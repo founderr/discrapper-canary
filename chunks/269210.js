@@ -1,43 +1,43 @@
 t.d(n, {
     G: function () {
-        return _;
+        return I;
     },
     U: function () {
-        return S;
+        return m;
     }
 });
 var i = t(735250);
 t(470079);
 var l = t(557533),
     r = t.n(l),
-    s = t(789978),
-    o = t(368072),
+    o = t(789978),
+    s = t(368072),
     a = t(777207),
     c = t(752843),
     d = t(330711),
     u = t(772421),
-    m = t(778342);
-function S(e) {
-    let { description: n, imgSrc: t, PurchaseButton: l, onPurchase: S, subscriptionType: _, title: p, onDetails: f, benefitItems: h, benefitsSummary: I } = e;
-    return (0, i.jsx)(s.tE, {
+    S = t(778342);
+function m(e) {
+    let { description: n, imgSrc: t, PurchaseButton: l, onPurchase: m, subscriptionType: I, title: x, onDetails: f, benefitItems: _, benefitsSummary: p } = e;
+    return (0, i.jsx)(o.tE, {
         children: (0, i.jsxs)('div', {
-            className: r()(u.container, m.hoverCard),
+            className: r()(u.container, S.hoverCard),
             tabIndex: 0,
             onClick: () => {
-                null != f ? f() : null != S && S();
+                null != f ? f() : null != m && m();
             },
             children: [
                 (0, i.jsxs)('div', {
                     className: u.card,
                     children: [
-                        null != _ && (0, i.jsx)(c.Z, { type: _ }),
+                        null != I && (0, i.jsx)(c.Z, { type: I }),
                         (0, i.jsxs)('div', {
                             className: u.body,
                             children: [
                                 (0, i.jsx)(a.x, {
                                     tag: 'div',
                                     variant: 'heading-lg/semibold',
-                                    children: p
+                                    children: x
                                 }),
                                 (0, i.jsx)('div', {
                                     className: u.image,
@@ -47,7 +47,7 @@ function S(e) {
                                                   src: t.toString(),
                                                   alt: ''
                                               })
-                                            : (0, i.jsx)(o.V, {
+                                            : (0, i.jsx)(s.V, {
                                                   color: 'white',
                                                   size: 'custom',
                                                   height: 48,
@@ -58,7 +58,7 @@ function S(e) {
                                     (0, i.jsx)(l, {
                                         className: u.purchaseBtn,
                                         onClick: (e) => {
-                                            e.stopPropagation(), null == S || S();
+                                            e.stopPropagation(), null == m || m();
                                         }
                                     }),
                                 null != n &&
@@ -73,16 +73,16 @@ function S(e) {
                         })
                     ]
                 }),
-                null != I &&
+                null != p &&
                     (0, i.jsx)('div', {
                         className: u.benefitsSummary,
                         children: (0, i.jsx)(a.x, {
                             color: 'interactive-normal',
                             variant: 'text-sm/medium',
-                            children: d.Z.Messages.Storefront.BENEFITS_SUMMARY.format({ count: I })
+                            children: d.Z.Messages.Storefront.BENEFITS_SUMMARY.format({ count: p })
                         })
                     }),
-                null != h &&
+                null != _ &&
                     (0, i.jsx)('div', {
                         className: u.benefits,
                         children: (0, i.jsx)('div', {
@@ -95,18 +95,18 @@ function S(e) {
                                         variant: 'eyebrow',
                                         children: d.Z.Messages.Storefront.BENEFITS_TITLE
                                     }),
-                                    h.length > 3
+                                    _.length > 3
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  h.slice(0, 3),
+                                                  _.slice(0, 3),
                                                   (0, i.jsx)(a.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
-                                                      children: d.Z.Messages.Storefront.MORE_BENEFITS.format({ count: h.length - 3 })
+                                                      children: d.Z.Messages.Storefront.MORE_BENEFITS.format({ count: _.length - 3 })
                                                   })
                                               ]
                                           })
-                                        : h
+                                        : _
                                 ]
                             })
                         })
@@ -115,7 +115,7 @@ function S(e) {
         })
     });
 }
-function _(e) {
+function I(e) {
     let { icon: n, name: t, description: l } = e;
     return (0, i.jsxs)('div', {
         className: u.cardBenefit,

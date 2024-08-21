@@ -1,36 +1,36 @@
-n.d(t, {
+t.d(n, {
     H: function () {
-        return d;
+        return u;
     }
 }),
-    n(47120);
-var i = n(735250),
-    l = n(470079),
-    r = n(120356),
-    a = n.n(r),
-    s = n(481060),
-    o = n(572004),
-    c = n(689938),
-    u = n(205962);
-function d(e) {
-    let { chunks: t, className: n, onCopy: r, ...d } = e,
-        h = l.useMemo(() => (null == t ? void 0 : t.join(' ')), [t]),
-        [p, _] = l.useState(!1),
-        f = l.useCallback(() => {
-            _(!0), (0, o.JG)(h), null == r || r();
-        }, [r, h]),
-        g = p ? s.CircleCheckIcon : s.CopyIcon;
-    return (0, i.jsx)(s.Clickable, {
-        className: a()(u.container, n),
-        onClick: f,
-        children: (0, i.jsx)(s.Tooltip, {
-            text: p ? c.Z.Messages.COPIED : c.Z.Messages.COPY,
+    t(47120);
+var o = t(735250),
+    r = t(470079),
+    s = t(120356),
+    c = t.n(s),
+    i = t(481060),
+    l = t(572004),
+    a = t(689938),
+    d = t(205962);
+function u(e) {
+    let { chunks: n, className: t, onCopy: s, ...u } = e,
+        h = r.useMemo(() => (null == n ? void 0 : n.join(' ')), [n]),
+        [f, x] = r.useState(!1),
+        m = r.useCallback(() => {
+            x(!0), (0, l.JG)(h), null == s || s();
+        }, [s, h]),
+        _ = f ? i.CircleCheckIcon : i.CopyIcon;
+    return (0, o.jsx)(i.Clickable, {
+        className: c()(d.container, t),
+        onClick: m,
+        children: (0, o.jsx)(i.Tooltip, {
+            text: f ? a.Z.Messages.COPIED : a.Z.Messages.COPY,
             children: (e) =>
-                (0, i.jsx)(g, {
-                    ...d,
+                (0, o.jsx)(_, {
+                    ...u,
                     ...e,
                     size: 'xxs',
-                    color: p ? s.tokens.colors.TEXT_POSITIVE : s.tokens.colors.INTERACTIVE_NORMAL
+                    color: f ? i.tokens.colors.TEXT_POSITIVE : i.tokens.colors.INTERACTIVE_NORMAL
                 })
         })
     });

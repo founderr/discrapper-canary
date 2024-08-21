@@ -44,8 +44,8 @@ var a = t(990547),
     y = t(998502),
     V = t(392735),
     Y = t(604227),
-    w = t(38915),
-    H = t(498639),
+    H = t(38915),
+    w = t(498639),
     k = t(748717),
     W = t(419636),
     K = t(799071),
@@ -90,7 +90,7 @@ var a = t(990547),
 let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eZ = eO.Z,
     ev = (e) => {
-        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: ev, impressionSource: ej, numOfPendingFamilyRequests: eB, isOverlaySupported: eU, isClipsBetaTagShowing: eG = !1, shouldMergeGameSettings: eF, isUserSettingsSearchEnabled: ey, isKeywordFilteringEnabled: eV, isStaff: eY, isInappropriateConversationWarningEnabled: ew, paymentsBlocked: eH, isEligibleForQuests: ek, showGiftNitro: eW, isStricterMessageRequestsEnabled: eK, hasLibraryApplication: ez, hasTOTPEnabled: eQ, canBroadcastActivity: eX, developerMode: eq } = e;
+        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: ev, impressionSource: ej, numOfPendingFamilyRequests: eB, isOverlaySupported: eU, isClipsBetaTagShowing: eG = !1, shouldMergeGameSettings: eF, isUserSettingsSearchEnabled: ey, isKeywordFilteringEnabled: eV, isStaff: eY, isInappropriateConversationWarningEnabled: eH, paymentsBlocked: ew, isEligibleForQuests: ek, showGiftNitro: eW, isStricterMessageRequestsEnabled: eK, hasLibraryApplication: ez, hasTOTPEnabled: eQ, canBroadcastActivity: eX, developerMode: eq } = e;
         return Object.freeze({
             [ex.s6.SEARCH_NO_RESULTS]: {
                 section: E.ID.CUSTOM,
@@ -377,7 +377,7 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eM.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eP.Z.Messages.SAFETY_ALERTS_SETTING_TITLE],
                 parent: ex.s6.PRIVACY_USER_SETTINGS,
-                predicate: () => ew
+                predicate: () => eH
             },
             [ex.s6.PRIVACY_ACCOUNT_STANDING]: {
                 section: eM.oAB.PRIVACY_AND_SAFETY,
@@ -502,13 +502,13 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eM.oAB.INVENTORY,
                 searchableTitles: [eP.Z.Messages.GIFT_NITRO],
                 parent: ex.s6.GIFT_INVENTORY,
-                predicate: () => !eH && eW
+                predicate: () => !ew && eW
             },
             [ex.s6.GIFT_CODE_REDEMPTION]: {
                 section: eM.oAB.INVENTORY,
                 searchableTitles: [eP.Z.Messages.GIFT_INVENTORY_REDEEM_CODES],
                 parent: ex.s6.GIFT_INVENTORY,
-                predicate: () => !eH
+                predicate: () => !ew
             },
             [ex.s6.GIFT_INVENTORY_QUESTS]: {
                 section: eM.oAB.INVENTORY,
@@ -520,13 +520,13 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eM.oAB.INVENTORY,
                 searchableTitles: [eP.Z.Messages.GIFT_INVENTORY_GIFTS_YOU_PURCHASED],
                 parent: ex.s6.GIFT_INVENTORY,
-                predicate: () => !eH
+                predicate: () => !ew
             },
             [ex.s6.GIFT_BLOCKED_PAYMENTS]: {
                 section: eM.oAB.INVENTORY,
                 searchableTitles: [eP.Z.Messages.REGION_BLOCKED_PAYMENTS_HEADER],
                 parent: ex.s6.GIFT_INVENTORY,
-                predicate: () => eH
+                predicate: () => ew
             },
             [ex.s6.BILLING]: {
                 section: eM.oAB.BILLING,
@@ -1378,7 +1378,7 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eM.oAB.HOTSPOT_OPTIONS,
                 searchableTitles: ['Hotspot Options'],
                 label: 'Hotspot Options',
-                element: w.Z,
+                element: H.Z,
                 predicate: () => b.Z.isDeveloper
             },
             [ex.s6.DISMISSIBLE_CONTENT_OPTIONS]: {
@@ -1392,7 +1392,7 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eM.oAB.PAYMENT_FLOW_MODAL_TEST_PAGE,
                 searchableTitles: ['Payment Flow Modals'],
                 label: 'Payment Flow Modals',
-                element: H.Z,
+                element: w.Z,
                 predicate: () => b.Z.isDeveloper
             },
             [ex.s6.TEXT_PLAYGROUND]: {

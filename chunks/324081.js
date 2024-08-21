@@ -20,8 +20,8 @@ var a = n(120356),
     T = n(199902),
     h = n(592125),
     N = n(430824),
-    f = n(158776),
-    C = n(594174),
+    C = n(158776),
+    f = n(594174),
     p = n(689938),
     g = n(394575);
 let S = {
@@ -72,7 +72,7 @@ function R(e) {
 }
 function x(e) {
     let { channel: t, gotoChannel: n } = e,
-        a = (0, l.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
+        a = (0, l.e7)([f.default], () => (t.isDM() ? f.default.getUser(t.getRecipientId()) : null)),
         s = null == a ? (0, u.x)(t) : a.getAvatarURL(void 0, 40);
     return (0, i.jsx)(o.Clickable, {
         onClick: n,
@@ -163,11 +163,11 @@ function v(e) {
             user: n,
             activities: a,
             applicationStream: s
-        } = (0, l.cj)([C.default, f.Z, T.Z], () => {
-            let e = C.default.getUser(t.getRecipientId());
+        } = (0, l.cj)([f.default, C.Z, T.Z], () => {
+            let e = f.default.getUser(t.getRecipientId());
             return {
                 user: e,
-                activities: null != e ? f.Z.getActivities(e.id) : null,
+                activities: null != e ? C.Z.getActivities(e.id) : null,
                 applicationStream: null != e ? T.Z.getAnyStreamForUser(e.id) : null
             };
         });

@@ -15,8 +15,8 @@ var i,
     T = n(431583),
     h = n(592745),
     N = n(952164),
-    f = n(768419),
-    C = n(456432),
+    C = n(768419),
+    f = n(456432),
     p = n(103575),
     g = n(789407),
     S = n(598077),
@@ -150,7 +150,7 @@ class G extends (i = s.PureComponent) {
             }),
             B(this, 'renderSpotifyJoinButton', (e) => {
                 let { channelId: t, guildId: n } = this.props;
-                return (0, a.jsx)(C.Z, {
+                return (0, a.jsx)(f.Z, {
                     guildId: null != n ? n : void 0,
                     channelId: t,
                     source: 'Invite Embed',
@@ -208,7 +208,7 @@ class G extends (i = s.PureComponent) {
     }
 }
 B(G, 'defaultProps', { isPreview: !1 }),
-    (t.Z = r.ZP.connectStores([f.Z, R.Z, M.Z, O.Z, h.Z, Z.Z, A.Z, L.Z, v.default, x.ZP], (e) => {
+    (t.Z = r.ZP.connectStores([C.Z, R.Z, M.Z, O.Z, h.Z, Z.Z, A.Z, L.Z, v.default, x.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: i, partyId: a, userId: s, guildId: r } = e,
             { id: l } = null != i ? i : {},
             o = null != t && null != t.party && t.party.id === a ? R.Z.getParty(t.party.id) : null,
@@ -229,8 +229,8 @@ B(G, 'defaultProps', { isPreview: !1 }),
                     }
                 );
             }),
-            _ = null != t && f.Z.canPlay(t),
-            E = f.Z.getSyncingWith(),
+            _ = null != t && C.Z.canPlay(t),
+            E = C.Z.getSyncingWith(),
             I = null != E && null != s && E.userId === s;
         return {
             analyticsLocations: n,

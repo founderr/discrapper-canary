@@ -18,21 +18,21 @@ var a = t(392711),
     d = t(117984),
     c = t(593214),
     _ = t(362658),
-    M = t(981631),
-    I = t(689938);
+    I = t(981631),
+    M = t(689938);
 function f(e, n) {
-    return e.type === M.d4z.GROUP_DM ? (n ? I.Z.Messages.UNFAVORITE_GDM : I.Z.Messages.FAVORITE_GDM) : e.type === M.d4z.DM ? (n ? I.Z.Messages.UNFAVORITE_DM : I.Z.Messages.FAVORITE_DM) : n ? I.Z.Messages.UNFAVORITE_CHANNEL : I.Z.Messages.FAVORITE_CHANNEL;
+    return e.type === I.d4z.GROUP_DM ? (n ? M.Z.Messages.UNFAVORITE_GDM : M.Z.Messages.FAVORITE_GDM) : e.type === I.d4z.DM ? (n ? M.Z.Messages.UNFAVORITE_DM : M.Z.Messages.FAVORITE_DM) : n ? M.Z.Messages.UNFAVORITE_CHANNEL : M.Z.Messages.FAVORITE_CHANNEL;
 }
 function E(e) {
-    let n = (0, r.e7)([s.ZP], () => s.ZP.getChannels(M.I_8))[M.d4z.GUILD_CATEGORY],
+    let n = (0, r.e7)([s.ZP], () => s.ZP.getChannels(I.I_8))[I.d4z.GUILD_CATEGORY],
         { isFavoritesPerk: t } = (0, _.z)('58e21a_1'),
         { notifyFavoriteAdded: a } = (0, c.up)();
     if (!(0, c.li)(e)) return null;
-    let [[o], I] = l().partition(n, (e) => 'null' === e.channel.id);
+    let [[o], M] = l().partition(n, (e) => 'null' === e.channel.id);
     function E(n) {
         a(), (0, d.kj)(e.id, n);
     }
-    return 0 === I.length
+    return 0 === M.length
         ? (0, i.jsx)(u.MenuItem, {
               id: 'favorite-channel',
               label: f(e, !1),
@@ -56,7 +56,7 @@ function E(e) {
                           )
                       }),
                   (0, i.jsx)(u.MenuGroup, {
-                      children: I.map((e) =>
+                      children: M.map((e) =>
                           (0, i.jsx)(
                               u.MenuItem,
                               {
@@ -80,7 +80,7 @@ function N(e) {
               label: f(e, !0),
               color: 'danger',
               action: () =>
-                  e.type === M.d4z.GUILD_CATEGORY
+                  e.type === I.d4z.GUILD_CATEGORY
                       ? (0, u.openModalLazy)(async () => {
                             let { default: n } = await t.e('37720').then(t.bind(t, 357632));
                             return (t) =>

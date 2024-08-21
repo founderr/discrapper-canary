@@ -3,31 +3,31 @@ t.d(n, {
         return c;
     }
 });
-var a = t(735250);
+var s = t(735250);
 t(470079);
 var i = t(442837),
-    s = t(481060),
-    l = t(475179),
+    l = t(481060),
+    a = t(475179),
     o = t(358221),
-    r = t(979651),
-    u = t(981631),
-    d = t(689938);
+    u = t(979651),
+    d = t(981631),
+    r = t(689938);
 function c(e, n) {
     let t = (0, i.e7)([o.Z], () => e === o.Z.getSelectedParticipantId(n), [n, e]);
     return (0, i.e7)(
-        [o.Z, r.Z],
+        [o.Z, u.Z],
         () => {
-            let t = r.Z.isInChannel(n, e) && r.Z.hasVideo(n),
-                a = o.Z.getLayout(n),
-                i = a === u.AEg.MINIMUM || a === u.AEg.NORMAL;
+            let t = u.Z.isInChannel(n, e) && u.Z.hasVideo(n),
+                s = o.Z.getLayout(n),
+                i = s === d.AEg.MINIMUM || s === d.AEg.NORMAL;
             return !t || i;
         },
         [n, e]
     )
         ? null
-        : (0, a.jsx)(s.MenuItem, {
+        : (0, s.jsx)(l.MenuItem, {
               id: 'focus-video',
-              label: t ? d.Z.Messages.UNFOCUS_PARTICIPANT : d.Z.Messages.FOCUS_PARTICIPANT,
-              action: () => l.Z.selectParticipant(n, t ? null : e)
+              label: t ? r.Z.Messages.UNFOCUS_PARTICIPANT : r.Z.Messages.FOCUS_PARTICIPANT,
+              action: () => a.Z.selectParticipant(n, t ? null : e)
           });
 }

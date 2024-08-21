@@ -16,8 +16,8 @@ var a = n(735250),
     d = n(481060),
     u = n(110924),
     g = n(40851),
-    v = n(367907),
-    m = n(565384),
+    m = n(367907),
+    v = n(565384),
     p = n(906732),
     f = n(835473),
     I = n(600164),
@@ -37,14 +37,14 @@ var a = n(735250),
     y = n(689938),
     D = n(226786),
     L = n(361205),
-    O = n(812320);
-let B = (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
+    B = n(812320);
+let O = (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
     V = (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
-    R = (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + B + (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
+    R = (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + O + (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
 function k(e) {
-    let { channel: t, guildId: n, locationObject: l, onClose: c, initialSelectedApplicationId: g, initialSlide: _ = A.ag.DIRECTORY, enableSelectedTextChannelInvite: T, analyticsLocations: B, ...R } = e,
+    let { channel: t, guildId: n, locationObject: l, onClose: c, initialSelectedApplicationId: g, initialSlide: _ = A.ag.DIRECTORY, enableSelectedTextChannelInvite: T, analyticsLocations: O, ...R } = e,
         k = (0, o.e7)([E.Z], () => E.Z.getIsEnabled(), []),
-        { analyticsLocations: H } = (0, p.ZP)(B),
+        { analyticsLocations: H } = (0, p.ZP)(O),
         [F, U] = i.useState(_),
         w = (0, u.Z)(F),
         [Y, G] = i.useState(null),
@@ -136,9 +136,9 @@ function k(e) {
                     a = {
                         channel_id: null == t ? void 0 : t.id,
                         guild_id: n,
-                        location: (0, m.k$)(),
-                        ...(0, v.hH)(n),
-                        ...(0, v.v_)(x.Z.getChannel(null == t ? void 0 : t.id)),
+                        location: (0, v.k$)(),
+                        ...(0, m.hH)(n),
+                        ...(0, m.v_)(x.Z.getChannel(null == t ? void 0 : t.id)),
                         ...$,
                         ...e
                     };
@@ -160,7 +160,7 @@ function k(e) {
                     }),
                     (0, a.jsx)('img', {
                         alt: y.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT,
-                        src: O,
+                        src: B,
                         className: D.shelfTopForeground
                     }),
                     (0, a.jsxs)(d.ModalHeader, {

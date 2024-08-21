@@ -44,10 +44,10 @@ var n = t(735250),
 let y = (0, N.hQ)(),
     V = (0, N.hQ)(),
     Y = (0, N.hQ)(),
-    w = l().debounce((e) => {
+    H = l().debounce((e) => {
         (0, u.o2)(e);
     }, 250),
-    H = l().debounce((e) => {
+    w = l().debounce((e) => {
         (0, p.Ct)(e);
     }, 250);
 function k(e) {
@@ -199,7 +199,7 @@ function K() {
                 maxValue: 1,
                 minValue: 0,
                 initialValue: e,
-                onValueChange: w,
+                onValueChange: H,
                 onMarkerRender: (e) => ((100 * e) % 2 == 0 ? ''.concat(100 * e, '%') : void 0)
             }),
             (0, n.jsx)(d.FormSwitch, {
@@ -537,7 +537,7 @@ function et() {
                               initialValue: s,
                               defaultValue: 1,
                               stickToMarkers: !0,
-                              onValueChange: H,
+                              onValueChange: w,
                               onValueRender: (e) => 'x'.concat(e.toFixed(2)),
                               onMarkerRender: (e) =>
                                   0 === e

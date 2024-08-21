@@ -32,7 +32,7 @@ function E(e) {
             launchingComponentId: x,
             onSubmissionComplete: I
         }),
-        [L, S] = a.useState(!1),
+        [S, L] = a.useState(!1),
         b = (0, c.Qv)({
             applicationId: t.id,
             channelId: n.id
@@ -83,9 +83,9 @@ function E(e) {
                 size: v,
                 color: T,
                 disabled: y,
-                submitting: L,
+                submitting: S,
                 onClick: () => {
-                    S(!0), R(), null == n || n();
+                    L(!0), R(), null == n || n();
                 },
                 'aria-label': h.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
                     buttonText: M,

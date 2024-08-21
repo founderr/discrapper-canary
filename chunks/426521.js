@@ -19,8 +19,8 @@ var i = n(735250),
     T = n(591759),
     h = n(833592),
     N = n(497089),
-    f = n(178480),
-    C = n(418316),
+    C = n(178480),
+    f = n(418316),
     p = n(526146),
     g = n(400565),
     S = n(148789),
@@ -138,7 +138,7 @@ let b = a.memo(function (e) {
             M = null;
         r.type === N.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (M = (0, i.jsx)(S.Z, { userId: r.other_user.id }));
         let v = null != r.local_id,
-            b = (0, C.Z)(r);
+            b = (0, f.Z)(r);
         return (0, i.jsxs)('div', {
             className: O.row,
             children: [
@@ -164,7 +164,7 @@ let b = a.memo(function (e) {
                                 (0, i.jsx)(s.Text, {
                                     variant: 'text-xs/medium',
                                     color: E ? 'text-muted' : 'header-secondary',
-                                    children: (0, f.a3)(m.default.extractTimestamp(r.id))
+                                    children: (0, C.a3)(m.default.extractTimestamp(r.id))
                                 }),
                                 M
                             ]

@@ -20,17 +20,17 @@ var i = n(735250),
     T = n(838440),
     h = n(981631),
     N = n(310004);
-function f(e) {
+function C(e) {
     let { assets: t, currentUser: n, message: i } = e,
         a = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
     return t[a];
 }
-function C(e) {
+function f(e) {
     let { currentUser: t, channel: n, message: s, buttonLabels: u, stickers: d, event: _, eventProperties: E } = e,
         [m, h] = a.useState(!1),
-        C = a.useMemo(
+        f = a.useMemo(
             () =>
-                f({
+                C({
                     assets: d,
                     currentUser: t,
                     message: s
@@ -39,7 +39,7 @@ function C(e) {
         ),
         p = a.useMemo(
             () =>
-                f({
+                C({
                     assets: u,
                     currentUser: t,
                     message: s
@@ -68,7 +68,7 @@ function C(e) {
                 })({
                     channel: n,
                     message: s,
-                    sticker: C
+                    sticker: f
                 }),
                 !(function (e) {
                     let { sticker: t, event: n, eventProperties: i } = e;
@@ -78,11 +78,11 @@ function C(e) {
                             sticker_id: t.id
                         });
                 })({
-                    sticker: C,
+                    sticker: f,
                     event: _,
                     eventProperties: E
                 }));
-        }, [n, s, C, _, E]);
+        }, [n, s, f, _, E]);
     return (0, i.jsxs)(r.Button, {
         className: N.CTAMessageButtonOuter,
         innerClassName: N.CTAMessageButton,
@@ -94,7 +94,7 @@ function C(e) {
             (0, i.jsx)(c.ZP, {
                 className: N.CTAMessageSticker,
                 isInteracting: m,
-                sticker: C,
+                sticker: f,
                 size: 28
             }),
             p
@@ -124,7 +124,7 @@ function p(e) {
     return null != c && I
         ? (0, i.jsx)('div', {
               className: N.CTAMessage,
-              children: (0, i.jsx)(C, {
+              children: (0, i.jsx)(f, {
                   currentUser: c,
                   channel: t,
                   message: n,

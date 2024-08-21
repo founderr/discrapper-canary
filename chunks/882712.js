@@ -16,14 +16,14 @@ var r,
 ((r = o || (o = {}))[(r.UNKNOWN = 0)] = 'UNKNOWN'), (r[(r.PENDING = 1)] = 'PENDING'), (r[(r.SUCCESS = 2)] = 'SUCCESS'), (r[(r.ERROR = 3)] = 'ERROR');
 let A = 0,
     c = null,
-    I = null;
-function T(e) {
+    T = null;
+function I(e) {
     let { error: t } = e,
         n = t instanceof S.ZP ? t : new S.ZP(t);
     s.Z.isConnected() && n.code === S.ZP.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (A = 1);
 }
 function d() {
-    (A = 0), (c = null), (I = null);
+    (A = 0), (c = null), (T = null);
 }
 class R extends (E = a.ZP.Store) {
     get purchaseTokenAuthState() {
@@ -33,7 +33,7 @@ class R extends (E = a.ZP.Store) {
         return c;
     }
     get expiresAt() {
-        return I;
+        return T;
     }
 }
 (l = 'PurchaseTokenAuthStore'),
@@ -46,10 +46,10 @@ class R extends (E = a.ZP.Store) {
           })
         : (i[u] = l),
     (t.Z = new R(_.Z, {
-        SKU_PURCHASE_FAIL: T,
-        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: T,
+        SKU_PURCHASE_FAIL: I,
+        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: I,
         USER_PAYMENT_CLIENT_ADD: function (e) {
-            (A = 2), (c = e.purchaseTokenHash), (I = e.expiresAt);
+            (A = 2), (c = e.purchaseTokenHash), (T = e.expiresAt);
         },
         BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: d,
         BILLING_SUBSCRIPTION_UPDATE_START: d,

@@ -16,7 +16,7 @@ var i,
     h = n(689938),
     N = n(677257);
 ((r = i || (i = {}))[(r.DIRECTORY_HERO = 1)] = 'DIRECTORY_HERO'), (r[(r.DIRECTORY_TILE = 2)] = 'DIRECTORY_TILE'), (r[(r.DIRECTORY_SEARCH = 3)] = 'DIRECTORY_SEARCH'), (r[(r.LISTING = 4)] = 'LISTING'), (r[(r.EMBED = 5)] = 'EMBED'), ((l = a || (a = {}))[(l.IN_LIBRARY = 1)] = 'IN_LIBRARY'), (l[(l.ON_SALE = 2)] = 'ON_SALE'), (l[(l.PREMIUM = 3)] = 'PREMIUM'), (l[(l.DEFAULT = 4)] = 'DEFAULT'), (l[(l.ENTITLEMENT_BRANCH = 5)] = 'ENTITLEMENT_BRANCH');
-let f = (e) => {
+let C = (e) => {
         let { className: t } = e;
         return (0, d.jsxs)('div', {
             className: I()(N.row, t),
@@ -30,7 +30,7 @@ let f = (e) => {
             ]
         });
     },
-    C = (e) => {
+    f = (e) => {
         let { sku: t, className: n } = e;
         return (0, d.jsxs)('div', {
             className: I()(N.row, n),
@@ -96,9 +96,9 @@ class x extends (s = _.PureComponent) {
             case 5:
                 return (0, d.jsx)(R, { className: I()(t, n) });
             case 1:
-                return (0, d.jsx)(f, { className: I()(t, n) });
+                return (0, d.jsx)(C, { className: I()(t, n) });
             case 3:
-                return (0, d.jsx)(C, {
+                return (0, d.jsx)(f, {
                     sku: i,
                     className: I()(t, n)
                 });
@@ -120,7 +120,7 @@ class x extends (s = _.PureComponent) {
             case 5:
                 return (0, d.jsx)(R, { className: I()(t) });
             case 3:
-                return (0, d.jsx)(C, {
+                return (0, d.jsx)(f, {
                     sku: n,
                     className: I()(N.directoryHeroPricePremium, t)
                 });

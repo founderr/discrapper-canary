@@ -6,7 +6,7 @@ n.d(t, {
         return T;
     },
     QY: function () {
-        return C;
+        return f;
     },
     Vj: function () {
         return c;
@@ -27,7 +27,7 @@ n.d(t, {
         return N;
     },
     u$: function () {
-        return f;
+        return C;
     },
     yC: function () {
         return o;
@@ -137,7 +137,7 @@ function N(e) {
             })
         );
 }
-function f(e, t, n) {
+function C(e, t, n) {
     null != e &&
         i.Z.dispatch({
             type: 'SEARCH_AUTOCOMPLETE_QUERY_UPDATE',
@@ -146,7 +146,7 @@ function f(e, t, n) {
             cursorScope: n
         });
 }
-function C(e, t) {
+function f(e, t) {
     i.Z.dispatch({
         type: 'SEARCH_SET_SHOW_BLOCKED_RESULTS',
         searchId: e,

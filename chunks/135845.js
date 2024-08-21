@@ -22,8 +22,8 @@ function h(e) {
     let t,
         n,
         a,
-        { invite: h, currentUserId: N, guild: f, onTransitionToInviteChannel: C, onAcceptInstantInvite: p } = e,
-        g = null == f ? void 0 : f.id,
+        { invite: h, currentUserId: N, guild: C, onTransitionToInviteChannel: f, onAcceptInstantInvite: p } = e,
+        g = null == C ? void 0 : C.id,
         S = (0, r.e7)([d.Z], () => d.Z.getGuildId()),
         A = (0, r.e7)([u.Z], () => (null != h && null != h.target_user ? u.Z.getActiveStreamForUser(h.target_user.id, g) : null), [h, g]),
         R = (0, r.e7)([u.Z], () => (null != h && null != h.target_user ? u.Z.getStreamForUser(h.target_user.id, g) : null), [h, g]),
@@ -34,15 +34,15 @@ function h(e) {
     s()(M === I.Iq.STREAM && null != v, 'invalid streaming invite');
     let L = N === v.id,
         Z = h.state === E.r2o.ACCEPTING,
-        P = null != f;
-    if (null == f) {
+        P = null != C;
+    if (null == C) {
         if (null == h.guild) return (0, i.jsx)(_.Z, {});
-        f = new c.ZP(h.guild);
+        C = new c.ZP(h.guild);
     }
     let b = null != h.channel ? (0, o.jD)(h.channel) : null,
-        D = x ? C : p;
+        D = x ? f : p;
     P && !O ? (a = L ? m.Z.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAM_ENDED.format({ name: v.username })) : ((t = m.Z.Messages.WATCH), (n = l.Z.Button.Colors.GREEN), x && ((t = m.Z.Messages.INVITE_BUTTON_STREAM_WATCHING), (n = l.Z.Button.Colors.PRIMARY)), (a = L ? m.Z.Messages.INVITE_BUTTON_STREAMER : m.Z.Messages.INVITE_BUTTON_STREAMING.format({ name: v.username })));
-    let j = S === f.id && null != b ? (0, i.jsx)(l.Z.Channel, { channel: b }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: f.name });
+    let j = S === C.id && null != b ? (0, i.jsx)(l.Z.Channel, { channel: b }) : m.Z.Messages.INVITE_BUTTON_STREAMING_SUBTEXT.format({ guildName: C.name });
     return (0, i.jsxs)(l.Z, {
         children: [
             (0, i.jsx)(l.Z.Header, { text: m.Z.Messages.INVITE_BUTTON_TITLE_STREAMING }),
@@ -52,7 +52,7 @@ function h(e) {
                         className: T.headerLine,
                         children: [
                             (0, i.jsx)(l.Z.Icon, {
-                                guild: f,
+                                guild: C,
                                 onClick: P && O ? D : void 0
                             }),
                             (0, i.jsx)(l.Z.Info, {

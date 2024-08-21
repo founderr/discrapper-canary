@@ -17,8 +17,8 @@ var a = n(735250),
     d = n(481060),
     u = n(100527),
     g = n(906732),
-    v = n(703656),
-    m = n(430824),
+    m = n(703656),
+    v = n(430824),
     p = n(594174),
     f = n(115130),
     I = n(566620),
@@ -38,12 +38,12 @@ let M = (0, r.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
 function y(e) {
     let { channel: t, guildId: n, locationObject: l, onClose: r, onActivityItemVisible: c, scrollerRef: y } = e,
         [D, L] = i.useState(0),
-        O = (0, _.Z)({
+        B = (0, _.Z)({
             guildId: n,
             enableFilter: !0
         }),
-        B = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        V = (0, o.e7)([m.Z], () => m.Z.getGuild(n), [n]),
+        O = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+        V = (0, o.e7)([v.Z], () => v.Z.getGuild(n), [n]),
         { analyticsLocations: R } = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY),
         k = (0, C.Z)(null == t ? void 0 : t.id),
         { enableAmazonMusicShelfPoster: P } = x.p.useExperiment({ location: 'ActivitiesShelf' }, { autoTrackExposure: !0 }),
@@ -74,10 +74,10 @@ function y(e) {
                 });
         }, [n, k]),
         (0, h.g)(),
-        (null == V && !k) || null == B)
+        (null == V && !k) || null == O)
     )
         return null;
-    let U = O.length > 0;
+    let U = B.length > 0;
     function w(e) {
         r();
     }
@@ -96,7 +96,7 @@ function y(e) {
                                   height: ((e) => {
                                       let t = 1 === e.length;
                                       return M + Math.ceil(e.length / 2) * (t ? Z : A);
-                                  })(O)
+                                  })(B)
                               }
                           })
                       })
@@ -113,7 +113,7 @@ function y(e) {
                                     'aria-label': e,
                                     onClick: () => {
                                         var e;
-                                        (e = E.Fu), r(), (0, v.uL)(S.Z5c.ACTIVITY_DETAILS(E.Fu), { sourceLocationStack: R });
+                                        (e = E.Fu), r(), (0, m.uL)(S.Z5c.ACTIVITY_DETAILS(E.Fu), { sourceLocationStack: R });
                                     },
                                     children: [
                                         (0, a.jsx)('div', {
@@ -135,11 +135,11 @@ function y(e) {
                                   className: N.scrollSection,
                                   children: (0, a.jsx)('div', {
                                       className: s()(N.shelf),
-                                      children: O.map((e) =>
+                                      children: B.map((e) =>
                                           (0, a.jsx)(
                                               T.Z,
                                               {
-                                                  large: 1 === O.length,
+                                                  large: 1 === B.length,
                                                   activityItem: e,
                                                   channel: t,
                                                   guildId: n,

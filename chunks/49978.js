@@ -17,8 +17,8 @@ var a = n(735250),
     d = n(906732),
     u = n(264165),
     g = n(70097),
-    v = n(740492),
-    m = n(592125),
+    m = n(740492),
+    v = n(592125),
     p = n(430824),
     f = n(496675),
     I = n(944486),
@@ -49,21 +49,21 @@ function y(e) {
     let { applicationId: c, guildId: d, selectedChannelId: f, setSelectedChannelId: _, enableSelectedTextChannelInvite: h } = e,
         N = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
         y = (0, C.T)(null != d ? d : null, null != c ? c : null),
-        [D, L] = i.useState(h && !v.ZP.disableInviteWithTextChannelActivityLaunch),
-        O = (0, T.F)(d);
+        [D, L] = i.useState(h && !m.ZP.disableInviteWithTextChannelActivityLaunch),
+        B = (0, T.F)(d);
     i.useEffect(() => {
         var e;
         x.w1({ guildId: d }), _(null !== (e = (0, T.d)({ guildId: d })) && void 0 !== e ? e : void 0);
     }, [d, _]);
-    let B = null == y ? void 0 : y.activity.activity_preview_video_asset_id,
-        V = null != B ? (0, E.Z)(null !== (t = null == y ? void 0 : y.application.id) && void 0 !== t ? t : '', B) : null,
+    let O = null == y ? void 0 : y.activity.activity_preview_video_asset_id,
+        V = null != O ? (0, E.Z)(null !== (t = null == y ? void 0 : y.application.id) && void 0 !== t ? t : '', O) : null,
         { url: R } = (0, S.Z)({
             applicationId: null !== (n = null == y ? void 0 : y.application.id) && void 0 !== n ? n : '',
             size: 1024,
             names: Z
         }),
         k = (0, l.e7)([p.Z], () => p.Z.getGuild(d)),
-        P = (0, l.e7)([m.Z, I.Z], () => m.Z.getChannel(I.Z.getChannelId())),
+        P = (0, l.e7)([v.Z, I.Z], () => v.Z.getChannel(I.Z.getChannelId())),
         H = A(null != d ? d : void 0);
     if ((null == y ? void 0 : y.application) == null || null == k) return null;
     let F = (null == P ? void 0 : P.name) == null || (null == P ? void 0 : P.name) === '' ? j.Z.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : '#'.concat(P.name);
@@ -101,7 +101,7 @@ function y(e) {
             (0, a.jsx)(s.Select, {
                 placeholder: j.Z.Messages.EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL,
                 optionClassName: M.__invalid_option,
-                options: O,
+                options: B,
                 isSelected: (e) => {
                     let { channel: t } = e;
                     return t.id === f;
@@ -115,7 +115,7 @@ function y(e) {
                     return t.id;
                 },
                 renderOptionValue: () => {
-                    let e = O.find((e) => e.value.channel.id === f);
+                    let e = B.find((e) => e.value.channel.id === f);
                     return null == e
                         ? null
                         : (0, a.jsx)(b.O, {
@@ -161,8 +161,8 @@ function D(e) {
     let { applicationId: t, guildId: n, locationObject: i, onBack: r, onClose: o, selectedChannelId: u, enableSelectedTextChannelInvite: g } = e,
         { analyticsLocations: p } = (0, d.ZP)(c.Z.ACTIVITY_CHANNEL_SELECTOR),
         f = (0, C.T)(null != n ? n : null, null != t ? t : null),
-        T = (0, l.e7)([m.Z, I.Z], () => m.Z.getChannel(I.Z.getChannelId())),
-        E = (0, l.e7)([v.ZP], () => g && !v.ZP.disableInviteWithTextChannelActivityLaunch),
+        T = (0, l.e7)([v.Z, I.Z], () => v.Z.getChannel(I.Z.getChannelId())),
+        E = (0, l.e7)([m.ZP], () => g && !m.ZP.disableInviteWithTextChannelActivityLaunch),
         S = (0, l.e7)([_.ZP], () => null != u && '' !== u && _.ZP.getEmbeddedActivitiesForChannel(u).some((e) => e.applicationId === t)),
         b = A(n),
         Z = async () => {

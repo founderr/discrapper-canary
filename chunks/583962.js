@@ -28,8 +28,8 @@ var i = n(735250),
     N = n(667815),
     x = n(531572),
     S = n(26323),
-    v = n(30513),
-    Z = n(981631),
+    Z = n(30513),
+    v = n(981631),
     T = n(689938),
     L = n(360084);
 let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
@@ -37,7 +37,7 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         let { guild: t, onSelect: n } = e,
             [r, a] = l.useState(t.premiumProgressBarEnabled),
             [s, o] = l.useState(!1),
-            u = (0, c.e7)([m.Z], () => m.Z.can(Z.Plq.MANAGE_GUILD, t)),
+            u = (0, c.e7)([m.Z], () => m.Z.can(v.Plq.MANAGE_GUILD, t)),
             p = async () => {
                 if (!!u) o(!0), await g.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), o(!1);
             };
@@ -73,7 +73,7 @@ t.ZP = (e) => {
             var e;
             return null !== (e = x.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
         }),
-        y = (0, c.e7)([m.Z], () => m.Z.can(Z.Plq.MANAGE_GUILD, t));
+        y = (0, c.e7)([m.Z], () => m.Z.can(v.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
         P !== u && (0, N.v)(g, u);
     }, [g, P, u]);
@@ -86,30 +86,30 @@ t.ZP = (e) => {
         },
         [U, G] = (0, d.useSpring)(() => w),
         k = () => {
-            (0, _.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
-                location: { section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR },
+            (0, _.yw)(v.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                location: { section: v.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                 guild_id: g,
                 location_stack: r
             }),
                 (0, S.Z)({
                     analyticsLocations: r,
                     analyticsSourceLocation: {
-                        page: Z.ZY5.GUILD_CHANNEL,
-                        section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR,
-                        object: Z.qAy.TOOLTIP
+                        page: v.ZY5.GUILD_CHANNEL,
+                        section: v.jXE.PREMIUM_GUILD_PROGRESS_BAR,
+                        object: v.qAy.TOOLTIP
                     },
                     guild: t,
-                    perks: (0, v.VF)(),
+                    perks: (0, Z.VF)(),
                     perkIntro: T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_PROGRESS_BAR_HEADER
                 });
         },
         B = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({ levelName: (0, I.e9)(R) }),
-        H = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
+        V = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
             numBoosts: u,
             numTotal: (0, I.vn)(t.id)[R]
         });
-    M && ((B = (0, I.e9)(R)), (H = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({ numBoosts: u })));
-    let V = (0, o.JA)('boosts-'.concat(t.id));
+    M && ((B = (0, I.e9)(R)), (V = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({ numBoosts: u })));
+    let H = (0, o.JA)('boosts-'.concat(t.id));
     return (0, i.jsx)('li', {
         children: (0, i.jsx)(d.Tooltip, {
             text: M ? T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({ levelName: (0, I.nW)(R) }),
@@ -119,7 +119,7 @@ t.ZP = (e) => {
             hideOnClick: !0,
             children: (e) =>
                 (0, i.jsxs)(d.Clickable, {
-                    ...V,
+                    ...H,
                     ...e,
                     'aria-label': void 0,
                     role: 'button',
@@ -164,7 +164,7 @@ t.ZP = (e) => {
                                         (0, i.jsx)(d.Text, {
                                             color: 'interactive-normal',
                                             variant: 'text-xs/normal',
-                                            children: H
+                                            children: V
                                         }),
                                         (0, i.jsx)(C.Z, {
                                             className: L.count,

@@ -22,7 +22,7 @@ function T(e) {
         T = (0, r.e7)([_.Z], () => _.Z.getGuildProduct(n)),
         h = (0, r.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         N = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
-        f = (0, u.n)();
+        C = (0, u.n)();
     if ((s()(null != h, 'guild cannot be null'), s()(null != T, 'guildProductListing cannot be null'), (0, d.SO)(h)))
         return (0, i.jsx)(l.Tooltip, {
             text: m.Z.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
@@ -37,7 +37,7 @@ function T(e) {
     if (!T.has_entitlement)
         return (0, i.jsx)(l.ShinyButton, {
             shineSize: l.ShinyButton.ShineSizes.SMALL,
-            pauseAnimation: N || !f,
+            pauseAnimation: N || !C,
             onClick: () =>
                 (0, E.z)({
                     guildProductListing: T,

@@ -15,8 +15,8 @@ var i = n(735250),
     T = n(430824),
     h = n(594174),
     N = n(739566),
-    f = n(981631),
-    C = n(665692),
+    C = n(981631),
+    f = n(665692),
     p = n(689938),
     g = n(894684);
 let S = {
@@ -109,9 +109,9 @@ t.Z = a.memo(function (e) {
                                                 channelId: O.id,
                                                 messageId: v,
                                                 sourceAnalyticsLocations: P,
-                                                analyticsLocation: { section: f.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
+                                                analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                             }),
-                                        children: [C.ME, e.nick]
+                                        children: [f.ME, e.nick]
                                     });
                                 }
                                 break;
@@ -122,7 +122,7 @@ t.Z = a.memo(function (e) {
                                 null != t &&
                                     (g = (0, i.jsxs)(E.Z, {
                                         ...A,
-                                        children: [C.zy, t.name]
+                                        children: [f.zy, t.name]
                                     }));
                                 break;
                             }
@@ -132,7 +132,7 @@ t.Z = a.memo(function (e) {
                                 null != t &&
                                     (g = (0, i.jsxs)(E.Z, {
                                         ...A,
-                                        children: [C.ME, t.name]
+                                        children: [f.ME, t.name]
                                     }));
                                 break;
                             }
@@ -141,7 +141,7 @@ t.Z = a.memo(function (e) {
                                     t = null != M ? T.Z.getRole(M.id, e) : void 0;
                                 if (null != t)
                                     g = (0, i.jsxs)(E.Z, {
-                                        children: [C.ME, t.name]
+                                        children: [f.ME, t.name]
                                     });
                                 else {
                                     let t = h.default.getUser(e);
@@ -153,9 +153,9 @@ t.Z = a.memo(function (e) {
                                                 (0, I.openUserProfileModal)({
                                                     userId: t.id,
                                                     guildId: O.guild_id,
-                                                    analyticsLocation: { section: f.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
+                                                    analyticsLocation: { section: C.jXE.CHANNEL_TEXT_AREA_AUTOCOMPLETE }
                                                 }),
-                                            children: [C.ME, e.nick]
+                                            children: [f.ME, e.nick]
                                         });
                                     }
                                 }

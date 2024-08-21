@@ -19,8 +19,8 @@ var i,
     T = n(834129),
     h = n(809026),
     N = n(139256),
-    f = n(489887),
-    C = n(689938),
+    C = n(489887),
+    f = n(689938),
     p = n(217946);
 function g() {
     return (0, s.jsx)('svg', {
@@ -66,7 +66,7 @@ function A(e) {
                 variant: 'text-sm/semibold',
                 color: 'text-normal',
                 scaleFontToUserSetting: !0,
-                children: C.Z.Messages.POLL_RESULT_NO_VOTERS
+                children: f.Z.Messages.POLL_RESULT_NO_VOTERS
             });
             break;
         case 'VICTOR':
@@ -95,7 +95,7 @@ function A(e) {
                         variant: 'text-xs/medium',
                         color: 'input-placeholder-text',
                         scaleFontToUserSetting: !0,
-                        children: [C.Z.Messages.POLL_RESULT_WINNING, ' \u2022 ', r, '%']
+                        children: [f.Z.Messages.POLL_RESULT_WINNING, ' \u2022 ', r, '%']
                     })
                 ]
             });
@@ -108,7 +108,7 @@ function A(e) {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
                         scaleFontToUserSetting: !0,
-                        children: C.Z.Messages.POLL_RESULT_TIED
+                        children: f.Z.Messages.POLL_RESULT_TIED
                     }),
                     (0, s.jsxs)(u.Text, {
                         variant: 'text-xs/medium',
@@ -164,7 +164,7 @@ function R(e) {
                         variant: 'text-sm/medium',
                         color: 'none',
                         scaleFontToUserSetting: !0,
-                        children: C.Z.Messages.POLL_RESULT_VIEW_POLL
+                        children: f.Z.Messages.POLL_RESULT_VIEW_POLL
                     })
                 })
         ]
@@ -175,7 +175,7 @@ function x(e) {
     let { message: n, channel: i, compact: a, disableInteraction: l = !1 } = e,
         o = n.embeds[0],
         _ = r.useMemo(() => (0, h.Z)(o), [o]),
-        E = (0, c.aF)(null !== (t = null == _ ? void 0 : _.questionText) && void 0 !== t ? t : '', f.Dv),
+        E = (0, c.aF)(null !== (t = null == _ ? void 0 : _.questionText) && void 0 !== t ? t : '', C.Dv),
         N = (0, I.ZP)(n),
         g = (0, m.l)({
             user: n.author,
@@ -201,7 +201,7 @@ function x(e) {
                       iconNode: (0, s.jsx)(u.PollsIcon, { size: 'xs' }),
                       timestamp: n.timestamp,
                       compact: a,
-                      children: C.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
+                      children: f.Z.Messages.POLL_RESULT_MESSAGE_HEADER.format({
                           username: N.nick,
                           usernameHook: g(N),
                           title: E,

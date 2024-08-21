@@ -3,7 +3,7 @@ n.d(t, {
         return h;
     },
     Pu: function () {
-        return f;
+        return C;
     },
     Vt: function () {
         return I;
@@ -77,7 +77,7 @@ let N = (e) => {
     if (e === o.evJ.DSA_APPEAL_REQUEST_DEFLECTION) return u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_DEFLECTION_ERROR;
     return u.Z.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR;
 };
-function f(e) {
+function C(e) {
     let t = e.max_expiration_time;
     if (null == t) return null;
     try {

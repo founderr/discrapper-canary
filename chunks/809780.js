@@ -30,8 +30,8 @@ var i,
     T = n(607070),
     h = n(853856),
     N = n(181945),
-    f = n(220444),
-    C = n(601070),
+    C = n(220444),
+    f = n(601070),
     p = n(344185),
     g = n(569471),
     S = n(723170),
@@ -325,7 +325,7 @@ function Y() {
                 D.ZP.getFlattenedGuildIds().forEach((n) => {
                     if (null == n) return;
                     let i = M.ZP.getSelectableChannelIds(n),
-                        a = C.Z.getActiveJoinedUnreadThreadsForGuild(n);
+                        a = f.Z.getActiveJoinedUnreadThreadsForGuild(n);
                     i.forEach((i) => {
                         var s;
                         W(e, t, n, i);
@@ -358,7 +358,7 @@ function W(e, t, n, i) {
     if (null == a || (!x.Ec.has(a.type) && j.ZP.isGuildOrCategoryOrChannelMuted(n, a.id))) return;
     if (a.isPrivate()) {
         if (0 === b.ZP.getMentionCount(i)) return;
-    } else if (!(0, f.d)(a) && 0 === b.ZP.getMentionCount(i)) return;
+    } else if (!(0, C.d)(a) && 0 === b.ZP.getMentionCount(i)) return;
     if (!a.isPrivate() && !P.Z.can(k.Plq.READ_MESSAGE_HISTORY, a)) return;
     let s = b.ZP.ackMessageId(i);
     if (null == s) {

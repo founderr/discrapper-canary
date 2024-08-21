@@ -29,10 +29,10 @@ let E = a.memo(function (e) {
         ),
         h = (0, s.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]),
         N = (0, u.Uj)(I),
-        f = (0, u.Uj)(t);
+        C = (0, u.Uj)(t);
     return (0, i.jsx)(d.Z, {
         repliedAuthor: N,
-        baseAuthor: f,
+        baseAuthor: C,
         baseMessage: t,
         channel: n,
         referencedMessage: _,

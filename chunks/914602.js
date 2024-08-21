@@ -27,7 +27,7 @@ function N(e, t, n) {
         e
     );
 }
-class f extends (i = s.PureComponent) {
+class C extends (i = s.PureComponent) {
     render() {
         let { sku: e, storeListing: t, isHorizontal: n, className: i, renderCustomTagline: s, renderCustomTitle: r, renderCustomMedia: l, isEmbed: o } = this.props,
             c = o ? I.$G : m.Z;
@@ -86,11 +86,11 @@ class f extends (i = s.PureComponent) {
             });
     }
 }
-N(f, 'defaultProps', {
+N(C, 'defaultProps', {
     showMediaPlaceholder: !1,
     isMouseOver: !1,
     showBuyInline: !1,
     isHorizontal: !1,
     isEmbed: !1
 }),
-    (t.Z = f);
+    (t.Z = C);

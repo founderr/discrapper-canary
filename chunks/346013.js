@@ -20,8 +20,8 @@ var i = n(735250),
     T = n(676742),
     h = n(1585),
     N = n(841762),
-    f = n(336197),
-    C = n(406432),
+    C = n(336197),
+    f = n(406432),
     p = n(348238),
     g = n(38267),
     S = n(184301),
@@ -80,7 +80,7 @@ function B(e) {
                     can_access: G.canAccess,
                     is_member: q
                 }),
-                G.canAccess ? (0, f.Z)(b.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId)) : q ? (0, f.Z)(b.Z5c.CHANNEL(G.guildId, G.parentChannelId)) : await v.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
+                G.canAccess ? (0, C.Z)(b.Z5c.CHANNEL(G.guildId, G.threadId, G.messageId)) : q ? (0, C.Z)(b.Z5c.CHANNEL(G.guildId, G.parentChannelId)) : await v.Ub(G.guildId, {}, { channelId: G.parentChannelId }));
         }, [G, k, q]),
         el = a.useCallback(
             () => (
@@ -116,7 +116,7 @@ function B(e) {
             if (!et.enabled) ei((e) => !e);
         },
         e_ = G.coverImage,
-        eE = null != e_ && (0, C.d$)(e_);
+        eE = null != e_ && (0, f.d$)(e_);
     return (0, i.jsxs)('div', {
         className: U.postPreviewContainer,
         children: [

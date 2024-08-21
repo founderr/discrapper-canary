@@ -15,8 +15,8 @@ var i = n(735250),
     T = n(857595),
     h = n(607070),
     N = n(367907),
-    f = n(313201),
-    C = n(592125),
+    C = n(313201),
+    f = n(592125),
     p = n(984933),
     g = n(768119),
     S = n(944486),
@@ -43,7 +43,7 @@ function b(e, t, n) {
     );
 }
 n(729068);
-let D = (0, f.hQ)(),
+let D = (0, C.hQ)(),
     j = c()(_.yC, 500);
 class U extends a.PureComponent {
     componentDidMount() {
@@ -210,8 +210,8 @@ class U extends a.PureComponent {
                     return;
                 }
                 let n = S.Z.getChannelId(),
-                    i = C.Z.getChannel(n);
-                if (((null == i ? void 0 : i.isThread()) && (i = C.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate())) {
+                    i = f.Z.getChannel(n);
+                if (((null == i ? void 0 : i.isThread()) && (i = f.Z.getChannel(null == i ? void 0 : i.parent_id)), null == i || i.isPrivate())) {
                     this.focusEditor();
                     return;
                 }

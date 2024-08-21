@@ -20,8 +20,8 @@ var a = n(120356),
     T = n(430824),
     h = n(594174),
     N = n(938475),
-    f = n(5192),
-    C = n(981631),
+    C = n(5192),
+    f = n(981631),
     p = n(689938),
     g = n(745571);
 function S(e) {
@@ -58,7 +58,7 @@ function S(e) {
         B = null === (x = Z.recipients) || void 0 === x ? void 0 : x.find((e) => e !== L.author.id),
         k = (0, r.e7)([h.default], () => (null != B ? h.default.getUser(B) : null)),
         G = (0, d.ZP)(L),
-        F = (0, f._T)(Z.getGuildId(), Z.id, k),
+        F = (0, C._T)(Z.getGuildId(), Z.id, k),
         w = (0, r.Wu)([N.ZP], () => (null != j ? N.ZP.getVoiceStatesForChannel(j) : []), [j]),
         V = w.some((e) => e.user.id === (null == U ? void 0 : U.id)),
         H =
@@ -130,7 +130,7 @@ function S(e) {
                     (0, i.jsxs)(l.Button, {
                         color: l.Button.Colors.BRAND,
                         onClick: () => {
-                            null != b && null != P && ((0, I.uL)(C.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
+                            null != b && null != P && ((0, I.uL)(f.Z5c.CHANNEL(P, b)), c.default.selectVoiceChannel(b));
                         },
                         className: g.button,
                         innerClassName: g.buttonInner,

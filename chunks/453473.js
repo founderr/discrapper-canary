@@ -20,8 +20,8 @@ var i = n(735250),
     T = n(373662),
     h = n(703656),
     N = n(695346),
-    f = n(675478),
-    C = n(581883),
+    C = n(675478),
+    f = n(581883),
     p = n(592125),
     g = n(594174),
     S = n(585483),
@@ -43,24 +43,24 @@ let j = {
         }
     },
     U = (e) => {
-        f.hW.updateAsync(
+        C.hW.updateAsync(
             'forLater',
             (t) => {
                 if (t.currentTab === e) return !1;
                 t.currentTab = e;
             },
-            f.fy.FREQUENT_USER_ACTION
+            C.fy.FREQUENT_USER_ACTION
         );
     };
 function y(e) {
     let { closePopout: t, throttledNow: n } = e,
-        a = (0, u.e7)([C.Z], () => {
+        a = (0, u.e7)([f.Z], () => {
             var e, t;
-            return null !== (t = null === (e = C.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : d.Pr.ALL;
+            return null !== (t = null === (e = f.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : d.Pr.ALL;
         }),
-        [s] = (0, u.Wu)([O.Z, C.Z], () => {
+        [s] = (0, u.Wu)([O.Z, f.Z], () => {
             var e, t;
-            let n = null !== (t = null === (e = C.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : d.Pr.ALL;
+            let n = null !== (t = null === (e = f.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : d.Pr.ALL;
             return [n === d.Pr.ALL ? O.Z.getSavedMessages() : n === d.Pr.BOOKMARKS ? O.Z.getMessageBookmarks() : O.Z.getMessageReminders(), O.Z.getVersion()];
         }),
         r = (0, u.e7)([O.Z], () => O.Z.getOverdueMessageReminderCount());

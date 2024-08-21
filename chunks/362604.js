@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
 }),
     n(47120),
@@ -21,28 +21,28 @@ var i = n(735250),
     T = n(981631),
     h = n(689938),
     N = n(360869);
-function f(e) {
-    let { message: t, channel: s, compact: f } = e,
-        C = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+function C(e) {
+    let { message: t, channel: s, compact: C } = e,
+        f = (0, l.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
         [p, g] = a.useState(null);
     return (a.useEffect(() => {
         let e = setInterval(() => {
-            C.length > 0 && g(C[Math.floor(Math.random() * C.length)]);
+            f.length > 0 && g(f[Math.floor(Math.random() * f.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [C]),
+    }, [f]),
     null == s.guild_id)
         ? null
         : (0, i.jsxs)('div', {
               children: [
                   (0, i.jsx)(c.Z, {
-                      className: r()(N.mainContainer, { [N.compact]: f }),
+                      className: r()(N.mainContainer, { [N.compact]: C }),
                       icon: n(570111),
-                      compact: f,
+                      compact: C,
                       children: (0, i.jsx)('div', {
-                          className: r()(N.__invalid_content, { [N.compact]: f }),
+                          className: r()(N.__invalid_content, { [N.compact]: C }),
                           children: (0, i.jsx)('div', {
-                              className: r()(N.__invalid_messageContent, { [N.compact]: f }),
+                              className: r()(N.__invalid_messageContent, { [N.compact]: C }),
                               children: '' !== t.content ? t.content : h.Z.Messages.DEADCHAT_PROMPT_1
                           })
                       })

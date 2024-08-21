@@ -27,8 +27,8 @@ function d(e) {
         T = _.type === a.d.GUILD_ANNOUNCEMENT && I,
         h = !d.hasFlag(u.iLy.EPHEMERAL) && (m || T),
         N = m && null != d.messageReference ? d.messageReference.message_id : d.id,
-        f = m && null != d.messageReference ? d.messageReference.channel_id : _.id,
-        C = m && (null === (n = d.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : _.guild_id,
+        C = m && null != d.messageReference ? d.messageReference.channel_id : _.id,
+        f = m && (null === (n = d.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? d.messageReference.guild_id : _.guild_id,
         p = i.useCallback(
             (e) => {
                 e
@@ -36,12 +36,12 @@ function d(e) {
                           messageId: N,
                           channelId: _.id,
                           guildId: _.guild_id,
-                          sourceChannelId: f,
-                          sourceGuildId: C
+                          sourceChannelId: C,
+                          sourceGuildId: f
                       })
                     : c.Z.handleMessageLostVisibility(N);
             },
-            [N, _.id, _.guild_id, f, C]
+            [N, _.id, _.guild_id, C, f]
         ),
         g = o.Z.useExperiment(
             { location: '836a4b_1' },

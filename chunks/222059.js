@@ -1,6 +1,6 @@
 n.d(t, {
     u: function () {
-        return V;
+        return H;
     }
 }),
     n(47120);
@@ -25,8 +25,8 @@ var i = n(735250),
     N = n(699516),
     x = n(944486),
     S = n(594174),
-    v = n(295226),
-    Z = n(774343),
+    Z = n(295226),
+    v = n(774343),
     T = n(417363),
     L = n(941128),
     A = n(436088),
@@ -54,25 +54,25 @@ let B = {
         y: 0
     }
 };
-function H(e) {
+function V(e) {
     let { selected: t, user: n, badge: h, link: _, showProgressBadge: f } = e,
         I = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
         [N, x] = l.useState(!1),
-        [S, v] = l.useState(!1),
-        [Z, T] = l.useState(null),
+        [S, Z] = l.useState(!1),
+        [v, T] = l.useState(null),
         [L, b] = l.useState(0),
         [R, w] = l.useState(!1),
-        { canViewBroadcasts: H } = p.Z.useExperiment({ location: 'home_button_no_track' }, { autoTrackExposure: !1 }),
-        V = (0, m.Z)(),
-        F = V.length > 0 && H;
+        { canViewBroadcasts: V } = p.Z.useExperiment({ location: 'home_button_no_track' }, { autoTrackExposure: !1 }),
+        H = (0, m.Z)(),
+        F = H.length > 0 && V;
     (0, g.P)();
     let W = (0, r.Ie)('home'),
         z = () => {
-            T(null), b(0), clearTimeout(Z);
+            T(null), b(0), clearTimeout(v);
         };
     if (null == n) return null;
     let Y = G.Z.Messages.DIRECT_MESSAGES;
-    S && (Y = s.K.get(D.wli) ? G.Z.Messages.DISCODO_ENABLED : G.Z.Messages.DISCODO_DISABLED), V.length > 0 && p.Z.trackExposure({ location: 'home_button' });
+    S && (Y = s.K.get(D.wli) ? G.Z.Messages.DISCODO_ENABLED : G.Z.Messages.DISCODO_DISABLED), H.length > 0 && p.Z.trackExposure({ location: 'home_button' });
     let K = null;
     !t && f
         ? (K = (0, i.jsx)(c.Z, {
@@ -91,15 +91,15 @@ function H(e) {
                 onMouseEnter: () => x(!0),
                 onMouseLeave: () => x(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != Z && clearTimeout(Z), T(setTimeout(z, 500)), b(L + 1), 15 === L)) {
+                    if (!__OVERLAY__ && (null != v && clearTimeout(v), T(setTimeout(z, 500)), b(L + 1), 15 === L)) {
                         z();
                         let e = !s.K.get(D.wli);
                         s.K.set(D.wli, e),
                             e && s.K.set(U.O5, !0),
                             e ? (0, M.GN)('discodo') : (0, M.GN)('user_leave'),
-                            v(!0),
+                            Z(!0),
                             setTimeout(() => {
-                                v(!1);
+                                Z(!1);
                             }, 1000);
                     }
                 },
@@ -169,7 +169,7 @@ function H(e) {
         })
     });
 }
-function V() {
+function H() {
     let e = (0, R.n)(),
         t = (0, a.e7)([L.Z, T.Z], () => {
             let e = (0, c.E)(L.Z.activeItems, T.Z),
@@ -180,9 +180,9 @@ function V() {
         n = (0, a.e7)([_.Z], () => _.Z.getUserIdsToValidate()),
         r = (0, a.e7)([N.Z], () => N.Z.getPendingCount()),
         s = Object.keys(w.nG),
-        { unviewedTrialCount: o, unviewedDiscountCount: u } = (0, a.cj)([v.Z], () => ({
-            unviewedTrialCount: v.Z.getUnacknowledgedOffers(s).length,
-            unviewedDiscountCount: v.Z.getUnacknowledgedDiscountOffers().length
+        { unviewedTrialCount: o, unviewedDiscountCount: u } = (0, a.cj)([Z.Z], () => ({
+            unviewedTrialCount: Z.Z.getUnacknowledgedOffers(s).length,
+            unviewedDiscountCount: Z.Z.getUnacknowledgedDiscountOffers().length
         })),
         d = o + u,
         p = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
@@ -193,10 +193,10 @@ function V() {
         n.length > 0 && (0, h.E7)();
     }, [n]),
         (0, f.Z)();
-    let E = Z.Z.getHomeLink();
+    let E = v.Z.getHomeLink();
     return (
         C && (E = D.Z5c.APPLICATION_STORE),
-        (0, i.jsx)(H, {
+        (0, i.jsx)(V, {
             selected: e,
             user: p,
             selectedChannelId: x.Z.getChannelId(D.ME),

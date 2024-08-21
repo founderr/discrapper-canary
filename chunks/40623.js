@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return o;
+        return r;
     }
 });
 var a = t(735250);
@@ -8,9 +8,9 @@ t(470079);
 var l = t(481060),
     s = t(689938),
     i = t(186983);
-function o(e) {
+function r(e) {
     let { sendStartNotification: n, setSendStartNotification: t } = e,
-        o = n ? s.Z.Messages.GUILD_NOTIFY_MEMBERS_ENABLED_NEW : s.Z.Messages.GUILD_NOTIFY_MEMBERS_DISABLED_NEW;
+        r = n ? s.Z.Messages.GUILD_NOTIFY_MEMBERS_ENABLED_NEW : s.Z.Messages.GUILD_NOTIFY_MEMBERS_DISABLED_NEW;
     return (0, a.jsx)('div', {
         className: i.notificationToggle,
         children: (0, a.jsx)(l.Checkbox, {
@@ -32,7 +32,7 @@ function o(e) {
                     children: (e) =>
                         (0, a.jsx)('span', {
                             ...e,
-                            children: o
+                            children: r
                         })
                 })
             })

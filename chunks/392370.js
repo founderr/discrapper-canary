@@ -3,7 +3,7 @@ t.d(n, {
         return b;
     },
     pe: function () {
-        return S;
+        return L;
     }
 }),
     t(47120),
@@ -39,10 +39,10 @@ function P(e, n) {
         i = (0, v.$d)(n);
     return (0, m.un)(t, i);
 }
-function L(e, n) {
+function S(e, n) {
     return (0, m.un)(e.displayName, n.displayName);
 }
-function S(e) {
+function L(e) {
     let { channel: n, query: t, commandLimit: a, applicationLimit: o, searchesCommands: r = !0, searchesBots: s = !0, searchesActivities: C = !0 } = e;
     t.startsWith(''.concat(I.GI)) && (t = t.substring(1));
     let {
@@ -118,7 +118,7 @@ function S(e) {
             includeEmbeddedApps: C,
             includeNonEmbeddedApps: s
         }),
-        S = (0, d.Z)({ guildId: n.getGuildId() }),
+        L = (0, d.Z)({ guildId: n.getGuildId() }),
         b = i.useMemo(() => {
             var e;
             if (!r) return [];
@@ -202,7 +202,7 @@ function S(e) {
                             return u.ZP.getScoreWithoutLoadingLatest(e, t) - i;
                         };
                     })({ channel: n }),
-                    L
+                    S
                 ]
             });
         }, [r, f, a, n, t]),
@@ -235,7 +235,7 @@ function S(e) {
                 );
                 i.push(...N),
                     i.push(
-                        ...S.filter((n) => {
+                        ...L.filter((n) => {
                             let {
                                 application: { id: t }
                             } = n;
@@ -297,7 +297,7 @@ function S(e) {
                 ],
                 sortComparers: [g, P]
             });
-        }, [s, C, o, n, t, N, S]),
+        }, [s, C, o, n, t, N, L]),
         M = R.length > 0,
         y = T.length > 0;
     return {

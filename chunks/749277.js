@@ -20,8 +20,8 @@ var a = n(442837),
     T = n(963249),
     h = n(346585),
     N = n(303172),
-    f = n(212332),
-    C = n(463230),
+    C = n(212332),
+    f = n(463230),
     p = n(246965),
     g = n(703656),
     S = n(706454),
@@ -193,7 +193,7 @@ let D = (e) => {
                         ]
                     });
                 case s.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
-                    return (0, i.jsx)(C.Z, {
+                    return (0, i.jsx)(f.Z, {
                         notice: j,
                         noticeType: D,
                         dismissCurrentNotice: () => A(M.L.UNKNOWN)
@@ -305,7 +305,7 @@ let D = (e) => {
                         ]
                     });
                 case s.z.CASH_APP_PAY_AWARENESS_NAGBAR:
-                    return (0, i.jsx)(f.Z, { onClose: () => A(M.L.TAKE_ACTION) });
+                    return (0, i.jsx)(C.Z, { onClose: () => A(M.L.TAKE_ACTION) });
             }
         }
     });

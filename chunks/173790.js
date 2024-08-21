@@ -27,21 +27,21 @@ function I(e) {
     var n;
     let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
         P = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
-        L = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        S = (0, _.ye)({ application: L }) ? g : A.Z,
+        S = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
+        L = (0, _.ye)({ application: S }) ? g : A.Z,
         b = a.useRef(null),
         { iconURL: R, name: T } = a.useMemo(
             () =>
-                (0, _.sl)(L, {
+                (0, _.sl)(S, {
                     fakeAppIconURL: x,
                     size: 84
                 }),
-            [L]
+            [S]
         );
     return (
         a.useEffect(() => {
-            I ? d.ZP.queryInstallOnDemandApp(L.id, t.id) : d.ZP.maybeQueryForInstallLessApps(L.id, t.id);
-        }, [L.id, t.id, I]),
+            I ? d.ZP.queryInstallOnDemandApp(S.id, t.id) : d.ZP.maybeQueryForInstallLessApps(S.id, t.id);
+        }, [S.id, t.id, I]),
         (0, i.jsxs)(r.ScrollerNone, {
             className: v.container,
             fade: !0,
@@ -60,15 +60,15 @@ function I(e) {
                         className: v.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(S, {
+                (0, i.jsx)(L, {
                     channel: t,
-                    application: L,
+                    application: S,
                     sectionName: c
                 }),
                 P === p._b.TEXT
                     ? (0, i.jsx)(f.Z, {
                           channel: t,
-                          application: L,
+                          application: S,
                           sectionName: c,
                           installOnDemand: I
                       })

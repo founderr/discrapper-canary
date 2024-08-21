@@ -19,8 +19,8 @@ var i = n(735250),
     T = n(313889),
     h = n(825829),
     N = n(226192),
-    f = n(36459),
-    C = n(336197),
+    C = n(36459),
+    f = n(336197),
     p = n(359110),
     g = n(103575),
     S = n(496675),
@@ -261,7 +261,7 @@ function X(e) {
         }, [l.id, ee, X, o]),
         ed = a.useCallback(
             (e) => {
-                if (null != et && null != z) e.stopPropagation(), e.preventDefault(), (0, C.Z)(B.Z5c.CHANNEL(null == z ? void 0 : z.guild_id, null == z ? void 0 : z.id, et));
+                if (null != et && null != z) e.stopPropagation(), e.preventDefault(), (0, f.Z)(B.Z5c.CHANNEL(null == z ? void 0 : z.guild_id, null == z ? void 0 : z.id, et));
             },
             [z, et]
         ),
@@ -278,7 +278,7 @@ function X(e) {
             [l, z]
         ),
         eE = a.useCallback(() => {
-            (0, f.Xx)(l.id, o, T.d.DELETE_USER_MESSAGE);
+            (0, C.Xx)(l.id, o, T.d.DELETE_USER_MESSAGE);
         }, [o, l.id]),
         eI = (0, G.L9)(Number(en)),
         em = null != ei,

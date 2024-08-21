@@ -19,8 +19,8 @@ let _ = (e) => {
             T = i.useRef(!1),
             [h, N] = i.useState(!1),
             {
-                initialized: f,
-                loading: C,
+                initialized: C,
+                loading: f,
                 items: p,
                 hasMore: g,
                 cursor: S,
@@ -39,8 +39,8 @@ let _ = (e) => {
             }));
         i.useEffect(() => ((0, o.Vk)(!0), () => (0, o.Vk)(!1)), []),
             i.useEffect(() => {
-                f && t && (0, s.FT)(d.W.NOTIFICATION_CENTER);
-            }, [t, f]);
+                C && t && (0, s.FT)(d.W.NOTIFICATION_CENTER);
+            }, [t, C]);
         let O = (0, r.Z)();
         i.useEffect(
             () => () => {
@@ -50,18 +50,18 @@ let _ = (e) => {
         ),
             i.useEffect(() => {
                 let e = m && t;
-                (!f || e) &&
+                (!C || e) &&
                     (0, o.jk)({
                         limit: null != I ? I : E ? 8 : 20,
                         with_mentions: E,
                         roles_filter: R,
                         everyone_filter: x
                     });
-            }, [f, m, t, E, R, x, I]);
+            }, [C, m, t, E, R, x, I]);
         let M = i.useCallback(
             async (e) => {
                 !T.current &&
-                    f &&
+                    C &&
                     g &&
                     null != S &&
                     (e || !A) &&
@@ -81,11 +81,11 @@ let _ = (e) => {
                     ),
                     N(!1));
             },
-            [f, g, S, A, E, R, x]
+            [C, g, S, A, E, R, x]
         );
         return {
-            initialized: f,
-            loading: C,
+            initialized: C,
+            loading: f,
             items: p,
             hasMore: g,
             loadMore: M,

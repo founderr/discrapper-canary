@@ -1,11 +1,11 @@
-var i = r(192291),
-    n = r(22092),
-    o = i.aTypedArrayConstructor;
-(0, i.exportTypedArrayStaticMethod)(
+var r = n(192291),
+    i = n(22092),
+    a = r.aTypedArrayConstructor;
+(0, r.exportTypedArrayStaticMethod)(
     'of',
     function () {
-        for (var e = 0, t = arguments.length, r = new (o(this))(t); t > e; ) r[e] = arguments[e++];
-        return r;
+        for (var e = 0, t = arguments.length, n = new (a(this))(t); t > e; ) n[e] = arguments[e++];
+        return n;
     },
-    n
+    i
 );

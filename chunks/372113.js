@@ -15,8 +15,8 @@ var a = n(120356),
     T = n(918701),
     h = n(566078),
     N = n(340100),
-    f = n(644646),
-    C = n(667105),
+    C = n(644646),
+    f = n(667105),
     p = n(341907),
     g = n(128535),
     S = n(87894),
@@ -55,7 +55,7 @@ function P(e) {
         _ = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
         m = (0, r.e7)([I.Z], () => I.Z.isEnrolling(t.id)),
         h = (0, T.zK)(t, R.S7.IN_HOUSE_CONSOLE_QUEST),
-        N = (0, C.Ks)({
+        N = (0, f.Ks)({
             progressState: n,
             quest: t,
             isInHouseQuest: h,
@@ -64,8 +64,8 @@ function P(e) {
             questContentPosition: c,
             inGiftInventory: u
         }),
-        f = h && u && d,
-        p = f ? M.inHouseButton : l.ButtonColors.BRAND,
+        C = h && u && d,
+        p = C ? M.inHouseButton : l.ButtonColors.BRAND,
         g = d && !_ ? l.ShinyButton : l.Button;
     return (0, i.jsx)(
         l.Tooltip,
@@ -84,7 +84,7 @@ function P(e) {
                     children: (0, i.jsxs)('div', {
                         className: M.ctaButtonInner,
                         children: [
-                            f &&
+                            C &&
                                 (0, i.jsx)('img', {
                                     src: v,
                                     alt: '',
@@ -100,7 +100,7 @@ function P(e) {
     );
 }
 t.Z = (e) => {
-    let { quest: t, location: n, size: a, isFocused: o, isQuestExpired: I, isExpanded: C, isAnimating: v, contentPosition: b } = e,
+    let { quest: t, location: n, size: a, isFocused: o, isQuestExpired: I, isExpanded: f, isAnimating: v, contentPosition: b } = e,
         D = (0, E._Q)(t),
         j = D >= E.OH.ACCEPTED,
         U = D >= E.OH.COMPLETED,
@@ -108,7 +108,7 @@ t.Z = (e) => {
         B = (0, T.Xv)(t.config),
         k = (0, S.uq)(n),
         G = n === m.jn.QUESTS_EMBED,
-        F = C || v,
+        F = f || v,
         w = j && !y && k,
         V = (0, E.t5)(t, R.dr.QUESTS_CARD, n),
         { xboxAndPlaystationAccounts: H } = (0, E.z6)(),
@@ -117,7 +117,7 @@ t.Z = (e) => {
         K = k && B,
         z = I && !U,
         Q = H.length > 0 && k && (0, T.$J)(t) && j && !U && !W,
-        q = (0, i.jsx)(f.Z, {
+        q = (0, i.jsx)(C.Z, {
             autoplay: o,
             className: s()(M.gridImg, {
                 [M.questRewardGiftInventory]: k && 'lg' === a,
@@ -184,8 +184,8 @@ t.Z = (e) => {
                                         I = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
                                         m = I && (null === (n = l.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
                                         N = (0, T.zK)(l, R.S7.IN_HOUSE_CONSOLE_QUEST),
-                                        f = (0, S.uq)(o),
-                                        C = (0, E.B6)(null === (i = l.userStatus) || void 0 === i ? void 0 : i.completedAt, {
+                                        C = (0, S.uq)(o),
+                                        f = (0, E.B6)(null === (i = l.userStatus) || void 0 === i ? void 0 : i.completedAt, {
                                             year: 'numeric',
                                             month: 'long',
                                             day: 'numeric'
@@ -194,7 +194,7 @@ t.Z = (e) => {
                                         g = h.r.build(l.config).defaultReward.messages.nameWithArticle,
                                         A = (0, T.Kr)(l.config),
                                         M = (0, T.b7)(l);
-                                    if (I && N && f) return O.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: C });
+                                    if (I && N && C) return O.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: f });
                                     if (m) {
                                         let e = p
                                                 ? (0, T.o9)({
@@ -206,19 +206,19 @@ t.Z = (e) => {
                                         return null != t
                                             ? O.Z.Messages.QUEST_REWARD_COMPLETED_CLAIMED.format({
                                                   reward: t,
-                                                  date: C
+                                                  date: f
                                               })
                                             : O.Z.Messages.QUEST_REWARD_COMPLETED.format({
                                                   reward: g,
-                                                  date: C
+                                                  date: f
                                               });
                                     }
                                     if (I)
                                         return p
-                                            ? O.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: C })
+                                            ? O.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: f })
                                             : O.Z.Messages.QUEST_REWARD_COMPLETED.format({
                                                   reward: g,
-                                                  date: C
+                                                  date: f
                                               });
                                     let v = p
                                         ? (0, T.o9)({

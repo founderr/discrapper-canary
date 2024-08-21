@@ -6,13 +6,13 @@ n.d(t, {
         return m;
     },
     c: function () {
-        return f;
+        return C;
     },
     dy: function () {
         return h;
     },
     hs: function () {
-        return C;
+        return f;
     },
     op: function () {
         return N;
@@ -86,7 +86,7 @@ function N(e) {
         null != n && s && !r && (0, u.Vb)(n.dropsQuestId);
     }, [n, s, r]);
 }
-function f(e, t, n, i) {
+function C(e, t, n, i) {
     var s;
     let r = m(e),
         c = null == r ? void 0 : r.drop,
@@ -96,14 +96,14 @@ function f(e, t, n, i) {
         T = (0, l.ot)([n, i]),
         h = (0, o.wE)(i),
         N = null == c || (0, E.hM)(c),
-        f = !!(null != c && !N && I && (null == r ? void 0 : r.config.dropsEnabled) && u);
+        C = !!(null != c && !N && I && (null == r ? void 0 : r.config.dropsEnabled) && u);
     return {
-        partnerGame: f ? e : null,
+        partnerGame: C ? e : null,
         dropsActivityPanelExperienceBlocked: T,
         showDropsSparkles: !d && !h
     };
 }
-function C(e, t, n) {
+function f(e, t, n) {
     let i = (0, E.BS)(e);
     (0, r.Z)({
         type: t,

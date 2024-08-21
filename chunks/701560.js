@@ -21,8 +21,8 @@ var i,
     T = n(358085),
     h = n(346329),
     N = n(981631),
-    f = n(689938),
-    C = n(713958);
+    C = n(689938),
+    f = n(713958);
 function p(e, t, n) {
     return (
         t in e
@@ -47,15 +47,15 @@ class g extends (i = s.PureComponent) {
         let { dispatchState: e } = this.props;
         return null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1
             ? (0, a.jsxs)(c.Clickable, {
-                  'aria-label': f.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
-                  className: C.dropdownArrowHitbox,
+                  'aria-label': C.Z.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
+                  className: f.dropdownArrowHitbox,
                   onClick: this.handleDropdownClick,
                   children: [
-                      (0, a.jsx)('div', { className: C.arrowSeparator }),
+                      (0, a.jsx)('div', { className: f.arrowSeparator }),
                       (0, a.jsx)(c.ChevronSmallDownIcon, {
                           size: 'md',
                           color: 'currentColor',
-                          className: C.dropdownArrow
+                          className: f.dropdownArrow
                       })
                   ]
               })
@@ -64,13 +64,13 @@ class g extends (i = s.PureComponent) {
     renderDisabledButton(e, t) {
         let { className: n, fullWidth: i, size: s, customDisabledColor: r, tooltipPosition: l } = this.props;
         return (0, a.jsxs)('div', {
-            className: C.disabledButtonWrapper,
+            className: f.disabledButtonWrapper,
             children: [
                 (0, a.jsx)(c.Button, {
                     className: n,
                     fullWidth: i,
                     size: s,
-                    color: null != r ? r : C.disabledButtonColor,
+                    color: null != r ? r : f.disabledButtonColor,
                     disabled: !0,
                     children: e
                 }),
@@ -79,7 +79,7 @@ class g extends (i = s.PureComponent) {
                     position: l,
                     children: (e) =>
                         (0, a.jsx)('div', {
-                            className: C.disabledButtonOverlay,
+                            className: f.disabledButtonOverlay,
                             ...e
                         })
                 })
@@ -88,12 +88,12 @@ class g extends (i = s.PureComponent) {
     }
     render() {
         let { className: e, fullWidth: t, size: n, color: i, isLaunchable: s, isLaunching: r, isRunning: o, isShiny: u, hideNotLaunchable: d } = this.props;
-        if (!s) return d ? null : this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_PLAY, T.isPlatformEmbedded ? f.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : f.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
-        if (o) return this.renderDisabledButton(f.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
+        if (!s) return d ? null : this.renderDisabledButton(C.Z.Messages.GAME_ACTION_BUTTON_PLAY, T.isPlatformEmbedded ? C.Z.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : C.Z.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
+        if (o) return this.renderDisabledButton(C.Z.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
         let _ = u ? c.ShinyButton : c.Button;
         return (0, a.jsxs)(_, {
-            className: l()(C.playButton, e),
-            innerClassName: C.playButtonContents,
+            className: l()(f.playButton, e),
+            innerClassName: f.playButtonContents,
             fullWidth: t,
             size: n,
             color: null != i ? i : c.Button.Colors.GREEN,
@@ -101,8 +101,8 @@ class g extends (i = s.PureComponent) {
             onClick: this.handleClick,
             children: [
                 (0, a.jsx)('div', {
-                    className: C.buttonText,
-                    children: f.Z.Messages.GAME_ACTION_BUTTON_PLAY
+                    className: f.buttonText,
+                    children: C.Z.Messages.GAME_ACTION_BUTTON_PLAY
                 }),
                 this.renderDropdown()
             ]

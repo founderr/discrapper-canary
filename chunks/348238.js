@@ -63,8 +63,8 @@ var i = n(735250),
     T = n(585483),
     h = n(5967),
     N = n(630388),
-    f = n(358085),
-    C = n(51144),
+    C = n(358085),
+    f = n(51144),
     p = n(91047),
     g = n(901461),
     S = n(50284),
@@ -84,7 +84,7 @@ function O(e, t, n) {
                 n();
                 return;
             }
-            let s = '@'.concat(C.ZP.getUserTag(a, { decoration: 'never' })),
+            let s = '@'.concat(f.ZP.getUserTag(a, { decoration: 'never' })),
                 r = '<@'.concat(e, '>');
             T.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
                 plainText: s,
@@ -133,7 +133,7 @@ function j(e, t, s, l) {
     return a.useCallback(
         (e, t) => {
             if (m) return;
-            if (!f.isPlatformEmbedded) {
+            if (!C.isPlatformEmbedded) {
                 let t = e.target;
                 if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();

@@ -1,48 +1,48 @@
-r.d(t, {
+t.d(n, {
     Z: function () {
-        return l;
+        return i;
     }
 });
-var n = r(735250);
-r(470079);
-var i = r(481060),
-    o = r(313201),
-    a = r(756843);
-function l(e) {
-    let { transitionState: t, title: r, subtitle: l, children: u } = e,
-        c = (0, o.Dt)();
-    return (0, n.jsxs)(i.ModalRoot, {
-        transitionState: t,
-        'aria-labelledby': c,
+var o = t(735250);
+t(470079);
+var r = t(481060),
+    s = t(313201),
+    c = t(756843);
+function i(e) {
+    let { transitionState: n, title: t, subtitle: i, children: l } = e,
+        a = (0, s.Dt)();
+    return (0, o.jsxs)(r.ModalRoot, {
+        transitionState: n,
+        'aria-labelledby': a,
         children: [
-            (0, n.jsx)('div', {
-                className: a.shieldIconContainer,
-                children: (0, n.jsx)('div', {
-                    className: a.shieldIcon,
-                    children: (0, n.jsx)(i.ShieldLockIcon, {
+            (0, o.jsx)('div', {
+                className: c.shieldIconContainer,
+                children: (0, o.jsx)('div', {
+                    className: c.shieldIcon,
+                    children: (0, o.jsx)(r.ShieldLockIcon, {
                         size: 'custom',
                         width: 55,
                         height: 55,
-                        color: i.tokens.colors.HEADER_SECONDARY
+                        color: r.tokens.colors.HEADER_SECONDARY
                     })
                 })
             }),
-            (0, n.jsxs)(i.ModalContent, {
-                className: a.content,
+            (0, o.jsxs)(r.ModalContent, {
+                className: c.content,
                 children: [
-                    (0, n.jsx)(i.Heading, {
-                        className: a.title,
+                    (0, o.jsx)(r.Heading, {
+                        className: c.title,
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
-                        children: r
+                        children: t
                     }),
-                    (0, n.jsx)(i.Text, {
-                        className: a.subtitle,
+                    (0, o.jsx)(r.Text, {
+                        className: c.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: l
+                        children: i
                     }),
-                    u
+                    l
                 ]
             })
         ]

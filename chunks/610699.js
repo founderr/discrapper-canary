@@ -22,8 +22,8 @@ var i = n(735250),
     T = n(884338),
     h = n(100527),
     N = n(906732),
-    f = n(835473),
-    C = n(471445),
+    C = n(835473),
+    f = n(471445),
     p = n(111028),
     g = n(955415),
     S = n(601964),
@@ -93,7 +93,7 @@ function y(e) {
 function B(e) {
     let { channel: t, guild: n, isStacked: a, hasEnded: s } = e;
     if (null != t && null != n) {
-        let e = (0, C.KS)(t, n);
+        let e = (0, f.KS)(t, n);
         return (0, i.jsxs)('div', {
             className: r()(b.channel, {
                 [b.stacked]: a,
@@ -138,7 +138,7 @@ function k(e) {
     var t, n;
     let s,
         l,
-        { invite: u, getAcceptInviteContext: C } = e,
+        { invite: u, getAcceptInviteContext: f } = e,
         { approximate_member_count: p, approximate_presence_count: M, target_type: k, target_application: G } = u;
     o()(k === Z.Iq.EMBEDDED_APPLICATION && null != G, 'invalid application invite');
     let F = a.useRef(null),
@@ -161,7 +161,7 @@ function k(e) {
         );
     }, [F, V, Y]);
     let W = (0, c.e7)([R.Z], () => (null != u.guild ? R.Z.getGuild(u.guild.id) : null), [u]),
-        K = (0, f.Z)([G.id])[0],
+        K = (0, C.Z)([G.id])[0],
         z = (0, c.e7)([E.ZP], () => {
             var e;
             return (null == u ? void 0 : u.channel) != null && (null === (e = E.ZP.getSelfEmbeddedActivityForChannel(u.channel.id)) || void 0 === e ? void 0 : e.applicationId) === G.id;
@@ -202,7 +202,7 @@ function k(e) {
         es = () => {
             _.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: u.code,
-                context: C('Invite Button Embed'),
+                context: f('Invite Button Embed'),
                 analyticsLocations: J
             });
         };

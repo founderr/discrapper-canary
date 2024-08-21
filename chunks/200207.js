@@ -6,17 +6,17 @@ i.d(n, {
 var l = i(735250);
 i(470079);
 var t = i(557533),
-    s = i.n(t),
-    r = i(789978),
+    r = i.n(t),
+    s = i(789978),
     a = i(790472),
     o = i(777207),
     d = i(25378),
     u = i(778342);
 function c(e) {
     let { title: n, description: i, headerImage: t, onDetails: c, onPurchase: p, PurchaseButton: m, availabilityLabel: v } = e;
-    return (0, l.jsx)(r.tE, {
+    return (0, l.jsx)(s.tE, {
         children: (0, l.jsxs)('div', {
-            className: s()(d.wrapper, u.hoverCard),
+            className: r()(d.wrapper, u.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != c ? c() : null != p && p();

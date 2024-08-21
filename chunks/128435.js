@@ -71,7 +71,7 @@ function N(e) {
         ]
     });
 }
-function f(e) {
+function C(e) {
     let { action: t, channelId: n, messageId: s, isInteractive: l, className: o } = e,
         { actionButtonRef: d, manageFocusOnAction: _ } = (0, E.dv)(),
         I = a.useCallback(async () => {
@@ -119,7 +119,7 @@ function f(e) {
                   className: o
               });
 }
-function C(e) {
+function f(e) {
     let { message: t, poll: n, className: a } = e,
         s = (0, _.$B)(n.containerStyle),
         u = (function (e, t) {
@@ -162,20 +162,20 @@ function C(e) {
                       (0, i.jsxs)('div', {
                           className: m.bottomBar,
                           children: [
-                              (0, i.jsx)(f, {
+                              (0, i.jsx)(C, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.secondaryAction,
                                   className: m.secondaryAction,
                                   isInteractive: n.isInteractive
                               }),
-                              (0, i.jsx)(f, {
+                              (0, i.jsx)(C, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.tertiaryAction,
                                   className: m.tertiaryAction
                               }),
-                              (0, i.jsx)(f, {
+                              (0, i.jsx)(C, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.primaryAction
@@ -192,7 +192,7 @@ function p(e) {
         message: t,
         poll: n,
         children: (0, i.jsx)(E.Pk, {
-            children: (0, i.jsx)(C, {
+            children: (0, i.jsx)(f, {
                 message: t,
                 poll: n,
                 className: a

@@ -25,8 +25,8 @@ var i = n(735250),
     N = n(855981),
     x = n(55543),
     S = n(626135),
-    v = n(768581),
-    Z = n(358085),
+    Z = n(768581),
+    v = n(358085),
     T = n(998502),
     L = n(379164),
     A = n(590965),
@@ -137,7 +137,7 @@ function w(e) {
     });
     let { invite: f, error: C, submitting: N } = (0, s.cj)([A.Z], () => A.Z.getProps());
     l.useEffect(() => {
-        !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
+        !__OVERLAY__ && v.isPlatformEmbedded && ((0, v.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
     }, []);
     let x = (0, g.Dt)(),
         { analyticsLocations: S } = (0, d.ZP)(u.Z.INVITE_MODAL);
@@ -150,19 +150,19 @@ function w(e) {
     let { guild: j, channel: w, inviter: U, target_application: G } = f,
         k = null != j,
         B = null != f.stage_instance,
-        H = null == f.guild && null == f.channel && null != f.inviter;
+        V = null == f.guild && null == f.channel && null != f.inviter;
     if (null != G) (t = null == j ? void 0 : j.name), (n = I.Z.createFromServer(G).getCoverImageURL(1024));
     else if (null != j)
         (t = j.name),
-            (n = v.ZP.getGuildSplashURL({
+            (n = Z.ZP.getGuildSplashURL({
                 id: j.id,
                 splash: j.splash
             }));
     else if (((null == (t = w.name) || '' === t) && null != U && (t = U.username), null == t)) throw Error('no name for group DM invite');
-    let V = (0, m.yU)(),
+    let H = (0, m.yU)(),
         F = B ? R.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : R.Z.Messages.INVITE_MODAL_BUTTON.format({ guildName: t });
     return (
-        H && (F = R.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON),
+        V && (F = R.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON),
         (0, i.jsx)(d.Gt, {
             value: S,
             children: (0, i.jsxs)(o.ModalRoot, {
@@ -201,10 +201,10 @@ function w(e) {
                                         : null,
                                     (0, i.jsxs)('div', {
                                         children: [
-                                            V ? (0, i.jsx)(y, {}) : null,
+                                            H ? (0, i.jsx)(y, {}) : null,
                                             null == G
                                                 ? (0, i.jsx)(o.Tooltip, {
-                                                      text: V ? R.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
+                                                      text: H ? R.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                                                       position: 'bottom',
                                                       children: (e) => {
                                                           let { onMouseEnter: t, onMouseLeave: n } = e;
@@ -212,11 +212,11 @@ function w(e) {
                                                               size: h.zx.Sizes.LARGE,
                                                               onClick: M,
                                                               submitting: N,
-                                                              disabled: V,
+                                                              disabled: H,
                                                               color: B ? h.zx.Colors.GREEN : h.zx.Colors.BRAND,
                                                               onMouseEnter: t,
                                                               onMouseLeave: n,
-                                                              children: V ? R.Z.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : F
+                                                              children: H ? R.Z.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : F
                                                           });
                                                       }
                                                   })

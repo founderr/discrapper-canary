@@ -23,8 +23,8 @@ var i = n(735250),
     T = n(594174),
     h = n(671533),
     N = n(51144),
-    f = n(506071),
-    C = n(696014),
+    C = n(506071),
+    f = n(696014),
     p = n(847033),
     g = n(857428),
     S = n(893182),
@@ -55,7 +55,7 @@ function x(e) {
 function O(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         a = I.QK.useSetting(),
-        s = (0, f.n)() && a,
+        s = (0, C.n)() && a,
         [r, l] = (0, E.Z)(t, s),
         o = s
             ? (0, i.jsx)(d.Z, {
@@ -88,7 +88,7 @@ function M(e) {
     var t, n, s;
     let { guild: d, subscriptionsSettings: E } = e,
         I = d.id;
-    let { nickname: h, nickcolor: f } =
+    let { nickname: h, nickcolor: C } =
             ((s = I),
             (0, l.cj)(
                 [m.ZP, T.default],
@@ -104,7 +104,7 @@ function M(e) {
                 },
                 [s]
             )),
-        { isTruncated: M, ExpandableTextContainer: v } = (0, C.s)(),
+        { isTruncated: M, ExpandableTextContainer: v } = (0, f.s)(),
         L = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0,
         [Z, P] = a.useState(1),
         b = (0, c.Z)('(max-width: 1439px)'),
@@ -174,7 +174,7 @@ function M(e) {
                                                 return (0, i.jsx)(
                                                     'span',
                                                     {
-                                                        style: { color: f },
+                                                        style: { color: C },
                                                         children: e
                                                     },
                                                     t

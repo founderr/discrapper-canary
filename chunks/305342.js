@@ -20,8 +20,8 @@ var i = n(735250),
     T = n(290348),
     h = n(934826),
     N = n(768318),
-    f = n(570533),
-    C = n(971792),
+    C = n(570533),
+    f = n(971792),
     p = n(629262),
     g = n(761966),
     S = n(893729),
@@ -85,7 +85,7 @@ let P = (e) => {
     },
     b = (e) => {
         let { guildId: t, listingId: n } = e,
-            a = (0, f.Z)(t),
+            a = (0, C.Z)(t),
             [s] = T.XZ(n, t),
             r = a.filter((e) => s.has(e.id));
         return 0 === r.length
@@ -136,7 +136,7 @@ let P = (e) => {
     },
     D = (e) => {
         let { listingId: t, guildId: n, className: a } = e,
-            s = (0, C.Z)(n, t),
+            s = (0, f.Z)(n, t),
             [l] = T.UE(t),
             c = (0, p.Z)(l),
             [u] = T.R7(t),
@@ -219,8 +219,8 @@ let P = (e) => {
 t.Z = (e) => {
     var t;
     let { listingId: n, guildId: s, groupListingId: u, analyticsLocation: E } = e,
-        f = (0, m.jO)(n),
-        { openModal: C, canOpenModal: p, cannotOpenReason: S, isCheckingTrialEligibility: A } = (0, O.Z)(f, s, u, E),
+        C = (0, m.jO)(n),
+        { openModal: f, canOpenModal: p, cannotOpenReason: S, isCheckingTrialEligibility: A } = (0, O.Z)(C, s, u, E),
         P = (0, l.e7)([_.Z], () => _.Z.isSyncing),
         { activeSubscription: b, activeSubscriptionListing: U } = (0, h.Z)(u),
         y = (null == U ? void 0 : U.id) === n,
@@ -241,8 +241,8 @@ t.Z = (e) => {
         [X, J] = a.useState(!1),
         $ = X || !q,
         ee = (0, l.e7)([d.Z], () => d.Z.isViewingServerShop(s)),
-        et = (null == f ? void 0 : f.published) === !0,
-        en = (null == f ? void 0 : f.soft_deleted) === !0,
+        et = (null == C ? void 0 : C.published) === !0,
+        en = (null == C ? void 0 : C.soft_deleted) === !0,
         ei = L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
     return (et || ee) && !en
         ? (0, i.jsxs)('article', {
@@ -310,7 +310,7 @@ t.Z = (e) => {
                                                                 fullWidth: !0,
                                                                 disabled: !p || P,
                                                                 submitting: A,
-                                                                onClick: C,
+                                                                onClick: f,
                                                                 onlyShineOnHover: !0,
                                                                 children: L.Z.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
                                                             })

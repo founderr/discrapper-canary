@@ -15,8 +15,8 @@ var i,
     T = n(814082),
     h = n(23750),
     N = n(314897),
-    f = n(592125),
-    C = n(375954),
+    C = n(592125),
+    f = n(375954),
     p = n(306680),
     g = n(699516),
     S = n(914010),
@@ -39,14 +39,14 @@ let O = 'recentMentionFilterSettings',
     U = !1;
 function y(e) {
     if (e instanceof h.ZP) return e;
-    let t = C.Z.getMessage(e.channel_id, e.id);
+    let t = f.Z.getMessage(e.channel_id, e.id);
     return null != t ? t : (0, E.e5)(e);
 }
 function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     if ((0, m.Z)(e) && !x.V$x.SELF_MENTIONABLE_SYSTEM.has(e.type)) return null;
     null == t && (t = e.channel_id);
-    let n = f.Z.getChannel(t);
+    let n = C.Z.getChannel(t);
     if (null == n || n.type === x.d4z.DM || (P.guildFilter === x.NgX.THIS_SERVER && n.getGuildId() !== S.Z.getGuildId())) return null;
     let i = N.default.getId();
     if (g.Z.isBlockedForMessage(e) || (0, T.Z)(e, i)) return null;
@@ -109,7 +109,7 @@ function H(e) {
 }
 class Y extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(R.default, f.Z, C.Z, p.ZP);
+        this.waitFor(R.default, C.Z, f.Z, p.ZP);
     }
     isOpen() {
         return j;
@@ -192,7 +192,7 @@ class Y extends (i = c.ZP.Store) {
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
             M = o().filter(M, (e) => {
-                let n = f.Z.getChannel(e.channel_id);
+                let n = C.Z.getChannel(e.channel_id);
                 return (null != n && n.getGuildId() !== t.id) || (delete v[e.id], !1);
             });
         },

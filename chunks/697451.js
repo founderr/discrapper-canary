@@ -19,8 +19,8 @@ var i = n(735250),
     T = n(906732),
     h = n(103575),
     N = n(768581),
-    f = n(55935),
-    C = n(739566),
+    C = n(55935),
+    f = n(739566),
     p = n(421399),
     g = n(310423),
     S = n(223021),
@@ -75,8 +75,8 @@ function M(e) {
             ),
             [l, s.id, s.interactionData]
         ),
-        L = (0, C.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l),
-        Z = a.useMemo(() => (e.compact ? (0, S.Z)((0, f.vc)(u()(), 'LT')) : null), [e.compact]),
+        L = (0, f.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l),
+        Z = a.useMemo(() => (e.compact ? (0, S.Z)((0, C.vc)(u()(), 'LT')) : null), [e.compact]),
         P = (0, _.NX)(l.id),
         b = s.interaction;
     if (null == b || null == L) return null;
@@ -91,7 +91,7 @@ function M(e) {
                     });
                 if (null != a.interaction) {
                     var I, m, T;
-                    let e = (0, C.ij)(a.interaction.user, l);
+                    let e = (0, f.ij)(a.interaction.user, l);
                     n =
                         null !==
                             (T = N.ZP.getGuildMemberAvatarURL({

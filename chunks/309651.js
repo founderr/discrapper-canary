@@ -1,33 +1,33 @@
-n.d(t, {
+t.d(n, {
     x: function () {
-        return i;
+        return r;
     }
 }),
-    n(411104),
-    n(518263),
-    n(970173),
-    n(520712),
-    n(268111),
-    n(941497),
-    n(32026),
-    n(480839),
-    n(744285),
-    n(492257),
-    n(873817);
-async function i(e, t, n) {
+    t(411104),
+    t(518263),
+    t(970173),
+    t(520712),
+    t(268111),
+    t(941497),
+    t(32026),
+    t(480839),
+    t(744285),
+    t(492257),
+    t(873817);
+async function r(e, n, t) {
     if (0 !== e) throw Error('unsupported fingerprint format version');
-    if (0 === t.byteLength) throw Error('zero-length key');
-    if (0 === n.length) throw Error('zero-length user ID');
-    let i = BigInt(n);
-    if (i < 0n || i >= 2n ** 64n) throw Error('user ID out of range');
-    let a = new Uint8Array(),
-        s = new Uint8Array(2 + t.byteLength + 8);
-    s.set(t, 2);
-    let r = new DataView(s.buffer);
-    r.setUint16(0, e), r.setBigUint64(2 + t.byteLength, i);
+    if (0 === n.byteLength) throw Error('zero-length key');
+    if (0 === t.length) throw Error('zero-length user ID');
+    let r = BigInt(t);
+    if (r < 0n || r >= 2n ** 64n) throw Error('user ID out of range');
+    let i = new Uint8Array(),
+        u = new Uint8Array(2 + n.byteLength + 8);
+    u.set(n, 2);
+    let a = new DataView(u.buffer);
+    a.setUint16(0, e), a.setBigUint64(2 + n.byteLength, r);
     for (let e = 0; e < 5200; e++) {
-        let e = s.byteLength + t.byteLength;
-        a.byteLength !== e && (a = new Uint8Array(e)), a.set(s, 0), a.set(t, s.byteLength), (s = new Uint8Array(await window.crypto.subtle.digest('SHA-512', a)));
+        let e = u.byteLength + n.byteLength;
+        i.byteLength !== e && (i = new Uint8Array(e)), i.set(u, 0), i.set(n, u.byteLength), (u = new Uint8Array(await window.crypto.subtle.digest('SHA-512', i)));
     }
-    return s;
+    return u;
 }

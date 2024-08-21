@@ -14,8 +14,8 @@ var a = n(735250),
     d = n(592125),
     u = n(566620),
     g = n(122613),
-    v = n(678173),
-    m = n(636508),
+    m = n(678173),
+    v = n(636508),
     p = n(696068),
     f = n(361213),
     I = n(778569),
@@ -28,7 +28,7 @@ var a = n(735250),
 function S(e) {
     var t;
     let { applicationId: n, guildId: l, channelId: d, onActivityLaunch: g } = e,
-        { analyticsLocations: m } = (0, o.ZP)(r.Z.ACTIVITY_SHELF_ACTIVITY_DETAILS);
+        { analyticsLocations: v } = (0, o.ZP)(r.Z.ACTIVITY_SHELF_ACTIVITY_DETAILS);
     i.useEffect(() => {
         (0, u.w1)({ guildId: l });
     }, [l]);
@@ -36,13 +36,13 @@ function S(e) {
             applicationId: null != n ? n : '',
             size: 2048
         }),
-        x = (0, v.T)(null != l ? l : null, n);
+        x = (0, m.T)(null != l ? l : null, n);
     if (null == x) return null;
     let _ = null != x.activity.activity_preview_video_asset_id ? (0, f.Z)(n, x.activity.activity_preview_video_asset_id) : null,
         h = C.o[n],
         S = (null == h ? void 0 : h.playersSuggestionMin) != null && (null == h ? void 0 : h.playersSuggestionMax) != null ? ''.concat(h.playersSuggestionMin, ' - ').concat(h.playersSuggestionMax) : void 0;
     return (0, a.jsx)(o.Gt, {
-        value: m,
+        value: v,
         children: (0, a.jsx)('div', {
             className: E.scrollContainer,
             children: (0, a.jsxs)(s.Scroller, {
@@ -163,13 +163,13 @@ function S(e) {
 }
 function b(e) {
     var t, r;
-    let { activityItem: c, onLaunch: u, channelId: v } = e,
+    let { activityItem: c, onLaunch: u, channelId: m } = e,
         f = (0, I.Z)({
             applicationId: c.application.id,
             size: 2048
         }),
         { analyticsLocations: C } = (0, o.ZP)(),
-        [S, b] = i.useState(null !== (t = (0, m.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
+        [S, b] = i.useState(null !== (t = (0, v.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
         [N, j] = i.useState(
             null !==
                 (r = (0, p.d)({
@@ -180,7 +180,7 @@ function b(e) {
                 : void 0
         ),
         M = (0, l.e7)([d.Z], () => d.Z.getChannel(N), [N]),
-        A = (0, m.W)(),
+        A = (0, v.W)(),
         Z = (0, p.F)(S),
         y = i.useCallback(async () => {
             var e;
@@ -216,7 +216,7 @@ function b(e) {
                 variant: 'text-md/medium',
                 children: T.Z.Messages.EMBEDDED_ACTIVITIES_START_OR_SHARE
             }),
-            null == v
+            null == m
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
                           (0, a.jsx)(s.Select, {

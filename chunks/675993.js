@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return L;
+        return S;
     }
 }),
     t(47120);
@@ -27,7 +27,7 @@ var i = t(735250),
     I = t(689938),
     g = t(655863),
     P = t(910212);
-function L(e) {
+function S(e) {
     let { channel: n, application: t, videoUrl: l, imageCoverUrl: r, sectionName: s } = e,
         d = a.useMemo(() => {
             var e;
@@ -93,11 +93,11 @@ function L(e) {
                     })
                 ]
             }),
-            x ? (0, i.jsx)(S, { application: t }) : null
+            x ? (0, i.jsx)(L, { application: t }) : null
         ]
     });
 }
-function S(e) {
+function L(e) {
     let { application: n } = e,
         t = (0, E.Cb)(n),
         a = (0, E.Hu)(n);

@@ -16,20 +16,20 @@ var a = n(120356),
     T = n(566078),
     h = n(667105),
     N = n(981631),
-    f = n(689938),
-    C = n(410301);
-let p = (e) => (0 === e.length ? C.warning : C.danger),
-    g = (e, t) => (0 === e.length ? f.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: t }) : f.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: t })),
+    C = n(689938),
+    f = n(410301);
+let p = (e) => (0 === e.length ? f.warning : f.danger),
+    g = (e, t) => (0 === e.length ? C.Z.Messages.QUESTS_LAUNCHED_GAME.format({ gameTitle: t }) : C.Z.Messages.QUESTS_GAME_NOT_DETECTED.format({ gameTitle: t })),
     S = (e) => {
         let { quest: t, location: n, errors: a, gameTitle: s, consoleHelpArticle: l, expiredCredentialsInteractable: c } = e;
         if (0 === a.length)
             return (0, i.jsx)(o.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: f.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: s })
+                children: C.Z.Messages.QUESTS_MICROPHONE_UNIT_BODY.format({ gameTitle: s })
             });
         let E = [];
-        (0, m.Nj)({ quest: t }) && E.push((0, d.isWeb)() ? f.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : f.Z.Messages.QUEST_PROGRESS_NO_GAME);
+        (0, m.Nj)({ quest: t }) && E.push((0, d.isWeb)() ? C.Z.Messages.QUEST_PROGRESS_NO_GAME_WEB : C.Z.Messages.QUEST_PROGRESS_NO_GAME);
         let I = [
             ...E,
             ...a.map((e) => {
@@ -70,7 +70,7 @@ t.Z = function (e) {
         r = (0, E.n)(),
         u = (0, h.g2)({
             useReducedMotion: n,
-            className: C.refreshIcon
+            className: f.refreshIcon
         }),
         {
             errorHints: d,
@@ -89,16 +89,16 @@ t.Z = function (e) {
             afterRequest: u.stopAnimation
         });
     return (0, i.jsxs)('div', {
-        className: s()(C.container, { [C.inFlight]: m }),
+        className: s()(f.container, { [f.inFlight]: m }),
         children: [
             (0, i.jsxs)('div', {
-                className: C.info,
+                className: f.info,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: C.header,
+                        className: f.header,
                         children: [
                             (0, i.jsx)(o.CircleWarningIcon, {
-                                className: s()(C.headerIcon, p(d)),
+                                className: s()(f.headerIcon, p(d)),
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
@@ -121,14 +121,14 @@ t.Z = function (e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: C.cta,
+                className: f.cta,
                 children: (0, i.jsx)(o.Button, {
                     color: o.ButtonColors.PRIMARY,
                     onClick: N,
                     disabled: m,
                     children: (0, i.jsxs)('div', {
-                        className: C.ctaInner,
-                        children: [u.render(), f.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
+                        className: f.ctaInner,
+                        children: [u.render(), C.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
                     })
                 })
             })

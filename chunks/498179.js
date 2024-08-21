@@ -13,7 +13,7 @@ var a = n(442837),
     c = n(701560),
     u = n(785547);
 function d(e) {
-    let { application: t, fullWidth: n = !1, size: d = s.Button.Sizes.LARGE, color: _, customDisabledColor: E, hideNotLaunchable: I, tooltipPosition: m, onClick: T, className: h, source: N, hover: f, innerClassName: C } = e,
+    let { application: t, fullWidth: n = !1, size: d = s.Button.Sizes.LARGE, color: _, customDisabledColor: E, hideNotLaunchable: I, tooltipPosition: m, onClick: T, className: h, source: N, hover: C, innerClassName: f } = e,
         p = {
             fullWidth: n,
             size: d,
@@ -22,8 +22,8 @@ function d(e) {
             tooltipPosition: m,
             onClick: T,
             className: h,
-            hover: f,
-            innerClassName: C
+            hover: C,
+            innerClassName: f
         },
         g = (0, a.e7)([r.Z], () => r.Z.getActiveLibraryApplication(t.id)),
         S = null != g ? g.sku.id : null,

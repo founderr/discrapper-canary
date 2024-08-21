@@ -20,8 +20,8 @@ var i = n(735250),
     T = n(594174),
     h = n(78839),
     N = n(55935),
-    f = n(63063),
-    C = n(74538),
+    C = n(63063),
+    f = n(74538),
     p = n(276444),
     g = n(790368),
     S = n(786397),
@@ -45,7 +45,7 @@ class M extends a.Component {
     }
     renderBody(e, t, n) {
         let { trialOffer: i } = this.props;
-        return e && !n && void 0 === i.redeemed_at ? x.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({ helpdeskArticle: f.Z.getArticleURL(R.BhN.REFERRAL_PROGRAM) }) : t ? null : x.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
+        return e && !n && void 0 === i.redeemed_at ? x.Z.Messages.REFERRAL_PROGRAM_LEARN_MORE_ABOUT_SHARING.format({ helpdeskArticle: C.Z.getArticleURL(R.BhN.REFERRAL_PROGRAM) }) : t ? null : x.Z.Messages.REFERRAL_PROGRAM_EMBED_BODY;
     }
     renderActions(e, t, n) {
         let { trialOffer: a, currentUser: s, analyticsLocations: r } = this.props,
@@ -55,7 +55,7 @@ class M extends a.Component {
                 },
                 color: d.Button.Colors.BRAND
             },
-            o = s.id !== a.user_id || (0, C.I5)(s) || !s.verified || (0, S.B)(a),
+            o = s.id !== a.user_id || (0, f.I5)(s) || !s.verified || (0, S.B)(a),
             c = this.renderExpirationDate(e, t, n);
         return (
             (l.disabled = o),
@@ -174,7 +174,7 @@ function v(e) {
             [n, t]
         ),
         r = T.default.getCurrentUser(),
-        l = (0, u.e7)([T.default], () => null != a && (0, C.I5)(void 0 !== r && a.user_id === r.id ? r : T.default.getUser(a.user_id))),
+        l = (0, u.e7)([T.default], () => null != a && (0, f.I5)(void 0 !== r && a.user_id === r.id ? r : T.default.getUser(a.user_id))),
         o = (0, u.e7)([h.ZP], () => {
             var e;
             return l ? (null === (e = h.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;

@@ -20,24 +20,24 @@ function p(e) {
         f = n.map((e) => e.application_id),
         v = null != p ? [p, ...f] : f,
         Z = (0, r.Z)(v),
-        h = i.useMemo(() => Z.filter(u.lm), [Z]),
-        m = i.useMemo(
+        _ = i.useMemo(() => Z.filter(u.lm), [Z]),
+        h = i.useMemo(
             () =>
-                null != p && h.length > 0 && h[0].id === p && null != h[0].embeddedActivityConfig
+                null != p && _.length > 0 && _[0].id === p && null != _[0].embeddedActivityConfig
                     ? [
                           {
-                              activity: h[0].embeddedActivityConfig,
-                              application: h[0]
+                              activity: _[0].embeddedActivityConfig,
+                              application: _[0]
                           }
                       ]
                     : [],
-            [h, p]
+            [_, p]
         ),
-        _ = i.useMemo(
+        m = i.useMemo(
             () =>
                 n
                     .map((e) => {
-                        let t = h.find((t) => t.id === e.application_id);
+                        let t = _.find((t) => t.id === e.application_id);
                         return null == t
                             ? null
                             : {
@@ -46,11 +46,11 @@ function p(e) {
                               };
                     })
                     .filter(u.lm),
-            [n, h]
+            [n, _]
         );
     return i.useMemo(
         () =>
-            [...m, ..._]
+            [...h, ...m]
                 .filter((e) => {
                     var t;
                     let { activity: n } = e;
@@ -60,6 +60,6 @@ function p(e) {
                     let { activity: n } = e;
                     return !n.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null;
                 }),
-        [null == t ? void 0 : t.nsfwAllowed, _, m]
+        [null == t ? void 0 : t.nsfwAllowed, m, h]
     );
 }

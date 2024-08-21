@@ -25,16 +25,16 @@ var l = n(120356),
     N = n(626135),
     x = n(434479),
     S = n(981631),
-    v = n(176505),
-    Z = n(629481),
+    Z = n(176505),
+    v = n(629481),
     T = n(689938),
     L = n(356417);
 function A(e) {
     let { guildId: t, selected: n, handleClick: l } = e,
         u = (0, _.RF)(t, 'guild_shop_channel_row'),
         f = (0, a.e7)([E.Z], () => E.Z.getGuild(t)),
-        v = (null == f ? void 0 : f.hasFeature(S.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
-        A = 'false' === o.K.get(Z.tM, 'false'),
+        Z = (null == f ? void 0 : f.hasFeature(S.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0,
+        A = 'false' === o.K.get(v.tM, 'false'),
         b = (0, a.e7)([d.Z], () => d.Z.useReducedMotion);
     return (0, i.jsx)(x.m, {
         id: 'shop-'.concat(t),
@@ -75,9 +75,9 @@ function A(e) {
                                 (0, m.EW)(s.z.SERVER_SHOP_PHANTOM_PREVIEW),
                                 N.default.track(S.rMx.GUILD_SHOP_PREVIEW_CLICK, {
                                     ...(0, h.hH)(t),
-                                    action_taken: Z.mz.DISMISS_CHANNEL_ROW
+                                    action_taken: v.mz.DISMISS_CHANNEL_ROW
                                 }),
-                                !u || !v)
+                                !u || !Z)
                             ) {
                                 var n;
                                 (0, C.dL)(S.Z5c.CHANNEL(t, null === (n = I.ZP.getDefaultChannel(t)) || void 0 === n ? void 0 : n.id));
@@ -97,7 +97,7 @@ function b(e) {
     let { guild: t, selected: l } = e,
         r = (0, f.g)(t, 'guild_shop_channel_row'),
         a = () => {
-            o.K.set(Z.tM, 'true'), (0, C.uL)(S.Z5c.CHANNEL(t.id, v.oC.GUILD_SHOP));
+            o.K.set(v.tM, 'true'), (0, C.uL)(S.Z5c.CHANNEL(t.id, Z.oC.GUILD_SHOP));
         };
     return r
         ? (0, i.jsx)(A, {

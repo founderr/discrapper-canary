@@ -24,8 +24,8 @@ var t = n(913527),
 function m(e) {
     var s;
     let { guildJoinRequest: t, guild: m, guildJoinRequestUser: A } = e,
-        { createdAt: x, actionedAt: h, guildId: S, userId: j } = t,
-        { approveRequest: P, rejectRequest: g, submitting: b } = (0, N.s)(S, j, t.joinRequestId),
+        { createdAt: x, actionedAt: h, guildId: S, userId: P } = t,
+        { approveRequest: j, rejectRequest: g, submitting: b } = (0, N.s)(S, P, t.joinRequestId),
         v = null === (s = t.actionedByUser) || void 0 === s ? void 0 : s.id,
         p = (0, l.e7)([E.default], () => E.default.getUser(v)),
         f = (0, l.e7)([I.ZP], () => (null != v ? I.ZP.getMember(S, v) : null), [v, S]),
@@ -128,7 +128,7 @@ function m(e) {
                                                     color: o.Button.Colors.GREEN,
                                                     submitting: b,
                                                     disabled: B,
-                                                    onClick: P,
+                                                    onClick: j,
                                                     children: C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
                                                 })
                                         }),

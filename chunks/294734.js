@@ -19,8 +19,8 @@ var i = n(735250),
     T = n(592125),
     h = n(906467),
     N = n(430824),
-    f = n(496675),
-    C = n(699516),
+    C = n(496675),
+    f = n(699516),
     p = n(594174),
     g = n(100604),
     S = n(694784),
@@ -49,7 +49,7 @@ function M() {
 function v(e) {
     let { message: t, snapshot: n, index: d } = e,
         _ = a.useMemo(() => new g.r(t, n, d), [t, n, d]),
-        E = (0, r.e7)([T.Z, p.default, C.Z, f.Z, N.Z, u.Z], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, u.Z).footerInfo, [_], l.Z),
+        E = (0, r.e7)([T.Z, p.default, f.Z, C.Z, N.Z, u.Z], () => _.getForwardInfo(T.Z, p.default, f.Z, C.Z, N.Z, u.Z).footerInfo, [_], l.Z),
         I = a.useCallback(() => {
             (0, S.Z)(t);
         }, [t]);
@@ -86,13 +86,13 @@ function L(e) {
         c = m.RS.useSetting(),
         u = m.NA.useSetting(),
         N = (0, r.e7)([h.Z], () => h.Z.isDeveloper),
-        f = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()),
-        { content: C, hasSpoilerEmbeds: p } = (0, E.Z)(o, {
+        C = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()),
+        { content: f, hasSpoilerEmbeds: p } = (0, E.Z)(o, {
             hideSimpleEmbedContent: c && u,
             isInteracting: !1,
             formatInline: !1,
-            allowList: f,
-            allowHeading: f,
+            allowList: C,
+            allowHeading: C,
             allowLinks: !0,
             allowDevLinks: N,
             previewLinkTarget: !0
@@ -113,7 +113,7 @@ function L(e) {
                               (0, i.jsx)(M, {}),
                               (0, i.jsx)(_.ZP, {
                                   message: o,
-                                  content: C
+                                  content: f
                               }),
                               (0, I.Z)({
                                   channelMessageProps: {

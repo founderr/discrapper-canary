@@ -22,8 +22,8 @@ var a = n(533800),
 function h(e) {
     var t, h;
     let N,
-        f,
         C,
+        f,
         { onTransitionToInviteChannel: p, onAcceptInstantInvite: g, guild: S, invite: A, author: R, currentUserId: x } = e,
         O = x === R.id,
         { channel: M, approximate_member_count: v, approximate_presence_count: L } = A,
@@ -51,7 +51,7 @@ function h(e) {
             isStream: !1
         });
     return (
-        (f = (0, i.jsxs)('span', {
+        (C = (0, i.jsxs)('span', {
             className: T.infoTitle,
             children: [
                 (0, i.jsx)(l.Z.GuildName, { guild: S }),
@@ -66,7 +66,7 @@ function h(e) {
             ]
         })),
         y &&
-            (C = (0, i.jsx)(s.TooltipContainer, {
+            (f = (0, i.jsx)(s.TooltipContainer, {
                 className: T.tooltipContainer,
                 text: m.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
                 children: (0, i.jsx)(s.CircleInformationIcon, {
@@ -76,7 +76,7 @@ function h(e) {
                 })
             })),
         j
-            ? ((f = (0, i.jsx)(l.Z.Channel, { channel: P })),
+            ? ((C = (0, i.jsx)(l.Z.Channel, { channel: P })),
               (N = (0, i.jsxs)('span', {
                   className: T.infoTitle,
                   children: [
@@ -105,7 +105,7 @@ function h(e) {
                 (0, i.jsx)(l.Z.GuildSplash, { guild: S }),
                 (0, i.jsx)(l.Z.Header, {
                     text: G,
-                    extra: C
+                    extra: f
                 }),
                 (0, i.jsxs)(l.Z.Body, {
                     children: [
@@ -114,7 +114,7 @@ function h(e) {
                             children: [
                                 (0, i.jsx)(l.Z.Icon, { guild: S }),
                                 (0, i.jsx)(l.Z.Info, {
-                                    title: f,
+                                    title: C,
                                     onClick: b ? k : null,
                                     children: N
                                 })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
 });
 var i = n(735250);
@@ -20,8 +20,8 @@ var a = n(120356),
     T = n(818186),
     h = n(689938),
     N = n(182987);
-function f(e) {
-    let { tab: t, setTab: n, children: a, badgeState: f, closePopout: C } = e,
+function C(e) {
+    let { tab: t, setTab: n, children: a, badgeState: C, closePopout: f } = e,
         { showReminders: p } = m.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
         { enabled: g } = I.Z.useExperiment({ location: 'RecentsPopout' }, { autoTrackExposure: !1 }),
         { enabled: S } = _.Z.useExperiment({ location: 'RecentsHeader' }),
@@ -43,7 +43,7 @@ function f(e) {
                         variant: 'text-lg/semibold',
                         children: h.Z.Messages.INBOX
                     }),
-                    (0, i.jsx)(T.Z, { closePopout: C })
+                    (0, i.jsx)(T.Z, { closePopout: f })
                 ]
             }),
             (0, i.jsxs)('div', {
@@ -60,7 +60,7 @@ function f(e) {
                                 className: s()(N.tab, N.expanded, { [N.active]: t === l.X.FOR_YOU }),
                                 children: [
                                     h.Z.Messages.FOR_YOU,
-                                    (null == f ? void 0 : f.badgeForYou)
+                                    (null == C ? void 0 : C.badgeForYou)
                                         ? (0, i.jsx)(o.CircleBadge, {
                                               color: u.Z.STATUS_DANGER,
                                               className: s()(N.iconBadge)

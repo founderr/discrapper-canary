@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
 });
 var i = n(735250),
@@ -24,7 +24,7 @@ let N = {
     left: -4,
     right: -4
 };
-function f(e) {
+function C(e) {
     let { channel: t, children: n, jumpToMessage: a } = e;
     return (0, i.jsx)(r.tE, {
         offset: N,
@@ -32,7 +32,7 @@ function f(e) {
             className: h.channelHeader,
             'data-recents-channel': t.id,
             children: [
-                (0, i.jsx)(C, { channel: t }),
+                (0, i.jsx)(f, { channel: t }),
                 t.isPrivate() ? null : (0, i.jsx)(l.Fbu, { size: 'xxs' }),
                 (0, i.jsx)(p, {
                     channel: t,
@@ -43,7 +43,7 @@ function f(e) {
         })
     });
 }
-function C(e) {
+function f(e) {
     let { channel: t } = e,
         n = (0, o.e7)([m.default], () => (t.isDM() ? m.default.getUser(t.getRecipientId()) : null)),
         a = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id));

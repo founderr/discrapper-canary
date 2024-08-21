@@ -20,8 +20,8 @@ var i = n(735250),
     T = n(791914),
     h = n(981631),
     N = n(689938),
-    f = n(601566);
-function C(e) {
+    C = n(601566);
+function f(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(l.CircleIconButton, {
         tooltip: N.Z.Messages.MARK_ALL_AS_READ,
@@ -49,7 +49,7 @@ function p(e) {
             return !1;
         }, [x, O, R]);
     return (0, i.jsxs)('div', {
-        className: f.container,
+        className: C.container,
         children: [
             (0, i.jsx)(T.Z, {
                 tab: r.X.FOR_YOU,
@@ -57,7 +57,7 @@ function p(e) {
                 badgeState: n,
                 closePopout: l,
                 children: M
-                    ? (0, i.jsx)(C, {
+                    ? (0, i.jsx)(f, {
                           onClick: () => {
                               null != x && (E.d$.updateSetting(x.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
                           }

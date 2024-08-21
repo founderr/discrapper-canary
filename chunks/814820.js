@@ -1,6 +1,6 @@
 n.d(t, {
     f: function () {
-        return C;
+        return f;
     }
 }),
     n(47120);
@@ -20,7 +20,7 @@ var i = n(735250),
     T = n(981631),
     h = n(689938),
     N = n(298226);
-let f = (e) => {
+let C = (e) => {
         let { channel: t, message: n } = e,
             [s, c] = a.useState(!1),
             u = (0, m.y6)(n.id),
@@ -55,7 +55,7 @@ let f = (e) => {
             })
         });
     },
-    C = (e) => {
+    f = (e) => {
         let { message: t, channel: n } = e,
             a = n.getGuildId(),
             r = (0, s.e7)([E.default, _.Z, d.Z, u.ZP], () => {
@@ -70,7 +70,7 @@ let f = (e) => {
                 return r && !s && !l && !o && m;
             });
         return null != a && r
-            ? (0, i.jsx)(f, {
+            ? (0, i.jsx)(C, {
                   message: t,
                   channel: n
               })

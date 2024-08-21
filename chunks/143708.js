@@ -22,16 +22,16 @@ function I(e) {
         { author: m, banned: T } = e,
         h = (0, a.e7)([l.default], () => l.default.getId()),
         N = (0, a.e7)([o.Z], () => o.Z.getChannelId()),
-        f = u.ZP.useName(m),
-        C = h === m.id;
+        C = u.ZP.useName(m),
+        f = h === m.id;
     return (
-        C
+        f
             ? ((t = _.Z.Messages.INVITE_BUTTON_INVALID_OWNER), (I = _.Z.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID))
             : ((I = _.Z.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID),
               T
                   ? (t = _.Z.Messages.INSTANT_INVITE_BANNED_INFO)
-                  : null != f
-                    ? ((t = _.Z.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({ username: f })),
+                  : null != C
+                    ? ((t = _.Z.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({ username: C })),
                       (n = (0, i.jsx)(r.Z.Button, {
                           onClick: function () {
                               let { id: e } = m,

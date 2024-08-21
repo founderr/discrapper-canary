@@ -19,7 +19,7 @@ var i = n(735250),
     T = n(176505),
     h = n(689938),
     N = n(824480);
-function f(e) {
+function C(e) {
     let { username: t } = e;
     return (0, i.jsx)('div', {
         className: N.welcomeCardText,
@@ -46,7 +46,7 @@ function f(e) {
         })
     });
 }
-function C(e) {
+function f(e) {
     let { guildId: t, user: n, username: a } = e;
     return (0, i.jsxs)('div', {
         className: N.welcomeCard,
@@ -58,14 +58,14 @@ function C(e) {
                 user: n,
                 className: N.welcomeCardBadge
             }),
-            (0, i.jsx)(f, { username: a })
+            (0, i.jsx)(C, { username: a })
         ]
     });
 }
 function p(e) {
     var t, s;
     let { channel: I, message: h, compact: N } = e,
-        f = (0, o.ZP)(h),
+        C = (0, o.ZP)(h),
         p = (function (e) {
             let { author: t, channel: n, message: i } = e,
                 s = n.guild_id,
@@ -92,7 +92,7 @@ function p(e) {
         })({
             channel: I,
             message: h,
-            author: f
+            author: C
         }),
         g = (null === (t = h.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (s = h.roleSubscriptionData) || void 0 === s ? void 0 : s.total_months_subscribed) <= 1;
     return null == p
@@ -106,10 +106,10 @@ function p(e) {
                       children: p
                   }),
                   g &&
-                      (0, i.jsx)(C, {
+                      (0, i.jsx)(f, {
                           guildId: I.guild_id,
                           user: h.author,
-                          username: f.nick
+                          username: C.nick
                       }),
                   (0, i.jsx)(E.Z, {
                       channel: I,

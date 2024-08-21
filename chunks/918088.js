@@ -30,8 +30,8 @@ var i = n(278074),
     T = n(358085),
     h = n(798628),
     N = n(79390),
-    f = n(839963),
-    C = n(897325),
+    C = n(839963),
+    f = n(897325),
     p = n(57101),
     g = n(562293),
     S = n(981631),
@@ -106,7 +106,7 @@ function v(e, t) {
     let E = e.state === S.yb.SENT,
         I = E ? (null != r ? r : (0, g.H)(l.expiry)) : '',
         m = null == I && E,
-        { selectedAnswerIds: T, submitting: N, editing: f, showResults: C } = null !== (a = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : R,
+        { selectedAnswerIds: T, submitting: N, editing: C, showResults: f } = null !== (a = null != t ? t : (0, h.fU)(e.getChannelId(), e.id)) && void 0 !== a ? a : R,
         p = e.reactions,
         A = !0;
     if (!M(e)) {
@@ -115,9 +115,9 @@ function v(e, t) {
     }
     let x = T.size > 0,
         O = p.some((e) => !0 === e.me_vote),
-        v = !f && O,
-        L = v || m || C,
-        Z = E && A && (!O || f || L),
+        v = !C && O,
+        L = v || m || f,
+        Z = E && A && (!O || C || L),
         P = null === (i = u.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
         b = null != P ? d.ZP.getSelfMember(P) : null,
         D = (0, o.EY)(b),
@@ -132,7 +132,7 @@ function v(e, t) {
         hasSelectedAnswer: x,
         hasVoted: v,
         hasVoteRecorded: O,
-        isEditingVote: f,
+        isEditingVote: C,
         isExpired: m,
         isInteractive: A,
         isSent: E,
@@ -140,7 +140,7 @@ function v(e, t) {
         selectedAnswerIds: T,
         submitting: N,
         tapShouldOpenVotersModal: L,
-        showResults: C
+        showResults: f
     };
 }
 function L(e, t) {
@@ -152,7 +152,7 @@ function L(e, t) {
     if (null == g) return;
     let S = s.Z.useReducedMotion,
         R = null === (o = u.Z.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
-        M = (0, C.E)(g, R),
+        M = (0, f.E)(g, R),
         L = h.answers,
         Z = h.layout_type,
         P = v(e, t, { formattedExpirationLabel: _ });
@@ -326,10 +326,10 @@ function L(e, t) {
             canTapAnswers: b,
             canSelectMultipleAnswers: en
         })
-            .with({ tapShouldOpenVotersModal: !0 }, () => f.Y7.LIST)
-            .with({ canTapAnswers: !1 }, () => f.Y7.LIST)
-            .with({ canSelectMultipleAnswers: !1 }, () => f.Y7.RADIO_BUTTONS)
-            .with({ canSelectMultipleAnswers: !0 }, () => f.Y7.CHECKBOXES)
+            .with({ tapShouldOpenVotersModal: !0 }, () => C.Y7.LIST)
+            .with({ canTapAnswers: !1 }, () => C.Y7.LIST)
+            .with({ canSelectMultipleAnswers: !1 }, () => C.Y7.RADIO_BUTTONS)
+            .with({ canSelectMultipleAnswers: !0 }, () => C.Y7.CHECKBOXES)
             .exhaustive(),
         answerTapAccessibilityLabel: W ? $ : void 0,
         layoutType: Z,

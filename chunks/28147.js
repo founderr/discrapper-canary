@@ -27,8 +27,8 @@ var i = t(735250),
     I = t(561160),
     g = t(41558),
     P = t(106771),
-    L = t(79984),
-    S = t(314734),
+    S = t(79984),
+    L = t(314734),
     b = t(981631),
     R = t(689938),
     T = t(429032);
@@ -37,9 +37,9 @@ let M = Array(6)
         .map((e, n) => n),
     y = [, , ,].fill(0).map((e, n) => n);
 function j(e) {
-    return e.enableGlobalSearch ? (0, i.jsx)(O, { ...e }) : (0, i.jsx)(Z, { ...e });
+    return e.enableGlobalSearch ? (0, i.jsx)(Z, { ...e }) : (0, i.jsx)(O, { ...e });
 }
-function O(e) {
+function Z(e) {
     let { channel: n, query: t, entrypoint: l, isScrollCloseToBottom: s } = e,
         { enabled: c } = f.nS.useExperiment({ location: 'App Launcher Search View' }, { autoTrackExposure: !1 }),
         d = l === A._b.TEXT,
@@ -72,7 +72,7 @@ function O(e) {
         s && v === m.M.FETCHED && g();
     }, [g, v, s]);
     let P = null == v || v === m.M.FETCHING,
-        L = a.useMemo(() => {
+        S = a.useMemo(() => {
             let e = N.map((e) => ({
                 application: e,
                 installOnDemand: !1
@@ -98,8 +98,8 @@ function O(e) {
                 )
             ];
         }, [l, x, N]),
-        S = L.length > 0,
-        b = _ && !S && !P;
+        L = S.length > 0,
+        b = _ && !L && !P;
     return p
         ? (0, i.jsx)(B, {})
         : b
@@ -116,9 +116,9 @@ function O(e) {
                             commandResults: C,
                             query: t
                         }),
-                    (S || P) &&
+                    (L || P) &&
                         (0, i.jsx)(D, {
-                            applicationResults: L,
+                            applicationResults: S,
                             includePlaceholder: P,
                             query: t,
                             searchesBots: u
@@ -126,7 +126,7 @@ function O(e) {
                 ]
             });
 }
-function Z(e) {
+function O(e) {
     let { channel: n, query: t, entrypoint: l } = e,
         o = l === A._b.TEXT,
         r = l === A._b.TEXT,
@@ -186,18 +186,18 @@ function U(e) {
         [E, N] = a.useState(!1),
         x = null !== (n = (0, s.Z)(E)) && void 0 !== n ? n : E,
         I = a.useCallback(() => N((e) => !e), []),
-        L = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
-        M = E && !L;
-    a.useLayoutEffect(() => N(!1), [L]);
+        S = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
+        M = E && !S;
+    a.useLayoutEffect(() => N(!1), [S]);
     let {
         ref: y,
         isTransitioning: j,
-        onTransitionEnd: O
+        onTransitionEnd: Z
     } = (0, v.Z)({
         key: r,
         isExpanded: M,
         durationMs: 200,
-        maxAnimationHeight: S.K7
+        maxAnimationHeight: L.K7
     });
     a.useEffect(() => {
         !x &&
@@ -208,9 +208,9 @@ function U(e) {
                 num: o.length
             });
     }, [o.length, x, E]);
-    let Z = M || j,
+    let O = M || j,
         U = M ? g.Z.buttonTypes.VIEW_LESS : g.Z.buttonTypes.VIEW_MORE,
-        H = Z ? o : f;
+        H = O ? o : f;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(g.Z, {
@@ -221,7 +221,7 @@ function U(e) {
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
                 ref: y,
-                onTransitionEnd: O,
+                onTransitionEnd: Z,
                 children: H.map((e, n) => {
                     let { command: t, application: a, section: o } = e;
                     return (0, i.jsx)(
@@ -301,7 +301,7 @@ function D(e) {
                                   t.id
                               );
                           }),
-                          t && y.map((e) => (0, i.jsx)(L.Z, {}, e))
+                          t && y.map((e) => (0, i.jsx)(S.Z, {}, e))
                       ]
                   })
               ]
@@ -328,7 +328,7 @@ function D(e) {
                                   t.id
                               );
                           }),
-                          t && y.map((e) => (0, i.jsx)(L.Z, {}, e))
+                          t && y.map((e) => (0, i.jsx)(S.Z, {}, e))
                       ]
                   })
               ]
@@ -349,12 +349,12 @@ function B() {
             (0, i.jsx)(g.Z, { title: R.Z.Messages.COMMANDS }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
-                children: M.map((e) => (0, i.jsx)(L.Z, {}, e))
+                children: M.map((e) => (0, i.jsx)(S.Z, {}, e))
             }),
             (0, i.jsx)(g.Z, { title: R.Z.Messages.APPS }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
-                children: y.map((e) => (0, i.jsx)(L.Z, {}, e))
+                children: y.map((e) => (0, i.jsx)(S.Z, {}, e))
             })
         ]
     });

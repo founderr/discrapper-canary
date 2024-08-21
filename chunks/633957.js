@@ -20,8 +20,8 @@ var i = n(735250),
     T = n(314897),
     h = n(592125),
     N = n(158776),
-    f = n(594174),
-    C = n(823379),
+    C = n(594174),
+    f = n(823379),
     p = n(226378),
     g = n(701488),
     S = n(689938),
@@ -43,11 +43,11 @@ function R(e) {
             currentEmbeddedActivity: o.ZP.getCurrentEmbeddedActivity(),
             activityLaunchState: o.ZP.getLaunchState(n.id, null != L ? L : void 0)
         })),
-        j = (0, s.Wu)([f.default], () => {
+        j = (0, s.Wu)([C.default], () => {
             var e;
             return Array.from(null !== (e = null == P ? void 0 : P.userIds) && void 0 !== e ? e : [])
-                .map((e) => f.default.getUser(e))
-                .filter(C.lm);
+                .map((e) => C.default.getUser(e))
+                .filter(f.lm);
         }),
         U = (0, s.e7)([N.Z], () => {
             var e;

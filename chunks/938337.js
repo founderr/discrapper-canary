@@ -6,15 +6,15 @@ t.d(n, {
 var i = t(735250),
     l = t(470079),
     r = t(512100),
-    s = t(906732),
-    o = t(626135),
+    o = t(906732),
+    s = t(626135),
     a = t(981631);
 function c(e) {
     let { appId: n, skuId: t, ...c } = e,
-        { analyticsLocations: d } = (0, s.ZP)();
+        { analyticsLocations: d } = (0, o.ZP)();
     return (
         l.useEffect(() => {
-            o.default.track(a.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
+            s.default.track(a.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
                 application_id: n,
                 sku_id: t,
                 location_stack: d

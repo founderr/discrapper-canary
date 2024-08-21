@@ -22,11 +22,11 @@ function m(e) {
         T = a(m),
         {
             avatarSrc: h,
-            eventHandlers: { onMouseEnter: N, onMouseLeave: f }
+            eventHandlers: { onMouseEnter: N, onMouseLeave: C }
         } = (0, u.m)(!0);
     return (0, i.jsx)('div', {
         onMouseEnter: N,
-        onMouseLeave: f,
+        onMouseLeave: C,
         children: (0, i.jsx)(d.Z, {
             className: s()(I.mainContainer, { [I.compact]: n }),
             iconNode: n ? null : (0, i.jsx)(u.S, { src: h }),

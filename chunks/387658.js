@@ -27,16 +27,16 @@ var i = t(735250),
     I = t(676161),
     g = t(660090),
     P = t(783097),
-    L = t(845936),
-    S = t(176412),
+    S = t(845936),
+    L = t(176412),
     b = t(870205),
     R = t(981631),
     T = t(689079),
     M = t(689938),
     y = t(202558),
     j = t(66086);
-let O = 'placeholder',
-    Z = [, , , , ,].fill(O);
+let Z = 'placeholder',
+    O = [, , , , ,].fill(Z);
 function U(e) {
     var n, t;
     let { channel: l, command: o, section: s, sectionName: c } = e,
@@ -60,7 +60,7 @@ function U(e) {
                 A.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
         }, [l.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
-        _ = a.useMemo(() => (0, S.ae)(o.displayDescription, void 0), [o.displayDescription]),
+        _ = a.useMemo(() => (0, L.ae)(o.displayDescription, void 0), [o.displayDescription]),
         C = a.useMemo(
             () =>
                 (0, i.jsxs)('div', {
@@ -161,7 +161,7 @@ function D(e) {
                 e.stopPropagation();
                 let n = N.Z.lastShownEntrypoint();
                 try {
-                    (await (0, L.L)({
+                    (await (0, S.L)({
                         applicationId: t.applicationId,
                         userIndexState: o,
                         guildIndexState: r,
@@ -224,7 +224,7 @@ function k(e) {
                       className: j.commandContainer,
                       'aria-label': l,
                       children: t.map((e, t) =>
-                          e === O
+                          e === Z
                               ? (0, i.jsx)(H, {}, e + t)
                               : (0, i.jsx)(
                                     U,
@@ -294,7 +294,7 @@ function B(e) {
                   (0, i.jsx)(k, {
                       channel: t,
                       section: p,
-                      commands: m.current ? Z : h,
+                      commands: m.current ? O : h,
                       headerName: M.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
                       sectionName: o,
                       children:

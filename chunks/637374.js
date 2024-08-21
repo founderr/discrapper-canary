@@ -15,8 +15,8 @@ var i = n(735250),
     T = n(884697),
     h = n(600164),
     N = n(479446),
-    f = n(930114),
-    C = n(981632),
+    C = n(930114),
+    f = n(981632),
     p = n(108989),
     g = n(703656),
     S = n(314897),
@@ -295,7 +295,7 @@ class V extends a.Component {
                         }
                     });
                 let r = a !== U.uaV.CUSTOM_GIFT ? void 0 : i;
-                (0, f.V)({
+                (0, C.V)({
                     processedCode: n,
                     channelContext: t,
                     customGiftMessage: r,
@@ -337,7 +337,7 @@ class V extends a.Component {
                             }),
                         a && (0, i.jsx)(v.Z, { className: k.headerIcon }),
                         null != e.giftStyle &&
-                            (0, i.jsx)(C.Z, {
+                            (0, i.jsx)(f.Z, {
                                 defaultAnimationState: e.redeemed ? N.S.LOOP : N.S.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: l

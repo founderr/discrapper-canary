@@ -1,25 +1,25 @@
 n.d(t, {
     Z: function () {
-        return o;
+        return u;
     }
 });
-var a = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(481060),
-    l = n(239091),
-    s = n(299206),
-    r = n(689938);
-function o(e) {
+var l = n(481060),
+    r = n(239091),
+    a = n(299206),
+    o = n(689938);
+function u(e) {
     let { application: t, onSelect: n } = e,
-        o = (0, s.Z)({
+        u = (0, a.Z)({
             id: t.id,
-            label: r.Z.Messages.COPY_ID
+            label: o.Z.Messages.COPY_ID_APP
         });
-    return (0, a.jsx)(i.Menu, {
+    return (0, i.jsx)(l.Menu, {
         navId: 'activity-shelf-item-context',
-        onClose: l.Zy,
-        'aria-label': r.Z.Messages.ACTIVITY_SHELF_ITEM_ACTIONS_MENU_LABEL,
+        onClose: r.Zy,
+        'aria-label': o.Z.Messages.ACTIVITY_SHELF_ITEM_ACTIONS_MENU_LABEL,
         onSelect: n,
-        children: (0, a.jsx)(i.MenuGroup, { children: o }, 'developer-actions')
+        children: (0, i.jsx)(l.MenuGroup, { children: u }, 'developer-actions')
     });
 }

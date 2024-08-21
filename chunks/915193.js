@@ -1,23 +1,23 @@
-a.d(n, {
+n.d(t, {
     Z: function () {
         return f;
     }
 });
-var r = a(735250);
-a(470079);
-var s = a(442837),
-    i = a(692547),
-    d = a(481060),
-    t = a(493683),
-    o = a(129861),
-    l = a(700582),
-    u = a(594174),
-    c = a(689938),
-    m = a(725458);
-function Z(e) {
-    let { color: n, className: a } = e;
+var r = n(735250);
+n(470079);
+var i = n(442837),
+    a = n(692547),
+    o = n(481060),
+    s = n(493683),
+    l = n(129861),
+    d = n(700582),
+    u = n(594174),
+    c = n(689938),
+    I = n(725458);
+function E(e) {
+    let { color: t, className: n } = e;
     return (0, r.jsx)('svg', {
-        className: a,
+        className: n,
         height: '16',
         width: '80',
         viewBox: '0 0 80 16',
@@ -29,7 +29,7 @@ function Z(e) {
             children: [
                 (0, r.jsx)('path', { d: 'm0 0h80v16h-80z' }),
                 (0, r.jsxs)('g', {
-                    stroke: n,
+                    stroke: t,
                     strokeLinecap: 'round',
                     strokeLinejoin: 'round',
                     strokeWidth: '2',
@@ -47,66 +47,66 @@ function Z(e) {
         })
     });
 }
-function f(e, n) {
-    let a = (0, s.e7)([u.default], () => u.default.getCurrentUser());
-    return null == a || n.ownerId !== a.id || e.id === a.id || (null == n ? void 0 : n.isBroadcastChannel())
+function f(e, t) {
+    let n = (0, i.e7)([u.default], () => u.default.getCurrentUser());
+    return null == n || t.ownerId !== n.id || e.id === n.id || (null == t ? void 0 : t.isBroadcastChannel())
         ? null
-        : (0, r.jsx)(d.MenuItem, {
+        : (0, r.jsx)(o.MenuItem, {
               id: 'make-dm-owner',
               color: 'danger',
               label: c.Z.Messages.CHANGE_DM_OWNER,
               action: () => {
-                  var s;
+                  var i;
                   return (
-                      (s = a),
-                      void (0, d.openModal)((a) =>
-                          (0, r.jsxs)(d.ConfirmModal, {
-                              bodyClassName: m.confirmModal,
+                      (i = n),
+                      void (0, o.openModal)((n) =>
+                          (0, r.jsxs)(o.ConfirmModal, {
+                              bodyClassName: I.confirmModal,
                               header: c.Z.Messages.TRANSFER_GROUP_OWNERSHIP,
                               confirmText: c.Z.Messages.CONFIRM,
                               cancelText: c.Z.Messages.CANCEL,
-                              onConfirm: () => t.Z.setDMOwner(n.id, e.id),
-                              ...a,
+                              onConfirm: () => s.Z.setDMOwner(t.id, e.id),
+                              ...n,
                               children: [
-                                  (0, r.jsx)(Z, { color: i.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                  (0, r.jsx)(E, { color: a.Z.unsafe_rawColors.PRIMARY_300.css }),
                                   (0, r.jsxs)('div', {
-                                      className: m.fromToWrapper,
+                                      className: I.fromToWrapper,
                                       children: [
                                           (0, r.jsx)('div', {
-                                              className: m.from,
-                                              children: (0, r.jsx)(l.Z, {
-                                                  user: s,
-                                                  size: d.AvatarSizes.SIZE_80
+                                              className: I.from,
+                                              children: (0, r.jsx)(d.Z, {
+                                                  user: i,
+                                                  size: o.AvatarSizes.SIZE_80
                                               })
                                           }),
                                           (0, r.jsx)('div', {
-                                              className: m.to,
-                                              children: (0, r.jsx)(l.Z, {
+                                              className: I.to,
+                                              children: (0, r.jsx)(d.Z, {
                                                   user: e,
-                                                  size: d.AvatarSizes.SIZE_80
+                                                  size: o.AvatarSizes.SIZE_80
                                               })
                                           })
                                       ]
                                   }),
-                                  (0, r.jsx)(d.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: 'text-md/normal',
                                       children: c.Z.Messages.CONFIRM_CHANGE_DM_OWNER.format({
-                                          usernameHook: (n, a) =>
+                                          usernameHook: (t, n) =>
                                               (0, r.jsx)(
-                                                  o.Z,
+                                                  l.Z,
                                                   {
-                                                      usernameIcon: (0, r.jsx)(d.Avatar, {
-                                                          className: m.avatarIcon,
+                                                      usernameIcon: (0, r.jsx)(o.Avatar, {
+                                                          className: I.avatarIcon,
                                                           src: e.getAvatarURL(void 0, 16),
-                                                          size: d.AvatarSizes.SIZE_16,
+                                                          size: o.AvatarSizes.SIZE_16,
                                                           'aria-hidden': !0
                                                       }),
-                                                      className: m.discordTag,
-                                                      usernameClass: m.username,
-                                                      discriminatorClass: m.discriminator,
+                                                      className: I.discordTag,
+                                                      usernameClass: I.username,
+                                                      discriminatorClass: I.discriminator,
                                                       user: e
                                                   },
-                                                  a
+                                                  n
                                               )
                                       })
                                   })

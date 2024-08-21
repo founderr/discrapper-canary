@@ -35,8 +35,8 @@ var i,
     T = n(186523),
     h = n(553826),
     N = n(506071),
-    f = n(203143),
-    C = n(79390),
+    C = n(203143),
+    f = n(79390),
     p = n(839963),
     g = n(294608),
     S = n(65145),
@@ -150,7 +150,7 @@ function b(e) {
         _ = (0, g.$B)(n.style),
         E = !0 === n.isSelected,
         I = r.useCallback(() => {
-            f.Z.handlePollAnswerTapped({
+            C.Z.handlePollAnswerTapped({
                 channelId: u,
                 messageId: d,
                 answerId: n.answerId
@@ -191,7 +191,7 @@ function D(e) {
         className: i,
         imageClassName: x.attachmentImage,
         src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
-        alt: null !== (t = n.description) && void 0 !== t ? t : (0, C.fw)(n.filename),
+        alt: null !== (t = n.description) && void 0 !== t ? t : (0, f.fw)(n.filename),
         responsive: !0,
         width: 212,
         height: 212,

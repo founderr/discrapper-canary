@@ -21,9 +21,9 @@ var a = n(120356),
 function h(e) {
     var t;
     let { message: n, compact: a, usernameHook: h, channel: N } = e,
-        f = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)),
-        C = (0, u.ZP)(n),
-        p = h(C),
+        C = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)),
+        f = (0, u.ZP)(n),
+        p = h(f),
         {
             avatarSrc: g,
             eventHandlers: { onMouseEnter: S, onMouseLeave: A }
@@ -65,9 +65,9 @@ function h(e) {
                     (0, i.jsx)('div', {
                         className: s()(T.__invalid_messageContent, { [T.compact]: a }),
                         children: m.Z.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
-                            username: C.nick,
+                            username: f.nick,
                             usernameHook: p,
-                            guildName: null !== (t = null == f ? void 0 : f.name) && void 0 !== t ? t : ''
+                            guildName: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : ''
                         })
                     })
                 ]

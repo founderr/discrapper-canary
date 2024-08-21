@@ -15,8 +15,8 @@ var i = n(735250),
     T = n(572004),
     h = n(617136),
     N = n(113434),
-    f = n(497505),
-    C = n(918701),
+    C = n(497505),
+    f = n(918701),
     p = n(566078),
     g = n(685613),
     S = n(611855),
@@ -39,7 +39,7 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
                     e.stop();
                 };
             }, []),
-            (0, C.zK)(t, O.S7.FRACTIONS_QUEST))
+            (0, f.zK)(t, O.S7.FRACTIONS_QUEST))
         )
             return null;
         let _ = () => {
@@ -49,7 +49,7 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
                 questContentCTA: h.jZ.COPY_QUEST_URL,
                 questContentPosition: s
             }),
-                (0, T.JG)((0, C.Rs)(t.id)),
+                (0, T.JG)((0, f.Rs)(t.id)),
                 o(!0),
                 c.current.start(1000, () => o(!1));
         };
@@ -76,10 +76,10 @@ t.Z = (e) => {
         { ref: F, width: w, scrollWidth: V } = (0, _.Z)(),
         H = (0, c.e7)([m.Z], () => m.Z.getState().theme),
         Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
-        W = a.useMemo(() => (0, C.nP)(u.config.assets.hero), [u]),
+        W = a.useMemo(() => (0, f.nP)(u.config.assets.hero), [u]),
         K = a.useRef(null),
         z = (0, x.uq)(I),
-        Q = I === f.jn.QUESTS_EMBED,
+        Q = I === C.jn.QUESTS_EMBED,
         q = (0, N.t5)(u, O.dr.QUESTS_CARD, I),
         X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         J = (0, N.B6)(u.config.expiresAt, {
@@ -106,7 +106,7 @@ t.Z = (e) => {
     a.useEffect(() => {
         W && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), (K.current.currentTime = 0)));
     }, [n, W]);
-    let et = (0, C.j8)(u);
+    let et = (0, f.j8)(u);
     return (0, i.jsxs)('div', {
         className: r()(v.outerContainer, {
             [v.outerContainerGiftInventory]: z,
@@ -136,7 +136,7 @@ t.Z = (e) => {
                     W &&
                     (0, i.jsx)('source', {
                         src: et,
-                        type: (0, C.mN)(et)
+                        type: (0, f.mN)(et)
                     })
             }),
             (0, i.jsxs)('div', {

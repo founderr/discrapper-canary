@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return B;
     }
 }),
     n(47120);
@@ -14,8 +14,8 @@ var a = n(735250),
     d = n(434650),
     u = n(213459),
     g = n(70097),
-    v = n(695346),
-    m = n(594174),
+    m = n(695346),
+    v = n(594174),
     p = n(695103),
     f = n(880448),
     I = n(823379),
@@ -44,12 +44,12 @@ function D(e) {
 }
 function L(e) {
     let { activity: t, application: n, channel: i, guildId: l, large: s = !1 } = e,
-        c = (0, r.Wu)([m.default], () => {
+        c = (0, r.Wu)([v.default], () => {
             var e;
             return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : [])
                 .map((e) => {
                     let [t] = e;
-                    return m.default.getUser(t);
+                    return v.default.getUser(t);
                 })
                 .filter(I.lm);
         }),
@@ -90,12 +90,12 @@ function L(e) {
         ]
     });
 }
-function O(e) {
+function B(e) {
     var t;
-    let { activityItem: n, channel: l, guildId: m, locationObject: I, onActivityItemVisible: x, onActivityItemSelected: _, large: j = !1 } = e,
+    let { activityItem: n, channel: l, guildId: v, locationObject: I, onActivityItemVisible: x, onActivityItemSelected: _, large: j = !1 } = e,
         {
-            imageBackground: O,
-            videoUrl: B,
+            imageBackground: B,
+            videoUrl: O,
             activityAction: V,
             joinableEmbeddedApp: R,
             onActivityItemSelected: k,
@@ -104,7 +104,7 @@ function O(e) {
         } = (0, T.ZP)({
             activityItem: n,
             channel: l,
-            guildId: m,
+            guildId: v,
             locationObject: I,
             onActivityItemVisible: x,
             onActivityItemSelected: _,
@@ -121,7 +121,7 @@ function O(e) {
     }, [G]);
     let J = () => W(!0),
         K = () => W(!1),
-        X = v.Sb.useSetting(),
+        X = m.Sb.useSetting(),
         $ = i.useCallback(() => {
             null == k || k(), u.ZP.maybeQueryForInstallLessApps(U.id, null == l ? void 0 : l.id);
         }, [U.id, null == l ? void 0 : l.id, k]);
@@ -151,18 +151,18 @@ function O(e) {
                 onBlur: K,
                 children: [
                     (0, a.jsx)(S.Z, {
-                        imageBackground: O,
+                        imageBackground: B,
                         applicationName: U.name,
                         imageClassName: s()(Z.activityImage, { [Z.large]: !0 === j }),
                         imageNotFoundClassName: Z.brokenImageIconWrapper
                     }),
-                    null != B && z && V === T.JS.START
+                    null != O && z && V === T.JS.START
                         ? (0, a.jsx)('div', {
                               className: s()(Z.activityVideo, { [Z.videoFadeOut]: !G }),
                               onAnimationEnd: () => (G ? null : q(!1)),
                               children: (0, a.jsx)(g.Z, {
                                   className: Z.activityVideo,
-                                  src: B,
+                                  src: O,
                                   loop: !0,
                                   autoPlay: !0,
                                   muted: !0
@@ -236,7 +236,7 @@ function O(e) {
                         activity: null == R ? void 0 : R.embeddedActivity,
                         application: U,
                         channel: l,
-                        guildId: m,
+                        guildId: v,
                         large: j
                     }),
                     (0, a.jsx)('div', {

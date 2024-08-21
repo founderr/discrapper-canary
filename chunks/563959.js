@@ -1,9 +1,9 @@
 n.d(t, {
     P: function () {
-        return f;
+        return C;
     },
     e: function () {
-        return C;
+        return f;
     }
 });
 var i = n(735250),
@@ -33,7 +33,7 @@ function N(e, t) {
                 }),
                 h = _.default.getUser(null === (c = a.bot) || void 0 === c ? void 0 : c.id),
                 N = m.Z.getIntegration(e.id, a.id),
-                f =
+                C =
                     e.isPrivate() && null != N
                         ? (t) => {
                               (0, r.jW)(t, async () => {
@@ -49,15 +49,15 @@ function N(e, t) {
                         : null != h
                           ? (t) => (0, I.Pv)(t, h, e)
                           : void 0,
-                { bot: C } = a;
-            return null == C
+                { bot: f } = a;
+            return null == f
                 ? l
                 : (0, i.jsx)(
                       s.Popout,
                       {
                           position: 'right',
                           preload: () =>
-                              (0, u.Z)(C.id, T, {
+                              (0, u.Z)(f.id, T, {
                                   guildId: e.guild_id,
                                   channelId: e.id
                               }),
@@ -65,7 +65,7 @@ function N(e, t) {
                               (0, i.jsx)(d.Z, {
                                   ...n,
                                   location: 'PrivateChannelIntegrationSystemMessage',
-                                  userId: C.id,
+                                  userId: f.id,
                                   guildId: e.guild_id,
                                   channelId: e.id,
                                   messageId: t.id
@@ -73,7 +73,7 @@ function N(e, t) {
                           children: (e) =>
                               (0, i.jsx)(s.Anchor, {
                                   ...e,
-                                  onContextMenu: f,
+                                  onContextMenu: C,
                                   children: l
                               })
                       },
@@ -83,7 +83,7 @@ function N(e, t) {
         [e, t.id]
     );
 }
-function f(e) {
+function C(e) {
     let { message: t, channel: a, compact: s } = e,
         r = (0, l.ZP)(t),
         u = t.application,
@@ -106,7 +106,7 @@ function f(e) {
         })
     });
 }
-function C(e) {
+function f(e) {
     let { message: t, channel: a, compact: s } = e,
         r = (0, l.ZP)(t),
         u = t.application,

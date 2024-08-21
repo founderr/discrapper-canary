@@ -7,29 +7,29 @@ var i = t(735250);
 t(470079);
 var l = t(777207),
     r = t(541822),
-    s = t(330711),
-    o = t(689498);
+    o = t(330711),
+    s = t(689498);
 function a(e) {
     let { benefits: n, description: t, imgSrc: a, title: c, tag: d, FallbackIcon: u } = e,
-        m = null != a ? { '--custom-background-url': 'url('.concat(a.toString(), ')') } : void 0,
-        S = null != t && '' !== t,
-        _ = S || null != n;
+        S = null != a ? { '--custom-background-url': 'url('.concat(a.toString(), ')') } : void 0,
+        m = null != t && '' !== t,
+        I = m || null != n;
     return (0, i.jsxs)('div', {
-        className: o.container,
+        className: s.container,
         children: [
             (0, i.jsxs)('div', {
-                className: o.header,
+                className: s.header,
                 children: [
                     (0, i.jsx)('div', {
-                        className: o.headerBackground,
-                        style: m
+                        className: s.headerBackground,
+                        style: S
                     }),
                     (0, i.jsx)('div', {
-                        className: o.headerTop,
+                        className: s.headerTop,
                         children: (0, i.jsx)('div', { children: d })
                     }),
                     (0, i.jsx)('div', {
-                        className: o.headerImage,
+                        className: s.headerImage,
                         children:
                             null != a
                                 ? (0, i.jsx)('img', {
@@ -46,11 +46,11 @@ function a(e) {
                 ]
             }),
             (0, i.jsxs)(r.Z, {
-                className: o.scroll,
+                className: s.scroll,
                 children: [
                     (0, i.jsx)('br', {}),
                     (0, i.jsxs)('div', {
-                        className: o.scrollContent,
+                        className: s.scrollContent,
                         children: [
                             (0, i.jsx)(l.x, {
                                 color: 'header-primary',
@@ -58,31 +58,31 @@ function a(e) {
                                 variant: 'heading-xl/semibold',
                                 children: c
                             }),
-                            _ &&
+                            I &&
                                 (0, i.jsxs)('div', {
-                                    className: o.details,
+                                    className: s.details,
                                     children: [
                                         (0, i.jsx)(l.x, {
                                             color: 'header-primary',
                                             tag: 'div',
                                             variant: 'heading-lg/semibold',
-                                            children: s.Z.Messages.Storefront.PRODUCT_DETAILS
+                                            children: o.Z.Messages.Storefront.PRODUCT_DETAILS
                                         }),
-                                        S &&
+                                        m &&
                                             (0, i.jsx)(l.x, {
                                                 color: 'text-muted',
                                                 variant: 'text-md/normal',
-                                                className: o.description,
+                                                className: s.description,
                                                 children: t
                                             }),
                                         null != n &&
                                             (0, i.jsxs)('div', {
-                                                className: o.benefits,
+                                                className: s.benefits,
                                                 children: [
                                                     (0, i.jsx)(l.x, {
                                                         color: 'header-secondary',
                                                         variant: 'eyebrow',
-                                                        children: s.Z.Messages.Storefront.BENEFITS_TITLE
+                                                        children: o.Z.Messages.Storefront.BENEFITS_TITLE
                                                     }),
                                                     n
                                                 ]

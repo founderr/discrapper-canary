@@ -20,8 +20,8 @@ var i = n(735250),
     T = n(661824),
     h = n(430824),
     N = n(626135),
-    f = n(76535),
-    C = n(866104),
+    C = n(76535),
+    f = n(866104),
     p = n(886176),
     g = n(981631),
     S = n(689938),
@@ -30,7 +30,7 @@ function R(e) {
     var t;
     let { guildId: n } = e,
         s = (0, c.e7)([h.Z], () => h.Z.getGuild(n)),
-        { loading: R, subscriptionsSettings: x } = (0, f.H)(n),
+        { loading: R, subscriptionsSettings: x } = (0, C.H)(n),
         { listingsLoaded: O } = (0, I.eD)(n),
         M = (0, I.ue)(n, { publishedOnly: !0 }),
         v = a.useCallback(async () => {
@@ -54,7 +54,7 @@ function R(e) {
           : (0, i.jsxs)('div', {
                 className: A.guildShopEmbed,
                 children: [
-                    (0, i.jsx)(C.Z, { coverImageAsset: null !== (t = x.cover_image_asset) && void 0 !== t ? t : null }),
+                    (0, i.jsx)(f.Z, { coverImageAsset: null !== (t = x.cover_image_asset) && void 0 !== t ? t : null }),
                     (0, i.jsx)(u.Spacer, { size: 16 }),
                     (0, i.jsxs)('div', {
                         className: A.serverShopLabel,

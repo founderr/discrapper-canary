@@ -14,7 +14,7 @@ var a = n(430824),
     u = n(981631),
     d = n(689938);
 function _(e) {
-    var t, n, _, E, I, m, T, h, N, f, C, p, g, S, A;
+    var t, n, _, E, I, m, T, h, N, C, f, p, g, S, A;
     let R = null !== (_ = null === (t = e.other_user) || void 0 === t ? void 0 : t.id) && void 0 !== _ ? _ : u.lds,
         x = o.ZP.getName(r.default.getUser(null === (n = e.other_user) || void 0 === n ? void 0 : n.id));
     switch (e.type) {
@@ -30,7 +30,7 @@ function _(e) {
                 count: v
             });
         case c.O7.MOBILE_NATIVE_UPDATE_AVAILABLE:
-            let L = null !== (C = null === (f = e.local_id) || void 0 === f ? void 0 : f.split('_').pop()) && void 0 !== C ? C : 'unknown';
+            let L = null !== (f = null === (C = e.local_id) || void 0 === C ? void 0 : C.split('_').pop()) && void 0 !== f ? f : 'unknown';
             return 'Update to build '.concat(L, ' available!');
         case c.DY.FRIEND_SUGGESTION_CREATED:
             let Z = s.Z.getRelationshipType(R) === u.OGo.PENDING_OUTGOING;

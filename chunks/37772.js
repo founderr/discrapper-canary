@@ -15,8 +15,8 @@ var i = n(735250),
     T = n(592125),
     h = n(699516),
     N = n(630388),
-    f = n(709054),
-    C = n(493892),
+    C = n(709054),
+    f = n(493892),
     p = n(901461),
     g = n(739566),
     S = n(443877),
@@ -77,7 +77,7 @@ t.Z = a.memo(function e(t) {
             previewLinkTarget: !0
         }),
         en = (0, g.ZP)(o),
-        ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))),
+        ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(C.default.castMessageIdAsChannelId(o.id))),
         ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W,
         es = !ea && void 0 === a,
         er = (0, O.Z)({
@@ -95,7 +95,7 @@ t.Z = a.memo(function e(t) {
               channel: W,
               hasThread: !1
           })
-        : (h.Z.isBlockedForMessage(o) ? (a = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, C.DQ)(o) && V && (a = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a)
+        : (h.Z.isBlockedForMessage(o) ? (a = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, f.DQ)(o) && V && (a = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== a)
           ? (0, i.jsx)(B, {
                 className: U,
                 compact: b,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
 });
 var i = n(735250);
@@ -20,8 +20,8 @@ var a = n(442837),
     T = n(934415),
     h = n(900849),
     N = n(981631);
-function f(e) {
-    let { channel: t, onClick: n, beforeTransition: f, className: C, openChatWithoutConnecting: p } = e,
+function C(e) {
+    let { channel: t, onClick: n, beforeTransition: C, className: f, openChatWithoutConnecting: p } = e,
         g = (0, a.e7)([m.default, I.Z], () => (null == t ? '' : (0, o.F6)(t, m.default, I.Z)), [t]);
     return (0, i.jsx)(s.Tooltip, {
         text: g,
@@ -30,12 +30,12 @@ function f(e) {
             let { onMouseEnter: a, onMouseLeave: o } = e;
             return (0, i.jsx)(c.Z, {
                 role: 'link',
-                className: C,
+                className: f,
                 onClick: (e) => {
                     e.stopPropagation(),
                         null != n
                             ? n()
-                            : (null != f && f(),
+                            : (null != C && C(),
                               (0, s.closeAllModals)(),
                               !(function (e, t) {
                                   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];

@@ -19,8 +19,8 @@ var i = n(735250),
     T = n(695346),
     h = n(131704),
     N = n(598077),
-    f = n(594174),
-    C = n(111361),
+    C = n(594174),
+    f = n(111361),
     p = n(74538),
     g = n(981631),
     S = n(474936),
@@ -36,8 +36,8 @@ let M = {
     },
     v = '1337';
 function L() {
-    let e = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
-        t = (0, C.I5)(e, S.p9.TIER_2),
+    let e = (0, c.e7)([C.default], () => C.default.getCurrentUser()),
+        t = (0, f.I5)(e, S.p9.TIER_2),
         { fakeMessage: n, fakeChannel: a } = (function (e) {
             let { showAttachment: t } = e,
                 n = new N.Z({

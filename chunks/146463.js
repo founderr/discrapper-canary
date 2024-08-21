@@ -63,9 +63,9 @@ function x(e) {
 s.Z = function (e) {
     var s;
     let { applicationStatus: n, guildJoinRequests: t, guildId: u, onScroll: I, listRef: h, atMaxMemberCapacity: S } = e,
-        j = (0, i.e7)([d.Z], () => d.Z.getGuild(u), [u]),
-        P = (0, i.e7)([_.Z], () => _.Z.isFetching()),
-        g = P ? [t.length + 25] : [t.length],
+        P = (0, i.e7)([d.Z], () => d.Z.getGuild(u), [u]),
+        j = (0, i.e7)([_.Z], () => _.Z.isFetching()),
+        g = j ? [t.length + 25] : [t.length],
         b = (0, N.L)({ guildId: u }),
         v = null !== (s = (0, R.A)({ guildId: u })) && void 0 !== s ? s : 0,
         p = (0, c.Z)('guild-join-requests'),
@@ -81,7 +81,7 @@ s.Z = function (e) {
                               [m.selected]: b === l,
                               [m.siblingSelected]: b === t[s - 1]
                           }),
-                          guild: j,
+                          guild: P,
                           guildJoinRequest: l,
                           onClick: () => E.Z.setSelectedGuildJoinRequest(u, l),
                           applicationStatus: n,
@@ -90,7 +90,7 @@ s.Z = function (e) {
                       ''.concat(l.userId, '-').concat(l.applicationStatus, '-').concat(s)
                   );
         };
-    return P || 0 !== t.length
+    return j || 0 !== t.length
         ? (0, a.jsxs)(a.Fragment, {
               children: [
                   0 !== v &&

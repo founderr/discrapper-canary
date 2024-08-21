@@ -45,8 +45,8 @@ function C(e) {
         [A, x] = t.useState(null),
         { user: h, createdAt: S } = i;
     if (null == h) throw Error('Missing user on this guild join request!');
-    let j = t.useMemo(() => new u.Z(h), [h]),
-        P = I.ZP.getUserAvatarURL(j),
+    let P = t.useMemo(() => new u.Z(h), [h]),
+        j = I.ZP.getUserAvatarURL(P),
         g = s === _.wB.SUBMITTED,
         b = t.useCallback(
             async (e, s) => {
@@ -73,7 +73,7 @@ function C(e) {
         onClick: M,
         children: [
             (0, a.jsx)(c.Avatar, {
-                src: P,
+                src: j,
                 size: c.AvatarSizes.SIZE_40,
                 'aria-label': h.username,
                 className: N.__invalid_spacer
@@ -120,7 +120,7 @@ function C(e) {
                                 (0, a.jsx)(e, {
                                     ...s,
                                     guild: r,
-                                    user: j
+                                    user: P
                                 });
                         },
                         {

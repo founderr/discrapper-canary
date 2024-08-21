@@ -38,8 +38,8 @@ var i = n(735250),
     T = n(850908),
     h = n(524444),
     N = n(981631),
-    f = n(689938),
-    C = n(789714);
+    C = n(689938),
+    f = n(789714);
 function p(e) {
     let t = e.item.originalItem;
     return (0, h.Yi)({
@@ -64,8 +64,8 @@ function g(e) {
             var e;
             return (0, I.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP)
                 ? (0, i.jsxs)(l.DY, {
-                      text: f.Z.Messages.CLIPS_BETA_TAG_HOVER,
-                      className: C.clipPill,
+                      text: C.Z.Messages.CLIPS_BETA_TAG_HOVER,
+                      className: f.clipPill,
                       children: [
                           (0, i.jsx)(o.ClipsIcon, {
                               size: 'xs',
@@ -74,7 +74,7 @@ function g(e) {
                           (0, i.jsx)(r.x, {
                               variant: 'text-xs/semibold',
                               color: 'always-white',
-                              children: f.Z.Messages.CLIP_TAG
+                              children: C.Z.Messages.CLIP_TAG
                           })
                       ]
                   })

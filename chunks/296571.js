@@ -21,7 +21,7 @@ function d(e) {
             var e;
             return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
         }),
-        f = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
+        C = c.Z.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
             actorName: T.nick,
             actorHook: h,
             threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
@@ -39,6 +39,6 @@ function d(e) {
         }),
         timestamp: n.timestamp,
         compact: d,
-        children: f
+        children: C
     });
 }

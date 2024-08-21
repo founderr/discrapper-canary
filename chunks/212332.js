@@ -23,7 +23,7 @@ function N(e) {
         s = d.default.getCurrentUser();
     r()(void 0 !== s, 'User must not be null');
     let N = (0, _.I5)(s),
-        f = N ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
+        C = N ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
     return (
         a.useEffect(() => {
             null == m.Z.cashAppPayComponent && (0, I.eI)();
@@ -38,7 +38,7 @@ function N(e) {
                 N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CONTENT : h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CONTENT,
                 (0, i.jsx)(l.PrimaryCTANoticeButton, {
                     onClick: () => {
-                        c.Z.open(f),
+                        c.Z.open(C),
                             setTimeout(() => {
                                 (0, l.openModalLazy)(
                                     async () => {

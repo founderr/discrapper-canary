@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     Z: function () {
-        return f;
+        return C;
     }
 }),
     n(47120);
@@ -31,14 +31,14 @@ function N(e) {
             quest: a,
             ...n
         };
-        return (0, i.jsx)(f, { ...e });
+        return (0, i.jsx)(C, { ...e });
     }
 }
-function f(e) {
+function C(e) {
     let { quest: t, location: n, initiallyExpanded: r, contentPosition: c } = e,
-        [N, f] = a.useState(!1),
-        C = a.useCallback(() => f(!0), []),
-        p = a.useCallback(() => f(!1), []),
+        [N, C] = a.useState(!1),
+        f = a.useCallback(() => C(!0), []),
+        p = a.useCallback(() => C(!1), []),
         g = (0, o.tP)(t),
         { containerRef: S, size: A, height: R } = (0, m.h)(),
         x = (0, l.q)({ location: T.dr.QUESTS_CARD }),
@@ -75,8 +75,8 @@ function f(e) {
                                   })
                     },
                     className: h.questsCard,
-                    onFocus: C,
-                    onMouseEnter: C,
+                    onFocus: f,
+                    onMouseEnter: f,
                     onBlur: p,
                     onMouseLeave: p,
                     children: (0, i.jsxs)('div', {

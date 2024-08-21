@@ -34,16 +34,16 @@ var i = n(735250),
     N = n(602147),
     x = n(981631),
     S = n(308083),
-    v = n(921944),
-    Z = n(689938),
+    Z = n(921944),
+    v = n(689938),
     T = n(174507);
 function L(e) {
     let { title: t, message: n, dismissibleContent: r, defaultGameId: a, onPopoutVisible: o, onClick: c, children: h, isEligibleForUpsell: _ = !0, withInviteIcon: f = !0 } = e,
         g = (0, s.TH)(),
-        [I, E] = (0, C.US)([r], v.R.SIDEBAR),
-        Z = I !== r,
+        [I, E] = (0, C.US)([r], Z.R.SIDEBAR),
+        v = I !== r,
         L = (0, d.Z)(),
-        A = _ && !L && !Z && g.pathname !== x.Z5c.GUILD_DISCOVERY;
+        A = _ && !L && !v && g.pathname !== x.Z5c.GUILD_DISCOVERY;
     l.useEffect(() => {
         A && o();
     }, [A, o]);
@@ -59,11 +59,11 @@ function L(e) {
             }
         }, [a, b]),
         R = l.useCallback(() => {
-            E(v.L.TAKE_ACTION), c(), (0, N.o)();
+            E(Z.L.TAKE_ACTION), c(), (0, N.o)();
         }, [E, c]),
         O = l.useCallback(
             (e) => {
-                e(), E(v.L.USER_DISMISS);
+                e(), E(Z.L.USER_DISMISS);
             },
             [E]
         );
@@ -119,9 +119,9 @@ function A(e) {
         [s, o] = l.useMemo(() => {
             switch (t) {
                 case S.xn:
-                    return [Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE, Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE];
+                    return [v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_TITLE, v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_GENSHIN_MESSAGE];
                 case S.nJ:
-                    return [Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE, Z.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE];
+                    return [v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_TITLE, v.Z.Messages.CLAN_GUILD_LIST_USER_UPSELL_VALORANT_MESSAGE];
                 default:
                     return [void 0, void 0];
             }
@@ -150,8 +150,8 @@ function b(e) {
         s = l.useCallback(() => {
             (0, f._9)({ location: _.Z.GUILDS_LIST });
         }, []),
-        o = Z.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
-        u = Z.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE;
+        o = v.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_TITLE,
+        u = v.Z.Messages.RAPIDASH_CHANNEL_LIST_ADMIN_UPSELL_MESSAGE;
     return (0, i.jsx)(L, {
         title: o,
         message: u,
@@ -196,12 +196,12 @@ function M(e) {
                                             children: [
                                                 (0, i.jsx)(u.Heading, {
                                                     variant: 'heading-md/medium',
-                                                    children: Z.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
+                                                    children: v.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_TITLE
                                                 }),
                                                 (0, i.jsx)(u.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'text-muted',
-                                                    children: Z.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_BODY
+                                                    children: v.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_BODY
                                                 })
                                             ]
                                         }),
@@ -210,7 +210,7 @@ function M(e) {
                                             size: u.ButtonSizes.SMALL,
                                             color: u.ButtonColors.BRAND,
                                             onClick: a,
-                                            children: Z.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
+                                            children: v.Z.Messages.CLAN_USER_APPLICATION_COACHMARK_CTA
                                         })
                                     ]
                                 }),

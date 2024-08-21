@@ -20,8 +20,8 @@ var i = n(735250),
     T = n(768943),
     h = n(695346),
     N = n(592125),
-    f = n(655354),
-    C = n(324081),
+    C = n(655354),
+    f = n(324081),
     p = n(240126),
     g = n(791914),
     S = n(981631),
@@ -98,7 +98,7 @@ function v(e) {
         : (0, i.jsxs)('div', {
               className: x.container,
               children: [
-                  (0, i.jsx)(C.Z, {
+                  (0, i.jsx)(f.Z, {
                       channel: u,
                       gotoChannel: T,
                       children: (0, i.jsxs)('div', {
@@ -166,7 +166,7 @@ function v(e) {
                   (0, i.jsxs)('div', {
                       className: r()(x.messageContainer, R.unloadedMessage),
                       children: [
-                          (0, i.jsx)(f.Z, {
+                          (0, i.jsx)(C.Z, {
                               className: x.jumpMessageButton,
                               onJump: T
                           }),

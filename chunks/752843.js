@@ -10,8 +10,8 @@ var i = t(735250);
 t(470079);
 var l = t(628028),
     r = t(220427),
-    s = t(777207),
-    o = t(330711),
+    o = t(777207),
+    s = t(330711),
     a = t(33937);
 function c(e) {
     let { type: n } = e;
@@ -26,7 +26,7 @@ function c(e) {
                       size: 'xxs',
                       color: 'var(--text-brand)'
                   }),
-        text: 'user' === n ? o.Z.Messages.Storefront.USER_SUBSCRIPTION : o.Z.Messages.Storefront.SERVER_SUBSCRIPTION
+        text: 'user' === n ? s.Z.Messages.Storefront.USER_SUBSCRIPTION : s.Z.Messages.Storefront.SERVER_SUBSCRIPTION
     });
 }
 function d(e) {
@@ -35,7 +35,7 @@ function d(e) {
         className: a.container,
         children: [
             n,
-            (0, i.jsx)(s.x, {
+            (0, i.jsx)(o.x, {
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
                 children: t

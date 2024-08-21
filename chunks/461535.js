@@ -15,8 +15,8 @@ var a = t(442837),
     d = t(131704),
     c = t(324067),
     _ = t(306680),
-    M = t(981631),
-    I = t(689938);
+    I = t(981631),
+    M = t(689938);
 function f(e) {
     let n = (function (e) {
         let n = (0, u.n2)(e.guild_id, e.id),
@@ -24,7 +24,7 @@ function f(e) {
                 [_.ZP, c.Z, s.Z, o.Z],
                 () => {
                     if (e.isForumPost()) return _.ZP.isForumPostUnread(e.id);
-                    if (e.type !== M.d4z.GUILD_CATEGORY) return _.ZP.hasUnreadOrMentions(e.id);
+                    if (e.type !== I.d4z.GUILD_CATEGORY) return _.ZP.hasUnreadOrMentions(e.id);
                     {
                         let n = c.Z.getCategories(e.getGuildId());
                         if (null == n[e.id]) return !1;
@@ -50,7 +50,7 @@ function f(e) {
     })(e);
     return (0, i.jsx)(l.MenuItem, {
         id: 'mark-channel-read',
-        label: I.Z.Messages.MARK_AS_READ,
+        label: M.Z.Messages.MARK_AS_READ,
         action: function () {
             (0, r.U6)(e);
         },

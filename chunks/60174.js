@@ -21,8 +21,8 @@ var i = n(735250),
     T = n(931651),
     h = n(594174),
     N = n(630388),
-    f = n(74538),
-    C = n(566006),
+    C = n(74538),
+    f = n(566006),
     p = n(981631),
     g = n(185923),
     S = n(474936),
@@ -47,10 +47,10 @@ class M extends a.Component {
         let { type: e, message: t, className: n, children: a, useChatFontScaling: s, tabIndex: l = 0 } = this.props,
             { isReactionPickerActive: o } = this.state,
             c = t.state === p.yb.SENDING,
-            E = e === C.O.BURST;
+            E = e === f.O.BURST;
         if (c || (0, N.yE)(t.flags, p.iLy.EPHEMERAL)) return null;
         let I = h.default.getCurrentUser(),
-            m = (0, f.I5)(I),
+            m = (0, C.I5)(I),
             T = E ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
         !m && E && (T = (0, i.jsx)(_.X, { tooltipText: A.Z.Messages.ADD_BURST_REACTION }));
         let S = s ? x : R;
@@ -113,8 +113,8 @@ class M extends a.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let i = h.default.getCurrentUser();
-                t === C.O.BURST &&
-                    !(0, f.I5)(i) &&
+                t === f.O.BURST &&
+                    !(0, C.I5)(i) &&
                     (0, E.openBurstReactionsUpsellModal)({
                         analytics: {
                             type: S.cd.BURST_REACTION_UPSELL,
@@ -130,7 +130,7 @@ class M extends a.Component {
                     { type: n, channel: a, message: s } = this.props,
                     r = {
                         openPopoutType: 'message_reaction_emoji_picker',
-                        ...(n === C.O.BURST && {
+                        ...(n === f.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
                             page: null != a.getGuildId() ? p.ZY5.GUILD_CHANNEL : p.ZY5.DM_CHANNEL,
                             section: (0, m.s4)(a),

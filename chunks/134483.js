@@ -15,8 +15,8 @@ var i = n(735250),
     T = n(594174),
     h = n(617136),
     N = n(272008),
-    f = n(113434),
-    C = n(569984),
+    C = n(113434),
+    f = n(569984),
     p = n(497505),
     g = n(918701),
     S = n(5881),
@@ -45,7 +45,7 @@ t.Z = function (e) {
         K = (0, l.e7)([E.Z], () => E.Z.getState().theme),
         z = (0, o.wj)(K) ? D.BRd.DARK : D.BRd.LIGHT,
         { isCurrentUserStreamingQuestApplication: Q, quest: q } = (0, l.cj)(
-            [m.Z, u.Z, C.Z],
+            [m.Z, u.Z, f.Z],
             () => {
                 var e, t, n, i;
                 let a = u.Z.getParticipants(B),
@@ -69,7 +69,7 @@ t.Z = function (e) {
                                       }
                                   }
                                   return null;
-                              })(a, C.Z.quests, m.Z);
+                              })(a, f.Z.quests, m.Z);
                 return {
                     isCurrentUserStreamingQuestApplication:
                         null != s &&
@@ -102,10 +102,10 @@ t.Z = function (e) {
             [q, J, W]
         ),
         ee = !0 === G || Q || $,
-        et = (0, l.e7)([C.Z], () => null != q && C.Z.isEnrolling(q.id), [q]),
+        et = (0, l.e7)([f.Z], () => null != q && f.Z.isEnrolling(q.id), [q]),
         en = (0, l.e7)([u.Z], () => ((null == W ? void 0 : W.id) == null ? null : u.Z.getParticipant(B, W.id)) != null, [B, W]),
-        ei = (0, f.B6)(null == q ? void 0 : q.config.expiresAt),
-        ea = (0, f.B6)(null == X ? void 0 : X.rewardsExpireAt),
+        ei = (0, C.B6)(null == q ? void 0 : q.config.expiresAt),
+        ea = (0, C.B6)(null == X ? void 0 : X.rewardsExpireAt),
         es = a.useCallback(() => {
             null != q &&
                 (0, N.AH)(q.id, {
@@ -143,7 +143,7 @@ t.Z = function (e) {
                 }),
             [q]
         ),
-        eu = (0, f.tP)(q);
+        eu = (0, C.tP)(q);
     if (null == q || !(0, g.dl)(q)) return null;
     let ed = (null === (t = q.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         e_ = (null === (n = q.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
