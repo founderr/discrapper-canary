@@ -32,18 +32,18 @@ async function N(e, t, n) {
         o,
         c,
         d,
-        { client_id: S, response_type: C = 'code', redirect_uri: N, code_challenge: A, code_challenge_method: v, state: Z, nonce: L, scope: O, permissions: R, guild_id: x, channel_id: b, prompt: P, disable_guild_select: M, integration_type: D } = e;
+        { client_id: S, response_type: C = 'code', redirect_uri: N, code_challenge: A, code_challenge_method: v, state: Z, nonce: L, scope: O, permissions: R, guild_id: x, channel_id: b, prompt: P, disable_guild_select: M, integration_type: D, pid: y } = e;
     if (null == S) throw new T.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != N) throw new T.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
-    let y = [];
-    if (('string' == typeof O ? (y = O.split(' ').filter((e) => e.length > 0)) : Array.isArray(O) && (y = O), null == I.default.getCurrentUser())) throw new T.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'Client is not logged in');
-    let j = m.Z.createFromServer(await (0, E.UM)(S)),
-        U = null != j && (0, g.yE)(j.flags, f.udG.EMBEDDED) && (null === (i = j.integrationTypesConfig) || void 0 === i ? void 0 : i[a.Y.USER_INSTALL]) != null;
-    l = null == D ? (U ? a.Y.USER_INSTALL : a.Y.GUILD_INSTALL) : Number(D);
+    let j = [];
+    if (('string' == typeof O ? (j = O.split(' ').filter((e) => e.length > 0)) : Array.isArray(O) && (j = O), null == I.default.getCurrentUser())) throw new T.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'Client is not logged in');
+    let U = m.Z.createFromServer(await (0, E.UM)(S)),
+        G = null != U && (0, g.yE)(U.flags, f.udG.EMBEDDED) && (null === (i = U.integrationTypesConfig) || void 0 === i ? void 0 : i[a.Y.USER_INSTALL]) != null;
+    l = null == D ? (G ? a.Y.USER_INSTALL : a.Y.GUILD_INSTALL) : Number(D);
     try {
         o = await (0, _.Ww)({
             clientId: S,
-            scopes: y,
+            scopes: j,
             responseType: C,
             redirectUri: N,
             codeChallenge: A,
@@ -67,7 +67,7 @@ async function N(e, t, n) {
                 await (0, _.Iq)({
                     authorize: !0,
                     clientId: S,
-                    scopes: y,
+                    scopes: j,
                     responseType: C,
                     redirectUri: N,
                     codeChallenge: A,
@@ -81,18 +81,18 @@ async function N(e, t, n) {
             let { body: e } = t;
             throw new T.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'OAuth2 Authorize Error: '.concat(e.message || 'Unknown Error'));
         }
-    null == n || n(o.application, b);
-    let G = p.Hn;
+    null == n || n(o.application, b, y);
+    let k = p.Hn;
     try {
-        G = r.vB(null != R ? R : 0);
+        k = r.vB(null != R ? R : 0);
     } catch (e) {}
     return (
         null != o.integration_type && Object.values(a.Y).includes(o.integration_type) && (s = new Map()).set(o.integration_type, o),
         t({
             clientId: S,
             authorizations: s,
-            scopes: y,
-            parsedPermissions: G,
+            scopes: j,
+            parsedPermissions: k,
             responseType: C,
             redirectUri: N,
             codeChallenge: A,
@@ -103,7 +103,8 @@ async function N(e, t, n) {
             prompt: P,
             disableGuildSelect: M,
             disclosures: c,
-            integrationType: l
+            integrationType: l,
+            pid: y
         })
     );
 }
