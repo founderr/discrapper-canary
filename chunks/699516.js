@@ -81,6 +81,9 @@ class R extends (r = u.ZP.Store) {
     getFriendIDs() {
         return E.default.keys(p).filter((e) => p[e] === h.OGo.FRIEND);
     }
+    getBlockedIDs() {
+        return E.default.keys(p).filter((e) => p[e] === h.OGo.BLOCKED);
+    }
 }
 (s = 'RelationshipStore'),
     (a = 'displayName') in (i = R)
