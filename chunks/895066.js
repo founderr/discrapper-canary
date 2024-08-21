@@ -240,8 +240,8 @@ class c {
                                 let S = null !== (r = e.transport.ping) && void 0 !== r ? r : 0,
                                     A = t.packetsReceived,
                                     N = t.packetsLost,
-                                    v = t.bytesReceived,
-                                    O = null !== (a = t.fecPacketsReceived) && void 0 !== a ? a : 0,
+                                    O = t.bytesReceived,
+                                    v = null !== (a = t.fecPacketsReceived) && void 0 !== a ? a : 0,
                                     R = null !== (s = t.fecPacketsDiscarded) && void 0 !== s ? s : 0,
                                     C = null !== (o = t.jitterBuffer) && void 0 !== o ? o : 0,
                                     y = {
@@ -275,9 +275,9 @@ class c {
                                     e > 0 && r >= 0 && ((a = this.calculateMos(S + C, i().clamp(r / (e + r), 0, 1))), s[Math.floor(a)]++),
                                         (this.inboundStats[n] = {
                                             packetsReceived: A,
-                                            bytesReceived: v,
+                                            bytesReceived: O,
                                             packetsLost: N,
-                                            fecPacketsReceived: O,
+                                            fecPacketsReceived: v,
                                             fecPacketsDiscarded: R,
                                             mos: a,
                                             mosSum: this.inboundStats[n].mosSum + a,
@@ -301,9 +301,9 @@ class c {
                                 } else
                                     (this.inboundStats[n] = {
                                         packetsReceived: A,
-                                        bytesReceived: v,
+                                        bytesReceived: O,
                                         packetsLost: N,
-                                        fecPacketsReceived: O,
+                                        fecPacketsReceived: v,
                                         fecPacketsDiscarded: R,
                                         mos: 0,
                                         mosSum: 0,

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return v;
     }
 }),
     n(47120);
@@ -25,9 +25,9 @@ var r = n(735250),
     S = n(981631),
     A = n(474936),
     N = n(234328);
-let v = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
-function O(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: O, animateOnHover: R, onOpenProfile: C } = e,
+let O = h.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+function v(e) {
+    let { user: t, displayProfile: n, guildId: a, channelId: h, profileType: v, animateOnHover: R, onOpenProfile: C } = e,
         { theme: y } = (0, T.z)(),
         { analyticsLocations: D } = (0, d.ZP)(c.Z.AVATAR),
         { trackUserProfileAction: L } = (0, p.KZ)(),
@@ -39,11 +39,11 @@ function O(e) {
             status: (0, u.Z)(U) ? S.Skl.STREAMING : E.Z.getStatus(t.id),
             isMobileOnline: E.Z.isMobileOnline(t.id)
         })),
-        G = O === g.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
+        G = v === g.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
         k = s()(N.avatar, {
-            [N.biteSize]: O === g.y0.BITE_SIZE,
-            [N.fullSize]: O === g.y0.FULL_SIZE,
-            [N.panel]: O === g.y0.PANEL
+            [N.biteSize]: v === g.y0.BITE_SIZE,
+            [N.fullSize]: v === g.y0.FULL_SIZE,
+            [N.panel]: v === g.y0.PANEL
         }),
         {
             avatarDecorationSrc: B,
@@ -55,7 +55,7 @@ function O(e) {
             size: G,
             animateOnHover: R
         }),
-        H = (0, r.jsx)(v, {
+        H = (0, r.jsx)(O, {
             src: F,
             avatarDecoration: B,
             size: G,

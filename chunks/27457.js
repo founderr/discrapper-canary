@@ -588,7 +588,7 @@ let er = a.memo((e) => {
                                                   (0, i.jsx)(u.ShieldLockIcon, {
                                                       ...e,
                                                       className: ea.secureFramesIcon,
-                                                      size: 'xxs',
+                                                      size: 'xs',
                                                       color: c.Z.colors.HEADER_PRIMARY,
                                                       'aria-label': ei.Z.Messages.E2EE_USER_VERIFIED_A11Y
                                                   })

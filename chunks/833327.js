@@ -16,7 +16,7 @@ function s(e) {
             })(t, e);
         });
 }
-(e.exports = O), (O.WritableState = v);
+(e.exports = v), (v.WritableState = O);
 var o = { deprecate: n(220342) },
     l = n(138772),
     u = n(413135).Buffer,
@@ -34,7 +34,7 @@ var o = { deprecate: n(220342) },
     S = E.ERR_UNKNOWN_ENCODING,
     A = d.errorOrDestroy;
 function N() {}
-function v(e, t, i) {
+function O(e, t, i) {
     (r = r || n(827664)), (e = e || {}), 'boolean' != typeof i && (i = t instanceof r), (this.objectMode = !!e.objectMode), i && (this.objectMode = this.objectMode || !!e.writableObjectMode), (this.highWaterMark = _(this, e, 'writableHighWaterMark', i)), (this.finalCalled = !1), (this.needDrain = !1), (this.ending = !1), (this.ended = !1), (this.finished = !1), (this.destroyed = !1);
     var o = !1 === e.decodeStrings;
     (this.decodeStrings = !o),
@@ -76,19 +76,19 @@ function v(e, t, i) {
         (this.bufferedRequestCount = 0),
         (this.corkedRequestsFree = new s(this));
 }
-function O(e) {
+function v(e) {
     var t = this instanceof (r = r || n(827664));
-    if (!t && !i.call(O, this)) return new O(e);
-    (this._writableState = new v(e, this, t)), (this.writable = !0), e && ('function' == typeof e.write && (this._write = e.write), 'function' == typeof e.writev && (this._writev = e.writev), 'function' == typeof e.destroy && (this._destroy = e.destroy), 'function' == typeof e.final && (this._final = e.final)), l.call(this);
+    if (!t && !i.call(v, this)) return new v(e);
+    (this._writableState = new O(e, this, t)), (this.writable = !0), e && ('function' == typeof e.write && (this._write = e.write), 'function' == typeof e.writev && (this._writev = e.writev), 'function' == typeof e.destroy && (this._destroy = e.destroy), 'function' == typeof e.final && (this._final = e.final)), l.call(this);
 }
-n(689118)(O, l),
-    (v.prototype.getBuffer = function () {
+n(689118)(v, l),
+    (O.prototype.getBuffer = function () {
         for (var e = this.bufferedRequest, t = []; e; ) t.push(e), (e = e.next);
         return t;
     }),
     !(function () {
         try {
-            Object.defineProperty(v.prototype, 'buffer', {
+            Object.defineProperty(O.prototype, 'buffer', {
                 get: o.deprecate(
                     function () {
                         return this.getBuffer();
@@ -101,18 +101,18 @@ n(689118)(O, l),
     })(),
     'function' == typeof Symbol && Symbol.hasInstance && 'function' == typeof Function.prototype[Symbol.hasInstance]
         ? ((i = Function.prototype[Symbol.hasInstance]),
-          Object.defineProperty(O, Symbol.hasInstance, {
+          Object.defineProperty(v, Symbol.hasInstance, {
               value: function (e) {
-                  return !!i.call(this, e) || (this === O && e && e._writableState instanceof v);
+                  return !!i.call(this, e) || (this === v && e && e._writableState instanceof O);
               }
           }))
         : (i = function (e) {
               return e instanceof this;
           }),
-    (O.prototype.pipe = function () {
+    (v.prototype.pipe = function () {
         A(this, new I());
     });
-(O.prototype.write = function (e, t, n) {
+(v.prototype.write = function (e, t, n) {
     var r,
         i,
         s,
@@ -162,24 +162,24 @@ n(689118)(O, l),
     }
     return m;
 }),
-    (O.prototype.cork = function () {
+    (v.prototype.cork = function () {
         this._writableState.corked++;
     }),
-    (O.prototype.uncork = function () {
+    (v.prototype.uncork = function () {
         var e = this._writableState;
         e.corked && (e.corked--, !e.writing && !e.corked && !e.bufferProcessing && e.bufferedRequest && y(this, e));
     }),
-    (O.prototype.setDefaultEncoding = function (e) {
+    (v.prototype.setDefaultEncoding = function (e) {
         if (('string' == typeof e && (e = e.toLowerCase()), !(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((e + '').toLowerCase()) > -1))) throw new S(e);
         return (this._writableState.defaultEncoding = e), this;
     }),
-    Object.defineProperty(O.prototype, 'writableBuffer', {
+    Object.defineProperty(v.prototype, 'writableBuffer', {
         enumerable: !1,
         get: function () {
             return this._writableState && this._writableState.getBuffer();
         }
     });
-Object.defineProperty(O.prototype, 'writableHighWaterMark', {
+Object.defineProperty(v.prototype, 'writableHighWaterMark', {
     enumerable: !1,
     get: function () {
         return this._writableState.highWaterMark;
@@ -226,11 +226,11 @@ function L(e, t) {
         t.pendingcb--, n && A(e, n), (t.prefinished = !0), e.emit('prefinish'), b(e, t);
     });
 }
-(O.prototype._write = function (e, t, n) {
+(v.prototype._write = function (e, t, n) {
     n(new h('_write()'));
 }),
-    (O.prototype._writev = null),
-    (O.prototype.end = function (e, t, n) {
+    (v.prototype._writev = null),
+    (v.prototype.end = function (e, t, n) {
         var r = this._writableState;
         return (
             'function' == typeof e ? ((n = e), (e = null), (t = null)) : 'function' == typeof t && ((n = t), (t = null)),
@@ -243,7 +243,7 @@ function L(e, t) {
             this
         );
     }),
-    Object.defineProperty(O.prototype, 'writableLength', {
+    Object.defineProperty(v.prototype, 'writableLength', {
         enumerable: !1,
         get: function () {
             return this._writableState.length;
@@ -261,7 +261,7 @@ function b(e, t) {
     }
     return i;
 }
-Object.defineProperty(O.prototype, 'destroyed', {
+Object.defineProperty(v.prototype, 'destroyed', {
     enumerable: !1,
     get: function () {
         return void 0 !== this._writableState && this._writableState.destroyed;
@@ -270,8 +270,8 @@ Object.defineProperty(O.prototype, 'destroyed', {
         if (!!this._writableState) this._writableState.destroyed = e;
     }
 }),
-    (O.prototype.destroy = d.destroy),
-    (O.prototype._undestroy = d.undestroy),
-    (O.prototype._destroy = function (e, t) {
+    (v.prototype.destroy = d.destroy),
+    (v.prototype._undestroy = d.undestroy),
+    (v.prototype._destroy = function (e, t) {
         t(e);
     });

@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(652853),
     A = n(429974),
     N = n(228168),
-    v = n(981631),
-    O = n(474936),
+    O = n(981631),
+    v = n(474936),
     R = n(234328);
 let C = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function y(e) {
@@ -35,7 +35,7 @@ function y(e) {
         { analyticsLocations: k } = (0, d.ZP)(c.Z.AVATAR),
         { trackUserProfileAction: B } = (0, I.KZ)(),
         F = y === N.y0.FULL_SIZE ? (0, A.z)(t.id, null == n ? void 0 : n.guildId) : void 0,
-        V = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, O.p9.TIER_2),
+        V = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
         H = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [t, p]),
         [Z, Y] = i.useState(!1),
         j = () => {
@@ -48,10 +48,10 @@ function y(e) {
             let e = null != E.Z.getAnyStreamForUser(t.id),
                 n = f.Z.findActivity(t.id, (t) => {
                     let { type: n } = t;
-                    return e ? n === v.IIU.PLAYING : n !== v.IIU.CUSTOM_STATUS;
+                    return e ? n === O.IIU.PLAYING : n !== O.IIU.CUSTOM_STATUS;
                 });
             return {
-                status: (0, u.Z)(n) ? v.Skl.STREAMING : f.Z.getStatus(t.id),
+                status: (0, u.Z)(n) ? O.Skl.STREAMING : f.Z.getStatus(t.id),
                 isMobileOnline: f.Z.isMobileOnline(t.id)
             };
         }),
@@ -78,7 +78,7 @@ function y(e) {
             size: q,
             'aria-label': t.username,
             imageClassName: null != L ? R.overlay : void 0,
-            status: H ? v.Skl.UNKNOWN : K,
+            status: H ? O.Skl.UNKNOWN : K,
             statusBackdropColor: V && !H ? (0, l.getStatusBackdropColor)(G) : void 0,
             isMobile: z,
             statusTooltip: !0,

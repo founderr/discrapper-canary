@@ -23,7 +23,7 @@ function c(e, t, n) {
         });
     return (0, i.forwardRef)(function (n, _) {
         var E;
-        let { onScroll: f, dir: h = 'ltr', sections: p, columns: I, getItemKey: m, getItemHeight: T, getSectionHeight: g, chunkSize: S, renderSection: A, renderItem: N, getSectionProps: v, itemGutter: O, removeEdgeItemGutters: R, sectionGutter: C, padding: y, paddingVertical: D, paddingHorizontal: L, fade: b = !1, className: M, style: P, maxContentWidth: U, renderAccessory: w, ...x } = n,
+        let { onScroll: f, dir: h = 'ltr', sections: p, columns: I, getItemKey: m, getItemHeight: T, getSectionHeight: g, chunkSize: S, renderSection: A, renderItem: N, getSectionProps: O, itemGutter: v, removeEdgeItemGutters: R, sectionGutter: C, padding: y, paddingVertical: D, paddingHorizontal: L, fade: b = !1, className: M, style: P, maxContentWidth: U, renderAccessory: w, ...x } = n,
             G = i.useRef(null),
             k = i.useRef(null),
             [B, F] = i.useState(!1),
@@ -50,7 +50,7 @@ function c(e, t, n) {
                 getItemHeight: T,
                 getSectionHeight: g,
                 chunkSize: S,
-                itemGutter: O,
+                itemGutter: v,
                 removeEdgeItemGutters: R,
                 sectionGutter: C,
                 padding: y,
@@ -129,7 +129,7 @@ function c(e, t, n) {
                                             n = j[e],
                                             i = K[e],
                                             a = j[(0, l.DP)(t)],
-                                            s = null == v ? void 0 : v(t);
+                                            s = null == O ? void 0 : O(t);
                                         return null != n && null != i
                                             ? (0, r.jsxs)(
                                                   'div',
@@ -151,7 +151,7 @@ function c(e, t, n) {
                                     })
                                 })
                             }),
-                        [K, N, A, j, z, v, W]
+                        [K, N, A, j, z, O, W]
                     )
                 ]
             })

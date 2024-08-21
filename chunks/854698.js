@@ -15,7 +15,7 @@ n.d(t, {
         return f;
     },
     P8: function () {
-        return v;
+        return O;
     },
     PJ: function () {
         return G;
@@ -36,7 +36,7 @@ n.d(t, {
         return b;
     },
     ib: function () {
-        return O;
+        return v;
     },
     lh: function () {
         return j;
@@ -80,7 +80,7 @@ let E = 365,
     S = [s.Ci.SU.weekday, s.Ci.MO.weekday],
     A = [s.Ci.SU.weekday, s.Ci.MO.weekday, s.Ci.TU.weekday, s.Ci.WE.weekday, s.Ci.TH.weekday, s.Ci.FR.weekday, s.Ci.SA.weekday],
     N = new Set([0, 6]);
-function v(e) {
+function O(e) {
     var t;
     let n = e.toDate(),
         r = Math.ceil(n.getDate() / 7),
@@ -129,7 +129,7 @@ function v(e) {
         a
     );
 }
-let O = () => {
+let v = () => {
         let e = a()().add(1, 'hour'),
             t = e.hour();
         return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);

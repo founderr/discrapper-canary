@@ -104,7 +104,7 @@ class g extends (i = o.PureComponent) {
     render() {
         var e;
         let { value: t, active: n, focused: r, sortedMarkers: i, markerPositions: a, closestMarkerIndex: o, newClosestIndex: l, min: c, max: d } = this.state,
-            { disabled: _, stickToMarkers: I, className: m, children: T, barStyles: g, fillStyles: S, mini: A, hideBubble: N, defaultValue: v, orientation: O, onValueRender: R, renderMarker: C, getAriaValueText: y, barClassName: D, grabberClassName: L, grabberStyles: b = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': U, 'aria-labelledby': w, 'aria-describedby': x } = this.props,
+            { disabled: _, stickToMarkers: I, className: m, children: T, barStyles: g, fillStyles: S, mini: A, hideBubble: N, defaultValue: O, orientation: v, onValueRender: R, renderMarker: C, getAriaValueText: y, barClassName: D, grabberClassName: L, grabberStyles: b = {}, markerPosition: M = 0, 'aria-hidden': P, 'aria-label': U, 'aria-labelledby': w, 'aria-describedby': x } = this.props,
             G = 0;
         I ? null != a && (null != l ? (G = a[l]) : null != o && (G = a[o])) : (G = this.scaleValue(t));
         let k = ''.concat(G, '%'),
@@ -112,7 +112,7 @@ class g extends (i = o.PureComponent) {
                 null != a && null != i
                     ? a.map((e, t) => {
                           let n = i[t],
-                              r = null != v && v === n,
+                              r = null != O && O === n,
                               a = this.renderMark(n);
                           return (0, s.jsx)(
                               'div',
@@ -154,7 +154,7 @@ class g extends (i = o.PureComponent) {
                 'aria-valuemax': d,
                 'aria-valuenow': t,
                 'aria-disabled': _,
-                'aria-orientation': O,
+                'aria-orientation': v,
                 'aria-hidden': P,
                 'aria-label': U,
                 'aria-labelledby': w,

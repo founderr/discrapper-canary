@@ -26,8 +26,8 @@ function p(e) {
         S = Math.min(_.Eu4.TIER_3, t.premiumTier + 1),
         A = _.oCV[t.premiumTier],
         N = _.oCV[S],
-        v = (t.premiumSubscriberCount - A) / (N - A),
-        O = d.P[t.premiumTier],
+        O = (t.premiumSubscriberCount - A) / (N - A),
+        v = d.P[t.premiumTier],
         R = d.P[S],
         C = t.premiumTier === _.Eu4.TIER_3,
         {
@@ -86,7 +86,7 @@ function p(e) {
                 }
             );
         })({
-            fillFactor: C ? 1 : v * (R - O) + O,
+            fillFactor: C ? 1 : O * (R - v) + v,
             isRevealed: p || n,
             useReducedMotion: n,
             premiumTier: t.premiumTier,

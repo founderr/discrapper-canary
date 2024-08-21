@@ -29,8 +29,8 @@ var r,
     S = n(311476),
     A = n(165583),
     N = n(587446),
-    v = n(210887),
-    O = n(740492),
+    O = n(210887),
+    v = n(740492),
     R = n(626135),
     C = n(238302),
     y = n(514361),
@@ -218,7 +218,7 @@ let k = Object.freeze({
             ((T === L.XV.length - 2 && 'EDITOR' === r) || u === d.Us.EASTER_EGG) && m(!0);
         }, [T, r, u]);
         let { enabled: N } = S.Z.useExperiment({ location: 'useGradientSelectors' }, { autoTrackExposure: !1 }),
-            v = (e, t) => {
+            O = (e, t) => {
                 if (
                     ((0, C.zO)(e.id),
                     F({
@@ -275,7 +275,7 @@ let k = Object.freeze({
                         {
                             preset: e,
                             isSelected: u === e.id,
-                            onSelect: () => v(e, n),
+                            onSelect: () => O(e, n),
                             disabled: t,
                             tabIndex: 0 !== n || t ? void 0 : 0,
                             showBadge: !1,
@@ -298,7 +298,7 @@ let k = Object.freeze({
                             (0, a.jsx)(D.DR, {
                                 preset: e,
                                 isSelected: u === d.Us.EASTER_EGG,
-                                onSelect: () => v(e)
+                                onSelect: () => O(e)
                             }),
                             (0, a.jsx)(_.LottieAnimation, {
                                 importData: t,
@@ -315,7 +315,7 @@ let k = Object.freeze({
         let { systemSelectorFirst: t } = e,
             { delay: n } = s.useContext(B),
             { analyticsLocations: r } = (0, p.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [i, o, l] = (0, c.Wu)([v.Z, O.ZP, y.Z], () => [v.Z.theme, null == y.Z.gradientPreset, O.ZP.useSystemTheme === P.K.ON]),
+            [i, o, l] = (0, c.Wu)([O.Z, v.ZP, y.Z], () => [O.Z.theme, null == y.Z.gradientPreset, v.ZP.useSystemTheme === P.K.ON]),
             u = (e) => {
                 (0, C.xs)(),
                     F({

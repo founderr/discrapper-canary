@@ -29,9 +29,9 @@ function _(e) {
         S = e.gpuAcceleration,
         A = e.adaptive,
         N = e.roundOffsets,
-        v = e.isFixed,
-        O = T.x,
-        R = void 0 === O ? 0 : O,
+        O = e.isFixed,
+        v = T.x,
+        R = void 0 === v ? 0 : v,
         C = T.y,
         y = void 0 === C ? 0 : C,
         D =
@@ -55,7 +55,7 @@ function _(e) {
             x = 'clientHeight',
             G = 'clientWidth';
         w === (0, a.Z)(h) && ((w = (0, s.Z)(h)), 'static' !== (0, o.Z)(w).position && 'absolute' === g && ((x = 'scrollHeight'), (G = 'scrollWidth')));
-        (I === r.we || ((I === r.t$ || I === r.F2) && m === r.ut)) && ((P = r.I), (y -= (v && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height), (y *= S ? 1 : -1)), (I === r.t$ || ((I === r.we || I === r.I) && m === r.ut)) && ((M = r.F2), (R -= (v && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width), (R *= S ? 1 : -1));
+        (I === r.we || ((I === r.t$ || I === r.F2) && m === r.ut)) && ((P = r.I), (y -= (O && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height), (y *= S ? 1 : -1)), (I === r.t$ || ((I === r.we || I === r.I) && m === r.ut)) && ((M = r.F2), (R -= (O && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width), (R *= S ? 1 : -1));
     }
     var k = Object.assign({ position: g }, A && d);
     var B =

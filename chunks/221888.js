@@ -35,7 +35,7 @@ function N(e, t) {
             throw Error('Unknown participant type.');
     }
 }
-function v(e) {
+function O(e) {
     let { users: t, disableInteraction: n, guildId: i, participantType: a, channelId: o, handleUserContextMenu: l } = e,
         u = N(a, t.length);
     return (0, r.jsx)(d.Dialog, {
@@ -70,7 +70,7 @@ function v(e) {
         })
     });
 }
-function O(e) {
+function v(e) {
     let { users: t, guildId: n, channelId: i, maxVisibleUsers: a = 3, className: o, participantType: l } = e,
         u = N(l, t.length),
         c =
@@ -153,7 +153,7 @@ function C(e) {
         );
     if (0 === L.length) return null;
     if (m)
-        return (0, r.jsx)(O, {
+        return (0, r.jsx)(v, {
             maxVisibleUsers: N,
             users: L,
             guildId: a,
@@ -193,7 +193,7 @@ function C(e) {
                 onMouseLeave: M,
                 children: (0, r.jsx)(d.Popout, {
                     renderPopout: () =>
-                        (0, r.jsx)(v, {
+                        (0, r.jsx)(O, {
                             participantType: o.type,
                             handleUserContextMenu: P,
                             guildId: a,

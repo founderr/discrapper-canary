@@ -28,7 +28,7 @@ function p(e) {
                 activityPanelMode: c.ZP.getActivityPanelMode()
             };
         }),
-        f = (0, r.NX)(p, !1),
+        f = (0, r.NX)(p),
         E = (0, l.Z)(p);
     if (
         (a.useEffect(() => {

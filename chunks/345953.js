@@ -55,10 +55,10 @@ function S() {
         );
 }
 let A = i().debounce(() => {
-        v();
+        O();
     }, 2000),
     N = i().debounce(u.On, 500, { maxWait: 500 });
-function v() {
+function O() {
     I.hW.updateAsync(
         'audioContextSettings',
         (e) => {
@@ -115,7 +115,7 @@ function v() {
         I.fy.INFREQUENT_USER_ACTION
     );
 }
-function O(e) {
+function v(e) {
     var t, n, r;
     let { context: i, userId: a, volume: s } = e;
     if (a === _.default.getId()) return;
@@ -135,14 +135,14 @@ function R(e) {
     let { context: t, userId: n } = e;
     if (n !== _.default.getId()) {
         var r, i, a;
-        (r = t), (i = n), (a = E.Z.isLocalMute(n, t)), (0, h.RF)(r, i, { muted: a }), A.cancel(), v();
+        (r = t), (i = n), (a = E.Z.isLocalMute(n, t)), (0, h.RF)(r, i, { muted: a }), A.cancel(), O();
     }
 }
 function C(e) {
     let { context: t, userId: n } = e;
     if (n !== _.default.getId()) {
         var r, i, a;
-        (r = t), (i = n), (a = d.Z.isLocalSoundboardMuted(n)), (0, h.RF)(r, i, { soundboardMuted: a }), A.cancel(), v();
+        (r = t), (i = n), (a = d.Z.isLocalSoundboardMuted(n)), (0, h.RF)(r, i, { soundboardMuted: a }), A.cancel(), O();
     }
 }
 class y extends l.Z {
@@ -153,7 +153,7 @@ class y extends l.Z {
             (n = 'actions'),
             (r = {
                 POST_CONNECTION_OPEN: S,
-                AUDIO_SET_LOCAL_VOLUME: O,
+                AUDIO_SET_LOCAL_VOLUME: v,
                 AUDIO_TOGGLE_LOCAL_MUTE: R,
                 AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: C
             }),

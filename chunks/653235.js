@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return v;
     }
 }),
     n(47120);
@@ -37,7 +37,7 @@ function A(e, t, n) {
     );
 }
 let N = (e, t) => (0, r.jsx)(I.G0, { columns: e }, t);
-class v extends i.PureComponent {
+class O extends i.PureComponent {
     componentDidMount() {
         0 === this.props.trendingCategories.length && (0, d.Tg)();
     }
@@ -185,11 +185,11 @@ class v extends i.PureComponent {
             });
     }
 }
-function O(e) {
+function v(e) {
     let t = (0, o.e7)([E.Z], () => E.Z.getTrendingCategories()),
         n = (0, h.gG)(),
         i = (0, m.PY)();
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(O, {
         ...e,
         ...i,
         trendingCategories: t,

@@ -100,16 +100,16 @@ class A extends (r = a.Component) {
     }
     render() {
         var e, t;
-        let { disabled: n, value: r, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: _, spellCheck: m, resizeable: T, className: A, id: N, rows: v, flex: O, autosize: R, required: C, onInvalid: y, inputRef: D } = this.props,
+        let { disabled: n, value: r, placeholder: a, autoFocus: s, minLength: l, maxLength: c, allowOverflow: _, spellCheck: m, resizeable: T, className: A, id: N, rows: O, flex: v, autosize: R, required: C, onInvalid: y, inputRef: D } = this.props,
             L = R ? E.l : 'textarea',
             b = this.hasError(),
             M = null !== (t = this.props['aria-labelledby']) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId,
             P = this.getAriaDescribedBy();
         return (0, i.jsxs)('div', {
-            className: o()(p.inputWrapper, { [h.flex]: O }),
+            className: o()(p.inputWrapper, { [h.flex]: v }),
             children: [
                 (0, i.jsxs)('div', {
-                    className: o()(h.inputMaxLength, { [h.flex]: O }),
+                    className: o()(h.inputMaxLength, { [h.flex]: v }),
                     children: [
                         (0, i.jsx)(u.t, {
                             children: (0, i.jsx)(L, {
@@ -137,7 +137,7 @@ class A extends (r = a.Component) {
                                 onFocus: this.onFocus,
                                 onKeyDown: this.onKeyDown,
                                 onInvalid: y,
-                                rows: v,
+                                rows: O,
                                 ref: D
                             })
                         }),

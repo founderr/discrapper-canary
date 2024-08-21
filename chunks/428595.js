@@ -20,8 +20,8 @@ var r = n(392711),
     S = n(594199),
     A = n(97734),
     N = n(660199),
-    v = n(364458),
-    O = n(981631),
+    O = n(364458),
+    v = n(981631),
     R = n(689079),
     C = n(377668),
     y = n(689938);
@@ -225,7 +225,7 @@ let U = (e) => {
                 }
                 null == a && '@Clyde' === e[0] && (0, o.gJ)(w(n), s) && (i = C.fL);
                 let u = e[1],
-                    d = null != u && O.Xyh.test(u.trim()),
+                    d = null != u && v.Xyh.test(u.trim()),
                     h = d && n.unknownUserMentionPlaceholder ? '@'.concat(y.Z.Messages.UNKNOWN_USER_MENTION_PLACEHOLDER) : e[0];
                 return {
                     userId: i,
@@ -339,7 +339,7 @@ let U = (e) => {
         spoiler: {
             order: S.ZP.order,
             requiredFirstCharacters: ['|'],
-            match: (e) => O.$92.exec(e),
+            match: (e) => v.$92.exec(e),
             parse: (e, t, n) => ({
                 content: t(e[1], n),
                 channelId: n.channelId
@@ -348,7 +348,7 @@ let U = (e) => {
         staticRouteLink: {
             order: S.ZP.order,
             requiredFirstCharacters: ['<'],
-            match: (e) => O.PEY.exec(e),
+            match: (e) => v.PEY.exec(e),
             parse: (e, t, n) => ({
                 content: [
                     {
@@ -370,12 +370,12 @@ let U = (e) => {
         list: T.Z,
         subtext: g.Z
     },
-    G = (0, v.Z)([x, A.Z]),
+    G = (0, O.Z)([x, A.Z]),
     k = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'subtext']),
     B = i().omit(G, ['inlineCode', 'codeBlock', 'br', 'blockQuote', 'autolink', 'url', 'attachmentLink', 'mention', 'roleMention', 'channelMention', 'channelOrMessageUrl', 'mediaPostLink', 'subtext']),
     F = i().omit(G, ['codeBlock', 'br', 'mention', 'channel', 'roleMention', 'attachmentLink', 'subtext']),
     V = i().omit(
-        (0, v.Z)([
+        (0, O.Z)([
             G,
             {
                 inlineCode: {
@@ -397,7 +397,7 @@ let U = (e) => {
 function W(e, t) {
     return 0 === e.length || 0 === t || '' === e.charAt(t - 1).trim();
 }
-let K = (0, v.Z)([
+let K = (0, O.Z)([
     {
         highlightWord: {
             order: -1,

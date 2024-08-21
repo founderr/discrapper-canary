@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return O;
     }
 }),
     n(47120);
@@ -28,15 +28,15 @@ let N = (0, _.kt)({
     id: '1',
     type: g.d4z.DM
 });
-function v(e) {
+function O(e) {
     let { user: t, guildId: n, channelId: a, onClose: _ } = e,
         { newestAnalyticsLocation: g } = (0, l.ZP)(),
-        { trackUserProfileAction: v } = (0, f.KZ)(),
-        { messageCtaEnabled: O, activeInviteToCallCtaEnabled: R, persistentCallCtaEnabled: C } = (0, h.l)({ location: 'BiteSizeProfileDirectMessageSection' }),
+        { trackUserProfileAction: O } = (0, f.KZ)(),
+        { messageCtaEnabled: v, activeInviteToCallCtaEnabled: R, persistentCallCtaEnabled: C } = (0, h.l)({ location: 'BiteSizeProfileDirectMessageSection' }),
         [y, D] = i.useState(''),
         [L, b] = i.useState((0, c.JM)(y)),
         M = i.useRef(!1);
-    if (O) {
+    if (v) {
         let e = (0, r.jsx)(m.Z, {
             user: t,
             className: A.biteSizeButton
@@ -104,7 +104,7 @@ function v(e) {
             let { value: n } = e;
             try {
                 return (
-                    v({ action: 'SEND_DIRECT_MESSAGE' }),
+                    O({ action: 'SEND_DIRECT_MESSAGE' }),
                     await (0, p.Z)({
                         userId: t.id,
                         content: n.trim(),

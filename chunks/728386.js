@@ -40,7 +40,7 @@ t.Z = i.memo(
                 }
             );
         }, [I]);
-        let { Component: A, events: N, play: v } = (0, l.z)();
+        let { Component: A, events: N, play: O } = (0, l.z)();
         return n
             ? null
             : (0, r.jsx)('div', {
@@ -50,7 +50,7 @@ t.Z = i.memo(
                       innerClassName: s()(f.button, f.stickerButton, { [f.stickerButtonTilted]: m && !g }),
                       ...N,
                       onClick: () => {
-                          S(), v();
+                          S(), O();
                       },
                       isActive: g,
                       'aria-label': E.Z.Messages.STICKER_BUTTON_LABEL,

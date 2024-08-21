@@ -21,7 +21,7 @@ n.d(t, {
         return y;
     },
     dy: function () {
-        return O;
+        return v;
     },
     mb: function () {
         return b;
@@ -52,8 +52,8 @@ var i = n(442837),
     S = n(377668),
     A = n(689938),
     N = n(778718),
-    v = n(910212);
-function O(e) {
+    O = n(910212);
+function v(e) {
     let { emoji: t } = e;
     return (0, r.jsx)(a.Tooltip, {
         text: t.name,
@@ -202,7 +202,7 @@ function P(e) {
 function U(e) {
     let { timestamp: t } = e;
     return (0, r.jsx)('span', {
-        className: v.timestamp,
+        className: O.timestamp,
         children: t.formatted
     });
 }

@@ -30,7 +30,7 @@ n.d(t, {
         return b;
     },
     MG: function () {
-        return v;
+        return O;
     },
     OT: function () {
         return o;
@@ -39,7 +39,7 @@ n.d(t, {
         return R;
     },
     Ut: function () {
-        return O;
+        return v;
     },
     WM: function () {
         return m;
@@ -112,8 +112,8 @@ let E = 'alt+c',
     S = 0.1,
     A = 25,
     N = 0,
-    v = 200,
-    O = 'clips-edit',
+    O = 200,
+    v = 'clips-edit',
     R = 'clips-gallery',
     C = 640,
     y = 360,

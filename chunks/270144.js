@@ -18,7 +18,7 @@ n.d(t, {
         return P;
     },
     _k: function () {
-        return O;
+        return v;
     },
     h6: function () {
         return D;
@@ -79,7 +79,7 @@ let A = function (e, t) {
             { entitlementsLoaded: i === T.M.FETCHED }
         );
     },
-    v = (e) => {
+    O = (e) => {
         let { applicationId: t, canFetch: n = !0, forceRefetch: r = !1, loggedIn: i } = e,
             l = (0, s.e7)([f.Z], () => f.Z.isFetchedForApplication(t), [t]);
         return (
@@ -92,7 +92,7 @@ let A = function (e, t) {
             { entitlementsLoaded: l }
         );
     },
-    O = function (e) {
+    v = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { includeSoftDeleted: !1 };
         return (0, s.Wu)(
             [T.Z],
@@ -238,7 +238,7 @@ function P(e) {
         s = (0, l.Z)(),
         { listingsLoaded: o } = A(r, i),
         { entitlementsLoaded: u } = N({ guildId: a }),
-        { entitlementsLoaded: c } = v({
+        { entitlementsLoaded: c } = O({
             applicationId: r,
             loggedIn: s
         }),

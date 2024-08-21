@@ -29,8 +29,8 @@ var r = n(735250),
     S = n(777861),
     A = n(565799),
     N = n(501655),
-    v = n(517334),
-    O = n(344185),
+    O = n(517334),
+    v = n(344185),
     R = n(199902),
     C = n(77498),
     y = n(984933),
@@ -94,7 +94,7 @@ function Y(e) {
         } = (function (e) {
             let t = e.id,
                 n = (0, u.Wu)(
-                    [y.ZP, O.Z],
+                    [y.ZP, v.Z],
                     () => {
                         let e = y.ZP.getChannels(t)
                             [y.Zb].filter((e) => {
@@ -105,11 +105,11 @@ function Y(e) {
                                 let { channel: t } = e;
                                 return t.id;
                             });
-                        return [...e, ...Object.values(O.Z.getThreadsForGuild(t)).flatMap((e) => Object.keys(e))];
+                        return [...e, ...Object.values(v.Z.getThreadsForGuild(t)).flatMap((e) => Object.keys(e))];
                     },
                     [t]
                 ),
-                r = (0, v.ZP)(t),
+                r = (0, O.ZP)(t),
                 a = i.useMemo(() => r.map((e) => e.id), [r]),
                 s = (0, u.e7)([P.ZP], () => P.ZP.getVoiceStates(t), [t]),
                 o = l().flatMap(n, (t) => {

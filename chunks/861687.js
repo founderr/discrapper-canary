@@ -28,8 +28,8 @@ var r,
     S = n(710845),
     A = n(811660),
     N = n(42352),
-    v = n(148959),
-    O = n(227196),
+    O = n(148959),
+    v = n(227196),
     R = n(926951),
     C = n(868616),
     y = n(848886),
@@ -499,7 +499,7 @@ class el extends E.Z {
                 this.userId === e && this.sendSpeaking(t, n), this.emit(K.z.Speaking, e, t);
             }),
             d.on(f.Sh.ToggleMuteFromNative, () => {
-                let { airpodsMuteSupported: e } = O.Z.getCurrentConfig({ location: 'RTCConnection ToggleMuteFromNative' }, { autoTrackExposure: !0 });
+                let { airpodsMuteSupported: e } = v.Z.getCurrentConfig({ location: 'RTCConnection ToggleMuteFromNative' }, { autoTrackExposure: !0 });
                 e && this.context === ei.Yn.DEFAULT && m.Z.toggleSelfMute({ playSoundEffect: !1 });
             }),
             d.on(f.Sh.NativeMuteChanged, (e) => {
@@ -1217,12 +1217,12 @@ class el extends E.Z {
                 });
         } else
             i === ei.Yn.STREAM &&
-                ((this._goLiveQualityManager = new v.Z(!0)),
-                this._goLiveQualityManager.on(v.y.RequestedSSRCsUpdate, (e, t, n) => {
+                ((this._goLiveQualityManager = new O.Z(!0)),
+                this._goLiveQualityManager.on(O.y.RequestedSSRCsUpdate, (e, t, n) => {
                     var r;
                     null === (r = this._connection) || void 0 === r || r.createUser(e, t, n);
                 }),
-                this._goLiveQualityManager.on(v.y.RequestedStreamsUpdate, (e) => {
+                this._goLiveQualityManager.on(O.y.RequestedStreamsUpdate, (e) => {
                     if (this.state === er.hes.RTC_CONNECTED && null != this._socket) {
                         var t;
                         this.logger.info('Go Live Media sink wants: '.concat(JSON.stringify(e))), this._socket.mediaSinkWants(e), null === (t = this._connection) || void 0 === t || t.setLocalVideoSinkWants(e);

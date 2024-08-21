@@ -20,8 +20,8 @@ var r = n(735250),
     S = n(230554),
     A = n(780748),
     N = n(464581),
-    v = n(732659),
-    O = n(86724),
+    O = n(732659),
+    v = n(86724),
     R = n(847302),
     C = n(657198),
     y = n(321127),
@@ -69,7 +69,7 @@ t.Z = i.forwardRef(function (e, t) {
                     (null != c &&
                         c[0].command.id !== (null === (r = u.Z.getActiveCommand(b.id)) || void 0 === r ? void 0 : r.id) &&
                         f.T.withMergedEntry(e, () => {
-                            (0, O.L)(e, b.id, null, !0);
+                            (0, v.L)(e, b.id, null, !0);
                         }),
                     l)
                 ) {
@@ -150,8 +150,8 @@ t.Z = i.forwardRef(function (e, t) {
                     e
                 );
         }, [b.id, eS, z, eA, J]);
-    (0, S.Z)(t, eS, b, eN), (0, v.Z)(eS, eE, V);
-    let { handleKeyDown: ev, handleKeyUp: eO } = (0, A.Z)({
+    (0, S.Z)(t, eS, b, eN), (0, O.Z)(eS, eE, V);
+    let { handleKeyDown: eO, handleKeyUp: ev } = (0, A.Z)({
             editor: eS,
             channel: b,
             disableEnterToSubmit: en,
@@ -216,8 +216,8 @@ t.Z = i.forwardRef(function (e, t) {
                     onBlur: Z,
                     onClick: ey,
                     onPaste: eR,
-                    onKeyDown: ev,
-                    onKeyUp: eO,
+                    onKeyDown: eO,
+                    onKeyUp: ev,
                     decorateExtra: eL,
                     renderExtraElement: eb,
                     renderExtraLeaf: eM,

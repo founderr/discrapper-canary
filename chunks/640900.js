@@ -25,8 +25,8 @@ function c(e, t) {
         {
             labelProps: A,
             fieldProps: N,
-            descriptionProps: v,
-            errorMessageProps: O
+            descriptionProps: O,
+            errorMessageProps: v
         } = (0, s.U)({
             ...e,
             isInvalid: T,
@@ -83,8 +83,8 @@ function c(e, t) {
                 ...I,
                 ...N
             }),
-            descriptionProps: v,
-            errorMessageProps: O,
+            descriptionProps: O,
+            errorMessageProps: v,
             isInvalid: T,
             validationErrors: g,
             validationDetails: S

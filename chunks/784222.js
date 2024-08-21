@@ -38,8 +38,8 @@ var r,
     S = n(364742),
     A = n(889161),
     N = n(984933),
-    v = n(430824),
-    O = n(914010),
+    O = n(430824),
+    v = n(914010),
     R = n(771845),
     C = n(594174),
     y = n(78839),
@@ -57,7 +57,7 @@ var r,
 let B = (e) => {
     let { channel: t, collapsedSections: n, includeCreateEmojiButton: r = !0, pickerIntention: i, emojiSearchResults: a, gridWidth: s, emojiPaddingHorizontal: o, emojiSpriteSize: l } = e,
         c = (0, E.e7)([h.ZP], () => h.ZP.categories),
-        f = (0, E.e7)([v.Z], () => v.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]),
+        f = (0, E.e7)([O.Z], () => O.Z.getGuild(null == t ? void 0 : t.getGuildId()), [t]),
         T = null == t ? null : t.getGuildId(),
         g = (0, E.e7)([h.ZP], () => h.ZP.getDisambiguatedEmojiContext(T), [T]),
         B = (0, P.NJ)(T),
@@ -117,12 +117,12 @@ let B = (e) => {
                         }),
                         m = _.concat(f),
                         S = s.guild,
-                        A = O.Z.getGuildId(),
+                        A = v.Z.getGuildId(),
                         N = s.sectionId === x.En.TOP_GUILD_EMOJI,
-                        v = !N && null != S && A === S.id && m.length < S.getMaxEmojiSlots(),
+                        O = !N && null != S && A === S.id && m.length < S.getMaxEmojiSlots(),
                         R = N && m.length < T && !et,
                         C = null != S && N && et && en === M.B.WITH_TOP_LIST && ee[S.id].length < S.getMaxEmojiSlots(),
-                        y = r && z && null != S && (v || R || C);
+                        y = r && z && null != S && (O || R || C);
                     y && C && m.length === T && m.shift();
                     let L = m.length > g && null != S && S.id !== A,
                         b = er && L && !K.has(S.id);
@@ -233,7 +233,7 @@ let B = (e) => {
                                     }) !== G.Z5.DISALLOW_EXTERNAL
                             );
                             if (0 === a.length) return;
-                            let s = v.Z.getGuild(n),
+                            let s = O.Z.getGuild(n),
                                 o =
                                     X ||
                                     (!Q &&
@@ -261,7 +261,7 @@ let B = (e) => {
                             t.length > 0 &&
                                 S(t, {
                                     categoryId: e,
-                                    guild: v.Z.getGuild(f.id),
+                                    guild: O.Z.getGuild(f.id),
                                     type: x.En.TOP_GUILD_EMOJI,
                                     sectionId: x.En.TOP_GUILD_EMOJI,
                                     count: t.length,

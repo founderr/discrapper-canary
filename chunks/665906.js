@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     },
     C7: function () {
-        return O;
+        return v;
     },
     Ek: function () {
         return N;
@@ -12,7 +12,7 @@ n.d(t, {
         return x;
     },
     JQ: function () {
-        return v;
+        return O;
     },
     NE: function () {
         return m;
@@ -115,7 +115,7 @@ function N(e) {
         t
     );
 }
-function v(e) {
+function O(e) {
     return (0, s.cj)([h.Z, E.Z], () => {
         let t = h.Z.getActiveJoinedThreadsForParent(e.guild_id, e.id),
             n = h.Z.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id),
@@ -129,7 +129,7 @@ function v(e) {
         };
     });
 }
-function O(e) {
+function v(e) {
     let t = (0, s.e7)([_.Z], () => _.Z.getChannel(null == e ? void 0 : e.parent_id)),
         n = (0, s.e7)([E.Z], () => null != t && E.Z.can(p.Plq.MANAGE_THREADS, t), [t]),
         r = (0, s.e7)([d.default], () => d.default.getId());

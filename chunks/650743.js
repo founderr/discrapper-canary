@@ -26,8 +26,8 @@ var i = n(399606),
 function A(e) {
     let { soundboardSound: t, closePicker: A } = e,
         N = (0, d.Iu)((e) => e.searchQuery),
-        v = (0, i.e7)([m.Z], () => null != t && m.Z.isFavoriteSound(t.soundId)),
-        O = (0, i.e7)([E.Z], () => E.Z.getGuild(null == t ? void 0 : t.guildId)),
+        O = (0, i.e7)([m.Z], () => null != t && m.Z.isFavoriteSound(t.soundId)),
+        v = (0, i.e7)([E.Z], () => E.Z.getGuild(null == t ? void 0 : t.guildId)),
         R = (0, i.e7)([l.Z], () => l.Z.useReducedMotion, []),
         C = (0, i.e7)([h.Z], () => h.Z.isFocused()),
         y = (0, i.e7)([f.Z], () => f.Z.getKeybindForAction(T.kg4.SOUNDBOARD_HOLD));
@@ -46,15 +46,15 @@ function A(e) {
                           className: S.emoji
                       }),
             graphicSecondary:
-                null != O
+                null != v
                     ? (0, r.jsx)(c.Z, {
-                          guild: O,
+                          guild: v,
                           shouldAnimate: !R && C
                       })
                     : null,
             titlePrimary: t.name,
-            titleSecondary: null == O ? void 0 : O.name,
-            isFavorite: v
+            titleSecondary: null == v ? void 0 : v.name,
+            isFavorite: O
         });
     let D = () => {
             A(),

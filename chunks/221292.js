@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     NE: function () {
-        return O;
+        return v;
     },
     QN: function () {
         return S;
@@ -18,7 +18,7 @@ n.d(t, {
         return A;
     },
     z7: function () {
-        return v;
+        return O;
     }
 }),
     n(653041),
@@ -142,7 +142,7 @@ let I = (e) => {
             voice_channel_id: d
         });
     },
-    v = (e) => {
+    O = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, action: a, display: s, activity: o, stream: l, entry: u, outbox: d } = e;
         c.default.track(h.rMx.USER_PROFILE_ACTIVITY_ACTION, {
             ...(0, r.hH)(t),
@@ -175,7 +175,7 @@ let I = (e) => {
                       })
         });
     },
-    O = (e) => {
+    v = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
         c.default.track(h.rMx.USER_PROFILE_BADGE_PRESSED, {
             ...(0, r.hH)(t),

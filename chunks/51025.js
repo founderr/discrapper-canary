@@ -1,6 +1,6 @@
 n.d(t, {
     A1: function () {
-        return O;
+        return v;
     },
     LO: function () {
         return T;
@@ -33,7 +33,7 @@ n.d(t, {
         return N;
     },
     wO: function () {
-        return v;
+        return O;
     },
     wi: function () {
         return C;
@@ -159,10 +159,10 @@ function A(e, t, n) {
 function N() {
     E.Z.resume();
 }
-function v() {
+function O() {
     E.Z.pause();
 }
-function O(e, t) {
+function v(e, t) {
     i.Z.dispatch({
         type: 'DISPATCH_APPLICATION_MOVE_UP',
         applicationId: e,

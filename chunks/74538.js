@@ -15,7 +15,7 @@ n.d(t, {
         return y.I5;
     },
     JE: function () {
-        return ev;
+        return eO;
     },
     JP: function () {
         return Y;
@@ -39,7 +39,7 @@ n.d(t, {
         return $;
     },
     Qo: function () {
-        return eO;
+        return ev;
     },
     Rd: function () {
         return K;
@@ -174,8 +174,8 @@ var _ = n(782568),
     S = n(509545),
     A = n(78839),
     N = n(122289),
-    v = n(55935),
-    O = n(424218),
+    O = n(55935),
+    v = n(424218),
     R = n(358085),
     C = n(380684),
     y = n(111361),
@@ -475,7 +475,7 @@ function J(e) {
         S = P.GP[f],
         A = D.ZP.formatPriceString(D.ZP.getDefaultPrice(S.id), S.interval),
         N = ep(E) || (null == E.paymentSourceId && !E.isPurchasedExternally && !(null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.hasFreePremium())),
-        O = null != h,
+        v = null != h,
         R = E.status === b.O0b.UNPAID && null !== E.latestInvoice && (null === (n = E.latestInvoice) || void 0 === n ? void 0 : n.status) === b.hUK.OPEN,
         C = N ? b.O0b.CANCELED : R ? b.O0b.UNPAID : E.status,
         y = null === (a = null !== (i = null == g ? void 0 : g.taxInclusive) && void 0 !== i ? i : null === (r = E.latestInvoice) || void 0 === r ? void 0 : r.taxInclusive) || void 0 === a || a,
@@ -485,9 +485,9 @@ function J(e) {
         case P.Xh.PREMIUM_YEAR_TIER_0:
             switch (C) {
                 case b.O0b.CANCELED:
-                    return O ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE;
+                    return v ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_CANCELATION_NO_PRICE;
                 case b.O0b.ACCOUNT_HOLD:
-                    return O ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE.format();
+                    return v ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_ACCOUNT_HOLD_NO_PRICE.format();
                 case b.O0b.UNPAID:
                     return w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_PENDING_PAYMENT.format();
                 case b.O0b.PAUSE_PENDING:
@@ -502,21 +502,21 @@ function J(e) {
                     return w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({ resumeDate: E.pauseEndsAt });
                 case b.O0b.PAST_DUE:
                     return w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-                        endDate: (0, v.vc)(ec(E).expiresDate, 'LL'),
+                        endDate: (0, O.vc)(ec(E).expiresDate, 'LL'),
                         onClick: () => {
                             (0, _.Z)('https://support.discord.com/hc/articles/23082866222871');
                         }
                     });
                 default:
-                    return O ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_NO_PRICE;
+                    return v ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_0_NO_PRICE;
             }
         case P.Xh.PREMIUM_MONTH_TIER_1:
         case P.Xh.PREMIUM_YEAR_TIER_1:
             switch (C) {
                 case b.O0b.CANCELED:
-                    return O ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE;
+                    return v ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_CANCELATION_NO_PRICE;
                 case b.O0b.ACCOUNT_HOLD:
-                    return O ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE.format();
+                    return v ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_ACCOUNT_HOLD_NO_PRICE.format();
                 case b.O0b.UNPAID:
                     return w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_PENDING_PAYMENT.format();
                 case b.O0b.PAUSE_PENDING:
@@ -531,13 +531,13 @@ function J(e) {
                     return w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_NITRO_PAUSED.format({ resumeDate: E.pauseEndsAt });
                 case b.O0b.PAST_DUE:
                     return w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-                        endDate: (0, v.vc)(ec(E).expiresDate, 'LL'),
+                        endDate: (0, O.vc)(ec(E).expiresDate, 'LL'),
                         onClick: () => {
                             (0, _.Z)('https://support.discord.com/hc/articles/23082866222871');
                         }
                     });
                 default:
-                    return O ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_NO_PRICE;
+                    return v ? (y ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1.format({ price: h }) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_TAX_EXCLUSIVE.format({ price: h })) : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_1_NO_PRICE;
             }
         case P.Xh.PREMIUM_MONTH_TIER_2:
         case P.Xh.PREMIUM_YEAR_TIER_2:
@@ -545,7 +545,7 @@ function J(e) {
         case P.Xh.PREMIUM_6_MONTH_TIER_2:
             switch (C) {
                 case b.O0b.CANCELED:
-                    return O
+                    return v
                         ? y
                             ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION.format({
                                   price: h,
@@ -557,7 +557,7 @@ function J(e) {
                               })
                         : w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_PENDING_CANCELATION_NO_PRICE.format({ num: L });
                 case b.O0b.ACCOUNT_HOLD:
-                    return O
+                    return v
                         ? y
                             ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2_ACCOUNT_HOLD.format({
                                   price: h,
@@ -584,7 +584,7 @@ function J(e) {
                     return w.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO.format({ endDate: c()(E.currentPeriodStart).add(P.A5, 'days') });
                 case b.O0b.PAST_DUE:
                     return w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_PAST_DUE_WITH_HC_LINK.format({
-                        endDate: (0, v.vc)(ec(E).expiresDate, 'LL'),
+                        endDate: (0, O.vc)(ec(E).expiresDate, 'LL'),
                         onClick: () => {
                             (0, _.Z)('https://support.discord.com/hc/articles/23082866222871');
                         }
@@ -607,7 +607,7 @@ function J(e) {
                                     regularPrice: A,
                                     numMonths: null !== (d = null == T ? void 0 : T.duration) && void 0 !== d ? d : P.rt
                                 })
-                        : O
+                        : v
                           ? y
                               ? w.Z.Messages.PREMIUM_SUBSCRIPTION_DESCRIPTION_TIER_2.format({
                                     price: h,
@@ -991,7 +991,7 @@ function eN(e) {
             throw Error('Unsupported interval duration.');
     }
 }
-function ev(e, t) {
+function eO(e, t) {
     switch (e) {
         case b.gg$.APPLE_PARTNER:
         case b.gg$.APPLE:
@@ -1001,7 +1001,7 @@ function ev(e, t) {
     }
     throw Error('Invalid external payment gateway '.concat(e));
 }
-function eO(e, t) {
+function ev(e, t) {
     return (0, y.I5)(e) || eI(null == t ? void 0 : t.status);
 }
 function eR(e, t) {
@@ -1085,7 +1085,7 @@ function eM(e) {
                   useSpace: !0,
                   useWithoutExperiment: !1
               };
-    return (0, O.BU)(((0, C.Xv)() && e === P.p9.TIER_2 && !t.useWithoutExperiment ? P.m0[e].fileSize : P.a1[e].fileSize) / 1024, {
+    return (0, v.BU)(((0, C.Xv)() && e === P.p9.TIER_2 && !t.useWithoutExperiment ? P.m0[e].fileSize : P.a1[e].fileSize) / 1024, {
         useKibibytes: !0,
         useSpace: t.useSpace
     });
@@ -1208,7 +1208,7 @@ t.ZP = Object.freeze({
                 ? w.Z.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO_EXTERNAL.format({
                       endDate: t,
                       paymentGatewayName: U.Vz[e.paymentGateway],
-                      paymentSourceLink: ev(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
+                      paymentSourceLink: eO(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
                   })
                 : w.Z.Messages.PREMIUM_SETTINGS_PAST_DUE_INFO.format({
                       endDate: t,
@@ -1224,7 +1224,7 @@ t.ZP = Object.freeze({
                 ? w.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_EXTERNAL.format({
                       endDate: c()(e.currentPeriodStart).add(P.gh, 'days'),
                       paymentGatewayName: U.Vz[e.paymentGateway],
-                      paymentSourceLink: ev(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
+                      paymentSourceLink: eO(e.paymentGateway, 'PAYMENT_SOURCE_MANAGEMENT')
                   })
                 : w.Z.Messages.PREMIUM_SETTINGS_ACCOUNT_HOLD_INFO_PRICE.format({
                       endDate: c()(e.currentPeriodStart).add(P.gh, 'days'),
@@ -1241,7 +1241,7 @@ t.ZP = Object.freeze({
                     ? w.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_EXTERNAL.format({
                           renewalDate: t.subscriptionPeriodStart,
                           paymentGatewayName: U.Vz[e.paymentGateway],
-                          subscriptionManagementLink: ev(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+                          subscriptionManagementLink: eO(e.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
                       })
                     : n
                       ? w.Z.Messages.PREMIUM_SETTINGS_RENEWAL_INFO_WITH_PLAN.format({

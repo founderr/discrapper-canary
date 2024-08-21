@@ -1,9 +1,9 @@
 n.d(t, {
     Lx: function () {
-        return O;
+        return v;
     },
     kq: function () {
-        return v;
+        return O;
     },
     vy: function () {
         return N;
@@ -61,7 +61,7 @@ function N(e, t, n) {
         }),
         (0, _.Z)([l.Z.CHANNEL_CALL], n, t, d.jy.ENTRY);
 }
-function v(e, t, n, r) {
+function O(e, t, n, r) {
     var i, a;
     let o = c.ZP.getCustomEmojiById(null !== (i = t.emojiId) && void 0 !== i ? i : ''),
         { abortController: l, onRequestProgress: u } = A(e),
@@ -84,7 +84,7 @@ function v(e, t, n, r) {
         (0, _.Z)(null != r ? r : [], n, t, d.jy.DEFAULT);
 }
 ((r = i || (i = {})).EMOJI_PICKER = 'emoji_picker'), (r.EFFECT_BAR = 'effect_bar');
-let O = async (e) => {
+let v = async (e) => {
         let { channel: t, emoji: n, location: r, animationType: i, animationId: a, isPremium: l } = e;
         if (null == n || I.Z.isOnCooldown) return;
         let u = l && null != i ? i : T.q.BASIC;

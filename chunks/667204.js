@@ -32,8 +32,8 @@ var r = n(512722),
     S = n(706454),
     A = n(430824),
     N = n(117530),
-    v = n(594174),
-    O = n(403182),
+    O = n(594174),
+    v = n(403182),
     R = n(823379),
     C = n(380684),
     y = n(861990),
@@ -66,7 +66,7 @@ let F = (e, t) => {
         return t || n ? t : null;
     };
 async function Z(e) {
-    var t, n, r, s, l, c, d, f, h, p, I, m, T, A, v, O;
+    var t, n, r, s, l, c, d, f, h, p, I, m, T, A, O, v;
     let { command: R, optionValues: C, context: y, commandTargetId: L, maxSizeCallback: M, commandOrigin: x = U.bB.CHAT, sectionName: k } = e,
         B = null !== (r = P.Z.getCommandOrigin(y.channel.id)) && void 0 !== r ? r : x;
     null == y.autocomplete &&
@@ -216,9 +216,9 @@ async function Z(e) {
     if (R.inputType === U.iw.BUILT_IN || R.inputType === U.iw.BUILT_IN_TEXT || R.inputType === U.iw.BUILT_IN_INTEGRATION) return;
     let q = {
         version: R.version,
-        id: null !== (v = null === (t = R.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== v ? v : R.id,
+        id: null !== (O = null === (t = R.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== O ? O : R.id,
         guild_id: R.guildId,
-        name: null !== (O = null === (n = R.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== O ? O : R.name,
+        name: null !== (v = null === (n = R.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== v ? v : R.name,
         type: R.type,
         options: Z,
         application_command: R.rootCommand
@@ -312,12 +312,12 @@ let Y = (e) => {
                 name: r.name,
                 name_localized: _,
                 type: u.B8.APPLICATION_COMMAND,
-                user: (0, T.pe)(v.default.getCurrentUser())
+                user: (0, T.pe)(O.default.getCurrentUser())
             },
             interaction_data: r
         };
         s.Z.receiveMessage(m, N, !0, { applicationId: n });
-        let O = (e, t) => {
+        let v = (e, t) => {
                 null == t && null != e && s.Z.sendClydeError(m, e),
                     a.Z.dispatch({
                         type: 'MESSAGE_SEND_FAILED',
@@ -342,7 +342,7 @@ let Y = (e) => {
             onCreate: (e) => {
                 null != N.interaction && (N.interaction.id = e);
             },
-            onFailure: (e, t) => O(e, t),
+            onFailure: (e, t) => v(e, t),
             data: {
                 interactionType: u.B8.APPLICATION_COMMAND,
                 channelId: m
@@ -390,9 +390,9 @@ async function q(e, t) {
     };
 }
 async function Q(e, t, n, r) {
-    let i = (0, O.dg)(n),
+    let i = (0, v.dg)(n),
         a = (e) => {
-            null == r || r(i, e), I.yr(t, G.evJ.ENTITY_TOO_LARGE, B.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: (0, O.Ng)(i) }));
+            null == r || r(i, e), I.yr(t, G.evJ.ENTITY_TOO_LARGE, B.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: (0, v.Ng)(i) }));
         },
         { totalSize: s, largestUploadedFileSize: o } = await q(e, !1),
         l = (0, C.Xv)() ? y.Ld : y.zz;

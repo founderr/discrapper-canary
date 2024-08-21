@@ -44,7 +44,7 @@ function N(e, t, n) {
         e
     );
 }
-function v(e) {
+function O(e) {
     var t;
     let { speaker: n, role: r, user: i, userNick: a, connectedOn: s, voiceState: o, type: u } = e,
         c = o.selfMute ? '\x01' : '\0',
@@ -59,7 +59,7 @@ function v(e) {
         .concat(s)
         .concat((0, l.Z)(a, i));
 }
-function O(e) {
+function v(e) {
     let { user: t, voiceState: n } = e,
         r = n.requestToSpeakTimestamp;
     return null == r ? t.id : ''.concat(Date.parse(r)).concat(t.id);
@@ -101,9 +101,9 @@ class y {
                 rtsState: (0, g.gf)(s)
             };
         a.push(N);
-        let v = null !== (r = c.Z.getStreamForUser(e, this.guildId)) && void 0 !== r ? r : c.Z.getActiveStreamForUser(e, this.guildId);
-        if (null != v && v.channelId === this.channelId) {
-            let e = (0, u.V9)(v);
+        let O = null !== (r = c.Z.getStreamForUser(e, this.guildId)) && void 0 !== r ? r : c.Z.getActiveStreamForUser(e, this.guildId);
+        if (null != O && O.channelId === this.channelId) {
+            let e = (0, u.V9)(O);
             (i = {
                 ...d,
                 id: e,
@@ -157,6 +157,6 @@ class y {
     }
     constructor(e) {
         var t;
-        N(this, 'channelId', void 0), N(this, 'guildId', void 0), N(this, 'participants', {}), N(this, '_participantsIndex', new o.h(C, v)), N(this, '_requestToSpeakIndex', new o.h(() => [], O)), (this.channelId = e), (this.guildId = null === (t = d.Z.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId());
+        N(this, 'channelId', void 0), N(this, 'guildId', void 0), N(this, 'participants', {}), N(this, '_participantsIndex', new o.h(C, O)), N(this, '_requestToSpeakIndex', new o.h(() => [], v)), (this.channelId = e), (this.guildId = null === (t = d.Z.getChannel(e)) || void 0 === t ? void 0 : t.getGuildId());
     }
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return O;
     }
 });
 var r = n(735250),
@@ -43,12 +43,12 @@ function N(e) {
         ]
     });
 }
-function v(e) {
+function O(e) {
     let { hideBadges: t = !1, stream: n, ...u } = e,
         f = (0, a.e7)([E.default], () => h.ZP.isPremium(E.default.getCurrentUser(), T.p9.TIER_1)),
         S = (0, a.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
-        v = i.useMemo(() => (null != n ? [n] : []), [n]),
-        O = (0, o.zW)(null == S ? void 0 : S.id),
+        O = i.useMemo(() => (null != n ? [n] : []), [n]),
+        v = (0, o.zW)(null == S ? void 0 : S.id),
         R = i.useCallback(() => {
             null != S && (0, d.Z)(S.getGuildId(), S.id, m.jXE.STREAM_SETTINGS);
         }, [S]);
@@ -61,12 +61,12 @@ function v(e) {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(p.Z, {
-                    children: O
+                    children: v
                         ? (0, r.jsx)(l.Z, { onClose: t })
                         : (0, r.jsx)(c.Z, {
                               channel: S,
                               currentUser: E.default.getCurrentUser(),
-                              activeStreams: v,
+                              activeStreams: O,
                               onClose: t,
                               showReportOption: !0,
                               handleGoLive: R

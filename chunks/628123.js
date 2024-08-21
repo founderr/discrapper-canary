@@ -20,8 +20,8 @@ var r = n(735250),
     S = n(998502),
     A = n(981631),
     N = n(689938),
-    v = n(831547);
-function O(e, t, n) {
+    O = n(831547);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -55,7 +55,7 @@ function R() {
         size: d.ButtonSizes.LARGE,
         onClick: n,
         submitting: e,
-        className: v.clearOverrideButton,
+        className: O.clearOverrideButton,
         children: N.Z.Messages.CLEAR_BUILD_OVERRIDE
     });
 }
@@ -117,7 +117,7 @@ class y extends i.PureComponent {
                     children: [(0, r.jsx)('p', { children: N.Z.Messages.ERRORS_UNEXPECTED_CRASH }), (0, r.jsx)('p', { children: N.Z.Messages.ERRORS_ACTION_TO_TAKE })]
                 }),
                 n = (0, r.jsxs)('div', {
-                    className: v.buttons,
+                    className: O.buttons,
                     children: [
                         (0, r.jsx)(d.Button, {
                             size: d.ButtonSizes.LARGE,
@@ -131,18 +131,18 @@ class y extends i.PureComponent {
                 title: N.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
                 note: null != t ? t() : e,
                 action: n,
-                className: v.errorPage
+                className: O.errorPage
             });
         }
         return e;
     }
     constructor(...e) {
         super(...e),
-            O(this, 'state', {
+            v(this, 'state', {
                 error: null,
                 info: null
             }),
-            O(this, 'discordErrorsSet', !1);
+            v(this, 'discordErrorsSet', !1);
     }
 }
 t.Z = y;

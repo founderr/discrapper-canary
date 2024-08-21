@@ -35,12 +35,12 @@ function N(e, t, n) {
         }
     }
 }
-let v = !1,
-    O = (e) => 'guild-join-request='.concat(e),
+let O = !1,
+    v = (e) => 'guild-join-request='.concat(e),
     R = (e, t) => 'guild-'.concat(e, '-').concat(t);
 function C(e) {
     let t = [];
-    return t.push(O(e.joinRequestId)), t.push(R(e.guildId, e.applicationStatus)), t;
+    return t.push(v(e.joinRequestId)), t.push(R(e.guildId, e.applicationStatus)), t;
 }
 let y = new c.h(C, (e) => ''.concat(e.joinRequestId)),
     D = new c.h(C, (e) => ''.concat(e.joinRequestId)),
@@ -77,7 +77,7 @@ class B extends (r = u.ZP.Store) {
         return g[e];
     }
     isFetching() {
-        return v;
+        return O;
     }
     hasFetched(e) {
         if (!T.has(e)) return !1;
@@ -116,17 +116,17 @@ class B extends (r = u.ZP.Store) {
         },
         GUILD_JOIN_REQUESTS_FETCH_SUCCESS: function (e) {
             let { status: t, requests: n, total: r, guildId: i } = e;
-            (v = !1),
+            (O = !1),
                 t === p.wB.SUBMITTED && A(i, r),
                 n.forEach((e) => {
                     M(e);
                 });
         },
         GUILD_JOIN_REQUESTS_FETCH_START: function () {
-            v = !0;
+            O = !0;
         },
         GUILD_JOIN_REQUESTS_FETCH_FAILURE: function () {
-            v = !1;
+            O = !1;
         },
         GUILD_JOIN_REQUESTS_BULK_ACTION: function (e) {
             let { guildId: t, action: n } = e;

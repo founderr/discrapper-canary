@@ -147,10 +147,10 @@ function N(e) {
     let { messages: t } = e;
     return S(t, (e) => S(e, (e) => g(e)));
 }
-function v(e) {
+function O(e) {
     return T.deleteChannelCache(e.channel.id);
 }
-function O(e, t) {
+function v(e, t) {
     if (!T.has(e, t)) return !1;
     T.set(e, t, { state: 2 });
 }
@@ -226,11 +226,11 @@ h(y, 'displayName', 'ReferencedMessageStore'),
         },
         MESSAGE_DELETE: function (e) {
             let { id: t, channelId: n } = e;
-            return O(n, t);
+            return v(n, t);
         },
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t, channelId: n } = e;
-            return S(t, (e) => O(n, e));
+            return S(t, (e) => v(n, e));
         },
         CREATE_PENDING_REPLY: function (e) {
             let { message: t } = e;
@@ -239,8 +239,8 @@ h(y, 'displayName', 'ReferencedMessageStore'),
                 message: t
             });
         },
-        CHANNEL_DELETE: v,
-        THREAD_DELETE: v,
+        CHANNEL_DELETE: O,
+        THREAD_DELETE: O,
         GUILD_DELETE: function () {
             if (0 === T.retainWhere((e) => null != _.Z.getChannel(e))) return !1;
         },

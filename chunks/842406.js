@@ -26,7 +26,7 @@ t.isPromise = function (e) {
     return ('undefined' != typeof Promise && e instanceof Promise) || (null !== e && 'object' == typeof e && 'function' == typeof e.then && 'function' == typeof e.catch);
 };
 t.isArrayBufferView = function (e) {
-    return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : s(e) || v(e);
+    return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : s(e) || O(e);
 };
 t.isUint8Array = function (e) {
     return 'Uint8Array' === a(e);
@@ -95,7 +95,7 @@ function A(e) {
 function N(e) {
     return '[object DataView]' === c(e);
 }
-function v(e) {
+function O(e) {
     return 'undefined' != typeof DataView && (N.working ? N(e) : e instanceof DataView);
 }
 (t.isWeakSet = function (e) {
@@ -104,13 +104,13 @@ function v(e) {
     (S.working = 'undefined' != typeof ArrayBuffer && S(new ArrayBuffer())),
     (t.isArrayBuffer = A),
     (N.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && N(new DataView(new ArrayBuffer(1), 0, 1))),
-    (t.isDataView = v);
-var O = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+    (t.isDataView = O);
+var v = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
 function R(e) {
     return '[object SharedArrayBuffer]' === c(e);
 }
 function C(e) {
-    return void 0 !== O && (void 0 === R.working && (R.working = R(new O())), R.working ? R(e) : e instanceof O);
+    return void 0 !== v && (void 0 === R.working && (R.working = R(new v())), R.working ? R(e) : e instanceof v);
 }
 t.isSharedArrayBuffer = C;
 t.isAsyncFunction = function (e) {

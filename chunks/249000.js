@@ -195,11 +195,11 @@ class m extends (a = u.PureComponent) {
                     return;
                 I = !0;
                 let { clientWidth: A, clientHeight: N } = r,
-                    v = n - this._offsetY,
-                    O = p(
+                    O = n - this._offsetY,
+                    v = p(
                         E(
                             {
-                                top: v,
+                                top: O,
                                 left: t - this._offsetX
                             },
                             i,
@@ -209,24 +209,24 @@ class m extends (a = u.PureComponent) {
                         )
                     );
                 if (d) {
-                    let e = f((O = h(O)));
+                    let e = f((v = h(v)));
                     (T = e[0]), (g = e[1]);
                 } else
-                    O = {
-                        top: O.top,
-                        left: O.left
+                    v = {
+                        top: v.top,
+                        left: v.left
                     };
                 2 === o && g !== this.state.horizontalOrientation && ((this._offsetX = A - this._offsetX), (S = !0)),
                     2 === s && T !== this.state.verticalOrientation && ((this._offsetY = N - this._offsetY), (S = !0)),
-                    this.setDOMPositions(O),
-                    !m && (null == l || l(O, r)),
-                    null == u || u(O, r),
+                    this.setDOMPositions(v),
+                    !m && (null == l || l(v, r)),
+                    null == u || u(v, r),
                     S && (null == c || c([T, g])),
                     this.setState({
                         dragging: I,
                         verticalOrientation: T,
                         horizontalOrientation: g,
-                        atTopEdge: 0 === O.top
+                        atTopEdge: 0 === v.top
                     });
             }),
             d(this, 'handleMouseUp', () => {

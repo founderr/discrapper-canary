@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return v;
+            return O;
         }
     }),
     n(47120),
@@ -264,7 +264,7 @@ class N extends i.Component {
         };
     }
 }
-function v(e) {
+function O(e) {
     let t = (0, d.Z)();
     return e.upload.item.platform !== u.ow.WEB
         ? null

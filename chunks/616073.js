@@ -9,7 +9,7 @@ n.d(t, {
         return N;
     },
     Xe: function () {
-        return O;
+        return v;
     },
     aQ: function () {
         return S;
@@ -110,8 +110,8 @@ function N(e = {}) {
     let { locale: t } = I();
     return (0, r.useMemo)(() => new l.e(t, e), [t, e]);
 }
-let v = new Map();
-function O(e) {
+let O = new Map();
+function v(e) {
     let { locale: t } = I(),
         n =
             t +
@@ -120,12 +120,12 @@ function O(e) {
                       .sort((e, t) => (e[0] < t[0] ? -1 : 1))
                       .join()
                 : '');
-    if (v.has(n)) return v.get(n);
+    if (O.has(n)) return O.get(n);
     let r = new Intl.Collator(t, e);
-    return v.set(n, r), r;
+    return O.set(n, r), r;
 }
 function R(e) {
-    let t = O({
+    let t = v({
             usage: 'search',
             ...e
         }),

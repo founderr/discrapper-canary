@@ -41,18 +41,18 @@ var g = (T.prototype = new m());
 var S = Array.isArray,
     A = Object.prototype.hasOwnProperty,
     N = { current: null },
-    v = {
+    O = {
         key: !0,
         ref: !0,
         __self: !0,
         __source: !0
     };
-function O(e, t, r) {
+function v(e, t, r) {
     var i,
         a = {},
         s = null,
         o = null;
-    if (null != t) for (i in (void 0 !== t.ref && (o = t.ref), void 0 !== t.key && (s = '' + t.key), t)) A.call(t, i) && !v.hasOwnProperty(i) && (a[i] = t[i]);
+    if (null != t) for (i in (void 0 !== t.ref && (o = t.ref), void 0 !== t.key && (s = '' + t.key), t)) A.call(t, i) && !O.hasOwnProperty(i) && (a[i] = t[i]);
     var l = arguments.length - 2;
     if (1 === l) a.children = r;
     else if (1 < l) {
@@ -224,7 +224,7 @@ var b = { current: null },
             o = e._owner;
         if (null != t) {
             if ((void 0 !== t.ref && ((s = t.ref), (o = N.current)), void 0 !== t.key && (a = '' + t.key), e.type && e.type.defaultProps)) var l = e.type.defaultProps;
-            for (u in t) A.call(t, u) && !v.hasOwnProperty(u) && (i[u] = void 0 === t[u] && void 0 !== l ? l[u] : t[u]);
+            for (u in t) A.call(t, u) && !O.hasOwnProperty(u) && (i[u] = void 0 === t[u] && void 0 !== l ? l[u] : t[u]);
         }
         var u = arguments.length - 2;
         if (1 === u) i.children = r;
@@ -260,9 +260,9 @@ var b = { current: null },
             (e.Consumer = e)
         );
     }),
-    (t.createElement = O),
+    (t.createElement = v),
     (t.createFactory = function (e) {
-        var t = O.bind(null, e);
+        var t = v.bind(null, e);
         return (t.type = e), t;
     }),
     (t.createRef = function () {

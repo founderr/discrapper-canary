@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     },
     MP: function () {
-        return O;
+        return v;
     },
     Mg: function () {
         return S;
@@ -119,7 +119,7 @@ function N(e) {
         media: e
     });
 }
-function v(e) {
+function O(e) {
     let { mid: t, type: n, setup: r, direction: i, baseSDP: a, codec: s, payload: o, bitrate: u, ssrcs: c, extensions: d, rtxPayload: _, sendingVideo: E } = e;
     if ('inactive' === i && !m.WS)
         return {
@@ -250,7 +250,7 @@ function v(e) {
     }
     return p;
 }
-function O(e) {
+function v(e) {
     let { type: t, baseSDP: n, direction: r, audioCodec: i, audioPayloadType: a, audioBitRate: s, videoCodec: o, videoPayloadType: l, videoBitRate: u, rtxPayloadType: c, ssrcs: d, extensions: _ } = e,
         E = [];
     if ((T.info('generateSessionDescription: '.concat(JSON.stringify(d))), 'Firefox' === f().name)) {
@@ -259,7 +259,7 @@ function O(e) {
             let [r, d, f, h, p] = t;
             if ('video' !== f || (0 !== l && 0 !== c))
                 E.push(
-                    v({
+                    O({
                         mid: p,
                         type: f,
                         setup: e,
@@ -286,7 +286,7 @@ function O(e) {
                 });
         if (
             (E.push(
-                v({
+                O({
                     mid: 'audio',
                     type: 'audio',
                     setup: e,
@@ -311,7 +311,7 @@ function O(e) {
                     return A(n, t, 'v');
                 });
             E.push(
-                v({
+                O({
                     mid: 'video',
                     type: 'video',
                     setup: e,
@@ -342,7 +342,7 @@ function R(e) {
                 { ssrc: d, cname: h, type: p, direction: I, mid: m } = e;
             '' !== h ? (t = A(h, d, 'audio' === p ? 'a' : 'v')) : ((t = []), 'sendonly' === I ? (I = 'inactive') : 'sendrecv' === I && (I = 'recvonly'));
             E.push(
-                v({
+                O({
                     mid: m,
                     type: p,
                     setup: f,

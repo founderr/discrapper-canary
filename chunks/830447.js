@@ -137,7 +137,7 @@ function T(e) {
                 throw Error('Menu API only allows Items and groups of Items as children. Received '.concat(null !== (i = null !== (r = null == n ? void 0 : n.type) && void 0 !== r ? r : n) && void 0 !== i ? i : typeof n, ' (').concat(typeof n, ') instead'));
             }, []);
         })(T),
-        v = (function e(t) {
+        O = (function e(t) {
             return t.reduce(
                 (t, n) =>
                     n.navigable
@@ -150,12 +150,12 @@ function T(e) {
                 []
             );
         })(N),
-        O = i.useRef([]);
-    !l()(O.current, v) && (O.current = v);
+        v = i.useRef([]);
+    !l()(v.current, O) && (v.current = O);
     let R = null === (t = N.find((e) => null != e.key)) || void 0 === t ? void 0 : t.key,
         C = (0, u.ZP)({
             navId: n,
-            items: O.current,
+            items: v.current,
             initialFocusPath: f.Z.keyboardModeEnabled && null != R ? [R] : [],
             closeMenu: g
         });

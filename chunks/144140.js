@@ -21,7 +21,7 @@ let g = new Set(),
     A = {};
 function N(e, t) {
     _.AW.has(e.type) &&
-        v(
+        O(
             (function (e) {
                 if (!(e.id in S)) {
                     var t;
@@ -38,12 +38,12 @@ function N(e, t) {
             t
         );
 }
-function v(e, t) {
+function O(e, t) {
     var n;
     let r = (null !== (n = A[e.parentId]) && void 0 !== n ? n : 0) + 1;
     (A[e.parentId] = r), t(e);
 }
-function O(e) {
+function v(e) {
     var t;
     null === (t = e.threads) || void 0 === t || t.forEach(R);
 }
@@ -106,7 +106,7 @@ class b extends (r = u.ZP.Store) {
         : (i[a] = s),
     (t.Z = new b(c.Z, {
         CONNECTION_OPEN: function (e) {
-            (A = {}), g.clear(), e.guilds.forEach(O);
+            (A = {}), g.clear(), e.guilds.forEach(v);
         },
         OVERLAY_INITIALIZE: function (e) {
             let { threadMessages: t } = e;
@@ -121,7 +121,7 @@ class b extends (r = u.ZP.Store) {
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            O(t);
+            v(t);
         },
         GUILD_DELETE: function (e) {
             var t;
@@ -182,7 +182,7 @@ class b extends (r = u.ZP.Store) {
                 r = S[n.channel_id],
                 i = null !== (t = null == r ? void 0 : r.mostRecentRawMessage) && void 0 !== t ? t : null == r ? void 0 : r.mostRecentMessage;
             if (null == r || null == i || i.id !== n.id) return !1;
-            v(r, (e) => {
+            O(r, (e) => {
                 null != e.mostRecentMessage && (e.mostRecentMessage = (0, d.wi)(e.mostRecentMessage, n)), null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, d.gx)(e.mostRecentRawMessage, n));
             });
         },
@@ -192,7 +192,7 @@ class b extends (r = u.ZP.Store) {
             if (null == r) return !1;
             let i = I.default.castChannelIdAsMessageId(n) !== t,
                 a = !g.has(t);
-            v(r, (e) => {
+            O(r, (e) => {
                 var n;
                 let r = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
                 null != r && r.id === t && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count = i && a ? Math.max(e.count - 1, 0) : e.count), g.add(t);
@@ -208,7 +208,7 @@ class b extends (r = u.ZP.Store) {
                 return t && r;
             }).length;
             i > 0 &&
-                v(r, (e) => {
+                O(r, (e) => {
                     var n;
                     let r = null !== (n = e.mostRecentRawMessage) && void 0 !== n ? n : e.mostRecentMessage;
                     null != r && t.includes(r.id) && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count -= i), t.forEach((e) => g.add(e));

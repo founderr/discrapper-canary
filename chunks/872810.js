@@ -63,8 +63,8 @@ var r = n(512722),
     S = n(573261),
     A = n(26151),
     N = n(493683),
-    v = n(475179),
-    O = n(287734),
+    O = n(475179),
+    v = n(287734),
     R = n(981631),
     C = n(70722);
 function y(e, t, n) {
@@ -105,7 +105,7 @@ function b(e, t) {
         streamKey: i,
         allowMultiple: a
     }),
-        !a && (null == t || !t.noFocus) && v.Z.selectParticipant(e.channelId, i);
+        !a && (null == t || !t.noFocus) && O.Z.selectParticipant(e.channelId, i);
 }
 function M(e, t) {
     o.Z.dispatch({
@@ -222,7 +222,7 @@ function H(e, t) {
     let n = E.default.getId(),
         r = (0, u.my)(t),
         i = p.Z.getVoiceChannelId();
-    null != i && i !== e && O.default.disconnect(),
+    null != i && i !== e && v.default.disconnect(),
         N.Z.addRecipient(e, n, void 0, () => {
             A.Z.call(e, !1, !1, null, () => {
                 P(r);

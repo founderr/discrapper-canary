@@ -20,8 +20,8 @@ var r = n(735250),
     S = n(210887),
     A = n(626135),
     N = n(176354),
-    v = n(74538),
-    O = n(543241),
+    O = n(74538),
+    v = n(543241),
     R = n(149203),
     C = n(981631),
     y = n(185923),
@@ -35,7 +35,7 @@ t.Z = (e) => {
         F = (0, o.e7)([S.Z], () => S.Z.theme) === C.BRd.LIGHT ? 'light' : 'dark',
         [V, H] = i.useState(!1),
         Z = () => {
-            (0, O.A3)(w), (0, f.z)(), P();
+            (0, v.A3)(w), (0, f.z)(), P();
         },
         Y = n(577391)('./img_premium_emoji_'.concat(F, '.svg')),
         j = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(F, '.png'),
@@ -68,7 +68,7 @@ t.Z = (e) => {
                     object: en
                 },
                 location_stack: Q,
-                sku_id: (0, v.Wz)(v.ZP.getSkuIdForPremiumType(D.p9.TIER_2))
+                sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(D.p9.TIER_2))
             });
     }, [k, Q, q, ee, et, M, en, X]);
     let er = (0, o.e7)([E.Z], () => E.Z.affinities),
@@ -98,7 +98,7 @@ t.Z = (e) => {
                       object: en
                   },
                   location_stack: Q,
-                  sku_id: (0, v.Wz)(v.ZP.getSkuIdForPremiumType(D.p9.TIER_2)),
+                  sku_id: (0, O.Wz)(O.ZP.getSkuIdForPremiumType(D.p9.TIER_2)),
                   has_search_query: null != q && '' !== q,
                   is_animated: ee
               }

@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(228168),
     A = n(981631),
     N = n(689938),
-    v = n(576062);
-let O = 'text-sm/medium',
+    O = n(576062);
+let v = 'text-sm/medium',
     R = 36,
     C = 144;
 function y(e) {
@@ -106,7 +106,7 @@ function y(e) {
         es = () =>
             H
                 ? (0, r.jsx)(d.I, {
-                      className: V ? v.statusEmojiInline : v.statusEmojiOnly,
+                      className: V ? O.statusEmojiInline : O.statusEmojiOnly,
                       emoji: k,
                       animate: T,
                       hideTooltip: !1,
@@ -116,49 +116,49 @@ function y(e) {
         eo = () =>
             V
                 ? (0, r.jsx)(c.Text, {
-                      variant: O,
-                      className: v.statusText,
+                      variant: v,
+                      className: O.statusText,
                       children: F
                   })
                 : null,
         el = () =>
             (0, r.jsxs)('div', {
-                className: v.content,
+                className: O.content,
                 children: [
                     (0, r.jsx)(c.CirclePlusIcon, {
-                        className: v.addStatusIcon,
-                        colorClass: v.addStatusIconColor
+                        className: O.addStatusIcon,
+                        colorClass: O.addStatusIconColor
                     }),
                     (0, r.jsx)(c.Text, {
-                        variant: O,
-                        className: v.addStatusPrompt,
+                        variant: v,
+                        className: O.addStatusPrompt,
                         children: N.Z.Messages.USER_SETTINGS_ADD_STATUS
                     })
                 ]
             }),
         eu = {
-            [v.biteSize]: h === S.y0.BITE_SIZE,
-            [v.fullSize]: h === S.y0.FULL_SIZE,
-            [v.panel]: h === S.y0.PANEL
+            [O.biteSize]: h === S.y0.BITE_SIZE,
+            [O.fullSize]: h === S.y0.FULL_SIZE,
+            [O.panel]: h === S.y0.PANEL
         },
-        ec = s()(v.background, { [v.editable]: Q }),
+        ec = s()(O.background, { [O.editable]: Q }),
         ed = s()({
-            [v.statusBubbleShape]: (!V && H) || !X,
-            [v.statusBubbleSingleLineWithTextShape]: (X && V) || q
+            [O.statusBubbleShape]: (!V && H) || !X,
+            [O.statusBubbleSingleLineWithTextShape]: (X && V) || q
         }),
-        e_ = s()(v.statusBubbleOuter, eu, ed, { [v.statusBubbleOuterAddStatusCursor]: q }),
-        eE = s()(v.statusBubble, ed, {
-            [v.statusBubbleEmojiOnlyPadding]: Z,
-            [v.statusBubbleWithTextPadding]: V || q,
-            [v.statusBubbleWithTextMinWidth]: V,
-            [v.statusBubbleCopyStatusCursor]: z
+        e_ = s()(O.statusBubbleOuter, eu, ed, { [O.statusBubbleOuterAddStatusCursor]: q }),
+        eE = s()(O.statusBubble, ed, {
+            [O.statusBubbleEmojiOnlyPadding]: Z,
+            [O.statusBubbleWithTextPadding]: V || q,
+            [O.statusBubbleWithTextMinWidth]: V,
+            [O.statusBubbleCopyStatusCursor]: z
         });
     return (0, r.jsx)(f.Gt, {
         value: y,
         children: (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)('div', {
-                    className: s()(v.invisibleContainer, eu),
+                    className: s()(O.invisibleContainer, eu),
                     children: (0, r.jsx)('div', {
                         className: e_,
                         children: (0, r.jsxs)('span', {
@@ -167,13 +167,13 @@ function y(e) {
                                 q && el(),
                                 z &&
                                     (0, r.jsxs)('div', {
-                                        className: s()(v.content, v.clamp, v.placeholderWidth, { [v.panel]: h === S.y0.PANEL }),
+                                        className: s()(O.content, O.clamp, O.placeholderWidth, { [O.panel]: h === S.y0.PANEL }),
                                         ref: x,
                                         children: [es(), eo()]
                                     }),
                                 z &&
                                     (0, r.jsxs)('div', {
-                                        className: s()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, { [v.panel]: h === S.y0.PANEL }),
+                                        className: s()(O.content, O.unclamp, O.placeholderWidth, O.incorporeal, { [O.panel]: h === S.y0.PANEL }),
                                         ref: U,
                                         children: [es(), eo()]
                                     })
@@ -182,7 +182,7 @@ function y(e) {
                     })
                 }),
                 (0, r.jsxs)(c.ClickableContainer, {
-                    className: s()(v.visibleContainer, eu, ec),
+                    className: s()(O.visibleContainer, eu, ec),
                     'aria-label': q
                         ? N.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL
                         : N.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
@@ -224,10 +224,10 @@ function y(e) {
                                 children: [
                                     z &&
                                         (() => {
-                                            let e = s()(v.content, {
-                                                [v.clamp]: M,
-                                                [v.unclamp]: !M,
-                                                [v.singleLineAlign]: X
+                                            let e = s()(O.content, {
+                                                [O.clamp]: M,
+                                                [O.unclamp]: !M,
+                                                [O.singleLineAlign]: X
                                             });
                                             return (0, r.jsxs)(o.animated.div, {
                                                 style: er,

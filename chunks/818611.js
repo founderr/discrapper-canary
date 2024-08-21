@@ -34,9 +34,9 @@ let g = () => 80,
             }),
             A = (0, E.Yq)(n.skuId),
             N = f.ZP.canUseCollectibles(t),
-            v = s === p.$0.PREMIUM_PURCHASE && !N,
-            O = i.useRef(null),
-            R = (0, d.Z)(null != a ? a : O),
+            O = s === p.$0.PREMIUM_PURCHASE && !N,
+            v = i.useRef(null),
+            R = (0, d.Z)(null != a ? a : v),
             { avatarDecorationSrc: C } = (0, I.Z)({
                 user: t,
                 avatarDecorationOverride: n,
@@ -44,8 +44,8 @@ let g = () => 80,
                 onlyAnimateOnHover: !R
             });
         return (0, r.jsxs)(S, {
-            className: v ? T.decorationGridItemChurned : void 0,
-            innerRef: null != a ? a : O,
+            className: O ? T.decorationGridItemChurned : void 0,
+            innerRef: null != a ? a : v,
             isSelected: o,
             ...h,
             children: [

@@ -61,10 +61,10 @@ function E(e) {
                     o = !1;
                     break;
                 case c.JS.START:
-                    n.isGuildVoice() ? a !== s.jy.CAN_LAUNCH && (o = !0) : !(0, r.WS)(n, !0) && (o = !0);
+                    n.isGuildVoice() ? a !== s.jy.CAN_LAUNCH && (o = !0) : !(0, r.WS)(n) && (o = !0);
                     break;
                 case c.JS.JOIN:
-                    n.isGuildVoice() ? (o = !i) : !(0, r.WS)(n, !1) && (o = !0);
+                    n.isGuildVoice() ? (o = !i) : !(0, r.WS)(n) && (o = !0);
             }
             return o;
         })({

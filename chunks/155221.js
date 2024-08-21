@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(626135),
     A = n(361207),
     N = n(690032),
-    v = n(358085),
-    O = n(998502),
+    O = n(358085),
+    v = n(998502),
     R = n(981631),
     C = n(188785),
     y = n(436620);
@@ -125,7 +125,7 @@ function z(e, t) {
 }
 class q extends i.Component {
     componentDidMount() {
-        O.ZP.cleanupDisplaySleep(), T.Z.initialize();
+        v.ZP.cleanupDisplaySleep(), T.Z.initialize();
     }
     componentWillUnmount() {
         T.Z.terminate();
@@ -138,7 +138,7 @@ class q extends i.Component {
                 n === I.P.IN_PROGRESS
                     ? null
                     : y.KO
-                      ? v.isPlatformEmbedded
+                      ? O.isPlatformEmbedded
                           ? (0, r.jsxs)(s.rs, {
                                 children: [
                                     (0, r.jsx)(s.AW, {
@@ -314,7 +314,7 @@ class q extends i.Component {
                       : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: D }) })),
             (0, r.jsxs)(p.Z, {
                 skipsSettingDefaultPageTitle: i,
-                children: [e, v.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(m.Z, {}) : null]
+                children: [e, O.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(m.Z, {}) : null]
             })
         );
     }

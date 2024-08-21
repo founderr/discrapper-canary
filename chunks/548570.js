@@ -32,8 +32,8 @@ var r = n(512722),
     S = n(626135),
     A = n(12647),
     N = n(70956),
-    v = n(358085),
-    O = n(960048),
+    O = n(358085),
+    v = n(960048),
     R = n(138859),
     C = n(14639),
     y = n(639655),
@@ -291,7 +291,7 @@ class j extends M.Z {
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
-        (0, v.isIOS)() &&
+        (0, O.isIOS)() &&
             null != this.token &&
             1001 === e &&
             'Stream end encountered' === t &&
@@ -457,7 +457,7 @@ class j extends M.Z {
                 },
                 !0
             ),
-            !1 !== e.sentry && O.Z.captureException(n, { tags: { socketCrashedAction: t } }),
+            !1 !== e.sentry && v.Z.captureException(n, { tags: { socketCrashedAction: t } }),
             S.default.track(w.rMx.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
@@ -577,7 +577,7 @@ class j extends M.Z {
                             let [t, n] = null !== (i = Array.from(_.ZP.getSelfEmbeddedActivities().entries())[0]) && void 0 !== i ? i : [];
                             null != t &&
                                 null != n &&
-                                (O.Z.addBreadcrumb({
+                                (v.Z.addBreadcrumb({
                                     message: 'Gateway close during Activity',
                                     data: {
                                         application_id: t,
@@ -585,7 +585,7 @@ class j extends M.Z {
                                         guild_id: n.guildId
                                     }
                                 }),
-                                O.Z.captureMessage('EMBEDDED_ACTIVITY_CLOSE was not sent due to no web socket existing'));
+                                v.Z.captureMessage('EMBEDDED_ACTIVITY_CLOSE was not sent due to no web socket existing'));
                         }
                     } catch (e) {}
                 else G.warn('Attempted to send while not being in a connected state opcode: '.concat(e));

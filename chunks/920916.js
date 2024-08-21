@@ -30,8 +30,8 @@ var r = n(735250),
     S = n(25990),
     A = n(594174),
     N = n(272008),
-    v = n(497505),
-    O = n(918701),
+    O = n(497505),
+    v = n(918701),
     R = n(566078),
     C = n(114732),
     y = n(46140),
@@ -52,12 +52,12 @@ function U(e) {
         g = i.useRef(new o.qA()),
         S = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         R = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
-        y = (0, O.j8)(l),
+        y = (0, v.j8)(l),
         L = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         [M, P] = i.useState(L ? 'claimed' : 'loading');
     i.useEffect(() => {
         !L &&
-            (0, N.QB)(l.id, v.y$.CROSS_PLATFORM, d)
+            (0, N.QB)(l.id, O.y$.CROSS_PLATFORM, d)
                 .then(() => P('claimed'))
                 .catch(() => P('error'));
     }, [l, d, L]);
@@ -110,9 +110,9 @@ function U(e) {
 }
 function w(e) {
     let { quest: t, user: n, decoration: i, decorationName: a, primaryColor: s, secondaryColor: o, backgroundUrl: l, isSaving: u, onClose: d, onConfirm: _ } = e,
-        E = (0, O.zK)(t, y.S7.IN_HOUSE_CONSOLE_QUEST),
-        h = R.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[v.y$.CROSS_PLATFORM],
-        p = (0, O.Kr)(t.config),
+        E = (0, v.zK)(t, y.S7.IN_HOUSE_CONSOLE_QUEST),
+        h = R.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[O.y$.CROSS_PLATFORM],
+        p = (0, v.Kr)(t.config),
         T =
             null == p
                 ? L.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({ decorationName: a })
@@ -209,7 +209,7 @@ function w(e) {
 function x(e) {
     var t, n;
     let { quest: a, location: s, onClose: o, transitionState: u } = e,
-        c = i.useMemo(() => (0, O.xn)(a.config), [a]),
+        c = i.useMemo(() => (0, v.xn)(a.config), [a]),
         [_, f] = (function (e) {
             let { product: t, isFetching: n } = (0, h.T)(e),
                 {} = (0, g.Z)({}),
@@ -221,7 +221,7 @@ function x(e) {
             return [r, () => (null == r ? Promise.reject() : ((0, d.cV)(r), P()))];
         })(null !== (n = null == c ? void 0 : c.skuId) && void 0 !== n ? n : null);
     if (null == c) return null;
-    let p = (0, O.zK)(a, y.S7.IN_HOUSE_CONSOLE_QUEST);
+    let p = (0, v.zK)(a, y.S7.IN_HOUSE_CONSOLE_QUEST);
     return (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || p
         ? (0, r.jsx)(U, {
               onClose: o,

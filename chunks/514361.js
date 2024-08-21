@@ -19,7 +19,7 @@ var a,
     S = n(47760),
     A = n(469115),
     N = n(874893);
-function v(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,14 +32,14 @@ function v(e, t, n) {
         e
     );
 }
-let O = !1,
+let v = !1,
     R = !0,
     C = !1;
 function y() {
-    O = !0;
+    v = !0;
 }
 function D() {
-    R && (r = void 0), (C = !1), (O = !1);
+    R && (r = void 0), (C = !1), (v = !1);
 }
 let L = () => {
         R = !T.ZP.canUseClientThemes(m.default.getCurrentUser());
@@ -79,7 +79,7 @@ class P extends (a = s.ZP.PersistedStore) {
         return null == this.gradientPreset ? null : (0, S.VK)(this.gradientPreset);
     }
     get isEditorOpen() {
-        return O;
+        return v;
     }
     get isPreview() {
         return R;
@@ -92,7 +92,7 @@ class P extends (a = s.ZP.PersistedStore) {
     }
     constructor(...e) {
         super(...e),
-            v(this, 'migrations', [
+            O(this, 'migrations', [
                 (e) => {
                     var t;
                     return { gradientPresetId: null == e ? void 0 : null === (t = e.gradientPreset) || void 0 === t ? void 0 : t.id };
@@ -100,8 +100,8 @@ class P extends (a = s.ZP.PersistedStore) {
             ]);
     }
 }
-v(P, 'displayName', 'ClientThemesBackgroundStore'),
-    v(P, 'persistKey', 'ClientThemesBackgroundStore'),
+O(P, 'displayName', 'ClientThemesBackgroundStore'),
+    O(P, 'persistKey', 'ClientThemesBackgroundStore'),
     (t.Z = new P(l.Z, {
         UPDATE_BACKGROUND_GRADIENT_PRESET: (e) => {
             let { presetId: t } = e;
@@ -121,7 +121,7 @@ v(P, 'displayName', 'ClientThemesBackgroundStore'),
         },
         CLIENT_THEMES_EDITOR_OPEN: (e) => {
             (function () {
-                O = !0;
+                v = !0;
             })();
         },
         CLIENT_THEMES_EDITOR_CLOSE: (e) => {
@@ -139,7 +139,7 @@ v(P, 'displayName', 'ClientThemesBackgroundStore'),
                 (0, p.zi)(i.type) &&
                 ((C = !0),
                 (function () {
-                    O = !0;
+                    v = !0;
                 })());
         },
         LOGOUT: function () {

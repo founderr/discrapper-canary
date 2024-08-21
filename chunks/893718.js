@@ -20,8 +20,8 @@ var r = n(735250),
     S = n(931981),
     A = n(326133),
     N = n(570220),
-    v = n(28546),
-    O = n(805680),
+    O = n(28546),
+    v = n(805680),
     R = n(151574),
     C = n(368844),
     y = n(41776),
@@ -59,7 +59,7 @@ var r = n(735250),
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         var a, l, es, eo, el, eu, ec, ed, e_, eE, ef, eh, ep, eI, em;
-        let { textValue: eT, richValue: eg, className: eS, innerClassName: eA, editorClassName: eN, id: ev, required: eO, disabled: eR, placeholder: eC, accessibilityLabel: ey, channel: eD, type: eL, focused: eb, renderAttachButton: eM, renderApplicationCommandIcon: eP, pendingReply: eU, onChange: ew, onResize: ex, onBlur: eG, onFocus: ek, onKeyDown: eB, onSubmit: eF, promptToUpload: eV, highlighted: eH, canMentionRoles: eZ, canMentionChannels: eY, maxCharacterCount: ej, showRemainingCharsAfterCount: eW, allowNewLines: eK = !0, characterCountClassName: ez, 'aria-describedby': eq, 'aria-labelledby': eQ, setEditorRef: eX, autoCompletePosition: e$, children: eJ, disableThemedBackground: e0 = !1, emojiPickerCloseOnModalOuterClick: e1, parentModalKey: e2, onCommandSentinelTyped: e3 } = e;
+        let { textValue: eT, richValue: eg, className: eS, innerClassName: eA, editorClassName: eN, id: eO, required: ev, disabled: eR, placeholder: eC, accessibilityLabel: ey, channel: eD, type: eL, focused: eb, renderAttachButton: eM, renderApplicationCommandIcon: eP, pendingReply: eU, onChange: ew, onResize: ex, onBlur: eG, onFocus: ek, onKeyDown: eB, onSubmit: eF, promptToUpload: eV, highlighted: eH, canMentionRoles: eZ, canMentionChannels: eY, maxCharacterCount: ej, showRemainingCharsAfterCount: eW, allowNewLines: eK = !0, characterCountClassName: ez, 'aria-describedby': eq, 'aria-labelledby': eQ, setEditorRef: eX, autoCompletePosition: e$, children: eJ, disableThemedBackground: e0 = !1, emojiPickerCloseOnModalOuterClick: e1, parentModalKey: e2, onCommandSentinelTyped: e3 } = e;
         u()(null != eL, 'chat input type must be set');
         let { analyticsLocations: e4 } = (0, m.ZP)(I.Z.CHANNEL_TEXT_AREA),
             e5 = (function (e) {
@@ -140,15 +140,15 @@ t.Z = i.memo(
         );
         !(function (e, t) {
             let n = i.useCallback(() => {
-                    if (!t) (0, v.RO)(ei.X1.EMOJI, e);
+                    if (!t) (0, O.RO)(ei.X1.EMOJI, e);
                 }, [t, e]),
                 r = i.useCallback(() => {
                     var n;
-                    if (!t && !!(null === (n = e.gifs) || void 0 === n ? void 0 : n.allowSending)) (0, v.RO)(ei.X1.GIF, e);
+                    if (!t && !!(null === (n = e.gifs) || void 0 === n ? void 0 : n.allowSending)) (0, O.RO)(ei.X1.GIF, e);
                 }, [t, e]),
                 a = i.useCallback(() => {
                     var n;
-                    if (!t && !!(null === (n = e.stickers) || void 0 === n ? void 0 : n.allowSending)) (0, v.RO)(ei.X1.STICKER, e);
+                    if (!t && !!(null === (n = e.stickers) || void 0 === n ? void 0 : n.allowSending)) (0, O.RO)(ei.X1.STICKER, e);
                 }, [t, e]);
             (0, H.yp)({
                 event: en.CkL.TOGGLE_EMOJI_POPOUT,
@@ -220,7 +220,7 @@ t.Z = i.memo(
                                     if (s !== k.Z.getChannelId()) h.Z.saveDraft(s, '', t.drafts.type);
                                     else _ && a.current.clearValue();
                                 }
-                                _ && (l(!1), (0, v._Q)(), c && a.current.focus());
+                                _ && (l(!1), (0, O._Q)(), c && a.current.focus());
                             });
                         },
                         [a, e, o, t, s]
@@ -237,7 +237,7 @@ t.Z = i.memo(
             {
                 autocompleteRef: tA,
                 handleMaybeShowAutocomplete: tN,
-                handleHideAutocomplete: tv
+                handleHideAutocomplete: tO
             } = (function () {
                 let e = i.useRef(null),
                     t = i.useCallback(() => {
@@ -254,14 +254,14 @@ t.Z = i.memo(
                     handleHideAutocomplete: n
                 };
             })();
-        let tO =
+        let tv =
             ((ef = tg),
             (eh = eL),
             (ep = e7),
             i.useCallback(
                 (e) => {
                     var t, n;
-                    eh === W.I.CREATE_FORUM_POST ? null === (n = ep.current) || void 0 === n || n.insertGIF(e) : ef(e.url, void 0, void 0, !0), (0, v._Q)(), null === (t = ep.current) || void 0 === t || t.focus();
+                    eh === W.I.CREATE_FORUM_POST ? null === (n = ep.current) || void 0 === n || n.insertGIF(e) : ef(e.url, void 0, void 0, !0), (0, O._Q)(), null === (t = ep.current) || void 0 === t || t.focus();
                 },
                 [ep, ef, eh]
             ));
@@ -271,7 +271,7 @@ t.Z = i.memo(
                     function (e, t) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                             r = eI.current;
-                        null != e && null != r && r.insertEmoji(e, t, n), t && (0, v._Q)();
+                        null != e && null != r && r.insertEmoji(e, t, n), t && (0, O._Q)();
                     },
                     [eI]
                 )),
@@ -296,7 +296,7 @@ t.Z = i.memo(
                                       stickers: [e.id]
                                   }),
                                   null === (c = t.current) || void 0 === c || c.clearValue()),
-                            (0, v._Q)(),
+                            (0, O._Q)(),
                             null === (u = t.current) || void 0 === u || u.focus());
                     },
                     [n, r, a, s.drafts.type, t, l, o]
@@ -314,7 +314,7 @@ t.Z = i.memo(
                 i.useCallback(
                     (e) => {
                         let t = em.current;
-                        null != e && null != t && t.insertSound(e), (0, v._Q)();
+                        null != e && null != t && t.insertSound(e), (0, O._Q)();
                     },
                     [em]
                 )),
@@ -365,16 +365,16 @@ t.Z = i.memo(
                 handleAutocompleteVisibilityChange: tG,
                 handleOuterClick: tk
             } = (function (e, t, n) {
-                let [r, a] = (0, v.Iu)((e) => [e.activeView, e.activeViewType], c.Z);
+                let [r, a] = (0, O.Iu)((e) => [e.activeView, e.activeViewType], c.Z);
                 i.useEffect(
                     () => () => {
-                        (0, v._Q)(e);
+                        (0, O._Q)(e);
                     },
                     [e]
                 );
                 let s = i.useCallback(
                         (e) => {
-                            t.emit('autocomplete-visibility-change', e), e && (0, v._Q)();
+                            t.emit('autocomplete-visibility-change', e), e && (0, O._Q)();
                         },
                         [t]
                     ),
@@ -477,14 +477,14 @@ t.Z = i.memo(
                                                 ringClassName: ea.focusRing,
                                                 children: (0, r.jsx)(K.Z, {
                                                     ref: e7,
-                                                    id: ev,
+                                                    id: eO,
                                                     focused: eb,
                                                     useSlate: tu,
                                                     textValue: eT,
                                                     richValue: eg,
                                                     disabled: ti,
                                                     placeholder: eC,
-                                                    required: eO,
+                                                    required: ev,
                                                     accessibilityLabel: ey,
                                                     isPreviewing: (tn || tr) && to,
                                                     channel: eD,
@@ -505,7 +505,7 @@ t.Z = i.memo(
                                                     onMoveSelection: tU,
                                                     onSelectionChanged: tm,
                                                     onMaybeShowAutocomplete: tN,
-                                                    onHideAutocomplete: tv,
+                                                    onHideAutocomplete: tO,
                                                     promptToUpload: eV,
                                                     fontSize: tE,
                                                     spellcheckEnabled: tf,
@@ -587,10 +587,10 @@ t.Z = i.memo(
                     }),
                     tx
                         ? null
-                        : (0, r.jsx)(O.Z, {
+                        : (0, r.jsx)(v.Z, {
                               positionTargetRef: e5,
                               type: eL,
-                              onSelectGIF: tO,
+                              onSelectGIF: tv,
                               onSelectEmoji: tR,
                               onSelectSticker: tC,
                               onSelectSound: ty,

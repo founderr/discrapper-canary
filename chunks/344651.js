@@ -29,8 +29,8 @@ var a = n(442837),
     S = n(592125),
     A = n(271383),
     N = n(819640),
-    v = n(594174),
-    O = n(979651),
+    O = n(594174),
+    v = n(979651),
     R = n(509545),
     C = n(78839),
     y = n(936101),
@@ -204,7 +204,7 @@ B(
         p.Z.initialGuild.measure(() => {
             a.ZP.Emitter.batched(() => {
                 let t = D.Fx(e, b.Wb.identifyStartTime);
-                null != v.default.getCurrentUser() &&
+                null != O.default.getCurrentUser() &&
                     (V({
                         type: 'GUILD_CREATE',
                         guild: t
@@ -923,7 +923,7 @@ B(
                         suppress: e.suppress,
                         selfStream: e.self_stream || !1,
                         requestToSpeakTimestamp: null !== (t = e.request_to_speak_timestamp) && void 0 !== t ? t : null,
-                        oldChannelId: O.Z.getUserVoiceChannelId(e.guild_id, e.user_id)
+                        oldChannelId: v.Z.getUserVoiceChannelId(e.guild_id, e.user_id)
                     }
                 ]
             });

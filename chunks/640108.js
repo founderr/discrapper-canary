@@ -27,8 +27,8 @@ var r,
     S = n(36703),
     A = n(228488),
     N = n(540026),
-    v = n(455813),
-    O = n(283756),
+    O = n(455813),
+    v = n(283756),
     R = n(793148),
     C = n(981631),
     y = n(217702),
@@ -700,7 +700,7 @@ class Y extends (i = s.PureComponent) {
                             })
                           : null
               })
-            : (0, a.jsx)(v.Z, {
+            : (0, a.jsx)(O.Z, {
                   onPlay: this.handleVideoClick,
                   inactive: !r
               });
@@ -760,7 +760,7 @@ class Y extends (i = s.PureComponent) {
                     this.renderVideo(),
                     (0, a.jsx)('div', {
                         className: L.playCenter,
-                        children: (0, a.jsx)(O.Z, {
+                        children: (0, a.jsx)(v.Z, {
                             className: L.__invalid_playButton,
                             externalURL: n,
                             renderLinkComponent: s

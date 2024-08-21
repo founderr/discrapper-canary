@@ -29,10 +29,10 @@ function E(e) {
                       className: _.clickableUsername,
                       children: e
                   }),
-        v = null != p && p.length > 0,
-        O = (0, l.D)(t);
+        O = null != p && p.length > 0,
+        v = (0, l.D)(t);
     return (0, r.jsxs)('div', {
-        className: a()(_.container, { [_.bot]: null != O }, I),
+        className: a()(_.container, { [_.bot]: null != v }, I),
         children: [
             (0, r.jsxs)('div', {
                 className: _.usernameRow,
@@ -44,9 +44,9 @@ function E(e) {
                             children: f
                         })
                     ),
-                    null != O &&
+                    null != v &&
                         (0, r.jsx)(u.Z, {
-                            type: O,
+                            type: v,
                             verified: t.isVerifiedBot()
                         }),
                     null != h &&
@@ -58,8 +58,8 @@ function E(e) {
             }),
             (0, r.jsxs)('div', {
                 className: a()(_.tags, A, {
-                    [_.pronouns]: v,
-                    [_.bot]: null != O
+                    [_.pronouns]: O,
+                    [_.bot]: null != v
                 }),
                 children: [
                     N(
@@ -74,7 +74,7 @@ function E(e) {
                             hideBotTag: !0
                         })
                     ),
-                    v &&
+                    O &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)('div', {

@@ -82,13 +82,13 @@ function u(e, t) {
         var A = this.jpoint(null, null, null),
             N = this._wnafT4;
         for (o = E; o >= 0; o--) {
-            for (var v = 0; o >= 0; ) {
-                var O = !0;
-                for (l = 0; l < r; l++) (N[l] = 0 | _[l][o]), 0 !== N[l] && (O = !1);
-                if (!O) break;
-                v++, o--;
+            for (var O = 0; o >= 0; ) {
+                var v = !0;
+                for (l = 0; l < r; l++) (N[l] = 0 | _[l][o]), 0 !== N[l] && (v = !1);
+                if (!v) break;
+                O++, o--;
             }
-            if ((o >= 0 && v++, (A = A.dblp(v)), o < 0)) break;
+            if ((o >= 0 && O++, (A = A.dblp(O)), o < 0)) break;
             for (l = 0; l < r; l++) {
                 var R = N[l];
                 if (0 !== R) {

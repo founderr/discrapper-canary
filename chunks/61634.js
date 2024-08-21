@@ -78,7 +78,7 @@ function R(e) {
     })(e, n);
     let a = (0, L.Z)(e),
         A = (0, s.e7)([d.ZP], () => d.ZP.getEmbeddedActivitiesForGuild(e)),
-        R = (0, u.NX)(null === (t = A[0]) || void 0 === t ? void 0 : t.channelId, !1),
+        R = (0, u.NX)(null === (t = A[0]) || void 0 === t ? void 0 : t.channelId),
         {
             guildHasVoice: O,
             guildHasVideo: P,

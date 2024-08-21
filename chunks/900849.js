@@ -24,13 +24,13 @@ n.d(t, {
         return T;
     },
     c6: function () {
-        return O;
+        return v;
     },
     j$: function () {
         return N;
     },
     m9: function () {
-        return v;
+        return O;
     },
     mT: function () {
         return R;
@@ -184,11 +184,11 @@ function N(e, t, n, r) {
         guild_id: r
     });
 }
-function v(e) {
+function O(e) {
     let { categoryId: t } = e;
     E.default.track(f.rMx.GUILD_DISCOVERY_SEARCH_FAILED, { category_id: t });
 }
-function O(e) {
+function v(e) {
     let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: s, isTagSearch: o } = e;
     E.default.track(f.rMx.SEARCH_RESULT_VIEWED, {
         search_type: o ? f.aib.GUILD_DISCOVERY_TAG : f.aib.GUILD_DISCOVERY,

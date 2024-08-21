@@ -21,7 +21,7 @@ var r = n(735250),
     N = n(157732);
 t.Z = (e) => {
     let { roleIcon: t, guild: n } = e,
-        { name: v } = t;
+        { name: O } = t;
     i.useEffect(() => {
         m.default.track(g.rMx.OPEN_POPOUT, {
             type: 'Role Icon Popout',
@@ -29,9 +29,9 @@ t.Z = (e) => {
             ...(0, o.v_)(f.Z.getChannel(p.Z.getChannelId(n.id)))
         });
     }, []);
-    let O = (0, a.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
-        R = (0, _.Z)(O),
-        C = R ? A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({ name: v }) : A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({ name: v }),
+    let v = (0, a.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
+        R = (0, _.Z)(v),
+        C = R ? A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({ name: O }) : A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({ name: O }),
         y = {
             ...t,
             src: null == t.src ? t.src : (0, c.o)(t.src, 40),
@@ -70,7 +70,7 @@ t.Z = (e) => {
                                     (0, r.jsx)(s.Heading, {
                                         variant: 'heading-md/semibold',
                                         className: N.roleName,
-                                        children: (0, r.jsx)(l.Z, { children: v })
+                                        children: (0, r.jsx)(l.Z, { children: O })
                                     }),
                                     (0, r.jsx)(s.Text, {
                                         variant: 'text-sm/normal',

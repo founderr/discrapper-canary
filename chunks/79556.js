@@ -232,7 +232,7 @@ function j(e) {
             },
             [t]
         ),
-        O = (0, d.NX)(t.id, !1),
+        O = (0, d.NX)(t.id),
         P = (0, T.Z)({
             channel: t,
             isChannelCollapsed: !1,

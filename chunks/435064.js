@@ -32,8 +32,8 @@ let p = 'default',
     S = null,
     A = null,
     N = {},
-    v = null,
     O = null,
+    v = null,
     R = {},
     C = {
         clipsEnabled: !1,
@@ -90,7 +90,7 @@ class L extends (r = i.ZP.DeviceSettingsStore) {
         return S === e;
     }
     getActiveAnimation() {
-        return O;
+        return v;
     }
     getStreamClipAnimations(e) {
         var t;
@@ -112,7 +112,7 @@ class L extends (r = i.ZP.DeviceSettingsStore) {
         return g >= _.Kw;
     }
     getLastClipsError() {
-        return v;
+        return O;
     }
     isClipsEnabledForUser(e) {
         var t, n;
@@ -284,7 +284,7 @@ let b = new L(a.Z, {
         if (((g += 1), (y.hasTakenDecoupledClip = y.hasTakenDecoupledClip || t === _.X9.DECOUPLED), null != n && null != r)) {
             var i;
             let e = Date.now();
-            (O = null != O ? O : e),
+            (v = null != v ? v : e),
                 (R[n] = [
                     ...(null !== (i = R[n]) && void 0 !== i ? i : []),
                     {
@@ -299,7 +299,7 @@ let b = new L(a.Z, {
     },
     CLIPS_SAVE_ANIMATION_END: function (e) {
         let { streamKey: t, timestamp: n } = e;
-        O === n && (O = null), null == n ? (R[t] = []) : (R[t] = R[t].filter((e) => e.timestamp !== n));
+        v === n && (v = null), null == n ? (R[t] = []) : (R[t] = R[t].filter((e) => e.timestamp !== n));
     },
     STREAM_START: function (e) {
         let { sourceName: t, pid: n } = e;
@@ -319,7 +319,7 @@ let b = new L(a.Z, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        if (((O = null), (R[t] = []), null == A || (0, l.my)(t).ownerId !== u.default.getId())) return !1;
+        if (((v = null), (R[t] = []), null == A || (0, l.my)(t).ownerId !== u.default.getId())) return !1;
         A =
             0 === A.newClipIds.length
                 ? null
@@ -377,7 +377,7 @@ let b = new L(a.Z, {
     },
     CLIPS_INIT: function (e) {
         let { applicationName: t } = e;
-        if (((v = null), !y.clipsSettings.clipsEnabled)) return !1;
+        if (((O = null), !y.clipsSettings.clipsEnabled)) return !1;
         A = {
             applicationName: t,
             newClipIds: [],
@@ -386,13 +386,13 @@ let b = new L(a.Z, {
     },
     CLIPS_INIT_FAILURE: function (e) {
         let { errMsg: t } = e;
-        v = t;
+        O = t;
     },
     CLIPS_DISMISS_EDUCATION: function (e) {
         let { educationType: t } = e;
         switch (t) {
             case _.D5.Error:
-                v = null;
+                O = null;
                 break;
             case _.D5.Disabled:
             case _.D5.Enabled:

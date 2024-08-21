@@ -19,8 +19,8 @@ var a,
     S = n(780570),
     A = n(314897),
     N = n(77498),
-    v = n(517100),
-    O = n(283595),
+    O = n(517100),
+    v = n(283595),
     R = n(293273),
     C = n(158776),
     y = n(797258),
@@ -35,7 +35,7 @@ let L = !1,
     G = Object.freeze([]),
     k = [];
 function B(e) {
-    return (0, S.OT)(e, O.Z);
+    return (0, S.OT)(e, v.Z);
 }
 function F(e) {
     switch (e.type) {
@@ -58,7 +58,7 @@ function F(e) {
 }
 function V() {
     var e;
-    if (((P = null !== (e = v.Z.getIdleSince()) && void 0 !== e ? e : 0), (w = v.Z.isAFK()), x)) (b = M), H();
+    if (((P = null !== (e = O.Z.getIdleSince()) && void 0 !== e ? e : 0), (w = O.Z.isAFK()), x)) (b = M), H();
     else if (L) b = D.Skl.INVISIBLE;
     else {
         let e = m.co.getSetting();
@@ -93,7 +93,7 @@ function Z() {
 }
 class Y extends (a = E.ZP.Store) {
     initialize() {
-        this.waitFor(v.Z, T.Z, R.Z, y.Z, O.Z, N.Z), this.syncWith([R.Z], V);
+        this.waitFor(O.Z, T.Z, R.Z, y.Z, v.Z, N.Z), this.syncWith([R.Z], V);
     }
     getLocalPresence() {
         return {

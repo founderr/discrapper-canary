@@ -63,7 +63,7 @@ function S(e) {
     let { reply: t, chatInputType: n } = e,
         { channel: i, message: a, shouldMention: u, showMentionToggle: f } = t,
         { nick: S, colorString: A, colorRoleName: N } = (0, c.ZP)(a),
-        v = (function (e, t) {
+        O = (function (e, t) {
             let n = e.id,
                 r = t.id;
             return (0, o.e7)(
@@ -80,8 +80,8 @@ function S(e) {
                 [n, r]
             );
         })(i, a),
-        O = (0, E.NE)(i, a),
-        R = n.showThreadPromptOnReply && v >= 2 && O;
+        v = (0, E.NE)(i, a),
+        R = n.showThreadPromptOnReply && O >= 2 && v;
     function C(e) {
         e.stopPropagation(), (0, d.qx)(i.id, !u);
     }
@@ -176,7 +176,7 @@ function S(e) {
                     (0, r.jsx)(g, {
                         channel: i,
                         message: a,
-                        replyChainLength: v
+                        replyChainLength: O
                     })
             ]
         })

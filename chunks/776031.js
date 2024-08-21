@@ -23,8 +23,8 @@ var r = n(735250),
     g = n(65154),
     S = n(689938);
 function A(e, t) {
-    let { preset: A, resolution: N, fps: v } = (0, s.cj)([f.Z], () => f.Z.getState()),
-        O = (0, s.e7)([p.Z], () => p.Z.getGoLiveSource()),
+    let { preset: A, resolution: N, fps: O } = (0, s.cj)([f.Z], () => f.Z.getState()),
+        v = (0, s.e7)([p.Z], () => p.Z.getGoLiveSource()),
         R = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
         C = (0, s.e7)([h.Z], () => {
             var t;
@@ -35,7 +35,7 @@ function A(e, t) {
         b = i.useCallback(
             (e, i, a, s) => {
                 if (e) {
-                    if (null != O) {
+                    if (null != v) {
                         let e = {
                             qualityOptions: {
                                 preset: T.tI.PRESET_CUSTOM,
@@ -44,15 +44,15 @@ function A(e, t) {
                             },
                             context: g.Yn.STREAM
                         };
-                        null != O.desktopSource
+                        null != v.desktopSource
                             ? (e.desktopSettings = {
-                                  sourceId: O.desktopSource.id,
+                                  sourceId: v.desktopSource.id,
                                   sound: !0
                               })
-                            : null != O.cameraSource &&
+                            : null != v.cameraSource &&
                               (e.cameraSettings = {
-                                  videoDeviceGuid: O.cameraSource.videoDeviceGuid,
-                                  audioDeviceGuid: O.cameraSource.audioDeviceGuid
+                                  videoDeviceGuid: v.cameraSource.videoDeviceGuid,
+                                  audioDeviceGuid: v.cameraSource.audioDeviceGuid
                               }),
                             D && (0, E.J1)(!(0, _.mc)(i, a)),
                             l.Z.setGoLiveSource(e);
@@ -78,10 +78,10 @@ function A(e, t) {
                         );
                 }
             },
-            [t, y, O, D]
+            [t, y, v, D]
         );
     if (null == e) return null;
-    let M = A === T.tI.PRESET_DOCUMENTS ? T.ws.FPS_30 : v,
+    let M = A === T.tI.PRESET_DOCUMENTS ? T.ws.FPS_30 : O,
         P = T.af.map((e) => {
             let { value: t, label: n } = e,
                 i = (0, c.Z)(T.tI.PRESET_CUSTOM, N, t, R, C);
@@ -93,7 +93,7 @@ function A(e, t) {
                         group: 'stream-settings-fps',
                         id: 'stream-settings-fps-'.concat(t),
                         label: n,
-                        checked: t === v,
+                        checked: t === O,
                         action: () => b(i, N, t, m.Qqv.RESOLUTION)
                     },
                     'stream-settings-fps-'.concat(t)

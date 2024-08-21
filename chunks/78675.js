@@ -24,7 +24,7 @@ var r = n(735250),
     g = n(439779);
 function S(e) {
     var t;
-    let { user: n, displayProfile: a, guildId: S, profileType: A, pendingBanner: N, children: v, animateOnHover: O = !1, hasProfileEffect: R = !1, canUsePremiumCustomization: C = !1 } = e,
+    let { user: n, displayProfile: a, guildId: S, profileType: A, pendingBanner: N, children: O, animateOnHover: v = !1, hasProfileEffect: R = !1, canUsePremiumCustomization: C = !1 } = e,
         y = C || (null == a ? void 0 : a.canUsePremiumProfileCustomization) || !1,
         [D, L] = i.useState(!1),
         b = (0, l.e7)([h.Z], () => h.Z.isFocused()),
@@ -33,7 +33,7 @@ function S(e) {
             displayProfile: a,
             pendingBanner: N,
             size: (0, T.e7)(A),
-            canAnimate: O || !M ? D : b
+            canAnimate: v || !M ? D : b
         }),
         w = (0, c.useToken)(u.Z.unsafe_rawColors.PRIMARY_800).hex(),
         x = (0, c.getAvatarSize)(c.AvatarSizes.SIZE_80),
@@ -64,7 +64,7 @@ function S(e) {
                 backgroundImage: null != P ? 'url('.concat(P, ')') : void 0,
                 backgroundColor: U !== I.s.COMPLETE ? u.Z.unsafe_rawColors.PRIMARY_800.css : k
             },
-            children: [!M && (0, p.F8)(P) && (0, r.jsx)(E.Z, { className: g.gifTag }), v]
+            children: [!M && (0, p.F8)(P) && (0, r.jsx)(E.Z, { className: g.gifTag }), O]
         })
     });
 }

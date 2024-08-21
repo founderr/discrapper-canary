@@ -22,7 +22,7 @@ function c(e) {
                         text: s ? o.Z.Messages.START : o.Z.Messages.EMBEDDED_ACTIVITIES_JOIN,
                         tooltip: void 0
                     },
-                    u = (0, r.WS)(a, s);
+                    u = (0, r.WS)(a);
                 if (null != t && null != i && t.launchId === i.launchId)
                     return {
                         ...c,

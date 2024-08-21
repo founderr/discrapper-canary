@@ -58,10 +58,10 @@ var r;
         if (((h = Date.now()), (c = !1), (r = null), u > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && I.timeRemaining() > s; i++) (n = l.shift()), p++, n && n(I);
         l.length ? A() : (u = 0);
     }
-    function v(e) {
+    function O(e) {
         return f++, l.push(e), A(), f;
     }
-    function O(e) {
+    function v(e) {
         var t = e - 1 - p;
         l[t] && (l[t] = null);
     }
@@ -89,8 +89,8 @@ var r;
             })(a.requestIdleCallback);
         }
     else
-        (a.requestIdleCallback = v),
-            (a.cancelIdleCallback = O),
+        (a.requestIdleCallback = O),
+            (a.cancelIdleCallback = v),
             a.document &&
                 document.addEventListener &&
                 (a.addEventListener('scroll', T, !0),
@@ -110,8 +110,8 @@ var r;
                         attributes: !0
                     }));
     return {
-        request: v,
-        cancel: O
+        request: O,
+        cancel: v
     };
 }),
     'function' == typeof define && define.amd ? define([], r) : e.exports ? (e.exports = r()) : (window.idleCallbackShim = r());

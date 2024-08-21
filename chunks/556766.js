@@ -34,14 +34,14 @@ t.Z = () => {
             currentChannelId: p.Z.getChannelId(),
             selectedVoiceChannelId: p.Z.getVoiceChannelId()
         })),
-        v = (0, l.Wu)([m.Z], () =>
+        O = (0, l.Wu)([m.Z], () =>
             m.Z.getIncomingCalls().filter((r) => {
                 let { channel: i } = r,
                     s = e === i.id && a !== i.id && t === g.Ez.PANEL;
                 return n !== i.id || s;
             })
         ),
-        O = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),
+        v = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),
         R = (0, l.e7)([h.Z], () => h.Z.isSoundDisabled('call_ringing')),
         C = E.Z.useIsRingtoneEligible(),
         y = E.Z.useIsRingtoneDisabled(),
@@ -64,9 +64,9 @@ t.Z = () => {
                 b.current && (M.stop(), (b.current = !1));
                 return;
             }
-            O && !b.current ? (M.loop(), (b.current = !0)) : !O && b.current && (M.stop(), (b.current = !1));
-        }, [R, D, O, M]),
-        (0, u.useTransition)(v, {
+            v && !b.current ? (M.loop(), (b.current = !0)) : !v && b.current && (M.stop(), (b.current = !1));
+        }, [R, D, v, M]),
+        (0, u.useTransition)(O, {
             keys: (e) => {
                 var t;
                 return null === (t = e.channel) || void 0 === t ? void 0 : t.id;

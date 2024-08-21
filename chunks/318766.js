@@ -46,13 +46,13 @@ let I = {
 t.Z = function (e) {
     var t;
     let { tabIndex: n, className: a, renderButtonContents: c, active: T, onClick: g, 'aria-controls': S, focusProps: A } = e,
-        [N, v] = i.useState(!1),
-        [O, R] = i.useState(50),
+        [N, O] = i.useState(!1),
+        [v, R] = i.useState(50),
         C = (0, l.e7)([_.ZP], () => _.ZP.inReverseTrial()),
         y = N || T,
         D = (0, E.l)(p, 'emojiButton', y ? 'Hovered' : 'Normal');
     let L =
-            ((t = O),
+            ((t = v),
             {
                 '--custom-emoji-sprite-size': ''.concat(24, 'px'),
                 '--custom-emoji-sprite-row': Math.floor(t / 20),
@@ -61,11 +61,11 @@ t.Z = function (e) {
         b = i.useCallback(() => {
             if (y) return;
             let e = Math.floor(77 * Math.random());
-            v(!0), R(e), (0, d.x)(f.qR.EmojiButtonMouseEntered);
-        }, [y, v, R]),
+            O(!0), R(e), (0, d.x)(f.qR.EmojiButtonMouseEntered);
+        }, [y, O, R]),
         M = i.useCallback(() => {
-            v(!1);
-        }, [v]),
+            O(!1);
+        }, [O]),
         P = i.useCallback(() => (0, d.x)(f.qR.EmojiButtonFocused), []);
     return (0, r.jsx)(u.Tooltip, {
         text: m(),

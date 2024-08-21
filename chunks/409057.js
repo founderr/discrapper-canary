@@ -26,8 +26,8 @@ var i = n(120356),
     S = n(833858),
     A = n(223135),
     N = n(769654),
-    v = n(502762),
-    O = n(652853),
+    O = n(502762),
+    v = n(652853),
     R = n(979038),
     C = n(448980),
     y = n(194811),
@@ -47,7 +47,7 @@ let { getAssetImage: V } = n(81063);
 function H(e) {
     let { user: t, currentUser: n, activity: i, application: H, guild: Z, channel: Y, className: j, onClose: W } = e,
         { analyticsLocations: K } = (0, p.ZP)(h.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { profileType: z } = (0, O.z)(),
+        { profileType: z } = (0, v.z)(),
         q = { [F.fullSize]: z === x.y0.FULL_SIZE },
         Q = (0, m.Bq)({
             activity: i,
@@ -338,7 +338,7 @@ function H(e) {
             onClose: W,
             children: (e) => {
                 let { onAutoDismiss: n } = e;
-                return (0, r.jsxs)(v.Z.Overlay, {
+                return (0, r.jsxs)(O.Z.Overlay, {
                     className: a()(F.card, j),
                     ref: J,
                     children: [

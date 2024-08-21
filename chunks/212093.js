@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     },
     AQ: function () {
-        return v;
+        return O;
     },
     G7: function () {
         return g;
@@ -119,7 +119,7 @@ n.d(t, {
         return N;
     },
     uY: function () {
-        return O;
+        return v;
     }
 }),
     n(653041),
@@ -257,11 +257,11 @@ async function N() {
         });
     }
 }
-function v() {
+function O() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     e && (0, u.uL)(f.Z5c.GUILD_DISCOVERY), l.Z.dispatch({ type: 'GUILD_DISCOVERY_CLEAR_SEARCH' });
 }
-function O(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     l.Z.dispatch({
         type: 'GUILD_DISCOVERY_SELECT_CATEGORY',

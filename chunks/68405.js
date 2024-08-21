@@ -83,7 +83,7 @@ function N(e, t) {
         ...s
     });
 }
-function v(e, t, n) {
+function O(e, t, n) {
     let r = Date.now();
     A(t),
         s.tn
@@ -118,7 +118,7 @@ function v(e, t, n) {
                     })
             );
 }
-let O = i().debounce(v, 250);
+let v = i().debounce(O, 250);
 function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = arguments.length > 3 ? arguments[3] : void 0;
@@ -128,7 +128,7 @@ function R(e, t) {
               type: 'GIF_PICKER_QUERY',
               query: e
           }),
-          n ? v(e, t, r) : O(e, t, r));
+          n ? O(e, t, r) : v(e, t, r));
 }
 function C(e) {
     if ('' !== e && null != e)

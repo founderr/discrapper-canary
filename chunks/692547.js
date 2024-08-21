@@ -20,7 +20,7 @@ let { Themes: f } = n(15202).V,
         themes: f,
         modules: T,
         colors: l()(h, (e, t) => ({
-            css: O(t),
+            css: v(t),
             resolve(t) {
                 let n = e[t.theme],
                     r = n.raw,
@@ -35,12 +35,12 @@ let { Themes: f } = n(15202).V,
         unsafe_rawColors: l()(p, (e, t) => {
             let n = g[t];
             return {
-                css: O(t),
+                css: v(t),
                 resolve: (e) => A(n, e.saturation)
             };
         }),
         shadows: l()(I, (e, t) => ({
-            css: O(t),
+            css: v(t),
             resolve: (t) => ({
                 boxShadow: e[t.theme].boxShadow,
                 filter: e[t.theme].filter,
@@ -78,12 +78,12 @@ function N(e, t, n) {
         a = e;
     return 1 !== t && (a = a.set('hsl.s', a.get('hsl.s') * t)), 1 !== i && (a = a.alpha(a.alpha() * i)), a;
 }
-function v(e) {
+function O(e) {
     return e.toLowerCase().replace(/_/g, '-');
 }
-function O(e, t) {
-    let n = null != t ? v(t) : null,
-        r = v(e);
+function v(e, t) {
+    let n = null != t ? O(t) : null,
+        r = O(e);
     return 'var(--'.concat([n, r].filter(Boolean).join('-'), ')');
 }
 t.Z = S;

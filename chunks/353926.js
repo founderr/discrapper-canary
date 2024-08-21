@@ -40,8 +40,8 @@ let I = 'scientist:triggered',
     S = new u.Z('ExperimentStore'),
     A = !1,
     N = {},
-    v = {},
-    O = [],
+    O = {},
+    v = [],
     R = [],
     C = {},
     y = {},
@@ -164,7 +164,7 @@ function j(e) {
     t && W(r, i), n(598984).Vx.trackExposure(), (A = !0);
 }
 function W(e, t) {
-    (O = e),
+    (v = e),
         (R = null != t ? t : []),
         e.forEach((e) => {
             let [t, n, r, i, a, s, o, l] = e;
@@ -243,7 +243,7 @@ function Q() {
 }
 function X(e) {
     let { isSwitchingAccount: t } = e;
-    o.K.remove(I), !t && (o.K.remove(m), o.K.remove(T), o.K.remove(g), (L = {}), (b = {})), (C = {}), (O = []), (N = {}), (A = !1);
+    o.K.remove(I), !t && (o.K.remove(m), o.K.remove(T), o.K.remove(g), (L = {}), (b = {})), (C = {}), (v = []), (N = {}), (A = !1);
 }
 function $() {
     (A = !1), (N = {}), o.K.remove(I);
@@ -284,7 +284,7 @@ function ee(e) {
 }
 function et(e) {
     let { experimentId: t, experimentType: n, title: r, description: i, buckets: a, commonTriggerPoint: s } = e;
-    v[t] = {
+    O[t] = {
         type: n,
         title: r,
         description: i,
@@ -295,7 +295,7 @@ function et(e) {
 function en(e) {
     var t;
     let { experimentId: n, experimentBucket: r, experimentType: i, skipCleanup: a } = e,
-        s = null != i ? i : null === (t = v[n]) || void 0 === t ? void 0 : t.type;
+        s = null != i ? i : null === (t = O[n]) || void 0 === t ? void 0 : t.type;
     if (null == s) return !1;
     if (
         (null == r
@@ -322,7 +322,7 @@ function en(e) {
                 }),
         !a)
     )
-        for (let e of [L, b]) for (let t in e) null == v[t] && delete L[t];
+        for (let e of [L, b]) for (let t in e) null == O[t] && delete L[t];
     J();
 }
 function er(e) {
@@ -382,7 +382,7 @@ class ei extends d.Z {
         return {
             version: ei.LATEST_SNAPSHOT_VERSION,
             data: {
-                rawUserExperiments: O,
+                rawUserExperiments: v,
                 rawGuildExperiments: R
             }
         };
@@ -391,7 +391,7 @@ class ei extends d.Z {
         return A;
     }
     hasRegisteredExperiment(e) {
-        return null != v[e];
+        return null != O[e];
     }
     getUserExperimentDescriptor(e) {
         if (M) {
@@ -499,7 +499,7 @@ class ei extends d.Z {
             });
     }
     getRegisteredExperiments() {
-        return v;
+        return O;
     }
     getAllExperimentOverrideDescriptors() {
         return M
@@ -516,7 +516,7 @@ class ei extends d.Z {
     getAllExperimentAssignments() {
         let e = {},
             t = {};
-        for (let n in (Object.keys(v).forEach((e) => {
+        for (let n in (Object.keys(O).forEach((e) => {
             t[U(''.concat(e))] = e;
         }),
         C)) {

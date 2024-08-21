@@ -63,8 +63,8 @@ var r = n(990547),
     S = n(973616),
     A = n(314897),
     N = n(592125),
-    v = n(430824),
-    O = n(496675),
+    O = n(430824),
+    v = n(496675),
     R = n(594174),
     C = n(979651),
     y = n(585483),
@@ -233,8 +233,8 @@ async function q(e) {
             ? (0, k.e4)({
                   channelId: i,
                   ChannelStore: N.Z,
-                  GuildStore: v.Z,
-                  PermissionStore: O.Z,
+                  GuildStore: O.Z,
+                  PermissionStore: v.Z,
                   VoiceStateStore: C.Z
               })
             : k.jy.NO_CHANNEL;
@@ -273,7 +273,7 @@ async function q(e) {
             }))
         )
             return !1;
-    } else if (!(0, M.WS)(d, !0) || !h) return !1;
+    } else if (!(0, M.WS)(d) || !h) return !1;
     return (
         await b.Z.post({
             url: Z.ANM.ACTIVITY_CHANNEL_LAUNCH(i, n),

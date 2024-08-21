@@ -26,8 +26,8 @@ let p = null,
     S = !1,
     A = !1,
     N = null,
-    v = !1,
-    O = new u.Z('SubscriptionStore');
+    O = !1,
+    v = new u.Z('SubscriptionStore');
 function R(e) {
     let { activeSubscriptions: t, record: n } = e,
         r = t.findIndex((e) => e.id === n.id);
@@ -38,7 +38,7 @@ function R(e) {
     }
 }
 function C() {
-    (p = null), (I = null), (m = null), (T = null), (g = null), (S = !1), (A = !1), (N = null), (v = !1);
+    (p = null), (I = null), (m = null), (T = null), (g = null), (S = !1), (A = !1), (N = null), (O = !1);
 }
 function y(e) {
     return e.status !== f.O0b.UNPAID;
@@ -56,7 +56,7 @@ function L(e, t) {
         if (!D(i)) {
             if (!A) {
                 let e = _.default.getId();
-                O.log('user id mismatch between logged in user and SubscriptionStore user'),
+                v.log('user id mismatch between logged in user and SubscriptionStore user'),
                     (0, E.g9)('user id mismatch between logged in user and SubscriptionStore user', {
                         extra: {
                             authUserId: e,
@@ -80,7 +80,7 @@ class b extends (r = o.ZP.Store) {
         return S;
     }
     hasFetchedPreviousPremiumTypeSubscription() {
-        return v;
+        return O;
     }
     getPremiumSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
@@ -141,7 +141,7 @@ class b extends (r = o.ZP.Store) {
                 s = _.default.getId();
             t.forEach((e) => {
                 if (e.user_id !== s && !A) {
-                    O.log('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
+                    v.log('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                         (0, E.g9)('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                             extra: {
                                 authUserId: s,
@@ -190,7 +190,7 @@ class b extends (r = o.ZP.Store) {
             if (((S = !0), null != t)) {
                 let e = _.default.getId();
                 if (t.user_id !== e && !A) {
-                    O.log('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
+                    v.log('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                         (0, E.g9)('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                             extra: {
                                 authUserId: e,
@@ -207,10 +207,10 @@ class b extends (r = o.ZP.Store) {
         },
         BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: function (e) {
             let { subscription: t } = e;
-            if (((v = !0), null != t)) {
+            if (((O = !0), null != t)) {
                 let e = _.default.getId();
                 if (t.user_id !== e && !A) {
-                    O.log('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
+                    v.log('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
                         (0, E.g9)('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                             extra: {
                                 authUserId: e,
@@ -218,7 +218,7 @@ class b extends (r = o.ZP.Store) {
                                 subscriptionUserId: t.user_id
                             }
                         }),
-                        (v = !1),
+                        (O = !1),
                         (A = !0);
                     return;
                 }

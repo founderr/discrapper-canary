@@ -18,7 +18,7 @@ n.d(t, {
         return C;
     },
     Wf: function () {
-        return O;
+        return v;
     },
     eT: function () {
         return R;
@@ -33,7 +33,7 @@ n.d(t, {
         return T;
     },
     nE: function () {
-        return v;
+        return O;
     },
     pf: function () {
         return A;
@@ -287,13 +287,13 @@ async function N(e, t) {
         }
     }
 }
-function v(e) {
+function O(e) {
     a.Z.dispatch({
         type: 'QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE',
         streamKey: e
     });
 }
-async function O(e) {
+async function v(e) {
     try {
         let t = await i.tn.post({
             url: f.ANM.QUESTS_PREVIEW_COMPLETE(e),

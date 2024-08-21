@@ -1,6 +1,6 @@
 n.d(t, {
     K: function () {
-        return v;
+        return O;
     },
     y: function () {
         return N;
@@ -94,18 +94,18 @@ function A(e) {
           });
 }
 function N(e) {
-    let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: v, onClose: O, shouldHideMediaOptions: R = !1, obscure: C = !1, ...y } = e,
+    let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: O, onClose: v, shouldHideMediaOptions: R = !1, obscure: C = !1, ...y } = e,
         { width: D, height: L } = (0, E.zp)(s, l),
-        b = o.tq && null != O;
+        b = o.tq && null != v;
     i.useEffect(() => {
-        if (null != O)
+        if (null != v)
             return (
-                _.S.subscribe(I.CkL.MEDIA_MODAL_CLOSE, O),
+                _.S.subscribe(I.CkL.MEDIA_MODAL_CLOSE, v),
                 () => {
-                    _.S.unsubscribe(I.CkL.MEDIA_MODAL_CLOSE, O);
+                    _.S.unsubscribe(I.CkL.MEDIA_MODAL_CLOSE, v);
                 }
             );
-    }, [O]);
+    }, [v]);
     let M = R
         ? (e) => {
               e.stopPropagation(), e.preventDefault();
@@ -114,7 +114,7 @@ function N(e) {
     return (0, r.jsxs)('div', {
         className: T.wrapper,
         children: [
-            b ? (0, r.jsx)(g, { onClose: O }) : null,
+            b ? (0, r.jsx)(g, { onClose: v }) : null,
             (0, r.jsx)(S, {
                 isObscured: C,
                 src: t,
@@ -149,7 +149,7 @@ function N(e) {
         ]
     });
 }
-function v(e) {
+function O(e) {
     let { src: t, width: n, height: i, onClose: a, renderLinkComponent: l, renderForwardComponent: u, shouldHideMediaOptions: c = !1, obscure: d = !1, ..._ } = e,
         { width: h, height: I } = (0, E.zp)(n, i),
         m = o.tq && null != a,

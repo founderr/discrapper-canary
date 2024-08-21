@@ -77,7 +77,7 @@ function M(e) {
         ),
         L = (0, C.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l),
         Z = a.useMemo(() => (e.compact ? (0, S.Z)((0, f.vc)(u()(), 'LT')) : null), [e.compact]),
-        P = (0, _.NX)(l.id, !0),
+        P = (0, _.NX)(l.id),
         b = s.interaction;
     if (null == b || null == L) return null;
     let D = () => {

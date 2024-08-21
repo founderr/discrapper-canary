@@ -28,11 +28,11 @@ let A = (e) => e.preventDefault(),
         tension: 1100,
         friction: 40
     },
-    v = {
+    O = {
         tension: 1600,
         friction: 60
     };
-function O(e, t) {
+function v(e, t) {
     return i.cloneElement(e, {
         'data-type': 'sticker',
         'data-id': t
@@ -82,7 +82,7 @@ let C = (e) => {
             I = i.useRef(null),
             m = i.useRef(null),
             [A, N] = i.useState(!0),
-            [v, y] = i.useState(!1),
+            [O, y] = i.useState(!1),
             D = i.useRef(!1);
         D.current = t && c;
         let L = null == o ? (0, T.Q6)(s) : o;
@@ -126,15 +126,15 @@ let C = (e) => {
             : (0, r.jsx)('div', {
                   role: 'img',
                   className: d,
-                  'aria-label': v ? g.Z.Messages.ERROR_LOADING_STICKER : R(s),
+                  'aria-label': O ? g.Z.Messages.ERROR_LOADING_STICKER : R(s),
                   ref: E,
                   children: (0, r.jsx)(C, {
-                      hasError: v,
+                      hasError: O,
                       isLoading: A,
                       maskAsset: _,
                       size: a,
                       withLoadingIndicator: h,
-                      children: O(
+                      children: v(
                           (0, r.jsx)('canvas', {
                               className: S.lottieCanvas,
                               ref: I
@@ -150,7 +150,7 @@ let C = (e) => {
             [p, I] = i.useState(!0),
             [m, g] = i.useState(!1),
             N = i.useRef(null),
-            v = i.useRef(null),
+            O = i.useRef(null),
             y =
                 null != E
                     ? E
@@ -172,7 +172,7 @@ let C = (e) => {
         }, []),
         i.useLayoutEffect(() => {
             var e;
-            (null === (e = v.current) || void 0 === e ? void 0 : e.complete) === !0 && I(!1);
+            (null === (e = O.current) || void 0 === e ? void 0 : e.complete) === !0 && I(!1);
         }, []),
         null == y)
             ? null
@@ -189,7 +189,7 @@ let C = (e) => {
                           maskAsset: u,
                           size: o,
                           withLoadingIndicator: _,
-                          children: O(
+                          children: v(
                               (0, r.jsx)('img', {
                                   className: S.pngImage,
                                   alt: R(n),
@@ -198,7 +198,7 @@ let C = (e) => {
                                   onError: L,
                                   onLoad: D,
                                   onContextMenu: A,
-                                  ref: v
+                                  ref: O
                               }),
                               n.id
                           )
@@ -230,7 +230,7 @@ let C = (e) => {
                     ref: T,
                     transform: s || f ? 'translateY(0)' : 'translateY(-25px)',
                     opacity: s ? 1 : 0,
-                    config: v
+                    config: O
                 },
                 'animate-always'
             );
