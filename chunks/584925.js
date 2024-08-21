@@ -48,5 +48,8 @@ c(_, 'displayName', 'GravityUnreadStateStore'),
         LOAD_GRAVITY_DEHYDRATED: function (e) {
             let { items: t } = e;
             for (let e of t) e.type === l.Rr.MESSAGE ? null == u.readIdToTimestampMap[e.id] && !(0, o.$U)(e.data.channel_id, e.data.message_id) && (u.readIdToTimestampMap[e.id] = 0) : e.type === l.Rr.SUMMARY && null == u.readIdToTimestampMap[e.id] && !(0, o.$U)(e.data.channel_id, e.data.summary_id) && (u.readIdToTimestampMap[e.id] = 0);
+        },
+        CLEAR_GRAVITY_READ_STATES: function () {
+            u.readIdToTimestampMap = {};
         }
     }));

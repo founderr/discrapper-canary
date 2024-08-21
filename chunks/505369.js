@@ -97,5 +97,6 @@ t.Z = {
             type: 'SET_GRAVITY_FILTERS',
             filters: e
         }),
-    giveFeedback: () => a.Z.dispatch({ type: 'GRAVITY_FEEDBACK_GIVEN' })
+    giveFeedback: () => a.Z.dispatch({ type: 'GRAVITY_FEEDBACK_GIVEN' }),
+    clearReadStates: () => a.Z.dispatch({ type: 'CLEAR_GRAVITY_READ_STATES' })
 };
