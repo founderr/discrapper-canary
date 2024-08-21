@@ -102,8 +102,8 @@ function g(e) {
             [t, A]
         );
     if (null == f) return null;
-    let v = null == A ? void 0 : A.colorString,
-        O = _.ZP.getName(t, n, f);
+    let O = null == A ? void 0 : A.colorString,
+        v = _.ZP.getName(t, n, f);
     return (0, r.jsxs)('div', {
         className: p.userSection,
         children: [
@@ -113,9 +113,9 @@ function g(e) {
                 'aria-hidden': !0
             }),
             (0, r.jsx)(o.NameWithRole, {
-                color: null != v ? v : void 0,
+                color: null != O ? O : void 0,
                 roleName: N,
-                name: O,
+                name: v,
                 className: p.userName,
                 'aria-hidden': !0
             }),
@@ -132,11 +132,13 @@ function g(e) {
                   })
                 : null,
             (0, r.jsx)(o.HiddenVisually, {
-                children: h.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS.format({
-                    user1: _.ZP.getName(t, n, m),
-                    user2: _.ZP.getName(t, n, g),
+                children: h.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
+                    user0: _.ZP.getName(t, n, m),
+                    user1: _.ZP.getName(t, n, g),
                     countOthers: S,
-                    nameHook: (e, t) => (0, r.jsx)('span', { children: 'text' }, t)
+                    name0Hook: (e, t) => (0, r.jsx)('span', { children: e }, t),
+                    name1Hook: (e, t) => (0, r.jsx)('span', { children: e }, t),
+                    countOthersHook: (e, t) => (0, r.jsx)('span', { children: e }, t)
                 })
             })
         ]

@@ -6,28 +6,34 @@ t.d(n, {
         return C;
     },
     Cb: function () {
-        return x;
+        return g;
     },
     Hu: function () {
-        return I;
+        return P;
     },
     Wx: function () {
         return _;
     },
     Y$: function () {
-        return N;
+        return v;
     },
     jD: function () {
         return h;
     },
+    lf: function () {
+        return N;
+    },
     sl: function () {
-        return v;
+        return I;
+    },
+    vJ: function () {
+        return A;
     },
     yJ: function () {
-        return E;
+        return x;
     },
     ye: function () {
-        return A;
+        return E;
     }
 }),
     t(789020);
@@ -52,15 +58,23 @@ function f(e) {
 function h(e) {
     return C(e) ? e.description : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
-function A(e) {
+function E(e) {
     var n;
     let { application: t } = e;
     return C(t) && (0, d.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED);
 }
-function E(e) {
-    return C(e) && A({ application: e }) ? (e instanceof s.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+function A(e) {
+    var n;
+    return C(e) && (0, d.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, u.udG.PARTNER);
 }
 function N(e) {
+    var n;
+    return C(e) && (0, d.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, u.udG.PROMOTED);
+}
+function x(e) {
+    return C(e) && E({ application: e }) ? (e instanceof s.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+}
+function v(e) {
     let { command: n, optionValues: t, context: s, commandTargetId: c, maxSizeCallback: d, sectionName: u } = e,
         { channel: m } = s,
         _ = async () => {
@@ -93,7 +107,7 @@ function N(e) {
         };
     return _();
 }
-function v(e) {
+function I(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: t, ...i } = n;
     return C(e)
@@ -112,10 +126,10 @@ function v(e) {
               description: p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
           };
 }
-function x(e) {
+function g(e) {
     return !!C(e) && ('is_monetized' in e ? e.is_monetized : e.isMonetized);
 }
-function I(e) {
-    let n = E(e);
+function P(e) {
+    let n = x(e);
     return null != n && n.displays_advertisements;
 }
