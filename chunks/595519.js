@@ -9,7 +9,7 @@ n.d(t, {
         return u;
     },
     qB: function () {
-        return _;
+        return E;
     }
 });
 var r = n(106351),
@@ -20,36 +20,21 @@ var r = n(106351),
     l = n(231338);
 function u(e) {
     var t;
-    if (null == e || void 0 === e) return !1;
+    if (null == e) return !1;
     let n = s.Z.getChannel(e.parent_id);
     if (null != n && (null == n ? void 0 : n.type) !== r.d.GUILD_CATEGORY) return !1;
     return (t = e.type), [r.d.GUILD_TEXT, r.d.GROUP_DM, r.d.DM].includes(t);
 }
-function c(e, t) {
-    if (null == e) return !1;
-    let n = u(e),
-        r = o.Z.can(l.Pl.USE_EMBEDDED_ACTIVITIES, e),
-        i = r && o.Z.can(l.Pl.SEND_MESSAGES | l.Pl.USE_APPLICATION_COMMANDS, e);
-    return (null == e ? void 0 : e.guild_id) == null ? n : t ? i && n : r && n;
+function c(e) {
+    return _(e, o.Z);
 }
-function d(e, t) {
-    let {
-        isActivitiesInTextEnabledForChannelType: n,
-        channelGuildId: r,
-        hasPermission: a
-    } = (0, i.cj)([s.Z, o.Z], () => {
-        let n = s.Z.getChannel(e),
-            r = o.Z.can(l.Pl.USE_EMBEDDED_ACTIVITIES, n),
-            i = r && o.Z.can(l.Pl.SEND_MESSAGES | l.Pl.USE_APPLICATION_COMMANDS, n);
-        return {
-            isActivitiesInTextEnabledForChannelType: u(n),
-            channelGuildId: null == n ? void 0 : n.guild_id,
-            hasPermission: t ? i : r
-        };
-    });
-    return null != r ? a && n : n;
+function d(e) {
+    return (0, i.e7)([s.Z, o.Z], () => _(s.Z.getChannel(e), o.Z));
 }
 function _(e, t) {
+    return !!(null != e && void 0 !== e && u(e) && (null == e.guild_id || t.can(l.Pl.USE_EMBEDDED_ACTIVITIES, e))) || !1;
+}
+function E(e, t) {
     let n = (0, i.e7)([s.Z], () => s.Z.getChannel(e)),
         r = (0, i.e7)([o.Z], () => o.Z.can(l.Pl.USE_EMBEDDED_ACTIVITIES, n)),
         c = u(n),
