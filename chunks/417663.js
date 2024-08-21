@@ -1,76 +1,77 @@
-s.r(t),
-    s.d(t, {
+t.r(s),
+    t.d(s, {
         AccountConnectionResult: function () {
-            return C;
+            return h;
         },
         LinkPlatformLogo: function () {
-            return g;
+            return p;
         }
     }),
-    s(47120);
-var n = s(735250),
-    r = s(470079),
-    a = s(120356),
-    o = s.n(a),
-    i = s(593473),
-    l = s(481060),
-    c = s(457330),
-    d = s(726542),
-    u = s(536285),
-    N = s(981631),
-    m = s(689938),
-    f = s(957636);
-function p(e, t, s) {
+    t(47120);
+var n = t(735250),
+    r = t(470079),
+    a = t(120356),
+    o = t.n(a),
+    i = t(593473),
+    l = t(481060),
+    c = t(457330),
+    d = t(726542),
+    u = t(536285),
+    N = t(981631),
+    m = t(689938),
+    C = t(957636);
+function _(e, s, t) {
     return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: s,
+        s in e
+            ? Object.defineProperty(e, s, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[s] = t),
         e
     );
 }
-let _ = null != window.opener;
-function g(e) {
-    let { platform: t, className: s } = e;
+let f = null != window.opener,
+    g = 'https://dis.gd/Amazon-Music-Connection';
+function p(e) {
+    let { platform: s, className: t } = e;
     return (0, n.jsxs)('div', {
-        className: o()(f.logos, s),
+        className: o()(C.logos, t),
         children: [
-            (0, n.jsx)('div', { className: o()(f.logo, f.logoDiscord) }),
-            (0, n.jsx)('div', { className: f.logosDivider }),
+            (0, n.jsx)('div', { className: o()(C.logo, C.logoDiscord) }),
+            (0, n.jsx)('div', { className: C.logosDivider }),
             (0, n.jsx)('div', {
-                className: f.logo,
-                style: { backgroundImage: 'url("'.concat(t.icon.whiteSVG, '")') }
+                className: C.logo,
+                style: { backgroundImage: 'url("'.concat(s.icon.whiteSVG, '")') }
             })
         ]
     });
 }
-function C(e) {
-    let t,
-        s,
+function h(e) {
+    let s,
+        t,
         { verifying: a, verified: i, platformType: c } = e,
         u = d.Z.get(c),
-        N = r.useCallback(() => {
+        _ = r.useCallback(() => {
             window.close();
         }, []);
     return (
-        (t = a
+        (s = a
             ? (0, n.jsx)('div', {
-                  className: f.message,
+                  className: C.message,
                   children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: u.name })
               })
             : i
               ? (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)('div', {
-                            className: f.message,
+                            className: C.message,
                             children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_SUCCESS.format({ name: u.name })
                         }),
                         (0, n.jsx)('div', {
-                            className: o()(f.message, f.details),
+                            className: o()(C.message, C.details),
                             children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_SUCCESS_DETAILS
                         })
                     ]
@@ -78,26 +79,38 @@ function C(e) {
               : (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsx)('div', {
-                            className: o()(f.message, f.error),
+                            className: o()(C.message, C.error),
                             children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE.format({ name: u.name })
                         }),
                         (0, n.jsx)('div', {
-                            className: o()(f.message, f.details),
+                            className: o()(C.message, C.details),
                             children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE_DETAILS
-                        })
+                        }),
+                        c !== N.ABu.AMAZON_MUSIC
+                            ? null
+                            : (0, n.jsx)('div', {
+                                  className: o()(C.message, C.details),
+                                  children: m.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE.format({
+                                      link: () =>
+                                          (0, n.jsx)(l.Anchor, {
+                                              href: g,
+                                              children: g
+                                          })
+                                  })
+                              })
                     ]
                 })),
-        (_ || a) &&
-            (s = (0, n.jsx)(l.Button, {
-                className: f.btn,
+        (f || a) &&
+            (t = (0, n.jsx)(l.Button, {
+                className: C.btn,
                 disabled: a,
-                onClick: N,
-                children: a ? (0, n.jsx)(l.Spinner, { itemClassName: f.spinnerItem }) : m.Z.Messages.DONE
+                onClick: _,
+                children: a ? (0, n.jsx)(l.Spinner, { itemClassName: C.spinnerItem }) : m.Z.Messages.DONE
             })),
         (0, n.jsx)('div', {
-            className: f.verifyConnectedAccount,
+            className: C.verifyConnectedAccount,
             children: (0, n.jsxs)('div', {
-                children: [(0, n.jsx)(g, { platform: u }), t, s]
+                children: [(0, n.jsx)(p, { platform: u }), s, t]
             })
         })
     );
@@ -105,33 +118,33 @@ function C(e) {
 class v extends r.Component {
     componentDidMount() {
         let e;
-        let t = (0, i.parse)(this.props.location.search),
-            { code: s, state: n, oauth_verifier: r, loading: a } = t;
+        let s = (0, i.parse)(this.props.location.search),
+            { code: t, state: n, oauth_verifier: r, loading: a } = s;
         if (null != a) return;
-        null != r && (s = r),
-            Object.keys(t).forEach((s) => {
-                if (!!s.startsWith('openid.')) null == e && (e = {}), (e[s] = t[s]);
+        null != r && (t = r),
+            Object.keys(s).forEach((t) => {
+                if (!!t.startsWith('openid.')) null == e && (e = {}), (e[t] = s[t]);
             });
         let o = (e) => {
-                let { status: t, body: s } = e;
+                let { status: s, body: t } = e;
                 this.setState(
                     {
                         verifying: !1,
-                        verified: 204 === t || 200 === t
+                        verified: 204 === s || 200 === s
                     },
                     () => {
-                        this.state.verified && _ && window.close();
+                        this.state.verified && f && window.close();
                     }
                 ),
-                    (null == s ? void 0 : s.redirect) != null && (window.location = s.redirect);
+                    (null == t ? void 0 : t.redirect) != null && (window.location = t.redirect);
             },
             l = {
-                code: s,
+                code: t,
                 openid_params: e,
                 state: n
             },
             d = (e) => c.Z.callback(this.getType(), l, e).then(o, o);
-        if (_) {
+        if (f) {
             d(!1);
             return;
         }
@@ -144,23 +157,23 @@ class v extends r.Component {
             .then(() => u.default.disconnect());
     }
     render() {
-        let { verifying: e, verified: t } = this.state,
-            s = this.getType();
-        return d.Z.isSupported(s)
-            ? (0, n.jsx)(C, {
+        let { verifying: e, verified: s } = this.state,
+            t = this.getType();
+        return d.Z.isSupported(t)
+            ? (0, n.jsx)(h, {
                   platformType: this.getType(),
                   verifying: e,
-                  verified: t
+                  verified: s
               })
             : null;
     }
     constructor(...e) {
         super(...e),
-            p(this, 'state', {
+            _(this, 'state', {
                 verifying: !0,
                 verified: !1
             }),
-            p(this, 'getType', () => this.props.match.params.type);
+            _(this, 'getType', () => this.props.match.params.type);
     }
 }
-t.default = v;
+s.default = v;
