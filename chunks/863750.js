@@ -1,21 +1,21 @@
-t(47120);
+n(47120);
 var r,
-    o = t(442837),
-    i = t(570140);
-function a(e, n, t) {
+    o = n(442837),
+    i = n(570140);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: t,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = t),
+            : (e[t] = n),
         e
     );
 }
-let c = {
+let l = {
         disable_alpha_voice_panel: "Disable new Voice Panel UI: Currently the new voice ui is defaulted ON for staff.  It's not feature complete so if there's something you are missing, or you find a problem, you can disable it here.",
         enable_recently_active: 'Enable recently active channels',
         happening_main_tab: 'Enable Happening tab containing summaries',
@@ -23,47 +23,44 @@ let c = {
         cozy_header: 'Cozy header',
         mobile_profile_effect_debug_controls: 'mobile_profile_effect_debug_controls',
         nav_experiment_server_drawer_enabled: '[NavI] Enable expandable server drawer',
-        nav_experiment_you_bar_grounded: '[NavI] Grounded you bar',
-        nav_experiment_you_bar_large_buttons: '[NavI] Small buttons in you bar',
-        nav_experiment_you_bar_large_messages: '[NavI] Large avatars in messages',
         shop_include_unpublished: '[Shop] show unpublished items in shop',
         disable_channel_list: "Disable channel list -- for performance testing. You probably don't want to turn this on, lol",
         show_icymi_debug_scores: 'Show ICYMI debug scores',
         only_channel_screen: 'Down with PanelsView, rely on only ChannelScreen!'
     },
-    l = {};
+    a = {};
 class s extends (r = o.ZP.DeviceSettingsStore) {
     getUserAgnosticState() {
-        return { toggleStates: l };
+        return { toggleStates: a };
     }
     initialize(e) {
-        for (var n in c) {
-            var t, r;
-            let o = null !== (r = null == e ? void 0 : null === (t = e.toggleStates) || void 0 === t ? void 0 : t[n]) && void 0 !== r && r;
-            l[n] = o;
+        for (var t in l) {
+            var n, r;
+            let o = null !== (r = null == e ? void 0 : null === (n = e.toggleStates) || void 0 === n ? void 0 : n[t]) && void 0 !== r && r;
+            a[t] = o;
         }
     }
     get(e) {
-        var n;
-        return null !== (n = l[e]) && void 0 !== n && n;
+        var t;
+        return null !== (t = a[e]) && void 0 !== t && t;
     }
-    set(e, n) {
-        return (l[e] = n), n;
+    set(e, t) {
+        return (a[e] = t), t;
     }
     all() {
-        return l;
+        return a;
     }
     allWithDescriptions() {
-        return Object.entries(l).map((e) => {
-            let [n, t] = e;
-            return [n, t, c[n]];
+        return Object.entries(a).map((e) => {
+            let [t, n] = e;
+            return [t, n, l[t]];
         });
     }
 }
-a(s, 'displayName', 'DevToolsDesignTogglesStore'),
-    a(s, 'persistKey', 'DevToolsDesignTogglesStore'),
-    (n.Z = new s(i.Z, {
+c(s, 'displayName', 'DevToolsDesignTogglesStore'),
+    c(s, 'persistKey', 'DevToolsDesignTogglesStore'),
+    (t.Z = new s(i.Z, {
         DEV_TOOLS_DESIGN_TOGGLE_SET: function (e) {
-            l[e.toggle] = e.value;
+            a[e.toggle] = e.value;
         }
     }));
