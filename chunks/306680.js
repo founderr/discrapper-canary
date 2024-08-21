@@ -1097,11 +1097,12 @@ let e0 = new eJ(p.Z, {
         let t,
             n,
             { channelId: i, message: a, isPushNotification: s } = e,
-            o = eb.get(i);
+            o = eb.get(i),
+            l = null != o.lastMessageId && o.lastMessageId >= a.id;
         o.lastMessageId = a.id;
-        let l = et.default.getCurrentUser(),
-            u = j.Z.getBasicChannel(i);
-        if (null != a.author && null != l && a.author.id === l.id && !er.V$x.SELF_MENTIONABLE_SYSTEM.has(a.type))
+        let u = et.default.getCurrentUser(),
+            c = j.Z.getBasicChannel(i);
+        if (null != a.author && null != u && a.author.id === u.id && !er.V$x.SELF_MENTIONABLE_SYSTEM.has(a.type))
             return (
                 null != o.outgoingAck && o.clearOutgoingAck(),
                 eQ({
@@ -1110,21 +1111,21 @@ let e0 = new eJ(p.Z, {
                     manual: !1
                 })
             );
-        let c = (0, v.PP)();
-        if ((null == c ? void 0 : c.isReady()) === !0) {
-            let e = c.getCurrentRoute();
+        let d = (0, v.PP)();
+        if ((null == d ? void 0 : d.isReady()) === !0) {
+            let e = d.getCurrentRoute();
             if (m.Z.getChatOpen(o.channelId)) t = o.channelId;
             else if ((null == e ? void 0 : e.name) === 'channel') t = e.params.channelId;
             else if ((null == e ? void 0 : e.name) === 'guilds') {
-                var d;
-                t = null === (d = e.params) || void 0 === d ? void 0 : d.channelId;
+                var _;
+                t = null === (_ = e.params) || void 0 === _ ? void 0 : _.channelId;
             }
-        } else null == c && ((t = J.Z.getChannelId()), (n = Y.ZP.getCurrentSidebarChannelId(t)));
-        let _ = t === i || n === i;
-        if ((_ && eL(o) && !s) || (null != r && r.isInstanceFocused() && _ && r.isInstanceUILocked() && r.isPinned(er.Odu.TEXT))) return o.ack({ messageId: a.id });
+        } else null == d && ((t = J.Z.getChannelId()), (n = Y.ZP.getCurrentSidebarChannelId(t)));
+        let E = t === i || n === i;
+        if ((E && eL(o) && !s) || (null != r && r.isInstanceFocused() && E && r.isInstanceUILocked() && r.isPinned(er.Odu.TEXT))) return o.ack({ messageId: a.id });
         (null == o.oldestUnreadMessageId || o.oldestUnreadMessageIdStale) && (o.oldestUnreadMessageId = a.id),
-            o.unreadCount++,
-            !($.Z.isBlockedForMessage(a) || (a.type === er.uaV.RECIPIENT_REMOVE && (null == u ? void 0 : u.type) === er.d4z.GROUP_DM)) &&
+            !l && o.unreadCount++,
+            !($.Z.isBlockedForMessage(a) || (a.type === er.uaV.RECIPIENT_REMOVE && (null == c ? void 0 : c.type) === er.d4z.GROUP_DM)) &&
                 (function (e, t, n) {
                     if (
                         null != t &&
@@ -1138,7 +1139,7 @@ let e0 = new eJ(p.Z, {
                         return !0;
                     let r = j.Z.getChannel(e.channel_id);
                     return !!eC(r) || (!!ee.ZP.mentionOnAllMessages && null != r && !r.isVocal() && !ee.ZP.isChannelMuted(r.guild_id, r.id) && ee.ZP.resolvedMessageNotifications(r) === er.bL.ALL_MESSAGES) || !1;
-                })(a, l, o) &&
+                })(a, u, o) &&
                 o.mentionCount++;
     },
     MESSAGE_DELETE: eH,
