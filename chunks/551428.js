@@ -11,38 +11,39 @@ var i,
     s = n(823379);
 let A = {},
     c = {},
+    T = {},
     I = {},
-    T = {};
-function d(e) {
+    d = new Set();
+function R(e) {
     let t = e.id,
         n = e.sku.id,
         r = A[t],
         i = S.Z.createFromServer(e);
-    if (!(null != r && !r.isSlimDirectoryVersion() && i.isSlimDirectoryVersion())) !1 === e.published ? (null == I[n] && (I[n] = new Set()), I[n].add(t)) : (T[n] = t), (A[t] = i);
+    if (!(null != r && !r.isSlimDirectoryVersion() && i.isSlimDirectoryVersion())) !1 === e.published ? (null == T[n] && (T[n] = new Set()), T[n].add(t)) : (I[n] = t), (A[t] = i), d.delete(e.sku.id);
 }
-function R(e, t) {
+function C(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function C() {
-    (A = {}), (T = {}), (I = {}), (c = {});
-}
 function N() {
-    if (r === _.default.locale) return !1;
-    C(), (r = _.default.locale);
+    (A = {}), (I = {}), (T = {}), (c = {}), (d = new Set());
 }
-class M extends (i = E.ZP.Store) {
+function M() {
+    if (r === _.default.locale) return !1;
+    N(), (r = _.default.locale);
+}
+class P extends (i = E.ZP.Store) {
     initialize() {
-        this.waitFor(_.default), this.syncWith([_.default], N), (r = _.default.locale);
+        this.waitFor(_.default), this.syncWith([_.default], M), (r = _.default.locale);
     }
     get(e) {
         return A[e];
     }
     getForSKU(e, t) {
-        let n = T[e];
-        return null != t ? c[R(t, e)] : null != n ? A[n] : null;
+        let n = I[e];
+        return null != t ? c[C(t, e)] : null != n ? A[n] : null;
     }
     getUnpublishedForSKU(e) {
-        let t = I[e];
+        let t = T[e];
         return null == t
             ? []
             : Array.from(t)
@@ -50,7 +51,10 @@ class M extends (i = E.ZP.Store) {
                   .filter(s.lm);
     }
     getForChannel(e, t) {
-        return c[R(e, t)];
+        return c[C(e, t)];
+    }
+    isFetchingForSKU(e) {
+        return d.has(e);
     }
     getStoreListing(e) {
         let { storeListingId: t, skuId: n, channelId: r, isTestMode: i } = e;
@@ -68,7 +72,7 @@ class M extends (i = E.ZP.Store) {
     }
 }
 (o = 'StoreListingStore'),
-    (l = 'displayName') in (u = M)
+    (l = 'displayName') in (u = P)
         ? Object.defineProperty(u, l, {
               value: o,
               enumerable: !0,
@@ -76,23 +80,31 @@ class M extends (i = E.ZP.Store) {
               writable: !0
           })
         : (u[l] = o),
-    (t.Z = new M(a.Z, {
+    (t.Z = new P(a.Z, {
+        STORE_LISTINGS_FETCH_START: function (e) {
+            let { skuId: t } = e;
+            d.add(t);
+        },
+        STORE_LISTINGS_FETCH_FAIL: function (e) {
+            let { skuId: t } = e;
+            d.delete(t);
+        },
         STORE_LISTINGS_FETCH_SUCCESS: function (e) {
             let { storeListings: t } = e;
-            for (let e of t) d(e);
+            for (let e of t) R(e);
         },
         STORE_LISTING_FETCH_SUCCESS: function (e) {
             let { storeListing: t, channelId: n } = e;
             if (null != n) {
                 let e = S.Z.createFromServer(t);
-                (c[R(n, e.skuId)] = e), (T[e.skuId] = e.id);
-            } else d(t);
+                (c[C(n, e.skuId)] = e), (I[e.skuId] = e.id);
+            } else R(t);
         },
-        USER_SETTINGS_PROTO_UPDATE: N,
-        APPLICATION_STORE_CLEAR_DATA: C,
+        USER_SETTINGS_PROTO_UPDATE: M,
+        APPLICATION_STORE_CLEAR_DATA: N,
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             let { giftCode: t } = e;
             if (null == t.store_listing) return !1;
-            d(t.store_listing);
+            R(t.store_listing);
         }
     }));
