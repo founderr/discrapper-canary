@@ -17,6 +17,7 @@ let c = () => {
     };
 t.Z = {
     openMemberVerificationModal(e, t) {
+        if (__OVERLAY__) return;
         d(e);
         let a = async (t) => {
             await s.Z.submitVerificationForm(e, t);
