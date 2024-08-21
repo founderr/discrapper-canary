@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return O;
     }
 }),
     n(47120);
@@ -16,159 +16,166 @@ var i = n(735250),
     h = n(785717),
     p = n(221292),
     m = n(318661),
-    _ = n(78675),
-    f = n(113557),
-    E = n(169979),
-    g = n(119096),
-    C = n(502762),
-    I = n(256059),
-    x = n(437758),
-    T = n(544989),
-    N = n(481932),
-    v = n(272510),
-    S = n(171368),
-    Z = n(926150),
-    A = n(940885),
-    M = n(625015),
-    b = n(228168),
-    R = n(689938),
-    L = n(317986);
-function j(e) {
-    let { user: t, currentUser: n, channel: j } = e,
-        P = __OVERLAY__,
-        O = (0, m.ZP)(t.id),
-        y = (0, o.ZP)(),
-        { analyticsLocations: D } = (0, u.ZP)(c.Z.PROFILE_PANEL),
-        k = (0, h.ZB)({
-            layout: 'SIMPLIFIED_DM_PANEL',
-            userId: t.id,
-            channelId: j.id
+    _ = n(428785),
+    f = n(78675),
+    E = n(113557),
+    g = n(169979),
+    C = n(119096),
+    I = n(502762),
+    x = n(256059),
+    T = n(437758),
+    N = n(544989),
+    v = n(481932),
+    S = n(272510),
+    Z = n(171368),
+    A = n(926150),
+    M = n(940885),
+    b = n(625015),
+    R = n(228168),
+    L = n(981631),
+    j = n(689938),
+    P = n(317986);
+function O(e) {
+    let { user: t, currentUser: n, channel: O } = e,
+        y = __OVERLAY__,
+        D = (0, m.ZP)(t.id),
+        k = (0, o.ZP)(),
+        U = (0, _.Z)({
+            user: t,
+            currentUser: n,
+            location: L.Sbl.PROFILE_PANEL
         }),
-        U = a.useRef(null),
-        w = (0, r.Z)(U),
-        [B, H] = a.useState(!1),
-        [G, V] = a.useState(!1),
-        [F, W] = a.useState(!1),
-        [z, Y] = a.useState(),
-        [K, q] = a.useState(),
-        X = (e) => {
-            Y(e.interactionType), q(e.interactionSourceType);
+        w = (0, h.ZB)({
+            layout: U ? 'SIMPLIFIED_DM_PANEL' : 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE',
+            userId: t.id,
+            channelId: O.id
+        }),
+        { analyticsLocations: B } = (0, u.ZP)(c.Z.PROFILE_PANEL),
+        H = a.useRef(null),
+        G = (0, r.Z)(H),
+        [V, F] = a.useState(!1),
+        [W, z] = a.useState(!1),
+        [Y, K] = a.useState(!1),
+        [q, X] = a.useState(),
+        [Q, J] = a.useState(),
+        $ = (e) => {
+            X(e.interactionType), J(e.interactionSourceType);
         },
-        Q = (e) => {
-            (0, S.openUserProfileModal)({
-                sourceAnalyticsLocations: D,
-                ...k,
+        ee = (e) => {
+            (0, Z.openUserProfileModal)({
+                sourceAnalyticsLocations: B,
+                ...w,
                 ...e
             });
         };
     return (0, i.jsx)(u.Gt, {
-        value: D,
+        value: B,
         children: (0, i.jsx)(h.Mt, {
-            value: k,
-            children: (0, i.jsxs)(C.Z, {
-                ref: U,
+            value: w,
+            children: (0, i.jsxs)(I.Z, {
+                ref: H,
                 user: t,
-                displayProfile: O,
-                profileType: b.y0.PANEL,
-                themeOverride: y,
-                className: L.container,
+                displayProfile: D,
+                profileType: R.y0.PANEL,
+                themeOverride: k,
+                className: P.container,
                 children: [
-                    null != z && (0, i.jsx)('div', { className: L.backdrop }),
+                    null != q && (0, i.jsx)('div', { className: P.backdrop }),
                     (0, i.jsxs)(s.u2, {
                         children: [
-                            (0, i.jsxs)(T.Z, {
-                                profileType: b.y0.PANEL,
+                            (0, i.jsxs)(N.Z, {
+                                profileType: R.y0.PANEL,
                                 children: [
-                                    (0, i.jsx)(N.Z, {
+                                    (0, i.jsx)(v.Z, {
                                         user: t,
-                                        profileType: b.y0.PANEL
+                                        profileType: R.y0.PANEL
                                     }),
-                                    t.bot ? (0, i.jsx)(x.Z, { user: t }) : (0, i.jsx)(v.Z, { user: t })
+                                    t.bot ? (0, i.jsx)(T.Z, { user: t }) : (0, i.jsx)(S.Z, { user: t })
                                 ]
                             }),
                             (0, i.jsxs)('header', {
-                                className: L.header,
+                                className: P.header,
                                 children: [
-                                    (0, i.jsx)(_.Z, {
-                                        user: t,
-                                        displayProfile: O,
-                                        profileType: b.y0.PANEL,
-                                        animateOnHover: !w,
-                                        className: L.banner
-                                    }),
-                                    (0, i.jsx)(g.Z, {
-                                        isReply: F,
-                                        sent: G,
-                                        shown: B,
-                                        className: L.toast
-                                    }),
                                     (0, i.jsx)(f.Z, {
-                                        location: 'SimplifiedProfilePanel',
                                         user: t,
-                                        displayProfile: O,
-                                        channelId: j.id,
-                                        profileType: b.y0.PANEL,
-                                        isInteractionSource: K === b.n_.AVATAR || K === b.n_.STATUS,
-                                        onOpenProfile: P ? void 0 : Q,
-                                        onInteraction: X,
-                                        setInteractionToastShown: H,
-                                        setInteractionSent: V,
-                                        setIsReplyInteraction: W,
-                                        showReplyPopout: z === b.P.REPLY && K === b.n_.AVATAR
+                                        displayProfile: D,
+                                        profileType: R.y0.PANEL,
+                                        animateOnHover: !G,
+                                        className: P.banner
+                                    }),
+                                    (0, i.jsx)(C.Z, {
+                                        isReply: Y,
+                                        sent: W,
+                                        shown: V,
+                                        className: P.toast
                                     }),
                                     (0, i.jsx)(E.Z, {
                                         location: 'SimplifiedProfilePanel',
                                         user: t,
-                                        channelId: j.id,
-                                        profileType: b.y0.PANEL,
-                                        isInteractionSource: K === b.n_.STATUS,
-                                        onInteraction: X,
-                                        setInteractionToastShown: H,
-                                        setInteractionSent: V,
-                                        setIsReplyInteraction: W,
-                                        showReplyPopout: z === b.P.REPLY && K === b.n_.STATUS
+                                        displayProfile: D,
+                                        channelId: O.id,
+                                        profileType: R.y0.PANEL,
+                                        isInteractionSource: Q === R.n_.AVATAR || Q === R.n_.STATUS,
+                                        onOpenProfile: y ? void 0 : ee,
+                                        onInteraction: $,
+                                        setInteractionToastShown: F,
+                                        setInteractionSent: z,
+                                        setIsReplyInteraction: K,
+                                        showReplyPopout: q === R.P.REPLY && Q === R.n_.AVATAR
                                     }),
-                                    (0, i.jsx)(I.Z, { user: t })
+                                    (0, i.jsx)(g.Z, {
+                                        location: 'SimplifiedProfilePanel',
+                                        user: t,
+                                        channelId: O.id,
+                                        profileType: R.y0.PANEL,
+                                        isInteractionSource: Q === R.n_.STATUS,
+                                        onInteraction: $,
+                                        setInteractionToastShown: F,
+                                        setInteractionSent: z,
+                                        setIsReplyInteraction: K,
+                                        showReplyPopout: q === R.P.REPLY && Q === R.n_.STATUS
+                                    }),
+                                    (0, i.jsx)(x.Z, { user: t })
                                 ]
                             }),
-                            (0, i.jsx)(Z.Z, {
+                            (0, i.jsx)(A.Z, {
                                 user: t,
                                 currentUser: n,
-                                displayProfile: O,
-                                channel: j,
-                                isHovering: w,
-                                onOpenProfile: P ? void 0 : Q
+                                displayProfile: D,
+                                channel: O,
+                                isHovering: G,
+                                onOpenProfile: y ? void 0 : ee
                             }),
-                            (0, i.jsx)(A.Z, { user: t }),
-                            (0, i.jsx)(M.Z, {
+                            (0, i.jsx)(M.Z, { user: t }),
+                            (0, i.jsx)(b.Z, {
                                 user: t,
-                                displayProfile: O
+                                displayProfile: D
                             })
                         ]
                     }),
-                    !P &&
+                    !y &&
                         (0, i.jsx)('footer', {
-                            className: L.footer,
+                            className: P.footer,
                             children: (0, i.jsx)(l.Button, {
                                 fullWidth: !0,
                                 size: l.Button.Sizes.LARGE,
                                 look: l.Button.Looks.BLANK,
-                                color: L.footerButtonColor,
+                                color: P.footerButtonColor,
                                 onClick: () => {
-                                    Q(),
+                                    ee(),
                                         (0, p.pQ)({
                                             action: 'PRESS_VIEW_PROFILE',
-                                            analyticsLocations: D,
-                                            ...k
+                                            analyticsLocations: B,
+                                            ...w
                                         });
                                 },
-                                children: R.Z.Messages.VIEW_FULL_PROFILE
+                                children: j.Z.Messages.VIEW_FULL_PROFILE
                             })
                         }),
-                    (null == O ? void 0 : O.profileEffectId) != null &&
+                    (null == D ? void 0 : D.profileEffectId) != null &&
                         (0, i.jsx)(d.Z, {
-                            profileEffectId: null == O ? void 0 : O.profileEffectId,
-                            isHovering: w
+                            profileEffectId: null == D ? void 0 : D.profileEffectId,
+                            isHovering: G
                         })
                 ]
             })
