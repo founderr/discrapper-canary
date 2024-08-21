@@ -1,187 +1,94 @@
 t.d(n, {
     Z: function () {
-        return g;
+        return p;
     }
 });
 var l = t(735250),
-    i = t(470079),
     a = t(120356),
-    r = t.n(a),
-    o = t(442837),
-    s = t(481060),
-    c = t(239091),
-    u = t(318374),
-    d = t(751688),
-    m = t(184301),
-    f = t(103575),
-    _ = t(210887),
-    p = t(5192),
-    C = t(192918),
-    h = t(256139),
-    E = t(981631),
-    I = t(689938),
-    T = t(182408);
-function x(e) {
-    let { participants: n, channel: i } = e;
-    return (0, l.jsx)(s.Scroller, {
-        className: T.participantsPopout,
-        children: n.map((e) =>
-            (0, l.jsx)(
-                d.Z,
-                {
-                    guildId: i.guild_id,
-                    user: e,
-                    nick: p.ZP.getNickname(i.guild_id, i.id, e),
-                    onContextMenu: (n) => {
-                        (0, c.jW)(n, async () => {
-                            let { default: n } = await Promise.all([t.e('79695'), t.e('69220'), t.e('46611')]).then(t.bind(t, 881351));
-                            return (t) =>
-                                (0, l.jsx)(n, {
-                                    ...t,
-                                    user: e
-                                });
-                        });
-                    }
-                },
-                e.id
-            )
-        )
-    });
-}
-function N(e) {
-    let { children: n, participants: t, channel: a } = e,
-        r = (0, o.e7)([_.Z], () => _.Z.theme),
-        c = 1 === t.length ? t[0] : null,
-        u = (0, i.useCallback)(
-            (e) =>
-                null != c
-                    ? (0, l.jsx)(f.Z, {
-                          ...e,
-                          location: 'Content Inventory Embed',
-                          userId: c.id,
-                          guildId: a.guild_id,
-                          channelId: a.id,
-                          analyticsParams: {
-                              location: {
-                                  page: E.ZY5.GUILD_CHANNEL,
-                                  section: E.jXE.CONTENT_INVENTORY_EMBED
-                              }
-                          }
-                      })
-                    : (0, l.jsx)(x, {
-                          participants: t,
-                          channel: a
-                      }),
-            [a, t, c]
-        );
-    return (0, l.jsx)(s.ThemeContextProvider, {
-        theme: r,
-        children: (0, l.jsx)(s.Popout, {
-            renderPopout: u,
-            preload: () =>
-                null != c
-                    ? (0, m.Z)(c, {
-                          guildId: a.guild_id,
-                          channelId: a.id
-                      })
-                    : Promise.resolve(),
-            children: n
-        })
-    });
-}
-function v(e) {
-    let { user: n, text: t, channel: i } = e;
-    return (0, l.jsx)(N, {
-        participants: [n],
-        channel: i,
-        children: (e) =>
-            (0, l.jsx)(h.Z, {
-                ...e,
-                tag: 'span',
-                children: (0, l.jsx)(s.Text, {
-                    variant: 'text-sm/semibold',
-                    color: 'text-primary',
-                    lineClamp: 1,
-                    scaleFontToUserSetting: !0,
-                    children: t
-                })
-            })
-    });
-}
-function g(e) {
-    let { entry: n, channel: t, className: i } = e,
-        { displayParticipants: a, participant1: o, participant2: c, numOtherParticipants: d, orderedParticipants: m } = (0, C.Z)(n),
-        f = [o, c];
+    i = t.n(a),
+    r = t(481060),
+    o = t(318374),
+    s = t(5192),
+    c = t(192918),
+    u = t(256139),
+    d = t(91907),
+    m = t(866040),
+    _ = t(689938),
+    f = t(182408);
+function p(e) {
+    let { entry: n, channel: t, className: a } = e,
+        { displayParticipants: p, participant1: E, participant2: I, numOtherParticipants: C, orderedParticipants: h } = (0, c.Z)(n),
+        N = [E, I];
     return (0, l.jsxs)('div', {
-        className: r()(T.container, i),
+        className: i()(f.container, a),
         children: [
-            a.length > 0
+            p.length > 0
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(N, {
-                              participants: m,
+                          (0, l.jsx)(m.Z, {
+                              participants: h,
                               channel: t,
                               children: (e) =>
-                                  (0, l.jsx)(s.Clickable, {
-                                      className: T.clickable,
+                                  (0, l.jsx)(r.Clickable, {
+                                      className: f.clickable,
                                       ...e,
-                                      children: (0, l.jsx)(u.Z, {
+                                      children: (0, l.jsx)(o.Z, {
                                           maxUsers: 3,
-                                          users: a,
-                                          size: s.AvatarSizes.SIZE_20,
-                                          avatarClassName: T.stackedAvatar,
+                                          users: p,
+                                          size: r.AvatarSizes.SIZE_20,
+                                          avatarClassName: f.stackedAvatar,
                                           hideOverflowCount: !0,
                                           disableUsernameTooltip: !0
                                       })
                                   })
                           }),
-                          (0, l.jsx)(s.Spacer, {
+                          (0, l.jsx)(r.Spacer, {
                               size: 6,
                               horizontal: !0
                           })
                       ]
                   })
                 : null,
-            (0, l.jsx)(s.Heading, {
+            (0, l.jsx)(r.Heading, {
                 variant: 'text-sm/semibold',
                 color: 'text-secondary',
-                className: r()(T.truncatedText, T.usersHeader),
+                className: i()(f.truncatedText, f.usersHeader),
                 scaleFontToUserSetting: !0,
-                children: I.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
-                    user0: p.ZP.getName(t.guild_id, t.id, f[0]),
-                    user1: p.ZP.getName(t.guild_id, t.id, f[1]),
-                    countOthers: d,
+                children: _.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
+                    user0: s.ZP.getName(t.guild_id, t.id, N[0]),
+                    user1: s.ZP.getName(t.guild_id, t.id, N[1]),
+                    countOthers: C,
                     name0Hook: (e, n) =>
                         (0, l.jsx)(
-                            v,
+                            d.Z,
                             {
                                 text: e,
-                                user: f[0],
+                                user: N[0],
                                 channel: t
                             },
                             n
                         ),
                     name1Hook: (e, n) =>
                         (0, l.jsx)(
-                            v,
+                            d.Z,
                             {
                                 text: e,
-                                user: f[1],
+                                user: N[1],
                                 channel: t
                             },
                             n
                         ),
                     countOthersHook: (e, n) =>
                         (0, l.jsx)(
-                            N,
+                            m.Z,
                             {
-                                participants: m,
+                                participants: h,
                                 channel: t,
                                 children: (n) =>
-                                    (0, l.jsx)(h.Z, {
+                                    (0, l.jsx)(u.Z, {
                                         ...n,
                                         tag: 'span',
-                                        children: (0, l.jsx)(s.Text, {
+                                        children: (0, l.jsx)(r.Text, {
                                             variant: 'text-sm/semibold',
                                             color: 'text-primary',
                                             lineClamp: 1,
