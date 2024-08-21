@@ -25,48 +25,40 @@ let A = {
         transform: 'scale(1)',
         opacity: 1
     };
-t.Z = () => {
-    let { connectedActivityChannelId: e, activityPanelMode: t } = (0, l.cj)([c.ZP], () => ({
-            connectedActivityChannelId: c.ZP.getConnectedActivityChannelId(),
-            activityPanelMode: c.ZP.getActivityPanelMode()
-        })),
-        { currentChannelId: n, selectedVoiceChannelId: a } = (0, l.cj)([p.Z], () => ({
-            currentChannelId: p.Z.getChannelId(),
-            selectedVoiceChannelId: p.Z.getVoiceChannelId()
-        })),
-        v = (0, l.Wu)([m.Z], () =>
-            m.Z.getIncomingCalls().filter((r) => {
-                let { channel: i } = r,
-                    s = e === i.id && a !== i.id && t === g.Ez.PANEL;
-                return n !== i.id || s;
+t.Z = i.memo(function () {
+    let e = (0, l.Wu)([m.Z, p.Z, c.ZP], () =>
+            m.Z.getIncomingCalls().filter((e) => {
+                let { channel: t } = e,
+                    n = c.ZP.getConnectedActivityChannelId() === t.id && p.Z.getVoiceChannelId() !== t.id && c.ZP.getActivityPanelMode() === g.Ez.PANEL;
+                return p.Z.getChannelId() !== t.id || n;
             })
         ),
-        O = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),
-        R = (0, l.e7)([h.Z], () => h.Z.isSoundDisabled('call_ringing')),
-        C = E.Z.useIsRingtoneEligible(),
-        y = E.Z.useIsRingtoneDisabled(),
-        D = (0, l.e7)([I.Z], () => I.Z.disableSounds),
-        L = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
-        b = i.useRef(!1),
-        M = (0, o.Z)(() => {
+        t = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),
+        n = (0, l.e7)([h.Z], () => h.Z.isSoundDisabled('call_ringing')),
+        a = E.Z.useIsRingtoneEligible(),
+        v = E.Z.useIsRingtoneDisabled(),
+        O = (0, l.e7)([I.Z], () => I.Z.disableSounds),
+        R = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
+        C = i.useRef(!1),
+        y = (0, o.Z)(() => {
             let e = 'call_ringing';
-            return C && !y ? (0, T.tu)(_.Z.ringtone, e) : L === S.YC.CLASSIC ? (0, T.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), e) : (0, T.uk)('call_ringing', L);
-        }, [L, y, C]);
+            return a && !v ? (0, T.tu)(_.Z.ringtone, e) : R === S.YC.CLASSIC ? (0, T.tu)(500 !== s().random(1, 1000) ? 'call_ringing' : s().sample(['call_ringing_beat', 'call_ringing_snow_halation']), e) : (0, T.uk)('call_ringing', R);
+        }, [R, v, a]);
     return (
         i.useEffect(
             () => () => {
-                M.stop();
+                y.stop();
             },
-            [M]
+            [y]
         ),
         i.useEffect(() => {
-            if (D || R) {
-                b.current && (M.stop(), (b.current = !1));
+            if (O || n) {
+                C.current && (y.stop(), (C.current = !1));
                 return;
             }
-            O && !b.current ? (M.loop(), (b.current = !0)) : !O && b.current && (M.stop(), (b.current = !1));
-        }, [R, D, O, M]),
-        (0, u.useTransition)(v, {
+            t && !C.current ? (y.loop(), (C.current = !0)) : !t && C.current && (y.stop(), (C.current = !1));
+        }, [n, O, t, y]),
+        (0, u.useTransition)(e, {
             keys: (e) => {
                 var t;
                 return null === (t = e.channel) || void 0 === t ? void 0 : t.id;
@@ -89,4 +81,4 @@ t.Z = () => {
             })
         )
     );
-};
+});

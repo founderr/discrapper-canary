@@ -192,7 +192,8 @@ function Y(e) {
                 })
             ]
         }),
-        Y = C ? k : B;
+        Y = C ? k : B,
+        j = (0, l.e7)([y.Z], () => y.Z.windowSize());
     return (0, r.jsx)(E.Z, {
         className: x.wrapper,
         selector: '.'.concat(x.root),
@@ -200,8 +201,8 @@ function Y(e) {
             left: a,
             top: n
         },
-        maxX: window.innerWidth,
-        maxY: window.innerHeight,
+        maxX: j.width,
+        maxY: j.height,
         onDragEnd: v,
         dragAnywhere: !0,
         children: (0, r.jsx)(r.Fragment, {
