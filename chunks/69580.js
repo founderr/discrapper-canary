@@ -45,8 +45,8 @@ var r,
     S = n(893776),
     A = n(434650),
     N = n(367907),
-    O = n(702493),
-    v = n(728345),
+    v = n(702493),
+    O = n(728345),
     R = n(979200),
     C = n(560067),
     y = n(353926),
@@ -80,7 +80,7 @@ function et() {
     let e = (0, u.TH)(),
         t = s.useMemo(() => (0, x.y)(e.search), [e.search]);
     return (
-        (0, O.Z)(),
+        (0, v.Z)(),
         (0, a.jsx)(z.G, {
             children: (0, a.jsx)(er, {
                 ...t,
@@ -159,11 +159,11 @@ function ei(e) {
     var t, n, r, i, o;
     let p,
         I,
-        O,
+        v,
         C,
         D,
         z,
-        { clientId: et, responseType: en, redirectUri: er, codeChallenge: ei, codeChallengeMethod: ea, state: es, nonce: eo, prompt: el, authorizations: eu, scopes: ec, permissions: ed, guildId: e_, channelId: eE, integrationType: ef, disableGuildSelect: eh = !1, disableContinueUntilRead: ep = !1, showLogout: eI = !1, cancelCompletesFlow: em = !0, isTrustedName: eT = !1, isEmbeddedFlow: eg = !1, inApp: eS = !1, callback: eA, callbackWithoutPost: eN, onClose: eO, disclosures: ev } = e,
+        { clientId: et, responseType: en, redirectUri: er, codeChallenge: ei, codeChallengeMethod: ea, state: es, nonce: eo, prompt: el, authorizations: eu, scopes: ec, permissions: ed, guildId: e_, channelId: eE, integrationType: ef, disableGuildSelect: eh = !1, disableContinueUntilRead: ep = !1, showLogout: eI = !1, cancelCompletesFlow: em = !0, isTrustedName: eT = !1, isEmbeddedFlow: eg = !1, inApp: eS = !1, callback: eA, callbackWithoutPost: eN, onClose: ev, disclosures: eO } = e,
         eR = null != ef ? (null == eu ? void 0 : eu.get(ef)) : void 0,
         eC = (0, u.TH)(),
         ey = (0, f.e7)([y.Z], () => y.Z.hasLoadedExperiments);
@@ -188,7 +188,7 @@ function ei(e) {
         }, [eR, null == ec ? void 0 : ec.length, er, ef]),
         [eX, e$] = s.useState(null);
     s.useEffect(() => {
-        eQ && v.Z.fetchApplication(et).then((e) => e$(b.Z.createFromServer(e)));
+        eQ && O.Z.fetchApplication(et).then((e) => e$(b.Z.createFromServer(e)));
     }, [et, eQ]);
     let eJ = s.useMemo(() => {
             var e, t;
@@ -209,8 +209,8 @@ function ei(e) {
             return null != t ? t : U.Hn;
         }, [null == eJ ? void 0 : eJ.permissions, ed, eQ]),
         e3 = s.useRef(!1),
-        [e4, e5] = s.useState(null != ev ? ev : []),
-        [e6, e7] = s.useState(null != ev && ev.length > 0);
+        [e4, e5] = s.useState(null != eO ? eO : []),
+        [e6, e7] = s.useState(null != eO && eO.length > 0);
     s.useEffect(() => {
         if (e3.current) return;
         let e = async () => {
@@ -229,14 +229,14 @@ function ei(e) {
                 e3.current = !1;
             }
         };
-        if (null == ev) {
+        if (null == eO) {
             if (!P.default.isAuthenticated()) {
                 (0, G.c$)(eC);
                 return;
             }
             e();
         }
-    }, [et, eC, ev, e5, eU, e7, eM]);
+    }, [et, eC, eO, e5, eU, e7, eM]);
     let e8 = s.useCallback(
             async (e) => {
                 if (null != eN) {
@@ -249,7 +249,7 @@ function ei(e) {
                             application: null == eD ? void 0 : eD.application,
                             guild: eK
                         }),
-                        null == eO || eO());
+                        null == ev || ev());
                     return;
                 }
                 if (null == ez) {
@@ -279,7 +279,7 @@ function ei(e) {
                             location: t.location,
                             guild: eK
                         }),
-                            null == eO || eO();
+                            null == ev || ev();
                     else if (null != t.location) {
                         let { host: e, path: n } = c.parse(t.location);
                         w.Z.isDiscordHostname(e) && n === X.Z5c.OAUTH2_AUTHORIZED
@@ -296,7 +296,7 @@ function ei(e) {
                     (null == e ? void 0 : e.message) != null && '' !== e.message ? eU(Error(e.message)) : eU(e), eM(1), ex(!1);
                 }
             },
-            [eN, em, eA, null == eD ? void 0 : eD.application, eK, eO, et, e0, en, er, ei, ea, es, eo, e2, eY, eF, ez, eH, e4]
+            [eN, em, eA, null == eD ? void 0 : eD.application, eK, ev, et, e0, en, er, ei, ea, es, eo, e2, eY, eF, ez, eH, e4]
         ),
         e9 = s.useRef(!1),
         te = s.useCallback(async () => {
@@ -423,7 +423,7 @@ function ei(e) {
                         : null
                 ]
             })),
-                e0.includes(_.x.BOT) && !E.fS(e2, U.Hn) && (O = 2),
+                e0.includes(_.x.BOT) && !E.fS(e2, U.Hn) && (v = 2),
                 tt.length > 1 && (I = 0),
                 (ti = (td && null == eK) || (tc && null == eH));
             break;
@@ -472,7 +472,7 @@ function ei(e) {
             location: eC,
             isTrustedName: eT
         }));
-    let t_ = null == O && null != C && !eG;
+    let t_ = null == v && null != C && !eG;
     to &&
         (z = (0, a.jsxs)('div', {
             className: l()(J.footer, { [J.inApp]: eS }),
@@ -491,9 +491,9 @@ function ei(e) {
                           children: $.Z.Messages.CANCEL
                       }),
                 0 !== eb
-                    ? null != O
+                    ? null != v
                         ? (0, a.jsx)(h.zx, {
-                              onClick: () => eM(O),
+                              onClick: () => eM(v),
                               disabled: ti,
                               children: $.Z.Messages.CONTINUE
                           })
@@ -555,7 +555,7 @@ function ei(e) {
         header: D,
         body: p,
         footer: z,
-        nextStep: O,
+        nextStep: v,
         appDetails: C,
         overlay: tE,
         sendAuthorize: e8

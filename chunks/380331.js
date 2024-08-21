@@ -20,8 +20,8 @@ var r = n(735250),
     S = n(543241),
     A = n(883661),
     N = n(880949),
-    O = n(784222),
-    v = n(149203),
+    v = n(784222),
+    O = n(149203),
     R = n(981631),
     C = n(957825),
     y = n(689938),
@@ -41,9 +41,9 @@ let L = (0, g.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
 function H(e) {
     let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: o, category: l, handleCategorySelect: c, isWindowFocused: d, useReducedMotion: E } = e,
         f = (0, u.JA)('expression-guild-'.concat(n)),
-        h = l.type === v.En.GUILD ? null : l.id,
+        h = l.type === O.En.GUILD ? null : l.id,
         p = t === n,
-        m = l.type === v.En.GUILD ? l.guild : null,
+        m = l.type === O.En.GUILD ? l.guild : null,
         g = (0, r.jsxs)(_.Clickable, {
             ...f,
             'aria-label': (0, S.Nf)(l, m),
@@ -51,7 +51,7 @@ function H(e) {
                 [D.categoryItemGuildCategory]: null != m,
                 [D.categoryItemDefaultCategory]: null == m,
                 [D.categoryItemDefaultCategorySelected]: null == m && p,
-                [D.categoryItemRecentEmoji]: l.type === v.En.RECENT
+                [D.categoryItemRecentEmoji]: l.type === O.En.RECENT
             }),
             onClick: () => {
                 null != m &&
@@ -82,8 +82,8 @@ function H(e) {
                     : null
             ]
         }),
-        O = o[n + 1],
-        y = null != O && l.type === v.En.GUILD && O.type !== v.En.GUILD;
+        v = o[n + 1],
+        y = null != v && l.type === O.En.GUILD && v.type !== O.En.GUILD;
     return null != m
         ? (0, r.jsxs)(i.Fragment, {
               children: [
@@ -100,7 +100,7 @@ function H(e) {
 t.Z = (e) => {
     let { className: t, emojiListRef: n, sectionDescriptors: a, intention: o, channel: u } = e,
         d = h.kJ.useStore((e) => e.activeCategoryIndex),
-        I = (0, O.Ni)({
+        I = (0, v.Ni)({
             sectionDescriptors: a,
             emojiListRef: n
         }),
@@ -135,10 +135,10 @@ t.Z = (e) => {
         U = i.useCallback(
             (e, t) => {
                 let n = g[t];
-                if (n.type === v.En.RECENT) return k;
-                if (n.type === v.En.GUILD) {
+                if (n.type === O.En.RECENT) return k;
+                if (n.type === O.En.GUILD) {
                     let e = g[t + 1];
-                    return null != e && e.type !== v.En.GUILD ? F : B;
+                    return null != e && e.type !== O.En.GUILD ? F : B;
                 }
                 return V;
             },
@@ -155,7 +155,7 @@ t.Z = (e) => {
                 n = 0,
                 r = 0;
             g.forEach((i) => {
-                i.type === v.En.GUILD ? ((t += 1), (n += 1)) : i.type === v.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
+                i.type === O.En.GUILD ? ((t += 1), (n += 1)) : i.type === O.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
             });
             let i = k + t * B + F;
             return {
@@ -189,10 +189,10 @@ t.Z = (e) => {
                 let n = g[e];
                 if (null == n) return 0;
                 let r = K ? w : 0;
-                if (n.type === v.En.RECENT) return t ? 0 : P;
-                if (n.type === v.En.GUILD) {
+                if (n.type === O.En.RECENT) return t ? 0 : P;
+                if (n.type === O.En.GUILD) {
                     let n = g[e + 1];
-                    return null != n && n.type !== v.En.GUILD ? (t ? x + -2 * G + b + r : b) : t ? r : b;
+                    return null != n && n.type !== O.En.GUILD ? (t ? x + -2 * G + b + r : b) : t ? r : b;
                 }
                 return t ? b + r : 2 * b;
             },

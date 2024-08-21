@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(626135),
     A = n(361207),
     N = n(690032),
-    O = n(358085),
-    v = n(998502),
+    v = n(358085),
+    O = n(998502),
     R = n(981631),
     C = n(188785),
     y = n(436620);
@@ -74,7 +74,7 @@ let D = (0, h.Un)({
         id: 457094
     }),
     G = (0, h.Un)({
-        createPromise: () => Promise.all([n.e('96427'), n.e('77799'), n.e('75492'), n.e('18543'), n.e('95393'), n.e('86975'), n.e('10778'), n.e('52030'), n.e('17764'), n.e('11260'), n.e('4775'), n.e('84956'), n.e('21824')]).then(n.bind(n, 822699)),
+        createPromise: () => Promise.all([n.e('96427'), n.e('32873'), n.e('75492'), n.e('18543'), n.e('95393'), n.e('86975'), n.e('10778'), n.e('52030'), n.e('17764'), n.e('11260'), n.e('4775'), n.e('84956'), n.e('21824')]).then(n.bind(n, 822699)),
         webpackId: 822699,
         name: 'ViewsWithAuth'
     }),
@@ -125,7 +125,7 @@ function z(e, t) {
 }
 class q extends i.Component {
     componentDidMount() {
-        v.ZP.cleanupDisplaySleep(), T.Z.initialize();
+        O.ZP.cleanupDisplaySleep(), T.Z.initialize();
     }
     componentWillUnmount() {
         T.Z.terminate();
@@ -138,7 +138,7 @@ class q extends i.Component {
                 n === I.P.IN_PROGRESS
                     ? null
                     : y.KO
-                      ? O.isPlatformEmbedded
+                      ? v.isPlatformEmbedded
                           ? (0, r.jsxs)(s.rs, {
                                 children: [
                                     (0, r.jsx)(s.AW, {
@@ -314,7 +314,7 @@ class q extends i.Component {
                       : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: D }) })),
             (0, r.jsxs)(p.Z, {
                 skipsSettingDefaultPageTitle: i,
-                children: [e, O.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(m.Z, {}) : null]
+                children: [e, v.isPlatformEmbedded && (n === I.P.NOT_STARTED || n === I.P.IN_PROGRESS) && !0 !== _.K.get(l.SV) ? (0, r.jsx)(m.Z, {}) : null]
             })
         );
     }

@@ -29,8 +29,8 @@ var r = n(512722),
     S = n(594174),
     A = n(70956),
     N = n(51144),
-    O = n(895924),
-    v = n(689079),
+    v = n(895924),
+    O = n(689079),
     R = n(981631),
     C = n(590433),
     y = n(689938);
@@ -40,16 +40,16 @@ let D = n(227419).Z,
         return null === (n = e.find((e) => e.name === t)) || void 0 === n ? void 0 : n.value;
     },
     b = {
-        [v.bi.BUILT_IN]: {
-            id: v.bi.BUILT_IN,
-            type: O.Qi.BUILT_IN,
+        [O.bi.BUILT_IN]: {
+            id: O.bi.BUILT_IN,
+            type: v.Qi.BUILT_IN,
             get name() {
                 return y.Z.Messages.COMMAND_SECTION_BUILT_IN_NAME;
             }
         },
-        [v.bi.FRECENCY]: {
-            id: v.bi.FRECENCY,
-            type: O.Qi.BUILT_IN,
+        [O.bi.FRECENCY]: {
+            id: O.bi.FRECENCY,
+            type: v.Qi.BUILT_IN,
             get name() {
                 return y.Z.Messages.FREQUENTLY_USED;
             }
@@ -62,8 +62,8 @@ let D = n(227419).Z,
             name: 'shrug',
             displayName: 'shrug',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN_TEXT,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_SHRUG_DESCRIPTION;
             },
@@ -94,8 +94,8 @@ let D = n(227419).Z,
             name: 'tableflip',
             displayName: 'tableflip',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN_TEXT,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_TABLEFLIP_DESCRIPTION;
             },
@@ -126,8 +126,8 @@ let D = n(227419).Z,
             name: 'unflip',
             displayName: 'unflip',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN_TEXT,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION;
             },
@@ -158,8 +158,8 @@ let D = n(227419).Z,
             name: 'tts',
             displayName: 'tts',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN_TEXT,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_TTS_DESCRIPTION;
             },
@@ -197,8 +197,8 @@ let D = n(227419).Z,
             name: 'me',
             displayName: 'me',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN_TEXT,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_ME_DESCRIPTION;
             },
@@ -230,8 +230,8 @@ let D = n(227419).Z,
             name: 'spoiler',
             displayName: 'spoiler',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN_TEXT,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_SPOILER_DESCRIPTION;
             },
@@ -263,8 +263,8 @@ let D = n(227419).Z,
             name: 'nick',
             displayName: 'nick',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_NICK_DESCRIPTION;
             },
@@ -301,8 +301,8 @@ let D = n(227419).Z,
             name: 'thread',
             displayName: 'thread',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_THREAD_DESCRIPTION;
             },
@@ -353,8 +353,8 @@ let D = n(227419).Z,
             name: 'kick',
             displayName: 'kick',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_KICK_DESCRIPTION;
             },
@@ -415,8 +415,8 @@ let D = n(227419).Z,
             name: 'ban',
             displayName: 'ban',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_BAN_DESCRIPTION;
             },
@@ -530,8 +530,8 @@ let D = n(227419).Z,
             name: 'timeout',
             displayName: 'timeout',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_TIMEOUT_DESCRIPTION;
             },
@@ -625,8 +625,8 @@ let D = n(227419).Z,
             name: 'msg',
             displayName: 'msg',
             type: _.yU.CHAT,
-            inputType: O.iw.BUILT_IN,
-            applicationId: v.bi.BUILT_IN,
+            inputType: v.iw.BUILT_IN,
+            applicationId: O.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_MSG_DESCRIPTION;
             },
@@ -682,5 +682,5 @@ let D = n(227419).Z,
     U = M.filter((e) => ['gif', 'tenor', 'tts', 'me', 'tableflip', 'unflip', 'shrug', 'spoiler', 'nick'].includes(e.name)),
     w = (e, t, n) => {
         let r = t ? M : U;
-        return (r = r.filter((t) => e.includes(t.type) && (!n || t.inputType === O.iw.BUILT_IN_TEXT || t.inputType === O.iw.BUILT_IN_INTEGRATION)));
+        return (r = r.filter((t) => e.includes(t.type) && (!n || t.inputType === v.iw.BUILT_IN_TEXT || t.inputType === v.iw.BUILT_IN_INTEGRATION)));
     };

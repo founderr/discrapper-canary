@@ -21,13 +21,13 @@ function c(e) {
     });
     let M = l.Z.getApplication(s),
         A = i.Y.USER_INSTALL,
-        I = null == M ? void 0 : null === (u = M.integrationTypesConfig) || void 0 === u ? void 0 : null === (m = u[A]) || void 0 === m ? void 0 : null === (c = m.oauth2InstallParams) || void 0 === c ? void 0 : c.scopes;
+        C = null == M ? void 0 : null === (u = M.integrationTypesConfig) || void 0 === u ? void 0 : null === (m = u[A]) || void 0 === m ? void 0 : null === (c = m.oauth2InstallParams) || void 0 === c ? void 0 : c.scopes;
     return new Promise((e) => {
         (0, a.openOAuth2Modal)(
             {
                 clientId: s,
                 integrationType: A,
-                scopes: I,
+                scopes: C,
                 callback: (t) => {
                     let { location: n } = t;
                     null != n

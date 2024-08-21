@@ -3,7 +3,7 @@ n.d(t, {
         return N;
     },
     AA: function () {
-        return O;
+        return v;
     },
     Db: function () {
         return b;
@@ -15,7 +15,7 @@ n.d(t, {
         return D;
     },
     TB: function () {
-        return v;
+        return O;
     },
     XE: function () {
         return C;
@@ -119,13 +119,13 @@ async function N(e) {
         });
     return (0, d.o3)(l.body, t);
 }
-async function O(e, t) {
+async function v(e, t) {
     await a.tn.del({
         url: f.ANM.GUILD_SOUNDBOARD_SOUND(e, t),
         oldFormErrors: !0
     });
 }
-function v(e) {
+function O(e) {
     u.DZ.updateAsync(
         'favoriteSoundboardSounds',
         (t) =>

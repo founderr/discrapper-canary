@@ -14,8 +14,8 @@ var i = t(735250),
     m = t(699516),
     M = t(594174),
     _ = t(630388),
-    h = t(970257),
-    N = t(981631),
+    N = t(970257),
+    h = t(981631),
     I = t(689938),
     Z = t(608362);
 function A(e, n, t) {
@@ -31,19 +31,19 @@ function A(e, n, t) {
         e
     );
 }
-class p extends s.PureComponent {
+class S extends s.PureComponent {
     render() {
         let e, n;
         let { report: t } = this.state,
             { channel: s, message: l, showContextMenuHint: a, ...o } = this.props,
-            u = s.type === N.d4z.GUILD_ANNOUNCEMENT && (0, _.yE)(l.flags, N.iLy.CROSSPOSTED);
+            u = s.type === h.d4z.GUILD_ANNOUNCEMENT && (0, _.yE)(l.flags, h.iLy.CROSSPOSTED);
         return (
             a &&
                 (e = (0, i.jsx)(c.Z, {
                     className: Z.spacingTop,
                     children: I.Z.Messages.DELETE_MESSAGE_CONTEXT_MENU_HINT.format()
                 })),
-            (0, h.vc)(l) &&
+            (0, N.vc)(l) &&
                 (n = (0, i.jsx)(r.FormSwitch, {
                     value: t,
                     onChange: this.handleToggleReport,
@@ -163,7 +163,7 @@ n.Z = {
     confirmDelete: function (e, n) {
         let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         (0, r.openModal)((s) =>
-            (0, i.jsx)(p, {
+            (0, i.jsx)(S, {
                 channel: e,
                 message: n,
                 showContextMenuHint: t,

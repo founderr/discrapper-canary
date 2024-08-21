@@ -24,7 +24,7 @@ n.d(t, {
         return N;
     },
     Zv: function () {
-        return v;
+        return O;
     },
     _V: function () {
         return R;
@@ -69,7 +69,7 @@ let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: 
         }
         return e.stickers[0];
     },
-    O = (e) => {
+    v = (e) => {
         switch (e) {
             case d.u3.PNG:
                 return l.$k ? d.og.WEBP : d.og.PNG;
@@ -83,7 +83,7 @@ let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: 
                 throw Error('Unexpected format type: '.concat(e));
         }
     },
-    v = (e) => {
+    O = (e) => {
         switch (e) {
             case 'application/json':
                 return d.u3.LOTTIE;
@@ -98,13 +98,13 @@ let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: 
                 throw Error('Unexpected file type: '.concat(e));
         }
     },
-    R = (e) => (null == e ? null : ''.concat(e.name, '.').concat(O(e.format_type))),
+    R = (e) => (null == e ? null : ''.concat(e.name, '.').concat(v(e.format_type))),
     C = function (e) {
         let { isPreview: t = !1, size: n = _.lE } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (null == e.format_type) return null;
         let r = e.format_type;
         e.format_type === d.u3.GIF && t && (r = d.u3.PNG);
-        let a = O(r),
+        let a = v(r),
             s = E.ANM.STICKER_ASSET(e.id, a),
             o = a === d.og.WEBP ? '&quality=lossless' : '';
         if ('development' !== p) {

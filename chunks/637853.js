@@ -24,13 +24,13 @@ n.d(t, {
         return M;
     },
     iF: function () {
-        return O;
+        return v;
     },
     kl: function () {
         return R;
     },
     mn: function () {
-        return v;
+        return O;
     },
     p3: function () {
         return T;
@@ -119,15 +119,15 @@ function A(e, t, n) {
     );
 }
 function N(e) {
-    return O(s.Z.getChannel(e));
-}
-function O(e) {
-    return !!(null != e && (0, E.s)(e.guild_id, e.id)) && (e.isForumChannel() ? _.Uu(f.Plq.SEND_MESSAGES_IN_THREADS, e) : _.Uu(f.Plq.SEND_MESSAGES, e));
+    return v(s.Z.getChannel(e));
 }
 function v(e) {
+    return !!(null != e && (0, E.s)(e.guild_id, e.id)) && (e.isForumChannel() ? _.Uu(f.Plq.SEND_MESSAGES_IN_THREADS, e) : _.Uu(f.Plq.SEND_MESSAGES, e));
+}
+function O(e) {
     return (0, r.e7)([s.Z], () => {
         let t = s.Z.getChannel(e);
-        return (0, d.lm)(t) && O(t);
+        return (0, d.lm)(t) && v(t);
     });
 }
 function R(e, t, n) {
@@ -179,7 +179,7 @@ function y(e, t) {
         (r = s),
         n.filter((e) => {
             var t;
-            return O(null === (t = r[e]) || void 0 === t ? void 0 : t.channel);
+            return v(null === (t = r[e]) || void 0 === t ? void 0 : t.channel);
         })),
         i
     ];
@@ -195,7 +195,7 @@ function L(e, t) {
                 r = [],
                 i = [],
                 a = {};
-            for (let e of n[o.sH]) (0, E.s)(e.channel.guild_id, e.channel.id) && ((t.has(e.channel.id) && !e.channel.isCategory()) || (!e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id))) && ((a[e.channel.id] = e), r.push(e.channel), O(e.channel) && i.push(e.channel.id));
+            for (let e of n[o.sH]) (0, E.s)(e.channel.guild_id, e.channel.id) && ((t.has(e.channel.id) && !e.channel.isCategory()) || (!e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id))) && ((a[e.channel.id] = e), r.push(e.channel), v(e.channel) && i.push(e.channel.id));
             return [i, r];
         },
         [e, t],

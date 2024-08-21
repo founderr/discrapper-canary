@@ -18,7 +18,7 @@ var s = n(493683),
     S = n(158631),
     A = n(981631);
 let N = [];
-class O extends u.Z {
+class v extends u.Z {
     handleRunningGamesChange() {
         let e = c.ZP.getVisibleGame();
         if (null == e) return;
@@ -112,4 +112,4 @@ class O extends u.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new O();
+t.Z = new v();

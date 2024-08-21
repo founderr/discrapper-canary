@@ -20,10 +20,10 @@ var i = n(512722),
     S = n(65154);
 let A = {},
     N = new _.V7(),
-    O = !1,
-    v = window.document.createElement('canvas');
-(v.width = 512), (v.height = 288);
-let R = v.getContext('2d');
+    v = !1,
+    O = window.document.createElement('canvas');
+(O.width = 512), (O.height = 288);
+let R = O.getContext('2d');
 function C() {
     N.stop(), null != r && (c.Z.removeSink(r, A), (r = null));
 }
@@ -41,7 +41,7 @@ let y = o().debounce((e, t, n, r) => {
 async function D(e, t) {
     if (r !== e) return;
     let n = () => D(e, t);
-    if (!O)
+    if (!v)
         try {
             let n = await (function (e, t) {
                 let n = 0;
@@ -100,7 +100,7 @@ async function D(e, t) {
                     n = Math.min(t, 288 / e.height),
                     r = e.width * n,
                     i = e.height * n;
-                (v.width = r), (v.height = i);
+                (O.width = r), (O.height = i);
                 let a = window.document.createElement('canvas'),
                     s = a.getContext('2d');
                 (a.width = e.width), (a.height = e.height);
@@ -112,7 +112,7 @@ async function D(e, t) {
                     })
                 );
             })(n);
-            let i = v.toDataURL('image/jpeg');
+            let i = O.toDataURL('image/jpeg');
             if (
                 (E.Z.dispatch({
                     type: 'STREAM_PREVIEW_FETCH_SUCCESS',
@@ -141,7 +141,7 @@ async function D(e, t) {
             new f.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(60000, n);
             return;
         }
-    r === e && (O ? N.start(60000, n) : N.start(300000, n));
+    r === e && (v ? N.start(60000, n) : N.start(300000, n));
 }
 t.Z = {
     init() {
@@ -154,7 +154,7 @@ t.Z = {
             }),
             E.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;
-                O = t === g.FQ1.PAUSED || !1;
+                v = t === g.FQ1.PAUSED || !1;
             });
     }
 };

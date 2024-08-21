@@ -20,8 +20,8 @@ var r = n(735250),
     S = n(414910),
     A = n(221888),
     N = n(933557),
-    O = n(569545),
-    v = n(74299),
+    v = n(569545),
+    O = n(74299),
     R = n(863908),
     C = n(803647),
     y = n(266910),
@@ -87,11 +87,11 @@ class el extends i.PureComponent {
     }
     get streamerPaused() {
         let { isMainWindowFocused: e, activeSelfStream: t, participantOnScreen: n } = this.props;
-        return null != t && (null == n ? void 0 : n.id) === (0, O.V9)(t) && !e;
+        return null != t && (null == n ? void 0 : n.id) === (0, v.V9)(t) && !e;
     }
     get activeStreamForSelectedParticipant() {
         let { participantOnScreen: e, activeStreams: t } = this.props;
-        return (0, ei._5)(e) ? t.find((t) => (0, O.V9)(t) === e.id) : null;
+        return (0, ei._5)(e) ? t.find((t) => (0, v.V9)(t) === e.id) : null;
     }
     getScreenMessage() {
         let { participantOnScreen: e, currentUserId: t } = this.props;
@@ -288,7 +288,7 @@ class el extends i.PureComponent {
             eo(this, 'renderSettingsIcon', () => {
                 let { participantOnScreen: e, activeStreams: t } = this.props;
                 l()((0, ei._5)(e), 'Cannot render settings for non stream participant');
-                let n = t.find((t) => (0, O.V9)(t) === e.id);
+                let n = t.find((t) => (0, v.V9)(t) === e.id);
                 return null == n || n.state === er.jm8.ENDED
                     ? null
                     : (0, r.jsx)(G.Z, {
@@ -307,7 +307,7 @@ t.Z = d.ZP.connectStores([F.Z, g.Z, B.default, Z.Z, Y.Z, k.Z, j.Z], (e) => {
         a = null == i || i.disabled,
         s = null != r && r.type !== ei.fO.ACTIVITY && r.type !== ei.fO.HIDDEN_STREAM ? Y.Z.getStreamId(r.user.id, t.getGuildId(), (0, S.Z)(r.type)) : null,
         o = !a && F.Z.isVideoEnabled(),
-        l = (0, v.Z)(F.Z),
+        l = (0, O.Z)(F.Z),
         u = B.default.getId(),
         d = k.Z.getCurrentUserActiveStream(),
         _ = (0, m.tA)(t.id);

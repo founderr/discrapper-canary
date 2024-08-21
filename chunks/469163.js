@@ -24,8 +24,8 @@ var r = n(127118),
     S = n(501422),
     A = n(852785),
     N = n(286507),
-    O = n(995747),
-    v = n(297418),
+    v = n(995747),
+    O = n(297418),
     R = n(229619),
     C = n(625895),
     y = n(290578),
@@ -77,7 +77,7 @@ function H(e) {
         N = (e) => {
             e.preventDefault();
         },
-        { addGlobalListener: O, removeAllGlobalListeners: v } = (0, B.xi)();
+        { addGlobalListener: v, removeAllGlobalListeners: O } = (0, B.xi)();
     return {
         spinButtonProps: {
             role: 'spinbutton',
@@ -121,20 +121,20 @@ function H(e) {
         },
         incrementButtonProps: {
             onPressStart: () => {
-                S(400), O(window, 'contextmenu', N);
+                S(400), v(window, 'contextmenu', N);
             },
             onPressEnd: () => {
-                I(), v();
+                I(), O();
             },
             onFocus: T,
             onBlur: g
         },
         decrementButtonProps: {
             onPressStart: () => {
-                A(400), O(window, 'contextmenu', N);
+                A(400), v(window, 'contextmenu', N);
             },
             onPressEnd: () => {
-                I(), v();
+                I(), O();
             },
             onFocus: T,
             onBlur: g
@@ -163,8 +163,8 @@ V = {
     'lv-LV': S.Z,
     'nb-NO': A.Z,
     'nl-NL': N.Z,
-    'pl-PL': O.Z,
-    'pt-BR': v.Z,
+    'pl-PL': v.Z,
+    'pt-BR': O.Z,
     'pt-PT': R.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,

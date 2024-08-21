@@ -31,11 +31,11 @@ function h(e) {
                 });
                 return;
             }
-            let O = A ? E.en1 : E.J6R;
-            if (p.length > O) {
+            let v = A ? E.en1 : E.J6R;
+            if (p.length > v) {
                 if (A || null == T) {
                     (n = p.length),
-                        (u = O),
+                        (u = v),
                         (0, i.openModal)((e) =>
                             (0, r.jsx)(s.default, {
                                 title: f.Z.Messages.MESSAGE_TOO_LONG_HEADER,

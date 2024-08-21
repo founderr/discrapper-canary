@@ -5,7 +5,7 @@ var r = n(735250),
     s = n.n(a),
     o = n(392711),
     l = n.n(o),
-    u = n(567526),
+    u = n(338545),
     c = n(91192),
     d = n(946188),
     _ = n(477690),
@@ -20,14 +20,14 @@ var r = n(735250),
     S = n(981631),
     A = n(689938),
     N = n(847838);
-let O = (0, I.hQ)(),
-    v = d.Z.convert.fromCodePoint('1f44f'),
+let v = (0, I.hQ)(),
+    O = d.Z.convert.fromCodePoint('1f44f'),
     R = (0, g.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
     C = (0, g.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
     y = (e) => {
         let { fade: t, surrogate: n, onClick: i, delay: a, index: s } = e,
             o = (0, c.JA)('item-'.concat(s)),
-            l = T.ZP.getURL(v + n),
+            l = T.ZP.getURL(O + n),
             _ = (0, E.useSpring)(
                 {
                     opacity: 1,
@@ -115,7 +115,7 @@ let O = (0, I.hQ)(),
     };
 t.Z = (e) => {
     let { searchBarRef: t, selectedSurrogate: n, className: a, hasTabWrapper: s } = e,
-        o = T.ZP.getURL(v + n),
+        o = T.ZP.getURL(O + n),
         [l, u] = i.useState(!1),
         c = (0, h.Z)(null, () => u(!1)),
         d = i.useRef(null);
@@ -132,7 +132,7 @@ t.Z = (e) => {
                 'aria-label': A.Z.Messages.EMOJI_MODIFIER_MENU_BUTTON,
                 'aria-haspopup': !0,
                 'aria-expanded': l,
-                'aria-controls': O,
+                'aria-controls': v,
                 tabIndex: l ? -1 : 0,
                 children: (0, r.jsx)('div', {
                     className: N.diversityEmojiItemImage,
@@ -145,7 +145,7 @@ t.Z = (e) => {
                           e.keyCode === S.yXg.ESCAPE && (e.stopPropagation(), u(!1), null != d.current && d.current.focus());
                       },
                       children: (0, r.jsx)(D, {
-                          id: O,
+                          id: v,
                           hasTabWrapper: s,
                           selectedSurrogate: n,
                           onClick: (e) => {

@@ -28,8 +28,8 @@ var r = n(735250),
     S = n(631771),
     A = n(609218),
     N = n(695346),
-    O = n(594174),
-    v = n(979651),
+    v = n(594174),
+    O = n(979651),
     R = n(259580),
     C = n(626135),
     y = n(74538),
@@ -202,11 +202,11 @@ function J(e) {
             [ea]
         ),
         [eo, el] = i.useState(null),
-        eu = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
+        eu = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
         ec = (0, y.I5)(eu, Y.p9.TIER_2),
-        ed = (0, o.e7)([v.Z], () => {
+        ed = (0, o.e7)([O.Z], () => {
             var e;
-            return v.Z.getVoiceState(t, null !== (e = null == eu ? void 0 : eu.id) && void 0 !== e ? e : Z.lds);
+            return O.Z.getVoiceState(t, null !== (e = null == eu ? void 0 : eu.id) && void 0 !== e ? e : Z.lds);
         }),
         e_ = (null == ed ? void 0 : ed.selfDeaf) || (null == ed ? void 0 : ed.mute) || (null == ed ? void 0 : ed.suppress),
         eE = (0, I.Iu)((e) => e.searchQuery),
@@ -218,8 +218,8 @@ function J(e) {
         eS = (0, x.FS)(ep, eI, eE).filter((e) => e.items.length > 0),
         eA = eS.some((e) => !!(0, y._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
         eN = !ec && R && eA,
-        { enableInlineUpsell: eO, enableRoadblock: ev, enableRoadblockWithSocialProof: eR } = S.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eN }),
-        eC = eN && eO,
+        { enableInlineUpsell: ev, enableRoadblock: eO, enableRoadblockWithSocialProof: eR } = S.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eN }),
+        eC = eN && ev,
         ey = N.T4.useSetting(),
         eD = i.useMemo(() => new Set(ey), [ey]),
         eL = null == a,
@@ -280,7 +280,7 @@ function J(e) {
                         soundButtonProps: {
                             channel: a,
                             interactive: eL ? eb : !e_,
-                            forceSecondaryActions: eL || eO,
+                            forceSecondaryActions: eL || ev,
                             analyticsLocations: er
                         },
                         buttonOverlay: k,
@@ -290,7 +290,7 @@ function J(e) {
                     'row-'.concat(n['aria-rowindex'])
                 );
             },
-            [eU, a, e_, g, er, eL, eb, k, t, eS, R, ec, eC, eO]
+            [eU, a, e_, g, er, eL, eb, k, t, eS, R, ec, eC, ev]
         ),
         ex = i.useCallback(
             (e, t) => {
@@ -416,7 +416,7 @@ function J(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != eo
-                ? ev
+                ? eO
                     ? (0, r.jsx)(A.Z, {
                           containerContext: A.p.NONE,
                           image: {

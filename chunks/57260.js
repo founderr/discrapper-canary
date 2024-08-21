@@ -8,7 +8,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(567526),
+    o = n(338545),
     l = n(481060),
     u = n(393238),
     c = n(23505);
@@ -28,7 +28,7 @@ function d(e) {
             },
             f ? 'animate-never' : 'respect-motion-settings'
         ),
-        O = i.useCallback(() => {
+        v = i.useCallback(() => {
             E(!_);
         }, [_, E]);
     return (
@@ -47,7 +47,7 @@ function d(e) {
                     (0, r.jsx)('div', {
                         ref: S,
                         className: s()(c.header, { [c.toggled]: m }),
-                        children: t({ onClick: O })
+                        children: t({ onClick: v })
                     }),
                     (0, r.jsx)('div', {
                         ref: T,

@@ -84,15 +84,15 @@ let g = 'deviceProperties',
     S = 'referralProperties',
     A = {},
     N = {},
-    O = window.DiscordNative;
-if (null != O) {
+    v = window.DiscordNative;
+if (null != v) {
     let e;
-    let t = O.remoteApp.getVersion(),
-        n = O.process.platform,
-        i = O.os.release,
-        s = O.os.arch,
-        o = O.os.appArch,
-        l = O.remoteApp.getReleaseChannel(),
+    let t = v.remoteApp.getVersion(),
+        n = v.process.platform,
+        i = v.os.release,
+        s = v.os.arch,
+        o = v.os.appArch,
+        l = v.remoteApp.getReleaseChannel(),
         u = (0, _.qf)();
     switch (n) {
         case 'win32':
@@ -121,11 +121,11 @@ if (null != O) {
         (null === (a = d().name) || void 0 === a ? void 0 : a.toLocaleLowerCase()) === 'electron' && ((r.browser_user_agent = d().ua || ''), (r.browser_version = d().version || '')),
         'linux' === n)
     ) {
-        let e = O.crashReporter.getMetadata();
+        let e = v.crashReporter.getMetadata();
         (r.window_manager = e.wm), (r.distro = e.distro);
     } else 'darwin' === n ? (r.os_sdk_version = null == i ? void 0 : i.split('.')[0]) : 'win32' === n && (r.os_sdk_version = null == i ? void 0 : i.split('.')[2]);
 }
-let v = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ');
+let O = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' ');
 function R(e, t) {
     if (null == e) return '';
     t = t.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
@@ -135,7 +135,7 @@ function R(e, t) {
 function C(e) {
     let t = {};
     return (
-        v.forEach((n) => {
+        O.forEach((n) => {
             let r = R(e, n);
             r.length > 0 && (t[n] = r);
         }),
@@ -270,9 +270,9 @@ M(
         let r = {},
             i = window.GLOBAL_ENV.RELEASE_CHANNEL;
         i && (r.release_channel = i.split('-')[0]);
-        let a = parseInt(((n = '320511'), '320511'), 10);
+        let a = parseInt(((n = '320576'), '320576'), 10);
         !isNaN(a) && (r.client_build_number = a);
-        let s = null == O ? void 0 : null === (e = (t = O.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
+        let s = null == v ? void 0 : null === (e = (t = v.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
         return (
             !isNaN(s) && (r.native_build_number = s),
             (r.client_event_source = (function () {

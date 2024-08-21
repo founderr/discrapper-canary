@@ -114,12 +114,12 @@ function I(e) {
         }, [c, u]),
         N = null != c ? (null == m ? void 0 : m[c]) : null;
     o = null != N && (null === (t = N.lastValidationResult) || void 0 === t ? void 0 : t.success) === !1 ? (null !== (n = N.lastValidationResult.error) && void 0 !== n ? n : '') : null;
-    let O = I && null != g ? (0, d.ky)(g) : null;
+    let v = I && null != g ? (0, d.ky)(g) : null;
     return (0, r.jsxs)('div', {
         className: s()(f.wrapper, S ? null : f.disabled),
         children: [
-            null != O
-                ? (0, r.jsx)(O, {
+            null != v
+                ? (0, r.jsx)(v, {
                       className: f.image,
                       channel: E,
                       section: g,

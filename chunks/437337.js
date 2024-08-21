@@ -8,7 +8,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(567526),
+    o = n(338545),
     l = n(692547),
     u = n(186325),
     c = n(84735),
@@ -38,8 +38,8 @@ let f = {
             { reducedMotion: g } = i.useContext(u.S),
             S = i.useRef(null),
             [A, N] = i.useState(!1),
-            O = (0, d.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(),
-            v = (0, d.d)(l.Z.unsafe_rawColors.GREEN_360).spring(),
+            v = (0, d.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(),
+            O = (0, d.d)(l.Z.unsafe_rawColors.GREEN_360).spring(),
             { state: R, opacity: C } = (0, _.useSpring)(
                 {
                     config: f,
@@ -63,7 +63,7 @@ let f = {
                 style: {
                     opacity: C,
                     backgroundColor: R.to({
-                        output: [O, v]
+                        output: [v, O]
                     })
                 },
                 children: [
@@ -125,7 +125,7 @@ let f = {
                                         })
                                     ]
                                 });
-                            })(R, O, v, g.enabled)
+                            })(R, v, O, g.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {

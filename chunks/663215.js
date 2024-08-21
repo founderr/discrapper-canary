@@ -66,12 +66,12 @@ function A(e) {
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         d = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         I = c.ZP.isPremium(d, m.p9.TIER_2),
-        [A, N, O] = (0, i.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites(), f.Z.isFetching()]),
-        v = (0, p.h)(e, !1),
+        [A, N, v] = (0, i.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites(), f.Z.isFetching()]),
+        O = (0, p.h)(e, !1),
         R = (0, i.Wu)([o.Z], () => {
             let e = [];
             return (
-                v.forEach((t) => {
+                O.forEach((t) => {
                     let n = o.Z.getGuild(t);
                     null != n && e.push(n);
                 }),
@@ -107,11 +107,11 @@ function A(e) {
             ? (S(e, A),
               {
                   categories: e,
-                  isFetching: O
+                  isFetching: v
               })
             : (g({
                   sections: e,
-                  guildIds: v,
+                  guildIds: O,
                   allSounds: A,
                   potentialSoundIdsForSection: Array.from(N),
                   sectionType: h.bg.FAVORITES,
@@ -120,7 +120,7 @@ function A(e) {
               L &&
                   g({
                       sections: e,
-                      guildIds: v,
+                      guildIds: O,
                       allSounds: A,
                       potentialSoundIdsForSection: P,
                       sectionType: h.bg.RECENTLY_HEARD,
@@ -129,7 +129,7 @@ function A(e) {
               b &&
                   g({
                       sections: e,
-                      guildIds: v,
+                      guildIds: O,
                       allSounds: A,
                       potentialSoundIdsForSection: M.map((e) => e.soundId),
                       sectionType: h.bg.FREQUENTLY_USED,
@@ -180,9 +180,9 @@ function A(e) {
               C && S(e, A),
               {
                   categories: e,
-                  isFetching: O
+                  isFetching: v
               });
-    }, [v, A, N, P, M, b, L, y, D, t, C, R, n, O, I]);
+    }, [O, A, N, P, M, b, L, y, D, t, C, R, n, v, I]);
 }
 function N(e, t, n) {
     return r.useMemo(

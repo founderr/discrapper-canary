@@ -20,8 +20,8 @@ var i = n(266067),
     S = n(944486),
     A = n(914010),
     N = n(70956),
-    O = n(796798),
-    v = n(198620),
+    v = n(796798),
+    O = n(198620),
     R = n(981631),
     C = n(176505),
     y = n(689938);
@@ -55,7 +55,7 @@ function b(e) {
         return;
     }
     let I = _.Z.getOrCreate(n);
-    O.l.getCurrentConfig({ location: 'fetch_messages' }).enabled && I.some(v.k5) && (L.log('Found expired attachment link, clearing messages'), _.Z.clear(n), (I = _.Z.getOrCreate(n))),
+    v.l.getCurrentConfig({ location: 'fetch_messages' }).enabled && I.some(O.k5) && (L.log('Found expired attachment link, clearing messages'), _.Z.clear(n), (I = _.Z.getOrCreate(n))),
         null != I.jumpTargetId &&
             null == i &&
             ((I = I.mutate({

@@ -20,10 +20,10 @@ var r,
     S = n(830168),
     A = n(358085),
     N = n(417363),
-    O = n(981631),
-    v = n(186901);
+    v = n(981631),
+    O = n(186901);
 ((s = r || (r = {})).INSTALL = 'Install'), (s.REPAIR = 'Repair'), ((o = i || (i = {})).PATCH = 'Patch'), (o.REPAIR = 'Repair');
-let R = [v.ff.AUTHENTICATION_FAILED, v.ff.NOT_ENTITLED],
+let R = [O.ff.AUTHENTICATION_FAILED, O.ff.NOT_ENTITLED],
     C = 'DispatchManagerStore',
     y = [],
     D = [],
@@ -184,7 +184,7 @@ class W extends (a = E.ZP.Store) {
                     a = N.Z.getState(n, i),
                     s = T.Z.getTargetBuildId(n, i),
                     o = T.Z.getTargetManifests(n, i);
-                if (null != a && a.type === O.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && _().isEqual(a.manifestIds, a.targetManifestIds) && _().isEqual(a.manifestIds, o)) {
+                if (null != a && a.type === v.vxO.UP_TO_DATE && a.buildId === a.targetBuildId && a.buildId === s && _().isEqual(a.manifestIds, a.targetManifestIds) && _().isEqual(a.manifestIds, o)) {
                     if ((D.push(t), U.has(t))) {
                         switch (U.get(t)) {
                             case 'Install':
@@ -207,7 +207,7 @@ class W extends (a = E.ZP.Store) {
                 { code: n } = t;
             if (null != n) {
                 if (R.includes(n)) Y();
-                else if (n === v.ff.APPLICATION_NOT_FOUND) {
+                else if (n === O.ff.APPLICATION_NOT_FOUND) {
                     let { context: e } = t;
                     if (null != e) {
                         let { application_id: t, branch_id: n } = e;

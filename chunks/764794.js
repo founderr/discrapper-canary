@@ -20,8 +20,8 @@ t.Z = i.memo(function (e) {
     let { disabled: t, referralsRemaining: n, channel: g, isResending: S } = e,
         { enabled: A } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
         N = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : S ? m.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : m.Z.Messages.SHARE_NITRO_TOOLTIP,
-        O = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null,
-        [v, R] = i.useState(!1),
+        v = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null,
+        [O, R] = i.useState(!1),
         [C, y] = i.useState(!1),
         D = (0, o.Z)(null, () => y(!1)),
         { analyticsLocations: L } = (0, c.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
@@ -43,12 +43,12 @@ t.Z = i.memo(function (e) {
                   (0, r.jsx)(a.u, {
                       text: N,
                       shouldShow: !C,
-                      'aria-label': null != O ? O : N,
+                      'aria-label': null != v ? v : N,
                       children: (e) =>
                           (0, r.jsx)('div', {
                               onMouseEnter: () => {
                                   !C &&
-                                      !v &&
+                                      !O &&
                                       (R(!0),
                                       f.default.track(p.rMx.SHARE_NITRO_FLOW_STEPS, {
                                           location_stack: L,
@@ -63,7 +63,7 @@ t.Z = i.memo(function (e) {
                                   ...e,
                                   innerClassName: T.button,
                                   isActive: C,
-                                  'aria-label': null != O ? O : N,
+                                  'aria-label': null != v ? v : N,
                                   'aria-haspopup': 'dialog',
                                   onClick: () => {
                                       y((e) => !e),
@@ -75,7 +75,7 @@ t.Z = i.memo(function (e) {
                                   },
                                   children: (0, r.jsx)(E.Z, {
                                       referralsRemaining: n,
-                                      hovered: v,
+                                      hovered: O,
                                       isResending: S,
                                       shouldShowBirthdayUX: A,
                                       isLightTheme: (0, s.ap)(M)

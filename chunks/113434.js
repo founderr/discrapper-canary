@@ -102,8 +102,8 @@ var r,
     S = n(358085),
     A = n(617136),
     N = n(272008),
-    O = n(569984),
-    v = n(497505),
+    v = n(569984),
+    O = n(497505),
     R = n(918701),
     C = n(796111),
     y = n(977156),
@@ -117,10 +117,10 @@ var r,
 function x() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { fetchPolicy: 'cache-only' },
         [t, n] = u.useState(!1),
-        r = (0, f.Wu)([O.Z], () => [...O.Z.quests.values()]),
-        { isFetchingCurrentQuests: i, lastFetchedCurrentQuests: a } = (0, f.cj)([O.Z], () => ({
-            isFetchingCurrentQuests: O.Z.isFetchingCurrentQuests,
-            lastFetchedCurrentQuests: O.Z.lastFetchedCurrentQuests
+        r = (0, f.Wu)([v.Z], () => [...v.Z.quests.values()]),
+        { isFetchingCurrentQuests: i, lastFetchedCurrentQuests: a } = (0, f.cj)([v.Z], () => ({
+            isFetchingCurrentQuests: v.Z.isFetchingCurrentQuests,
+            lastFetchedCurrentQuests: v.Z.lastFetchedCurrentQuests
         })),
         s = (0, y.cB)({ location: P.dr.USE_QUESTS });
     return (
@@ -150,10 +150,10 @@ function k(e) {
                         var n, r, i, a, s, o;
                         let l = !(0, R.zi)(e),
                             u = !(0, R.zi)(t),
-                            c = (0, R.Mi)(e, v.jn.QUEST_BAR) || (0, R.Mi)(e, v.jn.QUEST_BAR_V2),
-                            d = (0, R.Mi)(t, v.jn.QUEST_BAR) || (0, R.Mi)(t, v.jn.QUEST_BAR_V2),
-                            _ = (0, R.Mi)(e, v.jn.GIFT_INVENTORY_FOR_YOU),
-                            E = (0, R.Mi)(t, v.jn.GIFT_INVENTORY_FOR_YOU),
+                            c = (0, R.Mi)(e, O.jn.QUEST_BAR) || (0, R.Mi)(e, O.jn.QUEST_BAR_V2),
+                            d = (0, R.Mi)(t, O.jn.QUEST_BAR) || (0, R.Mi)(t, O.jn.QUEST_BAR_V2),
+                            _ = (0, R.Mi)(e, O.jn.GIFT_INVENTORY_FOR_YOU),
+                            E = (0, R.Mi)(t, O.jn.GIFT_INVENTORY_FOR_YOU),
                             f = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
                             h = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
                         return l !== u ? (l ? -1 : 1) : c !== d && l && u ? (c ? -1 : 1) : _ !== E ? (_ ? -1 : 1) : f !== h ? (f ? -1 : 1) : l && u ? G(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : G(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
@@ -240,7 +240,7 @@ function V(e) {
     return u.useMemo(() => (null == e ? '' : new Date(e).toLocaleDateString(n, t)), [e, t, n]);
 }
 function H(e) {
-    return (0, f.e7)([O.Z], () => O.Z.isProgressingOnDesktop(e.id));
+    return (0, f.e7)([v.Z], () => v.Z.isProgressingOnDesktop(e.id));
 }
 function Z(e) {
     return u.useMemo(() => (0, R.Bz)(e), [e]);
@@ -337,13 +337,13 @@ function q() {
         if (t || 0 === e.length) return r;
         for (let t of e) {
             var i;
-            if (!(0, R.vR)(t, v.jn.GIFT_INVENTORY_SETTINGS_BADGE) || (null !== (i = n.get(t.id)) && void 0 !== i && i)) continue;
+            if (!(0, R.vR)(t, O.jn.GIFT_INVENTORY_SETTINGS_BADGE) || (null !== (i = n.get(t.id)) && void 0 !== i && i)) continue;
             if ((null == t ? void 0 : t.userStatus) == null) {
                 r.push(t);
                 continue;
             }
             let e = null != t.userStatus.claimedAt,
-                a = (0, R.zE)(t.userStatus, v.jn.GIFT_INVENTORY_SETTINGS_BADGE);
+                a = (0, R.zE)(t.userStatus, O.jn.GIFT_INVENTORY_SETTINGS_BADGE);
             if (!e && !a) {
                 r.push(t);
                 continue;
@@ -355,12 +355,12 @@ function q() {
 function Q() {
     let e = q();
     u.useEffect(() => {
-        for (let t of e) (0, N.gl)(t.id, v.jn.GIFT_INVENTORY_SETTINGS_BADGE);
+        for (let t of e) (0, N.gl)(t.id, O.jn.GIFT_INVENTORY_SETTINGS_BADGE);
     }, [e]);
 }
 function X(e) {
     let t = (0, D.z)({ location: P.dr.MEMBERS_LIST }),
-        n = (0, f.e7)([O.Z], () => (t ? O.Z.quests : null)),
+        n = (0, f.e7)([v.Z], () => (t ? v.Z.quests : null)),
         r = u.useMemo(() => (0, R.Jg)(n, e), [e, n]);
     return F(r) ? null : r;
 }
@@ -492,7 +492,7 @@ function es(e) {
             quest: e,
             taskDetails: r,
             location: P.dr.QUEST_HOME_DESKTOP,
-            questContent: v.jn.QUEST_HOME_DESKTOP,
+            questContent: O.jn.QUEST_HOME_DESKTOP,
             useV2Variants: !0
         }),
         s = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
@@ -505,7 +505,7 @@ function es(e) {
 ((l = a || (a = {}))[(l.UNACCEPTED = 0)] = 'UNACCEPTED'), (l[(l.ACCEPTED = 1)] = 'ACCEPTED'), (l[(l.IN_PROGRESS = 2)] = 'IN_PROGRESS'), (l[(l.COMPLETED = 3)] = 'COMPLETED'), (l[(l.CLAIMED = 4)] = 'CLAIMED');
 function eo(e, t) {
     let [n, r] = (function (e) {
-            let t = (0, f.e7)([O.Z], () => O.Z.selectedTaskPlatform(e));
+            let t = (0, f.e7)([v.Z], () => v.Z.selectedTaskPlatform(e));
             return [t, u.useCallback((t) => (0, N.OR)(e, t), [e])];
         })(e.id),
         i = u.useMemo(() => (0, R.Nj)({ quest: e }), [e]),
@@ -533,21 +533,21 @@ function eo(e, t) {
                     currentProgressingPlatform: E,
                     selectedPlatform: n
                 })
-                    .with({ currentProgressingPlatform: P.cd.CONSOLE }, () => v.LI.CONSOLE)
-                    .with({ currentProgressingPlatform: P.cd.DESKTOP }, () => v.LI.DESKTOP)
+                    .with({ currentProgressingPlatform: P.cd.CONSOLE }, () => O.LI.CONSOLE)
+                    .with({ currentProgressingPlatform: P.cd.DESKTOP }, () => O.LI.DESKTOP)
                     .with(
                         {
                             currentProgressingPlatform: null,
                             lastPlatformProgress: P.cd.CONSOLE
                         },
-                        () => v.LI.CONSOLE
+                        () => O.LI.CONSOLE
                     )
                     .with(
                         {
                             currentProgressingPlatform: null,
                             lastPlatformProgress: P.cd.DESKTOP
                         },
-                        () => v.LI.DESKTOP
+                        () => O.LI.DESKTOP
                     )
                     .with(
                         {
@@ -555,7 +555,7 @@ function eo(e, t) {
                             lastPlatformProgress: null,
                             selectedPlatform: P.cd.CONSOLE
                         },
-                        () => v.LI.CONSOLE
+                        () => O.LI.CONSOLE
                     )
                     .with(
                         {
@@ -563,7 +563,7 @@ function eo(e, t) {
                             lastPlatformProgress: null,
                             selectedPlatform: P.cd.DESKTOP
                         },
-                        () => v.LI.DESKTOP
+                        () => O.LI.DESKTOP
                     )
                     .with(
                         {
@@ -571,7 +571,7 @@ function eo(e, t) {
                             lastPlatformProgress: null,
                             selectedPlatform: null
                         },
-                        () => (a && i && l ? v.LI.SELECT : a ? v.LI.CONSOLE : v.LI.DESKTOP)
+                        () => (a && i && l ? O.LI.SELECT : a ? O.LI.CONSOLE : O.LI.DESKTOP)
                     )
                     .exhaustive(),
             [a, i, l, _, E, n]
@@ -595,7 +595,7 @@ function el(e) {
         l = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         u = d.T.DESKTOP.has(i.taskType),
         c = 0 === i.percentComplete,
-        _ = o && !l && !s && null == r && (u || (c && a === v.LI.DESKTOP)),
+        _ = o && !l && !s && null == r && (u || (c && a === O.LI.DESKTOP)),
         E = (0, S.isWeb)() && _,
         f = (0, S.isMac)() && i.taskType === d.X.STREAM_ON_DESKTOP && _,
         h = [];

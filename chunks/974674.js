@@ -15,7 +15,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(567526),
+    o = n(338545),
     l = n(1561),
     u = n(438784),
     c = n(696826),
@@ -88,7 +88,7 @@ function N(e, t, n, i) {
         rx: n.stroke
     });
 }
-function O(e) {
+function v(e) {
     let { status: t, isMobile: n, isTyping: r, size: i } = e,
         a = n && !r && t === p.Skl.ONLINE,
         s = (0, h.UC)(i);
@@ -115,8 +115,8 @@ function O(e) {
         })
     };
 }
-function v(e) {
-    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: _, tabIndex: p, ariaLabel: g, ariaHidden: S, status: A, isMobile: N = !1, isTyping: O = !1, avatarDecoration: v, typingOffset: R, specs: C } = e,
+function O(e) {
+    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: _, tabIndex: p, ariaLabel: g, ariaHidden: S, status: A, isMobile: N = !1, isTyping: v = !1, avatarDecoration: O, typingOffset: R, specs: C } = e,
         y = {
             width: (0, h.px)(n),
             height: (0, h.px)(n)
@@ -193,9 +193,9 @@ function v(e) {
                     return E.QS.AVATAR_DECORATION_STATUS_ROUND_120;
             }
             return null;
-        })(A, n, N, O),
+        })(A, n, N, v),
         M =
-            null != v &&
+            null != O &&
             (0, r.jsx)('svg', {
                 width: L + R,
                 height: L,
@@ -212,7 +212,7 @@ function v(e) {
                         className: T.avatarStack,
                         children: (0, r.jsx)('img', {
                             className: T.avatar,
-                            src: v,
+                            src: O,
                             alt: ' ',
                             'aria-hidden': !0
                         })
@@ -266,16 +266,16 @@ function R(e) {
     );
 }
 function C(e) {
-    let { src: t, status: n, size: i, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: _, isSpeaking: I = !1, statusTooltip: m = !1, statusTooltipDelay: g, statusBackdropColor: S, 'aria-hidden': O = !1, 'aria-label': C, imageClassName: y } = e,
+    let { src: t, status: n, size: i, statusColor: a, isMobile: o = !1, isTyping: l = !1, typingIndicatorRef: _, isSpeaking: I = !1, statusTooltip: m = !1, statusTooltipDelay: g, statusBackdropColor: S, 'aria-hidden': v = !1, 'aria-label': C, imageClassName: y } = e,
         D = n !== p.Skl.UNKNOWN ? n : null,
         L = (0, h.UC)(i),
         b = null != D ? Math.ceil((L.status * h.D6 - L.status) / 2) : 0,
         M = L.size + b,
         P = (0, c.vj)(D, a);
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(O, {
         ...e,
         ariaLabel: C,
-        ariaHidden: O,
+        ariaHidden: v,
         status: D,
         specs: L,
         typingOffset: b,
@@ -412,7 +412,7 @@ function y(e) {
         G = i.useId(),
         [k] = i.useState(() => ({
             fill: a,
-            ...O({
+            ...v({
                 size: m,
                 status: n,
                 isMobile: t,
@@ -422,7 +422,7 @@ function y(e) {
         B = i.useMemo(
             () => ({
                 fill: w,
-                ...O({
+                ...v({
                     size: m,
                     status: C,
                     isMobile: l,
@@ -455,7 +455,7 @@ function y(e) {
         $ = z.size - z.status - X - z.offset,
         J = z.size - Q - z.offset,
         ee = z.size + Math.ceil(X);
-    return (0, r.jsx)(v, {
+    return (0, r.jsx)(O, {
         ...e,
         ariaLabel: P,
         ariaHidden: M,

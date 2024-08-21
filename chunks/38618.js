@@ -20,8 +20,8 @@ var r,
     S = n(944486),
     A = n(885110),
     N = n(959457),
-    O = n(358085),
-    v = n(138859),
+    v = n(358085),
+    O = n(138859),
     R = n(955132),
     C = n(645436),
     y = n(344651),
@@ -121,7 +121,7 @@ class H extends (r = u.ZP.Store) {
                     guildId: e.guildId,
                     channelId: e.channelId
                 }),
-                (0, O.isIOS)() && x === D.$7l.BACKGROUND && (null == e.channelId ? R.Wb.close(!0) : R.Wb.isClosed() && (C.Y(!1), R.Wb.connect())),
+                (0, v.isIOS)() && x === D.$7l.BACKGROUND && (null == e.channelId ? R.Wb.close(!0) : R.Wb.isClosed() && (C.Y(!1), R.Wb.connect())),
                 !1
             );
         },
@@ -168,7 +168,7 @@ class H extends (r = u.ZP.Store) {
                 });
         },
         APP_STATE_UPDATE: function (e) {
-            return (0, O.isIOS)() ? (h.default.isAuthenticated() && (x === D.$7l.INACTIVE && e.state === D.$7l.BACKGROUND && null == R.GC.channelId ? R.Wb.close(!0) : x === D.$7l.BACKGROUND && e.state === D.$7l.ACTIVE && R.Wb.isClosed() && (C.Y(!1), R.Wb.connect())), (x = e.state)) : e.state === D.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && R.Wb.resetBackoff('App state is active')), !1;
+            return (0, v.isIOS)() ? (h.default.isAuthenticated() && (x === D.$7l.INACTIVE && e.state === D.$7l.BACKGROUND && null == R.GC.channelId ? R.Wb.close(!0) : x === D.$7l.BACKGROUND && e.state === D.$7l.ACTIVE && R.Wb.isClosed() && (C.Y(!1), R.Wb.connect())), (x = e.state)) : e.state === D.$7l.ACTIVE && (C.Y(!1), h.default.isAuthenticated() && R.Wb.resetBackoff('App state is active')), !1;
         },
         GUILD_MEMBERS_REQUEST: function (e) {
             return (
@@ -273,7 +273,7 @@ class H extends (r = u.ZP.Store) {
             return R.Wb.isSessionEstablished() && R.Wb.remoteCommand(t, n), !1;
         },
         RESET_SOCKET: function (e) {
-            if (R.Wb.connectionState !== v.Z.WILL_RECONNECT) R.Wb.resetSocketOnError(e.args);
+            if (R.Wb.connectionState !== O.Z.WILL_RECONNECT) R.Wb.resetSocketOnError(e.args);
         },
         CLIPS_SETTINGS_UPDATE: k,
         RUNNING_GAMES_CHANGE: k,

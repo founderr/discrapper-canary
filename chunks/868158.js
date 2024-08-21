@@ -1,6 +1,6 @@
 n.d(t, {
     Eb: function () {
-        return v;
+        return O;
     },
     Fx: function () {
         return y;
@@ -12,7 +12,7 @@ n.d(t, {
         return M;
     },
     r$: function () {
-        return O;
+        return v;
     }
 }),
     n(653041),
@@ -39,7 +39,7 @@ let g = new E.Z('ReadyPayloadUtils'),
     S = {},
     A = null,
     N = {};
-function O(e, t) {
+function v(e, t) {
     var n;
     let { guilds: r, merged_members: i, merged_presences: a, ...s } = e,
         o = D(N, null == a ? void 0 : a.friends),
@@ -78,7 +78,7 @@ function O(e, t) {
         }
     );
 }
-function v() {
+function O() {
     let e = o.Z.database(),
         t = (0, _.O)() ? l.Z.getCommittedVersions() : Promise.resolve({}),
         n = (0, _.O)() ? c.Z.getGuildIds() : Promise.resolve(new Set());

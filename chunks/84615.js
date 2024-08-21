@@ -1,6 +1,6 @@
 n.d(t, {
     Ox: function () {
-        return O;
+        return v;
     },
     QP: function () {
         return g;
@@ -9,7 +9,7 @@ n.d(t, {
         return R;
     },
     q4: function () {
-        return v;
+        return O;
     }
 }),
     n(47120);
@@ -101,7 +101,7 @@ let A = {
         exitActive: m.exitActiveReducedMotion,
         exitDone: m.exitDoneReducedMotion
     };
-function O() {
+function v() {
     let { reducedMotion: e } = s.useContext(f.AccessibilityPreferencesContext),
         t = e.enabled ? N : A,
         n = g((e) => e.fullScreenLayers);
@@ -134,7 +134,7 @@ function O() {
         )
     });
 }
-function v(e) {
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
         { layerKey: n, Layer: r } = t,
         i = null != n ? n : l()();

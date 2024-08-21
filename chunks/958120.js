@@ -24,8 +24,8 @@ var r = n(735250),
     S = n(580512),
     A = n(67152),
     N = n(579285),
-    O = n(287612),
-    v = n(228168),
+    v = n(287612),
+    O = n(228168),
     R = n(981631),
     C = n(122269);
 function y(e) {
@@ -48,7 +48,7 @@ function y(e) {
         children: [
             (0, r.jsx)(m.Z, {
                 user: t,
-                profileType: v.y0.BITE_SIZE,
+                profileType: O.y0.BITE_SIZE,
                 onOpenProfile: b,
                 usernameIcon:
                     t.hasAvatarForGuild(null == D ? void 0 : D.id) &&
@@ -60,7 +60,7 @@ function y(e) {
                 pronouns: null == y ? void 0 : y.pronouns,
                 tags: (0, r.jsx)(E.Z, {
                     displayProfile: y,
-                    profileType: v.y0.BITE_SIZE,
+                    profileType: O.y0.BITE_SIZE,
                     onClose: P
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
@@ -84,7 +84,7 @@ function y(e) {
                     })
                 }),
             t.id !== n.id &&
-                (0, r.jsx)(O.Z, {
+                (0, r.jsx)(v.Z, {
                     user: t,
                     onOpenProfile: (e) => (null == b ? void 0 : b({ section: e }))
                 }),

@@ -6,7 +6,7 @@ t.d(n, {
         return P;
     },
     F4: function () {
-        return S;
+        return p;
     },
     HH: function () {
         return x;
@@ -42,7 +42,7 @@ t.d(n, {
         return j;
     },
     zW: function () {
-        return p;
+        return S;
     }
 }),
     t(735250),
@@ -64,16 +64,16 @@ var u = t(623292),
     m = t(934415),
     M = t(572004),
     _ = t(585483),
-    h = t(709054),
-    N = t(111618),
+    N = t(709054),
+    h = t(111618),
     I = t(50284),
     Z = t(730954),
     A = t(981631);
-function p(e) {
+function S(e) {
     let n = e.getGuildId();
     null != n && o.Z.open(n, A.pNK.OVERVIEW);
 }
-function S(e, n, t) {
+function p(e, n, t) {
     (0, M.JG)(t.shiftKey ? ''.concat(n.channel_id, '-').concat(n.id) : n.id);
 }
 function v(e, n) {
@@ -103,7 +103,7 @@ function D(e, n) {
     (0, a.Z)(e.id, n.id);
 }
 function L(e, n) {
-    (0, Z.Z)(e, n, void 0, N.Z.getOptions(n.id));
+    (0, Z.Z)(e, n, void 0, h.Z.getOptions(n.id));
 }
 function x(e, n, t) {
     let i = e.isPrivate(),
@@ -120,7 +120,7 @@ function G(e, n) {
     (0, c.R6)(e, n, 'Message');
 }
 function b(e, n) {
-    let t = f.Z.getChannel(h.default.castMessageIdAsChannelId(n.id));
+    let t = f.Z.getChannel(N.default.castMessageIdAsChannelId(n.id));
     null != t && (0, c.ok)(t);
 }
 function y(e, n) {

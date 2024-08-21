@@ -287,7 +287,7 @@ var t, n;
                 m = 'GET' !== r.method ? {} : t(t({}, r.data), a.data),
                 T = t(t(t({ 'x-algolia-agent': e.userAgent.value }, e.queryParameters), m), a.queryParameters),
                 N = 0,
-                O = function t(n, i) {
+                v = function t(n, i) {
                     var s = n.pop();
                     if (void 0 === s)
                         throw {
@@ -400,7 +400,7 @@ var t, n;
                             : d
                 };
             })).then(function (e) {
-                return O(i(e.statelessHosts).reverse(), e.getTimeout);
+                return v(i(e.statelessHosts).reverse(), e.getTimeout);
             });
         }
         function T(e) {
@@ -516,7 +516,7 @@ var t, n;
                     );
                 };
             },
-            O = function (e) {
+            v = function (e) {
                 return function (t, n) {
                     return e.transporter.write(
                         {
@@ -527,7 +527,7 @@ var t, n;
                     );
                 };
             },
-            v = function (e) {
+            O = function (e) {
                 return function (t, n) {
                     return e.transporter.read(
                         {
@@ -1408,10 +1408,10 @@ var t, n;
                     );
                 };
             },
-            eO = function (e) {
+            ev = function (e) {
                 return function (t, n) {
                     return l(
-                        ev(e)([t], n).then(function (e) {
+                        eO(e)([t], n).then(function (e) {
                             return { taskID: e.taskIDs[0] };
                         }),
                         function (t, n) {
@@ -1420,7 +1420,7 @@ var t, n;
                     );
                 };
             },
-            ev = function (e) {
+            eO = function (e) {
                 return function (t, n) {
                     var r = t.map(function (e) {
                         return { objectID: e };
@@ -2405,8 +2405,8 @@ var t, n;
                                             getSettings: ew,
                                             partialUpdateObject: eG,
                                             partialUpdateObjects: ek,
-                                            deleteObject: eO,
-                                            deleteObjects: ev,
+                                            deleteObject: ev,
+                                            deleteObjects: eO,
                                             deleteBy: eA,
                                             clearObjects: eT,
                                             browseObjects: eh,
@@ -2445,10 +2445,10 @@ var t, n;
                                                 {
                                                     methods: {
                                                         addABTest: N,
-                                                        getABTest: v,
+                                                        getABTest: O,
                                                         getABTests: R,
                                                         stopABTest: C,
-                                                        deleteABTest: O
+                                                        deleteABTest: v
                                                     }
                                                 }
                                             )).region || 'us'),

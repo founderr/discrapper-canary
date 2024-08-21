@@ -1,12 +1,12 @@
 n.d(t, {
     AG: function () {
-        return O;
+        return v;
     },
     Z$: function () {
         return R;
     },
     jH: function () {
-        return v;
+        return O;
     },
     zH: function () {
         return C;
@@ -85,7 +85,7 @@ function N(e) {
         })
     );
 }
-class O extends i.PureComponent {
+class v extends i.PureComponent {
     render() {
         let { color: e, onChange: t, value: n, disabled: i } = this.props;
         return (0, r.jsx)(N, {
@@ -97,7 +97,7 @@ class O extends i.PureComponent {
         });
     }
 }
-class v extends i.PureComponent {
+class O extends i.PureComponent {
     render() {
         let { customColor: e, value: t, disabled: n, 'aria-label': i } = this.props;
         return (0, r.jsx)(N, {
@@ -111,13 +111,13 @@ class v extends i.PureComponent {
 }
 let R = i.memo(function (e) {
     let { value: t, eagerUpdate: n = !1, onChange: a, onClose: o, suggestedColors: l, middle: _, footer: p, showEyeDropper: T, wrapperComponentType: A, className: N } = e,
-        O = (0, h.Z)(),
-        v = (function (e) {
+        v = (0, h.Z)(),
+        O = (function (e) {
             if (null == e) return null;
             if ('string' == typeof e) return (0, u.FX)(e) ? (0, u._i)(e) : null;
             return e;
         })(t),
-        R = null != v ? v : 0,
+        R = null != O ? O : 0,
         C = (0, u.Rf)(R),
         y = (0, u.O)(R),
         [D, L] = i.useState({
@@ -129,18 +129,18 @@ let R = i.memo(function (e) {
             input: C
         });
     i.useEffect(() => {
-        if (null == v || v === D.current) return;
-        let e = (0, u.Rf)(v),
-            t = (0, u.O)(v);
+        if (null == O || O === D.current) return;
+        let e = (0, u.Rf)(O),
+            t = (0, u.O)(O);
         L({
-            current: v,
+            current: O,
             pending: {
                 hex: e,
                 hsl: t
             },
             input: e
         });
-    }, [v, D]),
+    }, [O, D]),
         i.useEffect(() => o, [o]);
     let b = (e) => {
             let t = '#' === e[0] ? e : '#'.concat(e);
@@ -164,9 +164,9 @@ let R = i.memo(function (e) {
                 a(n);
         },
         M = async () => {
-            if (null != O)
+            if (null != v)
                 try {
-                    let { sRGBHex: e } = await O.open();
+                    let { sRGBHex: e } = await v.open();
                     b(e);
                 } catch {}
         },
@@ -199,7 +199,7 @@ let R = i.memo(function (e) {
                     className: S.customColorPickerInputContainer,
                     children: [
                         T &&
-                            null != O &&
+                            null != v &&
                             (0, r.jsx)(I.JO, {
                                 onClick: M,
                                 tooltip: g.Z.Messages.PICK_A_COLOR_FROM_THE_PAGE,

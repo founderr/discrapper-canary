@@ -22,8 +22,8 @@ e.exports = function (e, t, n) {
         S,
         A,
         N = n && n.that,
-        O = !!(n && n.AS_ENTRIES),
-        v = !!(n && n.IS_RECORD),
+        v = !!(n && n.AS_ENTRIES),
+        O = !!(n && n.IS_RECORD),
         R = !!(n && n.IS_ITERATOR),
         C = !!(n && n.INTERRUPTED),
         y = r(t, N),
@@ -31,9 +31,9 @@ e.exports = function (e, t, n) {
             return p && _(p, 'normal', e), new f(!0, e);
         },
         L = function (e) {
-            return O ? (a(e), C ? y(e[0], e[1], D) : y(e[0], e[1])) : C ? y(e, D) : y(e);
+            return v ? (a(e), C ? y(e[0], e[1], D) : y(e[0], e[1])) : C ? y(e, D) : y(e);
         };
-    if (v) p = e.iterator;
+    if (O) p = e.iterator;
     else if (R) p = e;
     else {
         if (!(I = d(e))) throw E(s(e) + ' is not iterable');
@@ -43,7 +43,7 @@ e.exports = function (e, t, n) {
         }
         p = c(e, I);
     }
-    for (S = v ? e.next : p.next; !(A = i(S, p)).done; ) {
+    for (S = O ? e.next : p.next; !(A = i(S, p)).done; ) {
         try {
             g = L(A.value);
         } catch (e) {

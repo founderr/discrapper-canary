@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(256226),
     A = n(314172),
     N = n(981631),
-    O = n(689938),
-    v = n(304747);
+    v = n(689938),
+    O = n(304747);
 let R = (0, E.Z)(function (e) {
     let { user: t, currentUser: n, guild: a, guildMember: c, roles: _, highestRole: E, canManageRoles: f, width: h, onAddRole: p, onRemoveRole: I } = e;
     s()(null != h, 'Unexpected null width');
@@ -71,7 +71,7 @@ let R = (0, E.Z)(function (e) {
             wrap: !0
         }),
         V = _.length,
-        H = 0 === V ? O.Z.Messages.ROLE_LIST_EMPTY : O.Z.Messages.ROLES_LIST.format({ numRoles: V }),
+        H = 0 === V ? v.Z.Messages.ROLE_LIST_EMPTY : v.Z.Messages.ROLES_LIST.format({ numRoles: V }),
         Z = M.map((e, i) => {
             var s;
             return (0, r.jsx)(
@@ -101,7 +101,7 @@ let R = (0, E.Z)(function (e) {
             children: (e) => {
                 let { ref: t, ...n } = e;
                 return (0, r.jsxs)('div', {
-                    className: v.root,
+                    className: O.root,
                     'aria-label': H,
                     ref: t,
                     ...n,
@@ -109,11 +109,11 @@ let R = (0, E.Z)(function (e) {
                         Z,
                         w &&
                             (0, r.jsx)(d.TooltipContainer, {
-                                text: O.Z.Messages.VIEW_ALL_ROLES,
+                                text: v.Z.Messages.VIEW_ALL_ROLES,
                                 children: (0, r.jsx)(d.Clickable, {
                                     innerRef: G,
                                     onClick: j,
-                                    className: v.showMoreButton,
+                                    className: O.showMoreButton,
                                     children: (0, r.jsx)(d.Text, {
                                         variant: 'text-xs/medium',
                                         children: '+'.concat(_.length - M.length)
@@ -122,10 +122,10 @@ let R = (0, E.Z)(function (e) {
                             }),
                         L &&
                             (0, r.jsx)(d.TooltipContainer, {
-                                text: O.Z.Messages.COLLAPSE_ROLES,
+                                text: v.Z.Messages.COLLAPSE_ROLES,
                                 children: (0, r.jsx)(d.Clickable, {
                                     onClick: W,
-                                    className: v.collapseButton,
+                                    className: O.collapseButton,
                                     children: (0, r.jsx)(m.Z, {
                                         direction: m.Z.Directions.LEFT,
                                         width: 12,
@@ -187,8 +187,8 @@ function C(e) {
             },
             [u, a.id, t.id, s]
         ),
-        O = m && null != o;
-    return 0 !== d.length || O
+        v = m && null != o;
+    return 0 !== d.length || v
         ? (0, r.jsx)('div', {
               children: (0, r.jsx)(R, {
                   user: t,

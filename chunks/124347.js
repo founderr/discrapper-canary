@@ -3,7 +3,7 @@ n.d(t, {
         return R;
     },
     u: function () {
-        return O;
+        return v;
     }
 }),
     n(47120);
@@ -40,17 +40,17 @@ function N(e, t, n) {
         e
     );
 }
-let O = /\.gif($|\?|#)/i,
-    v = /\.png($|\?|#)/i;
+let v = /\.gif($|\?|#)/i,
+    O = /\.png($|\?|#)/i;
 ((a = r || (r = {})).LOAD = 'LOAD'), (a.PRELOAD = 'PRELOAD'), (a.CLICK = 'CLICK');
 class R extends (i = o.Component) {
     static isAnimated(e) {
         let { src: t, original: n, animated: r } = e;
-        return r || O.test(null != n && '' !== n ? n : t);
+        return r || v.test(null != n && '' !== n ? n : t);
     }
     static isSrcPNG(e) {
         let { src: t } = e;
-        return v.test(t);
+        return O.test(t);
     }
     componentDidMount() {
         let { readyState: e } = this.state;
@@ -119,7 +119,7 @@ class R extends (i = o.Component) {
         null != i && this._cancellers.add(i);
     }
     render() {
-        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: I, minHeight: m, maxWidth: T, maxHeight: g, onClick: A, renderAccessory: N, tabIndex: O, limitResponsiveWidth: v, useFullWidth: C, placeholder: y, placeholderVersion: D, dataSafeSrc: L } = this.props,
+        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: I, minHeight: m, maxWidth: T, maxHeight: g, onClick: A, renderAccessory: N, tabIndex: v, limitResponsiveWidth: O, useFullWidth: C, placeholder: y, placeholderVersion: D, dataSafeSrc: L } = this.props,
             { readyState: b, hasMouseOver: M, hasFocus: P } = this.state,
             U = null != n,
             w = this.getRatio(),
@@ -135,9 +135,9 @@ class R extends (i = o.Component) {
                 minWidth: I,
                 minHeight: m,
                 mediaLayoutType: this.getType(),
-                limitResponsiveWidth: v,
+                limitResponsiveWidth: O,
                 useFullWidth: C,
-                tabIndex: O,
+                tabIndex: v,
                 width: x,
                 height: G,
                 src: '',

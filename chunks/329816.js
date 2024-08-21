@@ -20,8 +20,8 @@ var r = n(735250),
     S = n(899663),
     A = n(793903),
     N = n(213609),
-    O = n(613413),
-    v = n(94795),
+    v = n(613413),
+    O = n(94795),
     R = n(327943),
     C = n(907459),
     y = n(559407),
@@ -108,7 +108,7 @@ t.Z = function (e) {
             }) &&
             eI &&
             !em &&
-            ((0, v.nJ)(),
+            ((0, O.nJ)(),
             f.Z.dispatch({
                 type: 'APP_ICON_TRACK_IMPRESSION',
                 markAsDismissed: ep
@@ -184,7 +184,7 @@ t.Z = function (e) {
                                                                                 (0, r.jsx)(x.Un, {}),
                                                                                 (0, r.jsx)(k.ot, {}),
                                                                                 (0, r.jsx)(E.ToastContainer, {}),
-                                                                                (0, r.jsx)(O.Z, {}),
+                                                                                (0, r.jsx)(v.Z, {}),
                                                                                 (0, r.jsx)(B.Z, {}),
                                                                                 (0, r.jsx)(ea, {})
                                                                             ]

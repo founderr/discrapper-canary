@@ -94,10 +94,10 @@ function A() {
 function N() {
     A();
 }
-function O() {
+function v() {
     g();
 }
-class v extends s.Z {
+class O extends s.Z {
     forceRefreshIfOutdated() {
         let e = E.Z.getState();
         null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && g({ forceRefresh: !0 });
@@ -108,7 +108,7 @@ class v extends s.Z {
             (t = this),
             (n = 'actions'),
             (r = {
-                POST_CONNECTION_OPEN: O,
+                POST_CONNECTION_OPEN: v,
                 CONNECTION_CLOSED: N,
                 ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => g(),
                 ENTITLEMENT_CREATE: T,
@@ -126,4 +126,4 @@ class v extends s.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new v();
+t.Z = new O();

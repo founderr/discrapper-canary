@@ -32,8 +32,8 @@ let I = {},
     S = {},
     A = new Set(),
     N = () => b.emitChange(),
-    O = o().debounce(N, 150);
-function v(e) {
+    v = o().debounce(N, 150);
+function O(e) {
     let t = T[e];
     null != t &&
         !t.closed &&
@@ -60,11 +60,11 @@ function R(e, t, r) {
 function C(e) {
     let t = T[e];
     null != t &&
-        (!t.closed && v(e),
+        (!t.closed && O(e),
         t.close(),
         !(function (e) {
             let t = T[e];
-            a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', N), t.removeEventListener('blur', N), t.removeEventListener('resize', O);
+            a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', N), t.removeEventListener('blur', N), t.removeEventListener('resize', v);
             let n = g[e];
             a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete T[e], delete m[e], delete S[e], delete g[e];
         })(e),
@@ -93,7 +93,7 @@ function y(e) {
                             (0, f.uF)(r, N),
                                 t.addEventListener('focus', N),
                                 t.addEventListener('blur', N),
-                                t.addEventListener('resize', O),
+                                t.addEventListener('resize', v),
                                 !(function (e, t) {
                                     for (let e of document.querySelectorAll('link[rel="stylesheet"]')) R(t, e.href, e.integrity);
                                 })(0, t);
@@ -194,7 +194,7 @@ let b = new L(c.Z, {
     POPOUT_WINDOW_CLOSE: function (e) {
         let { key: t } = e,
             n = T[t];
-        null != n && !n.closed && (v(t), n.close());
+        null != n && !n.closed && (O(t), n.close());
     },
     POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function (e) {
         let { key: t, alwaysOnTop: n } = e;

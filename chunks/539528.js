@@ -132,18 +132,18 @@ function g(e) {
         S = l.getUserConfirmation,
         A = void 0 === S ? p : S,
         N = l.keyLength,
-        O = void 0 === N ? 6 : N,
-        v = e.basename ? c(o(e.basename)) : '';
+        v = void 0 === N ? 6 : N,
+        O = e.basename ? c(o(e.basename)) : '';
     function R(e) {
         var t = e || {},
             n = t.key,
             r = t.state,
             i = window.location,
             a = i.pathname + i.search + i.hash;
-        return v && (a = u(a, v)), _(a, r, n);
+        return O && (a = u(a, O)), _(a, r, n);
     }
     function C() {
-        return Math.random().toString(36).substr(2, O);
+        return Math.random().toString(36).substr(2, v);
     }
     var y = f();
     function D(e) {
@@ -179,7 +179,7 @@ function g(e) {
     var U = R(T()),
         w = [U.key];
     function x(e) {
-        return v + d(e);
+        return O + d(e);
     }
     function G(e) {
         n.go(e);
@@ -314,12 +314,12 @@ function N(e) {
     var t = e.indexOf('#');
     return -1 === t ? e : e.slice(0, t);
 }
-function O() {
+function v() {
     var e = window.location.href,
         t = e.indexOf('#');
     return -1 === t ? '' : e.substring(t + 1);
 }
-function v(e) {
+function O(e) {
     window.location.replace(N(window.location.href) + '#' + e);
 }
 function R(e) {
@@ -335,7 +335,7 @@ function R(e) {
         m = I.encodePath,
         T = I.decodePath;
     function g() {
-        var e = T(O());
+        var e = T(v());
         return E && (e = u(e, E)), _(e);
     }
     var R = f();
@@ -345,9 +345,9 @@ function R(e) {
     var y = !1,
         D = null;
     function L() {
-        var e = O(),
+        var e = v(),
             t = m(e);
-        if (e !== t) v(t);
+        if (e !== t) O(t);
         else {
             var n,
                 r,
@@ -377,9 +377,9 @@ function R(e) {
                 })(i);
         }
     }
-    var b = O(),
+    var b = v(),
         M = m(b);
-    b !== M && v(M);
+    b !== M && O(M);
     var P = g(),
         U = [d(P)];
     function w(e) {
@@ -406,7 +406,7 @@ function R(e) {
                     if (e) {
                         var t = d(r),
                             i = m(E + t);
-                        if (O() !== i) {
+                        if (v() !== i) {
                             (D = t), (a = i), (window.location.hash = a);
                             var a,
                                 s = U.lastIndexOf(d(B.location)),
@@ -428,7 +428,7 @@ function R(e) {
                     if (e) {
                         var t = d(r),
                             i = m(E + t);
-                        O() !== i && ((D = t), v(i));
+                        v() !== i && ((D = t), O(i));
                         var a = U.indexOf(d(B.location));
                         -1 !== a && (U[a] = t),
                             C({

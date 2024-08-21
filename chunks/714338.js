@@ -26,7 +26,7 @@ function A(e) {
 function N(e, t) {
     return (n, r) => (u.default.track(d.rMx.KEYBOARD_SHORTCUT_USED, { shortcut_name: e }), t(n, r));
 }
-function O(e) {
+function v(e) {
     for (let [t, n] of Object.entries(e)) {
         if (null == n) continue;
         let e = g();
@@ -66,10 +66,10 @@ function O(e) {
             _ = e;
         },
         enable() {
-            if (!f) (f = !0), this.checkDupes(_), O(_);
+            if (!f) (f = !0), this.checkDupes(_), v(_);
         },
         enableTemp(e) {
-            E.push(_), (_ = e), O(e), (f = !0);
+            E.push(_), (_ = e), v(e), (f = !0);
         },
         disableTemp() {
             let e = E.pop();

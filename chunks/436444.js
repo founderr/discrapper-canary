@@ -8,7 +8,7 @@ var r = n(735250);
 n(470079);
 var i = n(120356),
     a = n.n(i),
-    s = n(567526),
+    s = n(338545),
     o = n(481060),
     l = n(906732),
     u = n(471885),
@@ -28,10 +28,10 @@ t.Z = function (e) {
     let { children: t, confettiTriggerRef: n, guild: i, isProgressBarAnimationComplete: I, setConfettiCount: m, setShouldFireConfetti: T, tier: g, tierMarkerAnimationPosition: S } = e,
         { analyticsLocations: A } = (0, l.ZP)(),
         N = E.oCV[g] - i.premiumSubscriberCount,
-        O = g <= S || I,
-        v = O && g <= i.premiumTier,
-        R = O && g < i.premiumTier,
-        C = O && g === i.premiumTier,
+        v = g <= S || I,
+        O = v && g <= i.premiumTier,
+        R = v && g < i.premiumTier,
+        C = v && g === i.premiumTier,
         { scaleFactor: y } = (0, o.useSpring)({
             from: { scaleFactor: 0 },
             to: { scaleFactor: S >= g || (I && S + 1 === g) || (I && -1 === S && g === E.Eu4.NONE) ? 1 : 0 },
@@ -53,12 +53,12 @@ t.Z = function (e) {
                     })
             ]
         }),
-        L = v ? 'div' : o.Clickable,
-        b = v
+        L = O ? 'div' : o.Clickable,
+        b = O
             ? {}
             : {
                   onClick: function () {
-                      O &&
+                      v &&
                           (0, d.u)({
                               analyticsLocations: A,
                               analyticsLocation: {
@@ -84,7 +84,7 @@ t.Z = function (e) {
                   }
               };
     return (0, r.jsx)(o.Tooltip, {
-        text: v
+        text: O
             ? f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({ tierName: (0, c.nW)(g, { useLevels: !1 }) })
             : f.Z.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_REMAINING_FOR_TIER.format({
                   numBoostsRequired: N,
@@ -94,8 +94,8 @@ t.Z = function (e) {
         children: (e) =>
             (0, r.jsxs)(L, {
                 className: a()(h.progressBarMarker, {
-                    [h.progressBarMarkerUnlocked]: v,
-                    [h.progressBarMarkerLocked]: !v,
+                    [h.progressBarMarkerUnlocked]: O,
+                    [h.progressBarMarkerLocked]: !O,
                     [h.progressBarMarkerLower]: R,
                     [h.progressBarMarkerCurrent]: C
                 }),
@@ -103,8 +103,8 @@ t.Z = function (e) {
                 ...e,
                 ...b,
                 children: [
-                    !v && (0, r.jsx)('div', { className: h.boostedTierIconBackground }),
-                    v && g === E.Eu4.TIER_3
+                    !O && (0, r.jsx)('div', { className: h.boostedTierIconBackground }),
+                    O && g === E.Eu4.TIER_3
                         ? (0, r.jsx)(_.m, {
                               confettiTriggerRef: n,
                               setConfettiCount: m,
@@ -116,7 +116,7 @@ t.Z = function (e) {
                         className: h.progressBarMarkerLabel,
                         variant: 'text-md/normal',
                         children: [
-                            v &&
+                            O &&
                                 g !== E.Eu4.NONE &&
                                 (0, r.jsx)(o.CheckmarkLargeIcon, {
                                     size: 'md',

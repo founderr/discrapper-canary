@@ -68,8 +68,8 @@ var r,
     S = n(230900),
     A = n(703656),
     N = n(881824),
-    O = n(922482),
-    v = n(565799),
+    v = n(922482),
+    O = n(565799),
     R = n(501655),
     C = n(344185),
     y = n(814443),
@@ -275,10 +275,10 @@ function ei(e) {
         S = (0, l.e7)([b.Z], () => b.Z.hasConsented(W.pjP.PERSONALIZATION)),
         A = (0, l.e7)([y.Z], () => y.Z.getUserAffinities()),
         N = S && A.length > 0,
-        O = [...T, ...E];
+        v = [...T, ...E];
     return (
-        i !== O.length &&
-            O.length > 0 &&
+        i !== v.length &&
+            v.length > 0 &&
             (r(
                 (function (e) {
                     let t = [...e],
@@ -375,10 +375,10 @@ function ei(e) {
                             ],
                             ['desc']
                         );
-                    })(O, N)
+                    })(v, N)
                 ).slice(0, 3)
             ),
-            u(O.length)),
+            u(v.length)),
         n
     );
 }
@@ -428,11 +428,11 @@ function eo(e) {
     );
 }
 function el(e) {
-    let t = (0, l.e7)([v.Z], () => (null == e ? null : v.Z.getParticipantCount(e.id, R.pV.AUDIENCE))),
-        n = (0, l.Wu)([v.Z], () =>
+    let t = (0, l.e7)([O.Z], () => (null == e ? null : O.Z.getParticipantCount(e.id, R.pV.AUDIENCE))),
+        n = (0, l.Wu)([O.Z], () =>
             null == e
                 ? []
-                : v.Z.getMutableParticipants(e.id, R.pV.SPEAKER)
+                : O.Z.getMutableParticipants(e.id, R.pV.SPEAKER)
                       .filter((e) => e.type === R.Ui.VOICE)
                       .map((e) => {
                           let { user: t } = e;
@@ -545,7 +545,7 @@ function ed(e, t, n) {
     }
 }
 let e_ = async (e, t) => {
-        let n = await (0, O.AC)(e, t);
+        let n = await (0, v.AC)(e, t);
         (0, N.R5)(n, null, !1);
     },
     eE = (e, t) => {

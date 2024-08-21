@@ -20,8 +20,8 @@ var r = n(147018),
     S = n(622281),
     A = n(714050),
     N = n(803938),
-    O = n(879),
-    v = n(981971),
+    v = n(879),
+    O = n(981971),
     R = n(11697),
     C = n(202934),
     y = n(641236),
@@ -96,7 +96,7 @@ var r = n(147018),
         function (e, t) {
             P(this, {
                 type: M,
-                iterator: v(U(e).entries),
+                iterator: O(U(e).entries),
                 kind: t
             });
         },
@@ -128,8 +128,8 @@ ec.prototype = {
             l,
             u = R(e);
         if (u)
-            for (n = (t = v(e, u)).next; !(r = a(n, t)).done; ) {
-                if ((o = a((s = (i = v(g(r.value))).next), i)).done || (l = a(s, i)).done || !a(s, i).done) throw Y('Expected sequence with length 2');
+            for (n = (t = O(e, u)).next; !(r = a(n, t)).done; ) {
+                if ((o = a((s = (i = O(g(r.value))).next), i)).done || (l = a(s, i)).done || !a(s, i).done) throw Y('Expected sequence with length 2');
                 q(this.entries, {
                     key: A(o.value),
                     value: A(l.value)
@@ -287,8 +287,8 @@ if (
                     return (
                         !eE((t = e.headers ? new F(e.headers) : new F()), 'content-type') && ef(t, 'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'),
                         N(e, {
-                            body: O(0, A(n)),
-                            headers: O(0, t)
+                            body: v(0, A(n)),
+                            headers: v(0, t)
                         })
                     );
             }

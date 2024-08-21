@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     },
     hQ: function () {
-        return O;
+        return v;
     },
     lo: function () {
         return R;
@@ -63,8 +63,8 @@ let N = i.createContext({
     setSelected: () => null,
     itemToString: A
 });
-function O(e) {
-    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: h, 'aria-label': T, multiSelect: g = !1, autoFocus: S = !1, maxVisibleItems: O = 5, itemToString: v = A, showScrollbar: R = !1 } = e,
+function v(e) {
+    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: h, 'aria-label': T, multiSelect: g = !1, autoFocus: S = !1, maxVisibleItems: v = 5, itemToString: O = A, showScrollbar: R = !1 } = e,
         [C, y] = i.useState(''),
         [D] = i.useState(!0),
         [L, b] = i.useState(null),
@@ -169,11 +169,11 @@ function O(e) {
                                               activeDescendant: L,
                                               selected: a,
                                               setSelected: u,
-                                              itemToString: v
+                                              itemToString: O
                                           },
                                           children: (0, r.jsx)(V, {
                                               ...o,
-                                              style: { maxHeight: 46 * O },
+                                              style: { maxHeight: 46 * v },
                                               'aria-multiselectable': g,
                                               id: M,
                                               ref: P,
@@ -195,7 +195,7 @@ function O(e) {
         })
     });
 }
-let v = i.createContext(null);
+let O = i.createContext(null);
 function R(e) {
     var t;
     let { value: n, children: a, disabled: o = !1, selectedColor: u = T.STANDARD, ...d } = e,
@@ -218,7 +218,7 @@ function R(e) {
         role: 'option',
         'aria-selected': S,
         'aria-disabled': o,
-        children: (0, r.jsx)(v.Provider, {
+        children: (0, r.jsx)(O.Provider, {
             value: n,
             children: a
         })
@@ -242,7 +242,7 @@ function R(e) {
     (R.Checkbox = function (e) {
         let { checked: t } = e,
             { selected: n } = i.useContext(N),
-            a = i.useContext(v);
+            a = i.useContext(O);
         return (0, r.jsx)('span', {
             className: I.itemCheckbox,
             children: (0, r.jsx)(u.X, {
@@ -255,7 +255,7 @@ function R(e) {
     }),
     (R.Checkmark = function () {
         let { selected: e } = i.useContext(N),
-            t = i.useContext(v);
+            t = i.useContext(O);
         return e.has(t)
             ? (0, r.jsx)('span', {
                   className: I.itemCheckbox,

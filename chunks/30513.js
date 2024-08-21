@@ -9,7 +9,7 @@ n.d(t, {
         return R;
     },
     Yp: function () {
-        return v;
+        return O;
     },
     hC: function () {
         return L;
@@ -125,7 +125,7 @@ let c = () => ({
         icon: o.Z,
         description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_FILE_UPLOAD_TIER_3
     }),
-    O = function () {
+    v = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css;
         return {
             color: e,
@@ -133,11 +133,11 @@ let c = () => ({
             description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_SCREEN_SHARE_1080P
         };
     };
-function v() {
+function O() {
     return [f(), _(), h(), A()];
 }
 function R() {
-    return [f(), p(l.Eu4.TIER_2), O(), A()];
+    return [f(), p(l.Eu4.TIER_2), v(), A()];
 }
 function C() {
     return [p(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), N(), I(), A()];

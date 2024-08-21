@@ -113,30 +113,30 @@ function c(e, t) {
                 S = I.exdatevals,
                 A = I.dtstart,
                 N = I.tzid,
-                O = !1 === t.cache;
+                v = !1 === t.cache;
             if ((t.compatible && ((t.forceset = !0), (t.unfold = !0)), t.forceset || m.length > 1 || T.length || g.length || S.length)) {
-                var v = new a.p(O);
+                var O = new a.p(v);
                 return (
-                    v.dtstart(A),
-                    v.tzid(N || void 0),
+                    O.dtstart(A),
+                    O.tzid(N || void 0),
                     m.forEach(function (e) {
-                        v.rrule(new i.Ci(d(e, A, N), O));
+                        O.rrule(new i.Ci(d(e, A, N), v));
                     }),
                     T.forEach(function (e) {
-                        v.rdate(e);
+                        O.rdate(e);
                     }),
                     g.forEach(function (e) {
-                        v.exrule(new i.Ci(d(e, A, N), O));
+                        O.exrule(new i.Ci(d(e, A, N), v));
                     }),
                     S.forEach(function (e) {
-                        v.exdate(e);
+                        O.exdate(e);
                     }),
-                    t.compatible && t.dtstart && v.rdate(A),
-                    v
+                    t.compatible && t.dtstart && O.rdate(A),
+                    O
                 );
             }
             var R = m[0] || {};
-            return new i.Ci(d(R, R.dtstart || t.dtstart || A, R.tzid || t.tzid || N), O);
+            return new i.Ci(d(R, R.dtstart || t.dtstart || A, R.tzid || t.tzid || N), v);
         })(
             e,
             (function (e) {

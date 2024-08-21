@@ -7,7 +7,7 @@ n.d(t, {
     n(653041);
 var r = n(735250),
     i = n(470079),
-    a = n(567526),
+    a = n(338545),
     s = n(442837),
     o = n(704215),
     l = n(780384),
@@ -26,8 +26,8 @@ var r = n(735250),
     S = n(362061),
     A = n(70956),
     N = n(709054),
-    O = n(51144),
-    v = n(443603),
+    v = n(51144),
+    O = n(443603),
     R = n(981631),
     C = n(921944),
     y = n(474936),
@@ -165,7 +165,7 @@ t.Z = i.memo(function (e) {
     P && M && U.push(o.z.SEASONAL_GIFTING_COACHMARK_2023);
     let [x, G] = (0, h.US)(U),
         k = null != x,
-        F = (0, O.Ft)(n),
+        F = (0, v.Ft)(n),
         V = null != F;
     if (t) return null;
     let H = () => {
@@ -199,7 +199,7 @@ t.Z = i.memo(function (e) {
                         markAsDismissed: G,
                         isDM: V
                     }),
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(O.Z, {
                     innerClassName: b.button,
                     'aria-label': D.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                     isActive: !1,

@@ -6,7 +6,7 @@ n.d(t, {
         return A;
     },
     I: function () {
-        return O;
+        return v;
     },
     Ib: function () {
         return r;
@@ -30,7 +30,7 @@ n.d(t, {
         return g;
     },
     wK: function () {
-        return v;
+        return O;
     }
 }),
     n(789020),
@@ -137,9 +137,9 @@ function S(e, t, n, r, i, a) {
             };
         },
         S = m(r),
-        A = m(O(e, t), n),
+        A = m(v(e, t), n),
         N = T(S, A, 'RETURN_PREVIOUS_WHEN_CHANGED'),
-        v = u.Z.getChannel(t),
+        O = u.Z.getChannel(t),
         R = null !== (d = N('channel_flags')) && void 0 !== d ? d : 0,
         C = (null !== (f = A.channel_flags) && void 0 !== f ? f : 0) ^ R,
         y = 0 === (0, _.M1)(C, h.ic.FAVORITED, h.ic.OPT_IN_ENABLED),
@@ -152,7 +152,7 @@ function S(e, t, n, r, i, a) {
         channel_id: t,
         update_type: 'channel',
         label: i,
-        parent_id: null != v ? v.parent_id : null,
+        parent_id: null != O ? O.parent_id : null,
         channel_flags_old: N('channel_flags'),
         channel_is_muted_old: N('channel_is_muted'),
         channel_muted_until_old: N('channel_muted_until'),
@@ -181,7 +181,7 @@ function N(e) {
     let t = new Map();
     return e.forEach((e) => t.set(e, A(e))), t;
 }
-function O(e, t) {
+function v(e, t) {
     let n = d.ZP.isChannelMuted(e, t),
         r = d.ZP.getChannelMuteConfig(e, t);
     return {
@@ -191,7 +191,7 @@ function O(e, t) {
         channel_flags: d.ZP.getChannelIdFlags(e, t)
     };
 }
-function v(e, t) {
+function O(e, t) {
     let n = new Map();
-    return t.forEach((t) => n.set(t, O(e, t))), n;
+    return t.forEach((t) => n.set(t, v(e, t))), n;
 }

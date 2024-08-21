@@ -20,10 +20,10 @@ var r = n(664751),
     S = n(58642),
     A = n(254854),
     N = n(981631),
-    O = n(701488),
-    v = n(689938);
+    v = n(701488),
+    O = n(689938);
 function R(e) {
-    let { applicationId: t, secret: n, channelId: r, intent: i = O.Ws.PLAY, embedded: a = !1, analyticsLocations: o = [] } = e;
+    let { applicationId: t, secret: n, channelId: r, intent: i = v.Ws.PLAY, embedded: a = !1, analyticsLocations: o = [] } = e;
     C({
         applicationId: t,
         channelId: r,
@@ -126,7 +126,7 @@ async function C(e) {
                   });
               })
               .catch((e) => {
-                  A.Z.show(N.kVF.LAUNCH_GAME_FAILURE, v.Z.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND),
+                  A.Z.show(N.kVF.LAUNCH_GAME_FAILURE, O.Z.Messages.GAME_LAUNCH_FAILED_LAUNCH_TARGET_NOT_FOUND),
                       s.Z.dispatch({
                           type: 'GAME_LAUNCH_FAIL',
                           applicationId: t,
@@ -326,7 +326,7 @@ t.Z = {
     },
     launch: C,
     async join(e) {
-        let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: o = O.Ws.PLAY, embedded: l = !1 } = e;
+        let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: o = v.Ws.PLAY, embedded: l = !1 } = e;
         if (__OVERLAY__)
             return (
                 s.Z.dispatch({

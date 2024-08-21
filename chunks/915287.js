@@ -25,7 +25,7 @@ function _(e, t, n, a) {
             });
         });
     return i.forwardRef(function (a, f) {
-        let { className: h, onScroll: p, onResize: I = null, onContentResize: m = null, dir: T = 'ltr', sections: g, sectionHeight: S, rowHeight: A, footerHeight: N = 0, sidebarHeight: O, listHeaderHeight: v = 0, renderSection: R, renderRow: C, renderFooter: y, renderSidebar: D, renderListHeader: L, stickyListHeader: b, wrapSection: M, getAnchorId: P, paddingTop: U, paddingBottom: w, fade: x = !1, customTheme: G = !1, chunkSize: k, style: B, innerId: F, innerRole: V, innerAriaLabel: H, innerAriaMultiselectable: Z, innerAriaOrientation: Y, innerClassName: j, innerTag: W = 'div', ...K } = a,
+        let { className: h, onScroll: p, onResize: I = null, onContentResize: m = null, dir: T = 'ltr', sections: g, sectionHeight: S, rowHeight: A, footerHeight: N = 0, sidebarHeight: v, listHeaderHeight: O = 0, renderSection: R, renderRow: C, renderFooter: y, renderSidebar: D, renderListHeader: L, stickyListHeader: b, wrapSection: M, getAnchorId: P, paddingTop: U, paddingBottom: w, fade: x = !1, customTheme: G = !1, chunkSize: k, style: B, innerId: F, innerRole: V, innerAriaLabel: H, innerAriaMultiselectable: Z, innerAriaOrientation: Y, innerClassName: j, innerTag: W = 'div', ...K } = a,
             z = i.useRef(null),
             q = i.useRef(null),
             [Q, X] = i.useState(!1),
@@ -50,8 +50,8 @@ function _(e, t, n, a) {
                 sectionHeight: S,
                 rowHeight: A,
                 footerHeight: N,
-                sidebarHeight: O,
-                listHeaderHeight: v,
+                sidebarHeight: v,
+                listHeaderHeight: O,
                 paddingTop: U,
                 paddingBottom: w,
                 chunkSize: k,
@@ -232,10 +232,10 @@ function _(e, t, n, a) {
                             })({
                                 isSidebarVisible: ei,
                                 renderSidebar: D,
-                                sidebarHeight: O,
+                                sidebarHeight: v,
                                 isListVisible: 0 !== er.length
                             }),
-                        [ei, D, O, er.length]
+                        [ei, D, v, er.length]
                     )
                 ]
             })

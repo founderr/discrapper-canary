@@ -8,7 +8,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(567526),
+    o = n(338545),
     l = n(442837),
     u = n(704215),
     c = n(481060),
@@ -60,16 +60,16 @@ function g(e) {
         g = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         S = E.default.getCurrentUser(),
         A = null == S || (0, f.I5)(S) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
-        [N, O] = (0, _.US)(A),
-        [v, R] = i.useState(!1),
+        [N, v] = (0, _.US)(A),
+        [O, R] = i.useState(!1),
         [C, y] = (0, c.useSpring)(() => ({})),
         D = (0, o.animated)(c.SuperReactionIcon);
     i.useEffect(() => {
         let e = N === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (O(h.L.DISMISS), setTimeout(() => R(e), 200));
-    }, [N, O]);
-    let L = v ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? p.Z.Messages.SUPER_REACTION_TOGGLE_ENABLED : p.Z.Messages.SUPER_REACTION_TOGGLE_DISABLED,
-        b = v ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
+        e && (v(h.L.DISMISS), setTimeout(() => R(e), 200));
+    }, [N, v]);
+    let L = O ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? p.Z.Messages.SUPER_REACTION_TOGGLE_ENABLED : p.Z.Messages.SUPER_REACTION_TOGGLE_DISABLED,
+        b = O ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
     return (0, r.jsxs)(c.TooltipContainer, {
         position: 'top',
         text: (0, r.jsx)(T, {
@@ -78,7 +78,7 @@ function g(e) {
             headingText: b
         }),
         color: c.Tooltip.Colors.BRAND,
-        forceOpen: v,
+        forceOpen: O,
         'aria-label': L,
         tooltipClassName: I.tooltip,
         children: [

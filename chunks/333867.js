@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return h;
+        return f;
     }
 });
 var a = t(735250);
@@ -14,10 +14,10 @@ var s = t(772848),
     u = t(409813),
     c = t(608579),
     E = t(981631);
-let f = 'payment-modal';
-function h(e) {
+let h = 'payment-modal';
+function f(e) {
     let n;
-    let { skuId: t, isGift: h = !1, giftMessage: m, onClose: v, onComplete: C, analyticsLocations: p, analyticsObject: x } = e,
+    let { skuId: t, isGift: f = !1, giftMessage: m, onClose: v, onComplete: C, analyticsLocations: p, analyticsObject: x } = e,
         I = !1,
         T = (0, s.Z)(),
         g = (e) => {
@@ -30,7 +30,7 @@ function h(e) {
                 ...i,
                 loadId: T,
                 skuId: t,
-                isGift: h,
+                isGift: f,
                 giftMessage: m,
                 analyticsLocations: p,
                 onClose: (e) => {
@@ -44,14 +44,14 @@ function h(e) {
             });
         },
         {
-            modalKey: f,
+            modalKey: h,
             onCloseCallback: () => {
                 !I &&
                     d.default.track(E.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: T,
                         payment_type: E.Zuq[E.GZQ.ONE_TIME],
                         location: x,
-                        is_gift: h,
+                        is_gift: f,
                         location_stack: p
                     }),
                     (0, l.fw)(),
@@ -60,7 +60,7 @@ function h(e) {
                     I && (0, o.qg)();
             },
             onCloseRequest: () => {
-                n === u.h8.REVIEW && (0, i.closeModal)(f);
+                n === u.h8.REVIEW && (0, i.closeModal)(h);
             }
         }
     );

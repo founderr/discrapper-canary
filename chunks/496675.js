@@ -20,8 +20,8 @@ var r,
     S = n(700785),
     A = n(592125),
     N = n(683301),
-    O = n(271383),
-    v = n(430824),
+    v = n(271383),
+    O = n(430824),
     R = n(594174),
     C = n(981631),
     y = n(478743);
@@ -35,7 +35,7 @@ function P(e) {
     if (null != n) return n;
     let r = R.default.getCurrentUser();
     if (null == r) return S.Hn;
-    let i = v.Z.getGuild(e);
+    let i = O.Z.getGuild(e);
     return null == i
         ? S.Hn
         : (D[e] = S.uB({
@@ -52,7 +52,7 @@ function U(e) {
     let i = A.Z.getChannel(e);
     if (null == i) return S.Hn;
     let a = i.getGuildId(),
-        s = null != a && (E.Z.isLurking(a) || (null === (t = O.ZP.getMember(a, r.id)) || void 0 === t ? void 0 : t.isPending));
+        s = null != a && (E.Z.isLurking(a) || (null === (t = v.ZP.getMember(a, r.id)) || void 0 === t ? void 0 : t.isPending));
     return !i.isScheduledForDeletion() && !s && l().isEmpty(i.permissionOverwrites) && null != a
         ? P(a)
         : S.uB({
@@ -149,7 +149,7 @@ function W(e, t, n, r) {
 }
 class K extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(R.default, v.Z, A.Z, O.ZP, N.ZP, h.Z, f.Z, _.Z);
+        this.waitFor(R.default, O.Z, A.Z, v.ZP, N.ZP, h.Z, f.Z, _.Z);
     }
     getChannelPermissions(e) {
         return I.Ec.has(e.type) ? U(e.id) : w(e.id);
@@ -184,7 +184,7 @@ class K extends (r = c.ZP.Store) {
         return u.Db(P(e.id), S.ym);
     }
     canWithPartialContext(e, t) {
-        return 'channelId' in t && 'string' == typeof t.channelId ? this.can(e, A.Z.getChannel(t.channelId)) : 'guildId' in t && 'string' == typeof t.guildId && this.can(e, v.Z.getGuild(t.guildId));
+        return 'channelId' in t && 'string' == typeof t.channelId ? this.can(e, A.Z.getChannel(t.channelId)) : 'guildId' in t && 'string' == typeof t.guildId && this.can(e, O.Z.getGuild(t.guildId));
     }
     can(e, t, n, r, i) {
         let a = W(t, n, r, i);

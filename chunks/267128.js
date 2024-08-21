@@ -27,8 +27,8 @@ var r = n(735250),
     S = n(823379),
     A = n(453687),
     N = n(930282),
-    O = n(123145),
-    v = n(223021),
+    v = n(123145),
+    O = n(223021),
     R = n(217702),
     C = n(981631),
     y = n(689938),
@@ -68,8 +68,8 @@ function M(e, t, n, i, a) {
         g = null == t || '' === t || (Array.isArray(t) && 0 === t.length),
         S = (0, m.cv)(d).length > 0,
         A = null != d.interaction,
-        O = d.hasFlag(C.iLy.IS_VOICE_MESSAGE),
-        v = d.isPoll(),
+        v = d.hasFlag(C.iLy.IS_VOICE_MESSAGE),
+        O = d.isPoll(),
         R = d.type === C.uaV.POLL_RESULT;
     if (
         ((0, _.Z)(e) &&
@@ -84,7 +84,7 @@ function M(e, t, n, i, a) {
         s = y.Z.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
     else if (d.type === C.uaV.CHANNEL_PINNED_MESSAGE) s = y.Z.Messages.MESSAGE_PINNED;
     else if (g) {
-        if (v) {
+        if (O) {
             var D, L;
             o = null == d ? void 0 : null === (L = d.poll) || void 0 === L ? void 0 : null === (D = L.question) || void 0 === D ? void 0 : D.text;
         } else
@@ -94,7 +94,7 @@ function M(e, t, n, i, a) {
                   ? (s = y.Z.Messages.REPLY_QUOTE_STICKER)
                   : A
                     ? (s = y.Z.Messages.REPLY_QUOTE_COMMAND)
-                    : O
+                    : v
                       ? (s = y.Z.Messages.REPLY_QUOTE_VOICE_MESSAGE)
                       : ((s = y.Z.Messages.REPLY_QUOTE_NO_TEXT_CONTENT),
                         (l = (0, r.jsx)(u.ImageIcon, {
@@ -127,7 +127,7 @@ function M(e, t, n, i, a) {
                     width: T,
                     height: T
                 }))
-              : O
+              : v
                 ? (l = (0, r.jsx)(u.MicrophoneIcon, {
                       size: 'custom',
                       color: 'currentColor',
@@ -226,7 +226,7 @@ function P(e) {
                 c = (null == a ? void 0 : a.state) === p.Y.LOADED ? a.message : void 0;
             return null == c || c.type === C.uaV.USER_JOIN || c.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE || c.type === C.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION || c.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || c.type === C.uaV.GUILD_GAMING_STATS_PROMPT || c.type === C.uaV.POLL_RESULT
                 ? null
-                : (0, r.jsx)(O.Z, {
+                : (0, r.jsx)(v.Z, {
                       message: c,
                       channel: i,
                       compact: !0,
@@ -295,7 +295,7 @@ function P(e) {
                     (0, S.vE)(n);
             }
         })(e),
-        P = i.useMemo(() => (e.compact ? (0, v.Z)((0, g.vc)(l()(), 'LT')) : null), [e.compact]);
+        P = i.useMemo(() => (e.compact ? (0, O.Z)((0, g.vc)(l()(), 'LT')) : null), [e.compact]);
     return (
         null != n &&
             null != a &&

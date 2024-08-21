@@ -1,6 +1,6 @@
 n.d(t, {
     Ks: function () {
-        return O;
+        return v;
     },
     g2: function () {
         return A;
@@ -18,7 +18,7 @@ n.d(t, {
     n(47120);
 var r = n(735250),
     i = n(470079),
-    a = n(567526),
+    a = n(338545),
     s = n(442837),
     o = n(481060),
     l = n(594190),
@@ -117,7 +117,7 @@ let A = (e) => {
             children: n
         });
     };
-function O(e) {
+function v(e) {
     let { quest: t, progressState: n, isCollectibleQuest: r, location: a, questContentPosition: s, questContentRowIndex: o, isInHouseQuest: l, inGiftInventory: u } = e,
         h = g({
             quest: t,

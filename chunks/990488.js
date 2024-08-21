@@ -107,16 +107,16 @@ function N(e) {
     return (0, t.jsx)(t.Fragment, { children: n.map((e, s) => _(e, s)) });
 }
 function x(e) {
-    let { guildId: s, formFields: n, updateFormFields: l } = e,
-        o = (0, i.e7)([a.Z], () => a.Z.getGuild(s)),
-        c = (0, i.e7)([r.default], () => r.default.getCurrentUser()),
-        I = (0, d.G)({ guildId: s }) ? E.l : u.b,
-        M = null == o ? void 0 : o.hasFeature(_.oNc.COMMUNITY);
-    return null == c
+    let { guildId: s, formFields: n, updateFormFields: l, disableVerification: o } = e,
+        c = (0, i.e7)([a.Z], () => a.Z.getGuild(s)),
+        I = (0, i.e7)([r.default], () => r.default.getCurrentUser()),
+        M = (0, d.G)({ guildId: s }) ? E.l : u.b,
+        m = !o && (null == c ? void 0 : c.hasFeature(_.oNc.COMMUNITY));
+    return null == I
         ? null
         : (0, t.jsxs)(t.Fragment, {
               children: [
-                  M && (0, t.jsx)(I, {}),
+                  m && (0, t.jsx)(M, {}),
                   (0, t.jsx)(N, {
                       guildId: s,
                       formFields: n,
@@ -126,18 +126,18 @@ function x(e) {
           });
 }
 function R(e) {
-    let { guildId: s, formFields: n, updateFormFields: o } = e,
-        c = (0, i.e7)([a.Z], () => a.Z.getGuild(s)),
-        I = (0, i.e7)([r.default], () => r.default.getCurrentUser()),
-        { isPhoneVerificationLevel: M, isCurrentUserVerified: m } = (0, d.b)({ guildId: s }),
-        x = l.useRef(m),
-        R = M ? E.v : u.B,
-        f = (null == c ? void 0 : c.hasFeature(_.oNc.COMMUNITY)) && !x.current;
-    return null == I
+    let { guildId: s, formFields: n, updateFormFields: o, disableVerification: c } = e,
+        I = (0, i.e7)([a.Z], () => a.Z.getGuild(s)),
+        M = (0, i.e7)([r.default], () => r.default.getCurrentUser()),
+        { isPhoneVerificationLevel: m, isCurrentUserVerified: x } = (0, d.b)({ guildId: s }),
+        R = l.useRef(x),
+        f = m ? E.v : u.B,
+        g = !c && (null == I ? void 0 : I.hasFeature(_.oNc.COMMUNITY)) && !R.current;
+    return null == M
         ? null
         : (0, t.jsxs)(t.Fragment, {
               children: [
-                  f && (0, t.jsx)(R, { isUserVerified: m }),
+                  g && (0, t.jsx)(f, { isUserVerified: x }),
                   (0, t.jsx)(N, {
                       guildId: s,
                       formFields: n,

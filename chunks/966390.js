@@ -20,8 +20,8 @@ var r = n(481060),
     S = n(623292),
     A = n(807092),
     N = n(467798),
-    O = n(703558),
-    v = n(117530),
+    v = n(703558),
+    O = n(117530),
     R = n(630388),
     C = n(226351),
     y = n(981631),
@@ -133,8 +133,8 @@ async function L(e) {
                         help: null !== (E = null == n ? void 0 : n.message) && void 0 !== E ? E : D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
                     });
                 }
-                '' !== G.content && '' === O.Z.getDraft(_, b) && a.Z.saveDraft(_, G.content, b),
-                    0 === v.Z.getUploadCount(_, b) &&
+                '' !== G.content && '' === v.Z.getDraft(_, b) && a.Z.saveDraft(_, G.content, b),
+                    0 === O.Z.getUploadCount(_, b) &&
                         o.Z.setUploads({
                             channelId: _,
                             uploads: L,
@@ -239,7 +239,7 @@ t.Z = {
                         }
                     })
                 }),
-                    '' !== h.content && '' === O.Z.getDraft(n, u) && a.Z.saveDraft(n, h.content, u);
+                    '' !== h.content && '' === v.Z.getDraft(n, u) && a.Z.saveDraft(n, h.content, u);
             }),
             p.on('complete', (e) => {
                 i.Z.dispatch({
@@ -258,12 +258,12 @@ t.Z = {
         }),
             null != e.draftContent &&
                 null != e.channelId &&
-                '' === O.Z.getDraft(e.channelId, O.d.ChannelMessage) &&
+                '' === v.Z.getDraft(e.channelId, v.d.ChannelMessage) &&
                 i.Z.dispatch({
                     type: 'DRAFT_SAVE',
                     channelId: e.channelId,
                     draft: e.draftContent,
-                    draftType: O.d.ChannelMessage
+                    draftType: v.d.ChannelMessage
                 });
     }
 };

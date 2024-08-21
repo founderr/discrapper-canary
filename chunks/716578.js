@@ -3,6 +3,6 @@ n.d(t, {
         return i;
     }
 });
-var r = n(567526);
+var r = n(338545);
 let i = new (n(603767).Z)();
 r.Globals.assign({ frameLoop: i });

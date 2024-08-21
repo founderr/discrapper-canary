@@ -9,7 +9,7 @@ var i = t(904245),
 function l(e, n, t) {
     let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if ((i.Z.deleteMessage(e.id, n.id, !0), n.isCommandType())) {
-        null != n.interactionData && null != l.applicationId && (0, s.d)(n, e, l.applicationId);
+        null != n.interactionData && null != l.applicationId && (0, s.d)(n, e, l);
         return;
     }
     let { content: a, tts: r, messageReference: o, flags: u, nonce: d } = n;

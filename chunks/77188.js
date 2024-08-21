@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return O;
     }
 }),
     n(47120);
@@ -26,40 +26,40 @@ var T = n(814011),
     S = n(618136),
     A = n(247765),
     N = n(15559),
-    O = n(42530);
-function v(e) {
+    v = n(42530);
+function O(e) {
     let t = r.useContext(s.ZP),
         n = u.R$.useSetting(),
-        [v] = r.useState(() => {
+        [O] = r.useState(() => {
             let r = (0, a.Jh)();
             return (
                 (r.children = (0, c.JM)('')),
                 (r.selection = {
-                    anchor: O.nO,
-                    focus: O.nO
+                    anchor: v.nO,
+                    focus: v.nO
                 }),
                 (function (e) {
                     var t, n, r;
-                    let { editor: a, chatInputType: s, channel: o, canUseCommands: l, canOnlyUseTextCommands: u, windowContext: c, previewMarkdown: O, forTests: v, onChangeStart: R, onChangeEnd: C, updateState: y } = e,
+                    let { editor: a, chatInputType: s, channel: o, canUseCommands: l, canOnlyUseTextCommands: u, windowContext: c, previewMarkdown: v, forTests: O, onChangeStart: R, onChangeEnd: C, updateState: y } = e,
                         D = a,
                         { onChange: L } = D;
                     (D.chatInputType = s),
                         (D.windowContext = c),
-                        (D.previewMarkdown = O),
+                        (D.previewMarkdown = v),
                         (D.composition = null),
                         (D.events = new i.EventEmitter()),
                         (D.isMac = 'MacIntel' === navigator.platform),
                         (D.onChange = () => {
                             D.events.emit('onChange'), L();
                         }),
-                        (D = (0, g.B)(D, !0 === v)),
+                        (D = (0, g.B)(D, !0 === O)),
                         (D = (0, T.Z)(D)),
                         (D = (0, m.Z)(D)),
                         (null === (t = s.commands) || void 0 === t ? void 0 : t.enabled) && (D = (0, d.Z)(D, o, !0 === l, !0 === u)),
                         (D = (0, I.ZP)(D, o.guild_id, o.id)),
                         !(null === (n = s.markdown) || void 0 === n ? void 0 : n.disableBlockQuotes) && (D = (0, _.Z)(D)),
                         !(null === (r = s.markdown) || void 0 === r ? void 0 : r.disableCodeBlocks) && (D = (0, E.ZP)(D)),
-                        v && (D = (0, A.Z)(D)),
+                        O && (D = (0, A.Z)(D)),
                         (D = (0, p.Z)(D)),
                         (D = (0, f.Z)(D)),
                         (D = (0, S.Z)(D)),
@@ -82,7 +82,7 @@ function v(e) {
         });
     return (
         r.useEffect(() => {
-            let e = () => v.onChange();
+            let e = () => O.onChange();
             return (
                 l.Z.addChangeListener(e),
                 o.ZP.addChangeListener(e),
@@ -90,10 +90,10 @@ function v(e) {
                     l.Z.removeChangeListener(e), o.ZP.removeChangeListener(e);
                 }
             );
-        }, [v]),
+        }, [O]),
         r.useEffect(() => {
-            v.previewMarkdown !== n && ((v.previewMarkdown = n), v.onChange());
-        }, [v, n]),
-        v
+            O.previewMarkdown !== n && ((O.previewMarkdown = n), O.onChange());
+        }, [O, n]),
+        O
     );
 }

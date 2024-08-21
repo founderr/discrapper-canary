@@ -26,8 +26,8 @@ var i = n(120356),
     S = n(652853),
     A = n(194811),
     N = n(60241),
-    O = n(373826),
-    v = n(582123),
+    v = n(373826),
+    O = n(582123),
     R = n(622058),
     C = n(290274),
     y = n(318134),
@@ -40,7 +40,7 @@ function P(e) {
         { profileType: _ } = (0, S.z)(),
         E = { [b.fullSize]: _ === D.y0.FULL_SIZE },
         { iconUrl: h, appName: A } = (0, I.n)(n),
-        v = (0, T.Z)({
+        O = (0, T.Z)({
             location: 'UserProfileRecentActivityCard',
             applicationId: n.extra.application_id,
             source: m.m1.UserProfile,
@@ -55,7 +55,7 @@ function P(e) {
             analyticsLocations: R
         }),
         M = () => (n.content_type === s.s.TOP_GAME ? f.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))) : d.W.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))));
-    return null == v
+    return null == O
         ? (0, r.jsxs)(g.Z.Overlay, {
               className: a()(b.card, l),
               ref: L,
@@ -76,7 +76,7 @@ function P(e) {
                                   className: b.details,
                                   children: [
                                       (0, r.jsx)('div', {
-                                          children: (0, r.jsx)(O.Z, {
+                                          children: (0, r.jsx)(v.Z, {
                                               variant: 'heading-sm/semibold',
                                               text: A
                                           })
@@ -109,7 +109,7 @@ function P(e) {
                                       alt: A
                                   },
                                   onClick: () => {
-                                      C({ action: 'PRESS_GAME_IMAGE' }), v();
+                                      C({ action: 'PRESS_GAME_IMAGE' }), O();
                                   }
                               }),
                               (0, r.jsxs)('div', {
@@ -118,9 +118,9 @@ function P(e) {
                                       (0, r.jsx)(o.Clickable, {
                                           className: b.clickable,
                                           onClick: () => {
-                                              C({ action: 'OPEN_GAME_PROFILE' }), v(), null == c || c();
+                                              C({ action: 'OPEN_GAME_PROFILE' }), O(), null == c || c();
                                           },
-                                          children: (0, r.jsx)(O.Z, {
+                                          children: (0, r.jsx)(v.Z, {
                                               variant: 'heading-sm/semibold',
                                               text: A
                                           })
@@ -171,11 +171,11 @@ function U(e) {
                             children: [
                                 (0, r.jsxs)('div', {
                                     children: [
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             variant: 'heading-sm/semibold',
                                             text: n.extra.media_title
                                         }),
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             variant: 'text-xs/normal',
                                             text: n.extra.media_subtitle
                                         })
@@ -229,7 +229,7 @@ function w(e) {
                             className: b.details,
                             children: [
                                 (0, r.jsx)('div', {
-                                    children: (0, r.jsx)(O.Z, {
+                                    children: (0, r.jsx)(v.Z, {
                                         variant: 'heading-sm/semibold',
                                         text: m
                                     })
@@ -279,11 +279,11 @@ function x(e) {
                             children: [
                                 (0, r.jsxs)('div', {
                                     children: [
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             variant: 'heading-sm/semibold',
                                             text: n.extra.media.title
                                         }),
-                                        (0, r.jsx)(O.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             variant: 'text-xs/normal',
                                             text: n.extra.artist.name
                                         })
@@ -309,7 +309,7 @@ function G(e) {
     return (0, R.R)(n)
         ? (0, r.jsx)(u.Gt, {
               value: o,
-              children: (0, r.jsx)(v.Z, {
+              children: (0, r.jsx)(O.Z, {
                   user: t,
                   onClose: a,
                   children: (e) => {

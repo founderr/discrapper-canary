@@ -26,8 +26,8 @@ var r = n(729594),
     S = n(944486),
     A = n(914010),
     N = n(771845),
-    O = n(626135),
-    v = n(591759);
+    v = n(626135),
+    O = n(591759);
 n(782568);
 var R = n(981631),
     C = n(46140);
@@ -70,7 +70,7 @@ function b(e) {
             let { code: r } = s,
                 a = null !== (t = A.Z.getGuildId()) && void 0 !== t ? t : void 0;
             return (
-                O.default.track(R.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                v.default.track(R.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                     application_id: r,
                     device_platform: i.tq ? 'mobile_web' : 'desktop_web',
                     guild_id: a,
@@ -119,7 +119,7 @@ function b(e) {
             !0
         );
     let { path: g, hostname: N = '', host: y, query: b, hash: M } = r.parse(e),
-        P = v.Z.isDiscordHostname(N) || v.Z.isDiscordLocalhost(y, N);
+        P = O.Z.isDiscordHostname(N) || O.Z.isDiscordLocalhost(y, N);
     if (P && (null == g ? void 0 : g.startsWith('/application-directory'))) {
         let e;
         let t = g.split('/'),
@@ -137,7 +137,7 @@ function b(e) {
                 'search' === r && (_ = c.SEARCH),
                 null != s &&
                     ((_ = c.APPLICATION),
-                    O.default.track(R.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
+                    v.default.track(R.rMx.APP_DIRECTORY_PROFILE_EMBED_URL_CLICKED, {
                         application_id: s,
                         device_platform: i.tq ? 'mobile_web' : 'desktop_web',
                         guild_id: d,
@@ -161,7 +161,7 @@ function b(e) {
             );
         };
     }
-    if (null != g && P && v.Z.isAppRoute(g)) {
+    if (null != g && P && O.Z.isAppRoute(g)) {
         let e = {};
         return null != b && (e.search = b), null != M && (e.hash = M), (t) => (null == t || t.preventDefault(), (0, p.Z)(g, Object.keys(e).length > 0 ? e : null), !0);
     }

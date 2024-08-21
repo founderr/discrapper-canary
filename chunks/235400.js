@@ -26,8 +26,8 @@ var r = n(735250),
     S = n(240781),
     A = n(818611),
     N = n(981631),
-    O = n(474936),
-    v = n(689938),
+    v = n(474936),
+    O = n(689938),
     R = n(801802);
 function C(e) {
     let { user: t, categories: n, purchases: a, analyticsLocations: s, onClose: u, initialSelectedDecoration: E, initialSelectedDecorationId: I, isTryItOutFlow: m, guild: N } = e,
@@ -73,7 +73,7 @@ function C(e) {
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: 'heading-lg/semibold',
-                        children: v.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+                        children: O.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
                     }),
                     (0, r.jsx)(o.ModalCloseButton, {
                         className: R.modalCloseButton,
@@ -110,23 +110,23 @@ function C(e) {
                         ? (0, r.jsx)(o.Button, {
                               onClick: k,
                               disabled: G,
-                              children: v.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
+                              children: O.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
                           })
                         : null == P && (U || !(0, d.G1)(M))
                           ? (0, r.jsx)(o.Button, {
                                 className: R.modalFooterShopButton,
                                 onClick: () => B(null == M ? void 0 : M.skuId),
-                                children: v.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+                                children: O.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                             })
                           : (0, r.jsx)(h.Z, {
-                                subscriptionTier: O.Si.TIER_2,
-                                buttonText: T.ZP.isPremium(t) ? v.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : v.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+                                subscriptionTier: v.Si.TIER_2,
+                                buttonText: T.ZP.isPremium(t) ? O.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : O.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
                             }),
                     (0, r.jsx)(o.Button, {
                         look: o.Button.Looks.LINK,
                         color: o.Button.Colors.PRIMARY,
                         onClick: u,
-                        children: v.Z.Messages.CANCEL
+                        children: O.Z.Messages.CANCEL
                     })
                 ]
             })
@@ -137,8 +137,8 @@ function y(e) {
     let { transitionState: t, analyticsLocations: n, onClose: d, onCloseModal: _, initialSelectedDecoration: f, initialSelectedDecorationId: h, isTryItOutFlow: p, guild: T } = e,
         g = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
         { analyticsLocations: S } = (0, u.ZP)(n, l.Z.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: A, purchases: O, isFetchingCategories: v, isFetchingPurchases: y } = (0, E.Z)(),
-        D = v || (y && 0 === O.size);
+        { categories: A, purchases: v, isFetchingCategories: O, isFetchingPurchases: y } = (0, E.Z)(),
+        D = O || (y && 0 === v.size);
     return (
         i.useEffect(() => {
             m.default.track(N.rMx.OPEN_MODAL, {
@@ -172,7 +172,7 @@ function y(e) {
                                 user: g,
                                 guild: T,
                                 categories: A,
-                                purchases: O,
+                                purchases: v,
                                 analyticsLocations: S,
                                 initialSelectedDecoration: f,
                                 initialSelectedDecorationId: h,

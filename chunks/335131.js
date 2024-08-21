@@ -9,10 +9,10 @@ n.d(t, {
         return T;
     },
     K$: function () {
-        return O;
+        return v;
     },
     R2: function () {
-        return v;
+        return O;
     },
     fK: function () {
         return A;
@@ -179,13 +179,13 @@ let f = (e) => {
             throw new l.Hx(e);
         }
     },
-    O = (e) => {
+    v = (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_CATEGORY_ITEMS_VIEWED',
             ...e
         });
     },
-    v = async (e) => {
+    O = async (e) => {
         let { release: t = i.P.PROD } = e;
         s.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH' });
         let n = { platform: r.h.DESKTOP };

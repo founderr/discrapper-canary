@@ -8,7 +8,7 @@ n.d(t, {
 });
 var r = n(735250),
     i = n(470079),
-    a = n(567526),
+    a = n(338545),
     s = n(990547),
     o = n(873546),
     l = n(186325),
@@ -40,7 +40,7 @@ function m(e) {
     var t, n, I, m, T;
     let { contentDisplay: g, fadeInOut: S = !1, ...A } = e,
         N = {},
-        { analyticsLocations: O } = (0, E.ZP)();
+        { analyticsLocations: v } = (0, E.ZP)();
     i.Children.forEach(A.children, (e, t) => {
         N[e.props.id] = {
             children: e.props.children,
@@ -49,15 +49,15 @@ function m(e) {
             index: t
         };
     });
-    let v = A.activeSlide,
+    let O = A.activeSlide,
         R = (0, d.Z)(A.activeSlide);
-    let C = null !== (t = A.directionOverride) && void 0 !== t ? t : ((m = null != R ? N[R] : null), (T = N[v]), null == m ? null : m.index > T.index ? 'backwards' : m.index < T.index ? 'forwards' : null),
+    let C = null !== (t = A.directionOverride) && void 0 !== t ? t : ((m = null != R ? N[R] : null), (T = N[O]), null == m ? null : m.index > T.index ? 'backwards' : m.index < T.index ? 'forwards' : null),
         { reducedMotion: y } = i.useContext(l.S),
         D = i.useContext(_.Z),
-        L = N[v].impressionName,
+        L = N[O].impressionName,
         b = {
-            ...N[v].impressionProperties,
-            location_stack: O
+            ...N[O].impressionProperties,
+            location_stack: v
         };
     D({
         type: s.ImpressionTypes.MODAL,
@@ -65,7 +65,7 @@ function m(e) {
         properties: b,
         _stackContext: { isSlide: !0 }
     });
-    let { ref: M, width: P = 0, height: U = 0 } = (0, c.Z)(v),
+    let { ref: M, width: P = 0, height: U = 0 } = (0, c.Z)(O),
         w = {
             ...h,
             ...A.springConfig,
@@ -80,7 +80,7 @@ function m(e) {
             null == R ? 'animate-never' : 'respect-motion-settings'
         ),
         G = (0, u.useTransition)(
-            v,
+            O,
             {
                 value: 0,
                 from: { value: 1 },
@@ -89,7 +89,7 @@ function m(e) {
                 config: w,
                 onRest: (e, t) => {
                     let { item: n } = t;
-                    n === v && null != A.onSlideReady && A.onSlideReady(n);
+                    n === O && null != A.onSlideReady && A.onSlideReady(n);
                 }
             },
             null == R ? 'animate-never' : 'respect-motion-settings'
@@ -120,7 +120,7 @@ function m(e) {
             return (0, r.jsx)(
                 a.animated.div,
                 {
-                    ref: t === v ? M : null,
+                    ref: t === O ? M : null,
                     style: {
                         position: 'absolute',
                         display: g,

@@ -65,7 +65,7 @@ e.exports = function (e) {
                         subLanguage: 'xml'
                     }
                 },
-                O = {
+                v = {
                     begin: 'css`',
                     end: '',
                     starts: {
@@ -75,7 +75,7 @@ e.exports = function (e) {
                         subLanguage: 'css'
                     }
                 },
-                v = {
+                O = {
                     className: 'string',
                     begin: '`',
                     end: '`',
@@ -121,7 +121,7 @@ e.exports = function (e) {
                         e.C_LINE_COMMENT_MODE
                     ]
                 },
-                C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, N, O, v, { match: /\$\d+/ }, S];
+                C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, N, v, O, { match: /\$\d+/ }, S];
             A.contains = C.concat({
                 begin: /\{/,
                 end: /\}/,
@@ -221,8 +221,8 @@ e.exports = function (e) {
                     e.APOS_STRING_MODE,
                     e.QUOTE_STRING_MODE,
                     N,
-                    O,
                     v,
+                    O,
                     R,
                     { match: /\$\d+/ },
                     S,

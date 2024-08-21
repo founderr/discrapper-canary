@@ -45,8 +45,8 @@ let S = new _.h(
         (e) => [T(e.applicationId, e.isValid(null, h.Z), e.guildId), g(e.isValid(null, h.Z), e.guildId)],
         (e) => e.id
     ),
-    O = {},
-    v = {};
+    v = {},
+    O = {};
 function R(e) {
     let t = S.values(I(e));
     return c()(t.length <= 1, 'Found multiple group listings for application'), t[0];
@@ -61,7 +61,7 @@ function C(e) {
 class y extends (i = d.yh) {
     getSubscriptionGroupListingsForApplicationFetchState(e) {
         var t;
-        return null !== (t = O[e]) && void 0 !== t ? t : 0;
+        return null !== (t = v[e]) && void 0 !== t ? t : 0;
     }
     getSubscriptionGroupListing(e) {
         return S.get(e);
@@ -81,7 +81,7 @@ class y extends (i = d.yh) {
     }
     getEntitlementsForGuildFetchState(e) {
         var t;
-        return null !== (t = v[e]) && void 0 !== t ? t : 0;
+        return null !== (t = O[e]) && void 0 !== t ? t : 0;
     }
     getSubscriptionListingForPlan(e) {
         let t = A.values(m(e));
@@ -107,29 +107,29 @@ class y extends (i = d.yh) {
         : (s[o] = l),
     (t.Z = new y(E.Z, {
         LOGOUT: function () {
-            S.clear(), A.clear(), N.clear(), (O = {}), (v = {});
+            S.clear(), A.clear(), N.clear(), (v = {}), (O = {});
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS: function (e) {
             let { applicationId: t } = e;
-            O[t] = 1;
+            v[t] = 1;
             let n = R(t);
             if (null != n) for (let e of n.subscription_listings_ids) A.delete(e);
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_SUCCESS: function (e) {
             let { applicationId: t, groupListing: n } = e;
-            (O[t] = 2), C(n);
+            (v[t] = 2), C(n);
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTINGS_FAILURE: function (e) {
             let { applicationId: t } = e;
-            O[t] = 2;
+            v[t] = 2;
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS(e) {
             let { guildId: t } = e;
-            v[t] = 1;
+            O[t] = 1;
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS(e) {
             let { guildId: t, entitlements: n } = e;
-            (v[t] = 2),
+            (O[t] = 2),
                 n.forEach((e) => {
                     let t = f.Z.createFromServer(e);
                     N.set(t.id, t);
@@ -137,7 +137,7 @@ class y extends (i = d.yh) {
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_FAILURE(e) {
             let { guildId: t } = e;
-            v[t] = 0;
+            O[t] = 0;
         },
         APPLICATION_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN_SUCCESS: function (e) {
             let { groupListing: t } = e;

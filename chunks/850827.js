@@ -20,8 +20,8 @@ var i = n(120356),
     S = n(387903),
     A = n(606925),
     N = n(719216),
-    O = n(429589),
-    v = n(276149),
+    v = n(429589),
+    O = n(276149),
     R = n(636245),
     C = n(697761),
     y = n(611459),
@@ -145,7 +145,7 @@ t.Z = (0, c.Z)((e) => {
                   )
                 : q && null != Q
                   ? (0, r.jsx)(
-                        v.Z,
+                        O.Z,
                         {
                             color: G,
                             look: k,
@@ -167,7 +167,7 @@ t.Z = (0, c.Z)((e) => {
                                 'watch-button'
                             ),
                             (0, r.jsx)(
-                                O.Z,
+                                v.Z,
                                 {
                                     activity: t,
                                     embeddedActivity: n,

@@ -27,21 +27,21 @@ var r,
     S = n(689938),
     A = n(502374);
 function N(e) {
-    let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: N, upsellViewedTrackingData: O, onClose: v, onDisplay: R, onLearnMore: C } = e,
+    let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: N, upsellViewedTrackingData: v, onClose: O, onDisplay: R, onLearnMore: C } = e,
         y = (0, u.e7)([p.Z], () => p.Z.affinities),
         D = (0, u.e7)([p.Z], () => p.Z.hasFetched);
     s.useEffect(() => {
         !D && o && d.MH();
     }, [D, o]),
         s.useEffect(() => {
-            h.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, O), null == R || R();
-        }, [R, O]);
+            h.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, v), null == R || R();
+        }, [R, v]);
     let L = y.length > 1 && o;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(c.Backdrop, {
                 backdropStyle: c.BackdropStyles.DARK,
-                onClose: v,
+                onClose: O,
                 'aria-label': S.Z.Messages.CLOSE,
                 isVisible: !0
             }),
@@ -49,7 +49,7 @@ function N(e) {
                 className: l()(A.container, 2 === t ? A.hasTabParentContainer : 1 === t ? A.hasParentContainer : A.noParentContainer),
                 children: [
                     (0, a.jsx)(c.ModalCloseButton, {
-                        onClick: v,
+                        onClick: O,
                         className: A.closeButton
                     }),
                     (0, a.jsxs)('div', {
@@ -90,7 +90,7 @@ function N(e) {
                                     }),
                                         null == C || C(),
                                         (0, E.Z)(),
-                                        v(),
+                                        O(),
                                         (0, _.xf)(),
                                         (0, f.uL)(g.Z5c.APPLICATION_STORE);
                                 },
@@ -106,7 +106,7 @@ function N(e) {
                                 size: c.Button.Sizes.SMALL,
                                 color: c.Button.Colors.CUSTOM,
                                 onClick: () => {
-                                    v();
+                                    O();
                                 },
                                 buttonText: S.Z.Messages.PREMIUM_UPSELL_GET_NITRO
                             })

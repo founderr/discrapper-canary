@@ -17,7 +17,7 @@ let c = {
         object: o.qAy.EDIT_PER_SERVER_IDENTITY
     },
     d = {
-        page: o.ZY5.USER_POPOUT,
+        page: o.ZY5.USER_PROFILE,
         section: o.jXE.USER_PROFILE
     };
 function _(e) {

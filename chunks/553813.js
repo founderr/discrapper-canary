@@ -263,23 +263,23 @@ function N(e, t, n, r) {
             throw TypeError('Invalid operator: ' + t);
     }
 }
-function O(e, t) {
+function v(e, t) {
     if (
         ((!t || 'object' != typeof t) &&
             (t = {
                 loose: !!t,
                 includePrerelease: !1
             }),
-        e instanceof O)
+        e instanceof v)
     ) {
         if (!!t.loose === e.loose) return e;
         e = e.value;
     }
-    if (!(this instanceof O)) return new O(e, t);
-    r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === v ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
+    if (!(this instanceof v)) return new v(e, t);
+    r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === O ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
 }
-(t.gt = I), (t.lt = m), (t.eq = T), (t.neq = g), (t.gte = S), (t.lte = A), (t.cmp = N), (t.Comparator = O);
-var v = {};
+(t.gt = I), (t.lt = m), (t.eq = T), (t.neq = g), (t.gte = S), (t.lte = A), (t.cmp = N), (t.Comparator = v);
+var O = {};
 function R(e, t) {
     if (
         ((!t || 'object' != typeof t) &&
@@ -290,7 +290,7 @@ function R(e, t) {
         e instanceof R)
     )
         return !!t.loose === e.loose && !!t.includePrerelease === e.includePrerelease ? e : new R(e.raw, t);
-    if (e instanceof O) return new R(e.value, t);
+    if (e instanceof v) return new R(e.value, t);
     if (!(this instanceof R)) return new R(e, t);
     if (
         ((this.options = t),
@@ -318,17 +318,17 @@ function C(e, t) {
             (i = r.pop());
     return n;
 }
-(O.prototype.parse = function (e) {
+(v.prototype.parse = function (e) {
     var t = this.options.loose ? s[l.COMPARATORLOOSE] : s[l.COMPARATOR],
         n = e.match(t);
     if (!n) throw TypeError('Invalid comparator: ' + e);
-    (this.operator = void 0 !== n[1] ? n[1] : ''), '=' === this.operator && (this.operator = ''), n[2] ? (this.semver = new E(n[2], this.options.loose)) : (this.semver = v);
+    (this.operator = void 0 !== n[1] ? n[1] : ''), '=' === this.operator && (this.operator = ''), n[2] ? (this.semver = new E(n[2], this.options.loose)) : (this.semver = O);
 }),
-    (O.prototype.toString = function () {
+    (v.prototype.toString = function () {
         return this.value;
     }),
-    (O.prototype.test = function (e) {
-        if ((r('Comparator.test', e, this.options.loose), this.semver === v || e === v)) return !0;
+    (v.prototype.test = function (e) {
+        if ((r('Comparator.test', e, this.options.loose), this.semver === O || e === O)) return !0;
         if ('string' == typeof e)
             try {
                 e = new E(e, this.options);
@@ -337,8 +337,8 @@ function C(e, t) {
             }
         return N(e, this.operator, this.semver, this.options);
     }),
-    (O.prototype.intersects = function (e, t) {
-        if (!(e instanceof O)) throw TypeError('a Comparator is required');
+    (v.prototype.intersects = function (e, t) {
+        if (!(e instanceof v)) throw TypeError('a Comparator is required');
         if (
             ((!t || 'object' != typeof t) &&
                 (t = {
@@ -456,7 +456,7 @@ function C(e, t) {
                     return !!e.match(i);
                 })),
             (a = a.map(function (e) {
-                return new O(e, this.options);
+                return new v(e, this.options);
             }, this))
         );
     }),
@@ -509,7 +509,7 @@ R.prototype.test = function (e) {
                 for (var i = 0; i < e.length; i++) if (!e[i].test(t)) return !1;
                 if (t.prerelease.length && !n.includePrerelease) {
                     for (i = 0; i < e.length; i++) {
-                        if ((r(e[i].semver), e[i].semver !== v)) {
+                        if ((r(e[i].semver), e[i].semver !== O)) {
                             if (e[i].semver.prerelease.length > 0) {
                                 var a = e[i].semver;
                                 if (a.major === t.major && a.minor === t.minor && a.patch === t.patch) return !0;
@@ -619,7 +619,7 @@ function b(e, t, n, r) {
             _ = null;
         if (
             (c.forEach(function (e) {
-                e.semver === v && (e = new O('>=0.0.0')), (d = d || e), (_ = _ || e), i(e.semver, d.semver, r) ? (d = e) : s(e.semver, _.semver, r) && (_ = e);
+                e.semver === O && (e = new v('>=0.0.0')), (d = d || e), (_ = _ || e), i(e.semver, d.semver, r) ? (d = e) : s(e.semver, _.semver, r) && (_ = e);
             }),
             d.operator === o || d.operator === l)
         )

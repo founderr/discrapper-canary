@@ -28,8 +28,8 @@ var r = n(735250),
     S = n(424218),
     A = n(380684),
     N = n(74538),
-    O = n(960048),
-    v = n(861990),
+    v = n(960048),
+    O = n(861990),
     R = n(98278),
     C = n(639119),
     y = n(197115),
@@ -219,7 +219,7 @@ function H(e) {
     let { headingText: t, context: i, children: a, onClose: o, type: u, subscriptionTier: c, analyticsLocationObject: T, trialOffer: g, discountOffer: R } = e,
         C = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         y = (0, h.ZP)(),
-        D = (0, A.Xv)() ? v.Ld : v.zz,
+        D = (0, A.Xv)() ? O.Ld : O.zz,
         w = (0, S.BU)(D / S.XD, { useKibibytes: !0 });
     switch (u) {
         case L.cd.EMPTY_STICKER_PICKER_UPSELL:
@@ -512,7 +512,7 @@ function H(e) {
             });
         default:
             return (
-                O.Z.captureMessage('Possible mishandling of a PremiumUpsellType: '.concat(u)),
+                v.Z.captureMessage('Possible mishandling of a PremiumUpsellType: '.concat(u)),
                 (0, r.jsx)(V, {
                     headingText: t,
                     context: i,

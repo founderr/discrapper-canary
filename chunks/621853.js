@@ -32,8 +32,8 @@ let p = new Set(),
     S = {},
     A = {},
     N = {},
-    O = {},
-    v = !1;
+    v = {},
+    O = !1;
 function R(e) {
     let t = m[e];
     if ((null == t ? void 0 : t.profileEffectExpiresAt) == null) return;
@@ -75,7 +75,7 @@ function C(e, t) {
     }
 }
 function y() {
-    p.clear(), I.clear(), (m = {}), (T = {}), (A = {}), (N = {}), (O = {}), (v = !1);
+    p.clear(), I.clear(), (m = {}), (T = {}), (A = {}), (N = {}), (v = {}), (O = !1);
 }
 function D(e) {
     let { userId: t } = e;
@@ -102,15 +102,15 @@ function M(e) {
     I.delete(e.userId), (A[e.userId] = b(e.mutualFriends)), (N[e.userId] = e.mutualFriends.length);
 }
 function P() {
-    if (0 === Object.keys(O).length) return !1;
-    O = {};
+    if (0 === Object.keys(v).length) return !1;
+    v = {};
 }
 function U(e) {
-    if (null == O[e.user.id]) return !1;
-    delete O[e.user.id];
+    if (null == v[e.user.id]) return !1;
+    delete v[e.user.id];
 }
 function w(e) {
-    var t, n, r, i, o, l, u, d, _, h, I, v, y, D, L, M, P, U, w, x, G, k, B, F;
+    var t, n, r, i, o, l, u, d, _, h, I, O, y, D, L, M, P, U, w, x, G, k, B, F;
     if ((p.delete(e.user.id), null != e.mutual_guilds)) {
         let t = {};
         e.mutual_guilds.forEach((e) => {
@@ -122,7 +122,7 @@ function w(e) {
                     nick: r
                 });
         }),
-            (O[e.user.id] = E.ZP.getFlattenedGuildIds()
+            (v[e.user.id] = E.ZP.getFlattenedGuildIds()
                 .filter((e) => null != t[e])
                 .map((e) => ({
                     guild: t[e].guild,
@@ -186,7 +186,7 @@ function w(e) {
                       )
                     : e.badges
         }),
-        (null === (v = e.user_profile) || void 0 === v ? void 0 : null === (I = v.profile_effect) || void 0 === I ? void 0 : I.expires_at) != null)
+        (null === (O = e.user_profile) || void 0 === O ? void 0 : null === (I = O.profile_effect) || void 0 === I ? void 0 : I.expires_at) != null)
     ) {
         let t = new a.V7();
         (g[e.user.id] = t), R(e.user.id);
@@ -239,10 +239,10 @@ function G(e) {
         p.delete(n);
 }
 function k(e) {
-    v = !0;
+    O = !0;
 }
 function B(e) {
-    (v = !1),
+    (O = !1),
         null != e.guild_id
             ? !(function (e) {
                   let { userId: t, guild_id: n, accent_color: r, banner: i, bio: s, pronouns: o, popout_animation_particle_type: l, theme_colors: u, profileEffectId: c, profileEffectExpiresAt: d } = e;
@@ -291,7 +291,7 @@ function B(e) {
               })(e);
 }
 function F(e) {
-    v = !1;
+    O = !1;
 }
 function V(e) {
     let { user: t } = e;
@@ -312,7 +312,7 @@ class Z extends _.Z {
         return I.has(e);
     }
     get isSubmitting() {
-        return v;
+        return O;
     }
     getUserProfile(e) {
         return m[e];
@@ -328,7 +328,7 @@ class Z extends _.Z {
         return N[e];
     }
     getMutualGuilds(e) {
-        return O[e];
+        return v[e];
     }
     takeSnapshot() {
         let e = u.default.getId();

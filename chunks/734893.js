@@ -45,10 +45,10 @@ n.d(t, {
         return a;
     },
     pw: function () {
-        return v;
+        return O;
     },
     rk: function () {
-        return O;
+        return v;
     },
     tB: function () {
         return A;
@@ -179,17 +179,17 @@ function N(e, t) {
     };
 }
 ((r = a || (a = {}))[(r.VIEW = 0)] = 'VIEW'), (r[(r.CHAT = 1)] = 'CHAT');
-let O = (e) => {
+let v = (e) => {
     if (null == e) return null;
     let t = {};
     for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
     return t;
 };
-function v(e) {
+function O(e) {
     return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0);
 }
 function R(e) {
-    return null == e || (!!v(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
+    return null == e || (!!O(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
 }
 function C(e) {
     var t, n;

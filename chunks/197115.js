@@ -20,7 +20,7 @@ var i = n(120356),
     S = n(689938),
     A = n(95277);
 t.Z = function (e) {
-    let { isGift: t, subscriptionTier: i, onClick: N, size: O, className: v, isTrialCTA: R, buttonText: C, buttonTextClassName: y, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: b, premiumModalAnalyticsLocation: M, showIcon: P = !0, disableShine: U, applicationId: w, giftMessage: x, overrideDisabledButtonText: G, shinyButtonClassName: k, showGradient: B = !1, ...F } = e,
+    let { isGift: t, subscriptionTier: i, onClick: N, size: v, className: O, isTrialCTA: R, buttonText: C, buttonTextClassName: y, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: b, premiumModalAnalyticsLocation: M, showIcon: P = !0, disableShine: U, applicationId: w, giftMessage: x, overrideDisabledButtonText: G, shinyButtonClassName: k, showGradient: B = !1, ...F } = e,
         V = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
         H = (0, s.e7)([p.Z], () => p.Z.isFocused()),
         Z = (0, s.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
@@ -99,8 +99,8 @@ t.Z = function (e) {
         };
     if (R)
         return (0, r.jsxs)(o.Button, {
-            size: O,
-            className: v,
+            size: v,
+            className: O,
             innerClassName: A.premiumSubscribeButton,
             color: o.Button.Colors.BRAND_INVERTED,
             onClick: K,
@@ -120,8 +120,8 @@ t.Z = function (e) {
         });
     if (t)
         return (0, r.jsxs)(o.Button, {
-            size: O,
-            className: v,
+            size: v,
+            className: O,
             innerClassName: A.giftButton,
             color: o.Button.Colors.PRIMARY,
             onClick: K,
@@ -178,14 +178,14 @@ t.Z = function (e) {
             onClick: K,
             innerClassName: A.premiumSubscribeButton,
             color: i === T.Si.TIER_1 ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
-            size: O,
+            size: v,
             className: k,
             wrapperClassName: a()(
                 {
                     [A.tier2Gradient]: B && i === T.Si.TIER_2,
                     [A.tier1Gradient]: B && i === T.Si.TIER_1
                 },
-                v
+                O
             ),
             pauseAnimation: !H || U,
             ...F,

@@ -1,7 +1,7 @@
 n(47120);
 var r = n(735250),
     i = n(470079),
-    a = n(567526),
+    a = n(338545),
     s = n(91192),
     o = n(442837),
     l = n(780384),
@@ -20,8 +20,8 @@ var r = n(735250),
     S = n(979651),
     A = n(617136),
     N = n(113434),
-    O = n(497505),
-    v = n(918701),
+    v = n(497505),
+    O = n(918701),
     R = n(602667),
     C = n(644646),
     y = n(667105),
@@ -44,7 +44,7 @@ t.Z = function (e) {
         }),
         V = (0, y.hf)({
             quest: T,
-            location: O.jn.MEMBERS_LIST
+            location: v.jn.MEMBERS_LIST
         }),
         H = (0, N.tP)(T),
         Z = (null == T ? void 0 : null === (t = T.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
@@ -108,7 +108,7 @@ t.Z = function (e) {
     let ea = () => {
             (0, A._3)({
                 questId: T.id,
-                questContent: O.jn.MEMBERS_LIST,
+                questContent: v.jn.MEMBERS_LIST,
                 questContentCTA: A.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
@@ -117,7 +117,7 @@ t.Z = function (e) {
                     return (t) =>
                         (0, r.jsx)(e, {
                             ...t,
-                            questContent: O.jn.MEMBERS_LIST,
+                            questContent: v.jn.MEMBERS_LIST,
                             quest: T
                         });
                 });
@@ -125,7 +125,7 @@ t.Z = function (e) {
         es = () => {
             (0, A._3)({
                 questId: T.id,
-                questContent: O.jn.MEMBERS_LIST,
+                questContent: v.jn.MEMBERS_LIST,
                 questContentCTA: A.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
@@ -139,7 +139,7 @@ t.Z = function (e) {
                 return (
                     (0, A._3)({
                         questId: T.id,
-                        questContent: O.jn.MEMBERS_LIST,
+                        questContent: v.jn.MEMBERS_LIST,
                         questContentCTA: A.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
@@ -178,7 +178,7 @@ t.Z = function (e) {
                       };
     return (0, r.jsx)(R.A, {
         questOrQuests: T,
-        questContent: O.jn.MEMBERS_LIST,
+        questContent: v.jn.MEMBERS_LIST,
         trackGuildAndChannelMetadata: !0,
         children: (e) => {
             var t, n;
@@ -254,13 +254,13 @@ t.Z = function (e) {
                                                         gamePublisher: T.config.messages.gamePublisher
                                                     }),
                                                     className: U.assetTile,
-                                                    src: (0, v.uo)(T, K)
+                                                    src: (0, O.uo)(T, K)
                                                 }),
                                             'reward' === eu.tileAssetType &&
                                                 (0, r.jsx)(C.Z, {
                                                     className: U.assetTile,
                                                     quest: T,
-                                                    questContent: O.jn.MEMBERS_LIST,
+                                                    questContent: v.jn.MEMBERS_LIST,
                                                     learnMoreStyle: 'icon',
                                                     location: L.dr.MEMBERS_LIST,
                                                     onClick: er

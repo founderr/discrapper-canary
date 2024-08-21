@@ -3,7 +3,7 @@ n.d(t, {
         return A;
     },
     dE: function () {
-        return O;
+        return v;
     }
 }),
     n(47120);
@@ -70,10 +70,10 @@ function A(e) {
         N = () => {
             m(''), A((0, c.JM)(''));
         },
-        O = u.I.ATOMIC_REACTOR_REPLY_INPUT,
-        v = i.useRef(null);
+        v = u.I.ATOMIC_REACTOR_REPLY_INPUT,
+        O = i.useRef(null);
     return (0, r.jsx)(d.Z, {
-        ref: v,
+        ref: O,
         placeholder: t,
         editorClassName: h,
         className: s()(T.replyInput, h),
@@ -86,10 +86,10 @@ function A(e) {
         },
         type: o
             ? {
-                  ...O,
+                  ...v,
                   emojis: { button: !0 }
               }
-            : O,
+            : v,
         textValue: I,
         richValue: S,
         onSubmit: (e) => {
@@ -113,8 +113,8 @@ function A(e) {
         emojiPickerCloseOnModalOuterClick: !0,
         disabled: !1,
         autoCompletePosition: (() => {
-            if (null == v.current) return 'top';
-            let e = v.current.getBoundingClientRect(),
+            if (null == O.current) return 'top';
+            let e = O.current.getBoundingClientRect(),
                 t = window.innerHeight;
             return e.top < t / 2 ? 'bottom' : 'top';
         })(),
@@ -139,7 +139,7 @@ let N = (e, t) => {
             );
         }, [e, t]);
     },
-    O = (e) => {
+    v = (e) => {
         let { onSelectEmoji: t, onClick: n } = e,
             a = (0, l.ZP)(),
             [s, u] = i.useState(!1),
@@ -197,7 +197,7 @@ t.ZP = (e) => {
                 className: T.reactions,
                 children: [
                     n &&
-                        (0, r.jsx)(O, {
+                        (0, r.jsx)(v, {
                             onSelectEmoji: (e) => {
                                 null != e &&
                                     t({

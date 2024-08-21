@@ -7,7 +7,7 @@ var r = n(735250),
     l = n(315983);
 let u = i.memo(
     i.forwardRef((e, t) => {
-        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: _, renderSectionFooter: E, renderListHeader: f, rowCount: h, rowCountBySection: p, rowHeight: I, sectionMarginBottom: m, sectionHeaderHeight: T, sectionFooterHeight: g, listHeaderHeight: S, stickyHeaders: A = !1, className: N, hideScrollbar: O = !1, fade: v = !1, initialScrollTop: R = 0, role: C = 'list' } = e,
+        let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: _, renderSectionFooter: E, renderListHeader: f, rowCount: h, rowCountBySection: p, rowHeight: I, sectionMarginBottom: m, sectionHeaderHeight: T, sectionFooterHeight: g, listHeaderHeight: S, stickyHeaders: A = !1, className: N, hideScrollbar: v = !1, fade: O = !1, initialScrollTop: R = 0, role: C = 'list' } = e,
             [y, D] = i.useState(-1),
             [L, b] = i.useState(-1),
             M = i.useRef(null),
@@ -278,9 +278,9 @@ let u = i.memo(
                 };
             }, [z, u]),
             Q = i.useMemo(() => ({ height: H }), [H]),
-            X = O ? o.xV : o.h2;
+            X = v ? o.xV : o.h2;
         return (0, r.jsxs)(X, {
-            fade: v,
+            fade: O,
             className: s()(l.scroller, N),
             ref: M,
             onScroll: W,

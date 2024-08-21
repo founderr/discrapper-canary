@@ -24,8 +24,8 @@ function u(e) {
                 let n = null != u && e.shiftKey ? u : t;
                 a()(null != n, 'cannot copy null text'), (0, l.JG)(n), null == i || i();
             },
-            icon: s.IdIcon,
-            showIconFirst: c,
+            icon: c ? void 0 : s.IdIcon,
+            iconLeft: c ? s.IdIcon : void 0,
             focusedClassName: _
         },
         f

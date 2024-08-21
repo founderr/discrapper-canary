@@ -8,7 +8,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(567526),
+    o = n(338545),
     l = n(442837),
     u = n(846519),
     c = n(481060),
@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(277085),
     A = n(825801),
     N = n(215105),
-    O = n(429974),
-    v = n(228168),
+    v = n(429974),
+    O = n(228168),
     R = n(981631),
     C = n(689938),
     y = n(209071);
@@ -59,7 +59,7 @@ function M(e) {
         [ec, ed] = i.useState(en),
         [e_, eE] = i.useState(!en),
         [ef, eh] = i.useState(!1),
-        ep = g === v.y0.FULL_SIZE ? (0, O.z)(a.id, null == h ? void 0 : h.guildId) : void 0;
+        ep = g === O.y0.FULL_SIZE ? (0, v.z)(a.id, null == h ? void 0 : h.guildId) : void 0;
     i.useLayoutEffect(() => {
         if (null == K.current || en) return;
         let e = K.current.getBoundingClientRect().height;
@@ -114,7 +114,7 @@ function M(e) {
                       emoji: X,
                       animate: M,
                       hideTooltip: !1,
-                      tooltipDelay: v.vB
+                      tooltipDelay: O.vB
                   })
                 : null,
         eS = () =>
@@ -139,17 +139,17 @@ function M(e) {
         },
         eN = () =>
             (0, r.jsxs)('div', {
-                className: s()(y.content, y.clamp, y.placeholderWidth, { [y.panel]: g === v.y0.PANEL }),
+                className: s()(y.content, y.clamp, y.placeholderWidth, { [y.panel]: g === O.y0.PANEL }),
                 ref: q,
                 children: [eg(), eS()]
             }),
-        eO = () =>
+        ev = () =>
             (0, r.jsxs)('div', {
-                className: s()(y.content, y.unclamp, y.placeholderWidth, y.incorporeal, { [y.panel]: g === v.y0.PANEL }),
+                className: s()(y.content, y.unclamp, y.placeholderWidth, y.incorporeal, { [y.panel]: g === O.y0.PANEL }),
                 ref: K,
                 children: [eg(), eS()]
             }),
-        ev = () =>
+        eO = () =>
             (0, r.jsxs)('div', {
                 className: y.content,
                 children: [
@@ -186,9 +186,9 @@ function M(e) {
                 });
         },
         ey = {
-            [y.biteSize]: g === v.y0.BITE_SIZE,
-            [y.fullSize]: g === v.y0.FULL_SIZE,
-            [y.panel]: g === v.y0.PANEL
+            [y.biteSize]: g === O.y0.BITE_SIZE,
+            [y.fullSize]: g === O.y0.FULL_SIZE,
+            [y.panel]: g === O.y0.PANEL
         },
         eD = s()(y.background, { [y.editable]: eu }),
         eL = { [y.hoisted]: w },
@@ -233,7 +233,7 @@ function M(e) {
                         className: eM,
                         children: (0, r.jsxs)('span', {
                             className: eP,
-                            children: [eo && eA(), el && ev()]
+                            children: [eo && eA(), el && eO()]
                         })
                     }),
                     eo &&
@@ -241,7 +241,7 @@ function M(e) {
                         (0, r.jsx)(A.Z, {
                             user: a,
                             sourceDetails: eU(),
-                            sourceType: v.n_.STATUS,
+                            sourceType: O.n_.STATUS,
                             isVisible: ef,
                             isExpandable: e_,
                             onInteraction: U,
@@ -268,7 +268,7 @@ function M(e) {
                     className: eM,
                     children: (0, r.jsxs)('span', {
                         className: eP,
-                        children: [el && ev(), eo && eN(), eo && eO()]
+                        children: [el && eO(), eo && eN(), eo && ev()]
                     })
                 })
             }),
@@ -281,7 +281,7 @@ function M(e) {
                         channelId: m,
                         profileType: g,
                         sourceDetails: eU(),
-                        sourceType: v.n_.STATUS,
+                        sourceType: O.n_.STATUS,
                         setPopoutRef: t,
                         modalKey: ep,
                         onInteraction: U,
@@ -295,7 +295,7 @@ function M(e) {
                 },
                 animationPosition: 'top',
                 position: 'bottom',
-                align: g === v.y0.FULL_SIZE ? 'center' : 'left',
+                align: g === O.y0.FULL_SIZE ? 'center' : 'left',
                 spacing: 6,
                 shouldShow: x,
                 children: () => ew()

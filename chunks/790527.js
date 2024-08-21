@@ -24,8 +24,8 @@ var r = n(735250),
     S = n(631771),
     A = n(474936),
     N = n(981631),
-    O = n(689938),
-    v = n(876298),
+    v = n(689938),
+    O = n(876298),
     R = n(769860);
 function C(e) {
     var t, n, a;
@@ -59,27 +59,27 @@ function C(e) {
     i.useEffect(() => {
         !el && u.MH();
     }, [el]);
-    let eu = K ? s()(v.artContainer, v.artContainerBoxShadow, x) : s()(v.artContainer, x),
+    let eu = K ? s()(O.artContainer, O.artContainerBoxShadow, x) : s()(O.artContainer, x),
         ec = null;
     return (
         (ec =
             'artURL' in ee
                 ? (0, r.jsx)('img', {
-                      className: v.art,
+                      className: O.art,
                       alt: '',
                       src: ee.artURL
                   })
                 : ee.artElement),
         (0, r.jsxs)(l.ModalRoot, {
-            className: s()(v.root, w),
+            className: s()(O.root, w),
             'aria-label': C,
             transitionState: B,
             children: [
                 W
                     ? (0, r.jsx)(l.Text, {
                           variant: 'text-xs/semibold',
-                          className: v.betaBadge,
-                          children: O.Z.Messages.BETA
+                          className: O.betaBadge,
+                          children: v.Z.Messages.BETA
                       })
                     : null,
                 (0, r.jsxs)('div', {
@@ -88,7 +88,7 @@ function C(e) {
                         ec,
                         j
                             ? (0, r.jsx)('img', {
-                                  className: v.sparkleBadge,
+                                  className: O.sparkleBadge,
                                   alt: '',
                                   src: R
                               })
@@ -98,12 +98,12 @@ function C(e) {
                 $
                     ? (0, r.jsx)(l.ModalCloseButton, {
                           onClick: F,
-                          className: v.closeButton
+                          className: O.closeButton
                       })
                     : null,
                 (0, r.jsx)(l.ModalContent, {
                     scrollbarType: 'none',
-                    className: $ ? v.enhancedContent : v.content,
+                    className: $ ? O.enhancedContent : O.content,
                     children: q
                         ? (0, r.jsx)(l.Spinner, {})
                         : (0, r.jsx)(r.Fragment, {
@@ -124,7 +124,7 @@ function C(e) {
                                   : (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(l.Heading, {
-                                                className: s()(v.header, { [v.enhancedHeader]: $ }, G),
+                                                className: s()(O.header, { [O.enhancedHeader]: $ }, G),
                                                 variant: 'heading-xl/bold',
                                                 children: C
                                             }),
@@ -132,7 +132,7 @@ function C(e) {
                                             J,
                                             (0, r.jsx)(l.Text, {
                                                 variant: 'text-md/normal',
-                                                className: s()(k, v.subHeader),
+                                                className: s()(k, O.subHeader),
                                                 children: M
                                             })
                                         ]
@@ -140,14 +140,14 @@ function C(e) {
                           })
                 }),
                 (0, r.jsxs)(l.ModalFooter, {
-                    className: s()(v.footer, { [v.enhancedFooter]: $ }),
+                    className: s()(O.footer, { [O.enhancedFooter]: $ }),
                     children: [
                         (0, r.jsxs)('div', {
-                            className: s()(v.primaryActions, { [v.enhancedPrimaryActions]: $ }),
+                            className: s()(O.primaryActions, { [O.enhancedPrimaryActions]: $ }),
                             children: [
                                 null != Z
                                     ? (0, r.jsx)(l.Button, {
-                                          className: s()(v.secondaryAction, { [v.enhancedSecondaryAction]: $ }),
+                                          className: s()(O.secondaryAction, { [O.enhancedSecondaryAction]: $ }),
                                           onClick: H,
                                           size: l.Button.Sizes.SMALL,
                                           color: $ ? l.Button.Colors.CUSTOM : l.Button.Colors.PRIMARY,
@@ -162,7 +162,7 @@ function C(e) {
                                             guild: D.guild,
                                             onClose: F
                                         });
-                                    let e = $ ? O.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
+                                    let e = $ ? v.Z.Messages.PREMIUM_UPSELL_GET_NITRO : void 0;
                                     if (ei) {
                                         if (null != en) {
                                             var t, n;
@@ -170,7 +170,7 @@ function C(e) {
                                                 intervalType: null == en ? void 0 : null === (t = en.subscription_trial) || void 0 === t ? void 0 : t.interval,
                                                 intervalCount: null == en ? void 0 : null === (n = en.subscription_trial) || void 0 === n ? void 0 : n.interval_count
                                             });
-                                        } else null != er && (e = O.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: er.discount.amount }));
+                                        } else null != er && (e = v.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: er.discount.amount }));
                                     }
                                     return (0, r.jsx)(T.Z, {
                                         showGradient: $,
@@ -193,7 +193,7 @@ function C(e) {
                                 size: l.Button.Sizes.SMALL,
                                 color: l.Button.Colors.PRIMARY,
                                 look: l.Button.Looks.LINK,
-                                children: null != X ? X : O.Z.Messages.BACK
+                                children: null != X ? X : v.Z.Messages.BACK
                             })
                     ]
                 })

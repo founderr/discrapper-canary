@@ -33,8 +33,8 @@ async function _(e, t) {
                             : n.id) && void 0 !== _
                     ? _
                     : void 0);
-    let O = c.Z.getUserProfile(e),
-        v = c.Z.getGuildMemberProfile(e, S),
+    let v = c.Z.getUserProfile(e),
+        O = c.Z.getGuildMemberProfile(e, S),
         R = c.Z.getMutualGuilds(e),
         C = c.Z.getMutualFriends(e),
         y = c.Z.getMutualFriendsCount(e),
@@ -43,8 +43,8 @@ async function _(e, t) {
         b = null == R && h,
         M = null == C && I,
         P = null == y && p,
-        U = null != S && null == v,
-        w = Date.now() - (null !== (E = null == O ? void 0 : O.lastFetched) && void 0 !== E ? E : 0) >= 60000;
+        U = null != S && null == O,
+        w = Date.now() - (null !== (E = null == v ? void 0 : v.lastFetched) && void 0 !== E ? E : 0) >= 60000;
     if (!!(!D && (b || P || M)) || !!U || !!w)
         g
             ? await r.Z.wait(() =>

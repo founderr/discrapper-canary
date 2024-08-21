@@ -24,7 +24,7 @@ n.d(t, {
         return el;
     },
     H1: function () {
-        return O;
+        return v;
     },
     L1: function () {
         return eT;
@@ -63,7 +63,7 @@ n.d(t, {
         return eD;
     },
     SE: function () {
-        return eO;
+        return ev;
     },
     Sb: function () {
         return em;
@@ -90,7 +90,7 @@ n.d(t, {
         return L;
     },
     Xk: function () {
-        return v;
+        return O;
     },
     Xr: function () {
         return J;
@@ -308,7 +308,7 @@ let m = (0, o.Zc)(
         (e) => (null != e ? e : g),
         (e) => e
     ),
-    O = (0, o.Zc)(
+    v = (0, o.Zc)(
         'textAndImages',
         'viewImageDescriptions',
         (e) => {
@@ -317,7 +317,7 @@ let m = (0, o.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    v = (0, o.Zc)(
+    O = (0, o.Zc)(
         'textAndImages',
         'showCommandSuggestions',
         (e) => {
@@ -827,17 +827,17 @@ let em = (0, o.KM)(
             })
     ),
     eN = [],
-    eO = (0, o.Zc)(
+    ev = (0, o.Zc)(
         'privacy',
         'activityRestrictedGuildIds',
         (e) => (null != e ? e : eN),
         (e) => e
     ),
-    ev = [],
+    eO = [],
     eR = (0, o.Zc)(
         'privacy',
         'activityJoiningRestrictedGuildIds',
-        (e) => (null != e ? e : ev),
+        (e) => (null != e ? e : eO),
         (e) => e
     ),
     eC = (0, o.Zc)(

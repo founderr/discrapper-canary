@@ -34,15 +34,15 @@ function p(e, t) {
         g = null !== (a = null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) && void 0 !== a && a,
         A = null != h && null !== (s = null === (r = _.ZP.getMember(h, I)) || void 0 === r ? void 0 : r.roles) && void 0 !== s ? s : [],
         N = o.Z.isViewingRoles(h),
-        { computedPermissions: O, hasBaseAccessPermissions: v, hasSendMessagesPermission: R } = T(E, e instanceof u.Sf && e.isThread());
+        { computedPermissions: v, hasBaseAccessPermissions: O, hasSendMessagesPermission: R } = T(E, e instanceof u.Sf && e.isThread());
     return {
         context: E,
         userId: I,
         roleIds: A,
         isImpersonating: N,
         commandTypes: t,
-        computedPermissions: O,
-        hasBaseAccessPermissions: v,
+        computedPermissions: v,
+        hasBaseAccessPermissions: O,
         hasSendMessagesPermission: R,
         allowNsfw: m(E, g, p)
     };

@@ -15,7 +15,7 @@ let c = i.forwardRef(function (e, t) {
         [u.clickable]: !f && (null != p || null != E)
     })),
         (N['aria-selected'] = null !== (n = N['aria-selected']) && void 0 !== n ? n : f);
-    let O = (0, r.jsxs)('div', {
+    let v = (0, r.jsxs)('div', {
         className: s()(T, u.layout, {
             [u.muted]: !f && h,
             [u.wrappedLayout]: g
@@ -63,7 +63,7 @@ let c = i.forwardRef(function (e, t) {
                   ...N,
                   role: 'listitem',
                   ref: t,
-                  children: O
+                  children: v
               })
           })
         : null != E
@@ -73,7 +73,7 @@ let c = i.forwardRef(function (e, t) {
                 ...N,
                 role: 'listitem',
                 innerRef: t,
-                children: O
+                children: v
             })
           : (0, r.jsx)(l.FocusRing, {
                 ...A,
@@ -81,7 +81,7 @@ let c = i.forwardRef(function (e, t) {
                     ...N,
                     role: 'listitem',
                     ref: t,
-                    children: O
+                    children: v
                 })
             });
 });

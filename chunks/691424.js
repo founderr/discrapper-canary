@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(572004),
     A = n(900849),
     N = n(746878),
-    O = n(285063),
-    v = n(943362),
+    v = n(285063),
+    O = n(943362),
     R = n(551452),
     C = n(69626),
     y = n(142990),
@@ -219,7 +219,7 @@ let x = {
             );
         }
     },
-    timestamp: { react: (e, t, n) => (0, r.jsx)(O.Z, { node: e }, n.key) },
+    timestamp: { react: (e, t, n) => (0, r.jsx)(v.Z, { node: e }, n.key) },
     list: {
         react: (e, t, n) => {
             let r = e.ordered ? 'ol' : 'ul',
@@ -331,6 +331,6 @@ function G(e) {
         })(e),
         channelMention: (0, R.Z)(e),
         commandMention: (0, C.ZP)(e),
-        attachmentLink: (0, v.Z)(e)
+        attachmentLink: (0, O.Z)(e)
     };
 }

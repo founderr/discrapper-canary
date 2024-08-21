@@ -78,15 +78,15 @@ let g = h.Z.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
     S = [g, ...['discordapp.com/gifts', 'discord.com/gifts'].map((e) => h.Z.escape(e))].join('|'),
     A = RegExp('(?: |^|https?://)(?:'.concat(S, ')/([a-z0-9-]+)'), 'gi'),
     N = [...['discord.com/billing/promotions', 'promos.discord.gg'].map((e) => h.Z.escape(e))].join('|'),
-    O = RegExp('(?: |^|https?://)(?:'.concat(N, ')/([a-z0-9-]+)'), 'gi'),
-    v = (e, t) =>
+    v = RegExp('(?: |^|https?://)(?:'.concat(N, ')/([a-z0-9-]+)'), 'gi'),
+    O = (e, t) =>
         Array(t)
             .fill(void 0)
             .map(() => '['.concat('abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789', ']{').concat(e, '}'))
             .join('-?'),
-    R = v(4, 4),
-    C = v(4, 6),
-    y = v(5, 3),
+    R = O(4, 4),
+    C = O(4, 6),
+    y = O(5, 3),
     D = [R, C, y, '[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}'].join('|'),
     L = new RegExp('^('.concat('WUMP-?', ')?(').concat(D, ')$'));
 ((i = r || (r = {}))[(i.DEFAULT = 0)] = 'DEFAULT'), (i[(i.CUSTOM_STYLE = 1)] = 'CUSTOM_STYLE'), (i[(i.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = 'CUSTOM_MESSAGE_EMOJI_SOUNDBOARD');
@@ -117,7 +117,7 @@ let x = (e) => (null == e ? void 0 : e.type) === I.uaV.CUSTOM_GIFT && (null == e
         if (null == e) return [];
         let n = new Set();
         for (; null != (t = A.exec(e)) && n.size < 3; ) n.add(w(t[1]));
-        for (; null != (t = O.exec(e)) && n.size < 3; ) n.add(w(t[1]));
+        for (; null != (t = v.exec(e)) && n.size < 3; ) n.add(w(t[1]));
         return Array.from(n);
     };
 function k() {

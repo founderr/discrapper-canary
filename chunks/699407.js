@@ -54,7 +54,7 @@ let _ = 1500,
             if (((a = null), !S())) return;
             let e = p.slice();
             (p = []),
-                O(e).then(
+                v(e).then(
                     () => {
                         e.forEach((e) => {
                             var t;
@@ -68,7 +68,7 @@ let _ = 1500,
                     }
                 );
         }
-        function O(e) {
+        function v(e) {
             let t = Date.now(),
                 n = e.map((e) => ({
                     ...e,
@@ -122,13 +122,13 @@ let _ = 1500,
                     !1
                 );
             });
-        class v extends l.yh {
+        class O extends l.yh {
             initialize() {
                 null != g && this.waitFor(...g);
             }
             constructor(...e) {
-                super(...e), d(this, 'submitEventsImmediately', O);
+                super(...e), d(this, 'submitEventsImmediately', v);
             }
         }
-        return d(v, 'displayName', 'AnalyticsTrackingStore'), new v(t, n);
+        return d(O, 'displayName', 'AnalyticsTrackingStore'), new O(t, n);
     };

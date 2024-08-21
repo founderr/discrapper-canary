@@ -28,17 +28,17 @@ t.Z = {
                     S = void 0 === g || g,
                     A = n.allowedAutoPlacements,
                     N = t.options.placement,
-                    O = (0, i.Z)(N) === N,
-                    v =
+                    v = (0, i.Z)(N) === N,
+                    O =
                         h ||
-                        (O || !S
+                        (v || !S
                             ? [(0, r.Z)(N)]
                             : (function (e) {
                                   if ((0, i.Z)(e) === l.d7) return [];
                                   var t = (0, r.Z)(e);
                                   return [(0, a.Z)(e), t, (0, a.Z)(t)];
                               })(N)),
-                    R = [N].concat(v).reduce(function (e, n) {
+                    R = [N].concat(O).reduce(function (e, n) {
                         return e.concat(
                             (0, i.Z)(n) === l.d7
                                 ? (0, o.Z)(t, {

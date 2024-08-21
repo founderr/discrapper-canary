@@ -124,7 +124,7 @@ function d(e, t) {
         regexp: 'red'
     });
 function _(e, n, r) {
-    if (e.customInspect && n && v(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
+    if (e.customInspect && n && O(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
         var i,
             a,
             s = n.inspect(r, e);
@@ -146,20 +146,20 @@ function _(e, n, r) {
             i[e] = !0;
         }),
         i);
-    if ((e.showHidden && (l = Object.getOwnPropertyNames(n)), O(n) && (l.indexOf('message') >= 0 || l.indexOf('description') >= 0))) return E(n);
+    if ((e.showHidden && (l = Object.getOwnPropertyNames(n)), v(n) && (l.indexOf('message') >= 0 || l.indexOf('description') >= 0))) return E(n);
     if (0 === l.length) {
-        if (v(n)) {
+        if (O(n)) {
             var c = n.name ? ': ' + n.name : '';
             return e.stylize('[Function' + c + ']', 'special');
         }
         if (S(n)) return e.stylize(RegExp.prototype.toString.call(n), 'regexp');
         if (N(n)) return e.stylize(Date.prototype.toString.call(n), 'date');
-        if (O(n)) return E(n);
+        if (v(n)) return E(n);
     }
     var d = '',
         A = !1,
         R = ['{', '}'];
-    if ((h(n) && ((A = !0), (R = ['[', ']'])), v(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), S(n) && (d = ' ' + RegExp.prototype.toString.call(n)), N(n) && (d = ' ' + Date.prototype.toUTCString.call(n)), O(n) && (d = ' ' + E(n)), 0 === l.length && (!A || 0 == n.length))) return R[0] + d + R[1];
+    if ((h(n) && ((A = !0), (R = ['[', ']'])), O(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), S(n) && (d = ' ' + RegExp.prototype.toString.call(n)), N(n) && (d = ' ' + Date.prototype.toUTCString.call(n)), v(n) && (d = ' ' + E(n)), 0 === l.length && (!A || 0 == n.length))) return R[0] + d + R[1];
     if (r < 0) return S(n) ? e.stylize(RegExp.prototype.toString.call(n), 'regexp') : e.stylize('[Object]', 'special');
     return (
         e.seen.push(n),
@@ -260,10 +260,10 @@ function A(e) {
 function N(e) {
     return A(e) && '[object Date]' === R(e);
 }
-function O(e) {
+function v(e) {
     return A(e) && ('[object Error]' === R(e) || e instanceof Error);
 }
-function v(e) {
+function O(e) {
     return 'function' == typeof e;
 }
 (t.isSymbol = function (e) {
@@ -275,9 +275,9 @@ function v(e) {
     (t.isObject = A),
     (t.isDate = N),
     (t.types.isDate = N),
-    (t.isError = O),
-    (t.types.isNativeError = O),
-    (t.isFunction = v);
+    (t.isError = v),
+    (t.types.isNativeError = v),
+    (t.isFunction = O);
 function R(e) {
     return Object.prototype.toString.call(e);
 }

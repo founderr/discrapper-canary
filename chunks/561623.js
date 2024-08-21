@@ -28,7 +28,7 @@ var t = a(735250),
     S = a(309461);
 n.default = (e) => {
     var n, a, h, U;
-    let { daysLeft: B, premiumType: Z, premiumSubscription: G, analyticsSource: x, ...F } = e,
+    let { daysLeft: Z, premiumType: B, premiumSubscription: G, analyticsSource: x, ...F } = e,
         H = (0, l.ZP)(),
         [W, D] = r.useState(!1),
         { analyticsLocations: Y } = (0, u.ZP)(c.Z.PREMIUM_UNCANCEL_MODAL),
@@ -61,7 +61,7 @@ n.default = (e) => {
         Q = null != K ? (0, E.aS)(K.id, !1, !1, j) : null,
         V = null != Q && null != z ? (0, R.T4)(Q.amount - (null != z ? z : 0), Q.currency) : null,
         { intervalType: q, intervalCount: J } = E.ZP.getInterval(v),
-        $ = Z === A.p9.TIER_1,
+        $ = B === A.p9.TIER_1,
         ee = null != Q ? (0, R.T4)(Q.amount, Q.currency) : null;
     return (
         r.useEffect(() => {
@@ -77,7 +77,7 @@ n.default = (e) => {
                 ? (0, t.jsxs)(t.Fragment, {
                       children: [
                           (0, t.jsx)(p.Z, {
-                              premiumType: Z,
+                              premiumType: B,
                               onClose: F.onClose
                           }),
                           (0, t.jsx)(g.ZP, {
@@ -88,8 +88,8 @@ n.default = (e) => {
                       ]
                   })
                 : (0, t.jsx)(m.Z, {
-                      premiumType: Z,
-                      titleText: $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE_TIER_1.format({ daysLeft: B }) : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE.format({ daysLeft: B }),
+                      premiumType: B,
+                      titleText: $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE_TIER_1.format({ daysLeft: Z }) : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_TITLE.format({ daysLeft: Z }),
                       subtitleText: $ ? P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE_TIER_1.format() : P.Z.Messages.PREMIUM_SUBSCRIPTION_ENDING_WHAT_YOU_LOSE_SUBTITLE.format(),
                       footer: (0, t.jsxs)('div', {
                           children: [

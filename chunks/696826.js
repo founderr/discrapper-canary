@@ -12,7 +12,7 @@ n.d(t, {
         return _.Skl;
     },
     W5: function () {
-        return v;
+        return O;
     },
     lm: function () {
         return I;
@@ -21,7 +21,7 @@ n.d(t, {
         return R;
     },
     rs: function () {
-        return O;
+        return v;
     },
     vP: function () {
         return A;
@@ -35,7 +35,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(567526),
+    o = n(338545),
     l = n(780384),
     u = n(481060),
     c = n(44315),
@@ -288,7 +288,7 @@ function N(e) {
             'animate-always'
         ),
         N = p(t, l),
-        [{ fill: O }] = (0, u.useSpring)(
+        [{ fill: v }] = (0, u.useSpring)(
             {
                 config: h,
                 fill: N
@@ -296,11 +296,11 @@ function N(e) {
             'animate-always',
             [N]
         ),
-        v = Math.ceil(a * E.EW);
+        O = Math.ceil(a * E.EW);
     return (0, r.jsxs)('svg', {
         width: a,
-        height: v,
-        viewBox: '0 0 '.concat(a, ' ').concat(v),
+        height: O,
+        viewBox: '0 0 '.concat(a, ' ').concat(O),
         className: s()(f.mask, c),
         style: d,
         children: [
@@ -309,14 +309,14 @@ function N(e) {
                 x: 0,
                 y: 0,
                 width: a,
-                height: v,
-                fill: O,
+                height: O,
+                fill: v,
                 mask: 'url(#'.concat(I, ')')
             })
         ]
     });
 }
-function O(e, t) {
+function v(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     if (n) return d.ZP.Masks.STATUS_TYPING;
     switch (e) {
@@ -336,7 +336,7 @@ function O(e, t) {
             return d.ZP.Masks.STATUS_ONLINE;
     }
 }
-function v(e, t, n) {
+function O(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return t === _.Skl.ONLINE && n && !r
         ? {
@@ -353,10 +353,10 @@ function R(e) {
         u = t === _.Skl.ONLINE && n,
         c = p(t, l);
     return (0, r.jsx)(d.ZP, {
-        mask: O(t, u),
+        mask: v(t, u),
         className: s()(f.mask, a),
         style: o,
-        ...v(i, t, u),
+        ...O(i, t, u),
         children: (0, r.jsx)('div', {
             style: { backgroundColor: c },
             className: f.status

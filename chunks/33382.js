@@ -28,7 +28,7 @@ function a(e, t) {
             S = '+' === m || '*' === m,
             A = '?' === m || '*' === m,
             N = n[2] || u,
-            O = p || I;
+            v = p || I;
         r.push({
             name: h || a++,
             prefix: f || '',
@@ -37,10 +37,10 @@ function a(e, t) {
             repeat: S,
             partial: g,
             asterisk: !!T,
-            pattern: O
+            pattern: v
                 ? (function (e) {
                       return e.replace(/([=!:$\/()])/g, '\\$1');
-                  })(O)
+                  })(v)
                 : T
                   ? '.*'
                   : '[^' + l(N) + ']+?'

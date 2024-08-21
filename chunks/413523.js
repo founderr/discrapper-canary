@@ -33,7 +33,7 @@ var r,
     S = n(354459),
     A = n(981631),
     N = n(65154);
-function O(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +46,7 @@ function O(e, t, n) {
         e
     );
 }
-let v = '__EMBEDDED_ACTIVITIES__';
+let O = '__EMBEDDED_ACTIVITIES__';
 function R(e) {
     switch (e.type) {
         case S.fO.ACTIVITY:
@@ -94,15 +94,15 @@ class C {
         return null !== (t = this.participantByIndex.get(e)) && void 0 !== t ? t : null;
     }
     updateEmbeddedActivities() {
-        return this.updateParticipant(v);
+        return this.updateParticipant(O);
     }
     hasEmbeddedActivity() {
-        let e = this.participants[v];
+        let e = this.participants[O];
         return null != e && e.length > 0;
     }
     updateParticipant(e) {
         let t = this.participants[e],
-            n = e === v ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
+            n = e === O ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
         return (
             (null != t || 0 !== n.length) &&
             (null == t ||
@@ -194,18 +194,18 @@ class C {
         let g = [],
             A = p.default.getUser(e);
         if (null == A) return g;
-        let O = m.Z.getVoiceStateForChannel(this.channelId, e),
-            v = m.Z.getVoicePlatformForChannel(this.channelId, e),
+        let v = m.Z.getVoiceStateForChannel(this.channelId, e),
+            O = m.Z.getVoicePlatformForChannel(this.channelId, e),
             R = E.Z.getChannel(this.channelId),
             C = null !== (r = null === (n = this.call) || void 0 === n ? void 0 : null === (t = n.ringing) || void 0 === t ? void 0 : t.includes(e)) && void 0 !== r && r;
-        (null != O || C) &&
+        (null != v || C) &&
             ((l = {
                 type: S.fO.USER,
                 ...I.Z.getUserStreamData(e, null == R ? void 0 : R.getGuildId()),
                 user: A,
                 id: A.id,
-                voiceState: O,
-                voicePlatform: v,
+                voiceState: v,
+                voicePlatform: O,
                 speaking: (0, o.O)({
                     userId: e,
                     checkIsMuted: !0
@@ -234,7 +234,7 @@ class C {
                 ...i,
                 type: r ? S.fO.HIDDEN_STREAM : S.fO.STREAM,
                 id: t,
-                userVideo: null !== (s = null == O ? void 0 : O.selfVideo) && void 0 !== s && s,
+                userVideo: null !== (s = null == v ? void 0 : v.selfVideo) && void 0 !== s && s,
                 user: A,
                 userNick: T.ZP.getName(null == R ? void 0 : R.getGuildId(), this.channelId, A),
                 stream: y
@@ -244,11 +244,11 @@ class C {
         return g;
     }
     constructor(e) {
-        O(this, 'channelId', void 0),
-            O(this, 'call', void 0),
-            O(this, 'participants', {}),
-            O(this, 'lastSpoke', {}),
-            O(
+        v(this, 'channelId', void 0),
+            v(this, 'call', void 0),
+            v(this, 'participants', {}),
+            v(this, 'lastSpoke', {}),
+            v(
                 this,
                 'participantByIndex',
                 new s.h((e) => {

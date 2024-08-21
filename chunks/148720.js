@@ -27,8 +27,8 @@ async function I(e) {
     }
     if (null == S || null == A) return;
     let N = c.default.getCurrentUser(),
-        O = o.Z.getChannel(t);
-    async function v() {
+        v = o.Z.getChannel(t);
+    async function O() {
         if (null != S)
             await (0, E.Z)({
                 applicationId: S.applicationId,
@@ -84,12 +84,12 @@ async function I(e) {
             application: A,
             channelId: t,
             currentUser: N,
-            isActivitiesEnabledForCurrentPlatform: (0, f.a)(O),
+            isActivitiesEnabledForCurrentPlatform: (0, f.a)(v),
             ChannelStore: o.Z,
             VoiceStateStore: d.Z,
             PermissionStore: u.Z,
             GuildStore: l.Z
         }),
-        handleCanJoin: v
+        handleCanJoin: O
     });
 }

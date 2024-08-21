@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(689938),
     h = n(330708);
 t.Z = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: p, targetBoostedGuildTier: I, onClose: m = () => {}, closeLayer: T = () => {}, pauseAnimation: g = !1, applicationId: S, handleSubscribeModalClose: A, withHighlight: N = !1, ...O } = e,
-        { analyticsLocations: v } = (0, u.ZP)(),
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: p, targetBoostedGuildTier: I, onClose: m = () => {}, closeLayer: T = () => {}, pauseAnimation: g = !1, applicationId: S, handleSubscribeModalClose: A, withHighlight: N = !1, ...v } = e,
+        { analyticsLocations: O } = (0, u.ZP)(),
         R = (0, l.bp)() === E.IlC.POPOUT,
         [C, y] = i.useState(!1),
         D = null != I ? Math.max((0, d.KK)(a, I), 1) : 1,
@@ -22,7 +22,7 @@ t.Z = (e) => {
         b = async () => {
             y(!0),
                 await (0, _.u)({
-                    analyticsLocations: v,
+                    analyticsLocations: O,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: a,
@@ -49,7 +49,7 @@ t.Z = (e) => {
                 P
             ]
         })),
-        (O.disabled = !0)),
+        (v.disabled = !0)),
     null != L)
         ? (0, r.jsx)(o.Tooltip, {
               text: L,
@@ -60,14 +60,14 @@ t.Z = (e) => {
                       disabled: !0,
                       size: o.Button.Sizes.SMALL,
                       pauseAnimation: g,
-                      ...O,
+                      ...v,
                       children: P
                   })
           })
         : (0, r.jsx)(o.ShinyButton, {
               size: o.Button.Sizes.SMALL,
-              ...O,
-              className: s()(O.className, { [h.buttonHighlighted]: N }),
+              ...v,
+              className: s()(v.className, { [h.buttonHighlighted]: N }),
               submitting: C,
               onClick: b,
               pauseAnimation: g,

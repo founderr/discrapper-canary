@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(592125),
     A = n(757266),
     N = n(650774),
-    O = n(430824),
-    v = n(283595),
+    v = n(430824),
+    O = n(283595),
     R = n(496675),
     C = n(699516),
     y = n(944486),
@@ -53,12 +53,12 @@ function k(e) {
         }),
         z =
             (0, a.e7)(
-                [v.Z, g.Z, b.Z, A.Z],
+                [O.Z, g.Z, b.Z, A.Z],
                 () =>
                     null != j &&
                     (0, P.t)({
                         applicationId: j,
-                        LibraryApplicationStore: v.Z,
+                        LibraryApplicationStore: O.Z,
                         LaunchableGameStore: g.Z,
                         DispatchApplicationStore: b.Z,
                         ConnectedAppsStore: A.Z
@@ -71,7 +71,7 @@ function k(e) {
             })
         ),
         Q = (0, a.e7)([L.Z], () => null != j && L.Z.getState(j, w.mFx.JOIN) === w.OcF.LOADING),
-        X = (0, a.e7)([S.Z, O.Z, N.Z, C.Z, y.Z, D.Z, R.Z], () =>
+        X = (0, a.e7)([S.Z, v.Z, N.Z, C.Z, y.Z, D.Z, R.Z], () =>
             (0, E.Z)({
                 user: t,
                 activity: k,
@@ -80,7 +80,7 @@ function k(e) {
                 currentUser: n,
                 isEmbedded: Y,
                 ChannelStore: S.Z,
-                GuildStore: O.Z,
+                GuildStore: v.Z,
                 GuildMemberCountStore: N.Z,
                 RelationshipStore: C.Z,
                 SelectedChannelStore: y.Z,

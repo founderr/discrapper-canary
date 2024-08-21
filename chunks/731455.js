@@ -36,13 +36,13 @@ n.d(t, {
         return I;
     },
     md: function () {
-        return O;
+        return v;
     },
     o3: function () {
         return _;
     },
     zo: function () {
-        return v;
+        return O;
     }
 });
 var r,
@@ -118,9 +118,9 @@ let A = d.Z.getLanguages()
                 : e
         ),
     N = 40,
-    O = 20;
+    v = 20;
 ((a = u || (u = {})).GAME_RECOMMENDATIONS = 'Game Recommendations'), (a.SERVER_RECOMMENDATIONS = 'Server Recommendations'), ((s = c || (c = {}))[(s.Activity = 0)] = 'Activity'), (s[(s.Discover = 1)] = 'Discover'), (s[(s.Education = 2)] = 'Education'), (s[(s.Music = 3)] = 'Music'), (s[(s.Science = 4)] = 'Science'), (s[(s.Stage = 5)] = 'Stage'), (s[(s.Television = 6)] = 'Television'), (s[(s.Server = 7)] = 'Server'), (s[(s.Quest = 8)] = 'Quest');
-let v = {
+let O = {
     facebook: {
         presentation: 'Facebook',
         baseUrl: 'https://facebook.com'

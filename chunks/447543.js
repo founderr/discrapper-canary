@@ -25,8 +25,8 @@ var r = n(525654),
     S = n(924301),
     A = n(82085),
     N = n(264229),
-    O = n(652898),
-    v = n(895886),
+    v = n(652898),
+    O = n(895886),
     R = n(143816),
     C = n(703656),
     y = n(922482),
@@ -164,7 +164,7 @@ t.Z = {
                   type: 'INVITE_RESOLVE',
                   code: t
               }),
-              (0, O.Z)(t, n, r).then((e) => {
+              (0, v.Z)(t, n, r).then((e) => {
                   let { invite: t, code: n, banned: r } = e;
                   return (
                       null != t
@@ -335,7 +335,7 @@ t.Z = {
                 }),
             p = k.default.getCurrentUser();
         return null !== (t = null == p ? void 0 : p.hasFlag(j.xW$.QUARANTINED)) && void 0 !== t && t
-            ? ((0, v.default)(), new Promise((e, t) => t(Error())))
+            ? ((0, O.default)(), new Promise((e, t) => t(Error())))
             : (c.Z.dispatch({
                   type: 'INVITE_ACCEPT',
                   code: E

@@ -58,7 +58,7 @@ function N() {
         autoTrackExposure: !1
     }).canSeeFrequentlyPlayed;
 }
-class O extends (r = l.ZP.PersistedStore) {
+class v extends (r = l.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(_.default, f.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && g.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (T = e.playedEventsPendingFlush), this.syncWith([d.Z], A);
     }
@@ -81,9 +81,9 @@ class O extends (r = l.ZP.PersistedStore) {
         return S.frequently;
     }
 }
-m(O, 'displayName', 'SoundboardEventStore'),
-    m(O, 'persistKey', 'SoundboardEventStore'),
-    (t.Z = new O(u.Z, {
+m(v, 'displayName', 'SoundboardEventStore'),
+    m(v, 'persistKey', 'SoundboardEventStore'),
+    (t.Z = new v(u.Z, {
         GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: function (e) {
             let { sound: t, trigger: n } = e;
             if (!N()) return;

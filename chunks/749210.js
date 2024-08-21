@@ -26,8 +26,8 @@ var r = n(990547),
     S = n(430824),
     A = n(944486),
     N = n(914010),
-    O = n(594174),
-    v = n(626135),
+    v = n(594174),
+    O = n(626135),
     R = n(700785),
     C = n(74538),
     y = n(573261),
@@ -57,7 +57,7 @@ async function w(e) {
     let u = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { source: c, loadId: d, lurkLocation: _ } = u,
         E = null !== (t = u.lurker) && void 0 !== t && t,
-        h = O.default.getCurrentUser();
+        h = v.default.getCurrentUser();
     if (null !== (r = null == h ? void 0 : h.hasFlag(L.xW$.QUARANTINED)) && void 0 !== r && r) return (0, f.default)(), new Promise((e, t) => t(Error()));
     s.Z.wait(() =>
         s.Z.dispatch({
@@ -117,7 +117,7 @@ async function w(e) {
         return i;
     } catch (t) {
         if ((null === (i = t.body) || void 0 === i ? void 0 : i.code) === L.evJ.TOO_MANY_USER_GUILDS) {
-            let e = O.default.getCurrentUser();
+            let e = v.default.getCurrentUser();
             C.ZP.canUseIncreasedGuildCap(e) || (null == e ? void 0 : e.isStaff()) ? M(L.tHP) : M(L.DZw);
         }
         throw ((null === (o = t.body) || void 0 === o ? void 0 : o.code) === L.evJ.GUILD_AT_CAPACITY && U(), E && (null === (l = t.body) || void 0 === l ? void 0 : l.code) === L.evJ.UNKNOWN_GUILD && P(e), t);
@@ -356,7 +356,7 @@ t.Z = {
         });
     },
     createGuildFolderLocal(e, t) {
-        v.default.track(L.rMx.GUILD_FOLDER_CREATED),
+        O.default.track(L.rMx.GUILD_FOLDER_CREATED),
             s.Z.dispatch({
                 type: 'GUILD_FOLDER_CREATE_LOCAL',
                 sourceIds: e,
@@ -379,7 +379,7 @@ t.Z = {
     },
     toggleGuildFolderExpand(e) {
         let t = T.Z.isFolderExpanded(e);
-        v.default.track(L.rMx.GUILD_FOLDER_CLICKED, {
+        O.default.track(L.rMx.GUILD_FOLDER_CLICKED, {
             source: 'sidebar',
             action: t ? 'collapsed' : 'expanded'
         }),

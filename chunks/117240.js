@@ -19,11 +19,11 @@ let g = 'BrowserHandoffStore',
 function N() {
     null != r && null != i && (window.open(''.concat(r, '&key=').concat(i)), I.Z.focus(null, !0));
 }
-function O() {
+function v() {
     (i = null), A.stop(), (S = !1), _.K.set(g, S);
 }
-function v() {
-    O();
+function O() {
+    v();
 }
 class R extends (u = d.ZP.Store) {
     initialize() {
@@ -61,12 +61,12 @@ class R extends (u = d.ZP.Store) {
             if (null == t || null == n) return !1;
             (S = !0), A.start(r, () => (0, h.lx)());
         },
-        BROWSER_HANDOFF_UNAVAILABLE: O,
+        BROWSER_HANDOFF_UNAVAILABLE: v,
         BROWSER_HANDOFF_SET_USER: function (e) {
             a = new p.Z(e.user);
         },
-        LOGIN: v,
-        LOGIN_SUCCESS: v,
-        LOGOUT: v,
-        REGISTER: v
+        LOGIN: O,
+        LOGIN_SUCCESS: O,
+        LOGOUT: O,
+        REGISTER: O
     }));

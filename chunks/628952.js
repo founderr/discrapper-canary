@@ -10,8 +10,8 @@ var s = t(120356),
     u = t(125988),
     c = t(987209),
     E = t(921813),
-    f = t(731896),
-    h = t(484459),
+    h = t(731896),
+    f = t(484459),
     m = t(594174),
     v = t(937615),
     C = t(583434),
@@ -35,7 +35,7 @@ let T = (e) => {
     g = (e) => {
         var n;
         let { profileEffect: t } = e,
-            s = (0, f.V)(t.id),
+            s = (0, h.V)(t.id),
             { accessibilityLabel: i, thumbnailPreviewSrc: l, title: r } = null !== (n = null == s ? void 0 : s.config) && void 0 !== n ? n : {};
         return (0, a.jsxs)('div', {
             className: x.profileEffectContainer,
@@ -56,7 +56,7 @@ let T = (e) => {
 n.Z = (e) => {
     let { selectedSkuId: n, selectedSkuPricePreview: t, className: s } = e,
         { product: d } = (0, C.T)(n),
-        { giftRecipient: u, giftRecipientError: f } = (0, c.wD)(),
+        { giftRecipient: u, giftRecipientError: h } = (0, c.wD)(),
         I = (0, r.e7)([m.default], () => m.default.getCurrentUser());
     if (null == d || null == t) return null;
     let [N] = d.items,
@@ -75,7 +75,7 @@ n.Z = (e) => {
                         (0, a.jsx)(
                             o.Popout,
                             {
-                                preload: () => (0, h.Z)(u.id, u.getAvatarURL(null, 80)),
+                                preload: () => (0, f.Z)(u.id, u.getAvatarURL(null, 80)),
                                 renderPopout: (e) =>
                                     (0, a.jsx)(E.Z, {
                                         ...e,
@@ -104,7 +104,7 @@ n.Z = (e) => {
                 ]
             }),
             (0, a.jsxs)('div', {
-                className: i()(x.previewContainer, { [x.previewContainerError]: null != f }),
+                className: i()(x.previewContainer, { [x.previewContainerError]: null != h }),
                 children: [
                     N.type === l.Z.AVATAR_DECORATION && (0, a.jsx)(T, { avatarDecoration: N }),
                     N.type === l.Z.PROFILE_EFFECT && (0, a.jsx)(g, { profileEffect: N }),
@@ -128,12 +128,12 @@ n.Z = (e) => {
                     })
                 ]
             }),
-            null != f &&
+            null != h &&
                 (0, a.jsx)(o.Text, {
                     className: x.recipientError,
                     variant: 'text-sm/normal',
                     color: 'status-danger-background',
-                    children: f
+                    children: h
                 })
         ]
     });

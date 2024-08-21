@@ -19,8 +19,8 @@ var r = n(735250),
     S = n(685440);
 t.Z = (e) => {
     let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: A, setTrackedUpsellViewed: N } = e,
-        { location: O } = (0, u.O)(),
-        { analyticsLocations: v } = (0, d.ZP)(),
+        { location: v } = (0, u.O)(),
+        { analyticsLocations: O } = (0, d.ZP)(),
         R = (0, o.e7)([p.Z], () => p.Z.getGuild(n)),
         { canManageAllExpressions: C } = (0, h.XJ)(R),
         y = null != R && 0 === (0, I.A3)(R.premiumTier) && !R.hasFeature(m.oNc.MORE_STICKERS);
@@ -29,14 +29,14 @@ t.Z = (e) => {
             y &&
             A &&
             ((0, c.yw)(m.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
-                location: O,
+                location: v,
                 guild_id: null == R ? void 0 : R.id,
                 channel_id: null == a ? void 0 : a.id,
                 type: 'Expression Picker Inline Sticker Upsell',
-                location_stack: v
+                location_stack: O
             }),
             N(!0));
-    }, [y, R, a, O, A, N, v, C]),
+    }, [y, R, a, v, A, N, O, C]),
     null != R && C)
         ? y
             ? (0, r.jsxs)('div', {
@@ -58,8 +58,8 @@ t.Z = (e) => {
                           color: l.Button.Colors.LINK,
                           onClick: () => {
                               (0, E.Z)({
-                                  analyticsLocations: v,
-                                  analyticsSourceLocation: O,
+                                  analyticsLocations: O,
+                                  analyticsSourceLocation: v,
                                   guild: R,
                                   perks: (0, T.hC)()
                               });
@@ -88,7 +88,7 @@ t.Z = (e) => {
                           look: l.Button.Looks.LINK,
                           color: l.Button.Colors.LINK,
                           onClick: () => {
-                              (0, _._Q)(), f.Z.open(n, m.pNK.STICKERS, O);
+                              (0, _._Q)(), f.Z.open(n, m.pNK.STICKERS, v);
                           },
                           children: g.Z.Messages.STICKER_PICKER_EMPTY_GUILD_UPSELL_NO_STICKERS_CTA
                       })

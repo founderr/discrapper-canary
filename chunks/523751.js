@@ -24,8 +24,8 @@ var r = n(735250),
     S = n(267642),
     A = n(284363),
     N = n(854218),
-    O = n(981631),
-    v = n(689938),
+    v = n(981631),
+    O = n(689938),
     R = n(906287);
 let C = {
     [A.Q.STAFF]: {
@@ -104,7 +104,7 @@ function y(e) {
                 children: (0, r.jsx)(c.Text, {
                     variant: 'text-xs/semibold',
                     color: 'always-white',
-                    children: v.Z.Messages.SERVER_BADGE_PREMIUM_FOOTER_BOOST_COUNT.format({ count: t.premiumSubscriberCount })
+                    children: O.Z.Messages.SERVER_BADGE_PREMIUM_FOOTER_BOOST_COUNT.format({ count: t.premiumSubscriberCount })
                 })
             })
         ]
@@ -117,49 +117,49 @@ function D(e) {
             tooltipSubtitle: a,
             tooltipDescription: s
         } = (function (e, t) {
-            let n = t === N.PZ.PUBLIC ? v.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN : v.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
+            let n = t === N.PZ.PUBLIC ? O.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN : O.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
             switch (e) {
                 case A.Q.STAFF:
                     return {
-                        tooltipTitle: v.Z.Messages.INTERNAL_EMPLOYEE_ONLY,
-                        tooltipSubtitle: v.Z.Messages.INTERNAL_EMPLOYEE_ONLY,
-                        tooltipDescription: v.Z.Messages.INTERNAL_EMPLOYEE_ONLY
+                        tooltipTitle: O.Z.Messages.INTERNAL_EMPLOYEE_ONLY,
+                        tooltipSubtitle: O.Z.Messages.INTERNAL_EMPLOYEE_ONLY,
+                        tooltipDescription: O.Z.Messages.INTERNAL_EMPLOYEE_ONLY
                     };
                 case A.Q.VERIFIED:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
-                        tooltipSubtitle: v.Z.Messages.GUILD_VERIFIED,
+                        tooltipTitle: O.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
+                        tooltipSubtitle: O.Z.Messages.GUILD_VERIFIED,
                         tooltipDescription: n
                     };
                 case A.Q.PARTNERED:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
-                        tooltipSubtitle: v.Z.Messages.GUILD_PARTNERED,
+                        tooltipTitle: O.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
+                        tooltipSubtitle: O.Z.Messages.GUILD_PARTNERED,
                         tooltipDescription: n
                     };
                 case A.Q.VERIFIED_AND_PARTNERED:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
-                        tooltipSubtitle: v.Z.Messages.GUILD_VERIFIED_AND_PARTNERED,
+                        tooltipTitle: O.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
+                        tooltipSubtitle: O.Z.Messages.GUILD_VERIFIED_AND_PARTNERED,
                         tooltipDescription: n
                     };
                 case A.Q.COMMUNITY:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
-                        tooltipDescription: v.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY
+                        tooltipTitle: O.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
+                        tooltipDescription: O.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY
                     };
                 case A.Q.DISCOVERABLE:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
-                        tooltipDescription: v.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN
+                        tooltipTitle: O.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
+                        tooltipDescription: O.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN
                     };
                 case A.Q.CLAN:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_CLAN,
-                        tooltipDescription: v.Z.Messages.SERVER_BADGE_DESCRIPTION_APPLICATION_REQUIRED
+                        tooltipTitle: O.Z.Messages.SERVER_BADGE_TITLE_CLAN,
+                        tooltipDescription: O.Z.Messages.SERVER_BADGE_DESCRIPTION_APPLICATION_REQUIRED
                     };
                 default:
-                    return { tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_UNKNOWN };
+                    return { tooltipTitle: O.Z.Messages.SERVER_BADGE_TITLE_UNKNOWN };
             }
         })(t, n.visibility);
     return (0, r.jsxs)(r.Fragment, {
@@ -195,7 +195,7 @@ function D(e) {
 function L(e) {
     let t,
         n,
-        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: E, className: T, flowerStarClassName: g, iconClassName: S, badgeStrokeColor: v, badgeColor: y, size: L = 16, disableBoostClick: b, 'aria-label': M = !1 } = e,
+        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: E, className: T, flowerStarClassName: g, iconClassName: S, badgeStrokeColor: O, badgeColor: y, size: L = 16, disableBoostClick: b, 'aria-label': M = !1 } = e,
         P = (0, o.e7)([m.default, I.ZP], () => {
             let e = m.default.getCurrentUser();
             return I.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
@@ -213,8 +213,8 @@ function L(e) {
                     (0, f.f)({
                         guildId: a.id,
                         location: {
-                            section: O.jXE.GUILD_HEADER,
-                            object: O.qAy.BOOST_GEM_ICON
+                            section: v.jXE.GUILD_HEADER,
+                            object: v.qAy.BOOST_GEM_ICON
                         }
                     }));
             },
@@ -270,7 +270,7 @@ function L(e) {
                     flowerStarClassName: g,
                     allowFullSizedIcon: !0,
                     color: null != n ? n : y,
-                    stroke: v,
+                    stroke: O,
                     size: L,
                     children: (0, r.jsx)(B, {
                         size: 'custom',

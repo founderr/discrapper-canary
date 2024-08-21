@@ -1,6 +1,6 @@
 n.d(t, {
     Cy: function () {
-        return O;
+        return v;
     },
     DY: function () {
         return L;
@@ -22,7 +22,7 @@ var r,
     l = n(120356),
     u = n.n(l),
     c = n(699581),
-    d = n(567526),
+    d = n(338545),
     _ = n(873546),
     E = n(374470),
     f = n(846519),
@@ -65,7 +65,7 @@ let A = Object.freeze({}),
         custom: null,
         premium: g.tooltipPremium
     }),
-    O = (e) => {
+    v = (e) => {
         let { targetElementRef: t, align: n = 'center', position: r, color: i, children: a, onNonAccessibleClick: o, tooltipClassName: l, tooltipStyle: c, tooltipContentClassName: _, spacing: E = 8, animationStyle: f, disableTooltipPointerEvents: h = !1, allowOverflow: p = !1, tooltipPointerClassName: I } = e,
             m = ''.concat('string' == typeof a ? a : '', ':').concat(r);
         return (0, s.jsx)(T.W5, {
@@ -105,7 +105,7 @@ let A = Object.freeze({}),
             }
         });
     },
-    v = {
+    O = {
         scale: 0.95,
         opacity: 0
     },
@@ -125,15 +125,15 @@ let A = Object.freeze({}),
             {
                 keys: (e) => (e ? 'tooltip' : 'empty'),
                 config: h.F,
-                from: a.enabled ? R : v,
+                from: a.enabled ? R : O,
                 enter: C,
-                leave: a.enabled ? R : v,
+                leave: a.enabled ? R : O,
                 onRest: n
             },
             'animate-always'
         )((e, t) =>
             t
-                ? (0, s.jsx)(O, {
+                ? (0, s.jsx)(v, {
                       animationStyle: e,
                       targetElementRef: r,
                       ...i

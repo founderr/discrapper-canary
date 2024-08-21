@@ -20,9 +20,9 @@ var r,
     S = n(941128),
     A = n(391690),
     N = n(981631);
-let O = 1 * I.Z.Millis.MINUTE;
+let v = 1 * I.Z.Millis.MINUTE;
 (r || (r = {})).DISPATCH_APPLICATION_PROGRESS = 'dispatch_application_progress';
-let v = {},
+let O = {},
     R = 'file://',
     C = !1,
     y = 0,
@@ -52,7 +52,7 @@ let k = u().throttle(function (e) {
     }, 200),
     B = u().throttle(function (e) {
         let t = Date.now(),
-            n = t - O;
+            n = t - v;
         b = (b = [
             {
                 bytes: e,
@@ -76,7 +76,7 @@ let k = u().throttle(function (e) {
         ]).slice(0, 200);
     }, 200);
 function V(e, t, n) {
-    let r = n(v[t]),
+    let r = n(O[t]),
         i = n(e[t]);
     return null != r && null != i && 0 !== r ? Math.max(i - r, 0) : 0;
 }
@@ -85,38 +85,38 @@ class H extends (i = c.ZP.Store) {
         this.waitFor(f.default);
     }
     getState(e, t) {
-        return v[(0, m.Tu)(e, t)];
+        return O[(0, m.Tu)(e, t)];
     }
     isUpToDate(e, t) {
-        let n = v[(0, m.Tu)(e, t)];
+        let n = O[(0, m.Tu)(e, t)];
         return null != n && n.type === N.vxO.UP_TO_DATE;
     }
     shouldPatch(e, t) {
-        let n = v[(0, m.Tu)(e, t)];
+        let n = O[(0, m.Tu)(e, t)];
         return null != n && !0 === n.shouldPatch;
     }
     isInstalled(e, t) {
-        let n = v[(0, m.Tu)(e, t)];
+        let n = O[(0, m.Tu)(e, t)];
         return null != n ? n.type !== N.vxO.UNINSTALLING : A.Z.shouldBeInstalled(e, t);
     }
     supportsCloudSync(e, t) {
         null == t && (t = e);
-        let n = v[(0, m.Tu)(e, t)];
+        let n = O[(0, m.Tu)(e, t)];
         return null != n && null != n.storage && !!n.storage.sync;
     }
     isLaunchable(e, t) {
         if (!(0, g.Q)()) return !1;
-        let n = v[(0, m.Tu)(e, t)];
+        let n = O[(0, m.Tu)(e, t)];
         return null != n && n.type === N.vxO.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length;
     }
     getDefaultLaunchOption(e, t) {
-        let n = v[(0, m.Tu)(e, t)];
+        let n = O[(0, m.Tu)(e, t)];
         if (null == n) return null;
         let { defaultLaunchOptionId: r, launchOptions: i } = n;
         return null == r || null == i ? null : i[r];
     }
     getLaunchOptions(e, t) {
-        let n = v[(0, m.Tu)(e, t)];
+        let n = O[(0, m.Tu)(e, t)];
         return null == n || null == n.launchOptions ? [] : Object.values(n.launchOptions);
     }
     getHistoricalTotalBytesRead() {
@@ -251,7 +251,7 @@ class H extends (i = c.ZP.Store) {
                             }
                             throw Error('Invalid Dispatch State. state='.concat(e.state.type));
                         })(r[e][t])),
-                        null != v[s])
+                        null != O[s])
                     ) {
                         let e = V(n, s, w);
                         e > 0 && k((y += e));
@@ -296,6 +296,6 @@ class H extends (i = c.ZP.Store) {
                                 });
                     }
                 }
-            !a && 'dispatch_application_progress' === E.Z.taskID && E.Z.clearProgress('dispatch_application_progress'), (v = n), (U = !0);
+            !a && 'dispatch_application_progress' === E.Z.taskID && E.Z.clearProgress('dispatch_application_progress'), (O = n), (U = !0);
         }
     }));

@@ -25,8 +25,8 @@ var i = n(120356),
     S = n(998502),
     A = n(689938),
     N = n(949011);
-let O = (e) => S.ZP.close(e),
-    v = (e) => S.ZP.minimize(e),
+let v = (e) => S.ZP.close(e),
+    O = (e) => S.ZP.minimize(e),
     R = (e, t) => {
         (0, T.isMac)() && !t.altKey ? S.ZP.fullscreen(e) : S.ZP.maximize(e);
     },
@@ -41,7 +41,7 @@ let O = (e) => S.ZP.close(e),
                 }),
                 (0, r.jsx)(o.Clickable, {
                     className: N.winButtonClose,
-                    onClick: () => O(t),
+                    onClick: () => v(t),
                     'aria-label': A.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
                     tabIndex: -1,
                     children: (0, r.jsx)(E.Z, {})
@@ -55,7 +55,7 @@ let O = (e) => S.ZP.close(e),
                 }),
                 (0, r.jsx)(o.Clickable, {
                     className: N.winButtonMinMax,
-                    onClick: () => v(t),
+                    onClick: () => O(t),
                     'aria-label': A.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                     tabIndex: -1,
                     children: (0, r.jsx)(I.Z, {})
@@ -77,14 +77,14 @@ let O = (e) => S.ZP.close(e),
                           children: [
                               (0, r.jsx)(o.Clickable, {
                                   className: N.macButtonClose,
-                                  onClick: () => O(n),
+                                  onClick: () => v(n),
                                   'aria-label': A.Z.Messages.TITLE_BAR_CLOSE_WINDOW,
                                   tabIndex: -1,
                                   children: (0, r.jsx)(f.Z, { color: '#4c0000' })
                               }),
                               (0, r.jsx)(o.Clickable, {
                                   className: N.macButtonMinimize,
-                                  onClick: () => v(n),
+                                  onClick: () => O(n),
                                   'aria-label': A.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                                   tabIndex: -1,
                                   children: (0, r.jsx)(m.Z, { color: '#975500' })

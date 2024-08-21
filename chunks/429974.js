@@ -23,7 +23,7 @@ function I(e, t) {
 }
 async function m(e) {
     var t, a, s, m;
-    let { userId: T, section: g, subsection: S, guildId: A = f.ME, channelId: N, friendToken: O, analyticsLocation: v, showGuildProfile: R = !0, ...C } = e,
+    let { userId: T, section: g, subsection: S, guildId: A = f.ME, channelId: N, friendToken: v, analyticsLocation: O, showGuildProfile: R = !0, ...C } = e,
         y = d.default.getUser(T);
     if (null == y) return;
     let D = E.Z.getUserProfile(T),
@@ -42,7 +42,7 @@ async function m(e) {
                     location: 'handleOpenUserProfileModal',
                     user: y,
                     guildId: A,
-                    friendToken: O,
+                    friendToken: v,
                     initialSection: g,
                     initialSubsection: S,
                     channelId: N,
@@ -70,7 +70,7 @@ async function m(e) {
             profile_user_status: k,
             profile_has_nitro_customization: (null == D ? void 0 : D.banner) != null,
             profile_has_profile_effect: (null == D ? void 0 : D.profileEffectId) != null,
-            ...(null == v ? null : (0, _.expandLocation)(v))
+            ...(null == O ? null : (0, _.expandLocation)(O))
         });
 }
 function T() {

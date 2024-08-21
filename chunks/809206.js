@@ -30,7 +30,7 @@ n.d(t, {
         return R;
     },
     cV: function () {
-        return O;
+        return v;
     },
     ol: function () {
         return g;
@@ -42,7 +42,7 @@ n.d(t, {
         return I;
     },
     xn: function () {
-        return v;
+        return O;
     }
 });
 var r = n(544891),
@@ -190,13 +190,13 @@ function N(e) {
         globalName: e
     });
 }
-function O(e) {
+function v(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e
     });
 }
-function v(e) {
+function O(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e

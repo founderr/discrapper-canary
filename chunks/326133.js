@@ -21,7 +21,7 @@ var r = n(735250),
     A = n(918559),
     N = n(415118);
 t.Z = i.forwardRef(function (e, t) {
-    var n, a, O, v, R;
+    var n, a, v, O, R;
     let { channel: C, type: y, editorHeight: D, onVisibilityChange: L } = e,
         b = (0, f.Dt)(),
         M = (0, l.e7)(
@@ -90,7 +90,7 @@ t.Z = i.forwardRef(function (e, t) {
             [N.autocompleteTop]: V
         },
         j = 490;
-    null != F && (j = (null === (O = y.autocomplete) || void 0 === O ? void 0 : O.small) ? 200 : (null === (v = U.query) || void 0 === v ? void 0 : v.type) === T.eq.EMOJIS_AND_STICKERS ? 490 : 245), (j = Math.min(window.innerHeight - 175, j));
+    null != F && (j = (null === (v = y.autocomplete) || void 0 === v ? void 0 : v.small) ? 200 : (null === (O = U.query) || void 0 === O ? void 0 : O.type) === T.eq.EMOJIS_AND_STICKERS ? 490 : 245), (j = Math.min(window.innerHeight - 175, j));
     let W = (0, r.jsx)(_.ZP, {
         id: b,
         className: s()(N.autocomplete, Y),

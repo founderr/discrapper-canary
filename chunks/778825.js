@@ -9,12 +9,12 @@ var f,
 let S = g.QZA.CLOSED,
     A = {};
 function N() {
-    O(), v(), (A = {}), (S = g.QZA.OPEN);
-}
-function O() {
-    (r = void 0), (u = void 0), (i = void 0);
+    v(), O(), (A = {}), (S = g.QZA.OPEN);
 }
 function v() {
+    (r = void 0), (u = void 0), (i = void 0);
+}
+function O() {
     (s = void 0), (o = void 0), (l = void 0), (c = void 0), (a = void 0);
 }
 class R extends (I = m.ZP.Store) {
@@ -141,8 +141,8 @@ class R extends (I = m.ZP.Store) {
             let { themeColors: t } = e;
             c = t;
         },
-        GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: O,
-        GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: v,
+        GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: v,
+        GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: O,
         GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: N,
         GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: N,
         GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function () {

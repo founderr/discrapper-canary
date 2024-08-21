@@ -18,20 +18,20 @@ e.exports = function (e, t, n, h, p, I) {
     (g = g == d ? E : g), (S = S == d ? E : S);
     var A = g == E,
         N = S == E,
-        O = g == S;
-    if (O && u(e)) {
+        v = g == S;
+    if (v && u(e)) {
         if (!u(t)) return !1;
         (m = !0), (A = !1);
     }
-    if (O && !A) return I || (I = new r()), m || c(e) ? i(e, t, n, h, p, I) : a(e, t, g, n, h, p, I);
+    if (v && !A) return I || (I = new r()), m || c(e) ? i(e, t, n, h, p, I) : a(e, t, g, n, h, p, I);
     if (!(1 & n)) {
-        var v = A && f.call(e, '__wrapped__'),
+        var O = A && f.call(e, '__wrapped__'),
             R = N && f.call(t, '__wrapped__');
-        if (v || R) {
-            var C = v ? e.value() : e,
+        if (O || R) {
+            var C = O ? e.value() : e,
                 y = R ? t.value() : t;
             return I || (I = new r()), p(C, y, n, h, I);
         }
     }
-    return !!O && (I || (I = new r()), s(e, t, n, h, p, I));
+    return !!v && (I || (I = new r()), s(e, t, n, h, p, I));
 };

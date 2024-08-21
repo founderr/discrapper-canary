@@ -97,7 +97,7 @@ function N(e) {
                 : t
         );
 }
-class O extends (r = i.ZP.PersistedStore) {
+class v extends (r = i.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(c.default), null != e)) {
             let t = e.notifCenterItems.map((e) => ({
@@ -153,8 +153,8 @@ class O extends (r = i.ZP.PersistedStore) {
         return p.notifCenterTabFocused;
     }
 }
-h(O, 'displayName', 'NotificationCenterItemsStore'), h(O, 'persistKey', 'NotificationCenterItemsStore_v2');
-let v = new O(a.Z, {
+h(v, 'displayName', 'NotificationCenterItemsStore'), h(v, 'persistKey', 'NotificationCenterItemsStore_v2');
+let O = new v(a.Z, {
     CONNECTION_OPEN: function (e) {
         m();
         let t = [];
@@ -259,4 +259,4 @@ let v = new O(a.Z, {
         }
     }
 });
-t.Z = v;
+t.Z = O;

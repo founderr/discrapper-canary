@@ -74,8 +74,8 @@ var r = n(46973),
     S = n(358085),
     A = n(557177),
     N = n(435064),
-    O = n(61994),
-    v = n(550351),
+    v = n(61994),
+    O = n(550351),
     R = n(659487),
     C = n(711644),
     y = n(259612),
@@ -196,8 +196,8 @@ function B(e, t) {
 }
 async function F(e) {
     let t = N.Z.getSettings().storageLocation,
-        n = (0, v.Z)(e),
-        r = ''.concat((0, O.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
+        n = (0, O.Z)(e),
+        r = ''.concat((0, v.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
         i = o.Z.fileManager.join(t, r),
         a = I.Z.getMediaEngine(),
         l = JSON.stringify(n),
@@ -279,7 +279,7 @@ async function V(e) {
             let e = null != g ? (0, c.my)(g).ownerId : void 0;
             return e === p.default.getId() ? D.X9.STREAMER : null != e ? D.X9.VIEWER : D.X9.DECOUPLED;
         })(),
-        O = await (async () => {
+        v = await (async () => {
             if (null == g) return;
             let { ownerId: e, guildId: t } = (0, c.my)(g),
                 n = T.Z.getStreamId(e, t, r.Yn.STREAM);
@@ -296,9 +296,9 @@ async function V(e) {
         type: 'CLIPS_SAVE_CLIP_START',
         clipType: S,
         streamKey: g,
-        thumbnail: O
+        thumbnail: v
     });
-    let v = (0, A.GN)('clip_save', 0.5),
+    let O = (0, A.GN)('clip_save', 0.5),
         R = performance.now();
     try {
         let e = await F(g);
@@ -307,7 +307,7 @@ async function V(e) {
             clip: e
         });
     } catch (e) {
-        D.jF.error('Clip Failed to Save', e), null == v || v.stop(), (0, A.GN)('clip_error', 0.5), s.Z.dispatch({ type: 'CLIPS_SAVE_CLIP_ERROR' });
+        D.jF.error('Clip Failed to Save', e), null == O || O.stop(), (0, A.GN)('clip_error', 0.5), s.Z.dispatch({ type: 'CLIPS_SAVE_CLIP_ERROR' });
     }
     D.jF.info(''.concat(N.Z.getSettings().clipsLength / 1000, 's clip save took ').concat(Math.round(performance.now() - R), 'ms'));
 }

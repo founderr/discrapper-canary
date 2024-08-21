@@ -11,8 +11,8 @@ var s = t(442837),
     E = t(689938);
 n.Z = (e) => {
     let { selectedSkuId: n, className: t } = e,
-        f = (0, s.Wu)([o.Z], () => o.Z.getFriendIDs()),
-        h = (0, s.Wu)([d.default], () => d.default.filter((e) => f.includes(e.id) && !e.bot), [f]),
+        h = (0, s.Wu)([o.Z], () => o.Z.getFriendIDs()),
+        f = (0, s.Wu)([d.default], () => d.default.filter((e) => h.includes(e.id) && !e.bot), [h]),
         { giftRecipient: m, setGiftRecipient: v, giftRecipientError: C, setGiftRecipientError: p, setValidatingGiftRecipient: x } = (0, r.wD)();
     if (null == n) return null;
     let I = async (e) => {
@@ -33,7 +33,7 @@ n.Z = (e) => {
                           }),
                 value: m,
                 onChange: I,
-                options: h.map((e) => ({
+                options: f.map((e) => ({
                     value: e,
                     label: ''.concat(u.ZP.getUserTag(e))
                 }))

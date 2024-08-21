@@ -49,11 +49,11 @@ e.exports = function (e) {
             match: [/\./, i(...s, ...o)],
             className: { 2: 'keyword' }
         },
-        O = {
+        v = {
             match: r(/\./, i(...u)),
             relevance: 0
         },
-        v = u.filter((e) => 'string' == typeof e).concat(['_|0']),
+        O = u.filter((e) => 'string' == typeof e).concat(['_|0']),
         R = {
             variants: [
                 {
@@ -70,10 +70,10 @@ e.exports = function (e) {
         },
         C = {
             $pattern: i(/\b\w+/, /#\w+/),
-            keyword: v.concat(_),
+            keyword: O.concat(_),
             literal: c
         },
-        y = [N, O, R],
+        y = [N, v, R],
         D = {
             match: r(/\./, i(...E)),
             relevance: 0

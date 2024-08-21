@@ -46,7 +46,7 @@ function g() {
                         : s[0]) && (e = null != i && a.has(i) ? i : null === (l = n.first()) || void 0 === l ? void 0 : null === (o = l.user) || void 0 === o ? void 0 : o.id);
         }
     }
-    i !== e && ((i = e), t && O.emitChange());
+    i !== e && ((i = e), t && v.emitChange());
 }
 let S = c().debounce(g, 300);
 function A() {
@@ -69,5 +69,5 @@ class N extends (a = d.ZP.Store) {
               writable: !0
           })
         : (s[o] = l);
-let O = new N(_.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: A });
-t.Z = O;
+let v = new N(_.Z, { AUDIO_SET_LOCAL_VIDEO_DISABLED: A });
+t.Z = v;

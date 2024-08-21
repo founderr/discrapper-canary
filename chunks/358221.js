@@ -20,8 +20,8 @@ var r,
     S = n(944486),
     A = n(606304),
     N = n(594174),
-    O = n(33039),
-    v = n(979651),
+    v = n(33039),
+    O = n(979651),
     R = n(413523),
     C = n(354459),
     y = n(981631);
@@ -137,7 +137,7 @@ function X() {
             let n = S.Z.getVoiceChannelId();
             null != n && !e.includes(n) && e.push(n);
             let r = h.Z.getRemoteSessionId(),
-                i = v.Z.getVoiceStateForSession(m.default.getId(), r);
+                i = O.Z.getVoiceStateForSession(m.default.getId(), r);
             (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), c().difference(b, e).forEach(Q);
             let a = c().difference(e, b);
             return (b = e), a;
@@ -176,7 +176,7 @@ function ei(e) {
 }
 class ea extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, m.default, T.Z, g.Z, E.ZP, S.Z, A.Z, N.default, O.Z, v.Z), this.syncWith([E.ZP], $), this.syncWith([h.Z], X);
+        this.waitFor(I.Z, m.default, T.Z, g.Z, E.ZP, S.Z, A.Z, N.default, v.Z, O.Z), this.syncWith([E.ZP], $), this.syncWith([h.Z], X);
     }
     getParticipantsVersion(e) {
         return H(e).version;

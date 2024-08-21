@@ -4,7 +4,7 @@ n.d(t, {
         return p;
     },
     CA: function () {
-        return O;
+        return v;
     },
     F8: function () {
         return F;
@@ -16,7 +16,7 @@ n.d(t, {
         return R;
     },
     aN: function () {
-        return v;
+        return O;
     },
     ay: function () {
         return B;
@@ -133,7 +133,7 @@ function N(e) {
         t + '?'.concat(s.stringify({ size: (0, l.oO)(o * (0, l.x_)()) }))
     );
 }
-function O(e) {
+function v(e) {
     let { userId: t, avatar: n, guildId: r } = e,
         i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return null == n
@@ -145,7 +145,7 @@ function O(e) {
               canAnimate: i
           });
 }
-function v(e) {
+function O(e) {
     let t,
         { id: n, banner: r, canAnimate: i, size: a } = e;
     if (null == r) return;
@@ -323,15 +323,15 @@ function V(e) {
 t.ZP = {
     getUserAvatarURL: A,
     getDefaultAvatarURL: g,
-    getGuildMemberAvatarURL: O,
+    getGuildMemberAvatarURL: v,
     getGuildMemberAvatarURLSimple: N,
     getGuildMemberAvatarSource: function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = O(e, n);
+            r = v(e, n);
         return null != r ? V(r) : t.getAvatarSource(e.guildId, n);
     },
     getGuildMemberBannerURL: C,
-    getUserBannerURL: v,
+    getUserBannerURL: O,
     getAvatarDecorationURL: R,
     hasAnimatedGuildIcon: function (e) {
         return k(null == e ? void 0 : e.icon);

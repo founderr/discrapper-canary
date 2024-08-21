@@ -20,8 +20,8 @@ t.Z = function (e) {
     let { className: t, quest: n, autoplay: a = !0, learnMoreStyle: S = null } = e,
         A = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         N = (0, E.gO)(n),
-        O = i.useMemo(() => (0, E.nP)(N.name), [N.name]),
-        v = i.useCallback(
+        v = i.useMemo(() => (0, E.nP)(N.name), [N.name]),
+        O = i.useCallback(
             (t) => {
                 var r;
                 (0, o.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
@@ -41,14 +41,14 @@ t.Z = function (e) {
         y = i.useRef(a);
     i.useEffect(() => {
         if (null != C.current) {
-            if (!O || A) {
+            if (!v || A) {
                 (C.current.currentTime = 0), C.current.pause();
                 return;
             }
             a && !y.current ? C.current.play() : !a && y.current && ((C.current.currentTime = 0), C.current.pause()), (y.current = a);
         }
-    }, [a, O, A]);
-    let D = O
+    }, [a, v, A]);
+    let D = v
         ? (0, r.jsx)(p.Fl, {
               id: 'QuestRewardTile_rewardTileAnimated',
               children: (e) =>
@@ -93,7 +93,7 @@ t.Z = function (e) {
                   },
                   t
               ),
-              onClick: v,
+              onClick: O,
               children: [
                   D,
                   R &&

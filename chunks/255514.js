@@ -20,8 +20,8 @@ var r = n(735250),
     S = n(234937),
     A = n(473121),
     N = n(449413),
-    O = n(266080),
-    v = n(316617),
+    v = n(266080),
+    O = n(316617),
     R = n(15682),
     C = n(749534),
     y = n(521332),
@@ -138,7 +138,7 @@ t.Z = (e) => {
                 children: [
                     null != z ? (0, r.jsx)(b.Z, { element: z }) : null,
                     null != G(t, 'breadcrumbs') && (0, r.jsx)(_.Z, { history: F }),
-                    null != G(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(v.Z, { message: n.record }),
+                    null != G(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(O.Z, { message: n.record }),
                     null != G(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(M.Z, { user: n.record }) : null,
                     (function (e) {
                         let { elements: t } = e;
@@ -165,7 +165,7 @@ t.Z = (e) => {
                                     }),
                                 null != G(t, 'leave_guild') &&
                                     'guild' === n.name &&
-                                    (0, r.jsx)(O.Z, {
+                                    (0, r.jsx)(v.Z, {
                                         guildId: n.record.id,
                                         reportId: j
                                     })

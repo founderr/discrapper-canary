@@ -58,13 +58,13 @@ function d(e, t, n, r, i) {
             .concat(g.map((e) => e.biggestChannel).join(' / '), '\n- Biggest Channel (%): ')
             .concat(g.map((e) => e.biggestChannelFormatted).join(' / '), '\n- Sent Msgs: ')
             .concat(A, '\n'),
-        O = T.guildOpens >= 0.02 * T.totalOpensAcrossAllServers,
-        v = (null !== (d = I.guildOpens) && void 0 !== d ? d : 0) > 0;
+        v = T.guildOpens >= 0.02 * T.totalOpensAcrossAllServers,
+        O = (null !== (d = I.guildOpens) && void 0 !== d ? d : 0) > 0;
     if (h.messages === c.XR.High) {
-        if (!i) return [c.AR.UseGreyDot, O, 'UseGreyDot' + N];
-        if (!O && v) return [c.AR.UseGreyDot, O, 'UseGreyDot' + N];
+        if (!i) return [c.AR.UseGreyDot, v, 'UseGreyDot' + N];
+        if (!v && O) return [c.AR.UseGreyDot, v, 'UseGreyDot' + N];
     }
-    return [c.AR.KeepAsIs, O, 'KeepAsIs' + N];
+    return [c.AR.KeepAsIs, v, 'KeepAsIs' + N];
 }
 function _(e, t, n, r) {
     let a = t.reduce((e, t) => e + r(t), 0),

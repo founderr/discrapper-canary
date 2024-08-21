@@ -22,14 +22,14 @@ var i = n(120356),
     m = n(847943);
 function T(e) {
     var t, n, i, T;
-    let { type: g, textValue: S, maxCharacterCount: A, showRemainingCharsAfterCount: N, className: O } = e,
-        v = (0, s.e7)([_.default], () => E.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())),
+    let { type: g, textValue: S, maxCharacterCount: A, showRemainingCharsAfterCount: N, className: v } = e,
+        O = (0, s.e7)([_.default], () => E.ZP.canUseIncreasedMessageLength(_.default.getCurrentUser())),
         R = (0, c.Z)(),
         C = null != A ? A : R,
         y = null !== (T = null != N ? N : A) && void 0 !== T ? T : R / 10,
         D = S.length,
-        L = null != g.upsellLongMessages && (null != D ? D : 0) > h.J6R && v,
-        b = null != g.upsellLongMessages && !v,
+        L = null != g.upsellLongMessages && (null != D ? D : 0) > h.J6R && O,
+        b = null != g.upsellLongMessages && !O,
         M = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === p.Si.TIER_2,
         P = C - D,
         U = P > y,
@@ -40,7 +40,7 @@ function T(e) {
         ? (0, r.jsx)(u.Gt, {
               value: G,
               children: (0, r.jsxs)('div', {
-                  className: a()(O, m.characterCount, { [m.error]: P < 0 }),
+                  className: a()(v, m.characterCount, { [m.error]: P < 0 }),
                   children: [
                       (0, r.jsxs)('div', {
                           className: m.flairContainer,

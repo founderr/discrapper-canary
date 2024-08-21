@@ -21,23 +21,23 @@ let m = new Set(),
     S = [],
     A = (e) => 'user:'.concat(e),
     N = (e) => 'channel:'.concat(e),
-    O = (e) => 'validity:'.concat(e),
-    v = new d.h(
+    v = (e) => 'validity:'.concat(e),
+    O = new d.h(
         function (e) {
             let t = m.has(e.userId) ? 1 : 0;
-            return null != e.viewers && (t = 2), [A(e.userId), N(e.channelId), O(t)];
+            return null != e.viewers && (t = 2), [A(e.userId), N(e.channelId), v(t)];
         },
         (e) => e.channelId
     );
 function R(e, t, n) {
     if (f.default.getId() === e) return !1;
     if (null == t) {
-        let t = v.get(e);
-        return !!(null != t && (0, u.isEqual)(t.source, n)) && (v.delete(e), void 0);
+        let t = O.get(e);
+        return !!(null != t && (0, u.isEqual)(t.source, n)) && (O.delete(e), void 0);
     }
     !m.has(e) && !T.has(e) && (g.add(e), (S = [...g]));
     let r = (0, I.tI)(t, e, n);
-    v.set(e, r);
+    O.set(e, r);
 }
 function C(e) {
     return null != e
@@ -49,16 +49,16 @@ function C(e) {
 }
 class y extends (i = c.ZP.Store) {
     getBroadcasts() {
-        return v.values(O(2));
+        return O.values(v(2));
     }
     getBroadcastsToValidateChannels() {
-        return v.values(O(1));
+        return O.values(v(1));
     }
     getBroadcastByChannel(e) {
-        return v.values(N(e))[0];
+        return O.values(N(e))[0];
     }
     getBroadcastByUser(e) {
-        return v.get(e);
+        return O.get(e);
     }
     getUserIdsToValidate() {
         return S;
@@ -106,17 +106,17 @@ class y extends (i = c.ZP.Store) {
             let { data: t } = e;
             h.default.keys(t).forEach((e) => {
                 p.g.includes(t[e]) ? m.add(e) : T.add(e), g.clear(), (S = [...g]);
-                let n = v.get(e);
-                null != n && (v.delete(e), v.set(e, n));
+                let n = O.get(e);
+                null != n && (O.delete(e), O.set(e, n));
             });
         },
         BROADCAST_VIEWERS_UPDATE: function (e) {
             let { viewers: t } = e;
             Object.entries(t).forEach((e) => {
                 let [t, n] = e,
-                    r = v.get(t);
+                    r = O.get(t);
                 null != r &&
-                    v.set(t, {
+                    O.set(t, {
                         ...r,
                         viewers: n
                     });
@@ -124,18 +124,18 @@ class y extends (i = c.ZP.Store) {
         },
         CHANNEL_RECIPIENT_ADD: function (e) {
             let { channelId: t, user: n } = e,
-                r = v.values(N(t))[0];
+                r = O.values(N(t))[0];
             if (null == r || null == r.viewers || r.viewers.some((e) => e.id === n.id)) return !1;
-            v.set(r.userId, {
+            O.set(r.userId, {
                 ...r,
                 viewers: [...r.viewers, new E.Z(n)]
             });
         },
         CHANNEL_RECIPIENT_REMOVE: function (e) {
             let { channelId: t, user: n } = e,
-                r = v.values(N(t))[0];
+                r = O.values(N(t))[0];
             if (null == r || null == r.viewers) return !1;
-            v.set(r.userId, {
+            O.set(r.userId, {
                 ...r,
                 viewers: r.viewers.filter((e) => e.id !== n.id)
             });
@@ -143,15 +143,15 @@ class y extends (i = c.ZP.Store) {
         CHANNEL_CREATE: function (e) {
             var t;
             let { channel: n } = e,
-                r = v.values(N(n.id))[0];
+                r = O.values(N(n.id))[0];
             if (null == r) return !1;
             let i = null !== (t = n.rawRecipients) && void 0 !== t ? t : [];
-            v.set(r.userId, {
+            O.set(r.userId, {
                 ...r,
                 viewers: i.filter((e) => e.id !== r.userId).map((e) => new E.Z(e))
             });
         },
         LOGOUT: function () {
-            m.clear(), T.clear(), g.clear(), (S = []), v.clear();
+            m.clear(), T.clear(), g.clear(), (S = []), O.clear();
         }
     }));

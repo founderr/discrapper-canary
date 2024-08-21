@@ -90,7 +90,7 @@ var p = {
         }
         return null;
     },
-    O = function (e) {
+    v = function (e) {
         var t = N(e, p.TITLE),
             n = N(e, 'titleTemplate');
         if ((Array.isArray(t) && (t = t.join('')), n && t))
@@ -100,7 +100,7 @@ var p = {
         var r = N(e, 'defaultTitle');
         return t || r || void 0;
     },
-    v = function (e, t) {
+    O = function (e, t) {
         return t
             .filter(function (t) {
                 return void 0 !== t[e];
@@ -290,7 +290,7 @@ var p = {
                 S,
                 A,
                 N,
-                O =
+                v =
                     ((f = (E = e).linkTags),
                     (h = E.scriptTags),
                     (g = E.encode),
@@ -310,7 +310,7 @@ var p = {
                         linkTags: A.default,
                         scriptTags: N.default
                     });
-            (_ = O.priorityMethods), (u = O.linkTags), (c = O.metaTags), (d = O.scriptTags);
+            (_ = v.priorityMethods), (u = v.linkTags), (c = v.metaTags), (d = v.scriptTags);
         }
         return {
             priority: _,
@@ -525,18 +525,18 @@ var Y = function (e, t) {
                                         }
                                     return t;
                                 }, [])),
-                        bodyAttributes: v('bodyAttributes', t),
+                        bodyAttributes: O('bodyAttributes', t),
                         defer: N(t, 'defer'),
                         encode: N(t, 'encodeSpecialCharacters'),
-                        htmlAttributes: v('htmlAttributes', t),
+                        htmlAttributes: O('htmlAttributes', t),
                         linkTags: R(p.LINK, ['rel', 'href'], t),
                         metaTags: R(p.META, ['name', 'charset', 'http-equiv', 'property', 'itemprop'], t),
                         noscriptTags: R(p.NOSCRIPT, ['innerHTML'], t),
                         onChangeClientState: N(t, 'onChangeClientState') || function () {},
                         scriptTags: R(p.SCRIPT, ['src', 'innerHTML'], t),
                         styleTags: R(p.STYLE, ['cssText'], t),
-                        title: O(t),
-                        titleAttributes: v('titleAttributes', t),
+                        title: v(t),
+                        titleAttributes: O('titleAttributes', t),
                         prioritizeSeoTags: C(t, 'prioritizeSeoTags')
                     };
                 Z.canUseDOM

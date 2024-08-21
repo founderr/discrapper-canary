@@ -57,7 +57,7 @@ let S = async (e) => {
                     customId: i,
                     componentId: s
                 },
-                onFailure: (e, t) => v(u, e, t)
+                onFailure: (e, t) => O(u, e, t)
             }),
             null != E && (0, h.B0)(n, I, E, s);
         let m = {
@@ -115,7 +115,7 @@ let S = async (e) => {
             version: i.version,
             id: i.id
         };
-        await O({
+        await v({
             applicationId: t,
             channelId: n,
             guildId: r,
@@ -125,14 +125,14 @@ let S = async (e) => {
     N = async (e) => {
         let { applicationId: t, channelId: n, guildId: r } = e,
             i = { type: l.yU.PRIMARY_ENTRY_POINT };
-        await O({
+        await v({
             applicationId: t,
             channelId: n,
             guildId: r,
             data: i
         });
     },
-    O = async (e) => {
+    v = async (e) => {
         let { applicationId: t, channelId: n, guildId: r, data: i } = e,
             s = f.default.fromTimestamp(Date.now()),
             o = {
@@ -155,7 +155,7 @@ let S = async (e) => {
             }
         );
     },
-    v = (e, t, n) => {
+    O = (e, t, n) => {
         null == n && null != t && o.Z.sendClydeError(e, t);
     },
     R = (e, t, n, r, i) => {

@@ -26,8 +26,8 @@ var r = n(735250),
     S = n(814443),
     A = n(592125),
     N = n(626135),
-    O = n(912787),
-    v = n(272709),
+    v = n(912787),
+    O = n(272709),
     R = n(718582),
     C = n(126134),
     y = n(981631),
@@ -46,7 +46,7 @@ function b(e) {
                             e.category === C.L.EMBEDDED_ACTIVITY ? (i = e.embeddedActivities[0].channelId) : e.category === C.L.HANGOUT || e.category === C.L.GAMING ? (i = e.channelId) : e.category === C.L.EVENT && (i = e.event.channel_id),
                             n++,
                             (0, r.jsx)(
-                                v.Z,
+                                O.Z,
                                 {
                                     cardData: e,
                                     guildId: t.id,
@@ -70,7 +70,7 @@ function b(e) {
         for (let o of a) {
             var c, d, _, E, f;
             if (3 === e.length) break;
-            let a = null !== (_ = (0, O.i)(o)) && void 0 !== _ ? _ : '',
+            let a = null !== (_ = (0, v.i)(o)) && void 0 !== _ ? _ : '',
                 h = (0, R.bA)(a, t.id),
                 p = e.length;
             e.push(o.category),
@@ -110,8 +110,8 @@ function M(e) {
     let { guild: n, closePopout: o, nudge: S } = e,
         A = i.useRef(null),
         N = (0, u.Z)(n),
-        O = (0, p.I)(n),
-        { isViewingRoles: v, backNavigationSection: R } = (0, a.cj)([T.Z], () => ({
+        v = (0, p.I)(n),
+        { isViewingRoles: O, backNavigationSection: R } = (0, a.cj)([T.Z], () => ({
             isViewingRoles: T.Z.isViewingRoles(n.id),
             backNavigationSection: T.Z.getBackNavigationSection(n.id)
         })),
@@ -152,7 +152,7 @@ function M(e) {
                     ]
                 }),
                 (0, r.jsx)(b, { guild: n }),
-                O
+                v
                     ? (0, r.jsxs)('div', {
                           className: L.footer,
                           children: [
@@ -175,7 +175,7 @@ function M(e) {
                           ]
                       })
                     : null,
-                v
+                O
                     ? (0, r.jsxs)('div', {
                           className: L.footer,
                           children: [

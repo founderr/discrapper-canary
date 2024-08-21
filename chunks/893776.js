@@ -27,8 +27,8 @@ var i,
     S = n(981631),
     A = n(792101);
 let N = new E.Z('AuthenticationActionCreators'),
-    O = null;
-function v(e) {
+    v = null;
+function O(e) {
     let t = {
         type: 'LOGOUT',
         ...e
@@ -40,7 +40,7 @@ function v(e) {
 }
 function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT;
-    if ((v(), null == e)) return;
+    if ((O(), null == e)) return;
     let t = (0, f.PP)();
     if (null == t) {
         (0, h.uL)(e);
@@ -293,7 +293,7 @@ function R() {
             c.Z.dispatch({ type: 'LOGIN_STATUS_RESET' });
         },
         logoutInternal(e) {
-            v(e);
+            O(e);
         },
         logout() {
             var e;
@@ -322,7 +322,7 @@ function R() {
                     wasLoggedIn: null != n,
                     tokenHasChanged: e !== n
                 }),
-                v({
+                O({
                     isSwitchingAccount: !0,
                     goHomeAfterSwitching: t
                 }),
@@ -515,8 +515,8 @@ function R() {
             });
         },
         getLocationMetadata: () =>
-            null != O
-                ? O
+            null != v
+                ? v
                 : (clearTimeout(r),
                   (r = setTimeout(() => {
                       c.Z.dispatch({
@@ -524,7 +524,7 @@ function R() {
                           consentRequired: !0
                       });
                   }, 5000)),
-                  (O = l.tn
+                  (v = l.tn
                       .get({
                           url: S.ANM.AUTH_LOCATION_METADATA,
                           retries: 2,
@@ -545,7 +545,7 @@ function R() {
                                       type: 'SET_LOCATION_METADATA',
                                       countryCode: null !== (s = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== s ? s : void 0
                                   }),
-                                  (O = null),
+                                  (v = null),
                                   (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null)
                               ) {
                                   let t = e.body.promotional_email_opt_in;
@@ -562,7 +562,7 @@ function R() {
                                       type: 'SET_CONSENT_REQUIRED',
                                       consentRequired: !0
                                   }),
-                                  (O = null);
+                                  (v = null);
                           }
                       ))),
         closeSuspendedUser() {

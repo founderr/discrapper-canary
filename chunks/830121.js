@@ -44,8 +44,8 @@ let I = /^\/([a-zA-Z0-9-]+)$/,
     S = /^\/application-directory\/([0-9-]+)\/?$/,
     A = /^\/application-directory\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     N = /^\/activities\/([0-9-]+)\/?$/,
-    O = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    v = /^\/channels\/([0-9]+)\/shop$/,
+    v = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+    O = /^\/channels\/([0-9]+)\/shop$/,
     R = /^\/quests\/([0-9-]+)\/?$/,
     C = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     y = G(window.GLOBAL_ENV.INVITE_HOST),
@@ -173,9 +173,9 @@ function V(e) {
             let e = p[1];
             o(h.g.ACTIVITY_BOOKMARK, e);
         }
-        let R = null == s ? void 0 : s.match(O);
+        let R = null == s ? void 0 : s.match(v);
         null != R && o(h.g.GUILD_PRODUCT, ''.concat(R[1], '-').concat(R[2]));
-        let C = null == s ? void 0 : s.match(v);
+        let C = null == s ? void 0 : s.match(O);
         null != C && o(h.g.SERVER_SHOP, C[1]);
         let y = H(e);
         null != y && o(h.g.QUESTS_EMBED, y);

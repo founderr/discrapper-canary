@@ -15,12 +15,12 @@ var i = n(735250),
     r = n(481060),
     l = n(377171),
     o = n(951394),
-    c = n(364742),
+    c = n(407477),
     u = n(689938),
     d = n(589960);
 function _(e) {
     let { label: t, ariaLabel: n, tooltipText: a, tooltipColor: _, icon: E, iconProps: I, onClick: m, onTooltipShow: T, onTooltipHide: h, disabled: N, dangerous: f, separator: C, sparkle: p, showNewBadge: g, buttonClassName: S, children: A, ...R } = e,
-        { canShowReactionsOnMessageHover: x } = c.Z.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
+        { canShowReactionsOnMessageHover: x } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (0, i.jsx)(r.Tooltip, {
         text: null != a ? a : t,
         color: null != _ ? _ : r.TooltipColors.PRIMARY,
@@ -79,7 +79,7 @@ function E(e) {
 }
 function I(e) {
     let { children: t, ...n } = e,
-        { canShowReactionsOnMessageHover: a } = c.Z.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
+        { canShowReactionsOnMessageHover: a } = c.ZP.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
     return (0, i.jsx)(o.ZP, {
         className: s()(n.className, d.popover, { [d.popoverReactionHoverBar]: a }),
         children: t

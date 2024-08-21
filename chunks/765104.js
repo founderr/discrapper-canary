@@ -17,8 +17,8 @@ var o,
     S = n(592125),
     A = n(430824),
     N = n(306680),
-    O = n(944486),
-    v = n(9156),
+    v = n(944486),
+    O = n(9156),
     R = n(594174),
     C = n(70956),
     y = n(709054),
@@ -48,7 +48,7 @@ class F extends (l = h.ZP.PersistedStore) {
     }
     initialize(e) {
         var t;
-        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(S.Z, R.default, O.Z, A.Z, T.Z), this.syncWith([g.Z], B);
+        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(S.Z, R.default, v.Z, A.Z, T.Z), this.syncWith([g.Z], B);
     }
     allSummaries() {
         return b;
@@ -117,7 +117,7 @@ class F extends (l = h.ZP.PersistedStore) {
             r &&
                 (a = a.filter((e) => {
                     let t = S.Z.getChannel(e);
-                    return null != t && !v.ZP.isChannelMuted(t.guild_id, e) && N.ZP.hasUnread(e);
+                    return null != t && !O.ZP.isChannelMuted(t.guild_id, e) && N.ZP.hasUnread(e);
                 })),
             (a = a.filter((e) => {
                 let t = S.Z.getChannel(e);
@@ -218,7 +218,7 @@ let V = new F(p.Z, {
         }
     },
     UPDATE_VISIBLE_MESSAGES(e) {
-        let t = O.Z.getChannelId();
+        let t = v.Z.getChannelId();
         if (null != t) {
             if (null != i && i.channelId === t && null != i.summaryId) {
                 let e = b[i.channelId];

@@ -36,7 +36,7 @@ n.d(t, {
         return C;
     },
     dr: function () {
-        return v;
+        return O;
     },
     fY: function () {
         return S;
@@ -54,7 +54,7 @@ n.d(t, {
         return I;
     },
     yZ: function () {
-        return O;
+        return v;
     }
 });
 var r,
@@ -93,7 +93,7 @@ function N() {
         type: 0
     };
 }
-function O(e) {
+function v(e) {
     return {
         id: String(Date.now()),
         title: '',
@@ -104,7 +104,7 @@ function O(e) {
         type: 0
     };
 }
-function v(e) {
+function O(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {

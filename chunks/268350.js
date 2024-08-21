@@ -9,7 +9,7 @@ n.d(t, {
         return S;
     },
     Jf: function () {
-        return v;
+        return O;
     },
     SA: function () {
         return D;
@@ -24,7 +24,7 @@ n.d(t, {
         return L;
     },
     lY: function () {
-        return O;
+        return v;
     },
     pk: function () {
         return A;
@@ -104,7 +104,7 @@ let T = async (e, t) => {
     N = async (e) => {
         await a.tn.del({ url: p.ANM.GUILD_STICKER(e.guild_id, e.id) });
     },
-    O = async (e, t) => {
+    v = async (e, t) => {
         let n = await a.tn.post({
             url: p.ANM.GUILD_STICKER_PACKS(e),
             body: t
@@ -121,7 +121,7 @@ let T = async (e, t) => {
             n.body
         );
     },
-    v = async (e, t, n) =>
+    O = async (e, t, n) =>
         (
             await a.tn.patch({
                 url: p.ANM.GUILD_STICKER(e, t),

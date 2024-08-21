@@ -14,8 +14,8 @@ var s = t(442837),
     u = t(987716),
     c = t(311821),
     E = t(594174),
-    f = t(987209),
-    h = t(598),
+    h = t(987209),
+    f = t(598),
     m = t(409813),
     v = t(614277),
     C = t(474936),
@@ -31,7 +31,7 @@ let I = {
 };
 function T(e) {
     let { onStepChange: n, onBackClick: t, showBackButton: s = !1, disabled: l = !1, loading: r = !1 } = e,
-        { hasPaymentSources: o } = (0, h.usePaymentContext)(),
+        { hasPaymentSources: o } = (0, f.usePaymentContext)(),
         d = o ? m.h8.REVIEW : m.h8.ADD_PAYMENT_STEPS;
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -47,8 +47,8 @@ function T(e) {
 }
 function g(e) {
     let { handleStepChange: n, handleClose: t } = e,
-        { customGiftMessage: c = '', setCustomGiftMessage: m, giftRecipientError: I, validatingGiftRecipient: g, giftRecipient: N } = (0, f.wD)(),
-        { selectedSkuId: S, selectedSkuPricePreview: A } = (0, h.usePaymentContext)(),
+        { customGiftMessage: c = '', setCustomGiftMessage: m, giftRecipientError: I, validatingGiftRecipient: g, giftRecipient: N } = (0, h.wD)(),
+        { selectedSkuId: S, selectedSkuPricePreview: A } = (0, f.usePaymentContext)(),
         _ = (0, s.e7)([E.default], () => E.default.getCurrentUser());
     return (0, a.jsxs)(a.Fragment, {
         children: [

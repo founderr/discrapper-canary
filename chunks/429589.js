@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(944486),
     A = n(594174),
     N = n(979651),
-    O = n(181106),
-    v = n(417363),
+    v = n(181106),
+    O = n(417363),
     R = n(358085),
     C = n(804739),
     y = n(566620),
@@ -55,14 +55,14 @@ function F(e) {
             activity: F
         }),
         ee = (0, a.e7)(
-            [m.Z, E.Z, v.Z, h.Z],
+            [m.Z, E.Z, O.Z, h.Z],
             () =>
                 Y ||
                 (null != $ &&
                     (0, C.t)({
                         LibraryApplicationStore: m.Z,
                         LaunchableGameStore: E.Z,
-                        DispatchApplicationStore: v.Z,
+                        DispatchApplicationStore: O.Z,
                         ConnectedAppsStore: h.Z,
                         applicationId: $
                     }))
@@ -73,7 +73,7 @@ function F(e) {
                 return (t === (null == F ? void 0 : F.application_id) || t === (null == V ? void 0 : V.applicationId)) && n === J;
             })
         ),
-        en = (0, a.e7)([O.Z], () => null != F && null != F.application_id && O.Z.getState(F.application_id, k.mFx.JOIN) === k.OcF.LOADING),
+        en = (0, a.e7)([v.Z], () => null != F && null != F.application_id && v.Z.getState(F.application_id, k.mFx.JOIN) === k.OcF.LOADING),
         [er] = (0, _.Z)((null == V ? void 0 : V.applicationId) != null ? [null == V ? void 0 : V.applicationId] : (null == F ? void 0 : F.application_id) != null ? [null == F ? void 0 : F.application_id] : []),
         ei = (0, P.s5)({
             userId: H.id,

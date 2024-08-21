@@ -28,8 +28,8 @@ function T(e) {
     let { url: t, className: n, style: a, onLoad: s, shouldRefocus: m, queryParams: T, allowPopups: g = !1, referrerPolicy: S = 'origin' } = e,
         A = (0, u.e7)([c.Z], () => c.Z.getWindow(I.KJ3.CHANNEL_CALL_POPOUT)),
         N = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
-        O = i.useRef(null),
-        v = (0, f.Z)(O, m, null == A ? window : A),
+        v = i.useRef(null),
+        O = (0, f.Z)(v, m, null == A ? window : A),
         R = {
             ...T,
             frame_id: N,
@@ -69,7 +69,7 @@ function T(e) {
                   referrerPolicy: S,
                   onLoad: function (e) {
                       var n;
-                      null == s || s(e.target), (O.current = e.target), v(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([d.Z.HELLO, R], null != t ? t : '');
+                      null == s || s(e.target), (v.current = e.target), O(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([d.Z.HELLO, R], null != t ? t : '');
                   },
                   sandbox: (0, h.Z)({ allowPopups: g }),
                   className: n,

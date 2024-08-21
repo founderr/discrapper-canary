@@ -14,21 +14,21 @@ var r = n(735250),
     c = n(545659),
     d = n(970952);
 function _(e) {
-    let { section: t, isSelected: n, width: a, height: _, className: E, selectable: f = !1, onFocus: h, onBlur: p, onMouseOver: I, onMouseLeave: m, ...T } = e,
-        [g, S] = i.useState(!1),
-        A = i.useCallback(() => {
-            S(!0), null == h || h();
-        }, [h]),
+    let { section: t, isSelected: n, width: a, height: _, className: E, selectable: f = !1, isSquircle: h, onFocus: p, onBlur: I, onMouseOver: m, onMouseLeave: T, ...g } = e,
+        [S, A] = i.useState(!1),
         N = i.useCallback(() => {
-            S(!1), null == p || p();
+            A(!0), null == p || p();
         }, [p]),
-        O = i.useCallback(() => {
-            S(!0), null == I || I();
-        }, [I]),
         v = i.useCallback(() => {
-            S(!1), null == m || m();
+            A(!1), null == I || I();
+        }, [I]),
+        O = i.useCallback(() => {
+            A(!0), null == m || m();
         }, [m]),
-        R = i.useMemo(() => {
+        R = i.useCallback(() => {
+            A(!1), null == T || T();
+        }, [T]),
+        C = i.useMemo(() => {
             if (t.type === u.Qi.APPLICATION) {
                 var e;
                 return l.ZP.getApplicationIconURL({
@@ -42,18 +42,18 @@ function _(e) {
             return d;
         }, [t, a]);
     return (0, r.jsx)('div', {
-        ...T,
+        ...g,
         className: s()(c.wrapper, E, {
             [c.selectable]: f,
             [c.selected]: f && n
         }),
-        onFocus: A,
-        onBlur: N,
+        onFocus: N,
+        onBlur: v,
         onMouseOver: O,
-        onMouseLeave: v,
+        onMouseLeave: R,
         children: (0, r.jsx)(o.ZP, {
             className: c.mask,
-            mask: f && (n || g) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
+            mask: h || (f && (n || S)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
             width: a,
             height: _,
             children: (0, r.jsx)('img', {
@@ -63,7 +63,7 @@ function _(e) {
                     width: a,
                     height: _
                 },
-                src: R
+                src: C
             })
         })
     });

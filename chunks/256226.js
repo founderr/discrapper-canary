@@ -17,15 +17,15 @@ var r = n(735250),
 t.Z = i.forwardRef(function (e, t) {
     var a, T, g;
     let S;
-    let { canRemove: A, className: N, role: O, onRemove: v, guildId: R, disableBorderColor: C, onMouseDown: y } = e,
-        { tabIndex: D, ...L } = (0, o.JA)(O.id),
+    let { canRemove: A, className: N, role: v, onRemove: O, guildId: R, disableBorderColor: C, onMouseDown: y } = e,
+        { tabIndex: D, ...L } = (0, o.JA)(v.id),
         b = (0, p.p9)({
-            roleId: O.id,
+            roleId: v.id,
             size: 16,
             guildId: R
         }),
         M = (0, u.e7)([E.Z], () => E.Z.roleStyle),
-        P = (null === (a = O.tags) || void 0 === a ? void 0 : a.guild_connections) === null,
+        P = (null === (a = v.tags) || void 0 === a ? void 0 : a.guild_connections) === null,
         U = i.useCallback(
             (e) => {
                 (0, _.jW)(e, async () => {
@@ -33,15 +33,15 @@ t.Z = i.forwardRef(function (e, t) {
                     return (t) =>
                         (0, r.jsx)(e, {
                             ...t,
-                            id: O.id,
+                            id: v.id,
                             label: I.Z.Messages.COPY_ID_ROLE
                         });
                 });
             },
-            [O.id]
+            [v.id]
         ),
         w = (0, d.useToken)(c.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        x = null !== (T = O.colorString) && void 0 !== T ? T : w,
+        x = null !== (T = v.colorString) && void 0 !== T ? T : w,
         G = null !== (g = (0, l.wK)(x, 0.6)) && void 0 !== g ? g : void 0,
         k = c.Z.unsafe_rawColors.WHITE_500.css,
         B = (0, l._i)(x);
@@ -78,7 +78,7 @@ t.Z = i.forwardRef(function (e, t) {
             style: F,
             onContextMenu: U,
             onMouseDown: y,
-            'aria-label': O.name,
+            'aria-label': v.name,
             tabIndex: D,
             ...L,
             children: [
@@ -87,11 +87,11 @@ t.Z = i.forwardRef(function (e, t) {
                           text: I.Z.Messages.USER_PROFILE_REMOVE_ROLE,
                           children: (0, r.jsxs)(d.Clickable, {
                               className: s()(m.roleRemoveButtonCanRemove, m.roleRemoveButton),
-                              onClick: v,
+                              onClick: O,
                               tabIndex: D,
                               focusProps: { focusClassName: m.roleRemoveIconFocused },
                               'aria-hidden': !1,
-                              'aria-label': I.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({ roleName: O.name }),
+                              'aria-label': I.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({ roleName: v.name }),
                               children: [
                                   S,
                                   (0, r.jsx)(d.XSmallIcon, {
@@ -108,7 +108,7 @@ t.Z = i.forwardRef(function (e, t) {
                           tabIndex: -1,
                           focusProps: { focusClassName: m.roleRemoveIconFocused },
                           'aria-hidden': !0,
-                          'aria-label': I.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({ roleName: O.name }),
+                          'aria-label': I.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({ roleName: v.name }),
                           children: S
                       }),
                 null != b
@@ -124,7 +124,7 @@ t.Z = i.forwardRef(function (e, t) {
                     children: (0, r.jsx)(d.Text, {
                         variant: 'text-xs/medium',
                         className: m.roleNameOverflow,
-                        children: O.name
+                        children: v.name
                     })
                 })
             ]

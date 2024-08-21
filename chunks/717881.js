@@ -24,8 +24,8 @@ var r = n(735250),
     S = n(952164),
     A = n(199902),
     N = n(592125),
-    O = n(430824),
-    v = n(496675),
+    v = n(430824),
+    O = n(496675),
     R = n(979651),
     C = n(626135),
     y = n(153066),
@@ -64,13 +64,13 @@ t.Z = function (e) {
             { autoTrackExposure: !1 }
         ),
         x = (0, o.e7)([A.Z], () => (a ? A.Z.getAnyStreamForUser(n.id) : null)),
-        G = w && v.Z.can(D.Plq.CONNECT, U),
+        G = w && O.Z.can(D.Plq.CONNECT, U),
         k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G ? U : null,
-        B = (0, o.e7)([O.Z, R.Z, N.Z], () => {
+        B = (0, o.e7)([v.Z, R.Z, N.Z], () => {
             var e, r;
-            return (0, u.Z)(t, D.xjy.EMBEDDED) ? O.Z.getGuild(null === (e = N.Z.getChannel(null === (r = R.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? O.Z.getGuild(k.getGuildId()) : null;
+            return (0, u.Z)(t, D.xjy.EMBEDDED) ? v.Z.getGuild(null === (e = N.Z.getChannel(null === (r = R.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? v.Z.getGuild(k.getGuildId()) : null;
         }),
-        F = (0, o.e7)([O.Z], () => (null != x ? O.Z.getGuild(x.guildId) : null)),
+        F = (0, o.e7)([v.Z], () => (null != x ? v.Z.getGuild(x.guildId) : null)),
         V = (0, o.e7)([E.Z], () => {
             if (null != t) return null != t.application_id ? E.Z.getApplication(t.application_id) : E.Z.getApplicationByName(t.name);
             return null;

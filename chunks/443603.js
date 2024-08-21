@@ -9,7 +9,7 @@ var r,
     s = n(470079),
     o = n(120356),
     l = n.n(o),
-    u = n(567526),
+    u = n(338545),
     c = n(481060),
     d = n(686546),
     _ = n(540059),
@@ -41,7 +41,7 @@ let p = {
     }
 };
 t.Z = s.memo(function (e) {
-    let { className: t, disabled: n = !1, innerClassName: r, childClassName: i, iconClassName: s, icon: o, children: I, onClick: m, isActive: T, onMouseEnter: g, onMouseLeave: S, onFocus: A, onBlur: N, pulse: O, sparkle: v, notification: R, 'aria-label': C, 'aria-expanded': y, 'aria-haspopup': D, 'aria-controls': L } = e,
+    let { className: t, disabled: n = !1, innerClassName: r, childClassName: i, iconClassName: s, icon: o, children: I, onClick: m, isActive: T, onMouseEnter: g, onMouseLeave: S, onFocus: A, onBlur: N, pulse: v, sparkle: O, notification: R, 'aria-label': C, 'aria-expanded': y, 'aria-haspopup': D, 'aria-controls': L } = e,
         b = (0, _.Q)('ChannelTextAreaButton'),
         M = (0, c.useTransition)(null != I, {
             ...p,
@@ -74,7 +74,7 @@ t.Z = s.memo(function (e) {
         'aria-controls': L,
         disabled: n,
         className: l()(t, { [h.active]: T }),
-        innerClassName: l()(h.button, r, { [h.pulseButton]: O }),
+        innerClassName: l()(h.button, r, { [h.pulseButton]: v }),
         onClick: m,
         onMouseEnter: g,
         onMouseLeave: S,
@@ -107,7 +107,7 @@ t.Z = s.memo(function (e) {
                                 className: l()(h.buttonWrapper, i),
                                 children: P({
                                     component: (0, a.jsx)(o, {
-                                        className: l()(h.icon, s, { [h.pulseIcon]: O }),
+                                        className: l()(h.icon, s, { [h.pulseIcon]: v }),
                                         color: 'currentColor'
                                     })
                                 })
@@ -116,7 +116,7 @@ t.Z = s.memo(function (e) {
                         )
                       : void 0;
             }),
-            v &&
+            O &&
                 (0, a.jsxs)('div', {
                     className: h.sparkleContainer,
                     children: [(0, a.jsx)(f.Z, { className: h.sparkleStar }), (0, a.jsx)(E.Z, { className: h.sparklePlus })]

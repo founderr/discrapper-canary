@@ -118,13 +118,13 @@ e.exports = function (e) {
             end: /"/,
             contains: [{ match: /""/ }, e.BACKSLASH_ESCAPE]
         },
-        O = {
+        v = {
             scope: 'string',
             begin: /"""/,
             end: /"""/,
             relevance: 2
         },
-        v = {
+        O = {
             scope: 'subst',
             begin: /\{/,
             end: /\}/,
@@ -134,20 +134,20 @@ e.exports = function (e) {
             scope: 'string',
             begin: /\$"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, v]
+            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, O]
         },
         C = {
             scope: 'string',
             begin: /(\$@|@\$)"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, v]
+            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, O]
         },
         y = {
             scope: 'string',
             match: i(/'/, a(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (v.contains = [C, R, N, A, y, n, l, u, p, T, g, S, d, E]),
+        (O.contains = [C, R, N, A, y, n, l, u, p, T, g, S, d, E]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -162,12 +162,12 @@ e.exports = function (e) {
                             scope: 'string',
                             begin: /\$"""/,
                             end: /"""/,
-                            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, v],
+                            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, O],
                             relevance: 2
                         },
                         C,
                         R,
-                        O,
+                        v,
                         N,
                         A,
                         y
@@ -181,7 +181,7 @@ e.exports = function (e) {
                     begin: /\[</,
                     end: />\]/,
                     relevance: 2,
-                    contains: [u, O, N, A, y, S]
+                    contains: [u, v, N, A, y, S]
                 },
                 I,
                 p,

@@ -23,8 +23,8 @@ let p = 'IncomingCallStore',
     S = new Set(),
     A = 0,
     N = 0,
-    O = !1;
-function v(e) {
+    v = !1;
+function O(e) {
     if (null == e || null == g.get(e)) return !1;
     g.delete(e), (S = new Set(S)).delete(e);
 }
@@ -43,7 +43,7 @@ function R(e) {
             (S = new Set(S)).add(t);
     } else {
         if (!S.has(t) || r) return !1;
-        v(t);
+        O(t);
     }
 }
 !(function () {
@@ -55,23 +55,23 @@ function R(e) {
     }
 })();
 function C() {
-    O = f.Z.getStatus() === h.Skl.DND || c.QZ.getSetting();
+    v = f.Z.getStatus() === h.Skl.DND || c.QZ.getSetting();
 }
 class y extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(E.Z, f.Z), this.syncWith([f.Z], C), this.syncWith([d.Z], C);
     }
     getIncomingCalls() {
-        return O ? T : Array.from(g.values());
+        return v ? T : Array.from(g.values());
     }
     getIncomingCallChannelIds() {
-        return O ? m : S;
+        return v ? m : S;
     }
     getFirstIncomingCallId() {
-        return O ? null : S.values().next().value;
+        return v ? null : S.values().next().value;
     }
     hasIncomingCalls() {
-        return !O && S.size > 0;
+        return !v && S.size > 0;
     }
 }
 (s = 'IncomingCallStore'),
@@ -88,11 +88,11 @@ class y extends (r = o.ZP.Store) {
         CALL_UPDATE: R,
         CALL_DELETE: function (e) {
             let { channelId: t } = e;
-            return v(t);
+            return O(t);
         },
         VOICE_CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
-            return v(t);
+            return O(t);
         },
         INCOMING_CALL_MOVE: function (e) {
             let { x: t, y: n } = e;
@@ -108,6 +108,6 @@ class y extends (r = o.ZP.Store) {
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
-            return v(t.id);
+            return O(t.id);
         }
     }));

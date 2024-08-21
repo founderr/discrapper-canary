@@ -1,9 +1,9 @@
 n.d(t, {
     Jh: function () {
-        return O;
+        return v;
     },
     Lk: function () {
-        return v;
+        return O;
     },
     Xg: function () {
         return R;
@@ -80,7 +80,7 @@ function N(e) {
         headerClassName: S.headerSuccess
     });
 }
-function O(e) {
+function v(e) {
     let { guild: t, application: n, ...a } = e,
         { onClose: s } = a,
         o = g.Z.Messages.AUTHORIZED_SUCCESS,
@@ -151,7 +151,7 @@ function O(e) {
         })
     );
 }
-function v(e) {
+function O(e) {
     return (0, r.jsx)(A, {
         ...e,
         headerClassName: S.headerFailure
@@ -161,7 +161,7 @@ function R() {
     var e, t;
     let n = (0, l.TH)();
     return (0, r.jsx)(m.G, {
-        children: (0, r.jsx)(O, {
+        children: (0, r.jsx)(v, {
             guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
             application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
             showsCloseWindowText: !0
@@ -179,7 +179,7 @@ function C(e) {
     let s = null != a ? (0, o.parse)(a.search) : {},
         l = null !== (n = null !== (t = s.error_description) && void 0 !== t ? t : s.error) && void 0 !== n ? n : g.Z.Messages.OAUTH2_UNKNOWN_ERROR;
     return (0, r.jsx)(m.G, {
-        children: (0, r.jsx)(v, {
+        children: (0, r.jsx)(O, {
             message: l,
             showsCloseWindowText: !0
         })

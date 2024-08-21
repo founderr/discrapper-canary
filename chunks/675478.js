@@ -9,7 +9,7 @@ n.d(t, {
         return M;
     },
     DZ: function () {
-        return v;
+        return O;
     },
     PS: function () {
         return C;
@@ -27,7 +27,7 @@ n.d(t, {
         return I.fy;
     },
     hW: function () {
-        return O;
+        return v;
     },
     nm: function () {
         return D;
@@ -304,20 +304,20 @@ class N {
             (this.logger = new a.Y(this.ProtoClass.typeName));
     }
 }
-let O = new N(u.o8, I.yP.PRELOADED_USER_SETTINGS),
-    v = new N(l.ji, I.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+let v = new N(u.o8, I.yP.PRELOADED_USER_SETTINGS),
+    O = new N(l.ji, I.yP.FRECENCY_AND_FAVORITES_SETTINGS),
     R = {
-        [I.yP.PRELOADED_USER_SETTINGS]: O,
-        [I.yP.FRECENCY_AND_FAVORITES_SETTINGS]: v
+        [I.yP.PRELOADED_USER_SETTINGS]: v,
+        [I.yP.FRECENCY_AND_FAVORITES_SETTINGS]: O
     };
 function C(e, t, n) {
-    return O.updateAsync('guilds', (n) => (0, p.u0)(n, e, t), n);
+    return v.updateAsync('guilds', (n) => (0, p.u0)(n, e, t), n);
 }
 function y(e, t, n, r) {
     return C(e, (e) => (0, p.uL)(e, t, n), r);
 }
 function D(e) {
-    return O.updateAsync(
+    return v.updateAsync(
         'userContent',
         (t) => {
             if ((0, E.jl)(t.dismissedContents, e)) return !1;
@@ -327,7 +327,7 @@ function D(e) {
     );
 }
 function L(e, t) {
-    return O.updateAsync(
+    return v.updateAsync(
         'userContent',
         (n) => {
             null == n.recurringDismissibleContentStates[e] ? (n.recurringDismissibleContentStates[e] = { lastDismissedVersion: t }) : (n.recurringDismissibleContentStates[e].lastDismissedVersion = t);
@@ -336,7 +336,7 @@ function L(e, t) {
     );
 }
 function b(e) {
-    return O.updateAsync(
+    return v.updateAsync(
         'userContent',
         (t) => {
             if (!(0, E.jl)(t.dismissedContents, e)) return !1;
@@ -346,7 +346,7 @@ function b(e) {
     );
 }
 function M(e) {
-    return O.updateAsync(
+    return v.updateAsync(
         'userContent',
         (t) => {
             if (null == t.recurringDismissibleContentStates[e]) return !1;
@@ -356,7 +356,7 @@ function M(e) {
     );
 }
 function P() {
-    return O.updateAsync(
+    return v.updateAsync(
         'userContent',
         (e) => {
             (e.dismissedContents = new Uint8Array()), (e.recurringDismissibleContentStates = {});
@@ -365,7 +365,7 @@ function P() {
     );
 }
 function U() {
-    return O.updateAsync(
+    return v.updateAsync(
         'userContent',
         (e) => {
             let t = new Uint8Array();

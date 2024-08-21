@@ -54,18 +54,18 @@ var i = n(735250),
     l = n(904245),
     o = n(144144),
     c = n(40851),
-    u = n(675478),
-    d = n(592125),
-    _ = n(323873),
-    E = n(375954),
-    I = n(594174),
-    m = n(585483),
-    T = n(5967),
-    h = n(630388),
-    N = n(358085),
-    f = n(51144),
-    C = n(91047),
-    p = n(364742),
+    u = n(407477),
+    d = n(675478),
+    _ = n(592125),
+    E = n(323873),
+    I = n(375954),
+    m = n(594174),
+    T = n(585483),
+    h = n(5967),
+    N = n(630388),
+    f = n(358085),
+    C = n(51144),
+    p = n(91047),
     g = n(901461),
     S = n(50284),
     A = n(981631),
@@ -78,15 +78,15 @@ function x(e, t, n) {
 function O(e, t, n) {
     return a.useCallback(
         (i) => {
-            let a = I.default.getUser(e);
+            let a = m.default.getUser(e);
             if (null == a) return;
             if ((i.preventDefault(), i.stopPropagation(), !i.shiftKey)) {
                 n();
                 return;
             }
-            let s = '@'.concat(f.ZP.getUserTag(a, { decoration: 'never' })),
+            let s = '@'.concat(C.ZP.getUserTag(a, { decoration: 'never' })),
                 r = '<@'.concat(e, '>');
-            m.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
+            T.S.dispatchToLastSubscribed(A.CkL.INSERT_TEXT, {
                 plainText: s,
                 rawText: r
             }),
@@ -126,23 +126,23 @@ function D(e, t) {
 }
 function j(e, t, s, l) {
     let { id: o } = t,
-        { id: u, flags: I } = e,
-        m = (0, h.yE)(I, A.iLy.EPHEMERAL),
+        { id: u, flags: d } = e,
+        m = (0, N.yE)(d, A.iLy.EPHEMERAL),
         T = (0, g.Z)(e),
-        f = (0, c.bp)();
+        h = (0, c.bp)();
     return a.useCallback(
         (e, t) => {
             if (m) return;
-            if (!N.isPlatformEmbedded) {
+            if (!f.isPlatformEmbedded) {
                 let t = e.target;
                 if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
                 if (null != n && !n.isCollapsed && (n.focusNode === e.target || t.contains(n.focusNode))) return;
             }
-            let a = d.Z.getChannel(o),
-                c = E.Z.getMessage(o, u),
-                I = _.Z.isEditing(o, u);
-            if (null != a && null != c && !I)
+            let a = _.Z.getChannel(o),
+                c = I.Z.getMessage(o, u),
+                d = E.Z.isEditing(o, u);
+            if (null != a && null != c && !d)
                 s({ contextMenu: !0 }),
                     (0, r.jW)(
                         e,
@@ -171,19 +171,19 @@ function j(e, t, s, l) {
                         },
                         {
                             onClose: () => s({ contextMenu: !1 }),
-                            context: f
+                            context: h
                         }
                     );
         },
-        [m, o, u, s, f, T, l]
+        [m, o, u, s, h, T, l]
     );
 }
 function U(e, t) {
     return a.useCallback(
         (n) => {
-            let i = I.default.getUser(e),
-                a = d.Z.getChannel(t);
-            null != i && null != a && (n.stopPropagation(), (0, C.Pv)(n, i, a));
+            let i = m.default.getUser(e),
+                a = _.Z.getChannel(t);
+            null != i && null != a && (n.stopPropagation(), (0, p.Pv)(n, i, a));
         },
         [e, t]
     );
@@ -191,12 +191,12 @@ function U(e, t) {
 function y(e, t, n) {
     return a.useCallback(
         (i) => {
-            let a = I.default.getUser(e),
-                s = d.Z.getChannel(t);
+            let a = m.default.getUser(e),
+                s = _.Z.getChannel(t);
             null != a &&
                 null != s &&
                 (i.stopPropagation(),
-                (0, C._j)(i, {
+                (0, p._j)(i, {
                     user: a,
                     channel: s,
                     moderationAlertId: n
@@ -208,9 +208,9 @@ function y(e, t, n) {
 function B(e, t) {
     return a.useCallback(
         (n) => {
-            let i = I.default.getUser(e),
-                a = d.Z.getChannel(t);
-            null != i && null != a && (n.stopPropagation(), (0, C.xS)(n, i, a.guild_id));
+            let i = m.default.getUser(e),
+                a = _.Z.getChannel(t);
+            null != i && null != a && (n.stopPropagation(), (0, p.xS)(n, i, a.guild_id));
         },
         [e, t]
     );
@@ -226,22 +226,22 @@ function k(e, t) {
     );
 }
 function G(e, t, n) {
-    let { canShowReactionsOnMessageHover: i } = p.Z.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
+    let { canShowReactionsOnMessageHover: i } = u.ZP.useExperiment({ location: 'useHoveredMessage' }, { autoTrackExposure: !1 }),
         s = ''.concat(e, ':').concat(t),
         r = a.useRef(n),
         [l, o] = a.useState(n);
     r.current = l || r.current;
     let c = a.useCallback(() => {
-            i && (0, u.T6)(), !l && (m.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, s, !0), o(!0));
+            i && (0, d.T6)(), !l && (T.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, s, !0), o(!0));
         }, [l, s, i]),
-        d = a.useCallback(() => {
-            m.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, s, !1), o(!1);
+        _ = a.useCallback(() => {
+            T.S.dispatchKeyed(A.LPv.ANIMATE_CHAT_AVATAR, s, !1), o(!1);
         }, [s]);
     return {
         hasHovered: r.current,
         isHovered: l,
         handleMouseEnter: c,
-        handleMouseLeave: d
+        handleMouseLeave: _
     };
 }
 function F(e, t) {
@@ -250,7 +250,7 @@ function F(e, t) {
         l = a.useCallback(
             (t) => {
                 var n, a;
-                let s = null !== (a = null === (n = (0, T.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
+                let s = null !== (a = null === (n = (0, h.uB)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
                 (t.target === t.currentTarget || t.currentTarget.contains(s)) && (r(!0), i(!0)), null != e && e(t);
             },
             [e]
@@ -260,7 +260,7 @@ function F(e, t) {
         handleBlur: a.useCallback(
             (e) => {
                 var n, a;
-                let s = null !== (a = null === (n = (0, T.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
+                let s = null !== (a = null === (n = (0, h.uB)(e)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
                 (e.target === e.currentTarget || !e.currentTarget.contains(s)) && i(!1), null != t && t(e);
             },
             [t]

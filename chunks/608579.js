@@ -14,8 +14,8 @@ var a = t(735250),
     u = t(987209),
     c = t(598),
     E = t(409813),
-    f = t(791785),
-    h = t(961830),
+    h = t(791785),
+    f = t(961830),
     m = t(742956),
     v = t(346790),
     C = t(49308),
@@ -43,11 +43,11 @@ function S(e) {
         ),
         G = s.useMemo(
             () => [
-                h.WA,
+                f.WA,
                 p.Dd,
                 v.n,
-                ...h.yp,
-                h.wo,
+                ...f.yp,
+                f.wo,
                 {
                     key: E.h8.CONFIRM,
                     renderStep: (e) =>
@@ -93,7 +93,7 @@ function S(e) {
                     isGift: j,
                     giftRecipient: Z,
                     giftMessage: P,
-                    children: (0, a.jsx)(f.PaymentModal, {
+                    children: (0, a.jsx)(h.PaymentModal, {
                         onClose: F,
                         onComplete: B,
                         applicationId: I.XAJ,

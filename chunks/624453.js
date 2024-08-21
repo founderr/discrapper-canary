@@ -14,8 +14,8 @@ var i,
     m = t(271383),
     M = t(430824),
     _ = t(375954),
-    h = t(699516),
-    N = t(594174);
+    N = t(699516),
+    h = t(594174);
 let I = {};
 function Z(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
@@ -35,14 +35,14 @@ function A(e) {
     let { channel: n } = e;
     delete I[n.id];
 }
-function p() {
+function S() {
     o().forEach(I, (e) => {
-        e.messages = e.messages.map((e) => e.set('blocked', h.Z.isBlockedForMessage(e)));
+        e.messages = e.messages.map((e) => e.set('blocked', N.Z.isBlockedForMessage(e)));
     });
 }
-class S extends (i = u.ZP.Store) {
+class p extends (i = u.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, M.Z, m.ZP, _.Z, N.default, f.default);
+        this.waitFor(g.Z, M.Z, m.ZP, _.Z, h.default, f.default);
     }
     getPinnedMessages(e) {
         var n;
@@ -53,7 +53,7 @@ class S extends (i = u.ZP.Store) {
     }
 }
 (a = 'ChannelPinsStore'),
-    (l = 'displayName') in (s = S)
+    (l = 'displayName') in (s = p)
         ? Object.defineProperty(s, l, {
               value: a,
               enumerable: !0,
@@ -61,7 +61,7 @@ class S extends (i = u.ZP.Store) {
               writable: !0
           })
         : (s[l] = a),
-    (n.Z = new S(d.Z, {
+    (n.Z = new p(d.Z, {
         CONNECTION_OPEN: function () {
             I = {};
         },
@@ -132,8 +132,8 @@ class S extends (i = u.ZP.Store) {
         },
         CHANNEL_DELETE: A,
         THREAD_DELETE: A,
-        RELATIONSHIP_ADD: p,
-        RELATIONSHIP_REMOVE: p,
+        RELATIONSHIP_ADD: S,
+        RELATIONSHIP_REMOVE: S,
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
             let { messageId: n, channelId: t } = e,
                 i = I[t];

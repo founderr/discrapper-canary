@@ -28,13 +28,13 @@ t.Z = {
                 S = (0, i.Z)(h),
                 A = 'y' === m ? d.we : d.t$,
                 N = 'y' === m ? d.I : d.F2,
-                O = _.rects.reference[T] + _.rects.reference[m] - p[m] - _.rects.popper[T],
-                v = p[m] - _.rects.reference[m],
+                v = _.rects.reference[T] + _.rects.reference[m] - p[m] - _.rects.popper[T],
+                O = p[m] - _.rects.reference[m],
                 R = (0, s.Z)(h),
                 C = R ? ('y' === m ? R.clientHeight || 0 : R.clientWidth || 0) : 0,
                 y = g[A],
                 D = C - S[T] - g[N],
-                L = C / 2 - S[T] / 2 + (O / 2 - v / 2),
+                L = C / 2 - S[T] / 2 + (v / 2 - O / 2),
                 b = (0, l.u)(y, L, D);
             _.modifiersData[E] = (((a = {})[m] = b), (a.centerOffset = b - L), a);
         }
