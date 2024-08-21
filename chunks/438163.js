@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(906732),
     h = n(676035),
     p = n(314897),
-    m = n(158776),
-    I = n(785717),
+    I = n(158776),
+    m = n(785717),
     T = n(481046),
     g = n(277085),
     S = n(228168),
@@ -31,9 +31,9 @@ let O = 'text-sm/medium',
     C = 144;
 function y(e) {
     var t;
-    let { statusActivity: a, profileType: h, editEnabled: p, hasEntered: m = !0, animate: T = !0, onClose: A } = e,
+    let { statusActivity: a, profileType: h, editEnabled: p, hasEntered: I = !0, animate: T = !0, onClose: A } = e,
         { analyticsLocations: y } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
-        { trackUserProfileAction: D } = (0, I.KZ)(),
+        { trackUserProfileAction: D } = (0, m.KZ)(),
         L = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
         [b] = i.useState(() => new u.V7()),
         [M, P] = i.useState(!0),
@@ -59,13 +59,13 @@ function y(e) {
     i.useLayoutEffect(() => {
         if (null == U.current || Z) return;
         let e = U.current.getBoundingClientRect().height;
-        if (($(Z || e <= j), m)) {
+        if (($(Z || e <= j), I)) {
             var t, n, r, i;
             let e = null !== (r = null === (t = U.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : W,
                 a = null !== (i = null === (n = x.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : K;
             ee(!Z && e > a), (w.current = e), (G.current = a);
         }
-    }, [m, Z, j, W, K]);
+    }, [I, Z, j, W, K]);
     let [er, ei] = (0, c.useSpring)(() => ({
         maxHeight: ''.concat(K, 'px'),
         config: {
@@ -255,8 +255,8 @@ function D(e) {
     let { user: t, ...n } = e,
         i = (0, l.e7)([p.default], () => p.default.getId() === t.id),
         a = (0, h.a)(),
-        s = (0, l.e7)([m.Z], () =>
-            m.Z.findActivity(t.id, (e) => {
+        s = (0, l.e7)([I.Z], () =>
+            I.Z.findActivity(t.id, (e) => {
                 let { type: t } = e;
                 return t === A.IIU.CUSTOM_STATUS;
             })

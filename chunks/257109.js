@@ -12,8 +12,8 @@ var r = n(467360),
     f = '[object DataView]',
     h = (0, u.Z)(r.Z),
     p = (0, u.Z)(i.Z),
-    m = (0, u.Z)(a.Z),
-    I = (0, u.Z)(s.Z),
+    I = (0, u.Z)(a.Z),
+    m = (0, u.Z)(s.Z),
     T = (0, u.Z)(o.Z),
     g = l.Z;
 ((r.Z && g(new r.Z(new ArrayBuffer(1))) != f) || (i.Z && g(new i.Z()) != c) || (a.Z && g(a.Z.resolve()) != d) || (s.Z && g(new s.Z()) != _) || (o.Z && g(new o.Z()) != E)) &&
@@ -27,9 +27,9 @@ var r = n(467360),
                     return f;
                 case p:
                     return c;
-                case m:
-                    return d;
                 case I:
+                    return d;
+                case m:
                     return _;
                 case T:
                     return E;

@@ -13,8 +13,8 @@ var r = n(846519),
     f = n(981631);
 let h = new r.V7(),
     p = new r.V7(),
-    m = 5 * _.Z.Millis.SECOND,
-    I = 12 * _.Z.Millis.SECOND,
+    I = 5 * _.Z.Millis.SECOND,
+    m = 12 * _.Z.Millis.SECOND,
     T = null;
 function g(e, t) {
     if (c.Z.getVoiceChannelId() !== e) return !1;
@@ -33,7 +33,7 @@ t.Z = {
     init() {
         let e = (e, t) => {
             !d.Z.getAllActiveStreamKeys().includes(e) &&
-                p.start(t ? I : m, () => {
+                p.start(t ? m : I, () => {
                     i.Z.dispatch({
                         type: 'STREAM_TIMED_OUT',
                         streamKey: e

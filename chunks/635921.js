@@ -74,8 +74,8 @@ t.Z = (e) => {
     let { isFullscreen: t, className: n, buttonClassName: a, subscriptionTier: d, hideSparkles: g, hideSubscribeAndGiftButton: A, entrypoint: O } = e,
         { analyticsLocations: b } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         P = (0, E._O)(),
-        v = (0, u.Nx)(),
-        L = (0, R.Vi)(),
+        L = (0, u.Nx)(),
+        v = (0, R.Vi)(),
         Z = (0, i.e7)([_.Z], () => _.Z.affinities),
         D = (0, I.Z)(),
         { enabled: B } = T._.useExperiment({ location: 'HeroHeading' }, { autoTrackExposure: !1 }),
@@ -109,7 +109,7 @@ t.Z = (e) => {
                                     })
                                 })
                               : (0, s.jsx)(x, {}),
-                        L
+                        v
                             ? (0, s.jsx)('div', {
                                   className: S.buttonContainer,
                                   children: (0, s.jsx)(N.Z, {
@@ -121,7 +121,7 @@ t.Z = (e) => {
                               ? null
                               : (0, s.jsx)(h, {
                                     subscriptionTier: d,
-                                    inOfferExperience: v,
+                                    inOfferExperience: L,
                                     inTrial: P,
                                     buttonClassName: a
                                 }),
@@ -133,7 +133,7 @@ t.Z = (e) => {
                             })
                     ]
                 }),
-                !(v || g) && (0, s.jsx)(M, { isFullscreen: t })
+                !(L || g) && (0, s.jsx)(M, { isFullscreen: t })
             ]
         })
     });

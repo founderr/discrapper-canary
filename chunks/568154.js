@@ -1,6 +1,6 @@
 n.d(t, {
     h: function () {
-        return I;
+        return m;
     }
 }),
     n(47120);
@@ -30,7 +30,7 @@ function h(e, t, n) {
     );
 }
 let p = (0, c.Mg)(l.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE);
-function m(e, t) {
+function I(e, t) {
     let { innerWidth: n, innerHeight: r } = window;
     if (0 === e || 0 === t) return null;
     let i = t / e,
@@ -46,7 +46,7 @@ function m(e, t) {
         }
     );
 }
-function I(e) {
+function m(e) {
     let { splash: t, children: n } = e,
         [{ width: r, height: s }, l] = a.useState({
             width: 0,
@@ -59,7 +59,7 @@ function I(e) {
             function e() {
                 l((e) => {
                     let { naturalWidth: t, naturalHeight: n } = e,
-                        r = m(t, n);
+                        r = I(t, n);
                     return null != r ? r : e;
                 });
             }
@@ -72,7 +72,7 @@ function I(e) {
                     onLoad: function (e) {
                         let { currentTarget: t } = e,
                             { naturalWidth: n, naturalHeight: r } = t,
-                            i = m(n, r);
+                            i = I(n, r);
                         null != i && l(i);
                     },
                     src: t,
@@ -159,7 +159,7 @@ class T extends (r = a.PureComponent) {
             }),
             h(this, 'handleResize', () => {
                 let { naturalWidth: e, naturalHeight: t } = this.state,
-                    n = m(e, t),
+                    n = I(e, t),
                     r = this.calculateShowWaveAnimation();
                 null != n
                     ? this.setState({
@@ -171,7 +171,7 @@ class T extends (r = a.PureComponent) {
             h(this, 'handleLoad', (e) => {
                 let { currentTarget: t } = e,
                     { naturalWidth: n, naturalHeight: r } = t,
-                    i = m(n, r);
+                    i = I(n, r);
                 null != i && this.setState(i), this.setState({ splashLoaded: !0 }), window.removeEventListener('resize', this.handleResize), window.addEventListener('resize', this.handleResize);
             });
     }

@@ -12,7 +12,7 @@ var r = n(161581),
     f = l('species'),
     h = !1,
     p = a(r.PromiseRejectionEvent),
-    m = s('Promise', function () {
+    I = s('Promise', function () {
         var e = o(i),
             t = e !== String(i);
         if ((!t && 66 === _) || (d && !(E.catch && E.finally))) return !0;
@@ -31,7 +31,7 @@ var r = n(161581),
         return !t && (u || c) && !p;
     });
 e.exports = {
-    CONSTRUCTOR: m,
+    CONSTRUCTOR: I,
     REJECTION_EVENT: p,
     SUBCLASSING: h
 };

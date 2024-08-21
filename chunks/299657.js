@@ -27,12 +27,12 @@ var s = n(735250),
     O = n(104494),
     b = n(639119),
     P = n(2359),
-    v = n(132547),
-    L = n(474936),
+    L = n(132547),
+    v = n(474936),
     Z = n(981631),
     D = n(874296);
 t.Z = function (e) {
-    let { entrypoint: t = L.EZ.UserSettings } = e;
+    let { entrypoint: t = v.EZ.UserSettings } = e;
     a.useEffect(() => {
         p.X.trigger();
     }, []);
@@ -45,7 +45,7 @@ t.Z = function (e) {
         k = (0, C.V)(),
         [H, w] = a.useState(!0),
         F = a.useRef(0),
-        V = (0, S.M5)(U, L.p9.TIER_2),
+        V = (0, S.M5)(U, v.p9.TIER_2),
         W = (0, x.n)(),
         K = null == W ? void 0 : W.countryCode,
         Y = (0, l.e7)([h.Z], () => h.Z.hasFetched);
@@ -72,10 +72,10 @@ t.Z = function (e) {
         ? (0, s.jsx)(E.Z, {})
         : n
           ? (0, s.jsx)(g.c8, {})
-          : t === L.EZ.ApplicationStoreHome && V
+          : t === v.EZ.ApplicationStoreHome && V
             ? (0, s.jsx)(I.Gt, {
                   value: B,
-                  children: (0, s.jsx)(v.Z, {})
+                  children: (0, s.jsx)(L.Z, {})
               })
             : j && k && !H
               ? (0, s.jsx)(I.Gt, {

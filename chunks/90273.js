@@ -37,8 +37,8 @@ function R(e) {
     )
         return (0, r.jsx)(r.Fragment, { children: p });
     let P = [T.Z.Messages.COPY_SUCCESS_1, T.Z.Messages.COPY_SUCCESS_2, T.Z.Messages.COPY_SUCCESS_3, T.Z.Messages.COPY_SUCCESS_4, T.Z.Messages.COPY_SUCCESS_5, T.Z.Messages.COPY_SUCCESS_6, T.Z.Messages.COPY_SUCCESS_7, T.Z.Messages.COPY_SUCCESS_8, T.Z.Messages.COPY_SUCCESS_9, T.Z.Messages.COPY_SUCCESS_10, T.Z.Messages.COPY_SUCCESS_11],
-        v = Math.min(Math.max(S - 1, 0), P.length - 1),
-        L = null !== (t = P[v]) && void 0 !== t ? t : P[0],
+        L = Math.min(Math.max(S - 1, 0), P.length - 1),
+        v = null !== (t = P[L]) && void 0 !== t ? t : P[0],
         Z = S >= P.length - 1,
         D = Z ? d.TooltipColors.RED : d.TooltipColors.GREEN,
         B = M ? D : d.TooltipColors.PRIMARY,
@@ -55,7 +55,7 @@ function R(e) {
         text: M
             ? (0, r.jsx)(d.Shaker, {
                   isShaking: Z,
-                  children: L
+                  children: v
               })
             : C,
         onAnimationRest: (e, t) => {

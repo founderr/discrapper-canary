@@ -12,8 +12,8 @@ var r = n(735250),
     f = n(600164),
     h = n(718745),
     p = n(590921),
-    m = n(665692),
-    I = n(981631),
+    I = n(665692),
+    m = n(981631),
     T = n(689938),
     g = n(847602);
 let S = {
@@ -27,7 +27,7 @@ function A(e, t, n) {
     var r, i;
     let a;
     return (
-        n.commands === p.L8.OLD_BUILT_INS ? ((a = t.split(' ')[0].substring(m.GI.length)), (t = t.substring((null !== (r = a.length) && void 0 !== r ? r : 0) + m.GI.length))) : (a = null === (i = d.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.name),
+        n.commands === p.L8.OLD_BUILT_INS ? ((a = t.split(' ')[0].substring(I.GI.length)), (t = t.substring((null !== (r = a.length) && void 0 !== r ? r : 0) + I.GI.length))) : (a = null === (i = d.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.name),
         {
             command: a,
             query: t.trim()
@@ -38,12 +38,12 @@ let N = {
     stores: [d.Z, h.Z],
     matches(e, t, n, r, i) {
         var a;
-        return i.commands !== p.L8.DISABLED && (i.commands === p.L8.OLD_BUILT_INS ? n.startsWith(m.GI + 'gif') || n.startsWith(m.GI + 'tenor') : (null === (a = d.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === I.q9n.GIF && d.Z.getOptionStates(e.id).query.hasValue);
+        return i.commands !== p.L8.DISABLED && (i.commands === p.L8.OLD_BUILT_INS ? n.startsWith(I.GI + 'gif') || n.startsWith(I.GI + 'tenor') : (null === (a = d.Z.getActiveCommand(e.id)) || void 0 === a ? void 0 : a.integrationType) === m.q9n.GIF && d.Z.getOptionStates(e.id).query.hasValue);
     },
     queryResults(e, t, n, r, i) {
         let { command: a, query: o } = A(e, n, r);
         if (null == a) return S;
-        let l = s().findKey(I.nkL, (e) => e.command === a);
+        let l = s().findKey(m.nkL, (e) => e.command === a);
         i && null != l && o.length > 0 && u.Z.search(l, o);
         let c = h.Z.getResults(l, o);
         return null == c
@@ -66,8 +66,8 @@ let N = {
                 onHover: c,
                 onClick: _
             } = e,
-            { command: h, query: m } = A(s, l, u);
-        if (null == h || 0 === m.length) return null;
+            { command: h, query: I } = A(s, l, u);
+        if (null == h || 0 === I.length) return null;
         if (n)
             return (0, r.jsx)(o.Spinner, {
                 className: g.spinner,
@@ -77,7 +77,7 @@ let N = {
             var S, N;
             let e = !1,
                 n = t.map((t, n) => {
-                    if (t.type === I.q9n.GIF) {
+                    if (t.type === m.q9n.GIF) {
                         var i, s, o;
                         return (
                             (e = !0),
@@ -101,9 +101,9 @@ let N = {
                 }),
                 o = u.commands === p.L8.OLD_BUILT_INS ? h : null !== (N = null === (S = d.Z.getActiveCommand(s.id)) || void 0 === S ? void 0 : S.integrationTitle) && void 0 !== N ? N : h,
                 l =
-                    m.length > 0 && null != o
+                    I.length > 0 && null != o
                         ? T.Z.Messages.CONTENT_MATCHING.format({
-                              query: m,
+                              query: I,
                               command: o
                           })
                         : null != o
@@ -149,8 +149,8 @@ let N = {
                           return e.meta.url;
                       })(u)
                   ),
-            c.ZP.trackWithMetadata(I.rMx.SEARCH_RESULT_SELECTED, {
-                search_type: I.aib.GIF,
+            c.ZP.trackWithMetadata(m.rMx.SEARCH_RESULT_SELECTED, {
+                search_type: m.aib.GIF,
                 index_num: r,
                 source_object: '/'.concat(t)
             }),
@@ -167,7 +167,7 @@ let N = {
                     command: e,
                     commandOrigin: _.bB.CHAT
                 }),
-                c.ZP.trackWithMetadata(I.rMx.APPLICATION_COMMAND_USED, {
+                c.ZP.trackWithMetadata(m.rMx.APPLICATION_COMMAND_USED, {
                     command_id: e.id,
                     application_id: e.applicationId,
                     command_type: e.type

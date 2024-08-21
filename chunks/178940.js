@@ -18,8 +18,8 @@ var r,
     f = n(866442),
     h = n(692547),
     p = n(84735),
-    m = n(481060),
-    I = n(981631),
+    I = n(481060),
+    m = n(981631),
     T = n(693297);
 function g(e, t, n) {
     return (
@@ -110,7 +110,7 @@ class N extends (a = u.PureComponent) {
                             className: d()(s, S),
                             type: 'checkbox',
                             onClick: h,
-                            onChange: e || t ? I.dG4 : this.handleChange,
+                            onChange: e || t ? m.dG4 : this.handleChange,
                             checked: n,
                             style: {
                                 width: u,
@@ -126,7 +126,7 @@ class N extends (a = u.PureComponent) {
                         borderColor: _,
                         ...this.getStyle()
                     },
-                    children: (0, l.jsx)(m.CheckmarkLargeIcon, {
+                    children: (0, l.jsx)(I.CheckmarkLargeIcon, {
                         size: 'sm',
                         color: this.getColor(),
                         'aria-hidden': !0
@@ -157,6 +157,6 @@ g(N, 'Types', r),
         color: h.Z.unsafe_rawColors.BRAND_500.css,
         shape: S.BOX,
         align: 'center',
-        onChange: I.dG4,
+        onChange: m.dG4,
         reverse: !1
     });

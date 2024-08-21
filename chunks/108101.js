@@ -12,8 +12,8 @@ var r = n(687249),
     f = n(53919),
     h = n(247323),
     p = n(609511),
-    m = n(292548),
-    I = n(290677),
+    I = n(292548),
+    m = n(290677),
     T = n(551023),
     g = n(118788),
     S = n(661233),
@@ -31,7 +31,7 @@ e.exports = function e(t, n, y, D, L, b) {
         w = 4 & n;
     if ((y && (M = L ? y(t, D, L, b) : y(t)), void 0 !== M)) return M;
     if (!S(t)) return t;
-    var x = I(t);
+    var x = m(t);
     if (x) {
         if (((M = h(t)), !P)) return u(t, M);
     } else {
@@ -39,7 +39,7 @@ e.exports = function e(t, n, y, D, L, b) {
             k = G == O || '[object GeneratorFunction]' == G;
         if (T(t)) return l(t, P);
         if (G == R || G == v || (k && !L)) {
-            if (((M = U || k ? {} : m(t)), !P)) return U ? d(t, o(M, t)) : c(t, s(M, t));
+            if (((M = U || k ? {} : I(t)), !P)) return U ? d(t, o(M, t)) : c(t, s(M, t));
         } else {
             if (!C[G]) return L ? t : {};
             M = p(t, G, P);

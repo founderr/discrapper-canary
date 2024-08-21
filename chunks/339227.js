@@ -21,7 +21,7 @@ var r = n(512722),
     f = n(70956),
     h = n(40786),
     p = n(362092);
-let m = {
+let I = {
         link: { type: 'skip' },
         highlight: { type: 'skip' },
         blockQuote: { type: 'skip' },
@@ -124,12 +124,12 @@ let m = {
             after: ''
         }
     },
-    I = new Set(['*', '_', '\\']),
+    m = new Set(['*', '_', '\\']),
     T = {},
     g = {};
 for (let e in d.Z.RULES) {
-    if (!(e in m)) throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
-    let t = m[e];
+    if (!(e in I)) throw Error('Slate: Unknown markdown rule: '.concat(e, '.  If you have just added a new markdown rule ') + 'then you probably need to add it to this file so that the rich chat box understands it.');
+    let t = I[e];
     'skip' !== t.type && (T[e] = S(d.Z.RULES[e])), 'skip' !== t.type && 'inlineObject' !== t.type && (g[e] = S('text' === e ? _.ZP : d.Z.RULES[e]));
 }
 function S(e) {
@@ -368,7 +368,7 @@ function M(e, t, n, r, a) {
                         before: N.exec(r.input)[1],
                         after: ''
                     };
-                let i = m['link' === t ? 'url' : t];
+                let i = I['link' === t ? 'url' : t];
                 if ('inlineStyle' === i.type) return i;
                 throw Error('Slate: rule must be an inlineStyle');
             })(t, o, r, l);
@@ -446,7 +446,7 @@ function x(e, t) {
 }
 function G(e, t, n, r) {
     for (; n < r; )
-        if (I.has(t[n])) (n = U(e, t, t[n], n, 'syntaxBefore')), (n = x(t, n));
+        if (m.has(t[n])) (n = U(e, t, t[n], n, 'syntaxBefore')), (n = x(t, n));
         else break;
     return n;
 }

@@ -16,7 +16,7 @@ var r = n(735250),
     _ = n(580747),
     E = n(549738);
 let f = i.forwardRef(function (e, t) {
-    let { color: a, src: o, size: f = 'md', width: h, height: p, className: m, initialAnimation: I, markers: T } = e,
+    let { color: a, src: o, size: f = 'md', width: h, height: p, className: I, initialAnimation: m, markers: T } = e,
         [g, S] = i.useState(null),
         A = i.useRef(null),
         N = i.useRef(null),
@@ -32,7 +32,7 @@ let f = i.forwardRef(function (e, t) {
         C = i.useContext(u.S).reducedMotion.enabled,
         { enabled: y } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
         D = C || !y,
-        L = i.useRef(I);
+        L = i.useRef(m);
     return (
         i.useImperativeHandle(
             t,
@@ -94,7 +94,7 @@ let f = i.forwardRef(function (e, t) {
                 display: 'flex',
                 ...O
             },
-            className: s()(E.lottieIcon, m),
+            className: s()(E.lottieIcon, I),
             ref: A
         })
     );

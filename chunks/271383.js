@@ -23,8 +23,8 @@ var r,
     f = n(710845),
     h = n(69882),
     p = n(134049),
-    m = n(160404),
-    I = n(630388),
+    I = n(160404),
+    m = n(630388),
     T = n(823379),
     g = n(709054),
     S = n(314897),
@@ -99,7 +99,7 @@ function H(e, t) {
 }
 function Z(e) {
     let { userId: t, nick: n, guildId: r, avatar: i, avatarDecoration: a, guildRoles: s, roles: o, premiumSince: l, isPending: u, joinedAt: c, communicationDisabledUntil: d, unusualDMActivityUntil: _, fullProfileLoadedTimestamp: E, flags: f } = e,
-        { colorString: h, colorRoleId: p, iconRoleId: I, hoistRoleId: T, highestRoleId: A } = H(s, o),
+        { colorString: h, colorRoleId: p, iconRoleId: m, hoistRoleId: T, highestRoleId: A } = H(s, o),
         N = {
             userId: t,
             nick: n,
@@ -109,7 +109,7 @@ function Z(e) {
             roles: o,
             colorString: h,
             colorRoleId: p,
-            iconRoleId: I,
+            iconRoleId: m,
             hoistRoleId: T,
             highestRoleId: A,
             premiumSince: l,
@@ -122,11 +122,11 @@ function Z(e) {
         };
     if (null == R[r]) return N;
     if (t === S.default.getId()) {
-        if (m.Z.isViewingRoles(r) || m.Z.isFullServerPreview(r)) {
-            let e = m.Z.getViewingRoles(r);
+        if (I.Z.isViewingRoles(r) || I.Z.isFullServerPreview(r)) {
+            let e = I.Z.getViewingRoles(r);
             C[r] = {
                 ...N,
-                ...m.Z.getMemberOptions(r),
+                ...I.Z.getMemberOptions(r),
                 roles: null != e ? g.default.keys(e) : []
             };
         } else null != C[r] && delete C[r];
@@ -341,7 +341,7 @@ function J(e) {
 }
 class ee extends (i = _.ZP.Store) {
     initialize() {
-        this.waitFor(N.Z, S.default, m.Z);
+        this.waitFor(N.Z, S.default, I.Z);
     }
     getMutableAllGuildsAndMembers() {
         return R;
@@ -388,7 +388,7 @@ class ee extends (i = _.ZP.Store) {
             n = R[e];
         if (null == n || null == n[t]) return !1;
         let r = n[t].flags;
-        return null != r && (0, I.yE)(r, v.q.IS_GUEST);
+        return null != r && (0, m.yE)(r, v.q.IS_GUEST);
     }
     getMemberIds(e) {
         if (null == e) return [];
@@ -406,7 +406,7 @@ class ee extends (i = _.ZP.Store) {
     }
     getMember(e, t) {
         let n = this.getTrueMember(e, t);
-        if (null != n && t === S.default.getId() && (m.Z.isViewingRoles(e) || m.Z.isFullServerPreview(e))) {
+        if (null != n && t === S.default.getId() && (I.Z.isViewingRoles(e) || I.Z.isFullServerPreview(e))) {
             var r;
             return null !== (r = C[e]) && void 0 !== r ? r : n;
         }

@@ -13,7 +13,7 @@ var r = n(911969),
     f = n(590921),
     h = n(126226),
     p = n(689938);
-function m(e) {
+function I(e) {
     let t = _.X.exec(e);
     if (null != t) {
         let n = t[1],
@@ -28,18 +28,18 @@ function m(e) {
     }
     return null;
 }
-let I = {
+let m = {
     ...h.Z,
     sentinel: void 0,
     focusMode: f.QZ.MANUAL,
     matches(e, t, n, r, i) {
         if (i.commands === f.L8.DISABLED || i.commands === f.L8.OLD_BUILT_INS || n.length < 2 || !u.Xk.getSetting()) return !1;
-        let a = m(n);
+        let a = I(n);
         return null != a && a.cleanedQuery.length > 0;
     },
     queryResults(e, t, n, s, l) {
         if (!u.Xk.getSetting()) return h.K;
-        let c = m(n);
+        let c = I(n);
         if (null == c) return h.K;
         let d = (0, o.hV)(e, c.cleanedQuery),
             { commands: _, sections: E } = i.JT(
@@ -105,7 +105,7 @@ let I = {
                 };
             },
             getQuery: (e) => {
-                let t = m(e);
+                let t = I(e);
                 if ('mention' !== t.type) return e;
                 let n = d.ZP.getName(null == r ? void 0 : r.id, i.id, t.user);
                 return e.replace(_.X, '@'.concat(n));
@@ -132,4 +132,4 @@ let I = {
               };
     }
 };
-t.Z = I;
+t.Z = m;

@@ -15,7 +15,7 @@ var r,
 ((i = r || (r = {}))[(i.PARTNERED = 0)] = 'PARTNERED'), (i[(i.STAFF = 1)] = 'STAFF'), (i[(i.VERIFIED = 2)] = 'VERIFIED'), (i[(i.VERIFIED_AND_PARTNERED = 3)] = 'VERIFIED_AND_PARTNERED'), (i[(i.VERIFIED_AND_HUB = 4)] = 'VERIFIED_AND_HUB'), (i[(i.HUB = 5)] = 'HUB'), (i[(i.NONE = 6)] = 'NONE');
 class p extends s.PureComponent {
     renderBadge(e, t, n) {
-        let { className: r, badgeStrokeColor: i, tooltipColor: s = u.Tooltip.Colors.BRAND, tooltipPosition: o, tooltipDelay: d, size: E = 16, badgeColor: p, iconClassName: m, flowerStarClassName: I } = this.props,
+        let { className: r, badgeStrokeColor: i, tooltipColor: s = u.Tooltip.Colors.BRAND, tooltipPosition: o, tooltipDelay: d, size: E = 16, badgeColor: p, iconClassName: I, flowerStarClassName: m } = this.props,
             T = (function (e) {
                 switch (e) {
                     case 2:
@@ -51,20 +51,20 @@ class p extends s.PureComponent {
                               height: E
                           },
                           children: (0, a.jsx)(t, {
-                              className: l()(h.icon, m),
+                              className: l()(h.icon, I),
                               color: 'currentColor'
                           })
                       })
                     : (0, a.jsx)(c.Z, {
                           ...s,
                           className: l()(n, r),
-                          flowerStarClassName: I,
+                          flowerStarClassName: m,
                           color: p,
                           stroke: i,
                           size: E,
                           children: (0, a.jsx)(t, {
                               size: 'xxs',
-                              className: l()(h.icon, m),
+                              className: l()(h.icon, I),
                               color: 'currentColor'
                           })
                       })

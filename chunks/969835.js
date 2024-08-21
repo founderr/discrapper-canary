@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(785717),
     h = n(221292),
     p = n(318661),
-    m = n(78675),
-    I = n(113557),
+    I = n(78675),
+    m = n(113557),
     T = n(169979),
     g = n(119096),
     S = n(502762),
@@ -122,7 +122,7 @@ function M(e) {
                                 className: b.header,
                                 children: [
                                     null != ee && (0, r.jsx)('div', { className: b.backdrop }),
-                                    (0, r.jsx)(m.Z, {
+                                    (0, r.jsx)(I.Z, {
                                         user: t,
                                         displayProfile: W,
                                         guildId: M,
@@ -135,7 +135,7 @@ function M(e) {
                                         shown: z,
                                         className: b.toast
                                     }),
-                                    (0, r.jsx)(I.Z, {
+                                    (0, r.jsx)(m.Z, {
                                         location: 'BiteSizeProfilePopout',
                                         user: t,
                                         displayProfile: W,

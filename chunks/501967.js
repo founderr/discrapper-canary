@@ -62,7 +62,7 @@ class p extends a.PureComponent {
         super(e), (this.state = { animation: new l.Z.Value(0) });
     }
 }
-class m extends (r = a.PureComponent) {
+class I extends (r = a.PureComponent) {
     componentDidMount() {
         document.addEventListener('mousedown', this.handleMouseEvent, !0), document.addEventListener('mousemove', this.handleMouseEvent, !0);
     }
@@ -149,7 +149,7 @@ class m extends (r = a.PureComponent) {
             });
     }
 }
-f(m, 'defaultProps', {
+f(I, 'defaultProps', {
     layout: _.AEg.MINIMUM,
     animated: !0
 });

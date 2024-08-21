@@ -1,12 +1,12 @@
 n.d(t, {
     Qs: function () {
-        return m;
+        return I;
     },
     Uf: function () {
         return p;
     },
     VO: function () {
-        return I;
+        return m;
     },
     Xs: function () {
         return h;
@@ -126,7 +126,7 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             [l, o]
         );
     },
-    m = (e) => {
+    I = (e) => {
         let { activeCategoryIndex: t, listRef: n, isScrolling: i, searchQuery: s, scrollOffset: o = 0, onActiveCategoryIndexChange: l, disableForSearch: u = !0 } = e,
             c = r.useRef(_.xAR),
             d = r.useMemo(
@@ -164,7 +164,7 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             [i, d, E]
         );
     },
-    I = (e) => {
+    m = (e) => {
         let { columnCounts: t, gridNavigatorId: n, itemGrid: i, itemList: a, onGridNavigatorItemSelect: l, onGridNavigatorPositionChange: u } = e,
             c = r.useRef(!1),
             d = r.useCallback(
@@ -213,8 +213,8 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             {
                 dispatch: h,
                 getItemProps: p,
-                getRowProps: m,
-                getContainerProps: I
+                getRowProps: I,
+                getContainerProps: m
             } = (0, o.Z)({
                 navId: n,
                 columnCounts: t,
@@ -224,12 +224,12 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                 useVirtualFocus: !0
             }),
             { gridContainerProps: T, handleGridContainerKeyDown: g } = r.useMemo(() => {
-                let e = I();
+                let e = m();
                 return {
                     gridContainerProps: e,
                     handleGridContainerKeyDown: e.onKeyDown
                 };
-            }, [I]);
+            }, [m]);
         return (
             r.useEffect(() => {
                 let e = () => {
@@ -240,7 +240,7 @@ let E = (0, u.Mg)(c.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
             {
                 gridDispatch: h,
                 getItemProps: p,
-                getRowProps: m,
+                getRowProps: I,
                 gridContainerProps: T,
                 handleGridContainerKeyDown: g,
                 isUsingKeyboardNavigation: c
@@ -302,7 +302,7 @@ function g(e) {
             gridContainerProps: E,
             handleGridContainerKeyDown: f,
             isUsingKeyboardNavigation: h
-        } = I({
+        } = m({
             columnCounts: t,
             gridNavigatorId: s,
             itemGrid: n,

@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(925549),
     h = n(37234),
     p = n(519938),
-    m = n(367907),
-    I = n(158631),
+    I = n(367907),
+    m = n(158631),
     T = n(552740),
     g = n(358221),
     S = n(414910),
@@ -108,14 +108,14 @@ class el extends i.PureComponent {
         let { channel: e } = this.props;
         W.default.track(er.rMx.VIDEO_LAYOUT_TOGGLED, {
             video_layout: 'pip',
-            ...(0, m.AB)(e.id)
+            ...(0, I.AB)(e.id)
         });
     }
     componentWillUnmount() {
         let { channel: e } = this.props;
         W.default.track(er.rMx.VIDEO_LAYOUT_TOGGLED, {
             video_layout: g.Z.getLayout(e.id),
-            ...(0, m.AB)(e.id)
+            ...(0, I.AB)(e.id)
         });
     }
     renderStreamState() {
@@ -310,7 +310,7 @@ t.Z = d.ZP.connectStores([F.Z, g.Z, B.default, Z.Z, Y.Z, k.Z, j.Z], (e) => {
         l = (0, O.Z)(F.Z),
         u = B.default.getId(),
         d = k.Z.getCurrentUserActiveStream(),
-        _ = (0, I.tA)(t.id);
+        _ = (0, m.tA)(t.id);
     return {
         channel: t,
         streamId: s,

@@ -12,8 +12,8 @@ var r,
     f = n(636879),
     h = n(810847),
     p = n(898625),
-    m = n(981631),
-    I = n(328237);
+    I = n(981631),
+    m = n(328237);
 function T(e, t, n) {
     return (
         t in e
@@ -47,10 +47,10 @@ class A extends (r = a.Component) {
         this.pause(), this.unbindEvents(), this.children.forEach((e) => e.terminate());
     }
     bindEvents() {
-        window.addEventListener('resize', this.resizeCanvas, !1), window.addEventListener('blur', this.delayedPause, !1), window.addEventListener('focus', this.play, !1), document.addEventListener('visibilitychange', this.handleVisibilityChange, !1), d.S.subscribe(m.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
+        window.addEventListener('resize', this.resizeCanvas, !1), window.addEventListener('blur', this.delayedPause, !1), window.addEventListener('focus', this.play, !1), document.addEventListener('visibilitychange', this.handleVisibilityChange, !1), d.S.subscribe(I.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
     }
     unbindEvents() {
-        window.removeEventListener('resize', this.resizeCanvas, !1), window.removeEventListener('blur', this.delayedPause, !1), window.removeEventListener('focus', this.play, !1), document.removeEventListener('visibilitychange', this.handleVisibilityChange, !1), d.S.unsubscribe(m.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
+        window.removeEventListener('resize', this.resizeCanvas, !1), window.removeEventListener('blur', this.delayedPause, !1), window.removeEventListener('focus', this.play, !1), document.removeEventListener('visibilitychange', this.handleVisibilityChange, !1), d.S.unsubscribe(I.CkL.WAVE_EMPHASIZE, this.handleWaveEmphasize);
     }
     advanceTransitionalState() {
         let { waveState: e } = this.props;
@@ -74,13 +74,13 @@ class A extends (r = a.Component) {
                 let { reducedMotion: a } = r;
                 return a.enabled
                     ? (0, i.jsx)('div', {
-                          className: o()(I.fallbackImage, {
-                              [I.embedded]: n,
-                              [I.visible]: !t && e >= p.hO.ENTERED
+                          className: o()(m.fallbackImage, {
+                              [m.embedded]: n,
+                              [m.visible]: !t && e >= p.hO.ENTERED
                           })
                       })
                     : (0, i.jsx)('canvas', {
-                          className: o()(I.canvas, { [I.embedded]: n }),
+                          className: o()(m.canvas, { [m.embedded]: n }),
                           ref: this.setCanvas
                       });
             }

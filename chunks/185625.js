@@ -9,7 +9,7 @@ n.d(t, {
         return _;
     },
     RV: function () {
-        return I;
+        return m;
     },
     VP: function () {
         return R;
@@ -39,7 +39,7 @@ n.d(t, {
         return T;
     },
     yL: function () {
-        return m;
+        return I;
     }
 }),
     n(411104),
@@ -101,7 +101,7 @@ function p(e, t, n, r) {
         body: N(e, t, n, r)
     });
 }
-function m(e, t) {
+function I(e, t) {
     return s.tn.post({
         url: d.ANM.SEND_UNAUTHENTICATED_REPORT_PINCODE(e),
         body: {
@@ -110,7 +110,7 @@ function m(e, t) {
         }
     });
 }
-async function I(e, t, n) {
+async function m(e, t, n) {
     return (
         await s.tn.post({
             url: d.ANM.VERIFY_UNAUTHENTICATED_REPORT(e),

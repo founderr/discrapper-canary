@@ -18,11 +18,11 @@ function c(e) {
         var e, t, n;
         d ? ((0, o.F)(h), null === (e = p.current) || void 0 === e || e.focus()) : null === (n = p.current) || void 0 === n || null === (t = n.blur) || void 0 === t || t.call(n);
     }, [d]);
-    let m = i.useCallback(() => {
+    let I = i.useCallback(() => {
             var e, t;
             (null === (t = p.current) || void 0 === t ? void 0 : null === (e = t.activate) || void 0 === e ? void 0 : e.call(t)) && f();
         }, [f]),
-        I = a(
+        m = a(
             {
                 onClose: f,
                 disabled: c,
@@ -31,7 +31,7 @@ function c(e) {
             p
         );
     return (0, r.jsxs)('div', {
-        onClick: m,
+        onClick: I,
         className: s()(u.item, l._[t], {
             [u.disabled]: c,
             [u.focused]: _ && d,
@@ -49,7 +49,7 @@ function c(e) {
                       })
                   })
                 : null,
-            I
+            m
         ]
     });
 }

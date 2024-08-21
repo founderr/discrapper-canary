@@ -15,7 +15,7 @@ function p(e) {
     let t = e.ctrlKey || e.altKey || e.metaKey;
     e.key === h.mR.Tab && !t && !__OVERLAY__ && !(0, a.$s)() && c.Z.maybeShowKeyboardNavigationExplainerModal();
 }
-function m() {
+function I() {
     (0, l.rf)();
 }
 t.Z = function (e, t) {
@@ -50,9 +50,9 @@ t.Z = function (e, t) {
     return (
         (0, r.useLayoutEffect)(
             () => (
-                n ? (e.addEventListener('mousedown', m), e.addEventListener('keydown', p)) : e.addEventListener('keydown', a),
+                n ? (e.addEventListener('mousedown', I), e.addEventListener('keydown', p)) : e.addEventListener('keydown', a),
                 () => {
-                    n ? (e.removeEventListener('mousedown', m), e.removeEventListener('keydown', p)) : e.removeEventListener('keydown', a);
+                    n ? (e.removeEventListener('mousedown', I), e.removeEventListener('keydown', p)) : e.removeEventListener('keydown', a);
                 }
             ),
             [e, a, n]

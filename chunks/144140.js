@@ -13,8 +13,8 @@ var r,
     f = n(598077),
     h = n(592125),
     p = n(375954),
-    m = n(709054),
-    I = n(124368),
+    I = n(709054),
+    m = n(124368),
     T = n(981631);
 let g = new Set(),
     S = {},
@@ -168,12 +168,12 @@ class b extends (r = u.ZP.Store) {
                 null == a ||
                 !_.Ec.has(a.type) ||
                 !(function (e, t) {
-                    return !(t.type === T.uaV.THREAD_STARTER_MESSAGE || (e.isForumPost() && t.id === m.default.castChannelIdAsMessageId(e.id))) && !0;
+                    return !(t.type === T.uaV.THREAD_STARTER_MESSAGE || (e.isForumPost() && t.id === I.default.castChannelIdAsMessageId(e.id))) && !0;
                 })(a, t)
             )
                 return !1;
             N(a, (e) => {
-                (e.count = Math.min(e.count + 1, I.M3)), (e.mostRecentRawMessage = t), (e.mostRecentMessage = null);
+                (e.count = Math.min(e.count + 1, m.M3)), (e.mostRecentRawMessage = t), (e.mostRecentMessage = null);
             });
         },
         MESSAGE_UPDATE: function (e) {
@@ -190,7 +190,7 @@ class b extends (r = u.ZP.Store) {
             let { id: t, channelId: n } = e,
                 r = S[n];
             if (null == r) return !1;
-            let i = m.default.castChannelIdAsMessageId(n) !== t,
+            let i = I.default.castChannelIdAsMessageId(n) !== t,
                 a = !g.has(t);
             v(r, (e) => {
                 var n;
@@ -203,7 +203,7 @@ class b extends (r = u.ZP.Store) {
                 r = S[n];
             if (null == r) return !1;
             let i = t.filter((e) => {
-                let t = m.default.castChannelIdAsMessageId(n) !== e,
+                let t = I.default.castChannelIdAsMessageId(n) !== e,
                     r = !g.has(e);
                 return t && r;
             }).length;
@@ -225,7 +225,7 @@ class b extends (r = u.ZP.Store) {
                 else {
                     var n;
                     let r = null !== (n = e.messages[0]) && void 0 !== n ? n : null;
-                    (t.count = e.messages.length >= I.M3 ? I.M3 : t.count), (null == r ? void 0 : r.type) !== T.uaV.THREAD_STARTER_MESSAGE && ((t.mostRecentRawMessage = r), (t.mostRecentMessage = null));
+                    (t.count = e.messages.length >= m.M3 ? m.M3 : t.count), (null == r ? void 0 : r.type) !== T.uaV.THREAD_STARTER_MESSAGE && ((t.mostRecentRawMessage = r), (t.mostRecentMessage = null));
                 }
             });
         }

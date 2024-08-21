@@ -17,8 +17,8 @@ var r = n(235003),
     f = n(726249),
     h = n(395861),
     p = n(953523),
-    m = n(706440),
-    I = n(788675),
+    I = n(706440),
+    m = n(788675),
     T = n(591995),
     g = n(885723),
     S = n(580917),
@@ -63,7 +63,7 @@ function q(e, t) {
         );
     (0, B.Oj).set(t, { id: h.id });
     let p = (0, V.useMemo)(() => u || new Z.dp(t.collection, t.disabledKeys, l), [u, t.collection, t.disabledKeys, l]),
-        { collectionProps: m } = (0, Z.gq)({
+        { collectionProps: I } = (0, Z.gq)({
             selectionManager: t.selectionManager,
             keyboardDelegate: p,
             disallowTypeAhead: !0,
@@ -72,7 +72,7 @@ function q(e, t) {
             ref: o,
             isVirtualized: !0
         }),
-        I = (0, F.tv)(),
+        m = (0, F.tv)(),
         { isInvalid: T, validationErrors: g, validationDetails: S } = t.displayValidation,
         {
             labelProps: A,
@@ -86,7 +86,7 @@ function q(e, t) {
                 onKeyDown: d
                     ? e.onKeyDown
                     : (0, F.tS)(
-                          t.isOpen && m.onKeyDown,
+                          t.isOpen && I.onKeyDown,
                           (n) => {
                               switch (n.key) {
                                   case 'Enter':
@@ -94,7 +94,7 @@ function q(e, t) {
                                       if ((t.isOpen && 'Enter' === n.key && n.preventDefault(), t.isOpen && null != t.selectionManager.focusedKey && t.selectionManager.isLink(t.selectionManager.focusedKey))) {
                                           if ('Enter' === n.key) {
                                               let e = l.current.querySelector(`[data-key="${CSS.escape(t.selectionManager.focusedKey.toString())}"]`);
-                                              e instanceof HTMLAnchorElement && I.open(e, n);
+                                              e instanceof HTMLAnchorElement && m.open(e, n);
                                           }
                                           t.close();
                                       } else t.commit();
@@ -250,8 +250,8 @@ z = {
     'he-IL': f.Z,
     'hr-HR': h.Z,
     'hu-HU': p.Z,
-    'it-IT': m.Z,
-    'ja-JP': I.Z,
+    'it-IT': I.Z,
+    'ja-JP': m.Z,
     'ko-KR': T.Z,
     'lt-LT': g.Z,
     'lv-LV': S.Z,

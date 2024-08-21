@@ -14,12 +14,12 @@ let h = new o.Z('NativeDispatchUtils');
 function p() {
     return null == i && h.warn('Tried getting Dispatch instance before instantiated'), i;
 }
-function m(e) {
+function I(e) {
     let t = JSON.parse(e);
     return h.log('Native Dispatch error', t), new s.Z(t);
 }
-function I(e, t) {
-    '' !== e && m(e);
+function m(e, t) {
+    '' !== e && I(e);
 }
 t.Z = {
     init(e) {
@@ -38,7 +38,7 @@ t.Z = {
                 var r;
                 let d = {
                         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                        build_number: '320374'
+                        build_number: '320432'
                     },
                     _ = l.default.getCurrentUser();
                 null != _ && ((d.user_id = _.id), (d.user_name = _.tag), null != _.email && (d.email = _.email));
@@ -78,7 +78,7 @@ t.Z = {
                         });
                     },
                     (e) => {
-                        u(m(e));
+                        u(I(e));
                     },
                     (e) => {
                         !(function (e) {
@@ -117,7 +117,7 @@ t.Z = {
                     manifest_ids: s,
                     install_path: o
                 }),
-                I
+                m
             );
     },
     setCurrentTask(e, t, n, r, i) {
@@ -133,7 +133,7 @@ t.Z = {
                     user_id: r,
                     user_token: i
                 }),
-                I
+                m
             ),
             !0)
         );
@@ -147,7 +147,7 @@ t.Z = {
                     user_id: e,
                     user_token: t
                 }),
-                I
+                m
             );
     },
     cancel(e, t) {
@@ -159,7 +159,7 @@ t.Z = {
                     application_id: e,
                     branch_id: t
                 }),
-                I
+                m
             );
     },
     uninstall(e, t) {
@@ -171,16 +171,16 @@ t.Z = {
                     application_id: e,
                     branch_id: t
                 }),
-                I
+                m
             );
     },
     pause() {
         let e = p();
-        if (null != e) e.command(JSON.stringify({ command: 'Pause' }), I);
+        if (null != e) e.command(JSON.stringify({ command: 'Pause' }), m);
     },
     resume() {
         let e = p();
-        if (null != e) e.command(JSON.stringify({ command: 'Resume' }), I);
+        if (null != e) e.command(JSON.stringify({ command: 'Resume' }), m);
     },
     queryDirectory(e, t) {
         let n = p();
@@ -222,7 +222,7 @@ t.Z = {
                       (e, t, i) => {
                           if ('' !== e) {
                               a.Z.dispatch({ type: 'DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE' });
-                              let t = m(e);
+                              let t = I(e);
                               a.Z.dispatch({
                                   type: 'DISPATCH_APPLICATION_ERROR',
                                   error: t
@@ -262,7 +262,7 @@ t.Z = {
                     environment: r
                 }),
                 function (e, t) {
-                    '' !== e ? a(m(e)) : i([JSON.parse(t).pid]);
+                    '' !== e ? a(I(e)) : i([JSON.parse(t).pid]);
                 }
             );
         })

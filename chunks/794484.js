@@ -68,11 +68,11 @@ t.Z = (e) => {
                 cancelAnimationFrame(t), b && P();
             };
         }, [S, M, b, P]);
-    let v = (0, I.Op)(b),
-        L = (0, E.Z)(),
+    let L = (0, I.Op)(b),
+        v = (0, E.Z)(),
         Z = (0, I.mN)(),
         D = (0, I.sP)({
-            perksCards: L,
+            perksCards: v,
             variant: r,
             shopMarketingVariation: x,
             isFullScreen: f,
@@ -85,7 +85,7 @@ t.Z = (e) => {
         G = a.useRef(new l.qA());
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (null == L ? void 0 : null === (t = L.freeBoost) || void 0 === t ? void 0 : t.name) === E.u.FREE_BOOST &&
+            (null == v ? void 0 : null === (t = v.freeBoost) || void 0 === t ? void 0 : t.name) === E.u.FREE_BOOST &&
                 (0, s.jsx)(l.O_, {
                     ref: U,
                     className: C.confettiCanvas,
@@ -105,7 +105,7 @@ t.Z = (e) => {
                     (0, s.jsx)(g, {
                         showAllPerksButton: A,
                         leftAlignHeaders: N,
-                        title: v.title,
+                        title: L.title,
                         headerClassname: m
                     }),
                     (0, s.jsx)(o.Text, {
@@ -119,7 +119,7 @@ t.Z = (e) => {
                             [C.leftAlignSubtitle]: N,
                             [C.centerAlignSubtitle]: !N
                         }),
-                        children: v.subtitle
+                        children: L.subtitle
                     }),
                     !N &&
                         null != A &&

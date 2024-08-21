@@ -45,7 +45,7 @@ function P() {
         })
     });
 }
-function v(e) {
+function L(e) {
     let { displayType: t } = e,
         n = a.useCallback(() => {
             (0, o.showToast)((0, o.createToast)(O.Z.Messages.FAMILY_CENTER_ERROR_GENERIC_TOAST, o.ToastType.FAILURE));
@@ -105,17 +105,17 @@ function v(e) {
             [h, C, r, f]
         );
     if (0 === l.length) return null;
-    let v = l.slice(0, p);
+    let L = l.slice(0, p);
     return (0, s.jsxs)('div', {
         className: b.actionSection,
         children: [
             P(),
             (0, s.jsx)('div', {
                 className: b.actions,
-                style: { maxHeight: 65 * v.length },
-                children: v.map((e, t) => x({ row: t }))
+                style: { maxHeight: 65 * L.length },
+                children: L.map((e, t) => x({ row: t }))
             }),
-            v.length !== c
+            L.length !== c
                 ? (0, s.jsx)(o.Clickable, {
                       className: b.loadMoreBar,
                       onClick: S,
@@ -128,14 +128,14 @@ function v(e) {
                           : (0, s.jsx)(o.Text, {
                                 className: b.loadMore,
                                 variant: 'text-sm/bold',
-                                children: O.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({ pageSize: Math.min(c - v.length, M.iB) })
+                                children: O.Z.Messages.FAMILY_CENTER_ACTIVITY_MORE.format({ pageSize: Math.min(c - L.length, M.iB) })
                             })
                   })
                 : null
         ]
     });
 }
-let L = () => {
+let v = () => {
         let e = (0, g.Z)(),
             t = (0, p.mq)(M.ne.ACTIVE),
             n = (0, T.o)(O.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_TEEN.format({ activeLinks: t.length }), O.Z.Messages.FAMILY_CENTER_ACTIVITY_OVERVIEW_PREFACE_PARENT),
@@ -245,7 +245,7 @@ t.Z = (e) => {
         children: [
             (0, s.jsxs)('div', {
                 className: b.connectedCounter,
-                children: [(0, s.jsx)(L, {}), (0, s.jsx)(P, {})]
+                children: [(0, s.jsx)(v, {}), (0, s.jsx)(P, {})]
             }),
             (0, s.jsxs)('div', {
                 className: b.card,
@@ -276,7 +276,7 @@ t.Z = (e) => {
                                 children: a
                                     ? n.map((e) => {
                                           let [t] = e;
-                                          return (0, s.jsx)(v, { displayType: t }, ''.concat(t, '-list'));
+                                          return (0, s.jsx)(L, { displayType: t }, ''.concat(t, '-list'));
                                       })
                                     : (0, s.jsx)(h.Z, {
                                           className: b.emptyActivity,

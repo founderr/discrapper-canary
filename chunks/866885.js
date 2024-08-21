@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(358221),
     h = n(928518),
     p = n(703656),
-    m = n(607187),
-    I = n(937995),
+    I = n(607187),
+    m = n(937995),
     T = n(366050),
     g = n(944486),
     S = n(594174),
@@ -95,12 +95,12 @@ function x(e) {
         };
     return (
         null != y.guild_id && '' !== y.guild_id && (ea.guild_id = y.guild_id),
-        (0, r.jsx)(I.ZP, {
+        (0, r.jsx)(m.ZP, {
             timeout: 2000,
             children: (e) => {
                 var t, n, i, a, o, u, c, d;
                 let { idle: _, onActive: E, onForceIdle: f } = e;
-                return (0, r.jsxs)(m.Z, {
+                return (0, r.jsxs)(I.Z, {
                     className: s()(P.root, {
                         [P.pipMode]: ee,
                         [w.elevationHigh]: ee,

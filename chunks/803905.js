@@ -33,7 +33,7 @@ n.d(t, {
         return M;
     },
     _G: function () {
-        return I;
+        return m;
     },
     _O: function () {
         return A;
@@ -57,7 +57,7 @@ n.d(t, {
         return B;
     },
     lX: function () {
-        return m;
+        return I;
     },
     m_: function () {
         return E;
@@ -121,8 +121,8 @@ let _ = new d(r.q.ANIMATED_EMOJIS),
     f = new d(r.q.STICKERS_EVERYWHERE),
     h = new d(r.q.SOUNDBOARD_EVERYWHERE),
     p = new d(r.q.CUSTOM_CALL_SOUNDS),
-    m = new d(r.q.ANIMATED_AVATAR),
-    I = new d(r.q.CUSTOM_DISCRIMINATOR),
+    I = new d(r.q.ANIMATED_AVATAR),
+    m = new d(r.q.CUSTOM_DISCRIMINATOR),
     T = new d(r.q.PREMIUM_GUILD_MEMBER_PROFILE),
     g = new d('profileBadges'),
     S = new d(r.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
@@ -145,8 +145,8 @@ let U = new d(r.q.INCREASED_GUILD_LIMIT),
     G = new d('uploadLargeFiles'),
     k = Object.freeze({
         [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [_, E, f, g, P, x, G, N]),
-        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, E, m, I, g, O, C, L, x, G, N]),
-        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, E, f, h, p, m, I, T, g, S, v, O, R, C, y, L, b, M, P, U, w, x, G, N, A, D])
+        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, E, I, m, g, O, C, L, x, G, N]),
+        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, E, f, h, p, I, m, T, g, S, v, O, R, C, y, L, b, M, P, U, w, x, G, N, A, D])
     });
 function B(e, t) {
     return e.getFeatureValue(t);

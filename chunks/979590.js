@@ -321,10 +321,10 @@
             return this._applyModification(A, arguments);
         },
         desaturate: function () {
-            return this._applyModification(m, arguments);
+            return this._applyModification(I, arguments);
         },
         saturate: function () {
-            return this._applyModification(I, arguments);
+            return this._applyModification(m, arguments);
         },
         greyscale: function () {
             return this._applyModification(T, arguments);
@@ -424,12 +424,12 @@
     function p(e, t, n, r) {
         return [x(k(r)), x(l(e).toString(16)), x(l(t).toString(16)), x(l(n).toString(16))].join('');
     }
-    function m(e, t) {
+    function I(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = _(e).toHsl();
         return (n.s -= t / 100), (n.s = U(n.s)), _(n);
     }
-    function I(e, t) {
+    function m(e, t) {
         t = 0 === t ? 0 : t || 10;
         var n = _(e).toHsl();
         return (n.s += t / 100), (n.s = U(n.s)), _(n);

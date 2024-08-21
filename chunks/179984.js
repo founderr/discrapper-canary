@@ -27,8 +27,8 @@ var s = n(735250),
     O = n(689938),
     b = n(59486),
     P = n(102655),
-    v = n(768236),
-    L = n(314907),
+    L = n(768236),
+    v = n(314907),
     Z = n(826701);
 let D = () => {
         let e = (0, m.W1)();
@@ -51,7 +51,7 @@ let D = () => {
         let t,
             { premiumType: n } = e,
             a = (0, _.ZP)();
-        t = n === x.p9.TIER_0 ? ((0, o.wj)(a) ? P : v) : (0, o.wj)(a) ? L : Z;
+        t = n === x.p9.TIER_0 ? ((0, o.wj)(a) ? P : L) : (0, o.wj)(a) ? v : Z;
         let r = (0, C.Px)(n);
         return (0, s.jsx)('img', {
             src: t,
@@ -116,7 +116,7 @@ let D = () => {
 t.Z = (e) => {
     var t;
     let n,
-        { className: r, hideCTAs: P = !1, headingOverride: v, hidePill: L = !1, selectedPlanColumnClassName: Z, selectedPlanTier: y = x.p9.TIER_2 } = e,
+        { className: r, hideCTAs: P = !1, headingOverride: L, hidePill: v = !1, selectedPlanColumnClassName: Z, selectedPlanTier: y = x.p9.TIER_2 } = e,
         { analyticsLocations: k } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
         H = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         w = (0, T.V)(),
@@ -219,7 +219,7 @@ t.Z = (e) => {
               withBottomBorderRadius: !0,
               buttonsRow: null == Q
           }),
-        (n = L
+        (n = v
             ? null
             : null != Q || null != q
               ? (0, s.jsx)(f.Cy, {
@@ -240,7 +240,7 @@ t.Z = (e) => {
                 (0, s.jsx)(c.Heading, {
                     className: i()(b.titleText, b.__invalid_textColor),
                     variant: 'heading-xxl/extrabold',
-                    children: null != v ? v : O.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+                    children: null != L ? L : O.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
                 }),
                 (0, s.jsxs)('div', {
                     className: b.tableWrapper,

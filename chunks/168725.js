@@ -19,7 +19,7 @@ var h = {};
 function p(e, t, n) {
     this.setGenerator(t), (this.__prime = new i(e)), (this._prime = i.mont(this.__prime)), (this._primeLen = e.length), (this._pub = void 0), (this._priv = void 0), (this._primeCode = void 0), n ? ((this.setPublicKey = E), (this.setPrivateKey = f)) : (this._primeCode = 8);
 }
-function m(e, t) {
+function I(e, t) {
     var n = new r(e.toArray());
     return t ? n.toString(t) : n;
 }
@@ -64,16 +64,16 @@ Object.defineProperty(p.prototype, 'verifyError', {
         return t;
     }),
     (p.prototype.getPublicKey = function (e) {
-        return m(this._pub, e);
+        return I(this._pub, e);
     }),
     (p.prototype.getPrivateKey = function (e) {
-        return m(this._priv, e);
+        return I(this._priv, e);
     }),
     (p.prototype.getPrime = function (e) {
-        return m(this.__prime, e);
+        return I(this.__prime, e);
     }),
     (p.prototype.getGenerator = function (e) {
-        return m(this._gen, e);
+        return I(this._gen, e);
     }),
     (p.prototype.setGenerator = function (e, t) {
         return (t = t || 'utf8'), !r.isBuffer(e) && (e = new r(e, t)), (this.__gen = e), (this._gen = new i(e)), this;

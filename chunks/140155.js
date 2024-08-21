@@ -39,10 +39,10 @@ let p = {
     notifCenterActive: !1,
     notifCenterTabFocused: !1
 };
-function m(e) {
+function I(e) {
     return null != e.id && null != e.type;
 }
-function I() {
+function m() {
     p = {
         loading: !1,
         initialized: !1,
@@ -67,7 +67,7 @@ function T(e) {
 }
 function g(e) {
     let t = 'NOTIFICATION_CENTER_ITEM_CREATE' === e.type ? T(e.item) : e.item;
-    if (!p.initialized || !m(t) || p.notifCenterIds.has(t.id)) return !1;
+    if (!p.initialized || !I(t) || p.notifCenterIds.has(t.id)) return !1;
     p.notifCenterIds.add(t.id), (p.notifCenterItems = [t, ...p.notifCenterItems]), p.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id));
 }
 function S(e, t) {
@@ -80,7 +80,7 @@ function S(e, t) {
                   }
                 : n
         )
-        .filter(m);
+        .filter(I);
 }
 function A(e, t, n) {
     var r;
@@ -156,7 +156,7 @@ class v extends (r = i.ZP.PersistedStore) {
 h(v, 'displayName', 'NotificationCenterItemsStore'), h(v, 'persistKey', 'NotificationCenterItemsStore_v2');
 let O = new v(a.Z, {
     CONNECTION_OPEN: function (e) {
-        I();
+        m();
         let t = [];
         e.relationships.forEach((e) => {
             let { type: n, user: r, since: i, is_spam_request: a } = e;
@@ -172,7 +172,7 @@ let O = new v(a.Z, {
             }),
             (p.notifCenterLocalItems = t);
     },
-    LOGOUT: I,
+    LOGOUT: m,
     NOTIFICATION_CENTER_ITEMS_ACK: function (e) {
         let { ids: t } = e;
         S(t, !0);
@@ -202,7 +202,7 @@ let O = new v(a.Z, {
         let { items: t, hasMore: n, cursor: r } = e;
         if (!!p.loading) (p.loading = !1), (p.initialized = !0), (p.errored = !1), (p.isDataStale = !1), (null == r || !p.notifCenterIds.has(r)) && ((p.paginationHasMore = t.length > 0 && n), (p.paginationCursor = t.length > 0 ? r : void 0)), (p.notifCenterItems = [...p.notifCenterItems, ...t.map(T).filter((e) => !p.notifCenterIds.has(e.id))]), p.notifCenterItems.sort((e, t) => d.default.compare(t.id, e.id)), t.forEach((e) => p.notifCenterIds.add(e.id));
     },
-    RESET_NOTIFICATION_CENTER: I,
+    RESET_NOTIFICATION_CENTER: m,
     NOTIFICATION_CENTER_SET_ACTIVE: function (e) {
         let { active: t } = e;
         p.notifCenterActive = t;
@@ -248,9 +248,9 @@ let O = new v(a.Z, {
                       }
                     : e
             )
-            .filter(m);
+            .filter(I);
     },
-    SET_RECENT_MENTIONS_FILTER: I,
+    SET_RECENT_MENTIONS_FILTER: m,
     MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function (e) {
         let { newBuild: t } = e;
         if (null !== t) {

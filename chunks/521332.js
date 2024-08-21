@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return I;
     }
 }),
     n(47120);
@@ -35,11 +35,11 @@ function p(e) {
         })
     );
 }
-function m(e) {
-    let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: u, reportType: m, reportSubType: I } = e,
+function I(e) {
+    let { settingsUpsells: t, channelId: n, onModalClose: i, reportId: u, reportType: I, reportSubType: m } = e,
         T = (0, a.e7)([c.Z], () => c.Z.getChannel(n)),
         g = (0, d.jc)(t, null == T ? void 0 : T.type),
-        S = (0, _.i_)(m, I, u);
+        S = (0, _.i_)(I, m, u);
     return 0 === g.length
         ? null
         : (0, r.jsxs)('div', {
@@ -73,8 +73,8 @@ function m(e) {
                               i(),
                               l.ZP.trackWithMetadata(E.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: u,
-                                  report_type: m.name,
-                                  report_subtype: I,
+                                  report_type: I.name,
+                                  report_subtype: m,
                                   action: _.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED
                               });
                       },

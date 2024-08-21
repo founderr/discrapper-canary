@@ -13,8 +13,8 @@ var r = n(664751),
     f = n(283595),
     h = n(417363),
     p = n(626135),
-    m = n(630388),
-    I = n(877481),
+    I = n(630388),
+    m = n(877481),
     T = n(358085),
     g = n(278323),
     S = n(58642),
@@ -30,8 +30,8 @@ function R(e) {
         embedded: a,
         analyticsLocations: o
     })
-        .then(() => I.Z.waitConnected(t))
-        .then(() => Promise.race([I.Z.waitSubscribed(t, N.zMe.ACTIVITY_JOIN)]))
+        .then(() => m.Z.waitConnected(t))
+        .then(() => Promise.race([m.Z.waitSubscribed(t, N.zMe.ACTIVITY_JOIN)]))
         .then(() => {
             s.Z.dispatch({
                 type: 'ACTIVITY_JOIN',
@@ -67,18 +67,18 @@ async function C(e) {
         n = null != e ? e.branchId : t;
     }
     if (h.Z.isLaunchable(t, n)) {
-        var m;
+        var I;
         let e = h.Z.getState(t, n),
             s = f.Z.getActiveLaunchOptionId(t, n);
         if (null == e) throw Error('Missing dispatch game when launching');
         let o = f.Z.getLibraryApplication(t, n);
         if (null == o) throw Error('Missing library application when launching');
-        p = ((m = t),
+        p = ((I = t),
         a.tn
             .post({
                 url: N.ANM.OAUTH2_AUTHORIZE,
                 query: {
-                    client_id: m,
+                    client_id: I,
                     response_type: 'token',
                     scope: [i.x.IDENTIFY].join(' ')
                 },
@@ -101,10 +101,10 @@ async function C(e) {
                     if (404 === e.status) return null;
                     throw e;
                 }
-            )).then((t) => I.Z.launchDispatchApplication(e, t, d.default.locale, o.getBranchName(), s));
+            )).then((t) => m.Z.launchDispatchApplication(e, t, d.default.locale, o.getBranchName(), s));
     } else {
         let e = l.Z.getApplication(t);
-        p = null != e ? I.Z.launch(e) : I.Z.launchGame(t);
+        p = null != e ? m.Z.launch(e) : m.Z.launchGame(t);
     }
     let T = Error('game not found');
     return null != p
@@ -153,7 +153,7 @@ t.Z = {
         if (null != n) {
             let e = f.Z.getActiveLibraryApplication(n.id);
             if (null != e) {
-                let t = m.x9(e.getFlags(), N.eHb.OVERLAY_DISABLED);
+                let t = I.x9(e.getFlags(), N.eHb.OVERLAY_DISABLED);
                 S.h(e.id, e.branchId, t);
                 return;
             }

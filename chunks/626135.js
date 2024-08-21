@@ -4,7 +4,7 @@ n.r(t),
             return A;
         },
         AnalyticsContext: function () {
-            return m;
+            return I;
         },
         AnalyticsSchema: function () {
             return d;
@@ -47,8 +47,8 @@ var r = n(470079),
     f = n(981631),
     h = n(94752),
     p = n(689938);
-let m = r.createContext({ location: {} }),
-    I = {},
+let I = r.createContext({ location: {} }),
+    m = {},
     T = performance.now(),
     g = [];
 function S(e) {
@@ -250,7 +250,7 @@ let v = () => h.E.NONE,
         TRACK_ACTION_NAME: 'TRACK'
     });
 function R(e) {
-    return (I = e);
+    return (m = e);
 }
 function C(e) {
     var t, n, r, i, a;
@@ -280,7 +280,7 @@ function C(e) {
     (s.client_performance_cpu = _.Z.getCurrentCPUUsagePercent()), (s.client_performance_memory = _.Z.getCurrentMemoryUsageKB()), (s.cpu_core_count = _.Z.getCPUCoreCount()), (s.accessibility_features = v()), (s.rendered_locale = p.Z.getLocale()), (s.uptime_app = Math.floor((performance.now() - T) / 1000));
     let o = _.Z.getProcessUptime();
     null != o && (s.uptime_process_renderer = Math.floor(o));
-    let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = I;
+    let { utmSource: l, utmMedium: u, utmCampaign: c, utmContent: d } = m;
     return (s.utm_source = null !== (t = s.utm_source) && void 0 !== t ? t : l), (s.utm_medium = null !== (n = s.utm_medium) && void 0 !== n ? n : u), (s.utm_campaign = null !== (r = s.utm_campaign) && void 0 !== r ? r : c), (s.utm_content = null !== (i = s.utm_content) && void 0 !== i ? i : d), g.forEach((e) => e(s)), s;
 }
 function y(e, t) {

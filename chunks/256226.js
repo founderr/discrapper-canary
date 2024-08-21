@@ -12,8 +12,8 @@ var r = n(735250),
     f = n(134433),
     h = n(91218),
     p = n(518738),
-    m = n(689938),
-    I = n(195703);
+    I = n(689938),
+    m = n(195703);
 t.Z = i.forwardRef(function (e, t) {
     var a, T, g;
     let S;
@@ -34,7 +34,7 @@ t.Z = i.forwardRef(function (e, t) {
                         (0, r.jsx)(e, {
                             ...t,
                             id: v.id,
-                            label: m.Z.Messages.COPY_ID_ROLE
+                            label: I.Z.Messages.COPY_ID_ROLE
                         });
                 });
             },
@@ -48,21 +48,21 @@ t.Z = i.forwardRef(function (e, t) {
     null != B && 0.3 > (0, l.Bd)(B) && (k = c.Z.unsafe_rawColors.PRIMARY_630.css),
         (S = P
             ? (0, r.jsx)(f.Z, {
-                  className: I.roleFlowerStar,
-                  iconClassName: A ? I.roleVerifiedIcon : void 0,
+                  className: m.roleFlowerStar,
+                  iconClassName: A ? m.roleVerifiedIcon : void 0,
                   color: x,
                   size: 14
               })
             : 'dot' === M
               ? (0, r.jsx)(d.RoleDot, {
-                    className: I.roleDot,
+                    className: m.roleDot,
                     color: x,
                     background: !1,
                     tooltip: !1
                 })
               : (0, r.jsx)(d.RoleCircle, {
                     color: x,
-                    className: I.roleCircle
+                    className: m.roleCircle
                 }));
     let F = i.useMemo(() => {
         var t;
@@ -74,7 +74,7 @@ t.Z = i.forwardRef(function (e, t) {
     return (0, r.jsx)(d.FocusRing, {
         children: (0, r.jsxs)('div', {
             ref: t,
-            className: s()(I.role, N),
+            className: s()(m.role, N),
             style: F,
             onContextMenu: U,
             onMouseDown: y,
@@ -84,46 +84,46 @@ t.Z = i.forwardRef(function (e, t) {
             children: [
                 A
                     ? (0, r.jsx)(d.TooltipContainer, {
-                          text: m.Z.Messages.USER_PROFILE_REMOVE_ROLE,
+                          text: I.Z.Messages.USER_PROFILE_REMOVE_ROLE,
                           children: (0, r.jsxs)(d.Clickable, {
-                              className: s()(I.roleRemoveButtonCanRemove, I.roleRemoveButton),
+                              className: s()(m.roleRemoveButtonCanRemove, m.roleRemoveButton),
                               onClick: O,
                               tabIndex: D,
-                              focusProps: { focusClassName: I.roleRemoveIconFocused },
+                              focusProps: { focusClassName: m.roleRemoveIconFocused },
                               'aria-hidden': !1,
-                              'aria-label': m.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({ roleName: v.name }),
+                              'aria-label': I.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({ roleName: v.name }),
                               children: [
                                   S,
                                   (0, r.jsx)(d.XSmallIcon, {
                                       size: 'md',
                                       color: k,
-                                      className: I.roleRemoveIcon,
+                                      className: m.roleRemoveIcon,
                                       'aria-hidden': !0
                                   })
                               ]
                           })
                       })
                     : (0, r.jsx)(d.Clickable, {
-                          className: I.roleRemoveButton,
+                          className: m.roleRemoveButton,
                           tabIndex: -1,
-                          focusProps: { focusClassName: I.roleRemoveIconFocused },
+                          focusProps: { focusClassName: m.roleRemoveIconFocused },
                           'aria-hidden': !0,
-                          'aria-label': m.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({ roleName: v.name }),
+                          'aria-label': I.Z.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({ roleName: v.name }),
                           children: S
                       }),
                 null != b
                     ? (0, r.jsx)(h.Z, {
-                          className: I.roleIcon,
+                          className: m.roleIcon,
                           ...b,
                           enableTooltip: !1
                       })
                     : null,
                 (0, r.jsx)('div', {
                     'aria-hidden': !0,
-                    className: I.roleName,
+                    className: m.roleName,
                     children: (0, r.jsx)(d.Text, {
                         variant: 'text-xs/medium',
-                        className: I.roleNameOverflow,
+                        className: m.roleNameOverflow,
                         children: v.name
                     })
                 })

@@ -15,7 +15,7 @@ n.d(t, {
         return R;
     },
     Lp: function () {
-        return I;
+        return m;
     },
     Oe: function () {
         return N;
@@ -48,7 +48,7 @@ n.d(t, {
         return S;
     },
     hx: function () {
-        return m;
+        return I;
     },
     jK: function () {
         return f;
@@ -122,7 +122,7 @@ function p(e) {
         message_id: i
     });
 }
-function m(e) {
+function I(e) {
     let { guildId: t, userId: n, source: r } = e;
     u.default.track(d.rMx.CLAN_ADOPT_IDENTITY, {
         guild_id: t,
@@ -130,7 +130,7 @@ function m(e) {
         source: r
     });
 }
-function I(e, t) {
+function m(e, t) {
     u.default.track(d.rMx.CLAN_CONVERT_STEP_VIEWED, {
         guild_id: e,
         step: t

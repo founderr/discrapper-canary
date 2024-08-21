@@ -17,14 +17,14 @@ var r = n(735250),
     f = n(488131),
     h = n(375954),
     p = n(962293),
-    m = n(981631),
-    I = n(689938),
+    I = n(981631),
+    m = n(689938),
     T = n(325379);
 function g(e) {
     let { channel: t, message: n, replyChainLength: a } = e;
     return (
         i.useEffect(() => {
-            (0, u.yw)(m.rMx.THREAD_NUDGE_SHOWN, {
+            (0, u.yw)(I.rMx.THREAD_NUDGE_SHOWN, {
                 type: 'Reply Chain ('.concat(3, ')'),
                 reply_chain_length: a + 1,
                 channel_id: t.id,
@@ -47,13 +47,13 @@ function g(e) {
                     color: 'header-secondary',
                     className: T.text,
                     variant: 'text-sm/normal',
-                    children: I.Z.Messages.THREAD_REPLY_SUGGESTION.format({ count: Math.min(10, a + 1) })
+                    children: m.Z.Messages.THREAD_REPLY_SUGGESTION.format({ count: Math.min(10, a + 1) })
                 }),
                 (0, r.jsx)(l.Text, {
                     color: 'text-link',
                     className: T.createThreadButton,
                     variant: 'text-sm/semibold',
-                    children: I.Z.Messages.CREATE_THREAD
+                    children: m.Z.Messages.CREATE_THREAD
                 })
             ]
         })
@@ -72,7 +72,7 @@ function S(e) {
                     let e = r;
                     for (let t = 0; t < 10; t++) {
                         let r = h.Z.getMessage(n, e);
-                        if ((null == r ? void 0 : r.type) !== m.uaV.REPLY || null == r.messageReference) return t;
+                        if ((null == r ? void 0 : r.type) !== I.uaV.REPLY || null == r.messageReference) return t;
                         e = r.messageReference.message_id;
                     }
                     return 10;
@@ -94,7 +94,7 @@ function S(e) {
                     className: T.replyBar,
                     children: [
                         (0, r.jsx)(l.Clickable, {
-                            onClick: () => (0, _.uL)(m.Z5c.CHANNEL(i.getGuildId(), i.id, a.id)),
+                            onClick: () => (0, _.uL)(I.Z5c.CHANNEL(i.getGuildId(), i.id, a.id)),
                             focusProps: {
                                 offset: {
                                     top: -8,
@@ -107,7 +107,7 @@ function S(e) {
                                 color: 'header-secondary',
                                 className: s()(T.text, T.replyLabel),
                                 variant: 'text-sm/normal',
-                                children: I.Z.Messages.REPLYING_TO.format({
+                                children: m.Z.Messages.REPLYING_TO.format({
                                     userHook: (e, t) =>
                                         (0, r.jsx)(
                                             l.NameWithRole,
@@ -129,7 +129,7 @@ function S(e) {
                                     (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(l.Tooltip, {
-                                                text: u ? I.Z.Messages.REPLY_MENTION_ON_TOOLTIP : I.Z.Messages.REPLY_MENTION_OFF_TOOLTIP,
+                                                text: u ? m.Z.Messages.REPLY_MENTION_ON_TOOLTIP : m.Z.Messages.REPLY_MENTION_OFF_TOOLTIP,
                                                 children: (e) => {
                                                     let { onMouseEnter: t, onMouseLeave: n, onFocus: i, onBlur: a } = e;
                                                     return (0, r.jsx)(l.Clickable, {
@@ -148,10 +148,10 @@ function S(e) {
                                                                 (0, r.jsx)(l.AtIcon, {
                                                                     size: 'md',
                                                                     color: 'currentColor',
-                                                                    'aria-label': I.Z.Messages.MENTION,
+                                                                    'aria-label': m.Z.Messages.MENTION,
                                                                     className: T.mentionIcon
                                                                 }),
-                                                                u ? I.Z.Messages.REPLY_MENTION_ON : I.Z.Messages.REPLY_MENTION_OFF
+                                                                u ? m.Z.Messages.REPLY_MENTION_ON : m.Z.Messages.REPLY_MENTION_OFF
                                                             ]
                                                         })
                                                     });

@@ -41,7 +41,7 @@ function p(e) {
     let { language: i, region: a } = n.langtag;
     return ''.concat(i.language.toLowerCase(), '-').concat(a.toUpperCase());
 }
-class m {
+class I {
     get enabled() {
         return this._enabled;
     }
@@ -104,7 +104,7 @@ class m {
             });
     }
 }
-let I = a().debounce((e, t) => {
+let m = a().debounce((e, t) => {
     let n = (function (e) {
         return null == e ? null : (0, s.k)(e, HTMLInputElement) || (0, s.k)(e, HTMLTextAreaElement) ? e.value : (0, s.k)(e) && e.hasAttribute('contenteditable') ? e.textContent : void 0;
     })(t);
@@ -112,6 +112,6 @@ let I = a().debounce((e, t) => {
 }, 250);
 async function T() {
     var e, t;
-    let n = new m((null !== (e = await h.getAvailableDictionaries()) && void 0 !== e ? e : []).map(p).filter(c.lm));
-    return (t = n), null != document.body && document.body.addEventListener('beforeinput', (e) => I(t, e.target), !0), n;
+    let n = new I((null !== (e = await h.getAvailableDictionaries()) && void 0 !== e ? e : []).map(p).filter(c.lm));
+    return (t = n), null != document.body && document.body.addEventListener('beforeinput', (e) => m(t, e.target), !0), n;
 }

@@ -20,8 +20,8 @@ let h = [_.Eu4.NONE, _.Eu4.TIER_1, _.Eu4.TIER_2, _.Eu4.TIER_3];
 function p(e) {
     let { guild: t } = e,
         n = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
-        [p, m] = i.useState(!1),
-        [I, T] = i.useState(0),
+        [p, I] = i.useState(!1),
+        [m, T] = i.useState(0),
         g = i.useRef(null),
         S = Math.min(_.Eu4.TIER_3, t.premiumTier + 1),
         A = _.oCV[t.premiumTier],
@@ -42,7 +42,7 @@ function p(e) {
                 [c, E] = i.useState(0 === n),
                 [f, h] = i.useState(!1),
                 p = i.useRef(!0),
-                { widthFactor: m } = (0, o.useSpring)({
+                { widthFactor: I } = (0, o.useSpring)({
                     from: { widthFactor: 0 },
                     to: { widthFactor: a ? t : 0 },
                     config: {
@@ -79,7 +79,7 @@ function p(e) {
                 ),
                 {
                     isProgressBarAnimationComplete: c,
-                    progressBarFillWidthFactor: m,
+                    progressBarFillWidthFactor: I,
                     setShouldFireConfetti: h,
                     shouldFireConfetti: f,
                     tierMarkerAnimationPosition: l
@@ -95,7 +95,7 @@ function p(e) {
     return (
         i.useEffect(() => {
             let e = window.setTimeout(() => {
-                m(!0);
+                I(!0);
             }, 250);
             return () => {
                 window.clearTimeout(e);
@@ -147,7 +147,7 @@ function p(e) {
                     )
                 ),
                 (0, r.jsx)(c.Z, {
-                    confettiCount: I,
+                    confettiCount: m,
                     confettiTriggerRef: g,
                     isFiring: b
                 })

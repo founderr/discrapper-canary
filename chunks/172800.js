@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(806966),
     h = n(434404),
     p = n(675478),
-    m = n(819758),
-    I = n(626135),
+    I = n(819758),
+    m = n(626135),
     T = n(392552),
     g = n(784222),
     S = n(926243),
@@ -53,15 +53,15 @@ t.Z = (e) => {
                     var n;
                     let { onMouseEnter: a, onMouseLeave: o, handleSelect: u, icon: c, ariaLabel: d } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         { visibleRowIndex: _, columnIndex: E } = e,
-                        { ref: f, tabIndex: h, onFocus: p, ...m } = null !== (n = M(E, x)) && void 0 !== n ? n : {},
-                        I = q.rowIndex === _ && q.columnIndex === E,
+                        { ref: f, tabIndex: h, onFocus: p, ...I } = null !== (n = M(E, x)) && void 0 !== n ? n : {},
+                        m = q.rowIndex === _ && q.columnIndex === E,
                         T = () => {
                             !U.current && !w.current && L(e);
                         };
                     return (0, i.createElement)(
                         'li',
                         {
-                            ...m,
+                            ...I,
                             key: t
                         },
                         (0, r.jsx)(l.FocusRing, {
@@ -71,8 +71,8 @@ t.Z = (e) => {
                                 className: s()(O.emojiItem, {
                                     [O.emojiItemLarge]: ee,
                                     [O.emojiItemMedium]: et,
-                                    [O.emojiItemSelected]: I,
-                                    [null != V ? V : '']: I,
+                                    [O.emojiItemSelected]: m,
+                                    [null != V ? V : '']: m,
                                     [O.showPulse]: X === t
                                 }),
                                 onFocus: null != p ? p : T,
@@ -114,7 +114,7 @@ t.Z = (e) => {
                                         }),
                                         (0, d.D)(e.guildId),
                                         !e.sectionCollapsedToThreeRows && j(),
-                                        I.default.track(N.rMx.EMOJI_PICKER_THREE_ROW_COLLAPSE_TOGGLED, {
+                                        m.default.track(N.rMx.EMOJI_PICKER_THREE_ROW_COLLAPSE_TOGGLED, {
                                             collapsed: e.sectionCollapsedToThreeRows,
                                             guild_id: e.guildId
                                         }));
@@ -220,7 +220,7 @@ t.Z = (e) => {
                                   [O.alignRight]: ei.length > 0
                               }),
                               children: [
-                                  (0, r.jsx)(m.Z, { foreground: O.newlyAddedBadgeStar }),
+                                  (0, r.jsx)(I.Z, { foreground: O.newlyAddedBadgeStar }),
                                   (0, r.jsx)(l.Text, {
                                       variant: 'text-xs/semibold',
                                       color: 'always-white',

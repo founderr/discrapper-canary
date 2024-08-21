@@ -9,7 +9,7 @@ n.d(t, {
         return u;
     },
     FO: function () {
-        return m;
+        return I;
     },
     J_: function () {
         return c;
@@ -42,7 +42,7 @@ n.d(t, {
         return i;
     },
     wz: function () {
-        return I;
+        return m;
     },
     zU: function () {
         return h;
@@ -83,12 +83,12 @@ var r = n(686942),
         var t = e.getUTCMonth();
         return 1 === t && u(e.getUTCFullYear()) ? 29 : a[t];
     },
-    m = function (e) {
+    I = function (e) {
         return l[e.getUTCDay()];
     },
-    I = function (e, t) {
+    m = function (e, t) {
         var n = i(e, t + 1, 1);
-        return [m(n), p(n)];
+        return [I(n), p(n)];
     },
     T = function (e, t) {
         return (t = t || e), new Date(Date.UTC(e.getUTCFullYear(), e.getUTCMonth(), e.getUTCDate(), t.getHours(), t.getMinutes(), t.getSeconds(), t.getMilliseconds()));

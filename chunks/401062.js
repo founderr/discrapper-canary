@@ -26,8 +26,8 @@ var r,
     f = n(70956),
     h = n(176354),
     p = n(696900),
-    m = n(456631),
-    I = n(963838),
+    I = n(456631),
+    m = n(963838),
     T = n(353368),
     g = n(981631),
     S = n(710111);
@@ -47,7 +47,7 @@ function N(e, t, n) {
         o = null !== (r = p.Z.getState().animationType) && void 0 !== r ? r : T.q.BASIC,
         u = {
             animation_type: o,
-            animation_id: (0, I.Iu)(o, I.v)
+            animation_id: (0, m.Iu)(o, m.v)
         };
     s.tn
         .post({
@@ -86,7 +86,7 @@ function v(e, t, n, r) {
 ((r = i || (i = {})).EMOJI_PICKER = 'emoji_picker'), (r.EFFECT_BAR = 'effect_bar');
 let O = async (e) => {
         let { channel: t, emoji: n, location: r, animationType: i, animationId: a, isPremium: l } = e;
-        if (null == n || m.Z.isOnCooldown) return;
+        if (null == n || I.Z.isOnCooldown) return;
         let u = l && null != i ? i : T.q.BASIC;
         try {
             let e =

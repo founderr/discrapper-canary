@@ -17,7 +17,7 @@ var i = n(442837),
     E = n(139665);
 function f(e) {
     let { stream: t, canWatch: n, unavailableReason: f, onAction: h, onClose: p } = e,
-        m = (0, i.e7)([u.Z], () => {
+        I = (0, i.e7)([u.Z], () => {
             let e = u.Z.getActiveStreamForApplicationStream(t);
             return (
                 (null == e ? void 0 : e.state) !== d.jm8.ENDED &&
@@ -45,7 +45,7 @@ function f(e) {
                         }
                     })
             }),
-            m &&
+            I &&
                 (0, r.jsx)(c.ef, {
                     tooltipText: _.Z.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
                     icon: a.EyePlusIcon,

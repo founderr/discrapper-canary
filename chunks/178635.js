@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return I;
     }
 }),
     n(47120);
@@ -76,7 +76,7 @@ function p(e) {
     }
     return !0;
 }
-class m extends s.Z {
+class I extends s.Z {
     possiblyShowFeedbackModal(e, t) {
         if (
             !!(function (e) {

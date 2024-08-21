@@ -6,7 +6,7 @@ n.d(t, {
         return h;
     },
     L3: function () {
-        return I;
+        return m;
     },
     U: function () {
         return p;
@@ -33,7 +33,7 @@ n.d(t, {
         return S;
     },
     lA: function () {
-        return m;
+        return I;
     },
     md: function () {
         return v;
@@ -60,8 +60,8 @@ let _ = 0,
     h = -1,
     p = -2;
 ((r = o || (o = {}))[(r.Quests = -4)] = 'Quests'), (r[(r.Clans = -3)] = 'Clans'), (r[(r.Hub = p)] = 'Hub'), (r[(r.Communities = h)] = 'Communities'), (r[(r.Activity = 1)] = 'Activity'), (r[(r.Music = 2)] = 'Music'), (r[(r.Television = 3)] = 'Television'), (r[(r.Science = 5)] = 'Science'), (r[(r.Education = 6)] = 'Education');
-let m = 1000,
-    I = [1, 2, 3, 5, 6];
+let I = 1000,
+    m = [1, 2, 3, 5, 6];
 ((i = l || (l = {}))[(i.GENERAL_CHATTING = 14)] = 'GENERAL_CHATTING'), (i[(i.GAMING = 1)] = 'GAMING'), (i[(i.MUSIC = 2)] = 'MUSIC'), (i[(i.ENTERTAINMENT = 3)] = 'ENTERTAINMENT'), (i[(i.CREATIVE_ARTS = 4)] = 'CREATIVE_ARTS'), (i[(i.SCIENCE_AND_TECH = 5)] = 'SCIENCE_AND_TECH'), (i[(i.EDUCATION = 6)] = 'EDUCATION'), (i[(i.SPORTS = 7)] = 'SPORTS'), (i[(i.FASHION_AND_BEAUTY = 8)] = 'FASHION_AND_BEAUTY'), (i[(i.RELATIONSHIPS_AND_IDENTITY = 9)] = 'RELATIONSHIPS_AND_IDENTITY'), (i[(i.TRAVEL_AND_FOOD = 10)] = 'TRAVEL_AND_FOOD'), (i[(i.FITNESS_AND_HEALTH = 11)] = 'FITNESS_AND_HEALTH'), (i[(i.FINANCE = 12)] = 'FINANCE'), (i[(i.OTHER = 13)] = 'OTHER'), (i[(i.EMOJI = 43)] = 'EMOJI'), (i[(i.BOTS = 49)] = 'BOTS');
 let T = {
         14: [() => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREAMER, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => d.Z.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY],

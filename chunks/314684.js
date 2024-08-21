@@ -1,12 +1,12 @@
 n.d(t, {
     $_: function () {
-        return v;
+        return L;
     },
     FM: function () {
         return B;
     },
     IB: function () {
-        return L;
+        return v;
     },
     IY: function () {
         return Z;
@@ -147,7 +147,7 @@ let P = (e) => {
                 return [];
         }
     },
-    v = () => {
+    L = () => {
         let e = M(),
             [t, n] = s.useState(P(e)),
             a = (0, p.c)({ location: 'Home' });
@@ -157,7 +157,7 @@ let P = (e) => {
         let [r] = (0, u.US)(a ? t : []);
         return a ? (null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, m.Wb)(e.nitroTenureStatus) : null) : null;
     },
-    L = () => {
+    v = () => {
         var e;
         let t = null === (e = M()) || void 0 === e ? void 0 : e.nitroTenureStatus,
             n = (0, p.c)({ location: 'Home' }) && null != t && t === S.EB.REDEEMABLE,

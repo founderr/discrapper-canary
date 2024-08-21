@@ -21,8 +21,8 @@ var i = n(120356),
     f = n(785717),
     h = n(505737),
     p = n(790286),
-    m = n(485216),
-    I = n(228168),
+    I = n(485216),
+    m = n(228168),
     T = n(185923),
     g = n(689938),
     S = n(951768);
@@ -31,13 +31,13 @@ let A = 600,
         let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
             a = ':'.concat(t.name, ':');
         switch (r) {
-            case I.n_.ACTIVITY:
+            case m.n_.ACTIVITY:
                 let s = g.Z.Messages.USER_PROFILE_REACTED_TO_ACTIVITY.format({ username: n });
                 return '> -# *'.concat(s, '*\n').concat(a);
-            case I.n_.AVATAR:
+            case m.n_.AVATAR:
                 let o = g.Z.Messages.USER_PROFILE_REACTED_TO_AVATAR.format({ username: n });
                 return '> -# *'.concat(o, '*\n').concat(a);
-            case I.n_.STATUS:
+            case m.n_.STATUS:
                 let l = g.Z.Messages.USER_PROFILE_REACTED_TO_STATUS.format({ username: n });
                 return null != i ? '> -# *'.concat(l, '*').concat('\n > '.concat(i), '\n').concat(a) : '> -# *'.concat(l, '*\n').concat(a);
             default:
@@ -64,7 +64,7 @@ function v(e) {
         D(!1),
             y(!1),
             C(!0),
-            await (0, m.Z)({
+            await (0, I.Z)({
                 userId: t.id,
                 content: r,
                 location: 'UserProfileReactReplyBar',
@@ -80,8 +80,8 @@ function v(e) {
         className: a()(S.popover, {
             [S.visible]: v,
             [S.expandable]: O,
-            [S.statusPopover]: i === I.n_.STATUS,
-            [S.avatarPopover]: i === I.n_.AVATAR
+            [S.statusPopover]: i === m.n_.STATUS,
+            [S.avatarPopover]: i === m.n_.AVATAR
         }),
         children: [
             (0, r.jsx)(o.TooltipContainer, {
@@ -100,7 +100,7 @@ function v(e) {
                     onRequestOpen: () => {
                         null == R ||
                             R({
-                                interactionType: I.P.REACT,
+                                interactionType: m.P.REACT,
                                 interactionSourceType: i
                             });
                     },
@@ -144,7 +144,7 @@ function v(e) {
                         b({ action: U }),
                             null == R ||
                                 R({
-                                    interactionType: I.P.REPLY,
+                                    interactionType: m.P.REPLY,
                                     interactionSourceType: i
                                 });
                     },

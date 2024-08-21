@@ -38,18 +38,18 @@ function c(e, t, n) {
             n
         );
     (0, i.Q)(e, o, n);
-    let { isIndeterminate: m, isRequired: I, validationBehavior: T = 'aria' } = e;
+    let { isIndeterminate: I, isRequired: m, validationBehavior: T = 'aria' } = e;
     return (
         (0, r.useEffect)(() => {
-            n.current && (n.current.indeterminate = !!m);
+            n.current && (n.current.indeterminate = !!I);
         }),
         {
             labelProps: d,
             inputProps: {
                 ..._,
                 checked: E,
-                'aria-required': (I && 'aria' === T) || void 0,
-                required: I && 'native' === T
+                'aria-required': (m && 'aria' === T) || void 0,
+                required: m && 'native' === T
             },
             isSelected: E,
             isPressed: f,
@@ -115,12 +115,12 @@ function E(e, t, n) {
             validationBehavior: 'aria'
         }),
         p = (0, r.useRef)(a.PS),
-        m = () => {
+        I = () => {
             t.setInvalid(e.value, h.isInvalid ? h : p.current);
         };
-    (0, r.useEffect)(m);
-    let I = t.realtimeValidation.isInvalid ? t.realtimeValidation : h,
-        T = 'native' === f ? t.displayValidation : I,
+    (0, r.useEffect)(I);
+    let m = t.realtimeValidation.isInvalid ? t.realtimeValidation : h,
+        T = 'native' === f ? t.displayValidation : m,
         g = c(
             {
                 ...e,
@@ -130,12 +130,12 @@ function E(e, t, n) {
                 isRequired: null !== (s = e.isRequired) && void 0 !== s ? s : t.isRequired,
                 validationBehavior: f,
                 [a.tL]: {
-                    realtimeValidation: I,
+                    realtimeValidation: m,
                     displayValidation: T,
                     resetValidation: t.resetValidation,
                     commitValidation: t.commitValidation,
                     updateValidation(e) {
-                        (p.current = e), m();
+                        (p.current = e), I();
                     }
                 }
             },

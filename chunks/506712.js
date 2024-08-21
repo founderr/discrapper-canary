@@ -21,11 +21,11 @@ function d(e, t, n, r, i) {
         f = r.filter((e) => e.channel_id in E),
         h = null !== (a = n.filter((t) => t.guild_id === e.id)[0]) && void 0 !== a ? a : {},
         p = l.Z.getMemberCount(e.id),
-        m = _('year', r, f, (e) => {
+        I = _('year', r, f, (e) => {
             var t;
             return Number(null !== (t = e.num_year_opens) && void 0 !== t ? t : 0);
         }),
-        I = _('one month', r, f, (e) => {
+        m = _('one month', r, f, (e) => {
             var t;
             return Number(null !== (t = e.num_month_opens) && void 0 !== t ? t : 0);
         }),
@@ -34,13 +34,13 @@ function d(e, t, n, r, i) {
             return Number(null !== (t = e.num_three_month_opens) && void 0 !== t ? t : 0);
         }),
         g = [
-            I,
+            m,
             T,
             _('six month', r, f, (e) => {
                 var t;
                 return Number(null !== (t = e.num_six_month_opens) && void 0 !== t ? t : 0);
             }),
-            m
+            I
         ],
         S = 0,
         A = 0;
@@ -59,7 +59,7 @@ function d(e, t, n, r, i) {
             .concat(g.map((e) => e.biggestChannelFormatted).join(' / '), '\n- Sent Msgs: ')
             .concat(A, '\n'),
         v = T.guildOpens >= 0.02 * T.totalOpensAcrossAllServers,
-        O = (null !== (d = m.guildOpens) && void 0 !== d ? d : 0) > 0;
+        O = (null !== (d = I.guildOpens) && void 0 !== d ? d : 0) > 0;
     if (h.messages === c.XR.High) {
         if (!i) return [c.AR.UseGreyDot, v, 'UseGreyDot' + N];
         if (!v && O) return [c.AR.UseGreyDot, v, 'UseGreyDot' + N];

@@ -27,10 +27,10 @@ function p(e, t) {
         !0
     );
 }
-function m(e) {
+function I(e) {
     return f[e];
 }
-function I(e) {
+function m(e) {
     var t;
     return null === (t = f[e]) || void 0 === t ? void 0 : t.message;
 }
@@ -80,7 +80,7 @@ class g extends (s = o.ZP.Store) {
                 let n = (function (e) {
                         return f[e];
                     })(e),
-                    r = I(e);
+                    r = m(e);
                 null != n &&
                     null != r &&
                     (f[e] = {
@@ -91,7 +91,7 @@ class g extends (s = o.ZP.Store) {
         },
         MESSAGE_DELETE: function (e) {
             return (function (e, t) {
-                let n = I(e);
+                let n = m(e);
                 return (null == n ? void 0 : n.id) === t && (delete f[e], !0);
             })(e.channelId, e.id);
         },

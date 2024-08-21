@@ -3,7 +3,7 @@ n.d(t, {
         return C;
     },
     GL: function () {
-        return m;
+        return I;
     },
     Jd: function () {
         return L;
@@ -54,7 +54,7 @@ n.d(t, {
         return N;
     },
     yh: function () {
-        return I;
+        return m;
     },
     zo: function () {
         return P;
@@ -103,7 +103,7 @@ let f = (e) => {
             seconds: a(n)
         });
     },
-    m = (e, t, n) => {
+    I = (e, t, n) => {
         let r = a()(n),
             i = a()(d.default.extractTimestamp(e.id)),
             s = r.diff(i, 's');
@@ -125,9 +125,9 @@ let f = (e) => {
         let o = Math.round(s / c.Z.Seconds.DAYS_30);
         return E.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_MONTHS_AGO.format({ count: o });
     },
-    I = function (e, t) {
+    m = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now();
-        return g(e) ? p(e, n) : m(e, t, n);
+        return g(e) ? p(e, n) : I(e, t, n);
     };
 function T(e, t) {
     return e.traits.find((e) => e.type === t);

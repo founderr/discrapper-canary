@@ -6,10 +6,10 @@ n.d(t, {
         return f;
     },
     Z4: function () {
-        return I;
+        return m;
     },
     Zp: function () {
-        return m;
+        return I;
     },
     f6: function () {
         return T;
@@ -61,11 +61,11 @@ function h(e) {
 function p(e) {
     return null != e && e.hasFeature(_.oNc.CLAN);
 }
-function m(e, t) {
+function I(e, t) {
     var n, r;
     return null != t && t.identityGuildId === (null == e ? void 0 : e.id) && (((null == e ? void 0 : null === (n = e.clan) || void 0 === n ? void 0 : n.tag) != null && (null == e ? void 0 : null === (r = e.clan) || void 0 === r ? void 0 : r.tag) !== t.tag) || null == t.identityEnabled);
 }
-function I(e, t) {
+function m(e, t) {
     return (null != e && null != t && null != t.identityGuildId && t.identityGuildId === e && !!t.identityEnabled) || !1;
 }
 let T = (e, t) => {

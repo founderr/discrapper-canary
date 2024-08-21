@@ -19,8 +19,8 @@ function E(e) {
         [E, f] = s.useState(0),
         h = s.useRef(-1),
         p = s.useRef(!0),
-        m = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        { scaleFactor: I } = (0, u.useSpring)({
+        I = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        { scaleFactor: m } = (0, u.useSpring)({
             from: { scaleFactor: 1 },
             to: { scaleFactor: 1 === E ? 0.9 : 2 === E ? 1.2 : 1 },
             config: {
@@ -34,11 +34,11 @@ function E(e) {
         },
         []
     ),
-    m)
+    I)
         ? (0, a.jsx)(a.Fragment, { children: t })
         : (0, a.jsx)(o.animated.div, {
               className: _.confettiTriggerWrapper,
-              style: { transform: I.to((e) => 'scale('.concat(e, ')')) },
+              style: { transform: m.to((e) => 'scale('.concat(e, ')')) },
               children: (0, a.jsx)(u.Clickable, {
                   className: _.confettiTrigger,
                   onMouseDown: () => {

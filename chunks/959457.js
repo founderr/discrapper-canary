@@ -12,8 +12,8 @@ var a,
     f = n(46973),
     h = n(570140),
     p = n(594190),
-    m = n(444852),
-    I = n(569545),
+    I = n(444852),
+    m = n(569545),
     T = n(687516),
     g = n(139656),
     S = n(358085),
@@ -195,7 +195,7 @@ class F extends (a = E.ZP.Store) {
                   RTC_CONNECTION_SECURE_FRAMES_UPDATE: B,
                   STREAM_START: function (e) {
                       let { streamType: t, guildId: n, channelId: r, appContext: i, pid: a, sourceId: s } = e,
-                          o = (0, I.V9)({
+                          o = (0, m.V9)({
                               streamType: t,
                               guildId: n,
                               channelId: r,
@@ -238,11 +238,11 @@ class F extends (a = E.ZP.Store) {
                       if (null == o && null != n) {
                           var l, u, d;
                           null == M[t] && (b[t] = null);
-                          let e = (0, I.my)(t);
+                          let e = (0, m.my)(t);
                           null == b[t] && null == P[t] && (b[t] = (0, T.L2)(e, R.Z));
                           let i = v.Z.getChannel(e.channelId),
                               _ = null != i && i.isBroadcastChannel(),
-                              E = new m.A({
+                              E = new I.A({
                                   streamRegion: a,
                                   streamApplication: b[t],
                                   streamSourceType: (function (e) {
@@ -264,7 +264,7 @@ class F extends (a = E.ZP.Store) {
                               (u = n),
                               (d = E),
                               c()(null != r, 'Creating RTCConnection without session.'),
-                              (o = new m.Z({
+                              (o = new I.Z({
                                   sessionId: r,
                                   streamKey: l,
                                   serverId: u,

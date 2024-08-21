@@ -13,8 +13,8 @@ var r,
     f = n(441390),
     h = n(117901),
     p = n(175440),
-    m = n(700312).codeAt,
-    I = n(233591),
+    I = n(700312).codeAt,
+    m = n(233591),
     T = n(714050),
     g = n(865312),
     S = n(202934),
@@ -184,7 +184,7 @@ var r,
         '|': 1
     }),
     ef = function (e, t) {
-        var n = m(e, 0);
+        var n = I(e, 0);
         return n > 32 && n < 127 && !E(t, e) ? e : encodeURIComponent(e);
     },
     eh = {
@@ -199,11 +199,11 @@ var r,
         var n;
         return 2 === e.length && U(z, P(e, 0)) && (':' === (n = P(e, 1)) || (!t && '|' === n));
     },
-    em = function (e) {
+    eI = function (e) {
         var t;
         return e.length > 1 && ep(H(e, 0, 2)) && (2 === e.length || '/' === (t = P(e, 2)) || '\\' === t || '?' === t || '#' === t);
     },
-    eI = {},
+    em = {},
     eT = {},
     eg = {},
     eS = {},
@@ -240,7 +240,7 @@ var r,
 eB.prototype = {
     type: 'URL',
     parse: function (e, t, n) {
-        var i = t || eI,
+        var i = t || em,
             a = 0,
             s = '',
             o = !1,
@@ -248,7 +248,7 @@ eB.prototype = {
             u = !1;
         for (e = T(e), !t && ((this.scheme = ''), (this.username = ''), (this.password = ''), (this.host = null), (this.port = null), (this.path = []), (this.query = null), (this.fragment = null), (this.cannotBeABaseURL = !1), (e = B(e, er, '')), (e = B(e, ei, '$1'))), c = h((e = B(e, ea, ''))); a <= c.length; ) {
             switch (((d = c[a]), i)) {
-                case eI:
+                case em:
                     if (d && U(z, d)) (s += Z(d)), (i = eT);
                     else {
                         if (t) return j;
@@ -324,7 +324,7 @@ eB.prototype = {
                 case eC:
                     if ('@' === d) {
                         o && (s = '%40' + s), (o = !0), (_ = h(s));
-                        for (var c, d, _, f, m, I, g = 0; g < _.length; g++) {
+                        for (var c, d, _, f, I, m, g = 0; g < _.length; g++) {
                             var S = _[g];
                             if (':' === S && !u) {
                                 u = !0;
@@ -387,7 +387,7 @@ eB.prototype = {
                                 (this.host = n.host), (this.path = p(n.path)), (this.query = n.query), (this.fragment = ''), (i = ek);
                                 break;
                             default:
-                                !em(w(p(c, a), '')) && ((this.host = n.host), (this.path = p(n.path)), this.shortenPath()), (i = ew);
+                                !eI(w(p(c, a), '')) && ((this.host = n.host), (this.path = p(n.path)), this.shortenPath()), (i = ew);
                                 continue;
                         }
                     else {
@@ -400,7 +400,7 @@ eB.prototype = {
                         i = eP;
                         break;
                     }
-                    n && 'file' === n.scheme && !em(w(p(c, a), '')) && (ep(n.path[0], !0) ? k(this.path, n.path[0]) : (this.host = n.host)), (i = ew);
+                    n && 'file' === n.scheme && !eI(w(p(c, a), '')) && (ep(n.path[0], !0) ? k(this.path, n.path[0]) : (this.host = n.host)), (i = ew);
                     continue;
                 case eP:
                     if (d === r || '/' === d || '\\' === d || '?' === d || '#' === d) {
@@ -428,9 +428,9 @@ eB.prototype = {
                     break;
                 case ew:
                     if (d === r || '/' === d || ('\\' === d && this.isSpecial()) || (!t && ('?' === d || '#' === d))) {
-                        if ('..' === (m = Z((m = s))) || '%2e.' === m || '.%2e' === m || '%2e%2e' === m) this.shortenPath(), '/' !== d && !('\\' === d && this.isSpecial()) && k(this.path, '');
+                        if ('..' === (I = Z((I = s))) || '%2e.' === I || '.%2e' === I || '%2e%2e' === I) this.shortenPath(), '/' !== d && !('\\' === d && this.isSpecial()) && k(this.path, '');
                         else {
-                            if ('.' === (I = s) || '%2e' === Z(I)) '/' !== d && !('\\' === d && this.isSpecial()) && k(this.path, '');
+                            if ('.' === (m = s) || '%2e' === Z(m)) '/' !== d && !('\\' === d && this.isSpecial()) && k(this.path, '');
                             else 'file' === this.scheme && !this.path.length && ep(s) && (this.host && (this.host = ''), (s = P(s, 0) + ':')), k(this.path, s);
                         }
                         if (((s = ''), 'file' === this.scheme && (d === r || '?' === d || '#' === d))) for (; this.path.length > 1 && '' === this.path[0]; ) F(this.path);
@@ -455,7 +455,7 @@ eB.prototype = {
             if (']' !== P(e, e.length - 1) || !(t = eo(H(e, 1, -1)))) return W;
             this.host = t;
         } else if (this.isSpecial()) {
-            if (U(et, (e = I(e))) || null === (t = es(e))) return W;
+            if (U(et, (e = m(e))) || null === (t = es(e))) return W;
             this.host = t;
         } else {
             if (U(en, e)) return W;
@@ -509,7 +509,7 @@ eB.prototype = {
         return this.scheme + ':';
     },
     setProtocol: function (e) {
-        this.parse(T(e) + ':', eI);
+        this.parse(T(e) + ':', em);
     },
     getUsername: function () {
         return this.username;

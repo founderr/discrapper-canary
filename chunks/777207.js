@@ -15,14 +15,14 @@ var r = n(735250),
 let _ = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
     E = i.forwardRef(function (e, t) {
         let n,
-            { variant: i, tag: a = 'div', selectable: o = !1, className: l, lineClamp: E, color: f, tabularNumbers: h = !1, scaleFontToUserSetting: p = !1, ...m } = e,
-            I = '',
+            { variant: i, tag: a = 'div', selectable: o = !1, className: l, lineClamp: E, color: f, tabularNumbers: h = !1, scaleFontToUserSetting: p = !1, ...I } = e,
+            m = '',
             T = {};
         if (
             (null != E &&
                 (1 === E
-                    ? (I = c.lineClamp1)
-                    : ((I = c.lineClamp2Plus),
+                    ? (m = c.lineClamp1)
+                    : ((m = c.lineClamp2Plus),
                       (T = {
                           lineClamp: E,
                           WebkitLineClamp: E
@@ -46,7 +46,7 @@ let _ = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
         let S = {
             color: n,
             ...T,
-            ...m.style
+            ...I.style
         };
         return (0, r.jsx)(a, {
             ref: t,
@@ -57,11 +57,11 @@ let _ = Object.fromEntries(Object.keys(u.Z.colors).map((e) => [l()(e), e])),
                     [c.tabularNumbers]: h,
                     [d.fontScaling]: p
                 },
-                I,
+                m,
                 d[i],
                 l
             ),
-            ...m,
+            ...I,
             style: Object.values(S).filter(Boolean).length > 0 ? S : void 0,
             'data-text-variant': i
         });

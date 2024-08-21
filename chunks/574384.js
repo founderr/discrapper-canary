@@ -37,7 +37,7 @@ function d(e) {
         null == n)
     )
         return null;
-    let m =
+    let I =
         null == f || f.guildId !== n
             ? []
             : (null !== (t = null == f ? void 0 : f.channels) && void 0 !== t ? t : []).map((e) => ({
@@ -64,7 +64,7 @@ function d(e) {
                 maxVisibleItems: 5,
                 onChange: _,
                 placeholder: u.Z.Messages.SCOPE_WEBHOOK_INCOMING_CHANNEL_PLACEHOLDER,
-                options: m,
+                options: I,
                 value: d,
                 renderOptionLabel: (e) =>
                     (0, r.jsx)(s.x, {

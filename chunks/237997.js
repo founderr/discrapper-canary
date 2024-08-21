@@ -13,8 +13,8 @@ var r,
     f = n(355863),
     h = n(914010),
     p = n(358085),
-    m = n(998502),
-    I = n(145597),
+    I = n(998502),
+    m = n(145597),
     T = n(451478),
     g = n(981631),
     S = n(987650);
@@ -63,16 +63,16 @@ let w = { ...N },
     G = new Set([...x.values(), 'ACTIVITY_INVITE_MODAL_CLOSE', 'CALL_DELETE', 'CHANNEL_COLLAPSE', 'CHANNEL_SELECT', 'GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', 'OVERLAY_CALL_PRIVATE_CHANNEL', 'OVERLAY_JOIN_GAME', 'OVERLAY_NOTIFICATION_EVENT', 'OVERLAY_SELECT_CALL', 'OVERLAY_SET_NOT_IDLE', 'OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST', 'OVERLAY_WIDGET_CHANGED', 'SOUNDBOARD_SET_OVERLAY_ENABLED', 'STREAM_STOP']);
 function k() {
     if (!__OVERLAY__) return !1;
-    let e = v === (0, I.QF)(),
-        t = C.has((0, I.QF)()) || M.size > 0;
+    let e = v === (0, m.QF)(),
+        t = C.has((0, m.QF)()) || M.size > 0;
     e && t ? (0, o.T_)(window, !0) : (0, o.T_)(window, !1);
 }
 function B() {
-    if (v !== (0, I.QF)()) return !1;
+    if (v !== (0, m.QF)()) return !1;
     M.clear();
 }
 function F(e) {
-    let t = (0, I.QF)();
+    let t = (0, m.QF)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
             case g.BmY.STORAGE_SYNC:
@@ -84,7 +84,7 @@ function F(e) {
                     e.payloads.forEach((e) =>
                         (function (e) {
                             var t, n, r, i, a, o;
-                            if ('OVERLAY_INITIALIZE' === e.type && ((null == (t = e).version && 1 === I.Tq) || t.version === I.Tq || (s.Z.dispatch({ type: 'OVERLAY_INCOMPATIBLE_APP' }), (0, l.zP)(), 0))) b = !0;
+                            if ('OVERLAY_INITIALIZE' === e.type && ((null == (t = e).version && 1 === m.Tq) || t.version === m.Tq || (s.Z.dispatch({ type: 'OVERLAY_INCOMPATIBLE_APP' }), (0, l.zP)(), 0))) b = !0;
                             if (b) {
                                 switch (e.type) {
                                     case 'CHANNEL_CREATE':
@@ -151,7 +151,7 @@ class V extends (r = i.ZP.PersistedStore) {
                 let e = d.default.getId();
                 w = null != e ? U(e) : { ...N };
             }),
-            __OVERLAY__ && (p.isPlatformEmbedded && m.ZP.requireModule('discord_overlay2'), C.delete((0, I.QF)())),
+            __OVERLAY__ && (p.isPlatformEmbedded && I.ZP.requireModule('discord_overlay2'), C.delete((0, m.QF)())),
             null != e)
         ) {
             O = e;
@@ -167,17 +167,17 @@ class V extends (r = i.ZP.PersistedStore) {
     }
     isInstanceUILocked() {
         if (!__OVERLAY__) throw Error('OverlayStore: App instance should never call .isInstanceUILocked()');
-        return !C.has((0, I.QF)());
+        return !C.has((0, m.QF)());
     }
     isInstanceFocused() {
         if (!__OVERLAY__) throw Error('OverlayStore: App instance should never call .isInstanceFocused()');
-        return v === (0, I.QF)();
+        return v === (0, m.QF)();
     }
     isFocused(e) {
         return v === e;
     }
     isPinned(e) {
-        let t = f.Z.getLayout(I.qU);
+        let t = f.Z.getLayout(m.qU);
         return (
             null != t &&
             null !=
@@ -270,8 +270,8 @@ A(V, 'displayName', 'OverlayStore'),
                         null != n &&
                         ((0, l.lW)({
                             type: g.BmY.DISPATCH,
-                            pid: (0, I.QF)(),
-                            token: (0, I.Ht)(),
+                            pid: (0, m.QF)(),
+                            token: (0, m.Ht)(),
                             payloads: [
                                 {
                                     type: 'CHANNEL_PRELOAD',
@@ -292,19 +292,19 @@ A(V, 'displayName', 'OverlayStore'),
                 return (
                     (0, l.lW)({
                         type: g.BmY.DISPATCH,
-                        pid: (0, I.QF)(),
-                        token: (0, I.Ht)(),
+                        pid: (0, m.QF)(),
+                        token: (0, m.Ht)(),
                         payloads: [e]
                     }),
                     !x.has(e.type)
                 );
             }),
-                (0, l.Ty)(F, (0, I.Ht)()),
+                (0, l.Ty)(F, (0, m.Ht)()),
                 (0, l.$j)(),
                 (0, l.lW)({
                     type: g.BmY.CONNECT,
-                    pid: (0, I.QF)(),
-                    token: (0, I.Ht)()
+                    pid: (0, m.QF)(),
+                    token: (0, m.Ht)()
                 });
         },
         OVERLAY_INITIALIZE: function (e) {
@@ -377,7 +377,7 @@ A(V, 'displayName', 'OverlayStore'),
         },
         OVERLAY_ACTIVATE_REGION: function (e) {
             let { region: t } = e;
-            if (v !== (0, I.QF)() || M.has(t)) return !1;
+            if (v !== (0, m.QF)() || M.has(t)) return !1;
             M.add(t);
         },
         OVERLAY_DEACTIVATE_ALL_REGIONS: B,
@@ -387,7 +387,7 @@ A(V, 'displayName', 'OverlayStore'),
         WINDOW_RESIZED: function () {
             if (__OVERLAY__) {
                 let e = T.Z.windowSize();
-                !(0, I.Te)(e) && (P = !1);
+                !(0, m.Te)(e) && (P = !1);
             }
         },
         OVERLAY_SET_ASSOCIATED_GAME: function (e) {

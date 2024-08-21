@@ -9,13 +9,13 @@ n.d(t, {
         return h;
     },
     mh: function () {
-        return I;
+        return m;
     },
     px: function () {
         return p;
     },
     wL: function () {
-        return m;
+        return I;
     }
 }),
     n(47120);
@@ -76,11 +76,11 @@ let p = (e) => {
         ref: a
     });
 };
-function m(e) {
+function I(e) {
     let t = (0, d.Z)(e, _.layerContainer);
     return l()(null != t, 'Unexpected missing parent container'), t;
 }
-let I = (e) => {
+let m = (e) => {
     let { layerContext: t, children: n } = e;
     return (0, r.jsx)(t.Consumer, {
         children: (e) =>
@@ -104,7 +104,7 @@ function T(e) {
                     ...e
                 }),
             Layer: (e) =>
-                (0, r.jsx)(I, {
+                (0, r.jsx)(m, {
                     layerContext: t,
                     ...e
                 }),

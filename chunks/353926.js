@@ -33,8 +33,8 @@ function p(e, t, n) {
         e
     );
 }
-let m = 'scientist:triggered',
-    I = 'exerimentOverrides',
+let I = 'scientist:triggered',
+    m = 'exerimentOverrides',
     T = 'userExperimentOverrides',
     g = 'guildExperimentOverrides',
     S = new u.Z('ExperimentStore'),
@@ -243,10 +243,10 @@ function Q() {
 }
 function X(e) {
     let { isSwitchingAccount: t } = e;
-    o.K.remove(m), !t && (o.K.remove(I), o.K.remove(T), o.K.remove(g), (L = {}), (b = {})), (C = {}), (O = []), (N = {}), (A = !1);
+    o.K.remove(I), !t && (o.K.remove(m), o.K.remove(T), o.K.remove(g), (L = {}), (b = {})), (C = {}), (O = []), (N = {}), (A = !1);
 }
 function $() {
-    (A = !1), (N = {}), o.K.remove(m);
+    (A = !1), (N = {}), o.K.remove(I);
 }
 function J() {
     try {
@@ -270,7 +270,7 @@ function J() {
 }
 function ee(e) {
     try {
-        o.K.set(m, {
+        o.K.set(I, {
             v: 1,
             e: e
         });
@@ -335,7 +335,7 @@ function er(e) {
 class ei extends d.Z {
     initialize() {
         (N = (function () {
-            let e = o.K.get(m);
+            let e = o.K.get(I);
             if (null == e || 1 !== e.v) return {};
             let t = e.e,
                 n = Date.now(),
@@ -345,7 +345,7 @@ class ei extends d.Z {
         })()),
             !(function () {
                 var e, t, n;
-                let r = [null !== (e = o.K.get(I)) && void 0 !== e ? e : {}, null !== (t = o.K.get(T)) && void 0 !== t ? t : {}, null !== (n = o.K.get(g)) && void 0 !== n ? n : {}];
+                let r = [null !== (e = o.K.get(m)) && void 0 !== e ? e : {}, null !== (t = o.K.get(T)) && void 0 !== t ? t : {}, null !== (n = o.K.get(g)) && void 0 !== n ? n : {}];
                 (L = {}), (b = {});
                 let a = !i().isEmpty(r[0]);
                 for (let e of r)

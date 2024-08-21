@@ -19,8 +19,8 @@ var r = n(735250),
     f = n(751688),
     h = n(199902),
     p = n(594174),
-    m = n(823379),
-    I = n(5192),
+    I = n(823379),
+    m = n(5192),
     T = n(354459),
     g = n(981631),
     S = n(689938),
@@ -59,7 +59,7 @@ function v(e) {
                                 textClassName: A.memberListItemText,
                                 user: e,
                                 disablePopout: n,
-                                nick: I.ZP.getNickname(i, o, e),
+                                nick: m.ZP.getNickname(i, o, e),
                                 onContextMenu: (t) => (n ? null : l(t, e))
                             },
                             e.id
@@ -80,7 +80,7 @@ function O(e) {
                           'div',
                           {
                               className: A.viewersTooltipItem,
-                              children: I.ZP.getName(n, i, e)
+                              children: m.ZP.getName(n, i, e)
                           },
                           e.id
                       )
@@ -107,7 +107,7 @@ function O(e) {
 }
 let R = [];
 function C(e) {
-    let { channelId: t, guildId: a, participant: o, className: f, compact: I = !1, disableInteraction: S = !1, maxVisibleUsers: N = 3 } = e,
+    let { channelId: t, guildId: a, participant: o, className: f, compact: m = !1, disableInteraction: S = !1, maxVisibleUsers: N = 3 } = e,
         [C, y] = i.useState(!1),
         D = i.useRef(new c.sW(150, () => y(!1))),
         L = (0, u.Wu)(
@@ -115,13 +115,13 @@ function C(e) {
             () => {
                 if (o.type === T.fO.STREAM) {
                     let e = h.Z.getViewerIds(o.id);
-                    return e.length > 0 ? e.map((e) => p.default.getUser(e)).filter(m.lm) : R;
+                    return e.length > 0 ? e.map((e) => p.default.getUser(e)).filter(I.lm) : R;
                 }
                 return o.type === T.fO.ACTIVITY
                     ? o.participants.length > 0
                         ? Array.from(o.participants)
                               .map((e) => p.default.getUser(e.userId))
-                              .filter(m.lm)
+                              .filter(I.lm)
                         : R
                     : R;
             },
@@ -152,7 +152,7 @@ function C(e) {
             [M, b]
         );
     if (0 === L.length) return null;
-    if (I)
+    if (m)
         return (0, r.jsx)(O, {
             maxVisibleUsers: N,
             users: L,

@@ -15,7 +15,7 @@ n.d(t, {
         return v;
     },
     NE: function () {
-        return I;
+        return m;
     },
     RG: function () {
         return b;
@@ -39,7 +39,7 @@ n.d(t, {
         return D;
     },
     tM: function () {
-        return m;
+        return I;
     },
     tc: function () {
         return y;
@@ -62,7 +62,7 @@ var r = n(392711),
     f = n(709054),
     h = n(601070),
     p = n(981631);
-let m = (0, o.Z)({
+let I = (0, o.Z)({
     id: '2022-07_voice_in_threads',
     label: 'Voice in Threads',
     kind: 'guild',
@@ -75,7 +75,7 @@ let m = (0, o.Z)({
         }
     ]
 });
-function I(e, t) {
+function m(e, t) {
     return A(
         (0, s.e7)(
             [E.Z],
@@ -98,7 +98,7 @@ function g(e) {
     return e.type === p.d4z.GUILD_TEXT && A(t, e);
 }
 function S(e) {
-    let t = I(e),
+    let t = m(e),
         n = g(e);
     return t || n;
 }
@@ -177,7 +177,7 @@ function w(e) {
     let t = (0, l.Z)(),
         n = (0, s.e7)([E.Z], () => E.Z.can(p.Plq.CONNECT, e)),
         r = L(e),
-        i = m.useExperiment(
+        i = I.useExperiment(
             {
                 guildId: e.guild_id,
                 location: 'e791ea_1'

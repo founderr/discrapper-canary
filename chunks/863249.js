@@ -12,8 +12,8 @@ var r = n(544891),
     f = n(594174),
     h = n(626135),
     p = n(981631),
-    m = n(976757),
-    I = n(689938);
+    I = n(976757),
+    m = n(689938);
 let T = async (e, t) => {
         let n = null != t ? t : E.Z.getInviteKeyForGuildId(e),
             a = f.default.getCurrentUser(),
@@ -97,7 +97,7 @@ let T = async (e, t) => {
             let { body: n } = await r.tn.put({
                 url: p.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e),
                 body: {
-                    ...(0, l.jK)({ outcome: m.qz.UNKNOWN }),
+                    ...(0, l.jK)({ outcome: I.qz.UNKNOWN }),
                     version: t.version,
                     form_fields: t.formFields
                 }
@@ -118,25 +118,25 @@ let T = async (e, t) => {
                     throw (
                         ((0, s.Zy)(),
                         a.Z.show({
-                            title: I.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_HEADER,
-                            body: I.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY,
-                            confirmText: I.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_BUTTON
+                            title: m.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_HEADER,
+                            body: m.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY,
+                            confirmText: m.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_BUTTON
                         }),
                         {
                             ...t,
-                            message: I.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY
+                            message: m.Z.Messages.CLAN_APPLICATION_RATE_LIMITED_BODY
                         })
                     );
                 case 403:
                     throw {
                         ...t,
-                        message: I.Z.Messages.CLAN_APPLICATION_MISSING_PERMISSION
+                        message: m.Z.Messages.CLAN_APPLICATION_MISSING_PERMISSION
                     };
                 default:
                     var n, d;
                     throw {
                         ...t,
-                        message: null !== (d = ((n = new o.Hx(t)), n.getAnyErrorMessage())) && void 0 !== d ? d : I.Z.Messages.ERROR_GENERIC_TITLE
+                        message: null !== (d = ((n = new o.Hx(t)), n.getAnyErrorMessage())) && void 0 !== d ? d : m.Z.Messages.ERROR_GENERIC_TITLE
                     };
             }
         }

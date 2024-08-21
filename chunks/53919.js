@@ -12,8 +12,8 @@ var r = n(762378),
     f = '[object DataView]',
     h = u(r),
     p = u(i),
-    m = u(a),
-    I = u(s),
+    I = u(a),
+    m = u(s),
     T = u(o),
     g = l;
 ((r && g(new r(new ArrayBuffer(1))) != f) || (i && g(new i()) != c) || (a && g(a.resolve()) != d) || (s && g(new s()) != _) || (o && g(new o()) != E)) &&
@@ -27,9 +27,9 @@ var r = n(762378),
                     return f;
                 case p:
                     return c;
-                case m:
-                    return d;
                 case I:
+                    return d;
+                case m:
                     return _;
                 case T:
                     return E;

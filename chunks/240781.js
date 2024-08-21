@@ -14,8 +14,8 @@ var i = n(120356),
     f = n(74538),
     h = n(204418),
     p = n(689938),
-    m = n(828136);
-let I = [
+    I = n(828136);
+let m = [
         {
             avatarSize: l.AvatarSizes.SIZE_40,
             showStatus: !1
@@ -39,7 +39,7 @@ let I = [
             i = (0, u.qS)(t),
             a = null != t.expiresAt ? (0, E.TD)(Date.now(), t.expiresAt) : null;
         return (0, r.jsxs)('div', {
-            className: m.purchaseInfo,
+            className: I.purchaseInfo,
             children: [
                 (0, r.jsx)(l.Text, {
                     variant: 'text-sm/semibold',
@@ -102,10 +102,10 @@ t.Z = (e) => {
         O = !A && N;
     return null != g && (null == S || O)
         ? (0, r.jsxs)('div', {
-              className: a()(m.modalPreview, m.shopPreviewContainer, d),
+              className: a()(I.modalPreview, I.shopPreviewContainer, d),
               children: [
                   (0, r.jsx)('div', {
-                      className: m.shopPreviewBanner,
+                      className: I.shopPreviewBanner,
                       children: (0, r.jsx)(h.Z, {
                           user: t,
                           guildId: n,
@@ -113,7 +113,7 @@ t.Z = (e) => {
                       })
                   }),
                   (0, r.jsxs)('div', {
-                      className: m.shopPreviewTextContainer,
+                      className: I.shopPreviewTextContainer,
                       children: [
                           (0, r.jsx)(l.Text, {
                               variant: 'text-sm/semibold',
@@ -133,13 +133,13 @@ t.Z = (e) => {
               ]
           })
         : (0, r.jsxs)('div', {
-              className: a()(m.modalPreview, d),
+              className: a()(I.modalPreview, d),
               children: [
                   (0, r.jsxs)('div', {
-                      className: m.previewSections,
+                      className: I.previewSections,
                       children: [
                           (0, r.jsx)('div', {
-                              className: m.decorationPreview,
+                              className: I.decorationPreview,
                               children: (0, r.jsx)(h.Z, {
                                   user: t,
                                   guildId: n,
@@ -147,13 +147,13 @@ t.Z = (e) => {
                               })
                           }),
                           (0, r.jsx)('div', {
-                              className: m.smallDecorationPreviewsContainer,
-                              children: I.map((e) => {
+                              className: I.smallDecorationPreviewsContainer,
+                              children: m.map((e) => {
                                   let { avatarSize: a, showStatus: s } = e;
                                   return (0, r.jsx)(
                                       'div',
                                       {
-                                          className: m.smallDecorationPreview,
+                                          className: I.smallDecorationPreview,
                                           children: (0, r.jsx)(h.Z, {
                                               user: t,
                                               guildId: n,

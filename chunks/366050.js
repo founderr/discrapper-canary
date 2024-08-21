@@ -24,7 +24,7 @@ let _ = 'PictureInPictureLocation',
     f = {},
     h = u.VD2.BOTTOM_RIGHT,
     p = c.l8;
-class m extends (a = s.ZP.PersistedStore) {
+class I extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
             let e = o.K.get(_);
@@ -65,9 +65,9 @@ class m extends (a = s.ZP.PersistedStore) {
         };
     }
 }
-d(m, 'displayName', 'PictureInPictureStore'),
-    d(m, 'persistKey', 'PictureInPictureStore'),
-    (t.Z = new m(l.Z, {
+d(I, 'displayName', 'PictureInPictureStore'),
+    d(I, 'persistKey', 'PictureInPictureStore'),
+    (t.Z = new I(l.Z, {
         PICTURE_IN_PICTURE_OPEN: function (e) {
             var t, n;
             let { id: a, component: s, props: o } = e;

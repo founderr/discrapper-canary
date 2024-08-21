@@ -20,8 +20,8 @@ var r = n(735250),
     f = n(745510),
     h = n(631771),
     p = n(594174),
-    m = n(208049),
-    I = n(763296),
+    I = n(208049),
+    m = n(763296),
     T = n(697426),
     g = n(242291),
     S = n(706667),
@@ -91,7 +91,7 @@ t.ZP = i.forwardRef(function (e, t) {
         er = i.useRef(0.01),
         ei = i.useRef(new u.Xp()),
         ea = '1' === D.soundId,
-        es = (0, l.e7)([I.Z], () => I.Z.isFavoriteSound(Y), [Y]),
+        es = (0, l.e7)([m.Z], () => m.Z.isFavoriteSound(Y), [Y]),
         eo = 'sound-'.concat(D.soundId),
         el = (0, o.JA)(eo),
         eu = null != W || null != K,
@@ -100,7 +100,7 @@ t.ZP = i.forwardRef(function (e, t) {
         e_ = ec && V,
         { enableInlineUpsell: eE } = h.Qs.useExperiment({ location: 'Soundboard Sound Button' }, { autoTrackExposure: e_ });
     function ef(e) {
-        e.stopPropagation(), e.currentTarget.blur(), es ? (0, m.hs)(Y) : (0, m.TB)(Y);
+        e.stopPropagation(), e.currentTarget.blur(), es ? (0, I.hs)(Y) : (0, I.TB)(Y);
     }
     function eh() {
         return (0, r.jsx)(R, {
@@ -128,7 +128,7 @@ t.ZP = i.forwardRef(function (e, t) {
             previewSound: X,
             disabled: ec && !P
         }),
-        em = (e) =>
+        eI = (e) =>
             x || ec
                 ? ec && V && eE
                     ? (0, r.jsx)(d.LockIcon, {
@@ -142,12 +142,12 @@ t.ZP = i.forwardRef(function (e, t) {
                       color: 'currentColor',
                       className: s()(O.primaryIcon, e)
                   }),
-        eI = () =>
+        em = () =>
             eE && ec && V && !H
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)('div', { className: O.buttonOverlayBackground }),
-                          em(O.primaryIconTopLevel),
+                          eI(O.primaryIconTopLevel),
                           (0, r.jsx)('div', {
                               className: O.buttonOverlay,
                               children: (0, r.jsxs)('div', {
@@ -163,7 +163,7 @@ t.ZP = i.forwardRef(function (e, t) {
                           (0, r.jsx)('div', { className: s()({ [O.buttonOverlayBackground]: !x }) }),
                           (0, r.jsxs)('div', {
                               className: O.buttonOverlayActions,
-                              children: [ed && ep, em(), ed && eh()]
+                              children: [ed && ep, eI(), ed && eh()]
                           })
                       ]
                   });
@@ -264,7 +264,7 @@ t.ZP = i.forwardRef(function (e, t) {
                                     });
                                 case T.Pb.PLAY:
                                 default:
-                                    return eI();
+                                    return em();
                             }
                         })()
                     ]

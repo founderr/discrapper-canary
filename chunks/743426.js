@@ -31,10 +31,10 @@ function p(e, t, n) {
         e
     );
 }
-function m(e) {
+function I(e) {
     return (null != e ? e : h.Qx) / h.Qx;
 }
-function I(e, t, n) {
+function m(e, t, n) {
     return t + ((n - t) * e) / 100;
 }
 class T extends s.Z {
@@ -172,10 +172,10 @@ class T extends s.Z {
         return Promise.resolve();
     }
     setInputVolume(e) {
-        (0, d.zS)().setInputVolume(m(e));
+        (0, d.zS)().setInputVolume(I(e));
     }
     setOutputVolume(e) {
-        (0, d.zS)().setOutputVolume(m(e));
+        (0, d.zS)().setOutputVolume(I(e));
     }
     getAudioInputDevices() {
         return (0, c.Hg)();
@@ -261,9 +261,9 @@ class T extends s.Z {
                     width: i <= 480 ? (i / 3) * 4 : (i / 9) * 16,
                     height: i
                 });
-        let [p, m] = null != a ? a.split(':') : ['', ''];
+        let [p, I] = null != a ? a.split(':') : ['', ''];
         n.setClipsSource({
-            id: m,
+            id: I,
             soundshareId: null != s ? s : 0
         });
     }

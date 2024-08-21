@@ -78,8 +78,8 @@ var c = n(558217),
     f = n(771845),
     h = n(594174),
     p = n(626135),
-    m = n(70956),
-    I = n(176354),
+    I = n(70956),
+    m = n(176354),
     T = n(111361);
 n(709054);
 var g = n(304852),
@@ -101,7 +101,7 @@ let y = function (e, t) {
                 autoTrackExposure: !0
             }),
             { canShowReactionsOnMessageHover: p } = d.Z.useExperiment({ location: 'useEmojiCategories' }, { autoTrackExposure: !0 }),
-            m = H(n),
+            I = H(n),
             { topEmojis: N, newlyAddedEmojis: O } = (0, S.Z)(n, e),
             { allEmojis: R } = (0, g.Z)({
                 topEmojis: N,
@@ -119,7 +119,7 @@ let y = function (e, t) {
                 s = f.ZP.getFlattenedGuildIds(),
                 u = [],
                 c = (r, i) =>
-                    I.ZP.getEmojiUnavailableReasons({
+                    m.ZP.getEmojiUnavailableReasons({
                         categoryEmojis: r,
                         channel: t,
                         guildId: n,
@@ -171,7 +171,7 @@ let y = function (e, t) {
                             emojisDisabled: n
                         });
                     } else if (r === A.UX.FAVORITES) {
-                        let { emojisDisabled: e, emojisUnfiltered: n } = c(m, !0);
+                        let { emojisDisabled: e, emojisUnfiltered: n } = c(I, !0);
                         if (null == n || 0 === n.length) return t;
                         t.push({
                             type: A.En.FAVORITES,
@@ -194,7 +194,7 @@ let y = function (e, t) {
                     return t;
                 }, [])
             );
-        }, [y, t, n, e, b, R, D, _, p, o, a, m, i]);
+        }, [y, t, n, e, b, R, D, _, p, o, a, I, i]);
     },
     D = (e) => {
         let t = (null == e ? void 0 : e.getGuildId()) != null;
@@ -328,7 +328,7 @@ let y = function (e, t) {
             location: n
         });
     },
-    m.Z.Millis.HALF_SECOND,
+    I.Z.Millis.HALF_SECOND,
     {
         leading: !1,
         trailing: !0

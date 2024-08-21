@@ -1,6 +1,6 @@
 n.d(t, {
     Xj: function () {
-        return I;
+        return m;
     },
     fq: function () {
         return T;
@@ -24,8 +24,8 @@ var r = n(470079),
     f = n(420212);
 let h = { [E.ABu.INSTAGRAM]: ['1036753656588017764'] },
     p = new Map([[E.ABu.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
-    m = 30 * d.Z.Millis.DAY;
-function I(e) {
+    I = 30 * d.Z.Millis.DAY;
+function m(e) {
     let { forUserProfile: t } = e,
         n = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         r = l.c.useExperiment({ location: 'f2f7ef_1' }, { autoTrackExposure: !1 }).allowPlayStationStaging,
@@ -37,7 +37,7 @@ function I(e) {
 }
 function T() {
     let e = (0, s.e7)([u.Z], () => u.Z.getAccounts()),
-        t = I({ forUserProfile: !1 }),
+        t = m({ forUserProfile: !1 }),
         n = r.useMemo(() => {
             let t = new Set();
             return e.forEach((e) => t.add(e.type)), t;
@@ -45,7 +45,7 @@ function T() {
     return a().sortBy(o.Z.filter(t), [
         (e) => {
             var t;
-            return !(p.has(e.type) && Date.now() < (null !== (t = p.get(e.type)) && void 0 !== t ? t : 0) + m);
+            return !(p.has(e.type) && Date.now() < (null !== (t = p.get(e.type)) && void 0 !== t ? t : 0) + I);
         },
         (e) => n.has(e.type),
         (e) => e.hasMetadata,

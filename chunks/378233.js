@@ -57,10 +57,10 @@ var r = n(606301),
     d = n(373228),
     _ = n(611480),
     E = n(981631);
-let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: m, CDN_HOST: I } = window.GLOBAL_ENV,
+let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: I, CDN_HOST: m } = window.GLOBAL_ENV,
     T = Object.values(d.og),
     g = decodeURIComponent(E.ANM.STICKER_ASSET('[\\d]+', '('.concat(T.join('|'), ')'))),
-    S = RegExp('('.concat(location.protocol).concat(m, '|').concat(location.protocol).concat(h, ')(').concat(g, ')'), 'ig'),
+    S = RegExp('('.concat(location.protocol).concat(I, '|').concat(location.protocol).concat(h, ')(').concat(g, ')'), 'ig'),
     A = RegExp(''.concat(location.protocol).concat(f, '(').concat(g, ')'), 'ig'),
     N = (e) => {
         if (null != e.cover_sticker_id) {
@@ -108,7 +108,7 @@ let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: 
             s = E.ANM.STICKER_ASSET(e.id, a),
             o = a === d.og.WEBP ? '&quality=lossless' : '';
         if ('development' !== p) {
-            if (e.format_type === d.u3.LOTTIE) return ''.concat(location.protocol).concat(m).concat(s);
+            if (e.format_type === d.u3.LOTTIE) return ''.concat(location.protocol).concat(I).concat(s);
             let r = e.format_type === d.u3.APNG && t && !(0, u.isAndroid)() ? '&passthrough=false' : '',
                 a = Math.min(2, (0, i.x_)());
             return ''
@@ -128,8 +128,8 @@ let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: 
         let a = l.$k ? 'webp' : 'png';
         return (
             (n =
-                null != I
-                    ? ''.concat(location.protocol, '//').concat(I, '/app-assets/').concat(_.Ks, '/store/').concat(r, '.').concat(a)
+                null != m
+                    ? ''.concat(location.protocol, '//').concat(m, '/app-assets/').concat(_.Ks, '/store/').concat(r, '.').concat(a)
                     : ''
                           .concat(location.protocol)
                           .concat(f)

@@ -1,6 +1,6 @@
 n.d(t, {
     Ao: function () {
-        return m;
+        return I;
     },
     Jv: function () {
         return f;
@@ -15,7 +15,7 @@ n.d(t, {
         return T;
     },
     YO: function () {
-        return I;
+        return m;
     }
 });
 var r = n(592125),
@@ -61,7 +61,7 @@ function p(e) {
     let a = e.match(_);
     return null != a && a.length > 1 ? { guildId: a[1] } : null;
 }
-function m(e) {
+function I(e) {
     if (null == e) return null;
     let t = e.match(E);
     return null != t && t.length > 1
@@ -72,7 +72,7 @@ function m(e) {
           }
         : null;
 }
-function I(e) {
+function m(e) {
     return !!e.isPrivate() || a.Z.can(o.Plq.VIEW_CHANNEL, e);
 }
 function T(e) {
@@ -80,5 +80,5 @@ function T(e) {
     if (null == i.Z.getGuild(t) && t !== o.ME) return !1;
     if (null == n) return !0;
     let a = r.Z.getChannel(n);
-    return null != a && I(a);
+    return null != a && m(a);
 }

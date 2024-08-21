@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return I;
     },
     b: function () {
         return p;
@@ -23,12 +23,12 @@ var r = n(470079),
 function p(e) {
     let t = r.useRef(e);
     r.useEffect(() => {
-        if (t.current.intention === f.Hz.REACTION) m(t.current);
+        if (t.current.intention === f.Hz.REACTION) I(t.current);
     }, []);
 }
-function m(e) {
+function I(e) {
     var t;
-    let { intention: n, containerWidth: r, rowSize: p, isBurstReaction: m, analyticsObject: I } = e,
+    let { intention: n, containerWidth: r, rowSize: p, isBurstReaction: I, analyticsObject: m } = e,
         T = l.Z.getChannel(u.Z.getChannelId()),
         g = null == T ? void 0 : T.getGuildId(),
         { canSplitFrecencyList: S } = s.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
@@ -66,7 +66,7 @@ function m(e) {
         num_animated_expressions_top_server: b.filter((e) => e.animated).length,
         num_expressions_newly_added: M.length,
         num_animated_expressions_newly_added: M.filter((e) => e.animated).length,
-        ...(n === f.Hz.REACTION && { is_burst: m }),
-        ...(null != I && { location_object: I })
+        ...(n === f.Hz.REACTION && { is_burst: I }),
+        ...(null != m && { location_object: m })
     });
 }

@@ -18,8 +18,8 @@ var r,
     f = n(981631),
     h = n(503349),
     p = n(689938),
-    m = n(365862);
-function I(e, t, n) {
+    I = n(365862);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,26 +44,26 @@ class T extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'onMouseEnter', (e, t) => {
+            m(this, 'onMouseEnter', (e, t) => {
                 let { preloadImage: n } = t,
                     { width: r, height: i, onMouseEnter: a } = this.props;
                 null == a || a(e, { preloadImage: n }), n((0, _.zp)(r, i));
             }),
-            I(this, 'modalContext', (0, o.modalContextFromAppContext)(this.props.appContext)),
-            I(this, 'onCloseImage', () => {
+            m(this, 'modalContext', (0, o.modalContextFromAppContext)(this.props.appContext)),
+            m(this, 'onCloseImage', () => {
                 (0, o.closeModal)(h.c, this.modalContext);
             }),
-            I(this, 'onZoom', (e, t) => {
+            m(this, 'onZoom', (e, t) => {
                 let { zoomThumbnailPlaceholder: n, trigger: r } = t;
                 e.preventDefault();
-                let { alt: a, src: l, original: u, width: _, height: E, animated: I, children: T, renderLinkComponent: g, renderForwardComponent: S, isWindowFocused: A, shouldHideMediaOptions: N = !1 } = this.props,
+                let { alt: a, src: l, original: u, width: _, height: E, animated: m, children: T, renderLinkComponent: g, renderForwardComponent: S, isWindowFocused: A, shouldHideMediaOptions: N = !1 } = this.props,
                     v = {
                         alt: a,
                         src: l,
                         original: null != u ? u : l,
                         width: _,
                         height: E,
-                        animated: I,
+                        animated: m,
                         children: T,
                         zoomThumbnailPlaceholder: n,
                         renderLinkComponent: g,
@@ -80,13 +80,13 @@ class T extends (r = a.PureComponent) {
                     (0, o.openModal)(
                         (e) =>
                             (0, i.jsx)(o.ModalRoot, {
-                                className: m.modal,
+                                className: I.modal,
                                 ...e,
                                 size: o.ModalSize.DYNAMIC,
                                 'aria-label': p.Z.Messages.IMAGE,
                                 children: (0, i.jsx)(c.y, {
                                     ...v,
-                                    className: m.image,
+                                    className: I.image,
                                     shouldAnimate: A,
                                     onClose: this.onCloseImage,
                                     shouldHideMediaOptions: N
@@ -107,7 +107,7 @@ function g(e) {
         appContext: t
     });
 }
-I(T, 'defaultProps', {
+m(T, 'defaultProps', {
     shouldLink: !0,
     autoPlay: !1,
     animated: !1

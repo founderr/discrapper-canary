@@ -15,9 +15,9 @@ e.exports = function (e, t, n, a, s, o) {
     o.set(e, t), o.set(t, e);
     for (var h = l; ++d < c; ) {
         var p = e[(_ = u[d])],
-            m = t[_];
-        if (a) var I = l ? a(m, p, _, t, e, o) : a(p, m, _, e, t, o);
-        if (!(void 0 === I ? p === m || s(p, m, n, a, o) : I)) {
+            I = t[_];
+        if (a) var m = l ? a(I, p, _, t, e, o) : a(p, I, _, e, t, o);
+        if (!(void 0 === m ? p === I || s(p, I, n, a, o) : m)) {
             f = !1;
             break;
         }

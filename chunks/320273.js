@@ -13,8 +13,8 @@ var r = n(147018),
     f = n(644659),
     h = n(603528),
     p = n(354848),
-    m = n(740362),
-    I = n(566885),
+    I = n(740362),
+    m = n(566885),
     T = n(974971),
     g = n(24033),
     S = n(622281),
@@ -137,7 +137,7 @@ ec.prototype = {
             }
         else
             for (var c in e)
-                m(e, c) &&
+                I(e, c) &&
                     q(this.entries, {
                         key: c,
                         value: A(e[c])
@@ -235,7 +235,7 @@ if (
                     e.updateURL();
             },
             forEach: function (e) {
-                for (var t, n = U(this).entries, r = I(e, arguments.length > 1 ? arguments[1] : void 0), i = 0; i < n.length; ) r((t = n[i++]).value, t.key, this);
+                for (var t, n = U(this).entries, r = m(e, arguments.length > 1 ? arguments[1] : void 0), i = 0; i < n.length; ) r((t = n[i++]).value, t.key, this);
             },
             keys: function () {
                 return new eu(this, 'keys');

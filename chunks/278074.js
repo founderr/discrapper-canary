@@ -54,7 +54,7 @@ function d(e) {
         optional: () => _(e),
         and: (t) => h(e, t),
         or: (t) => p(e, t),
-        select: (t) => (void 0 === t ? I(e) : I(t, e))
+        select: (t) => (void 0 === t ? m(e) : m(t, e))
     });
 }
 function _(e) {
@@ -128,10 +128,10 @@ function p(...e) {
         })
     });
 }
-function m(e) {
+function I(e) {
     return { [r]: () => ({ match: (t) => ({ matched: !!e(t) }) }) };
 }
-function I(...e) {
+function m(...e) {
     let t = 'string' == typeof e[0] ? e[0] : void 0,
         n = 2 === e.length ? e[1] : 'string' == typeof e[0] ? void 0 : e[0];
     return d({
@@ -161,7 +161,7 @@ function S(e) {
     return 'bigint' == typeof e;
 }
 let A = d(
-        m(function (e) {
+        I(function (e) {
             return !0;
         })
     ),
@@ -171,49 +171,49 @@ let A = d(
                 N(
                     h(
                         e,
-                        m((e) => g(e) && e.startsWith(t))
+                        I((e) => g(e) && e.startsWith(t))
                     )
                 ),
             endsWith: (t) =>
                 N(
                     h(
                         e,
-                        m((e) => g(e) && e.endsWith(t))
+                        I((e) => g(e) && e.endsWith(t))
                     )
                 ),
             minLength: (t) => {
                 let n;
-                return N(h(e, ((n = t), m((e) => g(e) && e.length >= n))));
+                return N(h(e, ((n = t), I((e) => g(e) && e.length >= n))));
             },
             maxLength: (t) => {
                 let n;
-                return N(h(e, ((n = t), m((e) => g(e) && e.length <= n))));
+                return N(h(e, ((n = t), I((e) => g(e) && e.length <= n))));
             },
             includes: (t) =>
                 N(
                     h(
                         e,
-                        m((e) => g(e) && e.includes(t))
+                        I((e) => g(e) && e.includes(t))
                     )
                 ),
             regex: (t) =>
                 N(
                     h(
                         e,
-                        m((e) => g(e) && !!e.match(t))
+                        I((e) => g(e) && !!e.match(t))
                     )
                 )
         }),
-    v = N(m(g)),
-    O = (e, t) => m((n) => T(n) && e <= n && t >= n),
-    R = (e) => m((t) => T(t) && t < e),
-    C = (e) => m((t) => T(t) && t > e),
-    y = (e) => m((t) => T(t) && t <= e),
-    D = (e) => m((t) => T(t) && t >= e),
-    L = () => m((e) => T(e) && Number.isInteger(e)),
-    b = () => m((e) => T(e) && Number.isFinite(e)),
-    M = () => m((e) => T(e) && e > 0),
-    P = () => m((e) => T(e) && e < 0),
+    v = N(I(g)),
+    O = (e, t) => I((n) => T(n) && e <= n && t >= n),
+    R = (e) => I((t) => T(t) && t < e),
+    C = (e) => I((t) => T(t) && t > e),
+    y = (e) => I((t) => T(t) && t <= e),
+    D = (e) => I((t) => T(t) && t >= e),
+    L = () => I((e) => T(e) && Number.isInteger(e)),
+    b = () => I((e) => T(e) && Number.isFinite(e)),
+    M = () => I((e) => T(e) && e > 0),
+    P = () => I((e) => T(e) && e < 0),
     U = (e) =>
         Object.assign(d(e), {
             between: (t, n) => U(h(e, O(t, n))),
@@ -226,14 +226,14 @@ let A = d(
             positive: () => U(h(e, M())),
             negative: () => U(h(e, P()))
         }),
-    w = U(m(T)),
-    x = (e, t) => m((n) => S(n) && e <= n && t >= n),
-    G = (e) => m((t) => S(t) && t < e),
-    k = (e) => m((t) => S(t) && t > e),
-    B = (e) => m((t) => S(t) && t <= e),
-    F = (e) => m((t) => S(t) && t >= e),
-    V = () => m((e) => S(e) && e > 0),
-    H = () => m((e) => S(e) && e < 0),
+    w = U(I(T)),
+    x = (e, t) => I((n) => S(n) && e <= n && t >= n),
+    G = (e) => I((t) => S(t) && t < e),
+    k = (e) => I((t) => S(t) && t > e),
+    B = (e) => I((t) => S(t) && t <= e),
+    F = (e) => I((t) => S(t) && t >= e),
+    V = () => I((e) => S(e) && e > 0),
+    H = () => I((e) => S(e) && e < 0),
     Z = (e) =>
         Object.assign(d(e), {
             between: (t, n) => Z(h(e, x(t, n))),
@@ -244,19 +244,19 @@ let A = d(
             positive: () => Z(h(e, V())),
             negative: () => Z(h(e, H()))
         }),
-    Y = Z(m(S)),
+    Y = Z(I(S)),
     j = d(
-        m(function (e) {
+        I(function (e) {
             return 'boolean' == typeof e;
         })
     ),
     W = d(
-        m(function (e) {
+        I(function (e) {
             return 'symbol' == typeof e;
         })
     ),
     K = d(
-        m(function (e) {
+        I(function (e) {
             return null == e;
         })
     );
@@ -275,7 +275,7 @@ var z = {
                 }),
                 {
                     optional: () => e(_(t)),
-                    select: (n) => e(void 0 === n ? I(t) : I(n, t))
+                    select: (n) => e(void 0 === n ? m(t) : m(n, t))
                 }
             );
         })({
@@ -376,8 +376,8 @@ var z = {
             })
         });
     },
-    when: m,
-    select: I,
+    when: I,
+    select: m,
     any: A,
     _: A,
     string: v,
@@ -404,11 +404,11 @@ var z = {
     nullish: K,
     instanceOf: function (e) {
         var t;
-        return d(m(((t = e), (e) => e instanceof t)));
+        return d(I(((t = e), (e) => e instanceof t)));
     },
     shape: function (e) {
         return d(
-            m(
+            I(
                 (function (...e) {
                     if (1 === e.length) {
                         let [t] = e;

@@ -18,8 +18,8 @@ var r,
     f = n(823023),
     h = n(981631),
     p = n(217702),
-    m = n(689938),
-    I = n(235202),
+    I = n(689938),
+    m = n(235202),
     T = n(167969),
     g = n(557256);
 function S(e, t, n) {
@@ -79,11 +79,11 @@ class A extends (r = a.PureComponent) {
                 focusTarget: this._clickableRef,
                 children: (0, i.jsxs)('div', {
                     className: o()(
-                        I.imageWrapper,
+                        m.imageWrapper,
                         {
-                            [I.imageZoom]: D,
-                            [I.imageWrapperBackground]: r !== h.zo9.READY,
-                            [I.clickable]: null != P
+                            [m.imageZoom]: D,
+                            [m.imageWrapperBackground]: r !== h.zo9.READY,
+                            [m.clickable]: null != P
                         },
                         t
                     ),
@@ -111,7 +111,7 @@ class A extends (r = a.PureComponent) {
                                 tabIndex: -1,
                                 onClick: P,
                                 'aria-hidden': !0,
-                                className: I.originalLink,
+                                className: m.originalLink,
                                 href: L,
                                 ref: this._containerRef,
                                 'data-role': 'img',
@@ -119,10 +119,10 @@ class A extends (r = a.PureComponent) {
                             }),
                         null != P
                             ? (0, i.jsx)(u.Clickable, {
-                                  className: I.clickableWrapper,
+                                  className: m.clickableWrapper,
                                   tabIndex: null != U ? U : 0,
                                   onClick: P,
-                                  'aria-label': null != c ? c : m.Z.Messages.IMAGE,
+                                  'aria-label': null != c ? c : I.Z.Messages.IMAGE,
                                   'aria-describedby': d.r5,
                                   innerRef: this._clickableRef,
                                   focusProps: { enabled: !1 },
@@ -131,7 +131,7 @@ class A extends (r = a.PureComponent) {
                             : e,
                         null != F
                             ? (0, i.jsx)('div', {
-                                  className: I.imageAccessory,
+                                  className: m.imageAccessory,
                                   children: F
                               })
                             : null
@@ -148,7 +148,7 @@ function N(e) {
     let { size: t, mediaLayoutType: n, alt: r } = e,
         a = (0, c.ZP)();
     return (0, i.jsx)('div', {
-        className: I.imageErrorWrapper,
+        className: m.imageErrorWrapper,
         style: (function (e, t) {
             switch (t) {
                 case p.hV.MOSAIC:
@@ -170,8 +170,8 @@ function N(e) {
         })(t, n),
         children: (0, i.jsx)('img', {
             src: (0, l.ap)(a) ? g : T,
-            className: I.imageError,
-            alt: null != r ? r : m.Z.Messages.IMAGE
+            className: m.imageError,
+            alt: null != r ? r : I.Z.Messages.IMAGE
         })
     });
 }
@@ -182,7 +182,7 @@ S(A, 'defaultProps', {
         let { src: t, size: n, alt: r, className: a, mediaLayoutType: s } = e;
         return (0, i.jsx)('img', {
             className: null != a ? a : void 0,
-            alt: null != r ? r : m.Z.Messages.IMAGE,
+            alt: null != r ? r : I.Z.Messages.IMAGE,
             src: t,
             style: v(n, s)
         });

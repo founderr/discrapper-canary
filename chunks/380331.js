@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(607070),
     h = n(806966),
     p = n(254494),
-    m = n(593618),
-    I = n(451478),
+    I = n(593618),
+    m = n(451478),
     T = n(626135),
     g = n(624138),
     S = n(543241),
@@ -43,35 +43,35 @@ function H(e) {
         f = (0, u.JA)('expression-guild-'.concat(n)),
         h = l.type === O.En.GUILD ? null : l.id,
         p = t === n,
-        I = l.type === O.En.GUILD ? l.guild : null,
+        m = l.type === O.En.GUILD ? l.guild : null,
         g = (0, r.jsxs)(_.Clickable, {
             ...f,
-            'aria-label': (0, S.Nf)(l, I),
+            'aria-label': (0, S.Nf)(l, m),
             className: s()({
-                [D.categoryItemGuildCategory]: null != I,
-                [D.categoryItemDefaultCategory]: null == I,
-                [D.categoryItemDefaultCategorySelected]: null == I && p,
+                [D.categoryItemGuildCategory]: null != m,
+                [D.categoryItemDefaultCategory]: null == m,
+                [D.categoryItemDefaultCategorySelected]: null == m && p,
                 [D.categoryItemRecentEmoji]: l.type === O.En.RECENT
             }),
             onClick: () => {
-                null != I &&
+                null != m &&
                     T.default.track(R.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                         location: null == a ? void 0 : a.location,
                         tab: C.X1.EMOJI,
-                        guild_id: I.id
+                        guild_id: m.id
                     }),
                     c(n);
             },
             children: [
-                null != I
+                null != m
                     ? (0, r.jsx)(N.Z, {
-                          guild: I,
+                          guild: m,
                           isSelected: p,
                           shouldAnimate: !E && d,
                           isLocked: l.isNitroLocked
                       })
                     : null,
-                null == I && null != h
+                null == m && null != h
                     ? (0, r.jsx)(A.Z, {
                           categoryId: h,
                           className: D.categoryIcon,
@@ -84,11 +84,11 @@ function H(e) {
         }),
         v = o[n + 1],
         y = null != v && l.type === O.En.GUILD && v.type !== O.En.GUILD;
-    return null != I
+    return null != m
         ? (0, r.jsxs)(i.Fragment, {
               children: [
-                  (0, r.jsx)(m.Z, {
-                      guild: I,
+                  (0, r.jsx)(I.Z, {
+                      guild: m,
                       includeActivity: !1,
                       children: (0, r.jsx)('div', { children: g })
                   }),
@@ -100,14 +100,14 @@ function H(e) {
 t.Z = (e) => {
     let { className: t, emojiListRef: n, sectionDescriptors: a, intention: o, channel: u } = e,
         d = h.kJ.useStore((e) => e.activeCategoryIndex),
-        m = (0, v.Ni)({
+        I = (0, v.Ni)({
             sectionDescriptors: a,
             emojiListRef: n
         }),
         T = (0, E.O)(),
         g = (0, S.kI)(o, u),
         A = i.useRef(null),
-        N = (0, c.e7)([I.Z], () => I.Z.isFocused()),
+        N = (0, c.e7)([m.Z], () => m.Z.isFocused()),
         R = (0, c.e7)([f.Z], () => f.Z.useReducedMotion, []),
         C = i.useMemo(
             () =>
@@ -122,14 +122,14 @@ t.Z = (e) => {
                                 categories: g,
                                 category: n,
                                 categoryIndex: t,
-                                handleCategorySelect: m,
+                                handleCategorySelect: I,
                                 isWindowFocused: N,
                                 useReducedMotion: R
                             },
                             t
                         );
                 }),
-            [d, T, g, m, N, R]
+            [d, T, g, I, N, R]
         ),
         L = i.useMemo(() => [8, 8, 0, 8], []),
         U = i.useCallback(

@@ -19,33 +19,33 @@ var i = n(442837),
 function h(e) {
     let { user: t, guildId: n, viewProfileItem: h } = e,
         { trackUserProfileAction: p } = (0, d.KZ)(),
-        { analyticsLocations: m, newestAnalyticsLocation: I } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
+        { analyticsLocations: I, newestAnalyticsLocation: m } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
         T = (0, i.e7)([_.Z], () => _.Z.getUserProfile(t.id)),
         g = null == T ? void 0 : T.application,
         S = (0, u.Z)({
             user: t,
-            location: I,
+            location: m,
             color: 'danger',
             onBlock: () =>
                 p({
                     action: 'BLOCK',
-                    analyticsLocations: m
+                    analyticsLocations: I
                 }),
             onUnblock: () =>
                 p({
                     action: 'UNBLOCK',
-                    analyticsLocations: m
+                    analyticsLocations: I
                 })
         }),
         A = (0, c.Z)({
             user: t,
             guildId: n,
-            location: I,
+            location: m,
             color: 'danger',
             onAction: () =>
                 p({
                     action: 'REPORT',
-                    analyticsLocations: m
+                    analyticsLocations: I
                 })
         }),
         N = [
@@ -58,7 +58,7 @@ function h(e) {
                     onSuccess: () =>
                         p({
                             action: 'COPY_APP_ID',
-                            analyticsLocations: m
+                            analyticsLocations: I
                         })
                 })
             ]

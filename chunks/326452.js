@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return m;
+        return I;
     }
 }),
     n(47120);
@@ -72,7 +72,7 @@ let h = Object.freeze({
         });
     };
 p.Sizes = h;
-class m extends (r = a.PureComponent) {
+class I extends (r = a.PureComponent) {
     focus() {
         let { current: e } = this.inputRef;
         null == e || e.focus();
@@ -82,12 +82,12 @@ class m extends (r = a.PureComponent) {
         null == e || e.blur();
     }
     render() {
-        let { query: e, autoFocus: t, onClear: n, className: r, placeholder: a = _.Z.Messages.SEARCH, iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: d, isLoading: f, size: h, disabled: m, onChange: I, onBlur: T, onFocus: g, autoComplete: S, inputProps: A, hideSearchIcon: N, 'aria-label': v = _.Z.Messages.SEARCH, ...O } = this.props;
+        let { query: e, autoFocus: t, onClear: n, className: r, placeholder: a = _.Z.Messages.SEARCH, iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: d, isLoading: f, size: h, disabled: I, onChange: m, onBlur: T, onFocus: g, autoComplete: S, inputProps: A, hideSearchIcon: N, 'aria-label': v = _.Z.Messages.SEARCH, ...O } = this.props;
         return (0, i.jsx)(u.t, {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
             children: (0, i.jsx)('div', {
-                className: o()(r, E.container, h, { [E.disabled]: m }),
+                className: o()(r, E.container, h, { [E.disabled]: I }),
                 ref: this.containerRef,
                 ...O,
                 children: (0, i.jsxs)('div', {
@@ -104,7 +104,7 @@ class m extends (r = a.PureComponent) {
                             onKeyUp: c,
                             onKeyPress: d,
                             placeholder: a,
-                            disabled: m,
+                            disabled: I,
                             autoFocus: t,
                             autoComplete: S,
                             'aria-label': v,
@@ -133,8 +133,8 @@ class m extends (r = a.PureComponent) {
             });
     }
 }
-f(m, 'Sizes', h),
-    f(m, 'defaultProps', {
+f(I, 'Sizes', h),
+    f(I, 'defaultProps', {
         size: h.SMALL,
         isLoading: !1,
         disabled: !1

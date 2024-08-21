@@ -30,14 +30,14 @@ function f(e, t, n) {
 ((o = a || (a = {}))[(o.INVALID = 0)] = 'INVALID'), (o[(o.VALIDATING = 1)] = 'VALIDATING'), (o[(o.VALID = 2)] = 'VALID');
 let h = [],
     p = !1;
-function m(e) {
+function I(e) {
     (h = h.filter((t) => {
         let { id: n } = t;
         return n !== e;
     })),
         l.removeToken(e);
 }
-function I(e, t) {
+function m(e, t) {
     let n = h.slice(),
         r = n.find((t) => {
             let { id: n } = t;
@@ -125,7 +125,7 @@ f(T, 'displayName', 'MultiAccountStore'),
                 (h = n).length > E.$H &&
                     h.splice(E.$H).forEach((e) => {
                         let { id: t } = e;
-                        m(t);
+                        I(t);
                     });
         },
         LOGOUT: function (e) {
@@ -137,10 +137,10 @@ f(T, 'displayName', 'MultiAccountStore'),
                     })),
                 (r = null);
         },
-        MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => I(e.userId, 1),
-        MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => I(e.userId, 2),
-        MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => I(e.userId, 0),
-        MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => m(e.userId),
+        MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => m(e.userId, 1),
+        MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => m(e.userId, 2),
+        MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => m(e.userId, 0),
+        MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => I(e.userId),
         MULTI_ACCOUNT_MOVE_ACCOUNT: function (e) {
             let { from: t, to: n } = e;
             h = (0, d.aB)(h, t, n);

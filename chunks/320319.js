@@ -32,7 +32,7 @@ let P = {
         yMin: -150,
         yMax: -20
     },
-    v = a.memo((e) => {
+    L = a.memo((e) => {
         let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: p, cardType: f, confettiCanvas: S } = e,
             Z = null == e ? void 0 : e.onCtaClick,
             D = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
@@ -127,14 +127,14 @@ let P = {
                           children: [
                               (0, s.jsx)('div', {
                                   className: b.flipCardFront,
-                                  children: (0, s.jsx)(L, {
+                                  children: (0, s.jsx)(v, {
                                       ...e,
                                       className: b.topCover
                                   })
                               }),
                               (0, s.jsx)('div', {
                                   className: b.flipCardBack,
-                                  children: (0, s.jsx)(L, {
+                                  children: (0, s.jsx)(v, {
                                       ...e,
                                       className: b.topCover
                                   })
@@ -152,7 +152,7 @@ let P = {
                                 [b.reducedMotion]: D
                             }),
                             children: [
-                                (0, s.jsx)(L, {
+                                (0, s.jsx)(v, {
                                     ...e,
                                     ref: t === A.u.FREE_BOOST ? en : void 0
                                 }),
@@ -189,18 +189,18 @@ let P = {
                                 (0, s.jsx)('div', {
                                     className: b.flipCardHidden,
                                     'aria-hidden': !0,
-                                    children: (0, s.jsx)(L, { ...e })
+                                    children: (0, s.jsx)(v, { ...e })
                                 }),
                                 (0, s.jsx)('div', {
                                     className: b.flipCardFront,
-                                    children: (0, s.jsx)(L, {
+                                    children: (0, s.jsx)(v, {
                                         ...Y.upcomingDropUntimed,
                                         pillText: ''
                                     })
                                 }),
                                 (0, s.jsx)('div', {
                                     className: b.flipCardBack,
-                                    children: (0, s.jsx)(L, {
+                                    children: (0, s.jsx)(v, {
                                         ...e,
                                         description: ''
                                     })
@@ -215,25 +215,25 @@ let P = {
                             ]
                         })
                     })
-            : (0, s.jsx)(v, {
+            : (0, s.jsx)(L, {
                   ...Y.upcomingDropUntimed,
                   forceShadow: p
               });
     });
-v.displayName = 'PerkDiscoverabilityCard';
-let L = a.forwardRef((e, t) => {
+L.displayName = 'PerkDiscoverabilityCard';
+let v = a.forwardRef((e, t) => {
     var n;
     let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: u, onCtaClick: E, onMouseEnter: T, className: I, perkComponent: R, cardVariant: g, cardType: N, onClick: A, backgroundImage: h, pillText: M, perkImage: x } = e,
         O = N === m.R0.CARD_CAROUSEL_FIRST_ROW || N === m.R0.CARD_CAROUSEL_SECOND_ROW || N === m.R0.CARD_CAROUSEL_THIRD_ROW,
         P = 0 !== c.length || 0 !== d.length || (0 !== o.length && g === m.zW.REWARD),
-        v = (0, C.IB)(),
-        [L, Z] = a.useState(v);
+        L = (0, C.IB)(),
+        [v, Z] = a.useState(L);
     a.useEffect(() => {
-        v && Z(!0);
-    }, [v]);
+        L && Z(!0);
+    }, [L]);
     let D = (0, p._)(g);
     return (0, s.jsxs)(_.Clickable, {
-        className: i()(b.card, I, !0 === L ? (null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className) : void 0, {
+        className: i()(b.card, I, !0 === v ? (null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className) : void 0, {
             [b.clickable]: null != A,
             [b.hideOverflow]: O
         }),
@@ -279,4 +279,4 @@ let L = a.forwardRef((e, t) => {
         ]
     });
 });
-(L.displayName = 'PerkCardContent'), (t.Z = v);
+(v.displayName = 'PerkCardContent'), (t.Z = L);

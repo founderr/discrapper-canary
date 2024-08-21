@@ -23,8 +23,8 @@ var r = n(735250),
     f = n(204418),
     h = n(583434),
     p = n(530618),
-    m = n(70097),
-    I = n(454585),
+    I = n(70097),
+    m = n(454585),
     T = n(164946),
     g = n(166625),
     S = n(25990),
@@ -47,8 +47,8 @@ function P() {
 function U(e) {
     var t;
     let { transitionState: n, onClose: a, quest: l, location: d, reward: E, decoration: f, onUseNow: h } = e,
-        m = i.useRef(null),
-        [I, T] = i.useState(null),
+        I = i.useRef(null),
+        [m, T] = i.useState(null),
         g = i.useRef(new o.qA()),
         S = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         R = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
@@ -70,7 +70,7 @@ function U(e) {
                 environment: g.current
             }),
             (0, r.jsx)('div', {
-                ref: m,
+                ref: I,
                 children: (0, r.jsx)(c.ModalRoot, {
                     transitionState: n,
                     size: c.ModalSize.DYNAMIC,
@@ -100,8 +100,8 @@ function U(e) {
                 !L &&
                 'claimed' === M &&
                 (0, r.jsx)(p.Z, {
-                    confettiTarget: m.current,
-                    confettiCanvas: I,
+                    confettiTarget: I.current,
+                    confettiCanvas: m,
                     sprites: D.CA,
                     colors: D.Br
                 })
@@ -126,7 +126,7 @@ function w(e) {
             (0, r.jsxs)('div', {
                 className: b.headerContainer,
                 children: [
-                    (0, r.jsx)(m.Z, {
+                    (0, r.jsx)(I.Z, {
                         className: b.headerBackground,
                         autoPlay: !1,
                         loop: !1,
@@ -196,7 +196,7 @@ function w(e) {
                                     (0, r.jsx)(c.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'always-white',
-                                        children: I.Z.parse(h, !1, { allowLinks: !0 })
+                                        children: m.Z.parse(h, !1, { allowLinks: !0 })
                                     })
                                 ]
                             })

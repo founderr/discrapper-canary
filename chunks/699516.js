@@ -13,8 +13,8 @@ var r,
     f = n(594174),
     h = n(981631);
 let p = {},
-    m = {},
     I = {},
+    m = {},
     T = new Set(),
     g = 0,
     S = 0,
@@ -70,13 +70,13 @@ class R extends (r = u.ZP.Store) {
         return null != t ? t : h.OGo.NONE;
     }
     getNickname(e) {
-        return m[e];
-    }
-    getSince(e) {
         return I[e];
     }
+    getSince(e) {
+        return m[e];
+    }
     getSinces() {
-        return I;
+        return m;
     }
     getFriendIDs() {
         return E.default.keys(p).filter((e) => p[e] === h.OGo.FRIEND);
@@ -94,10 +94,10 @@ class R extends (r = u.ZP.Store) {
     (t.Z = new R(c.Z, {
         CONNECTION_OPEN: function (e) {
             (p = {}),
-                (m = {}),
                 (I = {}),
+                (m = {}),
                 e.relationships.forEach((e) => {
-                    (p[e.id] = e.type), null != e.nickname && (m[e.id] = e.nickname), null != e.since && (I[e.id] = e.since), (0, d.A)({ location: 'friend_request_spam_inbox' }) && e.is_spam_request && T.add(e.id);
+                    (p[e.id] = e.type), null != e.nickname && (I[e.id] = e.nickname), null != e.since && (m[e.id] = e.since), (0, d.A)({ location: 'friend_request_spam_inbox' }) && e.is_spam_request && T.add(e.id);
                 }),
                 O();
         },
@@ -111,13 +111,13 @@ class R extends (r = u.ZP.Store) {
                 [e.relationship.id]: e.relationship.type
             }),
                 null != e.relationship.nickname &&
-                    (m = {
-                        ...m,
+                    (I = {
+                        ...I,
                         [e.relationship.id]: e.relationship.nickname
                     }),
                 null != e.relationship.since &&
-                    (I = {
-                        ...I,
+                    (m = {
+                        ...m,
                         [e.relationship.id]: e.relationship.since
                     }),
                 e.relationship.isSpamRequest && T.add(e.relationship.id),
@@ -130,10 +130,10 @@ class R extends (r = u.ZP.Store) {
                     });
         },
         RELATIONSHIP_REMOVE: function (e) {
-            (p = { ...p }), delete p[e.relationship.id], null != m[e.relationship.id] && ((m = { ...m }), delete m[e.relationship.id]), null != I[e.relationship.id] && ((I = { ...I }), delete I[e.relationship.id]), O();
+            (p = { ...p }), delete p[e.relationship.id], null != I[e.relationship.id] && ((I = { ...I }), delete I[e.relationship.id]), null != m[e.relationship.id] && ((m = { ...m }), delete m[e.relationship.id]), O();
         },
         RELATIONSHIP_UPDATE: function (e) {
-            null == e.relationship.since ? delete I[e.relationship.id] : (I[e.relationship.id] = e.relationship.since), null == e.relationship.nickname ? delete m[e.relationship.id] : (m[e.relationship.id] = e.relationship.nickname);
+            null == e.relationship.since ? delete m[e.relationship.id] : (m[e.relationship.id] = e.relationship.since), null == e.relationship.nickname ? delete I[e.relationship.id] : (I[e.relationship.id] = e.relationship.nickname);
         },
         RELATIONSHIP_PENDING_INCOMING_REMOVED: function (e) {
             (p = { ...p }),

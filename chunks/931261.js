@@ -1,9 +1,9 @@
 n.d(t, {
     g: function () {
-        return m;
+        return I;
     },
     s: function () {
-        return I;
+        return m;
     }
 }),
     n(47120);
@@ -34,7 +34,7 @@ function p(e) {
         a = c.Z.getEnabled(n);
     return r && i && e.hasFeature(f.oNc.COMMUNITY) && !(e.hasFeature(f.oNc.GUILD_ONBOARDING) && !a);
 }
-function m(e) {
+function I(e) {
     let { homeSettingsEnabled: t } = d.ZP.useExperiment(
             {
                 guildId: e,
@@ -58,7 +58,7 @@ function m(e) {
         [e, t, n, r]
     );
 }
-function I(e) {
+function m(e) {
     let t = u.Z.getGuild(e),
         { homeSettingsEnabled: n } = d.ZP.getCurrentConfig({
             guildId: e,

@@ -17,8 +17,8 @@ var r = n(526167),
     f = n(859500),
     h = n(484542),
     p = n(881500),
-    m = n(910826),
-    I = n(307244),
+    I = n(910826),
+    m = n(307244),
     T = n(669730),
     g = n(666828),
     S = n(131999),
@@ -30,7 +30,7 @@ function v() {
 }
 t.Z = {
     DEFAULT_AVATARS: [a, s, o, l, u, c],
-    DEFAULT_GROUP_DM_AVATARS: [d, _, E, f, h, p, m, I],
+    DEFAULT_GROUP_DM_AVATARS: [d, _, E, f, h, p, I, m],
     BOT_AVATARS: {
         clyde: A,
         nitro: g,

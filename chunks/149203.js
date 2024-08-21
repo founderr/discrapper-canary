@@ -19,7 +19,7 @@ n.d(t, {
         return d;
     },
     _3: function () {
-        return I;
+        return m;
     },
     c: function () {
         return _;
@@ -40,7 +40,7 @@ n.d(t, {
         return f;
     },
     vO: function () {
-        return m;
+        return I;
     }
 }),
     ((o = r || (r = {})).GUILD = 'GUILD'),
@@ -59,8 +59,8 @@ let E = 'emoji-picker-tab-panel',
     f = 'emoji-picker-tab',
     h = 'soundboard-picker-tab-panel',
     p = 'soundboard-picker-tab',
-    m = 'gif-picker-tab-panel',
-    I = 'gif-picker-tab',
+    I = 'gif-picker-tab-panel',
+    m = 'gif-picker-tab',
     T = {
         reaction: 32,
         default: 44,

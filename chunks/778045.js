@@ -1,6 +1,6 @@
 n.d(t, {
     P: function () {
-        return m;
+        return I;
     }
 }),
     n(47120);
@@ -121,7 +121,7 @@ let p = (e) => (t, n) => {
         l = null !== (s = null == e ? void 0 : null === (i = e[n.id]) || void 0 === i ? void 0 : i.score) && void 0 !== s ? s : 0;
     return o !== l ? l - o : 0;
 };
-function m(e) {
+function I(e) {
     let { delayMs: t = 0 } = e;
     return (0, r.jsx)('div', {
         className: E.gameImageContainer,

@@ -38,16 +38,16 @@ var r,
     f = n(709054),
     h = n(591759),
     p = n(981631);
-function m(e) {
+function I(e) {
     if (null == e) return !1;
     let { filename: t, height: n, width: r } = e;
     return (0, s.CO)(t) && null != n && n > 0 && null != r && r > 0;
 }
-function I(e) {
+function m(e) {
     return null != e && null != e && (0, s.NU)(e.filename) && null != e.proxy_url;
 }
 function T(e) {
-    return m(e) || I(e);
+    return I(e) || m(e);
 }
 ((i = r || (r = {})).EMBED = 'embed'), (i.ATTACHMENT = 'attachment');
 function g(e) {
@@ -64,14 +64,14 @@ function g(e) {
                       if (null == l || null == u) return null;
                       let E = (0, s.NU)(c),
                           f = null != e.flags && (0, _.yE)(e.flags, p.J0y.IS_THUMBNAIL),
-                          m = null != n ? n : r;
+                          I = null != n ? n : r;
                       if (E) {
                           let e = h.Z.toURLSafe(n);
                           if (null == e) return null;
-                          e.searchParams.append('format', 'webp'), (m = e.toString());
+                          e.searchParams.append('format', 'webp'), (I = e.toString());
                       }
                       return {
-                          src: m,
+                          src: I,
                           width: l,
                           height: u,
                           spoiler: null != a && a,
@@ -149,7 +149,7 @@ function R(e, t) {
     let r = u.Z.getChannel(t);
     if (null == r) return !1;
     let i = c.Z.getMessage(r.id, f.default.castChannelIdAsMessageId(r.id));
-    return null != i && e.length > 0 && null != e.find((e) => e.isImage || e.isVideo) && r.isForumPost() && r.ownerId === (null === (n = d.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === o.Z.getCount(r.id) && (0 === i.attachments.length || null == i.attachments.find((e) => m(e) || I(e)));
+    return null != i && e.length > 0 && null != e.find((e) => e.isImage || e.isVideo) && r.isForumPost() && r.ownerId === (null === (n = d.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === o.Z.getCount(r.id) && (0 === i.attachments.length || null == i.attachments.find((e) => I(e) || m(e)));
 }
 function C(e) {
     return e.reduce(

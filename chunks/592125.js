@@ -20,8 +20,8 @@ var r,
     f = n(591526),
     h = n(458772),
     p = n(38217),
-    m = n(710845),
-    I = n(853856),
+    I = n(710845),
+    m = n(853856),
     T = n(131704),
     g = n(823379),
     S = n(709054),
@@ -29,7 +29,7 @@ var r,
     N = n(430824),
     v = n(594174),
     O = n(981631);
-let R = new m.Z('ChannelStore'),
+let R = new I.Z('ChannelStore'),
     C = {},
     y = {},
     D = {},
@@ -240,14 +240,14 @@ function es(e) {
     null != e && !(e.id in M) && T.AW.has(e.type) && X((0, T.q_)(e));
 }
 function eo() {
-    for (let e in ((x = {}), I.Z.getFavoriteChannels())) {
-        let t = I.Z.getCategoryRecord(e);
+    for (let e in ((x = {}), m.Z.getFavoriteChannels())) {
+        let t = m.Z.getCategoryRecord(e);
         null != t && (x[e] = t);
     }
 }
 class el extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z, v.default, N.Z, I.Z), this.syncWith([I.Z], eo);
+        this.waitFor(h.Z, v.default, N.Z, m.Z), this.syncWith([m.Z], eo);
     }
     hasChannel(e) {
         return null != K(e);

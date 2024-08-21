@@ -55,10 +55,10 @@ function l(e) {
                 return ''.concat(t, '=').concat(n.toString());
             })
             .join(';'),
-        m = '';
+        I = '';
     return (
-        '' !== p && (m = 'RRULE:'.concat(p)),
-        [n, m]
+        '' !== p && (I = 'RRULE:'.concat(p)),
+        [n, I]
             .filter(function (e) {
                 return !!e;
             })

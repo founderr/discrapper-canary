@@ -44,8 +44,8 @@ function E(e) {
                 styles: {}
             },
             p = [],
-            m = !1,
-            I = {
+            I = !1,
+            m = {
                 state: f,
                 setOptions: function (n) {
                     var r = 'function' == typeof n ? n(f.options) : n;
@@ -69,18 +69,18 @@ function E(e) {
                                     var i = r({
                                         state: f,
                                         name: t,
-                                        instance: I,
+                                        instance: m,
                                         options: void 0 === n ? {} : n
                                     });
                                     p.push(i || function () {});
                                 }
                             });
                         })(),
-                        I.update()
+                        m.update()
                     );
                 },
                 forceUpdate: function () {
-                    if (m) return;
+                    if (I) return;
                     var e = f.elements,
                         t = e.reference,
                         n = e.popper;
@@ -110,23 +110,23 @@ function E(e) {
                                         state: f,
                                         options: c,
                                         name: d,
-                                        instance: I
+                                        instance: m
                                     }) || f);
                         }
                     }
                 },
                 update: (0, l.Z)(function () {
                     return new Promise(function (e) {
-                        I.forceUpdate(), e(f);
+                        m.forceUpdate(), e(f);
                     });
                 }),
                 destroy: function () {
-                    T(), (m = !0);
+                    T(), (I = !0);
                 }
             };
-        if (!_(e, t)) return I;
-        I.setOptions(n).then(function (e) {
-            !m && n.onFirstUpdate && n.onFirstUpdate(e);
+        if (!_(e, t)) return m;
+        m.setOptions(n).then(function (e) {
+            !I && n.onFirstUpdate && n.onFirstUpdate(e);
         });
         function T() {
             p.forEach(function (e) {
@@ -134,6 +134,6 @@ function E(e) {
             }),
                 (p = []);
         }
-        return I;
+        return m;
     };
 }

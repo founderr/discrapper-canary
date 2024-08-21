@@ -19,8 +19,8 @@ var r = n(735250),
     f = n(99690),
     h = n(410030),
     p = n(726542),
-    m = n(367907),
-    I = n(906732),
+    I = n(367907),
+    m = n(906732),
     T = n(385499),
     g = n(171368),
     S = n(598077),
@@ -95,19 +95,19 @@ function x(e) {
                 c = u.filter((e) => null != e.operator),
                 E = u.find((e) => null != e.application),
                 h = p.Z.get(e),
-                m = null == E ? void 0 : E.application,
-                I = (null == m ? void 0 : m.bot) != null ? new S.Z(m.bot) : null;
+                I = null == E ? void 0 : E.application,
+                m = (null == I ? void 0 : I.bot) != null ? new S.Z(I.bot) : null;
             return (
-                v.SJ.includes(null !== (t = null == m ? void 0 : m.id) && void 0 !== t ? t : '')
+                v.SJ.includes(null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : '')
                     ? (l = (0, r.jsx)(y.Z, {
                           className: U.botTag,
                           color: i,
                           size: 16
                       }))
-                    : null != I &&
+                    : null != m &&
                       (l = (0, r.jsx)(T.Z, {
                           className: U.botTag,
-                          verified: I.isVerifiedBot()
+                          verified: m.isVerifiedBot()
                       })),
                 (0, r.jsxs)(
                     'div',
@@ -124,9 +124,9 @@ function x(e) {
                                               className: U.popoutCheckGroupPlatformIcon
                                           })
                                         : null,
-                                    null != I
+                                    null != m
                                         ? (0, r.jsx)(f.Z, {
-                                              user: I,
+                                              user: m,
                                               size: _.AvatarSizes.SIZE_20,
                                               className: U.popoutCheckGroupPlatformIcon
                                           })
@@ -134,7 +134,7 @@ function x(e) {
                                     (0, r.jsx)(_.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'interactive-active',
-                                        children: null !== (o = null == h ? void 0 : h.name) && void 0 !== o ? o : null == m ? void 0 : m.name
+                                        children: null !== (o = null == h ? void 0 : h.name) && void 0 !== o ? o : null == I ? void 0 : I.name
                                     }),
                                     l
                                 ]
@@ -173,8 +173,8 @@ function G(e) {
         N.default.track(b.rMx.PASSPORT_ROLE_POPOUT_VIEWED, {
             other_user_id: o,
             role_id: l,
-            ...(0, m.JS)(c),
-            ...(0, m.hH)(d)
+            ...(0, I.JS)(c),
+            ...(0, I.hH)(d)
         });
     }, [o, l, c, d]);
     let E = (0, u.e7)(
@@ -227,7 +227,7 @@ function G(e) {
 }
 function k(e) {
     let { userId: t, messageId: n, guild: a, channel: o } = e,
-        { analyticsLocations: l } = (0, I.ZP)(),
+        { analyticsLocations: l } = (0, m.ZP)(),
         c = (0, R.Z)(a, t, o.id, !0),
         d = (0, u.e7)([O.Z], () => O.Z.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)),
         [f, h] = i.useState(null == d);

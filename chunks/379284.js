@@ -32,8 +32,8 @@ e.exports = function (e, t, n) {
         if (r || p) return (e[t] = n['[[Value]]']), E(e[t], n['[[Value]]']);
         throw new a('This environment does not support defining non-writable, non-enumerable, or non-configurable properties');
     }
-    var m = i(e, t),
-        I = m && _(m),
+    var I = i(e, t),
+        m = I && _(I),
         T = c(e);
-    return h(e, t, T, n, I);
+    return h(e, t, T, n, m);
 };

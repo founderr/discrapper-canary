@@ -18,8 +18,8 @@ var i = n(442837),
     f = n(483424),
     h = n(681837),
     p = n(678738),
-    m = n(530),
-    I = n(645410),
+    I = n(530),
+    m = n(645410),
     T = n(357836),
     g = n(827313),
     S = n(580512),
@@ -44,7 +44,7 @@ function D(e) {
         fade: !0,
         className: C.body,
         children: [
-            (0, r.jsx)(m.Z, {
+            (0, r.jsx)(I.Z, {
                 user: t,
                 profileType: O.y0.BITE_SIZE,
                 onOpenProfile: M,
@@ -74,7 +74,7 @@ function D(e) {
             (0, r.jsxs)('div', {
                 className: y.buttons,
                 children: [
-                    (0, r.jsx)(I.Z, {
+                    (0, r.jsx)(m.Z, {
                         user: t,
                         className: y.button
                     }),

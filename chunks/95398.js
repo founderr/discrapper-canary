@@ -31,14 +31,14 @@ function p(e, t, n) {
     );
 }
 ((a = r || (r = {})).TEXT = 'text'), (a.ATTACHMENT = 'attachment'), (a.EMBED = 'embed');
-let m = (e) => {
+let I = (e) => {
         let { className: t } = e;
         return (0, s.jsx)('div', {
             className: u()(h.spoilerWarning, t),
             children: f.Z.Messages.SPOILER
         });
     },
-    I = (e) => {
+    m = (e) => {
         let { className: t, isSingleMosaicItem: n, obscureOnly: r } = e;
         return (0, s.jsx)('div', {
             className: u()(h.explicitContentWarning, t),
@@ -65,14 +65,14 @@ let m = (e) => {
         let { reason: t = _.wk.SPOILER, className: n, isSingleMosaicItem: r = !1 } = e;
         switch (t) {
             case _.wk.SPOILER:
-                return (0, s.jsx)(m, { className: n });
+                return (0, s.jsx)(I, { className: n });
             case _.wk.EXPLICIT_CONTENT:
-                return (0, s.jsx)(I, {
+                return (0, s.jsx)(m, {
                     isSingleMosaicItem: r,
                     className: n
                 });
             case _.wk.POTENTIAL_EXPLICIT_CONTENT:
-                return (0, s.jsx)(I, {
+                return (0, s.jsx)(m, {
                     isSingleMosaicItem: r,
                     className: n,
                     obscureOnly: !0

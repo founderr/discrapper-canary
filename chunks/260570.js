@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(906732),
     h = n(676035),
     p = n(633302),
-    m = n(314897),
-    I = n(158776),
+    I = n(314897),
+    m = n(158776),
     T = n(785717),
     g = n(481046),
     S = n(277085),
@@ -34,7 +34,7 @@ let D = 'text-sm/medium',
     L = 36,
     b = 144;
 function M(e) {
-    let { statusActivity: t, user: a, displayProfile: h, guildId: m, channelId: I, profileType: g, hasEntered: R = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
+    let { statusActivity: t, user: a, displayProfile: h, guildId: I, channelId: m, profileType: g, hasEntered: R = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
         { analyticsLocations: V } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
         { trackUserProfileAction: H } = (0, T.KZ)(),
         Z = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
@@ -70,7 +70,7 @@ function M(e) {
             eE(!en && e > a), (z.current = e), (Q.current = a);
         }
     }, [R, en, ei, ea, es]);
-    let [em, eI] = (0, c.useSpring)(() => ({
+    let [eI, em] = (0, c.useSpring)(() => ({
         maxHeight: ''.concat(es, 'px'),
         config: {
             clamp: !0,
@@ -83,7 +83,7 @@ function M(e) {
             if (!!e_) {
                 if (e) {
                     let e = Math.min(null !== (t = z.current) && void 0 !== t ? t : ea, ea);
-                    eI({
+                    em({
                         maxHeight: ''.concat(e, 'px'),
                         delay: Z ? 0 : 300,
                         config: {
@@ -93,7 +93,7 @@ function M(e) {
                     });
                 } else {
                     let e = Math.min(null !== (n = Q.current) && void 0 !== n ? n : es, es);
-                    eI({
+                    em({
                         maxHeight: ''.concat(e, 'px'),
                         delay: 0
                     });
@@ -132,7 +132,7 @@ function M(e) {
                 [y.singleLineAlign]: ec
             });
             return (0, r.jsxs)(o.animated.div, {
-                style: em,
+                style: eI,
                 className: e,
                 children: [eg(), eS()]
             });
@@ -277,8 +277,8 @@ function M(e) {
                     let { setPopoutRef: t } = e;
                     return (0, r.jsx)(N.Z, {
                         user: a,
-                        guildId: m,
-                        channelId: I,
+                        guildId: I,
+                        channelId: m,
                         profileType: g,
                         sourceDetails: eU(),
                         sourceType: O.n_.STATUS,
@@ -305,10 +305,10 @@ function M(e) {
 }
 function P(e) {
     let { user: t, ...n } = e,
-        i = (0, l.e7)([m.default], () => m.default.getId() === t.id),
+        i = (0, l.e7)([I.default], () => I.default.getId() === t.id),
         a = (0, h.a)(),
-        s = (0, l.e7)([I.Z], () =>
-            I.Z.findActivity(t.id, (e) => {
+        s = (0, l.e7)([m.Z], () =>
+            m.Z.findActivity(t.id, (e) => {
                 let { type: t } = e;
                 return t === R.IIU.CUSTOM_STATUS;
             })

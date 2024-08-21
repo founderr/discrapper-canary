@@ -19,8 +19,8 @@ var i = n(120356),
     f = n(555672),
     h = n(335326),
     p = n(297781),
-    m = n(797342),
-    I = n(810568),
+    I = n(797342),
+    m = n(810568),
     T = n(168524),
     g = n(502762),
     S = n(652853),
@@ -39,11 +39,11 @@ function P(e) {
     let { user: t, entry: n, header: i, className: l, onClose: c } = e,
         { profileType: _ } = (0, S.z)(),
         E = { [b.fullSize]: _ === D.y0.FULL_SIZE },
-        { iconUrl: h, appName: A } = (0, m.n)(n),
+        { iconUrl: h, appName: A } = (0, I.n)(n),
         O = (0, T.Z)({
             location: 'UserProfileRecentActivityCard',
             applicationId: n.extra.application_id,
-            source: I.m1.UserProfile,
+            source: m.m1.UserProfile,
             sourceUserId: t.id,
             trackEntryPointImpression: !0
         }),
@@ -206,9 +206,9 @@ function w(e) {
             entry: o,
             analyticsLocations: f
         }),
-        m = null === (t = o.extra.entries[0]) || void 0 === t ? void 0 : t.media;
-    if (null == m) return null;
-    let I = null !== (i = null === (n = m.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : m.title;
+        I = null === (t = o.extra.entries[0]) || void 0 === t ? void 0 : t.media;
+    if (null == I) return null;
+    let m = null !== (i = null === (n = I.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : I.title;
     return (0, r.jsxs)(g.Z.Overlay, {
         className: a()(b.card, c),
         ref: h,
@@ -221,8 +221,8 @@ function w(e) {
                     children: [
                         (0, r.jsx)(N.ZP, {
                             image: {
-                                src: m.image_url,
-                                alt: I
+                                src: I.image_url,
+                                alt: m
                             }
                         }),
                         (0, r.jsxs)('div', {
@@ -231,7 +231,7 @@ function w(e) {
                                 (0, r.jsx)('div', {
                                     children: (0, r.jsx)(v.Z, {
                                         variant: 'heading-sm/semibold',
-                                        text: I
+                                        text: m
                                     })
                                 }),
                                 (0, r.jsx)(p.Gk, {

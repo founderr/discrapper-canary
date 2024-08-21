@@ -113,7 +113,7 @@ function o(e) {
             },
             [N, t, n]
         ),
-        v = s.useCallback(
+        L = s.useCallback(
             async (e, s) => {
                 if (!g) {
                     p(!0);
@@ -136,7 +136,7 @@ function o(e) {
         cancelLinkRequest: O,
         selectTeenUser: P,
         getLinkCode: b,
-        requestLink: v,
+        requestLink: L,
         loadMore: s.useCallback(
             async (e) => {
                 let n = i.Z.getActionsForDisplayType(e),

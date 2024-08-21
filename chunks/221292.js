@@ -37,7 +37,7 @@ var r = n(367907),
     f = n(228168),
     h = n(981631),
     p = n(231338);
-let m = (e) => {
+let I = (e) => {
         let { user: t, userProfile: n, guildMember: r, guildMemberProfile: i } = e,
             a = null != n ? n : i,
             s = [];
@@ -51,7 +51,7 @@ let m = (e) => {
         }
         return (null == a ? void 0 : a.bio) && s.push(f.cm.BIO), (null == a ? void 0 : a.themeColors) != null && void 0 !== a.themeColors.find((e) => null !== e) && s.push(f.cm.THEME), (null == t ? void 0 : t.avatarDecoration) != null && s.push(f.cm.AVATAR_DECORATION), (null == a ? void 0 : a.profileEffectId) != null && s.push(f.cm.PROFILE_EFFECT), s;
     },
-    I = (e) => {
+    m = (e) => {
         let t = o.Z.getStatus(e),
             n = o.Z.isMobileOnline(e);
         return t === p.Sk.ONLINE && n ? ''.concat(t, '-mobile') : t === p.Sk.ONLINE ? ''.concat(t, '-desktop') : t;
@@ -68,11 +68,11 @@ let m = (e) => {
             profile_layout: r,
             profile_session_id: l,
             source_profile_session_id: c,
-            profile_properties: m({
+            profile_properties: I({
                 user: _,
                 userProfile: null == f ? void 0 : f._userProfile
             }),
-            guild_profile_properties: m({
+            guild_profile_properties: I({
                 guildMember: h,
                 guildMemberProfile: null == f ? void 0 : f._guildMemberProfile
             }),
@@ -93,7 +93,7 @@ let m = (e) => {
                         }),
             avatar_decoration_sku_id: null === (n = _.avatarDecoration) || void 0 === n ? void 0 : n.skuId,
             profile_effect_sku_id: null == f ? void 0 : f.profileEffectId,
-            user_status: I(_.id),
+            user_status: m(_.id),
             is_guild_profile: (null == f ? void 0 : f.guildId) != null,
             is_bot_profile: _.bot
         };

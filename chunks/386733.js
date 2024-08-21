@@ -121,8 +121,8 @@ t.Z = (e) => {
         x = (0, m.uv)('ReferralProgramProgressBar'),
         O = (0, l.Wu)([T.default], () => r.map((e) => T.default.getUser(e)).filter((e) => null != e)),
         P = a.useMemo(() => O.map((e) => new E.Z(e)), [O]),
-        { subscriberHomeVariant: v } = p.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-        L = v === p.p.VARIANT_2;
+        { subscriberHomeVariant: L } = p.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+        v = L === p.p.VARIANT_2;
     a.useEffect(() => {
         r.forEach((e) => {
             (0, c.PR)(e);
@@ -180,7 +180,7 @@ t.Z = (e) => {
                             className: i()(h.expandedProgressBarButtonContainer, { [h.expandedProgressBarButtonContainerLayout]: !t }),
                             children: [
                                 !t &&
-                                    !L &&
+                                    !v &&
                                     (0, s.jsx)(N.Z, {
                                         color: o.ButtonColors.CUSTOM,
                                         buttonText: S.Z.Messages.GIFT_NITRO,
@@ -229,8 +229,8 @@ t.Z = (e) => {
             className: i()({
                 [h.expandedProgressBarContainer]: !t,
                 [h.expandedProgressBarContainerSettingsPage]: t,
-                [h.expandedProgressBarContainerVariant1]: !L && !t,
-                [h.expandedProgressBarContainerVariant2]: L && !t,
+                [h.expandedProgressBarContainerVariant1]: !v && !t,
+                [h.expandedProgressBarContainerVariant2]: v && !t,
                 [h.allReferralsSentBorder]: k,
                 [h.containerWithBanner]: !1
             }),

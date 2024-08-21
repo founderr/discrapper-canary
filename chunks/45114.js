@@ -6,13 +6,13 @@ n.d(t, {
         return T;
     },
     FT: function () {
-        return I;
+        return m;
     },
     In: function () {
         return d;
     },
     Ju: function () {
-        return m;
+        return I;
     },
     U6: function () {
         return _;
@@ -113,7 +113,7 @@ function p(e, t) {
         windowId: t
     });
 }
-function m(e, t, n) {
+function I(e, t, n) {
     r.Z.dispatch({
         type: 'GUILD_FEATURE_ACK',
         id: e,
@@ -122,7 +122,7 @@ function m(e, t, n) {
         local: !1
     });
 }
-function I(e, t) {
+function m(e, t) {
     var n;
     if (null != (null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id))
         r.Z.dispatch({

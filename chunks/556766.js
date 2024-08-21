@@ -12,8 +12,8 @@ var r = n(735250),
     f = n(474873),
     h = n(292959),
     p = n(944486),
-    m = n(246946),
-    I = n(340895),
+    I = n(246946),
+    m = n(340895),
     T = n(557177),
     g = n(918559),
     S = n(871465);
@@ -34,18 +34,18 @@ t.Z = () => {
             currentChannelId: p.Z.getChannelId(),
             selectedVoiceChannelId: p.Z.getVoiceChannelId()
         })),
-        v = (0, l.Wu)([I.Z], () =>
-            I.Z.getIncomingCalls().filter((r) => {
+        v = (0, l.Wu)([m.Z], () =>
+            m.Z.getIncomingCalls().filter((r) => {
                 let { channel: i } = r,
                     s = e === i.id && a !== i.id && t === g.Ez.PANEL;
                 return n !== i.id || s;
             })
         ),
-        O = (0, l.e7)([I.Z], () => I.Z.hasIncomingCalls()),
+        O = (0, l.e7)([m.Z], () => m.Z.hasIncomingCalls()),
         R = (0, l.e7)([h.Z], () => h.Z.isSoundDisabled('call_ringing')),
         C = E.Z.useIsRingtoneEligible(),
         y = E.Z.useIsRingtoneDisabled(),
-        D = (0, l.e7)([m.Z], () => m.Z.disableSounds),
+        D = (0, l.e7)([I.Z], () => I.Z.disableSounds),
         L = (0, l.e7)([f.Z], () => f.Z.getSoundpack()),
         b = i.useRef(!1),
         M = (0, o.Z)(() => {

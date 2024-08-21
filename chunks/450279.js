@@ -135,13 +135,13 @@ function a(e, t, n, a, s) {
             });
         }
     }
-    let m = (null !== (o = f.currentRoundTripTime) && void 0 !== o ? o : 0) * 1000;
+    let I = (null !== (o = f.currentRoundTripTime) && void 0 !== o ? o : 0) * 1000;
     return {
         transport: {
             availableOutgoingBitrate: null !== (l = f.availableOutgoingBitrate) && void 0 !== l ? l : 0,
             bytesReceived: f.bytesReceived,
             bytesSent: f.bytesSent,
-            ping: m
+            ping: I
         },
         rtp: {
             inbound: p,

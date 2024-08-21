@@ -38,9 +38,9 @@ function O(e) {
         }),
         b = (0, p.Zy)({ location: h.dr.QUESTS_BAR }),
         P = (0, o.e7)([_.Z], () => _.Z.useReducedMotion),
-        v = (0, o.e7)([u.Z], () => u.Z.hasLayers()),
-        L = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
-        Z = (0, d.Z)(L),
+        L = (0, o.e7)([u.Z], () => u.Z.hasLayers()),
+        v = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        Z = (0, d.Z)(v),
         D = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         B = (0, d.Z)(D),
         j = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
@@ -109,15 +109,15 @@ function O(e) {
         D && F.shouldExpandOnQuestComplete && ei();
     }, [ei, D, F.shouldExpandOnQuestComplete]),
         a.useLayoutEffect(() => {
-            L && !Z && K.current && ei();
-        }, [ei, L, Z]),
+            v && !Z && K.current && ei();
+        }, [ei, v, Z]),
         a.useLayoutEffect(() => {
-            !D && L && !Z && !K.current && ea(!1);
-        }, [L, D, Z, ea]),
+            !D && v && !Z && !K.current && ea(!1);
+        }, [v, D, Z, ea]),
         a.useLayoutEffect(() => {
             H !== w.current && ee(!1), (w.current = H);
         }, [H]);
-    let eI = L ? h.XZ : h.R4,
+    let eI = v ? h.XZ : h.R4,
         [{ expansionSpring: eR }, eC] = (0, c.useSpring)(() => ({
             from: { expansionSpring: 0 },
             config: eI,
@@ -176,7 +176,7 @@ function O(e) {
         ? (0, s.jsx)(A.A, {
               questOrQuests: I,
               questContent: F.trackingCtx.content,
-              overrideVisibility: !v && H,
+              overrideVisibility: !L && H,
               children: () => {
                   let e = F.component;
                   return (0, s.jsx)('div', {
@@ -201,11 +201,11 @@ function O(e) {
                           children: (0, s.jsx)(l.animated.div, {
                               className: i()(x.contentWrapper, {
                                   [x.contentWrapperExpanded]: Q,
-                                  [x.contentWrapperAccepted]: L
+                                  [x.contentWrapperAccepted]: v
                               }),
                               style: {
                                   backgroundColor: F.preEnrollmentBackgroundColor,
-                                  backgroundImage: L ? F.postEnrollmentBackgroundImage : void 0
+                                  backgroundImage: v ? F.postEnrollmentBackgroundImage : void 0
                               },
                               children: (0, s.jsx)(f.t, {
                                   springConfig: eI,

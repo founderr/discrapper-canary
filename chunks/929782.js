@@ -4,7 +4,7 @@ n.r(t),
             return T;
         },
         isNotSupported: function () {
-            return m;
+            return I;
         },
         trackToggleSelfMute: function () {
             return g;
@@ -34,7 +34,7 @@ function p() {
             });
     });
 }
-function m() {
+function I() {
     return (
         !o.Z.isSupported() &&
         ((0, i.openModal)((e) =>
@@ -54,7 +54,7 @@ function m() {
         !0)
     );
 }
-function I(e) {
+function m(e) {
     c.default.track(_.rMx.PERMISSIONS_ACKED, {
         type: 'audio',
         action: e
@@ -62,7 +62,7 @@ function I(e) {
 }
 function T() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return m()
+    return I()
         ? Promise.resolve(!1)
         : (c.default.track(_.rMx.PERMISSIONS_REQUESTED, { type: 'audio' }),
           o.Z.getMediaEngine()
@@ -74,21 +74,21 @@ function T() {
                           enabled: !0,
                           unmute: e
                       }),
-                          I(E.PQ.ACCEPTED);
+                          m(E.PQ.ACCEPTED);
                   },
                   (e) => {
                       switch (e) {
                           case _.ETv.NO_DEVICES_FOUND:
-                              I(E.PQ.NO_DEVICES);
+                              m(E.PQ.NO_DEVICES);
                               break;
                           case _.ETv.PERMISSION_DENIED:
-                              I(E.PQ.DENIED);
+                              m(E.PQ.DENIED);
                               break;
                           case _.ETv.PERMISSION_DISMISSED:
-                              I(E.PQ.DISMISSED);
+                              m(E.PQ.DISMISSED);
                               break;
                           default:
-                              I(E.PQ.ERROR), h.warn('unknown getUserMedia error: '.concat(e));
+                              m(E.PQ.ERROR), h.warn('unknown getUserMedia error: '.concat(e));
                       }
                   }
               )

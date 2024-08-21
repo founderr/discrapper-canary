@@ -1,6 +1,6 @@
 n.d(t, {
     F4: function () {
-        return m;
+        return I;
     },
     So: function () {
         return g;
@@ -9,7 +9,7 @@ n.d(t, {
         return T;
     },
     vw: function () {
-        return I;
+        return m;
     }
 });
 var r = n(314897),
@@ -37,11 +37,11 @@ function p() {
     let s = a.Z.getGuild(n.guild_id);
     return null != s && s.premiumTier >= E.Eu4.TIER_2;
 }
-function m() {
+function I() {
     let { enabled: e } = d.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
     return e && c.Z.shouldFetch() && h() && !p();
 }
-function I(e) {
+function m(e) {
     let { enabled: t } = d.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
     return t && c.Z.shouldActivate(e) && h() && !p();
 }

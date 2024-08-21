@@ -13,8 +13,8 @@ var r,
     f = n(287328),
     h = n(86670),
     p = n(489033),
-    m = n(188742),
-    I = n(353926),
+    I = n(188742),
+    m = n(353926),
     T = n(973542),
     g = n(889564),
     S = n(687476),
@@ -275,7 +275,7 @@ class ec {
             let { id: n, names: r, name: i } = t,
                 a = null != r && o().some(r, e),
                 s = null != i && e(i),
-                l = null != i && o().some(m.Z.getTermsForEmoji(i), e),
+                l = null != i && o().some(I.Z.getTermsForEmoji(i), e),
                 u = null != n && o().some(F.Z.getCaptionsForEmojiById({ emojiId: n }), e);
             return a || s || l || u;
         });
@@ -365,7 +365,7 @@ function ep(e, t) {
     let r = (0, A.r)(e);
     en[e] = new X(e, n.id, t, r);
 }
-function em() {
+function eI() {
     var e, t, n, r, i, a;
     let s = null === (t = O.Z.settings.textAndImages) || void 0 === t ? void 0 : null === (e = t.diversitySurrogate) || void 0 === e ? void 0 : e.value;
     null != s && B.ZP.setDefaultDiversitySurrogate(s), ec.reset();
@@ -393,8 +393,8 @@ function em() {
             if ((n || r) && o().isEmpty(t) && o().isEmpty(Q.emojiReactionPendingUsages) && O.Z.hasLoaded(W.yP.FRECENCY_AND_FAVORITES_SETTINGS)) for (let e of ['100', '100', 'thumbsup', 'thumbsup', 'thumbsdown', 'thumbsdown', 'heart', 'point_up', 'eyes', 'weary', 'laughing', 'white_check_mark', 'x']) e_.track(e);
         })(u, c);
 }
-function eI() {
-    if (!I.Z.hasLoadedExperiments) return;
+function em() {
+    if (!m.Z.hasLoadedExperiments) return;
     let { frecencyAlgorithm: e } = k.Z.getCurrentConfig({ location: 'handleExperimentsChange' }, { autoTrackExposure: !0 }),
         t = E.M$[e],
         n = E.KX[e];
@@ -425,7 +425,7 @@ function eg(e) {
 }
 class eS extends (i = d.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(f.Z, C.Z, R.ZP, y.Z, v.default, S.Z, V.Z, L.default, I.Z), null != e && (null != e.pendingUsages && (Q.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (Q.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (Q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([O.Z], em), this.syncWith([I.Z], eI);
+        this.waitFor(f.Z, C.Z, R.ZP, y.Z, v.default, S.Z, V.Z, L.default, m.Z), null != e && (null != e.pendingUsages && (Q.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (Q.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (Q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([O.Z], eI), this.syncWith([m.Z], em);
     }
     getState() {
         return Q;
@@ -638,7 +638,7 @@ K(eS, 'displayName', 'EmojiStore'),
                 settings: { type: t },
                 wasSaved: n
             } = e;
-            if ((m.Z.setEmojiLocale(v.default.locale), t !== W.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
+            if ((I.Z.setEmojiLocale(v.default.locale), t !== W.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
             (Q.pendingUsages = []), (Q.emojiReactionPendingUsages = []);
         },
         GUILD_ROLE_CREATE: eg,

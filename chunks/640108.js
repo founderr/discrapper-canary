@@ -20,8 +20,8 @@ var r,
     f = n(167080),
     h = n(818083),
     p = n(268353),
-    m = n(866960),
-    I = n(181058),
+    I = n(866960),
+    m = n(181058),
     T = n(626135),
     g = n(70956),
     S = n(36703),
@@ -152,7 +152,7 @@ class B extends (r = s.Component) {
                     onClick: i,
                     tabIndex: s ? -1 : 0,
                     'aria-label': D.Z.Messages.PLAY_AGAIN,
-                    children: (0, a.jsx)(I.Z, { className: L.controlIcon }, 'replay')
+                    children: (0, a.jsx)(m.Z, { className: L.controlIcon }, 'replay')
                 })
               : (0, a.jsx)(_.Clickable, {
                     className: L.videoButton,
@@ -362,9 +362,9 @@ class Z {
                 mime_type: this.metadata.mimeType,
                 file_size: this.metadata.fileSize,
                 file_duration_sec: this.metadata.fileDurationSec,
-                connection_type: m.Z.getType(),
-                effective_connection_speed: m.Z.getEffectiveConnectionSpeed(),
-                service_provider: m.Z.getServiceProvider()
+                connection_type: I.Z.getType(),
+                effective_connection_speed: I.Z.getEffectiveConnectionSpeed(),
+                service_provider: I.Z.getServiceProvider()
             }),
             (this.playTimeSec = 0),
             (this.playWallTimeMs = 0),
@@ -660,7 +660,7 @@ class Y extends (i = s.PureComponent) {
         let { current: e } = this.mediaRef,
             {
                 props: { type: t, autoPlay: n, playable: r = !0, onVolumeShow: i, onVolumeHide: s, onControlsHide: o, onControlsShow: l },
-                state: { buffers: u, currentTime: c, duration: d, hasClickedPlay: _, hideControls: E, muted: f, playing: h, fullscreen: m, volume: I, dragging: T }
+                state: { buffers: u, currentTime: c, duration: d, hasClickedPlay: _, hideControls: E, muted: f, playing: h, fullscreen: I, volume: m, dragging: T }
             } = this,
             g = this.getWidth();
         return _ || n || t === w.AUDIO
@@ -668,7 +668,7 @@ class Y extends (i = s.PureComponent) {
                   buffers: u,
                   currentTime: c,
                   duration: d,
-                  volume: (0, S.P)(I, 1),
+                  volume: (0, S.P)(m, 1),
                   hide: t === w.VIDEO && E,
                   muted: f,
                   autoPlay: n,
@@ -686,7 +686,7 @@ class Y extends (i = s.PureComponent) {
                   dragging: T,
                   type: t,
                   ref: this.controlsRef,
-                  width: m ? window.screen.width : g,
+                  width: I ? window.screen.width : g,
                   disabled: !r,
                   children:
                       t === w.VIDEO

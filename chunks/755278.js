@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return I;
     }
 }),
     n(789020);
@@ -18,7 +18,7 @@ var r = n(928801),
     f = n(936349),
     h = n(630388),
     p = n(981631);
-class m extends r.Z {
+class I extends r.Z {
     get guildId() {
         return this.getState().guildId;
     }
@@ -31,10 +31,10 @@ class m extends r.Z {
             _ = c.tU.getSetting();
         r = (0, h.mB)(r, p.BVn.ALLOW_VOICE_RECORDING, _);
         let f = (0, s.Z)(E.Z),
-            m = (0, i.ln)() && a.Z.getSettings().clipsEnabled && ((null === (e = d.Z.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === p.jm8.ACTIVE || (null === (t = d.Z.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === p.jm8.PAUSED),
-            { enableDecoupledGameClipping: I } = l.Z.getCurrentConfig({ location: 'computeVoiceFlags' }),
-            T = f && a.Z.getSettings().decoupledClipsEnabled && (null === (n = o.ZP.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && I;
-        r = (0, h.mB)(r, p.BVn.CLIPS_ENABLED, m || T);
+            I = (0, i.ln)() && a.Z.getSettings().clipsEnabled && ((null === (e = d.Z.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === p.jm8.ACTIVE || (null === (t = d.Z.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === p.jm8.PAUSED),
+            { enableDecoupledGameClipping: m } = l.Z.getCurrentConfig({ location: 'computeVoiceFlags' }),
+            T = f && a.Z.getSettings().decoupledClipsEnabled && (null === (n = o.ZP.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && m;
+        r = (0, h.mB)(r, p.BVn.CLIPS_ENABLED, I || T);
         let { enableViewerClipping: g } = u.Z.getCurrentConfig({ location: 'computeVoiceFlags' }, { autoTrackExposure: !1 }),
             S = g && f && a.Z.getSettings().viewerClipsEnabled;
         return (r = (0, h.mB)(r, p.BVn.ALLOW_ANY_VIEWER_CLIPS, S));

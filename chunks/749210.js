@@ -19,8 +19,8 @@ var r = n(990547),
     f = n(895886),
     h = n(35225),
     p = n(703656),
-    m = n(314897),
-    I = n(592125),
+    I = n(314897),
+    m = n(592125),
     T = n(664915),
     g = n(984933),
     S = n(430824),
@@ -75,7 +75,7 @@ async function w(e) {
                 url: L.ANM.GUILD_JOIN(e),
                 query: {
                     lurker: E,
-                    session_id: E ? m.default.getSessionId() : null,
+                    session_id: E ? I.default.getSessionId() : null,
                     recommendation_load_id: d,
                     location: E && null != _ ? _ : null
                 },
@@ -411,7 +411,7 @@ t.Z = {
             for (null != (0, _.bv)(e.getCurrentRoute()) && e.goBack(); ; ) {
                 let t = (0, _.kf)(e.getCurrentRoute());
                 if (null == t) break;
-                let n = I.Z.getChannel(t.params.channelId);
+                let n = m.Z.getChannel(t.params.channelId);
                 if (null == n || !n.isNSFW()) break;
                 e.goBack();
             }

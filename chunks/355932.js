@@ -99,7 +99,7 @@ function E(e) {
 }
 t.ZP = function (e) {
     let { className: t, items: n, renderItem: a, itemGapPx: o = 0, maxLines: f, renderOverflow: h } = e,
-        { ref: p, width: m } = (function () {
+        { ref: p, width: I } = (function () {
             let [e, t] = i.useState(0);
             return {
                 ref: (0, l.y)((e) => {
@@ -110,14 +110,14 @@ t.ZP = function (e) {
             };
         })(),
         {
-            lastVisibleIndex: I,
+            lastVisibleIndex: m,
             onItemLayout: T,
             overflowItemsRef: g
         } = d({
             items: n,
             itemGapPx: o,
             maxLines: f,
-            containerWidth: m
+            containerWidth: I
         }),
         S = i.useCallback(
             (e) =>
@@ -127,8 +127,8 @@ t.ZP = function (e) {
                 }),
             [a]
         ),
-        A = i.useMemo(() => n.slice(0, I + 1), [n, I]),
-        N = i.useMemo(() => n.slice(I + 1), [n, I]);
+        A = i.useMemo(() => n.slice(0, m + 1), [n, m]),
+        N = i.useMemo(() => n.slice(m + 1), [n, m]);
     return (0, r.jsxs)('div', {
         className: s()(t, c.items),
         ref: p,

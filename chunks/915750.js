@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     u: function () {
-        return I;
+        return m;
     }
 });
 var r = n(735250),
@@ -130,14 +130,14 @@ let p = (e, t) => {
             : e.id;
         return ''.concat(n, '_').concat(t);
     },
-    m = (e) => {
+    I = (e) => {
         let t = Array.isArray(e) ? null : (0, u.uk)(e),
             n = (0, o.Z)(t);
         return t !== n;
     };
-function I(e) {
+function m(e) {
     let { visible: t, visibleChanged: n, reference: a, focused: s, focusedChanged: o, impression: l } = e,
-        u = m(e.questOrQuests);
+        u = I(e.questOrQuests);
     return (
         i.useEffect(
             () => () => {

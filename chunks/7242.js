@@ -18,17 +18,17 @@ var r = n(735250),
     h = n(689938);
 function p(e) {
     let { user: t, className: n, onClose: p } = e,
-        m = (0, i.e7)([u.default], () => u.default.getId()),
-        I = (0, i.e7)([c.Z, _.Z], () => {
+        I = (0, i.e7)([u.default], () => u.default.getId()),
+        m = (0, i.e7)([c.Z, _.Z], () => {
             var e;
-            return c.Z.getChannel(null === (e = _.Z.getVoiceStateForUser(m)) || void 0 === e ? void 0 : e.channelId);
+            return c.Z.getChannel(null === (e = _.Z.getVoiceStateForUser(I)) || void 0 === e ? void 0 : e.channelId);
         }),
-        T = null == I ? void 0 : I.isPrivate(),
-        g = (0, i.e7)([d.Z], () => d.Z.can(f.Plq.CREATE_INSTANT_INVITE, I));
-    if (null == I || T || !g || t.bot) return null;
+        T = null == m ? void 0 : m.isPrivate(),
+        g = (0, i.e7)([d.Z], () => d.Z.can(f.Plq.CREATE_INSTANT_INVITE, m));
+    if (null == m || T || !g || t.bot) return null;
     let S = async () => {
         await o.Z.createInvite(
-            null == I ? void 0 : I.id,
+            null == m ? void 0 : m.id,
             {
                 max_uses: 1,
                 unique: !0

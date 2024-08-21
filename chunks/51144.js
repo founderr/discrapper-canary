@@ -3,7 +3,7 @@ n.d(t, {
         return T;
     },
     Fc: function () {
-        return I;
+        return m;
     },
     Ft: function () {
         return A;
@@ -85,20 +85,20 @@ function p(e) {
             return null;
     }
 }
-function m(e, t) {
+function I(e, t) {
     let { maxDaysOld: n, minDaysOld: r = 0 } = t;
     if (null == e) return !1;
     let i = Date.now() - e.createdAt.getTime();
     return ((null == n || !!(i <= 86400000 * n)) && !!(i >= 86400000 * r)) || !1;
 }
-function I(e) {
-    return !m(e, {
+function m(e) {
+    return !I(e, {
         minDaysOld: 0,
         maxDaysOld: 30
     });
 }
 function T(e) {
-    return m(e, {
+    return I(e, {
         minDaysOld: 0,
         maxDaysOld: 7
     });

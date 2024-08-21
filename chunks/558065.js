@@ -44,11 +44,11 @@ function f(e) {
     let { streamId: t, paused: n, onReady: a, onResize: o, className: u, ...f } = e,
         h = i.useRef(null),
         p = i.useRef(null),
-        m = i.useRef({
+        I = i.useRef({
             width: 0,
             height: 0
         }),
-        I = i.useRef({
+        m = i.useRef({
             streamId: t,
             paused: n,
             onReady: a,
@@ -65,14 +65,14 @@ function f(e) {
                     (t.autoplay = !0),
                     (t.muted = !0),
                     t.addEventListener('pause', function () {
-                        if (!I.current.paused) {
+                        if (!m.current.paused) {
                             var e;
                             null === (e = p.current) || void 0 === e || e.play();
                         }
                     }),
                     t.addEventListener('resize', function () {
                         var e, t, n, r, i, a;
-                        let { width: s, height: o } = m.current,
+                        let { width: s, height: o } = I.current,
                             l = null !== (n = null === (e = p.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0,
                             u = null !== (r = null === (t = p.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== r ? r : 0;
                         if (s !== l || o !== u) {
@@ -80,21 +80,21 @@ function f(e) {
                                 width: l,
                                 height: u
                             };
-                            null === (i = (a = I.current).onResize) || void 0 === i || i.call(a, e), (m.current = e);
+                            null === (i = (a = m.current).onResize) || void 0 === i || i.call(a, e), (I.current = e);
                         }
                     }),
                     t.addEventListener('canplaythrough', function () {
                         var e, t;
-                        c.info('handleReady for '.concat(I.current.streamId, ', have onReady callback = ').concat(null != I.current.onReady)), null === (e = (t = I.current).onReady) || void 0 === e || e.call(t);
+                        c.info('handleReady for '.concat(m.current.streamId, ', have onReady callback = ').concat(null != m.current.onReady)), null === (e = (t = m.current).onReady) || void 0 === e || e.call(t);
                     }),
-                    c.info('create video element for '.concat(I.current.streamId, ', readyState=').concat(t.readyState)),
-                    t.readyState > 3 && c.error('video element for '.concat(I.current.streamId, ' was ready before attached')),
+                    c.info('create video element for '.concat(m.current.streamId, ', readyState=').concat(t.readyState)),
+                    t.readyState > 3 && c.error('video element for '.concat(m.current.streamId, ' was ready before attached')),
                     e.appendChild(t),
                     (p.current = t);
             }
         }, []),
         i.useEffect(() => {
-            (I.current.streamId = t), (I.current.paused = n), (I.current.onReady = a), (I.current.onResize = o);
+            (m.current.streamId = t), (m.current.paused = n), (m.current.onReady = a), (m.current.onResize = o);
         }),
         i.useEffect(() => {
             let e = p.current;

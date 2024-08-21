@@ -30,12 +30,12 @@ let E = s.forwardRef(function (e, t) {
             background: h,
             backdropFilter: 'blur(0px)'
         },
-        m = (0, d.Z)(r),
-        I = (0, c.useTransition)(
+        I = (0, d.Z)(r),
+        m = (0, c.useTransition)(
             o,
             {
                 keys: (e) => (e ? 'backdrop' : 'empty'),
-                config: { duration: r || m ? 0 : 300 },
+                config: { duration: r || I ? 0 : 300 },
                 from: p,
                 enter: {
                     background: f,
@@ -47,7 +47,7 @@ let E = s.forwardRef(function (e, t) {
         );
     if (null == s) {
         let e = { zIndex: 1000 + i };
-        return I((t, n) =>
+        return m((t, n) =>
             n
                 ? (0, a.jsx)(u.animated.div, {
                       className: _.backdrop,
@@ -61,7 +61,7 @@ let E = s.forwardRef(function (e, t) {
         );
     }
     return (0, a.jsx)(s, {
-        children: I((e, t) =>
+        children: m((e, t) =>
             t
                 ? (0, a.jsx)(u.animated.div, {
                       className: l()(_.backdrop, _.withLayer),

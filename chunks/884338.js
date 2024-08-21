@@ -19,8 +19,8 @@ var r,
     f = n(598077),
     h = n(594174),
     p = n(426563),
-    m = n(39368);
-function I(e, t, n) {
+    I = n(39368);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,7 +59,7 @@ class S extends (r = a.PureComponent) {
                     ? (0, i.jsx)(
                           'div',
                           {
-                              className: m.avatarContainer,
+                              className: I.avatarContainer,
                               children: o
                           },
                           g(null !== (c = e[u]) && void 0 !== c ? c : null, u)
@@ -67,7 +67,7 @@ class S extends (r = a.PureComponent) {
                     : (0, i.jsx)(
                           d.ZP,
                           {
-                              className: m.avatarContainerMasked,
+                              className: I.avatarContainerMasked,
                               height: r,
                               width: r,
                               mask: d.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
@@ -101,8 +101,8 @@ class S extends (r = a.PureComponent) {
             ? (0, i.jsx)(c.VoiceNormalIcon, {
                   size: 'md',
                   color: 'currentColor',
-                  colorClass: m.__invalid_foreground,
-                  className: m.icon
+                  colorClass: I.__invalid_foreground,
+                  className: I.icon
               })
             : null;
     }
@@ -132,20 +132,20 @@ class S extends (r = a.PureComponent) {
                 (0, i.jsxs)('div', {
                     className: o()(
                         e,
-                        m.container,
+                        I.container,
                         (function () {
                             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.SIZE_24;
                             switch (e) {
                                 case T.SIZE_16:
-                                    return m.size16;
+                                    return I.size16;
                                 case T.SIZE_24:
-                                    return m.size24;
+                                    return I.size24;
                                 case T.SIZE_32:
-                                    return m.size32;
+                                    return I.size32;
                                 case T.SIZE_56:
-                                    return m.size56;
+                                    return I.size56;
                                 default:
-                                    return m.size24;
+                                    return I.size24;
                             }
                         })(t)
                     ),
@@ -157,19 +157,19 @@ class S extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'state', { popoutUserId: null }),
-            I(this, '_ref', a.createRef()),
-            I(this, 'defaultRenderUser', (e, t, n) => {
+            m(this, 'state', { popoutUserId: null }),
+            m(this, '_ref', a.createRef()),
+            m(this, 'defaultRenderUser', (e, t, n) => {
                 let { showUserPopout: r, guildId: a, size: s } = this.props;
                 if (null == e) {
-                    if (!this.props.showDefaultAvatarsForNullUsers) return (0, i.jsx)('div', { className: m.emptyUser });
+                    if (!this.props.showDefaultAvatarsForNullUsers) return (0, i.jsx)('div', { className: I.emptyUser });
                     {
                         let e = (null != n ? n : 0) % p.Z.DEFAULT_AVATARS.length,
                             t = p.Z.DEFAULT_AVATARS[e];
                         return (0, i.jsx)('img', {
                             src: t,
                             alt: '',
-                            className: m.avatar
+                            className: I.avatar
                         });
                     }
                 }
@@ -178,7 +178,7 @@ class S extends (r = a.PureComponent) {
                     {
                         src: e.getAvatarURL(a, s),
                         alt: e.username,
-                        className: m.avatar
+                        className: I.avatar
                     },
                     e.id
                 );
@@ -186,7 +186,7 @@ class S extends (r = a.PureComponent) {
                     ? (0, i.jsx)(
                           c.Clickable,
                           {
-                              className: m.clickableAvatar,
+                              className: I.clickableAvatar,
                               onClick: () => {
                                   null != this._ref.current && null != e && this.setState({ popoutUserId: e.id });
                               },
@@ -199,11 +199,11 @@ class S extends (r = a.PureComponent) {
             });
     }
 }
-I(S, 'defaultProps', {
+m(S, 'defaultProps', {
     max: 10,
     renderMoreUsers: function (e) {
         return (0, i.jsx)('div', {
-            className: m.moreUsers,
+            className: I.moreUsers,
             children: e
         });
     },

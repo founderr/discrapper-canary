@@ -1,9 +1,9 @@
 n.d(t, {
     K: function () {
-        return I;
+        return m;
     },
     i: function () {
-        return m;
+        return I;
     }
 }),
     n(47120);
@@ -21,8 +21,8 @@ var r = n(933557),
     f = n(709054),
     h = n(752305),
     p = n(377668);
-function m(e, t, n, _) {
-    let { allowUsers: h = !0, allowRoles: m = !0 } = null != _ ? _ : {};
+function I(e, t, n, _) {
+    let { allowUsers: h = !0, allowRoles: I = !0 } = null != _ ? _ : {};
     switch (e[0]) {
         case '@':
             return (function (e, t, n, r, a) {
@@ -67,7 +67,7 @@ function m(e, t, n, _) {
                     }
                 }
                 return null;
-            })(e, t, n, h, m);
+            })(e, t, n, h, I);
         case ':':
             return (function (e, t) {
                 let n = s.ZP.EMOJI_NAME_RE.exec(e);
@@ -129,8 +129,8 @@ function m(e, t, n, _) {
     }
     return null;
 }
-function I(e, t, n, r) {
-    let i = m(e, t, n, r);
+function m(e, t, n, r) {
+    let i = I(e, t, n, r);
     return null == i ? null : (0, h.VI)(i);
 }
 function T(e, t, n) {

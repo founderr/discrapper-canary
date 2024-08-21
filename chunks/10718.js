@@ -1,6 +1,6 @@
 n.d(t, {
     Hf: function () {
-        return I;
+        return m;
     },
     JT: function () {
         return g;
@@ -12,7 +12,7 @@ n.d(t, {
         return A;
     },
     VB: function () {
-        return m;
+        return I;
     },
     Xq: function () {
         return f;
@@ -102,7 +102,7 @@ function p(e, t, n) {
         h = null !== (d = null !== (c = null === (i = _.result) || void 0 === i ? void 0 : null === (r = i.sections) || void 0 === r ? void 0 : r[n]) && void 0 !== c ? c : null === (s = E.result) || void 0 === s ? void 0 : null === (a = s.sections) || void 0 === a ? void 0 : a[n]) && void 0 !== d ? d : null === (u = f.result) || void 0 === u ? void 0 : null === (o = u.sections) || void 0 === o ? void 0 : o[n];
     return null == h ? void 0 : h.descriptor;
 }
-function m(e, t, n) {
+function I(e, t, n) {
     let r = l.ZP.query(
         e,
         {
@@ -119,7 +119,7 @@ function m(e, t, n) {
         sections: r.descriptors
     };
 }
-function I(e) {
+function m(e) {
     let t = l.ZP.getUserState(),
         n = l.ZP.getContextState(e);
     return [null == t ? void 0 : t.result, null == n ? void 0 : n.result];
@@ -136,21 +136,21 @@ function T(e, t, n) {
             allowFetch: !0
         }),
         [h, p] = r.useState(null),
-        m = r.useRef(!1);
-    m.current = f;
-    let I = r.useMemo(() => {
+        I = r.useRef(!1);
+    I.current = f;
+    let m = r.useMemo(() => {
         var e;
         return v(null !== (e = n.placeholderCount) && void 0 !== e ? e : 0, t.commandTypes[0]);
     }, [t.commandTypes, n.placeholderCount]);
     return r.useMemo(() => {
         let e = {
-            loading: m,
+            loading: I,
             commands: c,
             activeSections: u,
             commandsByActiveSection: d,
             filteredSectionId: h,
             hasMoreAfter: !1,
-            placeholders: f ? I : [],
+            placeholders: f ? m : [],
             sectionDescriptors: u,
             filterSection: (e) => {
                 p(e);
@@ -167,7 +167,7 @@ function T(e, t, n) {
                 e.commandsByActiveSection = [
                     {
                         section: t.section,
-                        data: [...t.data, ...I]
+                        data: [...t.data, ...m]
                     },
                     ...d.slice(1)
                 ];
@@ -177,14 +177,14 @@ function T(e, t, n) {
                     (e.commandsByActiveSection = [
                         {
                             section: t,
-                            data: I
+                            data: m
                         }
                     ]);
             }
-            e.commands = [...c, ...I];
+            e.commands = [...c, ...m];
         }
         return e;
-    }, [c, u, h, d, f, I]);
+    }, [c, u, h, d, f, m]);
 }
 function g(e, t, n) {
     var r;

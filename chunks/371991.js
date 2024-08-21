@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     x3: function () {
-        return m;
+        return I;
     }
 }),
     n(47120);
@@ -38,7 +38,7 @@ function p(e) {
         t
     );
 }
-let m = (e) => {
+let I = (e) => {
     let { entry: t, inline: n = !1, textColor: a, hovered: o = !1, bold: l = !1, scaleFontToUserSetting: c = !1 } = e,
         d = p(o),
         _ = i.useMemo(() => (0, f.T_)(t, d), [t, d]),
@@ -66,7 +66,7 @@ t.ZP = (e) => {
         l = (0, f.kr)(t),
         c = (0, o.e7)([d.default], () => d.default.locale);
     return l
-        ? (0, r.jsx)(m, {
+        ? (0, r.jsx)(I, {
               entry: t,
               textColor: n,
               hovered: i,

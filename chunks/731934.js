@@ -135,7 +135,7 @@ function P() {
         ]
     });
 }
-function v(e) {
+function L(e) {
     let { sectionType: t, sectionTitle: n, requests: r } = e,
         i = a.useRef(null),
         l = ''.concat(t, '-list'),
@@ -209,7 +209,7 @@ function v(e) {
         })
     });
 }
-let L = () => {
+let v = () => {
         let e = (0, I.Z)(),
             t = (0, R.mq)(m.ne.ACTIVE),
             n = e ? m.AG : m.i0,
@@ -221,7 +221,7 @@ let L = () => {
         return (0, s.jsx)(s.Fragment, {
             children:
                 t.length > 0
-                    ? (0, s.jsx)(v, {
+                    ? (0, s.jsx)(L, {
                           sectionType: m.ne.ACTIVE,
                           sectionTitle: r,
                           requests: t
@@ -291,7 +291,7 @@ let L = () => {
             t = (0, E.o)(S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({ count: e.length }), S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({ count: e.length }));
         return 0 === e.length
             ? null
-            : (0, s.jsx)(v, {
+            : (0, s.jsx)(L, {
                   sectionType: m.ne.PENDING,
                   sectionTitle: t,
                   requests: e
@@ -301,6 +301,6 @@ t.Z = () => {
     let e = (0, I.Z)();
     return (0, s.jsxs)('div', {
         className: h.container,
-        children: [e ? (0, s.jsx)(b, {}) : (0, s.jsx)(P, {}), (0, s.jsx)(L, {}), (0, s.jsx)(B, {}), (0, s.jsx)(Z, {}), (0, s.jsx)(D, {})]
+        children: [e ? (0, s.jsx)(b, {}) : (0, s.jsx)(P, {}), (0, s.jsx)(v, {}), (0, s.jsx)(B, {}), (0, s.jsx)(Z, {}), (0, s.jsx)(D, {})]
     });
 };

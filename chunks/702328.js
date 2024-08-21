@@ -27,8 +27,8 @@ var s = n(735250),
     O = n(635921),
     b = n(177839),
     P = n(794484),
-    v = n(392521),
-    L = n(349803),
+    L = n(392521),
+    v = n(349803),
     Z = n(179984),
     D = n(409100),
     B = n(391110),
@@ -68,15 +68,15 @@ let V = (e) => {
                               : void 0
                       }),
                       n
-                          ? (0, s.jsx)(v.ZP, {
+                          ? (0, s.jsx)(L.ZP, {
                                 className: k.pdSparklesTop,
-                                variant: v.u0.TOP
+                                variant: L.u0.TOP
                             })
                           : null,
                       n
-                          ? (0, s.jsx)(v.ZP, {
+                          ? (0, s.jsx)(L.ZP, {
                                 className: k.pdSparklesBottom,
-                                variant: v.u0.BOTTOM
+                                variant: L.u0.BOTTOM
                             })
                           : null
                   ]
@@ -91,7 +91,7 @@ t.Z = (e) => {
     }, []);
     let x = a.useRef(null),
         [b, P] = a.useState(!1),
-        [v, U] = a.useState(!1),
+        [L, U] = a.useState(!1),
         [Y, z] = a.useState(!1),
         [Q, q] = a.useState(!1),
         X = (0, l.e7)([T.ZP], () => T.ZP.getPremiumTypeSubscription()),
@@ -247,8 +247,8 @@ t.Z = (e) => {
                     ]
                 }),
                 (0, s.jsx)('div', { className: n ? k.footerSpacingFullscreen : k.footerSpacing }),
-                (0, s.jsx)(L.Z, {
-                    isVisible: !b && !v && Q,
+                (0, s.jsx)(v.Z, {
+                    isVisible: !b && !L && Q,
                     isFullscreen: n,
                     subscriptionTier: ee
                 }),

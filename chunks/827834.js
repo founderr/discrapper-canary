@@ -44,12 +44,12 @@ t.default = (function () {
                         value: '{',
                         description: '"{"'
                     },
-                    m = {
+                    I = {
                         type: 'literal',
                         value: ',',
                         description: '","'
                     },
-                    I = {
+                    m = {
                         type: 'literal',
                         value: '}',
                         description: '"}"'
@@ -237,7 +237,7 @@ t.default = (function () {
                                             if (ed() !== c) {
                                                 if (
                                                     ((i = $),
-                                                    44 === t.charCodeAt($) ? ((a = ','), $++) : ((a = c), 0 === er && ei(m)),
+                                                    44 === t.charCodeAt($) ? ((a = ','), $++) : ((a = c), 0 === er && ei(I)),
                                                     a !== c &&
                                                     (s = ed()) !== c &&
                                                     (o = (function () {
@@ -247,7 +247,7 @@ t.default = (function () {
                                                                 var e, n, r, i, a, s, o;
                                                                 if (((e = $), t.substr($, 6) === T ? ((n = T), ($ += 6)) : ((n = c), 0 === er && ei(g)), n === c && (t.substr($, 4) === S ? ((n = S), ($ += 4)) : ((n = c), 0 === er && ei(A)), n === c && (t.substr($, 4) === N ? ((n = N), ($ += 4)) : ((n = c), 0 === er && ei(v)))), n !== c)) {
                                                                     if (ed() !== c) {
-                                                                        if (((r = $), 44 === t.charCodeAt($) ? ((i = ','), $++) : ((i = c), 0 === er && ei(m)), i !== c && (a = ed()) !== c && (s = ep()) !== c ? (r = i = [i, a, s]) : (($ = r), (r = c)), r === c && (r = null), r !== c)) {
+                                                                        if (((r = $), 44 === t.charCodeAt($) ? ((i = ','), $++) : ((i = c), 0 === er && ei(I)), i !== c && (a = ed()) !== c && (s = ep()) !== c ? (r = i = [i, a, s]) : (($ = r), (r = c)), r === c && (r = null), r !== c)) {
                                                                             e = n = {
                                                                                 type: n + 'Format',
                                                                                 style: (o = r) && o[2]
@@ -261,7 +261,7 @@ t.default = (function () {
                                                                     var e, n, r, i, a;
                                                                     if (((e = $), t.substr($, 6) === O ? ((n = O), ($ += 6)) : ((n = c), 0 === er && ei(R)), n !== c)) {
                                                                         if (ed() !== c) {
-                                                                            if ((44 === t.charCodeAt($) ? ((r = ','), $++) : ((r = c), 0 === er && ei(m)), r !== c)) {
+                                                                            if ((44 === t.charCodeAt($) ? ((r = ','), $++) : ((r = c), 0 === er && ei(I)), r !== c)) {
                                                                                 if (ed() !== c) {
                                                                                     if ((i = eu()) !== c) {
                                                                                         e = n = {
@@ -281,7 +281,7 @@ t.default = (function () {
                                                                     var e, n, r, i, a;
                                                                     if (((e = $), t.substr($, 13) === C ? ((n = C), ($ += 13)) : ((n = c), 0 === er && ei(y)), n !== c)) {
                                                                         if (ed() !== c) {
-                                                                            if ((44 === t.charCodeAt($) ? ((r = ','), $++) : ((r = c), 0 === er && ei(m)), r !== c)) {
+                                                                            if ((44 === t.charCodeAt($) ? ((r = ','), $++) : ((r = c), 0 === er && ei(I)), r !== c)) {
                                                                                 if (ed() !== c) {
                                                                                     if ((i = eu()) !== c) {
                                                                                         e = n = {
@@ -301,7 +301,7 @@ t.default = (function () {
                                                                     var e, n, r, i, a;
                                                                     if (((e = $), t.substr($, 6) === D ? ((n = D), ($ += 6)) : ((n = c), 0 === er && ei(L)), n !== c)) {
                                                                         if (ed() !== c) {
-                                                                            if ((44 === t.charCodeAt($) ? ((r = ','), $++) : ((r = c), 0 === er && ei(m)), r !== c)) {
+                                                                            if ((44 === t.charCodeAt($) ? ((r = ','), $++) : ((r = c), 0 === er && ei(I)), r !== c)) {
                                                                                 if (ed() !== c) {
                                                                                     if (((i = []), (a = el()) !== c)) for (; a !== c; ) i.push(a), (a = el());
                                                                                     else i = c;
@@ -326,7 +326,7 @@ t.default = (function () {
                                                     i !== c)
                                                 ) {
                                                     if ((a = ed()) !== c) {
-                                                        if ((125 === t.charCodeAt($) ? ((s = '}'), $++) : ((s = c), 0 === er && ei(I)), s !== c)) {
+                                                        if ((125 === t.charCodeAt($) ? ((s = '}'), $++) : ((s = c), 0 === er && ei(m)), s !== c)) {
                                                             e = n = {
                                                                 type: 'argumentElement',
                                                                 id: r,
@@ -353,7 +353,7 @@ t.default = (function () {
                                     if (ed() !== c) {
                                         if ((a = es()) !== c) {
                                             if (ed() !== c) {
-                                                if ((125 === t.charCodeAt($) ? ((s = '}'), $++) : ((s = c), 0 === er && ei(I)), s !== c))
+                                                if ((125 === t.charCodeAt($) ? ((s = '}'), $++) : ((s = c), 0 === er && ei(m)), s !== c))
                                                     e = n = {
                                                         type: 'optionalFormatPattern',
                                                         selector: r,

@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     tR: function () {
-        return I;
+        return m;
     },
     tj: function () {
         return f;
@@ -45,8 +45,8 @@ let o = /^[0]+/,
     },
     h = i()('2021-04-12T00:00:00'),
     p = (e, t) => e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0),
-    m = (e, t) => e.value.unix() - t.value.unix();
-class I {
+    I = (e, t) => e.value.unix() - t.value.unix();
+class m {
     lookupByValue(e) {
         if (null == e) return;
         let t = p(h, e);
@@ -81,7 +81,7 @@ class I {
                 label: n,
                 value: t
             }),
-            this.options.sort(m),
+            this.options.sort(I),
             e
         );
     }
@@ -106,7 +106,7 @@ class I {
                 t.forEach((t) => {
                     null == this.lookupByValue(t) && e.push(this._createNewOption(t));
                 }),
-                e.sort(m),
+                e.sort(I),
                 e
             );
         }

@@ -26,8 +26,8 @@ var r = n(488745),
     f = n(311899),
     h = n(831280),
     p = n(221022),
-    m = n(623226),
-    I = n(66099),
+    I = n(623226),
+    m = n(66099),
     T = n(130196),
     g = n(739050),
     S = n(985265),
@@ -129,8 +129,8 @@ Z = {
     'he-IL': f.Z,
     'hr-HR': h.Z,
     'hu-HU': p.Z,
-    'it-IT': m.Z,
-    'ja-JP': I.Z,
+    'it-IT': I.Z,
+    'ja-JP': m.Z,
     'ko-KR': T.Z,
     'lt-LT': g.Z,
     'lv-LV': S.Z,
@@ -189,7 +189,7 @@ function W(e, t, n) {
 }
 function K(e, t, n) {
     var r, i, a;
-    let { key: s, closeOnSelect: o, isVirtualized: l, 'aria-haspopup': u, onPressStart: c, onPressUp: d, onPress: _, onPressChange: E, onPressEnd: f, onHoverStart: h, onHoverChange: p, onHoverEnd: m, onKeyDown: I, onKeyUp: T, onFocus: g, onFocusChange: S, onBlur: A } = e,
+    let { key: s, closeOnSelect: o, isVirtualized: l, 'aria-haspopup': u, onPressStart: c, onPressUp: d, onPress: _, onPressChange: E, onPressEnd: f, onHoverStart: h, onHoverChange: p, onHoverEnd: I, onKeyDown: m, onKeyUp: T, onFocus: g, onFocusChange: S, onBlur: A } = e,
         N = !!u,
         v = null !== (i = e.isDisabled) && void 0 !== i ? i : t.disabledKeys.has(s),
         O = null !== (a = e.isSelected) && void 0 !== a ? a : t.selectionManager.isSelected(s),
@@ -244,7 +244,7 @@ function K(e, t, n) {
                 !(0, B.E)() && (t.selectionManager.setFocused(!0), t.selectionManager.setFocusedKey(s)), null == h || h(e);
             },
             onHoverChange: p,
-            onHoverEnd: m
+            onHoverEnd: I
         }),
         { keyboardProps: K } = (0, B.v5)({
             onKeyDown: (e) => {
@@ -260,7 +260,7 @@ function K(e, t, n) {
                         !v && !1 !== o && !N && C && C();
                         break;
                     default:
-                        !N && e.continuePropagation(), null == I || I(e);
+                        !N && e.continuePropagation(), null == m || m(e);
                 }
             },
             onKeyUp: T

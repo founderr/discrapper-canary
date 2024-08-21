@@ -17,7 +17,7 @@ var r = n(470079),
             f = e.header,
             h = e.styles,
             p = e.className,
-            m = (0, s.default)(
+            I = (0, s.default)(
                 (0, o.Z)(
                     {
                         default: {
@@ -80,14 +80,14 @@ var r = n(470079),
         return r.createElement(
             'div',
             {
-                style: m.picker,
+                style: I.picker,
                 className: 'google-picker ' + (void 0 === p ? '' : p)
             },
-            r.createElement('div', { style: m.head }, f),
-            r.createElement('div', { style: m.swatch }),
+            r.createElement('div', { style: I.head }, f),
+            r.createElement('div', { style: I.swatch }),
             r.createElement(
                 'div',
-                { style: m.saturation },
+                { style: I.saturation },
                 r.createElement(l.OQ, {
                     hsl: a,
                     hsv: _,
@@ -97,18 +97,18 @@ var r = n(470079),
             ),
             r.createElement(
                 'div',
-                { style: m.body },
+                { style: I.body },
                 r.createElement(
                     'div',
                     {
-                        style: m.controls,
+                        style: I.controls,
                         className: 'flexbox-fix'
                     },
                     r.createElement(
                         'div',
-                        { style: m.hue },
+                        { style: I.hue },
                         r.createElement(l.PS, {
-                            style: m.Hue,
+                            style: I.Hue,
                             hsl: a,
                             radius: '4px',
                             pointer: c.Z,

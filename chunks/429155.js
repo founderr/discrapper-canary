@@ -7,7 +7,7 @@ var r = n(735250),
     l = n(98528),
     u = n(653248);
 let c = i.forwardRef(function (e, t) {
-    let { categories: n, store: c, hasSearchResults: d, listPadding: _, renderRow: E, renderSection: f, renderSectionHeader: h, renderSectionFooter: p, renderInspector: m, renderEmptySearchState: I, rowCount: T, rowCountBySection: g, rowHeight: S, sectionHeaderHeight: A, sectionFooterHeight: N, renderUpsell: v, setShowUpsell: O } = e,
+    let { categories: n, store: c, hasSearchResults: d, listPadding: _, renderRow: E, renderSection: f, renderSectionHeader: h, renderSectionFooter: p, renderInspector: I, renderEmptySearchState: m, rowCount: T, rowCountBySection: g, rowHeight: S, sectionHeaderHeight: A, sectionFooterHeight: N, renderUpsell: v, setShowUpsell: O } = e,
         R = i.useRef(!1),
         C = i.useRef(null),
         y = (0, o.Iu)((e) => e.searchQuery),
@@ -85,8 +85,8 @@ let c = i.forwardRef(function (e, t) {
         (0, r.jsxs)('div', {
             className: u.wrapper,
             children: [
-                y.length > 0 && !d && null != I
-                    ? I()
+                y.length > 0 && !d && null != m
+                    ? m()
                     : (0, r.jsx)(a.Z, {
                           role: 'none presentation',
                           listPadding: _,
@@ -104,7 +104,7 @@ let c = i.forwardRef(function (e, t) {
                           ref: C
                       }),
                 null == v ? void 0 : v(),
-                null == m ? void 0 : m()
+                null == I ? void 0 : I()
             ]
         })
     );

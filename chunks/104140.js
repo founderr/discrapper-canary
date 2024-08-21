@@ -18,8 +18,8 @@ var r,
     f = n(722770),
     h = n(846519),
     p = n(215569),
-    m = n(314274);
-function I(e, t, n) {
+    I = n(314274);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -78,7 +78,7 @@ class v extends s.Component {
         });
     }
     constructor(...e) {
-        super(...e), I(this, 'timeoutId', void 0);
+        super(...e), m(this, 'timeoutId', void 0);
     }
 }
 function O(e) {
@@ -230,14 +230,14 @@ class R extends (i = s.Component) {
     }
     render() {
         let { children: e, className: t, innerClassName: n, lowerBadge: r, lowerBadgeSize: i, style: o, upperBadge: u, highlight: c } = this.props,
-            { maskId: d, lowerBadgeMask: E, upperBadgeMask: h, focused: I, hasRenderedBadge: T, renderComplex: g } = this.state;
+            { maskId: d, lowerBadgeMask: E, upperBadgeMask: h, focused: m, hasRenderedBadge: T, renderComplex: g } = this.state;
         if (!g)
             return (0, a.jsx)(
                 'div',
                 {
                     className: l()(t, {
-                        [m.wrapperSimple]: !0,
-                        [m.simpleFocused]: I
+                        [I.wrapperSimple]: !0,
+                        [I.simpleFocused]: m
                     }),
                     style: o,
                     onFocus: this.handleFocus,
@@ -248,7 +248,7 @@ class R extends (i = s.Component) {
                             width: 48,
                             height: 48,
                             viewBox: '0 0 '.concat(48, ' ').concat(48),
-                            className: m.svg,
+                            className: I.svg,
                             overflow: 'visible',
                             children: (0, a.jsx)(
                                 'foreignObject',
@@ -278,7 +278,7 @@ class R extends (i = s.Component) {
         return (0, a.jsxs)(
             'div',
             {
-                className: l()(t, m.wrapper),
+                className: l()(t, I.wrapper),
                 style: o,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
@@ -289,7 +289,7 @@ class R extends (i = s.Component) {
                             width: 48,
                             height: 48,
                             viewBox: '0 0 '.concat(48, ' ').concat(48),
-                            className: l()(m.svg, { [m.noContain]: c }),
+                            className: l()(I.svg, { [I.noContain]: c }),
                             overflow: 'visible',
                             children: [
                                 (0, a.jsxs)('defs', {
@@ -345,7 +345,7 @@ class R extends (i = s.Component) {
                                         (0, a.jsx)('use', {
                                             href: '#'.concat(N),
                                             fill: 'white',
-                                            className: l()({ [m.isHighlighted]: c })
+                                            className: l()({ [I.isHighlighted]: c })
                                         }),
                                         T
                                             ? (0, a.jsxs)(a.Fragment, {
@@ -385,16 +385,16 @@ class R extends (i = s.Component) {
                                           ]
                                       })
                                     : null,
-                                I
+                                m
                                     ? (0, a.jsxs)(s.Fragment, {
                                           children: [
                                               (0, a.jsx)('g', {
-                                                  className: m.focusStroke,
+                                                  className: I.focusStroke,
                                                   mask: 'url(#'.concat(O, ')'),
                                                   children: (0, a.jsx)('use', { href: '#'.concat(N) })
                                               }),
                                               (0, a.jsxs)('g', {
-                                                  className: m.focusFill,
+                                                  className: I.focusFill,
                                                   children: [null != u ? (0, a.jsx)('use', { href: '#'.concat(S) }) : null, null != r ? (0, a.jsx)('use', { href: '#'.concat(A) }) : null]
                                               })
                                           ]
@@ -405,7 +405,7 @@ class R extends (i = s.Component) {
                                         d: this.getPathInterpolation(),
                                         stroke: f.Z.BRAND_500,
                                         'stroke-width': 2,
-                                        className: m.highlight,
+                                        className: I.highlight,
                                         mask: 'url(#'.concat(O, ')')
                                     }),
                                 (0, a.jsx)(
@@ -432,7 +432,7 @@ class R extends (i = s.Component) {
                                 ? (0, a.jsx)(
                                       v,
                                       {
-                                          className: m.lowerBadge,
+                                          className: I.lowerBadge,
                                           animatedStyle: this.getLowerBadgeStyles(),
                                           children: r
                                       },
@@ -443,7 +443,7 @@ class R extends (i = s.Component) {
                                 ? (0, a.jsx)(
                                       v,
                                       {
-                                          className: m.upperBadge,
+                                          className: I.upperBadge,
                                           animatedStyle: this.getUpperBadgeStyles(),
                                           children: u
                                       },
@@ -459,25 +459,25 @@ class R extends (i = s.Component) {
     }
     constructor(...e) {
         super(...e),
-            I(this, 'timeout', new h.V7()),
-            I(this, 'state', {
+            m(this, 'timeout', new h.V7()),
+            m(this, 'state', {
                 renderComplex: !1,
                 hasRenderedBadge: !1,
                 maskId: (0, E.Z)(),
                 focused: !1
             }),
-            I(this, 'handleTimeout', () => {
+            m(this, 'handleTimeout', () => {
                 this.timeout.stop(), this.setState({ renderComplex: !1 });
             }),
-            I(this, 'handleFocus', () => {
+            m(this, 'handleFocus', () => {
                 this.setState({ focused: !0 });
             }),
-            I(this, 'handleBlur', () => {
+            m(this, 'handleBlur', () => {
                 this.setState({ focused: !1 });
             });
     }
 }
-I(R, 'defaultProps', {
+m(R, 'defaultProps', {
     selected: !1,
     lowerBadgeSize: {
         width: 16,

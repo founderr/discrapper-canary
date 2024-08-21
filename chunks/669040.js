@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(2052),
     h = n(607070),
     p = n(906732),
-    m = n(218867),
-    I = n(806966),
+    I = n(218867),
+    m = n(806966),
     T = n(28546),
     g = n(691251),
     S = n(98528),
@@ -52,7 +52,7 @@ let K = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
     J = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
     ee = (e) => e + 2 * J,
     et = (e) => {
-        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: a, emojiSize: o, onEmojiSelect: u, searchQuery: _, sectionDescriptors: E, setCollapsedSections: p, getEmojiItemProps: m, getEmojiRowProps: T, isScrolling: S, isUsingKeyboardNavigation: v, allowAnimatedEmoji: O, channelGuildId: R, messageId: y, isBurstReaction: D, listHeaderClassName: L, activeSectionIndex: P, upsellGlowOpacity: U, emojiListRef: w } = e,
+        let { collapsedSections: t, diversitySurrogate: n, emojiGrid: a, emojiSize: o, onEmojiSelect: u, searchQuery: _, sectionDescriptors: E, setCollapsedSections: p, getEmojiItemProps: I, getEmojiRowProps: T, isScrolling: S, isUsingKeyboardNavigation: v, allowAnimatedEmoji: O, channelGuildId: R, messageId: y, isBurstReaction: D, listHeaderClassName: L, activeSectionIndex: P, upsellGlowOpacity: U, emojiListRef: w } = e,
             Y = (0, f.O)(),
             j = i.useRef(H.xAR),
             J = i.useMemo(() => ('' !== n ? d.Z.convert.toCodePoint(n) : ''), [n]),
@@ -95,7 +95,7 @@ let K = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                     r = e.type === B.ld.EMOJI ? e.emoji.allNamesString : e.name;
                 j.current !== H.xAR && window.cancelAnimationFrame(j.current),
                     (j.current = window.requestAnimationFrame(() => {
-                        I.kJ.setInspectedExpressionPosition(t, n, g.u.MOUSE_EVENT), I.kJ.setSearchPlaceholder(r), (j.current = H.xAR);
+                        m.kJ.setInspectedExpressionPosition(t, n, g.u.MOUSE_EVENT), m.kJ.setSearchPlaceholder(r), (j.current = H.xAR);
                     }));
             }, []),
             ei = (0, c.e7)([N.qc], () => N.qc.hasHotspot(N.v6.FAVORITE_EMOJI_TOOLTIP), []),
@@ -112,7 +112,7 @@ let K = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                                 surrogateCodePoint: J,
                                 onInspect: er,
                                 onSelect: u,
-                                getEmojiItemProps: m,
+                                getEmojiItemProps: I,
                                 getEmojiRowProps: T,
                                 isScrolling: S,
                                 isUsingKeyboardNavigation: v,
@@ -133,7 +133,7 @@ let K = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                             e
                         );
                     }),
-                [a, E, o, J, er, u, m, T, S, v, O, ei, R, y, D, w]
+                [a, E, o, J, er, u, I, T, S, v, O, ei, R, y, D, w]
             );
         i.useEffect(
             () => () => {
@@ -243,7 +243,7 @@ let K = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
     en = i.memo(function (e) {
         let { diversitySurrogate: t, emojiGrid: n, emojiListRef: a, emojiSize: s, onEmojiSelect: o, setUpsellConfigs: l, sectionDescriptors: d, rowCountBySection: _, collapsedSections: h, setCollapsedSections: g, getEmojiItemProps: A, getEmojiRowProps: N, rowCount: C, isUsingKeyboardNavigation: b, channelGuildId: w, messageId: x, isBurstReaction: G, listHeaderClassName: k } = e,
             F = i.useRef(!1),
-            V = I.kJ.useStore((e) => e.activeCategoryIndex),
+            V = m.kJ.useStore((e) => e.activeCategoryIndex),
             Z = (0, T.Iu)((e) => e.searchQuery),
             K = D.Yk.useSetting(),
             z = (0, c.e7)([L.default], () => L.default.getCurrentUser()),
@@ -271,7 +271,7 @@ let K = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                 renderSectionFooter: ef,
                 sectionMarginBottom: eh,
                 sectionHeaderHeight: ep,
-                sectionFooterHeight: em
+                sectionFooterHeight: eI
             } = et({
                 collapsedSections: h,
                 diversitySurrogate: t,
@@ -294,7 +294,7 @@ let K = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                 upsellGlowOpacity: ei,
                 emojiListRef: a
             }),
-            eI = (0, S.Uf)({
+            em = (0, S.Uf)({
                 listRef: a,
                 searchQuery: Z,
                 nitroLockedSectionStates: d,
@@ -306,7 +306,7 @@ let K = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                 isScrolling: F,
                 listRef: a,
                 onActiveCategoryIndexChange: (e) => {
-                    J(e), '' === Z && I.kJ.setActiveCategoryIndex(e);
+                    J(e), '' === Z && m.kJ.setActiveCategoryIndex(e);
                 },
                 scrollOffset: 0,
                 searchQuery: Z,
@@ -319,9 +319,9 @@ let K = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
         });
         let eg = i.useCallback(
                 (e) => {
-                    eI(e), eT(e);
+                    em(e), eT(e);
                 },
-                [eI, eT]
+                [em, eT]
             ),
             eS = d.length > 0;
         return (
@@ -340,7 +340,7 @@ let K = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                 className: W.listWrapper,
                 children: [
                     eS
-                        ? (0, r.jsx)(m.Z, {
+                        ? (0, r.jsx)(I.Z, {
                               role: 'none presentation',
                               className: W.list,
                               listPadding: ec,
@@ -354,7 +354,7 @@ let K = (0, w.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                               rowHeight: ee(s),
                               sectionHeaderHeight: ep,
                               sectionMarginBottom: eh,
-                              sectionFooterHeight: em,
+                              sectionFooterHeight: eI,
                               stickyHeaders: !0,
                               ref: a
                           })

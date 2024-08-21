@@ -17,10 +17,10 @@ let h = {
         overrides: {}
     },
     p = h;
-function m() {
+function I() {
     r = f.Z.getCurrentConfig({ location: 'PerksDemosStore' }, { autoTrackExposure: !1 });
 }
-class I extends (o = u.ZP.Store) {
+class m extends (o = u.ZP.Store) {
     isAvailable(e) {
         var t;
         return null !== (t = p.available[e]) && void 0 !== t && t;
@@ -48,7 +48,7 @@ class I extends (o = u.ZP.Store) {
     }
 }
 (s = 'PerksDemosStore'),
-    (a = 'displayName') in (i = I)
+    (a = 'displayName') in (i = m)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -56,7 +56,7 @@ class I extends (o = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new I(c.Z, {
+    (t.Z = new m(c.Z, {
         PREMIUM_PERKS_DEMOS_FETCH_SUCCESS: function (e) {
             let {
                 demos: { available: t, activated: n }
@@ -101,7 +101,7 @@ class I extends (o = u.ZP.Store) {
         STREAM_STOP: function () {
             (0, E.cD)(!1);
         },
-        CONNECTION_OPEN: m,
-        EXPERIMENTS_FETCH_SUCCESS: m,
-        EXPERIMENT_OVERRIDE_BUCKET: m
+        CONNECTION_OPEN: I,
+        EXPERIMENTS_FETCH_SUCCESS: I,
+        EXPERIMENT_OVERRIDE_BUCKET: I
     }));

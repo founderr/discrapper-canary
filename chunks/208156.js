@@ -22,14 +22,14 @@ var r = n(735250),
     f = n(53289),
     h = n(953101),
     p = n(701488),
-    m = n(981631),
-    I = n(654892);
+    I = n(981631),
+    m = n(654892);
 function T(e) {
-    let { url: t, className: n, style: a, onLoad: s, shouldRefocus: I, queryParams: T, allowPopups: g = !1, referrerPolicy: S = 'origin' } = e,
-        A = (0, u.e7)([c.Z], () => c.Z.getWindow(m.KJ3.CHANNEL_CALL_POPOUT)),
+    let { url: t, className: n, style: a, onLoad: s, shouldRefocus: m, queryParams: T, allowPopups: g = !1, referrerPolicy: S = 'origin' } = e,
+        A = (0, u.e7)([c.Z], () => c.Z.getWindow(I.KJ3.CHANNEL_CALL_POPOUT)),
         N = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
         v = i.useRef(null),
-        O = (0, f.Z)(v, I, null == A ? window : A),
+        O = (0, f.Z)(v, m, null == A ? window : A),
         R = {
             ...T,
             frame_id: N,
@@ -39,12 +39,12 @@ function T(e) {
         D = _.Z.theme,
         L = { ...a };
     return (
-        D === m.BRd.LIGHT ? (L.colorScheme = 'light') : (L.colorScheme = 'dark'),
+        D === I.BRd.LIGHT ? (L.colorScheme = 'light') : (L.colorScheme = 'dark'),
         i.useEffect(
             () => (
-                E.S.dispatch(m.CkL.IFRAME_MOUNT, { id: N }),
+                E.S.dispatch(I.CkL.IFRAME_MOUNT, { id: N }),
                 () => {
-                    E.S.dispatch(m.CkL.IFRAME_UNMOUNT, { id: N });
+                    E.S.dispatch(I.CkL.IFRAME_UNMOUNT, { id: N });
                 }
             ),
             [N]
@@ -55,9 +55,9 @@ function T(e) {
                 y(t);
             };
             return (
-                E.S.subscribe(m.CkL.MANUAL_IFRAME_RESIZING, e),
+                E.S.subscribe(I.CkL.MANUAL_IFRAME_RESIZING, e),
                 () => {
-                    E.S.unsubscribe(m.CkL.MANUAL_IFRAME_RESIZING, e);
+                    E.S.unsubscribe(I.CkL.MANUAL_IFRAME_RESIZING, e);
                 }
             );
         }, []),
@@ -88,11 +88,11 @@ function g(e) {
             [t]
         );
     return (0, r.jsxs)('div', {
-        className: I.fillParent,
+        className: m.fillParent,
         children: [
-            !n && (0, r.jsx)('div', { className: s()(I.fillParent, I.iframePlaceholder) }),
+            !n && (0, r.jsx)('div', { className: s()(m.fillParent, m.iframePlaceholder) }),
             (0, r.jsx)('div', {
-                className: s()(I.fillParent, n ? void 0 : I.hiddenIframeContainer),
+                className: s()(m.fillParent, n ? void 0 : m.hiddenIframeContainer),
                 children: (0, r.jsx)(T, {
                     ...e,
                     onLoad: o

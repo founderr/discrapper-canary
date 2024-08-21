@@ -34,11 +34,11 @@ function p(e) {
     let { channel: t } = e;
     return h(t);
 }
-function m(e) {
+function I(e) {
     let { threads: t } = e;
     t.forEach(T);
 }
-function I(e) {
+function m(e) {
     let t = !1;
     for (let n of e.messages) for (let e of n) t = T(e.thread) || t;
     return (
@@ -113,10 +113,10 @@ class g extends (r = u.ZP.Store) {
             if (null == t) return !1;
             null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), (t.memberCount = e.memberCount);
         },
-        SEARCH_FINISH: I,
-        MOD_VIEW_SEARCH_FINISH: I,
-        LOAD_THREADS_SUCCESS: m,
-        LOAD_ARCHIVED_THREADS_SUCCESS: m,
+        SEARCH_FINISH: m,
+        MOD_VIEW_SEARCH_FINISH: m,
+        LOAD_THREADS_SUCCESS: I,
+        LOAD_ARCHIVED_THREADS_SUCCESS: I,
         THREAD_DELETE: function (e) {
             let { channel: t } = e;
             delete E[t.id];

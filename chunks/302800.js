@@ -6,7 +6,7 @@ n.d(t, {
         return a;
     },
     M7: function () {
-        return v;
+        return L;
     },
     UY: function () {
         return j;
@@ -115,7 +115,7 @@ let b = {
             assetIds: ['a_ef8d97374ffdbf140df1164be6c69e46', 'a_4430a4ee89b7fba456e765db21f38485', 'a_1005898c6acf56a9ac5010baf444f6fd']
         }
     },
-    v = (e) =>
+    L = (e) =>
         (0, l.EQ)(e)
             .with(c.T.TIDE, () => ({
                 label: () => T.Z.Messages.COLLECTIBLES_SHY_FOR_A_LIMITED_TIME,
@@ -127,7 +127,7 @@ let b = {
                 }
             }))
             .otherwise(() => null),
-    L = {
+    v = {
         imageSrc: N,
         style: {
             position: 'absolute',
@@ -160,8 +160,8 @@ let b = {
     },
     j = (e) =>
         (0, l.EQ)(e)
-            .with('1252405010608951358', () => L)
-            .with('1252405017688936508', () => L)
+            .with('1252405010608951358', () => v)
+            .with('1252405017688936508', () => v)
             .with('1267521289330102344', () => B)
             .with('1267521289355268154', () => B)
             .with('1266160780928352268', () => B)

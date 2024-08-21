@@ -88,12 +88,12 @@ let c = () => ({
             })
         };
     },
-    m = () => ({
+    I = () => ({
         color: r.Z.unsafe_rawColors.PREMIUM_PERK_GOLD.css,
         icon: i.StarIcon,
         description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_VANITY_URL
     }),
-    I = () => ({
+    m = () => ({
         icon: a.Z,
         description: u.Z.Messages.PREMIUM_GUILD_USER_FEATURE_PROFILE_BADGE
     }),
@@ -140,10 +140,10 @@ function R() {
     return [f(), p(l.Eu4.TIER_2), v(), A()];
 }
 function C() {
-    return [p(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), N(), m(), A()];
+    return [p(l.Eu4.TIER_3, r.Z.unsafe_rawColors.PREMIUM_PERK_GREEN.css), N(), I(), A()];
 }
 function y() {
-    return [m(), E(), p(l.Eu4.TIER_3), A()];
+    return [I(), E(), p(l.Eu4.TIER_3), A()];
 }
 function D() {
     return [c(), h(), d(), A()];
@@ -152,5 +152,5 @@ function L() {
     return [h(), A()];
 }
 function b() {
-    return [T(), g(), I(), S()];
+    return [T(), g(), m(), S()];
 }

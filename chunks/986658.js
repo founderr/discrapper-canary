@@ -17,8 +17,8 @@ var r = n(470079),
             f = e.hex,
             h = e.renderers,
             p = e.styles,
-            m = e.className,
-            I = e.defaultView,
+            I = e.className,
+            m = e.defaultView,
             T = (0, s.default)(
                 (0, o.Z)(
                     {
@@ -89,7 +89,7 @@ var r = n(470079),
             'div',
             {
                 style: T.picker,
-                className: 'chrome-picker ' + (void 0 === m ? '' : m)
+                className: 'chrome-picker ' + (void 0 === I ? '' : I)
             },
             r.createElement(
                 'div',
@@ -143,7 +143,7 @@ var r = n(470079),
                     rgb: a,
                     hsl: _,
                     hex: f,
-                    view: I,
+                    view: m,
                     onChange: n,
                     disableAlpha: i
                 })

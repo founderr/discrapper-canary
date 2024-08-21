@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     },
     kC: function () {
-        return I;
+        return m;
     },
     l3: function () {
         return S;
@@ -40,7 +40,7 @@ function p(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function m(e) {
+function I(e) {
     let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: s } = e;
     return {
         url: t,
@@ -51,7 +51,7 @@ function m(e) {
         placeholderVersion: s
     };
 }
-function I(e, t, n) {
+function m(e, t, n) {
     let r = {
         id: i().uniqueId('embed_'),
         url: n.url,
@@ -90,13 +90,13 @@ function I(e, t, n) {
         switch (r.type) {
             case u.hBH.ARTICLE:
             case u.hBH.IMAGE:
-                r.image = m(n.thumbnail);
+                r.image = I(n.thumbnail);
                 break;
             default:
-                r.thumbnail = m(n.thumbnail);
+                r.thumbnail = I(n.thumbnail);
         }
     if (
-        (null != n.image && p(n.image) && (r.image = m(n.image)),
+        (null != n.image && p(n.image) && (r.image = I(n.image)),
         null != n.video &&
             (null == r.thumbnail &&
                 null != n.video.proxy_url &&
@@ -121,7 +121,7 @@ function I(e, t, n) {
                     let r = null != n.proxy_url || /^https:/i.test(n.url);
                     return null != e && 1492472454139 > l.default.extractTimestamp(e) && (r = r && null != t && E.test(t.name)), r;
                 })(t, n.provider, n.video) &&
-                (r.video = m(n.video))),
+                (r.video = I(n.video))),
         c.k.has(r.type))
     ) {
         var a;

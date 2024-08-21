@@ -1,6 +1,6 @@
 n.d(t, {
     Hg: function () {
-        return I;
+        return m;
     },
     KC: function () {
         return d;
@@ -48,19 +48,19 @@ function E(e, t) {
     let n = p(e).locale(),
         r = ''.concat(n, ':').concat(t),
         i = l[r];
-    return null == i && (i = l[r] = (0, a.Z)(t)), i(m(e));
+    return null == i && (i = l[r] = (0, a.Z)(t)), i(I(e));
 }
 function f(e) {
     let t;
     let n = i().localeData(),
         r = i()(),
-        a = c(m(e), r.toDate());
+        a = c(I(e), r.toDate());
     return a < -1 ? E(e, 'L LT') : ((t = a < 0 ? 'lastDay' : a < 1 ? 'sameDay' : a < 2 ? 'nextDay' : 'sameElse'), E(e, n.calendar(t, p(e), r)));
 }
 function h(e) {
     let t = i().localeData(),
         n = i()(),
-        r = c(m(e), n.toDate());
+        r = c(I(e), n.toDate());
     if (0 === r) return E(e, t.longDateFormat('LT'));
     if (-1 === r) return E(e, t.calendar('lastDay', p(e), n));
     if (r > -7) return E(e, 'dddd');
@@ -69,10 +69,10 @@ function h(e) {
 function p(e) {
     return i().isMoment(e) ? e : i()(e);
 }
-function m(e) {
+function I(e) {
     return i().isMoment(e) ? e.toDate() : e;
 }
-function I(e) {
+function m(e) {
     let t;
     let n = i().localeData(),
         r = new Date(),

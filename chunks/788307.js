@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(574176),
     h = n(106301),
     p = n(223135),
-    m = n(695346),
-    I = n(314897),
+    I = n(695346),
+    m = n(314897),
     T = n(592125),
     g = n(496675),
     S = n(158776),
@@ -30,7 +30,7 @@ var r = n(735250),
 let R = '14px';
 function C(e) {
     let { emoji: t, className: n, animate: i = !0, hideTooltip: a, tooltipDelay: o } = e,
-        c = m.Yk.useSetting(),
+        c = I.Yk.useSetting(),
         d = null != t.id ? ':'.concat(t.name, ':') : E.ZP.translateSurrogatesToInlineEmoji(t.name),
         _ = {
             className: s()(O.emoji, n),
@@ -88,9 +88,9 @@ let y = (e) => {
 };
 t.Z = (e) => {
     var t;
-    let { activities: n, applicationStream: i, className: a, textClassName: s, emojiClassName: u, animate: E = !0, hideTooltip: m = !1, hideEmoji: D = !1, user: L, hasQuest: b } = e,
+    let { activities: n, applicationStream: i, className: a, textClassName: s, emojiClassName: u, animate: E = !0, hideTooltip: I = !1, hideEmoji: D = !1, user: L, hasQuest: b } = e,
         M = null != n ? n.find((e) => e.type === v.IIU.CUSTOM_STATUS) : null,
-        P = (0, o.e7)([I.default], () => I.default.getId() === (null == L ? void 0 : L.id)),
+        P = (0, o.e7)([m.default], () => m.default.getId() === (null == L ? void 0 : L.id)),
         U = (0, o.e7)([h.Z], () => (P ? h.Z.getHangStatusActivity() : null != n ? n.find((e) => e.type === v.IIU.HANG_STATUS) : null)),
         w = (0, o.e7)([A.Z, T.Z], () => {
             var e;
@@ -117,7 +117,7 @@ t.Z = (e) => {
           (k = (0, r.jsx)(C, {
               emoji: M.emoji,
               animate: E,
-              hideTooltip: m,
+              hideTooltip: I,
               className: u
           }));
     let F = (0, o.e7)([S.Z], () => (null != L ? S.Z.getStatus(L.id) : null)),

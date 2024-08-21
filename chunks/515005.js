@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(626135),
     h = n(285651),
     p = n(373228),
-    m = n(378233),
-    I = n(419922),
+    I = n(378233),
+    m = n(419922),
     T = n(490095),
     g = n(981631),
     S = n(689938),
@@ -105,7 +105,7 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
                             e.guild_id
                         );
                     case p.al.STICKER: {
-                        let o = t && null != G && (0, m.jl)(e.sticker) && !G.has(e.sticker.pack_id);
+                        let o = t && null != G && (0, I.jl)(e.sticker) && !G.has(e.sticker.pack_id);
                         return (0, i.createElement)(
                             'div',
                             {
@@ -124,7 +124,7 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
                                 onClick: (t) => {
                                     if ((null == y ? void 0 : y.current) === !0 || (null == D ? void 0 : D.current) === !0) return;
                                     let n = t.altKey;
-                                    n && e.type === p.al.STICKER && !(0, m.gM)(e.sticker.id) && K(e.sticker.id), null == b || b(e, n);
+                                    n && e.type === p.al.STICKER && !(0, I.gM)(e.sticker.id) && K(e.sticker.id), null == b || b(e, n);
                                 },
                                 onContextMenu: (e) => {
                                     (0, c.jW)(e, async () => {
@@ -136,12 +136,12 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
                                 'data-type': E.S.STICKER,
                                 'data-id': e.sticker.id,
                                 children: [
-                                    (0, r.jsx)(u.HiddenVisually, { children: (0, I.Co)(e.sticker) }),
+                                    (0, r.jsx)(u.HiddenVisually, { children: (0, m.Co)(e.sticker) }),
                                     (0, r.jsxs)('div', {
                                         'aria-hidden': !0,
                                         children: [
                                             !k && (0, r.jsx)('div', { className: A.inspectedIndicator }),
-                                            (0, r.jsx)(I.ZP, {
+                                            (0, r.jsx)(m.ZP, {
                                                 className: s()(A.stickerNode, {
                                                     [A.stickerNodeDimmed]: k && !_ && null != C && -1 !== C.rowIndex && -1 !== C.columnIndex,
                                                     [A.stickerNodeHidden]: N,

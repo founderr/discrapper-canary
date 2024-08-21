@@ -13,10 +13,10 @@ var r,
 let f = {},
     h = {},
     p = new Set();
-function m() {
+function I() {
     (f = {}), (h = {});
 }
-class I extends (r = u.ZP.Store) {
+class m extends (r = u.ZP.Store) {
     getPreviewURL(e, t, n) {
         let r = (0, _.V9)({
                 streamType: null != e ? E.lo.GUILD : E.lo.CALL,
@@ -49,7 +49,7 @@ class I extends (r = u.ZP.Store) {
     }
 }
 (s = 'ApplicationStreamPreviewStore'),
-    (a = 'displayName') in (i = I)
+    (a = 'displayName') in (i = m)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -57,9 +57,9 @@ class I extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new I(c.Z, {
-        CONNECTION_OPEN: m,
-        LOGOUT: m,
+    (t.Z = new m(c.Z, {
+        CONNECTION_OPEN: I,
+        LOGOUT: I,
         STREAM_PREVIEW_FETCH_START: function (e) {
             var t;
             let { streamKey: n } = e;

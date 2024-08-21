@@ -13,8 +13,8 @@ var r = n(735250),
     f = n(570140),
     h = n(721037),
     p = n(490173),
-    m = n(114250),
-    I = n(315263),
+    I = n(114250),
+    m = n(315263),
     T = n(40851),
     g = n(607070),
     S = n(899663),
@@ -61,7 +61,7 @@ n(167666),
         .then((e) => {
             K.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
         }),
-    (0, _.E)({ getDefaultLinkInterceptor: I.default }),
+    (0, _.E)({ getDefaultLinkInterceptor: m.default }),
     (0, q.Un)({
         createPromise: () => Promise.all([n.e('77298'), n.e('80451'), n.e('30634'), n.e('54343')]).then(n.bind(n, 849493)),
         webpackId: 849493
@@ -85,7 +85,7 @@ t.Z = function (e) {
     let { children: t, skipsSettingDefaultPageTitle: n } = e,
         { pathname: a } = (0, l.TH)(),
         _ = (0, K.getPlatform)(),
-        I = u.tq || u.Em,
+        m = u.tq || u.Em,
         W = (0, c.e7)([H.Z], () => (H.Z.darkSidebar ? en.BRd.DARK : void 0)),
         q = (0, c.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
         [et, eo, el] = (0, c.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark, L.Z.isPreview]),
@@ -97,8 +97,8 @@ t.Z = function (e) {
     eE && eo && !e_ && ef.push(d.z.CLIENT_THEMES_COACHMARK);
     let [eh, ep] = (0, w.US)(ef, er.R.SIDEBAR, !0);
     ef.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-    let em = eh === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-        eI = eh === d.z.CLIENT_THEMES_COACHMARK;
+    let eI = eh === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+        em = eh === d.z.CLIENT_THEMES_COACHMARK;
     i.useEffect(() => {
         null ==
             (0, l.LX)(a, {
@@ -106,17 +106,17 @@ t.Z = function (e) {
                 exact: !1,
                 strict: !1
             }) &&
-            em &&
-            !eI &&
+            eI &&
+            !em &&
             ((0, O.nJ)(),
             f.Z.dispatch({
                 type: 'APP_ICON_TRACK_IMPRESSION',
                 markAsDismissed: ep
             }));
-    }, [em, eI, ep, a]);
+    }, [eI, em, ep, a]);
     let eT = i.useRef(document.body),
-        eg = (eE && !eo) || eI,
-        eS = eu && !ed && !eI,
+        eg = (eE && !eo) || em,
+        eS = eu && !ed && !em,
         eA = el || ec,
         { enabled: eN } = F.Z.useExperiment(
             { location: 'AppSkeleton' },
@@ -152,7 +152,7 @@ t.Z = function (e) {
                                             children: (0, r.jsxs)(x.yP, {
                                                 children: [
                                                     (0, r.jsxs)('div', {
-                                                        className: s()(ei.appAsidePanelWrapper, I && ei.mobileAppAsidePanelWrapper, {
+                                                        className: s()(ei.appAsidePanelWrapper, m && ei.mobileAppAsidePanelWrapper, {
                                                             [ei.allowsScrolling]: (() => {
                                                                 let e = (0, l.LX)(a, {
                                                                     path: en.Z5c.APPLICATION_DIRECTORY,
@@ -173,13 +173,13 @@ t.Z = function (e) {
                                                                             value: N.Z,
                                                                             children: [
                                                                                 (0, r.jsx)('div', {
-                                                                                    className: s()(I ? ei.mobileApp : ei.app),
+                                                                                    className: s()(m ? ei.mobileApp : ei.app),
                                                                                     children: t
                                                                                 }),
                                                                                 (0, r.jsx)(y.Z, {}),
                                                                                 (0, r.jsx)(p.Z, {}),
                                                                                 (0, r.jsx)(E.Modals, {}),
-                                                                                (0, r.jsx)(m.Z, {}),
+                                                                                (0, r.jsx)(I.Z, {}),
                                                                                 (0, r.jsx)(G.Ox, {}),
                                                                                 (0, r.jsx)(x.Un, {}),
                                                                                 (0, r.jsx)(k.ot, {}),
@@ -198,7 +198,7 @@ t.Z = function (e) {
                                                             eS &&
                                                                 !eN &&
                                                                 (0, r.jsx)(C.Z, {
-                                                                    isCoachmark: em,
+                                                                    isCoachmark: eI,
                                                                     markAsDismissed: ep
                                                                 }),
                                                             (eg || eS) &&
@@ -207,7 +207,7 @@ t.Z = function (e) {
                                                                     initialTab: eS ? Z._.APP_ICONS : Z._.CLIENT_THEMES,
                                                                     markAsDismissed: ep
                                                                 }),
-                                                            (0, r.jsx)(U.Z, { mobile: I })
+                                                            (0, r.jsx)(U.Z, { mobile: m })
                                                         ]
                                                     }),
                                                     !1

@@ -25,8 +25,8 @@ var r,
     f = n(432877),
     h = n(873741),
     p = n(314897),
-    m = n(866960),
-    I = n(70956),
+    I = n(866960),
+    m = n(70956),
     T = n(403182),
     g = n(651655),
     S = n(861990),
@@ -50,7 +50,7 @@ __OVERLAY__ && (O = n(237997).Z), ((a = r || (r = {})).OVERLAY_UNLOCKED = 'overl
 let R = (e) => 0 === e.type,
     C = (e) => 1 === e.type,
     y = (e) => (R(e) ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id),
-    D = [1 * I.Z.Millis.MINUTE, 5 * I.Z.Millis.MINUTE];
+    D = [1 * m.Z.Millis.MINUTE, 5 * m.Z.Millis.MINUTE];
 class L extends g.Z {
     isFull() {
         return this.queue.length >= this.maxSize;
@@ -96,7 +96,7 @@ class L extends g.Z {
     createResponseHandler(e, t) {
         return (n) => {
             if ((null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr)) return t(null, n);
-            null != n.body && (n.body.code === N.evJ.SLOWMODE_RATE_LIMITED || n.body.code === N.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) ? t(null, n) : 429 === n.status ? t({ retryAfter: n.body.retry_after * I.Z.Millis.SECOND }) : t(null, n);
+            null != n.body && (n.body.code === N.evJ.SLOWMODE_RATE_LIMITED || n.body.code === N.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) ? t(null, n) : 429 === n.status ? t({ retryAfter: n.body.retry_after * m.Z.Millis.SECOND }) : t(null, n);
         };
     }
     handleSend(e, t) {
@@ -104,7 +104,7 @@ class L extends g.Z {
         let { channelId: r, file: i, filename: a, ...s } = e,
             o = (0, h.d)(),
             l = {
-                mobile_network_type: m.Z.getType(),
+                mobile_network_type: I.Z.getType(),
                 ...s,
                 ...(null != o && { signal_strength: o })
             };
@@ -153,7 +153,7 @@ class L extends g.Z {
         else {
             let t;
             (t = {
-                timeout: 60 * I.Z.Millis.SECOND,
+                timeout: 60 * m.Z.Millis.SECOND,
                 retries: 3,
                 backoff: new u.Z()
             }),
@@ -208,7 +208,7 @@ class L extends g.Z {
             (h.data.attachments = []), (n = []);
             h.data.attachments = u.map((e, t) => (l()(e.status === A.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, S.B)(e, t)));
         }
-        let m = new AbortController();
+        let I = new AbortController();
         c.tn.post(
             {
                 url: N.ANM.INTERACTIONS,
@@ -219,9 +219,9 @@ class L extends g.Z {
                     }
                 ],
                 attachments: n,
-                signal: m.signal,
+                signal: I.signal,
                 onRequestCreated: (e) => {
-                    this.requests.set(o, m),
+                    this.requests.set(o, I),
                         e.on('progress', (e) => {
                             let { total: t } = e,
                                 n = (0, T.dg)(i);

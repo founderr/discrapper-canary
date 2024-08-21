@@ -14,8 +14,8 @@ t.Z = (e) => {
         h = null != f ? f.avatarDecoration : null == E ? void 0 : E.avatarDecoration,
         p = (0, a.Z)(n),
         {
-            pendingAvatar: m,
-            pendingAvatarDecoration: I,
+            pendingAvatar: I,
+            pendingAvatarDecoration: m,
             pendingErrors: T
         } = (0, i.cj)([u.Z, s.Z], () => ({
             pendingAvatar: t ? u.Z.getTryItOutAvatar() : null != _ ? s.Z.getPendingAvatar() : u.Z.getPendingAvatar(),
@@ -30,8 +30,8 @@ t.Z = (e) => {
             [p, _]
         );
     return {
-        pendingAvatar: m,
-        pendingAvatarDecoration: I,
+        pendingAvatar: I,
+        pendingAvatarDecoration: m,
         setPendingAvatar: t ? d.c_ : g,
         setPendingAvatarDecoration: t ? d.Xz : S,
         savedAvatarDecoration: h,

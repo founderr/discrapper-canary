@@ -18,8 +18,8 @@ var r = n(735250),
     f = n(979264),
     h = n(554300),
     p = n(33934),
-    m = n(736144),
-    I = n(113434),
+    I = n(736144),
+    m = n(113434),
     T = n(918701),
     g = n(553393),
     S = n(204197),
@@ -47,14 +47,14 @@ t.Z = function (e) {
         {
             avatarDecorationSrc: eh,
             avatarSrc: ep,
-            eventHandlers: em
+            eventHandlers: eI
         } = (0, S.Z)({
             user: G,
             size: u.AvatarSizes.SIZE_32,
             animateOnHover: !(n || ed),
             guildId: W
         }),
-        eI = i.useMemo(
+        em = i.useMemo(
             () => ({
                 source: y.jXE.MEMBER_LIST,
                 tagUserId: eo
@@ -67,7 +67,7 @@ t.Z = function (e) {
     i.useEffect(() => {
         n && eA(!1);
     }, [n]);
-    let eN = (0, I.Fr)(B),
+    let eN = (0, m.Fr)(B),
         ev = null != eN && !eu && n && !eS && (0, T.dl)(eN),
         eO = () => {
             e_(!0);
@@ -145,7 +145,7 @@ t.Z = function (e) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(n, {
-                            ...em,
+                            ...eI,
                             size: u.AvatarSizes.SIZE_32,
                             src: ep,
                             isMobile: Z,
@@ -156,7 +156,7 @@ t.Z = function (e) {
                             avatarDecoration: eh,
                             typingIndicatorRef: eC
                         }),
-                        (0, r.jsx)(m.Z, {
+                        (0, r.jsx)(I.Z, {
                             confettiSpawnRef: eE,
                             shouldFire: w && null != k && e.id !== k.id,
                             confettiLocation: L.Hn.MEMBER_USER
@@ -180,7 +180,7 @@ t.Z = function (e) {
                         contextGuildId: W,
                         disableGuildProfile: !0,
                         className: M.clanTag,
-                        profileViewedAnalytics: eI
+                        profileViewedAnalytics: em
                     })
                 ]
             }),

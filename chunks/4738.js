@@ -73,10 +73,10 @@ function h(e) {
             );
 }
 function p(e) {
-    let { currentPage: t, totalCount: n, pageSize: i, maxVisiblePages: a, disablePaginationGap: u, onPageChange: c, hideMaxPage: p = !1, className: m } = e,
-        I = Math.ceil(n / i);
+    let { currentPage: t, totalCount: n, pageSize: i, maxVisiblePages: a, disablePaginationGap: u, onPageChange: c, hideMaxPage: p = !1, className: I } = e,
+        m = Math.ceil(n / i);
     return (0, r.jsx)(_.W, {
-        totalPageCount: I,
+        totalPageCount: m,
         selectedPage: t,
         maxVisiblePages: a,
         hideMaxPage: p,
@@ -87,7 +87,7 @@ function p(e) {
             let { pages: t, hasMultiplePages: n } = e;
             return n
                 ? (0, r.jsx)('div', {
-                      className: s()(f.pageControlContainer, m),
+                      className: s()(f.pageControlContainer, I),
                       children: (0, r.jsx)('nav', {
                           className: f.pageControl,
                           children: t.map((e) => {
@@ -141,7 +141,7 @@ function p(e) {
                                               h,
                                               {
                                                   page: n,
-                                                  totalPageCount: I,
+                                                  totalPageCount: m,
                                                   disabled: !!u,
                                                   onPageChange: c
                                               },

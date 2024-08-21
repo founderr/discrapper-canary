@@ -22,8 +22,8 @@ function E(e, t, n) {
             usage: 'search',
             sensitivity: 'base'
         }),
-        m = (0, i.useMemo)(() => c || new a.dp(t.collection, t.disabledKeys, null, p), [c, t.collection, t.disabledKeys, p]),
-        { menuTriggerProps: I, menuProps: T } = (0, u.u4)(
+        I = (0, i.useMemo)(() => c || new a.dp(t.collection, t.disabledKeys, null, p), [c, t.collection, t.disabledKeys, p]),
+        { menuTriggerProps: m, menuProps: T } = (0, u.u4)(
             {
                 isDisabled: d,
                 type: 'listbox'
@@ -32,7 +32,7 @@ function E(e, t, n) {
             n
         ),
         { typeSelectProps: g } = (0, a.ip)({
-            keyboardDelegate: m,
+            keyboardDelegate: I,
             selectionManager: t.selectionManager,
             onTypeSelect(e) {
                 t.setSelectedKey(e);
@@ -52,7 +52,7 @@ function E(e, t, n) {
         });
     (g.onKeyDown = g.onKeyDownCapture), delete g.onKeyDownCapture;
     let y = (0, r.zL)(e, { labelable: !0 }),
-        D = (0, r.dG)(g, I, O),
+        D = (0, r.dG)(g, m, O),
         L = (0, r.Me)();
     return (
         _.set(t, {
@@ -77,13 +77,13 @@ function E(e, t, n) {
                         switch (e.key) {
                             case 'ArrowLeft': {
                                 e.preventDefault();
-                                let n = null != t.selectedKey ? m.getKeyAbove(t.selectedKey) : m.getFirstKey();
+                                let n = null != t.selectedKey ? I.getKeyAbove(t.selectedKey) : I.getFirstKey();
                                 n && t.setSelectedKey(n);
                                 break;
                             }
                             case 'ArrowRight': {
                                 e.preventDefault();
-                                let n = null != t.selectedKey ? m.getKeyBelow(t.selectedKey) : m.getFirstKey();
+                                let n = null != t.selectedKey ? I.getKeyBelow(t.selectedKey) : I.getFirstKey();
                                 n && t.setSelectedKey(n);
                             }
                         }

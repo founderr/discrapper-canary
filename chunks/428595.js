@@ -13,8 +13,8 @@ var r = n(392711),
     f = n(51144),
     h = n(298552),
     p = n(444758),
-    m = n(723454),
-    I = n(772096),
+    I = n(723454),
+    m = n(772096),
     T = n(800927),
     g = n(945884),
     S = n(594199),
@@ -30,7 +30,7 @@ let D = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
     b = /^ *>>> ?/,
     M = /^ *> ?/gm;
 function P(e) {
-    let t = (0, I.yw)(e[1]);
+    let t = (0, m.yw)(e[1]);
     if (null == t)
         return {
             type: 'text',
@@ -95,7 +95,7 @@ let U = (e) => {
                 );
             }
         },
-        link: I.ZP,
+        link: m.ZP,
         autolink: {
             ...s().defaultRules.autolink,
             parse: P
@@ -366,7 +366,7 @@ let U = (e) => {
                 id: e[1]
             })
         },
-        heading: m.Z,
+        heading: I.Z,
         list: T.Z,
         subtext: g.Z
     },

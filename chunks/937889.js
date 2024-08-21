@@ -76,7 +76,7 @@ function f(e) {
     return (function (e, t, n) {
         var a;
         let { toAST: s = !1, hideSimpleEmbedContent: l = !0, formatInline: _ = !1, postProcessor: E, shouldFilterKeywords: f, contentMessage: h } = n,
-            I = !1,
+            m = !1,
             T = (null != h ? h : t).content,
             g = e(
                 f
@@ -102,8 +102,8 @@ function f(e) {
                         (e = (function (e, t) {
                             return t ? p(e) : ('paragraph' === e[0].type && e[0].content instanceof Array && (e[0].content = p(e[0].content)), e);
                         })(e, n)),
-                    (I = (function (e, t) {
-                        return t ? m(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && m(e[0].content);
+                    (m = (function (e, t) {
+                        return t ? I(e) : 'paragraph' === e[0].type && e[0].content instanceof Array && I(e[0].content);
                     })(
                         (e = (function (e) {
                             let t = e.some((e) => 'link' !== e.type || !1);
@@ -129,7 +129,7 @@ function f(e) {
                 )
             );
         return {
-            hasSpoilerEmbeds: I,
+            hasSpoilerEmbeds: m,
             content: g
         };
     })(t.formatInline ? a.Z.parseInlineReply : a.Z.parse, e, t);
@@ -174,6 +174,6 @@ function p(e) {
           }),
           e);
 }
-function m(e) {
+function I(e) {
     return e.some((e) => 'spoiler' === e.type && Array.isArray(e.content) && e.content.some((e) => 'link' === e.type || 'attachmentLink' === e.type));
 }

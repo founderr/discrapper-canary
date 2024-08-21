@@ -18,8 +18,8 @@ var r = n(46973),
     f = n(626135),
     h = n(358085),
     p = n(924557),
-    m = n(435064),
-    I = n(894694),
+    I = n(435064),
+    m = n(894694),
     T = n(779618),
     g = n(356659),
     S = n(981631),
@@ -64,8 +64,8 @@ class N extends a.Z {
     }
     maybeShowClipsWarning(e) {
         let t = d.Z.getChannelId();
-        if (!(null == t || m.Z.getClipsWarningShown(t)) && e !== u.default.getId())
-            m.Z.isClipsEnabledForUser(e) &&
+        if (!(null == t || I.Z.getClipsWarningShown(t)) && e !== u.default.getId())
+            I.Z.isClipsEnabledForUser(e) &&
                 (i.Z.dispatch({
                     type: 'CLIPS_SHOW_CALL_WARNING',
                     channelId: t
@@ -75,10 +75,10 @@ class N extends a.Z {
     handlePostConnectionOpen() {
         if (!!(0, T.Z)(c.Z)) {
             if ((this.applyNativeClipsSettings(), !(0, p.ln)())) {
-                m.Z.getSettings().clipsEnabled && this.disableClips();
+                I.Z.getSettings().clipsEnabled && this.disableClips();
                 return;
             }
-            (null == m.Z.getHardwareClassification() || null == m.Z.getHardwareClassificationForDecoupled() || m.Z.getHardwareClassificationVersion() !== g.WM) &&
+            (null == I.Z.getHardwareClassification() || null == I.Z.getHardwareClassificationForDecoupled() || I.Z.getHardwareClassificationVersion() !== g.WM) &&
                 this.classifyHardwareAndTrack().then((e) => {
                     i.Z.dispatch({
                         type: 'CLIPS_CLASSIFY_HARDWARE',
@@ -133,43 +133,43 @@ class N extends a.Z {
                 t
             );
         } catch (e) {
-            return I.x.UNKNOWN;
+            return m.x.UNKNOWN;
         }
     }
     classifyHardware(e) {
         if ((0, h.isWindows)()) {
             let t = e.some((e) => g.mg.test(e)),
                 n = e.some((e) => g.nU.test(e));
-            return t ? I.x.MEETS_AUTO_ENABLE : n ? I.x.MEETS_MINIMUM : I.x.BELOW_MINIMUM;
+            return t ? m.x.MEETS_AUTO_ENABLE : n ? m.x.MEETS_MINIMUM : m.x.BELOW_MINIMUM;
         }
         if ((0, h.isMac)()) {
             let e = s.Z.remoteApp.getAppArch();
-            return 'arm64' === e ? I.x.MEETS_AUTO_ENABLE : I.x.MEETS_MINIMUM;
+            return 'arm64' === e ? m.x.MEETS_AUTO_ENABLE : m.x.MEETS_MINIMUM;
         }
-        return I.x.UNKNOWN;
+        return m.x.UNKNOWN;
     }
     applyUserVoiceRecording(e) {
         if (!(0, T.Z)(c.Z)) return;
         let t = d.Z.getRTCConnection();
         if (null == t) return;
         if (e === u.default.getId()) {
-            t.setClipRecordUser(e, 'audio', m.Z.getSettings().clipsEnabled);
+            t.setClipRecordUser(e, 'audio', I.Z.getSettings().clipsEnabled);
             return;
         }
-        let n = m.Z.isVoiceRecordingAllowedForUser(e);
+        let n = I.Z.isVoiceRecordingAllowedForUser(e);
         t.setClipRecordUser(e, 'audio', n);
     }
     applyStreamRecording(e, t) {
         if (!(0, T.Z)(c.Z)) return;
         if (u.default.getId() === e) {
-            let { clipsEnabled: n } = m.Z.getSettings(),
+            let { clipsEnabled: n } = I.Z.getSettings(),
                 r = (0, p.ln)();
             t.setClipRecordUser(e, 'audio', r && n), t.setClipRecordUser(e, 'video', r && n);
             return;
         }
         let { enableViewerClipping: n, ignoreSenderPreference: r } = l.Z.getCurrentConfig({ location: 'ClipsManager:applyStreamRecording' });
         if (!n) return;
-        let i = r || m.Z.isViewerClippingAllowedForUser(e);
+        let i = r || I.Z.isViewerClippingAllowedForUser(e);
         this.applyNativeClipsSettings(), t.setClipRecordUser(e, 'audio', i), t.setClipRecordUser(e, 'video', i);
     }
     disableClips() {}

@@ -7,10 +7,10 @@ n.r(t),
             return h;
         },
         isOnboardingActiveForGuild: function () {
-            return I;
+            return m;
         },
         openAndWaitForOnboarding: function () {
-            return m;
+            return I;
         }
     });
 var r = n(512722),
@@ -38,10 +38,10 @@ async function p(e) {
             if (!l.hasFeature(_.oNc.GUILD_ONBOARDING)) return;
             await (0, u.rK)(t);
         }
-        c.ZP.shouldShowOnboarding(t) && (await m(t), null != n && (0, o.uL)(_.Z5c.CHANNEL(t, n)));
+        c.ZP.shouldShowOnboarding(t) && (await I(t), null != n && (0, o.uL)(_.Z5c.CHANNEL(t, n)));
     }
 }
-function m(e) {
+function I(e) {
     return new Promise((t) => {
         (f[e] = t),
             (0, d.x)(e).then(() => {
@@ -51,6 +51,6 @@ function m(e) {
             (0, o.uL)(_.Z5c.CHANNEL(e, E.oC.GUILD_ONBOARDING));
     });
 }
-function I(e) {
+function m(e) {
     return null != f[e];
 }

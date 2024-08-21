@@ -50,7 +50,7 @@ n.d(t, {
                 nick: '',
                 guildId: n.id,
                 guildMemberAvatar: null,
-                roles: I.default.keys(r),
+                roles: m.default.keys(r),
                 colorString: null,
                 hoistRoleId: null,
                 premiumSince: null,
@@ -119,8 +119,8 @@ var r = n(392711),
     f = n(592125),
     h = n(271383),
     p = n(430824),
-    m = n(594174),
-    I = n(709054),
+    I = n(594174),
+    m = n(709054),
     T = n(981631);
 let g = a.vB(0),
     S = a.$e(...i().values(T.Plq)),
@@ -134,7 +134,7 @@ function y(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (r && t.mfaLevel === T.BpS.ELEVATED && n === E.default.getId()) {
         var i;
-        !(null === (i = m.default.getCurrentUser()) || void 0 === i ? void 0 : i.mfaEnabled) && (e = a.Od(e, T.TC2));
+        !(null === (i = I.default.getCurrentUser()) || void 0 === i ? void 0 : i.mfaEnabled) && (e = a.Od(e, T.TC2));
     }
     return e;
 }
@@ -178,14 +178,14 @@ function b(e) {
     let i,
         { user: a, context: s, overwrites: o, roles: l, checkElevated: c = !0, excludeGuildPermissions: E = !1 } = e;
     if (null == a) return g;
-    let I = 'string' == typeof a ? a : a.id,
+    let m = 'string' == typeof a ? a : a.id,
         T = N;
     if (s instanceof _.Sf) {
         if (s.isScheduledForDeletion()) return g;
         if (_.Ec.has(s.type)) {
             let e = f.Z.getChannel(s.parent_id);
             if (null == e || e.isScheduledForDeletion()) return g;
-            let t = I === (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && d.Z.hasJoined(s.id);
+            let t = m === (null === (n = I.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && d.Z.hasJoined(s.id);
             return M(
                 s,
                 b({
@@ -211,10 +211,10 @@ function b(e) {
         i = null != e ? p.Z.getGuild(e) : null;
     } else (o = null != o ? o : {}), (i = s);
     if (null == i) return g;
-    if (!(I === (null === (t = m.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.Z.isViewingRoles(i.id)) && i.isOwner(I)) return y(S, i, I, c);
-    let A = h.ZP.getMember(i.id, I);
+    if (!(m === (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && u.Z.isViewingRoles(i.id)) && i.isOwner(m)) return y(S, i, m, c);
+    let A = h.ZP.getMember(i.id, m);
     return L({
-        userId: I,
+        userId: m,
         member: A,
         guild: i,
         overwrites: o,

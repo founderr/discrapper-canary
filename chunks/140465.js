@@ -6,7 +6,7 @@ n.d(t, {
         return T;
     },
     WR: function () {
-        return I;
+        return m;
     },
     lr: function () {
         return p;
@@ -76,7 +76,7 @@ let h = () => {
                 return;
         }
     },
-    m = async () => {
+    I = async () => {
         let e = null;
         try {
             var t;
@@ -85,7 +85,7 @@ let h = () => {
         } catch (e) {}
         return e;
     },
-    I = (e) => {
+    m = (e) => {
         let [t, n] = r.useState(!1),
             [i, a] = r.useState(!1),
             [s, o] = r.useState(null);
@@ -101,7 +101,7 @@ let h = () => {
             !i &&
                 !t &&
                 (a(!0),
-                m()
+                I()
                     .then((e) => {
                         o(e), l();
                     })

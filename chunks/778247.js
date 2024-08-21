@@ -17,8 +17,8 @@ e.exports = function (e, t) {
             p = o.createDecipheriv(d, f, _);
         h.push(p.update(E)), h.push(p.final()), (n = l.concat(h));
     } else {
-        var m = u.match(a);
-        n = l.from(m[2].replace(/[\r\n]/g, ''), 'base64');
+        var I = u.match(a);
+        n = l.from(I[2].replace(/[\r\n]/g, ''), 'base64');
     }
     return {
         tag: u.match(i)[1],

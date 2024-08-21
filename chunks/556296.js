@@ -21,8 +21,8 @@ var i,
     f = n(570140),
     h = n(714338),
     p = n(710845),
-    m = n(658785),
-    I = n(131951),
+    I = n(658785),
+    m = n(131951),
     T = n(626135),
     g = n(358085),
     S = n(998502),
@@ -62,7 +62,7 @@ let D = new p.Z('KeybindsStore'),
     x = !1,
     G = [v.kg4.PUSH_TO_TALK, v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET];
 function k() {
-    let { showKeybindIndicators: e } = m.Z.getCurrentConfig({ location: 'KeybindsStore' });
+    let { showKeybindIndicators: e } = I.Z.getCurrentConfig({ location: 'KeybindsStore' });
     null == _().find(M, (e) => L.action === e.action && e.enabled && e.shortcut.length > 0) && !__OVERLAY__ && !x && U && e && (H(L), (x = !0));
 }
 function B() {
@@ -172,13 +172,13 @@ function W(e, t) {
 }
 let K = [
     function () {
-        let e = I.Z.getShortcuts();
+        let e = m.Z.getShortcuts();
         return (
             _().each(M, (t) => {
                 t.action === v.kg4.PUSH_TO_TALK && !0 === t.managed && (null == t.context || null == e[t.context]) && Y(t);
             }),
             _().reduce(
-                I.Z.getShortcuts(),
+                m.Z.getShortcuts(),
                 (e, t, n) => {
                     let r = _().find(M, (e) => e.action === v.kg4.PUSH_TO_TALK && !0 === e.managed && e.context === n);
                     if (null == r)
@@ -229,12 +229,12 @@ h.Z.setGetKeybindList(() => {
     for (let t in M) {
         if (!!M.hasOwnProperty(t)) e.push((0, A.BB)(M[t].shortcut));
     }
-    let { showKeybindIndicators: t } = m.Z.getCurrentConfig({ location: 'KeybindsStore' });
+    let { showKeybindIndicators: t } = I.Z.getCurrentConfig({ location: 'KeybindsStore' });
     return t && e.push((0, A.BB)(L.shortcut)), e;
 });
 class q extends (i = E.ZP.DeviceSettingsStore) {
     initialize(e) {
-        !__OVERLAY__ && this.waitFor(I.Z, N.Z), (M = null != e ? e : {});
+        !__OVERLAY__ && this.waitFor(m.Z, N.Z), (M = null != e ? e : {});
     }
     getUserAgnosticState() {
         return M;
@@ -253,7 +253,7 @@ class q extends (i = E.ZP.DeviceSettingsStore) {
     getKeybindForAction(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            { showKeybindIndicators: r } = m.Z.getCurrentConfig({ location: 'KeybindsStore' }),
+            { showKeybindIndicators: r } = I.Z.getCurrentConfig({ location: 'KeybindsStore' }),
             i = _().find(M, (r) => r.action === e && (!t || r.managed) && (!n || (r.shortcut.length > 0 && r.enabled)));
         return null != i ? i : r && e === v.kg4.TOGGLE_MUTE ? L : null;
     }
@@ -363,6 +363,6 @@ y(q, 'displayName', 'KeybindsStore'),
                     }
                 }),
                 (U = !0),
-                null == r && (r = m.Z.subscribe({ location: 'KeybindsStore' }, F));
+                null == r && (r = I.Z.subscribe({ location: 'KeybindsStore' }, F));
         }
     }));

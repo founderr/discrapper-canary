@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return I;
     }
 });
 var r = n(812206),
@@ -17,21 +17,21 @@ var r = n(812206),
     f = n(89425),
     h = n(197386),
     p = n(701488);
-async function m(e) {
+async function I(e) {
     let t,
-        { applicationId: n, activityChannelId: m, locationObject: I, analyticsLocations: T, componentId: g } = e,
+        { applicationId: n, activityChannelId: I, locationObject: m, analyticsLocations: T, componentId: g } = e,
         S = (0, _.Z)(),
-        A = i.Z.getChannel(m),
+        A = i.Z.getChannel(I),
         N = null == A ? void 0 : A.getGuildId(),
         v = null == N || '' === N,
         O = s.default.getCurrentUser();
-    if (null == A || (v && !A.isPrivate()) || null == m || null == O) return Promise.resolve(!1);
+    if (null == A || (v && !A.isPrivate()) || null == I || null == O) return Promise.resolve(!1);
     let R = u.ZP.getCurrentEmbeddedActivity();
-    if (((null == R ? void 0 : R.applicationId) != null && (t = r.Z.getApplication(null == R ? void 0 : R.applicationId)), a.Z.getVoiceChannelId() === m && (null == R ? void 0 : R.applicationId) === n && (null == R ? void 0 : R.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(N, m), Promise.resolve(!0);
+    if (((null == R ? void 0 : R.applicationId) != null && (t = r.Z.getApplication(null == R ? void 0 : R.applicationId)), a.Z.getVoiceChannelId() === I && (null == R ? void 0 : R.applicationId) === n && (null == R ? void 0 : R.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(N, I), Promise.resolve(!0);
     if (
         !(await (0, c.p)({
             applicationId: n,
-            application: await (0, d.Z)(n, m),
+            application: await (0, d.Z)(n, I),
             channel: A,
             currentEmbeddedApplication: t,
             embeddedActivitiesManager: S,
@@ -51,14 +51,14 @@ async function m(e) {
             return !1;
     } else if (!(0, o.WS)(A, !1) || !y) return !1;
     return (
-        (0, l.cG)(m, n),
+        (0, l.cG)(I, n),
         await (0, l.af)({
-            channelId: m,
+            channelId: I,
             applicationId: n,
             isStart: !1,
             embeddedActivitiesManager: S,
             analyticsLocations: T,
-            locationObject: I,
+            locationObject: m,
             componentId: g
         })
     );

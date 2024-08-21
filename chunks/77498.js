@@ -25,8 +25,8 @@ function E(e, t, n) {
 let f = 'GameStoreReportedGames',
     h = new u.Z(),
     p = {},
-    m = {},
-    I = null !== (i = o.K.get(f)) && void 0 !== i ? i : {},
+    I = {},
+    m = null !== (i = o.K.get(f)) && void 0 !== i ? i : {},
     T = '';
 let g = null;
 function S(e) {
@@ -45,7 +45,7 @@ function S(e) {
 function A(e) {
     let t = e instanceof d.Z ? S(e) : e;
     for (let n of (h.set(e.id, t), (p[e.name.toLowerCase()] = t), e.aliases)) p[n.toLowerCase()] = t;
-    if ((0, _.isDesktop)()) for (let n of e.executables) m[n.name] = t;
+    if ((0, _.isDesktop)()) for (let n of e.executables) I[n.name] = t;
 }
 class N extends (a = s.ZP.PersistedStore) {
     initialize(e) {
@@ -87,7 +87,7 @@ class N extends (a = s.ZP.PersistedStore) {
         return g;
     }
     getGameByExecutable(e) {
-        return m[e];
+        return I[e];
     }
     getGameByGameData(e) {
         var t, n;
@@ -105,11 +105,11 @@ class N extends (a = s.ZP.PersistedStore) {
     }
     shouldReport(e) {
         let t = null != this.getGameByName(e),
-            n = null != I[e];
+            n = null != m[e];
         return c.G6.getSetting() && !r && !(t || n);
     }
     markGameReported(e) {
-        (I[e] = !0), o.K.set(f, I);
+        (m[e] = !0), o.K.set(f, m);
     }
 }
 E(N, 'displayName', 'GameStore'),

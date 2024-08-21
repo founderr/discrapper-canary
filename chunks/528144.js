@@ -15,7 +15,7 @@ let u = Object.freeze({
         SIZE_32: l.size32
     }),
     c = (e) => {
-        let { id: t, muted: n = !1, className: i = o.wrapper, size: l = u.SIZE_14, selectable: c = !1, children: d, color: _, onClick: E, onContextMenu: f, style: h, title: p, uppercase: m } = e;
+        let { id: t, muted: n = !1, className: i = o.wrapper, size: l = u.SIZE_14, selectable: c = !1, children: d, color: _, onClick: E, onContextMenu: f, style: h, title: p, uppercase: I } = e;
         return (0, r.jsx)(s.H, {
             role: null != E ? 'button' : void 0,
             onClick: E,
@@ -26,7 +26,7 @@ let u = Object.freeze({
                 [l]: !0,
                 [o.selectable]: c,
                 [o.muted]: n,
-                [o.uppercase]: m
+                [o.uppercase]: I
             }),
             title: p,
             style:

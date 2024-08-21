@@ -15,28 +15,28 @@ var r = n(735250),
 function d(e) {
     let { src: t, size: n, constrain: a = 'height', className: d, alt: _, fallbackSrc: E, 'aria-hidden': f, showTooltip: h = !1 } = e,
         p = (0, l.ZP)(),
-        m = ''.concat(n, 'px'),
-        [I, T] = i.useState(!1),
+        I = ''.concat(n, 'px'),
+        [m, T] = i.useState(!1),
         [g, S] = i.useState(!1),
         A = null == E || g;
-    if (null == t || (I && A))
+    if (null == t || (m && A))
         return (0, r.jsx)(o.UnknownGameIcon, {
             size: 'custom',
             width: '100%',
             height: '100%',
             color: 'dark' === p ? 'white' : 'black',
-            style: { maxWidth: m },
+            style: { maxWidth: I },
             className: s()(c.contentImage, d)
         });
     let N =
         'height' === a
             ? {
-                  maxWidth: m,
-                  height: m
+                  maxWidth: I,
+                  height: I
               }
             : {
-                  maxWidth: m,
-                  minHeight: m
+                  maxWidth: I,
+                  minHeight: I
               };
     return (0, r.jsx)(
         o.Tooltip,
@@ -49,10 +49,10 @@ function d(e) {
                     ...e,
                     style: N,
                     className: s()(c.contentImage, d),
-                    src: I && null != E ? E : t,
+                    src: m && null != E ? E : t,
                     'aria-hidden': f,
                     alt: null != _ ? _ : f ? void 0 : u.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
-                    onError: (e) => (I ? S(!0) : T(!0))
+                    onError: (e) => (m ? S(!0) : T(!0))
                 })
         },
         'voice-preview'

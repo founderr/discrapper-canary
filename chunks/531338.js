@@ -1,18 +1,18 @@
-s.r(t), s(610138), s(216116), s(78328), s(815648), s(47120);
-var n = s(735250);
-s(470079);
-var r = s(481060),
-    a = s(457330),
-    o = s(417663),
-    i = s(726542),
-    l = s(77987),
-    c = s(787025),
-    d = s(689938),
-    u = s(460114);
-t.default = (0, l.e)(function (e) {
-    let { match: t } = e,
-        s = t.params.type,
-        l = i.Z.get(s);
+t.r(s), t(610138), t(216116), t(78328), t(815648), t(47120);
+var n = t(735250);
+t(470079);
+var r = t(481060),
+    a = t(457330),
+    o = t(417663),
+    i = t(726542),
+    l = t(77987),
+    c = t(787025),
+    d = t(689938),
+    u = t(460114);
+s.default = (0, l.e)(function (e) {
+    let { match: s } = e,
+        t = s.params.type,
+        l = i.Z.get(t);
     if (null == l)
         return (0, n.jsx)(c.G, {
             children: (0, n.jsx)(r.Text, {
@@ -23,13 +23,13 @@ t.default = (0, l.e)(function (e) {
             })
         });
     async function N() {
-        var e, t, n;
+        var e, s, n;
         let r = new URLSearchParams(window.location.search),
-            { body: o } = await a.Z.authorize(s, {
+            { body: o } = await a.Z.authorize(t, {
                 location: 'Connection Intermediate',
                 twoWayLink: null != r.get('two_way_link') ? 'true' === r.get('two_way_link') : void 0,
                 twoWayLinkType: null !== (e = r.get('two_way_link_type')) && void 0 !== e ? e : void 0,
-                userCode: null !== (t = r.get('two_way_user_code')) && void 0 !== t ? t : void 0,
+                userCode: null !== (s = r.get('two_way_user_code')) && void 0 !== s ? s : void 0,
                 successRedirect: null !== (n = r.get('success_redirect')) && void 0 !== n ? n : void 0
             });
         window.location = o.url;

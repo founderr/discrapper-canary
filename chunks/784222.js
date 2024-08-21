@@ -31,8 +31,8 @@ var r,
     f = n(80932),
     h = n(339085),
     p = n(906411),
-    m = n(689789),
-    I = n(633302),
+    I = n(689789),
+    m = n(633302),
     T = n(806966),
     g = n(28546),
     S = n(364742),
@@ -63,7 +63,7 @@ let B = (e) => {
         B = (0, P.NJ)(T),
         F = (0, P.wC)(T),
         V = (0, P.q5)(T),
-        { canSplitFrecencyList: H } = (0, m.S)({
+        { canSplitFrecencyList: H } = (0, I.S)({
             location: 'useEmojiGrid',
             autoTrackExposure: !0
         }),
@@ -100,7 +100,7 @@ let B = (e) => {
             E = [],
             h = [],
             p = 0,
-            m = 0;
+            I = 0;
         if (null != g && null != s) {
             let T = Math.floor(s / (l + 2 * o)),
                 g = 3 * T,
@@ -115,33 +115,33 @@ let B = (e) => {
                             });
                             return o.set(e, n), !n;
                         }),
-                        I = _.concat(f),
+                        m = _.concat(f),
                         S = s.guild,
                         A = O.Z.getGuildId(),
                         N = s.sectionId === x.En.TOP_GUILD_EMOJI,
-                        v = !N && null != S && A === S.id && I.length < S.getMaxEmojiSlots(),
-                        R = N && I.length < T && !et,
+                        v = !N && null != S && A === S.id && m.length < S.getMaxEmojiSlots(),
+                        R = N && m.length < T && !et,
                         C = null != S && N && et && en === M.B.WITH_TOP_LIST && ee[S.id].length < S.getMaxEmojiSlots(),
                         y = r && z && null != S && (v || R || C);
-                    y && C && I.length === T && I.shift();
-                    let L = I.length > g && null != S && S.id !== A,
+                    y && C && m.length === T && m.shift();
+                    let L = m.length > g && null != S && S.id !== A,
                         b = er && L && !K.has(S.id);
-                    b && I.splice(g - 1);
+                    b && m.splice(g - 1);
                     let U = et && y && !c,
-                        w = Math.ceil((y ? I.length + 1 : I.length) / T),
+                        w = Math.ceil((y ? m.length + 1 : m.length) / T),
                         G = [];
                     for (let e = 0; e < w; e++) {
                         let t = 0 === e,
                             n = e * T - (U && e > 0 ? 1 : 0),
                             r = n + T - (U && t ? 1 : 0),
-                            i = I.slice(n, r).map((e, n) => {
+                            i = m.slice(n, r).map((e, n) => {
                                 var r, i;
                                 return {
                                     type: 0,
                                     emoji: e,
                                     size: l,
                                     isDisabled: o.get(e),
-                                    rowIndex: m,
+                                    rowIndex: I,
                                     columnIndex: U && t ? n + 1 : n,
                                     visibleRowIndex: p,
                                     category: s.type,
@@ -158,7 +158,7 @@ let B = (e) => {
                                         guildId: S.id,
                                         name: k.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE,
                                         size: l,
-                                        rowIndex: m,
+                                        rowIndex: I,
                                         columnIndex: 0,
                                         visibleRowIndex: p
                                     },
@@ -194,7 +194,7 @@ let B = (e) => {
                             }
                             h.push(i.length), E.push(i), p++;
                         }
-                        m++;
+                        I++;
                     }
                     let B = {
                         ...s,
@@ -302,7 +302,7 @@ let B = (e) => {
                                 isNitroLocked: !1
                             });
                     } else {
-                        let t = I.ZP.getByCategory(e);
+                        let t = m.ZP.getByCategory(e);
                         null != t &&
                             S(t, {
                                 categoryId: e,

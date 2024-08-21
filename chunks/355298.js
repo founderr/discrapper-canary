@@ -47,11 +47,11 @@ function p(e) {
     let { channel: t } = e;
     return _(t);
 }
-function m(e) {
+function I(e) {
     let { channels: t } = e;
     for (let e of t) _(e);
 }
-function I(e) {
+function m(e) {
     let { channel: t } = e;
     return !!o.has(t.id) && (o.delete(t.id), !0);
 }
@@ -102,8 +102,8 @@ class S extends a.Z {
             CACHE_LOADED_LAZY: () => this.loadCache(),
             OVERLAY_INITIALIZE: T,
             CHANNEL_CREATE: p,
-            CHANNEL_UPDATES: m,
-            CHANNEL_DELETE: I,
+            CHANNEL_UPDATES: I,
+            CHANNEL_DELETE: m,
             SET_LOCATION_METADATA: g,
             MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
         });

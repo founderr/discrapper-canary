@@ -12,7 +12,7 @@ n.d(t, {
         return p;
     },
     f3: function () {
-        return I;
+        return m;
     },
     nA: function () {
         return A;
@@ -51,7 +51,7 @@ function p(e, t, r) {
     }
     return null == r && ('type' in e && (r = e.type), (r = null != r ? r : i.lookup(t))), new File([e], t, { type: r });
 }
-let m = [
+let I = [
     {
         reType: /^image\/vnd.adobe.photoshop/,
         klass: 'photoshop'
@@ -109,13 +109,13 @@ let m = [
         klass: 'audio'
     }
 ];
-function I(e) {
+function m(e) {
     return T(e.name, e.type);
 }
 function T(e, t) {
     var n;
     e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : '';
-    let r = s().find(m, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
+    let r = s().find(I, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
     return null != r ? r.klass : 'unknown';
 }
 function g(e) {
