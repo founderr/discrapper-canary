@@ -115,6 +115,14 @@ t.Z = function (e) {
                 className: u.icon,
                 'aria-label': l.Z.Messages.MEDIA_CHANNEL
             });
+            break;
+        case 'linked-roles':
+            i = (0, r.jsx)(s.LinkIcon, {
+                size: 'md',
+                color: 'currentColor',
+                className: u.icon,
+                'aria-label': l.Z.Messages.CONNECTIONS_ROLES_CHANNEL_NAME
+            });
     }
     return (0, r.jsxs)('span', {
         className: a()('channelWithIcon', { [u.iconMentionText]: 'text' === t }),

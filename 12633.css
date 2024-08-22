@@ -12894,6 +12894,14 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     background-color: var(--brand-500)
 }
 
+.icon_efcc0c {
+    width: .5em;
+    height: .5em;
+    margin-left: 4px;
+    margin-right: 2px;
+    margin-bottom: 1px
+}
+
 .icon_a89787 {
     width: .95rem;
     height: .95rem;
@@ -16366,14 +16374,6 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 
 .icon_edc433 {
     margin-right: .1rem
-}
-
-.icon_efcc0c {
-    width: .5em;
-    height: .5em;
-    margin-left: 4px;
-    margin-right: 2px;
-    margin-bottom: 1px
 }
 
 .tooltip_bea280 {

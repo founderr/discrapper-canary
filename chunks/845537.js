@@ -186,7 +186,8 @@ function M(e) {
             home: A.Z.Messages.SERVER_GUIDE,
             guide: A.Z.Messages.SERVER_GUIDE,
             browse: A.Z.Messages.CHANNEL_BROWSER_TITLE,
-            customize: A.Z.Messages.CHANNELS_AND_ROLES
+            customize: A.Z.Messages.CHANNELS_AND_ROLES,
+            'linked-roles': A.Z.Messages.CONNECTIONS_ROLES_CHANNEL_NAME
         };
     return (0, r.jsx)(_.Z, {
         iconType: t,

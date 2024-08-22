@@ -349,22 +349,46 @@ let U = (e) => {
             order: S.ZP.order,
             requiredFirstCharacters: ['<'],
             match: (e) => v.PEY.exec(e),
-            parse: (e, t, n) => ({
-                content: [
-                    {
-                        type: 'text',
-                        content: {
-                            home: y.Z.Messages.SERVER_GUIDE,
-                            guide: y.Z.Messages.SERVER_GUIDE,
-                            browse: y.Z.Messages.CHANNEL_BROWSER_TITLE,
-                            customize: y.Z.Messages.CHANNELS_AND_ROLES
-                        }[e[1]]
-                    }
-                ],
-                channelId: e[1],
-                guildId: U(n.channelId),
-                id: e[1]
-            })
+            parse(e, t, n) {
+                var r;
+                let [, i, a] = e,
+                    s = {
+                        home: y.Z.Messages.SERVER_GUIDE,
+                        guide: y.Z.Messages.SERVER_GUIDE,
+                        browse: y.Z.Messages.CHANNEL_BROWSER_TITLE,
+                        customize: y.Z.Messages.CHANNELS_AND_ROLES,
+                        'linked-roles': y.Z.Messages.CONNECTIONS_ROLES_CHANNEL_NAME
+                    },
+                    o = {
+                        'linked-roles': (e) => {
+                            let t = w(n);
+                            if (null == t) return null;
+                            let r = d.Z.getRole(t.id, e);
+                            return null == r ? null : r.name;
+                        }
+                    },
+                    l = s[i],
+                    u = null === (r = o[i]) || void 0 === r ? void 0 : r.call(o, a);
+                function c(e) {
+                    return null == e
+                        ? null
+                        : [
+                              {
+                                  type: 'text',
+                                  content: e
+                              }
+                          ];
+                }
+                return {
+                    content: c(l + (null != u ? ' \u203A '.concat(u) : '')),
+                    mainContent: c(l),
+                    itemContent: c(u),
+                    itemId: a,
+                    id: i,
+                    guildId: U(n.channelId),
+                    channelId: i
+                };
+            }
         },
         heading: I.Z,
         list: T.Z,

@@ -22,8 +22,8 @@ var c,
     T = t(481060),
     O = t(457330),
     m = t(749210),
-    A = t(230711),
-    E = t(99690),
+    E = t(230711),
+    A = t(99690),
     x = t(410030),
     p = t(726542),
     S = t(367907),
@@ -40,13 +40,13 @@ var c,
     b = t(496675),
     R = t(259580),
     Z = t(626135),
-    P = t(228643),
-    U = t(275759),
-    D = t(231757),
+    D = t(228643),
+    P = t(275759),
+    U = t(231757),
     w = t(753194),
     B = t(225104),
-    F = t(458034),
-    H = t(856651),
+    H = t(458034),
+    F = t(856651),
     V = t(981631),
     Y = t(689938),
     z = t(344482);
@@ -82,13 +82,13 @@ function W(e) {
         r = null;
     if (null != i)
         switch (o) {
-            case H.iO.LESS_THAN:
+            case F.iO.LESS_THAN:
                 r = Y.Z.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                     description: i,
                     count: Math.max(0, Number(l) - 1)
                 });
                 break;
-            case H.iO.GREATER_THAN:
+            case F.iO.GREATER_THAN:
                 r = Y.Z.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
                     description: i,
                     count: Math.max(0, Number(l) + 1)
@@ -100,16 +100,16 @@ function W(e) {
     else {
         let e;
         switch (o) {
-            case H.iO.EQUAL:
-                (e = Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_MUST_BE), t === V.ABu.PAYPAL && c === H.PC.PAYPAL_VERIFIED && (e = Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_MUST_HAVE_A);
+            case F.iO.EQUAL:
+                (e = Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_MUST_BE), t === V.ABu.PAYPAL && c === F.PC.PAYPAL_VERIFIED && (e = Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_MUST_HAVE_A);
                 break;
-            case H.iO.NOT_EQUAL:
+            case F.iO.NOT_EQUAL:
                 e = Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_MUST_NOT_BE;
                 break;
-            case H.iO.LESS_THAN:
+            case F.iO.LESS_THAN:
                 e = Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_MUST_HAVE_AT_MOST;
                 break;
-            case H.iO.GREATER_THAN:
+            case F.iO.GREATER_THAN:
                 e = Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_MUST_HAVE_AT_LEAST;
                 break;
             case void 0:
@@ -118,7 +118,7 @@ function W(e) {
         }
         if (
             null ==
-            (r = (0, U.n_)({
+            (r = (0, P.n_)({
                 connectionType: t,
                 connectionMetadataField: c,
                 operator: o,
@@ -144,9 +144,9 @@ function Q(e) {
         [r, u] = l.useState(0),
         [N, h] = l.useState(null),
         [O, m] = l.useState(null),
-        A = l.useMemo(() => C().flatten(n), [n]),
-        x = l.useMemo(() => C().groupBy(A, (e) => ''.concat(e.connection_type).concat(null != e.application_id ? ':'.concat(e.application_id) : '')), [A]);
-    l.useEffect(() => u(Date.now()), [A]),
+        E = l.useMemo(() => C().flatten(n), [n]),
+        x = l.useMemo(() => C().groupBy(E, (e) => ''.concat(e.connection_type).concat(null != e.application_id ? ':'.concat(e.application_id) : '')), [E]);
+    l.useEffect(() => u(Date.now()), [E]),
         l.useEffect(() => {
             if (null == N) return;
             let e = x[''.concat(N).concat(null != O ? ':'.concat(O.id) : '')];
@@ -165,14 +165,14 @@ function Q(e) {
                 let u, C, N;
                 let _ = x[e],
                     O = _.find((e) => null == e.operator),
-                    A = _.filter((e) => null != e.operator),
-                    f = (null == O || O.result) && A.every((e) => e.result),
+                    E = _.filter((e) => null != e.operator),
+                    f = (null == O || O.result) && E.every((e) => e.result),
                     M = _.find((e) => null != e.application),
                     v = p.Z.get(e),
                     g = null == v || v.enabled,
                     j = null == M ? void 0 : M.application,
                     L = (null == j ? void 0 : j.bot) != null ? new y.Z(j.bot) : null;
-                U.SJ.includes(null !== (n = null == j ? void 0 : j.id) && void 0 !== n ? n : '')
+                P.SJ.includes(null !== (n = null == j ? void 0 : j.id) && void 0 !== n ? n : '')
                     ? (u = (0, a.jsx)(w.Z, {
                           className: z.botTag,
                           color: S,
@@ -183,7 +183,7 @@ function Q(e) {
                           className: z.botTag,
                           verified: L.isVerifiedBot()
                       }));
-                let k = o[null !== (c = null == v ? void 0 : v.type) && void 0 !== c ? c : H.Kt],
+                let k = o[null !== (c = null == v ? void 0 : v.type) && void 0 !== c ? c : F.Kt],
                     G = !f && null != k && k <= r;
                 return (
                     (C = f
@@ -220,9 +220,9 @@ function Q(e) {
                                     ? () => {
                                           var e, n, c;
                                           return (
-                                              (n = null !== (e = null == v ? void 0 : v.type) && void 0 !== e ? e : H.Kt),
+                                              (n = null !== (e = null == v ? void 0 : v.type) && void 0 !== e ? e : F.Kt),
                                               (c = j),
-                                              void ((0, D.Z)({
+                                              void ((0, U.Z)({
                                                   platformType: n,
                                                   location: 'Verified Roles Connect Accounts Modal',
                                                   overrideUrl: null == c ? void 0 : c.role_connections_verification_url
@@ -249,7 +249,7 @@ function Q(e) {
                                       })
                                     : null,
                                 null != v ? (0, a.jsx)(K, { platformType: v.type }) : null,
-                                null != L ? (0, a.jsx)(E.Z, { user: L }) : null,
+                                null != L ? (0, a.jsx)(A.Z, { user: L }) : null,
                                 (0, a.jsxs)('div', {
                                     className: z.connectionsChecksGroupTextContainer,
                                     children: [
@@ -276,7 +276,7 @@ function Q(e) {
                                                     : null
                                             ]
                                         }),
-                                        A.map((e) => {
+                                        E.map((e) => {
                                             let { connection_type: n, connection_metadata_field: t, operator: c, value: o, result: l, description: s } = e;
                                             return (
                                                 d()(null != t, 'connectionMetadataField is null'),
@@ -319,7 +319,7 @@ function X(e) {
     l.useEffect(() => {
         s(!h), i(N);
     }, []);
-    let A = p.Z.get(o.type);
+    let E = p.Z.get(o.type);
     return (
         V.BFP.has(o.type) &&
             (n = (0, a.jsx)(T.FormSwitch, {
@@ -344,10 +344,10 @@ function X(e) {
                 },
                 children: (0, a.jsx)(T.Text, {
                     variant: 'text-sm/semibold',
-                    children: Y.Z.Messages.DISPLAY_ACTIVITY.format({ platform: A.name })
+                    children: Y.Z.Messages.DISPLAY_ACTIVITY.format({ platform: E.name })
                 })
             })),
-        !0 === A.hasMetadata &&
+        !0 === E.hasMetadata &&
             (c = (0, a.jsx)(T.FormSwitch, {
                 className: z.accountConnectedPrivacyOptionsSwitchItem,
                 hideBorder: !0,
@@ -389,12 +389,12 @@ function J(e) {
         [r, u] = l.useState(null),
         [C, _] = l.useState(!1),
         [h, O] = l.useState(!0),
-        [E, I] = l.useState(!1),
+        [A, I] = l.useState(!1),
         [M, y] = l.useState(!0),
-        [R, U] = l.useState(!1),
-        D = (0, N.e7)([k.Z], () => k.Z.getAccounts()),
+        [R, P] = l.useState(!1),
+        U = (0, N.e7)([k.Z], () => k.Z.getAccounts()),
         w = (0, N.e7)([j.default], () => j.default.getId()),
-        [H, K] = l.useState(null),
+        [F, K] = l.useState(null),
         [W, J] = l.useState(null),
         [$, ee] = l.useState(null),
         en = (0, x.ZP)(),
@@ -403,13 +403,13 @@ function J(e) {
         eo = Object.values((0, N.e7)([L.Z], () => L.Z.getMutableGuildChannelsForGuild(c))).filter((e) => b.Z.can(V.Plq.VIEW_CHANNEL, e) && b.Z.can(V.Plq.SEND_MESSAGES, e) && (0, f.Z)(e).includes(o));
     function ea() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        null == t || t(), e && (0, T.closeModal)(F.s$, T.DEFAULT_MODAL_CONTEXT);
+        null == t || t(), e && (0, T.closeModal)(H.s$, T.DEFAULT_MODAL_CONTEXT);
     }
     function el() {
-        ea(!0), A.Z.open(V.oAB.AUTHORIZED_APPS);
+        ea(!0), E.Z.open(V.oAB.AUTHORIZED_APPS);
     }
     function es() {
-        ea(!0), A.Z.open(V.oAB.CONNECTIONS);
+        ea(!0), E.Z.open(V.oAB.CONNECTIONS);
     }
     async function ei() {
         I(!0), await m.Z.assignGuildRoleConnection(c, o.id);
@@ -426,7 +426,7 @@ function J(e) {
             J(n),
             i(1),
             null != n &&
-                (0, P.nj)()
+                (0, D.nj)()
                     .then((e) => {
                         ee(e);
                     })
@@ -437,7 +437,7 @@ function J(e) {
             m.Z.fetchGuildRoleConnectionsEligibility(c, o.id).then((e) => {
                 u(e), _(e.some((e) => e.every((e) => e.result))), O(!1);
             });
-        }, [c, o.id, D]),
+        }, [c, o.id, U]),
         l.useEffect(() => {
             Z.default.track(V.rMx.PASSPORT_CHALLENGE_VIEWED, {
                 role_id: o.id,
@@ -445,14 +445,14 @@ function J(e) {
             });
         }, [c, o.id]),
         l.useEffect(() => {
-            if (!!E && null != ec && !!ec.roles.includes(o.id))
+            if (!!A && null != ec && !!ec.roles.includes(o.id))
                 I(!1),
                     eo.length > 0 ? i(2) : null == t || t(),
                     Z.default.track(V.rMx.PASSPORT_CHALLENGE_FINISHED, {
                         role_id: o.id,
                         ...(0, S.hH)(c)
                     });
-        }, [E, eo.length, ec, c, o.id, t]),
+        }, [A, eo.length, ec, c, o.id, t]),
         (0, a.jsxs)(T.ModalRoot, {
             size: T.ModalSize.MEDIUM,
             transitionState: n,
@@ -478,8 +478,8 @@ function J(e) {
                             });
                         case 1: {
                             var e, n;
-                            d()(null != H, 'lastPlatformConnected is null');
-                            let t = null !== (n = null == W ? void 0 : W.name) && void 0 !== n ? n : null === (e = p.Z.get(H)) || void 0 === e ? void 0 : e.name;
+                            d()(null != F, 'lastPlatformConnected is null');
+                            let t = null !== (n = null == W ? void 0 : W.name) && void 0 !== n ? n : null === (e = p.Z.get(F)) || void 0 === e ? void 0 : e.name;
                             return (0, a.jsxs)(T.ModalHeader, {
                                 className: z.header,
                                 separator: !1,
@@ -516,7 +516,8 @@ function J(e) {
                     children: (function () {
                         switch (s) {
                             case 0: {
-                                let e = null != r && r.length > 1;
+                                let e = null != r && r.length > 1,
+                                    n = null != r && 1 === r.length && 1 === r[0].length;
                                 return (0, a.jsx)(T.ModalContent, {
                                     children:
                                         h || null == r
@@ -526,7 +527,7 @@ function J(e) {
                                                       (0, a.jsx)(T.Text, {
                                                           variant: 'text-md/medium',
                                                           color: 'header-secondary',
-                                                          children: e ? Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_HEADER_TEXT_ANY.format() : Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_HEADER_TEXT_ALL.format()
+                                                          children: (n ? Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_HEADER_TEXT_ONE : e ? Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_HEADER_TEXT_ANY : Y.Z.Messages.CONNECTIONS_CONNECT_ACCOUNTS_MODAL_HEADER_TEXT_ALL).format({ roleName: o.name })
                                                       }),
                                                       (0, a.jsx)(T.ScrollerThin, {
                                                           className: z.connectionsChecksGroups,
@@ -551,10 +552,10 @@ function J(e) {
                                 });
                             }
                             case 1: {
-                                d()(null != H, 'lastPlatformConnected is null');
-                                let e = D.find((e) => {
+                                d()(null != F, 'lastPlatformConnected is null');
+                                let e = U.find((e) => {
                                         let { type: n } = e;
-                                        return H === n;
+                                        return F === n;
                                     }),
                                     n =
                                         null == $
@@ -613,7 +614,7 @@ function J(e) {
                                                                                     }),
                                                                                     (0, a.jsx)(X, {
                                                                                         account: e,
-                                                                                        setShowPreviewInvisibleIcon: U,
+                                                                                        setShowPreviewInvisibleIcon: P,
                                                                                         setShowPreviewMetadata: y
                                                                                     })
                                                                                 ]
@@ -699,7 +700,7 @@ function J(e) {
                                     (0, a.jsx)(T.Button, {
                                         color: T.ButtonColors.BRAND,
                                         onClick: () => ei(),
-                                        disabled: h || !C || E,
+                                        disabled: h || !C || A,
                                         children: Y.Z.Messages.FINISH
                                     }),
                                     n

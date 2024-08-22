@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return G;
+        return k;
     }
 }),
     n(47120);
@@ -10,40 +10,41 @@ var r = n(735250),
     s = n.n(a),
     o = n(302454),
     l = n(481060),
-    u = n(794295),
-    c = n(663993),
-    d = n(95398),
-    _ = n(339085),
-    E = n(779699),
-    f = n(359875),
-    h = n(124072),
-    p = n(695503),
-    I = n(628692),
-    m = n(590956),
-    T = n(703656),
-    g = n(430824),
-    S = n(572004),
-    A = n(900849),
-    N = n(746878),
-    O = n(285063),
-    v = n(943362),
-    R = n(551452),
-    C = n(69626),
-    y = n(142990),
-    D = n(532901),
-    L = n(981631),
-    b = n(176505),
-    M = n(689938),
-    P = n(910212),
-    U = n(594402);
+    u = n(570140),
+    c = n(794295),
+    d = n(663993),
+    _ = n(95398),
+    E = n(339085),
+    f = n(779699),
+    h = n(359875),
+    p = n(124072),
+    I = n(891984),
+    m = n(695503),
+    T = n(628692),
+    g = n(590956),
+    S = n(703656),
+    A = n(271383),
+    N = n(430824),
+    O = n(572004),
+    v = n(746878),
+    R = n(285063),
+    C = n(943362),
+    y = n(551452),
+    D = n(69626),
+    L = n(142990),
+    b = n(532901),
+    M = n(981631),
+    P = n(176505),
+    U = n(910212),
+    w = n(594402);
 n(567552);
-function w(e) {
+function x(e) {
     let { text: t } = e,
         [n, a] = i.useState(!1);
     return (0, r.jsx)(l.Clickable, {
         onClick: () => {
             try {
-                (0, S.JG)(t), a(!0);
+                (0, O.JG)(t), a(!0);
             } catch (e) {
                 a(!1);
             }
@@ -59,14 +60,14 @@ function w(e) {
               })
     });
 }
-let x = {
+let G = {
     blockQuote: {
         react: (e, t, n) =>
             (0, r.jsxs)(
                 'div',
                 {
-                    className: P.blockquoteContainer,
-                    children: [(0, r.jsx)('div', { className: P.blockquoteDivider }), (0, r.jsx)('blockquote', { children: t(e.content, n) })]
+                    className: U.blockquoteContainer,
+                    children: [(0, r.jsx)('div', { className: U.blockquoteDivider }), (0, r.jsx)('blockquote', { children: t(e.content, n) })]
                 },
                 n.key
             )
@@ -90,7 +91,7 @@ let x = {
                 'code',
                 {
                     className: 'inline',
-                    children: (0, N.S)(e, t, n)
+                    children: (0, v.S)(e, t, n)
                 },
                 n.key
             )
@@ -99,22 +100,22 @@ let x = {
         react(e, t, i) {
             let a = () =>
                 (0, r.jsx)('code', {
-                    className: s()(U.scrollbarGhostHairline, 'hljs'),
-                    children: (0, N.S)(e, t, i)
+                    className: s()(w.scrollbarGhostHairline, 'hljs'),
+                    children: (0, v.S)(e, t, i)
                 });
             return (0, r.jsx)(
                 'pre',
                 {
                     children: (0, r.jsxs)('div', {
-                        className: P.codeContainer,
+                        className: U.codeContainer,
                         children: [
-                            S.wS
+                            O.wS
                                 ? (0, r.jsx)('div', {
-                                      className: P.codeActions,
-                                      children: (0, r.jsx)(w, { text: e.content })
+                                      className: U.codeActions,
+                                      children: (0, r.jsx)(x, { text: e.content })
                                   })
                                 : null,
-                            (0, r.jsx)(c.GI, {
+                            (0, r.jsx)(d.GI, {
                                 createPromise: () => Promise.resolve().then(n.bind(n, 364964)),
                                 webpackId: 364964,
                                 renderFallback: a,
@@ -125,7 +126,7 @@ let x = {
                                         return null == n
                                             ? a()
                                             : (0, r.jsx)('code', {
-                                                  className: s()(U.scrollbarGhostHairline, 'hljs', n.language),
+                                                  className: s()(w.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               });
                                     }
@@ -142,11 +143,11 @@ let x = {
     spoiler: {
         react: (e, t, n) =>
             (0, r.jsx)(
-                d.Z,
+                _.Z,
                 {
-                    type: d.Z.Types.TEXT,
+                    type: _.Z.Types.TEXT,
                     inline: n.formatInline,
-                    renderTextElement: (e, t) => (null == e || e.type !== u.Z || t ? e : i.cloneElement(e, { tabIndex: -1 })),
+                    renderTextElement: (e, t) => (null == e || e.type !== c.Z || t ? e : i.cloneElement(e, { tabIndex: -1 })),
                     children: () => t(e.content, n)
                 },
                 n.key
@@ -154,79 +155,76 @@ let x = {
     },
     soundboard: {
         react: (e) =>
-            (0, r.jsx)(I.Z, {
+            (0, r.jsx)(T.Z, {
                 channelId: e.channelId,
                 soundId: e.soundId,
                 jumbo: e.jumboable
             })
     },
     staticRouteLink: {
-        react(e, t, n) {
-            let i = () => {
-                !(function (e, t) {
-                    let n = g.Z.getGuild(e);
-                    if (null == e || null == n || !n.hasFeature(L.oNc.COMMUNITY)) return;
-                    let r = {
-                            home: b.oC.GUILD_HOME,
-                            browse: b.oC.CHANNEL_BROWSER,
-                            customize: b.oC.CUSTOMIZE_COMMUNITY,
-                            guide: b.oC.GUILD_HOME
-                        }[t],
-                        i = g.Z.getGuild(e);
-                    if ((null == i ? void 0 : i.joinedAt) == null) {
-                        A.Ub(e, {}, { channelId: r });
-                        return;
-                    }
-                    (0, T.uL)(L.Z5c.CHANNEL(e, r));
-                })(e.guildId, e.channelId);
-            };
-            if (!(0, N.k)(e.channelId)) return null;
-            let a = ''.concat(e.channelId);
-            switch (e.channelId) {
-                case b.HY.GUILD_HOME:
-                case b.HY.SERVER_GUIDE:
-                    a = M.Z.Messages.SERVER_GUIDE;
-                    break;
-                case b.HY.CHANNEL_BROWSER:
-                    a = M.Z.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
-                    break;
-                case b.HY.CUSTOMIZE_COMMUNITY:
-                    a = M.Z.Messages.CHANNELS_AND_ROLES;
-            }
-            return (0, r.jsx)(
-                l.Tooltip,
-                {
-                    text: a,
-                    position: 'top',
-                    children: (a) => {
-                        let { onMouseEnter: s, onMouseLeave: o } = a;
-                        return (0, r.jsx)(
-                            h.Z,
-                            {
-                                role: 'link',
-                                onClick: i,
-                                onMouseEnter: s,
-                                onMouseLeave: o,
-                                className: 'channelMention',
-                                iconType: e.channelId,
-                                children: t(e.content, n)
-                            },
-                            n.key
-                        );
-                    }
-                },
-                n.key
-            );
-        }
+        react: (e, t, n) =>
+            (0, v.k)(e.id)
+                ? (0, r.jsxs)(
+                      p.Z,
+                      {
+                          role: 'link',
+                          onClick: () => {
+                              !(function (e, t, n) {
+                                  let r = N.Z.getGuild(e);
+                                  if (null == e || null == r) return;
+                                  let i = (t) => {
+                                      r.hasFeature(M.oNc.COMMUNITY) && (0, S.uL)(M.Z5c.CHANNEL(e, t));
+                                  };
+                                  switch (t) {
+                                      case 'home':
+                                      case 'guide':
+                                          i(P.oC.GUILD_HOME);
+                                          break;
+                                      case 'browse':
+                                          i(P.oC.CHANNEL_BROWSER);
+                                          break;
+                                      case 'customize':
+                                          i(P.oC.CUSTOMIZE_COMMUNITY);
+                                          break;
+                                      case 'linked-roles':
+                                          if (null != n) {
+                                              let t = A.ZP.getSelfMember(e);
+                                              if (null == t) return;
+                                              let r = N.Z.getRoles(e)[n];
+                                              null == r || t.roles.includes(r.id)
+                                                  ? u.Z.dispatch({
+                                                        type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
+                                                        guildId: e
+                                                    })
+                                                  : u.Z.dispatch({
+                                                        type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
+                                                        guildId: e,
+                                                        role: r
+                                                    });
+                                          } else
+                                              u.Z.dispatch({
+                                                  type: 'GUILD_ROLE_CONNECTIONS_MODAL_SHOW',
+                                                  guildId: e
+                                              });
+                                  }
+                              })(e.guildId, e.id, e.itemId);
+                          },
+                          className: 'channelMention',
+                          iconType: e.id,
+                          children: [t(e.mainContent, n), null != e.itemContent ? (0, r.jsx)(I.Z, {}) : null, null != e.itemContent ? t(e.itemContent, n) : null]
+                      },
+                      n.key
+                  )
+                : null
     },
-    timestamp: { react: (e, t, n) => (0, r.jsx)(O.Z, { node: e }, n.key) },
+    timestamp: { react: (e, t, n) => (0, r.jsx)(R.Z, { node: e }, n.key) },
     list: {
         react: (e, t, n) => {
             let r = e.ordered ? 'ol' : 'ul',
                 i = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
             return (0, o.reactElement)(r, ''.concat(n.key), {
                 start: e.start,
-                className: n.formatInline ? P.inlineFormat : null,
+                className: n.formatInline ? U.inlineFormat : null,
                 style: { '--totalCharacters': i },
                 children: e.items.map((e, r) => {
                     let i = (0, o.reactElement)('span', ''.concat(n.key, '-').concat(r, '-innerSpan'), { children: t(e, n) });
@@ -240,18 +238,18 @@ let x = {
             let r = (0, o.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
             return (0, o.reactElement)('h' + e.level, (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
                 children: r,
-                className: n.formatInline ? P.inlineFormat : null
+                className: n.formatInline ? U.inlineFormat : null
             });
         }
     },
     guild: {
         react: (e, t, n) => {
-            let i = g.Z.getGuild(e.guildId);
+            let i = N.Z.getGuild(e.guildId);
             return (0, r.jsx)(
-                f.Z,
+                h.Z,
                 {
                     guild: i,
-                    children: (0, N.S)(e, t, n)
+                    children: (0, v.S)(e, t, n)
                 },
                 n.key
             );
@@ -260,30 +258,30 @@ let x = {
     channel: {
         react: (e, t, n) =>
             (0, r.jsx)(
-                E.Z,
+                f.Z,
                 {
                     iconType: e.iconType,
-                    children: (0, N.S)(e, t, n)
+                    children: (0, v.S)(e, t, n)
                 },
                 n.key
             )
     },
-    message: { react: (e, t, n) => (0, r.jsx)(p.Z, {}, n.key) },
+    message: { react: (e, t, n) => (0, r.jsx)(m.Z, {}, n.key) },
     subtext: {
         react: (e, t, n) => {
             let r = (0, o.reactElement)('span', ''.concat(n.key, '-innerSpan'), { children: t(e.content, n) });
             return (0, o.reactElement)('small', (null == n ? void 0 : n.key) != null ? ''.concat(n.key) : null, {
                 children: r,
-                className: n.formatInline ? P.inlineFormat : null
+                className: n.formatInline ? U.inlineFormat : null
             });
         }
     }
 };
-function G(e) {
+function k(e) {
     return {
-        ...x,
-        link: (0, D.Z)(e),
-        devLink: (0, y.Z)(e),
+        ...G,
+        link: (0, b.Z)(e),
+        devLink: (0, L.Z)(e),
         emoji: (function (e) {
             let { emojiTooltipPosition: t = 'top', enableEmojiClick: n = !0 } = e;
             return {
@@ -291,7 +289,7 @@ function G(e) {
                     let { key: s } = a;
                     return e.src
                         ? (0, r.jsx)(
-                              m.c,
+                              g.c,
                               {
                                   node: e,
                                   tooltipPosition: t,
@@ -308,7 +306,7 @@ function G(e) {
             return {
                 react(e, i, a) {
                     let { key: s, guildId: o, isInteracting: l } = a,
-                        u = _.ZP.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+                        u = E.ZP.getDisambiguatedEmojiContext(o).getById(e.emojiId);
                     if (null != u) {
                         let t = u.require_colons;
                         e = {
@@ -317,7 +315,7 @@ function G(e) {
                         };
                     }
                     return (0, r.jsx)(
-                        m.Y,
+                        g.Y,
                         {
                             isInteracting: l,
                             node: e,
@@ -329,8 +327,8 @@ function G(e) {
                 }
             };
         })(e),
-        channelMention: (0, R.Z)(e),
-        commandMention: (0, C.ZP)(e),
-        attachmentLink: (0, v.Z)(e)
+        channelMention: (0, y.Z)(e),
+        commandMention: (0, D.ZP)(e),
+        attachmentLink: (0, C.Z)(e)
     };
 }
