@@ -10,5 +10,6 @@ e.exports = {
     code: 'code_efee60',
     footer: 'footer_efee60',
     verifiedButton: 'verifiedButton_efee60',
+    codeStatus: 'codeStatus_efee60',
     spinner: 'spinner_efee60'
 };

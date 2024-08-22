@@ -32,13 +32,20 @@ function f(e) {
         S = (0, s.e7)([c.Z], () => c.Z.getSecureFramesRosterMapEntry(t)),
         I = (0, s.e7)([c.Z], () => c.Z.getSecureFramesRosterMapEntry(n)),
         R = r.useCallback(async (e, t, n, r) => {
-            _(!0);
             let i = await (0, o.Il)(d.Xj, new Uint8Array(t), e, new Uint8Array(r), n);
             f(l.fromByteArray(i)), _(!1);
-        }, []);
+        }, []),
+        g = r.useRef(null);
     return (
         r.useEffect(() => {
-            null != S && null != I && R(n, I, t, S);
+            if (null != S && null != I && null == g.current) {
+                _(!0);
+                g.current = setTimeout(() => R(n, I, t, S), 300);
+            }
+            let e = g.current;
+            return () => {
+                null != e && clearTimeout(e);
+            };
         }, [n, I, R, t, S]),
         r.useMemo(
             () => ({
