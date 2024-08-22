@@ -66,14 +66,18 @@ function f(e) {
                           .map((e) => {
                               let t = _.ZP.getName(e);
                               return A
-                                  ? (0, r.jsx)('div', {
-                                        className: s()(E.avatar, p),
-                                        children: (0, r.jsx)(u.Avatar, {
-                                            src: e.getAvatarURL(o, 24),
-                                            'aria-label': t,
-                                            size: m
-                                        })
-                                    })
+                                  ? (0, r.jsx)(
+                                        'div',
+                                        {
+                                            className: s()(E.avatar, p),
+                                            children: (0, r.jsx)(u.Avatar, {
+                                                src: e.getAvatarURL(o, 24),
+                                                'aria-label': t,
+                                                size: m
+                                            })
+                                        },
+                                        e.id
+                                    )
                                   : (0, r.jsx)(
                                         u.TooltipContainer,
                                         {

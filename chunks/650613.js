@@ -62,30 +62,34 @@ function f() {
                     let { content: r } = e;
                     if (!(0, h.g)(t, r)) return [];
                     let n = o[(0, s.T)(r)];
-                    return (0, a.jsxs)('li', {
-                        className: p.locatorEntry,
-                        children: [
-                            (0, a.jsx)(b, {
-                                type: r.author_type,
-                                id: r.author_id
-                            }),
-                            !n &&
-                                (0, a.jsx)(i.Text, {
-                                    variant: 'text-md/normal',
-                                    children: 'Expired or no matching presence'
+                    return (0, a.jsxs)(
+                        'li',
+                        {
+                            className: p.locatorEntry,
+                            children: [
+                                (0, a.jsx)(b, {
+                                    type: r.author_type,
+                                    id: r.author_id
                                 }),
-                            (0, m.n2)(r) &&
-                                (0, a.jsxs)(i.Text, {
-                                    variant: 'text-md/normal',
-                                    children: ['Expired at ', r.expires_at]
-                                }),
-                            l.has(r.id) &&
-                                (0, a.jsx)(i.Text, {
-                                    variant: 'text-md/normal',
-                                    children: 'Impression capped'
-                                })
-                        ]
-                    });
+                                !n &&
+                                    (0, a.jsx)(i.Text, {
+                                        variant: 'text-md/normal',
+                                        children: 'Expired or no matching presence'
+                                    }),
+                                (0, m.n2)(r) &&
+                                    (0, a.jsxs)(i.Text, {
+                                        variant: 'text-md/normal',
+                                        children: ['Expired at ', r.expires_at]
+                                    }),
+                                l.has(r.id) &&
+                                    (0, a.jsx)(i.Text, {
+                                        variant: 'text-md/normal',
+                                        children: 'Impression capped'
+                                    })
+                            ]
+                        },
+                        r.id
+                    );
                 });
     return (0, a.jsxs)(i.FormSection, {
         children: [(0, a.jsx)(i.FormTitle, { children: 'Selected Content' }), null != c ? (0, a.jsx)('ul', { children: c }) : (0, a.jsx)('div', { children: '(none?)' })]
