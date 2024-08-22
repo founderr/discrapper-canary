@@ -1,10 +1,10 @@
 t.r(n),
     t.d(n, {
         AccountConnectionResult: function () {
-            return h;
+            return b;
         },
         default: function () {
-            return v;
+            return A;
         }
     }),
     t(610138),
@@ -15,36 +15,39 @@ t.r(n),
     t(757143);
 var s = t(735250),
     r = t(470079),
-    l = t(120356),
-    o = t.n(l),
-    i = t(266067),
+    i = t(120356),
+    o = t.n(i),
+    l = t(266067),
     a = t(873546),
-    c = t(481060),
-    u = t(457330),
-    d = t(726542),
-    f = t(536285),
-    C = t(656649),
-    p = t(981631),
-    g = t(689938),
-    N = t(934484);
-let m = null != window.opener,
-    E = 'https://dis.gd/Amazon-Music-Connection',
-    _ = (e) => new URLSearchParams(e.search);
-function v() {
+    c = t(442837),
+    u = t(481060),
+    d = t(457330),
+    f = t(726542),
+    C = t(536285),
+    p = t(553795),
+    g = t(656649),
+    N = t(981631),
+    m = t(689938),
+    E = t(934484);
+let _ = null != window.opener,
+    h = 'https://dis.gd/Amazon-Music-Connection',
+    v = (e) => new URLSearchParams(e.search);
+function A() {
     var e;
-    let n = (0, i.k6)(),
-        t = _((0, i.TH)()),
-        l = t.get('code'),
+    let n = (0, l.k6)(),
+        t = v((0, l.TH)()),
+        i = t.get('code'),
         o = t.get('oauth_verifier'),
         a = null !== (e = t.get('state')) && void 0 !== e ? e : '',
-        c = t.get('loading'),
-        { type: g } = (0, i.UO)(),
-        N = (0, C.vJ)(g),
-        E = null == o ? (null != l ? l : '') : o,
-        [v, A] = r.useState(!0);
+        u = t.get('loading'),
+        { type: m } = (0, l.UO)(),
+        E = (0, g.vJ)(m),
+        h = null == o ? (null != i ? i : '') : o,
+        A = (0, c.e7)([p.Z], () => p.Z.hasPendingAuthorizedState(a), [a]),
+        [T, O] = r.useState(!0);
     return (r.useEffect(() => {
         let e;
-        if (null != c) return;
+        if (null != u || !A) return;
         for (let n of t.keys()) {
             if (!!n.startsWith('openid.')) null == e && (e = {}), (e[n] = t.get(n));
         }
@@ -52,92 +55,92 @@ function v() {
                 let { status: t, body: s } = e;
                 if (null != o) {
                     if (null == s ? void 0 : s.redirect) return n.replace(s.redirect);
-                    [200, 204].includes(t) && (n.replace(p.Z5c.CONNECTIONS_SUCCESS(o)), m && window.close()), A(!1);
+                    [200, 204].includes(t) && (n.replace(N.Z5c.CONNECTIONS_SUCCESS(o)), _ && window.close()), O(!1);
                 }
             },
             r = {
-                code: E,
+                code: h,
                 openid_params: e,
                 state: a
             },
-            l = (e) => {
-                null != o && d.Z.isSupported(o) && u.Z.callback(o, r, e).then(s, s);
+            i = (e) => {
+                null != o && f.Z.isSupported(o) && d.Z.callback(o, r, e).then(s, s);
             };
-        if (m) {
-            l(!1);
+        if (_) {
+            i(!1);
             return;
         }
-        let o = (0, C.vJ)(g);
-        f.default
-            .request(p.Etm.CONNECTIONS_CALLBACK, {
+        let o = (0, g.vJ)(m);
+        C.default
+            .request(N.Etm.CONNECTIONS_CALLBACK, {
                 ...r,
                 providerType: o
             })
-            .then(s, (e) => l('RPCError' !== e.name))
-            .then(() => f.default.disconnect());
-    }, [E, n, c, g, t, a]),
-    null != N && d.Z.isSupported(N))
-        ? (0, s.jsx)(h, {
-              platformType: N,
-              verifying: v
+            .then(s, (e) => i('RPCError' !== e.name))
+            .then(() => C.default.disconnect());
+    }, [h, A, n, u, m, t, a]),
+    null != E && f.Z.isSupported(E))
+        ? (0, s.jsx)(b, {
+              platformType: E,
+              verifying: T
           })
         : null;
 }
-function h(e) {
+function b(e) {
     let n,
         t,
-        { verifying: l, platformType: i } = e,
-        u = d.Z.get(i),
-        f = r.useCallback(() => {
+        { verifying: i, platformType: l } = e,
+        c = f.Z.get(l),
+        d = r.useCallback(() => {
             window.close();
         }, []);
     return (
-        (n = l
+        (n = i
             ? (0, s.jsx)('div', {
-                  className: N.message,
-                  children: g.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: u.name })
+                  className: E.message,
+                  children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: c.name })
               })
             : (0, s.jsxs)(s.Fragment, {
                   children: [
                       (0, s.jsx)('div', {
-                          className: o()(N.message, N.error),
-                          children: g.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE.format({ name: u.name })
+                          className: o()(E.message, E.error),
+                          children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE.format({ name: c.name })
                       }),
                       (0, s.jsx)('div', {
-                          className: o()(N.message, N.details),
-                          children: g.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE_DETAILS
+                          className: o()(E.message, E.details),
+                          children: m.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE_DETAILS
                       }),
-                      i !== p.ABu.AMAZON_MUSIC
+                      l !== N.ABu.AMAZON_MUSIC
                           ? null
                           : (0, s.jsx)('div', {
-                                className: o()(N.message, N.details),
+                                className: o()(E.message, E.details),
                                 children: a.tq
-                                    ? g.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE_MOBILE.format({
+                                    ? m.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE_MOBILE.format({
                                           link: () =>
-                                              (0, s.jsx)(c.Anchor, {
-                                                  href: E,
-                                                  children: E
+                                              (0, s.jsx)(u.Anchor, {
+                                                  href: h,
+                                                  children: h
                                               })
                                       })
-                                    : g.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE.format({
+                                    : m.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE.format({
                                           link: () =>
-                                              (0, s.jsx)(c.Anchor, {
-                                                  href: E,
-                                                  children: E
+                                              (0, s.jsx)(u.Anchor, {
+                                                  href: h,
+                                                  children: h
                                               })
                                       })
                             })
                   ]
               })),
-        (m || l) &&
-            (t = (0, s.jsx)(c.Button, {
-                className: N.btn,
-                disabled: l,
-                onClick: f,
-                children: l ? (0, s.jsx)(c.Spinner, { itemClassName: N.spinnerItem }) : g.Z.Messages.DONE
+        (_ || i) &&
+            (t = (0, s.jsx)(u.Button, {
+                className: E.btn,
+                disabled: i,
+                onClick: d,
+                children: i ? (0, s.jsx)(u.Spinner, { itemClassName: E.spinnerItem }) : m.Z.Messages.DONE
             })),
-        (0, s.jsxs)(C.UV, {
-            platformType: i,
+        (0, s.jsxs)(g.UV, {
+            platformType: l,
             children: [n, t]
         })
     );

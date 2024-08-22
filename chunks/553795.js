@@ -15,17 +15,18 @@ let f = new Set([E.ABu.CONTACTS]),
     p = [],
     I = [],
     m = {},
-    T = {},
+    T = new Set(),
     g = {},
-    S = (e) => {
+    S = {},
+    A = (e) => {
         (p = e.filter((e) => !f.has(e.type) && c.Z.isSupported(e.type))), (I = e.filter((e) => f.has(e.type))), (h = !1);
     };
-class A extends (r = o.ZP.Store) {
+class N extends (r = o.ZP.Store) {
     isJoining(e) {
         return m[e] || !1;
     }
     joinErrorMessage(e) {
-        return g[e];
+        return S[e];
     }
     isFetching() {
         return h;
@@ -43,11 +44,20 @@ class A extends (r = o.ZP.Store) {
         return I.find((t) => t.type === e);
     }
     isSuggestedAccountType(e) {
-        return T[e] || !1;
+        return g[e] || !1;
+    }
+    addPendingAuthorizedState(e) {
+        T.add(e);
+    }
+    deletePendingAuthorizedState(e) {
+        T.delete(e);
+    }
+    hasPendingAuthorizedState(e) {
+        return T.has(e);
     }
 }
 (s = 'ConnectedAccountsStore'),
-    (a = 'displayName') in (i = A)
+    (a = 'displayName') in (i = N)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -55,13 +65,13 @@ class A extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new A(l.Z, {
+    (t.Z = new N(l.Z, {
         CONNECTION_OPEN: function (e) {
-            S(e.connectedAccounts.map((e) => new d.Z(e)));
+            A(e.connectedAccounts.map((e) => new d.Z(e)));
         },
         USER_CONNECTIONS_UPDATE: function (e) {
             e.local && null != e.accounts
-                ? S(
+                ? A(
                       e.accounts.map(
                           (e) =>
                               new d.Z({
@@ -85,6 +95,6 @@ class A extends (r = o.ZP.Store) {
             null != r && (a.revoked = r), null != i && (a.accessToken = i);
         },
         USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function (e) {
-            g[e.integrationId] = void 0 !== e.error ? e.error : '';
+            S[e.integrationId] = void 0 !== e.error ? e.error : '';
         }
     }));
