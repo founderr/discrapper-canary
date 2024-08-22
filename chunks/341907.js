@@ -1,16 +1,16 @@
 n.r(t),
     n.d(t, {
         navigateToQuestHome: function () {
-            return h;
+            return I;
         },
         openDisclosureModal: function () {
-            return f;
+            return p;
         },
         openQuestInGameRewardModal: function () {
-            return E;
+            return h;
         },
         openQuestsRewardCodeModal: function () {
-            return _;
+            return f;
         }
     });
 var r = n(735250);
@@ -21,9 +21,11 @@ var i = n(481060),
     o = n(703656),
     l = n(617136),
     u = n(282421),
-    c = n(981631),
-    d = n(731455);
-function _(e) {
+    c = n(497505),
+    d = n(150560),
+    _ = n(981631),
+    E = n(731455);
+function f(e) {
     let { questId: t, location: a, questContentPosition: s } = e;
     (0, i.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e('26138'), n.e('54535'), n.e('95688')]).then(n.bind(n, 985866));
@@ -36,7 +38,7 @@ function _(e) {
             });
     });
 }
-function E(e, t) {
+function h(e, t) {
     (0, i.openModalLazy)(async () => {
         let { default: i } = await n.e('88938').then(n.bind(n, 390238));
         return (n) =>
@@ -47,7 +49,7 @@ function E(e, t) {
             });
     });
 }
-function f(e, t) {
+function p(e, t) {
     (0, l._3)({
         questId: e.id,
         questContent: t.content,
@@ -64,6 +66,19 @@ function f(e, t) {
                 });
         });
 }
-function h(e, t) {
-    u.B.getCurrentConfig({ location: e }).enabled ? ((0, a.uY)(d.Gj.Quests), (0, o.uL)(c.Z5c.QUEST_HOME + (null != t ? '#'.concat(t) : ''))) : s.Z.open(c.oAB.INVENTORY);
+function I(e, t, n) {
+    let r = u.B.getCurrentConfig({ location: e }).enabled,
+        i = d.Z.getState().setUtmCurrentContext;
+    if (
+        (i({
+            utmSourceCurrent: 'Discord Widget',
+            utmMediumCurrent: 'in-app',
+            utmCampaignCurrent: n,
+            utmContentCurrent: Object.keys(c.jn).find((e) => c.jn[e] === t)
+        }),
+        r)
+    ) {
+        let e = null != n ? '#'.concat(n) : '';
+        (0, a.uY)(E.Gj.Quests), (0, o.uL)(_.Z5c.QUEST_HOME + e);
+    } else s.Z.open(_.oAB.INVENTORY);
 }

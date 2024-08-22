@@ -14,77 +14,85 @@ var i = n(735250),
     m = n(63063),
     I = n(113434),
     g = n(471985),
-    p = n(710914),
-    T = n(906739),
-    S = n(452081),
-    f = n(46140),
-    C = n(981631),
-    N = n(689938),
-    A = n(296561);
+    p = n(150560),
+    T = n(710914),
+    S = n(906739),
+    f = n(452081),
+    C = n(46140),
+    N = n(981631),
+    A = n(689938),
+    v = n(296561);
 t.Z = function (e) {
     let {} = e,
-        t = (0, g.Z)(f.dr.QUEST_HOME_DESKTOP),
-        { tabs: v, selectedTab: Z, onSelectTab: L } = (0, S.z)(),
-        { onScroll: O, scrollPosition: R } = (0, d.M)(),
-        x = (0, l.ZP)(),
-        { quests: b, isFetchingCurrentQuests: P } = (0, I.bA)(Z),
-        M = (0, T.Z)(),
-        D = null;
+        t = (0, g.Z)(C.dr.QUEST_HOME_DESKTOP),
+        { tabs: Z, selectedTab: L, onSelectTab: O } = (0, f.z)(),
+        { onScroll: R, scrollPosition: x } = (0, d.M)(),
+        b = (0, l.ZP)(),
+        P = p.Z.getState().getUtmCurrentContext(),
+        { quests: M, isFetchingCurrentQuests: D } = (0, I.bA)(L),
+        y = (0, S.Z)(),
+        j = null;
     if (window.location.hash.length > 0) {
         let e = window.location.hash.slice(1);
-        for (let t of b)
+        for (let t of M)
             if (t.id === e) {
-                D = e;
+                j = e;
                 break;
             }
     }
     a.useEffect(() => {
         (0, o.h)({
             name: s.ImpressionNames.QUEST_HOME,
-            type: s.ImpressionTypes.VIEW
+            type: s.ImpressionTypes.VIEW,
+            properties: {
+                utm_source_current: P.utmSourceCurrent,
+                utm_medium_current: P.utmMediumCurrent,
+                utm_campaign_current: P.utmCampaignCurrent,
+                utm_content_current: P.utmContentCurrent
+            }
         });
     }, []);
-    let y = a.useCallback(() => {
-        window.open(m.Z.getArticleURL(C.BhN.QUESTS_LEARN_MORE));
+    let U = a.useCallback(() => {
+        window.open(m.Z.getArticleURL(N.BhN.QUESTS_LEARN_MORE));
     }, []);
-    (0, c.Tt)({ location: N.Z.Messages.QUESTS });
-    let j = a.useMemo(() => ({ backgroundImage: 'url('.concat(M, ')') }), [M]);
+    (0, c.Tt)({ location: A.Z.Messages.QUESTS });
+    let G = a.useMemo(() => ({ backgroundImage: 'url('.concat(y, ')') }), [y]);
     return t
         ? (0, i.jsxs)('div', {
-              className: A.container,
+              className: v.container,
               children: [
                   (0, i.jsxs)(h.ZP, {
                       children: [
-                          (0, i.jsx)('div', { className: A.dragRegion }),
-                          (0, i.jsx)(h.z6, { scrollPosition: R }),
+                          (0, i.jsx)('div', { className: v.dragRegion }),
+                          (0, i.jsx)(h.z6, { scrollPosition: x }),
                           (0, i.jsx)(h.aV, { icon: r.QuestsIcon }),
                           (0, i.jsx)(E.Z, {
-                              tabs: v,
-                              selectedTab: Z,
-                              onTabSelect: L
+                              tabs: Z,
+                              selectedTab: L,
+                              onTabSelect: O
                           })
                       ]
                   }),
                   (0, i.jsx)(_.Z, {
-                      title: N.Z.Messages.QUESTS_HOME_HERO_TITLE,
-                      description: N.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-                      onScroll: O,
+                      title: A.Z.Messages.QUESTS_HOME_HERO_TITLE,
+                      description: A.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
+                      onScroll: R,
                       button: (0, i.jsx)(u.u, {
-                          text: N.Z.Messages.LEARN_MORE,
-                          onClick: y
+                          text: A.Z.Messages.LEARN_MORE,
+                          onClick: U
                       }),
-                      bannerClassName: A.bannerContainer,
+                      bannerClassName: v.bannerContainer,
                       bannerBackground: (0, i.jsx)('div', {
-                          className: A.bannerImage,
-                          style: j,
-                          children: (0, i.jsx)('div', { className: A.bannerGradient })
+                          className: v.bannerImage,
+                          style: G,
+                          children: (0, i.jsx)('div', { className: v.bannerGradient })
                       }),
                       children:
-                          P && 0 === b.length
-                              ? (0, i.jsx)(r.Spinner, { className: A.spinner })
-                              : 0 === b.length && Z === I.e5.CLAIMED
+                          D && 0 === M.length
+                              ? (0, i.jsx)(r.Spinner, { className: v.spinner })
+                              : 0 === M.length && L === I.e5.CLAIMED
                                 ? (0, i.jsxs)(r.EmptyState, {
-                                      theme: x,
+                                      theme: b,
                                       children: [
                                           (0, i.jsx)(r.EmptyStateImage, {
                                               lightSrc: n(979770),
@@ -92,14 +100,14 @@ t.Z = function (e) {
                                               width: 415,
                                               height: 200
                                           }),
-                                          (0, i.jsx)(r.EmptyStateText, { note: N.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({ onClick: () => L(I.e5.ALL) }) })
+                                          (0, i.jsx)(r.EmptyStateText, { note: A.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({ onClick: () => O(I.e5.ALL) }) })
                                       ]
                                   })
                                 : (0, i.jsx)('div', {
-                                      className: A.gridContainer,
-                                      children: (0, i.jsx)(p.Z, {
-                                          quests: b,
-                                          selectedQuestId: D
+                                      className: v.gridContainer,
+                                      children: (0, i.jsx)(T.Z, {
+                                          quests: M,
+                                          selectedQuestId: j
                                       })
                                   })
                   })

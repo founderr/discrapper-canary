@@ -1,40 +1,42 @@
 var i = n(735250),
     a = n(470079),
-    s = n(948789),
-    r = n(481060),
-    l = n(442837),
-    o = n(212093),
-    c = n(570938),
-    d = n(554300),
-    u = n(677277),
-    _ = n(285865),
-    h = n(918701),
-    E = n(471985),
-    m = n(702428),
-    I = n(683301),
-    g = n(296386),
-    p = n(150192),
-    T = n(889010),
-    S = n(488905),
-    f = n(731455),
-    C = n(981631),
-    N = n(46140),
-    A = n(689938),
-    v = n(653534);
-let Z = (e) => {
+    s = n(636977),
+    r = n(948789),
+    l = n(481060),
+    o = n(442837),
+    c = n(212093),
+    d = n(570938),
+    u = n(554300),
+    _ = n(677277),
+    h = n(285865),
+    E = n(918701),
+    m = n(471985),
+    I = n(702428),
+    g = n(341907),
+    p = n(683301),
+    T = n(296386),
+    S = n(150192),
+    f = n(889010),
+    C = n(488905),
+    N = n(731455),
+    A = n(981631),
+    v = n(46140),
+    Z = n(689938),
+    L = n(653534);
+let O = (e) => {
     switch (e) {
-        case f.Gj.Activity:
-            return f.fW.Activity;
-        case f.Gj.Music:
-            return f.fW.Music;
-        case f.Gj.Television:
-            return f.fW.Television;
-        case f.Gj.Science:
-            return f.fW.Science;
-        case f.Gj.Education:
-            return f.fW.Education;
+        case N.Gj.Activity:
+            return N.fW.Activity;
+        case N.Gj.Music:
+            return N.fW.Music;
+        case N.Gj.Television:
+            return N.fW.Television;
+        case N.Gj.Science:
+            return N.fW.Science;
+        case N.Gj.Education:
+            return N.fW.Education;
         default:
-            return f.fW.Server;
+            return N.fW.Server;
     }
 };
 t.Z = function () {
@@ -42,39 +44,39 @@ t.Z = function () {
             currentCategoryId: e,
             isViewingSearchResults: t,
             currentHomepageCategoryId: n
-        } = (0, l.cj)([I.ZP], () => ({
-            currentCategoryId: I.ZP.getCurrentCategoryId(),
-            isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0,
-            currentHomepageCategoryId: I.ZP.getCurrentHomepageCategoryId()
+        } = (0, o.cj)([p.ZP], () => ({
+            currentCategoryId: p.ZP.getCurrentCategoryId(),
+            isViewingSearchResults: p.ZP.getMostRecentQuery().length > 0,
+            currentHomepageCategoryId: p.ZP.getCurrentHomepageCategoryId()
         })),
-        L = (0, E.Z)(N.dr.QUEST_HOME_DESKTOP),
-        O = (0, h.OG)(),
-        R = (0, l.e7)([p.Z], () => p.Z.getClanDiscoveryCategories(), [], p.j),
-        x =
-            null == R
+        R = (0, m.Z)(v.dr.QUEST_HOME_DESKTOP),
+        x = (0, E.OG)(),
+        b = (0, o.e7)([S.Z], () => S.Z.getClanDiscoveryCategories(), [], S.j),
+        P =
+            null == b
                 ? void 0
-                : R.map((e) => ({
+                : b.map((e) => ({
                       ...e,
-                      icon: Z(e.categoryId)
+                      icon: O(e.categoryId)
                   })),
-        b = (e) => {
-            (0, o.uY)(e, !0), _.Z.closeSidebar(), t && (0, o.AQ)(), (0, h.OG)() && e !== f.Gj.Quests && (0, s.uL)(C.Z5c.GUILD_DISCOVERY), !(0, h.OG)() && e === f.Gj.Quests && (0, s.uL)(C.Z5c.QUEST_HOME);
+        M = (e) => {
+            (0, c.uY)(e, !0), h.Z.closeSidebar(), t && (0, c.AQ)(), (0, E.OG)() && e !== N.Gj.Quests && (0, r.uL)(A.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === N.Gj.Quests && (0, g.navigateToQuestHome)(v.dr.DISCOVERY_SIDEBAR, s.j.DISCOVERY_SIDEBAR);
         };
     return (
         a.useEffect(() => {
-            (0, g.le)(!1, !0);
+            (0, T.le)(!1, !0);
         }, [e]),
         a.useEffect(() => {
-            !O && null == n && (0, o.uY)(f.Gj.Clans, !0);
-        }, [O, n]),
-        (0, i.jsxs)(r.Scroller, {
+            !x && null == n && (0, c.uY)(N.Gj.Clans, !0);
+        }, [x, n]),
+        (0, i.jsxs)(l.Scroller, {
             children: [
-                (0, i.jsx)(S.V, { text: A.Z.Messages.DISCOVER }),
+                (0, i.jsx)(C.V, { text: Z.Z.Messages.DISCOVER }),
                 (0, i.jsx)(
-                    d.Z,
+                    u.Z,
                     {
-                        avatar: (0, i.jsx)(c.Z, {}),
-                        name: A.Z.Messages.CLANS,
+                        avatar: (0, i.jsx)(d.Z, {}),
+                        name: Z.Z.Messages.CLANS,
                         focusProps: {
                             offset: {
                                 right: 4,
@@ -82,30 +84,30 @@ t.Z = function () {
                                 bottom: 1
                             }
                         },
-                        onClick: () => b(f.Gj.Clans),
+                        onClick: () => M(N.Gj.Clans),
                         wrapContent: !0,
-                        selected: e === f.Gj.Clans,
-                        className: v.categoryItem,
-                        selectedClassName: v.selectedCategoryItem,
-                        innerClassName: v.itemInner
+                        selected: e === N.Gj.Clans,
+                        className: L.categoryItem,
+                        selectedClassName: L.selectedCategoryItem,
+                        innerClassName: L.itemInner
                     },
                     'clan-discovery-home'
                 ),
-                (0, i.jsx)(T.Z, {
-                    categories: x,
-                    handleCategorySelect: b,
+                (0, i.jsx)(f.Z, {
+                    categories: P,
+                    handleCategorySelect: M,
                     currentCategoryId: e,
                     shouldDisplaySelectedCategory: !t
                 }),
-                (0, i.jsx)(u.Z, {
-                    handleCategorySelect: b,
+                (0, i.jsx)(_.Z, {
+                    handleCategorySelect: M,
                     currentCategoryId: e,
                     shouldDisplaySelectedCategory: !t
                 }),
-                L &&
-                    (0, i.jsx)(m.Z, {
-                        onClick: () => b(f.Gj.Quests),
-                        isSelected: e === f.Gj.Quests
+                R &&
+                    (0, i.jsx)(I.Z, {
+                        onClick: () => M(N.Gj.Quests),
+                        isSelected: e === N.Gj.Quests
                     })
             ]
         })

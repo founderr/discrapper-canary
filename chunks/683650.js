@@ -1,6 +1,6 @@
 n.d(t, {
     o: function () {
-        return m;
+        return T;
     }
 });
 var i = n(735250);
@@ -8,59 +8,60 @@ n(470079);
 var s = n(120356),
     a = n.n(s),
     r = n(481060),
-    l = n(471985),
-    o = n(266843),
-    c = n(341907),
-    u = n(46140),
-    d = n(689938),
-    _ = n(695623),
-    E = n(87181);
-function I() {
-    let e = (0, l.Z)(u.dr.EMBED_DESKTOP);
+    l = n(497505),
+    o = n(471985),
+    c = n(266843),
+    u = n(341907),
+    d = n(46140),
+    _ = n(689938),
+    E = n(695623),
+    I = n(87181);
+function m() {
+    let e = (0, o.Z)(d.dr.EMBED_DESKTOP);
     return (0, i.jsx)('div', {
-        className: _.buttonContainer,
+        className: E.buttonContainer,
         children: (0, i.jsx)(r.Button, {
-            className: _.button,
+            className: E.button,
             color: r.ButtonColors.BRAND,
             onClick: () => {
-                (0, c.navigateToQuestHome)(u.dr.EMBED_DESKTOP);
+                (0, u.navigateToQuestHome)(d.dr.EMBED_DESKTOP, l.jn.QUESTS_EMBED);
             },
-            children: e ? d.Z.Messages.QUESTS : d.Z.Messages.GIFT_INVENTORY
+            children: e ? _.Z.Messages.QUESTS : _.Z.Messages.GIFT_INVENTORY
         })
     });
 }
-function m() {
-    let { containerRef: e, size: t } = (0, o.h)();
+function T() {
+    let { containerRef: e, size: t } = (0, c.h)();
     return (0, i.jsxs)('div', {
         ref: (t) => (e.current = t),
-        className: a()(_.container, {
-            [_.wide]: 'lg' === t,
-            [_.tall]: 'lg' !== t
+        className: a()(E.container, {
+            [E.wide]: 'lg' === t,
+            [E.tall]: 'lg' !== t
         }),
         children: [
             (0, i.jsxs)('div', {
-                className: _.contentContainer,
+                className: E.contentContainer,
                 children: [
                     (0, i.jsx)(r.Heading, {
                         variant: 'lg' === t ? 'heading-xl/bold' : 'heading-lg/bold',
                         color: 'header-primary',
-                        children: d.Z.Messages.QUESTS_EMBED_INVALID_HEADING
+                        children: _.Z.Messages.QUESTS_EMBED_INVALID_HEADING
                     }),
                     (0, i.jsx)(r.Text, {
                         variant: 'lg' === t ? 'text-sm/medium' : 'text-xs/medium',
                         color: 'text-normal',
-                        className: _.__invalid_mobileWebCopy,
-                        children: d.Z.Messages.QUESTS_EMBED_INVALID_BODY_2
+                        className: E.__invalid_mobileWebCopy,
+                        children: _.Z.Messages.QUESTS_EMBED_INVALID_BODY_2
                     }),
-                    (0, i.jsx)(I, {})
+                    (0, i.jsx)(m, {})
                 ]
             }),
             (0, i.jsx)('div', {
-                className: _.imgContainer,
+                className: E.imgContainer,
                 children: (0, i.jsx)('img', {
-                    src: E,
+                    src: I,
                     alt: '',
-                    className: _.missingQuestImage
+                    className: E.missingQuestImage
                 })
             })
         ]

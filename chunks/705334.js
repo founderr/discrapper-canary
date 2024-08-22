@@ -1,6 +1,6 @@
 n.d(t, {
     _: function () {
-        return p;
+        return f;
     }
 });
 var i = n(735250),
@@ -8,69 +8,72 @@ var i = n(735250),
     s = n(120356),
     r = n.n(s),
     l = n(143927),
-    o = n(731965),
-    c = n(481060),
-    d = n(703656),
-    u = n(836768),
-    _ = n(766219),
-    h = n(49898),
-    E = n(981631),
-    m = n(689938),
-    I = n(671590);
-function g(e) {
+    o = n(636977),
+    c = n(731965),
+    d = n(481060),
+    u = n(341907),
+    _ = n(703656),
+    h = n(836768),
+    E = n(766219),
+    m = n(49898),
+    I = n(981631),
+    g = n(46140),
+    p = n(689938),
+    T = n(671590);
+function S(e) {
     let { tab: t } = e,
-        n = (0, u.d)((e) => e.selectedPage === t, l.Z),
+        n = (0, h.d)((e) => e.selectedPage === t, l.Z),
         s = a.useMemo(
             () =>
                 (function (e) {
                     switch (e) {
-                        case h.F$.SERVERS:
-                            return (0, i.jsx)(c.ServerIcon, { color: 'currentColor' });
-                        case h.F$.QUESTS:
-                            return (0, i.jsx)(c.QuestsIcon, { color: 'currentColor' });
+                        case m.F$.SERVERS:
+                            return (0, i.jsx)(d.ServerIcon, { color: 'currentColor' });
+                        case m.F$.QUESTS:
+                            return (0, i.jsx)(d.QuestsIcon, { color: 'currentColor' });
                     }
                 })(t),
             [t]
         ),
-        m = a.useMemo(() => (0, _.sm)(t), [t]),
-        g = a.useCallback(() => {
-            switch (((0, o.j)(() => u.d.setState({ selectedPage: t })), t)) {
-                case h.F$.QUESTS:
-                    return (0, d.uL)(E.Z5c.QUEST_HOME);
-                case h.F$.SERVERS:
-                    return (0, d.uL)(E.Z5c.GLOBAL_DISCOVERY_SERVERS);
+        p = a.useMemo(() => (0, E.sm)(t), [t]),
+        S = a.useCallback(() => {
+            switch (((0, c.j)(() => h.d.setState({ selectedPage: t })), t)) {
+                case m.F$.QUESTS:
+                    return (0, u.navigateToQuestHome)(g.dr.DISCOVERY_SIDEBAR, o.j.DISCOVERY_SIDEBAR);
+                case m.F$.SERVERS:
+                    return (0, _.uL)(I.Z5c.GLOBAL_DISCOVERY_SERVERS);
             }
         }, [t]);
-    return (0, i.jsxs)(c.Clickable, {
-        onClick: g,
-        className: r()(I.navItem, { [I.selected]: n }),
+    return (0, i.jsxs)(d.Clickable, {
+        onClick: S,
+        className: r()(T.navItem, { [T.selected]: n }),
         children: [
             (0, i.jsx)('div', {
-                className: I.navItemIcon,
+                className: T.navItemIcon,
                 children: s
             }),
-            (0, i.jsx)(c.Text, {
+            (0, i.jsx)(d.Text, {
                 variant: 'text-md/medium',
                 color: 'none',
-                children: m
+                children: p
             })
         ]
     });
 }
-function p() {
+function f() {
     return (0, i.jsxs)('div', {
-        className: I.container,
+        className: T.container,
         children: [
             (0, i.jsx)('div', {
-                className: I.header,
-                children: (0, i.jsx)(c.Heading, {
+                className: T.header,
+                children: (0, i.jsx)(d.Heading, {
                     variant: 'text-lg/semibold',
-                    children: m.Z.Messages.GLOBAL_DISCOVERY_TITLE
+                    children: p.Z.Messages.GLOBAL_DISCOVERY_TITLE
                 })
             }),
             (0, i.jsx)('nav', {
-                className: I.nav,
-                children: h.mc.map((e) => (0, i.jsx)(g, { tab: e }, e))
+                className: T.nav,
+                children: m.mc.map((e) => (0, i.jsx)(S, { tab: e }, e))
             })
         ]
     });
