@@ -197,7 +197,8 @@ var n,
     (z.MOBILE_NATIVE_UPDATE = 'mobile-native-update'),
     (z.SHOP = 'shop'),
     (z.AUTHORIZED_APPS = 'authorized-apps'),
-    (z.SECURE_FRAMES_VERIFICATION = 'secure-frames-verification');
+    (z.SECURE_FRAMES_VERIFICATION = 'secure-frames-verification'),
+    (z.ICYMI = 'icymi');
 let e_ = 'CacheStoreLazy',
     eE = 'CacheStoreChannelsLazy',
     es = 'CacheStore';
