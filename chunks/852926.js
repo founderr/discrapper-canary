@@ -1,14 +1,17 @@
 n.d(t, {
     GC: function () {
-        return m;
+        return I;
     },
     _X: function () {
-        return E;
+        return m;
     },
     em: function () {
-        return h;
+        return E;
     },
     jU: function () {
+        return h;
+    },
+    s0: function () {
         return _;
     }
 });
@@ -22,34 +25,41 @@ var i = n(13245),
     d = n(981631);
 let u = ['207646673902501888'];
 function _(e) {
-    return null == e
-        ? {
-              lock: d.VqG,
+    return a.Z.isReady(e)
+        ? (i.Z.setLocked(!1, e),
+          {
+              lock() {
+                  i.Z.setLocked(!0, e);
+              },
+              context: d.IlC.OVERLAY
+          })
+        : (s.ZP.focus(null, !0),
+          {
+              lock() {
+                  s.ZP.setForegroundProcess(e);
+              },
               context: d.IlC.APP
-          }
-        : a.Z.isReady(e)
-          ? (i.Z.setLocked(!1, e),
-            {
-                lock() {
-                    i.Z.setLocked(!0, e);
-                },
-                context: d.IlC.OVERLAY
-            })
-          : (s.ZP.focus(null, !0),
-            {
-                lock() {
-                    s.ZP.setForegroundProcess(e);
-                },
-                context: d.IlC.APP
-            });
+          });
 }
-let h = async (e, t, n) => {
+function h(e) {
+    if (null == e)
+        return {
+            lock: d.VqG,
+            context: d.IlC.APP
+        };
+    let t = _(e);
+    return {
+        lock: t.lock,
+        context: t.context
+    };
+}
+let E = async (e, t, n) => {
         if (((0, o.YK)(e, t), (null == n || '' === n) && (0, o.s9)(t))) return (e.authorization.scopes = [c.cE, c.CN]), Promise.resolve();
         if (null == n || '' === n) return Promise.reject(new l.Z({ closeCode: d.$VG.INVALID_CLIENTID }, 'No Client ID Specified'));
         let i = s.ZP.releaseChannel !== d.R5N.CANARY && !u.includes(n) && e.transport !== c.He.POST_MESSAGE;
         return await (0, o.vv)(n, i), (0, o.fy)(e, n, t);
     },
-    E = () =>
+    m = () =>
         (0, o.tr)((e) => {
             let t = [];
             if (null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut))
@@ -63,7 +73,7 @@ let h = async (e, t, n) => {
                 });
             return t;
         }),
-    m = (e) =>
+    I = (e) =>
         (0, o.FJ)(e, (e) => {
             let t = '';
             return null != e.modeOptions.shortcut && Array.isArray(e.modeOptions.shortcut) && (t = (0, r.BB)(e.modeOptions.shortcut)), t;
