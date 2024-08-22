@@ -162,8 +162,8 @@ s.Z = function () {
     }, [g]);
     let p = b.bh.useSetting(),
         y = null != O || !g,
-        { promotionsLoaded: V, activeOutboundPromotions: Y, claimedEndedOutboundPromotions: H, claimedOutboundPromotionCodeMap: w, addClaimedOutboundPromotionCode: k } = (0, h.lG)(),
-        W = Y.length + H.length > 0,
+        { promotionsLoaded: V, activeOutboundPromotions: Y, claimedEndedOutboundPromotions: w, claimedOutboundPromotionCodeMap: H, addClaimedOutboundPromotionCode: k } = (0, h.lG)(),
+        W = Y.length + w.length > 0,
         K =
             A.g.useExperiment(
                 { location: 'EntitlementGifts' },
@@ -235,7 +235,7 @@ s.Z = function () {
                               children: [
                                   _,
                                   W ? (0, n.jsx)(d.FormDivider, { className: G.divider }) : null,
-                                  H.map((e) => {
+                                  w.map((e) => {
                                       let { code: s, promotion: t } = e;
                                       return (0, n.jsx)(
                                           F,
@@ -253,7 +253,7 @@ s.Z = function () {
                                           F,
                                           {
                                               outboundPromotion: e,
-                                              code: w[e.id],
+                                              code: H[e.id],
                                               addClaimedOutboundPromotionCode: k,
                                               disabled: !i
                                           },

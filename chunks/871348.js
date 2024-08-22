@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(931515),
     u = n(807933),
     _ = n(207796),
-    h = n(497189),
-    E = n(895068),
+    E = n(497189),
+    h = n(895068),
     m = n(490610),
     I = n(689938),
     g = n(604167);
@@ -38,7 +38,7 @@ function p(e) {
                         (0, i.jsx)('div', { className: g.backgroundImageBlur }),
                         (0, i.jsx)('div', {
                             className: g.backgroundImageContent,
-                            children: (0, i.jsx)(h.Z, {
+                            children: (0, i.jsx)(E.Z, {
                                 eligibleGuilds: s,
                                 eligibleGuildsIncludingConverted: n
                             })
@@ -60,10 +60,10 @@ function T(e) {
         children: [
             (0, i.jsx)('div', {
                 className: g.list,
-                children: (0, i.jsx)(E.ZP, {
+                children: (0, i.jsx)(h.ZP, {
                     width: null != a ? a : 0,
                     paddingHorizontal: 64,
-                    variant: (0, E.s)(r, E.Bj.GLOBAL_DISCOVERY),
+                    variant: (0, h.s)(r, h.Bj.GLOBAL_DISCOVERY),
                     onScroll: t
                 })
             }),

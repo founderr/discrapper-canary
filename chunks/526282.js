@@ -8,7 +8,7 @@ var i = n(735250),
     d = n(970606),
     u = n(207796),
     _ = n(689938),
-    h = n(620080);
+    E = n(620080);
 t.Z = a.memo(function (e) {
     let { className: t, background: n } = e;
     a.useEffect(() => {
@@ -17,17 +17,17 @@ t.Z = a.memo(function (e) {
     let s = a.useCallback(() => {
             (0, d.GS)({ location: c.Z.CLAN_DISCOVERY }), (0, u.fH)(u.v0.GET_STARTED);
         }, []),
-        E = (0, u.GN)((e) => e.completedNux, l.Z);
+        h = (0, u.GN)((e) => e.completedNux, l.Z);
     return (0, i.jsxs)('div', {
-        className: r()(h.upsellContainer, t),
+        className: r()(E.upsellContainer, t),
         children: [
             (0, i.jsx)('div', {
-                className: h.upsellDetailsContainer,
+                className: E.upsellDetailsContainer,
                 children: (0, i.jsxs)('div', {
-                    className: h.upsellDetails,
+                    className: E.upsellDetails,
                     children: [
                         (0, i.jsx)(o.Heading, {
-                            className: h.upsellTitle,
+                            className: E.upsellTitle,
                             variant: 'display-lg',
                             color: 'header-primary',
                             children: _.Z.Messages.CLAN_DISCOVERY_UPSELL_TITLE.format({})
@@ -38,12 +38,12 @@ t.Z = a.memo(function (e) {
                             children: _.Z.Messages.CLAN_DISCOVERY_UPSELL_SUBTITLE
                         }),
                         (0, i.jsx)('div', {
-                            className: h.upsellButtonContainer,
-                            children: E
+                            className: E.upsellButtonContainer,
+                            children: h
                                 ? null
                                 : (0, i.jsx)(o.Button, {
                                       onClick: s,
-                                      className: h.upsellButton,
+                                      className: E.upsellButton,
                                       children: (0, i.jsx)(o.Text, {
                                           variant: 'text-sm/medium',
                                           color: 'always-white',

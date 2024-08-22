@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
 var i = n(735250);
@@ -14,18 +14,18 @@ var a = n(990547),
     d = n(921944),
     u = n(689938),
     _ = n(920666);
-let h = (e, t) => ({
+let E = (e, t) => ({
     header: u.Z.Messages.DROP_ENROLLMENT_CTA_TOOLTIP_HEADER.format({ gameName: e.title }),
     body: e.messages.enrollmentTooltip(t),
     imgSrc: e.assets.tooltipSrc,
     imgStyle: _.defaultDropImage
 });
-function E(e) {
+function h(e) {
     let { markAsDismissed: t, partnerGame: n } = e;
     (0, o.hs)(n, a.ImpressionTypes.POPOUT, a.ImpressionNames.DROPS_QUEST_ENROLLMENT);
-    let E = (0, o.au)(n);
-    if (null == E) return null;
-    let { header: m, body: I, imgSrc: g, imgStyle: p } = h(E.drop, E.config.streamLengthRequirement),
+    let h = (0, o.au)(n);
+    if (null == h) return null;
+    let { header: m, body: I, imgSrc: g, imgStyle: p } = E(h.drop, h.config.streamLengthRequirement),
         T = () => {
             t(d.L.DISMISS);
         };
@@ -57,7 +57,7 @@ function E(e) {
                 className: _.subTitle,
                 children: I
             }),
-            E.config.autoEnrollment
+            h.config.autoEnrollment
                 ? (0, i.jsx)(s.Button, {
                       color: s.Button.Colors.BRAND_INVERTED,
                       fullWidth: !0,
@@ -71,7 +71,7 @@ function E(e) {
                       color: s.Button.Colors.BRAND_INVERTED,
                       fullWidth: !0,
                       onClick: () => {
-                          (0, l.RJ)(E.drop.dropsQuestId), r.Z.open(c.oAB.INVENTORY), t(d.L.PRIMARY);
+                          (0, l.RJ)(h.drop.dropsQuestId), r.Z.open(c.oAB.INVENTORY), t(d.L.PRIMARY);
                       },
                       children: u.Z.Messages.DROPS_ELIGIBILITY_ENROLLMENT_PRIMARY_CTA
                   }),

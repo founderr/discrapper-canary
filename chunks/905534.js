@@ -29,10 +29,10 @@ t.Z = {
                     args: d,
                     socket: n
                 }),
-                h = await (0, l.V)(n, c, d);
+                E = await (0, l.V)(n, c, d);
             return new Promise((e) => {
                 setImmediate(() => {
-                    t.addSubscription(n, c, d, _), null != h && t.dispatchToSubscriptions(c, (e) => e.socket.id === n.id, h);
+                    t.addSubscription(n, c, d, _), null != E && t.dispatchToSubscriptions(c, (e) => e.socket.id === n.id, E);
                 }),
                     e({ evt: c });
             });

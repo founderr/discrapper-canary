@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(749210),
     u = n(607070),
     _ = n(100527),
-    h = n(931240),
-    E = n(970606),
+    E = n(931240),
+    h = n(970606),
     m = n(650461),
     I = n(353093),
     g = n(603839),
@@ -164,7 +164,7 @@ t.Z = a.memo(function (e) {
         });
     a.useEffect(() => {
         !s &&
-            (0, E.TE)({
+            (0, h.TE)({
                 guildId: r,
                 location: _.Z.CLAN_DISCOVERY
             });
@@ -173,7 +173,7 @@ t.Z = a.memo(function (e) {
         x = (0, o.e7)([m.ZP], () => (null != r ? m.ZP.getStateForGuild(r).progress : null)),
         P = a.useCallback(() => {
             !s &&
-                ((0, E._9)({
+                ((0, h._9)({
                     guildId: r,
                     location: _.Z.CLAN_DISCOVERY
                 }),
@@ -269,7 +269,7 @@ t.Z = a.memo(function (e) {
         ),
         Y = a.useMemo(() => (null == x ? A.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : A.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [x]),
         W = a.useCallback(async () => {
-            await (0, h.Zx)(r), d.Z.transitionToGuildSync('936317138904440892');
+            await (0, E.Zx)(r), d.Z.transitionToGuildSync('936317138904440892');
         }, [r]),
         z = a.useCallback(
             (e) =>

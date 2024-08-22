@@ -14,13 +14,13 @@ let _ = {
     clamp: !0
 };
 t.Z = function (e) {
-    let { children: t, hasChanges: n, onClose: h, onSave: E, onReset: m } = e,
+    let { children: t, hasChanges: n, onClose: E, onSave: h, onReset: m } = e,
         I = a.useCallback(() => {
-            (0, o.fH)(o.v0.DISCOVERY), null == h || h();
-        }, [h]),
+            (0, o.fH)(o.v0.DISCOVERY), null == E || E();
+        }, [E]),
         g = a.useCallback(() => {
-            null == E || E(), null == I || I();
-        }, [E, I]),
+            null == h || h(), null == I || I();
+        }, [h, I]),
         p = a.useCallback(() => {
             null == m || m();
         }, [m]);

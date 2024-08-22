@@ -14,25 +14,25 @@ var a = n(6025),
     d = n(749405),
     u = n(981631);
 function _(e) {
-    let { index: t, className: n, channel: _, user: h, hasSingleMessageRequest: E } = e,
+    let { index: t, className: n, channel: _, user: E, hasSingleMessageRequest: h } = e,
         { channelId: m } = (0, o._)();
     return (0, i.jsx)(c.Z, {
         index: t,
         className: n,
         isFocused: m === _.id,
         channel: _,
-        user: h,
+        user: E,
         onClick: (e) => {
             e.stopPropagation(),
                 a.Z.openPrivateChannelAsSidebar({
                     channelId: _.id,
                     baseChannelId: s.uZ,
-                    hasSingleMessageRequest: E
+                    hasSingleMessageRequest: h
                 }),
                 r.default.track(u.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !1,
                     channel_id: _.id,
-                    other_user_id: h.id
+                    other_user_id: E.id
                 }),
                 setTimeout(() => {
                     l.S.dispatch(u.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: _.id });
@@ -41,7 +41,7 @@ function _(e) {
         children: (e) =>
             (0, i.jsx)(d.C, {
                 active: e,
-                user: h,
+                user: E,
                 channel: _
             })
     });

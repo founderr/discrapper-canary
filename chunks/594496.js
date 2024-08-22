@@ -63,13 +63,13 @@ function D(e) {
     i()(null != y, 'guild should not be null');
     let V = (0, l.gS)(y.id),
         Y = (0, r.e7)([C.ZP], () => (null == y.id ? null : C.ZP.getMember(y.id, L.id))),
-        H = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(L.id, y.id)),
-        w = A.ZP.canUsePremiumProfileCustomization(L),
+        w = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(L.id, y.id)),
+        H = A.ZP.canUsePremiumProfileCustomization(L),
         k = (0, c.gd)(b, null == Y ? void 0 : Y.avatar),
-        W = (0, c.f$)(v, null == H ? void 0 : H.banner),
-        K = (0, p.p)(U, null == H ? void 0 : H.themeColors),
-        z = null !== (s = null == H ? void 0 : H.bio) && void 0 !== s ? s : '',
-        Q = null !== (t = null == H ? void 0 : H.pronouns) && void 0 !== t ? t : '',
+        W = (0, c.f$)(v, null == w ? void 0 : w.banner),
+        K = (0, p.p)(U, null == w ? void 0 : w.themeColors),
+        z = null !== (s = null == w ? void 0 : w.bio) && void 0 !== s ? s : '',
+        Q = null !== (t = null == w ? void 0 : w.pronouns) && void 0 !== t ? t : '',
         X = (e, s, t) => {
             t(null != e ? e : null != s ? null : void 0);
         };
@@ -102,7 +102,7 @@ function D(e) {
             ),
             (0, n.jsxs)(x.Z, {
                 user: L,
-                showOverlay: !w,
+                showOverlay: !H,
                 children: [
                     (0, n.jsx)(
                         E.Z,
@@ -126,7 +126,7 @@ function D(e) {
                             onAvatarChange: (e) => X(e, null == Y ? void 0 : Y.avatar, g.I5),
                             errors: null == G ? void 0 : G.avatar,
                             guildId: y.id,
-                            disabled: !w
+                            disabled: !H
                         },
                         'avatar'
                     ),
@@ -181,9 +181,9 @@ function D(e) {
                         {
                             showRemoveBannerButton: W,
                             errors: null == G ? void 0 : G.banner,
-                            onBannerChange: (e) => X(e, null == H ? void 0 : H.banner, g.g_),
+                            onBannerChange: (e) => X(e, null == w ? void 0 : w.banner, g.g_),
                             guildId: null == y ? void 0 : y.id,
-                            disabled: !w
+                            disabled: !H
                         },
                         'banner'
                     ),
@@ -192,7 +192,7 @@ function D(e) {
                         pendingAvatar: b,
                         pendingColors: U,
                         onThemeColorsChange: (e) => {
-                            (0, p.ce)(e, null == H ? void 0 : H.themeColors);
+                            (0, p.ce)(e, null == w ? void 0 : w.themeColors);
                         },
                         guildId: null == y ? void 0 : y.id,
                         showResetThemeButton: K
@@ -220,7 +220,7 @@ function D(e) {
                             errors: null !== (D = null == G ? void 0 : G.bio) && void 0 !== D ? D : null == V ? void 0 : V.bio,
                             pendingBio: j,
                             currentBio: z,
-                            disabled: !w
+                            disabled: !H
                         },
                         'about'
                     )

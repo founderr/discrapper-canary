@@ -9,7 +9,7 @@ var i = n(496929),
     d = n(334288),
     u = n(186901),
     _ = n(981631);
-async function h(e, t) {
+async function E(e, t) {
     let n = t.filter((e) => e.type === _.epS.SUBSCRIPTION_GROUP),
         i = await Promise.all(n.map(async (t) => await (0, l.rx)(e, t.id))),
         a = [];
@@ -45,14 +45,14 @@ async function h(e, t) {
         a
     );
 }
-async function E(e) {
+async function h(e) {
     let { socket: t } = e;
     (0, d.f)(t.transport);
     let n = t.application.id;
     if (null == n) throw new c.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
     if (o.Z.inTestModeForApplication(n) || r.Z.inDevModeForApplication(n)) {
         let e = await a.uE(n, !1),
-            t = await h(n, e);
+            t = await E(n, e);
         return [...e.filter((e) => null != e.price), ...t];
     }
     let i = await s.oJ(n),
@@ -62,7 +62,7 @@ async function E(e) {
             .filter((e) => null != e.price);
     return [
         ...l,
-        ...(await h(
+        ...(await E(
             n,
             i.map((e) => e.sku)
         ))
@@ -78,7 +78,7 @@ function m(e) {
 t.Z = {
     [_.Etm.GET_SKUS]: {
         [u.Gp.ANY]: [u.wE, u.lH],
-        handler: E
+        handler: h
     },
     [_.Etm.GET_ENTITLEMENTS]: {
         [u.Gp.ANY]: [u.wE, u.lH],
@@ -86,7 +86,7 @@ t.Z = {
     },
     [_.Etm.GET_SKUS_EMBEDDED]: {
         [u.Gp.ANY]: [u.wE, u.lH],
-        handler: async (e) => ({ skus: await E(e) })
+        handler: async (e) => ({ skus: await h(e) })
     },
     [_.Etm.GET_ENTITLEMENTS_EMBEDDED]: {
         [u.Gp.ANY]: [u.wE, u.lH],

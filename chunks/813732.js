@@ -57,7 +57,7 @@ function Y() {
         })
     });
 }
-function H() {
+function w() {
     let e = (0, o.e7)([P.Z], () => P.Z.getForApplication(B.RQ));
     return (
         a.useEffect(() => {
@@ -135,7 +135,7 @@ s.Z = function () {
                               }),
                               (0, n.jsx)(p.F, {
                                   setting: F.s6.SUBSCRIPTIONS_CREDITS,
-                                  children: (0, n.jsx)(H, {})
+                                  children: (0, n.jsx)(w, {})
                               }),
                               null != e
                                   ? (0, n.jsx)(v.Z, {

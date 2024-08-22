@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(766219),
     u = n(801543),
     _ = n(979233),
-    h = n(88693),
-    E = n(611928),
+    E = n(88693),
+    h = n(611928),
     m = n(680180),
     I = n(791734),
     g = n(341789),
@@ -33,7 +33,7 @@ function Z() {
         x = (0, d.lg)(O),
         b = !C.MU.has(O),
         P = (0, r.iN)('global_discovery_servers_layout'),
-        { searchBarState: M, onTabsAvailableWidthChange: D, onCollapsedSearchBarClick: y, onSearchBarBlur: j, tabsClassName: U } = (0, h.U)({ isSearchBarVisible: b }),
+        { searchBarState: M, onTabsAvailableWidthChange: D, onCollapsedSearchBarClick: y, onSearchBarBlur: j, tabsClassName: U } = (0, E.U)({ isSearchBarVisible: b }),
         { searchQuery: G, onSearchTextChange: k, onClearSearch: w, onSearchSubmit: B, isSearchVisible: H } = (0, S.H)({ loadId: e.current }),
         V = a.useCallback(
             (e) => {
@@ -88,11 +88,11 @@ function Z() {
     return (0, i.jsxs)('div', {
         className: v.container,
         children: [
-            (0, i.jsxs)(E.ZP, {
+            (0, i.jsxs)(h.ZP, {
                 className: H ? v.search : void 0,
                 children: [
-                    !H && (0, i.jsx)(E.z6, { scrollPosition: n }),
-                    (0, i.jsx)(E.aV, {
+                    !H && (0, i.jsx)(h.z6, { scrollPosition: n }),
+                    (0, i.jsx)(h.aV, {
                         icon: H ? s.ArrowLargeLeftIcon : s.ServerIcon,
                         onClick: H ? w : void 0
                     }),

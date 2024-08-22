@@ -49,9 +49,9 @@ var n,
     y = t(474936),
     V = t(981631),
     Y = t(689938),
-    H = t(758294);
+    w = t(758294);
 ((a = n || (n = {}))[(a.WHAT_YOU_LOSE = 1)] = 'WHAT_YOU_LOSE'), (a[(a.CONFIRM = 2)] = 'CONFIRM'), (a[(a.PREVIEW = 3)] = 'PREVIEW'), (a[(a.CONFIRM_DISCOUNT = 4)] = 'CONFIRM_DISCOUNT'), (a[(a.DISCOUNT_APPLIED = 5)] = 'DISCOUNT_APPLIED'), (a[(a.PAUSE_SELECT = 6)] = 'PAUSE_SELECT'), (a[(a.PAUSE_CONFIRM = 7)] = 'PAUSE_CONFIRM');
-async function w(e) {
+async function H(e) {
     let { premiumSubscription: s, onClose: t, setHasError: n, setIsCancelling: a, analyticsLocations: i, analyticsLocation: r } = e;
     try {
         if ((a(!0), n(!1), [V.O0b.PAST_DUE, V.O0b.PAUSED, V.O0b.BILLING_RETRY].includes(s.status))) await (0, T.EO)(s.id, i, r);
@@ -128,7 +128,7 @@ function k(e) {
                   color: I.Button.Colors.RED,
                   disabled: _,
                   onClick: async () => {
-                      await w({
+                      await H({
                           setHasError: N,
                           onClose: o,
                           premiumSubscription: t,
@@ -150,7 +150,7 @@ function k(e) {
             l
                 ? (0, i.jsx)(U.Z, {
                       premiumType: n,
-                      className: H.cancellationHeader,
+                      className: w.cancellationHeader,
                       onClose: o
                   })
                 : (0, i.jsxs)(I.ModalHeader, {
@@ -164,15 +164,15 @@ function k(e) {
                       ]
                   }),
             (0, i.jsxs)(I.ModalContent, {
-                className: H.body,
+                className: w.body,
                 children: [
                     T
                         ? (0, i.jsx)(I.FormErrorBlock, {
-                              className: H.errorBlock,
+                              className: w.errorBlock,
                               children: Y.Z.Messages.BILLING_ERROR_GENERIC
                           })
                         : null,
-                    (0, i.jsx)('div', { className: H.cancelImage }),
+                    (0, i.jsx)('div', { className: w.cancelImage }),
                     (0, i.jsx)('div', { children: h })
                 ]
             }),
@@ -195,13 +195,13 @@ function W(e) {
             analyticsLocation: N.Z.CANCEL_INVOICE_PREVIEW
         }),
         o = (0, E.e7)([O.Z], () => O.Z.get(n.planId));
-    if (null == r || null == o) return (0, i.jsx)(I.Spinner, { className: H.loading });
+    if (null == r || null == o) return (0, i.jsx)(I.Spinner, { className: w.loading });
     let { intervalType: l, intervalCount: c } = R.ZP.getIntervalForInvoice(r);
     return (0, i.jsxs)('div', {
-        className: H.__invalid_bodyText,
+        className: w.__invalid_bodyText,
         children: [
             (0, i.jsx)('div', {
-                className: H.renewalInvoiceDate,
+                className: w.renewalInvoiceDate,
                 children:
                     0 !== r.total
                         ? Y.Z.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE_WITH_CHARGE.format({
@@ -216,7 +216,7 @@ function W(e) {
                     (0, i.jsx)(P.R$, {
                         label: Y.Z.Messages.PREMIUM_SUBSCRIPTION_CANCELLED.format({ planName: R.ZP.getDisplayName(o.id) }),
                         value: (0, R.PK)(o),
-                        className: H.invoiceCancelRow
+                        className: w.invoiceCancelRow
                     }),
                     (0, i.jsx)(P.KU, {}),
                     (0, i.jsx)(B.nd, {
@@ -241,11 +241,11 @@ function K(e) {
                 onClose: a
             }),
             (0, i.jsxs)(I.ModalContent, {
-                className: l()(H.previewStep, H.body),
+                className: l()(w.previewStep, w.body),
                 children: [
                     _
                         ? (0, i.jsx)(I.FormErrorBlock, {
-                              className: H.errorBlock,
+                              className: w.errorBlock,
                               children: Y.Z.Messages.BILLING_ERROR_GENERIC
                           })
                         : null,
@@ -260,7 +260,7 @@ function K(e) {
                         color: I.Button.Colors.RED,
                         disabled: c,
                         onClick: async () => {
-                            await w({
+                            await H({
                                 setHasError: E,
                                 onClose: a,
                                 premiumSubscription: s,
@@ -314,7 +314,7 @@ function X(e) {
     let j = M === y.p9.TIER_0 || M === y.p9.TIER_1 || M === y.p9.TIER_2;
     null == E && (E = j ? 1 : 2);
     let { analyticsLocations: B } = (0, C.ZP)(l, N.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
-        [U, w, W, X] = (function (e, s, t) {
+        [U, H, W, X] = (function (e, s, t) {
             let [n, a] = r.useState(e),
                 [i, o] = r.useState(Date.now()),
                 [l] = r.useState(Date.now()),
@@ -355,17 +355,17 @@ function X(e) {
             t = (0, i.jsx)(Z.of, {
                 premiumSubscription: n,
                 premiumType: M,
-                setStep: w,
+                setStep: H,
                 onClose: () => $(U),
                 pauseDuration: q,
                 setPauseDuration: J,
                 footer: (0, i.jsxs)('div', {
-                    className: H.whatYouLoseButtonContainer,
+                    className: w.whatYouLoseButtonContainer,
                     children: [
                         (0, i.jsx)(I.Button, {
                             disabled: null === q,
                             onClick: () => {
-                                0 === q ? w(1) : w(7);
+                                0 === q ? H(1) : H(7);
                             },
                             children: Y.Z.Messages.CONTINUE
                         }),
@@ -396,7 +396,7 @@ function X(e) {
             t = (0, i.jsx)(Z.Sz, {
                 premiumSubscription: n,
                 premiumType: M,
-                setStep: w,
+                setStep: H,
                 onClose: () => $(U),
                 analyticsLocation: d,
                 pauseDuration: q
@@ -407,25 +407,25 @@ function X(e) {
                 premiumType: M,
                 titleText: Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
                 subtitleText: p ? Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD_V2 : Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
-                subtitleClassName: p ? H.subtitleSection : void 0,
+                subtitleClassName: p ? w.subtitleSection : void 0,
                 subtitleIcon:
                     p &&
                     (0, i.jsx)('div', {
-                        className: H.subtitleIcon,
+                        className: w.subtitleIcon,
                         children: (0, i.jsx)(F.Z, {
                             staticPercentage: 100,
-                            iconClassName: H.iconClassName,
+                            iconClassName: w.iconClassName,
                             showAnimations: !1,
-                            innerCircleClassName: H.innerCircle,
+                            innerCircleClassName: w.innerCircle,
                             progressCircleStrokeSize: 5,
                             backgroundCircleSize: '38%'
                         })
                     }),
                 footer: (0, i.jsxs)('div', {
-                    className: H.whatYouLoseButtonContainer,
+                    className: w.whatYouLoseButtonContainer,
                     children: [
                         (0, i.jsx)(I.Button, {
-                            onClick: () => w(2),
+                            onClick: () => H(2),
                             children: Y.Z.Messages.CONTINUE
                         }),
                         (0, i.jsx)(I.Button, {
@@ -437,8 +437,8 @@ function X(e) {
                     ]
                 }),
                 onClose: () => $(U),
-                onDiscountClaim: () => w(4),
-                onContinue: () => w(2),
+                onDiscountClaim: () => H(4),
+                onContinue: () => H(2),
                 isLoading: ee && et,
                 churnUserDiscountOffer: es,
                 analyticsLocations: B
@@ -448,7 +448,7 @@ function X(e) {
             t = (0, i.jsx)(k, {
                 premiumSubscription: n,
                 premiumType: M,
-                setStep: w,
+                setStep: H,
                 onClose: () => $(U),
                 whatYouLoseExperienceEnabled: j,
                 analyticsLocation: d
@@ -458,7 +458,7 @@ function X(e) {
             t = (0, i.jsx)(K, {
                 premiumSubscription: n,
                 premiumType: M,
-                onBack: () => w(2),
+                onBack: () => H(2),
                 onClose: () => $(U),
                 analyticsLocation: d
             });
@@ -468,7 +468,7 @@ function X(e) {
                 premiumSubscription: n,
                 premiumType: M,
                 onClose: () => $(U),
-                onConfirm: () => w(5),
+                onConfirm: () => H(5),
                 userDiscountOffer: es
             });
             break;
@@ -489,7 +489,7 @@ function X(e) {
         children: [
             (0, i.jsx)(c.O_, {
                 ref: A,
-                className: H.confettiCanvas,
+                className: w.confettiCanvas,
                 environment: T.current
             }),
             (0, i.jsx)(I.ModalRoot, {
