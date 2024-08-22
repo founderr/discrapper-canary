@@ -10,14 +10,14 @@ var l = t(481060),
     r = t(299206),
     s = t(810568),
     o = t(168524),
-    c = t(725119),
-    u = t(26033),
+    u = t(725119),
+    c = t(26033),
     d = t(689938),
     m = t(243113);
 function _(e) {
     var n;
     let { user: t, guildId: _, channel: E, entry: T, onSelect: h, disableGameProfileLinks: x } = e,
-        N = (0, c.Z)({
+        N = (0, u.Z)({
             userId: t.id,
             guildId: _,
             channelId: null == E ? void 0 : E.id
@@ -26,7 +26,7 @@ function _(e) {
             id: t.id,
             label: d.Z.Messages.COPY_ID_USER
         }),
-        C = (0, u.dX)(T),
+        C = (0, c.dX)(T),
         p = (0, o.Z)({
             location: 'ContentPopoutContextMenu',
             applicationId: C && !0 !== x ? (null === (n = T.extra) || void 0 === n ? void 0 : n.application_id) : void 0,

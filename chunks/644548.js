@@ -5,8 +5,8 @@ var a = t(735250),
     r = t(70956),
     s = t(5192),
     o = t(561308),
-    c = t(919394),
-    u = t(206295),
+    u = t(919394),
+    c = t(206295),
     d = t(227172),
     m = t(555672),
     _ = t(297781),
@@ -35,13 +35,13 @@ let N = (e, n, t, a) => {
 n.Z = (e) => {
     let { channel: n, entry: t, disableGameProfileLinks: i, onReaction: s, onVoiceChannelPreview: C } = e,
         { iconUrl: p, iconTitle: g, user: f, details: v, appName: M, coverImageUrl: P } = (0, h.n)(t),
-        { primaryColor: Z, secondaryColor: S } = (0, u.Z)(p),
+        { primaryColor: Z, secondaryColor: S } = (0, c.Z)(p),
         A = (0, o.yA)(t),
         O = (0, o.Nq)(t),
         j = l.useCallback(
             (e) => {
                 if (null != n && null != f && null != A && null != O && !!(0, m.qy)(O))
-                    return (0, c.SO)({
+                    return (0, u.SO)({
                         entry: t,
                         applicationImageSrc: p,
                         avatarSrcs: [f.getAvatarURL(null == n ? void 0 : n.guild_id, 128)],
@@ -69,7 +69,7 @@ n.Z = (e) => {
                               'aria-label': x.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                           }),
                 entry: t,
-                userDescription: x.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+                userDescription: x.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                 title: M,
                 subtitle: v,
                 badges: (0, a.jsx)(_.Gk, {

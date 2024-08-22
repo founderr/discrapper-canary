@@ -34,8 +34,8 @@ var l = t(735250),
     E = t(224706),
     _ = t(600164),
     S = t(152708),
-    h = t(594190),
-    g = t(569984),
+    g = t(594190),
+    h = t(569984),
     C = t(918701),
     I = t(977156),
     x = t(28798),
@@ -99,7 +99,7 @@ async function P() {
     };
 }
 async function D() {
-    let e = h.ZP.getRunningGames();
+    let e = g.ZP.getRunningGames();
     return (
         await Promise.all(
             e.map(async (e) => {
@@ -125,8 +125,8 @@ async function D() {
     ).filter((e) => null !== e);
 }
 function G(e) {
-    let n = (0, f.isWindows)() ? (0, T.Z)(h.ZP, Z.Z) : null,
-        t = h.ZP.getRunningGames();
+    let n = (0, f.isWindows)() ? (0, T.Z)(g.ZP, Z.Z) : null,
+        t = g.ZP.getRunningGames();
     return null != n && (0, A.Z)(e.id, n.windowHandle) ? 2 : null != t.find((n) => (0, A.Z)(e.id, n.windowHandle)) ? 1 : 0;
 }
 function U(e) {
@@ -141,7 +141,7 @@ function U(e) {
         [k, B] = s.useState(!1),
         V = s.useRef(null),
         y = s.useRef(new d.Xp()),
-        H = (0, c.e7)([h.ZP], () => h.ZP.getRunningGames()),
+        H = (0, c.e7)([g.ZP], () => g.ZP.getRunningGames()),
         W = (function (e, n, t) {
             let l = (0, I.Zy)({ location: M.dr.STREAM_SOURCE_SELECT });
             return s.useMemo(() => {
@@ -160,7 +160,7 @@ function U(e) {
                 return null;
             }, [l, e, n, t]);
         })(
-            (0, c.e7)([g.Z], () => g.Z.quests),
+            (0, c.e7)([h.Z], () => h.Z.quests),
             H,
             Z
         ),

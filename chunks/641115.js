@@ -17,8 +17,8 @@ var l = t(735250),
     E = t(2052),
     _ = t(924557),
     S = t(600164),
-    h = t(436774),
-    g = t(933843),
+    g = t(436774),
+    h = t(933843),
     C = t(1163),
     I = t(594174),
     x = t(78839),
@@ -50,7 +50,7 @@ function j() {
         children: [
             (0, l.jsx)(d.NitroWheelIcon, {
                 size: 'md',
-                color: h.JX.PREMIUM_TIER_2,
+                color: g.JX.PREMIUM_TIER_2,
                 className: r()(M.premiumIcon)
             }),
             (0, l.jsx)(d.Text, {
@@ -110,7 +110,7 @@ function P(e) {
     );
 }
 function D(e) {
-    let { onClose: n, selectedPreset: t, selectedResolution: a, selectedFPS: r, onResolutionChange: i, onFPSChange: h, onPresetChange: j, targetGuildPremiumTier: D, captureDeviceSelected: G } = e,
+    let { onClose: n, selectedPreset: t, selectedResolution: a, selectedFPS: r, onResolutionChange: i, onFPSChange: g, onPresetChange: j, targetGuildPremiumTier: D, captureDeviceSelected: G } = e,
         U = (0, u.e7)([I.default], () => {
             let e = I.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
@@ -127,7 +127,7 @@ function D(e) {
         }
     );
     let V = (0, u.e7)([x.ZP], () => x.ZP.inReverseTrial()),
-        y = (0, g.So)(c.q.STREAM_HIGH_QUALITY),
+        y = (0, h.So)(c.q.STREAM_HIGH_QUALITY),
         H = (!b && !k) || y,
         [W, F] = s.useState(!1),
         z = G ? R.z8 : R.WC,
@@ -157,7 +157,7 @@ function D(e) {
                     needsPremium: !(0, Z.Z)(t, a, e.value, U, D),
                     needsDemo: y && e.value === R.ws.FPS_60,
                     analyticsLocation: K,
-                    onClick: () => h(e.value),
+                    onClick: () => g(e.value),
                     onClose: n,
                     setIsHovering: F
                 })

@@ -1,11 +1,11 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return _;
     }
 });
 var l = t(735250),
-    i = t(481060),
-    a = t(374129),
+    a = t(481060),
+    i = t(374129),
     r = t(639351),
     o = t(908841),
     s = t(410441),
@@ -13,9 +13,9 @@ var l = t(735250),
     u = t(689938);
 let d = {
         [c.kG.SPOTIFY]: o.Z,
-        [c.kG.CRUNCHYROLL]: i.CrunchyrollNeutralIcon,
+        [c.kG.CRUNCHYROLL]: a.CrunchyrollNeutralIcon,
         [c.kG.XBOX]: r.Z,
-        [c.kG.PLAYSTATION]: a.Z
+        [c.kG.PLAYSTATION]: i.Z
     },
     m = {
         [c.kG.SPOTIFY]: () => u.Z.Messages.SPOTIFY,
@@ -23,15 +23,15 @@ let d = {
         [c.kG.XBOX]: () => u.Z.Messages.XBOX,
         [c.kG.PLAYSTATION]: () => u.Z.Messages.PLAYSTATION
     };
-function f(e) {
+function _(e) {
     var n;
-    let { type: t, 'aria-label': i, ...a } = e,
+    let { type: t, 'aria-label': a, ...i } = e,
         r = d[t];
     if (null == r) return null;
-    let o = null != i ? i : null === (n = m[t]) || void 0 === n ? void 0 : n.call(m);
+    let o = null != a ? a : null === (n = m[t]) || void 0 === n ? void 0 : n.call(m);
     return (0, l.jsx)(s.Z, {
         Icon: r,
-        ...a,
+        ...i,
         'aria-label': o
     });
 }

@@ -5,8 +5,8 @@ var a = t(735250),
     r = t(423875),
     s = t(442837),
     o = t(18323),
-    c = t(594174),
-    u = t(908841),
+    u = t(594174),
+    c = t(908841),
     d = t(823379),
     m = t(5192),
     _ = t(561308),
@@ -40,7 +40,7 @@ n.Z = (e) => {
     let { channel: n, entry: t, onReaction: i, onVoiceChannelPreview: m } = e,
         { parent_title: v, provider: M, image_url: P } = t.extra.media,
         Z = t.extra.artist.name,
-        S = (0, s.e7)([c.default], () => c.default.getUser(t.author_id)),
+        S = (0, s.e7)([u.default], () => u.default.getUser(t.author_id)),
         { primaryColor: A, secondaryColor: O } = (0, T.Z)(P),
         j = (0, _.Nq)(t),
         R = l.useCallback(() => {
@@ -78,11 +78,11 @@ n.Z = (e) => {
                 headerIcons:
                     M === r.p.SPOTIFY
                         ? (0, a.jsx)(I.Z, {
-                              Icon: u.Z,
+                              Icon: c.Z,
                               'aria-label': p.Z.Messages.SPOTIFY
                           })
                         : null,
-                userDescription: p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED,
+                userDescription: p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
                 title: v,
                 subtitle: Z,
                 badges: (0, a.jsx)(x.Gk, {

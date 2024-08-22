@@ -16,8 +16,8 @@ var l = t(735250),
     E = t(954564),
     _ = t(98131),
     S = t(600164),
-    h = t(594190),
-    g = t(925329),
+    g = t(594190),
+    h = t(925329),
     C = t(565138),
     I = t(695346),
     x = t(494620),
@@ -49,9 +49,9 @@ var l = t(735250),
     z = t(458623);
 function K(e) {
     let { selectedSource: n, selectSource: t, sourceChanged: s, onChangeSource: a } = e,
-        r = (0, i.e7)([h.ZP, v.Z], () => ((0, O.isWindows)() ? (0, P.Z)(h.ZP, v.Z) : null)),
+        r = (0, i.e7)([g.ZP, v.Z], () => ((0, O.isWindows)() ? (0, P.Z)(g.ZP, v.Z) : null)),
         c = (0, i.e7)([u.Z], () => ((null == r ? void 0 : r.id) != null ? u.Z.getApplication(r.id) : null)),
-        d = (0, i.e7)([h.ZP], () => h.ZP.getRunningGames()),
+        d = (0, i.e7)([g.ZP], () => g.ZP.getRunningGames()),
         m = (0, i.Wu)([u.Z], () => d.map((e) => (null != e.id ? u.Z.getApplication(e.id) : null)).filter(M.lm), [d]),
         E = null;
     if ((null != n ? (E = n.name) : null != r && (E = r.name), null == E)) return null;
@@ -70,9 +70,9 @@ function K(e) {
         children: (0, l.jsxs)(w.Z, {
             children: [
                 null != S
-                    ? (0, l.jsx)(g.Z, {
+                    ? (0, l.jsx)(h.Z, {
                           game: S,
-                          size: g.Z.Sizes.XSMALL,
+                          size: h.Z.Sizes.XSMALL,
                           className: F.selectedIcon
                       })
                     : (0, l.jsx)(C, { className: F.selectedIcon }),
@@ -192,7 +192,7 @@ function q(e) {
     });
 }
 function J(e) {
-    let { selectedSource: n, selectedFPS: t, selectedChannelId: a, selectedPreset: r, selectedResolution: o, sourceChanged: u, selectedGuildId: S, targetGuildPremiumTier: h, selectSource: g, selectGuild: C, sound: I, onClose: Z, onChangeSelectedFPS: f, onChangeSelectedResolution: v, onChangeSelectedPreset: L, onChangeSelectedChannelId: M, onChangeSource: O, onChangeAudioDevice: P, onChangeGuild: w, onChangeSound: B, isAnimationDone: V } = e,
+    let { selectedSource: n, selectedFPS: t, selectedChannelId: a, selectedPreset: r, selectedResolution: o, sourceChanged: u, selectedGuildId: S, targetGuildPremiumTier: g, selectSource: h, selectGuild: C, sound: I, onClose: Z, onChangeSelectedFPS: f, onChangeSelectedResolution: v, onChangeSelectedPreset: L, onChangeSelectedChannelId: M, onChangeSource: O, onChangeAudioDevice: P, onChangeGuild: w, onChangeSound: B, isAnimationDone: V } = e,
         z = (0, i.e7)([A.Z, N.Z], () => N.Z.getChannel(A.Z.getVoiceChannelId())),
         J = (0, i.e7)([j.Z], () => j.Z.GPUDriversOutdated),
         $ = (0, i.e7)([j.Z], () => j.Z.problematicGPUDriver),
@@ -224,7 +224,7 @@ function J(e) {
                 : (0, l.jsxs)('div', {
                       children: [
                           (0, l.jsx)(K, {
-                              selectSource: g,
+                              selectSource: h,
                               sourceChanged: u,
                               onChangeSource: O,
                               selectedSource: n
@@ -269,7 +269,7 @@ function J(e) {
                 selectedPreset: r,
                 selectedFPS: t,
                 selectedResolution: o,
-                targetGuildPremiumTier: h,
+                targetGuildPremiumTier: g,
                 onClose: Z,
                 onFPSChange: f,
                 onResolutionChange: v,

@@ -4,32 +4,32 @@ n.d(a, {
     }
 }),
     n(47120);
-var t = n(470079),
-    r = n(392711),
-    s = n.n(r),
+var s = n(470079),
+    t = n(392711),
+    r = n.n(t),
     o = n(876215),
     i = n(442837),
     l = n(146282),
     c = n(897674),
-    u = n(709054),
-    _ = n(206583);
-let E = new Set([o.s.PLAYED_GAME]),
-    d = (e) => E.has(e.content_type);
+    _ = n(709054),
+    E = n(206583);
+let u = new Set([o.s.PLAYED_GAME]),
+    d = (e) => u.has(e.content_type);
 function I() {
-    let e = (0, c.Z)(_.YN.GAME_PROFILE_FEED),
-        a = (0, c.Z)(_.YN.GLOBAL_FEED),
-        n = t.useMemo(
+    let e = (0, c.Z)(E.YN.GAME_PROFILE_FEED),
+        a = (0, c.Z)(E.YN.GLOBAL_FEED),
+        n = s.useMemo(
             () =>
-                s()(a)
+                r()(a)
                     .unionBy(e, (e) => e.id)
                     .filter(d)
-                    .orderBy((e) => u.default.extractTimestamp(e.id), 'desc')
+                    .orderBy((e) => _.default.extractTimestamp(e.id), 'desc')
                     .uniqWith((e, a) => e.author_id === a.author_id && e.extra.application_id === a.extra.application_id)
                     .value(),
             [e, a]
         );
     return {
-        requestId: (0, i.e7)([l.Z], () => l.Z.getFeedRequestId(_.YN.GAME_PROFILE_FEED)),
+        requestId: (0, i.e7)([l.Z], () => l.Z.getFeedRequestId(E.YN.GAME_PROFILE_FEED)),
         entries: n
     };
 }

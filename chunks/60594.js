@@ -18,8 +18,8 @@ var l,
     E = t(287734),
     _ = t(872810),
     S = t(410575),
-    h = t(812206),
-    g = t(600164),
+    g = t(812206),
+    h = t(600164),
     C = t(313201),
     I = t(594190),
     x = t(998594),
@@ -75,8 +75,8 @@ function F(e) {
         ).enableSystemPicker;
     (0, D.UB)(), $ !== B.tI.PRESET_CUSTOM && ((ee = eo), (en = ec)), !(0, j.Z)($, ee, en, ea, ei) && ((ee = eo), (en = ec));
     let e_ = (0, C.Dt)();
-    let [eS, eh] = r.useState(((F = K), (z = Y), F ? 0 : z ? 2 : 3)),
-        [eg, eC] = r.useState(null),
+    let [eS, eg] = r.useState(((F = K), (z = Y), F ? 0 : z ? 2 : 3)),
+        [eh, eC] = r.useState(null),
         [eI, ex] = r.useState(!1),
         [eN, eZ] = r.useState(null),
         [ef, eR] = r.useState(null),
@@ -89,7 +89,7 @@ function F(e) {
         eb = null !== (s = null == el ? void 0 : el.id) && void 0 !== s ? s : eN;
     r.useEffect(() => {
         let e = (0, p.isWindows)() ? (0, G.Z)(I.ZP, L.Z) : null,
-            n = (null == e ? void 0 : e.id) != null ? h.Z.getApplication(e.id) : null;
+            n = (null == e ? void 0 : e.id) != null ? g.Z.getApplication(e.id) : null;
         M.default.track(V.rMx.OPEN_MODAL, {
             type: 'Go Live Modal',
             application_id: null == n ? void 0 : n.id,
@@ -151,7 +151,7 @@ function F(e) {
     );
     async function eB(e) {
         var n, l, s;
-        if ((e.preventDefault(), 2 === eS || 1 === eS)) return eh(3);
+        if ((e.preventDefault(), 2 === eS || 1 === eS)) return eg(3);
         let r = (0, k.Z)(es, ef, I.ZP.getRunningGames()),
             i = O.ZP.supportsFeature(V.eRX.ELEVATED_HOOK) && (null == r ? void 0 : r.elevated);
         if ((0, p.isMac)() && null != ef && (null === (n = ef.id) || void 0 === n ? void 0 : n.startsWith('screen'))) {
@@ -208,8 +208,8 @@ function F(e) {
                 if ((eR(e), null != e)) {
                     if (eE && (null == e ? void 0 : e.id.startsWith('camera:')) !== !0) {
                         let n = e.id.split(':')[1];
-                        ey(n), eH(n), eh(1);
-                    } else eh(3);
+                        ey(n), eH(n), eg(1);
+                    } else eg(3);
                     ex(!0);
                 }
             },
@@ -219,11 +219,11 @@ function F(e) {
             (e) => {
                 eU(e);
                 var n = 3;
-                eh((n = Y ? 2 : 3));
+                eg((n = Y ? 2 : 3));
             },
             [Y]
         );
-    1 === eS && eE && (ed === D.Uc.Update ? eh(3) : ed === D.Uc.Cancel && eh(2));
+    1 === eS && eE && (ed === D.Uc.Update ? eg(3) : ed === D.Uc.Cancel && eg(2));
     let ez = !(1 === eS && eE && ed === D.Uc.Error),
         eK = (function (e) {
             switch (e) {
@@ -239,9 +239,9 @@ function F(e) {
         eY = (0, a.jsx)(d.ModalHeader, {
             className: W.modalHeader,
             separator: !1,
-            children: (0, a.jsxs)(g.Z, {
-                direction: g.Z.Direction.VERTICAL,
-                align: g.Z.Align.CENTER,
+            children: (0, a.jsxs)(h.Z, {
+                direction: h.Z.Direction.VERTICAL,
+                align: h.Z.Align.CENTER,
                 className: W.header,
                 children: [
                     (0, a.jsx)(d.Heading, {
@@ -262,8 +262,8 @@ function F(e) {
             })
         }),
         eQ = r.useCallback(() => {
-            eE && D.ZP.releasePickerStream(), eh(2);
-        }, [eh, eE]),
+            eE && D.ZP.releasePickerStream(), eg(2);
+        }, [eg, eE]),
         eX = (0, a.jsxs)(d.Slides, {
             springConfig: {
                 ...c.config.stiff,
@@ -327,13 +327,13 @@ function F(e) {
                             onChangeSelectedSource: eW,
                             onChangeSource: () => eQ(),
                             onChangeAudioDevice: (e) => eT(e),
-                            onChangeGuild: () => eh(0),
+                            onChangeGuild: () => eg(0),
                             onChangeSound: (e) => eD(e),
                             onClose: q,
                             selectedGuildId: eG,
                             targetGuildPremiumTier: ei,
                             selectGuild: K,
-                            isAnimationDone: 3 === eg && J === d.ModalTransitionState.ENTERED
+                            isAnimationDone: 3 === eh && J === d.ModalTransitionState.ENTERED
                         })
                     })
                 })
@@ -355,10 +355,10 @@ function F(e) {
         })(eS, K, Y, eI),
         eJ = 3 !== eS || (null == ef && null == es) || null == eb,
         e$ = r.useCallback(() => {
-            null != eq && (D.ZP.releasePickerStream(), eh(eq));
-        }, [eh, eq]),
+            null != eq && (D.ZP.releasePickerStream(), eg(eq));
+        }, [eg, eq]),
         e0 = (0, a.jsxs)(d.ModalFooter, {
-            justify: null == eq ? g.Z.Justify.START : g.Z.Justify.BETWEEN,
+            justify: null == eq ? h.Z.Justify.START : h.Z.Justify.BETWEEN,
             children: [
                 (0, a.jsx)(d.Button, {
                     type: 'submit',

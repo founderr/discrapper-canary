@@ -5,8 +5,8 @@ var a = t(735250),
     r = t(481060),
     s = t(2052),
     o = t(620662),
-    c = t(841784),
-    u = t(429589),
+    u = t(841784),
+    c = t(429589),
     d = t(403404),
     m = t(906732),
     _ = t(522474),
@@ -51,10 +51,10 @@ let Z = (e, n) =>
 n.ZP = (e) => {
     var n;
     let { channel: t, entry: h, onReaction: O, onVoiceChannelPreview: j } = e,
-        { iconUrl: R, iconTitle: y, user: L, details: w, activity: b, coverImageUrl: k, richIcon: B } = (0, f.n)(h),
+        { iconUrl: R, iconTitle: y, user: L, details: w, activity: b, coverImageUrl: B, richIcon: k } = (0, f.n)(h),
         { primaryColor: U, secondaryColor: G } = (0, C.Z)(R),
         D = (0, i.e7)([E.default], () => E.default.locale),
-        { displayParticipants: H, participant1: Y, participant2: V, numOtherParticipants: F } = (0, x.Z)(h, 3),
+        { displayParticipants: H, participant1: V, participant2: Y, numOtherParticipants: F } = (0, x.Z)(h, 3),
         W = (0, s.O)(),
         { analyticsLocations: z } = (0, m.ZP)(),
         q = _.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
@@ -76,7 +76,7 @@ n.ZP = (e) => {
                         ? A({
                               entry: h,
                               channel: t,
-                              users: [Y, V],
+                              users: [V, Y],
                               countOthers: F
                           })
                         : S(h, t, L);
@@ -90,7 +90,7 @@ n.ZP = (e) => {
                     channelId: e
                 });
             },
-            [R, t, H, h, D, F, Y, V, U, G, L]
+            [R, t, H, h, D, F, V, Y, U, G, L]
         );
     if (null == L) return null;
     let X = (0, a.jsx)(p.PZ, {
@@ -98,10 +98,10 @@ n.ZP = (e) => {
             entry: h
         }),
         $ = (0, a.jsx)(g.wG, {
-            thumbnailSrc: null !== (n = null != B ? B : k) && void 0 !== n ? n : R,
+            thumbnailSrc: null !== (n = null != k ? k : B) && void 0 !== n ? n : R,
             thumbnailTitle: y,
             channel: t,
-            userDescription: (0, N.kr)(h) ? P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+            userDescription: (0, N.kr)(h) ? P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
             title: h.extra.activity_name,
             subtitle: w,
             badges: X,
@@ -111,8 +111,8 @@ n.ZP = (e) => {
             onClickThumbnail: K
         }),
         Q =
-            (0, o.Z)(b, v.xjy.JOIN) || (0, c.Z)(b)
-                ? (0, a.jsx)(u.Z, {
+            (0, o.Z)(b, v.xjy.JOIN) || (0, u.Z)(b)
+                ? (0, a.jsx)(c.Z, {
                       activity: b,
                       user: L,
                       ButtonComponent: (e) =>

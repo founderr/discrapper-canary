@@ -18,8 +18,8 @@ var l = t(735250),
     E = t(537135),
     _ = t(176940),
     S = t(689938),
-    h = t(51449),
-    g = t(458623),
+    g = t(51449),
+    h = t(458623),
     C = t(224499);
 function I(e) {
     let { selectedSource: n, onChangeVideoDeviceSource: t, onChangeAudioDevice: a } = e;
@@ -41,18 +41,18 @@ function I(e) {
         (0, l.jsx)(s.Fragment, {
             children: (0, l.jsxs)(d.FormItem, {
                 title: 'Capture Device',
-                className: g.modalContent,
+                className: h.modalContent,
                 children: [
                     (0, l.jsx)(d.FormItem, {
                         className: C.marginTop8,
                         children: (0, l.jsxs)(E.Z, {
                             children: [
                                 (0, l.jsx)('span', {
-                                    className: h.ellipsisText,
+                                    className: g.ellipsisText,
                                     children: n.name
                                 }),
                                 (0, l.jsx)(d.Button, {
-                                    className: h.changeButton,
+                                    className: g.changeButton,
                                     color: d.Button.Colors.PRIMARY,
                                     size: d.Button.Sizes.SMALL,
                                     onClick: t,

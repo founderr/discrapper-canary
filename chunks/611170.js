@@ -7,18 +7,18 @@ t.d(n, {
     }
 });
 var l = t(591759),
-    i = t(524444),
-    a = t(231338);
+    a = t(524444),
+    i = t(231338);
 function r(e) {
     let n = e.item.originalItem.media;
-    return (0, i.Yi)({
+    return (0, a.Yi)({
         ...e,
         alt: e.item.originalItem.description,
         src: n.proxyUrl,
         original: n.url,
         placeholder: n.placeholder,
         placeholderVersion: n.placeholderVersion,
-        renderForwardComponent: a.Vq
+        renderForwardComponent: i.Vq
     });
 }
 function o(e) {
@@ -27,13 +27,13 @@ function o(e) {
     return null == t
         ? null
         : (t.searchParams.append('format', 'webp'),
-          (0, i.lV)({
+          (0, a.lV)({
               ...e,
               poster: t.toString(),
               alt: e.item.originalItem.description,
               src: n.proxyUrl,
               placeholder: n.placeholder,
               placeholderVersion: n.placeholderVersion,
-              renderForwardComponent: a.Vq
+              renderForwardComponent: i.Vq
           }));
 }

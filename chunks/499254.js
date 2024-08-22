@@ -1,22 +1,22 @@
-n.d(a, {
+t.d(e, {
     _: function () {
-        return r;
+        return l;
     },
     y: function () {
-        return s;
+        return r;
     }
 });
-var t = n(570140);
-function r(e, a) {
-    t.Z.dispatch({
+var i = t(570140);
+function l(n, e) {
+    i.Z.dispatch({
         type: 'APP_LAUNCHER_SHOW',
-        entrypoint: e,
-        activeViewType: a
+        entrypoint: n,
+        activeViewType: e
     });
 }
-function s(e) {
-    t.Z.dispatch({
+function r(n) {
+    i.Z.dispatch({
         type: 'APP_LAUNCHER_DISMISS',
-        closeReason: e
+        closeReason: n
     });
 }

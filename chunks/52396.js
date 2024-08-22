@@ -1,32 +1,32 @@
 t.d(n, {
     B: function () {
-        return C;
+        return E;
     },
     r: function () {
-        return E;
+        return C;
     }
 }),
     t(411104);
 var l = t(735250),
-    i = t(470079),
-    a = t(512722),
-    r = t.n(a),
+    a = t(470079),
+    i = t(512722),
+    r = t.n(i),
     o = t(876215),
     s = t(775379),
     c = t(879046),
     u = t(214597),
     d = t(498187),
     m = t(482417),
-    f = t(301419),
-    _ = t(397035);
-let p = i.createContext(void 0);
-function C() {
-    let e = i.useContext(p);
+    _ = t(301419),
+    f = t(397035);
+let p = a.createContext(void 0);
+function E() {
+    let e = a.useContext(p);
     return r()(null != e, 'useEntryDataContext must be used within a EntryDataContextProvider'), e;
 }
-function h(e) {
+function I(e) {
     let { entry: n, ...t } = e,
-        i = {
+        a = {
             baseEntryData: (0, u.Z)({
                 entry: n,
                 channel: t.channel
@@ -35,126 +35,126 @@ function h(e) {
         };
     switch (n.content_type) {
         case o.s.TOP_ARTIST:
-            return (0, l.jsx)(T, {
-                entry: n,
-                ...i
-            });
-        case o.s.TOP_GAME:
-            return (0, l.jsx)(x, {
-                entry: n,
-                ...i
-            });
-        case o.s.PLAYED_GAME:
             return (0, l.jsx)(N, {
                 entry: n,
-                ...i
+                ...a
+            });
+        case o.s.TOP_GAME:
+            return (0, l.jsx)(T, {
+                entry: n,
+                ...a
+            });
+        case o.s.PLAYED_GAME:
+            return (0, l.jsx)(x, {
+                entry: n,
+                ...a
             });
         case o.s.WATCHED_MEDIA:
             return (0, l.jsx)(v, {
                 entry: n,
-                ...i
+                ...a
             });
         case o.s.LISTENED_SESSION:
             return (0, l.jsx)(g, {
                 entry: n,
-                ...i
+                ...a
             });
         case o.s.LAUNCHED_ACTIVITY:
-            return (0, l.jsx)(I, {
+            return (0, l.jsx)(h, {
                 entry: n,
-                ...i
+                ...a
             });
         default:
             throw Error('Unsupported content type: '.concat(n.content_type));
     }
 }
-function E(e) {
+function C(e) {
     let { errorFallback: n, ...t } = e;
     return (0, l.jsx)(s.S, {
         fallback: n,
-        children: (0, l.jsx)(h, { ...t })
+        children: (0, l.jsx)(I, { ...t })
     });
 }
-function I(e) {
-    let { entry: n, children: t, ...i } = e,
-        a = (0, c.Z)({
+function h(e) {
+    let { entry: n, children: t, ...a } = e,
+        i = (0, c.Z)({
             entry: n,
-            ...i
+            ...a
         });
     return (0, l.jsx)(p.Provider, {
         value: {
-            parsedEntry: a,
-            ...i
-        },
-        children: t
-    });
-}
-function T(e) {
-    let { entry: n, children: t, ...i } = e,
-        a = (0, f.Z)({
-            entry: n,
-            ...i
-        });
-    return (0, l.jsx)(p.Provider, {
-        value: {
-            parsedEntry: a,
-            ...i
-        },
-        children: t
-    });
-}
-function x(e) {
-    let { entry: n, children: t, ...i } = e,
-        a = (0, d.Z)({
-            entry: n,
-            ...i
-        });
-    return (0, l.jsx)(p.Provider, {
-        value: {
-            parsedEntry: a,
-            ...i
+            parsedEntry: i,
+            ...a
         },
         children: t
     });
 }
 function N(e) {
-    let { entry: n, children: t, ...i } = e,
-        a = (0, d.Z)({
+    let { entry: n, children: t, ...a } = e,
+        i = (0, _.Z)({
             entry: n,
-            ...i
+            ...a
         });
     return (0, l.jsx)(p.Provider, {
         value: {
-            parsedEntry: a,
-            ...i
+            parsedEntry: i,
+            ...a
+        },
+        children: t
+    });
+}
+function T(e) {
+    let { entry: n, children: t, ...a } = e,
+        i = (0, d.Z)({
+            entry: n,
+            ...a
+        });
+    return (0, l.jsx)(p.Provider, {
+        value: {
+            parsedEntry: i,
+            ...a
+        },
+        children: t
+    });
+}
+function x(e) {
+    let { entry: n, children: t, ...a } = e,
+        i = (0, d.Z)({
+            entry: n,
+            ...a
+        });
+    return (0, l.jsx)(p.Provider, {
+        value: {
+            parsedEntry: i,
+            ...a
         },
         children: t
     });
 }
 function v(e) {
-    let { entry: n, children: t, ...i } = e,
-        a = (0, _.Z)({
+    let { entry: n, children: t, ...a } = e,
+        i = (0, f.Z)({
             entry: n,
-            ...i
+            ...a
         });
     return (0, l.jsx)(p.Provider, {
         value: {
-            parsedEntry: a,
-            ...i
+            parsedEntry: i,
+            ...a
         },
         children: t
     });
 }
 function g(e) {
-    let { entry: n, children: t, ...i } = e,
-        a = (0, m.Z)({
+    let { entry: n, children: t, ...a } = e,
+        i = (0, m.Z)({
             entry: n,
-            ...i
+            ...a
         });
     return (0, l.jsx)(p.Provider, {
         value: {
-            parsedEntry: a,
-            ...i
+            parsedEntry: i,
+            ...a
         },
         children: t
     });

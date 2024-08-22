@@ -1,15 +1,15 @@
 t.d(n, {
     ZP: function () {
-        return T;
+        return N;
     },
     xX: function () {
-        return I;
+        return h;
     }
 });
 var l = t(735250);
 t(470079);
-var i = t(120356),
-    a = t.n(i),
+var a = t(120356),
+    i = t.n(a),
     r = t(911969),
     o = t(970184),
     s = t(987106),
@@ -17,22 +17,22 @@ var i = t(120356),
     u = t(574597),
     d = t(378975),
     m = t(413991),
-    f = t(12067),
-    _ = t(676149),
+    _ = t(12067),
+    f = t(676149),
     p = t(861529),
-    C = t(770009),
-    h = t(889515),
-    E = t(751319);
-function I(e) {
+    E = t(770009),
+    I = t(889515),
+    C = t(751319);
+function h(e) {
     return e.map((e, n) =>
         (function (e, n) {
             switch (e.type) {
                 case r.re.ACTION_ROW:
                     return (0, l.jsx)(
-                        h.Z,
+                        I.Z,
                         {
                             ...e,
-                            renderComponents: I
+                            renderComponents: h
                         },
                         n
                     );
@@ -51,25 +51,25 @@ function I(e) {
                 case r.re.TEXT:
                     return (0, l.jsx)(p.Z, { ...e }, n);
                 case r.re.MEDIA_GALLERY:
-                    return (0, l.jsx)(f.Z, { ...e }, n);
-                case r.re.SEPARATOR:
                     return (0, l.jsx)(_.Z, { ...e }, n);
+                case r.re.SEPARATOR:
+                    return (0, l.jsx)(f.Z, { ...e }, n);
                 case r.re.CONTENT_INVENTORY_ENTRY:
-                    return (0, l.jsx)(C.Z, { ...e }, n);
+                    return (0, l.jsx)(E.Z, { ...e }, n);
             }
         })(e, n.toString())
     );
 }
-function T(e) {
+function N(e) {
     let { message: n } = e,
         { components: t } = n;
     return 0 === t.length
         ? null
         : (0, l.jsx)('div', {
-              className: a()([E.container, { [E.containerUikit]: n.isUIKitComponents() }]),
+              className: i()([C.container, { [C.containerUikit]: n.isUIKitComponents() }]),
               children: (0, l.jsx)(o.Il, {
                   message: n,
-                  children: I(t)
+                  children: h(t)
               })
           });
 }

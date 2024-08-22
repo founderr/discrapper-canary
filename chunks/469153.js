@@ -5,15 +5,15 @@ var l = t(338545),
     r = t(481060),
     s = t(607070),
     o = t(689938),
-    c = t(348910),
-    u = t(810819);
+    u = t(348910),
+    c = t(810819);
 let d = () =>
     (0, a.jsxs)('div', {
-        className: u.toast,
+        className: c.toast,
         children: [
             (0, a.jsx)(r.Spinner, {
                 type: r.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
-                className: c.loadingSpinner
+                className: u.loadingSpinner
             }),
             (0, a.jsx)(r.Text, {
                 color: 'header-primary',
@@ -23,13 +23,13 @@ let d = () =>
         ]
     });
 n.Z = (e) => {
-    let { shown: n, sent: t, className: c } = e,
-        u = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
+    let { shown: n, sent: t, className: u } = e,
+        c = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
         m = (0, r.useTransition)(
             n,
             {
                 from: {
-                    transform: u ? 'translateY(0)' : 'translateY(16px)',
+                    transform: c ? 'translateY(0)' : 'translateY(16px)',
                     opacity: 0
                 },
                 enter: {
@@ -37,7 +37,7 @@ n.Z = (e) => {
                     opacity: 1
                 },
                 leave: {
-                    transform: u ? 'translateY(0)' : 'translateY(16px)',
+                    transform: c ? 'translateY(0)' : 'translateY(16px)',
                     opacity: 0
                 },
                 config: {
@@ -55,7 +55,7 @@ n.Z = (e) => {
             (e, n) =>
                 n &&
                 (0, a.jsx)(l.animated.div, {
-                    className: c,
+                    className: u,
                     style: e,
                     children: t
                         ? (0, a.jsx)(r.Toast, {

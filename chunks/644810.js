@@ -1,6 +1,6 @@
 t.d(n, {
     B: function () {
-        return u;
+        return c;
     }
 }),
     t(653041);
@@ -14,7 +14,7 @@ let o = (e, n, t) => ({
         ...(null != n && { MediaImage: n }),
         ...(null != t && { ApplicationImage: t })
     }),
-    c = (e, n) => {
+    u = (e, n) => {
         let t = [
             {
                 iconPath: s.i6,
@@ -30,10 +30,10 @@ let o = (e, n, t) => ({
             t
         );
     },
-    u = async (e) => {
-        let { mediaImageSrc: n, entry: t, avatarSrc: u, description: d, timestamp: m, episodeDescription: _, colors: E, channelId: T } = e,
+    c = async (e) => {
+        let { mediaImageSrc: n, entry: t, avatarSrc: c, description: d, timestamp: m, episodeDescription: _, colors: E, channelId: T } = e,
             h = t.extra.media_title,
-            x = o(u, n);
+            x = o(c, n);
         return await (0, i.f)({
             assetsToLoad: x,
             drawImage: (e) => {
@@ -131,7 +131,7 @@ let o = (e, n, t) => ({
                         },
                         !0
                     );
-                let i = c(m, _);
+                let i = u(m, _);
                 (0, r.J)({
                     canvas: e,
                     badges: i,

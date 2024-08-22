@@ -3,15 +3,15 @@ n.d(a, {
         return o;
     },
     L: function () {
-        return s;
+        return r;
     }
 });
-var t = n(433517);
-let r = 'GameFollowSurveyModal';
-function s() {
+var s = n(433517);
+let t = 'GameFollowSurveyModal';
+function r() {
     var e;
-    return (null === (e = t.K.get(r)) || void 0 === e ? void 0 : e.hasInteractedWithSurvey) !== !0;
+    return (null === (e = s.K.get(t)) || void 0 === e ? void 0 : e.hasInteractedWithSurvey) !== !0;
 }
 function o() {
-    return t.K.set(r, { hasInteractedWithSurvey: !0 });
+    return s.K.set(t, { hasInteractedWithSurvey: !0 });
 }

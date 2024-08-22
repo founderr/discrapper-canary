@@ -1,6 +1,6 @@
 a.d(n, {
     o: function () {
-        return B;
+        return P;
     }
 });
 var t = a(701488),
@@ -18,9 +18,9 @@ var t = a(701488),
     x = a(188225),
     v = a(337664),
     f = a(585681),
-    b = a(288021),
-    h = a(114089),
-    I = a(8361),
+    I = a(288021),
+    b = a(114089),
+    h = a(8361),
     j = a(655297),
     S = a(616297),
     _ = a(213860),
@@ -34,10 +34,10 @@ var t = a(701488),
     A = a(248313),
     D = a(928119),
     U = a(497664),
-    k = a(685358),
-    O = a(33218),
-    P = a(975570);
-let B = {
+    O = a(685358),
+    k = a(33218),
+    B = a(975570);
+let P = {
     [t.MO]: {
         playersSuggestionMin: 1,
         playersSuggestionMax: 8,
@@ -60,7 +60,7 @@ let B = {
         playersSuggestionMin: 1,
         playersSuggestionMax: 8,
         timeSuggestionMinutes: 10,
-        gameplayImageUrls: [U, k]
+        gameplayImageUrls: [U, O]
     },
     [t.PD]: {
         playersSuggestionMin: 1,
@@ -72,7 +72,7 @@ let B = {
         playersSuggestionMin: 1,
         playersSuggestionMax: 16,
         timeSuggestionMinutes: 2,
-        gameplayImageUrls: [O, P]
+        gameplayImageUrls: [k, B]
     },
     [t.am]: {
         playersSuggestionMin: 3,
@@ -135,6 +135,6 @@ let B = {
         gameplayImageUrls: [E, T]
     },
     [t.In]: {
-        gameplayImageUrls: [b, h, I]
+        gameplayImageUrls: [I, b, h]
     }
 };

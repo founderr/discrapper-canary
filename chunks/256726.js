@@ -17,13 +17,13 @@ var a = t(884439),
     r = t(690725),
     s = t(561308),
     o = t(737583),
-    c = t(169040),
-    u = t(689938);
+    u = t(169040),
+    c = t(689938);
 let d = (e) => {
         let { timestamp: n } = e;
         return [
             {
-                iconPath: c.mb,
+                iconPath: u.mb,
                 text: n
             }
         ];
@@ -35,8 +35,8 @@ let d = (e) => {
             ? []
             : [
                   {
-                      iconPath: c.eF,
-                      text: u.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: t })
+                      iconPath: u.eF,
+                      text: c.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: t })
                   }
               ];
     },
@@ -48,7 +48,7 @@ let d = (e) => {
         };
     },
     E = async (e) => {
-        let { user: n, channel: t, mediaImageSrc: a, artist: s, description: u, colors: d, badges: m } = e,
+        let { user: n, channel: t, mediaImageSrc: a, artist: s, description: c, colors: d, badges: m } = e,
             E = _({
                 avatarSrc: n.getAvatarURL(t.guild_id, 128),
                 mediaImageSrc: a
@@ -64,8 +64,8 @@ let d = (e) => {
                     }));
                     e.setSize(
                         {
-                            w: c.nx,
-                            h: c.bg
+                            w: u.nx,
+                            h: u.bg
                         },
                         4
                     ),
@@ -73,17 +73,17 @@ let d = (e) => {
                             t,
                             {
                                 x: 0,
-                                y: c.bg
+                                y: u.bg
                             },
                             {
-                                x: c.nx,
+                                x: u.nx,
                                 y: 0
                             },
                             {
                                 x: 0,
                                 y: 0,
-                                h: c.bg,
-                                w: c.nx
+                                h: u.bg,
+                                w: u.nx
                             },
                             8
                         );
@@ -92,12 +92,12 @@ let d = (e) => {
                         e.drawRoundedImage(
                             'MediaImage',
                             {
-                                x: c.sB,
-                                y: c.sB
+                                x: u.sB,
+                                y: u.sB
                             },
                             {
-                                w: c.Pu,
-                                h: c.Pu
+                                w: u.Pu,
+                                h: u.Pu
                             },
                             8,
                             { fillMode: i.JU.Contain }
@@ -105,8 +105,8 @@ let d = (e) => {
                             e.drawPath(
                                 l.Cv,
                                 {
-                                    x: c.sB,
-                                    y: c.sB
+                                    x: u.sB,
+                                    y: u.sB
                                 },
                                 !0,
                                 2 + 2 / 3
@@ -116,12 +116,12 @@ let d = (e) => {
                         e.drawRoundedImage(
                             'AvatarImage',
                             {
-                                x: c.Iq,
-                                y: c.sB
+                                x: u.Iq,
+                                y: u.sB
                             },
                             {
-                                w: c.$S,
-                                h: c.$S
+                                w: u.$S,
+                                h: u.$S
                             },
                             50
                         );
@@ -130,26 +130,26 @@ let d = (e) => {
                         e.setColor('white'),
                             e.setFont({
                                 size: 16,
-                                family: c.I8,
-                                weight: c.Ue,
+                                family: u.I8,
+                                weight: u.Ue,
                                 truncate: i.GX.Wrap
                             }),
                             e.drawText(
                                 n,
                                 {
-                                    x: c.Iq,
+                                    x: u.Iq,
                                     y: 64,
                                     h: 32,
-                                    w: c.kC
+                                    w: u.kC
                                 },
                                 !0
                             );
-                    })(e, u),
+                    })(e, c),
                     (0, o.J)({
                         canvas: e,
                         badges: m,
-                        startPosition: c.Iq,
-                        maxWidth: c.kC
+                        startPosition: u.Iq,
+                        maxWidth: u.kC
                     });
             },
             exportConfigs: {

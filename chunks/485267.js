@@ -3,10 +3,10 @@ t.d(n, {
         return d;
     },
     Jn: function () {
-        return u;
+        return c;
     },
     lY: function () {
-        return c;
+        return u;
     }
 });
 var a = t(570140);
@@ -18,7 +18,7 @@ var r = t(626135),
     s = t(71585);
 t(295955);
 var o = t(981631);
-let c = () => {
+let u = () => {
     a.Z.dispatch({ type: 'CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN' }),
         r.default.track(o.rMx.MEMBERLIST_CONTENT_FEED_HIDDEN, {
             channel_id: l.Z.getChannelId(),
@@ -26,7 +26,7 @@ let c = () => {
             hidden: s.Z.hidden
         });
 };
-function u() {
+function c() {
     a.Z.dispatch({ type: 'GAME_PROFILE_OPEN' });
 }
 function d() {

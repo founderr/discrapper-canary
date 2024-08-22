@@ -20,8 +20,8 @@ var a = n(735250),
     m = n(703656),
     v = n(430824),
     p = n(594174),
-    f = n(115130),
-    I = n(566620),
+    I = n(115130),
+    f = n(566620),
     x = n(520599),
     _ = n(127255),
     h = n(880308),
@@ -32,24 +32,24 @@ var a = n(735250),
     b = n(689938),
     N = n(876792),
     j = n(932463);
-let M = (0, r.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
-    A = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
+let A = (0, r.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
+    M = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
     Z = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
 function y(e) {
     let { channel: t, guildId: n, locationObject: l, onClose: r, onActivityItemVisible: c, scrollerRef: y } = e,
         [D, L] = i.useState(0),
-        B = (0, _.Z)({
+        O = (0, _.Z)({
             guildId: n,
             enableFilter: !0
         }),
-        O = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
+        B = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
         V = (0, o.e7)([v.Z], () => v.Z.getGuild(n), [n]),
         { analyticsLocations: R } = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY),
         k = (0, C.Z)(null == t ? void 0 : t.id),
         { enableAmazonMusicShelfPoster: P } = x.p.useExperiment({ location: 'ActivitiesShelf' }, { autoTrackExposure: !0 }),
-        { isDeveloperActivityShelfEnabled: H, filter: F } = (0, o.cj)([f.Z], () => ({
-            filter: f.Z.getFilter(),
-            isDeveloperActivityShelfEnabled: f.Z.getIsEnabled()
+        { isDeveloperActivityShelfEnabled: H, filter: F } = (0, o.cj)([I.Z], () => ({
+            filter: I.Z.getFilter(),
+            isDeveloperActivityShelfEnabled: I.Z.getIsEnabled()
         }));
     if (
         (i.useEffect(() => {
@@ -68,16 +68,16 @@ function y(e) {
         }, [y]),
         i.useEffect(() => {
             (k || null != n) &&
-                (0, I.w1)({
+                (0, f.w1)({
                     guildId: n,
                     force: !0
                 });
         }, [n, k]),
         (0, h.g)(),
-        (null == V && !k) || null == O)
+        (null == V && !k) || null == B)
     )
         return null;
-    let U = B.length > 0;
+    let U = O.length > 0;
     function w(e) {
         r();
     }
@@ -95,8 +95,8 @@ function y(e) {
                               style: {
                                   height: ((e) => {
                                       let t = 1 === e.length;
-                                      return M + Math.ceil(e.length / 2) * (t ? Z : A);
-                                  })(B)
+                                      return A + Math.ceil(e.length / 2) * (t ? Z : M);
+                                  })(O)
                               }
                           })
                       })
@@ -135,11 +135,11 @@ function y(e) {
                                   className: N.scrollSection,
                                   children: (0, a.jsx)('div', {
                                       className: s()(N.shelf),
-                                      children: B.map((e) =>
+                                      children: O.map((e) =>
                                           (0, a.jsx)(
                                               T.Z,
                                               {
-                                                  large: 1 === B.length,
+                                                  large: 1 === O.length,
                                                   activityItem: e,
                                                   channel: t,
                                                   guildId: n,

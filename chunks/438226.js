@@ -6,7 +6,7 @@ t.d(n, {
         return r;
     },
     VY: function () {
-        return c;
+        return u;
     }
 }),
     t(627494),
@@ -35,7 +35,7 @@ let r = (e, n) =>
             })
             .replaceAll('*', '');
     },
-    c = (e) => {
+    u = (e) => {
         let { entry: n, channel: t, users: r, countOthers: s } = e;
         return ((0, l.kr)(n) ? i.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYING : i.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED)
             .plainFormat({

@@ -9,8 +9,8 @@ var a = t(735250),
     r = t.n(i),
     s = t(442837),
     o = t(481060),
-    c = t(543882),
-    u = t(592125),
+    u = t(543882),
+    c = t(592125),
     d = t(496675),
     m = t(981631),
     _ = t(689938),
@@ -38,11 +38,11 @@ function T(e) {
 }
 function h(e) {
     let { stream: n, className: t, noText: i = !1 } = e,
-        o = (0, s.e7)([u.Z], () => u.Z.getBasicChannel(n.channelId)),
+        o = (0, s.e7)([c.Z], () => c.Z.getBasicChannel(n.channelId)),
         h = (0, s.e7)([d.Z], () => null != o && d.Z.canBasicChannel(m.S7T.CONNECT, o)),
-        { url: x, isLoading: N } = (0, s.cj)([c.Z], () => ({
-            url: h ? c.Z.getPreviewURL(n.guildId, n.channelId, n.ownerId) : null,
-            isLoading: h && c.Z.getIsPreviewLoading(n.guildId, n.channelId, n.ownerId)
+        { url: x, isLoading: N } = (0, s.cj)([u.Z], () => ({
+            url: h ? u.Z.getPreviewURL(n.guildId, n.channelId, n.ownerId) : null,
+            isLoading: h && u.Z.getIsPreviewLoading(n.guildId, n.channelId, n.ownerId)
         })),
         I = l.useRef(N ? null : x);
     l.useEffect(() => {

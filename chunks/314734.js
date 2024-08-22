@@ -1,39 +1,39 @@
-var t, r;
-n.d(a, {
+var i, l;
+t.d(e, {
     Gy: function () {
-        return l;
+        return u;
     },
     Jh: function () {
-        return s;
+        return r;
     },
     K7: function () {
         return c;
     },
     bS: function () {
-        return t;
+        return i;
     },
     e9: function () {
         return o;
     },
     lv: function () {
-        return u;
+        return d;
     },
     t4: function () {
-        return i;
+        return a;
     },
     u$: function () {
-        return _;
+        return s;
     }
 }),
-    ((r = t || (t = {}))[(r.POPULAR = 0)] = 'POPULAR'),
-    (r[(r.ALPHABETICAL = 1)] = 'ALPHABETICAL');
-let s = 'app-launcher-element',
+    ((l = i || (i = {}))[(l.POPULAR = 0)] = 'POPULAR'),
+    (l[(l.ALPHABETICAL = 1)] = 'ALPHABETICAL');
+let r = 'app-launcher-element',
     o = 'app-launcher-modal',
-    i = 'app-launcher-entrypoint',
-    l = 500,
+    a = 'app-launcher-entrypoint',
+    u = 500,
     c = 668,
-    u = 'min(100vh, '.concat(c, 'px)'),
-    _ = {
-        '--custom-app-launcher-width': ''.concat(l, 'px'),
-        '--custom-app-launcher-height': u
+    d = 'min(100vh, '.concat(c, 'px)'),
+    s = {
+        '--custom-app-launcher-width': ''.concat(u, 'px'),
+        '--custom-app-launcher-height': d
     };

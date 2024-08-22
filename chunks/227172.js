@@ -9,8 +9,8 @@ var a = t(735250),
     r = t(442837),
     s = t(481060),
     o = t(620662),
-    c = t(841784),
-    u = t(420660),
+    u = t(841784),
+    c = t(420660),
     d = t(429589),
     m = t(757182),
     _ = t(706454),
@@ -43,10 +43,10 @@ let O = {
 n.Z = (e) => {
     var n;
     let { channel: t, entry: i, disableGameProfileLinks: E, onReaction: T, onVoiceChannelPreview: j } = e,
-        { iconUrl: R, iconTitle: y, user: L, details: w, appName: b, activity: k, coverImageUrl: B, richIcon: U } = (0, Z.n)(i),
+        { iconUrl: R, iconTitle: y, user: L, details: w, appName: b, activity: B, coverImageUrl: k, richIcon: U } = (0, Z.n)(i),
         { primaryColor: G, secondaryColor: D } = (0, g.Z)(R),
         H = (0, r.e7)([_.default], () => _.default.locale),
-        { streamPreviewUrl: Y, stream: V } = (0, N.Z)(i),
+        { streamPreviewUrl: V, stream: Y } = (0, N.Z)(i),
         { displayParticipants: F, participant1: W, participant2: z, numOtherParticipants: q } = (0, x.Z)(i, 3),
         K = l.useCallback(
             (e) => {
@@ -75,13 +75,13 @@ n.Z = (e) => {
     if (null == L) return null;
     let J = null != i.extra.platform ? O[i.extra.platform] : null,
         X = (0, a.jsx)(v.Gk, {
-            location: null == Y ? v.Gt.POPOUT : v.Gt.STREAMING_POPOUT,
+            location: null == V ? v.Gt.POPOUT : v.Gt.STREAMING_POPOUT,
             children: f.W.map((e, n) => (0, a.jsx)(e, { entry: i }, n))
         }),
         $ =
-            null == Y
+            null == V
                 ? (0, a.jsx)(M.wG, {
-                      thumbnailSrc: null !== (n = null != U ? U : B) && void 0 !== n ? n : R,
+                      thumbnailSrc: null !== (n = null != U ? U : k) && void 0 !== n ? n : R,
                       thumbnailTitle: y,
                       channel: t,
                       headerIcons:
@@ -91,7 +91,7 @@ n.Z = (e) => {
                                     Icon: J,
                                     'aria-label': A.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                                 }),
-                      userDescription: (0, I.kr)(i) ? A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+                      userDescription: (0, I.kr)(i) ? A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                       title: b,
                       subtitle: w,
                       badges: X,
@@ -102,18 +102,18 @@ n.Z = (e) => {
                       thumbnailSrc: U,
                       thumbnailTitle: y,
                       channel: t,
-                      streamPreviewSrc: Y,
+                      streamPreviewSrc: V,
                       title: i.extra.game_name,
                       subtitle: w,
                       badges: X,
-                      userDescription: A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
+                      userDescription: A.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING_V2,
                       entry: i,
-                      stream: V
+                      stream: Y
                   }),
         Q =
-            (0, o.Z)(k, S.xjy.JOIN) || (0, c.Z)(k)
+            (0, o.Z)(B, S.xjy.JOIN) || (0, u.Z)(B)
                 ? (0, a.jsx)(d.Z, {
-                      activity: k,
+                      activity: B,
                       user: L,
                       ButtonComponent: (e) =>
                           (0, a.jsx)(M.Ll, {
@@ -124,9 +124,9 @@ n.Z = (e) => {
                 : null,
         ee = [
             Q,
-            (0, u.Z)(k)
+            (0, c.Z)(B)
                 ? (0, a.jsx)(m.Z, {
-                      activity: k,
+                      activity: B,
                       ButtonComponent: (e) =>
                           (0, a.jsx)(M.Ll, {
                               IconComponent: s.EyeIcon,

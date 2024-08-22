@@ -42,7 +42,7 @@ t.ZP = i.memo(function (e) {
     let { entry: t, channel: n, selected: i } = e,
         { activity: a, artist: o, imageUrl: l } = p(t);
     return (
-        s()(null != a, 'There must be a matching live Activity for LISTENED_SESSION'),
+        s()(null != a, 'There must be a matching live Activity for LISTENED_SESSION has user: '.concat(null != u.default.getUser(t.author_id), ', has activity: ').concat(null != c.Z.getMatchingActivity(t))),
         (0, r.jsxs)(_.Zb, {
             selected: i,
             children: [

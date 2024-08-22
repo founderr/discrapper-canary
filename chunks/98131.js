@@ -12,8 +12,8 @@ var l = t(735250),
     E = t(556296),
     _ = t(63063),
     S = t(13140),
-    h = t(435064),
-    g = t(894694),
+    g = t(435064),
+    h = t(894694),
     C = t(39604),
     I = t(981631),
     x = t(921944),
@@ -22,9 +22,9 @@ var l = t(735250),
     f = t(458623);
 let R = (e) => {
     let { clipsEnabled: n, isAnimationDone: t, guildId: a, children: r } = e,
-        E = (0, i.e7)([h.Z], () => h.Z.getHardwareClassification()),
-        S = E === g.x.MEETS_MINIMUM || E === g.x.UNKNOWN,
-        f = E === g.x.BELOW_MINIMUM,
+        E = (0, i.e7)([g.Z], () => g.Z.getHardwareClassification()),
+        S = E === h.x.MEETS_MINIMUM || E === h.x.UNKNOWN,
+        f = E === h.x.BELOW_MINIMUM,
         R = t && (S || f) && !n,
         [A, T] = (0, d.cv)(R ? [o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []),
         v = A === o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
@@ -84,7 +84,7 @@ let R = (e) => {
 };
 n.Z = function (e) {
     let { isAnimationDone: n, guildId: t } = e,
-        s = (0, i.e7)([h.Z], () => h.Z.getSettings().clipsEnabled),
+        s = (0, i.e7)([g.Z], () => g.Z.getSettings().clipsEnabled),
         a = (0, i.e7)([E.Z], () => E.Z.getKeybindForAction(I.kg4.SAVE_CLIP));
     r()(null != a, 'Clips keybind should be set');
     let o = S.BB(a.shortcut, !0);

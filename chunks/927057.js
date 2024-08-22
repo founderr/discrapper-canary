@@ -1,11 +1,11 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return f;
     }
 });
 var l = t(735250),
-    i = t(470079),
-    a = t(481060),
+    a = t(470079),
+    i = t(481060),
     r = t(471445),
     o = t(592125),
     s = t(430824),
@@ -13,24 +13,24 @@ var l = t(735250),
     u = t(811654),
     d = t(344991),
     m = t(981631),
-    f = t(296555);
-function _(e) {
+    _ = t(296555);
+function f(e) {
     var n;
     let { channelTypes: t } = e,
-        _ = (0, c.CJ)(),
-        p = null == _ ? void 0 : null === (n = _.message) || void 0 === n ? void 0 : n.getChannelId(),
-        C = o.Z.getChannel(p),
-        h = s.Z.getGuild(null == C ? void 0 : C.getGuildId()),
-        E = i.useMemo(() => (0, u.tx)(e.defaultValues, null == h ? void 0 : h.id, t), [e.defaultValues, h, t]);
+        f = (0, c.CJ)(),
+        p = null == f ? void 0 : null === (n = f.message) || void 0 === n ? void 0 : n.getChannelId(),
+        E = o.Z.getChannel(p),
+        I = s.Z.getGuild(null == E ? void 0 : E.getGuildId()),
+        C = a.useMemo(() => (0, u.tx)(e.defaultValues, null == I ? void 0 : I.id, t), [e.defaultValues, I, t]);
     return (0, l.jsx)(d.ZP, {
         selectActionComponent: e,
         queryOptions: (e) => (0, u.af)(e, p, t),
         renderIcon: (e, n) => {
             let t = o.Z.getChannel(null == e ? void 0 : e.value);
             if (null == t) return null;
-            let i = t.type === m.d4z.GUILD_CATEGORY ? a.FolderIcon : (0, r.KS)(t);
-            return null != i
-                ? (0, l.jsx)(i, {
+            let a = t.type === m.d4z.GUILD_CATEGORY ? i.FolderIcon : (0, r.KS)(t);
+            return null != a
+                ? (0, l.jsx)(a, {
                       size: 'custom',
                       color: 'currentColor',
                       width: n,
@@ -40,9 +40,9 @@ function _(e) {
         },
         renderOptionLabel: (e) =>
             (0, l.jsx)('span', {
-                className: f.label,
+                className: _.label,
                 children: e.label
             }),
-        defaultValues: E
+        defaultValues: C
     });
 }

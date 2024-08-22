@@ -1,11 +1,11 @@
 t.d(n, {
     S: function () {
-        return i;
+        return a;
     }
 }),
     t(47120);
 var l = t(470079);
-class i extends l.PureComponent {
+class a extends l.PureComponent {
     static getDerivedStateFromError(e) {
         return { error: e };
     }
