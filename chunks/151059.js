@@ -9,7 +9,6 @@ e.exports = {
     nitroTopDividerLockCircle: 'nitroTopDividerLockCircle_e8f337',
     nitroTopDividerLockBorderReversed: 'nitroTopDividerLockBorderReversed_e8f337',
     nitroTopDividerLower: 'nitroTopDividerLower_e8f337',
-    turnTransparent: 'turnTransparent_e8f337',
     premiumUnlockAnimation: 'premiumUnlockAnimation_e8f337',
     premiumUnlockedWithNitroPillContainer: 'premiumUnlockedWithNitroPillContainer_e8f337'
 };
