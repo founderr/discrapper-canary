@@ -11,19 +11,7 @@ var i = n(72924),
     _ = n(981631),
     h = n(474936);
 let E = [a.Z.RPC];
-function m(e) {
-    if (null == e)
-        return {
-            lock: _.VqG,
-            context: _.IlC.APP
-        };
-    let t = (0, d.s0)(e);
-    return {
-        lock: t.lock,
-        context: t.context
-    };
-}
-function I(e, t) {
+function m(e, t) {
     let n = {
         subscriptionTier: h.Si.TIER_2,
         analyticsLocations: E,
@@ -56,18 +44,18 @@ t.Z = {
             (0, c.f)(t.transport);
             let s = t.application.id;
             if (null == s) throw new r.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
-            let { lock: l, context: d } = m(t.transport !== u.He.POST_MESSAGE ? a : null);
+            let { lock: l, context: h } = (0, d.jU)(t.transport !== u.He.POST_MESSAGE ? a : null);
             if (null == (0, o.Z)()) throw new r.Z({ errorCode: _.lTL.INVALID_CHANNEL }, 'Invalid channel');
-            let h = { page: _.ZY5.IN_APP };
+            let I = { page: _.ZY5.IN_APP };
             return (async () => {
                 try {
                     let e = await (0, i.S)({
                         applicationId: s,
                         skuId: n,
-                        openPremiumPaymentModal: () => I(d, h),
+                        openPremiumPaymentModal: () => m(h, I),
                         analyticsLocations: E,
-                        analyticsLocationObject: h,
-                        context: d
+                        analyticsLocationObject: I,
+                        context: h
                     });
                     return l(), e;
                 } catch (e) {
@@ -89,8 +77,8 @@ t.Z = {
                 args: { pid: n }
             } = e;
             if (((0, c.f)(t.transport), null == t.application.id)) throw new r.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
-            let { lock: i, context: a } = m(t.transport !== u.He.POST_MESSAGE ? n : null);
-            return I(a, { page: _.ZY5.IN_APP }).then(
+            let { lock: i, context: a } = (0, d.jU)(t.transport !== u.He.POST_MESSAGE ? n : null);
+            return m(a, { page: _.ZY5.IN_APP }).then(
                 () => {
                     i();
                 },
