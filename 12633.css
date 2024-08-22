@@ -35233,7 +35233,7 @@ img.thumbnail_c64476 {
 
 .pictureInPictureWindow_e0c856 {
     position: absolute;
-    z-index: 1002
+    z-index: 1000
 }
 
 .borderRadius_e0c856 {
@@ -39958,7 +39958,7 @@ img.thumbnail_c64476 {
 }
 
 .wrapper_cbf230 {
-    z-index: 1003;
+    z-index: 1001;
     pointer-events: all
 }
 

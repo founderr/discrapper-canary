@@ -1158,10 +1158,11 @@ eT(tN, 'displayName', 'MediaEngineStore'),
             (i = e.sessionId),
                 (eU = !1),
                 (eG = !1),
-                Y.Z.subscribe({ location: 'handleConnectionOpen' }, (e) => {
-                    let t = e7();
-                    !e.sidechainAvailable && t.sidechainCompression ? (tl({ sidechainCompressionSettingVersion: 0 }), tm(!1)) : e.sidechainAvailable && t.sidechainCompressionSettingVersion < 1 && (tl({ sidechainCompressionSettingVersion: 1 }), tm(e.sidechainEnabled));
-                }),
+                !(0, et.isWeb)() &&
+                    Y.Z.subscribe({ location: 'handleConnectionOpen' }, (e) => {
+                        let t = e7();
+                        !e.sidechainAvailable && t.sidechainCompression ? (tl({ sidechainCompressionSettingVersion: 0 }), tm(!1)) : e.sidechainAvailable && t.sidechainCompressionSettingVersion < 1 && (tl({ sidechainCompressionSettingVersion: 1 }), tm(e.sidechainEnabled));
+                    }),
                 tE();
         },
         CONNECTION_CLOSED: function () {
