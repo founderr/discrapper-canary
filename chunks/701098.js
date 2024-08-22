@@ -1,6 +1,6 @@
 t.d(n, {
     G: function () {
-        return M;
+        return Z;
     }
 });
 var l = t(735250),
@@ -9,25 +9,27 @@ var l = t(735250),
     s = t(481060),
     o = t(569545),
     i = t(352954),
-    u = t(441894),
-    c = t(199902),
-    d = t(689938);
-function M(e) {
-    let { stream: n, channelId: t, location: M } = e,
-        Z = (0, u.J)({
+    u = t(277642),
+    c = t(441894),
+    d = t(199902),
+    M = t(689938);
+function Z(e) {
+    let { stream: n, channelId: t, location: Z } = e,
+        S = (0, c.J)({
             channelId: t,
-            location: M
+            location: Z
         }),
-        S = (0, r.e7)([c.Z], () => null != c.Z.getActiveStreamForApplicationStream(n)),
-        I = (0, o.V9)(n),
-        C = a.useCallback(() => {
-            i.Z.openSecureFramesStreamVerification(I, t);
-        }, [t, I]);
-    return Z && S
+        I = (0, r.e7)([d.Z], () => null != d.Z.getActiveStreamForApplicationStream(n)),
+        C = (0, o.V9)(n),
+        g = (0, u.t)(C),
+        E = a.useCallback(() => {
+            i.Z.openSecureFramesStreamVerification(C, t);
+        }, [t, C]);
+    return S && I && !g
         ? (0, l.jsx)(s.MenuItem, {
               id: 'secure-frames-stream-verification',
-              label: d.Z.Messages.E2EE_VIEW_STREAM_PRIVACY_CODE,
-              action: C
+              label: M.Z.Messages.E2EE_VIEW_STREAM_PRIVACY_CODE,
+              action: E
           })
         : null;
 }
