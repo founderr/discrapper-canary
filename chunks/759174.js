@@ -29,12 +29,13 @@ class l {
     }
     indexes() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (e) return this.valueIndexes;
         if (!e && this.dirty) {
             let e = {};
             for (let [t, n] of Object.entries(this.valueIndexes)) e[t] = [...n];
-            (this.valueIndexes = e), (this.dirty = !1);
+            (this.valueIndexesForGetter = e), (this.dirty = !1);
         }
-        return this.valueIndexes;
+        return this.valueIndexesForGetter;
     }
     keys() {
         return this.valueMap.keys();
@@ -69,6 +70,6 @@ class l {
         return null == t && ((t = []), (this.valueIndexes[e] = t)), t;
     }
     constructor(e, t, n = (e, t) => e === t) {
-        a(this, 'indexBy', void 0), a(this, 'sortBy', void 0), a(this, 'isEqual', void 0), a(this, 'valueMap', new Map()), a(this, 'valueArray', []), a(this, 'valueIndexes', {}), a(this, 'dirty', !1), a(this, '_version', 0), (this.indexBy = e), (this.sortBy = t), (this.isEqual = n);
+        a(this, 'indexBy', void 0), a(this, 'sortBy', void 0), a(this, 'isEqual', void 0), a(this, 'valueMap', new Map()), a(this, 'valueArray', []), a(this, 'valueIndexes', {}), a(this, 'valueIndexesForGetter', {}), a(this, 'dirty', !1), a(this, '_version', 0), (this.indexBy = e), (this.sortBy = t), (this.isEqual = n);
     }
 }
