@@ -1,7 +1,4 @@
 n.d(t, {
-    De: function () {
-        return s;
-    },
     NV: function () {
         return a;
     },
@@ -9,10 +6,9 @@ n.d(t, {
         return i;
     },
     yf: function () {
-        return r;
+        return s;
     }
 });
 let i = 64,
     a = 62,
-    s = 24,
-    r = 5;
+    s = 5;
