@@ -1,15 +1,18 @@
 n.d(t, {
     F9: function () {
-        return g;
+        return S;
     },
     Zb: function () {
+        return m;
+    },
+    cA: function () {
         return I;
     },
     e$: function () {
-        return m;
+        return T;
     },
     ll: function () {
-        return S;
+        return A;
     }
 });
 var r = n(735250);
@@ -27,7 +30,13 @@ var i = n(120356),
     f = n(687694),
     h = n(689938),
     p = n(182022);
-function I(e) {
+function I() {
+    return (0, r.jsx)('div', {
+        className: p.container,
+        'aria-hidden': !0
+    });
+}
+function m(e) {
     let { children: t, selected: n } = e,
         { showReplyIcon: i, openOnHover: s } = (0, f.C)({ location: 'ContentCard' });
     return (0, r.jsxs)('div', {
@@ -46,14 +55,14 @@ function I(e) {
         ]
     });
 }
-function m(e) {
+function T(e) {
     let { children: t } = e;
     return (0, r.jsx)('div', {
         className: p.infoSection,
         children: t
     });
 }
-function T(e) {
+function g(e) {
     let { users: t, guildId: n, 'aria-hidden': i } = e;
     return (0, r.jsx)('div', {
         className: p.facePile,
@@ -87,11 +96,11 @@ function T(e) {
         })
     });
 }
-function g(e) {
+function S(e) {
     let { guildId: t, channelId: n, entry: i, maxAvatars: a = 3 } = e,
         l = i.author_id,
         f = (0, s.e7)([d.default], () => d.default.getUser(l)),
-        { displayParticipants: I, participant1: m, participant2: g, numOtherParticipants: S } = (0, E.Z)(i, a),
+        { displayParticipants: I, participant1: m, participant2: T, numOtherParticipants: S } = (0, E.Z)(i, a),
         A = (0, s.e7)([u.ZP], () => u.ZP.getMember(t, l)),
         N = (0, s.e7)(
             [c.Z],
@@ -107,7 +116,7 @@ function g(e) {
     return (0, r.jsxs)('div', {
         className: p.userSection,
         children: [
-            (0, r.jsx)(T, {
+            (0, r.jsx)(g, {
                 users: I,
                 guildId: t,
                 'aria-hidden': !0
@@ -134,7 +143,7 @@ function g(e) {
             (0, r.jsx)(o.HiddenVisually, {
                 children: h.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
                     user0: _.ZP.getName(t, n, m),
-                    user1: _.ZP.getName(t, n, g),
+                    user1: _.ZP.getName(t, n, T),
                     countOthers: S,
                     name0Hook: (e, t) => (0, r.jsx)('span', { children: e }, t),
                     name1Hook: (e, t) => (0, r.jsx)('span', { children: e }, t),
@@ -144,7 +153,7 @@ function g(e) {
         ]
     });
 }
-function S(e) {
+function A(e) {
     let { children: t } = e;
     return (0, r.jsx)(o.Heading, {
         color: 'text-normal',
