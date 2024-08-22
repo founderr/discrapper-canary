@@ -91,14 +91,31 @@ function I() {
                                 })
                             ]
                         }),
-                        (0, n.jsx)('div', {
+                        (0, n.jsxs)('div', {
                             className: r()(_.row, _.end, _.section),
-                            children: (0, n.jsx)(l.Button, {
-                                onClick: () => {
-                                    s(u());
-                                },
-                                children: 'Create New Effect'
-                            })
+                            children: [
+                                (0, n.jsx)(l.Button, {
+                                    color: l.ButtonColors.GREEN,
+                                    onClick: async () => {
+                                        let e = (e) => {
+                                                (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
+                                            },
+                                            t = await navigator.clipboard.read();
+                                        if (null != t[0]) {
+                                            'text/plain' !== t[0].types[0] && e('It looks like you have non-text content on your clipboard');
+                                            let n = await t[0].getType('text/plain');
+                                            s(JSON.parse(await n.text())), (0, l.showToast)((0, l.createToast)('Profile Effect (maybe??) imported!', l.ToastType.SUCCESS));
+                                        } else e('To import, copy the content of a shared config to your clipboard.');
+                                    },
+                                    children: 'Import'
+                                }),
+                                (0, n.jsx)(l.Button, {
+                                    onClick: () => {
+                                        s(u());
+                                    },
+                                    children: 'Create New Effect'
+                                })
+                            ]
                         })
                     ]
                 }),

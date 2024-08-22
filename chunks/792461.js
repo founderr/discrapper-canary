@@ -15,6 +15,8 @@ e.exports = {
     uploadButton: 'uploadButton_e3bb87',
     input: 'input_e3bb87',
     bottomControls: 'bottomControls_e3bb87',
+    shareSection: 'shareSection_e3bb87',
+    warningText: 'warningText_e3bb87',
     layers: 'layers_e3bb87',
     layerForm: 'layerForm_e3bb87',
     layerPreview: 'layerPreview_e3bb87'

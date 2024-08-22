@@ -229,6 +229,29 @@ s.Z = (e) => {
                                           })
                                       ]
                                   }),
+                                  (0, n.jsxs)('div', {
+                                      className: r()(N.bottomControls, N.shareSection),
+                                      children: [
+                                          (0, n.jsxs)(c.Text, {
+                                              variant: 'text-sm/semibold',
+                                              children: [
+                                                  'Export the config for sharing in this tool.',
+                                                  ' ',
+                                                  (0, n.jsx)('span', {
+                                                      className: N.warningText,
+                                                      children: "WARNING: it's really big"
+                                                  })
+                                              ]
+                                          }),
+                                          (0, n.jsx)(c.Button, {
+                                              color: c.ButtonColors.GREEN,
+                                              onClick: () => {
+                                                  (0, u.JG)(JSON.stringify(s)), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                              },
+                                              children: 'Share'
+                                          })
+                                      ]
+                                  }),
                                   M &&
                                       (0, n.jsxs)('div', {
                                           className: r()(N.userProfilePreview, N.preview),
