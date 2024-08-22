@@ -1,191 +1,192 @@
-n.d(t, {
-    Z: function () {
-        return R;
-    }
-}),
-    n(47120);
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(913527),
-    o = n.n(r),
-    c = n(442837),
-    u = n(481060),
-    d = n(410030),
-    h = n(313201),
-    p = n(271383),
-    m = n(430824),
-    _ = n(594174),
-    f = n(709054),
-    E = n(931240),
-    g = n(645896),
-    C = n(603368),
-    I = n(532490),
-    x = n(380365),
-    T = n(979264),
-    N = n(620929),
-    v = n(284019),
-    S = n(308083),
-    Z = n(981631),
-    A = n(689938),
-    M = n(319410);
-function b(e) {
-    var t;
-    let { guildId: n, clanInfo: s, signed: r, onSignCharter: c } = e,
-        d = a.useMemo(() => {
-            let e = f.default.extractTimestamp(n);
+t.r(l),
+    t.d(l, {
+        default: function () {
+            return I;
+        }
+    }),
+    t(47120);
+var a = t(735250),
+    n = t(470079),
+    s = t(120356),
+    i = t.n(s),
+    r = t(913527),
+    o = t.n(r),
+    c = t(442837),
+    d = t(481060),
+    u = t(410030),
+    x = t(313201),
+    h = t(271383),
+    m = t(430824),
+    g = t(594174),
+    C = t(709054),
+    v = t(931240),
+    f = t(645896),
+    j = t(603368),
+    p = t(532490),
+    N = t(380365),
+    _ = t(979264),
+    T = t(620929),
+    E = t(284019),
+    S = t(308083),
+    Z = t(981631),
+    L = t(689938),
+    M = t(319410);
+function A(e) {
+    var l;
+    let { guildId: t, clanInfo: s, signed: r, onSignCharter: c } = e,
+        u = n.useMemo(() => {
+            let e = C.default.extractTimestamp(t);
             return o()(new Date(e)).format('MMMM YYYY');
-        }, [n]),
-        h = a.useMemo(() => new Set(s.games), [s.games]);
-    return (0, i.jsx)(I.Z, {
-        guildId: n,
-        signHintPosition: I.p.LEFT,
-        primaryColor: null === (t = s.branding) || void 0 === t ? void 0 : t.primaryColor,
+        }, [t]),
+        x = n.useMemo(() => new Set(s.games), [s.games]);
+    return (0, a.jsx)(p.Z, {
+        guildId: t,
+        signHintPosition: p.p.LEFT,
+        primaryColor: null === (l = s.branding) || void 0 === l ? void 0 : l.primaryColor,
         signed: r,
         onSignCharter: c,
-        children: (0, i.jsxs)('div', {
+        children: (0, a.jsxs)('div', {
             className: M.scrollContentsContainer,
             children: [
-                (0, i.jsx)(T.aG, {
-                    guildId: n,
+                (0, a.jsx)(_.aG, {
+                    guildId: t,
                     clanBadge: s.badge.imageHash,
                     clanTag: s.tag,
                     textVariant: 'heading-lg/semibold',
                     badgeSize: S.NC.SIZE_24,
                     className: M.clanTagChiplet
                 }),
-                (0, i.jsxs)('div', {
+                (0, a.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(u.Heading, {
+                        (0, a.jsx)(d.Heading, {
                             variant: 'heading-xxl/normal',
                             color: 'text-muted',
                             className: M.charterHeaderText,
-                            children: A.Z.Messages.CLAN_SETUP_OVERVIEW_TITLE
+                            children: L.Z.Messages.CLAN_SETUP_OVERVIEW_TITLE
                         }),
-                        (0, i.jsx)(u.Heading, {
+                        (0, a.jsx)(d.Heading, {
                             variant: 'heading-xxl/bold',
                             color: 'interactive-active',
                             className: M.charterHeaderText,
                             children: s.name
                         }),
-                        (0, i.jsx)(u.Text, {
+                        (0, a.jsx)(d.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
                             className: M.establishedDate,
-                            children: A.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({ date: d })
+                            children: L.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({ date: u })
                         })
                     ]
                 }),
-                (0, i.jsx)(N.p, {
-                    applicationIds: h,
+                (0, a.jsx)(T.p, {
+                    applicationIds: x,
                     playstyle: s.playstyle,
-                    className: l()(M.charterBodyText, M.gameSection)
+                    className: i()(M.charterBodyText, M.gameSection)
                 }),
-                (0, i.jsx)(u.Text, {
+                (0, a.jsx)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-muted',
                     className: M.charterBodyText,
-                    children: A.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
+                    children: L.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
                 })
             ]
         })
     });
 }
-function R(e) {
-    var t;
-    let { guildId: n, onClose: s, onAccept: r, ...o } = e,
-        f = (0, h.Dt)(),
-        I = (0, g.Cc)(n),
-        T = (0, g.E8)(n),
-        [N, S] = a.useState(!0),
-        [R, L] = a.useState(!1),
-        j = a.useCallback(() => {
+function I(e) {
+    var l;
+    let { guildId: t, onClose: s, onAccept: r, ...o } = e,
+        C = (0, x.Dt)(),
+        p = (0, f.Cc)(t),
+        _ = (0, f.E8)(t),
+        [T, S] = n.useState(!0),
+        [I, y] = n.useState(!1),
+        w = n.useCallback(() => {
             r(), s();
         }, [r, s]);
-    a.useEffect(() => {
-        null == I && !T && j();
-    }, [I, j, T]);
-    let P = a.useCallback(() => {
-            N && (0, E.nE)(n, N, Z.Sbl.CREATE_JOIN_GUILD_MODAL), j();
-        }, [n, j, N]),
-        O = (0, c.e7)([m.Z], () => m.Z.getGuild(n)),
-        y = (0, c.e7)([_.default], () => _.default.getCurrentUser()),
-        D = (0, c.e7)([p.ZP], () => (null != y ? p.ZP.getMember(n, y.id) : null)),
-        k = (0, d.ZP)(),
-        U = (0, C.nP)(null == I ? void 0 : null === (t = I.branding) || void 0 === t ? void 0 : t.primaryColor, [u.tokens.colors.BG_BRAND, 0.7]),
-        w = u.tokens.colors.BG_SURFACE_OVERLAY.resolve({
-            theme: k,
+    n.useEffect(() => {
+        null == p && !_ && w();
+    }, [p, w, _]);
+    let H = n.useCallback(() => {
+            T && (0, v.nE)(t, T, Z.Sbl.CREATE_JOIN_GUILD_MODAL), w();
+        }, [t, w, T]),
+        R = (0, c.e7)([m.Z], () => m.Z.getGuild(t)),
+        V = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
+        b = (0, c.e7)([h.ZP], () => (null != V ? h.ZP.getMember(t, V.id) : null)),
+        P = (0, u.ZP)(),
+        U = (0, j.nP)(null == p ? void 0 : null === (l = p.branding) || void 0 === l ? void 0 : l.primaryColor, [d.tokens.colors.BG_BRAND, 0.7]),
+        B = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+            theme: P,
             saturation: 1
         }).hex(),
-        B = (0, C.nj)(U, w, 'top center');
-    return null == O || null == y || null == D || null == I
+        G = (0, j.nj)(U, B, 'top center');
+    return null == R || null == V || null == b || null == p
         ? null
-        : (0, i.jsx)(u.ModalRoot, {
+        : (0, a.jsx)(d.ModalRoot, {
               ...o,
               transitionState: o.transitionState,
-              'aria-labelledby': f,
+              'aria-labelledby': C,
               className: M.modal,
-              size: u.ModalSize.DYNAMIC,
-              children: (0, i.jsxs)(u.ModalContent, {
+              size: d.ModalSize.DYNAMIC,
+              children: (0, a.jsxs)(d.ModalContent, {
                   className: M.content,
-                  style: B,
+                  style: G,
                   children: [
-                      (0, i.jsxs)('div', {
+                      (0, a.jsxs)('div', {
                           className: M.infoSide,
                           children: [
-                              (0, i.jsxs)('div', {
+                              (0, a.jsxs)('div', {
                                   className: M.titlesContainer,
                                   children: [
-                                      (0, i.jsx)('div', {
+                                      (0, a.jsx)('div', {
                                           className: M.title,
-                                          children: (0, i.jsx)(u.Heading, {
+                                          children: (0, a.jsx)(d.Heading, {
                                               variant: 'heading-xxl/medium',
-                                              children: A.Z.Messages.CLAN_JOIN_SUCCESS_TITLE.format({ name: O.name })
+                                              children: L.Z.Messages.CLAN_JOIN_SUCCESS_TITLE.format({ name: R.name })
                                           })
                                       }),
-                                      (0, i.jsx)(u.Text, {
+                                      (0, a.jsx)(d.Text, {
                                           className: M.subtitle,
                                           variant: 'text-md/normal',
-                                          children: A.Z.Messages.CLAN_JOIN_SUCCESS_SUBTITLE
+                                          children: L.Z.Messages.CLAN_JOIN_SUCCESS_SUBTITLE
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(x.Z, {
-                                  guildId: n,
-                                  isTagAdopted: N,
+                              (0, a.jsx)(N.Z, {
+                                  guildId: t,
+                                  isTagAdopted: T,
                                   onChangeUseTag: S
                               })
                           ]
                       }),
-                      (0, i.jsx)('div', {
+                      (0, a.jsx)('div', {
                           className: M.scrollMainContainer,
-                          children: (0, i.jsx)(b, {
-                              guildId: n,
-                              clanInfo: I,
-                              signed: R,
-                              onSignCharter: L
+                          children: (0, a.jsx)(A, {
+                              guildId: t,
+                              clanInfo: p,
+                              signed: I,
+                              onSignCharter: y
                           })
                       }),
-                      (0, i.jsx)(v.Z, {
-                          onClick: P,
-                          color: u.Button.Colors.BRAND,
+                      (0, a.jsx)(E.Z, {
+                          onClick: H,
+                          color: d.Button.Colors.BRAND,
                           themeColor: U,
                           fullWidth: !1,
-                          className: l()(M.ctaButton, R ? M.ctaButtonSigned : null),
-                          children: (0, i.jsxs)('div', {
+                          className: i()(M.ctaButton, I ? M.ctaButtonSigned : null),
+                          children: (0, a.jsxs)('div', {
                               className: M.ctaButtonInner,
                               children: [
-                                  (0, i.jsx)(u.Text, {
+                                  (0, a.jsx)(d.Text, {
                                       color: 'currentColor',
                                       variant: 'text-md/medium',
-                                      children: A.Z.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
+                                      children: L.Z.Messages.CLAN_JOIN_SUCCESS_MAIN_CTA
                                   }),
-                                  (0, i.jsx)(u.ArrowLargeRightIcon, {
+                                  (0, a.jsx)(d.ArrowLargeRightIcon, {
                                       size: 'custom',
                                       width: 20,
                                       height: 20,
-                                      color: null == U ? void 0 : (0, C.$0)(U).hex()
+                                      color: null == U ? void 0 : (0, j.$0)(U).hex()
                                   })
                               ]
                           })

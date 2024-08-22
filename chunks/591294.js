@@ -4,6 +4,7 @@ e.exports = {
     clickableAction: 'clickableAction_e3f878',
     actionInfo: 'actionInfo_e3f878',
     channelIcon: 'channelIcon_e3f878',
+    tagIconContainer: 'tagIconContainer_e3f878',
     channelIconContainer: 'channelIconContainer_e3f878',
     rulesIconContainer: 'rulesIconContainer_e3f878',
     rulesIcon: 'rulesIcon_e3f878',
