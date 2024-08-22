@@ -1,23 +1,24 @@
 n.d(t, {
     W: function () {
-        return a;
+        return _;
     },
     _: function () {
-        return _;
+        return l;
     }
 });
 var r = n(544891),
     i = n(570140),
-    s = n(814443),
-    I = n(428598),
-    u = n(981631);
-function a() {
+    s = n(480294),
+    I = n(814443),
+    u = n(428598),
+    a = n(981631);
+function _() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return s.Z.needsRefresh()
+    return I.Z.needsRefresh()
         ? (i.Z.dispatch({ type: 'LOAD_USER_AFFINITIES' }),
           r.tn
               .get({
-                  url: u.ANM.USER_AFFINITIES,
+                  url: a.ANM.USER_AFFINITIES,
                   retries: e ? 3 : 0,
                   oldFormErrors: !0
               })
@@ -35,13 +36,13 @@ function a() {
               ))
         : Promise.resolve();
 }
-function _() {
+function l() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return I.Z.shouldFetch()
+    return u.Z.shouldFetch() && s.Z.hasConsented(a.pjP.PERSONALIZATION)
         ? (i.Z.dispatch({ type: 'LOAD_USER_AFFINITIES_V2' }),
           r.tn
               .get({
-                  url: u.ANM.USER_AFFINITIES_V2,
+                  url: a.ANM.USER_AFFINITIES_V2,
                   retries: e ? 3 : 0,
                   oldFormErrors: !0
               })
