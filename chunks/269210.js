@@ -18,13 +18,13 @@ var l = t(557533),
     u = t(772421),
     S = t(778342);
 function m(e) {
-    let { description: n, imgSrc: t, PurchaseButton: l, onPurchase: m, subscriptionType: I, title: x, onDetails: f, benefitItems: _, benefitsSummary: p } = e;
+    let { description: n, imgSrc: t, renderPurchaseButton: l, onPurchase: m, subscriptionType: I, title: f, onDetails: x, benefitItems: _, benefitsSummary: p } = e;
     return (0, i.jsx)(o.tE, {
         children: (0, i.jsxs)('div', {
             className: r()(u.container, S.hoverCard),
             tabIndex: 0,
             onClick: () => {
-                null != f ? f() : null != m && m();
+                null != x ? x() : null != m && m();
             },
             children: [
                 (0, i.jsxs)('div', {
@@ -37,7 +37,7 @@ function m(e) {
                                 (0, i.jsx)(a.x, {
                                     tag: 'div',
                                     variant: 'heading-lg/semibold',
-                                    children: x
+                                    children: f
                                 }),
                                 (0, i.jsx)('div', {
                                     className: u.image,
@@ -54,13 +54,14 @@ function m(e) {
                                                   width: 48
                                               })
                                 }),
-                                null != l &&
-                                    (0, i.jsx)(l, {
-                                        className: u.purchaseBtn,
-                                        onClick: (e) => {
-                                            e.stopPropagation(), null == m || m();
-                                        }
-                                    }),
+                                null != l
+                                    ? l({
+                                          className: u.purchaseBtn,
+                                          onClick: (e) => {
+                                              e.stopPropagation(), null == m || m();
+                                          }
+                                      })
+                                    : null,
                                 null != n &&
                                     '' !== n &&
                                     (0, i.jsx)(a.x, {
