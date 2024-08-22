@@ -62,7 +62,8 @@ let I = (() => {
         analyticsDebuggerEnabled: !1,
         bugReporterEnabled: !0,
         idleStatusIndicatorEnabled: !1,
-        appDirectoryIncludesInactiveCollections: !1
+        appDirectoryIncludesInactiveCollections: !1,
+        isStreamInfoOverlayEnabled: !1
     },
     g = { ...T };
 function S(e) {
@@ -121,6 +122,9 @@ class A extends (r = u.ZP.Store) {
     }
     get appDirectoryIncludesInactiveCollections() {
         return g.appDirectoryIncludesInactiveCollections;
+    }
+    get isStreamInfoOverlayEnabled() {
+        return g.isStreamInfoOverlayEnabled;
     }
     getDebugOptionsHeaderValue() {
         return (

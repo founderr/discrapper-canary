@@ -115,6 +115,32 @@ class y extends (r = i.ZP.Store) {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.Yn.DEFAULT;
         return h[e][0];
     }
+    getInboundStats(e, t) {
+        var n, r;
+        let i = null === (r = this.getAllStats(t)[0]) || void 0 === r ? void 0 : null === (n = r.rtp) || void 0 === n ? void 0 : n.inbound[e],
+            a = null == i ? void 0 : i.find((e) => 'video' === e.type);
+        return {
+            codec: null == a ? void 0 : a.codec.name,
+            resolution: null == a ? void 0 : a.resolution,
+            bitrateEstimate: void 0
+        };
+    }
+    getOutboundStats(e) {
+        var t, n, r;
+        let i;
+        let a = this.getAllStats(e),
+            s = null === (t = a[0]) || void 0 === t ? void 0 : t.transport,
+            o = null === (r = a[0]) || void 0 === r ? void 0 : null === (n = r.rtp) || void 0 === n ? void 0 : n.outbound,
+            l = null == o ? void 0 : o.find((e) => 'video' === e.type);
+        return (
+            Array.isArray(null == s ? void 0 : s.availableOutgoingBitrate) && s.availableOutgoingBitrate.length > 0 && (i = s.availableOutgoingBitrate[s.availableOutgoingBitrate.length - 1].value),
+            {
+                codec: null == l ? void 0 : l.codec.name,
+                resolution: null == l ? void 0 : l.resolution,
+                bitrateEstimate: i
+            }
+        );
+    }
     getAllStats() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.Yn.DEFAULT;
         return Object.values(h[e]);

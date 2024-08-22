@@ -788,8 +788,12 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [ex.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING]: {
                 section: eM.oAB.VOICE,
                 searchableTitles: [eP.Z.Messages.FORM_LABEL_DEBUG],
-                parent: ex.s6.VOICE_AND_VIDEO_ADVANCED,
-                predicate: () => F.isPlatformEmbedded && v.Z.supports(eD.AN.DEBUG_LOGGING) && null != u.Z.fileManager.readLogFiles
+                parent: ex.s6.VOICE_AND_VIDEO_ADVANCED
+            },
+            [ex.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY]: {
+                section: eM.oAB.VOICE,
+                searchableTitles: [eP.Z.Messages.FORM_LABEL_STREAM_INFO_OVERLAY],
+                parent: ex.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING
             },
             [ex.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP]: {
                 section: eM.oAB.VOICE,
@@ -806,7 +810,8 @@ let eb = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [ex.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
                 section: eM.oAB.VOICE,
                 searchableTitles: [eP.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING],
-                parent: ex.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING
+                parent: ex.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
+                predicate: () => F.isPlatformEmbedded && v.Z.supports(eD.AN.DEBUG_LOGGING) && null != u.Z.fileManager.readLogFiles
             },
             [ex.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
                 section: eM.oAB.VOICE,
