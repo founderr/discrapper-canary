@@ -9,8 +9,8 @@ var i = n(413135),
     d = n(76238),
     u = n(852926),
     _ = n(981631);
-let E = o.ZP.requireModule('discord_rpc').RPCIPC,
-    h = new l.Z('RPCServer:IPC'),
+let h = o.ZP.requireModule('discord_rpc').RPCIPC,
+    E = new l.Z('RPCServer:IPC'),
     m = {
         HANDSHAKE: 0,
         FRAME: 1,
@@ -26,7 +26,7 @@ function g(e) {
 }
 function p(e) {
     return new Promise((t, n) => {
-        'string' == typeof e && (e = E.net.createConnection(e)),
+        'string' == typeof e && (e = h.net.createConnection(e)),
             e.pause(),
             e.on('readable', () => {
                 try {
@@ -103,7 +103,7 @@ function S(e) {
 }
 class f extends d.Z {
     send(e) {
-        h.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(T(m.FRAME, e));
+        E.info('Socket Emit: '.concat(this.id), (0, c.Z)(e)), this.socket.write(T(m.FRAME, e));
     }
     close(e, t) {
         this.socket.end(
@@ -163,15 +163,15 @@ class C extends a.EventEmitter {
                         e.destroy();
                     return;
                 }
-                h.info('Socket Opened: '.concat(n.id)),
-                    e.on('error', (e) => h.error('Socket Error: '.concat(e.message))),
+                E.info('Socket Opened: '.concat(n.id)),
+                    e.on('error', (e) => E.error('Socket Error: '.concat(e.message))),
                     e.on('close', () => {
-                        h.info('Socket Close: '.concat(n.id)), this.emit('disconnect', n);
+                        E.info('Socket Close: '.concat(n.id)), this.emit('disconnect', n);
                     }),
                     (0, u.em)(n, null, i)
                         .then(() => {
                             e.on('request', (e) => {
-                                h.info('Socket Message: '.concat(n.id), (0, c.Z)(e)), this.emit('request', n, e);
+                                E.info('Socket Message: '.concat(n.id), (0, c.Z)(e)), this.emit('request', n, e);
                             }),
                                 this.emit('connect', n);
                         })
@@ -183,11 +183,11 @@ class C extends a.EventEmitter {
     }
     constructor() {
         super();
-        let e = E.net.createServer((e) => this.handleConnection(e));
-        e.on('error', (e) => h.error('Error: '.concat(e.message))),
-            E.getAvailableSocket(p).then((t) => {
+        let e = h.net.createServer((e) => this.handleConnection(e));
+        e.on('error', (e) => E.error('Error: '.concat(e.message))),
+            h.getAvailableSocket(p).then((t) => {
                 e.listen(t, () => {
-                    ('function' == typeof e.listening ? e.listening() : e.listening) && h.info('Starting on '.concat(e.address()));
+                    ('function' == typeof e.listening ? e.listening() : e.listening) && E.info('Starting on '.concat(e.address()));
                 });
             });
     }

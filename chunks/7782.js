@@ -13,14 +13,14 @@ var i = n(735250),
     _ = n(621853),
     f = n(171368),
     E = n(433355),
-    g = n(699516),
-    C = n(594174),
+    C = n(699516),
+    g = n(594174),
     I = n(768581),
     x = n(525541),
     T = n(981631),
     N = n(377668),
-    v = n(228168),
-    S = n(689938),
+    S = n(228168),
+    v = n(689938),
     Z = n(38487);
 let A = (e) => {
         let { userId: t, channelId: n } = e,
@@ -73,7 +73,7 @@ let A = (e) => {
             ? (0, i.jsx)(r.Text, {
                   color: 'header-secondary',
                   variant: 'text-sm/normal',
-                  children: S.Z.Messages.NO_MUTUAL_GUILDS
+                  children: v.Z.Messages.NO_MUTUAL_GUILDS
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -86,14 +86,14 @@ let A = (e) => {
                               (0, f.openUserProfileModal)({
                                   userId: t,
                                   channelId: n,
-                                  section: v.oh.MUTUAL_GUILDS,
+                                  section: S.oh.MUTUAL_GUILDS,
                                   analyticsLocation: { section: T.jXE.DIRECT_MESSAGE }
                               });
                           },
                           children: (0, i.jsx)(r.Text, {
                               className: Z.mutualGuilds,
                               variant: 'text-sm/normal',
-                              children: S.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: s.length })
+                              children: v.Z.Messages.USER_PROFILE_MUTUAL_GUILDS.format({ count: s.length })
                           })
                       })
                   ]
@@ -102,7 +102,7 @@ let A = (e) => {
     M = (e) => {
         var t;
         let { relationshipType: n, userId: a, showingBanner: s } = e,
-            l = null === (t = C.default.getUser(a)) || void 0 === t ? void 0 : t.bot,
+            l = null === (t = g.default.getUser(a)) || void 0 === t ? void 0 : t.bot,
             c = () => {
                 o.Z.addRelationship({
                     userId: a,
@@ -120,7 +120,7 @@ let A = (e) => {
                         type: T.OGo.BLOCKED
                     });
                 },
-                children: S.Z.Messages.BLOCK
+                children: v.Z.Messages.BLOCK
             });
         switch (n) {
             case T.OGo.NONE:
@@ -132,7 +132,7 @@ let A = (e) => {
                                 className: Z.action,
                                 size: r.Button.Sizes.TINY,
                                 onClick: c,
-                                children: S.Z.Messages.ADD_FRIEND
+                                children: v.Z.Messages.ADD_FRIEND
                             }),
                         u
                     ]
@@ -147,7 +147,7 @@ let A = (e) => {
                                 o.Z.removeFriend(a, { location: T.ZY5.DM_CHANNEL });
                             },
                             color: r.Button.Colors.PRIMARY,
-                            children: S.Z.Messages.REMOVE_FRIEND
+                            children: v.Z.Messages.REMOVE_FRIEND
                         }),
                         u
                     ]
@@ -160,7 +160,7 @@ let A = (e) => {
                         o.Z.unblockUser(a, { location: T.ZY5.DM_CHANNEL });
                     },
                     color: r.Button.Colors.PRIMARY,
-                    children: S.Z.Messages.UNBLOCK
+                    children: v.Z.Messages.UNBLOCK
                 });
             case T.OGo.PENDING_INCOMING:
                 return (0, i.jsxs)(i.Fragment, {
@@ -169,13 +169,13 @@ let A = (e) => {
                             className: Z.action,
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            children: S.Z.Messages.FRIEND_REQUEST_RECEIVED
+                            children: v.Z.Messages.FRIEND_REQUEST_RECEIVED
                         }),
                         (0, i.jsx)(r.Button, {
                             className: Z.action,
                             size: r.Button.Sizes.TINY,
                             onClick: c,
-                            children: S.Z.Messages.FRIEND_REQUEST_ACCEPT
+                            children: v.Z.Messages.FRIEND_REQUEST_ACCEPT
                         }),
                         (0, i.jsx)(r.Button, {
                             className: Z.action,
@@ -184,7 +184,7 @@ let A = (e) => {
                             onClick: () => {
                                 o.Z.cancelFriendRequest(a, { location: T.ZY5.DM_CHANNEL });
                             },
-                            children: S.Z.Messages.FRIEND_REQUEST_IGNORE
+                            children: v.Z.Messages.FRIEND_REQUEST_IGNORE
                         }),
                         u
                     ]
@@ -196,7 +196,7 @@ let A = (e) => {
                             className: Z.action,
                             size: r.Button.Sizes.TINY,
                             disabled: !0,
-                            children: S.Z.Messages.ADD_FRIEND_BUTTON_AFTER
+                            children: v.Z.Messages.ADD_FRIEND_BUTTON_AFTER
                         }),
                         u
                     ]
@@ -208,7 +208,7 @@ let A = (e) => {
     b = (e) => {
         let { channelId: t, otherUserId: n } = e,
             s = a.useCallback(() => {
-                (0, r.showToast)((0, r.createToast)(S.Z.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
+                (0, r.showToast)((0, r.createToast)(v.Z.Messages.MESSAGE_REQUESTS_SPAM_REQUEST_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
             }, []),
             l = a.useCallback(() => {
                 m.Z.closeChannelSidebar(E.uZ);
@@ -224,30 +224,30 @@ let A = (e) => {
                 isOptimisticAccepted: _,
                 isOptimisticRejected: f
             } = (0, d.m)({
-                user: C.default.getUser(n),
+                user: g.default.getUser(n),
                 onError: s,
                 onAcceptSuccess: o,
                 onRejectSuccess: l
             }),
-            g = h || p || _ || f;
+            C = h || p || _ || f;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(r.Button, {
                     className: Z.action,
                     size: r.Button.Sizes.TINY,
                     onClick: () => c(t),
-                    disabled: g,
+                    disabled: C,
                     submitting: h,
-                    children: S.Z.Messages.MESSAGE_REQUEST_ACCEPT
+                    children: v.Z.Messages.MESSAGE_REQUEST_ACCEPT
                 }),
                 (0, i.jsx)(r.Button, {
                     className: Z.action,
                     size: r.Button.Sizes.TINY,
                     onClick: () => u(t),
                     color: r.Button.Colors.PRIMARY,
-                    disabled: g,
+                    disabled: C,
                     submitting: p,
-                    children: S.Z.Messages.MESSAGE_REQUEST_IGNORE
+                    children: v.Z.Messages.MESSAGE_REQUEST_IGNORE
                 })
             ]
         });
@@ -256,7 +256,7 @@ t.Z = (e) => {
     let { userId: t, channel: n, showingBanner: a } = e,
         { channelId: r } = (0, h._)(),
         o = (0, l.e7)([u.Z], () => null != r && u.Z.isSpam(r), [r]),
-        c = (0, l.e7)([g.Z], () => g.Z.getRelationshipType(t), [t]),
+        c = (0, l.e7)([C.Z], () => C.Z.getRelationshipType(t), [t]),
         d = n.id === r;
     return t === N.fL
         ? null

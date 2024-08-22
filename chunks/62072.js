@@ -13,19 +13,19 @@ var i = n(470079),
     _ = n(323873),
     f = n(271383),
     E = n(607744),
-    g = n(375954),
-    C = n(496675),
+    C = n(375954),
+    g = n(496675),
     I = n(572004),
     x = n(585483),
     T = n(358085),
     N = n(709054),
-    v = n(418476),
-    S = n(901461),
+    S = n(418476),
+    v = n(901461),
     Z = n(432376),
     A = n(996861),
     M = n(981631);
 function b(e) {
-    return C.Z.can(M.Plq.MANAGE_MESSAGES, e);
+    return g.Z.can(M.Plq.MANAGE_MESSAGES, e);
 }
 t.Z = function (e, t, n) {
     let R = i.useRef(n);
@@ -33,14 +33,14 @@ t.Z = function (e, t, n) {
         (R.current = n),
         i.useCallback(
             (n) => {
-                var i, L, j, P, O;
+                var i, L, j, O, P;
                 if (!R.current || n.target !== n.currentTarget) return;
                 let y = !n.altKey && !n.ctrlKey && !n.metaKey && !n.shiftKey,
                     D = n.altKey && !(n.ctrlKey || n.metaKey || n.shiftKey),
                     k = n.ctrlKey && !(n.altKey || n.metaKey || n.shiftKey),
                     U = n.metaKey && !(n.altKey || n.ctrlKey || n.shiftKey),
                     w = n.shiftKey && !(n.altKey || n.ctrlKey || n.metaKey),
-                    B = g.Z.getMessage(t, e),
+                    B = C.Z.getMessage(t, e),
                     H = m.Z.getChannel(t);
                 if (null == B || null == H) return;
                 let G = p.default.getId();
@@ -53,12 +53,12 @@ t.Z = function (e, t, n) {
                         break;
                     case 'e':
                         if (y) {
-                            if (((i = G), (L = H), (j = B), !L.isSystemDM() && (0, v.Z)(j, i))) n.preventDefault(), (0, A.Hd)(H, B);
+                            if (((i = G), (L = H), (j = B), !L.isSystemDM() && (0, S.Z)(j, i))) n.preventDefault(), (0, A.Hd)(H, B);
                         }
                         break;
                     case 'p':
                         if (y || w) {
-                            if (((P = H), (O = B), !P.isSystemDM() && !(0, S.Z)(O) && (b(P) || P.isPrivate()))) n.preventDefault(), (0, A.rY)(H, B, n);
+                            if (((O = H), (P = B), !O.isSystemDM() && !(0, v.Z)(P) && (b(O) || O.isPrivate()))) n.preventDefault(), (0, A.rY)(H, B, n);
                         }
                         break;
                     case '+':
@@ -70,7 +70,7 @@ t.Z = function (e, t, n) {
                                         channel: e,
                                         canChat: t,
                                         renderReactions: n,
-                                        canAddNewReactions: t && C.Z.can(M.Plq.ADD_REACTIONS, e),
+                                        canAddNewReactions: t && g.Z.can(M.Plq.ADD_REACTIONS, e),
                                         isLurking: null != e.guild_id && o.Z.isLurking(e.guild_id),
                                         isGuest: null != e.guild_id && f.ZP.isCurrentUserGuest(e.guild_id),
                                         isActiveChannelOrUnarchivableThread: (0, u.RG)(e)

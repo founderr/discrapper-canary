@@ -1,7 +1,7 @@
 var a = l(735250),
-    r = l(470079),
-    i = l(120356),
-    t = l.n(i),
+    i = l(470079),
+    r = l(120356),
+    t = l.n(r),
     s = l(442837),
     d = l(692547),
     o = l(481060),
@@ -14,13 +14,13 @@ var a = l(735250),
     x = l(496675),
     f = l(709586),
     I = l(768581),
-    Z = l(981631),
+    v = l(981631),
     _ = l(689938),
-    v = l(672256),
-    p = l(63190),
-    N = l(102219);
-let j = (e) => {
-    let n = r.useMemo(
+    Z = l(672256),
+    N = l(63190),
+    j = l(102219);
+let p = (e) => {
+    let n = i.useMemo(
         () =>
             null == e
                 ? null
@@ -39,12 +39,12 @@ let j = (e) => {
 function b(e) {
     let { guild: n } = e,
         l = () => {
-            g.Z.open(n.id, Z.pNK.ONBOARDING, void 0, Z.KsC.SERVER_GUIDE);
+            g.Z.open(n.id, v.pNK.ONBOARDING, void 0, v.KsC.SERVER_GUIDE);
         };
-    return n.hasFeature(Z.oNc.BANNER)
+    return n.hasFeature(v.oNc.BANNER)
         ? (0, a.jsxs)(o.Button, {
-              className: v.editButton,
-              innerClassName: v.editButtonInner,
+              className: Z.editButton,
+              innerClassName: Z.editButtonInner,
               type: 'button',
               size: o.Button.Sizes.MEDIUM,
               color: o.Button.Colors.BRAND,
@@ -59,8 +59,8 @@ function b(e) {
           })
         : (0, a.jsxs)(o.ShinyButton, {
               color: o.Button.Colors.GREEN,
-              className: v.editButton,
-              innerClassName: v.editButtonInner,
+              className: Z.editButton,
+              innerClassName: Z.editButtonInner,
               onClick: l,
               children: [
                   (0, a.jsx)(f.Z, {
@@ -71,42 +71,42 @@ function b(e) {
               ]
           });
 }
-let E = r.memo(function (e) {
-    let { guild: n, titleClassName: r } = e,
-        { homeHeaderImage: i, isHomeHeaderImageSet: d } = j(n),
+let E = i.memo(function (e) {
+    let { guild: n, titleClassName: i } = e,
+        { homeHeaderImage: r, isHomeHeaderImageSet: d } = p(n),
         g = (0, m.b$)(n.id),
         f = (0, s.e7)([x.Z], () => (0, C.b)(x.Z, n)),
         I = (0, c.ZP)();
     return (0, a.jsxs)('div', {
-        className: v.header,
+        className: Z.header,
         children: [
             (0, a.jsxs)('div', {
-                className: v.headerArtWrapper,
+                className: Z.headerArtWrapper,
                 children: [
                     (0, a.jsx)('div', {
-                        className: t()(v.headerArt, { [v.headerArtPlaceholder]: !d }),
-                        style: { backgroundImage: 'url('.concat(d ? i : 'dark' === I ? p : N, ')') }
+                        className: t()(Z.headerArt, { [Z.headerArtPlaceholder]: !d }),
+                        style: { backgroundImage: 'url('.concat(d ? r : 'dark' === I ? N : j, ')') }
                     }),
                     g && (0, a.jsx)(b, { guild: n })
                 ]
             }),
             (0, a.jsx)('div', {
-                className: v.titleWrapper,
+                className: Z.titleWrapper,
                 children: (0, a.jsxs)('div', {
-                    className: r,
+                    className: i,
                     children: [
                         (0, a.jsx)(u.Z, {
-                            className: v.headerIcon,
+                            className: Z.headerIcon,
                             guild: n,
                             size: u.Z.Sizes.XLARGE,
                             active: !0
                         }),
                         (0, a.jsx)(o.HeadingLevel, {
                             children: (0, a.jsxs)('div', {
-                                className: v.headerName,
+                                className: Z.headerName,
                                 children: [
                                     (0, a.jsx)(o.Heading, {
-                                        className: v.headerName,
+                                        className: Z.headerName,
                                         variant: 'heading-xxl/bold',
                                         children: n.name
                                     }),
@@ -118,7 +118,7 @@ let E = r.memo(function (e) {
                                     }),
                                     f &&
                                         (0, a.jsx)(o.Button, {
-                                            className: v.inviteButton,
+                                            className: Z.inviteButton,
                                             size: o.Button.Sizes.MEDIUM,
                                             color: o.Button.Colors.PRIMARY,
                                             onClick: () =>
@@ -128,7 +128,7 @@ let E = r.memo(function (e) {
                                                         (0, a.jsx)(e, {
                                                             ...l,
                                                             guild: n,
-                                                            source: Z.t4x.GUILD_HOME
+                                                            source: v.t4x.GUILD_HOME
                                                         });
                                                 }),
                                             children: _.Z.Messages.INSTANT_INVITE

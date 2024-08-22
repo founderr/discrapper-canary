@@ -1,19 +1,19 @@
-let i;
+let r;
 n.d(t, {
     Z: function () {
-        return s;
+        return i;
     }
 });
-var a = n(145597);
-function s(e, t) {
+var o = n(145597);
+function i(e, t) {
     if (__OVERLAY__) {
         let e = t.getGame(),
-            n = (0, a.QF)();
+            n = (0, o.QF)();
         return null == e || null == n
             ? null
-            : (null == i ? void 0 : i.id) === e.id && (null == i ? void 0 : i.pid) === n
-              ? i
-              : (i = {
+            : (null == r ? void 0 : r.id) === e.id && (null == r ? void 0 : r.pid) === n
+              ? r
+              : (r = {
                     id: e.id,
                     pid: n,
                     pidPath: [],

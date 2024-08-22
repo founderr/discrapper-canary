@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(481060),
     u = n(341907),
     _ = n(703656),
-    E = n(836768),
-    h = n(766219),
+    h = n(836768),
+    E = n(766219),
     m = n(49898),
     I = n(981631),
     g = n(46140),
@@ -22,7 +22,7 @@ var i = n(735250),
     T = n(671590);
 function S(e) {
     let { tab: t } = e,
-        n = (0, E.d)((e) => e.selectedPage === t, l.Z),
+        n = (0, h.d)((e) => e.selectedPage === t, l.Z),
         s = a.useMemo(
             () =>
                 (function (e) {
@@ -35,9 +35,9 @@ function S(e) {
                 })(t),
             [t]
         ),
-        p = a.useMemo(() => (0, h.sm)(t), [t]),
+        p = a.useMemo(() => (0, E.sm)(t), [t]),
         S = a.useCallback(() => {
-            switch (((0, c.j)(() => E.d.setState({ selectedPage: t })), t)) {
+            switch (((0, c.j)(() => h.d.setState({ selectedPage: t })), t)) {
                 case m.F$.QUESTS:
                     return (0, u.navigateToQuestHome)(g.dr.DISCOVERY_SIDEBAR, o.j.DISCOVERY_SIDEBAR);
                 case m.F$.SERVERS:

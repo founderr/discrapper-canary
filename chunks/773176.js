@@ -14,14 +14,14 @@ var i = n(735250),
     _ = n(706140),
     f = n(543241),
     E = n(407477),
-    g = n(633302),
-    C = n(347374),
+    C = n(633302),
+    g = n(347374),
     I = n(346610),
     x = n(868643),
     T = n(245216),
     N = n(223606),
-    v = n(188597),
-    S = n(41776),
+    S = n(188597),
+    v = n(41776),
     Z = n(222677),
     A = n(995774),
     M = n(931651),
@@ -29,8 +29,8 @@ var i = n(735250),
     R = n(768943),
     L = n(121254),
     j = n(665906),
-    P = n(695346),
-    O = n(314897),
+    O = n(695346),
+    P = n(314897),
     y = n(323873),
     D = n(271383),
     k = n(430824),
@@ -55,7 +55,7 @@ var i = n(735250),
     en = n(689938),
     ei = n(547881),
     ea = n(589958);
-let es = [g.ZP.getByName('100'), g.ZP.getByName('laughing'), g.ZP.getByName('sparkling_heart')].filter(V.lm);
+let es = [C.ZP.getByName('100'), C.ZP.getByName('laughing'), C.ZP.getByName('sparkling_heart')].filter(V.lm);
 function el(e) {
     e.stopPropagation();
 }
@@ -90,7 +90,7 @@ let eo = a.memo(function (e) {
                     guildId: t.guild_id
                 })
         ),
-        s = (a.length >= 3 ? a : [...(0, C.Z)(a.concat(es)).values()]).slice(0, 3),
+        s = (a.length >= 3 ? a : [...(0, g.Z)(a.concat(es)).values()]).slice(0, 3),
         l = n.reactions.filter((e) => e.me);
     return (0, i.jsx)(i.Fragment, {
         children: s.map((e) => {
@@ -152,10 +152,10 @@ function ec(e) {
             canReport: o,
             canEdit: h,
             canPublish: f,
-            canReact: g,
-            canConfigureJoin: C,
+            canReact: C,
+            canConfigureJoin: g,
             canReply: N,
-            canStartThread: v,
+            canStartThread: S,
             canViewThread: Z,
             canForward: A,
             isExpanded: M,
@@ -171,41 +171,41 @@ function ec(e) {
             let { channel: t, message: n, showEmojiPicker: i, showEmojiBurstPicker: a, showMoreUtilities: s, setPopout: l, isFocused: r } = e,
                 { author: o } = n,
                 u = (0, c.e7)([k.Z], () => k.Z.getGuild(t.guild_id), [t.guild_id]),
-                d = (0, c.e7)([O.default], () => O.default.getId()),
+                d = (0, c.e7)([P.default], () => P.default.getId()),
                 h = (0, j.$R)(t),
                 _ = (0, j.Gu)(t),
-                f = P.nc.useSetting(),
-                E = P.Sb.useSetting(),
-                g = (0, c.e7)([U.Z], () => null == t.guild_id || U.Z.canChatInGuild(t.guild_id), [t]),
-                { canManageMessages: C, canAddNewReactions: T } = (0, c.cj)(
+                f = O.nc.useSetting(),
+                E = O.Sb.useSetting(),
+                C = (0, c.e7)([U.Z], () => null == t.guild_id || U.Z.canChatInGuild(t.guild_id), [t]),
+                { canManageMessages: g, canAddNewReactions: T } = (0, c.cj)(
                     [w.Z],
                     () => ({
-                        canAddNewReactions: g && w.Z.can($.Plq.ADD_REACTIONS, t),
+                        canAddNewReactions: C && w.Z.can($.Plq.ADD_REACTIONS, t),
                         canManageMessages: w.Z.can($.Plq.MANAGE_MESSAGES, t)
                     }),
-                    [t, g]
+                    [t, C]
                 ),
                 N = (0, b.U)(t, n),
-                v = (0, j.NE)(t, n),
+                S = (0, j.NE)(t, n),
                 Z = (0, j.Ek)(n),
-                A = (0, c.e7)([S.Z], () => null != t.guild_id && S.Z.isLurking(t.guild_id), [t]),
+                A = (0, c.e7)([v.Z], () => null != t.guild_id && v.Z.isLurking(t.guild_id), [t]),
                 M = (0, c.e7)([D.ZP], () => null != t.guild_id && D.ZP.isCurrentUserGuest(t.guild_id), [t]),
                 y = o.id === d,
-                B = (C || n.canDeleteOwnMessage(d)) && h && !$.V$x.UNDELETABLE.has(n.type);
-            n.type === $.uaV.AUTO_MODERATION_ACTION && (B = B && C);
+                B = (g || n.canDeleteOwnMessage(d)) && h && !$.V$x.UNDELETABLE.has(n.type);
+            n.type === $.uaV.AUTO_MODERATION_ACTION && (B = B && g);
             let G = (0, F.a4)(n),
-                V = (0, z.Z)(n, t, C),
+                V = (0, z.Z)(n, t, g),
                 K = !t.isSystemDM() && (0, W.Z)(n, d) && h && !_,
                 { disableReactionCreates: q } = (0, Y.Z)({
                     channel: t,
-                    canChat: g,
+                    canChat: C,
                     renderReactions: f,
                     canAddNewReactions: T,
                     isLurking: A,
                     isGuest: M,
                     isActiveChannelOrUnarchivableThread: h
                 }),
-                X = t.type === $.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature($.oNc.NEWS) && (y || C) && (0, m.Z)(n),
+                X = t.type === $.d4z.GUILD_ANNOUNCEMENT && null != u && u.hasFeature($.oNc.NEWS) && (y || g) && (0, m.Z)(n),
                 Q = t.getGuildId(),
                 ee = null != Q && (n.type === $.uaV.USER_JOIN || n.type === $.uaV.GUILD_INVITE_REMINDER) && w.Z.canWithPartialContext($.Plq.MANAGE_GUILD, { guildId: Q }),
                 { canForwardMessages: et } = (0, I.yk)({ location: 'useMessageUtilitiesProps' }, { autoTrackExposure: !1 }),
@@ -222,7 +222,7 @@ function ec(e) {
                 canDelete: B,
                 canReport: G,
                 canReply: N,
-                canStartThread: v,
+                canStartThread: S,
                 canViewThread: Z,
                 canForward: et && en,
                 canCopy: H.wS,
@@ -256,12 +256,12 @@ function ec(e) {
         ep = n.hasFlag($.iLy.CROSSPOSTED),
         [em, e_] = (0, _.cv)(A ? [u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE] : []),
         ef = em === u.z.MESSAGE_FORWARDING_DESKTOP_UTILITIES_NEW_BADGE,
-        [eE, eg] = a.useState(!1),
-        eC = a.useCallback(() => {
-            eg(!0);
+        [eE, eC] = a.useState(!1),
+        eg = a.useCallback(() => {
+            eC(!0);
         }, []),
         eI = a.useCallback(() => {
-            eg(!1);
+            eC(!1);
         }, []),
         ex = a.useCallback(
             (e, t) => {
@@ -297,7 +297,7 @@ function ec(e) {
                                     'copy-link'
                                 )
                               : null,
-                          C
+                          g
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
@@ -341,7 +341,7 @@ function ec(e) {
                                     'pin'
                                 )
                               : null,
-                          v && A
+                          S && A
                               ? (0, i.jsx)(
                                     K.sF,
                                     {
@@ -366,7 +366,7 @@ function ec(e) {
                       ]
                   })
                 : null,
-            g && !es
+            C && !es
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
                           eT && !M
@@ -420,14 +420,14 @@ function ec(e) {
                           label: en.Z.Messages.MESSAGE_ACTION_FORWARD,
                           icon: T.Z,
                           onClick: () => ex(t, n),
-                          onTooltipShow: eC,
+                          onTooltipShow: eg,
                           onTooltipHide: eI,
                           showNewBadge: !eE && ef
                       },
                       'forward'
                   )
                 : null,
-            v && !A
+            S && !A
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -438,7 +438,7 @@ function ec(e) {
                       'thread'
                   )
                 : null,
-            !v && Z
+            !S && Z
                 ? (0, i.jsx)(
                       K.sF,
                       {
@@ -514,7 +514,7 @@ function ec(e) {
 function eu(e) {
     let { channel: t, message: n } = e,
         a = (0, c.e7)([N.Z], () => null != N.Z.getMessage(n.id), [n.id]),
-        s = null == n.interaction || (null != n.interactionData && (0, v.$s)(n.interactionData));
+        s = null == n.interaction || (null != n.interactionData && (0, S.$s)(n.interactionData));
     return (0, i.jsxs)(i.Fragment, {
         children: [
             !a &&

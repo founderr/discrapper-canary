@@ -19,14 +19,14 @@ var i = n(735250),
     _ = n(526846),
     f = n(938655),
     E = n(403404),
-    g = n(906732),
-    C = n(424602),
+    C = n(906732),
+    g = n(424602),
     I = n(243778),
     x = n(579185),
     T = n(301076),
     N = n(981631),
-    v = n(921944),
-    S = n(177480);
+    S = n(921944),
+    v = n(177480);
 function Z(e) {
     let { channel: t } = e,
         n = (0, s.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
@@ -34,8 +34,8 @@ function Z(e) {
         A = (0, p.g5)(Z),
         M = Z !== p.jy.CAN_LAUNCH || n,
         { isHovered: b, setIsHovered: R, onMouseEnter: L, onMouseLeave: j } = (0, x.Z)(200, 300),
-        P = (0, h.a)(),
-        O = (0, d.Z)({ channelId: t.id }),
+        O = (0, h.a)(),
+        P = (0, d.Z)({ channelId: t.id }),
         y = !M,
         D = a.useCallback(
             (e) => {
@@ -45,9 +45,9 @@ function Z(e) {
         ),
         k = (0, o.O)(),
         U = (0, c.bp)() === N.IlC.POPOUT,
-        { analyticsLocations: w } = (0, g.ZP)(),
+        { analyticsLocations: w } = (0, C.ZP)(),
         B = w.length > 0 ? w[w.length - 1] : 'open-activity-shelf';
-    C.m1.useExperiment({ location: B }, { autoTrackExposure: !0 });
+    g.m1.useExperiment({ location: B }, { autoTrackExposure: !0 });
     let H = a.useCallback(() => {
             (0, E.Z)({
                 channel: t,
@@ -86,7 +86,7 @@ function Z(e) {
                                   onMouseEnter: L,
                                   onMouseLeave: j,
                                   isHovered: b,
-                                  onClick: () => a(v.L.UNKNOWN)
+                                  onClick: () => a(S.L.UNKNOWN)
                               })
                             : (0, i.jsx)(i.Fragment, {});
                     },
@@ -97,15 +97,15 @@ function Z(e) {
                                     disabled: M,
                                     'aria-label': A,
                                     label: y ? void 0 : A,
-                                    isActivityActive: O || b,
-                                    className: S.controlButton,
+                                    isActivityActive: P || b,
+                                    className: v.controlButton,
                                     onClick: () => {
-                                        H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(v.L.UNKNOWN);
+                                        H(), (n === l.z.ACTIVITIES_MINI_SHELF_SPARKLES || n === l.z.ACTIVITY_GDM_ROCKET_SPARKLE || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === l.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && a(S.L.UNKNOWN);
                                     },
                                     onMouseEnter: D,
                                     onMouseLeave: j
                                 }),
-                                P
+                                O
                                     ? (0, i.jsx)(f.A, {
                                           top: 4,
                                           right: 10,

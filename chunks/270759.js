@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(481060),
     u = n(570140),
     _ = n(150063),
-    E = n(758059),
-    h = n(252618),
+    h = n(758059),
+    E = n(252618),
     m = n(313201),
     I = n(5254),
     g = n(984370),
@@ -49,7 +49,7 @@ t.Z = function (e) {
             _.Y(Z.Z5c.FRIENDS), (0, S.e)('friends');
         }, []),
         a.useEffect(() => {
-            null != t && E.Z.setInitialSection(t);
+            null != t && h.Z.setInitialSection(t);
         }, [t]);
     let p = (0, c.e7)([f.Z], () => f.Z.theme),
         { section: b, pendingCount: P } = (0, c.cj)([C.ZP], () => C.ZP.getState()),
@@ -60,7 +60,7 @@ t.Z = function (e) {
         className: R.container,
         'aria-label': O.Z.Messages.FRIENDS,
         children: [
-            (0, i.jsx)(h.yY, { location: O.Z.Messages.FRIENDS }),
+            (0, i.jsx)(E.yY, { location: O.Z.Messages.FRIENDS }),
             (0, i.jsxs)(g.Z, {
                 className: (0, N.Q)(p),
                 toolbar: (0, i.jsx)(x, {}),
@@ -82,7 +82,7 @@ t.Z = function (e) {
                         selectedItem: b,
                         type: 'top-pill',
                         onItemSelect: (e) => {
-                            E.Z.setSection(e);
+                            h.Z.setSection(e);
                         },
                         className: R.tabBar,
                         children: [

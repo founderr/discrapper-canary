@@ -25,10 +25,10 @@ function m(e) {
             let t = new Date(e).getTime();
             return (0, c.fv)(t, c.jq.JOINED_AT);
         }, []),
-        g = a.useMemo(() => (null == t ? null : E(f)), [t, E, f]),
-        C = a.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
+        C = a.useMemo(() => (null == t ? null : E(f)), [t, E, f]),
+        g = a.useMemo(() => (0, o.J)(t.communicationDisabledUntil), [t.communicationDisabledUntil]),
         I = a.useMemo(() => (null == t.communicationDisabledUntil ? new Date() : new Date(t.communicationDisabledUntil)), [t.communicationDisabledUntil]);
-    return null != f || C
+    return null != f || g
         ? (0, i.jsx)(l.FormItem, {
               title: h.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_FLAGS,
               titleClassName: p.infoTitle,
@@ -50,10 +50,10 @@ function m(e) {
                               description: (0, i.jsx)(l.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'text-normal',
-                                  children: g
+                                  children: C
                               })
                           }),
-                      C &&
+                      g &&
                           null != I &&
                           (0, i.jsx)(d._2, {
                               icon: (0, i.jsx)(l.ClockWarningIcon, {

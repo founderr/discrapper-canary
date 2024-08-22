@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
 var i = n(442837),
@@ -13,7 +13,7 @@ var i = n(442837),
     d = n(779618),
     u = n(356659),
     _ = n(981631);
-function E(e) {
+function h(e) {
     let t = (0, o.nM)({ autoTrackExposure: !0 }),
         { enableDecoupledGameClipping: n } = s.Z.useExperiment({ location: 'useShouldDisplayClipsGuildSidebarEducation' }, { autoTrackExposure: !1 });
     return (0, i.e7)([c.Z, a.ZP, r.Z, l.Z], () => {
@@ -21,8 +21,8 @@ function E(e) {
         if (null != c.Z.getLastClipsError()) return !0;
         if (!r.Z.hasConsented(_.pjP.PERSONALIZATION) || null == a.ZP.getVisibleGame()) return !1;
         let {
-            clipsEducationState: { dismissedAt: i, numberOfGamesLaunchedSinceDismissal: s, numberOfTimesDismissed: E },
-            hasTakenDecoupledClip: h,
+            clipsEducationState: { dismissedAt: i, numberOfGamesLaunchedSinceDismissal: s, numberOfTimesDismissed: h },
+            hasTakenDecoupledClip: E,
             clipsSettings: { clipsEnabled: m }
         } = c.Z.getState();
         if (null === i) return !0;
@@ -30,6 +30,6 @@ function E(e) {
         let I = Date.now() - i > u.xx,
             g = s >= u._U,
             p = m ? u.xd : u.A5;
-        return I && g && E < p && !h;
+        return I && g && h < p && !E;
     });
 }

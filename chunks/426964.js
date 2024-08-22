@@ -70,7 +70,7 @@ t.Z = i.memo(function (e) {
         }, [U, Z, P]),
         q = i.useCallback(
             (e) => {
-                if (null != U) e.stopPropagation(), e.preventDefault(), null == M || M(), (0, S.S)(U);
+                if (null != U) e.stopPropagation(), e.preventDefault(), null == M || M(), (0, S.SJ)(U);
             },
             [U, M]
         ),
@@ -78,7 +78,7 @@ t.Z = i.memo(function (e) {
             (e) => {
                 if (null == w || null == U) return;
                 if ((e.stopPropagation(), e.preventDefault(), null == M || M(), !K))
-                    (0, S.q)(U, w, {
+                    (0, S.qF)(U, w, {
                         source: null == P ? void 0 : P.source,
                         messageId: null == P ? void 0 : P.messageId,
                         tagUserId: null == P ? void 0 : P.tagUserId,

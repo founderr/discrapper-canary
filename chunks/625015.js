@@ -14,8 +14,8 @@ var i = n(735250),
     _ = n(204197),
     f = n(502762),
     E = n(981631),
-    g = n(921944),
-    C = n(474936),
+    C = n(921944),
+    g = n(474936),
     I = n(689938),
     x = n(753821);
 function T() {
@@ -27,7 +27,7 @@ function T() {
 }
 function N(e) {
     let { avatarSrc: t, username: n } = e,
-        [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
+        [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
     return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL
         ? null
         : (0, i.jsxs)(f.Z.Overlay, {
@@ -48,7 +48,7 @@ function N(e) {
                               children: I.Z.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({ username: n })
                           }),
                           (0, i.jsx)(r.Clickable, {
-                              onClick: () => c(g.L.USER_DISMISS),
+                              onClick: () => c(C.L.USER_DISMISS),
                               'aria-label': I.Z.Messages.DISMISS,
                               className: x.closeIconWrapper,
                               children: (0, i.jsx)(r.XSmallIcon, {
@@ -80,9 +80,9 @@ function N(e) {
               ]
           });
 }
-function v(e) {
+function S(e) {
     let { avatarSrc: t, username: n } = e,
-        [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], g.R.SIDEBAR, !0);
+        [a, c] = (0, o.US)([s.z.NITRO_ON_PROFILE_SIDE_PANEL], C.R.SIDEBAR, !0);
     return a !== s.z.NITRO_ON_PROFILE_SIDE_PANEL
         ? null
         : (0, i.jsx)(f.Z.Overlay, {
@@ -105,7 +105,7 @@ function v(e) {
                           })
                       }),
                       (0, i.jsx)(r.Clickable, {
-                          onClick: () => c(g.L.USER_DISMISS),
+                          onClick: () => c(C.L.USER_DISMISS),
                           'aria-label': I.Z.Messages.DISMISS,
                           className: x.closeIconWrapper,
                           children: (0, i.jsx)(r.XSmallIcon, {
@@ -118,7 +118,7 @@ function v(e) {
               })
           });
 }
-function S(e) {
+function v(e) {
     let { avatarSrc: t, username: n } = e;
     return (0, i.jsx)(f.Z.Overlay, {
         className: x.overlay2,
@@ -151,12 +151,12 @@ function Z(e) {
             username: a
         });
     if (2 === t)
-        return (0, i.jsx)(v, {
+        return (0, i.jsx)(S, {
             avatarSrc: n,
             username: a
         });
     if (3 === t)
-        return (0, i.jsx)(S, {
+        return (0, i.jsx)(v, {
             avatarSrc: n,
             username: a
         });
@@ -169,7 +169,7 @@ let A = a.memo(function (e) {
             size: r.AvatarSizes.SIZE_32
         }),
         s = h.default.getCurrentUser(),
-        l = m.ZP.isPremium(s) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, C.p9.TIER_2),
+        l = m.ZP.isPremium(s) || null == n || !m.ZP.isPremiumAtLeast(n.premiumType, g.p9.TIER_2),
         { enabled: o, variant: u } = c.f.useExperiment(
             { location: 'SimplifiedProfilePanelPremiumUpsell' },
             {

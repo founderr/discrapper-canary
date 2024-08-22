@@ -16,8 +16,8 @@ var i = n(470079),
     d = n(900849),
     u = n(540742),
     _ = n(766219),
-    E = n(72881);
-let h = [];
+    h = n(72881);
+let E = [];
 function m(e) {
     let { loadId: t } = e,
         n = (0, u.B)((e) => {
@@ -31,7 +31,7 @@ function m(e) {
         { guilds: l, loading: o } = (0, r.e7)([c.Z], () =>
             null == n
                 ? {
-                      guilds: h,
+                      guilds: E,
                       loading: !0
                   }
                 : c.Z.getResults(n, s)
@@ -42,12 +42,12 @@ function m(e) {
                 { guilds: i, total: a, loading: s, initialized: r } = c.Z.getResults(n.searchResultsQuery, n.searchCategoryId);
             !s &&
                 (!r || !(i.length >= a)) &&
-                (0, E.y)({
+                (0, h.y)({
                     loadId: t,
                     categoryId: n.searchCategoryId,
                     offset: i.length,
                     searchQuery: n.searchQuery,
-                    languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, E.X)()
+                    languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, h.X)()
                 });
         }, [t]);
     return i.useMemo(
@@ -77,7 +77,7 @@ function I(e) {
     let c = i.useCallback((e) => {
             (0, s.j)(() => u.B.setState({ searchQuery: e }));
         }, []),
-        h = i.useCallback(() => {
+        E = i.useCallback(() => {
             d.IZ(t),
                 (0, s.j)(() =>
                     u.B.setState({
@@ -93,18 +93,18 @@ function I(e) {
     return {
         searchQuery: r,
         onSearchTextChange: c,
-        onClearSearch: h,
+        onClearSearch: E,
         onSearchSubmit: i.useCallback(() => {
             var e;
             let n = u.B.getState();
             n.searchQuery !== n.searchResultsQuery &&
                 ((0, s.j)(() => u.B.setState({ initialSearchCategoryId: n.searchCategoryId })),
-                (0, E.y)({
+                (0, h.y)({
                     loadId: t,
                     categoryId: n.searchCategoryId,
                     offset: 0,
                     searchQuery: n.searchQuery,
-                    languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, E.X)()
+                    languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, h.X)()
                 }));
         }, [t]),
         isSearchVisible: n

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return v;
     }
 }),
     n(47120);
@@ -19,8 +19,8 @@ var i = n(735250),
     _ = n(526120),
     f = n(734893),
     E = n(655359),
-    g = n(931261),
-    C = n(305762),
+    C = n(931261),
+    g = n(305762),
     I = n(689938),
     x = n(396056);
 function T(e) {
@@ -45,58 +45,58 @@ function N(e) {
         l = (0, o.e7)([p.Z], () => p.Z.getChannel(n));
     if (null == l) return null;
     let r = null !== (t = (0, h.KS)(l)) && void 0 !== t ? t : c.TextIcon;
-    return (0, i.jsx)(C.Z, {
+    return (0, i.jsx)(g.Z, {
         emojiId: a,
         emojiName: s,
-        size: C.R.MEDIUM,
+        size: g.R.MEDIUM,
         defaultComponent: (0, i.jsx)(r, { className: x.channelIcon })
     });
 }
-function v(e) {
+function S(e) {
     var t, n, s, d;
     let { guildId: h, channel: p, className: m } = e,
-        { channelAction: g, completed: C } = (0, E.P3)(h, p),
-        v = (0, E.K_)(h, null == g ? void 0 : g.channelId),
-        S = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        Z = (null == g ? void 0 : g.actionType) === f.oi.VIEW,
+        { channelAction: C, completed: g } = (0, E.P3)(h, p),
+        S = (0, E.K_)(h, null == C ? void 0 : C.channelId),
+        v = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        Z = (null == C ? void 0 : C.actionType) === f.oi.VIEW,
         A = (0, c.useToken)(c.tokens.colors.WHITE),
         [M, b] = a.useState(!1),
         [R] = a.useState(new r.Z.Value(0)),
         [L] = a.useState(new r.Z.Value(0));
     a.useEffect(() => {
-        C
+        g
             ? r.Z.timing(R, {
                   toValue: 0,
-                  duration: S ? 1 : 350,
+                  duration: v ? 1 : 350,
                   easing: r.Z.Easing.quad,
                   delay: Z ? 0 : 500
               }).start(() => b(!0))
             : r.Z.timing(R, {
                   toValue: 1,
-                  duration: S ? 1 : 350,
+                  duration: v ? 1 : 350,
                   easing: r.Z.Easing.quad,
                   delay: 400
               }).start();
-    }, [C, R, Z, S]),
+    }, [g, R, Z, v]),
         a.useEffect(() => {
-            C &&
+            g &&
                 M &&
                 r.Z.timing(L, {
                     toValue: 1,
-                    duration: S ? 0 : 350,
+                    duration: v ? 0 : 350,
                     easing: r.Z.Easing.quad,
                     delay: 400
                 }).start();
-        }, [C, L, M, S]);
+        }, [g, L, M, v]);
     let j = a.useCallback(() => {
-        null != v && (0, _.gp)(h, v.channelId);
-    }, [h, v]);
-    return null == g || (Z && !M)
+        null != S && (0, _.gp)(h, S.channelId);
+    }, [h, S]);
+    return null == C || (Z && !M)
         ? null
         : (0, i.jsx)('div', {
               className: l()(x.container, m),
               children:
-                  M && null != v
+                  M && null != S
                       ? (0, i.jsx)(r.Z.div, {
                             style: {
                                 marginBottom: L.interpolate({
@@ -109,9 +109,9 @@ function v(e) {
                                 onClick: j,
                                 children: [
                                     (0, i.jsx)(N, {
-                                        channelId: v.channelId,
-                                        emojiId: null === (t = v.emoji) || void 0 === t ? void 0 : t.id,
-                                        emojiName: null == v ? void 0 : null === (n = v.emoji) || void 0 === n ? void 0 : n.name
+                                        channelId: S.channelId,
+                                        emojiId: null === (t = S.emoji) || void 0 === t ? void 0 : t.id,
+                                        emojiName: null == S ? void 0 : null === (n = S.emoji) || void 0 === n ? void 0 : n.name
                                     }),
                                     (0, i.jsxs)('div', {
                                         className: x.text,
@@ -119,9 +119,9 @@ function v(e) {
                                             (0, i.jsx)(c.Text, {
                                                 variant: 'text-md/semibold',
                                                 color: 'header-primary',
-                                                children: I.Z.Messages.MEMBER_ACTIONS_NEXT_STEP.format({ step: v.title })
+                                                children: I.Z.Messages.MEMBER_ACTIONS_NEXT_STEP.format({ step: S.title })
                                             }),
-                                            (0, i.jsx)(T, { action: v })
+                                            (0, i.jsx)(T, { action: S })
                                         ]
                                     }),
                                     (0, i.jsx)('div', {
@@ -145,9 +145,9 @@ function v(e) {
                             },
                             children: [
                                 (0, i.jsx)(N, {
-                                    channelId: g.channelId,
-                                    emojiId: null === (s = g.emoji) || void 0 === s ? void 0 : s.id,
-                                    emojiName: null == g ? void 0 : null === (d = g.emoji) || void 0 === d ? void 0 : d.name
+                                    channelId: C.channelId,
+                                    emojiId: null === (s = C.emoji) || void 0 === s ? void 0 : s.id,
+                                    emojiName: null == C ? void 0 : null === (d = C.emoji) || void 0 === d ? void 0 : d.name
                                 }),
                                 (0, i.jsxs)('div', {
                                     className: x.text,
@@ -155,7 +155,7 @@ function v(e) {
                                         (0, i.jsx)(c.Text, {
                                             variant: 'text-md/semibold',
                                             color: 'header-primary',
-                                            children: g.title
+                                            children: C.title
                                         }),
                                         (0, i.jsx)(c.Text, {
                                             variant: 'text-xxs/normal',
@@ -164,7 +164,7 @@ function v(e) {
                                         })
                                     ]
                                 }),
-                                C
+                                g
                                     ? (0, i.jsx)(c.CircleCheckIcon, {
                                           size: 'custom',
                                           color: 'currentColor',
@@ -178,16 +178,16 @@ function v(e) {
                         })
           });
 }
-function S(e) {
+function v(e) {
     let { guildId: t, channel: n, className: a } = e,
-        s = (0, g.g)(t),
+        s = (0, C.g)(t),
         l = (0, o.e7)([m.ZP], () => {
             var e;
             return (null === (e = m.ZP.getSelfMember(t)) || void 0 === e ? void 0 : e.isPending) === !0;
         });
     return (0, E.PE)(t) || l || !s
         ? null
-        : (0, i.jsx)(v, {
+        : (0, i.jsx)(S, {
               guildId: t,
               channel: n,
               className: a

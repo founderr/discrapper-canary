@@ -19,21 +19,21 @@ var a = n(442837),
     _ = n(681837),
     f = n(91433),
     E = n(900927),
-    g = n(678738),
-    C = n(502762),
+    C = n(678738),
+    g = n(502762),
     I = n(530),
     x = n(7242),
     T = n(827313),
     N = n(580512),
-    v = n(228168),
-    S = n(981631),
+    S = n(228168),
+    v = n(981631),
     Z = n(689938),
     A = n(27251);
 function M(e) {
     let { user: t, currentUser: n, displayProfile: M, channel: b, isHovering: R, onOpenProfile: L } = e,
         { newActivityCardsEnabled: j } = (0, u.z)({ location: 'SimplifiedProfilePanelBody' }),
-        { activeInviteToCallCtaEnabled: P } = (0, c.l)({ location: 'SimplifiedProfilePanelBody' }),
-        O = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)),
+        { activeInviteToCallCtaEnabled: O } = (0, c.l)({ location: 'SimplifiedProfilePanelBody' }),
+        P = (0, a.e7)([s.Z], () => s.Z.getRelationshipType(t.id)),
         y = (0, a.e7)([l.Z], () => l.Z.hidePersonalInformation),
         D = (0, a.e7)([o.Z], () => {
             var e;
@@ -44,13 +44,13 @@ function M(e) {
         children: [
             (0, i.jsx)(I.Z, {
                 user: t,
-                profileType: v.y0.PANEL,
+                profileType: S.y0.PANEL,
                 nickname: r.ZP.getName(null, b.id, t),
                 pronouns: null == M ? void 0 : M.pronouns,
                 onOpenProfile: L,
                 tags: (0, i.jsx)(d.Z, {
                     displayProfile: M,
-                    profileType: v.y0.PANEL
+                    profileType: S.y0.PANEL
                 }),
                 nicknameIcons: (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -64,14 +64,14 @@ function M(e) {
                     ]
                 })
             }),
-            O === S.OGo.PENDING_INCOMING &&
-                (0, i.jsx)(C.Z.Overlay, {
+            P === v.OGo.PENDING_INCOMING &&
+                (0, i.jsx)(g.Z.Overlay, {
                     children: (0, i.jsx)(f.Z, {
                         user: t,
                         channelId: b.id
                     })
                 }),
-            P && (0, i.jsx)(x.Z, { user: t }),
+            O && (0, i.jsx)(x.Z, { user: t }),
             j
                 ? (0, i.jsx)(m.Z, {
                       user: t,
@@ -83,13 +83,13 @@ function M(e) {
                       channelId: b.id,
                       className: A.activity
                   }),
-            (0, i.jsxs)(C.Z.Overlay, {
+            (0, i.jsxs)(g.Z.Overlay, {
                 className: A.overlay,
                 children: [
                     !y &&
                         (null == M ? void 0 : M.bio) != null &&
                         (null == M ? void 0 : M.bio) !== '' &&
-                        (0, i.jsx)(g.Z, {
+                        (0, i.jsx)(C.Z, {
                             heading: Z.Z.Messages.USER_POPOUT_ABOUT_ME,
                             headingColor: 'header-primary',
                             children: (0, i.jsx)(h.Z, {
@@ -105,7 +105,7 @@ function M(e) {
                             commandIds: D.popularApplicationCommandIds,
                             channel: b
                         }),
-                    (0, i.jsx)(g.Z, {
+                    (0, i.jsx)(C.Z, {
                         heading: t.bot ? Z.Z.Messages.BOT_PROFILE_CREATED_ON : Z.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                         headingColor: 'header-primary',
                         children: (0, i.jsx)(E.Z, { userId: t.id })

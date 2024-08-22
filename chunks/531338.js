@@ -1,63 +1,63 @@
-t.r(s), t(610138), t(216116), t(78328), t(815648), t(47120);
-var n = t(735250);
-t(470079);
-var r = t(481060),
-    a = t(457330),
-    o = t(417663),
-    i = t(726542),
-    l = t(77987),
-    c = t(787025),
-    d = t(689938),
-    u = t(460114);
-s.default = (0, l.e)(function (e) {
-    let { match: s } = e,
-        t = s.params.type,
-        l = i.Z.get(t);
-    if (null == l)
-        return (0, n.jsx)(c.G, {
-            children: (0, n.jsx)(r.Text, {
-                className: u.error,
+n.r(o), n(610138), n(216116), n(78328), n(815648), n(47120);
+var t = n(735250);
+n(470079);
+var r = n(481060),
+    s = n(457330),
+    a = n(726542),
+    i = n(77987),
+    l = n(787025),
+    c = n(656649),
+    u = n(689938),
+    d = n(460114);
+o.default = (0, i.e)(function (e) {
+    let { match: o } = e,
+        n = o.params.type,
+        i = a.Z.get(n);
+    if (null == i)
+        return (0, t.jsx)(l.G, {
+            children: (0, t.jsx)(r.Text, {
+                className: d.error,
                 variant: 'text-md/normal',
                 color: 'text-warning',
-                children: d.Z.Messages.CONNECTED_ACCOUNT_AUTHORIZATION_PLATFORM_UNKNOWN
+                children: u.Z.Messages.CONNECTED_ACCOUNT_AUTHORIZATION_PLATFORM_UNKNOWN
             })
         });
-    async function N() {
-        var e, s, n;
+    async function f() {
+        var e, o, t;
         let r = new URLSearchParams(window.location.search),
-            { body: o } = await a.Z.authorize(t, {
+            { body: a } = await s.Z.authorize(n, {
                 location: 'Connection Intermediate',
                 twoWayLink: null != r.get('two_way_link') ? 'true' === r.get('two_way_link') : void 0,
                 twoWayLinkType: null !== (e = r.get('two_way_link_type')) && void 0 !== e ? e : void 0,
-                userCode: null !== (s = r.get('two_way_user_code')) && void 0 !== s ? s : void 0,
-                successRedirect: null !== (n = r.get('success_redirect')) && void 0 !== n ? n : void 0
+                userCode: null !== (o = r.get('two_way_user_code')) && void 0 !== o ? o : void 0,
+                successRedirect: null !== (t = r.get('success_redirect')) && void 0 !== t ? t : void 0
             });
-        window.location = o.url;
+        window.location = a.url;
     }
-    return (0, n.jsx)(c.G, {
-        wrapperClassName: u.wrapper,
-        children: (0, n.jsxs)('div', {
-            className: u.root,
+    return (0, t.jsx)(l.G, {
+        wrapperClassName: d.wrapper,
+        children: (0, t.jsxs)('div', {
+            className: d.root,
             children: [
-                (0, n.jsx)(o.LinkPlatformLogo, {
-                    className: u.logos,
-                    platform: l
+                (0, t.jsx)(c.KJ, {
+                    className: d.logos,
+                    platform: i
                 }),
-                (0, n.jsx)(r.Heading, {
+                (0, t.jsx)(r.Heading, {
                     variant: 'text-lg/bold',
-                    className: u.header,
-                    children: d.Z.Messages.CONNECTED_ACCOUNT_AUTHORIZATION_CONTINUE_HEADER.format({ provider: l.name })
+                    className: d.header,
+                    children: u.Z.Messages.CONNECTED_ACCOUNT_AUTHORIZATION_CONTINUE_HEADER.format({ provider: i.name })
                 }),
-                (0, n.jsx)(r.Text, {
+                (0, t.jsx)(r.Text, {
                     variant: 'text-md/normal',
-                    className: u.body,
-                    children: d.Z.Messages.CONNECTED_ACCOUNT_AUTHORIZATION_CONTINUE_DESCRIPTION.format({ provider: l.name })
+                    className: d.body,
+                    children: u.Z.Messages.CONNECTED_ACCOUNT_AUTHORIZATION_CONTINUE_DESCRIPTION.format({ provider: i.name })
                 }),
-                (0, n.jsx)(r.Button, {
+                (0, t.jsx)(r.Button, {
                     size: r.Button.Sizes.LARGE,
                     color: r.Button.Colors.BRAND,
-                    onClick: N,
-                    children: d.Z.Messages.CONNECTED_ACCOUNT_AUTHORIZATION_CONTINUE_BUTTON
+                    onClick: f,
+                    children: u.Z.Messages.CONNECTED_ACCOUNT_AUTHORIZATION_CONTINUE_BUTTON
                 })
             ]
         })

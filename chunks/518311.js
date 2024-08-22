@@ -21,14 +21,14 @@ var i,
     _ = n(570140),
     f = n(26151),
     E = n(493683),
-    g = n(758059),
-    C = n(447543),
+    C = n(758059),
+    g = n(447543),
     I = n(708690),
     x = n(194359),
     T = n(425493),
     N = n(461745),
-    v = n(40851),
-    S = n(367907),
+    S = n(40851),
+    v = n(367907),
     Z = n(762914),
     A = n(43267),
     M = n(933557),
@@ -36,8 +36,8 @@ var i,
     R = n(313201),
     L = n(366980),
     j = n(703656),
-    P = n(93127),
-    O = n(60349),
+    O = n(93127),
+    P = n(60349),
     y = n(814443),
     D = n(428598),
     k = n(131704),
@@ -179,7 +179,7 @@ class eh extends (i = s.PureComponent) {
     componentDidMount() {
         let { channel: e } = this.props;
         _.Z.wait(() => I.Z.open(null == e ? void 0 : e.id));
-        let t = (0, S.v_)(e);
+        let t = (0, v.v_)(e);
         z.default.track(et.rMx.OPEN_POPOUT, {
             ...t,
             type: this._getAnalyticsEntryPoint().entryPointType,
@@ -203,7 +203,7 @@ class eh extends (i = s.PureComponent) {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
         let { inviteMaxAgeSeconds: t } = J.Z.getCurrentConfig({ location: '5326c5_1' }, { autoTrackExposure: !1 });
-        C.Z.createInvite(e.id, { max_age: t }, et.t4x.GROUP_DM);
+        g.Z.createInvite(e.id, { max_age: t }, et.t4x.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -488,7 +488,7 @@ class eh extends (i = s.PureComponent) {
         return {
             affinities: e.map((e) => {
                 var t, n, i;
-                let a = O.Z.getCurrentConfig({ location: 'desktop_dm_list' }, { autoTrackExposure: !1 });
+                let a = P.Z.getCurrentConfig({ location: 'desktop_dm_list' }, { autoTrackExposure: !1 });
                 if (a.useV1) {
                     let n = y.Z.getUserAffinity(e);
                     return null !== (t = null == n ? void 0 : n.affinity) && void 0 !== t ? t : -1;
@@ -594,7 +594,7 @@ class eh extends (i = s.PureComponent) {
             }),
             el(this, 'handleQueryChange', (e) => {
                 let { channel: t } = this.props,
-                    n = (0, S.v_)(t);
+                    n = (0, v.v_)(t);
                 I.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
@@ -616,7 +616,7 @@ class eh extends (i = s.PureComponent) {
                 t.has(e) ? I.Z.removeUser(e) : (I.Z.addUser(e), n.length > 0 && I.Z.clear(null == i ? void 0 : i.id)), this.forceFocus();
             }),
             el(this, 'handleAddFriendNavigation', () => {
-                (0, j.uL)(et.Z5c.FRIENDS), g.Z.setSection(et.pJs.ADD_FRIEND), this.props.onClose();
+                (0, j.uL)(et.Z5c.FRIENDS), C.Z.setSection(et.pJs.ADD_FRIEND), this.props.onClose();
             }),
             el(this, 'handleScroll', () => {
                 let e = this.scrollerRef.current;
@@ -625,7 +625,7 @@ class eh extends (i = s.PureComponent) {
             el(this, 'createNewDM', (e) => {
                 let t = this._searchCounter,
                     { channel: n } = this.props,
-                    i = (0, S.v_)(n),
+                    i = (0, v.v_)(n),
                     a = !0;
                 1 === e.length && (a = null == E.Z._openCachedDMChannel(e[0])),
                     z.default.track(et.rMx.CREATE_DM_USER_LIST_CLICKED, {
@@ -641,7 +641,7 @@ class eh extends (i = s.PureComponent) {
             }),
             el(this, 'pushToExistingDM', (e, t) => {
                 let n = this._searchCounter,
-                    i = (0, S.v_)(e),
+                    i = (0, v.v_)(e),
                     a = H.Z.getChannelId() === e.id;
                 E.Z.addRecipients(e.id, t, et.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (!!a) {
@@ -716,7 +716,7 @@ class eh extends (i = s.PureComponent) {
 }
 function ep(e) {
     let { channel: t, ...n } = e;
-    O.Z.useExperiment({ location: 'desktop_dm_list' });
+    P.Z.useExperiment({ location: 'desktop_dm_list' });
     let i = (0, p.cj)([B.Z, w.Z, F.Z], () => {
         let e;
         return (
@@ -749,10 +749,10 @@ function em(e) {
         ),
         [u, _]
     );
-    let { useV1: f, useV2Dm: E, useV2Communication: g } = O.Z.useExperiment({ location: 'desktop_dm_list' }, { autoTrackExposure: !1 });
+    let { useV1: f, useV2Dm: E, useV2Communication: C } = P.Z.useExperiment({ location: 'desktop_dm_list' }, { autoTrackExposure: !1 });
     return (s.useEffect(() => {
-        f && (0, P.W)(), E && (0, P._)(), g && (0, P._)();
-    }, [f, E, g]),
+        f && (0, O.W)(), E && (0, O._)(), C && (0, O._)();
+    }, [f, E, C]),
     p)
         ? null
         : (0, a.jsx)(m.Popout, {
@@ -793,4 +793,4 @@ function e_(e) {
 function ef(e) {
     return JSON.stringify(e.sort());
 }
-el(eh, 'contextType', v.ZP);
+el(eh, 'contextType', S.ZP);

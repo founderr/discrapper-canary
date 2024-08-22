@@ -14,41 +14,41 @@ var i = n(735250),
     _ = n(981631),
     f = n(689938),
     E = n(125803),
-    g = n(703959),
-    C = n(584354),
+    C = n(703959),
+    g = n(584354),
     I = n(725060);
 let x = (0, c.Z)((e) => {
     let { searchQuery: t, setSearchQuery: n, handleClearSearch: a, handleSearchKeyPress: s, width: r } = e,
         c = null != r && r <= 800;
     return (0, i.jsxs)('div', {
-        className: g.header,
+        className: C.header,
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                className: g.headerImage,
-                src: c ? I : C
+                className: C.headerImage,
+                src: c ? I : g
             }),
             (0, i.jsx)('div', {
-                className: g.headerContentWrapper,
+                className: C.headerContentWrapper,
                 children: (0, i.jsxs)('div', {
-                    className: l()(g.headerContent, { [g.headerContentSmall]: c }),
+                    className: l()(C.headerContent, { [C.headerContentSmall]: c }),
                     children: [
                         (0, i.jsx)(o.Heading, {
                             variant: 'heading-xl/semibold',
-                            className: g.searchTitle,
+                            className: C.searchTitle,
                             children: f.Z.Messages.HUB_DIRECTORY_SEARCH_TITLE
                         }),
                         (0, i.jsx)(o.Text, {
                             variant: 'text-md/normal',
-                            className: g.searchSubtitle,
+                            className: C.searchSubtitle,
                             children: f.Z.Messages.HUB_DIRECTORY_SEARCH_SUBTITLE
                         }),
                         (0, i.jsx)(o.SearchBox, {
                             searchTerm: t,
-                            className: g.searchBox,
-                            inputClassName: g.searchBoxInput,
-                            closeIconClassName: g.closeIcon,
-                            searchIconClassName: g.searchIcon,
+                            className: C.searchBox,
+                            inputClassName: C.searchBoxInput,
+                            closeIconClassName: C.closeIcon,
+                            searchIconClassName: C.searchIcon,
                             label: f.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                             placeholder: f.Z.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
                             onChange: n,
@@ -84,20 +84,20 @@ function T(e) {
             className: E.scroller,
             children: [
                 (0, i.jsxs)('div', {
-                    className: g.header,
+                    className: C.header,
                     children: [
                         null != m
                             ? (0, i.jsx)('img', {
                                   alt: '',
-                                  className: l()(g.headerImage, g.headerImageSimple),
+                                  className: l()(C.headerImage, C.headerImageSimple),
                                   src: m
                               })
                             : null,
-                        (0, i.jsx)('div', { className: g.headerImageBG }),
+                        (0, i.jsx)('div', { className: C.headerImageBG }),
                         (0, i.jsx)('div', {
-                            className: g.headerContentWrapper,
+                            className: C.headerContentWrapper,
                             children: (0, i.jsx)('div', {
-                                className: l()(g.headerContent, g.headerContentSmall),
+                                className: l()(C.headerContent, C.headerContentSmall),
                                 children: (0, i.jsx)(o.Heading, {
                                     variant: 'heading-xl/semibold',
                                     color: 'always-white',
@@ -118,14 +118,14 @@ function T(e) {
     });
 }
 t.Z = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: s, searchQuery: l, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: h, currentCategoryId: C, handleSelectCategory: I, categoryCounts: N, allEntriesCount: v, isLoading: S } = e,
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: s, searchQuery: l, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: h, currentCategoryId: g, handleSelectCategory: I, categoryCounts: N, allEntriesCount: S, isLoading: v } = e,
         Z = (0, r.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
     return null != Z && Z.hasFeature(_.oNc.SHARD)
         ? (0, i.jsx)(T, {
               guild: Z,
               directoryEntries: n,
               handleCreateOrAddGuild: s,
-              isLoading: S
+              isLoading: v
           })
         : (0, i.jsx)('div', {
               className: E.pageContainer,
@@ -141,10 +141,10 @@ t.Z = (e) => {
                       (0, i.jsx)(o.AdvancedScrollerThin, {
                           orientation: 'horizontal',
                           children: (0, i.jsxs)(o.TabBar, {
-                              className: g.tabBar,
+                              className: C.tabBar,
                               type: 'top',
                               look: 'brand',
-                              selectedItem: C,
+                              selectedItem: g,
                               onItemSelect: (e) => {
                                   I(e);
                               },
@@ -152,9 +152,9 @@ t.Z = (e) => {
                                   (0, i.jsx)(
                                       o.TabBar.Item,
                                       {
-                                          className: g.tabBarItem,
+                                          className: C.tabBarItem,
                                           id: m.AR.ALL,
-                                          children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(v, ')')
+                                          children: ''.concat(f.Z.Messages.DIRECTORY_CATEGORY_ALL, ' (').concat(S, ')')
                                       },
                                       m.AR.ALL
                                   ),
@@ -163,7 +163,7 @@ t.Z = (e) => {
                                       return (0, i.jsx)(
                                           o.TabBar.Item,
                                           {
-                                              className: g.tabBarItem,
+                                              className: C.tabBarItem,
                                               id: t,
                                               children: ''.concat(n, ' ').concat(null != N[t] ? '('.concat(N[t], ')') : '')
                                           },
@@ -173,7 +173,7 @@ t.Z = (e) => {
                               ]
                           })
                       }),
-                      S && null == n
+                      v && null == n
                           ? (0, i.jsx)(o.Spinner, { className: E.spinner })
                           : null == n
                             ? void 0
@@ -185,7 +185,7 @@ t.Z = (e) => {
                                               void 0 !== e.header
                                                   ? (0, i.jsx)(o.Text, {
                                                         variant: 'text-md/semibold',
-                                                        className: g.sectionHeader,
+                                                        className: C.sectionHeader,
                                                         children: e.header
                                                     })
                                                   : null,

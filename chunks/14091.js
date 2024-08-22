@@ -19,14 +19,14 @@ var i = n(735250),
     _ = n(695346),
     f = n(768119),
     E = n(944486),
-    g = n(585483),
-    C = n(251285),
+    C = n(585483),
+    g = n(251285),
     I = n(406326),
     x = n(994463),
     T = n(619753),
     N = n(981631),
-    v = n(689938),
-    S = n(718518);
+    S = n(689938),
+    v = n(718518);
 function Z(e, t, n) {
     return (
         t in e
@@ -90,19 +90,19 @@ class A extends a.Component {
 let M = (e) => {
     let { children: t } = e;
     return (0, i.jsx)('div', {
-        className: S.emptyResultsWrap,
+        className: v.emptyResultsWrap,
         children: (0, i.jsx)('div', {
-            className: S.emptyResultsContent,
+            className: v.emptyResultsContent,
             children: t
         })
     });
 };
 class b extends a.PureComponent {
     componentDidMount() {
-        g.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        C.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentWillUnmount() {
-        g.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        C.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentDidUpdate(e) {
         let { search: t } = e;
@@ -128,13 +128,13 @@ class b extends a.PureComponent {
         let { searchAnalyticsId: e, searchType: t, searchResults: n } = this.props,
             { offset: a, hasError: s, totalResults: l, isHistoricalIndexing: r } = this.props.search;
         return (0, i.jsxs)('section', {
-            className: S.searchResultsWrap,
-            'aria-label': v.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
+            className: v.searchResultsWrap,
+            'aria-label': S.Z.Messages.SEARCH_RESULTS_SECTION_LABEL,
             children: [
                 this.renderHeader(),
                 (0, i.jsx)(u.AdvancedScroller, {
                     ref: this.scrollerRef,
-                    className: S.scroller,
+                    className: v.scroller,
                     children: this.renderContent()
                 }),
                 (0, i.jsx)(A, {
@@ -223,12 +223,12 @@ class b extends a.PureComponent {
                 });
             }),
             Z(this, 'renderIndexing', () => {
-                let e = f.Z.getSearchType(this.props.searchId) === N.aib.GUILD ? v.Z.Messages.SEARCH_GUILD_STILL_INDEXING : v.Z.Messages.SEARCH_DM_STILL_INDEXING;
+                let e = f.Z.getSearchType(this.props.searchId) === N.aib.GUILD ? S.Z.Messages.SEARCH_GUILD_STILL_INDEXING : S.Z.Messages.SEARCH_DM_STILL_INDEXING;
                 return (0, i.jsxs)(M, {
                     children: [
                         (0, i.jsx)(x.Z, {}),
                         (0, i.jsx)('div', {
-                            className: (S.emptyResultsText, S.stillIndexing),
+                            className: (v.emptyResultsText, v.stillIndexing),
                             children: e
                         })
                     ]
@@ -236,12 +236,12 @@ class b extends a.PureComponent {
             }),
             Z(this, 'renderNoResults', () => {
                 let { showNoResultsAlt: e } = this.props.search,
-                    t = e ? v.Z.Messages.SEARCH_NO_RESULTS_ALT : v.Z.Messages.SEARCH_NO_RESULTS;
+                    t = e ? S.Z.Messages.SEARCH_NO_RESULTS_ALT : S.Z.Messages.SEARCH_NO_RESULTS;
                 return (0, i.jsxs)(M, {
                     children: [
-                        (0, i.jsx)('div', { className: l()(S.noResultsImage, { [S.alt]: e }) }),
+                        (0, i.jsx)('div', { className: l()(v.noResultsImage, { [v.alt]: e }) }),
                         (0, i.jsx)('div', {
-                            className: l()(S.emptyResultsText, S.noResults, { [S.alt]: e }),
+                            className: l()(v.emptyResultsText, v.noResults, { [v.alt]: e }),
                             children: t
                         })
                     ]
@@ -250,10 +250,10 @@ class b extends a.PureComponent {
             Z(this, 'renderError', () =>
                 (0, i.jsxs)(M, {
                     children: [
-                        (0, i.jsx)('div', { className: S.errorImage }),
+                        (0, i.jsx)('div', { className: v.errorImage }),
                         (0, i.jsx)('div', {
-                            className: l()(S.emptyResultsText, S.errorMessage),
-                            children: v.Z.Messages.SEARCH_ERROR
+                            className: l()(v.emptyResultsText, v.errorMessage),
+                            children: S.Z.Messages.SEARCH_ERROR
                         })
                     ]
                 })
@@ -294,7 +294,7 @@ function R(e) {
             }),
             [t]
         ),
-        ...(0, C.Z)(t),
+        ...(0, g.Z)(t),
         renderEmbeds: _.NA.useSetting(),
         developerMode: _.Sb.useSetting(),
         ...(0, c.cj)([m.Z], () => {

@@ -19,14 +19,14 @@ var i,
     _ = n(58540),
     f = n(665149),
     E = n(484459),
-    g = n(103575),
-    C = n(271383),
+    C = n(103575),
+    g = n(271383),
     I = n(496675),
     x = n(158776),
     T = n(471253),
     N = n(431328),
-    v = n(145834),
-    S = n(590415),
+    S = n(145834),
+    v = n(590415),
     Z = n(614173),
     A = n(618896),
     M = n(231338),
@@ -66,17 +66,17 @@ let L = l.memo(function (e) {
                 isMobile: x.Z.isMobileOnline(i.user.id),
                 status: x.Z.getStatus(i.user.id, f)
             })),
-            Z = (0, d.e7)([C.ZP], () => C.ZP.getMember(f, i.user.id)),
+            Z = (0, d.e7)([g.ZP], () => g.ZP.getMember(f, i.user.id)),
             A = l.useMemo(() => ({ [f]: [i.user.id] }), [f, i.user.id]);
         (0, _.$)(A);
-        let M = i.rtsState === S.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+        let M = i.rtsState === v.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function L() {
             (0, T.DT)(t, i.user.id, !1);
         }
         function j() {
             (0, T.DT)(t, i.user.id, !0);
         }
-        let P = (e) => {
+        let O = (e) => {
             (0, p.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
                 return (n) =>
@@ -99,7 +99,7 @@ let L = l.memo(function (e) {
                             channelId: t.id
                         }),
                     renderPopout: (e) =>
-                        (0, s.jsx)(g.Z, {
+                        (0, s.jsx)(C.Z, {
                             ...e,
                             location: 'RequestToSpeakSidebar',
                             userId: i.user.id,
@@ -112,7 +112,7 @@ let L = l.memo(function (e) {
                         var t;
                         return (0, s.jsxs)(h.Clickable, {
                             className: R.participantMemberContainer,
-                            onContextMenu: P,
+                            onContextMenu: O,
                             ...e,
                             children: [
                                 (0, s.jsx)(m.Z, {
@@ -133,7 +133,7 @@ let L = l.memo(function (e) {
                                         (0, s.jsx)(h.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-secondary',
-                                            children: (0, v.$)(i)
+                                            children: (0, S.$)(i)
                                         })
                                     ]
                                 })
@@ -175,7 +175,7 @@ let L = l.memo(function (e) {
             ]
         });
     }),
-    P = l.memo(function (e) {
+    O = l.memo(function (e) {
         let { channel: t } = e,
             [n, i] = (0, Z.h)(t.id);
         return (0, s.jsx)(h.FormSwitch, {
@@ -185,7 +185,7 @@ let L = l.memo(function (e) {
             children: b.Z.Messages.MODERATOR_ALLOW_EVERYONE_RAISE_HAND
         });
     }),
-    O = l.memo(function () {
+    P = l.memo(function () {
         return (0, s.jsxs)('div', {
             className: R.emptyStateContainer,
             children: [
@@ -237,9 +237,9 @@ function y(e) {
                     let { section: n, row: i } = e;
                     switch (n) {
                         case 0:
-                            return (0, s.jsx)(P, { channel: t }, 'rts-toggle');
+                            return (0, s.jsx)(O, { channel: t }, 'rts-toggle');
                         case 1: {
-                            if (0 === a.length) return (0, s.jsx)(O, {}, 'participants-empty');
+                            if (0 === a.length) return (0, s.jsx)(P, {}, 'participants-empty');
                             let e = a[i];
                             return (0, s.jsx)(
                                 j,

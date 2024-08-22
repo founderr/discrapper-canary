@@ -17,8 +17,8 @@ var i,
     d = n.n(c),
     u = n(143927),
     _ = n(481060),
-    E = n(110924),
-    h = n(100527),
+    h = n(110924),
+    E = n(100527),
     m = n(970606),
     I = n(17845),
     g = n(945124),
@@ -62,7 +62,7 @@ t.ZP = o.memo(function (e) {
         { loaded: x, clans: b, searchResult: P, searchCriteria: M } = (0, S.ML)(c, 'saved_guilds' === i),
         D = (0, C.GN)((e) => e.selectedTraits, u.Z),
         y = (0, C.GN)((e) => e.completedNux, u.Z),
-        j = (0, E.Z)(P),
+        j = (0, h.Z)(P),
         { currentPage: U, updatePage: G, totalItems: k, pageSize: w } = (0, f.$)();
     o.useEffect(() => {
         if (null != P && !!(0, v.Pw)(P)) (!(null != j && (0, v.Pw)(j)) || !(j.loadedAt >= P.loadedAt)) && (0, m.Oe)('top_picks', M);
@@ -242,7 +242,7 @@ t.ZP = o.memo(function (e) {
                                           size: _.ButtonSizes.MEDIUM,
                                           className: O.heroButton,
                                           onClick: () => {
-                                              (0, m.GS)({ location: h.Z.GLOBAL_DISCOVERY }), (0, C.fH)(C.v0.GET_STARTED);
+                                              (0, m.GS)({ location: E.Z.GLOBAL_DISCOVERY }), (0, C.fH)(C.v0.GET_STARTED);
                                           },
                                           children: (0, l.jsx)(_.Text, {
                                               variant: 'text-sm/medium',

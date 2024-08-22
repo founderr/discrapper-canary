@@ -23,14 +23,14 @@ var i = n(735250),
     _ = n(644914),
     f = n(434404),
     E = n(330010),
-    g = n(314897),
-    C = n(430824),
+    C = n(314897),
+    g = n(430824),
     I = n(594174),
     x = n(259580),
     T = n(585483),
     N = n(63063),
-    v = n(358085),
-    S = n(709054),
+    S = n(358085),
+    v = n(709054),
     Z = n(967128),
     A = n(981631),
     M = n(231873),
@@ -76,10 +76,10 @@ function L(e) {
 }
 function j(e) {
     let { channel: t } = e,
-        s = (0, c.e7)([C.Z], () => (null != t ? C.Z.getGuild(t.getGuildId()) : null), [t]),
-        h = null != s && S.default.extractTimestamp(s.id) < Date.now() - A._8R,
-        x = (0, c.e7)([g.default], () => (null == s ? void 0 : s.ownerId) === g.default.getId(), [s]),
-        { canInvite: j, canManageGuild: P, canMessage: O } = (0, _.TE)(t, s),
+        s = (0, c.e7)([g.Z], () => (null != t ? g.Z.getGuild(t.getGuildId()) : null), [t]),
+        h = null != s && v.default.extractTimestamp(s.id) < Date.now() - A._8R,
+        x = (0, c.e7)([C.default], () => (null == s ? void 0 : s.ownerId) === C.default.getId(), [s]),
+        { canInvite: j, canManageGuild: O, canMessage: P } = (0, _.TE)(t, s),
         y = (0, c.e7)([I.default], () => {
             var e, t;
             return (null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = I.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
@@ -253,7 +253,7 @@ function j(e) {
                     'invite'
                 )
             ),
-        P &&
+        O &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -270,7 +270,7 @@ function j(e) {
                     'customize'
                 )
             ),
-        O &&
+        P &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,
@@ -287,7 +287,7 @@ function j(e) {
                     'message'
                 )
             ),
-        (0, v.isWeb)() &&
+        (0, S.isWeb)() &&
             K.push(
                 (0, i.jsx)(
                     o.Z.div,

@@ -1,143 +1,143 @@
-n.d(t, {
+t.d(l, {
     p: function () {
-        return v;
+        return E;
     }
 });
-var i = n(735250),
-    a = n(470079),
-    s = n(120356),
-    l = n.n(s),
-    r = n(913527),
-    o = n.n(r),
-    c = n(442837),
-    u = n(481060),
-    d = n(430824),
-    h = n(650461),
-    p = n(353093),
-    m = n(105671),
-    _ = n(532490),
-    f = n(979264),
-    E = n(570938),
-    g = n(550271),
-    C = n(116175),
-    I = n(308083),
-    x = n(689938),
-    T = n(329809);
-function N(e) {
-    let { guildId: t, tag: n, badge: a, primaryColor: s, secondaryColor: l } = e;
-    return null == n || 0 === n.length
-        ? (0, i.jsx)('div', {
-              className: T.placeholderIcon,
-              children: (0, i.jsx)(E.Z, {
+var a = t(735250),
+    n = t(470079),
+    s = t(120356),
+    i = t.n(s),
+    r = t(913527),
+    o = t.n(r),
+    c = t(442837),
+    d = t(481060),
+    u = t(430824),
+    x = t(650461),
+    h = t(353093),
+    m = t(105671),
+    g = t(532490),
+    C = t(979264),
+    v = t(570938),
+    f = t(550271),
+    j = t(116175),
+    p = t(308083),
+    N = t(689938),
+    _ = t(329809);
+function T(e) {
+    let { guildId: l, tag: t, badge: n, primaryColor: s, secondaryColor: i } = e;
+    return null == t || 0 === t.length
+        ? (0, a.jsx)('div', {
+              className: _.placeholderIcon,
+              children: (0, a.jsx)(v.Z, {
                   height: 42,
                   width: 42
               })
           })
-        : (0, i.jsx)(f.aG, {
-              guildId: t,
-              className: T.charterClanTag,
-              clanTag: n,
+        : (0, a.jsx)(C.aG, {
+              guildId: l,
+              className: _.charterClanTag,
+              clanTag: t,
               textVariant: 'heading-lg/semibold',
               textColor: 'text-normal',
-              badgeSize: I.NC.SIZE_24,
-              clanBadge: (0, i.jsx)(g.A, {
-                  className: T.charterClanBadge,
-                  badge: a,
-                  width: I.NC.SIZE_24,
-                  height: I.NC.SIZE_24,
+              badgeSize: p.NC.SIZE_24,
+              clanBadge: (0, a.jsx)(f.A, {
+                  className: _.charterClanBadge,
+                  badge: n,
+                  width: p.NC.SIZE_24,
+                  height: p.NC.SIZE_24,
                   primaryTintColor: s,
-                  secondaryTintColor: l
+                  secondaryTintColor: i
               })
           });
 }
-function v(e) {
-    let { applicationIds: t, playstyle: n, className: s } = e,
-        r = a.useMemo(() => Array.from(t), [t]),
+function E(e) {
+    let { applicationIds: l, playstyle: t, className: s } = e,
+        r = n.useMemo(() => Array.from(l), [l]),
         o = (0, m.i)(r),
-        c = a.useMemo(() => {
+        c = n.useMemo(() => {
             if (null == o) return null;
-            let e = (0, I.mv)(n);
+            let e = (0, p.mv)(t);
             return null == e
-                ? x.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({ games: o })
-                : x.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
+                ? N.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES.format({ games: o })
+                : N.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_GAMES_AND_PLAYSTYLE.format({
                       playstyle: e,
                       games: o
                   });
-        }, [o, n]);
-    return (0, i.jsx)(u.Text, {
+        }, [o, t]);
+    return (0, a.jsx)(d.Text, {
         variant: 'text-sm/normal',
         color: 'text-muted',
-        className: l()(T.overviewText, s),
-        children: null == c ? x.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT : c
+        className: i()(_.overviewText, s),
+        children: null == c ? N.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_DEFAULT : c
     });
 }
-t.Z =
-    12633 == n.j
+l.Z =
+    12633 == t.j
         ? (e) => {
-              let { guildId: t } = e,
-                  n = (0, h.Wg)(),
-                  s = (0, c.e7)([d.Z], () => {
-                      var e, n;
-                      return null !== (n = null === (e = d.Z.getGuild(t)) || void 0 === e ? void 0 : e.name) && void 0 !== n ? n : '';
+              let { guildId: l } = e,
+                  t = (0, x.Wg)(),
+                  s = (0, c.e7)([u.Z], () => {
+                      var e, t;
+                      return null !== (t = null === (e = u.Z.getGuild(l)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : '';
                   }),
                   {
-                      gameApplicationIds: l,
+                      gameApplicationIds: i,
                       playstyle: r,
                       interests: m,
-                      tag: f,
-                      badgeKind: E,
-                      badgePrimaryColor: g,
+                      tag: C,
+                      badgeKind: v,
+                      badgePrimaryColor: f,
                       badgeSecondaryColor: S
-                  } = (0, c.cj)([h.ZP], () => {
+                  } = (0, c.cj)([x.ZP], () => {
                       var e;
-                      return null !== (e = h.ZP.getStateForGuild(t).progress) && void 0 !== e ? e : n;
+                      return null !== (e = x.ZP.getStateForGuild(l).progress) && void 0 !== e ? e : t;
                   }),
-                  Z = a.useMemo(() => ((null == m ? void 0 : m.size) > 0 ? (0, p.f6)(Array.from(m), I.nt) : null), [m]);
-              return (0, i.jsxs)(_.Z, {
+                  Z = n.useMemo(() => ((null == m ? void 0 : m.size) > 0 ? (0, h.f6)(Array.from(m), p.nt) : null), [m]);
+              return (0, a.jsxs)(g.Z, {
                   ...e,
                   children: [
-                      (0, i.jsx)(N, {
-                          guildId: t,
-                          tag: f,
-                          badge: E,
-                          primaryColor: null != g ? g : C.Nh,
-                          secondaryColor: null != S ? S : C.vY
+                      (0, a.jsx)(T, {
+                          guildId: l,
+                          tag: C,
+                          badge: v,
+                          primaryColor: null != f ? f : j.Nh,
+                          secondaryColor: null != S ? S : j.vY
                       }),
-                      (0, i.jsx)(u.Heading, {
+                      (0, a.jsx)(d.Heading, {
                           variant: 'heading-xl/normal',
                           color: 'text-muted',
-                          className: T.overviewHeaderPrelude,
-                          children: x.Z.Messages.CLAN_SETUP_OVERVIEW_TITLE
+                          className: _.overviewHeaderPrelude,
+                          children: N.Z.Messages.CLAN_SETUP_OVERVIEW_TITLE
                       }),
-                      (0, i.jsx)(u.Heading, {
+                      (0, a.jsx)(d.Heading, {
                           variant: 'heading-xl/bold',
                           color: 'interactive-active',
-                          className: T.overviewGuildName,
+                          className: _.overviewGuildName,
                           children: s
                       }),
-                      (0, i.jsx)(u.Text, {
+                      (0, a.jsx)(d.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
-                          className: T.overviewText,
-                          children: x.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({ date: o()().format('MMMM YYYY') })
+                          className: _.overviewText,
+                          children: N.Z.Messages.CLAN_SETUP_OVERVIEW_ESTABLISHED.format({ date: o()().format('MMMM YYYY') })
                       }),
-                      (0, i.jsx)(v, {
-                          applicationIds: l,
+                      (0, a.jsx)(E, {
+                          applicationIds: i,
                           playstyle: r
                       }),
                       null != Z
-                          ? (0, i.jsx)(u.Text, {
+                          ? (0, a.jsx)(d.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-muted',
-                                className: T.overviewText,
-                                children: x.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({ traits: Z })
+                                className: _.overviewText,
+                                children: N.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({ traits: Z })
                             })
                           : null,
-                      (0, i.jsx)(u.Text, {
+                      (0, a.jsx)(d.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
-                          className: T.overviewText,
-                          children: x.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
+                          className: _.overviewText,
+                          children: N.Z.Messages.CLAN_SETUP_OVERVIEW_TEXT_WRAP
                       })
                   ]
               });

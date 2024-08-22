@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return S;
     }
 });
 var i = n(735250);
@@ -19,29 +19,29 @@ var a = n(512722),
     _ = n(775666),
     f = n(423589),
     E = n(592125),
-    g = n(496675),
-    C = n(881824),
+    C = n(496675),
+    g = n(881824),
     I = n(146085),
     x = n(427679),
     T = n(354459),
     N = n(689938);
-function v(e) {
-    let { channelId: t, closePopout: n, appContext: a, onSelect: v } = e,
-        S = (0, l.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
-        Z = (null == S ? void 0 : S.type) === T.fO.STREAM ? S.stream : null,
+function S(e) {
+    let { channelId: t, closePopout: n, appContext: a, onSelect: S } = e,
+        v = (0, l.e7)([c.Z], () => c.Z.getSelectedParticipant(t)),
+        Z = (null == v ? void 0 : v.type) === T.fO.STREAM ? v.stream : null,
         A = (0, p.Z)(t);
     return (0, i.jsxs)(r.Menu, {
         navId: 'stage-channel-call-overflow-popout',
         onClose: n,
         'aria-label': N.Z.Messages.CHANNEL_CALL_OVERFLOW_MENU_LABEL,
-        onSelect: v,
+        onSelect: S,
         children: [
             (function (e) {
                 let t = (0, l.e7)([E.Z], () => E.Z.getChannel(e), [e]),
-                    n = (0, l.e7)([g.Z], () => g.Z.can(I.yP, t)),
+                    n = (0, l.e7)([C.Z], () => C.Z.can(I.yP, t)),
                     a = (0, l.e7)([x.Z], () => x.Z.getStageInstanceByChannel(e), [e]),
                     s = (0, o.bp)(),
-                    c = () => null != t && (0, C.T)(t, s);
+                    c = () => null != t && (0, g.T)(t, s);
                 return (null == t ? void 0 : t.isGuildStageVoice()) && n
                     ? null != a
                         ? (0, i.jsx)(r.MenuItem, {

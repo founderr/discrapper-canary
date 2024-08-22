@@ -18,8 +18,8 @@ var i = n(735250),
     _ = n(313692),
     f = n(596443),
     E = n(50493),
-    g = n(981631);
-function C(e, t) {
+    C = n(981631);
+function g(e, t) {
     return (n) => {
         if (0 === n) return 'auto';
         let i = 'forwards' === t.current,
@@ -30,22 +30,22 @@ function C(e, t) {
 }
 function I(e) {
     var t, n;
-    let { userId: I, guildId: x, onClose: T, analyticsLocation: N, className: v } = e,
-        S = (0, l.e7)([h.ZP], () => h.ZP.getGuildSidebarState(x), [x]),
-        Z = null !== (t = null == S ? void 0 : S.details.modViewPanel) && void 0 !== t ? t : E.k.INFO,
+    let { userId: I, guildId: x, onClose: T, analyticsLocation: N, className: S } = e,
+        v = (0, l.e7)([h.ZP], () => h.ZP.getGuildSidebarState(x), [x]),
+        Z = null !== (t = null == v ? void 0 : v.details.modViewPanel) && void 0 !== t ? t : E.k.INFO,
         A = (0, c.Z)(I);
     let M = null == (n = Z) ? null : n === E.k.INFO ? 'backwards' : 'forwards',
         b = (0, d.Z)(M),
         { reducedMotion: R } = a.useContext(r.S),
         L = a.useCallback(
             (e) => {
-                null != S && (0, p.r)(x, I, S.baseChannelId, { modViewPanel: e });
+                null != v && (0, p.r)(x, I, v.baseChannelId, { modViewPanel: e });
             },
-            [S, x, I]
+            [v, x, I]
         ),
         j = a.useMemo(
             () => ({
-                [g.EkH.CLOSE_MODAL]: {
+                [C.EkH.CLOSE_MODAL]: {
                     binds: ['esc'],
                     comboKeysBindGlobal: !0,
                     action() {
@@ -57,7 +57,7 @@ function I(e) {
             [T, Z, L]
         );
     a.useEffect(() => (u.Z.enable(), u.Z.enableTemp(j), () => u.Z.disableTemp()), [j]);
-    let P = (0, o.useTransition)(
+    let O = (0, o.useTransition)(
         Z,
         {
             value: 0,
@@ -74,7 +74,7 @@ function I(e) {
             flex: 1,
             overflow: 'hidden'
         },
-        children: P((e, t, n) => {
+        children: O((e, t, n) => {
             var a, l, r;
             let { key: o } = n;
             return (0, i.jsx)(
@@ -90,8 +90,8 @@ function I(e) {
                         ...(R.enabled
                             ? { opacity: null === (a = e.value) || void 0 === a ? void 0 : a.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null === (l = e.value) || void 0 === l ? void 0 : l.to(C('left', b)),
-                                  right: null === (r = e.value) || void 0 === r ? void 0 : r.to(C('right', b))
+                                  left: null === (l = e.value) || void 0 === l ? void 0 : l.to(g('left', b)),
+                                  right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g('right', b))
                               })
                     },
                     children: (function (e) {
@@ -101,21 +101,21 @@ function I(e) {
                                     userId: I,
                                     guildId: x,
                                     onNavigate: L,
-                                    className: v
+                                    className: S
                                 });
                             case E.k.MESSAGE_HISTORY:
                                 return (0, i.jsx)(_.Z, {
                                     userId: I,
                                     guildId: x,
                                     onNavigate: () => L(E.k.INFO),
-                                    className: v
+                                    className: S
                                 });
                             case E.k.PERMISSIONS:
                                 return (0, i.jsx)(f.Z, {
                                     userId: I,
                                     guildId: x,
                                     onNavigate: () => L(E.k.INFO),
-                                    className: v
+                                    className: S
                                 });
                             default:
                                 return null;

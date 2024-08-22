@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return v;
     }
 }),
     n(47120),
@@ -20,15 +20,15 @@ var i = n(735250),
     _ = n(937393),
     f = n(43982),
     E = n(721351),
-    g = n(420529),
-    C = n(927923),
+    C = n(420529),
+    g = n(927923),
     I = n(981631),
     x = n(921944),
     T = n(689938),
     N = n(286419);
-function v(e) {
+function S(e) {
     let { onClose: t, channel: n } = e,
-        a = (0, g.Z)(n);
+        a = (0, C.Z)(n);
     return (0, i.jsx)(r.Menu, {
         onClose: t,
         onSelect: () => null,
@@ -37,20 +37,20 @@ function v(e) {
         children: a
     });
 }
-function S(e) {
-    let { channel: t, showLeftDivider: n = !1, ...g } = e,
-        S = (0, m.Z)(),
+function v(e) {
+    let { channel: t, showLeftDivider: n = !1, ...C } = e,
+        v = (0, m.Z)(),
         Z = (0, s.e7)([p.Z], () => {
             var e, t;
-            return null === (e = p.Z.getSessionById(null !== (t = null == S ? void 0 : S.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
+            return null === (e = p.Z.getSessionById(null !== (t = null == v ? void 0 : v.sessionId) && void 0 !== t ? t : '')) || void 0 === e ? void 0 : e.clientInfo.os;
         }),
         A = (0, s.e7)([h.Z], () => h.Z.hasLayers()),
         [M, b] = (0, s.Wu)([o.Z], () => [o.Z.getMode(t.id), o.Z.getLayout(t.id)]),
         R = (0, r.useModalsStore)(r.hasAnyModalOpenSelector),
         L = (0, _.Z)(),
         j = L.filter((e) => e.twoWayLink),
-        [P, O] = a.useState(!1);
-    if ((null == S && 0 === L.length) || t.isBroadcastChannel()) return null;
+        [O, P] = a.useState(!1);
+    if ((null == v && 0 === L.length) || t.isBroadcastChannel()) return null;
     let y = I.WtW.VOICE !== M && [I.AEg.NO_CHAT, I.AEg.FULL_SCREEN].includes(b) ? 'top' : 'bottom',
         D = [];
     return (
@@ -67,8 +67,8 @@ function S(e) {
                             position: y,
                             spacing: o ? 16 : void 0,
                             positionKey: ''.concat(M, ':').concat(b),
-                            onRequestClose: () => O(!1),
-                            shouldShow: (o || P) && !A && !R,
+                            onRequestClose: () => P(!1),
+                            shouldShow: (o || O) && !A && !R,
                             renderPopout: (e) => {
                                 let { closePopout: n } = e;
                                 return (0, i.jsx)(u.Z, {
@@ -77,11 +77,11 @@ function S(e) {
                                               popoutPosition: y,
                                               onDismiss: () => s(x.L.UNKNOWN),
                                               onAccept: () => {
-                                                  s(x.L.UNKNOWN), O(!0);
+                                                  s(x.L.UNKNOWN), P(!0);
                                               },
                                               gameConsoleAccounts: j
                                           })
-                                        : (0, i.jsx)(v, {
+                                        : (0, i.jsx)(S, {
                                               onClose: () => {
                                                   n();
                                               },
@@ -93,9 +93,9 @@ function S(e) {
                                 var t;
                                 return (0, i.jsx)(d.Z, {
                                     ...e,
-                                    ...g,
-                                    onClick: () => O(!0),
-                                    label: null != (t = Z) ? (t === C.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
+                                    ...C,
+                                    onClick: () => P(!0),
+                                    label: null != (t = Z) ? (t === g.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
                                     iconComponent: (0, E.Z)(Z)
                                 });
                             }

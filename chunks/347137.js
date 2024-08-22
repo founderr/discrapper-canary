@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(570938),
     u = n(554300),
     _ = n(677277),
-    E = n(285865),
-    h = n(918701),
+    h = n(285865),
+    E = n(918701),
     m = n(471985),
     I = n(702428),
     g = n(341907),
@@ -50,7 +50,7 @@ t.Z = function () {
             currentHomepageCategoryId: p.ZP.getCurrentHomepageCategoryId()
         })),
         R = (0, m.Z)(v.dr.QUEST_HOME_DESKTOP),
-        x = (0, h.OG)(),
+        x = (0, E.OG)(),
         b = (0, o.e7)([S.Z], () => S.Z.getClanDiscoveryCategories(), [], S.j),
         P =
             null == b
@@ -60,7 +60,7 @@ t.Z = function () {
                       icon: O(e.categoryId)
                   })),
         M = (e) => {
-            (0, c.uY)(e, !0), E.Z.closeSidebar(), t && (0, c.AQ)(), (0, h.OG)() && e !== N.Gj.Quests && (0, r.uL)(A.Z5c.GUILD_DISCOVERY), !(0, h.OG)() && e === N.Gj.Quests && (0, g.navigateToQuestHome)(v.dr.DISCOVERY_SIDEBAR, s.j.DISCOVERY_SIDEBAR);
+            (0, c.uY)(e, !0), h.Z.closeSidebar(), t && (0, c.AQ)(), (0, E.OG)() && e !== N.Gj.Quests && (0, r.uL)(A.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === N.Gj.Quests && (0, g.navigateToQuestHome)(v.dr.DISCOVERY_SIDEBAR, s.j.DISCOVERY_SIDEBAR);
         };
     return (
         a.useEffect(() => {

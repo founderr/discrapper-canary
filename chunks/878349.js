@@ -19,20 +19,20 @@ var i = n(735250),
     _ = n(546240),
     f = n(952009);
 function E(e) {
-    let { checked: t, labelText: n, tooltipText: s, canToggle: E, iconAltText: g, onChange: C, tooltipColor: I, className: x, id: T = 'fancybutton-toggle', collapseWhenChecked: N = !0, onClick: v, disabled: S } = e,
+    let { checked: t, labelText: n, tooltipText: s, canToggle: E, iconAltText: C, onChange: g, tooltipColor: I, className: x, id: T = 'fancybutton-toggle', collapseWhenChecked: N = !0, onClick: S, disabled: v } = e,
         Z = (0, r.e7)([h.Z], () => h.Z.useReducedMotion),
         [A, M] = a.useState(!1),
         b = (0, d.ZP)(),
         R = (0, o.wj)(b) || t ? f : _,
         { width: L = 0, ref: j } = (0, u.Z)(),
-        { width: P = 0, ref: O } = (0, u.Z)();
+        { width: O = 0, ref: P } = (0, u.Z)();
     return (0, i.jsxs)(c.TooltipContainer, {
         text: (0, i.jsx)(p.X, {
             textColor: 'always-white',
             tooltipText: s
         }),
         position: 'top',
-        color: null != I ? I : S ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
+        color: null != I ? I : v ? c.Tooltip.Colors.BLACK : c.Tooltip.Colors.BRAND,
         'aria-label': s,
         tooltipClassName: m.tooltip,
         className: m.tooltipContainer,
@@ -43,13 +43,13 @@ function E(e) {
                 onChange: function () {
                     if (E) {
                         let e = !t;
-                        M(!0), null == C || C(e);
+                        M(!0), null == g || g(e);
                     }
-                    'function' == typeof v && v();
+                    'function' == typeof S && S();
                 },
                 id: T,
                 type: 'checkbox',
-                disabled: S
+                disabled: v
             }),
             (0, i.jsxs)('label', {
                 htmlFor: T,
@@ -58,7 +58,7 @@ function E(e) {
                     [m.labelChecked]: t,
                     [m.labelUnchecked]: !t && !E
                 }),
-                style: N ? { width: t ? L : L + P } : void 0,
+                style: N ? { width: t ? L : L + O } : void 0,
                 children: [
                     t
                         ? (0, i.jsx)(c.Shine, {
@@ -69,10 +69,10 @@ function E(e) {
                     (0, i.jsx)('img', {
                         ref: j,
                         src: R,
-                        alt: g
+                        alt: C
                     }),
                     (0, i.jsx)('span', {
-                        ref: O,
+                        ref: P,
                         children: (0, i.jsx)(c.Text, {
                             className: l()(m.burstText, {
                                 [m.visuallyHidden]: t && N,

@@ -1,13 +1,13 @@
 l.d(n, {
     ZP: function () {
-        return H;
+        return B;
     }
 }),
     l(47120);
 var a = l(735250),
-    r = l(470079),
-    i = l(120356),
-    t = l.n(i),
+    i = l(470079),
+    r = l(120356),
+    t = l.n(r),
     s = l(442837),
     d = l(481060),
     o = l(904245),
@@ -20,12 +20,12 @@ var a = l(735250),
     x = l(703656),
     f = l(6025),
     I = l(695346),
-    Z = l(592125),
+    v = l(592125),
     _ = l(984933),
-    v = l(375954),
-    p = l(496675),
-    N = l(451478),
-    j = l(768581),
+    Z = l(375954),
+    N = l(496675),
+    j = l(451478),
+    p = l(768581),
     b = l(526120),
     E = l(689981),
     M = l(825334),
@@ -34,31 +34,31 @@ var a = l(735250),
     T = l(706221),
     R = l(910212),
     P = l(931057);
-function B(e) {
+function k(e) {
     let n,
         l,
-        { firstMedia: r, channelId: i } = e,
-        d = (0, s.e7)([Z.Z], () => Z.Z.getChannel(i)),
+        { firstMedia: i, channelId: r } = e,
+        d = (0, s.e7)([v.Z], () => v.Z.getChannel(r)),
         [o, c] = (0, g.hL)({
-            media: r,
+            media: i,
             channel: d
         }),
         h = (0, g.MC)(c),
-        x = (0, s.e7)([N.Z], () => N.Z.isFocused()),
-        f = (0, m.d$)(r.src),
+        x = (0, s.e7)([j.Z], () => j.Z.isFocused()),
+        f = (0, m.d$)(i.src),
         _ = I.QK.useSetting(),
-        { src: v, width: p, height: j, alt: b } = r;
+        { src: Z, width: N, height: p, alt: b } = i;
     return (
-        j > p ? (l = 72) : (n = 72),
+        p > N ? (l = 72) : (n = 72),
         (0, a.jsxs)('div', {
             className: T.media,
             children: [
                 (0, C.Yi)({
-                    src: v,
+                    src: Z,
                     maxHeight: n,
                     maxWidth: l,
-                    width: p,
-                    height: j,
+                    width: N,
+                    height: p,
                     alt: null != b && o && null != h ? h : b,
                     autoPlay: _,
                     animated: f && !o && x,
@@ -77,15 +77,15 @@ function B(e) {
 }
 function y(e) {
     let { resource: n } = e,
-        l = (0, s.e7)([Z.Z], () => Z.Z.getChannel(n.channelId)),
-        i = (0, s.e7)([v.Z], () => v.Z.getMessages(n.channelId)),
-        u = (0, s.e7)([p.Z], () => p.Z.can(A.Plq.VIEW_CHANNEL, l)),
-        m = i.first(),
+        l = (0, s.e7)([v.Z], () => v.Z.getChannel(n.channelId)),
+        r = (0, s.e7)([Z.Z], () => Z.Z.getMessages(n.channelId)),
+        u = (0, s.e7)([N.Z], () => N.Z.can(A.Plq.VIEW_CHANNEL, l)),
+        m = r.first(),
         g = (0, E.Z)(m),
         C = (0, c.zy)(m, !1),
         x = (null == C ? void 0 : C.length) > 0 ? C[0] : null,
-        I = null != l && null == i.first() && !i.loadingMore && !i.ready && !i.hasFetched && u;
-    r.useEffect(() => {
+        I = null != l && null == r.first() && !r.loadingMore && !r.ready && !r.hasFetched && u;
+    i.useEffect(() => {
         I &&
             o.Z.fetchMessages({
                 channelId: n.channelId,
@@ -94,11 +94,11 @@ function y(e) {
             });
     }, [n.channelId, I]);
     if (null == l || null == l.guild_id) return null;
-    let _ = j.ZP.getResourceChannelIconURL({
+    let _ = p.ZP.getResourceChannelIconURL({
             channelId: l.id,
             icon: n.icon
         }),
-        N = null == n.description || 0 === n.description.length;
+        j = null == n.description || 0 === n.description.length;
     return (0, a.jsxs)(d.Clickable, {
         className: T.row,
         onClick: (e) => {
@@ -120,7 +120,7 @@ function y(e) {
                         color: 'header-primary',
                         children: n.title
                     }),
-                    N &&
+                    j &&
                         null != g &&
                         (0, a.jsx)(d.Text, {
                             className: T.messageContent,
@@ -132,7 +132,7 @@ function y(e) {
                                 channelId: l.id
                             })
                         }),
-                    !N &&
+                    !j &&
                         (0, a.jsx)(d.Text, {
                             className: t()(T.messageContent, R.markup),
                             variant: 'text-sm/normal',
@@ -159,7 +159,7 @@ function y(e) {
                   })
                 : null,
             null == _ && null != x
-                ? (0, a.jsx)(B, {
+                ? (0, a.jsx)(k, {
                       firstMedia: x,
                       channelId: n.channelId
                   })
@@ -167,10 +167,10 @@ function y(e) {
         ]
     });
 }
-function H(e) {
+function B(e) {
     let { guild: n, isNewMember: l } = e,
-        r = (0, M.Z)(n.id);
-    if (0 === r.length)
+        i = (0, M.Z)(n.id);
+    if (0 === i.length)
         return l
             ? null
             : (0, a.jsxs)('div', {
@@ -205,7 +205,7 @@ function H(e) {
                 color: 'header-primary',
                 children: S.Z.Messages.GUILD_HOME_RESOURCES
             }),
-            r.map((e) => (0, a.jsx)(y, { resource: e }, e.channelId))
+            i.map((e) => (0, a.jsx)(y, { resource: e }, e.channelId))
         ]
     });
 }

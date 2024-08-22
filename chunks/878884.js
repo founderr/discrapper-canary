@@ -14,8 +14,8 @@ var i,
     _ = n(594174),
     f = n(979651),
     E = n(938475),
-    g = n(981631),
-    C = n(354459);
+    C = n(981631),
+    g = n(354459);
 let I = new u.Z(),
     x = new u.Z(),
     T = new Set();
@@ -24,10 +24,10 @@ function N(e, t, n) {
             userId: e.id,
             channelId: n
         }),
-        a = (0, E.PH)(i, null != t ? t : g.ME, e.id);
+        a = (0, E.PH)(i, null != t ? t : C.ME, e.id);
     I.set(e.id, a);
     let s = {
-        type: C.fO.USER,
+        type: g.fO.USER,
         user: e,
         id: e.id,
         streamId: null,
@@ -42,13 +42,13 @@ function N(e, t, n) {
     };
     x.set(e.id, s);
 }
-function v(e) {
+function S(e) {
     let t = I.delete(e),
         n = x.delete(e),
         i = T.delete(e);
     return t || n || i;
 }
-function S() {
+function v() {
     var e;
     let t = m.Z.getChannelId();
     if (null == t) return !1;
@@ -71,7 +71,7 @@ function Z() {
 }
 class A extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, _.default, p.Z, m.Z), this.syncWith([_.default], S);
+        this.waitFor(f.Z, _.default, p.Z, m.Z), this.syncWith([_.default], v);
     }
     get desyncedVoiceStatesCount() {
         return I.size();
@@ -102,7 +102,7 @@ class A extends (i = r.ZP.Store) {
         VOICE_CHANNEL_SELECT: Z,
         RTC_CONNECTION_STATE: function (e) {
             let { state: t, context: n } = e;
-            if (n !== o.Yn.DEFAULT || t !== g.hes.DISCONNECTED) return !1;
+            if (n !== o.Yn.DEFAULT || t !== C.hes.DISCONNECTED) return !1;
             Z();
         },
         VOICE_STATE_UPDATES: function (e) {
@@ -112,7 +112,7 @@ class A extends (i = r.ZP.Store) {
                 null != n &&
                 t.reduce((e, t) => {
                     let { userId: i, channelId: a } = t;
-                    return (a === n && !!v(i)) || e;
+                    return (a === n && !!S(i)) || e;
                 }, !1)
             );
         },
@@ -129,6 +129,6 @@ class A extends (i = r.ZP.Store) {
         },
         RTC_CONNECTION_CLIENT_DISCONNECT: function (e) {
             let { userId: t, context: n } = e;
-            return n === o.Yn.DEFAULT && v(t);
+            return n === o.Yn.DEFAULT && S(t);
         }
     }));

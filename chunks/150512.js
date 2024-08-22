@@ -1,12 +1,12 @@
 l.d(n, {
     Z: function () {
-        return j;
+        return p;
     }
 });
 var a = l(735250),
-    r = l(470079),
-    i = l(120356),
-    t = l.n(i),
+    i = l(470079),
+    r = l(120356),
+    t = l.n(r),
     s = l(866442),
     d = l(399606),
     o = l(481060),
@@ -19,17 +19,17 @@ var a = l(735250),
     x = l(721987),
     f = l(502762),
     I = l(430824),
-    Z = l(594174),
+    v = l(594174),
     _ = l(5192),
-    v = l(51144),
-    p = l(228168),
-    N = l(65679);
-function j(e) {
-    let { guildId: n, welcomeMessage: l, className: i } = e,
-        j = (0, d.e7)([I.Z], () => I.Z.getGuild(n)),
+    Z = l(51144),
+    N = l(228168),
+    j = l(65679);
+function p(e) {
+    let { guildId: n, welcomeMessage: l, className: r } = e,
+        p = (0, d.e7)([I.Z], () => I.Z.getGuild(n)),
         b = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
-        E = (0, d.e7)([Z.default], () => Z.default.getUser(null == l ? void 0 : l.authorIds[0])),
-        M = (0, d.e7)([Z.default], () => Z.default.getCurrentUser()),
+        E = (0, d.e7)([v.default], () => v.default.getUser(null == l ? void 0 : l.authorIds[0])),
+        M = (0, d.e7)([v.default], () => v.default.getCurrentUser()),
         A = (0, C.ZP)(null == E ? void 0 : E.id, n),
         { theme: S, primaryColor: T } = (0, x.Z)({
             user: E,
@@ -37,55 +37,55 @@ function j(e) {
         }),
         R = (0, u.ZP)(),
         P = (0, o.useToken)(o.tokens.colors.BACKGROUND_SECONDARY, S).hex(),
-        B = r.useMemo(() => {
+        k = i.useMemo(() => {
             var e;
             return null !== (e = null == l ? void 0 : l.authorIds) && void 0 !== e ? e : [];
         }, [l]);
-    r.useEffect(() => {
-        c.Z.requestMembersById(n, B);
-    }, [n, B]),
-        r.useEffect(() => {
+    i.useEffect(() => {
+        c.Z.requestMembersById(n, k);
+    }, [n, k]),
+        i.useEffect(() => {
             null != E && (0, g.Z)(E.id, E.getAvatarURL(n, 48), { guildId: n });
         }, [E, n]);
-    let y = (0, v._T)(M),
-        H = null != T ? (0, s.br)(T, 1) : P,
-        k = (0, m.$0)(H);
+    let y = (0, Z._T)(M),
+        B = null != T ? (0, s.br)(T, 1) : P,
+        H = (0, m.$0)(B);
     if (null == E || null == M || null == l) return null;
-    let L = null != j && j.ownerId === E.id;
+    let L = null != p && p.ownerId === E.id;
     return (0, a.jsx)('div', {
-        className: t()(N.welcomeMessageContainer, i),
+        className: t()(j.welcomeMessageContainer, r),
         children: (0, a.jsxs)(f.Z, {
-            className: N.welcomeMessageProfileContainer,
+            className: j.welcomeMessageProfileContainer,
             user: E,
             displayProfile: A,
-            profileType: p.y0.CARD,
+            profileType: N.y0.CARD,
             themeOverride: R,
             forceShowPremium: !0,
             children: [
-                (0, a.jsx)('div', { className: N.avatarBackground }),
+                (0, a.jsx)('div', { className: j.avatarBackground }),
                 b
                     ? (0, a.jsx)(o.Avatar, {
                           src: E.getAvatarURL(n, 48),
                           size: o.AvatarSizes.SIZE_48,
-                          className: N.avatar,
+                          className: j.avatar,
                           'aria-label': E.username
                       })
                     : (0, a.jsx)(o.AnimatedAvatar, {
                           src: E.getAvatarURL(n, 48),
                           size: o.AvatarSizes.SIZE_48,
-                          className: N.avatar,
+                          className: j.avatar,
                           'aria-label': E.username
                       }),
                 (0, a.jsx)('div', {
-                    className: N.avatarBorder,
-                    style: { backgroundColor: H }
+                    className: j.avatarBorder,
+                    style: { backgroundColor: B }
                 }),
                 (0, a.jsxs)('div', {
-                    className: N.welcomeMessageContent,
-                    style: { color: k.hex() },
+                    className: j.welcomeMessageContent,
+                    style: { color: H.hex() },
                     children: [
                         (0, a.jsxs)('div', {
-                            className: N.adminUsernameContainer,
+                            className: j.adminUsernameContainer,
                             children: [
                                 (0, a.jsx)(o.Text, {
                                     variant: 'text-sm/semibold',
@@ -96,7 +96,7 @@ function j(e) {
                                     ? (0, a.jsx)(o.CrownIcon, {
                                           size: 'md',
                                           color: 'currentColor',
-                                          className: N.ownerIcon
+                                          className: j.ownerIcon
                                       })
                                     : null
                             ]
@@ -107,13 +107,13 @@ function j(e) {
                             children: (function (e, n) {
                                 let l = e.split(/\[@username\]/g);
                                 return (0, a.jsx)('span', {
-                                    children: l.map((e, i) =>
+                                    children: l.map((e, r) =>
                                         (0, a.jsxs)(
-                                            r.Fragment,
+                                            i.Fragment,
                                             {
                                                 children: [
                                                     e,
-                                                    i < l.length - 1
+                                                    r < l.length - 1
                                                         ? (0, a.jsx)(o.Text, {
                                                               tag: 'span',
                                                               variant: 'text-md/semibold',
@@ -122,7 +122,7 @@ function j(e) {
                                                         : null
                                                 ]
                                             },
-                                            'username-'.concat(i)
+                                            'username-'.concat(r)
                                         )
                                     )
                                 });

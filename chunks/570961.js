@@ -1,12 +1,12 @@
 t.d(n, {
     $y: function () {
-        return G;
+        return A;
     },
     Kk: function () {
-        return m;
+        return T;
     },
     NB: function () {
-        return T;
+        return m;
     },
     en: function () {
         return L;
@@ -15,7 +15,7 @@ t.d(n, {
         return O;
     },
     n_: function () {
-        return A;
+        return h;
     },
     rS: function () {
         return D;
@@ -39,10 +39,10 @@ var s = t(544891),
     _ = t(981631),
     u = t(290511),
     E = t(689938);
-function T() {
+function m() {
     l.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET' });
 }
-function m(e, n, t) {
+function T(e, n, t) {
     S(
         e,
         N.Z.editedOnboardingPrompts.map((e) =>
@@ -70,7 +70,7 @@ function S(e, n) {
         }),
         t)
     ) {
-        let t = n.map((t) => h(e, n, t));
+        let t = n.map((t) => G(e, n, t));
         l.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS',
             errors: t
@@ -104,9 +104,9 @@ async function D(e, n) {
                 type: s.length >= u.fY && t ? u.FN.DROPDOWN : u.FN.MULTIPLE_CHOICE
             };
         }),
-        T = _.filter((e) => e.inOnboarding),
-        m = _.filter((e) => !0 !== e.inOnboarding),
-        O = _.map((n) => h(e, _, n));
+        m = _.filter((e) => e.inOnboarding),
+        T = _.filter((e) => !0 !== e.inOnboarding),
+        O = _.map((n) => G(e, _, n));
     if (O.filter(I.lm).length > 0)
         throw (
             (l.Z.dispatch({
@@ -115,7 +115,7 @@ async function D(e, n) {
             }),
             Error('failed to locally validate prompts'))
         );
-    if (T.length > u.b3)
+    if (m.length > u.b3)
         throw (
             (a.Z.show({
                 title: E.Z.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
@@ -127,10 +127,10 @@ async function D(e, n) {
             }),
             Error('too many prompts in onboarding'))
         );
-    let S = [...T, ...m];
+    let S = [...m, ...T];
     l.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT' });
     try {
-        await A(e.id, { prompts: S.map(u.dr) }),
+        await h(e.id, { prompts: S.map(u.dr) }),
             l.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS',
                 guildId: e.id,
@@ -149,14 +149,14 @@ async function D(e, n) {
         );
     }
 }
-async function G(e, n) {
+async function A(e, n) {
     l.Z.dispatch({
         type: 'GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE',
         guildId: e,
         updates: { enabled: n }
     });
     try {
-        await A(e, { enabled: n });
+        await h(e, { enabled: n });
     } catch (s) {
         var t;
         let { fieldName: e, error: n } = null !== (t = new i.Hx(s).getAnyErrorMessageAndField()) && void 0 !== t ? t : {};
@@ -166,13 +166,13 @@ async function G(e, n) {
         });
     }
 }
-async function A(e, n) {
+async function h(e, n) {
     await s.tn.put({
         url: _.ANM.GUILD_ONBOARDING(e),
         body: n
     });
 }
-function h(e, n, t) {
+function G(e, n, t) {
     let s = { optionErrors: [] },
         l = !1;
     return t.title.length <= 0 && ((s.title = E.Z.Messages.ONBOARDING_PROMPT_TITLE_REQUIRED), (l = !0)), t.options.length <= 0 && ((s.options = E.Z.Messages.ONBOARDING_PROMPT_ANSWER_REQUIRED), (l = !0)), t.inOnboarding && n.filter((e) => e.inOnboarding).length > u.b3 && ((s.config = E.Z.Messages.ONBOARDING_PROMPT_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({ numQuestions: u.b3 })), (l = !0)), (s.optionErrors = t.options.map((s) => L(e, n, t, s))), (l = l || s.optionErrors.some((e) => null != e)) ? s : null;

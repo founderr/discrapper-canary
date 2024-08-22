@@ -1,9 +1,9 @@
 n.d(t, {
     p: function () {
-        return i;
+        return a;
     }
 });
-let i = (0, n(818083).B)({
+let a = (0, n(818083).B)({
     kind: 'user',
     id: '2024-06_amazon_music_activity_shelf_banner',
     label: 'Amazon Music Activity Shelf Promo Banner',

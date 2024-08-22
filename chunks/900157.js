@@ -18,14 +18,14 @@ var i = n(735250),
     _ = n(287746),
     f = n(541716),
     E = n(665149),
-    g = n(910611),
-    C = n(359110),
+    C = n(910611),
+    g = n(359110),
     I = n(592125),
     x = n(703558),
     T = n(430824),
     N = n(979651),
-    v = n(664342),
-    S = n(124368),
+    S = n(664342),
+    v = n(124368),
     Z = n(981631),
     A = n(689938),
     M = n(437996);
@@ -43,14 +43,14 @@ function b(e) {
                     type: 'SIDEBAR_CLOSE',
                     baseChannelId: e.parent_id
                 }),
-                (0, C.ad)(e, { source: S.on.VOICE_AUTO_OPEN }));
+                (0, g.ad)(e, { source: v.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(R);
-    let P = a.useRef(!1);
+    let O = a.useRef(!1);
     if (
         (a.useEffect(() => {
-            if (null == R || P.current) return;
-            P.current = !0;
+            if (null == R || O.current) return;
+            O.current = !0;
             let e = (0, h.K)(I.Z.getChannel(R.id), !0);
             (0, d.yw)(Z.rMx.CHANNEL_OPENED, {
                 ...e,
@@ -62,7 +62,7 @@ function b(e) {
         null == R || null == L)
     )
         return null;
-    let O = (0, i.jsx)(v.Z, {
+    let P = (0, i.jsx)(S.Z, {
         channel: R,
         baseChannelId: s
     });
@@ -73,9 +73,9 @@ function b(e) {
                 draftType: x.d.ChannelMessage
             }),
             (0, i.jsx)(E.ZP, {
-                toolbar: O,
+                toolbar: P,
                 'aria-label': A.Z.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
-                children: (0, g.ud)({
+                children: (0, C.ud)({
                     channel: R,
                     channelName: j,
                     guild: L,
@@ -91,7 +91,7 @@ function b(e) {
                         });
                     },
                     handleClick: function () {
-                        if (null != R) (0, C.Kh)(R.id);
+                        if (null != R) (0, g.Kh)(R.id);
                     }
                 })
             }),

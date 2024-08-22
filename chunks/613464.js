@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return S;
+        return v;
     }
 }),
     n(47120);
@@ -19,21 +19,21 @@ var i = n(735250),
     _ = n(527379),
     f = n(184301),
     E = n(318661),
-    g = n(502762),
-    C = n(271383),
+    C = n(502762),
+    g = n(271383),
     I = n(594174),
     x = n(189357),
     T = n(718617),
     N = n(327250),
-    v = n(662917);
-function S(e) {
-    let { userId: t, guildId: n, onClose: s, className: S, infoPanelClassName: Z, style: A } = e,
+    S = n(662917);
+function v(e) {
+    let { userId: t, guildId: n, onClose: s, className: v, infoPanelClassName: Z, style: A } = e,
         M = (0, x.ms)(n),
         b = (0, r.e7)([I.default], () => I.default.getUser(t), [t]),
-        R = (0, r.e7)([C.ZP], () => C.ZP.getMember(n, t), [n, t]),
+        R = (0, r.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]),
         [L, j] = a.useState(null == b || null == R),
-        P = (0, u.Z)(R),
-        O = a.useRef(null),
+        O = (0, u.Z)(R),
+        P = a.useRef(null),
         { analyticsLocations: y } = (0, m.ZP)(p.Z.GUILD_MEMBER_MOD_VIEW),
         D = (0, E.ZP)(t, n),
         k = (0, d.ZP)();
@@ -41,17 +41,17 @@ function S(e) {
         !M && s();
     }, [M, s]),
     a.useEffect(() => {
-        null != P && null == R && !L && s();
-    }, [L, R, s, P]),
+        null != O && null == R && !L && s();
+    }, [L, R, s, O]),
     a.useEffect(() => {
         null != b && null != R && j(!1);
     }, [b, R]),
     a.useEffect(() => {
         let e = null == R;
         return (
-            !L && e && (O.current = window.setTimeout(s, 500)),
+            !L && e && (P.current = window.setTimeout(s, 500)),
             () => {
-                null != O.current && window.clearTimeout(O.current);
+                null != P.current && window.clearTimeout(P.current);
             }
         );
     }, [L, R, s]),
@@ -72,7 +72,7 @@ function S(e) {
     M)
         ? L || null == b || null == R
             ? (0, i.jsx)('div', {
-                  className: l()(v.sidebarContainer, v.loadingContainer, S),
+                  className: l()(S.sidebarContainer, S.loadingContainer, v),
                   style: A,
                   children: (0, i.jsx)(o.Spinner, {
                       animated: !0,
@@ -82,17 +82,17 @@ function S(e) {
             : (0, i.jsx)(m.Gt, {
                   value: y,
                   children: (0, i.jsx)('div', {
-                      className: l()(v.sidebarContainer, S),
+                      className: l()(S.sidebarContainer, v),
                       style: A,
-                      children: (0, i.jsx)(g.Z, {
+                      children: (0, i.jsx)(C.Z, {
                           user: b,
                           displayProfile: D,
                           profileType: null,
                           themeOverride: k,
                           forceShowPremium: !0,
-                          className: v.profileThemedContainer,
+                          className: S.profileThemedContainer,
                           children: (0, i.jsxs)('div', {
-                              className: v.innerContainer,
+                              className: S.innerContainer,
                               children: [
                                   (0, i.jsx)(N.Z, {
                                       userId: t,

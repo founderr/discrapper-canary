@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return S;
     }
 });
 var i = n(735250),
@@ -18,23 +18,23 @@ var i = n(735250),
     _ = n(352736),
     f = n(937889),
     E = n(739566),
-    g = n(267128),
-    C = n(507418),
+    C = n(267128),
+    g = n(507418),
     I = n(348238),
     x = n(981631),
     T = n(689938);
 let N = a.memo(function (e) {
     var t;
-    let { baseMessage: n, referencedMessage: N, channel: v, compact: S = !1, referencedUsernameProfile: Z, referencedAvatarProfile: A, setPopout: M } = e,
+    let { baseMessage: n, referencedMessage: N, channel: S, compact: v = !1, referencedUsernameProfile: Z, referencedAvatarProfile: A, setPopout: M } = e,
         b = N.state === p.Y.LOADED ? N.message : void 0,
         R = (0, E.Uj)(b),
         L = (0, c.p)(),
         j = (0, u.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
-        P = a.useMemo(() => {
+        O = a.useMemo(() => {
             if (null == b) return null;
             let e = (0, r.Z)(b);
             if (e.type === x.uaV.USER_JOIN) {
-                let t = _.Z.getWelcomeMessageKind(v.guild_id);
+                let t = _.Z.getWelcomeMessageKind(S.guild_id);
                 return (0, l.Rp)(
                     _.Z.getSystemMessageUserJoin(e.id, t).astFormat({
                         username: null != R ? R.nick : e.author.username,
@@ -46,7 +46,7 @@ let N = a.memo(function (e) {
                 return (0, l.Rp)(
                     (0, o.PA)({
                         username: null != R ? R.nick : e.author.username,
-                        guildId: null == v ? void 0 : v.guild_id,
+                        guildId: null == S ? void 0 : S.guild_id,
                         roleSubscriptionData: e.roleSubscriptionData
                     })
                 );
@@ -78,7 +78,7 @@ let N = a.memo(function (e) {
                         allowLinks: !0,
                         shouldFilterKeywords: L
                     },
-                    n = e.isFirstMessageInForumPost(v)
+                    n = e.isFirstMessageInForumPost(S)
                         ? {
                               ...t,
                               noStyleAndInteraction: !0,
@@ -94,11 +94,11 @@ let N = a.memo(function (e) {
                 return (0, f.ZP)(e, n).content;
             }
             return null;
-        }, [b, R, v, j, L]),
-        O = (0, s.e7)([m.Z], () => null != b && m.Z.isBlockedForMessage(b), [b]),
-        y = (0, I.wq)(null == b ? void 0 : b.author.id, v.id),
-        D = (0, I.$3)(n, b, O),
-        k = (0, I.Wl)(b, v, Z, M),
+        }, [b, R, S, j, L]),
+        P = (0, s.e7)([m.Z], () => null != b && m.Z.isBlockedForMessage(b), [b]),
+        y = (0, I.wq)(null == b ? void 0 : b.author.id, S.id),
+        D = (0, I.$3)(n, b, P),
+        k = (0, I.Wl)(b, S, Z, M),
         U = (0, I.rY)(A, M),
         w = a.useCallback(
             () =>
@@ -109,18 +109,18 @@ let N = a.memo(function (e) {
             [M]
         ),
         B = (0, E.Uj)(n);
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(C.Z, {
         repliedAuthor: R,
         baseMessage: n,
-        channel: v,
+        channel: S,
         baseAuthor: B,
         referencedMessage: N,
-        content: P,
-        compact: S,
-        isReplyAuthorBlocked: O,
+        content: O,
+        compact: v,
+        isReplyAuthorBlocked: P,
         showAvatarPopout: A,
         showUsernamePopout: Z,
-        renderPopout: C.Z,
+        renderPopout: g.Z,
         onClickAvatar: U,
         onClickUsername: k,
         onClickReply: D,
@@ -128,7 +128,7 @@ let N = a.memo(function (e) {
         onPopoutRequestClose: w
     });
 });
-function v(e, t, n, a, s) {
+function S(e, t, n, a, s) {
     let { message: l, channel: r, compact: o } = e,
         { referencedUsernameProfile: c, referencedAvatarProfile: u } = n,
         d =

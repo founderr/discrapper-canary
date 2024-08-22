@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return P;
     }
 });
 var i = n(735250),
@@ -18,14 +18,14 @@ var i = n(735250),
     _ = n(984933),
     f = n(496675),
     E = n(594174),
-    g = n(51144),
-    C = n(7782),
+    C = n(51144),
+    g = n(7782),
     I = n(967128),
     x = n(320781),
     T = n(269203),
     N = n(753898),
-    v = n(734386),
-    S = n(184279),
+    S = n(734386),
+    v = n(184279),
     Z = n(438306),
     A = n(544142),
     M = n(128557),
@@ -33,7 +33,7 @@ var i = n(735250),
     R = n(176505),
     L = n(689938),
     j = n(224499);
-function P(e) {
+function O(e) {
     let { canManageRoles: t, channel: n } = e,
         a = t && (0, c.Yk)(n),
         l = (0, s.e7)([_.ZP], () => null != n.guild_id && n === _.ZP.getDefaultChannel(n.guild_id), [n]);
@@ -41,17 +41,17 @@ function P(e) {
     if (n.isForumPost()) return (0, i.jsx)(x.Z, { channel: n });
     if (m.Ec.has(n.type)) return (0, i.jsx)(A.Z, { channel: n });
     else if (l) return (0, i.jsx)(M.Z, { channel: n });
-    else if (a) return (0, i.jsx)(v.Z, { channel: n });
+    else if (a) return (0, i.jsx)(S.Z, { channel: n });
     return (0, i.jsx)(Z.Z, { channel: n });
 }
-function O(e) {
+function P(e) {
     var t;
     let { channel: n, showingBanner: c } = e,
         u = (0, o.ZP)(n),
         { type: m } = n,
         _ = (0, s.e7)([E.default], () => (n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null)),
-        x = g.ZP.useUserTag(_),
-        { canManageRoles: v, canReadMessageHistory: Z } = (0, s.cj)([f.Z], () => ({
+        x = C.ZP.useUserTag(_),
+        { canManageRoles: S, canReadMessageHistory: Z } = (0, s.cj)([f.Z], () => ({
             canManageRoles: f.Z.can(b.Plq.MANAGE_ROLES, n),
             canReadMessageHistory: f.Z.can(b.Plq.READ_MESSAGE_HISTORY, n)
         })),
@@ -64,7 +64,7 @@ function O(e) {
         n.isSystemDM())
     )
         return M
-            ? (0, i.jsx)(S.Z, { channel: n })
+            ? (0, i.jsx)(v.Z, { channel: n })
             : (0, i.jsx)(N.Z, {
                   channel: n,
                   children: L.Z.Messages.SYSTEM_DM_EMPTY_MESSAGE
@@ -81,7 +81,7 @@ function O(e) {
                         children: x
                     }),
                 L.Z.Messages.BEGINNING_DM.format({ username: u }),
-                (0, i.jsx)(C.Z, {
+                (0, i.jsx)(g.Z, {
                     userId: n.getRecipientId(),
                     channel: n,
                     showingBanner: c
@@ -101,9 +101,9 @@ function O(e) {
                     children: L.Z.Messages.BEGINNING_GROUP_DM.format({ name: u })
                 });
     return Z
-        ? (0, i.jsx)(P, {
+        ? (0, i.jsx)(O, {
               channel: n,
-              canManageRoles: v
+              canManageRoles: S
           })
         : (0, i.jsx)(I.ZP, {
               channelId: n.id,

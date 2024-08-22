@@ -20,14 +20,14 @@ var i = n(735250),
     _ = n(541716),
     f = n(752305),
     E = n(893718),
-    g = n(957730),
-    C = n(789407),
+    C = n(957730),
+    g = n(789407),
     I = n(300429),
     x = n(838440),
     T = n(981631),
     N = n(689938),
-    v = n(326290);
-function S(e, t, n) {
+    S = n(326290);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -66,9 +66,9 @@ class A extends a.PureComponent {
     }
     render() {
         let { textValue: e, richValue: t, textFocused: n, contentWarningProps: a } = this.state,
-            { activity: s, analyticsLocations: r, channel: c, activityActionType: h, cooldown: p, application: m, transitionState: f, onClose: g } = this.props,
-            C = p > 0,
-            I = C ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((p + 1000) / 1000) }) : null;
+            { activity: s, analyticsLocations: r, channel: c, activityActionType: h, cooldown: p, application: m, transitionState: f, onClose: C } = this.props,
+            g = p > 0,
+            I = g ? N.Z.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({ seconds: Math.round((p + 1000) / 1000) }) : null;
         return (0, i.jsxs)(o.ModalRoot, {
             size: o.ModalSize.SMALL,
             transitionState: f,
@@ -84,20 +84,20 @@ class A extends a.PureComponent {
                 (0, i.jsxs)(o.ModalContent, {
                     children: [
                         (0, i.jsx)('div', {
-                            className: v.subHeader,
+                            className: S.subHeader,
                             children: N.Z.Messages.MESSAGE_PREVIEW
                         }),
                         (0, i.jsx)(u.Z, {
                             activityActionType: h,
                             activity: s,
-                            className: v.preview,
+                            className: S.preview,
                             application: m,
                             partyId: null != s.party ? s.party.id : null,
                             isPreview: !0,
                             analyticsLocations: r
                         }),
                         (0, i.jsx)('div', {
-                            className: v.subHeader,
+                            className: S.subHeader,
                             children: N.Z.Messages.ADD_A_COMMENT_OPTIONAL
                         }),
                         (0, i.jsx)(o.Popout, {
@@ -119,7 +119,7 @@ class A extends a.PureComponent {
                             },
                             children: () =>
                                 (0, i.jsx)(E.Z, {
-                                    className: v.textArea,
+                                    className: S.textArea,
                                     textValue: e,
                                     richValue: t,
                                     focused: n,
@@ -141,7 +141,7 @@ class A extends a.PureComponent {
                                 (0, i.jsx)('div', {
                                     ...e,
                                     children: (0, i.jsx)(o.Button, {
-                                        disabled: C,
+                                        disabled: g,
                                         onClick: this.handleShare,
                                         children: N.Z.Messages.INVITE_EMBED_SEND_INVITE
                                     })
@@ -150,7 +150,7 @@ class A extends a.PureComponent {
                         (0, i.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.PRIMARY,
-                            onClick: g,
+                            onClick: C,
                             children: N.Z.Messages.CANCEL
                         })
                     ]
@@ -160,12 +160,12 @@ class A extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'state', {
+            v(this, 'state', {
                 ...(0, f.H2)(),
                 textFocused: !0,
                 contentWarningProps: null
             }),
-            S(this, 'trackInvite', (e) => {
+            v(this, 'trackInvite', (e) => {
                 if (null != e && e.ok) {
                     let { activity: t, channel: n, activityActionType: i } = this.props,
                         a = '';
@@ -192,13 +192,13 @@ class A extends a.PureComponent {
                     );
                 }
             }),
-            S(this, 'handleTextChange', (e, t, n) => {
+            v(this, 'handleTextChange', (e, t, n) => {
                 this.setState({
                     textValue: t,
                     richValue: n
                 });
             }),
-            S(this, 'handleShare', () => {
+            v(this, 'handleShare', () => {
                 let { channel: e, activity: t, activityActionType: n, cooldown: i, onClose: a } = this.props,
                     { textValue: s, contentWarningProps: l } = this.state;
                 if (i > 0)
@@ -206,7 +206,7 @@ class A extends a.PureComponent {
                         shouldClear: !1,
                         shouldRefocus: !0
                     });
-                let r = g.ZP.parse(e, s),
+                let r = C.ZP.parse(e, s),
                     o = {
                         activity: t,
                         type: n
@@ -245,6 +245,6 @@ t.default = r.ZP.connectStores([I.Z, m.Z], (e) => {
     let { channel: t, activity: n } = e;
     return {
         cooldown: I.Z.getSlowmodeCooldownGuess(t.id),
-        application: null != n.application_id ? m.Z.getApplication(n.application_id) : C.r9
+        application: null != n.application_id ? m.Z.getApplication(n.application_id) : g.r9
     };
 })(A);

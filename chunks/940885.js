@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return C;
     }
 });
 var i = n(735250);
@@ -19,16 +19,16 @@ var a = n(410030),
     _ = n(772056),
     f = n(689938),
     E = n(409931);
-function g(e) {
+function C(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, s.ZP)(),
-        { context: g, trackUserProfileAction: C } = (0, r.KZ)(),
+        { context: C, trackUserProfileAction: g } = (0, r.KZ)(),
         I = (0, a.ZP)(),
         { mutualFriends: x, isFetching: T } = (0, o.Z)(t.id, !t.bot),
-        { mutualGuilds: N, isFetching: v } = (0, c.Z)(t.id, !0),
-        S = !t.bot && null != x && x.length > 0,
+        { mutualGuilds: N, isFetching: S } = (0, c.Z)(t.id, !0),
+        v = !t.bot && null != x && x.length > 0,
         Z = null != N && N.length > 0;
-    return S || Z
+    return v || Z
         ? (0, i.jsxs)(d.Z.Overlay, {
               className: E.overlay,
               children: [
@@ -36,11 +36,11 @@ function g(e) {
                       (0, i.jsx)(_.Z, {
                           className: E.list,
                           header: f.Z.Messages.MUTUAL_GUILDS_COUNT.format({ count: N.length }),
-                          isLoadingHeader: v,
+                          isLoadingHeader: S,
                           loadingContentsCount: N.length,
                           itemType: _.R.MutualGuildList,
                           onExpand: () =>
-                              C({
+                              g({
                                   action: 'PRESS_SECTION',
                                   section: 'MUTUAL_GUILDS'
                               }),
@@ -59,8 +59,8 @@ function g(e) {
                               );
                           })
                       }),
-                  Z && S && (0, i.jsx)(u.Z, { className: E.divider }),
-                  S &&
+                  Z && v && (0, i.jsx)(u.Z, { className: E.divider }),
+                  v &&
                       (0, i.jsx)(_.Z, {
                           className: E.list,
                           header: f.Z.Messages.MUTUAL_FRIENDS_COUNT.format({ count: x.length }),
@@ -68,7 +68,7 @@ function g(e) {
                           loadingContentsCount: x.length,
                           itemType: _.R.MutualFriendsList,
                           onExpand: () =>
-                              C({
+                              g({
                                   action: 'PRESS_SECTION',
                                   section: 'MUTUAL_FRIENDS'
                               }),
@@ -81,7 +81,7 @@ function g(e) {
                                       status: s,
                                       onSelect: () => {
                                           (0, h.openUserProfileModal)({
-                                              ...g,
+                                              ...C,
                                               userId: a.id,
                                               sourceAnalyticsLocations: n
                                           });

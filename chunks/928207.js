@@ -9,8 +9,8 @@ var a = n(266067),
     d = n(100527),
     u = n(906732),
     _ = n(600164),
-    E = n(984370),
-    h = n(299657),
+    h = n(984370),
+    E = n(299657),
     m = n(594174),
     I = n(981631),
     g = n(474936),
@@ -27,15 +27,15 @@ let S = s.ZP.connectStores([m.default], () => ({ user: m.default.getCurrentUser(
                       children: [
                           (0, i.jsx)(l.Z, {
                               section: I.jXE.NAVIGATION,
-                              children: (0, i.jsxs)(E.Z, {
+                              children: (0, i.jsxs)(h.Z, {
                                   isAuthenticated: n,
                                   className: T.headerBar,
                                   children: [
-                                      (0, i.jsx)(E.Z.Icon, {
+                                      (0, i.jsx)(h.Z.Icon, {
                                           icon: r.NitroWheelIcon,
                                           'aria-hidden': !0
                                       }),
-                                      (0, i.jsx)(E.Z.Title, { children: p.Z.Messages.PREMIUM })
+                                      (0, i.jsx)(h.Z.Title, { children: p.Z.Messages.PREMIUM })
                                   ]
                               })
                           }),
@@ -48,7 +48,7 @@ let S = s.ZP.connectStores([m.default], () => ({ user: m.default.getCurrentUser(
                                             justify: _.Z.Justify.CENTER,
                                             children: (0, i.jsx)(r.Spinner, { className: T.spinner })
                                         })
-                                      : (0, i.jsx)(h.Z, { entrypoint: g.EZ.ApplicationStoreHome })
+                                      : (0, i.jsx)(E.Z, { entrypoint: g.EZ.ApplicationStoreHome })
                           })
                       ]
                   })

@@ -20,30 +20,30 @@ var l = t(120356),
     _ = t(150512),
     u = t(430824),
     E = t(594174),
-    T = t(626135),
-    m = t(999382),
+    m = t(626135),
+    T = t(999382),
     O = t(983135),
     S = t(84658),
     D = t(981631),
-    G = t(689938),
-    A = t(645);
-let h = () => [
+    A = t(689938),
+    h = t(645);
+let G = () => [
         {
             emoji: '\uD83E\uDDD9',
-            emojiDescription: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_1_EMOJI,
-            title: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_1,
+            emojiDescription: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_1_EMOJI,
+            title: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_1,
             selected: !0
         },
         {
             emoji: '\uD83C\uDFA4',
-            emojiDescription: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_2_EMOJI,
-            title: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_2,
+            emojiDescription: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_2_EMOJI,
+            title: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_2,
             selected: !1
         },
         {
             emoji: '\uD83D\uDC40',
-            emojiDescription: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_3_EMOJI,
-            title: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_3,
+            emojiDescription: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_3_EMOJI,
+            title: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_3,
             selected: !1
         }
     ],
@@ -53,9 +53,9 @@ let h = () => [
                 (0, s.jsx)(r.AnnouncementsIcon, {
                     size: 'xs',
                     color: 'currentColor',
-                    className: A.channelIcon
+                    className: h.channelIcon
                 }),
-            channel: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_1,
+            channel: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_1,
             selected: !0
         },
         {
@@ -63,9 +63,9 @@ let h = () => [
                 (0, s.jsx)(r.TextIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: A.channelIcon
+                    className: h.channelIcon
                 }),
-            channel: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_2,
+            channel: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_2,
             selected: !0
         },
         {
@@ -73,9 +73,9 @@ let h = () => [
                 (0, s.jsx)(r.TextIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: A.channelIcon
+                    className: h.channelIcon
                 }),
-            channel: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_3,
+            channel: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_3,
             selected: !1
         },
         {
@@ -83,47 +83,47 @@ let h = () => [
                 (0, s.jsx)(r.ForumIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: A.channelIcon
+                    className: h.channelIcon
                 }),
-            channel: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_4,
+            channel: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_4,
             selected: !0
         }
     ];
 function g(e) {
     let { isTooltip: n = !1 } = e,
-        t = h();
+        t = G();
     n && t.pop();
     let l = n
             ? (0, s.jsx)(r.Text, {
                   variant: 'text-sm/semibold',
                   color: 'header-primary',
-                  children: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_TITLE_TOOLTIP
+                  children: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_TITLE_TOOLTIP
               })
             : (0, s.jsx)(r.Heading, {
                   variant: 'heading-md/semibold',
-                  children: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_TITLE
+                  children: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_TITLE
               }),
         i = n
             ? (0, s.jsx)(r.Text, {
                   variant: 'text-xxs/normal',
-                  children: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_SUBTITLE_TOOLTIP.format()
+                  children: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_SUBTITLE_TOOLTIP.format()
               })
             : (0, s.jsx)(r.Text, {
                   variant: 'text-xs/normal',
-                  children: G.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_SUBTITLE.format()
+                  children: A.Z.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_SUBTITLE.format()
               });
     return (0, s.jsxs)('div', {
-        className: a()(A.upsellPreview, A.spacingLarge, { [A.tooltip]: n }),
+        className: a()(h.upsellPreview, h.spacingLarge, { [h.tooltip]: n }),
         children: [
             l,
             (0, s.jsx)('div', {
-                className: A.spacingSmall,
+                className: h.spacingSmall,
                 children: t.map((e, n) => {
                     let { emoji: t, emojiDescription: l, title: i, selected: o } = e;
                     return (0, s.jsxs)(
                         'div',
                         {
-                            className: a()(A.previewListItem, { [A.selected]: o }),
+                            className: a()(h.previewListItem, { [h.selected]: o }),
                             children: [
                                 (0, s.jsx)('span', {
                                     role: 'img',
@@ -137,11 +137,11 @@ function g(e) {
                                 }),
                                 o &&
                                     (0, s.jsx)('div', {
-                                        className: A.checkboxCircle,
+                                        className: h.checkboxCircle,
                                         children: (0, s.jsx)(r.CheckmarkLargeIcon, {
                                             size: 'md',
                                             color: 'currentColor',
-                                            className: A.checkmark
+                                            className: h.checkmark
                                         })
                                     })
                             ]
@@ -157,72 +157,72 @@ function g(e) {
 function f() {
     let e = [
         {
-            message: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_HARRY_POTTER,
+            message: A.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_HARRY_POTTER,
             profilePic: 'https://cdn.discordapp.com/avatars/302407541994946561/bb3fd59e6c2ea0a86a2bdabf5dff7856.webp?size=80',
-            adminTitle: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_HARRY_POTTER
+            adminTitle: A.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_HARRY_POTTER
         },
         {
-            message: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_DESIGN_BUDDIES,
+            message: A.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_DESIGN_BUDDIES,
             profilePic: 'https://cdn.discordapp.com/avatars/433499434098229249/b6d433308debef625537e33df04023e5.webp?size=80',
-            adminTitle: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_DESIGN_BUDDIES
+            adminTitle: A.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_DESIGN_BUDDIES
         },
         {
-            message: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_VALORANT,
+            message: A.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_VALORANT,
             profilePic: 'https://cdn.discordapp.com/avatars/555460020494663691/599bfcdb0b0700b415f4c695890f272c.webp?size=80',
-            adminTitle: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_VALORANT
+            adminTitle: A.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_VALORANT
         },
         {
-            message: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_DUNGEON_SLIMES,
+            message: A.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_DUNGEON_SLIMES,
             profilePic: 'https://cdn.discordapp.com/guilds/936317138904440892/users/125526751064489984/avatars/f35679626acac9943e102533fc170d41.webp?size=80',
-            adminTitle: G.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_DUNGEON_SLIMES
+            adminTitle: A.Z.Messages.GUILD_ONBOARDING_TESTIMONIAL_ADMIN_DUNGEON_SLIMES
         }
     ];
     return (0, s.jsx)(d.i, { testimonials: e });
 }
 function x() {
-    let e = (0, i.e7)([m.Z], () => m.Z.getGuildId()),
+    let e = (0, i.e7)([T.Z], () => T.Z.getGuildId()),
         n = (0, i.e7)([u.Z], () => u.Z.getGuild(e)),
         t = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
         { homeSettingsEnabled: l } = (0, I.kZ)(null != e ? e : D.lds);
     return null == e || null == n || null == t
         ? null
         : (0, s.jsxs)('div', {
-              className: A.upsellContainer,
+              className: h.upsellContainer,
               children: [
                   (0, s.jsxs)('div', {
-                      className: A.upsellHeader,
+                      className: h.upsellHeader,
                       children: [
                           (0, s.jsxs)('div', {
-                              className: A.islands,
+                              className: h.islands,
                               children: [
                                   (0, s.jsx)(c.xm, {}),
                                   (0, s.jsx)(c._I, {
                                       guild: n,
-                                      mainIslandClassName: A.mainIsland,
-                                      balloonDogClassName: A.balloonDog
+                                      mainIslandClassName: h.mainIsland,
+                                      balloonDogClassName: h.balloonDog
                                   }),
                                   (0, s.jsx)(c.B0, {})
                               ]
                           }),
                           (0, s.jsxs)('div', {
-                              className: A.upsellHeaderText,
+                              className: h.upsellHeaderText,
                               children: [
                                   (0, s.jsx)(r.Heading, {
                                       variant: 'heading-xl/semibold',
-                                      children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_TITLE
+                                      children: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_TITLE
                                   }),
                                   (0, s.jsx)(r.Text, {
                                       variant: 'text-md/normal',
-                                      children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_SUBTITLE
+                                      children: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_SUBTITLE
                                   })
                               ]
                           }),
                           (0, s.jsx)('div', {
-                              className: A.upsellButtons,
+                              className: h.upsellButtons,
                               children: (0, s.jsx)(r.Button, {
                                   onClick: function () {
                                       null != e &&
-                                          (T.default.track(D.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+                                          (m.default.track(D.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
                                               ...(0, o.hH)(e),
                                               step: S.PG[S.PG.LANDING],
                                               back: !1,
@@ -232,7 +232,7 @@ function x() {
                                   },
                                   color: r.Button.Colors.BRAND,
                                   disabled: !1,
-                                  children: G.Z.Messages.CHECK_IT_OUT
+                                  children: A.Z.Messages.CHECK_IT_OUT
                               })
                           })
                       ]
@@ -241,22 +241,22 @@ function x() {
                   (0, s.jsx)(f, {}),
                   (0, s.jsx)(r.FormDivider, {}),
                   (0, s.jsxs)('div', {
-                      className: A.valuesContainer,
+                      className: h.valuesContainer,
                       children: [
                           (0, s.jsxs)('div', {
-                              className: A.valueContainer,
+                              className: h.valueContainer,
                               children: [
                                   (0, s.jsx)(g, {}),
                                   (0, s.jsxs)('div', {
-                                      className: A.valueText,
+                                      className: h.valueText,
                                       children: [
                                           (0, s.jsx)(r.Heading, {
                                               variant: 'heading-md/semibold',
-                                              children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_CHANNELS_TITLE
+                                              children: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_CHANNELS_TITLE
                                           }),
                                           (0, s.jsx)(r.Text, {
                                               variant: 'text-sm/normal',
-                                              children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_CHANNELS_SUBTITLE
+                                              children: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_CHANNELS_SUBTITLE
                                           })
                                       ]
                                   })
@@ -264,41 +264,41 @@ function x() {
                           }),
                           l &&
                               (0, s.jsxs)('div', {
-                                  className: A.valueContainer,
+                                  className: h.valueContainer,
                                   children: [
                                       (0, s.jsxs)('div', {
-                                          className: A.valueText,
+                                          className: h.valueText,
                                           children: [
                                               (0, s.jsx)(r.Heading, {
                                                   variant: 'heading-md/semibold',
-                                                  children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TITLE
+                                                  children: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TITLE
                                               }),
                                               (0, s.jsx)(r.Text, {
                                                   variant: 'text-sm/normal',
-                                                  children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_SUBTITLE
+                                                  children: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_SUBTITLE
                                               })
                                           ]
                                       }),
                                       (0, s.jsxs)('div', {
-                                          className: a()(A.upsellPreview, A.spacingLarge),
+                                          className: a()(h.upsellPreview, h.spacingLarge),
                                           children: [
                                               (0, s.jsx)(_.Z, {
                                                   guildId: e,
                                                   welcomeMessage: {
                                                       authorIds: [t.id],
-                                                      message: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_WELCOME_MESSAGE
+                                                      message: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_WELCOME_MESSAGE
                                                   }
                                               }),
                                               (0, s.jsx)(N.k, {
-                                                  title: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_TITLE,
-                                                  subtitle: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_CHANNEL_NAME,
+                                                  title: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_TITLE,
+                                                  subtitle: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_CHANNEL_NAME,
                                                   completed: !0,
                                                   Icon: r.TextIcon,
                                                   variant: 'static'
                                               }),
                                               (0, s.jsx)(N.k, {
-                                                  title: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_TITLE,
-                                                  subtitle: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_CHANNEL_NAME,
+                                                  title: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_TITLE,
+                                                  subtitle: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_CHANNEL_NAME,
                                                   completed: !0,
                                                   Icon: r.TextIcon,
                                                   variant: 'static'
@@ -308,19 +308,19 @@ function x() {
                                   ]
                               }),
                           (0, s.jsxs)('div', {
-                              className: A.valueContainer,
+                              className: h.valueContainer,
                               children: [
                                   (0, s.jsx)('div', {
-                                      className: a()(A.upsellPreview, A.spacingLarge),
+                                      className: a()(h.upsellPreview, h.spacingLarge),
                                       children: L().map((e, n) => {
                                           let { channelIcon: t, channel: l, selected: i } = e;
                                           return (0, s.jsxs)(
                                               'div',
                                               {
-                                                  className: a()(A.previewListItem, A.spaceBetween, { [A.selected]: i }),
+                                                  className: a()(h.previewListItem, h.spaceBetween, { [h.selected]: i }),
                                                   children: [
                                                       (0, s.jsxs)('div', {
-                                                          className: A.channel,
+                                                          className: h.channel,
                                                           children: [
                                                               t(),
                                                               (0, s.jsx)(r.Text, {
@@ -331,13 +331,13 @@ function x() {
                                                           ]
                                                       }),
                                                       (0, s.jsx)('div', {
-                                                          className: a()(A.checkbox, { [A.selected]: i }),
+                                                          className: a()(h.checkbox, { [h.selected]: i }),
                                                           children:
                                                               i &&
                                                               (0, s.jsx)(r.CheckmarkLargeIcon, {
                                                                   size: 'md',
                                                                   color: 'currentColor',
-                                                                  className: A.checkmark
+                                                                  className: h.checkmark
                                                               })
                                                       })
                                                   ]
@@ -347,15 +347,15 @@ function x() {
                                       })
                                   }),
                                   (0, s.jsxs)('div', {
-                                      className: A.valueText,
+                                      className: h.valueText,
                                       children: [
                                           (0, s.jsx)(r.Heading, {
                                               variant: 'heading-md/semibold',
-                                              children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_ONBOARDING_TITLE
+                                              children: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_ONBOARDING_TITLE
                                           }),
                                           (0, s.jsx)(r.Text, {
                                               variant: 'text-sm/normal',
-                                              children: G.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_ONBOARDING_SUBTITLE
+                                              children: A.Z.Messages.GUILD_ONBOARDING_SETUP_LANDING_ONBOARDING_SUBTITLE
                                           })
                                       ]
                                   })

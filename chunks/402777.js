@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return P;
     }
 }),
     n(47120);
@@ -19,14 +19,14 @@ var i = n(735250),
     _ = n(428785),
     f = n(78675),
     E = n(113557),
-    g = n(169979),
-    C = n(119096),
+    C = n(169979),
+    g = n(119096),
     I = n(502762),
     x = n(256059),
     T = n(437758),
     N = n(544989),
-    v = n(481932),
-    S = n(272510),
+    S = n(481932),
+    v = n(272510),
     Z = n(171368),
     A = n(926150),
     M = n(940885),
@@ -34,9 +34,9 @@ var i = n(735250),
     R = n(228168),
     L = n(981631),
     j = n(689938),
-    P = n(317986);
-function O(e) {
-    let { user: t, currentUser: n, channel: O } = e,
+    O = n(317986);
+function P(e) {
+    let { user: t, currentUser: n, channel: P } = e,
         y = __OVERLAY__,
         D = (0, m.ZP)(t.id),
         k = (0, o.ZP)(),
@@ -48,7 +48,7 @@ function O(e) {
         w = (0, h.ZB)({
             layout: U ? 'SIMPLIFIED_DM_PANEL' : 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE',
             userId: t.id,
-            channelId: O.id
+            channelId: P.id
         }),
         { analyticsLocations: B } = (0, u.ZP)(c.Z.PROFILE_PANEL),
         H = a.useRef(null),
@@ -78,42 +78,42 @@ function O(e) {
                 displayProfile: D,
                 profileType: R.y0.PANEL,
                 themeOverride: k,
-                className: P.container,
+                className: O.container,
                 children: [
-                    null != q && (0, i.jsx)('div', { className: P.backdrop }),
+                    null != q && (0, i.jsx)('div', { className: O.backdrop }),
                     (0, i.jsxs)(s.u2, {
                         children: [
                             (0, i.jsxs)(N.Z, {
                                 profileType: R.y0.PANEL,
                                 children: [
-                                    (0, i.jsx)(v.Z, {
+                                    (0, i.jsx)(S.Z, {
                                         user: t,
                                         profileType: R.y0.PANEL
                                     }),
-                                    t.bot ? (0, i.jsx)(T.Z, { user: t }) : (0, i.jsx)(S.Z, { user: t })
+                                    t.bot ? (0, i.jsx)(T.Z, { user: t }) : (0, i.jsx)(v.Z, { user: t })
                                 ]
                             }),
                             (0, i.jsxs)('header', {
-                                className: P.header,
+                                className: O.header,
                                 children: [
                                     (0, i.jsx)(f.Z, {
                                         user: t,
                                         displayProfile: D,
                                         profileType: R.y0.PANEL,
                                         animateOnHover: !G,
-                                        className: P.banner
+                                        className: O.banner
                                     }),
-                                    (0, i.jsx)(C.Z, {
+                                    (0, i.jsx)(g.Z, {
                                         isReply: Y,
                                         sent: W,
                                         shown: V,
-                                        className: P.toast
+                                        className: O.toast
                                     }),
                                     (0, i.jsx)(E.Z, {
                                         location: 'SimplifiedProfilePanel',
                                         user: t,
                                         displayProfile: D,
-                                        channelId: O.id,
+                                        channelId: P.id,
                                         profileType: R.y0.PANEL,
                                         isInteractionSource: Q === R.n_.AVATAR || Q === R.n_.STATUS,
                                         onOpenProfile: y ? void 0 : ee,
@@ -123,10 +123,10 @@ function O(e) {
                                         setIsReplyInteraction: K,
                                         showReplyPopout: q === R.P.REPLY && Q === R.n_.AVATAR
                                     }),
-                                    (0, i.jsx)(g.Z, {
+                                    (0, i.jsx)(C.Z, {
                                         location: 'SimplifiedProfilePanel',
                                         user: t,
-                                        channelId: O.id,
+                                        channelId: P.id,
                                         profileType: R.y0.PANEL,
                                         isInteractionSource: Q === R.n_.STATUS,
                                         onInteraction: $,
@@ -142,7 +142,7 @@ function O(e) {
                                 user: t,
                                 currentUser: n,
                                 displayProfile: D,
-                                channel: O,
+                                channel: P,
                                 isHovering: G,
                                 onOpenProfile: y ? void 0 : ee
                             }),
@@ -155,12 +155,12 @@ function O(e) {
                     }),
                     !y &&
                         (0, i.jsx)('footer', {
-                            className: P.footer,
+                            className: O.footer,
                             children: (0, i.jsx)(l.Button, {
                                 fullWidth: !0,
                                 size: l.Button.Sizes.LARGE,
                                 look: l.Button.Looks.BLANK,
-                                color: P.footerButtonColor,
+                                color: O.footerButtonColor,
                                 onClick: () => {
                                     ee(),
                                         (0, p.pQ)({

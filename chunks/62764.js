@@ -19,14 +19,14 @@ var i = n(735250),
     _ = n(443877),
     f = n(60174),
     E = n(216337),
-    g = n(920888),
-    C = n(287151),
+    C = n(920888),
+    g = n(287151),
     I = n(569471),
     x = n(346479),
     T = n(592125),
     N = n(934415),
-    v = n(456269),
-    S = n(109590),
+    S = n(456269),
+    v = n(109590),
     Z = n(228392),
     A = n(981631),
     M = n(689938),
@@ -34,16 +34,16 @@ var i = n(735250),
     R = n(952527);
 function L(e) {
     let { postId: t, isFirstMessage: n, isLastItem: s = !1, parentChannelId: L } = e,
-        { ref: j, width: P } = (0, u.Z)(),
-        [O, y] = a.useState(3),
+        { ref: j, width: O } = (0, u.Z)(),
+        [P, y] = a.useState(3),
         [D, k] = a.useState(!n),
         [U, w] = (0, d.Z)(!1, 2000),
         B = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
-        { firstMessage: H } = (0, S.cl)(B),
+        { firstMessage: H } = (0, v.cl)(B),
         G = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)),
         { disableReactionUpdates: V, disableReactionCreates: F, isLurking: W, isGuest: z, isPendingMember: Y } = (0, _.Z)(B),
         K = (0, o.e7)([T.Z], () => T.Z.getChannel(L)),
-        q = (0, v.Bs)(K),
+        q = (0, S.Bs)(K),
         X = (0, o.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         Q = a.useCallback(
             (e) => {
@@ -70,8 +70,8 @@ function L(e) {
     let [J, $] = a.useState(!0);
     if (
         (a.useEffect(() => {
-            if (null != P) y(Math.floor((P - 280) / 58)), $(!1);
-        }, [P]),
+            if (null != O) y(Math.floor((O - 280) / 58)), $(!1);
+        }, [O]),
         null == B || null == H)
     )
         return null;
@@ -102,7 +102,7 @@ function L(e) {
                                 null != q &&
                                 (0, i.jsx)('div', {
                                     className: R.reactions,
-                                    children: (0, i.jsx)(C.le, {
+                                    children: (0, i.jsx)(g.le, {
                                         message: H,
                                         readOnly: !1,
                                         useChatFontScaling: !1,
@@ -118,7 +118,7 @@ function L(e) {
                                         me_burst: !1
                                     })
                                 }),
-                            (0, i.jsx)(g.Z, {
+                            (0, i.jsx)(C.Z, {
                                 message: H,
                                 channel: B,
                                 disableReactionCreates: !0,
@@ -126,7 +126,7 @@ function L(e) {
                                 isLurking: W,
                                 isGuest: z,
                                 isPendingMember: Y,
-                                maxReactions: O,
+                                maxReactions: P,
                                 className: b.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,

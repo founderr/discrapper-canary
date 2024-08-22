@@ -13,17 +13,17 @@ var i = n(735250),
     _ = n(594174),
     f = n(626135),
     E = n(906605),
-    g = n(574176),
-    C = n(833858),
+    C = n(574176),
+    g = n(833858),
     I = n(866071),
     x = n(223135),
     T = n(625938),
     N = n(981631),
-    v = n(689938),
-    S = n(803565);
+    S = n(689938),
+    v = n(803565);
 t.Z = (e) => {
     let { hangStatusActivity: t, userId: s, channel: Z, previewIsOpen: A } = e,
-        { enableHangStatus: M } = g.n.useExperiment({
+        { enableHangStatus: M } = C.n.useExperiment({
             guildId: Z.guild_id,
             location: 'HangStatusPopout'
         }),
@@ -31,9 +31,9 @@ t.Z = (e) => {
         R = (0, r.e7)([_.default], () => _.default.getUser(s)),
         L = (0, r.e7)([m.Z], () => m.Z.getChannelId() === Z.id),
         j = (0, r.e7)([p.Z], () => p.Z.can(N.Plq.CONNECT, Z)),
-        P = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, Z),
-        O = (0, r.e7)([h.ZP], () => (null != Z.guild_id && null != R ? h.ZP.getMember(Z.guild_id, s) : null)),
-        y = a.useMemo(() => (null != R ? (0, u.SG)(void 0, O, R, { size: 40 }) : void 0), [O, R]);
+        O = (null == t ? void 0 : t.emoji) == null || (0, I.K)(t.emoji, Z),
+        P = (0, r.e7)([h.ZP], () => (null != Z.guild_id && null != R ? h.ZP.getMember(Z.guild_id, s) : null)),
+        y = a.useMemo(() => (null != R ? (0, u.SG)(void 0, P, R, { size: 40 }) : void 0), [P, R]);
     return (a.useEffect(() => {
         (0, E.UP)();
     }, []),
@@ -52,7 +52,7 @@ t.Z = (e) => {
     M && null != R)
         ? b === s
             ? (0, i.jsx)('div', {
-                  className: l()(S.popoutWrapper, { [S.mounted]: A }),
+                  className: l()(v.popoutWrapper, { [v.mounted]: A }),
                   children: (0, i.jsx)(T.y, {
                       currentStatus: t,
                       channel: Z
@@ -61,46 +61,46 @@ t.Z = (e) => {
             : null == t
               ? null
               : (0, i.jsx)('div', {
-                    className: l()(S.popoutWrapper, { [S.mounted]: A }),
+                    className: l()(v.popoutWrapper, { [v.mounted]: A }),
                     children: (0, i.jsxs)('div', {
-                        className: S.popout,
+                        className: v.popout,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: S.contentContainer,
+                                className: v.contentContainer,
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: S.statusGroup,
+                                        className: v.statusGroup,
                                         children: [
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-xs/medium',
                                                 color: 'text-muted',
-                                                children: v.Z.Messages.STATUS_LEAD_IN_JUST
+                                                children: S.Z.Messages.STATUS_LEAD_IN_JUST
                                             }),
                                             (0, i.jsx)(o.Text, {
                                                 variant: 'text-sm/semibold',
                                                 color: 'text-normal',
-                                                className: S.statusText,
-                                                children: (0, C.O8)(t)
+                                                className: v.statusText,
+                                                children: (0, g.O8)(t)
                                             })
                                         ]
                                     }),
                                     (0, i.jsxs)('div', {
-                                        className: S.iconGroup,
+                                        className: v.iconGroup,
                                         children: [
                                             (0, i.jsx)(x.Z, {
-                                                className: S.statusIcon,
+                                                className: v.statusIcon,
                                                 hangStatusActivity: t
                                             }),
                                             (0, i.jsxs)('div', {
-                                                className: S.avatarWrapper,
+                                                className: v.avatarWrapper,
                                                 children: [
                                                     (0, i.jsx)(o.Avatar, {
-                                                        className: S.avatar,
+                                                        className: v.avatar,
                                                         size: o.AvatarSizes.SIZE_40,
                                                         src: y,
                                                         'aria-hidden': !0
                                                     }),
-                                                    (0, i.jsx)('div', { className: S.outline })
+                                                    (0, i.jsx)('div', { className: v.outline })
                                                 ]
                                             })
                                         ]
@@ -109,7 +109,7 @@ t.Z = (e) => {
                             }),
                             !L && j
                                 ? (0, i.jsx)(o.Button, {
-                                      className: S.cta,
+                                      className: v.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           !L &&
@@ -121,12 +121,12 @@ t.Z = (e) => {
                                                   channel_id: Z.id
                                               }));
                                       },
-                                      children: v.Z.Messages.CUSTOM_HANG_STATUS_CTA
+                                      children: S.Z.Messages.CUSTOM_HANG_STATUS_CTA
                                   })
                                 : null,
-                            L && P
+                            L && O
                                 ? (0, i.jsx)(o.Button, {
-                                      className: S.cta,
+                                      className: v.cta,
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           let e = t.state;
@@ -147,7 +147,7 @@ t.Z = (e) => {
                                                   media_session_id: m.Z.getMediaSessionId()
                                               });
                                       },
-                                      children: v.Z.Messages.CUSTOM_HANGS_STATUS_COPY_CTA
+                                      children: S.Z.Messages.CUSTOM_HANGS_STATUS_COPY_CTA
                                   })
                                 : null
                         ]

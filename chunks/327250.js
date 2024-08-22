@@ -19,19 +19,19 @@ var a = n(120356),
     _ = n(271383),
     f = n(430824),
     E = n(496675),
-    g = n(158776),
-    C = n(885110),
+    C = n(158776),
+    g = n(885110),
     I = n(594174),
     x = n(572004),
     T = n(5192),
     N = n(51144),
-    v = n(981631),
-    S = n(689938),
+    S = n(981631),
+    v = n(689938),
     Z = n(181861);
 function A(e) {
     let { user: t, guildId: n, onClose: a } = e,
         s = t.id,
-        o = (0, l.e7)([C.Z, g.Z, m.default], () => (s === m.default.getId() ? C.Z.getStatus() : g.Z.getStatus(s, n)), [s, n]);
+        o = (0, l.e7)([g.Z, C.Z, m.default], () => (s === m.default.getId() ? g.Z.getStatus() : C.Z.getStatus(s, n)), [s, n]);
     return (0, i.jsxs)('div', {
         className: Z.topRow,
         children: [
@@ -96,14 +96,14 @@ function b(e) {
     let { user: t, member: a, guildId: s } = e,
         _ = (0, l.e7)([f.Z], () => f.Z.getGuild(s)),
         {
-            canKickUser: g,
-            canBanUser: C,
+            canKickUser: C,
+            canBanUser: g,
             canModerateMembers: T
         } = (0, l.cj)(
             [E.Z, I.default, f.Z],
             () => ({
-                canKickUser: null != _ && E.Z.canManageUser(v.Plq.KICK_MEMBERS, t, _),
-                canBanUser: null != _ && E.Z.canManageUser(v.Plq.BAN_MEMBERS, t, _),
+                canKickUser: null != _ && E.Z.canManageUser(S.Plq.KICK_MEMBERS, t, _),
+                canBanUser: null != _ && E.Z.canManageUser(S.Plq.BAN_MEMBERS, t, _),
                 canModerateMembers: null != _ && (0, h.F)(_.id, t.id, [I.default, f.Z, E.Z])
             }),
             [t, _]
@@ -121,7 +121,7 @@ function b(e) {
         children: [
             (0, i.jsxs)(M, {
                 disabled: L,
-                'aria-label': S.Z.Messages.SEND_DM,
+                'aria-label': v.Z.Messages.SEND_DM,
                 onClick: () => {
                     o.Z.openPrivateChannel(t.id);
                 },
@@ -135,13 +135,13 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: S.Z.Messages.SEND_DM
+                        children: v.Z.Messages.SEND_DM
                     })
                 ]
             }),
             (0, i.jsxs)(M, {
-                disabled: !g,
-                'aria-label': S.Z.Messages.KICK,
+                disabled: !C,
+                'aria-label': v.Z.Messages.KICK,
                 onClick: () => {
                     (0, r.openModalLazy)(async () => {
                         let { default: e } = await n.e('5454').then(n.bind(n, 854360));
@@ -164,13 +164,13 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: S.Z.Messages.KICK
+                        children: v.Z.Messages.KICK
                     })
                 ]
             }),
             (0, i.jsxs)(M, {
-                disabled: !C,
-                'aria-label': S.Z.Messages.BAN,
+                disabled: !g,
+                'aria-label': v.Z.Messages.BAN,
                 onClick: () => {
                     (0, r.openModalLazy)(async () => {
                         let { default: e } = await n.e('43350').then(n.bind(n, 98746));
@@ -193,13 +193,13 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: S.Z.Messages.BAN
+                        children: v.Z.Messages.BAN
                     })
                 ]
             }),
             (0, i.jsxs)(M, {
                 disabled: !T,
-                'aria-label': S.Z.Messages.TIMEOUT_USER,
+                'aria-label': v.Z.Messages.TIMEOUT_USER,
                 onClick: () => {
                     N ? (0, d.q)(a.guildId, a.userId, A) : (0, d.z)(a.guildId, a.userId, A);
                 },
@@ -213,12 +213,12 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: N ? S.Z.Messages.REMOVE : S.Z.Messages.TIMEOUT_USER
+                        children: N ? v.Z.Messages.REMOVE : v.Z.Messages.TIMEOUT_USER
                     })
                 ]
             }),
             (0, i.jsxs)(M, {
-                'aria-label': S.Z.Messages.COPY_ID,
+                'aria-label': v.Z.Messages.COPY_ID,
                 onClick: () => {
                     R(p.jQ.COPY_ID), (0, x.JG)(t.id);
                 },
@@ -233,7 +233,7 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: S.Z.Messages.COPY_ID
+                        children: v.Z.Messages.COPY_ID
                     })
                 ]
             })

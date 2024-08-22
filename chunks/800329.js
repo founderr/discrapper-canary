@@ -30,15 +30,15 @@ function h(e) {
             width: 0,
             height: 0
         }),
-        { width: E, height: g } = _,
-        C = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0,
+        { width: E, height: C } = _,
+        g = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0,
         I = E - 16,
-        x = g - (p + m),
+        x = C - (p + m),
         {
             tileStyle: T,
             tileWidth: N,
-            rows: v,
-            columns: S
+            rows: S,
+            columns: v
         } = a.useMemo(
             () =>
                 (function (e, t, n) {
@@ -81,20 +81,20 @@ function h(e) {
                         rows: i,
                         columns: a
                     };
-                })(C, I, x),
-            [C, I, x]
+                })(g, I, x),
+            [g, I, x]
         ),
-        Z = S + 1,
+        Z = v + 1,
         A = Z * N + (Z - 1) * 8 <= E,
         M = Math.floor(N / c) + 8,
-        b = Math.max(0, x - M * v) / 2;
+        b = Math.max(0, x - M * S) / 2;
     return (0, i.jsx)(r.Z, {
         fade: !0,
         className: n,
         listPadding: [p + b, 0, m + b - 8, 8],
         renderRow: function (e) {
             var t;
-            let n = e * S;
+            let n = e * v;
             return (0, i.jsx)(
                 'div',
                 {
@@ -102,7 +102,7 @@ function h(e) {
                     children:
                         null == s
                             ? void 0
-                            : null === (t = s.slice(n, n + S)) || void 0 === t
+                            : null === (t = s.slice(n, n + v)) || void 0 === t
                               ? void 0
                               : t.map((e, t) => {
                                     var a;
@@ -113,8 +113,8 @@ function h(e) {
                                             style: T,
                                             className: l()(o.tile, {
                                                 [o.padColumn]: A,
-                                                [o.noVerticalMargin]: s >= (v - 1) * S,
-                                                [o.noHorizontalMargin]: (s + 1) % S == 0 || s === C - 1
+                                                [o.noVerticalMargin]: s >= (S - 1) * v,
+                                                [o.noHorizontalMargin]: (s + 1) % v == 0 || s === g - 1
                                             }),
                                             children: (0, i.jsx)('div', {
                                                 className: o.tileSizer,
@@ -128,8 +128,8 @@ function h(e) {
                 e
             );
         },
-        rowCount: v,
-        rowCountBySection: [v],
+        rowCount: S,
+        rowCountBySection: [S],
         rowHeight: M,
         onResize: f
     });

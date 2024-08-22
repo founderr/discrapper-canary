@@ -18,8 +18,8 @@ function p(e) {
     let { guildId: n, groupListingId: p, location: m, relevantSubscriptionListingIds: _ } = e,
         f = (0, c.f)('useTrackRoleSubscriptionUpsellAnalytics'),
         { activeSubscription: E } = (0, d.Z)(p),
-        g = null != E,
-        C = (0, a.Wu)(
+        C = null != E,
+        g = (0, a.Wu)(
             [u.Z],
             () =>
                 (null != _ ? _ : []).filter((e) => {
@@ -33,16 +33,16 @@ function p(e) {
     i.useEffect(() => {
         f &&
             null != p &&
-            null != C &&
+            null != g &&
             !x.current &&
             ((x.current = !0),
             o.default.track(h.rMx.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
                 role_subscription_group_listing_id: p,
-                role_subscription_listing_ids: C,
-                is_premium_member: g,
+                role_subscription_listing_ids: g,
+                is_premium_member: C,
                 location_stack: I,
                 location: m,
                 ...(0, s.hH)(n)
             }));
-    }, [n, p, f, m, C, g, I]);
+    }, [n, p, f, m, g, C, I]);
 }

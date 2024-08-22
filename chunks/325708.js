@@ -53,7 +53,7 @@ function E(e) {
                     return 'homeSidebarWidth';
             }
         })(t),
-        [g, C] = l.useState(p.ZP[E]),
+        [C, g] = l.useState(p.ZP[E]),
         I = l.useCallback(
             (e) => {
                 d.ZP.updatedUnsyncedSettings({ [E]: e });
@@ -61,16 +61,16 @@ function E(e) {
             [E]
         ),
         x = (0, m.W)({ maxWidth: n }),
-        T = (0, c.clamp)(g, m.C, n),
+        T = (0, c.clamp)(C, m.C, n),
         N = x ? T : T + u.Z.modules.chat.RESIZE_HANDLE_WIDTH;
     l.useEffect(() => {
         null == i || i(T, x);
     }, [T, i, x]);
-    let v = null != r ? r : l.Fragment;
+    let S = null != r ? r : l.Fragment;
     return (0, s.jsxs)(s.Fragment, {
         children: [
             !x && (0, s.jsx)('div', { style: { minWidth: N } }),
-            (0, s.jsx)(v, {
+            (0, s.jsx)(S, {
                 children: (0, s.jsxs)('div', {
                     className: _.chatLayerWrapper,
                     children: [
@@ -85,7 +85,7 @@ function E(e) {
                             (0, s.jsx)(f, {
                                 maxWidth: n,
                                 resizableNode: h,
-                                onResize: C,
+                                onResize: g,
                                 onResizeEnd: I
                             }),
                         (0, s.jsx)('div', {

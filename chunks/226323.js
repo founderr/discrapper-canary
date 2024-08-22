@@ -15,8 +15,8 @@ var i = n(735250),
     d = n(586902),
     u = n(512384),
     _ = n(184301),
-    E = n(103575),
-    h = n(314897),
+    h = n(103575),
+    E = n(314897),
     m = n(131951),
     I = n(51144),
     g = n(524484),
@@ -52,15 +52,15 @@ let S = { offset: 2 },
     };
 function C(e) {
     var t, a;
-    let { channel: s, user: h, nick: C, mute: N, deaf: A, serverMute: v, serverDeaf: Z } = e,
-        L = (0, l.e7)([m.Z], () => m.Z.isLocalMute(h.id)),
+    let { channel: s, user: E, nick: C, mute: N, deaf: A, serverMute: v, serverDeaf: Z } = e,
+        L = (0, l.e7)([m.Z], () => m.Z.isLocalMute(E.id)),
         O = (0, d.Z)({
-            userId: h.id,
+            userId: E.id,
             checkSoundSharing: !0
         }),
         R = null !== (t = s.getGuildId()) && void 0 !== t ? t : void 0,
-        x = h.getAvatarURL(s.guild_id, 24),
-        b = null != C ? C : I.ZP.getName(h),
+        x = E.getAvatarURL(s.guild_id, 24),
+        b = null != C ? C : I.ZP.getName(E),
         {
             icon: P,
             colorize: M,
@@ -96,7 +96,7 @@ function C(e) {
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
-                          user: h,
+                          user: E,
                           guildId: R,
                           channel: s,
                           showMediaItems: !0
@@ -107,22 +107,22 @@ function C(e) {
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
-                          user: h,
+                          user: E,
                           showMediaItems: !0
                       });
               });
     }
     return (0, i.jsx)(o.Popout, {
         preload: () =>
-            (0, _.Z)(h.id, h.getAvatarURL(R, 80), {
+            (0, _.Z)(E.id, E.getAvatarURL(R, 80), {
                 guildId: R,
                 channelId: s.id
             }),
         position: 'top',
         renderPopout: (e) =>
-            (0, i.jsx)(E.Z, {
+            (0, i.jsx)(h.Z, {
                 location: 'RTCConnectionVoiceUsers',
-                userId: h.id,
+                userId: E.id,
                 guildId: R,
                 channelId: s.id,
                 ...e
@@ -173,7 +173,7 @@ function N(e) {
             }),
             focusProps: S
         }),
-        E = (0, l.e7)([h.default], () => h.default.getId(), []),
+        h = (0, l.e7)([E.default], () => E.default.getId(), []),
         [m, I] = (function (e, t) {
             let n = [];
             for (let i of e) {
@@ -183,7 +183,7 @@ function N(e) {
                 }
             }
             return [n, !1];
-        })(t, E),
+        })(t, h),
         g = I && c ? t : m;
     return g.length <= 0
         ? null
@@ -197,7 +197,7 @@ function N(e) {
                   children: [
                       g.map((e) => {
                           let { user: t, nick: a, voiceState: s } = e;
-                          return t.id !== E
+                          return t.id !== h
                               ? (0, i.jsx)(
                                     C,
                                     {

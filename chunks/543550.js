@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(963202),
     u = n(353093),
     _ = n(207796),
-    E = n(497189),
-    h = n(490610),
+    h = n(497189),
+    E = n(490610),
     m = n(981631),
     I = n(689938),
     g = n(145745);
@@ -51,14 +51,14 @@ function T() {
                               e !== _.hz.NONE && (0, i.jsx)('div', { className: g.backgroundImageBlur }),
                               (0, i.jsx)('div', {
                                   className: g.backgroundImageContent,
-                                  children: (0, i.jsx)(E.Z, {
+                                  children: (0, i.jsx)(h.Z, {
                                       eligibleGuilds: n,
                                       eligibleGuildsIncludingConverted: t
                                   })
                               })
                           ]
                       }),
-                      (0, i.jsx)(h.Z, {
+                      (0, i.jsx)(E.Z, {
                           title: I.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
                           className: e === _.hz.NONE ? g.genericPreviewList : void 0
                       })

@@ -20,14 +20,14 @@ var i = n(735250),
     _ = n(243778),
     f = n(488131),
     E = n(375954),
-    g = n(626135),
-    C = n(585483),
+    C = n(626135),
+    g = n(585483),
     I = n(403182),
     x = n(127654),
     T = n(752305),
     N = n(951211),
-    v = n(981631),
-    S = n(921944),
+    S = n(981631),
+    v = n(921944),
     Z = n(489887),
     A = n(689938),
     M = n(383985);
@@ -56,7 +56,7 @@ function L() {
     return (
         a.useEffect(
             () => () => {
-                n === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: S.L.TAKE_ACTION });
+                n === r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, p.EW)(r.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: v.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -75,10 +75,10 @@ function L() {
     );
 }
 function j(e) {
-    let { channel: t, options: l, onFileUpload: c, onClose: m, onSelect: _, draftType: E, editorTextContent: j, setValue: P, openClips: O } = e,
+    let { channel: t, options: l, onFileUpload: c, onClose: m, onSelect: _, draftType: E, editorTextContent: j, setValue: O, openClips: P } = e,
         { analyticsLocations: y } = (0, h.ZP)();
     a.useEffect(() => {
-        g.default.track(v.rMx.OPEN_POPOUT, {
+        C.default.track(S.rMx.OPEN_POPOUT, {
             type: 'Send Attachment',
             channel_id: t.id,
             guild_id: t.guild_id
@@ -88,13 +88,13 @@ function j(e) {
         (0, f.R6)(t, void 0, 'Plus Button');
     }
     function k() {
-        g.default.track(v.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), P('/', (0, T.JM)('/'));
+        C.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O('/', (0, T.JM)('/'));
     }
     function U() {
-        O();
+        P();
     }
     function w() {
-        (0, p.EW)(r.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: S.L.TAKE_ACTION }),
+        (0, p.EW)(r.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: v.L.TAKE_ACTION }),
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
@@ -108,7 +108,7 @@ function j(e) {
             );
     }
     function B() {
-        g.default.track(v.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        C.default.track(S.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
@@ -117,10 +117,10 @@ function j(e) {
                 channel: t,
                 guildId: t.guild_id,
                 locationObject: {
-                    page: t.isPrivate() ? v.ZY5.DM_CHANNEL : v.ZY5.GUILD_CHANNEL,
-                    section: v.jXE.CHANNEL_TEXT_AREA,
-                    object: v.qAy.CONTEXT_MENU_ITEM,
-                    objectType: v.Qqv.ACTIVITY
+                    page: t.isPrivate() ? S.ZY5.DM_CHANNEL : S.ZY5.GUILD_CHANNEL,
+                    section: S.jXE.CHANNEL_TEXT_AREA,
+                    object: S.qAy.CONTEXT_MENU_ITEM,
+                    objectType: S.Qqv.ACTIVITY
                 },
                 openInPopout: !1,
                 enableSelectedTextChannelInvite: !0,
@@ -133,7 +133,7 @@ function j(e) {
             n = 'txt',
             i = '',
             a = j.match(R);
-        null != a && ((i = a[1]), (n = a[2]), (e = a[3]), (i += a[4])), (0, x.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), C.S.dispatchToLastSubscribed(v.CkL.CLEAR_TEXT), '' !== i && C.S.dispatchToLastSubscribed(v.CkL.INSERT_TEXT, { plainText: i });
+        null != a && ((i = a[1]), (n = a[2]), (e = a[3]), (i += a[4])), (0, x.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), g.S.dispatchToLastSubscribed(S.CkL.CLEAR_TEXT), '' !== i && g.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, { plainText: i });
     }
     return (0, i.jsx)(o.Menu, {
         onSelect: _,
@@ -215,12 +215,12 @@ function j(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (g.default.track(v.rMx.OPEN_MODAL, {
+                                    void (C.default.track(S.rMx.OPEN_MODAL, {
                                         type: 'Send Join Invite',
                                         application_id: n.application_id,
-                                        location: v.jXE.CHANNEL_TEXT_AREA
+                                        location: S.jXE.CHANNEL_TEXT_AREA
                                     }),
-                                    b(n, t, v.mFx.JOIN, y))
+                                    b(n, t, S.mFx.JOIN, y))
                                 );
                             }
                         },
@@ -236,11 +236,11 @@ function j(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (g.default.track(v.rMx.OPEN_MODAL, {
+                                    void (C.default.track(S.rMx.OPEN_MODAL, {
                                         type: 'Send Listen Invite',
-                                        location: v.jXE.CHANNEL_TEXT_AREA
+                                        location: S.jXE.CHANNEL_TEXT_AREA
                                     }),
-                                    b(n, t, v.mFx.LISTEN, y))
+                                    b(n, t, S.mFx.LISTEN, y))
                                 );
                             }
                         },
@@ -256,11 +256,11 @@ function j(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (g.default.track(v.rMx.OPEN_MODAL, {
+                                    void (C.default.track(S.rMx.OPEN_MODAL, {
                                         type: 'Send Watch Invite',
-                                        location: v.jXE.CHANNEL_TEXT_AREA
+                                        location: S.jXE.CHANNEL_TEXT_AREA
                                     }),
-                                    b(n, t, v.mFx.WATCH, y))
+                                    b(n, t, S.mFx.WATCH, y))
                                 );
                             }
                         },

@@ -20,14 +20,14 @@ var a = n(120356),
     _ = n(925329),
     f = n(554747),
     E = n(854698),
-    g = n(897669),
-    C = n(665149),
+    C = n(897669),
+    g = n(665149),
     I = n(984370),
     x = n(910611),
     T = n(454585),
     N = n(134483),
-    v = n(210975),
-    S = n(809244),
+    S = n(210975),
+    v = n(809244),
     Z = n(618158),
     A = n(792125),
     M = n(358221),
@@ -35,8 +35,8 @@ var a = n(120356),
     R = n(887012),
     L = n(613548),
     j = n(221888),
-    P = n(339340),
-    O = n(354459),
+    O = n(339340),
+    P = n(354459),
     y = n(981631),
     D = n(231338),
     k = n(689938),
@@ -59,7 +59,7 @@ function B(e) {
 }
 function H(e) {
     let { user: t, channel: n, stream: a, color: s } = e,
-        l = (0, S.Z)(n, t, a);
+        l = (0, v.Z)(n, t, a);
     return null == t || null == a
         ? null
         : (0, i.jsxs)(i.Fragment, {
@@ -86,11 +86,11 @@ function G(e) {
         o = (0, f.qY)(s.id),
         c = null != o ? (0, E.DK)(o) : null,
         d = null != o;
-    if ((null == a ? void 0 : a.type) === O.fO.ACTIVITY)
+    if ((null == a ? void 0 : a.type) === P.fO.ACTIVITY)
         null != n &&
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(C.ZP.Divider, { className: U.divider }),
+                    (0, i.jsx)(g.ZP.Divider, { className: U.divider }),
                     (0, i.jsx)(_.Z, {
                         game: n,
                         className: U.activityIcon
@@ -108,12 +108,12 @@ function G(e) {
                         })
                 ]
             }));
-    else if ((null == a ? void 0 : a.type) === O.fO.STREAM) {
+    else if ((null == a ? void 0 : a.type) === P.fO.STREAM) {
         let e = a.user,
             n = a.stream;
         t = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(C.ZP.Divider, { className: U.divider }),
+                (0, i.jsx)(g.ZP.Divider, { className: U.divider }),
                 (0, i.jsx)(H, {
                     user: e,
                     channel: s,
@@ -129,7 +129,7 @@ function G(e) {
         });
     } else
         d &&
-            (t = (0, i.jsx)(g.Z, {
+            (t = (0, i.jsx)(C.Z, {
                 guildEvent: o,
                 recurrenceId: c
             }));
@@ -149,8 +149,8 @@ function V(e) {
             [t.id]
         ),
         E = (0, p.ZP)(t),
-        g = (0, m.KS)(t),
-        [S] = (0, d.Z)((null == f ? void 0 : f.type) === O.fO.ACTIVITY ? [f.id] : []),
+        C = (0, m.KS)(t),
+        [v] = (0, d.Z)((null == f ? void 0 : f.type) === P.fO.ACTIVITY ? [f.id] : []),
         Z = k.Z.Messages.VOICE_CHANNEL;
     t.isDM() ? (Z = k.Z.Messages.DM) : t.isGroupDM() && (Z = k.Z.Messages.GROUP_DM);
     let R = (0, l.e7)([h.Z], () => h.Z.getChannelStatus(t)),
@@ -195,17 +195,17 @@ function V(e) {
                         ...n
                     });
             },
-            { modalKey: P.VOICE_CHANNEL_STATUS_MODAL_KEY }
+            { modalKey: O.VOICE_CHANNEL_STATUS_MODAL_KEY }
         );
     }
-    let F = (0, v.m$)({
+    let F = (0, S.m$)({
         channelId: t.id,
         location: 'ChannelCallHeader'
     });
     return (0, i.jsxs)('div', {
         className: U.subtitleContainer,
         children: [
-            (0, i.jsxs)(C.ZP, {
+            (0, i.jsxs)(g.ZP, {
                 onDoubleClick: I.O,
                 transparent: !0,
                 className: (0, A.Q)(D.BR.DARK),
@@ -219,14 +219,14 @@ function V(e) {
                     exitFullScreen: _
                 }),
                 children: [
-                    null != g
-                        ? (0, i.jsx)(C.ZP.Icon, {
-                              icon: g,
+                    null != C
+                        ? (0, i.jsx)(g.ZP.Icon, {
+                              icon: C,
                               disabled: !0,
                               'aria-label': Z
                           })
                         : null,
-                    (0, i.jsx)(C.ZP.Title, {
+                    (0, i.jsx)(g.ZP.Title, {
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
                                 E,
@@ -250,7 +250,7 @@ function V(e) {
                         guild: a
                     }),
                     (0, i.jsx)(G, {
-                        focusedApplication: S,
+                        focusedApplication: v,
                         focusedParticipant: f,
                         channel: t
                     })

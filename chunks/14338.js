@@ -20,8 +20,8 @@ function f(e) {
     let { channel: t, speaker: s, className: p } = e,
         f = (0, u.bp)(),
         { reducedMotion: E } = a.useContext(r.AccessibilityPreferencesContext),
-        g = (0, c.Z)({ userId: s.id }),
-        C = null != s.member ? (0, m.CA)(s.member) : null,
+        C = (0, c.Z)({ userId: s.id }),
+        g = null != s.member ? (0, m.CA)(s.member) : null,
         I = (e) => {
             (0, o.jW)(
                 e,
@@ -70,11 +70,11 @@ function f(e) {
                         },
                         onContextMenu: I,
                         children: (0, i.jsx)(r.Avatar, {
-                            src: null != C ? C : s.user.getAvatarURL(t.guild_id, 24),
+                            src: null != g ? g : s.user.getAvatarURL(t.guild_id, 24),
                             size: r.AvatarSizes.SIZE_24,
                             className: l()(_.avatar, p),
                             'aria-label': s.userNick,
-                            isSpeaking: g && !E.enabled
+                            isSpeaking: C && !E.enabled
                         })
                     })
             })

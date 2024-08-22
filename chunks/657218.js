@@ -19,14 +19,14 @@ var i = n(735250),
     _ = n(906732),
     f = n(541716),
     E = n(752305),
-    g = n(893718),
-    C = n(303628),
+    C = n(893718),
+    g = n(303628),
     I = n(313201),
     x = n(967128),
     T = n(665149),
     N = n(294218),
-    v = n(913663),
-    S = n(268350),
+    S = n(913663),
+    v = n(268350),
     Z = n(695346),
     A = n(592125),
     M = n(703558),
@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(496675),
     L = n(117530),
     j = n(459273),
-    P = n(838440),
-    O = n(127654),
+    O = n(838440),
+    P = n(127654),
     y = n(241309),
     D = n(928477),
     k = n(456077),
@@ -122,7 +122,7 @@ function z(e) {
                 updateThreadSettings: s
             };
         })(t, n),
-        { textAreaState: g, setTextAreaState: C } = (function (e, t) {
+        { textAreaState: C, setTextAreaState: g } = (function (e, t) {
             let [n, i] = a.useState((0, E.H2)());
             return (
                 a.useEffect(() => {
@@ -169,7 +169,7 @@ function z(e) {
                 submit: a.useCallback(
                     async (e, a, s) => {
                         var r, o, u;
-                        null == e && (e = l.textValue), (e = e.trim()), (null == a || 0 === a.length) && (a = null === (r = v.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == s || 0 === s.length) && (s = L.Z.getUploads(t.id, M.d.FirstThreadMessage));
+                        null == e && (e = l.textValue), (e = e.trim()), (null == a || 0 === a.length) && (a = null === (r = S.Z.getStickerPreview(t.id, F.drafts.type)) || void 0 === r ? void 0 : r.map((e) => e.id)), (null == s || 0 === s.length) && (s = L.Z.getUploads(t.id, M.d.FirstThreadMessage));
                         let p = null !== (o = i.name) && void 0 !== o ? o : '',
                             m = null == n && 0 === p.length,
                             _ = '' === e && (null == a || 0 === a.length) && 0 === s.length;
@@ -179,7 +179,7 @@ function z(e) {
                                 shouldRefocus: !0
                             };
                         if (null == n) {
-                            let { valid: n } = await (0, P.v)({
+                            let { valid: n } = await (0, O.v)({
                                 content: e,
                                 stickers: a,
                                 uploads: s,
@@ -204,7 +204,7 @@ function z(e) {
                             );
                         }
                         return (
-                            (0, S.qB)(t.id, F.drafts.type),
+                            (0, v.qB)(t.id, F.drafts.type),
                             {
                                 shouldClear: !0,
                                 shouldRefocus: !1
@@ -219,7 +219,7 @@ function z(e) {
             parentMessageId: n,
             threadSettings: m,
             privateThreadMode: I,
-            textAreaState: g,
+            textAreaState: C,
             location: s
         }),
         A = (0, D.oD)(m, I) ? o.ThreadLockIcon : o.ThreadIcon;
@@ -277,8 +277,8 @@ function z(e) {
                         children: [
                             (0, i.jsx)(q, {
                                 parentChannel: t,
-                                textAreaState: g,
-                                setTextAreaState: C,
+                                textAreaState: C,
+                                setTextAreaState: g,
                                 submit: Z,
                                 error: N
                             }),
@@ -401,7 +401,7 @@ function q(e) {
         T = (0, y.Op)(h, { content: n.textValue });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(C.Z, {
+            (0, i.jsx)(g.Z, {
                 channelId: t.id,
                 type: F,
                 canAttachFiles: x
@@ -410,7 +410,7 @@ function q(e) {
                 className: G.starterMessageError,
                 children: (0, i.jsx)(o.InputError, { error: T })
             }),
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(C.Z, {
                 type: F,
                 channel: t,
                 placeholder: H.Z.Messages.FORM_THREAD_STARTER_MESSAGE_PLACEHOLDER,
@@ -423,7 +423,7 @@ function q(e) {
                 onBlur: f,
                 onChange: E,
                 onSubmit: I,
-                promptToUpload: O.d
+                promptToUpload: P.d
             })
         ]
     });

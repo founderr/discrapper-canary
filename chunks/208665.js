@@ -11,25 +11,25 @@ var s,
     _ = t(981631),
     u = t(290511);
 let E = !1,
-    T = null,
-    m = [],
+    m = null,
+    T = [],
     O = !1,
     S = [];
 function D() {
     (function () {
-        (E = !1), (T = null), (S = []), (O = !1);
+        (E = !1), (m = null), (S = []), (O = !1);
     })(),
-        null != (T = N.Z.getGuildId()) && N.Z.getSection() === _.pNK.ONBOARDING && ((m = I.Z.getOnboardingPrompts(T)), (O = I.Z.isAdvancedMode(T)));
+        null != (m = N.Z.getGuildId()) && N.Z.getSection() === _.pNK.ONBOARDING && ((T = I.Z.getOnboardingPrompts(m)), (O = I.Z.isAdvancedMode(m)));
 }
-class G extends (i = c.ZP.Store) {
+class A extends (i = c.ZP.Store) {
     initialize() {
         this.waitFor(N.Z, I.Z);
     }
     hasChanges() {
-        return null != T && !o().isEqual(I.Z.getOnboardingPrompts(T), m);
+        return null != m && !o().isEqual(I.Z.getOnboardingPrompts(m), T);
     }
     get guildId() {
-        return T;
+        return m;
     }
     get submitting() {
         return E;
@@ -38,14 +38,14 @@ class G extends (i = c.ZP.Store) {
         return S;
     }
     get editedOnboardingPrompts() {
-        return m;
+        return T;
     }
     get advancedMode() {
         return O;
     }
 }
 (a = 'GuildSettingsOnboardingPromptsStore'),
-    (l = 'displayName') in (s = G)
+    (l = 'displayName') in (s = A)
         ? Object.defineProperty(s, l, {
               value: a,
               enumerable: !0,
@@ -53,7 +53,7 @@ class G extends (i = c.ZP.Store) {
               writable: !0
           })
         : (s[l] = a),
-    (n.Z = new G(d.Z, {
+    (n.Z = new A(d.Z, {
         GUILD_SETTINGS_INIT: D,
         GUILD_SETTINGS_SET_SECTION: D,
         GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: D,
@@ -66,7 +66,7 @@ class G extends (i = c.ZP.Store) {
         },
         GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
             let { prompts: n } = e;
-            m = n;
+            T = n;
         },
         GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
             (E = !0), (S = []);

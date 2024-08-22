@@ -19,14 +19,14 @@ var i = n(735250),
     _ = n(906732),
     f = n(703656),
     E = n(210887),
-    g = n(390322),
-    C = n(626135),
+    C = n(390322),
+    g = n(626135),
     I = n(348600),
     x = n(566620),
     T = n(520599),
     N = n(127255),
-    v = n(5200),
-    S = n(558317),
+    S = n(5200),
+    v = n(558317),
     Z = n(403404),
     A = n(701488),
     M = n(981631),
@@ -34,8 +34,8 @@ var i = n(735250),
     R = n(57241),
     L = n(587952),
     j = n(736733),
-    P = n(932463);
-let O = 'vc-activities-'.concat((0, o.Z)()),
+    O = n(932463);
+let P = 'vc-activities-'.concat((0, o.Z)()),
     y = a.forwardRef(function (e, t) {
         let { channel: n, isHovered: s, closePopout: o, onMouseEnter: y, onMouseLeave: D, onClick: k, className: U } = e,
             { enabled: w } = I.Z.useExperiment({ location: '8009ca_3' }),
@@ -44,7 +44,7 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
             G = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
             { id: V, guild_id: F } = n;
         a.useEffect(() => {
-            C.default.track(M.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
+            g.default.track(M.rMx.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
                 channel_id: V,
                 guild_id: F
             });
@@ -80,7 +80,7 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
             J = a.useCallback(
                 (e) => {
                     y(),
-                        C.default.track(M.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
+                        g.default.track(M.rMx.ACTIVITIES_MINI_SHELF_HOVERED, {
                             channel_id: n.id,
                             guild_id: n.getGuildId()
                         });
@@ -108,7 +108,7 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
                         children: [
                             (0, i.jsx)('img', {
                                 alt: b.Z.Messages.EMBEDDED_ACTIVITIES_AMAZON_MUSIC_PROMO_BANNER_ALT,
-                                src: P,
+                                src: O,
                                 className: R.poster
                             }),
                             (0, i.jsx)('div', { className: R.posterDivider })
@@ -117,17 +117,17 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
                   : null;
         return (0, i.jsx)(_.Gt, {
             value: z,
-            children: (0, i.jsx)(g.Z, {
+            children: (0, i.jsx)(C.Z, {
                 children: (0, i.jsxs)(u.Dialog, {
                     ref: t,
-                    'aria-labelledby': O,
+                    'aria-labelledby': P,
                     className: U,
                     children: [
                         (0, i.jsx)(u.HeadingLevel, {
                             forceLevel: 2,
                             children: (0, i.jsx)(u.HiddenVisually, {
                                 children: (0, i.jsx)(u.H, {
-                                    id: O,
+                                    id: P,
                                     children: b.Z.Messages.EMBEDDED_ACTIVITIES_MINI_SHELF_TITLE
                                 })
                             })
@@ -182,14 +182,14 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
                                     children: [
                                         X.map((e) =>
                                             (0, i.jsx)(
-                                                v.Y,
+                                                S.Y,
                                                 {
                                                     channel: n,
                                                     activityItem: e,
                                                     onClick: () => {
                                                         o(), k();
                                                     },
-                                                    aspectRatio: v.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
+                                                    aspectRatio: S.Y.AspectRatio.THIRTEEN_BY_ELEVEN,
                                                     animatedDivClass: R.activitySuggestion
                                                 },
                                                 e.application.id
@@ -199,7 +199,7 @@ let O = 'vc-activities-'.concat((0, o.Z)()),
                                             className: l()(R.wumpusRocketOuterContainer, { [R.wumpusReducedMotion]: G }),
                                             children: (0, i.jsx)('div', {
                                                 className: R.wumpusRocketInnerContainer,
-                                                children: (0, i.jsx)(S.Z, { className: R.wumpusRocket })
+                                                children: (0, i.jsx)(v.Z, { className: R.wumpusRocket })
                                             })
                                         })
                                     ]

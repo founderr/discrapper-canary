@@ -1,9 +1,9 @@
 n.d(t, {
     $s: function () {
-        return h;
+        return E;
     },
     Cg: function () {
-        return E;
+        return h;
     },
     XB: function () {
         return u;
@@ -85,7 +85,7 @@ async function _(e) {
         recommendationId: 'static:'.concat(s)
     });
 }
-async function E(e) {
+async function h(e) {
     let t = l.Z.getSearchResult(e);
     if ('loaded' === t.status) return t;
     let n = a().v3(JSON.stringify(e));
@@ -123,7 +123,7 @@ async function E(e) {
         };
     }
 }
-async function h(e, t) {
+async function E(e, t) {
     try {
         let n = (
                 await s.tn.post({

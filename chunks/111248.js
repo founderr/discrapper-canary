@@ -26,23 +26,23 @@ function m(e) {
                 }, [])
             ];
         })(),
-        g = a.useRef(null),
-        C = null == m.getGuildId() ? 70 : 50;
+        C = a.useRef(null),
+        g = null == m.getGuildId() ? 70 : 50;
     return (
         a.useLayoutEffect(() => {
             var e;
-            null === (e = g.current) || void 0 === e || e.ensureIsInPosition();
+            null === (e = C.current) || void 0 === e || e.ensureIsInPosition();
         }, [_.length]),
         (0, i.jsx)('div', {
             className: d.container,
             children: (0, i.jsx)(o._, {
                 position: f,
                 id: 0,
-                ref: g,
+                ref: C,
                 onMove: (e, t) => E(t),
                 maxX: t,
                 maxY: s,
-                edgeOffsetTop: C,
+                edgeOffsetTop: g,
                 edgeOffsetBottom: 70,
                 edgeOffsetLeft: 16,
                 edgeOffsetRight: 16,

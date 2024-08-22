@@ -2576,7 +2576,7 @@ let oI = 10,
     oR = 524288000,
     oA = (e) => '||'.concat(e, '||'),
     oT = /^\|\|([\s\S]+?)\|\|/,
-    od = /^<id:(home|browse|customize|guide)>/,
+    od = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
     oN = /^\d{17,19}$/;
 ((rK = et || (et = {})).MESSAGE = 'MESSAGE'), (rK.MESSAGE_GROUP_BLOCKED = 'MESSAGE_GROUP_BLOCKED'), (rK.MESSAGE_GROUP_SPAMMER = 'MESSAGE_GROUP_SPAMMER'), (rK.THREAD_STARTER_MESSAGE = 'THREAD_STARTER_MESSAGE'), (rK.DIVIDER = 'DIVIDER'), (rK.JUMP_TARGET = 'JUMP_TARGET'), (rK.FORUM_POST_ACTION_BAR = 'FORUM_POST_ACTION_BAR'), (rK.MESSAGE_GROUP = 'MESSAGE_GROUP'), (rK.DIVIDER_TIME_STAMP = 'DIVIDER_TIME_STAMP'), (rK.DIVIDER_NEW_MESSAGES = 'DIVIDER_NEW_MESSAGES'), ((rk = er || (er = {})).VIDEO = 'video'), (rk.VOICE = 'voice'), ((rV = en || (en = {}))[(rV.PLAYING = 0)] = 'PLAYING'), (rV[(rV.STREAMING = 1)] = 'STREAMING'), (rV[(rV.LISTENING = 2)] = 'LISTENING'), (rV[(rV.WATCHING = 3)] = 'WATCHING'), (rV[(rV.CUSTOM_STATUS = 4)] = 'CUSTOM_STATUS'), (rV[(rV.COMPETING = 5)] = 'COMPETING'), (rV[(rV.HANG_STATUS = 6)] = 'HANG_STATUS'), ((rx = ea || (ea = {})).GAME = 'game'), (rx.USER = 'user'), (rx.GROUP = 'group'), ((rF = eo || (eo = {})).LOADING = 'LOADING'), (rF.COMPLETE = 'COMPLETE'), (rF.FAILED = 'FAILED'), ((rW = ei || (ei = {})).FEATURED = 'featured'), (rW.GAMES_YOU_PLAY = 'gamesYouPlay'), (rW.SEARCH = 'search'), (rW.MISC = 'misc');
 let op = 128,

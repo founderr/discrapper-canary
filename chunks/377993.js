@@ -20,14 +20,14 @@ var i = n(735250),
     _ = n(556084),
     f = n(184301),
     E = n(103575),
-    g = n(158776),
-    C = n(699516),
+    C = n(158776),
+    g = n(699516),
     I = n(111583),
     x = n(594174),
     T = n(626135),
     N = n(768581),
-    v = n(585483),
-    S = n(233870),
+    S = n(585483),
+    v = n(233870),
     Z = n(51144),
     A = n(998502),
     M = n(276264),
@@ -35,14 +35,14 @@ var i = n(735250),
     R = n(689938),
     L = n(410740),
     j = n(460356);
-let P = [],
-    O = A.ZP.getEnableHardwareAcceleration();
+let O = [],
+    P = A.ZP.getEnableHardwareAcceleration();
 function y(e) {
     let { user: t, channel: a, status: u, activities: d } = e,
         h = (0, l.e7)([I.Z], () => null != I.Z.getTypingUsers(a.id)[t.id]),
         p = (0, l.e7)([x.default], () => x.default.getCurrentUser()),
-        m = (0, l.e7)([g.Z], () => g.Z.isMobileOnline(t.id)),
-        _ = (0, l.e7)([C.Z], () => C.Z.getNickname(t.id)),
+        m = (0, l.e7)([C.Z], () => C.Z.isMobileOnline(t.id)),
+        _ = (0, l.e7)([g.Z], () => g.Z.getNickname(t.id)),
         T = (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('17354')]).then(n.bind(n, 354589));
@@ -68,7 +68,7 @@ function y(e) {
         onShiftClick: () => {
             let e = '@'.concat(Z.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            v.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
+            S.S.dispatchToLastSubscribed(b.CkL.INSERT_TEXT, {
                 plainText: e,
                 rawText: n
             }),
@@ -82,7 +82,7 @@ function y(e) {
                     currentUser: p,
                     isOwner: t.id === a.ownerId,
                     ownerTooltipText: R.Z.Messages.GROUP_OWNER,
-                    shouldAnimateStatus: O,
+                    shouldAnimateStatus: P,
                     isTyping: h,
                     status: u,
                     activities: d,
@@ -182,20 +182,20 @@ function U(e) {
     let { listItems: I } =
             ((t = s),
             (0, l.e7)(
-                [C.Z, x.default, g.Z],
+                [g.Z, x.default, C.Z],
                 () => {
-                    let e = (0, S.T)(t.recipients, x.default),
+                    let e = (0, v.T)(t.recipients, x.default),
                         n = {};
                     for (let t of e) {
                         var i, a, s;
-                        C.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
+                        g.Z.isFriend(t.id) || t.id === (null === (i = x.default.getCurrentUser()) || void 0 === i ? void 0 : i.id)
                             ? (n[t.id] = {
-                                  status: null !== (a = g.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
-                                  activities: null !== (s = g.Z.getActivities(t.id)) && void 0 !== s ? s : P
+                                  status: null !== (a = C.Z.getStatus(t.id)) && void 0 !== a ? a : b.Skl.OFFLINE,
+                                  activities: null !== (s = C.Z.getActivities(t.id)) && void 0 !== s ? s : O
                               })
                             : (n[t.id] = {
                                   status: b.Skl.OFFLINE,
-                                  activities: P
+                                  activities: O
                               });
                     }
                     let l = [];
@@ -212,7 +212,7 @@ function U(e) {
                 [t],
                 k
             )),
-        { installedIntegrations: N, applicationsShelf: v, fetched: Z, appsInGDMEnabled: A, availableApplications: M } = (0, _.j)({ channelId: s.id });
+        { installedIntegrations: N, applicationsShelf: S, fetched: Z, appsInGDMEnabled: A, availableApplications: M } = (0, _.j)({ channelId: s.id });
     a.useEffect(() => {
         if (c)
             for (let e of I)
@@ -228,7 +228,7 @@ function U(e) {
                 guild_id: s.guild_id
             });
         }, [s.guild_id, s.id, s.type]);
-    let O = c && I.every((e) => e.user.isStaff());
+    let P = c && I.every((e) => e.user.isStaff());
     return (0, i.jsx)(d.Gt, {
         value: E,
         children: (0, i.jsx)('div', {
@@ -241,7 +241,7 @@ function U(e) {
                         className: j.membersGroup,
                         children: [
                             ''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(I.length, ' '),
-                            O
+                            P
                                 ? (0, i.jsx)(h.Z, {
                                       className: j.__invalid_decorator,
                                       type: h.Z.Types.STAFF_ONLY_DM
@@ -262,7 +262,7 @@ function U(e) {
                         )
                     ),
                     A &&
-                        (N.length > 0 || (Z && v.length > 0)) &&
+                        (N.length > 0 || (Z && S.length > 0)) &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p.Z, {

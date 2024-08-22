@@ -71,6 +71,6 @@ let d = Object.freeze({
     }),
     _ = 1024,
     E = 4096;
-((s = i || (i = {})).GUILD_HOME = 'home'), (s.SERVER_GUIDE = 'guide'), (s.CHANNEL_BROWSER = 'browse'), (s.CUSTOMIZE_COMMUNITY = 'customize');
+((s = i || (i = {})).GUILD_HOME = 'home'), (s.SERVER_GUIDE = 'guide'), (s.CHANNEL_BROWSER = 'browse'), (s.CUSTOMIZE_COMMUNITY = 'customize'), (s.LINKED_ROLES = 'linked-roles');
 let f = new Set(Object.values(i)),
     h = '131';

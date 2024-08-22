@@ -20,8 +20,8 @@ var i = n(735250),
     _ = n(880831),
     f = n(774168),
     E = n(871499),
-    g = n(981631),
-    C = n(689938);
+    C = n(981631),
+    g = n(689938);
 function I(e) {
     let t = (0, o.e7)([p.Z], () => !(0, r.isEmpty)(p.Z.getTypingUsers(e)), [e]),
         n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]),
@@ -55,8 +55,8 @@ function T(e) {
     let t,
         { channelId: n, className: s, showingClassName: r, onClick: d, inPopout: h, showRequestToSpeakSidebar: p, toggleRequestToSpeakSidebar: f, ...T } = e,
         { disabled: N } = T,
-        v = a.useRef(null),
-        S = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
+        S = a.useRef(null),
+        v = (0, o.e7)([u.Z], () => u.Z.getChatOpen(n), [n]),
         {
             isShowing: Z,
             unreadCount: A,
@@ -82,8 +82,8 @@ function T(e) {
             );
         })(n),
         b = a.useCallback(() => {
-            null == d || d(), !S && p && (null == f || f()), c.Z.updateChatOpen(n, !S);
-        }, [n, S, d, p, f]),
+            null == d || d(), !v && p && (null == f || f()), c.Z.updateChatOpen(n, !v);
+        }, [n, v, d, p, f]),
         R = a.useCallback(
             (e) => {
                 let { className: t } = e;
@@ -96,38 +96,38 @@ function T(e) {
         ),
         L = a.useCallback(() => {
             var e;
-            null === (e = v.current) || void 0 === e || e.focus();
+            null === (e = S.current) || void 0 === e || e.focus();
         }, []);
     (0, m.yp)({
-        event: g.CkL.FOCUS_CHAT_BUTTON,
+        event: C.CkL.FOCUS_CHAT_BUTTON,
         handler: N ? null : L
     });
-    let [j, P] = a.useState(!1),
-        O = a.useCallback(() => {
-            h && P(!0);
+    let [j, O] = a.useState(!1),
+        P = a.useCallback(() => {
+            h && O(!0);
         }, [h]);
     (0, m.yp)({
-        event: g.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-        handler: O
+        event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+        handler: P
     }),
         a.useEffect(() => {
             let e;
             return (
                 j &&
                     (e = setTimeout(() => {
-                        P(!1);
+                        O(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
         }, [j]);
-    let y = [(t = h && N ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : S ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
+    let y = [(t = h && N ? g.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : v ? g.Z.Messages.VIDEO_CALL_HIDE_CHAT : g.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
     return (
-        M > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })),
-        A > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
+        M > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })),
+        A > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
         (0, i.jsx)(E.Z, {
-            buttonRef: v,
+            buttonRef: S,
             onClick: b,
             label: t,
             'aria-label': y.join(', '),

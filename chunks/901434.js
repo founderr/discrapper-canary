@@ -15,26 +15,26 @@ var i = n(735250),
 let E = (e, t) => p.ZP.getName(e.getGuildId(), e.id, t.user);
 t.Z = function (e) {
     var t, n;
-    let { participants: p, channel: g, hasConnectPermission: C } = e,
-        I = (0, u.J)(g.guild_id),
+    let { participants: p, channel: C, hasConnectPermission: g } = e,
+        I = (0, u.J)(C.guild_id),
         x = a.useCallback(() => {
-            I ? (0, c.hk)(g.guild_id, () => r.default.selectVoiceChannel(g.id)) : r.default.selectVoiceChannel(g.id);
-        }, [g.id, g.guild_id, I]),
+            I ? (0, c.hk)(C.guild_id, () => r.default.selectVoiceChannel(C.id)) : r.default.selectVoiceChannel(C.id);
+        }, [C.id, C.guild_id, I]),
         T = p.filter((e) => e.type === m.Ui.VOICE),
         N = 4 === T.length ? 2 : 3,
-        v = (0, s.Wu)([o.Z], () => T.map((e) => o.Z.getParticipant(g.id, e.id)).filter(h.lm), [g.id, T]);
+        S = (0, s.Wu)([o.Z], () => T.map((e) => o.Z.getParticipant(C.id, e.id)).filter(h.lm), [C.id, T]);
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
             (0, i.jsx)('div', {
                 className: f.tiles,
                 style: { maxWidth: 168 * N },
-                children: v.slice(0, 5).map((e) =>
+                children: S.slice(0, 5).map((e) =>
                     (0, i.jsx)(
                         d.ZP,
                         {
                             participant: e,
-                            channel: g,
+                            channel: C,
                             className: f.tile,
                             paused: !0,
                             inCall: !0,
@@ -49,7 +49,7 @@ t.Z = function (e) {
             (0, i.jsx)(l.Heading, {
                 className: f.channelName,
                 variant: 'heading-xxl/semibold',
-                children: g.name
+                children: C.name
             }),
             (0, i.jsx)('div', {
                 className: f.participantsRow,
@@ -57,7 +57,7 @@ t.Z = function (e) {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
-                        ((t = g),
+                        ((t = C),
                         0 === (n = T).length
                             ? _.Z.Messages.CURRENTLY_IN_STAGE_EMPTY
                             : 1 === n.length
@@ -77,12 +77,12 @@ t.Z = function (e) {
                 })
             }),
             (0, i.jsx)(l.Button, {
-                disabled: !C,
+                disabled: !g,
                 className: f.joinButton,
-                color: C ? l.Button.Colors.GREEN : l.Button.Colors.PRIMARY,
+                color: g ? l.Button.Colors.GREEN : l.Button.Colors.PRIMARY,
                 onClick: x,
                 size: l.Button.Sizes.MEDIUM,
-                children: C ? _.Z.Messages.STAGE_CHANNEL_JOIN : _.Z.Messages.CHANNEL_LOCKED_SHORT
+                children: g ? _.Z.Messages.STAGE_CHANNEL_JOIN : _.Z.Messages.CHANNEL_LOCKED_SHORT
             })
         ]
     });

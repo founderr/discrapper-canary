@@ -4,8 +4,8 @@ l.d(n, {
     }
 });
 var a = l(399606),
-    r = l(592125),
-    i = l(563534);
+    i = l(592125),
+    r = l(563534);
 function t(e) {
-    return (0, a.Wu)([i.Z, r.Z], () => i.Z.getResourceChannels(e).filter((e) => null != r.Z.getChannel(e.channelId)));
+    return (0, a.Wu)([r.Z, i.Z], () => r.Z.getResourceChannels(e).filter((e) => null != i.Z.getChannel(e.channelId)));
 }

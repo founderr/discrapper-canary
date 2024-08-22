@@ -16,12 +16,12 @@ var a = n(481060),
 function _(e) {
     let { isSelected: t, onClick: n } = e,
         _ = (0, l.Z)(o.dr.QUEST_HOME_DESKTOP),
-        E = (0, s.Sl)(c.Ilk.WHITE);
+        h = (0, s.Sl)(c.Ilk.WHITE);
     return _
         ? (0, i.jsx)(
               r.Z,
               {
-                  avatar: (0, i.jsx)(a.QuestsIcon, { color: t ? E.hex : void 0 }),
+                  avatar: (0, i.jsx)(a.QuestsIcon, { color: t ? h.hex : void 0 }),
                   name: d.Z.Messages.QUESTS,
                   focusProps: {
                       offset: {

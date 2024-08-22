@@ -440,7 +440,7 @@ t.ZP = function (e) {
                 (0, O.uL)(L.Z5c.GUILD_MEMBER_VERIFICATION(o.id));
                 return;
             }
-            (0, f.q)(
+            (0, f.qF)(
                 o.id,
                 o,
                 {
