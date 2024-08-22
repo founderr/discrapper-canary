@@ -130,20 +130,24 @@ function d(e, t, n) {
                                     className: c.content,
                                     ref: F,
                                     children: Object.keys(Q).map((e) => {
-                                        let t = (0, u.t$)(e),
-                                            n = z[e],
-                                            i = Q[e],
-                                            a = z[(0, u.DP)(t)],
-                                            s = null == v ? void 0 : v(t);
-                                        return null != n && null != i
+                                        var t;
+                                        let n = (0, u.t$)(e),
+                                            i = z[e],
+                                            a = Q[e],
+                                            s = z[(0, u.DP)(n)],
+                                            o = null == v ? void 0 : v(n);
+                                        return null != i && null != a
                                             ? (0, r.jsxs)(
                                                   'div',
                                                   {
-                                                      style: n,
-                                                      ...s,
+                                                      ...o,
+                                                      style: {
+                                                          ...i,
+                                                          ...(null !== (t = null == o ? void 0 : o.style) && void 0 !== t ? t : {})
+                                                      },
                                                       children: [
-                                                          null != N && null != a && N(t, a, e),
-                                                          i.map((e) => {
+                                                          null != N && null != s && N(n, s, e),
+                                                          a.map((e) => {
                                                               let [t, n, r] = e,
                                                                   i = z[t];
                                                               return null != i ? O(n, r, i, t, q) : null;

@@ -1,45 +1,60 @@
 var i = n(735250),
     a = n(470079),
-    s = n(481060),
-    r = n(100527),
-    l = n(970606),
-    o = n(207796),
-    c = n(689938),
-    d = n(620080);
-t.Z = a.memo(function () {
+    s = n(120356),
+    r = n.n(s),
+    l = n(143927),
+    o = n(481060),
+    c = n(100527),
+    d = n(970606),
+    u = n(207796),
+    _ = n(689938),
+    h = n(620080);
+t.Z = a.memo(function (e) {
+    let { className: t, background: n } = e;
     a.useEffect(() => {
-        (0, l.tv)({ location: r.Z.CLAN_DISCOVERY });
+        (0, d.tv)({ location: c.Z.CLAN_DISCOVERY });
     }, []);
-    let e = a.useCallback(() => {
-        (0, l.GS)({ location: r.Z.CLAN_DISCOVERY }), (0, o.fH)(o.v0.GET_STARTED);
-    }, []);
-    return (0, i.jsx)('div', {
-        className: d.upsellContainer,
-        children: (0, i.jsxs)('div', {
-            className: d.upsellDetails,
-            children: [
-                (0, i.jsx)(s.Heading, {
-                    className: d.upsellTitle,
-                    variant: 'heading-xxl/semibold',
-                    color: 'header-primary',
-                    children: c.Z.Messages.CLAN_DISCOVERY_UPSELL_TITLE
-                }),
-                (0, i.jsxs)(s.Text, {
-                    className: d.upsellSubtitle,
-                    variant: 'text-md/medium',
-                    color: 'header-secondary',
-                    children: [' ', c.Z.Messages.CLAN_DISCOVERY_UPSELL_SUBTITLE]
-                }),
-                (0, i.jsx)(s.Button, {
-                    onClick: e,
-                    children: (0, i.jsx)(s.Text, {
-                        variant: 'text-sm/medium',
-                        color: 'always-white',
-                        className: d.customizeButton,
-                        children: c.Z.Messages.CLAN_DISCOVERY_UPSELL_USER_CTA
-                    })
+    let s = a.useCallback(() => {
+            (0, d.GS)({ location: c.Z.CLAN_DISCOVERY }), (0, u.fH)(u.v0.GET_STARTED);
+        }, []),
+        E = (0, u.GN)((e) => e.completedNux, l.Z);
+    return (0, i.jsxs)('div', {
+        className: r()(h.upsellContainer, t),
+        children: [
+            (0, i.jsx)('div', {
+                className: h.upsellDetailsContainer,
+                children: (0, i.jsxs)('div', {
+                    className: h.upsellDetails,
+                    children: [
+                        (0, i.jsx)(o.Heading, {
+                            className: h.upsellTitle,
+                            variant: 'display-lg',
+                            color: 'header-primary',
+                            children: _.Z.Messages.CLAN_DISCOVERY_UPSELL_TITLE.format({})
+                        }),
+                        (0, i.jsx)(o.Text, {
+                            variant: 'text-md/medium',
+                            color: 'header-secondary',
+                            children: _.Z.Messages.CLAN_DISCOVERY_UPSELL_SUBTITLE
+                        }),
+                        (0, i.jsx)('div', {
+                            className: h.upsellButtonContainer,
+                            children: E
+                                ? null
+                                : (0, i.jsx)(o.Button, {
+                                      onClick: s,
+                                      className: h.upsellButton,
+                                      children: (0, i.jsx)(o.Text, {
+                                          variant: 'text-sm/medium',
+                                          color: 'always-white',
+                                          children: _.Z.Messages.CLAN_DISCOVERY_UPSELL_USER_CTA
+                                      })
+                                  })
+                        })
+                    ]
                 })
-            ]
-        })
+            }),
+            n
+        ]
     });
 });

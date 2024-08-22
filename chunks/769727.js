@@ -1,3 +1,4 @@
+n(47120);
 var i,
     a,
     s = n(735250),
@@ -17,7 +18,7 @@ var i,
     T = n(895068),
     S = n(921944),
     f = n(69878);
-((i = a || (a = {})).TOP_PICKS = 'top_picks'), (i.OTHER_GUILDS = 'other_guilds');
+((a = i || (i = {})).TOP_PICKS = 'top_picks'), (a.OTHER_GUILDS = 'other_guilds');
 let C = {
         mass: 1,
         tension: 600,
@@ -31,15 +32,25 @@ let C = {
                 config: C,
                 delay: 500
             }),
-            a = (0, h.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
+            [{ scrollSpring: a }, o] = (0, d.useSpring)(() => ({
+                from: { scrollSpring: 0 },
+                config: C
+            })),
+            u = r.useCallback(
+                (e) => {
+                    o({ scrollSpring: e.currentTarget.scrollTop });
+                },
+                [o]
+            ),
+            _ = (0, h.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
         switch (
             (r.useEffect(() => {
-                !a &&
+                !_ &&
                     (0, h.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
                         dismissAction: S.L.TAKE_ACTION,
                         forceTrack: !0
                     });
-            }, [a]),
+            }, [_]),
             t)
         ) {
             case g.v0.ADMIN_UPSELL:
@@ -50,25 +61,27 @@ let C = {
             case g.v0.PLAYSTYLE:
             case g.v0.TRAITS:
             case g.v0.PREFERENCES:
-                return (0, s.jsxs)('div', {
+                return (0, s.jsxs)(l.animated.div, {
+                    style: { opacity: i.opacity },
                     className: f.discoveryContainer,
                     children: [
-                        (0, s.jsx)(l.animated.div, {
+                        (0, s.jsxs)('div', {
                             className: f.toolbar,
-                            style: {
-                                opacity: i.opacity,
-                                transform: i.opacity.to([0, 1], [-40, 0]).to((e) => 'translateY('.concat(e, 'px)'))
-                            },
-                            children: (0, s.jsx)(I.Z, {})
+                            children: [
+                                (0, s.jsx)(l.animated.div, {
+                                    className: f.toolbarBackground,
+                                    style: {
+                                        opacity: null == a ? void 0 : a.to([0, 100], [0, 1])
+                                    }
+                                }),
+                                (0, s.jsx)(I.Z, {})
+                            ]
                         }),
-                        (0, s.jsx)(l.animated.div, {
+                        (0, s.jsx)('div', {
                             className: f.content,
-                            style: {
-                                opacity: i.opacity,
-                                transform: i.opacity.to([0, 1], [40, 0]).to((e) => 'translateY('.concat(e, 'px)'))
-                            },
                             children: (0, s.jsx)(T.ZP, {
                                 width: n,
+                                onScroll: u,
                                 variant: (0, T.s)(t)
                             })
                         }),
@@ -112,6 +125,10 @@ function A(e) {
         r.useEffect(() => {
             if (i && !a && t !== g.v0.ADMIN_UPSELL) {
                 (0, g.fH)(g.v0.ADMIN_UPSELL);
+                return;
+            }
+            if (!i && a && t === g.v0.ADMIN_UPSELL) {
+                (0, g.fH)(g.v0.DISCOVERY);
                 return;
             }
         }, [t, i, a]),

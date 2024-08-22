@@ -325,6 +325,7 @@ var n, r;
     (r.CLAN_GUILD_PROFILE = 'clan guild profile'),
     (r.CLAN_DISCOVERY = 'clan discovery'),
     (r.CLAN_REAPPLY = 'clan reapply'),
+    (r.GLOBAL_DISCOVERY = 'global discovery'),
     (r.COLLECTIBLES_LIGHTNING_CHECKOUT = 'collectibles lightning checkout'),
     (r.CHECKOUT_RECOVERY_NAGBAR = 'checkout recovery nagbar'),
     (r.CASH_APP_PAY_AWARENESS_NON_NITRO_FLOW_UPSELL = 'cash_app_pay_awareness_non_nitro_flow_upsell'),
