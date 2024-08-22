@@ -31,7 +31,7 @@ function m(e) {
                 o.Z.requestMember(_, e);
             });
     }, [E, _]);
-    let C = (0, s.Wu)(
+    let g = (0, s.Wu)(
             [c.ZP],
             () => {
                 if (null == _) return h;
@@ -41,10 +41,10 @@ function m(e) {
             },
             [E, _]
         ),
-        g = i.useMemo(() => {
-            if (null == m || 0 === C.length) return p;
+        C = i.useMemo(() => {
+            if (null == m || 0 === g.length) return p;
             let e = new Set();
-            for (let t of C) {
+            for (let t of g) {
                 let n = u.uB({
                     user: t,
                     context: m
@@ -52,6 +52,6 @@ function m(e) {
                 a.e$(n, d.Pl.VIEW_CHANNEL) && e.add(t);
             }
             return e;
-        }, [C, m]);
-    return i.useMemo(() => (null == t ? void 0 : t.filter((e) => g.has(e.author_id))), [t, g]);
+        }, [g, m]);
+    return i.useMemo(() => (null == t ? void 0 : t.filter((e) => C.has(e.author_id))), [t, C]);
 }

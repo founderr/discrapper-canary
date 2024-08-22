@@ -22,8 +22,8 @@ var i,
     _ = n(527805),
     f = n(716600),
     E = n(778569),
-    C = n(563218),
-    g = n(318891),
+    g = n(563218),
+    C = n(318891),
     I = n(884338),
     x = n(719296),
     T = n(958185),
@@ -76,9 +76,9 @@ function k(e) {
 }
 function U(e) {
     var t, n, i, a;
-    let { participants: r, application: f, channel: E, width: C } = e;
-    let g = (i = C) > 400 ? 2 : i > 300 ? 1 : 0;
-    let [I] = (a = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : a > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24],
+    let { participants: r, application: f, channel: E, width: g } = e;
+    let C = (i = g) > 400 ? 2 : i > 300 ? 1 : 0;
+    let [I] = (a = g) > 400 ? [u.AvatarSizes.SIZE_56, 56] : a > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24],
         x = (0, c.Wu)([L.default, b.default], () =>
             Array.from(r)
                 .map((e) => ((0, m.J)(e, b.default) ? null : L.default.getUser(e.userId)))
@@ -114,8 +114,8 @@ function U(e) {
             }),
             (0, s.jsx)(u.Text, {
                 className: o()(y.subheader, {
-                    [y.small]: 0 === g,
-                    [y.medium]: 1 === g
+                    [y.small]: 0 === C,
+                    [y.medium]: 1 === C
                 }),
                 variant: 'text-sm/normal',
                 children:
@@ -128,8 +128,8 @@ function U(e) {
             }),
             (0, s.jsx)(u.Text, {
                 className: o()(y.header, {
-                    [y.small]: 0 === g,
-                    [y.medium]: 1 === g
+                    [y.small]: 0 === C,
+                    [y.medium]: 1 === C
                 }),
                 variant: 'text-sm/normal',
                 children: f.name
@@ -159,7 +159,7 @@ function U(e) {
                                   case 0:
                                       return u.Button.Sizes.SMALL;
                               }
-                          })(g),
+                          })(C),
                           className: y.button,
                           color: u.Button.Colors.PRIMARY,
                           children: P.Z.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
@@ -194,7 +194,7 @@ function w(e) {
         l.useEffect(() => {
             if (_ && null != d && !Z) {
                 let e = (0, x.Z)(d.channelId, d.applicationId);
-                (0, g.jy)(e);
+                (0, C.jy)(e);
             }
         }, [_, d, Z]),
         (0, s.jsx)(S.Gt, {
@@ -204,7 +204,7 @@ function w(e) {
                 children: (0, s.jsxs)(s.Fragment, {
                     children: [
                         _ &&
-                            (0, s.jsx)(C.Z, {
+                            (0, s.jsx)(g.Z, {
                                 className: y.iframe,
                                 embedId: (0, x.Z)(r.id, u)
                             }),

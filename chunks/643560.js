@@ -16,15 +16,15 @@ var i = n(735250),
 function h(e) {
     let { entry: t, onSelect: h, closePopout: p, hideEditButton: m = !1 } = e,
         { isEntryAdmin: _, canEdit: f, canRemove: E } = (0, u.Z)(t),
-        C = (0, r.Z)({
+        g = (0, r.Z)({
             id: t.guildId,
             label: d.Z.Messages.COPY_ID_GUILD,
             onSuccess: p
         });
     a.useEffect(() => {
-        !f && !E && null == C && (0, l.Zy)();
+        !f && !E && null == g && (0, l.Zy)();
     });
-    let g = () => {
+    let C = () => {
         c.kx(t.channelId, t.guildId);
     };
     function I() {
@@ -65,7 +65,7 @@ function h(e) {
                                           header: d.Z.Messages.HUB_ENTRY_REMOVE,
                                           confirmText: d.Z.Messages.REMOVE,
                                           cancelText: d.Z.Messages.CANCEL,
-                                          onConfirm: g,
+                                          onConfirm: C,
                                           ...e,
                                           children: (0, i.jsx)(s.Text, {
                                               variant: 'text-md/normal',
@@ -93,7 +93,7 @@ function h(e) {
                           })
                 ]
             }),
-            (0, i.jsx)(s.MenuGroup, { children: C })
+            (0, i.jsx)(s.MenuGroup, { children: g })
         ]
     });
 }

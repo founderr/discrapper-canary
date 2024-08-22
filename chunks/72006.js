@@ -21,7 +21,7 @@ t.d(n, {
         return R;
     },
     c2: function () {
-        return U;
+        return Z;
     },
     eE: function () {
         return y;
@@ -30,7 +30,7 @@ t.d(n, {
         return w;
     },
     iK: function () {
-        return Z;
+        return U;
     },
     lv: function () {
         return O;
@@ -186,19 +186,19 @@ function D(e) {
         t = e.getSelection();
     return null != t && t.hasFocus && (n = r.EditorState.moveFocusToEnd(n)), n;
 }
-function U(e, n) {
+function Z(e, n) {
     let t = M(n);
     return v(e, n, 0, t.length);
 }
-function Z(e, n) {
+function U(e, n) {
     let t = n.getSelection();
     return (t = (t = t.set('focusOffset', e)).set('anchorOffset', e)), r.EditorState.forceSelection(n, t);
 }
 function P(e) {
-    return Z(e.getCurrentContent().getFirstBlock().getText().length, e);
+    return U(e.getCurrentContent().getFirstBlock().getText().length, e);
 }
 function y(e) {
-    return Z(0, e);
+    return U(0, e);
 }
 function x(e) {
     let n = e.getSelection();

@@ -21,8 +21,8 @@ var i,
     _ = n(570140),
     f = n(26151),
     E = n(493683),
-    C = n(758059),
-    g = n(447543),
+    g = n(758059),
+    C = n(447543),
     I = n(708690),
     x = n(194359),
     T = n(425493),
@@ -202,7 +202,7 @@ class ed extends (i = s.PureComponent) {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
         let { inviteMaxAgeSeconds: t } = Q.Z.getCurrentConfig({ location: '5326c5_1' }, { autoTrackExposure: !1 });
-        g.Z.createInvite(e.id, { max_age: t }, ee.t4x.GROUP_DM);
+        C.Z.createInvite(e.id, { max_age: t }, ee.t4x.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -603,7 +603,7 @@ class ed extends (i = s.PureComponent) {
                 t.has(e) ? I.Z.removeUser(e) : (I.Z.addUser(e), n.length > 0 && I.Z.clear(null == i ? void 0 : i.id)), this.forceFocus();
             }),
             es(this, 'handleAddFriendNavigation', () => {
-                (0, j.uL)(ee.Z5c.FRIENDS), C.Z.setSection(ee.pJs.ADD_FRIEND), this.props.onClose();
+                (0, j.uL)(ee.Z5c.FRIENDS), g.Z.setSection(ee.pJs.ADD_FRIEND), this.props.onClose();
             }),
             es(this, 'handleScroll', () => {
                 let e = this.scrollerRef.current;

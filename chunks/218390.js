@@ -39,8 +39,8 @@ var n = t(735250),
     y = t(179984),
     V = t(938736),
     Y = t(386733),
-    w = t(474936),
-    H = t(981631),
+    H = t(474936),
+    w = t(981631),
     k = t(689938),
     W = t(374912),
     K = t(881188),
@@ -54,10 +54,10 @@ function X() {
         i = (0, A.ZP)();
     if (null == e || null == e.planIdFromItems) return null;
     let o = null != e.trialId,
-        d = e.planIdFromItems === w.Xh.PREMIUM_YEAR_TIER_2,
+        d = e.planIdFromItems === H.Xh.PREMIUM_YEAR_TIER_2,
         u = s || o,
         I = null != e.trialEndsAt ? l()(e.trialEndsAt).diff(l()(), 'd') : 0,
-        S = w.GP[e.planIdFromItems],
+        S = H.GP[e.planIdFromItems],
         C = b.ZP.formatPriceString(b.ZP.getDefaultPrice(S.id), S.interval);
     return (0, n.jsxs)('div', {
         className: r()(W.tierCard, { [W.withTier2Rim]: u }),
@@ -84,7 +84,7 @@ function X() {
                                           var s, n, i;
                                           if (o) {
                                               if (a) {
-                                                  let s = e.trialId === w.dO ? 1 : 2;
+                                                  let s = e.trialId === H.dO ? 1 : 2;
                                                   return k.Z.Messages.REVERSE_TRIAL_SUBSCRIBER_MANAGEMENT_SUBHEADER.format({ weeks: s });
                                               }
                                               return k.Z.Messages.PREMIUM_TIER_CARD_TRIAL_HEADER_AFTER_REDEMPTION.format({
@@ -94,13 +94,13 @@ function X() {
                                           }
                                           if (d)
                                               return k.Z.Messages.PREMIUM_TIER_CARD_ANNUAL_DISCOUNT_HEADER.format({
-                                                  percent: null !== (s = null == t ? void 0 : t.percentage) && void 0 !== s ? s : w.Bo,
+                                                  percent: null !== (s = null == t ? void 0 : t.percentage) && void 0 !== s ? s : H.Bo,
                                                   regularPrice: C
                                               });
                                           return k.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_HEADER_AFTER_REDEMPTION_GENERIC.format({
-                                              percent: null !== (n = null == t ? void 0 : t.percentage) && void 0 !== n ? n : w.M_,
+                                              percent: null !== (n = null == t ? void 0 : t.percentage) && void 0 !== n ? n : H.M_,
                                               regularPrice: C,
-                                              numMonths: null !== (i = null == t ? void 0 : t.duration) && void 0 !== i ? i : w.rt
+                                              numMonths: null !== (i = null == t ? void 0 : t.duration) && void 0 !== i ? i : H.rt
                                           });
                                       })()
                                   })
@@ -108,7 +108,7 @@ function X() {
                           })
                         : (0, n.jsx)(F.Z, {
                               variant: void 0,
-                              subscriptionTier: w.Si.TIER_2,
+                              subscriptionTier: H.Si.TIER_2,
                               interval: S.interval
                           }),
                     (0, n.jsx)(G.nT, {}),
@@ -116,12 +116,12 @@ function X() {
                         className: W.tierCardButton,
                         color: E.Button.Colors.WHITE,
                         onClick: () => {
-                            L.default.track(H.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            L.default.track(w.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_premium_home_button',
                                 target: 'premium home page'
                             }),
                                 (0, T.xf)(),
-                                (0, M.uL)(H.Z5c.APPLICATION_STORE);
+                                (0, M.uL)(w.Z5c.APPLICATION_STORE);
                         },
                         children: (0, n.jsx)(E.Text, {
                             className: W.tierCardButtonCTA,
@@ -134,11 +134,11 @@ function X() {
                         look: E.Button.Looks.OUTLINED,
                         color: E.Button.Colors.WHITE,
                         onClick: () => {
-                            L.default.track(H.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            L.default.track(w.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'to_subscriptions_button',
                                 target: 'subscriptions settings'
                             }),
-                                N.Z.open(H.oAB.SUBSCRIPTIONS);
+                                N.Z.open(w.oAB.SUBSCRIPTIONS);
                         },
                         children: (0, n.jsx)(E.Text, {
                             className: W.__invalid_managePlanButtonCTA,
@@ -200,7 +200,7 @@ function q() {
                         buttonTextClassName: W.giftButtonCTA,
                         color: E.Button.Colors.CUSTOM,
                         onClick: () => {
-                            L.default.track(H.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                            L.default.track(w.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                 cta_type: 'gifting_button',
                                 target: 'payment modal'
                             });
@@ -234,7 +234,7 @@ s.Z = function () {
     let M = (0, V.bD)('PremiumManagementSettings');
     a.useEffect(() => {
         u.Z.wait(async () => {
-            !N && !e && (await Promise.all([I.jg(), I.tZ(), (0, S.Y2)(T, null, H.JjL.DISCOVERY)])), l(!1);
+            !N && !e && (await Promise.all([I.jg(), I.tZ(), (0, S.Y2)(T, null, w.JjL.DISCOVERY)])), l(!1);
         });
     }, [T, N, e]);
     let [P, b] = a.useState(!1);
@@ -263,13 +263,13 @@ s.Z = function () {
                             headingOverride: k.Z.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,
                             hidePill: !Z,
                             selectedPlanColumnClassName: W.tier2PlanComparisonTableBackground,
-                            selectedPlanTier: w.p9.TIER_2
+                            selectedPlanTier: H.p9.TIER_2
                         })
                     ]
                 }),
                 (0, n.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !P && (L.default.track(H.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), b(!0));
+                        e && !P && (L.default.track(w.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), b(!0));
                     },
                     children: (0, n.jsx)('div', { className: W.bottomOfPageVisibilitySensor })
                 })

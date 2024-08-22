@@ -20,13 +20,13 @@ var i = n(470079),
     f = n(981631);
 function E(e) {
     let { user: t, onAcceptSuccess: n, onRejectSuccess: a, onError: E } = e,
-        C = (0, m.Z)(),
-        [g, I] = i.useState(!1),
+        g = (0, m.Z)(),
+        [C, I] = i.useState(!1),
         [x, T] = i.useState(!1),
         [N, S] = i.useState(!1),
         [v, Z] = i.useState(!1),
         [A, M] = i.useState(!1),
-        b = g || x || N,
+        b = C || x || N,
         R = i.useCallback(
             async (e) => {
                 if (!b) {
@@ -150,11 +150,11 @@ function E(e) {
             [R]
         );
     return {
-        acceptMessageRequest: C ? O : R,
+        acceptMessageRequest: g ? O : R,
         rejectMessageRequest: L,
         rejectAll: j,
         markAsNotSpam: P,
-        isAcceptLoading: g,
+        isAcceptLoading: C,
         isRejectLoading: x,
         isUserProfileLoading: N,
         isOptimisticAccepted: v,

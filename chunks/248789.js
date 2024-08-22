@@ -19,10 +19,10 @@ var i = n(735250),
     _ = n(689938);
 function f(e) {
     let { channelId: t, warningId: f, senderId: E } = e,
-        C = a.useCallback(() => {
+        g = a.useCallback(() => {
             (0, u.T)(t, [f]);
         }, [t, f]),
-        g = (0, l.e7)([c.Z], () => c.Z.isBlocked(E)),
+        C = (0, l.e7)([c.Z], () => c.Z.isBlocked(E)),
         I = a.useMemo(
             () => ({
                 channelId: t,
@@ -69,11 +69,11 @@ function f(e) {
                 x(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
         }, [t, E, f, x]),
         N = a.useCallback(() => {
-            C(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
-        }, [C, x]),
+            g(), x(h.NM.USER_BANNER_BLOCK_CONFIRM);
+        }, [g, x]),
         S = a.useCallback(() => {
-            C(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
-        }, [C, x]),
+            g(), x(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+        }, [g, x]),
         v = a.useCallback(() => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
@@ -100,14 +100,14 @@ function f(e) {
         warningType: d.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
         header: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_HEADER,
         description: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_DESCRIPTION,
-        onDismiss: C,
+        onDismiss: g,
         buttons: [
             {
                 text: _.Z.Messages.INAPPROPRIATE_CONVERSATION_BANNER_OPEN_SAFETY_TOOLS_BUTTON,
                 color: r.Button.Colors.BRAND,
                 onclick: T
             },
-            ...(g
+            ...(C
                 ? []
                 : [
                       {

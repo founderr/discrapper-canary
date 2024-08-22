@@ -20,13 +20,13 @@ function u(e) {
     null === (t = document.getElementById(e)) || void 0 === t || t.focus();
 }
 function d(e) {
-    let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: h, setFocus: p, getNewFocusIndex: m, maintainFocusPosition: _ = !0, includeSetSizes: f = !0, focusOnMount: E = !0, enabled: C = !0, onDispatch: g } = e,
+    let { navId: t, itemCount: n, focusedIndex: d = 0, onSelect: h, setFocus: p, getNewFocusIndex: m, maintainFocusPosition: _ = !0, includeSetSizes: f = !0, focusOnMount: E = !0, enabled: g = !0, onDispatch: C } = e,
         I = i.useCallback(
             (e, t) => {
                 let n = (0, a.Z)(e, t);
-                return null != g && g(e, n, t), n;
+                return null != C && C(e, n, t), n;
             },
-            [g]
+            [C]
         ),
         [x, T] = i.useReducer(I, {
             focusedIndex: d,
@@ -42,14 +42,14 @@ function d(e) {
             });
         }, [n]),
         (function (e) {
-            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: p = u, getNewFocusIndex: m, dispatch: _, maintainFocusPosition: f, includeSetSizes: E, focusOnMount: C, enabled: g, makeId: I = l.qR, getIndexFromId: x } = e,
+            let { navId: t, itemCount: n, focusedIndex: d, onSelect: h, setFocus: p = u, getNewFocusIndex: m, dispatch: _, maintainFocusPosition: f, includeSetSizes: E, focusOnMount: g, enabled: C, makeId: I = l.qR, getIndexFromId: x } = e,
                 T = i.useRef(n),
                 N = i.useRef(x);
             (N.current = x), (T.current = n);
             let S = i.useRef();
             i.useEffect(() => {
-                S.current = g;
-            }, [g]);
+                S.current = C;
+            }, [C]);
             let [v, Z] = i.useState(!1),
                 [A] = i.useState(
                     () =>
@@ -72,7 +72,7 @@ function d(e) {
                 ),
                 [b, R] = i.useState(!0);
             i.useEffect(() => {
-                if (b && !C) {
+                if (b && !g) {
                     R(!1);
                     return;
                 }
@@ -208,7 +208,7 @@ function d(e) {
             maintainFocusPosition: _,
             includeSetSizes: f,
             focusOnMount: E,
-            enabled: C
+            enabled: g
         })
     );
 }

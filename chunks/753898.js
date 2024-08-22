@@ -21,7 +21,7 @@ function h(e) {
         {
             avatarDecorationSrc: f,
             eventHandlers: E,
-            isAnimating: C
+            isAnimating: g
         } = (0, u.Z)({
             user: p,
             size: s.AvatarSizes.SIZE_80,
@@ -32,7 +32,7 @@ function h(e) {
         ...E,
         children: [
             (() => {
-                let e = !m && C;
+                let e = !m && g;
                 return n.isMultiUserDM()
                     ? (0, i.jsx)(c.Z, {
                           channel: n,

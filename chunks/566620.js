@@ -39,8 +39,8 @@ n.d(t, {
         return en;
     }
 }),
-    n(789020),
     n(411104),
+    n(789020),
     n(47120);
 var r = n(990547),
     i = n(544891),
@@ -162,7 +162,7 @@ async function q(e) {
                                     sectionName: S,
                                     interactionLifecycleOptionsFactory: () => ({
                                         onSuccess: () => r(),
-                                        onFailure: () => i()
+                                        onFailure: () => i(Error())
                                     })
                                 });
                             }),

@@ -19,14 +19,14 @@ function m(e) {
     let { userId: t, guildId: n, textClassName: m, tooltipDelay: _ } = e,
         f = (0, a.e7)([o.default], () => o.default.locale),
         E = (0, a.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
-        C = (0, a.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
-        g = (0, l.FI)(d.default.extractTimestamp(t), f),
-        I = (0, l.FI)(null == C ? void 0 : C.joinedAt, f);
-    return null == E || null == C
+        g = (0, a.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
+        C = (0, l.FI)(d.default.extractTimestamp(t), f),
+        I = (0, l.FI)(null == g ? void 0 : g.joinedAt, f);
+    return null == E || null == g
         ? (0, i.jsx)(s.Text, {
               variant: 'text-sm/normal',
               className: m,
-              children: g
+              children: C
           })
         : (0, i.jsxs)('div', {
               className: p.memberSinceWrapper,
@@ -50,7 +50,7 @@ function m(e) {
                           (0, i.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               className: m,
-                              children: g
+                              children: C
                           })
                       ]
                   }),

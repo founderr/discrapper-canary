@@ -13,18 +13,18 @@ function o(e) {
         m = t || n || o,
         _ = c ? r.d : r.Z,
         f = (0, l.Z)(t, n, o, u),
-        { Component: E, play: C, events: g } = (0, s.O)(m ? 'unmute' : 'mute');
+        { Component: E, play: g, events: C } = (0, s.O)(m ? 'unmute' : 'mute');
     return (
-        a.useEffect(() => () => C(), [C, m]),
+        a.useEffect(() => () => g(), [g, m]),
         (0, i.jsx)(_, {
             isActive: !m,
             iconComponent: E,
             label: f,
             onMouseEnter: (e) => {
-                null == d || d(e), g.onMouseEnter();
+                null == d || d(e), C.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                null == h || h(e), g.onMouseLeave();
+                null == h || h(e), C.onMouseLeave();
             },
             ...p
         })

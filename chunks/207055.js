@@ -14,8 +14,8 @@ var i = n(735250),
     _ = n(106301),
     f = n(512384),
     E = n(470956),
-    C = n(597998),
-    g = n(199902),
+    g = n(597998),
+    C = n(199902),
     I = n(314897),
     x = n(271383),
     T = n(131951),
@@ -33,7 +33,7 @@ var i = n(735250),
     P = n(313842);
 let y = a.memo((e) => {
     var t;
-    let { mute: n, deaf: a, user: s, channel: l, sessionId: o, nick: C } = e,
+    let { mute: n, deaf: a, user: s, channel: l, sessionId: o, nick: g } = e,
         N = s.id,
         P = (0, r.e7)([I.default], () => I.default.getId() === N, [N]),
         [y, D, k] = (0, r.Wu)([T.Z], () => (P ? [!T.Z.isSupported() || T.Z.isSelfMute() || T.Z.isSelfMutedTemporarily(), T.Z.isSelfDeaf(), !1] : [!T.Z.isSupported() || T.Z.isLocalMute(N), !1, T.Z.isLocalVideoDisabled(N)]), [P, N]),
@@ -57,7 +57,7 @@ let y = a.memo((e) => {
         F = (0, r.e7)([S.Z, v.Z], () => (P ? v.Z.getActivities() : S.Z.getActivities(N, l.guild_id))).find((e) => null != e.application_id && e.type === j.IIU.PLAYING),
         W = (0, r.e7)([d.Z], () => ((null == F ? void 0 : F.application_id) != null ? d.Z.getApplication(null == F ? void 0 : F.application_id) : void 0));
     null != W && R.ZP.trackExposure({ location: 'voice_users' });
-    let [z, Y] = (0, r.Wu)([g.Z], () => [g.Z.getStreamForUser(N, l.getGuildId()), g.Z.getActiveStreamForUser(N, l.getGuildId())], [l, N]),
+    let [z, Y] = (0, r.Wu)([C.Z], () => [C.Z.getStreamForUser(N, l.getGuildId()), C.Z.getActiveStreamForUser(N, l.getGuildId())], [l, N]),
         K = (0, r.e7)([Z.Z], () => Z.Z.getSessionById(o)),
         q = b.ZP.useName(s),
         X = (0, r.e7)([M.Z], () => M.Z.getVoicePlatformForChannel(l.id, N), [l.id, N]),
@@ -74,7 +74,7 @@ let y = a.memo((e) => {
         isShaking: w,
         children: (0, i.jsx)(L.ZP, {
             ...e,
-            nick: null != C ? C : q,
+            nick: null != g ? g : q,
             canDrag: e.canDrag && !B,
             otherClientSessionType: null == K ? void 0 : null === (t = K.clientInfo) || void 0 === t ? void 0 : t.os,
             voicePlatform: X,
@@ -99,7 +99,7 @@ let y = a.memo((e) => {
 y.displayName = 'ConnectedVoiceUser';
 let D = [];
 t.Z = function (e) {
-    let { allowPreviews: t = !0, allowDragging: n = !0, channel: s, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: p, location: m, numAudience: _, withGuildIcon: f = !1, className: g, children: x } = e,
+    let { allowPreviews: t = !0, allowDragging: n = !0, channel: s, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: p, location: m, numAudience: _, withGuildIcon: f = !1, className: C, children: x } = e,
         [T, v] = a.useState(null),
         [Z, A] = a.useState(!1),
         M = a.useRef(null),
@@ -185,8 +185,8 @@ t.Z = function (e) {
     })();
     return null == B && null == x
         ? null
-        : (0, i.jsxs)(C.e, {
-              className: l()(g, P.list, {
+        : (0, i.jsxs)(g.e, {
+              className: l()(C, P.list, {
                   [P.collapsed]: u,
                   [P.withGuildIcon]: f
               }),

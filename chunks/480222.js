@@ -34,13 +34,13 @@ t.Z = function (e) {
             from: { opacity: 0 },
             to: { opacity: 1 },
             config: _,
-            delay: 500
+            delay: 200
         }),
         S = (0, r.useSpring)({
             from: { opacity: 0 },
             to: { opacity: n ? 1 : 0 },
             config: _,
-            delay: 500
+            delay: 200
         });
     return (0, i.jsxs)('div', {
         className: u.container,

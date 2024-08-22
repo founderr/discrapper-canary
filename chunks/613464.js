@@ -19,8 +19,8 @@ var i = n(735250),
     _ = n(527379),
     f = n(184301),
     E = n(318661),
-    C = n(502762),
-    g = n(271383),
+    g = n(502762),
+    C = n(271383),
     I = n(594174),
     x = n(189357),
     T = n(718617),
@@ -30,7 +30,7 @@ function v(e) {
     let { userId: t, guildId: n, onClose: s, className: v, infoPanelClassName: Z, style: A } = e,
         M = (0, x.ms)(n),
         b = (0, r.e7)([I.default], () => I.default.getUser(t), [t]),
-        R = (0, r.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]),
+        R = (0, r.e7)([C.ZP], () => C.ZP.getMember(n, t), [n, t]),
         [L, j] = a.useState(null == b || null == R),
         O = (0, u.Z)(R),
         P = a.useRef(null),
@@ -84,7 +84,7 @@ function v(e) {
                   children: (0, i.jsx)('div', {
                       className: l()(S.sidebarContainer, v),
                       style: A,
-                      children: (0, i.jsx)(C.Z, {
+                      children: (0, i.jsx)(g.Z, {
                           user: b,
                           displayProfile: D,
                           profileType: null,

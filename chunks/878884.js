@@ -14,8 +14,8 @@ var i,
     _ = n(594174),
     f = n(979651),
     E = n(938475),
-    C = n(981631),
-    g = n(354459);
+    g = n(981631),
+    C = n(354459);
 let I = new u.Z(),
     x = new u.Z(),
     T = new Set();
@@ -24,10 +24,10 @@ function N(e, t, n) {
             userId: e.id,
             channelId: n
         }),
-        a = (0, E.PH)(i, null != t ? t : C.ME, e.id);
+        a = (0, E.PH)(i, null != t ? t : g.ME, e.id);
     I.set(e.id, a);
     let s = {
-        type: g.fO.USER,
+        type: C.fO.USER,
         user: e,
         id: e.id,
         streamId: null,
@@ -102,7 +102,7 @@ class A extends (i = r.ZP.Store) {
         VOICE_CHANNEL_SELECT: Z,
         RTC_CONNECTION_STATE: function (e) {
             let { state: t, context: n } = e;
-            if (n !== o.Yn.DEFAULT || t !== C.hes.DISCONNECTED) return !1;
+            if (n !== o.Yn.DEFAULT || t !== g.hes.DISCONNECTED) return !1;
             Z();
         },
         VOICE_STATE_UPDATES: function (e) {

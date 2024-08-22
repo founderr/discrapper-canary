@@ -20,8 +20,8 @@ var i = n(735250),
     _ = n(131951),
     f = n(626135),
     E = n(120522),
-    C = n(386542),
-    g = n(933843),
+    g = n(386542),
+    C = n(933843),
     I = n(746599),
     x = n(1163),
     T = n(738672),
@@ -51,14 +51,14 @@ function R(e) {
         n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
         [s, l] = a.useState(!1),
         { preset: o } = (0, c.cj)([m.Z], () => m.Z.getState()),
-        C = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()),
+        g = (0, c.e7)([_.Z], () => _.Z.getGoLiveSource()),
         x = a.useCallback(() => {
             l(!0),
                 (0, E.S)(r.q.STREAM_HIGH_QUALITY)
                     .then((e) => {
                         if (e) {
                             if (
-                                ((0, I.J1)(!(0, g.mc)(M, b)),
+                                ((0, I.J1)(!(0, C.mc)(M, b)),
                                 f.default.track(N.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
@@ -67,7 +67,7 @@ function R(e) {
                                     max_fps: b
                                 }),
                                 (0, I.cD)(!1),
-                                null == C)
+                                null == g)
                             )
                                 return;
                             let e = {
@@ -78,15 +78,15 @@ function R(e) {
                                 },
                                 context: u.Yn.STREAM
                             };
-                            null != C.desktopSource
+                            null != g.desktopSource
                                 ? (e.desktopSettings = {
-                                      sourceId: C.desktopSource.id,
+                                      sourceId: g.desktopSource.id,
                                       sound: !0
                                   })
-                                : null != C.cameraSource &&
+                                : null != g.cameraSource &&
                                   (e.cameraSettings = {
-                                      videoDeviceGuid: C.cameraSource.videoDeviceGuid,
-                                      audioDeviceGuid: C.cameraSource.audioDeviceGuid
+                                      videoDeviceGuid: g.cameraSource.videoDeviceGuid,
+                                      audioDeviceGuid: g.cameraSource.audioDeviceGuid
                                   }),
                                 h.Z.setGoLiveSource(e);
                         }
@@ -95,7 +95,7 @@ function R(e) {
                     .finally(() => {
                         l(!1);
                     });
-        }, [o, t, C]);
+        }, [o, t, g]);
     return (0, i.jsx)(d.ShinyButton, {
         fullWidth: !0,
         pauseAnimation: n,
@@ -141,7 +141,7 @@ function L(e) {
 }
 function j(e) {
     let { channel: t, ...n } = e,
-        { shouldShowOptInPopout: s } = (0, C.k)(r.q.STREAM_HIGH_QUALITY),
+        { shouldShowOptInPopout: s } = (0, g.k)(r.q.STREAM_HIGH_QUALITY),
         { enabled: l } = x.Z.useExperiment(
             { location: 'StreamButtonDemoOptInPopout' },
             {

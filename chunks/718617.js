@@ -18,8 +18,8 @@ var i = n(735250),
     _ = n(313692),
     f = n(596443),
     E = n(50493),
-    C = n(981631);
-function g(e, t) {
+    g = n(981631);
+function C(e, t) {
     return (n) => {
         if (0 === n) return 'auto';
         let i = 'forwards' === t.current,
@@ -45,7 +45,7 @@ function I(e) {
         ),
         j = a.useMemo(
             () => ({
-                [C.EkH.CLOSE_MODAL]: {
+                [g.EkH.CLOSE_MODAL]: {
                     binds: ['esc'],
                     comboKeysBindGlobal: !0,
                     action() {
@@ -90,8 +90,8 @@ function I(e) {
                         ...(R.enabled
                             ? { opacity: null === (a = e.value) || void 0 === a ? void 0 : a.to((e) => 1 - Math.abs(e)) }
                             : {
-                                  left: null === (l = e.value) || void 0 === l ? void 0 : l.to(g('left', b)),
-                                  right: null === (r = e.value) || void 0 === r ? void 0 : r.to(g('right', b))
+                                  left: null === (l = e.value) || void 0 === l ? void 0 : l.to(C('left', b)),
+                                  right: null === (r = e.value) || void 0 === r ? void 0 : r.to(C('right', b))
                               })
                     },
                     children: (function (e) {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return g;
     }
 });
 var i = n(735250);
@@ -19,10 +19,10 @@ var a = n(410030),
     _ = n(772056),
     f = n(689938),
     E = n(409931);
-function C(e) {
+function g(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, s.ZP)(),
-        { context: C, trackUserProfileAction: g } = (0, r.KZ)(),
+        { context: g, trackUserProfileAction: C } = (0, r.KZ)(),
         I = (0, a.ZP)(),
         { mutualFriends: x, isFetching: T } = (0, o.Z)(t.id, !t.bot),
         { mutualGuilds: N, isFetching: S } = (0, c.Z)(t.id, !0),
@@ -40,7 +40,7 @@ function C(e) {
                           loadingContentsCount: N.length,
                           itemType: _.R.MutualGuildList,
                           onExpand: () =>
-                              g({
+                              C({
                                   action: 'PRESS_SECTION',
                                   section: 'MUTUAL_GUILDS'
                               }),
@@ -68,7 +68,7 @@ function C(e) {
                           loadingContentsCount: x.length,
                           itemType: _.R.MutualFriendsList,
                           onExpand: () =>
-                              g({
+                              C({
                                   action: 'PRESS_SECTION',
                                   section: 'MUTUAL_FRIENDS'
                               }),
@@ -81,7 +81,7 @@ function C(e) {
                                       status: s,
                                       onSelect: () => {
                                           (0, h.openUserProfileModal)({
-                                              ...C,
+                                              ...g,
                                               userId: a.id,
                                               sourceAnalyticsLocations: n
                                           });

@@ -67,7 +67,7 @@ function h(e) {
                       .sortBy((e) => -e.position)
                       .first()
                 : void 0,
-        U = i.useMemo(
+        Z = i.useMemo(
             () =>
                 null != o && null != t
                     ? Object.values(u)
@@ -81,14 +81,14 @@ function h(e) {
             [o, t, L, D, u]
         );
     if (null == t || null == o || null == R) return null;
-    let Z = {};
+    let U = {};
     return (R.roles.forEach((e) => {
         let n = u[e];
-        null != n && (Z[n.id] = n);
+        null != n && (U[n.id] = n);
     }),
     s.e$(
         I.I0({
-            forceRoles: Z,
+            forceRoles: U,
             context: o
         }),
         s.$e(T.Plq.MANAGE_GUILD, T.Plq.MANAGE_ROLES)
@@ -101,7 +101,7 @@ function h(e) {
                   onChange: O,
                   autoFocus: !0,
                   children: (e) => {
-                      let n = U.reduce(
+                      let n = Z.reduce(
                               (n, t) => (
                                   l()(e.toLowerCase(), t.name.toLowerCase()) &&
                                       n.push(

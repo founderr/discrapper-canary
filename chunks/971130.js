@@ -30,9 +30,9 @@ var i,
     S = n(483360),
     N = n(981631),
     O = n(245335),
-    f = n(689938);
+    T = n(689938);
 (r = n(603617)), ((s = i || (i = {})).GROUP_DM = 'GROUP_DM'), (s.DM = 'DM'), (s.FRIEND = 'FRIEND'), (s.CHANNEL = 'CHANNEL');
-let T = (e, t) => null != e && a.ZP.isMember(e, t),
+let f = (e, t) => null != e && a.ZP.isMember(e, t),
     c = (e) => {
         let { omitUserIds: t, suggestedUserIds: n, maxRowsWithoutQuery: r, omitGuildId: i, shownUserIds: s, rows: I, counts: u } = e;
         if (null != n)
@@ -40,7 +40,7 @@ let T = (e, t) => null != e && a.ZP.isMember(e, t),
                 if (null != r && r > 0 && I.length >= r) break;
                 if (t.has(e) || s.has(e)) continue;
                 let n = o.default.getUser(e);
-                !(null == n || T(i, n.id)) &&
+                !(null == n || f(i, n.id)) &&
                     (s.add(n.id),
                     I.push({
                         type: 'FRIEND',
@@ -86,7 +86,7 @@ let T = (e, t) => null != e && a.ZP.isMember(e, t),
             let O = E.getRecipientId();
             if (null != O && !t.has(O) && !i.has(O)) {
                 let e = o.default.getUser(O);
-                if (null == e || e.bot || T(r, e.id)) continue;
+                if (null == e || e.bot || f(r, e.id)) continue;
                 i.add(e.id),
                     s.push({
                         type: 'DM',
@@ -104,7 +104,7 @@ let T = (e, t) => null != e && a.ZP.isMember(e, t),
             if (null != n && n > 0 && s.length >= n) break;
             if (t.has(e) || i.has(e)) continue;
             let u = o.default.getUser(e);
-            !(null == u || T(r, u.id)) &&
+            !(null == u || f(r, u.id)) &&
                 (s.push({
                     type: 'FRIEND',
                     item: u,
@@ -257,7 +257,7 @@ function R(e, t) {
         let i = r.getRecipientId();
         if (null != i && !e.has(i)) {
             let e = o.default.getUser(i);
-            if (null == e || e.bot || T(t, e.id)) continue;
+            if (null == e || e.bot || f(t, e.id)) continue;
             return e;
         }
     }
@@ -314,23 +314,23 @@ function v(e, t) {
         i = V[e].value;
     switch (V[e].type) {
         case p.MINUTES:
-            if (r) return f.Z.Messages.INVITE_EXPIRES_MINUTES;
-            return f.Z.Messages.INVITE_EXPIRES_MINUTES_OR_USES.format({ numUses: n });
+            if (r) return T.Z.Messages.INVITE_EXPIRES_MINUTES;
+            return T.Z.Messages.INVITE_EXPIRES_MINUTES_OR_USES.format({ numUses: n });
         case p.HOURS:
-            if (r) return f.Z.Messages.INVITE_EXPIRES_HOURS.format({ numHours: i });
-            return f.Z.Messages.INVITE_EXPIRES_HOURS_OR_USES.format({
+            if (r) return T.Z.Messages.INVITE_EXPIRES_HOURS.format({ numHours: i });
+            return T.Z.Messages.INVITE_EXPIRES_HOURS_OR_USES.format({
                 numHours: i,
                 numUses: n
             });
         case p.DAYS:
-            if (r) return f.Z.Messages.INVITE_EXPIRES_DAYS_PLURAL.format({ numDays: i });
-            return f.Z.Messages.INVITE_EXPIRES_DAYS_OR_USES_PLURAL.format({
+            if (r) return T.Z.Messages.INVITE_EXPIRES_DAYS_PLURAL.format({ numDays: i });
+            return T.Z.Messages.INVITE_EXPIRES_DAYS_OR_USES_PLURAL.format({
                 numDays: i,
                 numUses: n
             });
         case p.NEVER:
-            if (r) return f.Z.Messages.INVITE_EXPIRES_NEVER;
-            return f.Z.Messages.INVITE_EXPIRES_USES.format({ numUses: n });
+            if (r) return T.Z.Messages.INVITE_EXPIRES_NEVER;
+            return T.Z.Messages.INVITE_EXPIRES_USES.format({ numUses: n });
         default:
             return '';
     }

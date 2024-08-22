@@ -20,9 +20,9 @@ function c(e) {
         } = e,
         f = h.state === r.yb.SENDING,
         E = h.id === m,
-        C = (0, a.yE)(h.flags, r.iLy.EPHEMERAL),
-        g = h.state === r.yb.SEND_FAILED;
-    return f || (C && !g)
+        g = (0, a.yE)(h.flags, r.iLy.EPHEMERAL),
+        C = h.state === r.yb.SEND_FAILED;
+    return f || (g && !C)
         ? null
         : (0, i.jsx)(l.Z, {
               className: o.buttons,

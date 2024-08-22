@@ -3,7 +3,7 @@ t.d(n, {
         return D;
     },
     d: function () {
-        return U;
+        return Z;
     }
 });
 var r = t(735250);
@@ -79,8 +79,8 @@ function D() {
                     return R.Z.Messages.VIEWING_AS_ROLES_BACK;
             }
         })(i),
-        U = i === N.pNK.ROLE_SUBSCRIPTIONS ? R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : R.Z.Messages.VIEWING_AS_ROLES_SELECT,
-        Z = n === h.oC.GUILD_ONBOARDING,
+        Z = i === N.pNK.ROLE_SUBSCRIPTIONS ? R.Z.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : R.Z.Messages.VIEWING_AS_ROLES_SELECT,
+        U = n === h.oC.GUILD_ONBOARDING,
         P = (n) => {
             let { backToSettings: t } = n;
             null != e && (m.Z.isFullServerPreview(e) && (0, E.uL)(N.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (s.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, T.mL)(e), t && f.Z.open(e, i), i === N.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
@@ -102,7 +102,7 @@ function D() {
                     D
                 ]
             }),
-            Z && o
+            U && o
                 ? (0, r.jsx)('div', {
                       className: M.noticeContents,
                       children: (0, r.jsx)('div', {
@@ -125,7 +125,7 @@ function D() {
                                   return (0, r.jsxs)(O, {
                                       onClick: n,
                                       children: [
-                                          U,
+                                          Z,
                                           (0, r.jsx)(S.Z, {
                                               width: 16,
                                               height: 16,
@@ -163,7 +163,7 @@ function D() {
         ]
     });
 }
-function U(e) {
+function Z(e) {
     let { guildId: n } = e;
     return (0, l.e7)([m.Z], () => m.Z.isViewingRoles(n))
         ? (0, r.jsx)('div', {

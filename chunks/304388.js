@@ -25,10 +25,10 @@ t.Z = a.forwardRef(function (e, t) {
     let { renderPopout: n, children: u } = e,
         [d, h] = a.useState(!1),
         { isHovered: p, setIsHovered: m, onMouseEnter: _, onMouseLeave: f, cancelTimers: E } = (0, l.Z)(200, 300);
-    function C(e) {
+    function g(e) {
         'focus' !== e.type && !d && _();
     }
-    function g() {
+    function C() {
         !d && f();
     }
     function I(e) {
@@ -59,7 +59,7 @@ t.Z = a.forwardRef(function (e, t) {
                 isHovered: x,
                 onFocus: () => h(!0),
                 onMouseEnter: _,
-                onMouseLeave: g,
+                onMouseLeave: C,
                 renderPopout: n,
                 ...e
             }),
@@ -73,8 +73,8 @@ t.Z = a.forwardRef(function (e, t) {
                         return (t = e), (i = n), void ((t.key === r.vn.ENTER || t.key === r.vn.SPACE) && I(() => i(t)));
                     },
                     className: o.actionBarButton,
-                    onMouseEnter: C,
-                    onMouseLeave: g,
+                    onMouseEnter: g,
+                    onMouseLeave: C,
                     isActive: x
                 })
             });

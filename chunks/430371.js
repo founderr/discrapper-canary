@@ -19,14 +19,14 @@ var i = n(735250),
     _ = n(807705),
     f = n(27457),
     E = n(111248),
-    C = n(312703),
-    g = n(796638),
+    g = n(312703),
+    C = n(796638),
     I = n(981631),
     x = n(354459),
     T = n(201614),
     N = n(97478);
 let S = 16 / 9,
-    v = 8 + g.cF;
+    v = 8 + C.cF;
 function Z(e) {
     var t;
     let n,
@@ -127,8 +127,8 @@ function Z(e) {
         eE = a.useCallback((e) => {
             W(e), Y(!1);
         }, []),
-        eC = ee || D ? [] : (0, C.n3)(M, O, V),
-        { visibleParticipants: eg, participantTileWidth: eI } = (0, g.ZB)(k, b);
+        eg = ee || D ? [] : (0, g.n3)(M, O, V),
+        { visibleParticipants: eC, participantTileWidth: eI } = (0, C.ZB)(k, b);
     return (0, i.jsxs)('div', {
         className: l()(N.root, T.flexCenter, y),
         children: [
@@ -197,12 +197,12 @@ function Z(e) {
                             opacity: eh.value,
                             visibility: eh.value.to((e) => (0 === e ? 'hidden' : 'visible'))
                         },
-                        children: (0, i.jsx)(g.ZP, {
+                        children: (0, i.jsx)(C.ZP, {
                             channel: j,
                             onClick: s,
                             onContextMenu: Z,
                             onDoubleClick: A,
-                            participants: eg,
+                            participants: eC,
                             participantTileWidth: eI,
                             selectedParticipantId: O.id,
                             inCall: L,
@@ -212,13 +212,13 @@ function Z(e) {
                     })
                 ]
             }),
-            eC.length > 0
+            eg.length > 0
                 ? (0, i.jsx)(E.Z, {
                       onContextMenuParticipant: Z,
                       width: k,
                       height: U,
                       channel: j,
-                      participants: eC
+                      participants: eg
                   })
                 : null
         ]

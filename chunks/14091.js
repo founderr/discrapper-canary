@@ -19,8 +19,8 @@ var i = n(735250),
     _ = n(695346),
     f = n(768119),
     E = n(944486),
-    C = n(585483),
-    g = n(251285),
+    g = n(585483),
+    C = n(251285),
     I = n(406326),
     x = n(994463),
     T = n(619753),
@@ -99,10 +99,10 @@ let M = (e) => {
 };
 class b extends a.PureComponent {
     componentDidMount() {
-        C.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        g.S.subscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentWillUnmount() {
-        C.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
+        g.S.unsubscribe(N.CkL.SEARCH_RESULTS_CLOSE, this.handleSearchResultsClose);
     }
     componentDidUpdate(e) {
         let { search: t } = e;
@@ -294,7 +294,7 @@ function R(e) {
             }),
             [t]
         ),
-        ...(0, g.Z)(t),
+        ...(0, C.Z)(t),
         renderEmbeds: _.NA.useSetting(),
         developerMode: _.Sb.useSetting(),
         ...(0, c.cj)([m.Z], () => {

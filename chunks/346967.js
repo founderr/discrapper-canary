@@ -22,19 +22,19 @@ function E(e) {
     let { location: t, channel: n, ...s } = e,
         E = (0, p.Z)();
     (0, o.t)();
-    let [C] = n.recipients,
-        g = (0, r.e7)([u.default], () => u.default.getUser(C));
-    l()(null != g, 'ProfilePanelExperimentWrapper: user cannot be undefined');
+    let [g] = n.recipients,
+        C = (0, r.e7)([u.default], () => u.default.getUser(g));
+    l()(null != C, 'ProfilePanelExperimentWrapper: user cannot be undefined');
     let I = (0, r.e7)([u.default], () => u.default.getCurrentUser());
     l()(null != I, 'ProfilePanelExperimentWrapper: currentUser cannot be undefined'),
         a.useEffect(() => {
-            (0, h.Z)(g, {
-                withMutualFriends: !g.bot,
+            (0, h.Z)(C, {
+                withMutualFriends: !C.bot,
                 withMutualGuilds: !0,
                 channelId: n.id
             });
-        }, [g, n.id]);
-    let x = (0, r.e7)([c.Z], () => c.Z.isBlocked(g.id)),
+        }, [C, n.id]);
+    let x = (0, r.e7)([c.Z], () => c.Z.isBlocked(C.id)),
         [T, N] = a.useState(x),
         S = (0, d.sS)({ location: t });
     return (a.useEffect(() => {
@@ -44,19 +44,19 @@ function E(e) {
         ? null
         : T && S
           ? (0, i.jsx)(m.Z, {
-                user: g,
+                user: C,
                 channel: n,
                 onViewBlockedProfileClick: () => N(!1),
                 ...s
             })
-          : g.isNonUserBot()
+          : C.isNonUserBot()
             ? (0, i.jsx)(_.Z, {
-                  user: g,
+                  user: C,
                   channel: n,
                   ...s
               })
             : (0, i.jsx)(f.Z, {
-                  user: g,
+                  user: C,
                   currentUser: I,
                   channel: n,
                   ...s

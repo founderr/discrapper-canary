@@ -18,8 +18,8 @@ var i = n(735250),
     _ = n(984933),
     f = n(496675),
     E = n(594174),
-    C = n(51144),
-    g = n(7782),
+    g = n(51144),
+    C = n(7782),
     I = n(967128),
     x = n(320781),
     T = n(269203),
@@ -50,7 +50,7 @@ function P(e) {
         u = (0, o.ZP)(n),
         { type: m } = n,
         _ = (0, s.e7)([E.default], () => (n.isPrivate() ? E.default.getUser(n.getRecipientId()) : null)),
-        x = C.ZP.useUserTag(_),
+        x = g.ZP.useUserTag(_),
         { canManageRoles: S, canReadMessageHistory: Z } = (0, s.cj)([f.Z], () => ({
             canManageRoles: f.Z.can(b.Plq.MANAGE_ROLES, n),
             canReadMessageHistory: f.Z.can(b.Plq.READ_MESSAGE_HISTORY, n)
@@ -81,7 +81,7 @@ function P(e) {
                         children: x
                     }),
                 L.Z.Messages.BEGINNING_DM.format({ username: u }),
-                (0, i.jsx)(g.Z, {
+                (0, i.jsx)(C.Z, {
                     userId: n.getRecipientId(),
                     channel: n,
                     showingBanner: c

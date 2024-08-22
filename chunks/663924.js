@@ -13,21 +13,21 @@ var i = n(735250),
     _ = n(314734),
     f = n(981631),
     E = n(689938),
-    C = n(1966);
-let g = { height: _.lv };
+    g = n(1966);
+let C = { height: _.lv };
 function I() {
     h.y(p.ti.DISMISSED);
 }
 function x(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: c } = e,
         h = a.useRef(null),
-        { renderWindow: E, windowDispatch: C } = a.useContext(o.ZP),
-        g = null != c,
+        { renderWindow: E, windowDispatch: g } = a.useContext(o.ZP),
+        C = null != c,
         x = (0, l.Jw)(null != c ? c : ''),
         T = a.useCallback(
             (e) => {
                 var t;
-                if ((!g && (0, l.$s)()) || (g && !(x && n))) return;
+                if ((!C && (0, l.$s)()) || (C && !(x && n))) return;
                 let { target: i } = e;
                 if ((0, s.k)(i) && null != i.closest('.' + _.Jh)) return;
                 for (; (0, s.k)(i); ) {
@@ -42,24 +42,24 @@ function x(e) {
                 let a = null === (t = (0, d.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
                 (null == a || 'BODY' === a.tagName) && u.S.dispatchToLastSubscribed(f.CkL.TEXTAREA_FOCUS);
             },
-            [n, x, g]
+            [n, x, C]
         );
     return (
         a.useLayoutEffect(
             () => (
                 E.addEventListener('mousedown', T),
                 E.addEventListener('contextmenu', T),
-                C.subscribe(f.CkL.POPOUT_CLOSE, I),
+                g.subscribe(f.CkL.POPOUT_CLOSE, I),
                 () => {
-                    E.removeEventListener('mousedown', T), E.removeEventListener('contextmenu', T), C.unsubscribe(f.CkL.POPOUT_CLOSE, I);
+                    E.removeEventListener('mousedown', T), E.removeEventListener('contextmenu', T), g.unsubscribe(f.CkL.POPOUT_CLOSE, I);
                 }
             ),
-            [T, E, C]
+            [T, E, g]
         ),
         (0, r.useFocusLock)(h),
         a.useEffect(() => {
-            ((!g && (0, l.$s)()) || (g && !x)) && I();
-        }, [x, g]),
+            ((!C && (0, l.$s)()) || (C && !x)) && I();
+        }, [x, C]),
         (0, i.jsx)(m.Z, {
             ref: h,
             channel: t,
@@ -72,7 +72,7 @@ t.Z = a.memo(function (e) {
     return (0, i.jsx)('span', {
         style: _.u$,
         children: (0, i.jsx)(c.W5, {
-            className: C.positionLayer,
+            className: g.positionLayer,
             targetRef: t,
             position: 'top',
             align: 'right',
@@ -81,9 +81,9 @@ t.Z = a.memo(function (e) {
             children: (e) => {
                 let { isPositioned: t } = e;
                 return (0, i.jsx)('section', {
-                    className: C.positionContainer,
+                    className: g.positionContainer,
                     role: 'dialog',
-                    style: g,
+                    style: C,
                     'aria-label': E.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_LAUNCHER_ARIA_LABEL,
                     children: t && (0, i.jsx)(x, { ...n })
                 });

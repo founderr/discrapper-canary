@@ -14,8 +14,8 @@ var i = n(735250),
     _ = n(424602),
     f = n(924557),
     E = n(435064),
-    C = n(712114),
-    g = n(605236),
+    g = n(712114),
+    C = n(605236),
     I = n(536442),
     x = n(79390),
     T = n(665906),
@@ -73,8 +73,8 @@ t.Z = a.memo(function (e) {
                   }),
                 j.S.dispatchToLastSubscribed(U.CkL.TEXTAREA_FOCUS);
         },
-        eC = (0, r.e7)([A.Z], () => A.Z.hasCurrentUserSentMessageSinceAppStart());
-    function eg() {
+        eg = (0, r.e7)([A.Z], () => A.Z.hasCurrentUserSentMessageSinceAppStart());
+    function eC() {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('2668'), n.e('18963')]).then(n.bind(n, 542055));
@@ -157,17 +157,17 @@ t.Z = a.memo(function (e) {
         position: 'top',
         positionKey: null != ec ? ec : 'null',
         onRequestOpen: () => {
-            eC && (0, g.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: B.L.TAKE_ACTION }), eu('attachMenu');
+            eg && (0, C.EW)(o.z.ACTIVITIES_CHAT_BUTTON_NUX_V2, { dismissAction: B.L.TAKE_ACTION }), eu('attachMenu');
         },
         onRequestClose: () => {
-            !(0, c.hasAnyModalOpen)() && (eC && (0, g.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: B.L.TAKE_ACTION }), eu(null));
+            !(0, c.hasAnyModalOpen)() && (eg && (0, C.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: B.L.TAKE_ACTION }), eu(null));
         },
         renderPopout: (e) => {
             switch (ec) {
                 case 'recentClips':
-                    return (0, i.jsx)(C.Z, {
+                    return (0, i.jsx)(g.Z, {
                         ...e,
-                        onOpenClips: eg,
+                        onOpenClips: eC,
                         lastClipsSession: ee
                     });
                 case 'attachMenu':
@@ -183,7 +183,7 @@ t.Z = a.memo(function (e) {
                         draftType: z,
                         editorTextContent: Y,
                         setValue: K,
-                        openClips: eg
+                        openClips: eC
                     });
                 default:
                     throw Error('Invalid popout type provided');

@@ -51,7 +51,7 @@ class E extends a.PureComponent {
         });
     }
 }
-class C extends a.PureComponent {
+class g extends a.PureComponent {
     componentDidMount() {
         null == this.props.regions && c.Z.fetchRegions(null);
     }
@@ -121,4 +121,4 @@ class C extends a.PureComponent {
             });
     }
 }
-t.Z = r.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(C);
+t.Z = r.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(g);

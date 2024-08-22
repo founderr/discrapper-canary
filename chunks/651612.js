@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return C;
     }
 }),
     n(653041);
@@ -19,9 +19,9 @@ var i = n(735250),
     _ = n(918559),
     f = n(981631),
     E = n(689938),
-    C = n(225029);
-function g(e) {
-    let { channelId: t, className: n, ...g } = e,
+    g = n(225029);
+function C(e) {
+    let { channelId: t, className: n, ...C } = e,
         I = a.useRef(null),
         x = (0, l.e7)([m.ZP], () => m.ZP.getFocusedLayout() === _.MI.RESIZABLE),
         T = a.useCallback(() => {
@@ -59,7 +59,7 @@ function g(e) {
         b = S > 0 ? S : N,
         R = b > 0;
     return (0, i.jsxs)('div', {
-        className: C.wrapper,
+        className: g.wrapper,
         children: [
             (0, i.jsx)(c.d, {
                 buttonRef: I,
@@ -70,13 +70,13 @@ function g(e) {
                 iconComponent: M === _.MI.NO_CHAT ? r.ChevronLargeUpIcon : r.ChevronLargeDownIcon,
                 themeable: !0,
                 className: n,
-                ...g
+                ...C
             }),
             R
                 ? (0, i.jsx)(o.Z, {
                       hasMentions: S > 0,
                       truncatedCount: b > 99 ? '99+' : b,
-                      className: C.badge
+                      className: g.badge
                   })
                 : null
         ]

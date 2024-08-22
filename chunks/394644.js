@@ -111,8 +111,8 @@ function v() {
         y = (0, l.Q)(),
         V = (0, C.Zy)({ location: L.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: Y } = T.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
-        w = (0, a.e7)([O.Z], () => O.Z.hasLibraryApplication()),
-        H = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()),
+        H = (0, a.e7)([O.Z], () => O.Z.hasLibraryApplication()),
+        w = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()),
         { canBroadcast: k } = c.Z.useExperiment({ location: 'user_settings_activity_privacy' }, { autoTrackExposure: !0 }),
         W = R.Sb.useSetting(),
         K = (0, u.Z)();
@@ -132,8 +132,8 @@ function v() {
         isEligibleForQuests: V,
         showGiftNitro: Y,
         isStricterMessageRequestsEnabled: K,
-        hasLibraryApplication: w,
-        hasTOTPEnabled: H,
+        hasLibraryApplication: H,
+        hasTOTPEnabled: w,
         canBroadcastActivity: k,
         developerMode: W
     });

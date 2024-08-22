@@ -14,7 +14,7 @@ let d = Object.freeze({}),
     _ = {},
     f = {},
     E = {};
-class C extends (i = r.ZP.Store) {
+class g extends (i = r.ZP.Store) {
     isFetching() {
         return h;
     }
@@ -43,7 +43,7 @@ class C extends (i = r.ZP.Store) {
     }
 }
 (l = 'GuildDirectoryStore'),
-    (s = 'displayName') in (a = C)
+    (s = 'displayName') in (a = g)
         ? Object.defineProperty(a, s, {
               value: l,
               enumerable: !0,
@@ -51,7 +51,7 @@ class C extends (i = r.ZP.Store) {
               writable: !0
           })
         : (a[s] = l),
-    (t.Z = new C(o.Z, {
+    (t.Z = new g(o.Z, {
         GUILD_DIRECTORY_FETCH_START: function () {
             h = !0;
         },
@@ -125,34 +125,34 @@ class C extends (i = r.ZP.Store) {
             var t, n, i, a, s, l, r, o, d;
             let { channelId: h, entry: m } = e,
                 E = (0, c.MQ)(m),
-                C = null === (t = p[h]) || void 0 === t ? void 0 : t[E.guildId];
+                g = null === (t = p[h]) || void 0 === t ? void 0 : t[E.guildId];
             p[h] = {
                 ...p[h],
                 [E.guildId]: {
-                    ...C,
+                    ...g,
                     ...E
                 }
             };
-            let g = null !== (a = null == C ? void 0 : C.primaryCategoryId) && void 0 !== a ? a : u.AR.UNCATEGORIZED,
+            let C = null !== (a = null == g ? void 0 : g.primaryCategoryId) && void 0 !== a ? a : u.AR.UNCATEGORIZED,
                 I = null !== (s = E.primaryCategoryId) && void 0 !== s ? s : u.AR.UNCATEGORIZED,
-                x = Object.assign({}, null === (n = _[h]) || void 0 === n ? void 0 : n[g]);
-            null != C && g !== I && delete x[E.guildId],
+                x = Object.assign({}, null === (n = _[h]) || void 0 === n ? void 0 : n[C]);
+            null != g && C !== I && delete x[E.guildId],
                 (_[h] = {
                     ..._[h],
-                    [g]: x,
+                    [C]: x,
                     [I]: {
                         ...(null === (i = _[h]) || void 0 === i ? void 0 : i[I]),
                         [E.guildId]: {
-                            ...C,
+                            ...g,
                             ...E
                         }
                     }
                 }),
-                I !== g &&
+                I !== C &&
                     null != f[h] &&
                     (f[h] = {
                         ...f[h],
-                        [g]: (null === (l = f[h]) || void 0 === l ? void 0 : l[g]) > 0 ? (null === (r = f[h]) || void 0 === r ? void 0 : r[g]) - 1 : 0,
+                        [C]: (null === (l = f[h]) || void 0 === l ? void 0 : l[C]) > 0 ? (null === (r = f[h]) || void 0 === r ? void 0 : r[C]) - 1 : 0,
                         [I]: (null !== (d = null === (o = f[h]) || void 0 === o ? void 0 : o[I]) && void 0 !== d ? d : 0) + 1
                     });
         },

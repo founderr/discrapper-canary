@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return g;
     }
 });
 var i = n(735250),
@@ -18,11 +18,11 @@ var i = n(735250),
     _ = n(981631),
     f = n(689938),
     E = n(446926);
-function C(e) {
+function g(e) {
     let { member: t } = e,
         n = (0, r.e7)([h.Z], () => h.Z.getGuild(t.guildId)),
         s = (0, r.e7)([h.Z], () => h.Z.getRoles(t.guildId)),
-        C = a.useMemo(
+        g = a.useMemo(
             () =>
                 null == n
                     ? []
@@ -37,8 +37,8 @@ function C(e) {
                             .map((e) => e.id),
             [t.roles, t.highestRoleId, n, s]
         ),
-        g = (0, r.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
-        I = (0, u.zq)(g),
+        C = (0, r.e7)([c.Z], () => c.Z.getEnhancedMember(t.guildId, t.userId), [t.guildId, t.userId]),
+        I = (0, u.zq)(C),
         x = (0, u.qr)(t),
         T = (0, r.e7)([p.Z], () => p.Z.can(_.Plq.MANAGE_ROLES, n), [n]);
     return null == n
@@ -70,7 +70,7 @@ function C(e) {
                                                 });
                                             }
                                         }),
-                                        C.map((e) =>
+                                        g.map((e) =>
                                             (0, i.jsx)(
                                                 d.Z,
                                                 {

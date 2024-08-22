@@ -20,15 +20,15 @@ var i = n(735250),
     _ = n(937393),
     f = n(43982),
     E = n(721351),
-    C = n(420529),
-    g = n(927923),
+    g = n(420529),
+    C = n(927923),
     I = n(981631),
     x = n(921944),
     T = n(689938),
     N = n(286419);
 function S(e) {
     let { onClose: t, channel: n } = e,
-        a = (0, C.Z)(n);
+        a = (0, g.Z)(n);
     return (0, i.jsx)(r.Menu, {
         onClose: t,
         onSelect: () => null,
@@ -38,7 +38,7 @@ function S(e) {
     });
 }
 function v(e) {
-    let { channel: t, showLeftDivider: n = !1, ...C } = e,
+    let { channel: t, showLeftDivider: n = !1, ...g } = e,
         v = (0, m.Z)(),
         Z = (0, s.e7)([p.Z], () => {
             var e, t;
@@ -93,9 +93,9 @@ function v(e) {
                                 var t;
                                 return (0, i.jsx)(d.Z, {
                                     ...e,
-                                    ...C,
+                                    ...g,
                                     onClick: () => P(!0),
-                                    label: null != (t = Z) ? (t === g.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
+                                    label: null != (t = Z) ? (t === C.YE.XBOX ? T.Z.Messages.XBOX_REMOTE_CONNECTED_RAW : T.Z.Messages.PLAYSTATION_REMOTE_CONNECTED_RAW) : T.Z.Messages.CONSOLE_TRANSFER,
                                     iconComponent: (0, E.Z)(Z)
                                 });
                             }

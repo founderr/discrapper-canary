@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(981631);
 let h = a.memo(function (e) {
         let { message: t, channel: n, compact: s = !1, groupId: l, isGroupStart: o, usernameProfile: h, avatarProfile: p, setPopout: m, author: _, repliedMessage: f, roleIcon: E } = e,
-            C = (0, u.wq)(t.author.id, n.id),
-            g = (0, u.XO)(t, n, h, m),
+            g = (0, u.wq)(t.author.id, n.id),
+            C = (0, u.XO)(t, n, h, m),
             I = (0, u.R9)(p, m),
             x = a.useCallback(
                 () =>
@@ -39,8 +39,8 @@ let h = a.memo(function (e) {
             showAvatarPopout: p,
             showUsernamePopout: h,
             onClickAvatar: I,
-            onClickUsername: g,
-            onContextMenu: C,
+            onClickUsername: C,
+            onContextMenu: g,
             onPopoutRequestClose: x,
             roleIcon: E
         });
@@ -49,20 +49,20 @@ let h = a.memo(function (e) {
 function m(e) {
     let { messageProps: t, setPopout: n, messagePopouts: a, replyReference: r, author: o, repliedMessage: c, roleIcon: u } = e,
         { message: d, compact: m, channel: _, groupId: f } = t,
-        { usernameProfile: E, avatarProfile: C } = a;
+        { usernameProfile: E, avatarProfile: g } = a;
     if ((0, s.Z)(d)) return null;
-    let g = d.id === f;
-    return g || m || null != r
+    let C = d.id === f;
+    return C || m || null != r
         ? (0, i.jsx)(h, {
               message: d,
               channel: _,
               compact: m,
               subscribeToGroupId: f,
-              isGroupStart: g,
+              isGroupStart: C,
               groupId: f,
               setPopout: n,
               usernameProfile: E,
-              avatarProfile: C,
+              avatarProfile: g,
               author: o,
               repliedMessage: c,
               roleIcon: u

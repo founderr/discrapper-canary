@@ -14,8 +14,8 @@ var i,
 let _ = {},
     f = {},
     E = {},
-    C = !0,
-    g = null;
+    g = !0,
+    C = null;
 function I(e) {
     if (null == f[e]) {
         let t = u.default.getUser(e);
@@ -27,7 +27,7 @@ function I(e) {
 }
 class x extends (i = r.ZP.Store) {
     get visibleOverlayCanvas() {
-        return C;
+        return g;
     }
     getDrawables(e) {
         return null != _[e] ? _[e] : [];
@@ -39,7 +39,7 @@ class x extends (i = r.ZP.Store) {
         return E[e];
     }
     getDrawMode() {
-        return g;
+        return C;
     }
 }
 (l = 'SharedCanvasStore'),
@@ -118,11 +118,11 @@ let T = new x(o.Z, {
     },
     SHARED_CANVAS_SET_DRAW_MODE: function (e) {
         let { drawMode: t } = e;
-        g = t;
+        C = t;
     },
     TOGGLE_OVERLAY_CANVAS: function (e) {
         let {} = e;
-        C = !C;
+        g = !g;
     }
 });
 t.Z = T;

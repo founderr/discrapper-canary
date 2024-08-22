@@ -3,7 +3,7 @@ n.d(t, {
         return E;
     },
     ZP: function () {
-        return C;
+        return g;
     },
     cF: function () {
         return p;
@@ -75,16 +75,16 @@ function E(e, t) {
             -1 !== u && ((h = a[u]), a.splice(u, 1));
             let p = null != h ? e - m - 8 : e,
                 E = Math.max(0, Math.min(Math.floor((p - 8) / 132), 12, t.length)),
-                C = Math.min((p - 8) / E - 8, m),
-                g = Math.max(0, E - o.length),
+                g = Math.min((p - 8) / E - 8, m),
+                C = Math.max(0, E - o.length),
                 I = o.slice(0, E),
-                x = a.slice(0, g),
-                T = Array(g);
-            if (g > 0) {
+                x = a.slice(0, C),
+                T = Array(C);
+            if (C > 0) {
                 let e = [];
                 for (let t of x) {
                     let n = r.current[t.id];
-                    null != n && n < g ? (T[n] = t) : e.push(t);
+                    null != n && n < C ? (T[n] = t) : e.push(t);
                 }
                 for (let t = 0; t < T.length; t++) {
                     if (null != T[t]) continue;
@@ -101,7 +101,7 @@ function E(e, t) {
                 null != h && v.push(h),
                 {
                     visibleParticipants: v,
-                    participantTileWidth: C
+                    participantTileWidth: g
                 }
             );
         }, [e, t, n]);
@@ -110,7 +110,7 @@ function E(e, t) {
         participantTileWidth: u
     };
 }
-function C(e) {
+function g(e) {
     let { participants: t, participantTileWidth: n, selectedParticipantId: a, onDoubleClick: s, onContextMenu: l, onClick: r, channel: o, inCall: c, popoutWindow: d, paused: p = !1 } = e,
         _ = null != d;
     return (0, i.jsx)('div', {

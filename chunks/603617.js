@@ -7,10 +7,10 @@ n.r(t),
             return a;
         },
         INVITE_OPTIONS_12_HOURS: function () {
-            return f;
+            return T;
         },
         INVITE_OPTIONS_1_DAY: function () {
-            return T;
+            return f;
         },
         INVITE_OPTIONS_1_HOUR: function () {
             return N;
@@ -69,8 +69,8 @@ let s = i(0, () => r.Z.Messages.MAX_USES.format({ maxUses: 0 })),
     S = i(1800, () => r.Z.Messages.DURATION_MINUTES.format({ minutes: 30 })),
     N = i(3600, () => r.Z.Messages.DURATION_HOURS.format({ hours: 1 })),
     O = i(21600, () => r.Z.Messages.DURATION_HOURS.format({ hours: 6 })),
-    f = i(43200, () => r.Z.Messages.DURATION_HOURS.format({ hours: 12 })),
-    T = i(86400, () => r.Z.Messages.DURATION_DAYS.format({ days: 1 })),
+    T = i(43200, () => r.Z.Messages.DURATION_HOURS.format({ hours: 12 })),
+    f = i(86400, () => r.Z.Messages.DURATION_DAYS.format({ days: 1 })),
     c = i(604800, () => r.Z.Messages.DURATION_DAYS.format({ days: 7 })),
     d = i(0, () => r.Z.Messages.MAX_AGE_NEVER),
-    m = [S, N, O, f, T, c, d];
+    m = [S, N, O, T, f, c, d];

@@ -20,8 +20,8 @@ var i = n(735250),
     _ = n(880831),
     f = n(774168),
     E = n(871499),
-    C = n(981631),
-    g = n(689938);
+    g = n(981631),
+    C = n(689938);
 function I(e) {
     let t = (0, o.e7)([p.Z], () => !(0, r.isEmpty)(p.Z.getTypingUsers(e)), [e]),
         n = (0, o.e7)([h.Z], () => h.Z.getVoiceChannelId() === e, [e]),
@@ -99,7 +99,7 @@ function T(e) {
             null === (e = S.current) || void 0 === e || e.focus();
         }, []);
     (0, m.yp)({
-        event: C.CkL.FOCUS_CHAT_BUTTON,
+        event: g.CkL.FOCUS_CHAT_BUTTON,
         handler: N ? null : L
     });
     let [j, O] = a.useState(!1),
@@ -107,7 +107,7 @@ function T(e) {
             h && O(!0);
         }, [h]);
     (0, m.yp)({
-        event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+        event: g.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
         handler: P
     }),
         a.useEffect(() => {
@@ -122,10 +122,10 @@ function T(e) {
                 }
             );
         }, [j]);
-    let y = [(t = h && N ? g.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : v ? g.Z.Messages.VIDEO_CALL_HIDE_CHAT : g.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
+    let y = [(t = h && N ? C.Z.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : v ? C.Z.Messages.VIDEO_CALL_HIDE_CHAT : C.Z.Messages.VIDEO_CALL_SHOW_CHAT)];
     return (
-        M > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })),
-        A > 0 && y.push(g.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
+        M > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({ mentionCount: M })),
+        A > 0 && y.push(C.Z.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD),
         (0, i.jsx)(E.Z, {
             buttonRef: S,
             onClick: b,

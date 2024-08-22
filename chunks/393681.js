@@ -39,8 +39,8 @@ var n = t(735250),
     y = t(801461),
     V = t(689938),
     Y = t(78075),
-    w = t(224499);
-class H extends a.PureComponent {
+    H = t(224499);
+class w extends a.PureComponent {
     componentDidMount() {
         let { currentUser: e } = this.props;
         (0, R.Z)(e.id, e.getAvatarURL(void 0, 80));
@@ -68,7 +68,7 @@ class H extends a.PureComponent {
             });
             return (0, n.jsx)(_.FormNotice, {
                 type: _.FormNotice.Types.DANGER,
-                className: w.marginBottom20,
+                className: H.marginBottom20,
                 imageData: {
                     src: t(418558),
                     width: 60,
@@ -94,7 +94,7 @@ class H extends a.PureComponent {
             });
             return (0, n.jsx)(_.FormNotice, {
                 type: _.FormNotice.Types.PRIMARY,
-                className: w.marginBottom20,
+                className: H.marginBottom20,
                 imageData: {
                     src: t(449125),
                     width: 60,
@@ -135,14 +135,14 @@ class H extends a.PureComponent {
         let { backupCodes: e, currentUser: s, theme: a } = this.props,
             i = (0, d.wj)(a) ? t(555702) : t(610802);
         return (0, n.jsxs)(_.FormSection, {
-            className: r()(Y.userSettingsSecurity, w.marginTop40),
+            className: r()(Y.userSettingsSecurity, H.marginTop40),
             title: V.Z.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION,
             tag: 'h1',
             children: [
                 s.mfaEnabled
                     ? (0, n.jsx)(_.FormSection, {
                           children: (0, n.jsxs)(_.FormTitle, {
-                              className: r()(Y.isEnabled, w.marginBottom20),
+                              className: r()(Y.isEnabled, H.marginBottom20),
                               children: [
                                   (0, n.jsx)('img', {
                                       alt: '',
@@ -254,7 +254,7 @@ class H extends a.PureComponent {
     renderAccountRemovalSettings() {
         let { currentUser: e } = this.props;
         return (0, n.jsx)(j.Z, {
-            className: w.marginTop40,
+            className: H.marginTop40,
             currentUser: e,
             handleDisableAccount: () => this.handleDisableAccount(!1),
             handleDeleteAccount: () => this.handleDisableAccount(!0)
@@ -332,7 +332,7 @@ s.Z = () => {
         i = (0, O.b)(),
         r = (0, A.CC)(),
         o = (0, c.e7)([L.default], () => L.default.locale);
-    return (0, n.jsx)(H, {
+    return (0, n.jsx)(w, {
         theme: a,
         currentUser: e,
         backupCodes: s,

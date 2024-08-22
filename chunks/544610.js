@@ -14,8 +14,8 @@ var a,
     _ = n(131704),
     f = n(624138),
     E = n(51144),
-    C = n(592125),
-    g = n(480294),
+    g = n(592125),
+    C = n(480294),
     I = n(580005),
     x = n(699516),
     T = n(594174),
@@ -35,7 +35,7 @@ function j(e) {
 }
 function O() {
     if (!S) return !1;
-    let e = C.Z.getChannel(R);
+    let e = g.Z.getChannel(R);
     if (0 === v.trim().length)
         return (
             null != i && i.clearQuery(),
@@ -74,7 +74,7 @@ function O() {
                             let i = I.Z.getScoreWithoutFetchingLatest(e.id),
                                 a = e.getRecipientId(),
                                 s = x.Z.isFriend(a) ? 0.2 : 0,
-                                l = null != C.Z.getDMFromUserId(a) ? 0.1 : 0;
+                                l = null != g.Z.getDMFromUserId(a) ? 0.1 : 0;
                             n[a] = 1 + i / t + s + l;
                         }),
                         n
@@ -90,7 +90,7 @@ function P() {
     return (M = c().some(x.Z.getRelationships(), (e) => e === N.OGo.FRIEND)) !== e;
 }
 function y(e, t) {
-    if (g.Z.hasConsented(N.pjP.PERSONALIZATION)) {
+    if (C.Z.hasConsented(N.pjP.PERSONALIZATION)) {
         var n, i, a, s;
         let l = null !== (a = null === (n = m.Z.getUserAffinity(e.user.id)) || void 0 === n ? void 0 : n.communicationProbability) && void 0 !== a ? a : 0,
             r = null !== (s = null === (i = m.Z.getUserAffinity(t.user.id)) || void 0 === i ? void 0 : i.communicationProbability) && void 0 !== s ? s : 0;
@@ -125,7 +125,7 @@ function B() {
 }
 class H extends (a = u.ZP.Store) {
     initialize() {
-        this.waitFor(T.default, C.Z, x.Z, p.Z, g.Z), this.syncWith([T.default, C.Z], O), this.syncWith([x.Z], P);
+        this.waitFor(T.default, g.Z, x.Z, p.Z, C.Z), this.syncWith([T.default, g.Z], O), this.syncWith([x.Z], P);
     }
     getResults() {
         return A;

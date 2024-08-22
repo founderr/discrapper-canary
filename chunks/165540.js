@@ -13,8 +13,8 @@ var i = n(735250),
     _ = n(827498),
     f = n(663924),
     E = n(998698),
-    C = n(873387),
-    g = n(605236),
+    g = n(873387),
+    C = n(605236),
     I = n(291407),
     x = n(981631),
     T = n(314734),
@@ -24,7 +24,7 @@ var i = n(735250),
 let Z = a.forwardRef(function (e, t) {
     let { type: n, animateRef: s } = e,
         p = (0, r.e7)([m.Z], () => m.Z.shouldShowPopup() && m.Z.activeViewType() === n),
-        { Component: f, events: E, play: C } = (0, c.w)();
+        { Component: f, events: E, play: g } = (0, c.w)();
     a.useImperativeHandle(
         s,
         () => ({
@@ -35,8 +35,8 @@ let Z = a.forwardRef(function (e, t) {
         [E]
     );
     let I = a.useCallback(() => {
-        (0, d.yw)(x.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.y(_.ti.DISMISSED) : ((0, g.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h._(_._b.TEXT, n)), C();
-    }, [p, n, C]);
+        (0, d.yw)(x.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED), p ? h.y(_.ti.DISMISSED) : ((0, C.EW)(o.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: N.L.TAKE_ACTION }), h._(_._b.TEXT, n)), g();
+    }, [p, n, g]);
     return (0, i.jsx)('div', {
         className: l()(v.buttonContainer, T.t4),
         ref: t,
@@ -64,7 +64,7 @@ let Z = a.forwardRef(function (e, t) {
 t.Z = a.memo(function (e) {
     let { channel: t, type: n, animateRef: s } = e,
         l = a.useRef(null),
-        o = (0, C.g)(t),
+        o = (0, g.g)(t),
         { activeCommand: c } = (0, r.cj)([E.Z], () => {
             var e;
             return { activeCommand: (null === (e = n.commands) || void 0 === e ? void 0 : e.enabled) ? E.Z.getActiveCommand(t.id) : null };
