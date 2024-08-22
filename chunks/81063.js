@@ -155,23 +155,32 @@ async function v(e, t) {
     });
     let r = [],
         i = t.filter((e) => (null == e ? void 0 : e.startsWith('http:')) || (null == e ? void 0 : e.startsWith('https:')));
-    return (i.length > 0 && (await A(e, i)), N(t, r))
-        ? (s.Z.dispatch({
-              type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
-              applicationId: e
-          }),
-          r)
-        : O(t, r, await S(e), n)
-          ? m(e).then(() => v(e, t, n - 1))
-          : (s.Z.dispatch({
+    if ((i.length > 0 && (await A(e, i)), N(t, r)))
+        return (
+            s.Z.dispatch({
                 type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
                 applicationId: e
             }),
-            r);
+            r
+        );
+    let a = await S(e);
+    return (s.Z.dispatch({
+        type: 'APPLICATION_ASSETS_UPDATE',
+        applicationId: e,
+        assets: a
+    }),
+    O(t, r, a, n))
+        ? m(e).then(() => v(e, t, n - 1))
+        : (s.Z.dispatch({
+              type: 'APPLICATION_ASSETS_FETCH_SUCCESS',
+              applicationId: e
+          }),
+          r);
 }
 function R(e, t) {
-    let n = [];
-    if (N(t, n)) return n;
-    let r = o.Z.getApplicationAssets(e);
-    return null == r ? n : (O(t, n, r), n);
+    var n;
+    let r = [];
+    if (N(t, r)) return r;
+    let i = null === (n = o.Z.getApplicationAssets(e)) || void 0 === n ? void 0 : n.assets;
+    return null == i ? r : (O(t, r, i), r);
 }

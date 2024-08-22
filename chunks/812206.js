@@ -16,12 +16,15 @@ function h(e) {
     delete f[e.id];
 }
 function p(e) {
+    h(u.Z.createFromServer(e));
+}
+function I(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (h(u.Z.createFromServer(e.application)), (n = !0));
     return n;
 }
-class I extends (r = o.ZP.Store) {
+class m extends (r = o.ZP.Store) {
     _getAllApplications() {
         return Object.values(d);
     }
@@ -53,7 +56,7 @@ class I extends (r = o.ZP.Store) {
     }
 }
 (s = 'ApplicationStore'),
-    (a = 'displayName') in (i = I)
+    (a = 'displayName') in (i = m)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -61,7 +64,7 @@ class I extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new I(l.Z, {
+    (t.Z = new m(l.Z, {
         LOGOUT: function () {
             (d = {}), (_ = {}), (E = {}), (f = {});
         },
@@ -76,7 +79,7 @@ class I extends (r = o.ZP.Store) {
         },
         APPLICATION_FETCH_SUCCESS: function (e) {
             let { application: t } = e;
-            h(u.Z.createFromServer(t));
+            p(t);
         },
         APPLICATION_FETCH_FAIL: function (e) {
             let { applicationId: t } = e,
@@ -105,9 +108,13 @@ class I extends (r = o.ZP.Store) {
             }
             return n;
         },
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: p,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: p,
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: p,
+        APPLICATION_UPDATE: function (e) {
+            let { application: t } = e;
+            p(t);
+        },
+        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: I,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: I,
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: I,
         GUILD_SETTINGS_LOADED_INTEGRATIONS: function (e) {
             let { integrations: t, guildId: n } = e,
                 r = !1,
