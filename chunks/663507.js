@@ -15,6 +15,9 @@ n.d(t, {
     DP: function () {
         return a;
     },
+    ZI: function () {
+        return u;
+    },
     ZP: function () {
         return l;
     },
@@ -207,4 +210,34 @@ class l {
             }),
             r(this, 'getSectionHeight', o);
     }
+}
+function u(e, t, n) {
+    let r = {},
+        i = {};
+    for (let i in e)
+        if (null == t[i]) r[i] = e[i];
+        else {
+            let r = e[i],
+                a = t[i];
+            for (let e = 0; e < r.length; e++) {
+                let [t] = r[e];
+                !a.some((e) => {
+                    let [n] = e;
+                    return t === n;
+                }) && n(r[e][1], r[e][2], !0);
+            }
+        }
+    for (let r in t)
+        if (null == e[r]) i[r] = t[r];
+        else {
+            let i = e[r],
+                a = t[r];
+            for (let e = 0; e < a.length; e++) {
+                let [t] = a[e];
+                !i.some((e) => {
+                    let [n] = e;
+                    return n === t;
+                }) && n(a[e][1], a[e][2], !1);
+            }
+        }
 }

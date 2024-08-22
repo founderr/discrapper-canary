@@ -5,6 +5,9 @@ n.d(t, {
     B3: function () {
         return A;
     },
+    CK: function () {
+        return G;
+    },
     EK: function () {
         return D;
     },
@@ -15,13 +18,13 @@ n.d(t, {
         return R;
     },
     Gh: function () {
-        return B;
+        return F;
     },
     Lp: function () {
         return m;
     },
     Lx: function () {
-        return G;
+        return k;
     },
     Oe: function () {
         return N;
@@ -45,7 +48,7 @@ n.d(t, {
         return y;
     },
     _v: function () {
-        return F;
+        return V;
     },
     aC: function () {
         return b;
@@ -60,7 +63,7 @@ n.d(t, {
         return I;
     },
     j$: function () {
-        return k;
+        return B;
     },
     jK: function () {
         return f;
@@ -300,6 +303,14 @@ function x(e) {
     });
 }
 function G(e) {
+    let { guildId: t, position: n } = e;
+    u.default.track(d.rMx.DISCOVERY_GUILD_IMPRESSIONED, {
+        ...f(),
+        guild_id: t,
+        position: n
+    });
+}
+function k(e) {
     let { fromPage: t, toPage: n } = e;
     u.default.track(d.rMx.DISCOVERY_GUILD_PAGINATION_CLICKED, {
         ...f(),
@@ -307,7 +318,7 @@ function G(e) {
         to_page: n
     });
 }
-function k(e) {
+function B(e) {
     let { guildId: t, position: n, isFavorited: r } = e;
     u.default.track(d.rMx.DISCOVERY_GUILD_FAVORITED, {
         ...f(),
@@ -316,7 +327,7 @@ function k(e) {
         favorite: r
     });
 }
-function B(e) {
+function F(e) {
     let { feature: t, guildId: n, position: r } = e;
     u.default.track(d.rMx.DISCOVERY_GUILD_CARD_INTERACTION, {
         ...f(),
@@ -325,7 +336,7 @@ function B(e) {
         position: r
     });
 }
-function F(e) {
+function V(e) {
     let { guildId: t, position: n } = e;
     u.default.track(d.rMx.GUILD_APPLICATION_ABANDONED, {
         ...f({ outcome: _.qz.HIT }),

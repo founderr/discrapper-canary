@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     s: function () {
-        return x;
+        return b;
     }
 }),
     n(47120);
@@ -35,6 +35,15 @@ var i,
     O = n(266489);
 let R = 56;
 function x(e) {
+    switch (e) {
+        case 'saved_guilds':
+            return 0;
+        case 'global_discovery':
+        case 'default':
+            return 1;
+    }
+}
+function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
     return e === C.v0.SAVED_GUILDS ? 'saved_guilds' : t;
 }
@@ -51,14 +60,14 @@ t.ZP = o.memo(function (e) {
                 i = a / t;
             return i > 360 ? Math.floor(t - (t - e) / 2) : n < 240 ? Math.max(e, t) : e;
         }, [a]),
-        { loaded: c, clans: x, searchResult: b, searchCriteria: P } = (0, S.ML)(r, 'saved_guilds' === n),
-        M = (0, C.GN)((e) => e.selectedTraits, u.Z),
-        D = (0, h.Z)(b),
-        { currentPage: y, updatePage: j, totalItems: U, pageSize: G } = (0, f.$)();
+        { loaded: c, clans: b, searchResult: P, searchCriteria: M } = (0, S.ML)(r, 'saved_guilds' === n),
+        D = (0, C.GN)((e) => e.selectedTraits, u.Z),
+        y = (0, h.Z)(P),
+        { currentPage: j, updatePage: U, totalItems: G, pageSize: k } = (0, f.$)();
     o.useEffect(() => {
-        if (null != b && !!(0, v.Pw)(b)) (!(null != D && (0, v.Pw)(D)) || !(D.loadedAt >= b.loadedAt)) && (0, E.Oe)('top_picks', P);
-    }, [P, b, D]);
-    let k = o.useMemo(
+        if (null != P && !!(0, v.Pw)(P)) (!(null != y && (0, v.Pw)(y)) || !(y.loadedAt >= P.loadedAt)) && (0, E.Oe)('top_picks', M);
+    }, [M, P, y]);
+    let w = o.useMemo(
             () =>
                 (function (e, t, n, i) {
                     if (null == e) return [];
@@ -153,46 +162,35 @@ t.ZP = o.memo(function (e) {
                         default:
                             return [];
                     }
-                })(x, r, n, y),
-            [x, r, n, y]
+                })(b, r, n, j),
+            [b, r, n, j]
         ),
-        w = o.useCallback(
+        B = o.useCallback(
             (e) => {
                 var t;
                 (0, E.Lx)({
-                    fromPage: y,
+                    fromPage: j,
                     toPage: e
                 }),
                     null === (t = s.current) ||
                         void 0 === t ||
                         t.scrollToTop({
                             callback: () => {
-                                j(e);
+                                U(e);
                             }
                         });
             },
-            [j, y]
+            [U, j]
         ),
-        B = o.useMemo(() => new Set(P.games), [P.games]),
-        H = o.useCallback(
+        [, H] = o.useState(new Set()),
+        V = o.useMemo(() => new Set(M.games), [M.games]),
+        F = o.useCallback(
             (e, t, i, a) => {
                 var s;
-                let { items: o, section: c } = k[e];
+                let { items: o, section: c } = w[e];
                 if ('upsell' === c || 'hero' === c) return null;
-                let d =
-                        (e -
-                            (function (e) {
-                                switch (e) {
-                                    case 'saved_guilds':
-                                        return 0;
-                                    case 'global_discovery':
-                                    case 'default':
-                                        return 1;
-                                }
-                            })(n)) *
-                            r +
-                        t,
-                    u = y * G + d,
+                let d = (e - x(n)) * r + t,
+                    u = (j - 1) * k + d,
                     _ = o[t];
                 return (0, l.jsx)(
                     p.ZP,
@@ -200,23 +198,46 @@ t.ZP = o.memo(function (e) {
                         clan: _,
                         index: d,
                         position: u,
-                        affinity: null !== (s = _.affininty) && void 0 !== s ? s : (0, g.y)(_, P),
-                        traitsToHighlight: M,
+                        affinity: null !== (s = _.affininty) && void 0 !== s ? s : (0, g.y)(_, M),
+                        traitsToHighlight: D,
                         className: O.card,
                         style: i,
                         source: Z.jXE.DISCOVER_SEARCH,
-                        prioritizedGameIds: B,
+                        prioritizedGameIds: V,
                         onlyAnimateIconOnHover: !0
                     },
                     a
                 );
             },
-            [P, k, M, B, r, n, y, G]
+            [M, w, D, V, r, n, j, k]
         ),
-        V = o.useCallback((e, t, n, i) => (0, l.jsx)(T.Z, { style: n }, i), []),
-        F = o.useCallback(
+        Y = o.useCallback(
+            (e, t, i) => {
+                let { items: a, section: s } = w[e];
+                if ('upsell' === s || 'hero' === s) return;
+                let l = (j - 1) * k + ((e - x(n)) * r + t),
+                    o = a[t];
+                null != o &&
+                    i &&
+                    H((e) => {
+                        let t = new Set(e);
+                        return (
+                            t.add(o.id),
+                            t.size > e.size &&
+                                (0, E.CK)({
+                                    guildId: o.id,
+                                    position: l
+                                }),
+                            t
+                        );
+                    });
+            },
+            [w, H, r, n, j, k]
+        ),
+        W = o.useCallback((e, t, n, i) => (0, l.jsx)(T.Z, { style: n }, i), []),
+        z = o.useCallback(
             (e, t) => {
-                let { header: n, subtitle: i, section: a } = k[e];
+                let { header: n, subtitle: i, section: a } = w[e];
                 switch (a) {
                     case 'upsell':
                         return (0, l.jsx)(N.Z, {});
@@ -246,15 +267,15 @@ t.ZP = o.memo(function (e) {
                     case 'pagination':
                         return (0, l.jsx)(l.Fragment, {
                             children:
-                                U > G &&
+                                G > k &&
                                 (0, l.jsx)(_.Paginator, {
                                     className: d()(O.paginationInput),
-                                    totalCount: U,
-                                    pageSize: G,
+                                    totalCount: G,
+                                    pageSize: k,
                                     disablePaginationGap: !0,
                                     hideMaxPage: !0,
-                                    currentPage: y,
-                                    onPageChange: w
+                                    currentPage: j,
+                                    onPageChange: B
                                 })
                         });
                     default:
@@ -270,9 +291,9 @@ t.ZP = o.memo(function (e) {
                         });
                 }
             },
-            [y, w, G, k, U]
+            [j, B, k, w, G]
         );
-    if (0 === x.length && c && 'saved_guilds' === n)
+    if (0 === b.length && c && 'saved_guilds' === n)
         return (0, l.jsxs)('div', {
             className: O.emptySavedGuilds,
             children: [
@@ -288,7 +309,7 @@ t.ZP = o.memo(function (e) {
                 })
             ]
         });
-    if (0 === x.length && c)
+    if (0 === b.length && c)
         return (0, l.jsxs)('div', {
             className: O.emptySavedGuilds,
             children: [
@@ -304,12 +325,12 @@ t.ZP = o.memo(function (e) {
                 })
             ]
         });
-    let Y = c
-        ? k.map((e) => {
+    let K = c
+        ? w.map((e) => {
               let { items: t } = e;
               return t.length;
           })
-        : k.map((e) => {
+        : w.map((e) => {
               let { skeletonCount: t } = e;
               return null != t ? t : 0;
           });
@@ -319,21 +340,22 @@ t.ZP = o.memo(function (e) {
             children: (0, l.jsx)(_.MasonryList, {
                 ref: s,
                 className: O.masonryList,
-                sections: Y,
+                sections: K,
                 columns: r,
                 itemGutter: 16,
                 paddingHorizontal: 32,
                 paddingVertical: 0,
                 removeEdgeItemGutters: !0,
-                renderItem: c ? H : V,
-                renderSection: F,
-                getSectionHeight: (e) => k[e].sectionHeight,
-                getItemKey: (e, t) => (c ? k[e].items[t].id : ''.concat(e, '-').concat(t)),
-                getItemHeight: (e) => k[e].itemHeight,
+                renderItem: c ? F : W,
+                renderSection: z,
+                getSectionHeight: (e) => w[e].sectionHeight,
+                getItemKey: (e, t) => (c ? w[e].items[t].id : ''.concat(e, '-').concat(t)),
+                getItemHeight: (e) => w[e].itemHeight,
                 getSectionProps: (e) => {
                     var t;
-                    return null !== (t = k[e].props) && void 0 !== t ? t : {};
+                    return null !== (t = w[e].props) && void 0 !== t ? t : {};
                 },
+                onItemVisibilityChange: Y,
                 chunkSize: 4 * r,
                 maxContentWidth: 2000,
                 onScroll: i
