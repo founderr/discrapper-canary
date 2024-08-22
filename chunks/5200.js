@@ -1,6 +1,6 @@
 n.d(t, {
     Y: function () {
-        return x;
+        return T;
     }
 }),
     n(47120);
@@ -12,122 +12,124 @@ var i,
     o = n.n(r),
     c = n(338545),
     u = n(481060),
-    d = n(792125),
-    h = n(542094),
-    p = n(182906),
-    m = n(556505),
-    _ = n(513202),
-    f = n(981631),
-    E = n(689938),
-    g = n(774867);
-let C = ['embedded_cover'],
-    I = {
+    d = n(895924),
+    h = n(792125),
+    p = n(542094),
+    m = n(182906),
+    _ = n(556505),
+    f = n(513202),
+    E = n(981631),
+    g = n(689938),
+    C = n(774867);
+let I = ['embedded_cover'],
+    x = {
         tension: 800,
         friction: 24
     };
-function x(e) {
+function T(e) {
     var t;
-    let { channel: n, activityItem: i, onClick: a, aspectRatio: r = 0, animatedDivClass: x } = e,
+    let { channel: n, activityItem: i, onClick: a, aspectRatio: r = 0, animatedDivClass: T } = e,
         {
-            onActivityItemSelected: T,
-            imageBackground: N,
-            activityAction: v,
-            labelType: S
-        } = (0, h.ZP)({
+            onActivityItemSelected: N,
+            imageBackground: v,
+            activityAction: S,
+            labelType: Z
+        } = (0, p.ZP)({
             channel: n,
             activityItem: i,
             guildId: null !== (t = n.getGuildId()) && void 0 !== t ? t : void 0,
             locationObject: {},
             onActivityItemSelected: a,
-            embeddedActivitiesManager: _.Z,
-            assetNames: C
+            embeddedActivitiesManager: f.Z,
+            assetNames: I,
+            commandOrigin: d.bB.VOICE_UI
         }),
-        [Z, A] = l.useState(!1),
-        M = l.useCallback(() => {
-            A(!0);
-        }, [A]),
+        [A, M] = l.useState(!1),
         b = l.useCallback(() => {
-            A(!1);
-        }, [A]),
-        R = l.useMemo(
+            M(!0);
+        }, [M]),
+        R = l.useCallback(() => {
+            M(!1);
+        }, [M]),
+        L = l.useMemo(
             () =>
                 (0, s.jsx)('div', {
-                    className: g.overlayBadge,
+                    className: C.overlayBadge,
                     children: (0, s.jsx)('div', {
-                        className: g.badgeContainer,
-                        children: (0, s.jsx)(m.Z, {
+                        className: C.badgeContainer,
+                        children: (0, s.jsx)(_.Z, {
                             name: i.application.name,
-                            labelType: S
+                            labelType: Z
                         })
                     })
                 }),
-            [i.application.name, S]
+            [i.application.name, Z]
         ),
-        L = l.useMemo(() => {
-            switch (v) {
-                case h.JS.JOIN:
+        j = l.useMemo(() => {
+            switch (S) {
+                case p.JS.JOIN:
                     return (0, s.jsx)('div', {
-                        className: g.activityAction,
+                        className: C.activityAction,
                         children: (0, s.jsx)('div', {
-                            className: g.activityActionButton,
+                            className: C.activityActionButton,
                             children: (0, s.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: E.Z.Messages.JOIN
+                                children: g.Z.Messages.JOIN
                             })
                         })
                     });
-                case h.JS.LEAVE:
+                case p.JS.LEAVE:
                     return (0, s.jsx)('div', {
-                        className: g.activityAction,
+                        className: C.activityAction,
                         children: (0, s.jsx)('div', {
-                            className: o()(g.activityActionButton, g.activityActionButtonDanger),
+                            className: o()(C.activityActionButton, C.activityActionButtonDanger),
                             children: (0, s.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: E.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE
+                                children: g.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE
                             })
                         })
                     });
-                case h.JS.START:
+                case p.JS.START:
                 default:
                     return (0, s.jsx)(s.Fragment, {});
             }
-        }, [v]);
+        }, [S]);
     return (0, s.jsx)(u.Button, {
-        onClick: T,
+        onClick: N,
         color: 'transparent',
         look: u.Button.Looks.BLANK,
         size: u.Button.Sizes.NONE,
-        onFocus: M,
-        onBlur: b,
-        onMouseEnter: M,
-        onMouseLeave: b,
-        innerClassName: g.activityItemButtonInnerClass,
+        onFocus: b,
+        onBlur: R,
+        onMouseEnter: b,
+        onMouseLeave: R,
+        innerClassName: C.activityItemButtonInnerClass,
         children: (0, s.jsx)(u.Spring, {
-            config: I,
+            config: x,
             from: { value: 0 },
-            to: { value: Z ? 1 : 0 },
+            to: { value: A ? 1 : 0 },
             children: (e) => {
                 let { value: t } = e;
                 return (0, s.jsx)(c.animated.div, {
-                    className: o()((0, d.Q)(f.BRd.DARK), g.activityItem, x, {
-                        [g.activityItem_13_11]: 0 === r,
-                        [g.activityItem_16_9]: 1 === r
+                    className: o()((0, h.Q)(E.BRd.DARK), C.activityItem, T, {
+                        [C.activityItem_13_11]: 0 === r,
+                        [C.activityItem_16_9]: 1 === r
                     }),
                     style: {
                         transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))
                     },
                     children: (0, s.jsxs)(s.Fragment, {
                         children: [
-                            (0, s.jsx)(p.Z, {
-                                imageBackground: N,
+                            (0, s.jsx)(m.Z, {
+                                imageBackground: v,
                                 applicationName: i.application.name,
-                                imageClassName: g.activitySuggestionImage,
-                                imageNotFoundClassName: g.brokenImageIconWrapper
+                                imageClassName: C.activitySuggestionImage,
+                                imageNotFoundClassName: C.brokenImageIconWrapper
                             }),
-                            R,
-                            L
+                            L,
+                            j
                         ]
                     })
                 });
@@ -135,4 +137,4 @@ function x(e) {
         })
     });
 }
-((a = i || (i = {}))[(a.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (a[(a.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), (x.AspectRatio = i);
+((a = i || (i = {}))[(a.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (a[(a.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), (T.AspectRatio = i);

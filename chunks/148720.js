@@ -18,24 +18,26 @@ var r = n(668781),
     h = n(527805),
     p = n(689938);
 async function I(e) {
-    let { channelId: t, applicationId: n, launchId: I, inputApplication: m, analyticsLocations: T, launchingComponentId: g } = e,
-        S = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == I || e.launchId === I)),
-        A = m;
-    if (null == A) {
+    let { channelId: t, applicationId: n, launchId: I, inputApplication: m, analyticsLocations: T, launchingComponentId: g, commandOrigin: S, sectionName: A } = e,
+        N = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == I || e.launchId === I)),
+        O = m;
+    if (null == O) {
         let e = await i.Z.fetchApplication(n);
-        A = s.Z.createFromServer(e);
+        O = s.Z.createFromServer(e);
     }
-    if (null == S || null == A) return;
-    let N = c.default.getCurrentUser(),
-        O = o.Z.getChannel(t);
-    async function v() {
-        if (null != S)
+    if (null == N || null == O) return;
+    let v = c.default.getCurrentUser(),
+        R = o.Z.getChannel(t);
+    async function C() {
+        if (null != N)
             await (0, E.Z)({
-                applicationId: S.applicationId,
+                applicationId: N.applicationId,
                 activityChannelId: t,
                 locationObject: {},
                 analyticsLocations: T,
-                componentId: g
+                componentId: g,
+                commandOrigin: S,
+                sectionName: A
             });
     }
     !(function (e) {
@@ -80,16 +82,16 @@ async function I(e) {
         }
     })({
         embeddedActivityJoinability: (0, h.ZP)({
-            userId: null == N ? void 0 : N.id,
-            application: A,
+            userId: null == v ? void 0 : v.id,
+            application: O,
             channelId: t,
-            currentUser: N,
-            isActivitiesEnabledForCurrentPlatform: (0, f.a)(O),
+            currentUser: v,
+            isActivitiesEnabledForCurrentPlatform: (0, f.a)(R),
             ChannelStore: o.Z,
             VoiceStateStore: d.Z,
             PermissionStore: u.Z,
             GuildStore: l.Z
         }),
-        handleCanJoin: v
+        handleCanJoin: C
     });
 }

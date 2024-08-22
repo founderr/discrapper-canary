@@ -19,47 +19,49 @@ var r = n(812206),
     p = n(701488);
 async function I(e) {
     let t,
-        { applicationId: n, activityChannelId: I, locationObject: m, analyticsLocations: T, componentId: g } = e,
-        S = (0, _.Z)(),
-        A = i.Z.getChannel(I),
-        N = null == A ? void 0 : A.getGuildId(),
-        O = null == N || '' === N,
-        v = s.default.getCurrentUser();
-    if (null == A || (O && !A.isPrivate()) || null == I || null == v) return Promise.resolve(!1);
-    let R = u.ZP.getCurrentEmbeddedActivity();
-    if (((null == R ? void 0 : R.applicationId) != null && (t = r.Z.getApplication(null == R ? void 0 : R.applicationId)), a.Z.getVoiceChannelId() === I && (null == R ? void 0 : R.applicationId) === n && (null == R ? void 0 : R.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(N, I), Promise.resolve(!0);
+        { applicationId: n, activityChannelId: I, locationObject: m, analyticsLocations: T, componentId: g, commandOrigin: S, sectionName: A } = e,
+        N = (0, _.Z)(),
+        O = i.Z.getChannel(I),
+        v = null == O ? void 0 : O.getGuildId(),
+        R = null == v || '' === v,
+        C = s.default.getCurrentUser();
+    if (null == O || (R && !O.isPrivate()) || null == I || null == C) return Promise.resolve(!1);
+    let y = u.ZP.getCurrentEmbeddedActivity();
+    if (((null == y ? void 0 : y.applicationId) != null && (t = r.Z.getApplication(null == y ? void 0 : y.applicationId)), a.Z.getVoiceChannelId() === I && (null == y ? void 0 : y.applicationId) === n && (null == y ? void 0 : y.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(v, I), Promise.resolve(!0);
     if (
         !(await (0, c.p)({
             applicationId: n,
             application: await (0, d.Z)(n, I),
-            channel: A,
+            channel: O,
             currentEmbeddedApplication: t,
-            embeddedActivitiesManager: S,
-            user: v
+            embeddedActivitiesManager: N,
+            user: C
         }))
     )
         return !1;
-    let C = (0, E.Z)(A.id),
-        y = p.wP.includes(A.type);
-    if (C) {
+    let D = (0, E.Z)(O.id),
+        L = p.wP.includes(O.type);
+    if (D) {
         if (
             !(await (0, f.Z)({
-                channelId: A.id,
+                channelId: O.id,
                 bypassChangeModal: null != t
             }))
         )
             return !1;
-    } else if (!(0, o.WS)(A) || !y) return !1;
+    } else if (!(0, o.WS)(O) || !L) return !1;
     return (
         (0, l.cG)(I, n),
         await (0, l.af)({
             channelId: I,
             applicationId: n,
             isStart: !1,
-            embeddedActivitiesManager: S,
+            embeddedActivitiesManager: N,
             analyticsLocations: T,
             locationObject: m,
-            componentId: g
+            componentId: g,
+            commandOrigin: S,
+            sectionName: A
         })
     );
 }

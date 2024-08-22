@@ -20,16 +20,16 @@ var s = t(120356),
     E = t(846401),
     _ = t(197115),
     S = t(981631),
-    h = t(474936),
-    g = t(689938),
+    g = t(474936),
+    h = t(689938),
     C = t(304095);
 function I(e) {
     let { location: n, ...t } = e;
     return (0, l.jsx)(_.Z, {
         className: a()(C.enhancedCTA, C.ctaGradientBackground),
         iconClassName: C.premiumIcon,
-        subscriptionTier: h.Si.TIER_2,
-        buttonText: g.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
+        subscriptionTier: g.Si.TIER_2,
+        buttonText: h.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_CTA,
         size: o.Button.Sizes.TINY,
         premiumModalAnalyticsLocation: n,
         ...t
@@ -53,13 +53,13 @@ function x() {
                             }),
                             (0, l.jsx)(o.Text, {
                                 variant: 'text-xs/bold',
-                                children: g.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_TITLE.toUpperCase()
+                                children: h.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_TITLE.toUpperCase()
                             })
                         ]
                     }),
                     (0, l.jsx)(o.Text, {
                         variant: 'text-sm/medium',
-                        children: g.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_BODY
+                        children: h.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_V2_DURATION_UPSELL_BODY
                     })
                 ]
             }),
@@ -84,9 +84,8 @@ function N() {
             }),
             (0, l.jsx)(o.Text, {
                 variant: 'text-xs/medium',
-                color: 'always-white',
                 className: C.reverseTrialEducationText,
-                children: g.Z.Messages.PREMIUM_REVERSE_TRIAL_SCREEN_SHARE_QUALITY_EDUCATION.format()
+                children: h.Z.Messages.PREMIUM_REVERSE_TRIAL_SCREEN_SHARE_QUALITY_EDUCATION.format()
             })
         ]
     });
@@ -123,9 +122,9 @@ function Z(e) {
                                               : E
                                                 ? (0, l.jsxs)(l.Fragment, {
                                                       children: [
-                                                          g.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_UPSELL_BODY,
+                                                          h.Z.Messages.GO_LIVE_MODAL_PERK_DEMO_HD_STREAMING_OPT_IN_UPSELL_BODY,
                                                           ' ',
-                                                          g.Z.Messages.LEARN_MORE_CLICK.format({
+                                                          h.Z.Messages.LEARN_MORE_CLICK.format({
                                                               onClick: () =>
                                                                   s({
                                                                       analyticsLocation: c,
@@ -134,7 +133,7 @@ function Z(e) {
                                                           })
                                                       ]
                                                   })
-                                                : g.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
+                                                : h.Z.Messages.STREAM_PREMIUM_UPSELL_BANNER_LEARN_MORE_V3.format({
                                                       onClick: () =>
                                                           s({
                                                               analyticsLocation: c,

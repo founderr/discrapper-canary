@@ -46,10 +46,7 @@ function u(e) {
                         (0, i.jsxs)('div', {
                             className: c.poweredByNitroContainer,
                             children: [
-                                (0, i.jsx)(l.NitroWheelIcon, {
-                                    size: 'xs',
-                                    color: 'white'
-                                }),
+                                (0, i.jsx)(l.NitroWheelIcon, { size: 'xs' }),
                                 (0, i.jsx)(l.Text, {
                                     className: c.infoText,
                                     variant: 'text-sm/medium',

@@ -13,29 +13,31 @@ var r = n(592125),
     c = n(275920),
     d = n(981631);
 async function _(e) {
-    let { targetApplicationId: t, locationObject: n, channelId: _, analyticsLocations: E, componentId: f } = e,
-        h = (0, u.Z)(),
-        p = i.default.getCurrentUser();
+    let { targetApplicationId: t, locationObject: n, channelId: _, analyticsLocations: E, componentId: f, commandOrigin: h, sectionName: p } = e,
+        I = (0, u.Z)(),
+        m = i.default.getCurrentUser();
     if (null == t) return !1;
-    let I = await (0, l.Z)(t, _);
+    let T = await (0, l.Z)(t, _);
     return null == _
         ? (a.S.dispatch(d.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t }), !1)
         : null != r.Z.getChannel(_) &&
-              null != p &&
-              null != I &&
+              null != m &&
+              null != T &&
               ((0, c.Z)({
                   type: d.q5t.LAUNCH,
-                  userId: p.id,
-                  applicationId: I.id,
+                  userId: m.id,
+                  applicationId: T.id,
                   locationObject: n,
                   analyticsLocations: E
               }),
-              s.tZ(I.id),
+              s.tZ(T.id),
               await (0, o.af)({
                   channelId: _,
-                  applicationId: I.id,
+                  applicationId: T.id,
                   isStart: !0,
-                  embeddedActivitiesManager: h,
-                  componentId: f
+                  embeddedActivitiesManager: I,
+                  componentId: f,
+                  commandOrigin: h,
+                  sectionName: p
               }));
 }

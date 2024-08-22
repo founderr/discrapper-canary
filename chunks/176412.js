@@ -1,12 +1,12 @@
 t.d(n, {
     Bm: function () {
-        return g;
+        return P;
     },
     P7: function () {
-        return I;
+        return g;
     },
     ae: function () {
-        return v;
+        return I;
     }
 });
 var i = t(470079),
@@ -18,75 +18,78 @@ var i = t(470079),
     c = t(542094),
     d = t(513202),
     u = t(367907),
-    m = t(691424),
-    p = t(428595),
-    _ = t(364458),
-    C = t(499254),
-    f = t(541099),
-    h = t(827498),
-    E = t(981631),
-    A = t(689938);
-let N = {
-        ...p.Z.RULES.commandMention,
-        parse: (e, n, t) => ({ content: p.Z.RULES.commandMention.parse(e, n, t).content })
+    m = t(895924),
+    p = t(691424),
+    _ = t(428595),
+    C = t(364458),
+    f = t(499254),
+    h = t(541099),
+    E = t(827498),
+    A = t(981631),
+    N = t(689938);
+let x = {
+        ..._.Z.RULES.commandMention,
+        parse: (e, n, t) => ({ content: _.Z.RULES.commandMention.parse(e, n, t).content })
     },
-    x = l().pick(
-        (0, _.Z)([
-            p.Z.RULES,
-            { commandMention: N },
-            (0, m.Z)({
+    v = l().pick(
+        (0, C.Z)([
+            _.Z.RULES,
+            { commandMention: x },
+            (0, p.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1
             })
         ]),
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
-    v = o.w4(x);
-function I(e) {
-    let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: o = !0, launchingComponentId: m, submitting: p = !1 } = e,
-        _ = (0, s.O)(),
-        N = (0, c.Qv)({
+    I = o.w4(v);
+function g(e) {
+    let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: o = !0, launchingComponentId: p, submitting: _ = !1 } = e,
+        C = (0, s.O)(),
+        x = (0, c.Qv)({
             channelId: n.id,
             applicationId: t.id
         }),
-        x = (0, c.w1)({
+        v = (0, c.w1)({
             applicationId: t.id,
             embeddedActivitiesManager: d.Z,
             channelId: n.id,
-            locationObject: _.location,
+            locationObject: C.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e,
-                    t = f.Z.entrypoint();
-                o && C.y(h.ti.ACTIVITY),
-                    (0, u.yw)(E.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                    t = h.Z.entrypoint();
+                o && f.y(E.ti.ACTIVITY),
+                    (0, u.yw)(A.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,
                         section_name: a,
-                        action: N,
+                        action: x,
                         source: t
                     });
             },
-            launchingComponentId: m
+            launchingComponentId: p,
+            commandOrigin: m.bB.APPLICATION_LAUNCHER,
+            sectionName: a
         }),
-        v = r.ButtonColors.BRAND,
-        I = null != l ? l : A.Z.Messages.LAUNCH;
+        I = r.ButtonColors.BRAND,
+        g = null != l ? l : N.Z.Messages.LAUNCH;
     return (
-        N === c.JS.JOIN ? ((v = r.ButtonColors.GREEN), (I = A.Z.Messages.JOIN_ACTIVITY)) : N === c.JS.LEAVE && !p && ((v = r.ButtonColors.RED), (I = A.Z.Messages.LEAVE)),
+        x === c.JS.JOIN ? ((I = r.ButtonColors.GREEN), (g = N.Z.Messages.JOIN_ACTIVITY)) : x === c.JS.LEAVE && !_ && ((I = r.ButtonColors.RED), (g = N.Z.Messages.LEAVE)),
         {
-            onActivityItemSelected: x,
-            activityAction: N,
-            buttonColor: v,
-            buttonText: I
+            onActivityItemSelected: v,
+            activityAction: x,
+            buttonColor: I,
+            buttonText: g
         }
     );
 }
-function g(e, n) {
-    let t = f.Z.entrypoint(),
+function P(e, n) {
+    let t = h.Z.entrypoint(),
         l = i.useMemo(
             () =>
                 (0, a.debounce)(
                     (e, n) => {
-                        (0, u.yw)(E.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, u.yw)(A.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: n
                         });

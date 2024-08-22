@@ -291,6 +291,12 @@ function y(e) {
     switch (e) {
         case f.bB.CHAT:
         case f.bB.APPLICATION_LAUNCHER:
+        case f.bB.CONTEXT_MENU:
+        case f.bB.VOICE_UI:
+        case f.bB.USER_PROFILE:
+        case f.bB.NOW_PLAYING:
+        case f.bB.ACTIVITY_DETAILS:
+        case f.bB.ACTIVITIES_HOME:
         case f.bB.IMAGE_RECS_MENU:
             return E.d.SlashCommand;
     }

@@ -1,42 +1,42 @@
 n.d(t, {
     $h: function () {
-        return $;
-    },
-    W5: function () {
-        return ea;
-    },
-    af: function () {
-        return z;
-    },
-    cG: function () {
-        return K;
-    },
-    gC: function () {
-        return eo;
-    },
-    kv: function () {
         return J;
     },
-    mW: function () {
-        return Q;
-    },
-    pu: function () {
-        return er;
-    },
-    rp: function () {
-        return X;
-    },
-    sN: function () {
-        return en;
-    },
-    tg: function () {
+    W5: function () {
         return es;
     },
-    ux: function () {
+    af: function () {
+        return q;
+    },
+    cG: function () {
+        return z;
+    },
+    gC: function () {
+        return el;
+    },
+    kv: function () {
+        return ee;
+    },
+    mW: function () {
+        return X;
+    },
+    pu: function () {
         return ei;
     },
+    rp: function () {
+        return $;
+    },
+    sN: function () {
+        return er;
+    },
+    tg: function () {
+        return eo;
+    },
+    ux: function () {
+        return ea;
+    },
     w1: function () {
-        return et;
+        return en;
     }
 }),
     n(789020),
@@ -54,57 +54,58 @@ var r = n(990547),
     _ = n(911969),
     E = n(845936),
     f = n(213459),
-    h = n(812236),
-    p = n(812206),
-    I = n(358221),
-    m = n(233764),
-    T = n(188597),
-    g = n(835873),
-    S = n(973616),
-    A = n(314897),
-    N = n(592125),
-    O = n(430824),
-    v = n(496675),
-    R = n(594174),
-    C = n(979651),
-    y = n(585483),
-    D = n(630388),
-    L = n(823379),
-    b = n(573261),
-    M = n(595519),
-    P = n(317381),
-    U = n(363522),
-    w = n(672181),
-    x = n(882347),
-    G = n(224189),
-    k = n(374065),
-    B = n(917107),
-    F = n(89425),
-    V = n(275920),
-    H = n(701488),
-    Z = n(981631),
-    Y = n(674563),
-    j = n(245335),
-    W = n(689938);
-function K(e, t) {
-    let n = A.default.getId(),
-        r = P.ZP.getSelfEmbeddedActivityForChannel(e),
-        i = P.ZP.getEmbeddedActivitiesForChannel(e).find((e) => e.applicationId === t && e.userIds.has(n));
+    h = n(667204),
+    p = n(812236),
+    I = n(812206),
+    m = n(358221),
+    T = n(233764),
+    g = n(188597),
+    S = n(835873),
+    A = n(973616),
+    N = n(314897),
+    O = n(592125),
+    v = n(430824),
+    R = n(496675),
+    C = n(594174),
+    y = n(979651),
+    D = n(585483),
+    L = n(630388),
+    b = n(823379),
+    M = n(573261),
+    P = n(595519),
+    U = n(317381),
+    w = n(363522),
+    x = n(672181),
+    G = n(882347),
+    k = n(224189),
+    B = n(374065),
+    F = n(917107),
+    V = n(89425),
+    H = n(275920),
+    Z = n(701488),
+    Y = n(981631),
+    j = n(674563),
+    W = n(245335),
+    K = n(689938);
+function z(e, t) {
+    let n = N.default.getId(),
+        r = U.ZP.getSelfEmbeddedActivityForChannel(e),
+        i = U.ZP.getEmbeddedActivitiesForChannel(e).find((e) => e.applicationId === t && e.userIds.has(n));
     null != r
-        ? Q({
+        ? X({
               channelId: e,
               applicationId: r.applicationId,
               showFeedback: !1
           })
-        : null != i && X(e, t, !0),
-        (0, w.Z)(e);
+        : null != i && $(e, t, !0),
+        (0, x.Z)(e);
 }
-async function z(e) {
+async function q(e) {
     var t, n;
-    let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c } = e,
-        I = N.Z.getChannel(r),
-        g = null !== (t = null == I ? void 0 : I.getGuildId()) && void 0 !== t ? t : void 0;
-    if (null == g && !(null !== (n = null == I ? void 0 : I.isPrivate()) && void 0 !== n && n)) return !1;
+    let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c, commandOrigin: m, sectionName: S } = e,
+        A = O.Z.getChannel(r),
+        N = null !== (t = null == A ? void 0 : A.getGuildId()) && void 0 !== t ? t : void 0;
+    if (null == N && !(null !== (n = null == A ? void 0 : A.isPrivate()) && void 0 !== n && n)) return !1;
     try {
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
@@ -113,10 +114,10 @@ async function z(e) {
             componentId: c,
             analyticsLocations: s ? void 0 : o
         });
-        let e = R.default.getCurrentUser();
+        let e = C.default.getCurrentUser();
         null != e &&
-            (0, V.Z)({
-                type: s ? Z.q5t.LAUNCH : Z.q5t.JOIN,
+            (0, H.Z)({
+                type: s ? Y.q5t.LAUNCH : Y.q5t.JOIN,
                 userId: null == e ? void 0 : e.id,
                 applicationId: i,
                 locationObject: l,
@@ -128,13 +129,13 @@ async function z(e) {
                     let { canSendFakeCommand: t } = e,
                         n = null;
                     try {
-                        n = await (0, h.ZP)(r, i);
+                        n = await (0, p.ZP)(r, i);
                     } catch (e) {
-                        if (e.message !== h.sV) throw e;
+                        if (e.message !== p.sV) throw e;
                     }
                     if (null != n) {
                         if (n.handler === _.VC.APP_HANDLER) {
-                            let e = f.ZP.getGuildState(g),
+                            let e = f.ZP.getGuildState(N),
                                 t = f.ZP.getUserState();
                             if (
                                 !(await (0, E.L)({
@@ -145,60 +146,73 @@ async function z(e) {
                             )
                                 return !1;
                         }
+                        let e = O.Z.getChannel(r),
+                            t = null != N ? v.Z.getGuild(N) : null;
                         return (
-                            await (0, T.qn)({
-                                applicationId: i,
-                                channelId: r,
-                                guildId: g,
-                                command: n
+                            null != e &&
+                            (await new Promise((r, i) => {
+                                (0, h.Z)({
+                                    command: n,
+                                    optionValues: {},
+                                    context: {
+                                        channel: e,
+                                        guild: t
+                                    },
+                                    commandOrigin: m,
+                                    sectionName: S,
+                                    interactionLifecycleOptionsFactory: () => ({
+                                        onSuccess: () => r(),
+                                        onFailure: () => i()
+                                    })
+                                });
                             }),
-                            !0
+                            !0)
                         );
                     }
                     return (
                         null == n &&
                         !!t &&
-                        (await (0, T.XV)({
+                        (await (0, g.XV)({
                             applicationId: i,
                             channelId: r,
-                            guildId: g
+                            guildId: N
                         }),
                         !0)
                     );
                 },
-                n = Y.Yq.includes(i),
-                a = (null == I ? void 0 : I.type) === Z.d4z.GUILD_VOICE,
-                s = p.Z.getApplication(i),
-                o = null != s && (0, D.yE)(s.flags, Z.udG.EMBEDDED),
-                l = null != s && (0, D.yE)(s.flags, Z.udG.EMBEDDED_RELEASED),
-                u = (0, M.l5)(I);
+                n = j.Yq.includes(i),
+                a = (null == A ? void 0 : A.type) === Y.d4z.GUILD_VOICE,
+                s = I.Z.getApplication(i),
+                o = null != s && (0, L.yE)(s.flags, Y.udG.EMBEDDED),
+                l = null != s && (0, L.yE)(s.flags, Y.udG.EMBEDDED_RELEASED),
+                u = (0, P.l5)(A);
             if (n) {
                 if (((t = !1), !(await e({ canSendFakeCommand: !1 })))) throw Error();
             } else if (a) {
                 if (o && !l) t = !(await e({ canSendFakeCommand: !1 }));
                 else if (o && l) {
-                    U.j.trackExposure({ location: 'EmbeddedActivitiesActionCreators.launchEmbeddedActivity' });
-                    let { enabled: n } = U.j.getCurrentConfig({ location: 'EmbeddedActivitiesActionCreators.launchEmbeddedActivity' });
+                    w.j.trackExposure({ location: 'EmbeddedActivitiesActionCreators.launchEmbeddedActivity' });
+                    let { enabled: n } = w.j.getCurrentConfig({ location: 'EmbeddedActivitiesActionCreators.launchEmbeddedActivity' });
                     if (n) {
-                        if (!(await e({ canSendFakeCommand: !1 }))) throw new m.Z(m.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+                        if (!(await e({ canSendFakeCommand: !1 }))) throw new T.Z(T.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
                         t = !1;
                     } else t = !0;
                 }
             } else if (u) {
                 let n = await e({ canSendFakeCommand: o && l });
-                if (((t = !n), o && !n)) throw new m.Z(m.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
+                if (((t = !n), o && !n)) throw new T.Z(T.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
             }
         }
         if (
             (!s || t) &&
-            !(await q({
+            !(await Q({
                 applicationId: i,
                 channelId: r,
                 embeddedActivitiesManager: u,
-                guildId: g
+                guildId: N
             }))
         )
-            throw new m.Z(m.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
+            throw new T.Z(T.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
             applicationId: i,
@@ -208,52 +222,52 @@ async function z(e) {
         return (
             a.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
-                guildId: g,
+                guildId: N,
                 applicationId: i,
                 channelId: r,
-                error: e instanceof m.Z ? e : new d.Z(e)
+                error: e instanceof T.Z ? e : new d.Z(e)
             }),
             !1
         );
     }
     return !0;
 }
-async function q(e) {
+async function Q(e) {
     let t,
         { applicationId: n, channelId: i, embeddedActivitiesManager: a, guildId: o } = e,
-        l = A.default.getSessionId(),
-        u = R.default.getCurrentUser();
+        l = N.default.getSessionId(),
+        u = C.default.getCurrentUser();
     if (null == n) return !1;
-    let c = await (0, G.Z)(n, i);
-    if (null == i) return y.S.dispatch(Z.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
-    let d = N.Z.getChannel(i);
+    let c = await (0, k.Z)(n, i);
+    if (null == i) return D.S.dispatch(Y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
+    let d = O.Z.getChannel(i);
     if (null == d || null == u || null == c) return !1;
     let _ =
         null != i
-            ? (0, k.e4)({
+            ? (0, B.e4)({
                   channelId: i,
-                  ChannelStore: N.Z,
-                  GuildStore: O.Z,
-                  PermissionStore: v.Z,
-                  VoiceStateStore: C.Z
+                  ChannelStore: O.Z,
+                  GuildStore: v.Z,
+                  PermissionStore: R.Z,
+                  VoiceStateStore: y.Z
               })
-            : k.jy.NO_CHANNEL;
-    if (_ !== k.jy.CAN_LAUNCH)
+            : B.jy.NO_CHANNEL;
+    if (_ !== B.jy.CAN_LAUNCH)
         return (
-            _ === k.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
-                ? (0, g.w)()
-                : _ === k.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
+            _ === B.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
+                ? (0, S.w)()
+                : _ === B.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   s.Z.show({
-                      title: W.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
-                      body: W.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+                      title: K.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
+                      body: K.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
                       hideActionSheet: !1
                   }),
             !1
         );
-    let E = P.ZP.getCurrentEmbeddedActivity();
+    let E = U.ZP.getCurrentEmbeddedActivity();
     if (
-        ((null == E ? void 0 : E.applicationId) != null && (t = p.Z.getApplication(null == E ? void 0 : E.applicationId)),
-        !(await (0, x.p)({
+        ((null == E ? void 0 : E.applicationId) != null && (t = I.Z.getApplication(null == E ? void 0 : E.applicationId)),
+        !(await (0, G.p)({
             applicationId: n,
             application: c,
             channel: d,
@@ -263,20 +277,20 @@ async function q(e) {
         })))
     )
         return !1;
-    let f = (0, B.Z)(i),
-        h = H.wP.includes(d.type);
+    let f = (0, F.Z)(i),
+        h = Z.wP.includes(d.type);
     if (f) {
         if (
-            !(await (0, F.Z)({
+            !(await (0, V.Z)({
                 channelId: i,
                 bypassChangeModal: null != t
             }))
         )
             return !1;
-    } else if (!(0, M.WS)(d) || !h) return !1;
+    } else if (!(0, P.WS)(d) || !h) return !1;
     return (
-        await b.Z.post({
-            url: Z.ANM.ACTIVITY_CHANNEL_LAUNCH(i, n),
+        await M.Z.post({
+            url: Y.ANM.ACTIVITY_CHANNEL_LAUNCH(i, n),
             body: {
                 session_id: l,
                 guild_id: null != o ? o : void 0
@@ -296,10 +310,10 @@ async function q(e) {
         !0
     );
 }
-function Q(e) {
+function X(e) {
     var t, n;
     let { channelId: r, applicationId: i, showFeedback: s = !0 } = e,
-        o = P.ZP.getSelfEmbeddedActivityForChannel(r);
+        o = U.ZP.getSelfEmbeddedActivityForChannel(r);
     a.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_CLOSE',
         channelId: r,
@@ -308,11 +322,11 @@ function Q(e) {
         instanceId: null == o ? void 0 : o.launchId,
         showFeedback: s
     });
-    let u = I.Z.getSelectedParticipantId(r),
-        c = null === (n = R.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
-    if (null != P.ZP.getEmbeddedActivitiesForChannel(r).find((e) => e.applicationId === i) && null != c && '' !== c) u === i && l.Z.selectParticipant(r, null);
+    let u = m.Z.getSelectedParticipantId(r),
+        c = null === (n = C.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+    if (null != U.ZP.getEmbeddedActivitiesForChannel(r).find((e) => e.applicationId === i) && null != c && '' !== c) u === i && l.Z.selectParticipant(r, null);
 }
-function X(e, t) {
+function $(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     a.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_DISCONNECT',
@@ -321,15 +335,15 @@ function X(e, t) {
         isRejoiningFromCurrentSession: n
     });
 }
-async function $() {
+async function J() {
     try {
         a.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_START' });
         let e = await i.tn.get({
-                url: Z.ANM.APPLICATIONS_WITH_ASSETS,
+                url: Y.ANM.APPLICATIONS_WITH_ASSETS,
                 query: { with_team_applications: !0 },
                 oldFormErrors: !0
             }),
-            t = e.body.applications.map((e) => S.Z.createFromServer(e));
+            t = e.body.applications.map((e) => A.Z.createFromServer(e));
         a.Z.dispatch({
             type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS',
             applications: t,
@@ -339,11 +353,11 @@ async function $() {
         a.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL' });
     }
 }
-async function J(e, t, n) {
+async function ee(e, t, n) {
     try {
         a.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START' });
         let r = await i.tn.post({
-            url: Z.ANM.APPLICATION_UPLOAD_ATTACHMENT(e),
+            url: Y.ANM.APPLICATION_UPLOAD_ATTACHMENT(e),
             query: { channel_id: t },
             attachments: [
                 {
@@ -363,23 +377,23 @@ async function J(e, t, n) {
         return a.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL' }), new d.Z(e);
     }
 }
-let ee = (e, t, n) => {
+let et = (e, t, n) => {
     let { guildId: r } = n;
     (r === e || (null == r && null == e)) && t();
 };
-async function et(e) {
+async function en(e) {
     var t, n, i, s;
     let { guildId: o, force: l = !1 } = e,
-        u = P.ZP.getShelfActivities(o),
-        c = u.map((e) => p.Z.getApplication(e.application_id)).filter(L.lm);
-    if (!l && !P.ZP.shouldFetchShelf(o)) {
-        if (null === (t = P.ZP.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
+        u = U.ZP.getShelfActivities(o),
+        c = u.map((e) => I.Z.getApplication(e.application_id)).filter(b.lm);
+    if (!l && !U.ZP.shouldFetchShelf(o)) {
+        if (null === (t = U.ZP.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
             let e, t;
             let n = new Promise((t) => {
-                    (e = ee.bind(null, o, t)), a.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e);
+                    (e = et.bind(null, o, t)), a.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e);
                 }),
                 r = new Promise((e) => {
-                    (t = ee.bind(null, o, e)), a.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t);
+                    (t = et.bind(null, o, e)), a.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t);
                 });
             await Promise.race([n, r]), null != e && (a.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e), (e = null)), null != t && (a.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t), (t = null));
         }
@@ -394,8 +408,8 @@ async function et(e) {
             guildId: o
         });
         let e = void 0 !== o && '' !== o ? { guild_id: o } : void 0,
-            t = await b.Z.get({
-                url: Z.ANM.ACTIVITY_SHELF,
+            t = await M.Z.get({
+                url: Y.ANM.ACTIVITY_SHELF,
                 query: e,
                 trackedActionData: {
                     event: r.NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF,
@@ -422,7 +436,7 @@ async function et(e) {
                 }),
             {
                 activityConfigs: l,
-                applications: u.map((e) => S.Z.createFromServer(e))
+                applications: u.map((e) => A.Z.createFromServer(e))
             }
         );
     } catch (e) {
@@ -438,37 +452,37 @@ async function et(e) {
         );
     }
 }
-async function en(e) {
+async function er(e) {
     let { activityChannelId: t, invitedChannelId: n, applicationId: r, location: i } = e,
         a = await u.Z.createInvite(
             t,
             {
-                target_type: j.Iq.EMBEDDED_APPLICATION,
+                target_type: W.Iq.EMBEDDED_APPLICATION,
                 target_application_id: r
             },
             i
         );
-    null != N.Z.getChannel(n) && c.Z.sendInvite(n, a.code, i, null);
+    null != O.Z.getChannel(n) && c.Z.sendInvite(n, a.code, i, null);
 }
-async function er(e) {
+async function ei(e) {
     let { channelId: t, applicationId: n, userId: r, location: i } = e,
         a = await u.Z.createInvite(
             t,
             {
-                target_type: j.Iq.EMBEDDED_APPLICATION,
+                target_type: W.Iq.EMBEDDED_APPLICATION,
                 target_application_id: n
             },
             i
         );
     o.Z.ensurePrivateChannel(r).then((e) => {
-        null != N.Z.getChannel(e) && c.Z.sendInvite(e, a.code, i, null);
+        null != O.Z.getChannel(e) && c.Z.sendInvite(e, a.code, i, null);
     });
 }
-function ei() {
+function ea() {
     a.Z.dispatch({ type: 'EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR' });
 }
-async function ea(e) {
-    let t = Z.ANM.ACTIVITY_TEST_MODE(e);
+async function es(e) {
+    let t = Y.ANM.ACTIVITY_TEST_MODE(e);
     try {
         return (
             await i.tn.get({
@@ -481,13 +495,13 @@ async function ea(e) {
         return !1;
     }
 }
-function es(e) {
+function eo(e) {
     a.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_SET_PANEL_MODE',
         activityPanelMode: e
     });
 }
-function eo(e) {
+function el(e) {
     a.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT',
         focusedActivityLayout: e

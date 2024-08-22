@@ -33,42 +33,43 @@ var i,
     I = n(701488);
 ((l = i || (i = {}))[(l.START = 0)] = 'START'), (l[(l.JOIN = 1)] = 'JOIN'), (l[(l.LEAVE = 2)] = 'LEAVE');
 function E(e) {
-    let { activityItem: t, channel: n, locationObject: i, onActivityItemSelected: l, embeddedActivitiesManager: r, assetNames: o = ['embedded_cover'], backgroundResolution: u = 250, launchingComponentId: c } = e,
-        { application: s, activity: p } = t,
-        f = p.client_platform_config[(0, Z.Z)((0, d.getOS)())],
-        h = null != f.label_until && Date.now() < Date.parse(f.label_until),
-        m = (0, g.Z)({
-            applicationId: s.id,
+    let { activityItem: t, channel: n, locationObject: i, onActivityItemSelected: l, embeddedActivitiesManager: r, assetNames: o = ['embedded_cover'], backgroundResolution: u = 250, launchingComponentId: c, commandOrigin: s } = e,
+        { application: p, activity: f } = t,
+        h = f.client_platform_config[(0, Z.Z)((0, d.getOS)())],
+        m = null != h.label_until && Date.now() < Date.parse(h.label_until),
+        E = (0, g.Z)({
+            applicationId: p.id,
             size: u,
             names: o
         }),
-        E = null != p.activity_preview_video_asset_id ? (0, _.Z)(s.id, p.activity_preview_video_asset_id) : null,
-        b = (0, v.ZP)(n).find((e) => {
+        b = null != f.activity_preview_video_asset_id ? (0, _.Z)(p.id, f.activity_preview_video_asset_id) : null,
+        w = (0, v.ZP)(n).find((e) => {
             let { embeddedActivity: t } = e;
-            return s.id === t.applicationId;
+            return p.id === t.applicationId;
         }),
-        w = A({
+        C = A({
             channelId: null == n ? void 0 : n.id,
-            applicationId: s.id
+            applicationId: p.id
         }),
-        C = y({
+        S = y({
             applicationId: t.application.id,
             channelId: null == n ? void 0 : n.id,
             locationObject: i,
             embeddedActivitiesManager: r,
             onActivityItemSelectedProp: l,
-            launchingComponentId: c
+            launchingComponentId: c,
+            commandOrigin: s
         }),
-        S = t.activity.client_platform_config[(0, Z.Z)((0, d.getOS)())].release_phase,
-        T = I.eB.includes(S) ? S.replace('_', ' ').replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
+        T = t.activity.client_platform_config[(0, Z.Z)((0, d.getOS)())].release_phase,
+        M = I.eB.includes(T) ? T.replace('_', ' ').replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
     return {
-        imageBackground: m,
-        videoUrl: E,
-        joinableEmbeddedApp: b,
-        activityAction: w,
-        onActivityItemSelected: C,
-        labelType: h ? f.label_type : a.ww.NONE,
-        staffReleasePhase: T
+        imageBackground: E,
+        videoUrl: b,
+        joinableEmbeddedApp: w,
+        activityAction: C,
+        onActivityItemSelected: S,
+        labelType: m ? h.label_type : a.ww.NONE,
+        staffReleasePhase: M
     };
 }
 function A(e) {
@@ -85,21 +86,23 @@ function A(e) {
     return null == d ? i : (null != l && (null == a ? void 0 : a.channelId) === l.id && (null == o ? void 0 : o.id) === d.id ? (i = 2) : null != s && (i = 1), i);
 }
 function y(e) {
-    let { applicationId: t, channelId: n, locationObject: i, embeddedActivitiesManager: l, onActivityItemSelectedProp: r, launchingComponentId: a } = e,
-        u = A({
+    let { applicationId: t, channelId: n, locationObject: i, embeddedActivitiesManager: l, onActivityItemSelectedProp: r, launchingComponentId: a, commandOrigin: u, sectionName: c } = e,
+        d = A({
             channelId: n,
             applicationId: t
         }),
-        { analyticsLocations: c } = (0, o.ZP)();
-    switch (u) {
+        { analyticsLocations: v } = (0, o.ZP)();
+    switch (d) {
         case 0:
             return async () => {
                 await (0, f.Z)({
                     targetApplicationId: t,
                     locationObject: i,
                     channelId: n,
-                    analyticsLocations: c,
-                    componentId: a
+                    analyticsLocations: v,
+                    componentId: a,
+                    commandOrigin: u,
+                    sectionName: c
                 }).then((e) => e && (null == r ? void 0 : r({ applicationId: t })));
             };
         case 1:
@@ -109,8 +112,10 @@ function y(e) {
                         applicationId: t,
                         activityChannelId: n,
                         locationObject: i,
-                        analyticsLocations: c,
-                        componentId: a
+                        analyticsLocations: v,
+                        componentId: a,
+                        commandOrigin: u,
+                        sectionName: c
                     }).then((e) => e && (null == r ? void 0 : r({ applicationId: t }))));
             };
         case 2:

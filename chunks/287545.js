@@ -290,52 +290,54 @@ class Y extends l.Z {
             }),
             x(this, 'handleDeferredOpen', async (e) => {
                 var t, n, r;
-                let { channelId: i, applicationId: a, analyticsLocations: s } = e,
-                    o = p.Z.getChannel(i);
-                if (void 0 === o || (f.tx.has(null == o ? void 0 : o.type) && m.Z.getVoiceChannelId() !== i)) return;
-                let l = R.ZP.getSelfEmbeddedActivityForChannel(i);
-                if ((null == l ? void 0 : l.applicationId) === a) return;
-                let c = await u.Z.fetchApplication(a);
-                if (!(0, L.a)(o)) {
+                let { channelId: i, applicationId: a, analyticsLocations: s, commandOrigin: o } = e,
+                    l = p.Z.getChannel(i);
+                if (void 0 === l || (f.tx.has(null == l ? void 0 : l.type) && m.Z.getVoiceChannelId() !== i)) return;
+                let c = R.ZP.getSelfEmbeddedActivityForChannel(i);
+                if ((null == c ? void 0 : c.applicationId) === a) return;
+                let d = await u.Z.fetchApplication(a);
+                if (!(0, L.a)(l)) {
                     this.showLaunchErrorModal(w.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
                     return;
                 }
-                if (!(0, M.Z)(null == c ? void 0 : null === (t = c.embedded_activity_config) || void 0 === t ? void 0 : t.supported_platforms)) {
+                if (!(0, M.Z)(null == d ? void 0 : null === (t = d.embedded_activity_config) || void 0 === t ? void 0 : t.supported_platforms)) {
                     this.showLaunchErrorModal(w.Z.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS);
                     return;
                 }
-                let d = null !== (n = null == o ? void 0 : o.getGuildId()) && void 0 !== n ? n : void 0,
-                    { activityConfigs: _, applications: E } = await (0, v.w1)({ guildId: d }),
-                    h = (0, C.Z)({
+                let _ = null !== (n = null == l ? void 0 : l.getGuildId()) && void 0 !== n ? n : void 0,
+                    { activityConfigs: E, applications: h } = await (0, v.w1)({ guildId: _ }),
+                    I = (0, C.Z)({
                         applicationId: a,
-                        activityConfigs: _,
-                        applications: E
+                        activityConfigs: E,
+                        applications: h
                     });
-                if (null == h) {
+                if (null == I) {
                     let e = await (0, v.w1)({
-                        guildId: d,
+                        guildId: _,
                         force: !0
                     });
-                    h = (0, C.Z)({
+                    I = (0, C.Z)({
                         applicationId: a,
                         activityConfigs: e.activityConfigs,
                         applications: e.applications
                     });
                 }
-                let I = R.ZP.getEmbeddedActivitiesForChannel(i).find((e) => e.applicationId === a),
-                    T = null !== (r = null == I ? void 0 : I.userIds.size) && void 0 !== r ? r : 0;
-                T > 0
+                let T = R.ZP.getEmbeddedActivitiesForChannel(i).find((e) => e.applicationId === a),
+                    g = null !== (r = null == T ? void 0 : T.userIds.size) && void 0 !== r ? r : 0;
+                g > 0
                     ? await (0, y.k)({
                           channelId: i,
                           applicationId: a,
-                          launchId: null == I ? void 0 : I.launchId,
+                          launchId: null == T ? void 0 : T.launchId,
                           inputApplication: null,
-                          analyticsLocations: s
+                          analyticsLocations: s,
+                          commandOrigin: o
                       })
                     : await (0, D.Z)({
                           targetApplicationId: a,
                           channelId: i,
-                          analyticsLocations: s
+                          analyticsLocations: s,
+                          commandOrigin: o
                       });
             }),
             x(this, 'handleGuildDelete', (e) => {
