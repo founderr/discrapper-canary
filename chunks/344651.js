@@ -212,7 +212,7 @@ B(
                     V({
                         type: 'VOICE_STATE_UPDATES',
                         voiceStates: t.voice_states.map((e) => {
-                            var n;
+                            var n, r;
                             return {
                                 userId: e.user_id,
                                 guildId: t.id,
@@ -225,7 +225,8 @@ B(
                                 selfVideo: e.self_video || !1,
                                 suppress: e.suppress,
                                 selfStream: e.self_stream || !1,
-                                requestToSpeakTimestamp: null !== (n = e.request_to_speak_timestamp) && void 0 !== n ? n : null
+                                requestToSpeakTimestamp: null !== (n = e.request_to_speak_timestamp) && void 0 !== n ? n : null,
+                                discoverable: null === (r = e.discoverable) || void 0 === r || r
                             };
                         })
                     }),
@@ -266,7 +267,7 @@ B(
                 let l = [];
                 i.forEach((e) => {
                     e.voice_states.forEach((t) => {
-                        var n;
+                        var n, r;
                         l.push({
                             userId: t.user_id,
                             guildId: e.id,
@@ -279,7 +280,8 @@ B(
                             selfVideo: t.self_video || !1,
                             suppress: t.suppress,
                             selfStream: t.self_stream || !1,
-                            requestToSpeakTimestamp: null !== (n = t.request_to_speak_timestamp) && void 0 !== n ? n : null
+                            requestToSpeakTimestamp: null !== (n = t.request_to_speak_timestamp) && void 0 !== n ? n : null,
+                            discoverable: null === (r = t.discoverable) || void 0 === r || r
                         });
                     });
                 }),
@@ -638,7 +640,7 @@ B(
                     V({
                         type: 'VOICE_STATE_UPDATES',
                         voiceStates: t.voice_states.map((e) => {
-                            var n;
+                            var n, r;
                             return {
                                 userId: e.user_id,
                                 guildId: t.id,
@@ -651,7 +653,8 @@ B(
                                 selfVideo: e.self_video || !1,
                                 suppress: e.suppress,
                                 selfStream: e.self_stream || !1,
-                                requestToSpeakTimestamp: null !== (n = e.request_to_speak_timestamp) && void 0 !== n ? n : null
+                                requestToSpeakTimestamp: null !== (n = e.request_to_speak_timestamp) && void 0 !== n ? n : null,
+                                discoverable: null === (r = e.discoverable) || void 0 === r || r
                             };
                         })
                     });
@@ -905,7 +908,7 @@ B(
         });
     }),
     k(['VOICE_STATE_UPDATE'], (e) => {
-        var t;
+        var t, n;
         null != e.member && H(e.guild_id, e.member.user, e.member),
             V({
                 type: 'VOICE_STATE_UPDATES',
@@ -923,6 +926,7 @@ B(
                         suppress: e.suppress,
                         selfStream: e.self_stream || !1,
                         requestToSpeakTimestamp: null !== (t = e.request_to_speak_timestamp) && void 0 !== t ? t : null,
+                        discoverable: null === (n = e.discoverable) || void 0 === n || n,
                         oldChannelId: v.Z.getUserVoiceChannelId(e.guild_id, e.user_id)
                     }
                 ]
@@ -950,7 +954,7 @@ B(
             V({
                 type: 'VOICE_STATE_UPDATES',
                 voiceStates: t.map((e) => {
-                    var t;
+                    var t, n;
                     return {
                         userId: e.user_id,
                         guildId: null,
@@ -963,7 +967,8 @@ B(
                         selfVideo: e.self_video || !1,
                         suppress: e.suppress,
                         selfStream: e.self_stream || !1,
-                        requestToSpeakTimestamp: null !== (t = e.request_to_speak_timestamp) && void 0 !== t ? t : null
+                        requestToSpeakTimestamp: null !== (t = e.request_to_speak_timestamp) && void 0 !== t ? t : null,
+                        discoverable: null === (n = e.discoverable) || void 0 === n || n
                     };
                 })
             });

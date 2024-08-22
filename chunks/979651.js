@@ -82,7 +82,8 @@ function L(e, t) {
                 selfVideo: t.selfVideo,
                 sessionId: t.sessionId,
                 suppress: t.suppress,
-                userId: t.userId
+                userId: t.userId,
+                discoverable: t.discoverable
             };
             return null != e ? e.merge(n) : new E.Z(n);
         }
