@@ -3323,6 +3323,7 @@ let oW = 'help_center_cta';
     (rZ.SECURE_FRAMES_VERIFIED_DEVICES = 'Secure Frames Verified Devices'),
     (rZ.SECURE_FRAMES = 'Secure Frames'),
     (rZ.CONTENT_INVENTORY_EMBED = 'Content Inventory Embed'),
+    (rZ.REVERSE_TRIAL_UPSELL_MODAL = 'Reverse trial Upsell Modal'),
     ((r0 = eA || (eA = {})).TOOLTIP = 'Tooltip'),
     (r0.CARD = 'Card'),
     (r0.CAROUSEL = 'Carousel'),

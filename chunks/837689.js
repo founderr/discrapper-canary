@@ -2,21 +2,26 @@ n(47120);
 var i = n(735250);
 n(470079);
 var a = n(873546),
-    s = n(481060),
-    r = n(570140),
-    l = n(317770),
-    o = n(594174),
-    c = n(295226),
-    d = n(74538),
-    u = n(374023),
-    _ = n(913976),
-    h = n(104494),
-    E = n(29920),
-    m = n(786397),
-    I = n(248042),
-    g = n(318199),
-    p = n(474936);
-function T(e, t, n) {
+    s = n(704215),
+    r = n(481060),
+    l = n(570140),
+    o = n(317770),
+    c = n(605236),
+    d = n(594174),
+    u = n(295226),
+    _ = n(74538),
+    h = n(374023),
+    E = n(913976),
+    m = n(533990),
+    I = n(104494),
+    g = n(29920),
+    p = n(786397),
+    T = n(248042),
+    S = n(278945),
+    f = n(727310),
+    C = n(318199),
+    N = n(474936);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,26 +34,26 @@ function T(e, t, n) {
         e
     );
 }
-let S = 'PremiumServerDriveAnnouncementModal';
-class f extends l.Z {
+let v = 'PremiumServerDriveAnnouncementModal';
+class Z extends o.Z {
     _initialize() {
-        r.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), r.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
+        l.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), l.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
     _terminate() {
-        r.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), r.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
+        l.Z.unsubscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), l.Z.unsubscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
     constructor(...e) {
         super(...e),
-            T(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-                let a = (0, g.extractAnnouncementModalContent)({
+            A(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
+                let a = (0, C.extractAnnouncementModalContent)({
                     content: e,
                     isPreview: t
                 });
                 if (null != a)
                     return (
-                        !!(!1 !== t || (null == a ? void 0 : a.contentIdentifier) !== 'summer_bogo_content' || (await (0, I.k)())) &&
-                        ((0, s.closeModal)(S),
-                        (0, s.openModalLazy)(
+                        !!(!1 !== t || (null == a ? void 0 : a.contentIdentifier) !== 'summer_bogo_content' || (await (0, T.k)())) &&
+                        ((0, r.closeModal)(v),
+                        (0, r.openModalLazy)(
                             async () => {
                                 let { default: e } = await Promise.resolve().then(n.bind(n, 318199));
                                 return (t) =>
@@ -57,37 +62,44 @@ class f extends l.Z {
                                         properties: a
                                     });
                             },
-                            { modalKey: S }
+                            { modalKey: v }
                         ),
                         !0)
                     );
                 return !1;
             }),
-            T(this, 'handlePreview', (e) => {
+            A(this, 'handlePreview', (e) => {
                 let { properties: t } = e;
                 this.maybeOpenServerDriveAnnouncementModal(t, !0);
             }),
-            T(this, 'getOfferFromStore', () => {
-                let e = o.default.getCurrentUser();
-                if ((0, d.I5)(e)) return {};
-                let t = [p.hs, p.RU, p.rB, p.ih]
-                    .map((e) => c.Z.getUserDiscountOffer(e))
-                    .filter((e) => null != e && !(0, h.kA)(e))
+            A(this, 'getOfferFromStore', () => {
+                let e = d.default.getCurrentUser();
+                if ((0, _.I5)(e)) return {};
+                let t = [N.hs, N.RU, N.rB, N.ih]
+                    .map((e) => u.Z.getUserDiscountOffer(e))
+                    .filter((e) => null != e && !(0, I.kA)(e))
                     .shift();
                 if (null != t) return { userDiscountOffer: t };
-                let n = [p.i_, p.Cn, p.wh, p.AU, p.TL, p.ET, p.C2, p.Hk, p.Rt]
-                    .map((e) => c.Z.getUserTrialOffer(e))
-                    .filter((e) => null != e && !(0, m.B)(e))
+                let n = [N.i_, N.Cn, N.wh, N.AU, N.TL, N.ET, N.C2, N.Hk, N.Rt]
+                    .map((e) => u.Z.getUserTrialOffer(e))
+                    .filter((e) => null != e && !(0, p.B)(e))
                     .shift();
                 return null != n ? { userTrialOffer: n } : {};
             }),
-            T(this, 'mayShowAnnouncementModal', async () => {
-                if ((await (0, I.l2)(), !u.s.isDisallowPopupsSet())) {
-                    if (!(0, s.hasAnyModalOpen)() && _.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !a.tq) {
-                        for (let e of await (0, E.H)(this.getOfferFromStore())) if (await this.maybeOpenServerDriveAnnouncementModal(e, !1)) break;
-                    }
+            A(this, 'mayShowAnnouncementModal', async () => {
+                if ((await (0, T.l2)(), h.s.isDisallowPopupsSet())) return;
+                let e = this.getOfferFromStore(),
+                    t = m.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).enabled,
+                    n = (0, c.un)(s.z.REVERSE_TRIAL_ENDED_UPSELL),
+                    i = d.default.getCurrentUser();
+                if (t && !n && !(0, r.hasAnyModalOpen)() && !(0, _.I5)(i)) {
+                    let t = await (0, S.r)(e.userTrialOffer);
+                    null != t && (0, f.Z)({ upsellType: t });
+                }
+                if (!(0, r.hasAnyModalOpen)() && E.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !a.tq) {
+                    for (let t of await (0, g.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                 }
             });
     }
 }
-t.Z = new f();
+t.Z = new Z();
