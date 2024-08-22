@@ -1,8 +1,8 @@
 var r = t(570140),
     i = t(668781),
     u = t(287734),
-    a = t(881052),
-    E = t(314897),
+    E = t(881052),
+    a = t(314897),
     o = t(592125),
     s = t(979651),
     c = t(352954),
@@ -20,7 +20,7 @@ async function S(e, n) {
             await (0, l.om)(_.GB), null == n || n();
         } catch (n) {
             var t;
-            let e = new a.Hx(n);
+            let e = new E.Hx(n);
             r.Z.dispatch({
                 type: 'SECURE_FRAMES_SETTINGS_UPDATE',
                 persistentCodesEnabled: !1
@@ -39,9 +39,9 @@ async function S(e, n) {
 }
 async function I(e) {
     let n = (function () {
-        let e = s.Z.getVoiceStateForUser(E.default.getId()),
+        let e = s.Z.getVoiceStateForUser(a.default.getId()),
             n = o.Z.getChannel(null == e ? void 0 : e.channelId);
-        return E.default.getSessionId() === (null == e ? void 0 : e.sessionId) && null != n && n.type !== d.d4z.GUILD_STAGE_VOICE ? n.id : null;
+        return a.default.getSessionId() === (null == e ? void 0 : e.sessionId) && null != n && n.type !== d.d4z.GUILD_STAGE_VOICE ? n.id : null;
     })();
     null != n
         ? c.Z.openSecureFramesUpdateConfirmation({
@@ -57,10 +57,13 @@ async function I(e) {
         : await S(e);
 }
 n.Z = {
+    clearUploadedKeyVersions: function () {
+        r.Z.dispatch({ type: 'SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR' });
+    },
     updatePersistentCodesEnabled: I,
-    addCurrentUserUploadedKeyVersionCached: function (e) {
+    addUploadedKeyVersion: function (e) {
         r.Z.dispatch({
-            type: 'SECURE_FRAMES_UPLOAD_PUBLIC_KEY_SUCCESS',
+            type: 'SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD',
             keyVersion: e
         });
     },

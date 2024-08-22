@@ -42,12 +42,15 @@ s(c, 'displayName', 'SecureFramesPersistedStore'),
         SECURE_FRAMES_SETTINGS_UPDATE: function (e) {
             l = e.persistentCodesEnabled;
         },
-        SECURE_FRAMES_UPLOAD_PUBLIC_KEY_SUCCESS: function (e) {
+        SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: function (e) {
             let t = [];
             for (let n of u) {
                 if (n === e.keyVersion) return;
                 t.push(n);
             }
             t.push(e.keyVersion), (u = t);
+        },
+        SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: function () {
+            u = o;
         }
     }));
