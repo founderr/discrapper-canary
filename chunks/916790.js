@@ -43,7 +43,7 @@ let _ = [
         }
     }
 ];
-function w(e) {
+function j(e) {
     let { actionLog: r } = e,
         t = n.useMemo(
             () =>
@@ -60,7 +60,7 @@ function w(e) {
         })
     });
 }
-let j = [
+let w = [
     {
         id: 'action',
         name: 'Action',
@@ -100,7 +100,7 @@ let j = [
         name: 'Store Handlers',
         render(e) {
             let { actionLog: r } = e;
-            return (0, a.jsx)(w, { actionLog: r });
+            return (0, a.jsx)(j, { actionLog: r });
         }
     }
 ];
@@ -110,7 +110,7 @@ function C(e) {
             () =>
                 r.error
                     ? [
-                          ...j,
+                          ...w,
                           {
                               id: 'error',
                               name: (0, a.jsxs)(a.Fragment, {
@@ -141,7 +141,7 @@ function C(e) {
                               }
                           }
                       ]
-                    : j,
+                    : w,
             [r]
         ),
         { TabBar: l, renderSelectedTab: c } = (0, y.Z)({ tabs: i }, [i]);

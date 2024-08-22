@@ -258,7 +258,7 @@ t.Z = (e) => {
                                 (0, i.jsx)(Z, {
                                     containerSize: s,
                                     onClick: () => {
-                                        (0, p.navigateToQuestHome)(R.dr.QUESTS_CARD, t.id),
+                                        (0, p.navigateToQuestHome)(R.dr.QUESTS_CARD, n, t.id),
                                             (0, _._3)({
                                                 questId: t.id,
                                                 questContent: n,

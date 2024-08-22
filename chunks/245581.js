@@ -5,39 +5,39 @@ t.d(n, {
 });
 var o = t(735250);
 t(470079);
-var r = t(481060),
-    s = t(313201),
-    c = t(756843);
+var s = t(481060),
+    c = t(313201),
+    r = t(756843);
 function i(e) {
     let { transitionState: n, title: t, subtitle: i, children: l } = e,
-        a = (0, s.Dt)();
-    return (0, o.jsxs)(r.ModalRoot, {
+        a = (0, c.Dt)();
+    return (0, o.jsxs)(s.ModalRoot, {
         transitionState: n,
         'aria-labelledby': a,
         children: [
             (0, o.jsx)('div', {
-                className: c.shieldIconContainer,
+                className: r.shieldIconContainer,
                 children: (0, o.jsx)('div', {
-                    className: c.shieldIcon,
-                    children: (0, o.jsx)(r.ShieldLockIcon, {
+                    className: r.shieldIcon,
+                    children: (0, o.jsx)(s.ShieldLockIcon, {
                         size: 'custom',
                         width: 55,
                         height: 55,
-                        color: r.tokens.colors.HEADER_SECONDARY
+                        color: s.tokens.colors.HEADER_SECONDARY
                     })
                 })
             }),
-            (0, o.jsxs)(r.ModalContent, {
-                className: c.content,
+            (0, o.jsxs)(s.ModalContent, {
+                className: r.content,
                 children: [
-                    (0, o.jsx)(r.Heading, {
-                        className: c.title,
+                    (0, o.jsx)(s.Heading, {
+                        className: r.title,
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
                         children: t
                     }),
-                    (0, o.jsx)(r.Text, {
-                        className: c.subtitle,
+                    (0, o.jsx)(s.Text, {
+                        className: r.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: i

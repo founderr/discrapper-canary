@@ -5,23 +5,23 @@ t.d(n, {
 }),
     t(47120);
 var o = t(735250),
-    r = t(470079),
-    s = t(120356),
-    c = t.n(s),
+    s = t(470079),
+    c = t(120356),
+    r = t.n(c),
     i = t(481060),
     l = t(572004),
     a = t(689938),
     d = t(205962);
 function u(e) {
-    let { chunks: n, className: t, onCopy: s, ...u } = e,
-        h = r.useMemo(() => (null == n ? void 0 : n.join(' ')), [n]),
-        [f, x] = r.useState(!1),
-        m = r.useCallback(() => {
-            x(!0), (0, l.JG)(h), null == s || s();
-        }, [s, h]),
+    let { chunks: n, className: t, onCopy: c, ...u } = e,
+        h = s.useMemo(() => (null == n ? void 0 : n.join(' ')), [n]),
+        [f, x] = s.useState(!1),
+        m = s.useCallback(() => {
+            x(!0), (0, l.JG)(h), null == c || c();
+        }, [c, h]),
         _ = f ? i.CircleCheckIcon : i.CopyIcon;
     return (0, o.jsx)(i.Clickable, {
-        className: c()(d.container, t),
+        className: r()(d.container, t),
         onClick: m,
         children: (0, o.jsx)(i.Tooltip, {
             text: f ? a.Z.Messages.COPIED : a.Z.Messages.COPY,

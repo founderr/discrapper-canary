@@ -24,8 +24,8 @@ var a = t(735250),
     k = t(823379),
     v = t(71585),
     _ = t(146282),
-    w = t(650613),
-    j = t(789086),
+    j = t(650613),
+    w = t(789086),
     C = t(206583),
     N = t(787524),
     S = t(535271);
@@ -141,7 +141,7 @@ function I() {
                                 data: s
                             }),
                         (0, a.jsx)(h.Spacer, { size: 8 }),
-                        (0, a.jsx)(j.Z, {}),
+                        (0, a.jsx)(w.Z, {}),
                         (0, a.jsx)(h.Button, {
                             fullWidth: !0,
                             onClick: function () {
@@ -192,7 +192,7 @@ function I() {
                     ]
                 }),
                 false,
-                (0, a.jsx)(w.Z, {}),
+                (0, a.jsx)(j.Z, {}),
                 (0, a.jsxs)(h.FormSection, {
                     children: [
                         (0, a.jsx)(h.FormTitle, { children: 'Game Profile' }),

@@ -38,16 +38,16 @@ function _() {
         e
     );
 }
-function w() {
+function j() {
     let e = v(['\n      export const rawPalette = {\n        ', '\n      } as const;\n    ']);
     return (
-        (w = function () {
+        (j = function () {
             return e;
         }),
         e
     );
 }
-let j = {
+let w = {
         ...b.K,
         ...m.J,
         ...g.c
@@ -75,7 +75,7 @@ function E(e) {
             let a = e[t];
             if ('name' in a)
                 a = (function e(r) {
-                    let t = j[r.name];
+                    let t = w[r.name];
                     return 'name' in t ? e(t) : t;
                 })(a);
             r[t] = {
@@ -125,7 +125,7 @@ function Z() {
             semanticTokens: C
         }),
         [g, b] = n.useState(''),
-        [v, j] = n.useState({}),
+        [v, w] = n.useState({}),
         [S, T] = n.useState({}),
         E = n.useMemo(
             () =>
@@ -231,7 +231,7 @@ function Z() {
         A = n.useCallback(
             (e) =>
                 c()(
-                    w(),
+                    j(),
                     Object.keys(e).map((r) => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))
                 ),
             []
@@ -396,7 +396,7 @@ function Z() {
                                             children: (0, a.jsx)(f.Checkbox, {
                                                 value: v[r],
                                                 onChange: () => {
-                                                    j((e) => ({
+                                                    w((e) => ({
                                                         ...e,
                                                         [r]: !e[r]
                                                     }));

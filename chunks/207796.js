@@ -39,7 +39,7 @@ let E = (0, u.Z)(
             mode: 'admin_upsell',
             previousMode: 'admin_upsell',
             game: 'none',
-            started: !1,
+            completedNux: !1,
             userUpsellScreen: 'user_upsell',
             savedGuildIds: [],
             selectedGames: [],
@@ -51,21 +51,21 @@ let E = (0, u.Z)(
                 (0, d.j)(() =>
                     e({
                         selectedGames: t,
-                        started: !0
+                        completedNux: !0
                     })
                 ),
             setSelectedPlaystyle: (t) =>
                 (0, d.j)(() =>
                     e({
                         selectedPlaystyle: t,
-                        started: !0
+                        completedNux: !0
                     })
                 ),
             setSelectedTraits: (t) =>
                 (0, d.j)(() =>
                     e({
                         selectedTraits: t,
-                        started: !0
+                        completedNux: !0
                     })
                 ),
             setUserUpsellScreen: (t) => (0, d.j)(() => e({ userUpsellScreen: t }))
@@ -83,7 +83,7 @@ let E = (0, u.Z)(
             partialize: (e) => ({
                 mode: e.mode,
                 game: e.game,
-                started: e.started,
+                completedNux: e.completedNux,
                 savedGuildIds: e.savedGuildIds,
                 selectedGames: e.selectedGames,
                 selectedPlaystyle: e.selectedPlaystyle,
@@ -94,12 +94,12 @@ let E = (0, u.Z)(
 );
 function f(e, t) {
     let n = E.getState().mode,
-        r = E.getState().started;
+        r = E.getState().completedNux;
     (0, d.j)(() => {
         E.setState({
             mode: e,
             previousMode: n,
-            started: null != t ? t : r
+            completedNux: null != t ? t : r
         });
     });
 }
@@ -111,7 +111,7 @@ function h(e, t) {
 function p() {
     (0, d.j)(() => {
         E.setState({
-            started: !1,
+            completedNux: !1,
             mode: 'admin_upsell',
             previousMode: 'admin_upsell',
             game: 'none',

@@ -24,8 +24,8 @@ var a = t(735250),
     k = t(621060),
     v = t(689938),
     _ = t(408126),
-    w = t(535271);
-let j = [
+    j = t(535271);
+let w = [
     {
         key: 'event',
         cellClassName: _.eventColumn,
@@ -78,7 +78,7 @@ let S = [
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)(h.ZP, {
-                            className: o()(w.headerBar, _.subPanelHeaderBar),
+                            className: o()(j.headerBar, _.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)(h.ZP.Icon, {
                                     icon: d.AnalyticsIcon,
@@ -174,7 +174,7 @@ function E() {
         { TabBar: m, renderSelectedTab: g } = (0, k.Z)({ tabs: S }, []);
     return (0, a.jsxs)('div', {
         ref: e,
-        className: o()(w.panel, _.panel),
+        className: o()(j.panel, _.panel),
         children: [
             (0, a.jsxs)('div', {
                 className: _.toolbar,
@@ -217,7 +217,7 @@ function E() {
             (0, a.jsx)(d.ScrollerThin, {
                 className: _.tableContainer,
                 children: (0, a.jsx)(x.Z, {
-                    columns: j,
+                    columns: w,
                     data: l,
                     selectedRowKey: c,
                     onClickRow: u

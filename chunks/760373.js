@@ -1,4 +1,4 @@
-var r, i, u, a;
+var r, i, u, E;
 t.d(n, {
     $J: function () {
         return o;
@@ -31,7 +31,7 @@ t.d(n, {
         return d;
     },
     l4: function () {
-        return E;
+        return a;
     },
     s9: function () {
         return s;
@@ -43,7 +43,7 @@ t.d(n, {
         return c;
     }
 });
-let E = '',
+let a = '',
     o = '',
     s = '',
     c = 5,
@@ -54,6 +54,6 @@ let E = '',
     S = 4;
 ((u = r || (r = {})).MATCH = 'match'), (u.OTHER_USER_ALREADY_VERIFIED = 'other_user_already_verified'), (u.OTHER_USER_INCONSISTENT_KEYS = 'other_user_inconsistent_keys'), (u.FINGERPRINT_MISMATCH = 'fingerprint_mismatch'), (u.UNABLE_TO_VERIFY = 'unable_to_verify'), (u.OTHER_USER_DISCONNECTED = 'other_user_disconnected'), (u.CURRENT_USER_DISCONNECTED = 'current_user_disconnected');
 let I = 100;
-((a = i || (i = {})).RTC_DEBUG_PANEL = 'rtc_debug_panel'), (a.RTC_SECURE_FRAMES = 'rtc_secure_frames');
+((E = i || (i = {})).RTC_DEBUG_PANEL = 'rtc_debug_panel'), (E.RTC_SECURE_FRAMES = 'rtc_secure_frames');
 let T = 1,
     R = 0;

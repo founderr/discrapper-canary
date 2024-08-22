@@ -31,7 +31,7 @@ function p() {
         i = a.useMemo(() => ({ backgroundImage: 'url('.concat(s, ')') }), [s]),
         p = a.useCallback(() => {
             (0, d.xf)(),
-                (0, N.navigateToQuestHome)(m.dr.USER_SETTINGS_GIFT_INVENTORY),
+                (0, N.navigateToQuestHome)(m.dr.USER_SETTINGS_GIFT_INVENTORY, T.jn.QUEST_HOME_MOVE_CALLOUT),
                 u.default.track(A.rMx.QUEST_CONTENT_CLICKED, {
                     cta_name: I.jZ.VIEW_QUESTS,
                     ...(0, I.mH)(T.jn.QUEST_HOME_MOVE_CALLOUT)

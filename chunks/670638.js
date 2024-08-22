@@ -19,12 +19,12 @@ var s = n(735250),
     x = n(341907),
     T = n(46140),
     _ = n(231338),
-    h = n(689938);
-function q(e) {
+    q = n(689938);
+function h(e) {
     var t;
     let n = (0, i.e7)([E.Z], () => E.Z.questDeliveryOverride, []),
         u = (0, m.GN)(e.questContent),
-        q = (0, m.zK)(e.quest, T.S7.IN_HOUSE_CONSOLE_QUEST),
+        h = (0, m.zK)(e.quest, T.S7.IN_HOUSE_CONSOLE_QUEST),
         M = (0, m.KM)(e.quest),
         N = (0, p.Z)(T.dr.QUEST_CONTEXT_MENU),
         { handleComplete: j, handleResetDismissibilityClick: I, handleResetStatusClick: g, handleOverrideDeliveryClick: S } = (0, C.kJ)(e.quest.id),
@@ -48,7 +48,7 @@ function q(e) {
             null != e.onSelect ? e.onSelect() : (0, r.Zy)();
         },
         navId: 'quests-entry',
-        'aria-label': h.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
+        'aria-label': q.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
         onClose: null !== (t = null == e ? void 0 : e.onClose) && void 0 !== t ? t : _.dG,
         children: [
             !1 === M &&
@@ -56,17 +56,17 @@ function q(e) {
                     a.MenuGroup,
                     {
                         children: [
-                            !1 === q &&
+                            !1 === h &&
                                 (0, s.jsx)(a.MenuItem, {
                                     id: 'play-game',
-                                    label: h.Z.Messages.QUESTS_GET_THIS_GAME,
+                                    label: q.Z.Messages.QUESTS_GET_THIS_GAME,
                                     action: b,
                                     icon: a.LinkExternalMediumIcon
                                 }),
                             !0 === e.showShareLink &&
                                 (0, s.jsx)(a.MenuItem, {
                                     id: 'share-link',
-                                    label: h.Z.Messages.COPY_LINK,
+                                    label: q.Z.Messages.COPY_LINK,
                                     action: f,
                                     icon: a.CopyIcon
                                 })
@@ -81,7 +81,7 @@ function q(e) {
                         !e.hideLearnMore &&
                             (0, s.jsx)(a.MenuItem, {
                                 id: 'learn-more',
-                                label: h.Z.Messages.QUESTS_LEARN_MORE_V2,
+                                label: q.Z.Messages.QUESTS_LEARN_MORE_V2,
                                 action: () => {
                                     (0, c._3)({
                                         questId: e.quest.id,
@@ -89,13 +89,13 @@ function q(e) {
                                         questContentPosition: e.questContentPosition,
                                         questContentCTA: c.jZ.CONTEXT_MENU_LEARN_MORE
                                     }),
-                                        (0, x.navigateToQuestHome)(T.dr.QUEST_CONTEXT_MENU, e.quest.id);
+                                        (0, x.navigateToQuestHome)(T.dr.QUEST_CONTEXT_MENU, e.questContent, e.quest.id);
                                 }
                             }),
                         e.shouldShowDisclosure &&
                             (0, s.jsx)(a.MenuItem, {
                                 id: 'display-disclosure',
-                                label: h.Z.Messages.QUESTS_DISCLOSURE_LABEL,
+                                label: q.Z.Messages.QUESTS_DISCLOSURE_LABEL,
                                 action: () => {
                                     (0, x.openDisclosureModal)(e.quest, {
                                         content: e.questContent,
@@ -107,7 +107,7 @@ function q(e) {
                         u &&
                             (0, s.jsx)(a.MenuItem, {
                                 id: 'hide-entrypoint',
-                                label: h.Z.Messages.QUESTS_HIDE_THIS,
+                                label: q.Z.Messages.QUESTS_HIDE_THIS,
                                 action: () => {
                                     (0, c._3)({
                                         questId: e.quest.id,
@@ -117,7 +117,7 @@ function q(e) {
                                     }),
                                         (0, m.GN)(e.questContent) && (0, d.gl)(e.quest.id, e.questContent);
                                 },
-                                subtext: N ? h.Z.Messages.QUESTS_FIND_THIS_IN_DISCOVERY_QUEST_HOME : h.Z.Messages.QUESTS_FIND_QUEST
+                                subtext: N ? q.Z.Messages.QUESTS_FIND_THIS_IN_DISCOVERY_QUEST_HOME : q.Z.Messages.QUESTS_FIND_QUEST
                             })
                     ]
                 },
@@ -197,7 +197,7 @@ function M(e) {
             let { closePopout: t } = e;
             return r
                 ? (0, s.jsx)(u.Z, {
-                      children: (0, s.jsx)(q, {
+                      children: (0, s.jsx)(h, {
                           ...E,
                           quest: l,
                           questContent: d,
@@ -205,7 +205,7 @@ function M(e) {
                           onClose: t
                       })
                   })
-                : (0, s.jsx)(q, {
+                : (0, s.jsx)(h, {
                       ...E,
                       quest: l,
                       questContent: d,

@@ -5,7 +5,7 @@ var a = t(735250),
     s = t(43205),
     o = t(797342),
     u = t(182022);
-let c = [i.OV, i.Af, i.pQ];
+let c = [i.OV, i.EE, i.Af, i.U9, i.n8, i.pQ];
 n.Z = l.memo((e) => {
     let { entry: n, channel: t, selected: l, hovered: d } = e,
         { iconUrl: m, iconTitle: _ } = (0, o.n)(n);

@@ -82,7 +82,7 @@ t.Z = function (e) {
                     questContent: m.jn.ACTIVITY_PANEL,
                     questContentCTA: u.jZ.TRACK_PROGRESS
                 }),
-                (0, A.navigateToQuestHome)(v.dr.ACTIVITY_PANEL, o.id));
+                (0, A.navigateToQuestHome)(v.dr.ACTIVITY_PANEL, m.jn.ACTIVITY_PANEL, o.id));
         }, [o]),
         y = a.useCallback(() => {
             (0, u._3)({
@@ -90,7 +90,7 @@ t.Z = function (e) {
                 questContent: m.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.LEARN_MORE
             }),
-                (0, A.navigateToQuestHome)(v.dr.ACTIVITY_PANEL, o.id);
+                (0, A.navigateToQuestHome)(v.dr.ACTIVITY_PANEL, m.jn.ACTIVITY_PANEL, o.id);
         }, [o]),
         j = (0, C.hf)({
             quest: o,

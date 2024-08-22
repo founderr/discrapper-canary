@@ -1,8 +1,8 @@
 t.r(n);
 var o = t(735250),
-    r = t(470079),
-    s = t(442837),
-    c = t(481060),
+    s = t(470079),
+    c = t(442837),
+    r = t(481060),
     i = t(959457),
     l = t(571826),
     a = t(301107),
@@ -14,7 +14,7 @@ var o = t(735250),
     m = t(756843);
 n.default = function (e) {
     let { transitionState: n, streamKey: t, channelId: _ } = e,
-        E = (0, s.e7)([i.Z], () => {
+        E = (0, c.e7)([i.Z], () => {
             var e;
             return null === (e = i.Z.getSecureFramesState(t)) || void 0 === e ? void 0 : e.epochAuthenticator;
         }),
@@ -23,7 +23,7 @@ n.default = function (e) {
             chunkSize: f.y6,
             desiredLength: f.YP
         }),
-        I = r.useCallback(() => {
+        I = s.useCallback(() => {
             (0, l.ih)({ channelId: _ });
         }, [_]);
     return (0, o.jsxs)(h.Z, {
@@ -37,7 +37,7 @@ n.default = function (e) {
                     (0, o.jsxs)('div', {
                         className: m.header,
                         children: [
-                            (0, o.jsx)(c.Heading, {
+                            (0, o.jsx)(r.Heading, {
                                 variant: 'text-sm/bold',
                                 color: 'header-primary',
                                 children: x.Z.Messages.E2EE_PRIVACY_CODE
@@ -46,7 +46,7 @@ n.default = function (e) {
                                 (0, o.jsx)(u.H, {
                                     className: m.copyIcon,
                                     chunks: v,
-                                    color: c.tokens.colors.INTERACTIVE_NORMAL,
+                                    color: r.tokens.colors.INTERACTIVE_NORMAL,
                                     onCopy: I
                                 })
                         ]
@@ -58,7 +58,7 @@ n.default = function (e) {
                     })
                 ]
             }),
-            (0, o.jsx)(c.Text, {
+            (0, o.jsx)(r.Text, {
                 className: m.footer,
                 variant: 'text-sm/normal',
                 color: 'text-muted',

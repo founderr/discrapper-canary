@@ -12,8 +12,8 @@ var l = t(772848),
     a = t(626135),
     c = t(981631);
 function d(e) {
-    let { applicationId: n, skuId: d, onClose: u, onComplete: S, analyticsLocations: m, analyticsLocationObject: I, contextKey: x } = e,
-        f = !1,
+    let { applicationId: n, skuId: d, onClose: u, onComplete: S, analyticsLocations: m, analyticsLocationObject: I, contextKey: f } = e,
+        x = !1,
         _ = (0, l.Z)();
     (0, r.openModalLazy)(
         async () => {
@@ -31,15 +31,15 @@ function d(e) {
                         l(), null == u || u(e);
                     },
                     onComplete: (e) => {
-                        (f = !0), null == S || S(e);
+                        (x = !0), null == S || S(e);
                     }
                 });
             };
         },
         {
-            contextKey: x,
+            contextKey: f,
             onCloseCallback: () => {
-                !f &&
+                !x &&
                     a.default.track(c.rMx.PAYMENT_FLOW_CANCELED, {
                         load_id: _,
                         payment_type: c.Zuq[c.GZQ.ONE_TIME],
@@ -50,7 +50,7 @@ function d(e) {
                     }),
                     (0, o.fw)(),
                     (0, s.p)(),
-                    null == u || u(f);
+                    null == u || u(x);
             },
             onCloseRequest: c.dG4
         }

@@ -120,7 +120,7 @@ t.Z = function (e) {
                     questContent: p.jn.QUEST_LIVE_STREAM,
                     questContentCTA: h.jZ.TRACK_PROGRESS
                 }),
-                (0, P.navigateToQuestHome)(D.dr.QUEST_CHANNEL_CALL_HEADER, q.id));
+                (0, P.navigateToQuestHome)(D.dr.QUEST_CHANNEL_CALL_HEADER, p.jn.QUEST_LIVE_STREAM, q.id));
         }, [q]),
         el = s.useCallback(() => {
             null != q &&
@@ -129,7 +129,7 @@ t.Z = function (e) {
                     questContent: p.jn.QUEST_LIVE_STREAM,
                     questContentCTA: h.jZ.LEARN_MORE
                 }),
-                (0, P.navigateToQuestHome)(D.dr.QUEST_CHANNEL_CALL_HEADER, q.id));
+                (0, P.navigateToQuestHome)(D.dr.QUEST_CHANNEL_CALL_HEADER, p.jn.QUEST_LIVE_STREAM, q.id));
         }, [q]),
         eo = (0, L.hf)({
             quest: q,

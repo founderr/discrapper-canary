@@ -23,8 +23,8 @@ async function r(e, n, t) {
     let i = new Uint8Array(),
         u = new Uint8Array(2 + n.byteLength + 8);
     u.set(n, 2);
-    let a = new DataView(u.buffer);
-    a.setUint16(0, e), a.setBigUint64(2 + n.byteLength, r);
+    let E = new DataView(u.buffer);
+    E.setUint16(0, e), E.setBigUint64(2 + n.byteLength, r);
     for (let e = 0; e < 5200; e++) {
         let e = u.byteLength + n.byteLength;
         i.byteLength !== e && (i = new Uint8Array(e)), i.set(u, 0), i.set(n, u.byteLength), (u = new Uint8Array(await window.crypto.subtle.digest('SHA-512', i)));

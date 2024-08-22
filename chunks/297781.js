@@ -87,7 +87,7 @@ let y = {
     [d.s.PLAYED_GAME]: [U, w, P, Y, G, F, Z, B, k],
     [d.s.TOP_GAME]: [V],
     [d.s.WATCHED_MEDIA]: [j, W],
-    [d.s.LAUNCHED_ACTIVITY]: [U, P, k]
+    [d.s.LAUNCHED_ACTIVITY]: [U, w, P, Y, Z, k]
 };
 ((r = i || (i = {}))[(r.CARD = 0)] = 'CARD'), (r[(r.POPOUT = 1)] = 'POPOUT'), (r[(r.STREAMING_POPOUT = 2)] = 'STREAMING_POPOUT'), (r[(r.GAME_PROFILE = 3)] = 'GAME_PROFILE'), (r[(r.USER_PROFILE = 4)] = 'USER_PROFILE'), (r[(r.EMBED = 5)] = 'EMBED');
 let D = s.createContext({});

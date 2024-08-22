@@ -129,7 +129,7 @@ t.Z = function (e) {
                 questContentCTA: A.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, D.navigateToQuestHome)(L.dr.MEMBERS_LIST, T.id);
+                (0, D.navigateToQuestHome)(L.dr.MEMBERS_LIST, O.jn.MEMBERS_LIST, T.id);
         },
         eo = (e) => {
             e.stopPropagation(), ea();

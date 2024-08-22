@@ -3,13 +3,13 @@ t.d(n, {
         return I;
     },
     M9: function () {
-        return f;
+        return x;
     },
     Oj: function () {
         return _;
     },
     cj: function () {
-        return x;
+        return f;
     },
     km: function () {
         return S;
@@ -96,10 +96,10 @@ function I(e) {
         });
     });
 }
-function x() {
+function f() {
     l.Z.dispatch({ type: 'APPLICATION_STORE_MATURE_AGREE' });
 }
-function f() {
+function x() {
     (0, o.uL)(d.Z5c.APPLICATION_STORE);
 }
 function _(e) {

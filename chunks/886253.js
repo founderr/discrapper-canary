@@ -1,6 +1,6 @@
 t.d(n, {
     A: function () {
-        return x;
+        return f;
     }
 });
 var i = t(735250);
@@ -16,8 +16,8 @@ var l = t(442837),
     S = t(689938),
     m = t(437561),
     I = t(27399);
-function x(e) {
-    let { appId: n, skuId: t, transitionState: x, onClose: f, onHeaderTitleClick: _, children: p, footer: h } = e,
+function f(e) {
+    let { appId: n, skuId: t, transitionState: f, onClose: x, onHeaderTitleClick: _, children: p, footer: h } = e,
         T = (0, l.e7)(
             [s.Z, o.Z],
             () => {
@@ -30,7 +30,7 @@ function x(e) {
     let v = (0, c.y)(T, 25),
         { termsOfServiceUrl: E, privacyPolicyUrl: N } = T;
     return (0, i.jsxs)(r.ModalRoot, {
-        transitionState: x,
+        transitionState: f,
         size: r.ModalSize.DYNAMIC,
         className: I.modal,
         children: [
@@ -54,7 +54,7 @@ function x(e) {
                         ]
                     }),
                     (0, i.jsx)(r.ModalCloseButton, {
-                        onClick: f,
+                        onClick: x,
                         className: m.modalCloseBtn
                     })
                 ]

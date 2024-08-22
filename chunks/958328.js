@@ -49,9 +49,9 @@ function k() {
         k = (0, l.e7)([h.Z], () => h.Z.computePermissions(t)),
         v = (0, l.e7)([h.Z], () => h.Z.computePermissions(n)),
         _ = (0, s.ZP)(t, !0),
-        w = null != t ? (0, b.IG)(t, !1, !0) : null,
-        j = null != n ? p.Z.getGuildPermissionSpecMap(n) : null,
-        C = Object.values(null != w ? w : {}).map((e) => {
+        j = null != t ? (0, b.IG)(t, !1, !0) : null,
+        w = null != n ? p.Z.getGuildPermissionSpecMap(n) : null,
+        C = Object.values(null != j ? j : {}).map((e) => {
             let { title: r, flag: t } = e,
                 n = o.e$(k, t);
             return (0, a.jsx)(
@@ -63,7 +63,7 @@ function k() {
                 r
             );
         }),
-        N = Object.values(null != j ? j : {}).map((e) => {
+        N = Object.values(null != w ? w : {}).map((e) => {
             let { title: r, flag: t } = e,
                 n = o.e$(v, t);
             return (0, a.jsx)(

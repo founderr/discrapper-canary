@@ -1,7 +1,7 @@
 t.r(n),
     t.d(n, {
         SubscriptionDetailsModal: function () {
-            return f;
+            return x;
         }
     });
 var i = t(735250),
@@ -16,10 +16,10 @@ var i = t(735250),
     S = t(591759),
     m = t(886253),
     I = t(680005),
-    x = t(938337);
-function f(e) {
+    f = t(938337);
+function x(e) {
     var n;
-    let { appId: t, groupListingId: f, groupListingType: _, guildId: p, onClose: h, skuId: T, transitionState: v, onHeaderTitleClick: E } = e,
+    let { appId: t, groupListingId: x, groupListingType: _, guildId: p, onClose: h, skuId: T, transitionState: v, onHeaderTitleClick: E } = e,
         { data: N } = (0, c.H)(T),
         { data: g } = (0, a.Z)(T),
         L = l.useMemo(() => {
@@ -46,13 +46,13 @@ function f(e) {
               onClose: h,
               footer: (0, i.jsx)(I.p, {
                   appId: t,
-                  groupListingId: f,
+                  groupListingId: x,
                   groupListingType: _,
                   guildId: p,
                   skuId: T,
                   subPlan: N[0]
               }),
-              children: (0, i.jsx)(x.i, {
+              children: (0, i.jsx)(f.i, {
                   appId: t,
                   skuId: T,
                   benefits:

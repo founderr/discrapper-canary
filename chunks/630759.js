@@ -1,15 +1,15 @@
 t.d(n, {
     J6: function () {
-        return w;
+        return b;
     },
     LO: function () {
-        return p;
+        return U;
     },
     MA: function () {
         return k;
     },
     TQ: function () {
-        return U;
+        return p;
     },
     ZU: function () {
         return Z;
@@ -50,8 +50,8 @@ t.d(n, {
 var r = t(250683),
     i = t(512722),
     u = t.n(i),
-    a = t(913527),
-    E = t.n(a),
+    E = t(913527),
+    a = t.n(E),
     o = t(544891),
     s = t(253135),
     c = t(668781),
@@ -64,50 +64,50 @@ var r = t(250683),
     T = t(5192),
     R = t(960048),
     A = t(51144),
-    C = t(718629),
+    N = t(718629),
     M = t(615830),
-    N = t(352954),
+    C = t(352954),
     h = t(571826),
     g = t(760373),
     y = t(981631),
     O = t(689938);
-function U(e, n, t, r, i) {
-    t ? C.Z.createSecureFramesVerifiedKey(e, n) : C.Z.createSecureFramesTransientKey(e, n),
+function p(e, n, t, r, i) {
+    t ? N.Z.createSecureFramesVerifiedKey(e, n) : N.Z.createSecureFramesTransientKey(e, n),
         (0, h.M1)({
             channelId: r,
             userId: e,
             analyticsLocation: i
         });
 }
-function p(e, n, t) {
+function U(e, n, t) {
     if (t) {
         let t = (0, s.MK)(new Uint8Array(n));
-        C.Z.deleteSecureFramesVerifiedKey(e, t);
-    } else C.Z.deleteSecureFramesTransientKey(e);
+        N.Z.deleteSecureFramesVerifiedKey(e, t);
+    } else N.Z.deleteSecureFramesTransientKey(e);
 }
 function Z(e, n) {
-    N.Z.openSecureFramesUpdateConfirmation({
+    C.Z.openSecureFramesUpdateConfirmation({
         title: O.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE,
         subtitle: O.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE,
         onConfirm: () => {
-            C.Z.deleteSecureFramesVerifiedKey(e, n), (0, h.Pn)();
+            N.Z.deleteSecureFramesVerifiedKey(e, n), (0, h.Pn)();
         }
     });
 }
 function m(e) {
     let n = S.default.getUser(e),
         t = A.ZP.getName(n);
-    N.Z.openSecureFramesUpdateConfirmation({
+    C.Z.openSecureFramesUpdateConfirmation({
         title: O.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE.format({ username: t }),
         subtitle: O.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE,
         onConfirm: () => {
-            C.Z.deleteSecureFramesUserVerifiedKeys(e), (0, h.DF)();
+            N.Z.deleteSecureFramesUserVerifiedKeys(e), (0, h.DF)();
         }
     });
 }
 function D(e) {
-    let n = E()(e),
-        t = E()().diff(n, 's');
+    let n = a()(e),
+        t = a()().diff(n, 's');
     if (t > 12 * I.Z.Seconds.DAYS_30) {
         let e = Math.round(t / (12 * I.Z.Seconds.DAYS_30));
         return O.Z.Messages.E2EE_USER_VERIFIED_YEARS_AGO.format({ count: e });
@@ -146,17 +146,17 @@ async function L(e) {
     let n = l.default.getStaticAuthSessionId();
     return u()(null != n, '[getCurrentUserPublicKey] session id should not be null'), await _.Z.getMLSSigningKey(n, e);
 }
-function b(e) {
+function V(e) {
     let n = r.fromByteArray(new Uint8Array(e));
     return 'data:application/octet-stream;base64,'.concat(n);
 }
-async function w(e, n, t) {
+async function b(e, n, t) {
     try {
         return (
             await o.tn.post({
                 url: y.ANM.VOICE_MATCH_PUBLIC_KEY(e),
                 body: {
-                    public_key: b(n),
+                    public_key: V(n),
                     key_version: t
                 }
             })
@@ -165,18 +165,18 @@ async function w(e, n, t) {
         throw (R.Z.captureException(e), e);
     }
 }
-async function V(e) {
+async function w(e) {
     let { key: n, signature: t } = await L(e);
     try {
         await o.tn.put({
             url: y.ANM.VOICE_PUBLIC_KEYS(),
             body: {
-                public_key: b(n),
-                signature: b(t),
+                public_key: V(n),
+                signature: V(t),
                 key_version: e
             }
         }),
-            C.Z.addCurrentUserUploadedKeyVersionCached(e);
+            N.Z.addUploadedKeyVersion(e);
     } catch (e) {
         throw (R.Z.captureException(e), e);
     }
@@ -185,13 +185,13 @@ function P(e) {
     return M.Z.getUploadedKeyVersionsCached().includes(e);
 }
 async function K(e) {
-    !P(e) && (await V(e));
+    !P(e) && (await w(e));
 }
 async function v(e) {
-    if (!P(e)) return await V(e), !0;
+    if (!P(e)) return await w(e), !0;
     let n = l.default.getId(),
         { key: t } = await L(e),
-        r = await w(n, t, e);
+        r = await b(n, t, e);
     return !r && (0, h.KA)(e), r;
 }
 function k(e, n) {

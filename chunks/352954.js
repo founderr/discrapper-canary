@@ -28,20 +28,20 @@ n.Z = {
             });
     },
     openSecureFramesUpdateConfirmation: function (e) {
-        let { title: n, subtitle: a, confirmText: E = u.Z.Messages.CONFIRM, onConfirm: o } = e;
+        let { title: n, subtitle: E, confirmText: a = u.Z.Messages.CONFIRM, onConfirm: o } = e;
         (0, i.openModalLazy)(async () => {
             let { ConfirmModal: e } = await Promise.resolve().then(t.bind(t, 481060));
             return (t) =>
                 (0, r.jsx)(e, {
                     header: n,
-                    confirmText: E,
+                    confirmText: a,
                     cancelText: u.Z.Messages.CANCEL,
                     onConfirm: o,
                     ...t,
                     children: (0, r.jsx)(i.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: a
+                        children: E
                     })
                 });
         });

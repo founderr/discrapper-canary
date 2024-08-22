@@ -203,7 +203,7 @@ function E(e) {
               imgSrc: v,
               subscriptionType: o,
               onPurchase: p,
-              PurchaseButton: S,
+              renderPurchaseButton: S,
               benefitItems:
                   null != m
                       ? m.map((e) =>

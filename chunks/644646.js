@@ -31,7 +31,7 @@ t.Z = function (e) {
                         questContentPosition: e.questContentPosition,
                         questContentCTA: _.jZ.REWARD_LEARN_MORE
                     }),
-                    (0, I.navigateToQuestHome)(e.location, n.id),
+                    (0, I.navigateToQuestHome)(e.location, e.questContent, n.id),
                     null === (r = e.onClick) || void 0 === r || r.call(e, t);
             },
             [n.id, e]
