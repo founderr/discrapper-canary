@@ -97,7 +97,7 @@ function g(e) {
             return (0, i.jsxs)(r.ShinyButton, {
                 className: m.buttonWide,
                 innerClassName: m.innerButton,
-                color: r.Button.Colors.GREEN,
+                wrapperClassName: m.tier2Gradient,
                 size: r.Button.Sizes.SMALL,
                 onClick: () => {
                     c.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {

@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return v;
+            return A;
         }
     }),
     n(47120);
@@ -14,20 +14,20 @@ var r = n(735250),
     a = n(594174),
     c = n(5192),
     d = n(571826),
-    E = n(630759),
-    f = n(539067),
+    f = n(630759),
+    E = n(539067),
     _ = n(12786),
     S = n(210975),
     I = n(301107),
     R = n(65692),
-    C = n(785792),
-    g = n(190054),
+    g = n(785792),
+    C = n(190054),
     h = n(245581),
     m = n(760373),
     Z = n(981631),
     T = n(689938),
     N = n(756843);
-function A(e) {
+function v(e) {
     let { badgeText: t, badgeColor: n } = e,
         i = l.useRef(t),
         s = l.useRef(n);
@@ -36,12 +36,12 @@ function A(e) {
         color: s.current
     });
 }
-function v(e) {
-    let { transitionState: t, userId: n, channelId: v, onClose: y } = e,
+function A(e) {
+    let { transitionState: t, userId: n, channelId: A, onClose: y } = e,
         x = (0, i.e7)([a.default], () => a.default.getUser(n)),
         M = (0, i.e7)([o.Z], () => {
             var e;
-            return null === (e = o.Z.getChannel(v)) || void 0 === e ? void 0 : e.getGuildId();
+            return null === (e = o.Z.getChannel(A)) || void 0 === e ? void 0 : e.getGuildId();
         }),
         p = c.ZP.useName(M, null, x),
         { fingerprint: b, userKey: k, loading: F } = (0, R.q)({ userId: n }),
@@ -53,33 +53,33 @@ function v(e) {
         V = l.useCallback(() => {
             (0, d.s$)({
                 userId: n,
-                channelId: v
+                channelId: A
             });
-        }, [v, n]),
+        }, [A, n]),
         D = (0, S.wV)({
             userId: n,
-            channelId: v,
+            channelId: A,
             location: 'WebSecureFramesUserVerificationModal'
         }),
         j = (0, _.R)({ userId: n });
     (0, _.i)({
         isKeyConsistent: j,
-        channelId: v,
+        channelId: A,
         userId: n,
         nickname: p,
         onAlertOpen: y
     });
-    let { isCurrentUserKeyPersistent: O, isOtherUserKeyPersistent: w, loading: K } = (0, f.y)({ userId: n }),
+    let { isCurrentUserKeyPersistent: O, isOtherUserKeyPersistent: w, loading: K } = (0, E.y)({ userId: n }),
         L = l.useCallback(() => {
-            null != k && ((0, E.TQ)(n, k, w, v, Z.Sbl.E2EE_USER_VERIFY_MODAL), y());
-        }, [k, n, w, v, y]),
+            null != k && ((0, f.TQ)(n, k, w, A, Z.Sbl.E2EE_USER_VERIFY_MODAL), y());
+        }, [k, n, w, A, y]),
         B = l.useCallback(() => {
-            null != k && ((0, E.LO)(n, k, w), y());
+            null != k && ((0, f.LO)(n, k, w), y());
         }, [k, n, w, y]),
         [P, Y] = l.useMemo(() => (D ? [T.Z.Messages.E2EE_VERIFIED, s.Z.BG_BRAND] : [T.Z.Messages.NEW, s.Z.STATUS_DANGER]), [D]),
         z = l.useMemo(
             () =>
-                (0, E.kK)({
+                (0, f.kK)({
                     isCurrentUserKeyPersistent: O,
                     isOtherUserKeyPersistent: w,
                     otherUserNickname: p
@@ -90,9 +90,9 @@ function v(e) {
         l.useEffect(() => {
             (0, d.Rq)({
                 userId: n,
-                channelId: v
+                channelId: A
             });
-        }, [v, n]),
+        }, [A, n]),
         (0, r.jsxs)(h.Z, {
             transitionState: t,
             title: T.Z.Messages.E2EE_VERIFICATION_CODE,
@@ -110,7 +110,7 @@ function v(e) {
                                     children: T.Z.Messages.E2EE_VERIFICATION_CODE
                                 }),
                                 null != U &&
-                                    (0, r.jsx)(g.H, {
+                                    (0, r.jsx)(C.H, {
                                         className: N.copyIcon,
                                         chunks: U,
                                         color: u.tokens.colors.INTERACTIVE_NORMAL,
@@ -121,13 +121,13 @@ function v(e) {
                                           className: N.spinner,
                                           type: u.SpinnerTypes.SPINNING_CIRCLE
                                       })
-                                    : (0, r.jsx)(A, {
+                                    : (0, r.jsx)(v, {
                                           badgeText: P,
                                           badgeColor: Y
                                       })
                             ]
                         }),
-                        (0, r.jsx)(C.b, {
+                        (0, r.jsx)(g.b, {
                             className: N.code,
                             chunks: U,
                             columns: m.ak

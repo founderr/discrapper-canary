@@ -1,6 +1,6 @@
 n.d(t, {
     q: function () {
-        return E;
+        return f;
     }
 }),
     n(47120),
@@ -23,18 +23,18 @@ var r = n(470079),
     a = n(314897),
     c = n(19780),
     d = n(760373);
-function E(e) {
+function f(e) {
     let { userId: t } = e,
         n = (0, s.e7)([a.default], () => a.default.getId());
     u()(n !== t, '[useSecureFramesPairwiseFingerprint] Should not pass current user id.');
-    let [i, E] = r.useState(null),
-        [f, _] = r.useState(!1),
+    let [i, f] = r.useState(null),
+        [E, _] = r.useState(!1),
         S = (0, s.e7)([c.Z], () => c.Z.getSecureFramesRosterMapEntry(t)),
         I = (0, s.e7)([c.Z], () => c.Z.getSecureFramesRosterMapEntry(n)),
         R = r.useCallback(async (e, t, n, r) => {
             _(!0);
             let i = await (0, o.Il)(d.Xj, new Uint8Array(t), e, new Uint8Array(r), n);
-            E(l.fromByteArray(i)), _(!1);
+            f(l.fromByteArray(i)), _(!1);
         }, []);
     return (
         r.useEffect(() => {
@@ -44,9 +44,9 @@ function E(e) {
             () => ({
                 fingerprint: i,
                 userKey: S,
-                loading: f
+                loading: E
             }),
-            [i, f, S]
+            [i, E, S]
         )
     );
 }

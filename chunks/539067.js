@@ -15,7 +15,7 @@ function a(e) {
         n = (0, l.e7)([i.Z], () => i.Z.getSecureFramesRosterMapEntry(t)),
         a = (0, l.e7)([u.Z], () => u.Z.getPersistentCodesEnabled()),
         [c, d] = r.useState(!0),
-        [E, f] = r.useState(!1),
+        [f, E] = r.useState(!1),
         [_, S] = r.useState(!1),
         I = r.useCallback(async (e, t) => {
             d(!0);
@@ -23,20 +23,20 @@ function a(e) {
                 let n = o.GB,
                     r = await (0, s.uX)(n),
                     l = await (0, s.J6)(e, t, n);
-                f(r), S(l);
+                E(r), S(l);
             } catch (e) {
-                f(!1), S(!1);
+                E(!1), S(!1);
             } finally {
                 d(!1);
             }
         }, []);
     return (
         r.useEffect(() => {
-            a && null != n ? I(t, n) : (f(!1), S(!1), d(!1));
+            a && null != n ? I(t, n) : (E(!1), S(!1), d(!1));
         }, [a, n, I, t]),
         {
             loading: c,
-            isCurrentUserKeyPersistent: E,
+            isCurrentUserKeyPersistent: f,
             isOtherUserKeyPersistent: _
         }
     );
