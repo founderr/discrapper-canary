@@ -83,7 +83,7 @@ let eo = a.memo(function (e) {
     let { channel: t, message: n } = e,
         a = (0, f.q5)(t.guild_id).filter(
             (e) =>
-                !G.ZP.isEmojiDisabled({
+                !G.ZP.isEmojiFilteredOrLocked({
                     emoji: e,
                     channel: t,
                     intention: et.Hz.REACTION,

@@ -20,16 +20,16 @@ var i = t(735250),
     E = t(653798),
     x = t(314182),
     N = t(251660),
-    S = t(246946),
-    T = t(351402),
+    T = t(246946),
+    S = t(351402),
     h = t(853872),
     b = t(855775),
     g = t(695103),
     P = t(4912),
     v = t(669079),
     A = t(937615),
-    y = t(987209),
-    M = t(598),
+    M = t(987209),
+    y = t(598),
     C = t(45572),
     O = t(119226),
     R = t(981631),
@@ -88,22 +88,22 @@ function D(e) {
 }
 function w(e) {
     let { hasLegalTermsFlash: n, legalTermsNodeRef: t, onPaymentSourceChange: r, handlePaymentSourceAdd: f } = e,
-        { application: A, purchaseState: w, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: U, skusById: k, skuPricePreviewsById: F, selectedSkuId: H, isEmbeddedIAP: W, purchaseType: Y, purchasePreviewError: K } = (0, M.usePaymentContext)(),
-        { isGift: V, giftRecipient: z } = (0, y.wD)(),
+        { application: A, purchaseState: w, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: U, skusById: k, skuPricePreviewsById: F, selectedSkuId: W, isEmbeddedIAP: H, purchaseType: Y, purchasePreviewError: K } = (0, y.usePaymentContext)(),
+        { isGift: V, giftRecipient: z } = (0, M.wD)(),
         X = V && (0, v.pO)(z),
         { defaultPaymentSourceId: q, hasFetchedPaymentSources: J } = (0, o.cj)([h.Z], () => ({
             defaultPaymentSourceId: h.Z.defaultPaymentSourceId,
             hasFetchedPaymentSources: h.Z.hasFetchedPaymentSources
         }));
-    s()(null != H, 'Expected selectedSkuId');
-    let Q = k[H],
-        $ = F[H],
+    s()(null != W, 'Expected selectedSkuId');
+    let Q = k[W],
+        $ = F[W],
         ee = null != B ? B : b.c,
         en = null != $ ? $[ee] : null;
     s()(null != Q, 'SKU must exist and be fetched.'), s()(null != A, 'Application must exist.');
     let et = (0, o.e7)([I.Z, g.Z], () => g.Z.inTestModeForApplication(A.id) || I.Z.inDevModeForApplication(A.id), [A.id]),
-        ei = (0, o.e7)([S.Z], () => S.Z.enabled),
-        ea = l.M.EEA_COUNTRIES.has(T.Z.ipCountryCodeWithFallback),
+        ei = (0, o.e7)([T.Z], () => T.Z.enabled),
+        ea = l.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback),
         er = w === C.A.PURCHASING || w === C.A.COMPLETED,
         es = null != B ? G[B].type : null;
     return (
@@ -128,7 +128,7 @@ function w(e) {
                 (0, i.jsx)(D, {
                     application: A,
                     sku: Q,
-                    isEmbeddedIAP: W
+                    isEmbeddedIAP: H
                 }),
                 X && (0, i.jsx)(O.Z, { sku: Q }),
                 null != z ? (0, i.jsx)(N.s, { giftRecipient: z }) : null,
@@ -185,7 +185,7 @@ function w(e) {
                         checkboxLabel: Q.productLine === R.POd.COLLECTIBLES ? L.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_SIMPLE.format({ paidURL: R.EYA.PAID_TERMS }) : void 0,
                         finePrint: (0, i.jsx)(d.Z, {
                             paymentSourceType: es,
-                            isEmbeddedIAP: W,
+                            isEmbeddedIAP: H,
                             purchaseType: Y,
                             productLine: Q.productLine,
                             isGift: V

@@ -25,8 +25,8 @@ var l = n(442837),
     N = n(135724),
     x = n(25601),
     S = n(981631),
-    Z = n(490897),
-    v = n(689938),
+    v = n(490897),
+    Z = n(689938),
     T = n(704842);
 function L(e) {
     var t;
@@ -36,13 +36,13 @@ function L(e) {
         G = (0, l.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)),
         k = (0, l.e7)([f.Z], () => f.Z.hasVideo(n.id)),
         B = (0, u.PK)(n.id) && n.isGuildStageVoice(),
-        V = (0, I.ZP)({
+        H = (0, I.ZP)({
             channel: n,
             locked: G,
             video: k || B,
             selected: L
         }),
-        H = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
+        V = (0, l.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
         F = (0, o.n2)(n.guild_id, n.id),
         W = (0, l.e7)([h.Z], () => {
             var e, t;
@@ -52,15 +52,15 @@ function L(e) {
     if ((0, c.O)(O)) return (0, i.jsx)(c.Z, { locked: P });
     if (y)
         return (0, i.jsx)(a.TextBadge, {
-            text: v.Z.Messages.NEW,
+            text: Z.Z.Messages.NEW,
             color: r.Z.unsafe_rawColors.BRAND_260.css,
             className: T.newChannel
         });
-    if (!j && D === Z.i.ALL_MESSAGES && n.isForumLikeChannel() && null != H && H > 0)
+    if (!j && D === v.i.ALL_MESSAGES && n.isForumLikeChannel() && null != V && V > 0)
         return (0, i.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',
-            children: v.Z.Messages.CHANNEL_NEW_POSTS_LABEL.format({ count: (0, a.getBadgeCountString)(H) })
+            children: Z.Z.Messages.CHANNEL_NEW_POSTS_LABEL.format({ count: (0, a.getBadgeCountString)(V) })
         });
     if (!j && n.isForumLikeChannel() && null != F && F > 0)
         return (0, i.jsx)(a.Text, {
@@ -69,7 +69,7 @@ function L(e) {
             children: (0, a.getBadgeCountString)(F)
         });
     let z = null !== (t = null == b ? void 0 : b.length) && void 0 !== t ? t : 0;
-    return null != M && M && V
+    return null != M && M && H
         ? (0, i.jsx)(N.Z, {
               userCount: z,
               video: k || B,
@@ -77,7 +77,7 @@ function L(e) {
           })
         : A && (0, g.a)(b) && W
           ? (0, i.jsx)(a.TextBadge, {
-                text: v.Z.Messages.LIVE,
+                text: Z.Z.Messages.LIVE,
                 color: r.Z.unsafe_rawColors.RED_400.css
             })
           : null != R && R && (0, m.u)(U)

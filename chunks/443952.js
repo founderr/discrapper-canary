@@ -36,7 +36,7 @@ async function M(e, t, n, i) {
     if (null == s || null == s.secrets || !(0, Z.t9)(i, s.party, s.secrets)) throw new v.Z({ errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
     let r = (0, E.Z)(s, T.Z);
     if (r) {
-        let { lock: t } = (0, x.s0)(e);
+        let { lock: t } = (0, x.jU)(e);
         return (0, o.h7)(s, r).then(() => {
             throw (t(), new v.Z({ errorCode: P.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.'));
         });

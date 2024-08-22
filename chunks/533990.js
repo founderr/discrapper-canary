@@ -25,7 +25,7 @@ let i = (0, n(818083).B)({
         },
         {
             id: 98,
-            label: 'User recieves 1 week trial and 1 week followup trial',
+            label: 'Users recieve 2 week trial.',
             config: {
                 enabled: !0,
                 isFollowup: !1

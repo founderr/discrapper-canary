@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(276952),
     x = n(249792),
     S = n(40153),
-    Z = n(593618),
-    v = n(252686),
+    v = n(593618),
+    Z = n(252686),
     T = n(682662),
     L = n(674552),
     A = n(981631),
@@ -46,9 +46,9 @@ function O(e, t) {
 }
 t.Z = l.memo(function (e) {
     var t, n, r, p, P;
-    let { guildNode: y, setRef: j, onDragStart: D, onDragEnd: w, route: U, guild: G, animatable: k, selected: B = !1, unread: V = !1, mediaState: H, unavailable: F = !1, badge: W = 0, contextMenu: z = O, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
+    let { guildNode: y, setRef: j, onDragStart: D, onDragEnd: w, route: U, guild: G, animatable: k, selected: B = !1, unread: H = !1, mediaState: V, unavailable: F = !1, badge: W = 0, contextMenu: z = O, draggable: Y = !1, sorting: K = !1, preloadOnClick: q = !0, guildJoinRequestStatus: Q } = e,
         { id: X, parentId: J } = y,
-        $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != H ? (0, L.Or)(H) : void 0,
+        $ = null !== (t = e.upperBadge) && void 0 !== t ? t : F ? (0, L.Ny)() : null != V ? (0, L.Or)(V) : void 0,
         ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
     null == ee && W > 0 ? (ee = null !== (r = (0, L.Ne)(W)) && void 0 !== r ? r : void 0) : null == ee && null != Q && (ee = null !== (p = (0, L.jt)({ guildJoinRequestStatus: Q })) && void 0 !== p ? p : void 0);
     let et = null !== (P = e.lowerBadgeSize) && void 0 !== P ? P : { width: (0, d.getBadgeWidthForValue)(W) },
@@ -155,7 +155,7 @@ t.Z = l.memo(function (e) {
                       role: 'treeitem'
                   }),
         eN = en
-            ? (0, i.jsx)(S.OG, { children: (0, i.jsx)(v.Z, {}) })
+            ? (0, i.jsx)(S.OG, { children: (0, i.jsx)(Z.Z, {}) })
             : (0, i.jsx)('div', {
                   ref: Y ? ei : void 0,
                   'data-dnd-name': G.toString(),
@@ -178,10 +178,10 @@ t.Z = l.memo(function (e) {
             (0, i.jsx)(N.Z, {
                 hovered: !en && es,
                 selected: !en && B,
-                unread: !en && V,
+                unread: !en && H,
                 className: M.pill
             }),
-            (0, i.jsx)(Z.Z, {
+            (0, i.jsx)(v.Z, {
                 guild: G,
                 disabled: K,
                 isDragging: en,

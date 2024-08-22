@@ -11,8 +11,8 @@ var i = n(735250),
     h = n(689938),
     p = n(121865);
 t.Z = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: _, headerClassName: f, contentClassName: g, tryItText: m, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: Z = !1, showGIFTag: v = !1, dismissibleContent: T, position: L = 'top', align: A = 'center', art: b, isPremiumEarlyAccess: M = !1, maxWidth: R = 280 } = e,
-        O = Z ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
+    let { body: n, header: r, artClassName: _, headerClassName: f, contentClassName: g, tryItText: m, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: v = !1, showGIFTag: Z = !1, dismissibleContent: T, position: L = 'top', align: A = 'center', art: b, isPremiumEarlyAccess: M = !1, maxWidth: R = 280 } = e,
+        O = v ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
         [P, y] = l.useState(!1),
         { ref: j, width: D } = (0, o.Z)();
     function w(e) {
@@ -38,7 +38,7 @@ t.Z = l.forwardRef(function (e, t) {
                 children: [
                     (0, i.jsxs)('div', {
                         className: a()(_, x ? p.artInline : p.artAbsolute),
-                        children: [v && (0, i.jsx)(u.Z, { className: p.gifTag }), b]
+                        children: [Z && (0, i.jsx)(u.Z, { className: p.gifTag }), b]
                     }),
                     (0, i.jsxs)('div', {
                         className: p.body,
@@ -89,7 +89,7 @@ t.Z = l.forwardRef(function (e, t) {
                     }),
                     (0, i.jsx)('div', {
                         ref: j,
-                        className: P || !Z ? p.buttonContainerVertical : p.buttonContainerHorizontal,
+                        className: P || !v ? p.buttonContainerVertical : p.buttonContainerHorizontal,
                         children:
                             null != I
                                 ? (0, i.jsxs)(i.Fragment, {

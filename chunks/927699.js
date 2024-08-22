@@ -23,7 +23,7 @@ let E = (0, _.kt)({
     type: m.d4z.DM
 });
 function x(e) {
-    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: _, placeholder: m, currentText: x, className: N, innerClassName: S, disabled: T = !1, disableThemedBackground: h = !1 } = e,
+    let { sectionTitle: n, errors: t, onTextChange: r, pendingText: _, placeholder: m, currentText: x, className: N, innerClassName: T, disabled: S = !1, disableThemedBackground: h = !1 } = e,
         [b, g] = a.useState(null != _ ? _ : x),
         [P, v] = a.useState((0, c.JM)(b)),
         A = a.useRef(!1);
@@ -42,10 +42,10 @@ function x(e) {
             children: (0, i.jsxs)(d.Z, {
                 title: n,
                 errors: t,
-                disabled: T,
+                disabled: S,
                 children: [
                     (0, i.jsx)(u.Z, {
-                        innerClassName: s()(f.textArea, S),
+                        innerClassName: s()(f.textArea, T),
                         editorClassName: f.editorTextArea,
                         maxCharacterCount: p.$n,
                         onChange: function (e, n, t) {

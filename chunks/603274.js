@@ -28,8 +28,8 @@ var l = n(120356),
     N = n(981631),
     x = n(689938),
     S = n(416590),
-    Z = n(403614);
-function v(e, t) {
+    v = n(403614);
+function Z(e, t) {
     return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
@@ -69,7 +69,7 @@ function T() {
                 ),
             [r]
         ),
-        Z = (0, o.Wu)([h.Z], () =>
+        v = (0, o.Wu)([h.Z], () =>
             s().flatMap(a, (e) =>
                 h.Z.getMutableParticipants(e, p.pV.SPEAKER)
                     .filter((e) => e.type === p.Ui.VOICE)
@@ -107,12 +107,12 @@ function T() {
         ),
         b = (0, o.Wu)([g.default], () => A.map((e) => g.default.getUser(e)), [A]),
         M = (0, o.Wu)([g.default], () => L.map((e) => g.default.getUser(e)), [L]),
-        R = v(
+        R = Z(
             c.VoiceNormalIcon,
             x.filter((e) => !L.includes(e.id) && !A.includes(e.id))
         );
     let O =
-            ((e = Z),
+            ((e = v),
             (t = T),
             0 === e.length
                 ? null
@@ -146,11 +146,11 @@ function T() {
                           })
                       ]
                   })),
-        P = v(
+        P = Z(
             c.ScreenArrowIcon,
             M.filter((e) => null != e && !A.includes(e.id))
         ),
-        y = v(c.ActivitiesIcon, b);
+        y = Z(c.ActivitiesIcon, b);
     return (0, i.jsxs)(i.Fragment, {
         children: [O, R, P, y]
     });
@@ -177,7 +177,7 @@ function A(e) {
         position: 'right',
         text: (0, i.jsx)(L, {}),
         'aria-label': t,
-        tooltipClassName: Z.listItemTooltip,
+        tooltipClassName: v.listItemTooltip,
         onTooltipShow: n,
         children: (e) =>
             (0, i.jsx)('div', {

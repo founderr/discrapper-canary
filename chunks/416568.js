@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(358221),
     x = n(963202),
     S = n(353093),
-    Z = n(706590),
-    v = n(940777),
+    v = n(706590),
+    Z = n(940777),
     T = n(831565),
     L = n(41776),
     A = n(905423),
@@ -38,8 +38,8 @@ var i = n(735250),
     G = n(474109),
     k = n(741616),
     B = n(187835),
-    V = n(162050),
-    H = n(118122),
+    H = n(162050),
+    V = n(118122),
     F = n(193154),
     W = n(602147),
     z = n(773182),
@@ -216,9 +216,9 @@ function eu(e) {
         eN = eg || eC.length > 0 || eE,
         ex = l.useMemo(() => eC.filter((e) => !(0, S.EJ)(e)), [eC]).length > 0,
         eS = l.useMemo(() => (ex ? z.OO : eg ? z.KF : void 0), [eg, ex]),
-        eZ = l.useMemo(() => (ex ? eI : eg ? em : void 0), [eI, eg, ex, em]),
-        ev = null != eS,
-        eT = !ev,
+        ev = l.useMemo(() => (ex ? eI : eg ? em : void 0), [eI, eg, ex, em]),
+        eZ = null != eS,
+        eT = !eZ,
         { ref: eL, ...eA } = (0, d.OP)(),
         eb = (0, g.useFocusJumpSection)(),
         [eM, eR] = l.useState(!1),
@@ -276,7 +276,7 @@ function eu(e) {
     }, [eO]);
     (0, U.Z)(eO.scrollToGuild);
     let eU = o.getRoots(),
-        eG = (0, Z.Z)(),
+        eG = (0, v.Z)(),
         ek = (0, b.U)(),
         eB = el.map((e) =>
             (0, i.jsx)(
@@ -317,8 +317,8 @@ function eu(e) {
                         onScroll: eO.handleScroll,
                         children: [
                             (0, i.jsx)(Y.u, {}),
-                            eG ? (0, i.jsx)(v.Z, {}) : null,
-                            (0, i.jsx)(V.Z, {}),
+                            eG ? (0, i.jsx)(Z.Z, {}) : null,
+                            (0, i.jsx)(H.Z, {}),
                             (0, i.jsx)(K.Z, { isOnHubVerificationRoute: eD }),
                             (0, i.jsx)(k.Z, {}),
                             ek,
@@ -364,7 +364,7 @@ function eu(e) {
                             eB,
                             n
                                 ? null
-                                : (0, i.jsx)(H.Z, {
+                                : (0, i.jsx)(V.Z, {
                                       disableTooltip: h.length > 0,
                                       lastTargetNode: eU[eU.length - 1]
                                   }),
@@ -396,7 +396,7 @@ function eu(e) {
                         : (0, i.jsx)(z.LW, {
                               hideGradient: e_,
                               children: (0, i.jsx)(eS, {
-                                  defaultGameId: eZ,
+                                  defaultGameId: ev,
                                   children: (e) => {
                                       let { onClick: t } = e;
                                       return (0, i.jsx)(W.Z, {
@@ -413,7 +413,7 @@ function eu(e) {
                         ref: ep,
                         isVisible: eO.isItemVisible,
                         onJumpTo: eO.handleJumpToGuild,
-                        className: a()(ei.unreadMentionsIndicatorBottom, { [ei.unreadMentionsFixedFooter]: !n && ev }),
+                        className: a()(ei.unreadMentionsIndicatorBottom, { [ei.unreadMentionsFixedFooter]: !n && eZ }),
                         barClassName: ei.unreadMentionsBar
                     })
                 ]

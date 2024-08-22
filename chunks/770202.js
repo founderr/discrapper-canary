@@ -89,7 +89,7 @@ class S extends g.ZP {
             });
     }
 }
-let Z = (0, u.B)(S);
+let v = (0, u.B)(S);
 t.Z = l.memo(function (e) {
     let { channel: t, guild: n, disableSorting: l } = e,
         r = (0, s.cj)([p.Z, f.Z], () => {
@@ -99,7 +99,7 @@ t.Z = l.memo(function (e) {
                 canReorderChannel: !0 !== l && null != e ? f.Z.can(C.Plq.MANAGE_CHANNELS, e) : f.Z.can(C.Plq.MANAGE_CHANNELS, n)
             };
         });
-    return (0, i.jsx)(Z, {
+    return (0, i.jsx)(v, {
         ...r,
         ...e
     });

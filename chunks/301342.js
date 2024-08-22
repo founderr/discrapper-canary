@@ -33,16 +33,16 @@ var i = n(735250),
     N = n(981631),
     x = n(689938),
     S = n(405695);
-function Z(e) {
+function v(e) {
     e.stopPropagation();
 }
-let v = l.memo(function (e) {
+let Z = l.memo(function (e) {
     let t,
-        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: E, position: v, sortingPosition: T, hideIcon: L, children: A } = e,
+        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: E, position: Z, sortingPosition: T, hideIcon: L, children: A } = e,
         b = (0, o.e7)([C.ZP], () => C.ZP.isChannelMuted(r.getGuildId(), r.id)),
         M = (0, o.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
         R = (0, o.e7)([m.Z], () => m.Z.can(N.Plq.MANAGE_CHANNELS, r));
-    t = null != T ? (v > T ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
+    t = null != T ? (Z > T ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
     let O = l.useCallback(() => {
             M ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
         }, [r.id, M]),
@@ -126,7 +126,7 @@ let v = l.memo(function (e) {
                                 ]
                             }),
                             (0, i.jsx)('div', {
-                                onClick: Z,
+                                onClick: v,
                                 className: S.children,
                                 children:
                                     R && !E
@@ -169,7 +169,7 @@ let v = l.memo(function (e) {
         });
     return null != I && null != h ? I(h(k)) : k;
 });
-t.ZP = (0, h.B)(v);
+t.ZP = (0, h.B)(Z);
 let T = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)('li', {

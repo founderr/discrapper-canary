@@ -20,7 +20,7 @@ t.Z = (0, h.Z)(
             O = null != v ? (null == c ? void 0 : c.get(v)) : void 0,
             R = null !== (t = null == O ? void 0 : O.application) && void 0 !== t ? t : l.Z.getApplication(n);
         return new Promise((e, t) => {
-            let l = (0, E.s0)(null != Z ? Z : 0),
+            let l = (0, E.jU)(Z),
                 O = (i) => {
                     let { clientId: a, location: r } = i;
                     if (null == a || a === n) l.lock(), s.Z.unsubscribe('OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', O), null != location ? e(r) : t(new _.Z({ errorCode: m.lTL.OAUTH2_ERROR }, 'User cancelled authorization'));

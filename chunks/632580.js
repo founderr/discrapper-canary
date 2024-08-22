@@ -18,13 +18,13 @@ var i = t(512722),
     m = t(981631),
     I = t(474936);
 async function f(e) {
-    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: E, setHasRedirectURL: x, isGift: N, baseAnalyticsData: S, analyticsLocation: T, analyticsLocations: h, flowStartTime: b, subscriptionPlan: g, planGroup: P, trialId: v, priceOptions: A, paymentSource: y, isPrepaidPaymentPastDue: M, openInvoiceId: C, premiumSubscription: O, onNext: R, metadata: L, sku: j, skuPricePreview: Z, purchaseType: D, referralCode: w, loadId: G, giftInfoOptions: B, invoicePreview: U } = e;
+    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: E, setHasRedirectURL: x, isGift: N, baseAnalyticsData: T, analyticsLocation: S, analyticsLocations: h, flowStartTime: b, subscriptionPlan: g, planGroup: P, trialId: v, priceOptions: A, paymentSource: M, isPrepaidPaymentPastDue: y, openInvoiceId: C, premiumSubscription: O, onNext: R, metadata: L, sku: j, skuPricePreview: Z, purchaseType: D, referralCode: w, loadId: G, giftInfoOptions: B, invoicePreview: U } = e;
     n(p.A.PURCHASING), t(!0), i(!0), r.Z.wait(l.fw), f(null);
     try {
         let e, t, i;
         if (
             (d.default.track(m.rMx.PAYMENT_FLOW_COMPLETED, {
-                ...S,
+                ...T,
                 subtotal: null == U ? void 0 : U.subtotal,
                 tax: null == U ? void 0 : U.tax,
                 expected_amount: null == U ? void 0 : U.total,
@@ -41,7 +41,7 @@ async function f(e) {
                     expectedAmount: Z.amount,
                     expectedCurrency: Z.currency,
                     isGift: N,
-                    paymentSource: y,
+                    paymentSource: M,
                     loadId: G,
                     giftInfoOptions: B
                 }));
@@ -52,37 +52,37 @@ async function f(e) {
             e = await (0, c.ZZ)(I.RQ, g.skuId, {
                 expectedAmount: n,
                 expectedCurrency: t,
-                paymentSource: y,
+                paymentSource: M,
                 subscriptionPlanId: g.id,
                 isGift: !0,
                 loadId: G,
                 giftInfoOptions: B
             });
-        } else if (M && null != C && null != y && null != O)
-            e = m.Uk1.has(y.type)
-                ? await (0, s.G)(O, C, y, A.currency)
+        } else if (y && null != C && null != M && null != O)
+            e = m.Uk1.has(M.type)
+                ? await (0, s.G)(O, C, M, A.currency)
                 : await (0, s.Mg)(
                       O,
                       {
-                          paymentSource: y,
+                          paymentSource: M,
                           currency: A.currency
                       },
                       h,
-                      T,
+                      S,
                       G
                   );
         else if (null != O) {
             let n = (0, _.al)(O, g.id, 1, new Set(P)),
                 t = {
-                    paymentSource: y,
+                    paymentSource: M,
                     currency: A.currency
                 };
-            O.status === m.O0b.PAUSED ? (t.status = m.O0b.ACTIVE) : (t.items = n), (e = await (0, s.Mg)(O, t, h, T, G));
+            O.status === m.O0b.PAUSED ? (t.status = m.O0b.ACTIVE) : (t.items = n), (e = await (0, s.Mg)(O, t, h, S, G));
         } else
             e = await (0, o.Ld)({
                 planId: g.id,
                 currency: A.currency,
-                paymentSource: y,
+                paymentSource: M,
                 trialId: v,
                 metadata: L,
                 referralCode: w,
@@ -97,10 +97,10 @@ async function f(e) {
         n(p.A.FAIL),
             f(e),
             d.default.track(m.rMx.PAYMENT_FLOW_FAILED, {
-                ...S,
+                ...T,
                 payment_error_code: null == e ? void 0 : e.code,
-                payment_source_id: null == y ? void 0 : y.id,
-                payment_source_type: null == y ? void 0 : y.type,
+                payment_source_id: null == M ? void 0 : M.id,
+                payment_source_type: null == M ? void 0 : M.type,
                 duration_ms: Date.now() - b
             });
     } finally {

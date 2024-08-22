@@ -52,7 +52,7 @@ t.Z = {
             if (null == a) throw new _.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
             let s = d.Z.getApplicationActivity(a);
             if (null == s || null == s.secrets || !(0, h.t9)(n, s.party, s.secrets)) throw new _.Z({ errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
-            let { lock: l } = (0, m.s0)(i),
+            let { lock: l } = (0, m.jU)(i),
                 o = (0, c.Z)(s, u.Z);
             return (0, r.h7)(s, o).then(() => {
                 if ((l(), o)) throw new _.Z({ errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure user does have have privacy enabled.');
@@ -77,7 +77,7 @@ t.Z = {
             return l.Z.resolveInvite(t, 'Game SDK').then((e) => {
                 let { invite: t, code: i } = e;
                 if (null == t) throw new _.Z({ errorCode: g.lTL.INVALID_INVITE }, 'Invalid invite id: '.concat(i));
-                let { context: a, lock: r } = (0, m.s0)(n);
+                let { context: a, lock: r } = (0, m.jU)(n);
                 return new Promise((e) => {
                     s.Z.dispatch({
                         type: 'INVITE_MODAL_OPEN',
@@ -103,7 +103,7 @@ t.Z = {
                 } = e,
                 r = s.application.id;
             if (null == r) throw new _.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
-            let { lock: l } = (0, m.s0)(t);
+            let { lock: l } = (0, m.jU)(t);
             return new Promise((e) => {
                 (0, a.openModalLazy)(async () => {
                     let { default: t } = await n.e('66063').then(n.bind(n, 344516));

@@ -26,8 +26,8 @@ var i,
     N = n(306680),
     x = n(944486),
     S = n(938475),
-    Z = n(585483),
-    v = n(63063),
+    v = n(585483),
+    Z = n(63063),
     T = n(51596),
     L = n(823385),
     A = n(415795),
@@ -60,7 +60,7 @@ let y = 10,
                 (0, l.jsx)('div', {
                     className: O.emptyStateCTA,
                     children: (0, l.jsx)(u.Anchor, {
-                        href: v.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
+                        href: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: R.Z.Messages.QUICKSWITCHER_EMPTY_CTA
                     })
                 })
@@ -105,7 +105,7 @@ let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
             n = C.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? N.ZP.getMentionCount(n) : 0 };
     })(A.n5);
-function V(e, t, n) {
+function H(e, t, n) {
     return (0, l.jsx)(
         u.Tooltip,
         {
@@ -120,7 +120,7 @@ function V(e, t, n) {
         e
     );
 }
-class H extends r.PureComponent {
+class V extends r.PureComponent {
     componentDidMount() {
         p.Z.disable(), p.Z.enableTemp(h.u);
     }
@@ -197,7 +197,7 @@ class H extends r.PureComponent {
                 });
     }
     focusNode(e) {
-        Z.S.dispatch(M.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        v.S.dispatch(M.CkL.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return 'quick-switcher-'.concat(this._listId, '-item-').concat(e);
@@ -207,11 +207,11 @@ class H extends r.PureComponent {
             className: s()(O.protip, { [O.hasContent]: this.state.query.length > 0 }),
             type: g.Z.Types.INLINE,
             children: R.Z.Messages.QUICKSWITCHER_PROTIP.format({
-                userSymbolHook: (e, t) => V(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
-                textChannelSymbolHook: (e, t) => V(t, _.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
-                voiceChannelSymbolHook: (e, t) => V(t, _.xQ.VOICE_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
-                guildSymbolHook: (e, t) => V(t, _.xQ.GUILD, R.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
-                helpdeskArticle: v.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
+                userSymbolHook: (e, t) => H(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
+                textChannelSymbolHook: (e, t) => H(t, _.xQ.TEXT_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_TEXT_CHANNELS),
+                voiceChannelSymbolHook: (e, t) => H(t, _.xQ.VOICE_CHANNEL, R.Z.Messages.QUICKSWITCHER_PROTIP_VOICE_CHANNELS),
+                guildSymbolHook: (e, t) => H(t, _.xQ.GUILD, R.Z.Messages.QUICKSWITCHER_PROTIP_GUILDS),
+                helpdeskArticle: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL)
             })
         });
     }
@@ -534,7 +534,7 @@ class H extends r.PureComponent {
 }
 function F(e) {
     let t = (0, c.cj)([L.Z], () => L.Z.getProps());
-    return (0, l.jsx)(H, {
+    return (0, l.jsx)(V, {
         ...t,
         ...e
     });

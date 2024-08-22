@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return Z;
     }
 }),
     n(47120),
@@ -26,8 +26,8 @@ var i = n(735250),
     N = n(543432),
     x = n(981631),
     S = n(689938),
-    Z = n(864967);
-function v(e) {
+    v = n(864967);
+function Z(e) {
     var t, d;
     let { channel: h, guild: p, onAction: f, voiceStates: m, isChannelSelected: I, shouldShowSettingNudge: E } = e;
     !(function (e, t) {
@@ -49,7 +49,7 @@ function v(e) {
         (0, s.$)(n);
     })(h, m);
     let N = (0, o.ZP)(h),
-        v = Array.from((0, o.uF)(N).values()),
+        Z = Array.from((0, o.uF)(N).values()),
         L = null !== (t = null == m ? void 0 : m.filter(g.lm)) && void 0 !== t ? t : [],
         A = (e) => (t) => ([x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === x.IIU.LISTENING,
         b = (0, r.e7)(
@@ -78,18 +78,18 @@ function v(e) {
             [L],
             r.pF
         );
-    return b.length + v.length === 0
+    return b.length + Z.length === 0
         ? null
         : (0, i.jsxs)(a.Scroller, {
-              className: Z.container,
+              className: v.container,
               children: [
                   (0, i.jsx)(T, {
                       channel: h,
                       isChannelSelected: I,
                       voiceStatesCount: null !== (d = null == m ? void 0 : m.length) && void 0 !== d ? d : 0
                   }),
-                  (0, i.jsx)('div', { className: Z.headerDivider }),
-                  v.map((e, t) => {
+                  (0, i.jsx)('div', { className: v.headerDivider }),
+                  Z.map((e, t) => {
                       var n;
                       return (0, i.jsx)(
                           C.Z,
@@ -118,9 +118,9 @@ function v(e) {
                   E &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)('div', { className: Z.headerDivider }),
+                              (0, i.jsx)('div', { className: v.headerDivider }),
                               (0, i.jsx)('div', {
-                                  className: Z.settingNudgeText,
+                                  className: v.settingNudgeText,
                                   children: (0, i.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
@@ -157,7 +157,7 @@ function T(e) {
     return null == (0, d.KS)(t, c)
         ? null
         : (0, i.jsxs)('div', {
-              className: Z.popoutHeaderContainer,
+              className: v.popoutHeaderContainer,
               children: [
                   (0, i.jsx)(I.Z, { channel: t }),
                   o

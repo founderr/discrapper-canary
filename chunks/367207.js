@@ -21,8 +21,8 @@ var l = n(392711),
     N = n(269486),
     x = n(514851),
     S = n(970645),
-    Z = n(30684),
-    v = n(371260),
+    v = n(30684),
+    Z = n(371260),
     T = n(6242),
     L = n(467721),
     A = n(757692),
@@ -39,8 +39,8 @@ var l = n(392711),
     G = n(520540),
     k = n(11352),
     B = n(474936),
-    V = n(981631),
-    H = n(354459),
+    H = n(981631),
+    V = n(354459),
     F = n(37113),
     W = n(689938);
 function z(e, t, n) {
@@ -110,7 +110,7 @@ class Y extends c.Z {
     }
     maybeShowHDStreamingPerksDemoPostUpsellModal(e) {
         let { enabled: t } = j.Z.getCurrentConfig({ location: 'PremiumManager' }, { autoTrackExposure: !1 });
-        if (!t || e.state !== V.hes.DISCONNECTED || e.willReconnect) return;
+        if (!t || e.state !== H.hes.DISCONNECTED || e.willReconnect) return;
         let n = _.Z.getChannel(e.channelId);
         if (null == n) return;
         let i = b.Z.hasActiveDemo(r.q.STREAM_HIGH_QUALITY);
@@ -140,7 +140,7 @@ class Y extends c.Z {
             }),
             z(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = g.default.getCurrentUser();
-                null != e && e.verified && !(0, I.I5)(e) && Z.Z.shouldFetchCheckoutRecovery() && (await (0, S.o)());
+                null != e && e.verified && !(0, I.I5)(e) && v.Z.shouldFetchCheckoutRecovery() && (await (0, S.o)());
             }),
             z(this, '_maybeFetchCampaignContext', async () => {
                 let e = g.default.getCurrentUser();
@@ -180,19 +180,19 @@ class Y extends c.Z {
                     let r = d.Z.getSelectedParticipant(e),
                         a = (0, A.o)(r, n),
                         { sendNitroMessage: s } = (0, T.TD)(a),
-                        c = null !== (l = null === (i = f.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : V.Eu4.NONE;
-                    if (L.Z.cooldownIsActive() || !s || c >= V.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== H.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
-                    v.I();
+                        c = null !== (l = null === (i = f.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : H.Eu4.NONE;
+                    if (L.Z.cooldownIsActive() || !s || c >= H.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
+                    Z.I();
                     let u = W.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
                         nickname: r.userNick,
                         resolution: (0, F.o6)(r.maxResolution.height),
                         fps: (0, E.bp)(r.maxFrameRate)
                     });
                     o.Z.sendNitroSystemMessage(e, u),
-                        C.default.track(V.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
+                        C.default.track(H.rMx.PREMIUM_UPSELL_MESSAGE_SENT, {
                             type: B.cd.HD_STREAMING_VIEWER_UPSELL,
-                            location_section: null != t ? V.jXE.TEXT_IN_VOICE : V.jXE.CHANNEL_TEXT_AREA,
-                            location_object: V.qAy.MESSAGE,
+                            location_section: null != t ? H.jXE.TEXT_IN_VOICE : H.jXE.CHANNEL_TEXT_AREA,
+                            location_object: H.qAy.MESSAGE,
                             guild_id: t
                         });
                 }, 200)

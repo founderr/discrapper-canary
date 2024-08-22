@@ -20,21 +20,21 @@ var i = t(735250),
     f = t(62612);
 let E = (e) => {
     let { isShopGift: n } = e,
-        { giftRecipient: t, selectedGiftStyle: E, setSelectedGiftStyle: x, emojiConfetti: N, soundEffect: S, setEmojiConfetti: T, setSoundEffect: h } = (0, s.wD)(),
+        { giftRecipient: t, selectedGiftStyle: E, setSelectedGiftStyle: x, emojiConfetti: N, soundEffect: T, setEmojiConfetti: S, setSoundEffect: h } = (0, s.wD)(),
         [b, g] = a.useState(!1),
         P = a.useRef(null),
         v = (0, r.useRadioGroup)({ orientation: 'horizontal' }),
         A = (0, o.MY)(t, n),
-        y = A === o.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        M = A !== o.xr.DEFAULT,
+        M = A === o.xr.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        y = A !== o.xr.DEFAULT,
         C = (0, u.rK)(),
         { enabled: O } = u.ZP.useExperiment({ location: 'premiumGiftSelect_GiftAnimationOptions' }, { autoTrackExposure: C }),
         R = null;
     return (
-        M && (R = C && O ? m.V4 : m.QI),
+        y && (R = C && O ? m.V4 : m.QI),
         (0, i.jsxs)('div', {
             children: [
-                M &&
+                y &&
                     (0, i.jsxs)('div', {
                         className: f.giftMainAnimation,
                         children: [
@@ -47,14 +47,14 @@ let E = (e) => {
                                       className: f.animation
                                   })
                                 : (0, i.jsx)(r.Spinner, { className: f.spinner }),
-                            y &&
+                            M &&
                                 (0, i.jsxs)('div', {
                                     className: f.soundEmojiContainer,
                                     children: [
                                         (0, i.jsx)('div', {
                                             className: f.sound,
                                             children: (0, i.jsx)(l.Z, {
-                                                sound: S,
+                                                sound: T,
                                                 onSelect: (e) => {
                                                     null != h && h(null == e ? void 0 : e);
                                                 }
@@ -63,7 +63,7 @@ let E = (e) => {
                                         (0, i.jsx)('div', {
                                             className: f.emoji,
                                             children: (0, i.jsx)(_.Z, {
-                                                setEmojiConfetti: T,
+                                                setEmojiConfetti: S,
                                                 emojiConfetti: null == N ? void 0 : N
                                             })
                                         })

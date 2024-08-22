@@ -18,7 +18,7 @@ var i = t(512722),
     I = t(474936);
 function f(e) {
     let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: E, onReturn: x, continueSession: N = !1 } = e,
-        { contextMetadata: S, step: T, paymentSources: h, paymentSourceId: b, setPaymentSourceId: g, purchaseError: P, setPurchaseError: v, purchaseErrorBlockRef: A, paymentAuthenticationState: y, selectedSkuId: M, activeSubscription: C, previousStepRef: O, setPurchaseState: R } = (0, u.usePaymentContext)(),
+        { contextMetadata: T, step: S, paymentSources: h, paymentSourceId: b, setPaymentSourceId: g, purchaseError: P, setPurchaseError: v, purchaseErrorBlockRef: A, paymentAuthenticationState: M, selectedSkuId: y, activeSubscription: C, previousStepRef: O, setPurchaseState: R } = (0, u.usePaymentContext)(),
         { isGift: L } = (0, c.wD)(),
         j = {
             ...(0, l.fL)(),
@@ -28,27 +28,27 @@ function f(e) {
             purchaseError: P,
             setPurchaseError: v,
             purchaseErrorBlockRef: A,
-            paymentAuthenticationState: y,
-            selectedSkuId: M,
+            paymentAuthenticationState: M,
+            selectedSkuId: y,
             isGift: L
         },
         Z = (0, s.N)(E),
-        D = !L && null != Z && null != M && I.nG[Z.trial_id].skus.includes(M),
+        D = !L && null != Z && null != y && I.nG[Z.trial_id].skus.includes(y),
         w =
             null != x
                 ? x
                 : () => {
                       f(Object.values(h).length < 1 && null == t ? d.h8.PLAN_SELECT : d.h8.REVIEW, { trackedFromStep: d.h8.PAYMENT_TYPE });
                   };
-    a()(T, 'Step should be set here');
-    let G = (0, r.Z)(() => Date.now(), [T]);
+    a()(S, 'Step should be set here');
+    let G = (0, r.Z)(() => Date.now(), [S]);
     return (0, l.vP)({
         paymentModalArgs: j,
         initialStep: N && null == O.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
         prependSteps: [d.h8.PROMOTION_INFO],
         appendSteps: [d.h8.REVIEW, d.h8.CONFIRM],
         breadcrumpSteps: i,
-        currentBreadcrumpStep: T,
+        currentBreadcrumpStep: S,
         usePaymentModalStep: !0,
         onReturn: w,
         onComplete: (e) => {
@@ -62,10 +62,10 @@ function f(e) {
                 from_step: t,
                 to_step: i,
                 step_duration_ms: a - G,
-                flow_duration_ms: a - S.startTime
+                flow_duration_ms: a - T.startTime
             });
         },
         isEligibleForTrial: D,
-        allowDesktopRedirectPurchase: (0, p.tr)(M, L, C)
+        allowDesktopRedirectPurchase: (0, p.tr)(y, L, C)
     });
 }

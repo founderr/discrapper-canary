@@ -103,18 +103,18 @@ function x() {
 }
 t.ZP = l.memo(function (e) {
     var t;
-    let { bannerVisible: n, controller: r, className: s, onClick: S, onContextMenu: Z, onMouseDown: v, disableBannerAnimation: T, 'aria-expanded': L, 'aria-controls': A, guild: b, guildBanner: M, animationOverlayHeight: R, children: O, headerClassName: P, communityInfoVisible: y, hasSubheader: j } = e,
+    let { bannerVisible: n, controller: r, className: s, onClick: S, onContextMenu: v, onMouseDown: Z, disableBannerAnimation: T, 'aria-expanded': L, 'aria-controls': A, guild: b, guildBanner: M, animationOverlayHeight: R, children: O, headerClassName: P, communityInfoVisible: y, hasSubheader: j } = e,
         D = b.hasFeature(g.oNc.ANIMATED_BANNER),
         w = (0, d.Z)(b),
         U = !w && b.hasCommunityInfoSubheader(),
         G = (0, p.xR)(M) && D && !T,
         [k, B] = l.useState(!1),
-        V = l.useRef(),
-        H = l.useRef(null),
+        H = l.useRef(),
+        V = l.useRef(null),
         F = l.useRef(),
         W = h.QK.getSetting();
     l.useEffect(() => {
-        if (G && n && !V.current && W)
+        if (G && n && !H.current && W)
             return (
                 B(!0),
                 (F.current = setTimeout(() => {
@@ -126,7 +126,7 @@ t.ZP = l.memo(function (e) {
             );
     }, [G, n, W]),
         l.useEffect(() => {
-            V.current = n;
+            H.current = n;
         }, [n]);
     let z = () => {
             let { renderBanner: t, guildBanner: n } = e;
@@ -136,7 +136,7 @@ t.ZP = l.memo(function (e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                ref: H,
+                ref: V,
                 className: a()(s, {
                     [I.container]: !0,
                     [I.clickable]: null != S,
@@ -146,8 +146,8 @@ t.ZP = l.memo(function (e) {
                     [(0, _.Q)(g.BRd.DARK)]: n,
                     [I.communityInfoVisible]: (!w && y) || (j && U)
                 }),
-                onMouseDown: v,
-                onContextMenu: Z,
+                onMouseDown: Z,
+                onContextMenu: v,
                 onClick: S,
                 children: [
                     Y
@@ -175,11 +175,11 @@ t.ZP = l.memo(function (e) {
                                                   'aria-controls': A,
                                                   'aria-expanded': L,
                                                   focusProps: {
-                                                      ringTarget: H,
+                                                      ringTarget: V,
                                                       offset: 4
                                                   },
                                                   onClick: S,
-                                                  onContextMenu: Z,
+                                                  onContextMenu: v,
                                                   'aria-label': C.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({ guildName: null !== (t = null == b ? void 0 : b.toString()) && void 0 !== t ? t : '' })
                                               }),
                                           (0, i.jsx)('div', {

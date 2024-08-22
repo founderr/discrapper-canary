@@ -39,7 +39,7 @@ function S(e, t, n) {
         e
     );
 }
-let Z = {
+let v = {
     [E.vxO.INSTALLING]: {
         [_.J6.NONE]: (e, t) => N.Z.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({ name: e }),
         [_.J6.SECONDS]: (e, t) =>
@@ -95,7 +95,7 @@ let Z = {
             })
     }
 };
-class v extends r.PureComponent {
+class Z extends r.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
         if (e.type === E.vxO.UPDATING || e.type === E.vxO.REPAIRING || e.type === E.vxO.INSTALLING) {
@@ -121,7 +121,7 @@ class v extends r.PureComponent {
                 if (null == r || null == a || null == l) return null;
                 let o = (e[e.length - 1] / t) * 1000,
                     c = 0 !== o ? Math.max(1, (a - r) / o) : null,
-                    u = Z[s],
+                    u = v[s],
                     d = null != u ? Object.keys(u) : [],
                     { unit: h, time: p } = (0, _.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != h) {
@@ -152,7 +152,7 @@ class T extends (i = r.PureComponent) {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
         return null == e || null == t
             ? N.Z.Messages.LIBRARY
-            : (0, l.jsx)(v, {
+            : (0, l.jsx)(Z, {
                   application: e,
                   state: t,
                   isPaused: n
