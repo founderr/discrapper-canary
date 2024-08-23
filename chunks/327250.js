@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return j;
     }
 });
 var i = n(735250);
@@ -11,35 +11,37 @@ var a = n(120356),
     r = n(481060),
     o = n(493683),
     c = n(906732),
-    u = n(69882),
-    d = n(251794),
-    h = n(386696),
-    p = n(910693),
-    m = n(314897),
-    _ = n(271383),
-    f = n(430824),
-    E = n(496675),
+    u = n(979264),
+    d = n(69882),
+    h = n(251794),
+    p = n(386696),
+    m = n(910693),
+    _ = n(314897),
+    f = n(271383),
+    E = n(430824),
+    C = n(496675),
     g = n(158776),
-    C = n(885110),
-    I = n(594174),
-    x = n(572004),
-    T = n(5192),
-    N = n(51144),
-    S = n(981631),
-    v = n(689938),
-    Z = n(181861);
-function A(e) {
+    I = n(885110),
+    x = n(594174),
+    T = n(572004),
+    N = n(5192),
+    S = n(51144),
+    v = n(981631),
+    Z = n(308083),
+    A = n(689938),
+    M = n(181861);
+function b(e) {
     let { user: t, guildId: n, onClose: a } = e,
         s = t.id,
-        o = (0, l.e7)([C.Z, g.Z, m.default], () => (s === m.default.getId() ? C.Z.getStatus() : g.Z.getStatus(s, n)), [s, n]);
+        o = (0, l.e7)([I.Z, g.Z, _.default], () => (s === _.default.getId() ? I.Z.getStatus() : g.Z.getStatus(s, n)), [s, n]);
     return (0, i.jsxs)('div', {
-        className: Z.topRow,
+        className: M.topRow,
         children: [
             (0, i.jsxs)('div', {
-                className: Z.memberNameContainer,
+                className: M.memberNameContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        className: Z.memberAvatar,
+                        className: M.memberAvatar,
                         children: (0, i.jsx)(r.Avatar, {
                             src: t.getAvatarURL(n, 48),
                             'aria-label': t.username,
@@ -47,20 +49,36 @@ function A(e) {
                             status: o
                         })
                     }),
-                    (0, i.jsx)('div', {
-                        className: Z.memberName,
-                        children: (0, i.jsx)(r.Text, {
-                            variant: 'text-lg/medium',
-                            children: (0, i.jsx)(r.NameWithRole, {
-                                name: T.ZP.getName(n, null, t),
-                                color: r.tokens.colors.HEADER_PRIMARY.css
+                    (0, i.jsxs)('div', {
+                        className: M.memberNameAndTagContainer,
+                        children: [
+                            (0, i.jsxs)('div', {
+                                className: M.memberNameTextContainer,
+                                children: [
+                                    (0, i.jsx)(r.Text, {
+                                        variant: 'text-lg/medium',
+                                        children: (0, i.jsx)(r.NameWithRole, {
+                                            name: N.ZP.getName(n, null, t),
+                                            color: r.tokens.colors.HEADER_PRIMARY.css
+                                        })
+                                    }),
+                                    (0, i.jsx)(u.ZP, {
+                                        clan: null == t ? void 0 : t.clan,
+                                        userId: null == t ? void 0 : t.id,
+                                        contextGuildId: n,
+                                        badgeSize: Z.NC.SIZE_16,
+                                        textVariant: 'heading-md/semibold',
+                                        className: M.memberClanTag,
+                                        containerClassName: M.memberClanTagContainer
+                                    })
+                                ]
+                            }),
+                            (0, i.jsx)(r.Text, {
+                                variant: 'text-md/medium',
+                                color: 'text-normal',
+                                children: S.ZP.getUserTag(t)
                             })
-                        })
-                    }),
-                    (0, i.jsx)(r.Text, {
-                        variant: 'text-md/medium',
-                        color: 'text-normal',
-                        children: N.ZP.getUserTag(t)
+                        ]
                     })
                 ]
             }),
@@ -68,7 +86,7 @@ function A(e) {
                 variant: 'text-md/medium',
                 color: 'text-normal',
                 children: (0, i.jsx)(r.Clickable, {
-                    className: Z.closeAction,
+                    className: M.closeAction,
                     onClick: a,
                     children: (0, i.jsx)(r.XSmallIcon, {
                         size: 'md',
@@ -79,49 +97,49 @@ function A(e) {
         ]
     });
 }
-function M(e) {
+function R(e) {
     let { tag: t = 'div', disabled: n, children: a, onClick: l, ...o } = e;
     return (0, i.jsx)(r.Clickable, {
         ...o,
         tag: t,
-        className: s()(Z.bottomRowAction, { [Z.bottomRowActionDisabled]: n }),
+        className: s()(M.bottomRowAction, { [M.bottomRowActionDisabled]: n }),
         onClick: n ? void 0 : l,
         children: (0, i.jsx)('div', {
-            className: Z.innerBottomRowAction,
+            className: M.innerBottomRowAction,
             children: a
         })
     });
 }
-function b(e) {
+function L(e) {
     let { user: t, member: a, guildId: s } = e,
-        _ = (0, l.e7)([f.Z], () => f.Z.getGuild(s)),
+        u = (0, l.e7)([E.Z], () => E.Z.getGuild(s)),
         {
-            canKickUser: g,
-            canBanUser: C,
-            canModerateMembers: T
+            canKickUser: f,
+            canBanUser: g,
+            canModerateMembers: I
         } = (0, l.cj)(
-            [E.Z, I.default, f.Z],
+            [C.Z, x.default, E.Z],
             () => ({
-                canKickUser: null != _ && E.Z.canManageUser(S.Plq.KICK_MEMBERS, t, _),
-                canBanUser: null != _ && E.Z.canManageUser(S.Plq.BAN_MEMBERS, t, _),
-                canModerateMembers: null != _ && (0, h.F)(_.id, t.id, [I.default, f.Z, E.Z])
+                canKickUser: null != u && C.Z.canManageUser(v.Plq.KICK_MEMBERS, t, u),
+                canBanUser: null != u && C.Z.canManageUser(v.Plq.BAN_MEMBERS, t, u),
+                canModerateMembers: null != u && (0, p.F)(u.id, t.id, [x.default, E.Z, C.Z])
             }),
-            [t, _]
+            [t, u]
         ),
-        N = (0, u.b)(a),
-        { analyticsLocations: A, newestAnalyticsLocation: b } = (0, c.ZP)(),
-        R = (0, p.sE)(s, {
+        N = (0, d.b)(a),
+        { analyticsLocations: S, newestAnalyticsLocation: Z } = (0, c.ZP)(),
+        b = (0, m.sE)(s, {
             targetUserId: t.id,
-            location: b,
-            locations: A
+            location: Z,
+            locations: S
         }),
-        L = (0, l.e7)([m.default], () => m.default.getId() === (null == t ? void 0 : t.id));
+        L = (0, l.e7)([_.default], () => _.default.getId() === (null == t ? void 0 : t.id));
     return (0, i.jsxs)('div', {
-        className: Z.bottomRow,
+        className: M.bottomRow,
         children: [
-            (0, i.jsxs)(M, {
+            (0, i.jsxs)(R, {
                 disabled: L,
-                'aria-label': v.Z.Messages.SEND_DM,
+                'aria-label': A.Z.Messages.SEND_DM,
                 onClick: () => {
                     o.Z.openPrivateChannel(t.id);
                 },
@@ -135,20 +153,20 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: v.Z.Messages.SEND_DM
+                        children: A.Z.Messages.SEND_DM
                     })
                 ]
             }),
-            (0, i.jsxs)(M, {
-                disabled: !g,
-                'aria-label': v.Z.Messages.KICK,
+            (0, i.jsxs)(R, {
+                disabled: !f,
+                'aria-label': A.Z.Messages.KICK,
                 onClick: () => {
                     (0, r.openModalLazy)(async () => {
                         let { default: e } = await n.e('5454').then(n.bind(n, 854360));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: b,
+                                location: Z,
                                 guildId: s,
                                 user: t
                             });
@@ -164,20 +182,20 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: v.Z.Messages.KICK
+                        children: A.Z.Messages.KICK
                     })
                 ]
             }),
-            (0, i.jsxs)(M, {
-                disabled: !C,
-                'aria-label': v.Z.Messages.BAN,
+            (0, i.jsxs)(R, {
+                disabled: !g,
+                'aria-label': A.Z.Messages.BAN,
                 onClick: () => {
                     (0, r.openModalLazy)(async () => {
                         let { default: e } = await n.e('43350').then(n.bind(n, 98746));
                         return (n) =>
                             (0, i.jsx)(e, {
                                 ...n,
-                                location: b,
+                                location: Z,
                                 guildId: s,
                                 user: t
                             });
@@ -193,15 +211,15 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: v.Z.Messages.BAN
+                        children: A.Z.Messages.BAN
                     })
                 ]
             }),
-            (0, i.jsxs)(M, {
-                disabled: !T,
-                'aria-label': v.Z.Messages.TIMEOUT_USER,
+            (0, i.jsxs)(R, {
+                disabled: !I,
+                'aria-label': A.Z.Messages.TIMEOUT_USER,
                 onClick: () => {
-                    N ? (0, d.q)(a.guildId, a.userId, A) : (0, d.z)(a.guildId, a.userId, A);
+                    N ? (0, h.q)(a.guildId, a.userId, S) : (0, h.z)(a.guildId, a.userId, S);
                 },
                 children: [
                     (0, i.jsx)(r.ClockWarningIcon, {
@@ -213,16 +231,16 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: N ? v.Z.Messages.REMOVE : v.Z.Messages.TIMEOUT_USER
+                        children: N ? A.Z.Messages.REMOVE : A.Z.Messages.TIMEOUT_USER
                     })
                 ]
             }),
-            (0, i.jsxs)(M, {
-                'aria-label': v.Z.Messages.COPY_ID,
+            (0, i.jsxs)(R, {
+                'aria-label': A.Z.Messages.COPY_ID,
                 onClick: () => {
-                    R(p.jQ.COPY_ID), (0, x.JG)(t.id);
+                    b(m.jQ.COPY_ID), (0, T.JG)(t.id);
                 },
-                disabled: !x.wS,
+                disabled: !T.wS,
                 children: [
                     (0, i.jsx)(r.IdIcon, {
                         size: 'custom',
@@ -233,28 +251,28 @@ function b(e) {
                     (0, i.jsx)(r.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: v.Z.Messages.COPY_ID
+                        children: A.Z.Messages.COPY_ID
                     })
                 ]
             })
         ]
     });
 }
-function R(e) {
+function j(e) {
     let { userId: t, guildId: n, onClose: a } = e,
-        s = (0, l.e7)([I.default], () => I.default.getUser(t), [t]),
-        r = (0, l.e7)([_.ZP], () => _.ZP.getMember(n, t), [n, t]);
+        s = (0, l.e7)([x.default], () => x.default.getUser(t), [t]),
+        r = (0, l.e7)([f.ZP], () => f.ZP.getMember(n, t), [n, t]);
     return null == s || null == r
         ? null
         : (0, i.jsxs)('div', {
-              className: Z.container,
+              className: M.container,
               children: [
-                  (0, i.jsx)(A, {
+                  (0, i.jsx)(b, {
                       user: s,
                       guildId: n,
                       onClose: a
                   }),
-                  (0, i.jsx)(b, {
+                  (0, i.jsx)(L, {
                       user: s,
                       member: r,
                       guildId: n

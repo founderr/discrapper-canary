@@ -67,21 +67,21 @@ let I = i.memo(function (e) {
     }),
     T = i.memo(function (e) {
         var t, n;
-        let { clan: a, userId: s, children: d, profileViewedAnalytics: _ } = e,
-            f = (0, o.e7)([u.default], () => u.default.getUser(s), [s]),
-            h = null !== (t = null == f ? void 0 : f.clan) && void 0 !== t ? t : a,
-            [I, m] = (0, c.L_)(null !== (n = null == h ? void 0 : h.identityGuildId) && void 0 !== n ? n : null),
-            T = i.useCallback(() => {
-                m();
-            }, [m]);
+        let { clan: a, userId: d, className: _, children: f, profileViewedAnalytics: h } = e,
+            I = (0, o.e7)([u.default], () => u.default.getUser(d), [d]),
+            m = null !== (t = null == I ? void 0 : I.clan) && void 0 !== t ? t : a,
+            [T, g] = (0, c.L_)(null !== (n = null == m ? void 0 : m.identityGuildId) && void 0 !== n ? n : null),
+            S = i.useCallback(() => {
+                g();
+            }, [g]);
         return (0, r.jsx)(l.Popout, {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(E.Z, {
-                    isLoading: I,
-                    clan: h,
+                    isLoading: T,
+                    clan: m,
                     onClose: t,
-                    profileViewedAnalytics: _
+                    profileViewedAnalytics: h
                 });
             },
             position: 'top',
@@ -89,7 +89,7 @@ let I = i.memo(function (e) {
             spacing: 16,
             children: (e) =>
                 (0, r.jsx)(l.Clickable, {
-                    className: p.clickable,
+                    className: s()(p.clickable, _),
                     tag: 'span',
                     ...e,
                     onClick: (t) => {
@@ -98,43 +98,44 @@ let I = i.memo(function (e) {
                     },
                     onMouseEnter: () => {
                         var t;
-                        T(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
+                        S(), null === (t = e.onMouseEnter) || void 0 === t || t.call(e);
                     },
-                    children: d
+                    children: f
                 })
         });
     });
 t.ZP = i.memo(function (e) {
     var t;
-    let { clan: n, userId: i, contextGuildId: a, className: l, textVariant: c, textColor: _, badgeSize: E, disableGuildProfile: f = !1, inline: h = !0, profileViewedAnalytics: I } = e,
-        g = (0, o.e7)([u.default], () => u.default.getUser(i), [i]),
-        S = null !== (t = null == g ? void 0 : g.clan) && void 0 !== t ? t : n,
-        { tag: A, badge: N, guildId: O } = (0, d.vh)(S);
-    return (0, d.p0)(i, a) && null != O
-        ? f
+    let { clan: n, userId: i, contextGuildId: a, className: l, containerClassName: c, textVariant: _, textColor: E, badgeSize: f, disableGuildProfile: h = !1, inline: I = !0, profileViewedAnalytics: g } = e,
+        S = (0, o.e7)([u.default], () => u.default.getUser(i), [i]),
+        A = null !== (t = null == S ? void 0 : S.clan) && void 0 !== t ? t : n,
+        { tag: N, badge: O, guildId: v } = (0, d.vh)(A);
+    return (0, d.p0)(i, a) && null != v
+        ? h
             ? (0, r.jsx)(m, {
-                  guildId: O,
-                  clanTag: A,
-                  clanBadge: N,
+                  guildId: v,
+                  clanTag: N,
+                  clanBadge: O,
                   className: s()(p.noTooltip, l),
-                  textVariant: c,
-                  textColor: _,
-                  badgeSize: E,
-                  inline: h
+                  textVariant: _,
+                  textColor: E,
+                  badgeSize: f,
+                  inline: I
               })
             : (0, r.jsx)(T, {
-                  clan: S,
+                  clan: A,
                   userId: i,
-                  profileViewedAnalytics: I,
+                  profileViewedAnalytics: g,
+                  className: c,
                   children: (0, r.jsx)(m, {
-                      guildId: O,
-                      clanTag: A,
-                      clanBadge: N,
+                      guildId: v,
+                      clanTag: N,
+                      clanBadge: O,
                       className: l,
-                      textVariant: c,
-                      textColor: _,
-                      badgeSize: E,
-                      inline: h
+                      textVariant: _,
+                      textColor: E,
+                      badgeSize: f,
+                      inline: I
                   })
               })
         : null;

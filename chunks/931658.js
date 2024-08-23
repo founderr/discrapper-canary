@@ -26,5 +26,7 @@ e.exports = {
     roleTooltipItemContainer: 'roleTooltipItemContainer_a39fe9',
     roleTooltipSafetyContainer: 'roleTooltipSafetyContainer_a39fe9',
     roleTooltipItem: 'roleTooltipItem_a39fe9',
-    disabledActionTooltip: 'disabledActionTooltip_a39fe9'
+    disabledActionTooltip: 'disabledActionTooltip_a39fe9',
+    nameContainer: 'nameContainer_a39fe9',
+    memberClanTag: 'memberClanTag_a39fe9'
 };
