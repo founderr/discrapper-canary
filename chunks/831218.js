@@ -19,19 +19,21 @@ var i,
     E = n(702321),
     N = n(82295),
     x = n(313201),
-    S = n(518311),
-    v = n(355298),
-    Z = n(869404),
-    T = n(333984),
-    L = n(210887),
-    A = n(592125),
-    b = n(158776),
-    M = n(55589),
-    R = n(515753),
-    O = n(981631),
-    P = n(689938),
-    y = n(680136);
-function j(e, t, n) {
+    S = n(860144),
+    v = n(214852),
+    Z = n(518311),
+    T = n(355298),
+    L = n(869404),
+    A = n(333984),
+    b = n(210887),
+    M = n(592125),
+    R = n(158776),
+    P = n(55589),
+    O = n(515753),
+    y = n(981631),
+    j = n(689938),
+    D = n(680136);
+function w(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -45,12 +47,12 @@ function j(e, t, n) {
     );
 }
 ((r = i || (i = {}))[(r.PAGES = 0)] = 'PAGES'), (r[(r.DMS = 1)] = 'DMS');
-let D = s.memo(function () {
+let G = s.memo(function () {
     return (0, a.jsxs)('svg', {
         width: '184',
         height: '428',
         viewBox: '0 0 184 428',
-        className: y.empty,
+        className: D.empty,
         children: [
             (0, a.jsx)('rect', {
                 x: 40,
@@ -193,7 +195,7 @@ let D = s.memo(function () {
         ]
     });
 });
-class w extends (l = s.Component) {
+class U extends (l = s.Component) {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t)
@@ -248,14 +250,14 @@ class w extends (l = s.Component) {
                         (0, a.jsx)(_.List, {
                             fade: !0,
                             innerRole: r,
-                            innerAriaLabel: P.Z.Messages.DIRECT_MESSAGES,
+                            innerAriaLabel: j.Z.Messages.DIRECT_MESSAGES,
                             innerTag: 'ul',
                             ref: (e) => {
                                 var t;
                                 (this._list = e), (this.props.listRef.current = e), (l.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
                             },
                             onScroll: this.handleScroll,
-                            className: y.scroller,
+                            className: D.scroller,
                             sectionHeight: this.getSectionHeight,
                             paddingTop: t,
                             paddingBottom: 8,
@@ -272,15 +274,15 @@ class w extends (l = s.Component) {
     }
     constructor(...e) {
         super(...e),
-            j(this, 'state', {
+            w(this, 'state', {
                 initialized: !1,
                 preRenderedChildren: 0,
                 totalRowCount: 0,
                 nonNullChildren: []
             }),
-            j(this, '_list', null),
-            j(this, 'hasReportedAnalytics', !1),
-            j(this, 'reportAnalytics', () => {
+            w(this, '_list', null),
+            w(this, 'hasReportedAnalytics', !1),
+            w(this, 'reportAnalytics', () => {
                 var e;
                 if (this.hasReportedAnalytics) return;
                 let t = null === (e = this._list) || void 0 === e ? void 0 : e.getScrollerState();
@@ -295,37 +297,37 @@ class w extends (l = s.Component) {
                     c = n.some((e) => (0, E.Z)(e)),
                     u = {
                         num_users_visible: a.length,
-                        num_users_visible_with_mobile_indicator: o.filter((e) => null != e && b.Z.isMobileOnline(e)).length
+                        num_users_visible_with_mobile_indicator: o.filter((e) => null != e && R.Z.isMobileOnline(e)).length
                     };
                 (this.hasReportedAnalytics = !0),
-                    m.ZP.trackWithMetadata(O.rMx.DM_LIST_VIEWED, {
+                    m.ZP.trackWithMetadata(y.rMx.DM_LIST_VIEWED, {
                         ...u,
                         ...(0, C.X)(),
                         changelog_dm_visible: c
                     });
             }),
-            j(this, 'getSectionHeight', (e) => {
+            w(this, 'getSectionHeight', (e) => {
                 let { showDMHeader: t } = this.props;
                 return 0 === e ? 0 : t ? 40 : 0;
             }),
-            j(
+            w(
                 this,
                 'handleScroll',
                 c()(() => {
                     if (null != this._list) {
                         let e = this._list.getScrollerNode();
-                        null != e && f.Z.updateChannelListScroll(O.ME, e.scrollTop);
+                        null != e && f.Z.updateChannelListScroll(y.ME, e.scrollTop);
                     }
                 }, 100)
             ),
-            j(this, 'renderDM', (e, t) => {
+            w(this, 'renderDM', (e, t) => {
                 let { privateChannelIds: n, channels: i, selectedChannelId: l } = this.props,
                     { totalRowCount: r, preRenderedChildren: s } = this.state,
                     o = i[n[t]];
                 return null == o
                     ? null
                     : (0, a.jsx)(
-                          R.ZP,
+                          O.ZP,
                           {
                               channel: o,
                               selected: o.id === l,
@@ -335,7 +337,7 @@ class w extends (l = s.Component) {
                           o.id
                       );
             }),
-            j(this, 'renderChild', (e) => {
+            w(this, 'renderChild', (e) => {
                 let { nonNullChildren: t, totalRowCount: n } = this.state,
                     i = t[e];
                 return s.isValidElement(i)
@@ -345,29 +347,29 @@ class w extends (l = s.Component) {
                       })
                     : i;
             }),
-            j(this, 'renderRow', (e) => {
+            w(this, 'renderRow', (e) => {
                 let { section: t, row: n } = e,
                     { privateChannelIds: i } = this.props;
-                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(D, {}, 'no-private-channels') : this.renderDM(t, n);
+                return 0 === t ? this.renderChild(n) : 0 === n && 0 === i.length ? (0, a.jsx)(G, {}, 'no-private-channels') : this.renderDM(t, n);
             }),
-            j(this, 'renderSection', (e) => {
+            w(this, 'renderSection', (e) => {
                 let { section: t } = e,
                     { showDMHeader: n } = this.props;
                 return 0 !== t && n
                     ? (0, a.jsxs)(
                           N.Z,
                           {
-                              className: y.privateChannelsHeaderContainer,
+                              className: D.privateChannelsHeaderContainer,
                               children: [
                                   (0, a.jsx)('span', {
-                                      className: y.headerText,
-                                      children: P.Z.Messages.DIRECT_MESSAGES
+                                      className: D.headerText,
+                                      children: j.Z.Messages.DIRECT_MESSAGES
                                   }),
-                                  (0, a.jsx)(S.Z, {
-                                      tooltip: P.Z.Messages.CREATE_DM,
+                                  (0, a.jsx)(Z.Z, {
+                                      tooltip: j.Z.Messages.CREATE_DM,
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
-                                      iconClassName: y.privateChannelRecipientsInviteButtonIcon,
+                                      iconClassName: D.privateChannelRecipientsInviteButtonIcon,
                                       icon: _.PlusSmallIcon,
                                       subscribeToGlobalHotkey: !0
                                   })
@@ -377,31 +379,32 @@ class w extends (l = s.Component) {
                       )
                     : null;
             }),
-            j(this, 'getRowHeight', (e, t) => {
+            w(this, 'getRowHeight', (e, t) => {
                 let { privateChannelIds: n } = this.props;
                 return 1 === e && 0 === t && 0 === n.length ? 428 : 44;
             });
     }
 }
-j(w, 'defaultProps', { padding: 8 });
+w(U, 'defaultProps', { padding: 8 });
 t.Z = (e) => {
     let { version: t, theme: n, children: i, showDMHeader: l } = e,
         r = s.Children.count(i),
-        o = A.Z.getMutablePrivateChannels(),
-        c = (0, Z.k1)(o),
+        o = M.Z.getMutablePrivateChannels(),
+        c = (0, L.k1)(o),
         p = (0, h.Wu)(
-            [M.Z, v.Z, T.Z],
+            [P.Z, T.Z, A.Z],
             () => {
-                let e = M.Z.getPrivateChannelIds(),
-                    t = (0, Z.tU)(e, [v.Z, T.Z]);
+                let e = P.Z.getPrivateChannelIds(),
+                    t = (0, L.tU)(e, [T.Z, A.Z]);
                 return (0, I.Ce)(t);
             },
             []
-        ),
-        _ = (0, h.cj)([g.Z, L.Z, A.Z], () => ({
-            theme: L.Z.darkSidebar ? O.BRd.DARK : n,
+        );
+    (0, v.z)(S.R);
+    let _ = (0, h.cj)([g.Z, b.Z, M.Z], () => ({
+            theme: b.Z.darkSidebar ? y.BRd.DARK : n,
             keyboardModeEnabled: g.Z.keyboardModeEnabled,
-            version: null != t ? ''.concat(t, ':').concat(A.Z.getPrivateChannelsVersion()) : A.Z.getPrivateChannelsVersion()
+            version: null != t ? ''.concat(t, ':').concat(M.Z.getPrivateChannelsVersion()) : M.Z.getPrivateChannelsVersion()
         })),
         f = s.useRef(null),
         m = s.useCallback((e) => {
@@ -442,7 +445,7 @@ t.Z = (e) => {
             []
         ),
         N = (0, x.Dt)(),
-        S = (0, d.ZP)({
+        Z = (0, d.ZP)({
             id: 'private-channels-'.concat(N),
             isEnabled: _.keyboardModeEnabled,
             scrollToStart: C,
@@ -451,8 +454,8 @@ t.Z = (e) => {
             setFocus: m
         });
     return (0, a.jsx)(u.bG, {
-        navigator: S,
-        children: (0, a.jsx)(w, {
+        navigator: Z,
+        children: (0, a.jsx)(U, {
             channels: c,
             privateChannelIds: p,
             listRef: f,
