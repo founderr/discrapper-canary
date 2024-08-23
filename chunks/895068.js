@@ -216,7 +216,7 @@ t.ZP = o.memo(function (e) {
                     case 'header_spacer':
                         return (0, l.jsx)('div', { className: O.headerSpacer });
                     default:
-                        if (null === t) return null;
+                        if (null == t) return null;
                         return (0, l.jsx)(A.Z, {
                             title: t,
                             subtitle: n
@@ -331,10 +331,7 @@ t.ZP = o.memo(function (e) {
                                     e > 0 &&
                                         (0, l.jsx)('div', {
                                             className: O.sectionContent,
-                                            style: {
-                                                gridTemplateColumns: 'repeat('.concat(M, ', 1fr)'),
-                                                gridGap: ''.concat(16, 'px')
-                                            },
+                                            style: { gridTemplateColumns: 'repeat('.concat(M, ', minmax(252px, 1fr))') },
                                             children: Array.from({ length: e }).map((e, n) => {
                                                 let i = ''.concat(t, '-').concat(n);
                                                 return D ? Q(t, n, i) : X(i);
