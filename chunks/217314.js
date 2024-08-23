@@ -22,8 +22,8 @@ function m(e) {
         _ = (0, a.e7)([r.Z], () => r.Z.getStatus(t)),
         f = (0, a.e7)([r.Z], () => r.Z.isMobileOnline(t)),
         E = (0, a.e7)([o.Z], () => o.Z.getNickname(t)),
-        g = u.ZP.useUserTag(m),
-        C = (0, l.m$)({
+        C = u.ZP.useUserTag(m),
+        g = (0, l.m$)({
             channelId: e.channel.id,
             location: 'HeaderBarDirectMessageV2'
         });
@@ -50,11 +50,11 @@ function m(e) {
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(s.TooltipContainer, {
-                            text: g,
+                            text: C,
                             position: 'bottom',
                             children: null != E ? E : u.ZP.getName(m)
                         }),
-                        C &&
+                        g &&
                             (0, i.jsx)(s.Tooltip, {
                                 text: h.Z.Messages.E2EE_CALL_VERIFIED_TOOLTIP,
                                 children: (e) =>

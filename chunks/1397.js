@@ -19,8 +19,8 @@ var i = n(735250),
     _ = n(353093),
     f = n(717057),
     E = n(693546),
-    g = n(881952),
-    C = n(305325),
+    C = n(881952),
+    g = n(305325),
     I = n(246364),
     x = n(937111),
     T = n(270801),
@@ -69,11 +69,11 @@ class V extends a.PureComponent {
         }
     }
     render() {
-        let { isFollowable: e, isLurking: t, notClaimed: s, notPhoneVerified: l, notEmailVerified: r, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: h, theme: p, children: m, canSendMessages: _, channelFollowingUsersSeen: f, showLurkerModeUpsellPopout: E, showMemberVerificationModal: g, useReducedMotion: C, isStaff: x, guildJoinRequest: T } = this.props,
+        let { isFollowable: e, isLurking: t, notClaimed: s, notPhoneVerified: l, notEmailVerified: r, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: h, theme: p, children: m, canSendMessages: _, channelFollowingUsersSeen: f, showLurkerModeUpsellPopout: E, showMemberVerificationModal: C, useReducedMotion: g, isStaff: x, guildJoinRequest: T } = this.props,
             { shouldShowLurkerModeUpsellPopout: N, shouldShowLurkerModeSuccessPopout: S } = this.state,
             v = {
                 theme: p,
-                useReducedMotion: C
+                useReducedMotion: g
             };
         if (e && !_) {
             if (((v.message = B.Z.Messages.FOLLOW_NEWS_CHAT_INPUT_MESSAGE), null != f && f >= 1000)) {
@@ -81,8 +81,8 @@ class V extends a.PureComponent {
                 v.subtitle = B.Z.Messages.FOLLOW_NEWS_CHAT_INPUT_SUBTITLE.format({ count: e.toLocaleString() });
             }
             (v.buttonText = B.Z.Messages.FOLLOW), (v.onButtonClick = this.handleFollowAnnouncement), (v.imageSrc = n(485195)), t && ((v.onSecondaryButtonClick = this.handleJoinServer), (v.secondaryButtonText = B.Z.Messages.LURKER_MODE_CHAT_INPUT_BUTTON));
-        } else if (s) (v.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED), (v.buttonText = B.Z.Messages.CLAIM_ACCOUNT), (v.onButtonClick = g ? this.handleShowMemberVerification : this.handleClaimAccount), (v.imageSrc = n(102811));
-        else if (g)
+        } else if (s) (v.message = B.Z.Messages.GUILD_VERIFICATION_TEXT_NOT_CLAIMED), (v.buttonText = B.Z.Messages.CLAIM_ACCOUNT), (v.onButtonClick = C ? this.handleShowMemberVerification : this.handleClaimAccount), (v.imageSrc = n(102811));
+        else if (C)
             switch (null == T ? void 0 : T.applicationStatus) {
                 case I.wB.SUBMITTED:
                     (v.message = B.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE), (v.subtitle = B.Z.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_SUBTITLE), (v.buttonText = B.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION), (v.onButtonClick = this.handleCancelApplication), (v.imageSrc = n(281958));
@@ -183,7 +183,7 @@ class V extends a.PureComponent {
             }),
             G(this, 'handleShowMemberVerification', () => {
                 let { guild: e } = this.props;
-                null != e && (0, C.hk)(e.id);
+                null != e && (0, g.hk)(e.id);
             }),
             G(this, 'handleClaimAccount', () => {
                 p.j();
@@ -263,7 +263,7 @@ class V extends a.PureComponent {
             G(this, 'renderMemberVerificationSuccessModal', () => {
                 let { guild: e, guildJoinRequest: t } = this.props,
                     n = (null == t ? void 0 : t.applicationStatus) === I.wB.APPROVED;
-                if (null == e || null == t || !n || (0, g.d3)(t)) return null;
+                if (null == e || null == t || !n || (0, C.d3)(t)) return null;
                 let a = () => {
                     E.Z.ackUserGuildJoinRequest(e.id, t.joinRequestId);
                 };
@@ -299,7 +299,7 @@ function F(e) {
         p = (0, r.e7)([R.Z], () => (d ? R.Z.getFollowerStatsForChannel(s.id) : null)),
         f = (0, r.e7)([S.Z], () => S.Z.isLurking(o)),
         E = (0, r.e7)([y.default], () => y.default.getCurrentUser()),
-        C = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t,
+        g = null !== (t = null == E ? void 0 : E.isStaff()) && void 0 !== t && t,
         T = (0, r.e7)([L.ZP], () => {
             var e, t;
             return null != E && null !== (t = null === (e = L.ZP.getMember(o, E.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== t && t;
@@ -313,7 +313,7 @@ function F(e) {
         H = (0, m.Cc)(o),
         G = (null == k ? void 0 : k.applicationStatus) === I.wB.APPROVED;
     a.useEffect(() => {
-        if (!(!(0, _.EJ)(c) || !G || (0, g.d3)(k)) && null == H) B();
+        if (!(!(0, _.EJ)(c) || !G || (0, C.d3)(k)) && null == H) B();
     }, [c, G, k, H]);
     let F = {
         ...u,
@@ -330,7 +330,7 @@ function F(e) {
         guildJoinRequestStatus: null !== (n = null == k ? void 0 : k.applicationStatus) && void 0 !== n ? n : I.wB.STARTED,
         guildJoinRequest: k,
         useReducedMotion: h.Z.useReducedMotion,
-        isStaff: C,
+        isStaff: g,
         isLoading: w,
         clanInfo: H
     };

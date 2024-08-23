@@ -21,13 +21,13 @@ var n = l(735250),
     g = l(855935),
     I = l(231338),
     p = l(689938),
-    H = l(960841);
-let f = a.forwardRef(function (e, t) {
+    f = l(960841);
+let H = a.forwardRef(function (e, t) {
     let { guild: l } = e,
         o = (0, u.e7)([T.Z], () => T.Z.hasDefaultSearchStateByGuildId(l.id), [l.id]),
         i = (0, u.e7)([h.Z], () => (0, m.wj)(h.Z.theme)),
         C = (0, u.e7)([M.Z], () => M.Z.can(d.$e(I.Pl.MANAGE_GUILD, I.Pl.KICK_MEMBERS), l)),
-        f = a.useCallback(() => {
+        H = a.useCallback(() => {
             if (null != l && !!C)
                 (0, _.openModalLazy)(
                     async () => (e) =>
@@ -65,10 +65,10 @@ let f = a.forwardRef(function (e, t) {
             }
         })),
         (0, n.jsxs)('div', {
-            className: s()(H.searchHeaderContainer),
+            className: s()(f.searchHeaderContainer),
             children: [
                 (0, n.jsx)('div', {
-                    className: s()(H.searchHeader),
+                    className: s()(f.searchHeader),
                     children: o
                         ? (0, n.jsx)(_.Heading, {
                               variant: 'heading-md/medium',
@@ -80,11 +80,11 @@ let f = a.forwardRef(function (e, t) {
                           })
                 }),
                 (0, n.jsx)('div', {
-                    className: s()(H.searchInput),
+                    className: s()(f.searchInput),
                     children: (0, n.jsx)('div', {
-                        className: s()(H.searchHeader),
+                        className: s()(f.searchHeader),
                         children: (0, n.jsx)(_.SearchBar, {
-                            className: H.searchBar,
+                            className: f.searchBar,
                             query: A,
                             placeholder: p.Z.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
                             onChange: D,
@@ -119,7 +119,7 @@ let f = a.forwardRef(function (e, t) {
                                 look: i ? _.Button.Looks.FILLED : _.Button.Looks.OUTLINED,
                                 size: _.Button.Sizes.SMALL,
                                 children: (0, n.jsxs)('div', {
-                                    className: H.sortButton,
+                                    className: f.sortButton,
                                     children: [
                                         (0, n.jsx)(_.ArrowsUpDownIcon, {
                                             size: 'xs',
@@ -128,7 +128,7 @@ let f = a.forwardRef(function (e, t) {
                                         (0, n.jsx)(_.Text, {
                                             variant: 'text-sm/medium',
                                             color: Z ? 'interactive-active' : 'header-secondary',
-                                            className: H.sortText,
+                                            className: f.sortText,
                                             children: p.Z.Messages.SORT
                                         })
                                     ]
@@ -138,12 +138,12 @@ let f = a.forwardRef(function (e, t) {
                     })
                 }),
                 (0, n.jsx)('div', {
-                    className: s()(H.tableOptions),
+                    className: s()(f.tableOptions),
                     children:
                         C &&
                         (0, n.jsx)(_.Button, {
-                            className: s()(H.__invalid_pruneButton),
-                            onClick: f,
+                            className: s()(f.__invalid_pruneButton),
+                            onClick: H,
                             'aria-label': p.Z.Messages.PRUNE_MEMBERS,
                             color: _.Button.Colors.RED,
                             look: _.Button.Looks.OUTLINED,
@@ -155,4 +155,4 @@ let f = a.forwardRef(function (e, t) {
         })
     );
 });
-t.Z = f;
+t.Z = H;

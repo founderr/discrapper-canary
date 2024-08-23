@@ -21,8 +21,8 @@ var a = t(120356),
     E = t(937615),
     x = t(104494),
     N = t(474936),
-    T = t(689938),
-    S = t(379573);
+    S = t(689938),
+    T = t(379573);
 function h(e) {
     let { premiumSubscription: n, planId: t, selectPlan: a, selected: s, priceOptions: h, shouldShowUpdatedPaymentModal: b, isEligibleForDiscount: g, discountAmountOff: P, isEligibleForTrial: v } = e,
         A = (0, o.e7)([_.default], () => _.default.locale),
@@ -37,22 +37,22 @@ function h(e) {
         D = (0, f.Ap)(h.paymentSourceId),
         w = null != j && !b,
         G = (0, x.Ng)(),
-        B = M.interval === N.rV.YEAR ? T.Z.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : T.Z.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
+        B = M.interval === N.rV.YEAR ? S.Z.Messages.BILLING_TRIAL_YEARLY_PRICE_AFTER_TRIAL : S.Z.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL,
         U = () =>
             null != j &&
             (0, i.jsx)(u.Text, {
                 tag: 'span',
                 variant: 'eyebrow',
                 color: 'always-white',
-                className: S.planOptionDiscount,
-                children: T.Z.Messages.BILLING_PLAN_SELECTION_DISCOUNT.format({ discount: (0, I.T3)(A, j / 100) })
+                className: T.planOptionDiscount,
+                children: S.Z.Messages.BILLING_PLAN_SELECTION_DISCOUNT.format({ discount: (0, I.T3)(A, j / 100) })
             }),
         k = () =>
             (M.interval === N.rV.YEAR && null != n) || (w && !R)
                 ? M.interval === N.rV.YEAR && null != n
                     ? (0, i.jsxs)('span', {
-                          className: S.planOptionMonthsFree,
-                          children: ['(', T.Z.Messages.BILLING_SWITCH_PLAN_YEARLY_FREE_MONTHS, ')']
+                          className: T.planOptionMonthsFree,
+                          children: ['(', S.Z.Messages.BILLING_SWITCH_PLAN_YEARLY_FREE_MONTHS, ')']
                       })
                     : w && !R
                       ? U()
@@ -71,16 +71,16 @@ function h(e) {
             }
         },
         onClick: L ? void 0 : () => a(t),
-        className: r()(S.planOptionClickableContainer, {
-            [S.selectedPlan]: O && s,
-            [S.selectionBox]: O
+        className: r()(T.planOptionClickableContainer, {
+            [T.selectedPlan]: O && s,
+            [T.selectionBox]: O
         }),
         children: [
             (0, i.jsxs)('div', {
-                className: r()(S.planOption, { [S.planOptionDisabled]: L }),
+                className: r()(T.planOption, { [T.planOptionDisabled]: L }),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: S.planOptionClickable,
+                        className: T.planOptionClickable,
                         children: [
                             !O &&
                                 (0, i.jsx)(u.Checkbox, {
@@ -90,60 +90,60 @@ function h(e) {
                                     shape: u.Checkbox.Shapes.ROUND,
                                     color: c.Z.unsafe_rawColors.BRAND_500.css,
                                     type: u.Checkbox.Types.INVERTED,
-                                    className: S.planOptionCheckbox
+                                    className: T.planOptionCheckbox
                                 }),
                             (0, i.jsxs)('div', {
                                 children: [
                                     (0, i.jsxs)('div', {
-                                        className: r()(S.planOptionInterval, {
-                                            [S.optionSelected]: s || O,
-                                            [S.updatedOptionSelected]: b && (s || O)
+                                        className: r()(T.planOptionInterval, {
+                                            [T.optionSelected]: s || O,
+                                            [T.updatedOptionSelected]: b && (s || O)
                                         }),
                                         children: [(0, f.L7)(M.interval, y, D, M.intervalCount, O, (0, f.Rd)(M.id)), O && k()]
                                     }),
                                     O &&
                                         (0, i.jsx)('div', {
-                                            className: S.planOneTimeCost,
-                                            children: T.Z.Messages.ONE_TIME_CHARGE.format({ currencyAmount: (0, E.T4)(Z.amount, Z.currency) })
+                                            className: T.planOneTimeCost,
+                                            children: S.Z.Messages.ONE_TIME_CHARGE.format({ currencyAmount: (0, E.T4)(Z.amount, Z.currency) })
                                         })
                                 ]
                             }),
                             R &&
                                 (0, i.jsxs)('span', {
-                                    className: S.planOptionCurrentPlan,
-                                    children: ['(', T.Z.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, ')']
+                                    className: T.planOptionCurrentPlan,
+                                    children: ['(', S.Z.Messages.BILLING_SWITCH_PLAN_CURRENT_PLAN, ')']
                                 }),
                             !O && k()
                         ]
                     }),
                     b
                         ? (0, i.jsx)('div', {
-                              className: r()({ [S.optionPriceSelected]: s }),
-                              children: T.Z.Messages.BILLING_TRIAL_PRICE_NOW.format({ price: g && null != P && M.interval === N.rV.MONTH ? (0, E.T4)(Z.amount - P, Z.currency) : v ? (0, E.T4)(0, Z.currency, { maximumFractionDigits: 0 }) : (0, E.T4)(Z.amount, Z.currency) })
+                              className: r()({ [T.optionPriceSelected]: s }),
+                              children: S.Z.Messages.BILLING_TRIAL_PRICE_NOW.format({ price: g && null != P && M.interval === N.rV.MONTH ? (0, E.T4)(Z.amount - P, Z.currency) : v ? (0, E.T4)(0, Z.currency, { maximumFractionDigits: 0 }) : (0, E.T4)(Z.amount, Z.currency) })
                           })
                         : (0, i.jsx)('div', {
-                              className: r()({ [S.optionSelected]: s || O }),
+                              className: r()({ [T.optionSelected]: s || O }),
                               children: (0, E.T4)(Z.amount, Z.currency)
                           })
                 ]
             }),
             b &&
                 (0, i.jsx)('div', {
-                    className: S.planOptionSubtextContainer,
+                    className: T.planOptionSubtextContainer,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-md/normal',
                         color: s ? 'text-normal' : 'interactive-normal',
-                        className: r()(S.planOptionSubtext, { [S.discountPlanOptionSubtext]: g }),
+                        className: r()(T.planOptionSubtext, { [T.discountPlanOptionSubtext]: g }),
                         children: (() => {
                             if (g && null != P && M.interval === N.rV.MONTH) {
                                 var e;
-                                return T.Z.Messages.BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC.format({
+                                return S.Z.Messages.BILLING_DISCOUNT_MONTHLY_PRICE_GENERIC.format({
                                     numMonths: null !== (e = null == G ? void 0 : G.discount.user_usage_limit) && void 0 !== e ? e : N.rt,
                                     discountedPrice: (0, E.T4)(Z.amount - P, Z.currency),
                                     regularPrice: (0, E.T4)(Z.amount, Z.currency)
                                 });
                             }
-                            return v ? B.format({ price: (0, E.T4)(Z.amount, Z.currency) }) : (M.interval === N.rV.YEAR && T.Z.Messages.BILLING_YEARLY_PLAN_SAVINGS.format({ percent: j }), null);
+                            return v ? B.format({ price: (0, E.T4)(Z.amount, Z.currency) }) : (M.interval === N.rV.YEAR && S.Z.Messages.BILLING_YEARLY_PLAN_SAVINGS.format({ percent: j }), null);
                         })()
                     })
                 })

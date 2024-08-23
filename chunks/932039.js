@@ -88,7 +88,7 @@ function T(e) {
                 label: E.Z.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_3_MONTHS
             }
         ],
-        [H, f] = s.useState(!1),
+        [f, H] = s.useState(!1),
         N = (function () {
             if (7 !== i) return null;
             if (null != t && null != l) return ''.concat(t, ' - ').concat(l);
@@ -97,7 +97,7 @@ function T(e) {
             return null;
         })(),
         R = s.useCallback(() => {
-            f(!0), L();
+            H(!0), L();
         }, [L]),
         A = s.useCallback(
             (e) => {
@@ -112,7 +112,7 @@ function T(e) {
             [I]
         ),
         Z = s.useCallback(() => {
-            null == a && null == n && T(0, null), f(!1);
+            null == a && null == n && T(0, null), H(!1);
         }, [n, a, T]);
     return (0, o.jsx)(u.Menu, {
         navId: 'member-safety-guild-member-'.concat(d, '-menu'),
@@ -120,7 +120,7 @@ function T(e) {
         'aria-label': E.Z.Messages.MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE,
         onSelect: _.dG4,
         children: (0, o.jsx)(u.MenuGroup, {
-            children: H
+            children: f
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(u.MenuItem, {

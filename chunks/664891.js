@@ -21,8 +21,8 @@ var i = t(735250),
     E = t(598),
     x = t(45572),
     N = t(614223),
-    T = t(246946),
-    S = t(351402),
+    S = t(246946),
+    T = t(351402),
     h = t(509545),
     b = t(74538),
     g = t(296848),
@@ -40,14 +40,14 @@ var i = t(735250),
 function D(e) {
     var n;
     let t,
-        { premiumSubscription: r, paymentSources: m, priceOptions: I, onPaymentSourceChange: P, onPaymentSourceAdd: M, planId: O, setHasAcceptedTerms: j, legalTermsNodeRef: D, hasLegalTermsFlash: F, onInvoiceError: W, planGroup: H, currencies: Y, onCurrencyChange: K, hasOpenInvoice: V, purchaseState: z, handleClose: X } = e,
+        { premiumSubscription: r, paymentSources: m, priceOptions: I, onPaymentSourceChange: P, onPaymentSourceAdd: M, planId: O, setHasAcceptedTerms: j, legalTermsNodeRef: D, hasLegalTermsFlash: F, onInvoiceError: W, planGroup: H, currencies: Y, onCurrencyChange: V, hasOpenInvoice: K, purchaseState: z, handleClose: X } = e,
         { selectedSkuId: q, defaultPlanId: J, isPremium: Q, startedPaymentFlowWithPaymentSourcesRef: $ } = (0, E.usePaymentContext)(),
         { isGift: ee } = (0, f.wD)(),
         en = I.paymentSourceId,
         et = (0, o.e7)([h.Z], () => h.Z.get(O));
     s()(null != et, 'Missing newPlan');
-    let ei = (0, o.e7)([T.Z], () => T.Z.hidePersonalInformation),
-        ea = l.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback),
+    let ei = (0, o.e7)([S.Z], () => S.Z.hidePersonalInformation),
+        ea = l.M.EEA_COUNTRIES.has(T.Z.ipCountryCodeWithFallback),
         er = z === x.A.PURCHASING || z === x.A.COMPLETED,
         es = (0, N.Kp)({
             isTrial: !1,
@@ -70,11 +70,11 @@ function D(e) {
                 }),
             [q, r, J, Q, ee]
         );
-    t = V || el ? L.Z.Messages.BILLING_PURCHASE_DETAILS_HEADER : (0, b.PV)(O) ? (0, b.W_)(r, et) : L.Z.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({ planName: et.name });
+    t = K || el ? L.Z.Messages.BILLING_PURCHASE_DETAILS_HEADER : (0, b.PV)(O) ? (0, b.W_)(r, et) : L.Z.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({ planName: et.name });
     let ec = null;
     return (
         null != r &&
-            (ec = V
+            (ec = K
                 ? (0, i.jsx)(w, {
                       premiumSubscription: r,
                       onInvoiceError: W,
@@ -159,7 +159,7 @@ function D(e) {
                         (0, i.jsx)(u.Z, {
                             selectedCurrency: I.currency,
                             currencies: Y,
-                            onChange: K,
+                            onChange: V,
                             disabled: er
                         })
                     ]
@@ -237,7 +237,7 @@ function G(e) {
         { isGift: _ } = (0, f.wD)(),
         { analyticsLocations: p } = (0, I.ZP)(),
         x = (0, b.al)(n, t.id, 1, new Set(s)),
-        [T, S] = (0, P.ED)({
+        [S, T] = (0, P.ED)({
             subscriptionId: n.id,
             items: x,
             renewal: !1,
@@ -258,7 +258,7 @@ function G(e) {
             analyticsLocations: p,
             analyticsLocation: m.Z.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
         }),
-        v = null != S ? S : g;
+        v = null != T ? T : g;
     if (
         (a.useEffect(() => {
             r(v);
@@ -272,13 +272,13 @@ function G(e) {
             selectedSkuId: u,
             startedPaymentFlowWithPaymentSources: d.current
         }),
-        y = (0, N.$g)(M, T, t);
-    if (null == T || null == h || y) return (0, i.jsx)(c.Spinner, { className: Z.__invalid_spinner });
+        y = (0, N.$g)(M, S, t);
+    if (null == S || null == h || y) return (0, i.jsx)(c.Spinner, { className: Z.__invalid_spinner });
     let C = (0, b.Ap)(l.paymentSourceId);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(O.hG, {
-                proratedInvoice: T,
+                proratedInvoice: S,
                 renewalInvoice: h
             }),
             (0, i.jsxs)(A.PO, {
@@ -286,13 +286,13 @@ function G(e) {
                 children: [
                     (0, i.jsx)(A.q9, { children: L.Z.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS }),
                     (0, i.jsx)(O.Lu, {
-                        invoice: T,
+                        invoice: S,
                         newPlan: t,
                         isPrepaidPaymentSource: C
                     }),
                     (0, i.jsx)(O.nd, {
                         premiumSubscription: n,
-                        proratedInvoice: T,
+                        proratedInvoice: S,
                         renewalInvoice: h,
                         isUpdate: !0,
                         isPrepaidPaymentSource: C
@@ -305,8 +305,8 @@ function G(e) {
 function B(e) {
     var n, t;
     let r,
-        { premiumSubscription: s, newPlan: l, onInvoiceError: o, planGroup: u, priceOptions: _, preventFetch: f, disabled: E, isEEA: x, paymentSources: N, setHasAcceptedTerms: T } = e,
-        { analyticsLocations: S } = (0, I.ZP)(),
+        { premiumSubscription: s, newPlan: l, onInvoiceError: o, planGroup: u, priceOptions: _, preventFetch: f, disabled: E, isEEA: x, paymentSources: N, setHasAcceptedTerms: S } = e,
+        { analyticsLocations: T } = (0, I.ZP)(),
         h = (0, b.al)(s, l.id, 1, new Set(u)),
         [g, v] = (0, P.ED)({
             subscriptionId: s.id,
@@ -315,7 +315,7 @@ function B(e) {
             paymentSourceId: _.paymentSourceId,
             currency: _.currency,
             preventFetch: f,
-            analyticsLocations: S,
+            analyticsLocations: T,
             analyticsLocation: m.Z.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
         });
     return (a.useEffect(() => {
@@ -333,7 +333,7 @@ function B(e) {
             null == r)
           ? null
           : (0, i.jsx)(p.Z, {
-                onChange: T,
+                onChange: S,
                 finePrint: (0, i.jsx)(d.Z, {
                     subscriptionPlan: l,
                     paymentSourceType: null === (n = N[null !== (t = _.paymentSourceId) && void 0 !== t ? t : '']) || void 0 === n ? void 0 : n.type,

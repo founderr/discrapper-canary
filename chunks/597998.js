@@ -21,8 +21,8 @@ var i,
     _ = n(833858),
     f = n(223135),
     E = n(374129),
-    g = n(639351),
-    C = n(630388),
+    C = n(639351),
+    g = n(630388),
     I = n(51144),
     x = n(981631),
     T = n(354459),
@@ -220,7 +220,7 @@ class b extends (i = s.Component) {
                           'div',
                           {
                               className: r()(v.iconSpacing),
-                              children: (0, a.jsx)(g.Z, { className: r()(v.icon, f) })
+                              children: (0, a.jsx)(C.Z, { className: r()(v.icon, f) })
                           },
                           'xbox'
                       )
@@ -263,7 +263,7 @@ class b extends (i = s.Component) {
                           'watch'
                       )
                   );
-        let V = null != P && !(0, C.yE)(P.flags, x.udG.EMBEDDED),
+        let V = null != P && !(0, g.yE)(P.flags, x.udG.EMBEDDED),
             F = null == b && V;
         return 0 !== H.length || null != G || j || F
             ? (0, a.jsxs)('div', {

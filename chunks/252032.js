@@ -20,8 +20,8 @@ var i = n(735250),
     _ = n(630388),
     f = n(838440),
     E = n(930282),
-    g = n(955384),
-    C = n(981631),
+    C = n(955384),
+    g = n(981631),
     I = n(58755);
 function x(e) {
     let { value: t, channel: n } = e;
@@ -39,8 +39,8 @@ function T(e) {
         { id: c } = n,
         m = t.getGuildId(),
         f = (0, s.e7)([h.Z], () => h.Z.getGuild(m), [m]),
-        E = t.type === C.d4z.GUILD_ANNOUNCEMENT,
-        T = null != f && f.hasFeature(C.oNc.NEWS),
+        E = t.type === g.d4z.GUILD_ANNOUNCEMENT,
+        T = null != f && f.hasFeature(g.oNc.NEWS),
         S = E && T,
         {
             editingMessage: v,
@@ -59,9 +59,9 @@ function T(e) {
         b = a.useCallback(
             (e, n, i) => {
                 let { content: a } = i,
-                    s = p.Z.can(C.Plq.MANAGE_MESSAGES, t),
+                    s = p.Z.can(g.Plq.MANAGE_MESSAGES, t),
                     o = null != v && null != v.author ? v.author.id : null;
-                return S && (o === M || s) && null != v && (0, _.yE)(v.flags, C.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, a) : l.Z.editMessage(e, n, { content: a }), Promise.resolve();
+                return S && (o === M || s) && null != v && (0, _.yE)(v.flags, g.iLy.CROSSPOSTED) ? r.Z.confirmEdit(e, n, a) : l.Z.editMessage(e, n, { content: a }), Promise.resolve();
             },
             [v, S, M, t]
         ),
@@ -75,7 +75,7 @@ function T(e) {
             [c]
         );
     return null != Z && null != A
-        ? (0, i.jsx)(g.Z, {
+        ? (0, i.jsx)(C.Z, {
               ref: void 0,
               channel: t,
               message: n,
@@ -98,10 +98,10 @@ function N(e) {
     return (
         a.useEffect(
             () => (
-                m.S.subscribe(C.CkL.TEXTAREA_FOCUS, _),
-                m.S.subscribe(C.CkL.TEXTAREA_BLUR, f),
+                m.S.subscribe(g.CkL.TEXTAREA_FOCUS, _),
+                m.S.subscribe(g.CkL.TEXTAREA_BLUR, f),
                 () => {
-                    m.S.unsubscribe(C.CkL.TEXTAREA_FOCUS, _), m.S.unsubscribe(C.CkL.TEXTAREA_BLUR, f);
+                    m.S.unsubscribe(g.CkL.TEXTAREA_FOCUS, _), m.S.unsubscribe(g.CkL.TEXTAREA_BLUR, f);
                 }
             ),
             [_, f]

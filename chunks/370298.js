@@ -26,8 +26,8 @@ var i = n(735250),
     h = n(703558),
     f = n(430824),
     N = n(626135),
-    P = n(585483),
-    y = n(619895),
+    y = n(585483),
+    P = n(619895),
     v = n(844439),
     b = n(981631),
     T = n(689938),
@@ -77,7 +77,7 @@ function R(e) {
 function S(e) {
     let { onSelect: t, onClose: n, channel: I, imageUrl: R, mimeType: S } = e,
         U = (0, a.e7)([f.Z], () => f.Z.getGuild(I.guild_id)),
-        { fetchState: Z, imageRecCommandContexts: F } = (0, y.hR)({ channelId: I.id }),
+        { fetchState: Z, imageRecCommandContexts: F } = (0, P.hR)({ channelId: I.id }),
         w = Z === v.M.FETCHING,
         j = (0, x.g)(I),
         D = (0, s.PL)(!0, !0),
@@ -100,7 +100,7 @@ function S(e) {
                 let t = await fetch(R),
                     n = await t.arrayBuffer(),
                     i = S.join('/'),
-                    o = new File([n], 'image'.concat((0, y.Qm)({ contentType: i })), { type: i });
+                    o = new File([n], 'image'.concat((0, P.Qm)({ contentType: i })), { type: i });
                 r.Z.setFile({
                     channelId: I.id,
                     id: e,
@@ -118,7 +118,7 @@ function S(e) {
             async (e, t, n) => {
                 var i, o;
                 if (!j) return;
-                let a = y.Id[e.id],
+                let a = P.Id[e.id],
                     l = e.applicationId,
                     r = (null === (i = D.result) || void 0 === i ? void 0 : i.sections[l]) != null,
                     c = (null === (o = k.result) || void 0 === o ? void 0 : o.sections[l]) != null;
@@ -143,9 +143,9 @@ function S(e) {
                                 value: 'image'
                             }
                         },
-                        commandOrigin: _.bB.APPLICATION_LAUNCHER
+                        commandOrigin: _.bB.IMAGE_RECS_MENU
                     }),
-                    P.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: I.id });
+                    y.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: I.id });
             },
             [I.id, L, j, D, k]
         ),
@@ -171,7 +171,7 @@ function S(e) {
                     }),
                     r)
                 ) {
-                    let t = y.Id[e.id],
+                    let t = P.Id[e.id],
                         n = t.additionalOptions;
                     await L(t.imageOption),
                         await (0, g.Z)({
@@ -232,8 +232,8 @@ function S(e) {
                 : (0, i.jsx)(i.Fragment, {
                       children: F.map((e) => {
                           var t;
-                          let n = null != y.Id[e.command.id].additionalOptions,
-                              o = y.Id[e.command.id].onlyAllowEdit;
+                          let n = null != P.Id[e.command.id].additionalOptions,
+                              o = P.Id[e.command.id].onlyAllowEdit;
                           return (0, i.jsx)(
                               l.MenuItem,
                               {
@@ -241,7 +241,7 @@ function S(e) {
                                   action: () => {
                                       o ? H(e.command, e.section, _.Vh.IMAGE_RECS_MENU) : G(e.command, _.Vh.IMAGE_RECS_MENU);
                                   },
-                                  label: null !== (t = y.Id[e.command.id].overrideCommandName) && void 0 !== t ? t : e.command.name,
+                                  label: null !== (t = P.Id[e.command.id].overrideCommandName) && void 0 !== t ? t : e.command.name,
                                   subtext: e.command.description,
                                   subtextLineClamp: 1,
                                   icon: o ? l.PencilIcon : n ? void 0 : l.SendMessageIcon,

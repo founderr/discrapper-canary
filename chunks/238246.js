@@ -14,8 +14,8 @@ var i,
     _ = n(40851),
     f = n(607070),
     E = n(899663),
-    g = n(317381),
-    C = n(496616),
+    C = n(317381),
+    g = n(496616),
     I = n(100527),
     x = n(906732),
     T = n(168551),
@@ -113,7 +113,7 @@ class F extends (i = s.Component) {
         n.document.documentElement.classList.toggle('disable-forced-colors', !e && 'active' === t);
     }
     render() {
-        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: s, windowKey: l, mouseModeEnabled: o, keyboardModeEnabled: c, reducedMotionEnabled: d, fontScaleClass: h, saturation: f, withTitleBar: g, guestWindow: C, clientThemesClassName: I, contentClassName: x } = this.props,
+        let { theme: e, forcedColors: t, focused: n, appFocused: i, children: s, windowKey: l, mouseModeEnabled: o, keyboardModeEnabled: c, reducedMotionEnabled: d, fontScaleClass: h, saturation: f, withTitleBar: C, guestWindow: g, clientThemesClassName: I, contentClassName: x } = this.props,
             T = (0, y.getPlatform)(),
             A = r()(h, {
                 'mouse-mode': o,
@@ -142,13 +142,13 @@ class F extends (i = s.Component) {
                                                 (0, a.jsx)(v.Co, {}),
                                                 (0, a.jsx)(_.Wu, {
                                                     appContext: B.IlC.POPOUT,
-                                                    renderWindow: C,
+                                                    renderWindow: g,
                                                     children: (0, a.jsxs)(b.yP, {
                                                         children: [
                                                             (0, a.jsxs)('div', {
                                                                 className: G.popout,
                                                                 children: [
-                                                                    g && null != T
+                                                                    C && null != T
                                                                         ? (0, a.jsx)(Z.Z, {
                                                                               focused: n,
                                                                               type: T,
@@ -187,7 +187,7 @@ class F extends (i = s.Component) {
             V(this, 'warnPopoutClose', (e) => {
                 if (this.props.connectedToEmbeddedActivity && !O.ZP.disableEmbeddedActivityPopOutAlert) {
                     if (((e.returnValue = H.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE), !!y.isPlatformEmbedded))
-                        (0, C.Z)(() => {
+                        (0, g.Z)(() => {
                             w.Z.unmountWindow(this.props.windowKey), y.isPlatformEmbedded && k.ZP.close(this.props.windowKey);
                         });
                 }
@@ -220,7 +220,7 @@ let W = s.forwardRef(function (e, t) {
             reducedMotionEnabled: m,
             fontScaleClass: _,
             saturation: E,
-            systemForcedColors: C,
+            systemForcedColors: g,
             useForcedColors: N
         } = (0, h.cj)([f.Z], () => ({
             fontScale: f.Z.fontScale,
@@ -231,7 +231,7 @@ let W = s.forwardRef(function (e, t) {
             systemForcedColors: f.Z.systemForcedColors,
             useForcedColors: f.Z.useForcedColors
         })),
-        S = (0, h.e7)([g.ZP], () => null != e.channelId && null !== g.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
+        S = (0, h.e7)([C.ZP], () => null != e.channelId && null !== C.ZP.getSelfEmbeddedActivityForChannel(e.channelId));
     (0, A.Z)(n, !1);
     let v = (0, M.Z)(n, i),
         { analyticsLocations: Z } = (0, x.ZP)(I.Z.POPOUT_WINDOW),
@@ -251,7 +251,7 @@ let W = s.forwardRef(function (e, t) {
                       theme: r,
                       forcedColors: o,
                       useForcedColors: N,
-                      systemForcedColors: C,
+                      systemForcedColors: g,
                       fontScale: u,
                       keyboardModeEnabled: d,
                       mouseModeEnabled: v,

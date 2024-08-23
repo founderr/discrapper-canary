@@ -21,8 +21,8 @@ var n = l(735250),
     g = l(66747),
     I = l(852479),
     p = l(420212),
-    H = l(4667);
-let f = {
+    f = l(4667);
+let H = {
         transform: 'translate3d(15%, 0, 0)',
         opacity: 0.3
     },
@@ -80,14 +80,14 @@ let f = {
                             n = M.Z.getLastRefreshTimestamp(l.id),
                             a = null == t || 0 === n,
                             o = null != t && t.refreshTimestamp === n;
-                        return a || !o ? R : U ? N : f;
+                        return a || !o ? R : U ? N : H;
                     },
                     enter: R,
                     config: A
                 }),
                 k = !h && i === T.po.LOADING;
             return (0, n.jsxs)('table', {
-                className: s()(H.table, o),
+                className: s()(f.table, o),
                 children: [
                     (0, n.jsx)(L.Z, {
                         guildId: l.id,

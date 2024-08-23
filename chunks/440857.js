@@ -43,10 +43,10 @@ function T(e) {
             }
             g();
         },
-        H = a.useCallback(() => {
+        f = a.useCallback(() => {
             g();
         }, [g]),
-        f = (0, n.jsxs)('span', {
+        H = (0, n.jsxs)('span', {
             className: b.messageContainer,
             children: [
                 (0, n.jsx)(r.UserIcon, {
@@ -63,7 +63,7 @@ function T(e) {
                 (0, n.jsx)(r.Button, {
                     color: r.Button.Colors.LINK,
                     look: r.Button.Looks.LINK,
-                    onClick: H,
+                    onClick: f,
                     className: b.clearButton,
                     children: x.Z.Messages.MEMBER_SAFETY_ACTION_NOTICE_CLEAR_SELECTION
                 })
@@ -114,7 +114,7 @@ function T(e) {
                           },
                           onSaveText: N,
                           onSaveButtonColor: r.ButtonColors.RED,
-                          message: f
+                          message: H
                       })
                   })
           })

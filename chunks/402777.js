@@ -19,8 +19,8 @@ var i = n(735250),
     _ = n(428785),
     f = n(78675),
     E = n(113557),
-    g = n(169979),
-    C = n(119096),
+    C = n(169979),
+    g = n(119096),
     I = n(502762),
     x = n(256059),
     T = n(437758),
@@ -103,7 +103,7 @@ function P(e) {
                                         animateOnHover: !G,
                                         className: O.banner
                                     }),
-                                    (0, i.jsx)(C.Z, {
+                                    (0, i.jsx)(g.Z, {
                                         isReply: Y,
                                         sent: W,
                                         shown: V,
@@ -123,7 +123,7 @@ function P(e) {
                                         setIsReplyInteraction: K,
                                         showReplyPopout: q === R.P.REPLY && Q === R.n_.AVATAR
                                     }),
-                                    (0, i.jsx)(g.Z, {
+                                    (0, i.jsx)(C.Z, {
                                         location: 'SimplifiedProfilePanel',
                                         user: t,
                                         channelId: P.id,

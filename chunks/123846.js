@@ -26,8 +26,8 @@ var n = l(735250),
     g = l(689938),
     I = l(727328),
     p = l(837244);
-let H = [b.gq.DISCOVERY, b.gq.VANITY_URL, b.gq.BOT, b.gq.HUB, b.gq.MANUAL_MEMBER_VERIFICATION];
-function f(e) {
+let f = [b.gq.DISCOVERY, b.gq.VANITY_URL, b.gq.BOT, b.gq.HUB, b.gq.MANUAL_MEMBER_VERIFICATION];
+function H(e) {
     let { type: t, text: l, size: a, vanityUrl: o, isFocused: i } = e,
         r = null != a ? a : 16,
         C = (function (e, t) {
@@ -174,13 +174,13 @@ function N(e) {
                                   ]
                               })
                       }),
-                      H.map((e) =>
+                      f.map((e) =>
                           (0, n.jsx)(
                               u.MenuRadioItem,
                               {
                                   id: 'join-source-type-option-'.concat(e),
                                   label: (t) =>
-                                      (0, n.jsx)(f, {
+                                      (0, n.jsx)(H, {
                                           ...t,
                                           type: e,
                                           vanityUrl: E,
@@ -232,7 +232,7 @@ function N(e) {
                               {
                                   id: 'join-source-type-option-'.concat(e),
                                   label: (t) =>
-                                      (0, n.jsx)(f, {
+                                      (0, n.jsx)(H, {
                                           ...t,
                                           type: b.gq.INVITE,
                                           vanityUrl: E,
@@ -267,7 +267,7 @@ function N(e) {
                                                   Z
                                                       ? (0, n.jsx)('div', {
                                                             className: I.selectedOption,
-                                                            children: (0, n.jsx)(f, {
+                                                            children: (0, n.jsx)(H, {
                                                                 ...e,
                                                                 size: 12,
                                                                 text: (0, b.bE)(S, E, j),

@@ -26,19 +26,19 @@ var n = l(735250),
     g = l(42551),
     I = l(981631),
     p = l(689938),
-    H = l(387214),
-    f = l(931658);
+    f = l(387214),
+    H = l(931658);
 function N(e) {
     let { label: t, onFilter: l, isFiltered: a, isSorted: o, className: i, ...r } = e,
         C = a ? 'header-primary' : 'header-secondary';
     return (
         o && (C = 'text-brand'),
         (0, n.jsx)('th', {
-            className: s()(H.tableHeaderCellContainer, i),
+            className: s()(f.tableHeaderCellContainer, i),
             children: (0, n.jsxs)(d.Clickable, {
                 ...r,
                 onClick: l,
-                className: s()(H.tableHeaderCell, { [H.tableHeaderCellWithFilter]: null != l }),
+                className: s()(f.tableHeaderCell, { [f.tableHeaderCellWithFilter]: null != l }),
                 children: [
                     (0, n.jsx)(d.Text, {
                         variant: 'eyebrow',
@@ -47,10 +47,10 @@ function N(e) {
                     }),
                     null != l &&
                         (0, n.jsx)('div', {
-                            className: H.filterIconButton,
+                            className: f.filterIconButton,
                             children: (0, n.jsx)(d.FiltersHorizontalIcon, {
                                 size: 'custom',
-                                className: H.filterIcon,
+                                className: f.filterIcon,
                                 color: a ? d.tokens.colors.CONTROL_BRAND_FOREGROUND.css : d.tokens.colors.TEXT_MUTED.css,
                                 width: 16,
                                 height: 16
@@ -89,11 +89,11 @@ function A(e) {
         }, [z, q, Z, S, G]);
     return (0, n.jsx)('thead', {
         children: (0, n.jsxs)('tr', {
-            className: H.tableHeaderRow,
+            className: f.tableHeaderRow,
             children: [
                 Y &&
                     (0, n.jsx)('th', {
-                        className: s()(H.tableHeaderCellContainer, f.xsmallCol),
+                        className: s()(f.tableHeaderCellContainer, H.xsmallCol),
                         children: (0, n.jsx)(d.Tooltip, {
                             shouldShow: !z,
                             text: p.Z.Messages.MEMBER_SAFETY_CANNOT_SELECT_ALL,
@@ -101,7 +101,7 @@ function A(e) {
                                 (0, n.jsx)(d.Clickable, {
                                     ...e,
                                     onClick: W,
-                                    className: H.tableHeaderCell,
+                                    className: f.tableHeaderCell,
                                     children: (0, n.jsx)(d.Checkbox, {
                                         type: d.Checkbox.Types.INVERTED,
                                         value: q,
@@ -131,7 +131,7 @@ function A(e) {
                                           onFilter: t,
                                           isFiltered: D,
                                           isSorted: O,
-                                          className: f.smallCol,
+                                          className: H.smallCol,
                                           ...l
                                       });
                                   }
@@ -153,7 +153,7 @@ function A(e) {
                                           onFilter: t,
                                           isFiltered: B,
                                           isSorted: V,
-                                          className: f.smallCol,
+                                          className: H.smallCol,
                                           ...l
                                       });
                                   }
@@ -164,11 +164,11 @@ function A(e) {
                           children: [
                               (0, n.jsx)(N, {
                                   label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOINED_AT,
-                                  className: f.smallCol
+                                  className: H.smallCol
                               }),
                               (0, n.jsx)(N, {
                                   label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACCOUNT_AGE,
-                                  className: f.smallCol
+                                  className: H.smallCol
                               })
                           ]
                       }),
@@ -189,7 +189,7 @@ function A(e) {
                                   label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
                                   onFilter: t,
                                   isFiltered: k,
-                                  className: f.smallCol,
+                                  className: H.smallCol,
                                   ...l
                               });
                           }
@@ -197,7 +197,7 @@ function A(e) {
                     : i &&
                       (0, n.jsx)(N, {
                           label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_JOIN_METHOD,
-                          className: f.smallCol
+                          className: H.smallCol
                       }),
                 (0, n.jsx)(d.Popout, {
                     animation: d.Popout.Animation.FADE,
@@ -217,7 +217,7 @@ function A(e) {
                             label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ROLES,
                             onFilter: t,
                             isFiltered: v,
-                            className: s()(f.mediumCol),
+                            className: s()(H.mediumCol),
                             ...l
                         });
                     }
@@ -251,7 +251,7 @@ function A(e) {
                                         P(), null === (n = t.onClick) || void 0 === n || n.call(t, l), null === (a = e.onClick) || void 0 === a || a.call(e);
                                     },
                                     isFiltered: j,
-                                    className: s()(f.smallCol),
+                                    className: s()(H.smallCol),
                                     onMouseEnter: () => {
                                         var l, n;
                                         P(), null === (l = e.onMouseEnter) || void 0 === l || l.call(e), null === (n = t.onMouseEnter) || void 0 === n || n.call(t);
@@ -268,7 +268,7 @@ function A(e) {
                 }),
                 (0, n.jsx)(N, {
                     label: p.Z.Messages.MEMBER_SAFETY_TABLE_HEADER_ACTIONS,
-                    className: f.smallCol
+                    className: H.smallCol
                 })
             ]
         })

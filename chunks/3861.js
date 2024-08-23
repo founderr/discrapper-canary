@@ -13,14 +13,14 @@ var i = n(735250),
     _ = n(430371),
     f = n(236564),
     E = n(981631),
-    g = n(354459),
-    C = n(201614);
+    C = n(354459),
+    g = n(201614);
 t.Z = (0, r.Z)((e) => {
     let { participants: t, filteredParticipants: n, selectedParticipant: s, participantsVersion: r, layout: I, onSelectParticipant: x, onContextMenuParticipant: T, onFullscreenParticipant: N, channel: S, hasConnectPermission: v, className: Z, inCall: A, showParticipants: M = !0, paused: b = !1, width: R, height: L, idle: j, mode: O, popoutWindow: P, awaitingRemoteSessionInfo: y } = e;
     a.useEffect(() => {
         d.S.dispatch(E.CkL.REMEASURE_TARGET);
     }, [R, L]);
-    let D = a.useMemo(() => n.filter((e) => e.type !== g.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, r]);
+    let D = a.useMemo(() => n.filter((e) => e.type !== C.fO.ACTIVITY || !e.participants.some((e) => (0, o.J)(e))), [n, r]);
     if ((null == y ? void 0 : y.channelId) === S.id) return (0, i.jsx)(p.Z, { height: L });
     if ((null == S ? void 0 : S.isGuildVocal()) && !A)
         return (0, i.jsx)(h.Z, {
@@ -32,24 +32,24 @@ t.Z = (0, r.Z)((e) => {
         return (0, i.jsx)(c.Z, {
             guildId: S.guild_id,
             width: R,
-            className: C.voiceCallWrapper,
+            className: g.voiceCallWrapper,
             participants: t,
             onContextMenu: T
         });
     if (((n = A ? n : t), null == s))
         return 0 === n.length
             ? (0, i.jsx)(f.Z, {
-                  className: l()(C.videoGrid, C.hiddenParticipants),
+                  className: l()(g.videoGrid, g.hiddenParticipants),
                   channelId: S.id,
                   width: R
               })
             : (0, i.jsx)(u.Z, {
-                  className: C.videoGridWrapper,
+                  className: g.videoGridWrapper,
                   justify: u.Z.Justify.CENTER,
                   align: u.Z.Align.CENTER,
                   children: (0, i.jsx)(m.Z, {
                       channel: S,
-                      className: C.videoGrid,
+                      className: g.videoGrid,
                       participants: D,
                       totalNumberOfParticipants: t.length,
                       onClick: x,

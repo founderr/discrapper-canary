@@ -15,18 +15,18 @@ function u(e) {
     let { channel: t, buttonSize: n = a.ButtonSizes.TINY, className: u, onReportClick: d, onReportSubmit: h, onMouseEnter: p, onMouseLeave: m } = e,
         { error: _, loaded: f } = (0, o.a)(t),
         E = t.isDM() ? t.getRecipientId() : null,
-        g = (0, r.V)(t.id, E);
-    if (null == g && (f || _)) return null;
-    let C = () => {
+        C = (0, r.V)(t.id, E);
+    if (null == C && (f || _)) return null;
+    let g = () => {
         null == h || h(), s.Z.closePrivateChannel(t.id);
     };
     return (0, i.jsx)(a.Button, {
         className: u,
         size: n,
         color: a.Button.Colors.RED,
-        disabled: null == g,
+        disabled: null == C,
         onClick: (e) => {
-            e.stopPropagation(), null == d || d(), null != g && (0, l.WL)(g, C);
+            e.stopPropagation(), null == d || d(), null != C && (0, l.WL)(C, g);
         },
         onMouseEnter: p,
         onMouseLeave: m,

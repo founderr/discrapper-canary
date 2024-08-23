@@ -14,8 +14,8 @@ var i = n(735250),
     _ = n(135938),
     f = n(160404),
     E = n(765104),
-    g = n(695346),
-    C = n(314897),
+    C = n(695346),
+    g = n(314897),
     I = n(323873),
     x = n(607744),
     T = n(375954),
@@ -36,11 +36,11 @@ var i = n(735250),
 let k = a.memo(
     function (e) {
         var t, n;
-        let { className: s, messageGroupSpacing: d, scrollerClassName: p, channel: m, messages: _, unreadCount: E, showNewMessagesBar: g, messageDisplayCompact: C, channelStream: I, uploads: x, hasUnreads: T, editingMessageId: S, fontSize: v, keyboardModeEnabled: Z, filterAfterTimestamp: M, showingQuarantineBanner: b, hideSummaries: k = !1 } = e,
+        let { className: s, messageGroupSpacing: d, scrollerClassName: p, channel: m, messages: _, unreadCount: E, showNewMessagesBar: C, messageDisplayCompact: g, channelStream: I, uploads: x, hasUnreads: T, editingMessageId: S, fontSize: v, keyboardModeEnabled: Z, filterAfterTimestamp: M, showingQuarantineBanner: b, hideSummaries: k = !1 } = e,
             [U, w] = a.useState(!1),
             B = a.useMemo(
                 () =>
-                    C
+                    g
                         ? (0, R.aJ)({
                               compact: !0,
                               messageGroups: 30,
@@ -57,12 +57,12 @@ let k = a.memo(
                               fontSize: v,
                               groupSpacing: d
                           }),
-                [C, v, d]
+                [g, v, d]
             ),
             H = (0, j.ZP)({
                 messages: _,
                 channel: m,
-                compact: C,
+                compact: g,
                 hasUnreads: T,
                 focusId: S,
                 placeholderHeight: B.totalHeight,
@@ -87,8 +87,8 @@ let k = a.memo(
                 channel: m,
                 messages: _,
                 unreadCount: E,
-                showNewMessagesBar: g,
-                messageDisplayCompact: C,
+                showNewMessagesBar: C,
+                messageDisplayCompact: g,
                 channelStream: I,
                 uploads: x,
                 loadMore: H.loadMore,
@@ -220,8 +220,8 @@ t.Z = a.memo(function (e) {
             renderSpoilers: O,
             keyboardModeEnabled: y
         } = (function () {
-            let e = g.jU.useSetting(),
-                t = g.cC.useSetting(),
+            let e = C.jU.useSetting(),
+                t = C.cC.useSetting(),
                 {
                     messageGroupSpacing: n,
                     fontSize: i,
@@ -259,7 +259,7 @@ t.Z = a.memo(function (e) {
                     [e.id]
                 ),
                 { enabled: l } = _.Z.useExperiment({ location: '41de6d_1' }, { autoTrackExposure: !1 }),
-                r = null !== (n = null === (t = Z.default.getUser(C.default.getId())) || void 0 === t ? void 0 : t.hasFlag(P.xW$.SPAMMER)) && void 0 !== n && n,
+                r = null !== (n = null === (t = Z.default.getUser(g.default.getId())) || void 0 === t ? void 0 : t.hasFlag(P.xW$.SPAMMER)) && void 0 !== n && n,
                 c = (0, d.ts)(e),
                 u = (0, m.Z)('use_topic_dividers_in_chat'),
                 h = (0, o.Wu)(

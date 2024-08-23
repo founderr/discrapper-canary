@@ -33,7 +33,7 @@ function p(e) {
         i = (0, m.e7)([M.Z], () => M.Z.getSearchStateByGuildId(t), [t], u()),
         [C, d] = a.useState(i.selectedRoleIds),
         p = (0, E.h)(t, I, !0),
-        H = (e, l) => {
+        f = (e, l) => {
             let { record: a } = e;
             return (0, n.jsx)(
                 _.ComboboxItem,
@@ -69,11 +69,11 @@ function p(e) {
                 a.id
             );
         },
-        f = (e, t) =>
+        H = (e, t) =>
             p.reduce((l, n) => {
                 let { record: a } = n,
                     o = e.has(a.id);
-                return r()(t.toLowerCase(), a.name.toLowerCase()) ? l.push(H(n, o)) : o && l.push(H(n, o)), l;
+                return r()(t.toLowerCase(), a.name.toLowerCase()) ? l.push(f(n, o)) : o && l.push(f(n, o)), l;
             }, []),
         N = a.useCallback(
             (e) => {
@@ -100,6 +100,6 @@ function p(e) {
         multiSelect: !0,
         showScrollbar: !0,
         autoFocus: !0,
-        children: (e) => f(C, e)
+        children: (e) => H(C, e)
     });
 }

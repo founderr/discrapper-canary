@@ -20,8 +20,8 @@ var i = n(735250),
     _ = n(239091),
     f = n(941028),
     E = n(144144),
-    g = n(276264),
-    C = n(607070),
+    C = n(276264),
+    g = n(607070),
     I = n(100527),
     x = n(367907),
     T = n(906732),
@@ -63,7 +63,7 @@ function Y(e, t, n) {
     );
 }
 let K = V.ZP.getEnableHardwareAcceleration(),
-    q = 44 + g.x,
+    q = 44 + C.x,
     X = {
         origin: {
             x: 38,
@@ -82,7 +82,7 @@ class Q extends a.Component {
     }
     render() {
         let { colorString: e, colorRoleName: t, isOwner: n, nick: a, user: s, currentUser: l, activities: r, applicationStream: o, status: c, channel: u, guildId: h, isTyping: p, isMobileOnline: _, premiumSince: f, ...E } = this.props,
-            C = null != f ? new Date(f) : null;
+            g = null != f ? new Date(f) : null;
         return (0, i.jsx)(m.Popout, {
             preload: () =>
                 (0, P.Z)(s, {
@@ -95,7 +95,7 @@ class Q extends a.Component {
             onShiftClick: this.handleShiftClick,
             children: (d, m) => {
                 let { isShown: f } = m;
-                return (0, i.jsx)(g.Z, {
+                return (0, i.jsx)(C.Z, {
                     className: z.member,
                     onContextMenu: this.renderUserContextMenu,
                     shouldAnimateStatus: K,
@@ -106,7 +106,7 @@ class Q extends a.Component {
                     activities: r,
                     applicationStream: o,
                     isOwner: n,
-                    premiumSince: C,
+                    premiumSince: g,
                     colorString: e,
                     colorRoleName: t,
                     isTyping: p,
@@ -239,7 +239,7 @@ let J = a.memo((e) => {
 function ee(e) {
     let { index: t } = e,
         n = (0, c.JA)(''.concat(t));
-    return (0, i.jsx)(g.Z, { itemProps: n });
+    return (0, i.jsx)(C.Z, { itemProps: n });
 }
 class et extends a.Component {
     shouldComponentUpdate(e) {
@@ -499,7 +499,7 @@ class et extends a.Component {
 function en(e) {
     let { channel: t, className: n } = e,
         { analyticsLocations: s } = (0, T.ZP)(I.Z.MEMBER_LIST),
-        r = (0, h.e7)([C.Z], () => C.Z.keyboardModeEnabled),
+        r = (0, h.e7)([g.Z], () => g.Z.keyboardModeEnabled),
         o = (0, h.cj)([D.ZP], () => D.ZP.getProps(t.guild_id, t.id)),
         {
             rows: d,
@@ -530,7 +530,7 @@ function en(e) {
                 }
             });
         }, []),
-        g = a.useCallback(
+        C = a.useCallback(
             () =>
                 new Promise((e) => {
                     let t = f.current;
@@ -556,7 +556,7 @@ function en(e) {
             id: 'members-'.concat(t.id),
             setFocus: E,
             isEnabled: r,
-            scrollToStart: g,
+            scrollToStart: C,
             scrollToEnd: x
         });
     return (0, i.jsx)(T.Gt, {

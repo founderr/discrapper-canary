@@ -14,8 +14,8 @@ var i = n(735250),
     _ = n(194082),
     f = n(484459),
     E = n(594174),
-    g = n(626135),
-    C = n(74538),
+    C = n(626135),
+    g = n(74538),
     I = n(557457),
     x = n(475674),
     T = n(981631),
@@ -61,7 +61,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
         let O = t || s,
             { location: P } = (0, p.O)(),
             y = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
-            D = o && !C.ZP.isPremium(y, N.p9.TIER_1) && !C.ZP.canStreamQuality(C.ZP.StreamQuality.MID, y),
+            D = o && !g.ZP.isPremium(y, N.p9.TIER_1) && !g.ZP.canStreamQuality(g.ZP.StreamQuality.MID, y),
             k = a.useCallback(() => {
                 D &&
                     O &&
@@ -78,7 +78,7 @@ let Z = (0, o.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             (a.useEffect(() => {
                 !Z &&
                     O &&
-                    (g.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+                    (C.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: N.cd.STREAM_QUALITY_INDICATOR,
                         has_premium_stream_fps: t,
                         has_premium_stream_resolution: s,
@@ -126,12 +126,12 @@ t.Z = (e) => {
         [d, p] = a.useState(!1),
         m = (0, I.Wc)(t),
         { reducedMotion: E } = a.useContext(h.AccessibilityPreferencesContext),
-        g = n && null != m;
+        C = n && null != m;
     a.useEffect(() => {
         (0, f.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
     }, [t]);
-    let C = (0, h.useTransition)(
-            g,
+    let g = (0, h.useTransition)(
+            C,
             {
                 enter: {
                     from: E.enabled ? b : A,
@@ -144,7 +144,7 @@ t.Z = (e) => {
         ),
         x = (0, h.useSpring)(
             {
-                to: g ? j : L,
+                to: C ? j : L,
                 config: O
             },
             'animate-always'
@@ -155,7 +155,7 @@ t.Z = (e) => {
             className: l()(v.streamQualityIndicator, n),
             ...a,
             children: [
-                C((e, n) =>
+                g((e, n) =>
                     n
                         ? (0, i.jsx)(r.animated.div, {
                               style: e,
@@ -178,7 +178,7 @@ t.Z = (e) => {
                     children: (0, i.jsx)(_.ZP, {
                         look: _.jZ.RED,
                         size: o,
-                        shape: g ? h.BadgeShapes.ROUND_RIGHT : h.BadgeShapes.ROUND
+                        shape: C ? h.BadgeShapes.ROUND_RIGHT : h.BadgeShapes.ROUND
                     })
                 })
             ]

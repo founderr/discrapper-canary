@@ -37,10 +37,10 @@ function p(e) {
         !f)
     )
         return null;
-    let g = null == m ? void 0 : m.applicationId;
-    return _ !== h.Ez.PANEL || null == g
+    let C = null == m ? void 0 : m.applicationId;
+    return _ !== h.Ez.PANEL || null == C
         ? null
-        : null == p || null == m || (0, u.Z)(p) || null == g
+        : null == p || null == m || (0, u.Z)(p) || null == C
           ? null
           : (0, i.jsx)(d.Z, {
                 maxHeight: t,

@@ -20,8 +20,8 @@ var i = t(735250),
     E = t(653798),
     x = t(314182),
     N = t(251660),
-    T = t(246946),
-    S = t(351402),
+    S = t(246946),
+    T = t(351402),
     h = t(853872),
     b = t(855775),
     g = t(695103),
@@ -88,9 +88,9 @@ function D(e) {
 }
 function w(e) {
     let { hasLegalTermsFlash: n, legalTermsNodeRef: t, onPaymentSourceChange: r, handlePaymentSourceAdd: f } = e,
-        { application: A, purchaseState: w, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: U, skusById: k, skuPricePreviewsById: F, selectedSkuId: W, isEmbeddedIAP: H, purchaseType: Y, purchasePreviewError: K } = (0, y.usePaymentContext)(),
-        { isGift: V, giftRecipient: z } = (0, M.wD)(),
-        X = V && (0, v.pO)(z),
+        { application: A, purchaseState: w, paymentSources: G, paymentSourceId: B, setHasAcceptedTerms: U, skusById: k, skuPricePreviewsById: F, selectedSkuId: W, isEmbeddedIAP: H, purchaseType: Y, purchasePreviewError: V } = (0, y.usePaymentContext)(),
+        { isGift: K, giftRecipient: z } = (0, M.wD)(),
+        X = K && (0, v.pO)(z),
         { defaultPaymentSourceId: q, hasFetchedPaymentSources: J } = (0, o.cj)([h.Z], () => ({
             defaultPaymentSourceId: h.Z.defaultPaymentSourceId,
             hasFetchedPaymentSources: h.Z.hasFetchedPaymentSources
@@ -102,8 +102,8 @@ function w(e) {
         en = null != $ ? $[ee] : null;
     s()(null != Q, 'SKU must exist and be fetched.'), s()(null != A, 'Application must exist.');
     let et = (0, o.e7)([I.Z, g.Z], () => g.Z.inTestModeForApplication(A.id) || I.Z.inDevModeForApplication(A.id), [A.id]),
-        ei = (0, o.e7)([T.Z], () => T.Z.enabled),
-        ea = l.M.EEA_COUNTRIES.has(S.Z.ipCountryCodeWithFallback),
+        ei = (0, o.e7)([S.Z], () => S.Z.enabled),
+        ea = l.M.EEA_COUNTRIES.has(T.Z.ipCountryCodeWithFallback),
         er = w === C.A.PURCHASING || w === C.A.COMPLETED,
         es = null != B ? G[B].type : null;
     return (
@@ -134,14 +134,14 @@ function w(e) {
                 null != z ? (0, i.jsx)(N.s, { giftRecipient: z }) : null,
                 (0, i.jsx)(c.FormTitle, {
                     tag: c.FormTitleTags.H5,
-                    children: V ? L.Z.Messages.PREMIUM_GIFTING_BUTTON : L.Z.Messages.ONE_TIME_PURCHASE_REVIEW_STEP_PURCHASE_DETAILS_LABEL
+                    children: K ? L.Z.Messages.PREMIUM_GIFTING_BUTTON : L.Z.Messages.ONE_TIME_PURCHASE_REVIEW_STEP_PURCHASE_DETAILS_LABEL
                 }),
                 null != en
                     ? (0, i.jsx)(Z, {
                           sku: Q,
                           skuPricePreview: en
                       })
-                    : null == K
+                    : null == V
                       ? (0, i.jsx)(c.Spinner, {
                             type: c.Spinner.Type.WANDERING_CUBES,
                             className: j.invoiceSpinner
@@ -181,14 +181,14 @@ function w(e) {
                         subscriptionPlan: null,
                         finePrintClassname: j.fineprint,
                         purchaseType: Y,
-                        isGift: V,
+                        isGift: K,
                         checkboxLabel: Q.productLine === R.POd.COLLECTIBLES ? L.Z.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_SIMPLE.format({ paidURL: R.EYA.PAID_TERMS }) : void 0,
                         finePrint: (0, i.jsx)(d.Z, {
                             paymentSourceType: es,
                             isEmbeddedIAP: H,
                             purchaseType: Y,
                             productLine: Q.productLine,
-                            isGift: V
+                            isGift: K
                         })
                     })
                 })

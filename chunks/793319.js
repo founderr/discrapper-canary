@@ -22,8 +22,8 @@ var i,
     _ = n(481060),
     f = n(846027),
     E = n(287734),
-    g = n(872810),
-    C = n(410575),
+    C = n(872810),
+    g = n(410575),
     I = n(40851),
     x = n(317381),
     T = n(596040),
@@ -76,8 +76,8 @@ var i,
     e_ = n(923973),
     ef = n(829750),
     eE = n(189771),
-    eg = n(294629),
-    eC = n(304745),
+    eC = n(294629),
+    eg = n(304745),
     eI = n(985370),
     ex = n(544384),
     eT = n(560688),
@@ -99,7 +99,7 @@ function eL(e) {
         u = (0, p.Wu)([el.Z], () => el.Z.getAllActiveStreams()),
         d = u.find((e) => e.ownerId === n.id),
         { activated: f, hqStreamingState: E } = (0, z.k)(h.q.STREAM_HIGH_QUALITY),
-        C = null != d && f,
+        g = null != d && f,
         x = l.useRef(null),
         T = t.getGuildId(),
         N = l.useCallback(() => {
@@ -113,7 +113,7 @@ function eL(e) {
         j = () => {
             R &&
                 (null == d
-                    ? (0, g.tE)({
+                    ? (0, C.tE)({
                           channelId: t.id,
                           pid: null == S ? void 0 : S.pid
                       })
@@ -164,7 +164,7 @@ function eL(e) {
                     : null,
                 popoutOpen: t,
                 shouldShowTooltip: !t,
-                premiumGlow: C && E.hqStreamingIsEnabled,
+                premiumGlow: g && E.hqStreamingIsEnabled,
                 buttonRef: x,
                 onClick: null != d ? P : O
             });
@@ -187,7 +187,7 @@ function eL(e) {
                                     });
                             }
                         })
-                      : C && E.hqStreamingIsEnabled
+                      : g && E.hqStreamingIsEnabled
                         ? (0, s.jsx)(q.$, {
                               buttonRef: x,
                               dismissed: E.hqStreamingPopoutDismissed,
@@ -233,7 +233,7 @@ function ej(e) {
     return (0, T.Z)(n, t.id)
         ? (0, s.jsx)('div', {
               className: eb.buttonContainer,
-              children: (0, s.jsx)(eC.M, { channel: t })
+              children: (0, s.jsx)(eg.M, { channel: t })
           })
         : null;
 }
@@ -246,7 +246,7 @@ let eO = l.memo(function (e) {
         h = null == r ? void 0 : r.id,
         m = (0, p.e7)([el.Z], () => (null != h ? el.Z.getActiveStreamForStreamKey(h) : null), [h]),
         f = (null == r ? void 0 : r.type) === eA.fO.STREAM && null != m && m.ownerId !== (null == n ? void 0 : n.id),
-        C = (0, p.Wu)([el.Z], () =>
+        g = (0, p.Wu)([el.Z], () =>
             el.Z.getAllActiveStreamsForChannel(a.id).filter((e) => {
                 let { ownerId: t } = e;
                 return t !== (null == n ? void 0 : n.id);
@@ -282,9 +282,9 @@ let eO = l.memo(function (e) {
         T() !== N && u(!0);
     }, [N, T]);
     let Z = l.useCallback(() => {
-            if (null != m) (0, g.g)((0, w.V9)(m));
-            else for (let e of C) (0, g.g)((0, w.V9)(e));
-        }, [C, m]),
+            if (null != m) (0, C.g)((0, w.V9)(m));
+            else for (let e of g) (0, C.g)((0, w.V9)(e));
+        }, [g, m]),
         b = (e, t) => {
             let l = {
                 centerButton: !0,
@@ -299,7 +299,7 @@ let eO = l.memo(function (e) {
                         applicationId: r.id,
                         color: 'red',
                         channelId: a.id,
-                        onPopoutClick: C.length > 0 ? t : null
+                        onPopoutClick: g.length > 0 ? t : null
                     });
                 case 'STREAM':
                     return (0, s.jsx)(ea.O, {
@@ -308,7 +308,7 @@ let eO = l.memo(function (e) {
                         streamActive: !0,
                         color: 'red',
                         onClick: Z,
-                        onPopoutClick: C.length > 1 ? t : null,
+                        onPopoutClick: g.length > 1 ? t : null,
                         isSelfStream: !1
                     });
                 case 'CALL':
@@ -316,7 +316,7 @@ let eO = l.memo(function (e) {
                         ...l,
                         color: 'red',
                         onClick: () => (null == i ? void 0 : i()),
-                        onPopoutClick: C.length > 0 ? t : null,
+                        onPopoutClick: g.length > 0 ? t : null,
                         channel: a
                     });
                 case 'EVENT':
@@ -336,7 +336,7 @@ let eO = l.memo(function (e) {
                 : (0, s.jsx)(ex.Z, {
                       channel: a,
                       currentUser: n,
-                      activeStreams: C,
+                      activeStreams: g,
                       handleGoLive: eZ.VqG,
                       hideSelfOptions: !0,
                       onClose: t
@@ -410,14 +410,14 @@ t.ZP = function (e) {
         }),
         { cameraUnavailable: r, enabled: c } = (0, e_.Z)(),
         d = (0, eE.Z)(t),
-        { suppress: h, selfMute: m, mute: f } = (0, eg.Z)(t),
+        { suppress: h, selfMute: m, mute: f } = (0, eC.Z)(t),
         { canGoLive: E } = (0, p.cj)([eo.Z], () => ({ canGoLive: (0, B.Z)(eo.Z) })),
-        g = (0, k.Z)(),
+        C = (0, k.Z)(),
         I = (0, p.e7)([D.Z], () => null != D.Z.getAwaitingRemoteSessionInfo()),
-        T = null != g,
+        T = null != C,
         v = (0, p.e7)([ec.Z], () => {
             var e;
-            return (null !== (e = null == g ? void 0 : g.channelId) && void 0 !== e ? e : ec.Z.getVoiceChannelId()) === t.id;
+            return (null !== (e = null == C ? void 0 : C.channelId) && void 0 !== e ? e : ec.Z.getVoiceChannelId()) === t.id;
         }),
         Z = (0, L.Z)(t, !0),
         A = (0, p.e7)([x.ZP], () => {
@@ -446,7 +446,7 @@ t.ZP = function (e) {
         !Z;
     return (0, s.jsx)(S.Gt, {
         value: R,
-        children: (0, s.jsxs)(C.Z, {
+        children: (0, s.jsxs)(g.Z, {
             section: eZ.jXE.VOICE_CONTROL_TRAY,
             children: [
                 (0, s.jsx)('div', {

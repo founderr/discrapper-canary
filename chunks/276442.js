@@ -18,7 +18,7 @@ var i = t(512722),
     I = t(474936);
 function f(e) {
     let { analyticsData: n, initialPlanId: t, breadcrumbSteps: i, handleStepChange: f, referralTrialOfferId: E, onReturn: x, continueSession: N = !1 } = e,
-        { contextMetadata: T, step: S, paymentSources: h, paymentSourceId: b, setPaymentSourceId: g, purchaseError: P, setPurchaseError: v, purchaseErrorBlockRef: A, paymentAuthenticationState: M, selectedSkuId: y, activeSubscription: C, previousStepRef: O, setPurchaseState: R } = (0, u.usePaymentContext)(),
+        { contextMetadata: S, step: T, paymentSources: h, paymentSourceId: b, setPaymentSourceId: g, purchaseError: P, setPurchaseError: v, purchaseErrorBlockRef: A, paymentAuthenticationState: M, selectedSkuId: y, activeSubscription: C, previousStepRef: O, setPurchaseState: R } = (0, u.usePaymentContext)(),
         { isGift: L } = (0, c.wD)(),
         j = {
             ...(0, l.fL)(),
@@ -40,15 +40,15 @@ function f(e) {
                 : () => {
                       f(Object.values(h).length < 1 && null == t ? d.h8.PLAN_SELECT : d.h8.REVIEW, { trackedFromStep: d.h8.PAYMENT_TYPE });
                   };
-    a()(S, 'Step should be set here');
-    let G = (0, r.Z)(() => Date.now(), [S]);
+    a()(T, 'Step should be set here');
+    let G = (0, r.Z)(() => Date.now(), [T]);
     return (0, l.vP)({
         paymentModalArgs: j,
         initialStep: N && null == O.current ? d.h8.CREDIT_CARD_INFORMATION : d.h8.PAYMENT_TYPE,
         prependSteps: [d.h8.PROMOTION_INFO],
         appendSteps: [d.h8.REVIEW, d.h8.CONFIRM],
         breadcrumpSteps: i,
-        currentBreadcrumpStep: S,
+        currentBreadcrumpStep: T,
         usePaymentModalStep: !0,
         onReturn: w,
         onComplete: (e) => {
@@ -62,7 +62,7 @@ function f(e) {
                 from_step: t,
                 to_step: i,
                 step_duration_ms: a - G,
-                flow_duration_ms: a - T.startTime
+                flow_duration_ms: a - S.startTime
             });
         },
         isEligibleForTrial: D,

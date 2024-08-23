@@ -22,7 +22,7 @@ var a = t(278074),
     E = t(326397),
     x = t(241822);
 let N = m.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
-function T(e) {
+function S(e) {
     let { avatarDecoration: n } = e,
         {
             avatarDecorationSrc: t,
@@ -44,7 +44,7 @@ function T(e) {
         })
     });
 }
-function S(e) {
+function T(e) {
     var n;
     let { id: t } = e,
         a = null === (n = (0, _.V)(t)) || void 0 === n ? void 0 : n.config;
@@ -66,8 +66,8 @@ function h(e) {
         { product: s } = (0, c.T)(null == n ? void 0 : n.id),
         l = null == s ? void 0 : s.items[0],
         o = (0, a.EQ)(l)
-            .with({ type: r.Z.AVATAR_DECORATION }, (e) => (0, i.jsx)(T, { avatarDecoration: e }))
-            .with({ type: r.Z.PROFILE_EFFECT }, (e) => (0, i.jsx)(S, { id: e.id }))
+            .with({ type: r.Z.AVATAR_DECORATION }, (e) => (0, i.jsx)(S, { avatarDecoration: e }))
+            .with({ type: r.Z.PROFILE_EFFECT }, (e) => (0, i.jsx)(T, { id: e.id }))
             .otherwise(() => null);
     return null != t && null == o
         ? (0, i.jsx)('div', {

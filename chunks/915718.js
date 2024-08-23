@@ -20,8 +20,8 @@ var i = n(735250),
     _ = n(605236),
     f = n(243778),
     E = n(590293),
-    g = n(970731),
-    C = n(560688),
+    C = n(970731),
+    g = n(560688),
     I = n(173507),
     x = n(523746),
     T = n(819640),
@@ -83,7 +83,7 @@ class D extends a.PureComponent {
             _ = '',
             E = !1;
         s ? ((_ = p ? O.Z.Messages.VOICE_UNAVAILABLE : O.Z.Messages.CALL_UNAVAILABLE), (e = r.Tooltip.Colors.RED), (E = !0)) : o ? ((_ = O.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (e = r.Tooltip.Colors.RED), (E = !0)) : (_ = a ? (p ? O.Z.Messages.CONNECT : O.Z.Messages.JOIN_VOICE_CALL) : p ? O.Z.Messages.CONNECT : O.Z.Messages.START_VOICE_CALL);
-        let C = (0, i.jsx)(b.ZP.Icon, {
+        let g = (0, i.jsx)(b.ZP.Icon, {
             icon: r.PhoneCallIcon,
             onClick: this.handleVoiceClick,
             disabled: E,
@@ -102,7 +102,7 @@ class D extends a.PureComponent {
                         shouldShow: n && u && !t,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, i.jsx)(g.ZP, {
+                            return (0, i.jsx)(C.ZP, {
                                 header: (0, i.jsxs)('div', {
                                     children: [
                                         (0, i.jsx)(m.Z, {
@@ -141,9 +141,9 @@ class D extends a.PureComponent {
                                 className: P.tooltip
                             });
                         },
-                        children: () => C
+                        children: () => g
                     });
-                return C;
+                return g;
             }
         });
     }
@@ -177,7 +177,7 @@ class D extends a.PureComponent {
                 (0, I.Z)(() => this.handleJoinCall(!0), e);
             }),
             y(this, 'handleBrowserNotSupported', () => {
-                (0, C.Z)();
+                (0, g.Z)();
             });
     }
 }
@@ -192,7 +192,7 @@ function k(e) {
             callUnavailable: x.Z.isCallUnavailable(t.id)
         })),
         f = t.getRecipientId(),
-        { notFriend: g, isBlocked: C } = (0, s.cj)([S.Z], () => ({
+        { notFriend: C, isBlocked: g } = (0, s.cj)([S.Z], () => ({
             notFriend: t.type === R.d4z.DM && null != f && !S.Z.isFriend(f),
             isBlocked: t.type === R.d4z.DM && null != f && S.Z.isBlocked(f)
         })),
@@ -217,8 +217,8 @@ function k(e) {
               inCall: o,
               callActive: m,
               callUnavailable: _,
-              notFriend: g,
-              isBlocked: C,
+              notFriend: C,
+              isBlocked: g,
               appContext: N,
               canShowTooltip: L,
               canShowActivityGdmTooltip: M,

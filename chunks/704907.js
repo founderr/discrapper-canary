@@ -42,8 +42,8 @@ let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
     },
     c = {
         original: l,
-        safe: (e, t, n) => (null == n.maxTotalUse ? 0 : (e / n.maxTotalUse) * 0.2 + (t / 1000) * 0.8),
-        day_recency: (e, t, n) => (null == n.maxTotalUse ? 0 : (e / n.maxTotalUse) * 0.05 + (t / 1000) * 0.95)
+        safe: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.2 + (t / 1000) * 0.8))),
+        day_recency: (e, t, n) => (null == n.maxTotalUse ? 0 : Math.trunc(1000 * ((e / n.maxTotalUse) * 0.05 + (t / 1000) * 0.95)))
     };
 t.ZP = class e {
     overwriteHistory(e, t) {

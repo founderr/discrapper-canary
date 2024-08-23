@@ -18,13 +18,13 @@ var i = t(512722),
     m = t(981631),
     I = t(474936);
 async function f(e) {
-    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: E, setHasRedirectURL: x, isGift: N, baseAnalyticsData: T, analyticsLocation: S, analyticsLocations: h, flowStartTime: b, subscriptionPlan: g, planGroup: P, trialId: v, priceOptions: A, paymentSource: M, isPrepaidPaymentPastDue: y, openInvoiceId: C, premiumSubscription: O, onNext: R, metadata: L, sku: j, skuPricePreview: Z, purchaseType: D, referralCode: w, loadId: G, giftInfoOptions: B, invoicePreview: U } = e;
+    let { setPurchaseState: n, setHasAcceptedTerms: t, setIsSubmitting: i, setPurchaseError: f, hasRedirectURL: E, setHasRedirectURL: x, isGift: N, baseAnalyticsData: S, analyticsLocation: T, analyticsLocations: h, flowStartTime: b, subscriptionPlan: g, planGroup: P, trialId: v, priceOptions: A, paymentSource: M, isPrepaidPaymentPastDue: y, openInvoiceId: C, premiumSubscription: O, onNext: R, metadata: L, sku: j, skuPricePreview: Z, purchaseType: D, referralCode: w, loadId: G, giftInfoOptions: B, invoicePreview: U } = e;
     n(p.A.PURCHASING), t(!0), i(!0), r.Z.wait(l.fw), f(null);
     try {
         let e, t, i;
         if (
             (d.default.track(m.rMx.PAYMENT_FLOW_COMPLETED, {
-                ...T,
+                ...S,
                 subtotal: null == U ? void 0 : U.subtotal,
                 tax: null == U ? void 0 : U.tax,
                 expected_amount: null == U ? void 0 : U.total,
@@ -68,7 +68,7 @@ async function f(e) {
                           currency: A.currency
                       },
                       h,
-                      S,
+                      T,
                       G
                   );
         else if (null != O) {
@@ -77,7 +77,7 @@ async function f(e) {
                     paymentSource: M,
                     currency: A.currency
                 };
-            O.status === m.O0b.PAUSED ? (t.status = m.O0b.ACTIVE) : (t.items = n), (e = await (0, s.Mg)(O, t, h, S, G));
+            O.status === m.O0b.PAUSED ? (t.status = m.O0b.ACTIVE) : (t.items = n), (e = await (0, s.Mg)(O, t, h, T, G));
         } else
             e = await (0, o.Ld)({
                 planId: g.id,
@@ -97,7 +97,7 @@ async function f(e) {
         n(p.A.FAIL),
             f(e),
             d.default.track(m.rMx.PAYMENT_FLOW_FAILED, {
-                ...T,
+                ...S,
                 payment_error_code: null == e ? void 0 : e.code,
                 payment_source_id: null == M ? void 0 : M.id,
                 payment_source_type: null == M ? void 0 : M.type,

@@ -22,8 +22,8 @@ var i = t(735250),
     E = t(409813),
     x = t(809144),
     N = t(698708),
-    T = t(614223),
-    S = t(481595),
+    S = t(614223),
+    T = t(481595),
     h = t(51499),
     b = t(678334),
     g = t(614277),
@@ -34,7 +34,7 @@ function M(e) {
     var n, t;
     let r,
         { handleStepChange: M, trialId: y, trialFooterMessageOverride: C, reviewWarningMessage: O, planGroup: R, openInvoiceId: L, analyticsData: j, analyticsLocation: Z, referralTrialOfferId: D, initialPlanId: w, subscriptionTier: G, handleClose: B } = e,
-        { activeSubscription: U, setUpdatedSubscription: k, contextMetadata: F, currencies: W, paymentSourceId: H, paymentSources: Y, priceOptions: K, purchaseError: V, purchaseTokenAuthState: z, selectedPlan: X, selectedSkuId: q, setCurrency: J, setPaymentSourceId: Q, setPurchaseState: $, setPurchaseError: ee, step: en, purchaseState: et, isPremium: ei, setHasAcceptedTerms: ea, purchaseType: er, setEntitlementsGranted: es, startedPaymentFlowWithPaymentSourcesRef: el, invoicePreview: eo, inReverseTrial: ec } = (0, f.usePaymentContext)(),
+        { activeSubscription: U, setUpdatedSubscription: k, contextMetadata: F, currencies: W, paymentSourceId: H, paymentSources: Y, priceOptions: V, purchaseError: K, purchaseTokenAuthState: z, selectedPlan: X, selectedSkuId: q, setCurrency: J, setPaymentSourceId: Q, setPurchaseState: $, setPurchaseError: ee, step: en, purchaseState: et, isPremium: ei, setHasAcceptedTerms: ea, purchaseType: er, setEntitlementsGranted: es, startedPaymentFlowWithPaymentSourcesRef: el, invoicePreview: eo, inReverseTrial: ec } = (0, f.usePaymentContext)(),
         { isGift: eu, giftMessage: ed, giftRecipient: e_ } = (0, I.wD)();
     s()(null != en, 'Step should be set');
     let ep = a.useRef(null),
@@ -44,11 +44,11 @@ function M(e) {
         eE = null != ef && (!ei || P.nG[ef].skus.includes(q)) ? ef : null,
         ex = (0, u.N)(D),
         eN = (0, c.Ng)(),
-        eT = { user_trial_offer_id: null == ex ? void 0 : ex.id };
+        eS = { user_trial_offer_id: null == ex ? void 0 : ex.id };
     a.useEffect(() => {
-        null != V && null != ep.current && ep.current.scrollIntoView({ behavior: 'smooth' });
-    }, [V]);
-    let eS = a.useCallback(
+        null != K && null != ep.current && ep.current.scrollIntoView({ behavior: 'smooth' });
+    }, [K]);
+    let eT = a.useCallback(
             (e, n) => {
                 k(e),
                     null != n && es(n),
@@ -70,7 +70,7 @@ function M(e) {
         ey = !eu && null != eN && null != eM && null != X && eM.includes(X.id),
         eC = eu && (0, m.pO)(e_),
         eO = null == w && null == G && er === v.GZ.SUBSCRIPTION,
-        eR = (0, T.Kp)({
+        eR = (0, S.Kp)({
             isTrial: eA,
             isGift: eu,
             selectedSkuId: q,
@@ -88,7 +88,7 @@ function M(e) {
         eD = !1;
     return (
         er === v.GZ.ONE_TIME
-            ? (r = (0, i.jsx)(S.Z, {
+            ? (r = (0, i.jsx)(T.Z, {
                   hasLegalTermsFlash: em,
                   legalTermsNodeRef: eg,
                   onPaymentSourceChange: (e) => Q(null != e ? e.id : null),
@@ -101,7 +101,7 @@ function M(e) {
                         selectedPlanId: X.id,
                         paymentSources: Y,
                         onPaymentSourceChange: (e) => Q(null != e ? e.id : null),
-                        priceOptions: K,
+                        priceOptions: V,
                         currencies: W,
                         onCurrencyChange: (e) => J(e),
                         handlePaymentSourceAdd: () => M(E.h8.ADD_PAYMENT_STEPS),
@@ -121,7 +121,7 @@ function M(e) {
                     (r = (0, i.jsx)(_.Z, {
                         premiumSubscription: U,
                         paymentSources: Y,
-                        priceOptions: K,
+                        priceOptions: V,
                         onPaymentSourceChange: (e) => {
                             Q(null != e ? e.id : null);
                         },
@@ -152,7 +152,7 @@ function M(e) {
                         premiumSubscription: null != U ? U : null,
                         setPurchaseState: $,
                         onBack: eZ,
-                        onNext: eS,
+                        onNext: eT,
                         onPurchaseError: (e) => ee(e),
                         legalTermsNodeRef: eg,
                         flashLegalTerms: () => eI(!0),
@@ -166,7 +166,7 @@ function M(e) {
                         purchaseTokenAuthState: z,
                         openInvoiceId: L,
                         backButtonEligible: ej,
-                        metadata: eT,
+                        metadata: eS,
                         isTrial: eA,
                         disablePurchase: eD
                     })

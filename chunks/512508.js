@@ -32,8 +32,8 @@ var n,
     g = l(518738),
     I = l(439170),
     p = l(592125),
-    H = l(430824),
-    f = l(699516),
+    f = l(430824),
+    H = l(699516),
     N = l(594174),
     R = l(689938),
     A = l(524898);
@@ -62,7 +62,7 @@ function O(e) {
     };
 }
 function B(e) {
-    let t = (0, x.F6)(e, N.default, f.Z);
+    let t = (0, x.F6)(e, N.default, H.Z);
     return {
         tag: {
             type: M.Fj.CHANNEL,
@@ -86,7 +86,7 @@ let V = c.memo(function (e) {
             roleId: o,
             size: 16
         }),
-        r = (0, E.e7)([H.Z], () => H.Z.getRole(n, o)),
+        r = (0, E.e7)([f.Z], () => f.Z.getRole(n, o)),
         c = s.includes(I.CR) ? '' : '@',
         d = (0, h.useToken)(h.tokens.unsafe_rawColors.PRIMARY_300).hsl(),
         m = null !== (t = null == r ? void 0 : r.colorString) && void 0 !== t ? t : d;
@@ -159,7 +159,7 @@ function w(e, t, l) {
 }
 function k(e) {
     let { guildId: t, roleRows: l = [], channelRows: n = [], selectedChannelIds: a = new Set(), selectedRoleIds: o = new Set(), onChange: s, placeholder: i, helperText: r, className: d } = e,
-        m = (0, E.e7)([H.Z], () => H.Z.getRoles(t)),
+        m = (0, E.e7)([f.Z], () => f.Z.getRoles(t)),
         x = c.useMemo(
             () =>
                 (function (e, t, l) {
@@ -181,7 +181,7 @@ function k(e) {
         b = c.useMemo(() => Object.keys(x), [x]),
         [T, L] = c.useState(''),
         [g, I] = c.useState(!1),
-        [f, N] = c.useState(!1),
+        [H, N] = c.useState(!1),
         [j, V] = c.useState(!1),
         U = c.useRef(null),
         { sections: k, sectionCounts: F } = c.useMemo(() => {
@@ -224,12 +224,12 @@ function k(e) {
         };
     c.useEffect(() => {
         let e = setTimeout(() => {
-            V(g || f);
+            V(g || H);
         }, 32);
         return () => {
             clearTimeout(e);
         };
-    }, [g, f]);
+    }, [g, H]);
     let Y = (e, t, l) => {
             l.stopPropagation(), l.preventDefault(), 2 === t ? I(e) : (1 === t || I(e), N(e));
         },

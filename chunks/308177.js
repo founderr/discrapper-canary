@@ -14,8 +14,8 @@ var i,
     _ = n(766015),
     f = n(401139),
     E = n(12779),
-    g = n(450369),
-    C = n(689938),
+    C = n(450369),
+    g = n(689938),
     I = n(442545);
 let x = 424,
     T = 624,
@@ -23,7 +23,7 @@ let x = 424,
 ((a = i || (i = {}))[(a.SELECTED = 0)] = 'SELECTED'), (a[(a.SPEAKER = 1)] = 'SPEAKER'), (a[(a.AUDIENCE = 2)] = 'AUDIENCE');
 let S = (e, t) => {
         let n = Math.floor(e / t - 8),
-            i = Math.floor(n / g.Q);
+            i = Math.floor(n / C.Q);
         return {
             speakerTileWidth: n,
             speakerTileHeight: i
@@ -82,7 +82,7 @@ t.Z = (0, o.Z)((e) => {
                           E.Z,
                           {
                               participantCount: M,
-                              label: C.Z.Messages.SPEAKER_LABEL,
+                              label: g.Z.Messages.SPEAKER_LABEL,
                               className: I.header,
                               onClick: () => z(!W),
                               collapsed: W,
@@ -99,7 +99,7 @@ t.Z = (0, o.Z)((e) => {
                           E.Z,
                           {
                               participantCount: b,
-                              label: C.Z.Messages.AUDIENCE_LABEL,
+                              label: g.Z.Messages.AUDIENCE_LABEL,
                               className: I.header,
                               onClick: () => K(!Y),
                               collapsed: Y,
@@ -121,7 +121,7 @@ t.Z = (0, o.Z)((e) => {
                         'div',
                         {
                             className: I.focusedRow,
-                            children: (0, s.jsx)(g.Z, {
+                            children: (0, s.jsx)(C.Z, {
                                 channel: i,
                                 participant: a[0],
                                 width: V
@@ -158,7 +158,7 @@ t.Z = (0, o.Z)((e) => {
                     return null;
             }
         },
-        rowHeight: (e) => (null == w[e][0] ? 0 : 0 === e ? V / g.Q + 8 : 1 === e ? (W ? 0 : G) : Y ? 0 : 98),
+        rowHeight: (e) => (null == w[e][0] ? 0 : 0 === e ? V / C.Q + 8 : 1 === e ? (W ? 0 : G) : Y ? 0 : 98),
         renderFooter: (e) => {
             let { section: t } = e;
             return F(t) ? (0, s.jsx)('div', { className: I.spacer }, 'bottom-spacer') : null;

@@ -19,8 +19,8 @@ var i,
     _ = n(556505),
     f = n(513202),
     E = n(981631),
-    g = n(689938),
-    C = n(774867);
+    C = n(689938),
+    g = n(774867);
 let I = ['embedded_cover'],
     x = {
         tension: 800,
@@ -54,9 +54,9 @@ function T(e) {
         L = l.useMemo(
             () =>
                 (0, s.jsx)('div', {
-                    className: C.overlayBadge,
+                    className: g.overlayBadge,
                     children: (0, s.jsx)('div', {
-                        className: C.badgeContainer,
+                        className: g.badgeContainer,
                         children: (0, s.jsx)(_.Z, {
                             name: i.application.name,
                             labelType: Z
@@ -69,25 +69,25 @@ function T(e) {
             switch (v) {
                 case p.JS.JOIN:
                     return (0, s.jsx)('div', {
-                        className: C.activityAction,
+                        className: g.activityAction,
                         children: (0, s.jsx)('div', {
-                            className: C.activityActionButton,
+                            className: g.activityActionButton,
                             children: (0, s.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: g.Z.Messages.JOIN
+                                children: C.Z.Messages.JOIN
                             })
                         })
                     });
                 case p.JS.LEAVE:
                     return (0, s.jsx)('div', {
-                        className: C.activityAction,
+                        className: g.activityAction,
                         children: (0, s.jsx)('div', {
-                            className: o()(C.activityActionButton, C.activityActionButtonDanger),
+                            className: o()(g.activityActionButton, g.activityActionButtonDanger),
                             children: (0, s.jsx)(u.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'always-white',
-                                children: g.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE
+                                children: C.Z.Messages.EMBEDDED_ACTIVITIES_LEAVE
                             })
                         })
                     });
@@ -105,7 +105,7 @@ function T(e) {
         onBlur: R,
         onMouseEnter: b,
         onMouseLeave: R,
-        innerClassName: C.activityItemButtonInnerClass,
+        innerClassName: g.activityItemButtonInnerClass,
         children: (0, s.jsx)(u.Spring, {
             config: x,
             from: { value: 0 },
@@ -113,9 +113,9 @@ function T(e) {
             children: (e) => {
                 let { value: t } = e;
                 return (0, s.jsx)(c.animated.div, {
-                    className: o()((0, h.Q)(E.BRd.DARK), C.activityItem, T, {
-                        [C.activityItem_13_11]: 0 === r,
-                        [C.activityItem_16_9]: 1 === r
+                    className: o()((0, h.Q)(E.BRd.DARK), g.activityItem, T, {
+                        [g.activityItem_13_11]: 0 === r,
+                        [g.activityItem_16_9]: 1 === r
                     }),
                     style: {
                         transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))
@@ -125,8 +125,8 @@ function T(e) {
                             (0, s.jsx)(m.Z, {
                                 imageBackground: S,
                                 applicationName: i.application.name,
-                                imageClassName: C.activitySuggestionImage,
-                                imageNotFoundClassName: C.brokenImageIconWrapper
+                                imageClassName: g.activitySuggestionImage,
+                                imageNotFoundClassName: g.brokenImageIconWrapper
                             }),
                             L,
                             j

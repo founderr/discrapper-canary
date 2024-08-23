@@ -25,8 +25,8 @@ var i = n(735250),
     _ = n(266076),
     f = n(565138),
     E = n(703656),
-    g = n(699516),
-    C = n(914010),
+    C = n(699516),
+    g = n(914010),
     I = n(594174),
     x = n(768581),
     T = n(63063),
@@ -112,7 +112,7 @@ function j(e) {
 }
 function O(e) {
     let { channel: t, channelName: n, parentChannel: s, guild: r, inSidebar: o = !1, handleClick: u, handleContextMenu: d, handleParentClick: m, handleParentContextMenu: f, renderFollowButton: E } = e,
-        C = (0, p.KS)(t, r),
+        g = (0, p.KS)(t, r),
         { prefix: x, level: T } = (function (e, t) {
             var n, i;
             switch (e) {
@@ -198,7 +198,7 @@ function O(e) {
         case M.d4z.GUILD_MEDIA:
             return (0, i.jsxs)(a.Fragment, {
                 children: [
-                    D(C, t.type === M.d4z.GUILD_ANNOUNCEMENT ? R.Z.Messages.NEWS_CHANNEL : R.Z.Messages.TEXT_CHANNEL),
+                    D(g, t.type === M.d4z.GUILD_ANNOUNCEMENT ? R.Z.Messages.NEWS_CHANNEL : R.Z.Messages.TEXT_CHANNEL),
                     (0, i.jsx)(Z.Z.Title, {
                         level: T,
                         onContextMenu: d,
@@ -212,7 +212,7 @@ function O(e) {
         case M.d4z.GUILD_VOICE:
             return (0, i.jsxs)(a.Fragment, {
                 children: [
-                    D(C, R.Z.Messages.VOICE_CHANNEL),
+                    D(g, R.Z.Messages.VOICE_CHANNEL),
                     (0, i.jsx)(Z.Z.Title, {
                         level: T,
                         onContextMenu: d,
@@ -224,7 +224,7 @@ function O(e) {
         case M.d4z.GUILD_STAGE_VOICE:
             return (0, i.jsxs)(a.Fragment, {
                 children: [
-                    D(C, R.Z.Messages.STAGE_CHANNEL),
+                    D(g, R.Z.Messages.STAGE_CHANNEL),
                     (0, i.jsx)(Z.Z.Title, {
                         level: T,
                         onContextMenu: d,
@@ -247,7 +247,7 @@ function O(e) {
                             onContextMenu: f,
                             onClick: m,
                             className: l()(L.parentChannelName, L.cursorPointer),
-                            children: (0, h.F6)(s, I.default, g.Z)
+                            children: (0, h.F6)(s, I.default, C.Z)
                         }),
                         (0, i.jsx)(Z.Z.Caret, {})
                     ]
@@ -257,7 +257,7 @@ function O(e) {
             return (0, i.jsxs)(a.Fragment, {
                 children: [
                     v,
-                    D(b ? null : C, R.Z.Messages.THREAD),
+                    D(b ? null : g, R.Z.Messages.THREAD),
                     (0, i.jsx)(Z.Z.Title, {
                         level: T,
                         onContextMenu: d,
@@ -274,10 +274,10 @@ function O(e) {
             let O = (null == r ? void 0 : r.hasFeature(M.oNc.HUB)) ? R.Z.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({ guildName: n }) : n;
             return (0, i.jsxs)(a.Fragment, {
                 children: [
-                    null !== C
+                    null !== g
                         ? (0, i.jsx)(Z.Z.Icon, {
                               iconClassName: L.__invalid_icon,
-                              icon: C,
+                              icon: g,
                               'aria-hidden': !0
                           })
                         : null,
@@ -347,7 +347,7 @@ function D(e, t) {
 }
 function k(e) {
     let { guild: t, channel: n, caretPosition: a = 'left' } = e;
-    return (0, r.e7)([C.Z], () => C.Z.getGuildId()) !== M.I_8 || null == t
+    return (0, r.e7)([g.Z], () => g.Z.getGuildId()) !== M.I_8 || null == t
         ? null
         : (0, i.jsxs)('div', {
               className: L.guildBreadcrumbContainer,

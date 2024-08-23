@@ -19,8 +19,8 @@ var i = n(735250),
     _ = n(933793),
     f = n(13736),
     E = n(732393),
-    g = n(137591),
-    C = n(299206),
+    C = n(137591),
+    g = n(299206),
     I = n(665149),
     x = n(695346),
     T = n(979651),
@@ -65,7 +65,7 @@ function Z(e) {
         I = (0, m.Z)(t),
         v = (0, E.Z)(t.id),
         Z = (0, f.Z)(t),
-        A = (0, C.Z)({
+        A = (0, g.Z)({
             id: t.id,
             label: S.Z.Messages.COPY_ID_THREAD
         }),
@@ -74,7 +74,7 @@ function Z(e) {
         R = (0, h.Z)(t, 'Toolbar Overflow'),
         L = (0, _.Z)(t),
         j = (0, p.Z)(t),
-        O = (0, g.Z)(t),
+        O = (0, C.Z)(t),
         P = x.vF.useSetting(),
         y = (0, r.e7)([T.Z], () => !l().isEmpty(T.Z.getVoiceStatesForChannel(t.id)));
     return (0, i.jsxs)(o.Menu, {

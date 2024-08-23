@@ -48,7 +48,7 @@ function x(e) {
         g = new Intl.NumberFormat(E.Z.getLocale()).format(i),
         I = (0, u.nX)(t.id),
         p = (0, u.xC)(t.id),
-        H = a.useMemo(() => 1 + (I ? 1 : 0) + (p ? 1 : 0), [I, p]);
+        f = a.useMemo(() => 1 + (I ? 1 : 0) + (p ? 1 : 0), [I, p]);
     return 0 === i
         ? null
         : (0, n.jsxs)('tr', {
@@ -66,7 +66,7 @@ function x(e) {
                           })
                       })
                   }),
-                  (0, n.jsx)('td', { colSpan: H }),
+                  (0, n.jsx)('td', { colSpan: f }),
                   (0, n.jsx)('td', {
                       colSpan: 2,
                       children: (0, n.jsx)('div', {

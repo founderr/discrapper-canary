@@ -20,8 +20,8 @@ var i = n(735250),
     _ = n(243778),
     f = n(488131),
     E = n(375954),
-    g = n(626135),
-    C = n(585483),
+    C = n(626135),
+    g = n(585483),
     I = n(403182),
     x = n(127654),
     T = n(752305),
@@ -78,7 +78,7 @@ function j(e) {
     let { channel: t, options: l, onFileUpload: c, onClose: m, onSelect: _, draftType: E, editorTextContent: j, setValue: O, openClips: P } = e,
         { analyticsLocations: y } = (0, h.ZP)();
     a.useEffect(() => {
-        g.default.track(S.rMx.OPEN_POPOUT, {
+        C.default.track(S.rMx.OPEN_POPOUT, {
             type: 'Send Attachment',
             channel_id: t.id,
             guild_id: t.guild_id
@@ -88,7 +88,7 @@ function j(e) {
         (0, f.R6)(t, void 0, 'Plus Button');
     }
     function k() {
-        g.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O('/', (0, T.JM)('/'));
+        C.default.track(S.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O('/', (0, T.JM)('/'));
     }
     function U() {
         P();
@@ -108,7 +108,7 @@ function j(e) {
             );
     }
     function B() {
-        g.default.track(S.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        C.default.track(S.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
@@ -133,7 +133,7 @@ function j(e) {
             n = 'txt',
             i = '',
             a = j.match(R);
-        null != a && ((i = a[1]), (n = a[2]), (e = a[3]), (i += a[4])), (0, x.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), C.S.dispatchToLastSubscribed(S.CkL.CLEAR_TEXT), '' !== i && C.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, { plainText: i });
+        null != a && ((i = a[1]), (n = a[2]), (e = a[3]), (i += a[4])), (0, x.d)([(0, I.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n))], t, E), g.S.dispatchToLastSubscribed(S.CkL.CLEAR_TEXT), '' !== i && g.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, { plainText: i });
     }
     return (0, i.jsx)(o.Menu, {
         onSelect: _,
@@ -215,7 +215,7 @@ function j(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (g.default.track(S.rMx.OPEN_MODAL, {
+                                    void (C.default.track(S.rMx.OPEN_MODAL, {
                                         type: 'Send Join Invite',
                                         application_id: n.application_id,
                                         location: S.jXE.CHANNEL_TEXT_AREA
@@ -236,7 +236,7 @@ function j(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (g.default.track(S.rMx.OPEN_MODAL, {
+                                    void (C.default.track(S.rMx.OPEN_MODAL, {
                                         type: 'Send Listen Invite',
                                         location: S.jXE.CHANNEL_TEXT_AREA
                                     }),
@@ -256,7 +256,7 @@ function j(e) {
                                 var n;
                                 return (
                                     (n = e.activity),
-                                    void (g.default.track(S.rMx.OPEN_MODAL, {
+                                    void (C.default.track(S.rMx.OPEN_MODAL, {
                                         type: 'Send Watch Invite',
                                         location: S.jXE.CHANNEL_TEXT_AREA
                                     }),

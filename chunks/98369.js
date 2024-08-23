@@ -14,16 +14,16 @@ var i,
     _ = n(729303),
     f = n(651941),
     E = n(981631);
-let g = new Map(),
-    C = new Map(),
+let C = new Map(),
+    g = new Map(),
     I = !1,
     x = null;
 function T() {
     return p.Z.getAllActiveStreamKeys().reduce((e, t) => {
         let { ownerId: n } = (0, u.my)(t),
-            i = !0 === g.get(n),
-            a = C.get(t) !== i;
-        return C.set(t, i), !!a || e;
+            i = !0 === C.get(n),
+            a = g.get(t) !== i;
+        return g.set(t, i), !!a || e;
     }, !1);
 }
 function N() {
@@ -32,7 +32,7 @@ function N() {
         n = d.default.getId(),
         i = !0;
     for (let e of t)
-        if (n !== e && !0 !== g.get(e)) {
+        if (n !== e && !0 !== C.get(e)) {
             i = !1;
             break;
         }
@@ -49,15 +49,15 @@ function S(e) {
                 i = f.Z.isKeyVerified(e, n) || _.Z.isKeyVerified(e, n),
                 a = (0, m.MA)(e, [h.Z, p.Z]),
                 s = i && a,
-                l = s !== g.get(e);
-            return g.set(e, s), l;
+                l = s !== C.get(e);
+            return C.set(e, s), l;
         })(t),
         i = T(),
         a = N();
     return n || i || a;
 }
 function v() {
-    g.clear(), C.clear(), (I = !1);
+    C.clear(), g.clear(), (I = !1);
 }
 class Z extends (i = r.ZP.Store) {
     initialize() {
@@ -67,10 +67,10 @@ class Z extends (i = r.ZP.Store) {
         return I;
     }
     isStreamVerified(e) {
-        return C.get(e);
+        return g.get(e);
     }
     isUserVerified(e) {
-        return g.get(e);
+        return C.get(e);
     }
 }
 (l = 'SecureFramesVerifiedStore'),
@@ -95,7 +95,7 @@ class Z extends (i = r.ZP.Store) {
             switch (i) {
                 case o.Yn.STREAM:
                     if (null == t) return !1;
-                    return C.delete(t), N();
+                    return g.delete(t), N();
                 case o.Yn.DEFAULT:
                     v();
             }
