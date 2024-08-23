@@ -7,8 +7,8 @@ var i = t(735250),
     a = t(470079),
     r = t(481060),
     o = t(768581),
-    l = t(924489),
-    s = t(950854),
+    s = t(924489),
+    l = t(950854),
     c = t(491576),
     d = t(982469);
 function u(e) {
@@ -20,31 +20,31 @@ function u(e) {
             size: 48
         }),
         E = (0, c.Z)({ application: m }),
-        x = null === (n = m.categories) || void 0 === n ? void 0 : n[0],
-        b = (null !== (_ = null === (t = m.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== _ ? _ : 0) > 0 || E.length > 0,
+        b = null === (n = m.categories) || void 0 === n ? void 0 : n[0],
+        x = (null !== (_ = null === (t = m.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== _ ? _ : 0) > 0 || E.length > 0,
         A = a.useCallback(() => {
             h({ mutualGuilds: E });
         }, [h, E]),
-        P = (0, i.jsx)(l.Z, {
+        P = (0, i.jsx)(s.Z, {
             application: m,
             textVariant: 'text-xs/normal',
             mutualGuilds: E,
             mutualGuildShownMax: 3,
-            guildIconSize: l.x.SMALL,
+            guildIconSize: s.x.SMALL,
             compact: !0
         });
-    return (0, i.jsxs)(s.Z, {
+    return (0, i.jsxs)(l.Z, {
         className: I,
         onClick: A,
         iconSrc: v,
         header: m.name,
         subheader:
-            null != x &&
+            null != b &&
             (0, i.jsx)(r.Text, {
                 tag: 'span',
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
-                children: x.name
+                children: b.name
             }),
         animatesOnHover: g,
         ...C,
@@ -59,7 +59,7 @@ function u(e) {
                         children: null !== (p = null === (u = m.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== p ? p : m.description
                     })
                 }),
-            b &&
+            x &&
                 (0, i.jsx)('div', {
                     className: d.bottomGuildCountContainer,
                     children: P

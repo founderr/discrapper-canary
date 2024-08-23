@@ -17,9 +17,9 @@ var a = n(735250),
 s.default = function (e) {
     let { guildId: s } = e,
         { analyticsLocations: n } = (0, i.ZP)(l.Z.GUILD_MEMBER_APPLICATION_REVIEW),
-        C = (0, E.L)({ guildId: s }),
-        { user: M } = null != C ? C : {},
-        m = t.useMemo(() => (null != M ? new c.Z(M) : null), [M]),
+        M = (0, E.L)({ guildId: s }),
+        { user: C } = null != M ? M : {},
+        m = t.useMemo(() => (null != C ? new c.Z(C) : null), [C]),
         A = (0, r.e7)([d.Z], () => d.Z.getGuild(s), [s]);
     return (
         (0, o.Tt)({
@@ -36,7 +36,7 @@ s.default = function (e) {
                     className: R.content,
                     children: (0, a.jsx)(_.Z, { guildId: s })
                 }),
-                null != C &&
+                null != M &&
                     null != A &&
                     null != m &&
                     (0, a.jsxs)(a.Fragment, {
@@ -46,7 +46,7 @@ s.default = function (e) {
                                 className: R.sidebar,
                                 children: (0, a.jsx)(T.Z, {
                                     guild: A,
-                                    guildJoinRequest: C,
+                                    guildJoinRequest: M,
                                     guildJoinRequestUser: m,
                                     onClose: () => u.Z.setSelectedGuildJoinRequest(s, null)
                                 })

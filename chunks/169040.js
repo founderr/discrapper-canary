@@ -15,7 +15,7 @@ t.d(n, {
         return o;
     },
     NC: function () {
-        return v;
+        return f;
     },
     NM: function () {
         return a;
@@ -24,7 +24,7 @@ t.d(n, {
         return m;
     },
     PW: function () {
-        return f;
+        return v;
     },
     Pu: function () {
         return x;
@@ -92,7 +92,7 @@ let a = 'M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
     C = 260,
     p = 88,
     g = 99,
-    f = 12,
-    v = 18,
+    v = 12,
+    f = 18,
     M = ['gg sans', 'sans-serif'],
     P = 500;

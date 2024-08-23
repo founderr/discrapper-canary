@@ -174,7 +174,7 @@ function T(e) {
             var e;
             return (0, N.BQ)(n) && null !== (e = null == n ? void 0 : n.tags) && void 0 !== e ? e : [];
         }, [n]);
-    return (0, N.ye)({ application: n })
+    return (0, N.ye)(n)
         ? (0, i.jsxs)('div', {
               className: P.tagsContainer,
               children: [
@@ -200,7 +200,7 @@ function T(e) {
 function M(e) {
     var n;
     let { application: t } = e;
-    if (!(0, N.ye)({ application: t })) return null;
+    if (!(0, N.ye)(t)) return null;
     let a = null !== (n = 'maxParticipants' in t ? t.maxParticipants : 'max_participants' in t ? t.max_participants : 0) && void 0 !== n ? n : 0;
     return (0, i.jsxs)('div', {
         className: P.tagContainer,
@@ -223,7 +223,7 @@ function y(e) {
             applicationId: t.id,
             channel: n
         });
-    return (0, N.BQ)(t) && (0, N.ye)({ application: t })
+    return (0, N.BQ)(t) && (0, N.ye)(t)
         ? (0, i.jsx)('div', {
               className: P.entrypointContainer,
               children:

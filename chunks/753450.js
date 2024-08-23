@@ -16,8 +16,8 @@ var i = t(735250),
     a = t(470079),
     r = t(120356),
     o = t.n(r),
-    l = t(525654),
-    s = t.n(l),
+    s = t(525654),
+    l = t.n(s),
     c = t(302454),
     d = t.n(c),
     u = t(873546),
@@ -31,8 +31,8 @@ var i = t(735250),
     C = t(445986),
     v = t(9807),
     E = t(911969),
-    x = t(330726),
-    b = t(782568),
+    b = t(330726),
+    x = t(782568),
     A = t(607070),
     P = t(581364),
     T = t(970321),
@@ -70,8 +70,8 @@ var i = t(735250),
     ea = t(491576),
     er = t(527564),
     eo = t(326135),
-    el = t(940064),
-    es = t(626004),
+    es = t(940064),
+    el = t(626004),
     ec = t(939893),
     ed = t(430913),
     eu = t(606183),
@@ -85,15 +85,15 @@ let eh = d().parserFor(ec.Z),
     eC = d().reactFor(d().ruleOutput(ec.Z, 'react')),
     ev = (0, p.Mg)(f.Z.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE),
     eE = 'redirect_to_support_server',
-    ex = 'start_application_install',
-    eb = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(e)),
+    eb = 'start_application_install',
+    ex = (e) => ''.concat(location.protocol, '//').concat(location.host).concat(ep.Z5c.APPLICATION_DIRECTORY_PROFILE(e)),
     eA = (e) => {
         if (null == e) return null;
         let n = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
         return null != n ? n[1] : null;
     };
 function eP(e) {
-    var n, r, l, c;
+    var n, r, s, c;
     let d,
         {
             match: {
@@ -208,7 +208,7 @@ function eP(e) {
             }
         }, [eM]);
     let eF = H.ZP.getApplicationIconURL({
-            id: null !== (l = null == eM ? void 0 : eM.id) && void 0 !== l ? l : '-1',
+            id: null !== (s = null == eM ? void 0 : eM.id) && void 0 !== s ? s : '-1',
             icon: null == eM ? void 0 : eM.icon,
             size: ev
         }),
@@ -317,7 +317,7 @@ function eP(e) {
         ),
         e$ = a.useCallback(() => {
             null != eM &&
-                (0, b.Z)(
+                (0, x.Z)(
                     (0, eo.G)({
                         id: eM.id,
                         name: eM.name,
@@ -346,7 +346,7 @@ function eP(e) {
                 }),
             [eU, e$]
         ),
-        [e1, e6] = (0, x.Z)(!1, 1000),
+        [e1, e6] = (0, b.Z)(!1, 1000),
         e8 = a.useCallback(() => {
             if (null != eM)
                 G.default.track(ep.rMx.APP_SHARE_BUTTON_CLICKED, {
@@ -354,13 +354,13 @@ function eP(e) {
                     application_id: eM.id,
                     guild_id: f
                 }),
-                    (0, F.JG)(eb(eM.id)),
+                    (0, F.JG)(ex(eM.id)),
                     e6(!0);
         }, [eM, e6, f]);
     a.useEffect(() => {
         let e = new URL(location.href);
-        if (E && 'true' === e.searchParams.get(ex)) {
-            e.searchParams.delete(ex);
+        if (E && 'true' === e.searchParams.get(eb)) {
+            e.searchParams.delete(eb);
             let n = e.pathname + e.search;
             (0, Z.dL)(n), eW('product_page');
         }
@@ -376,7 +376,7 @@ function eP(e) {
                           source: 'product_page',
                           device_platform: u.tq ? 'mobile_web' : 'desktop_web'
                       }),
-                      (0, Q.rf)({ [ex]: 'true' })));
+                      (0, Q.rf)({ [eb]: 'true' })));
         }, [eM, E, eW, p, f]),
         { applicationSubscriptionListingsShown: e3 } = (0, y.ZP)({
             applicationId: null == eM ? void 0 : eM.id,
@@ -396,7 +396,7 @@ function eP(e) {
     a.useEffect(() => {
         no && null != p && (0, R.Z)(p);
     }, [no, p]);
-    let nl = a.useMemo(() => {
+    let ns = a.useMemo(() => {
             let e = [],
                 n = !0;
             switch (I) {
@@ -416,7 +416,7 @@ function eP(e) {
                                           ref: ni,
                                           className: o()({
                                               [ef.descriptionClamp]: !e7,
-                                              [ef.descriptionClampSafari]: !e7 && 'Safari' === s().name
+                                              [ef.descriptionClampSafari]: !e7 && 'Safari' === l().name
                                           }),
                                           children: (0, i.jsx)(O.Z, {
                                               className: ef.detailedDescription,
@@ -467,7 +467,7 @@ function eP(e) {
                                             variant: 'heading-md/semibold',
                                             children: eI.Z.Messages.APP_DIRECTORY_PROFILE_COMMANDS_HEADING
                                         }),
-                                        (0, i.jsx)(el.Z, {
+                                        (0, i.jsx)(es.Z, {
                                             className: ef.commandList,
                                             commands: eL
                                         })
@@ -575,7 +575,7 @@ function eP(e) {
                                             variant: 'heading-md/semibold',
                                             children: eI.Z.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_HEADING
                                         }),
-                                        (0, i.jsx)(es.Z, { application: eM })
+                                        (0, i.jsx)(el.Z, { application: eM })
                                     ]
                                 })
                             );
@@ -595,7 +595,7 @@ function eP(e) {
                 )
             );
         }, [I, eH, eM, eL, e7, e4, eq, ey, eJ, no, p, f, e3, na, nr, ez]),
-        ns = a.useMemo(() => {
+        nl = a.useMemo(() => {
             let e = [
                 {
                     name: e_.ApplicationDirectoryProfileSections.GENERAL,
@@ -757,7 +757,7 @@ function eP(e) {
                                                   (0, i.jsx)(eu.Z, {
                                                       activeSection: I,
                                                       setSection: eK,
-                                                      sections: ns
+                                                      sections: nl
                                                   })
                                               ]
                                           })
@@ -769,7 +769,7 @@ function eP(e) {
                                           (0, i.jsxs)('div', {
                                               className: ef.content,
                                               children: [
-                                                  nl,
+                                                  ns,
                                                   null != eP && eP.length > 0
                                                       ? (0, i.jsxs)(i.Fragment, {
                                                             children: [
@@ -903,8 +903,8 @@ function eS(e) {
     let { app: n, iconSrc: t } = e,
         r = (0, N.ZP)(t, I.Z.unsafe_rawColors.PRIMARY_800.css),
         { bot: o } = n,
-        l = (0, m.e7)([A.Z], () => A.Z.useReducedMotion),
-        s = a.useMemo(() => {
+        s = (0, m.e7)([A.Z], () => A.Z.useReducedMotion),
+        l = a.useMemo(() => {
             let e = { backgroundColor: r };
             if (null != o) {
                 let n = (0, H.aN)({
@@ -913,7 +913,7 @@ function eS(e) {
                     size: 1024,
                     canAnimate: !1
                 });
-                if ((null != n && ((e['--custom-background-static'] = 'url('.concat(n)), (e.height = '212px')), !l)) {
+                if ((null != n && ((e['--custom-background-static'] = 'url('.concat(n)), (e.height = '212px')), !s)) {
                     let n = (0, H.aN)({
                         id: o.id,
                         banner: o.banner,
@@ -924,9 +924,9 @@ function eS(e) {
                 }
             }
             return e;
-        }, [r, o, l]);
+        }, [r, o, s]);
     return (0, i.jsx)('div', {
-        style: s,
+        style: l,
         className: ef.headerBanner
     });
 }

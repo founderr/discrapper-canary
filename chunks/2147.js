@@ -1,6 +1,6 @@
 s.d(t, {
     G: function () {
-        return eN;
+        return ep;
     },
     Z: function () {
         return eS;
@@ -24,15 +24,15 @@ var n = s(735250),
     g = s(771340),
     E = s(410575),
     T = s(852860),
-    N = s(129865),
-    p = s(902840),
+    p = s(129865),
+    N = s(902840),
     _ = s(933557),
     S = s(541716),
     x = s(752305),
     f = s(893718),
     C = s(600164),
-    I = s(313201),
-    M = s(907040),
+    M = s(313201),
+    I = s(907040),
     R = s(633302),
     Z = s(109434),
     v = s(162389),
@@ -77,23 +77,23 @@ function en(e, t, s) {
         e
     );
 }
-let el = (0, I.hQ)(),
-    ea = (0, I.hQ)(),
-    ei = (0, I.hQ)(),
-    er = (0, I.hQ)(),
-    eo = (0, I.hQ)(),
-    ed = (0, I.hQ)(),
-    ec = (0, I.hQ)(),
-    eu = (0, I.hQ)(),
-    eh = (0, I.hQ)(),
-    em = (0, I.hQ)(),
-    eg = (0, I.hQ)(),
+let el = (0, M.hQ)(),
+    ea = (0, M.hQ)(),
+    ei = (0, M.hQ)(),
+    er = (0, M.hQ)(),
+    eo = (0, M.hQ)(),
+    ed = (0, M.hQ)(),
+    ec = (0, M.hQ)(),
+    eu = (0, M.hQ)(),
+    eh = (0, M.hQ)(),
+    em = (0, M.hQ)(),
+    eg = (0, M.hQ)(),
     eE = (0, y.kt)({
         id: '1',
         type: q.d4z.DM
     }),
     eT = 'AUTOMATIC_RTC_REGION',
-    eN = d.ZP.connectStores([P.Z], () => {
+    ep = d.ZP.connectStores([P.Z], () => {
         let { channel: e, submitting: t } = P.Z.getProps();
         return {
             channel: e,
@@ -103,7 +103,7 @@ let el = (0, I.hQ)(),
             },
             onSave() {
                 if (null == e) return;
-                let { name: t, type: s, topic: n, bitrate: l, userLimit: a, nsfw: i, flags: r, rateLimitPerUser: o, defaultThreadRateLimitPerUser: d, threadMetadata: c, defaultAutoArchiveDuration: u, template: h, rtcRegion: g, videoQualityMode: E, defaultReactionEmoji: T, availableTags: N, defaultSortOrder: p, defaultForumLayout: _ } = e;
+                let { name: t, type: s, topic: n, bitrate: l, userLimit: a, nsfw: i, flags: r, rateLimitPerUser: o, defaultThreadRateLimitPerUser: d, threadMetadata: c, defaultAutoArchiveDuration: u, template: h, rtcRegion: g, videoQualityMode: E, defaultReactionEmoji: T, availableTags: p, defaultSortOrder: N, defaultForumLayout: _ } = e;
                 e.isThread() && (t = (0, j.Z)(t, !0)),
                     (0, m.wk)(e.id, {
                         name: t,
@@ -123,14 +123,14 @@ let el = (0, I.hQ)(),
                         rtcRegion: g,
                         videoQualityMode: E,
                         defaultReactionEmoji: T,
-                        availableTags: N,
-                        defaultSortOrder: p,
+                        availableTags: p,
+                        defaultSortOrder: N,
                         defaultForumLayout: _
                     });
             }
         };
     })(T.Z);
-function ep(e) {
+function eN(e) {
     var t;
     let { channel: s, onChange: a } = e,
         [i, r] = l.useState(null !== (t = s.rateLimitPerUser) && void 0 !== t ? t : 0),
@@ -208,7 +208,7 @@ class e_ extends l.PureComponent {
     renderChannelInfo(e, t) {
         var s, l, a, d, u, m;
         let g, T;
-        let { canManageChannels: N, canSendMessages: p, isThreadModerator: _, canManageThread: x, guild: C, isForumPost: I, isOwner: M, showAdvancedSlowModeSetting: Z } = this.props,
+        let { canManageChannels: p, canSendMessages: N, isThreadModerator: _, canManageThread: x, guild: C, isForumPost: M, isOwner: I, showAdvancedSlowModeSetting: Z } = this.props,
             L = y.Ec.has(e.type),
             j = e.isForumLikeChannel(),
             D = j && (null === (s = e.availableTags) || void 0 === s ? void 0 : s.every((e) => e.moderated)),
@@ -247,7 +247,7 @@ class e_ extends l.PureComponent {
                                         onChange: this.handleChangeTopic,
                                         error: this.getError('topic'),
                                         maxLength: X.$x,
-                                        disabled: !N,
+                                        disabled: !p,
                                         autosize: !0
                                     })
                           }),
@@ -268,7 +268,7 @@ class e_ extends l.PureComponent {
                                       onChange: this.handleChangeTemplate,
                                       error: this.getError('template'),
                                       maxLength: $.Vb,
-                                      disabled: !N,
+                                      disabled: !p,
                                       autosize: !0
                                   })
                               }),
@@ -296,7 +296,7 @@ class e_ extends l.PureComponent {
                               ]
                           }),
                           (0, n.jsx)(h.Checkbox, {
-                              disabled: !N || D,
+                              disabled: !p || D,
                               value: e.hasFlag(X.zZ.REQUIRE_TAG),
                               type: h.Checkbox.Types.INVERTED,
                               onChange: (e, t) => this.handleRequireTagChanged(t),
@@ -340,7 +340,7 @@ class e_ extends l.PureComponent {
                                                       children: (e) =>
                                                           (0, n.jsx)(h.Button, {
                                                               ...e,
-                                                              disabled: !N,
+                                                              disabled: !p,
                                                               onClick: (t) => {
                                                                   var s;
                                                                   null === (s = e.onClick) || void 0 === s || s.call(e, t);
@@ -440,7 +440,7 @@ class e_ extends l.PureComponent {
                       ]
                   })
                 : null,
-            V = L ? _ : N,
+            V = L ? _ : p,
             z = y.X_.has(e.type)
                 ? (0, n.jsxs)('div', {
                       children: [
@@ -458,7 +458,7 @@ class e_ extends l.PureComponent {
                                         })
                                       : null,
                                   !0 === Z
-                                      ? (0, n.jsx)(ep, {
+                                      ? (0, n.jsx)(eN, {
                                             channel: e,
                                             onChange: this.handleChangeSlowmode
                                         })
@@ -530,7 +530,7 @@ class e_ extends l.PureComponent {
                               (0, n.jsx)(h.FormText, {
                                   className: es.marginTop8,
                                   type: h.FormText.Types.DESCRIPTION,
-                                  children: I ? ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION_FORUM_POST : ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION
+                                  children: M ? ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION_FORUM_POST : ee.Z.Messages.FORM_HELP_AUTO_ARCHIVE_DURATION
                               })
                           ]
                       })
@@ -555,7 +555,7 @@ class e_ extends l.PureComponent {
                           onChange: this.handleNSFWChange,
                           value: e.isNSFW(),
                           hideBorder: !0,
-                          disabled: !N || null != e.linkedLobby,
+                          disabled: !p || null != e.linkedLobby,
                           disabledText: null != e.linkedLobby ? ee.Z.Messages.CHANNEL_LINKED_LOBBY_CHANNEL_NSFW_DISABLED_REASON : null,
                           children: ee.Z.Messages.FORM_LABEL_NSFW_CHANNEL
                       })
@@ -569,7 +569,7 @@ class e_ extends l.PureComponent {
                               onChange: this.handleNewsChange,
                               value: e.type === q.d4z.GUILD_ANNOUNCEMENT,
                               hideBorder: !0,
-                              disabled: !N,
+                              disabled: !p,
                               children: ee.Z.Messages.FORM_LABEL_NEWS_CHANNEL
                           })
                       })
@@ -585,7 +585,7 @@ class e_ extends l.PureComponent {
                                   guild: C,
                                   channel: e,
                                   onChange: this.handleChangeDefaultAutoArchiveDuration,
-                                  isDisabled: !N
+                                  isDisabled: !p
                               })
                           }),
                           (0, n.jsx)(h.FormText, {
@@ -602,7 +602,7 @@ class e_ extends l.PureComponent {
                       onChange: this.handleChannelSummariesToggled,
                       value: !e.hasFlag(X.zZ.SUMMARIES_DISABLED) && (null == C ? void 0 : C.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
                       hideBorder: !0,
-                      disabled: !N || !(null == C ? void 0 : C.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
+                      disabled: !p || !(null == C ? void 0 : C.hasFeature(q.oNc.SUMMARIES_ENABLED_BY_USER)),
                       children: (0, n.jsxs)('div', {
                           className: et.badgedItem,
                           children: [
@@ -624,7 +624,7 @@ class e_ extends l.PureComponent {
                               value: !e.hasFlag(X.zZ.HIDE_MEDIA_DOWNLOAD_OPTIONS),
                               note: ee.Z.Messages.MEDIA_CHANNEL_HIDE_MEDIA_DOWNLOAD_OPTIONS_TOGGLE_DESCRIPTION,
                               hideBorder: !0,
-                              disabled: !N,
+                              disabled: !p,
                               children: ee.Z.Messages.MEDIA_CHANNEL_HIDE_MEDIA_DOWNLOAD_OPTIONS_TOGGLE_LABEL
                           })
                       ]
@@ -643,7 +643,7 @@ class e_ extends l.PureComponent {
                             error: this.getError('name'),
                             name: g,
                             autoFocus: !0,
-                            disabled: M ? !p : !N,
+                            disabled: I ? !N : !p,
                             maxLength: q.HN8
                         })
                     }),
@@ -882,7 +882,7 @@ class e_ extends l.PureComponent {
             en(this, 'renderEmojiPicker', (e) => {
                 let { closePopout: t } = e,
                     { channel: s } = this.props;
-                return (0, n.jsx)(M.Z, {
+                return (0, n.jsx)(I.Z, {
                     guildId: null == s ? void 0 : s.guild_id,
                     closePopout: t,
                     onSelectEmoji: (e, s) => {
@@ -1024,8 +1024,8 @@ function eS() {
         E = w.default.getId(),
         T = (0, Z.v)(),
         S = null == t ? void 0 : t.id,
-        x = (0, p.ts)(t, !1, !0),
-        f = N.Z.useExperiment({
+        x = (0, N.ts)(t, !1, !0),
+        f = p.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'ChannelSettingsOverview'
         }).enabled,

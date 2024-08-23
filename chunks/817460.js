@@ -1,12 +1,12 @@
 t.d(n, {
     JE: function () {
-        return l;
+        return s;
     },
     ab: function () {
         return o;
     },
     iG: function () {
-        return s;
+        return l;
     },
     lL: function () {
         return d;
@@ -21,7 +21,7 @@ var i = t(293810),
 function o(e) {
     return 'roles' in e ? 'emoji-'.concat(e.id) : ''.concat(e.ref_type, '-').concat(e.emoji_id, '-').concat(e.name, '-').concat(e.ref_id);
 }
-function l(e) {
+function s(e) {
     let { interval: n, interval_count: t } = e;
     return (function (e) {
         switch (e) {
@@ -34,7 +34,7 @@ function l(e) {
         }
     })(n).format({ count: t });
 }
-function s(e) {
+function l(e) {
     let { interval: n, interval_count: t } = e;
     switch (n) {
         case a.rV.DAY:

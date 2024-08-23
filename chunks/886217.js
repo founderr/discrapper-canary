@@ -31,14 +31,14 @@ let g = (e, n, t, a) => {
             })
             .replaceAll('*', '');
     },
-    f = (e, n) =>
+    v = (e, n) =>
         p.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_TOP_ARTIST.format({
             username: n.username,
             artist: e.extra.artist.name
         });
 n.Z = (e) => {
     let { channel: n, entry: t, onReaction: i, onVoiceChannelPreview: m } = e,
-        { parent_title: v, provider: M, image_url: P } = t.extra.media,
+        { parent_title: f, provider: M, image_url: P } = t.extra.media,
         Z = t.extra.artist.name,
         S = (0, s.e7)([u.default], () => u.default.getUser(t.author_id)),
         { primaryColor: A, secondaryColor: O } = (0, T.Z)(P),
@@ -83,7 +83,7 @@ n.Z = (e) => {
                           })
                         : null,
                 userDescription: p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
-                title: v,
+                title: f,
                 subtitle: Z,
                 badges: (0, a.jsx)(x.Gk, {
                     location: x.Gt.POPOUT,
@@ -97,7 +97,7 @@ n.Z = (e) => {
                     user: S,
                     channel: n,
                     generateReactionImage: R,
-                    reactionImageAltText: f(t, S),
+                    reactionImageAltText: v(t, S),
                     entry: t
                 })
             })

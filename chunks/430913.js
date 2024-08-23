@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return b;
+        return x;
     }
 }),
     t(47120),
@@ -13,8 +13,8 @@ var i = t(735250),
     a = t(470079),
     r = t(120356),
     o = t.n(r),
-    l = t(780384),
-    s = t(481060),
+    s = t(780384),
+    l = t(481060),
     c = t(794295),
     d = t(410030),
     u = t(726542),
@@ -32,9 +32,9 @@ function E(e) {
     let { onClick: r, url: o, children: c } = e,
         _ = (0, d.ZP)(),
         p = u.Z.getByUrl(o),
-        m = (0, l.wj)(_) ? (null == p ? void 0 : null === (n = p.icon) || void 0 === n ? void 0 : n.darkSVG) : null == p ? void 0 : null === (t = p.icon) || void 0 === t ? void 0 : t.lightSVG;
-    return (0, i.jsx)(x, {
-        icon: void 0 === m ? s.LinkIcon : void 0,
+        m = (0, s.wj)(_) ? (null == p ? void 0 : null === (n = p.icon) || void 0 === n ? void 0 : n.darkSVG) : null == p ? void 0 : null === (t = p.icon) || void 0 === t ? void 0 : t.lightSVG;
+    return (0, i.jsx)(b, {
+        icon: void 0 === m ? l.LinkIcon : void 0,
         imageSrc: m,
         onClick: r,
         url: o,
@@ -42,8 +42,8 @@ function E(e) {
         children: c
     });
 }
-function x(e) {
-    let { icon: n, imageSrc: t, iconColor: a, url: r, type: l, children: d, onClick: u } = e,
+function b(e) {
+    let { icon: n, imageSrc: t, iconColor: a, url: r, type: s, children: d, onClick: u } = e,
         _ = (0, m.Z)(),
         p = null;
     null != n
@@ -63,7 +63,7 @@ function x(e) {
     let I = (0, i.jsxs)(i.Fragment, {
         children: [
             p,
-            (0, i.jsx)(s.Text, {
+            (0, i.jsx)(l.Text, {
                 className: C.listText,
                 variant: 'text-md/normal',
                 selectable: !0,
@@ -74,47 +74,47 @@ function x(e) {
     return (0, i.jsx)(c.Z, {
         href: r,
         className: o()(C.listItem, C.linkItem),
-        onClick: () => (u(r, l), !1),
+        onClick: () => (u(r, s), !1),
         trusted: !_,
         useDefaultUnderlineStyles: !1,
         children: I
     });
 }
-function b(e) {
+function x(e) {
     var n, t, r;
-    let { application: l, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: m } = e,
-        [b, A] = a.useState(null),
+    let { application: s, guildId: c, className: d, onViewCategory: u, onClickGuildWidget: m } = e,
+        [x, A] = a.useState(null),
         P = [],
-        T = null !== (t = null == l ? void 0 : null === (n = l.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
+        T = null !== (t = null == s ? void 0 : null === (n = s.directory_entry) || void 0 === n ? void 0 : n.external_urls) && void 0 !== t ? t : [];
     a.useEffect(() => {
         var e;
-        if ((null === (e = l.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
-            let e = new Set(l.directory_entry.supported_locales);
+        if ((null === (e = s.directory_entry) || void 0 === e ? void 0 : e.supported_locales) !== void 0) {
+            let e = new Set(s.directory_entry.supported_locales);
             A(v.filter((n) => e.has(n.value)).map((e) => e.localizedName));
         }
-    }, [l.directory_entry]);
+    }, [s.directory_entry]);
     let R = (e, n) => {
         _.default.track(g.rMx.APP_DIRECTORY_APPLICATION_EXTERNAL_LINK_CLICKED, {
-            application_id: l.id,
+            application_id: s.id,
             guild_id: c,
             type: n,
             url: e
         });
     };
     return (
-        null != l.categories &&
-            l.categories.length > 0 &&
+        null != s.categories &&
+            s.categories.length > 0 &&
             P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             className: C.sectionHeader,
                             variant: 'eyebrow',
                             children: h.Z.Messages.APP_DIRECTORY_PROFILE_CATEGORIES_HEADING
                         }),
                         (0, i.jsx)('div', {
                             className: C.categories,
-                            children: (null !== (r = l.categories) && void 0 !== r ? r : []).map((e) => {
+                            children: (null !== (r = s.categories) && void 0 !== r ? r : []).map((e) => {
                                 let n = new URLSearchParams();
                                 return (
                                     n.set('category_id', e.id.toString()),
@@ -122,10 +122,10 @@ function b(e) {
                                         p.Z,
                                         {
                                             href: ''.concat(g.Z5c.APPLICATION_DIRECTORY_SEARCH, '?').concat(n),
-                                            children: (0, i.jsx)(s.Clickable, {
+                                            children: (0, i.jsx)(l.Clickable, {
                                                 className: C.category,
                                                 onClick: () => u(e),
-                                                children: (0, i.jsx)(s.Text, {
+                                                children: (0, i.jsx)(l.Text, {
                                                     variant: 'text-sm/normal',
                                                     color: 'header-primary',
                                                     children: e.name
@@ -140,25 +140,25 @@ function b(e) {
                     ]
                 })
             ),
-        null != b &&
-            b.length > 0 &&
+        null != x &&
+            x.length > 0 &&
             P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             className: C.sectionHeader,
                             variant: 'eyebrow',
                             children: h.Z.Messages.APP_DIRECTORY_PROFILE_LANGUAGES_HEADING
                         }),
-                        (0, i.jsx)(f.Z, { supportedLanguages: b })
+                        (0, i.jsx)(f.Z, { supportedLanguages: x })
                     ]
                 })
             ),
-        (null != l.terms_of_service_url || null != l.privacy_policy_url || T.length > 0) &&
+        (null != s.terms_of_service_url || null != s.privacy_policy_url || T.length > 0) &&
             P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             className: C.sectionHeader,
                             variant: 'eyebrow',
                             children: h.Z.Messages.APP_DIRECTORY_PROFILE_LINKS_HEADING
@@ -174,20 +174,20 @@ function b(e) {
                                 n
                             )
                         ),
-                        null != l.terms_of_service_url
-                            ? (0, i.jsx)(x, {
-                                  icon: s.LinkIcon,
+                        null != s.terms_of_service_url
+                            ? (0, i.jsx)(b, {
+                                  icon: l.LinkIcon,
                                   onClick: R,
-                                  url: l.terms_of_service_url,
+                                  url: s.terms_of_service_url,
                                   type: 'tos',
                                   children: h.Z.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
                               })
                             : null,
-                        null != l.privacy_policy_url
-                            ? (0, i.jsx)(x, {
-                                  icon: s.LockIcon,
+                        null != s.privacy_policy_url
+                            ? (0, i.jsx)(b, {
+                                  icon: l.LockIcon,
                                   onClick: R,
-                                  url: l.privacy_policy_url,
+                                  url: s.privacy_policy_url,
                                   type: 'policy',
                                   children: h.Z.Messages.APP_DIRECTORY_PROFILE_PRIVACY_LINK
                               })
@@ -195,18 +195,18 @@ function b(e) {
                     ]
                 })
             ),
-        null != l.guild &&
-            l.guild.features.includes(g.oNc.DISCOVERABLE) &&
+        null != s.guild &&
+            s.guild.features.includes(g.oNc.DISCOVERABLE) &&
             P.push(
                 (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(l.Heading, {
                             className: C.sectionHeader,
                             variant: 'eyebrow',
                             children: h.Z.Messages.APP_DIRECTORY_PROFILE_SERVER_HEADING
                         }),
                         (0, i.jsx)(I.Z, {
-                            guild: l.guild,
+                            guild: s.guild,
                             onClick: m
                         })
                     ]

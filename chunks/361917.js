@@ -236,7 +236,7 @@ function X(e) {
             let e = [];
             for (let n of o)
                 if (null != n.application) {
-                    if (s && !(0, R.ye)({ application: n.application })) continue;
+                    if (s && !(0, R.ye)(n.application)) continue;
                     e.push({ application: n.application });
                 }
             return e;

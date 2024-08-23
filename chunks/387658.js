@@ -279,7 +279,7 @@ function k(e) {
         commands: h,
         limit: 5
     });
-    return (m.current && (0, P.ye)({ application: l })) || (!m.current && 0 === h.length)
+    return (m.current && (0, P.ye)(l)) || (!m.current && 0 === h.length)
         ? null
         : (0, i.jsxs)('ul', {
               className: j.contentContainer,

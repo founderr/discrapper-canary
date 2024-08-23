@@ -88,7 +88,7 @@ function b(e) {
                 _ = i.useCallback(
                     (e) => {
                         let n = e.descriptor.application;
-                        return null != n && (!!(o && (0, x.ye)({ application: n })) || (null != n && r && !(0, x.ye)({ application: n }) && (!t || Object.keys(e.commands).length > 0)));
+                        return null != n && (!!(o && (0, x.ye)(n)) || (null != n && r && !(0, x.ye)(n) && (!t || Object.keys(e.commands).length > 0)));
                     },
                     [o, r, t]
                 ),

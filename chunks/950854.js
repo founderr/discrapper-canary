@@ -8,8 +8,8 @@ t(470079);
 var a = t(120356),
     r = t.n(a),
     o = t(481060),
-    l = t(689938),
-    s = t(276199);
+    s = t(689938),
+    l = t(276199);
 function c(e) {
     let { className: n, onClick: t, imageSrc: a, iconSrc: c, header: d, headerClassName: u, subheaderVariant: _ = 'text-sm/normal', subheader: p, children: m, animatesOnHover: I, ...f } = e,
         g = null != a,
@@ -17,22 +17,22 @@ function c(e) {
             children: [
                 g &&
                     (0, i.jsx)('div', {
-                        className: s.imageContainer,
+                        className: l.imageContainer,
                         children: (0, i.jsx)('img', {
                             alt: '',
-                            className: s.image,
+                            className: l.image,
                             src: a
                         })
                     }),
                 (0, i.jsxs)('div', {
-                    className: s.textContainer,
+                    className: l.textContainer,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: r()(s.topRowContainer),
+                            className: r()(l.topRowContainer),
                             children: [
                                 null != c &&
                                     (0, i.jsx)('img', {
-                                        className: s.icon,
+                                        className: l.icon,
                                         alt: '',
                                         'aria-hidden': !0,
                                         src: c,
@@ -40,7 +40,7 @@ function c(e) {
                                         height: 48
                                     }),
                                 (0, i.jsxs)('div', {
-                                    className: s.headerContainer,
+                                    className: l.headerContainer,
                                     children: [
                                         (0, i.jsx)(o.Heading, {
                                             variant: 'heading-md/medium',
@@ -49,7 +49,7 @@ function c(e) {
                                         }),
                                         null != p &&
                                             (0, i.jsx)(o.Text, {
-                                                className: s.subheader,
+                                                className: l.subheader,
                                                 color: 'header-secondary',
                                                 variant: _,
                                                 children: p
@@ -63,13 +63,13 @@ function c(e) {
                 })
             ]
         }),
-        C = r()(n, s.container, { [s.hasImage]: g });
+        C = r()(n, l.container, { [l.hasImage]: g });
     return null != t
         ? (0, i.jsx)(o.ClickableContainer, {
               tag: 'article',
-              'aria-label': l.Z.Messages.APP_DIRECTORY_LISTING_CARD_BUTTON_A11Y_LABEL.format({ name: d }),
+              'aria-label': s.Z.Messages.APP_DIRECTORY_LISTING_CARD_BUTTON_A11Y_LABEL.format({ name: d }),
               onClick: t,
-              className: r()(C, s.clickable, { [s.animatesOnHoverContainer]: I }),
+              className: r()(C, l.clickable, { [l.animatesOnHoverContainer]: I }),
               focusProps: { offset: 4 },
               children: h
           })

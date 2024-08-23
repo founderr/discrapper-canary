@@ -27,15 +27,15 @@ var l = i(735250),
     h = i(696906),
     S = i(55563),
     f = i(551428),
-    j = i(626135),
-    I = i(768581),
+    I = i(626135),
+    j = i(768581),
     _ = i(73346),
     b = i(624138),
     R = i(591759),
     N = i(601911),
     T = i(110742),
-    P = i(147496),
-    k = i(680005),
+    k = i(147496),
+    P = i(680005),
     O = i(519896),
     Z = i(981631),
     M = i(689938),
@@ -47,7 +47,7 @@ function y(e) {
         h = t.useMemo(() => {
             var e;
             if ((null == x ? void 0 : x.banner) == null) return;
-            let n = (0, I.aN)({
+            let n = (0, j.aN)({
                 id: x.id,
                 banner: x.banner,
                 size: 1024,
@@ -58,7 +58,7 @@ function y(e) {
         S = t.useMemo(() => {
             var e;
             if ((null == x ? void 0 : x.banner) == null) return;
-            let n = (0, I.aN)({
+            let n = (0, j.aN)({
                 id: x.id,
                 banner: x.banner,
                 size: 1024,
@@ -67,12 +67,12 @@ function y(e) {
             return null != n && null !== (e = R.Z.toURLSafe(n)) && void 0 !== e ? e : void 0;
         }, [x]),
         f = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        _ = t.useMemo(() => [...a.map((e) => e.id), ...m.map((e) => e.id)], [a, m]),
+        _ = t.useMemo(() => [...a.map((e) => e.id), ...m.map((e) => e.skuId)], [a, m]),
         { analyticsLocations: b } = (0, p.ZP)(c.Z.APP_STOREFRONT);
     return (
         t.useEffect(() => {
             0 !== _.length &&
-                j.default.track(Z.rMx.VIEW_PREMIUM_APP_STOREFRONT, {
+                I.default.track(Z.rMx.VIEW_PREMIUM_APP_STOREFRONT, {
                     application_id: n.id,
                     sku_ids: _,
                     location_stack: b
@@ -131,7 +131,7 @@ function y(e) {
                                     (0, l.jsx)(
                                         A,
                                         {
-                                            skuId: e.sku.id,
+                                            skuId: e.skuId,
                                             appId: n.id
                                         },
                                         e.id
@@ -184,7 +184,7 @@ function E(e) {
             (e) =>
                 null == c || 0 === c.length
                     ? null
-                    : (0, l.jsx)(k.p, {
+                    : (0, l.jsx)(P.p, {
                           ...e,
                           appId: n,
                           groupListingId: i,
@@ -243,18 +243,18 @@ function A(e) {
         { analyticsLocations: g } = (0, p.ZP)(c.Z.APP_STOREFRONT),
         x = (0, o.e7)([f.Z], () => f.Z.getForSKU(a), [a]),
         h = (0, o.e7)([S.Z], () => S.Z.get(a), [a]),
-        j = (0, T.M)(a);
+        I = (0, T.M)(a);
     if (null == h) return null;
-    let I = null !== (i = h.name) && void 0 !== i ? i : '',
+    let j = null !== (i = h.name) && void 0 !== i ? i : '',
         N = null !== (t = null == x ? void 0 : null === (n = x.description) || void 0 === n ? void 0 : n.trim()) && void 0 !== t ? t : void 0,
         O = (null == x ? void 0 : x.headerBackground) != null && null !== (r = R.Z.toURLSafe((0, _._W)(u, x.headerBackground, 256))) && void 0 !== r ? r : void 0,
-        L = h.type === Z.epS.DURABLE && j,
+        L = h.type === Z.epS.DURABLE && I,
         y = h.type === Z.epS.DURABLE ? (L ? M.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY_NONE : M.Z.Messages.STOREFRONT_DURABLE_AVAILABILITY) : void 0,
         { price: E } = h;
     return null == E
         ? null
         : (0, l.jsx)(s.I, {
-              title: I,
+              title: j,
               description: N,
               headerImage: O,
               availabilityLabel: y,
@@ -266,7 +266,7 @@ function A(e) {
                         : () => {
                               (0, d.openModal)((e) => {
                                   let { onClose: n, transitionState: i } = e;
-                                  return (0, l.jsx)(P.ItemDetailsModal, {
+                                  return (0, l.jsx)(k.ItemDetailsModal, {
                                       appId: u,
                                       skuId: a,
                                       onClose: n,
@@ -275,7 +275,7 @@ function A(e) {
                               });
                           },
               PurchaseButton: (e) =>
-                  (0, l.jsx)(k.Y, {
+                  (0, l.jsx)(P.Y, {
                       ...e,
                       appId: u,
                       sku: h

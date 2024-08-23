@@ -8,8 +8,8 @@ t(470079);
 var a = t(120356),
     r = t.n(a),
     o = t(481060),
-    l = t(410030),
-    s = t(686546),
+    s = t(410030),
+    l = t(686546),
     c = t(565138),
     d = t(372769),
     u = t(134432),
@@ -22,7 +22,7 @@ var a = t(120356),
     h = t(330065);
 function C(e) {
     let { guild: n, className: t, onClick: a } = e,
-        C = (0, l.ZP)(),
+        C = (0, s.ZP)(),
         v = new _.ZP({
             name: n.name,
             icon: n.icon
@@ -32,7 +32,7 @@ function C(e) {
             splash: n.discovery_splash,
             size: 192 * (0, u.x_)()
         }),
-        x =
+        b =
             null != E
                 ? E
                 : (function (e) {
@@ -43,7 +43,7 @@ function C(e) {
                               return h;
                       }
                   })(C),
-        b = p.ZP.getGuildIconURL({
+        x = p.ZP.getGuildIconURL({
             id: n.id,
             icon: n.icon,
             size: 50
@@ -57,21 +57,21 @@ function C(e) {
                 className: f.cardHeader,
                 children: [
                     (0, i.jsx)('img', {
-                        src: x,
+                        src: b,
                         alt: '',
                         className: f.splashImage
                     }),
                     (0, i.jsx)('div', {
                         className: f.guildIcon,
-                        children: (0, i.jsx)(s.ZP, {
-                            mask: s.ZP.Masks.AVATAR_DEFAULT,
+                        children: (0, i.jsx)(l.ZP, {
+                            mask: l.ZP.Masks.AVATAR_DEFAULT,
                             width: 58,
                             height: 58,
                             children: (0, i.jsx)('div', {
                                 className: f.iconMask,
                                 children: (0, i.jsx)(c.Z, {
                                     className: f.__invalid_icon,
-                                    iconSrc: b,
+                                    iconSrc: x,
                                     guild: v,
                                     size: c.Z.Sizes.LARGE
                                 })

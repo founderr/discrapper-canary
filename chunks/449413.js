@@ -1,7 +1,7 @@
 var r = n(735250),
     i = n(470079),
-    a = n(454585),
-    s = n(777036),
+    a = n(481060),
+    s = n(454585),
     o = n(273744),
     l = n(819258);
 t.Z = (e) => {
@@ -9,16 +9,16 @@ t.Z = (e) => {
             node: { info: t }
         } = e,
         n = i.useRef(
-            a.Z.reactParserFor({
-                ...a.Z.defaultRules,
+            s.Z.reactParserFor({
+                ...s.Z.defaultRules,
                 link: o.s
             })
         );
     return null == t
         ? null
-        : (0, r.jsx)(s.Z, {
+        : (0, r.jsx)(a.HelpMessage, {
               className: l.infoBox,
-              messageType: s.Q.INFO,
+              messageType: a.HelpMessageTypes.INFO,
               children: n.current(t)
           });
 };

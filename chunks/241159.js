@@ -19,7 +19,7 @@ function o(e) {
                     a.Z.dispatch({
                         type: 'APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS',
                         applicationId: e,
-                        listings: n.body
+                        layout: n.body
                     }),
                     n.body
                 )

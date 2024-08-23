@@ -26,8 +26,8 @@ var a = t(735250),
     C = t(551228),
     p = t(591853),
     g = t(371991),
-    f = t(410441),
-    v = t(981631),
+    v = t(410441),
+    f = t(981631),
     M = t(616922),
     P = t(689938),
     Z = t(346292),
@@ -91,7 +91,7 @@ function j(e) {
         { channel: R, entry: y, closePopout: L, onReaction: w, onVoiceChannelPreview: b } = e,
         { activity: B, currentEntry: k, artist: U, imageUrl: G, title: D, user: H } = (0, C.pi)(y),
         { primaryColor: V, secondaryColor: Y } = (0, I.Z)(G),
-        F = (0, r.e7)([c.Z, E.default], () => ((null == B ? void 0 : B.type) === v.IIU.LISTENING && null != H ? (0, m.Z)(c.Z, E.default, H, B) : void 0), [B, H], s.Z),
+        F = (0, r.e7)([c.Z, E.default], () => ((null == B ? void 0 : B.type) === f.IIU.LISTENING && null != H ? (0, m.Z)(c.Z, E.default, H, B) : void 0), [B, H], s.Z),
         W = l.useCallback(() => {
             var e;
             if (null == R || null == H) return;
@@ -157,7 +157,7 @@ function j(e) {
         entry: y,
         headerIcons:
             k.media.provider === i.p.SPOTIFY
-                ? (0, a.jsx)(f.Z, {
+                ? (0, a.jsx)(v.Z, {
                       onClick: g,
                       'aria-label': P.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
                       Icon: T.Z

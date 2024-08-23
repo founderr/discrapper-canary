@@ -28,7 +28,7 @@ function I(e) {
     let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
         P = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
         L = null !== (n = (0, u.q)(s.id === A.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        b = (0, _.ye)({ application: L }) ? g : E.Z,
+        b = (0, _.ye)(L) ? g : E.Z,
         S = a.useRef(null),
         { iconURL: R, name: T } = a.useMemo(
             () =>

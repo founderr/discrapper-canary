@@ -34,26 +34,26 @@ let N = (e, n, t, a) => {
         });
 n.Z = (e) => {
     let { channel: n, entry: t, disableGameProfileLinks: i, onReaction: s, onVoiceChannelPreview: C } = e,
-        { iconUrl: p, iconTitle: g, user: f, details: v, appName: M, coverImageUrl: P } = (0, h.n)(t),
+        { iconUrl: p, iconTitle: g, user: v, details: f, appName: M, coverImageUrl: P } = (0, h.n)(t),
         { primaryColor: Z, secondaryColor: S } = (0, c.Z)(p),
         A = (0, o.yA)(t),
         O = (0, o.Nq)(t),
         j = l.useCallback(
             (e) => {
-                if (null != n && null != f && null != A && null != O && !!(0, m.qy)(O))
+                if (null != n && null != v && null != A && null != O && !!(0, m.qy)(O))
                     return (0, u.SO)({
                         entry: t,
                         applicationImageSrc: p,
-                        avatarSrcs: [f.getAvatarURL(null == n ? void 0 : n.guild_id, 128)],
-                        description: N(t, n, f, O),
+                        avatarSrcs: [v.getAvatarURL(null == n ? void 0 : n.guild_id, 128)],
+                        description: N(t, n, v, O),
                         timestamp: x.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(A / r.Z.Seconds.HOUR) }),
                         colors: [Z, S],
                         channelId: e
                     });
             },
-            [p, n, A, t, Z, O, S, f]
+            [p, n, A, t, Z, O, S, v]
         );
-    if (null == f || null == A || null == O || !(0, m.qy)(O)) return null;
+    if (null == v || null == A || null == O || !(0, m.qy)(O)) return null;
     let R = null != t.extra.platform ? d.v[t.extra.platform] : null;
     return (0, a.jsxs)(E.yR, {
         children: [
@@ -71,7 +71,7 @@ n.Z = (e) => {
                 entry: t,
                 userDescription: x.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                 title: M,
-                subtitle: v,
+                subtitle: f,
                 badges: (0, a.jsx)(_.Gk, {
                     location: _.Gt.POPOUT,
                     children: m.Hs.map((e, n) => (0, a.jsx)(e, { entry: t }, n))
@@ -82,10 +82,10 @@ n.Z = (e) => {
                 children: (0, a.jsx)(E.WT, {
                     onReaction: s,
                     onVoiceChannelPreview: C,
-                    user: f,
+                    user: v,
                     channel: n,
                     generateReactionImage: j,
-                    reactionImageAltText: I(t, f),
+                    reactionImageAltText: I(t, v),
                     entry: t
                 })
             })

@@ -19,36 +19,36 @@ var t = n(913527),
     T = n(246364),
     N = n(360328),
     R = n(981631),
-    C = n(689938),
-    M = n(385747);
+    M = n(689938),
+    C = n(385747);
 function m(e) {
     var s;
     let { guildJoinRequest: t, guild: m, guildJoinRequestUser: A } = e,
         { createdAt: x, actionedAt: h, guildId: S, userId: P } = t,
-        { approveRequest: j, rejectRequest: g, submitting: b } = (0, N.s)(S, P, t.joinRequestId),
+        { approveRequest: g, rejectRequest: j, submitting: b } = (0, N.s)(S, P, t.joinRequestId),
         v = null === (s = t.actionedByUser) || void 0 === s ? void 0 : s.id,
         p = (0, l.e7)([E.default], () => E.default.getUser(v)),
         f = (0, l.e7)([I.ZP], () => (null != v ? I.ZP.getMember(S, v) : null), [v, S]),
         Z = (0, l.e7)([u.Z], () => u.Z.getMemberCount(S)),
         B = (null != Z ? Z : 0) >= m.maxMembers,
-        O = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING,
+        O = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING,
         L = (0, a.jsx)(o.ClockIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 24,
             height: 24,
-            className: M.icon
+            className: C.icon
         });
     t.applicationStatus === T.wB.APPROVED
-        ? ((O = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED),
+        ? ((O = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED),
           (L = (0, a.jsx)(o.CircleCheckIcon, {
               size: 'md',
-              className: M.iconApproved,
+              className: C.iconApproved,
               color: i.Z.colors.WHITE.css,
               secondaryColor: 'currentColor'
           })))
         : t.applicationStatus === T.wB.REJECTED &&
-          ((O = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED),
+          ((O = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED),
           (L = (0, a.jsx)(o.CircleXIcon, {
               size: 'md',
               color: i.Z.colors.WHITE.css,
@@ -56,14 +56,14 @@ function m(e) {
           })));
     let D =
         null != p && null != h
-            ? C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
+            ? M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
                   date: r()(_.default.extractTimestamp(h)).format('ll'),
                   usernameHook: function () {
                       var e;
                       return (0, a.jsx)(
                           o.Clickable,
                           {
-                              className: M.actionedByUser,
+                              className: C.actionedByUser,
                               onClick: () =>
                                   (0, d.openUserProfileModal)({
                                       userId: p.id,
@@ -87,13 +87,13 @@ function m(e) {
               })
             : r()(x).format('lll');
     return (0, a.jsxs)('div', {
-        className: M.container,
+        className: C.container,
         children: [
             (0, a.jsxs)('div', {
-                className: M.wrapper,
+                className: C.wrapper,
                 children: [
                     (0, a.jsxs)('div', {
-                        className: M.inline,
+                        className: C.inline,
                         children: [
                             L,
                             (0, a.jsxs)('div', {
@@ -103,7 +103,7 @@ function m(e) {
                                         children: O
                                     }),
                                     (0, a.jsx)(o.Text, {
-                                        className: M.headerSubtext,
+                                        className: C.headerSubtext,
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
                                         children: D
@@ -113,14 +113,14 @@ function m(e) {
                         ]
                     }),
                     (0, a.jsxs)('div', {
-                        className: M.inline,
+                        className: C.inline,
                         children: [
                             t.applicationStatus === T.wB.SUBMITTED &&
                                 (0, a.jsxs)('div', {
-                                    className: M.buttons,
+                                    className: C.buttons,
                                     children: [
                                         (0, a.jsx)(o.Tooltip, {
-                                            text: C.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
+                                            text: M.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
                                             shouldShow: B,
                                             children: (e) =>
                                                 (0, a.jsx)(o.Button, {
@@ -128,15 +128,15 @@ function m(e) {
                                                     color: o.Button.Colors.GREEN,
                                                     submitting: b,
                                                     disabled: B,
-                                                    onClick: j,
-                                                    children: C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
+                                                    onClick: g,
+                                                    children: M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
                                                 })
                                         }),
                                         (0, a.jsx)(o.Button, {
                                             color: o.Button.Colors.RED,
-                                            onClick: g,
+                                            onClick: j,
                                             disabled: b,
-                                            children: C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
+                                            children: M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
                                         })
                                     ]
                                 }),
@@ -152,13 +152,13 @@ function m(e) {
                                             });
                                     });
                                 },
-                                className: M.overflow,
+                                className: C.overflow,
                                 children: (0, a.jsx)(o.MoreHorizontalIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 20,
                                     height: 20,
-                                    className: M.iconInteractive
+                                    className: C.iconInteractive
                                 })
                             })
                         ]
@@ -168,7 +168,7 @@ function m(e) {
             t.applicationStatus === T.wB.REJECTED &&
                 null != t.rejectionReason &&
                 (0, a.jsx)('div', {
-                    className: M.rejectionReason,
+                    className: C.rejectionReason,
                     children: (0, a.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         children: t.rejectionReason

@@ -27,8 +27,8 @@ var a = t(735250),
     C = t(354459),
     p = t(185923),
     g = t(420212),
-    f = t(894967);
-let v = p.Hz.CHAT,
+    v = t(894967);
+let f = p.Hz.CHAT,
     M = [h.ZP.getByName('thumbsup'), h.ZP.getByName('eyes'), h.ZP.getByName('laughing'), h.ZP.getByName('watermelon'), h.ZP.getByName('fork_and_knife'), h.ZP.getByName('yum')].filter(I.lm);
 function P(e) {
     let { emoji: n, isDisabled: t = !1, onClick: i, className: s } = e,
@@ -52,7 +52,7 @@ function P(e) {
                             transform: l.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                         },
                         children: (0, a.jsx)(c.Z, {
-                            className: r()(f.emoji, s, { [f.emojiItemDisabled]: t }),
+                            className: r()(v.emoji, s, { [v.emojiItemDisabled]: t }),
                             emojiId: n.id,
                             emojiName: null == n ? void 0 : n.surrogates,
                             animated: n.animated
@@ -69,14 +69,14 @@ function Z(e) {
         children: [
             n,
             (0, a.jsx)(u.Clickable, {
-                className: f.dropDownContainer,
+                className: v.dropDownContainer,
                 onClick: () => {
                     l(!t), i();
                 },
                 children: (0, a.jsx)(u.ChevronSmallDownIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: r()(f.dropDown, { [f.dropDownOpen]: t })
+                    className: r()(v.dropDown, { [v.dropDownOpen]: t })
                 })
             })
         ]
@@ -93,7 +93,7 @@ function S(e) {
                     !N.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: n,
-                        intention: v
+                        intention: f
                     })
             )
             .slice(0, C.e5);
@@ -122,18 +122,18 @@ function S(e) {
                 })
             }),
             (0, a.jsxs)('div', {
-                className: f.container,
+                className: v.container,
                 children: [
                     (0, a.jsx)(T.Z, {
                         analyticsOverride: S,
                         channel: n,
-                        className: r()(f.animatedPicker, { [f.animatedPickerTall]: O }),
-                        headerClassName: r()(f.emojiPickerHeader, { [f.emojiPickerHeaderExpanded]: O }),
+                        className: r()(v.animatedPicker, { [v.animatedPickerTall]: O }),
+                        headerClassName: r()(v.emojiPickerHeader, { [v.emojiPickerHeaderExpanded]: O }),
                         closePopout: i,
                         onSelectEmoji: O ? w : () => {},
                         shouldHidePickerActions: !O,
                         wrapper: 'div',
-                        pickerIntention: v,
+                        pickerIntention: f,
                         searchProps: {
                             ...h,
                             accessory: (0, a.jsx)(Z, {
@@ -148,9 +148,9 @@ function S(e) {
                         }
                     }),
                     (0, a.jsx)('div', {
-                        className: f.slotsContainer,
+                        className: v.slotsContainer,
                         children: (0, a.jsx)('div', {
-                            className: r()(f.slots, f.slotsWide),
+                            className: r()(v.slots, v.slotsWide),
                             children: y.map((e) => {
                                 let t = N.ZP.isEmojiDisabled({
                                     emoji: e,
@@ -160,12 +160,12 @@ function S(e) {
                                 return (0, a.jsx)(
                                     'div',
                                     {
-                                        className: f.slot,
+                                        className: v.slot,
                                         children: (0, a.jsx)(u.TooltipContainer, {
                                             text: e.name,
                                             position: 'top',
                                             'aria-label': e.name,
-                                            tooltipClassName: f.tooltipContainer,
+                                            tooltipClassName: v.tooltipContainer,
                                             color: u.Tooltip.Colors.BRAND,
                                             children: (0, a.jsx)(P, {
                                                 emoji: e,

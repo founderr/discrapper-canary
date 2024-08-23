@@ -258,7 +258,7 @@ function w(e) {
 function V(e) {
     let { application: n, fallbackColor: t, showVideo: i, disableFadeIn: a } = e;
     if ((0, S.BQ)(n)) {
-        if ((0, S.ye)({ application: n }))
+        if ((0, S.ye)(n))
             return (0, l.jsx)(W, {
                 application: n,
                 showVideo: i,

@@ -23,8 +23,8 @@ var a = t(735250),
     C = t(919394),
     p = t(438226),
     g = t(206295),
-    f = t(91140),
-    v = t(297781),
+    v = t(91140),
+    f = t(297781),
     M = t(591853),
     P = t(410441),
     Z = t(797342),
@@ -74,9 +74,9 @@ n.Z = (e) => {
         );
     if (null == L) return null;
     let J = null != i.extra.platform ? O[i.extra.platform] : null,
-        X = (0, a.jsx)(v.Gk, {
-            location: null == V ? v.Gt.POPOUT : v.Gt.STREAMING_POPOUT,
-            children: f.W.map((e, n) => (0, a.jsx)(e, { entry: i }, n))
+        X = (0, a.jsx)(f.Gk, {
+            location: null == V ? f.Gt.POPOUT : f.Gt.STREAMING_POPOUT,
+            children: v.W.map((e, n) => (0, a.jsx)(e, { entry: i }, n))
         }),
         $ =
             null == V

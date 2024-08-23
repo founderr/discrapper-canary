@@ -10,7 +10,7 @@ var n = s(735250),
     u = s(591318);
 t.Z = function (e) {
     var t;
-    let { message: s, errorMessage: h, submitting: m, onReset: g, onSave: E, onSaveText: T, onResetText: N, onSaveButtonColor: p, disabled: _, saveButtonTooltip: S } = e,
+    let { message: s, errorMessage: h, submitting: m, onReset: g, onSave: E, onSaveText: T, onResetText: p, onSaveButtonColor: N, disabled: _, saveButtonTooltip: S } = e,
         x = l.useRef(null),
         [{ spring: f }, C] = (0, r.useSpring)(() => ({ spring: 0 }));
     l.useEffect(() => {
@@ -32,11 +32,11 @@ t.Z = function (e) {
             }
         );
     }, [C]);
-    let I = f.to({
+    let M = f.to({
             range: [0, 1],
             output: [(0, r.useToken)(i.Z.colors.TEXT_NORMAL).hex(), (0, r.useToken)(i.Z.unsafe_rawColors.WHITE_500).hex()]
         }),
-        M = f.to({
+        I = f.to({
             range: [0, 1],
             output: [(0, r.useToken)(i.Z.colors.BACKGROUND_FLOATING).hex(), (0, r.useToken)(i.Z.colors.STATUS_DANGER).hex()]
         }),
@@ -46,7 +46,7 @@ t.Z = function (e) {
         });
     return (0, n.jsx)(a.animated.div, {
         className: u.container,
-        style: { backgroundColor: M },
+        style: { backgroundColor: I },
         children: (0, n.jsx)('div', {
             className: u.flexContainer,
             ref: x,
@@ -57,7 +57,7 @@ t.Z = function (e) {
                         className: u.shrinkingContainer,
                         children: (0, n.jsx)(a.animated.div, {
                             className: u.message,
-                            style: { color: null != h ? R : I },
+                            style: { color: null != h ? R : M },
                             children: null !== (t = null != h ? h : s) && void 0 !== t ? t : c.Z.Messages.SETTINGS_NOTICE_MESSAGE
                         })
                     }),
@@ -72,8 +72,8 @@ t.Z = function (e) {
                                     look: r.Button.Looks.LINK,
                                     onClick: g,
                                     children: (0, n.jsx)(a.animated.span, {
-                                        style: { color: I },
-                                        children: null != N ? N : c.Z.Messages.RESET
+                                        style: { color: M },
+                                        children: null != p ? p : c.Z.Messages.RESET
                                     })
                                 }),
                             null != E
@@ -82,7 +82,7 @@ t.Z = function (e) {
                                       children: (e) =>
                                           (0, n.jsx)(r.Button, {
                                               size: r.Button.Sizes.SMALL,
-                                              color: null != p ? p : r.Button.Colors.GREEN,
+                                              color: null != N ? N : r.Button.Colors.GREEN,
                                               submitting: m,
                                               disabled: _,
                                               onClick: E,

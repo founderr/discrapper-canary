@@ -19,8 +19,8 @@ var a = t(735250),
     C = t(206295),
     p = t(297781),
     g = t(591853),
-    f = t(797342),
-    v = t(981631),
+    v = t(797342),
+    f = t(981631),
     M = t(701488),
     P = t(689938);
 let Z = (e, n) =>
@@ -51,13 +51,13 @@ let Z = (e, n) =>
 n.ZP = (e) => {
     var n;
     let { channel: t, entry: h, onReaction: O, onVoiceChannelPreview: j } = e,
-        { iconUrl: R, iconTitle: y, user: L, details: w, activity: b, coverImageUrl: B, richIcon: k } = (0, f.n)(h),
+        { iconUrl: R, iconTitle: y, user: L, details: w, activity: b, coverImageUrl: B, richIcon: k } = (0, v.n)(h),
         { primaryColor: U, secondaryColor: G } = (0, C.Z)(R),
         D = (0, i.e7)([E.default], () => E.default.locale),
         { displayParticipants: H, participant1: V, participant2: Y, numOtherParticipants: F } = (0, x.Z)(h, 3),
         W = (0, s.O)(),
         { analyticsLocations: z } = (0, m.ZP)(),
-        q = _.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
+        q = _.Z.getWindowOpen(f.KJ3.CHANNEL_CALL_POPOUT),
         K = () => {
             (0, d.Z)({
                 guildId: null == t ? void 0 : t.guild_id,
@@ -111,7 +111,7 @@ n.ZP = (e) => {
             onClickThumbnail: K
         }),
         Q =
-            (0, o.Z)(b, v.xjy.JOIN) || (0, u.Z)(b)
+            (0, o.Z)(b, f.xjy.JOIN) || (0, u.Z)(b)
                 ? (0, a.jsx)(c.Z, {
                       activity: b,
                       user: L,

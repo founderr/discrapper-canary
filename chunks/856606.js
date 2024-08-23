@@ -23,15 +23,15 @@ var n = s(735250),
     g = s(668390),
     E = s(144991),
     T = s(852860),
-    N = s(911969),
-    p = s(410030),
+    p = s(911969),
+    N = s(410030),
     _ = s(607070),
     S = s(940639),
     x = s(325476),
     f = s(146085),
     C = s(598077),
-    I = s(277053),
-    M = s(388610),
+    M = s(277053),
+    I = s(388610),
     R = s(271383),
     Z = s(430824),
     v = s(496675),
@@ -48,17 +48,17 @@ var n = s(735250),
     B = s(981631),
     H = s(689938),
     U = s(137580);
-let G = o.ZP.connectStores([I.Z, M.Z], () => {
-    let e = M.Z.getChannel();
+let G = o.ZP.connectStores([M.Z, I.Z], () => {
+    let e = I.Z.getChannel();
     return {
-        submitting: I.Z.formState === B.QZA.SUBMITTING,
+        submitting: M.Z.formState === B.QZA.SUBMITTING,
         onReset() {
             (0, m.S1)();
         },
         onSave() {
             if (null == e) return;
-            let t = I.Z.editedPermissionIds.reduce((e, t) => {
-                let s = I.Z.getPermissionOverwrite(t);
+            let t = M.Z.editedPermissionIds.reduce((e, t) => {
+                let s = M.Z.getPermissionOverwrite(t);
                 return null != s && e.push(s), e;
             }, []);
             (0, m.hw)(e.id, t);
@@ -67,7 +67,7 @@ let G = o.ZP.connectStores([I.Z, M.Z], () => {
 })(T.Z);
 function k(e) {
     let { overwrite: t } = e,
-        s = (0, o.e7)([I.Z], () => I.Z.channel),
+        s = (0, o.e7)([M.Z], () => M.Z.channel),
         l = (0, o.e7)([Z.Z], () => (null != s ? Z.Z.getGuild(s.getGuildId()) : null)),
         a = (0, o.e7)([Z.Z], () => (null != l ? Z.Z.getRoles(l.id) : void 0));
     if (null == s || null == l || null == t) return null;
@@ -81,7 +81,7 @@ function k(e) {
                 n = null !== (e = null == s ? void 0 : s.username) && void 0 !== e ? e : '';
             return null != t ? t.name : n;
         },
-        p = (e, n) => {
+        N = (e, n) => {
             if ('boolean' == typeof n) throw Error('Unexpected boolean action');
             let { allow: l, deny: a } = t;
             switch (((a = r.Od(a, e)), (l = r.Od(l, e)), n)) {
@@ -103,10 +103,10 @@ function k(e) {
                 (0, m.kY)(s, g, l, a);
             else {
                 let e;
-                if (t.type === N.BN.MEMBER) {
+                if (t.type === p.BN.MEMBER) {
                     let s = A.default.getUser(t.id);
                     null != s && (e = w.ZP.getName(s));
-                } else if (t.type === N.BN.ROLE) {
+                } else if (t.type === p.BN.ROLE) {
                     let n = Z.Z.getGuild(s.getGuildId());
                     if (null != n) {
                         let s = Z.Z.getRole(n.id, t.id);
@@ -130,11 +130,11 @@ function k(e) {
             return s.isGuildStageVoice() && f.xS.has(e) ? H.Z.Messages.STAGE_CHANNEL_CANNOT_OVERWRITE_PERMISSION : !((!r.fS(e, B.Plq.MANAGE_ROLES) || t) && (null == e || v.Z.can(e, l) || t)) && H.Z.Messages.HELP_MISSING_PERMISSION;
         },
         C = g === i,
-        M = s.isForumLikeChannel() && r.e$(t.deny, B.Plq.SEND_MESSAGES),
+        I = s.isForumLikeChannel() && r.e$(t.deny, B.Plq.SEND_MESSAGES),
         R = r.e$(t.deny, B.Plq.SEND_MESSAGES),
         O = r.e$(t.deny, B.Plq.READ_MESSAGE_HISTORY),
         L = D.Z.generateChannelPermissionSpec(i, s, C, {
-            createPostsDisabled: M,
+            createPostsDisabled: I,
             sendMessagesDisabled: R,
             readMessageHistoryDisabled: O
         });
@@ -148,7 +148,7 @@ function k(e) {
                         spec: e,
                         allow: t.allow,
                         deny: t.deny,
-                        onChange: p,
+                        onChange: N,
                         permissionRender: S,
                         className: U.permissionsForm
                     },
@@ -265,14 +265,14 @@ function z(e) {
             L.Z.requestMembers(t.id, e, 20);
         },
         onSelect: (e) => {
-            if (null != e) W(e) ? r(e.id, N.BN.ROLE) : e instanceof C.Z && r(e.id, N.BN.MEMBER);
+            if (null != e) W(e) ? r(e.id, p.BN.ROLE) : e instanceof C.Z && r(e.id, p.BN.MEMBER);
         },
         onClose: a,
         position: d
     });
 }
 function Y() {
-    let { channel: e, permissionOverwrites: t, selectedOverwriteId: a } = (0, o.cj)([I.Z], () => I.Z),
+    let { channel: e, permissionOverwrites: t, selectedOverwriteId: a } = (0, o.cj)([M.Z], () => M.Z),
         r = null == e ? void 0 : e.getGuildId(),
         { guild: u, guildRoles: E } = (0, o.cj)(
             [Z.Z],
@@ -287,7 +287,7 @@ function Y() {
             [r]
         ),
         T = (0, F.Z)(r, t),
-        S = (0, p.ZP)(),
+        S = (0, N.ZP)(),
         f = (0, o.e7)([_.Z], () => _.Z.roleStyle);
     if (null == u || null == E || null == e || null == t) return null;
     let C = (s) => {
@@ -297,11 +297,11 @@ function Y() {
                 channel: e,
                 permissionOverwrites: t,
                 position: null != l ? l : 'bottom',
-                onSelect: M,
+                onSelect: I,
                 onClose: a
             });
         },
-        M = (t, s) => {
+        I = (t, s) => {
             h.Z.updatePermissionOverwrite(e.id, {
                 id: t,
                 type: s,
@@ -311,7 +311,7 @@ function Y() {
         };
     null != t && null == t[u.id] && (t[u.id] = y.we(u.id));
     let R = i()(t)
-            .filter((e) => e.type === N.BN.ROLE)
+            .filter((e) => e.type === p.BN.ROLE)
             .map((e) => E[e.id])
             .filter(O.lm)
             .sortBy((e) => -e.position)
@@ -422,7 +422,7 @@ function Y() {
     });
 }
 function Q() {
-    let { channel: e, permissionOverwrites: t, selectedOverwriteId: s } = (0, o.cj)([I.Z], () => I.Z);
+    let { channel: e, permissionOverwrites: t, selectedOverwriteId: s } = (0, o.cj)([M.Z], () => M.Z);
     if (null == (0, o.e7)([Z.Z], () => (null != e ? Z.Z.getGuild(e.getGuildId()) : null)) || null == e || null == t || null == s) return null;
     let l = t[s];
     return (0, n.jsxs)(x.ZP, {

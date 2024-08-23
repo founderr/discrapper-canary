@@ -1,9 +1,9 @@
 n.d(s, {
     C: function () {
-        return C;
+        return M;
     },
     h: function () {
-        return M;
+        return C;
     }
 }),
     n(47120),
@@ -40,14 +40,14 @@ function R(e) {
               })
     });
 }
-function C(e) {
-    let { applicationStatus: s, guild: r, guildJoinRequest: i, className: C, onClick: M, atMaxMemberCapacity: m } = e,
+function M(e) {
+    let { applicationStatus: s, guild: r, guildJoinRequest: i, className: M, onClick: C, atMaxMemberCapacity: m } = e,
         [A, x] = t.useState(null),
         { user: h, createdAt: S } = i;
     if (null == h) throw Error('Missing user on this guild join request!');
     let P = t.useMemo(() => new u.Z(h), [h]),
-        j = I.ZP.getUserAvatarURL(P),
-        g = s === _.wB.SUBMITTED,
+        g = I.ZP.getUserAvatarURL(P),
+        j = s === _.wB.SUBMITTED,
         b = t.useCallback(
             async (e, s) => {
                 let { guildId: n, userId: a } = e;
@@ -69,11 +69,11 @@ function C(e) {
             await b(i, _.wB.REJECTED);
         };
     return (0, a.jsxs)(c.Clickable, {
-        className: l()(N.container, C),
-        onClick: M,
+        className: l()(N.container, M),
+        onClick: C,
         children: [
             (0, a.jsx)(c.Avatar, {
-                src: j,
+                src: g,
                 size: c.AvatarSizes.SIZE_40,
                 'aria-label': h.username,
                 className: N.__invalid_spacer
@@ -94,7 +94,7 @@ function C(e) {
                     })
                 ]
             }),
-            g &&
+            j &&
                 !m &&
                 (0, a.jsx)(R, {
                     icon: c.CheckmarkLargeIcon,
@@ -102,7 +102,7 @@ function C(e) {
                     submitting: A === _.wB.APPROVED,
                     disabled: null != A && A !== _.wB.APPROVED
                 }),
-            g &&
+            j &&
                 (0, a.jsx)(R, {
                     icon: c.XSmallIcon,
                     onClick: p,
@@ -139,7 +139,7 @@ function C(e) {
         ]
     });
 }
-function M() {
+function C() {
     let e = ''.concat(Math.floor(50 * Math.random()) + 100, 'px'),
         s = ''.concat(Math.floor(25 * Math.random()) + 50, 'px');
     return (0, a.jsxs)('div', {

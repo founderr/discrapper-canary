@@ -34,24 +34,24 @@ let I = (e, n, t) => {
         });
 n.Z = (e) => {
     let { channel: n, entry: t, onReaction: u, onVoiceChannelPreview: p } = e,
-        { user: g, mediaImageSrc: f, episodeDescription: v } = (0, E.Bj)(t),
-        { primaryColor: M, secondaryColor: P } = (0, _.Z)(f),
+        { user: g, mediaImageSrc: v, episodeDescription: f } = (0, E.Bj)(t),
+        { primaryColor: M, secondaryColor: P } = (0, _.Z)(v),
         Z = (0, i.e7)([s.default], () => s.default.locale),
         S = l.useCallback(
             (e) => {
-                if (null != g && null != f)
+                if (null != g && null != v)
                     return (0, m.B)({
                         entry: t,
-                        mediaImageSrc: f,
+                        mediaImageSrc: v,
                         avatarSrc: g.getAvatarURL(null == n ? void 0 : n.guild_id, 128),
                         description: I(t, n, g),
                         timestamp: (0, d.yh)(t, Z),
-                        episodeDescription: v,
+                        episodeDescription: f,
                         colors: [M, P],
                         channelId: e
                     });
             },
-            [n, t, v, Z, f, M, P, g]
+            [n, t, f, Z, v, M, P, g]
         ),
         A = () => {
             if (null == t.extra.url) return;
@@ -67,7 +67,7 @@ n.Z = (e) => {
         : (0, a.jsxs)(h.yR, {
               children: [
                   (0, a.jsx)(h.wG, {
-                      thumbnailSrc: f,
+                      thumbnailSrc: v,
                       channel: n,
                       entry: t,
                       userDescription: (0, d.kr)(t) ? N.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : N.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,

@@ -48,7 +48,7 @@ function D(e) {
             let e = C.default.getCurrentUser();
             return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
-        D = (0, o.e7)([S.Z], () => !S.Z.isFetchingProfile(i.id)),
+        D = (0, o.e7)([S.Z], () => !S.Z.isFetchingProfile(i.id, null == s ? void 0 : s.id)),
         P = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation),
         { source: L, ...b } = (0, o.cj)([g.Z], () => ({
             ...g.Z.getAllPending(),

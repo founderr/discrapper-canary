@@ -12,7 +12,7 @@ var r = n(470079),
     l = n(981631);
 function u(e) {
     let t = (0, i.e7)([a.Z], () => (null != e ? a.Z.get(e) : null)),
-        n = null != t && t.productLine !== l.POd.COLLECTIBLES,
+        n = null == t || t.productLine !== l.POd.COLLECTIBLES,
         [u, c] = (0, i.Wu)([o.Z], () => [o.Z.isFetchingProduct(e), o.Z.getProduct(e)]);
     return (
         (0, r.useEffect)(() => {

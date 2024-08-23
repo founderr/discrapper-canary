@@ -12,8 +12,8 @@ var a = n(735250),
     _ = n(689938),
     T = n(189522);
 s.Z = function (e) {
-    let { guild: s, guildJoinRequest: N, guildJoinRequestUser: R, onClose: C } = e,
-        M = t.useMemo(() => {
+    let { guild: s, guildJoinRequest: N, guildJoinRequestUser: R, onClose: M } = e,
+        C = t.useMemo(() => {
             var e;
             return null !== (e = N.formResponses) && void 0 !== e ? e : [];
         }, [N.formResponses]),
@@ -37,7 +37,7 @@ s.Z = function (e) {
             (0, a.jsxs)(l.ZP, {
                 toolbar: (0, a.jsx)(l.ZP.Icon, {
                     icon: r.XSmallIcon,
-                    onClick: C,
+                    onClick: M,
                     tooltip: _.Z.Messages.CLOSE
                 }),
                 children: [
@@ -84,7 +84,7 @@ s.Z = function (e) {
                         className: T.disabledFormRenderer,
                         children: (0, a.jsx)(c.Z, {
                             guildId: s.id,
-                            formFields: M,
+                            formFields: C,
                             user: R
                         })
                     })
