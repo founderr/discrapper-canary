@@ -1,46 +1,44 @@
 t.d(n, {
     Z: function () {
-        return M;
+        return c;
     }
 });
 var i = t(735250);
 t(470079);
-var a = t(913527),
-    l = t.n(a),
-    r = t(442837),
-    s = t(481060),
-    o = t(324701),
-    u = t(768943),
-    d = t(742989),
-    c = t(898150),
-    E = t(689938);
-function M(e) {
-    let { showReminders: n } = d.Z.useExperiment({ location: 'use_message_reminders_item' }, { autoTrackExposure: !1 }),
-        t = (0, r.e7)([u.Z], () => u.Z.isMessageReminder(e.channel_id, e.id)),
-        a = (0, c.useMessageReminderDurationSuggestions)({
-            onSelectDuration: (n) =>
-                (0, o.z)({
+var a = t(442837),
+    l = t(481060),
+    r = t(324701),
+    s = t(768943),
+    o = t(742989),
+    u = t(898150),
+    d = t(689938);
+function c(e) {
+    let { showReminders: n } = o.Z.useExperiment({ location: 'use_message_reminders_item' }, { autoTrackExposure: !1 }),
+        t = (0, a.e7)([s.Z], () => s.Z.isMessageReminder(e.channel_id, e.id)),
+        c = (0, u.useMessageReminderDurationSuggestions)({
+            createReminder: (n) =>
+                (0, r.z)({
                     channelId: e.channel_id,
                     messageId: e.id,
-                    dueAt: l()().add(n, 'millisecond').toDate(),
+                    dueAt: n,
                     displayToast: !0
                 })
         });
     return n
-        ? (0, i.jsxs)(s.MenuItem, {
+        ? (0, i.jsxs)(l.MenuItem, {
               id: 'mark-todo',
-              label: t ? E.Z.Messages.MESSAGE_REMINDERS_EDIT : E.Z.Messages.MESSAGE_REMINDERS_CREATE,
+              label: t ? d.Z.Messages.MESSAGE_REMINDERS_EDIT : d.Z.Messages.MESSAGE_REMINDERS_CREATE,
               children: [
-                  (0, i.jsx)(s.MenuGroup, {
-                      label: E.Z.Messages.MESSAGE_REMINDERS_REMIND_ME,
-                      children: a
+                  (0, i.jsx)(l.MenuGroup, {
+                      label: d.Z.Messages.MESSAGE_REMINDERS_REMIND_ME,
+                      children: c
                   }),
                   t
-                      ? (0, i.jsx)(s.MenuItem, {
+                      ? (0, i.jsx)(l.MenuItem, {
                             id: 'remove-reminder',
-                            label: E.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
+                            label: d.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
                             action: () =>
-                                (0, o.x)({
+                                (0, r.x)({
                                     channelId: e.channel_id,
                                     messageId: e.id,
                                     displayToast: !0
