@@ -1,8 +1,5 @@
 t.r(n),
     t.d(n, {
-        MESSAGE_REMINDER_DURATION_ITEMS: function () {
-            return d;
-        },
         MessageReminderEditMenu: function () {
             return c;
         },
@@ -17,30 +14,12 @@ var s = t(913527),
     i = t.n(s),
     r = t(481060),
     l = t(239091),
-    u = t(70956),
-    M = t(324701),
-    E = t(689938);
-let d = [
-    {
-        duration: 30 * u.Z.Millis.MINUTE,
-        getLabel: () => E.Z.Messages.MESSAGE_REMINDERS_IN_THIRTY_MIN
-    },
-    {
-        duration: u.Z.Millis.HOUR,
-        getLabel: () => E.Z.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
-    },
-    {
-        duration: 2 * u.Z.Millis.HOUR,
-        getLabel: () => E.Z.Messages.MESSAGE_REMINDERS_IN_TWO_HOURS
-    },
-    {
-        duration: 4 * u.Z.Millis.HOUR,
-        getLabel: () => E.Z.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
-    }
-];
+    u = t(324701),
+    M = t(550727),
+    d = t(689938);
 function o(e) {
     let { onSelectDuration: n, showCustom: s = !0 } = e,
-        i = d.map((e) => {
+        i = M.B.map((e) => {
             let { duration: t, getLabel: s } = e;
             return (0, a.jsx)(
                 r.MenuItem,
@@ -59,7 +38,7 @@ function o(e) {
                     r.MenuItem,
                     {
                         id: 'create-reminder-custom',
-                        label: E.Z.Messages.MESSAGE_REMINDERS_CUSTOM_DUE,
+                        label: d.Z.Messages.MESSAGE_REMINDERS_CUSTOM_DUE,
                         action: () => {
                             (0, r.openModalLazy)(async () => {
                                 let { default: e } = await t.e('43866').then(t.bind(t, 423639));
@@ -81,7 +60,7 @@ function c(e) {
     let { message: n, label: t } = e,
         s = o({
             onSelectDuration: (e) =>
-                (0, M.z)({
+                (0, u.z)({
                     channelId: n.channel_id,
                     messageId: n.id,
                     dueAt: i()().add(e, 'millisecond').toDate()
@@ -90,7 +69,7 @@ function c(e) {
     return (0, a.jsx)(r.Menu, {
         navId: 'message-reminder-create',
         onClose: l.Zy,
-        'aria-label': E.Z.Messages.MESSAGE_REMINDERS_CREATE,
+        'aria-label': d.Z.Messages.MESSAGE_REMINDERS_CREATE,
         onSelect: () => null,
         children: (0, a.jsx)(r.MenuGroup, {
             label: t,
