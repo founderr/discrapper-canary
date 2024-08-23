@@ -52,24 +52,25 @@ function p(e) {
 }
 function T(e) {
     let { onScroll: t } = e,
-        { ref: n, width: a } = (0, l.Z)(),
-        r = (0, _.GN)((e) => e.mode, s.Z);
+        n = (0, _.GN)((e) => e.mode, s.Z),
+        { ref: a, width: r } = (0, l.Z)();
     return (0, i.jsxs)('section', {
-        ref: n,
+        ref: a,
         className: g.guilds,
         children: [
             (0, i.jsx)('div', {
                 className: g.list,
-                children: (0, i.jsx)(E.ZP, {
-                    width: null != a ? a : 0,
-                    paddingHorizontal: 64,
-                    variant: (0, E.s)(r, E.Bj.GLOBAL_DISCOVERY),
-                    onScroll: t
-                })
+                children:
+                    null != r &&
+                    (0, i.jsx)(E.ZP, {
+                        width: r,
+                        variant: (0, E.s)(n, E.Bj.GLOBAL_DISCOVERY),
+                        onScroll: t
+                    })
             }),
             (0, i.jsx)('div', {
                 className: g.selectors,
-                children: (0, i.jsx)(u.Z, { mode: r })
+                children: (0, i.jsx)(u.Z, { mode: n })
             })
         ]
     });

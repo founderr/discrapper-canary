@@ -1,4 +1,9 @@
-n(47120);
+n.d(t, {
+    a: function () {
+        return L;
+    }
+}),
+    n(47120);
 var i = n(735250),
     a = n(470079),
     s = n(120356),
@@ -8,34 +13,35 @@ var i = n(735250),
     c = n(963202),
     d = n(105671),
     u = n(92373),
-    _ = n(377171),
-    h = n(207796),
-    E = n(308083),
-    m = n(689938),
-    I = n(630244);
-function g(e) {
+    _ = n(570938),
+    h = n(377171),
+    E = n(207796),
+    m = n(308083),
+    I = n(689938),
+    g = n(630244);
+function p(e) {
     let { icon: t, text: n, ariaLabel: s, tooltip: l, onClick: c, isActive: d, autoWidth: u = !1 } = e,
-        [_, E] = a.useState(!1),
-        [m, g] = a.useState(!1),
-        p = h.GN.getState().mode,
-        T = p === h.v0.GAMES || p === h.v0.PLAYSTYLE || p === h.v0.TRAITS;
+        [_, h] = a.useState(!1),
+        [m, I] = a.useState(!1),
+        p = E.GN.getState().mode,
+        T = p === E.v0.GAMES || p === E.v0.PLAYSTYLE || p === E.v0.TRAITS;
     a.useEffect(() => {
-        T && (E(!1), g(!1));
+        T && (h(!1), I(!1));
     }, [T]);
     let S = d && (m || _),
         f = a.useMemo(
             () =>
                 null != l
                     ? (0, i.jsxs)(o.Clickable, {
-                          className: I.tooltipContentWrapper,
+                          className: g.tooltipContentWrapper,
                           onClick: c,
                           onMouseEnter: () => {
-                              !T && E(!0);
+                              !T && h(!0);
                           },
                           onMouseLeave: () => {
-                              E(!1);
+                              h(!1);
                           },
-                          children: [(0, i.jsx)('div', { className: I.tooltipHoverBridge }), l]
+                          children: [(0, i.jsx)('div', { className: g.tooltipHoverBridge }), l]
                       })
                     : null,
             [l, c, T]
@@ -44,21 +50,21 @@ function g(e) {
             (e) =>
                 (0, i.jsxs)(o.Button, {
                     ...e,
-                    className: r()(I.filterPill, { [I.filterPillActive]: d }),
-                    innerClassName: I.filterPillContents,
+                    className: r()(g.filterPill, { [g.filterPillActive]: d }),
+                    innerClassName: g.filterPillContents,
                     look: o.ButtonLooks.OUTLINED,
                     color: o.ButtonColors.CUSTOM,
                     onClick: c,
                     onMouseEnter: () => {
-                        g(!0);
+                        I(!0);
                     },
                     onMouseLeave: () => {
-                        g(!1);
+                        I(!1);
                     },
                     children: [
                         t,
                         (0, i.jsxs)('div', {
-                            className: I.filterPillText,
+                            className: g.filterPillText,
                             children: [
                                 (0, i.jsx)(o.Text, {
                                     variant: 'text-xs/medium',
@@ -67,7 +73,7 @@ function g(e) {
                                 }),
                                 null != f &&
                                     (0, i.jsx)(o.ChevronSmallDownIcon, {
-                                        className: I.chevron,
+                                        className: g.chevron,
                                         color: 'currentColor'
                                     })
                             ]
@@ -86,22 +92,22 @@ function g(e) {
               forceOpen: S,
               allowOverflow: !0,
               disableTooltipPointerEvents: !1,
-              tooltipClassName: r()(I.filterTooltip, { [I.filterTooltipAutoWidth]: u }),
-              tooltipContentClassName: I.filterTooltipContent,
+              tooltipClassName: r()(g.filterTooltip, { [g.filterTooltipAutoWidth]: u }),
+              tooltipContentClassName: g.filterTooltipContent,
               children: C
           });
 }
-function p() {
+function T() {
     var e;
-    let t = (0, h.GN)((e) => e.selectedGames, l.Z),
+    let t = (0, E.GN)((e) => e.selectedGames, l.Z),
         n = a.useCallback(() => {
-            (0, h.fH)(h.v0.GAMES, !0);
+            (0, E.fH)(E.v0.GAMES, !0);
         }, []),
         s = null !== (e = (0, d.i)(t)) && void 0 !== e ? e : '',
         r = t.slice(0, 3),
         c = t.length - 3,
         _ = (0, i.jsx)('div', {
-            className: I.gamesTooltip,
+            className: g.gamesTooltip,
             children: r.map((e, t) =>
                 (0, i.jsx)(
                     u.Z,
@@ -113,13 +119,13 @@ function p() {
                 )
             )
         }),
-        E = (0, i.jsx)(o.GameControllerIcon, {
-            className: I.filterPillIcon,
+        h = (0, i.jsx)(o.GameControllerIcon, {
+            className: g.filterPillIcon,
             color: 'currentColor'
         });
-    return (0, i.jsx)(g, {
-        icon: E,
-        text: m.Z.Messages.CLAN_DISCOVERY_GAME_FILTER.format({ count: t.length }),
+    return (0, i.jsx)(p, {
+        icon: h,
+        text: I.Z.Messages.CLAN_DISCOVERY_GAME_FILTER.format({ count: t.length }),
         tooltip: _,
         onClick: n,
         isActive: t.length > 0,
@@ -127,13 +133,13 @@ function p() {
         autoWidth: !0
     });
 }
-function T() {
-    let e = a.useMemo(E.f4, []),
-        t = (0, h.GN)((e) => e.selectedPlaystyle, l.Z),
+function S() {
+    let e = a.useMemo(m.f4, []),
+        t = (0, E.GN)((e) => e.selectedPlaystyle, l.Z),
         n = null != t ? e[t] : null,
         s = null == n ? void 0 : n.title,
         r = a.useCallback(() => {
-            (0, h.fH)(h.v0.PLAYSTYLE, !0);
+            (0, E.fH)(E.v0.PLAYSTYLE, !0);
         }, []),
         c =
             null != n
@@ -159,31 +165,31 @@ function T() {
                   })
                 : null,
         d = (0, i.jsx)(o.DpadIcon, {
-            className: I.filterPillIcon,
+            className: g.filterPillIcon,
             color: 'currentColor'
         });
-    return (0, i.jsx)(g, {
+    return (0, i.jsx)(p, {
         icon: d,
-        text: null != s ? s : m.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE,
+        text: null != s ? s : I.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE,
         tooltip: c,
         onClick: r,
         isActive: null != n,
-        ariaLabel: null != s ? s : m.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE
+        ariaLabel: null != s ? s : I.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE
     });
 }
-function S() {
-    let e = (0, h.GN)((e) => e.selectedTraits, l.Z),
+function f() {
+    let e = (0, E.GN)((e) => e.selectedTraits, l.Z),
         t = a.useCallback(() => {
-            (0, h.fH)(h.v0.TRAITS, !0);
+            (0, E.fH)(E.v0.TRAITS, !0);
         }, []);
     if (null == e) return null;
     let n = (0, i.jsx)('div', {
-            className: I.traitsTooltip,
+            className: g.traitsTooltip,
             children: e.map((e) =>
                 (0, i.jsx)(
                     'div',
                     {
-                        className: I.trait,
+                        className: g.trait,
                         children: (0, i.jsx)(o.Text, {
                             variant: 'text-xs/medium',
                             color: 'none',
@@ -195,12 +201,12 @@ function S() {
             )
         }),
         s = (0, i.jsx)(o.TagIcon, {
-            className: I.filterPillIcon,
+            className: g.filterPillIcon,
             color: 'currentColor'
         });
-    return (0, i.jsx)(g, {
+    return (0, i.jsx)(p, {
         icon: s,
-        text: m.Z.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
+        text: I.Z.Messages.CLAN_DISCOVERY_PREFERENCES_FILTER,
         tooltip: n,
         onClick: t,
         isActive: e.length > 0,
@@ -208,113 +214,113 @@ function S() {
         autoWidth: !0
     });
 }
-function f() {
+function C() {
     let { enableClanCreation: e } = (0, c.C3)({
         location: 'clan_discovery_add_clan',
         includeConverted: !1
     });
     return e
         ? (0, i.jsxs)(o.Clickable, {
-              className: r()(I.buttonPill),
-              onClick: () => (0, h.fH)(h.v0.ADMIN_UPSELL),
+              className: r()(g.buttonPill),
+              onClick: () => (0, E.fH)(E.v0.ADMIN_UPSELL),
               children: [
                   (0, i.jsx)(o.PlusSmallIcon, {
-                      className: I.filterPillIcon,
+                      className: g.filterPillIcon,
                       color: 'currentColor'
                   }),
                   (0, i.jsx)('div', {
-                      className: I.filterPillText,
+                      className: g.filterPillText,
                       children: (0, i.jsx)(o.Text, {
                           variant: 'text-xs/medium',
                           color: 'none',
-                          children: m.Z.Messages.CLAN_DISCOVERY_ADD_CLAN
+                          children: I.Z.Messages.CLAN_DISCOVERY_ADD_CLAN
                       })
                   })
               ]
           })
         : null;
 }
-function C(e) {
+function N(e) {
     let { onClick: t } = e,
-        n = (0, h.GN)((e) => e.mode, l.Z),
-        a = (0, h.GN)((e) => e.savedGuildIds, l.Z),
+        n = (0, E.GN)((e) => e.mode, l.Z),
+        a = (0, E.GN)((e) => e.savedGuildIds, l.Z),
         s = (0, i.jsx)(o.HeartIcon, {
-            className: I.filterPillIcon,
+            className: g.filterPillIcon,
             color: 'currentColor'
         }),
         r = (0, i.jsxs)('div', {
-            className: I.savedInnerContainer,
+            className: g.savedInnerContainer,
             children: [
-                m.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
+                I.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
                 a.length > 0
                     ? (0, i.jsx)(o.NumberBadge, {
                           count: a.length,
-                          color: _.Z.BG_MOD_SUBTLE
+                          color: h.Z.BG_MOD_SUBTLE
                       })
                     : null
             ]
         });
-    return (0, i.jsx)(g, {
+    return (0, i.jsx)(p, {
         icon: s,
         text: r,
         onClick: t,
-        isActive: n === h.v0.SAVED_GUILDS,
-        ariaLabel: m.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
+        isActive: n === E.v0.SAVED_GUILDS,
+        ariaLabel: I.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
         autoWidth: !0
     });
 }
-function N() {
-    let e = (0, h.GN)((e) => e.mode, l.Z),
+function A() {
+    let e = (0, E.GN)((e) => e.mode, l.Z),
         {
             selectedGames: t,
             selectedPlaystyle: n,
             selectedTraits: s
-        } = (0, h.GN)((e) => ({
+        } = (0, E.GN)((e) => ({
             selectedGames: e.selectedGames,
             selectedPlaystyle: e.selectedPlaystyle,
             selectedTraits: e.selectedTraits
         })),
         r = t.length + (null != n ? 1 : 0) + s.length,
         c = a.useCallback(() => {
-            if (e === h.v0.PREFERENCES) {
-                (0, h.fH)(h.v0.DISCOVERY);
+            if (e === E.v0.PREFERENCES) {
+                (0, E.fH)(E.v0.DISCOVERY);
                 return;
             }
-            (0, h.fH)(h.v0.PREFERENCES);
+            (0, E.fH)(E.v0.PREFERENCES);
         }, [e]),
         d = (0, i.jsxs)('div', {
-            className: I.savedInnerContainer,
+            className: g.savedInnerContainer,
             children: [
-                m.Z.Messages.CLAN_DISCOVERY_PREFERENCES,
+                I.Z.Messages.CLAN_DISCOVERY_PREFERENCES,
                 r > 0
                     ? (0, i.jsx)(o.NumberBadge, {
                           count: r,
-                          color: _.Z.BG_MOD_SUBTLE
+                          color: h.Z.BG_MOD_SUBTLE
                       })
                     : null
             ]
         });
-    return (0, i.jsx)(g, {
+    return (0, i.jsx)(p, {
         icon: (0, i.jsx)(o.FiltersHorizontalIcon, {
-            className: I.filterPillIcon,
+            className: g.filterPillIcon,
             color: 'currentColor'
         }),
         text: d,
         onClick: c,
         isActive: r > 0,
-        ariaLabel: m.Z.Messages.CLAN_DISCOVERY_PREFERENCES,
+        ariaLabel: I.Z.Messages.CLAN_DISCOVERY_PREFERENCES,
         autoWidth: !0
     });
 }
-function A(e) {
+function v(e) {
     let { title: t, onNavigateBack: n } = e;
     return null == t
         ? null
         : (0, i.jsxs)('div', {
-              className: I.backToDiscovery,
+              className: g.backToDiscovery,
               children: [
                   (0, i.jsx)(o.Clickable, {
-                      className: I.backArrow,
+                      className: g.backArrow,
                       onClick: n,
                       children: (0, i.jsx)(o.ArrowLargeLeftIcon, { color: 'currentColor' })
                   }),
@@ -326,68 +332,99 @@ function A(e) {
               ]
           });
 }
-function v(e) {
+function Z(e) {
     let { className: t, onNavigateBack: n } = e;
     return (0, i.jsxs)('div', {
-        className: r()(I.toolbar, t),
+        className: r()(g.toolbar, t),
         children: [
             (0, i.jsx)('div', {
-                className: I.addClan,
-                children: (0, i.jsx)(A, {
-                    title: m.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
+                className: g.addClan,
+                children: (0, i.jsx)(v, {
+                    title: I.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
                     onNavigateBack: n
                 })
             }),
-            (0, i.jsx)('div', { className: I.actions })
+            (0, i.jsx)('div', { className: g.actions })
         ]
     });
 }
-function Z(e) {
-    let { className: t } = e,
-        n = (0, h.GN)((e) => e.mode, l.Z),
-        s = a.useCallback(() => {
-            if (n !== h.v0.SAVED_GUILDS) return (0, h.fH)(h.v0.SAVED_GUILDS);
-        }, [n]),
-        o = a.useCallback(() => (0, h.fH)(h.v0.DISCOVERY), []);
-    return n === h.v0.SAVED_GUILDS
-        ? (0, i.jsx)(v, {
-              className: t,
-              onNavigateBack: o
+function L() {
+    return (0, i.jsxs)('div', {
+        className: g.guildsIconContainer,
+        children: [
+            (0, i.jsx)(_.Z, {
+                width: 24,
+                height: 24
+            }),
+            (0, i.jsx)(o.Heading, {
+                variant: 'heading-md/semibold',
+                color: 'header-primary',
+                children: I.Z.Messages.CLANS
+            })
+        ]
+    });
+}
+function O(e) {
+    let { guildIcon: t, className: n } = e,
+        s = (0, E.GN)((e) => e.mode, l.Z),
+        o = a.useCallback(() => {
+            if (s !== E.v0.SAVED_GUILDS) return (0, E.fH)(E.v0.SAVED_GUILDS);
+        }, [s]),
+        c = a.useCallback(() => (0, E.fH)(E.v0.DISCOVERY), []);
+    return s === E.v0.SAVED_GUILDS
+        ? (0, i.jsx)(Z, {
+              className: n,
+              onNavigateBack: c
           })
         : (0, i.jsxs)('div', {
-              className: r()(I.toolbar, t),
+              className: r()(g.toolbar, n),
               children: [
+                  null != t
+                      ? (0, i.jsx)('div', {
+                            className: g.toolbarIcon,
+                            children: t
+                        })
+                      : null,
                   (0, i.jsx)('div', {
-                      className: I.addClan,
-                      children: (0, i.jsx)(f, {})
+                      className: g.addClan,
+                      children: (0, i.jsx)(C, {})
                   }),
-                  (0, i.jsx)('div', { className: I.preferences }),
+                  (0, i.jsx)('div', { className: g.preferences }),
                   (0, i.jsxs)('div', {
-                      className: I.actions,
-                      children: [(0, i.jsx)(N, {}), (0, i.jsx)(C, { onClick: s })]
+                      className: g.actions,
+                      children: [(0, i.jsx)(A, {}), (0, i.jsx)(N, { onClick: o })]
                   })
               ]
           });
 }
 t.Z = function (e) {
-    let { className: t } = e,
-        n = (0, h.GN)((e) => e.mode, l.Z);
+    let { guildIcon: t, className: n } = e,
+        a = (0, E.GN)((e) => e.mode, l.Z);
     return (0, c.iN)('discovery_toolbar')
-        ? (0, i.jsx)(Z, { className: t })
-        : n === h.v0.SAVED_GUILDS
-          ? (0, i.jsx)(v, { className: t })
+        ? (0, i.jsx)(O, {
+              guildIcon: t,
+              className: n
+          })
+        : a === E.v0.SAVED_GUILDS
+          ? (0, i.jsx)(Z, { className: n })
           : (0, i.jsxs)('div', {
-                className: r()(I.toolbar, t),
+                className: r()(g.toolbar, n),
                 children: [
+                    null != t
+                        ? (0, i.jsx)('div', {
+                              className: g.toolbarIcon,
+                              children: t
+                          })
+                        : null,
                     (0, i.jsx)('div', {
-                        className: I.addClan,
-                        children: (0, i.jsx)(f, {})
+                        className: g.addClan,
+                        children: (0, i.jsx)(C, {})
                     }),
                     (0, i.jsxs)('div', {
-                        className: I.preferences,
-                        children: [(0, i.jsx)(p, {}), (0, i.jsx)(T, {}), (0, i.jsx)(S, {})]
+                        className: g.preferences,
+                        children: [(0, i.jsx)(T, {}), (0, i.jsx)(S, {}), (0, i.jsx)(f, {})]
                     }),
-                    (0, i.jsx)('div', { className: I.actions })
+                    (0, i.jsx)('div', { className: g.actions })
                 ]
             });
 };

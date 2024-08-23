@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return h;
+        return g;
     }
 }),
     t(47120);
@@ -9,11 +9,11 @@ var n = t(735250),
     i = t(120356),
     r = t.n(i),
     o = t(442837),
-    l = t(433517),
-    c = t(481060),
-    d = t(37234),
-    _ = t(153867),
-    E = t(425493),
+    l = t(481060),
+    c = t(37234),
+    d = t(153867),
+    _ = t(425493),
+    E = t(918222),
     u = t(607070),
     I = t(304761),
     T = t(865427),
@@ -52,25 +52,13 @@ let O = [
         value: 'custom'
     }
 ];
-function g(e, s) {
-    let [t, n] = a.useState(() => {
-        let t = l.K.get(e);
-        return null != t ? t : s;
-    });
-    return (
-        a.useEffect(() => {
-            l.K.set(e, t);
-        }, [e, t]),
-        [t, n]
-    );
-}
-function h() {
+function g() {
     let [e, s] = a.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
         { platformZoom: t, theme: i } = (0, o.cj)([N.Z, u.Z], () => ({
             theme: N.Z.theme,
             platformZoom: u.Z.zoom
         })),
-        [l, h] = a.useState('upright'),
+        [g, h] = a.useState('upright'),
         p = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         R = new Map([
             ['normal', 400],
@@ -90,8 +78,8 @@ function h() {
             var e, s;
             return (0, T.fD)() ? (null === (s = I.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
-        [f, D] = g('playground-overrideText', null),
-        [P, L] = g('playground-defaultText', O[0].value),
+        [f, D] = (0, E.R)('playground-overrideText', null),
+        [P, L] = (0, E.R)('playground-defaultText', O[0].value),
         b = a.useCallback(
             (e) => {
                 let s = O.find((s) => {
@@ -105,25 +93,25 @@ function h() {
     return (0, n.jsx)('div', {
         className: A.fullscreen,
         style: {
-            '--playground-font-family': 'mono' === l ? 'gg mono' : 'gg sans',
-            '--playground-font-style': 'italic' === l ? 'italic' : 'normal'
+            '--playground-font-family': 'mono' === g ? 'gg mono' : 'gg sans',
+            '--playground-font-style': 'italic' === g ? 'italic' : 'normal'
         },
-        children: (0, n.jsxs)(c.FormSection, {
-            tag: c.FormTitleTags.H1,
+        children: (0, n.jsxs)(l.FormSection, {
+            tag: l.FormTitleTags.H1,
             children: [
                 (0, n.jsxs)('div', {
                     className: A.toolbar,
                     children: [
                         (0, n.jsxs)('div', {
                             children: [
-                                (0, n.jsxs)(c.Text, {
+                                (0, n.jsxs)(l.Text, {
                                     tag: 'div',
                                     variant: 'heading-lg/bold',
                                     style: { display: 'inline-block' },
                                     children: ['Zoom: ', x, '%']
                                 }),
                                 null != M
-                                    ? (0, n.jsxs)(c.Text, {
+                                    ? (0, n.jsxs)(l.Text, {
                                           tag: 'div',
                                           variant: 'heading-lg/bold',
                                           style: {
@@ -136,26 +124,26 @@ function h() {
                                     : null
                             ]
                         }),
-                        (0, n.jsx)(c.FormItem, {
-                            children: (0, n.jsx)(c.SingleSelect, {
+                        (0, n.jsx)(l.FormItem, {
+                            children: (0, n.jsx)(l.SingleSelect, {
                                 className: A.select,
                                 options: O,
                                 onChange: (e) => b(e),
                                 value: P
                             })
                         }),
-                        (0, n.jsx)(c.FormItem, {
+                        (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)('div', {
                                 className: A.input,
-                                children: (0, n.jsx)(c.TextInput, {
+                                children: (0, n.jsx)(l.TextInput, {
                                     placeholder: 'Enter custom input...',
                                     value: null != f ? f : '',
                                     onChange: b
                                 })
                             })
                         }),
-                        (0, n.jsx)(c.FormItem, {
-                            children: (0, n.jsx)(c.RadioGroup, {
+                        (0, n.jsx)(l.FormItem, {
+                            children: (0, n.jsx)(l.RadioGroup, {
                                 withTransparentBackground: !0,
                                 className: A.theme,
                                 orientation: 'horizontal',
@@ -170,13 +158,13 @@ function h() {
                                     }
                                 ],
                                 onChange: (e) => {
-                                    (0, _.ZI)({ theme: e.value });
+                                    (0, d.ZI)({ theme: e.value });
                                 },
                                 value: i
                             })
                         }),
-                        (0, n.jsx)(c.FormItem, {
-                            children: (0, n.jsx)(c.RadioGroup, {
+                        (0, n.jsx)(l.FormItem, {
+                            children: (0, n.jsx)(l.RadioGroup, {
                                 withTransparentBackground: !0,
                                 className: A.theme,
                                 orientation: 'horizontal',
@@ -197,11 +185,11 @@ function h() {
                                 onChange: (e) => {
                                     h(e.value);
                                 },
-                                value: l
+                                value: g
                             })
                         }),
-                        (0, n.jsx)(E.Z, {
-                            closeAction: d.xf,
+                        (0, n.jsx)(_.Z, {
+                            closeAction: c.xf,
                             keybind: 'ESC'
                         })
                     ]
@@ -215,7 +203,7 @@ function h() {
                                 'div',
                                 {
                                     className: A.columnHeading,
-                                    children: (0, n.jsx)(c.Heading, {
+                                    children: (0, n.jsx)(l.Heading, {
                                         variant: 'eyebrow',
                                         children: e
                                     })
@@ -233,12 +221,12 @@ function h() {
                                             {
                                                 className: A.fontSize,
                                                 children: [
-                                                    (0, n.jsxs)(c.Heading, {
+                                                    (0, n.jsxs)(l.Heading, {
                                                         variant: 'eyebrow',
                                                         children: [e, 'px']
                                                     }),
                                                     100 !== x
-                                                        ? (0, n.jsxs)(c.Heading, {
+                                                        ? (0, n.jsxs)(l.Heading, {
                                                               variant: 'eyebrow',
                                                               color: 'text-muted',
                                                               children: ['(', (e * x) / 100, ')']

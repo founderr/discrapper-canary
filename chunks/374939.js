@@ -1,33 +1,29 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(17845),
-    r = n(89866);
-function l(e) {
-    let { title: t, description: n, onScroll: l, button: o, bannerClassName: c, bannerBackground: d, children: u } = e;
-    return (0, i.jsxs)(a.AdvancedScroller, {
-        onScroll: l,
-        className: r.container,
+var i = n(735250),
+    a = n(470079),
+    s = n(481060),
+    r = n(17845),
+    l = n(89866);
+t.Z = a.forwardRef(function (e, t) {
+    let { title: n, description: a, onScroll: o, button: c, bannerClassName: d, bannerBackground: u, children: _ } = e;
+    return (0, i.jsxs)(s.AdvancedScroller, {
+        onScroll: o,
+        className: l.container,
+        ref: t,
         children: [
-            (0, i.jsx)(s.Z, {
-                title: t,
-                description: n,
-                button: o,
-                className: c,
-                background: d
+            (0, i.jsx)(r.Z, {
+                title: n,
+                description: a,
+                button: c,
+                className: d,
+                background: u
             }),
             (0, i.jsx)('section', {
-                className: r.contentContainer,
+                className: l.contentContainer,
                 children: (0, i.jsx)('div', {
-                    className: r.content,
-                    children: u
+                    className: l.content,
+                    children: _
                 })
             })
         ]
     });
-}
+});
