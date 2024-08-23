@@ -133,24 +133,28 @@ t.ZP = o.memo(function (e) {
         [, H] = o.useState(new Set()),
         V = o.useMemo(() => new Set(M.games), [M.games]),
         F = o.useCallback(
-            (e, t, n) => {
-                let { items: i } = w[e],
-                    a = (j - 1) * k + (e * R + t),
-                    s = i[t];
-                null != s &&
-                    n &&
-                    H((e) => {
-                        let t = new Set(e);
-                        return (
-                            t.add(s.id),
-                            t.size > e.size &&
-                                (0, E.CK)({
-                                    guildId: s.id,
-                                    position: a
-                                }),
-                            t
-                        );
-                    });
+            (e, t, n, i) => {
+                let { items: a } = w[e],
+                    s = (j - 1) * k + (e * R + t),
+                    r = a[t];
+                null != r && n
+                    ? (i.current = setTimeout(
+                          () =>
+                              H((e) => {
+                                  let t = new Set(e);
+                                  return (
+                                      t.add(r.id),
+                                      t.size > e.size &&
+                                          (0, E.CK)({
+                                              guildId: r.id,
+                                              position: s
+                                          }),
+                                      t
+                                  );
+                              }),
+                          2000
+                      ))
+                    : clearTimeout(i.current);
             },
             [w, H, R, j, k]
         ),
@@ -173,7 +177,7 @@ t.ZP = o.memo(function (e) {
                         source: N.jXE.DISCOVER_SEARCH,
                         prioritizedGameIds: V,
                         onlyAnimateIconOnHover: !0,
-                        onVisibilityChange: (n) => F(e, t, n)
+                        onVisibilityChange: (n, i) => F(e, t, n, i)
                     },
                     n
                 );

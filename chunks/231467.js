@@ -421,8 +421,16 @@ t.ZP = function (e) {
             return (null === (e = O.Z.getRequest(_.id)) || void 0 === e ? void 0 : e.applicationStatus) === N.wB.SUBMITTED;
         }),
         A = _.memberCount >= M.Du,
-        y = (0, d.O)(s, 1),
-        D = i.useCallback(() => {
+        y = i.useRef(-1),
+        D = i.useCallback((e) => s(e, y), [s]),
+        L = (0, d.O)(D, 1);
+    i.useEffect(
+        () => () => {
+            null == s || s(!1, y);
+        },
+        [s]
+    );
+    let P = i.useCallback(() => {
             let e = null != O.Z.getRequest(_.id);
             if (
                 ((0, E.EK)({
@@ -453,7 +461,7 @@ t.ZP = function (e) {
                 I
             );
         }, [_, g, f, p, m, a, I]),
-        L = i.useCallback(
+        w = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('5577').then(n.bind(n, 955120));
@@ -467,12 +475,12 @@ t.ZP = function (e) {
             [_.id]
         );
     return (0, r.jsx)('div', {
-        ref: y,
+        ref: L,
         children: (0, r.jsx)(l.Clickable, {
-            onClick: D,
+            onClick: P,
             className: U.clickableCard,
             style: t,
-            onContextMenu: L,
+            onContextMenu: w,
             children: (0, r.jsx)(B, {
                 ...o,
                 isMember: g,
