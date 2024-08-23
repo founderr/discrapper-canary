@@ -15,26 +15,27 @@ var i,
     I = n(702646),
     g = n(207796),
     p = n(543550),
-    T = n(895068),
-    f = n(921944),
-    S = n(69878);
+    T = n(86014),
+    f = n(895068),
+    S = n(921944),
+    C = n(69878);
 ((a = i || (i = {})).TOP_PICKS = 'top_picks'), (a.OTHER_GUILDS = 'other_guilds');
-let C = {
+let N = {
         mass: 1,
         tension: 600,
         friction: 60
     },
-    N = r.memo(function (e) {
+    A = r.memo(function (e) {
         let { mode: t, width: n } = e,
             i = (0, d.useSpring)({
                 from: { opacity: 0 },
                 to: { opacity: 1 },
-                config: C,
+                config: N,
                 delay: 500
             }),
             [{ scrollSpring: a }, o] = (0, d.useSpring)(() => ({
                 from: { scrollSpring: 0 },
-                config: C
+                config: N
             })),
             u = r.useCallback(
                 (e) => {
@@ -47,14 +48,14 @@ let C = {
             (r.useEffect(() => {
                 !_ &&
                     (0, h.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
-                        dismissAction: f.L.TAKE_ACTION,
+                        dismissAction: S.L.TAKE_ACTION,
                         forceTrack: !0
                     });
             }, [_]),
             t)
         ) {
             case g.v0.ADMIN_UPSELL:
-                return (0, s.jsx)(p.$, {});
+                return (0, s.jsx)(p.$, { onScroll: u });
             case g.v0.GET_STARTED:
             case g.v0.DISCOVERY:
             case g.v0.GAMES:
@@ -63,13 +64,13 @@ let C = {
             case g.v0.PREFERENCES:
                 return (0, s.jsxs)(l.animated.div, {
                     style: { opacity: i.opacity },
-                    className: S.discoveryContainer,
+                    className: C.discoveryContainer,
                     children: [
                         (0, s.jsxs)('div', {
-                            className: S.toolbar,
+                            className: C.toolbar,
                             children: [
                                 (0, s.jsx)(l.animated.div, {
-                                    className: S.toolbarBackground,
+                                    className: C.toolbarBackground,
                                     style: {
                                         opacity: null == a ? void 0 : a.to([0, 100], [0, 1])
                                     }
@@ -78,43 +79,43 @@ let C = {
                             ]
                         }),
                         (0, s.jsx)('div', {
-                            className: S.content,
-                            children: (0, s.jsx)(T.ZP, {
+                            className: C.content,
+                            children: (0, s.jsx)(T.Z, {
                                 width: n,
                                 onScroll: u,
-                                variant: (0, T.s)(t)
+                                variant: (0, f.s)(t)
                             })
                         }),
                         (0, s.jsx)('div', {
-                            className: S.selectors,
+                            className: C.selectors,
                             children: (0, s.jsx)(m.Z, { mode: t })
                         })
                     ]
                 });
             case g.v0.SAVED_GUILDS:
                 return (0, s.jsxs)('div', {
-                    className: S.discoveryContainer,
+                    className: C.discoveryContainer,
                     children: [
                         (0, s.jsx)('div', {
-                            className: S.toolbar,
+                            className: C.toolbar,
                             children: (0, s.jsx)(I.Z, {})
                         }),
                         (0, s.jsx)('div', {
-                            className: S.content,
-                            children: (0, s.jsx)(T.ZP, {
+                            className: C.content,
+                            children: (0, s.jsx)(T.Z, {
                                 width: n,
-                                variant: (0, T.s)(t)
+                                variant: (0, f.s)(t)
                             })
                         }),
                         (0, s.jsx)('div', {
-                            className: S.selectors,
+                            className: C.selectors,
                             children: (0, s.jsx)(m.Z, { mode: t })
                         })
                     ]
                 });
         }
     });
-function A(e) {
+function v(e) {
     let { mode: t, children: n } = e,
         { enableClanCreation: i } = (0, _.C3)({
             location: 'ClanDiscoveryAdminContainer',
@@ -140,18 +141,18 @@ t.Z = r.memo(function () {
         t = (0, g.GN)((e) => e.mode, o.Z),
         { ref: n, width: i } = (0, u.Z)();
     return (0, s.jsxs)('main', {
-        className: S.container,
+        className: C.container,
         ref: n,
         children: [
-            (0, s.jsx)('div', { className: S.dragRegion }),
+            (0, s.jsx)('div', { className: C.dragRegion }),
             e
                 ? (0, s.jsx)('div', {
-                      className: S.loading,
+                      className: C.loading,
                       children: (0, s.jsx)(d.Spinner, {})
                   })
-                : (0, s.jsx)(A, {
+                : (0, s.jsx)(v, {
                       mode: t,
-                      children: (0, s.jsx)(N, {
+                      children: (0, s.jsx)(A, {
                           width: i,
                           mode: t
                       })

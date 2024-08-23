@@ -28,39 +28,41 @@ let p = (e, t) => {
             return t === m.BRd.DARK ? g.valorantUpsellBackgroundImageDark : g.valorantUpsellBackgroundImageLight;
     }
 };
-function T() {
-    let e = (0, _.GN)((e) => e.game, l.Z),
-        { guilds: t } = (0, d.C3)({
+function T(e) {
+    let { onScroll: t } = e,
+        n = (0, _.GN)((e) => e.game, l.Z),
+        { guilds: s } = (0, d.C3)({
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0
         }),
-        n = a.useMemo(() => t.filter((e) => !(0, u.EJ)(e)), [t]),
-        s = (0, c.ZP)(),
-        m = a.useMemo(() => p(e, s), [e, s]);
-    return 0 === t.length
+        m = a.useMemo(() => s.filter((e) => !(0, u.EJ)(e)), [s]),
+        T = (0, c.ZP)(),
+        f = a.useMemo(() => p(n, T), [n, T]);
+    return 0 === s.length
         ? null
         : (0, i.jsx)('div', {
               className: g.container,
               children: (0, i.jsxs)(o.u2, {
                   className: g.upsellScroller,
                   fade: !0,
+                  onScroll: t,
                   children: [
                       (0, i.jsxs)('div', {
-                          className: r()(m, g.adminUpsell),
+                          className: r()(f, g.adminUpsell),
                           children: [
-                              e !== _.hz.NONE && (0, i.jsx)('div', { className: g.backgroundImageBlur }),
+                              n !== _.hz.NONE && (0, i.jsx)('div', { className: g.backgroundImageBlur }),
                               (0, i.jsx)('div', {
                                   className: g.backgroundImageContent,
                                   children: (0, i.jsx)(h.Z, {
-                                      eligibleGuilds: n,
-                                      eligibleGuildsIncludingConverted: t
+                                      eligibleGuilds: m,
+                                      eligibleGuildsIncludingConverted: s
                                   })
                               })
                           ]
                       }),
                       (0, i.jsx)(E.Z, {
                           title: I.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE,
-                          className: e === _.hz.NONE ? g.genericPreviewList : void 0
+                          className: n === _.hz.NONE ? g.genericPreviewList : void 0
                       })
                   ]
               })

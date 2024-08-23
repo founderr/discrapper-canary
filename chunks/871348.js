@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return f;
+        return S;
     }
 });
 var i = n(735250),
@@ -14,11 +14,12 @@ var i = n(735250),
     u = n(807933),
     _ = n(207796),
     h = n(497189),
-    E = n(895068),
-    m = n(490610),
-    I = n(689938),
-    g = n(604167);
-function p(e) {
+    E = n(86014),
+    m = n(895068),
+    I = n(490610),
+    g = n(689938),
+    p = n(604167);
+function T(e) {
     let { onScroll: t } = e,
         { guilds: n } = (0, o.C3)({
             location: 'ClanDiscoveryAdminContainer',
@@ -26,18 +27,18 @@ function p(e) {
         }),
         s = a.useMemo(() => n.filter((e) => !(0, c.EJ)(e)), [n]);
     return (0, i.jsx)('section', {
-        className: g.guilds,
+        className: p.guilds,
         children: (0, i.jsxs)(r.AdvancedScrollerNone, {
             onScroll: t,
-            className: g.upsellScroller,
+            className: p.upsellScroller,
             fade: !0,
             children: [
                 (0, i.jsxs)('div', {
-                    className: g.adminUpsell,
+                    className: p.adminUpsell,
                     children: [
-                        (0, i.jsx)('div', { className: g.backgroundImageBlur }),
+                        (0, i.jsx)('div', { className: p.backgroundImageBlur }),
                         (0, i.jsx)('div', {
-                            className: g.backgroundImageContent,
+                            className: p.backgroundImageContent,
                             children: (0, i.jsx)(h.Z, {
                                 eligibleGuilds: s,
                                 eligibleGuildsIncludingConverted: n
@@ -45,41 +46,41 @@ function p(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(m.Z, { title: I.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE })
+                (0, i.jsx)(I.Z, { title: g.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE })
             ]
         })
     });
 }
-function T(e) {
+function f(e) {
     let { onScroll: t } = e,
         n = (0, _.GN)((e) => e.mode, s.Z),
         { ref: a, width: r } = (0, l.Z)();
     return (0, i.jsxs)('section', {
         ref: a,
-        className: g.guilds,
+        className: p.guilds,
         children: [
             (0, i.jsx)('div', {
-                className: g.list,
+                className: p.list,
                 children:
                     null != r &&
-                    (0, i.jsx)(E.ZP, {
+                    (0, i.jsx)(E.Z, {
                         width: r,
-                        variant: (0, E.s)(n, E.Bj.GLOBAL_DISCOVERY),
+                        variant: (0, m.s)(n, m.Bj.GLOBAL_DISCOVERY),
                         onScroll: t
                     })
             }),
             (0, i.jsx)('div', {
-                className: g.selectors,
+                className: p.selectors,
                 children: (0, i.jsx)(u.Z, { mode: n })
             })
         ]
     });
 }
-function f(e) {
+function S(e) {
     let { onScroll: t } = e,
         { enableClanCreation: n } = (0, o.C3)({
             location: 'GuildsTab',
             includeConverted: !0
         });
-    return (0, d.LE)(), n ? (0, i.jsx)(p, { onScroll: t }) : (0, i.jsx)(T, { onScroll: t });
+    return (0, d.LE)(), n ? (0, i.jsx)(T, { onScroll: t }) : (0, i.jsx)(f, { onScroll: t });
 }
