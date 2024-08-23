@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return b;
+        return R;
     }
 }),
     t(47120);
@@ -14,165 +14,164 @@ var i = t(735250),
     c = t(895924),
     u = t(581364),
     I = t(605436),
-    m = t(777036),
-    _ = t(271383),
-    N = t(430824),
-    E = t(496675),
-    T = t(821864),
-    h = t(905753),
-    g = t(937427),
-    p = t(643886),
-    f = t(869157),
-    C = t(454092),
-    O = t(289465),
-    x = t(981631),
-    S = t(689079),
-    A = t(689938),
-    R = t(869880);
-function b(e) {
-    let { applicationId: n, commandId: s, guildId: g, inModal: p, editedTargetPermissions: b, originalApplicationPermissions: M, originalCommandPermissions: L, selectedPermissionCount: j } = e,
-        D = (0, o.e7)([h.Z], () => (null == s ? null : h.Z.getCommand(s)), [s]),
-        P = (null == D ? void 0 : D.defaultMemberPermissions) != null,
-        B = (0, o.e7)(
-            [N.Z, _.ZP, E.Z],
+    m = t(271383),
+    _ = t(430824),
+    N = t(496675),
+    E = t(821864),
+    T = t(905753),
+    h = t(937427),
+    g = t(643886),
+    p = t(869157),
+    f = t(454092),
+    C = t(289465),
+    O = t(981631),
+    x = t(689079),
+    S = t(689938),
+    A = t(869880);
+function R(e) {
+    let { applicationId: n, commandId: s, guildId: h, inModal: g, editedTargetPermissions: R, originalApplicationPermissions: v, originalCommandPermissions: M, selectedPermissionCount: L } = e,
+        j = (0, o.e7)([T.Z], () => (null == s ? null : T.Z.getCommand(s)), [s]),
+        D = (null == j ? void 0 : j.defaultMemberPermissions) != null,
+        P = (0, o.e7)(
+            [_.Z, m.ZP, N.Z],
             () => {
-                let e = N.Z.getGuild(g),
-                    n = _.ZP.getSelfMember(g);
+                let e = _.Z.getGuild(h),
+                    n = m.ZP.getSelfMember(h);
                 return (
                     null != e &&
                     null != n &&
                     (0, u.Ft)({
-                        PermissionStore: E.Z,
+                        PermissionStore: N.Z,
                         guild: e,
                         selfMember: n,
-                        applicationLevelPermissions: M,
-                        commandLevelPermissions: L,
-                        defaultMemberPermissions: null == D ? void 0 : D.defaultMemberPermissions
+                        applicationLevelPermissions: v,
+                        commandLevelPermissions: M,
+                        defaultMemberPermissions: null == j ? void 0 : j.defaultMemberPermissions
                     })
                 );
             },
-            [g, D, M, L]
+            [h, j, v, M]
         ),
-        y = null != s ? s : n,
-        [G, k] = a.useMemo(() => {
+        B = null != s ? s : n,
+        [y, G] = a.useMemo(() => {
             let e = {},
                 n = {};
-            for (let [t, i] of Object.entries(b)) i.type === c.Kw.CHANNEL ? (e[t] = i) : (n[t] = i);
+            for (let [t, i] of Object.entries(R)) i.type === c.Kw.CHANNEL ? (e[t] = i) : (n[t] = i);
             return [e, n];
-        }, [b]),
-        U = a.useCallback(
+        }, [R]),
+        k = a.useCallback(
             (e) => {
-                let n = N.Z.getGuild(g),
-                    t = _.ZP.getSelfMember(g);
+                let n = _.Z.getGuild(h),
+                    t = m.ZP.getSelfMember(h);
                 return (
                     null != n &&
                     null != t &&
                     (null != s
                         ? (0, u.Ft)({
-                              PermissionStore: E.Z,
+                              PermissionStore: N.Z,
                               guild: n,
                               selfMember: t,
-                              applicationLevelPermissions: M,
+                              applicationLevelPermissions: v,
                               commandLevelPermissions: e,
-                              defaultMemberPermissions: null == D ? void 0 : D.defaultMemberPermissions
+                              defaultMemberPermissions: null == j ? void 0 : j.defaultMemberPermissions
                           })
                         : (0, u.Ft)({
-                              PermissionStore: E.Z,
+                              PermissionStore: N.Z,
                               guild: n,
                               selfMember: t,
                               applicationLevelPermissions: e
                           }))
                 );
             },
-            [g, D, s, M]
+            [h, j, s, v]
         ),
-        H = a.useCallback(
+        U = a.useCallback(
             (e, n) => {
                 let t;
                 let i = null;
                 if (0 !== n.length) {
-                    let e = b[n[0]];
-                    if (e.type === c.Kw.USER) t = C.s.REMOVE_SELF;
+                    let e = R[n[0]];
+                    if (e.type === c.Kw.USER) t = f.s.REMOVE_SELF;
                     else {
                         let n = e.id;
-                        if (((t = C.s.REMOVE_ROLE), (0, I.pM)(g, n))) i = '@everyone';
+                        if (((t = f.s.REMOVE_ROLE), (0, I.pM)(h, n))) i = '@everyone';
                         else {
-                            let e = N.Z.getRole(g, n);
+                            let e = _.Z.getRole(h, n);
                             i = null != e ? e.name : 'role';
                         }
                     }
                 } else {
                     let n = Object.values(e)[0].id;
-                    if (((t = C.s.DENY_ROLE), (0, I.pM)(g, n))) i = '@everyone';
+                    if (((t = f.s.DENY_ROLE), (0, I.pM)(h, n))) i = '@everyone';
                     else {
-                        let e = N.Z.getRole(g, n);
+                        let e = _.Z.getRole(h, n);
                         i = null != e ? e.name : 'role';
                     }
                 }
-                (0, C._)(t, i);
+                (0, f._)(t, i);
             },
-            [g, b]
+            [h, R]
         ),
-        w = a.useCallback(
+        H = a.useCallback(
             (e, t) => {
                 let i = {};
-                for (let [e, n] of Object.entries(b))
+                for (let [e, n] of Object.entries(R))
                     i[e] = {
                         id: n.id,
                         permission: n.permission,
                         type: n.type
                     };
-                if (((i = Object.assign(i, e)), t.length > 0 && (i = l().omit(i, t)), !U(i))) {
-                    H(e, t);
+                if (((i = Object.assign(i, e)), t.length > 0 && (i = l().omit(i, t)), !k(i))) {
+                    U(e, t);
                     return;
                 }
-                T.W4(n, y, i);
+                E.W4(n, B, i);
             },
-            [n, b, y, U, H]
+            [n, R, B, k, U]
         ),
+        w = a.useCallback(() => {
+            let e = Object.keys(y);
+            return (0, d.openModalLazy)(async () => {
+                let { default: n } = await t.e('64908').then(t.bind(t, 557944));
+                return (t) =>
+                    (0, i.jsx)(n, {
+                        editPermissions: H,
+                        guildId: h,
+                        headerText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
+                        hasMemberSearch: !1,
+                        overwrittenKeys: e,
+                        search: b,
+                        searchPlaceholderText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_SEARCH_PLACEHOLDER,
+                        selectedPermissionCount: L,
+                        ...t
+                    });
+            });
+        }, [H, y, h, L]),
         W = a.useCallback(() => {
             let e = Object.keys(G);
             return (0, d.openModalLazy)(async () => {
                 let { default: n } = await t.e('64908').then(t.bind(t, 557944));
                 return (t) =>
                     (0, i.jsx)(n, {
-                        editPermissions: w,
-                        guildId: g,
-                        headerText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
-                        hasMemberSearch: !1,
+                        editPermissions: H,
+                        guildId: h,
+                        hasMemberSearch: !0,
+                        headerText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD_BUTTON,
                         overwrittenKeys: e,
                         search: Z,
-                        searchPlaceholderText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_SEARCH_PLACEHOLDER,
-                        selectedPermissionCount: j,
+                        searchPlaceholderText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_SEARCH_PLACEHOLDER,
+                        selectedPermissionCount: L,
                         ...t
                     });
             });
-        }, [w, G, g, j]),
-        F = a.useCallback(() => {
-            let e = Object.keys(k);
-            return (0, d.openModalLazy)(async () => {
-                let { default: n } = await t.e('64908').then(t.bind(t, 557944));
-                return (t) =>
-                    (0, i.jsx)(n, {
-                        editPermissions: w,
-                        guildId: g,
-                        hasMemberSearch: !0,
-                        headerText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD_BUTTON,
-                        overwrittenKeys: e,
-                        search: v,
-                        searchPlaceholderText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_SEARCH_PLACEHOLDER,
-                        selectedPermissionCount: j,
-                        ...t
-                    });
-            });
-        }, [w, g, k, j]),
-        V = a.useCallback(
+        }, [H, h, G, L]),
+        F = a.useCallback(
             () =>
                 (0, d.openModalLazy)(async () => {
                     let { default: e } = await t.e('21897').then(t.bind(t, 303313)),
-                        n = D.defaultMemberPermissions;
+                        n = j.defaultMemberPermissions;
                     return (
-                        r.fS(n, u.BO) && (n = x.Plq.ADMINISTRATOR),
+                        r.fS(n, u.BO) && (n = O.Plq.ADMINISTRATOR),
                         (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -180,91 +179,91 @@ function b(e) {
                             })
                     );
                 }),
-            [D]
+            [j]
         ),
-        K = j - S._n,
-        Y = K >= 0,
-        z = [
-            {
-                buttonClick: F,
-                buttonText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD_BUTTON,
-                noneSelectedText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_ROLE_MEMBER_NO_ENTRIES,
-                overwrites: k,
-                title: null == s ? A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD : A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_ROLE_MEMBER_HEADER
-            },
+        V = L - x._n,
+        K = V >= 0,
+        Y = [
             {
                 buttonClick: W,
-                buttonText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
-                noneSelectedText: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_NO_ENTRIES,
+                buttonText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD_BUTTON,
+                noneSelectedText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_ROLE_MEMBER_NO_ENTRIES,
                 overwrites: G,
-                title: null == s ? A.Z.Messages.CHANNELS : A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_HEADER
+                title: null == s ? S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_ROLE_MEMBER_ADD : S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_ROLE_MEMBER_HEADER
+            },
+            {
+                buttonClick: w,
+                buttonText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_CHANNEL_ADD_BUTTON,
+                noneSelectedText: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_NO_ENTRIES,
+                overwrites: y,
+                title: null == s ? S.Z.Messages.CHANNELS : S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_OVERRIDE_SECTION_CHANNEL_HEADER
             }
         ];
     return (0, i.jsxs)(a.Fragment, {
         children: [
-            K > 0
-                ? (0, i.jsx)(m.Z, {
-                      messageType: m.Q.WARNING,
-                      children: A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_NOTICE_TEXT.format({ removeCount: K })
+            V > 0
+                ? (0, i.jsx)(d.HelpMessage, {
+                      messageType: d.HelpMessageTypes.WARNING,
+                      children: S.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_NOTICE_TEXT.format({ removeCount: V })
                   })
                 : null,
-            P
+            D
                 ? (0, i.jsxs)('div', {
-                      className: R.requiredPermissionsBanner,
+                      className: A.requiredPermissionsBanner,
                       children: [
                           (0, i.jsx)(d.CircleInformationIcon, {
                               size: 'sm',
                               color: 'currentColor',
-                              className: R.icon
+                              className: A.icon
                           }),
                           (0, i.jsx)('span', {
-                              className: R.message,
-                              children: A.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_DEFAULT_MEMBER_PERMISSIONS_SECTION_DESCRIPTION.format()
+                              className: A.message,
+                              children: S.Z.Messages.INTEGRATIONS_APPLICATION_COMMAND_DEFAULT_MEMBER_PERMISSIONS_SECTION_DESCRIPTION.format()
                           }),
                           (0, i.jsx)(d.Button, {
                               color: d.Button.Colors.PRIMARY,
-                              onClick: V,
+                              onClick: F,
                               size: d.Button.Sizes.SMALL,
-                              className: R.addButton,
-                              children: A.Z.Messages.VIEW
+                              className: A.addButton,
+                              children: S.Z.Messages.VIEW
                           })
                       ]
                   })
                 : null,
-            z.map((e, n) => {
+            Y.map((e, n) => {
                 let t = (n) =>
                         (0, i.jsx)(d.Button, {
                             ...n,
                             color: d.Button.Colors.PRIMARY,
-                            disabled: Y || !B,
+                            disabled: K || !P,
                             onClick: e.buttonClick,
                             size: d.Button.Sizes.TINY,
-                            className: R.addButton,
+                            className: A.addButton,
                             children: e.buttonText
                         }),
                     a = null;
                 return (
-                    B ? Y && (a = A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_MAX) : (a = null != s ? A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : A.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION),
+                    P ? K && (a = S.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_MAX) : (a = null != s ? S.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_COMMAND : S.Z.Messages.INTEGRATIONS_APPLICATION_PERMISSIONS_LOCKED_APPLICATION),
                     (0, i.jsx)(
-                        O.Z,
+                        C.Z,
                         {
                             bar: (0, i.jsx)(d.Tooltip, {
-                                tooltipClassName: R.tooltip,
+                                tooltipClassName: A.tooltip,
                                 text: a,
                                 shouldShow: null != a,
                                 children: (e) => t(e)
                             }),
-                            inModal: p,
+                            inModal: g,
                             title: e.title,
                             children: (0, i.jsx)('div', {
-                                className: p ? void 0 : R.listContainer,
-                                children: (0, i.jsx)(f.Z, {
-                                    guildId: g,
+                                className: g ? void 0 : A.listContainer,
+                                children: (0, i.jsx)(p.Z, {
+                                    guildId: h,
                                     commandId: s,
                                     noneSelectedText: e.noneSelectedText,
                                     overwrites: e.overwrites,
-                                    editPermissions: w,
-                                    hasAccessToMutatePermissions: B
+                                    editPermissions: H,
+                                    hasAccessToMutatePermissions: P
                                 })
                             })
                         },
@@ -275,8 +274,8 @@ function b(e) {
         ]
     });
 }
-function Z(e) {
-    let n = (0, g.w)(e);
+function b(e) {
+    let n = (0, h.w)(e);
     return {
         ...n,
         results: n.results.map((e) => ({
@@ -285,8 +284,8 @@ function Z(e) {
         }))
     };
 }
-function v(e) {
-    let n = (0, p.U)(e);
+function Z(e) {
+    let n = (0, g.U)(e);
     return {
         ...n,
         results: n.results.roles

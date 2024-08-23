@@ -20,30 +20,29 @@ var n = t(735250),
     O = t(332473),
     g = t(303172),
     h = t(921801),
-    p = t(777036),
-    R = t(484459),
-    x = t(430824),
-    M = t(325067),
-    f = t(246946),
-    D = t(594174),
-    P = t(709054),
-    L = t(706454),
-    b = t(210887),
-    Z = t(418632),
-    v = t(730820),
-    j = t(888256),
-    B = t(2719),
-    U = t(194530),
-    G = t(726985),
-    F = t(981631),
-    y = t(801461),
-    V = t(689938),
-    Y = t(78075),
-    H = t(224499);
-class w extends a.PureComponent {
+    p = t(484459),
+    R = t(430824),
+    x = t(325067),
+    M = t(246946),
+    f = t(594174),
+    D = t(709054),
+    P = t(706454),
+    L = t(210887),
+    b = t(418632),
+    Z = t(730820),
+    v = t(888256),
+    j = t(2719),
+    B = t(194530),
+    U = t(726985),
+    G = t(981631),
+    F = t(801461),
+    y = t(689938),
+    V = t(78075),
+    Y = t(224499);
+class H extends a.PureComponent {
     componentDidMount() {
         let { currentUser: e } = this.props;
-        (0, R.Z)(e.id, e.getAvatarURL(void 0, 80));
+        (0, p.Z)(e.id, e.getAvatarURL(void 0, 80));
     }
     componentWillUnmount() {
         E.Z.clearBackupCodes(), (0, u.Zy)();
@@ -54,27 +53,27 @@ class w extends a.PureComponent {
             let e = (0, n.jsxs)('section', {
                 children: [
                     (0, n.jsx)('div', {
-                        className: Y.accountWarningBodyText,
-                        children: V.Z.Messages.UNCLAIMED_ACCOUNT_BODY_2
+                        className: V.accountWarningBodyText,
+                        children: y.Z.Messages.UNCLAIMED_ACCOUNT_BODY_2
                     }),
                     (0, n.jsx)(_.Button, {
                         look: _.ButtonLooks.OUTLINED,
                         size: _.ButtonSizes.SMALL,
                         color: _.Button.Colors.WHITE,
                         onClick: () => S.Z.openClaimAccountModal(),
-                        children: V.Z.Messages.CLAIM_ACCOUNT_LONG
+                        children: y.Z.Messages.CLAIM_ACCOUNT_LONG
                     })
                 ]
             });
             return (0, n.jsx)(_.FormNotice, {
                 type: _.FormNotice.Types.DANGER,
-                className: H.marginBottom20,
+                className: Y.marginBottom20,
                 imageData: {
                     src: t(418558),
                     width: 60,
                     height: 60
                 },
-                title: V.Z.Messages.UNCLAIMED_ACCOUNT_TITLE,
+                title: y.Z.Messages.UNCLAIMED_ACCOUNT_TITLE,
                 body: e
             });
         }
@@ -83,10 +82,10 @@ class w extends a.PureComponent {
             let e = (0, n.jsxs)('section', {
                 children: [
                     (0, n.jsx)('div', {
-                        className: Y.accountWarningBodyText,
-                        children: V.Z.Messages.USER_SETTINGS_UNVERIFIED_EMAIL_BODY
+                        className: V.accountWarningBodyText,
+                        children: y.Z.Messages.USER_SETTINGS_UNVERIFIED_EMAIL_BODY
                     }),
-                    (0, n.jsx)(Z.Z, {
+                    (0, n.jsx)(b.Z, {
                         size: _.ButtonSizes.SMALL,
                         color: _.Button.Colors.PRIMARY
                     })
@@ -94,30 +93,30 @@ class w extends a.PureComponent {
             });
             return (0, n.jsx)(_.FormNotice, {
                 type: _.FormNotice.Types.PRIMARY,
-                className: H.marginBottom20,
+                className: Y.marginBottom20,
                 imageData: {
                     src: t(449125),
                     width: 60,
                     height: 60
                 },
-                title: V.Z.Messages.UNVERIFIED_EMAIL_TITLE,
+                title: y.Z.Messages.UNVERIFIED_EMAIL_TITLE,
                 body: e
             });
         }
     }
     renderPomeloWarning() {
         return this.props.shouldRenderPomeloWarning
-            ? (0, n.jsxs)(p.Z, {
-                  className: Y.accountWarningBodyText,
-                  messageType: p.Q.WARNING,
+            ? (0, n.jsxs)(_.HelpMessage, {
+                  className: V.accountWarningBodyText,
+                  messageType: _.HelpMessageTypes.WARNING,
                   children: [
-                      this.props.forceMigrationExperiment ? V.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, m.IE)(this.props.locale) }) : V.Z.Messages.POMELO_ACTION_NEEDED.format(),
+                      this.props.forceMigrationExperiment ? y.Z.Messages.POMELO_ACTION_NEEDED_FORCE.format({ date: (0, m.IE)(this.props.locale) }) : y.Z.Messages.POMELO_ACTION_NEEDED.format(),
                       ' ',
                       '',
                       (0, n.jsx)(C.Z, {
-                          className: Y.noticeTextButton,
-                          onClick: () => (0, g.Z)(y.Kq.USER_SETTINGS),
-                          children: V.Z.Messages.GET_STARTED
+                          className: V.noticeTextButton,
+                          onClick: () => (0, g.Z)(F.Kq.USER_SETTINGS),
+                          children: y.Z.Messages.GET_STARTED
                       })
                   ]
               })
@@ -126,59 +125,59 @@ class w extends a.PureComponent {
     renderAccountSettings() {
         return (0, n.jsxs)(_.FormSection, {
             tag: _.FormTitleTags.H1,
-            title: V.Z.Messages.USER_SETTINGS_MY_ACCOUNT,
-            className: Y.__invalid_userSettingsAccount,
-            children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, n.jsx)(B.Z, {})]
+            title: y.Z.Messages.USER_SETTINGS_MY_ACCOUNT,
+            className: V.__invalid_userSettingsAccount,
+            children: [this.renderPomeloWarning(), this.renderAccountWarning(), (0, n.jsx)(j.Z, {})]
         });
     }
     renderSecuritySettings() {
         let { backupCodes: e, currentUser: s, theme: a } = this.props,
             i = (0, d.wj)(a) ? t(555702) : t(610802);
         return (0, n.jsxs)(_.FormSection, {
-            className: r()(Y.userSettingsSecurity, H.marginTop40),
-            title: V.Z.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION,
+            className: r()(V.userSettingsSecurity, Y.marginTop40),
+            title: y.Z.Messages.USER_SETTINGS_ACCOUNT_PASSWORD_AND_AUTHENTICATION,
             tag: 'h1',
             children: [
                 s.mfaEnabled
                     ? (0, n.jsx)(_.FormSection, {
                           children: (0, n.jsxs)(_.FormTitle, {
-                              className: r()(Y.isEnabled, H.marginBottom20),
+                              className: r()(V.isEnabled, Y.marginBottom20),
                               children: [
                                   (0, n.jsx)('img', {
                                       alt: '',
-                                      className: r()(Y.lockIcon),
+                                      className: r()(V.lockIcon),
                                       src: t(511391)
                                   }),
-                                  V.Z.Messages.TWO_FA_ENABLED
+                                  y.Z.Messages.TWO_FA_ENABLED
                               ]
                           })
                       })
                     : null,
                 (0, n.jsx)(h.F, {
-                    setting: G.s6.ACCOUNT_CHANGE_PASSWORD,
+                    setting: U.s6.ACCOUNT_CHANGE_PASSWORD,
                     children: (0, n.jsx)('div', {
                         children: (0, n.jsx)(_.Button, {
                             size: _.Button.Sizes.SMALL,
-                            className: Y.changePasswordButton,
+                            className: V.changePasswordButton,
                             onClick: () =>
                                 (0, _.openModal)((e) =>
-                                    (0, n.jsx)(U.default, {
+                                    (0, n.jsx)(B.default, {
                                         ...e,
                                         onSuccess: e.onClose
                                     })
                                 ),
-                            children: V.Z.Messages.CHANGE_PASSWORD
+                            children: y.Z.Messages.CHANGE_PASSWORD
                         })
                     })
                 }),
                 (0, n.jsx)(h.F, {
-                    setting: G.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
+                    setting: U.s6.ACCOUNT_MULTI_FACTOR_AUTHENTICATION,
                     children: (0, n.jsxs)(N.Z, {
                         align: N.Z.Align.STRETCH,
                         children: [
                             (0, n.jsx)(N.Z.Child, {
                                 wrap: !0,
-                                children: (0, n.jsx)(v.Z, { backupCodes: e })
+                                children: (0, n.jsx)(Z.Z, { backupCodes: e })
                             }),
                             s.mfaEnabled
                                 ? null
@@ -188,7 +187,7 @@ class w extends a.PureComponent {
                                       grow: 0,
                                       children: (0, n.jsx)('img', {
                                           src: i,
-                                          className: Y.userSettingsSecurityImage,
+                                          className: V.userSettingsSecurityImage,
                                           alt: ''
                                       })
                                   })
@@ -204,14 +203,14 @@ class w extends a.PureComponent {
             let e = () => this.setState({ shouldRenderOwnedGuildsModal: !1 });
             return (0, n.jsx)(_.DeclarativeConfirmModal, {
                 dismissable: !0,
-                header: V.Z.Messages.DELETE_ACCOUNT_TRANSFER_OWNERSHIP,
-                confirmText: V.Z.Messages.OKAY,
+                header: y.Z.Messages.DELETE_ACCOUNT_TRANSFER_OWNERSHIP,
+                confirmText: y.Z.Messages.OKAY,
                 confirmButtonColor: _.ButtonColors.BRAND,
                 onCancel: e,
                 onConfirm: e,
                 children: (0, n.jsx)(_.Text, {
                     variant: 'text-md/normal',
-                    children: V.Z.Messages.DELETE_ACCOUNT_TRANSFER_OWNERSHIP_BODY
+                    children: y.Z.Messages.DELETE_ACCOUNT_TRANSFER_OWNERSHIP_BODY
                 })
             });
         }
@@ -219,14 +218,14 @@ class w extends a.PureComponent {
             let e = () => this.setState({ shouldRenderDeleteAccountConfirmModal: !1 });
             return (0, n.jsx)(_.DeclarativeConfirmModal, {
                 dismissable: !0,
-                header: V.Z.Messages.DELETE_ACCOUNT,
-                confirmText: V.Z.Messages.DELETE_ACCOUNT,
-                cancelText: V.Z.Messages.CANCEL,
+                header: y.Z.Messages.DELETE_ACCOUNT,
+                confirmText: y.Z.Messages.DELETE_ACCOUNT,
+                cancelText: y.Z.Messages.CANCEL,
                 onCancel: e,
                 onConfirm: () => (0, u.ss)('', !0).then(e),
                 children: (0, n.jsx)(_.Text, {
                     variant: 'text-md/normal',
-                    children: V.Z.Messages.DELETE_ACCOUNT_BODY
+                    children: y.Z.Messages.DELETE_ACCOUNT_BODY
                 })
             });
         }
@@ -238,8 +237,8 @@ class w extends a.PureComponent {
                 });
             return (0, n.jsx)(_.DeclarativeConfirmModal, {
                 dismissable: !0,
-                header: V.Z.Messages.DELETE_ACCOUNT_ERROR,
-                confirmText: V.Z.Messages.OKAY,
+                header: y.Z.Messages.DELETE_ACCOUNT_ERROR,
+                confirmText: y.Z.Messages.OKAY,
                 confirmButtonColor: _.ButtonColors.BRAND,
                 onCancel: e,
                 onConfirm: e,
@@ -253,8 +252,8 @@ class w extends a.PureComponent {
     }
     renderAccountRemovalSettings() {
         let { currentUser: e } = this.props;
-        return (0, n.jsx)(j.Z, {
-            className: H.marginTop40,
+        return (0, n.jsx)(v.Z, {
+            className: Y.marginTop40,
             currentUser: e,
             handleDisableAccount: () => this.handleDisableAccount(!1),
             handleDeleteAccount: () => this.handleDisableAccount(!0)
@@ -267,35 +266,35 @@ class w extends a.PureComponent {
                   children: [
                       this.renderConfirmModals(),
                       (0, n.jsx)(h.F, {
-                          setting: G.s6.ACCOUNT_PROFILE,
+                          setting: U.s6.ACCOUNT_PROFILE,
                           children: this.renderAccountSettings()
                       }),
                       (0, n.jsx)(h.F, {
-                          setting: G.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
+                          setting: U.s6.ACCOUNT_PASSWORD_AND_AUTHENTICATION,
                           children: this.renderSecuritySettings()
                       }),
                       (0, n.jsx)(h.F, {
-                          setting: G.s6.ACCOUNT_REMOVAL,
+                          setting: U.s6.ACCOUNT_REMOVAL,
                           children: this.renderAccountRemovalSettings()
                       })
                   ]
               });
     }
     handleDisableAccountError(e) {
-        if (e.body.code === F.evJ.INVALID_PASSWORD) throw e;
+        if (e.body.code === G.evJ.INVALID_PASSWORD) throw e;
         this.setState({
             shouldRenderDisableAccountErrorModal: !0,
             disableAccountErrorMessage: e.body.message
         });
     }
     handleSubmitDisableAccount(e, s) {
-        return (0, u.ss)(e, s).then(F.dG4, this.handleDisableAccountError);
+        return (0, u.ss)(e, s).then(G.dG4, this.handleDisableAccountError);
     }
     handleDisableAccount() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             { currentUser: s } = this.props,
-            t = x.Z.getGuilds();
-        if (P.default.keys(t).filter((e) => t[e].ownerId === s.id).length > 0) {
+            t = R.Z.getGuilds();
+        if (D.default.keys(t).filter((e) => t[e].ownerId === s.id).length > 0) {
             this.setState({ shouldRenderOwnedGuildsModal: !0 });
             return;
         }
@@ -304,9 +303,9 @@ class w extends a.PureComponent {
                   (0, n.jsx)(T.default, {
                       ...s,
                       handleSubmit: (s) => this.handleSubmitDisableAccount(s, e),
-                      title: e ? V.Z.Messages.DELETE_ACCOUNT : V.Z.Messages.DISABLE_ACCOUNT,
-                      actionText: e ? V.Z.Messages.DELETE_ACCOUNT : V.Z.Messages.DISABLE_ACCOUNT,
-                      children: e ? V.Z.Messages.DELETE_ACCOUNT_BODY : V.Z.Messages.DISABLE_ACCOUNT_BODY
+                      title: e ? y.Z.Messages.DELETE_ACCOUNT : y.Z.Messages.DISABLE_ACCOUNT,
+                      actionText: e ? y.Z.Messages.DELETE_ACCOUNT : y.Z.Messages.DISABLE_ACCOUNT,
+                      children: e ? y.Z.Messages.DELETE_ACCOUNT_BODY : y.Z.Messages.DISABLE_ACCOUNT_BODY
                   })
               )
             : this.setState({ shouldRenderDeleteAccountConfirmModal: !0 });
@@ -322,17 +321,17 @@ class w extends a.PureComponent {
     }
 }
 s.Z = () => {
-    let e = (0, c.e7)([D.default], () => {
-            let e = D.default.getCurrentUser();
+    let e = (0, c.e7)([f.default], () => {
+            let e = f.default.getCurrentUser();
             return l()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
         }),
-        s = (0, c.e7)([M.Z], () => M.Z.getBackupCodes()),
-        t = (0, c.e7)([f.Z], () => f.Z.hidePersonalInformation),
-        a = (0, c.e7)([b.Z], () => b.Z.theme),
+        s = (0, c.e7)([x.Z], () => x.Z.getBackupCodes()),
+        t = (0, c.e7)([M.Z], () => M.Z.hidePersonalInformation),
+        a = (0, c.e7)([L.Z], () => L.Z.theme),
         i = (0, O.b)(),
         r = (0, A.CC)(),
-        o = (0, c.e7)([L.default], () => L.default.locale);
-    return (0, n.jsx)(w, {
+        o = (0, c.e7)([P.default], () => P.default.locale);
+    return (0, n.jsx)(H, {
         theme: a,
         currentUser: e,
         backupCodes: s,

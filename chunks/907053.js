@@ -1,7 +1,7 @@
 o.r(s),
     o.d(s, {
         default: function () {
-            return C;
+            return x;
         }
     }),
     o(47120),
@@ -13,43 +13,42 @@ var t,
     i = o(544891),
     r = o(481060),
     c = o(600164),
-    d = o(777036),
-    I = o(572004),
-    N = o(472305),
-    u = o(981631),
-    _ = o(689938),
-    O = o(332649);
-function x(e) {
+    d = o(572004),
+    I = o(472305),
+    N = o(981631),
+    u = o(689938),
+    _ = o(332649);
+function O(e) {
     let { name: s, value: o } = e,
         [t, n] = a.useState(r.CopyInputModes.DEFAULT);
     return (0, l.jsxs)('div', {
-        className: O.infoRow,
+        className: _.infoRow,
         children: [
             (0, l.jsx)(r.FormTitle, { children: s }),
             (0, l.jsx)(r.CopyInput, {
                 value: o,
                 mode: t,
-                supportsCopy: I.wS,
+                supportsCopy: d.wS,
                 onCopy: () => {
-                    (0, I.JG)(o), n(r.CopyInputModes.SUCCESS);
+                    (0, d.JG)(o), n(r.CopyInputModes.SUCCESS);
                 }
             })
         ]
     });
 }
-function C(e) {
+function x(e) {
     let { onClose: s, transitionState: o } = e,
         [t, n] = a.useState(''),
-        [I, C] = a.useState(''),
-        [h, M] = a.useState(null),
-        [R, m] = a.useState(!1),
-        [A, T] = a.useState('DOMAIN'),
-        j = () => {
-            m(!0),
+        [d, x] = a.useState(''),
+        [C, M] = a.useState(null),
+        [h, R] = a.useState(!1),
+        [m, T] = a.useState('DOMAIN'),
+        A = () => {
+            R(!0),
                 M(null),
                 i.tn
                     .post({
-                        url: u.ANM.CONNECTION(u.ABu.DOMAIN, t),
+                        url: N.ANM.CONNECTION(N.ABu.DOMAIN, t),
                         body: {}
                     })
                     .then(() => {
@@ -57,79 +56,79 @@ function C(e) {
                     })
                     .catch((e) => {
                         var s, o, t, n, l, a, i;
-                        (null === (s = e.body) || void 0 === s ? void 0 : s.proof) && 'DOMAIN' === A ? (C(e.body.proof), T('PROOF_DNS')) : M((null === (a = e.body) || void 0 === a ? void 0 : null === (l = a.errors) || void 0 === l ? void 0 : null === (n = l.domain) || void 0 === n ? void 0 : null === (t = n._errors) || void 0 === t ? void 0 : null === (o = t[0]) || void 0 === o ? void 0 : o.message) || (null === (i = e.body) || void 0 === i ? void 0 : i.message) || e.message);
+                        (null === (s = e.body) || void 0 === s ? void 0 : s.proof) && 'DOMAIN' === m ? (x(e.body.proof), T('PROOF_DNS')) : M((null === (a = e.body) || void 0 === a ? void 0 : null === (l = a.errors) || void 0 === l ? void 0 : null === (n = l.domain) || void 0 === n ? void 0 : null === (t = n._errors) || void 0 === t ? void 0 : null === (o = t[0]) || void 0 === o ? void 0 : o.message) || (null === (i = e.body) || void 0 === i ? void 0 : i.message) || e.message);
                     })
                     .finally(() => {
-                        m(!1);
+                        R(!1);
                     });
         };
     return (0, l.jsxs)(r.ModalRoot, {
         transitionState: o,
-        className: O.__invalid_modal,
+        className: _.__invalid_modal,
         children: [
             (0, l.jsxs)(r.ModalHeader, {
                 direction: c.Z.Direction.VERTICAL,
-                className: O.header,
+                className: _.header,
                 separator: !1,
                 children: [
                     (0, l.jsx)(r.Heading, {
                         variant: 'heading-xl/semibold',
-                        children: _.Z.Messages.DOMAIN_VERIFICATION_HEADER
+                        children: u.Z.Messages.DOMAIN_VERIFICATION_HEADER
                     }),
                     (0, l.jsx)(r.ModalCloseButton, {
-                        className: O.closeButton,
+                        className: _.closeButton,
                         onClick: s
                     })
                 ]
             }),
             (0, l.jsxs)(r.Slides, {
-                activeSlide: A,
+                activeSlide: m,
                 width: 440,
                 children: [
                     (0, l.jsx)(r.Slide, {
                         id: 'DOMAIN',
                         children: (0, l.jsxs)('form', {
                             onSubmit: (e) => {
-                                e.preventDefault(), j();
+                                e.preventDefault(), A();
                             },
                             children: [
                                 (0, l.jsxs)(r.ModalContent, {
-                                    className: O.content,
+                                    className: _.content,
                                     children: [
                                         (0, l.jsx)(r.Text, {
                                             variant: 'text-md/normal',
                                             color: 'header-secondary',
-                                            className: O.description,
-                                            children: _.Z.Messages.DOMAIN_VERIFICATION_DESCRIPTION
+                                            className: _.description,
+                                            children: u.Z.Messages.DOMAIN_VERIFICATION_DESCRIPTION
                                         }),
                                         (0, l.jsx)(r.FormItem, {
-                                            title: _.Z.Messages.DOMAIN_VERIFICATION_LABEL,
-                                            error: h,
+                                            title: u.Z.Messages.DOMAIN_VERIFICATION_LABEL,
+                                            error: C,
                                             children: (0, l.jsx)(r.TextInput, {
                                                 onChange: n,
-                                                placeholder: N.pL,
+                                                placeholder: I.pL,
                                                 maxLength: 253,
                                                 value: t,
-                                                disabled: R,
+                                                disabled: h,
                                                 autoFocus: !0
                                             })
                                         })
                                     ]
                                 }),
                                 (0, l.jsxs)(r.ModalFooter, {
-                                    className: O.footer,
+                                    className: _.footer,
                                     children: [
                                         (0, l.jsx)(r.Button, {
                                             type: 'submit',
-                                            submitting: R,
+                                            submitting: h,
                                             disabled: '' === t,
-                                            children: _.Z.Messages.NEXT
+                                            children: u.Z.Messages.NEXT
                                         }),
                                         (0, l.jsx)(r.Button, {
                                             look: r.Button.Looks.LINK,
                                             color: r.Button.Colors.PRIMARY,
                                             onClick: s,
-                                            children: _.Z.Messages.CANCEL
+                                            children: u.Z.Messages.CANCEL
                                         })
                                     ]
                                 })
@@ -140,16 +139,16 @@ function C(e) {
                         id: 'PROOF_DNS',
                         children: [
                             (0, l.jsxs)(r.ModalContent, {
-                                className: O.content,
+                                className: _.content,
                                 children: [
                                     (0, l.jsxs)('ol', {
-                                        className: O.list,
+                                        className: _.list,
                                         children: [
                                             (0, l.jsx)('li', {
                                                 children: (0, l.jsx)(r.Text, {
                                                     tag: 'span',
                                                     variant: 'text-md/normal',
-                                                    children: _.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_1
+                                                    children: u.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_1
                                                 })
                                             }),
                                             (0, l.jsxs)('li', {
@@ -157,22 +156,22 @@ function C(e) {
                                                     (0, l.jsx)(r.Text, {
                                                         tag: 'span',
                                                         variant: 'text-md/normal',
-                                                        children: _.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_2
+                                                        children: u.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_2
                                                     }),
                                                     (0, l.jsxs)('div', {
-                                                        className: O.dnsRecordContainer,
+                                                        className: _.dnsRecordContainer,
                                                         children: [
-                                                            (0, l.jsx)(x, {
-                                                                name: _.Z.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
-                                                                value: (0, N.Qv)(t)
+                                                            (0, l.jsx)(O, {
+                                                                name: u.Z.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
+                                                                value: (0, I.Qv)(t)
                                                             }),
-                                                            (0, l.jsx)(x, {
-                                                                name: _.Z.Messages.DOMAIN_VERIFICATION_RECORD_TYPE,
+                                                            (0, l.jsx)(O, {
+                                                                name: u.Z.Messages.DOMAIN_VERIFICATION_RECORD_TYPE,
                                                                 value: 'TXT'
                                                             }),
-                                                            (0, l.jsx)(x, {
-                                                                name: _.Z.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
-                                                                value: I
+                                                            (0, l.jsx)(O, {
+                                                                name: u.Z.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
+                                                                value: d
                                                             })
                                                         ]
                                                     })
@@ -180,22 +179,22 @@ function C(e) {
                                             })
                                         ]
                                     }),
-                                    (0, l.jsx)(d.Z, {
-                                        messageType: d.Q.INFO,
-                                        className: O.text,
-                                        children: _.Z.Messages.DOMAIN_VERIFICATION_DNS_WARNING
+                                    (0, l.jsx)(r.HelpMessage, {
+                                        messageType: r.HelpMessageTypes.INFO,
+                                        className: _.text,
+                                        children: u.Z.Messages.DOMAIN_VERIFICATION_DNS_WARNING
                                     }),
-                                    null != h &&
+                                    null != C &&
                                         (0, l.jsx)(r.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-danger',
-                                            className: O.text,
-                                            children: h
+                                            className: _.text,
+                                            children: C
                                         })
                                 ]
                             }),
                             (0, l.jsxs)(r.ModalFooter, {
-                                className: O.footer,
+                                className: _.footer,
                                 direction: c.Z.Direction.HORIZONTAL,
                                 children: [
                                     (0, l.jsx)(r.Button, {
@@ -204,10 +203,10 @@ function C(e) {
                                         onClick: () => {
                                             T('DOMAIN'), M(null);
                                         },
-                                        children: _.Z.Messages.BACK
+                                        children: u.Z.Messages.BACK
                                     }),
                                     (0, l.jsxs)('div', {
-                                        className: O.footerInner,
+                                        className: _.footerInner,
                                         children: [
                                             (0, l.jsx)(r.Button, {
                                                 look: r.Button.Looks.LINK,
@@ -215,13 +214,13 @@ function C(e) {
                                                 onClick: () => {
                                                     T('PROOF_HTTP'), M(null);
                                                 },
-                                                className: O.__invalid_switchButton,
-                                                children: _.Z.Messages.DOMAIN_VERIFICATION_USE_HTTP
+                                                className: _.__invalid_switchButton,
+                                                children: u.Z.Messages.DOMAIN_VERIFICATION_USE_HTTP
                                             }),
                                             (0, l.jsx)(r.Button, {
-                                                submitting: R,
-                                                onClick: j,
-                                                children: _.Z.Messages.VERIFY
+                                                submitting: h,
+                                                onClick: A,
+                                                children: u.Z.Messages.VERIFY
                                             })
                                         ]
                                     })
@@ -233,37 +232,37 @@ function C(e) {
                         id: 'PROOF_HTTP',
                         children: [
                             (0, l.jsxs)(r.ModalContent, {
-                                className: O.content,
+                                className: _.content,
                                 children: [
                                     (0, l.jsx)(r.Text, {
                                         tag: 'span',
                                         variant: 'text-md/normal',
-                                        children: _.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_HTTP
+                                        children: u.Z.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_HTTP
                                     }),
                                     (0, l.jsxs)('div', {
-                                        className: O.httpFileContainer,
+                                        className: _.httpFileContainer,
                                         children: [
-                                            (0, l.jsx)(x, {
-                                                name: _.Z.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
-                                                value: (0, N.F9)(t)
+                                            (0, l.jsx)(O, {
+                                                name: u.Z.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
+                                                value: (0, I.F9)(t)
                                             }),
-                                            (0, l.jsx)(x, {
-                                                name: _.Z.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
-                                                value: I
+                                            (0, l.jsx)(O, {
+                                                name: u.Z.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
+                                                value: d
                                             })
                                         ]
                                     }),
-                                    null != h &&
+                                    null != C &&
                                         (0, l.jsx)(r.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-danger',
-                                            className: O.text,
-                                            children: h
+                                            className: _.text,
+                                            children: C
                                         })
                                 ]
                             }),
                             (0, l.jsxs)(r.ModalFooter, {
-                                className: O.footer,
+                                className: _.footer,
                                 direction: c.Z.Direction.HORIZONTAL,
                                 children: [
                                     (0, l.jsx)(r.Button, {
@@ -272,10 +271,10 @@ function C(e) {
                                         onClick: () => {
                                             T('DOMAIN'), M(null);
                                         },
-                                        children: _.Z.Messages.BACK
+                                        children: u.Z.Messages.BACK
                                     }),
                                     (0, l.jsxs)('div', {
-                                        className: O.footerInner,
+                                        className: _.footerInner,
                                         children: [
                                             (0, l.jsx)(r.Button, {
                                                 look: r.Button.Looks.LINK,
@@ -283,13 +282,13 @@ function C(e) {
                                                 onClick: () => {
                                                     T('PROOF_DNS'), M(null);
                                                 },
-                                                className: O.__invalid_switchButton,
-                                                children: _.Z.Messages.DOMAIN_VERIFICATION_USE_DNS
+                                                className: _.__invalid_switchButton,
+                                                children: u.Z.Messages.DOMAIN_VERIFICATION_USE_DNS
                                             }),
                                             (0, l.jsx)(r.Button, {
-                                                submitting: R,
-                                                onClick: j,
-                                                children: _.Z.Messages.VERIFY
+                                                submitting: h,
+                                                onClick: A,
+                                                children: u.Z.Messages.VERIFY
                                             })
                                         ]
                                     })

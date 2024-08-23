@@ -1,41 +1,40 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return f;
+            return p;
         },
         openInteractionModal: function () {
-            return m;
+            return f;
         }
     });
 var o = t(735250);
 t(470079);
 var i = t(481060),
     a = t(112831),
-    r = t(777036),
     l = t(970184),
-    s = t(471073),
-    u = t(293979),
-    d = t(954654),
-    c = t(689938),
-    p = t(167990);
-function f(e) {
-    let { title: n, onClose: t, transitionState: f } = e,
-        { components: m, applicationIconURL: h, applicationName: I, submissionState: _, error: C, validators: g, onSubmit: b } = (0, u.X9)(e, t);
+    r = t(471073),
+    s = t(293979),
+    u = t(954654),
+    d = t(689938),
+    c = t(167990);
+function p(e) {
+    let { title: n, onClose: t, transitionState: p } = e,
+        { components: f, applicationIconURL: m, applicationName: h, submissionState: I, error: _, validators: g, onSubmit: C } = (0, s.X9)(e, t);
     return (0, o.jsx)('form', {
         onSubmit: (e) => {
-            e.preventDefault(), b();
+            e.preventDefault(), C();
         },
         children: (0, o.jsxs)(i.ModalRoot, {
-            transitionState: f,
+            transitionState: p,
             children: [
                 (0, o.jsxs)(i.ModalHeader, {
                     separator: !1,
                     children: [
                         (0, o.jsx)(i.Avatar, {
-                            src: h,
+                            src: m,
                             size: i.AvatarSizes.SIZE_24,
-                            'aria-label': I,
-                            className: p.applicationIcon
+                            'aria-label': h,
+                            className: c.applicationIcon
                         }),
                         (0, o.jsx)(a.Z, {
                             color: a.Z.Colors.HEADER_PRIMARY,
@@ -44,29 +43,29 @@ function f(e) {
                         }),
                         (0, o.jsx)(i.ModalCloseButton, {
                             onClick: t,
-                            className: p.closeButton
+                            className: c.closeButton
                         })
                     ]
                 }),
                 (0, o.jsxs)(i.ModalContent, {
                     children: [
-                        null != C && '' !== C
-                            ? (0, o.jsx)(r.Z, {
-                                  messageType: r.Q.ERROR,
-                                  className: p.submissionWarning,
-                                  children: C
+                        null != _ && '' !== _
+                            ? (0, o.jsx)(i.HelpMessage, {
+                                  messageType: i.HelpMessageTypes.ERROR,
+                                  className: c.submissionWarning,
+                                  children: _
                               })
                             : null,
-                        (0, o.jsx)(r.Z, {
-                            messageType: r.Q.WARNING,
-                            className: p.submissionWarning,
-                            children: c.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({ applicationName: I })
+                        (0, o.jsx)(i.HelpMessage, {
+                            messageType: i.HelpMessageTypes.WARNING,
+                            className: c.submissionWarning,
+                            children: d.Z.Messages.INTERACTION_FORM_SUBMISSION_APPLICATION.format({ applicationName: h })
                         }),
                         (0, o.jsx)(i.FormSection, {
                             children: (0, o.jsx)(l.Il, {
                                 modal: e,
                                 validators: g,
-                                children: (0, d.xX)(m)
+                                children: (0, u.xX)(f)
                             })
                         })
                     ]
@@ -77,14 +76,14 @@ function f(e) {
                             type: 'submit',
                             color: i.Button.Colors.BRAND,
                             size: i.Button.Sizes.MEDIUM,
-                            submitting: _ === s.i.IN_FLIGHT,
-                            children: c.Z.Messages.SUBMIT
+                            submitting: I === r.i.IN_FLIGHT,
+                            children: d.Z.Messages.SUBMIT
                         }),
                         (0, o.jsx)(i.Button, {
                             look: i.Button.Looks.LINK,
                             color: i.Button.Colors.PRIMARY,
                             onClick: t,
-                            children: c.Z.Messages.CANCEL
+                            children: d.Z.Messages.CANCEL
                         })
                     ]
                 })
@@ -92,9 +91,9 @@ function f(e) {
         })
     });
 }
-function m(e) {
+function f(e) {
     (0, i.openModal)((n) =>
-        (0, o.jsx)(f, {
+        (0, o.jsx)(p, {
             ...n,
             ...e
         })
