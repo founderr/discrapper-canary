@@ -20,8 +20,8 @@ var i = n(735250),
     g = n(680180),
     p = n(791734),
     T = n(341789),
-    S = n(591433),
-    f = n(282773),
+    f = n(591433),
+    S = n(282773),
     C = n(143021),
     N = n(775260),
     A = n(49898),
@@ -56,7 +56,7 @@ function O() {
         ),
         K = Y === d.v0.SAVED_GUILDS,
         q = a.useRef(new h.Z(P)),
-        { onGuildCardSeen: Q, onGuildCardClick: X } = (0, f.H)({
+        { onGuildCardSeen: Q, onGuildCardClick: X } = (0, S.H)({
             guildDiscoveryCardSeenManager: q.current,
             loadId: e.current
         });
@@ -113,7 +113,7 @@ function O() {
                 ]
             }),
             F
-                ? (0, i.jsx)(S.Z, {
+                ? (0, i.jsx)(f.Z, {
                       loadId: e.current,
                       onGuildCardClick: X,
                       onGuildCardSeen: Q

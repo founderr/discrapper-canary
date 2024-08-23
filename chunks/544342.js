@@ -1,4 +1,4 @@
-t.d(r, {
+r.d(t, {
     c: function () {
         return a;
     }

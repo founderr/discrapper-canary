@@ -5,8 +5,8 @@ var i,
     r,
     a = n(442837),
     d = n(570140),
-    h = n(45114),
-    o = n(897473),
+    o = n(45114),
+    h = n(897473),
     u = n(581883),
     c = n(314897),
     C = n(592125),
@@ -17,38 +17,38 @@ var i,
     I = n(9156),
     E = n(70956),
     S = n(709054),
-    y = n(981631);
-let w = new Set(),
-    _ = {},
-    N = {};
-function m(e, t) {
-    let n = _[e];
+    _ = n(981631);
+let y = new Set(),
+    w = {},
+    m = {};
+function N(e, t) {
+    let n = w[e];
     if (null != n && null != t && n.has(t)) {
         var i;
-        I.ZP.isOptInEnabled(e) && !(null === (i = C.Z.getChannel(t)) || void 0 === i ? void 0 : i.isThread()) && null == v.ZP.ackMessageId(t) && d.Z.wait(() => (0, h.In)(t, !0, !0, S.default.atPreviousMillisecond(t)));
+        I.ZP.isOptInEnabled(e) && !(null === (i = C.Z.getChannel(t)) || void 0 === i ? void 0 : i.isThread()) && null == v.ZP.ackMessageId(t) && d.Z.wait(() => (0, o.In)(t, !0, !0, S.default.atPreviousMillisecond(t)));
     }
 }
 function A(e) {
     var t;
-    if (null != _[e]) return;
+    if (null != w[e]) return;
     let n = g.ZP.getChannels(e)[g.sH].map((e) => e.channel.id),
         i = null === (t = p.ZP.getMember(e, c.default.getId())) || void 0 === t ? void 0 : t.joinedAt;
     if (null == i) return;
-    _[e] = new Set();
+    w[e] = new Set();
     let s = new Date(i).getTime();
     if (0 !== n.length)
-        (_[e] = new Set(
+        (w[e] = new Set(
             n.filter((t) => {
                 let n = S.default.extractTimestamp(t);
                 return null == v.ZP.getTrackedAckMessageId(t) && n > Date.now() - E.Z.Millis.WEEK && n > u.Z.getGuildRecentsDismissedAt(e) && n > s && !I.ZP.isChannelOrParentOptedIn(e, t);
             })
         )),
-            (N[e] = Date.now());
+            (m[e] = Date.now());
 }
 function L() {
-    S.default.keys(_).forEach((e) => {
-        let t = _[e];
-        _[e] = new Set([...t].filter((t) => !I.ZP.isChannelOrParentOptedIn(e, t)));
+    S.default.keys(w).forEach((e) => {
+        let t = w[e];
+        w[e] = new Set([...t].filter((t) => !I.ZP.isChannelOrParentOptedIn(e, t)));
     });
 }
 class R extends (i = a.ZP.Store) {
@@ -57,13 +57,13 @@ class R extends (i = a.ZP.Store) {
     }
     getNewChannelIds(e) {
         var t;
-        return null != e && null == _[e] && A(e), null != e && null !== (t = _[e]) && void 0 !== t ? t : w;
+        return null != e && null == w[e] && A(e), null != e && null !== (t = w[e]) && void 0 !== t ? t : y;
     }
     shouldIndicateNewChannel(e, t) {
         var n;
         if (null == e) return !1;
         let i = f.Z.getGuild(e);
-        return !!(null != i && i.hasFeature(y.oNc.COMMUNITY)) && (null != e && null == _[e] && A(e), (null === (n = _[e]) || void 0 === n ? void 0 : n.has(t)) && null == v.ZP.getTrackedAckMessageId(t));
+        return !!(null != i && i.hasFeature(_.oNc.COMMUNITY)) && (null != e && null == w[e] && A(e), (null === (n = w[e]) || void 0 === n ? void 0 : n.has(t)) && null == v.ZP.getTrackedAckMessageId(t));
     }
 }
 (r = 'NewChannelsStore'),
@@ -78,29 +78,29 @@ class R extends (i = a.ZP.Store) {
     (t.Z = new R(d.Z, {
         BULK_CLEAR_RECENTS: function (e) {
             let { guildId: t, channelIds: n } = e;
-            if (null == _[t]) return !1;
-            n.forEach((e) => _[t].delete(e)), 0 === _[t].size && delete _[t];
+            if (null == w[t]) return !1;
+            n.forEach((e) => w[t].delete(e)), 0 === w[t].size && delete w[t];
         },
         CHANNEL_ACK: () => !0,
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
-            return null != t && (null == _[t] || N[t] < Date.now() - E.Z.Millis.HOUR ? (A(t), !0) : (null != n && m(t, n), !1));
+            return null != t && (null == w[t] || m[t] < Date.now() - E.Z.Millis.HOUR ? (A(t), !0) : (null != n && N(t, n), !1));
         },
         SIDEBAR_VIEW_CHANNEL: function (e) {
             let { guildId: t, channelId: n, sidebarType: i } = e;
-            return null != t && i === o.tI.VIEW_CHANNEL && (m(t, n), !1);
+            return null != t && i === h.tI.VIEW_CHANNEL && (N(t, n), !1);
         },
         SIDEBAR_VIEW_GUILD: function (e) {
             let { guildId: t, baseChannelId: n } = e;
-            return null != t && (m(t, n), !1);
+            return null != t && (N(t, n), !1);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;
-            delete _[t.id];
+            delete w[t.id];
         },
         CHANNEL_CREATE: function (e) {
             var t;
             let { channel: n } = e;
-            !n.isVocal() && ((_[n.guild_id] = null !== (t = _[n.guild_id]) && void 0 !== t ? t : new Set()), _[n.guild_id].add(n.id));
+            !n.isVocal() && ((w[n.guild_id] = null !== (t = w[n.guild_id]) && void 0 !== t ? t : new Set()), w[n.guild_id].add(n.id));
         }
     }));

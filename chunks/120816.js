@@ -1,14 +1,14 @@
-t(47120);
+r(47120);
 var a,
     n,
     i,
     o,
-    l = t(772848),
-    c = t(756647),
-    s = t(442837),
-    d = t(570140),
-    u = t(314897),
-    h = t(906467);
+    l = r(772848),
+    c = r(756647),
+    s = r(442837),
+    d = r(570140),
+    u = r(314897),
+    h = r(906467);
 let m = 0,
     g = [],
     p = [],
@@ -36,17 +36,17 @@ class f extends (a = s.ZP.Store) {
               writable: !0
           })
         : (n[i] = o),
-    (r.Z = new f(d.Z, {
+    (t.Z = new f(d.Z, {
         TRACK: function (e) {
-            let { event: r, properties: t, fingerprint: a } = e;
+            let { event: t, properties: r, fingerprint: a } = e;
             if (h.Z.isDeveloper) {
                 var n;
                 (g = [
                     ...g,
                     {
                         key: (m++).toString(),
-                        event: r,
-                        properties: t,
+                        event: t,
+                        properties: r,
                         fingerprint: null != (n = a) ? (0, c.s)(n) : u.default.getId(),
                         timestamp: new Date()
                     }
@@ -54,15 +54,15 @@ class f extends (a = s.ZP.Store) {
             }
         },
         TRACK_TRIGGER: function (e) {
-            let { experimentId: r, descriptor: t, exposureType: a, excluded: n, location: i, previouslyTracked: o } = e;
+            let { experimentId: t, descriptor: r, exposureType: a, excluded: n, location: i, previouslyTracked: o } = e;
             if (!!h.Z.isDeveloper)
                 b &&
                     (p = [
                         ...p,
                         {
                             key: (0, l.Z)(),
-                            experimentId: r,
-                            descriptor: t,
+                            experimentId: t,
+                            descriptor: r,
                             exposureType: a,
                             excluded: n,
                             location: i,
@@ -73,8 +73,8 @@ class f extends (a = s.ZP.Store) {
                     p.shift();
         },
         SET_TRACK_TRIGGERS: function (e) {
-            let { enabled: r } = e;
-            b = r;
+            let { enabled: t } = e;
+            b = t;
         },
         ANALYTICS_LOG_CLEAR: function () {
             (g = []), (p = []);

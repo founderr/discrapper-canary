@@ -15,8 +15,8 @@ var i = n(735250),
     g = n(341907),
     p = n(683301),
     T = n(296386),
-    S = n(150192),
-    f = n(889010),
+    f = n(150192),
+    S = n(889010),
     C = n(488905),
     N = n(731455),
     A = n(981631),
@@ -51,7 +51,7 @@ t.Z = function () {
         })),
         R = (0, m.Z)(v.dr.QUEST_HOME_DESKTOP),
         x = (0, E.OG)(),
-        b = (0, o.e7)([S.Z], () => S.Z.getClanDiscoveryCategories(), [], S.j),
+        b = (0, o.e7)([f.Z], () => f.Z.getClanDiscoveryCategories(), [], f.j),
         P =
             null == b
                 ? void 0
@@ -93,7 +93,7 @@ t.Z = function () {
                     },
                     'clan-discovery-home'
                 ),
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(S.Z, {
                     categories: P,
                     handleCategorySelect: M,
                     currentCategoryId: e,

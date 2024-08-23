@@ -1,19 +1,19 @@
-t.d(r, {
+r.d(t, {
     Z: function () {
         return b;
     }
 }),
-    t(47120);
-var a = t(735250),
-    n = t(470079),
-    i = t(848246),
-    o = t(442837),
-    l = t(481060),
-    c = t(570140),
-    s = t(746599),
-    d = t(594174),
-    u = t(246992),
-    h = t(700768);
+    r(47120);
+var a = r(735250),
+    n = r(470079),
+    i = r(848246),
+    o = r(442837),
+    l = r(481060),
+    c = r(570140),
+    s = r(746599),
+    d = r(594174),
+    u = r(246992),
+    h = r(700768);
 let m = [
         {
             label: 'No Override',
@@ -46,7 +46,7 @@ let m = [
     ];
 function b() {
     let e = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-        [r, t] = n.useState(!1),
+        [t, r] = n.useState(!1),
         [b, f] = n.useState(!1),
         [y, x] = n.useState(1);
     return (0, a.jsxs)('div', {
@@ -58,9 +58,9 @@ function b() {
                 tag: l.FormTitleTags.H3,
                 children: (0, a.jsx)(l.SingleSelect, {
                     options: m,
-                    value: r,
+                    value: t,
                     onChange: (e) => {
-                        t(e);
+                        r(e);
                     },
                     popoutLayerContext: u.O$
                 })
@@ -97,7 +97,7 @@ function b() {
                         type: 'PREMIUM_PERKS_DEMO_OVERRIDE',
                         perkType: i.q.STREAM_HIGH_QUALITY,
                         user: e,
-                        available: r,
+                        available: t,
                         activateSuccess: b,
                         demoDuration: y
                     }),

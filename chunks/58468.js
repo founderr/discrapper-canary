@@ -17,25 +17,25 @@ function d(e, t, n) {
         e
     );
 }
-let h = {},
-    o = h;
+let o = {},
+    h = o;
 function u() {
-    r.default.keys(o).forEach((e) => {
-        null == a.Z.getChannel(e) && delete o[e];
+    r.default.keys(h).forEach((e) => {
+        null == a.Z.getChannel(e) && delete h[e];
     });
 }
 class c extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(a.Z), (o = null != e ? e : h);
+        this.waitFor(a.Z), (h = null != e ? e : o);
     }
     getState() {
-        return o;
+        return h;
     }
     getCollapsed() {
-        return o;
+        return h;
     }
     isCollapsed(e) {
-        return o[e] || !1;
+        return h[e] || !1;
     }
 }
 d(c, 'displayName', 'CollapsedVoiceChannelStore'),
@@ -45,6 +45,6 @@ d(c, 'displayName', 'CollapsedVoiceChannelStore'),
         OVERLAY_INITIALIZE: u,
         CHANNEL_COLLAPSE: function (e) {
             let { channelId: t } = e;
-            o[t] ? delete o[t] : (o[t] = !0), (o = { ...o });
+            h[t] ? delete h[t] : (h[t] = !0), (h = { ...h });
         }
     }));

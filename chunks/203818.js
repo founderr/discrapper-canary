@@ -19,7 +19,7 @@ function d(e) {
     let { guildId: t, expand: n } = e;
     n ? (a[t] = !0) : delete a[t];
 }
-class h extends (i = s.ZP.PersistedStore) {
+class o extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         a = null != e ? e : {};
     }
@@ -34,9 +34,9 @@ class h extends (i = s.ZP.PersistedStore) {
         return a;
     }
 }
-r(h, 'displayName', 'ChannelListVoiceCategoryStore'),
-    r(h, 'persistKey', 'ChannelListVoiceCategoryStore'),
-    (t.Z = new h(l.Z, {
+r(o, 'displayName', 'ChannelListVoiceCategoryStore'),
+    r(o, 'persistKey', 'ChannelListVoiceCategoryStore'),
+    (t.Z = new o(l.Z, {
         VOICE_CATEGORY_COLLAPSE: d,
         VOICE_CATEGORY_EXPAND: d
     }));

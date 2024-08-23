@@ -22,7 +22,7 @@ var i = n(735250),
 function T(e) {
     let { loadId: t, onScroll: n } = e,
         T = (0, d.Z)(),
-        S = (0, s.e7)([u.Z], () => u.Z.theme);
+        f = (0, s.e7)([u.Z], () => u.Z.theme);
     return (
         a.useEffect(() => {
             _.Zt({
@@ -62,7 +62,7 @@ function T(e) {
                                                       premiumSubscriptionCount: void 0,
                                                       emojis: void 0
                                                   },
-                                                  theme: S
+                                                  theme: f
                                               },
                                               e.id
                                           )

@@ -12,12 +12,12 @@ t.d(n, {
 var s = t(735250);
 t(470079);
 var r = t(120356),
-    i = t.n(r),
+    l = t.n(r),
     o = t(726542),
-    l = t(981631),
+    i = t(981631),
     a = t(145301);
 function c(e) {
-    return null != e && Object.values(l.ABu).includes(e) ? e : null;
+    return null != e && Object.values(i.ABu).includes(e) ? e : null;
 }
 function u(e) {
     let { children: n, platformType: t } = e,
@@ -32,9 +32,9 @@ function u(e) {
 function d(e) {
     let { platform: n, className: t } = e;
     return (0, s.jsxs)('div', {
-        className: i()(a.logos, t),
+        className: l()(a.logos, t),
         children: [
-            (0, s.jsx)('div', { className: i()(a.logo, a.logoDiscord) }),
+            (0, s.jsx)('div', { className: l()(a.logo, a.logoDiscord) }),
             (0, s.jsx)('div', { className: a.logosDivider }),
             (0, s.jsx)('div', {
                 className: a.logo,

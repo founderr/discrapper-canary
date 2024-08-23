@@ -1,34 +1,34 @@
-t.d(r, {
+r.d(t, {
     Z: function () {
         return d;
     }
 }),
-    t(47120);
-var a = t(735250),
-    n = t(470079),
-    i = t(442837),
-    o = t(481060),
-    l = t(581612),
-    c = t(91311),
-    s = t(701801);
+    r(47120);
+var a = r(735250),
+    n = r(470079),
+    i = r(442837),
+    o = r(481060),
+    l = r(581612),
+    c = r(91311),
+    s = r(701801);
 function d() {
     let e = (0, i.e7)([c.Z], () => c.Z.allWithDescriptions(), [], i.pF),
-        r = n.useMemo(
+        t = n.useMemo(
             () =>
                 e.map((e) => {
-                    let [r, t, n] = e;
+                    let [t, r, n] = e;
                     return (0, a.jsx)(
                         o.FormItem,
                         {
                             children: (0, a.jsx)(o.FormSwitch, {
-                                value: t,
-                                note: r,
-                                onChange: (e) => (0, l.Z)(r, e),
+                                value: r,
+                                note: t,
+                                onChange: (e) => (0, l.Z)(t, e),
                                 hideBorder: !0,
                                 children: n
                             })
                         },
-                        r
+                        t
                     );
                 }),
             [e]
@@ -44,7 +44,7 @@ function d() {
             }),
             (0, a.jsx)('div', {
                 className: s.rowsContainer,
-                children: r
+                children: t
             })
         ]
     });

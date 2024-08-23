@@ -3,8 +3,8 @@ n(47120), n(653041);
 var r,
     a,
     d,
-    h,
     o,
+    h,
     u,
     c = n(913527),
     C = n.n(c),
@@ -15,11 +15,11 @@ var r,
     I = n(333984),
     E = n(131704),
     S = n(592125),
-    y = n(430824),
-    w = n(306680),
-    _ = n(9156),
-    N = n(594174),
-    m = n(709054),
+    _ = n(430824),
+    y = n(306680),
+    w = n(9156),
+    m = n(594174),
+    N = n(709054),
     A = n(176505);
 ((d = r || (r = {})).DEFAULT = 'DEFAULT'), (d.FAVORITE = 'FAVORITE');
 let L = new p.h(
@@ -38,12 +38,12 @@ function R(e) {
             ? arguments[1]
             : (function (e) {
                   var t, n;
-                  let i = null !== (n = null !== (t = w.ZP.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
+                  let i = null !== (n = null !== (t = y.ZP.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== n ? n : e.id,
                       s = e.isMessageRequestTimestamp;
                   if (null != s) {
                       let e = C()(s).valueOf(),
-                          t = m.default.fromTimestamp(e);
-                      return m.default.compare(i, t) > 0 ? i : t;
+                          t = N.default.fromTimestamp(e);
+                      return N.default.compare(i, t) > 0 ? i : t;
                   }
                   return i;
               })(e);
@@ -54,17 +54,17 @@ function R(e) {
         isRequest: v.Z.isMessageRequest(e.id) || I.Z.isSpam(e.id)
     };
 }
-function Z() {
+function b() {
     L.clear(),
         Object.values(S.Z.getMutablePrivateChannels()).forEach((e) => {
             L.set(e.id, R(e));
         });
 }
-function O() {
+function Z() {
     let e = S.Z.getMutablePrivateChannels();
     for (let t in e) L.set(t, R(e[t]));
 }
-let T =
+let O =
     ((i = []),
     (s = []),
     (l = []),
@@ -87,12 +87,12 @@ let T =
             l
         );
     });
-class P extends (a = g.ZP.Store) {
+class T extends (a = g.ZP.Store) {
     initialize() {
-        this.waitFor(S.Z, y.Z, N.default, v.Z, _.ZP), this.syncWith([_.ZP, v.Z], Z);
+        this.waitFor(S.Z, _.Z, m.default, v.Z, w.ZP), this.syncWith([w.ZP, v.Z], b);
     }
     getPrivateChannelIds() {
-        return T();
+        return O();
     }
     getSortedChannels() {
         return [L.values('FAVORITE'), L.values('DEFAULT')];
@@ -109,20 +109,20 @@ class P extends (a = g.ZP.Store) {
     }
 }
 (u = 'PrivateChannelSortStore'),
-    (o = 'displayName') in (h = P)
-        ? Object.defineProperty(h, o, {
+    (h = 'displayName') in (o = T)
+        ? Object.defineProperty(o, h, {
               value: u,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (h[o] = u),
-    (t.Z = new P(f.Z, {
-        CONNECTION_OPEN: Z,
-        CONNECTION_OPEN_SUPPLEMENTAL: Z,
-        OVERLAY_INITIALIZE: Z,
-        CACHE_LOADED: O,
-        CACHE_LOADED_LAZY: O,
+        : (o[h] = u),
+    (t.Z = new T(f.Z, {
+        CONNECTION_OPEN: b,
+        CONNECTION_OPEN_SUPPLEMENTAL: b,
+        OVERLAY_INITIALIZE: b,
+        CACHE_LOADED: Z,
+        CACHE_LOADED_LAZY: Z,
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
             t.forEach((e) => {

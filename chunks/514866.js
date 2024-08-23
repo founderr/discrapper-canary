@@ -1,26 +1,26 @@
-t.d(r, {
+r.d(t, {
     Z: function () {
         return p;
     }
 });
-var a = t(735250);
-t(470079);
-var n = t(120356),
-    i = t.n(n),
-    o = t(481060),
-    l = t(45114),
-    c = t(110478),
-    s = t(423932),
-    d = t(601948),
-    u = t(594174),
-    h = t(804637),
-    m = t(224499);
+var a = r(735250);
+r(470079);
+var n = r(120356),
+    i = r.n(n),
+    o = r(481060),
+    l = r(45114),
+    c = r(110478),
+    s = r(423932),
+    d = r(601948),
+    u = r(594174),
+    h = r(804637),
+    m = r(224499);
 let g = () => {
-    Promise.all([t.e('52030'), t.e('55900')])
-        .then(t.bind(t, 24031))
+    Promise.all([r.e('52030'), r.e('55900')])
+        .then(r.bind(r, 24031))
         .then((e) => {
-            let { openMFAModal: r } = e;
-            r(
+            let { openMFAModal: t } = e;
+            t(
                 {
                     ticket: 'ticket',
                     methods: [
@@ -43,7 +43,7 @@ let g = () => {
 };
 function p() {
     let e = u.default.getCurrentUser(),
-        r = null == e ? void 0 : e.isStaff();
+        t = null == e ? void 0 : e.isStaff();
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)('div', {
@@ -71,7 +71,7 @@ function p() {
                     children: 'Clear Message Requests Read State'
                 })
             }),
-            r &&
+            t &&
                 (0, a.jsx)('div', {
                     className: i()(h.buttonsContainer, m.marginBottom20),
                     children: (0, a.jsx)(o.Button, {

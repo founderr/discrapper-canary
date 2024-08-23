@@ -1,58 +1,58 @@
-t.r(r),
-    t.d(r, {
+r.r(t),
+    r.d(t, {
         default: function () {
             return Y;
         }
     }),
-    t(653041),
-    t(47120);
-var a = t(735250),
-    n = t(470079),
-    i = t(120356),
-    o = t.n(i),
-    l = t(990547),
-    c = t(442837),
-    s = t(481060),
-    d = t(347469),
-    u = t(213609),
-    h = t(213713),
-    m = t(665149),
-    g = t(906467),
-    p = t(259580),
-    b = t(31336),
-    f = t(19759),
-    y = t(432877);
-t(381996);
-var x = t(392750),
-    k = t(926976),
-    v = t(592197),
-    _ = t(860337),
-    j = t(789654),
-    w = t(691867),
-    C = t(916790),
-    N = t(645973),
-    S = t(912072),
-    T = t(246992),
-    E = t(442954),
-    I = t(702904),
-    Z = t(178821),
-    R = t(248526),
-    O = t(958328),
-    A = t(514866),
-    L = t(678639),
-    B = t(351930),
-    P = t(771751),
-    D = t(596768),
-    M = t(621060),
-    U = t(689938),
-    G = t(941735),
-    H = t(535271);
+    r(653041),
+    r(47120);
+var a = r(735250),
+    n = r(470079),
+    i = r(120356),
+    o = r.n(i),
+    l = r(990547),
+    c = r(442837),
+    s = r(481060),
+    d = r(347469),
+    u = r(213609),
+    h = r(213713),
+    m = r(665149),
+    g = r(906467),
+    p = r(259580),
+    b = r(31336),
+    f = r(19759),
+    y = r(432877);
+r(381996);
+var x = r(392750),
+    k = r(926976),
+    v = r(592197),
+    _ = r(860337),
+    C = r(789654),
+    w = r(691867),
+    j = r(916790),
+    S = r(645973),
+    N = r(912072),
+    T = r(246992),
+    E = r(442954),
+    I = r(702904),
+    Z = r(178821),
+    R = r(248526),
+    O = r(958328),
+    A = r(514866),
+    L = r(678639),
+    P = r(351930),
+    B = r(771751),
+    D = r(596768),
+    M = r(621060),
+    U = r(689938),
+    G = r(941735),
+    H = r(535271);
 function F(e) {
-    let { resizableNode: r, onResize: t, onResizeEnd: n } = e,
+    let { resizableNode: t, onResize: r, onResizeEnd: n } = e,
         i = (0, d.Z)({
             minDimension: f.h,
-            resizableDomNodeRef: r,
-            onElementResize: t,
+            resizableDomNodeRef: t,
+            onElementResize: r,
             onElementResizeEnd: n,
             orientation: d.y.HORIZONTAL_LEFT
         });
@@ -63,7 +63,7 @@ function F(e) {
 }
 function z() {
     var e;
-    let r = n.useMemo(() => {
+    let t = n.useMemo(() => {
             let e = [
                 {
                     id: 'analytics',
@@ -83,7 +83,7 @@ function z() {
                 {
                     id: 'dispatcher',
                     name: 'Dispatcher',
-                    render: () => (0, a.jsx)(C.Z, {})
+                    render: () => (0, a.jsx)(j.Z, {})
                 }
             ];
             return (
@@ -102,7 +102,7 @@ function z() {
                     (e.push({
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
-                        render: () => (0, a.jsx)(N.Z, {})
+                        render: () => (0, a.jsx)(S.Z, {})
                     }),
                     e.push({
                         id: 'clans',
@@ -117,7 +117,7 @@ function z() {
                 e.push({
                     id: 'colors',
                     name: 'Colors',
-                    render: () => (0, a.jsx)(j.Z, {})
+                    render: () => (0, a.jsx)(C.Z, {})
                 }),
                 e.push({
                     id: 'design_toggles',
@@ -127,17 +127,17 @@ function z() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, a.jsx)(S.Z, { devSettingsCategory: y.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(N.Z, { devSettingsCategory: y.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
                     name: 'Messaging',
-                    render: () => (0, a.jsx)(S.Z, { devSettingsCategory: y.zU.MESSAGING })
+                    render: () => (0, a.jsx)(N.Z, { devSettingsCategory: y.zU.MESSAGING })
                 }),
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, a.jsx)(S.Z, { devSettingsCategory: y.zU.REPORTING })
+                    render: () => (0, a.jsx)(N.Z, { devSettingsCategory: y.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -164,7 +164,7 @@ function z() {
                     (e.push({
                         id: 'trials',
                         name: 'Trials',
-                        render: () => (0, a.jsx)(P.Z, {})
+                        render: () => (0, a.jsx)(B.Z, {})
                     }),
                     e.push({
                         id: 'payments',
@@ -174,7 +174,7 @@ function z() {
                     e.push({
                         id: 'subscriptions',
                         name: 'Subscriptions',
-                        render: () => (0, a.jsx)(B.Z, {})
+                        render: () => (0, a.jsx)(P.Z, {})
                     }),
                     e.push({
                         id: 'billing',
@@ -185,18 +185,18 @@ function z() {
             );
         }, []),
         {
-            TabBar: t,
+            TabBar: r,
             renderSelectedTab: i,
             selectedTabId: o
         } = (0, M.Z)(
             {
-                tabs: r,
+                tabs: t,
                 initialSelectedTabId: null !== (e = f.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
                 onChangeTab: (e) => {
                     (0, b.Qh)({ lastOpenTabId: e });
                 }
             },
-            [r]
+            [t]
         );
     return (
         (0, u.Z)({
@@ -221,7 +221,7 @@ function z() {
                         (0, a.jsx)(m.ZP.Title, { children: 'DevTools' })
                     ]
                 }),
-                (0, a.jsx)(t, {}),
+                (0, a.jsx)(r, {}),
                 i(),
                 (0, a.jsx)(T.Br, { className: G.layerContainer })
             ]
@@ -230,20 +230,20 @@ function z() {
 }
 function V() {
     let e = n.useRef(null),
-        r = (0, c.e7)([f.Z], () => f.Z.sidebarWidth),
-        [t, i] = n.useState(null),
+        t = (0, c.e7)([f.Z], () => f.Z.sidebarWidth),
+        [r, i] = n.useState(null),
         l = n.useCallback((e) => (0, b.Qh)({ sidebarWidth: e }), []);
     return (n.useEffect(() => {
-        null === t && null !== r && i(r);
-    }, [r, t]),
-    null === t)
+        null === r && null !== t && i(t);
+    }, [t, r]),
+    null === r)
         ? null
         : (0, a.jsxs)('div', {
               ref: e,
               className: o()(G.container),
               style: {
                   minWidth: f.h,
-                  width: t
+                  width: r
               },
               children: [
                   (0, a.jsx)(F, {
@@ -287,6 +287,6 @@ function W() {
           });
 }
 function Y(e) {
-    let { mobile: r } = e;
-    return r ? (0, a.jsx)(W, {}) : (0, a.jsx)(V, {});
+    let { mobile: t } = e;
+    return t ? (0, a.jsx)(W, {}) : (0, a.jsx)(V, {});
 }

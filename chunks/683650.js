@@ -26,7 +26,7 @@ function m() {
             onClick: () => {
                 (0, u.navigateToQuestHome)(d.dr.EMBED_DESKTOP, l.jn.QUESTS_EMBED);
             },
-            children: e ? _.Z.Messages.QUESTS : _.Z.Messages.GIFT_INVENTORY
+            children: e ? _.Z.Messages.QUESTS_HOME_MOVED_CALLOUT_BUTTON : _.Z.Messages.GIFT_INVENTORY
         })
     });
 }
@@ -51,7 +51,7 @@ function T() {
                         variant: 'lg' === t ? 'text-sm/medium' : 'text-xs/medium',
                         color: 'text-normal',
                         className: E.__invalid_mobileWebCopy,
-                        children: _.Z.Messages.QUESTS_EMBED_INVALID_BODY_2
+                        children: _.Z.Messages.QUESTS_EMBED_INVALID_BODY_3
                     }),
                     (0, i.jsx)(m, {})
                 ]

@@ -224,7 +224,7 @@ class T extends a.PureComponent {
             });
     }
 }
-class S extends a.PureComponent {
+class f extends a.PureComponent {
     componentDidMount() {
         (0, l.ec)(
             this.props.installationPaths.map((e) => {
@@ -285,4 +285,4 @@ t.Z = s.ZP.connectStores([u.Z], () => ({
     installationPaths: u.Z.installationPaths,
     installationPathsMetadata: u.Z.installationPathsMetadata,
     defaultInstallationPath: u.Z.defaultInstallationPath
-}))(S);
+}))(f);

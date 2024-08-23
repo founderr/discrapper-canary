@@ -1,17 +1,17 @@
-t.d(r, {
+r.d(t, {
     Z: function () {
         return p;
     }
 }),
-    t(47120);
-var a = t(735250);
-t(470079);
-var n = t(346652),
-    i = t(692547),
-    o = t(410030),
-    l = t(95398),
-    c = t(981631),
-    s = t(535271);
+    r(47120);
+var a = r(735250);
+r(470079);
+var n = r(346652),
+    i = r(692547),
+    o = r(410030),
+    l = r(95398),
+    c = r(981631),
+    s = r(535271);
 let d = {
     base00: i.Z.colors.BACKGROUND_SECONDARY.css,
     base03: i.Z.colors.TEXT_WARNING.css,
@@ -22,9 +22,9 @@ let d = {
     base0D: i.Z.colors.TEXT_BRAND.css
 };
 function u(e) {
-    let r = {};
-    for (let [t, a] of Object.entries(e)) r[t] = a;
-    return r;
+    let t = {};
+    for (let [r, a] of Object.entries(e)) t[r] = a;
+    return t;
 }
 let h = u(d),
     m = u(d);
@@ -37,13 +37,13 @@ function g(e) {
         : e;
 }
 function p(e) {
-    let { data: r } = e,
-        t = (0, o.ZP)();
+    let { data: t } = e,
+        r = (0, o.ZP)();
     return (0, a.jsx)('div', {
         className: s.inspectorWrapper,
         children: (0, a.jsx)(n.L, {
-            data: r,
-            theme: 'light' === t ? m : h,
+            data: t,
+            theme: 'light' === r ? m : h,
             invertTheme: !1,
             valueRenderer: g
         })

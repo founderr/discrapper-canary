@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(785570),
     p = n(963202),
     T = n(252618),
-    S = n(353926),
-    f = n(440190),
+    f = n(353926),
+    S = n(440190),
     C = n(665149),
     N = n(5955),
     A = n(918701),
@@ -444,10 +444,10 @@ function et(e) {
             fetching: n,
             loadId: a,
             recommendedGuilds: s
-        } = (0, _.cj)([f.Z], () => ({
-            recommendedGuilds: f.Z.getRecommendedGuilds(),
-            loadId: f.Z.getLoadId(),
-            fetching: f.Z.isFetching()
+        } = (0, _.cj)([S.Z], () => ({
+            recommendedGuilds: S.Z.getRecommendedGuilds(),
+            loadId: S.Z.getLoadId(),
+            fetching: S.Z.isFetching()
         }));
     return (0, i.jsx)(ee, {
         searchRoute: t,
@@ -469,7 +469,7 @@ t.Z = function (e) {
         o = (0, _.e7)([P.ZP], () => P.ZP.getIsReady()),
         c = (0, v.Z)(z.dr.QUEST_HOME_DESKTOP),
         d = (0, A.XT)(),
-        u = (0, _.e7)([S.Z], () => S.Z.hasLoadedExperiments);
+        u = (0, _.e7)([f.Z], () => f.Z.hasLoadedExperiments);
     return (a.useEffect(() => {
         c && d && (0, m.uY)(Y.Gj.Quests);
     }, [c, d]),

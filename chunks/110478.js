@@ -1,16 +1,16 @@
-t.d(r, {
+r.d(t, {
     N: function () {
         return i;
     }
 });
-var a = t(735250);
-t(470079);
-var n = t(481060);
+var a = r(735250);
+r(470079);
+var n = r(481060);
 function i(e) {
     (0, n.openModalLazy)(
         async () => {
-            let { default: e } = await t.e('61323').then(t.bind(t, 333636));
-            return (r) => (0, a.jsx)(e, { ...r });
+            let { default: e } = await r.e('61323').then(r.bind(r, 333636));
+            return (t) => (0, a.jsx)(e, { ...t });
         },
         { onCloseCallback: e }
     );

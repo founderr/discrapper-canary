@@ -1,6 +1,6 @@
-var a = t(319301);
+var a = r(319301);
 let n = { figma: { ignore: !0 } };
-r.Z = (0, a.a)({
+t.Z = (0, a.a)({
     'profile-gradient-overlay-synced-with-user-theme': {
         dark: {
             color: 'black.500',

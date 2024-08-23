@@ -22,8 +22,8 @@ var i = n(735250),
     g = n(393596),
     p = n(35448),
     T = n(458203),
-    S = n(692420),
-    f = n(689938),
+    f = n(692420),
+    S = n(689938),
     C = n(992945);
 let N = 56,
     A = 94,
@@ -97,12 +97,12 @@ function O(e) {
                                     (0, i.jsx)(l.X, {
                                         variant: 'heading-lg/semibold',
                                         className: C.heading,
-                                        children: f.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: x })
+                                        children: S.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: x })
                                     }),
                                     !j &&
                                         (0, i.jsxs)('div', {
                                             className: C.headingFilters,
-                                            children: [(0, i.jsx)(p.Z, { loadId: t }), (0, i.jsx)(S.Z, { loadId: t })]
+                                            children: [(0, i.jsx)(p.Z, { loadId: t }), (0, i.jsx)(f.Z, { loadId: t })]
                                         }),
                                     Y && (0, i.jsx)(T.Z, { loadId: t })
                                 ]
@@ -251,7 +251,7 @@ function O(e) {
                               children: [
                                   (0, i.jsx)('div', {
                                       className: C.sidebarLanguageSelect,
-                                      children: (0, i.jsx)(S.Z, { loadId: t })
+                                      children: (0, i.jsx)(f.Z, { loadId: t })
                                   }),
                                   (0, i.jsx)(g.Z, { loadId: t })
                               ]

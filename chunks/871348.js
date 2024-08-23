@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return S;
+        return f;
     }
 });
 var i = n(735250),
@@ -75,7 +75,7 @@ function T(e) {
         ]
     });
 }
-function S(e) {
+function f(e) {
     let { onScroll: t } = e,
         { enableClanCreation: n } = (0, o.C3)({
             location: 'GuildsTab',

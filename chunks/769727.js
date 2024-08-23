@@ -16,8 +16,8 @@ var i,
     g = n(207796),
     p = n(543550),
     T = n(895068),
-    S = n(921944),
-    f = n(69878);
+    f = n(921944),
+    S = n(69878);
 ((a = i || (i = {})).TOP_PICKS = 'top_picks'), (a.OTHER_GUILDS = 'other_guilds');
 let C = {
         mass: 1,
@@ -47,7 +47,7 @@ let C = {
             (r.useEffect(() => {
                 !_ &&
                     (0, h.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
-                        dismissAction: S.L.TAKE_ACTION,
+                        dismissAction: f.L.TAKE_ACTION,
                         forceTrack: !0
                     });
             }, [_]),
@@ -63,22 +63,22 @@ let C = {
             case g.v0.PREFERENCES:
                 return (0, s.jsxs)(l.animated.div, {
                     style: { opacity: i.opacity },
-                    className: f.discoveryContainer,
+                    className: S.discoveryContainer,
                     children: [
                         (0, s.jsxs)('div', {
-                            className: f.toolbar,
+                            className: S.toolbar,
                             children: [
                                 (0, s.jsx)(l.animated.div, {
-                                    className: f.toolbarBackground,
+                                    className: S.toolbarBackground,
                                     style: {
                                         opacity: null == a ? void 0 : a.to([0, 100], [0, 1])
                                     }
                                 }),
-                                (0, s.jsx)(I.Z, {})
+                                (0, s.jsx)(I.Z, { guildIcon: (0, s.jsx)(I.a, {}) })
                             ]
                         }),
                         (0, s.jsx)('div', {
-                            className: f.content,
+                            className: S.content,
                             children: (0, s.jsx)(T.ZP, {
                                 width: n,
                                 onScroll: u,
@@ -86,28 +86,28 @@ let C = {
                             })
                         }),
                         (0, s.jsx)('div', {
-                            className: f.selectors,
+                            className: S.selectors,
                             children: (0, s.jsx)(m.Z, { mode: t })
                         })
                     ]
                 });
             case g.v0.SAVED_GUILDS:
                 return (0, s.jsxs)('div', {
-                    className: f.discoveryContainer,
+                    className: S.discoveryContainer,
                     children: [
                         (0, s.jsx)('div', {
-                            className: f.toolbar,
+                            className: S.toolbar,
                             children: (0, s.jsx)(I.Z, {})
                         }),
                         (0, s.jsx)('div', {
-                            className: f.content,
+                            className: S.content,
                             children: (0, s.jsx)(T.ZP, {
                                 width: n,
                                 variant: (0, T.s)(t)
                             })
                         }),
                         (0, s.jsx)('div', {
-                            className: f.selectors,
+                            className: S.selectors,
                             children: (0, s.jsx)(m.Z, { mode: t })
                         })
                     ]
@@ -140,13 +140,13 @@ t.Z = r.memo(function () {
         t = (0, g.GN)((e) => e.mode, o.Z),
         { ref: n, width: i } = (0, u.Z)();
     return (0, s.jsxs)('main', {
-        className: f.container,
+        className: S.container,
         ref: n,
         children: [
-            (0, s.jsx)('div', { className: f.dragRegion }),
+            (0, s.jsx)('div', { className: S.dragRegion }),
             e
                 ? (0, s.jsx)('div', {
-                      className: f.loading,
+                      className: S.loading,
                       children: (0, s.jsx)(d.Spinner, {})
                   })
                 : (0, s.jsx)(A, {

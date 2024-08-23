@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(367907),
     p = n(770471),
     T = n(158631),
-    S = n(143614),
-    f = n(463119),
+    f = n(143614),
+    S = n(463119),
     C = n(377171),
     N = n(243778),
     A = n(922409),
@@ -54,7 +54,7 @@ let q = (e) => {
         let { selected: t, ...n } = e,
             a = (0, o.JA)('friends'),
             s = (0, d.e7)([j.Z], () => j.Z.getPendingCount()),
-            r = (0, S.Z)(),
+            r = (0, f.Z)(),
             { canViewBroadcasts: l } = p.Z.useExperiment({ location: 'friends_tab_no_track' }),
             c = (0, T.ZP)();
         return (0, i.jsxs)(V.Qj, {
@@ -293,7 +293,7 @@ let ea = (e) => {
                         : null,
                     (0, i.jsx)($, { selected: null == u ? null != a && a.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
                     (0, i.jsx)(
-                        f.i,
+                        S.i,
                         {
                             selected: u === W.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(W.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {

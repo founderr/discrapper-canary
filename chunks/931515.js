@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     ML: function () {
-        return S;
+        return f;
     },
     Qc: function () {
         return T;
@@ -100,19 +100,19 @@ function T() {
               searchResult: c
           };
 }
-function S(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { updatePaginationSettings: n, updatePaginationResults: a, pageSize: o, chunkedPages: d, currentPage: I } = (0, h.$)(),
         p = I - 1,
         T = (0, E.GN)((e) => e.savedGuildIds, r.Z),
-        S = g(),
-        f = (0, l.e7)([u.Z], () => u.Z.getSearchResult(S), [S]);
+        f = g(),
+        S = (0, l.e7)([u.Z], () => u.Z.getSearchResult(f), [f]);
     i.useEffect(() => {
         n(e);
     }, [e, n]),
         i.useEffect(() => {
-            t ? a(T) : (0, m.Pw)(f) ? a(f.guildIds) : a([]);
-        }, [T, t, a, f]);
+            t ? a(T) : (0, m.Pw)(S) ? a(S.guildIds) : a([]);
+        }, [T, t, a, S]);
     let C = (0, l.Wu)(
         [u.Z],
         () =>
@@ -149,9 +149,9 @@ function S(e) {
         v = N.length === A.length || t,
         Z = A.length === o || (0 === C.length && v);
     return {
-        loaded: (0, m.Pw)(f) && Z,
+        loaded: (0, m.Pw)(S) && Z,
         clans: A,
-        searchCriteria: S,
-        searchResult: f
+        searchCriteria: f,
+        searchResult: S
     };
 }

@@ -1,20 +1,20 @@
-t.d(r, {
+r.d(t, {
     Z: function () {
         return d;
     }
 });
-var a = t(735250),
-    n = t(470079),
-    i = t(120356),
-    o = t.n(i),
-    l = t(481060),
-    c = t(167533),
-    s = t(535271);
+var a = r(735250),
+    n = r(470079),
+    i = r(120356),
+    o = r.n(i),
+    l = r(481060),
+    c = r(167533),
+    s = r(535271);
 function d(e) {
-    let { columns: r, rowComponent: t, headerClassName: i, stickyHeader: d, onClickRow: u, selectedRowKey: h, ...m } = e,
+    let { columns: t, rowComponent: r, headerClassName: i, stickyHeader: d, onClickRow: u, selectedRowKey: h, ...m } = e,
         g = n.useMemo(
             () =>
-                r.map((e) => ({
+                t.map((e) => ({
                     renderHeader: () =>
                         (0, a.jsx)(l.Text, {
                             variant: 'text-sm/semibold',
@@ -22,26 +22,26 @@ function d(e) {
                         }),
                     ...e
                 })),
-            [r]
+            [t]
         );
     return (0, a.jsx)(c.Z, {
         ...m,
         columns: g,
         rowComponent:
-            null != t
-                ? t
+            null != r
+                ? r
                 : (e) => {
-                      let { item: r, children: t } = e,
-                          n = o()(s.tableRow, { [s.selectedTableRow]: r.key === h });
+                      let { item: t, children: r } = e,
+                          n = o()(s.tableRow, { [s.selectedTableRow]: t.key === h });
                       return null != u
                           ? (0, a.jsx)(l.Clickable, {
                                 className: n,
-                                onClick: () => u(r.key),
-                                children: t
+                                onClick: () => u(t.key),
+                                children: r
                             })
                           : (0, a.jsx)('div', {
                                 className: n,
-                                children: t
+                                children: r
                             });
                   },
         headerClassName: o()(s.tableHeader, i),

@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(279240),
     p = n(765717),
     T = n(358221),
-    S = n(823748),
-    f = n(626421),
+    f = n(823748),
+    S = n(626421),
     C = n(118379),
     N = n(652515),
     A = n(857428),
@@ -104,13 +104,13 @@ let eE = () =>
         name: 'ChannelsAndRolesPage',
         renderLoader: eE
     }),
-    eS = (0, c.Un)({
+    ef = (0, c.Un)({
         createPromise: () => Promise.all([n.e('96427'), n.e('44156'), n.e('19878'), n.e('38359'), n.e('10682')]).then(n.bind(n, 599263)),
         webpackId: 599263,
         name: 'GuildOnboardingPage',
         renderLoader: eE
     }),
-    ef = (e) => {
+    eS = (e) => {
         let { match: t } = e,
             n = (0, u.e7)([q.Z, J.Z], () => {
                 let e = J.Z.getChannelId();
@@ -158,7 +158,7 @@ let eE = () =>
                         selectedSection: e_.l7.BROWSE
                     });
                 case eu.oC.GUILD_ONBOARDING:
-                    return (0, i.jsx)(eS, { guildId: a });
+                    return (0, i.jsx)(ef, { guildId: a });
                 case eu.oC.CUSTOMIZE_COMMUNITY:
                     return (0, i.jsx)(eT, {
                         guildId: a,
@@ -185,7 +185,7 @@ let eE = () =>
                 n.id
             );
         }
-        return (0, i.jsx)(S.Z, {});
+        return (0, i.jsx)(f.Z, {});
     },
     eC = a.memo(function () {
         let { guildId: e, channelId: t } = (0, W.Z)(),
@@ -211,7 +211,7 @@ let eE = () =>
               )
             : (0, i.jsx)(el.Z, {});
     }),
-    eN = (e) => (0, i.jsx)(ef, { ...e }),
+    eN = (e) => (0, i.jsx)(eS, { ...e }),
     eA = (e) => {
         let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null;
         return (0, L.a)({ location: 'sidebar' }) ? (0, i.jsx)(O.A, {}) : (0, i.jsx)(v.Z, { searchRoute: t });
@@ -358,7 +358,7 @@ function eU() {
                             (0, i.jsxs)('div', {
                                 className: eh.content,
                                 children: [
-                                    (0, i.jsx)(f.Z, {}),
+                                    (0, i.jsx)(S.Z, {}),
                                     (0, i.jsx)(ej, {
                                         hasNotice: t,
                                         sidebarTheme: n,

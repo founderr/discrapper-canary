@@ -34,8 +34,8 @@ t.Z = () => {
                     return [];
             }
         }, [e, g, n, t]),
-        [T, S] = (0, l.US)(p, void 0, !0),
-        f = (0, _.E)(I),
+        [T, f] = (0, l.US)(p, void 0, !0),
+        S = (0, _.E)(I),
         C = null;
     if (null != T) {
         if (g) {
@@ -58,12 +58,12 @@ t.Z = () => {
                         srcLightHovered: null === (O = e.hovered) || void 0 === O ? void 0 : O.light
                     });
             }
-        } else f === E.k2.COACHTIP ? (C = E.fY[T]) : f === E.k2.COACHTIP_HEADLINE_ONLY ? (C = E.zM[T]) : f === E.k2.BADGE && (C = { type: E.k2.BADGE });
+        } else S === E.k2.COACHTIP ? (C = E.fY[T]) : S === E.k2.COACHTIP_HEADLINE_ONLY ? (C = E.zM[T]) : S === E.k2.BADGE && (C = { type: E.k2.BADGE });
     }
     return {
         collectiblesShopTabNewBadgeDisplayOptions: C,
         dismissCollectiblesShopTabNewBadge: () => {
-            null != C && S(m.L.AUTO);
+            null != C && f(m.L.AUTO);
         }
     };
 };

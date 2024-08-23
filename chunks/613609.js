@@ -19,11 +19,11 @@ t.Z = (e) => {
     a.useEffect(() => {
         null != n && r.Z.resolveInvite(n, 'Hub').finally(() => T(!1));
     }, [n]);
-    let S = (0, s.e7)([d.Z], () => (null != n ? d.Z.getInvite(n) : null)),
-        f = (0, s.e7)([c.Z], () => c.Z.getGuild(t));
+    let f = (0, s.e7)([d.Z], () => (null != n ? d.Z.getInvite(n) : null)),
+        S = (0, s.e7)([c.Z], () => c.Z.getGuild(t));
     a.useEffect(() => {
-        null != f && (0, o.uL)(h.Z5c.CHANNEL(t));
-    }, [f, t]);
+        null != S && (0, o.uL)(h.Z5c.CHANNEL(t));
+    }, [S, t]);
     let C = a.useCallback((e) => {
             g((t) => Math.max(t, e));
         }, []),
@@ -40,7 +40,7 @@ t.Z = (e) => {
                 (0, i.jsx)('div', { className: m.dragRegion }),
                 (0, i.jsx)('div', {
                     className: m.contentWrapper,
-                    children: !p && (0, i.jsx)(_.HubEmailConnectionModalView, { invite: S })
+                    children: !p && (0, i.jsx)(_.HubEmailConnectionModalView, { invite: f })
                 })
             ]
         })

@@ -1,29 +1,29 @@
-t.d(r, {
+n.d(t, {
     d: function () {
         return l;
     },
     u: function () {
-        return c;
+        return o;
     }
 });
-var a = t(652874),
-    n = t(868888),
-    i = t(433517);
-let o = { selectedPage: t(49898).F$.SERVERS },
-    l = (0, a.Z)(
-        (0, n.tJ)(() => o, {
+var i = n(652874),
+    a = n(868888),
+    s = n(433517);
+let r = { selectedPage: n(49898).F$.SERVERS },
+    l = (0, i.Z)(
+        (0, a.tJ)(() => r, {
             name: 'global-discovery-ui-store',
             getStorage: () => ({
                 getItem: (e) => {
-                    var r;
-                    return null !== (r = i.K.get(e)) && void 0 !== r ? r : null;
+                    var t;
+                    return null !== (t = s.K.get(e)) && void 0 !== t ? t : null;
                 },
-                setItem: (e, r) => i.K.set(e, r),
-                removeItem: (e) => i.K.remove(e)
+                setItem: (e, t) => s.K.set(e, t),
+                removeItem: (e) => s.K.remove(e)
             }),
             partialize: (e) => ({ selectedPage: e.selectedPage })
         })
     );
-function c() {
-    l.setState(o);
+function o() {
+    l.setState(r);
 }

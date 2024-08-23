@@ -21,8 +21,8 @@ var i,
     g = n(210887),
     p = n(819640),
     T = n(585483),
-    S = n(792125),
-    f = n(981631),
+    f = n(792125),
+    S = n(981631),
     C = n(600753);
 function N(e, t, n) {
     return (
@@ -58,10 +58,10 @@ let A = (0, m.Un)({
         name: 'GuildSettings'
     }),
     O = {
-        [f.S9g.USER_SETTINGS]: () => (0, a.jsx)(A, {}),
-        [f.S9g.CHANNEL_SETTINGS]: () => (0, a.jsx)(v, {}),
-        [f.S9g.GUILD_SETTINGS]: () => (0, a.jsx)(L, {}),
-        [f.S9g.COLLECTIBLES_SHOP]: () => (0, a.jsx)(Z, {})
+        [S.S9g.USER_SETTINGS]: () => (0, a.jsx)(A, {}),
+        [S.S9g.CHANNEL_SETTINGS]: () => (0, a.jsx)(v, {}),
+        [S.S9g.GUILD_SETTINGS]: () => (0, a.jsx)(L, {}),
+        [S.S9g.COLLECTIBLES_SHOP]: () => (0, a.jsx)(Z, {})
     },
     R = 'SHOWN',
     x = 'HIDDEN',
@@ -110,7 +110,7 @@ class M extends (i = s.PureComponent) {
     animateOut(e) {
         c.ZP.Emitter.pause(500);
         let { opacity: t, scale: n } = this.state;
-        T.S.dispatch(f.CkL.LAYER_POP_START),
+        T.S.dispatch(S.CkL.LAYER_POP_START),
             o.Z.parallel([
                 o.Z.spring(t, {
                     toValue: 0,
@@ -121,7 +121,7 @@ class M extends (i = s.PureComponent) {
                     ...b
                 })
             ]).start(() => {
-                e(), T.S.dispatch(f.CkL.LAYER_POP_COMPLETE);
+                e(), T.S.dispatch(S.CkL.LAYER_POP_COMPLETE);
             });
     }
     animateUnder() {
@@ -188,10 +188,10 @@ class M extends (i = s.PureComponent) {
 N(M, 'defaultProps', { baseLayer: !1 }), N(M, 'contextType', u.AccessibilityPreferencesContext);
 class D extends s.PureComponent {
     componentDidMount() {
-        T.S.subscribe(f.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
+        T.S.subscribe(S.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
     }
     componentWillUnmount() {
-        T.S.unsubscribe(f.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
+        T.S.unsubscribe(S.CkL.LAYER_POP_ESCAPE_KEY, _.xf);
     }
     renderLayers() {
         let { children: e, layers: t, hasFullScreenLayer: n } = this.props,
@@ -228,7 +228,7 @@ class D extends s.PureComponent {
         );
     }
     renderArtisanalHack() {
-        return (0, a.jsx)('div', { className: l()(C.bg, (0, S.Q)(this.props.sidebarTheme)) });
+        return (0, a.jsx)('div', { className: l()(C.bg, (0, f.Q)(this.props.sidebarTheme)) });
     }
     render() {
         return (0, a.jsxs)(a.Fragment, {
@@ -244,7 +244,7 @@ class D extends s.PureComponent {
     }
 }
 function y(e) {
-    let t = (0, c.e7)([g.Z], () => g.Z.darkSidebar) ? f.BRd.DARK : void 0,
+    let t = (0, c.e7)([g.Z], () => g.Z.darkSidebar) ? S.BRd.DARK : void 0,
         n = (0, c.e7)([p.Z], () => p.Z.getLayers()),
         i = (0, I.QP)((e) => e.fullScreenLayers.length > 0);
     return (0, a.jsx)(D, {
