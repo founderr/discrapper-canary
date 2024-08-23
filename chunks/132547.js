@@ -8,75 +8,74 @@ var s = n(735250),
     c = n(100527),
     d = n(906732),
     _ = n(433811),
-    u = n(626135),
-    E = n(314684),
-    T = n(794484),
-    I = n(347475),
-    R = n(342414),
-    C = n(938736),
-    g = n(391110),
-    p = n(71363),
-    N = n(781800),
-    A = n(981631),
-    m = n(396001),
-    f = n(865215);
+    u = n(214852),
+    E = n(626135),
+    T = n(314684),
+    I = n(794484),
+    R = n(347475),
+    C = n(342414),
+    g = n(938736),
+    p = n(391110),
+    N = n(71363),
+    A = n(781800),
+    m = n(981631),
+    f = n(396001),
+    S = n(865215);
 t.Z = () => {
-    a.useEffect(() => {
-        _.X.trigger();
-    }, []);
+    (0, u.z)(_.X);
     let e = a.useRef(null),
         [t, n] = a.useState(!1),
         { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [S, h] = a.useState(!1);
-    (0, E.FM)();
-    let M = (0, C.bD)('SubscriberNitroHome');
+        [h, M] = a.useState(!1);
+    (0, T.FM)();
+    let x = (0, g.bD)('SubscriberNitroHome');
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(o.AdvancedScrollerAuto, {
-                className: m.mainPageScroller,
+                className: f.mainPageScroller,
                 ref: e,
                 children: (0, s.jsx)('div', {
-                    className: m.container,
+                    className: f.container,
                     children: (0, s.jsxs)(d.Gt, {
                         value: r,
                         children: [
-                            (0, s.jsx)(R.Z, {
-                                className: m.heroHeading,
-                                location: g.MQ.HOME
+                            (0, s.jsx)(C.Z, {
+                                className: f.heroHeading,
+                                location: p.MQ.HOME
                             }),
-                            (0, s.jsx)(T.Z, {
-                                variant: g.R0.WHATS_NEW,
-                                className: i()(m.whatsNew, { [m.whatsNewWithOriginalHeroHeading]: !M }),
+                            (0, s.jsx)(I.Z, {
+                                variant: p.R0.WHATS_NEW,
+                                className: i()(f.whatsNew, { [f.whatsNewWithOriginalHeroHeading]: !x }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
                             }),
-                            (0, s.jsx)(T.Z, {
-                                className: m.perksDiscoverability,
+                            (0, s.jsx)(I.Z, {
+                                className: f.perksDiscoverability,
                                 noBackground: !0,
                                 leftAlignHeaders: !0,
-                                showAllPerksButton: (0, s.jsx)(N.Z, {
+                                showAllPerksButton: (0, s.jsx)(A.Z, {
                                     setIsAllPerksVisible: n,
-                                    previousComponent: g.MQ.HOME
+                                    previousComponent: p.MQ.HOME
                                 })
                             }),
-                            (0, s.jsx)(I.Z, {
-                                className: m.giftNitro,
+                            (0, s.jsx)(R.Z, {
+                                className: f.giftNitro,
                                 location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                 analyticsLocation: {
-                                    page: A.ZY5.NITRO_HOME,
-                                    section: A.jXE.GIFT_BANNER
+                                    page: m.ZY5.NITRO_HOME,
+                                    section: m.jXE.GIFT_BANNER
                                 }
                             }),
-                            (0, s.jsx)('div', { className: m.footerSpacing }),
+                            (0, s.jsx)('div', { className: f.footerSpacing }),
                             (0, s.jsx)(l.$, {
                                 onChange: (e) => {
-                                    e && !S && (u.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), h(!0));
+                                    e && !h && (E.default.track(m.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), M(!0));
                                 },
-                                children: (0, s.jsx)('div', { className: m.bottomOfPageVisibilitySensor })
+                                children: (0, s.jsx)('div', { className: f.bottomOfPageVisibilitySensor })
                             }),
                             (0, s.jsx)(o.Image, {
-                                src: f,
-                                className: m.bottomIllustration,
+                                src: S,
+                                className: f.bottomIllustration,
                                 width: 112,
                                 height: 85,
                                 zoomable: !1
@@ -85,10 +84,10 @@ t.Z = () => {
                     })
                 })
             }),
-            (0, s.jsx)(p.Z, {
+            (0, s.jsx)(N.Z, {
                 isAllPerksVisible: t,
                 setIsAllPerksVisible: n,
-                previousComponent: g.MQ.HOME
+                previousComponent: p.MQ.HOME
             })
         ]
     });

@@ -16,74 +16,73 @@ var s = n(735250),
     C = n(15640),
     g = n(89057),
     p = n(433811),
-    N = n(246946),
-    A = n(594174),
-    m = n(78839),
-    f = n(626135),
-    S = n(111361),
-    h = n(357355),
-    M = n(937579),
-    x = n(91802),
-    O = n(104494),
-    b = n(639119),
-    P = n(2359),
+    N = n(214852),
+    A = n(246946),
+    m = n(594174),
+    f = n(78839),
+    S = n(626135),
+    h = n(111361),
+    M = n(357355),
+    x = n(937579),
+    O = n(91802),
+    b = n(104494),
+    P = n(639119),
+    v = n(2359),
     L = n(132547),
-    v = n(474936),
-    Z = n(981631),
-    D = n(874296);
+    Z = n(474936),
+    D = n(981631),
+    B = n(874296);
 t.Z = function (e) {
-    let { entrypoint: t = v.EZ.UserSettings } = e;
-    a.useEffect(() => {
-        p.X.trigger();
-    }, []);
+    let { entrypoint: t = Z.EZ.UserSettings } = e;
+    (0, N.z)(p.X);
     let n = (0, R.Q)(),
-        { sourceAnalyticsLocations: r, analyticsLocations: B } = (0, I.ZP)(T.Z.PREMIUM_MARKETING),
-        j = (0, l.e7)([m.ZP], () => m.ZP.hasFetchedSubscriptions()),
-        U = (0, l.e7)([A.default], () => A.default.getCurrentUser()),
-        G = (0, b.N)(),
-        y = (0, O.Ng)(),
-        k = (0, C.V)(),
-        [H, w] = a.useState(!0),
-        F = a.useRef(0),
-        V = (0, S.M5)(U, v.p9.TIER_2),
-        W = (0, x.n)(),
-        K = null == W ? void 0 : W.countryCode,
-        Y = (0, l.e7)([h.Z], () => h.Z.hasFetched);
+        { sourceAnalyticsLocations: r, analyticsLocations: j } = (0, I.ZP)(T.Z.PREMIUM_MARKETING),
+        U = (0, l.e7)([f.ZP], () => f.ZP.hasFetchedSubscriptions()),
+        G = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
+        y = (0, P.N)(),
+        k = (0, b.Ng)(),
+        H = (0, C.V)(),
+        [w, F] = a.useState(!0),
+        V = a.useRef(0),
+        W = (0, h.M5)(G, Z.p9.TIER_2),
+        K = (0, O.n)(),
+        Y = null == K ? void 0 : K.countryCode,
+        z = (0, l.e7)([M.Z], () => M.Z.hasFetched);
     return (a.useEffect(() => {
-        !Y && d.MH();
-    }, [Y]),
+        !z && d.MH();
+    }, [z]),
     a.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, _.X8)(), d.tZ(), (0, u.Y2)(K, null, Z.JjL.DISCOVERY)]), (F.current = Date.now() - e), w(!1);
+            await Promise.all([d.jg(), (0, _.X8)(), d.tZ(), (0, u.Y2)(Y, null, D.JjL.DISCOVERY)]), (V.current = Date.now() - e), F(!1);
         });
-    }, [K]),
+    }, [Y]),
     a.useEffect(() => {
-        n && (null != G || null != y) && (0, M.a)(G, y);
-    }, [n, G, y]),
+        n && (null != y || null != k) && (0, x.a)(y, k);
+    }, [n, y, k]),
     a.useEffect(() => {
-        !H &&
-            f.default.track(Z.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+        !w &&
+            S.default.track(D.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                 location_stack: r,
-                load_duration_ms: F.current
+                load_duration_ms: V.current
             });
-    }, [r, H]),
-    (0, l.e7)([N.Z], () => N.Z.enabled))
+    }, [r, w]),
+    (0, l.e7)([A.Z], () => A.Z.enabled))
         ? (0, s.jsx)(E.Z, {})
         : n
           ? (0, s.jsx)(g.c8, {})
-          : t === v.EZ.ApplicationStoreHome && V
+          : t === Z.EZ.ApplicationStoreHome && W
             ? (0, s.jsx)(I.Gt, {
-                  value: B,
+                  value: j,
                   children: (0, s.jsx)(L.Z, {})
               })
-            : j && k && !H
+            : U && H && !w
               ? (0, s.jsx)(I.Gt, {
-                    value: B,
-                    children: (0, s.jsx)(P.Z, { entrypoint: t })
+                    value: j,
+                    children: (0, s.jsx)(v.Z, { entrypoint: t })
                 })
               : (0, s.jsx)('div', {
-                    className: i()(D.container, D.loading),
+                    className: i()(B.container, B.loading),
                     children: (0, s.jsx)(o.Spinner, {})
                 });
 };
