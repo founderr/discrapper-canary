@@ -1,52 +1,52 @@
-t.r(s),
-    t.d(s, {
+s.r(t),
+    s.d(t, {
         default: function () {
-            return l;
+            return d;
         }
     }),
-    t(47120);
-var n = t(735250),
-    i = t(470079),
-    r = t(913527),
-    u = t.n(r),
-    o = t(481060),
-    a = t(689938),
-    d = t(3485);
-function l(e) {
-    let { onSelectDuration: s, ...t } = e,
-        [r, l] = i.useState(u()()),
-        c = u()(),
-        p = i.useCallback(() => {
-            s(r.diff(c));
-        }, [s, r, c]),
-        f = (e) => {
-            if (!!e.isValid()) l(e);
+    s(47120);
+var n = s(735250),
+    u = s(470079),
+    a = s(913527),
+    i = s.n(a),
+    o = s(481060),
+    r = s(689938),
+    l = s(3485);
+function d(e) {
+    let { createReminder: t, ...s } = e,
+        [a, d] = u.useState(() => i()()),
+        [c, p] = u.useState(() => i()()),
+        h = u.useCallback(() => {
+            t(a.toDate());
+        }, [t, a]),
+        m = (e) => {
+            if (!!e.isValid()) d(e);
         };
     return (0, n.jsx)(o.ConfirmModal, {
-        header: a.Z.Messages.MESSAGE_REMINDERS_SET_CUSTOM,
-        confirmText: a.Z.Messages.SAVE,
-        cancelText: a.Z.Messages.CANCEL,
+        header: r.Z.Messages.MESSAGE_REMINDERS_SET_CUSTOM,
+        confirmText: r.Z.Messages.SAVE,
+        cancelText: r.Z.Messages.CANCEL,
         confirmButtonColor: o.Button.Colors.BRAND,
-        onConfirm: p,
-        ...t,
+        onConfirm: h,
+        ...s,
         children: (0, n.jsxs)('div', {
-            className: d.doubleInput,
+            className: l.doubleInput,
             children: [
                 (0, n.jsx)(o.FormItem, {
-                    title: a.Z.Messages.DATE,
+                    title: r.Z.Messages.DATE,
                     required: !0,
                     children: (0, n.jsx)(o.DateInput, {
-                        value: r,
-                        onSelect: f,
+                        value: a,
+                        onSelect: m,
                         minDate: c
                     })
                 }),
                 (0, n.jsx)(o.FormItem, {
-                    title: a.Z.Messages.TIME,
+                    title: r.Z.Messages.TIME,
                     required: !0,
                     children: (0, n.jsx)(o.TimeInput, {
-                        value: r,
-                        onChange: f
+                        value: a,
+                        onChange: m
                     })
                 })
             ]

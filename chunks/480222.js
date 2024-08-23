@@ -85,7 +85,7 @@ t.Z = function (e) {
                                     (0, i.jsx)(r.Button, {
                                         onClick: p,
                                         size: r.ButtonSizes.SMALL,
-                                        look: r.ButtonLooks.BLANK,
+                                        look: r.ButtonLooks.LINK,
                                         color: r.ButtonColors.WHITE,
                                         children: d.Z.Messages.RESET
                                     }),

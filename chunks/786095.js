@@ -25,9 +25,9 @@ let Z = _.fX.KEYWORD;
 function S(e, n) {
     let { perGuildMaxCount: t } = u.I6[Z],
         { isLoading: S, saveRule: T, errorMessage: v } = (0, c.w)(),
-        { createNewEditingRule: A } = (0, c.V)(),
-        [R, O] = a.useState(!1),
-        [N, h] = (0, o.I2)(n),
+        { createNewEditingRule: R } = (0, c.V)(),
+        [A, O] = a.useState(!1),
+        [h, N] = (0, o.I2)(n),
         { rulesByTriggerType: p, updateRule: x } = (0, o.pH)(n),
         j = a.useMemo(() => {
             var e;
@@ -37,18 +37,18 @@ function S(e, n) {
         C = t > j.length && !b;
     if (!a.useMemo(() => (0, d.ze)(n), [n]) || null == e || 0 === e.length || null == n) return null;
     let D = e.split(' '),
-        G = D.length;
+        L = D.length;
     try {
         (0, s.km)(D, _.RH);
     } catch (e) {
         return null;
     }
-    let L = () => {
+    let P = () => {
             if (null != n)
                 (0, r.Zy)(),
                     I.Z.open(n, m.pNK.GUILD_AUTOMOD),
                     setTimeout(() => {
-                        A(n, Z, {
+                        R(n, Z, {
                             triggerMetadata: {
                                 keywordFilter: [e],
                                 regexPatterns: [],
@@ -57,7 +57,7 @@ function S(e, n) {
                         });
                     }, 400);
         },
-        P = async (n) => {
+        G = async (n) => {
             var t, i;
             if (((0, r.Zy)(), !(await (0, M.XN)(n.name, e)))) return;
             let a = {
@@ -76,14 +76,14 @@ function S(e, n) {
             })
         });
     return (
-        !N &&
+        !h &&
             (y = (0, i.jsxs)(i.Fragment, {
                 children: [
                     b &&
                         (0, i.jsx)(l.MenuItem, {
                             id: 'add-first-rule',
                             label: g.Z.Messages.GUILD_SETTINGS_ACTION_FILTER_AUTOMOD_RULE_CREATE,
-                            action: L,
+                            action: P,
                             disabled: S
                         }),
                     j.map((e) => {
@@ -110,7 +110,7 @@ function S(e, n) {
                                 group: 'automod-rule-selection',
                                 checked: !1,
                                 disabled: S,
-                                action: () => P(e)
+                                action: () => G(e)
                             },
                             e.id
                         );
@@ -122,7 +122,7 @@ function S(e, n) {
                                 (0, i.jsx)(l.MenuItem, {
                                     id: 'add-another-rule',
                                     label: g.Z.Messages.GUILD_AUTOMOD_ADD_NEW_RULE,
-                                    action: L,
+                                    action: P,
                                     disabled: S
                                 })
                             ]
@@ -131,9 +131,9 @@ function S(e, n) {
             })),
         (0, i.jsx)(l.MenuItem, {
             id: 'guild-automod-add-selection',
-            label: g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION.format({ keywordCount: G }),
+            label: g.Z.Messages.GUILD_AUTOMOD_ADD_SELECTION.format({ keywordCount: L }),
             onFocus: () => {
-                if (!R) O(!0), h();
+                if (!A) O(!0), N();
             },
             children: y
         })

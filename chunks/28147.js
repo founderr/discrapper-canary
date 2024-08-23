@@ -75,7 +75,7 @@ function O(e) {
         L = a.useMemo(() => {
             let e = N.map((e) => ({
                 application: e,
-                installOnDemand: !1
+                installOnDemand: !0
             }));
             if (l === E._b.VOICE) return e;
             let n = new Set(

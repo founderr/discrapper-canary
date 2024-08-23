@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return R;
+        return A;
     }
 }),
     t(47120);
@@ -28,14 +28,14 @@ let _ = 'https://media.discordapp.net',
         var n, t, i, a;
         return null === (a = c.Z.toURLSafe(e)) || void 0 === a ? void 0 : null === (i = a.pathname) || void 0 === i ? void 0 : null === (t = i.split('.')) || void 0 === t ? void 0 : null === (n = t.pop()) || void 0 === n ? void 0 : n.toLowerCase();
     };
-function A(e, n) {
+function R(e, n) {
     l.Z.show({
         title: m.Z.Messages.ERROR,
         body: e
     }),
         d.Z.captureException(n);
 }
-function R(e, n, t) {
+function A(e, n, t) {
     if (
         (0, s.Z)(null == n ? void 0 : n.getChannelId()) ||
         (null == t ? void 0 : t.shouldHideMediaOptions) === !0 ||
@@ -57,14 +57,14 @@ function R(e, n, t) {
             try {
                 await E.ZP.saveImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVED, { ...(0, M.v)() });
             } catch (e) {
-                o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, M.v)() }), A(m.Z.Messages.ERROR_SAVING_IMAGE, e);
+                o.default.track(I.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, { ...(0, M.v)() }), R(m.Z.Messages.ERROR_SAVING_IMAGE, e);
             }
         },
-        R = async () => {
+        A = async () => {
             try {
                 await E.ZP.copyImage(l), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPIED, { ...(0, M.v)() });
             } catch (e) {
-                A(m.Z.Messages.ERROR_COPYING_IMAGE, e), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, M.v)() });
+                R(m.Z.Messages.ERROR_COPYING_IMAGE, e), o.default.track(I.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, { ...(0, M.v)() });
             }
         };
     return [
@@ -78,7 +78,7 @@ function R(e, n, t) {
                   {
                       id: 'copy-image',
                       label: m.Z.Messages.COPY_IMAGE_MENU_ITEM,
-                      action: R
+                      action: A
                   },
                   'copy-image'
               )

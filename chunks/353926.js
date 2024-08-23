@@ -374,7 +374,8 @@ class ea extends _.Z {
                         (a = !0);
                 a && ee();
             })(),
-            this.waitFor(d.default);
+            this.waitFor(d.default),
+            this.loadCache();
     }
     loadCache() {
         let e = this.readSnapshot(ea.LATEST_SNAPSHOT_VERSION);
@@ -554,7 +555,6 @@ class ea extends _.Z {
                 CONNECTION_OPEN: W,
                 EXPERIMENTS_FETCH_SUCCESS: W,
                 OVERLAY_INITIALIZE: Q,
-                CACHE_LOADED: () => this.loadCache(),
                 EXPERIMENTS_FETCH_FAILURE: X,
                 EXPERIMENT_OVERRIDE_BUCKET: er,
                 GUILD_CREATE: ei,

@@ -108,8 +108,8 @@ function w(e) {
         es = null != B ? G[B].type : null;
     return (
         a.useEffect(() => {
-            J && B === q && q !== b.c && null == en && (0, u.x2)(Q.applicationId, Q.id, q);
-        }, [q, J, B, Q.applicationId, Q.id, en]),
+            J && B === q && q !== b.c && null == en && (0, u.x2)(Q.applicationId, Q.id, q, { isGift: K });
+        }, [q, J, B, Q.applicationId, Q.id, en, K]),
         (0, i.jsxs)('div', {
             className: j.stepBody,
             children: [

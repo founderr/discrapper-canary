@@ -14,7 +14,7 @@ function s(e, t) {
 }
 let r = (0, i.Z)((e) => ({
     currentPage: 1,
-    pageSize: 18,
+    pageSize: 30,
     totalItems: 0,
     chunkedPages: [],
     _rawItems: [],
@@ -24,7 +24,7 @@ let r = (0, i.Z)((e) => ({
         });
     },
     updatePaginationSettings: function (t) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
         (0, a.j)(() => {
             let i = t * n;
             e((e) => ({
