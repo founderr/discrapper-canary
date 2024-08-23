@@ -87,8 +87,19 @@ let i = (0, r.B)({
         treatments: [
             {
                 id: 1,
-                label: 'Use old icon',
-                config: { useOldIcon: !0 }
+                label: 'Icon: chat bubble',
+                config: {
+                    canForwardMessages: !0,
+                    useOldIcon: !1
+                }
+            },
+            {
+                id: 2,
+                label: 'Icon: upper right arrow',
+                config: {
+                    canForwardMessages: !0,
+                    useOldIcon: !0
+                }
             }
         ]
     });
