@@ -33,12 +33,16 @@ class _ extends (r = u.ZP.Store) {
     getClass() {
         return this.constructor;
     }
-    constructor(e) {
-        super(d.Z, {
-            ...e,
-            CLEAR_CACHES: () => (this.clear(), !1),
-            WRITE_CACHES: () => (this.save(), !1)
-        }),
+    constructor(e, t) {
+        super(
+            d.Z,
+            {
+                ...e,
+                CLEAR_CACHES: () => (this.clear(), !1),
+                WRITE_CACHES: () => (this.save(), !1)
+            },
+            t
+        ),
             l()(null != this.getClass().displayName, 'Snapshot stores need a display name'),
             l()(!('CLEAR_CACHES' in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"),
             l()(!('WRITE_CACHES' in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"),
