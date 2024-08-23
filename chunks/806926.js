@@ -1,68 +1,70 @@
 t.d(n, {
     Z: function () {
-        return p;
+        return x;
     }
 });
 var s = t(735250);
 t(470079);
 var i = t(442837),
-    o = t(699516),
-    l = t(5192),
-    r = t(741308),
-    a = t(681837),
-    c = t(91433),
-    d = t(502762),
-    u = t(530),
-    I = t(616140),
-    _ = t(107194),
-    E = t(228168),
-    f = t(981631),
-    m = t(392214);
-function p(e) {
+    o = t(979264),
+    l = t(699516),
+    r = t(5192),
+    a = t(741308),
+    c = t(681837),
+    d = t(91433),
+    u = t(502762),
+    I = t(530),
+    _ = t(616140),
+    E = t(107194),
+    f = t(228168),
+    m = t(981631),
+    p = t(392214);
+function x(e) {
     var n;
-    let { user: t, currentUser: p, channelId: x, displayProfile: Z, initialSection: v, initialSubsection: h, friendToken: S, onClose: T } = e,
-        A = (0, i.e7)([o.Z], () => o.Z.getRelationshipType(t.id)),
-        g = (0, _.Z)({
+    let { user: t, currentUser: x, channelId: Z, displayProfile: v, initialSection: h, initialSubsection: S, friendToken: T, onClose: A } = e,
+        g = (0, i.e7)([l.Z], () => l.Z.getRelationshipType(t.id)),
+        N = (0, E.Z)({
             user: t,
-            currentUser: p
+            currentUser: x
         });
     return (0, s.jsxs)('div', {
-        className: m.body,
+        className: p.body,
         children: [
-            (0, s.jsx)(u.Z, {
+            (0, s.jsx)(I.Z, {
                 user: t,
-                profileType: E.y0.FULL_SIZE,
-                nickname: l.ZP.getName(null == Z ? void 0 : Z.guildId, x, t),
-                pronouns: null == Z ? void 0 : Z.pronouns,
+                profileType: f.y0.FULL_SIZE,
+                nickname: r.ZP.getName(null == v ? void 0 : v.guildId, Z, t),
+                pronouns: null == v ? void 0 : v.pronouns,
                 nicknameVariant: 'heading-xl/bold',
-                nicknameIcons: (0, s.jsx)(a.Z, { userId: t.id }),
-                tags: (0, s.jsx)(r.Z, {
-                    displayProfile: Z,
-                    profileType: E.y0.FULL_SIZE,
-                    onClose: T
+                nicknameIcons: (0, s.jsx)(c.Z, { userId: t.id }),
+                tags: (0, s.jsx)(a.Z, {
+                    displayProfile: v,
+                    profileType: f.y0.FULL_SIZE,
+                    onClose: A
                 })
             }),
-            A === f.OGo.PENDING_INCOMING &&
-                (0, s.jsx)(d.Z.Overlay, {
-                    className: m.friendRequestBannerOverlay,
-                    children: (0, s.jsx)(c.Z, {
+            (0, s.jsx)(o.ZP, { userId: t.id }),
+            g === m.OGo.PENDING_INCOMING &&
+                (0, s.jsx)(u.Z.Overlay, {
+                    className: p.friendRequestBannerOverlay,
+                    children: (0, s.jsx)(d.Z, {
                         user: t,
-                        guildId: null !== (n = null == Z ? void 0 : Z.guildId) && void 0 !== n ? n : void 0,
-                        channelId: x,
-                        friendToken: S,
-                        className: m.friendRequestBanner
+                        guildId: null !== (n = null == v ? void 0 : v.guildId) && void 0 !== n ? n : void 0,
+                        channelId: Z,
+                        friendToken: T,
+                        className: p.friendRequestBanner
                     })
                 }),
-            (0, s.jsx)(d.Z.Overlay, {
-                className: m.overlay,
-                children: (0, s.jsx)(I.Z, {
+            (0, s.jsx)(u.Z.Overlay, {
+                className: p.overlay,
+                children: (0, s.jsx)(_.Z, {
                     user: t,
-                    currentUser: p,
-                    displayProfile: Z,
-                    items: g,
-                    initialSection: v,
-                    initialSubsection: h,
-                    onClose: T
+                    currentUser: x,
+                    displayProfile: v,
+                    items: N,
+                    initialSection: h,
+                    initialSubsection: S,
+                    onClose: A
                 })
             })
         ]
