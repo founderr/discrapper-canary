@@ -178,8 +178,8 @@ function U(e) {
     let { channel: s } = e,
         o = x.default.getCurrentUser(),
         c = null == o ? void 0 : o.isStaff(),
-        { analyticsLocations: E } = (0, d.ZP)(u.Z.MEMBER_LIST);
-    let { listItems: I } =
+        { analyticsLocations: f } = (0, d.ZP)(u.Z.MEMBER_LIST);
+    let { listItems: E } =
             ((t = s),
             (0, l.e7)(
                 [g.Z, x.default, C.Z],
@@ -212,25 +212,17 @@ function U(e) {
                 [t],
                 k
             )),
-        { installedIntegrations: N, applicationsShelf: S, fetched: Z, appsInGDMEnabled: A, availableApplications: M } = (0, _.j)({ channelId: s.id });
+        { installedIntegrations: I, applicationsShelf: N, fetched: S, appsInGDMEnabled: Z, availableApplications: A } = (0, _.j)({ channelId: s.id });
     a.useEffect(() => {
-        if (c)
-            for (let e of I)
-                (0, f.Z)(e.user, {
-                    dispatchWait: !0,
-                    channelId: s.id
-                });
-    }, [c, I, s.id]),
-        a.useEffect(() => {
-            T.default.track(b.rMx.MEMBER_LIST_VIEWED, {
-                channel_id: s.id,
-                channel_type: s.type,
-                guild_id: s.guild_id
-            });
-        }, [s.guild_id, s.id, s.type]);
-    let P = c && I.every((e) => e.user.isStaff());
+        T.default.track(b.rMx.MEMBER_LIST_VIEWED, {
+            channel_id: s.id,
+            channel_type: s.type,
+            guild_id: s.guild_id
+        });
+    }, [s.guild_id, s.id, s.type]);
+    let M = c && E.every((e) => e.user.isStaff());
     return (0, i.jsx)(d.Gt, {
-        value: E,
+        value: f,
         children: (0, i.jsx)('div', {
             className: j.membersWrap,
             children: (0, i.jsxs)(r.Scroller, {
@@ -239,17 +231,9 @@ function U(e) {
                 children: [
                     (0, i.jsxs)(p.Z, {
                         className: j.membersGroup,
-                        children: [
-                            ''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(I.length, ' '),
-                            P
-                                ? (0, i.jsx)(h.Z, {
-                                      className: j.__invalid_decorator,
-                                      type: h.Z.Types.STAFF_ONLY_DM
-                                  })
-                                : null
-                        ]
+                        children: [''.concat(R.Z.Messages.MEMBERS, '\u2014').concat(E.length, ' '), M && (0, i.jsx)(h.Z, { type: h.Z.Types.STAFF_ONLY_DM })]
                     }),
-                    I.map((e) =>
+                    E.map((e) =>
                         (0, i.jsx)(
                             y,
                             {
@@ -261,15 +245,15 @@ function U(e) {
                             e.user.id
                         )
                     ),
-                    A &&
-                        (N.length > 0 || (Z && S.length > 0)) &&
+                    Z &&
+                        (I.length > 0 || (S && N.length > 0)) &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(p.Z, {
                                     className: j.membersGroup,
-                                    children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(N.length)
+                                    children: ''.concat(R.Z.Messages.APPS, '\u2014').concat(I.length)
                                 }),
-                                N.map((e) =>
+                                I.map((e) =>
                                     (0, i.jsx)(
                                         D,
                                         {
@@ -279,7 +263,7 @@ function U(e) {
                                         e.application.id
                                     )
                                 ),
-                                M.length > 0 &&
+                                A.length > 0 &&
                                     (0, i.jsx)(m.Z, {
                                         className: L.member,
                                         onClick: () => {

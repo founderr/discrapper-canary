@@ -15,11 +15,13 @@ var i = n(442837),
     d = n(507714);
 function _(e) {
     let { userId: t } = e;
-    return (0, i.e7)([l.Z], () => {
-        var e, n;
-        return null !== (n = null === (e = l.Z.getUserProfile(t)) || void 0 === e ? void 0 : e.profileFetchFailed) && void 0 !== n && n;
-    })
-        ? (0, r.jsx)(s.DY, {
+    return null ==
+        (0, i.e7)([l.Z], () => {
+            var e;
+            return null === (e = l.Z.getUserProfile(t)) || void 0 === e ? void 0 : e.fetchError;
+        })
+        ? null
+        : (0, r.jsx)(s.DY, {
               className: d.container,
               text: c.Z.Messages.USER_PROFILE_LOAD_ERROR,
               delay: u.vB,
@@ -27,6 +29,5 @@ function _(e) {
                   size: 'xs',
                   color: a.Z.colors.STATUS_WARNING.css
               })
-          })
-        : null;
+          });
 }
