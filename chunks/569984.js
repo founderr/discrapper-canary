@@ -25,8 +25,11 @@ function L(e, t) {
             ...t
         };
         !(function (e, t) {
-            var n, r, i;
-            if (null != t.userStatus) for (let a of Object.values(null !== (r = null === (n = t.userStatus) || void 0 === n ? void 0 : n.progress) && void 0 !== r ? r : {})) !(0, g.isNil)(a) && S.T.DESKTOP.has(a.eventName) && (null === (i = a.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) == null && c.delete(e);
+            var n, r, i, a;
+            if (null != t.userStatus)
+                for (let s of Object.values(null !== (r = null === (n = t.userStatus) || void 0 === n ? void 0 : n.progress) && void 0 !== r ? r : {})) {
+                    if (!(0, g.isNil)(s)) S.T.DESKTOP.has(s.eventName) && ((null === (i = s.heartbeat) || void 0 === i ? void 0 : i.lastBeatAt) != null ? c.add(e) : (null === (a = s.heartbeat) || void 0 === a ? void 0 : a.lastBeatAt) == null && c.delete(e));
+                }
         })(e, t),
             i.set(e, r);
     }
