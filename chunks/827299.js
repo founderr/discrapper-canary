@@ -7,27 +7,29 @@ n.d(t, {
 var r = n(470079),
     i = n(399606);
 function a(e, t) {
-    let { get: n, getIsLoading: a, load: s, useStateHook: o } = t;
+    let { get: n, getIsLoading: a, load: s, useStateHook: o, dangerousAbortOnCleanup: l = !1 } = t;
     return function () {
-        for (var t = arguments.length, l = Array(t), u = 0; u < t; u++) l[u] = arguments[u];
-        let c = o([e], () => n(...l), l),
-            d = (0, i.e7)([e], () => a(...l), l),
-            [_, E] = (0, r.useState)();
+        for (var t = arguments.length, u = Array(t), c = 0; c < t; c++) u[c] = arguments[c];
+        let d = o([e], () => n(...u), u),
+            _ = (0, i.e7)([e], () => a(...u), u),
+            [E, f] = (0, r.useState)();
         return (
             (0, r.useEffect)(() => {
-                if (a(...l) || null != n(...l)) return;
+                if (a(...u) || null != n(...u)) return;
                 let e = new AbortController();
                 return (
-                    s(e.signal, ...l).catch((t) => {
-                        !e.signal.aborted && E(t);
+                    s(e.signal, ...u).catch((t) => {
+                        !e.signal.aborted && f(t);
                     }),
-                    () => e.abort()
+                    () => {
+                        l && e.abort();
+                    }
                 );
-            }, l),
+            }, u),
             {
-                data: c,
-                error: _,
-                isLoading: d
+                data: d,
+                error: E,
+                isLoading: _
             }
         );
     };
