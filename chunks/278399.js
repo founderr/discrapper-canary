@@ -1,49 +1,47 @@
 n.d(t, {
     Ho: function () {
-        return E;
+        return _;
     },
     y9: function () {
-        return f;
+        return E;
     }
 });
 var r = n(735250),
     i = n(470079),
     a = n(317261),
     s = n(823379),
-    o = n(162461),
-    l = n(561308),
-    u = n(297781),
-    c = n(443487),
-    d = n(43205),
-    _ = n(182022);
-let E = [u.An],
-    f = [a._.WEEK];
+    o = n(561308),
+    l = n(297781),
+    u = n(443487),
+    c = n(43205),
+    d = n(182022);
+let _ = [l.An],
+    E = [a._.WEEK];
 t.ZP = i.memo((e) => {
-    let { entry: t, channel: n, selected: i } = e;
-    if (!(0, o.Rg)('MemberListTopArtistContent')) return null;
-    let a = (0, l.Nq)(t);
-    return null != a && (0, s.Hi)(a, f)
-        ? (0, r.jsxs)(c.Zb, {
+    let { entry: t, channel: n, selected: i } = e,
+        a = (0, o.Nq)(t);
+    return null != a && (0, s.Hi)(a, E)
+        ? (0, r.jsxs)(u.Zb, {
               selected: i,
               children: [
-                  (0, r.jsxs)(c.e$, {
+                  (0, r.jsxs)(u.e$, {
                       children: [
-                          (0, r.jsx)(c.F9, {
+                          (0, r.jsx)(u.F9, {
                               entry: t,
                               channelId: n.id,
                               guildId: n.guild_id
                           }),
-                          (0, r.jsx)(c.ll, { children: t.extra.artist.name }),
-                          (0, r.jsx)(u.Gk, {
-                              location: u.Gt.CARD,
-                              children: E.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
+                          (0, r.jsx)(u.ll, { children: t.extra.artist.name }),
+                          (0, r.jsx)(l.Gk, {
+                              location: l.Gt.CARD,
+                              children: _.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
                           })
                       ]
                   }),
-                  (0, r.jsx)(d.f, {
+                  (0, r.jsx)(c.f, {
                       src: t.extra.media.image_url,
                       size: 48,
-                      className: _.thumbnail
+                      className: d.thumbnail
                   })
               ]
           })

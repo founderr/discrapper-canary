@@ -1,18 +1,18 @@
 n.d(t, {
     F9: function () {
-        return S;
+        return g;
     },
     Zb: function () {
-        return m;
-    },
-    cA: function () {
         return I;
     },
+    cA: function () {
+        return p;
+    },
     e$: function () {
-        return T;
+        return m;
     },
     ll: function () {
-        return A;
+        return S;
     }
 });
 var r = n(735250);
@@ -27,45 +27,32 @@ var i = n(120356),
     d = n(594174),
     _ = n(5192),
     E = n(192918),
-    f = n(687694),
-    h = n(689938),
-    p = n(182022);
-function I() {
+    f = n(689938),
+    h = n(182022);
+function p() {
     return (0, r.jsx)('div', {
-        className: p.container,
+        className: h.container,
         'aria-hidden': !0
     });
 }
-function m(e) {
-    let { children: t, selected: n } = e,
-        { showReplyIcon: i, openOnHover: s } = (0, f.C)({ location: 'ContentCard' });
-    return (0, r.jsxs)('div', {
-        className: a()(p.container, { [p.selected]: n }, { [p.openOnHover]: s }),
-        children: [
-            t,
-            i &&
-                (0, r.jsx)('div', {
-                    className: p.reply,
-                    children: (0, r.jsx)(o.ArrowAngleLeftUpIcon, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: p.icon
-                    })
-                })
-        ]
-    });
-}
-function T(e) {
-    let { children: t } = e;
+function I(e) {
+    let { children: t, selected: n } = e;
     return (0, r.jsx)('div', {
-        className: p.infoSection,
+        className: a()(h.container, h.openOnHover, { [h.selected]: n }),
         children: t
     });
 }
-function g(e) {
+function m(e) {
+    let { children: t } = e;
+    return (0, r.jsx)('div', {
+        className: h.infoSection,
+        children: t
+    });
+}
+function T(e) {
     let { users: t, guildId: n, 'aria-hidden': i } = e;
     return (0, r.jsx)('div', {
-        className: p.facePile,
+        className: h.facePile,
         children: t.map((e, a) => {
             let s = (0, r.jsx)(o.Avatar, {
                 src: e.getAvatarURL(n, 80),
@@ -77,7 +64,7 @@ function g(e) {
                 ? (0, r.jsx)(
                       'div',
                       {
-                          className: p.facePileItem,
+                          className: h.facePileItem,
                           children: s
                       },
                       e.id
@@ -87,7 +74,7 @@ function g(e) {
                       {
                           width: 16,
                           height: 16,
-                          className: p.facePileItem,
+                          className: h.facePileItem,
                           mask: l.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
                           children: s
                       },
@@ -96,11 +83,11 @@ function g(e) {
         })
     });
 }
-function S(e) {
+function g(e) {
     let { guildId: t, channelId: n, entry: i, maxAvatars: a = 3 } = e,
         l = i.author_id,
-        f = (0, s.e7)([d.default], () => d.default.getUser(l)),
-        { displayParticipants: I, participant1: m, participant2: T, numOtherParticipants: S } = (0, E.Z)(i, a),
+        p = (0, s.e7)([d.default], () => d.default.getUser(l)),
+        { displayParticipants: I, participant1: m, participant2: g, numOtherParticipants: S } = (0, E.Z)(i, a),
         A = (0, s.e7)([u.ZP], () => u.ZP.getMember(t, l)),
         N = (0, s.e7)(
             [c.Z],
@@ -110,13 +97,13 @@ function S(e) {
             },
             [t, A]
         );
-    if (null == f) return null;
+    if (null == p) return null;
     let O = null == A ? void 0 : A.colorString,
-        v = _.ZP.getName(t, n, f);
+        v = _.ZP.getName(t, n, p);
     return (0, r.jsxs)('div', {
-        className: p.userSection,
+        className: h.userSection,
         children: [
-            (0, r.jsx)(g, {
+            (0, r.jsx)(T, {
                 users: I,
                 guildId: t,
                 'aria-hidden': !0
@@ -125,25 +112,25 @@ function S(e) {
                 color: null != O ? O : void 0,
                 roleName: N,
                 name: v,
-                className: p.userName,
+                className: h.userName,
                 'aria-hidden': !0
             }),
             S > 0
                 ? (0, r.jsx)('div', {
-                      className: p.additionalParticipantBadge,
+                      className: h.additionalParticipantBadge,
                       'aria-hidden': !0,
                       children: (0, r.jsxs)(o.Text, {
                           variant: 'text-xxs/medium',
                           color: 'text-normal',
-                          className: p.additionalParticipantBadgeText,
+                          className: h.additionalParticipantBadgeText,
                           children: ['+', S]
                       })
                   })
                 : null,
             (0, r.jsx)(o.HiddenVisually, {
-                children: h.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
+                children: f.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
                     user0: _.ZP.getName(t, n, m),
-                    user1: _.ZP.getName(t, n, T),
+                    user1: _.ZP.getName(t, n, g),
                     countOthers: S,
                     name0Hook: (e, t) => (0, r.jsx)('span', { children: e }, t),
                     name1Hook: (e, t) => (0, r.jsx)('span', { children: e }, t),
@@ -153,12 +140,12 @@ function S(e) {
         ]
     });
 }
-function A(e) {
+function S(e) {
     let { children: t } = e;
     return (0, r.jsx)(o.Heading, {
         color: 'text-normal',
         variant: 'heading-sm/medium',
-        className: p.contentTitle,
+        className: h.contentTitle,
         lineClamp: 1,
         children: t
     });
