@@ -593,7 +593,7 @@ class el extends E.Z {
                     case ei.$j.DTLS_CONNECTING:
                         this.setState(er.hes.DTLS_CONNECTING);
                 }
-                if ((n === er.hes.RTC_CONNECTING && this.state === er.hes.RTC_DISCONNECTED ? this.reconnect() : this.state === er.hes.NO_ROUTE && this._backoff.fail(this.reconnect), this.state === er.hes.RTC_CONNECTED)) {
+                if ((n === er.hes.RTC_CONNECTING && this.state === er.hes.RTC_DISCONNECTED ? this.reconnect() : this.state === er.hes.NO_ROUTE && (0 === this._backoff.fails && this._handleNoRoute(), this._backoff.fail(this.reconnect)), this.state === er.hes.RTC_CONNECTED)) {
                     var r, i;
                     let e = F.Z.shouldIncludePreferredRegion() ? F.Z.getPreferredRegion() : null;
                     this._connecting &&
@@ -1104,6 +1104,10 @@ class el extends E.Z {
             }),
             ea(this, '_handleNetworkOffline', () => {
                 this.expeditedHeartbeat(15000, 'network detected offline.', !1);
+            }),
+            ea(this, '_handleNoRoute', () => {
+                var e;
+                null === (e = this._socket) || void 0 === e || e.noRoute();
             }),
             ea(this, '_handlePowerResume', () => {
                 this.expeditedHeartbeat(5000, 'power monitor resumed');
