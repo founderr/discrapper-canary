@@ -21,7 +21,7 @@ class o {
                         (0, r.EQ)(n)
                             .with({ type: i.Z.COACHTIP }, (e) => s.Z.fromServer(e))
                             .with({ type: i.Z.BADGE }, (e) => a.E.fromServer(e))
-                            .otherwise(() => n)
+                            .otherwise(() => void 0)
                     ];
                 })
             )

@@ -31,7 +31,7 @@ let i = {
         neverLoadBeforeConnectionOpen: !0
     },
     CommonTriggerPointManager: {
-        actions: ['POST_CONNECTION_OPEN', 'VOICE_CHANNEL_SELECT', 'CALL_CREATE', 'USER_SETTINGS_MODAL_OPEN'],
+        actions: ['VOICE_CHANNEL_SELECT', 'CALL_CREATE', 'USER_SETTINGS_MODAL_OPEN'],
         inlineRequire: () => n(957899).Z
     },
     CommunicationDisabledManager: {

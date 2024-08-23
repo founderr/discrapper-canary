@@ -16,7 +16,7 @@ let a = (0, r.B)({
     id: '2024-06_game_profile_experiment',
     label: 'Enables the Game Profile',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: i.$P.POST_CONNECTION_OPEN,
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,

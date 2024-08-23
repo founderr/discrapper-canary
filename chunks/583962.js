@@ -57,7 +57,7 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
     },
     M = 57,
     R = 57 + A,
-    O = {
+    P = {
         tension: 180,
         friction: 80
     };
@@ -69,22 +69,22 @@ t.ZP = (e) => {
         A = (0, I.FZ)(E, t.id),
         M = null == A,
         R = null != A ? A : E,
-        P = (0, c.e7)([x.Z], () => {
+        O = (0, c.e7)([x.Z], () => {
             var e;
             return null !== (e = x.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
         }),
         y = (0, c.e7)([m.Z], () => m.Z.can(Z.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
-        P !== u && (0, N.v)(g, u);
-    }, [g, P, u]);
+        O !== u && (0, N.v)(g, u);
+    }, [g, O, u]);
     let j = ''.concat(Math.min(100, (u / (0, I.vn)(t.id)[R]) * 100), '%'),
         { current: D } = l.useRef(j),
         w = {
-            from: { width: P === u ? D : '0%' },
+            from: { width: O === u ? D : '0%' },
             to: { width: j },
-            config: O
+            config: P
         },
-        [U, G] = (0, d.useSpring)(() => w),
+        [G, U] = (0, d.useSpring)(() => w),
         k = () => {
             (0, _.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR },
@@ -132,7 +132,7 @@ t.ZP = (e) => {
                     onClick: k,
                     onMouseEnter: () => {
                         var t;
-                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), G(w);
+                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), U(w);
                     },
                     className: a()(L.container, { [L.containerWithMargin]: n }),
                     onContextMenu: (e) => {
@@ -181,7 +181,7 @@ t.ZP = (e) => {
                             children: [
                                 (0, i.jsx)(s.animated.div, {
                                     className: L.progressBar,
-                                    style: U
+                                    style: G
                                 }),
                                 M
                                     ? (0, i.jsx)('span', {

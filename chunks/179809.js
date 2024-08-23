@@ -30,14 +30,14 @@ let Z = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     L = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function A(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: _, mentionCount: A = 0, unread: b = !1, defaultFolderName: M, useCircleMask: R = !1, draggable: O = !1, sorting: P = !1, onDragStart: y, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: _, mentionCount: A = 0, unread: b = !1, defaultFolderName: M, useCircleMask: R = !1, draggable: P = !1, sorting: O = !1, onDragStart: y, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: G, folderIconContent: U } = e,
         { id: k, name: B, children: H } = t,
         [V, F] = l.useState(!1),
         [W, z] = l.useState(!1),
         Y = V || W;
     l.useEffect(() => {
-        P && F(!1);
-    }, [P]);
+        O && F(!1);
+    }, [O]);
     let [{ dragging: K }, q] = (0, s.c)({
             type: f.eD.FOLDER,
             item: () => (
@@ -83,11 +83,11 @@ function A(e) {
                 }),
                 (0, i.jsx)(N.Z, {
                     text: J,
-                    disabled: P,
+                    disabled: O,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
-                        ref: O ? q : void 0,
+                        ref: P ? q : void 0,
                         className: a()({ [v.wobble]: !K && W && !u }),
                         'data-dnd-name': J,
                         children: K
@@ -96,7 +96,7 @@ function A(e) {
                                   folderNode: t,
                                   expanded: u,
                                   forceCircular: R,
-                                  sorting: P,
+                                  sorting: O,
                                   mediaState: _,
                                   mentionCount: A,
                                   tooltipName: J,
@@ -106,11 +106,11 @@ function A(e) {
                                   onHoverChange: F,
                                   onKeyDown: X,
                                   treeItemProps: $,
-                                  folderIconContent: G
+                                  folderIconContent: U
                               })
                     })
                 }),
-                O
+                P
                     ? (0, i.jsx)(C.ZP, {
                           name: J,
                           targetNode: t,
@@ -142,13 +142,13 @@ function A(e) {
                             style: { height: e.height.to((e) => e * et) },
                             className: S.__invalid_expandedGuilds,
                             role: 'group',
-                            children: H.map(U)
+                            children: H.map(G)
                         },
                         l
                     )
                 );
             }),
-            O && u
+            P && u
                 ? (0, i.jsx)(C.Zu, {
                       name: J,
                       targetNode: t

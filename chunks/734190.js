@@ -42,8 +42,8 @@ function b(e) {
 }
 t.Z = l.memo(function (e) {
     let { thread: t, isSelectedChannel: r, isSelectedVoice: A, isLast: M, withGuildIcon: R } = e,
-        O = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
-        P = (0, o.e7)([m.Z], () => m.Z.hasVideo(t.id)),
+        P = (0, o.e7)([C.ZP], () => C.ZP.getVoiceStatesForChannel(t), [t]),
+        O = (0, o.e7)([m.Z], () => m.Z.hasVideo(t.id)),
         { unread: y, mentionCount: j } = (0, o.cj)([g.ZP], () => ({
             unread: g.ZP.hasUnread(t.id),
             mentionCount: g.ZP.getMentionCount(t.id)
@@ -55,10 +55,10 @@ t.Z = l.memo(function (e) {
             },
             [t]
         ),
-        U = l.useCallback(() => {
+        G = l.useCallback(() => {
             u.Z.preload(t.guild_id, t.id);
         }, [t.guild_id, t.id]),
-        G = l.useCallback(
+        U = l.useCallback(
             (e) => {
                 let l = f.Z.getChannel(t.id);
                 null != l &&
@@ -73,7 +73,7 @@ t.Z = l.memo(function (e) {
             },
             [t.id]
         ),
-        k = null == O ? 0 : O.length,
+        k = null == P ? 0 : P.length,
         { role: B, ...H } = (0, s.JA)(t.id),
         V = l.useRef(null),
         F =
@@ -111,8 +111,8 @@ t.Z = l.memo(function (e) {
                         [L.modeUnreadImportant]: !D && !r && y,
                         [L.withGuildIcon]: R
                     }),
-                    onMouseDown: U,
-                    onContextMenu: G,
+                    onMouseDown: G,
+                    onContextMenu: U,
                     children: [
                         !y || D || r ? null : (0, i.jsx)('div', { className: a()(L.unread, L.unreadImportant) }),
                         (0, i.jsx)(c.Clickable, {
@@ -136,7 +136,7 @@ t.Z = l.memo(function (e) {
                                             k > 0 && t.userLimit > 0
                                                 ? (0, i.jsx)(E.Z, {
                                                       userCount: k,
-                                                      video: P,
+                                                      video: O,
                                                       channel: t
                                                   })
                                                 : null,
@@ -153,7 +153,7 @@ t.Z = l.memo(function (e) {
                 channel: t,
                 collapsed: !A,
                 collapsedMax: 6,
-                voiceStates: O,
+                voiceStates: P,
                 location: S.Sbl.GUILD_CHANNEL_LIST
             })
         ]

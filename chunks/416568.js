@@ -28,14 +28,14 @@ var i = n(735250),
     b = n(802718),
     M = n(796974),
     R = n(271383),
-    O = n(430824),
-    P = n(771845),
+    P = n(430824),
+    O = n(771845),
     y = n(358085),
     j = n(709054),
     D = n(792125),
     w = n(727258),
-    U = n(605951),
-    G = n(474109),
+    G = n(605951),
+    U = n(474109),
     k = n(741616),
     B = n(187835),
     H = n(162050),
@@ -189,16 +189,16 @@ class ec {
 }
 function eu(e) {
     let { disableAppDownload: t = y.isPlatformEmbedded, isOverlay: n = !1, className: r, themeOverride: s } = e,
-        [o] = (0, p.Wu)([P.ZP], () => {
-            let e = P.ZP.getGuildsTree();
+        [o] = (0, p.Wu)([O.ZP], () => {
+            let e = O.ZP.getGuildsTree();
             return [e, e.version];
         }),
         c = (0, p.e7)([L.Z], () => L.Z.lurkingGuildIds()),
         h = l.useMemo(() => (n ? [] : c), [c, n]),
-        _ = (0, p.Wu)([O.Z, R.ZP], () => j.default.keys(O.Z.getGuilds()).filter((e) => R.ZP.isCurrentUserGuest(e))),
+        _ = (0, p.Wu)([P.Z, R.ZP], () => j.default.keys(P.Z.getGuilds()).filter((e) => R.ZP.isCurrentUserGuest(e))),
         m = h.concat(_),
         C = (0, p.e7)([N.Z], () => N.Z.isFullscreenInContext()),
-        el = (0, p.e7)([O.Z], () => O.Z.getGeoRestrictedGuilds()),
+        el = (0, p.e7)([P.Z], () => P.Z.getGeoRestrictedGuilds()),
         [er, ea] = l.useState(!1),
         es = l.useCallback(() => ea(!0), []),
         eo = l.useCallback(() => ea(!1), []),
@@ -238,10 +238,10 @@ function eu(e) {
                 ),
             [o, eZ]
         ),
-        { analyticsLocations: eO } = (0, E.ZP)(I.Z.GUILDS_LIST),
-        { pathname: eP } = (0, u.TH)(),
-        ey = eP.startsWith(et.Z5c.GUILD_DISCOVERY) || eP.startsWith(et.Z5c.GLOBAL_DISCOVERY),
-        ej = eP.startsWith(et.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
+        { analyticsLocations: eP } = (0, E.ZP)(I.Z.GUILDS_LIST),
+        { pathname: eO } = (0, u.TH)(),
+        ey = eO.startsWith(et.Z5c.GUILD_DISCOVERY) || eO.startsWith(et.Z5c.GLOBAL_DISCOVERY),
+        ej = eO.startsWith(et.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(''));
     l.useLayoutEffect(() => {
         if (!eu.current) {
             if (0 !== o.size) {
@@ -273,10 +273,10 @@ function eu(e) {
             animate: !1
         });
     }, [eR]);
-    (0, U.Z)(eR.scrollToGuild);
+    (0, G.Z)(eR.scrollToGuild);
     let ew = o.getRoots(),
-        eU = (0, v.Z)(),
-        eG = (0, b.U)(),
+        eG = (0, v.Z)(),
+        eU = (0, b.U)(),
         ek = el.map((e) =>
             (0, i.jsx)(
                 F.Z,
@@ -289,7 +289,7 @@ function eu(e) {
             )
         );
     return (0, i.jsx)(E.Gt, {
-        value: eO,
+        value: eP,
         children: (0, i.jsx)('nav', {
             className: a()(ei.wrapper, r, (0, D.Q)(s), { [ei.hidden]: C }),
             'aria-label': en.Z.Messages.GUILDS_BAR_A11Y_LABEL,
@@ -300,7 +300,7 @@ function eu(e) {
                 role: 'tree',
                 className: ei.tree,
                 children: [
-                    (0, i.jsx)(G.Z, {
+                    (0, i.jsx)(U.Z, {
                         ref: eh,
                         isVisible: eR.isItemVisible,
                         onJumpTo: eR.handleJumpToGuild,
@@ -316,11 +316,11 @@ function eu(e) {
                         onScroll: eR.handleScroll,
                         children: [
                             (0, i.jsx)(Y.u, {}),
-                            eU ? (0, i.jsx)(Z.Z, {}) : null,
+                            eG ? (0, i.jsx)(Z.Z, {}) : null,
                             (0, i.jsx)(H.Z, {}),
                             (0, i.jsx)(K.Z, { isOnHubVerificationRoute: ej }),
                             (0, i.jsx)(k.Z, {}),
-                            eG,
+                            eU,
                             m.map((e) => (0, i.jsx)(ee.Z, { guildId: e }, e)),
                             (0, i.jsx)($.Z, { onActivate: eD }),
                             (0, i.jsx)(q.Z, {}),
@@ -407,7 +407,7 @@ function eu(e) {
                                 })
                             })
                           : null,
-                    (0, i.jsx)(G.Z, {
+                    (0, i.jsx)(U.Z, {
                         reverse: !0,
                         ref: ep,
                         isVisible: eR.isItemVisible,

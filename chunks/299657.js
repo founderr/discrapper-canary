@@ -27,8 +27,8 @@ var s = n(735250),
     O = n(91802),
     b = n(104494),
     P = n(639119),
-    v = n(2359),
-    L = n(132547),
+    L = n(2359),
+    v = n(132547),
     Z = n(474936),
     D = n(981631),
     B = n(874296);
@@ -74,12 +74,12 @@ t.Z = function (e) {
           : t === Z.EZ.ApplicationStoreHome && W
             ? (0, s.jsx)(I.Gt, {
                   value: j,
-                  children: (0, s.jsx)(L.Z, {})
+                  children: (0, s.jsx)(v.Z, {})
               })
             : U && H && !w
               ? (0, s.jsx)(I.Gt, {
                     value: j,
-                    children: (0, s.jsx)(v.Z, { entrypoint: t })
+                    children: (0, s.jsx)(L.Z, { entrypoint: t })
                 })
               : (0, s.jsx)('div', {
                     className: i()(B.container, B.loading),

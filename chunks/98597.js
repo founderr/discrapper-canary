@@ -125,7 +125,7 @@ function R(e) {
         })
     );
 }
-function O(e) {
+function P(e) {
     let { channel: t } = e,
         n = () => {
             (0, g._U)(t.guild_id, t.id);
@@ -146,7 +146,7 @@ function O(e) {
             })
     });
 }
-function P(e) {
+function O(e) {
     let { channel: t } = e,
         n = () => {
             (0, g.dM)(t.guild_id, t.id, !0, { section: Z.jXE.CHANNEL_LIST });
@@ -175,10 +175,10 @@ class y extends (a = o.PureComponent) {
         return (0, s.jsx)(R, { ...this.props });
     }
     renderRemoveSuggestionButton() {
-        return (0, s.jsx)(O, { ...this.props });
+        return (0, s.jsx)(P, { ...this.props });
     }
     renderAcceptSuggestionButton() {
-        return (0, s.jsx)(P, { ...this.props });
+        return (0, s.jsx)(O, { ...this.props });
     }
     getClassName() {
         let { position: e, sortingPosition: t } = this.props;

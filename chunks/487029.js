@@ -43,8 +43,8 @@ function x(e) {
         })((0, m.h)(n, !0)),
         b = (0, g.j)(),
         M = l.useRef(null),
-        [R, O] = l.useState(void 0),
-        P = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        [R, P] = l.useState(void 0),
+        O = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
         { analyticsLocations: y } = (0, o.ZP)(s.Z.SOUNDBOARD_WHEEL),
         j = l.useCallback(
             (e) => {
@@ -72,13 +72,13 @@ function x(e) {
                 properties: {
                     source: T,
                     guild_id: t,
-                    media_session_id: P
+                    media_session_id: O
                 }
             },
             { disableTrack: !Z }
         );
     let D = l.useCallback((e) => {
-            (M.current = e), O(null == e ? void 0 : e.soundId);
+            (M.current = e), P(null == e ? void 0 : e.soundId);
         }, []),
         w = l.useCallback(
             (e) => {
@@ -91,7 +91,7 @@ function x(e) {
             },
             [D, A]
         ),
-        U = l.useCallback(
+        G = l.useCallback(
             (e) => {
                 if (null == e) return;
                 let t = A[e];
@@ -99,7 +99,7 @@ function x(e) {
             },
             [A, j]
         ),
-        G = l.useMemo(
+        U = l.useMemo(
             () =>
                 A.map((e) =>
                     (0, i.jsx)(
@@ -128,9 +128,9 @@ function x(e) {
                   showDeadZoneIndicator: !v,
                   activeItem: R,
                   onItemSelect: w,
-                  onItemAction: U,
+                  onItemAction: G,
                   interactive: Z,
-                  children: G
+                  children: U
               })
           });
 }

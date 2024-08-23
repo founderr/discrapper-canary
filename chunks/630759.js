@@ -1,6 +1,6 @@
 t.d(n, {
     J6: function () {
-        return b;
+        return P;
     },
     LO: function () {
         return U;
@@ -15,10 +15,10 @@ t.d(n, {
         return Z;
     },
     Zn: function () {
-        return m;
+        return D;
     },
     bo: function () {
-        return D;
+        return m;
     },
     fz: function () {
         return G;
@@ -94,7 +94,7 @@ function Z(e, n) {
         }
     });
 }
-function m(e) {
+function D(e) {
     let n = S.default.getUser(e),
         t = A.ZP.getName(n);
     C.Z.openSecureFramesUpdateConfirmation({
@@ -105,7 +105,7 @@ function m(e) {
         }
     });
 }
-function D(e) {
+function m(e) {
     let n = a()(e),
         t = a()().diff(n, 's');
     if (t > 12 * I.Z.Seconds.DAYS_30) {
@@ -150,7 +150,7 @@ function V(e) {
     let n = r.fromByteArray(new Uint8Array(e));
     return 'data:application/octet-stream;base64,'.concat(n);
 }
-async function b(e, n, t) {
+async function P(e, n, t) {
     try {
         return (
             await o.tn.post({
@@ -165,7 +165,7 @@ async function b(e, n, t) {
         throw (R.Z.captureException(e), e);
     }
 }
-async function w(e) {
+async function b(e) {
     let { key: n, signature: t } = await L(e);
     try {
         await o.tn.put({
@@ -181,17 +181,17 @@ async function w(e) {
         throw (R.Z.captureException(e), e);
     }
 }
-function P(e) {
+function w(e) {
     return M.Z.getUploadedKeyVersionsCached().includes(e);
 }
 async function K(e) {
-    !P(e) && (await w(e));
+    !w(e) && (await b(e));
 }
 async function v(e) {
-    if (!P(e)) return await w(e), !0;
+    if (!w(e)) return await b(e), !0;
     let n = l.default.getId(),
         { key: t } = await L(e),
-        r = await b(n, t, e);
+        r = await P(n, t, e);
     return !r && (0, h.KA)(e), r;
 }
 function k(e, n) {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return P;
     }
 }),
     n(47120),
@@ -41,18 +41,18 @@ let R = {
         object: A.qAy.CHANNEL
     }
 };
-function O() {
+function P() {
     let e = (0, s.Ie)('favorites'),
         { favoriteAdded: t, clearFavoriteAdded: r } = (0, v.up)(),
-        [O, P] = l.useState(!1),
+        [P, O] = l.useState(!1),
         { favoriteServerMuted: y, favoriteChannels: j } = (0, o.cj)([S.Z], () => ({
             favoriteChannels: S.Z.getFavoriteChannels(),
             favoriteServerMuted: S.Z.favoriteServerMuted
         })),
         D = (0, o.e7)([E.Z], () => E.Z.getChannelId(A.I_8)),
         w = (0, o.e7)([I.Z], () => I.Z.getChannel(D)),
-        U = (0, m.Z)((e) => e.guildId) === A.I_8,
-        { badge: G, unread: k } = (0, Z.Z)(j),
+        G = (0, m.Z)((e) => e.guildId) === A.I_8,
+        { badge: U, unread: k } = (0, Z.Z)(j),
         B = (function (e) {
             let t = (0, o.e7)([E.Z], () => E.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
@@ -87,15 +87,15 @@ function O() {
                 })
             );
         })(j),
-        H = G > 0 ? (0, g.N)(G) : null,
+        H = U > 0 ? (0, g.N)(U) : null,
         V = l.useCallback(() => {
             r();
         }, [r]);
     return (0, i.jsxs)(_.H, {
         children: [
             (0, i.jsx)(p.Z, {
-                selected: U,
-                hovered: O,
+                selected: G,
+                hovered: P,
                 unread: k && !y,
                 className: M.pill
             }),
@@ -103,22 +103,22 @@ function O() {
                 onShow: V,
                 children: (0, i.jsx)(T.S, {
                     children: (0, i.jsx)(c.BlobMask, {
-                        selected: U || O,
+                        selected: G || P,
                         upperBadge: B,
                         lowerBadge: H,
                         children: (0, i.jsx)(c.NavItem, {
                             ...e,
                             ariaLabel: b.Z.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
                                 guildName: b.Z.Messages.FAVORITES_GUILD_NAME,
-                                mentions: G
+                                mentions: U
                             }),
                             to: {
                                 pathname: A.Z5c.CHANNEL(A.I_8, D),
                                 state: R
                             },
-                            selected: U || O,
-                            onMouseEnter: () => P(!0),
-                            onMouseLeave: () => P(!1),
+                            selected: G || P,
+                            onMouseEnter: () => O(!0),
+                            onMouseLeave: () => O(!1),
                             onMouseDown: function () {
                                 if (null != w) u.Z.preload(w.guild_id, w.id);
                             },

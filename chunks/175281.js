@@ -68,7 +68,7 @@ function R(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: o()(T.backdrop, { [T.show]: t }) });
 }
-function O() {
+function P() {
     let e = a.useMemo(
         () =>
             h()((0, m.Rv)())
@@ -146,7 +146,7 @@ function O() {
         })
     });
 }
-class P extends a.PureComponent {
+class O extends a.PureComponent {
     componentDidMount() {
         (this.lastInputedKeys = []), N.S.subscribe(v.CkL.SCROLL_PAGE_UP, this.scrollPageUp), N.S.subscribe(v.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
@@ -205,7 +205,7 @@ class P extends a.PureComponent {
                 (0, r.jsx)(g.AdvancedScrollerAuto, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, r.jsx)(g.HeadingLevel, { children: (0, r.jsx)(O, {}) })
+                    children: (0, r.jsx)(g.HeadingLevel, { children: (0, r.jsx)(P, {}) })
                 })
             ]
         });
@@ -341,7 +341,7 @@ function j(e) {
                               'raging-demo'
                           )
                         : (0, r.jsx)(
-                              P,
+                              O,
                               {
                                   content: u,
                                   keyboardModeEnabled: d,

@@ -118,8 +118,8 @@ t.Z = l.memo(function (e) {
             x: 0,
             y: 0
         }),
-        O = Math.abs(M.x) + Math.abs(M.y) > 0,
-        P = l.useMemo(() => a().chunk(S, p), [S]),
+        P = Math.abs(M.x) + Math.abs(M.y) > 0,
+        O = l.useMemo(() => a().chunk(S, p), [S]),
         y = l.useCallback(
             (e, t) => {
                 null == Z.current[A] ? (Z.current[A] = []) : (Z.current[A][t] = e);
@@ -141,7 +141,7 @@ t.Z = l.memo(function (e) {
             },
             [D]
         ),
-        U = l.useCallback((e, t, n) => {
+        G = l.useCallback((e, t, n) => {
             if (T.current) {
                 R({
                     x: 0,
@@ -162,7 +162,7 @@ t.Z = l.memo(function (e) {
                 y: (r ? Math.max(i.y, -a.y) : Math.min(i.y, a.y)) / 2
             });
         }, []),
-        G = l.useCallback(
+        U = l.useCallback(
             (e) => {
                 if (null != L.current) e.preventDefault(), e.stopPropagation(), null == N || N(p * A + L.current);
             },
@@ -182,7 +182,7 @@ t.Z = l.memo(function (e) {
                             x: e.clientX,
                             y: e.clientY
                         };
-                    if ((U(a, r, Math.max(t, n)), T.current)) {
+                    if ((G(a, r, Math.max(t, n)), T.current)) {
                         null != I && D();
                         return;
                     }
@@ -198,19 +198,19 @@ t.Z = l.memo(function (e) {
                     }
                     D();
                 }, 16),
-            [I, U, D, j, A, n, t]
+            [I, G, D, j, A, n, t]
         ),
         B = l.useCallback(
             (e) => {
                 if (!x) return;
                 let t = A + (e.deltaY > 0 ? 1 : -1);
-                t >= 0 && t < P.length && (null != L.current && (P[t].length > L.current ? j(t, L.current) : D()), b(t));
+                t >= 0 && t < O.length && (null != L.current && (O[t].length > L.current ? j(t, L.current) : D()), b(t));
             },
-            [x, A, P, j, D]
+            [x, A, O, j, D]
         ),
         H = l.useMemo(
             () =>
-                P[A].map((e, l) => {
+                O[A].map((e, l) => {
                     let r = h[l];
                     if (null == r) throw Error('Too many items supplied '.concat(S.length, ' expected max of ').concat(h.length));
                     let a = _(r.x, t, g),
@@ -231,13 +231,13 @@ t.Z = l.memo(function (e) {
                         l
                     );
                 }),
-            [P, A, t, g, n, m, S.length, y]
+            [O, A, t, g, n, m, S.length, y]
         );
     return (0, i.jsx)(s.Clickable, {
         className: u.chatWheelMouseInput,
         onMouseMove: k,
         onWheel: B,
-        onClick: G,
+        onClick: U,
         children: (0, i.jsxs)('div', {
             ref: v,
             className: u.chatWheel,
@@ -302,7 +302,7 @@ t.Z = l.memo(function (e) {
                                         cy: 144,
                                         r: 28.8
                                     }),
-                                O &&
+                                P &&
                                     (0, i.jsx)('circle', {
                                         className: u.chatWheelCenter,
                                         cx: 144 + M.x,
@@ -327,7 +327,7 @@ t.Z = l.memo(function (e) {
                     className: u.innerContent,
                     children: [
                         C && (0, i.jsx)(d, { className: u.chatWheelDeadZoneIcon }),
-                        x && P.length > 1
+                        x && O.length > 1
                             ? (0, i.jsx)('div', {
                                   className: u.paginationHint,
                                   children: c.Z.Messages.CHAT_WHEEL_PAGINATION_HINT

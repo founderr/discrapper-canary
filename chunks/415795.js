@@ -6,7 +6,7 @@ n.d(s, {
         return T;
     },
     PZ: function () {
-        return L;
+        return Z;
     },
     h4: function () {
         return S;
@@ -15,7 +15,7 @@ n.d(s, {
         return M;
     },
     n5: function () {
-        return Z;
+        return L;
     },
     rU: function () {
         return R;
@@ -41,10 +41,10 @@ var r,
     x = n(754688),
     N = n(237583),
     f = n(430824),
-    b = n(699516),
-    E = n(594174),
-    _ = n(51144),
-    g = n(689938),
+    E = n(699516),
+    g = n(594174),
+    b = n(51144),
+    _ = n(689938),
     I = n(900601);
 function v(e, s, n) {
     return (
@@ -153,7 +153,7 @@ class M extends i.Component {
     }
     getAccessibilityLabel() {
         let { guild: e } = this.props;
-        return g.Z.Messages.QUICK_SWITCHER_RESULTS_GUILD_LABEL.format({ name: e.name });
+        return _.Z.Messages.QUICK_SWITCHER_RESULTS_GUILD_LABEL.format({ name: e.name });
     }
     render() {
         let { onMouseEnter: e, onClick: s, onFocus: n, onContextMenu: r, focused: i, score: l, id: a } = this.props;
@@ -201,14 +201,14 @@ class A extends (r = i.Component) {
             null != r &&
                 (s = (0, t.jsx)('span', {
                     className: I.note,
-                    children: (0, c.F6)(r, E.default, b.Z)
+                    children: (0, c.F6)(r, g.default, E.Z)
                 })),
             (0, t.jsxs)('div', {
                 className: I.name,
                 children: [
                     (0, t.jsx)('span', {
                         className: I.match,
-                        children: (0, c.F6)(i, E.default, b.Z)
+                        children: (0, c.F6)(i, g.default, E.Z)
                     }),
                     e,
                     this.renderVoiceStates(),
@@ -250,9 +250,9 @@ class A extends (r = i.Component) {
         var e;
         let { channel: s } = this.props,
             n = null === (e = f.Z.getGuild(this.props.channel.guild_id)) || void 0 === e ? void 0 : e.name,
-            r = (0, c.F6)(s, E.default, b.Z),
+            r = (0, c.F6)(s, g.default, E.Z),
             t = (0, u.Z)(s);
-        return g.Z.Messages.QUICK_SWITCHER_RESULTS_CHANNEL_LABEL.format({
+        return _.Z.Messages.QUICK_SWITCHER_RESULTS_CHANNEL_LABEL.format({
             name: r,
             type: t,
             guild: n
@@ -274,7 +274,7 @@ class A extends (r = i.Component) {
     }
 }
 v(A, 'defaultProps', { unread: !1 });
-class L extends i.Component {
+class Z extends i.Component {
     renderIcon() {
         let { channel: e } = this.props;
         return (0, t.jsx)('div', {
@@ -301,7 +301,7 @@ class L extends i.Component {
                 children: [
                     (0, t.jsx)('span', {
                         className: I.match,
-                        children: (0, c.F6)(n, E.default, b.Z)
+                        children: (0, c.F6)(n, g.default, E.Z)
                     }),
                     e
                 ]
@@ -324,13 +324,13 @@ class L extends i.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: s } = this.props,
-            n = (0, c.F6)(e, E.default, b.Z);
+            n = (0, c.F6)(e, g.default, E.Z);
         return null != s && s > 0
-            ? g.Z.Messages.QUICK_SWITCHER_RESULTS_GROUP_DM_UNREAD_LABEL.format({
+            ? _.Z.Messages.QUICK_SWITCHER_RESULTS_GROUP_DM_UNREAD_LABEL.format({
                   name: n,
                   mentions: s
               })
-            : g.Z.Messages.QUICK_SWITCHER_RESULTS_GROUP_DM_LABEL.format({ name: n });
+            : _.Z.Messages.QUICK_SWITCHER_RESULTS_GROUP_DM_LABEL.format({ name: n });
     }
     render() {
         let { onMouseEnter: e, onClick: s, onFocus: n, onContextMenu: r, focused: i, score: l, id: a } = this.props;
@@ -347,7 +347,7 @@ class L extends i.Component {
         });
     }
 }
-class Z extends i.Component {
+class L extends i.Component {
     renderIcon() {
         let { user: e } = this.props;
         return (0, t.jsx)('div', {
@@ -362,8 +362,8 @@ class Z extends i.Component {
     getDisplayNickname() {
         let e;
         let { user: s, comparator: n } = this.props,
-            r = b.Z.getNickname(s.id);
-        return ((e = n === s.tag || null == n || '' === n ? s.username : n) === s.username || e === s.id) && (e = null != r ? r : _.ZP.getName(s)), e;
+            r = E.Z.getNickname(s.id);
+        return ((e = n === s.tag || null == n || '' === n ? s.username : n) === s.username || e === s.id) && (e = null != r ? r : b.ZP.getName(s)), e;
     }
     renderName() {
         let e;
@@ -386,7 +386,7 @@ class Z extends i.Component {
                     e,
                     (0, t.jsx)('span', {
                         className: I.username,
-                        children: _.ZP.getUserTag(s)
+                        children: b.ZP.getUserTag(s)
                     })
                 ]
             })
@@ -409,14 +409,14 @@ class Z extends i.Component {
     getAccessibilityLabel() {
         let { mentions: e, user: s } = this.props,
             n = this.getDisplayNickname(),
-            r = _.ZP.getUserTag(s);
+            r = b.ZP.getUserTag(s);
         return null != e && e > 0
-            ? g.Z.Messages.QUICK_SWITCHER_RESULTS_USER_UNREAD_LABEL.format({
+            ? _.Z.Messages.QUICK_SWITCHER_RESULTS_USER_UNREAD_LABEL.format({
                   name: n,
                   id: r,
                   mentions: e
               })
-            : g.Z.Messages.QUICK_SWITCHER_RESULTS_USER_LABEL.format({
+            : _.Z.Messages.QUICK_SWITCHER_RESULTS_USER_LABEL.format({
                   name: n,
                   id: r
               });
@@ -492,18 +492,18 @@ class R extends i.Component {
             i = (0, x.Qj)(n.path);
         return (
             null == i || void 0 === i.messageId
-                ? ((e = g.Z.Messages.QUICKSWITCHER_LINK_UNKNOWN),
+                ? ((e = _.Z.Messages.QUICKSWITCHER_LINK_UNKNOWN),
                   (s = (0, t.jsx)(l.LinkIcon, {
                       size: 'xs',
                       color: 'currentColor'
                   })))
                 : (0, x.VO)(i)
-                  ? ((e = g.Z.Messages.QUICKSWITCHER_LINK_MESSAGE),
+                  ? ((e = _.Z.Messages.QUICKSWITCHER_LINK_MESSAGE),
                     (s = (0, t.jsx)(p.Z, {
                         size: 'xs',
                         color: 'currentColor'
                     })))
-                  : ((e = g.Z.Messages.QUICKSWITCHER_LINK_NO_ACCESS),
+                  : ((e = _.Z.Messages.QUICKSWITCHER_LINK_NO_ACCESS),
                     (s = (0, t.jsx)(l.LockIcon, {
                         size: 'xs',
                         color: 'currentColor'
@@ -545,14 +545,14 @@ class U extends i.Component {
             r = '';
         switch (s.type) {
             case a.Ky.SHOP:
-                (r = g.Z.Messages.COLLECTIBLES_SHOP),
+                (r = _.Z.Messages.COLLECTIBLES_SHOP),
                     (e = (0, t.jsx)(l.ShopIcon, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
                 break;
             case a.Ky.NITRO_HOME:
-                (r = g.Z.Messages.PREMIUM),
+                (r = _.Z.Messages.PREMIUM),
                     (e = (0, t.jsx)(l.NitroWheelIcon, {
                         size: 'xs',
                         color: 'currentColor'

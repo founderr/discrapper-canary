@@ -27,8 +27,8 @@ var s = n(735250),
     O = n(498765),
     b = n(635921),
     P = n(177839),
-    v = n(794484),
-    L = n(392521),
+    L = n(794484),
+    v = n(392521),
     Z = n(349803),
     D = n(179984),
     B = n(409100),
@@ -55,11 +55,11 @@ let W = (e) => {
             ? (0, s.jsxs)('div', {
                   className: i()(H.whatsNewSectionBackground),
                   children: [
-                      (0, s.jsx)(v.Z, {
+                      (0, s.jsx)(L.Z, {
                           variant: j.R0.WHATS_NEW,
                           isFullScreen: t
                       }),
-                      (0, s.jsx)(v.Z, {
+                      (0, s.jsx)(L.Z, {
                           isFullScreen: t,
                           showAllPerksButton: t
                               ? (0, s.jsx)(G.Z, {
@@ -69,15 +69,15 @@ let W = (e) => {
                               : void 0
                       }),
                       n
-                          ? (0, s.jsx)(L.ZP, {
+                          ? (0, s.jsx)(v.ZP, {
                                 className: H.pdSparklesTop,
-                                variant: L.u0.TOP
+                                variant: v.u0.TOP
                             })
                           : null,
                       n
-                          ? (0, s.jsx)(L.ZP, {
+                          ? (0, s.jsx)(v.ZP, {
                                 className: H.pdSparklesBottom,
-                                variant: L.u0.BOTTOM
+                                variant: v.u0.BOTTOM
                             })
                           : null
                   ]
@@ -89,8 +89,8 @@ t.Z = (e) => {
     let { isFullscreen: n, entrypoint: r } = e;
     (0, T.z)(E.X);
     let O = a.useRef(null),
-        [P, v] = a.useState(!1),
-        [L, G] = a.useState(!1),
+        [P, L] = a.useState(!1),
+        [v, G] = a.useState(!1),
         [z, Q] = a.useState(!1),
         [q, X] = a.useState(!1),
         J = (0, l.e7)([I.ZP], () => I.ZP.getPremiumTypeSubscription()),
@@ -188,7 +188,7 @@ t.Z = (e) => {
                           smallGap: !0
                       })
                     : (0, s.jsx)(o.$, {
-                          onChange: (e) => v(e),
+                          onChange: (e) => L(e),
                           threshold: 0,
                           active: !0,
                           children: (0, s.jsx)(b.Z, {
@@ -247,7 +247,7 @@ t.Z = (e) => {
                 }),
                 (0, s.jsx)('div', { className: n ? H.footerSpacingFullscreen : H.footerSpacing }),
                 (0, s.jsx)(Z.Z, {
-                    isVisible: !P && !L && q,
+                    isVisible: !P && !v && q,
                     isFullscreen: n,
                     subscriptionTier: et
                 }),

@@ -25,7 +25,7 @@ let a = (0, r.Z)({
         id: '2024-06_ctp_app_open_vanilla',
         label: 'CTP app open - A/A test - Vanilla',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: i.$P.POST_CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -39,7 +39,7 @@ let a = (0, r.Z)({
         id: '2024-06_ctp_app_open_filters',
         label: 'CTP app open - A/A test - Filters',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: i.$P.POST_CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -53,7 +53,7 @@ let a = (0, r.Z)({
         id: '2024-06_ctp_app_open_multiple_buckets',
         label: 'CTP app open - A/A test - Multiple buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: i.$P.POST_CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -72,7 +72,7 @@ let a = (0, r.Z)({
         id: '2024-06_ctp_app_open_everyone',
         label: 'CTP app open - A/A test - Everyone',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: i.$P.POST_CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -86,7 +86,7 @@ let a = (0, r.Z)({
         id: '2024-06_ctp_app_open_uneven_buckets',
         label: 'CTP app open - A/A test - Uneven buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: i.$P.POST_CONNECTION_OPEN,
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,

@@ -35,14 +35,14 @@ var l = n(120356),
     b = n(496675),
     M = n(306680),
     R = n(9156),
-    O = n(979651),
-    P = n(934415),
+    P = n(979651),
+    O = n(934415),
     y = n(98597),
     j = n(648501),
     D = n(473403),
     w = n(207055),
-    U = n(981631),
-    G = n(647086),
+    G = n(981631),
+    U = n(647086),
     k = n(689938),
     B = n(391463),
     H = n(153572);
@@ -67,7 +67,7 @@ class F extends y.ZP {
     }
     isFull() {
         let { channel: e } = this.props;
-        return (0, P.rY)(e, O.Z, L.Z);
+        return (0, O.rY)(e, P.Z, L.Z);
     }
     getModeClass() {
         let { position: e, sortingPosition: t, isUserOver: n } = this.props;
@@ -82,7 +82,7 @@ class F extends y.ZP {
             voiceStates: l,
             collapsed: t,
             tabIndex: n,
-            location: U.Sbl.GUILD_CHANNEL_LIST,
+            location: G.Sbl.GUILD_CHANNEL_LIST,
             numAudience: r
         });
     }
@@ -235,11 +235,11 @@ function z(e) {
             let e = T.Z.getChannel(n.parent_id),
                 i = A.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: null != t && b.Z.can(U.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === G._ || (null != e ? b.Z.can(U.Plq.MANAGE_CHANNELS, e) : b.Z.can(U.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: b.Z.can(U.Plq.MOVE_MEMBERS, n),
-                locked: !b.Z.can(U.Plq.CONNECT, n),
-                bypassLimit: b.Z.can(U.Plq.MOVE_MEMBERS, n),
+                canManageChannel: null != t && b.Z.can(G.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== l && (t.id === U._ || (null != e ? b.Z.can(G.Plq.MANAGE_CHANNELS, e) : b.Z.can(G.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: b.Z.can(G.Plq.MOVE_MEMBERS, n),
+                locked: !b.Z.can(G.Plq.CONNECT, n),
+                bypassLimit: b.Z.can(G.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
         }),
@@ -250,16 +250,16 @@ function z(e) {
         { isSubscriptionGated: m, needSubscriptionToAccess: C } = (0, g.Z)(n.id),
         I = (0, a.e7)([R.ZP], () => R.ZP.isFavorite(t.id, n.id)),
         L = (0, S.xJ)(n.id),
-        O = (0, j.Z)({
+        P = (0, j.Z)({
             channel: n,
             isChannelSelected: !1,
             isChannelCollapsed: s,
             voiceStates: o,
             isSubscriptionGated: m,
             needSubscriptionToAccess: C,
-            enableConnectedUserLimit: L || (n.userLimit > 0 && n.userLimit < U.xGv)
+            enableConnectedUserLimit: L || (n.userLimit > 0 && n.userLimit < G.xGv)
         }),
-        P = e.connected && null == O;
+        O = e.connected && null == P;
     return (0, i.jsx)(W, {
         categoryCollapsed: h,
         connectAction: p,
@@ -271,8 +271,8 @@ function z(e) {
         ...d,
         ...e,
         isFavoriteSuggestion: r && !I,
-        forceShowButtons: P,
-        channelInfo: O,
+        forceShowButtons: O,
+        channelInfo: P,
         resolvedUnreadSetting: u
     });
 }

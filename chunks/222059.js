@@ -33,14 +33,14 @@ var i = n(735250),
     b = n(780570),
     M = n(557177),
     R = n(278464),
-    O = n(276952),
-    P = n(682662),
+    P = n(276952),
+    O = n(682662),
     y = n(662146),
     j = n(674552),
     D = n(981631),
     w = n(474936),
-    U = n(871465),
-    G = n(689938),
+    G = n(871465),
+    U = n(689938),
     k = n(60798);
 let B = {
     origin: {
@@ -71,8 +71,8 @@ function H(e) {
             T(null), b(0), clearTimeout(Z);
         };
     if (null == n) return null;
-    let Y = G.Z.Messages.DIRECT_MESSAGES;
-    S && (Y = s.K.get(D.wli) ? G.Z.Messages.DISCODO_ENABLED : G.Z.Messages.DISCODO_DISABLED), V.length > 0 && p.Z.trackExposure({ location: 'home_button' });
+    let Y = U.Z.Messages.DIRECT_MESSAGES;
+    S && (Y = s.K.get(D.wli) ? U.Z.Messages.DISCODO_ENABLED : U.Z.Messages.DISCODO_DISABLED), V.length > 0 && p.Z.trackExposure({ location: 'home_button' });
     let K = null;
     !t && f
         ? (K = (0, i.jsx)(c.Z, {
@@ -95,7 +95,7 @@ function H(e) {
                         z();
                         let e = !s.K.get(D.wli);
                         s.K.set(D.wli, e),
-                            e && s.K.set(U.O5, !0),
+                            e && s.K.set(G.O5, !0),
                             e ? (0, M.GN)('discodo') : (0, M.GN)('user_leave'),
                             v(!0),
                             setTimeout(() => {
@@ -104,7 +104,7 @@ function H(e) {
                     }
                 },
                 selected: q,
-                ariaLabel: G.Z.Messages.DIRECT_MESSAGES,
+                ariaLabel: U.Z.Messages.DIRECT_MESSAGES,
                 ...W,
                 to: {
                     pathname: _,
@@ -148,9 +148,9 @@ function H(e) {
             inlineSpecs: B,
             tutorialId: 'friends-list',
             position: 'right',
-            children: (0, i.jsxs)(P.H, {
+            children: (0, i.jsxs)(O.H, {
                 children: [
-                    (0, i.jsx)(O.Z, {
+                    (0, i.jsx)(P.Z, {
                         selected: t,
                         hovered: N,
                         className: k.pill

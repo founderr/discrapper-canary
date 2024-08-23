@@ -34,8 +34,8 @@ var i,
     b = n(670512),
     M = n(981631),
     R = n(689938),
-    O = n(614899);
-function P(e, t, n) {
+    P = n(614899);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,14 +51,14 @@ function P(e, t, n) {
 let y = 10,
     j = () =>
         (0, l.jsxs)('div', {
-            className: O.emptyState,
+            className: P.emptyState,
             children: [
                 (0, l.jsx)('div', {
-                    className: O.emptyStateNote,
+                    className: P.emptyStateNote,
                     children: R.Z.Messages.QUICKSWITCHER_EMPTY_TEXT
                 }),
                 (0, l.jsx)('div', {
-                    className: O.emptyStateCTA,
+                    className: P.emptyStateCTA,
                     children: (0, l.jsx)(u.Anchor, {
                         href: Z.Z.getArticleURL(M.BhN.QUICK_SWITCHER_TUTORIAL),
                         children: R.Z.Messages.QUICKSWITCHER_EMPTY_CTA
@@ -72,13 +72,13 @@ class D extends (i = r.Component) {
         return (0, l.jsx)(A.$W, {
             ...this.props,
             children: (0, l.jsx)('div', {
-                className: O.miscContainer,
+                className: P.miscContainer,
                 children: null != e ? e.name : null
             })
         });
     }
 }
-P(D, 'defaultProps', { unread: !1 });
+O(D, 'defaultProps', { unread: !1 });
 let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
         let { channel: t } = e;
         return {
@@ -87,12 +87,12 @@ let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
             category: C.Z.getChannel(t.parent_id)
         };
     })(D),
-    U = c.ZP.connectStores([S.ZP], (e) => {
+    G = c.ZP.connectStores([S.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(D),
-    G = c.ZP.connectStores([I.default], (e) => {
+    U = c.ZP.connectStores([I.default], (e) => {
         let { guild: t } = e;
         return { unread: I.default.hasUnread(t.id) };
     })(A.ic),
@@ -113,7 +113,7 @@ function H(e, t, n) {
             children: (e) =>
                 (0, l.jsx)('span', {
                     ...e,
-                    className: O.autocompleteQuerySymbol,
+                    className: P.autocompleteQuerySymbol,
                     children: t
                 })
         },
@@ -154,7 +154,7 @@ class V extends r.PureComponent {
             i = t.length > 0 && '' !== n;
         return (0, l.jsx)(u.FocusRing, {
             children: (0, l.jsx)('input', {
-                className: O.input,
+                className: P.input,
                 'aria-label': R.Z.Messages.QUICK_SWITCHER,
                 ref: this.inputRef,
                 type: 'text',
@@ -191,7 +191,7 @@ class V extends r.PureComponent {
                     rowHeight: 34,
                     paddingBottom: y,
                     sections: [t.length],
-                    className: O.scroller,
+                    className: P.scroller,
                     renderRow: this.renderRow,
                     renderSection: this.renderSection
                 });
@@ -204,7 +204,7 @@ class V extends r.PureComponent {
     }
     renderProtip() {
         return (0, l.jsx)(g.Z, {
-            className: s()(O.protip, { [O.hasContent]: this.state.query.length > 0 }),
+            className: s()(P.protip, { [P.hasContent]: this.state.query.length > 0 }),
             type: g.Z.Types.INLINE,
             children: R.Z.Messages.QUICKSWITCHER_PROTIP.format({
                 userSymbolHook: (e, t) => H(t, _.xQ.USER, R.Z.Messages.QUICKSWITCHER_PROTIP_USERNAMES),
@@ -225,10 +225,10 @@ class V extends r.PureComponent {
             'aria-label': R.Z.Messages.QUICK_SWITCHER,
             size: u.ModalSize.DYNAMIC,
             transitionState: this.props.transitionState,
-            className: s()(O.container, o.tq && O.mobileContainer),
+            className: s()(P.container, o.tq && P.mobileContainer),
             fullscreenOnMobile: !1,
             children: (0, l.jsxs)('div', {
-                className: s()(O.quickswitcher, o.tq && O.mobileQuickswitcher),
+                className: s()(P.quickswitcher, o.tq && P.mobileQuickswitcher),
                 onMouseMove: this.handleMouseMove,
                 children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()]
             })
@@ -236,28 +236,28 @@ class V extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            P(this, 'scrollerRef', r.createRef()),
-            P(this, 'inputRef', r.createRef()),
-            P(this, '_listId', (0, m.hQ)()),
-            P(this, 'state', {
+            O(this, 'scrollerRef', r.createRef()),
+            O(this, 'inputRef', r.createRef()),
+            O(this, '_listId', (0, m.hQ)()),
+            O(this, 'state', {
                 query: this.props.query,
                 mouseFocusDisabled: !0
             }),
-            P(this, 'handleInputChange', () => {
+            O(this, 'handleInputChange', () => {
                 let { current: e } = this.inputRef;
                 null != e && this.search(e.value);
             }),
-            P(this, 'handleMouseMove', () => {
+            O(this, 'handleMouseMove', () => {
                 let { mouseFocusDisabled: e } = this.state;
                 if (!1 !== e) this.setState({ mouseFocusDisabled: !1 });
             }),
-            P(this, 'focusResult', (e) => {
+            O(this, 'focusResult', (e) => {
                 if (!this.state.mouseFocusDisabled) (0, T.tF)(this.props.results.indexOf(e));
             }),
-            P(this, 'selectResult', (e) => {
+            O(this, 'selectResult', (e) => {
                 (0, T.Se)(e, this.props.queryMode === _.h8.TEXT_CHANNEL);
             }),
-            P(this, 'handleContextMenu', (e) => {
+            O(this, 'handleContextMenu', (e) => {
                 let t = this.props.results[this.props.selectedIndex];
                 switch (t.type) {
                     case _.h8.GUILD:
@@ -360,7 +360,7 @@ class V extends r.PureComponent {
                         });
                 }
             }),
-            P(this, 'handleKeyDown', (e) => {
+            O(this, 'handleKeyDown', (e) => {
                 let { mouseFocusDisabled: t, query: n } = this.state,
                     { results: i } = this.props;
                 !1 === t && this.setState({ mouseFocusDisabled: !0 });
@@ -399,7 +399,7 @@ class V extends r.PureComponent {
                 }
                 e.preventDefault(), (0, T.tF)(r);
             }),
-            P(this, 'renderRow', (e) => {
+            O(this, 'renderRow', (e) => {
                 let { row: t } = e,
                     n = this.props.results[t],
                     { selectedIndex: i } = this.props,
@@ -424,7 +424,7 @@ class V extends r.PureComponent {
                         );
                     case _.h8.VOICE_CHANNEL:
                         return (0, l.jsx)(
-                            U,
+                            G,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,
@@ -439,7 +439,7 @@ class V extends r.PureComponent {
                         );
                     case _.h8.GUILD:
                         return (0, l.jsx)(
-                            G,
+                            U,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,

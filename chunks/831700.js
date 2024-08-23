@@ -35,14 +35,14 @@ var l = n(120356),
     b = n(695346),
     M = n(592125),
     R = n(430824),
-    O = n(607744),
-    P = n(496675),
+    P = n(607744),
+    O = n(496675),
     y = n(306680),
     j = n(9156),
     D = n(979651),
     w = n(934415),
-    U = n(98597),
-    G = n(648501),
+    G = n(98597),
+    U = n(648501),
     k = n(473403),
     B = n(830993),
     H = n(653577),
@@ -64,7 +64,7 @@ function K(e, t, n) {
         e
     );
 }
-class q extends U.ZP {
+class q extends G.ZP {
     componentWillUnmount() {
         this.activitiesHideTimeout.stop();
     }
@@ -332,15 +332,15 @@ function X(e) {
             mentionCount: y.ZP.getMentionCount(n.id)
         })),
         d = (0, a.e7)([j.ZP], () => j.ZP.resolveUnreadSetting(n)),
-        h = (0, a.cj)([M.Z, O.Z, P.Z], () => {
+        h = (0, a.cj)([M.Z, P.Z, O.Z], () => {
             let e = M.Z.getChannel(n.parent_id),
-                i = O.Z.getCheck(n.guild_id);
+                i = P.Z.getCheck(n.guild_id);
             return {
-                canManageChannel: P.Z.can(F.Plq.MANAGE_CHANNELS, n),
-                canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? P.Z.can(F.Plq.MANAGE_CHANNELS, e) : P.Z.can(F.Plq.MANAGE_CHANNELS, t))),
-                canMoveMembers: P.Z.can(F.Plq.MOVE_MEMBERS, n),
-                locked: !P.Z.can(F.Plq.CONNECT, n),
-                bypassLimit: P.Z.can(F.Plq.MOVE_MEMBERS, n),
+                canManageChannel: O.Z.can(F.Plq.MANAGE_CHANNELS, n),
+                canReorderChannel: !0 !== l && (t.id === W._ || (null != e ? O.Z.can(F.Plq.MANAGE_CHANNELS, e) : O.Z.can(F.Plq.MANAGE_CHANNELS, t))),
+                canMoveMembers: O.Z.can(F.Plq.MOVE_MEMBERS, n),
+                locked: !O.Z.can(F.Plq.CONNECT, n),
+                bypassLimit: O.Z.can(F.Plq.MOVE_MEMBERS, n),
                 unverifiedAccount: !i.canChat
             };
         }),
@@ -359,7 +359,7 @@ function X(e) {
             },
             { autoTrackExposure: !1 }
         ),
-        R = (0, G.Z)({
+        R = (0, U.Z)({
             channel: n,
             isChannelSelected: s,
             isChannelCollapsed: o,

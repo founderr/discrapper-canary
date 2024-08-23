@@ -37,14 +37,14 @@ var i,
     b = n(131704),
     M = n(592125),
     R = n(796974),
-    O = n(984933),
-    P = n(914010),
+    P = n(984933),
+    O = n(914010),
     y = n(540126),
     j = n(734307),
     D = n(854444),
     w = n(761091),
-    U = n(301342),
-    G = n(471995),
+    G = n(301342),
+    U = n(471995),
     k = n(906817),
     B = n(429122),
     H = n(285573),
@@ -461,7 +461,7 @@ class eu extends (i = r.PureComponent) {
             }),
             ec(this, 'renderListHeader', () => {
                 let { guild: e, guildChannels: t, guildBanner: n } = this.props;
-                return (0, l.jsx)(G.B, {
+                return (0, l.jsx)(U.B, {
                     guild: e,
                     guildChannels: t,
                     hasBanner: null != n
@@ -480,7 +480,7 @@ class eu extends (i = r.PureComponent) {
                                 S.Z,
                                 {
                                     guild: i,
-                                    channel: O.ZP.getDefaultChannel(i.id)
+                                    channel: P.ZP.getDefaultChannel(i.id)
                                 },
                                 ei.z.GUILD_HUB_HEADER_OPTIONS
                             );
@@ -669,7 +669,7 @@ class eu extends (i = r.PureComponent) {
                         );
                     case er.d4z.GUILD_CATEGORY:
                         if (t !== u.voiceChannelsSectionNumber) return null;
-                        return (0, l.jsx)(U.kw, { channel: v }, 'readonly-'.concat(v.id));
+                        return (0, l.jsx)(G.kw, { channel: v }, 'readonly-'.concat(v.id));
                     case er.d4z.PUBLIC_THREAD:
                     case er.d4z.PRIVATE_THREAD:
                         return (0, l.jsx)(
@@ -738,7 +738,7 @@ let ed = (e) => {
         { analyticsLocations: s } = (0, m.ZP)(g.Z.GUILD_CHANNEL_LIST),
         d = (0, u.e7)([M.Z], () => M.Z.getChannel(n)),
         h = (0, u.e7)([M.Z], () => M.Z.getChannel(i)),
-        p = (0, u.e7)([P.Z], () => P.Z.getGuildId()),
+        p = (0, u.e7)([O.Z], () => O.Z.getGuildId()),
         C = (0, Z.DM)(t),
         I = r.useRef(null),
         E = r.useCallback((e, t) => {

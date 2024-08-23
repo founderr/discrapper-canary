@@ -61,7 +61,7 @@ function L(e) {
         R = l.useCallback(() => {
             E(v.L.TAKE_ACTION), c(), (0, N.o)();
         }, [E, c]),
-        O = l.useCallback(
+        P = l.useCallback(
             (e) => {
                 e(), E(v.L.USER_DISMISS);
             },
@@ -79,7 +79,7 @@ function L(e) {
                         children: [
                             (0, i.jsx)('div', { className: M }),
                             (0, i.jsx)(u.Clickable, {
-                                onClick: () => O(l),
+                                onClick: () => P(l),
                                 className: T.close,
                                 children: (0, i.jsx)(u.XSmallIcon, {
                                     size: 'xs',
