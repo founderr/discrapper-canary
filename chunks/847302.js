@@ -239,7 +239,8 @@ function S(e, t, n, r) {
             case 'staticRouteLink':
                 l = {
                     type: 'staticRouteLink',
-                    channelId: c.data.id,
+                    id: c.data.id,
+                    itemId: c.data.itemId,
                     children: [{ text: '' }]
                 };
                 break;

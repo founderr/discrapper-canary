@@ -116,7 +116,14 @@ function d(e, t, n) {
             return (0, r.jsxs)(_, {
                 attributes: d,
                 className: p,
-                children: [(0, r.jsx)(s.NY, { id: f.channelId }), E]
+                children: [
+                    (0, r.jsx)(s.NY, {
+                        id: f.id,
+                        itemId: f.itemId,
+                        guildId: t
+                    }),
+                    E
+                ]
             });
         case 'soundboard':
             return (0, r.jsxs)(_, {

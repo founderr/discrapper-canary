@@ -12,7 +12,10 @@ class o extends s.Z {
     }
     handleShow(e) {
         let { role: t, guildId: n } = e;
-        !(0, i.hasModalOpen)('GUILD_ROLE_CONNECTIONS_MODAL_KEY') && (null != t ? (0, r.openGuildRoleConnectionsConnectAccountModal)(t, n) : (0, l.Am)(n));
+        if (!(0, i.hasModalOpen)('GUILD_ROLE_CONNECTIONS_MODAL_KEY')) {
+            var a;
+            null != t && (null === (a = t.tags) || void 0 === a ? void 0 : a.guild_connections) === null ? (0, r.openGuildRoleConnectionsConnectAccountModal)(t, n) : (0, l.Am)(n);
+        }
     }
 }
 t.Z = new o();

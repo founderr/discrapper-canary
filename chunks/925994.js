@@ -135,13 +135,8 @@ function I(e, t) {
             if (null == r) return t;
             return r.name;
         }
-        case 'staticRouteLink': {
-            let t = '<id:'.concat(e.channelId, '>');
-            if ('raw' === n) return t;
-            let r = l.Z.getChannel(e.channelId);
-            if (null == r) return t;
-            return (0, a.F6)(r, _.default, c.Z, !0, !0);
-        }
+        case 'staticRouteLink':
+            return null != e.itemId ? '<id:'.concat(e.id, ':').concat(e.itemId, '>') : '<id:'.concat(e.id, '>');
         case 'roleMention': {
             let t = '<@&'.concat(e.roleId, '>');
             if ('raw' === n) return t;

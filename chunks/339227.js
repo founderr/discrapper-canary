@@ -302,7 +302,6 @@ function M(e, t, n, r, a) {
         case 'roleMention':
         case 'channelMention':
         case 'commandMention':
-        case 'staticRouteLink':
         case 'soundboard':
         case 'channel': {
             let { text: a, id: s } = n;
@@ -327,6 +326,19 @@ function M(e, t, n, r, a) {
                 data: { id: s }
             });
         }
+        case 'staticRouteLink':
+            let { id: u, itemId: c } = n;
+            return w({
+                result: e,
+                sourceText: t,
+                text: l[0],
+                originalStart: r,
+                attributes: [o],
+                data: {
+                    id: u,
+                    itemId: c
+                }
+            });
         case 'timestamp':
             if (h.Z.getCurrentConfig({ location: 'c70cbb_1' }, { autoTrackExposure: !1 }).enabled)
                 return w({

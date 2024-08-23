@@ -56,11 +56,6 @@ function o(e) {
                 type: 'channelMention',
                 channelId: e.channelId
             };
-        case 'staticRouteLink':
-            return {
-                type: 'staticRouteLink',
-                channelId: e.channelId
-            };
         case 'soundboard':
             return {
                 type: 'soundboard',
