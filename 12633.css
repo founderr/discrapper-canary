@@ -17316,7 +17316,8 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     justify-content: space-between;
     align-items: center;
     padding: 12px;
-    border-top: 1px solid var(--border-subtle)
+    border-top: 1px solid var(--border-subtle);
+    min-height: 24px
 }
 
 .cardFooterInfo_e0fe28 {
