@@ -1,6 +1,6 @@
 n.d(t, {
     Co: function () {
-        return L;
+        return b;
     },
     QS: function () {
         return i;
@@ -137,7 +137,9 @@ var r,
     (r.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR = 'svg-mask-content-inventory-card-face-pile-avatar'),
     (r.CLAN_ICON = 'svg-mask-clan-icon'),
     (r.FORWARD_ATTACHMENT_PILE_OVERFLOW = 'svg-mask-forward-attachment-pile-overflow'),
-    (r.GAMEPLAY_HIGH_ACTIVITY_ICON = 'svg-mask-gameplay-high-activity-icon');
+    (r.GAMEPLAY_HIGH_ACTIVITY_ICON = 'svg-mask-gameplay-high-activity-icon'),
+    (r.CONTENT_IMAGE_60 = 'svg-mask-content-image-60'),
+    (r.CONTENT_IMAGE_72 = 'svg-mask-content-image-72');
 function E(e, t) {
     return (e - 0.5) / (null != t ? t : d.hs) + 0.5;
 }
@@ -484,7 +486,29 @@ function y(e, t) {
         ]
     });
 }
-function D(e) {
+function D(e, t, n, r) {
+    return (0, a.jsxs)('mask', {
+        id: e,
+        maskContentUnits: 'objectBoundingBox',
+        viewBox: '0 0 1 1',
+        children: [
+            (0, a.jsx)('rect', {
+                fill: 'white',
+                x: 0,
+                y: 0,
+                width: '100%',
+                height: '100%'
+            }),
+            (0, a.jsx)('circle', {
+                fill: 'black',
+                cx: (t - n / 2 + 4) / t,
+                cy: (t - n / 2 + 4) / t,
+                r: (n / 2 + r) / t
+            })
+        ]
+    });
+}
+function L(e) {
     let { mask: t, width: n = 24, height: r = 24, rightOverhang: i = 0, bottomOverhang: s = 0, children: o, className: u, style: c, 'aria-label': d, ...E } = e;
     return (0, a.jsx)('svg', {
         width: n + i,
@@ -505,10 +529,10 @@ function D(e) {
         })
     });
 }
-(D.Masks = i), (t.ZP = D);
-let L = s.memo(
+(L.Masks = i), (t.ZP = L);
+let b = s.memo(
     function () {
-        var e, t, n, r, i, s, o, l, c, d, _, E, I, m, D, L, b, M, P, U, w;
+        var e, t, n, r, i, s, o, l, c, d, _, E, I, m, L, b, M, P, U, w, x;
         return (0, a.jsxs)('svg', {
             viewBox: '0 0 1 1',
             style: {
@@ -930,9 +954,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((D = 'svg-mask-autocomplete-emoji-upsell-emoji'),
+                ((L = 'svg-mask-autocomplete-emoji-upsell-emoji'),
                 (0, a.jsxs)('mask', {
-                    id: D,
+                    id: L,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -949,9 +973,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((L = 'svg-mask-event-ticket'),
+                ((b = 'svg-mask-event-ticket'),
                 (0, a.jsx)('mask', {
-                    id: L,
+                    id: b,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: (0, a.jsx)('path', {
@@ -959,9 +983,9 @@ let L = s.memo(
                         fill: 'white'
                     })
                 })),
-                ((b = 'svg-mask-guild-icon-with-channel-type'),
+                ((M = 'svg-mask-guild-icon-with-channel-type'),
                 (0, a.jsxs)('mask', {
-                    id: b,
+                    id: M,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -977,9 +1001,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((M = 'svg-mask-content-inventory-card-face-pile-avatar'),
+                ((P = 'svg-mask-content-inventory-card-face-pile-avatar'),
                 (0, a.jsxs)('mask', {
-                    id: M,
+                    id: P,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -996,9 +1020,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((P = 'svg-mask-guild-popout-activity-icon'),
+                ((U = 'svg-mask-guild-popout-activity-icon'),
                 (0, a.jsxs)('mask', {
-                    id: P,
+                    id: U,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: [
@@ -1017,9 +1041,9 @@ let L = s.memo(
                         })
                     ]
                 })),
-                ((U = 'svg-mask-clan-icon'),
+                ((w = 'svg-mask-clan-icon'),
                 (0, a.jsx)('mask', {
-                    id: U,
+                    id: w,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: (0, a.jsx)('rect', {
@@ -1030,16 +1054,18 @@ let L = s.memo(
                         height: 1
                     })
                 })),
-                ((w = 'svg-mask-forward-attachment-pile-overflow'),
+                ((x = 'svg-mask-forward-attachment-pile-overflow'),
                 (0, a.jsx)('mask', {
-                    id: w,
+                    id: x,
                     maskContentUnits: 'objectBoundingBox',
                     viewBox: '0 0 1 1',
                     children: (0, a.jsx)('path', {
                         d: 'M0.142857 0C0.0639593 0 0 0.0639593 0 0.142857V0.857143C0 0.936041 0.0639593 1 0.142857 1H0.554564C0.520632 0.962089 0.5 0.912025 0.5 0.857143V0.714286C0.5 0.595939 0.595939 0.5 0.714286 0.5H0.857143C0.912025 0.5 0.962089 0.520632 1 0.554564V0.142857C1 0.0639593 0.936041 0 0.857143 0H0.142857Z',
                         fill: 'white'
                     })
-                }))
+                })),
+                D('svg-mask-content-image-60', 60, 24, 2),
+                D('svg-mask-content-image-72', 72, 32, 4)
             ]
         });
     },

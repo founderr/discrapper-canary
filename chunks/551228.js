@@ -10,56 +10,55 @@ n.d(t, {
 var r = n(735250),
     i = n(470079),
     a = n(442837),
-    s = n(276852),
-    o = n(594174),
+    s = n(594174),
+    o = n(379357),
     l = n(719247),
-    u = n(297781),
-    c = n(443487),
-    d = n(43205),
+    u = n(442550),
+    c = n(297781),
+    d = n(443487),
     _ = n(182022);
-let E = [u.XF];
+let E = [c.XF];
 function f(e) {
-    var t, n, r, i, u, c, d;
-    let _ = (0, a.e7)([l.Z], () => l.Z.getMatchingActivity(e)),
-        E = (0, a.e7)([o.default], () => o.default.getUser(e.author_id));
-    if (null == _ || null == E) return {};
-    let f = e.extra.entries[0],
-        h = null !== (i = null !== (r = (0, s.Z)(_)) && void 0 !== r ? r : null === (t = _.assets) || void 0 === t ? void 0 : t.small_image) && void 0 !== i ? i : f.media.image_url,
-        p = null !== (c = null !== (u = _.state) && void 0 !== u ? u : null === (n = f.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== c ? c : f.media.title,
-        I = null !== (d = _.details) && void 0 !== d ? d : f.media.title;
+    var t, n, r, i;
+    let o = (0, a.e7)([l.Z], () => l.Z.getMatchingActivity(e)),
+        u = (0, a.e7)([s.default], () => s.default.getUser(e.author_id));
+    if (null == o || null == u) return {};
+    let c = e.extra.entries[0],
+        d = null !== (r = null !== (n = o.state) && void 0 !== n ? n : null === (t = c.media.artists[0]) || void 0 === t ? void 0 : t.name) && void 0 !== r ? r : c.media.title,
+        _ = null !== (i = o.details) && void 0 !== i ? i : c.media.title;
     return {
-        activity: _,
-        artist: p,
-        currentEntry: f,
-        imageUrl: h,
-        title: I,
-        user: E
+        activity: o,
+        artist: d,
+        currentEntry: c,
+        title: _,
+        user: u
     };
 }
 t.ZP = i.memo(function (e) {
     let { entry: t, channel: n, selected: i } = e,
-        { activity: a, artist: s, imageUrl: o } = f(t);
+        { activity: a, artist: s } = f(t),
+        { largeImage: l } = (0, o.rv)({ entry: t });
     return null == a
-        ? (0, r.jsx)(c.cA, {})
-        : (0, r.jsxs)(c.Zb, {
+        ? (0, r.jsx)(d.cA, {})
+        : (0, r.jsxs)(d.Zb, {
               selected: i,
               children: [
-                  (0, r.jsxs)(c.e$, {
+                  (0, r.jsxs)(d.e$, {
                       children: [
-                          (0, r.jsx)(c.F9, {
+                          (0, r.jsx)(d.F9, {
                               entry: t,
                               channelId: n.id,
                               guildId: n.guild_id
                           }),
-                          (0, r.jsx)(c.ll, { children: s }),
-                          (0, r.jsx)(u.Gk, {
-                              location: u.Gt.CARD,
+                          (0, r.jsx)(d.ll, { children: s }),
+                          (0, r.jsx)(c.Gk, {
+                              location: c.Gt.CARD,
                               children: E.map((e, n) => (0, r.jsx)(e, { entry: t }, n))
                           })
                       ]
                   }),
-                  (0, r.jsx)(d.f, {
-                      src: o,
+                  (0, r.jsx)(u.f, {
+                      src: null == l ? void 0 : l.src,
                       size: 48,
                       className: _.thumbnail
                   })

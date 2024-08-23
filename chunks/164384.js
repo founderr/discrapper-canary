@@ -4,7 +4,6 @@ e.exports = {
     interactionsContainerHeader: 'interactionsContainerHeader_a35965',
     interactionsContainer: 'interactionsContainer_a35965',
     emoji: 'emoji_a35965',
-    contentImage: 'contentImage_a35965',
     toastContainer: 'toastContainer_a35965',
     emojiHotrailShareToChannel: 'emojiHotrailShareToChannel_a35965',
     inputContainerShareToChannel: 'inputContainerShareToChannel_a35965',

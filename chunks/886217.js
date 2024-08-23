@@ -8,21 +8,21 @@ var a = t(735250),
     u = t(594174),
     c = t(908841),
     d = t(823379),
-    m = t(5192),
-    _ = t(561308),
+    _ = t(5192),
+    m = t(561308),
     E = t(256726),
     T = t(206295),
     h = t(278399),
     x = t(297781),
-    N = t(591853),
-    I = t(410441),
+    I = t(591853),
+    N = t(410441),
     C = t(616922),
     p = t(689938);
 let g = (e, n, t, a) => {
         let l = (function (e) {
                 if (e === i._.WEEK) return p.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_WEEK_POPOUT;
             })(a),
-            r = m.ZP.getName(n.guild_id, n.id, t),
+            r = _.ZP.getName(n.guild_id, n.id, t),
             s = e.extra.artist.name;
         return l
             .plainFormat({
@@ -37,34 +37,34 @@ let g = (e, n, t, a) => {
             artist: e.extra.artist.name
         });
 n.Z = (e) => {
-    let { channel: n, entry: t, onReaction: i, onVoiceChannelPreview: m } = e,
+    let { channel: n, entry: t, onReaction: i, onVoiceChannelPreview: _ } = e,
         { parent_title: f, provider: M, image_url: P } = t.extra.media,
         Z = t.extra.artist.name,
-        S = (0, s.e7)([u.default], () => u.default.getUser(t.author_id)),
-        { primaryColor: A, secondaryColor: O } = (0, T.Z)(P),
-        j = (0, _.Nq)(t),
-        R = l.useCallback(() => {
-            if (null == n || null == S || !(0, d.Hi)(j, h.y9)) return;
-            let e = g(t, n, S, j);
+        A = (0, s.e7)([u.default], () => u.default.getUser(t.author_id)),
+        { primaryColor: S, secondaryColor: O } = (0, T.Z)(P),
+        R = (0, m.Nq)(t),
+        j = l.useCallback(() => {
+            if (null == n || null == A || !(0, d.Hi)(R, h.y9)) return;
+            let e = g(t, n, A, R);
             return (0, E.CR)({
-                user: S,
+                user: A,
                 channel: n,
                 mediaImageSrc: P,
                 artist: Z,
                 description: e,
-                colors: [A, O],
+                colors: [S, O],
                 badges: (0, E.UU)(t)
             });
-        }, [P, Z, n, t, A, j, O, S]);
-    if (null == S || !(0, d.Hi)(j, h.y9)) return null;
+        }, [P, Z, n, t, S, R, O, A]);
+    if (null == A || !(0, d.Hi)(R, h.y9)) return null;
     let y = () => {
         let e = C.Hw.ALBUM,
             n = o.Z.isProtocolRegistered() ? C.C7.PLAYER_OPEN(e, t.extra.media.external_parent_id) : C.C7.WEB_OPEN(e, t.extra.media.external_parent_id);
         window.open(n);
     };
-    return (0, a.jsxs)(N.yR, {
+    return (0, a.jsxs)(I.yR, {
         children: [
-            (0, a.jsx)(N.wG, {
+            (0, a.jsx)(I.wG, {
                 onClickTitle: y,
                 onClickSubtitle: () => {
                     let e = C.Hw.ARTIST,
@@ -72,12 +72,11 @@ n.Z = (e) => {
                     window.open(n);
                 },
                 onClickThumbnail: y,
-                thumbnailSrc: P,
                 channel: n,
                 entry: t,
                 headerIcons:
                     M === r.p.SPOTIFY
-                        ? (0, a.jsx)(I.Z, {
+                        ? (0, a.jsx)(N.Z, {
                               Icon: c.Z,
                               'aria-label': p.Z.Messages.SPOTIFY
                           })
@@ -90,14 +89,14 @@ n.Z = (e) => {
                     children: h.Ho.map((e, n) => (0, a.jsx)(e, { entry: t }, n))
                 })
             }),
-            (0, a.jsx)(N.St, {
-                children: (0, a.jsx)(N.WT, {
+            (0, a.jsx)(I.St, {
+                children: (0, a.jsx)(I.WT, {
                     onReaction: i,
-                    onVoiceChannelPreview: m,
-                    user: S,
+                    onVoiceChannelPreview: _,
+                    user: A,
                     channel: n,
-                    generateReactionImage: R,
-                    reactionImageAltText: v(t, S),
+                    generateReactionImage: j,
+                    reactionImageAltText: v(t, A),
                     entry: t
                 })
             })
