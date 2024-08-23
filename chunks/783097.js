@@ -60,8 +60,7 @@ function h(e) {
 }
 function E(e) {
     var n;
-    let { application: t } = e;
-    return C(t) && (0, d.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED);
+    return C(e) && (0, d.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED);
 }
 function A(e) {
     var n;
@@ -72,7 +71,7 @@ function N(e) {
     return C(e) && (0, d.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, u.udG.PROMOTED);
 }
 function x(e) {
-    return C(e) && E({ application: e }) ? (e instanceof s.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    return C(e) && E(e) ? (e instanceof s.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function v(e) {
     let { command: n, optionValues: t, context: s, commandTargetId: c, maxSizeCallback: d, sectionName: u } = e,
