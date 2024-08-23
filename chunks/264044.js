@@ -9,5 +9,7 @@ e.exports = {
     panels: 'panels_a4d4d9',
     content: 'content_a4d4d9',
     activityPanel: 'activityPanel_a4d4d9',
-    loader: 'loader_a4d4d9'
+    loader: 'loader_a4d4d9',
+    sidebarResizeHandle: 'sidebarResizeHandle_a4d4d9',
+    dragging: 'dragging_a4d4d9'
 };

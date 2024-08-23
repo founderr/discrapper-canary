@@ -47305,8 +47305,8 @@ img[alt] {
 }
 
 .visual-refresh {
-    --custom-app-sidebar-target-width: 340px;
     --custom-guild-list-width: 72px;
-    --custom-guild-sidebar-width: calc(var(--custom-app-sidebar-target-width) - var(--custom-guild-list-width));
+    --custom-guild-sidebar-width: 268px;
+    --custom-app-sidebar-target-width: calc(var(--custom-guild-sidebar-width) + var(--custom-guild-list-width));
     --custom-channel-textarea-text-area-height: 48px
 }
