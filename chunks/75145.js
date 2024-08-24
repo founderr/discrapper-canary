@@ -20,36 +20,35 @@ var r = n(735250),
     E = n(689938),
     f = n(151059);
 let h = 41;
-function p(e) {
-    let { className: t, colorOpacity: a = 0.2 } = e,
-        h = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
-        [p, I] = (0, d.US)([l.z.REVERSE_TRIAL_EMOJI_PICKER]),
-        m = p === l.z.REVERSE_TRIAL_EMOJI_PICKER;
+function p() {
+    let e = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        [t, a] = (0, d.US)([l.z.REVERSE_TRIAL_EMOJI_PICKER]),
+        h = t === l.z.REVERSE_TRIAL_EMOJI_PICKER;
     return (
         i.useEffect(
             () => () => {
-                m && I(_.L.TAKE_ACTION);
+                h && a(_.L.TAKE_ACTION);
             },
-            [m, I]
+            [h, a]
         ),
         (0, r.jsxs)('div', {
-            className: s()(f.nitroTopDividerContainer, t),
+            className: f.nitroTopDividerContainer,
             children: [
                 (0, r.jsx)('div', { className: f.nitroTopDividerUpper }),
-                (0, r.jsx)('div', { className: s()(f.nitroTopDividerShadow, f.glow, { [f.reducedMotion]: h }) }),
+                (0, r.jsx)('div', { className: s()(f.nitroTopDividerShadow, f.glow, { [f.reducedMotion]: e || !h }) }),
                 (0, r.jsxs)('div', {
                     className: s()(f.nitroTopDividerLockContainer),
                     children: [
                         (0, r.jsx)('div', { className: f.nitroTopDividerLockBorder }),
-                        !h &&
-                            m &&
+                        !e &&
+                            h &&
                             (0, r.jsx)(u.LottieAnimation, {
                                 className: s()(f.premiumUnlockAnimation),
                                 loop: !1,
                                 importData: () => n.e('21812').then(n.t.bind(n, 741855, 19))
                             }),
                         (0, r.jsxs)('div', {
-                            className: s()(f.premiumUnlockedWithNitroPillContainer, { [f.reducedMotion]: h || !m }),
+                            className: s()(f.premiumUnlockedWithNitroPillContainer, { [f.reducedMotion]: e || !h }),
                             children: [
                                 (0, r.jsx)(u.NitroWheelIcon, {
                                     size: 'xs',
@@ -66,10 +65,7 @@ function p(e) {
                         (0, r.jsx)('div', { className: f.nitroTopDividerLockBorderReversed })
                     ]
                 }),
-                (0, r.jsx)('div', {
-                    style: { opacity: a },
-                    className: f.nitroTopDividerLower
-                })
+                (0, r.jsx)('div', { className: f.reverseTrialTopDividerLower })
             ]
         })
     );

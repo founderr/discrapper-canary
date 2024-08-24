@@ -13,9 +13,6 @@ n.d(t, {
     },
     _N: function () {
         return c;
-    },
-    gX: function () {
-        return p;
     }
 }),
     n(47120);
@@ -52,12 +49,8 @@ function u(e) {
 }
 function d(e) {
     var t;
-    return ((t = e.filter((e) => e.featurableInDirectory && p(e))), l().orderBy(t, [(e) => e.createdAt], ['desc'])).slice(0, c);
+    return ((t = e.filter((e) => e.featurableInDirectory)), l().orderBy(t, [(e) => e.createdAt], ['desc'])).slice(0, c);
 }
 function h(e) {
     return u(e);
-}
-function p(e) {
-    var t;
-    return (null !== (t = e.approximateMemberCount) && void 0 !== t ? t : 0) >= 5;
 }

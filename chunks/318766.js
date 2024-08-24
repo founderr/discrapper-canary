@@ -39,6 +39,7 @@ let g = {
                 }),
                 (0, r.jsx)(c.Text, {
                     variant: 'text-sm/medium',
+                    className: T.premiumTooltipText,
                     children: m.Z.Messages.PREMIUM_REVERSE_TRIAL_EMOJI_TOOLTIP.format()
                 })
             ]
@@ -77,6 +78,7 @@ t.Z = function (e) {
         position: 'top',
         shouldShow: b && !N,
         tooltipClassName: T.premiumTooltip,
+        tooltipContentClassName: T.premiumTooltipContainer,
         children: (e) =>
             (0, r.jsx)(c.Button, {
                 look: c.Button.Looks.BLANK,

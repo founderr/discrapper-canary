@@ -14,6 +14,8 @@ n.r(
         active: 'active_d91a75',
         premiumTooltip: 'premiumTooltip_d91a75',
         premiumTooltipContainer: 'premiumTooltipContainer_d91a75',
-        premiumUnlockAnimation: 'premiumUnlockAnimation_d91a75'
+        premiumUnlockAnimation: 'premiumUnlockAnimation_d91a75',
+        shrink: 'shrink_d91a75',
+        premiumTooltipText: 'premiumTooltipText_d91a75'
     })
 );

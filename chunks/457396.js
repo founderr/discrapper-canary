@@ -73,7 +73,11 @@ let k = (e) => {
     Q
         ? ((n = (0, s.jsx)(N.Z, {})), (i = 0))
         : null != er && er === o.z.REVERSE_TRIAL_NITRO_TAB_BADGE
-          ? ((n = (0, s.jsx)(P.Z, { copy: j.Z.Messages.PREMIUM_REVERSE_TRIAL_BADGE })), (i = 4))
+          ? ((n = (0, s.jsx)(P.Z, {
+                copy: j.Z.Messages.PREMIUM_REVERSE_TRIAL_BADGE,
+                showStars: !1
+            })),
+            (i = 4))
           : null != J
             ? ((n = (0, s.jsx)(x.Z, { copy: J })), (i = 1))
             : X
