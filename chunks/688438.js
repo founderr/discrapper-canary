@@ -17,8 +17,8 @@ function o(e) {
             let n = a.ZP.ackMessageId(e.id);
             if (null == n) return 0;
             let i = Object.values(null !== (t = l.Z.getDirectoryEntries(e.id)) && void 0 !== t ? t : {}).filter((e) => {
-                let t = s.default.fromTimestamp(new Date(e.createdAt).getTime());
-                return (0, r.gX)(e) && t > n;
+                let t = new Date(e.createdAt).getTime();
+                return t > s.default.extractTimestamp(n);
             });
             return Math.min(r._N, i.length);
         },

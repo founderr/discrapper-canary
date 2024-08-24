@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return S;
+        return A;
     },
     u: function () {
         return P;
@@ -16,26 +16,26 @@ var a = t(735250),
     u = t(481060),
     c = t(596454),
     d = t(727637),
-    m = t(313201),
-    _ = t(543241),
+    _ = t(313201),
+    m = t(543241),
     E = t(318766),
     T = t(907040),
     h = t(633302),
     x = t(806966),
-    N = t(176354),
-    I = t(823379),
+    I = t(176354),
+    N = t(823379),
     C = t(354459),
     p = t(185923),
     g = t(420212),
     v = t(894967);
 let f = p.Hz.CHAT,
-    M = [h.ZP.getByName('thumbsup'), h.ZP.getByName('eyes'), h.ZP.getByName('laughing'), h.ZP.getByName('watermelon'), h.ZP.getByName('fork_and_knife'), h.ZP.getByName('yum')].filter(I.lm);
+    M = [h.ZP.getByName('thumbsup'), h.ZP.getByName('eyes'), h.ZP.getByName('laughing'), h.ZP.getByName('watermelon'), h.ZP.getByName('fork_and_knife'), h.ZP.getByName('yum')].filter(N.lm);
 function P(e) {
     let { emoji: n, isDisabled: t = !1, onClick: i, className: s } = e,
-        m = l.useRef(null),
-        _ = (0, d.Z)(m);
+        _ = l.useRef(null),
+        m = (0, d.Z)(_);
     return (0, a.jsx)('span', {
-        ref: m,
+        ref: _,
         children: (0, a.jsx)(u.Button, {
             onClick: i,
             look: u.Button.Looks.BLANK,
@@ -44,7 +44,7 @@ function P(e) {
             children: (0, a.jsx)(u.Spring, {
                 config: E.u,
                 from: { value: 0 },
-                to: { value: _ ? 1 : 0 },
+                to: { value: m ? 1 : 0 },
                 children: (e) => {
                     let { value: l } = e;
                     return (0, a.jsx)(o.animated.div, {
@@ -82,24 +82,24 @@ function Z(e) {
         ]
     });
 }
-function S(e) {
-    let { channel: n, title: t, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: E, emojiSearchProps: h, recentlyUsedEmojis: I, analyticsOverride: S } = e,
-        A = (0, m.Dt)(),
-        [O, j] = l.useState(!1),
-        R = (0, _.wC)(n.guild_id),
-        y = (0, s.uniqBy)([...R, ...M], 'name')
+function A(e) {
+    let { channel: n, title: t, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: E, emojiSearchProps: h, recentlyUsedEmojis: N, analyticsOverride: A } = e,
+        S = (0, _.Dt)(),
+        [O, R] = l.useState(!1),
+        j = (0, m.wC)(n.guild_id),
+        y = (0, s.uniqBy)([...j, ...M], 'name')
             .filter(
                 (e) =>
-                    !N.ZP.isEmojiFilteredOrLocked({
+                    !I.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: n,
                         intention: f
                     })
             )
             .slice(0, C.e5);
-    null != I && I.length > 0 && y.splice(y.length - 1, 1, I[0]);
+    null != N && N.length > 0 && y.splice(y.length - 1, 1, N[0]);
     let L = (e) => {
-            j(e), null == E || E(e);
+            R(e), null == E || E(e);
         },
         w = (e, n) => {
             if (null == e && n) {
@@ -110,13 +110,13 @@ function S(e) {
             L(!n), n && x.kJ.setSearchPlaceholder(null);
         };
     return (0, a.jsxs)(u.Dialog, {
-        'aria-labelledby': A,
+        'aria-labelledby': S,
         children: [
             (0, a.jsx)(u.HeadingLevel, {
                 forceLevel: 2,
                 children: (0, a.jsx)(u.HiddenVisually, {
                     children: (0, a.jsx)(u.H, {
-                        id: A,
+                        id: S,
                         children: t
                     })
                 })
@@ -125,7 +125,7 @@ function S(e) {
                 className: v.container,
                 children: [
                     (0, a.jsx)(T.Z, {
-                        analyticsOverride: S,
+                        analyticsOverride: A,
                         channel: n,
                         className: r()(v.animatedPicker, { [v.animatedPickerTall]: O }),
                         headerClassName: r()(v.emojiPickerHeader, { [v.emojiPickerHeaderExpanded]: O }),
@@ -152,7 +152,7 @@ function S(e) {
                         children: (0, a.jsx)('div', {
                             className: r()(v.slots, v.slotsWide),
                             children: y.map((e) => {
-                                let t = N.ZP.isEmojiDisabled({
+                                let t = I.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: n,
                                     intention: p.Hz.CHAT

@@ -1,9 +1,9 @@
 t(47120);
 var n,
     a = t(735250),
-    o = t(470079),
-    r = t(120356),
-    i = t.n(r),
+    r = t(470079),
+    o = t(120356),
+    i = t.n(o),
     c = t(481060),
     l = t(37234),
     u = t(230711),
@@ -23,7 +23,7 @@ function g(e, s, t) {
         e
     );
 }
-class x extends (n = o.Component) {
+class x extends (n = r.Component) {
     render() {
         return (0, a.jsxs)('div', {
             className: p.streamerModeEnabled,

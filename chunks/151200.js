@@ -9,10 +9,10 @@ var a = t(120356),
     i = t.n(a),
     r = t(481060),
     o = t(328731),
-    s = t(435439),
-    c = t(206295),
-    u = t(297781),
-    d = t(43205),
+    s = t(442550),
+    c = t(435439),
+    u = t(206295),
+    d = t(297781),
     m = t(313201),
     _ = t(792125),
     f = t(231338),
@@ -72,7 +72,7 @@ function h(e) {
 function N(e) {
     let { entry: n, channel: t, title: a, subtitle: I, thumbnailUrl: N, titleClickable: T, subtitleClickable: x, thumbnailClickable: v, providerIconProps: g, style: b = {} } = e,
         S = (0, m.Dt)(),
-        { primaryColor: O, secondaryColor: j } = (0, c.Z)(N);
+        { primaryColor: O, secondaryColor: j } = (0, u.Z)(N);
     return (
         null != N && (b.background = 'linear-gradient(45deg, '.concat(O, ', ').concat(j, ')')),
         (0, l.jsx)(r.ThemeContextProvider, {
@@ -88,7 +88,7 @@ function N(e) {
                         className: E.thumbnailContainer,
                         clickableClassName: E.clickable,
                         clickable: v,
-                        children: (0, l.jsx)(d.f, {
+                        children: (0, l.jsx)(s.f, {
                             src: N,
                             constrain: 'width',
                             size: 64,
@@ -134,16 +134,16 @@ function N(e) {
                                       ]
                                   })
                                 : null,
-                            (0, l.jsx)(u.PZ, {
+                            (0, l.jsx)(d.PZ, {
                                 className: E.badges,
                                 entry: n,
-                                location: u.Gt.EMBED
+                                location: d.Gt.EMBED
                             })
                         ]
                     }),
                     (0, l.jsx)('div', {
                         className: E.headerIcons,
-                        children: null != g ? (0, l.jsx)(s.Z, { ...g }) : null
+                        children: null != g ? (0, l.jsx)(c.Z, { ...g }) : null
                     })
                 ]
             })

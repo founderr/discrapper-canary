@@ -63,15 +63,15 @@ function N(e, t) {
             }
     for (let e of S.allNodes()) e.type === l.eD.GUILD && (u.Z.isLurking(e.id) || h.ZP.isCurrentUserGuest(e.id) || (null == p.Z.getGuild(e.id) && !f.Z.isUnavailable(e.id))) && S.removeNode(e);
     for (let e of Object.values(S.nodes)) e.type === l.eD.FOLDER && 0 === e.children.length && S.removeNode(e);
-    return (
-        !(function (e, t) {
-            for (let n in p.Z.getGuilds()) e(n) && !u.Z.isLurking(n) && !h.ZP.isCurrentUserGuest(n) && t(n);
-        })(
-            (e) => null == S.nodes[e],
-            (e) => S.addNode((0, l.Mg)(e), S.root, !1)
-        ),
-        !a()(n, S)
-    );
+    !(function (e, t) {
+        for (let n in p.Z.getGuilds()) e(n) && !u.Z.isLurking(n) && !h.ZP.isCurrentUserGuest(n) && t(n);
+    })(
+        (e) => null == S.nodes[e],
+        (e) => S.addNode((0, l.Mg)(e), S.root, !1)
+    ),
+        (S.version = n.version);
+    let r = a()(n, S);
+    return r ? (S = n) : (S.version = n.version + 1), !r;
 }
 function O() {
     var e, t, n;

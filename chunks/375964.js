@@ -15307,7 +15307,7 @@ e.exports = Object.freeze({
     REFERRAL_PROGRAM_PLAN_COMPARISON_ROW: '3 Nitro friend passes',
     REFERRAL_PROGRAM_CONFIRMATION_ERROR_PAGE: 'We were unable to send {userName} a trial. Please try again later.',
     REFERRAL_PROGRAM_CONFIRMATION_ERROR_PAGE_HEADER: 'Hmm... Something went wrong',
-    REVERSE_TRIAL_SUBSCRIBER_MANAGEMENT_SUBHEADER: 'You have **{weeks, plural, =1 {1 week} other {{weeks} weeks}}** of Nitro on us. No payment method required. Subscribe anytime during your trial to keep all your new perks.',
+    REVERSE_TRIAL_SUBSCRIBER_MANAGEMENT_SUBHEADER: 'You have **{weeks, plural, =1 {1 week} other {{weeks} weeks}} of Nitro on us.** No payment method required. Subscribe anytime during your trial to keep all your new perks.',
     REVERSE_TRIAL_NITRO_HOME_HEADER_TITLE: 'Your Free Trial of Nitro Starts Now, {displayName}!',
     REVERSE_TRIAL_NITRO_HOME_HEADER_BODY_NEW: 'You heard us right: you have {weeks, plural, =1 {1-week} other {#-weeks}} of Nitro on us. No payment method required. Subscribe anytime during your trial to keep all your new perks.',
     REVERSE_TRIAL_NITRO_HOME_HEADER_BODY: 'You heard us right: you\u2019ve got a {duration}-week free trial of all the Nitro perks. Get hype because this is gonna be fun! And don\u2019t worry. We won\u2019t charge you during this time. Plus, we\u2019ll remind you right before your trial ends.',

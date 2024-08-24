@@ -9,10 +9,10 @@ t.d(s, {
     t(47120);
 var n,
     a,
-    o = t(735250);
+    r = t(735250);
 t(470079);
-var r = t(120356),
-    i = t.n(r),
+var o = t(120356),
+    i = t.n(o),
     c = t(442837),
     l = t(246946),
     u = t(91802),
@@ -109,12 +109,12 @@ let et = new Map([
 function en(e) {
     let { entryPoint: s, className: t } = e,
         a = (0, c.e7)([l.Z], () => l.Z.hidePersonalInformation),
-        r = (0, u.n)(),
-        g = null == r ? void 0 : r.countryCode;
+        o = (0, u.n)(),
+        g = null == o ? void 0 : o.countryCode;
     if (((0, d.U)(f.jXE.SETTINGS_PREMIUM, g), null == g || !et.has(g) || a)) return null;
     let x = et.get(g),
         b = 'badgeIcon' + n[s];
-    return (0, o.jsx)('img', {
+    return (0, r.jsx)('img', {
         className: i()(t, p[b]),
         'aria-hidden': !0,
         alt: 'Wumpus holding a country-specific flag',

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return _;
+        return m;
     }
 });
 var a = t(735250);
@@ -13,16 +13,16 @@ var l = t(481060),
     u = t(725119),
     c = t(26033),
     d = t(689938),
-    m = t(243113);
-function _(e) {
+    _ = t(243113);
+function m(e) {
     var n;
-    let { user: t, guildId: _, channel: E, entry: T, onSelect: h, disableGameProfileLinks: x } = e,
-        N = (0, u.Z)({
+    let { user: t, guildId: m, channel: E, entry: T, onSelect: h, disableGameProfileLinks: x } = e,
+        I = (0, u.Z)({
             userId: t.id,
-            guildId: _,
+            guildId: m,
             channelId: null == E ? void 0 : E.id
         }),
-        I = (0, r.Z)({
+        N = (0, r.Z)({
             id: t.id,
             label: d.Z.Messages.COPY_ID_USER
         }),
@@ -51,7 +51,7 @@ function _(e) {
                     children: [
                         (0, a.jsxs)(l.MenuGroup, {
                             children: [
-                                N,
+                                I,
                                 null != p &&
                                     (0, a.jsx)(l.MenuItem, {
                                         id: 'game-profile',
@@ -60,7 +60,7 @@ function _(e) {
                                     })
                             ]
                         }),
-                        (0, a.jsx)(l.MenuGroup, { children: I })
+                        (0, a.jsx)(l.MenuGroup, { children: N })
                     ]
                 })
             });
@@ -71,7 +71,7 @@ function _(e) {
                 children: (n) =>
                     (0, a.jsx)(l.Clickable, {
                         ...n,
-                        className: m.menuIcon,
+                        className: _.menuIcon,
                         ...e,
                         children: (0, a.jsx)(l.MoreHorizontalIcon, {
                             color: 'currentColor',

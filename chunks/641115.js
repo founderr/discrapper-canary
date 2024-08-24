@@ -141,7 +141,7 @@ function D(e) {
                     type: e,
                     selected: e.value === a,
                     needsPremium: !(0, Z.Z)(t, e.value, r, U, D),
-                    needsDemo: y && e.value !== R.LY.RESOLUTION_720,
+                    needsDemo: (y || V) && e.value !== R.LY.RESOLUTION_720,
                     analyticsLocation: K,
                     onClick: () => i(e.value),
                     onClose: n,

@@ -25,7 +25,7 @@ let d = () =>
 n.Z = (e) => {
     let { shown: n, sent: t, className: u } = e,
         c = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        m = (0, r.useTransition)(
+        _ = (0, r.useTransition)(
             n,
             {
                 from: {
@@ -51,7 +51,7 @@ n.Z = (e) => {
             'animate-always'
         );
     return (0, a.jsx)(a.Fragment, {
-        children: m(
+        children: _(
             (e, n) =>
                 n &&
                 (0, a.jsx)(l.animated.div, {

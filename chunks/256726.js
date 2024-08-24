@@ -3,7 +3,7 @@ t.d(n, {
         return E;
     },
     UU: function () {
-        return m;
+        return _;
     },
     jE: function () {
         return d;
@@ -28,7 +28,7 @@ let d = (e) => {
             }
         ];
     },
-    m = (e) => {
+    _ = (e) => {
         var n;
         let t = null === (n = (0, s.PJ)(e, a.N.AGGREGATE_COUNT)) || void 0 === n ? void 0 : n.count;
         return null == t
@@ -40,7 +40,7 @@ let d = (e) => {
                   }
               ];
     },
-    _ = (e) => {
+    m = (e) => {
         let { avatarSrc: n, mediaImageSrc: t } = e;
         return {
             AvatarImage: n,
@@ -48,8 +48,8 @@ let d = (e) => {
         };
     },
     E = async (e) => {
-        let { user: n, channel: t, mediaImageSrc: a, artist: s, description: c, colors: d, badges: m } = e,
-            E = _({
+        let { user: n, channel: t, mediaImageSrc: a, artist: s, description: c, colors: d, badges: _ } = e,
+            E = m({
                 avatarSrc: n.getAvatarURL(t.guild_id, 128),
                 mediaImageSrc: a
             }),
@@ -147,7 +147,7 @@ let d = (e) => {
                     })(e, c),
                     (0, o.J)({
                         canvas: e,
-                        badges: m,
+                        badges: _,
                         startPosition: u.Iq,
                         maxWidth: u.kC
                     });

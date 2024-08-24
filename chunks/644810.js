@@ -31,7 +31,7 @@ let o = (e, n, t) => ({
         );
     },
     c = async (e) => {
-        let { mediaImageSrc: n, entry: t, avatarSrc: c, description: d, timestamp: m, episodeDescription: _, colors: E, channelId: T } = e,
+        let { mediaImageSrc: n, entry: t, avatarSrc: c, description: d, timestamp: _, episodeDescription: m, colors: E, channelId: T } = e,
             h = t.extra.media_title,
             x = o(c, n);
         return await (0, i.f)({
@@ -131,7 +131,7 @@ let o = (e, n, t) => ({
                         },
                         !0
                     );
-                let i = u(m, _);
+                let i = u(_, m);
                 (0, r.J)({
                     canvas: e,
                     badges: i,

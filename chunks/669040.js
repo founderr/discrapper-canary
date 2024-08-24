@@ -212,7 +212,7 @@ let W = (0, U.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
             ),
             el = i.useCallback(
                 (e) => {
-                    if (ee(e)) return es ? (0, r.jsx)(R.mY, { glowOpacity: P }) : (0, r.jsx)(R.ZP, { glowOpacity: P });
+                    if (ee(e)) return es ? (0, r.jsx)(R.mY, {}) : (0, r.jsx)(R.ZP, { glowOpacity: P });
                     return J(e) ? (0, r.jsx)('div', { className: j.nitroBottomDivider }) : null;
                 },
                 [P, ee, J, es]

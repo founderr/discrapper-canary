@@ -8,7 +8,7 @@ var i = n(735250),
     s = n(120356),
     r = n.n(s),
     l = n(143927),
-    o = n(597312),
+    o = n(349361),
     c = n(410030),
     d = n(963202),
     u = n(353093),
@@ -42,7 +42,7 @@ function T(e) {
         ? null
         : (0, i.jsx)('div', {
               className: g.container,
-              children: (0, i.jsxs)(o.u2, {
+              children: (0, i.jsxs)(o.xV, {
                   className: g.upsellScroller,
                   fade: !0,
                   onScroll: t,
