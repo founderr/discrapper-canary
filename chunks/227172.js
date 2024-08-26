@@ -45,9 +45,9 @@ n.Z = (e) => {
     let { channel: n, entry: t, disableGameProfileLinks: i, onReaction: E, onVoiceChannelPreview: T } = e,
         { largeImage: j } = (0, x.rv)({ entry: t }),
         { user: y, details: L, appName: w, activity: B } = (0, A.n)(t),
-        { primaryColor: k, secondaryColor: b } = (0, v.Z)(null == j ? void 0 : j.src),
-        U = (0, r.e7)([m.default], () => m.default.locale),
-        { streamPreviewUrl: G, stream: D } = (0, N.Z)(t),
+        { primaryColor: k, secondaryColor: U } = (0, v.Z)(null == j ? void 0 : j.src),
+        b = (0, r.e7)([m.default], () => m.default.locale),
+        { streamPreviewUrl: D, stream: G } = (0, N.Z)(t),
         { displayParticipants: H, participant1: V, participant2: Y, numOtherParticipants: F } = (0, I.Z)(t, 3),
         W = l.useCallback(
             (e) => {
@@ -66,21 +66,21 @@ n.Z = (e) => {
                     applicationImageSrc: null == j ? void 0 : j.src,
                     avatarSrcs: H.map((e) => e.getAvatarURL(n.guild_id, 128)),
                     description: a,
-                    timestamp: (0, C.yh)(t, U),
-                    colors: [k, b],
+                    timestamp: (0, C.yh)(t, b),
+                    colors: [k, U],
                     channelId: e
                 });
             },
-            [null == j ? void 0 : j.src, n, H, t, U, F, V, Y, k, b, y]
+            [null == j ? void 0 : j.src, n, H, t, b, F, V, Y, k, U, y]
         );
     if (null == y) return null;
     let z = null != t.extra.platform ? R[t.extra.platform] : null,
         q = (0, a.jsx)(M.Gk, {
-            location: null == G ? M.Gt.POPOUT : M.Gt.STREAMING_POPOUT,
+            location: null == D ? M.Gt.POPOUT : M.Gt.STREAMING_POPOUT,
             children: f.W.map((e, n) => (0, a.jsx)(e, { entry: t }, n))
         }),
         K =
-            null == G
+            null == D
                 ? (0, a.jsx)(P.wG, {
                       channel: n,
                       headerIcons:
@@ -99,13 +99,13 @@ n.Z = (e) => {
                   })
                 : (0, a.jsx)(P.jL, {
                       channel: n,
-                      streamPreviewSrc: G,
+                      streamPreviewSrc: D,
                       title: t.extra.game_name,
                       subtitle: L,
                       badges: q,
                       userDescription: O.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING_V2,
                       entry: t,
-                      stream: D
+                      stream: G
                   }),
         J =
             (0, o.Z)(B, S.xjy.JOIN) || (0, u.Z)(B)

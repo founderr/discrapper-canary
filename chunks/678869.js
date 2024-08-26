@@ -90,23 +90,23 @@ function j(e) {
         A,
         j,
         { channel: y, entry: L, closePopout: w, onReaction: B, onVoiceChannelPreview: k } = e,
-        { largeImage: b } = (0, x.rv)({ entry: L }),
-        { activity: U, currentEntry: G, artist: D, title: H, user: V } = (0, p.pi)(L),
-        { primaryColor: Y, secondaryColor: F } = (0, C.Z)(null == b ? void 0 : b.src),
-        W = (0, r.e7)([c.Z, E.default], () => ((null == U ? void 0 : U.type) === M.IIU.LISTENING && null != V ? (0, _.Z)(c.Z, E.default, V, U) : void 0), [U, V], s.Z),
+        { largeImage: U } = (0, x.rv)({ entry: L }),
+        { activity: b, currentEntry: D, artist: G, title: H, user: V } = (0, p.pi)(L),
+        { primaryColor: Y, secondaryColor: F } = (0, C.Z)(null == U ? void 0 : U.src),
+        W = (0, r.e7)([c.Z, E.default], () => ((null == b ? void 0 : b.type) === M.IIU.LISTENING && null != V ? (0, _.Z)(c.Z, E.default, V, b) : void 0), [b, V], s.Z),
         z = l.useCallback(() => {
             var e;
             if (null == y || null == V) return;
-            let n = null === (e = U.timestamps) || void 0 === e ? void 0 : e.start,
+            let n = null === (e = b.timestamps) || void 0 === e ? void 0 : e.start,
                 t = (0, I.T_)(null != n ? { start: n } : L, Date.now());
             return (0, N.CR)({
                 user: V,
                 channel: y,
-                mediaImageSrc: null == b ? void 0 : b.src,
-                artist: D,
+                mediaImageSrc: null == U ? void 0 : U.src,
+                artist: G,
                 description: O(
                     {
-                        artist: D,
+                        artist: G,
                         media: H
                     },
                     y,
@@ -115,26 +115,26 @@ function j(e) {
                 colors: [Y, F],
                 badges: (0, N.jE)({ timestamp: t })
             });
-        }, [U, D, y, L, null == b ? void 0 : b.src, Y, F, H, V]);
-    if (null == U || null == G) return null;
-    let q = D,
+        }, [b, G, y, L, null == U ? void 0 : U.src, Y, F, H, V]);
+    if (null == b || null == D) return null;
+    let q = G,
         K = [];
-    if (G.media.provider === i.p.SPOTIFY) {
+    if (D.media.provider === i.p.SPOTIFY) {
         (A = () => {
-            (0, u.aG)(U);
+            (0, u.aG)(b);
         }),
             (j = () => {
-                (0, u.Z5)(U, V.id);
+                (0, u.Z5)(b, V.id);
             }),
             (v = () => {
-                (0, u.aG)(U);
+                (0, u.aG)(b);
             });
         (q = (0, a.jsx)(d.Z, {
-            artists: D,
-            canOpen: null != U.sync_id,
+            artists: G,
+            canOpen: null != b.sync_id,
             linkClassName: S.popoutTextSecondary,
             onOpenSpotifyArtist: (e) => {
-                (0, u.d$)(U, V.id, e);
+                (0, u.d$)(b, V.id, e);
             }
         })),
             (null == W ? void 0 : W.syncDisabled) === !1 &&
@@ -157,7 +157,7 @@ function j(e) {
         channel: y,
         entry: L,
         headerIcons:
-            G.media.provider === i.p.SPOTIFY
+            D.media.provider === i.p.SPOTIFY
                 ? (0, a.jsx)(f.Z, {
                       onClick: v,
                       'aria-label': Z.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
@@ -169,7 +169,7 @@ function j(e) {
         onClickTitle: A,
         subtitle: q,
         badges: null,
-        children: (null === (n = U.timestamps) || void 0 === n ? void 0 : n.start) != null && (0, a.jsx)(R, { activity: U })
+        children: (null === (n = b.timestamps) || void 0 === n ? void 0 : n.start) != null && (0, a.jsx)(R, { activity: b })
     });
     return (0, a.jsxs)(g.yR, {
         children: [
@@ -182,7 +182,7 @@ function j(e) {
                     channel: y,
                     generateReactionImage: z,
                     reactionImageAltText:
-                        ((t = D),
+                        ((t = G),
                         (h = V),
                         Z.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
                             username: h.username,

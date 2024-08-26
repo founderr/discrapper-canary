@@ -54,8 +54,8 @@ n.ZP = (e) => {
         { largeImage: j } = (0, x.rv)({ entry: t }),
         { user: y, details: L, activity: w } = (0, f.n)(t),
         { primaryColor: B, secondaryColor: k } = (0, p.Z)(null == j ? void 0 : j.src),
-        b = (0, i.e7)([E.default], () => E.default.locale),
-        { displayParticipants: U, participant1: G, participant2: D, numOtherParticipants: H } = (0, I.Z)(t, 3),
+        U = (0, i.e7)([E.default], () => E.default.locale),
+        { displayParticipants: b, participant1: D, participant2: G, numOtherParticipants: H } = (0, I.Z)(t, 3),
         V = (0, s.O)(),
         { analyticsLocations: Y } = (0, _.ZP)(),
         F = m.Z.getWindowOpen(M.KJ3.CHANNEL_CALL_POPOUT),
@@ -77,21 +77,21 @@ n.ZP = (e) => {
                         ? O({
                               entry: t,
                               channel: n,
-                              users: [G, D],
+                              users: [D, G],
                               countOthers: H
                           })
                         : S(t, n, y);
                 return (0, C.C4)({
                     entry: t,
                     applicationImageSrc: null == j ? void 0 : j.src,
-                    avatarSrcs: U.map((e) => e.getAvatarURL(n.guild_id, 128)),
+                    avatarSrcs: b.map((e) => e.getAvatarURL(n.guild_id, 128)),
                     description: a,
-                    timestamp: (0, N.yh)(t, b),
+                    timestamp: (0, N.yh)(t, U),
                     colors: [B, k],
                     channelId: e
                 });
             },
-            [null == j ? void 0 : j.src, n, U, t, b, H, G, D, B, k, y]
+            [null == j ? void 0 : j.src, n, b, t, U, H, D, G, B, k, y]
         );
     if (null == y) return null;
     let q = (0, a.jsx)(g.PZ, {

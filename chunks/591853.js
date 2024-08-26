@@ -55,10 +55,10 @@ var u = t(442837),
     w = t(237583),
     B = t(592125),
     k = t(430824),
-    b = t(496675),
-    U = t(699516),
-    G = t(9156),
-    D = t(594174),
+    U = t(496675),
+    b = t(699516),
+    D = t(9156),
+    G = t(594174),
     H = t(979651),
     V = t(938475),
     Y = t(626135),
@@ -131,9 +131,9 @@ function eT(e) {
     let { channel: n, user: t, generateReactionImage: i, reactionImageAltText: r, onReaction: s, entry: T, buttons: h = [], header: x, onVoiceChannelPreview: p } = e,
         [v, f] = l.useState(!1),
         [M, P] = l.useState(null),
-        Z = (0, u.e7)([b.Z], () => null != n && b.Z.can(eo.Plq.SEND_MESSAGES, n)),
+        Z = (0, u.e7)([U.Z], () => null != n && U.Z.can(eo.Plq.SEND_MESSAGES, n)),
         [A, S] = l.useState(!1),
-        [L, D] = l.useState(!1),
+        [L, G] = l.useState(!1),
         { voiceBar: F, joinVoiceButton: z } = (function (e) {
             let { channel: n, entry: t, onVoiceChannelPreview: i } = e,
                 { streamPreviewUrl: r, channel: s } = (0, ee.Z)(t),
@@ -145,8 +145,8 @@ function eT(e) {
                 I = l.useMemo(() => {
                     for (let e of h) {
                         let n = B.Z.getDMFromUserId(e.user.id),
-                            t = null != n && G.ZP.isChannelMuted(null, n),
-                            a = U.Z.isBlocked(e.user.id);
+                            t = null != n && D.ZP.isChannelMuted(null, n),
+                            a = b.Z.isBlocked(e.user.id);
                         if (t || a) return !0;
                     }
                     return !1;
@@ -299,7 +299,7 @@ function eT(e) {
                     }),
                     (0, g.EW)(c.z.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP),
                     S(!0),
-                    D(!1),
+                    G(!1),
                     v)
                 )
                     o()(null != n, 'shareToChannelMode should only be true if a valid channel is passed'), (a = n);
@@ -314,7 +314,7 @@ function eT(e) {
                         reply: ':'.concat(e.name, ':'),
                         sendToChannel: a,
                         onComplete: (e, n) => {
-                            D(!0),
+                            G(!0),
                                 setTimeout(() => {
                                     S(!1), s(e, n);
                                 }, 600);
@@ -529,7 +529,7 @@ function ex(e) {
     let { channel: n, userDescription: t, entry: l, disableGameProfileLinks: i } = e,
         s = null == n ? void 0 : n.guild_id,
         { displayParticipants: o, participant1: c, participant2: d, numOtherParticipants: m } = (0, Q.Z)(l, 3),
-        E = (0, u.e7)([D.default], () => D.default.getUser(l.author_id)),
+        E = (0, u.e7)([G.default], () => G.default.getUser(l.author_id)),
         { streamPreviewUrl: T } = (0, ee.Z)(l),
         h = [c, d];
     return (0, a.jsxs)('div', {
@@ -693,7 +693,7 @@ function eC(e) {
     var n;
     let { title: t, subtitle: i, badges: r, stream: s, onClickThumbnail: o, onClickTitle: c, onClickSubtitle: d, ...m } = e,
         E = (0, u.e7)([B.Z], () => B.Z.getChannel(null == s ? void 0 : s.channelId)),
-        [x] = l.useMemo(() => (0, A.p9)(E, H.Z, k.Z, b.Z, M.Z), [E]),
+        [x] = l.useMemo(() => (0, A.p9)(E, H.Z, k.Z, U.Z, M.Z), [E]),
         { entry: I } = m,
         N = (0, K.dX)(I),
         C = (0, Z.Z)({
