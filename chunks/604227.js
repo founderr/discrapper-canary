@@ -13,14 +13,14 @@ var a = t(525654),
     r = t(481060),
     o = t(579806),
     l = t(304761),
-    c = t(90273),
+    c = t(320161),
     d = t(689938),
     _ = t(844185);
 function E() {
     var e, s, t, a, E, u;
     let I = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        T = '321730',
-        S = ((e = '30b4c58ae181bc11fc1e20649826c300e9da5830'), e.substring(0, 7)),
+        T = '321789',
+        S = ((e = '85d38c2297a0d35af6629cc8beda2dfb38529793'), e.substring(0, 7)),
         N = null === o.Z || void 0 === o.Z ? void 0 : o.Z.remoteApp.getVersion(),
         C = null === o.Z || void 0 === o.Z ? void 0 : null === (s = (t = o.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(t),
         m = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (E = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(E),
@@ -38,71 +38,76 @@ function E() {
         null != N && (g.push('Host '.concat(N)), null != m && g.push(m.toLowerCase()), null != C && g.push('('.concat(C, ')'))),
         g.push('Build Override: '.concat(null != A ? A.id : 'N/A')),
         null != O && g.push(O),
-        (0, n.jsx)(c.o, {
+        (0, n.jsx)(c.Z, {
             copyValue: g.join(' '),
-            disableCopy: !1,
-            copyTooltip: d.Z.Messages.COPY_VERSION,
-            showCopyIcon: !1,
-            children: (0, n.jsxs)('div', {
-                className: _.info,
-                children: [
-                    (0, n.jsxs)(r.Text, {
-                        tag: 'span',
-                        className: _.line,
-                        variant: 'text-xs/normal',
-                        color: 'text-muted',
+            text: d.Z.Messages.COPY_VERSION,
+            'aria-label': !1,
+            children: (e) =>
+                (0, n.jsx)(r.Clickable, {
+                    ...e,
+                    'aria-label': d.Z.Messages.COPY_VERSION,
+                    className: _.clickable,
+                    children: (0, n.jsxs)('div', {
+                        className: _.info,
                         children: [
-                            I,
+                            (0, n.jsxs)(r.Text, {
+                                tag: 'span',
+                                className: _.line,
+                                variant: 'text-xs/normal',
+                                color: 'text-muted',
+                                children: [
+                                    I,
+                                    ' ',
+                                    T,
+                                    ' ',
+                                    (0, n.jsxs)('span', {
+                                        className: _.versionHash,
+                                        children: ['(', S, ')']
+                                    })
+                                ]
+                            }),
                             ' ',
-                            T,
-                            ' ',
-                            (0, n.jsxs)('span', {
-                                className: _.versionHash,
-                                children: ['(', S, ')']
-                            })
-                        ]
-                    }),
-                    ' ',
-                    null != N
-                        ? (0, n.jsxs)(n.Fragment, {
-                              children: [
-                                  (0, n.jsxs)(r.Text, {
+                            null != N
+                                ? (0, n.jsxs)(n.Fragment, {
+                                      children: [
+                                          (0, n.jsxs)(r.Text, {
+                                              tag: 'span',
+                                              className: _.line,
+                                              variant: 'text-xs/normal',
+                                              color: 'text-muted',
+                                              children: [
+                                                  'Host ',
+                                                  N,
+                                                  ' ',
+                                                  null != m
+                                                      ? (0, n.jsxs)('span', {
+                                                            className: _.appArch,
+                                                            children: [m.toLowerCase(), ' ']
+                                                        })
+                                                      : null,
+                                                  null != C
+                                                      ? (0, n.jsxs)('span', {
+                                                            children: ['(', C, ')']
+                                                        })
+                                                      : null
+                                              ]
+                                          }),
+                                          ' '
+                                      ]
+                                  })
+                                : null,
+                            null != O
+                                ? (0, n.jsx)(r.Text, {
                                       tag: 'span',
                                       className: _.line,
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: [
-                                          'Host ',
-                                          N,
-                                          ' ',
-                                          null != m
-                                              ? (0, n.jsxs)('span', {
-                                                    className: _.appArch,
-                                                    children: [m.toLowerCase(), ' ']
-                                                })
-                                              : null,
-                                          null != C
-                                              ? (0, n.jsxs)('span', {
-                                                    children: ['(', C, ')']
-                                                })
-                                              : null
-                                      ]
-                                  }),
-                                  ' '
-                              ]
-                          })
-                        : null,
-                    null != O
-                        ? (0, n.jsx)(r.Text, {
-                              tag: 'span',
-                              className: _.line,
-                              variant: 'text-xs/normal',
-                              color: 'text-muted',
-                              children: O
-                          })
-                        : null
-                ]
-            })
+                                      children: O
+                                  })
+                                : null
+                        ]
+                    })
+                })
         })
     );
 }
