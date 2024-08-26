@@ -12,17 +12,17 @@ function r(e) {
     let { channel: n, commands: t, limit: r = t.length } = e,
         s = (0, o.D)(n),
         c = (0, a.R)(s),
-        u = i.useMemo(() => t.reduce((e, n) => ((e[n.id] = n), e), {}), [t]);
+        d = i.useMemo(() => t.reduce((e, n) => ((e[n.id] = n), e), {}), [t]);
     return i.useMemo(
         () =>
             c
-                .map((e) => u[e])
+                .map((e) => d[e])
                 .filter((e) => null != e)
                 .sort((e, n) => {
                     let t = l.ZP.getScoreWithoutLoadingLatest(s, e);
                     return l.ZP.getScoreWithoutLoadingLatest(s, n) - t;
                 })
                 .slice(0, r),
-        [c, u, s, r]
+        [c, d, s, r]
     );
 }

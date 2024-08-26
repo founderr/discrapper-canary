@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = t(735250);
@@ -11,9 +11,9 @@ var a = t(120356),
     r = t(314734),
     s = t(689938),
     c = t(449784);
-function u(e) {
+function d(e) {
     let { sortOrder: n, onSortOptionClick: t, closePopout: a } = e,
-        u = (e) => {
+        d = (e) => {
             t(e), a();
         };
     return (0, i.jsx)('div', {
@@ -31,14 +31,14 @@ function u(e) {
                         id: 'sort-by-popular',
                         group: 'sort-by',
                         label: s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_POPULAR,
-                        action: () => u(r.bS.POPULAR),
+                        action: () => d(r.bS.POPULAR),
                         checked: n === r.bS.POPULAR
                     }),
                     (0, i.jsx)(o.MenuRadioItem, {
                         id: 'sort-by-alphabetical',
                         group: 'sort-by',
                         label: s.Z.Messages.APP_LAUNCHER_COMMAND_LIST_SORT_OPTION_ALPHABETICAL,
-                        action: () => u(r.bS.ALPHABETICAL),
+                        action: () => d(r.bS.ALPHABETICAL),
                         checked: n === r.bS.ALPHABETICAL
                     })
                 ]

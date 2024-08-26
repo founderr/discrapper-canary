@@ -1,12 +1,12 @@
 t.d(n, {
     J: function () {
-        return w;
+        return L;
     },
     YN: function () {
         return O;
     },
     iZ: function () {
-        return R;
+        return j;
     }
 }),
     t(47120);
@@ -25,10 +25,10 @@ var a = t(735250),
     T = t(69259),
     h = t(370370),
     x = t(107062),
-    I = t(91140),
-    N = t(227172),
-    C = t(551228),
-    p = t(678869),
+    N = t(91140),
+    I = t(227172),
+    p = t(551228),
+    C = t(678869),
     g = t(278399),
     v = t(886217),
     f = t(555672),
@@ -38,24 +38,14 @@ var a = t(735250),
     A = t(797342),
     S = t(206583);
 let O = 72;
-function R(e) {
+function j(e) {
     return (null == e ? void 0 : e.type) === m.so.CONTENT_INVENTORY ? O : 0;
 }
-let j = r().throttle(
-        (e) => {
-            (0, T.L)(S.xP.CARD_HOVER, e);
-        },
-        5000,
-        {
-            leading: !0,
-            trailing: !1
-        }
-    ),
-    y = (e) => {
+let R = (e) => {
         let { entry: n, ...t } = e;
         switch (n.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, a.jsx)(I.Z, {
+                return (0, a.jsx)(N.Z, {
                     ...t,
                     entry: n
                 });
@@ -75,7 +65,7 @@ let j = r().throttle(
                     entry: n
                 });
             case o.s.LISTENED_SESSION:
-                return (0, a.jsx)(C.ZP, {
+                return (0, a.jsx)(p.ZP, {
                     ...t,
                     entry: n
                 });
@@ -88,9 +78,9 @@ let j = r().throttle(
                 return null;
         }
     },
-    L = (e) => {
+    y = (e) => {
         let { requestId: n, closePopout: t, ...l } = e;
-        return (0, a.jsx)(w, {
+        return (0, a.jsx)(L, {
             onReaction: (e, a) => {
                 (0, T.L)(e, {
                     entry: l.entry,
@@ -117,11 +107,11 @@ let j = r().throttle(
             ...l
         });
     },
-    w = (e) => {
+    L = (e) => {
         let { entry: n, ...t } = e;
         switch (n.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, a.jsx)(N.Z, {
+                return (0, a.jsx)(I.Z, {
                     ...t,
                     entry: n
                 });
@@ -141,7 +131,7 @@ let j = r().throttle(
                     entry: n
                 });
             case o.s.LISTENED_SESSION:
-                return (0, a.jsx)(p.Z, {
+                return (0, a.jsx)(C.Z, {
                     ...t,
                     entry: n
                 });
@@ -156,78 +146,91 @@ let j = r().throttle(
     };
 n.ZP = l.memo((e) => {
     var n;
-    let { index: i, ...r } = e,
-        [o, m] = l.useState('default'),
-        h = (0, s.JA)(''.concat(i)),
-        x = null === (n = E.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff(),
-        { isRich: I, appName: N } = (0, A.n)(r.entry),
+    let { index: i, ...o } = e,
+        [m, h] = l.useState('default'),
+        x = (0, s.JA)(''.concat(i)),
+        N = null === (n = E.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff(),
+        { isRich: I, appName: p } = (0, A.n)(o.entry),
         C = {
-            entry: r.entry,
-            channelId: r.channel.id,
-            guildId: r.channel.guild_id,
-            requestId: r.requestId,
-            richPresenceName: I ? N : void 0
+            entry: o.entry,
+            channelId: o.channel.id,
+            guildId: o.channel.guild_id,
+            requestId: o.requestId,
+            richPresenceName: I ? p : void 0
         },
-        p = l.useRef(!1),
-        [g, v] = l.useState(!1),
-        [f, M] = l.useState(!1),
-        P = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled);
+        g = l.useRef(!1),
+        [v, f] = l.useState(!1),
+        [M, P] = l.useState(!1),
+        Z = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled);
     l.useEffect(() => {
-        g && P && M(!0);
-    }, [g, P]);
-    let Z = l.useCallback(
+        v && Z && P(!0);
+    }, [v, Z]);
+    let O = l.useCallback(
             (e) => {
-                if (!!x)
+                if (!!N)
                     (0, d.jW)(e, async () => {
                         let { default: e } = await t.e('153').then(t.bind(t, 330150));
                         return () =>
                             (0, a.jsx)(e, {
-                                entry: r.entry,
-                                requestId: r.requestId
+                                entry: o.entry,
+                                requestId: o.requestId
                             });
                     });
             },
-            [r, x]
+            [o, N]
         ),
-        O = l.useCallback(() => {
-            m(String(Date.now()));
+        j = l.useCallback(() => {
+            h(String(Date.now()));
         }, []),
-        R = () => {
-            (p.current = !1),
+        L = l.useCallback(
+            r().throttle(
+                (e) => {
+                    (0, T.L)(S.xP.CARD_POPOUT_OPEN, e);
+                },
+                2000,
+                {
+                    leading: !0,
+                    trailing: !1
+                }
+            ),
+            []
+        ),
+        w = () => {
+            (g.current = !1),
                 setTimeout(() => {
-                    !p.current && (v(!1), M(P));
+                    !g.current && (f(!1), P(Z));
                 }, 100);
         };
     return (0, a.jsx)('div', {
         onMouseEnter: () => {
-            (p.current = !0),
+            (g.current = !0),
                 setTimeout(() => {
-                    p.current && v(!0), (0, T.L)(S.xP.CARD_CLICK, C);
+                    g.current && f(!0), L(C);
                 }, 100);
         },
-        onMouseLeave: R,
+        onMouseLeave: w,
         children: (0, a.jsx)(c.Popout, {
             renderPopout: (e) => {
                 let { closePopout: n } = e;
-                return (0, a.jsx)(L, {
+                return (0, a.jsx)(y, {
                     closePopout: n,
-                    updatePopoutPosition: O,
-                    ...r
+                    updatePopoutPosition: j,
+                    ...o
                 });
             },
             position: 'left',
-            shouldShow: g,
-            positionKey: o,
-            onRequestOpen: () => (0, T.L)(S.xP.CARD_CLICK, C),
+            shouldShow: v,
+            positionKey: m,
+            onRequestOpen: () => L(C),
             onRequestClose: () => {
-                f && R();
+                M && w();
             },
             spacing: 8,
             children: (e, n) => {
                 let { isShown: t } = n;
                 return (0, a.jsx)(c.Clickable, {
                     ...e,
-                    ...h,
+                    ...x,
                     focusProps: {
                         offset: {
                             top: 4,
@@ -237,16 +240,13 @@ n.ZP = l.memo((e) => {
                         }
                     },
                     onClick: () => {
-                        !g && v(!0);
+                        !v && f(!0);
                     },
-                    onMouseEnter: () => {
-                        j(C);
-                    },
-                    onContextMenu: Z,
-                    children: (0, a.jsx)(y, {
-                        ...r,
+                    onContextMenu: O,
+                    children: (0, a.jsx)(R, {
+                        ...o,
                         selected: t,
-                        hovered: p.current
+                        hovered: g.current
                     })
                 });
             }

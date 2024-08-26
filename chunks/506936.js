@@ -24,10 +24,10 @@ t.Z = (e) => {
     let { type: t, guildId: i, closePopout: l } = e,
         C = (0, u.Dt)(),
         { notClaimed: I, notEmailVerified: E, notPhoneVerified: N, newAccount: x, newMember: S } = (0, a.e7)([h.Z], () => h.Z.getCheck(i), [i]),
-        v = 0 === t ? g.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null,
-        Z = null,
+        Z = 0 === t ? g.Z.Messages.GUILD_VERIFICATION_VOICE_HEADER : null,
+        v = null,
         T = null;
-    return (0 === t && (I ? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (T = g.Z.Messages.CLAIM_ACCOUNT)) : N ? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (T = g.Z.Messages.VERIFY_PHONE)) : E ? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (T = g.Z.Messages.RESEND_VERIFICATION_EMAIL)) : S ? ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: _.YeM.MEMBER_AGE })), (T = g.Z.Messages.OKAY)) : x && ((Z = g.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: _.YeM.ACCOUNT_AGE })), (T = g.Z.Messages.OKAY))), null == v || null == Z)
+    return (0 === t && (I ? ((v = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_CLAIMED), (T = g.Z.Messages.CLAIM_ACCOUNT)) : N ? ((v = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_PHONE_VERIFIED), (T = g.Z.Messages.VERIFY_PHONE)) : E ? ((v = g.Z.Messages.GUILD_VERIFICATION_VOICE_NOT_VERIFIED), (T = g.Z.Messages.RESEND_VERIFICATION_EMAIL)) : S ? ((v = g.Z.Messages.GUILD_VERIFICATION_VOICE_MEMBER_AGE.format({ min: _.YeM.MEMBER_AGE })), (T = g.Z.Messages.OKAY)) : x && ((v = g.Z.Messages.GUILD_VERIFICATION_VOICE_ACCOUNT_AGE.format({ min: _.YeM.ACCOUNT_AGE })), (T = g.Z.Messages.OKAY))), null == Z || null == v)
         ? null
         : (0, r.jsxs)(s.Dialog, {
               className: m.container,
@@ -44,12 +44,12 @@ t.Z = (e) => {
                           (0, r.jsx)(s.Heading, {
                               variant: 'heading-md/semibold',
                               id: C,
-                              children: v
+                              children: Z
                           }),
                           (0, r.jsx)(s.Text, {
                               color: 'header-secondary',
                               variant: 'text-sm/normal',
-                              children: Z
+                              children: v
                           }),
                           (0, r.jsxs)('div', {
                               className: m.buttonContainer,

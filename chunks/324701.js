@@ -29,7 +29,7 @@ async function u(e) {
                 : ((0, i.showToast)((0, i.createToast)(null !== (r = null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.message) && void 0 !== r ? r : c.Z.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE)), null);
         });
     if (t && null != u) {
-        let e = null != n.dueAt ? c.Z.Messages.MESSAGE_REMINDERS_CREATE_SUCCESS : c.Z.Messages.MESSAGE_BOOKMARKS_CREATE_SUCCESS,
+        let e = null != n.dueAt ? c.Z.Messages.MESSAGE_REMINDERS_CREATE_SUCCESS : c.Z.Messages.MESSAGE_BOOKMARKS_CREATE_SUCCESS_LONG,
             t = null != n.dueAt ? i.ToastType.CLOCK : i.ToastType.BOOKMARK;
         (0, i.showToast)((0, i.createToast)(e, t));
     }

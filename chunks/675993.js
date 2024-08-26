@@ -11,8 +11,8 @@ var i = t(735250),
     r = t(581051),
     s = t(353381),
     c = t(442837),
-    u = t(993365),
-    d = t(481060),
+    d = t(993365),
+    u = t(481060),
     m = t(115130),
     p = t(147865),
     _ = t(427996),
@@ -30,11 +30,11 @@ var i = t(735250),
     L = t(910212);
 function b(e) {
     let { channel: n, application: t, videoUrl: l, imageCoverUrl: r, sectionName: s } = e,
-        u = a.useMemo(() => {
+        d = a.useMemo(() => {
             var e;
             return null !== (e = (0, N.jD)(t)) && void 0 !== e ? e : '';
         }, [t]),
-        d = (0, c.e7)([m.Z], () => m.Z.getIsEnabled()),
+        u = (0, c.e7)([m.Z], () => m.Z.getIsEnabled()),
         p = null != l || null != r,
         { isSlideReady: f } = (0, x.hH)(),
         [E, A] = a.useState(!1);
@@ -75,8 +75,8 @@ function b(e) {
                         children: [
                             (0, i.jsx)(R, { application: t }),
                             (0, i.jsx)(T, { application: t }),
-                            u.length > 0 ? (0, i.jsx)(j, { description: u }) : null,
-                            d
+                            d.length > 0 ? (0, i.jsx)(j, { description: d }) : null,
+                            u
                                 ? (0, i.jsx)('div', {
                                       className: P.developerShelfControlsContainer,
                                       children: (0, i.jsx)(_.W, {
@@ -110,11 +110,11 @@ function S(e) {
                       ? (0, i.jsxs)('div', {
                             className: P.monetizationDisclosureStyle,
                             children: [
-                                (0, i.jsx)(d.ShopIcon, {
+                                (0, i.jsx)(u.ShopIcon, {
                                     size: 'sm',
-                                    color: d.tokens.colors.INTERACTIVE_MUTED
+                                    color: u.tokens.colors.INTERACTIVE_MUTED
                                 }),
-                                (0, i.jsx)(u.x, {
+                                (0, i.jsx)(d.x, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
                                     children: g.Z.Messages.APP_LAUNCHER_IAP_DISCLOSURE
@@ -126,11 +126,11 @@ function S(e) {
                       ? (0, i.jsxs)('div', {
                             className: P.monetizationDisclosureStyle,
                             children: [
-                                (0, i.jsx)(d.BillIcon, {
+                                (0, i.jsx)(u.BillIcon, {
                                     size: 'sm',
-                                    color: d.tokens.colors.INTERACTIVE_MUTED
+                                    color: u.tokens.colors.INTERACTIVE_MUTED
                                 }),
-                                (0, i.jsx)(u.x, {
+                                (0, i.jsx)(d.x, {
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
                                     children: g.Z.Messages.APP_LAUNCHER_ADS_DISCLOSURE
@@ -150,7 +150,7 @@ function R(e) {
     return (0, i.jsxs)('div', {
         className: P.titleContainer,
         children: [
-            (0, i.jsx)(d.Heading, {
+            (0, i.jsx)(u.Heading, {
                 variant: 'heading-xl/extrabold',
                 lineClamp: 1,
                 children: a
@@ -158,7 +158,7 @@ function R(e) {
             l
                 ? (0, i.jsx)('div', {
                       className: P.partnerLabelContainer,
-                      children: (0, i.jsx)(u.x, {
+                      children: (0, i.jsx)(d.x, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
                           children: g.Z.Messages.APP_DIRECTORY_PARTNER
@@ -184,7 +184,7 @@ function T(e) {
                           'div',
                           {
                               className: P.tagContainer,
-                              children: (0, i.jsx)(u.x, {
+                              children: (0, i.jsx)(d.x, {
                                   variant: 'text-sm/semibold',
                                   color: 'interactive-normal',
                                   children: e
@@ -205,11 +205,11 @@ function M(e) {
     return (0, i.jsxs)('div', {
         className: P.tagContainer,
         children: [
-            (0, i.jsx)(d.GroupIcon, {
+            (0, i.jsx)(u.GroupIcon, {
                 size: 'xs',
-                color: d.tokens.colors.INTERACTIVE_NORMAL
+                color: u.tokens.colors.INTERACTIVE_NORMAL
             }),
-            (0, i.jsx)(u.x, {
+            (0, i.jsx)(d.x, {
                 variant: 'text-sm/semibold',
                 color: 'interactive-normal',
                 children: (0, p.lY)(a)
@@ -233,7 +233,7 @@ function y(e) {
                             application: t,
                             sectionName: a,
                             commandName: l,
-                            buttonSize: d.ButtonSizes.MAX
+                            buttonSize: u.ButtonSizes.MAX
                         })
                       : null
           })
@@ -291,7 +291,7 @@ function j(e) {
                 ref: C,
                 className: P.overflowHidden,
                 onTransitionEnd: E,
-                children: (0, i.jsx)(u.x, {
+                children: (0, i.jsx)(d.x, {
                     ref: c,
                     className: L.markup,
                     variant: 'text-sm/medium',
@@ -301,11 +301,11 @@ function j(e) {
                 })
             }),
             null != p && p > 1
-                ? (0, i.jsxs)(d.Clickable, {
+                ? (0, i.jsxs)(u.Clickable, {
                       className: P.expandableDescriptionClickable,
                       onClick: () => l((e) => !e),
                       children: [
-                          (0, i.jsx)(u.x, {
+                          (0, i.jsx)(d.x, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
                               children: A ? g.Z.Messages.APP_LAUNCHER_SHOW_LESS : g.Z.Messages.APP_LAUNCHER_SHOW_MORE
@@ -313,11 +313,11 @@ function j(e) {
                           A
                               ? (0, i.jsx)(s.u, {
                                     size: 'sm',
-                                    color: d.tokens.colors.TEXT_BRAND
+                                    color: u.tokens.colors.TEXT_BRAND
                                 })
                               : (0, i.jsx)(r.C, {
                                     size: 'sm',
-                                    color: d.tokens.colors.TEXT_BRAND
+                                    color: u.tokens.colors.TEXT_BRAND
                                 })
                       ]
                   })

@@ -14,11 +14,11 @@ var a = t(735250),
     T = t(206295),
     h = t(335326),
     x = t(297781),
-    I = t(591853),
-    N = t(410441),
-    C = t(689938);
-let p = (e, n, t) => {
-        let a = C.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
+    N = t(591853),
+    I = t(410441),
+    p = t(689938);
+let C = (e, n, t) => {
+        let a = p.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
             l = c.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, t),
             i = e.extra.media_title;
         return a
@@ -30,7 +30,7 @@ let p = (e, n, t) => {
             .replaceAll('*', '');
     },
     g = (e, n) =>
-        C.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+        p.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
             username: n.username,
             activity: e.extra.media_title
         });
@@ -48,7 +48,7 @@ n.Z = (e) => {
                         entry: t,
                         mediaImageSrc: null == M ? void 0 : M.src,
                         avatarSrc: f.getAvatarURL(null == n ? void 0 : n.guild_id, 128),
-                        description: p(t, n, f),
+                        description: C(t, n, f),
                         timestamp: (0, m.yh)(t, A),
                         episodeDescription: S,
                         colors: [P, Z],
@@ -57,7 +57,7 @@ n.Z = (e) => {
             },
             [n, t, S, A, null == M ? void 0 : M.src, P, Z, f]
         ),
-        R = () => {
+        j = () => {
             if (null == t.extra.url) return;
             let e = d.Z.safeParseWithQuery(t.extra.url);
             if (null != e && null != e.protocol && null != e.hostname)
@@ -68,27 +68,27 @@ n.Z = (e) => {
         };
     return null == f
         ? null
-        : (0, a.jsxs)(I.yR, {
+        : (0, a.jsxs)(N.yR, {
               children: [
-                  (0, a.jsx)(I.wG, {
+                  (0, a.jsx)(N.wG, {
                       channel: n,
                       entry: t,
-                      userDescription: (0, m.kr)(t) ? C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : C.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
+                      userDescription: (0, m.kr)(t) ? p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : p.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
                       title: t.extra.media_title,
                       subtitle: t.extra.media_subtitle,
-                      headerIcons: (0, a.jsx)(N.Z, {
+                      headerIcons: (0, a.jsx)(I.Z, {
                           Icon: r.CrunchyrollNeutralIcon,
-                          'aria-label': C.Z.Messages.CRUNCHYROLL
+                          'aria-label': p.Z.Messages.CRUNCHYROLL
                       }),
                       badges: (0, a.jsx)(x.Gk, {
                           location: x.Gt.POPOUT,
                           children: h.t.map((e, n) => (0, a.jsx)(e, { entry: t }, n))
                       }),
-                      onClickTitle: R,
-                      onClickThumbnail: R
+                      onClickTitle: j,
+                      onClickThumbnail: j
                   }),
-                  (0, a.jsx)(I.St, {
-                      children: (0, a.jsx)(I.WT, {
+                  (0, a.jsx)(N.St, {
+                      children: (0, a.jsx)(N.WT, {
                           onReaction: c,
                           onVoiceChannelPreview: v,
                           user: f,

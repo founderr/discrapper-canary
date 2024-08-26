@@ -69,8 +69,8 @@ var r = t(250683),
     M = t(352954),
     h = t(571826),
     g = t(760373),
-    y = t(981631),
-    O = t(689938);
+    O = t(981631),
+    y = t(689938);
 function p(e, n, t, r, i) {
     t ? N.Z.createSecureFramesVerifiedKey(e, n) : N.Z.createSecureFramesTransientKey(e, n),
         (0, h.M1)({
@@ -87,8 +87,8 @@ function U(e, n, t) {
 }
 function Z(e, n) {
     M.Z.openSecureFramesUpdateConfirmation({
-        title: O.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE,
-        subtitle: O.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE,
+        title: y.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE,
+        subtitle: y.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE,
         onConfirm: () => {
             N.Z.deleteSecureFramesVerifiedKey(e, n), (0, h.Pn)();
         }
@@ -98,8 +98,8 @@ function m(e) {
     let n = S.default.getUser(e),
         t = A.ZP.getName(n);
     M.Z.openSecureFramesUpdateConfirmation({
-        title: O.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE.format({ username: t }),
-        subtitle: O.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE,
+        title: y.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE.format({ username: t }),
+        subtitle: y.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE,
         onConfirm: () => {
             N.Z.deleteSecureFramesUserVerifiedKeys(e), (0, h.DF)();
         }
@@ -110,37 +110,37 @@ function D(e) {
         t = a()().diff(n, 's');
     if (t > 12 * I.Z.Seconds.DAYS_30) {
         let e = Math.round(t / (12 * I.Z.Seconds.DAYS_30));
-        return O.Z.Messages.E2EE_USER_VERIFIED_YEARS_AGO.format({ count: e });
+        return y.Z.Messages.E2EE_USER_VERIFIED_YEARS_AGO.format({ count: e });
     }
     if (t > I.Z.Seconds.DAYS_30) {
         let e = Math.round(t / I.Z.Seconds.DAYS_30);
-        return O.Z.Messages.E2EE_USER_VERIFIED_MONTHS_AGO.format({ count: e });
+        return y.Z.Messages.E2EE_USER_VERIFIED_MONTHS_AGO.format({ count: e });
     }
     if (t > 7 * I.Z.Seconds.DAY) {
         let e = Math.round(t / (7 * I.Z.Seconds.DAY));
-        return O.Z.Messages.E2EE_USER_VERIFIED_WEEKS_AGO.format({ count: e });
+        return y.Z.Messages.E2EE_USER_VERIFIED_WEEKS_AGO.format({ count: e });
     } else if (t > I.Z.Seconds.DAY) {
         let e = Math.round(t / I.Z.Seconds.DAY);
-        return O.Z.Messages.E2EE_USER_VERIFIED_DAYS_AGO.format({ count: e });
+        return y.Z.Messages.E2EE_USER_VERIFIED_DAYS_AGO.format({ count: e });
     } else if (t > I.Z.Seconds.HOUR) {
         let e = Math.round(t / I.Z.Seconds.HOUR);
-        return O.Z.Messages.E2EE_USER_VERIFIED_HOURS_AGO.format({ count: e });
+        return y.Z.Messages.E2EE_USER_VERIFIED_HOURS_AGO.format({ count: e });
     } else {
-        if (!(t > I.Z.Seconds.MINUTE)) return O.Z.Messages.E2EE_USER_VERIFIED_SECONDS_AGO.format({ count: t });
+        if (!(t > I.Z.Seconds.MINUTE)) return y.Z.Messages.E2EE_USER_VERIFIED_SECONDS_AGO.format({ count: t });
         let e = Math.round(t / I.Z.Seconds.MINUTE);
-        return O.Z.Messages.E2EE_USER_VERIFIED_MINUTES_AGO.format({ count: e });
+        return y.Z.Messages.E2EE_USER_VERIFIED_MINUTES_AGO.format({ count: e });
     }
 }
 function F(e) {
     let { isCurrentUserKeyPersistent: n, isOtherUserKeyPersistent: t, otherUserNickname: r } = e;
-    if (n && t) return O.Z.Messages.E2EE_PERSISTENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
+    if (n && t) return y.Z.Messages.E2EE_PERSISTENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
     if (n)
-        return O.Z.Messages.E2EE_OTHER_USER_TRANSIENT_VERIFICATION_DESC.format({
+        return y.Z.Messages.E2EE_OTHER_USER_TRANSIENT_VERIFICATION_DESC.format({
             username: r,
             helpArticle: g.l4
         });
-    if (t) return O.Z.Messages.E2EE_CURRENT_USER_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
-    else return O.Z.Messages.E2EE_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
+    if (t) return y.Z.Messages.E2EE_CURRENT_USER_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
+    else return y.Z.Messages.E2EE_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
 }
 async function L(e) {
     let n = l.default.getStaticAuthSessionId();
@@ -154,7 +154,7 @@ async function P(e, n, t) {
     try {
         return (
             await o.tn.post({
-                url: y.ANM.VOICE_MATCH_PUBLIC_KEY(e),
+                url: O.ANM.VOICE_MATCH_PUBLIC_KEY(e),
                 body: {
                     public_key: V(n),
                     key_version: t
@@ -169,7 +169,7 @@ async function b(e) {
     let { key: n, signature: t } = await L(e);
     try {
         await o.tn.put({
-            url: y.ANM.VOICE_PUBLIC_KEYS(),
+            url: O.ANM.VOICE_PUBLIC_KEYS(),
             body: {
                 public_key: V(n),
                 signature: V(t),
@@ -218,8 +218,8 @@ function Y(e) {
         reason: g.Xe.OTHER_USER_INCONSISTENT_KEYS
     }),
         c.Z.show({
-            title: O.Z.Messages.E2EE_INCONSISTENT_KEY_MISMATCH_TITLE,
-            body: O.Z.Messages.E2EE_INCONSISTENT_KEY_MISMATCH_SUBTITLE.format({ username: r })
+            title: y.Z.Messages.E2EE_INCONSISTENT_KEY_MISMATCH_TITLE,
+            body: y.Z.Messages.E2EE_INCONSISTENT_KEY_MISMATCH_SUBTITLE.format({ username: r })
         });
 }
 function G(e) {

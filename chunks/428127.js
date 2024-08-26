@@ -73,10 +73,10 @@ function E(e) {
         { bottomBar: h, topBar: _ } = (0, o.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
         E = (0, o.e7)([p.Z], () => p.Z.isFocused()),
         { mode: N, mentionCount: x, targetChannelId: S } = 'bottom' === t ? h : _,
-        v = N === f.x.HIDDEN,
-        Z = (0, u.useSpring)(
+        Z = N === f.x.HIDDEN,
+        v = (0, u.useSpring)(
             {
-                to: { transform: v ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
+                to: { transform: Z ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: C
             },
             E ? 'respect-motion-settings' : 'animate-never'
@@ -94,8 +94,8 @@ function E(e) {
         }),
         children: (0, i.jsx)(s.animated.div, {
             className: m.containerPadding,
-            style: Z,
-            'aria-hidden': v,
+            style: v,
+            'aria-hidden': Z,
             children:
                 N === f.x.HIDDEN
                     ? (0, i.jsx)('div', { className: a()(m.bar, m.emptyBar) })

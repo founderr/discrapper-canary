@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(358221),
     x = n(963202),
     S = n(353093),
-    v = n(706590),
-    Z = n(940777),
+    Z = n(706590),
+    v = n(940777),
     T = n(831565),
     L = n(41776),
     A = n(905423),
@@ -216,8 +216,8 @@ function eu(e) {
         eN = eg || eC.length > 0 || eE,
         ex = l.useMemo(() => eC.filter((e) => !(0, S.EJ)(e)), [eC]).length > 0,
         eS = l.useMemo(() => (ex ? z.OO : eg ? z.KF : void 0), [eg, ex]),
-        ev = l.useMemo(() => (ex ? eI : eg ? em : void 0), [eI, eg, ex, em]),
-        eZ = !eN,
+        eZ = l.useMemo(() => (ex ? eI : eg ? em : void 0), [eI, eg, ex, em]),
+        ev = !eN,
         { ref: eT, ...eL } = (0, d.OP)(),
         eA = (0, g.useFocusJumpSection)(),
         [eb, eM] = l.useState(!1),
@@ -234,9 +234,9 @@ function eu(e) {
                         let { isNearBottom: t } = e;
                         ef(t);
                     },
-                    eZ
+                    ev
                 ),
-            [o, eZ]
+            [o, ev]
         ),
         { analyticsLocations: eP } = (0, E.ZP)(I.Z.GUILDS_LIST),
         { pathname: eO } = (0, u.TH)(),
@@ -275,7 +275,7 @@ function eu(e) {
     }, [eR]);
     (0, G.Z)(eR.scrollToGuild);
     let ew = o.getRoots(),
-        eG = (0, v.Z)(),
+        eG = (0, Z.Z)(),
         eU = (0, b.U)(),
         ek = el.map((e) =>
             (0, i.jsx)(
@@ -316,7 +316,7 @@ function eu(e) {
                         onScroll: eR.handleScroll,
                         children: [
                             (0, i.jsx)(Y.u, {}),
-                            eG ? (0, i.jsx)(Z.Z, {}) : null,
+                            eG ? (0, i.jsx)(v.Z, {}) : null,
                             (0, i.jsx)(H.Z, {}),
                             (0, i.jsx)(K.Z, { isOnHubVerificationRoute: ej }),
                             (0, i.jsx)(k.Z, {}),
@@ -385,7 +385,7 @@ function eu(e) {
                         ? (0, i.jsx)(z.LW, {
                               hideGradient: e_,
                               children: (0, i.jsx)(eS, {
-                                  defaultGameId: ev,
+                                  defaultGameId: eZ,
                                   children: (e) => {
                                       let { onClick: t } = e;
                                       return (0, i.jsx)(W.Z, {

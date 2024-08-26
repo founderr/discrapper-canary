@@ -11,8 +11,8 @@ var i = t(735250),
     r = t(140835),
     s = t(246521),
     c = t(442837),
-    u = t(481060),
-    d = t(911969),
+    d = t(481060),
+    u = t(911969),
     m = t(607070),
     p = t(555573),
     _ = t(213459),
@@ -40,7 +40,7 @@ let O = 'placeholder',
 function H(e) {
     var n, t;
     let { channel: l, command: o, section: s, sectionName: c } = e,
-        d = a.useCallback(() => {
+        u = a.useCallback(() => {
             let e = N.Z.entrypoint();
             A.y(x.ti.COMMAND),
                 (0, h.Mo)({
@@ -66,12 +66,12 @@ function H(e) {
                 (0, i.jsxs)('div', {
                     className: j.commandTextContainer,
                     children: [
-                        (0, i.jsx)(u.Text, {
+                        (0, i.jsx)(d.Text, {
                             variant: 'text-sm/semibold',
                             color: 'header-primary',
                             children: o.displayName
                         }),
-                        (0, i.jsx)(u.Text, {
+                        (0, i.jsx)(d.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-muted',
                             lineClamp: 1,
@@ -81,11 +81,11 @@ function H(e) {
                 }),
             [o.displayName, _]
         );
-    return (0, i.jsxs)(u.Clickable, {
+    return (0, i.jsxs)(d.Clickable, {
         className: j.command,
-        onClick: d,
+        onClick: u,
         children: [
-            (0, i.jsx)(u.FocusBlock, {
+            (0, i.jsx)(d.FocusBlock, {
                 className: j.commandFocusBlock,
                 children: C
             }),
@@ -122,7 +122,7 @@ function U() {
                         (0, i.jsx)('div', {
                             className: y.textPlaceholder,
                             style: n,
-                            children: (0, i.jsx)(u.Text, {
+                            children: (0, i.jsx)(d.Text, {
                                 className: y.hidden,
                                 variant: 'text-sm/semibold',
                                 color: 'header-primary',
@@ -133,7 +133,7 @@ function U() {
                         (0, i.jsx)('div', {
                             className: y.textPlaceholder,
                             style: t,
-                            children: (0, i.jsx)(u.Text, {
+                            children: (0, i.jsx)(d.Text, {
                                 className: y.hidden,
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
@@ -155,7 +155,7 @@ function D(e) {
         o = (0, _.PL)(!0, !0),
         r = (0, _.LD)(n.guild_id, !0),
         c = (0, v.D)(n),
-        [d, m] = a.useState(!1),
+        [u, m] = a.useState(!1),
         p = a.useCallback(
             async (e) => {
                 e.stopPropagation();
@@ -182,17 +182,17 @@ function D(e) {
             },
             [t, o, r, l, c]
         );
-    return (0, i.jsxs)(u.Button, {
+    return (0, i.jsxs)(d.Button, {
         type: 'submit',
         onClick: p,
-        disabled: d,
-        size: u.ButtonSizes.ICON,
-        color: u.Button.Colors.PRIMARY,
+        disabled: u,
+        size: d.ButtonSizes.ICON,
+        color: d.Button.Colors.PRIMARY,
         className: j.commandSentCTAButton,
         innerClassName: j.commandSentCTAButtonInner,
         'aria-label': M.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({ commandName: t.name }),
         children: [
-            (0, i.jsx)(u.Text, {
+            (0, i.jsx)(d.Text, {
                 variant: 'text-sm/medium',
                 color: 'currentColor',
                 children: M.Z.Messages.SEND
@@ -213,7 +213,7 @@ function B(e) {
                   (0, i.jsxs)('div', {
                       className: j.commandListHeader,
                       children: [
-                          (0, i.jsx)(u.Heading, {
+                          (0, i.jsx)(d.Heading, {
                               variant: 'heading-sm/semibold',
                               children: l
                           }),
@@ -247,11 +247,11 @@ function k(e) {
         {
             filterSection: s,
             commandsByActiveSection: c,
-            sectionDescriptors: u,
+            sectionDescriptors: d,
             loading: m
         } = C.wi(
             t,
-            { commandTypes: [d.yU.CHAT] },
+            { commandTypes: [u.yU.CHAT] },
             {
                 placeholderCount: 0,
                 limit: T.tn,
@@ -261,7 +261,7 @@ function k(e) {
                 applicationId: l.id
             }
         ),
-        p = null !== (n = u.find((e) => e.id === l.id)) && void 0 !== n ? n : null,
+        p = null !== (n = d.find((e) => e.id === l.id)) && void 0 !== n ? n : null,
         {
             sortOrder: _,
             setSortOrder: f,

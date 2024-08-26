@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i = t(735250),
@@ -10,8 +10,8 @@ var i = t(735250),
     r = t(768581),
     s = t(689938),
     c = t(799829);
-function u(e) {
-    let { application: n, src: t, className: l, size: u, botIconFirst: d, fallbackAvatar: m, rendersPlaceholder: p = !1 } = e,
+function d(e) {
+    let { application: n, src: t, className: l, size: d, botIconFirst: u, fallbackAvatar: m, rendersPlaceholder: p = !1 } = e,
         _ = a.useMemo(
             () =>
                 null != n
@@ -19,12 +19,12 @@ function u(e) {
                           id: n.id,
                           icon: n.icon,
                           bot: n.bot,
-                          size: u,
-                          botIconFirst: d,
+                          size: d,
+                          botIconFirst: u,
                           fallbackAvatar: m
                       })
                     : t,
-            [n, t, u, d, m]
+            [n, t, d, u, m]
         );
     if (null == _) return p ? (0, i.jsx)('div', { className: o()(c.icon, c.placeholder, l) }) : null;
     return (0, i.jsx)('img', {

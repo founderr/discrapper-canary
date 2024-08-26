@@ -21,11 +21,11 @@ t.Z = l.memo(function (e) {
         N = (0, r.e7)([u.Z], () => u.Z.isUnavailable(m)),
         x = (0, c.Z)((e) => e.guildId),
         S = (0, _.Z)(m),
-        { badge: v, unread: Z } = (0, r.cj)([d.default], () => ({
+        { badge: Z, unread: v } = (0, r.cj)([d.default], () => ({
             badge: d.default.getMentionCount(m),
             unread: d.default.hasUnread(m)
         })),
-        T = (0, o.I)(C) && 0 === v,
+        T = (0, o.I)(C) && 0 === Z,
         L = l.useMemo(
             () =>
                 null != n
@@ -50,9 +50,9 @@ t.Z = l.memo(function (e) {
         unavailable: N,
         animatable: E,
         selected: x === m,
-        badge: v,
+        badge: Z,
         lowerBadge: L,
-        unread: Z,
+        unread: v,
         mediaState: S,
         guildJoinRequestStatus: I
     });

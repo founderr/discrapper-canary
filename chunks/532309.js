@@ -10,7 +10,7 @@ var i = t(990547),
     r = t(312871);
 function s(e) {
     let { applicationId: n, commandId: t, searchResultsPosition: s, query: c } = e,
-        u = (0, a.e7)([o.Z], () => o.Z.entrypoint());
+        d = (0, a.e7)([o.Z], () => o.Z.entrypoint());
     return {
         trackSearchResultsItemImpressionRef: (0, r.Z)({
             onVisible: () => {
@@ -22,7 +22,7 @@ function s(e) {
                         command_id: t,
                         search_results_position: s,
                         query: c,
-                        source: u
+                        source: d
                     }
                 });
             },

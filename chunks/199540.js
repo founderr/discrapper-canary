@@ -47,10 +47,10 @@ function x(e) {
         _ = h.map((e) => e.id),
         [f, m] = l.useState(!1),
         [x, S] = l.useState(c),
-        v = c ? 0 : -E,
-        Z = (0, d.useSpring)(
+        Z = c ? 0 : -E,
+        v = (0, d.useSpring)(
             {
-                transform: 'translate3d(0, '.concat(v, 'px, 0)'),
+                transform: 'translate3d(0, '.concat(Z, 'px, 0)'),
                 config: { duration: I },
                 onStart() {
                     m(!0), S(c);
@@ -61,7 +61,7 @@ function x(e) {
             },
             'animate-always'
         ),
-        T = f ? Z : void 0;
+        T = f ? v : void 0;
     return (
         (f || x) &&
             (t = (0, i.jsx)(s.animated.div, {
@@ -113,12 +113,12 @@ function S(e) {
             onKeyDown: E,
             treeItemProps: { onFocus: N, ...S }
         } = e,
-        [v, Z] = l.useState(!1),
+        [Z, v] = l.useState(!1),
         T = l.useCallback(() => {
-            s || Z(!0), null == I || I(!0);
+            s || v(!0), null == I || I(!0);
         }, [s, I]),
         L = l.useCallback(() => {
-            s || Z(!1), null == I || I(!1);
+            s || v(!1), null == I || I(!1);
         }, [s, I]),
         A = r || null == o ? null : (0, f.Or)(o),
         b = !r && c > 0 ? (0, f.Ne)(c) : null;
@@ -128,7 +128,7 @@ function S(e) {
         lowerBadge: b,
         lowerBadgeSize: { width: (0, d.getBadgeWidthForValue)(c) },
         children: (0, i.jsx)(d.Clickable, {
-            className: a()(C.folder, { [C.hover]: v }),
+            className: a()(C.folder, { [C.hover]: Z }),
             onClick: _,
             onContextMenu: g,
             onMouseEnter: T,
@@ -152,7 +152,7 @@ function S(e) {
                       })
                     : (0, i.jsx)(x, {
                           folderNode: t,
-                          hovered: v,
+                          hovered: Z,
                           expanded: r
                       })
         })

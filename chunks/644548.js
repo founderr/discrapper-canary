@@ -14,10 +14,10 @@ var a = t(735250),
     T = t(591853),
     h = t(410441),
     x = t(797342),
-    I = t(689938);
-let N = (e, n, t, a) => {
+    N = t(689938);
+let I = (e, n, t, a) => {
         let l = (function (e) {
-                if (e === i._.WEEK) return I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
+                if (e === i._.WEEK) return N.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
             })(a),
             r = s.ZP.getName(n.guild_id, n.id, t),
             o = e.extra.game_name;
@@ -28,13 +28,13 @@ let N = (e, n, t, a) => {
             })
             .replaceAll('*', '');
     },
-    C = (e, n) =>
-        I.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+    p = (e, n) =>
+        N.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: n.username,
             activity: e.extra.game_name
         });
 n.Z = (e) => {
-    let { channel: n, entry: t, disableGameProfileLinks: i, onReaction: s, onVoiceChannelPreview: p } = e,
+    let { channel: n, entry: t, disableGameProfileLinks: i, onReaction: s, onVoiceChannelPreview: C } = e,
         { largeImage: g } = (0, o.rv)({ entry: t }),
         { user: v, details: f, appName: M } = (0, x.n)(t),
         { primaryColor: P, secondaryColor: Z } = (0, d.Z)(null == g ? void 0 : g.src),
@@ -47,8 +47,8 @@ n.Z = (e) => {
                         entry: t,
                         applicationImageSrc: null == g ? void 0 : g.src,
                         avatarSrcs: [v.getAvatarURL(null == n ? void 0 : n.guild_id, 128)],
-                        description: N(t, n, v, S),
-                        timestamp: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(A / r.Z.Seconds.HOUR) }),
+                        description: I(t, n, v, S),
+                        timestamp: N.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(A / r.Z.Seconds.HOUR) }),
                         colors: [P, Z],
                         channelId: e
                     });
@@ -56,20 +56,20 @@ n.Z = (e) => {
             [null == g ? void 0 : g.src, n, A, t, P, S, Z, v]
         );
     if (null == v || null == A || null == S || !(0, m.qy)(S)) return null;
-    let R = null != t.extra.platform ? _.v[t.extra.platform] : null;
+    let j = null != t.extra.platform ? _.v[t.extra.platform] : null;
     return (0, a.jsxs)(T.yR, {
         children: [
             (0, a.jsx)(T.wG, {
                 channel: n,
                 headerIcons:
-                    null == R
+                    null == j
                         ? null
                         : (0, a.jsx)(h.Z, {
-                              Icon: R,
-                              'aria-label': I.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
+                              Icon: j,
+                              'aria-label': N.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                           }),
                 entry: t,
-                userDescription: I.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+                userDescription: N.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                 title: M,
                 subtitle: f,
                 badges: (0, a.jsx)(E.Gk, {
@@ -81,11 +81,11 @@ n.Z = (e) => {
             (0, a.jsx)(T.St, {
                 children: (0, a.jsx)(T.WT, {
                     onReaction: s,
-                    onVoiceChannelPreview: p,
+                    onVoiceChannelPreview: C,
                     user: v,
                     channel: n,
                     generateReactionImage: O,
-                    reactionImageAltText: C(t, v),
+                    reactionImageAltText: p(t, v),
                     entry: t
                 })
             })

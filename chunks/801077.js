@@ -20,8 +20,8 @@ var i,
     N = n(38618),
     x = n(656063),
     S = n(761282),
-    v = n(814443),
-    Z = n(789407),
+    Z = n(814443),
+    v = n(789407),
     T = n(974543),
     L = n(250889),
     A = n(199902),
@@ -47,7 +47,7 @@ let B = !1,
     K = new Set();
 function q() {
     let e = D.Z.getFriendIDs();
-    return M.Z.hasConsented(k.pjP.PERSONALIZATION) ? new Set([...v.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e);
+    return M.Z.hasConsented(k.pjP.PERSONALIZATION) ? new Set([...Z.Z.getUserAffinitiesUserIds(), ...e]) : new Set(e);
 }
 function Q(e) {
     return j.Z.findActivity(e, (e) => e.type !== k.IIU.CUSTOM_STATUS);
@@ -76,7 +76,7 @@ function $(e) {
     !K.has(e) && Y.add(e);
 }
 function ee(e) {
-    if ((0, _.Z)(e)) return Z.r9;
+    if ((0, _.Z)(e)) return v.r9;
     let t = null != e.application_id ? C.Z.getApplication(e.application_id) : null;
     return null != t ? t : (0, f.Z)(e) ? X(e.name) : (0, g.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && $(e.application_id), t);
 }
@@ -96,7 +96,7 @@ function ei(e, t, n) {
         m = t.filter((t) => e.has(t.id)),
         I = !1,
         N = [],
-        v = new Set(),
+        Z = new Set(),
         M = !1,
         D = [];
     for (let e of t) {
@@ -116,10 +116,10 @@ function ei(e, t, n) {
             continue;
         let c = (0, x.Z)(s);
         if (null == c) continue;
-        M = c === Z.XB;
+        M = c === v.XB;
         let u = (function (e) {
                 let t = C.Z.getApplication(e);
-                return null != t ? t : 'string' != typeof e ? (new E.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === Z.XB ? Z.r9 : e.startsWith(L.H) ? X(e.slice(L.H.length)) : e.startsWith(T._) ? J(e.slice(T._.length)) : ($(e), null);
+                return null != t ? t : 'string' != typeof e ? (new E.Z('NowPlayingViewStore').error('Unknown type for applicationId: '.concat(typeof e, ', value: ').concat(e), { tags: { source: 'ACTIVITIES' } }), null) : e === v.XB ? v.r9 : e.startsWith(L.H) ? X(e.slice(L.H.length)) : e.startsWith(T._) ? J(e.slice(T._.length)) : ($(e), null);
             })(c),
             g = null === (l = s.timestamps) || void 0 === l ? void 0 : l.start;
         if ((0, p.Z)(s)) {
@@ -140,7 +140,7 @@ function ei(e, t, n) {
             )
                 continue;
         } else if (null == g) continue;
-        if (!S.JE(s) || null == u || v.has(u.id)) continue;
+        if (!S.JE(s) || null == u || Z.has(u.id)) continue;
         let m = null != s ? ee(s) : null;
         (null == m || m.id !== u.id) && (s = null);
         let j = [];
@@ -156,7 +156,7 @@ function ei(e, t, n) {
                       return null != n && n.id === u.id;
                   })),
             (j = o().orderBy(j, [en], ['desc'])).length !== t.length && (I = !0),
-            v.add(u.id),
+            Z.add(u.id),
             N.push({
                 game: u,
                 activity: s,
@@ -264,7 +264,7 @@ function ea() {
 }
 class es extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([w.default, C.Z, j.Z, R.Z, G.Z, A.Z, D.Z, M.Z, v.Z], ea), this.waitFor(N.Z, O.Z, C.Z, w.default, v.Z);
+        this.syncWith([w.default, C.Z, j.Z, R.Z, G.Z, A.Z, D.Z, M.Z, Z.Z], ea), this.waitFor(N.Z, O.Z, C.Z, w.default, Z.Z);
     }
     get currentActivityParties() {
         return V;

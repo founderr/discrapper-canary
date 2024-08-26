@@ -22,14 +22,14 @@ var a = t(735250),
     T = t(907040),
     h = t(633302),
     x = t(806966),
-    I = t(176354),
-    N = t(823379),
-    C = t(354459),
-    p = t(185923),
+    N = t(176354),
+    I = t(823379),
+    p = t(354459),
+    C = t(185923),
     g = t(420212),
     v = t(894967);
-let f = p.Hz.CHAT,
-    M = [h.ZP.getByName('thumbsup'), h.ZP.getByName('eyes'), h.ZP.getByName('laughing'), h.ZP.getByName('watermelon'), h.ZP.getByName('fork_and_knife'), h.ZP.getByName('yum')].filter(N.lm);
+let f = C.Hz.CHAT,
+    M = [h.ZP.getByName('thumbsup'), h.ZP.getByName('eyes'), h.ZP.getByName('laughing'), h.ZP.getByName('watermelon'), h.ZP.getByName('fork_and_knife'), h.ZP.getByName('yum')].filter(I.lm);
 function P(e) {
     let { emoji: n, isDisabled: t = !1, onClick: i, className: s } = e,
         _ = l.useRef(null),
@@ -83,23 +83,23 @@ function Z(e) {
     });
 }
 function A(e) {
-    let { channel: n, title: t, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: E, emojiSearchProps: h, recentlyUsedEmojis: N, analyticsOverride: A } = e,
+    let { channel: n, title: t, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: E, emojiSearchProps: h, recentlyUsedEmojis: I, analyticsOverride: A } = e,
         S = (0, _.Dt)(),
-        [O, R] = l.useState(!1),
-        j = (0, m.wC)(n.guild_id),
-        y = (0, s.uniqBy)([...j, ...M], 'name')
+        [O, j] = l.useState(!1),
+        R = (0, m.wC)(n.guild_id),
+        y = (0, s.uniqBy)([...R, ...M], 'name')
             .filter(
                 (e) =>
-                    !I.ZP.isEmojiFilteredOrLocked({
+                    !N.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: n,
                         intention: f
                     })
             )
-            .slice(0, C.e5);
-    null != N && N.length > 0 && y.splice(y.length - 1, 1, N[0]);
+            .slice(0, p.e5);
+    null != I && I.length > 0 && y.splice(y.length - 1, 1, I[0]);
     let L = (e) => {
-            R(e), null == E || E(e);
+            j(e), null == E || E(e);
         },
         w = (e, n) => {
             if (null == e && n) {
@@ -152,10 +152,10 @@ function A(e) {
                         children: (0, a.jsx)('div', {
                             className: r()(v.slots, v.slotsWide),
                             children: y.map((e) => {
-                                let t = I.ZP.isEmojiDisabled({
+                                let t = N.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: n,
-                                    intention: p.Hz.CHAT
+                                    intention: C.Hz.CHAT
                                 });
                                 return (0, a.jsx)(
                                     'div',

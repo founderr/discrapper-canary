@@ -40,26 +40,26 @@ function h(e) {
     let { stream: n, className: t, noText: i = !1 } = e,
         o = (0, s.e7)([c.Z], () => c.Z.getBasicChannel(n.channelId)),
         h = (0, s.e7)([d.Z], () => null != o && d.Z.canBasicChannel(_.S7T.CONNECT, o)),
-        { url: x, isLoading: I } = (0, s.cj)([u.Z], () => ({
+        { url: x, isLoading: N } = (0, s.cj)([u.Z], () => ({
             url: h ? u.Z.getPreviewURL(n.guildId, n.channelId, n.ownerId) : null,
             isLoading: h && u.Z.getIsPreviewLoading(n.guildId, n.channelId, n.ownerId)
         })),
-        N = l.useRef(I ? null : x);
+        I = l.useRef(N ? null : x);
     l.useEffect(() => {
-        !I && (N.current = x);
-    }, [x, I]);
-    let C = null == x || I ? N.current : x;
-    return null == C
+        !N && (I.current = x);
+    }, [x, N]);
+    let p = null == x || N ? I.current : x;
+    return null == p
         ? (0, a.jsx)(T, {
               className: t,
-              isLoading: I,
+              isLoading: N,
               noText: i,
               previewText: h ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
           })
         : (0, a.jsx)('div', {
               className: r()(t, E.root),
               children: (0, a.jsx)('img', {
-                  src: C,
+                  src: p,
                   alt: '',
                   className: E.image
               })

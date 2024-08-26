@@ -47,8 +47,8 @@ var i = t(668781),
     r = t(957730),
     s = t(973616),
     c = t(768581),
-    u = t(630388),
-    d = t(827498),
+    d = t(630388),
+    u = t(827498),
     m = t(981631),
     p = t(689079),
     _ = t(689938);
@@ -64,21 +64,21 @@ function E(e) {
 }
 function A(e) {
     var n;
-    return f(e) && (0, u.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, m.udG.EMBEDDED);
+    return f(e) && (0, d.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, m.udG.EMBEDDED);
 }
 function N(e) {
     var n;
-    return f(e) && (0, u.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, m.udG.PARTNER);
+    return f(e) && (0, d.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, m.udG.PARTNER);
 }
 function x(e) {
     var n;
-    return f(e) && (0, u.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, m.udG.PROMOTED);
+    return f(e) && (0, d.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, m.udG.PROMOTED);
 }
 function v(e) {
     return f(e) && A(e) ? (e instanceof s.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function I(e) {
-    let { command: n, optionValues: t, context: s, commandTargetId: c, maxSizeCallback: u, sectionName: d } = e,
+    let { command: n, optionValues: t, context: s, commandTargetId: c, maxSizeCallback: d, sectionName: u } = e,
         { channel: m } = s,
         p = async () => {
             try {
@@ -87,9 +87,9 @@ function I(e) {
                     optionValues: t,
                     context: s,
                     commandTargetId: c,
-                    maxSizeCallback: u,
+                    maxSizeCallback: d,
                     commandOrigin: l.bB.APPLICATION_LAUNCHER,
-                    sectionName: d
+                    sectionName: u
                 });
                 if (n.inputType === l.iw.BUILT_IN_TEXT && null != i) {
                     var e;
@@ -137,5 +137,5 @@ function L(e) {
     return null != n && n.displays_advertisements;
 }
 function b(e) {
-    return e === d._b.TEXT;
+    return e === u._b.TEXT;
 }

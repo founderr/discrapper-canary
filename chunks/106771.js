@@ -10,8 +10,8 @@ var i = t(735250),
     r = t(823531),
     s = t(695346),
     c = t(973616),
-    u = t(783097),
-    d = t(176412),
+    d = t(783097),
+    u = t(176412),
     m = t(753972),
     p = t(532309),
     _ = t(728021),
@@ -22,7 +22,7 @@ function f(e) {
         N = s.Sb.useSetting(),
         x = a.useCallback(
             (e) => {
-                if ((0, u.BQ)(f) && N) {
+                if ((0, d.BQ)(f) && N) {
                     let n = f instanceof c.Z ? f : c.Z.createFromServer(f);
                     (0, o.vq)(e, (e) =>
                         (0, i.jsx)(r.Z, {
@@ -34,11 +34,11 @@ function f(e) {
             },
             [f, N]
         ),
-        { iconURL: v, name: I, description: g } = a.useMemo(() => (0, u.sl)(f, { fakeAppIconURL: C }), [f]),
+        { iconURL: v, name: I, description: g } = a.useMemo(() => (0, d.sl)(f, { fakeAppIconURL: C }), [f]),
         P = a.useMemo(() => {
             var e;
             let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : g;
-            return null == n ? null : (0, d.ae)(n, void 0);
+            return null == n ? null : (0, u.ae)(n, void 0);
         }, [g, null == t ? void 0 : t.displayDescription]),
         { trackSearchResultsItemImpressionRef: L } = (0, p.Z)({
             applicationId: f.id,

@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var i,
@@ -10,7 +10,7 @@ var i,
     r = t(481060),
     s = t(689938),
     c = t(531951);
-function u(e) {
+function d(e) {
     let { title: n, buttonType: t, onClickViewButton: i } = e;
     return (0, l.jsxs)('div', {
         className: c.header,
@@ -37,8 +37,8 @@ function u(e) {
 }
 ((i = a || (a = {}))[(i.VIEW_MORE = 0)] = 'VIEW_MORE'),
     (i[(i.VIEW_LESS = 1)] = 'VIEW_LESS'),
-    (u.buttonTypes = a),
-    (u.Loading = function () {
+    (d.buttonTypes = a),
+    (d.Loading = function () {
         let e = o.useMemo(() => ({ width: ''.concat(10 + 20 * Math.random(), '%') }), []);
         return (0, l.jsx)('div', {
             className: c.loadingHeader,
