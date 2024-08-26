@@ -5,20 +5,20 @@ t.d(n, {
     LO: function () {
         return U;
     },
-    MA: function () {
-        return k;
-    },
     TQ: function () {
         return p;
+    },
+    UB: function () {
+        return k;
     },
     ZU: function () {
         return Z;
     },
     Zn: function () {
-        return D;
+        return m;
     },
     bo: function () {
-        return m;
+        return D;
     },
     fz: function () {
         return G;
@@ -65,8 +65,8 @@ var r = t(250683),
     R = t(960048),
     A = t(51144),
     N = t(718629),
-    M = t(615830),
-    C = t(352954),
+    C = t(615830),
+    M = t(352954),
     h = t(571826),
     g = t(760373),
     y = t(981631),
@@ -86,7 +86,7 @@ function U(e, n, t) {
     } else N.Z.deleteSecureFramesTransientKey(e);
 }
 function Z(e, n) {
-    C.Z.openSecureFramesUpdateConfirmation({
+    M.Z.openSecureFramesUpdateConfirmation({
         title: O.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_TITLE,
         subtitle: O.Z.Messages.E2EE_CLEAR_VERIFICATION_CONFIRM_SUBTITLE,
         onConfirm: () => {
@@ -94,10 +94,10 @@ function Z(e, n) {
         }
     });
 }
-function D(e) {
+function m(e) {
     let n = S.default.getUser(e),
         t = A.ZP.getName(n);
-    C.Z.openSecureFramesUpdateConfirmation({
+    M.Z.openSecureFramesUpdateConfirmation({
         title: O.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_TITLE.format({ username: t }),
         subtitle: O.Z.Messages.E2EE_CLEAR_USER_VERIFICATION_CONFIRM_SUBTITLE,
         onConfirm: () => {
@@ -105,7 +105,7 @@ function D(e) {
         }
     });
 }
-function m(e) {
+function D(e) {
     let n = a()(e),
         t = a()().diff(n, 's');
     if (t > 12 * I.Z.Seconds.DAYS_30) {
@@ -182,7 +182,7 @@ async function b(e) {
     }
 }
 function w(e) {
-    return M.Z.getUploadedKeyVersionsCached().includes(e);
+    return C.Z.getUploadedKeyVersionsCached().includes(e);
 }
 async function K(e) {
     !w(e) && (await b(e));
@@ -195,20 +195,19 @@ async function v(e) {
     return !r && (0, h.KA)(e), r;
 }
 function k(e, n) {
-    let [t, r] = n,
-        i = t.getSecureFramesRosterMapEntry(e);
+    let [t, r] = n;
+    if (!t.isUserConnected(e)) return !1;
+    let i = t.getSecureFramesRosterMapEntry(e);
     if (null == i) return !1;
     let u = new Uint8Array(i);
-    return r
-        .getAllActiveStreamKeys()
-        .filter((n) => r.isUserConnected(n, e))
-        .every((n) => {
-            let t = f.Z.getSecureFramesRosterMapEntry(n, e);
-            if (null == t) return !1;
-            let r = new Uint8Array(t);
-            for (let e = 0; e < u.length; e++) if (u[e] !== r[e]) return !1;
-            return !0;
-        });
+    for (let n of r.getAllActiveStreamKeys()) {
+        if (!r.isUserConnected(n, e)) continue;
+        let t = f.Z.getSecureFramesRosterMapEntry(n, e);
+        if (null == t) return !0;
+        let i = new Uint8Array(t);
+        for (let e = 0; e < u.length; e++) if (u[e] !== i[e]) return !0;
+    }
+    return !1;
 }
 function Y(e) {
     let { userId: n, channelId: t, nickname: r } = e;
@@ -225,15 +224,17 @@ function Y(e) {
 }
 function G(e) {
     let { userId: n, guildId: t, channelId: r } = e;
-    if (k(n, [d.Z, f.Z])) return !0;
-    let i = S.default.getUser(n),
-        u = T.ZP.getName(t, r, i);
-    return (
-        Y({
-            userId: n,
-            channelId: r,
-            nickname: u
-        }),
-        !1
-    );
+    if (!k(n, [d.Z, f.Z])) return !0;
+    {
+        let e = S.default.getUser(n),
+            i = T.ZP.getName(t, r, e);
+        return (
+            Y({
+                userId: n,
+                channelId: r,
+                nickname: i
+            }),
+            !1
+        );
+    }
 }

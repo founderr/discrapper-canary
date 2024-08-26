@@ -1,6 +1,6 @@
 t.d(n, {
-    c: function () {
-        return r;
+    S: function () {
+        return i;
     }
 });
 let r = (0, t(987170).Z)({
@@ -16,3 +16,7 @@ let r = (0, t(987170).Z)({
         }
     ]
 });
+function i(e) {
+    let { location: n } = e;
+    return r.useExperiment({ location: n }, { autoTrackExposure: !0 });
+}

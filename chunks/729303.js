@@ -27,6 +27,9 @@ class u extends (i = r.ZP.Store) {
           })
         : (a[s] = l),
     (t.Z = new u(o.Z, {
+        CONNECTION_OPEN: function () {
+            c.clear();
+        },
         SECURE_FRAMES_TRANSIENT_KEY_CREATE: function (e) {
             let { userId: t, key: n } = e,
                 i = new Uint8Array(n);
