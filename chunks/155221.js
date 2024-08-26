@@ -1,6 +1,6 @@
 n.d(t, {
     a: function () {
-        return H;
+        return Z;
     }
 }),
     n(47120);
@@ -57,78 +57,83 @@ let D = (0, h.Un)({
         name: 'VerifyConnectedAccountSuccess'
     }),
     U = (0, h.Un)({
+        createPromise: () => n.e('68326').then(n.bind(n, 926665)),
+        webpackId: 926665,
+        name: 'VerifyConnectedAccountError'
+    }),
+    w = (0, h.Un)({
         createPromise: () => n.e('68661').then(n.bind(n, 832462)),
         webpackId: 832462,
         name: 'LinkConnectedAccount'
     }),
-    w = (0, h.Un)({
+    x = (0, h.Un)({
         createPromise: () => n.e('46882').then(n.bind(n, 924339)),
         webpackId: 924339,
         name: 'LinkAuthorize'
     }),
-    x = (0, h.Un)({
+    G = (0, h.Un)({
         createPromise: () => Promise.all([n.e('19878'), n.e('49277')]).then(n.bind(n, 197528)),
         webpackId: 197528,
         name: 'ActivateDevice'
     }),
-    G = (0, h.Un)({
+    k = (0, h.Un)({
         createPromise: () => Promise.all([n.e('77298'), n.e('23357'), n.e('23755'), n.e('89350'), n.e('51778'), n.e('11751'), n.e('11438'), n.e('35535'), n.e('63958'), n.e('29549'), n.e('6380'), n.e('18543'), n.e('31605'), n.e('72181'), n.e('30671'), n.e('65840'), n.e('36774'), n.e('81272'), n.e('95393'), n.e('53115'), n.e('18101'), n.e('29637'), n.e('86975'), n.e('90508'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('49641'), n.e('22173'), n.e('18146'), n.e('70583'), n.e('37229'), n.e('7590'), n.e('39285'), n.e('59743'), n.e('68241'), n.e('26138'), n.e('38667'), n.e('48804'), n.e('54535'), n.e('1187'), n.e('71661'), n.e('22036'), n.e('92557'), n.e('29975'), n.e('64679'), n.e('93826'), n.e('36036'), n.e('48800'), n.e('17764'), n.e('23693'), n.e('87713'), n.e('21351'), n.e('28128'), n.e('90029'), n.e('37220'), n.e('80026'), n.e('82158'), n.e('91315'), n.e('48458'), n.e('4775'), n.e('84921'), n.e('95468'), n.e('11256'), n.e('36859')]).then(n.bind(n, 457094)),
         webpackId: 457094,
         name: 'ViewsWithMainInterface',
         memo: !0,
         id: 457094
     }),
-    k = (0, h.Un)({
+    B = (0, h.Un)({
         createPromise: () => Promise.all([n.e('96427'), n.e('32873'), n.e('75492'), n.e('18543'), n.e('95393'), n.e('86975'), n.e('10778'), n.e('52030'), n.e('17764'), n.e('11260'), n.e('4775'), n.e('84956'), n.e('21824')]).then(n.bind(n, 822699)),
         webpackId: 822699,
         name: 'ViewsWithAuth'
     }),
-    B = (0, h.Un)({
+    F = (0, h.Un)({
         createPromise: () => n.e('32640').then(n.bind(n, 285773)),
         webpackId: 285773,
         name: 'ViewsWithOAuth2'
     }),
-    F = (0, h.Un)({
+    V = (0, h.Un)({
         createPromise: () => n.e('40021').then(n.bind(n, 549652)),
         webpackId: 549652,
         name: 'BrowserHandoff'
     }),
-    V = (0, h.Un)({
+    H = (0, h.Un)({
         createPromise: () => n.e('76888').then(n.bind(n, 573276)),
         webpackId: 573276,
         name: 'MobileWebHandoffFallback'
     }),
-    H = (0, h.Un)({
+    Z = (0, h.Un)({
         createPromise: () => Promise.all([n.e('77298'), n.e('23357'), n.e('23755'), n.e('89350'), n.e('51778'), n.e('11751'), n.e('11438'), n.e('35535'), n.e('29549'), n.e('6380'), n.e('18543'), n.e('31605'), n.e('72181'), n.e('30671'), n.e('65840'), n.e('36774'), n.e('81272'), n.e('95393'), n.e('53115'), n.e('18101'), n.e('29637'), n.e('86975'), n.e('90508'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('49641'), n.e('22173'), n.e('70583'), n.e('7590'), n.e('39285'), n.e('59743'), n.e('68241'), n.e('26138'), n.e('38667'), n.e('48804'), n.e('1187'), n.e('22036'), n.e('92557'), n.e('29975'), n.e('64679'), n.e('93826'), n.e('36036'), n.e('48800'), n.e('17764'), n.e('87713'), n.e('21351'), n.e('28128'), n.e('90029'), n.e('37220'), n.e('82158'), n.e('91315'), n.e('48458'), n.e('84921'), n.e('41916')]).then(n.bind(n, 290161)),
         webpackId: 290161,
         name: 'Overlay'
     }),
-    Z = (0, h.Un)({
+    Y = (0, h.Un)({
         createPromise: () => Promise.all([n.e('18824'), n.e('11874')]).then(n.bind(n, 430075)),
         webpackId: 430075,
         name: 'SuspendedUserSafetyHubPage'
     }),
-    Y = (0, h.Un)({
+    j = (0, h.Un)({
         createPromise: () => Promise.all([n.e('19878'), n.e('4964')]).then(n.bind(n, 630107)),
         webpackId: 630107,
         name: 'QuestsLandingPage'
     }),
-    j = (0, h.Un)({
+    W = (0, h.Un)({
         createPromise: () => n.e('16547').then(n.bind(n, 531338)),
         webpackId: 531338,
         name: 'ConnectionsAuthorizeContinue'
     }),
-    W = (0, h.Un)({
+    K = (0, h.Un)({
         createPromise: () => n.e('54918').then(n.bind(n, 838134)),
         webpackId: 838134,
         name: 'ApplicationDirectoryRoutes'
     }),
-    K = () => (0, r.jsx)(G, {}),
-    z = new Set([R.Z5c.LOGIN, R.Z5c.LOGIN_HANDOFF, R.Z5c.INVITE_LOGIN(':inviteCode'), R.Z5c.GIFT_CODE_LOGIN(':giftCode'), R.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode')]);
-function q(e, t) {
-    return t ? e.filter((e) => !z.has(e)) : e;
+    z = () => (0, r.jsx)(k, {}),
+    q = new Set([R.Z5c.LOGIN, R.Z5c.LOGIN_HANDOFF, R.Z5c.INVITE_LOGIN(':inviteCode'), R.Z5c.GIFT_CODE_LOGIN(':giftCode'), R.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode')]);
+function Q(e, t) {
+    return t ? e.filter((e) => !q.has(e)) : e;
 }
-class Q extends i.Component {
+class X extends i.Component {
     componentDidMount() {
         v.ZP.cleanupDisplaySleep(), T.Z.initialize();
     }
@@ -157,8 +162,8 @@ class Q extends i.Component {
                                         component: L
                                     }),
                                     (0, r.jsx)(s.AW, {
-                                        path: q([R.Z5c.LOGIN, R.Z5c.REGISTER, R.Z5c.INVITE(':inviteCode'), R.Z5c.INVITE_LOGIN(':inviteCode'), R.Z5c.GIFT_CODE(':giftCode'), R.Z5c.GIFT_CODE_LOGIN(':giftCode'), R.Z5c.RESET], C.a),
-                                        component: k
+                                        path: Q([R.Z5c.LOGIN, R.Z5c.REGISTER, R.Z5c.INVITE(':inviteCode'), R.Z5c.INVITE_LOGIN(':inviteCode'), R.Z5c.GIFT_CODE(':giftCode'), R.Z5c.GIFT_CODE_LOGIN(':giftCode'), R.Z5c.RESET], C.a),
+                                        component: B
                                     }),
                                     (0, r.jsx)(f.Z, {
                                         path: R.Z5c.INVITE_PROXY(':channelId'),
@@ -172,7 +177,7 @@ class Q extends i.Component {
                                         from: R.Z5c.GIFT_CODE(''),
                                         to: R.Z5c.LOGIN
                                     }),
-                                    (0, r.jsx)(s.AW, { render: K })
+                                    (0, r.jsx)(s.AW, { render: z })
                                 ]
                             })
                           : (0, r.jsxs)(s.rs, {
@@ -183,20 +188,20 @@ class Q extends i.Component {
                                         render: () => (0, r.jsx)(E.Z, {})
                                     }),
                                     (0, r.jsx)(s.AW, {
-                                        path: q([R.Z5c.LOGIN, R.Z5c.LOGIN_HANDOFF, R.Z5c.REGISTER, R.Z5c.BILLING_PREFIX, R.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), R.Z5c.INVITE(':inviteCode'), R.Z5c.INVITE_LOGIN(':inviteCode'), R.Z5c.GIFT_CODE(':giftCode'), R.Z5c.GIFT_CODE_LOGIN(':giftCode'), R.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), R.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), R.Z5c.DISABLE_EMAIL_NOTIFICATIONS, R.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, R.Z5c.RESET, R.Z5c.REPORT, R.Z5c.REPORT_SECOND_LOOK], C.a),
-                                        component: k
+                                        path: Q([R.Z5c.LOGIN, R.Z5c.LOGIN_HANDOFF, R.Z5c.REGISTER, R.Z5c.BILLING_PREFIX, R.Z5c.BILLING_PROMOTION_REDEMPTION(':code'), R.Z5c.INVITE(':inviteCode'), R.Z5c.INVITE_LOGIN(':inviteCode'), R.Z5c.GIFT_CODE(':giftCode'), R.Z5c.GIFT_CODE_LOGIN(':giftCode'), R.Z5c.GUILD_TEMPLATE(':guildTemplateCode'), R.Z5c.GUILD_TEMPLATE_LOGIN(':guildTemplateCode'), R.Z5c.DISABLE_EMAIL_NOTIFICATIONS, R.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, R.Z5c.RESET, R.Z5c.REPORT, R.Z5c.REPORT_SECOND_LOOK], C.a),
+                                        component: B
                                     }),
                                     t
                                         ? null
                                         : (0, r.jsx)(s.AW, {
                                               path: R.Z5c.PICK_GUILD_SETTINGS(':section?', ':subsection?'),
-                                              component: k
+                                              component: B
                                           }),
                                     t
                                         ? null
                                         : (0, r.jsx)(s.AW, {
                                               path: R.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?'),
-                                              component: k
+                                              component: B
                                           }),
                                     (0, r.jsx)(s.l_, {
                                         from: R.Z5c.INVITE(''),
@@ -212,7 +217,7 @@ class Q extends i.Component {
                                     }),
                                     (0, r.jsx)(f.Z, {
                                         path: R.Z5c.QUESTS(':questId'),
-                                        component: Y,
+                                        component: j,
                                         impressionName: o.ImpressionNames.QUESTS_LANDING_PAGE,
                                         impressionProperties: (e) => {
                                             let { computedMatch: t } = e;
@@ -221,31 +226,35 @@ class Q extends i.Component {
                                     }),
                                     (0, r.jsx)(f.Z, {
                                         path: R.Z5c.HANDOFF,
-                                        component: F
-                                    }),
-                                    (0, r.jsx)(f.Z, {
-                                        path: R.Z5c.MOBILE_WEB_HANDOFF,
                                         component: V
                                     }),
                                     (0, r.jsx)(f.Z, {
-                                        path: R.Z5c.CONNECTION_LINK(':type'),
-                                        component: U
+                                        path: R.Z5c.MOBILE_WEB_HANDOFF,
+                                        component: H
                                     }),
                                     (0, r.jsx)(f.Z, {
-                                        path: R.Z5c.CONNECTION_LINK_AUTHORIZE(':type'),
+                                        path: R.Z5c.CONNECTION_LINK(':type'),
                                         component: w
                                     }),
                                     (0, r.jsx)(f.Z, {
-                                        path: R.Z5c.ACTIVATE,
+                                        path: R.Z5c.CONNECTION_LINK_AUTHORIZE(':type'),
                                         component: x
                                     }),
                                     (0, r.jsx)(f.Z, {
+                                        path: R.Z5c.ACTIVATE,
+                                        component: G
+                                    }),
+                                    (0, r.jsx)(f.Z, {
                                         path: R.Z5c.CONNECTIONS_AUTHORIZE_CONTINUE(':type'),
-                                        component: j
+                                        component: W
                                     }),
                                     (0, r.jsx)(f.Z, {
                                         path: R.Z5c.CONNECTIONS_SUCCESS(':type'),
                                         component: P
+                                    }),
+                                    (0, r.jsx)(f.Z, {
+                                        path: R.Z5c.CONNECTIONS_ERROR(':type'),
+                                        component: U
                                     }),
                                     (0, r.jsx)(f.Z, {
                                         path: R.Z5c.CONNECTIONS(':type'),
@@ -303,21 +312,21 @@ class Q extends i.Component {
                                     }),
                                     (0, r.jsx)(s.AW, {
                                         path: [R.Z5c.OAUTH2_AUTHORIZED, R.Z5c.OAUTH2_AUTHORIZE, R.Z5c.OAUTH2_ERROR, R.Z5c.OAUTH2_WHITELIST_ACCEPT],
-                                        component: B
+                                        component: F
                                     }),
                                     t
                                         ? null
                                         : (0, r.jsx)(s.AW, {
                                               path: [R.Z5c.ACCOUNT_STANDING],
-                                              component: Z
+                                              component: Y
                                           }),
                                     t
                                         ? null
                                         : (0, r.jsx)(s.AW, {
                                               path: R.Z5c.APPLICATION_DIRECTORY,
-                                              component: W
+                                              component: K
                                           }),
-                                    (0, r.jsx)(s.AW, { render: K })
+                                    (0, r.jsx)(s.AW, { render: z })
                                 ]
                             })
                       : (0, r.jsx)(s.rs, { children: (0, r.jsx)(f.Z, { component: D }) })),
@@ -340,7 +349,7 @@ t.Z = d.ZP.connectStores(
         let { pathname: e } = (0, s.TH)();
         return null != (0, s.LX)(e, { path: R.Z5c.APPLICATION_DIRECTORY });
     })();
-    return (0, r.jsx)(Q, {
+    return (0, r.jsx)(X, {
         ...e,
         skipsSettingDefaultPageTitle: t
     });

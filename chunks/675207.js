@@ -1,10 +1,10 @@
 t.r(n),
     t.d(n, {
-        AccountConnectionResult: function () {
-            return h;
+        VerifyAccountLoading: function () {
+            return N;
         },
         default: function () {
-            return v;
+            return m;
         }
     }),
     t(610138),
@@ -13,132 +13,82 @@ t.r(n),
     t(815648),
     t(47120),
     t(757143);
-var s = t(735250),
+var o = t(735250),
     r = t(470079),
-    l = t(120356),
-    o = t.n(l),
-    i = t(266067),
-    a = t(873546),
-    c = t(481060),
-    u = t(457330),
-    d = t(726542),
-    f = t(536285),
-    C = t(656649),
-    p = t(981631),
-    g = t(689938),
-    N = t(934484);
-let m = null != window.opener,
-    E = 'https://dis.gd/Amazon-Music-Connection',
-    _ = (e) => new URLSearchParams(e.search);
-function v() {
+    c = t(266067),
+    l = t(481060),
+    s = t(457330),
+    i = t(726542),
+    a = t(536285),
+    u = t(656649),
+    d = t(981631),
+    f = t(689938),
+    p = t(934484);
+let g = null != window.opener,
+    C = (e) => new URLSearchParams(e.search);
+function m() {
     var e;
-    let n = (0, i.k6)(),
-        t = _((0, i.TH)()),
+    let n = (0, c.k6)(),
+        t = C((0, c.TH)()),
         l = t.get('code'),
-        o = t.get('oauth_verifier'),
-        a = null !== (e = t.get('state')) && void 0 !== e ? e : '',
-        c = t.get('loading'),
-        { type: g } = (0, i.UO)(),
-        N = (0, C.vJ)(g),
-        E = null == o ? (null != l ? l : '') : o,
-        [v, A] = r.useState(!0);
+        f = t.get('oauth_verifier'),
+        p = null !== (e = t.get('state')) && void 0 !== e ? e : '',
+        m = t.get('loading'),
+        { type: v } = (0, c.UO)(),
+        b = (0, u.vJ)(v),
+        h = null == f ? (null != l ? l : '') : f;
     return (r.useEffect(() => {
         let e;
-        if (null != c) return;
+        if (null != m) return;
         for (let n of t.keys()) {
             if (!!n.startsWith('openid.')) null == e && (e = {}), (e[n] = t.get(n));
         }
-        let s = (e) => {
-                let { status: t, body: s } = e;
-                if (null != o) {
-                    if (null == s ? void 0 : s.redirect) return n.replace(s.redirect);
-                    [200, 204].includes(t) && (n.replace(p.Z5c.CONNECTIONS_SUCCESS(o)), m && window.close()), A(!1);
+        let o = (e) => {
+                let { status: o, body: r } = e;
+                if (null != l) {
+                    if (null == r ? void 0 : r.redirect) return n.replace(r.redirect);
+                    [200, 204].includes(o) && (n.replace(d.Z5c.CONNECTIONS_SUCCESS(l)), g && window.close()), n.replace(''.concat(d.Z5c.CONNECTIONS_ERROR(l), '?').concat(t.toString()));
                 }
             },
             r = {
-                code: E,
+                code: h,
                 openid_params: e,
-                state: a
+                state: p
             },
-            l = (e) => {
-                null != o && d.Z.isSupported(o) && u.Z.callback(o, r, e).then(s, s);
+            c = (e) => {
+                null != l && i.Z.isSupported(l) && s.Z.callback(l, r, e).then(o, o);
             };
-        if (m) {
-            l(!1);
+        if (g) {
+            c(!1);
             return;
         }
-        let o = (0, C.vJ)(g);
-        f.default
-            .request(p.Etm.CONNECTIONS_CALLBACK, {
+        let l = (0, u.vJ)(v);
+        a.default
+            .request(d.Etm.CONNECTIONS_CALLBACK, {
                 ...r,
-                providerType: o
+                providerType: l
             })
-            .then(s, (e) => l('RPCError' !== e.name))
-            .then(() => f.default.disconnect());
-    }, [E, n, c, g, t, a]),
-    null != N && d.Z.isSupported(N))
-        ? (0, s.jsx)(h, {
-              platformType: N,
-              verifying: v
-          })
+            .then(o, (e) => c('RPCError' !== e.name))
+            .then(() => a.default.disconnect());
+    }, [h, n, m, v, t, p]),
+    null != b && i.Z.isSupported(b))
+        ? (0, o.jsx)(N, { platformType: b })
         : null;
 }
-function h(e) {
-    let n,
-        t,
-        { verifying: l, platformType: i } = e,
-        u = d.Z.get(i),
-        f = r.useCallback(() => {
-            window.close();
-        }, []);
-    return (
-        (n = l
-            ? (0, s.jsx)('div', {
-                  className: N.message,
-                  children: g.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: u.name })
-              })
-            : (0, s.jsxs)(s.Fragment, {
-                  children: [
-                      (0, s.jsx)('div', {
-                          className: o()(N.message, N.error),
-                          children: g.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE.format({ name: u.name })
-                      }),
-                      (0, s.jsx)('div', {
-                          className: o()(N.message, N.details),
-                          children: g.Z.Messages.CONNECTED_ACCOUNT_VERIFY_FAILURE_DETAILS
-                      }),
-                      i !== p.ABu.AMAZON_MUSIC
-                          ? null
-                          : (0, s.jsx)('div', {
-                                className: o()(N.message, N.details),
-                                children: a.tq
-                                    ? g.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE_MOBILE.format({
-                                          link: () =>
-                                              (0, s.jsx)(c.Anchor, {
-                                                  href: E,
-                                                  children: E
-                                              })
-                                      })
-                                    : g.Z.Messages.CONNECTED_ACCOUNT_HELP_CENTER_ARTICLE.format({
-                                          link: () =>
-                                              (0, s.jsx)(c.Anchor, {
-                                                  href: E,
-                                                  children: E
-                                              })
-                                      })
-                            })
-                  ]
-              })),
-        (m || l) &&
-            (t = (0, s.jsx)(c.Button, {
-                className: N.btn,
-                disabled: l,
-                onClick: f,
-                children: l ? (0, s.jsx)(c.Spinner, { itemClassName: N.spinnerItem }) : g.Z.Messages.DONE
-            })),
-        (0, s.jsxs)(C.UV, {
-            platformType: i,
-            children: [n, t]
-        })
-    );
+function N(e) {
+    let { platformType: n } = e;
+    return (0, o.jsxs)(u.UV, {
+        platformType: n,
+        children: [
+            (0, o.jsx)('div', {
+                className: p.message,
+                children: f.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: platform.name })
+            }),
+            (0, o.jsx)(l.Button, {
+                className: p.btn,
+                disabled: !0,
+                children: (0, o.jsx)(l.Spinner, { itemClassName: p.spinnerItem })
+            })
+        ]
+    });
 }
