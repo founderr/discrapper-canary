@@ -1,8 +1,8 @@
 var l = t(735250),
     s = t(470079),
     a = t(481060),
-    r = t(2052),
-    i = t(906732),
+    i = t(2052),
+    r = t(906732),
     o = t(963249),
     c = t(626135),
     u = t(981631),
@@ -11,8 +11,8 @@ var l = t(735250),
     E = t(38457),
     _ = t(458623);
 n.Z = () => {
-    let e = (0, r.O)(),
-        { analyticsLocations: n } = (0, i.ZP)();
+    let e = (0, i.O)(),
+        { analyticsLocations: n } = (0, r.ZP)();
     return (
         s.useEffect(() => {
             c.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {

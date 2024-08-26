@@ -19,8 +19,8 @@ function p(t, e) {
         end: e
     };
 }
-var d = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
-    m = !!String.fromCodePoint,
+var m = !!String.prototype.startsWith && '_a'.startsWith('a', 1),
+    d = !!String.fromCodePoint,
     v = !!Object.fromEntries,
     g = !!String.prototype.codePointAt,
     y = !!String.prototype.trimStart,
@@ -37,14 +37,14 @@ try {
 } catch (t) {
     T = !1;
 }
-var A = d
+var A = m
         ? function (t, e, r) {
               return t.startsWith(e, r);
           }
         : function (t, e, r) {
               return t.slice(r, r + e.length) === e;
           },
-    I = m
+    I = d
         ? String.fromCodePoint
         : function () {
               for (var t, e = [], r = 0; r < arguments.length; r++) e[r] = arguments[r];
@@ -594,26 +594,26 @@ var N = (function () {
                 case 'date':
                 case 'time':
                     this.bumpSpace();
-                    var d = null;
+                    var m = null;
                     if (this.bumpIf(',')) {
                         this.bumpSpace();
-                        var m = this.clonePosition(),
+                        var d = this.clonePosition(),
                             v = this.parseSimpleArgStyleIfPossible();
                         if (v.err) return v;
                         var g = P(v.val);
                         if (0 === g.length) return this.error(a.o.EXPECT_ARGUMENT_STYLE, p(this.clonePosition(), this.clonePosition()));
-                        d = {
+                        m = {
                             style: g,
-                            styleLocation: p(m, this.clonePosition())
+                            styleLocation: p(d, this.clonePosition())
                         };
                     }
                     var y = this.tryParseArgumentClose(n);
                     if (y.err) return y;
                     var b = p(n, this.clonePosition());
-                    if (d && A(null == d ? void 0 : d.style, '::', 0)) {
-                        var E = H(d.style.slice(2));
+                    if (m && A(null == m ? void 0 : m.style, '::', 0)) {
+                        var E = H(m.style.slice(2));
                         if ('number' === h) {
-                            var v = this.parseNumberSkeletonFromString(E, d.styleLocation);
+                            var v = this.parseNumberSkeletonFromString(E, m.styleLocation);
                             if (v.err) return v;
                             return {
                                 val: {
@@ -631,7 +631,7 @@ var N = (function () {
                         var g = {
                             type: s.aV.dateTime,
                             pattern: T,
-                            location: d.styleLocation,
+                            location: m.styleLocation,
                             parsedOptions: this.shouldParseSkeletons ? (0, c.TE)(T) : {}
                         };
                         return {
@@ -649,7 +649,7 @@ var N = (function () {
                             type: 'number' === h ? s.wD.number : 'date' === h ? s.wD.date : s.wD.time,
                             value: r,
                             location: b,
-                            style: null !== (i = null == d ? void 0 : d.style) && void 0 !== i ? i : null
+                            style: null !== (i = null == m ? void 0 : m.style) && void 0 !== i ? i : null
                         },
                         err: null
                     };
@@ -764,17 +764,17 @@ var N = (function () {
                 }
                 if (u.has(c)) return this.error('select' === e ? a.o.DUPLICATE_SELECT_ARGUMENT_SELECTOR : a.o.DUPLICATE_PLURAL_ARGUMENT_SELECTOR, l);
                 'other' === c && (o = !0), this.bumpSpace();
-                var d = this.clonePosition();
+                var m = this.clonePosition();
                 if (!this.bumpIf('{')) return this.error('select' === e ? a.o.EXPECT_SELECT_ARGUMENT_SELECTOR_FRAGMENT : a.o.EXPECT_PLURAL_ARGUMENT_SELECTOR_FRAGMENT, p(this.clonePosition(), this.clonePosition()));
-                var m = this.parseMessage(t + 1, e, r);
-                if (m.err) return m;
-                var v = this.tryParseArgumentClose(d);
+                var d = this.parseMessage(t + 1, e, r);
+                if (d.err) return d;
+                var v = this.tryParseArgumentClose(m);
                 if (v.err) return v;
                 s.push([
                     c,
                     {
-                        value: m.val,
-                        location: p(d, this.clonePosition())
+                        value: d.val,
+                        location: p(m, this.clonePosition())
                     }
                 ]),
                     u.add(c),

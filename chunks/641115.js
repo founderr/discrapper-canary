@@ -7,9 +7,9 @@ t.d(n, {
 var l = t(735250),
     s = t(470079),
     a = t(120356),
-    r = t.n(a),
-    i = t(512722),
-    o = t.n(i),
+    i = t.n(a),
+    r = t(512722),
+    o = t.n(r),
     c = t(848246),
     u = t(442837),
     d = t(481060),
@@ -17,11 +17,11 @@ var l = t(735250),
     E = t(2052),
     _ = t(924557),
     S = t(600164),
-    g = t(436774),
-    h = t(933843),
+    h = t(436774),
+    x = t(933843),
     C = t(1163),
-    I = t(594174),
-    x = t(78839),
+    g = t(594174),
+    I = t(78839),
     N = t(74538),
     Z = t(451467),
     f = t(122186),
@@ -50,8 +50,8 @@ function j() {
         children: [
             (0, l.jsx)(d.NitroWheelIcon, {
                 size: 'md',
-                color: g.JX.PREMIUM_TIER_2,
-                className: r()(M.premiumIcon)
+                color: h.JX.PREMIUM_TIER_2,
+                className: i()(M.premiumIcon)
             }),
             (0, l.jsx)(d.Text, {
                 className: M.upsellText,
@@ -64,10 +64,10 @@ function j() {
 function P(e) {
     let n,
         t,
-        { type: s, selected: a, needsPremium: i, needsDemo: o, analyticsLocation: c, onClick: u, onClose: m, setIsHovering: E } = e,
+        { type: s, selected: a, needsPremium: r, needsDemo: o, analyticsLocation: c, onClick: u, onClose: m, setIsHovering: E } = e,
         { value: _, label: S } = s;
     return (
-        i
+        r
             ? ((n = (0, l.jsx)(d.TooltipContainer, {
                   tooltipClassName: M.tooltip,
                   spacing: 6,
@@ -79,7 +79,7 @@ function P(e) {
                       onMouseLeave: () => E(!1),
                       children: (0, l.jsx)(d.Text, {
                           variant: 'text-xs/bold',
-                          className: r()(M.selectorNitroText, M.enhancedSelectorNitroText),
+                          className: i()(M.selectorNitroText, M.enhancedSelectorNitroText),
                           children: S
                       })
                   })
@@ -93,26 +93,26 @@ function P(e) {
                   className: M.textContainer,
                   children: (0, l.jsx)(d.Text, {
                       variant: 'text-xs/normal',
-                      className: r()(M.selectorText, { [M.enhancedSelectorNitroText]: o }),
+                      className: i()(M.selectorText, { [M.enhancedSelectorNitroText]: o }),
                       children: S
                   })
               })),
               (t = () => u(_))),
         {
             content: n,
-            className: r()(M.selectorButton, {
+            className: i()(M.selectorButton, {
                 [M.selectorButtonSelected]: a,
                 [M.perksDemo]: o,
-                [M.premiumUpsell]: i
+                [M.premiumUpsell]: r
             }),
             onClick: t
         }
     );
 }
 function D(e) {
-    let { onClose: n, selectedPreset: t, selectedResolution: a, selectedFPS: r, onResolutionChange: i, onFPSChange: g, onPresetChange: j, targetGuildPremiumTier: D, captureDeviceSelected: G } = e,
-        U = (0, u.e7)([I.default], () => {
-            let e = I.default.getCurrentUser();
+    let { onClose: n, selectedPreset: t, selectedResolution: a, selectedFPS: i, onResolutionChange: r, onFPSChange: h, onPresetChange: j, targetGuildPremiumTier: D, captureDeviceSelected: G } = e,
+        U = (0, u.e7)([g.default], () => {
+            let e = g.default.getCurrentUser();
             return o()(null != e, 'StreamSettings: user cannot be undefined'), e;
         }),
         b = N.ZP.canStreamQuality(N.U2.MID, U),
@@ -126,8 +126,8 @@ function D(e) {
             disable: B
         }
     );
-    let V = (0, u.e7)([x.ZP], () => x.ZP.inReverseTrial()),
-        y = (0, h.So)(c.q.STREAM_HIGH_QUALITY),
+    let V = (0, u.e7)([I.ZP], () => I.ZP.inReverseTrial()),
+        y = (0, x.So)(c.q.STREAM_HIGH_QUALITY),
         H = (!b && !k) || y,
         [W, F] = s.useState(!1),
         z = G ? R.z8 : R.WC,
@@ -140,10 +140,10 @@ function D(e) {
                 P({
                     type: e,
                     selected: e.value === a,
-                    needsPremium: !(0, Z.Z)(t, e.value, r, U, D),
+                    needsPremium: !(0, Z.Z)(t, e.value, i, U, D),
                     needsDemo: (y || V) && e.value !== R.LY.RESOLUTION_720,
                     analyticsLocation: K,
-                    onClick: () => i(e.value),
+                    onClick: () => r(e.value),
                     onClose: n,
                     setIsHovering: F
                 })
@@ -153,11 +153,11 @@ function D(e) {
             buttons: R.k0.map((e) =>
                 P({
                     type: e,
-                    selected: e.value === r,
+                    selected: e.value === i,
                     needsPremium: !(0, Z.Z)(t, a, e.value, U, D),
                     needsDemo: y && e.value === R.ws.FPS_60,
                     analyticsLocation: K,
-                    onClick: () => g(e.value),
+                    onClick: () => h(e.value),
                     onClose: n,
                     setIsHovering: F
                 })
@@ -192,7 +192,7 @@ function D(e) {
                                   className: M.documentModeGroup,
                                   children: (0, l.jsx)(d.Text, {
                                       variant: 'text-xs/normal',
-                                      children: v.Z.Messages.STREAM_PRESET_DOCUMENTS_DESCRIPTION_NITRO.format({ fps: r })
+                                      children: v.Z.Messages.STREAM_PRESET_DOCUMENTS_DESCRIPTION_NITRO.format({ fps: i })
                                   })
                               })
                           }),

@@ -11,18 +11,18 @@ var i = n(153867),
     s = n(689938);
 function l(e) {
     let { type: t, onConfirm: n, ...l } = e,
-        d = t === o.K.STREAM ? s.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_HEADER : s.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_HEADER,
-        u = t === o.K.STREAM ? s.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_BODY : s.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_BODY;
+        u = t === o.K.STREAM ? s.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_HEADER : s.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_HEADER,
+        d = t === o.K.STREAM ? s.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_BODY : s.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_BODY;
     return (0, r.jsx)(a.default, {
         confirmText: s.Z.Messages.CONFIRM,
         secondaryConfirmText: s.Z.Messages.DONT_ASK_AGAIN,
-        title: d,
+        title: u,
         cancelText: s.Z.Messages.CANCEL,
         onConfirm: n,
         onConfirmSecondary: () => {
             i.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), n();
         },
-        body: u,
+        body: d,
         ...l
     });
 }

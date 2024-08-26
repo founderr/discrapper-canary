@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
 var r = n(735250);
@@ -10,15 +10,15 @@ var i = n(481060),
     o = n(37234),
     s = n(314897),
     l = n(981631),
-    d = n(689938);
-function u(e, t) {
+    u = n(689938);
+function d(e, t) {
     let n = s.default.getId(),
-        u = t === l.IlC.POPOUT;
-    return n === e || u
+        d = t === l.IlC.POPOUT;
+    return n === e || d
         ? null
         : (0, r.jsx)(i.MenuItem, {
               id: 'message-user',
-              label: d.Z.Messages.USER_POPOUT_MESSAGE,
+              label: u.Z.Messages.USER_POPOUT_MESSAGE,
               action: () => {
                   a.Z.openPrivateChannel(e), (0, o.xf)();
               }

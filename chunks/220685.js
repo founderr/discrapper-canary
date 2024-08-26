@@ -248,9 +248,9 @@ function v() {
 }
 function j() {
     let e = (0, u.e7)([g.Z], () => g.Z.getGuild());
-    return (0, s.jsxs)(x.l, {
+    return (0, s.jsx)(x.l, {
         guildId: null == e ? void 0 : e.id,
         refetchOnMount: !0,
-        children: [(0, s.jsx)(v, {}), ';']
+        children: (0, s.jsx)(v, {})
     });
 }

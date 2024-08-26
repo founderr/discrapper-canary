@@ -27,24 +27,24 @@ function i(e, t, n, i, o = 'SHA-256') {
             'string' == typeof e ? (e = new TextEncoder().encode(e)) : e instanceof ArrayBuffer ? (e = new Uint8Array(e)) : ArrayBuffer.isView(e) || l(RangeError('P should be string, ArrayBuffer, TypedArray, DataView')),
             'string' == typeof t ? (t = new TextEncoder().encode(t)) : t instanceof ArrayBuffer ? (t = new Uint8Array(t)) : ArrayBuffer.isView(t) ? (t = new Uint8Array(t.buffer, t.byteOffset, t.byteLength)) : l(RangeError('S should be string, ArrayBuffer, TypedArray, DataView')),
             crypto.subtle.importKey('raw', e, 'PBKDF2', !1, ['deriveBits']).then(
-                (d) => {
-                    let u = {
+                (u) => {
+                    let d = {
                         name: 'PBKDF2',
                         hash: o,
                         salt: t,
                         iterations: n
                     };
-                    crypto.subtle.deriveBits(u, d, 8 * i).then(
+                    crypto.subtle.deriveBits(d, u, 8 * i).then(
                         (e) => s(e),
-                        (d) => {
+                        (u) => {
                             (async function (e, t, n, i, o) {
                                 if (!(o in r)) throw RangeError(`Valid hash algorithm values are any of ${Object.keys(r).toString()}`);
                                 if (!Number.isInteger(n) || n <= 0) throw RangeError('c must be a positive integer');
                                 let s = r[o].outputLength;
                                 if (!Number.isInteger(i) || i <= 0 || i >= (4294967296 - 1) * s) throw RangeError('dkLen must be a positive integer < (2 ** 32 - 1) * hLen');
                                 let l = Math.ceil(i / s),
-                                    d = i - (l - 1) * s,
-                                    u = Array(l);
+                                    u = i - (l - 1) * s,
+                                    d = Array(l);
                                 0 === e.byteLength && (e = new Uint8Array(r[o].blockSize));
                                 let c = await crypto.subtle.importKey(
                                         'raw',
@@ -59,8 +59,8 @@ function i(e, t, n, i, o = 'SHA-256') {
                                     I = async function (e, t) {
                                         return new Uint8Array(await crypto.subtle.sign('HMAC', e, t));
                                     };
-                                for (let e = 0; e < l; e++) u[e] = await E(c, t, n, e + 1);
-                                async function E(e, t, n, r) {
+                                for (let e = 0; e < l; e++) d[e] = await f(c, t, n, e + 1);
+                                async function f(e, t, n, r) {
                                     let i = await I(
                                             e,
                                             a(
@@ -78,7 +78,7 @@ function i(e, t, n, i, o = 'SHA-256') {
                                         })(i, (o = await I(e, o)));
                                     return i;
                                 }
-                                return (u[l - 1] = u[l - 1].slice(0, d)), a(...u).buffer;
+                                return (d[l - 1] = d[l - 1].slice(0, u)), a(...d).buffer;
                             })(e, t, n, i, o).then(
                                 (e) => s(e),
                                 (e) => l(e)

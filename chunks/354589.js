@@ -6,12 +6,12 @@ var i = n(481060),
     o = n(883385),
     s = n(108843),
     l = n(911969),
-    d = n(947440),
-    u = n(100527),
+    u = n(947440),
+    d = n(100527),
     c = n(441061),
     I = n(167675),
-    E = n(737013),
-    f = n(607783),
+    f = n(737013),
+    E = n(607783),
     p = n(299206),
     T = n(819403),
     N = n(777658),
@@ -37,7 +37,7 @@ t.default = (0, s.Z)(
     (0, o.Z)(
         function (e) {
             var t;
-            let { user: n, channel: o, context: s, showChatItems: u = !0, showMediaItems: x = !1, showChannelCallItems: D = !1, showModalItems: P = !0, onSelect: L, onHeightUpdate: j } = e,
+            let { user: n, channel: o, context: s, showChatItems: d = !0, showMediaItems: x = !1, showChannelCallItems: D = !1, showModalItems: P = !0, onSelect: L, onHeightUpdate: j } = e,
                 H = (0, b.Z)({
                     userId: n.id,
                     guildId: null
@@ -58,7 +58,7 @@ t.default = (0, s.Z)(
                 z = (0, C.Z)(n.id),
                 Y = (0, v.Z)(n.id, o.id),
                 q = (0, G.Z)(n.id),
-                X = (0, f.B)({
+                X = (0, E.B)({
                     userId: n.id,
                     channelId: o.id,
                     guildId: o.getGuildId(),
@@ -66,7 +66,7 @@ t.default = (0, s.Z)(
                 }),
                 $ = (0, Z.Z)(n.id, o.id),
                 J = (0, O.Z)({ user: n }),
-                Q = (0, d.Z)(null, n),
+                Q = (0, u.Z)(null, n),
                 ee = (0, N.Z)(n),
                 et = (0, A.Z)({ user: n }),
                 en = (0, p.Z)({
@@ -77,7 +77,7 @@ t.default = (0, s.Z)(
                 ei = (0, I.Z)(n.id),
                 ea = (0, c.Z)(o.id),
                 eo = (0, T.Z)(n),
-                es = (0, E.Z)(n.id),
+                es = (0, f.Z)(n.id),
                 el = (0, S.Z)({
                     commandType: l.yU.USER,
                     commandTargetId: n.id,
@@ -85,8 +85,8 @@ t.default = (0, s.Z)(
                     guildId: void 0,
                     onHeightUpdate: j
                 }),
-                ed = (0, m.Z)(n, o),
-                eu = n.isNonUserBot(),
+                eu = (0, m.Z)(n, o),
+                ed = n.isNonUserBot(),
                 ec = o.isManaged(),
                 eI = null === (t = o.recipients) || void 0 === t ? void 0 : t.includes(n.id);
             return (0, r.jsxs)(i.Menu, {
@@ -95,17 +95,17 @@ t.default = (0, s.Z)(
                 'aria-label': U.Z.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: L,
                 children: [
-                    !eu &&
+                    !ed &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(i.MenuGroup, { children: eo }),
                                 (0, r.jsxs)(i.MenuGroup, {
-                                    children: [P && H, u && B, F, V, !ec && k, P && W, P && K, er]
+                                    children: [P && H, d && B, F, V, !ec && k, P && W, P && K, er]
                                 }),
                                 x && (0, r.jsx)(i.MenuGroup, { children: z }),
                                 eI &&
                                     (0, r.jsxs)(i.MenuGroup, {
-                                        children: [!ec && Y, ed]
+                                        children: [!ec && Y, eu]
                                     }),
                                 (0, r.jsx)(i.MenuGroup, { children: P && Q }),
                                 (0, r.jsxs)(i.MenuGroup, {
@@ -123,5 +123,5 @@ t.default = (0, s.Z)(
         },
         { object: x.qAy.CONTEXT_MENU }
     ),
-    [u.Z.CONTEXT_MENU, u.Z.GROUP_DM_USER_MENU]
+    [d.Z.CONTEXT_MENU, d.Z.GROUP_DM_USER_MENU]
 );

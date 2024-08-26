@@ -24,8 +24,8 @@ t.d(n, {
 var l = t(735250),
     s = t(470079),
     a = t(120356),
-    r = t.n(a),
-    i = t(788900),
+    i = t.n(a),
+    r = t(788900),
     o = t(268146),
     c = t(442837),
     u = t(141038),
@@ -34,11 +34,11 @@ var l = t(735250),
     E = t(224706),
     _ = t(600164),
     S = t(152708),
-    g = t(594190),
-    h = t(569984),
+    h = t(594190),
+    x = t(569984),
     C = t(918701),
-    I = t(977156),
-    x = t(28798),
+    g = t(977156),
+    I = t(28798),
     N = t(131951),
     Z = t(449224),
     f = t(358085),
@@ -61,7 +61,7 @@ async function P() {
         l = await t,
         s = await n,
         a = s.filter((e) => e.id.startsWith(o.vA.SCREEN)),
-        r = (function (e, n) {
+        i = (function (e, n) {
             let t = {};
             return (
                 n.forEach((e) => {
@@ -78,7 +78,7 @@ async function P() {
         ),
         c = ['GQgGHISKZ5aYqYeYhX9isDUHGw', 'bAgKFITWhoVvmHVRuokCdjVQaA', 'XAgGDIJ/ipadd3iCiYUcWpCZBA', 'HRkGDIT5aXRneomGdlvUawB7qA', 'I9gNDISmlqqPmHiKd3isTp/5lg', 'XxgGBIIwT2ZGpneUeZev6fWLXQ', 'KzsKNIZDeYmfd3ihe1bXfr8Jxg', 'J9cRDIJ6iHd/d4h4eIUJf5LyRw', 'DggKFIQwtndKe3hVfXnAWQmddQ', 'WggKDILeh3ePZpd6l4jln1b5SQ', '4PgJJIJVl3eAaod2iJeHj7tE8Q'];
     return {
-        windowSources: r,
+        windowSources: i,
         screenSources: a,
         cameraSources: Object.entries(e)
             .filter((e) => {
@@ -89,17 +89,17 @@ async function P() {
                 let [t, l] = e,
                     s = c[n % c.length],
                     a = Uint8Array.from(atob(s), (e) => e.charCodeAt(0)),
-                    r = (0, i.xS)(a);
+                    i = (0, r.xS)(a);
                 return {
                     id: 'camera:' + l.id,
                     name: l.name,
-                    url: r
+                    url: i
                 };
             })
     };
 }
 async function D() {
-    let e = g.ZP.getRunningGames();
+    let e = h.ZP.getRunningGames();
     return (
         await Promise.all(
             e.map(async (e) => {
@@ -125,14 +125,14 @@ async function D() {
     ).filter((e) => null !== e);
 }
 function G(e) {
-    let n = (0, f.isWindows)() ? (0, T.Z)(g.ZP, Z.Z) : null,
-        t = g.ZP.getRunningGames();
+    let n = (0, f.isWindows)() ? (0, T.Z)(h.ZP, Z.Z) : null,
+        t = h.ZP.getRunningGames();
     return null != n && (0, A.Z)(e.id, n.windowHandle) ? 2 : null != t.find((n) => (0, A.Z)(e.id, n.windowHandle)) ? 1 : 0;
 }
 function U(e) {
     let { selectedSource: n, onChangeSelectedSource: t } = e,
         { enableGoLiveCaptureCard: a } = R.Z.useExperiment({ location: 'GoLive_Source_Select' }),
-        i = N.Z.supports(p.AN.GO_LIVE_HARDWARE),
+        r = N.Z.supports(p.AN.GO_LIVE_HARDWARE),
         [u, E] = s.useState(null),
         [Z, f] = s.useState(null),
         [T, D] = s.useState(null),
@@ -141,26 +141,26 @@ function U(e) {
         [k, B] = s.useState(!1),
         V = s.useRef(null),
         y = s.useRef(new d.Xp()),
-        H = (0, c.e7)([g.ZP], () => g.ZP.getRunningGames()),
+        H = (0, c.e7)([h.ZP], () => h.ZP.getRunningGames()),
         W = (function (e, n, t) {
-            let l = (0, I.Zy)({ location: M.dr.STREAM_SOURCE_SELECT });
+            let l = (0, g.Zy)({ location: M.dr.STREAM_SOURCE_SELECT });
             return s.useMemo(() => {
                 if (null == t || !l) return null;
                 for (let l of t) {
                     var s, a;
                     let t = n.find((e) => (0, A.Z)(l.id, e.windowHandle));
                     if ((null == t ? void 0 : t.id) == null) continue;
-                    let r = (0, C.lQ)(e, t.id);
-                    if (null != r && (null === (s = r.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && (null === (a = r.userStatus) || void 0 === a ? void 0 : a.completedAt) == null)
+                    let i = (0, C.lQ)(e, t.id);
+                    if (null != i && (null === (s = i.userStatus) || void 0 === s ? void 0 : s.enrolledAt) != null && (null === (a = i.userStatus) || void 0 === a ? void 0 : a.completedAt) == null)
                         return {
                             source: l,
-                            quest: r
+                            quest: i
                         };
                 }
                 return null;
             }, [l, e, n, t]);
         })(
-            (0, c.e7)([h.Z], () => h.Z.quests),
+            (0, c.e7)([x.Z], () => x.Z.quests),
             H,
             Z
         ),
@@ -207,7 +207,7 @@ function U(e) {
         return (0, l.jsx)(
             m.Clickable,
             {
-                className: r()(j.tile, { [j.selected]: a }),
+                className: i()(j.tile, { [j.selected]: a }),
                 onClick: () => t(e, null),
                 children: (0, l.jsx)(
                     L.Z,
@@ -245,7 +245,7 @@ function U(e) {
                             ];
                             return (
                                 a &&
-                                    i &&
+                                    r &&
                                     U &&
                                     e.push({
                                         name: O.Z.Messages.GO_LIVE_MODAL_CAPTURE,
@@ -284,7 +284,7 @@ function U(e) {
                       className: j.sourceScroller,
                       onScroll: Q,
                       children: [
-                          b === o.vA.WINDOW && null != W && (0, l.jsx)(x.Z, { quest: W.quest }),
+                          b === o.vA.WINDOW && null != W && (0, l.jsx)(I.Z, { quest: W.quest }),
                           (0, l.jsx)(S.Z, {
                               layout: S.Z.Layout.WRAP,
                               columns: 2,
@@ -305,7 +305,7 @@ function b(e) {
             }),
             []
         ),
-        [a, i] = s.useState([]),
+        [a, r] = s.useState([]),
         [o, c] = s.useState(t),
         u = s.useRef(new d.Xp());
     s.useEffect(() => {
@@ -315,7 +315,7 @@ function b(e) {
                     let [n, t] = e;
                     return !t.disabled;
                 });
-                i(e),
+                r(e),
                     c({
                         ...t,
                         ...e.reduce((e, n) => {
@@ -364,13 +364,13 @@ function b(e) {
                             name: O.Z.Messages.GO_LIVE_MODAL_WINDOW,
                             value: 'prepicked:window',
                             icon: m.BrowserIcon,
-                            radioItemIconClassName: r()(j.hideRadioCheckbox)
+                            radioItemIconClassName: i()(j.hideRadioCheckbox)
                         },
                         {
                             name: O.Z.Messages.GO_LIVE_MODAL_SCREEN,
                             value: 'prepicked:screen',
                             icon: m.ScreenIcon,
-                            radioItemIconClassName: r()(j.hideRadioCheckbox)
+                            radioItemIconClassName: i()(j.hideRadioCheckbox)
                         }
                     ]
                 }),

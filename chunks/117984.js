@@ -18,7 +18,7 @@ n.d(t, {
         return N;
     },
     uA: function () {
-        return A;
+        return p;
     },
     xh: function () {
         return T;
@@ -27,8 +27,8 @@ n.d(t, {
     n(47120);
 var r = n(524437),
     i = n(675478),
-    a = n(592125),
-    o = n(496675),
+    o = n(592125),
+    a = n(496675),
     u = n(709054),
     s = n(853856),
     l = n(231338);
@@ -46,13 +46,13 @@ function c(e) {
             continue;
         }
         if (n.type === r.Dd.CATEGORY) continue;
-        let i = a.Z.getChannel(t);
+        let i = o.Z.getChannel(t);
         if (null == i) {
             delete e[t];
             continue;
         }
         if (!i.isPrivate()) {
-            if (!o.Z.can(l.Pl.VIEW_CHANNEL, i)) {
+            if (!a.Z.can(l.Pl.VIEW_CHANNEL, i)) {
                 delete e[t];
                 continue;
             }
@@ -128,7 +128,7 @@ function N(e) {
         i.fy.FREQUENT_USER_ACTION
     );
 }
-function A(e, t) {
+function p(e, t) {
     i.hW.updateAsync(
         'favorites',
         (n) => {

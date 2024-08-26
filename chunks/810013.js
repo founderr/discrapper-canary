@@ -7,16 +7,16 @@ var l = t(735250);
 t(470079);
 var s = t(442837),
     a = t(481060),
-    r = t(314897),
-    i = t(938475),
+    i = t(314897),
+    r = t(938475),
     o = t(499596),
     c = t(537135),
     u = t(689938),
     d = t(458623);
 function m(e) {
     let { channel: n } = e,
-        t = (0, s.e7)([r.default], () => r.default.getId()),
-        m = (0, s.e7)([i.ZP], () => i.ZP.getVoiceStatesForChannel(n), [n]);
+        t = (0, s.e7)([i.default], () => i.default.getId()),
+        m = (0, s.e7)([r.ZP], () => r.ZP.getVoiceStatesForChannel(n), [n]);
     return (0, l.jsx)(a.FormItem, {
         title: u.Z.Messages.GO_LIVE_MODAL_CURRENT_CHANNEL_FORM_TITLE,
         className: d.modalContent,

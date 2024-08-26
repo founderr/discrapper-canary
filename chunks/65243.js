@@ -37,7 +37,7 @@ r.r(e),
             return n.Sn;
         },
         defineMessage: function () {
-            return d;
+            return m;
         },
         defineMessages: function () {
             return p;
@@ -95,6 +95,6 @@ var n = r(789903),
 function p(t) {
     return t;
 }
-function d(t) {
+function m(t) {
     return t;
 }

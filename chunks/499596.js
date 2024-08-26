@@ -7,8 +7,8 @@ var l = t(735250);
 t(470079);
 var s = t(120356),
     a = t.n(s),
-    r = t(481060),
-    i = t(884338),
+    i = t(481060),
+    r = t(884338),
     o = t(933557),
     c = t(471445),
     u = t(5192),
@@ -20,7 +20,7 @@ function E(e) {
         _ = null;
     null != t &&
         t.length > 0 &&
-        (_ = (0, l.jsx)(i.Z, {
+        (_ = (0, l.jsx)(r.Z, {
             guildId: n.guild_id,
             className: m.voiceUserList,
             users: t,
@@ -28,7 +28,7 @@ function E(e) {
                 if (null == e) return null;
                 let t = u.ZP.getName(n.guild_id, n.id, e),
                     s = e.getAvatarURL(n.guild_id, 24);
-                return (0, l.jsx)(r.TooltipContainer, {
+                return (0, l.jsx)(i.TooltipContainer, {
                     text: t,
                     children: (0, l.jsx)('img', {
                         src: null != s ? s : void 0,
@@ -62,7 +62,7 @@ function E(e) {
                               });
                 })(t.slice(4), n);
                 return (0, l.jsx)('div', {
-                    children: (0, l.jsx)(r.TooltipContainer, {
+                    children: (0, l.jsx)(i.TooltipContainer, {
                         text: s,
                         children: (0, l.jsx)('div', {
                             className: m.userListOverflow,

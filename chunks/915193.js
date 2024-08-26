@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var r = n(735250);
@@ -10,11 +10,11 @@ var i = n(442837),
     o = n(481060),
     s = n(493683),
     l = n(129861),
-    d = n(700582),
-    u = n(594174),
+    u = n(700582),
+    d = n(594174),
     c = n(689938),
     I = n(725458);
-function E(e) {
+function f(e) {
     let { color: t, className: n } = e;
     return (0, r.jsx)('svg', {
         className: n,
@@ -47,8 +47,8 @@ function E(e) {
         })
     });
 }
-function f(e, t) {
-    let n = (0, i.e7)([u.default], () => u.default.getCurrentUser());
+function E(e, t) {
+    let n = (0, i.e7)([d.default], () => d.default.getCurrentUser());
     return null == n || t.ownerId !== n.id || e.id === n.id || (null == t ? void 0 : t.isBroadcastChannel())
         ? null
         : (0, r.jsx)(o.MenuItem, {
@@ -68,20 +68,20 @@ function f(e, t) {
                               onConfirm: () => s.Z.setDMOwner(t.id, e.id),
                               ...n,
                               children: [
-                                  (0, r.jsx)(E, { color: a.Z.unsafe_rawColors.PRIMARY_300.css }),
+                                  (0, r.jsx)(f, { color: a.Z.unsafe_rawColors.PRIMARY_300.css }),
                                   (0, r.jsxs)('div', {
                                       className: I.fromToWrapper,
                                       children: [
                                           (0, r.jsx)('div', {
                                               className: I.from,
-                                              children: (0, r.jsx)(d.Z, {
+                                              children: (0, r.jsx)(u.Z, {
                                                   user: i,
                                                   size: o.AvatarSizes.SIZE_80
                                               })
                                           }),
                                           (0, r.jsx)('div', {
                                               className: I.to,
-                                              children: (0, r.jsx)(d.Z, {
+                                              children: (0, r.jsx)(u.Z, {
                                                   user: e,
                                                   size: o.AvatarSizes.SIZE_80
                                               })

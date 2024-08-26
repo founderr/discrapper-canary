@@ -7,8 +7,8 @@ t.d(n, {
 var l = t(735250),
     s = t(470079),
     a = t(120356),
-    r = t.n(a),
-    i = t(481060),
+    i = t.n(a),
+    r = t(481060),
     o = t(958707),
     c = t(458623),
     u = t(523022);
@@ -16,19 +16,19 @@ function d(e) {
     let { title: n, scrollerClassName: t, scrollerInnerClassName: a, children: d } = e,
         m = s.useRef(null),
         [E, _] = s.useState(!1),
-        [S, g] = s.useState(!1),
-        h = s.useCallback(() => {
+        [S, h] = s.useState(!1),
+        x = s.useCallback(() => {
             let { current: e } = m;
-            null != e && (_(!e.isScrolledToTop()), g(!e.isScrolledToBottom()));
+            null != e && (_(!e.isScrolledToTop()), h(!e.isScrolledToBottom()));
         }, []);
     return (
-        s.useLayoutEffect(() => h(), []),
+        s.useLayoutEffect(() => x(), []),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)('div', {
-                    className: r()(u.title, u.scrollWrapper),
+                    className: i()(u.title, u.scrollWrapper),
                     children: [
-                        (0, l.jsx)(i.FormTitle, {
+                        (0, l.jsx)(r.FormTitle, {
                             className: c.formItemTitle,
                             children: n
                         }),
@@ -37,10 +37,10 @@ function d(e) {
                 }),
                 (0, l.jsx)('div', {
                     className: t,
-                    children: (0, l.jsx)(i.AdvancedScroller, {
+                    children: (0, l.jsx)(r.AdvancedScroller, {
                         ref: m,
-                        className: r()(u.scrollerInner, a, { [u.bottomSeparator]: S }),
-                        onScroll: h,
+                        className: i()(u.scrollerInner, a, { [u.bottomSeparator]: S }),
+                        onScroll: x,
                         children: d
                     })
                 })

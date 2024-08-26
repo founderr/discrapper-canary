@@ -54,13 +54,13 @@ let i = function (e) {
             l = void 0 !== i && void 0 !== i.p ? i.p : 1;
         if (!Number.isInteger(a) || a <= 0 || 0 != (a & (a - 1))) throw RangeError('N must be a power of 2');
         if (!Number.isInteger(o) || o <= 0 || !Number.isInteger(l) || l <= 0 || l * o > 1073741823.75) throw RangeError('Parallelization parameter p and blocksize parameter r must be positive integers satisfying p \u2264 (2^32\u2212 1) * hLen / MFLen where hLen is 32 and MFlen is 128 * r.');
-        let d = new Uint32Array(await (0, r.Z)(e, t, 1, 128 * l * o));
+        let u = new Uint32Array(await (0, r.Z)(e, t, 1, 128 * l * o));
         for (let e = 0; e < l; e++) {
             let t = 32 * o,
                 n = e * t,
-                r = d.slice(n, n + t);
+                r = u.slice(n, n + t);
             s(r, a);
-            for (let e = 0; e < 32 * o; e++) d[n + e] = r[e];
+            for (let e = 0; e < 32 * o; e++) u[n + e] = r[e];
         }
-        return await (0, r.Z)(e, d, 1, n);
+        return await (0, r.Z)(e, u, 1, n);
     };

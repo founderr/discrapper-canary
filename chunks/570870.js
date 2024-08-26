@@ -4,12 +4,12 @@ var r = n(735250),
     o = n.n(a),
     s = n(442837),
     l = n(481060),
-    d = n(10718),
-    u = n(667204),
+    u = n(10718),
+    d = n(667204),
     c = n(826298),
     I = n(276022),
-    E = n(978983),
-    f = n(430824),
+    f = n(978983),
+    E = n(430824),
     p = n(594174),
     T = n(981631),
     N = n(689079),
@@ -18,7 +18,7 @@ var r = n(735250),
 t.Z = (e) => {
     let t,
         { commandType: n, commandTargetId: a, channel: S, guildId: A, onHeightUpdate: g, context: m } = e,
-        Z = (0, s.e7)([f.Z], () => f.Z.getGuild(null != A ? A : S.guild_id)),
+        Z = (0, s.e7)([E.Z], () => E.Z.getGuild(null != A ? A : S.guild_id)),
         O = (0, s.e7)([p.default], () => p.default.getUser(a)),
         y = (0, I.Z)({
             user: O,
@@ -26,7 +26,7 @@ t.Z = (e) => {
             channel: S,
             context: m
         }),
-        { commands: M, sectionDescriptors: v, loading: R } = d.wi(S, { commandTypes: [n] }, { limit: N.lr }),
+        { commands: M, sectionDescriptors: v, loading: R } = u.wi(S, { commandTypes: [n] }, { limit: N.lr }),
         { sections: G } = i.useMemo(() => {
             let e = {};
             return (
@@ -61,7 +61,7 @@ t.Z = (e) => {
                               })
                             : null,
                     action: () => {
-                        (0, u.Z)({
+                        (0, d.Z)({
                             command: e,
                             optionValues: {},
                             context: {
@@ -83,7 +83,7 @@ t.Z = (e) => {
                   l.MenuItem,
                   {
                       id: 'menu-commands-placeholder',
-                      render: () => (0, r.jsx)(E.Z, {}),
+                      render: () => (0, r.jsx)(f.Z, {}),
                       disabled: !0
                   },
                   'menu-commands-placeholder'

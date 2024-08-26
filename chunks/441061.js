@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
 var r = n(735250);
@@ -10,7 +10,7 @@ var i = n(442837),
     o = n(475179),
     s = n(358221),
     l = n(689938);
-function d(e) {
+function u(e) {
     let t = (0, i.e7)([s.Z], () => s.Z.getVoiceParticipantsHidden(e));
     return (0, r.jsx)(a.MenuCheckboxItem, {
         id: 'no-video-hide',

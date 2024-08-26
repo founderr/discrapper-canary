@@ -21,8 +21,8 @@ function l(e) {
                 if (!t || null == e || r.getChannelId() !== e) return !1;
                 let l = o.getChannel(e);
                 if (null == l || l.isGuildStageVoice()) return !1;
-                let d = null === (n = r.getSecureFramesState()) || void 0 === n ? void 0 : n.version;
-                return null != d && d > s.HK;
+                let u = null === (n = r.getSecureFramesState()) || void 0 === n ? void 0 : n.version;
+                return null != u && u > s.HK;
             })(t, l, [a.Z, i.Z]),
         [t, l]
     );

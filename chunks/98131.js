@@ -2,8 +2,8 @@ t(47120);
 var l = t(735250),
     s = t(470079),
     a = t(512722),
-    r = t.n(a),
-    i = t(442837),
+    i = t.n(a),
+    r = t(442837),
     o = t(704215),
     c = t(481060),
     u = t(605236),
@@ -12,19 +12,19 @@ var l = t(735250),
     E = t(556296),
     _ = t(63063),
     S = t(13140),
-    g = t(435064),
-    h = t(894694),
+    h = t(435064),
+    x = t(894694),
     C = t(39604),
-    I = t(981631),
-    x = t(921944),
+    g = t(981631),
+    I = t(921944),
     N = t(689938),
     Z = t(759041),
     f = t(458623);
 let R = (e) => {
-    let { clipsEnabled: n, isAnimationDone: t, guildId: a, children: r } = e,
-        E = (0, i.e7)([g.Z], () => g.Z.getHardwareClassification()),
-        S = E === h.x.MEETS_MINIMUM || E === h.x.UNKNOWN,
-        f = E === h.x.BELOW_MINIMUM,
+    let { clipsEnabled: n, isAnimationDone: t, guildId: a, children: i } = e,
+        E = (0, r.e7)([h.Z], () => h.Z.getHardwareClassification()),
+        S = E === x.x.MEETS_MINIMUM || E === x.x.UNKNOWN,
+        f = E === x.x.BELOW_MINIMUM,
         R = t && (S || f) && !n,
         [A, T] = (0, d.cv)(R ? [o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []),
         v = A === o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
@@ -32,7 +32,7 @@ let R = (e) => {
         n && (0, u.EW)(o.z.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, { forceTrack: !0 });
     }, [n]);
     let L = (e, n) => {
-        e.stopPropagation(), e.preventDefault(), null == n || n(), T(x.L.UNKNOWN);
+        e.stopPropagation(), e.preventDefault(), null == n || n(), T(I.L.UNKNOWN);
     };
     return (0, l.jsx)(c.Popout, {
         shouldShow: v,
@@ -60,7 +60,7 @@ let R = (e) => {
                                   variant: 'text-sm/normal',
                                   color: 'always-white',
                                   className: Z.warningText,
-                                  children: N.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({ url: _.Z.getArticleURL(I.BhN.CLIPS) })
+                                  children: N.Z.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({ url: _.Z.getArticleURL(g.BhN.CLIPS) })
                               })
                             : null
                     ]
@@ -79,14 +79,14 @@ let R = (e) => {
                 }
             });
         },
-        children: () => r
+        children: () => i
     });
 };
 n.Z = function (e) {
     let { isAnimationDone: n, guildId: t } = e,
-        s = (0, i.e7)([g.Z], () => g.Z.getSettings().clipsEnabled),
-        a = (0, i.e7)([E.Z], () => E.Z.getKeybindForAction(I.kg4.SAVE_CLIP));
-    r()(null != a, 'Clips keybind should be set');
+        s = (0, r.e7)([h.Z], () => h.Z.getSettings().clipsEnabled),
+        a = (0, r.e7)([E.Z], () => E.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
+    i()(null != a, 'Clips keybind should be set');
     let o = S.BB(a.shortcut, !0);
     return (0, l.jsx)(c.FormItem, {
         title: N.Z.Messages.CLIPS_SETTINGS,

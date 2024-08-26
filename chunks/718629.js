@@ -1,13 +1,13 @@
 var r = t(570140),
     i = t(668781),
-    u = t(287734),
-    E = t(881052),
+    E = t(287734),
+    u = t(881052),
     a = t(314897),
     o = t(592125),
     s = t(979651),
     c = t(352954),
-    l = t(630759),
-    _ = t(760373),
+    _ = t(630759),
+    l = t(760373),
     d = t(981631),
     f = t(689938);
 async function S(e, n) {
@@ -17,10 +17,10 @@ async function S(e, n) {
             persistentCodesEnabled: e
         });
         try {
-            await (0, l.om)(_.GB), null == n || n();
+            await (0, _.om)(l.GB), null == n || n();
         } catch (n) {
             var t;
-            let e = new E.Hx(n);
+            let e = new u.Hx(n);
             r.Z.dispatch({
                 type: 'SECURE_FRAMES_SETTINGS_UPDATE',
                 persistentCodesEnabled: !1
@@ -50,7 +50,7 @@ async function I(e) {
               confirmText: f.Z.Messages.E2EE_PERSISTENT_KEYS_RECONNECT_CONFIRM,
               onConfirm: async () => {
                   await S(e, () => {
-                      u.default.disconnect(), u.default.selectVoiceChannel(n);
+                      E.default.disconnect(), E.default.selectVoiceChannel(n);
                   });
               }
           })

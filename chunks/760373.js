@@ -1,4 +1,4 @@
-var r, i, u, E;
+var r, i, E, u;
 t.d(n, {
     $J: function () {
         return o;
@@ -13,7 +13,7 @@ t.d(n, {
         return f;
     },
     WK: function () {
-        return _;
+        return l;
     },
     Xe: function () {
         return r;
@@ -22,7 +22,7 @@ t.d(n, {
         return R;
     },
     YP: function () {
-        return l;
+        return _;
     },
     ak: function () {
         return S;
@@ -47,13 +47,13 @@ let a = '',
     o = '',
     s = '',
     c = 5,
-    l = 30,
-    _ = 3,
+    _ = 30,
+    l = 3,
     d = 5,
     f = 60,
     S = 4;
-((u = r || (r = {})).MATCH = 'match'), (u.OTHER_USER_ALREADY_VERIFIED = 'other_user_already_verified'), (u.OTHER_USER_INCONSISTENT_KEYS = 'other_user_inconsistent_keys'), (u.FINGERPRINT_MISMATCH = 'fingerprint_mismatch'), (u.UNABLE_TO_VERIFY = 'unable_to_verify'), (u.OTHER_USER_DISCONNECTED = 'other_user_disconnected'), (u.CURRENT_USER_DISCONNECTED = 'current_user_disconnected');
+((E = r || (r = {})).MATCH = 'match'), (E.OTHER_USER_ALREADY_VERIFIED = 'other_user_already_verified'), (E.OTHER_USER_INCONSISTENT_KEYS = 'other_user_inconsistent_keys'), (E.FINGERPRINT_MISMATCH = 'fingerprint_mismatch'), (E.UNABLE_TO_VERIFY = 'unable_to_verify'), (E.OTHER_USER_DISCONNECTED = 'other_user_disconnected'), (E.CURRENT_USER_DISCONNECTED = 'current_user_disconnected');
 let I = 100;
-((E = i || (i = {})).RTC_DEBUG_PANEL = 'rtc_debug_panel'), (E.RTC_SECURE_FRAMES = 'rtc_secure_frames');
+((u = i || (i = {})).RTC_DEBUG_PANEL = 'rtc_debug_panel'), (u.RTC_SECURE_FRAMES = 'rtc_secure_frames');
 let T = 1,
     R = 0;

@@ -22,6 +22,6 @@ async function r(e, n, t) {
     if (r < 0n || r >= 2n ** 64n) throw Error('user ID out of range');
     let i = new Uint8Array(2 + n.byteLength + 8);
     i.set(n, 2);
-    let u = new DataView(i.buffer);
-    return u.setUint16(0, e), u.setBigUint64(2 + n.byteLength, r), i;
+    let E = new DataView(i.buffer);
+    return E.setUint16(0, e), E.setBigUint64(2 + n.byteLength, r), i;
 }

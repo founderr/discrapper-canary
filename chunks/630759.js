@@ -15,10 +15,10 @@ t.d(n, {
         return Z;
     },
     Zn: function () {
-        return m;
+        return D;
     },
     bo: function () {
-        return D;
+        return m;
     },
     fz: function () {
         return G;
@@ -30,7 +30,7 @@ t.d(n, {
         return Y;
     },
     om: function () {
-        return K;
+        return b;
     },
     uX: function () {
         return v;
@@ -49,14 +49,14 @@ t.d(n, {
     t(47120);
 var r = t(250683),
     i = t(512722),
-    u = t.n(i),
-    E = t(913527),
-    a = t.n(E),
+    E = t.n(i),
+    u = t(913527),
+    a = t.n(u),
     o = t(544891),
     s = t(253135),
     c = t(668781),
-    l = t(314897),
-    _ = t(131951),
+    _ = t(314897),
+    l = t(131951),
     d = t(19780),
     f = t(959457),
     S = t(594174),
@@ -68,8 +68,8 @@ var r = t(250683),
     C = t(615830),
     M = t(352954),
     h = t(571826),
-    g = t(760373),
-    O = t(981631),
+    O = t(760373),
+    g = t(981631),
     y = t(689938);
 function p(e, n, t, r, i) {
     t ? N.Z.createSecureFramesVerifiedKey(e, n) : N.Z.createSecureFramesTransientKey(e, n),
@@ -94,7 +94,7 @@ function Z(e, n) {
         }
     });
 }
-function m(e) {
+function D(e) {
     let n = S.default.getUser(e),
         t = A.ZP.getName(n);
     M.Z.openSecureFramesUpdateConfirmation({
@@ -105,7 +105,7 @@ function m(e) {
         }
     });
 }
-function D(e) {
+function m(e) {
     let n = a()(e),
         t = a()().diff(n, 's');
     if (t > 12 * I.Z.Seconds.DAYS_30) {
@@ -133,18 +133,18 @@ function D(e) {
 }
 function F(e) {
     let { isCurrentUserKeyPersistent: n, isOtherUserKeyPersistent: t, otherUserNickname: r } = e;
-    if (n && t) return y.Z.Messages.E2EE_PERSISTENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
+    if (n && t) return y.Z.Messages.E2EE_PERSISTENT_VERIFICATION_DESC.format({ helpArticle: O.l4 });
     if (n)
         return y.Z.Messages.E2EE_OTHER_USER_TRANSIENT_VERIFICATION_DESC.format({
             username: r,
-            helpArticle: g.l4
+            helpArticle: O.l4
         });
-    if (t) return y.Z.Messages.E2EE_CURRENT_USER_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
-    else return y.Z.Messages.E2EE_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: g.l4 });
+    if (t) return y.Z.Messages.E2EE_CURRENT_USER_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: O.l4 });
+    else return y.Z.Messages.E2EE_TRANSIENT_VERIFICATION_DESC.format({ helpArticle: O.l4 });
 }
 async function L(e) {
-    let n = l.default.getStaticAuthSessionId();
-    return u()(null != n, '[getCurrentUserPublicKey] session id should not be null'), await _.Z.getMLSSigningKey(n, e);
+    let n = _.default.getStaticAuthSessionId();
+    return E()(null != n, '[getCurrentUserPublicKey] session id should not be null'), await l.Z.getMLSSigningKey(n, e);
 }
 function V(e) {
     let n = r.fromByteArray(new Uint8Array(e));
@@ -154,7 +154,7 @@ async function P(e, n, t) {
     try {
         return (
             await o.tn.post({
-                url: O.ANM.VOICE_MATCH_PUBLIC_KEY(e),
+                url: g.ANM.VOICE_MATCH_PUBLIC_KEY(e),
                 body: {
                     public_key: V(n),
                     key_version: t
@@ -165,11 +165,11 @@ async function P(e, n, t) {
         throw (R.Z.captureException(e), e);
     }
 }
-async function b(e) {
+async function w(e) {
     let { key: n, signature: t } = await L(e);
     try {
         await o.tn.put({
-            url: O.ANM.VOICE_PUBLIC_KEYS(),
+            url: g.ANM.VOICE_PUBLIC_KEYS(),
             body: {
                 public_key: V(n),
                 signature: V(t),
@@ -181,15 +181,15 @@ async function b(e) {
         throw (R.Z.captureException(e), e);
     }
 }
-function w(e) {
+function K(e) {
     return C.Z.getUploadedKeyVersionsCached().includes(e);
 }
-async function K(e) {
-    !w(e) && (await b(e));
+async function b(e) {
+    !K(e) && (await w(e));
 }
 async function v(e) {
-    if (!w(e)) return await b(e), !0;
-    let n = l.default.getId(),
+    if (!K(e)) return await w(e), !0;
+    let n = _.default.getId(),
         { key: t } = await L(e),
         r = await P(n, t, e);
     return !r && (0, h.KA)(e), r;
@@ -199,13 +199,13 @@ function k(e, n) {
     if (!t.isUserConnected(e)) return !1;
     let i = t.getSecureFramesRosterMapEntry(e);
     if (null == i) return !1;
-    let u = new Uint8Array(i);
+    let E = new Uint8Array(i);
     for (let n of r.getAllActiveStreamKeys()) {
         if (!r.isUserConnected(n, e)) continue;
         let t = f.Z.getSecureFramesRosterMapEntry(n, e);
         if (null == t) return !0;
         let i = new Uint8Array(t);
-        for (let e = 0; e < u.length; e++) if (u[e] !== i[e]) return !0;
+        for (let e = 0; e < E.length; e++) if (E[e] !== i[e]) return !0;
     }
     return !1;
 }
@@ -214,8 +214,8 @@ function Y(e) {
     (0, h.CW)({
         userId: n,
         channelId: t,
-        keyVersion: g.GB,
-        reason: g.Xe.OTHER_USER_INCONSISTENT_KEYS
+        keyVersion: O.GB,
+        reason: O.Xe.OTHER_USER_INCONSISTENT_KEYS
     }),
         c.Z.show({
             title: y.Z.Messages.E2EE_INCONSISTENT_KEY_MISMATCH_TITLE,
