@@ -23,4 +23,5 @@ n.d(t, {
     (i.PREMIUM_COLLECTIBLES = 'premiumCollectibles'),
     (i.CUSTOM_CALL_SOUNDS = 'customCallSounds'),
     (i.CUSTOM_NOTIFICATION_SOUNDS = 'customNotificationSounds'),
+    (i.SAVED_MESSAGES = 'savedMessages'),
     (i.APP_ICONS = 'appIcons');
