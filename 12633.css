@@ -14903,7 +14903,7 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 .barBase_cf58b5 {
     position: absolute;
     left: 16px;
-    right: 16px;
+    right: calc(16px + var(--custom-channel-textarea-text-area-height) + var(--custom-channel-textarea-app-launcher-button-gap));
     display: flex;
     align-items: center;
     z-index: 2;
@@ -47029,7 +47029,8 @@ code {
     --custom-channel-attachment-upload-spoiler-blur-radius: 44px;
     --custom-channel-attachment-upload-mini-attachment-size: 78px;
     --custom-channel-textarea-text-area-height: 44px;
-    --custom-channel-textarea-text-area-max-height: 50vh
+    --custom-channel-textarea-text-area-max-height: 50vh;
+    --custom-channel-textarea-app-launcher-button-gap: 8px
 }
 
 :root {
