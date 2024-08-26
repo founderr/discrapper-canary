@@ -20,14 +20,8 @@ async function r(e, n, t) {
     if (0 === t.length) throw Error('zero-length user ID');
     let r = BigInt(t);
     if (r < 0n || r >= 2n ** 64n) throw Error('user ID out of range');
-    let i = new Uint8Array(),
-        u = new Uint8Array(2 + n.byteLength + 8);
-    u.set(n, 2);
-    let E = new DataView(u.buffer);
-    E.setUint16(0, e), E.setBigUint64(2 + n.byteLength, r);
-    for (let e = 0; e < 5200; e++) {
-        let e = u.byteLength + n.byteLength;
-        i.byteLength !== e && (i = new Uint8Array(e)), i.set(u, 0), i.set(n, u.byteLength), (u = new Uint8Array(await window.crypto.subtle.digest('SHA-512', i)));
-    }
-    return u;
+    let i = new Uint8Array(2 + n.byteLength + 8);
+    i.set(n, 2);
+    let u = new DataView(i.buffer);
+    return u.setUint16(0, e), u.setBigUint64(2 + n.byteLength, r), i;
 }
