@@ -13,8 +13,8 @@ t.r(n),
     t(815648),
     t(47120),
     t(757143);
-var o = t(735250),
-    r = t(470079),
+var r = t(735250),
+    o = t(470079),
     c = t(266067),
     l = t(481060),
     s = t(457330),
@@ -37,26 +37,30 @@ function m() {
         { type: v } = (0, c.UO)(),
         b = (0, u.vJ)(v),
         h = null == f ? (null != l ? l : '') : f;
-    return (r.useEffect(() => {
+    return (o.useEffect(() => {
         let e;
         if (null != m) return;
         for (let n of t.keys()) {
             if (!!n.startsWith('openid.')) null == e && (e = {}), (e[n] = t.get(n));
         }
-        let o = (e) => {
-                let { status: o, body: r } = e;
+        let r = (e) => {
+                let { status: r, body: o } = e;
                 if (null != l) {
-                    if (null == r ? void 0 : r.redirect) return n.replace(r.redirect);
-                    [200, 204].includes(o) && (n.replace(d.Z5c.CONNECTIONS_SUCCESS(l)), g && window.close()), n.replace(''.concat(d.Z5c.CONNECTIONS_ERROR(l), '?').concat(t.toString()));
+                    if (null == o ? void 0 : o.redirect) return n.replace(o.redirect);
+                    if ([200, 204].includes(r)) {
+                        n.replace(d.Z5c.CONNECTIONS_SUCCESS(l)), g && window.close();
+                        return;
+                    }
+                    n.replace(''.concat(d.Z5c.CONNECTIONS_ERROR(l), '?').concat(t.toString()));
                 }
             },
-            r = {
+            o = {
                 code: h,
                 openid_params: e,
                 state: p
             },
             c = (e) => {
-                null != l && i.Z.isSupported(l) && s.Z.callback(l, r, e).then(o, o);
+                null != l && i.Z.isSupported(l) && s.Z.callback(l, o, e).then(r, r);
             };
         if (g) {
             c(!1);
@@ -65,29 +69,29 @@ function m() {
         let l = (0, u.vJ)(v);
         a.default
             .request(d.Etm.CONNECTIONS_CALLBACK, {
-                ...r,
+                ...o,
                 providerType: l
             })
-            .then(o, (e) => c('RPCError' !== e.name))
+            .then(r, (e) => c('RPCError' !== e.name))
             .then(() => a.default.disconnect());
     }, [h, n, m, v, t, p]),
     null != b && i.Z.isSupported(b))
-        ? (0, o.jsx)(N, { platformType: b })
+        ? (0, r.jsx)(N, { platformType: b })
         : null;
 }
 function N(e) {
     let { platformType: n } = e;
-    return (0, o.jsxs)(u.UV, {
+    return (0, r.jsxs)(u.UV, {
         platformType: n,
         children: [
-            (0, o.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: p.message,
                 children: f.Z.Messages.CONNECTED_ACCOUNT_VERIFYING.format({ name: platform.name })
             }),
-            (0, o.jsx)(l.Button, {
+            (0, r.jsx)(l.Button, {
                 className: p.btn,
                 disabled: !0,
-                children: (0, o.jsx)(l.Spinner, { itemClassName: p.spinnerItem })
+                children: (0, r.jsx)(l.Spinner, { itemClassName: p.spinnerItem })
             })
         ]
     });
