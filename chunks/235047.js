@@ -41,6 +41,7 @@ function c(e) {
                                 (0, r.x)({
                                     channelId: e.channel_id,
                                     messageId: e.id,
+                                    dueAt: new Date(),
                                     displayToast: !0
                                 }),
                             color: 'danger'
