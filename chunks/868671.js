@@ -1,9 +1,9 @@
 n.d(t, {
     H: function () {
-        return x;
+        return T;
     },
     T: function () {
-        return I;
+        return x;
     }
 }),
     n(47120),
@@ -19,104 +19,105 @@ var i = n(470079),
     d = n(162461),
     h = n(71585),
     p = n(34586),
-    m = n(590026),
-    _ = n(178762),
-    f = n(206583),
-    E = n(809017),
-    C = n(981631),
-    g = n(689938);
-let I = 0;
-function x(e) {
+    m = n(69259),
+    _ = n(590026),
+    f = n(178762),
+    E = n(206583),
+    C = n(809017),
+    g = n(981631),
+    I = n(689938);
+let x = 0;
+function T(e) {
     let {
-            memberStoreProps: { groups: t, rows: n, version: I },
-            channelId: x,
-            guildId: T
+            memberStoreProps: { groups: t, rows: n, version: x },
+            channelId: T,
+            guildId: N
         } = e,
-        [N, S] = i.useState(!1),
-        { requestId: v, entries: Z, impressionCappedEntryIds: A } = (0, m.Z)(x),
-        M = (0, a.e7)([h.Z], () => h.Z.hidden),
-        b = (0, a.e7)([c.Z], () => c.Z.isFocused()),
-        R = (0, a.e7)([r.Z], () => r.Z.getChannel(x)),
-        L = (0, a.e7)([o.Z], () => o.Z.getGuild(T), [T]),
-        j = (0, p.E)(L),
-        O = null != j && j && (null == R ? void 0 : R.isForumChannel()) === !1,
-        [P, y, D, k] = i.useMemo(() => {
+        [S, v] = i.useState(!1),
+        { requestId: Z, entries: A, impressionCappedEntryIds: M } = (0, _.Z)(T),
+        b = (0, a.e7)([h.Z], () => h.Z.hidden),
+        R = (0, a.e7)([c.Z], () => c.Z.isFocused()),
+        L = (0, a.e7)([r.Z], () => r.Z.getChannel(T)),
+        j = (0, a.e7)([o.Z], () => o.Z.getGuild(N), [N]),
+        O = (0, p.E)(j),
+        P = null != O && O && (null == L ? void 0 : L.isForumChannel()) === !1,
+        [y, D, k, U] = i.useMemo(() => {
             let e;
-            if (null == Z || 0 === Z.length || null == v || !O) return [t, n, I];
-            let i = N ? Z.length : 3,
-                a = Z.slice(0, i);
-            e = M
+            if (null == A || 0 === A.length || null == Z || !P) return [t, n, x];
+            let i = S ? A.length : 3,
+                a = A.slice(0, i);
+            e = b
                 ? [{ type: l.so.HIDDEN_CONTENT_INVENTORY }]
                 : a.map((e) => ({
                       type: l.so.CONTENT_INVENTORY,
                       entry: e,
-                      requestId: v
+                      requestId: Z
                   }));
             let s = {
-                id: E.G,
+                id: C.G,
                 type: l.so.CONTENT_INVENTORY_GROUP,
-                key: E.G,
+                key: C.G,
                 count: e.length,
                 index: n.length,
-                title: g.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
+                title: I.Z.Messages.CONTENT_INVENTORY_MEMBERLIST_GROUP_TITLE,
                 onToggleExpand: () => {
-                    S((e) => {
+                    v((e) => {
                         let t = !e;
                         return (
-                            u.default.track(C.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
-                                channel_id: x,
-                                guild_id: T,
+                            u.default.track(g.rMx.MEMBERLIST_CONTENT_FEED_TOGGLED, {
+                                channel_id: T,
+                                guild_id: N,
                                 expanded: t
                             }),
                             t
                         );
                     });
                 },
-                expanded: N,
-                expandedCount: Z.length,
-                feedHeight: e.map(_.iZ).reduce((e, t) => e + t, 0)
+                expanded: S,
+                expandedCount: A.length,
+                feedHeight: e.map(f.iZ).reduce((e, t) => e + t, 0)
             };
             return [[s, ...t], [...n, s, ...e], Math.random(), e];
-        }, [x, Z, N, t, T, v, n, I, M, O]),
-        U = i.useRef(0),
-        w = i.useRef(Z),
-        B = i.useRef(),
-        H = i.useRef({ impressionCappedEntryIds: A }),
-        G = i.useCallback(
+        }, [T, A, S, t, N, Z, n, x, b, P]),
+        w = i.useRef(0),
+        B = i.useRef(A),
+        H = i.useRef(),
+        G = i.useRef({ impressionCappedEntryIds: M }),
+        V = i.useCallback(
             (e) => {
                 var t;
-                let n = Math.floor(e / _.YN),
-                    i = Math.min(null !== (t = null == k ? void 0 : k.length) && void 0 !== t ? t : 0, n);
-                U.current = Math.max(U.current, i);
+                let n = Math.floor(e / f.YN),
+                    i = Math.min(null !== (t = null == U ? void 0 : U.length) && void 0 !== t ? t : 0, n);
+                w.current = Math.max(w.current, i);
             },
-            [k]
+            [U]
         );
     return (
         i.useEffect(() => {
-            w.current = Z;
-        }, [Z]),
-        i.useEffect(() => {
-            H.current = { impressionCappedEntryIds: A };
+            B.current = A;
         }, [A]),
+        i.useEffect(() => {
+            G.current = { impressionCappedEntryIds: M };
+        }, [M]),
         i.useEffect(
             () => (
-                (U.current = 0),
-                (B.current = Date.now()),
+                (w.current = 0),
+                (H.current = Date.now()),
                 () => {
                     var e, t;
-                    if (null == v || null == B.current || Date.now() - B.current < 3000) return;
-                    let n = null !== (t = null === (e = w.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t ? t : [],
-                        i = n.slice(0, U.current);
-                    if (!M && !!b && !!O)
-                        u.default.track(C.rMx.RANKING_ITEMS_SEEN, {
-                            request_id: v,
-                            first_shown_at: B.current,
+                    if (null == Z || null == H.current || Date.now() - H.current < 3000) return;
+                    let n = null !== (t = null === (e = B.current) || void 0 === e ? void 0 : e.map((e) => e.id)) && void 0 !== t ? t : [],
+                        i = n.slice(0, w.current);
+                    if (!b && !!R && !!P)
+                        (0, m.e)(g.rMx.RANKING_ITEMS_SEEN_MUST_BE_SAMPLED, {
+                            request_id: Z,
+                            first_shown_at: H.current,
                             item_ids: i,
-                            surface_type: f.Kd.GUILD_MEMBER_LIST,
-                            channel_id: x,
-                            guild_id: T,
+                            surface_type: E.Kd.GUILD_MEMBER_LIST,
+                            channel_id: T,
+                            guild_id: N,
                             all_item_ids: n,
-                            impression_capped_item_ids: [...H.current.impressionCappedEntryIds]
+                            impression_capped_item_ids: [...G.current.impressionCappedEntryIds]
                         }),
                             (0, d.wm)('useInjectContentInventoryFeed') &&
                                 s.Z.dispatch({
@@ -125,13 +126,13 @@ function x(e) {
                                 });
                 }
             ),
-            [v, x, T, M, b, O]
+            [Z, T, N, b, R, P]
         ),
         {
-            groups: P,
-            rows: y,
-            version: D,
-            updateMaxRowSeen: G
+            groups: y,
+            rows: D,
+            version: k,
+            updateMaxRowSeen: V
         }
     );
 }

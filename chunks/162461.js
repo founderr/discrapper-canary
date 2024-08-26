@@ -2,6 +2,9 @@ n.d(t, {
     Dy: function () {
         return u;
     },
+    nP: function () {
+        return E;
+    },
     sA: function () {
         return s;
     },
@@ -93,4 +96,20 @@ let c = (0, r.B)({
 function d(e) {
     let { enabled: t } = c.useExperiment({ location: e }, { autoTrackExposure: !0 });
     return t;
+}
+let _ = (0, r.B)({
+    kind: 'user',
+    id: '2024-08_content_inventory_analytics_sampling',
+    label: 'Content Inventory Analytics Sampling',
+    defaultConfig: { trackingEnabled: !0 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Tracking disabled',
+            config: { trackingEnabled: !1 }
+        }
+    ]
+});
+function E(e) {
+    return _.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 }
