@@ -22,6 +22,7 @@ e.exports = {
     buttonWithSelect: 'buttonWithSelect_ed1152',
     upsellSelect: 'upsellSelect_ed1152',
     reserveButton: 'reserveButton_ed1152',
+    separatorDot: 'separatorDot_ed1152',
     wfsSpacer: 'wfsSpacer_ed1152',
     joinWFSContainer: 'joinWFSContainer_ed1152',
     joinWFS: 'joinWFS_ed1152',

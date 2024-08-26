@@ -13,6 +13,8 @@ e.exports = {
     sectionHeaderSpacer: 'sectionHeaderSpacer_a24e0c',
     card: 'card_a24e0c',
     topPicksSection: 'topPicksSection_a24e0c',
+    contentCtaContainer: 'contentCtaContainer_a24e0c',
+    upsellSelect: 'upsellSelect_a24e0c',
     heroButton: 'heroButton_a24e0c',
     globalDiscoveryTitle: 'globalDiscoveryTitle_a24e0c'
 };

@@ -1,6 +1,6 @@
 n.d(t, {
     a: function () {
-        return L;
+        return Z;
     }
 }),
     n(47120);
@@ -28,8 +28,8 @@ function p(e) {
     a.useEffect(() => {
         T && (h(!1), I(!1));
     }, [T]);
-    let f = d && (m || _),
-        S = a.useMemo(
+    let S = d && (m || _),
+        f = a.useMemo(
             () =>
                 null != l
                     ? (0, i.jsxs)(o.Clickable, {
@@ -71,7 +71,7 @@ function p(e) {
                                     color: 'none',
                                     children: n
                                 }),
-                                null != S &&
+                                null != f &&
                                     (0, i.jsx)(o.ChevronSmallDownIcon, {
                                         className: g.chevron,
                                         color: 'currentColor'
@@ -80,16 +80,16 @@ function p(e) {
                         })
                     ]
                 }),
-            [t, n, d, c, S]
+            [t, n, d, c, f]
         );
-    return null == S
+    return null == f
         ? C({})
         : (0, i.jsx)(o.Tooltip, {
-              text: S,
+              text: f,
               position: 'bottom',
               'aria-label': s,
-              shouldShow: f,
-              forceOpen: f,
+              shouldShow: S,
+              forceOpen: S,
               allowOverflow: !0,
               disableTooltipPointerEvents: !1,
               tooltipClassName: r()(g.filterTooltip, { [g.filterTooltipAutoWidth]: u }),
@@ -133,7 +133,7 @@ function T() {
         autoWidth: !0
     });
 }
-function f() {
+function S() {
     let e = a.useMemo(m.f4, []),
         t = (0, E.GN)((e) => e.selectedPlaystyle, l.Z),
         n = null != t ? e[t] : null,
@@ -177,7 +177,7 @@ function f() {
         ariaLabel: null != s ? s : I.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE
     });
 }
-function S() {
+function f() {
     let e = (0, E.GN)((e) => e.selectedTraits, l.Z),
         t = a.useCallback(() => {
             (0, E.fH)(E.v0.TRAITS, !0);
@@ -214,33 +214,7 @@ function S() {
         autoWidth: !0
     });
 }
-function C() {
-    let { enableClanCreation: e } = (0, c.C3)({
-        location: 'clan_discovery_add_clan',
-        includeConverted: !1
-    });
-    return e
-        ? (0, i.jsxs)(o.Clickable, {
-              className: r()(g.buttonPill),
-              onClick: () => (0, E.fH)(E.v0.ADMIN_UPSELL),
-              children: [
-                  (0, i.jsx)(o.PlusSmallIcon, {
-                      className: g.filterPillIcon,
-                      color: 'currentColor'
-                  }),
-                  (0, i.jsx)('div', {
-                      className: g.filterPillText,
-                      children: (0, i.jsx)(o.Text, {
-                          variant: 'text-xs/medium',
-                          color: 'none',
-                          children: I.Z.Messages.CLAN_DISCOVERY_ADD_CLAN
-                      })
-                  })
-              ]
-          })
-        : null;
-}
-function N(e) {
+function C(e) {
     let { onClick: t } = e,
         n = (0, E.GN)((e) => e.mode, l.Z),
         a = (0, E.GN)((e) => e.savedGuildIds, l.Z),
@@ -269,7 +243,7 @@ function N(e) {
         autoWidth: !0
     });
 }
-function A() {
+function N() {
     let e = (0, E.GN)((e) => e.mode, l.Z),
         {
             selectedGames: t,
@@ -312,7 +286,7 @@ function A() {
         autoWidth: !0
     });
 }
-function v(e) {
+function A(e) {
     let { title: t, onNavigateBack: n } = e;
     return null == t
         ? null
@@ -332,14 +306,14 @@ function v(e) {
               ]
           });
 }
-function Z(e) {
+function v(e) {
     let { className: t, onNavigateBack: n } = e;
     return (0, i.jsxs)('div', {
         className: r()(g.toolbar, t),
         children: [
             (0, i.jsx)('div', {
-                className: g.addClan,
-                children: (0, i.jsx)(v, {
+                className: g.backToDiscovery,
+                children: (0, i.jsx)(A, {
                     title: I.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS,
                     onNavigateBack: n
                 })
@@ -348,7 +322,7 @@ function Z(e) {
         ]
     });
 }
-function L() {
+function Z() {
     return (0, i.jsxs)('div', {
         className: g.guildsIconContainer,
         children: [
@@ -364,7 +338,7 @@ function L() {
         ]
     });
 }
-function O(e) {
+function L(e) {
     let { guildIcon: t, className: n } = e,
         s = (0, E.GN)((e) => e.mode, l.Z),
         o = a.useCallback(() => {
@@ -372,7 +346,7 @@ function O(e) {
         }, [s]),
         c = a.useCallback(() => (0, E.fH)(E.v0.DISCOVERY), []);
     return s === E.v0.SAVED_GUILDS
-        ? (0, i.jsx)(Z, {
+        ? (0, i.jsx)(v, {
               className: n,
               onNavigateBack: c
           })
@@ -385,14 +359,10 @@ function O(e) {
                             children: t
                         })
                       : null,
-                  (0, i.jsx)('div', {
-                      className: g.addClan,
-                      children: (0, i.jsx)(C, {})
-                  }),
                   (0, i.jsx)('div', { className: g.preferences }),
                   (0, i.jsxs)('div', {
                       className: g.actions,
-                      children: [(0, i.jsx)(A, {}), (0, i.jsx)(N, { onClick: o })]
+                      children: [(0, i.jsx)(N, {}), (0, i.jsx)(C, { onClick: o })]
                   })
               ]
           });
@@ -401,12 +371,12 @@ t.Z = function (e) {
     let { guildIcon: t, className: n } = e,
         a = (0, E.GN)((e) => e.mode, l.Z);
     return (0, c.iN)('discovery_toolbar')
-        ? (0, i.jsx)(O, {
+        ? (0, i.jsx)(L, {
               guildIcon: t,
               className: n
           })
         : a === E.v0.SAVED_GUILDS
-          ? (0, i.jsx)(Z, { className: n })
+          ? (0, i.jsx)(v, { className: n })
           : (0, i.jsxs)('div', {
                 className: r()(g.toolbar, n),
                 children: [
@@ -416,13 +386,9 @@ t.Z = function (e) {
                               children: t
                           })
                         : null,
-                    (0, i.jsx)('div', {
-                        className: g.addClan,
-                        children: (0, i.jsx)(C, {})
-                    }),
                     (0, i.jsxs)('div', {
                         className: g.preferences,
-                        children: [(0, i.jsx)(T, {}), (0, i.jsx)(f, {}), (0, i.jsx)(S, {})]
+                        children: [(0, i.jsx)(T, {}), (0, i.jsx)(S, {}), (0, i.jsx)(f, {})]
                     }),
                     (0, i.jsx)('div', { className: g.actions })
                 ]

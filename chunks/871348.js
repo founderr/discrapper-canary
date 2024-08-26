@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return S;
+        return C;
     }
 });
 var i = n(735250),
@@ -17,9 +17,10 @@ var i = n(735250),
     E = n(86014),
     m = n(895068),
     I = n(490610),
-    g = n(689938),
-    p = n(604167);
-function T(e) {
+    g = n(901040),
+    p = n(689938),
+    T = n(604167);
+function S(e) {
     let { onScroll: t } = e,
         { guilds: n } = (0, o.C3)({
             location: 'ClanDiscoveryAdminContainer',
@@ -27,18 +28,18 @@ function T(e) {
         }),
         s = a.useMemo(() => n.filter((e) => !(0, c.EJ)(e)), [n]);
     return (0, i.jsx)('section', {
-        className: p.guilds,
+        className: T.guilds,
         children: (0, i.jsxs)(r.AdvancedScrollerNone, {
             onScroll: t,
-            className: p.upsellScroller,
+            className: T.upsellScroller,
             fade: !0,
             children: [
                 (0, i.jsxs)('div', {
-                    className: p.adminUpsell,
+                    className: T.adminUpsell,
                     children: [
-                        (0, i.jsx)('div', { className: p.backgroundImageBlur }),
+                        (0, i.jsx)(g.Z, {}),
                         (0, i.jsx)('div', {
-                            className: p.backgroundImageContent,
+                            className: T.backgroundImageContent,
                             children: (0, i.jsx)(h.Z, {
                                 eligibleGuilds: s,
                                 eligibleGuildsIncludingConverted: n
@@ -46,41 +47,50 @@ function T(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(I.Z, { title: g.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE })
+                (0, i.jsx)(I.Z, { title: p.Z.Messages.CLAN_DISCOVERY_INSPIRATION_TITLE })
             ]
         })
     });
 }
 function f(e) {
-    let { onScroll: t } = e,
-        n = (0, _.GN)((e) => e.mode, s.Z),
-        { ref: a, width: r } = (0, l.Z)();
+    let { onScroll: t, withAdminContent: n } = e,
+        a = (0, _.GN)((e) => e.mode, s.Z),
+        { ref: r, width: o } = (0, l.Z)();
     return (0, i.jsxs)('section', {
-        ref: a,
-        className: p.guilds,
+        ref: r,
+        className: T.guilds,
         children: [
             (0, i.jsx)('div', {
-                className: p.list,
+                className: T.list,
                 children:
-                    null != r &&
+                    null != o &&
                     (0, i.jsx)(E.Z, {
-                        width: r,
-                        variant: (0, m.s)(n, m.Bj.GLOBAL_DISCOVERY),
-                        onScroll: t
+                        inGlobalDiscovery: !0,
+                        width: o,
+                        variant: (0, m.s)(a, m.Bj.GLOBAL_DISCOVERY),
+                        onScroll: t,
+                        withAdminContent: n
                     })
             }),
             (0, i.jsx)('div', {
-                className: p.selectors,
-                children: (0, i.jsx)(u.Z, { mode: n })
+                className: T.selectors,
+                children: (0, i.jsx)(u.Z, { mode: a })
             })
         ]
     });
 }
-function S(e) {
+function C(e) {
     let { onScroll: t } = e,
         { enableClanCreation: n } = (0, o.C3)({
             location: 'GuildsTab',
             includeConverted: !0
-        });
-    return (0, d.LE)(), n ? (0, i.jsx)(T, { onScroll: t }) : (0, i.jsx)(f, { onScroll: t });
+        }),
+        a = (0, o.iN)('global_discovery_guilds_tab'),
+        s = (0, _.GN)((e) => e.dismissedPilotAdminNux);
+    return ((0, d.LE)(), n && !(a && s))
+        ? (0, i.jsx)(S, { onScroll: t })
+        : (0, i.jsx)(f, {
+              onScroll: t,
+              withAdminContent: n && a
+          });
 }

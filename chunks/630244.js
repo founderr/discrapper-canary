@@ -4,9 +4,8 @@ e.exports = {
     toolbarIcon: 'toolbarIcon_ac1501',
     preferences: 'preferences_ac1501',
     actions: 'actions_ac1501',
-    addClan: 'addClan_ac1501',
+    backToDiscovery: 'backToDiscovery_ac1501',
     filterPill: 'filterPill_ac1501',
-    buttonPill: 'buttonPill_ac1501',
     filterPillActive: 'filterPillActive_ac1501',
     filterPillIcon: 'filterPillIcon_ac1501',
     filterPillText: 'filterPillText_ac1501',
@@ -20,7 +19,6 @@ e.exports = {
     tooltipContentWrapper: 'tooltipContentWrapper_ac1501',
     traitsTooltip: 'traitsTooltip_ac1501',
     trait: 'trait_ac1501',
-    backToDiscovery: 'backToDiscovery_ac1501',
     backArrow: 'backArrow_ac1501',
     savedInnerContainer: 'savedInnerContainer_ac1501'
 };

@@ -5,10 +5,8 @@ e.exports = {
     upsellScroller: 'upsellScroller_c013eb',
     backgroundImageBlur: 'backgroundImageBlur_c013eb',
     genericPreviewList: 'genericPreviewList_c013eb',
-    genericUpsellBackgroundImageDark: 'genericUpsellBackgroundImageDark_c013eb backgroundImage_c013eb',
     genshinUpsellBackgroundImageDark: 'genshinUpsellBackgroundImageDark_c013eb backgroundImage_c013eb',
     valorantUpsellBackgroundImageDark: 'valorantUpsellBackgroundImageDark_c013eb backgroundImage_c013eb',
-    genericUpsellBackgroundImageLight: 'genericUpsellBackgroundImageLight_c013eb backgroundImage_c013eb',
     genshinUpsellBackgroundImageLight: 'genshinUpsellBackgroundImageLight_c013eb backgroundImage_c013eb',
     valorantUpsellBackgroundImageLight: 'valorantUpsellBackgroundImageLight_c013eb backgroundImage_c013eb'
 };
