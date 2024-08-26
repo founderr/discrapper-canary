@@ -15,8 +15,8 @@ var a = n(120356),
     R = n(248042),
     C = n(422034),
     g = n(206127),
-    p = n(710220),
-    N = n(318747),
+    N = n(710220),
+    p = n(318747),
     A = n(409100),
     m = n(474936),
     f = n(689938),
@@ -33,7 +33,7 @@ let h = (e) => {
                         className: r()(S.button, i),
                         subscriptionTier: a
                     }),
-                    (0, s.jsx)(N.Z, {
+                    (0, s.jsx)(p.Z, {
                         className: r()(S.button, i),
                         forceWhite: !0
                     })
@@ -44,7 +44,7 @@ let h = (e) => {
             n &&
                 (o = (0, s.jsx)('div', {
                     className: S.buttonContainer,
-                    children: (0, s.jsx)(N.Z, {
+                    children: (0, s.jsx)(p.Z, {
                         className: r()(S.button, i),
                         forceWhite: !0
                     })
@@ -99,7 +99,7 @@ t.Z = (e) => {
                             children: f.Z.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE_V3
                         }),
                         j
-                            ? (0, s.jsx)(p.Z, { referrer: D })
+                            ? (0, s.jsx)(N.Z, { referrer: D })
                             : U
                               ? (0, s.jsx)('div', {
                                     className: r()(S.affinityDescription),
@@ -112,7 +112,7 @@ t.Z = (e) => {
                         v
                             ? (0, s.jsx)('div', {
                                   className: S.buttonContainer,
-                                  children: (0, s.jsx)(N.Z, {
+                                  children: (0, s.jsx)(p.Z, {
                                       className: r()(S.button, a),
                                       forceWhite: !0
                                   })

@@ -16,7 +16,7 @@ var a = n(120356),
 t.Z = (e) => {
     var t;
     let n;
-    let { title: a, titleClassName: C = '', buttonClassName: g = '', subtitle: p = '', description: N = '', descriptionCta: A = '', isPremiumGetCta: m, onCtaClick: f, cardVariant: S } = e,
+    let { title: a, titleClassName: C = '', buttonClassName: g = '', subtitle: N = '', description: p = '', descriptionCta: A = '', isPremiumGetCta: m, onCtaClick: f, cardVariant: S } = e,
         h = (0, d.N)(),
         M = null == h ? void 0 : h.subscription_trial,
         x = (0, c.Ng)(),
@@ -39,8 +39,8 @@ t.Z = (e) => {
                 title: a,
                 cardVariantStyleInfo: P,
                 titleClassName: C,
-                subtitle: p,
-                description: N
+                subtitle: N,
+                description: p
             }),
             m &&
                 (0, s.jsx)(E.Z, {

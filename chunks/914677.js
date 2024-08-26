@@ -39,10 +39,10 @@ t.Z = (e) => {
     let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: E = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
         C = 43 + T / 2,
         g = 2 * Math.PI * C,
-        [p, N] = a.useState(E);
+        [N, p] = a.useState(E);
     a.useEffect(() => {
         let e = setTimeout(() => {
-            N(t);
+            p(t);
         }, 200);
         return () => clearTimeout(e);
     }, [t]);
@@ -74,7 +74,7 @@ t.Z = (e) => {
                         strokeLinecap: 'round',
                         strokeDasharray: ''.concat(g, ' ').concat(g),
                         className: c,
-                        style: { strokeDashoffset: (1 - p / 100) * g },
+                        style: { strokeDashoffset: (1 - N / 100) * g },
                         r: ''.concat(C),
                         cx: '50%',
                         cy: '50%'

@@ -31,22 +31,22 @@ function f(e) {
         [E, _] = r.useState(!1),
         S = (0, s.e7)([c.Z], () => c.Z.getSecureFramesRosterMapEntry(t)),
         I = (0, s.e7)([c.Z], () => c.Z.getSecureFramesRosterMapEntry(n)),
-        R = r.useCallback(async (e, t, n, r) => {
+        C = r.useCallback(async (e, t, n, r) => {
             let i = await (0, o.Il)(d.Xj, new Uint8Array(t), e, new Uint8Array(r), n);
             f(l.fromByteArray(i)), _(!1);
         }, []),
-        g = r.useRef(null);
+        R = r.useRef(null);
     return (
         r.useEffect(() => {
-            if (null != S && null != I && null == g.current) {
+            if (null != S && null != I && null == R.current) {
                 _(!0);
-                g.current = setTimeout(() => R(n, I, t, S), 300);
+                R.current = setTimeout(() => C(n, I, t, S), 300);
             }
-            let e = g.current;
+            let e = R.current;
             return () => {
                 null != e && clearTimeout(e);
             };
-        }, [n, I, R, t, S]),
+        }, [n, I, C, t, S]),
         r.useMemo(
             () => ({
                 fingerprint: i,

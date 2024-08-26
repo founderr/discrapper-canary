@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return ef;
+        return eS;
     }
 }),
     n(47120),
@@ -22,8 +22,8 @@ var i = n(735250),
     g = n(100527),
     p = n(906732),
     T = n(211242),
-    f = n(536687),
-    S = n(745837),
+    S = n(536687),
+    f = n(745837),
     C = n(13228),
     N = n(1259),
     A = n(211644),
@@ -283,7 +283,7 @@ class eT extends a.PureComponent {
                             tutorialType: ea._.GAME_NIGHT
                         });
                     default:
-                        if (t) return (0, i.jsx)(S.Z, {});
+                        if (t) return (0, i.jsx)(f.Z, {});
                         return (0, i.jsx)(i.Fragment, {});
                 }
             }
@@ -415,7 +415,7 @@ class eT extends a.PureComponent {
             });
     }
 }
-function ef(e) {
+function eS(e) {
     var t;
     let { guildId: n, hideSelectedChannel: s, selectedChannelId: l } = e,
         d = (0, o.e7)([q.Z], () => q.Z.getGuild(n));
@@ -423,7 +423,7 @@ function ef(e) {
     let _ = (0, L.Z)(n),
         h = (0, o.e7)([Y.Z], () => Y.Z.getGuildDimensions(n).scrollTo),
         E = (0, o.e7)([$.Z], () => $.Z.getChannelId()),
-        [S, Z, P] = (0, o.Wu)([X.Z], () => [X.Z.can(ec.Plq.MANAGE_GUILD, d), X.Z.can(ec.Plq.MANAGE_ROLES, d), X.Z.can(ec.Plq.MANAGE_THREADS, d)]),
+        [f, Z, P] = (0, o.Wu)([X.Z], () => [X.Z.can(ec.Plq.MANAGE_GUILD, d), X.Z.can(ec.Plq.MANAGE_ROLES, d), X.Z.can(ec.Plq.MANAGE_THREADS, d)]),
         y = (0, o.e7)([W.Z], () => W.Z.isUnavailable(n)),
         G = (0, o.e7)([ee.default], () => ee.default.getCurrentUser()),
         w = (0, o.e7)([V.Z], () => (V.Z.darkSidebar ? ec.BRd.DARK : V.Z.theme)),
@@ -437,21 +437,21 @@ function ef(e) {
         n !== es && ea(!z);
     }, [n, es, z]);
     let [eo, e_] = (0, A.ZP)((e) => [ed.XN.some((t) => e.currentlyShown.has(t.dismissibleContentType)), e.currentlyShownGroup.has(eu.R.GUILD_HEADER_TOOLTIPS)]),
-        eh = (0, f.Z)(d),
+        eh = (0, S.Z)(d),
         eE = (0, u.useModalsStore)(u.hasAnyModalOpenSelector),
         em = (0, o.e7)([Q.Z], () => Q.Z.hasLayers()),
         eI = (0, o.e7)([B.Z], () => B.Z.shouldShow(eg)),
-        ep = S && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
-        ef = (0, o.e7)([K.Z], () => K.Z.getMemberCount(n)),
-        eS = S && null != ef && ef >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
-        eC = Z && null != d && (d.hasFeature(ec.oNc.COMMUNITY) || (null != ef && ef > 50)),
+        ep = f && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
+        eS = (0, o.e7)([K.Z], () => K.Z.getMemberCount(n)),
+        ef = f && null != eS && eS >= 30 && (null == d ? void 0 : d.premiumProgressBarEnabled) === !1 && !en.s.isDisallowPopupsSet(),
+        eC = Z && null != d && (d.hasFeature(ec.oNc.COMMUNITY) || (null != eS && eS > 50)),
         eN = (0, b.Z)(n),
         eA = (0, N._)(n),
         ev = (null == d ? void 0 : d.hasFeature(ec.oNc.HUB)) === !0,
-        eZ = S && (null == d ? void 0 : d.hasFeature(ec.oNc.DISCOVERABLE)) === !0,
+        eZ = f && (null == d ? void 0 : d.hasFeature(ec.oNc.DISCOVERABLE)) === !0,
         eL = (0, T.Q)(),
-        eO = (S || (null == d ? void 0 : d.premiumTier) === ec.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !eL,
-        eR = (0, o.e7)([M.Z, Q.Z], () => null != d && null != G && S && !Q.Z.hasLayers() && M.Z.shouldShowGuildTemplateDirtyTooltip(n)),
+        eO = (f || (null == d ? void 0 : d.premiumTier) === ec.Eu4.NONE) && !en.s.isDisallowPopupsSet() && !eL,
+        eR = (0, o.e7)([M.Z, Q.Z], () => null != d && null != G && f && !Q.Z.hasLayers() && M.Z.shouldShowGuildTemplateDirtyTooltip(n)),
         ex = (0, o.e7)([F.Z], () => F.Z.getChannel(l)),
         { isPopoutOpen: eb } = (0, O.y)(),
         eP = null !== (t = null == d ? void 0 : d.hasFeature(ec.oNc.COMMUNITY)) && void 0 !== t && t,
@@ -483,7 +483,7 @@ function ef(e) {
         hasChannelNotice: null != eh || eo,
         anyLayerOpen: eE || em,
         showGuildBoostingProgressBarUpsell: ep,
-        showGuildBoostingProgressBarSizeUpsell: eS,
+        showGuildBoostingProgressBarSizeUpsell: ef,
         showInviteSplashUpsell: eO,
         showDiscoveryLandingPageSettingsUpsell: eZ,
         showGuildHeaderTutorial: eI,
@@ -492,7 +492,7 @@ function ef(e) {
         showDiscoveryTooltip: eA,
         showHubPrivacySettingsTooltip: ev,
         showNewUnreadsBar: eP,
-        showActiveThreadsNotice: P && null != ef && ef >= 200 && eM,
+        showActiveThreadsNotice: P && null != eS && eS >= 200 && eM,
         showGuildSoundboardPermissionUpsell: eC,
         showMediaChannelUpsell: eG,
         showTierTemplatesUpsell: ek,

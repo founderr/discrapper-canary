@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return v;
+        return h;
     }
 }),
     t(47120);
@@ -21,16 +21,16 @@ var s = t(735250),
     p = t(689938),
     x = t(493248),
     Z = t(161068);
-function v(e) {
-    let { user: n, guildId: t, channelId: v, messageId: h, roleId: S, transitionState: T, onViewBlockedProfileClick: A, showGuildProfile: g = !0, sourceAnalyticsLocations: N = [] } = e,
+function h(e) {
+    let { user: n, guildId: t, channelId: h, messageId: v, roleId: S, transitionState: T, onViewBlockedProfileClick: A, showGuildProfile: g = !0, sourceAnalyticsLocations: N = [] } = e,
         L = t === m.ME ? void 0 : t,
         { analyticsLocations: j } = (0, r.ZP)([...N, l.Z.BLOCKED_PROFILE_MODAL]),
         R = (0, c.ZB)({
             layout: 'BLOCKED_PROFILE_MODAL',
             userId: n.id,
             guildId: L,
-            channelId: v,
-            messageId: h,
+            channelId: h,
+            messageId: v,
             roleId: S,
             showGuildProfile: g
         }),

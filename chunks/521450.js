@@ -14,7 +14,7 @@ var s = n(735250),
     R = n(930441),
     C = n(689938),
     g = n(284725),
-    p = n(224499);
+    N = n(224499);
 t.Z = () => {
     let e = T.Ex.useSetting(),
         { categories: t, initialized: n } = (0, c.cj)([E.Z], () => E.Z.getEmailSettings());
@@ -31,7 +31,7 @@ t.Z = () => {
                     children: C.Z.Messages.FAMILY_CENTER_SETTINGS_FORM_TITLE
                 }),
                 (0, s.jsx)(d.FormSwitch, {
-                    className: i()(p.marginTop8, p.marginBottom20),
+                    className: i()(N.marginTop8, N.marginBottom20),
                     value: e,
                     note: C.Z.Messages.FAMILY_CENTER_SETTINGS_ENABLE_SWITCH_NOTE,
                     hideBorder: !0,
@@ -73,7 +73,7 @@ t.Z = () => {
                       })
                     : null,
                 (0, s.jsx)(d.FormSwitch, {
-                    className: i()(p.marginTop20, p.marginBottom20),
+                    className: i()(N.marginTop20, N.marginBottom20),
                     value: !!t[R.$Z.FAMILY_CENTER_DIGEST],
                     note: C.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
                     hideBorder: !0,

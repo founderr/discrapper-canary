@@ -46,7 +46,7 @@ let g = (e) => {
 };
 t.Z = (e) => {
     var t;
-    let { className: n, variant: r = T.R0.PERKS_DISCOVERABILITY, noBackground: p = !1, leftAlignHeaders: N = !1, showAllPerksButton: A, headerClassname: m, isFullScreen: f = !0 } = e,
+    let { className: n, variant: r = T.R0.PERKS_DISCOVERABILITY, noBackground: N = !1, leftAlignHeaders: p = !1, showAllPerksButton: A, headerClassname: m, isFullScreen: f = !0 } = e,
         S = a.useRef(null),
         h = (0, _.yQ)(),
         M = (0, u.Ag)(h),
@@ -96,15 +96,15 @@ t.Z = (e) => {
                 className: i()(
                     C.section,
                     {
-                        [C.centerAlignSection]: !N,
-                        [C.leftAlignSection]: N
+                        [C.centerAlignSection]: !p,
+                        [C.leftAlignSection]: p
                     },
                     n
                 ),
                 children: [
                     (0, s.jsx)(g, {
                         showAllPerksButton: A,
-                        leftAlignHeaders: N,
+                        leftAlignHeaders: p,
                         title: L.title,
                         headerClassname: m
                     }),
@@ -112,16 +112,16 @@ t.Z = (e) => {
                         variant: 'text-lg/normal',
                         color: 'header-primary',
                         className: i()(C.subtitle, {
-                            [C.subtitle]: null == A || N,
-                            [C.subtitleWithButton]: null != A && !N,
-                            [C.fullWidth]: b || N,
+                            [C.subtitle]: null == A || p,
+                            [C.subtitleWithButton]: null != A && !p,
+                            [C.fullWidth]: b || p,
                             [C.moreSubtitleMargin]: B,
-                            [C.leftAlignSubtitle]: N,
-                            [C.centerAlignSubtitle]: !N
+                            [C.leftAlignSubtitle]: p,
+                            [C.centerAlignSubtitle]: !p
                         }),
                         children: L.subtitle
                     }),
-                    !N &&
+                    !p &&
                         null != A &&
                         (0, s.jsx)('div', {
                             className: i()(C.showAllPerksButtonCenter),
@@ -138,7 +138,7 @@ t.Z = (e) => {
                                 {
                                     confettiCanvas: e.name === E.u.FREE_BOOST ? j : void 0,
                                     ...e,
-                                    forceShadow: p
+                                    forceShadow: N
                                 },
                                 ''.concat(e.name, '_').concat(t)
                             )

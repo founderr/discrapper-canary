@@ -9,8 +9,8 @@ var i = t(470079),
     l = t(607070);
 function o(e) {
     let { key: n, isExpanded: t, durationMs: o = 100, minHeightOverride: r, maxHeightOverride: s, maxAnimationHeight: c } = e,
-        d = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-        [u, m] = i.useState(null),
+        u = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        [d, m] = i.useState(null),
         p = i.useCallback(() => {}, []),
         _ = i.useRef(),
         C = i.useRef(),
@@ -31,31 +31,31 @@ function o(e) {
         }, [n]),
         i.useLayoutEffect(() => {
             var e, i, a;
-            if (null == u) return;
-            let { height: l } = u.getBoundingClientRect();
+            if (null == d) return;
+            let { height: l } = d.getBoundingClientRect();
             !t && (null == _.current || l < _.current) && (_.current = l), t && (null == C.current || l > C.current) && (C.current = l);
             let o = null !== (e = E.current) && void 0 !== e ? e : _.current,
                 r = null !== (i = A.current) && void 0 !== i ? i : C.current,
                 s = f.current !== n;
             if (((f.current = n), null == o || null == r || s)) return;
             let c = Math.min(null !== (a = N.current) && void 0 !== a ? a : r, r),
-                d = t ? o : c,
+                u = t ? o : c,
                 m = t ? c : o;
-            if (!(d !== m)) return;
-            v(!0), (u.style.height = ''.concat(d, 'px')), (u.style.transition = '');
+            if (!(u !== m)) return;
+            v(!0), (d.style.height = ''.concat(u, 'px')), (d.style.transition = '');
             let p = null;
             return (
                 (p = requestAnimationFrame(() => {
-                    (p = null), (u.style.height = ''.concat(m, 'px')), (u.style.transition = 'height '.concat(h.current, 'ms ease-in-out'));
+                    (p = null), (d.style.height = ''.concat(m, 'px')), (d.style.transition = 'height '.concat(h.current, 'ms ease-in-out'));
                 })),
                 () => (null != p ? cancelAnimationFrame(p) : void 0)
             );
-        }, [n, u, t]),
+        }, [n, d, t]),
         i.useLayoutEffect(() => {
-            if (null != u && !x) (u.style.height = ''), (u.style.transition = '');
-        }, [n, u, x]),
+            if (null != d && !x) (d.style.height = ''), (d.style.transition = '');
+        }, [n, d, x]),
         {
-            ref: d ? p : m,
+            ref: u ? p : m,
             isTransitioning: x,
             onTransitionEnd: I
         }

@@ -37,7 +37,7 @@ function T(e) {
         { analyticsLocations: l } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
         { resetRenewalMutation: T, submitting: I, error: R } = E(l),
         C = (0, d._k)(t, { includeSoftDeleted: !0 }),
-        { currentListing: g, nextListing: p } = a.useMemo(() => {
+        { currentListing: g, nextListing: N } = a.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)
                 return {
                     currentListing: void 0,
@@ -51,13 +51,13 @@ function T(e) {
                 nextListing: C.find((e) => e.subscription_plans[0].id === t)
             };
         }, [n, C]);
-    if (null == n || null == g || null == p) return null;
-    let N = i()(n.currentPeriodEnd).format('MMM DD, YYYY');
+    if (null == n || null == g || null == N) return null;
+    let p = i()(n.currentPeriodEnd).format('MMM DD, YYYY');
     return (0, s.jsx)(_.Z, {
         message: u.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_DELETE_MUTATION_DESCRIPTION.format({
             currentListing: g.name,
-            nextListing: p.name,
-            changeDate: N
+            nextListing: N.name,
+            changeDate: p
         }),
         error: null == R ? void 0 : R.message,
         onClick: () => T(n),

@@ -20,8 +20,8 @@ var i = n(735250),
     g = n(521868),
     p = n(299206),
     T = n(440051),
-    f = n(734934),
-    S = n(158238),
+    S = n(734934),
+    f = n(158238),
     C = n(300284),
     N = n(680295),
     A = n(785717),
@@ -32,13 +32,13 @@ var i = n(735250),
     R = n(78675),
     x = n(741308),
     b = n(899007),
-    P = n(549546),
-    M = n(438163),
-    D = n(483424),
-    y = n(681837),
-    j = n(502762),
-    U = n(530),
-    G = n(544989),
+    P = n(438163),
+    M = n(483424),
+    D = n(681837),
+    y = n(502762),
+    j = n(530),
+    U = n(544989),
+    G = n(309494),
     k = n(969205),
     w = n(171368),
     B = n(580512),
@@ -178,8 +178,8 @@ function er(e) {
         eu = (function (e, t) {
             let n = T.Y.useExperiment({ location: 'account popout' }).expiringStatus,
                 a = V.Cr.useSetting(),
-                s = (0, f.p)(),
-                r = S.e.useExperiment({ location: 'account popout' }).allowQuietMode || s,
+                s = (0, S.p)(),
+                r = f.e.useExperiment({ location: 'account popout' }).allowQuietMode || s,
                 o = V.fv.useSetting(),
                 c = e === J.Skl.DND,
                 u = (t) => {
@@ -213,7 +213,7 @@ function er(e) {
                                 id: ''.concat(e, '-').concat(n),
                                 label: a(),
                                 action: () => {
-                                    (0, f.oW)(!0, n);
+                                    (0, S.oW)(!0, n);
                                 },
                                 dontCloseOnAction: !0
                             },
@@ -275,7 +275,7 @@ function er(e) {
                                                   ]
                                               }),
                                           action: () => {
-                                              (0, f.oW)(!s);
+                                              (0, S.oW)(!s);
                                           },
                                           dontCloseOnAction: !0,
                                           children: _
@@ -304,10 +304,10 @@ function er(e) {
         { newActivityCardsEnabled: em } = (0, L.z)({ location: 'AccountProfilePopout' }),
         { customStatusBubbleEditEnabled: eI } = (0, Z.K)({ location: 'AccountProfilePopout' }),
         eg = (0, C.Z)({ analyticsLocations: el }),
-        ep = (0, f.p)(),
+        ep = (0, S.p)(),
         eT = ed === J.Skl.DND,
-        ef = (0, Q.g)(),
-        eS = (0, g.o)({
+        eS = (0, Q.g)(),
+        ef = (0, g.o)({
             focusedClassName: et.menuItemFocused,
             customStatus: ec,
             analyticsLocations: el,
@@ -327,14 +327,14 @@ function er(e) {
             children: (0, i.jsx)(d.Dialog, {
                 ref: e_,
                 'aria-label': t.username,
-                children: (0, i.jsxs)(j.Z, {
+                children: (0, i.jsxs)(y.Z, {
                     className: et.themeContainer,
                     user: t,
                     displayProfile: q,
                     profileType: $.y0.BITE_SIZE,
                     children: [
                         !eI &&
-                            (0, i.jsx)(G.Z, {
+                            (0, i.jsx)(U.Z, {
                                 profileType: $.y0.BITE_SIZE,
                                 children: (0, i.jsx)(k.Z, {
                                     userId: t.id,
@@ -355,7 +355,7 @@ function er(e) {
                                     profileType: $.y0.BITE_SIZE,
                                     onOpenProfile: W ? void 0 : eE
                                 }),
-                                (0, i.jsx)(M.Z, {
+                                (0, i.jsx)(P.Z, {
                                     user: t,
                                     profileType: $.y0.BITE_SIZE,
                                     onClose: n
@@ -370,7 +370,7 @@ function er(e) {
                         (0, i.jsxs)(d.Scroller, {
                             className: et.body,
                             children: [
-                                (0, i.jsx)(U.Z, {
+                                (0, i.jsx)(j.Z, {
                                     user: t,
                                     className: et.username,
                                     profileType: $.y0.BITE_SIZE,
@@ -384,8 +384,8 @@ function er(e) {
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(y.Z, { userId: t.id }),
-                                            (0, i.jsx)(P.Z, {
+                                            (0, i.jsx)(D.Z, { userId: t.id }),
+                                            (0, i.jsx)(G.Z, {
                                                 user: t,
                                                 isHovering: eh
                                             })
@@ -399,7 +399,7 @@ function er(e) {
                                     onClose: n
                                 }),
                                 em
-                                    ? (0, i.jsx)(D.Z, {
+                                    ? (0, i.jsx)(M.Z, {
                                           user: t,
                                           currentUser: t,
                                           onClose: n
@@ -411,7 +411,7 @@ function er(e) {
                                 (0, i.jsxs)('div', {
                                     className: et.menus,
                                     children: [
-                                        (0, i.jsx)(j.Z.Overlay, {
+                                        (0, i.jsx)(y.Z.Overlay, {
                                             className: et.menuOverlay,
                                             children: (0, i.jsxs)(d.Menu, {
                                                 navId: 'status',
@@ -503,11 +503,11 @@ function er(e) {
                                                             'status-picker'
                                                         )
                                                     }),
-                                                    !eI && (0, i.jsx)(d.MenuGroup, { children: eS })
+                                                    !eI && (0, i.jsx)(d.MenuGroup, { children: ef })
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(j.Z.Overlay, {
+                                        (0, i.jsx)(y.Z.Overlay, {
                                             className: et.menuOverlay,
                                             children: (0, i.jsxs)(d.Menu, {
                                                 navId: 'account',
@@ -531,7 +531,7 @@ function er(e) {
                                                                 }),
                                                                     (0, X.Z)();
                                                             },
-                                                            children: ef
+                                                            children: eS
                                                         })
                                                     }),
                                                     (0, i.jsx)(d.MenuGroup, { children: eC })

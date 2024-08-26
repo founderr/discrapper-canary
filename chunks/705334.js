@@ -1,6 +1,6 @@
 n.d(t, {
     _: function () {
-        return S;
+        return f;
     }
 });
 var i = n(735250),
@@ -20,7 +20,7 @@ var i = n(735250),
     g = n(46140),
     p = n(689938),
     T = n(671590);
-function f(e) {
+function S(e) {
     let { tab: t } = e,
         n = (0, h.d)((e) => e.selectedPage === t, l.Z),
         s = a.useMemo(
@@ -36,7 +36,7 @@ function f(e) {
             [t]
         ),
         p = a.useMemo(() => (0, E.sm)(t), [t]),
-        f = a.useCallback(() => {
+        S = a.useCallback(() => {
             switch (((0, c.j)(() => h.d.setState({ selectedPage: t })), t)) {
                 case m.F$.QUESTS:
                     return (0, u.navigateToQuestHome)(g.dr.DISCOVERY_SIDEBAR, o.j.DISCOVERY_SIDEBAR);
@@ -45,7 +45,7 @@ function f(e) {
             }
         }, [t]);
     return (0, i.jsxs)(d.Clickable, {
-        onClick: f,
+        onClick: S,
         className: r()(T.navItem, { [T.selected]: n }),
         children: [
             (0, i.jsx)('div', {
@@ -60,7 +60,7 @@ function f(e) {
         ]
     });
 }
-function S() {
+function f() {
     return (0, i.jsxs)('div', {
         className: T.container,
         children: [
@@ -73,7 +73,7 @@ function S() {
             }),
             (0, i.jsx)('nav', {
                 className: T.nav,
-                children: m.mc.map((e) => (0, i.jsx)(f, { tab: e }, e))
+                children: m.mc.map((e) => (0, i.jsx)(S, { tab: e }, e))
             })
         ]
     });

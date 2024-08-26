@@ -30,8 +30,8 @@ function T(e) {
         R = (0, c.oX)(n);
     if (null == R) return null;
     let C = (0, r.getAvatarSpecs)(T),
-        { name: g, rarity: p } = R,
-        { color: N } = (0, c.F7)(p),
+        { name: g, rarity: N } = R,
+        { color: p } = (0, c.F7)(N),
         A = (0, a.wj)(I) ? u : E,
         m = (C.size - C.offset - 2 * C.stroke) * 0.8,
         f = C.size - C.stroke,
@@ -59,7 +59,7 @@ function T(e) {
                 className: _.trophyIconContainer,
                 children: (0, s.jsx)(r.TrophyIcon, {
                     size: 'custom',
-                    color: d ? N : (0, l.Lq)(A.trophy),
+                    color: d ? p : (0, l.Lq)(A.trophy),
                     width: m,
                     height: m
                 })
@@ -75,7 +75,7 @@ function T(e) {
                     })
                 }),
             d &&
-                p === c.EP.LEGENDARY &&
+                N === c.EP.LEGENDARY &&
                 (0, s.jsx)('div', {
                     className: _.lockContainer,
                     style: h,

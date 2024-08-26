@@ -19,16 +19,16 @@ var s = t(735250),
 function m(e) {
     let { user: n, currentUser: t, onClose: m } = e,
         { live: p, recent: x, stream: Z } = (0, a.Z)(n.id),
-        v = n.id === t.id,
-        h = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+        h = n.id === t.id,
+        v = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
         i.useEffect(() => {
-            if (!!v && !h)
+            if (!!h && !v)
                 (0, r.EW)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
                     dismissAction: _.L.AUTO_DISMISS,
                     forceTrack: !0
                 });
-        }, [v, h]),
+        }, [h, v]),
         (0, s.jsxs)(l.ScrollerThin, {
             className: f.scroller,
             fade: !0,

@@ -15,7 +15,7 @@ n.d(t, {
         return g;
     },
     uv: function () {
-        return p;
+        return N;
     }
 });
 var s,
@@ -94,7 +94,7 @@ let E = 3,
         let s = (0, r.e7)([o.Z], () => o.Z.getIsEligibleToSendReferrals());
         return t && s;
     },
-    p = (e) => {
+    N = (e) => {
         let t;
         let { enabled: n, eligibleToFetch: s } = d.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             { enabled: a } = c.$.useExperiment({ location: e }, { autoTrackExposure: !1 });

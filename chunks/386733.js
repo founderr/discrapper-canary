@@ -14,8 +14,8 @@ var s = n(735250),
     R = n(63063),
     C = n(281494),
     g = n(276444),
-    p = n(520540),
-    N = n(197115),
+    N = n(520540),
+    p = n(197115),
     A = n(119269),
     m = n(938736),
     f = n(981631),
@@ -121,8 +121,8 @@ t.Z = (e) => {
         x = (0, m.uv)('ReferralProgramProgressBar'),
         O = (0, l.Wu)([T.default], () => r.map((e) => T.default.getUser(e)).filter((e) => null != e)),
         P = a.useMemo(() => O.map((e) => new E.Z(e)), [O]),
-        { subscriberHomeVariant: L } = p.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-        v = L === p.p.VARIANT_2;
+        { subscriberHomeVariant: L } = N.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+        v = L === N.p.VARIANT_2;
     a.useEffect(() => {
         r.forEach((e) => {
             (0, c.PR)(e);
@@ -181,7 +181,7 @@ t.Z = (e) => {
                             children: [
                                 !t &&
                                     !v &&
-                                    (0, s.jsx)(N.Z, {
+                                    (0, s.jsx)(p.Z, {
                                         color: o.ButtonColors.CUSTOM,
                                         buttonText: S.Z.Messages.GIFT_NITRO,
                                         className: i()(h.expandedProgressBarGiftingCTA, { [h.expandedProgressBarGiftingCTALayout]: !t }),
@@ -221,7 +221,7 @@ t.Z = (e) => {
                 })
             ]
         }),
-        k = r.length === m.Q_;
+        H = r.length === m.Q_;
     return (0, s.jsx)(_.Gt, {
         value: j,
         children: (0, s.jsxs)('div', {
@@ -231,7 +231,7 @@ t.Z = (e) => {
                 [h.expandedProgressBarContainerSettingsPage]: t,
                 [h.expandedProgressBarContainerVariant1]: !v && !t,
                 [h.expandedProgressBarContainerVariant2]: v && !t,
-                [h.allReferralsSentBorder]: k,
+                [h.allReferralsSentBorder]: H,
                 [h.containerWithBanner]: !1
             }),
             children: [!1, y]

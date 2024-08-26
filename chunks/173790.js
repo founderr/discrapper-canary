@@ -10,8 +10,8 @@ var i = t(735250),
     r = t(481060),
     s = t(361213),
     c = t(778569),
-    d = t(213459),
-    u = t(835473),
+    u = t(213459),
+    d = t(835473),
     m = t(541099),
     p = t(827498),
     _ = t(783097),
@@ -27,7 +27,7 @@ function I(e) {
     var n;
     let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
         P = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
-        L = null !== (n = (0, u.q)(s.id === A.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
+        L = null !== (n = (0, d.q)(s.id === A.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
         b = (0, _.ye)(L) ? g : E.Z,
         S = a.useRef(null),
         { iconURL: R, name: T } = a.useMemo(
@@ -40,7 +40,7 @@ function I(e) {
         );
     return (
         a.useEffect(() => {
-            I ? d.ZP.queryInstallOnDemandApp(L.id, t.id) : d.ZP.maybeQueryForInstallLessApps(L.id, t.id);
+            I ? u.ZP.queryInstallOnDemandApp(L.id, t.id) : u.ZP.maybeQueryForInstallLessApps(L.id, t.id);
         }, [L.id, t.id, I]),
         (0, i.jsxs)(r.ScrollerNone, {
             className: x.container,

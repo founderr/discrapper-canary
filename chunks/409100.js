@@ -24,7 +24,7 @@ let I = (e) => {
     },
     R = (e, t, n, s) => (t || n ? E.Z.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === u.Si.TIER_2 ? E.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: s }) : void 0);
 t.Z = (e) => {
-    let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: C = !1, isPersistentCTA: g = !1, useShorterCTA: p = !1, ...N } = e,
+    let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: C = !1, isPersistentCTA: g = !1, useShorterCTA: N = !1, ...p } = e,
         A = (0, i.ZP)(),
         m = (0, a.wj)(A) || t,
         f = (0, d.N)(),
@@ -40,7 +40,7 @@ t.Z = (e) => {
         P = C
             ? E.Z.Messages.BOGO_CLAIM_OFFER
             : null != M
-              ? R(n, p, g, M.discount.amount)
+              ? R(n, N, g, M.discount.amount)
               : I({
                     showTrialCTA: x,
                     subscriptionTier: n,
@@ -52,11 +52,11 @@ t.Z = (e) => {
                 });
     return (0, s.jsx)(_.Z, {
         color: m ? r.ButtonColors.BRAND_INVERTED : r.ButtonColors.BRAND,
-        buttonShineClassName: 'buttonShineClassName' in N ? N.buttonShineClassName : m ? T.brandShine : void 0,
+        buttonShineClassName: 'buttonShineClassName' in p ? p.buttonShineClassName : m ? T.brandShine : void 0,
         buttonText: P,
         buttonTextClassName: x ? T.freeTrialText : void 0,
         onlyShineOnHover: !0,
         subscriptionTier: n,
-        ...N
+        ...p
     });
 };

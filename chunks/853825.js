@@ -21,8 +21,8 @@ var s = t(735250),
     p = t(900927),
     x = t(678738),
     Z = t(502762),
-    v = t(530),
-    h = t(679332),
+    h = t(530),
+    v = t(679332),
     S = t(544989),
     T = t(228168),
     A = t(981631),
@@ -64,7 +64,7 @@ function R(e) {
                         children: [
                             (0, s.jsx)(S.Z, {
                                 profileType: T.y0.FULL_SIZE,
-                                children: (0, s.jsx)(h.Z, { user: n })
+                                children: (0, s.jsx)(v.Z, { user: n })
                             }),
                             (0, s.jsxs)('header', {
                                 children: [
@@ -88,7 +88,7 @@ function R(e) {
                             (0, s.jsxs)('div', {
                                 className: N.body,
                                 children: [
-                                    (0, s.jsx)(v.Z, {
+                                    (0, s.jsx)(h.Z, {
                                         user: n,
                                         profileType: T.y0.FULL_SIZE,
                                         nickname: d.ZP.getName(U, R, n),

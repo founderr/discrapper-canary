@@ -15,8 +15,8 @@ var s = n(735250),
     R = n(626135),
     C = n(314684),
     g = n(715627),
-    p = n(176782),
-    N = n(238108),
+    N = n(176782),
+    p = n(238108),
     A = n(32173),
     m = n(391110),
     f = n(484239),
@@ -33,18 +33,18 @@ let P = {
         yMax: -20
     },
     L = a.memo((e) => {
-        let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: p, cardType: f, confettiCanvas: S } = e,
+        let { name: t, canReveal: n = !0, dismissibleContentType: r, forceShadow: N, cardType: f, confettiCanvas: S } = e,
             Z = null == e ? void 0 : e.onCtaClick,
             D = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
             [B, j] = a.useState(!1),
             [U, G] = a.useState(!1),
             y = (0, C.yQ)(),
-            k = (0, C.IB)(),
-            [H, w] = a.useState(!1),
-            [F, V] = a.useState(t === A.u.FREE_BOOST && k && (null == y ? void 0 : y.nitroTenureStatus) === h.EB.REDEEMABLE);
+            H = (0, C.IB)(),
+            [k, w] = a.useState(!1),
+            [F, V] = a.useState(t === A.u.FREE_BOOST && H && (null == y ? void 0 : y.nitroTenureStatus) === h.EB.REDEEMABLE);
         a.useEffect(() => {
-            t === A.u.FREE_BOOST && k && (null == y ? void 0 : y.nitroTenureStatus) === h.EB.REDEEMABLE && V(!0);
-        }, [k, t, y]);
+            t === A.u.FREE_BOOST && H && (null == y ? void 0 : y.nitroTenureStatus) === h.EB.REDEEMABLE && V(!0);
+        }, [H, t, y]);
         let W = a.useCallback(() => {
                 w(!0);
             }, []),
@@ -53,14 +53,14 @@ let P = {
             [z, Q] = (0, I.cv)((null != r && n) || r === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI ? [r] : []);
         a.useEffect(
             () => () => {
-                z === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && H && (0, T.EW)(z);
+                z === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && k && (0, T.EW)(z);
             },
-            [z, H]
+            [z, k]
         ),
             a.useEffect(() => {
-                z === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && H && (0, T.EW)(z);
-            }, [z, H]);
-        let { easterEggLevel: q, isEasterEggTriggered: X, onHover: J, onUnhover: $ } = (0, N.Z)(5),
+                z === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && k && (0, T.EW)(z);
+            }, [z, k]);
+        let { easterEggLevel: X, isEasterEggTriggered: q, onHover: J, onUnhover: $ } = (0, p.Z)(5),
             ee = (0, l.debounce)(() => {
                 R.default.track(M.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                     card_type: (0, l.snakeCase)(t),
@@ -112,16 +112,16 @@ let P = {
         n)
             ? t === A.u.UPCOMING_DROP_UNTIMED
                 ? (0, s.jsx)('div', {
-                      className: i()(b.flipCardContainer, { [b.forceShadow]: p }),
+                      className: i()(b.flipCardContainer, { [b.forceShadow]: N }),
                       onMouseEnter: J,
                       onFocus: J,
                       onMouseLeave: $,
                       onBlur: $,
                       children: (0, s.jsxs)('div', {
                           className: i()(b.flipCard, {
-                              [b.partialFlipCard]: !X,
-                              [b.ultraFlipCard]: X,
-                              [b.rotateCard]: X && 3 === q,
+                              [b.partialFlipCard]: !q,
+                              [b.ultraFlipCard]: q,
+                              [b.rotateCard]: q && 3 === X,
                               [b.reducedMotion]: D
                           }),
                           children: [
@@ -148,7 +148,7 @@ let P = {
                             className: i()({
                                 [b.noFlipCardContainer]: !K,
                                 [b.noFlipCardContainerCarousel]: K,
-                                [b.forceShadow]: p,
+                                [b.forceShadow]: N,
                                 [b.reducedMotion]: D
                             }),
                             children: [
@@ -174,7 +174,7 @@ let P = {
                         })
                     })
                   : (0, s.jsx)('div', {
-                        className: i()(b.flipCardContainer, { [b.forceShadow]: p }),
+                        className: i()(b.flipCardContainer, { [b.forceShadow]: N }),
                         children: (0, s.jsxs)(_.Clickable, {
                             onClick: () => j(!0),
                             className: i()(b.flipCard, b.clickable, {
@@ -217,21 +217,21 @@ let P = {
                     })
             : (0, s.jsx)(L, {
                   ...Y.upcomingDropUntimed,
-                  forceShadow: p
+                  forceShadow: N
               });
     });
 L.displayName = 'PerkDiscoverabilityCard';
 let v = a.forwardRef((e, t) => {
     var n;
-    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: u, onCtaClick: E, onMouseEnter: T, className: I, perkComponent: R, cardVariant: g, cardType: N, onClick: A, backgroundImage: h, pillText: M, perkImage: x } = e,
-        O = N === m.R0.CARD_CAROUSEL_FIRST_ROW || N === m.R0.CARD_CAROUSEL_SECOND_ROW || N === m.R0.CARD_CAROUSEL_THIRD_ROW,
+    let { title: r, titleClassName: l = '', subtitle: o = '', description: c = '', descriptionCta: d = '', isPremiumGetCta: u, onCtaClick: E, onMouseEnter: T, className: I, perkComponent: R, cardVariant: g, cardType: p, onClick: A, backgroundImage: h, pillText: M, perkImage: x } = e,
+        O = p === m.R0.CARD_CAROUSEL_FIRST_ROW || p === m.R0.CARD_CAROUSEL_SECOND_ROW || p === m.R0.CARD_CAROUSEL_THIRD_ROW,
         P = 0 !== c.length || 0 !== d.length || (0 !== o.length && g === m.zW.REWARD),
         L = (0, C.IB)(),
         [v, Z] = a.useState(L);
     a.useEffect(() => {
         L && Z(!0);
     }, [L]);
-    let D = (0, p._)(g);
+    let D = (0, N._)(g);
     return (0, s.jsxs)(_.Clickable, {
         className: i()(b.card, I, !0 === v ? (null === (n = D.cardContainer) || void 0 === n ? void 0 : n.className) : void 0, {
             [b.clickable]: null != A,

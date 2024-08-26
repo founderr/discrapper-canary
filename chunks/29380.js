@@ -11,8 +11,8 @@ var i = t(735250),
     r = t(595519),
     s = t(374065),
     c = t(542094),
-    d = t(895924),
-    u = t(496675),
+    u = t(895924),
+    d = t(496675),
     m = t(499254),
     p = t(827498),
     _ = t(890280),
@@ -44,7 +44,7 @@ function A(e) {
         } = (0, C.P7)({
             channel: n,
             application: t,
-            location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+            location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: A,
             commandName: N,
             autoDismissOnClick: S === c.JS.LEAVE,
@@ -53,7 +53,7 @@ function A(e) {
         }),
         y = (function (e) {
             let { channel: n, activityAction: t } = e,
-                i = (0, l.e7)([u.Z], () => u.Z.can(f.Pl.USE_EMBEDDED_ACTIVITIES, n)),
+                i = (0, l.e7)([d.Z], () => d.Z.can(f.Pl.USE_EMBEDDED_ACTIVITIES, n)),
                 a = (0, s.KF)(n.id),
                 o = !1;
             switch (t) {

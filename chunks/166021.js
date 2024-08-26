@@ -28,12 +28,12 @@ t.Z = (e) => {
         a.useEffect(() => {
             g > T && u > g - T ? E(g - T) : g <= T && E(0);
         }, [g, T]);
-    let p = a.useCallback((e) => ({ x: (e - u) * 100 }), [u]),
-        [N, A] = (0, o.useSprings)(t.length, p);
+    let N = a.useCallback((e) => ({ x: (e - u) * 100 }), [u]),
+        [p, A] = (0, o.useSprings)(t.length, N);
     return (
         a.useEffect(() => {
-            A(p);
-        }, [A, p]),
+            A(N);
+        }, [A, N]),
         (0, s.jsx)('div', {
             className: n,
             children: (0, s.jsxs)('div', {
@@ -57,7 +57,7 @@ t.Z = (e) => {
                         }),
                     (0, s.jsx)('div', {
                         className: d.cardInnerContainer,
-                        children: N.map((e, n) => {
+                        children: p.map((e, n) => {
                             let { x: a } = e;
                             return (0, s.jsx)(
                                 l.animated.div,

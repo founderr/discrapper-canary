@@ -21,10 +21,10 @@ var s = t(735250),
     x = t(431776);
 function Z(e) {
     let { user: n, type: t, showActions: o, onClose: Z } = e,
-        v = (0, r.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(n.id)),
-        h = (0, r.e7)([_.Z], () => _.Z.getActivities(n.id)),
-        S = i.useMemo(() => h.filter((e) => e.type !== m.IIU.CUSTOM_STATUS), [h]),
-        T = i.useMemo(() => (v ? S.find((e) => e.type === m.IIU.PLAYING) : null), [S, v]),
+        h = (0, r.e7)([I.Z], () => null != I.Z.getAnyStreamForUser(n.id)),
+        v = (0, r.e7)([_.Z], () => _.Z.getActivities(n.id)),
+        S = i.useMemo(() => v.filter((e) => e.type !== m.IIU.CUSTOM_STATUS), [v]),
+        T = i.useMemo(() => (h ? S.find((e) => e.type === m.IIU.PLAYING) : null), [S, h]),
         A = i.useMemo(() => S.filter((e) => e !== T), [T, S]),
         { analyticsLocations: g, newestAnalyticsLocation: N } = (0, u.ZP)(),
         { context: L, trackUserProfileAction: j } = (0, E.KZ)(),
@@ -38,7 +38,7 @@ function Z(e) {
         className: x.listScroller,
         fade: !0,
         children: [
-            v
+            h
                 ? (0, s.jsx)(c.Z, {
                       type: t,
                       user: n,

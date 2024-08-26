@@ -16,8 +16,8 @@ var r = n(756647),
     g = n(553795),
     p = n(594174),
     T = n(626135),
-    f = n(585483),
-    S = n(591759),
+    S = n(585483),
+    f = n(591759),
     C = n(998502),
     N = n(996106),
     A = n(186901),
@@ -133,7 +133,7 @@ function Z(e, t) {
                         null != n && ((0, m.dL)(v.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, 'settings'));
                         break;
                     case A.jE.CHANGELOG:
-                        null != n && ((0, m.dL)(S.Z.formatPathWithQuery(v.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
+                        null != n && ((0, m.dL)(f.Z.formatPathWithQuery(v.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
                         break;
                     case A.jE.LIBRARY:
                         (0, m.dL)(v.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, 'library');
@@ -197,7 +197,7 @@ function Z(e, t) {
                         })
                     );
                 } catch (e) {
-                    throw (f.S.dispatch(v.CkL.CONNECTIONS_CALLBACK_ERROR), e);
+                    throw (S.S.dispatch(v.CkL.CONNECTIONS_CALLBACK_ERROR), e);
                 }
             }
         },

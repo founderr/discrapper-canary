@@ -11,7 +11,7 @@ var r = n(442837),
     s = n(760373);
 function l(e) {
     let { channelId: t, location: n } = e,
-        { enabled: l } = o.c.useExperiment({ location: n });
+        { enabled: l } = (0, o.S)({ location: n });
     return (0, r.e7)(
         [a.Z, i.Z],
         () =>

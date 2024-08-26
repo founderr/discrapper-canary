@@ -22,8 +22,8 @@ var s = n(735250),
     R = n(252618),
     C = n(313201),
     g = n(605236),
-    p = n(984370),
-    N = n(797614),
+    N = n(984370),
+    p = n(797614),
     A = n(108427),
     m = n(210887),
     f = n(695346),
@@ -43,8 +43,8 @@ var s = n(735250),
     U = n(981631),
     G = n(723359),
     y = n(921944),
-    k = n(689938),
-    H = n(199071);
+    H = n(689938),
+    k = n(199071);
 let w = {
         [j.dG.REQUESTS]: () => (0, s.jsx)(D.Z, {}),
         [j.dG.ACTIVITY]: () => (0, s.jsx)(Z.Z, {}),
@@ -59,27 +59,27 @@ function V(e) {
         a = (0, v.gU)(),
         r = (0, L.Z)();
     return (0, s.jsxs)(_.TabBar, {
-        className: H.settingsTabBar,
-        'aria-label': k.Z.Messages.FAMILY_CENTER_TITLE,
+        className: k.settingsTabBar,
+        'aria-label': H.Z.Messages.FAMILY_CENTER_TITLE,
         selectedItem: t,
         type: 'top',
         look: 'brand',
         onItemSelect: n,
         children: [
             (0, s.jsx)(_.TabBar.Item, {
-                className: H.settingsTabBarItem,
+                className: k.settingsTabBarItem,
                 id: j.dG.ACTIVITY,
-                children: k.Z.Messages.FAMILY_CENTER_ACTIVITY_TAB
+                children: H.Z.Messages.FAMILY_CENTER_ACTIVITY_TAB
             }),
             (0, s.jsxs)(_.TabBar.Item, {
-                className: H.settingsTabBarItem,
+                className: k.settingsTabBarItem,
                 id: j.dG.REQUESTS,
-                'aria-label': k.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
+                'aria-label': H.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
                 children: [
-                    k.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
+                    H.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
                     a > 0
                         ? (0, s.jsx)(_.NumberBadge, {
-                              className: H.badge,
+                              className: k.badge,
                               count: a
                           })
                         : null
@@ -87,9 +87,9 @@ function V(e) {
             }),
             r
                 ? (0, s.jsx)(_.TabBar.Item, {
-                      className: H.settingsTabBarItem,
+                      className: k.settingsTabBarItem,
                       id: j.dG.SETTINGS,
-                      children: k.Z.Messages.SETTINGS
+                      children: H.Z.Messages.SETTINGS
                   })
                 : null
         ]
@@ -99,43 +99,43 @@ function W(e) {
     let { theme: t, section: n, handleItemSelect: a } = e,
         r = (0, C.Dt)(),
         o = (0, v.gU)();
-    return (0, s.jsxs)(p.Z, {
-        className: i()((0, M.Q)(t), H.sidebarTabBar),
+    return (0, s.jsxs)(N.Z, {
+        className: i()((0, M.Q)(t), k.sidebarTabBar),
         scrollable: l.tq,
         role: 'navigation',
         'aria-labelledby': r,
         toolbar: !0,
         children: [
-            (0, s.jsx)(p.Z.Icon, {
+            (0, s.jsx)(N.Z.Icon, {
                 icon: _.GroupIcon,
                 'aria-hidden': !0
             }),
-            (0, s.jsx)(p.Z.Title, {
+            (0, s.jsx)(N.Z.Title, {
                 id: r,
-                children: k.Z.Messages.FAMILY_CENTER_TITLE
+                children: H.Z.Messages.FAMILY_CENTER_TITLE
             }),
-            (0, s.jsx)(p.Z.Divider, {}),
+            (0, s.jsx)(N.Z.Divider, {}),
             (0, s.jsxs)(_.TabBar, {
-                'aria-label': k.Z.Messages.FAMILY_CENTER_TITLE,
+                'aria-label': H.Z.Messages.FAMILY_CENTER_TITLE,
                 selectedItem: n,
                 type: 'top-pill',
                 onItemSelect: a,
-                className: H.__invalid_tabBar,
+                className: k.__invalid_tabBar,
                 children: [
                     (0, s.jsx)(_.TabBar.Item, {
                         id: j.dG.ACTIVITY,
-                        className: H.item,
-                        children: k.Z.Messages.FAMILY_CENTER_ACTIVITY_TAB
+                        className: k.item,
+                        children: H.Z.Messages.FAMILY_CENTER_ACTIVITY_TAB
                     }),
                     (0, s.jsxs)(_.TabBar.Item, {
                         id: j.dG.REQUESTS,
-                        className: H.item,
-                        'aria-label': k.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
+                        className: k.item,
+                        'aria-label': H.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
                         children: [
-                            k.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
+                            H.Z.Messages.FAMILY_CENTER_REQUESTS_TAB,
                             o > 0
                                 ? (0, s.jsx)(_.NumberBadge, {
-                                      className: H.badge,
+                                      className: k.badge,
                                       count: o
                                   })
                                 : null
@@ -154,9 +154,9 @@ function K() {
         l = (0, P.M)(),
         { selectedTab: u, handleTabChange: T } = (0, b.Z)(),
         I = (0, C.Dt)(),
-        p = S.default.getCurrentUser(),
+        N = S.default.getCurrentUser(),
         m = null != e,
-        f = r && null != p && !m;
+        f = r && null != N && !m;
     return (a.useEffect(() => {
         (0, A.e)('family-center'),
             x.ZP.initialPageLoad(),
@@ -176,15 +176,15 @@ function K() {
                 initial_page: j.QH[u],
                 source: j._6[j.Mu.SIDENAV]
             }),
-            N.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
+            p.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
     }, [r, m]),
     f)
         ? ((0, E.mN)(G.L0.FAMILY_CENTER), null)
         : (0, s.jsxs)('main', {
-              className: i()(H.container),
-              'aria-label': k.Z.Messages.FAMILY_CENTER_TITLE,
+              className: i()(k.container),
+              'aria-label': H.Z.Messages.FAMILY_CENTER_TITLE,
               children: [
-                  (0, s.jsx)(R.yY, { location: k.Z.Messages.FAMILY_CENTER_TITLE }),
+                  (0, s.jsx)(R.yY, { location: H.Z.Messages.FAMILY_CENTER_TITLE }),
                   (0, s.jsx)(V, {
                       section: u,
                       handleItemSelect: (e) => {
@@ -194,7 +194,7 @@ function K() {
                   (0, s.jsx)(_.TabBar.Panel, {
                       id: u,
                       'aria-labelledby': I,
-                      className: H.contentPanel,
+                      className: k.contentPanel,
                       children: (0, s.jsx)('div', { children: w[u]() })
                   })
               ]
@@ -206,7 +206,7 @@ function Y() {
         n = (0, v.M8)(),
         r = (0, g.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         l = (0, c.e7)([O.Z], () => O.Z.getIsInitialized()),
-        p = (0, P.M)(),
+        N = (0, P.M)(),
         M = (0, c.e7)([m.Z], () => m.Z.theme),
         { selectedTab: Z, handleTabChange: D } = (0, b.Z)(),
         B = (0, C.Dt)(),
@@ -230,11 +230,11 @@ function Y() {
                 (h.default.track(U.rMx.FAMILY_CENTER_VIEWED, {
                     is_considered_adult: t,
                     num_of_accepted_links: n,
-                    selected_teen_id: p,
+                    selected_teen_id: N,
                     initial_page: j.QH[Z],
                     source: j._6[j.Mu.SIDENAV]
                 }),
-                N.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
+                p.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
         }, [l, V]),
         a.useEffect(() => {
             let e = f.Ex.getSetting();
@@ -248,10 +248,10 @@ function Y() {
     return (0, s.jsx)(I.Gt, {
         value: e,
         children: (0, s.jsxs)('main', {
-            className: i()(H.container, H.containerSidenav),
-            'aria-label': k.Z.Messages.FAMILY_CENTER_TITLE,
+            className: i()(k.container, k.containerSidenav),
+            'aria-label': H.Z.Messages.FAMILY_CENTER_TITLE,
             children: [
-                (0, s.jsx)(R.yY, { location: k.Z.Messages.FAMILY_CENTER_TITLE }),
+                (0, s.jsx)(R.yY, { location: H.Z.Messages.FAMILY_CENTER_TITLE }),
                 (0, s.jsx)(W, {
                     theme: M,
                     section: Y,
@@ -262,10 +262,10 @@ function Y() {
                 (0, s.jsx)(_.TabBar.Panel, {
                     id: Y,
                     'aria-labelledby': B,
-                    className: H.contentPanel,
+                    className: k.contentPanel,
                     children: (0, s.jsx)(_.Scroller, {
                         children: (0, s.jsx)('div', {
-                            className: H.sideNavContent,
+                            className: k.sideNavContent,
                             children: z()
                         })
                     })

@@ -958,7 +958,7 @@ function eA() {
         { hasSearchResults: o, searchResults: l } = (0, ee.E)(),
         c = (0, D.p)(),
         _ = (0, P.Z)(),
-        { enabled: E } = b.c.useExperiment({ location: 'PrivacySafetySettings' });
+        { enabled: E } = (0, b.S)({ location: 'PrivacySafetySettings' });
     return (0, i.jsx)(em, {
         currentUser: e,
         defaultGuildsRestricted: Q.iG.useSetting(),

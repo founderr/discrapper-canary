@@ -21,8 +21,8 @@ var s = t(735250),
     p = t(318661),
     x = t(428785),
     Z = t(78675),
-    v = t(113557),
-    h = t(169979),
+    h = t(113557),
+    v = t(169979),
     S = t(119096),
     T = t(502762),
     A = t(544989),
@@ -168,7 +168,7 @@ function U(e) {
                                     (0, s.jsxs)('div', {
                                         className: y.headerInner,
                                         children: [
-                                            (0, s.jsx)(v.Z, {
+                                            (0, s.jsx)(h.Z, {
                                                 location: 'SimplifiedUserProfileModal',
                                                 user: n,
                                                 displayProfile: eo,
@@ -201,7 +201,7 @@ function U(e) {
                                                     })
                                                 ]
                                             }),
-                                            (0, s.jsx)(h.Z, {
+                                            (0, s.jsx)(v.Z, {
                                                 location: 'SimplifiedUserProfileModal',
                                                 user: n,
                                                 displayProfile: eo,

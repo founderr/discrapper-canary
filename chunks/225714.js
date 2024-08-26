@@ -19,17 +19,17 @@ function E(e) {
     let { isCurrentUser: n, user: t, relationshipType: E, friendToken: f, persistentCallCtaEnabled: m = !1, activeInviteToCallCtaEnabled: p = !1, onClose: x } = e,
         { newestAnalyticsLocation: Z } = (0, l.ZP)();
     if (n || E === u.OGo.BLOCKED) return null;
-    let v = m
+    let h = m
             ? (0, s.jsx)(a.Z, {
                   user: t,
                   onClose: x
               })
             : null,
-        h = (0, s.jsx)(c.Z, {
+        v = (0, s.jsx)(c.Z, {
             user: t,
             onClose: x
         });
-    if (E === u.OGo.FRIEND && p && null != h)
+    if (E === u.OGo.FRIEND && p && null != v)
         return (0, s.jsxs)('div', {
             className: _.multipleButtons,
             children: [
@@ -37,14 +37,14 @@ function E(e) {
                     userId: t.id,
                     onClose: x
                 }),
-                h
+                v
             ]
         });
     if (E === u.OGo.FRIEND || t.bot)
         return (0, s.jsxs)('div', {
             className: _.multipleButtons,
             children: [
-                v,
+                h,
                 (0, s.jsx)(d.c, {
                     userId: t.id,
                     onClose: x
@@ -52,7 +52,7 @@ function E(e) {
             ]
         });
     if (E === u.OGo.PENDING_OUTGOING || E === u.OGo.PENDING_INCOMING)
-        return p && null != h
+        return p && null != v
             ? (0, s.jsxs)('div', {
                   className: _.multipleButtons,
                   children: [
@@ -65,7 +65,7 @@ function E(e) {
                           userId: t.id,
                           onClose: x
                       }),
-                      h
+                      v
                   ]
               })
             : (0, s.jsxs)('div', {
@@ -76,14 +76,14 @@ function E(e) {
                           tooltipText: I.Z.Messages.FRIENDS_SECTION_PENDING,
                           disabled: !0
                       }),
-                      v,
+                      h,
                       (0, s.jsx)(d.c, {
                           userId: t.id,
                           onClose: x
                       })
                   ]
               });
-    return p && null != h
+    return p && null != v
         ? (0, s.jsxs)('div', {
               className: _.multipleButtons,
               children: [
@@ -103,13 +103,13 @@ function E(e) {
                       userId: t.id,
                       onClose: x
                   }),
-                  h
+                  v
               ]
           })
         : (0, s.jsxs)('div', {
               className: _.multipleButtons,
               children: [
-                  v,
+                  h,
                   (0, s.jsx)(d.v, {
                       userId: t.id,
                       onClose: x

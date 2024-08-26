@@ -16,26 +16,26 @@ var a = n(636977),
     g = n(150192),
     p = n(889010),
     T = n(488905),
-    f = n(347137),
-    S = n(731455),
+    S = n(347137),
+    f = n(731455),
     C = n(981631),
     N = n(46140),
     A = n(689938),
     v = n(745322);
 let Z = (e) => {
         switch (e) {
-            case S.Gj.Activity:
-                return S.fW.Activity;
-            case S.Gj.Music:
-                return S.fW.Music;
-            case S.Gj.Television:
-                return S.fW.Television;
-            case S.Gj.Science:
-                return S.fW.Science;
-            case S.Gj.Education:
-                return S.fW.Education;
+            case f.Gj.Activity:
+                return f.fW.Activity;
+            case f.Gj.Music:
+                return f.fW.Music;
+            case f.Gj.Television:
+                return f.fW.Television;
+            case f.Gj.Science:
+                return f.fW.Science;
+            case f.Gj.Education:
+                return f.fW.Education;
             default:
-                return S.fW.Discover;
+                return f.fW.Discover;
         }
     },
     L = () => {
@@ -45,7 +45,7 @@ let Z = (e) => {
             })),
             n = (0, _.Z)(N.dr.QUEST_HOME_DESKTOP),
             o = (0, s.e7)([g.Z], () => g.Z.getDiscoveryCategories(), [], g.j),
-            f =
+            S =
                 null == o
                     ? void 0
                     : o.map((e) => ({
@@ -53,14 +53,14 @@ let Z = (e) => {
                           icon: Z(e.categoryId)
                       })),
             L = (e) => {
-                (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== S.Gj.Quests && (0, m.uL)(C.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === S.Gj.Quests && (0, E.navigateToQuestHome)(N.dr.DISCOVERY_SIDEBAR, a.j.DISCOVERY_SIDEBAR);
+                (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== f.Gj.Quests && (0, m.uL)(C.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === f.Gj.Quests && (0, E.navigateToQuestHome)(N.dr.DISCOVERY_SIDEBAR, a.j.DISCOVERY_SIDEBAR);
             };
         return (0, i.jsxs)(r.Scroller, {
             className: v.sidebarContainer,
             children: [
                 (0, i.jsx)(T.V, { text: A.Z.Messages.DISCOVER }),
                 (0, i.jsx)(p.Z, {
-                    categories: f,
+                    categories: S,
                     handleCategorySelect: L,
                     currentCategoryId: e,
                     shouldDisplaySelectedCategory: !t
@@ -72,8 +72,8 @@ let Z = (e) => {
                 }),
                 n &&
                     (0, i.jsx)(h.Z, {
-                        onClick: () => L(S.Gj.Quests),
-                        isSelected: e === S.Gj.Quests
+                        onClick: () => L(f.Gj.Quests),
+                        isSelected: e === f.Gj.Quests
                     })
             ]
         });
@@ -85,5 +85,5 @@ t.Z = function () {
         }),
         t = e.length > 0,
         { clanDiscoveryEnabled: n } = (0, o.nk)('guild_discovery_sidebar');
-    return t || n ? (0, i.jsx)(f.Z, {}) : (0, i.jsx)(L, {});
+    return t || n ? (0, i.jsx)(S.Z, {}) : (0, i.jsx)(L, {});
 };

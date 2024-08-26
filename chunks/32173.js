@@ -20,8 +20,8 @@ var i = n(399606),
     R = n(131951),
     C = n(78839),
     g = n(424218),
-    p = n(63063),
-    N = n(380684),
+    N = n(63063),
+    p = n(380684),
     A = n(74538),
     m = n(860489),
     f = n(494127),
@@ -41,8 +41,8 @@ var i = n(399606),
     U = n(994554),
     G = n(704565),
     y = n(393305),
-    k = n(338879),
-    H = n(609926),
+    H = n(338879),
+    k = n(609926),
     w = n(203302),
     F = n(766491),
     V = n(193943),
@@ -51,8 +51,8 @@ var i = n(399606),
     Y = n(334347),
     z = n(132015),
     Q = n(142416),
-    q = n(607762),
-    X = n(474106),
+    X = n(607762),
+    q = n(474106),
     J = n(567452),
     $ = n(572501),
     ee = n(755590),
@@ -68,7 +68,7 @@ var i = n(399606),
 t.Z = () => {
     let { analyticsLocations: e } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, c.ZP)(),
-        n = (0, g.BU)(((0, N.Xv)() ? b.wb : b.Uq) / 1024, { useKibibytes: !0 }),
+        n = (0, g.BU)(((0, p.Xv)() ? b.wb : b.Uq) / 1024, { useKibibytes: !0 }),
         s = (0, i.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
         a = null != s ? A.ZP.getPremiumPlanItem(s) : null,
         ec = null != a ? A.ZP.getSkuIdForPlan(a.planId) : null,
@@ -81,11 +81,11 @@ t.Z = () => {
         eR = null != eT ? eT.percentage : void 0,
         eC = (0, u.Z)(R.Z),
         eg = (0, h.Z)(),
-        ep = (0, E.Z)({
+        eN = (0, E.Z)({
             scrollPosition: L.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
-        eN = () => {
+        ep = () => {
             o.Z.open(P.oAB.VOICE, L.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
@@ -151,7 +151,7 @@ t.Z = () => {
                                 });
                             }
                           : () => {
-                                window.open(p.Z.getArticleURL(P.BhN.CLIPS), '_blank');
+                                window.open(N.Z.getArticleURL(P.BhN.CLIPS), '_blank');
                             },
                       perkImage: F
                   }
@@ -202,7 +202,7 @@ t.Z = () => {
                       subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
                       description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                       descriptionCta: Z.Z.Messages.TAKE_ME_THERE,
-                      onCtaClick: eN,
+                      onCtaClick: ep,
                       perkImage: z
                   }
                 : {
@@ -219,7 +219,7 @@ t.Z = () => {
                       subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
                       description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
                       descriptionCta: Z.Z.Messages.TAKE_ME_THERE,
-                      onCtaClick: eN,
+                      onCtaClick: ep,
                       perkImage: Q
                   }
                 : {
@@ -258,7 +258,7 @@ t.Z = () => {
                 subtitle: Z.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
                 description: Z.Z.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
                 descriptionCta: Z.Z.Messages.TAKE_ME_THERE,
-                onCtaClick: ep,
+                onCtaClick: eN,
                 perkImage: y
             },
             remixing: ed
@@ -290,7 +290,7 @@ t.Z = () => {
                         analyticsLocations: e
                     });
                 },
-                perkImage: k,
+                perkImage: H,
                 hideOnNarrowScreen: !0
             },
             specialMemberPricing: ed
@@ -377,7 +377,7 @@ t.Z = () => {
                 name: 'upcomingDropUntimed',
                 title: Z.Z.Messages.NEW_DROP,
                 pillText: Z.Z.Messages.COMING_SOON,
-                backgroundImage: X
+                backgroundImage: q
             },
             badge: {
                 name: 'badge',
@@ -438,13 +438,13 @@ t.Z = () => {
                 descriptionCta: ed || e_ ? Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NITRO_NEW_APP_STYLES : Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
                 isPremiumGetCta: !(ed || e_),
                 onCtaClick: ed || e_ ? em : void 0,
-                perkImage: q
+                perkImage: X
             },
             referralProgram: {
                 name: 'referralProgram',
                 title: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_TITLE,
                 subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_SUBTITLE,
-                description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_DESCRIPTION.format({ helpdeskArticle: p.Z.getArticleURL(P.BhN.REFERRAL_PROGRAM) }),
+                description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_REFERRAL_PROGRAM_DESCRIPTION.format({ helpdeskArticle: N.Z.getArticleURL(P.BhN.REFERRAL_PROGRAM) }),
                 descriptionCta: Z.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
                 isPremiumGetCta: !ed || void 0,
                 perkImage: $
@@ -455,7 +455,7 @@ t.Z = () => {
                 subtitle: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_SERVER_PRORFILES_SUBTITLE,
                 descriptionCta: ed ? Z.Z.Messages.TAKE_ME_THERE : Z.Z.Messages.MARKETING_PAGE_CTA_GET_NITRO,
                 isPremiumGetCta: !ed,
-                onCtaClick: ed ? ep : void 0,
+                onCtaClick: ed ? eN : void 0,
                 perkImage: et
             }
         };
@@ -491,7 +491,7 @@ t.Z = () => {
                 descriptionCta: Z.Z.Messages.VISIT_THE_SHOP_CTA,
                 pillText: Z.Z.Messages.NITRO_HOME_TAB_NEW.toLocaleUpperCase(),
                 onCtaClick: ed ? eA : void 0,
-                perkImage: H,
+                perkImage: k,
                 isPremiumGetCta: !ed
             }),
         ef

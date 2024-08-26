@@ -20,8 +20,8 @@ var i = n(735250),
     g = n(88693),
     p = n(611928),
     T = n(680180),
-    f = n(791734),
-    S = n(341789),
+    S = n(791734),
+    f = n(341789),
     C = n(591433),
     N = n(282773),
     A = n(143021),
@@ -104,7 +104,7 @@ function x() {
                             onClick: Y ? V : void 0
                         }),
                     !q &&
-                        (0, i.jsx)(f.Z, {
+                        (0, i.jsx)(S.Z, {
                             className: w,
                             tabs: K,
                             selectedTab: Y ? null : b,
@@ -120,7 +120,7 @@ function x() {
                       onGuildCardClick: J,
                       onGuildCardSeen: X
                   })
-                : (0, i.jsx)(S.Z, {
+                : (0, i.jsx)(f.Z, {
                       loadId: e.current,
                       selectedTab: b,
                       onScroll: t,

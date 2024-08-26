@@ -42,8 +42,8 @@ var s,
     R = n(420224),
     C = n(782164),
     g = n(22344),
-    p = n(107209),
-    N = n(876122),
+    N = n(107209),
+    p = n(876122),
     A = n(692797),
     m = n(219663),
     f = n(480097),
@@ -128,7 +128,7 @@ let b = {
             }))
             .otherwise(() => null),
     v = {
-        imageSrc: N,
+        imageSrc: p,
         style: {
             position: 'absolute',
             width: '600px',
@@ -136,7 +136,7 @@ let b = {
         }
     },
     Z = {
-        imageSrc: p,
+        imageSrc: N,
         style: {
             position: 'absolute',
             width: '400px',

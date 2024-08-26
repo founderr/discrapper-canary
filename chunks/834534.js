@@ -21,8 +21,8 @@ var i = t(442837),
     p = t(335191),
     x = t(351707),
     Z = t(228168),
-    v = t(689938),
-    h = t(408277);
+    h = t(689938),
+    v = t(408277);
 function S(e) {
     let { user: n, currentUser: t, displayProfile: S, subsection: T, onClose: A } = e,
         { theme: g } = (0, m.z)(),
@@ -35,7 +35,7 @@ function S(e) {
         C = (0, u.Z)(n.id);
     return (0, s.jsxs)(o.ScrollerThin, {
         fade: !0,
-        className: h.scroller,
+        className: v.scroller,
         children: [
             (null == S ? void 0 : S.bio) != null &&
                 (null == S ? void 0 : S.bio) !== '' &&
@@ -51,7 +51,7 @@ function S(e) {
                     scrollIntoView: T === Z.Tb.ROLES
                 }),
             (0, s.jsx)(f.Z, {
-                heading: v.Z.Messages.USER_PROFILE_MEMBER_SINCE,
+                heading: h.Z.Messages.USER_PROFILE_MEMBER_SINCE,
                 children: (0, s.jsx)(E.Z, {
                     userId: n.id,
                     guildId: null == S ? void 0 : S.guildId,
@@ -60,11 +60,11 @@ function S(e) {
             }),
             b.length > 0 &&
                 (0, s.jsx)(f.Z, {
-                    heading: v.Z.Messages.CONNECTIONS,
+                    heading: h.Z.Messages.CONNECTIONS,
                     scrollIntoView: T === Z.Tb.CONNECTIONS,
                     children: (0, s.jsx)(p.OA, {
                         connectedAccounts: b,
-                        className: h.connections,
+                        className: v.connections,
                         userId: n.id,
                         theme: g,
                         locale: O
@@ -72,12 +72,12 @@ function S(e) {
                 }),
             C.length > 0 &&
                 (0, s.jsx)(f.Z, {
-                    heading: v.Z.Messages.APPS,
+                    heading: h.Z.Messages.APPS,
                     children: C.map((e) =>
                         (0, s.jsx)(
                             p.tH,
                             {
-                                className: h.appsConnections,
+                                className: v.appsConnections,
                                 applicationRoleConnection: e,
                                 locale: O,
                                 onApplicationClicked: () => {
@@ -90,11 +90,11 @@ function S(e) {
                     )
                 }),
             (0, s.jsx)(f.Z, {
-                heading: v.Z.Messages.NOTE,
+                heading: h.Z.Messages.NOTE,
                 scrollIntoView: T === Z.Tb.NOTE,
                 children: (0, s.jsx)(l.Z, {
                     userId: n.id,
-                    className: h.note,
+                    className: v.note,
                     autoFocus: T === Z.Tb.NOTE,
                     onUpdate: () => N({ action: 'SET_NOTE' })
                 })

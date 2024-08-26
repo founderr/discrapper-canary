@@ -15,8 +15,8 @@ var s = n(735250),
     R = n(347475),
     C = n(342414),
     g = n(938736),
-    p = n(391110),
-    N = n(71363),
+    N = n(391110),
+    p = n(71363),
     A = n(781800),
     m = n(981631),
     f = n(396001),
@@ -41,10 +41,10 @@ t.Z = () => {
                         children: [
                             (0, s.jsx)(C.Z, {
                                 className: f.heroHeading,
-                                location: p.MQ.HOME
+                                location: N.MQ.HOME
                             }),
                             (0, s.jsx)(I.Z, {
-                                variant: p.R0.WHATS_NEW,
+                                variant: N.R0.WHATS_NEW,
                                 className: i()(f.whatsNew, { [f.whatsNewWithOriginalHeroHeading]: !x }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
@@ -55,7 +55,7 @@ t.Z = () => {
                                 leftAlignHeaders: !0,
                                 showAllPerksButton: (0, s.jsx)(A.Z, {
                                     setIsAllPerksVisible: n,
-                                    previousComponent: p.MQ.HOME
+                                    previousComponent: N.MQ.HOME
                                 })
                             }),
                             (0, s.jsx)(R.Z, {
@@ -84,10 +84,10 @@ t.Z = () => {
                     })
                 })
             }),
-            (0, s.jsx)(N.Z, {
+            (0, s.jsx)(p.Z, {
                 isAllPerksVisible: t,
                 setIsAllPerksVisible: n,
-                previousComponent: p.MQ.HOME
+                previousComponent: N.MQ.HOME
             })
         ]
     });

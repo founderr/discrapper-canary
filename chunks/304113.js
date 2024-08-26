@@ -25,15 +25,15 @@ function p(e) {
     l()(null != a, 'UserProfileModalExperimentWrapper: currentUser cannot be undefined');
     let p = (0, r.e7)([c.Z], () => c.Z.isBlocked(t.id)),
         [x, Z] = i.useState(p),
-        v = (0, u.sS)({ location: n });
+        h = (0, u.sS)({ location: n });
     i.useEffect(() => {
         Z(p);
     }, [p]);
-    let h = !m.some((e) => {
+    let v = !m.some((e) => {
         var n;
         return (null !== (n = o.sourceAnalyticsLocations) && void 0 !== n ? n : []).includes(e);
     });
-    return x && v && h
+    return x && h && v
         ? (0, s.jsx)(I.Z, {
               user: t,
               currentUser: a,

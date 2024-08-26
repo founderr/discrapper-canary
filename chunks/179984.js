@@ -15,8 +15,8 @@ var s = n(735250),
     R = n(78839),
     C = n(74538),
     g = n(775412),
-    p = n(104494),
-    N = n(639119),
+    N = n(104494),
+    p = n(639119),
     A = n(230916),
     m = n(248042),
     f = n(823188),
@@ -117,8 +117,8 @@ t.Z = (e) => {
     var t;
     let n,
         { className: r, hideCTAs: P = !1, headingOverride: L, hidePill: v = !1, selectedPlanColumnClassName: Z, selectedPlanTier: y = x.p9.TIER_2 } = e,
-        { analyticsLocations: k } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        H = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
+        { analyticsLocations: H } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+        k = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         w = (0, T.V)(),
         F = 'PlanComparisonTable';
     (0, d.j)({
@@ -133,18 +133,18 @@ t.Z = (e) => {
         W = (0, o.ap)(V),
         K = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
         Y = (0, C.M5)(K, x.p9.TIER_2),
-        z = (0, N.N)(),
+        z = (0, p.N)(),
         Q = null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        q = (0, g.rT)(),
-        X = (0, p.Ng)(),
-        J = null != X && (0, p.Wp)(X, x.Si.TIER_2),
+        X = (0, g.rT)(),
+        q = (0, N.Ng)(),
+        J = null != q && (0, N.Wp)(q, x.Si.TIER_2),
         $ = (0, A.A)(x.Xh.PREMIUM_MONTH_TIER_2),
         ee = ''.concat($, '/').concat((0, C.eP)(x.rV.MONTH)),
         et = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
         en = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
         es = (0, S.n)(et, en, J, ee),
         ea = (0, m.Vi)();
-    if (!H || !w) return null;
+    if (!k || !w) return null;
     let er = {
         label: (0, s.jsx)(c.Heading, {
             className: b.__invalid_textColor,
@@ -182,7 +182,7 @@ t.Z = (e) => {
                                 subscriptionTier: x.Si.TIER_0,
                                 showIcon: !1
                             }),
-                      q === x.p9.TIER_2 || null != Q
+                      X === x.p9.TIER_2 || null != Q
                           ? null
                           : (0, s.jsx)(h.Z, {
                                 className: b.button,
@@ -207,7 +207,7 @@ t.Z = (e) => {
                                 showIcon: !1,
                                 isEligibleForBogoPromotion: ea
                             }),
-                      q === x.p9.TIER_0 || null != Q
+                      X === x.p9.TIER_0 || null != Q
                           ? null
                           : (0, s.jsx)(h.Z, {
                                 className: b.button,
@@ -221,7 +221,7 @@ t.Z = (e) => {
           }),
         (n = v
             ? null
-            : null != Q || null != q
+            : null != Q || null != X
               ? (0, s.jsx)(f.Cy, {
                     text: null != Q ? O.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : O.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
                     className: b.freeTrialPillWithSparkles,
@@ -230,9 +230,9 @@ t.Z = (e) => {
               : ea
                 ? (0, s.jsx)(D, {})
                 : (0, s.jsx)(B, {}));
-    let ei = Q === x.Si.TIER_0 || q === x.p9.TIER_0 || y === x.p9.TIER_0;
+    let ei = Q === x.Si.TIER_0 || X === x.p9.TIER_0 || y === x.p9.TIER_0;
     return (0, s.jsx)(E.Gt, {
-        value: k,
+        value: H,
         children: (0, s.jsxs)('div', {
             className: i()(b.root, r),
             'data-testid': 'v2-marketing-page-comparison-table',

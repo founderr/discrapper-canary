@@ -21,7 +21,7 @@ var i = t(442837),
     p = t(392214);
 function x(e) {
     var n;
-    let { user: t, currentUser: x, channelId: Z, displayProfile: v, initialSection: h, initialSubsection: S, friendToken: T, onClose: A } = e,
+    let { user: t, currentUser: x, channelId: Z, displayProfile: h, initialSection: v, initialSubsection: S, friendToken: T, onClose: A } = e,
         g = (0, i.e7)([l.Z], () => l.Z.getRelationshipType(t.id)),
         N = (0, E.Z)({
             user: t,
@@ -33,12 +33,12 @@ function x(e) {
             (0, s.jsx)(I.Z, {
                 user: t,
                 profileType: f.y0.FULL_SIZE,
-                nickname: r.ZP.getName(null == v ? void 0 : v.guildId, Z, t),
-                pronouns: null == v ? void 0 : v.pronouns,
+                nickname: r.ZP.getName(null == h ? void 0 : h.guildId, Z, t),
+                pronouns: null == h ? void 0 : h.pronouns,
                 nicknameVariant: 'heading-xl/bold',
                 nicknameIcons: (0, s.jsx)(c.Z, { userId: t.id }),
                 tags: (0, s.jsx)(a.Z, {
-                    displayProfile: v,
+                    displayProfile: h,
                     profileType: f.y0.FULL_SIZE,
                     onClose: A
                 })
@@ -49,7 +49,7 @@ function x(e) {
                     className: p.friendRequestBannerOverlay,
                     children: (0, s.jsx)(d.Z, {
                         user: t,
-                        guildId: null !== (n = null == v ? void 0 : v.guildId) && void 0 !== n ? n : void 0,
+                        guildId: null !== (n = null == h ? void 0 : h.guildId) && void 0 !== n ? n : void 0,
                         channelId: Z,
                         friendToken: T,
                         className: p.friendRequestBanner
@@ -60,9 +60,9 @@ function x(e) {
                 children: (0, s.jsx)(_.Z, {
                     user: t,
                     currentUser: x,
-                    displayProfile: v,
+                    displayProfile: h,
                     items: N,
-                    initialSection: h,
+                    initialSection: v,
                     initialSubsection: S,
                     onClose: A
                 })

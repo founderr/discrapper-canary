@@ -15,8 +15,8 @@ var s = n(735250),
     R = n(103433),
     C = n(166021),
     g = n(32173),
-    p = n(391110),
-    N = n(75077),
+    N = n(391110),
+    p = n(75077),
     A = n(981631),
     m = n(689938),
     f = n(396001),
@@ -30,12 +30,12 @@ t.Z = (e) => {
             let [n, s] = t;
             return !1 !== s.canReveal && 'upcomingDropUntimed' !== s.name && (e[n] = s), e;
         }, {}),
-        P = (0, I.HI)({ location: p.MQ.SEE_ALL }),
+        P = (0, I.HI)({ location: N.MQ.SEE_ALL }),
         { analyticsLocations: L } = (0, u.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [v, Z] = a.useState(!1),
         D = (0, E.ZP)('perks-discoverability'),
         B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        j = (0, N.mN)();
+        j = (0, p.mN)();
     return (
         P === I.mJ.DEFAULT ? ((t = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
         (0, s.jsx)(c.AdvancedScrollerAuto, {
@@ -54,7 +54,7 @@ t.Z = (e) => {
                             onBackClick: () => {
                                 h(!1),
                                     T.default.track(A.rMx.NITRO_HOME_NAVIGATION, {
-                                        current_component: p.MQ.SEE_ALL,
+                                        current_component: N.MQ.SEE_ALL,
                                         next_component: M,
                                         interaction_component: 'Back Button'
                                     });
@@ -71,15 +71,15 @@ t.Z = (e) => {
                                 }),
                                 (0, s.jsx)(C.Z, {
                                     className: f.cardCarousel,
-                                    cards: (0, N.sP)({
+                                    cards: (0, p.sP)({
                                         perksCards: b,
-                                        variant: p.R0.CARD_CAROUSEL_FIRST_ROW,
+                                        variant: N.R0.CARD_CAROUSEL_FIRST_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
                                         isPremiumSubscriber: j,
                                         isFullScreen: x
                                     }),
-                                    cardType: p.R0.CARD_CAROUSEL_FIRST_ROW
+                                    cardType: N.R0.CARD_CAROUSEL_FIRST_ROW
                                 }),
                                 (0, s.jsx)(c.Heading, {
                                     variant: 'heading-xxl/extrabold',
@@ -89,15 +89,15 @@ t.Z = (e) => {
                                 }),
                                 (0, s.jsx)(C.Z, {
                                     className: f.cardCarousel,
-                                    cards: (0, N.sP)({
+                                    cards: (0, p.sP)({
                                         perksCards: b,
-                                        variant: p.R0.CARD_CAROUSEL_SECOND_ROW,
+                                        variant: N.R0.CARD_CAROUSEL_SECOND_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
                                         isPremiumSubscriber: j,
                                         isFullScreen: x
                                     }),
-                                    cardType: p.R0.CARD_CAROUSEL_SECOND_ROW
+                                    cardType: N.R0.CARD_CAROUSEL_SECOND_ROW
                                 }),
                                 (0, s.jsx)(c.Heading, {
                                     variant: 'heading-xxl/extrabold',
@@ -107,15 +107,15 @@ t.Z = (e) => {
                                 }),
                                 (0, s.jsx)(C.Z, {
                                     className: f.cardCarousel,
-                                    cards: (0, N.sP)({
+                                    cards: (0, p.sP)({
                                         perksCards: b,
-                                        variant: p.R0.CARD_CAROUSEL_THIRD_ROW,
+                                        variant: N.R0.CARD_CAROUSEL_THIRD_ROW,
                                         shopMarketingVariation: D,
                                         tileOrderVariant: P,
                                         isPremiumSubscriber: j,
                                         isFullScreen: x
                                     }),
-                                    cardType: p.R0.CARD_CAROUSEL_THIRD_ROW
+                                    cardType: N.R0.CARD_CAROUSEL_THIRD_ROW
                                 })
                             ]
                         }),

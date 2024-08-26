@@ -6,7 +6,7 @@ n.d(t, {
         return I;
     },
     _Z: function () {
-        return p;
+        return S;
     },
     kj: function () {
         return E;
@@ -137,7 +137,7 @@ function A(e, t) {
         i.fy.FREQUENT_USER_ACTION
     );
 }
-function p() {
+function S() {
     i.hW.updateAsync(
         'favorites',
         (e) => {

@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(974042),
     p = n(451478),
     T = n(434184),
-    f = n(701861),
-    S = n(437314),
+    S = n(701861),
+    f = n(437314),
     C = n(696577),
     N = n(163417),
     A = n(492347),
@@ -59,7 +59,7 @@ t.Z = function (e) {
             children: [
                 t === L.pJs.ONLINE && (0, i.jsx)(m.Z, {}),
                 (0, i.jsx)(
-                    S.Z,
+                    f.Z,
                     {
                         type: t,
                         onClick: () => {
@@ -124,7 +124,7 @@ t.Z = function (e) {
                 w
                     ? (0, i.jsx)('div', {
                           className: R.emptyStateContainer,
-                          children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, b)
+                          children: (0, i.jsx)(f.Z, { type: f.j.SECTION_NO_RESULTS }, b)
                       })
                     : (0, i.jsx)(N.Z, {
                           relationshipCount: M,
@@ -149,7 +149,7 @@ t.Z = function (e) {
                                   case L.pJs.ONLINE:
                                   case L.pJs.ALL:
                                   default:
-                                      return (0, i.jsx)(f.Z, {
+                                      return (0, i.jsx)(S.Z, {
                                           ...e,
                                           isFocused: P
                                       });

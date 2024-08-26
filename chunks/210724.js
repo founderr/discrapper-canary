@@ -20,8 +20,8 @@ var s = n(735250),
     R = n(497505),
     C = n(918701),
     g = n(302245),
-    p = n(977156),
-    N = n(5881),
+    N = n(977156),
+    p = n(5881),
     A = n(602667),
     m = n(78826),
     f = n(693900),
@@ -32,11 +32,11 @@ var s = n(735250),
 function O(e) {
     var t, n, r;
     let { quest: I } = e,
-        O = (0, N.T)({
+        O = (0, p.T)({
             quest: I,
             location: h.dr.QUESTS_BAR
         }),
-        b = (0, p.Zy)({ location: h.dr.QUESTS_BAR }),
+        b = (0, N.Zy)({ location: h.dr.QUESTS_BAR }),
         P = (0, o.e7)([_.Z], () => _.Z.useReducedMotion),
         L = (0, o.e7)([u.Z], () => u.Z.hasLayers()),
         v = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
@@ -46,21 +46,21 @@ function O(e) {
         j = (null === (r = I.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
         U = null != I.userStatus && (0, C.zE)(I.userStatus, R.jn.QUEST_BAR),
         G = (0, T.tP)(I),
-        { hasError: y, isLoading: k } = (0, m.d7)(),
-        H = b && !U && !j && !G && !k,
-        w = a.useRef(H),
-        F = (0, S.B)(I, H && !y),
+        { hasError: y, isLoading: H } = (0, m.d7)(),
+        k = b && !U && !j && !G && !H,
+        w = a.useRef(k),
+        F = (0, S.B)(I, k && !y),
         V = (0, g.vI)(I, h.dr.QUESTS_BAR) ? g.WV : F.collapsedHeight,
         W = a.useRef(-1),
         K = a.useRef(!1),
         [Y, z] = a.useState(!1),
-        [Q, q] = a.useState(!1),
-        [X, J] = a.useState(!0),
+        [Q, X] = a.useState(!1),
+        [q, J] = a.useState(!0),
         [$, ee] = a.useState(!0),
         [et, en] = a.useState(F.preEnrollmentExpandedHeight),
         es = a.useRef(null),
         ea = a.useCallback((e) => {
-            J(!1), q(e);
+            J(!1), X(e);
         }, []),
         er = a.useCallback(() => {
             var e, t;
@@ -115,8 +115,8 @@ function O(e) {
             !D && v && !Z && !K.current && ea(!1);
         }, [v, D, Z, ea]),
         a.useLayoutEffect(() => {
-            H !== w.current && ee(!1), (w.current = H);
-        }, [H]);
+            k !== w.current && ee(!1), (w.current = k);
+        }, [k]);
     let eI = v ? h.XZ : h.R4,
         [{ expansionSpring: eR }, eC] = (0, c.useSpring)(() => ({
             from: { expansionSpring: 0 },
@@ -136,7 +136,7 @@ function O(e) {
     }, [Q, eC, P]);
     let { visibilitySpring: eg } = (0, c.useSpring)({
         from: { visibilitySpring: 0 },
-        to: { visibilitySpring: H ? 1 : 0 },
+        to: { visibilitySpring: k ? 1 : 0 },
         config: {
             tension: 250,
             friction: 10,
@@ -172,24 +172,24 @@ function O(e) {
                     }
                 });
     }, [y, b, I.id]),
-    b && (H || !$ || k) && !y)
+    b && (k || !$ || H) && !y)
         ? (0, s.jsx)(A.A, {
               questOrQuests: I,
               questContent: F.trackingCtx.content,
-              overrideVisibility: !L && H,
+              overrideVisibility: !L && k,
               children: () => {
                   let e = F.component;
                   return (0, s.jsx)('div', {
                       className: x.mask,
                       children: (0, s.jsx)(l.animated.div, {
-                          'aria-hidden': !H,
+                          'aria-hidden': !k,
                           onMouseLeave: eT,
                           onMouseEnter: eE,
                           onFocus: e_,
                           onBlur: eu,
                           className: i()(x.wrapper, {
-                              [x.wrapperInvisible]: !H,
-                              [x.wrapperVisible]: H && $
+                              [x.wrapperInvisible]: !k,
+                              [x.wrapperVisible]: k && $
                           }),
                           style: {
                               color: I.config.colors.secondary,
@@ -214,7 +214,7 @@ function O(e) {
                                       expandedContentRef: es,
                                       expansionSpring: eR,
                                       isExpanded: Q,
-                                      isExpansionAnimationComplete: X,
+                                      isExpansionAnimationComplete: q,
                                       onCtxMenuClosed: eo,
                                       onCtxMenuOpened: el,
                                       onCtxMenuSelection: ec,

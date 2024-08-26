@@ -12,17 +12,17 @@ var i = n(735250),
     o = n(410030),
     c = n(100527),
     u = n(906732),
-    d = n(680295),
-    h = n(785717),
-    p = n(221292),
-    m = n(318661),
-    _ = n(428785),
-    f = n(78675),
-    E = n(113557),
-    C = n(169979),
-    g = n(119096),
-    I = n(502762),
-    x = n(256059),
+    d = n(688465),
+    h = n(680295),
+    p = n(785717),
+    m = n(221292),
+    _ = n(318661),
+    f = n(428785),
+    E = n(78675),
+    C = n(113557),
+    g = n(169979),
+    I = n(119096),
+    x = n(502762),
     T = n(437758),
     N = n(544989),
     S = n(481932),
@@ -38,14 +38,14 @@ var i = n(735250),
 function P(e) {
     let { user: t, currentUser: n, channel: P } = e,
         y = __OVERLAY__,
-        D = (0, m.ZP)(t.id),
+        D = (0, _.ZP)(t.id),
         k = (0, o.ZP)(),
-        U = (0, _.Z)({
+        U = (0, f.Z)({
             user: t,
             currentUser: n,
             location: L.Sbl.PROFILE_PANEL
         }),
-        w = (0, h.ZB)({
+        w = (0, p.ZB)({
             layout: U ? 'SIMPLIFIED_DM_PANEL' : 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE',
             userId: t.id,
             channelId: P.id
@@ -70,9 +70,9 @@ function P(e) {
         };
     return (0, i.jsx)(u.Gt, {
         value: B,
-        children: (0, i.jsx)(h.Mt, {
+        children: (0, i.jsx)(p.Mt, {
             value: w,
-            children: (0, i.jsxs)(I.Z, {
+            children: (0, i.jsxs)(x.Z, {
                 ref: H,
                 user: t,
                 displayProfile: D,
@@ -96,20 +96,20 @@ function P(e) {
                             (0, i.jsxs)('header', {
                                 className: O.header,
                                 children: [
-                                    (0, i.jsx)(f.Z, {
+                                    (0, i.jsx)(E.Z, {
                                         user: t,
                                         displayProfile: D,
                                         profileType: R.y0.PANEL,
                                         animateOnHover: !G,
                                         className: O.banner
                                     }),
-                                    (0, i.jsx)(g.Z, {
+                                    (0, i.jsx)(I.Z, {
                                         isReply: Y,
                                         sent: W,
                                         shown: V,
                                         className: O.toast
                                     }),
-                                    (0, i.jsx)(E.Z, {
+                                    (0, i.jsx)(C.Z, {
                                         location: 'SimplifiedProfilePanel',
                                         user: t,
                                         displayProfile: D,
@@ -123,7 +123,7 @@ function P(e) {
                                         setIsReplyInteraction: K,
                                         showReplyPopout: q === R.P.REPLY && Q === R.n_.AVATAR
                                     }),
-                                    (0, i.jsx)(C.Z, {
+                                    (0, i.jsx)(g.Z, {
                                         location: 'SimplifiedProfilePanel',
                                         user: t,
                                         channelId: P.id,
@@ -135,7 +135,7 @@ function P(e) {
                                         setIsReplyInteraction: K,
                                         showReplyPopout: q === R.P.REPLY && Q === R.n_.STATUS
                                     }),
-                                    (0, i.jsx)(x.Z, { user: t })
+                                    t.isClyde() && (0, i.jsx)(d.Z, { className: O.headerTag })
                                 ]
                             }),
                             (0, i.jsx)(A.Z, {
@@ -163,7 +163,7 @@ function P(e) {
                                 color: O.footerButtonColor,
                                 onClick: () => {
                                     ee(),
-                                        (0, p.pQ)({
+                                        (0, m.pQ)({
                                             action: 'PRESS_VIEW_PROFILE',
                                             analyticsLocations: B,
                                             ...w
@@ -173,7 +173,7 @@ function P(e) {
                             })
                         }),
                     (null == D ? void 0 : D.profileEffectId) != null &&
-                        (0, i.jsx)(d.Z, {
+                        (0, i.jsx)(h.Z, {
                             profileEffectId: null == D ? void 0 : D.profileEffectId,
                             isHovering: G
                         })

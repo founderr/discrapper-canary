@@ -9,10 +9,10 @@ t.d(n, {
         return a;
     }
 });
-var o = t(735250);
+var r = t(735250);
 t(470079);
-var r = t(120356),
-    c = t.n(r),
+var o = t(120356),
+    c = t.n(o),
     l = t(726542),
     s = t(981631),
     i = t(145301);
@@ -21,22 +21,22 @@ function a(e) {
 }
 function u(e) {
     let { children: n, platformType: t } = e,
-        r = l.Z.get(t);
-    return (0, o.jsx)('div', {
+        o = l.Z.get(t);
+    return (0, r.jsx)('div', {
         className: i.verifyConnectedAccount,
-        children: (0, o.jsxs)('div', {
-            children: [(0, o.jsx)(d, { platform: r }), n]
+        children: (0, r.jsxs)('div', {
+            children: [(0, r.jsx)(d, { platform: o }), n]
         })
     });
 }
 function d(e) {
     let { platform: n, className: t } = e;
-    return (0, o.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: c()(i.logos, t),
         children: [
-            (0, o.jsx)('div', { className: c()(i.logo, i.logoDiscord) }),
-            (0, o.jsx)('div', { className: i.logosDivider }),
-            (0, o.jsx)('div', {
+            (0, r.jsx)('div', { className: c()(i.logo, i.logoDiscord) }),
+            (0, r.jsx)('div', { className: i.logosDivider }),
+            (0, r.jsx)('div', {
                 className: i.logo,
                 style: { backgroundImage: 'url("'.concat(n.icon.whiteSVG, '")') }
             })

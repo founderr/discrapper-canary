@@ -10,15 +10,15 @@ var i = t(470079),
 function r(e) {
     let { applicationId: n, channelId: t, launchingComponentId: r, onSubmissionComplete: s } = e,
         c = (0, a.e7)([o.ZP], () => o.ZP.getLaunchState(n, t)),
-        d = null != c && c.isLaunching && c.componentId === r,
-        u = (0, l.Z)(d);
+        u = null != c && c.isLaunching && c.componentId === r,
+        d = (0, l.Z)(u);
     return (
         i.useEffect(() => {
-            !d && u && (null == s || s());
-        }, [d, u, s]),
+            !u && d && (null == s || s());
+        }, [u, d, s]),
         {
-            submitting: d,
-            wasSubmitting: u
+            submitting: u,
+            wasSubmitting: d
         }
     );
 }

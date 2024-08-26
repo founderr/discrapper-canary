@@ -19,7 +19,7 @@ t.Z = function (e) {
         C = (0, i.e7)([o.default], () => o.default.locale);
     (0, _.U)(I.jXE.SETTINGS_PREMIUM_BANNER, a);
     let g = (0, i.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
-        { localizedPricingBannerHeader: p, localizedPricingBannerBody: N } = (0, d.vB)({
+        { localizedPricingBannerHeader: N, localizedPricingBannerBody: p } = (0, d.vB)({
             localizedPricingPromo: t,
             subscription: g,
             userLocale: C
@@ -35,7 +35,7 @@ t.Z = function (e) {
             (0, s.jsx)(l.Heading, {
                 className: R.bannerHeading,
                 variant: 'heading-xl/semibold',
-                children: p
+                children: N
             }),
             (0, s.jsx)('div', {
                 className: R.textContainer,
@@ -43,7 +43,7 @@ t.Z = function (e) {
                     color: 'none',
                     variant: 'text-md/normal',
                     className: R.bannerBody,
-                    children: N
+                    children: p
                 })
             }),
             (0, s.jsxs)('div', {

@@ -24,15 +24,15 @@ var i,
     g = n(301544),
     p = n(931515),
     T = n(286083),
-    f = n(207796),
-    S = n(777734),
+    S = n(207796),
+    f = n(777734),
     C = n(976757),
     N = n(981631),
     A = n(689938),
     v = n(266489);
 function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
-    return e === f.v0.SAVED_GUILDS ? 'saved_guilds' : t;
+    return e === S.v0.SAVED_GUILDS ? 'saved_guilds' : t;
 }
 ((s = i || (i = {})).TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.PAGINATION = 'pagination'), (s.HEADER_SPACER = 'header_spacer'), ((r = a || (a = {})).DEFAULT = 'default'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');
 t.ZP = o.memo(function (e) {
@@ -48,7 +48,7 @@ t.ZP = o.memo(function (e) {
             return i > 360 ? Math.max(Math.floor(t - (t - e) / 2), 1) : n < 240 ? Math.max(Math.max(e, t), 1) : Math.max(e, 1);
         }, [O]),
         { loaded: x, clans: b, searchResult: P, searchCriteria: M } = (0, p.ML)(R, 'saved_guilds' === Z),
-        D = (0, f.GN)((e) => e.selectedTraits, u.Z),
+        D = (0, S.GN)((e) => e.selectedTraits, u.Z),
         y = (0, h.Z)(P),
         { currentPage: j, updatePage: U, totalItems: G, pageSize: k } = (0, T.$)();
     o.useEffect(() => {
@@ -192,7 +192,7 @@ t.ZP = o.memo(function (e) {
                     case 'top_picks':
                         return (0, l.jsx)('div', {
                             className: v.topPicksSection,
-                            children: (0, l.jsx)(S.Z, {
+                            children: (0, l.jsx)(f.Z, {
                                 title: t,
                                 subtitle: n
                             })
@@ -215,7 +215,7 @@ t.ZP = o.memo(function (e) {
                         return (0, l.jsx)('div', { className: v.headerSpacer });
                     default:
                         if (null == t) return null;
-                        return (0, l.jsx)(S.Z, {
+                        return (0, l.jsx)(f.Z, {
                             title: t,
                             subtitle: n
                         });

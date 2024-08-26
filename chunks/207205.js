@@ -3,7 +3,7 @@ n.d(t, {
         return g;
     },
     Rm: function () {
-        return f;
+        return S;
     },
     aL: function () {
         return i;
@@ -117,8 +117,8 @@ function I(e, t) {
     };
 }
 function g(e, t) {
-    let n = o.ZP.ackMessageId(e);
-    return null != n && c.default.extractTimestamp(t) > c.default.extractTimestamp(n);
+    let n = o.ZP.getTrackedAckMessageId(e);
+    return null == n || c.default.extractTimestamp(t) > c.default.extractTimestamp(n);
 }
 function p(e) {
     return !1;
@@ -147,7 +147,7 @@ function T(e) {
         score_components: e.score_components
     };
 }
-function f(e, t, n) {
+function S(e, t, n) {
     let i = h.Z.getReadTimestamp(e);
     null == i && (i = null == n ? void 0 : n[e]);
     let a = h.Z.getReadTimestamp(t);

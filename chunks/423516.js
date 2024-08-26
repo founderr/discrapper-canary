@@ -8,7 +8,7 @@ var l = n(120356),
     c = n(433912);
 t.Z = function (e) {
     let { className: t, hasVideo: n, text: l } = e,
-        { enabled: u } = s.c.useExperiment({ location: 'RTCConnectionStatusText' }),
+        { enabled: u } = (0, s.S)({ location: 'RTCConnectionStatusText' }),
         d = n ? o.Z.Messages.E2EE_VIDEO_DETAILS : o.Z.Messages.E2EE_VOICE_DETAILS;
     return (0, i.jsx)(a.Z, {
         className: r()(t, u ? c.hoverableStatus : c.status),

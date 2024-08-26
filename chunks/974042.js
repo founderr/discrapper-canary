@@ -34,7 +34,7 @@ function T(e) {
         usernameLower: null != t ? t.username.toLowerCase() : null
     };
 }
-function f(e) {
+function S(e) {
     return {
         status: E.Z.getStatus(e),
         isMobile: E.Z.isMobileOnline(e),
@@ -42,7 +42,7 @@ function f(e) {
         applicationStream: u.Z.getAnyStreamForUser(e)
     };
 }
-function S(e) {
+function f(e) {
     let t = [];
     return (
         s()(_.ZP.memberOf(e))
@@ -76,8 +76,8 @@ class N {
                         type: e,
                         nickname: m.Z.getNickname(t),
                         ...T(t),
-                        ...f(t),
-                        ...S(t)
+                        ...S(t),
+                        ...f(t)
                     })
             ),
             t = s().map(
@@ -88,8 +88,8 @@ class N {
                         type: 99,
                         nickname: e.name,
                         ...T(e.key),
-                        ...f(e.key),
-                        ...S(e.key)
+                        ...S(e.key),
+                        ...f(e.key)
                     })
             );
         return new N(s().concat(e, t));
@@ -178,7 +178,7 @@ function M(e) {
 }
 class D extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, E.Z, I.default, h.Z, _.ZP, u.Z, d.Z), this.syncWith([m.Z], P), this.syncWith([d.Z], P), this.syncWith([I.default], M(T)), this.syncWith([E.Z, u.Z], M(f)), b();
+        this.waitFor(m.Z, E.Z, I.default, h.Z, _.ZP, u.Z, d.Z), this.syncWith([m.Z], P), this.syncWith([d.Z], P), this.syncWith([I.default], M(T)), this.syncWith([E.Z, u.Z], M(S)), b();
     }
     getState() {
         return {

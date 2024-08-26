@@ -1,6 +1,6 @@
 t.d(n, {
     A: function () {
-        return u;
+        return d;
     }
 });
 var i = t(735250);
@@ -11,13 +11,13 @@ var a = t(780384),
     r = t(176412),
     s = t(79646),
     c = t(983008),
-    d = t(478408);
-function u(e) {
-    let { searchQuery: n, textContent: t, type: u } = e,
+    u = t(478408);
+function d(e) {
+    let { searchQuery: n, textContent: t, type: d } = e,
         m = (0, o.ZP)(),
-        p = (0, a.ap)(m) ? d : c;
+        p = (0, a.ap)(m) ? u : c;
     return (
-        (0, r.Bm)(u, n),
+        (0, r.Bm)(d, n),
         (0, i.jsxs)('div', {
             className: s.emptyStateContainer,
             children: [

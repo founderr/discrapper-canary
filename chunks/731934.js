@@ -15,8 +15,8 @@ var s = n(735250),
     R = n(631885),
     C = n(895328),
     g = n(568671),
-    p = n(419821),
-    N = n(367515),
+    N = n(419821),
+    p = n(367515),
     A = n(250285),
     m = n(292352),
     f = n(134612),
@@ -152,7 +152,7 @@ function L(e) {
                           {
                               userId: i.id,
                               isLast: l,
-                              children: () => (t === m.ne.ACTIVE ? (0, s.jsx)(p.u, { user: i }) : (0, s.jsx)(N.B, { user: i }))
+                              children: () => (t === m.ne.ACTIVE ? (0, s.jsx)(N.u, { user: i }) : (0, s.jsx)(p.B, { user: i }))
                           },
                           i.id
                       );

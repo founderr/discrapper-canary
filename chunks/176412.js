@@ -16,8 +16,8 @@ var i = t(470079),
     r = t(481060),
     s = t(2052),
     c = t(542094),
-    d = t(513202),
-    u = t(367907),
+    u = t(513202),
+    d = t(367907),
     m = t(895924),
     p = t(691424),
     _ = t(428595),
@@ -52,14 +52,14 @@ function g(e) {
         }),
         v = (0, c.w1)({
             applicationId: t.id,
-            embeddedActivitiesManager: d.Z,
+            embeddedActivitiesManager: u.Z,
             channelId: n.id,
             locationObject: C.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e,
                     t = h.Z.entrypoint();
                 o && f.y(E.ti.ACTIVITY),
-                    (0, u.yw)(A.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                    (0, d.yw)(A.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,
                         section_name: a,
@@ -89,7 +89,7 @@ function P(e, n) {
             () =>
                 (0, a.debounce)(
                     (e, n) => {
-                        (0, u.yw)(A.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, d.yw)(A.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: n
                         });

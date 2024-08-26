@@ -47,8 +47,8 @@ function S(e) {
             if (null == t) return !1;
             let n = new Uint8Array(t),
                 i = f.Z.isKeyVerified(e, n) || _.Z.isKeyVerified(e, n),
-                a = (0, m.MA)(e, [h.Z, p.Z]),
-                s = i && a,
+                a = (0, m.UB)(e, [h.Z, p.Z]),
+                s = i && !a,
                 l = s !== C.get(e);
             return C.set(e, s), l;
         })(t),

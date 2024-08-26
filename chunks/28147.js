@@ -11,8 +11,8 @@ var i = t(735250),
     r = t(209173),
     s = t(110924),
     c = t(367907),
-    d = t(555573),
-    u = t(895924),
+    u = t(555573),
+    d = t(895924),
     m = t(809547),
     p = t(583027),
     _ = t(585483),
@@ -42,8 +42,8 @@ function j(e) {
 function O(e) {
     let { channel: n, query: t, entrypoint: l, isScrollCloseToBottom: s } = e,
         { enabled: c } = f.nS.useExperiment({ location: 'App Launcher Search View' }, { autoTrackExposure: !1 }),
-        d = l === E._b.TEXT,
         u = l === E._b.TEXT,
+        d = l === E._b.TEXT,
         {
             loading: p,
             isEmptyState: _,
@@ -54,8 +54,8 @@ function O(e) {
             channel: n,
             query: t,
             searchesActivities: !0,
-            searchesCommands: d,
-            searchesBots: u
+            searchesCommands: u,
+            searchesBots: d
         }),
         {
             fetchState: x,
@@ -121,7 +121,7 @@ function O(e) {
                             applicationResults: L,
                             includePlaceholder: P,
                             query: t,
-                            searchesBots: u
+                            searchesBots: d
                         })
                 ]
             });
@@ -133,8 +133,8 @@ function Z(e) {
         {
             loading: s,
             isEmptyState: c,
-            commandResults: d,
-            hasCommandResults: u,
+            commandResults: u,
+            hasCommandResults: d,
             applicationResults: m,
             hasApplicationResults: p
         } = (0, A.pe)({
@@ -163,10 +163,10 @@ function Z(e) {
             })
           : (0, i.jsxs)('div', {
                 children: [
-                    u &&
+                    d &&
                         (0, i.jsx)(H, {
                             channel: n,
-                            commandResults: d,
+                            commandResults: u,
                             query: t
                         }),
                     p &&
@@ -236,14 +236,14 @@ function H(e) {
                                 C.y(E.ti.DISMISSED),
                                     (0, p.Mo)({
                                         command: t,
-                                        location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
+                                        location: d.Vh.APP_LAUNCHER_HOME_SEARCH,
                                         sectionName: E.L3.SEARCH
                                     }),
-                                    d.Po({
+                                    u.Po({
                                         channelId: l.id,
                                         command: t,
                                         section: o,
-                                        location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
+                                        location: d.Vh.APP_LAUNCHER_HOME_SEARCH,
                                         triggerSection: void 0,
                                         queryLength: r.length,
                                         sectionName: E.L3.SEARCH,
@@ -292,7 +292,7 @@ function D(e) {
                                   B,
                                   {
                                       application: t,
-                                      location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
+                                      location: d.Vh.APP_LAUNCHER_HOME_SEARCH,
                                       sectionName: E.L3.SEARCH,
                                       resultsPosition: n,
                                       installOnDemand: l,
@@ -319,7 +319,7 @@ function D(e) {
                                   {
                                       application: t,
                                       look: N.U4.LARGE_BANNER,
-                                      location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
+                                      location: d.Vh.APP_LAUNCHER_HOME_SEARCH,
                                       sectionName: E.L3.SEARCH,
                                       resultsPosition: n,
                                       installOnDemand: l,

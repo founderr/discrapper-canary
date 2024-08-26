@@ -20,7 +20,7 @@ var s = n(735250),
     R = n(981631),
     C = n(689938),
     g = n(610781);
-function p(e, t, n) {
+function N(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -33,7 +33,7 @@ function p(e, t, n) {
         e
     );
 }
-class N extends a.PureComponent {
+class p extends a.PureComponent {
     componentDidMount() {
         this._initTimeout.start(1000, this.setupVoiceActivity);
     }
@@ -138,20 +138,20 @@ class N extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            p(this, '_initTimeout', new c.V7()),
-            p(this, '_silenceTimeout', new c.V7()),
-            p(this, '_messageTimeout', new c.V7()),
-            p(this, '_micTestStartTime', void 0),
-            p(this, 'state', {
+            N(this, '_initTimeout', new c.V7()),
+            N(this, '_silenceTimeout', new c.V7()),
+            N(this, '_messageTimeout', new c.V7()),
+            N(this, '_micTestStartTime', void 0),
+            N(this, 'state', {
                 volume: -100,
                 isMicTesting: !1,
                 isDetectingInput: !0,
                 didDeafenUser: !1
             }),
-            p(this, 'setupVoiceActivity', () => {
+            N(this, 'setupVoiceActivity', () => {
                 E.Z.getMediaEngine().on(o.aB.VoiceActivity, this.handleVoiceActivity);
             }),
-            p(this, 'handleVoiceActivity', (e) => {
+            N(this, 'handleVoiceActivity', (e) => {
                 let { isMicTesting: t } = this.state;
                 if (t && e <= -100) {
                     !this._silenceTimeout.isStarted() &&
@@ -167,7 +167,7 @@ class N extends a.PureComponent {
                         isDetectingInput: !0
                     });
             }),
-            p(this, 'handleToggleMicTest', () => {
+            N(this, 'handleToggleMicTest', () => {
                 this.state.isMicTesting ? this._micTestStop() : this._micTestStart();
             });
     }
@@ -197,4 +197,4 @@ t.Z = l.ZP.connectStores([T.Z, E.Z], () => {
         inputDeviceName: null != n ? n.name : '',
         outputDeviceName: null != r ? r.name : ''
     };
-})(N);
+})(p);

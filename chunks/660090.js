@@ -15,7 +15,7 @@ function r(e) {
             var e, i;
             return null !== (i = null === (e = t.find((e) => e.section.id === n)) || void 0 === e ? void 0 : e.data) && void 0 !== i ? i : [];
         }, [t, n]),
-        { popularSortedCommands: d, canSort: u } = (function (e) {
+        { popularSortedCommands: u, canSort: d } = (function (e) {
             let { alphabeticalSortedCommands: n } = e;
             return i.useMemo(() => {
                 if (n.length <= 1)
@@ -60,12 +60,12 @@ function r(e) {
         a.i6(n, { dontRefetchMs: l.Z.Millis.DAY });
     }, [n]),
         i.useLayoutEffect(() => {
-            if (!!u) s(o.bS.POPULAR);
-        }, [u]);
+            if (!!d) s(o.bS.POPULAR);
+        }, [d]);
     let m = c;
     switch (r) {
         case o.bS.POPULAR:
-            m = d;
+            m = u;
             break;
         case o.bS.ALPHABETICAL:
             m = c;
@@ -74,6 +74,6 @@ function r(e) {
         sortOrder: r,
         setSortOrder: s,
         commands: m,
-        canSort: u
+        canSort: d
     };
 }

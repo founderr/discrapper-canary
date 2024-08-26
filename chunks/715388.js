@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return v;
+        return h;
     }
 });
 var s = t(735250);
@@ -21,11 +21,11 @@ var i = t(442837),
     p = t(228168),
     x = t(689938),
     Z = t(408277);
-function v(e) {
+function h(e) {
     var n;
-    let { user: t, currentUser: v, displayProfile: h, subsection: S, onClose: T } = e,
+    let { user: t, currentUser: h, displayProfile: v, subsection: S, onClose: T } = e,
         { trackUserProfileAction: A } = (0, d.KZ)(),
-        g = (0, i.e7)([a.Z], () => ((null == h ? void 0 : h.guildId) != null ? a.Z.getGuild(h.guildId) : null)),
+        g = (0, i.e7)([a.Z], () => ((null == v ? void 0 : v.guildId) != null ? a.Z.getGuild(v.guildId) : null)),
         N = (0, i.e7)([u.Z], () => {
             var e;
             return null === (e = u.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
@@ -35,10 +35,10 @@ function v(e) {
         fade: !0,
         className: Z.scroller,
         children: [
-            (null == h ? void 0 : h.bio) != null &&
-                (null == h ? void 0 : h.bio) !== '' &&
+            (null == v ? void 0 : v.bio) != null &&
+                (null == v ? void 0 : v.bio) !== '' &&
                 (0, s.jsx)(I.Z, {
-                    userBio: h.bio,
+                    userBio: v.bio,
                     setLineClamp: !1
                 }),
             (null == N ? void 0 : N.popularApplicationCommandIds) != null &&
@@ -47,13 +47,13 @@ function v(e) {
                     applicationId: N.id,
                     commandIds: N.popularApplicationCommandIds,
                     channel: L,
-                    guildId: null !== (n = null == h ? void 0 : h.guildId) && void 0 !== n ? n : void 0,
+                    guildId: null !== (n = null == v ? void 0 : v.guildId) && void 0 !== n ? n : void 0,
                     onClick: T
                 }),
             null != g &&
                 (0, s.jsx)(m.Z, {
                     user: t,
-                    currentUser: v,
+                    currentUser: h,
                     guild: g,
                     scrollIntoView: S === p.Tb.ROLES
                 }),
@@ -61,7 +61,7 @@ function v(e) {
                 heading: x.Z.Messages.BOT_PROFILE_CREATED_ON,
                 children: (0, s.jsx)(E.Z, {
                     userId: t.id,
-                    guildId: null == h ? void 0 : h.guildId,
+                    guildId: null == v ? void 0 : v.guildId,
                     tooltipDelay: p.vB
                 })
             }),
