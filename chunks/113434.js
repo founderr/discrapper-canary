@@ -508,12 +508,13 @@ function eo(e, t) {
             let t = (0, f.e7)([O.Z], () => O.Z.selectedTaskPlatform(e));
             return [t, u.useCallback((t) => (0, N.OR)(e, t), [e])];
         })(e.id),
-        i = u.useMemo(() => (0, R.Nj)({ quest: e }), [e]),
-        a = u.useMemo(() => (0, R.$J)(e), [e]),
-        s = H(e),
-        o = Z(e),
-        l = (0, L.p)({ location: P.dr.QUESTS_BAR }),
-        _ = u.useMemo(
+        i = u.useMemo(() => (0, R.yH)(e), [e]),
+        a = i.includes(P.cd.DESKTOP),
+        s = i.includes(P.cd.CONSOLE),
+        o = H(e),
+        l = Z(e),
+        _ = (0, L.p)({ location: P.dr.QUESTS_BAR }),
+        E = u.useMemo(
             () =>
                 (0, c.EQ)(t)
                     .with({ percentComplete: 0 }, () => null)
@@ -525,12 +526,13 @@ function eo(e, t) {
                     .exhaustive(),
             [t]
         ),
-        E = s ? P.cd.DESKTOP : o ? P.cd.CONSOLE : null,
-        h = u.useMemo(
+        h = o ? P.cd.DESKTOP : l ? P.cd.CONSOLE : null;
+    return [
+        u.useMemo(
             () =>
                 (0, c.EQ)({
-                    lastPlatformProgress: _,
-                    currentProgressingPlatform: E,
+                    lastPlatformProgress: E,
+                    currentProgressingPlatform: h,
                     selectedPlatform: n
                 })
                     .with({ currentProgressingPlatform: P.cd.CONSOLE }, () => v.LI.CONSOLE)
@@ -571,17 +573,12 @@ function eo(e, t) {
                             lastPlatformProgress: null,
                             selectedPlatform: null
                         },
-                        () => (a && i && l ? v.LI.SELECT : a ? v.LI.CONSOLE : v.LI.DESKTOP)
+                        () => (s && a && _ ? v.LI.SELECT : s ? v.LI.CONSOLE : v.LI.DESKTOP)
                     )
                     .exhaustive(),
-            [a, i, l, _, E, n]
-        );
-    return [
-        h,
-        u.useMemo(() => {
-            let e = [];
-            return i && e.push(P.cd.DESKTOP), a && e.push(P.cd.CONSOLE), e;
-        }, [a, i]),
+            [s, a, _, E, h, n]
+        ),
+        i,
         r
     ];
 }

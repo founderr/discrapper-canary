@@ -153,6 +153,9 @@ n.d(t, {
     xn: function () {
         return es;
     },
+    yH: function () {
+        return e$;
+    },
     yI: function () {
         return Y;
     },
@@ -171,7 +174,8 @@ n.d(t, {
 }),
     n(627341),
     n(47120),
-    n(411104);
+    n(411104),
+    n(653041);
 var i = n(164369),
     a = n(392711),
     s = n(266067),
@@ -753,4 +757,23 @@ function eX(e) {
                 gamePublisher: n,
                 gameTitle: r
             });
+}
+function e$(e) {
+    let t =
+            eg({ quest: e }) ||
+            (function (e) {
+                let { quest: t } = e;
+                return (0, o.EQ)(t.config)
+                    .with(
+                        {
+                            configVersion: 2,
+                            taskConfig: { type: d.L.FIRST_PARTY }
+                        },
+                        (e) => null != e.taskConfig.tasks[l.X.STREAM_ON_DESKTOP]
+                    )
+                    .otherwise(() => !1);
+            })({ quest: e }),
+        n = ek(e),
+        r = [];
+    return t && r.push(C.cd.DESKTOP), n && r.push(C.cd.CONSOLE), r;
 }
