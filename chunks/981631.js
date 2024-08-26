@@ -4877,6 +4877,8 @@ let o7 = Object.freeze({
     (np.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED = 'user_account_email_change_reason_selected'),
     (np.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL = 'user_account_email_change_save_new_email'),
     (np.USER_ACCOUNT_EMAIL_CHANGE_WARNING_CONTINUE = 'user_account_email_change_warning_continue'),
+    (np.HD_STREAMING_POPOUT_DISMISSED = 'hd_streaming_popout_dismissed'),
+    (np.EMOJI_PICKER_BUTTON_HOVERED = 'emoji_picker_button_hovered'),
     ((nO = eF || (eF = {})).CANARY = 'canary'),
     (nO.PTB = 'ptb'),
     (nO.STABLE = 'stable'),

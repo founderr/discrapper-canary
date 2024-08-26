@@ -106,6 +106,7 @@ n.d(t, {
     (a.GUILD_TRANSFER_OWNERSHIP_CONFIRM_EMAIL_CODE = 'impression_guild_transfer_ownership_confirm_email_code'),
     (a.GUILD_TRANSFER_OWNERSHIP_CONFIRM_SMS_CODE = 'impression_guild_transfer_ownership_confirm_sms_code'),
     (a.GUILDS_EMPTY_NUX = 'impression_guilds_empty_nux'),
+    (a.HD_STREAMING_POPOUT = 'impression_hd_streaming_popout'),
     (a.HOTSPOT = 'impression_hotspot'),
     (a.HUB_CREATE_GUILD_CUSTOMIZE = 'impression_hub_create_guild_customize'),
     (a.HUB_CREATE_GUILD_TEMPLATE = 'impression_hub_create_guild_template'),
