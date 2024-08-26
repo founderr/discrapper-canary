@@ -100,6 +100,7 @@ function y(e) {
                               null == L || L();
                       },
                       className: R.clickable,
+                      focusProps: { ringClassName: R.focusRing },
                       children: ee
                   });
     return (0, r.jsxs)('div', {

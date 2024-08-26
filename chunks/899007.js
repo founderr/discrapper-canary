@@ -76,6 +76,7 @@ function v(e) {
         : (0, r.jsx)(l.Clickable, {
               ...V,
               className: s()(k, N.clickable),
+              focusProps: { ringClassName: N.focusRing },
               onClick: () => {
                   L({
                       action: 'PRESS_VIEW_PROFILE',

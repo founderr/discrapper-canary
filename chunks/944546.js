@@ -25,6 +25,7 @@ function E(e) {
     let { user: t, status: o, onSelect: u } = e,
         d = (0, a.e7)([c.Z], () => c.Z.isMobileOnline(t.id));
     return (0, i.jsxs)(s.Clickable, {
+        focusProps: { offset: { right: 8 } },
         className: _.listRow,
         onClick: u,
         onContextMenu: (e) => {

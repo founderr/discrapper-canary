@@ -1,6 +1,7 @@
 e.exports = {
     container: 'container_ecc60d',
     header: 'header_ecc60d',
+    headerTag: 'headerTag_ecc60d',
     footer: 'footer_ecc60d',
     footerButtonColor: 'footerButtonColor_ecc60d',
     banner: 'banner_ecc60d',
