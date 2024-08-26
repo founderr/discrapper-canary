@@ -4765,6 +4765,7 @@ e.exports = Object.freeze({
     SCOPE_GUILDS_JOIN: 'Join servers for you',
     SCOPE_GUILDS_MEMBERS_READ: 'Read your member info (nickname, avatar, roles, etc...) for servers you belong to',
     SCOPE_GUILDS_MEMBERS_READ_VOICE: 'Read member info (nickname, avatar, roles, etc...) for servers you belong to',
+    SCOPE_GUILDS_CHANNELS_READ: 'Read the channel list for servers you belong to and some channel info (name, type, sort order, etc...)',
     SCOPE_GDM_JOIN: 'Join group DMs for you',
     SCOPE_BOT: 'Add a bot to a server',
     SCOPE_RPC: 'Interface with your Discord client',
