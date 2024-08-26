@@ -571,18 +571,17 @@ class j extends M.Z {
                 if (!n || this.isSessionEstablished())
                     try {
                         if (null != this.webSocket) this.webSocket.send(r);
-                        else {
+                        else if ((G.warn('Attempted to send without a websocket that exists. Opcode: '.concat(e)), e === M.j.EMBEDDED_ACTIVITY_CLOSE)) {
                             var i;
-                            G.warn('Attempted to send without a websocket that exists. Opcode: '.concat(e));
-                            let [t, n] = null !== (i = Array.from(_.ZP.getSelfEmbeddedActivities().entries())[0]) && void 0 !== i ? i : [];
-                            null != t &&
-                                null != n &&
+                            let [e, t] = null !== (i = Array.from(_.ZP.getSelfEmbeddedActivities().entries())[0]) && void 0 !== i ? i : [];
+                            null != e &&
+                                null != t &&
                                 (v.Z.addBreadcrumb({
                                     message: 'Gateway close during Activity',
                                     data: {
-                                        application_id: t,
-                                        channel_id: n.channelId,
-                                        guild_id: n.guildId
+                                        application_id: e,
+                                        channel_id: t.channelId,
+                                        guild_id: t.guildId
                                     }
                                 }),
                                 v.Z.captureMessage('EMBEDDED_ACTIVITY_CLOSE was not sent due to no web socket existing'));
