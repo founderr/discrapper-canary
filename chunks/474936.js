@@ -654,6 +654,7 @@ let et = Object.freeze({
     (R.HD_STREAMING_VIEWER_UPSELL = 'hd_streaming_viewer_upsell'),
     (R.REVERSE_TRIAL_ENDED_UPSELL = 'reverse_trial_ended_upsell'),
     (R.REVERSE_TRIAL_FOLLOWUP_UPSELL = 'reverse_trial_followup_upsell'),
+    (R.FOR_LATER_MODAL_UPSELL = 'for_later_modal_upsell'),
     (R.EMOJI_EVERYWHERE_INLINE_UPSELL = 'emoji_everywhere_inline_upsell'),
     (R.EMOJI_EVERYWHERE_UPSELL = 'emoji_everywhere_upsell'),
     (R.SOUNDBOARD_EVERYWHERE_INLINE_UPSELL = 'soundboard_everywhere_inline_upsell'),

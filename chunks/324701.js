@@ -1,48 +1,77 @@
 n.d(t, {
     x: function () {
-        return d;
+        return T;
     },
     z: function () {
-        return u;
+        return m;
     }
 });
-var i = n(481060),
-    s = n(668781),
-    a = n(585483),
-    r = n(192720),
-    l = n(981631),
-    o = n(989925),
-    c = n(689938);
-async function u(e) {
-    let { displayToast: t = !1, ...n } = e,
-        u = await (0, r.XA)(n).catch((e) => {
-            var t, n, r;
-            return (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code) === l.evJ.TOO_MANY_SAVED_MESSAGES
-                ? (s.Z.show({
-                      title: c.Z.Messages.FOR_LATER_TOO_MANY_TITLE,
-                      body: c.Z.Messages.FOR_LATER_TOO_MANY_BODY.format({ max: o.D }),
-                      confirmText: c.Z.Messages.OKAY,
-                      cancelText: c.Z.Messages.FOR_LATER_MANAGE_MESSAGES,
-                      onCancel: () => a.S.dispatch(l.CkL.TOGGLE_FOR_LATER)
-                  }),
-                  null)
-                : ((0, i.showToast)((0, i.createToast)(null !== (r = null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.message) && void 0 !== r ? r : c.Z.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE)), null);
+var i = n(735250),
+    s = n(481060),
+    a = n(668781),
+    r = n(100527),
+    l = n(594174),
+    o = n(585483),
+    c = n(111361),
+    u = n(192720),
+    d = n(981631),
+    _ = n(474936),
+    E = n(989925),
+    I = n(689938);
+async function m(e) {
+    let { displayToast: t = !1, ...m } = e,
+        T = l.default.getCurrentUser();
+    if (!(0, c.I5)(T, _.p9.TIER_2)) {
+        (0, s.openModalLazy)(async () => {
+            let { default: e } = await n.e('34906').then(n.bind(n, 639565));
+            return (t) =>
+                (0, i.jsx)(e, {
+                    source: r.Z.FOR_LATER_HELPERS,
+                    ...t
+                });
         });
-    if (t && null != u) {
-        let e = null != n.dueAt ? c.Z.Messages.MESSAGE_REMINDERS_CREATE_SUCCESS : c.Z.Messages.MESSAGE_BOOKMARKS_CREATE_SUCCESS_LONG,
-            t = null != n.dueAt ? i.ToastType.CLOCK : i.ToastType.BOOKMARK;
-        (0, i.showToast)((0, i.createToast)(e, t));
+        return;
+    }
+    let h = await (0, u.XA)(m).catch((e) => {
+        var t, n, i;
+        return (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code) === d.evJ.TOO_MANY_SAVED_MESSAGES
+            ? (a.Z.show({
+                  title: I.Z.Messages.FOR_LATER_TOO_MANY_TITLE,
+                  body: I.Z.Messages.FOR_LATER_TOO_MANY_BODY.format({ max: E.D }),
+                  confirmText: I.Z.Messages.OKAY,
+                  cancelText: I.Z.Messages.FOR_LATER_MANAGE_MESSAGES,
+                  onCancel: () => o.S.dispatch(d.CkL.TOGGLE_FOR_LATER)
+              }),
+              null)
+            : ((0, s.showToast)((0, s.createToast)(null !== (i = null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.message) && void 0 !== i ? i : I.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE)), null);
+    });
+    if (t && null != h) {
+        let e = null != m.dueAt ? I.Z.Messages.MESSAGE_REMINDERS_CREATE_SUCCESS : I.Z.Messages.MESSAGE_BOOKMARKS_CREATE_SUCCESS_LONG,
+            t = null != m.dueAt ? s.ToastType.CLOCK : s.ToastType.BOOKMARK;
+        (0, s.showToast)((0, s.createToast)(e, t));
     }
 }
-async function d(e) {
-    let { displayToast: t = !1, ...n } = e,
-        s = await (0, r.ep)(n).catch((e) => {
-            var t, n;
-            return (0, i.showToast)((0, i.createToast)(null !== (n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : c.Z.Messages.ERROR_GENERIC_TITLE, i.ToastType.FAILURE)), null;
+async function T(e) {
+    let { displayToast: t = !1, ...a } = e,
+        o = l.default.getCurrentUser();
+    if (!(0, c.I5)(o, _.p9.TIER_2)) {
+        (0, s.openModalLazy)(async () => {
+            let { default: e } = await n.e('34906').then(n.bind(n, 639565));
+            return (t) =>
+                (0, i.jsx)(e, {
+                    source: r.Z.FOR_LATER_HELPERS,
+                    ...t
+                });
         });
-    if (t && null != s) {
-        let e = null != n.dueAt ? c.Z.Messages.MESSAGE_REMINDERS_DELETE_SUCCESS : c.Z.Messages.MESSAGE_BOOKMARKS_DELETE_SUCCESS,
-            t = null != n.dueAt ? i.ToastType.CLOCK : i.ToastType.BOOKMARK;
-        (0, i.showToast)((0, i.createToast)(e, t));
+        return;
+    }
+    let d = await (0, u.ep)(a).catch((e) => {
+        var t, n;
+        return (0, s.showToast)((0, s.createToast)(null !== (n = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : I.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE)), null;
+    });
+    if (t && null != d) {
+        let e = null != a.dueAt ? I.Z.Messages.MESSAGE_REMINDERS_DELETE_SUCCESS : I.Z.Messages.MESSAGE_BOOKMARKS_DELETE_SUCCESS,
+            t = null != a.dueAt ? s.ToastType.CLOCK : s.ToastType.BOOKMARK;
+        (0, s.showToast)((0, s.createToast)(e, t));
     }
 }

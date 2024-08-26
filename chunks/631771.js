@@ -115,6 +115,8 @@ function u(e) {
         case a.cd.CLIENT_THEMES_UPSELL:
         case a.cd.APP_ICONS_UPSELL:
             return i.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
+        case a.cd.FOR_LATER_MODAL_UPSELL:
+            return !0;
         default:
             return !1;
     }
