@@ -111,6 +111,11 @@ class k extends (o = d.ZP.Store) {
         var t;
         return null !== (t = s[e]) && void 0 !== t ? t : null;
     }
+    getIsActiveStreamPreviewDisabled(e) {
+        var t;
+        let n = s[e];
+        return null !== (t = null == n ? void 0 : n.previewDisabled) && void 0 !== t && t;
+    }
     getAnyStreamForUser(e) {
         var t;
         if (!(0, I.Z)(A.Z)) return null;
@@ -216,21 +221,22 @@ class k extends (o = d.ZP.Store) {
         },
         STREAM_START: function (e) {
             var t;
-            let { streamType: n, guildId: i, channelId: a, pid: o, sourceName: l, sourceId: u } = e,
-                c = (0, h.V9)({
+            let { streamType: n, guildId: i, channelId: a, pid: o, sourceName: l, sourceId: u, previewDisabled: c } = e,
+                d = (0, h.V9)({
                     streamType: n,
                     guildId: i,
                     channelId: a,
                     ownerId: T.default.getId()
                 }),
-                d = null !== (t = null != o ? f.ZP.getGameForPID(o) : null != u ? f.ZP.getRunningGames().find((e) => (0, m.Z)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
-            (s[c] = {
-                id: null == d ? void 0 : d.id,
+                _ = null !== (t = null != o ? f.ZP.getGameForPID(o) : null != u ? f.ZP.getRunningGames().find((e) => (0, m.Z)(u, e.windowHandle)) : null) && void 0 !== t ? t : null;
+            (s[d] = {
+                id: null == _ ? void 0 : _.id,
                 pid: o,
-                sourceName: l
+                sourceName: l,
+                previewDisabled: c
             }),
-                r.delete(c),
-                r.set(c, {
+                r.delete(d),
+                r.set(d, {
                     streamType: n,
                     guildId: i,
                     channelId: a,

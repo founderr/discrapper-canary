@@ -744,6 +744,11 @@ let eZ = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eL.Z.Messages.SIDECHAIN_COMPRESSION],
                 parent: eM.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING
             },
+            [eM.s6.VOICE_AND_VIDEO_STREAM_PREVIEWS]: {
+                section: ef.oAB.VOICE,
+                searchableTitles: [eL.Z.Messages.SIDECHAIN_COMPRESSION],
+                parent: eM.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING
+            },
             [eM.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_NOISE_SUPPRESSION]: {
                 section: ef.oAB.VOICE,
                 searchableTitles: [eL.Z.Messages.NOISE_SUPPRESSION, eL.Z.Messages.NOISE_CANCELLATION_SEARCH_TERM_KRISP],

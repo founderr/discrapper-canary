@@ -11,42 +11,48 @@ var i = n(512722),
     _ = n(846519),
     E = n(570140),
     f = n(710845),
-    h = n(314897),
-    p = n(358085),
-    I = n(998502),
-    m = n(569545),
-    T = n(70722),
-    g = n(981631),
-    S = n(65154);
-let A = {},
-    N = new _.V7(),
-    O = !1,
-    v = window.document.createElement('canvas');
-(v.width = 512), (v.height = 288);
-let R = v.getContext('2d');
-function C() {
-    N.stop(), null != r && (c.Z.removeSink(r, A), (r = null));
+    h = n(977059),
+    p = n(695346),
+    I = n(199902),
+    m = n(314897),
+    T = n(358085),
+    g = n(998502),
+    S = n(569545),
+    A = n(70722),
+    N = n(981631),
+    O = n(65154);
+let v = {},
+    R = new _.V7(),
+    C = !1,
+    y = window.document.createElement('canvas');
+(y.width = 512), (y.height = 288);
+let D = y.getContext('2d');
+function L() {
+    R.stop(), null != r && (c.Z.removeSink(r, v), (r = null));
 }
-let y = o().debounce((e, t, n, r) => {
-    D(
+let b = o().debounce((e, t, n, r) => {
+    M(
         e,
-        (0, m.V9)({
-            streamType: null != t ? T.lo.GUILD : T.lo.CALL,
+        (0, S.V9)({
+            streamType: null != t ? A.lo.GUILD : A.lo.CALL,
             guildId: t,
             channelId: n,
             ownerId: r
         })
     );
 }, 500);
-async function D(e, t) {
+async function M(e, t) {
     if (r !== e) return;
-    let n = () => D(e, t);
-    if (!O)
+    let { enabled: n } = (0, h.R)({ location: 'uploadStreamPreviews' }),
+        i = ((0, T.isWeb)() && p.I0.getSetting()) || I.Z.getIsActiveStreamPreviewDisabled(t);
+    if (n && i) return;
+    let s = () => M(e, t);
+    if (!C)
         try {
             let n = await (function (e, t) {
                 let n = 0;
                 return (
-                    p.isPlatformEmbedded
+                    T.isPlatformEmbedded
                         ? function (e, t) {
                               let n = (0, u.zS)(),
                                   i = (null == n ? void 0 : n.getNextVideoOutputFrame) != null;
@@ -62,9 +68,9 @@ async function D(e, t) {
                                       ? n.getNextVideoOutputFrame(e).then(o, (t) => {
                                             if (r === e) throw t;
                                         })
-                                      : c.Z.addSink(e, A, o);
+                                      : c.Z.addSink(e, v, o);
                               }).finally(() => {
-                                  !i && c.Z.removeSink(e, A);
+                                  !i && c.Z.removeSink(e, v);
                               });
                           }
                         : function (e, t) {
@@ -100,7 +106,7 @@ async function D(e, t) {
                     n = Math.min(t, 288 / e.height),
                     r = e.width * n,
                     i = e.height * n;
-                (v.width = r), (v.height = i);
+                (y.width = r), (y.height = i);
                 let a = window.document.createElement('canvas'),
                     s = a.getContext('2d');
                 (a.width = e.width), (a.height = e.height);
@@ -108,23 +114,23 @@ async function D(e, t) {
                 return (
                     null == s || s.putImageData(o, 0, 0),
                     new Promise((t) => {
-                        null == R || R.drawImage(a, 0, 0, e.width, e.height, 0, 0, r, i), t();
+                        null == D || D.drawImage(a, 0, 0, e.width, e.height, 0, 0, r, i), t();
                     })
                 );
             })(n);
-            let i = v.toDataURL('image/jpeg');
+            let i = y.toDataURL('image/jpeg');
             if (
                 (E.Z.dispatch({
                     type: 'STREAM_PREVIEW_FETCH_SUCCESS',
                     streamKey: t,
                     previewURL: i
                 }),
-                p.isPlatformEmbedded)
+                T.isPlatformEmbedded)
             ) {
-                let e = h.default.getToken();
+                let e = m.default.getToken();
                 a()(null != e, 'Auth token was null while sending screenshot.'),
-                    await I.ZP.makeChunkedRequest(
-                        g.ANM.STREAM_PREVIEW(t),
+                    await g.ZP.makeChunkedRequest(
+                        N.ANM.STREAM_PREVIEW(t),
                         { thumbnail: i },
                         {
                             method: 'POST',
@@ -133,28 +139,28 @@ async function D(e, t) {
                     );
             } else
                 await l.tn.post({
-                    url: g.ANM.STREAM_PREVIEW(t),
+                    url: N.ANM.STREAM_PREVIEW(t),
                     body: { thumbnail: i },
                     oldFormErrors: !0
                 });
         } catch (t) {
-            new f.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && N.start(60000, n);
+            new f.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && R.start(60000, s);
             return;
         }
-    r === e && (O ? N.start(60000, n) : N.start(300000, n));
+    r === e && (C ? R.start(60000, s) : R.start(300000, s));
 }
 t.Z = {
     init() {
-        E.Z.subscribe('CONNECTION_OPEN', C),
-            E.Z.subscribe('LOGOUT', C),
-            E.Z.subscribe('STREAM_DELETE', C),
+        E.Z.subscribe('CONNECTION_OPEN', L),
+            E.Z.subscribe('LOGOUT', L),
+            E.Z.subscribe('STREAM_DELETE', L),
             E.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
                 let { guildId: t, channelId: n, userId: i, streamId: a, context: s } = e;
-                !(null == a || s !== S.Yn.STREAM || i !== h.default.getId() || __OVERLAY__) && (C(), (r = a), y(a, t, n, i));
+                !(null == a || s !== O.Yn.STREAM || i !== m.default.getId() || __OVERLAY__) && (L(), (r = a), b(a, t, n, i));
             }),
             E.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;
-                O = t === g.FQ1.PAUSED || !1;
+                C = t === N.FQ1.PAUSED || !1;
             });
     }
 };

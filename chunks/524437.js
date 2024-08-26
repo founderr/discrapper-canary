@@ -1139,6 +1139,9 @@ class ee extends y.C {
                 case 9:
                     i.soundboardSettings = eZ.internalBinaryRead(e, e.uint32(), n, i.soundboardSettings);
                     break;
+                case 10:
+                    i.disableStreamPreviews = D.D5.internalBinaryRead(e, e.uint32(), n, i.disableStreamPreviews);
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
@@ -1149,7 +1152,7 @@ class ee extends y.C {
         return i;
     }
     internalBinaryWrite(e, t, n) {
-        'blur' === e.videoBackgroundFilterDesktop.oneofKind && J.internalBinaryWrite(e.videoBackgroundFilterDesktop.blur, t.tag(1, v.TD.LengthDelimited).fork(), n).join(), 'presetOption' === e.videoBackgroundFilterDesktop.oneofKind && t.tag(2, v.TD.Varint).uint32(e.videoBackgroundFilterDesktop.presetOption), 'customAsset' === e.videoBackgroundFilterDesktop.oneofKind && X.internalBinaryWrite(e.videoBackgroundFilterDesktop.customAsset, t.tag(3, v.TD.LengthDelimited).fork(), n).join(), e.alwaysPreviewVideo && D.D5.internalBinaryWrite(e.alwaysPreviewVideo, t.tag(5, v.TD.LengthDelimited).fork(), n).join(), e.afkTimeout && D.yC.internalBinaryWrite(e.afkTimeout, t.tag(6, v.TD.LengthDelimited).fork(), n).join(), e.streamNotificationsEnabled && D.D5.internalBinaryWrite(e.streamNotificationsEnabled, t.tag(7, v.TD.LengthDelimited).fork(), n).join(), e.nativePhoneIntegrationEnabled && D.D5.internalBinaryWrite(e.nativePhoneIntegrationEnabled, t.tag(8, v.TD.LengthDelimited).fork(), n).join(), e.soundboardSettings && eZ.internalBinaryWrite(e.soundboardSettings, t.tag(9, v.TD.LengthDelimited).fork(), n).join();
+        'blur' === e.videoBackgroundFilterDesktop.oneofKind && J.internalBinaryWrite(e.videoBackgroundFilterDesktop.blur, t.tag(1, v.TD.LengthDelimited).fork(), n).join(), 'presetOption' === e.videoBackgroundFilterDesktop.oneofKind && t.tag(2, v.TD.Varint).uint32(e.videoBackgroundFilterDesktop.presetOption), 'customAsset' === e.videoBackgroundFilterDesktop.oneofKind && X.internalBinaryWrite(e.videoBackgroundFilterDesktop.customAsset, t.tag(3, v.TD.LengthDelimited).fork(), n).join(), e.alwaysPreviewVideo && D.D5.internalBinaryWrite(e.alwaysPreviewVideo, t.tag(5, v.TD.LengthDelimited).fork(), n).join(), e.afkTimeout && D.yC.internalBinaryWrite(e.afkTimeout, t.tag(6, v.TD.LengthDelimited).fork(), n).join(), e.streamNotificationsEnabled && D.D5.internalBinaryWrite(e.streamNotificationsEnabled, t.tag(7, v.TD.LengthDelimited).fork(), n).join(), e.nativePhoneIntegrationEnabled && D.D5.internalBinaryWrite(e.nativePhoneIntegrationEnabled, t.tag(8, v.TD.LengthDelimited).fork(), n).join(), e.soundboardSettings && eZ.internalBinaryWrite(e.soundboardSettings, t.tag(9, v.TD.LengthDelimited).fork(), n).join(), e.disableStreamPreviews && D.D5.internalBinaryWrite(e.disableStreamPreviews, t.tag(10, v.TD.LengthDelimited).fork(), n).join();
         let r = n.writeUnknownFields;
         return !1 !== r && (!0 == r ? v.z.onWrite : r)(this.typeName, e, t), t;
     }
@@ -1205,6 +1208,12 @@ class ee extends y.C {
                 name: 'soundboard_settings',
                 kind: 'message',
                 T: () => eZ
+            },
+            {
+                no: 10,
+                name: 'disable_stream_previews',
+                kind: 'message',
+                T: () => D.D5
             }
         ]);
     }

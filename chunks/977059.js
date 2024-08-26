@@ -1,9 +1,12 @@
-t.d(n, {
+n.d(t, {
+    R: function () {
+        return u;
+    },
     S: function () {
-        return i;
+        return r;
     }
 });
-let r = (0, t(987170).Z)({
+let i = (0, n(987170).Z)({
     kind: 'user',
     id: '2024-05_secure_frames_ui_rollout',
     label: 'Secure Frames Rollout',
@@ -16,7 +19,11 @@ let r = (0, t(987170).Z)({
         }
     ]
 });
-function i(e) {
-    let { location: n } = e;
-    return r.useExperiment({ location: n }, { autoTrackExposure: !0 });
+function r(e) {
+    let { location: t } = e;
+    return i.useExperiment({ location: t }, { autoTrackExposure: !0 });
+}
+function u(e) {
+    let { location: t } = e;
+    return i.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
 }
