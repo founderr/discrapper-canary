@@ -342,7 +342,7 @@ function eT(e) {
         },
         em = async (e) => {
             let { reply: n, sendToChannel: t, onComplete: a, interactionType: l } = e;
-            if ((0, j.Io)('ContentPopout Reactor'))
+            if ((null == M || M.focus(), (0, j.Io)('ContentPopout Reactor')))
                 await (0, $.p)({
                     channel: t,
                     content: n,
@@ -371,108 +371,113 @@ function eT(e) {
             null == a || a(l, t);
         },
         eE = null != x ? x : null != F ? F : void 0;
-    return (0, a.jsxs)('div', {
-        style: { pointerEvents: A ? 'none' : 'all' },
-        children: [
-            (0, a.jsx)(er.Z, {
-                sent: L,
-                shown: A,
-                className: ec.toastContainer
-            }),
-            null != eE
-                ? eE
-                : (0, a.jsx)(ea.Z, {
-                      children: (0, a.jsxs)('div', {
-                          className: ec.emojiHotrailShareToChannel,
-                          children: [
-                              (0, a.jsx)(eh, {
-                                  channel: n,
-                                  onClickSuggestion: ed
-                              }),
-                              (0, a.jsx)(I.dE, { onSelectEmoji: ed })
-                          ]
-                      })
-                  }),
-            (0, a.jsxs)('div', {
-                className: X ? ec.inputContainerShareToChannel : ec.hiddenButRenderedInputField,
-                children: [
-                    (0, a.jsx)(I.A7, {
-                        placeholder: eu.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: et }),
-                        onEnter: e_,
-                        setEditorRef: (e) => P(e),
-                        channel: v ? n : void 0,
-                        showEmojiButton: null != eE,
-                        renderAttachButton: Z
-                            ? () =>
-                                  (0, a.jsx)(_.Tooltip, {
-                                      text: ei,
-                                      children: (e) =>
-                                          (0, a.jsx)(_.Clickable, {
-                                              ...e,
-                                              className: ec.shareToChannelButton,
-                                              onClick: () => f((e) => !e),
-                                              children: v
-                                                  ? (0, a.jsx)(_.TextIcon, {
-                                                        size: 'custom',
-                                                        width: 20,
-                                                        height: 20
-                                                    })
-                                                  : (0, a.jsx)(_.AtIcon, {
-                                                        size: 'custom',
-                                                        width: 20,
-                                                        height: 20
-                                                    })
-                                          })
-                                  })
-                            : void 0
-                    }),
-                    K &&
-                        (0, a.jsx)(_.Clickable, {
-                            onClick: () => Q(!1),
-                            className: ec.primaryActionPopoutMessageCloseIcon,
-                            children: (0, a.jsx)(_.XSmallIcon, {
-                                size: 'custom',
-                                width: 20,
-                                height: 20,
-                                color: d.Z.colors.ICON_PRIMARY
-                            })
-                        })
-                ]
-            }),
-            !1 === X &&
+    return (
+        l.useEffect(() => {
+            X && (null == M || M.focus());
+        }, [M, v, X]),
+        (0, a.jsxs)('div', {
+            style: { pointerEvents: A ? 'none' : 'all' },
+            children: [
+                (0, a.jsx)(er.Z, {
+                    sent: L,
+                    shown: A,
+                    className: ec.toastContainer
+                }),
+                null != eE
+                    ? eE
+                    : (0, a.jsx)(ea.Z, {
+                          children: (0, a.jsxs)('div', {
+                              className: ec.emojiHotrailShareToChannel,
+                              children: [
+                                  (0, a.jsx)(eh, {
+                                      channel: n,
+                                      onClickSuggestion: ed
+                                  }),
+                                  (0, a.jsx)(I.dE, { onSelectEmoji: ed })
+                              ]
+                          })
+                      }),
                 (0, a.jsxs)('div', {
-                    className: ec.primaryActionPopoutActionButtons,
+                    className: X ? ec.inputContainerShareToChannel : ec.hiddenButRenderedInputField,
                     children: [
-                        (0, a.jsxs)(
-                            _.Button,
-                            {
-                                className: ec.secondaryButton,
-                                color: _.Button.Colors.CUSTOM,
-                                onClick: () => Q(!0),
-                                innerClassName: ec.iconButton,
-                                size: J ? _.Button.Sizes.MIN : _.Button.Sizes.LARGE,
-                                children: [
-                                    (0, a.jsx)(_.ChatIcon, {
-                                        size: 'custom',
-                                        width: 20,
-                                        height: 20,
-                                        colorClass: ec.secondaryText
-                                    }),
-                                    !J &&
-                                        (0, a.jsx)(_.Text, {
-                                            variant: 'text-md/semibold',
-                                            className: ec.secondaryText,
-                                            children: eu.Z.Messages.USER_POPOUT_MESSAGE
-                                        })
-                                ]
-                            },
-                            'toggleMessageMode'
-                        ),
-                        q
+                        (0, a.jsx)(I.A7, {
+                            placeholder: eu.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: et }),
+                            onEnter: e_,
+                            setEditorRef: (e) => P(e),
+                            channel: v ? n : void 0,
+                            showEmojiButton: null != eE,
+                            renderAttachButton: Z
+                                ? () =>
+                                      (0, a.jsx)(_.Tooltip, {
+                                          text: ei,
+                                          children: (e) =>
+                                              (0, a.jsx)(_.Clickable, {
+                                                  ...e,
+                                                  className: ec.shareToChannelButton,
+                                                  onClick: () => f((e) => !e),
+                                                  children: v
+                                                      ? (0, a.jsx)(_.TextIcon, {
+                                                            size: 'custom',
+                                                            width: 20,
+                                                            height: 20
+                                                        })
+                                                      : (0, a.jsx)(_.AtIcon, {
+                                                            size: 'custom',
+                                                            width: 20,
+                                                            height: 20
+                                                        })
+                                              })
+                                      })
+                                : void 0
+                        }),
+                        K &&
+                            (0, a.jsx)(_.Clickable, {
+                                onClick: () => Q(!1),
+                                className: ec.primaryActionPopoutMessageCloseIcon,
+                                children: (0, a.jsx)(_.XSmallIcon, {
+                                    size: 'custom',
+                                    width: 20,
+                                    height: 20,
+                                    color: d.Z.colors.ICON_PRIMARY
+                                })
+                            })
                     ]
-                })
-        ]
-    });
+                }),
+                !1 === X &&
+                    (0, a.jsxs)('div', {
+                        className: ec.primaryActionPopoutActionButtons,
+                        children: [
+                            (0, a.jsxs)(
+                                _.Button,
+                                {
+                                    className: ec.secondaryButton,
+                                    color: _.Button.Colors.CUSTOM,
+                                    onClick: () => Q(!0),
+                                    innerClassName: ec.iconButton,
+                                    size: J ? _.Button.Sizes.MIN : _.Button.Sizes.LARGE,
+                                    children: [
+                                        (0, a.jsx)(_.ChatIcon, {
+                                            size: 'custom',
+                                            width: 20,
+                                            height: 20,
+                                            colorClass: ec.secondaryText
+                                        }),
+                                        !J &&
+                                            (0, a.jsx)(_.Text, {
+                                                variant: 'text-md/semibold',
+                                                className: ec.secondaryText,
+                                                children: eu.Z.Messages.USER_POPOUT_MESSAGE
+                                            })
+                                    ]
+                                },
+                                'toggleMessageMode'
+                            ),
+                            q
+                        ]
+                    })
+            ]
+        })
+    );
 }
 let eh = (e) => {
     let { channel: n, onClickSuggestion: t } = e,
