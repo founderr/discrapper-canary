@@ -18,6 +18,11 @@ let i = (0, n(818083).B)({
                 id: 1,
                 label: 'Users will see the nagbar',
                 config: { enabled: !0 }
+            },
+            {
+                id: 2,
+                label: 'Bypass eligibility check (testing only)',
+                config: { enabled: !0 }
             }
         ]
     }),
