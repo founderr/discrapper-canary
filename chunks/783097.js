@@ -1,39 +1,42 @@
 t.d(n, {
     $d: function () {
-        return f;
-    },
-    BQ: function () {
-        return C;
-    },
-    Cb: function () {
-        return g;
-    },
-    Hu: function () {
-        return P;
-    },
-    Wx: function () {
-        return _;
-    },
-    Y$: function () {
-        return v;
-    },
-    jD: function () {
         return h;
     },
-    lf: function () {
-        return N;
+    BQ: function () {
+        return f;
     },
-    sl: function () {
+    Cb: function () {
+        return P;
+    },
+    Hu: function () {
+        return L;
+    },
+    Wx: function () {
+        return C;
+    },
+    Y$: function () {
         return I;
     },
-    vJ: function () {
-        return A;
+    Yn: function () {
+        return b;
     },
-    yJ: function () {
+    jD: function () {
+        return E;
+    },
+    lf: function () {
         return x;
     },
+    sl: function () {
+        return g;
+    },
+    vJ: function () {
+        return N;
+    },
+    yJ: function () {
+        return v;
+    },
     ye: function () {
-        return E;
+        return A;
     }
 }),
     t(789020);
@@ -44,48 +47,49 @@ var i = t(668781),
     r = t(957730),
     s = t(973616),
     c = t(768581),
-    d = t(630388),
-    u = t(981631),
-    m = t(689079),
-    p = t(689938);
-let _ = { id: m.bi.BUILT_IN };
-function C(e) {
-    return e.id !== m.bi.BUILT_IN;
-}
+    u = t(630388),
+    d = t(827498),
+    m = t(981631),
+    p = t(689079),
+    _ = t(689938);
+let C = { id: p.bi.BUILT_IN };
 function f(e) {
-    return C(e) ? e.name : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
+    return e.id !== p.bi.BUILT_IN;
 }
 function h(e) {
-    return C(e) ? e.description : p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
+    return f(e) ? e.name : _.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME;
 }
 function E(e) {
-    var n;
-    return C(e) && (0, d.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, u.udG.EMBEDDED);
+    return f(e) ? e.description : _.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION;
 }
 function A(e) {
     var n;
-    return C(e) && (0, d.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, u.udG.PARTNER);
+    return f(e) && (0, u.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, m.udG.EMBEDDED);
 }
 function N(e) {
     var n;
-    return C(e) && (0, d.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, u.udG.PROMOTED);
+    return f(e) && (0, u.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, m.udG.PARTNER);
 }
 function x(e) {
-    return C(e) && E(e) ? (e instanceof s.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+    var n;
+    return f(e) && (0, u.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, m.udG.PROMOTED);
 }
 function v(e) {
-    let { command: n, optionValues: t, context: s, commandTargetId: c, maxSizeCallback: d, sectionName: u } = e,
+    return f(e) && A(e) ? (e instanceof s.Z ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
+}
+function I(e) {
+    let { command: n, optionValues: t, context: s, commandTargetId: c, maxSizeCallback: u, sectionName: d } = e,
         { channel: m } = s,
-        _ = async () => {
+        p = async () => {
             try {
                 let i = await (0, o.Z)({
                     command: n,
                     optionValues: t,
                     context: s,
                     commandTargetId: c,
-                    maxSizeCallback: d,
+                    maxSizeCallback: u,
                     commandOrigin: l.bB.APPLICATION_LAUNCHER,
-                    sectionName: u
+                    sectionName: d
                 });
                 if (n.inputType === l.iw.BUILT_IN_TEXT && null != i) {
                     var e;
@@ -95,21 +99,21 @@ function v(e) {
             } catch (e) {
                 throw (
                     (i.Z.show({
-                        title: p.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
-                        body: p.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
-                        confirmText: p.Z.Messages.RETRY,
-                        onConfirm: () => _()
+                        title: _.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_TITLE,
+                        body: _.Z.Messages.APP_LAUNCHER_UNKNOWN_COMMAND_ERROR_MODAL_BODY,
+                        confirmText: _.Z.Messages.RETRY,
+                        onConfirm: () => p()
                     }),
                     e)
                 );
             }
         };
-    return _();
+    return p();
 }
-function I(e) {
+function g(e) {
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: t, ...i } = n;
-    return C(e)
+    return f(e)
         ? {
               iconURL: c.ZP.getApplicationIconURL({
                   ...i,
@@ -121,14 +125,17 @@ function I(e) {
           }
         : {
               iconURL: null != t ? t : null,
-              name: p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
-              description: p.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
+              name: _.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_NAME,
+              description: _.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
           };
 }
-function g(e) {
-    return !!C(e) && ('is_monetized' in e ? e.is_monetized : e.isMonetized);
-}
 function P(e) {
-    let n = x(e);
+    return !!f(e) && ('is_monetized' in e ? e.is_monetized : e.isMonetized);
+}
+function L(e) {
+    let n = v(e);
     return null != n && n.displays_advertisements;
+}
+function b(e) {
+    return e === d._b.TEXT;
 }

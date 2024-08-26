@@ -34300,14 +34300,7 @@ img.thumbnail_c64476 {
 }
 
 .roleName_f9575e {
-    max-width: 200px;
     margin-right: 2px;
-    overflow: hidden
-}
-
-.roleNameOverflow_f9575e {
-    white-space: nowrap;
-    text-overflow: ellipsis;
     overflow: hidden
 }
 
@@ -34395,7 +34388,7 @@ img.thumbnail_c64476 {
     border-color: var(--profile-body-border-color)
 }
 
-.showMoreButton_c83b44 {
+.expandButton_c83b44 {
     padding: 3px 7px;
     cursor: pointer;
     align-items: center
