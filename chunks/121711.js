@@ -16,27 +16,25 @@ var i = n(735250),
     g = n(471985),
     p = n(150560),
     T = n(710914),
-    f = n(906739),
-    S = n(452081),
-    C = n(46140),
-    N = n(981631),
-    A = n(689938),
-    v = n(296561);
+    f = n(452081),
+    S = n(46140),
+    C = n(981631),
+    N = n(689938),
+    A = n(296561);
 t.Z = function (e) {
     let {} = e,
-        t = (0, g.Z)(C.dr.QUEST_HOME_DESKTOP),
-        { tabs: Z, selectedTab: L, onSelectTab: O } = (0, S.z)(),
-        { onScroll: R, scrollPosition: x } = (0, d.M)(),
-        b = (0, l.ZP)(),
-        P = p.Z.getState().getUtmCurrentContext(),
-        { quests: M, isFetchingCurrentQuests: D } = (0, I.bA)(L),
-        y = (0, f.Z)(),
-        j = null;
+        t = (0, g.Z)(S.dr.QUEST_HOME_DESKTOP),
+        { tabs: v, selectedTab: Z, onSelectTab: L } = (0, f.z)(),
+        { onScroll: O, scrollPosition: R } = (0, d.M)(),
+        x = (0, l.ZP)(),
+        b = p.Z.getState().getUtmCurrentContext(),
+        { quests: P, isFetchingCurrentQuests: M } = (0, I.bA)(Z),
+        D = null;
     if (window.location.hash.length > 0) {
         let e = window.location.hash.slice(1);
-        for (let t of M)
+        for (let t of P)
             if (t.id === e) {
-                j = e;
+                D = e;
                 break;
             }
     }
@@ -45,54 +43,54 @@ t.Z = function (e) {
             name: s.ImpressionNames.QUEST_HOME,
             type: s.ImpressionTypes.VIEW,
             properties: {
-                utm_source_current: P.utmSourceCurrent,
-                utm_medium_current: P.utmMediumCurrent,
-                utm_campaign_current: P.utmCampaignCurrent,
-                utm_content_current: P.utmContentCurrent
+                utm_source_current: b.utmSourceCurrent,
+                utm_medium_current: b.utmMediumCurrent,
+                utm_campaign_current: b.utmCampaignCurrent,
+                utm_content_current: b.utmContentCurrent
             }
         });
     }, []);
-    let U = a.useCallback(() => {
-        window.open(m.Z.getArticleURL(N.BhN.QUESTS_LEARN_MORE));
+    let y = a.useCallback(() => {
+        window.open(m.Z.getArticleURL(C.BhN.QUESTS_LEARN_MORE));
     }, []);
-    (0, c.Tt)({ location: A.Z.Messages.QUESTS });
-    let G = a.useMemo(() => ({ backgroundImage: 'url('.concat(y, ')') }), [y]);
+    (0, c.Tt)({ location: N.Z.Messages.QUESTS });
+    let j = a.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []);
     return t
         ? (0, i.jsxs)('div', {
-              className: v.container,
+              className: A.container,
               children: [
                   (0, i.jsxs)(h.ZP, {
                       children: [
-                          (0, i.jsx)('div', { className: v.dragRegion }),
-                          (0, i.jsx)(h.z6, { scrollPosition: x }),
+                          (0, i.jsx)('div', { className: A.dragRegion }),
+                          (0, i.jsx)(h.z6, { scrollPosition: R }),
                           (0, i.jsx)(h.aV, { icon: r.QuestsIcon }),
                           (0, i.jsx)(E.Z, {
-                              tabs: Z,
-                              selectedTab: L,
-                              onTabSelect: O
+                              tabs: v,
+                              selectedTab: Z,
+                              onTabSelect: L
                           })
                       ]
                   }),
                   (0, i.jsx)(_.Z, {
-                      title: A.Z.Messages.QUESTS_HOME_HERO_TITLE,
-                      description: A.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-                      onScroll: R,
+                      title: N.Z.Messages.QUESTS_HOME_HERO_TITLE,
+                      description: N.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
+                      onScroll: O,
                       button: (0, i.jsx)(u.u, {
-                          text: A.Z.Messages.LEARN_MORE,
-                          onClick: U
+                          text: N.Z.Messages.LEARN_MORE,
+                          onClick: y
                       }),
-                      bannerClassName: v.bannerContainer,
+                      bannerClassName: A.bannerContainer,
                       bannerBackground: (0, i.jsx)('div', {
-                          className: v.bannerImage,
-                          style: G,
-                          children: (0, i.jsx)('div', { className: v.bannerGradient })
+                          className: A.bannerImage,
+                          style: j,
+                          children: (0, i.jsx)('div', { className: A.bannerGradient })
                       }),
                       children:
-                          D && 0 === M.length
-                              ? (0, i.jsx)(r.Spinner, { className: v.spinner })
-                              : 0 === M.length && L === I.e5.CLAIMED
+                          M && 0 === P.length
+                              ? (0, i.jsx)(r.Spinner, { className: A.spinner })
+                              : 0 === P.length && Z === I.e5.CLAIMED
                                 ? (0, i.jsxs)(r.EmptyState, {
-                                      theme: b,
+                                      theme: x,
                                       children: [
                                           (0, i.jsx)(r.EmptyStateImage, {
                                               lightSrc: n(979770),
@@ -100,14 +98,14 @@ t.Z = function (e) {
                                               width: 415,
                                               height: 200
                                           }),
-                                          (0, i.jsx)(r.EmptyStateText, { note: A.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({ onClick: () => O(I.e5.ALL) }) })
+                                          (0, i.jsx)(r.EmptyStateText, { note: N.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({ onClick: () => L(I.e5.ALL) }) })
                                       ]
                                   })
                                 : (0, i.jsx)('div', {
-                                      className: v.gridContainer,
+                                      className: A.gridContainer,
                                       children: (0, i.jsx)(T.Z, {
-                                          quests: M,
-                                          selectedQuestId: j
+                                          quests: P,
+                                          selectedQuestId: D
                                       })
                                   })
                   })
