@@ -21,7 +21,7 @@ var i = n(392711),
 t.Z = {
     [f.Etm.GET_CHANNEL]: {
         scope: {
-            [S.Gp.ANY]: [s.x.RPC, s.x.GUILDS]
+            [S.Gp.ANY]: [s.x.RPC, s.x.GUILDS, s.x.GUILDS_CHANNELS_READ]
         },
         handler(e) {
             let {
