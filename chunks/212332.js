@@ -47,6 +47,7 @@ function N(e) {
                                             (0, i.jsx)(e, {
                                                 ...t,
                                                 initialStep: u.h8.CASH_APP_INFORMATION,
+                                                analyticsLocation: T.Sbl.CASH_APP_PAY_AWARENESS_NAGBAR,
                                                 onAddPaymentSource: (e) => (0, E.i1)(e.id)
                                             });
                                     },
