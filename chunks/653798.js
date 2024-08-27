@@ -1,133 +1,140 @@
 t.d(n, {
     HE: function () {
-        return N;
+        return M;
     },
     Ji: function () {
-        return d;
+        return N;
     },
     KU: function () {
-        return T;
+        return d;
     },
     PO: function () {
-        return u;
+        return I;
     },
     R$: function () {
-        return _;
-    },
-    i$: function () {
         return E;
     },
+    i$: function () {
+        return T;
+    },
     q9: function () {
-        return I;
+        return _;
     }
 });
 var s = t(735250);
 t(470079);
 var r = t(120356),
-    l = t.n(r),
-    i = t(911969),
-    a = t(937615),
-    c = t(689938),
-    o = t(246502);
-function u(e) {
+    i = t.n(r),
+    l = t(481060),
+    a = t(911969),
+    c = t(937615),
+    o = t(689938),
+    u = t(246502);
+function I(e) {
     let { children: n, className: t } = e;
     return (0, s.jsx)('div', {
-        className: l()(o.table, t),
-        children: n
-    });
-}
-function I(e) {
-    let { children: n } = e;
-    return (0, s.jsx)('div', {
-        className: o.header,
+        className: i()(u.table, t),
         children: n
     });
 }
 function _(e) {
+    let { children: n } = e;
+    return (0, s.jsx)('div', {
+        className: u.header,
+        children: n
+    });
+}
+function E(e) {
     let { label: n, value: t, className: r } = e;
     return (0, s.jsxs)('div', {
-        className: l()(o.row, r),
+        className: i()(u.row, r),
         children: [
             (0, s.jsx)('div', {
-                className: o.rowLabel,
+                className: u.rowLabel,
                 children: n
             }),
             (0, s.jsx)('div', {
-                className: o.rowAmount,
+                className: u.rowAmount,
                 children: t
             })
         ]
     });
 }
-function E(e) {
-    let { label: n, value: t, discounts: r, originalAmount: l, interval: u, currency: I, className: E, intervalCount: T } = e,
-        d = (e) => (null != r ? r.find((n) => n.type === e) : null),
-        N = d(i.eW.SUBSCRIPTION_PLAN),
-        M = d(i.eW.ENTITLEMENT),
-        A = null != N ? Math.floor((N.amount / l) * 100) : null,
-        L = (0, a.T4)(l, I);
+function T(e) {
+    let { label: n, value: t, discounts: r, originalAmount: i, interval: I, currency: _, className: T, intervalCount: d, inTrialPeriod: N } = e,
+        M = (e) => (null != r ? r.find((n) => n.type === e) : null),
+        A = M(a.eW.SUBSCRIPTION_PLAN),
+        L = M(a.eW.ENTITLEMENT),
+        P = null != A ? Math.floor((A.amount / i) * 100) : null,
+        R = (0, c.T4)(i, _);
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(_, {
+            (0, s.jsx)(E, {
                 label: n,
                 value: (0, s.jsxs)(s.Fragment, {
                     children: [
-                        t,
-                        null != A
+                        N ? o.Z.Messages.BILLING_TRIAL_PRICE_NOW.format({ price: (0, c.T4)(0, _) }) : t,
+                        null != P
                             ? (0, s.jsxs)('div', {
-                                  className: o.rowPercentDiscount,
-                                  children: ['-', A, '%']
+                                  className: u.rowPercentDiscount,
+                                  children: ['-', P, '%']
                               })
                             : null
                     ]
                 }),
-                className: E
+                className: T
             }),
-            null != A
+            N &&
+                (0, s.jsx)(l.Text, {
+                    variant: 'text-md/medium',
+                    className: u.trialEndPrice,
+                    children: o.Z.Messages.BILLING_TRIAL_MONTHLY_PRICE_AFTER_TRIAL.format({ price: R })
+                }),
+            null != P
                 ? (0, s.jsxs)('div', {
-                      className: o.rowDiscountOriginalPrice,
-                      children: ['(', null != u && null != T ? (0, a.og)(L, u, T) : L, ')']
+                      className: u.rowDiscountOriginalPrice,
+                      children: ['(', null != I && null != d ? (0, c.og)(R, I, d) : R, ')']
                   })
                 : null,
-            null != M
+            null != L
                 ? (0, s.jsx)('div', {
-                      className: o.entitlementDiscountRow,
-                      children: c.Z.Messages.BILLING_INVOICE_SUBSCRIPTION_CREDIT_APPLIED
+                      className: u.entitlementDiscountRow,
+                      children: o.Z.Messages.BILLING_INVOICE_SUBSCRIPTION_CREDIT_APPLIED
                   })
                 : null
         ]
     });
 }
-function T(e) {
+function d(e) {
     let { extended: n = !1, negativeMarginTop: t = !1, negativeMarginBottom: r = !1 } = e;
     return (0, s.jsx)('div', {
-        className: l()(o.divider, {
-            [o.dividerExtended]: n,
-            [o.negativeMarginTop]: t,
-            [o.negativeMarginBottom]: r
+        className: i()(u.divider, {
+            [u.dividerExtended]: n,
+            [u.negativeMarginTop]: t,
+            [u.negativeMarginBottom]: r
         })
     });
 }
-function d(e) {
+function N(e) {
     let { label: n, value: t, className: r } = e;
     return (0, s.jsxs)('div', {
-        className: l()(o.totalRow, r),
+        className: i()(u.totalRow, r),
         children: [
             (0, s.jsx)('div', {
-                className: o.totalLabel,
+                className: u.totalLabel,
                 children: n
             }),
             (0, s.jsx)('div', {
-                className: o.totalAmount,
+                className: u.totalAmount,
                 children: t
             })
         ]
     });
 }
-function N(e) {
+function M(e) {
     let { children: n, className: t } = e;
     return (0, s.jsx)('div', {
-        className: l()(o.finePrint, t),
+        className: i()(u.finePrint, t),
         children: n
     });
 }

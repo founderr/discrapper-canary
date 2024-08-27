@@ -345,7 +345,8 @@ function ee(e) {
                               proratedInvoice: t,
                               renewalInvoice: l,
                               isUpdate: !0,
-                              isPrepaidPaymentSource: v
+                              isPrepaidPaymentSource: v,
+                              isTrial: A
                           })
                         : (0, i.jsx)(g.nd, {
                               renewalInvoice: l,
