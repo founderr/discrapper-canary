@@ -92,7 +92,8 @@ let f = (0, u.Z)(
                 savedGuildIds: e.savedGuildIds,
                 selectedGames: e.selectedGames,
                 selectedPlaystyle: e.selectedPlaystyle,
-                selectedTraits: e.selectedTraits
+                selectedTraits: e.selectedTraits,
+                dismissedPilotAdminNux: e.dismissedPilotAdminNux
             })
         }
     )

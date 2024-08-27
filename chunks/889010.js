@@ -45,7 +45,10 @@ let c = (e) => {
                     color: 'currentColor'
                 });
             case l.fW.Server:
-                return (0, i.jsx)(a.ServerIcon, {});
+                return (0, i.jsx)(a.ServerIcon, {
+                    size: 'md',
+                    color: 'currentColor'
+                });
             case l.fW.Quest:
                 return (0, i.jsx)(a.QuestsIcon, {});
             default:

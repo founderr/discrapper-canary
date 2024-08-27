@@ -341,14 +341,15 @@ function Z() {
 function L(e) {
     let { guildIcon: t, className: n } = e,
         s = (0, E.GN)((e) => e.mode, l.Z),
-        o = a.useCallback(() => {
+        o = (0, E.GN)((e) => e.dismissedPilotAdminNux),
+        c = a.useCallback(() => {
             if (s !== E.v0.SAVED_GUILDS) return (0, E.fH)(E.v0.SAVED_GUILDS);
         }, [s]),
-        c = a.useCallback(() => (0, E.fH)(E.v0.DISCOVERY), []);
+        d = a.useCallback(() => (0, E.fH)(E.v0.DISCOVERY), []);
     return s === E.v0.SAVED_GUILDS
         ? (0, i.jsx)(v, {
               className: n,
-              onNavigateBack: c
+              onNavigateBack: d
           })
         : (0, i.jsxs)('div', {
               className: r()(g.toolbar, n),
@@ -360,10 +361,12 @@ function L(e) {
                         })
                       : null,
                   (0, i.jsx)('div', { className: g.preferences }),
-                  (0, i.jsxs)('div', {
-                      className: g.actions,
-                      children: [(0, i.jsx)(N, {}), (0, i.jsx)(C, { onClick: o })]
-                  })
+                  o
+                      ? (0, i.jsxs)('div', {
+                            className: g.actions,
+                            children: [(0, i.jsx)(N, {}), (0, i.jsx)(C, { onClick: c })]
+                        })
+                      : null
               ]
           });
 }

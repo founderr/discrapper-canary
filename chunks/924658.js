@@ -592,6 +592,7 @@ e.exports = Object.freeze({
     CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP: 'Continue Setup',
     CLAN_DISCOVERY_UPSELL_TITLE: 'Play games\n\nmake friends',
     CLAN_DISCOVERY_UPSELL_SUBTITLE: 'Join a friendly group of players looking to make more friends. Add your games to find the right Guild for you.',
+    CLAN_DISCOVERY_UPSELL_SUBTITLE_NUX_COMPLETED: 'Join a friendly group of players looking to make more friends.',
     CLAN_DISCOVERY_UPSELL_VALORANT_SUBTITLE: 'Check out small Guilds looking to recruit Valorant players and make new friends.',
     CLAN_DISCOVERY_UPSELL_GENSHIN_TITLE: 'Just a few clicks to find your Genshin clique.',
     CLAN_DISCOVERY_UPSELL_GENSHIN_SUBTITLE: 'Check out small Guilds looking to recruit Genshin players and make new friends.',
