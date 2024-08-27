@@ -122,22 +122,23 @@ let m = () => (
             })
             .then(
                 (e) => {
-                    var t, n;
-                    let r = new Map();
+                    var t, n, r;
+                    let i = new Map();
                     if (null != e.body && null != e.body.recipient_status)
                         for (let t in e.body.recipient_status) {
                             let n = e.body.recipient_status[t];
-                            r.set(t, n);
+                            i.set(t, n);
                         }
                     l.Z.dispatch({
                         type: 'BILLING_REFERRALS_REMAINING_FETCH_SUCCESS',
                         referrals_remaining: null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
                         sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : [],
-                        refresh_at: null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.refresh_at) && void 0 !== n ? n : null,
-                        recipient_status: r,
+                        refresh_at: null !== (r = null === (t = e.body) || void 0 === t ? void 0 : t.refresh_at) && void 0 !== r ? r : null,
+                        recipient_status: i,
                         has_eligible_friends: e.body.has_eligible_friends,
                         isUserEligibleForIncentive: e.body.is_eligible_for_incentive,
-                        isUserQualifiedForIncentive: e.body.is_qualified_for_incentive
+                        isUserQualifiedForIncentive: e.body.is_qualified_for_incentive,
+                        userReferralIncentiveState: null === (n = e.body) || void 0 === n ? void 0 : n.referral_incentive_status
                     });
                 },
                 () => {

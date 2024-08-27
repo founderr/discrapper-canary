@@ -231,13 +231,14 @@ s.Z = function () {
             autoTrackExposure: !1
         }),
         (0, B.B)('PremiumManagementSettings');
-    let M = (0, V.bD)('PremiumManagementSettings');
+    let M = (0, V.bD)('PremiumManagementSettings'),
+        P = (0, V.pn)('PremiumManagementSettings');
     a.useEffect(() => {
         u.Z.wait(async () => {
             !N && !e && (await Promise.all([I.jg(), I.tZ(), (0, S.Y2)(T, null, w.JjL.DISCOVERY)])), l(!1);
         });
     }, [T, N, e]);
-    let [P, b] = a.useState(!1);
+    let [b, Z] = a.useState(!1);
     if (N) return (0, n.jsx)(C.Z, {});
     if (e) return (0, n.jsx)(R.c8, {});
     if ((!i || null == t || !r) && !o)
@@ -246,7 +247,7 @@ s.Z = function () {
             note: null
         });
     if (!i || null == t || !r || o) return (0, n.jsx)(E.Spinner, {});
-    let Z = null != t.trialId;
+    let v = null != t.trialId;
     return (0, n.jsx)(g.Gt, {
         value: s,
         children: (0, n.jsxs)(n.Fragment, {
@@ -255,13 +256,13 @@ s.Z = function () {
                     className: W.__invalid_container,
                     children: [
                         (0, n.jsx)(X, {}),
-                        M && (0, n.jsx)(Y.Z, { isInSettings: !0 }),
+                        (M || P) && (0, n.jsx)(Y.Z, { isInSettings: !0 }),
                         (0, n.jsx)(q, {}),
                         (0, n.jsx)(y.Z, {
                             className: W.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: k.Z.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,
-                            hidePill: !Z,
+                            hidePill: !v,
                             selectedPlanColumnClassName: W.tier2PlanComparisonTableBackground,
                             selectedPlanTier: H.p9.TIER_2
                         })
@@ -269,7 +270,7 @@ s.Z = function () {
                 }),
                 (0, n.jsx)(d.$, {
                     onChange: (e) => {
-                        e && !P && (L.default.track(w.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), b(!0));
+                        e && !b && (L.default.track(w.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: s }), Z(!0));
                     },
                     children: (0, n.jsx)('div', { className: W.bottomOfPageVisibilitySensor })
                 })

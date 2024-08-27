@@ -136,20 +136,21 @@ t.Z = (e) => {
         r = (0, i.e7)([d.ZP], () => d.ZP.inReverseTrial()),
         l = (0, _._O)(),
         E = (0, R.bD)(n),
-        u = (0, s.jsx)(m, {
+        u = (0, R.pn)(n),
+        T = (0, s.jsx)(m, {
             className: t,
             inTrial: l
         });
     return (
-        r && (u = (0, s.jsx)(S, {})),
-        E &&
-            (u = (0, s.jsx)(f, {
+        r && (T = (0, s.jsx)(S, {})),
+        (E || u) &&
+            (T = (0, s.jsx)(f, {
                 inTrial: l,
                 location: n
             })),
         (0, s.jsx)(c.Gt, {
             value: a,
-            children: u
+            children: T
         })
     );
 };

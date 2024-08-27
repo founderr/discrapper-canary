@@ -11,19 +11,19 @@ var i = n(735250),
     h = n(689938),
     p = n(121865);
 t.Z = l.forwardRef(function (e, t) {
-    let { body: n, header: r, artClassName: _, headerClassName: f, contentClassName: g, tryItText: m, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: Z = !1, showGIFTag: v = !1, dismissibleContent: T, position: L = 'top', align: A = 'center', art: b, isPremiumEarlyAccess: M = !1, maxWidth: R = 280 } = e,
-        P = Z ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
-        [O, y] = l.useState(!1),
-        { ref: j, width: D } = (0, o.Z)();
-    function w(e) {
+    let { body: n, header: r, artClassName: _, headerClassName: f, contentClassName: g, tryItText: m, dismissText: C, onTryFeature: I, onClose: E, className: N, inlineArt: x = !1, isPremiumFeature: S = !1, shouldUseHorizontalButtons: Z = !1, showGIFTag: v = !1, dismissibleContent: T, position: L = 'top', align: A = 'center', art: b, isPremiumEarlyAccess: M = !1, maxWidth: R = 280, hideDismissButton: P = !1, pointerClassName: O, dismissIconClassName: y, dismissIcon: j, onDismissIconClick: D } = e,
+        w = Z ? s.Button.Sizes.LARGE : s.Button.Sizes.MAX,
+        [G, U] = l.useState(!1),
+        { ref: k, width: B } = (0, o.Z)();
+    function H(e) {
         (0, c.EW)(T, { dismissAction: e });
     }
     return (
         l.useEffect(() => {
             var e, t;
-            let n = (null !== (t = null === (e = j.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
-            !O && n > R && y(!0);
-        }, [O, D, j, R]),
+            let n = (null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.scrollWidth) && void 0 !== t ? t : 0) + 64;
+            !G && n > R && U(!0);
+        }, [G, B, k, R]),
         l.useEffect(() => {
             (0, c.kk)(T);
         }, [T]),
@@ -36,6 +36,12 @@ t.Z = l.forwardRef(function (e, t) {
                     [p.contentPremium]: S || M
                 }),
                 children: [
+                    null != j &&
+                        (0, i.jsx)(s.Clickable, {
+                            onClick: D,
+                            className: y,
+                            children: j
+                        }),
                     (0, i.jsxs)('div', {
                         className: a()(_, x ? p.artInline : p.artAbsolute),
                         children: [v && (0, i.jsx)(u.Z, { className: p.gifTag }), b]
@@ -88,45 +94,46 @@ t.Z = l.forwardRef(function (e, t) {
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        ref: j,
-                        className: O || !Z ? p.buttonContainerVertical : p.buttonContainerHorizontal,
+                        ref: k,
+                        className: G || !Z ? p.buttonContainerVertical : p.buttonContainerHorizontal,
                         children:
                             null != I
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(s.Button, {
                                               className: p.button,
-                                              size: P,
+                                              size: w,
                                               onClick: (e) => {
-                                                  null == E || E(e), I(e), w(d.L.PRIMARY);
+                                                  null == E || E(e), I(e), H(d.L.PRIMARY);
                                               },
                                               color: S || M ? s.Button.Colors.BRAND_INVERTED : s.Button.Colors.WHITE,
                                               children: null != m ? m : h.Z.Messages.EDUCATION_NEW_FEATURE_TRY_IT
                                           }),
-                                          (0, i.jsx)(s.Button, {
-                                              className: p.button,
-                                              size: P,
-                                              onClick: (e) => {
-                                                  null == E || E(e), w(d.L.DISMISS);
-                                              },
-                                              color: S || M ? s.Button.Colors.WHITE : s.Button.Colors.BRAND,
-                                              look: S || M ? s.Button.Looks.LINK : s.Button.Looks.FILLED,
-                                              children: null != C ? C : h.Z.Messages.EDUCATION_NEW_FEATURE_DISMISS
-                                          })
+                                          !P &&
+                                              (0, i.jsx)(s.Button, {
+                                                  className: p.button,
+                                                  size: w,
+                                                  onClick: (e) => {
+                                                      null == E || E(e), H(d.L.DISMISS);
+                                                  },
+                                                  color: S || M ? s.Button.Colors.WHITE : s.Button.Colors.BRAND,
+                                                  look: S || M ? s.Button.Looks.LINK : s.Button.Looks.FILLED,
+                                                  children: null != C ? C : h.Z.Messages.EDUCATION_NEW_FEATURE_DISMISS
+                                              })
                                       ]
                                   })
                                 : (0, i.jsx)(s.Button, {
                                       className: p.button,
                                       size: s.Button.Sizes.MAX,
                                       onClick: (e) => {
-                                          null == E || E(e), w(d.L.PRIMARY);
+                                          null == E || E(e), H(d.L.PRIMARY);
                                       },
                                       color: s.Button.Colors.WHITE,
                                       children: h.Z.Messages.EDUCATION_NEW_FEATURE_CONFIRM
                                   })
                     }),
                     (0, i.jsx)('div', {
-                        className: a()(p.pointer, {
+                        className: a()(p.pointer, O, {
                             [p.bottomPointer]: 'top' === L,
                             [p.centerLeftPointer]: 'right' === L && 'center' === A,
                             [p.topLeftPointer]: 'right' === L && 'top' === A

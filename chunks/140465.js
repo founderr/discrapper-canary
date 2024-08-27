@@ -72,6 +72,11 @@ let h = () => {
                     duration: 1,
                     percentage: 25
                 };
+            case _.n5:
+                return {
+                    duration: 1,
+                    percentage: 40
+                };
             default:
                 return;
         }

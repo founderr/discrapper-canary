@@ -22,14 +22,16 @@ var s = n(735250),
     f = n(689938),
     S = n(396001),
     h = n(865215);
+let M = 'SubscriberNitroHome';
 t.Z = () => {
     (0, E.z)(_.X);
     let e = a.useRef(null),
         [t, n] = a.useState(!1),
         { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [M, x] = a.useState(!1);
+        [x, O] = a.useState(!1);
     (0, T.FM)();
-    let O = (0, g.bD)('SubscriberNitroHome');
+    let b = (0, g.bD)(M),
+        P = (0, g.TW)(M);
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)(o.AdvancedScrollerAuto, {
@@ -46,7 +48,7 @@ t.Z = () => {
                             }),
                             (0, s.jsx)(I.Z, {
                                 variant: N.R0.WHATS_NEW,
-                                className: i()(S.whatsNew, { [S.whatsNewWithOriginalHeroHeading]: !O }),
+                                className: i()(S.whatsNew, { [S.whatsNewWithOriginalHeroHeading]: !(b || P) }),
                                 noBackground: !0,
                                 leftAlignHeaders: !0
                             }),
@@ -70,7 +72,7 @@ t.Z = () => {
                             (0, s.jsx)('div', { className: S.footerSpacing }),
                             (0, s.jsx)(l.$, {
                                 onChange: (e) => {
-                                    e && !M && (u.default.track(m.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), x(!0));
+                                    e && !x && (u.default.track(m.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), O(!0));
                                 },
                                 children: (0, s.jsx)('div', { className: S.bottomOfPageVisibilitySensor })
                             }),

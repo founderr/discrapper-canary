@@ -28,15 +28,16 @@ let E = null,
     D = !1,
     L = !1,
     b = !1,
-    M = () => !0;
-function P(e) {
+    M = _.g2L.NOT_ELIGIBLE,
+    P = () => !0;
+function U(e) {
     T.add(e);
 }
-function U(e) {
-    let { messages: t } = e;
-    t.forEach((e) => w(e));
-}
 function w(e) {
+    let { messages: t } = e;
+    t.forEach((e) => x(e));
+}
+function x(e) {
     let t = e.type === o.u.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
     if (!g.has(t) && !T.has(t)) {
@@ -44,9 +45,9 @@ function w(e) {
         (n = t), T.add(n), u.Z.wait(() => (0, d.IB)(t).catch(_.VqG));
     }
 }
-class x extends (r = l.ZP.Store) {
+class G extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(c.default), this.syncWith([c.default], M);
+        this.waitFor(c.default), this.syncWith([c.default], P);
     }
     checkAndFetchReferralsRemaining() {
         null == E && !m && A < 5 && (null == N || N < Date.now()) && (0, d.C$)();
@@ -102,9 +103,12 @@ class x extends (r = l.ZP.Store) {
     getIsFetchingReferralIncentiveEligibility() {
         return b;
     }
+    getSenderIncentiveState() {
+        return M;
+    }
 }
 (s = 'ReferralTrialStore'),
-    (a = 'displayName') in (i = x)
+    (a = 'displayName') in (i = G)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -112,7 +116,7 @@ class x extends (r = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new x(u.Z, {
+    (t.Z = new G(u.Z, {
         BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function (e) {
             let { userTrialOfferId: t, recipientId: n } = e;
             if ((!m && (0, d.C$)(), !I.has(n) && (0, d.Ve)(n), !T.has(t))) {
@@ -125,8 +129,8 @@ class x extends (r = l.ZP.Store) {
             (C = !1), (y = null), (m = !0);
         },
         BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function (e) {
-            let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a, isUserEligibleForIncentive: s, isUserQualifiedForIncentive: o } = e;
-            (C = null == r && a), (m = !1), (E = t), (h = n), (y = r), (p = i), (D = s), (L = o);
+            let { referrals_remaining: t, sent_user_ids: n, refresh_at: r, recipient_status: i, has_eligible_friends: a, isUserEligibleForIncentive: s, isUserQualifiedForIncentive: o, userReferralIncentiveState: l } = e;
+            (C = null == r && a), (m = !1), (E = t), (h = n), (y = r), (p = i), (D = s && (a || p.size > 0)), (L = o), (M = l);
         },
         BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
             let {} = e;
@@ -180,13 +184,13 @@ class x extends (r = l.ZP.Store) {
         REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function () {
             R = !1;
         },
-        LOAD_MESSAGES_SUCCESS: U,
+        LOAD_MESSAGES_SUCCESS: w,
         MESSAGE_CREATE: function (e) {
             let { message: t } = e;
-            w(t);
+            x(t);
         },
-        LOAD_MESSAGES_AROUND_SUCCESS: U,
+        LOAD_MESSAGES_AROUND_SUCCESS: w,
         LOGOUT: function () {
-            (E = null), (f = {}), (h = []), (I = new Set()), (m = !1), (T = new Set()), (g = new Set()), (S = {}), (A = 0), (N = null), (O = []), (R = !1), (v = 0), (C = !1), (y = null), (p = new Map()), (D = !1), (L = !1), (b = !1);
+            (E = null), (f = {}), (h = []), (I = new Set()), (m = !1), (T = new Set()), (g = new Set()), (S = {}), (A = 0), (N = null), (O = []), (R = !1), (v = 0), (C = !1), (y = null), (p = new Map()), (D = !1), (L = !1), (b = !1), (M = _.g2L.NOT_ELIGIBLE);
         }
     }));
