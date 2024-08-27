@@ -1,34 +1,36 @@
 t.d(s, {
     Z: function () {
-        return I;
+        return T;
     }
 }),
-    t(47120);
+    t(47120),
+    t(642549);
 var n = t(735250),
     a = t(470079),
     i = t(120356),
     r = t.n(i),
     o = t(772848),
     l = t(481060),
-    c = t(451593),
-    d = t(694539),
-    _ = t(792461);
-let E = (e) => {
+    c = t(53281),
+    d = t(451593),
+    _ = t(694539),
+    E = t(792461);
+let u = (e) => {
         var s, t, a;
         let { effect: i, onClick: o } = e,
-            { deleteConfig: d } = (0, c.E)();
+            { deleteConfig: c } = (0, d.E)();
         return (0, n.jsxs)(l.Clickable, {
-            className: _.previewCard,
+            className: E.previewCard,
             onClick: () => {
                 o(i);
             },
             children: [
                 (0, n.jsx)('div', {
-                    className: _.previewCardImage,
+                    className: E.previewCardImage,
                     style: { backgroundImage: 'url('.concat(null === (a = i.config) || void 0 === a ? void 0 : null === (t = a.effects) || void 0 === t ? void 0 : null === (s = t[0]) || void 0 === s ? void 0 : s.base64, ')') }
                 }),
                 (0, n.jsxs)('div', {
-                    className: r()(_.previewCardFooter, _.row),
+                    className: r()(E.previewCardFooter, E.row),
                     children: [
                         (0, n.jsx)(l.Text, {
                             variant: 'text-md/bold',
@@ -38,7 +40,7 @@ let E = (e) => {
                             color: l.ButtonColors.RED,
                             look: l.ButtonLooks.LINK,
                             onClick: (e) => {
-                                e.preventDefault(), e.stopPropagation(), d(i.id);
+                                e.preventDefault(), e.stopPropagation(), c(i.id);
                             },
                             children: 'Delete'
                         })
@@ -47,7 +49,7 @@ let E = (e) => {
             ]
         });
     },
-    u = () => {
+    I = () => {
         let e = (0, o.Z)();
         return {
             id: e,
@@ -55,30 +57,34 @@ let E = (e) => {
             config: { effects: [] }
         };
     };
-function I() {
-    let { profileEffects: e, upsertConfig: s } = (0, c.E)(),
-        [t, i] = a.useState();
+function T() {
+    let { profileEffects: e, upsertConfig: s } = (0, d.E)(),
+        [t, i] = a.useState(),
+        o = a.useRef(null),
+        T = (e) => {
+            (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
+        };
     return (0, n.jsxs)('div', {
-        className: _.root,
+        className: E.root,
         children: [
             null == t &&
                 (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsxs)('div', {
-                            className: _.col,
+                            className: E.col,
                             children: [
                                 (0, n.jsx)('div', {
-                                    className: _.section,
+                                    className: E.section,
                                     children: (0, n.jsx)(l.Heading, {
                                         variant: 'heading-lg/bold',
                                         children: 'Profile Effects'
                                     })
                                 }),
                                 (0, n.jsx)('div', {
-                                    className: _.grid,
+                                    className: E.grid,
                                     children: Object.values(e).map((e) =>
                                         (0, n.jsx)(
-                                            E,
+                                            u,
                                             {
                                                 effect: e,
                                                 onClick: (e) => {
@@ -92,26 +98,38 @@ function I() {
                             ]
                         }),
                         (0, n.jsxs)('div', {
-                            className: r()(_.row, _.end, _.section),
+                            className: r()(E.row, E.end, E.section),
                             children: [
-                                (0, n.jsx)(l.Button, {
-                                    color: l.ButtonColors.GREEN,
-                                    onClick: async () => {
-                                        let e = (e) => {
-                                                (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
+                                (0, n.jsxs)('div', {
+                                    className: E.uploadButton,
+                                    children: [
+                                        (0, n.jsx)(l.Text, {
+                                            variant: 'text-md/normal',
+                                            color: 'always-white',
+                                            children: 'Import Shared Config'
+                                        }),
+                                        (0, n.jsx)(c.Z, {
+                                            ref: o,
+                                            onChange: (e) => {
+                                                let t = e.currentTarget.files;
+                                                if (null == t) return;
+                                                let n = t[0],
+                                                    a = new FileReader();
+                                                (a.onload = (e) => {
+                                                    if (null == e.target || 'string' != typeof e.target.result) return T('Something went wrong, try again!');
+                                                    let [t, n] = e.target.result.split(',');
+                                                    if (!t.includes('text/plain')) return T("Make sure you're only uploading text files!");
+                                                    s(JSON.parse(atob(n))), (0, l.showToast)((0, l.createToast)('Profile Effect (maybe??) imported!', l.ToastType.SUCCESS));
+                                                }),
+                                                    a.readAsDataURL(n);
                                             },
-                                            t = await navigator.clipboard.read();
-                                        if (null != t[0]) {
-                                            'text/plain' !== t[0].types[0] && e('It looks like you have non-text content on your clipboard');
-                                            let n = await t[0].getType('text/plain');
-                                            s(JSON.parse(await n.text())), (0, l.showToast)((0, l.createToast)('Profile Effect (maybe??) imported!', l.ToastType.SUCCESS));
-                                        } else e('To import, copy the content of a shared config to your clipboard.');
-                                    },
-                                    children: 'Import'
+                                            multiple: !1
+                                        })
+                                    ]
                                 }),
                                 (0, n.jsx)(l.Button, {
                                     onClick: () => {
-                                        s(u());
+                                        s(I());
                                     },
                                     children: 'Create New Effect'
                                 })
@@ -120,7 +138,7 @@ function I() {
                     ]
                 }),
             null != t &&
-                (0, n.jsx)(d.Z, {
+                (0, n.jsx)(_.Z, {
                     effect: t,
                     back: () => {
                         i(void 0);
