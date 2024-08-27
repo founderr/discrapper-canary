@@ -9,12 +9,12 @@ var a = n(442837),
     d = n(267642),
     u = n(981631),
     _ = n(689938),
-    E = n(571472);
+    h = n(571472);
 t.Z = (e) => {
     let { guild: t } = e,
         n = t.id,
-        h = (0, a.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(t.id));
-    return null == h || 0 >= (0, d._k)(h, n)
+        E = (0, a.e7)([c.Z], () => c.Z.getAppliedGuildBoostsForGuild(t.id));
+    return null == E || 0 >= (0, d._k)(E, n)
         ? null
         : (0, i.jsx)(l.Z, {
               guild: t,
@@ -27,7 +27,7 @@ t.Z = (e) => {
               message: _.Z.Messages.PREMIUM_GUILD_GRACE_PERIOD_NOTICE,
               trackingSource: u.PsQ.GRACE_PERIOD_NOTICE,
               type: u.vID.GUILD_BOOSTING_GRACE_PERIOD,
-              image: E,
+              image: h,
               cta: _.Z.Messages.PREMIUM_GUILD_GRACE_PERIOD_NOTICE_BUTTON,
               ctaColor: s.ButtonColors.PRIMARY
           });

@@ -1,6 +1,6 @@
 t.d(n, {
     Bm: function () {
-        return b;
+        return S;
     },
     P7: function () {
         return g;
@@ -22,8 +22,8 @@ var i = t(470079),
     p = t(691424),
     _ = t(428595),
     C = t(364458),
-    h = t(499254),
-    f = t(541099),
+    f = t(499254),
+    h = t(541099),
     A = t(827498),
     E = t(981631),
     x = t(689938);
@@ -57,8 +57,8 @@ function g(e) {
             locationObject: C.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: n } = e,
-                    t = f.Z.entrypoint();
-                o && h.y(A.ti.ACTIVITY),
+                    t = h.Z.entrypoint();
+                o && f.y(A.ti.ACTIVITY),
                     (0, u.yw)(E.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,
@@ -83,8 +83,8 @@ function g(e) {
         }
     );
 }
-function b(e, n) {
-    let t = f.Z.entrypoint(),
+function S(e, n) {
+    let t = h.Z.entrypoint(),
         l = i.useMemo(
             () =>
                 (0, a.debounce)(

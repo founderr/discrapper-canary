@@ -129,7 +129,7 @@ class D extends f.Z {
                 let e = Date.now() - this.connectionStartTime;
                 this.handleClose(!1, 0, 'The connection timed out after '.concat(e, ' ms - did not receive OP_HELLO in time.'));
             }, A));
-        let e = (this.webSocket = new WebSocket(''.concat(this.url, '?v=').concat(8)));
+        let e = (this.webSocket = new WebSocket(''.concat(this.url, '?v=').concat(7)));
         (e.binaryType = 'arraybuffer'),
             (e.onopen = () => {
                 (this.webSocketCloseTime = null), 1 === this.connectionState ? this.emit('connect') : 5 === this.connectionState && this.doResumeOrClose(), (this.connectionState = 4);

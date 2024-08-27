@@ -14,9 +14,9 @@ function o(e) {
         p = i.useCallback(() => {}, []),
         _ = i.useRef(),
         C = i.useRef(),
-        h = i.useRef(n),
-        f = i.useRef(o);
-    f.current = o;
+        f = i.useRef(n),
+        h = i.useRef(o);
+    h.current = o;
     let A = i.useRef(r);
     A.current = r;
     let E = i.useRef(s);
@@ -36,8 +36,8 @@ function o(e) {
             !t && (null == _.current || l < _.current) && (_.current = l), t && (null == C.current || l > C.current) && (C.current = l);
             let o = null !== (e = A.current) && void 0 !== e ? e : _.current,
                 r = null !== (i = E.current) && void 0 !== i ? i : C.current,
-                s = h.current !== n;
-            if (((h.current = n), null == o || null == r || s)) return;
+                s = f.current !== n;
+            if (((f.current = n), null == o || null == r || s)) return;
             let c = Math.min(null !== (a = x.current) && void 0 !== a ? a : r, r),
                 d = t ? o : c,
                 m = t ? c : o;
@@ -46,7 +46,7 @@ function o(e) {
             let p = null;
             return (
                 (p = requestAnimationFrame(() => {
-                    (p = null), (u.style.height = ''.concat(m, 'px')), (u.style.transition = 'height '.concat(f.current, 'ms ease-in-out'));
+                    (p = null), (u.style.height = ''.concat(m, 'px')), (u.style.transition = 'height '.concat(h.current, 'ms ease-in-out'));
                 })),
                 () => (null != p ? cancelAnimationFrame(p) : void 0)
             );

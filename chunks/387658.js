@@ -17,8 +17,8 @@ var i = t(735250),
     p = t(555573),
     _ = t(213459),
     C = t(10718),
-    h = t(895924),
-    f = t(583027),
+    f = t(895924),
+    h = t(583027),
     A = t(585483),
     E = t(499254),
     x = t(541099),
@@ -26,8 +26,8 @@ var i = t(735250),
     v = t(496158),
     I = t(676161),
     g = t(660090),
-    b = t(783097),
-    S = t(845936),
+    S = t(783097),
+    b = t(845936),
     P = t(176412),
     L = t(870205),
     R = t(981631),
@@ -43,19 +43,19 @@ function H(e) {
         u = a.useCallback(() => {
             let e = x.Z.entrypoint();
             E.y(N.ti.COMMAND),
-                (0, f.Mo)({
+                (0, h.Mo)({
                     command: o,
-                    location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+                    location: f.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                     sectionName: c
                 }),
                 p.Po({
                     channelId: l.id,
                     command: o,
                     section: s,
-                    location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+                    location: f.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                     sectionName: c,
                     source: e,
-                    commandOrigin: h.bB.APPLICATION_LAUNCHER
+                    commandOrigin: f.bB.APPLICATION_LAUNCHER
                 }),
                 A.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
         }, [l.id, o, s, c]),
@@ -161,15 +161,15 @@ function k(e) {
                 e.stopPropagation();
                 let n = x.Z.lastShownEntrypoint();
                 try {
-                    (await (0, S.L)({
+                    (await (0, b.L)({
                         applicationId: t.applicationId,
                         userIndexState: o,
                         guildIndexState: r,
                         sectionName: l,
-                        location: h.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+                        location: f.Vh.APP_LAUNCHER_APPLICATION_VIEW,
                         entrypoint: n
                     })) &&
-                        (await (0, b.Y$)({
+                        (await (0, S.Y$)({
                             command: t,
                             optionValues: {},
                             context: c,
@@ -264,8 +264,8 @@ function B(e) {
         p = null !== (n = d.find((e) => e.id === l.id)) && void 0 !== n ? n : null,
         {
             sortOrder: _,
-            setSortOrder: h,
-            commands: f,
+            setSortOrder: f,
+            commands: h,
             canSort: A
         } = (0, g.Z)({
             sectionId: l.id,
@@ -276,10 +276,10 @@ function B(e) {
     }, [l.id, s]);
     let E = (0, I.Z)({
         channel: t,
-        commands: f,
+        commands: h,
         limit: 5
     });
-    return (m.current && (0, b.ye)(l)) || (!m.current && 0 === f.length)
+    return (m.current && (0, S.ye)(l)) || (!m.current && 0 === h.length)
         ? null
         : (0, i.jsxs)('ul', {
               className: y.contentContainer,
@@ -294,14 +294,14 @@ function B(e) {
                   (0, i.jsx)(D, {
                       channel: t,
                       section: p,
-                      commands: m.current ? O : f,
+                      commands: m.current ? O : h,
                       headerName: M.Z.Messages.APP_LAUNCHER_USE_THIS_APP_HEADER,
                       sectionName: o,
                       children:
                           A &&
                           (0, i.jsx)(L.Z, {
                               sortOrder: _,
-                              onSortOptionClick: h
+                              onSortOptionClick: f
                           })
                   })
               ]

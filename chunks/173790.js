@@ -16,8 +16,8 @@ var i = t(735250),
     p = t(827498),
     _ = t(783097),
     C = t(753972),
-    h = t(387658),
-    f = t(536650),
+    f = t(387658),
+    h = t(536650),
     A = t(675993),
     E = t(689079),
     x = t(689938),
@@ -26,22 +26,22 @@ var i = t(735250),
 function I(e) {
     var n;
     let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
-        b = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
-        S = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        P = (0, _.ye)(S) ? g : A.Z,
+        S = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
+        b = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
+        P = (0, _.ye)(b) ? g : A.Z,
         L = a.useRef(null),
         { iconURL: R, name: T } = a.useMemo(
             () =>
-                (0, _.sl)(S, {
+                (0, _.sl)(b, {
                     fakeAppIconURL: v,
                     size: 84
                 }),
-            [S]
+            [b]
         );
     return (
         a.useEffect(() => {
-            I ? d.ZP.queryInstallOnDemandApp(S.id, t.id) : d.ZP.maybeQueryForInstallLessApps(S.id, t.id);
-        }, [S.id, t.id, I]),
+            I ? d.ZP.queryInstallOnDemandApp(b.id, t.id) : d.ZP.maybeQueryForInstallLessApps(b.id, t.id);
+        }, [b.id, t.id, I]),
         (0, i.jsxs)(r.ScrollerNone, {
             className: N.container,
             fade: !0,
@@ -49,7 +49,7 @@ function I(e) {
             role: 'region',
             'aria-label': x.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: T }),
             children: [
-                (0, i.jsx)(f.Z, {
+                (0, i.jsx)(h.Z, {
                     name: T,
                     iconURL: R,
                     scrollerRef: L
@@ -62,13 +62,13 @@ function I(e) {
                 (0, i.jsx)(o.Z, { size: 54 }),
                 (0, i.jsx)(P, {
                     channel: t,
-                    application: S,
+                    application: b,
                     sectionName: c
                 }),
-                b === p._b.TEXT
-                    ? (0, i.jsx)(h.Z, {
+                S === p._b.TEXT
+                    ? (0, i.jsx)(f.Z, {
                           channel: t,
-                          application: S,
+                          application: b,
                           sectionName: c,
                           installOnDemand: I
                       })

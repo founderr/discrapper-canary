@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(692547),
     u = n(780384),
     _ = n(481060),
-    E = n(570140),
-    h = n(239091),
+    h = n(570140),
+    E = n(239091),
     m = n(51025),
     I = n(785547),
     g = n(730749),
@@ -511,7 +511,7 @@ class ee extends a.PureComponent {
         let { applications: e } = this.props;
         e.forEach((e) => {
             e.finished &&
-                E.Z.wait(() => {
+                h.Z.wait(() => {
                     m.wi(e.applicationId, e.branchId);
                 });
         }),
@@ -563,7 +563,7 @@ class ee extends a.PureComponent {
                                       (a = e),
                                       (s = t),
                                       (r = l),
-                                      void h.jW(a, async () => {
+                                      void E.jW(a, async () => {
                                           let { default: e } = await n.e('98335').then(n.bind(n, 485292));
                                           return (t) =>
                                               (0, i.jsx)(e, {

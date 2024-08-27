@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(931515),
     u = n(807933),
     _ = n(207796),
-    E = n(497189),
-    h = n(86014),
+    h = n(497189),
+    E = n(86014),
     m = n(895068),
     I = n(490610),
     g = n(901040),
@@ -40,7 +40,7 @@ function S(e) {
                         (0, i.jsx)(g.Z, {}),
                         (0, i.jsx)('div', {
                             className: T.backgroundImageContent,
-                            children: (0, i.jsx)(E.Z, {
+                            children: (0, i.jsx)(h.Z, {
                                 eligibleGuilds: s,
                                 eligibleGuildsIncludingConverted: n
                             })
@@ -64,7 +64,7 @@ function f(e) {
                 className: T.list,
                 children:
                     null != o &&
-                    (0, i.jsx)(h.Z, {
+                    (0, i.jsx)(E.Z, {
                         inGlobalDiscovery: !0,
                         width: o,
                         variant: (0, m.s)(a, m.Bj.GLOBAL_DISCOVERY),

@@ -218,7 +218,7 @@ function F(e) {
                   (0, i.jsx)(_.Heading, {
                       variant: 'text-md/semibold',
                       color: 'header-secondary',
-                      children: D.Z.Messages.FOR_LATER_MESSAGE_DELETED
+                      children: null != t.saveData.dueAt ? D.Z.Messages.FOR_LATER_REMINDER_DELETED : D.Z.Messages.FOR_LATER_BOOKMARK_DELETED
                   }),
                   (0, i.jsx)(T.ZP, {
                       className: b.hoverBar,

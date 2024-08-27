@@ -14,14 +14,14 @@ var i = n(470079),
     d = n(292959),
     u = n(699516),
     _ = n(340895),
-    E = n(358085),
-    h = n(998502),
+    h = n(358085),
+    E = n(998502),
     m = n(252618),
     I = n(981631),
     g = n(689938);
 let p = new Set(['Blink', 'Gecko', 'WebKit']),
     T = I.dG4;
-if (E.isPlatformEmbedded) T = (e) => h.ZP.setBadge(e);
+if (h.isPlatformEmbedded) T = (e) => E.ZP.setBadge(e);
 else if (p.has(l().layout)) {
     let e = new (s())({ animation: 'none' });
     T = (t) => {
@@ -42,7 +42,7 @@ function S() {
         });
     i.useEffect(() => {
         if (!e) return;
-        let t = h.ZP.bounceDock('critical'),
+        let t = E.ZP.bounceDock('critical'),
             n = (0, m.EM)({
                 messages: [g.Z.Messages.INCOMING_CALL],
                 count: 50

@@ -10,7 +10,7 @@ var i,
 function _() {
     return !0;
 }
-class E extends (r = l.ZP.Store) {
+class h extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(u.Z), this.syncWith([u.Z], _);
     }
@@ -19,7 +19,7 @@ class E extends (r = l.ZP.Store) {
     }
 }
 (s = 'GuildOnboardingUpsellNoticeStore'),
-    (a = 'displayName') in (i = E)
+    (a = 'displayName') in (i = h)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -27,4 +27,4 @@ class E extends (r = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new E(c.Z));
+    (t.Z = new h(c.Z));

@@ -6,13 +6,13 @@ n.d(t, {
         return h;
     },
     Es: function () {
-        return c;
+        return o;
     },
     U$: function () {
         return l;
     },
     kH: function () {
-        return o;
+        return c;
     }
 }),
     n(315314),
@@ -36,7 +36,7 @@ var r = n(392711),
     i = n(36793),
     a = n(486324);
 async function s(e, t, r, s, l) {
-    let { x: u, y: c, scaledCropWidth: o, scaledCropHeight: h } = (0, i.eu)(t, r, s, l),
+    let { x: u, y: o, scaledCropWidth: c, scaledCropHeight: h } = (0, i.eu)(t, r, s, l),
         d = await e.arrayBuffer(),
         A = new Worker(new URL('/assets/' + n.u('86047'), n.b)),
         E = new Promise((e, t) => {
@@ -65,8 +65,8 @@ async function s(e, t, r, s, l) {
             type: a.u.CROP_GIF_START,
             gif: new Uint8Array(d),
             x: 0 | u,
-            y: 0 | c,
-            width: 0 | o,
+            y: 0 | o,
+            width: 0 | c,
             height: 0 | h
         }),
         {
@@ -94,7 +94,7 @@ function u(e, t, n, r) {
               height: t
           };
 }
-function c(e, t, n) {
+function o(e, t, n) {
     switch (e) {
         case a.pC.AVATAR:
         case a.pC.AVATAR_DECORATION:
@@ -114,7 +114,7 @@ function c(e, t, n) {
             return u(a.sX, a.SW, t, n);
     }
 }
-function o(e, t, n) {
+function c(e, t, n) {
     let r = {
             top: 0,
             bottom: 0,
@@ -153,16 +153,16 @@ function h(e, t, n, r) {
                 height: (9 / 16) * u
             };
         case a.pC.SCHEDULED_EVENT_IMAGE:
-            let c = Math.min(t, a.vJ);
-            return {
-                width: c,
-                height: 0.4 * c
-            };
-        case a.pC.HOME_HEADER:
             let o = Math.min(t, a.vJ);
             return {
                 width: o,
-                height: o * (1 / a.sX)
+                height: 0.4 * o
+            };
+        case a.pC.HOME_HEADER:
+            let c = Math.min(t, a.vJ);
+            return {
+                width: c,
+                height: c * (1 / a.sX)
             };
     }
 }

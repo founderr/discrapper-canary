@@ -14,8 +14,8 @@ var a = n(442837),
     d = n(1585),
     u = n(125988),
     _ = n(43267),
-    E = n(522289),
-    h = n(699516),
+    h = n(522289),
+    E = n(699516),
     m = n(51144),
     I = n(998502),
     g = n(620924),
@@ -36,7 +36,7 @@ let C = (e) => {
             : (0, i.jsxs)('div', {
                   className: f.mutualGuildsContainer,
                   children: [
-                      (0, i.jsx)(E.Z, {
+                      (0, i.jsx)(h.Z, {
                           guilds: n,
                           maxGuilds: 3,
                           size: c.Vj.Sizes.SMOL,
@@ -54,10 +54,10 @@ let C = (e) => {
     N = I.ZP.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 function A(e) {
     var t;
-    let { channel: n, otherUser: c, active: E } = e,
+    let { channel: n, otherUser: c, active: h } = e,
         I = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
-        p = (0, a.e7)([h.Z], () => (null == c ? null : h.Z.getNickname(c.id))),
-        A = !I && E,
+        p = (0, a.e7)([E.Z], () => (null == c ? null : E.Z.getNickname(c.id))),
+        A = !I && h,
         v = (0, g.c)(n),
         { avatarDecorationSrc: Z } = (0, u.Z)({
             user: c,
@@ -97,7 +97,7 @@ function A(e) {
                     }),
                     (0, i.jsx)(o.Z, {
                         hoverText: (0, i.jsx)(T.Z, { channel: n }),
-                        forceHover: E,
+                        forceHover: h,
                         children: (0, i.jsx)(C, { userId: c.id })
                     })
                 ]

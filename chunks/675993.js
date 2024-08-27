@@ -17,8 +17,8 @@ var i = t(735250),
     p = t(147865),
     _ = t(427996),
     C = t(70097),
-    h = t(240991),
-    f = t(424602),
+    f = t(240991),
+    h = t(424602),
     A = t(88410),
     E = t(327027),
     x = t(783097),
@@ -26,8 +26,8 @@ var i = t(735250),
     v = t(520315),
     I = t(29380),
     g = t(689938),
-    b = t(655863),
-    S = t(910212);
+    S = t(655863),
+    b = t(910212);
 function P(e) {
     let { channel: n, application: t, videoUrl: l, imageCoverUrl: r, sectionName: s } = e,
         d = a.useMemo(() => {
@@ -36,25 +36,25 @@ function P(e) {
         }, [t]),
         u = (0, c.e7)([m.Z], () => m.Z.getIsEnabled()),
         p = null != l || null != r,
-        { isSlideReady: h } = (0, N.hH)(),
+        { isSlideReady: f } = (0, N.hH)(),
         [A, E] = a.useState(!1);
     a.useEffect(() => {
-        h && E(!0);
-    }, [h]);
-    let v = f.nS.useExperiment({ location: 'AppLauncherAppProfile' }, { autoTrackExposure: !1 }).enabled;
+        f && E(!0);
+    }, [f]);
+    let v = h.nS.useExperiment({ location: 'AppLauncherAppProfile' }, { autoTrackExposure: !1 }).enabled;
     return (0, i.jsxs)('div', {
-        className: b.container,
+        className: S.container,
         children: [
             (0, i.jsxs)('div', {
-                className: b.profileAndVideoContainer,
+                className: S.profileAndVideoContainer,
                 children: [
                     p
                         ? (0, i.jsxs)('div', {
-                              className: b.videoContainer,
+                              className: S.videoContainer,
                               children: [
                                   A
                                       ? (0, i.jsx)(C.Z, {
-                                            className: o()(b.videoCover, b.video),
+                                            className: o()(S.videoCover, S.video),
                                             loop: !0,
                                             muted: !0,
                                             autoPlay: !0,
@@ -63,7 +63,7 @@ function P(e) {
                                         })
                                       : null,
                                   (0, i.jsx)('img', {
-                                      className: b.videoCover,
+                                      className: S.videoCover,
                                       src: r,
                                       'aria-label': g.Z.Messages.IMAGE
                                   })
@@ -71,17 +71,17 @@ function P(e) {
                           })
                         : null,
                     (0, i.jsxs)('div', {
-                        className: p ? b.overviewContainerWithVideo : b.overviewContainerNoVideo,
+                        className: p ? S.overviewContainerWithVideo : S.overviewContainerNoVideo,
                         children: [
                             (0, i.jsx)(R, { application: t }),
                             (0, i.jsx)(T, { application: t }),
                             d.length > 0 ? (0, i.jsx)(y, { description: d }) : null,
                             u
                                 ? (0, i.jsx)('div', {
-                                      className: b.developerShelfControlsContainer,
+                                      className: S.developerShelfControlsContainer,
                                       children: (0, i.jsx)(_.W, {
                                           hideSearch: !0,
-                                          className: b.developerShelfControls
+                                          className: S.developerShelfControls
                                       })
                                   })
                                 : null,
@@ -104,11 +104,11 @@ function L(e) {
         a = (0, x.Hu)(n);
     return t || a
         ? (0, i.jsxs)('div', {
-              className: b.monetizationDisclosureContainerStyle,
+              className: S.monetizationDisclosureContainerStyle,
               children: [
                   t
                       ? (0, i.jsxs)('div', {
-                            className: b.monetizationDisclosureStyle,
+                            className: S.monetizationDisclosureStyle,
                             children: [
                                 (0, i.jsx)(u.ShopIcon, {
                                     size: 'sm',
@@ -124,7 +124,7 @@ function L(e) {
                       : null,
                   a
                       ? (0, i.jsxs)('div', {
-                            className: b.monetizationDisclosureStyle,
+                            className: S.monetizationDisclosureStyle,
                             children: [
                                 (0, i.jsx)(u.BillIcon, {
                                     size: 'sm',
@@ -148,7 +148,7 @@ function R(e) {
         a = (0, x.BQ)(t) ? t.name : null !== (n = (0, x.$d)(t)) && void 0 !== n ? n : '',
         l = (0, E.V)(t);
     return (0, i.jsxs)('div', {
-        className: b.titleContainer,
+        className: S.titleContainer,
         children: [
             (0, i.jsx)(u.Heading, {
                 variant: 'heading-xl/extrabold',
@@ -157,7 +157,7 @@ function R(e) {
             }),
             l
                 ? (0, i.jsx)('div', {
-                      className: b.partnerLabelContainer,
+                      className: S.partnerLabelContainer,
                       children: (0, i.jsx)(d.x, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
@@ -176,14 +176,14 @@ function T(e) {
         }, [n]);
     return (0, x.ye)(n)
         ? (0, i.jsxs)('div', {
-              className: b.tagsContainer,
+              className: S.tagsContainer,
               children: [
                   (0, i.jsx)(M, { application: n }),
                   t.map((e, n) =>
                       (0, i.jsx)(
                           'div',
                           {
-                              className: b.tagContainer,
+                              className: S.tagContainer,
                               children: (0, i.jsx)(d.x, {
                                   variant: 'text-sm/semibold',
                                   color: 'interactive-normal',
@@ -203,7 +203,7 @@ function M(e) {
     if (!(0, x.ye)(t)) return null;
     let a = null !== (n = 'maxParticipants' in t ? t.maxParticipants : 'max_participants' in t ? t.max_participants : 0) && void 0 !== n ? n : 0;
     return (0, i.jsxs)('div', {
-        className: b.tagContainer,
+        className: S.tagContainer,
         children: [
             (0, i.jsx)(u.GroupIcon, {
                 size: 'xs',
@@ -225,7 +225,7 @@ function j(e) {
         });
     return (0, x.BQ)(t) && (0, x.ye)(t)
         ? (0, i.jsx)('div', {
-              className: b.entrypointContainer,
+              className: S.entrypointContainer,
               children:
                   null != t
                       ? (0, i.jsx)(I.Z, {
@@ -243,7 +243,7 @@ function y(e) {
     let { description: n } = e,
         [t, l] = a.useState(!0);
     a.useLayoutEffect(() => l(!1), []);
-    let o = a.useMemo(() => (0, h.YP)(n), [n]),
+    let o = a.useMemo(() => (0, f.YP)(n), [n]),
         {
             ref: c,
             lineHeight: m,
@@ -277,23 +277,23 @@ function y(e) {
         }, [p, m]),
         {
             ref: C,
-            isTransitioning: f,
+            isTransitioning: h,
             onTransitionEnd: A
         } = (0, v.Z)({
             isExpanded: t,
             ..._
         }),
-        E = t || f;
+        E = t || h;
     return (0, i.jsxs)('div', {
-        className: b.descriptionContainer,
+        className: S.descriptionContainer,
         children: [
             (0, i.jsx)('div', {
                 ref: C,
-                className: b.overflowHidden,
+                className: S.overflowHidden,
                 onTransitionEnd: A,
                 children: (0, i.jsx)(d.x, {
                     ref: c,
-                    className: S.markup,
+                    className: b.markup,
                     variant: 'text-sm/medium',
                     lineClamp: E ? void 0 : 1,
                     style: { maxHeight: E ? void 0 : _.minHeightOverride },
@@ -302,7 +302,7 @@ function y(e) {
             }),
             null != p && p > 1
                 ? (0, i.jsxs)(u.Clickable, {
-                      className: b.expandableDescriptionClickable,
+                      className: S.expandableDescriptionClickable,
                       onClick: () => l((e) => !e),
                       children: [
                           (0, i.jsx)(d.x, {

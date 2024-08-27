@@ -17,8 +17,8 @@ var i = t(735250),
     p = t(827498),
     _ = t(890280),
     C = t(176412),
-    h = t(231338),
-    f = t(689938),
+    f = t(231338),
+    h = t(689938),
     A = t(872674);
 function E(e) {
     let { channel: n, application: t, sectionName: E, commandName: x, buttonSize: N = o.ButtonSizes.MEDIUM } = e,
@@ -26,13 +26,13 @@ function E(e) {
         I = a.useCallback(() => {
             m.y(p.ti.ACTIVITY);
         }, []),
-        { submitting: g, wasSubmitting: b } = (0, _.Z)({
+        { submitting: g, wasSubmitting: S } = (0, _.Z)({
             applicationId: t.id,
             channelId: n.id,
             launchingComponentId: v,
             onSubmissionComplete: I
         }),
-        [S, P] = a.useState(!1),
+        [b, P] = a.useState(!1),
         L = (0, c.Qv)({
             applicationId: t.id,
             channelId: n.id
@@ -49,11 +49,11 @@ function E(e) {
             commandName: x,
             autoDismissOnClick: L === c.JS.LEAVE,
             launchingComponentId: v,
-            submitting: null != b ? b : g
+            submitting: null != S ? S : g
         }),
         j = (function (e) {
             let { channel: n, activityAction: t } = e,
-                i = (0, l.e7)([u.Z], () => u.Z.can(h.Pl.USE_EMBEDDED_ACTIVITIES, n)),
+                i = (0, l.e7)([u.Z], () => u.Z.can(f.Pl.USE_EMBEDDED_ACTIVITIES, n)),
                 a = (0, s.KF)(n.id),
                 o = !1;
             switch (t) {
@@ -74,7 +74,7 @@ function E(e) {
     return (0, i.jsx)(o.Tooltip, {
         shouldShow: j,
         tooltipContentClassName: A.tooltipContent,
-        text: f.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START,
+        text: h.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START,
         children: (e) => {
             let { onClick: n, ...a } = e;
             return (0, i.jsx)(o.Button, {
@@ -83,11 +83,11 @@ function E(e) {
                 size: N,
                 color: T,
                 disabled: j,
-                submitting: S,
+                submitting: b,
                 onClick: () => {
                     P(!0), R(), null == n || n();
                 },
-                'aria-label': f.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
+                'aria-label': h.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
                     buttonText: M,
                     applicationName: t.name
                 }),

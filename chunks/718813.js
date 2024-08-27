@@ -14,8 +14,8 @@ var i,
     d = n(215569),
     u = n(481060),
     _ = n(37234),
-    E = n(134616),
-    h = n(714338),
+    h = n(134616),
+    E = n(714338),
     m = n(663993),
     I = n(84615),
     g = n(210887),
@@ -38,7 +38,7 @@ function N(e, t, n) {
     );
 }
 let A = (0, m.Un)({
-        createPromise: () => Promise.all([n.e('96427'), n.e('22453'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('47006'), n.e('32776'), n.e('18209'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('76540'), n.e('68136'), n.e('87624'), n.e('22646'), n.e('5528'), n.e('43331'), n.e('30419'), n.e('18824'), n.e('52619'), n.e('29291'), n.e('96503')]).then(n.bind(n, 989804)),
+        createPromise: () => Promise.all([n.e('96427'), n.e('7183'), n.e('52249'), n.e('54803'), n.e('15685'), n.e('47006'), n.e('32776'), n.e('18209'), n.e('33053'), n.e('8016'), n.e('37581'), n.e('76540'), n.e('68136'), n.e('87624'), n.e('22646'), n.e('5528'), n.e('43331'), n.e('30419'), n.e('18824'), n.e('52619'), n.e('29291'), n.e('96503')]).then(n.bind(n, 989804)),
         webpackId: 989804,
         name: 'UserSettings'
     }),
@@ -70,7 +70,7 @@ let A = (0, m.Un)({
         tension: 100
     };
 function P() {
-    return s.useEffect(() => (h.Z.enable(), h.Z.enableTemp(E.u), () => h.Z.disableTemp()), []), null;
+    return s.useEffect(() => (E.Z.enable(), E.Z.enableTemp(h.u), () => E.Z.disableTemp()), []), null;
 }
 class M extends (i = s.PureComponent) {
     static getDerivedStateFromProps(e, t) {
