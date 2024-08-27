@@ -16,5 +16,6 @@ e.exports = {
     nitroWheelFlairContainer: 'nitroWheelFlairContainer_f2f431',
     pillWrapper: 'pillWrapper_f2f431',
     imagePickerContainer: 'imagePickerContainer_f2f431',
-    imageSpecifications: 'imageSpecifications_f2f431'
+    imageSpecifications: 'imageSpecifications_f2f431',
+    nitroUpsell: 'nitroUpsell_f2f431'
 };

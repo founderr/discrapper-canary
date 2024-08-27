@@ -92,23 +92,25 @@ class N extends i.PureComponent {
         );
     }
     renderContent() {
-        let { resultItems: e, resultQuery: t, query: n, favorites: i, searchOffset: a, searchLimit: s, searchTotalResults: o, suggestions: l, hideFavorites: u } = this.props,
-            { resultType: c } = this.state;
-        return null == c
+        let { contentClassName: e, resultItems: t, resultQuery: n, query: i, favorites: a, searchOffset: s, searchLimit: o, searchTotalResults: l, suggestions: u, hideFavorites: c } = this.props,
+            { resultType: d } = this.state;
+        return null == d
             ? (0, r.jsx)(h.Z, {
-                  hideFavoritesTile: u,
+                  className: e,
+                  hideFavoritesTile: c,
                   onSelectItem: this.handleSelectItem
               })
             : (0, r.jsx)(p.ZP, {
-                  data: c === I.wI2.FAVORITES ? i : e,
+                  className: e,
+                  data: d === I.wI2.FAVORITES ? a : t,
                   onSelectGIF: this.handleSelectGIF,
-                  resultType: c,
-                  resultQuery: t,
-                  query: n,
-                  searchOffset: a,
-                  searchLimit: s,
-                  searchTotalResults: o,
-                  suggestions: l,
+                  resultType: d,
+                  resultQuery: n,
+                  query: i,
+                  searchOffset: s,
+                  searchLimit: o,
+                  searchTotalResults: l,
+                  suggestions: u,
                   onSelectSuggestion: this.handleSelectSuggestion
               });
     }
