@@ -23528,6 +23528,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     border-top-right-radius: var(--custom-emoji-picker-border-radius);
     align-items: center;
     box-shadow: var(--shadow-low);
+    margin: 0 -1px;
     padding: 12px;
     z-index: 100;
     position: relative;
@@ -23536,6 +23537,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 
 .emojiPickerHasTabWrapper_c6ee36 .header_c6ee36 {
     padding: 0 16px 16px;
+    margin: 0;
     background-color: transparent;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0
