@@ -42,5 +42,15 @@ let r = (0, i.Z)((e) => ({
                 totalItems: t.length
             }));
         });
+    },
+    resetPagination: () => {
+        (0, a.j)(() => {
+            e(() => ({
+                currentPage: 1,
+                totalItems: 0,
+                _rawItems: [],
+                chunkedPages: []
+            }));
+        });
     }
 }));
