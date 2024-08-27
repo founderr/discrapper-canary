@@ -29,8 +29,8 @@ var r = n(735250),
     A = n(686546),
     N = n(246364),
     O = n(937111),
-    v = n(703656),
-    R = n(271383),
+    R = n(703656),
+    v = n(271383),
     C = n(594174),
     y = n(778045),
     D = n(207796),
@@ -172,7 +172,7 @@ function k(e) {
 }
 function B(e) {
     var t;
-    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: d, prioritizedGameIds: h, className: p, position: g, showBrandingFooter: N = !1, showFavoriteButton: O = !1, bannerUrl: v, onlyAnimateIconOnHover: R = !1, hasPendingJoinRequest: C = !1, atMaxMemberCapacity: L = !1 } = e,
+    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: d, prioritizedGameIds: h, className: p, position: g, showBrandingFooter: N = !1, showFavoriteButton: O = !1, bannerUrl: R, onlyAnimateIconOnHover: v = !1, hasPendingJoinRequest: C = !1, atMaxMemberCapacity: L = !1 } = e,
         {
             tag: b,
             badge: B,
@@ -207,7 +207,7 @@ function B(e) {
             K(!1);
         }, []),
         en = P.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({ count: n.memberCount }),
-        er = null != v ? v : (0, I.pY)(n.id, H),
+        er = null != R ? R : (0, I.pY)(n.id, H),
         ei = null == a && null == er ? { background: 'linear-gradient(90deg, '.concat(F, ', ').concat(V, ')') } : void 0,
         ea =
             null != a
@@ -292,7 +292,7 @@ function B(e) {
                                                 guildName: n.name,
                                                 guildIcon: n.icon,
                                                 iconSize: 64,
-                                                animate: !R || W
+                                                animate: !v || W
                                             })
                                         })
                                     }),
@@ -413,55 +413,57 @@ function B(e) {
 }
 t.ZP = function (e) {
     let { style: t, prioritizedGameIds: a, onVisibilityChange: s = () => {}, ...o } = e,
-        { clan: _, affinity: f, index: p, position: I, source: m } = o,
-        T = (0, u.e7)([C.default], () => C.default.getCurrentUser()),
-        g = (0, u.e7)([R.ZP], () => R.ZP.isMember(_.id, null == T ? void 0 : T.id), [_, T]),
-        S = (0, u.e7)([O.Z], () => {
+        { clan: _, affinity: p, index: I, position: m, source: T } = o,
+        g = (0, u.e7)([C.default], () => C.default.getCurrentUser()),
+        S = (0, u.e7)([v.ZP], () => v.ZP.isMember(_.id, null == g ? void 0 : g.id), [_, g]),
+        A = (0, u.e7)([O.Z], () => {
             var e;
             return (null === (e = O.Z.getRequest(_.id)) || void 0 === e ? void 0 : e.applicationStatus) === N.wB.SUBMITTED;
         }),
-        A = _.memberCount >= M.Du,
-        y = i.useRef(-1),
-        D = i.useCallback((e) => s(e, y), [s]),
-        L = (0, d.O)(D, 1);
+        y = (0, f.iN)('ClanGuildProfile'),
+        D = _.memberCount >= M.Du,
+        L = i.useRef(-1),
+        P = i.useCallback((e) => s(e, L), [s]),
+        w = (0, d.O)(P, 1);
     i.useEffect(
         () => () => {
-            null == s || s(!1, y);
+            null == s || s(!1, L);
         },
         [s]
     );
-    let P = i.useCallback(() => {
+    let x = i.useCallback(() => {
             let e = null != O.Z.getRequest(_.id);
             if (
                 ((0, E.EK)({
                     guildId: _.id,
-                    isMember: g,
+                    isMember: S,
                     hasJoinRequest: e,
-                    affinity: f,
-                    index: p,
-                    position: I
+                    affinity: p,
+                    index: I,
+                    position: m
                 }),
-                g)
+                S)
             ) {
-                (0, v.XU)(_.id);
+                (0, R.XU)(_.id);
                 return;
             }
             if (e) {
-                (0, v.uL)(b.Z5c.GUILD_MEMBER_VERIFICATION(_.id));
+                (0, R.uL)(b.Z5c.GUILD_MEMBER_VERIFICATION(_.id));
                 return;
             }
-            (0, h.qF)(
-                _.id,
-                _,
-                {
-                    source: m,
-                    location: b.Sbl.CLAN_DISCOVERY_CARD
-                },
-                a,
-                I
-            );
-        }, [_, g, f, p, m, a, I]),
-        w = i.useCallback(
+            y &&
+                (0, h.qF)(
+                    _.id,
+                    _,
+                    {
+                        source: T,
+                        location: b.Sbl.CLAN_DISCOVERY_CARD
+                    },
+                    a,
+                    m
+                );
+        }, [_, S, p, I, m, y, T, a]),
+        G = i.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('5577').then(n.bind(n, 955120));
@@ -475,19 +477,19 @@ t.ZP = function (e) {
             [_.id]
         );
     return (0, r.jsx)('div', {
-        ref: L,
+        ref: w,
         children: (0, r.jsx)(l.Clickable, {
-            onClick: P,
+            onClick: x,
             className: U.clickableCard,
             style: t,
-            onContextMenu: w,
+            onContextMenu: G,
             children: (0, r.jsx)(B, {
                 ...o,
-                isMember: g,
+                isMember: S,
                 prioritizedGameIds: a,
                 showBrandingFooter: !0,
-                hasPendingJoinRequest: S,
-                atMaxMemberCapacity: A
+                hasPendingJoinRequest: A,
+                atMaxMemberCapacity: D
             })
         })
     });

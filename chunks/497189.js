@@ -82,8 +82,11 @@ function M(e) {
                     label: e.name
                 })),
             [s]
-        ),
-        E = s.length > 1;
+        );
+    a.useEffect(() => {
+        0 === s.length && (0, C.Ce)();
+    }, [s]);
+    let E = s.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             d
