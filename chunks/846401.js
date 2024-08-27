@@ -7,11 +7,11 @@ t.d(n, {
 var l = t(470079),
     s = t(913527),
     a = t.n(s),
-    i = t(848246),
-    r = t(442837),
+    r = t(848246),
+    i = t(442837),
     o = t(846519),
-    c = t(114064),
-    u = t(689938);
+    u = t(114064),
+    c = t(689938);
 function d(e) {
     return e.toString().padStart(2, '0');
 }
@@ -20,8 +20,8 @@ function m(e) {
     return ''.concat(d(n.hours()), ':').concat(d(n.minutes()), ':').concat(d(n.seconds()));
 }
 function E() {
-    let [e, n] = l.useState(m(a()(c.Z.activatedEndTime(i.q.STREAM_HIGH_QUALITY)))),
-        t = (0, r.e7)([c.Z], () => c.Z.activatedEndTime(i.q.STREAM_HIGH_QUALITY)),
+    let [e, n] = l.useState(m(a()(u.Z.activatedEndTime(r.q.STREAM_HIGH_QUALITY)))),
+        t = (0, i.e7)([u.Z], () => u.Z.activatedEndTime(r.q.STREAM_HIGH_QUALITY)),
         s = l.useMemo(() => a()(t), [t]),
         d = l.useRef(new o.Xp()),
         E = l.useCallback(() => {
@@ -30,7 +30,7 @@ function E() {
     return (
         l.useEffect(() => {
             let e = a().duration(s.diff(a()()));
-            1 > e.seconds() ? (n('00:00:00'), d.current.stop()) : 1 > e.days() ? (E(), d.current.start(1000, E)) : (n(u.Z.Messages.HUMANIZE_DURATION_DAYS.format({ time: Math.floor(e.asDays()) })), d.current.stop());
+            1 > e.seconds() ? (n('00:00:00'), d.current.stop()) : 1 > e.days() ? (E(), d.current.start(1000, E)) : (n(c.Z.Messages.HUMANIZE_DURATION_DAYS.format({ time: Math.floor(e.asDays()) })), d.current.stop());
         }, [s, E]),
         e
     );

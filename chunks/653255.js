@@ -1,53 +1,53 @@
-var i,
-    a,
-    s,
-    r,
-    l = n(442837),
-    o = n(570140),
-    c = n(358085),
-    d = n(998502),
-    u = n(869614),
-    _ = n(281083),
-    h = n(672598);
-let E = !1,
+var r,
+    i,
+    o,
+    c,
+    a = n(442837),
+    l = n(570140),
+    u = n(358085),
+    s = n(998502),
+    d = n(869614),
+    f = n(281083),
+    _ = n(672598);
+let p = !1,
     m = !0,
-    I = !1;
-class g extends (r = l.ZP.Store) {
+    g = !1;
+class h extends (c = a.ZP.Store) {
     initialize() {
-        !(!c.isPlatformEmbedded || __OVERLAY__) &&
-            d.ZP.getGPUDriverVersions().then((e) => {
-                (E = (0, h.Z)(e)), (m = (0, u.Z)(e)), (I = (0, _.Z)(e)), this.emitChange();
+        !(!u.isPlatformEmbedded || __OVERLAY__) &&
+            s.ZP.getGPUDriverVersions().then((e) => {
+                (p = (0, _.Z)(e)), (m = (0, d.Z)(e)), (g = (0, f.Z)(e)), this.emitChange();
             });
     }
     get GPUDriversOutdated() {
-        return E;
+        return p;
     }
     get canUseHardwareAcceleration() {
         return m;
     }
     get problematicGPUDriver() {
-        return I;
+        return g;
     }
     getState() {
         return {
-            GPUDriversOutdated: E,
+            GPUDriversOutdated: p,
             canUseHardwareAcceleration: m,
-            problematicGPUDriver: I
+            problematicGPUDriver: g
         };
     }
 }
-(s = 'StreamingCapabilitiesStore'),
-    (a = 'displayName') in (i = g)
-        ? Object.defineProperty(i, a, {
-              value: s,
+(o = 'StreamingCapabilitiesStore'),
+    (i = 'displayName') in (r = h)
+        ? Object.defineProperty(r, i, {
+              value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = s),
-    (t.Z = new g(o.Z, {
+        : (r[i] = o),
+    (t.Z = new h(l.Z, {
         OVERLAY_INITIALIZE: function (e) {
             let { streamingCapabilitiesStoreState: t } = e;
-            (E = t.GPUDriversOutdated), (m = t.canUseHardwareAcceleration);
+            (p = t.GPUDriversOutdated), (m = t.canUseHardwareAcceleration);
         }
     }));

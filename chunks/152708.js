@@ -1,11 +1,11 @@
 var l,
     s,
     a,
-    i = t(735250),
-    r = t(470079),
+    r = t(735250),
+    i = t(470079),
     o = t(120356),
-    c = t.n(o),
-    u = t(600164),
+    u = t.n(o),
+    c = t(600164),
     d = t(951381);
 function m(e, n, t) {
     return (
@@ -21,7 +21,7 @@ function m(e, n, t) {
     );
 }
 ((l = s || (s = {})).WRAP = 'wrap'), (l.STACK = 'stack');
-class E extends (a = r.PureComponent) {
+class E extends (a = i.PureComponent) {
     renderChildren() {
         let e;
         let { children: n, layout: t, columns: l } = this.props;
@@ -33,8 +33,8 @@ class E extends (a = r.PureComponent) {
                 e = ''.concat((1 / l) * 100, '%');
         }
         return n.map((n, t) =>
-            (0, i.jsx)(
-                u.Z.Child,
+            (0, r.jsx)(
+                c.Z.Child,
                 {
                     className: d.tile,
                     basis: e,
@@ -47,9 +47,9 @@ class E extends (a = r.PureComponent) {
     }
     render() {
         let { className: e } = this.props;
-        return (0, i.jsx)(u.Z, {
-            className: c()(e, d.grid),
-            wrap: u.Z.Wrap.WRAP,
+        return (0, r.jsx)(c.Z, {
+            className: u()(e, d.grid),
+            wrap: c.Z.Wrap.WRAP,
             children: this.renderChildren()
         });
     }

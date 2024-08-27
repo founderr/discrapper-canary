@@ -7,29 +7,29 @@ t.d(n, {
 var l = t(735250),
     s = t(470079),
     a = t(120356),
-    i = t.n(a),
-    r = t(481060),
+    r = t.n(a),
+    i = t(481060),
     o = t(958707),
-    c = t(458623),
-    u = t(523022);
+    u = t(458623),
+    c = t(523022);
 function d(e) {
     let { title: n, scrollerClassName: t, scrollerInnerClassName: a, children: d } = e,
         m = s.useRef(null),
-        [E, _] = s.useState(!1),
-        [S, h] = s.useState(!1),
-        x = s.useCallback(() => {
+        [E, S] = s.useState(!1),
+        [_, g] = s.useState(!1),
+        h = s.useCallback(() => {
             let { current: e } = m;
-            null != e && (_(!e.isScrolledToTop()), h(!e.isScrolledToBottom()));
+            null != e && (S(!e.isScrolledToTop()), g(!e.isScrolledToBottom()));
         }, []);
     return (
-        s.useLayoutEffect(() => x(), []),
+        s.useLayoutEffect(() => h(), []),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)('div', {
-                    className: i()(u.title, u.scrollWrapper),
+                    className: r()(c.title, c.scrollWrapper),
                     children: [
-                        (0, l.jsx)(r.FormTitle, {
-                            className: c.formItemTitle,
+                        (0, l.jsx)(i.FormTitle, {
+                            className: u.formItemTitle,
                             children: n
                         }),
                         (0, l.jsx)(o.Z, { separator: E })
@@ -37,10 +37,10 @@ function d(e) {
                 }),
                 (0, l.jsx)('div', {
                     className: t,
-                    children: (0, l.jsx)(r.AdvancedScroller, {
+                    children: (0, l.jsx)(i.AdvancedScroller, {
                         ref: m,
-                        className: i()(u.scrollerInner, a, { [u.bottomSeparator]: S }),
-                        onScroll: x,
+                        className: r()(c.scrollerInner, a, { [c.bottomSeparator]: _ }),
+                        onScroll: h,
                         children: d
                     })
                 })

@@ -25,8 +25,8 @@ function f(e, n) {
 let C = null,
     h = [],
     x = [],
-    p = {};
-class g extends (a = c.ZP.Store) {
+    g = {};
+class p extends (a = c.ZP.Store) {
     getPrimaryCategories() {
         return h;
     }
@@ -57,11 +57,11 @@ class g extends (a = c.ZP.Store) {
         return C;
     }
     getCategoryName(e) {
-        return e === m.Hk ? _.Z.Messages.HOME : p[e];
+        return e === m.Hk ? _.Z.Messages.HOME : g[e];
     }
 }
 (s = 'GuildDiscoveryCategoryStore'),
-    (i = 'displayName') in (r = g)
+    (i = 'displayName') in (r = p)
         ? Object.defineProperty(r, i, {
               value: s,
               enumerable: !0,
@@ -69,7 +69,7 @@ class g extends (a = c.ZP.Store) {
               writable: !0
           })
         : (r[i] = s),
-    (n.Z = new g(d.Z, {
+    (n.Z = new p(d.Z, {
         GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
             let n,
                 { categories: t, locale: a } = e,
@@ -97,7 +97,7 @@ class g extends (a = c.ZP.Store) {
                                     categoryId: t,
                                     name: a
                                 }),
-                                (p[t] = a);
+                                (g[t] = a);
                         }
                     }),
                 null != n)
@@ -107,7 +107,7 @@ class g extends (a = c.ZP.Store) {
                     categoryId: e,
                     name: t
                 }),
-                    (p[e] = t);
+                    (g[e] = t);
             }
             (C = a), (h = r), (x = i);
         }

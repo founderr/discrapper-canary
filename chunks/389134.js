@@ -28,16 +28,16 @@ let h = () => ({
         brandSecondaryColor: C.ym['0'].secondary
     }),
     x = h(),
-    p = d()(x),
-    g = !1,
+    g = d()(x),
+    p = !1,
     T = !1,
     E = {};
 class I extends (a = u.ZP.Store) {
     getState() {
         return {
             initialSettings: x,
-            settings: p,
-            dirty: g,
+            settings: g,
+            dirty: p,
             errors: E,
             submitting: T
         };
@@ -54,7 +54,7 @@ class I extends (a = u.ZP.Store) {
         : (r[i] = s),
     (n.Z = new I(m.Z, {
         CLAN_SETTINGS_FETCH_START: function () {
-            (T = !1), (x = h()), (p = d()(x)), (g = !1), (E = {});
+            (T = !1), (x = h()), (g = d()(x)), (p = !1), (E = {});
         },
         CLAN_SETTINGS_FETCH_SUCCESS: function (e) {
             let { settings: n } = e;
@@ -62,24 +62,24 @@ class I extends (a = u.ZP.Store) {
                 ...h(),
                 ...n
             }),
-                (p = d()(x)),
-                (g = !1);
+                (g = d()(x)),
+                (p = !1);
         },
         CLAN_SETTINGS_UPDATE: function (e) {
             let { updates: n } = e;
-            for (let e in ((p = {
-                ...p,
+            for (let e in ((g = {
+                ...g,
                 ...d()(n)
             }),
             n))
                 delete E[e], (E = { ...E });
-            g = !l().isEqual(l().omit(p, 'verificationForm'), l().omit(x, 'verificationForm'));
+            p = !l().isEqual(l().omit(g, 'verificationForm'), l().omit(x, 'verificationForm'));
         },
         CLAN_SETTINGS_SUBMIT: function () {
             (T = !0), (E = {});
         },
         CLAN_SETTINGS_SUBMIT_SUCCESS: function () {
-            (T = !1), (x = d()(p)), (g = !1), (E = {});
+            (T = !1), (x = d()(g)), (p = !1), (E = {});
         },
         CLAN_SETTINGS_SUBMIT_ERROR: function (e) {
             let { error: n } = e;
@@ -96,19 +96,19 @@ class I extends (a = u.ZP.Store) {
         },
         MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
             let { form: n, isLocalUpdate: t } = e;
-            if (null == p.verificationForm) return !1;
+            if (null == g.verificationForm) return !1;
             if (
-                ((p = {
-                    ...p,
+                ((g = {
+                    ...g,
                     verificationForm: {
-                        ...p.verificationForm,
+                        ...g.verificationForm,
                         ...n
                     }
                 }),
                 t)
             ) {
                 var a;
-                g = !l().isEqual(p.verificationForm.formFields, null === (a = x.verificationForm) || void 0 === a ? void 0 : a.formFields);
-            } else g = !1;
+                p = !l().isEqual(g.verificationForm.formFields, null === (a = x.verificationForm) || void 0 === a ? void 0 : a.formFields);
+            } else p = !1;
         }
     }));

@@ -21,7 +21,7 @@ function x(e) {
     let { guildId: n, webhook: t } = e;
     h(n)[t.id] = t;
 }
-class p extends (r = d.ZP.Store) {
+class g extends (r = d.ZP.Store) {
     isFetching(e, n) {
         return null != f[C(e, n)];
     }
@@ -39,7 +39,7 @@ class p extends (r = d.ZP.Store) {
     }
 }
 (o = 'WebhooksStore'),
-    (s = 'displayName') in (i = p)
+    (s = 'displayName') in (i = g)
         ? Object.defineProperty(i, s, {
               value: o,
               enumerable: !0,
@@ -47,7 +47,7 @@ class p extends (r = d.ZP.Store) {
               writable: !0
           })
         : (i[s] = o),
-    (n.Z = new p(u.Z, {
+    (n.Z = new g(u.Z, {
         WEBHOOKS_UPDATE: function (e) {
             let { guildId: n, channelId: t, webhooks: r, error: i } = e;
             if (null == r) {

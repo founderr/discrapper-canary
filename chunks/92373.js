@@ -11,11 +11,11 @@ var a = t(735250),
 n.Z = function (e) {
     let { applicationId: n, imageContainerClassName: t, onClick: i, selected: _, locked: f = !1, otherGamesCount: C = 0 } = e,
         h = (0, o.useToken)(o.tokens.colors.WHITE),
-        { isFetching: x, coverImageUrl: p } = (0, c.$)(n, {
+        { isFetching: x, coverImageUrl: g } = (0, c.$)(n, {
             coverImageHeight: 336,
             coverImageWidth: 252
         }),
-        g = (0, l.e7)([d.Z], () => {
+        p = (0, l.e7)([d.Z], () => {
             var e, t;
             return null !== (t = null === (e = d.Z.getDetectableGame(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : '';
         }),
@@ -26,17 +26,17 @@ n.Z = function (e) {
             () =>
                 x
                     ? null
-                    : null == p
+                    : null == g
                       ? (0, a.jsx)('div', {
                             className: m.gameUnknownImage,
                             children: (0, a.jsx)(o.UnknownGameIcon, { size: 'lg' })
                         })
                       : (0, a.jsx)('img', {
                             className: m.gameImage,
-                            alt: g,
-                            src: p
+                            alt: p,
+                            src: g
                         }),
-            [p, x, g]
+            [g, x, p]
         );
     return (0, a.jsxs)('div', {
         className: m.selectedGame,
@@ -71,7 +71,7 @@ n.Z = function (e) {
                 className: m.gameName,
                 variant: 'text-xs/normal',
                 color: 'header-primary',
-                children: [g, f && (0, a.jsx)(o.LockIcon, { size: 'xxs' })]
+                children: [p, f && (0, a.jsx)(o.LockIcon, { size: 'xxs' })]
             })
         ]
     });
