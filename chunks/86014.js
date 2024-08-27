@@ -136,7 +136,7 @@ t.Z = a.memo(function (e) {
             color: 'header-primary',
             children: p.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE_2.format({})
         }),
-        description: p.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
+        description: g ? p.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION_NUX_COMPLETED : p.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
         button: C,
         bannerBackground: (0, i.jsx)(h.Z, {}),
         onScroll: c,

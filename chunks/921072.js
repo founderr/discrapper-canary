@@ -13,7 +13,7 @@ var r,
     o = n(240773),
     l = n(495852),
     u = n(835913);
-((i = r || (r = {}))[(i.UNSPECIFIED_DISCLOSURE = 0)] = 'UNSPECIFIED_DISCLOSURE'), (i[(i.IP_LOCATION = 1)] = 'IP_LOCATION'), (i[(i.DISPLAYS_ADVERTISEMENTS = 2)] = 'DISPLAYS_ADVERTISEMENTS');
+((i = r || (r = {}))[(i.UNSPECIFIED_DISCLOSURE = 0)] = 'UNSPECIFIED_DISCLOSURE'), (i[(i.IP_LOCATION = 1)] = 'IP_LOCATION'), (i[(i.DISPLAYS_ADVERTISEMENTS = 2)] = 'DISPLAYS_ADVERTISEMENTS'), (i[(i.PARTNER_SDK_DATA_SHARING_MESSAGE = 3)] = 'PARTNER_SDK_DATA_SHARING_MESSAGE');
 class c extends l.C {
     create(e) {
         let t = {

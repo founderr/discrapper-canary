@@ -3,9 +3,9 @@ var o = t(735250),
     r = t(470079),
     c = t(593473),
     l = t(266067),
-    s = t(478677),
-    i = t(457330),
-    a = t(675207),
+    i = t(478677),
+    a = t(457330),
+    s = t(675207),
     u = t(981631);
 function d(e) {
     let { platformType: n } = e,
@@ -18,7 +18,7 @@ function d(e) {
                 t.replace(r);
                 return;
             }
-            i.Z.linkDispatchAuthCallback(n, {
+            a.Z.linkDispatchAuthCallback(n, {
                 code: e,
                 state: o
             }).then(
@@ -31,12 +31,12 @@ function d(e) {
                 }
             );
         }, [t, n]),
-        (0, o.jsx)(a.VerifyAccountLoading, { platformType: n })
+        (0, o.jsx)(s.VerifyAccountLoading, { platformType: n })
     );
 }
 n.default = function (e) {
     let { match: n } = e,
         t = n.params.type,
         { two_way_link_type: r } = c.parse(window.location.search);
-    return [u.ABu.XBOX, u.ABu.PLAYSTATION_STAGING, u.ABu.PLAYSTATION, u.ABu.CRUNCHYROLL].includes(t) && r === s.g.DESKTOP ? (0, o.jsx)(d, { platformType: t }) : null;
+    return [u.ABu.XBOX, u.ABu.PLAYSTATION_STAGING, u.ABu.PLAYSTATION, u.ABu.CRUNCHYROLL].includes(t) && r === i.g.DESKTOP ? (0, o.jsx)(d, { platformType: t }) : null;
 };
