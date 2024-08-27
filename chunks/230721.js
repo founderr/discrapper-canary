@@ -1,6 +1,5 @@
 e.exports = {
     bodyText: 'bodyText_f875f7',
-    planSelectStep: 'planSelectStep_f875f7',
     planSelectText: 'planSelectText_f875f7',
     planSelectRow: 'planSelectRow_f875f7',
     planSelectorWrapper: 'planSelectorWrapper_f875f7',
@@ -8,7 +7,6 @@ e.exports = {
     planSelectorPreviewPrice: 'planSelectorPreviewPrice_f875f7',
     planSelectDivider: 'planSelectDivider_f875f7',
     planSelectorSubtotal: 'planSelectorSubtotal_f875f7',
-    reviewStep: 'reviewStep_f875f7',
     paymentSourceWrapper: 'paymentSourceWrapper_f875f7',
     confirmationContainer: 'confirmationContainer_f875f7',
     confirmationAnimation: 'confirmationAnimation_f875f7',
@@ -17,5 +15,8 @@ e.exports = {
     existingSlotNotice: 'existingSlotNotice_f875f7',
     existingSlotIcon: 'existingSlotIcon_f875f7',
     existingSlotTooltipWarningIcon: 'existingSlotTooltipWarningIcon_f875f7',
-    loadingSpinner: 'loadingSpinner_f875f7'
+    loadingSpinner: 'loadingSpinner_f875f7',
+    reverseTrialContextInfoDivider: 'reverseTrialContextInfoDivider_f875f7',
+    reverseTrialContextText: 'reverseTrialContextText_f875f7',
+    reverseTrialContextMarginBottom: 'reverseTrialContextMarginBottom_f875f7'
 };
