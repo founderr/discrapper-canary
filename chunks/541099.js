@@ -10,11 +10,12 @@ let c = {
     entrypoint: u._b.NONE,
     lastShownEntrypoint: u._b.NONE,
     activeViewType: null,
-    closeReason: u.ti.DISMISSED
+    closeReason: u.ti.DISMISSED,
+    initialState: void 0
 };
 function d(e) {
     let { closeReason: t = u.ti.DISMISSED } = e;
-    return (c.show = !1), (c.entrypoint = u._b.NONE), (c.closeReason = t), !0;
+    return (c.show = !1), (c.entrypoint = u._b.NONE), (c.closeReason = t), (c.initialState = void 0), !0;
 }
 class _ extends (s = o.ZP.Store) {
     initialize() {}
@@ -36,6 +37,9 @@ class _ extends (s = o.ZP.Store) {
     closeReason() {
         return c.closeReason;
     }
+    initialState() {
+        return c.initialState;
+    }
 }
 function E() {
     d({ closeReason: u.ti.DISMISSED });
@@ -54,8 +58,8 @@ function f() {
         : (r[i] = a),
     (t.Z = new _(l.Z, {
         APP_LAUNCHER_SHOW: function (e) {
-            let { entrypoint: t, activeViewType: n } = e;
-            return (c.show = !0), (c.entrypoint = t), (c.lastShownEntrypoint = t), (c.closeReason = u.ti.DISMISSED), (c.activeViewType = n), !0;
+            let { entrypoint: t, activeViewType: n, initialState: r } = e;
+            return (c.show = !0), (c.entrypoint = t), (c.lastShownEntrypoint = t), (c.closeReason = u.ti.DISMISSED), (c.activeViewType = n), (c.initialState = r), !0;
         },
         APP_LAUNCHER_DISMISS: d,
         CONNECTION_OPEN: E,

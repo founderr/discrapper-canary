@@ -1,78 +1,98 @@
+n(653041);
 var i = n(735250),
     a = n(470079),
     s = n(374470),
-    l = n(952265),
-    r = n(481060),
-    o = n(40851),
-    c = n(314910),
-    u = n(585483),
-    d = n(5967),
-    h = n(499254),
-    p = n(827498),
-    m = n(421591),
-    _ = n(314734),
-    f = n(981631),
-    E = n(689938),
-    C = n(1966);
-let g = { height: _.lv };
-function I() {
-    h.y(p.ti.DISMISSED);
+    l = n(442837),
+    r = n(952265),
+    o = n(481060),
+    c = n(40851),
+    u = n(213459),
+    d = n(314910),
+    h = n(585483),
+    p = n(5967),
+    m = n(499254),
+    _ = n(541099),
+    f = n(827498),
+    E = n(695676),
+    C = n(421591),
+    g = n(314734),
+    I = n(981631),
+    x = n(689938),
+    T = n(1966);
+let N = { height: g.lv };
+function S() {
+    m.y(f.ti.DISMISSED);
 }
-function x(e) {
-    let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: c } = e,
-        h = a.useRef(null),
-        { renderWindow: E, windowDispatch: C } = a.useContext(o.ZP),
-        g = null != c,
-        x = (0, l.Jw)(null != c ? c : ''),
-        T = a.useCallback(
+function v(e) {
+    let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: d } = e,
+        m = a.useRef(null),
+        { renderWindow: x, windowDispatch: T } = a.useContext(c.ZP),
+        N = null != d,
+        v = (0, r.Jw)(null != d ? d : ''),
+        Z = a.useCallback(
             (e) => {
                 var t;
-                if ((!g && (0, l.$s)()) || (g && !(x && n))) return;
+                if ((!N && (0, r.$s)()) || (N && !(v && n))) return;
                 let { target: i } = e;
-                if ((0, s.k)(i) && null != i.closest('.' + _.Jh)) return;
+                if ((0, s.k)(i) && null != i.closest('.' + g.Jh)) return;
                 for (; (0, s.k)(i); ) {
-                    if (i === h.current) return;
-                    if (i.classList.contains(_.t4)) {
+                    if (i === m.current) return;
+                    if (i.classList.contains(g.t4)) {
                         e.preventDefault();
                         return;
                     }
                     i = i.parentNode;
                 }
-                I();
-                let a = null === (t = (0, d.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-                (null == a || 'BODY' === a.tagName) && u.S.dispatchToLastSubscribed(f.CkL.TEXTAREA_FOCUS);
+                S();
+                let a = null === (t = (0, p.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+                (null == a || 'BODY' === a.tagName) && h.S.dispatchToLastSubscribed(I.CkL.TEXTAREA_FOCUS);
             },
-            [n, x, g]
+            [n, v, N]
         );
-    return (
-        a.useLayoutEffect(
-            () => (
-                E.addEventListener('mousedown', T),
-                E.addEventListener('contextmenu', T),
-                C.subscribe(f.CkL.POPOUT_CLOSE, I),
-                () => {
-                    E.removeEventListener('mousedown', T), E.removeEventListener('contextmenu', T), C.unsubscribe(f.CkL.POPOUT_CLOSE, I);
-                }
-            ),
-            [T, E, C]
+    a.useLayoutEffect(
+        () => (
+            x.addEventListener('mousedown', Z),
+            x.addEventListener('contextmenu', Z),
+            T.subscribe(I.CkL.POPOUT_CLOSE, S),
+            () => {
+                x.removeEventListener('mousedown', Z), x.removeEventListener('contextmenu', Z), T.unsubscribe(I.CkL.POPOUT_CLOSE, S);
+            }
         ),
-        (0, r.useFocusLock)(h),
+        [Z, x, T]
+    ),
+        (0, o.useFocusLock)(m),
         a.useEffect(() => {
-            ((!g && (0, l.$s)()) || (g && !x)) && I();
-        }, [x, g]),
-        (0, i.jsx)(m.Z, {
-            ref: h,
-            channel: t,
-            entrypoint: p._b.TEXT
-        })
-    );
+            ((!N && (0, r.$s)()) || (N && !v)) && S();
+        }, [v, N]);
+    let A = (0, l.e7)([_.Z], () => _.Z.initialState(), []),
+        M = a.useMemo(() => {
+            if (null == A) return;
+            let e = [{ type: E.gc.HOME }];
+            if (null != A.applicationId) {
+                var n;
+                let i = (0, u.If)(t, A.applicationId);
+                (null == i ? void 0 : null === (n = i.descriptor) || void 0 === n ? void 0 : n.application) != null &&
+                    e.push({
+                        type: E.gc.APPLICATION,
+                        application: i.descriptor.application,
+                        installOnDemand: !i.isGuildInstalled && !i.isUserInstalled
+                    });
+            }
+            return e;
+        }, [t, A]);
+    return (0, i.jsx)(C.Z, {
+        ref: m,
+        channel: t,
+        entrypoint: f._b.TEXT,
+        initHistory: M
+    });
 }
 t.Z = a.memo(function (e) {
     let { positionTargetRef: t, ...n } = e;
     return (0, i.jsx)('span', {
-        style: _.u$,
-        children: (0, i.jsx)(c.W5, {
-            className: C.positionLayer,
+        style: g.u$,
+        children: (0, i.jsx)(d.W5, {
+            className: T.positionLayer,
             targetRef: t,
             position: 'top',
             align: 'right',
@@ -81,11 +101,11 @@ t.Z = a.memo(function (e) {
             children: (e) => {
                 let { isPositioned: t } = e;
                 return (0, i.jsx)('section', {
-                    className: C.positionContainer,
+                    className: T.positionContainer,
                     role: 'dialog',
-                    style: g,
-                    'aria-label': E.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_LAUNCHER_ARIA_LABEL,
-                    children: t && (0, i.jsx)(x, { ...n })
+                    style: N,
+                    'aria-label': x.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_LAUNCHER_ARIA_LABEL,
+                    children: t && (0, i.jsx)(v, { ...n })
                 });
             }
         })

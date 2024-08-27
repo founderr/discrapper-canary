@@ -12,25 +12,25 @@ var i = t(735250),
     p = t(684256),
     _ = t(314734),
     C = t(981631),
-    f = t(79499);
-let h = {
+    h = t(79499);
+let f = {
         width: _.Gy,
         height: _.lv
     },
-    E = { height: _.lv };
-function A(e) {
-    let { children: n } = e,
-        [t, l] = a.useState([{ type: d.gc.HOME }]),
-        [o, r] = a.useState({}),
-        s = t[t.length - 1],
-        [c, u] = a.useState(!1),
-        m = a.useCallback((e) => {
-            l((n) => [...n, e]);
+    A = { height: _.lv };
+function E(e) {
+    let { initHistory: n, children: t } = e,
+        [l, o] = a.useState(null != n ? n : [{ type: d.gc.HOME }]),
+        [r, s] = a.useState({}),
+        c = l[l.length - 1],
+        [u, m] = a.useState(!1),
+        p = a.useCallback((e) => {
+            o((n) => [...n, e]);
         }, []),
-        p = a.useCallback(() => {
+        _ = a.useCallback(() => {
             let e = null;
-            l((n) => (n.length <= 1 ? n : ((e = n[n.length - 1]), n.slice(0, -1)))),
-                r((n) =>
+            o((n) => (n.length <= 1 ? n : ((e = n[n.length - 1]), n.slice(0, -1)))),
+                s((n) =>
                     null == e
                         ? n
                         : {
@@ -39,28 +39,28 @@ function A(e) {
                           }
                 );
         }, []),
-        _ = a.useCallback(
+        C = a.useCallback(
             (e) => {
                 var n;
-                return null !== (n = t.findLast((n) => n.type === e)) && void 0 !== n ? n : o[e];
+                return null !== (n = l.findLast((n) => n.type === e)) && void 0 !== n ? n : r[e];
             },
-            [t, o]
+            [l, r]
         );
     return (0, i.jsx)(d.uX.Provider, {
         value: {
-            history: t,
-            discard: o,
-            currentView: s,
-            pushHistory: m,
-            goBack: p,
-            getMostRecentHistoryItemByType: _,
-            isSlideReady: c,
-            setSlideReady: u
+            history: l,
+            discard: r,
+            currentView: c,
+            pushHistory: p,
+            goBack: _,
+            getMostRecentHistoryItemByType: C,
+            isSlideReady: u,
+            setSlideReady: m
         },
-        children: n
+        children: t
     });
 }
-function N(e) {
+function x(e) {
     let { channel: n, entrypoint: t } = e,
         [o, r] = a.useState(''),
         { setScroller: s, isCloseToBottom: c } = (function (e) {
@@ -90,26 +90,26 @@ function N(e) {
                 }
             );
         })(o),
-        { currentView: C, getMostRecentHistoryItemByType: h, setSlideReady: A } = (0, d.hH)();
+        { currentView: C, getMostRecentHistoryItemByType: f, setSlideReady: E } = (0, d.hH)();
     a.useEffect(() => {
-        A(!1);
-    }, [null == C ? void 0 : C.type, A]);
-    let N = a.useCallback(() => {
-        A(!0);
-    }, [A]);
+        E(!1);
+    }, [null == C ? void 0 : C.type, E]);
+    let x = a.useCallback(() => {
+        E(!0);
+    }, [E]);
     if (null == C) return null;
-    let x = h(d.gc.LIST),
-        v = h(d.gc.APPLICATION);
+    let N = f(d.gc.LIST),
+        v = f(d.gc.APPLICATION);
     return (0, i.jsxs)(l.Slides, {
         activeSlide: C.type,
         width: _.Gy,
-        onSlideReady: N,
+        onSlideReady: x,
         children: [
             (0, i.jsx)(l.Slide, {
                 id: d.gc.HOME,
                 children: (0, i.jsx)('div', {
-                    className: f.slideContent,
-                    style: E,
+                    className: h.slideContent,
+                    style: A,
                     children: (0, i.jsx)(m.Z, {
                         isScrollCloseToBottom: c,
                         setScroller: s,
@@ -123,25 +123,25 @@ function N(e) {
             (0, i.jsx)(l.Slide, {
                 id: d.gc.LIST,
                 children: (0, i.jsx)('div', {
-                    className: f.slideContent,
-                    style: E,
+                    className: h.slideContent,
+                    style: A,
                     children:
-                        null != x &&
+                        null != N &&
                         (0, i.jsx)(p.Z, {
                             channel: n,
                             entrypoint: t,
-                            title: x.title,
-                            look: x.look,
-                            items: x.items,
-                            sectionName: x.sectionName
+                            title: N.title,
+                            look: N.look,
+                            items: N.items,
+                            sectionName: N.sectionName
                         })
                 })
             }),
             (0, i.jsx)(l.Slide, {
                 id: d.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
-                    className: f.slideContent,
-                    style: E,
+                    className: h.slideContent,
+                    style: A,
                     children:
                         null != v &&
                         (0, i.jsx)(u.Z, {
@@ -157,8 +157,8 @@ function N(e) {
 }
 n.Z = a.memo(
     a.forwardRef(function (e, n) {
-        let { channel: t, entrypoint: l } = e,
-            { analyticsLocations: d } = (0, s.ZP)(o.Z.APP_LAUNCHER);
+        let { channel: t, entrypoint: l, initHistory: d } = e,
+            { analyticsLocations: u } = (0, s.ZP)(o.Z.APP_LAUNCHER);
         return (
             a.useEffect(() => {
                 (0, r.yw)(C.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
@@ -177,15 +177,16 @@ n.Z = a.memo(
                 };
             }, [l]),
             (0, i.jsx)('div', {
-                className: f.drawerSizingWrapper,
+                className: h.drawerSizingWrapper,
                 ref: n,
-                style: h,
+                style: f,
                 children: (0, i.jsx)('div', {
-                    className: f.contentWrapper,
+                    className: h.contentWrapper,
                     children: (0, i.jsx)(s.Gt, {
-                        value: d,
-                        children: (0, i.jsx)(A, {
-                            children: (0, i.jsx)(N, {
+                        value: u,
+                        children: (0, i.jsx)(E, {
+                            initHistory: d,
+                            children: (0, i.jsx)(x, {
                                 channel: t,
                                 entrypoint: l
                             })

@@ -7,11 +7,12 @@ t.d(e, {
     }
 });
 var i = t(570140);
-function l(n, e) {
+function l(n, e, t) {
     i.Z.dispatch({
         type: 'APP_LAUNCHER_SHOW',
         entrypoint: n,
-        activeViewType: e
+        activeViewType: e,
+        initialState: t
     });
 }
 function r(n) {

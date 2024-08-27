@@ -1,9 +1,9 @@
 t.d(n, {
     Q2: function () {
-        return S;
+        return L;
     },
     pe: function () {
-        return b;
+        return P;
     }
 }),
     t(47120),
@@ -22,33 +22,33 @@ var i = t(470079),
     p = t(807169),
     _ = t(104793),
     C = t(674588),
-    f = t(809547),
-    h = t(822245),
-    E = t(631827),
-    A = t(424602),
-    N = t(827498),
-    x = t(783097),
+    h = t(809547),
+    f = t(822245),
+    A = t(631827),
+    E = t(424602),
+    x = t(827498),
+    N = t(783097),
     v = t(689079),
     I = t(665692);
 function g(e, n) {
-    let t = h.Z.getScoreWithoutLoadingLatest(e.id);
-    return h.Z.getScoreWithoutLoadingLatest(n.id) - t;
+    let t = f.Z.getScoreWithoutLoadingLatest(e.id);
+    return f.Z.getScoreWithoutLoadingLatest(n.id) - t;
 }
-function P(e, n) {
-    let t = (0, x.$d)(e),
-        i = (0, x.$d)(n);
+function b(e, n) {
+    let t = (0, N.$d)(e),
+        i = (0, N.$d)(n);
     return (0, m.un)(t, i);
 }
-function L(e, n) {
+function S(e, n) {
     return (0, m.un)(e.displayName, n.displayName);
 }
-function b(e) {
+function P(e) {
     let { channel: n, query: t, commandLimit: a, applicationLimit: o, searchesCommands: r = !0, searchesBots: s = !0, searchesActivities: C = !0 } = e;
     t.startsWith(''.concat(I.GI)) && (t = t.substring(1));
     let {
-            commands: f,
-            commandSectionMap: h,
-            loading: A
+            commands: h,
+            commandSectionMap: f,
+            loading: E
         } = (function (e) {
             var n, t;
             let { channel: a, includeBuiltIn: l = !0, allowFetch: o = !0 } = e,
@@ -80,7 +80,7 @@ function b(e) {
             channel: n,
             includeBuiltIn: !0
         }),
-        { apps: N } = (function (e) {
+        { apps: x } = (function (e) {
             let { channel: n, onlyWithCommands: t, includeBuiltIn: a, allowFetch: l = !0, includeEmbeddedApps: o, includeNonEmbeddedApps: r } = e,
                 s = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions,
                 d = (0, m.em)(n, s, l),
@@ -88,24 +88,24 @@ function b(e) {
                 _ = i.useCallback(
                     (e) => {
                         let n = e.descriptor.application;
-                        return null != n && (!!(o && (0, x.ye)(n)) || (null != n && r && !(0, x.ye)(n) && (!t || Object.keys(e.commands).length > 0)));
+                        return null != n && (!!(o && (0, N.ye)(n)) || (null != n && r && !(0, N.ye)(n) && (!t || Object.keys(e.commands).length > 0)));
                     },
                     [o, r, t]
                 ),
                 C = [],
-                f = new Set();
+                h = new Set();
             if (null != d.result)
                 for (let e of Object.values(d.result.sections)) {
                     let n = e.descriptor.application;
-                    null != n && _(e) && (C.push(n), f.add(n.id));
+                    null != n && _(e) && (C.push(n), h.add(n.id));
                 }
             if (null != u.result)
                 for (let e of Object.values(u.result.sections)) {
                     let n = e.descriptor.application;
-                    null != n && !f.has(n.id) && _(e) && C.push(n);
+                    null != n && !h.has(n.id) && _(e) && C.push(n);
                 }
             return (
-                r && a && C.push(x.Wx),
+                r && a && C.push(N.Wx),
                 {
                     apps: C,
                     loading: (null == d ? void 0 : d.fetchState.fetching) === !0 || (null == u ? void 0 : u.fetchState.fetching) === !0
@@ -118,11 +118,11 @@ function b(e) {
             includeEmbeddedApps: C,
             includeNonEmbeddedApps: s
         }),
-        b = (0, d.Z)({ guildId: n.getGuildId() }),
-        S = i.useMemo(() => {
+        P = (0, d.Z)({ guildId: n.getGuildId() }),
+        L = i.useMemo(() => {
             var e;
             if (!r) return [];
-            return (0, E.N)(f, {
+            return (0, A.N)(h, {
                 limit: a,
                 filterPredicates: [
                     (function (e) {
@@ -202,19 +202,19 @@ function b(e) {
                             return u.ZP.getScoreWithoutLoadingLatest(e, t) - i;
                         };
                     })({ channel: n }),
-                    L
+                    S
                 ]
             });
-        }, [r, f, a, n, t]),
+        }, [r, h, a, n, t]),
         R = i.useMemo(() => {
-            if (0 === S.length) return [];
-            let e = new Map(N.map((e) => [e.id, e]));
+            if (0 === L.length) return [];
+            let e = new Map(x.map((e) => [e.id, e]));
             return l().compact(
-                S.map((n) => {
+                L.map((n) => {
                     var t;
                     let i = e.get(n.applicationId);
                     if (null == i) return null;
-                    let a = null !== (t = h[n.id]) && void 0 !== t ? t : null;
+                    let a = null !== (t = f[n.id]) && void 0 !== t ? t : null;
                     return {
                         command: n,
                         application: i,
@@ -222,33 +222,31 @@ function b(e) {
                     };
                 })
             );
-        }, [N, S, h]),
+        }, [x, L, f]),
         T = i.useMemo(() => {
             var e;
             let i = [];
             if (C) {
                 let e = new Set(
-                    N.map((e) => {
+                    x.map((e) => {
                         let { id: n } = e;
                         return n;
                     })
                 );
-                i.push(...N),
+                i.push(...x),
                     i.push(
-                        ...b
-                            .filter((n) => {
-                                let {
-                                    application: { id: t }
-                                } = n;
-                                return !e.has(t);
-                            })
-                            .map((e) => {
-                                let { application: n } = e;
-                                return n;
-                            })
+                        ...P.filter((n) => {
+                            let {
+                                application: { id: t }
+                            } = n;
+                            return !e.has(t);
+                        }).map((e) => {
+                            let { application: n } = e;
+                            return n;
+                        })
                     );
-            } else s && (i = N);
-            return (0, E.N)(i, {
+            } else s && (i = x);
+            return (0, A.N)(i, {
                 limit: o,
                 filterPredicates: [
                     (function (e) {
@@ -277,54 +275,54 @@ function b(e) {
                 ],
                 bucketPredicates: [
                     (function (e) {
-                        return (n) => (0, x.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
+                        return (n) => (0, N.$d)(n).toLocaleLowerCase().startsWith(e.toLocaleLowerCase());
                     })((e = t)),
                     (function (e) {
-                        return (n) => (0, x.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
+                        return (n) => (0, N.$d)(n).toLocaleLowerCase().includes(e.toLocaleLowerCase());
                     })(e),
                     (function (e) {
                         return (n) => {
                             var t, i;
-                            let a = null === (t = (0, x.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+                            let a = null === (t = (0, N.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
                             return null !== (i = null == a ? void 0 : a.startsWith(e.toLocaleLowerCase())) && void 0 !== i && i;
                         };
                     })(e),
                     (function (e) {
                         return (n) => {
                             var t, i;
-                            let a = null === (t = (0, x.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
+                            let a = null === (t = (0, N.jD)(n)) || void 0 === t ? void 0 : t.toLocaleLowerCase();
                             return null !== (i = null == a ? void 0 : a.includes(e.toLocaleLowerCase())) && void 0 !== i && i;
                         };
                     })(e)
                 ],
-                sortComparers: [g, P]
+                sortComparers: [g, b]
             });
-        }, [s, C, o, n, t, N, b]),
+        }, [s, C, o, n, t, x, P]),
         M = R.length > 0,
-        y = T.length > 0;
+        j = T.length > 0;
     return {
         commandResults: R,
         hasCommandResults: M,
         applicationResults: T,
-        hasApplicationResults: y,
-        isEmptyState: !M && !y,
-        loading: A && r
+        hasApplicationResults: j,
+        isEmptyState: !M && !j,
+        loading: E && r
     };
 }
-function S(e) {
+function L(e) {
     let { channel: n, query: t, fetches: a = !0, pageLimit: l = 1 / 0, entrypoint: c } = e;
     t.startsWith(''.concat(I.GI)) && (t = t.substring(1));
-    let { enabled: d } = A.nS.useExperiment({ location: 'App Launcher Search Utils' }, { autoTrackExposure: !1 }),
-        u = d && c === N._b.VOICE,
+    let { enabled: d } = E.nS.useExperiment({ location: 'App Launcher Search Utils' }, { autoTrackExposure: !1 }),
+        u = d && c === x._b.VOICE,
         [m, p] = i.useState(1),
         _ = i.useRef(m);
     _.current = m;
-    let { fetchState: h, totalPages: E } = (0, s.cj)(
-            [f.Z],
+    let { fetchState: f, totalPages: A } = (0, s.cj)(
+            [h.Z],
             () => {
                 var e, i;
                 return {
-                    fetchState: f.Z.getFetchState({
+                    fetchState: h.Z.getFetchState({
                         query: t,
                         guildId: n.guild_id,
                         page: m,
@@ -339,7 +337,7 @@ function S(e) {
                         null !==
                             (i =
                                 null ===
-                                    (e = f.Z.getSearchResults({
+                                    (e = h.Z.getSearchResults({
                                         query: t,
                                         guildId: n.guild_id,
                                         page: m,
@@ -358,14 +356,14 @@ function S(e) {
             },
             [n.guild_id, m, t, u, u]
         ),
-        x = i.useMemo(
+        N = i.useMemo(
             () =>
-                Array.from({ length: h === f.M.FETCHED || h === f.M.ERROR ? m : m - 1 }, (e, i) => {
+                Array.from({ length: f === h.M.FETCHED || f === h.M.ERROR ? m : m - 1 }, (e, i) => {
                     var a, l;
                     return null !==
                         (l =
                             null ===
-                                (a = f.Z.getSearchResults({
+                                (a = h.Z.getSearchResults({
                                     query: t,
                                     guildId: n.guild_id,
                                     page: i + 1,
@@ -381,12 +379,12 @@ function S(e) {
                         ? l
                         : [];
                 }),
-            [h, n.guild_id, t, m, u, u]
+            [f, n.guild_id, t, m, u, u]
         ),
         v = i.useCallback(() => {
-            let e = x.length;
-            h === f.M.FETCHED && e === _.current && e > 0 && e < E && e < l && x[e - 1].length > 0 && (_.current++, p((e) => e + 1));
-        }, [h, l, x, E]),
+            let e = N.length;
+            f === h.M.FETCHED && e === _.current && e > 0 && e < A && e < l && N[e - 1].length > 0 && (_.current++, p((e) => e + 1));
+        }, [f, l, N, A]),
         g = i.useCallback(
             (e) => {
                 let { query: n, page: t, guildId: i } = e;
@@ -419,8 +417,8 @@ function S(e) {
             p(1);
         }, [n.guild_id, t]),
         {
-            fetchState: h,
-            applicationResults: x.flat(),
+            fetchState: f,
+            applicationResults: N.flat(),
             fetchNextPage: v
         }
     );

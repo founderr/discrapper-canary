@@ -49,13 +49,17 @@ async function u(e, t) {
         url: a.ANM.MESSAGE_INTERACTION_DATA(e, t),
         oldFormErrors: !0
     });
-    if (n.ok) {
+    if (!n.ok) return null;
+    {
         let r = n.body;
-        i.Z.dispatch({
-            type: 'LOAD_MESSAGE_INTERACTION_DATA_SUCCESS',
-            channelId: e,
-            messageId: t,
-            interactionData: r
-        });
+        return (
+            i.Z.dispatch({
+                type: 'LOAD_MESSAGE_INTERACTION_DATA_SUCCESS',
+                channelId: e,
+                messageId: t,
+                interactionData: r
+            }),
+            r
+        );
     }
 }
