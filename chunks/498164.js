@@ -197,6 +197,7 @@ function Z(e, t) {
                         })
                     );
                 } catch (e) {
+                    if ((null == e ? void 0 : e.status) === 400) throw new N.Z({ errorCode: v.lTL.BAD_REQUEST_FOR_PROVIDER }, 'Bad request for provider');
                     throw (S.S.dispatch(v.CkL.CONNECTIONS_CALLBACK_ERROR), e);
                 }
             }
