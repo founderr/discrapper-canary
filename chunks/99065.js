@@ -4,5 +4,6 @@ e.exports = {
     shopLogo: 'shopLogo_d8354c',
     shopLogoContainer: 'shopLogoContainer_d8354c',
     discordLogo: 'discordLogo_d8354c',
-    closeIcon: 'closeIcon_d8354c'
+    closeIcon: 'closeIcon_d8354c',
+    back: 'back_d8354c'
 };

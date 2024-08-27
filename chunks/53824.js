@@ -1,4 +1,8 @@
 e.exports = {
+    shopViewWrapper: 'shopViewWrapper_e77fa3',
+    visible: 'visible_e77fa3',
+    out: 'out_e77fa3',
+    in: 'in_e77fa3',
     pageWrapper: 'pageWrapper_e77fa3',
     page: 'page_e77fa3',
     pageFullscreen: 'pageFullscreen_e77fa3',
