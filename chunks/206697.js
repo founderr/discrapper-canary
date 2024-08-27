@@ -1,106 +1,63 @@
 n.d(t, {
     w: function () {
-        return Z;
+        return R;
     }
 });
 var i = n(735250),
-    s = n(120356),
-    a = n.n(s),
-    r = n(106351),
+    s = n(470079),
+    a = n(120356),
+    r = n.n(a),
     l = n(657707),
     o = n(793030),
     c = n(442837),
     u = n(481060),
     d = n(436774),
-    _ = n(93735),
-    E = n(786761),
-    I = n(3148),
-    m = n(294218),
-    T = n(197115),
-    h = n(695346),
-    N = n(131704),
-    C = n(598077),
-    f = n(594174),
-    p = n(111361),
-    g = n(74538),
-    S = n(981631),
-    A = n(474936),
-    R = n(689938),
-    x = n(591047),
-    O = n(80706),
-    M = n(305682);
-let v = {
-        offset: {
-            left: 4,
-            right: -12
-        }
-    },
-    L = '1337';
-function Z() {
-    let e = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
-        t = (0, p.I5)(e, A.p9.TIER_2),
-        { fakeMessage: n, fakeChannel: s } = (function (e) {
-            let { showAttachment: t } = e,
-                n = new C.Z({
-                    id: '1337',
-                    username: R.Z.Messages.WUMPUS,
-                    avatar: 'nitro_wumpus',
-                    bot: !0
-                }),
-                i = new N.DA({
-                    id: L,
-                    guild_id: '1337',
-                    type: r.d.GUILD_TEXT,
-                    name: ''
-                }),
-                s = {
-                    id: '1337',
-                    filename: 'save-message.png',
-                    url: M,
-                    proxy_url: M,
-                    width: 621,
-                    height: 432,
-                    size: 1337,
-                    content_scan_version: (0, _.Qy)()
-                };
-            return {
-                fakeChannel: i,
-                fakeMessage: (0, E.e5)({
-                    ...(0, I.ZP)({
-                        channelId: L,
-                        content: R.Z.Messages.FOR_LATER_TUTORIAL_MESSAGE
-                    }),
-                    state: S.yb.SENT,
-                    id: '1337',
-                    author: n,
-                    attachments: t ? [s] : void 0
-                })
-            };
-        })({ showAttachment: t });
+    _ = n(294218),
+    E = n(197115),
+    I = n(695346),
+    m = n(594174),
+    T = n(111361),
+    h = n(74538),
+    N = n(997486),
+    C = n(981631),
+    f = n(474936),
+    p = n(689938),
+    g = n(591047),
+    S = n(80706);
+let A = {
+    offset: {
+        left: 4,
+        right: -12
+    }
+};
+function R() {
+    let e = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
+        t = (0, T.I5)(e, f.p9.TIER_2),
+        { fakeMessage: n, fakeChannel: a } = s.useMemo(() => (0, N.Z)({ showAttachment: !1 }), []);
     return (0, i.jsxs)('div', {
-        className: O.messagesScroller,
+        className: S.messagesScroller,
         children: [
             (0, i.jsx)('div', {
-                className: O.messageContainer,
-                children: (0, i.jsx)(m.Z, {
+                className: S.messageContainer,
+                children: (0, i.jsx)(_.Z, {
                     message: n,
-                    channel: s,
-                    className: a()(O.message, x.tutorialMessage),
-                    compact: h.jU.getSetting(),
+                    channel: a,
+                    className: r()(S.message, g.tutorialMessage),
+                    compact: I.jU.getSetting(),
                     animateAvatar: !1,
-                    focusProps: v,
+                    focusProps: A,
                     trackAnnouncementViews: !0
                 })
             }),
-            t ? null : (0, i.jsx)(P, {})
+            t ? null : (0, i.jsx)(x, {})
         ]
     });
 }
-function P() {
-    let e = (0, g.Px)(A.p9.TIER_2),
-        t = R.Z.Messages.FOR_LATER_PREMIUM_UPSELL.format({ nitroTierName: e });
+function x() {
+    let e = (0, h.Px)(f.p9.TIER_2),
+        t = p.Z.Messages.FOR_LATER_PREMIUM_UPSELL.format({ nitroTierName: e });
     return (0, i.jsxs)('div', {
-        className: x.upsellContainer,
+        className: g.upsellContainer,
         children: [
             (0, i.jsx)(l.SrA, {
                 size: 'md',
@@ -109,16 +66,16 @@ function P() {
             (0, i.jsx)(o.x, {
                 variant: 'text-xs/medium',
                 color: 'header-primary',
-                className: x.upsellText,
+                className: g.upsellText,
                 children: t
             }),
-            (0, i.jsx)(T.Z, {
-                className: x.upsellButton,
+            (0, i.jsx)(E.Z, {
+                className: g.upsellButton,
                 size: u.ButtonSizes.TINY,
-                shinyButtonClassName: x.upsellButton,
-                subscriptionTier: A.Si.TIER_2,
-                buttonText: R.Z.Messages.FOR_LATER_PREMIUM_UPSELL_CTA,
-                premiumModalAnalyticsLocation: { section: S.jXE.FOR_LATER_POPOUT_UPSELL }
+                shinyButtonClassName: g.upsellButton,
+                subscriptionTier: f.Si.TIER_2,
+                buttonText: p.Z.Messages.FOR_LATER_PREMIUM_UPSELL_CTA,
+                premiumModalAnalyticsLocation: { section: C.jXE.FOR_LATER_POPOUT_UPSELL }
             })
         ]
     });
