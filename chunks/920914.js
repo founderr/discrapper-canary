@@ -360,6 +360,7 @@ function w(e) {
                                 size: _.Button.Sizes.SMALL,
                                 submitting: W,
                                 disabled: r,
+                                'aria-label': y.Z.Messages.CONNECTIONS_OPEN_LINK,
                                 onClick: r
                                     ? void 0
                                     : () => {
