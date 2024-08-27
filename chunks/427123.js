@@ -45,7 +45,7 @@ function R() {
     }
     return e;
 }
-class x extends (i = c.ZP.Store) {
+class O extends (i = c.ZP.Store) {
     initialize() {
         var e;
         this.waitFor(T.ZP, C.Z, N.Z), (A = null !== (e = u.K.get(p)) && void 0 !== e ? e : A);
@@ -55,7 +55,7 @@ class x extends (i = c.ZP.Store) {
     }
 }
 (r = 'DetectedOffPlatformPremiumPerksStore'),
-    (a = 'displayName') in (s = x)
+    (a = 'displayName') in (s = O)
         ? Object.defineProperty(s, a, {
               value: r,
               enumerable: !0,
@@ -63,7 +63,7 @@ class x extends (i = c.ZP.Store) {
               writable: !0
           })
         : (s[a] = r),
-    (t.Z = new x(d.Z, {
+    (t.Z = new O(d.Z, {
         LOGOUT: function () {
             (g = {}), (S = {});
         },

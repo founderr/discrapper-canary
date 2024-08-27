@@ -39,8 +39,8 @@ var i,
     A = n(77498),
     N = n(283595),
     O = n(417363),
-    R = n(626135),
-    v = n(70956),
+    v = n(626135),
+    R = n(70956),
     C = n(877481),
     y = n(823379),
     D = n(358085),
@@ -271,7 +271,7 @@ function ef(e) {
     var t, n;
     let r = {
         ...e,
-        played: null != e.lastFocused && 0 !== e.lastFocused ? d()(new Date(e.lastFocused * v.Z.Millis.SECOND)).fromNow() : ' ',
+        played: null != e.lastFocused && 0 !== e.lastFocused ? d()(new Date(e.lastFocused * R.Z.Millis.SECOND)).fromNow() : ' ',
         overlay: ((t = e), null !== (n = z.enableOverlay[eu(t)]) && void 0 !== n ? n : ec(t).enabled),
         verified: A.Z.isGameInDatabase(e),
         detectable: ed(e)
@@ -613,7 +613,7 @@ class eT extends (i = _.ZP.Store) {
             if (((z.enableOverlay[eu(e.game)] = e.newEnabledValue), eE(), !__OVERLAY__)) {
                 let t = null != e.game.id ? A.Z.getDetectableGame(e.game.id) : null;
                 null != t &&
-                    R.default.track(P.rMx.OVERLAY_TOGGLED, {
+                    v.default.track(P.rMx.OVERLAY_TOGGLED, {
                         enabled: e.newEnabledValue,
                         setting_type: 'overlay toggled - game',
                         application_id: t.id,
@@ -624,7 +624,7 @@ class eT extends (i = _.ZP.Store) {
         RUNNING_GAME_TOGGLE_DETECTION: function (e) {
             let { game: t } = e,
                 n = ed(t);
-            (z.enableDetection[eu(t)] = !n), eE(), R.default.track(P.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
+            (z.enableDetection[eu(t)] = !n), eE(), v.default.track(P.rMx.USER_SETTINGS_GAME_DETECTION_TOGGLE, { enabled: !n });
         },
         RUNNING_GAME_EDIT_NAME: function (e) {
             let t = eu(e.game),
@@ -705,7 +705,7 @@ class eT extends (i = _.ZP.Store) {
                 })
                 .map((e) => e.cleanedExePath);
             t.length > 0 &&
-                R.default.track(P.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
+                v.default.track(P.rMx.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
                     keywords: k,
                     paths: t,
                     debugging_level: er,

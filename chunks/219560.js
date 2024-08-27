@@ -34,8 +34,8 @@ var r = n(594438),
     A = n(267858),
     N = n(543093),
     O = n(807579),
-    R = n(658054),
-    v = n(243351),
+    v = n(658054),
+    R = n(243351),
     C = n(402573),
     y = n(250358),
     D = n(428961),
@@ -79,8 +79,8 @@ Y = {
     'nb-NO': A.Z,
     'nl-NL': N.Z,
     'pl-PL': O.Z,
-    'pt-BR': R.Z,
-    'pt-PT': v.Z,
+    'pt-BR': v.Z,
+    'pt-PT': R.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
     'sk-SK': D.Z,
@@ -409,12 +409,12 @@ function J(e, t, n) {
         (0, F.useEffect)(() => {
             c && n.current && ((0, k.Ao)(n.current), 'pointer' !== (0, H.Jz)() && document.activeElement === n.current && (0, k.Gt)(n.current, { containingElement: (0, k.rP)(n.current) }));
         }, [c, n]);
-    let R = (0, B.aQ)({
+    let v = (0, B.aQ)({
             day: 'numeric',
             timeZone: t.timeZone,
             calendar: r.calendar.identifier
         }),
-        v = (0, F.useMemo)(() => R.formatToParts(f).find((e) => 'day' === e.type).value, [R, f]);
+        R = (0, F.useMemo)(() => v.formatToParts(f).find((e) => 'day' === e.type).value, [v, f]);
     return {
         cellProps: {
             role: 'gridcell',
@@ -449,6 +449,6 @@ function J(e, t, n) {
         isUnavailable: d,
         isOutsideVisibleRange: 0 > r.compare(t.visibleRange.start) || r.compare(t.visibleRange.end) > 0,
         isInvalid: E,
-        formattedDate: v
+        formattedDate: R
     };
 }

@@ -26,8 +26,8 @@ var r = n(735250),
     A = n(689938),
     N = n(435880);
 function O(e) {
-    let { className: t, disabled: a, isEditor: O, renderCTAButtons: R } = e,
-        [v, C] = (0, o.Wu)([p.Z], () => [p.Z.getCurrentDesktopIcon(), p.Z.isUpsellPreview]),
+    let { className: t, disabled: a, isEditor: O, renderCTAButtons: v } = e,
+        [R, C] = (0, o.Wu)([p.Z], () => [p.Z.getCurrentDesktopIcon(), p.Z.isUpsellPreview]),
         { enabled: y } = E.Z.getCurrentConfig(
             { location: 'UserSettingsAppearanceInAppIcon' },
             {
@@ -115,7 +115,7 @@ function O(e) {
                                           })
                                 ]
                             }),
-                            null == R ? void 0 : R()
+                            null == v ? void 0 : v()
                         ]
                     }),
                     (0, r.jsx)('div', {
@@ -128,7 +128,7 @@ function O(e) {
                                 m.Z,
                                 {
                                     icon: e,
-                                    isSelected: v === e.id,
+                                    isSelected: R === e.id,
                                     onSelect: (e) => M(e),
                                     disabled: a,
                                     tabIndex: 0 !== t || a ? void 0 : 0,

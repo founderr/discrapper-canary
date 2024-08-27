@@ -24,17 +24,17 @@ t.Z = i.memo(
                 return T && Object.values(null !== (t = null === (e = _.Z.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2;
             }),
             [A, N, O] = (0, d.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], o.Z),
-            R = i.useRef(0),
-            v = i.useCallback(() => {
+            v = i.useRef(0),
+            R = i.useCallback(() => {
                 g(!0),
-                    clearTimeout(R.current),
-                    (R.current = setTimeout(() => {
-                        g(!1), (R.current = 0);
+                    clearTimeout(v.current),
+                    (v.current = setTimeout(() => {
+                        g(!1), (v.current = 0);
                     }, 2000));
             }, []);
         (0, E.yp)({
             event: h.CkL.FAVORITE_GIF,
-            handler: v
+            handler: R
         });
         let C = i.useCallback(() => {
                 (0, d.RO)(p.X1.GIF, a);

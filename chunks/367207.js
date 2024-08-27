@@ -21,8 +21,8 @@ var l = n(392711),
     N = n(269486),
     x = n(514851),
     S = n(970645),
-    Z = n(30684),
-    v = n(371260),
+    v = n(30684),
+    Z = n(371260),
     T = n(6242),
     L = n(467721),
     A = n(757692),
@@ -140,7 +140,7 @@ class Y extends c.Z {
             }),
             z(this, '_maybeFetchCheckoutRecovery', async () => {
                 let e = g.default.getCurrentUser();
-                null != e && e.verified && !(0, I.I5)(e) && Z.Z.shouldFetchCheckoutRecovery() && (await (0, S.o)());
+                null != e && e.verified && !(0, I.I5)(e) && v.Z.shouldFetchCheckoutRecovery() && (await (0, S.o)());
             }),
             z(this, '_maybeFetchCampaignContext', async () => {
                 let e = g.default.getCurrentUser();
@@ -182,7 +182,7 @@ class Y extends c.Z {
                         { sendNitroMessage: s } = (0, T.TD)(a),
                         c = null !== (l = null === (i = f.Z.getGuild(t)) || void 0 === i ? void 0 : i.premiumTier) && void 0 !== l ? l : H.Eu4.NONE;
                     if (L.Z.cooldownIsActive() || !s || c >= H.Eu4.TIER_2 || (null == r ? void 0 : r.type) !== V.fO.STREAM || (null == r ? void 0 : r.id) === (null == n ? void 0 : n.id) || null == r.maxResolution || null == r.maxFrameRate) return;
-                    v.I();
+                    Z.I();
                     let u = W.Z.Messages.STREAM_PREMIUM_VIEWER_UPSELL_MESSAGE.format({
                         nickname: r.userNick,
                         resolution: (0, F.o6)(r.maxResolution.height),

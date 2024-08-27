@@ -68,7 +68,7 @@ class R extends s.PureComponent {
             });
     }
 }
-class x extends s.PureComponent {
+class O extends s.PureComponent {
     isDeadInvite() {
         let { isPreview: e, message: t, activity: n, applicationId: i } = this.props;
         return !e && !(null != t && (0, N.Z)(n, t, i));
@@ -398,4 +398,4 @@ class x extends s.PureComponent {
             });
     }
 }
-t.Z = x;
+t.Z = O;

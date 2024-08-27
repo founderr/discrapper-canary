@@ -66,7 +66,7 @@ n.d(t, {
         return eL;
     },
     SE: function () {
-        return eR;
+        return ev;
     },
     Sb: function () {
         return eT;
@@ -93,7 +93,7 @@ n.d(t, {
         return b;
     },
     Xk: function () {
-        return R;
+        return v;
     },
     Xr: function () {
         return ee;
@@ -171,7 +171,7 @@ n.d(t, {
         return eh;
     },
     qF: function () {
-        return v;
+        return R;
     },
     rN: function () {
         return ep;
@@ -320,7 +320,7 @@ let m = (0, o.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    R = (0, o.Zc)(
+    v = (0, o.Zc)(
         'textAndImages',
         'showCommandSuggestions',
         (e) => {
@@ -329,7 +329,7 @@ let m = (0, o.Zc)(
         },
         (e) => a.D5.create({ value: e })
     ),
-    v = (0, o.Zc)(
+    R = (0, o.Zc)(
         'voiceAndVideo',
         'alwaysPreviewVideo',
         (e) => {
@@ -836,17 +836,17 @@ let eT = (0, o.KM)(
             })
     ),
     eO = [],
-    eR = (0, o.Zc)(
+    ev = (0, o.Zc)(
         'privacy',
         'activityRestrictedGuildIds',
         (e) => (null != e ? e : eO),
         (e) => e
     ),
-    ev = [],
+    eR = [],
     eC = (0, o.Zc)(
         'privacy',
         'activityJoiningRestrictedGuildIds',
-        (e) => (null != e ? e : ev),
+        (e) => (null != e ? e : eR),
         (e) => e
     ),
     ey = (0, o.Zc)(

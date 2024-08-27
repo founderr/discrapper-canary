@@ -9,7 +9,7 @@ n.d(t, {
         return S;
     },
     Jf: function () {
-        return R;
+        return v;
     },
     SA: function () {
         return D;
@@ -18,7 +18,7 @@ n.d(t, {
         return N;
     },
     eu: function () {
-        return v;
+        return R;
     },
     hW: function () {
         return L;
@@ -121,14 +121,14 @@ let T = async (e, t) => {
             n.body
         );
     },
-    R = async (e, t, n) =>
+    v = async (e, t, n) =>
         (
             await a.tn.patch({
                 url: p.ANM.GUILD_STICKER(e, t),
                 body: n
             })
         ).body;
-function v(e, t, n) {
+function R(e, t, n) {
     s.Z.dispatch({
         type: 'ADD_STICKER_PREVIEW',
         channelId: e,

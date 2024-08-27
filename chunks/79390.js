@@ -1,6 +1,6 @@
 n.d(t, {
     D$: function () {
-        return v;
+        return R;
     },
     N4: function () {
         return L;
@@ -12,7 +12,7 @@ n.d(t, {
         return S;
     },
     _N: function () {
-        return R;
+        return v;
     },
     cS: function () {
         return C;
@@ -76,10 +76,10 @@ function N(e) {
 function O(e) {
     return (0, l.e7)([f.Z], () => !!(null != e && T.TPd.POLLS.has(e.type)) && (!!e.isPrivate() || (f.Z.can(T.Plq.SEND_MESSAGES, e) && f.Z.can(T.Plq.SEND_POLLS, e))));
 }
-function R() {
+function v() {
     return !1;
 }
-function v(e, t, n) {
+function R(e, t, n) {
     return 0 === e.length && null == t.find((e) => C(e, n));
 }
 function C(e, t) {

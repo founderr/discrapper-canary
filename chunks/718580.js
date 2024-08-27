@@ -49,14 +49,14 @@ function m(e) {
             index: t
         };
     });
-    let R = A.activeSlide,
-        v = (0, d.Z)(A.activeSlide);
-    let C = null !== (t = A.directionOverride) && void 0 !== t ? t : ((m = null != v ? N[v] : null), (T = N[R]), null == m ? null : m.index > T.index ? 'backwards' : m.index < T.index ? 'forwards' : null),
+    let v = A.activeSlide,
+        R = (0, d.Z)(A.activeSlide);
+    let C = null !== (t = A.directionOverride) && void 0 !== t ? t : ((m = null != R ? N[R] : null), (T = N[v]), null == m ? null : m.index > T.index ? 'backwards' : m.index < T.index ? 'forwards' : null),
         { reducedMotion: y } = i.useContext(l.S),
         D = i.useContext(_.Z),
-        L = N[R].impressionName,
+        L = N[v].impressionName,
         b = {
-            ...N[R].impressionProperties,
+            ...N[v].impressionProperties,
             location_stack: O
         };
     D({
@@ -65,7 +65,7 @@ function m(e) {
         properties: b,
         _stackContext: { isSlide: !0 }
     });
-    let { ref: M, width: P = 0, height: U = 0 } = (0, c.Z)(R),
+    let { ref: M, width: P = 0, height: U = 0 } = (0, c.Z)(v),
         w = {
             ...h,
             ...A.springConfig,
@@ -77,10 +77,10 @@ function m(e) {
                 height: U,
                 config: w
             },
-            null == v ? 'animate-never' : 'respect-motion-settings'
+            null == R ? 'animate-never' : 'respect-motion-settings'
         ),
         G = (0, u.useTransition)(
-            R,
+            v,
             {
                 value: 0,
                 from: { value: 1 },
@@ -89,10 +89,10 @@ function m(e) {
                 config: w,
                 onRest: (e, t) => {
                     let { item: n } = t;
-                    n === R && null != A.onSlideReady && A.onSlideReady(n);
+                    n === v && null != A.onSlideReady && A.onSlideReady(n);
                 }
             },
-            null == v ? 'animate-never' : 'respect-motion-settings'
+            null == R ? 'animate-never' : 'respect-motion-settings'
         ),
         k = (0, f.Z)(C),
         { width: B, centered: F = !0 } = A,
@@ -120,7 +120,7 @@ function m(e) {
             return (0, r.jsx)(
                 a.animated.div,
                 {
-                    ref: t === R ? M : null,
+                    ref: t === v ? M : null,
                     style: {
                         position: 'absolute',
                         display: g,

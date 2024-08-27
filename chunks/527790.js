@@ -27,8 +27,8 @@ var i = n(120356),
     A = n(502762),
     N = n(652853),
     O = n(194811),
-    R = n(373826),
-    v = n(582123),
+    v = n(373826),
+    R = n(582123),
     C = n(622058),
     y = n(290274),
     D = n(318134),
@@ -44,7 +44,7 @@ function P(e) {
             showCoverImage: !1
         }),
         { appName: O } = (0, T.n)(n),
-        v = (0, S.Z)({
+        R = (0, S.Z)({
             location: 'UserProfileRecentActivityCard',
             applicationId: n.extra.application_id,
             source: g.m1.UserProfile,
@@ -59,7 +59,7 @@ function P(e) {
             analyticsLocations: C
         }),
         P = () => (n.content_type === s.s.TOP_GAME ? p.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))) : E.W.map((e, t) => (0, r.jsx)(e, { entry: n }, 'entry-'.concat(t))));
-    return null == v
+    return null == R
         ? (0, r.jsxs)(A.Z.Overlay, {
               className: a()(M.card, l),
               ref: b,
@@ -78,7 +78,7 @@ function P(e) {
                                   className: M.details,
                                   children: [
                                       (0, r.jsx)('div', {
-                                          children: (0, r.jsx)(R.Z, {
+                                          children: (0, r.jsx)(v.Z, {
                                               variant: 'heading-sm/semibold',
                                               text: O
                                           })
@@ -108,7 +108,7 @@ function P(e) {
                               (0, r.jsx)(_.E, {
                                   image: I,
                                   onClick: () => {
-                                      y({ action: 'PRESS_GAME_IMAGE' }), v();
+                                      y({ action: 'PRESS_GAME_IMAGE' }), R();
                                   },
                                   size: _.J.SIZE_60
                               }),
@@ -118,9 +118,9 @@ function P(e) {
                                       (0, r.jsx)(o.Clickable, {
                                           className: M.clickable,
                                           onClick: () => {
-                                              y({ action: 'OPEN_GAME_PROFILE' }), v(), null == d || d();
+                                              y({ action: 'OPEN_GAME_PROFILE' }), R(), null == d || d();
                                           },
-                                          children: (0, r.jsx)(R.Z, {
+                                          children: (0, r.jsx)(v.Z, {
                                               variant: 'heading-sm/semibold',
                                               text: O
                                           })
@@ -170,11 +170,11 @@ function U(e) {
                             children: [
                                 (0, r.jsxs)('div', {
                                     children: [
-                                        (0, r.jsx)(R.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             variant: 'heading-sm/semibold',
                                             text: n.extra.media_title
                                         }),
-                                        (0, r.jsx)(R.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             variant: 'text-xs/normal',
                                             text: n.extra.media_subtitle
                                         })
@@ -227,7 +227,7 @@ function w(e) {
                             className: M.details,
                             children: [
                                 (0, r.jsx)('div', {
-                                    children: (0, r.jsx)(R.Z, {
+                                    children: (0, r.jsx)(v.Z, {
                                         variant: 'heading-sm/semibold',
                                         text: S
                                     })
@@ -276,11 +276,11 @@ function x(e) {
                             children: [
                                 (0, r.jsxs)('div', {
                                     children: [
-                                        (0, r.jsx)(R.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             variant: 'heading-sm/semibold',
                                             text: n.extra.media.title
                                         }),
-                                        (0, r.jsx)(R.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             variant: 'text-xs/normal',
                                             text: n.extra.artist.name
                                         })
@@ -306,7 +306,7 @@ function G(e) {
     return (0, C.R)(n)
         ? (0, r.jsx)(u.Gt, {
               value: o,
-              children: (0, r.jsx)(v.Z, {
+              children: (0, r.jsx)(R.Z, {
                   user: t,
                   onClose: a,
                   children: (e) => {

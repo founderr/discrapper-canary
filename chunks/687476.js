@@ -61,7 +61,7 @@ function O(e) {
     let { guildId: t } = e;
     return !!p.has(t) && S(t);
 }
-class R extends (r = l.ZP.Store) {
+class v extends (r = l.ZP.Store) {
     initialize() {
         this.waitFor(d.Z);
     }
@@ -96,7 +96,7 @@ class R extends (r = l.ZP.Store) {
     }
 }
 (s = 'SubscriptionRoleStore'),
-    (a = 'displayName') in (i = R)
+    (a = 'displayName') in (i = v)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -104,7 +104,7 @@ class R extends (r = l.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new R(u.Z, {
+    (t.Z = new v(u.Z, {
         CONNECTION_OPEN: A,
         LOGOUT: A,
         GUILD_CREATE: N,

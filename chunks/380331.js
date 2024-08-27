@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(883661),
     N = n(880949),
     O = n(784222),
-    R = n(149203),
-    v = n(981631),
+    v = n(149203),
+    R = n(981631),
     C = n(957825),
     y = n(689938),
     D = n(746974);
@@ -41,9 +41,9 @@ let L = (0, g.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
 function H(e) {
     let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: o, category: l, handleCategorySelect: c, isWindowFocused: d, useReducedMotion: E } = e,
         f = (0, u.JA)('expression-guild-'.concat(n)),
-        h = l.type === R.En.GUILD ? null : l.id,
+        h = l.type === v.En.GUILD ? null : l.id,
         p = t === n,
-        m = l.type === R.En.GUILD ? l.guild : null,
+        m = l.type === v.En.GUILD ? l.guild : null,
         g = (0, r.jsxs)(_.Clickable, {
             ...f,
             'aria-label': (0, S.Nf)(l, m),
@@ -51,11 +51,11 @@ function H(e) {
                 [D.categoryItemGuildCategory]: null != m,
                 [D.categoryItemDefaultCategory]: null == m,
                 [D.categoryItemDefaultCategorySelected]: null == m && p,
-                [D.categoryItemRecentEmoji]: l.type === R.En.RECENT
+                [D.categoryItemRecentEmoji]: l.type === v.En.RECENT
             }),
             onClick: () => {
                 null != m &&
-                    T.default.track(v.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
+                    T.default.track(R.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                         location: null == a ? void 0 : a.location,
                         tab: C.X1.EMOJI,
                         guild_id: m.id
@@ -83,7 +83,7 @@ function H(e) {
             ]
         }),
         O = o[n + 1],
-        y = null != O && l.type === R.En.GUILD && O.type !== R.En.GUILD;
+        y = null != O && l.type === v.En.GUILD && O.type !== v.En.GUILD;
     return null != m
         ? (0, r.jsxs)(i.Fragment, {
               children: [
@@ -108,7 +108,7 @@ t.Z = (e) => {
         g = (0, S.kI)(o, u),
         A = i.useRef(null),
         N = (0, c.e7)([m.Z], () => m.Z.isFocused()),
-        v = (0, c.e7)([f.Z], () => f.Z.useReducedMotion, []),
+        R = (0, c.e7)([f.Z], () => f.Z.useReducedMotion, []),
         C = i.useMemo(
             () =>
                 l().memoize((e, t) => {
@@ -124,21 +124,21 @@ t.Z = (e) => {
                                 categoryIndex: t,
                                 handleCategorySelect: I,
                                 isWindowFocused: N,
-                                useReducedMotion: v
+                                useReducedMotion: R
                             },
                             t
                         );
                 }),
-            [d, T, g, I, N, v]
+            [d, T, g, I, N, R]
         ),
         L = i.useMemo(() => [8, 8, 0, 8], []),
         U = i.useCallback(
             (e, t) => {
                 let n = g[t];
-                if (n.type === R.En.RECENT) return k;
-                if (n.type === R.En.GUILD) {
+                if (n.type === v.En.RECENT) return k;
+                if (n.type === v.En.GUILD) {
                     let e = g[t + 1];
-                    return null != e && e.type !== R.En.GUILD ? F : B;
+                    return null != e && e.type !== v.En.GUILD ? F : B;
                 }
                 return V;
             },
@@ -155,7 +155,7 @@ t.Z = (e) => {
                 n = 0,
                 r = 0;
             g.forEach((i) => {
-                i.type === R.En.GUILD ? ((t += 1), (n += 1)) : i.type === R.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
+                i.type === v.En.GUILD ? ((t += 1), (n += 1)) : i.type === v.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
             });
             let i = k + t * B + F;
             return {
@@ -189,10 +189,10 @@ t.Z = (e) => {
                 let n = g[e];
                 if (null == n) return 0;
                 let r = K ? w : 0;
-                if (n.type === R.En.RECENT) return t ? 0 : P;
-                if (n.type === R.En.GUILD) {
+                if (n.type === v.En.RECENT) return t ? 0 : P;
+                if (n.type === v.En.GUILD) {
                     let n = g[e + 1];
-                    return null != n && n.type !== R.En.GUILD ? (t ? x + -2 * G + b + r : b) : t ? r : b;
+                    return null != n && n.type !== v.En.GUILD ? (t ? x + -2 * G + b + r : b) : t ? r : b;
                 }
                 return t ? b + r : 2 * b;
             },

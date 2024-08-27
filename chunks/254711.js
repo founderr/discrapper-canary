@@ -30,8 +30,8 @@ var r = n(512722),
     A = n(70956),
     N = n(51144),
     O = n(895924),
-    R = n(689079),
-    v = n(981631),
+    v = n(689079),
+    R = n(981631),
     C = n(590433),
     y = n(689938);
 let D = n(227419).Z,
@@ -40,15 +40,15 @@ let D = n(227419).Z,
         return null === (n = e.find((e) => e.name === t)) || void 0 === n ? void 0 : n.value;
     },
     b = {
-        [R.bi.BUILT_IN]: {
-            id: R.bi.BUILT_IN,
+        [v.bi.BUILT_IN]: {
+            id: v.bi.BUILT_IN,
             type: O.Qi.BUILT_IN,
             get name() {
                 return y.Z.Messages.COMMAND_SECTION_BUILT_IN_NAME;
             }
         },
-        [R.bi.FRECENCY]: {
-            id: R.bi.FRECENCY,
+        [v.bi.FRECENCY]: {
+            id: v.bi.FRECENCY,
             type: O.Qi.BUILT_IN,
             get name() {
                 return y.Z.Messages.FREQUENTLY_USED;
@@ -63,7 +63,7 @@ let D = n(227419).Z,
             displayName: 'shrug',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_SHRUG_DESCRIPTION;
             },
@@ -95,7 +95,7 @@ let D = n(227419).Z,
             displayName: 'tableflip',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_TABLEFLIP_DESCRIPTION;
             },
@@ -127,7 +127,7 @@ let D = n(227419).Z,
             displayName: 'unflip',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_TABLEUNFLIP_DESCRIPTION;
             },
@@ -159,7 +159,7 @@ let D = n(227419).Z,
             displayName: 'tts',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_TTS_DESCRIPTION;
             },
@@ -182,7 +182,7 @@ let D = n(227419).Z,
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return !t.isPrivate() && m.OW.getSetting() && g.Z.can(v.Plq.SEND_TTS_MESSAGES, t);
+                return !t.isPrivate() && m.OW.getSetting() && g.Z.can(R.Plq.SEND_TTS_MESSAGES, t);
             },
             execute: (e) => {
                 var t;
@@ -198,7 +198,7 @@ let D = n(227419).Z,
             displayName: 'me',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_ME_DESCRIPTION;
             },
@@ -231,7 +231,7 @@ let D = n(227419).Z,
             displayName: 'spoiler',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN_TEXT,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_SPOILER_DESCRIPTION;
             },
@@ -255,7 +255,7 @@ let D = n(227419).Z,
             execute: (e) => {
                 var t;
                 let n = null !== (t = L(e, 'message')) && void 0 !== t ? t : '';
-                return { content: (0, v.XmY)(n).trim() };
+                return { content: (0, R.XmY)(n).trim() };
             }
         },
         {
@@ -264,7 +264,7 @@ let D = n(227419).Z,
             displayName: 'nick',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_NICK_DESCRIPTION;
             },
@@ -286,14 +286,14 @@ let D = n(227419).Z,
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return !t.isPrivate() && (g.Z.can(v.Plq.CHANGE_NICKNAME, t) || g.Z.can(v.Plq.MANAGE_NICKNAMES, t));
+                return !t.isPrivate() && (g.Z.can(R.Plq.CHANGE_NICKNAME, t) || g.Z.can(R.Plq.MANAGE_NICKNAMES, t));
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
                 if (null == r) return;
                 let a = null !== (n = L(e, 'new_nick')) && void 0 !== n ? n : '';
-                l.Z.changeNickname(r.id, i.id, v.ME, a || '');
+                l.Z.changeNickname(r.id, i.id, R.ME, a || '');
             }
         },
         {
@@ -302,7 +302,7 @@ let D = n(227419).Z,
             displayName: 'thread',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_THREAD_DESCRIPTION;
             },
@@ -354,7 +354,7 @@ let D = n(227419).Z,
             displayName: 'kick',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_KICK_DESCRIPTION;
             },
@@ -389,14 +389,14 @@ let D = n(227419).Z,
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return g.Z.can(v.Plq.KICK_MEMBERS, t);
+                return g.Z.can(R.Plq.KICK_MEMBERS, t);
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
                 if (null == r) return;
                 let a = null !== (n = L(e, 'user')) && void 0 !== n ? n : '';
-                if (!g.Z.canManageUser(v.Plq.KICK_MEMBERS, a, r)) {
+                if (!g.Z.canManageUser(R.Plq.KICK_MEMBERS, a, r)) {
                     d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_KICK_UNABLE);
                     return;
                 }
@@ -416,7 +416,7 @@ let D = n(227419).Z,
             displayName: 'ban',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_BAN_DESCRIPTION;
             },
@@ -502,14 +502,14 @@ let D = n(227419).Z,
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return g.Z.can(v.Plq.BAN_MEMBERS, t);
+                return g.Z.can(R.Plq.BAN_MEMBERS, t);
             },
             execute: (e, t) => {
                 var n;
                 let { guild: r, channel: i } = t;
                 if (null == r) return;
                 let a = null !== (n = L(e, 'user')) && void 0 !== n ? n : '';
-                if (!g.Z.canManageUser(v.Plq.BAN_MEMBERS, a, r)) {
+                if (!g.Z.canManageUser(R.Plq.BAN_MEMBERS, a, r)) {
                     d.Z.sendBotMessage(i.id, y.Z.Messages.COMMAND_BAN_UNABLE);
                     return;
                 }
@@ -531,7 +531,7 @@ let D = n(227419).Z,
             displayName: 'timeout',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_TIMEOUT_DESCRIPTION;
             },
@@ -585,7 +585,7 @@ let D = n(227419).Z,
             ],
             predicate: (e) => {
                 let { guild: t } = e;
-                return g.Z.can(v.Plq.MODERATE_MEMBERS, t);
+                return g.Z.can(R.Plq.MODERATE_MEMBERS, t);
             },
             execute: (e, t) => {
                 let { guild: n, channel: r } = t;
@@ -626,7 +626,7 @@ let D = n(227419).Z,
             displayName: 'msg',
             type: _.yU.CHAT,
             inputType: O.iw.BUILT_IN,
-            applicationId: R.bi.BUILT_IN,
+            applicationId: v.bi.BUILT_IN,
             get description() {
                 return y.Z.Messages.COMMAND_MSG_DESCRIPTION;
             },
@@ -659,7 +659,7 @@ let D = n(227419).Z,
                     required: !0,
                     get maxLength() {
                         var P;
-                        return (null === (P = S.default.getCurrentUser()) || void 0 === P ? void 0 : P.premiumType) ? v.en1 : v.J6R;
+                        return (null === (P = S.default.getCurrentUser()) || void 0 === P ? void 0 : P.premiumType) ? R.en1 : R.J6R;
                     }
                 }
             ],

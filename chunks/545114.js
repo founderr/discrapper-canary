@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(117496),
     u = n(702646),
     _ = n(207796),
-    h = n(540742),
-    E = n(766219),
+    E = n(540742),
+    h = n(766219),
     m = n(801543),
     I = n(979233),
     g = n(88693),
@@ -34,7 +34,7 @@ function x() {
     let e = a.useRef((0, d.P)()),
         { onScroll: t, scrollPosition: n, resetScrollPosition: s } = (0, I.M)(),
         { tabs: x, selectedTab: b, setSelectedTab: P } = (0, v.Y)(),
-        M = (0, E.lg)(b),
+        M = (0, h.lg)(b),
         D = !Z.MU.has(b),
         y = (0, c.iN)('global_discovery_servers_layout'),
         { searchBarState: j, onTabsAvailableWidthChange: U, onCollapsedSearchBarClick: G, onSearchBarBlur: k, tabsClassName: w } = (0, g.U)({ isSearchBarVisible: D }),
@@ -69,7 +69,7 @@ function x() {
             s();
         }, [b, s]),
         a.useEffect(() => {
-            !Y && h.B.setState({ searchScrollPosition: null });
+            !Y && E.B.setState({ searchScrollPosition: null });
         }, [Y]);
     let $ = a.useMemo(() => {
         switch (b) {
@@ -81,7 +81,7 @@ function x() {
             default:
                 return (0, i.jsx)(T.Z, {
                     query: B,
-                    placeholder: M === L.Hk ? O.Z.Messages.SEARCH : O.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: (0, E.vb)(b) }),
+                    placeholder: M === L.Hk ? O.Z.Messages.SEARCH : O.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: (0, h.vb)(b) }),
                     onTextChange: H,
                     onClear: V,
                     onSubmit: F,

@@ -47,11 +47,11 @@ function O(e) {
     var t;
     return null !== (t = e.id) && void 0 !== t ? t : e.src;
 }
-function R(e, t) {
+function v(e, t) {
     let n = N[t];
     return null == n ? 0 : n.height;
 }
-function v(e, t, n, i) {
+function R(e, t, n, i) {
     if (!(e > 0))
         return null == N[t]
             ? null
@@ -361,8 +361,8 @@ class L extends i.PureComponent {
                               columns: e,
                               itemGutter: 12,
                               getItemKey: C,
-                              getItemHeight: R,
-                              renderItem: v,
+                              getItemHeight: v,
+                              renderItem: R,
                               chunkSize: 128
                           },
                           a

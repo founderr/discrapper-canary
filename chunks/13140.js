@@ -1,6 +1,6 @@
 n.d(t, {
     BB: function () {
-        return R;
+        return v;
     },
     C$: function () {
         return m;
@@ -161,7 +161,7 @@ function O(e) {
             return null != i && e.push([n, i, t]), e;
         }, []);
 }
-function R(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         r = e
             .map((e) => {

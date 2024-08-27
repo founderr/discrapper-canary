@@ -49,11 +49,11 @@ function R() {
                     trackAnnouncementViews: !0
                 })
             }),
-            t ? null : (0, i.jsx)(x, {})
+            t ? null : (0, i.jsx)(O, {})
         ]
     });
 }
-function x() {
+function O() {
     let e = (0, h.Px)(f.p9.TIER_2),
         t = p.Z.Messages.FOR_LATER_PREMIUM_UPSELL.format({ nitroTierName: e });
     return (0, i.jsxs)('div', {

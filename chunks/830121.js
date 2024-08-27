@@ -45,8 +45,8 @@ let I = /^\/([a-zA-Z0-9-]+)$/,
     A = /^\/application-directory\/([0-9-]+)\/store\/?([0-9-]+)?\/?$/,
     N = /^\/activities\/([0-9-]+)\/?$/,
     O = /^\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-    R = /^\/channels\/([0-9]+)\/shop$/,
-    v = /^\/quests\/([0-9-]+)\/?$/,
+    v = /^\/channels\/([0-9]+)\/shop$/,
+    R = /^\/quests\/([0-9-]+)\/?$/,
     C = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     y = G(window.GLOBAL_ENV.INVITE_HOST),
     D = G(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
@@ -173,9 +173,9 @@ function V(e) {
             let e = p[1];
             o(h.g.ACTIVITY_BOOKMARK, e);
         }
-        let v = null == s ? void 0 : s.match(O);
-        null != v && o(h.g.GUILD_PRODUCT, ''.concat(v[1], '-').concat(v[2]));
-        let C = null == s ? void 0 : s.match(R);
+        let R = null == s ? void 0 : s.match(O);
+        null != R && o(h.g.GUILD_PRODUCT, ''.concat(R[1], '-').concat(R[2]));
+        let C = null == s ? void 0 : s.match(v);
         null != C && o(h.g.SERVER_SHOP, C[1]);
         let y = H(e);
         null != y && o(h.g.QUESTS_EMBED, y);
@@ -185,7 +185,7 @@ function V(e) {
 function H(e) {
     var t, n;
     let r = F(e),
-        i = null == r ? void 0 : null === (t = r.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(v);
+        i = null == r ? void 0 : null === (t = r.primaryHostRemainingPath) || void 0 === t ? void 0 : t.match(R);
     return null !== (n = null == i ? void 0 : i[1]) && void 0 !== n ? n : null;
 }
 function Z(e) {

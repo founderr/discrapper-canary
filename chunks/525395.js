@@ -10,7 +10,7 @@ function _() {
     (a = {}), (i = {}), (s = new Set());
 }
 _();
-class h extends (r = d.ZP.Store) {
+class E extends (r = d.ZP.Store) {
     getStatisticsForApplication(e) {
         return i[e];
     }
@@ -20,7 +20,7 @@ class h extends (r = d.ZP.Store) {
     }
 }
 (c = 'ApplicationStatisticsStore'),
-    (o = 'displayName') in (l = h)
+    (o = 'displayName') in (l = E)
         ? Object.defineProperty(l, o, {
               value: c,
               enumerable: !0,
@@ -28,7 +28,7 @@ class h extends (r = d.ZP.Store) {
               writable: !0
           })
         : (l[o] = c),
-    (t.Z = new h(u.Z, {
+    (t.Z = new E(u.Z, {
         APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function (e) {
             let { applicationId: t } = e;
             s.add(t);

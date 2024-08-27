@@ -26,8 +26,8 @@ var r = n(735250),
     A = n(215633),
     N = n(777887),
     O = n(228168),
-    R = n(689938),
-    v = n(122269);
+    v = n(689938),
+    R = n(122269);
 function C(e) {
     let { user: t, currentUser: n, guildId: C, channelId: y, messageId: D, roleId: L, closePopout: b, setPopoutRef: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
         { analyticsLocations: w } = (0, u.ZP)([...U, l.Z.BITE_SIZE_PROFILE_POPOUT]),
@@ -77,7 +77,7 @@ function C(e) {
                                     ? null
                                     : (0, r.jsx)(s.MenuItem, {
                                           id: 'view-profile',
-                                          label: R.Z.Messages.VIEW_FULL_PROFILE,
+                                          label: v.Z.Messages.VIEW_FULL_PROFILE,
                                           action: () => {
                                               H(),
                                                   (0, E.pQ)({
@@ -90,7 +90,7 @@ function C(e) {
                             })
                         }),
                         (0, r.jsxs)('header', {
-                            className: v.header,
+                            className: R.header,
                             children: [
                                 (0, r.jsx)(h.Z, {
                                     user: t,

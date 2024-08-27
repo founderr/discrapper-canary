@@ -29,8 +29,8 @@ var i = n(658722),
     A = n(675478),
     N = n(131704),
     O = n(598077),
-    R = n(592125),
-    v = n(984933),
+    v = n(592125),
+    R = n(984933),
     C = n(271383),
     y = n(430824),
     D = n(375954),
@@ -64,7 +64,7 @@ function et() {
         t = arguments.length > 1 ? arguments[1] : void 0;
     return 1000 * e * (null != t ? t : 1);
 }
-let en = [v.sH, v.Zb, Y.d4z.GUILD_CATEGORY];
+let en = [R.sH, R.Zb, Y.d4z.GUILD_CATEGORY];
 function er(e, t) {
     let { exactQuery: n, containQuery: r, queryLower: i, isFullMatch: s } = t,
         o = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -101,7 +101,7 @@ function ea(e) {
         h = 0,
         p = 0;
     for (; h < f; ) {
-        var I, m, T, g, S, A, N, R, v;
+        var I, m, T, g, S, A, N, v, R;
         let e, r;
         let u = n[h];
         u instanceof O.Z ? ((r = u), (e = null === (m = C.ZP.getNick(l, r.id)) || void 0 === m ? void 0 : m.toLocaleLowerCase())) : ((e = null === (T = u.nick) || void 0 === T ? void 0 : T.toLocaleLowerCase()), (r = o[u.userId]));
@@ -136,8 +136,8 @@ function ea(e) {
                         type: j.h8.USER,
                         record: r,
                         score: 1,
-                        comparator: null !== (R = null != f ? f : e) && void 0 !== R ? R : n,
-                        sortable: null !== (v = null != h ? h : l) && void 0 !== v ? v : i
+                        comparator: null !== (v = null != f ? f : e) && void 0 !== v ? v : n,
+                        sortable: null !== (R = null != h ? h : l) && void 0 !== R ? R : i
                     }),
                     (p += 1));
         }
@@ -155,7 +155,7 @@ function es(e, t, n) {
     return null != i && (i.isFullMatch ? (t.length = 0) : t.splice(t.indexOf(i), 1)), r;
 }
 function eo(e, t) {
-    let n = R.Z.getChannel(e);
+    let n = v.Z.getChannel(e);
     return null == e || null == n
         ? []
         : o()(D.Z.getMessages(e).toArray())
@@ -197,7 +197,7 @@ t.ZP = {
         let { query: t, limit: n = 10, filter: r } = e;
         return ea({
             query: t,
-            members: R.Z.getDMUserIds()
+            members: v.Z.getDMUserIds()
                 .map((e) => w.default.getUser(e))
                 .filter(G.lm),
             limit: n,
@@ -207,9 +207,9 @@ t.ZP = {
     queryChannelUsers(e) {
         let t,
             { channelId: n, query: r, limit: i = 10, request: a = !0, checkRecentlyTalkedOnEmptyQuery: s = !0, allowSnowflake: o = !1 } = e,
-            l = R.Z.getChannel(n);
+            l = v.Z.getChannel(n);
         if (null == l) return [];
-        let u = l.isThread() ? R.Z.getChannel(l.parent_id) : null,
+        let u = l.isThread() ? v.Z.getChannel(l.parent_id) : null,
             c = null != u ? u : l;
         if (null == c) return [];
         if (c.isPrivate()) {
@@ -282,7 +282,7 @@ t.ZP = {
     },
     queryChannels(e) {
         let t,
-            { query: n, guildId: r, limit: i = Y.rnv, fuzzy: a = !0, filter: s = q, type: l = v.sH, allowEmptyQueries: d = !1, requireVocalConnectAccess: _ = !0, boosters: E = {}, allowSnowflake: f } = e,
+            { query: n, guildId: r, limit: i = Y.rnv, fuzzy: a = !0, filter: s = q, type: l = R.sH, allowEmptyQueries: d = !1, requireVocalConnectAccess: _ = !0, boosters: E = {}, allowSnowflake: f } = e,
             h = (function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = e
@@ -310,16 +310,16 @@ t.ZP = {
             })(n, d);
         t =
             null != r
-                ? o()(v.ZP.getChannels(r)[l])
+                ? o()(R.ZP.getChannels(r)[l])
                       .map((e) => e.channel)
                       .concat(S.Z.computeAllActiveJoinedThreads(r))
                       .value()
-                : o()(R.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(S.Z.computeAllActiveJoinedThreads()).value();
+                : o()(v.Z.loadAllGuildAndPrivateChannelsFromDisk()).values().concat(S.Z.computeAllActiveJoinedThreads()).value();
         let p = {},
             I = [];
         for (let e of t) {
             var m, T, g, A, O;
-            if (((m = l), (T = e.type), (g = null != r), !(m === T || ((g || (0, N.Km)(T)) && (m === v.sH ? (0, N.r8)(T) || (0, N.bw)(T) : m === v.Zb && (0, N.bw)(T)))) || ((0, N.Km)(e.type) && !L.Z.can(_ ? e.accessPermissions : Y.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
+            if (((m = l), (T = e.type), (g = null != r), !(m === T || ((g || (0, N.Km)(T)) && (m === R.sH ? (0, N.r8)(T) || (0, N.bw)(T) : m === R.Zb && (0, N.bw)(T)))) || ((0, N.Km)(e.type) && !L.Z.can(_ ? e.accessPermissions : Y.Plq.VIEW_CHANNEL, e)) || !s(e))) continue;
             let t = [...h],
                 i = e.name.toLocaleLowerCase(),
                 o = f && n === e.id,
@@ -341,7 +341,7 @@ t.ZP = {
                             let n = t[e.parent_id];
                             if (null == n) {
                                 var r;
-                                n = t[e.parent_id] = null === (r = R.Z.getChannel(e.parent_id)) || void 0 === r ? void 0 : r.name.toLocaleLowerCase();
+                                n = t[e.parent_id] = null === (r = v.Z.getChannel(e.parent_id)) || void 0 === r ? void 0 : r.name.toLocaleLowerCase();
                             }
                             return n;
                         })(e, p)
@@ -353,7 +353,7 @@ t.ZP = {
                     u = Math.min(6, u);
                 }
                 if (0 === u || t.length > 1 || (1 === t.length && !t[0].isFullMatch && !o)) continue;
-                if (((A = l), (O = e.type), A === v.sH && (0, N.bw)(O))) u = Math.max(u - 1, 0.5);
+                if (((A = l), (O = e.type), A === R.sH && (0, N.bw)(O))) u = Math.max(u - 1, 0.5);
                 I.push({
                     type: (0, N.bw)(e.type) ? j.h8.VOICE_CHANNEL : j.h8.TEXT_CHANNEL,
                     record: e,
@@ -397,7 +397,7 @@ t.ZP = {
                 containQuery: RegExp(F.Z.escape(s), 'i'),
                 queryLower: s
             },
-            d = o()(R.Z.getMutablePrivateChannels()).values().value(),
+            d = o()(v.Z.getMutablePrivateChannels()).values().value(),
             _ = [];
         for (let e of d) {
             if (!e.isMultiUserDM() || !i(e)) continue;
@@ -659,7 +659,7 @@ t.ZP = {
         return u;
     },
     queryChannelResults(e) {
-        let { query: t, channel: n, type: r = v.sH, channelTypes: i } = e;
+        let { query: t, channel: n, type: r = R.sH, channelTypes: i } = e;
         return {
             channels: this.queryChannels({
                 query: t,

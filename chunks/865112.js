@@ -1,12 +1,12 @@
 n.d(t, {
     RB: function () {
-        return x;
+        return O;
     },
     VH: function () {
         return S;
     },
     Vi: function () {
-        return O;
+        return x;
     },
     Vu: function () {
         return M;
@@ -83,11 +83,11 @@ let S = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    x = (e) => {
+    O = (e) => {
         if ('icHighlight' === e) return 'TOP_MESSAGES';
         return 'NOTIFICATION_CENTER';
     },
-    O = (e) => {
+    x = (e) => {
         switch (e) {
             case o.DY.GO_LIVE_PUSH:
                 return {

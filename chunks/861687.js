@@ -29,8 +29,8 @@ var r,
     A = n(811660),
     N = n(42352),
     O = n(148959),
-    R = n(227196),
-    v = n(926951),
+    v = n(227196),
+    R = n(926951),
     C = n(868616),
     y = n(848886),
     D = n(583215),
@@ -280,7 +280,7 @@ class el extends E.Z {
             e && (n ? t.push('force_krisp_enabled') : t.push('force_krisp_disabled'));
         }
         if ((G.Z.supports(ei.AN.FIXED_KEYFRAME_INTERVAL) && t.push('fixed_keyframe_interval'), 0 !== this._supportedBandwidthEstimationExperiments.length)) {
-            let { enabled: e, fullname: n } = v.Z.getConfig(!0, this._supportedBandwidthEstimationExperiments);
+            let { enabled: e, fullname: n } = R.Z.getConfig(!0, this._supportedBandwidthEstimationExperiments);
             e && t.push(n);
         }
         this._selectedExperiments = t;
@@ -499,7 +499,7 @@ class el extends E.Z {
                 this.userId === e && this.sendSpeaking(t, n), this.emit(K.z.Speaking, e, t);
             }),
             d.on(f.Sh.ToggleMuteFromNative, () => {
-                let { airpodsMuteSupported: e } = R.Z.getCurrentConfig({ location: 'RTCConnection ToggleMuteFromNative' }, { autoTrackExposure: !0 });
+                let { airpodsMuteSupported: e } = v.Z.getCurrentConfig({ location: 'RTCConnection ToggleMuteFromNative' }, { autoTrackExposure: !0 });
                 e && this.context === ei.Yn.DEFAULT && m.Z.toggleSelfMute({ playSoundEffect: !1 });
             }),
             d.on(f.Sh.NativeMuteChanged, (e) => {
@@ -861,7 +861,7 @@ class el extends E.Z {
     }
     _handleBandwidthEstimationExperiment(e) {
         this._bandwidthEstimationExperiment = e;
-        let t = v.Z.getMediaEngineExperiments(e);
+        let t = R.Z.getMediaEngineExperiments(e);
         if (null !== t && 0 !== t.length) {
             var n;
             null === (n = this._connection) || void 0 === n || n.setBandwidthEstimationExperiments(t);

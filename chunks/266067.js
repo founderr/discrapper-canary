@@ -12,7 +12,7 @@ n.d(t, {
         return m;
     },
     LX: function () {
-        return v;
+        return R;
     },
     TH: function () {
         return P;
@@ -165,8 +165,8 @@ function N(e) {
     });
 }
 var O = {},
-    R = 0;
-function v(e, t) {
+    v = 0;
+function R(e, t) {
     void 0 === t && (t = {}), ('string' == typeof t || Array.isArray(t)) && (t = { path: t });
     var n = t,
         r = n.path,
@@ -188,7 +188,7 @@ function v(e, t) {
                         regexp: _()(e, i, t),
                         keys: i
                     };
-                return R < 10000 && ((r[e] = a), R++), a;
+                return v < 10000 && ((r[e] = a), v++), a;
             })(n, {
                 end: a,
                 strict: o,
@@ -224,7 +224,7 @@ var C = (function (e) {
             return s.createElement(I.Consumer, null, function (t) {
                 t || (0, u.Z)(!1);
                 var n = e.props.location || t.location,
-                    r = e.props.computedMatch ? e.props.computedMatch : e.props.path ? v(n.pathname, e.props) : t.match,
+                    r = e.props.computedMatch ? e.props.computedMatch : e.props.path ? R(n.pathname, e.props) : t.match,
                     i = (0, c.Z)({}, t, {
                         location: n,
                         match: r
@@ -261,7 +261,7 @@ var D = (function (e) {
                         if (null == r && s.isValidElement(e)) {
                             n = e;
                             var a = e.props.path || e.props.from;
-                            r = a ? v(i.pathname, (0, c.Z)({}, e.props, { path: a })) : t.match;
+                            r = a ? R(i.pathname, (0, c.Z)({}, e.props, { path: a })) : t.match;
                         }
                     }),
                     r
@@ -301,5 +301,5 @@ function U() {
 function w(e) {
     var t = P(),
         n = b(I).match;
-    return e ? v(t.pathname, e) : n;
+    return e ? R(t.pathname, e) : n;
 }

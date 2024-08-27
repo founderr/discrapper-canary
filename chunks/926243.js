@@ -26,7 +26,7 @@ var r = n(735250),
 let A = (e, t) => ''.concat(e, ':').concat(t),
     N = i.forwardRef(function (e, t) {
         let n,
-            { emoji: i, isFavorite: a, isLargeSize: u, isMediumSize: c, isInspected: d, isDisabled: E, showPulse: h, columnIndex: p, rowIndex: m, size: A, surrogateCodePoint: N, allowAnimatedEmoji: O, selectedItemClassName: R, inNitroLockedSection: v, ...C } = e,
+            { emoji: i, isFavorite: a, isLargeSize: u, isMediumSize: c, isInspected: d, isDisabled: E, showPulse: h, columnIndex: p, rowIndex: m, size: A, surrogateCodePoint: N, allowAnimatedEmoji: O, selectedItemClassName: v, inNitroLockedSection: R, ...C } = e,
             y = (0, o.e7)([I.Z], () => (i.type === _.B.GUILD ? I.Z.getGuild(i.guildId) : void 0), [i]);
         return (0, r.jsx)(l.FocusRing, {
             children: (0, r.jsx)('button', {
@@ -35,7 +35,7 @@ let A = (e, t) => ''.concat(e, ':').concat(t),
                     [S.emojiItemLarge]: u,
                     [S.emojiItemMedium]: c,
                     [S.emojiItemSelected]: d,
-                    [null != R ? R : '']: d,
+                    [null != v ? v : '']: d,
                     [S.showPulse]: h
                 }),
                 'data-type': f.S.EMOJI,
@@ -61,13 +61,13 @@ let A = (e, t) => ''.concat(e, ':').concat(t),
                     size: A,
                     surrogateCodePoint: N,
                     allowAnimatedEmoji: O,
-                    isLocked: E && !v
+                    isLocked: E && !R
                 })
             })
         });
     });
 function O(e) {
-    let { descriptor: t, emojiItemKey: a, isInspected: s, rowIndex: _, channelGuildId: f, onInspect: I, onSelect: T, isScrolling: S, isUsingKeyboardNavigation: O, showEmojiFavoriteTooltip: R, surrogateCodePoint: v, selectedItemClassName: C, getEmojiItemProps: y, isMediumSize: D, isLargeSize: L, pulseItemKey: b, allowAnimatedEmoji: M, setPulseItemKey: P, messageId: U, isBurstReaction: w, rowPosition: x, inNitroLockedSection: G } = e,
+    let { descriptor: t, emojiItemKey: a, isInspected: s, rowIndex: _, channelGuildId: f, onInspect: I, onSelect: T, isScrolling: S, isUsingKeyboardNavigation: O, showEmojiFavoriteTooltip: v, surrogateCodePoint: R, selectedItemClassName: C, getEmojiItemProps: y, isMediumSize: D, isLargeSize: L, pulseItemKey: b, allowAnimatedEmoji: M, setPulseItemKey: P, messageId: U, isBurstReaction: w, rowPosition: x, inNitroLockedSection: G } = e,
         [k, B] = i.useState(''),
         F = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         V = (0, o.e7)([d.ZP], () => d.ZP.getDisambiguatedEmojiContext(f), [f]),
@@ -131,13 +131,13 @@ function O(e) {
                         columnIndex: W,
                         rowIndex: _,
                         size: Y,
-                        surrogateCodePoint: v,
+                        surrogateCodePoint: R,
                         selectedItemClassName: C,
                         inNitroLockedSection: G
                     })
             );
         };
-    return R
+    return v
         ? (0, r.jsx)(
               l.Tooltip,
               {

@@ -1,6 +1,6 @@
 n.d(t, {
     $z: function () {
-        return v;
+        return R;
     },
     D0: function () {
         return h;
@@ -48,7 +48,7 @@ n.d(t, {
         return I;
     },
     u_: function () {
-        return R;
+        return v;
     },
     z: function () {
         return g;
@@ -154,7 +154,7 @@ class u extends r.Z {
                     bank: e.bank
                 });
             case o.HeQ.CASH_APP:
-                return new R({
+                return new v({
                     ...r,
                     username: e.username
                 });
@@ -197,7 +197,7 @@ class u extends r.Z {
             case o.HeQ.IDEAL:
                 return new p(e);
             case o.HeQ.CASH_APP:
-                return new R(e);
+                return new v(e);
             default:
                 (0, s.vE)(t);
         }
@@ -301,13 +301,13 @@ class O extends u {
         if ((super(e), e.type !== o.HeQ.BANCONTACT)) throw Error('Cannot instantiate BancontactSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.BANCONTACT));
     }
 }
-class R extends u {
+class v extends u {
     constructor(e) {
         if ((super(e), l(this, 'username', void 0), e.type !== o.HeQ.CASH_APP)) throw Error('Cannot instantiate Cashapp with type: '.concat(e.type, ', must be ').concat(o.HeQ.CASH_APP));
         this.username = e.username || '';
     }
 }
-class v extends u {
+class R extends u {
     constructor(e) {
         if (((e.id = ''), (e.paymentGateway = o.gg$.APPLE_PARTNER), (e.type = o.HeQ.APPLE), (e.billingAddress = {}), (e.country = ''), (e.invalid = !1), (e.isDefault = !1), (e.flags = 0), super(e), e.type !== o.HeQ.APPLE)) throw Error('Cannot instantiate AppleSourceRecord with type: '.concat(e.type, ', must be ').concat(o.HeQ.APPLE));
     }

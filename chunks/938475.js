@@ -1,6 +1,6 @@
 n.d(t, {
     PH: function () {
-        return R;
+        return v;
     },
     sQ: function () {
         return O;
@@ -40,7 +40,7 @@ let T = Object.freeze([]),
     g = {};
 function S(e) {
     let t = g[e];
-    return null == t && ((t = new v(e)), (g[e] = t)), t;
+    return null == t && ((t = new R(e)), (g[e] = t)), t;
 }
 function A(e, t) {
     return _.ZP.getMember(e, t.id);
@@ -59,7 +59,7 @@ function O(e, t) {
         .concat(t.toLowerCase(), '\0')
         .concat(e.userId);
 }
-function R(e, t, n) {
+function v(e, t, n) {
     var r;
     let i = E.default.getUser(n),
         a = null == i;
@@ -79,14 +79,14 @@ function R(e, t, n) {
         };
     return a && (l._isPlaceholder = !0), l;
 }
-class v {
+class R {
     updateVoiceState(e) {
         if (null != this._pending) return this._pending.add(e), !1;
         let t = f.Z.getVoiceState(this.guildId, e),
             n = this._voiceStates.get(e),
             r = E.default.getUser(e);
         if (null != t && null != r) {
-            if (null == n) return this._voiceStates.set(e, R(t, this.guildId, e)), !0;
+            if (null == n) return this._voiceStates.set(e, v(t, this.guildId, e)), !0;
             if (n.voiceState !== t) {
                 var i;
                 let a = A(this.guildId, r),
@@ -132,7 +132,7 @@ class v {
             null == this._pending &&
             this._voiceStates.values().reduce((e, t) => {
                 let n = E.default.getUser(t.user.id);
-                return null != n && t.user !== n ? (this._voiceStates.set(n.id, R(t.voiceState, this.guildId, n.id)), !0) : e;
+                return null != n && t.user !== n ? (this._voiceStates.set(n.id, v(t.voiceState, this.guildId, n.id)), !0) : e;
             }, !1)
         );
     }

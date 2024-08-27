@@ -69,8 +69,8 @@ function O(e, t) {
             responses: r
         });
 }
-let R = [],
-    v = [],
+let v = [],
+    R = [],
     C = [];
 class y extends (r = u.ZP.Store) {
     initialize() {
@@ -78,15 +78,15 @@ class y extends (r = u.ZP.Store) {
     }
     getOnboardingPromptsForOnboarding(e) {
         var t, n;
-        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : R;
+        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.onboardingPrompts) && void 0 !== n ? n : v;
     }
     getOnboardingPrompts(e) {
         var t, n;
-        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : R;
+        return null !== (n = null === (t = m[e]) || void 0 === t ? void 0 : t.prompts) && void 0 !== n ? n : v;
     }
     getOnboardingResponses(e) {
         var t, n, r;
-        return d.Z.isFullServerPreview(e) ? Array.from(null !== (n = d.Z.getOnboardingResponses(e)) && void 0 !== n ? n : v) : null !== (r = null === (t = m[e]) || void 0 === t ? void 0 : t.responses) && void 0 !== r ? r : v;
+        return d.Z.isFullServerPreview(e) ? Array.from(null !== (n = d.Z.getOnboardingResponses(e)) && void 0 !== n ? n : R) : null !== (r = null === (t = m[e]) || void 0 === t ? void 0 : t.responses) && void 0 !== r ? r : R;
     }
     getSelectedOptions(e) {
         let t = this.getOnboardingResponses(e);
@@ -97,10 +97,10 @@ class y extends (r = u.ZP.Store) {
     }
     getOnboardingResponsesForPrompt(e, t) {
         let n = m[e];
-        if (null == n) return v;
+        if (null == n) return R;
         let r = n.prompts.find((e) => e.id === t);
         return null == r
-            ? v
+            ? R
             : l().intersection(
                   r.options.map((e) => e.id),
                   this.getOnboardingResponses(e)
@@ -109,7 +109,7 @@ class y extends (r = u.ZP.Store) {
     getEnabledOnboardingPrompts(e) {
         var t, n;
         let r = m[e];
-        return d.Z.isFullServerPreview(e) ? (null !== (t = null == r ? void 0 : r.prompts) && void 0 !== t ? t : R) : null != r && r.enabled ? (null !== (n = r.prompts) && void 0 !== n ? n : R) : R;
+        return d.Z.isFullServerPreview(e) ? (null !== (t = null == r ? void 0 : r.prompts) && void 0 !== t ? t : v) : null != r && r.enabled ? (null !== (n = r.prompts) && void 0 !== n ? n : v) : v;
     }
     getDefaultChannelIds(e) {
         var t, n;

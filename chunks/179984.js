@@ -135,9 +135,9 @@ t.Z = (e) => {
         Y = (0, C.M5)(K, x.p9.TIER_2),
         z = (0, p.N)(),
         Q = null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-        X = (0, g.rT)(),
-        q = (0, N.Ng)(),
-        J = null != q && (0, N.Wp)(q, x.Si.TIER_2),
+        q = (0, g.rT)(),
+        X = (0, N.Ng)(),
+        J = null != X && (0, N.Wp)(X, x.Si.TIER_2),
         $ = (0, A.A)(x.Xh.PREMIUM_MONTH_TIER_2),
         ee = ''.concat($, '/').concat((0, C.eP)(x.rV.MONTH)),
         et = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
@@ -182,7 +182,7 @@ t.Z = (e) => {
                                 subscriptionTier: x.Si.TIER_0,
                                 showIcon: !1
                             }),
-                      X === x.p9.TIER_2 || null != Q
+                      q === x.p9.TIER_2 || null != Q
                           ? null
                           : (0, s.jsx)(h.Z, {
                                 className: b.button,
@@ -207,7 +207,7 @@ t.Z = (e) => {
                                 showIcon: !1,
                                 isEligibleForBogoPromotion: ea
                             }),
-                      X === x.p9.TIER_0 || null != Q
+                      q === x.p9.TIER_0 || null != Q
                           ? null
                           : (0, s.jsx)(h.Z, {
                                 className: b.button,
@@ -221,7 +221,7 @@ t.Z = (e) => {
           }),
         (n = v
             ? null
-            : null != Q || null != X
+            : null != Q || null != q
               ? (0, s.jsx)(f.Cy, {
                     text: null != Q ? O.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : O.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
                     className: b.freeTrialPillWithSparkles,
@@ -230,7 +230,7 @@ t.Z = (e) => {
               : ea
                 ? (0, s.jsx)(D, {})
                 : (0, s.jsx)(B, {}));
-    let ei = Q === x.Si.TIER_0 || X === x.p9.TIER_0 || y === x.p9.TIER_0;
+    let ei = Q === x.Si.TIER_0 || q === x.p9.TIER_0 || y === x.p9.TIER_0;
     return (0, s.jsx)(u.Gt, {
         value: H,
         children: (0, s.jsxs)('div', {

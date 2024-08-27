@@ -26,17 +26,17 @@ var r = n(735250),
     N = n(405388);
 function O(e) {
     var t, n, a;
-    let { className: O, onClose: R } = e;
+    let { className: O, onClose: v } = e;
     (0, h.fP)();
-    let { analyticsLocations: v } = (0, c.ZP)(u.Z.EMPTY_STATE),
+    let { analyticsLocations: R } = (0, c.ZP)(u.Z.EMPTY_STATE),
         C = (0, o.Wu)([p.Z], () => T.Wt.map((e) => p.Z.getStickerById(e)));
     i.useEffect(() => {
         f.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, {
             type: S.cd.EMPTY_STICKER_PICKER_UPSELL,
             source: { section: g.jXE.EMPTY_STICKER_PICKER_UPSELL },
-            location_stack: v
+            location_stack: R
         });
-    }, [v]);
+    }, [R]);
     let y = (0, _.N)(),
         D = (0, d.Ng)(),
         L = null != y || null != D,
@@ -48,7 +48,7 @@ function O(e) {
                 ? (0, r.jsx)(E.ZP, {
                       discountOffer: D,
                       trialOffer: y,
-                      onClose: R,
+                      onClose: v,
                       type: S.cd.EMPTY_STICKER_PICKER_UPSELL,
                       subscriptionTier: null !== (a = null == y ? void 0 : null === (n = y.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : S.Si.TIER_2,
                       children: A.Z.Messages.STICKER_PICKER_PREMIUM_EMPTY_STATE_SUBTITLE

@@ -1,6 +1,6 @@
 n.d(t, {
     K: function () {
-        return R;
+        return v;
     }
 });
 var r = n(735250);
@@ -26,8 +26,8 @@ var i = n(693789),
     A = n(689079),
     N = n(689938),
     O = n(402345);
-let R = { results: { entries: [] } };
-function v() {
+let v = { results: { entries: [] } };
+function R() {
     (0, a.ZD)(async () => {
         let { default: e } = await n.e('87549').then(n.bind(n, 913962));
         return (t) => (0, r.jsx)(e, { ...t });
@@ -38,7 +38,7 @@ let C = {
     stores: [_.Z, u.ZP, I.Z],
     matches: (e, t, n, r, i) => i.commands !== g.L8.DISABLED && null == _.Z.getActiveCommand(e.id) && (r || i.commands !== g.L8.OLD_BUILT_INS),
     queryResults(e, t, n, r, i) {
-        if (0 === n.length && r.commands !== g.L8.OLD_BUILT_INS) return R;
+        if (0 === n.length && r.commands !== g.L8.OLD_BUILT_INS) return v;
         if (r.commands === g.L8.OLD_BUILT_INS) {
             let r = (0, l.Kh)([s.yU.CHAT], !1, !1),
                 i = RegExp('^'.concat(m.Z.escape(n)), 'i'),
@@ -53,7 +53,7 @@ let C = {
                 ),
                 o = l.Tm[A.bi.BUILT_IN];
             return 0 === a.length
-                ? R
+                ? v
                 : {
                       results: {
                           entries: a.map((e) => ({
@@ -77,7 +77,7 @@ let C = {
                     allowFetch: i
                 }
             );
-        if (null == o) return R;
+        if (null == o) return v;
         let _ = o;
         if (a.hasSpaceTerminator) {
             let e = a.text.trim(),
@@ -85,7 +85,7 @@ let C = {
             _ = _.filter((n) => n.name === e || n.name.startsWith(t));
         }
         return 0 === _.length
-            ? R
+            ? v
             : {
                   results: {
                       entries: _.slice(0, g.AQ).map((e) => ({
@@ -136,7 +136,7 @@ let C = {
                       look: i.zx.Looks.LINK,
                       color: i.zx.Colors.BRAND,
                       size: i.zx.Sizes.MIN,
-                      onClick: v,
+                      onClick: R,
                       children: N.Z.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
                   })
                 : null

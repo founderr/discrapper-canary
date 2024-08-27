@@ -115,8 +115,8 @@ function O(e) {
         })
     };
 }
-function R(e) {
-    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: _, tabIndex: p, ariaLabel: g, ariaHidden: S, status: A, isMobile: N = !1, isTyping: O = !1, avatarDecoration: R, typingOffset: v, specs: C } = e,
+function v(e) {
+    let { children: t, size: n, onClick: i, onMouseDown: a, onKeyDown: o, onContextMenu: u, onMouseEnter: c, onMouseLeave: d, className: _, tabIndex: p, ariaLabel: g, ariaHidden: S, status: A, isMobile: N = !1, isTyping: O = !1, avatarDecoration: v, typingOffset: R, specs: C } = e,
         y = {
             width: (0, h.px)(n),
             height: (0, h.px)(n)
@@ -195,11 +195,11 @@ function R(e) {
             return null;
         })(A, n, N, O),
         M =
-            null != R &&
+            null != v &&
             (0, r.jsx)('svg', {
-                width: L + v,
+                width: L + R,
                 height: L,
-                viewBox: '0 0 '.concat(L + v, ' ').concat(L),
+                viewBox: '0 0 '.concat(L + R, ' ').concat(L),
                 className: T.avatarDecoration,
                 'aria-hidden': !0,
                 children: (0, r.jsx)('foreignObject', {
@@ -212,7 +212,7 @@ function R(e) {
                         className: T.avatarStack,
                         children: (0, r.jsx)('img', {
                             className: T.avatar,
-                            src: R,
+                            src: v,
                             alt: ' ',
                             'aria-hidden': !0
                         })
@@ -246,7 +246,7 @@ function R(e) {
               children: [t, M]
           });
 }
-function v(e) {
+function R(e) {
     let { src: t, isSpeaking: n, className: i } = e;
     return (0, r.jsxs)(
         'div',
@@ -272,7 +272,7 @@ function C(e) {
         b = null != D ? Math.ceil((L.status * h.D6 - L.status) / 2) : 0,
         M = L.size + b,
         P = (0, c.vj)(D, a);
-    return (0, r.jsx)(R, {
+    return (0, r.jsx)(v, {
         ...e,
         ariaLabel: C,
         ariaHidden: O,
@@ -365,7 +365,7 @@ function C(e) {
                         })(D, i, o, l),
                         ')'
                     ),
-                    children: (0, r.jsx)(v, {
+                    children: (0, r.jsx)(R, {
                         src: t,
                         isSpeaking: I,
                         className: y
@@ -455,7 +455,7 @@ function y(e) {
         $ = z.size - z.status - X - z.offset,
         J = z.size - Q - z.offset,
         ee = z.size + Math.ceil(X);
-    return (0, r.jsx)(R, {
+    return (0, r.jsx)(v, {
         ...e,
         ariaLabel: P,
         ariaHidden: M,
@@ -497,7 +497,7 @@ function y(e) {
                     width: K,
                     height: K,
                     mask: 'url(#'.concat(x, ')'),
-                    children: (0, r.jsx)(v, {
+                    children: (0, r.jsx)(R, {
                         src: A,
                         isSpeaking: I,
                         className: U

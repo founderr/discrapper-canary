@@ -94,19 +94,19 @@ function A(e) {
           });
 }
 function N(e) {
-    let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: O, onClose: R, shouldHideMediaOptions: v = !1, obscure: C = !1, ...y } = e,
+    let { src: t, original: n, placeholder: a, width: s, height: l, animated: u, children: c, responsive: d, renderLinkComponent: f, renderForwardComponent: p, maxWidth: m, maxHeight: N, shouldAnimate: O, onClose: v, shouldHideMediaOptions: R = !1, obscure: C = !1, ...y } = e,
         { width: D, height: L } = (0, E.zp)(s, l),
-        b = o.tq && null != R;
+        b = o.tq && null != v;
     i.useEffect(() => {
-        if (null != R)
+        if (null != v)
             return (
-                _.S.subscribe(I.CkL.MEDIA_MODAL_CLOSE, R),
+                _.S.subscribe(I.CkL.MEDIA_MODAL_CLOSE, v),
                 () => {
-                    _.S.unsubscribe(I.CkL.MEDIA_MODAL_CLOSE, R);
+                    _.S.unsubscribe(I.CkL.MEDIA_MODAL_CLOSE, v);
                 }
             );
-    }, [R]);
-    let M = v
+    }, [v]);
+    let M = R
         ? (e) => {
               e.stopPropagation(), e.preventDefault();
           }
@@ -114,7 +114,7 @@ function N(e) {
     return (0, r.jsxs)('div', {
         className: T.wrapper,
         children: [
-            b ? (0, r.jsx)(g, { onClose: R }) : null,
+            b ? (0, r.jsx)(g, { onClose: v }) : null,
             (0, r.jsx)(S, {
                 isObscured: C,
                 src: t,
@@ -139,7 +139,7 @@ function N(e) {
                         t
                     )
             }),
-            null == n || v
+            null == n || R
                 ? null
                 : (0, r.jsx)(A, {
                       src: n,

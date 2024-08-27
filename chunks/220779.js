@@ -71,9 +71,9 @@ function A(e) {
             m(''), A((0, c.JM)(''));
         },
         O = u.I.ATOMIC_REACTOR_REPLY_INPUT,
-        R = i.useRef(null);
+        v = i.useRef(null);
     return (0, r.jsx)(d.Z, {
-        ref: R,
+        ref: v,
         placeholder: t,
         editorClassName: h,
         className: s()(T.replyInput, h),
@@ -113,8 +113,8 @@ function A(e) {
         emojiPickerCloseOnModalOuterClick: !0,
         disabled: !1,
         autoCompletePosition: (() => {
-            if (null == R.current) return 'top';
-            let e = R.current.getBoundingClientRect(),
+            if (null == v.current) return 'top';
+            let e = v.current.getBoundingClientRect(),
                 t = window.innerHeight;
             return e.top < t / 2 ? 'bottom' : 'top';
         })(),

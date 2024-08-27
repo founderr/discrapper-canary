@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return h;
     }
 });
 var i = t(735250),
@@ -16,14 +16,14 @@ var i = t(735250),
     p = t(532309),
     _ = t(728021),
     C = t(413097);
-function f(e) {
+function h(e) {
     var n;
-    let { command: t, application: f, onClick: h, query: E, searchResultsPosition: A } = e,
-        N = s.Sb.useSetting(),
-        x = a.useCallback(
+    let { command: t, application: h, onClick: f, query: A, searchResultsPosition: E } = e,
+        x = s.Sb.useSetting(),
+        N = a.useCallback(
             (e) => {
-                if ((0, d.BQ)(f) && N) {
-                    let n = f instanceof c.Z ? f : c.Z.createFromServer(f);
+                if ((0, d.BQ)(h) && x) {
+                    let n = h instanceof c.Z ? h : c.Z.createFromServer(h);
                     (0, o.vq)(e, (e) =>
                         (0, i.jsx)(r.Z, {
                             application: n,
@@ -32,25 +32,25 @@ function f(e) {
                     );
                 }
             },
-            [f, N]
+            [h, x]
         ),
-        { iconURL: v, name: I, description: g } = a.useMemo(() => (0, d.sl)(f, { fakeAppIconURL: C }), [f]),
-        P = a.useMemo(() => {
+        { iconURL: v, name: I, description: g } = a.useMemo(() => (0, d.sl)(h, { fakeAppIconURL: C }), [h]),
+        b = a.useMemo(() => {
             var e;
             let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : g;
             return null == n ? null : (0, u.ae)(n, void 0);
         }, [g, null == t ? void 0 : t.displayDescription]),
-        { trackSearchResultsItemImpressionRef: L } = (0, p.Z)({
-            applicationId: f.id,
+        { trackSearchResultsItemImpressionRef: S } = (0, p.Z)({
+            applicationId: h.id,
             commandId: null == t ? void 0 : t.id,
-            query: E,
-            searchResultsPosition: A
+            query: A,
+            searchResultsPosition: E
         });
     return (0, i.jsx)(l.Clickable, {
         className: _.clickable,
-        innerRef: (e) => (L.current = e),
-        onClick: h,
-        onContextMenu: x,
+        innerRef: (e) => (S.current = e),
+        onClick: f,
+        onContextMenu: N,
         children: (0, i.jsxs)(l.FocusBlock, {
             className: _.focusBlock,
             children: [
@@ -73,7 +73,7 @@ function f(e) {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
-                            children: P
+                            children: b
                         })
                     ]
                 }),

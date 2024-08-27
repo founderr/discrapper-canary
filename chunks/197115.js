@@ -20,7 +20,7 @@ var i = n(120356),
     S = n(689938),
     A = n(95277);
 t.Z = function (e) {
-    let { isGift: t, subscriptionTier: i, onClick: N, size: O, className: R, isTrialCTA: v, buttonText: C, buttonTextClassName: y, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: b, premiumModalAnalyticsLocation: M, showIcon: P = !0, disableShine: U, applicationId: w, giftMessage: x, overrideDisabledButtonText: G, shinyButtonClassName: k, showGradient: B = !1, ...F } = e,
+    let { isGift: t, subscriptionTier: i, onClick: N, size: O, className: v, isTrialCTA: R, buttonText: C, buttonTextClassName: y, iconClassName: D, postSuccessGuild: L, onSubscribeModalClose: b, premiumModalAnalyticsLocation: M, showIcon: P = !0, disableShine: U, applicationId: w, giftMessage: x, overrideDisabledButtonText: G, shinyButtonClassName: k, showGradient: B = !1, ...F } = e,
         V = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
         H = (0, s.e7)([p.Z], () => p.Z.isFocused()),
         Z = (0, s.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
@@ -97,10 +97,10 @@ t.Z = function (e) {
                 giftMessage: x
             });
         };
-    if (v)
+    if (R)
         return (0, r.jsxs)(o.Button, {
             size: O,
-            className: R,
+            className: v,
             innerClassName: A.premiumSubscribeButton,
             color: o.Button.Colors.BRAND_INVERTED,
             onClick: K,
@@ -121,7 +121,7 @@ t.Z = function (e) {
     if (t)
         return (0, r.jsxs)(o.Button, {
             size: O,
-            className: R,
+            className: v,
             innerClassName: A.giftButton,
             color: o.Button.Colors.PRIMARY,
             onClick: K,
@@ -185,7 +185,7 @@ t.Z = function (e) {
                     [A.tier2Gradient]: B && i === T.Si.TIER_2,
                     [A.tier1Gradient]: B && i === T.Si.TIER_1
                 },
-                R
+                v
             ),
             pauseAnimation: !H || U,
             ...F,

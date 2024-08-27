@@ -34,8 +34,8 @@ var r = n(488745),
     A = n(169794),
     N = n(301485),
     O = n(151593),
-    R = n(558254),
-    v = n(279465),
+    v = n(558254),
+    R = n(279465),
     C = n(134945),
     y = n(36737),
     D = n(884147),
@@ -137,8 +137,8 @@ Z = {
     'nb-NO': A.Z,
     'nl-NL': N.Z,
     'pl-PL': O.Z,
-    'pt-BR': R.Z,
-    'pt-PT': v.Z,
+    'pt-BR': v.Z,
+    'pt-PT': R.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
     'sk-SK': D.Z,
@@ -192,10 +192,10 @@ function K(e, t, n) {
     let { key: s, closeOnSelect: o, isVirtualized: l, 'aria-haspopup': u, onPressStart: c, onPressUp: d, onPress: _, onPressChange: E, onPressEnd: f, onHoverStart: h, onHoverChange: p, onHoverEnd: I, onKeyDown: m, onKeyUp: T, onFocus: g, onFocusChange: S, onBlur: A } = e,
         N = !!u,
         O = null !== (i = e.isDisabled) && void 0 !== i ? i : t.disabledKeys.has(s),
-        R = null !== (a = e.isSelected) && void 0 !== a ? a : t.selectionManager.isSelected(s),
-        v = j.get(t),
-        C = e.onClose || v.onClose,
-        y = N ? () => {} : e.onAction || v.onAction,
+        v = null !== (a = e.isSelected) && void 0 !== a ? a : t.selectionManager.isSelected(s),
+        R = j.get(t),
+        C = e.onClose || R.onClose,
+        y = N ? () => {} : e.onAction || R.onAction,
         D = (0, G.tv)(),
         L = (e) => {
             y && y(s), e.target instanceof HTMLAnchorElement && D.open(e.target, e);
@@ -215,7 +215,7 @@ function K(e, t, n) {
             'aria-haspopup': u,
             'aria-expanded': e['aria-expanded']
         };
-    'none' !== t.selectionManager.selectionMode && !N && (w['aria-checked'] = R);
+    'none' !== t.selectionManager.selectionMode && !N && (w['aria-checked'] = v);
     let x = t.collection.getItem(s);
     l && ((w['aria-posinset'] = null == x ? void 0 : x.index), (w['aria-setsize'] = (0, H.is)(t.collection)));
     let { itemProps: k, isFocused: F } = (0, V.Cs)({
@@ -283,7 +283,7 @@ function K(e, t, n) {
             descriptionProps: { id: P },
             keyboardShortcutProps: { id: U },
             isFocused: F,
-            isSelected: R,
+            isSelected: v,
             isPressed: Y,
             isDisabled: O
         }

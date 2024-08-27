@@ -51,8 +51,8 @@ var i = n(399606),
     Y = n(334347),
     z = n(132015),
     Q = n(142416),
-    X = n(607762),
-    q = n(474106),
+    q = n(607762),
+    X = n(474106),
     J = n(567452),
     $ = n(572501),
     ee = n(755590),
@@ -377,7 +377,7 @@ t.Z = () => {
                 name: 'upcomingDropUntimed',
                 title: Z.Z.Messages.NEW_DROP,
                 pillText: Z.Z.Messages.COMING_SOON,
-                backgroundImage: q
+                backgroundImage: X
             },
             badge: {
                 name: 'badge',
@@ -438,7 +438,7 @@ t.Z = () => {
                 descriptionCta: ed || e_ ? Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NITRO_NEW_APP_STYLES : Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_NON_NITRO_NEW_APP_STYLES,
                 isPremiumGetCta: !(ed || e_),
                 onCtaClick: ed || e_ ? em : void 0,
-                perkImage: X
+                perkImage: q
             },
             referralProgram: {
                 name: 'referralProgram',

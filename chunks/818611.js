@@ -35,17 +35,17 @@ let g = () => 80,
             A = (0, E.Yq)(n.skuId),
             N = f.ZP.canUseCollectibles(t),
             O = s === p.$0.PREMIUM_PURCHASE && !N,
-            R = i.useRef(null),
-            v = (0, d.Z)(null != a ? a : R),
+            v = i.useRef(null),
+            R = (0, d.Z)(null != a ? a : v),
             { avatarDecorationSrc: C } = (0, I.Z)({
                 user: t,
                 avatarDecorationOverride: n,
                 size: 80,
-                onlyAnimateOnHover: !v
+                onlyAnimateOnHover: !R
             });
         return (0, r.jsxs)(S, {
             className: O ? T.decorationGridItemChurned : void 0,
-            innerRef: null != a ? a : R,
+            innerRef: null != a ? a : v,
             isSelected: o,
             ...h,
             children: [

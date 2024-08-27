@@ -22,8 +22,8 @@ function C(e) {
     let { channel: t, connected: n, hovered: r, subtitle: C, onClick: I, enableHangStatus: E, allowChannelTopic: N } = e,
         x = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         S = null != x && x.length > 0,
-        Z = (0, c.Z)(t, !0),
-        v = (!E || !!N) && Z,
+        v = (0, c.Z)(t, !0),
+        Z = (!E || !!N) && v,
         T = null != C && C.length > 0;
     l.useEffect(() => {
         S &&
@@ -34,18 +34,18 @@ function C(e) {
     }, [t.id, S, t.guild_id]);
     let L = (0, o.useRedesignIconContext)().enabled ? 12 : 14;
     if (null == t.guild_id) return null;
-    let A = a()(g.statusDiv, n && v ? g.hoverable : null);
+    let A = a()(g.statusDiv, n && Z ? g.hoverable : null);
     if (S)
         return (0, i.jsx)(o.Clickable, {
             className: A,
-            onClick: v ? I : void 0,
+            onClick: Z ? I : void 0,
             children: (0, i.jsx)(o.Text, {
                 variant: 'text-xs/medium',
                 className: a()(g.statusText, m.markup),
                 children: (0, i.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(x, !0, { channelId: t.id }) })
             })
         });
-    if (n && v && (!T || r))
+    if (n && Z && (!T || r))
         return (0, i.jsxs)(o.Clickable, {
             className: A,
             onClick: I,

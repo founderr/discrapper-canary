@@ -53,17 +53,17 @@ e.exports = function (e) {
         A = i({ stateHandler: d }),
         N = I(e, 'strategy', 'object'),
         O = I(e, 'important', !1),
-        R = {
+        v = {
             reporter: m,
             batchProcessor: T,
             stateHandler: d,
             idHandler: t,
             important: O
         };
-    if (('scroll' === N && (u.isLegacyOpera() ? (m.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (N = 'object')) : u.isIE(9) && (m.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (N = 'object'))), 'scroll' === N)) n = E(R);
-    else if ('object' === N) n = _(R);
+    if (('scroll' === N && (u.isLegacyOpera() ? (m.warn('Scroll strategy is not supported on legacy Opera. Changing to object strategy.'), (N = 'object')) : u.isIE(9) && (m.warn('Scroll strategy is not supported on IE9. Changing to object strategy.'), (N = 'object'))), 'scroll' === N)) n = E(v);
+    else if ('object' === N) n = _(v);
     else throw Error('Invalid strategy name: ' + N);
-    var v = {};
+    var R = {};
     return {
         listenTo: function (e, i, a) {
             function s(e) {
@@ -92,8 +92,8 @@ e.exports = function (e) {
                     if ((_ && m.log(E, 'Not detectable.'), A.isBusy(e))) {
                         _ && m.log(E, 'System busy making it detectable'),
                             o(u, e, a),
-                            (v[E] = v[E] || []),
-                            v[E].push(function () {
+                            (R[E] = R[E] || []),
+                            R[E].push(function () {
                                 ++l === i.length && c();
                             });
                         return;
@@ -116,12 +116,12 @@ e.exports = function (e) {
                                             h = e.offsetHeight;
                                         (t.startSize.width !== f || t.startSize.height !== h) && s(e);
                                     }
-                                    v[E] &&
-                                        r(v[E], function (e) {
+                                    R[E] &&
+                                        r(R[E], function (e) {
                                             e();
                                         });
                                 } else _ && m.log(E, 'Element uninstalled before being detectable.');
-                                delete v[E], ++l === i.length && c();
+                                delete R[E], ++l === i.length && c();
                             }
                         )
                     );

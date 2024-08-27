@@ -30,8 +30,8 @@ var r,
     A = n(165583),
     N = n(587446),
     O = n(210887),
-    R = n(740492),
-    v = n(626135),
+    v = n(740492),
+    R = n(626135),
     C = n(238302),
     y = n(514361),
     D = n(583901),
@@ -51,7 +51,7 @@ let k = Object.freeze({
     B = s.createContext({}),
     F = (e) => {
         let { isPersisted: t, themeName: n, analyticsLocations: r } = e;
-        v.default.track(b.rMx.CLIENT_THEME_UPDATED, {
+        R.default.track(b.rMx.CLIENT_THEME_UPDATED, {
             feature_name: M.QP.CLIENT_THEME,
             theme_name: n,
             is_persisted: t,
@@ -315,7 +315,7 @@ let k = Object.freeze({
         let { systemSelectorFirst: t } = e,
             { delay: n } = s.useContext(B),
             { analyticsLocations: r } = (0, p.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [i, o, l] = (0, c.Wu)([O.Z, R.ZP, y.Z], () => [O.Z.theme, null == y.Z.gradientPreset, R.ZP.useSystemTheme === P.K.ON]),
+            [i, o, l] = (0, c.Wu)([O.Z, v.ZP, y.Z], () => [O.Z.theme, null == y.Z.gradientPreset, v.ZP.useSystemTheme === P.K.ON]),
             u = (e) => {
                 (0, C.xs)(),
                     F({

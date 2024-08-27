@@ -70,7 +70,7 @@ function O(e) {
         })
     });
 }
-function R(e) {
+function v(e) {
     let { users: t, guildId: n, channelId: i, maxVisibleUsers: a = 3, className: o, participantType: l } = e,
         u = N(l, t.length),
         c =
@@ -105,7 +105,7 @@ function R(e) {
         })
     });
 }
-let v = [];
+let R = [];
 function C(e) {
     let { channelId: t, guildId: a, participant: o, className: f, compact: m = !1, disableInteraction: S = !1, maxVisibleUsers: N = 3 } = e,
         [C, y] = i.useState(!1),
@@ -115,15 +115,15 @@ function C(e) {
             () => {
                 if (o.type === T.fO.STREAM) {
                     let e = h.Z.getViewerIds(o.id);
-                    return e.length > 0 ? e.map((e) => p.default.getUser(e)).filter(I.lm) : v;
+                    return e.length > 0 ? e.map((e) => p.default.getUser(e)).filter(I.lm) : R;
                 }
                 return o.type === T.fO.ACTIVITY
                     ? o.participants.length > 0
                         ? Array.from(o.participants)
                               .map((e) => p.default.getUser(e.userId))
                               .filter(I.lm)
-                        : v
-                    : v;
+                        : R
+                    : R;
             },
             [o]
         ),
@@ -153,7 +153,7 @@ function C(e) {
         );
     if (0 === L.length) return null;
     if (m)
-        return (0, r.jsx)(R, {
+        return (0, r.jsx)(v, {
             maxVisibleUsers: N,
             users: L,
             guildId: a,

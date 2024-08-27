@@ -8,7 +8,7 @@ var i = n(735250),
     d = n(981631),
     u = n(921944),
     _ = n(689938),
-    h = n(532333);
+    E = n(532333);
 t.Z = (e) => {
     let { markAsDismissed: t } = e;
     return (
@@ -20,7 +20,7 @@ t.Z = (e) => {
             content: _.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_CONTENT_V2.format({ helpdeskArticle: o.Z.getArticleURL(d.BhN.SAFE_DIRECT_MESSAGING) }),
             buttonCTA: _.Z.Messages.GOT_IT,
             secondaryButtonCTA: _.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_COACHMARK_REDIRECT,
-            className: h.coachmark,
+            className: E.coachmark,
             onClick: (e) => {
                 e.stopPropagation(), t(u.L.UNKNOWN), l.default.track(d.rMx.DM_SAFETY_COACHMARK_ACTION, { action: c.Rv.DISMISS });
             },
@@ -29,7 +29,7 @@ t.Z = (e) => {
             },
             markAsDismissed: t,
             caretPosition: r.DF.BOTTOM_CENTER,
-            headerClassName: h.__invalid_header
+            headerClassName: E.__invalid_header
         })
     );
 };

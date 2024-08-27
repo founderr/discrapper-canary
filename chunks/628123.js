@@ -21,7 +21,7 @@ var r = n(735250),
     A = n(981631),
     N = n(689938),
     O = n(831547);
-function R(e, t, n) {
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function R(e, t, n) {
         e
     );
 }
-function v() {
+function R() {
     let [e, t] = i.useState(!1);
     if (
         null ==
@@ -124,7 +124,7 @@ class y extends i.PureComponent {
                             onClick: this._handleSubmitReport,
                             children: N.Z.Messages.ERRORS_RELOAD
                         }),
-                        (0, r.jsx)(v, {})
+                        (0, r.jsx)(R, {})
                     ]
                 });
             return (0, r.jsx)(h.Z, {
@@ -138,11 +138,11 @@ class y extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            R(this, 'state', {
+            v(this, 'state', {
                 error: null,
                 info: null
             }),
-            R(this, 'discordErrorsSet', !1);
+            v(this, 'discordErrorsSet', !1);
     }
 }
 t.Z = y;

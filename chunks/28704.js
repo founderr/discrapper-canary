@@ -370,9 +370,9 @@
             A = 0 | s[4],
             N = 8191 & A,
             O = A >>> 13,
-            R = 0 | s[5],
-            v = 8191 & R,
-            C = R >>> 13,
+            v = 0 | s[5],
+            R = 8191 & v,
+            C = v >>> 13,
             y = 0 | s[6],
             D = 8191 & y,
             L = y >>> 13,
@@ -425,25 +425,25 @@
         var eT = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
         (u = ((((a = (a + Math.imul(_, X)) | 0) + (i >>> 13)) | 0) + (eT >>> 26)) | 0), (eT &= 67108863), (r = Math.imul(N, V)), (i = ((i = Math.imul(N, H)) + Math.imul(O, V)) | 0), (a = Math.imul(O, H)), (r = (r + Math.imul(g, Y)) | 0), (i = ((i = (i + Math.imul(g, j)) | 0) + Math.imul(S, Y)) | 0), (a = (a + Math.imul(S, j)) | 0), (r = (r + Math.imul(I, K)) | 0), (i = ((i = (i + Math.imul(I, z)) | 0) + Math.imul(m, K)) | 0), (a = (a + Math.imul(m, z)) | 0), (r = (r + Math.imul(f, Q)) | 0), (i = ((i = (i + Math.imul(f, X)) | 0) + Math.imul(h, Q)) | 0), (a = (a + Math.imul(h, X)) | 0), (r = (r + Math.imul(d, J)) | 0), (i = ((i = (i + Math.imul(d, ee)) | 0) + Math.imul(_, J)) | 0);
         var eg = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
-        (u = ((((a = (a + Math.imul(_, ee)) | 0) + (i >>> 13)) | 0) + (eg >>> 26)) | 0), (eg &= 67108863), (r = Math.imul(v, V)), (i = ((i = Math.imul(v, H)) + Math.imul(C, V)) | 0), (a = Math.imul(C, H)), (r = (r + Math.imul(N, Y)) | 0), (i = ((i = (i + Math.imul(N, j)) | 0) + Math.imul(O, Y)) | 0), (a = (a + Math.imul(O, j)) | 0), (r = (r + Math.imul(g, K)) | 0), (i = ((i = (i + Math.imul(g, z)) | 0) + Math.imul(S, K)) | 0), (a = (a + Math.imul(S, z)) | 0), (r = (r + Math.imul(I, Q)) | 0), (i = ((i = (i + Math.imul(I, X)) | 0) + Math.imul(m, Q)) | 0), (a = (a + Math.imul(m, X)) | 0), (r = (r + Math.imul(f, J)) | 0), (i = ((i = (i + Math.imul(f, ee)) | 0) + Math.imul(h, J)) | 0), (a = (a + Math.imul(h, ee)) | 0), (r = (r + Math.imul(d, en)) | 0), (i = ((i = (i + Math.imul(d, er)) | 0) + Math.imul(_, en)) | 0);
+        (u = ((((a = (a + Math.imul(_, ee)) | 0) + (i >>> 13)) | 0) + (eg >>> 26)) | 0), (eg &= 67108863), (r = Math.imul(R, V)), (i = ((i = Math.imul(R, H)) + Math.imul(C, V)) | 0), (a = Math.imul(C, H)), (r = (r + Math.imul(N, Y)) | 0), (i = ((i = (i + Math.imul(N, j)) | 0) + Math.imul(O, Y)) | 0), (a = (a + Math.imul(O, j)) | 0), (r = (r + Math.imul(g, K)) | 0), (i = ((i = (i + Math.imul(g, z)) | 0) + Math.imul(S, K)) | 0), (a = (a + Math.imul(S, z)) | 0), (r = (r + Math.imul(I, Q)) | 0), (i = ((i = (i + Math.imul(I, X)) | 0) + Math.imul(m, Q)) | 0), (a = (a + Math.imul(m, X)) | 0), (r = (r + Math.imul(f, J)) | 0), (i = ((i = (i + Math.imul(f, ee)) | 0) + Math.imul(h, J)) | 0), (a = (a + Math.imul(h, ee)) | 0), (r = (r + Math.imul(d, en)) | 0), (i = ((i = (i + Math.imul(d, er)) | 0) + Math.imul(_, en)) | 0);
         var eS = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
-        (u = ((((a = (a + Math.imul(_, er)) | 0) + (i >>> 13)) | 0) + (eS >>> 26)) | 0), (eS &= 67108863), (r = Math.imul(D, V)), (i = ((i = Math.imul(D, H)) + Math.imul(L, V)) | 0), (a = Math.imul(L, H)), (r = (r + Math.imul(v, Y)) | 0), (i = ((i = (i + Math.imul(v, j)) | 0) + Math.imul(C, Y)) | 0), (a = (a + Math.imul(C, j)) | 0), (r = (r + Math.imul(N, K)) | 0), (i = ((i = (i + Math.imul(N, z)) | 0) + Math.imul(O, K)) | 0), (a = (a + Math.imul(O, z)) | 0), (r = (r + Math.imul(g, Q)) | 0), (i = ((i = (i + Math.imul(g, X)) | 0) + Math.imul(S, Q)) | 0), (a = (a + Math.imul(S, X)) | 0), (r = (r + Math.imul(I, J)) | 0), (i = ((i = (i + Math.imul(I, ee)) | 0) + Math.imul(m, J)) | 0), (a = (a + Math.imul(m, ee)) | 0), (r = (r + Math.imul(f, en)) | 0), (i = ((i = (i + Math.imul(f, er)) | 0) + Math.imul(h, en)) | 0), (a = (a + Math.imul(h, er)) | 0), (r = (r + Math.imul(d, ea)) | 0), (i = ((i = (i + Math.imul(d, es)) | 0) + Math.imul(_, ea)) | 0);
+        (u = ((((a = (a + Math.imul(_, er)) | 0) + (i >>> 13)) | 0) + (eS >>> 26)) | 0), (eS &= 67108863), (r = Math.imul(D, V)), (i = ((i = Math.imul(D, H)) + Math.imul(L, V)) | 0), (a = Math.imul(L, H)), (r = (r + Math.imul(R, Y)) | 0), (i = ((i = (i + Math.imul(R, j)) | 0) + Math.imul(C, Y)) | 0), (a = (a + Math.imul(C, j)) | 0), (r = (r + Math.imul(N, K)) | 0), (i = ((i = (i + Math.imul(N, z)) | 0) + Math.imul(O, K)) | 0), (a = (a + Math.imul(O, z)) | 0), (r = (r + Math.imul(g, Q)) | 0), (i = ((i = (i + Math.imul(g, X)) | 0) + Math.imul(S, Q)) | 0), (a = (a + Math.imul(S, X)) | 0), (r = (r + Math.imul(I, J)) | 0), (i = ((i = (i + Math.imul(I, ee)) | 0) + Math.imul(m, J)) | 0), (a = (a + Math.imul(m, ee)) | 0), (r = (r + Math.imul(f, en)) | 0), (i = ((i = (i + Math.imul(f, er)) | 0) + Math.imul(h, en)) | 0), (a = (a + Math.imul(h, er)) | 0), (r = (r + Math.imul(d, ea)) | 0), (i = ((i = (i + Math.imul(d, es)) | 0) + Math.imul(_, ea)) | 0);
         var eA = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
-        (u = ((((a = (a + Math.imul(_, es)) | 0) + (i >>> 13)) | 0) + (eA >>> 26)) | 0), (eA &= 67108863), (r = Math.imul(M, V)), (i = ((i = Math.imul(M, H)) + Math.imul(P, V)) | 0), (a = Math.imul(P, H)), (r = (r + Math.imul(D, Y)) | 0), (i = ((i = (i + Math.imul(D, j)) | 0) + Math.imul(L, Y)) | 0), (a = (a + Math.imul(L, j)) | 0), (r = (r + Math.imul(v, K)) | 0), (i = ((i = (i + Math.imul(v, z)) | 0) + Math.imul(C, K)) | 0), (a = (a + Math.imul(C, z)) | 0), (r = (r + Math.imul(N, Q)) | 0), (i = ((i = (i + Math.imul(N, X)) | 0) + Math.imul(O, Q)) | 0), (a = (a + Math.imul(O, X)) | 0), (r = (r + Math.imul(g, J)) | 0), (i = ((i = (i + Math.imul(g, ee)) | 0) + Math.imul(S, J)) | 0), (a = (a + Math.imul(S, ee)) | 0), (r = (r + Math.imul(I, en)) | 0), (i = ((i = (i + Math.imul(I, er)) | 0) + Math.imul(m, en)) | 0), (a = (a + Math.imul(m, er)) | 0), (r = (r + Math.imul(f, ea)) | 0), (i = ((i = (i + Math.imul(f, es)) | 0) + Math.imul(h, ea)) | 0), (a = (a + Math.imul(h, es)) | 0), (r = (r + Math.imul(d, el)) | 0), (i = ((i = (i + Math.imul(d, eu)) | 0) + Math.imul(_, el)) | 0);
+        (u = ((((a = (a + Math.imul(_, es)) | 0) + (i >>> 13)) | 0) + (eA >>> 26)) | 0), (eA &= 67108863), (r = Math.imul(M, V)), (i = ((i = Math.imul(M, H)) + Math.imul(P, V)) | 0), (a = Math.imul(P, H)), (r = (r + Math.imul(D, Y)) | 0), (i = ((i = (i + Math.imul(D, j)) | 0) + Math.imul(L, Y)) | 0), (a = (a + Math.imul(L, j)) | 0), (r = (r + Math.imul(R, K)) | 0), (i = ((i = (i + Math.imul(R, z)) | 0) + Math.imul(C, K)) | 0), (a = (a + Math.imul(C, z)) | 0), (r = (r + Math.imul(N, Q)) | 0), (i = ((i = (i + Math.imul(N, X)) | 0) + Math.imul(O, Q)) | 0), (a = (a + Math.imul(O, X)) | 0), (r = (r + Math.imul(g, J)) | 0), (i = ((i = (i + Math.imul(g, ee)) | 0) + Math.imul(S, J)) | 0), (a = (a + Math.imul(S, ee)) | 0), (r = (r + Math.imul(I, en)) | 0), (i = ((i = (i + Math.imul(I, er)) | 0) + Math.imul(m, en)) | 0), (a = (a + Math.imul(m, er)) | 0), (r = (r + Math.imul(f, ea)) | 0), (i = ((i = (i + Math.imul(f, es)) | 0) + Math.imul(h, ea)) | 0), (a = (a + Math.imul(h, es)) | 0), (r = (r + Math.imul(d, el)) | 0), (i = ((i = (i + Math.imul(d, eu)) | 0) + Math.imul(_, el)) | 0);
         var eN = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
-        (u = ((((a = (a + Math.imul(_, eu)) | 0) + (i >>> 13)) | 0) + (eN >>> 26)) | 0), (eN &= 67108863), (r = Math.imul(w, V)), (i = ((i = Math.imul(w, H)) + Math.imul(x, V)) | 0), (a = Math.imul(x, H)), (r = (r + Math.imul(M, Y)) | 0), (i = ((i = (i + Math.imul(M, j)) | 0) + Math.imul(P, Y)) | 0), (a = (a + Math.imul(P, j)) | 0), (r = (r + Math.imul(D, K)) | 0), (i = ((i = (i + Math.imul(D, z)) | 0) + Math.imul(L, K)) | 0), (a = (a + Math.imul(L, z)) | 0), (r = (r + Math.imul(v, Q)) | 0), (i = ((i = (i + Math.imul(v, X)) | 0) + Math.imul(C, Q)) | 0), (a = (a + Math.imul(C, X)) | 0), (r = (r + Math.imul(N, J)) | 0), (i = ((i = (i + Math.imul(N, ee)) | 0) + Math.imul(O, J)) | 0), (a = (a + Math.imul(O, ee)) | 0), (r = (r + Math.imul(g, en)) | 0), (i = ((i = (i + Math.imul(g, er)) | 0) + Math.imul(S, en)) | 0), (a = (a + Math.imul(S, er)) | 0), (r = (r + Math.imul(I, ea)) | 0), (i = ((i = (i + Math.imul(I, es)) | 0) + Math.imul(m, ea)) | 0), (a = (a + Math.imul(m, es)) | 0), (r = (r + Math.imul(f, el)) | 0), (i = ((i = (i + Math.imul(f, eu)) | 0) + Math.imul(h, el)) | 0), (a = (a + Math.imul(h, eu)) | 0), (r = (r + Math.imul(d, ed)) | 0), (i = ((i = (i + Math.imul(d, e_)) | 0) + Math.imul(_, ed)) | 0);
+        (u = ((((a = (a + Math.imul(_, eu)) | 0) + (i >>> 13)) | 0) + (eN >>> 26)) | 0), (eN &= 67108863), (r = Math.imul(w, V)), (i = ((i = Math.imul(w, H)) + Math.imul(x, V)) | 0), (a = Math.imul(x, H)), (r = (r + Math.imul(M, Y)) | 0), (i = ((i = (i + Math.imul(M, j)) | 0) + Math.imul(P, Y)) | 0), (a = (a + Math.imul(P, j)) | 0), (r = (r + Math.imul(D, K)) | 0), (i = ((i = (i + Math.imul(D, z)) | 0) + Math.imul(L, K)) | 0), (a = (a + Math.imul(L, z)) | 0), (r = (r + Math.imul(R, Q)) | 0), (i = ((i = (i + Math.imul(R, X)) | 0) + Math.imul(C, Q)) | 0), (a = (a + Math.imul(C, X)) | 0), (r = (r + Math.imul(N, J)) | 0), (i = ((i = (i + Math.imul(N, ee)) | 0) + Math.imul(O, J)) | 0), (a = (a + Math.imul(O, ee)) | 0), (r = (r + Math.imul(g, en)) | 0), (i = ((i = (i + Math.imul(g, er)) | 0) + Math.imul(S, en)) | 0), (a = (a + Math.imul(S, er)) | 0), (r = (r + Math.imul(I, ea)) | 0), (i = ((i = (i + Math.imul(I, es)) | 0) + Math.imul(m, ea)) | 0), (a = (a + Math.imul(m, es)) | 0), (r = (r + Math.imul(f, el)) | 0), (i = ((i = (i + Math.imul(f, eu)) | 0) + Math.imul(h, el)) | 0), (a = (a + Math.imul(h, eu)) | 0), (r = (r + Math.imul(d, ed)) | 0), (i = ((i = (i + Math.imul(d, e_)) | 0) + Math.imul(_, ed)) | 0);
         var eO = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
-        (u = ((((a = (a + Math.imul(_, e_)) | 0) + (i >>> 13)) | 0) + (eO >>> 26)) | 0), (eO &= 67108863), (r = Math.imul(k, V)), (i = ((i = Math.imul(k, H)) + Math.imul(B, V)) | 0), (a = Math.imul(B, H)), (r = (r + Math.imul(w, Y)) | 0), (i = ((i = (i + Math.imul(w, j)) | 0) + Math.imul(x, Y)) | 0), (a = (a + Math.imul(x, j)) | 0), (r = (r + Math.imul(M, K)) | 0), (i = ((i = (i + Math.imul(M, z)) | 0) + Math.imul(P, K)) | 0), (a = (a + Math.imul(P, z)) | 0), (r = (r + Math.imul(D, Q)) | 0), (i = ((i = (i + Math.imul(D, X)) | 0) + Math.imul(L, Q)) | 0), (a = (a + Math.imul(L, X)) | 0), (r = (r + Math.imul(v, J)) | 0), (i = ((i = (i + Math.imul(v, ee)) | 0) + Math.imul(C, J)) | 0), (a = (a + Math.imul(C, ee)) | 0), (r = (r + Math.imul(N, en)) | 0), (i = ((i = (i + Math.imul(N, er)) | 0) + Math.imul(O, en)) | 0), (a = (a + Math.imul(O, er)) | 0), (r = (r + Math.imul(g, ea)) | 0), (i = ((i = (i + Math.imul(g, es)) | 0) + Math.imul(S, ea)) | 0), (a = (a + Math.imul(S, es)) | 0), (r = (r + Math.imul(I, el)) | 0), (i = ((i = (i + Math.imul(I, eu)) | 0) + Math.imul(m, el)) | 0), (a = (a + Math.imul(m, eu)) | 0), (r = (r + Math.imul(f, ed)) | 0), (i = ((i = (i + Math.imul(f, e_)) | 0) + Math.imul(h, ed)) | 0), (a = (a + Math.imul(h, e_)) | 0), (r = (r + Math.imul(d, ef)) | 0), (i = ((i = (i + Math.imul(d, eh)) | 0) + Math.imul(_, ef)) | 0);
-        var eR = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
-        (u = ((((a = (a + Math.imul(_, eh)) | 0) + (i >>> 13)) | 0) + (eR >>> 26)) | 0), (eR &= 67108863), (r = Math.imul(k, Y)), (i = ((i = Math.imul(k, j)) + Math.imul(B, Y)) | 0), (a = Math.imul(B, j)), (r = (r + Math.imul(w, K)) | 0), (i = ((i = (i + Math.imul(w, z)) | 0) + Math.imul(x, K)) | 0), (a = (a + Math.imul(x, z)) | 0), (r = (r + Math.imul(M, Q)) | 0), (i = ((i = (i + Math.imul(M, X)) | 0) + Math.imul(P, Q)) | 0), (a = (a + Math.imul(P, X)) | 0), (r = (r + Math.imul(D, J)) | 0), (i = ((i = (i + Math.imul(D, ee)) | 0) + Math.imul(L, J)) | 0), (a = (a + Math.imul(L, ee)) | 0), (r = (r + Math.imul(v, en)) | 0), (i = ((i = (i + Math.imul(v, er)) | 0) + Math.imul(C, en)) | 0), (a = (a + Math.imul(C, er)) | 0), (r = (r + Math.imul(N, ea)) | 0), (i = ((i = (i + Math.imul(N, es)) | 0) + Math.imul(O, ea)) | 0), (a = (a + Math.imul(O, es)) | 0), (r = (r + Math.imul(g, el)) | 0), (i = ((i = (i + Math.imul(g, eu)) | 0) + Math.imul(S, el)) | 0), (a = (a + Math.imul(S, eu)) | 0), (r = (r + Math.imul(I, ed)) | 0), (i = ((i = (i + Math.imul(I, e_)) | 0) + Math.imul(m, ed)) | 0), (a = (a + Math.imul(m, e_)) | 0), (r = (r + Math.imul(f, ef)) | 0), (i = ((i = (i + Math.imul(f, eh)) | 0) + Math.imul(h, ef)) | 0);
+        (u = ((((a = (a + Math.imul(_, e_)) | 0) + (i >>> 13)) | 0) + (eO >>> 26)) | 0), (eO &= 67108863), (r = Math.imul(k, V)), (i = ((i = Math.imul(k, H)) + Math.imul(B, V)) | 0), (a = Math.imul(B, H)), (r = (r + Math.imul(w, Y)) | 0), (i = ((i = (i + Math.imul(w, j)) | 0) + Math.imul(x, Y)) | 0), (a = (a + Math.imul(x, j)) | 0), (r = (r + Math.imul(M, K)) | 0), (i = ((i = (i + Math.imul(M, z)) | 0) + Math.imul(P, K)) | 0), (a = (a + Math.imul(P, z)) | 0), (r = (r + Math.imul(D, Q)) | 0), (i = ((i = (i + Math.imul(D, X)) | 0) + Math.imul(L, Q)) | 0), (a = (a + Math.imul(L, X)) | 0), (r = (r + Math.imul(R, J)) | 0), (i = ((i = (i + Math.imul(R, ee)) | 0) + Math.imul(C, J)) | 0), (a = (a + Math.imul(C, ee)) | 0), (r = (r + Math.imul(N, en)) | 0), (i = ((i = (i + Math.imul(N, er)) | 0) + Math.imul(O, en)) | 0), (a = (a + Math.imul(O, er)) | 0), (r = (r + Math.imul(g, ea)) | 0), (i = ((i = (i + Math.imul(g, es)) | 0) + Math.imul(S, ea)) | 0), (a = (a + Math.imul(S, es)) | 0), (r = (r + Math.imul(I, el)) | 0), (i = ((i = (i + Math.imul(I, eu)) | 0) + Math.imul(m, el)) | 0), (a = (a + Math.imul(m, eu)) | 0), (r = (r + Math.imul(f, ed)) | 0), (i = ((i = (i + Math.imul(f, e_)) | 0) + Math.imul(h, ed)) | 0), (a = (a + Math.imul(h, e_)) | 0), (r = (r + Math.imul(d, ef)) | 0), (i = ((i = (i + Math.imul(d, eh)) | 0) + Math.imul(_, ef)) | 0);
         var ev = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
-        (u = ((((a = (a + Math.imul(h, eh)) | 0) + (i >>> 13)) | 0) + (ev >>> 26)) | 0), (ev &= 67108863), (r = Math.imul(k, K)), (i = ((i = Math.imul(k, z)) + Math.imul(B, K)) | 0), (a = Math.imul(B, z)), (r = (r + Math.imul(w, Q)) | 0), (i = ((i = (i + Math.imul(w, X)) | 0) + Math.imul(x, Q)) | 0), (a = (a + Math.imul(x, X)) | 0), (r = (r + Math.imul(M, J)) | 0), (i = ((i = (i + Math.imul(M, ee)) | 0) + Math.imul(P, J)) | 0), (a = (a + Math.imul(P, ee)) | 0), (r = (r + Math.imul(D, en)) | 0), (i = ((i = (i + Math.imul(D, er)) | 0) + Math.imul(L, en)) | 0), (a = (a + Math.imul(L, er)) | 0), (r = (r + Math.imul(v, ea)) | 0), (i = ((i = (i + Math.imul(v, es)) | 0) + Math.imul(C, ea)) | 0), (a = (a + Math.imul(C, es)) | 0), (r = (r + Math.imul(N, el)) | 0), (i = ((i = (i + Math.imul(N, eu)) | 0) + Math.imul(O, el)) | 0), (a = (a + Math.imul(O, eu)) | 0), (r = (r + Math.imul(g, ed)) | 0), (i = ((i = (i + Math.imul(g, e_)) | 0) + Math.imul(S, ed)) | 0), (a = (a + Math.imul(S, e_)) | 0), (r = (r + Math.imul(I, ef)) | 0), (i = ((i = (i + Math.imul(I, eh)) | 0) + Math.imul(m, ef)) | 0);
+        (u = ((((a = (a + Math.imul(_, eh)) | 0) + (i >>> 13)) | 0) + (ev >>> 26)) | 0), (ev &= 67108863), (r = Math.imul(k, Y)), (i = ((i = Math.imul(k, j)) + Math.imul(B, Y)) | 0), (a = Math.imul(B, j)), (r = (r + Math.imul(w, K)) | 0), (i = ((i = (i + Math.imul(w, z)) | 0) + Math.imul(x, K)) | 0), (a = (a + Math.imul(x, z)) | 0), (r = (r + Math.imul(M, Q)) | 0), (i = ((i = (i + Math.imul(M, X)) | 0) + Math.imul(P, Q)) | 0), (a = (a + Math.imul(P, X)) | 0), (r = (r + Math.imul(D, J)) | 0), (i = ((i = (i + Math.imul(D, ee)) | 0) + Math.imul(L, J)) | 0), (a = (a + Math.imul(L, ee)) | 0), (r = (r + Math.imul(R, en)) | 0), (i = ((i = (i + Math.imul(R, er)) | 0) + Math.imul(C, en)) | 0), (a = (a + Math.imul(C, er)) | 0), (r = (r + Math.imul(N, ea)) | 0), (i = ((i = (i + Math.imul(N, es)) | 0) + Math.imul(O, ea)) | 0), (a = (a + Math.imul(O, es)) | 0), (r = (r + Math.imul(g, el)) | 0), (i = ((i = (i + Math.imul(g, eu)) | 0) + Math.imul(S, el)) | 0), (a = (a + Math.imul(S, eu)) | 0), (r = (r + Math.imul(I, ed)) | 0), (i = ((i = (i + Math.imul(I, e_)) | 0) + Math.imul(m, ed)) | 0), (a = (a + Math.imul(m, e_)) | 0), (r = (r + Math.imul(f, ef)) | 0), (i = ((i = (i + Math.imul(f, eh)) | 0) + Math.imul(h, ef)) | 0);
+        var eR = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
+        (u = ((((a = (a + Math.imul(h, eh)) | 0) + (i >>> 13)) | 0) + (eR >>> 26)) | 0), (eR &= 67108863), (r = Math.imul(k, K)), (i = ((i = Math.imul(k, z)) + Math.imul(B, K)) | 0), (a = Math.imul(B, z)), (r = (r + Math.imul(w, Q)) | 0), (i = ((i = (i + Math.imul(w, X)) | 0) + Math.imul(x, Q)) | 0), (a = (a + Math.imul(x, X)) | 0), (r = (r + Math.imul(M, J)) | 0), (i = ((i = (i + Math.imul(M, ee)) | 0) + Math.imul(P, J)) | 0), (a = (a + Math.imul(P, ee)) | 0), (r = (r + Math.imul(D, en)) | 0), (i = ((i = (i + Math.imul(D, er)) | 0) + Math.imul(L, en)) | 0), (a = (a + Math.imul(L, er)) | 0), (r = (r + Math.imul(R, ea)) | 0), (i = ((i = (i + Math.imul(R, es)) | 0) + Math.imul(C, ea)) | 0), (a = (a + Math.imul(C, es)) | 0), (r = (r + Math.imul(N, el)) | 0), (i = ((i = (i + Math.imul(N, eu)) | 0) + Math.imul(O, el)) | 0), (a = (a + Math.imul(O, eu)) | 0), (r = (r + Math.imul(g, ed)) | 0), (i = ((i = (i + Math.imul(g, e_)) | 0) + Math.imul(S, ed)) | 0), (a = (a + Math.imul(S, e_)) | 0), (r = (r + Math.imul(I, ef)) | 0), (i = ((i = (i + Math.imul(I, eh)) | 0) + Math.imul(m, ef)) | 0);
         var eC = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
-        (u = ((((a = (a + Math.imul(m, eh)) | 0) + (i >>> 13)) | 0) + (eC >>> 26)) | 0), (eC &= 67108863), (r = Math.imul(k, Q)), (i = ((i = Math.imul(k, X)) + Math.imul(B, Q)) | 0), (a = Math.imul(B, X)), (r = (r + Math.imul(w, J)) | 0), (i = ((i = (i + Math.imul(w, ee)) | 0) + Math.imul(x, J)) | 0), (a = (a + Math.imul(x, ee)) | 0), (r = (r + Math.imul(M, en)) | 0), (i = ((i = (i + Math.imul(M, er)) | 0) + Math.imul(P, en)) | 0), (a = (a + Math.imul(P, er)) | 0), (r = (r + Math.imul(D, ea)) | 0), (i = ((i = (i + Math.imul(D, es)) | 0) + Math.imul(L, ea)) | 0), (a = (a + Math.imul(L, es)) | 0), (r = (r + Math.imul(v, el)) | 0), (i = ((i = (i + Math.imul(v, eu)) | 0) + Math.imul(C, el)) | 0), (a = (a + Math.imul(C, eu)) | 0), (r = (r + Math.imul(N, ed)) | 0), (i = ((i = (i + Math.imul(N, e_)) | 0) + Math.imul(O, ed)) | 0), (a = (a + Math.imul(O, e_)) | 0), (r = (r + Math.imul(g, ef)) | 0), (i = ((i = (i + Math.imul(g, eh)) | 0) + Math.imul(S, ef)) | 0);
+        (u = ((((a = (a + Math.imul(m, eh)) | 0) + (i >>> 13)) | 0) + (eC >>> 26)) | 0), (eC &= 67108863), (r = Math.imul(k, Q)), (i = ((i = Math.imul(k, X)) + Math.imul(B, Q)) | 0), (a = Math.imul(B, X)), (r = (r + Math.imul(w, J)) | 0), (i = ((i = (i + Math.imul(w, ee)) | 0) + Math.imul(x, J)) | 0), (a = (a + Math.imul(x, ee)) | 0), (r = (r + Math.imul(M, en)) | 0), (i = ((i = (i + Math.imul(M, er)) | 0) + Math.imul(P, en)) | 0), (a = (a + Math.imul(P, er)) | 0), (r = (r + Math.imul(D, ea)) | 0), (i = ((i = (i + Math.imul(D, es)) | 0) + Math.imul(L, ea)) | 0), (a = (a + Math.imul(L, es)) | 0), (r = (r + Math.imul(R, el)) | 0), (i = ((i = (i + Math.imul(R, eu)) | 0) + Math.imul(C, el)) | 0), (a = (a + Math.imul(C, eu)) | 0), (r = (r + Math.imul(N, ed)) | 0), (i = ((i = (i + Math.imul(N, e_)) | 0) + Math.imul(O, ed)) | 0), (a = (a + Math.imul(O, e_)) | 0), (r = (r + Math.imul(g, ef)) | 0), (i = ((i = (i + Math.imul(g, eh)) | 0) + Math.imul(S, ef)) | 0);
         var ey = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
-        (u = ((((a = (a + Math.imul(S, eh)) | 0) + (i >>> 13)) | 0) + (ey >>> 26)) | 0), (ey &= 67108863), (r = Math.imul(k, J)), (i = ((i = Math.imul(k, ee)) + Math.imul(B, J)) | 0), (a = Math.imul(B, ee)), (r = (r + Math.imul(w, en)) | 0), (i = ((i = (i + Math.imul(w, er)) | 0) + Math.imul(x, en)) | 0), (a = (a + Math.imul(x, er)) | 0), (r = (r + Math.imul(M, ea)) | 0), (i = ((i = (i + Math.imul(M, es)) | 0) + Math.imul(P, ea)) | 0), (a = (a + Math.imul(P, es)) | 0), (r = (r + Math.imul(D, el)) | 0), (i = ((i = (i + Math.imul(D, eu)) | 0) + Math.imul(L, el)) | 0), (a = (a + Math.imul(L, eu)) | 0), (r = (r + Math.imul(v, ed)) | 0), (i = ((i = (i + Math.imul(v, e_)) | 0) + Math.imul(C, ed)) | 0), (a = (a + Math.imul(C, e_)) | 0), (r = (r + Math.imul(N, ef)) | 0), (i = ((i = (i + Math.imul(N, eh)) | 0) + Math.imul(O, ef)) | 0);
+        (u = ((((a = (a + Math.imul(S, eh)) | 0) + (i >>> 13)) | 0) + (ey >>> 26)) | 0), (ey &= 67108863), (r = Math.imul(k, J)), (i = ((i = Math.imul(k, ee)) + Math.imul(B, J)) | 0), (a = Math.imul(B, ee)), (r = (r + Math.imul(w, en)) | 0), (i = ((i = (i + Math.imul(w, er)) | 0) + Math.imul(x, en)) | 0), (a = (a + Math.imul(x, er)) | 0), (r = (r + Math.imul(M, ea)) | 0), (i = ((i = (i + Math.imul(M, es)) | 0) + Math.imul(P, ea)) | 0), (a = (a + Math.imul(P, es)) | 0), (r = (r + Math.imul(D, el)) | 0), (i = ((i = (i + Math.imul(D, eu)) | 0) + Math.imul(L, el)) | 0), (a = (a + Math.imul(L, eu)) | 0), (r = (r + Math.imul(R, ed)) | 0), (i = ((i = (i + Math.imul(R, e_)) | 0) + Math.imul(C, ed)) | 0), (a = (a + Math.imul(C, e_)) | 0), (r = (r + Math.imul(N, ef)) | 0), (i = ((i = (i + Math.imul(N, eh)) | 0) + Math.imul(O, ef)) | 0);
         var eD = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
-        (u = ((((a = (a + Math.imul(O, eh)) | 0) + (i >>> 13)) | 0) + (eD >>> 26)) | 0), (eD &= 67108863), (r = Math.imul(k, en)), (i = ((i = Math.imul(k, er)) + Math.imul(B, en)) | 0), (a = Math.imul(B, er)), (r = (r + Math.imul(w, ea)) | 0), (i = ((i = (i + Math.imul(w, es)) | 0) + Math.imul(x, ea)) | 0), (a = (a + Math.imul(x, es)) | 0), (r = (r + Math.imul(M, el)) | 0), (i = ((i = (i + Math.imul(M, eu)) | 0) + Math.imul(P, el)) | 0), (a = (a + Math.imul(P, eu)) | 0), (r = (r + Math.imul(D, ed)) | 0), (i = ((i = (i + Math.imul(D, e_)) | 0) + Math.imul(L, ed)) | 0), (a = (a + Math.imul(L, e_)) | 0), (r = (r + Math.imul(v, ef)) | 0), (i = ((i = (i + Math.imul(v, eh)) | 0) + Math.imul(C, ef)) | 0);
+        (u = ((((a = (a + Math.imul(O, eh)) | 0) + (i >>> 13)) | 0) + (eD >>> 26)) | 0), (eD &= 67108863), (r = Math.imul(k, en)), (i = ((i = Math.imul(k, er)) + Math.imul(B, en)) | 0), (a = Math.imul(B, er)), (r = (r + Math.imul(w, ea)) | 0), (i = ((i = (i + Math.imul(w, es)) | 0) + Math.imul(x, ea)) | 0), (a = (a + Math.imul(x, es)) | 0), (r = (r + Math.imul(M, el)) | 0), (i = ((i = (i + Math.imul(M, eu)) | 0) + Math.imul(P, el)) | 0), (a = (a + Math.imul(P, eu)) | 0), (r = (r + Math.imul(D, ed)) | 0), (i = ((i = (i + Math.imul(D, e_)) | 0) + Math.imul(L, ed)) | 0), (a = (a + Math.imul(L, e_)) | 0), (r = (r + Math.imul(R, ef)) | 0), (i = ((i = (i + Math.imul(R, eh)) | 0) + Math.imul(C, ef)) | 0);
         var eL = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
         (u = ((((a = (a + Math.imul(C, eh)) | 0) + (i >>> 13)) | 0) + (eL >>> 26)) | 0), (eL &= 67108863), (r = Math.imul(k, ea)), (i = ((i = Math.imul(k, es)) + Math.imul(B, ea)) | 0), (a = Math.imul(B, es)), (r = (r + Math.imul(w, el)) | 0), (i = ((i = (i + Math.imul(w, eu)) | 0) + Math.imul(x, el)) | 0), (a = (a + Math.imul(x, eu)) | 0), (r = (r + Math.imul(M, ed)) | 0), (i = ((i = (i + Math.imul(M, e_)) | 0) + Math.imul(P, ed)) | 0), (a = (a + Math.imul(P, e_)) | 0), (r = (r + Math.imul(D, ef)) | 0), (i = ((i = (i + Math.imul(D, eh)) | 0) + Math.imul(L, ef)) | 0);
         var eb = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
@@ -453,7 +453,7 @@
         var eP = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
         (u = ((((a = (a + Math.imul(x, eh)) | 0) + (i >>> 13)) | 0) + (eP >>> 26)) | 0), (eP &= 67108863), (r = Math.imul(k, ef)), (i = ((i = Math.imul(k, eh)) + Math.imul(B, ef)) | 0);
         var eU = (((u + r) | 0) + ((8191 & i) << 13)) | 0;
-        return (u = ((((a = Math.imul(B, eh)) + (i >>> 13)) | 0) + (eU >>> 26)) | 0), (eU &= 67108863), (l[0] = ep), (l[1] = eI), (l[2] = em), (l[3] = eT), (l[4] = eg), (l[5] = eS), (l[6] = eA), (l[7] = eN), (l[8] = eO), (l[9] = eR), (l[10] = ev), (l[11] = eC), (l[12] = ey), (l[13] = eD), (l[14] = eL), (l[15] = eb), (l[16] = eM), (l[17] = eP), (l[18] = eU), 0 !== u && ((l[19] = u), n.length++), n;
+        return (u = ((((a = Math.imul(B, eh)) + (i >>> 13)) | 0) + (eU >>> 26)) | 0), (eU &= 67108863), (l[0] = ep), (l[1] = eI), (l[2] = em), (l[3] = eT), (l[4] = eg), (l[5] = eS), (l[6] = eA), (l[7] = eN), (l[8] = eO), (l[9] = ev), (l[10] = eR), (l[11] = eC), (l[12] = ey), (l[13] = eD), (l[14] = eL), (l[15] = eb), (l[16] = eM), (l[17] = eP), (l[18] = eU), 0 !== u && ((l[19] = u), n.length++), n;
     };
     function I(e, t, n) {
         (n.negative = t.negative ^ e.negative), (n.length = e.length + t.length);
@@ -997,7 +997,7 @@
             return 0 === this.cmp(e);
         }),
         (a.red = function (e) {
-            return new v(e);
+            return new R(e);
         }),
         (a.prototype.toRed = function (e) {
             return r(!this.red, 'Already a number in reduction context'), r(0 === this.negative, 'red works only with positives'), e.convertTo(this)._forceRed(e);
@@ -1068,17 +1068,17 @@
     function O() {
         S.call(this, 'p192', 'ffffffff ffffffff ffffffff fffffffe ffffffff ffffffff');
     }
-    function R() {
+    function v() {
         S.call(this, '25519', '7fffffffffffffff ffffffffffffffff ffffffffffffffff ffffffffffffffed');
     }
-    function v(e) {
+    function R(e) {
         if ('string' == typeof e) {
             var t = a._prime(e);
             (this.m = t.p), (this.prime = t);
         } else r(e.gtn(1), 'modulus must be greater than 1'), (this.m = e), (this.prime = null);
     }
     function C(e) {
-        v.call(this, e), (this.shift = this.m.bitLength()), this.shift % 26 != 0 && (this.shift += 26 - (this.shift % 26)), (this.r = new a(1).iushln(this.shift)), (this.r2 = this.imod(this.r.sqr())), (this.rinv = this.r._invmp(this.m)), (this.minv = this.rinv.mul(this.r).isubn(1).div(this.m)), (this.minv = this.minv.umod(this.r)), (this.minv = this.r.sub(this.minv));
+        R.call(this, e), (this.shift = this.m.bitLength()), this.shift % 26 != 0 && (this.shift += 26 - (this.shift % 26)), (this.r = new a(1).iushln(this.shift)), (this.r2 = this.imod(this.r.sqr())), (this.rinv = this.r._invmp(this.m)), (this.minv = this.rinv.mul(this.r).isubn(1).div(this.m)), (this.minv = this.minv.umod(this.r)), (this.minv = this.r.sub(this.minv));
     }
     (S.prototype._tmp = function () {
         var e = new a(null);
@@ -1122,8 +1122,8 @@
         }),
         i(N, S),
         i(O, S),
-        i(R, S),
-        (R.prototype.imulK = function (e) {
+        i(v, S),
+        (v.prototype.imulK = function (e) {
             for (var t = 0, n = 0; n < e.length; n++) {
                 var r = (0 | e.words[n]) * 19 + t,
                     i = 67108863 & r;
@@ -1137,58 +1137,58 @@
             if ('k256' === e) t = new A();
             else if ('p224' === e) t = new N();
             else if ('p192' === e) t = new O();
-            else if ('p25519' === e) t = new R();
+            else if ('p25519' === e) t = new v();
             else throw Error('Unknown prime ' + e);
             return (g[e] = t), t;
         }),
-        (v.prototype._verify1 = function (e) {
+        (R.prototype._verify1 = function (e) {
             r(0 === e.negative, 'red works only with positives'), r(e.red, 'red works only with red numbers');
         }),
-        (v.prototype._verify2 = function (e, t) {
+        (R.prototype._verify2 = function (e, t) {
             r((e.negative | t.negative) == 0, 'red works only with positives'), r(e.red && e.red === t.red, 'red works only with red numbers');
         }),
-        (v.prototype.imod = function (e) {
+        (R.prototype.imod = function (e) {
             return this.prime ? this.prime.ireduce(e)._forceRed(this) : (u(e, e.umod(this.m)._forceRed(this)), e);
         }),
-        (v.prototype.neg = function (e) {
+        (R.prototype.neg = function (e) {
             return e.isZero() ? e.clone() : this.m.sub(e)._forceRed(this);
         }),
-        (v.prototype.add = function (e, t) {
+        (R.prototype.add = function (e, t) {
             this._verify2(e, t);
             var n = e.add(t);
             return n.cmp(this.m) >= 0 && n.isub(this.m), n._forceRed(this);
         }),
-        (v.prototype.iadd = function (e, t) {
+        (R.prototype.iadd = function (e, t) {
             this._verify2(e, t);
             var n = e.iadd(t);
             return n.cmp(this.m) >= 0 && n.isub(this.m), n;
         }),
-        (v.prototype.sub = function (e, t) {
+        (R.prototype.sub = function (e, t) {
             this._verify2(e, t);
             var n = e.sub(t);
             return 0 > n.cmpn(0) && n.iadd(this.m), n._forceRed(this);
         }),
-        (v.prototype.isub = function (e, t) {
+        (R.prototype.isub = function (e, t) {
             this._verify2(e, t);
             var n = e.isub(t);
             return 0 > n.cmpn(0) && n.iadd(this.m), n;
         }),
-        (v.prototype.shl = function (e, t) {
+        (R.prototype.shl = function (e, t) {
             return this._verify1(e), this.imod(e.ushln(t));
         }),
-        (v.prototype.imul = function (e, t) {
+        (R.prototype.imul = function (e, t) {
             return this._verify2(e, t), this.imod(e.imul(t));
         }),
-        (v.prototype.mul = function (e, t) {
+        (R.prototype.mul = function (e, t) {
             return this._verify2(e, t), this.imod(e.mul(t));
         }),
-        (v.prototype.isqr = function (e) {
+        (R.prototype.isqr = function (e) {
             return this.imul(e, e.clone());
         }),
-        (v.prototype.sqr = function (e) {
+        (R.prototype.sqr = function (e) {
             return this.mul(e, e);
         }),
-        (v.prototype.sqrt = function (e) {
+        (R.prototype.sqrt = function (e) {
             if (e.isZero()) return e.clone();
             var t = this.m.andln(3);
             if ((r(t % 2 == 1), 3 === t)) {
@@ -1210,11 +1210,11 @@
             }
             return _;
         }),
-        (v.prototype.invm = function (e) {
+        (R.prototype.invm = function (e) {
             var t = e._invmp(this.m);
             return 0 !== t.negative ? ((t.negative = 0), this.imod(t).redNeg()) : this.imod(t);
         }),
-        (v.prototype.pow = function (e, t) {
+        (R.prototype.pow = function (e, t) {
             if (t.isZero()) return new a(1).toRed(this);
             if (0 === t.cmpn(1)) return e.clone();
             var n = Array(16);
@@ -1237,18 +1237,18 @@
             }
             return i;
         }),
-        (v.prototype.convertTo = function (e) {
+        (R.prototype.convertTo = function (e) {
             var t = e.umod(this.m);
             return t === e ? t.clone() : t;
         }),
-        (v.prototype.convertFrom = function (e) {
+        (R.prototype.convertFrom = function (e) {
             var t = e.clone();
             return (t.red = null), t;
         }),
         (a.mont = function (e) {
             return new C(e);
         }),
-        i(C, v),
+        i(C, R),
         (C.prototype.convertTo = function (e) {
             return this.imod(e.ushln(this.shift));
         }),

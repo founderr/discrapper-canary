@@ -198,9 +198,9 @@ let A = {
     },
     N = /(-# +)/,
     O = (0, E.Z)([T, A]),
-    R = (0, E.Z)([g, A]),
-    v = l._p(O),
-    C = l._p(R),
+    v = (0, E.Z)([g, A]),
+    R = l._p(O),
+    C = l._p(v),
     y = {
         max: 1 / 0,
         maxAge: 1 * f.Z.Millis.MINUTE,
@@ -245,7 +245,7 @@ function b(e, t) {
                                 0: ''
                             },
                             type: 'paragraph',
-                            content: (n ? C : v)(s, !0, {
+                            content: (n ? C : R)(s, !0, {
                                 returnMentionIds: !0,
                                 disableAutoBlockNewlines: !0,
                                 guildId: t

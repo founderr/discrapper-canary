@@ -23,7 +23,7 @@ function I(e, t) {
 }
 async function m(e) {
     var t, a, s, m;
-    let { userId: T, section: g, subsection: S, guildId: A = f.ME, channelId: N, friendToken: O, analyticsLocation: R, showGuildProfile: v = !0, ...C } = e,
+    let { userId: T, section: g, subsection: S, guildId: A = f.ME, channelId: N, friendToken: O, analyticsLocation: v, showGuildProfile: R = !0, ...C } = e,
         y = d.default.getUser(T);
     if (null == y) return;
     let D = E.Z.getUserProfile(T),
@@ -46,12 +46,12 @@ async function m(e) {
                     initialSection: g,
                     initialSubsection: S,
                     channelId: N,
-                    showGuildProfile: v,
+                    showGuildProfile: R,
                     ...t,
                     ...C
                 });
         },
-        { modalKey: I(T, v ? A : void 0) }
+        { modalKey: I(T, R ? A : void 0) }
     )),
         _.default.track(f.rMx.OPEN_MODAL, {
             type: 'Profile Modal',
@@ -70,7 +70,7 @@ async function m(e) {
             profile_user_status: k,
             profile_has_nitro_customization: (null == D ? void 0 : D.banner) != null,
             profile_has_profile_effect: (null == D ? void 0 : D.profileEffectId) != null,
-            ...(null == R ? null : (0, _.expandLocation)(R))
+            ...(null == v ? null : (0, _.expandLocation)(v))
         });
 }
 function T() {

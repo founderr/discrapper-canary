@@ -14,16 +14,16 @@ function o(e) {
         p = i.useCallback(() => {}, []),
         _ = i.useRef(),
         C = i.useRef(),
-        f = i.useRef(n),
-        h = i.useRef(o);
-    h.current = o;
-    let E = i.useRef(r);
-    E.current = r;
-    let A = i.useRef(s);
-    A.current = s;
-    let N = i.useRef(c);
-    N.current = c;
-    let [x, v] = i.useState(!1),
+        h = i.useRef(n),
+        f = i.useRef(o);
+    f.current = o;
+    let A = i.useRef(r);
+    A.current = r;
+    let E = i.useRef(s);
+    E.current = s;
+    let x = i.useRef(c);
+    x.current = c;
+    let [N, v] = i.useState(!1),
         I = i.useCallback(() => v(!1), []);
     return (
         i.useLayoutEffect(() => {
@@ -34,11 +34,11 @@ function o(e) {
             if (null == u) return;
             let { height: l } = u.getBoundingClientRect();
             !t && (null == _.current || l < _.current) && (_.current = l), t && (null == C.current || l > C.current) && (C.current = l);
-            let o = null !== (e = E.current) && void 0 !== e ? e : _.current,
-                r = null !== (i = A.current) && void 0 !== i ? i : C.current,
-                s = f.current !== n;
-            if (((f.current = n), null == o || null == r || s)) return;
-            let c = Math.min(null !== (a = N.current) && void 0 !== a ? a : r, r),
+            let o = null !== (e = A.current) && void 0 !== e ? e : _.current,
+                r = null !== (i = E.current) && void 0 !== i ? i : C.current,
+                s = h.current !== n;
+            if (((h.current = n), null == o || null == r || s)) return;
+            let c = Math.min(null !== (a = x.current) && void 0 !== a ? a : r, r),
                 d = t ? o : c,
                 m = t ? c : o;
             if (!(d !== m)) return;
@@ -46,17 +46,17 @@ function o(e) {
             let p = null;
             return (
                 (p = requestAnimationFrame(() => {
-                    (p = null), (u.style.height = ''.concat(m, 'px')), (u.style.transition = 'height '.concat(h.current, 'ms ease-in-out'));
+                    (p = null), (u.style.height = ''.concat(m, 'px')), (u.style.transition = 'height '.concat(f.current, 'ms ease-in-out'));
                 })),
                 () => (null != p ? cancelAnimationFrame(p) : void 0)
             );
         }, [n, u, t]),
         i.useLayoutEffect(() => {
-            if (null != u && !x) (u.style.height = ''), (u.style.transition = '');
-        }, [n, u, x]),
+            if (null != u && !N) (u.style.height = ''), (u.style.transition = '');
+        }, [n, u, N]),
         {
             ref: d ? p : m,
-            isTransitioning: x,
+            isTransitioning: N,
             onTransitionEnd: I
         }
     );

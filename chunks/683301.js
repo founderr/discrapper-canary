@@ -42,8 +42,8 @@ let S = {
     },
     N = '',
     O = !1,
-    R = 'unset',
-    v = null,
+    v = 'unset',
+    R = null,
     C = g.Hk,
     y = null,
     D = [],
@@ -73,13 +73,13 @@ class P extends (a = f.ZP.Store) {
         this.waitFor(I.default);
     }
     isFetching() {
-        return O || null == v || null == m.Z.lastFetched;
+        return O || null == R || null == m.Z.lastFetched;
     }
     isFetchingSearch() {
-        return 'fetching' === R;
+        return 'fetching' === v;
     }
     hasSearchError() {
-        return 'failed' === R;
+        return 'failed' === v;
     }
     getDiscoverableGuilds() {
         return A;
@@ -137,7 +137,7 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_FETCH_SUCCESS: function (e) {
             let { guilds: t, section: n, total: r, offset: i, limit: a } = e;
-            (O = !1), (v = Date.now()), (L = (0, p.P)());
+            (O = !1), (R = Date.now()), (L = (0, p.P)());
             let s = E().map(t, M);
             A = {
                 ...A,
@@ -176,7 +176,7 @@ class P extends (a = f.ZP.Store) {
         },
         GUILD_DISCOVERY_POPULAR_FETCH_SUCCESS: function (e) {
             let { categoryId: t, guilds: n } = e;
-            (O = !1), (v = Date.now());
+            (O = !1), (R = Date.now());
             let r = E().map(n, M);
             A = {
                 ...A,
@@ -203,7 +203,7 @@ class P extends (a = f.ZP.Store) {
             var t;
             let { section: n, query: r, categoryId: i } = e;
             d()('search' === n, 'This action only supports search it seems'),
-                (R = 'fetching'),
+                (v = 'fetching'),
                 (A = {
                     ...A,
                     [n]: {
@@ -242,13 +242,13 @@ class P extends (a = f.ZP.Store) {
                 }
             }),
                 (N = o),
-                (R = 'succeeded');
+                (v = 'succeeded');
         },
         GUILD_DISCOVERY_SEARCH_FETCH_FAILURE: function (e) {
             var t;
             let { section: n, query: r, categoryId: i } = e;
             d()('search' === n, 'This action only supports search it seems'),
-                (R = 'failed'),
+                (v = 'failed'),
                 (A = {
                     ...A,
                     [n]: {

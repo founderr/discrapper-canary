@@ -24,7 +24,7 @@ n.d(t, {
         return I;
     },
     c6: function () {
-        return x;
+        return O;
     },
     d9: function () {
         return R;
@@ -133,7 +133,7 @@ let R = {
             prev: null
         }
     },
-    x = {
+    O = {
         'collect-signal': {
             next: 'thanks',
             prev: null

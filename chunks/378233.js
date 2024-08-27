@@ -24,10 +24,10 @@ n.d(t, {
         return N;
     },
     Zv: function () {
-        return R;
+        return v;
     },
     _V: function () {
-        return v;
+        return R;
     },
     cv: function () {
         return x;
@@ -83,7 +83,7 @@ let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: 
                 throw Error('Unexpected format type: '.concat(e));
         }
     },
-    R = (e) => {
+    v = (e) => {
         switch (e) {
             case 'application/json':
                 return d.u3.LOTTIE;
@@ -98,7 +98,7 @@ let { API_ENDPOINT: f, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: p, ASSET_ENDPOINT: 
                 throw Error('Unexpected file type: '.concat(e));
         }
     },
-    v = (e) => (null == e ? null : ''.concat(e.name, '.').concat(O(e.format_type))),
+    R = (e) => (null == e ? null : ''.concat(e.name, '.').concat(O(e.format_type))),
     C = function (e) {
         let { isPreview: t = !1, size: n = _.lE } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (null == e.format_type) return null;

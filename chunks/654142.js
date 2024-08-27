@@ -18,7 +18,7 @@ t.Z = l.memo(function (e) {
         N = E.map((e) => e.id),
         x = (0, o.Z)((e) => e.guildId),
         S = (0, r.e7)([c.Z], () => c.Z.isFolderExpanded(m)),
-        Z = (function (e) {
+        v = (function (e) {
             let t = e.children
                     .map((e) => {
                         let t = e.id,
@@ -31,7 +31,7 @@ t.Z = l.memo(function (e) {
             for (let e of t) (e.length < n || 0 === i.length) && (i.push(e), (n -= e.length));
             return ''.concat(i.join(', ')).concat(i.length < t.length ? ', ...' : '');
         })(t),
-        v = (0, _.Z)(t),
+        Z = (0, _.Z)(t),
         { mentionCount: T, unread: L } = (0, r.cj)([u.default], () => ({
             mentionCount: N.map((e) => u.default.getMentionCount(e)).reduce((e, t) => e + t, 0),
             unread: N.some((e) => u.default.hasUnread(e))
@@ -62,8 +62,8 @@ t.Z = l.memo(function (e) {
         selected: null != x && N.includes(x),
         mentionCount: T,
         unread: L,
-        mediaState: v,
-        defaultFolderName: Z,
+        mediaState: Z,
+        defaultFolderName: v,
         onExpandCollapse: A,
         onContextMenu: b
     });

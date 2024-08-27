@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(526383),
     u = n(210887),
     _ = n(900849),
-    h = n(374939),
-    E = n(901040),
+    E = n(374939),
+    h = n(901040),
     m = n(731455),
     I = n(689938),
     g = n(239181),
@@ -32,11 +32,11 @@ function T(e) {
                 categoryId: m.U
             });
         }, [t]),
-        (0, i.jsxs)(h.Z, {
+        (0, i.jsxs)(E.Z, {
             title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
             description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
             onScroll: n,
-            bannerBackground: (0, i.jsx)(E.Z, {}),
+            bannerBackground: (0, i.jsx)(h.Z, {}),
             children: [
                 T.length > 0
                     ? (0, i.jsxs)(i.Fragment, {

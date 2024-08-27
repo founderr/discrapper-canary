@@ -19,14 +19,14 @@ let E = 'guild-boost-purchase-modal';
 async function f(e) {
     let { analyticsLocations: t, analyticsLocation: f, analyticsSourceLocation: h, guildId: p, closeLayer: I, onCloseModal: m, totalNumberOfSlotsToAssign: T = 1, disablePremiumUpsell: g, onSubscriptionConfirmation: S, inPopout: A, applicationId: N } = e,
         O = A ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT,
-        R = l.ZP.getPremiumTypeSubscription();
-    if (null != R && R.isPurchasedExternally && null != R.paymentGateway) {
+        v = l.ZP.getPremiumTypeSubscription();
+    if (null != v && v.isPurchasedExternally && null != v.paymentGateway) {
         null != I && I(),
             a.Z.show({
-                title: _.Z.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({ paymentGatewayName: d.Vzj[R.paymentGateway] }),
+                title: _.Z.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({ paymentGatewayName: d.Vzj[v.paymentGateway] }),
                 body: _.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_UPGRADE_TO_PREMIUM_EXTERNAL_ERROR.format({
-                    paymentGatewayName: d.Vzj[R.paymentGateway],
-                    subscriptionManagementLink: (0, c.JE)(R.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+                    paymentGatewayName: d.Vzj[v.paymentGateway],
+                    subscriptionManagementLink: (0, c.JE)(v.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
                 })
             });
         return;

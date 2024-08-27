@@ -30,26 +30,26 @@ t.Z = function (e) {
         null == n)
     )
         return null;
-    let R = (0, r.jsx)(s.Avatar, {
+    let v = (0, r.jsx)(s.Avatar, {
             className: f.avatarWrapper,
             src: n,
             ...T
         }),
-        v = {
+        R = {
             ...t,
             backgroundColor: S
         };
     return (
-        null != O && m && A && ((v.backgroundImage = 'url('.concat(O, ')')), (v.backgroundSize = 'cover')),
+        null != O && m && A && ((R.backgroundImage = 'url('.concat(O, ')')), (R.backgroundSize = 'cover')),
         (0, r.jsx)('div', {
-            style: v,
+            style: R,
             className: f.background,
             children: I
                 ? (0, r.jsx)(u.Z, {
                       shouldAnimate: m,
-                      children: R
+                      children: v
                   })
-                : R
+                : v
         })
     );
 };

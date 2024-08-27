@@ -99,7 +99,7 @@ function g(e) {
         );
     if (null == p) return null;
     let O = null == A ? void 0 : A.colorString,
-        R = _.ZP.getName(t, n, p);
+        v = _.ZP.getName(t, n, p);
     return (0, r.jsxs)('div', {
         className: h.userSection,
         children: [
@@ -111,7 +111,7 @@ function g(e) {
             (0, r.jsx)(o.NameWithRole, {
                 color: null != O ? O : void 0,
                 roleName: N,
-                name: R,
+                name: v,
                 className: h.userName,
                 'aria-hidden': !0
             }),

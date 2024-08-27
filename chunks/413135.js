@@ -498,7 +498,7 @@ function N(e, t, n, r, i, a) {
 function O(e, t, n, r, a) {
     return (t = +t), (n >>>= 0), !a && N(e, t, n, 4, 3.4028234663852886e38, -3.4028234663852886e38), i.write(e, t, n, r, 23, 4), n + 4;
 }
-function R(e, t, n, r, a) {
+function v(e, t, n, r, a) {
     return (t = +t), (n >>>= 0), !a && N(e, t, n, 8, 1.7976931348623157e308, -1.7976931348623157e308), i.write(e, t, n, r, 52, 8), n + 8;
 }
 (o.prototype.slice = function (e, t) {
@@ -652,10 +652,10 @@ function R(e, t, n, r, a) {
         return O(this, e, t, !1, n);
     }),
     (o.prototype.writeDoubleLE = function (e, t, n) {
-        return R(this, e, t, !0, n);
+        return v(this, e, t, !0, n);
     }),
     (o.prototype.writeDoubleBE = function (e, t, n) {
-        return R(this, e, t, !1, n);
+        return v(this, e, t, !1, n);
     }),
     (o.prototype.copy = function (e, t, n, r) {
         if (!o.isBuffer(e)) throw TypeError('argument should be a Buffer');
@@ -691,7 +691,7 @@ function R(e, t, n, r, a) {
         }
         return this;
     });
-var v = /[^+/0-9A-Za-z-_]/g;
+var R = /[^+/0-9A-Za-z-_]/g;
 function C(e, t) {
     t = t || 1 / 0;
     for (var n, r = e.length, i = null, a = [], s = 0; s < r; ++s) {
@@ -737,7 +737,7 @@ function y(e) {
 function D(e) {
     return r.toByteArray(
         (function (e) {
-            if ((e = (e = e.split('=')[0]).trim().replace(v, '')).length < 2) return '';
+            if ((e = (e = e.split('=')[0]).trim().replace(R, '')).length < 2) return '';
             for (; e.length % 4 != 0; ) e += '=';
             return e;
         })(e)

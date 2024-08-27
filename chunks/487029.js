@@ -25,7 +25,7 @@ var i = n(735250),
     E = n(710111),
     N = n(827126);
 function x(e) {
-    let { guildId: t, channel: n, width: x, height: S, keepOpen: Z, interactive: v = !0, analyticsSource: T, onClose: L } = e,
+    let { guildId: t, channel: n, width: x, height: S, keepOpen: v, interactive: Z = !0, analyticsSource: T, onClose: L } = e,
         A = (function (e) {
             let [t, n] = (0, a.Wu)([_.Z], () => [_.Z.getSounds(), _.Z.getFavorites()]);
             return l.useMemo(() => {
@@ -61,9 +61,9 @@ function x(e) {
         l.useEffect(
             () => () => {
                 let e = M.current;
-                !Z && null != e && j(e);
+                !v && null != e && j(e);
             },
-            [Z, j]
+            [v, j]
         ),
         (0, c.Z)(
             {
@@ -75,7 +75,7 @@ function x(e) {
                     media_session_id: O
                 }
             },
-            { disableTrack: !v }
+            { disableTrack: !Z }
         );
     let D = l.useCallback((e) => {
             (M.current = e), P(null == e ? void 0 : e.soundId);
@@ -105,7 +105,7 @@ function x(e) {
                     (0, i.jsx)(
                         I.ZP,
                         {
-                            interactive: v,
+                            interactive: Z,
                             className: N.soundButton,
                             sound: e,
                             focused: R === e.soundId,
@@ -114,7 +114,7 @@ function x(e) {
                         e.soundId
                     )
                 ),
-            [R, n, v, A]
+            [R, n, Z, A]
         );
     return 0 === A.length
         ? null
@@ -125,11 +125,11 @@ function x(e) {
                   wheelHeight: S,
                   itemWidth: 96,
                   itemHeight: 52,
-                  showDeadZoneIndicator: !Z,
+                  showDeadZoneIndicator: !v,
                   activeItem: R,
                   onItemSelect: w,
                   onItemAction: G,
-                  interactive: v,
+                  interactive: Z,
                   children: U
               })
           });

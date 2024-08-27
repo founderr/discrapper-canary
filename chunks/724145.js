@@ -27,8 +27,8 @@ var r = n(735250),
     A = n(74538),
     N = n(238302),
     O = n(514361),
-    R = n(572397),
-    v = n(705262),
+    v = n(572397),
+    R = n(705262),
     C = n(981631),
     y = n(921944),
     D = n(474936),
@@ -51,7 +51,7 @@ let M = () =>
         }),
     P = (e) => {
         let { markAsDismissed: t } = e,
-            n = (0, R.q)();
+            n = (0, v.q)();
         return (0, r.jsxs)('div', {
             className: b.editorHeader,
             children: [
@@ -90,7 +90,7 @@ let M = () =>
             onSubscribeModalClose: (e) => {
                 if (!e) return;
                 if ((null == a || a(), null != s && s(y.L.PRIMARY), null != _))
-                    (0, v.Yk)({
+                    (0, R.Yk)({
                         isPersisted: !0,
                         themeName: u.Us[_.id],
                         analyticsLocations: o
@@ -109,7 +109,7 @@ let M = () =>
                 isCoachmark: O.Z.isCoachmark
             })),
             [s, u] = i.useState(!1),
-            d = (0, R.q)(),
+            d = (0, v.q)(),
             E = (0, o.EQ)({
                 isPreview: n,
                 isCoachmark: a,
@@ -154,7 +154,7 @@ function x(e) {
             isEditorOpen: O.Z.isEditorOpen,
             shouldEditorAnimate: O.Z.isCoachmark && !f.Z.useReducedMotion
         })),
-        _ = (0, R.q)();
+        _ = (0, v.q)();
     i.useEffect(() => _(C.rMx.CLIENT_THEME_PREVIEW_VIEWED), [_]),
         i.useEffect(() => {
             if (!!a)
@@ -163,7 +163,7 @@ function x(e) {
                     location_stack: n
                 });
         }, [a, n]);
-    let I = (0, R.J)(),
+    let I = (0, v.J)(),
         m = (0, E.Z)(null, a ? I : C.dG4);
     return (
         i.useEffect(() => {
@@ -179,9 +179,9 @@ function x(e) {
                         o ? (0, r.jsx)(M, {}) : (0, r.jsx)(P, { markAsDismissed: t }),
                         (0, r.jsx)(c.Scroller, {
                             className: b.editorBody,
-                            children: (0, r.jsxs)(v.ZP, {
-                                type: v.yH.EDITOR,
-                                children: [!a && (0, r.jsx)(v.ZP.Basic, { className: b.selectionGroup }), (0, r.jsx)(v.ZP.Gradient, { className: b.selectionGroup })]
+                            children: (0, r.jsxs)(R.ZP, {
+                                type: R.yH.EDITOR,
+                                children: [!a && (0, r.jsx)(R.ZP.Basic, { className: b.selectionGroup }), (0, r.jsx)(R.ZP.Gradient, { className: b.selectionGroup })]
                             })
                         }),
                         (0, r.jsx)(w, { markAsDismissed: t })

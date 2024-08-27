@@ -154,7 +154,7 @@ let S = new o.Z('GuildSettingsActionCreators'),
                 });
         },
         saveGuild(e, t) {
-            let { name: n, description: r, icon: s, splash: o, banner: u, homeHeader: c, afkChannelId: d, afkTimeout: _, systemChannelId: E, verificationLevel: f, defaultMessageNotifications: h, explicitContentFilter: p, features: I, systemChannelFlags: g, preferredLocale: A, rulesChannelId: N, safetyAlertsChannelId: O, discoverySplash: R, publicUpdatesChannelId: v, premiumProgressBarEnabled: C, clan: y } = t,
+            let { name: n, description: r, icon: s, splash: o, banner: u, homeHeader: c, afkChannelId: d, afkTimeout: _, systemChannelId: E, verificationLevel: f, defaultMessageNotifications: h, explicitContentFilter: p, features: I, systemChannelFlags: g, preferredLocale: A, rulesChannelId: N, safetyAlertsChannelId: O, discoverySplash: v, publicUpdatesChannelId: R, premiumProgressBarEnabled: C, clan: y } = t,
                 D = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 L = {
                     name: n,
@@ -173,8 +173,8 @@ let S = new o.Z('GuildSettingsActionCreators'),
                     explicit_content_filter: p,
                     system_channel_flags: g,
                     rules_channel_id: N,
-                    discovery_splash: R,
-                    public_updates_channel_id: v,
+                    discovery_splash: v,
+                    public_updates_channel_id: R,
                     safety_alerts_channel_id: O,
                     ...(null != C ? { premium_progress_bar_enabled: C } : null),
                     clan: null != y ? (0, T.A9)(y) : y

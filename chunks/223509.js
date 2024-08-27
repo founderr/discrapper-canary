@@ -54,8 +54,8 @@ function I(e, t, n, r) {
             A,
             N,
             O,
-            R,
             v,
+            R,
             C,
             y,
             D,
@@ -269,34 +269,34 @@ function I(e, t, n, r) {
                     (n.have = 0), (n.mode = 19);
                 case 19:
                     for (; n.have < n.nlen + n.ndist; ) {
-                        for (; (v = (x = n.lencode[T & ((1 << n.lenbits) - 1)]) >>> 24), (C = (x >>> 16) & 255), (y = 65535 & x), !(v <= g); ) {
+                        for (; (R = (x = n.lencode[T & ((1 << n.lenbits) - 1)]) >>> 24), (C = (x >>> 16) & 255), (y = 65535 & x), !(R <= g); ) {
                             if (0 === h) break r;
                             h--, (T += d[E++] << g), (g += 8);
                         }
-                        if (y < 16) (T >>>= v), (g -= v), (n.lens[n.have++] = y);
+                        if (y < 16) (T >>>= R), (g -= R), (n.lens[n.have++] = y);
                         else {
                             if (16 === y) {
-                                for (w = v + 2; g < w; ) {
+                                for (w = R + 2; g < w; ) {
                                     if (0 === h) break r;
                                     h--, (T += d[E++] << g), (g += 8);
                                 }
-                                if (((T >>>= v), (g -= v), 0 === n.have)) {
+                                if (((T >>>= R), (g -= R), 0 === n.have)) {
                                     (e.msg = 'invalid bit length repeat'), (n.mode = 30);
                                     break;
                                 }
                                 (M = n.lens[n.have - 1]), (N = 3 + (3 & T)), (T >>>= 2), (g -= 2);
                             } else if (17 === y) {
-                                for (w = v + 3; g < w; ) {
+                                for (w = R + 3; g < w; ) {
                                     if (0 === h) break r;
                                     h--, (T += d[E++] << g), (g += 8);
                                 }
-                                (T >>>= v), (g -= v), (M = 0), (N = 3 + (7 & T)), (T >>>= 3), (g -= 3);
+                                (T >>>= R), (g -= R), (M = 0), (N = 3 + (7 & T)), (T >>>= 3), (g -= 3);
                             } else {
-                                for (w = v + 7; g < w; ) {
+                                for (w = R + 7; g < w; ) {
                                     if (0 === h) break r;
                                     h--, (T += d[E++] << g), (g += 8);
                                 }
-                                (T >>>= v), (g -= v), (M = 0), (N = 11 + (127 & T)), (T >>>= 7), (g -= 7);
+                                (T >>>= R), (g -= R), (M = 0), (N = 11 + (127 & T)), (T >>>= 7), (g -= 7);
                             }
                             if (n.have + N > n.nlen + n.ndist) {
                                 (e.msg = 'invalid bit length repeat'), (n.mode = 30);
@@ -326,18 +326,18 @@ function I(e, t, n, r) {
                         (e.next_out = f), (e.avail_out = m), (e.next_in = E), (e.avail_in = h), (n.hold = T), (n.bits = g), l(e, A), (f = e.next_out), (_ = e.output), (m = e.avail_out), (E = e.next_in), (d = e.input), (h = e.avail_in), (T = n.hold), (g = n.bits), 12 === n.mode && (n.back = -1);
                         break;
                     }
-                    for (n.back = 0; (v = (x = n.lencode[T & ((1 << n.lenbits) - 1)]) >>> 24), (C = (x >>> 16) & 255), (y = 65535 & x), !(v <= g); ) {
+                    for (n.back = 0; (R = (x = n.lencode[T & ((1 << n.lenbits) - 1)]) >>> 24), (C = (x >>> 16) & 255), (y = 65535 & x), !(R <= g); ) {
                         if (0 === h) break r;
                         h--, (T += d[E++] << g), (g += 8);
                     }
                     if (C && (240 & C) == 0) {
-                        for (D = v, L = C, b = y; (v = (x = n.lencode[b + ((T & ((1 << (D + L)) - 1)) >> D)]) >>> 24), (C = (x >>> 16) & 255), (y = 65535 & x), !(D + v <= g); ) {
+                        for (D = R, L = C, b = y; (R = (x = n.lencode[b + ((T & ((1 << (D + L)) - 1)) >> D)]) >>> 24), (C = (x >>> 16) & 255), (y = 65535 & x), !(D + R <= g); ) {
                             if (0 === h) break r;
                             h--, (T += d[E++] << g), (g += 8);
                         }
                         (T >>>= D), (g -= D), (n.back += D);
                     }
-                    if (((T >>>= v), (g -= v), (n.back += v), (n.length = y), 0 === C)) {
+                    if (((T >>>= R), (g -= R), (n.back += R), (n.length = y), 0 === C)) {
                         n.mode = 26;
                         break;
                     }
@@ -360,18 +360,18 @@ function I(e, t, n, r) {
                     }
                     (n.was = n.length), (n.mode = 23);
                 case 23:
-                    for (; (v = (x = n.distcode[T & ((1 << n.distbits) - 1)]) >>> 24), (C = (x >>> 16) & 255), (y = 65535 & x), !(v <= g); ) {
+                    for (; (R = (x = n.distcode[T & ((1 << n.distbits) - 1)]) >>> 24), (C = (x >>> 16) & 255), (y = 65535 & x), !(R <= g); ) {
                         if (0 === h) break r;
                         h--, (T += d[E++] << g), (g += 8);
                     }
                     if ((240 & C) == 0) {
-                        for (D = v, L = C, b = y; (v = (x = n.distcode[b + ((T & ((1 << (D + L)) - 1)) >> D)]) >>> 24), (C = (x >>> 16) & 255), (y = 65535 & x), !(D + v <= g); ) {
+                        for (D = R, L = C, b = y; (R = (x = n.distcode[b + ((T & ((1 << (D + L)) - 1)) >> D)]) >>> 24), (C = (x >>> 16) & 255), (y = 65535 & x), !(D + R <= g); ) {
                             if (0 === h) break r;
                             h--, (T += d[E++] << g), (g += 8);
                         }
                         (T >>>= D), (g -= D), (n.back += D);
                     }
-                    if (((T >>>= v), (g -= v), (n.back += v), 64 & C)) {
+                    if (((T >>>= R), (g -= R), (n.back += R), 64 & C)) {
                         (e.msg = 'invalid distance code'), (n.mode = 30);
                         break;
                     }
@@ -396,10 +396,10 @@ function I(e, t, n, r) {
                             (e.msg = 'invalid distance too far back'), (n.mode = 30);
                             break;
                         }
-                        N > n.wnext ? ((N -= n.wnext), (O = n.wsize - N)) : (O = n.wnext - N), N > n.length && (N = n.length), (R = n.window);
-                    } else (R = _), (O = f - n.offset), (N = n.length);
+                        N > n.wnext ? ((N -= n.wnext), (O = n.wsize - N)) : (O = n.wnext - N), N > n.length && (N = n.length), (v = n.window);
+                    } else (v = _), (O = f - n.offset), (N = n.length);
                     N > m && (N = m), (m -= N), (n.length -= N);
-                    do _[f++] = R[O++];
+                    do _[f++] = v[O++];
                     while (--N);
                     0 === n.length && (n.mode = 21);
                     break;

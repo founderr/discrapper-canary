@@ -25,8 +25,8 @@ var r = n(735250),
     A = n(199257),
     N = n(880949),
     O = n(784222),
-    R = n(149203),
-    v = n(689938),
+    v = n(149203),
+    R = n(689938),
     C = n(611540);
 let y = n(137321),
     D = n(233892),
@@ -38,7 +38,7 @@ function M(e) {
 let P = (e) => {
         let { inspectedEmoji: t, guild: n } = e,
             r = M(t);
-        return null != n && r ? v.Z.Messages.EMOJI_FROM_GUILD.format({ guildName: n.name }) : null;
+        return null != n && r ? R.Z.Messages.EMOJI_FROM_GUILD.format({ guildName: n.name }) : null;
     },
     U = i.memo(function (e) {
         let t,
@@ -79,21 +79,21 @@ let P = (e) => {
             z = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: q } = (0, A.Z)(G, k),
             Q = t.id,
-            X = (null == H ? void 0 : H.type) === O.ld.EMOJI ? H.subCategory : R.t0.NONE;
+            X = (null == H ? void 0 : H.type) === O.ld.EMOJI ? H.subCategory : v.t0.NONE;
         if (
             (i.useEffect(() => {
                 let e = Date.now();
                 return () => {
                     Date.now() - e >= 250 &&
                         M(t) &&
-                        X !== R.t0.NONE &&
-                        (X === R.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, _.Zg)(t.guildId, q[0].id),
+                        X !== v.t0.NONE &&
+                        (X === v.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, _.Zg)(t.guildId, q[0].id),
                         null != V.source &&
                             (0, S.Gn)({
                                 emoji: t,
                                 subCategory: X,
                                 position: H.columnIndex + 1,
-                                newlyAddedHighlight: X === R.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(G, Q)
+                                newlyAddedHighlight: X === v.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(G, Q)
                             }));
                 };
             }),
@@ -151,10 +151,10 @@ let P = (e) => {
                       shouldAnimate: !j && Y
                   })
                 : null;
-        U = F && 'CREATE_EMOJI' === t.type ? v.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type ? (z.has(t.guildId) ? v.Z.Messages.EMOJI_PICKER_COLLAPSE_EMOJI_SECTION : v.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION) : t.allNamesString;
+        U = F && 'CREATE_EMOJI' === t.type ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE_DESCRIPTION : 'EXPAND_OR_COLLAPSE_EMOJI' === t.type ? (z.has(t.guildId) ? R.Z.Messages.EMOJI_PICKER_COLLAPSE_EMOJI_SECTION : R.Z.Messages.EMOJI_PICKER_EXPAND_EMOJI_SECTION) : t.allNamesString;
         let et =
             F && 'CREATE_EMOJI' === t.type
-                ? v.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE
+                ? R.Z.Messages.EMOJI_PICKER_CREATE_EMOJI_TITLE
                 : P({
                       inspectedEmoji: t,
                       channel: B,

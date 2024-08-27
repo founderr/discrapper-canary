@@ -103,8 +103,8 @@ var r,
     A = n(617136),
     N = n(272008),
     O = n(569984),
-    R = n(497505),
-    v = n(918701),
+    v = n(497505),
+    R = n(918701),
     C = n(796111),
     y = n(977156),
     D = n(31055),
@@ -148,12 +148,12 @@ function k(e) {
                 let n = e
                     .sort((e, t) => {
                         var n, r, i, a, s, o;
-                        let l = !(0, v.zi)(e),
-                            u = !(0, v.zi)(t),
-                            c = (0, v.Mi)(e, R.jn.QUEST_BAR) || (0, v.Mi)(e, R.jn.QUEST_BAR_V2),
-                            d = (0, v.Mi)(t, R.jn.QUEST_BAR) || (0, v.Mi)(t, R.jn.QUEST_BAR_V2),
-                            _ = (0, v.Mi)(e, R.jn.GIFT_INVENTORY_FOR_YOU),
-                            E = (0, v.Mi)(t, R.jn.GIFT_INVENTORY_FOR_YOU),
+                        let l = !(0, R.zi)(e),
+                            u = !(0, R.zi)(t),
+                            c = (0, R.Mi)(e, v.jn.QUEST_BAR) || (0, R.Mi)(e, v.jn.QUEST_BAR_V2),
+                            d = (0, R.Mi)(t, v.jn.QUEST_BAR) || (0, R.Mi)(t, v.jn.QUEST_BAR_V2),
+                            _ = (0, R.Mi)(e, v.jn.GIFT_INVENTORY_FOR_YOU),
+                            E = (0, R.Mi)(t, v.jn.GIFT_INVENTORY_FOR_YOU),
                             f = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
                             h = (null === (r = t.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null;
                         return l !== u ? (l ? -1 : 1) : c !== d && l && u ? (c ? -1 : 1) : _ !== E ? (_ ? -1 : 1) : f !== h ? (f ? -1 : 1) : l && u ? G(null === (s = e.config) || void 0 === s ? void 0 : s.expiresAt, null === (o = t.config) || void 0 === o ? void 0 : o.expiresAt, 1) : G(null === (i = e.config) || void 0 === i ? void 0 : i.expiresAt, null === (a = t.config) || void 0 === a ? void 0 : a.expiresAt, 0);
@@ -202,19 +202,19 @@ function k(e) {
 }
 function B() {
     let { quests: e, isFetchingCurrentQuests: t } = x({ fetchPolicy: 'cache-only' }),
-        [n, r] = u.useState(() => new Map(e.map((e) => [e.id, (0, v.zi)(e)])));
+        [n, r] = u.useState(() => new Map(e.map((e) => [e.id, (0, R.zi)(e)])));
     return (
         u.useEffect(() => {
             if (t) return;
             let n = [];
             for (let t of e)
-                if (null == t || (0, v.zi)(t)) null != t && (0, v.zi)(t) && r((e) => (e.has(t.id) ? e : new Map(e).set(t.id, !0)));
+                if (null == t || (0, R.zi)(t)) null != t && (0, R.zi)(t) && r((e) => (e.has(t.id) ? e : new Map(e).set(t.id, !0)));
                 else {
                     let e = new E.V7(),
                         i = () => {
                             let a = Date.parse(t.config.expiresAt) - Date.now();
                             e.start(a, () => {
-                                (0, v.zi)(t) ? r((e) => new Map(e).set(t.id, !0)) : i();
+                                (0, R.zi)(t) ? r((e) => new Map(e).set(t.id, !0)) : i();
                             }),
                                 n.push(e);
                         };
@@ -243,7 +243,7 @@ function H(e) {
     return (0, f.e7)([O.Z], () => O.Z.isProgressingOnDesktop(e.id));
 }
 function Z(e) {
-    return u.useMemo(() => (0, v.Bz)(e), [e]);
+    return u.useMemo(() => (0, R.Bz)(e), [e]);
 }
 function Y(e) {
     let t = H(e),
@@ -252,7 +252,7 @@ function Y(e) {
 }
 ((o = i || (i = {})).ALL = 'all'), (o.CLAIMED = 'claimed');
 let j = (e) => {
-    let t = u.useCallback(() => (0, v.il)(e), [e]),
+    let t = u.useCallback(() => (0, R.il)(e), [e]),
         [n, r] = u.useState(t()),
         i = u.useCallback(() => r(t()), [t]),
         a = Y(e);
@@ -274,14 +274,14 @@ let j = (e) => {
     );
 };
 function W(e) {
-    return u.useMemo(() => (0, v.b7)(e), [e]);
+    return u.useMemo(() => (0, R.b7)(e), [e]);
 }
 let K = (e) => {
     let { quest: t, location: n, questContent: r } = e,
         i = en({ quest: t });
     return () => {
         i
-            ? (0, v.gI)(
+            ? (0, R.gI)(
                   {
                       quest: t,
                       showInline: (0, C.i)({ location: n })
@@ -291,7 +291,7 @@ let K = (e) => {
                       ctaContent: A.jZ.CONNECT_CONSOLE_LINK
                   }
               )
-            : (0, v.V$)(
+            : (0, R.V$)(
                   { quest: t },
                   {
                       content: r,
@@ -308,12 +308,12 @@ function z(e, t, n) {
             location: t,
             questContent: n
         });
-    if ((0, v.zK)(e, P.S7.IN_HOUSE_CONSOLE_QUEST))
+    if ((0, R.zK)(e, P.S7.IN_HOUSE_CONSOLE_QUEST))
         return w.Z.Messages.QUESTS_IN_HOUSE_TASK_WITH_LINK.format({
             minutes: r,
             onClick: a
         });
-    if ((0, v.$J)(e))
+    if ((0, R.$J)(e))
         return w.Z.Messages.QUESTS_CONSOLE_QUEST_TASK_WITH_LINK.format({
             minutes: r,
             onClick: a,
@@ -322,7 +322,7 @@ function z(e, t, n) {
     if (null != i) return i.title;
     let s = w.Z.Messages.QUESTS_STREAM_TASK;
     return (
-        (0, v.Nj)({ quest: e }) && (s = w.Z.Messages.QUESTS_PLAY_TASK),
+        (0, R.Nj)({ quest: e }) && (s = w.Z.Messages.QUESTS_PLAY_TASK),
         s.format({
             minutes: r,
             gameTitle: e.config.messages.gameTitle
@@ -337,13 +337,13 @@ function q() {
         if (t || 0 === e.length) return r;
         for (let t of e) {
             var i;
-            if (!(0, v.vR)(t, R.jn.GIFT_INVENTORY_SETTINGS_BADGE) || (null !== (i = n.get(t.id)) && void 0 !== i && i)) continue;
+            if (!(0, R.vR)(t, v.jn.GIFT_INVENTORY_SETTINGS_BADGE) || (null !== (i = n.get(t.id)) && void 0 !== i && i)) continue;
             if ((null == t ? void 0 : t.userStatus) == null) {
                 r.push(t);
                 continue;
             }
             let e = null != t.userStatus.claimedAt,
-                a = (0, v.zE)(t.userStatus, R.jn.GIFT_INVENTORY_SETTINGS_BADGE);
+                a = (0, R.zE)(t.userStatus, v.jn.GIFT_INVENTORY_SETTINGS_BADGE);
             if (!e && !a) {
                 r.push(t);
                 continue;
@@ -355,18 +355,18 @@ function q() {
 function Q() {
     let e = q();
     u.useEffect(() => {
-        for (let t of e) (0, N.gl)(t.id, R.jn.GIFT_INVENTORY_SETTINGS_BADGE);
+        for (let t of e) (0, N.gl)(t.id, v.jn.GIFT_INVENTORY_SETTINGS_BADGE);
     }, [e]);
 }
 function X(e) {
     let t = (0, D.z)({ location: P.dr.MEMBERS_LIST }),
         n = (0, f.e7)([O.Z], () => (t ? O.Z.quests : null)),
-        r = u.useMemo(() => (0, v.Jg)(n, e), [e, n]);
+        r = u.useMemo(() => (0, R.Jg)(n, e), [e, n]);
     return F(r) ? null : r;
 }
 function $(e) {
     var t;
-    let n = (0, v.Xv)(e),
+    let n = (0, R.Xv)(e),
         { product: r, isFetching: i } = (0, h.T)(M.r.build(e).defaultReward.skuId);
     return {
         hasQuestCollectibles: n,
@@ -440,7 +440,7 @@ let et = (e) => {
             { xboxAndPlaystationAccounts: n } = ee(),
             r = Y(t),
             i = 0 === n.length;
-        return (0, v.$J)(t) && i && !r;
+        return (0, R.$J)(t) && i && !r;
     },
     er = () => {
         let { xboxAccounts: e, playstationAccounts: t } = ee(),
@@ -487,12 +487,12 @@ function ea(e) {
 function es(e) {
     var t, n;
     let r = j(e),
-        i = (0, v.b7)(e),
+        i = (0, R.b7)(e),
         a = (0, b.D)({
             quest: e,
             taskDetails: r,
             location: P.dr.QUEST_HOME_DESKTOP,
-            questContent: R.jn.QUEST_HOME_DESKTOP,
+            questContent: v.jn.QUEST_HOME_DESKTOP,
             useV2Variants: !0
         }),
         s = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
@@ -508,7 +508,7 @@ function eo(e, t) {
             let t = (0, f.e7)([O.Z], () => O.Z.selectedTaskPlatform(e));
             return [t, u.useCallback((t) => (0, N.OR)(e, t), [e])];
         })(e.id),
-        i = u.useMemo(() => (0, v.yH)(e), [e]),
+        i = u.useMemo(() => (0, R.yH)(e), [e]),
         a = i.includes(P.cd.DESKTOP),
         s = i.includes(P.cd.CONSOLE),
         o = H(e),
@@ -535,21 +535,21 @@ function eo(e, t) {
                     currentProgressingPlatform: h,
                     selectedPlatform: n
                 })
-                    .with({ currentProgressingPlatform: P.cd.CONSOLE }, () => R.LI.CONSOLE)
-                    .with({ currentProgressingPlatform: P.cd.DESKTOP }, () => R.LI.DESKTOP)
+                    .with({ currentProgressingPlatform: P.cd.CONSOLE }, () => v.LI.CONSOLE)
+                    .with({ currentProgressingPlatform: P.cd.DESKTOP }, () => v.LI.DESKTOP)
                     .with(
                         {
                             currentProgressingPlatform: null,
                             lastPlatformProgress: P.cd.CONSOLE
                         },
-                        () => R.LI.CONSOLE
+                        () => v.LI.CONSOLE
                     )
                     .with(
                         {
                             currentProgressingPlatform: null,
                             lastPlatformProgress: P.cd.DESKTOP
                         },
-                        () => R.LI.DESKTOP
+                        () => v.LI.DESKTOP
                     )
                     .with(
                         {
@@ -557,7 +557,7 @@ function eo(e, t) {
                             lastPlatformProgress: null,
                             selectedPlatform: P.cd.CONSOLE
                         },
-                        () => R.LI.CONSOLE
+                        () => v.LI.CONSOLE
                     )
                     .with(
                         {
@@ -565,7 +565,7 @@ function eo(e, t) {
                             lastPlatformProgress: null,
                             selectedPlatform: P.cd.DESKTOP
                         },
-                        () => R.LI.DESKTOP
+                        () => v.LI.DESKTOP
                     )
                     .with(
                         {
@@ -573,7 +573,7 @@ function eo(e, t) {
                             lastPlatformProgress: null,
                             selectedPlatform: null
                         },
-                        () => (s && a && _ ? R.LI.SELECT : s ? R.LI.CONSOLE : R.LI.DESKTOP)
+                        () => (s && a && _ ? v.LI.SELECT : s ? v.LI.CONSOLE : v.LI.DESKTOP)
                     )
                     .exhaustive(),
             [s, a, _, E, h, n]
@@ -592,7 +592,7 @@ function el(e) {
         l = (null === (n = e.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         u = d.T.DESKTOP.has(i.taskType),
         c = 0 === i.percentComplete,
-        _ = o && !l && !s && null == r && (u || (c && a === R.LI.DESKTOP)),
+        _ = o && !l && !s && null == r && (u || (c && a === v.LI.DESKTOP)),
         E = (0, S.isWeb)() && _,
         f = (0, S.isMac)() && i.taskType === d.X.STREAM_ON_DESKTOP && _,
         h = [];

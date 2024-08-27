@@ -64,7 +64,7 @@ function p() {
     });
 }
 function I(e) {
-    let { look: t = E.FILLED, color: n = f.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: I = !0, disabled: m = !1, submitting: T = !1, type: g = 'button', style: S, wrapperClassName: A, className: N, innerClassName: O, onClick: R, onDoubleClick: v, onMouseDown: C, onMouseUp: y, onMouseEnter: D, onMouseLeave: L, onKeyDown: b, children: M, rel: P, buttonRef: U, focusProps: w, 'aria-label': x, submittingStartedLabel: G, submittingFinishedLabel: k, ...B } = e,
+    let { look: t = E.FILLED, color: n = f.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: I = !0, disabled: m = !1, submitting: T = !1, type: g = 'button', style: S, wrapperClassName: A, className: N, innerClassName: O, onClick: v, onDoubleClick: R, onMouseDown: C, onMouseUp: y, onMouseEnter: D, onMouseLeave: L, onKeyDown: b, children: M, rel: P, buttonRef: U, focusProps: w, 'aria-label': x, submittingStartedLabel: G, submittingFinishedLabel: k, ...B } = e,
         F = m || T,
         V = F && (null != D || null != L),
         H = (function (e, t) {
@@ -92,8 +92,8 @@ function I(e) {
             'aria-label': x,
             'aria-busy': !!T || void 0,
             ref: U,
-            onClick: F ? (e) => e.preventDefault() : R,
-            onDoubleClick: F ? (e) => e.preventDefault() : v,
+            onClick: F ? (e) => e.preventDefault() : v,
+            onDoubleClick: F ? (e) => e.preventDefault() : R,
             onMouseUp: m ? void 0 : y,
             onMouseDown: m ? void 0 : C,
             onMouseEnter: D,

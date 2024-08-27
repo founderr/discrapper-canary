@@ -92,8 +92,8 @@ t.Z = (e) => {
     let b = a.useRef(null),
         [L, v] = a.useState(!1),
         [Z, y] = a.useState(!1),
-        [Q, X] = a.useState(!1),
-        [q, J] = a.useState(!1),
+        [Q, q] = a.useState(!1),
+        [X, J] = a.useState(!1),
         $ = (0, o.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
         ee = null != $ ? (0, g.Af)($) : null,
         et = null != ee ? g.ZP.getSkuIdForPlan(ee.planId) : null,
@@ -248,13 +248,13 @@ t.Z = (e) => {
                 }),
                 (0, s.jsx)('div', { className: n ? w.footerSpacingFullscreen : w.footerSpacing }),
                 (0, s.jsx)(D.Z, {
-                    isVisible: !L && !Z && q,
+                    isVisible: !L && !Z && X,
                     isFullscreen: n,
                     subscriptionTier: en
                 }),
                 (0, s.jsx)(c.$, {
                     onChange: (e) => {
-                        e && !Q && (C.default.track(k.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eE }), X(!0));
+                        e && !Q && (C.default.track(k.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eE }), q(!0));
                     },
                     children: (0, s.jsx)('div', { className: w.bottomOfPageVisibilitySensor })
                 }),

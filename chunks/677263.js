@@ -24,10 +24,10 @@ function s(e) {
         N = (0, a.useCallback)((e) => (isNaN(e) || null === e ? '' : S.format(e)), [S]),
         O = isNaN(s) ? 1 : s;
     'percent' === A.style && isNaN(s) && (O = 0.01);
-    let [R, v] = (0, a.useState)(h),
+    let [v, R] = (0, a.useState)(h),
         [C, y] = (0, a.useState)(_),
         [D, L] = (0, a.useState)(l);
-    (!Object.is(h, R) || _ !== C || l !== D) && (m(N(h)), v(h), y(_), L(l));
+    (!Object.is(h, v) || _ !== C || l !== D) && (m(N(h)), R(h), y(_), L(l));
     let b = (0, a.useMemo)(() => T.parse(I), [T, I]),
         M = (e, i) => {
             if (isNaN(b)) {

@@ -20,8 +20,8 @@ var r = n(735250),
     A = n(353093),
     N = n(954138),
     O = n(169559),
-    R = n(284019),
-    v = n(308083),
+    v = n(284019),
+    R = n(308083),
     C = n(981631),
     y = n(689938),
     D = n(931797);
@@ -42,7 +42,7 @@ t.Z = i.memo(function (e) {
             var e;
             return (null == w ? void 0 : w.id) != null && (null === (e = _.Z.getRequest(w.id)) || void 0 === e ? void 0 : e.applicationStatus) === d.wB.SUBMITTED;
         }),
-        H = null != w && w.memberCount >= v.Du,
+        H = null != w && w.memberCount >= R.Du,
         Z = (0, c.wE)(a.z.CLAN_TAG_WAITLIST),
         Y = (0, o.e7)([I.default], () => I.default.getUser(B), [B]),
         j = (null == F ? void 0 : F.joinedAt) != null,
@@ -134,25 +134,25 @@ t.Z = i.memo(function (e) {
                         ]
                     });
                 case !j && K:
-                    return (0, r.jsx)(R.Z, {
+                    return (0, r.jsx)(v.Z, {
                         onClick: $,
                         ...ee,
                         children: y.Z.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
                     });
                 case !j:
-                    return (0, r.jsx)(R.Z, {
+                    return (0, r.jsx)(v.Z, {
                         onClick: Q,
                         ...ee,
                         children: y.Z.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
                     });
                 case j && !W:
-                    return (0, r.jsx)(R.Z, {
+                    return (0, r.jsx)(v.Z, {
                         onClick: q,
                         ...ee,
                         children: y.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
                     });
                 case j && W:
-                    return (0, r.jsx)(R.Z, {
+                    return (0, r.jsx)(v.Z, {
                         onClick: J,
                         ...ee,
                         children: y.Z.Messages.CLAN_USER_GO_TO_CLAN_CTA

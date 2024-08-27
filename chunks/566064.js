@@ -29,8 +29,8 @@ function c(e) {
             focusedY: d,
             columnCounts: n
         }),
-        { columnCounts: N, focusedX: O, focusedY: R } = S,
-        [v] = r.useState(() => (0, s.P2)(A, 16));
+        { columnCounts: N, focusedX: O, focusedY: v } = S,
+        [R] = r.useState(() => (0, s.P2)(A, 16));
     return (
         r.useEffect(() => {
             A({
@@ -44,8 +44,8 @@ function c(e) {
             g.current = I;
             let S = u(l(t, c, d)),
                 [A, N] = r.useState(!1),
-                [O, R] = r.useState(!1),
-                [v, C] = r.useState(!1),
+                [O, v] = r.useState(!1),
+                [R, C] = r.useState(!1),
                 [y] = r.useState(
                     () =>
                         new s.$o((e) => {
@@ -73,7 +73,7 @@ function c(e) {
                         let r = l(t, e, n);
                         (null != E ? E(e, n, r) : Promise.resolve()).then(() => {
                             let e = u(r);
-                            null != e ? (D(e), R(!1)) : requestAnimationFrame(() => R(!0));
+                            null != e ? (D(e), v(!1)) : requestAnimationFrame(() => v(!0));
                         });
                     },
                     [t, E, D]
@@ -116,10 +116,10 @@ function c(e) {
                 g.current && null == e && P(!0);
             }, []);
             r.useEffect(() => {
-                A && O && null != S && (D(S), R(!1));
+                A && O && null != S && (D(S), v(!1));
             }, [O, S]),
                 r.useEffect(() => {
-                    A && (!v && L(c, d), C(!1));
+                    A && (!R && L(c, d), C(!1));
                 }, [c, d]);
             let w = r.useCallback(
                     (e) => {
@@ -222,8 +222,8 @@ function c(e) {
             navId: t,
             columnCounts: N,
             focusedX: O,
-            focusedY: R,
-            dispatch: v,
+            focusedY: v,
+            dispatch: R,
             onSelect: _,
             prepareFocus: E,
             getNewFocusPosition: f,

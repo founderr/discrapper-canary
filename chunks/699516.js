@@ -21,12 +21,12 @@ let p = {},
     A = 0,
     N = 0,
     O = 0;
-function R() {
+function v() {
     N = Object.values(p).length;
     let { [h.OGo.PENDING_INCOMING]: e = 0, [h.OGo.PENDING_OUTGOING]: t = 0, [h.OGo.FRIEND]: n = 0 } = l().countBy(Object.values(p), (e) => e);
     (S = t), (A = n), (g = e - (O = T.size));
 }
-class v extends (r = u.ZP.Store) {
+class R extends (r = u.ZP.Store) {
     initialize() {
         this.waitFor(f.default);
     }
@@ -86,7 +86,7 @@ class v extends (r = u.ZP.Store) {
     }
 }
 (s = 'RelationshipStore'),
-    (a = 'displayName') in (i = v)
+    (a = 'displayName') in (i = R)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -94,7 +94,7 @@ class v extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new v(c.Z, {
+    (t.Z = new R(c.Z, {
         CONNECTION_OPEN: function (e) {
             (p = {}),
                 (I = {}),
@@ -102,10 +102,10 @@ class v extends (r = u.ZP.Store) {
                 e.relationships.forEach((e) => {
                     (p[e.id] = e.type), null != e.nickname && (I[e.id] = e.nickname), null != e.since && (m[e.id] = e.since), (0, d.A)({ location: 'friend_request_spam_inbox' }) && e.is_spam_request && T.add(e.id);
                 }),
-                R();
+                v();
         },
         OVERLAY_INITIALIZE: function (e) {
-            (p = { ...e.relationships }), R();
+            (p = { ...e.relationships }), v();
         },
         RELATIONSHIP_ADD: function (e) {
             let t = p[e.relationship.id];
@@ -124,7 +124,7 @@ class v extends (r = u.ZP.Store) {
                         [e.relationship.id]: e.relationship.since
                     }),
                 e.relationship.isSpamRequest && T.add(e.relationship.id),
-                R(),
+                v(),
                 e.relationship.type === h.OGo.FRIEND &&
                     t === h.OGo.PENDING_OUTGOING &&
                     c.Z.dispatch({
@@ -133,7 +133,7 @@ class v extends (r = u.ZP.Store) {
                     });
         },
         RELATIONSHIP_REMOVE: function (e) {
-            (p = { ...p }), delete p[e.relationship.id], null != I[e.relationship.id] && ((I = { ...I }), delete I[e.relationship.id]), null != m[e.relationship.id] && ((m = { ...m }), delete m[e.relationship.id]), R();
+            (p = { ...p }), delete p[e.relationship.id], null != I[e.relationship.id] && ((I = { ...I }), delete I[e.relationship.id]), null != m[e.relationship.id] && ((m = { ...m }), delete m[e.relationship.id]), v();
         },
         RELATIONSHIP_UPDATE: function (e) {
             null == e.relationship.since ? delete m[e.relationship.id] : (m[e.relationship.id] = e.relationship.since), null == e.relationship.nickname ? delete I[e.relationship.id] : (I[e.relationship.id] = e.relationship.nickname);
@@ -143,6 +143,6 @@ class v extends (r = u.ZP.Store) {
                 E.default.keys(p).forEach((e) => {
                     p[e] === h.OGo.PENDING_INCOMING && delete p[e];
                 }),
-                R();
+                v();
         }
     }));

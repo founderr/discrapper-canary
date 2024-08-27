@@ -80,7 +80,7 @@ function u(e) {
         I !== T && (g(I), A(!1));
         let N = (0, r.useMemo)(() => d(S ? [] : m), [S, m]),
             O = (0, r.useRef)(s),
-            [R, v] = (0, r.useState)(s),
+            [v, R] = (0, r.useState)(s),
             C = (0, r.useRef)(s),
             [y, D] = (0, r.useState)(!1);
         return (
@@ -88,16 +88,16 @@ function u(e) {
                 if (!y) return;
                 D(!1);
                 let e = p || u || O.current;
-                !_(e, C.current) && ((C.current = e), v(e));
+                !_(e, C.current) && ((C.current = e), R(e));
             }),
             {
                 realtimeValidation: h || N || p || u || s,
-                displayValidation: 'native' === f ? h || N || R : h || N || p || u || R,
+                displayValidation: 'native' === f ? h || N || v : h || N || p || u || v,
                 updateValidation(e) {
-                    'aria' !== f || _(R, e) ? (O.current = e) : v(e);
+                    'aria' !== f || _(v, e) ? (O.current = e) : R(e);
                 },
                 resetValidation() {
-                    !_(s, C.current) && ((C.current = s), v(s)), 'native' === f && D(!1), A(!0);
+                    !_(s, C.current) && ((C.current = s), R(s)), 'native' === f && D(!1), A(!0);
                 },
                 commitValidation() {
                     'native' === f && D(!0), A(!0);

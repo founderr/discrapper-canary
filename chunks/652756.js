@@ -59,12 +59,12 @@ function o(e, t, n, s, o) {
                 dragPreviewWidth: f,
                 dragPreviewHeight: h
             }),
-        R = O.dragPreviewWidth,
-        v = O.dragPreviewHeight,
+        v = O.dragPreviewWidth,
+        R = O.dragPreviewHeight,
         C = o.offsetX,
         y = o.offsetY;
     return {
-        x: 0 === C || C ? C : new i.I([0, 0.5, 1], [T.x, (T.x / g) * R, T.x + R - g]).interpolate(A),
-        y: 0 === y || y ? y : ((p = new i.I([0, 0.5, 1], [T.y, (T.y / S) * v, T.y + v - S]).interpolate(N)), (0, r.G)() && I && (p += (window.devicePixelRatio - 1) * v), p)
+        x: 0 === C || C ? C : new i.I([0, 0.5, 1], [T.x, (T.x / g) * v, T.x + v - g]).interpolate(A),
+        y: 0 === y || y ? y : ((p = new i.I([0, 0.5, 1], [T.y, (T.y / S) * R, T.y + R - S]).interpolate(N)), (0, r.G)() && I && (p += (window.devicePixelRatio - 1) * R), p)
     };
 }

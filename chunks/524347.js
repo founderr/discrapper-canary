@@ -26,7 +26,7 @@ let C = null,
         interrupted: !1,
         retries: 0
     },
-    x = (e) => {
+    O = (e) => {
         let { dropsQuestId: t, streamKey: n, game: i, completed: s, gameTitle: a } = R;
         if (!(null == t || null == a || s || null == i || null == n || A.isStarted()))
             e
@@ -35,11 +35,11 @@ let C = null,
                       (0, T.m0)(t, n, i.pid);
                   });
     },
-    O = (e) => {
+    x = (e) => {
         (R.retries = 0), (R.completed = e.completed), (R.initialProgressFetched = !0), (R.progress = e.progress), (R.lastCheckedAt = o().now()), (S = R.completed ? N._e.QUEST_COMPLETION : N._e.TRACK_PROGRESS);
     },
     M = (e, t, n) => {
-        if (!R.completed || e.dropsQuestId !== R.dropsQuestId) (R.game = t), (R.dropsQuestId = e.dropsQuestId), (R.gameTitle = e.title), (R.completed = !1), (R.interrupted = !1), (R.streamKey = n), (R.retries = 0), (R.lastCheckedAt = o().now()), A.start(5000, () => x(!0));
+        if (!R.completed || e.dropsQuestId !== R.dropsQuestId) (R.game = t), (R.dropsQuestId = e.dropsQuestId), (R.gameTitle = e.title), (R.completed = !1), (R.interrupted = !1), (R.streamKey = n), (R.retries = 0), (R.lastCheckedAt = o().now()), A.start(5000, () => O(!0));
     };
 class v extends (r = c.ZP.Store) {
     initialize() {
@@ -118,17 +118,17 @@ class v extends (r = c.ZP.Store) {
                 enrolledUser: e.enrolledUser
             };
         },
-        DROPS_FETCH_PROGRESS_SUCCESS: O,
+        DROPS_FETCH_PROGRESS_SUCCESS: x,
         DROPS_FETCH_PROGRESS_FAILURE: (e) => {
             if (!R.initialProgressFetched) (R.initialProgressFetched = !0), (S = N._e.STREAM_CTA);
         },
         DROPS_HEARTBEAT_SUCCESS: (e) => {
-            O(e), (p[e.dropsQuestId] = !0), x();
+            x(e), (p[e.dropsQuestId] = !0), O();
         },
         DROPS_HEARTBEAT_FAILURE: (e) => {
             let { dropsQuestId: t, statusCode: n } = e;
             if (((R.completed = !1), (R.initialProgressFetched = !0), (R.lastCheckedAt = o().now()), 429 === n && 0 === R.retries)) {
-                (R.retries = R.retries + 1), x();
+                (R.retries = R.retries + 1), O();
                 return;
             }
             (S = N._e.STREAM_CTA), 403 === n ? (p[t] = !1) : (R.interrupted = !0);

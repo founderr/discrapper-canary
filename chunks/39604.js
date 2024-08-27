@@ -75,8 +75,8 @@ var r = n(46973),
     A = n(557177),
     N = n(435064),
     O = n(61994),
-    R = n(550351),
-    v = n(659487),
+    v = n(550351),
+    R = n(659487),
     C = n(711644),
     y = n(259612),
     D = n(356659),
@@ -196,7 +196,7 @@ function B(e, t) {
 }
 async function F(e) {
     let t = N.Z.getSettings().storageLocation,
-        n = (0, R.Z)(e),
+        n = (0, v.Z)(e),
         r = ''.concat((0, O.Z)(n.applicationName.substring(0, 20)), '_').concat(n.id, '.mp4'),
         i = o.Z.fileManager.join(t, r),
         a = I.Z.getMediaEngine(),
@@ -298,8 +298,8 @@ async function V(e) {
         streamKey: g,
         thumbnail: O
     });
-    let R = (0, A.GN)('clip_save', 0.5),
-        v = performance.now();
+    let v = (0, A.GN)('clip_save', 0.5),
+        R = performance.now();
     try {
         let e = await F(g);
         s.Z.dispatch({
@@ -307,9 +307,9 @@ async function V(e) {
             clip: e
         });
     } catch (e) {
-        D.jF.error('Clip Failed to Save', e), null == R || R.stop(), (0, A.GN)('clip_error', 0.5), s.Z.dispatch({ type: 'CLIPS_SAVE_CLIP_ERROR' });
+        D.jF.error('Clip Failed to Save', e), null == v || v.stop(), (0, A.GN)('clip_error', 0.5), s.Z.dispatch({ type: 'CLIPS_SAVE_CLIP_ERROR' });
     }
-    D.jF.info(''.concat(N.Z.getSettings().clipsLength / 1000, 's clip save took ').concat(Math.round(performance.now() - v), 'ms'));
+    D.jF.info(''.concat(N.Z.getSettings().clipsLength / 1000, 's clip save took ').concat(Math.round(performance.now() - R), 'ms'));
 }
 function H(e, t) {
     s.Z.dispatch({
@@ -325,7 +325,7 @@ async function Z(e, t) {
         ...n,
         ...t
     };
-    null != (await (0, v.w)(r)) &&
+    null != (await (0, R.w)(r)) &&
         (await I.Z.getMediaEngine().updateClipMetadata(r.filepath, JSON.stringify(r)),
         g.default.track(L.rMx.CLIP_EDITED, { clip_id: r.id }),
         s.Z.dispatch({
@@ -345,7 +345,7 @@ async function W(e) {
     let n = await o.Z.clips.loadClipsDirectory(e),
         r = [];
     for (let e of n) {
-        let t = await (0, v.w)({
+        let t = await (0, R.w)({
             ...e.metadata,
             filepath: e.filepath
         });

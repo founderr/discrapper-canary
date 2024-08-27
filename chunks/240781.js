@@ -99,8 +99,8 @@ t.Z = (e) => {
         A = f.ZP.canUseCollectibles(t),
         N = (0, u.qS)(S),
         O = (0, u.G1)(g),
-        R = !A && N;
-    return null != g && (null == S || R)
+        v = !A && N;
+    return null != g && (null == S || v)
         ? (0, r.jsxs)('div', {
               className: a()(I.modalPreview, I.shopPreviewContainer, d),
               children: [
@@ -121,7 +121,7 @@ t.Z = (e) => {
                           }),
                           (0, r.jsx)(l.Text, {
                               variant: 'text-sm/normal',
-                              children: R
+                              children: v
                                   ? p.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_CHURNED
                                   : (0, s.EQ)([O, A])
                                         .with([!0, !0], () => p.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM)

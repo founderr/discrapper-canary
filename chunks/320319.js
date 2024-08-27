@@ -60,7 +60,7 @@ let P = {
             a.useEffect(() => {
                 z === d.z.TENURE_REWARD_REDEEMABLE_CONFETTI && k && (0, T.EW)(z);
             }, [z, k]);
-        let { easterEggLevel: X, isEasterEggTriggered: q, onHover: J, onUnhover: $ } = (0, p.Z)(5),
+        let { easterEggLevel: q, isEasterEggTriggered: X, onHover: J, onUnhover: $ } = (0, p.Z)(5),
             ee = (0, l.debounce)(() => {
                 R.default.track(M.rMx.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                     card_type: (0, l.snakeCase)(t),
@@ -119,9 +119,9 @@ let P = {
                       onBlur: $,
                       children: (0, s.jsxs)('div', {
                           className: i()(b.flipCard, {
-                              [b.partialFlipCard]: !q,
-                              [b.ultraFlipCard]: q,
-                              [b.rotateCard]: q && 3 === X,
+                              [b.partialFlipCard]: !X,
+                              [b.ultraFlipCard]: X,
+                              [b.rotateCard]: X && 3 === q,
                               [b.reducedMotion]: D
                           }),
                           children: [

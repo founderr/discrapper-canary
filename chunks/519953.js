@@ -1,6 +1,6 @@
 n.d(t, {
     BU: function () {
-        return tv;
+        return tR;
     },
     CX: function () {
         return tc;
@@ -79,8 +79,8 @@ var T = new WeakMap(),
     A = new WeakMap(),
     N = new WeakMap(),
     O = new WeakMap(),
-    R = new WeakMap(),
     v = new WeakMap(),
+    R = new WeakMap(),
     C = new WeakMap(),
     y = new WeakMap(),
     D = new WeakMap(),
@@ -198,8 +198,8 @@ var T = new WeakMap(),
             return t;
         },
         findKey(e, t) {
-            var n = v.get(t);
-            return !n && ((n = new m()), v.set(t, n)), n;
+            var n = R.get(t);
+            return !n && ((n = new m()), R.set(t, n)), n;
         },
         findPath(e, t) {
             for (var n = [], r = t; ; ) {
@@ -391,12 +391,12 @@ var T = new WeakMap(),
                 var N = o.hasAttribute('data-slate-node') ? o : o.closest('[data-slate-node]');
                 if (N && eT.hasDOMNode(e, N, { editable: !0 })) {
                     var O = eT.toSlateNode(e, N),
-                        { path: R, offset: v } = d.ML.start(e, eT.findPath(e, O));
+                        { path: v, offset: R } = d.ML.start(e, eT.findPath(e, O));
                     return (
-                        !N.querySelector('[data-slate-leaf]') && (v = s),
+                        !N.querySelector('[data-slate-leaf]') && (R = s),
                         {
-                            path: R,
-                            offset: v
+                            path: v,
+                            offset: R
                         }
                     );
                 }
@@ -489,7 +489,7 @@ var T = new WeakMap(),
         }
         return !0;
     },
-    eR = (e, t) => {
+    ev = (e, t) => {
         if (e.length !== t.length) return !1;
         for (var n = 0; n < e.length; n++) {
             var r = e[n],
@@ -498,7 +498,7 @@ var T = new WeakMap(),
         }
         return !0;
     },
-    ev = eI ? u.useLayoutEffect : u.useEffect,
+    eR = eI ? u.useLayoutEffect : u.useEffect,
     eC = (e) => {
         var { isLast: t, leaf: n, parent: r, text: i } = e,
             a = eM(),
@@ -527,7 +527,7 @@ var T = new WeakMap(),
             i = () => ''.concat(null != t ? t : '').concat(n ? '\n' : ''),
             [a] = (0, u.useState)(i);
         return (
-            ev(() => {
+            eR(() => {
                 var e = i();
                 r.current && r.current.textContent !== e && (r.current.textContent = e);
             }),
@@ -654,7 +654,7 @@ var T = new WeakMap(),
             var p = (0, u.useCallback)(
                 (e) => {
                     var t = C.get(o);
-                    e ? (null == t || t.set(_, e), R.set(s, e), O.set(e, s)) : (null == t || t.delete(_), R.delete(s), l.current && O.delete(l.current)), (l.current = e);
+                    e ? (null == t || t.set(_, e), v.set(s, e), O.set(e, s)) : (null == t || t.delete(_), v.delete(s), l.current && O.delete(l.current)), (l.current = e);
                 },
                 [l, o, _, s]
             );
@@ -667,7 +667,7 @@ var T = new WeakMap(),
                 E
             );
         },
-        (e, t) => t.parent === e.parent && t.isLast === e.isLast && t.renderLeaf === e.renderLeaf && t.renderPlaceholder === e.renderPlaceholder && t.text === e.text && eR(t.decorations, e.decorations)
+        (e, t) => t.parent === e.parent && t.isLast === e.isLast && t.renderLeaf === e.renderLeaf && t.renderPlaceholder === e.renderPlaceholder && t.text === e.text && ev(t.decorations, e.decorations)
     ),
     ex = u.memo(
         (e) => {
@@ -679,7 +679,7 @@ var T = new WeakMap(),
                 f = (0, u.useCallback)(
                     (e) => {
                         var t = C.get(l);
-                        e ? (null == t || t.set(E, e), R.set(n, e), O.set(e, n)) : (null == t || t.delete(E), R.delete(n));
+                        e ? (null == t || t.set(E, e), v.set(n, e), O.set(e, n)) : (null == t || t.delete(E), v.delete(n));
                     },
                     [l, E, n]
                 ),
@@ -1148,7 +1148,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
             o,
             c,
             _ = (0, u.useCallback)((e) => u.createElement(td, Object.assign({}, e)), []),
-            { autoFocus: E, decorate: f = t_, onDOMBeforeInput: I, placeholder: m, readOnly: T = !1, renderElement: g, renderLeaf: v, renderPlaceholder: C = _, scrollSelectionIntoView: M = tE, style: H = {}, as: Y = 'div', disableDefaultStyles: z = !1 } = e,
+            { autoFocus: E, decorate: f = t_, onDOMBeforeInput: I, placeholder: m, readOnly: T = !1, renderElement: g, renderLeaf: R, renderPlaceholder: C = _, scrollSelectionIntoView: M = tE, style: H = {}, as: Y = 'div', disableDefaultStyles: z = !1 } = e,
             Q = p(e, ta),
             X = eW(),
             [$, J] = (0, u.useState)(!1),
@@ -1474,9 +1474,9 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                                                     end: m.offset
                                                 },
                                                 O = x.get(t),
-                                                R = null == O ? void 0 : O.find((e) => d.y$.equals(e.path, A)),
-                                                v = R ? [R.diff, N] : [N];
-                                            if ((0 === e2(S.text, ...v).length && (l = !1), d.e6.isExpanded(r))) {
+                                                v = null == O ? void 0 : O.find((e) => d.y$.equals(e.path, A)),
+                                                R = v ? [v.diff, N] : [N];
+                                            if ((0 === e2(S.text, ...R).length && (l = !1), d.e6.isExpanded(r))) {
                                                 if (l && d.y$.equals(r.anchor.path, r.focus.path)) {
                                                     var C = {
                                                         path: r.anchor.path,
@@ -1623,7 +1623,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                 return (
                     !(function (e, t, n) {
                         var [r] = (0, u.useState)(() => new MutationObserver(t));
-                        ev(() => {
+                        eR(() => {
                             r.takeRecords();
                         }),
                             (0, u.useEffect)(() => {
@@ -1640,8 +1640,8 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                 onDOMSelectionChange: e_,
                 scheduleOnDOMSelectionChange: eE
             });
-        ev(() => {
-            ee.current && (e = Z(ee.current)) ? (S.set(X, e), A.set(X, ee.current), R.set(X, ee.current), O.set(ee.current, X)) : R.delete(X);
+        eR(() => {
+            ee.current && (e = Z(ee.current)) ? (S.set(X, e), A.set(X, ee.current), v.set(X, ee.current), O.set(ee.current, X)) : v.delete(X);
             var e,
                 { selection: t } = X,
                 n = eT.findDocumentOrShadowRoot(X).getSelection();
@@ -1812,11 +1812,11 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
             ),
             eA = (0, u.useCallback)(
                 (e) => {
-                    null == e ? (e_.cancel(), eE.cancel(), A.delete(X), R.delete(X), ee.current && em && ee.current.removeEventListener('beforeinput', eS)) : em && e.addEventListener('beforeinput', eS), (ee.current = e);
+                    null == e ? (e_.cancel(), eE.cancel(), A.delete(X), v.delete(X), ee.current && em && ee.current.removeEventListener('beforeinput', eS)) : em && e.addEventListener('beforeinput', eS), (ee.current = e);
                 },
                 [ee, eS, e_, eE]
             );
-        ev(() => {
+        eR(() => {
             var e = eT.getWindow(X);
             return (
                 e.document.addEventListener('selectionchange', eE),
@@ -1835,17 +1835,17 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                 focus: eO
             });
         }
-        var { marks: eR } = X;
-        if (((ec.hasMarkPlaceholder = !1), X.selection && d.e6.isCollapsed(X.selection) && eR)) {
+        var { marks: ev } = X;
+        if (((ec.hasMarkPlaceholder = !1), X.selection && d.e6.isCollapsed(X.selection) && ev)) {
             var { anchor: eC } = X.selection,
                 ey = d.NB.leaf(X, eC.path),
                 eD = p(ey, ts);
-            if (!d.xv.equals(ey, eR, { loose: !0 })) {
+            if (!d.xv.equals(ey, ev, { loose: !0 })) {
                 ec.hasMarkPlaceholder = !0;
                 var eL = Object.fromEntries(Object.keys(eD).map((e) => [e, null]));
                 eN.push(
                     tl(
-                        tl(tl({ [V]: !0 }, eL), eR),
+                        tl(tl({ [V]: !0 }, eL), ev),
                         {},
                         {
                             anchor: eC,
@@ -1861,8 +1861,8 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                 if (e) {
                     var { anchor: t } = e,
                         n = d.NB.leaf(X, t.path);
-                    if (eR && !d.xv.equals(n, eR, { loose: !0 })) {
-                        U.set(X, eR);
+                    if (ev && !d.xv.equals(n, ev, { loose: !0 })) {
+                        U.set(X, ev);
                         return;
                     }
                 }
@@ -2274,7 +2274,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
                             node: X,
                             renderElement: g,
                             renderPlaceholder: C,
-                            renderLeaf: v,
+                            renderLeaf: R,
                             selection: X.selection
                         })
                     )
@@ -2371,7 +2371,7 @@ var tu = (e) => u.createElement(u.Fragment, null, eH(e)),
             (0, u.useEffect)(() => {
                 g(eT.isFocused(a));
             }),
-            ev(() => {
+            eR(() => {
                 var e = () => g(eT.isFocused(a));
                 return ei
                     ? (document.addEventListener('focusin', e),
@@ -2420,7 +2420,7 @@ function tO(e, t) {
     }
     return n;
 }
-function tR(e) {
+function tv(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2
@@ -2435,7 +2435,7 @@ function tR(e) {
     }
     return e;
 }
-var tv = function (e) {
+var tR = function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'x-slate-fragment',
             { apply: n, onChange: r, deleteBackward: i, addMark: a, removeMark: s } = e;
         return (
@@ -2576,7 +2576,7 @@ var tv = function (e) {
                 var l = G.get(e);
                 if (null != l && l.at) {
                     var u = d.E9.isPoint(null == l ? void 0 : l.at) ? e6(e, l.at, t) : e7(e, l.at, t);
-                    G.set(e, u ? tR(tR({}, l), {}, { at: u }) : null);
+                    G.set(e, u ? tv(tv({}, l), {}, { at: u }) : null);
                 }
                 switch (t.type) {
                     case 'insert_text':
@@ -2600,7 +2600,7 @@ var tv = function (e) {
                 }
                 for (var [c, _] of (n(t), i)) {
                     var [E] = d.ML.node(e, c);
-                    v.set(E, _);
+                    R.set(E, _);
                 }
             }),
             (e.setFragmentData = (n) => {

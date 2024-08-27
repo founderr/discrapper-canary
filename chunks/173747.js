@@ -21,8 +21,8 @@ var r,
 let A = new Set(),
     N = {},
     O = new Set(),
-    R = {},
-    v = new Set(),
+    v = {},
+    R = new Set(),
     C = {},
     y = 10 * T.Z.Millis.MINUTE,
     D = 6 * T.Z.Millis.HOUR,
@@ -49,7 +49,7 @@ function U(e, t) {
             (i.buildId !== n.id || !l().isEqual(i.manifestIds, r)) &&
             d.Z.wait(() => {
                 let i = h.Z.getApplication(e);
-                null != i ? (v.delete((0, g.Tu)(e, t)), (0, f.li)(i, t, n.id, r, !0)) : v.add((0, g.Tu)(e, t));
+                null != i ? (R.delete((0, g.Tu)(e, t)), (0, f.li)(i, t, n.id, r, !0)) : R.add((0, g.Tu)(e, t));
             });
     }
 }
@@ -73,10 +73,10 @@ class x extends (r = u.ZP.Store) {
         return A.has(t);
     }
     needsToFetchBuildSize(e) {
-        return !R.hasOwnProperty(e);
+        return !v.hasOwnProperty(e);
     }
     getBuildSize(e) {
-        return R[e];
+        return v[e];
     }
 }
 (s = 'ApplicationBuildStore'),
@@ -94,9 +94,9 @@ class x extends (r = u.ZP.Store) {
         },
         GAMES_DATABASE_UPDATE: function () {
             if (!(0, S.Q)()) return !1;
-            for (let e of v) {
+            for (let e of R) {
                 let { applicationId: t, branchId: n } = (0, g.CP)(e);
-                null != h.Z.getApplication(t) && (v.delete(e), U(t, n));
+                null != h.Z.getApplication(t) && (R.delete(e), U(t, n));
             }
         },
         APPLICATION_BUILD_FETCH_START: function (e) {
@@ -127,15 +127,15 @@ class x extends (r = u.ZP.Store) {
         },
         APPLICATION_BUILD_SIZE_FETCH_START: function (e) {
             let { buildId: t } = e;
-            !R.hasOwnProperty(t) && (R[t] = null);
+            !v.hasOwnProperty(t) && (v[t] = null);
         },
         APPLICATION_BUILD_SIZE_FETCH_SUCCESS: function (e) {
             let { buildId: t, sizeKB: n } = e;
-            R[t] = n;
+            v[t] = n;
         },
         APPLICATION_BUILD_SIZE_FETCH_FAIL: function (e) {
             let { buildId: t } = e;
-            null == R[t] && delete R[t];
+            null == v[t] && delete v[t];
         },
         APPLICATION_BRANCHES_FETCH_SUCCESS: function (e) {
             let { branches: t } = e,

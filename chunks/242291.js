@@ -1,12 +1,12 @@
 n.d(t, {
     GN: function () {
-        return v;
+        return R;
     },
     M2: function () {
         return C;
     },
     Nq: function () {
-        return R;
+        return v;
     },
     SZ: function () {
         return L;
@@ -53,11 +53,11 @@ function N() {
 function O(e, t) {
     return (null == t ? void 0 : t.guild_id) == null || d.Z.can(A.Plq.USE_EXTERNAL_SOUNDS, t) || e.guildId === S.X8 || e.guildId === (null == t ? void 0 : t.guild_id);
 }
-function R(e, t, n) {
+function v(e, t, n) {
     let r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     return (f.ZP.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === S.X8) && O(t, n) && (!r || t.available);
 }
-function v(e, t, n) {
+function R(e, t, n) {
     (0, p.XE)(t, e, m.YQ.SOUNDBOARD), (0, u.kq)(t, e, __OVERLAY__, n);
 }
 async function C(e) {
@@ -70,7 +70,7 @@ async function C(e) {
         s = I.Z.getSound(i, r.soundId);
     if (null != s) {
         var o, l;
-        if (!O(s, n) || !R(t, s, n, !0)) return null;
+        if (!O(s, n) || !v(t, s, n, !0)) return null;
         (o = s), (l = n.id), (0, p.XE)(l, o, m.YQ.JOINED_VOICE_CHANNEL), (0, u.vy)(l, o, __OVERLAY__);
     }
 }

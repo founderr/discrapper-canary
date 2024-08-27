@@ -26,8 +26,8 @@ var i = n(735250),
     S = n(496675),
     A = n(594174),
     R = n(5192),
-    x = n(51144),
-    O = n(937889),
+    O = n(51144),
+    x = n(937889),
     M = n(739566),
     v = n(779125),
     L = n(890410),
@@ -133,7 +133,7 @@ function z(e) {
         if (null == s) return K(e, {});
         let a = (function (e, t, n) {
             var i;
-            let s = null !== (i = R.ZP.getNickname(n, null, t)) && void 0 !== i ? i : x.ZP.getUserTag(t),
+            let s = null !== (i = R.ZP.getNickname(n, null, t)) && void 0 !== i ? i : O.ZP.getUserTag(t),
                 a = o()(e.ts),
                 r = ''.concat(s, ' ').concat(a.fromNow());
             try {
@@ -249,12 +249,12 @@ function X(e) {
             avatarSrc: g,
             eventHandlers: { onMouseEnter: A, onMouseLeave: R }
         } = (0, j.m)(!0),
-        { onFocus: x, ...M } = (0, c.JA)(null != n ? n : ''),
-        { isFocused: v, handleFocus: P, handleBlur: b } = (0, D.bb)(x),
+        { onFocus: O, ...M } = (0, c.JA)(null != n ? n : ''),
+        { isFocused: v, handleFocus: P, handleBlur: b } = (0, D.bb)(O),
         y = (0, d.e7)([I.Z], () => I.Z.keyboardModeEnabled),
         H = (0, d.e7)([S.Z], () => S.Z.can(B.Plq.MANAGE_MESSAGES, o), [o]),
         { ruleName: K, embedChannel: z, decisionId: X, keywordMatchedContent: J, keyword: $, content: ee, flaggedMessageId: et, timeoutDuration: en, decisionReason: ei, alertActionsExecution: es, quarantineType: ea, interactionUserId: er } = (0, h.ZP)(l),
-        el = s.useMemo(() => (0, O.k$)(ee, J, o.id), [ee, J, o]),
+        el = s.useMemo(() => (0, x.k$)(ee, J, o.id), [ee, J, o]),
         { selected: eo, ...ec } = V(l, o),
         eu = s.useCallback(() => {
             (0, N._s)(l.id, ee, X, o);

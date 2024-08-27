@@ -26,8 +26,8 @@ var r = n(735250),
     A = n(679332),
     N = n(544989),
     O = n(171368),
-    R = n(228168),
-    v = n(689938),
+    v = n(228168),
+    R = n(689938),
     C = n(122269);
 function y(e) {
     let { user: t, guildId: n, channelId: y, messageId: D, roleId: L, setPopoutRef: b, closePopout: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
@@ -65,16 +65,16 @@ function y(e) {
                     (0, r.jsxs)(g.Z, {
                         user: t,
                         displayProfile: w,
-                        profileType: R.y0.BITE_SIZE,
+                        profileType: v.y0.BITE_SIZE,
                         children: [
                             (0, r.jsx)(N.Z, {
-                                profileType: R.y0.BITE_SIZE,
+                                profileType: v.y0.BITE_SIZE,
                                 children: (0, r.jsx)(A.Z, {
                                     user: t,
                                     viewProfileItem: V
                                         ? (0, r.jsx)(a.MenuItem, {
                                               id: 'view-profile',
-                                              label: v.Z.Messages.VIEW_FULL_PROFILE,
+                                              label: R.Z.Messages.VIEW_FULL_PROFILE,
                                               action: () => {
                                                   F(),
                                                       (0, f.pQ)({
@@ -94,14 +94,14 @@ function y(e) {
                                         user: t,
                                         displayProfile: w,
                                         guildId: n,
-                                        profileType: R.y0.BITE_SIZE
+                                        profileType: v.y0.BITE_SIZE
                                     }),
                                     (0, r.jsx)(T.Z, {
                                         user: t,
                                         displayProfile: w,
                                         guildId: n,
                                         channelId: y,
-                                        profileType: R.y0.BITE_SIZE,
+                                        profileType: v.y0.BITE_SIZE,
                                         onOpenProfile: V ? F : void 0
                                     }),
                                     t.isClyde() && (0, r.jsx)(c.Z, { className: C.headerTag })
@@ -113,12 +113,12 @@ function y(e) {
                                 children: [
                                     (0, r.jsx)(S.Z, {
                                         user: t,
-                                        profileType: R.y0.BITE_SIZE,
+                                        profileType: v.y0.BITE_SIZE,
                                         nickname: _.ZP.getName(n, y, t),
                                         onOpenProfile: V ? F : void 0,
                                         tags: (0, r.jsx)(I.Z, {
                                             displayProfile: w,
-                                            profileType: R.y0.BITE_SIZE,
+                                            profileType: v.y0.BITE_SIZE,
                                             onClose: M
                                         })
                                     }),

@@ -150,11 +150,11 @@ function N(e) {
 function O(e) {
     return T.deleteChannelCache(e.channel.id);
 }
-function R(e, t) {
+function v(e, t) {
     if (!T.has(e, t)) return !1;
     T.set(e, t, { state: 2 });
 }
-function v() {
+function R() {
     T.clear();
 }
 function C(e) {
@@ -226,11 +226,11 @@ h(y, 'displayName', 'ReferencedMessageStore'),
         },
         MESSAGE_DELETE: function (e) {
             let { id: t, channelId: n } = e;
-            return R(n, t);
+            return v(n, t);
         },
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t, channelId: n } = e;
-            return S(t, (e) => R(n, e));
+            return S(t, (e) => v(n, e));
         },
         CREATE_PENDING_REPLY: function (e) {
             let { message: t } = e;
@@ -244,6 +244,6 @@ h(y, 'displayName', 'ReferencedMessageStore'),
         GUILD_DELETE: function () {
             if (0 === T.retainWhere((e) => null != _.Z.getChannel(e))) return !1;
         },
-        CONNECTION_OPEN: v,
-        LOGOUT: v
+        CONNECTION_OPEN: R,
+        LOGOUT: R
     }));

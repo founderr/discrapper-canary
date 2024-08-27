@@ -30,8 +30,8 @@ var a = n(442837),
     A = n(271383),
     N = n(819640),
     O = n(594174),
-    R = n(979651),
-    v = n(509545),
+    v = n(979651),
+    R = n(509545),
     C = n(78839),
     y = n(936101),
     D = n(868158),
@@ -927,7 +927,7 @@ B(
                         selfStream: e.self_stream || !1,
                         requestToSpeakTimestamp: null !== (t = e.request_to_speak_timestamp) && void 0 !== t ? t : null,
                         discoverable: null === (n = e.discoverable) || void 0 === n || n,
-                        oldChannelId: R.Z.getUserVoiceChannelId(e.guild_id, e.user_id)
+                        oldChannelId: v.Z.getUserVoiceChannelId(e.guild_id, e.user_id)
                     }
                 ]
             });
@@ -1092,7 +1092,7 @@ B(
         });
     }),
     k(['USER_PAYMENT_SOURCES_UPDATE'], () => {
-        N.Z.hasLayers() && (n(355467).tZ(), l.Gn(v.Z.getFetchedSKUIDs()));
+        N.Z.hasLayers() && (n(355467).tZ(), l.Gn(R.Z.getFetchedSKUIDs()));
     }),
     k(['USER_SUBSCRIPTIONS_UPDATE'], () => {
         u.k(), N.Z.hasLayers() && n(355467).jg();

@@ -20,10 +20,10 @@ var r = n(687249),
     A = n(357361),
     N = n(438330),
     O = '[object Arguments]',
-    R = '[object Function]',
-    v = '[object Object]',
+    v = '[object Function]',
+    R = '[object Object]',
     C = {};
-(C[O] = C['[object Array]'] = C['[object ArrayBuffer]'] = C['[object DataView]'] = C['[object Boolean]'] = C['[object Date]'] = C['[object Float32Array]'] = C['[object Float64Array]'] = C['[object Int8Array]'] = C['[object Int16Array]'] = C['[object Int32Array]'] = C['[object Map]'] = C['[object Number]'] = C[v] = C['[object RegExp]'] = C['[object Set]'] = C['[object String]'] = C['[object Symbol]'] = C['[object Uint8Array]'] = C['[object Uint8ClampedArray]'] = C['[object Uint16Array]'] = C['[object Uint32Array]'] = !0), (C['[object Error]'] = C[R] = C['[object WeakMap]'] = !1);
+(C[O] = C['[object Array]'] = C['[object ArrayBuffer]'] = C['[object DataView]'] = C['[object Boolean]'] = C['[object Date]'] = C['[object Float32Array]'] = C['[object Float64Array]'] = C['[object Int8Array]'] = C['[object Int16Array]'] = C['[object Int32Array]'] = C['[object Map]'] = C['[object Number]'] = C[R] = C['[object RegExp]'] = C['[object Set]'] = C['[object String]'] = C['[object Symbol]'] = C['[object Uint8Array]'] = C['[object Uint8ClampedArray]'] = C['[object Uint16Array]'] = C['[object Uint32Array]'] = !0), (C['[object Error]'] = C[v] = C['[object WeakMap]'] = !1);
 e.exports = function e(t, n, y, D, L, b) {
     var M,
         P = 1 & n,
@@ -36,9 +36,9 @@ e.exports = function e(t, n, y, D, L, b) {
         if (((M = h(t)), !P)) return u(t, M);
     } else {
         var G = f(t),
-            k = G == R || '[object GeneratorFunction]' == G;
+            k = G == v || '[object GeneratorFunction]' == G;
         if (T(t)) return l(t, P);
-        if (G == v || G == O || (k && !L)) {
+        if (G == R || G == O || (k && !L)) {
             if (((M = U || k ? {} : I(t)), !P)) return U ? d(t, o(M, t)) : c(t, s(M, t));
         } else {
             if (!C[G]) return L ? t : {};

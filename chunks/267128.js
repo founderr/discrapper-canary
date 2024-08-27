@@ -28,8 +28,8 @@ var r = n(735250),
     A = n(453687),
     N = n(930282),
     O = n(123145),
-    R = n(223021),
-    v = n(217702),
+    v = n(223021),
+    R = n(217702),
     C = n(981631),
     y = n(689938),
     D = n(438379);
@@ -69,8 +69,8 @@ function M(e, t, n, i, a) {
         S = (0, m.cv)(d).length > 0,
         A = null != d.interaction,
         O = d.hasFlag(C.iLy.IS_VOICE_MESSAGE),
-        R = d.isPoll(),
-        v = d.type === C.uaV.POLL_RESULT;
+        v = d.isPoll(),
+        R = d.type === C.uaV.POLL_RESULT;
     if (
         ((0, _.Z)(e) &&
             (c = (0, r.jsx)(f.Z, {
@@ -84,11 +84,11 @@ function M(e, t, n, i, a) {
         s = y.Z.Messages.REPLY_QUOTE_MESSAGE_BLOCKED;
     else if (d.type === C.uaV.CHANNEL_PINNED_MESSAGE) s = y.Z.Messages.MESSAGE_PINNED;
     else if (g) {
-        if (R) {
+        if (v) {
             var D, L;
             o = null == d ? void 0 : null === (L = d.poll) || void 0 === L ? void 0 : null === (D = L.question) || void 0 === D ? void 0 : D.text;
         } else
-            v
+            R
                 ? (s = (0, h.N4)(d))
                 : S
                   ? (s = y.Z.Messages.REPLY_QUOTE_STICKER)
@@ -136,7 +136,7 @@ function M(e, t, n, i, a) {
                       height: T
                   }))
                 : (d.attachments.length > 0 || d.embeds.length > 0) &&
-                  !v &&
+                  !R &&
                   (l = (0, r.jsx)(u.ImageIcon, {
                       size: 'custom',
                       color: 'currentColor',
@@ -174,8 +174,8 @@ function P(e) {
             if (n.message.type === C.uaV.POLL_RESULT)
                 return (0, r.jsx)(u.PollsIcon, {
                     className: D.repliedTextContentLeadingIcon,
-                    width: v.WW,
-                    height: v.WW,
+                    width: R.WW,
+                    height: R.WW,
                     size: 'custom'
                 });
             let m = () => {
@@ -252,7 +252,7 @@ function P(e) {
                     } = M(n.message, t, i, D.repliedTextContent, {
                         trailingIconClass: D.repliedTextContentTrailingIcon,
                         leadingIconClass: D.repliedTextContentLeadingIcon,
-                        iconSize: v.WW
+                        iconSize: R.WW
                     });
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
@@ -295,7 +295,7 @@ function P(e) {
                     (0, S.vE)(n);
             }
         })(e),
-        P = i.useMemo(() => (e.compact ? (0, R.Z)((0, g.vc)(l()(), 'LT')) : null), [e.compact]);
+        P = i.useMemo(() => (e.compact ? (0, v.Z)((0, g.vc)(l()(), 'LT')) : null), [e.compact]);
     return (
         null != n &&
             null != a &&

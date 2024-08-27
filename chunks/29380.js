@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return A;
+        return E;
     }
 }),
     t(47120);
@@ -17,23 +17,23 @@ var i = t(735250),
     p = t(827498),
     _ = t(890280),
     C = t(176412),
-    f = t(231338),
-    h = t(689938),
-    E = t(872674);
-function A(e) {
-    let { channel: n, application: t, sectionName: A, commandName: N, buttonSize: x = o.ButtonSizes.MEDIUM } = e,
+    h = t(231338),
+    f = t(689938),
+    A = t(872674);
+function E(e) {
+    let { channel: n, application: t, sectionName: E, commandName: x, buttonSize: N = o.ButtonSizes.MEDIUM } = e,
         v = a.useId(),
         I = a.useCallback(() => {
             m.y(p.ti.ACTIVITY);
         }, []),
-        { submitting: g, wasSubmitting: P } = (0, _.Z)({
+        { submitting: g, wasSubmitting: b } = (0, _.Z)({
             applicationId: t.id,
             channelId: n.id,
             launchingComponentId: v,
             onSubmissionComplete: I
         }),
-        [L, b] = a.useState(!1),
-        S = (0, c.Qv)({
+        [S, P] = a.useState(!1),
+        L = (0, c.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
@@ -45,15 +45,15 @@ function A(e) {
             channel: n,
             application: t,
             location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: A,
-            commandName: N,
-            autoDismissOnClick: S === c.JS.LEAVE,
+            sectionName: E,
+            commandName: x,
+            autoDismissOnClick: L === c.JS.LEAVE,
             launchingComponentId: v,
-            submitting: null != P ? P : g
+            submitting: null != b ? b : g
         }),
-        y = (function (e) {
+        j = (function (e) {
             let { channel: n, activityAction: t } = e,
-                i = (0, l.e7)([u.Z], () => u.Z.can(f.Pl.USE_EMBEDDED_ACTIVITIES, n)),
+                i = (0, l.e7)([u.Z], () => u.Z.can(h.Pl.USE_EMBEDDED_ACTIVITIES, n)),
                 a = (0, s.KF)(n.id),
                 o = !1;
             switch (t) {
@@ -69,25 +69,25 @@ function A(e) {
             return o;
         })({
             channel: n,
-            activityAction: S
+            activityAction: L
         });
     return (0, i.jsx)(o.Tooltip, {
-        shouldShow: y,
-        tooltipContentClassName: E.tooltipContent,
-        text: h.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START,
+        shouldShow: j,
+        tooltipContentClassName: A.tooltipContent,
+        text: f.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START,
         children: (e) => {
             let { onClick: n, ...a } = e;
             return (0, i.jsx)(o.Button, {
                 ...a,
                 type: 'submit',
-                size: x,
+                size: N,
                 color: T,
-                disabled: y,
-                submitting: L,
+                disabled: j,
+                submitting: S,
                 onClick: () => {
-                    b(!0), R(), null == n || n();
+                    P(!0), R(), null == n || n();
                 },
-                'aria-label': h.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
+                'aria-label': f.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
                     buttonText: M,
                     applicationName: t.name
                 }),

@@ -35,7 +35,7 @@ function N(e) {
         (m[t] = r);
 }
 let O = Object.freeze({});
-class R extends (i = l.ZP.Store) {
+class v extends (i = l.ZP.Store) {
     getGuild(e) {
         return null == e ? void 0 : e === p.I_8 ? I.g : T[e];
     }
@@ -67,7 +67,7 @@ class R extends (i = l.ZP.Store) {
     }
 }
 (o = 'GuildStore'),
-    (s = 'displayName') in (a = R)
+    (s = 'displayName') in (a = v)
         ? Object.defineProperty(a, s, {
               value: o,
               enumerable: !0,
@@ -75,7 +75,7 @@ class R extends (i = l.ZP.Store) {
               writable: !0
           })
         : (a[s] = o),
-    (t.Z = new R(c.Z, {
+    (t.Z = new v(c.Z, {
         BACKGROUND_SYNC: function (e) {
             for (let n of e.guilds) {
                 var t;

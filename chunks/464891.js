@@ -34,8 +34,8 @@ var r = n(735250),
     A = n(204197),
     N = n(740492),
     O = n(430824),
-    R = n(496675),
-    v = n(594174),
+    v = n(496675),
+    R = n(594174),
     C = n(768581),
     y = n(585483),
     D = n(630388),
@@ -189,12 +189,12 @@ function W(e) {
         K = i.useMemo(() => (null != p ? (e) => p(e, t) : void 0), [p, t]),
         [, z] = (0, f.ZP)(t.author.id, e.guildId),
         q = (0, l.e7)([O.Z], () => O.Z.getGuild(e.guildId), [e.guildId]),
-        Q = null != t.author && null != q && R.Z.canManageUser(G.Plq.MODERATE_MEMBERS, t.author, q),
+        Q = null != t.author && null != q && v.Z.canManageUser(G.Plq.MODERATE_MEMBERS, t.author, q),
         X = z && Q,
         $ = (function (e) {
             var t, n;
             let { props: a, guildId: s, handleRenderPopout: _, showCommunicationDisabledStyles: E = !1, className: f } = e,
-                { message: h, author: p, compact: I = !1, subscribeToGroupId: m, animate: T = !0, onContextMenu: g, onClickAvatar: O, onPopoutRequestClose: R, showAvatarPopout: v } = a,
+                { message: h, author: p, compact: I = !1, subscribeToGroupId: m, animate: T = !0, onContextMenu: g, onClickAvatar: O, onPopoutRequestClose: v, showAvatarPopout: R } = a,
                 [D, L] = i.useState(!1),
                 { analyticsLocations: b } = (0, d.ZP)(c.Z.AVATAR),
                 M = (0, l.e7)([N.ZP], () => {
@@ -236,7 +236,7 @@ function W(e) {
             }, [w, m]),
             I && !M)
                 ? void 0
-                : null != _ && null != v
+                : null != _ && null != R
                   ? (0, r.jsx)(d.Gt, {
                         value: b,
                         children: (0, r.jsx)(u.Popout, {
@@ -260,9 +260,9 @@ function W(e) {
                                       );
                                   },
                             renderPopout: _,
-                            shouldShow: v,
+                            shouldShow: R,
                             position: o.tq ? 'window_center' : 'right',
-                            onRequestClose: R,
+                            onRequestClose: v,
                             children: (e) =>
                                 V({
                                     ...F,
@@ -347,7 +347,7 @@ function W(e) {
             isRepliedMessage: !1
         }),
         en = [],
-        er = v.default.getCurrentUser(),
+        er = R.default.getCurrentUser(),
         ei = L.ZP.isPremium(t.author),
         ea = L.ZP.isPremium(er),
         es = null == W ? void 0 : W.isPrivate();

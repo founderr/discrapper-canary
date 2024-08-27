@@ -21,8 +21,8 @@ var r = n(470079),
     I = n(377668),
     m = n(185923);
 function T(e, t, n) {
-    var T, g, S, A, N, O, R;
-    let { channel: v, type: C } = e,
+    var T, g, S, A, N, O, v;
+    let { channel: R, type: C } = e,
         [y, D] = r.useState(() => (0, f.P)()),
         L = (0, i.Z)(),
         b = (0, a.e7)([c.ZP], () => {
@@ -36,19 +36,19 @@ function T(e, t, n) {
         P = (0, a.e7)([c.ZP, E.default], () => {
             var e, t;
             let n = E.default.getCurrentUser();
-            return null !== (t = null != v.guild_id && null != n ? (null === (e = c.ZP.getMember(v.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== t && t;
+            return null !== (t = null != R.guild_id && null != n ? (null === (e = c.ZP.getMember(R.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending) : null) && void 0 !== t && t;
         }),
         { canMentionEveryone: U, hidePersonalInformation: w } = (0, a.cj)(
             [d.Z, _.Z],
             () => ({
-                canMentionEveryone: v.isPrivate() || P || C === l.I.RULES_INPUT || d.Z.can(p.Plq.MENTION_EVERYONE, v),
+                canMentionEveryone: R.isPrivate() || P || C === l.I.RULES_INPUT || d.Z.can(p.Plq.MENTION_EVERYONE, R),
                 hidePersonalInformation: _.Z.hidePersonalInformation
             }),
-            [v, C, P]
+            [R, C, P]
         ),
         { activeCommand: x, activeCommandOption: G } = (0, a.cj)([o.Z], () => ({
-            activeCommand: o.Z.getActiveCommand(v.id),
-            activeCommandOption: o.Z.getActiveOption(v.id)
+            activeCommand: o.Z.getActiveCommand(R.id),
+            activeCommandOption: o.Z.getActiveOption(R.id)
         })),
         k = (0, h.Z)({
             navId: 'channel-autocomplete',
@@ -70,7 +70,7 @@ function T(e, t, n) {
             emojiIntention: C === l.I.RULES_INPUT ? m.Hz.COMMUNITY_CONTENT : m.Hz.CHAT,
             currentWord: null !== (O = null == B ? void 0 : B.word) && void 0 !== O ? O : '',
             currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
-            optionText: null != G ? (0, s.KF)({ [G.name]: null !== (R = null === (S = e.editorRef.current) || void 0 === S ? void 0 : S.getCurrentCommandOptionValue()) && void 0 !== R ? R : [] }, G.name) : ''
+            optionText: null != G ? (0, s.KF)({ [G.name]: null !== (v = null === (S = e.editorRef.current) || void 0 === S ? void 0 : S.getCurrentCommandOptionValue()) && void 0 !== v ? v : [] }, G.name) : ''
         },
         [V] = r.useState(() => new f.Z(F));
     return (

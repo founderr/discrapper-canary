@@ -20,11 +20,11 @@ var r = n(620014),
     A = n(822480),
     N = n(58834),
     O = n(453342),
-    R = '[object Arguments]',
-    v = '[object Function]',
+    v = '[object Arguments]',
+    R = '[object Function]',
     C = '[object Object]',
     y = {};
-(y[R] = y['[object Array]'] = y['[object ArrayBuffer]'] = y['[object DataView]'] = y['[object Boolean]'] = y['[object Date]'] = y['[object Float32Array]'] = y['[object Float64Array]'] = y['[object Int8Array]'] = y['[object Int16Array]'] = y['[object Int32Array]'] = y['[object Map]'] = y['[object Number]'] = y[C] = y['[object RegExp]'] = y['[object Set]'] = y['[object String]'] = y['[object Symbol]'] = y['[object Uint8Array]'] = y['[object Uint8ClampedArray]'] = y['[object Uint16Array]'] = y['[object Uint32Array]'] = !0), (y['[object Error]'] = y[v] = y['[object WeakMap]'] = !1);
+(y[v] = y['[object Array]'] = y['[object ArrayBuffer]'] = y['[object DataView]'] = y['[object Boolean]'] = y['[object Date]'] = y['[object Float32Array]'] = y['[object Float64Array]'] = y['[object Int8Array]'] = y['[object Int16Array]'] = y['[object Int32Array]'] = y['[object Map]'] = y['[object Number]'] = y[C] = y['[object RegExp]'] = y['[object Set]'] = y['[object String]'] = y['[object Symbol]'] = y['[object Uint8Array]'] = y['[object Uint8ClampedArray]'] = y['[object Uint16Array]'] = y['[object Uint32Array]'] = !0), (y['[object Error]'] = y[R] = y['[object WeakMap]'] = !1);
 e.exports = function e(t, n, D, L, b, M) {
     var P,
         U = 1 & n,
@@ -37,9 +37,9 @@ e.exports = function e(t, n, D, L, b, M) {
         if (((P = h(t)), !U)) return u(t, P);
     } else {
         var k = f(t),
-            B = k == v || '[object GeneratorFunction]' == k;
+            B = k == R || '[object GeneratorFunction]' == k;
         if (T(t)) return l(t, U);
-        if (k == C || k == R || (B && !b)) {
+        if (k == C || k == v || (B && !b)) {
             if (((P = w || B ? {} : I(t)), !U)) return w ? d(t, o(P, t)) : c(t, s(P, t));
         } else {
             if (!y[k]) return b ? t : {};

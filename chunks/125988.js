@@ -19,13 +19,13 @@ t.Z = (e) => {
             return [null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id, l.default.getUser(null == n ? void 0 : n.id)];
         }),
         O = null == S ? (null == N ? void 0 : N.avatarDecoration) : null === S.avatarDecoration ? null : null !== (t = S.avatarDecoration) && void 0 !== t ? t : null == N ? void 0 : N.avatarDecoration,
-        { pendingAvatarDecoration: R } = (0, s.Z)({
+        { pendingAvatarDecoration: v } = (0, s.Z)({
             isTryItOut: p,
             guildId: _
         }),
-        v = h && void 0 !== R && void 0 !== A && A === (null == n ? void 0 : n.id),
-        C = null != _ && null === R,
-        y = (0, c.Z)(v ? (C ? (null == N ? void 0 : N.avatarDecoration) : null != R ? R : O) : null != O ? O : null == N ? void 0 : N.avatarDecoration),
+        R = h && void 0 !== v && void 0 !== A && A === (null == n ? void 0 : n.id),
+        C = null != _ && null === v,
+        y = (0, c.Z)(R ? (C ? (null == N ? void 0 : N.avatarDecoration) : null != v ? v : O) : null != O ? O : null == N ? void 0 : N.avatarDecoration),
         D = r.useMemo(
             () =>
                 (0, u.NZ)({

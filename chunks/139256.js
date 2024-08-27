@@ -42,8 +42,8 @@ var i,
     S = n(65145),
     A = n(981631),
     R = n(689938),
-    x = n(2482);
-function O(e) {
+    O = n(2482);
+function x(e) {
     let { className: t, children: n } = e;
     return (0, a.jsx)('ul', {
         'aria-label': R.Z.Messages.POLL_OPTIONS_ARIA,
@@ -75,7 +75,7 @@ function L(e) {
         { pollAnswerRef: l } = (0, S.dv)();
     return (0, a.jsx)(u.Clickable, {
         role: 'checkbox',
-        className: o()(t, x.enabled),
+        className: o()(t, O.enabled),
         onClick: n,
         'aria-checked': i,
         ref: s ? l : void 0,
@@ -89,7 +89,7 @@ function Z(e) {
     let { pollAnswerRef: d } = (0, S.dv)();
     return (0, a.jsx)(u.Clickable, {
         role: 'radio',
-        className: o()(n, x.enabled),
+        className: o()(n, O.enabled),
         onClick: s,
         'aria-checked': r,
         tabIndex: t,
@@ -117,12 +117,12 @@ function P(e) {
                     answersInteraction: p.Y7.LIST
                 },
                 () => ({
-                    ContainerComponent: O,
+                    ContainerComponent: x,
                     answerElementType: 3
                 })
             )
             .otherwise(() => ({
-                ContainerComponent: O,
+                ContainerComponent: x,
                 answerElementType: 0
             }));
     return (0, a.jsx)(_, {
@@ -131,7 +131,7 @@ function P(e) {
             (0, a.jsx)(
                 D,
                 {
-                    className: o()(x.__invalid_answer, u),
+                    className: o()(O.__invalid_answer, u),
                     answer: e,
                     isFirstAnswer: 0 === t,
                     elementType: E,
@@ -189,7 +189,7 @@ function b(e) {
         r = m.QK.useSetting();
     return (0, a.jsx)(I.Z, {
         className: i,
-        imageClassName: x.attachmentImage,
+        imageClassName: O.attachmentImage,
         src: null != n.proxy_url && '' !== n.proxy_url ? n.proxy_url : n.url,
         alt: null !== (t = n.description) && void 0 !== t ? t : (0, f.fw)(n.filename),
         responsive: !0,
@@ -291,13 +291,13 @@ function k(e) {
         s = {
             width: n,
             height: n,
-            background: x.radioBackground,
+            background: O.radioBackground,
             'aria-hidden': !0
         };
     return t
         ? (0, a.jsx)(h.Z, {
               ...s,
-              foreground: x.radioForeground,
+              foreground: O.radioForeground,
               className: i
           })
         : (0, a.jsx)(T.Z, {
@@ -309,7 +309,7 @@ function F(e) {
     let { isSelected: t, size: n, className: i } = e,
         s = 0.85 * n;
     return (0, a.jsx)('div', {
-        className: o()(x.checkbox, { [x.checkboxSelected]: t }, i),
+        className: o()(O.checkbox, { [O.checkboxSelected]: t }, i),
         style: {
             width: n,
             height: n

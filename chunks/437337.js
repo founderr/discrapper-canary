@@ -39,8 +39,8 @@ let f = {
             S = i.useRef(null),
             [A, N] = i.useState(!1),
             O = (0, d.d)(l.Z.unsafe_rawColors.PRIMARY_400).spring(),
-            R = (0, d.d)(l.Z.unsafe_rawColors.GREEN_360).spring(),
-            { state: v, opacity: C } = (0, _.useSpring)(
+            v = (0, d.d)(l.Z.unsafe_rawColors.GREEN_360).spring(),
+            { state: R, opacity: C } = (0, _.useSpring)(
                 {
                     config: f,
                     opacity: p ? 0.3 : 1,
@@ -62,8 +62,8 @@ let f = {
                 onMouseLeave: () => N(!1),
                 style: {
                     opacity: C,
-                    backgroundColor: v.to({
-                        output: [O, R]
+                    backgroundColor: R.to({
+                        output: [O, v]
                     })
                 },
                 children: [
@@ -72,7 +72,7 @@ let f = {
                         viewBox: '0 0 28 20',
                         preserveAspectRatio: 'xMinYMid meet',
                         style: {
-                            left: v.to({
+                            left: R.to({
                                 range: [0, 0.3, 0.7, 1],
                                 output: [-3, 1, 8, 12]
                             })
@@ -81,19 +81,19 @@ let f = {
                         children: [
                             (0, r.jsx)(o.animated.rect, {
                                 fill: 'white',
-                                x: v.to({
+                                x: R.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [4, 0, 0, 4]
                                 }),
-                                y: v.to({
+                                y: R.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [0, 1, 1, 0]
                                 }),
-                                height: v.to({
+                                height: R.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 18, 18, 20]
                                 }),
-                                width: v.to({
+                                width: R.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 28, 28, 20]
                                 }),
@@ -125,7 +125,7 @@ let f = {
                                         })
                                     ]
                                 });
-                            })(v, O, R, g.enabled)
+                            })(R, O, v, g.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {

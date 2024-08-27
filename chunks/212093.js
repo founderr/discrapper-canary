@@ -119,7 +119,7 @@ n.d(t, {
         return N;
     },
     uY: function () {
-        return R;
+        return v;
     }
 }),
     n(653041),
@@ -229,7 +229,7 @@ async function A(e, t) {
             }),
             oldFormErrors: !0
         });
-        v(n.body, f.Lcj.FEATURED);
+        R(n.body, f.Lcj.FEATURED);
     } catch (e) {
         l.Z.dispatch({
             type: 'GUILD_DISCOVERY_FETCH_FAILURE',
@@ -249,7 +249,7 @@ async function N() {
             query: s.stringify({ application_ids: e }),
             oldFormErrors: !0
         });
-        v(t.body, f.Lcj.GAMES_YOU_PLAY);
+        R(t.body, f.Lcj.GAMES_YOU_PLAY);
     } catch (e) {
         l.Z.dispatch({
             type: 'GUILD_DISCOVERY_FETCH_FAILURE',
@@ -261,7 +261,7 @@ function O() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     e && (0, u.uL)(f.Z5c.GUILD_DISCOVERY), l.Z.dispatch({ type: 'GUILD_DISCOVERY_CLEAR_SEARCH' });
 }
-function R(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     l.Z.dispatch({
         type: 'GUILD_DISCOVERY_SELECT_CATEGORY',
@@ -269,7 +269,7 @@ function R(e) {
         isHomepage: t
     });
 }
-function v(e, t) {
+function R(e, t) {
     let { offset: n, limit: r, guilds: i, total: a } = e;
     l.Z.dispatch({
         type: 'GUILD_DISCOVERY_FETCH_SUCCESS',

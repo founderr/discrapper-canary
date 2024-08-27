@@ -36,8 +36,8 @@ var i,
     S = n(960904),
     A = n(161314),
     R = n(163268),
-    x = n(25610),
-    O = n(703751),
+    O = n(25610),
+    x = n(703751),
     M = n(761538),
     v = n(674611),
     L = n(346610),
@@ -90,8 +90,8 @@ var i,
     eS = n(591759),
     eA = n(169525),
     eR = n(161010),
-    ex = n(461157),
-    eO = n(901461),
+    eO = n(461157),
+    ex = n(901461),
     eM = n(432376),
     ev = n(384203),
     eL = n(633957),
@@ -688,18 +688,18 @@ class e7 extends (i = a.Component) {
             S = this.renderEmbeddedApplicationInstanceEmbed(t),
             A = this.renderInteractionPremiumUpsell(t),
             R = this.renderMediaPostEmbeds(t),
-            x = this.renderSafetyPolicyNotice(t),
-            O = this.renderSafetySystemNotification(t),
+            O = this.renderSafetyPolicyNotice(t),
+            x = this.renderSafetySystemNotification(t),
             M = this.renderVoiceChannelInvite(t, n),
             v = this.renderMediaObscureNotice(t),
             L = this.renderPoll(t, i),
             Z = this.renderForwardedMessage(t);
-        return null == o && null == d && null == I && null == m && null == T && null == c && null == u && null == h && null == N && null == C && null == f && null == p && null == S && null == g && null == R && null == x && null != A && null == L && null == M && null == Z
+        return null == o && null == d && null == I && null == m && null == T && null == c && null == u && null == h && null == N && null == C && null == f && null == p && null == S && null == g && null == R && null == O && null != A && null == L && null == M && null == Z
             ? null
             : (0, s.jsxs)('div', {
                   id: (0, ej.bX)(t),
                   className: l()(e, ez.container),
-                  children: [Z, g, L, o, c, u, R, d, _, I, v, m, C, p, S, A, E, T, h, N, a && this.renderSuppressConfirmModal(), r && this.renderRemoveAttachmentConfirmModal(), f, x, O, M]
+                  children: [Z, g, L, o, c, u, R, d, _, I, v, m, C, p, S, A, E, T, h, N, a && this.renderSuppressConfirmModal(), r && this.renderRemoveAttachmentConfirmModal(), f, O, x, M]
               });
     }
     constructor(...e) {
@@ -794,7 +794,7 @@ function e3(e) {
         l = (0, c.e7)([ed.default], () => ed.default.getId()),
         o = eu.x4.useSetting(),
         u = eu.RS.useSetting(),
-        d = eu.NA.useSetting() && !(0, eO.Z)(e.message),
+        d = eu.NA.useSetting() && !(0, ex.Z)(e.message),
         _ = eu.nc.useSetting(),
         E = eu.QK.useSetting(),
         I = (0, c.e7)([eE.Z], () => null == n.guild_id || eE.Z.canChatInGuild(n.guild_id), [n]),
@@ -816,7 +816,7 @@ function e3(e) {
         f = (0, U.ux)(n.guild_id),
         [, p] = (0, y.AB)(n.guild_id),
         g = (0, eo.$R)(n),
-        S = (l === i.author.id || C) && i.author.id !== eH.LAt && !1 !== a && !(0, ef.yE)(i.flags, eH.iLy.EPHEMERAL) && g && 1 === (0, ex.Z)(i),
+        S = (l === i.author.id || C) && i.author.id !== eH.LAt && !1 !== a && !(0, ef.yE)(i.flags, eH.iLy.EPHEMERAL) && g && 1 === (0, eO.Z)(i),
         A = l === i.author.id && g && !r,
         R = i.author.id === l,
         M = i.isFirstMessageInForumPost(n),
@@ -834,8 +834,8 @@ function e3(e) {
         P = (0, W.A)((null !== (t = i.editedTimestamp) && void 0 !== t ? t : i.timestamp).valueOf()),
         D = (0, q.Z)(null == n ? void 0 : n.id),
         b = (0, $.Z)(i),
-        j = (0, x.V)(n.id, i.author.id),
-        B = (0, O.r)(i.id),
+        j = (0, O.V)(n.id, i.author.id),
+        B = (0, x.r)(i.id),
         { hasInlineForwardButton: k } = (0, L.yk)({ location: 'MessageAccessories' }),
         F = (0, Z.a)(i) && k;
     return (0, s.jsx)(e7, {
@@ -875,8 +875,8 @@ let e2 = (e) => {
         m = eu.QK.useSetting(),
         T = (0, W.A)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()),
         h = (0, q.Z)(null == i ? void 0 : i.id),
-        N = (0, x.V)(i.id, n.author.id),
-        C = (0, O.r)(n.id),
+        N = (0, O.V)(i.id, n.author.id),
+        C = (0, x.r)(n.id),
         f = (0, $.Z)(n);
     return (0, s.jsx)(e7, {
         ...d,

@@ -6,10 +6,10 @@ n.d(t, {
         return g;
     },
     ob: function () {
-        return v;
+        return R;
     },
     q4: function () {
-        return R;
+        return v;
     }
 }),
     n(47120);
@@ -58,7 +58,7 @@ function S(e) {
                                 binds: ['esc'],
                                 comboKeysBindGlobal: !0,
                                 action() {
-                                    v(e);
+                                    R(e);
                                 }
                             }
                         };
@@ -78,7 +78,7 @@ function S(e) {
                     (0, a.jsx)('div', { className: m.drag }),
                     t.render({
                         transitionState: null != t ? t.transitionState : 3,
-                        closeLayer: () => v(t.key)
+                        closeLayer: () => R(t.key)
                     })
                 ]
             })
@@ -134,7 +134,7 @@ function O() {
         )
     });
 }
-function R(e) {
+function v(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
         { layerKey: n, Layer: r } = t,
         i = null != n ? n : l()();
@@ -155,7 +155,7 @@ function R(e) {
         i
     );
 }
-function v(e) {
+function R(e) {
     (0, _.j)(() => {
         g.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
     });

@@ -21,8 +21,8 @@ var r,
     A = n(594174),
     N = n(979651),
     O = n(938475),
-    R = n(501655),
-    v = n(88751),
+    v = n(501655),
+    R = n(88751),
     C = n(427679);
 let y = 'NO_GUILD',
     D = new _.h(
@@ -59,7 +59,7 @@ function U(e) {
 }
 function w(e) {
     let t = b[e];
-    return null == t && ((t = new R.ZP(e)), (b[e] = t), t.rebuild()), t;
+    return null == t && ((t = new v.ZP(e)), (b[e] = t), t.rebuild()), t;
 }
 function x(e) {
     return null != e && e.isGuildStageVoice() && O.ZP.countVoiceStatesForChannel(e.id) > 0;
@@ -115,7 +115,7 @@ function j(e) {
 let W = [];
 class K extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(p.default, A.default, I.Z, S.Z, N.Z, T.Z, O.ZP, m.Z, v.ZP, g.Z, C.Z, h.Z);
+        this.waitFor(p.default, A.default, I.Z, S.Z, N.Z, T.Z, O.ZP, m.Z, R.ZP, g.Z, C.Z, h.Z);
     }
     getParticipantsVersion(e) {
         var t, n;

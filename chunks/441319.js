@@ -31,8 +31,8 @@ var r = n(392711),
     A = n(19009),
     N = n(234912),
     O = n(405571),
-    R = n(730886),
-    v = n(473974),
+    v = n(730886),
+    R = n(473974),
     C = n(563856),
     y = n(997945),
     D = n(689938);
@@ -77,7 +77,7 @@ let L = 60,
         },
         {
             id: y.Ru.PIRATE,
-            iconSource: R,
+            iconSource: v,
             isPremium: !0,
             name: D.Z.Messages.APP_ICON_PIRATE
         },
@@ -89,7 +89,7 @@ let L = 60,
         },
         {
             id: y.Ru.SUNSET,
-            iconSource: v,
+            iconSource: R,
             isPremium: !0,
             name: D.Z.Messages.APP_ICON_SUNSET
         },

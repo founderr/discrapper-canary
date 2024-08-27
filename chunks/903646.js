@@ -234,17 +234,17 @@ function N(e, t) {
     );
 }
 function O(e) {
-    return R(u((e = b(e, new _())).era, e.year), e.month, e.day, e.hour, e.minute, e.second, e.millisecond);
+    return v(u((e = b(e, new _())).era, e.year), e.month, e.day, e.hour, e.minute, e.second, e.millisecond);
 }
-function R(e, t, n, r, i, a, s) {
+function v(e, t, n, r, i, a, s) {
     let o = new Date();
     return o.setUTCHours(r, i, a, s), o.setUTCFullYear(e, t - 1, n), o.getTime();
 }
-function v(e, t) {
+function R(e, t) {
     if ('UTC' === t) return 0;
     if (e > 0 && t === T()) return -60000 * new Date(e).getTimezoneOffset();
     let { year: n, month: r, day: i, hour: a, minute: s, second: o } = y(e, t);
-    return R(n, r, i, a, s, o, 0) - 1000 * Math.floor(e / 1000);
+    return v(n, r, i, a, s, o, 0) - 1000 * Math.floor(e / 1000);
 }
 let C = new Map();
 function y(e, t) {
@@ -287,8 +287,8 @@ function D(e, t, n = 'compatible') {
                 return e.setFullYear(t, o.month - 1, o.day), e.setHours(o.hour, o.minute, o.second, o.millisecond), e.getTime();
             }
             let l = O(o),
-                c = v(l - 86400000, t),
-                d = v(l + 86400000, t);
+                c = R(l - 86400000, t),
+                d = R(l + 86400000, t);
             let E =
                 ((r = o),
                 (i = t),
@@ -914,18 +914,18 @@ function eO(e) {
         n = 29 * t + Math.floor((12084 + 13753 * t) / 25920);
     return 3 > s(3 * (n + 1), 7) && (n += 1), n;
 }
-function eR(e) {
+function ev(e) {
     var t;
     let n, r;
     return eO(e) + ((n = eO((t = e) - 1)), (r = eO(t)), eO(t + 1) - r == 356 ? 2 : r - n == 382 ? 1 : 0);
 }
-function ev(e) {
-    return eR(e + 1) - eR(e);
+function eR(e) {
+    return ev(e + 1) - ev(e);
 }
 function eC(e, t) {
     if ((t >= 6 && !eN(e) && t++, 4 === t || 7 === t || 9 === t || 11 === t || 13 === t)) return 29;
     let n = (function (e) {
-        let t = ev(e);
+        let t = eR(e);
         switch ((t > 380 && (t -= 30), t)) {
             case 353:
                 return 0;
@@ -941,9 +941,9 @@ class ey {
     fromJulianDay(e) {
         let t = e - 347997,
             n = Math.floor((((t * eS) / eA) * 19 + 234) / 235) + 1,
-            r = eR(n),
+            r = ev(n),
             i = Math.floor(t - r);
-        for (; i < 1; ) i = Math.floor(t - (r = eR(--n)));
+        for (; i < 1; ) i = Math.floor(t - (r = ev(--n)));
         let a = 1,
             s = 0;
         for (; s < i; ) (s += eC(n, a)), a++;
@@ -951,7 +951,7 @@ class ey {
         return new j(this, n, a, o);
     }
     toJulianDay(e) {
-        let t = eR(e.year);
+        let t = ev(e.year);
         for (let n = 1; n < e.month; n++) t += eC(e.year, n);
         return t + e.day + 347997;
     }
@@ -962,7 +962,7 @@ class ey {
         return eN(e.year) ? 13 : 12;
     }
     getDaysInYear(e) {
-        return ev(e.year);
+        return eR(e.year);
     }
     getYearsInEra() {
         return 9999;

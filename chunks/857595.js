@@ -27,7 +27,7 @@ n.d(t, {
         return _;
     },
     eN: function () {
-        return v;
+        return R;
     },
     f1: function () {
         return h;
@@ -54,7 +54,7 @@ n.d(t, {
         return f;
     },
     u1: function () {
-        return R;
+        return v;
     }
 });
 var r = n(570140),
@@ -159,14 +159,14 @@ function O(e) {
         alwaysShowLinkDecorations: e
     });
 }
-function R(e) {
+function v(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_ROLE_STYLE',
         roleStyle: e
     }),
         a.default.track(o.rMx.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
 }
-function v() {
+function R() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE' });
 }
 function C() {

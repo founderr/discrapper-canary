@@ -79,8 +79,8 @@ var r,
     A = n(561308),
     N = n(797342),
     O = n(371991),
-    R = n(206583),
-    v = n(689938),
+    v = n(206583),
+    R = n(689938),
     C = n(119369);
 let y = {
     [d.s.TOP_ARTIST]: [H],
@@ -218,7 +218,7 @@ function G(e) {
     return (0, A.Ol)(t)
         ? (0, a.jsx)(M, {
               Icon: h.NewUserSimpleIcon,
-              text: v.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
+              text: R.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
               iconColor: r
           })
         : null;
@@ -249,7 +249,7 @@ function B(e) {
         Icon: h.RetryIcon,
         showTooltip: !r,
         tooltipText: s,
-        text: r ? s : v.Z.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+        text: r ? s : R.Z.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
     });
 }
 function F(e) {
@@ -260,8 +260,8 @@ function F(e) {
         ? (0, a.jsx)(M, {
               Icon: h.FlashIcon,
               showTooltip: 0 === n,
-              text: v.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({ days: r }),
-              tooltipText: v.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_TOOLTIP.format({ days: r })
+              text: R.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({ days: r }),
+              tooltipText: R.Z.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_TOOLTIP.format({ days: r })
           })
         : null;
 }
@@ -271,11 +271,11 @@ function V(e) {
         r = 0 !== n,
         i = (0, A.yA)(t);
     if (null == i) return null;
-    let s = r ? v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
+    let s = r ? R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
     return (0, a.jsx)(M, {
         Icon: h.TrophyIcon,
         text: (0, a.jsxs)(a.Fragment, {
-            children: [v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, r ? ' \u2014 ' : ': ', s.format({ hours: Math.round(i / p.Z.Seconds.HOUR) })]
+            children: [R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, r ? ' \u2014 ' : ': ', s.format({ hours: Math.round(i / p.Z.Seconds.HOUR) })]
         })
     });
 }
@@ -285,7 +285,7 @@ function H(e) {
         { location: r } = L(),
         i = null === (t = (0, A.PJ)(n, _.N.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
     if (null == i) return null;
-    let s = (0, I.Hi)(r, [1, 2, 5]) ? v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: i }) : v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({ count: i });
+    let s = (0, I.Hi)(r, [1, 2, 5]) ? R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({ count: i }) : R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({ count: i });
     return (0, a.jsx)(M, {
         Icon: h.TrophyIcon,
         text: s
@@ -300,7 +300,7 @@ function Z(e) {
         ? null
         : (0, a.jsx)(M, {
               Icon: h.FireIcon,
-              text: v.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+              text: R.Z.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
           });
 }
 function Y(e) {
@@ -308,11 +308,11 @@ function Y(e) {
         { location: n } = L();
     if (3 === n) return null;
     let r = m.default.extractTimestamp(t.extra.application_id);
-    return c()().diff(c()(r), 'days') > R.G
+    return c()().diff(c()(r), 'days') > v.G
         ? null
         : (0, a.jsx)(M, {
               Icon: h.StarShootingIcon,
-              text: v.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
+              text: R.Z.Messages.MEMBER_LIST_CONTENT_FEED_NEW_RELEASE
           });
 }
 function j(e) {

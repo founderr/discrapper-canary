@@ -26,23 +26,23 @@ let S = 25,
     A = !1,
     N = !0,
     O = !1,
-    R = !1,
-    v = null,
+    v = !1,
+    R = null,
     C = c.z.LATEST_ACTIVITY,
     y = [],
     D = 0;
 function L() {
-    (A = !1), (N = !0), (O = !1), (R = !1), (v = null), (C = c.z.LATEST_ACTIVITY), (r = new Set()), (D = 0), (y = []);
+    (A = !1), (N = !0), (O = !1), (v = !1), (R = null), (C = c.z.LATEST_ACTIVITY), (r = new Set()), (D = 0), (y = []);
 }
 function b(e, t) {
     return t === c.z.LATEST_ACTIVITY ? I.ZP.lastMessageId(e.id) : e.id;
 }
 function M() {
-    if (null == v) return !1;
+    if (null == R) return !1;
     let e = !O,
         t = p.Z.getChannel(y[y.length - 1]),
         n = null == t ? null : b(t, C);
-    y = u()(p.Z.getAllThreadsForParent(v))
+    y = u()(p.Z.getAllThreadsForParent(R))
         .filter((e) => e.isArchivedThread())
         .filter((t) => {
             var i;
@@ -68,7 +68,7 @@ class w extends (i = d.ZP.Store) {
         this.waitFor(p.Z, g.Z, I.ZP);
     }
     get canLoadMore() {
-        return O && !A && !R;
+        return O && !A && !v;
     }
     get nextOffset() {
         return D;
@@ -77,10 +77,10 @@ class w extends (i = d.ZP.Store) {
         return N;
     }
     isLoading(e, t, n) {
-        return v === e && C === t && (0, m.OL)(r, n) ? A : (L(), !1);
+        return R === e && C === t && (0, m.OL)(r, n) ? A : (L(), !1);
     }
     getThreads(e, t, n) {
-        return v === e && C === t && (0, m.OL)(r, n) ? y : U;
+        return R === e && C === t && (0, m.OL)(r, n) ? y : U;
     }
 }
 (o = 'ArchivedThreadsStore'),
@@ -100,20 +100,20 @@ class w extends (i = d.ZP.Store) {
         },
         THREAD_UPDATE: function (e) {
             let { channel: t } = e;
-            return v === t.parent_id && !!(0, E.yv)(t.id) && void P(t.id);
+            return R === t.parent_id && !!(0, E.yv)(t.id) && void P(t.id);
         },
         CHANNEL_DELETE: function (e) {
-            if (e.channel.id !== v) return !1;
+            if (e.channel.id !== R) return !1;
             L();
         },
         LOAD_ARCHIVED_THREADS: function (e) {
-            (e.channelId !== v || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) && L(), (v = e.channelId), (C = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (A = !0), (N = !1);
+            (e.channelId !== R || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) && L(), (R = e.channelId), (C = e.sortOrder), (r = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter)), (A = !0), (N = !1);
         },
         LOAD_ARCHIVED_THREADS_SUCCESS: function (e) {
-            if (e.channelId !== v || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) return !1;
+            if (e.channelId !== R || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) return !1;
             let t = e.threads.filter((e) => h.AW.has(e.type)).map((e) => e.id);
             y = y.concat(t);
-            let n = p.Z.getChannel(v);
+            let n = p.Z.getChannel(R);
             null != n &&
                 n.isForumLikeChannel() &&
                 (0, f.Hr)({
@@ -131,10 +131,10 @@ class w extends (i = d.ZP.Store) {
                 (N = !1);
         },
         LOAD_ARCHIVED_THREADS_FAIL: function (e) {
-            if (e.channelId !== v || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) return !1;
-            (A = !1), (R = !0), (N = !1);
+            if (e.channelId !== R || e.sortOrder !== C || !(0, m.OL)(e.tagFilter, r)) return !1;
+            (A = !1), (v = !0), (N = !1);
         },
         RESORT_THREADS: function (e) {
-            return (null == v || null == e.channelId || v === e.channelId) && M();
+            return (null == R || null == e.channelId || R === e.channelId) && M();
         }
     }));

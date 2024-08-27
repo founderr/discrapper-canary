@@ -100,7 +100,7 @@ var p = {
         var r = N(e, 'defaultTitle');
         return t || r || void 0;
     },
-    R = function (e, t) {
+    v = function (e, t) {
         return t
             .filter(function (t) {
                 return void 0 !== t[e];
@@ -112,7 +112,7 @@ var p = {
                 return _({}, e, t);
             }, {});
     },
-    v = function (e, t, n) {
+    R = function (e, t, n) {
         var r = {};
         return n
             .filter(function (t) {
@@ -525,18 +525,18 @@ var Y = function (e, t) {
                                         }
                                     return t;
                                 }, [])),
-                        bodyAttributes: R('bodyAttributes', t),
+                        bodyAttributes: v('bodyAttributes', t),
                         defer: N(t, 'defer'),
                         encode: N(t, 'encodeSpecialCharacters'),
-                        htmlAttributes: R('htmlAttributes', t),
-                        linkTags: v(p.LINK, ['rel', 'href'], t),
-                        metaTags: v(p.META, ['name', 'charset', 'http-equiv', 'property', 'itemprop'], t),
-                        noscriptTags: v(p.NOSCRIPT, ['innerHTML'], t),
+                        htmlAttributes: v('htmlAttributes', t),
+                        linkTags: R(p.LINK, ['rel', 'href'], t),
+                        metaTags: R(p.META, ['name', 'charset', 'http-equiv', 'property', 'itemprop'], t),
+                        noscriptTags: R(p.NOSCRIPT, ['innerHTML'], t),
                         onChangeClientState: N(t, 'onChangeClientState') || function () {},
-                        scriptTags: v(p.SCRIPT, ['src', 'innerHTML'], t),
-                        styleTags: v(p.STYLE, ['cssText'], t),
+                        scriptTags: R(p.SCRIPT, ['src', 'innerHTML'], t),
+                        styleTags: R(p.STYLE, ['cssText'], t),
                         title: O(t),
-                        titleAttributes: R('titleAttributes', t),
+                        titleAttributes: v('titleAttributes', t),
                         prioritizeSeoTags: C(t, 'prioritizeSeoTags')
                     };
                 Z.canUseDOM

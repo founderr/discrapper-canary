@@ -20,24 +20,24 @@ var r = n(735250),
 t.Z = (e) => {
     let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: A, setTrackedUpsellViewed: N } = e,
         { location: O } = (0, u.O)(),
-        { analyticsLocations: R } = (0, d.ZP)(),
-        v = (0, o.e7)([p.Z], () => p.Z.getGuild(n)),
-        { canManageAllExpressions: C } = (0, h.XJ)(v),
-        y = null != v && 0 === (0, I.A3)(v.premiumTier) && !v.hasFeature(m.oNc.MORE_STICKERS);
+        { analyticsLocations: v } = (0, d.ZP)(),
+        R = (0, o.e7)([p.Z], () => p.Z.getGuild(n)),
+        { canManageAllExpressions: C } = (0, h.XJ)(R),
+        y = null != R && 0 === (0, I.A3)(R.premiumTier) && !R.hasFeature(m.oNc.MORE_STICKERS);
     return (i.useEffect(() => {
         C &&
             y &&
             A &&
             ((0, c.yw)(m.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                 location: O,
-                guild_id: null == v ? void 0 : v.id,
+                guild_id: null == R ? void 0 : R.id,
                 channel_id: null == a ? void 0 : a.id,
                 type: 'Expression Picker Inline Sticker Upsell',
-                location_stack: R
+                location_stack: v
             }),
             N(!0));
-    }, [y, v, a, O, A, N, R, C]),
-    null != v && C)
+    }, [y, R, a, O, A, N, v, C]),
+    null != R && C)
         ? y
             ? (0, r.jsxs)('div', {
                   className: s()(S.upsell, t),
@@ -58,9 +58,9 @@ t.Z = (e) => {
                           color: l.Button.Colors.LINK,
                           onClick: () => {
                               (0, E.Z)({
-                                  analyticsLocations: R,
+                                  analyticsLocations: v,
                                   analyticsSourceLocation: O,
-                                  guild: v,
+                                  guild: R,
                                   perks: (0, T.hC)()
                               });
                           },

@@ -31,7 +31,7 @@ function m(e) {
         O = i.useCallback(() => {
             g(!1);
         }, []),
-        R = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 var r;
                 g(!1);
@@ -52,12 +52,12 @@ function m(e) {
     return (i.useEffect(() => {
         let e = A.current;
         return (
-            null == S && (null == e || e.addEventListener('dragover', N, !1), null == e || e.addEventListener('dragleave', O, !1), null == e || e.addEventListener('drop', R, !1)),
+            null == S && (null == e || e.addEventListener('dragover', N, !1), null == e || e.addEventListener('dragleave', O, !1), null == e || e.addEventListener('drop', v, !1)),
             () => {
-                null == e || e.removeEventListener('dragover', N, !1), null == e || e.removeEventListener('dragleave', O, !1), null == e || e.removeEventListener('drop', R, !1);
+                null == e || e.removeEventListener('dragover', N, !1), null == e || e.removeEventListener('dragleave', O, !1), null == e || e.removeEventListener('drop', v, !1);
             }
         );
-    }, [S, N, O, R]),
+    }, [S, N, O, v]),
     null != S)
         ? (0, r.jsx)(f.Z, {
               channelId: t,

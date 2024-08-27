@@ -50,7 +50,7 @@ function I() {
             );
         }, []),
         O = u.ZP.isPremium(t),
-        R =
+        v =
             d.g.useExperiment(
                 { location: 'useOutboundPromotions' },
                 {
@@ -60,9 +60,9 @@ function I() {
             ).enabled || u.ZP.isPremiumExactly(t, h.p9.TIER_2);
     r.useEffect(() => {
         a.Z.wait(() => {
-            R && null == e && E.ZP.fetchActiveOutboundPromotions();
+            v && null == e && E.ZP.fetchActiveOutboundPromotions();
         });
-    }, [e, R]),
+    }, [e, v]),
         r.useEffect(() => {
             a.Z.wait(() => {
                 (0, _.t8)()
@@ -74,9 +74,9 @@ function I() {
                     });
             });
         }, []);
-    let v = {};
-    for (let { code: e, promotion: t } of S) v[t.id] = e;
-    let C = p(n, I, m, v),
+    let R = {};
+    for (let { code: e, promotion: t } of S) R[t.id] = e;
+    let C = p(n, I, m, R),
         y = new Set(
             C.map((e) => {
                 let { id: t } = e;
@@ -88,10 +88,10 @@ function I() {
             return !y.has(t.id);
         });
     return {
-        promotionsLoaded: T && (!R || null != e),
+        promotionsLoaded: T && (!v || null != e),
         activeOutboundPromotions: C,
         claimedEndedOutboundPromotions: D.filter((e) => (0, _.ZC)(e.promotion)),
-        claimedOutboundPromotionCodeMap: v,
+        claimedOutboundPromotionCodeMap: R,
         addClaimedOutboundPromotionCode: N
     };
 }

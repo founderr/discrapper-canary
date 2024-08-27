@@ -22,7 +22,7 @@ t.Z = function (e) {
         A = (0, o.e7)([E.default], () => E.default.getCurrentUser()),
         N = (0, o.e7)([f.Z], () => f.Z.boostSlots),
         { analyticsLocations: O } = (0, c.ZP)(),
-        R = i.useMemo(
+        v = i.useMemo(
             () =>
                 Object.keys(N).filter((e) => {
                     let t = N[e];
@@ -58,11 +58,11 @@ t.Z = function (e) {
                             })
                         ]
                     }),
-                    R.length > 0
+                    v.length > 0
                         ? (0, r.jsx)(u.Text, {
                               className: S.guildBoostCountCurrentUser,
                               variant: 'text-sm/normal',
-                              children: g.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_USER_SUBSCRIPTION_COUNT.format({ numSubscriptions: R.length })
+                              children: g.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_USER_SUBSCRIPTION_COUNT.format({ numSubscriptions: v.length })
                           })
                         : null
                 ]

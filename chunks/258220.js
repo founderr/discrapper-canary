@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         ACTIVITY_ENCOURAGES_HW_ACCELERATION: function () {
-            return E;
+            return h;
         },
         default: function () {
             return m;
@@ -18,8 +18,8 @@ var i = n(735250),
     d = n(998502),
     u = n(981631),
     _ = n(689938),
-    h = n(434052);
-let E = 'Activity Encourages Hardware Acceleration';
+    E = n(434052);
+let h = 'Activity Encourages Hardware Acceleration';
 function m(e) {
     var t;
     let { applicationId: n, ...m } = e,
@@ -27,19 +27,19 @@ function m(e) {
         [p] = (0, l.Z)([n]),
         T = null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : 'This Activity';
     a.useEffect(() => {
-        c.default.track(u.rMx.OPEN_MODAL, { type: E });
+        c.default.track(u.rMx.OPEN_MODAL, { type: h });
     }, []);
     let S = () => {
         let e = 'temporary';
         I && ((e = 'permanent'), r.ZP.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
             c.default.track(u.rMx.MODAL_DISMISSED, {
-                type: E,
+                type: h,
                 dismiss_type: e
             }),
             m.onClose();
     };
     return (0, i.jsxs)(s.ModalRoot, {
-        className: h.root,
+        className: E.root,
         'aria-label': _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE,
         ...m,
         children: [
@@ -47,26 +47,26 @@ function m(e) {
                 separator: !1,
                 children: [
                     (0, i.jsx)(s.Text, {
-                        className: h.__invalid_header,
+                        className: E.__invalid_header,
                         variant: 'text-lg/normal',
                         children: _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE
                     }),
                     (0, i.jsx)(s.ModalCloseButton, {
                         onClick: S,
-                        className: h.closeButton
+                        className: E.closeButton
                     })
                 ]
             }),
             (0, i.jsx)(s.ModalContent, {
-                className: h.content,
+                className: E.content,
                 children: (0, i.jsx)(s.Text, {
                     variant: 'text-md/normal',
-                    className: h.__invalid_ratingBody,
+                    className: E.__invalid_ratingBody,
                     children: _.Z.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_BODY.format({ applicationName: T })
                 })
             }),
             (0, i.jsxs)(s.ModalFooter, {
-                className: h.footer,
+                className: E.footer,
                 direction: o.Z.Direction.HORIZONTAL,
                 children: [
                     (0, i.jsx)(s.Checkbox, {

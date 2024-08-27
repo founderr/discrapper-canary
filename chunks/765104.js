@@ -18,8 +18,8 @@ var o,
     A = n(430824),
     N = n(306680),
     O = n(944486),
-    R = n(9156),
-    v = n(594174),
+    v = n(9156),
+    R = n(594174),
     C = n(70956),
     y = n(709054),
     D = n(418088),
@@ -48,7 +48,7 @@ class F extends (l = h.ZP.PersistedStore) {
     }
     initialize(e) {
         var t;
-        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(S.Z, v.default, O.Z, A.Z, T.Z), this.syncWith([g.Z], B);
+        (r = null === (t = null == e ? void 0 : e.shouldShowTopicsBar) || void 0 === t || t), this.waitFor(S.Z, R.default, O.Z, A.Z, T.Z), this.syncWith([g.Z], B);
     }
     allSummaries() {
         return b;
@@ -117,7 +117,7 @@ class F extends (l = h.ZP.PersistedStore) {
             r &&
                 (a = a.filter((e) => {
                     let t = S.Z.getChannel(e);
-                    return null != t && !R.ZP.isChannelMuted(t.guild_id, e) && N.ZP.hasUnread(e);
+                    return null != t && !v.ZP.isChannelMuted(t.guild_id, e) && N.ZP.hasUnread(e);
                 })),
             (a = a.filter((e) => {
                 let t = S.Z.getChannel(e);

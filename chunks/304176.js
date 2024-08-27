@@ -29,15 +29,15 @@ t.Z = (e) => {
             ...(0, o.v_)(f.Z.getChannel(p.Z.getChannelId(n.id)))
         });
     }, []);
-    let R = (0, a.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
-        v = (0, _.Z)(R),
-        C = v ? A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({ name: O }) : A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({ name: O }),
+    let v = (0, a.e7)([h.Z], () => (null != t.roleId ? h.Z.getRole(n.id, t.roleId) : void 0)),
+        R = (0, _.Z)(v),
+        C = R ? A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION_ROLE_SUBSCRIPTIONS.format({ name: O }) : A.Z.Messages.ROLE_ICON_POPOUT_DESCRIPTION.format({ name: O }),
         y = {
             ...t,
             src: null == t.src ? t.src : (0, c.o)(t.src, 40),
             size: 40
         },
-        D = v
+        D = R
             ? () => {
                   (0, E.uL)(g.Z5c.CHANNEL(n.id, S.oC.ROLE_SUBSCRIPTIONS));
               }

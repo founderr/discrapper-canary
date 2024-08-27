@@ -17,8 +17,8 @@ var i,
     d = n.n(c),
     u = n(143927),
     _ = n(442837),
-    h = n(481060),
-    E = n(110924),
+    E = n(481060),
+    h = n(110924),
     m = n(970606),
     I = n(594174),
     g = n(51144),
@@ -53,7 +53,7 @@ t.ZP = o.memo(function (e) {
         { loaded: D, clans: y, searchResult: j, searchCriteria: U } = (0, f.ML)(M, 'saved_guilds' === x),
         G = (0, N.GN)((e) => e.selectedTraits, u.Z),
         k = (0, N.GN)((e) => e.selectedGames, u.Z),
-        w = (0, E.Z)(j),
+        w = (0, h.Z)(j),
         { currentPage: B, updatePage: H, totalItems: V, pageSize: F } = (0, C.$)(),
         Y = (0, _.e7)([I.default], () => I.default.getCurrentUser());
     o.useEffect(() => {
@@ -208,7 +208,7 @@ t.ZP = o.memo(function (e) {
                         return (0, l.jsx)(l.Fragment, {
                             children:
                                 V > F &&
-                                (0, l.jsx)(h.Paginator, {
+                                (0, l.jsx)(E.Paginator, {
                                     className: d()(O.paginationInput),
                                     totalCount: V,
                                     pageSize: F,
@@ -247,12 +247,12 @@ t.ZP = o.memo(function (e) {
         ? (0, l.jsxs)('div', {
               className: O.emptySavedGuilds,
               children: [
-                  (0, l.jsx)(h.Heading, {
+                  (0, l.jsx)(E.Heading, {
                       variant: 'heading-md/medium',
                       color: 'header-primary',
                       children: L.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
                   }),
-                  (0, l.jsx)(h.Text, {
+                  (0, l.jsx)(E.Text, {
                       variant: 'text-sm/medium',
                       color: 'header-secondary',
                       children: L.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
@@ -263,12 +263,12 @@ t.ZP = o.memo(function (e) {
           ? (0, l.jsxs)('div', {
                 className: O.emptySavedGuilds,
                 children: [
-                    (0, l.jsx)(h.Heading, {
+                    (0, l.jsx)(E.Heading, {
                         variant: 'heading-md/medium',
                         color: 'header-primary',
                         children: L.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
                     }),
-                    (0, l.jsx)(h.Text, {
+                    (0, l.jsx)(E.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         children: L.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION

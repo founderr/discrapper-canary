@@ -6,14 +6,14 @@ t.d(n, {
 var s = t(735250);
 t(470079);
 var r = t(120356),
-    l = t.n(r),
-    i = t(937615),
+    i = t.n(r),
+    l = t(937615),
     a = t(474936),
     c = t(689938),
     o = t(25817);
 function u(e) {
     let { price: n, currency: t, intervalType: r, className: u, intervalCount: I = 1, isPrepaidPaymentSource: _ = !1 } = e,
-        E = (0, i.T4)(n, t),
+        E = (0, l.T4)(n, t),
         T = null;
     return (
         r === a.rV.YEAR
@@ -27,7 +27,7 @@ function u(e) {
                     intervalCount: I
                 })),
         (0, s.jsx)('div', {
-            className: l()(o.pricePerInterval, u),
+            className: i()(o.pricePerInterval, u),
             'data-testid': 'PricePerInterval-'.concat(t),
             children: null == r || _ ? (0, s.jsx)('strong', { children: E }) : T
         })

@@ -27,7 +27,7 @@ n.d(t, {
         return U;
     },
     _p: function () {
-        return v;
+        return R;
     },
     aq: function () {
         return M;
@@ -36,7 +36,7 @@ n.d(t, {
         return N;
     },
     e9: function () {
-        return R;
+        return v;
     },
     f2: function () {
         return L;
@@ -302,7 +302,7 @@ function O(e) {
             throw Error('Not a valid tier type');
     }
 }
-function R(e) {
+function v(e) {
     switch (e) {
         case f.Eu4.NONE:
             return p.Z.Messages.PREMIUM_GUILD_TIER_0;
@@ -316,7 +316,7 @@ function R(e) {
             throw Error('Not a valid tier type');
     }
 }
-let v = s().memoize((e) => (h.HO[f.Eu4.TIER_1].features.includes(e) ? f.Eu4.TIER_1 : h.HO[f.Eu4.TIER_2].features.includes(e) ? f.Eu4.TIER_2 : h.HO[f.Eu4.TIER_3].features.includes(e) ? f.Eu4.TIER_3 : null)),
+let R = s().memoize((e) => (h.HO[f.Eu4.TIER_1].features.includes(e) ? f.Eu4.TIER_1 : h.HO[f.Eu4.TIER_2].features.includes(e) ? f.Eu4.TIER_2 : h.HO[f.Eu4.TIER_3].features.includes(e) ? f.Eu4.TIER_3 : null)),
     C = (e) => {
         if (e === f.Eu4.NONE) return f.Qqv.NONE;
         if (e === f.Eu4.TIER_1) return f.Qqv.TIER_1;

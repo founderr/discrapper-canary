@@ -22,12 +22,12 @@ async function I(e) {
         { applicationId: n, activityChannelId: I, locationObject: m, analyticsLocations: T, componentId: g, commandOrigin: S, sectionName: A } = e,
         N = (0, _.Z)(),
         O = i.Z.getChannel(I),
-        R = null == O ? void 0 : O.getGuildId(),
-        v = null == R || '' === R,
+        v = null == O ? void 0 : O.getGuildId(),
+        R = null == v || '' === v,
         C = s.default.getCurrentUser();
-    if (null == O || (v && !O.isPrivate()) || null == I || null == C) return Promise.resolve(!1);
+    if (null == O || (R && !O.isPrivate()) || null == I || null == C) return Promise.resolve(!1);
     let y = u.ZP.getCurrentEmbeddedActivity();
-    if (((null == y ? void 0 : y.applicationId) != null && (t = r.Z.getApplication(null == y ? void 0 : y.applicationId)), a.Z.getVoiceChannelId() === I && (null == y ? void 0 : y.applicationId) === n && (null == y ? void 0 : y.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(R, I), Promise.resolve(!0);
+    if (((null == y ? void 0 : y.applicationId) != null && (t = r.Z.getApplication(null == y ? void 0 : y.applicationId)), a.Z.getVoiceChannelId() === I && (null == y ? void 0 : y.applicationId) === n && (null == y ? void 0 : y.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(v, I), Promise.resolve(!0);
     if (
         !(await (0, c.p)({
             applicationId: n,

@@ -33,8 +33,8 @@ async function R() {
         'Minimize' === i ? h.ZP.minimize() : 'Maximize' === i && h.ZP.maximize();
     }
 }
-function x(e) {
-    let { children: t, className: n, channelId: s, guildId: a, innerClassname: o, transparent: c = !1, toolbar: T, mobileToolbar: h, 'aria-label': g, 'aria-labelledby': S, scrollable: x, role: O, hideSearch: M, showDivider: v } = e,
+function O(e) {
+    let { children: t, className: n, channelId: s, guildId: a, innerClassname: o, transparent: c = !1, toolbar: T, mobileToolbar: h, 'aria-label': g, 'aria-labelledby': S, scrollable: O, role: x, hideSearch: M, showDivider: v } = e,
         L = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
         Z = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1,
         { enabled: P } = _.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
@@ -54,12 +54,12 @@ function x(e) {
         onDoubleClick: R,
         'aria-label': g,
         'aria-labelledby': S,
-        role: O,
-        scrollable: x,
+        role: x,
+        scrollable: O,
         children: t
     });
 }
-function O(e) {
+function x(e) {
     let { children: t, className: n, 'aria-label': s, 'aria-labelledby': a, role: r } = e;
     return (0, i.jsx)(N.ZP, {
         className: n,
@@ -77,11 +77,11 @@ function M(e) {
     return (0, i.jsx)(c.Gt, {
         value: s,
         children: t
-            ? (0, i.jsx)(x, {
+            ? (0, i.jsx)(O, {
                   ...n,
                   className: r
               })
-            : (0, i.jsx)(O, {
+            : (0, i.jsx)(x, {
                   ...n,
                   className: r
               })

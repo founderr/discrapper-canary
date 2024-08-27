@@ -6,7 +6,7 @@ n.d(t, {
         return O;
     },
     _2: function () {
-        return v;
+        return R;
     },
     bE: function () {
         return A;
@@ -95,7 +95,7 @@ let N = (e) => {
             n = (0, d.ZP)();
         return null != t && ['twitch', 'youtube'].includes(e) ? "url('".concat((0, c.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null;
     };
-function R(e) {
+function v(e) {
     return {
         userId: e.user_id,
         sourceInviteCode: e.source_invite_code,
@@ -104,7 +104,7 @@ function R(e) {
         integrationType: e.integration_type
     };
 }
-async function v(e, t) {
+async function R(e, t) {
     let n = m(e, t),
         r = n.filter((e) => p[e] <= 1).map(T);
     if (0 === r.length) return [];
@@ -115,7 +115,7 @@ async function v(e, t) {
             body: { user_ids: r }
         });
         if (!Array.isArray(t.body)) return g(n, 0), [];
-        let i = t.body.map(R),
+        let i = t.body.map(v),
             a = [];
         i.forEach((e) => {
             let { userId: t } = e;

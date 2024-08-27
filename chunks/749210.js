@@ -27,8 +27,8 @@ var r = n(990547),
     A = n(944486),
     N = n(914010),
     O = n(594174),
-    R = n(626135),
-    v = n(700785),
+    v = n(626135),
+    R = n(700785),
     C = n(74538),
     y = n(573261),
     D = n(668781),
@@ -235,7 +235,7 @@ t.Z = {
         let r = {
             name: null != t && '' !== t ? t : b.Z.Messages.NEW_ROLE,
             color: null != n ? n : 0,
-            permissions: v.Hn
+            permissions: R.Hn
         };
         try {
             let t = await a.tn.post({
@@ -356,7 +356,7 @@ t.Z = {
         });
     },
     createGuildFolderLocal(e, t) {
-        R.default.track(L.rMx.GUILD_FOLDER_CREATED),
+        v.default.track(L.rMx.GUILD_FOLDER_CREATED),
             s.Z.dispatch({
                 type: 'GUILD_FOLDER_CREATE_LOCAL',
                 sourceIds: e,
@@ -379,7 +379,7 @@ t.Z = {
     },
     toggleGuildFolderExpand(e) {
         let t = T.Z.isFolderExpanded(e);
-        R.default.track(L.rMx.GUILD_FOLDER_CLICKED, {
+        v.default.track(L.rMx.GUILD_FOLDER_CLICKED, {
             source: 'sidebar',
             action: t ? 'collapsed' : 'expanded'
         }),

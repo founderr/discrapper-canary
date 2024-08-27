@@ -10,15 +10,15 @@ t.Z = (e) => {
     let { layerConfig: d, animationType: _, ticking: E, time: f, accessibilityLabel: h, hasPlayedThrough: p, setHasPlayedThrough: I, urlQueryString: m, maxLoops: T, loopEnd: g, bannerAdjustment: S } = e,
         A = (0, a.nY)('Profile Effect - Web'),
         N = i.useRef(null),
-        [O, R] = i.useState(!1),
-        v = !0;
-    if ((!E && (v = !1), f < d.start && (v = !1), !d.loop && f > d.duration + d.start && (v = !1), _ === o.Q.PERSISTENT && !p && null != T && f >= g && I(!0), d.loop && void 0 !== d.loopDelay && d.loopDelay > 0)) {
+        [O, v] = i.useState(!1),
+        R = !0;
+    if ((!E && (R = !1), f < d.start && (R = !1), !d.loop && f > d.duration + d.start && (R = !1), _ === o.Q.PERSISTENT && !p && null != T && f >= g && I(!0), d.loop && void 0 !== d.loopDelay && d.loopDelay > 0)) {
         let e = d.duration + d.loopDelay,
             t = Math.floor((f - d.start) / e);
-        f - d.start - t * e > d.duration && (_ === o.Q.INTERMITTENT && !p && null != T && t >= T && I(!0), (v = !1));
+        f - d.start - t * e > d.duration && (_ === o.Q.INTERMITTENT && !p && null != T && t >= T && I(!0), (R = !1));
     }
     return A
-        ? (null != N.current && O !== v && (!v && N.current.pause(), v && ((N.current.currentTime = 0), N.current.play()), R(v)),
+        ? (null != N.current && O !== R && (!R && N.current.pause(), R && ((N.current.currentTime = 0), N.current.play()), v(R)),
           (0, r.jsx)('video', {
               muted: !0,
               autoPlay: !0,
@@ -26,9 +26,9 @@ t.Z = (e) => {
               className: l.effect,
               ref: N,
               src: d.src,
-              style: { opacity: v ? 1 : 0 }
+              style: { opacity: R ? 1 : 0 }
           }))
-        : v
+        : R
           ? (0, r.jsx)('img', {
                 src: null != m ? ''.concat(d.src, '?query=').concat(m) : d.src,
                 className: l.effect,

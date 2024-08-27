@@ -25,8 +25,8 @@ var i = n(735250),
     N = n(855981),
     x = n(55543),
     S = n(626135),
-    Z = n(768581),
-    v = n(358085),
+    v = n(768581),
+    Z = n(358085),
     T = n(998502),
     L = n(379164),
     A = n(590965),
@@ -137,7 +137,7 @@ function w(e) {
     });
     let { invite: f, error: C, submitting: N } = (0, s.cj)([A.Z], () => A.Z.getProps());
     l.useEffect(() => {
-        !__OVERLAY__ && v.isPlatformEmbedded && ((0, v.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
+        !__OVERLAY__ && Z.isPlatformEmbedded && ((0, Z.isWindows)() ? T.ZP.minimize() : T.ZP.restore(), T.ZP.focus());
     }, []);
     let x = (0, g.Dt)(),
         { analyticsLocations: S } = (0, d.ZP)(u.Z.INVITE_MODAL);
@@ -154,7 +154,7 @@ function w(e) {
     if (null != U) (t = null == j ? void 0 : j.name), (n = I.Z.createFromServer(U).getCoverImageURL(1024));
     else if (null != j)
         (t = j.name),
-            (n = Z.ZP.getGuildSplashURL({
+            (n = v.ZP.getGuildSplashURL({
                 id: j.id,
                 splash: j.splash
             }));

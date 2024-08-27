@@ -9,8 +9,8 @@ t.d(n, {
 var s = t(735250);
 t(470079);
 var r = t(512722),
-    l = t.n(r),
-    i = t(481060),
+    i = t.n(r),
+    l = t(481060),
     a = t(906732),
     c = t(598),
     o = t(74538),
@@ -21,13 +21,13 @@ var r = t(512722),
     T = t(357831),
     d = t(74316);
 function N(e) {
-    let { purchaseType: n, plan: t, premiumSubscription: s, isGift: r, planGroup: i, isPrepaidPaymentSource: a, inReverseTrial: c } = e;
+    let { purchaseType: n, plan: t, premiumSubscription: s, isGift: r, planGroup: l, isPrepaidPaymentSource: a, inReverseTrial: c } = e;
     if (n === _.GZ.ONE_TIME) return r ? E.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT : E.Z.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
-    if ((l()(null != t, 'Subscription plan must be selected to render SubscriptionReviewButton'), r)) return E.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
+    if ((i()(null != t, 'Subscription plan must be selected to render SubscriptionReviewButton'), r)) return E.Z.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
     if (c) return E.Z.Messages.BILLING_SELECT_PLAN_PREMIUM_MONTH_TIER_2;
     if ((0, o.PV)(t.id)) {
         if (a) return E.Z.Messages.BILLING_SELECT_PLAN;
-        if (null != s) return s.isPaused ? E.Z.Messages.RESUME : (0, u.R4)(s, t.id, i) ? E.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : E.Z.Messages.BILLING_SWITCH_PLAN_CHANGE;
+        if (null != s) return s.isPaused ? E.Z.Messages.RESUME : (0, u.R4)(s, t.id, l) ? E.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE : E.Z.Messages.BILLING_SWITCH_PLAN_CHANGE;
         return (0, o.W_)(null, t);
     }
     return E.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN;
@@ -36,7 +36,7 @@ function M(e, n) {
     null != e.current && (e.current.scrollIntoView({ behavior: 'smooth' }), n());
 }
 function A(e) {
-    let { legalTermsNodeRef: n, invoiceError: t, planError: r, disablePurchase: l, flashLegalTerms: o, isSubmitting: u, premiumSubscription: _, isGift: A, planGroup: L, isPrepaid: P, isTrial: R, makePurchase: S, needsPaymentSource: m, inReverseTrial: U, onNext: p } = e,
+    let { legalTermsNodeRef: n, invoiceError: t, planError: r, disablePurchase: i, flashLegalTerms: o, isSubmitting: u, premiumSubscription: _, isGift: A, planGroup: L, isPrepaid: P, isTrial: R, makePurchase: m, needsPaymentSource: S, inReverseTrial: U, onNext: p } = e,
         { selectedPlan: O, hasAcceptedTerms: v, purchaseType: C, paymentSourceId: h, activeSubscription: f } = (0, c.usePaymentContext)(),
         g = N({
             purchaseType: C,
@@ -48,19 +48,19 @@ function A(e) {
             inReverseTrial: U
         }),
         { analyticsLocations: Z } = (0, a.ZP)();
-    if (null != t || null != r || l)
-        return (0, s.jsx)(i.Button, {
-            color: i.Button.Colors.GREEN,
+    if (null != t || null != r || i)
+        return (0, s.jsx)(l.Button, {
+            color: l.Button.Colors.GREEN,
             disabled: !0,
             children: g
         });
-    if (m)
-        return (0, s.jsx)(i.Tooltip, {
+    if (S)
+        return (0, s.jsx)(l.Tooltip, {
             text: E.Z.Messages.BILLING_SELECT_PAYMENT_SOURCE_TOOLTIP,
             children: (e) =>
-                (0, s.jsx)(i.Button, {
+                (0, s.jsx)(l.Button, {
                     ...e,
-                    color: i.Button.Colors.GREEN,
+                    color: l.Button.Colors.GREEN,
                     type: 'submit',
                     'data-testid': 'submitButton',
                     disabled: !0,
@@ -68,11 +68,11 @@ function A(e) {
                 })
         });
     if (R)
-        return (0, s.jsxs)(i.ShinyButton, {
+        return (0, s.jsxs)(l.ShinyButton, {
             innerClassName: T.innerButton,
             'data-testid': v ? 'purchase' : 'submitButton',
-            onClick: v ? S : () => M(n, o),
-            color: i.Button.Colors.GREEN,
+            onClick: v ? m : () => M(n, o),
+            color: l.Button.Colors.GREEN,
             submitting: u,
             children: [
                 (0, s.jsx)('img', {
@@ -84,12 +84,12 @@ function A(e) {
             ]
         });
     else if (!v)
-        return (0, s.jsx)(i.Tooltip, {
+        return (0, s.jsx)(l.Tooltip, {
             text: E.Z.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP,
             children: (e) =>
-                (0, s.jsx)(i.Button, {
+                (0, s.jsx)(l.Button, {
                     ...e,
-                    color: i.Button.Colors.GREEN,
+                    color: l.Button.Colors.GREEN,
                     type: 'submit',
                     onClick: () => M(n, o),
                     'data-testid': 'submitButton',
@@ -106,10 +106,10 @@ function A(e) {
             analyticsLocations: Z
         });
     else
-        return (0, s.jsx)(i.Button, {
+        return (0, s.jsx)(l.Button, {
             'data-testid': 'purchase',
-            onClick: S,
-            color: i.Button.Colors.GREEN,
+            onClick: m,
+            color: l.Button.Colors.GREEN,
             submitting: u,
             children: g
         });

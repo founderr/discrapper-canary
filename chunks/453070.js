@@ -21,10 +21,10 @@ n.d(t, {
         return O;
     },
     fP: function () {
-        return v;
+        return R;
     },
     fQ: function () {
-        return R;
+        return v;
     },
     t$: function () {
         return N;
@@ -53,7 +53,7 @@ var r = n(470079),
     g = n(981631),
     S = n(689938);
 let A = (e) => {
-        v();
+        R();
         let t = (0, i.e7)([I.Z], () => I.Z.hasLoadedStickerPacks);
         r.useEffect(() => {
             t && null == I.Z.getStickerPack(e) && (0, h.FQ)(e);
@@ -129,7 +129,7 @@ let A = (e) => {
             };
         }, [t, n, i, s, o, c, d]);
     },
-    R = (e) => {
+    v = (e) => {
         let t = (0, i.e7)([d.default], () => d.default.getCurrentUser());
         return (0, i.e7)(
             [I.Z],
@@ -140,7 +140,7 @@ let A = (e) => {
             [t, e]
         );
     },
-    v = () => {
+    R = () => {
         r.useEffect(() => {
             (0, h.$p)();
         }, []);

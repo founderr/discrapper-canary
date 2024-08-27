@@ -26,8 +26,8 @@ var r = n(735250),
     A = n(594174),
     N = n(979651),
     O = n(912787),
-    R = n(623552),
-    v = n(718582),
+    v = n(623552),
+    R = n(718582),
     C = n(177963),
     y = n(835248),
     D = n(437431),
@@ -100,13 +100,13 @@ function B(e) {
             return g.Z.getChannel(e);
         }),
         Y = (0, l.e7)([f.ZP], () => f.ZP.getActiveEventByChannel(null == Z ? void 0 : Z.id)),
-        { usersToShow: j, othersCount: W } = (0, v.QO)(null !== (n = null == Z ? void 0 : Z.id) && void 0 !== n ? n : '', c),
-        { usersToShow: K } = (0, v.Es)(Z),
-        z = (0, v.ni)(a),
+        { usersToShow: j, othersCount: W } = (0, R.QO)(null !== (n = null == Z ? void 0 : Z.id) && void 0 !== n ? n : '', c),
+        { usersToShow: K } = (0, R.Es)(Z),
+        z = (0, R.ni)(a),
         q = (function (e, t, n, i) {
             let { category: a } = e,
                 s = (0, O.Z)(e),
-                { usersToShow: c } = (0, v.Es)(s),
+                { usersToShow: c } = (0, R.Es)(s),
                 _ = (0, l.e7)([T.Z], () => (a === M.L.HANGOUT ? T.Z.getIsPreviewLoading(t, e.channelId, e.streamUserIds[0]) : null));
             switch (a) {
                 case M.L.GAMING:
@@ -123,7 +123,7 @@ function B(e) {
                     });
                 case M.L.EVENT:
                     if (c.length > 0)
-                        return (0, r.jsx)(R.Z, {
+                        return (0, r.jsx)(v.Z, {
                             guildId: t,
                             users: c
                         });
@@ -145,7 +145,7 @@ function B(e) {
                         d = l ? c : [];
                     if (l) {
                         if (0 === d.length) return (0, r.jsx)(D.Z, { className: x.imageIcon });
-                        return (0, r.jsx)(R.Z, {
+                        return (0, r.jsx)(v.Z, {
                             guildId: t,
                             users: d
                         });
@@ -173,13 +173,13 @@ function B(e) {
                                 ]
                             });
                         let a = i.map((e) => A.default.getUser(e)).filter((e) => null != e);
-                        return (0, r.jsx)(R.Z, {
+                        return (0, r.jsx)(v.Z, {
                             guildId: t,
                             users: a
                         });
                     }
                     let E = a.map((e) => A.default.getUser(e)).filter((e) => null != e);
-                    return (0, r.jsx)(R.Z, {
+                    return (0, r.jsx)(v.Z, {
                         guildId: t,
                         users: E
                     });
@@ -188,23 +188,23 @@ function B(e) {
         })(a, c, F, z),
         Q = (function (e, t) {
             let { category: n } = e,
-                i = (0, v.FP)(n === M.L.HANGOUT ? (null == e ? void 0 : e.userIds) : []),
-                a = (0, v.FP)(n === M.L.HANGOUT ? (null == e ? void 0 : e.streamUserIds) : []),
-                o = (0, v.FP)(n === M.L.GAMING ? (null == e ? void 0 : e.gameUserIds) : []),
+                i = (0, R.FP)(n === M.L.HANGOUT ? (null == e ? void 0 : e.userIds) : []),
+                a = (0, R.FP)(n === M.L.HANGOUT ? (null == e ? void 0 : e.streamUserIds) : []),
+                o = (0, R.FP)(n === M.L.GAMING ? (null == e ? void 0 : e.gameUserIds) : []),
                 l = (0, O.Z)(e),
-                { hasChannelStatus: c } = (0, v.CE)(l),
-                { usersToShow: d } = (0, v.Es)(l),
-                _ = (0, v.FP)(n === M.L.HANGOUT && e.isStage ? d.map((e) => e.id) : []),
+                { hasChannelStatus: c } = (0, R.CE)(l),
+                { usersToShow: d } = (0, R.Es)(l),
+                _ = (0, R.FP)(n === M.L.HANGOUT && e.isStage ? d.map((e) => e.id) : []),
                 E = new Set();
             n === M.L.EMBEDDED_ACTIVITY &&
                 e.embeddedActivities.forEach((e) => {
                     E = new Set([...E, ...e.userIds]);
                 });
-            let f = (0, v.FP)(n === M.L.EMBEDDED_ACTIVITY ? [...E] : []);
+            let f = (0, R.FP)(n === M.L.EMBEDDED_ACTIVITY ? [...E] : []);
             switch (n) {
                 case M.L.HANGOUT: {
                     if (c && 0 === a.length) {
-                        let e = (0, v.K6)(i, t, !0),
+                        let e = (0, R.K6)(i, t, !0),
                             n = i.length - 1;
                         return (0, r.jsxs)('div', {
                             className: x.hangoutStatusTitleContainer,
@@ -225,7 +225,7 @@ function B(e) {
                             ]
                         });
                     }
-                    let n = (0, v.K6)(_.length > 0 ? _ : a.length > 0 ? a : i, t);
+                    let n = (0, R.K6)(_.length > 0 ? _ : a.length > 0 ? a : i, t);
                     if (e.isStage) {
                         var h, p;
                         return null !== (p = null === (h = m.Z.getStageInstanceByChannel(e.channelId)) || void 0 === h ? void 0 : h.topic) && void 0 !== p ? p : n;
@@ -235,9 +235,9 @@ function B(e) {
                 case M.L.EVENT:
                     return e.event.name;
                 case M.L.EMBEDDED_ACTIVITY:
-                    return (0, v.K6)(f, t);
+                    return (0, R.K6)(f, t);
                 case M.L.GAMING:
-                    return (0, v.K6)(o, t);
+                    return (0, R.K6)(o, t);
                 default:
                     return null;
             }
@@ -247,8 +247,8 @@ function B(e) {
             let { category: o } = e,
                 l = (0, O.Z)(e),
                 c = G(e),
-                { audienceCount: d } = (0, v.Es)(l),
-                { channelStatus: _, hasChannelStatus: E } = (0, v.CE)(l);
+                { audienceCount: d } = (0, R.Es)(l),
+                { channelStatus: _, hasChannelStatus: E } = (0, R.CE)(l);
             switch (o) {
                 case M.L.GAMING:
                     let { games: f, channelId: p } = e;
@@ -277,7 +277,7 @@ function B(e) {
                     });
                 case M.L.EVENT:
                     let { event: I } = e,
-                        m = (0, v.NZ)(I),
+                        m = (0, R.NZ)(I),
                         T = null == m ? void 0 : m.IconComponent,
                         S = null == m ? void 0 : m.locationName;
                     if (null != T && null != S)
@@ -396,7 +396,7 @@ function B(e) {
         $ = (function (e) {
             let { category: t } = e,
                 n = (0, O.Z)(e),
-                { audienceCount: r } = (0, v.Es)(n);
+                { audienceCount: r } = (0, R.Es)(n);
             switch (t) {
                 case M.L.EVENT:
                     if (null != r)
@@ -452,7 +452,7 @@ function B(e) {
                     return [];
             }
         })(a),
-        J = (0, v.$1)(a, c, _),
+        J = (0, R.$1)(a, c, _),
         ee = (function (e, t, n) {
             var i;
             let { category: a } = e,
@@ -462,14 +462,14 @@ function B(e) {
             let l = null != s && N.Z.isInChannel(s),
                 c = o && (e.event.entity_type === U.WX.EXTERNAL || e.event.entity_type === U.WX.NONE) ? w.Z.Messages.VIEW : l ? w.Z.Messages.GUILD_POPOUT_JOINED : w.Z.Messages.JOIN,
                 d = (null === (i = g.Z.getChannel(s)) || void 0 === i ? void 0 : i.isGuildVocal()) && !S.Z.can(P.Plq.CONNECT, g.Z.getChannel(s)),
-                _ = (0, v.DE)(e, t),
+                _ = (0, R.DE)(e, t),
                 E = (0, r.jsxs)(u.Button, {
                     size: u.Button.Sizes.MIN,
                     innerClassName: x.joinButtonInner,
                     color: u.Button.Colors.GREEN,
                     disabled: l || d,
                     onClick: (r) => {
-                        r.stopPropagation(), (0, v.ob)(e, t, n, v.pV.JOIN_BUTTON), null == _ || _();
+                        r.stopPropagation(), (0, R.ob)(e, t, n, R.pV.JOIN_BUTTON), null == _ || _();
                     },
                     className: x.joinButton,
                     children: [
@@ -488,7 +488,7 @@ function B(e) {
                 children: E
             });
         })(a, c, _),
-        { hasChannelStatus: et } = (0, v.CE)(Z),
+        { hasChannelStatus: et } = (0, R.CE)(Z),
         en = G(a),
         er = y === M.L.HANGOUT && et && null == F,
         ei = (null != Y || !!(null == Z ? void 0 : Z.isGuildStageVoice())) && K.length > 0,

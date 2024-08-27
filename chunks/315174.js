@@ -103,7 +103,7 @@ function x() {
 }
 t.ZP = l.memo(function (e) {
     var t;
-    let { bannerVisible: n, controller: r, className: s, onClick: S, onContextMenu: Z, onMouseDown: v, disableBannerAnimation: T, 'aria-expanded': L, 'aria-controls': A, guild: b, guildBanner: M, animationOverlayHeight: R, children: P, headerClassName: O, communityInfoVisible: y, hasSubheader: j } = e,
+    let { bannerVisible: n, controller: r, className: s, onClick: S, onContextMenu: v, onMouseDown: Z, disableBannerAnimation: T, 'aria-expanded': L, 'aria-controls': A, guild: b, guildBanner: M, animationOverlayHeight: R, children: P, headerClassName: O, communityInfoVisible: y, hasSubheader: j } = e,
         D = b.hasFeature(g.oNc.ANIMATED_BANNER),
         w = (0, d.Z)(b),
         G = !w && b.hasCommunityInfoSubheader(),
@@ -146,8 +146,8 @@ t.ZP = l.memo(function (e) {
                     [(0, _.Q)(g.BRd.DARK)]: n,
                     [I.communityInfoVisible]: (!w && y) || (j && G)
                 }),
-                onMouseDown: v,
-                onContextMenu: Z,
+                onMouseDown: Z,
+                onContextMenu: v,
                 onClick: S,
                 children: [
                     Y
@@ -179,7 +179,7 @@ t.ZP = l.memo(function (e) {
                                                       offset: 4
                                                   },
                                                   onClick: S,
-                                                  onContextMenu: Z,
+                                                  onContextMenu: v,
                                                   'aria-label': C.Z.Messages.GUILD_SIDEBAR_ACTIONS_BUTTON.format({ guildName: null !== (t = null == b ? void 0 : b.toString()) && void 0 !== t ? t : '' })
                                               }),
                                           (0, i.jsx)('div', {

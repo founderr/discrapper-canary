@@ -36,11 +36,11 @@ function N(e, t, n) {
     }
 }
 let O = !1,
-    R = (e) => 'guild-join-request='.concat(e),
-    v = (e, t) => 'guild-'.concat(e, '-').concat(t);
+    v = (e) => 'guild-join-request='.concat(e),
+    R = (e, t) => 'guild-'.concat(e, '-').concat(t);
 function C(e) {
     let t = [];
-    return t.push(R(e.joinRequestId)), t.push(v(e.guildId, e.applicationStatus)), t;
+    return t.push(v(e.joinRequestId)), t.push(R(e.guildId, e.applicationStatus)), t;
 }
 let y = new c.h(C, (e) => ''.concat(e.joinRequestId)),
     D = new c.h(C, (e) => ''.concat(e.joinRequestId)),
@@ -70,7 +70,7 @@ class B extends (r = u.ZP.Store) {
         return G[e];
     }
     getRequests(e, t) {
-        let n = v(e, t);
+        let n = R(e, t);
         return (0, h.bk)(t) ? L.values(n) : (0, h.Nd)(t) ? D.values(n) : y.values(n);
     }
     getSubmittedGuildJoinRequestTotal(e) {
@@ -130,7 +130,7 @@ class B extends (r = u.ZP.Store) {
         },
         GUILD_JOIN_REQUESTS_BULK_ACTION: function (e) {
             let { guildId: t, action: n } = e;
-            y.values(v(t, p.wB.SUBMITTED)).forEach((e) => {
+            y.values(R(t, p.wB.SUBMITTED)).forEach((e) => {
                 M({
                     ...e,
                     applicationStatus: n

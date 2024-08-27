@@ -25,8 +25,8 @@ var r = n(735250),
     A = n(67152),
     N = n(579285),
     O = n(287612),
-    R = n(228168),
-    v = n(981631),
+    v = n(228168),
+    R = n(981631),
     C = n(122269);
 function y(e) {
     let { user: t, currentUser: n, displayProfile: y, guild: D, isHovering: L, onOpenProfile: b, channelId: M, onClose: P } = e,
@@ -36,7 +36,7 @@ function y(e) {
         G = (0, o.Z)('username'),
         k = i.useMemo(
             () => ({
-                source: v.jXE.BITE_SIZE_PROFILE_POPOUT,
+                source: R.jXE.BITE_SIZE_PROFILE_POPOUT,
                 tagUserId: t.id
             }),
             [t.id]
@@ -48,7 +48,7 @@ function y(e) {
         children: [
             (0, r.jsx)(m.Z, {
                 user: t,
-                profileType: R.y0.BITE_SIZE,
+                profileType: v.y0.BITE_SIZE,
                 onOpenProfile: b,
                 usernameIcon:
                     t.hasAvatarForGuild(null == D ? void 0 : D.id) &&
@@ -60,7 +60,7 @@ function y(e) {
                 pronouns: null == y ? void 0 : y.pronouns,
                 tags: (0, r.jsx)(E.Z, {
                     displayProfile: y,
-                    profileType: R.y0.BITE_SIZE,
+                    profileType: v.y0.BITE_SIZE,
                     onClose: P
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
@@ -75,7 +75,7 @@ function y(e) {
                     ]
                 })
             }),
-            w === v.OGo.PENDING_INCOMING &&
+            w === R.OGo.PENDING_INCOMING &&
                 (0, r.jsx)(I.Z.Overlay, {
                     children: (0, r.jsx)(p.Z, {
                         user: t,

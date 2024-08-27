@@ -36,7 +36,7 @@ n.d(t, {
         return C;
     },
     dr: function () {
-        return R;
+        return v;
     },
     fY: function () {
         return S;
@@ -104,7 +104,7 @@ function O(e) {
         type: 0
     };
 }
-function R(e) {
+function v(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -129,7 +129,7 @@ function R(e) {
         type: e.type
     };
 }
-function v(e) {
+function R(e) {
     return {
         id: e.id,
         options: e.options.map((e) => {
@@ -154,7 +154,7 @@ function v(e) {
 function C(e) {
     var t, n, r;
     return {
-        prompts: e.prompts.map(v),
+        prompts: e.prompts.map(R),
         defaultChannelIds: e.default_channel_ids,
         responses: null !== (t = e.responses) && void 0 !== t ? t : [],
         mode: e.mode,

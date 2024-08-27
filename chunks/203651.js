@@ -313,7 +313,7 @@ for (var N = 0, O = ['GET', 'POST', 'OPTIONS', 'PATCH', 'PUT', 'DELETE']; N < O.
         return this._setDefaults(r), n && r.end(n), r;
     };
 }
-function R(e, t, n) {
+function v(e, t, n) {
     let r = p('DELETE', e);
     return 'function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
 }
@@ -330,8 +330,8 @@ function R(e, t, n) {
         let r = p('OPTIONS', e);
         return 'function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
     }),
-    (p.del = R),
-    (p.delete = R),
+    (p.del = v),
+    (p.delete = v),
     (p.patch = (e, t, n) => {
         let r = p('PATCH', e);
         return 'function' == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;

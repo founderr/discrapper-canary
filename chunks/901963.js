@@ -32,9 +32,9 @@ t.Z = (e) => {
         null == N || !(0, f.zV)(N.status) || a)
     )
         return null;
-    let R = N.status === p.O0b.PAST_DUE ? (0, f.lY)(N).expiresDate : s()(N.currentPeriodStart).add(I.gh),
-        v = ''.concat(N.id, ':').concat(R.toISOString());
-    if (S === v) return null;
+    let v = N.status === p.O0b.PAST_DUE ? (0, f.lY)(N).expiresDate : s()(N.currentPeriodStart).add(I.gh),
+        R = ''.concat(N.id, ':').concat(v.toISOString());
+    if (S === R) return null;
     let C = f.ZP.getPremiumType(N.planId) === I.p9.TIER_0 ? _.JX.PREMIUM_TIER_0 : f.ZP.getPremiumType(N.planId) === I.p9.TIER_1 ? _.JX.PREMIUM_TIER_1 : _.JX.PREMIUM_TIER_2;
     return (0, r.jsxs)('div', {
         className: T.premiumRetentionNotice,
@@ -51,7 +51,7 @@ t.Z = (e) => {
                         variant: 'text-xs/normal',
                         children: m.Z.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
                             planName: f.ZP.getDisplayPremiumType(N.planId),
-                            endsAt: R
+                            endsAt: v
                         })
                     }),
                     (0, r.jsx)('div', {
@@ -66,7 +66,7 @@ t.Z = (e) => {
             }),
             (0, r.jsx)(u.Clickable, {
                 onClick: () => {
-                    l.K.set(g, v), (S = v), A(!0);
+                    l.K.set(g, R), (S = R), A(!0);
                 },
                 children: (0, r.jsx)(u.XSmallIcon, {
                     size: 'md',

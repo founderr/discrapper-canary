@@ -12,7 +12,7 @@ n.d(t, {
         return O;
     },
     R2: function () {
-        return R;
+        return v;
     },
     fK: function () {
         return A;
@@ -185,7 +185,7 @@ let f = (e) => {
             ...e
         });
     },
-    R = async (e) => {
+    v = async (e) => {
         let { release: t = i.P.PROD } = e;
         s.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH' });
         let n = { platform: r.h.DESKTOP };

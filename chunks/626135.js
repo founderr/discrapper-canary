@@ -25,7 +25,7 @@ n.r(t),
             return b;
         },
         setUTMContext: function () {
-            return v;
+            return R;
         },
         trackNetworkAction: function () {
             return L;
@@ -244,12 +244,12 @@ function N(e) {
           };
 }
 let O = () => h.E.NONE,
-    R = (0, a.trackMaker)({
+    v = (0, a.trackMaker)({
         analyticEventConfigs: A,
         dispatcher: s.Z,
         TRACK_ACTION_NAME: 'TRACK'
     });
-function v(e) {
+function R(e) {
     return (m = e);
 }
 function C(e) {
@@ -328,7 +328,7 @@ t.default = {
         let r = C(t);
         return (
             y(e, r, n.logEventProperties),
-            R(e, r, {
+            v(e, r, {
                 flush: n.flush,
                 fingerprint: n.fingerprint
             })

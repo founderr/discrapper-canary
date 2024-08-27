@@ -46,8 +46,8 @@ var r,
     A = n(434650),
     N = n(367907),
     O = n(702493),
-    R = n(728345),
-    v = n(979200),
+    v = n(728345),
+    R = n(979200),
     C = n(560067),
     y = n(353926),
     D = n(341298),
@@ -163,8 +163,8 @@ function ei(e) {
         C,
         D,
         z,
-        { clientId: et, responseType: en, redirectUri: er, codeChallenge: ei, codeChallengeMethod: ea, state: es, nonce: eo, prompt: el, authorizations: eu, scopes: ec, permissions: ed, guildId: e_, channelId: eE, integrationType: ef, disableGuildSelect: eh = !1, disableContinueUntilRead: ep = !1, showLogout: eI = !1, cancelCompletesFlow: em = !0, isTrustedName: eT = !1, isEmbeddedFlow: eg = !1, inApp: eS = !1, callback: eA, callbackWithoutPost: eN, onClose: eO, disclosures: eR } = e,
-        ev = null != ef ? (null == eu ? void 0 : eu.get(ef)) : void 0,
+        { clientId: et, responseType: en, redirectUri: er, codeChallenge: ei, codeChallengeMethod: ea, state: es, nonce: eo, prompt: el, authorizations: eu, scopes: ec, permissions: ed, guildId: e_, channelId: eE, integrationType: ef, disableGuildSelect: eh = !1, disableContinueUntilRead: ep = !1, showLogout: eI = !1, cancelCompletesFlow: em = !0, isTrustedName: eT = !1, isEmbeddedFlow: eg = !1, inApp: eS = !1, callback: eA, callbackWithoutPost: eN, onClose: eO, disclosures: ev } = e,
+        eR = null != ef ? (null == eu ? void 0 : eu.get(ef)) : void 0,
         eC = (0, u.TH)(),
         ey = (0, f.e7)([y.Z], () => y.Z.hasLoadedExperiments);
     s.useEffect(() => {
@@ -184,11 +184,11 @@ function ei(e) {
         [ez, eq] = s.useState(null),
         eQ = s.useMemo(() => {
             var e;
-            return null == ev && null == ef && (null !== (e = null == ec ? void 0 : ec.length) && void 0 !== e ? e : 0) === 0 && null == er;
-        }, [ev, null == ec ? void 0 : ec.length, er, ef]),
+            return null == eR && null == ef && (null !== (e = null == ec ? void 0 : ec.length) && void 0 !== e ? e : 0) === 0 && null == er;
+        }, [eR, null == ec ? void 0 : ec.length, er, ef]),
         [eX, e$] = s.useState(null);
     s.useEffect(() => {
-        eQ && R.Z.fetchApplication(et).then((e) => e$(b.Z.createFromServer(e)));
+        eQ && v.Z.fetchApplication(et).then((e) => e$(b.Z.createFromServer(e)));
     }, [et, eQ]);
     let eJ = s.useMemo(() => {
             var e, t;
@@ -209,14 +209,14 @@ function ei(e) {
             return null != t ? t : U.Hn;
         }, [null == eJ ? void 0 : eJ.permissions, ed, eQ]),
         e3 = s.useRef(!1),
-        [e4, e5] = s.useState(null != eR ? eR : []),
-        [e6, e7] = s.useState(null != eR && eR.length > 0);
+        [e4, e5] = s.useState(null != ev ? ev : []),
+        [e6, e7] = s.useState(null != ev && ev.length > 0);
     s.useEffect(() => {
         if (e3.current) return;
         let e = async () => {
             e3.current = !0;
             try {
-                let { disclosures: e, allAcked: t } = await (0, v.de)(et);
+                let { disclosures: e, allAcked: t } = await (0, R.de)(et);
                 e7(!t), e5(e);
             } catch (n) {
                 let { status: e, body: t } = n;
@@ -229,14 +229,14 @@ function ei(e) {
                 e3.current = !1;
             }
         };
-        if (null == eR) {
+        if (null == ev) {
             if (!P.default.isAuthenticated()) {
                 (0, G.c$)(eC);
                 return;
             }
             e();
         }
-    }, [et, eC, eR, e5, eU, e7, eM]);
+    }, [et, eC, ev, e5, eU, e7, eM]);
     let e8 = s.useCallback(
             async (e) => {
                 if (null != eN) {
@@ -273,7 +273,7 @@ function ei(e) {
                         guildId: ez === d.Y.GUILD_INSTALL && null != eF ? eF : void 0,
                         channelId: ez === d.Y.GUILD_INSTALL && null != eH ? eH : void 0
                     });
-                    if ((e && (await (0, v.x9)(et, e4)), null != eA))
+                    if ((e && (await (0, R.x9)(et, e4)), null != eA))
                         eA({
                             application: null == eD ? void 0 : eD.application,
                             location: t.location,
@@ -309,8 +309,8 @@ function ei(e) {
                     e9.current = !0;
                     try {
                         let e =
-                            null != ev
-                                ? ev
+                            null != eR
+                                ? eR
                                 : await (0, G.Ww)({
                                       clientId: et,
                                       scopes: e0,
@@ -335,7 +335,7 @@ function ei(e) {
                     }
                 }
             }
-        }, [eC, ev, et, e0, en, er, ei, ea, es, eo, ez, el, e8, e6]),
+        }, [eC, eR, et, e0, en, er, ei, ea, es, eo, ez, el, e8, e6]),
         tt = s.useMemo(() => {
             var e;
             return null != eX && eQ
@@ -352,11 +352,11 @@ function ei(e) {
         }, [eX, eQ]);
     s.useEffect(() => {
         if (null == eb && (!eQ || null != eX) && !!ey)
-            if (null != ev) {
+            if (null != eR) {
                 var e;
-                eq(null !== (e = ev.integration_type) && void 0 !== e ? e : d.Y.GUILD_INSTALL), eM(1);
+                eq(null !== (e = eR.integration_type) && void 0 !== e ? e : d.Y.GUILD_INSTALL), eM(1);
             } else tt.length > 1 ? eM(0) : (1 === tt.length ? eq(tt[0]) : null != ef ? eq(ef) : eq(d.Y.GUILD_INSTALL), eM(1));
-    }, [ev, tt, eX, eQ, ef, eb, ey]),
+    }, [eR, tt, eX, eQ, ef, eb, ey]),
         s.useEffect(() => {
             if (null == ez || null != eD || null != eP) return;
             ez === d.Y.USER_INSTALL && (eV(null), eZ(null));

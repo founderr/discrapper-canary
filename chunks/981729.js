@@ -105,11 +105,11 @@ let A = Object.freeze({}),
             }
         });
     },
-    R = {
+    v = {
         scale: 0.95,
         opacity: 0
     },
-    v = {
+    R = {
         scale: 1,
         opacity: 0
     },
@@ -125,9 +125,9 @@ let A = Object.freeze({}),
             {
                 keys: (e) => (e ? 'tooltip' : 'empty'),
                 config: h.F,
-                from: a.enabled ? v : R,
+                from: a.enabled ? R : v,
                 enter: C,
-                leave: a.enabled ? v : R,
+                leave: a.enabled ? R : v,
                 onRest: n
             },
             'animate-always'

@@ -1,6 +1,6 @@
 n.d(t, {
     $l: function () {
-        return v;
+        return R;
     },
     G1: function () {
         return m;
@@ -141,7 +141,7 @@ async function O() {
         receivedAt: Date.now()
     });
 }
-async function R(e) {
+async function v(e) {
     let t,
         n,
         { useQuickSwitcher: r = !0, useChannelAffinities: i = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -193,7 +193,7 @@ async function R(e) {
         error: t
     });
 }
-async function v(e) {
+async function R(e) {
     try {
         await o.tn.del(h.Z5c.CHANNEL_SUMMARY(e.channelId, e.id)),
             l.Z.dispatch({
@@ -217,7 +217,7 @@ t.ZP = {
     },
     setHighlightedSummary: T,
     fetchSummaries: m,
-    fetchSummariesBulk: R,
+    fetchSummariesBulk: v,
     useChannelSummaries: function (e) {
         let { channelIds: t = [] } = e;
         return (
@@ -231,12 +231,12 @@ t.ZP = {
                         try {
                             await O();
                         } catch (e) {}
-                        await R(n.split(','));
+                        await v(n.split(','));
                     }
                 }, [n, t]);
             })(t),
             (0, s.Wu)([f.Z], () => f.Z.topSummaries(), [])
         );
     },
-    deleteSummary: v
+    deleteSummary: R
 };

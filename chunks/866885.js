@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(566620),
     N = n(317381),
     O = n(963614),
-    R = n(917107),
-    v = n(208156),
+    v = n(917107),
+    R = n(208156),
     C = n(748492),
     y = n(350064),
     D = n(701488),
@@ -59,7 +59,7 @@ function x(e) {
             participantsOpen: f.Z.getParticipantsOpen(y.id)
         })),
         Q = Z || null != W,
-        X = (0, R.Z)(y.id),
+        X = (0, v.Z)(y.id),
         $ = X && (null == z ? void 0 : z.type) !== M.fO.ACTIVITY,
         J = !X && F === L.Ez.PIP,
         ee = (!Q || (Q && ($ || J) && null == Y)) && !j,
@@ -83,7 +83,7 @@ function x(e) {
             });
         }
     }, [null == B ? void 0 : B.applicationId, ee]);
-    if (null == B || null == H || (null == K && (0, R.Z)(y.id)) || null == V) return null;
+    if (null == B || null == H || (null == K && (0, v.Z)(y.id)) || null == V) return null;
     let ei = Array.from(B.userIds)
             .map((e) => S.default.getUser(e))
             .filter((e) => null != e),
@@ -181,7 +181,7 @@ function x(e) {
                                       [P.pipModeTall]: ee && G
                                   })
                               })
-                            : (0, r.jsx)(v.J, {
+                            : (0, r.jsx)(R.J, {
                                   allowPopups: (0, O.h)(V),
                                   referrerPolicy: D.um.has(B.applicationId) ? 'no-referrer' : 'origin',
                                   url: B.url,

@@ -21,8 +21,8 @@ var r,
     A = n(592125),
     N = n(683301),
     O = n(271383),
-    R = n(430824),
-    v = n(594174),
+    v = n(430824),
+    R = n(594174),
     C = n(981631),
     y = n(478743);
 let D = {},
@@ -33,9 +33,9 @@ function P(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = D[e];
     if (null != n) return n;
-    let r = v.default.getCurrentUser();
+    let r = R.default.getCurrentUser();
     if (null == r) return S.Hn;
-    let i = R.Z.getGuild(e);
+    let i = v.Z.getGuild(e);
     return null == i
         ? S.Hn
         : (D[e] = S.uB({
@@ -47,7 +47,7 @@ function P(e) {
 function U(e) {
     var t;
     let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        r = v.default.getCurrentUser();
+        r = R.default.getCurrentUser();
     if (null == r) return S.Hn;
     let i = A.Z.getChannel(e);
     if (null == i) return S.Hn;
@@ -85,7 +85,7 @@ function B() {
 function F(e) {
     var t;
     let { user: n } = e;
-    if (n.id !== (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
+    if (n.id !== (null === (t = R.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return !1;
     G();
 }
 function V() {
@@ -109,7 +109,7 @@ function Y(e) {
     let { instance: t } = e,
         n = A.Z.getChannel(t.channel_id);
     if (null == n) return !1;
-    let r = v.default.getCurrentUser(),
+    let r = R.default.getCurrentUser(),
         i = S.uB({
             user: r,
             context: n
@@ -138,7 +138,7 @@ function W(e, t, n, r) {
     } else e instanceof m.ZP && (i = P(e.id));
     return void 0 !== t || void 0 !== n || void 0 !== r
         ? S.uB({
-              user: v.default.getCurrentUser(),
+              user: R.default.getCurrentUser(),
               context: e,
               overwrites: t,
               roles: n,
@@ -149,7 +149,7 @@ function W(e, t, n, r) {
 }
 class K extends (r = c.ZP.Store) {
     initialize() {
-        this.waitFor(v.default, R.Z, A.Z, O.ZP, N.ZP, h.Z, f.Z, _.Z);
+        this.waitFor(R.default, v.Z, A.Z, O.ZP, N.ZP, h.Z, f.Z, _.Z);
     }
     getChannelPermissions(e) {
         return I.Ec.has(e.type) ? U(e.id) : w(e.id);
@@ -158,7 +158,7 @@ class K extends (r = c.ZP.Store) {
         return P(e.id);
     }
     getGuildPermissionProps(e) {
-        let t = v.default.getCurrentUser();
+        let t = R.default.getCurrentUser();
         return {
             canManageGuild: this.can(C.Plq.MANAGE_GUILD, e),
             canManageChannels: this.can(C.Plq.MANAGE_CHANNELS, e),
@@ -184,7 +184,7 @@ class K extends (r = c.ZP.Store) {
         return u.Db(P(e.id), S.ym);
     }
     canWithPartialContext(e, t) {
-        return 'channelId' in t && 'string' == typeof t.channelId ? this.can(e, A.Z.getChannel(t.channelId)) : 'guildId' in t && 'string' == typeof t.guildId && this.can(e, R.Z.getGuild(t.guildId));
+        return 'channelId' in t && 'string' == typeof t.channelId ? this.can(e, A.Z.getChannel(t.channelId)) : 'guildId' in t && 'string' == typeof t.guildId && this.can(e, v.Z.getGuild(t.guildId));
     }
     can(e, t, n, r, i) {
         let a = W(t, n, r, i);
@@ -202,18 +202,18 @@ class K extends (r = c.ZP.Store) {
     canManageUser(e, t, n) {
         let r = t instanceof T.Z ? t.id : t;
         if (n.isOwner(r)) return !1;
-        let i = v.default.getCurrentUser();
+        let i = R.default.getCurrentUser();
         if (!this.can(e, n)) return !1;
         let a = null != i ? S.e9(n, i.id) : void 0,
             s = S.e9(n, r);
         return null != i && S.r6(n, i.id, a, s);
     }
     getHighestRole(e) {
-        let t = v.default.getCurrentUser();
+        let t = R.default.getCurrentUser();
         return null != t ? S.e9(e, t.id) : null;
     }
     isRoleHigher(e, t, n) {
-        let r = v.default.getCurrentUser(),
+        let r = R.default.getCurrentUser(),
             i = _.Z.isViewingRoles(e.id);
         return S.r6(e, i ? void 0 : null == r ? void 0 : r.id, t, n);
     }
@@ -264,7 +264,7 @@ function z() {
                 } = e,
                 n = A.Z.getChannel(t);
             if (null == n || n.isPrivate()) return !1;
-            let r = v.default.getCurrentUser(),
+            let r = R.default.getCurrentUser(),
                 i = S.uB({
                     user: r,
                     context: n
@@ -283,7 +283,7 @@ function z() {
             for (let { id: e } of t) {
                 let t = A.Z.getChannel(e);
                 if (null == t || t.isPrivate()) continue;
-                let r = v.default.getCurrentUser(),
+                let r = R.default.getCurrentUser(),
                     i = S.uB({
                         user: r,
                         context: t
@@ -300,7 +300,7 @@ function z() {
         MOD_VIEW_SEARCH_FINISH: H,
         THREAD_MEMBER_UPDATE: function (e) {
             var t;
-            return (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (x(e.guildId), !0);
+            return (null === (t = R.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.userId && (x(e.guildId), !0);
         },
         THREAD_MEMBERS_UPDATE: function (e) {
             return !!(0, p.s)(e) && (x(e.guildId), !0);

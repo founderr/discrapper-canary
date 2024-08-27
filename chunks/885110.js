@@ -20,8 +20,8 @@ var a,
     A = n(314897),
     N = n(77498),
     O = n(517100),
-    R = n(283595),
-    v = n(293273),
+    v = n(283595),
+    R = n(293273),
     C = n(158776),
     y = n(797258),
     D = n(981631);
@@ -35,7 +35,7 @@ let L = !1,
     G = Object.freeze([]),
     k = [];
 function B(e) {
-    return (0, S.OT)(e, R.Z);
+    return (0, S.OT)(e, v.Z);
 }
 function F(e) {
     switch (e.type) {
@@ -66,7 +66,7 @@ function V() {
     }
     b === D.Skl.ONLINE && P > 0 && (b = D.Skl.IDLE);
     let t = !1,
-        n = x || b === D.Skl.INVISIBLE ? [] : v.Z.getActivities().filter(F);
+        n = x || b === D.Skl.INVISIBLE ? [] : R.Z.getActivities().filter(F);
     !c()(U, n) && ((U = n), (t = !0));
     let r = y.Z.getRemoteActivities();
     if ((G !== r && ((G = r), (t = !0)), t)) {
@@ -93,7 +93,7 @@ function Z() {
 }
 class Y extends (a = E.ZP.Store) {
     initialize() {
-        this.waitFor(O.Z, T.Z, v.Z, y.Z, R.Z, N.Z), this.syncWith([v.Z], V);
+        this.waitFor(O.Z, T.Z, R.Z, y.Z, v.Z, N.Z), this.syncWith([R.Z], V);
     }
     getLocalPresence() {
         return {

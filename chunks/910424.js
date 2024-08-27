@@ -32,14 +32,14 @@ function m(e) {
                 }).length > 0
         })),
         N = (0, i.e7)([_.Z], () => _.Z.getChannel(null == T ? void 0 : T.channelId)),
-        [O, R] = (0, c.wq)(N),
-        v = (0, u.Aq)(),
+        [O, v] = (0, c.wq)(N),
+        R = (0, u.Aq)(),
         C = null != S && null != T && S.state !== h.jm8.ENDED && S.ownerId === T.ownerId,
         y = (e) => {
-            if (null != T) null == g || g(), o.default.selectVoiceChannel(T.channelId), !C && (0, l.iV)(T, { forceMultiple: e }), v.dispatch(h.CkL.POPOUT_CLOSE), E.S.dispatch(h.CkL.MODAL_CLOSE), s.Z.popAll();
+            if (null != T) null == g || g(), o.default.selectVoiceChannel(T.channelId), !C && (0, l.iV)(T, { forceMultiple: e }), R.dispatch(h.CkL.POPOUT_CLOSE), E.S.dispatch(h.CkL.MODAL_CLOSE), s.Z.popAll();
         };
     if (null == T) return null;
-    let D = (0, c.P9)(R);
+    let D = (0, c.P9)(v);
     t ? (D = p.Z.Messages.WATCH_STREAM_STREAMING) : C && (D = p.Z.Messages.WATCH_STREAM_WATCHING);
     let L = {
         color: n,

@@ -30,9 +30,9 @@ function E(e) {
                       children: e
                   }),
         O = null != p && p.length > 0,
-        R = (0, l.D)(t);
+        v = (0, l.D)(t);
     return (0, r.jsxs)('div', {
-        className: a()(_.container, { [_.bot]: null != R }, I),
+        className: a()(_.container, { [_.bot]: null != v }, I),
         children: [
             (0, r.jsxs)('div', {
                 className: _.usernameRow,
@@ -44,9 +44,9 @@ function E(e) {
                             children: f
                         })
                     ),
-                    null != R &&
+                    null != v &&
                         (0, r.jsx)(u.Z, {
-                            type: R,
+                            type: v,
                             verified: t.isVerifiedBot()
                         }),
                     null != h &&
@@ -59,7 +59,7 @@ function E(e) {
             (0, r.jsxs)('div', {
                 className: a()(_.tags, A, {
                     [_.pronouns]: O,
-                    [_.bot]: null != R
+                    [_.bot]: null != v
                 }),
                 children: [
                     N(

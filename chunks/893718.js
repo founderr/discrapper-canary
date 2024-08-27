@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(326133),
     N = n(570220),
     O = n(28546),
-    R = n(805680),
-    v = n(151574),
+    v = n(805680),
+    R = n(151574),
     C = n(368844),
     y = n(41776),
     D = n(849522),
@@ -59,7 +59,7 @@ var r = n(735250),
 t.Z = i.memo(
     i.forwardRef(function (e, t) {
         var a, l, es, eo, el, eu, ec, ed, e_, eE, ef, eh, ep, eI, em;
-        let { textValue: eT, richValue: eg, className: eS, innerClassName: eA, editorClassName: eN, id: eO, required: eR, disabled: ev, placeholder: eC, accessibilityLabel: ey, channel: eD, type: eL, focused: eb, renderAttachButton: eM, renderApplicationCommandIcon: eP, pendingReply: eU, onChange: ew, onResize: ex, onBlur: eG, onFocus: ek, onKeyDown: eB, onSubmit: eF, promptToUpload: eV, highlighted: eH, canMentionRoles: eZ, canMentionChannels: eY, maxCharacterCount: ej, showRemainingCharsAfterCount: eW, allowNewLines: eK = !0, characterCountClassName: ez, 'aria-describedby': eq, 'aria-labelledby': eQ, setEditorRef: eX, autoCompletePosition: e$, children: eJ, disableThemedBackground: e0 = !1, emojiPickerCloseOnModalOuterClick: e1, parentModalKey: e2, onCommandSentinelTyped: e3 } = e;
+        let { textValue: eT, richValue: eg, className: eS, innerClassName: eA, editorClassName: eN, id: eO, required: ev, disabled: eR, placeholder: eC, accessibilityLabel: ey, channel: eD, type: eL, focused: eb, renderAttachButton: eM, renderApplicationCommandIcon: eP, pendingReply: eU, onChange: ew, onResize: ex, onBlur: eG, onFocus: ek, onKeyDown: eB, onSubmit: eF, promptToUpload: eV, highlighted: eH, canMentionRoles: eZ, canMentionChannels: eY, maxCharacterCount: ej, showRemainingCharsAfterCount: eW, allowNewLines: eK = !0, characterCountClassName: ez, 'aria-describedby': eq, 'aria-labelledby': eQ, setEditorRef: eX, autoCompletePosition: e$, children: eJ, disableThemedBackground: e0 = !1, emojiPickerCloseOnModalOuterClick: e1, parentModalKey: e2, onCommandSentinelTyped: e3 } = e;
         u()(null != eL, 'chat input type must be set');
         let { analyticsLocations: e4 } = (0, m.ZP)(I.Z.CHANNEL_TEXT_AREA),
             e5 = (function (e) {
@@ -120,7 +120,7 @@ t.Z = i.memo(
                     isPendingMember: s,
                     ...o
                 };
-            })(eD, eL, tt, ev),
+            })(eD, eL, tt, eR),
             tu = eL.toolbarType === W.O.STATIC,
             tc = !w.dN.useSetting() && !(0, Y.isAndroidWeb)() && null != window.ResizeObserver,
             td = !tc || !(null === (a = eL.commands) || void 0 === a ? void 0 : a.enabled) || !eb || eT !== er.GI,
@@ -238,7 +238,7 @@ t.Z = i.memo(
             {
                 autocompleteRef: tN,
                 handleMaybeShowAutocomplete: tO,
-                handleHideAutocomplete: tR
+                handleHideAutocomplete: tv
             } = (function () {
                 let e = i.useRef(null),
                     t = i.useCallback(() => {
@@ -255,7 +255,7 @@ t.Z = i.memo(
                     handleHideAutocomplete: n
                 };
             })();
-        let tv =
+        let tR =
             ((ef = tS),
             (eh = eL),
             (ep = e8),
@@ -485,7 +485,7 @@ t.Z = i.memo(
                                                     richValue: eg,
                                                     disabled: ta,
                                                     placeholder: eC,
-                                                    required: eR,
+                                                    required: ev,
                                                     accessibilityLabel: ey,
                                                     isPreviewing: (tr || ti) && tl,
                                                     channel: eD,
@@ -506,7 +506,7 @@ t.Z = i.memo(
                                                     onMoveSelection: tw,
                                                     onSelectionChanged: tT,
                                                     onMaybeShowAutocomplete: tO,
-                                                    onHideAutocomplete: tR,
+                                                    onHideAutocomplete: tv,
                                                     promptToUpload: eV,
                                                     fontSize: tf,
                                                     spellcheckEnabled: th,
@@ -575,7 +575,7 @@ t.Z = i.memo(
                                   })
                                 : null,
                             tj
-                                ? (0, r.jsx)(v.Z, {
+                                ? (0, r.jsx)(R.Z, {
                                       editorRef: e8,
                                       channel: eD,
                                       isEditorFocused: eb,
@@ -589,10 +589,10 @@ t.Z = i.memo(
                     }),
                     tG
                         ? null
-                        : (0, r.jsx)(R.Z, {
+                        : (0, r.jsx)(v.Z, {
                               positionTargetRef: e6,
                               type: eL,
-                              onSelectGIF: tv,
+                              onSelectGIF: tR,
                               onSelectEmoji: tC,
                               onSelectSticker: ty,
                               onSelectSound: tD,

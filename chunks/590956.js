@@ -88,7 +88,7 @@ let T = (e) => {
             [I, T] = i.useState(String(Date.now())),
             [g, A] = i.useState(!1),
             [N, O] = i.useState(!1),
-            R = function () {
+            v = function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 return (0, r.jsx)(u.Z, {
                     ...e,
@@ -99,7 +99,7 @@ let T = (e) => {
                     isInteracting: n
                 });
             },
-            v = (0, o.Z)(),
+            R = (0, o.Z)(),
             C = (e) =>
                 (0, r.jsx)(l.Tooltip, {
                     text: (0, f.Y)(t.name, c),
@@ -113,7 +113,7 @@ let T = (e) => {
                                 (S({
                                     emojiNode: t,
                                     isCustomEmoji: !0,
-                                    nonce: v
+                                    nonce: R
                                 }),
                                 (0, d.x)(p.qR.CustomEmojiTooltipShown));
                     },
@@ -131,11 +131,11 @@ let T = (e) => {
                                   }
                                 : void 0,
                             onMouseLeave: () => {
-                                g && (_.default.track(h.rMx.CLOSE_POPOUT, { nonce: v }), A(!1));
+                                g && (_.default.track(h.rMx.CLOSE_POPOUT, { nonce: R }), A(!1));
                             },
                             tag: 'span',
                             className: s()(m.emojiContainer, { [m.emojiContainerClickable]: c }),
-                            children: R(t)
+                            children: v(t)
                         })
                 });
         return c
@@ -143,7 +143,7 @@ let T = (e) => {
                   animation: l.Popout.Animation.FADE,
                   align: 'center',
                   onRequestClose: () => {
-                      _.default.track(h.rMx.CLOSE_POPOUT, { nonce: v }), A(!1), O(!1);
+                      _.default.track(h.rMx.CLOSE_POPOUT, { nonce: R }), A(!1), O(!1);
                   },
                   autoInvert: !0,
                   nudgeAlignIntoViewport: !0,
@@ -153,7 +153,7 @@ let T = (e) => {
                           ...e,
                           node: t,
                           refreshPositionKey: () => T(String(Date.now())),
-                          nonce: v
+                          nonce: R
                       }),
                   positionKey: I,
                   children: C

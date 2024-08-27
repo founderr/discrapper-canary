@@ -45,7 +45,7 @@ let A = 1200,
         }
     };
 function O(e) {
-    let { user: t, channel: n, sourceType: i, sourceDetails: _, isVisible: O, isExpandable: R, onInteraction: v, setInteractionToastShown: C, setInteractionSent: y, setIsReplyInteraction: D, onClose: L } = e,
+    let { user: t, channel: n, sourceType: i, sourceDetails: _, isVisible: O, isExpandable: v, onInteraction: R, setInteractionToastShown: C, setInteractionSent: y, setIsReplyInteraction: D, onClose: L } = e,
         { trackUserProfileAction: b } = (0, f.KZ)(),
         { sendReact: M, pressReact: P, pressReply: U } = (0, p.Q)(i),
         w = (0, s.e7)([c.default], () => c.default.getId() === t.id),
@@ -79,7 +79,7 @@ function O(e) {
     return (0, r.jsxs)(l.ZP, {
         className: a()(S.popover, {
             [S.visible]: O,
-            [S.expandable]: R,
+            [S.expandable]: v,
             [S.statusPopover]: i === m.n_.STATUS,
             [S.avatarPopover]: i === m.n_.AVATAR
         }),
@@ -91,15 +91,15 @@ function O(e) {
                 'aria-label': !1,
                 children: (0, r.jsx)(o.Popout, {
                     onRequestClose: () => {
-                        null == v ||
-                            v({
+                        null == R ||
+                            R({
                                 interactionType: null,
                                 interactionSourceType: null
                             });
                     },
                     onRequestOpen: () => {
-                        null == v ||
-                            v({
+                        null == R ||
+                            R({
                                 interactionType: m.P.REACT,
                                 interactionSourceType: i
                             });
@@ -142,8 +142,8 @@ function O(e) {
                 children: (0, r.jsx)(l.zx, {
                     onClick: () => {
                         b({ action: U }),
-                            null == v ||
-                                v({
+                            null == R ||
+                                R({
                                     interactionType: m.P.REPLY,
                                     interactionSourceType: i
                                 });

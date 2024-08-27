@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return E;
     }
 });
 var i = n(735250);
@@ -18,12 +18,12 @@ let _ = (e, t) => ({
     imgSrc: e.assets.tooltipSrc,
     imgStyle: u.defaultDropImage
 });
-function h(e) {
+function E(e) {
     let { markAsDismissed: t, partnerGame: n } = e;
     (0, l.hs)(n, a.ImpressionTypes.POPOUT, a.ImpressionNames.DROPS_QUEST_COMPLETION);
-    let h = (0, l.au)(n);
-    if (null == h) return null;
-    let { body: E, imgSrc: m, imgStyle: I } = _(h.drop, h.config.streamLengthRequirement),
+    let E = (0, l.au)(n);
+    if (null == E) return null;
+    let { body: h, imgSrc: m, imgStyle: I } = _(E.drop, E.config.streamLengthRequirement),
         g = () => {
             t(c.L.DISMISS);
         };
@@ -53,7 +53,7 @@ function h(e) {
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/medium',
                 className: u.subTitle,
-                children: E
+                children: h
             }),
             (0, i.jsx)(s.Button, {
                 color: s.Button.Colors.BRAND_INVERTED,

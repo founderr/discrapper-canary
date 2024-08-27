@@ -74,8 +74,8 @@ var r,
     A = n(313201),
     N = n(688465),
     O = n(425886),
-    R = n(80966),
-    v = n(593545),
+    v = n(80966),
+    R = n(593545),
     C = n(479313),
     y = n(765104),
     D = n(505953),
@@ -113,7 +113,7 @@ function z(e) {
         (i = null == i ? G.rs : i),
         (0, a.jsxs)(s.Fragment, {
             children: [
-                (0, a.jsx)(R.Z, {
+                (0, a.jsx)(v.Z, {
                     ...c,
                     alt: o,
                     volume: r,
@@ -245,7 +245,7 @@ function $(e) {
 function J(e) {
     let { renderAdjacentContent: t, ...n } = e;
     return (0, a.jsxs)(s.Fragment, {
-        children: [(0, a.jsx)(v.Z, { ...n }), null != t && t()]
+        children: [(0, a.jsx)(R.Z, { ...n }), null != t && t()]
     });
 }
 function ee(e) {
@@ -414,8 +414,8 @@ function ei(e) {
         { disableInteractions: p } = s.useContext(S.G),
         [I, g] = s.useState(null),
         A = s.useRef(null),
-        [O, R] = s.useState(null),
-        v = s.useRef(null),
+        [O, v] = s.useState(null),
+        R = s.useRef(null),
         L = (0, _.Wu)(
             [y.Z],
             () => {
@@ -541,13 +541,13 @@ function ei(e) {
         $ = s.useCallback((e) => {
             var t;
             q(e);
-            let n = null === (t = v.current) || void 0 === t ? void 0 : t.scrollTop;
-            null != n && R(n);
+            let n = null === (t = R.current) || void 0 === t ? void 0 : t.scrollTop;
+            null != n && v(n);
         }, []);
     s.useEffect(() => {
         if (null != O && z) {
             var e;
-            null === (e = v.current) || void 0 === e || e.scrollTo({ top: O });
+            null === (e = R.current) || void 0 === e || e.scrollTo({ top: O });
         }
     }, [O, z]);
     let J = s.useCallback(
@@ -720,7 +720,7 @@ function ei(e) {
                                       ]
                                   }),
                                   (0, a.jsx)(E.Scroller, {
-                                      ref: v,
+                                      ref: R,
                                       className: Y.topicsScroller,
                                       fade: !0,
                                       children: ee
@@ -749,7 +749,7 @@ function es(e) {
         I = s.useRef(null),
         [g, A] = s.useState(null),
         O = s.useRef(null),
-        R = (0, _.Wu)(
+        v = (0, _.Wu)(
             [y.Z],
             () => {
                 var e;
@@ -757,29 +757,29 @@ function es(e) {
             },
             [i]
         ),
-        v = (0, T.Z)(R);
+        R = (0, T.Z)(v);
     s.useEffect(() => {
-        !c().isEqual(v, R) &&
+        !c().isEqual(R, v) &&
             w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_VIEWED, {
-                num_summaries: R.length,
-                message_counts: R.map((e) => e.count),
-                start_message_ids: R.map((e) => e.startId),
-                end_message_ids: R.map((e) => e.endId),
-                num_participants: R.map((e) => e.people.length),
+                num_summaries: v.length,
+                message_counts: v.map((e) => e.count),
+                start_message_ids: v.map((e) => e.startId),
+                end_message_ids: v.map((e) => e.endId),
+                num_participants: v.map((e) => e.people.length),
                 guild_id: i.guild_id,
                 channel_id: i.id,
                 channel_type: i.type
             });
-    }, [R, v, i.guild_id, i.id, i.type]);
+    }, [v, R, i.guild_id, i.id, i.type]);
     let L = (0, _.e7)(
             [P.default],
             () => {
                 var e;
                 return null !==
                     (e =
-                        null == R
+                        null == v
                             ? void 0
-                            : R.map((e) => {
+                            : v.map((e) => {
                                   var t;
                                   return null === (t = e.people) || void 0 === t
                                       ? void 0
@@ -793,14 +793,14 @@ function es(e) {
                     ? e
                     : [];
             },
-            [R],
+            [v],
             ea
         ),
         b = null !== (n = (0, _.e7)([y.Z], () => y.Z.visibleSummaryIndex())) && void 0 !== n ? n : -1,
-        M = null == R ? void 0 : null === (t = R[b]) || void 0 === t ? void 0 : t.topic;
-    null == M && null == h && (null == R ? void 0 : R.length) >= 1 && (M = null === (r = R[0]) || void 0 === r ? void 0 : r.topic);
-    let G = s.useMemo(() => c().get(R, b - 1), [b, R]),
-        k = s.useMemo(() => c().get(R, b + 1), [b, R]),
+        M = null == v ? void 0 : null === (t = v[b]) || void 0 === t ? void 0 : t.topic;
+    null == M && null == h && (null == v ? void 0 : v.length) >= 1 && (M = null === (r = v[0]) || void 0 === r ? void 0 : r.topic);
+    let G = s.useMemo(() => c().get(v, b - 1), [b, v]),
+        k = s.useMemo(() => c().get(v, b + 1), [b, v]),
         B = s.useMemo(
             () =>
                 c().debounce((e) => {
@@ -830,21 +830,21 @@ function es(e) {
         z = s.useCallback(() => {
             w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                 topics_dropdown_open: !W,
-                num_summaries: R.length,
-                message_counts: R.map((e) => e.count),
-                start_message_ids: R.map((e) => e.startId),
-                end_message_ids: R.map((e) => e.endId),
-                num_participants: R.map((e) => e.people.length),
+                num_summaries: v.length,
+                message_counts: v.map((e) => e.count),
+                start_message_ids: v.map((e) => e.startId),
+                end_message_ids: v.map((e) => e.endId),
+                num_participants: v.map((e) => e.people.length),
                 guild_id: i.guild_id,
                 channel_id: i.id,
                 channel_type: i.type
             }),
                 K(!W);
-        }, [W, R, K, i]),
+        }, [W, v, K, i]),
         q = s.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : H.DZ.PILL_DROPDOWN,
-                    n = R[e];
+                    n = v[e];
                 if (null == n) return;
                 (0, C.wv)(i.id, n.id), (0, C.yK)(i.id, n.id);
                 let r = () => {
@@ -871,7 +871,7 @@ function es(e) {
                         context: 'Summary Jump'
                     });
             },
-            [R, i, j, o]
+            [v, i, j, o]
         ),
         Q = s.useCallback(() => {
             q(b - 1, H.DZ.PILL_NEXT_ARROW);
@@ -898,18 +898,18 @@ function es(e) {
                 W &&
                     w.default.track(F.rMx.SUMMARIES_TOPICS_PILL_TOGGLED, {
                         topics_dropdown_open: !1,
-                        num_summaries: R.length,
-                        message_counts: R.map((e) => e.count),
-                        start_message_ids: R.map((e) => e.startId),
-                        end_message_ids: R.map((e) => e.endId),
-                        num_participants: R.map((e) => e.people.length),
+                        num_summaries: v.length,
+                        message_counts: v.map((e) => e.count),
+                        start_message_ids: v.map((e) => e.startId),
+                        end_message_ids: v.map((e) => e.endId),
+                        num_participants: v.map((e) => e.people.length),
                         guild_id: i.guild_id,
                         channel_id: i.id,
                         channel_type: i.type
                     }),
                     $(!1);
         },
-        [W, R, i, $]
+        [W, v, i, $]
     );
     s.useEffect(
         () => (
@@ -936,17 +936,17 @@ function es(e) {
         () =>
             (0, a.jsx)(D.Z, {
                 channel: i,
-                summaries: R,
+                summaries: v,
                 summariesMembers: L,
                 selectTopic: q,
                 setOpen: $
             }),
-        [R, L, q, $, i]
+        [v, L, q, $, i]
     );
     if (!(0, _.e7)([y.Z], () => y.Z.shouldShowTopicsBar())) return null;
     let et = Z.Z.Messages.SUMMARIES_NO_SUMMARIES;
     return (
-        R.length > 0 && (et = '' === M || null == M ? Z.Z.Messages.SUMMARIES_VIEW_ALL : M),
+        v.length > 0 && (et = '' === M || null == M ? Z.Z.Messages.SUMMARIES_VIEW_ALL : M),
         u
             ? null
             : (0, a.jsxs)('div', {

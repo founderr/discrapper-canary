@@ -6,10 +6,10 @@ n.d(t, {
         return y;
     },
     XO: function () {
-        return v;
+        return R;
     },
     Yp: function () {
-        return R;
+        return v;
     },
     hC: function () {
         return L;
@@ -133,10 +133,10 @@ let c = () => ({
             description: u.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_PERKS_SCREEN_SHARE_1080P
         };
     };
-function R() {
+function v() {
     return [f(), _(), h(), A()];
 }
-function v() {
+function R() {
     return [f(), p(l.Eu4.TIER_2), O(), A()];
 }
 function C() {

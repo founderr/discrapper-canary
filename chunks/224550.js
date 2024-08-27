@@ -2,8 +2,8 @@ t(411104);
 var s = t(735250);
 t(470079);
 var r = t(442837),
-    l = t(858987),
-    i = t(78839),
+    i = t(858987),
+    l = t(78839),
     a = t(122289),
     c = t(63063),
     o = t(74538),
@@ -15,15 +15,15 @@ var r = t(442837),
     d = t(191334);
 n.Z = function (e) {
     let n, t, N, M;
-    let { subscriptionPlan: A, isGift: L, isEmbeddedIAP: P, renewalInvoice: R, paymentSourceType: S, hide: m, purchaseType: U, productLine: p, basePrice: O, currentSubscription: v } = e,
-        C = (0, r.e7)([i.ZP], () => i.ZP.inReverseTrial());
-    if (m) return null;
+    let { subscriptionPlan: A, isGift: L, isEmbeddedIAP: P, renewalInvoice: R, paymentSourceType: m, hide: S, purchaseType: U, productLine: p, basePrice: O, currentSubscription: v } = e,
+        C = (0, r.e7)([l.ZP], () => l.ZP.inReverseTrial());
+    if (S) return null;
     let h = null == e.planGroup ? [] : e.planGroup;
     if (null != R) {
         let e = o.ZP.getIntervalForInvoice(R);
         (n = e.intervalType), (t = e.intervalCount), (N = (0, u.og)((0, u.T4)(R.total, R.currency), n, t)), (M = (0, u.og)((0, u.T4)(R.subtotal, R.currency), n, t));
     } else null != A && ((n = A.interval), (t = A.intervalCount));
-    let f = (0, l.K)({
+    let f = (0, i.K)({
             purchaseType: U || _.GZQ.SUBSCRIPTION,
             plan: A,
             premiumSubscription: null == v ? null : v,
@@ -82,7 +82,7 @@ n.Z = function (e) {
         }
     else {
         let e;
-        let s = (0, l.K)({
+        let s = (0, i.K)({
             purchaseType: _.GZQ.SUBSCRIPTION,
             plan: A,
             premiumSubscription: null == v ? null : v,
@@ -110,9 +110,9 @@ n.Z = function (e) {
                     contactLink: _.EYA.CONTACT,
                     helpdeskArticle: c.Z.getArticleURL(_.BhN.BILLING)
                 })
-              : C && p === _.POd.BOOST
+              : C && p === _.POd.BOOST && null != O
                 ? T.Z.Messages.BILLING_BOOST_PURCHASE_IN_REVERSE_TRIAL_LEGAL_COPY.format({
-                      price: e,
+                      price: (0, u.T4)(O.amount, O.currency),
                       paidServiceTermsArticle: _.EYA.PAID_TERMS,
                       contactUsArticle: _.EYA.CONTACT,
                       subscriptionFAQArticle: c.Z.getArticleURL(_.BhN.BILLING)
@@ -132,12 +132,12 @@ n.Z = function (e) {
                     children: [(0, s.jsx)('div', { children: Z }), (0, s.jsx)('div', { className: d.divider })]
                 }),
             '' !== g && (0, s.jsx)('div', { children: g }),
-            S === _.HeQ.PAYSAFE_CARD &&
+            m === _.HeQ.PAYSAFE_CARD &&
                 (0, s.jsx)('div', {
                     className: d.paymentSourceNoticeCopy,
                     children: T.Z.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD
                 }),
-            S === _.HeQ.SOFORT &&
+            m === _.HeQ.SOFORT &&
                 (0, s.jsxs)('div', {
                     className: d.paymentSourceNoticeCopy,
                     children: [T.Z.Messages.SOFORT_MANDATE_AGREEMENT, ' ']

@@ -21,18 +21,18 @@ var r = n(735250),
     A = n(323276);
 let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
     O = (0, l.Mg)(A.__invalid_stickerPickerPreviewPadding),
-    R = i.memo(function (e) {
-        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: R, gutterWidth: v, inspectedStickerPosition: C, isScrolling: y, isUsingKeyboardNavigation: D, onInspect: L, onSelect: b, rowIndex: M, stickerClassName: P, stickerDescriptors: U, stickerPadding: w = O, stickerSize: x = N, ownedStickerPacks: G, enlargeOnInteraction: k = !1, channel: B, currentUser: F, checkSendability: V = !0 } = e,
+    v = i.memo(function (e) {
+        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: v, gutterWidth: R, inspectedStickerPosition: C, isScrolling: y, isUsingKeyboardNavigation: D, onInspect: L, onSelect: b, rowIndex: M, stickerClassName: P, stickerDescriptors: U, stickerPadding: w = O, stickerSize: x = N, ownedStickerPacks: G, enlargeOnInteraction: k = !1, channel: B, currentUser: F, checkSendability: V = !0 } = e,
             { location: H } = (0, d.O)(),
             Z = x + 2 * w,
             Y = i.useMemo(
                 () => ({
-                    gridColumnGap: v,
+                    gridColumnGap: R,
                     gridTemplateColumns: 'repeat(auto-fill, '.concat(Z, 'px)'),
                     height: Z,
                     paddingRight: t ? void 0 : Z
                 }),
-                [t, v, Z]
+                [t, R, Z]
             ),
             j = i.useMemo(
                 () => ({
@@ -46,7 +46,7 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
         return (0, r.jsx)('div', {
             className: A.row,
             style: Y,
-            ...(null == R ? void 0 : R(M)),
+            ...(null == v ? void 0 : v(M)),
             children: U.map((e) => {
                 var d;
                 let _ = e.visibleRowIndex === (null == C ? void 0 : C.rowIndex) && e.columnIndex === (null == C ? void 0 : C.columnIndex),
@@ -54,7 +54,7 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
                     O = (0, o.throttle)(() => {
                         (null == y ? void 0 : y.current) !== !0 && (null == D ? void 0 : D.current) !== !0 && !_ && (null == L || L(e));
                     }, 250),
-                    { ref: R, tabIndex: v, onFocus: U, ...w } = null !== (d = null == l ? void 0 : l(e.columnIndex, M)) && void 0 !== d ? d : {};
+                    { ref: v, tabIndex: R, onFocus: U, ...w } = null !== (d = null == l ? void 0 : l(e.columnIndex, M)) && void 0 !== d ? d : {};
                 switch (e.type) {
                     case p.al.CREATE_STICKER:
                         return (0, r.jsx)(
@@ -64,8 +64,8 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
                                 children: (0, r.jsxs)(u.Clickable, {
                                     'aria-label': e.name,
                                     className: s()(A.createSticker, P, { [A.createInspected]: _ }),
-                                    innerRef: R,
-                                    tabIndex: v,
+                                    innerRef: v,
+                                    tabIndex: R,
                                     onFocus: null != U ? U : O,
                                     onMouseMove: O,
                                     onClick: () => {
@@ -117,8 +117,8 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
                                     [A.stickerInspected]: _,
                                     [A.showPulse]: W === e.sticker.id
                                 }),
-                                innerRef: R,
-                                tabIndex: v,
+                                innerRef: v,
+                                tabIndex: R,
                                 onFocus: null != U ? U : O,
                                 onMouseMove: O,
                                 onClick: (t) => {
@@ -165,4 +165,4 @@ let N = (0, l.Mg)(A.__invalid_stickerPickerPreviewDimensions),
             })
         });
     });
-t.Z = R;
+t.Z = v;

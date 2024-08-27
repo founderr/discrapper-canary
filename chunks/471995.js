@@ -24,7 +24,7 @@ function I(e) {
         N = l.getGuildActionSection(),
         x = (0, d.Z)(t),
         S = (0, r.e7)([p.Z], () => p.Z.getMemberCount(t.id)),
-        Z = async () => {
+        v = async () => {
             let { default: e } = await n.e('46826').then(n.bind(n, 859432));
             return (n) => {
                 let { closePopout: l } = n;
@@ -101,7 +101,7 @@ function I(e) {
                         }
                     }),
                     (0, i.jsx)(s.LazyPopout, {
-                        renderPopout: Z,
+                        renderPopout: v,
                         position: 'bottom',
                         align: 'center',
                         animation: s.Popout.Animation.SCALE,

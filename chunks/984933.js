@@ -31,8 +31,8 @@ var r,
     A = n(496675),
     N = n(699516),
     O = n(594174),
-    R = n(981631),
-    v = n(689938);
+    v = n(981631),
+    R = n(689938);
 let C = 'SELECTABLE',
     y = 'VOCAL',
     D = null,
@@ -44,12 +44,12 @@ let C = 'SELECTABLE',
     w = {
         comparator: -1,
         channel: (0, p.kt)({
-            id: R.Sc2,
-            type: R.d4z.GUILD_CATEGORY,
-            name: v.Z.Messages.UNCATEGORIZED
+            id: v.Sc2,
+            type: v.d4z.GUILD_CATEGORY,
+            name: R.Z.Messages.UNCATEGORIZED
         })
     },
-    x = B(R.kod),
+    x = B(v.kod),
     G = [],
     k = {};
 function B(e) {
@@ -57,7 +57,7 @@ function B(e) {
         id: e,
         [C]: [],
         [y]: [],
-        [R.d4z.GUILD_CATEGORY]: [w],
+        [v.d4z.GUILD_CATEGORY]: [w],
         count: 0
     };
 }
@@ -78,7 +78,7 @@ function H(e) {
         !(function (e) {
             let { id: t } = e,
                 n = (function (e) {
-                    if (e === R.I_8)
+                    if (e === v.I_8)
                         return (function () {
                             let e = {},
                                 t = f.Z.getFavoriteChannels();
@@ -106,14 +106,14 @@ function H(e) {
             l().forEach(n, (n) => {
                 var r;
                 let i = n.channel;
-                if (((e.count += 1), p.zS.has(i.type) && !A.Z.can(R.Plq.VIEW_CHANNEL, i) && !_.Z.isChannelGated(i.guild_id, i.id) && i.id !== P)) return;
+                if (((e.count += 1), p.zS.has(i.type) && !A.Z.can(v.Plq.VIEW_CHANNEL, i) && !_.Z.isChannelGated(i.guild_id, i.id) && i.id !== P)) return;
                 let a = ((r = i.type), (0, p.r8)(r) ? C : (0, p.bw)(r) ? y : r);
-                i.type === R.d4z.GUILD_DIRECTORY && (null == U[t] && (U[t] = []), U[t].push(n)), null != e[a] && e[a].push(n);
+                i.type === v.d4z.GUILD_DIRECTORY && (null == U[t] && (U[t] = []), U[t].push(n)), null != e[a] && e[a].push(n);
             });
         })(n),
         (t = n)[C].sort(F),
         t[y].sort(F),
-        t[R.d4z.GUILD_CATEGORY].sort(F),
+        t[v.d4z.GUILD_CATEGORY].sort(F),
         (function (e) {
             let t = (b[e.id] = {}),
                 n = {};
@@ -170,7 +170,7 @@ function W(e, t) {
             context: t,
             checkElevated: !1
         }),
-        R.TC2
+        v.TC2
     );
 }
 function K(e, t) {
@@ -181,7 +181,7 @@ function K(e, t) {
     (L[r] = void 0), r === D && H(r);
 }
 function z() {
-    H(R.I_8);
+    H(v.I_8);
 }
 class q extends (r = c.ZP.Store) {
     initialize() {
@@ -206,12 +206,12 @@ class q extends (r = c.ZP.Store) {
     }
     getDefaultChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : R.Plq.VIEW_CHANNEL;
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : v.Plq.VIEW_CHANNEL;
         return this.getFirstChannel(e, (e) => A.Z.can(n, e.channel), t);
     }
     getSFWDefaultChannel(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : R.Plq.VIEW_CHANNEL;
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : v.Plq.VIEW_CHANNEL;
         return this.getFirstChannel(e, (e) => A.Z.can(n, e.channel) && !e.channel.nsfw, t);
     }
     getSelectableChannelIds(e) {
@@ -252,7 +252,7 @@ class q extends (r = c.ZP.Store) {
         return this.getChannels(e).count > 0;
     }
     hasCategories(e) {
-        return this.getChannels(e)[R.d4z.GUILD_CATEGORY].length > 1;
+        return this.getChannels(e)[v.d4z.GUILD_CATEGORY].length > 1;
     }
     getTextChannelNameDisambiguations(e) {
         var t;

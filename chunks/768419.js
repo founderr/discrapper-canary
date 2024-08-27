@@ -19,8 +19,8 @@ var s,
     A = n(553795),
     N = n(517100),
     O = n(158776),
-    R = n(606304),
-    v = n(979651),
+    v = n(606304),
+    R = n(979651),
     C = n(626135),
     y = n(81063),
     D = n(70956),
@@ -278,7 +278,7 @@ function ef() {
 }
 function eh(e) {
     if (e === S.default.getId()) {
-        let t = v.Z.isCurrentClientInVoiceChannel(),
+        let t = R.Z.isCurrentClientInVoiceChannel(),
             n = (0, p.O)({
                 userId: e,
                 checkSoundSharing: !0,
@@ -292,7 +292,7 @@ function ep(e, t, n) {
     var r, i, a, s, o, l, u, c, d, _, E, f, p, I;
     let m,
         T,
-        { device: g, progress_ms: S, is_playing: A, repeat_state: N, item: O, context: R } = n;
+        { device: g, progress_ms: S, is_playing: A, repeat_state: N, item: O, context: v } = n;
     if (null != O && O.type === M.Hw.TRACK) {
         let e = O.id;
         null != O.linked_from && null != O.linked_from.id && (e = O.linked_from.id),
@@ -334,16 +334,16 @@ function ep(e, t, n) {
                 ...g,
                 is_active: !0
             }),
-        null != R && [M.Hw.PLAYLIST, M.Hw.ALBUM].includes(R.type))
+        null != v && [M.Hw.PLAYLIST, M.Hw.ALBUM].includes(v.type))
     ) {
         let n = eT.getPlayerState(e);
         T =
-            null != n && null != n.context && n.context.uri === R.uri
+            null != n && null != n.context && n.context.uri === v.uri
                 ? Promise.resolve(n.context)
-                : R.type === M.Hw.ALBUM
-                  ? Promise.resolve(R)
+                : v.type === M.Hw.ALBUM
+                  ? Promise.resolve(v)
                   : b.rC
-                        .get(e, t, { url: R.href })
+                        .get(e, t, { url: v.href })
                         .then((e) => {
                             let { body: t } = e;
                             return t;
@@ -383,7 +383,7 @@ function eI(e, t) {
 }
 class em extends (o = _.ZP.Store) {
     initialize() {
-        this.waitFor(A.Z, R.Z),
+        this.waitFor(A.Z, v.Z),
             this.syncWith([O.Z], () =>
                 (function () {
                     if (null == i || null == er()) return !1;

@@ -30,10 +30,10 @@ function c(e, t, n) {
         g = (0, r.zL)(e, { labelable: !0 }),
         S = -1;
     null != t.selectedValue ? t.selectedValue === o && (S = 0) : (t.lastFocusedValue === o || null == t.lastFocusedValue) && (S = 0), _ && (S = void 0);
-    let { name: A, descriptionId: N, errorMessageId: O, validationBehavior: R } = u.get(t);
+    let { name: A, descriptionId: N, errorMessageId: O, validationBehavior: v } = u.get(t);
     return (
         (0, r.y$)(n, t.selectedValue, t.setSelectedValue),
-        (0, a.Q)({ validationBehavior: R }, t, n),
+        (0, a.Q)({ validationBehavior: v }, t, n),
         {
             labelProps: (0, r.dG)(p, { onClick: (e) => e.preventDefault() }),
             inputProps: (0, r.dG)(g, {
@@ -42,7 +42,7 @@ function c(e, t, n) {
                 name: A,
                 tabIndex: S,
                 disabled: _,
-                required: t.isRequired && 'native' === R,
+                required: t.isRequired && 'native' === v,
                 checked: E,
                 value: o,
                 onChange: (e) => {

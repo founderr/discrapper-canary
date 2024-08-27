@@ -26,8 +26,8 @@ var l = n(442837),
     N = n(944486),
     x = n(885110),
     S = n(449224),
-    Z = n(436088),
-    v = n(870569),
+    v = n(436088),
+    Z = n(870569),
     T = n(981631),
     L = n(921944),
     A = n(689938);
@@ -60,14 +60,14 @@ function b() {
             } else (0, c.b_)();
         },
         D = (e) =>
-            (0, i.jsx)(v.Z, {
+            (0, i.jsx)(Z.Z, {
                 tooltipText: M ? A.Z.Messages.START_BROADCASTING : A.Z.Messages.STOP_BROADCASTING,
                 onClick: () => {
                     j(), null == e || e(L.L.UNKNOWN);
                 },
                 onMouseEnter: y,
                 icon: M
-                    ? (0, a.makeIconCompat)(Z.Z)
+                    ? (0, a.makeIconCompat)(v.Z)
                     : () =>
                           (0, i.jsx)(p.Z, {
                               width: 20,

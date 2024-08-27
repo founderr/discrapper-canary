@@ -26,8 +26,8 @@ var r = n(735250),
     A = n(981631),
     N = n(689938),
     O = n(576062);
-let R = 'text-sm/medium',
-    v = 36,
+let v = 'text-sm/medium',
+    R = 36,
     C = 144;
 function y(e) {
     var t;
@@ -49,7 +49,7 @@ function y(e) {
         Y = H ? 1.25 : 0,
         j = 18 + Y,
         W = C + Y,
-        K = v + Y,
+        K = R + Y,
         z = H || V,
         q = p && !z,
         Q = p && z,
@@ -116,7 +116,7 @@ function y(e) {
         eo = () =>
             V
                 ? (0, r.jsx)(c.Text, {
-                      variant: R,
+                      variant: v,
                       className: O.statusText,
                       children: F
                   })
@@ -130,7 +130,7 @@ function y(e) {
                         colorClass: O.addStatusIconColor
                     }),
                     (0, r.jsx)(c.Text, {
-                        variant: R,
+                        variant: v,
                         className: O.addStatusPrompt,
                         children: N.Z.Messages.USER_SETTINGS_ADD_STATUS
                     })

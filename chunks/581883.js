@@ -66,7 +66,7 @@ function O(e) {
     let o = T[n];
     i && N(o), r ? ((o.proto = (0, f.re)(o.ProtoClass, o.proto, t)), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string')) : ((o.proto = t), a()('string' != typeof o.proto, 'UserSettingsProto cannot be a string'), (o.editInfo.loaded = !0), (o.editInfo.loading = !1));
 }
-function R(e) {
+function v(e) {
     null != e &&
         o().forEach(T, (t, n) => {
             var r, i;
@@ -82,9 +82,9 @@ function R(e) {
             null != c && ((t.editInfo.protoToSave = c), (t.editInfo.offlineEditDataVersion = s.offlineEditDataVersion));
         });
 }
-class v extends (r = l.ZP.PersistedStore) {
+class R extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        R(e);
+        v(e);
     }
     getState() {
         return this.computeState();
@@ -142,12 +142,12 @@ class v extends (r = l.ZP.PersistedStore) {
         return null !== (t = null === (e = this.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : null;
     }
 }
-p(v, 'displayName', 'UserSettingsProtoStore'),
-    p(v, 'persistKey', 'UserSettingsProtoStore-Cache'),
-    (t.Z = new v(_.Z, {
+p(R, 'displayName', 'UserSettingsProtoStore'),
+    p(R, 'persistKey', 'UserSettingsProtoStore-Cache'),
+    (t.Z = new R(_.Z, {
         CACHE_LOADED: function (e) {
             let { userSettings: t } = e;
-            R(t);
+            v(t);
         },
         USER_SETTINGS_PROTO_UPDATE: O,
         USER_SETTINGS_PROTO_ENQUEUE_UPDATE: O,

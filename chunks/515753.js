@@ -28,8 +28,8 @@ var i = n(735250),
     N = n(43267),
     x = n(933557),
     S = n(979264),
-    Z = n(163889),
-    v = n(111028),
+    v = n(163889),
+    Z = n(111028),
     T = n(853856),
     L = n(93687),
     A = n(785232),
@@ -82,7 +82,7 @@ let V = G.ZP.getEnableHardwareAcceleration() ? p.AnimatedAvatar : p.Avatar,
 class Y extends l.Component {
     render() {
         let { route: e, selected: t, icon: n, iconClassName: l, interactiveClassName: r, text: s, children: o, locationState: u, onClick: h, className: _, role: f, 'aria-posinset': g, 'aria-setsize': m, ...I } = this.props;
-        return (0, i.jsx)(Z.Z, {
+        return (0, i.jsx)(v.Z, {
             className: a()(H.channel, { [H.fullWidth]: d.tq }, _),
             onClick: h,
             role: f,
@@ -288,7 +288,7 @@ function K(e) {
         id: t.id,
         children: (e) => {
             let { role: n, ...l } = e;
-            return (0, i.jsx)(Z.Z, {
+            return (0, i.jsx)(v.Z, {
                 className: H.channel,
                 role: n,
                 focusProps: {
@@ -328,7 +328,7 @@ function K(e) {
                                 highlighted: et,
                                 muted: null != ee && ee,
                                 subText: eh(),
-                                name: (0, i.jsx)(v.Z, {
+                                name: (0, i.jsx)(Z.Z, {
                                     tooltipClassName: H.overflowTooltip,
                                     children: em
                                 }),

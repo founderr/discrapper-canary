@@ -79,7 +79,7 @@ let C = (e) => {
             children: h.Z.Messages.APPLICATION_STORE_FREE
         });
     };
-class x extends (a = _.PureComponent) {
+class O extends (a = _.PureComponent) {
     getState() {
         let { inLibrary: e, sku: t, hasEntitlementBranch: n } = this.props;
         if (n) return 5;
@@ -181,7 +181,7 @@ class x extends (a = _.PureComponent) {
         }
     }
 }
-(o = x),
+(o = O),
     (c = 'Types'),
     (u = i),
     c in o
@@ -192,4 +192,4 @@ class x extends (a = _.PureComponent) {
               writable: !0
           })
         : (o[c] = u),
-    (t.Z = x);
+    (t.Z = O);

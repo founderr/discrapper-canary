@@ -32,8 +32,8 @@ var r = n(373793),
     A = n(981631),
     N = n(665692);
 let O = new Set(['applicationCommandOption']),
-    R = new Set([i.jw.ATTACHMENT]),
-    v = new Set(['line', 'applicationCommand']);
+    v = new Set([i.jw.ATTACHMENT]),
+    R = new Set(['line', 'applicationCommand']);
 function C(e, t, n, d) {
     let { insertData: E, isInline: f, isVoid: h, onChange: A, deleteBackward: C, deleteForward: U, deleteFragment: w } = e;
     (e.insertData = (n) => {
@@ -68,7 +68,7 @@ function C(e, t, n, d) {
         return E(n);
     }),
         (e.isInline = (e) => !!O.has(e.type) || f(e)),
-        (e.isVoid = (e) => !!('applicationCommandOption' === e.type && R.has(e.optionType)) || h(e)),
+        (e.isVoid = (e) => !!('applicationCommandOption' === e.type && v.has(e.optionType)) || h(e)),
         (e.deleteBackward = (t) => {
             M(e, () => C(t));
         }),
@@ -123,7 +123,7 @@ function C(e, t, n, d) {
                                             f.startsWith(h) && f.length > h.length ? (E = _.substring(h.length).trim()) : f.startsWith(I) && f.length > I.length && (E = _.substring(I.length).trim());
                                             let A = [],
                                                 O = null,
-                                                v = null;
+                                                R = null;
                                             if (null != c.options) {
                                                 let e = new Set();
                                                 if (null != d)
@@ -142,7 +142,7 @@ function C(e, t, n, d) {
                                                 for (let r of c.options)
                                                     if (!e.has(r.name) && (r.required || null != u[r.name])) {
                                                         let e, i;
-                                                        E.length > 0 && !R.has(r.type) ? ((e = E), (E = '')) : (e = null != (i = P(n, t, r.name)) ? i : '');
+                                                        E.length > 0 && !v.has(r.type) ? ((e = E), (E = '')) : (e = null != (i = P(n, t, r.name)) ? i : '');
                                                         let a = {
                                                             type: 'applicationCommandOption',
                                                             optionName: r.name,
@@ -150,7 +150,7 @@ function C(e, t, n, d) {
                                                             optionType: r.type,
                                                             children: [{ text: e }]
                                                         };
-                                                        A.push(a), 0 === e.length && null == O && (O = a), null == i && (v = a);
+                                                        A.push(a), 0 === e.length && null == O && (O = a), null == i && (R = a);
                                                     }
                                             }
                                             (l = E.length > 0 ? ''.concat(N.GI).concat(c.displayName, ' ').concat(E.replace(/\r|\n/g, ' ')) : 0 === A.length ? ''.concat(N.GI).concat(c.displayName, ' ') : ''.concat(N.GI).concat(c.displayName)), A.unshift({ text: l });
@@ -172,7 +172,7 @@ function C(e, t, n, d) {
                                                         });
                                             });
                                             let y = null;
-                                            return null != O ? (T.Q.selectCommandOption(e, O.optionName), (y = O.optionName)) : null != v ? (T.Q.selectCommandOption(e, v.optionName, !1), (y = v.optionName)) : T.Q.resetSelectionToEnd(e), null == v && D(e, c), y;
+                                            return null != O ? (T.Q.selectCommandOption(e, O.optionName), (y = O.optionName)) : null != R ? (T.Q.selectCommandOption(e, R.optionName, !1), (y = R.optionName)) : T.Q.resetSelectionToEnd(e), null == R && D(e, c), y;
                                         })(s, c, l),
                                         t = p.tM(s, O, c.id);
                                     return (
@@ -203,7 +203,7 @@ function C(e, t, n, d) {
                                     );
                                 let e = g.bN.richValue(s)[0],
                                     t = e.children[0];
-                                if (v.has(e.type) && g.LC.isText(t)) {
+                                if (R.has(e.type) && g.LC.isText(t)) {
                                     let e = (function (e, t) {
                                         if (!e.startsWith('/')) return null;
                                         let n = (0, _.hV)(t, e.substring(1));
@@ -346,7 +346,7 @@ function y(e, t, n, r) {
         });
 }
 function D(e, t) {
-    if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || R.has(t.options[0].type) || p.cu(e).length > 0 || null == p.cr(e)) return !1;
+    if (null == t.options || 1 !== t.options.length || !0 === t.options[0].required || v.has(t.options[0].type) || p.cu(e).length > 0 || null == p.cr(e)) return !1;
     let n = g.bN.getFirstText(e);
     if (null == n) return !1;
     let r = t.options[0],

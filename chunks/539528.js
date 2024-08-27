@@ -15,7 +15,7 @@ n.d(t, {
         return _;
     },
     q_: function () {
-        return v;
+        return R;
     }
 });
 var r = n(599295),
@@ -133,14 +133,14 @@ function g(e) {
         A = void 0 === S ? p : S,
         N = l.keyLength,
         O = void 0 === N ? 6 : N,
-        R = e.basename ? c(o(e.basename)) : '';
-    function v(e) {
+        v = e.basename ? c(o(e.basename)) : '';
+    function R(e) {
         var t = e || {},
             n = t.key,
             r = t.state,
             i = window.location,
             a = i.pathname + i.search + i.hash;
-        return R && (a = u(a, R)), _(a, r, n);
+        return v && (a = u(a, v)), _(a, r, n);
     }
     function C() {
         return Math.random().toString(36).substr(2, O);
@@ -150,10 +150,10 @@ function g(e) {
         (0, r.Z)(V, e), (V.length = n.length), y.notifyListeners(V.location, V.action);
     }
     function L(e) {
-        if (!(void 0 === e.state && -1 === navigator.userAgent.indexOf('CriOS'))) P(v(e.state));
+        if (!(void 0 === e.state && -1 === navigator.userAgent.indexOf('CriOS'))) P(R(e.state));
     }
     function b() {
-        P(v(T()));
+        P(R(T()));
     }
     var M = !1;
     function P(e) {
@@ -176,10 +176,10 @@ function g(e) {
                         })(e);
               });
     }
-    var U = v(T()),
+    var U = R(T()),
         w = [U.key];
     function x(e) {
-        return R + d(e);
+        return v + d(e);
     }
     function G(e) {
         n.go(e);
@@ -319,10 +319,10 @@ function O() {
         t = e.indexOf('#');
     return -1 === t ? '' : e.substring(t + 1);
 }
-function R(e) {
+function v(e) {
     window.location.replace(N(window.location.href) + '#' + e);
 }
-function v(e) {
+function R(e) {
     void 0 === e && (e = {}), h || (0, s.Z)(!1);
     var t = window.history;
     window.navigator.userAgent.indexOf('Firefox');
@@ -338,16 +338,16 @@ function v(e) {
         var e = T(O());
         return E && (e = u(e, E)), _(e);
     }
-    var v = f();
+    var R = f();
     function C(e) {
-        (0, r.Z)(B, e), (B.length = t.length), v.notifyListeners(B.location, B.action);
+        (0, r.Z)(B, e), (B.length = t.length), R.notifyListeners(B.location, B.action);
     }
     var y = !1,
         D = null;
     function L() {
         var e = O(),
             t = m(e);
-        if (e !== t) R(t);
+        if (e !== t) v(t);
         else {
             var n,
                 r,
@@ -358,7 +358,7 @@ function v(e) {
                 (function (e) {
                     y
                         ? ((y = !1), C())
-                        : v.confirmTransitionTo(e, 'POP', a, function (t) {
+                        : R.confirmTransitionTo(e, 'POP', a, function (t) {
                               t
                                   ? C({
                                         action: 'POP',
@@ -379,7 +379,7 @@ function v(e) {
     }
     var b = O(),
         M = m(b);
-    b !== M && R(M);
+    b !== M && v(M);
     var P = g(),
         U = [d(P)];
     function w(e) {
@@ -402,7 +402,7 @@ function v(e) {
             push: function (e, t) {
                 var n = 'PUSH',
                     r = _(e, void 0, void 0, B.location);
-                v.confirmTransitionTo(r, n, a, function (e) {
+                R.confirmTransitionTo(r, n, a, function (e) {
                     if (e) {
                         var t = d(r),
                             i = m(E + t);
@@ -424,11 +424,11 @@ function v(e) {
             replace: function (e, t) {
                 var n = 'REPLACE',
                     r = _(e, void 0, void 0, B.location);
-                v.confirmTransitionTo(r, n, a, function (e) {
+                R.confirmTransitionTo(r, n, a, function (e) {
                     if (e) {
                         var t = d(r),
                             i = m(E + t);
-                        O() !== i && ((D = t), R(i));
+                        O() !== i && ((D = t), v(i));
                         var a = U.indexOf(d(B.location));
                         -1 !== a && (U[a] = t),
                             C({
@@ -447,7 +447,7 @@ function v(e) {
             },
             block: function (e) {
                 void 0 === e && (e = !1);
-                var t = v.setPrompt(e);
+                var t = R.setPrompt(e);
                 return (
                     !k && (G(1), (k = !0)),
                     function () {
@@ -456,7 +456,7 @@ function v(e) {
                 );
             },
             listen: function (e) {
-                var t = v.appendListener(e);
+                var t = R.appendListener(e);
                 return (
                     G(1),
                     function () {

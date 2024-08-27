@@ -83,16 +83,16 @@ function u(e, t) {
             N = this._wnafT4;
         for (o = E; o >= 0; o--) {
             for (var O = 0; o >= 0; ) {
-                var R = !0;
-                for (l = 0; l < r; l++) (N[l] = 0 | _[l][o]), 0 !== N[l] && (R = !1);
-                if (!R) break;
+                var v = !0;
+                for (l = 0; l < r; l++) (N[l] = 0 | _[l][o]), 0 !== N[l] && (v = !1);
+                if (!v) break;
                 O++, o--;
             }
             if ((o >= 0 && O++, (A = A.dblp(O)), o < 0)) break;
             for (l = 0; l < r; l++) {
-                var v = N[l];
-                if (0 !== v) {
-                    v > 0 ? (u = d[l][(v - 1) >> 1]) : v < 0 && (u = d[l][(-v - 1) >> 1].neg());
+                var R = N[l];
+                if (0 !== R) {
+                    R > 0 ? (u = d[l][(R - 1) >> 1]) : R < 0 && (u = d[l][(-R - 1) >> 1].neg());
                     A = 'affine' === u.type ? A.mixedAdd(u) : A.add(u);
                 }
             }

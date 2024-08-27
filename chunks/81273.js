@@ -21,8 +21,8 @@ var i = n(735250),
     S = n(584825),
     A = n(697227),
     R = n(934826),
-    x = n(896083),
-    O = n(939872),
+    O = n(896083),
+    x = n(939872),
     M = n(265985),
     v = n(293810),
     L = n(981631),
@@ -44,7 +44,7 @@ t.Z = (e, t, n, a) => {
         Y = (0, A.V)(G),
         W = null != Y,
         K = (null == G ? void 0 : G.trialId) != null,
-        { loading: z, getTrialPurchaseEligibility: Q } = (0, x.F)(),
+        { loading: z, getTrialPurchaseEligibility: Q } = (0, O.F)(),
         q = (0, S.oC)(null == e ? void 0 : e.id),
         { analyticsLocations: X } = (0, E.ZP)(),
         J = (null == G ? void 0 : G.paymentGateway) === L.gg$.APPLE_PARTNER;
@@ -97,7 +97,7 @@ t.Z = (e, t, n, a) => {
                 planGroup: H,
                 renderPurchaseConfirmation: (n, s) =>
                     $
-                        ? (0, i.jsx)(O.m, {
+                        ? (0, i.jsx)(x.m, {
                               listing: e,
                               onClose: s,
                               guildId: t

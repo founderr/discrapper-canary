@@ -171,11 +171,11 @@ var n = (function () {
                             (c = t[0] >> e), (d = t[1] >> e), (_[(u = n(c, d, t[2] >> e))] = (_[u] || 0) + 1);
                         }),
                         _),
-                    R = 0;
+                    v = 0;
                 O.forEach(function () {
-                    R++;
+                    v++;
                 });
-                var v =
+                var R =
                         ((E = s),
                         (f = O),
                         (m = 1000000),
@@ -257,7 +257,7 @@ var n = (function () {
                         if ((e.push(l), u && (e.push(u), a++), a >= r || s++ > 1000)) return;
                     }
                 }
-                C.push(v), y(C, 0.75 * o);
+                C.push(R), y(C, 0.75 * o);
                 for (
                     var D = new r(function (e, n) {
                         return t.naturalOrder(e.count() * e.volume(), n.count() * n.volume());

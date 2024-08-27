@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(895924),
     N = n(581364),
     O = n(56801),
-    R = n(342687),
-    v = n(826298),
+    v = n(342687),
+    R = n(826298),
     C = n(689079),
     y = n(981631),
     D = n(689938),
@@ -153,7 +153,7 @@ t.Z = i.forwardRef(function (e, t) {
             (e) => {
                 let t = H[e];
                 if (null == t) return null;
-                let i = (0, v.ky)(t),
+                let i = (0, R.ky)(t),
                     a = (0, r.jsx)(i, {
                         channel: n,
                         section: t,
@@ -205,7 +205,7 @@ t.Z = i.forwardRef(function (e, t) {
                 let a = Z[t.sectionIndex],
                     s = a.data[t.sectionRowIndex],
                     o = ''.concat(a.section.id, ':').concat(null !== (i = null == s ? void 0 : s.id) && void 0 !== i ? i : e);
-                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === A.iw.PLACEHOLDER) return (0, r.jsx)(R.Z, {}, o);
+                if (null == s || (a.section.id !== s.applicationId && a.section.id !== C.bi.FRECENCY) || s.inputType === A.iw.PLACEHOLDER) return (0, r.jsx)(v.Z, {}, o);
                 let l = V.find((e) => e.id === s.applicationId);
                 return (0, r.jsx)(
                     _.ZP.NewCommand,

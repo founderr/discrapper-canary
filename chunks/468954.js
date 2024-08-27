@@ -11,7 +11,7 @@ var r = n(735250),
     l = n(810462),
     u = n(40261);
 function c(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: _, onSearchExpressions: E, hasSearchResults: f, defaultSearchPlaceholder: h, emptySearchPlaceholder: p, renderEmptyState: I, renderRow: m, renderSection: T, renderSectionHeader: g, renderSectionFooter: S, renderInspector: A, renderEmptySearchState: N, renderCategoryList: O, renderHeaderAccessories: R, rowHeight: v, sectionHeaderHeight: C, sectionFooterHeight: y, itemNodeWidth: D, listPaddingRight: L, itemNodeMargin: b, listPadding: M, gridNavigatorId: P, gridNotice: U, renderHeader: w, renderUpsell: x, setShowUpsell: G } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: c, store: d, onSelectItem: _, onSearchExpressions: E, hasSearchResults: f, defaultSearchPlaceholder: h, emptySearchPlaceholder: p, renderEmptyState: I, renderRow: m, renderSection: T, renderSectionHeader: g, renderSectionFooter: S, renderInspector: A, renderEmptySearchState: N, renderCategoryList: O, renderHeaderAccessories: v, rowHeight: R, sectionHeaderHeight: C, sectionFooterHeight: y, itemNodeWidth: D, listPaddingRight: L, itemNodeMargin: b, listPadding: M, gridNavigatorId: P, gridNotice: U, renderHeader: w, renderUpsell: x, setShowUpsell: G } = e,
         k = i.useRef(null),
         B = i.useRef(null),
         F = i.useRef(null),
@@ -95,7 +95,7 @@ function c(e) {
                 defaultSearchPlaceholder: h,
                 emptySearchPlaceholder: p
             }),
-            null == R ? void 0 : R()
+            null == v ? void 0 : v()
         ]
     });
     return (0, r.jsxs)(r.Fragment, {
@@ -137,7 +137,7 @@ function c(e) {
                                             renderEmptySearchState: N,
                                             rowCount: W,
                                             rowCountBySection: K,
-                                            rowHeight: v,
+                                            rowHeight: R,
                                             sectionHeaderHeight: C,
                                             sectionFooterHeight: y,
                                             renderUpsell: x,

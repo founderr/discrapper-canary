@@ -34,7 +34,7 @@ class p extends s.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: s, isGuest: a, isPendingMember: N, isForumToolbar: C, channel: f, className: p, forceAddReactions: g, reactionClassName: S, useChatFontScaling: A, forceHideReactionCreates: R, remainingReactions: x, combinedReactions: O, visibleReactionsCount: M } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: s, isGuest: a, isPendingMember: N, isForumToolbar: C, channel: f, className: p, forceAddReactions: g, reactionClassName: S, useChatFontScaling: A, forceHideReactionCreates: R, remainingReactions: O, combinedReactions: x, visibleReactionsCount: M } = this.props,
             { disableTransitionAppear: v } = this.state,
             L = A ? h : T,
             Z = M > 0;
@@ -53,7 +53,7 @@ class p extends s.PureComponent {
             onMouseLeave: () => this.setState({ isHovered: !1 }),
             children: [
                 (0, i.jsx)(E.l, {
-                    reactions: O,
+                    reactions: x,
                     message: e,
                     readOnly: n,
                     isLurking: s,
@@ -63,7 +63,7 @@ class p extends s.PureComponent {
                     useChatFontScaling: A,
                     className: S
                 }),
-                x > 0 &&
+                O > 0 &&
                     (0, i.jsx)(o.Clickable, {
                         onClick: (t) => {
                             t.stopPropagation(), (0, I.op)(f, e);
@@ -73,7 +73,7 @@ class p extends s.PureComponent {
                         children: (0, i.jsxs)(o.Text, {
                             className: L.reactionInner,
                             variant: 'text-sm/normal',
-                            children: ['+', x]
+                            children: ['+', O]
                         })
                     }),
                 !t &&

@@ -18,10 +18,10 @@ n.d(t, {
         return C;
     },
     Wf: function () {
-        return R;
+        return v;
     },
     eT: function () {
-        return v;
+        return R;
     },
     gl: function () {
         return N;
@@ -293,7 +293,7 @@ function O(e) {
         streamKey: e
     });
 }
-async function R(e) {
+async function v(e) {
     try {
         let t = await i.tn.post({
             url: f.ANM.QUESTS_PREVIEW_COMPLETE(e),
@@ -311,7 +311,7 @@ async function R(e) {
         });
     }
 }
-async function v(e) {
+async function R(e) {
     try {
         let t = await i.tn.del({
             url: f.ANM.QUESTS_PREVIEW_STATUS(e),

@@ -27,8 +27,8 @@ var r = n(735250),
     A = n(592125),
     N = n(626135),
     O = n(912787),
-    R = n(272709),
-    v = n(718582),
+    v = n(272709),
+    R = n(718582),
     C = n(126134),
     y = n(981631),
     D = n(689938),
@@ -36,7 +36,7 @@ var r = n(735250),
 function b(e) {
     let { guild: t } = e,
         n = -1,
-        a = (0, v.V1)(t),
+        a = (0, R.V1)(t),
         s = i.useMemo(
             () =>
                 a.map((e) => {
@@ -46,7 +46,7 @@ function b(e) {
                             e.category === C.L.EMBEDDED_ACTIVITY ? (i = e.embeddedActivities[0].channelId) : e.category === C.L.HANGOUT || e.category === C.L.GAMING ? (i = e.channelId) : e.category === C.L.EVENT && (i = e.event.channel_id),
                             n++,
                             (0, r.jsx)(
-                                R.Z,
+                                v.Z,
                                 {
                                     cardData: e,
                                     guildId: t.id,
@@ -71,7 +71,7 @@ function b(e) {
             var c, d, _, E, f;
             if (3 === e.length) break;
             let a = null !== (_ = (0, O.i)(o)) && void 0 !== _ ? _ : '',
-                h = (0, v.bA)(a, t.id),
+                h = (0, R.bA)(a, t.id),
                 p = e.length;
             e.push(o.category),
                 r.push(h.length),
@@ -111,12 +111,12 @@ function M(e) {
         A = i.useRef(null),
         N = (0, u.Z)(n),
         O = (0, p.I)(n),
-        { isViewingRoles: R, backNavigationSection: v } = (0, a.cj)([T.Z], () => ({
+        { isViewingRoles: v, backNavigationSection: R } = (0, a.cj)([T.Z], () => ({
             isViewingRoles: T.Z.isViewingRoles(n.id),
             backNavigationSection: T.Z.getBackNavigationSection(n.id)
         })),
         C = () => {
-            T.Z.isFullServerPreview(n.id) && (0, g.uL)(y.Z5c.CHANNEL(n.id)), E.ZP.shouldShowOnboarding(n.id) && (_.Z.finishOnboarding(n.id), (0, f.discardOnboardingPromise)(n.id)), (0, m.mL)(n.id), I.Z.open(n.id, v), v === y.pNK.ROLE_SUBSCRIPTIONS && (0, h.GN)(n.id);
+            T.Z.isFullServerPreview(n.id) && (0, g.uL)(y.Z5c.CHANNEL(n.id)), E.ZP.shouldShowOnboarding(n.id) && (_.Z.finishOnboarding(n.id), (0, f.discardOnboardingPromise)(n.id)), (0, m.mL)(n.id), I.Z.open(n.id, R), R === y.pNK.ROLE_SUBSCRIPTIONS && (0, h.GN)(n.id);
         },
         M = null === (t = A.current) || void 0 === t ? void 0 : t.clientHeight,
         P = S + 14;
@@ -175,7 +175,7 @@ function M(e) {
                           ]
                       })
                     : null,
-                R
+                v
                     ? (0, r.jsxs)('div', {
                           className: L.footer,
                           children: [

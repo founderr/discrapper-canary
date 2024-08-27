@@ -3,7 +3,7 @@ n.d(t, {
         return M;
     },
     Z: function () {
-        return O;
+        return x;
     }
 }),
     n(47120);
@@ -30,7 +30,7 @@ var i = n(735250),
     S = n(893182),
     A = n(689938),
     R = n(889086);
-function x(e) {
+function O(e) {
     let { onClick: t } = e;
     return (0, i.jsxs)(o.Clickable, {
         onClick: t,
@@ -52,7 +52,7 @@ function x(e) {
         ]
     });
 }
-function O(e) {
+function x(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         s = I.QK.useSetting(),
         a = (0, C.n)() && s,
@@ -123,7 +123,7 @@ function M(e) {
                       }),
                       M &&
                           (0, i.jsxs)(i.Fragment, {
-                              children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(x, { onClick: () => (0, S.Z)({ guildId: I }) })]
+                              children: [(0, i.jsx)(o.Spacer, { size: 4 }), (0, i.jsx)(O, { onClick: () => (0, S.Z)({ guildId: I }) })]
                           })
                   ]
               })
@@ -190,7 +190,7 @@ function M(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(O, {
+            (0, i.jsx)(x, {
                 coverImageAsset: null == E ? void 0 : E.cover_image_asset,
                 isPreview: j
             })

@@ -27,7 +27,7 @@ var i = n(735250),
     S = n(981631),
     A = n(689938);
 function R(e) {
-    let { onOpen: t, onClose: n, children: R, badgeState: x, popoutPosition: O, popoutAlign: M } = e,
+    let { onOpen: t, onClose: n, children: R, badgeState: O, popoutPosition: x, popoutAlign: M } = e,
         { analyticsLocations: v } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
         [L, Z] = s.useState(!1),
         [P, D] = (function () {
@@ -94,7 +94,7 @@ function R(e) {
         value: v,
         children: (0, i.jsx)(o.Popout, {
             animation: o.Popout.Animation.NONE,
-            position: O,
+            position: x,
             align: M,
             autoInvert: !1,
             shouldShow: L,
@@ -106,20 +106,20 @@ function R(e) {
                         P === l.X.FOR_YOU
                             ? (0, i.jsx)(h.Z, {
                                   setTab: D,
-                                  badgeState: x,
+                                  badgeState: O,
                                   closePopout: U
                               })
                             : P === l.X.MENTIONS
                               ? (0, i.jsx)(f.Z, {
                                     setTab: D,
                                     onJump: w,
-                                    badgeState: x,
+                                    badgeState: O,
                                     closePopout: U
                                 })
                               : G && P === l.X.GAME_INVITES
                                 ? (0, i.jsx)(g.Z, {
                                       setTab: D,
-                                      badgeState: x,
+                                      badgeState: O,
                                       closePopout: U
                                   })
                                 : F && P === l.X.BOOKMARKS
@@ -138,7 +138,7 @@ function R(e) {
                                           fallback: (0, i.jsx)(p.h, {
                                               setTab: D,
                                               closePopout: U,
-                                              badgeState: x
+                                              badgeState: O
                                           }),
                                           children: (0, i.jsx)(p.Z, {
                                               setTab: D,
@@ -146,7 +146,7 @@ function R(e) {
                                               showTutorial: b,
                                               setSeenTutorial: j,
                                               closePopout: U,
-                                              badgeState: x
+                                              badgeState: O
                                           })
                                       })
                 });

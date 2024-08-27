@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(626135),
     N = n(176354),
     O = n(74538),
-    R = n(543241),
-    v = n(149203),
+    v = n(543241),
+    R = n(149203),
     C = n(981631),
     y = n(185923),
     D = n(474936),
@@ -35,7 +35,7 @@ t.Z = (e) => {
         F = (0, o.e7)([S.Z], () => S.Z.theme) === C.BRd.LIGHT ? 'light' : 'dark',
         [V, H] = i.useState(!1),
         Z = () => {
-            (0, R.A3)(w), (0, f.z)(), P();
+            (0, v.A3)(w), (0, f.z)(), P();
         },
         Y = n(577391)('./img_premium_emoji_'.concat(F, '.svg')),
         j = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(F, '.png'),
@@ -51,7 +51,7 @@ t.Z = (e) => {
                 disable: z
             }
         );
-    M = G === y.Hz.REACTION ? D.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == x ? D.cd.EMOJI_PICKER_FLOATING_UPSELL : x.subCategory === v.t0.TOP_GUILD_EMOJI ? D.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : x.subCategory === v.t0.NEWLY_ADDED_EMOJI ? D.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : D.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    M = G === y.Hz.REACTION ? D.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == x ? D.cd.EMOJI_PICKER_FLOATING_UPSELL : x.subCategory === R.t0.TOP_GUILD_EMOJI ? D.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : x.subCategory === R.t0.NEWLY_ADDED_EMOJI ? D.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : D.cd.EMOJI_PICKER_EMOJI_CLICKED;
     let J = null != x ? x.emoji : void 0,
         ee = null != J && J.animated,
         et = null != J && !N.ZP.isInternalEmojiForGuildId(J, null == w ? void 0 : w.getGuildId()),

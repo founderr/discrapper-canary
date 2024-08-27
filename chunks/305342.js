@@ -27,8 +27,8 @@ var i = n(735250),
     S = n(893729),
     A = n(838940),
     R = n(882101),
-    x = n(11705),
-    O = n(81273),
+    O = n(11705),
+    x = n(81273),
     M = n(293810),
     v = n(981631),
     L = n(689938),
@@ -220,7 +220,7 @@ t.Z = (e) => {
     var t;
     let { listingId: n, guildId: a, groupListingId: u, analyticsLocation: E } = e,
         C = (0, m.jO)(n),
-        { openModal: f, canOpenModal: p, cannotOpenReason: S, isCheckingTrialEligibility: A } = (0, O.Z)(C, a, u, E),
+        { openModal: f, canOpenModal: p, cannotOpenReason: S, isCheckingTrialEligibility: A } = (0, x.Z)(C, a, u, E),
         P = (0, l.e7)([_.Z], () => _.Z.isSyncing),
         { activeSubscription: D, activeSubscriptionListing: U } = (0, h.Z)(u),
         y = (null == U ? void 0 : U.id) === n,
@@ -279,7 +279,7 @@ t.Z = (e) => {
                               className: Z.tierInfoContainer,
                               children: [
                                   q
-                                      ? (0, i.jsx)(x.e, {
+                                      ? (0, i.jsx)(O.e, {
                                             listingId: n,
                                             isListingPublished: et,
                                             expanded: $,

@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(304761),
     u = n(865427),
     _ = n(820254),
-    h = n(689938),
-    E = n(514990);
+    E = n(689938),
+    h = n(514990);
 let m = 'isHideDevBanner';
 t.Z = () => {
     var e;
@@ -26,23 +26,23 @@ t.Z = () => {
         g = () =>
             (0, i.jsx)(c.Clickable, {
                 onClick: I,
-                className: E.closeButton,
-                'aria-label': h.Z.Messages.DISMISS,
+                className: h.closeButton,
+                'aria-label': E.Z.Messages.DISMISS,
                 children: (0, i.jsx)(c.XSmallIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: E.closeIcon
+                    className: h.closeIcon
                 })
             });
     return null != s
         ? (0, i.jsxs)('div', {
-              className: r()(E.devBanner, E.buildOverride),
-              children: [(0, i.jsx)(_.Z, { className: E.icon }), h.Z.Messages.BUILD_OVERRIDE, (0, i.jsx)(g, {})]
+              className: r()(h.devBanner, h.buildOverride),
+              children: [(0, i.jsx)(_.Z, { className: h.icon }), E.Z.Messages.BUILD_OVERRIDE, (0, i.jsx)(g, {})]
           })
         : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
           ? (0, i.jsxs)('div', {
-                className: r()(E.devBanner, E.staging),
-                children: [(0, i.jsx)(_.Z, { className: E.icon }), h.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '322206' }), (0, i.jsx)(g, {})]
+                className: r()(h.devBanner, h.staging),
+                children: [(0, i.jsx)(_.Z, { className: h.icon }), E.Z.Messages.DEV_NOTICE_STAGING.format({ buildNumber: '322256' }), (0, i.jsx)(g, {})]
             })
           : null;
 };

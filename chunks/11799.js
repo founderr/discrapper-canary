@@ -33,7 +33,7 @@ let _ = (e) => {
                 cursor: c.Z.cursor,
                 errored: c.Z.errored
             })),
-            { roleFilter: R, everyoneFilter: x } = (0, s.cj)([l.Z], () => ({
+            { roleFilter: R, everyoneFilter: O } = (0, s.cj)([l.Z], () => ({
                 everyoneFilter: l.Z.everyoneFilter,
                 roleFilter: l.Z.roleFilter
             }));
@@ -41,12 +41,12 @@ let _ = (e) => {
             i.useEffect(() => {
                 C && t && (0, a.FT)(d.W.NOTIFICATION_CENTER);
             }, [t, C]);
-        let O = (0, r.Z)();
+        let x = (0, r.Z)();
         i.useEffect(
             () => () => {
-                _ ? !O() && (A || p.length > 100) && (0, o.jF)() : n && p.length > 100 && (0, o.jF)();
+                _ ? !x() && (A || p.length > 100) && (0, o.jF)() : n && p.length > 100 && (0, o.jF)();
             },
-            [n, p, _, O, A]
+            [n, p, _, x, A]
         ),
             i.useEffect(() => {
                 let e = m && t;
@@ -55,9 +55,9 @@ let _ = (e) => {
                         limit: null != I ? I : E ? 8 : 20,
                         with_mentions: E,
                         roles_filter: R,
-                        everyone_filter: x
+                        everyone_filter: O
                     });
-            }, [C, m, t, E, R, x, I]);
+            }, [C, m, t, E, R, O, I]);
         let M = i.useCallback(
             async (e) => {
                 !T.current &&
@@ -72,7 +72,7 @@ let _ = (e) => {
                             after: S,
                             with_mentions: E,
                             roles_filter: R,
-                            everyone_filter: x,
+                            everyone_filter: O,
                             limit: E ? 8 : 20
                         },
                         () => {
@@ -81,7 +81,7 @@ let _ = (e) => {
                     ),
                     N(!1));
             },
-            [C, g, S, A, E, R, x]
+            [C, g, S, A, E, R, O]
         );
         return {
             initialized: C,

@@ -150,13 +150,13 @@ function T(e) {
                 []
             );
         })(N),
-        R = i.useRef([]);
-    !l()(R.current, O) && (R.current = O);
-    let v = null === (t = N.find((e) => null != e.key)) || void 0 === t ? void 0 : t.key,
+        v = i.useRef([]);
+    !l()(v.current, O) && (v.current = O);
+    let R = null === (t = N.find((e) => null != e.key)) || void 0 === t ? void 0 : t.key,
         C = (0, u.ZP)({
             navId: n,
-            items: R.current,
-            initialFocusPath: f.Z.keyboardModeEnabled && null != v ? [v] : [],
+            items: v.current,
+            initialFocusPath: f.Z.keyboardModeEnabled && null != R ? [R] : [],
             closeMenu: g
         });
     i.useEffect(() => {

@@ -11,7 +11,7 @@ var i = n(735250),
     p = n(167555);
 let _ = (0, s.debounce)(c.ZP.trackWithMetadata, 500);
 t.Z = function (e) {
-    let { guild: t, title: n, message: r, image: s, type: f, imageStyles: g, imageMarginX: m, imageMarginTop: C, trackingSource: I, undismissable: E, onDismissed: N, onClick: x, cta: S, ctaColor: Z, centerText: v, className: T } = e;
+    let { guild: t, title: n, message: r, image: s, type: f, imageStyles: g, imageMarginX: m, imageMarginTop: C, trackingSource: I, undismissable: E, onDismissed: N, onClick: x, cta: S, ctaColor: v, centerText: Z, className: T } = e;
     l.useEffect(() => {
         _(d.rMx.CHANNEL_NOTICE_VIEWED, {
             notice_type: f,
@@ -35,7 +35,7 @@ t.Z = function (e) {
                       null == x || x();
               },
               fullWidth: !0,
-              color: Z,
+              color: v,
               children: S
           }));
     let A = null;
@@ -45,7 +45,7 @@ t.Z = function (e) {
           (A = (0, i.jsx)(o.Text, {
               variant: 'text-md/medium',
               color: 'header-primary',
-              className: a()(p.title, { [p.noImageTitle]: null == s }, { [p.center]: v }),
+              className: a()(p.title, { [p.noImageTitle]: null == s }, { [p.center]: Z }),
               children: n
           }));
     let b = null;
@@ -53,7 +53,7 @@ t.Z = function (e) {
         ? (b = r())
         : null != r &&
           (b = (0, i.jsx)(o.Text, {
-              className: a()({ [p.center]: v }),
+              className: a()({ [p.center]: Z }),
               variant: 'text-sm/normal',
               color: 'text-muted',
               children: r

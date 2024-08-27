@@ -82,9 +82,9 @@ t.ZP = {
             h = f(a),
             N = f(null != o ? o : ''),
             O = E.whitespaceSanitized,
-            R = h.fullySanitized,
-            v = N.fullySanitized,
-            C = R.trim();
+            v = h.fullySanitized,
+            R = N.fullySanitized,
+            C = v.trim();
         if (0 === O.trim().length || 0 === C.length) return _();
         let y = A(l().unescapeUrl(s)),
             D = (0, u.ZP)(a).length > 0 || (0, u.ZP)(o).length > 0;
@@ -97,8 +97,8 @@ t.ZP = {
             b = n.allowEmojiLinks ? I : p,
             M = [...b, ...m],
             P = [...T, ...g],
-            U = S(t(R, L), M, [d.b.EMOJI]),
-            w = S(t(v, L), P);
+            U = S(t(v, L), M, [d.b.EMOJI]),
+            w = S(t(R, L), P);
         if (
             null == U ||
             null == w ||

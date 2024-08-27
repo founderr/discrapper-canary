@@ -36,7 +36,7 @@ n.d(t, {
         return b;
     },
     ib: function () {
-        return R;
+        return v;
     },
     lh: function () {
         return j;
@@ -129,13 +129,13 @@ function O(e) {
         a
     );
 }
-let R = () => {
+let v = () => {
         let e = a()().add(1, 'hour'),
             t = e.hour();
         return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
     },
-    v = (e, t) => e.format(e.get('years') === t.get('years') ? 'ddd MMM Do \xB7 LT' : 'ddd MMM Do, YYYY \xB7 LT'),
-    C = (e, t) => (e.diff(t, 'days') > 1 ? v(e, t) : e.calendar(t));
+    R = (e, t) => e.format(e.get('years') === t.get('years') ? 'ddd MMM Do \xB7 LT' : 'ddd MMM Do, YYYY \xB7 LT'),
+    C = (e, t) => (e.diff(t, 'days') > 1 ? R(e, t) : e.calendar(t));
 function y(e, t, n) {
     null == n && (n = a()());
     let r = a()(e),
@@ -143,7 +143,7 @@ function y(e, t, n) {
         s = null != t && r.isSame(i, 'day');
     return {
         startDateTimeString: C(r, n),
-        endDateTimeString: null != i ? (s ? i.format('LT') : v(i, n)) : void 0,
+        endDateTimeString: null != i ? (s ? i.format('LT') : R(i, n)) : void 0,
         currentOrPastEvent: r <= n,
         upcomingEvent: r <= a()().add(1, 'hour'),
         withinStartWindow: r <= a()().add(15, 'minute'),

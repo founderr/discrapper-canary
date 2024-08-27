@@ -34,8 +34,8 @@ function N(e, t, n) {
     );
 }
 let O = null !== (i = (0, f.Z)()) && void 0 !== i ? i : S.BRd.DARK,
-    R = null,
-    v = !1;
+    v = null,
+    R = !1;
 function C() {
     let e = (function () {
         var e, t;
@@ -81,19 +81,19 @@ class b extends (a = s.ZP.PersistedStore) {
         return { theme: this.theme };
     }
     get darkSidebar() {
-        return (0, u.ap)(this.theme) && m.ZP.darkSidebar && !v;
+        return (0, u.ap)(this.theme) && m.ZP.darkSidebar && !R;
     }
     get theme() {
         return C();
     }
     get systemTheme() {
-        return R;
+        return v;
     }
     get systemPrefersColorScheme() {
         return r;
     }
     get isSystemThemeAvailable() {
-        return null !== R;
+        return null !== v;
     }
 }
 N(b, 'displayName', 'ThemeStore'),
@@ -133,8 +133,8 @@ N(b, 'displayName', 'ThemeStore'),
             let { presetId: r } = e;
             O = null != r && null !== (n = null === (t = A.qt[r]) || void 0 === t ? void 0 : t.theme) && void 0 !== n ? n : C();
             let i = null != r;
-            return v !== i
-                ? ((v = i), !0)
+            return R !== i
+                ? ((R = i), !0)
                 : (function () {
                       let e = C();
                       return !(0, _.qu)(O, e) && ((O = e), !0);
@@ -143,7 +143,7 @@ N(b, 'displayName', 'ThemeStore'),
         RESET_PREVIEW_CLIENT_THEME: y,
         SYSTEM_THEME_CHANGE: function (e) {
             let { systemTheme: t } = e;
-            return (R = t), L();
+            return (v = t), L();
         },
         ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function (e) {
             return (r = e.systemPrefersColorScheme), L();

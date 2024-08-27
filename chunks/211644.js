@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     },
     ZP: function () {
-        return v;
+        return R;
     },
     bn: function () {
         return A;
@@ -18,7 +18,7 @@ n.d(t, {
         return g;
     },
     mc: function () {
-        return R;
+        return v;
     },
     ot: function () {
         return N;
@@ -117,9 +117,9 @@ let s = new (n(499303).I)(),
         let e = [...l.getState().currentlyShown].filter((e) => !a.O.has(e)).length;
         return [l.getState().currentlyShown.size, e];
     },
-    R = () => {
+    v = () => {
         (0, i.j)(() => l.setState(o)), s.unschedule();
     };
-function v(e) {
+function R(e) {
     return l(e);
 }

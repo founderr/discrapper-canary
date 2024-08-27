@@ -33,7 +33,7 @@ let I = {},
     A = new Set(),
     N = () => b.emitChange(),
     O = o().debounce(N, 150);
-function R(e) {
+function v(e) {
     let t = T[e];
     null != t &&
         !t.closed &&
@@ -45,7 +45,7 @@ function R(e) {
             alwaysOnTop: !!_.isPlatformEmbedded && m[e]
         });
 }
-function v(e, t, r) {
+function R(e, t, r) {
     let i = e.document,
         s = new URL(t).origin,
         o = new URL(''.concat(window.location.protocol, '//').concat(window.location.host)).origin,
@@ -60,7 +60,7 @@ function v(e, t, r) {
 function C(e) {
     let t = T[e];
     null != t &&
-        (!t.closed && R(e),
+        (!t.closed && v(e),
         t.close(),
         !(function (e) {
             let t = T[e];
@@ -95,7 +95,7 @@ function y(e) {
                                 t.addEventListener('blur', N),
                                 t.addEventListener('resize', O),
                                 !(function (e, t) {
-                                    for (let e of document.querySelectorAll('link[rel="stylesheet"]')) v(t, e.href, e.integrity);
+                                    for (let e of document.querySelectorAll('link[rel="stylesheet"]')) R(t, e.href, e.integrity);
                                 })(0, t);
                             let i = (0, l.createRoot)(r.getElementById('app-mount'));
                             a()(null != i, 'No render target for popout!'), (g[e] = i), i.render(n(e));
@@ -189,12 +189,12 @@ let b = new L(c.Z, {
     },
     POPOUT_WINDOW_ADD_STYLESHEET: function (e) {
         let { url: t, integrity: n } = e;
-        for (let e of Object.values(T)) null != e && !e.closed && v(e, t, n);
+        for (let e of Object.values(T)) null != e && !e.closed && R(e, t, n);
     },
     POPOUT_WINDOW_CLOSE: function (e) {
         let { key: t } = e,
             n = T[t];
-        null != n && !n.closed && (R(t), n.close());
+        null != n && !n.closed && (v(t), n.close());
     },
     POPOUT_WINDOW_SET_ALWAYS_ON_TOP: function (e) {
         let { key: t, alwaysOnTop: n } = e;

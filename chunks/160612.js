@@ -254,9 +254,9 @@ var r;
                             url: 'https://stripe.com/docs/stripe-js/react'
                         });
             },
-            R = t.createContext(null);
-        R.displayName = 'ElementsContext';
-        var v = function (e, t) {
+            v = t.createContext(null);
+        v.displayName = 'ElementsContext';
+        var R = function (e, t) {
                 if (!e) throw Error('Could not find Elements context; You need to wrap the part of your app that '.concat(t, ' in an <Elements> provider.'));
                 return e;
             },
@@ -331,7 +331,7 @@ var r;
                         },
                         [l.stripe]
                     ),
-                    t.createElement(R.Provider, { value: l }, i)
+                    t.createElement(v.Provider, { value: l }, i)
                 );
             };
         C.propTypes = {
@@ -339,7 +339,7 @@ var r;
             options: f.object
         };
         var y = function (e) {
-                return v(t.useContext(R), e);
+                return R(t.useContext(v), e);
             },
             D = function (e) {
                 return (0, e.children)(y('mounts <ElementsConsumer>'));
@@ -487,9 +487,9 @@ var r;
         };
         var x = function (e) {
                 var n = t.useContext(b),
-                    r = t.useContext(R);
+                    r = t.useContext(v);
                 if (n && r) throw Error('You cannot wrap the part of your app that '.concat(e, ' in both <CustomCheckoutProvider> and <Elements> providers.'));
-                return n ? M(n, e) : v(r, e);
+                return n ? M(n, e) : R(r, e);
             },
             G = function (e, n) {
                 var r,
@@ -522,10 +522,10 @@ var r;
                                   A = n.onConfirm,
                                   N = n.onCancel,
                                   O = n.onShippingAddressChange,
-                                  R = n.onShippingRateChange,
-                                  v = x('mounts <'.concat(i, '>')),
-                                  C = 'elements' in v ? v.elements : null,
-                                  y = 'customCheckoutSdk' in v ? v.customCheckoutSdk : null,
+                                  v = n.onShippingRateChange,
+                                  R = x('mounts <'.concat(i, '>')),
+                                  C = 'elements' in R ? R.elements : null,
+                                  y = 'customCheckoutSdk' in R ? R.customCheckoutSdk : null,
                                   D = s(t.useState(null), 2),
                                   L = D[0],
                                   b = D[1],
@@ -541,7 +541,7 @@ var r;
                                   h(L, 'confirm', A),
                                   h(L, 'cancel', N),
                                   h(L, 'shippingaddresschange', O),
-                                  h(L, 'shippingratechange', R),
+                                  h(L, 'shippingratechange', v),
                                   h(L, 'change', E),
                                   _ &&
                                       (r =

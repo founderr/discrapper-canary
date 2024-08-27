@@ -28,8 +28,8 @@ var i = n(735250),
     N = n(667815),
     x = n(531572),
     S = n(26323),
-    Z = n(30513),
-    v = n(981631),
+    v = n(30513),
+    Z = n(981631),
     T = n(689938),
     L = n(360084);
 let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
@@ -37,7 +37,7 @@ let A = (0, E.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         let { guild: t, onSelect: n } = e,
             [r, a] = l.useState(t.premiumProgressBarEnabled),
             [s, o] = l.useState(!1),
-            u = (0, c.e7)([m.Z], () => m.Z.can(v.Plq.MANAGE_GUILD, t)),
+            u = (0, c.e7)([m.Z], () => m.Z.can(Z.Plq.MANAGE_GUILD, t)),
             p = async () => {
                 if (!!u) o(!0), await g.Z.saveGuild(t.id, { premiumProgressBarEnabled: !r }), a(!r), o(!1);
             };
@@ -73,7 +73,7 @@ t.ZP = (e) => {
             var e;
             return null !== (e = x.Z.getCountForGuild(g)) && void 0 !== e ? e : 0;
         }),
-        y = (0, c.e7)([m.Z], () => m.Z.can(v.Plq.MANAGE_GUILD, t));
+        y = (0, c.e7)([m.Z], () => m.Z.can(Z.Plq.MANAGE_GUILD, t));
     l.useEffect(() => {
         O !== u && (0, N.v)(g, u);
     }, [g, O, u]);
@@ -86,20 +86,20 @@ t.ZP = (e) => {
         },
         [G, U] = (0, d.useSpring)(() => w),
         k = () => {
-            (0, _.yw)(v.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
-                location: { section: v.jXE.PREMIUM_GUILD_PROGRESS_BAR },
+            (0, _.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                location: { section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR },
                 guild_id: g,
                 location_stack: r
             }),
                 (0, S.Z)({
                     analyticsLocations: r,
                     analyticsSourceLocation: {
-                        page: v.ZY5.GUILD_CHANNEL,
-                        section: v.jXE.PREMIUM_GUILD_PROGRESS_BAR,
-                        object: v.qAy.TOOLTIP
+                        page: Z.ZY5.GUILD_CHANNEL,
+                        section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR,
+                        object: Z.qAy.TOOLTIP
                     },
                     guild: t,
-                    perks: (0, Z.VF)(),
+                    perks: (0, v.VF)(),
                     perkIntro: T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_PROGRESS_BAR_HEADER
                 });
         },

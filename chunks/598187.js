@@ -26,8 +26,8 @@ var i = n(735250),
     S = n(103575),
     A = n(204197),
     R = n(592125),
-    x = n(271383),
-    O = n(594174),
+    O = n(271383),
+    x = n(594174),
     M = n(464891),
     v = n(348238),
     L = n(83561),
@@ -116,9 +116,9 @@ function k(e) {
 function F(e) {
     var t;
     let { message: n, compact: a } = e,
-        r = O.default.getUser((0, C.Sw)(n)),
+        r = x.default.getUser((0, C.Sw)(n)),
         l = null === (t = R.Z.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id,
-        c = null != l && null != r ? x.ZP.getMember(l, r.id) : null,
+        c = null != l && null != r ? O.ZP.getMember(l, r.id) : null,
         {
             avatarSrc: u,
             avatarDecorationSrc: d,
@@ -220,12 +220,12 @@ function G(e) {
         g = null !== (t = null == p ? void 0 : p.guild_id) && void 0 !== t ? t : null,
         { shouldShowIncidentActions: S } = (0, h.mI)(g),
         A = (0, v.sR)(n.author.id, n.channel_id),
-        x = s.useCallback(() => {
+        O = s.useCallback(() => {
             let e = null == p ? void 0 : p.guild_id;
             null != e && (0, f.kW)(n.id, e);
         }, [n.id, p]),
-        O = m === d.$.DM_RAID,
-        M = O ? I.CircleWarningIcon : I.ChatWarningIcon;
+        x = m === d.$.DM_RAID,
+        M = x ? I.CircleWarningIcon : I.ChatWarningIcon;
     return (0, i.jsx)(V, {
         compact: a,
         header: (0, i.jsxs)(s.Fragment, {
@@ -237,7 +237,7 @@ function G(e) {
                 (0, i.jsx)(I.Text, {
                     variant: 'text-md/semibold',
                     color: 'text-danger',
-                    children: O ? b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
+                    children: x ? b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : b.Z.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
                 })
             ]
         }),
@@ -307,7 +307,7 @@ function G(e) {
                       }),
                       (0, i.jsx)(U, {}),
                       (0, i.jsx)(I.Button, {
-                          onClick: x,
+                          onClick: O,
                           color: I.Button.Colors.LINK,
                           look: I.Button.Looks.LINK,
                           size: I.Button.Sizes.SMALL,

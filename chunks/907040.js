@@ -27,8 +27,8 @@ var r,
     A = n(339085),
     N = n(438332),
     O = n(664437),
-    R = n(806966),
-    v = n(28546),
+    v = n(806966),
+    R = n(28546),
     C = n(691251),
     y = n(98528),
     D = n(770812),
@@ -63,7 +63,7 @@ let en = (0, k.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL
     ei = (e) => e.stopPropagation();
 ((i = r || (r = {}))[(i.NONE = 0)] = 'NONE'), (i[(i.TABS_EXPRESSION_PICKER = 1)] = 'TABS_EXPRESSION_PICKER'), (i[(i.NO_TABS_EXPRESSION_PICKER = 2)] = 'NO_TABS_EXPRESSION_PICKER');
 let ea = (e, t) => {
-        R.kJ.setInspectedExpressionPosition(e, t, C.u.GRID_NAVIGATOR_EVENT);
+        v.kJ.setInspectedExpressionPosition(e, t, C.u.GRID_NAVIGATOR_EVENT);
     },
     es = (e) => {
         let { analyticsLocation: t, pickerIntention: n, columnCounts: r, onSelectEmoji: i, emojiGrid: a, emojiList: o, channelGuildId: l, isBurstReaction: u } = e,
@@ -131,7 +131,7 @@ let ea = (e, t) => {
         return (
             s.useEffect(
                 () =>
-                    R.kJ.useStore.subscribe(
+                    v.kJ.useStore.subscribe(
                         (e) => {
                             if (null == e) return;
                             let { columnIndex: t, rowIndex: n, source: r } = e;
@@ -164,7 +164,7 @@ let ea = (e, t) => {
             }
         }, [t, n]),
             s.useEffect(() => {
-                r(R.kJ.getState().activeCategoryIndex);
+                r(v.kJ.getState().activeCategoryIndex);
             }, [e]);
     },
     el = (e, t, n, r) => {
@@ -186,11 +186,11 @@ t.Z = s.memo(
         var n, r;
         let i,
             { pickerIntention: o, channel: u, guildId: c, closePopout: d, emojiSize: f = X.Su.MEDIUM, hasTabWrapper: p = !1, containerContext: C = 0, includeCreateEmojiButton: L, onSelectEmoji: k, containerWidth: ea, onNavigateAway: e_, persistSearch: eE, className: ef, headerClassName: eh, analyticsOverride: ep = ed, searchProps: eI = {}, wrapper: em, shouldHidePickerActions: eT = !1, messageId: eg, renderHeader: eS, listHeaderClassName: eA } = e,
-            { onFocus: eN, onKeyDown: eO, autoFocus: eR = !0, accessory: ev } = eI,
+            { onFocus: eN, onKeyDown: eO, autoFocus: ev = !0, accessory: eR } = eI,
             eC = (0, _.e7)([U.ZP], () => (null != c ? U.ZP.getDefaultChannel(c) : null), [c]),
             [ey, eD] = s.useState(null),
             eL = s.useRef(''),
-            eb = (0, v.Iu)((e) => e.searchQuery),
+            eb = (0, R.Iu)((e) => e.searchQuery),
             eM = s.useRef(null),
             eP = s.useRef(null),
             eU = s.useRef(null);
@@ -316,9 +316,9 @@ t.Z = s.memo(
                 isBurstReaction: ex
             });
         eo(ea, eP),
-            el(ea, eK, eU, eR),
+            el(ea, eK, eU, ev),
             s.useEffect(() => {
-                !eE && (0, v.ql)('');
+                !eE && (0, R.ql)('');
             }, [eE]),
             s.useEffect(
                 () => (
@@ -326,15 +326,15 @@ t.Z = s.memo(
                         type: null != eY ? eY : 'Emoji Picker',
                         guild_id: ew
                     }),
-                    R.kJ.resetStoreState
+                    v.kJ.resetStoreState
                 ),
                 [eY, ew]
             ),
             s.useEffect(() => () => (0, b.Kw)(b.v6.FAVORITE_EMOJI_TOOLTIP), []),
             s.useLayoutEffect(() => {
                 var e;
-                let { columnIndex: t, rowIndex: n } = R.kJ.getState().inspectedExpressionPosition;
-                (null === (e = e2[n]) || void 0 === e ? void 0 : e[t]) == null && 0 !== t && R.kJ.setInspectedExpressionPosition(0, 0);
+                let { columnIndex: t, rowIndex: n } = v.kJ.getState().inspectedExpressionPosition;
+                (null === (e = e2[n]) || void 0 === e ? void 0 : e[t]) == null && 0 !== t && v.kJ.setInspectedExpressionPosition(0, 0);
             }, [e2]),
             s.useEffect(() => {
                 if (('' === eL.current && '' !== eb && (0, B.PC)(ej, o), 0 === eq && '' !== eb)) eu(ej, eb);
@@ -374,8 +374,8 @@ t.Z = s.memo(
                 },
                 searchBarRef: eU,
                 onFocus: eN,
-                autoFocus: eR,
-                accessory: ev,
+                autoFocus: ev,
+                accessory: eR,
                 headerClassName: eh,
                 hasTabWrapper: p,
                 diversitySurrogate: eK,

@@ -21,7 +21,7 @@ n.d(t, {
         return el;
     },
     Km: function () {
-        return R;
+        return v;
     },
     Lr: function () {
         return y;
@@ -51,7 +51,7 @@ n.d(t, {
         return W;
     },
     _H: function () {
-        return ev;
+        return eR;
     },
     bc: function () {
         return M;
@@ -96,7 +96,7 @@ n.d(t, {
         return P;
     },
     tx: function () {
-        return v;
+        return R;
     },
     uC: function () {
         return F;
@@ -161,13 +161,13 @@ function A(e) {
 }
 let N = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE]),
     O = new Set([h.d4z.GUILD_TEXT, h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE, h.d4z.GUILD_CATEGORY, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_STORE, h.d4z.ANNOUNCEMENT_THREAD, h.d4z.PUBLIC_THREAD, h.d4z.PRIVATE_THREAD, h.d4z.GUILD_DIRECTORY, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA]);
-function R(e) {
+function v(e) {
     return O.has(e);
 }
 h.d4z.GUILD_TEXT, h.d4z.GUILD_ANNOUNCEMENT, h.d4z.GUILD_FORUM, h.d4z.GUILD_MEDIA;
-let v = new Set([h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE]);
+let R = new Set([h.d4z.GUILD_VOICE, h.d4z.GUILD_STAGE_VOICE]);
 function C(e) {
-    return 'SELECTABLE' !== e && v.has(e);
+    return 'SELECTABLE' !== e && R.has(e);
 }
 let y = new Set([h.d4z.GUILD_STAGE_VOICE]),
     D = new Set([h.d4z.DM, h.d4z.GROUP_DM]);
@@ -519,7 +519,7 @@ class eE extends e_ {
 class ef extends e_ {
     static fromServer(e, t) {
         var n, r, i, a;
-        return ev({
+        return eR({
             application_id: e.application_id,
             bitrate_: e.bitrate,
             flags_: e.flags,
@@ -553,7 +553,7 @@ class ef extends e_ {
 class eh extends e_ {
     static fromServer(e, t) {
         var n, r, i, a;
-        return ev({
+        return eR({
             application_id: e.application_id,
             defaultAutoArchiveDuration: e.default_auto_archive_duration,
             defaultThreadRateLimitPerUser: e.default_thread_rate_limit_per_user,
@@ -781,7 +781,7 @@ function eN(e, t) {
 function eO(e) {
     return eC(e);
 }
-let eR = {
+let ev = {
     [h.d4z.DM]: class e extends eg {},
     [h.d4z.GROUP_DM]: class e extends eg {},
     [h.d4z.GUILD_TEXT]: class e extends eh {},
@@ -797,12 +797,12 @@ let eR = {
     [h.d4z.GUILD_FORUM]: ep,
     [h.d4z.GUILD_MEDIA]: ep
 };
-function ev(e) {
+function eR(e) {
     var t, n;
-    let r = null !== (n = eR[null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT]) && void 0 !== n ? n : eE;
+    let r = null !== (n = ev[null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT]) && void 0 !== n ? n : eE;
     return (0, c.gh)(e, r);
 }
 function eC(e) {
     var t, n;
-    return new (null !== (n = eR[null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT]) && void 0 !== n ? n : eE)(ec(e));
+    return new (null !== (n = ev[null !== (t = e.type) && void 0 !== t ? t : h.d4z.GUILD_TEXT]) && void 0 !== n ? n : eE)(ec(e));
 }

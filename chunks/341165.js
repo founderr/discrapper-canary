@@ -20,7 +20,7 @@ let m = {},
     A = !1,
     N = !1,
     O = !1;
-class R extends (o = f.ZP.Store) {
+class v extends (o = f.ZP.Store) {
     getInvite(e) {
         var t, n;
         let { targetType: r, targetUserId: i, targetApplicationId: a } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -37,7 +37,7 @@ class R extends (o = f.ZP.Store) {
     }
 }
 (s = 'InstantInviteStore'),
-    (a = 'displayName') in (i = R)
+    (a = 'displayName') in (i = v)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -45,7 +45,7 @@ class R extends (o = f.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new R(h.Z, {
+    (t.Z = new v(h.Z, {
         CONNECTION_OPEN: function () {
             (m = {}), (T = {}), (g = {}), (S = {}), (r = null), (N = !1), (O = !1), (A = !1);
         },

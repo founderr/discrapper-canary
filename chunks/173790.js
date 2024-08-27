@@ -16,59 +16,59 @@ var i = t(735250),
     p = t(827498),
     _ = t(783097),
     C = t(753972),
-    f = t(387658),
-    h = t(536650),
-    E = t(675993),
-    A = t(689079),
-    N = t(689938),
-    x = t(254044),
+    h = t(387658),
+    f = t(536650),
+    A = t(675993),
+    E = t(689079),
+    x = t(689938),
+    N = t(254044),
     v = t(413097);
 function I(e) {
     var n;
     let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
-        P = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
-        L = null !== (n = (0, u.q)(s.id === A.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        b = (0, _.ye)(L) ? g : E.Z,
-        S = a.useRef(null),
+        b = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
+        S = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
+        P = (0, _.ye)(S) ? g : A.Z,
+        L = a.useRef(null),
         { iconURL: R, name: T } = a.useMemo(
             () =>
-                (0, _.sl)(L, {
+                (0, _.sl)(S, {
                     fakeAppIconURL: v,
                     size: 84
                 }),
-            [L]
+            [S]
         );
     return (
         a.useEffect(() => {
-            I ? d.ZP.queryInstallOnDemandApp(L.id, t.id) : d.ZP.maybeQueryForInstallLessApps(L.id, t.id);
-        }, [L.id, t.id, I]),
+            I ? d.ZP.queryInstallOnDemandApp(S.id, t.id) : d.ZP.maybeQueryForInstallLessApps(S.id, t.id);
+        }, [S.id, t.id, I]),
         (0, i.jsxs)(r.ScrollerNone, {
-            className: x.container,
+            className: N.container,
             fade: !0,
-            ref: S,
+            ref: L,
             role: 'region',
-            'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: T }),
+            'aria-label': x.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: T }),
             children: [
-                (0, i.jsx)(h.Z, {
+                (0, i.jsx)(f.Z, {
                     name: T,
                     iconURL: R,
-                    scrollerRef: S
+                    scrollerRef: L
                 }),
                 null != R &&
                     (0, i.jsx)(C.Z, {
                         src: R,
-                        className: x.appIcon
+                        className: N.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(b, {
+                (0, i.jsx)(P, {
                     channel: t,
-                    application: L,
+                    application: S,
                     sectionName: c
                 }),
-                P === p._b.TEXT
-                    ? (0, i.jsx)(f.Z, {
+                b === p._b.TEXT
+                    ? (0, i.jsx)(h.Z, {
                           channel: t,
-                          application: L,
+                          application: S,
                           sectionName: c,
                           installOnDemand: I
                       })
@@ -86,7 +86,7 @@ function g(e) {
         }),
         o = (0, _.yJ)(t),
         r = null != o && null != o.activity_preview_video_asset_id ? (0, s.Z)(t.id, o.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(E.Z, {
+    return (0, i.jsx)(A.Z, {
         channel: n,
         application: t,
         imageCoverUrl: l.url,

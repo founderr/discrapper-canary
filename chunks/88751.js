@@ -59,7 +59,7 @@ function O(e) {
     for (let e of t) delete S[e.id];
     return t.length > 0;
 }
-function R(e) {
+function v(e) {
     let { guildId: t, user: n } = e;
     return (
         null != n &&
@@ -73,7 +73,7 @@ function R(e) {
         })(n.id, t)
     );
 }
-function v(e) {
+function R(e) {
     let { guild: t } = e;
     for (let e in S) {
         let n = E.Z.getBasicChannel(e);
@@ -121,8 +121,8 @@ class C extends (i = d.ZP.Store) {
         CONNECTION_OPEN: function () {
             S = {};
         },
-        GUILD_MEMBER_REMOVE: R,
-        GUILD_MEMBER_UPDATE: R,
+        GUILD_MEMBER_REMOVE: v,
+        GUILD_MEMBER_UPDATE: v,
         GUILD_ROLE_UPDATE: function (e) {
             let { guildId: t } = e;
             O(t);
@@ -147,6 +147,6 @@ class C extends (i = d.ZP.Store) {
                 }, !1)
             );
         },
-        GUILD_CREATE: v,
-        GUILD_DELETE: v
+        GUILD_CREATE: R,
+        GUILD_DELETE: R
     }));

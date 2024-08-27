@@ -29,8 +29,8 @@ var r = n(735250),
     A = n(609218),
     N = n(695346),
     O = n(594174),
-    R = n(979651),
-    v = n(259580),
+    v = n(979651),
+    R = n(259580),
     C = n(626135),
     y = n(74538),
     D = n(135869),
@@ -135,9 +135,9 @@ function Q(e) {
                                     }
                                 })()
                             }),
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(R.Z, {
                                 className: W.headerIcon,
-                                direction: n ? v.Z.Directions.RIGHT : v.Z.Directions.DOWN
+                                direction: n ? R.Z.Directions.RIGHT : R.Z.Directions.DOWN
                             })
                         ]
                     })
@@ -189,7 +189,7 @@ function $(e) {
     });
 }
 function J(e) {
-    let { guildId: t, channel: a, containerWidth: s, onClose: c, onSelect: h, suppressPlaySound: g = !1, shouldShowUpsell: v = !0, gridNotice: G, soundButtonOverlay: k, listPadding: J, renderHeader: ee, defaultSoundsOnly: et = !1 } = e,
+    let { guildId: t, channel: a, containerWidth: s, onClose: c, onSelect: h, suppressPlaySound: g = !1, shouldShowUpsell: R = !0, gridNotice: G, soundButtonOverlay: k, listPadding: J, renderHeader: ee, defaultSoundsOnly: et = !1 } = e,
         { currentPreviewRef: en } = i.useContext(D.Z),
         { analyticsLocations: er } = (0, E.ZP)(),
         { analyticsLocations: ei } = (0, E.ZP)(_.Z.PREMIUM_UPSELL),
@@ -204,9 +204,9 @@ function J(e) {
         [eo, el] = i.useState(null),
         eu = (0, o.e7)([O.default], () => O.default.getCurrentUser()),
         ec = (0, y.I5)(eu, Y.p9.TIER_2),
-        ed = (0, o.e7)([R.Z], () => {
+        ed = (0, o.e7)([v.Z], () => {
             var e;
-            return R.Z.getVoiceState(t, null !== (e = null == eu ? void 0 : eu.id) && void 0 !== e ? e : Z.lds);
+            return v.Z.getVoiceState(t, null !== (e = null == eu ? void 0 : eu.id) && void 0 !== e ? e : Z.lds);
         }),
         e_ = (null == ed ? void 0 : ed.selfDeaf) || (null == ed ? void 0 : ed.mute) || (null == ed ? void 0 : ed.suppress),
         eE = (0, I.Iu)((e) => e.searchQuery),
@@ -217,8 +217,8 @@ function J(e) {
         [eT, eg] = i.useState(!1),
         eS = (0, x.FS)(ep, eI, eE).filter((e) => e.items.length > 0),
         eA = eS.some((e) => !!(0, y._O)(e.categoryInfo) && e.categoryInfo.isNitroLocked),
-        eN = !ec && v && eA,
-        { enableInlineUpsell: eO, enableRoadblock: eR, enableRoadblockWithSocialProof: ev } = S.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eN }),
+        eN = !ec && R && eA,
+        { enableInlineUpsell: eO, enableRoadblock: ev, enableRoadblockWithSocialProof: eR } = S.Qs.useExperiment({ location: 'Soundboard Picker' }, { autoTrackExposure: eN }),
         eC = eN && eO,
         ey = N.T4.useSetting(),
         eD = i.useMemo(() => new Set(ey), [ey]),
@@ -244,10 +244,10 @@ function J(e) {
                             });
                 } else {
                     if ((0, M.Nq)(eu, e, a)) return;
-                    v && el(e);
+                    R && el(e);
                 }
             },
-            [g, eu, a, v, ef, eE]
+            [g, eu, a, R, ef, eE]
         ),
         eU = i.useCallback(
             (e) => {
@@ -263,7 +263,7 @@ function J(e) {
         ew = i.useCallback(
             (e, n, i, s, o) => {
                 let l = eS[i.sectionIndex],
-                    u = v && q(l.categoryInfo, ec, t),
+                    u = R && q(l.categoryInfo, ec, t),
                     c = i.sectionIndex === eS.length - 1 && i.rowIndex === i.totalRowCount - 1;
                 return (0, r.jsx)(
                     $,
@@ -285,23 +285,23 @@ function J(e) {
                         },
                         buttonOverlay: k,
                         isNitroLocked: u && eC,
-                        shouldShowUpsell: v
+                        shouldShowUpsell: R
                     },
                     'row-'.concat(n['aria-rowindex'])
                 );
             },
-            [eU, a, e_, g, er, eL, eb, k, t, eS, v, ec, eC, eO]
+            [eU, a, e_, g, er, eL, eb, k, t, eS, R, ec, eC, eO]
         ),
         ex = i.useCallback(
             (e, t) => {
-                if (e <= 0 || !v) return !1;
+                if (e <= 0 || !R) return !1;
                 let n = eS[e],
                     r = eS[e - 1],
                     i = q(n.categoryInfo, ec, t),
                     a = q(r.categoryInfo, ec, t);
                 return i && !a;
             },
-            [eS, v, ec]
+            [eS, R, ec]
         ),
         eG = i.useCallback((e) => (0 === e ? 16 : ex(e, t) ? z : 32), [t, ex]),
         ek = i.useCallback(
@@ -314,7 +314,7 @@ function J(e) {
         eB = i.useCallback(
             (e, n) => {
                 let i = ''.concat(e.key),
-                    a = v && q(e.categoryInfo, ec, t),
+                    a = R && q(e.categoryInfo, ec, t),
                     s = ex(n, t);
                 return (0, r.jsx)(
                     Q,
@@ -329,7 +329,7 @@ function J(e) {
                     'header-'.concat(i)
                 );
             },
-            [eD, eM, t, ex, v, ec, eC]
+            [eD, eM, t, ex, R, ec, eC]
         ),
         eF = i.useCallback(
             (e, t) => {
@@ -416,7 +416,7 @@ function J(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             null != eo
-                ? eR
+                ? ev
                     ? (0, r.jsx)(A.Z, {
                           containerContext: A.p.NONE,
                           image: {
@@ -426,7 +426,7 @@ function J(e) {
                           },
                           title: j.Z.Messages.PREMIUM_UPSELL_MOBILE_FEATURE_SOUNDBOARD_TITLE,
                           description: j.Z.Messages.PREMIUM_UPSELL_DESKTOP_FEATURE_SOUNDBOARD_DESCRIPTION,
-                          enableSocialProof: ev,
+                          enableSocialProof: eR,
                           analyticsLocationSection: Z.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL,
                           upsellViewedTrackingData: {
                               type: Y.cd.SOUND_PICKER_SOUND_CLICKED,

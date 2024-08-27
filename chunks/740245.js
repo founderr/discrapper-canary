@@ -67,12 +67,12 @@ r.inherits(T, I),
             A = this.h[11],
             N = this.h[12],
             O = this.h[13],
-            R = this.h[14],
-            v = this.h[15];
+            v = this.h[14],
+            R = this.h[15];
         a(this.k.length === n.length);
         for (var C = 0; C < n.length; C += 2) {
-            var y = R,
-                D = v,
+            var y = v,
+                D = R,
                 L = (function (e, t) {
                     var n = s(e, t, 14) ^ s(e, t, 18) ^ s(t, e, 9);
                     return n < 0 && (n += 4294967296), n;
@@ -117,9 +117,9 @@ r.inherits(T, I),
                     })(r, i, l, u, E, f))
                 ),
                 V = _(y, D, L, b);
-            (R = N), (v = O), (N = S), (O = A), (S = T), (A = g), (T = d(I, m, k, B)), (g = _(m, m, k, B)), (I = E), (m = f), (E = l), (f = u), (l = r), (u = i), (r = d(k, B, F, V)), (i = _(k, B, F, V));
+            (v = N), (R = O), (N = S), (O = A), (S = T), (A = g), (T = d(I, m, k, B)), (g = _(m, m, k, B)), (I = E), (m = f), (E = l), (f = u), (l = r), (u = i), (r = d(k, B, F, V)), (i = _(k, B, F, V));
         }
-        c(this.h, 0, r, i), c(this.h, 2, l, u), c(this.h, 4, E, f), c(this.h, 6, I, m), c(this.h, 8, T, g), c(this.h, 10, S, A), c(this.h, 12, N, O), c(this.h, 14, R, v);
+        c(this.h, 0, r, i), c(this.h, 2, l, u), c(this.h, 4, E, f), c(this.h, 6, I, m), c(this.h, 8, T, g), c(this.h, 10, S, A), c(this.h, 12, N, O), c(this.h, 14, v, R);
     }),
     (T.prototype._digest = function (e) {
         return 'hex' === e ? r.toHex32(this.h, 'big') : r.split32(this.h, 'big');

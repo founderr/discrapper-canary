@@ -21,7 +21,7 @@ t.Z = function (e) {
         A = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         N = (0, E.gO)(n),
         O = i.useMemo(() => (0, E.nP)(N.name), [N.name]),
-        R = i.useCallback(
+        v = i.useCallback(
             (t) => {
                 var r;
                 (0, o.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
@@ -36,7 +36,7 @@ t.Z = function (e) {
             },
             [n.id, e]
         ),
-        v = (0, f.vI)(n, m.dr.QUESTS_BAR),
+        R = (0, f.vI)(n, m.dr.QUESTS_BAR),
         C = i.useRef(null),
         y = i.useRef(a);
     i.useEffect(() => {
@@ -88,15 +88,15 @@ t.Z = function (e) {
                   g.questRewardTileInteractive,
                   g.questRewardTile,
                   {
-                      [g.rewardHighlight]: v,
-                      [g.borderOverlay]: !v
+                      [g.rewardHighlight]: R,
+                      [g.borderOverlay]: !R
                   },
                   t
               ),
-              onClick: R,
+              onClick: v,
               children: [
                   D,
-                  v &&
+                  R &&
                       (0, r.jsx)(u.Shine, {
                           className: g.shine,
                           shineSize: u.ShineSizes.SMALL

@@ -1,6 +1,6 @@
 n.d(t, {
     $0: function () {
-        return v;
+        return R;
     },
     AN: function () {
         return P;
@@ -51,7 +51,7 @@ n.d(t, {
         return _;
     },
     j4: function () {
-        return R;
+        return v;
     },
     ks: function () {
         return B;
@@ -129,8 +129,8 @@ let _ = new d(r.q.ANIMATED_EMOJIS),
     A = new d('collectibles'),
     N = new d('appIcons'),
     O = new d(r.q.CLIENT_THEMES),
-    R = new d('boostDiscount'),
-    v = new d('freeBoosts'),
+    v = new d('boostDiscount'),
+    R = new d('freeBoosts'),
     C = new d(r.q.STREAM_MID_QUALITY),
     y = new d(r.q.STREAM_HIGH_QUALITY),
     D = new d(r.q.CUSTOM_NOTIFICATION_SOUNDS),
@@ -145,8 +145,8 @@ let U = new d(r.q.INCREASED_GUILD_LIMIT),
     G = new d('uploadLargeFiles'),
     k = Object.freeze({
         [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [_, E, f, g, P, x, G, N]),
-        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, E, I, m, g, R, C, L, x, G, N]),
-        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, E, f, h, p, I, m, T, g, S, O, R, v, C, y, L, b, M, P, U, w, x, G, N, A, D])
+        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, E, I, m, g, v, C, L, x, G, N]),
+        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, E, f, h, p, I, m, T, g, S, O, v, R, C, y, L, b, M, P, U, w, x, G, N, A, D])
     });
 function B(e, t) {
     return e.getFeatureValue(t);

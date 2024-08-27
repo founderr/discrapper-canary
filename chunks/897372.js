@@ -21,8 +21,8 @@ var r,
     A = n(320273),
     N = n(644659),
     O = N.set,
-    R = N.getterFor('URL'),
-    v = A.URLSearchParams,
+    v = N.getterFor('URL'),
+    R = A.URLSearchParams,
     C = A.getState,
     y = o.URL,
     D = o.TypeError,
@@ -210,8 +210,8 @@ var r,
     eA = {},
     eN = {},
     eO = {},
-    eR = {},
     ev = {},
+    eR = {},
     eC = {},
     ey = {},
     eD = {},
@@ -234,7 +234,7 @@ var r,
             this.searchParams = null;
         } else {
             if ((void 0 !== n && (r = new eB(n, !0)), (i = this.parse(s, null, r)))) throw D(i);
-            (a = C(new v())).bindURL(this), (this.searchParams = a);
+            (a = C(new R())).bindURL(this), (this.searchParams = a);
         }
     };
 eB.prototype = {
@@ -264,7 +264,7 @@ eB.prototype = {
                             this.isSpecial() && eh[this.scheme] === this.port && (this.port = null);
                             return;
                         }
-                        (s = ''), 'file' === this.scheme ? (i = eb) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eS) : this.isSpecial() ? (i = eR) : '/' === c[a + 1] ? ((i = eA), a++) : ((this.cannotBeABaseURL = !0), k(this.path, ''), (i = ex));
+                        (s = ''), 'file' === this.scheme ? (i = eb) : this.isSpecial() && n && n.scheme === this.scheme ? (i = eS) : this.isSpecial() ? (i = ev) : '/' === c[a + 1] ? ((i = eA), a++) : ((this.cannotBeABaseURL = !0), k(this.path, ''), (i = ex));
                     } else {
                         if (t) return j;
                         (s = ''), (i = eg), (a = 0);
@@ -280,7 +280,7 @@ eB.prototype = {
                     i = 'file' === n.scheme ? eb : eN;
                     continue;
                 case eS:
-                    if ('/' === d && '/' === c[a + 1]) (i = ev), a++;
+                    if ('/' === d && '/' === c[a + 1]) (i = eR), a++;
                     else {
                         i = eN;
                         continue;
@@ -304,18 +304,18 @@ eB.prototype = {
                     }
                     break;
                 case eO:
-                    if (this.isSpecial() && ('/' === d || '\\' === d)) i = ev;
+                    if (this.isSpecial() && ('/' === d || '\\' === d)) i = eR;
                     else if ('/' === d) i = eC;
                     else {
                         (this.username = n.username), (this.password = n.password), (this.host = n.host), (this.port = n.port), (i = ew);
                         continue;
                     }
                     break;
-                case eR:
-                    if (((i = ev), '/' !== d || '/' !== P(s, a + 1))) continue;
+                case ev:
+                    if (((i = eR), '/' !== d || '/' !== P(s, a + 1))) continue;
                     a++;
                     break;
-                case ev:
+                case eR:
                     if ('/' !== d && '\\' !== d) {
                         i = eC;
                         continue;
@@ -595,12 +595,12 @@ var eF = function (e) {
     eH = function (e, t) {
         return {
             get: function () {
-                return R(this)[e]();
+                return v(this)[e]();
             },
             set:
                 t &&
                 function (e) {
-                    return R(this)[t](e);
+                    return v(this)[t](e);
                 },
             configurable: !0,
             enumerable: !0
@@ -612,7 +612,7 @@ if (
         eV,
         'toJSON',
         function () {
-            return R(this).serialize();
+            return v(this).serialize();
         },
         { enumerable: !0 }
     ),
@@ -620,7 +620,7 @@ if (
         eV,
         'toString',
         function () {
-            return R(this).serialize();
+            return v(this).serialize();
         },
         { enumerable: !0 }
     ),

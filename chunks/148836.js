@@ -57,8 +57,8 @@ function d(e) {
 function _(e) {
     let t,
         { selectionManager: n, keyboardDelegate: _, ref: E, autoFocus: f = !1, shouldFocusWrap: h = !1, disallowEmptySelection: p = !1, disallowSelectAll: I = !1, selectOnFocus: m = 'replace' === n.selectionBehavior, disallowTypeAhead: T = !1, shouldUseVirtualFocus: g, allowsTabNavigation: S = !1, isVirtualized: A, scrollRef: N = E, linkBehavior: O = 'action' } = e,
-        { direction: R } = (0, l.bU)(),
-        v = (0, s.tv)(),
+        { direction: v } = (0, l.bU)(),
+        R = (0, s.tv)(),
         C = (0, i.useRef)({
             top: 0,
             left: 0
@@ -111,7 +111,7 @@ function _(e) {
                                 n.setFocusedKey(t, i);
                             });
                             let a = N.current.querySelector(`[data-key="${CSS.escape(t.toString())}"]`);
-                            v.open(a, e);
+                            R.open(a, e);
                             return;
                         }
                         n.setFocusedKey(t, i), (!n.isLink(t) || 'override' !== O) && (e.shiftKey && 'multiple' === n.selectionMode ? n.extendSelection(t) : m && !u(e) && n.replaceSelection(t));
@@ -136,14 +136,14 @@ function _(e) {
                         if (_.getKeyLeftOf) {
                             e.preventDefault();
                             let t = _.getKeyLeftOf(n.focusedKey);
-                            null == t && h && (t = 'rtl' === R ? (null === (d = _.getFirstKey) || void 0 === d ? void 0 : d.call(_, n.focusedKey)) : null === (f = _.getLastKey) || void 0 === f ? void 0 : f.call(_, n.focusedKey)), A(t, 'rtl' === R ? 'first' : 'last');
+                            null == t && h && (t = 'rtl' === v ? (null === (d = _.getFirstKey) || void 0 === d ? void 0 : d.call(_, n.focusedKey)) : null === (f = _.getLastKey) || void 0 === f ? void 0 : f.call(_, n.focusedKey)), A(t, 'rtl' === v ? 'first' : 'last');
                         }
                         break;
                     case 'ArrowRight':
                         if (_.getKeyRightOf) {
                             e.preventDefault();
                             let t = _.getKeyRightOf(n.focusedKey);
-                            null == t && h && (t = 'rtl' === R ? (null === (T = _.getLastKey) || void 0 === T ? void 0 : T.call(_, n.focusedKey)) : null === (g = _.getFirstKey) || void 0 === g ? void 0 : g.call(_, n.focusedKey)), A(t, 'rtl' === R ? 'last' : 'first');
+                            null == t && h && (t = 'rtl' === v ? (null === (T = _.getLastKey) || void 0 === T ? void 0 : T.call(_, n.focusedKey)) : null === (g = _.getFirstKey) || void 0 === g ? void 0 : g.call(_, n.focusedKey)), A(t, 'rtl' === v ? 'last' : 'first');
                         }
                         break;
                     case 'Home':
@@ -264,10 +264,10 @@ function E(e) {
     let A = t.isLink(n) && 'override' === m,
         N = t.isLink(n) && 'selection' !== m && 'none' !== m,
         O = !E && t.canSelectItem(n) && !A,
-        R = (p || N) && !E,
-        v = R && ('replace' === t.selectionBehavior ? !O : !O || t.isEmpty),
-        C = R && O && 'replace' === t.selectionBehavior,
-        y = v || C,
+        v = (p || N) && !E,
+        R = v && ('replace' === t.selectionBehavior ? !O : !O || t.isEmpty),
+        C = v && O && 'replace' === t.selectionBehavior,
+        y = R || C,
         D = (0, i.useRef)(null),
         L = y && O,
         b = (0, i.useRef)(!1),
@@ -281,17 +281,17 @@ function E(e) {
               (D.current = e.pointerType), (b.current = L), 'keyboard' === e.pointerType && (!y || h()) && g(e);
           }),
           I
-              ? ((U.onPressUp = v
+              ? ((U.onPressUp = R
                     ? null
                     : (e) => {
                           'keyboard' !== e.pointerType && O && g(e);
                       }),
-                (U.onPress = v ? P : null))
+                (U.onPress = R ? P : null))
               : (U.onPress = (e) => {
-                    v || (C && 'mouse' !== e.pointerType) ? ('keyboard' !== e.pointerType || !!f()) && P(e) : 'keyboard' !== e.pointerType && O && g(e);
+                    R || (C && 'mouse' !== e.pointerType) ? ('keyboard' !== e.pointerType || !!f()) && P(e) : 'keyboard' !== e.pointerType && O && g(e);
                 }))
         : ((U.onPressStart = (e) => {
-              (D.current = e.pointerType), (b.current = L), (M.current = v), O && (('mouse' === e.pointerType && !v) || ('keyboard' === e.pointerType && (!R || h()))) && g(e);
+              (D.current = e.pointerType), (b.current = L), (M.current = R), O && (('mouse' === e.pointerType && !R) || ('keyboard' === e.pointerType && (!v || h()))) && g(e);
           }),
           (U.onPress = (e) => {
               ('touch' === e.pointerType || 'pen' === e.pointerType || 'virtual' === e.pointerType || ('keyboard' === e.pointerType && y && f()) || ('mouse' === e.pointerType && M.current)) && (y ? P(e) : O && g(e));
@@ -316,7 +316,7 @@ function E(e) {
               }
             : void 0;
     return {
-        itemProps: (0, s.dG)(S, O || v ? w : {}, L ? k : {}, {
+        itemProps: (0, s.dG)(S, O || R ? w : {}, L ? k : {}, {
             onDoubleClick: G,
             onDragStartCapture: (e) => {
                 'touch' === D.current && b.current && e.preventDefault();

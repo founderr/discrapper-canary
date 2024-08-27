@@ -3,10 +3,10 @@ n.d(t, {
         return O;
     },
     Lk: function () {
-        return R;
+        return v;
     },
     Xg: function () {
-        return v;
+        return R;
     },
     ZP: function () {
         return A;
@@ -151,13 +151,13 @@ function O(e) {
         })
     );
 }
-function R(e) {
+function v(e) {
     return (0, r.jsx)(A, {
         ...e,
         headerClassName: S.headerFailure
     });
 }
-function v() {
+function R() {
     var e, t;
     let n = (0, l.TH)();
     return (0, r.jsx)(m.G, {
@@ -179,7 +179,7 @@ function C(e) {
     let s = null != a ? (0, o.parse)(a.search) : {},
         l = null !== (n = null !== (t = s.error_description) && void 0 !== t ? t : s.error) && void 0 !== n ? n : g.Z.Messages.OAUTH2_UNKNOWN_ERROR;
     return (0, r.jsx)(m.G, {
-        children: (0, r.jsx)(R, {
+        children: (0, r.jsx)(v, {
             message: l,
             showsCloseWindowText: !0
         })

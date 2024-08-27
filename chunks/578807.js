@@ -1,6 +1,6 @@
 var r;
 (r = 0),
-    (function (e, t, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, g, S, A, N, O, R, v, C, y, D, L, b, M, P, U, w, x, G, k, B, F, V, H, Z, Y, j, W, K, z, q, Q, X, $, J, ee, et, en, er, ei, ea, es, eo, el, eu) {
+    (function (e, t, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, g, S, A, N, O, v, R, C, y, D, L, b, M, P, U, w, x, G, k, B, F, V, H, Z, Y, j, W, K, z, q, Q, X, $, J, ee, et, en, er, ei, ea, es, eo, el, eu) {
         function ec(e) {
             return e && 'object' == typeof e && 'default' in e ? e : { default: e };
         }
@@ -18,14 +18,14 @@ var r;
             eA = ec(p),
             eN = ec(I),
             eO = ec(m),
-            eR = ec(T),
-            ev = ec(g),
+            ev = ec(T),
+            eR = ec(g),
             eC = ec(S),
             ey = ec(A),
             eD = ec(N),
             eL = ec(O),
-            eb = ec(R),
-            eM = ec(v),
+            eb = ec(v),
+            eM = ec(R),
             eP = ec(C),
             eU = ec(y),
             ew = ec(D),
@@ -263,14 +263,14 @@ var r;
                 i = t.second;
             return ek.default(eG.default(ex.default(e, void 0 === i ? 0 : i), void 0 === r ? 0 : r), void 0 === n ? 0 : n);
         }
-        function tR(e, t, n) {
+        function tv(e, t, n) {
             var r = tw(t || tU());
             return ez.default(e, {
                 locale: r,
                 weekStartsOn: n
             });
         }
-        function tv(e) {
+        function tR(e) {
             return eq.default(e);
         }
         function tC(e) {
@@ -425,7 +425,7 @@ var r;
             var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
                 n = t.minDate,
                 r = t.includeDates,
-                i = eR.default(e, 1);
+                i = ev.default(e, 1);
             return (
                 (n && eW.default(n, i) > 0) ||
                 (r &&
@@ -894,7 +894,7 @@ var r;
                         }),
                         (r.state = {
                             monthYearsList: (function (e, t) {
-                                for (var n = [], r = tv(e), i = tv(t); !e4.default(r, i); ) n.push(tg(r)), (r = eg.default(r, 1));
+                                for (var n = [], r = tR(e), i = tR(t); !e4.default(r, i); ) n.push(tg(r)), (r = eg.default(r, 1));
                                 return n;
                             })(r.props.minDate, r.props.maxDate)
                         }),
@@ -928,7 +928,7 @@ var r;
                     return (
                         tl(tE((e = t.call.apply(t, [this].concat(i)))), 'state', { dropdownVisible: !1 }),
                         tl(tE(e), 'renderSelectOptions', function () {
-                            for (var t = tv(e.props.minDate), n = tv(e.props.maxDate), r = []; !e4.default(t, n); ) {
+                            for (var t = tR(e.props.minDate), n = tR(e.props.maxDate), r = []; !e4.default(t, n); ) {
                                 var i = ew.default(t);
                                 r.push(
                                     ed.default.createElement(
@@ -951,7 +951,7 @@ var r;
                             return ed.default.createElement(
                                 'select',
                                 {
-                                    value: ew.default(tv(e.props.date)),
+                                    value: ew.default(tR(e.props.date)),
                                     className: 'react-datepicker__month-year-select',
                                     onChange: e.onSelectChange
                                 },
@@ -1268,7 +1268,7 @@ var r;
                             return e.props.formatWeekNumber ? e.props.formatWeekNumber(t) : ((n = t), (i = tU() && tw(tU())), eb.default(n, i ? { locale: i } : null));
                         }),
                         tl(tE(e), 'renderDays', function () {
-                            var t = tR(e.props.day, e.props.locale, e.props.calendarStartDay),
+                            var t = tv(e.props.day, e.props.locale, e.props.calendarStartDay),
                                 n = [],
                                 r = e.formatWeekNumber(t);
                             if (e.props.showWeekNumber) {
@@ -1430,7 +1430,7 @@ var r;
                         }),
                         tl(tE(e), 'renderWeeks', function () {
                             for (
-                                var t = [], n = e.props.fixedHeight, r = 0, i = !1, a = tR(tv(e.props.day), e.props.locale, e.props.calendarStartDay);
+                                var t = [], n = e.props.fixedHeight, r = 0, i = !1, a = tv(tR(e.props.day), e.props.locale, e.props.calendarStartDay);
                                 t.push(
                                     ed.default.createElement(ne, {
                                         ariaLabelPrefix: e.props.weekAriaLabelPrefix,
@@ -1488,7 +1488,7 @@ var r;
                             return t;
                         }),
                         tl(tE(e), 'onMonthClick', function (t, n) {
-                            e.handleDayClick(tv(eB.default(e.props.day, n)), t);
+                            e.handleDayClick(tR(eB.default(e.props.day, n)), t);
                         }),
                         tl(tE(e), 'handleMonthNavigation', function (t, n) {
                             e.isDisabled(n) || e.isExcluded(n) || (e.props.setPreSelection(n), e.MONTH_REFS[t].current && e.MONTH_REFS[t].current.focus());
@@ -2155,7 +2155,7 @@ var r;
                         }),
                         tl(tE(r), 'header', function () {
                             var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r.state.date,
-                                t = tR(e, r.props.locale, r.props.calendarStartDay),
+                                t = tv(e, r.props.locale, r.props.calendarStartDay),
                                 n = [];
                             return (
                                 r.props.showWeekNumbers &&
@@ -2194,7 +2194,7 @@ var r;
                             r.setState(
                                 function (e) {
                                     var t = e.date;
-                                    return { date: eR.default(t, r.props.showYearPicker ? r.props.yearItemNumber : 1) };
+                                    return { date: ev.default(t, r.props.showYearPicker ? r.props.yearItemNumber : 1) };
                                 },
                                 function () {
                                     return r.handleYearChange(r.state.date);
@@ -2214,7 +2214,7 @@ var r;
                                                 n = t.minDate,
                                                 r = t.yearItemNumber,
                                                 i = void 0 === r ? 12 : r,
-                                                a = t$(tC(eR.default(e, i)), i).endPeriod,
+                                                a = t$(tC(ev.default(e, i)), i).endPeriod,
                                                 s = n && eU.default(n);
                                             return (s && s > a) || !1;
                                         })(r.state.date, r.props);
@@ -3018,7 +3018,7 @@ var r;
                                                 (a = tO(a, {
                                                     hour: ey.default(r.props.selected),
                                                     minute: eC.default(r.props.selected),
-                                                    second: ev.default(r.props.selected)
+                                                    second: eR.default(r.props.selected)
                                                 })),
                                             r.props.inline || r.setState({ preSelection: a }),
                                             r.props.focusSelectedMonth || r.setState({ monthSelectedIn: i })),
@@ -3114,7 +3114,7 @@ var r;
                                         t = eg.default(i, 1);
                                         break;
                                     case 'Home':
-                                        t = eR.default(i, 1);
+                                        t = ev.default(i, 1);
                                         break;
                                     case 'End':
                                         t = eS.default(i, 1);

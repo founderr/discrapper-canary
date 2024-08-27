@@ -57,7 +57,7 @@ function O(e) {
         iconType: e ? 'post' : 'message'
     };
 }
-function R(e, t) {
+function v(e, t) {
     var n;
     let r = u.Z.getChannel(e),
         i = (0, o.$)(e, u.Z, a.Z, d.Z).isSubscriptionGated,
@@ -95,7 +95,7 @@ function R(e, t) {
           }
         : null;
 }
-function v(e) {
+function R(e) {
     return {
         type: 'link',
         content: [
@@ -172,7 +172,7 @@ function D(e, t, n, r) {
                 inContent: [N(e)],
                 content: [O(!1)]
             };
-        return null != (s = r) ? v(s) : C('#'.concat(g.Z.Messages.UNKNOWN_CHANNEL_PLACEHOLDER));
+        return null != (s = r) ? R(s) : C('#'.concat(g.Z.Messages.UNKNOWN_CHANNEL_PLACEHOLDER));
     }
     let o = e.guildId === n;
     return {
@@ -232,7 +232,7 @@ let L = {
                     type: 'channelMention',
                     id: r
                 };
-            let i = R(r, n.mentionChannels);
+            let i = v(r, n.mentionChannels);
             return null == i ? y(null, r, null, S(n.channelId)) : D(i, null, S(n.channelId));
         }
     },
@@ -248,8 +248,8 @@ let L = {
                 i = e[1],
                 a = e[2],
                 s = e[3];
-            if (null == a) return v(r);
-            let o = R(a, null);
+            if (null == a) return R(r);
+            let o = v(a, null);
             return null == o ? y(i, a, s, S(n.channelId), r) : D(o, s, S(n.channelId), r);
         }
     },
@@ -263,10 +263,10 @@ let L = {
                 a = e[2],
                 s = e[3],
                 o = e[4];
-            if (null == a || null == s) return v(r);
-            let l = R(s, null);
+            if (null == a || null == s) return R(r);
+            let l = v(s, null);
             if (null != l) return D(l, o, S(n.channelId), r);
-            let u = R(a, null);
+            let u = v(a, null);
             return null != u ? D(u, o, S(n.channelId), r) : y(i, a, o, S(n.channelId), r);
         }
     };

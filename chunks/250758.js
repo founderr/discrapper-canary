@@ -73,7 +73,7 @@ function A(e, t) {
         })(n, l));
     let { query: o, mode: c, tokens: u, cursorScope: d } = s,
         { autocompletes: _ } = s;
-    (_ = O(e, c)),
+    (_ = x(e, c)),
         (p[e] = S({
             searchId: e,
             query: o,
@@ -114,7 +114,7 @@ function R(e, t, n) {
               results: i
           };
 }
-function x(e) {
+function O(e) {
     let t = (null != e ? e.getFullMatch() : '').trim(),
         n = (function () {
             let e = (0, d.cn)() && !1;
@@ -135,7 +135,7 @@ function x(e) {
         results: i
     };
 }
-function O(e, t) {
+function x(e, t) {
     let n = [];
     return (
         t.type === f.Sap.FILTER
@@ -173,12 +173,12 @@ function O(e, t) {
                                     }
                                 })(e, t)
                             )),
-                        5 > (0, I.BU)(i) && i.push(x(e)),
+                        5 > (0, I.BU)(i) && i.push(O(e)),
                         i
                     );
                 })(t.token, e))
               : t.type === f.Sap.EMPTY &&
-                (n.push(x(t.token)),
+                (n.push(O(t.token)),
                 (0, d.cn)(),
                 n.push(
                     (function (e) {
@@ -221,7 +221,7 @@ function L() {
         mode: n,
         tokens: i,
         cursorScope: s,
-        autocompletes: O(e, n)
+        autocompletes: x(e, n)
     });
 }
 class Z extends (i = l.ZP.Store) {
@@ -253,10 +253,10 @@ let P = new Z(o.Z, {
             c = g[i],
             u = !0;
         if (r === o.query && (null == o.mode || o.mode.filter === l.filter)) (n = o.autocompletes), (u = !1);
-        else if (l.type === f.Sap.EMPTY || (l.type === f.Sap.FILTER && l.filter !== f.dCx.FILTER_FROM && l.filter !== f.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = O(i, l));
+        else if (l.type === f.Sap.EMPTY || (l.type === f.Sap.FILTER && l.filter !== f.dCx.FILTER_FROM && l.filter !== f.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = x(i, l));
         else if (null != c) {
             let { token: e } = l;
-            null != e && e.getFullMatch().trim().length > 0 ? (E.Z.requestMembers(i, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: i }), (n = o.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = O(i, l)));
+            null != e && e.getFullMatch().trim().length > 0 ? (E.Z.requestMembers(i, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: i }), (n = o.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = x(i, l)));
         }
         return (
             (p[i] = S({

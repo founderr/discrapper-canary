@@ -27,8 +27,8 @@ var r = n(952639),
     A = n(651530),
     N = n(163268),
     O = n(735020),
-    R = n(774863),
-    v = n(981631),
+    v = n(774863),
+    R = n(981631),
     C = n(526761);
 let y = 3000,
     D = {};
@@ -143,7 +143,7 @@ function U(e, t) {
         : P(i, a);
 }
 function w(e) {
-    let t = R.Z.validContentScanVersion;
+    let t = v.Z.validContentScanVersion;
     return e.reduce((e, n) => {
         var r, i, a, s, o, l, u, c;
         null == e[n.channel_id] &&
@@ -268,7 +268,7 @@ function W(e) {
                 let t = e.filter((e) => (0, g.qP)(e) && (0, N.HH)(e)),
                     n = e
                         .map((e) => {
-                            if (v.OBS.has(e.type) && null != e.messageReference) {
+                            if (R.OBS.has(e.type) && null != e.messageReference) {
                                 let t = _.Z.getMessageByReference(e.messageReference);
                                 if (t.state === _.Y.LOADED && null != t.message && (0, g.qP)(t.message) && (0, N.HH)(t.message)) return t.message;
                             }

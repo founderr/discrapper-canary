@@ -27,7 +27,7 @@ var r = n(735250),
     N = n(900566);
 function O(e) {
     var t;
-    let { onClose: a, closePopout: O, sound: R, channel: v } = e,
+    let { onClose: a, closePopout: O, sound: v, channel: R } = e,
         C = (0, c.ZP)(),
         [y, D] = i.useState(!1),
         { location: L } = (0, u.O)(),
@@ -39,9 +39,9 @@ function O(e) {
             [L]
         ),
         { analyticsLocations: M } = (0, _.ZP)(d.Z.PREMIUM_UPSELL),
-        { previewSound: P } = (0, I.Z)(R, null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : null),
+        { previewSound: P } = (0, I.Z)(v, null !== (t = null == R ? void 0 : R.id) && void 0 !== t ? t : null),
         U = (0, m.K_)({
-            sound: R,
+            sound: v,
             previewSound: P,
             tooltipPosition: 'left'
         }),

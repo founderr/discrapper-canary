@@ -79,17 +79,17 @@ function d(e, t, n) {
         A = null !== (f = e.shouldUseVirtualFocus) && void 0 !== f ? f : null == I ? void 0 : I.shouldUseVirtualFocus,
         N = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == I ? void 0 : I.isVirtualized,
         O = (0, r.mp)(),
-        R = (0, r.mp)(),
-        v = {
+        v = (0, r.mp)(),
+        R = {
             role: 'option',
             'aria-disabled': m || void 0,
             'aria-selected': 'none' !== t.selectionManager.selectionMode ? T : void 0
         };
-    !((0, r.V5)() && (0, r.Pf)()) && ((v['aria-label'] = e['aria-label']), (v['aria-labelledby'] = O), (v['aria-describedby'] = R));
+    !((0, r.V5)() && (0, r.Pf)()) && ((R['aria-label'] = e['aria-label']), (R['aria-labelledby'] = O), (R['aria-describedby'] = v));
     let C = t.collection.getItem(p);
     if (N) {
         let e = Number(null == C ? void 0 : C.index);
-        (v['aria-posinset'] = Number.isNaN(e) ? void 0 : e + 1), (v['aria-setsize'] = (0, o.is)(t.collection));
+        (R['aria-posinset'] = Number.isNaN(e) ? void 0 : e + 1), (R['aria-setsize'] = (0, o.is)(t.collection));
     }
     let {
             itemProps: y,
@@ -125,12 +125,12 @@ function d(e, t, n) {
         delete U.id,
         {
             optionProps: {
-                ...v,
+                ...R,
                 ...(0, r.dG)(U, y, P),
                 id: u(t, p)
             },
             labelProps: { id: O },
-            descriptionProps: { id: R },
+            descriptionProps: { id: v },
             isFocused: L,
             isFocusVisible: L && (0, i.E)(),
             isSelected: T,

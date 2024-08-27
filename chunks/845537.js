@@ -53,8 +53,8 @@ var i = n(442837),
     A = n(51144),
     N = n(377668),
     O = n(689938),
-    R = n(778718),
-    v = n(910212);
+    v = n(778718),
+    R = n(910212);
 function C(e) {
     let { emoji: t } = e;
     return (0, r.jsx)(a.Tooltip, {
@@ -105,20 +105,20 @@ function L(e) {
         let e = u || l.isPomelo() ? null : '#'.concat(l.discriminator);
         return (0, r.jsx)(a.Tooltip, {
             text: (0, r.jsxs)('div', {
-                className: R.userTooltip,
+                className: v.userTooltip,
                 children: [
                     (0, r.jsx)(o.Z, {
                         user: l,
                         animate: !0,
                         size: a.AvatarSizes.SIZE_16,
-                        className: R.avatar
+                        className: v.avatar
                     }),
                     A.ZP.getUserTag(l, {
                         mode: 'username',
                         identifiable: u ? 'never' : 'always'
                     }),
                     (0, r.jsx)('span', {
-                        className: R.discriminator,
+                        className: v.discriminator,
                         children: e
                     })
                 ]
@@ -200,7 +200,7 @@ function w(e) {
 function x(e) {
     let { timestamp: t } = e;
     return (0, r.jsx)('span', {
-        className: v.timestamp,
+        className: R.timestamp,
         children: t.formatted
     });
 }

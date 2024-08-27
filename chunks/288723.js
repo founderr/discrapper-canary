@@ -29,7 +29,7 @@ t.Z = {
                     A = n.allowedAutoPlacements,
                     N = t.options.placement,
                     O = (0, i.Z)(N) === N,
-                    R =
+                    v =
                         h ||
                         (O || !S
                             ? [(0, r.Z)(N)]
@@ -38,7 +38,7 @@ t.Z = {
                                   var t = (0, r.Z)(e);
                                   return [(0, a.Z)(e), t, (0, a.Z)(t)];
                               })(N)),
-                    v = [N].concat(R).reduce(function (e, n) {
+                    R = [N].concat(v).reduce(function (e, n) {
                         return e.concat(
                             (0, i.Z)(n) === l.d7
                                 ? (0, o.Z)(t, {
@@ -56,12 +56,12 @@ t.Z = {
                     y = t.rects.popper,
                     D = new Map(),
                     L = !0,
-                    b = v[0],
+                    b = R[0],
                     M = 0;
-                M < v.length;
+                M < R.length;
                 M++
             ) {
-                var P = v[M],
+                var P = R[M],
                     U = (0, i.Z)(P),
                     w = (0, u.Z)(P) === l.BL,
                     x = [l.we, l.I].indexOf(U) >= 0,
@@ -93,7 +93,7 @@ t.Z = {
                 for (
                     var H = S ? 3 : 1,
                         Z = function (e) {
-                            var t = v.find(function (t) {
+                            var t = R.find(function (t) {
                                 var n = D.get(t);
                                 if (n)
                                     return n.slice(0, e).every(function (e) {

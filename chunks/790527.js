@@ -25,8 +25,8 @@ var r = n(735250),
     A = n(474936),
     N = n(981631),
     O = n(689938),
-    R = n(876298),
-    v = n(769860);
+    v = n(876298),
+    R = n(769860);
 function C(e) {
     var t, n, a;
     let { title: C, type: y, guildBoostProps: D, analyticsSource: L, analyticsLocation: b, body: M, context: P, glowUp: U, modalClassName: w, artContainerClassName: x, headerClassName: G, bodyClassName: k, transitionState: B, onClose: F, onSubscribeClick: V, onSecondaryClick: H, secondaryCTA: Z, subscribeButtonText: Y, showNewBadge: j = !1, showBetaBadge: W = !1, enableArtBoxShadow: K = !0, subscriptionTier: z = A.Si.TIER_2, isLoading: q = !1, hideBackButton: Q, backButtonText: X, showEnhancedUpsell: $, useSubscribeButtonGradient: J, subscribeButtonClassname: ee, hidePremiumOfferUpsell: et, children: en, ...er } = e,
@@ -59,26 +59,26 @@ function C(e) {
     i.useEffect(() => {
         !ed && u.MH();
     }, [ed]);
-    let e_ = K ? s()(R.artContainer, R.artContainerBoxShadow, x) : s()(R.artContainer, x),
+    let e_ = K ? s()(v.artContainer, v.artContainerBoxShadow, x) : s()(v.artContainer, x),
         eE = null;
     return (
         (eE =
             'artURL' in er
                 ? (0, r.jsx)('img', {
-                      className: R.art,
+                      className: v.art,
                       alt: '',
                       src: er.artURL
                   })
                 : er.artElement),
         (0, r.jsxs)(l.ModalRoot, {
-            className: s()(R.root, w),
+            className: s()(v.root, w),
             'aria-label': C,
             transitionState: B,
             children: [
                 W
                     ? (0, r.jsx)(l.Text, {
                           variant: 'text-xs/semibold',
-                          className: R.betaBadge,
+                          className: v.betaBadge,
                           children: O.Z.Messages.BETA
                       })
                     : null,
@@ -88,9 +88,9 @@ function C(e) {
                         eE,
                         j
                             ? (0, r.jsx)('img', {
-                                  className: R.sparkleBadge,
+                                  className: v.sparkleBadge,
                                   alt: '',
-                                  src: v
+                                  src: R
                               })
                             : null
                     ]
@@ -98,12 +98,12 @@ function C(e) {
                 $
                     ? (0, r.jsx)(l.ModalCloseButton, {
                           onClick: F,
-                          className: R.closeButton
+                          className: v.closeButton
                       })
                     : null,
                 (0, r.jsx)(l.ModalContent, {
                     scrollbarType: 'none',
-                    className: $ ? R.enhancedContent : R.content,
+                    className: $ ? v.enhancedContent : v.content,
                     children: q
                         ? (0, r.jsx)(l.Spinner, {})
                         : (0, r.jsx)(r.Fragment, {
@@ -124,7 +124,7 @@ function C(e) {
                                   : (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(l.Heading, {
-                                                className: s()(R.header, { [R.enhancedHeader]: $ }, G),
+                                                className: s()(v.header, { [v.enhancedHeader]: $ }, G),
                                                 variant: 'heading-xl/bold',
                                                 children: C
                                             }),
@@ -132,7 +132,7 @@ function C(e) {
                                             en,
                                             (0, r.jsx)(l.Text, {
                                                 variant: 'text-md/normal',
-                                                className: s()(k, R.subHeader),
+                                                className: s()(k, v.subHeader),
                                                 children: M
                                             })
                                         ]
@@ -140,14 +140,14 @@ function C(e) {
                           })
                 }),
                 (0, r.jsxs)(l.ModalFooter, {
-                    className: s()(R.footer, { [R.enhancedFooter]: $ }),
+                    className: s()(v.footer, { [v.enhancedFooter]: $ }),
                     children: [
                         (0, r.jsxs)('div', {
-                            className: s()(R.primaryActions, { [R.enhancedPrimaryActions]: $ }),
+                            className: s()(v.primaryActions, { [v.enhancedPrimaryActions]: $ }),
                             children: [
                                 null != Z
                                     ? (0, r.jsx)(l.Button, {
-                                          className: s()(R.secondaryAction, { [R.enhancedSecondaryAction]: $ }),
+                                          className: s()(v.secondaryAction, { [v.enhancedSecondaryAction]: $ }),
                                           onClick: H,
                                           size: l.Button.Sizes.SMALL,
                                           color: $ ? l.Button.Colors.CUSTOM : l.Button.Colors.PRIMARY,

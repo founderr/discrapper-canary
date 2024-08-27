@@ -21,14 +21,14 @@ var i = n(512722),
     A = n(70722),
     N = n(981631),
     O = n(65154);
-let R = {},
-    v = new _.V7(),
+let v = {},
+    R = new _.V7(),
     C = !1,
     y = window.document.createElement('canvas');
 (y.width = 512), (y.height = 288);
 let D = y.getContext('2d');
 function L() {
-    v.stop(), null != r && (c.Z.removeSink(r, R), (r = null));
+    R.stop(), null != r && (c.Z.removeSink(r, v), (r = null));
 }
 let b = o().debounce((e, t, n, r) => {
     M(
@@ -68,9 +68,9 @@ async function M(e, t) {
                                       ? n.getNextVideoOutputFrame(e).then(o, (t) => {
                                             if (r === e) throw t;
                                         })
-                                      : c.Z.addSink(e, R, o);
+                                      : c.Z.addSink(e, v, o);
                               }).finally(() => {
-                                  !i && c.Z.removeSink(e, R);
+                                  !i && c.Z.removeSink(e, v);
                               });
                           }
                         : function (e, t) {
@@ -144,10 +144,10 @@ async function M(e, t) {
                     oldFormErrors: !0
                 });
         } catch (t) {
-            new f.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && v.start(60000, s);
+            new f.Z('ApplicationStreamPreviewUploadManager').error('Failed to post stream preview', t), r === e && R.start(60000, s);
             return;
         }
-    r === e && (C ? v.start(60000, s) : v.start(300000, s));
+    r === e && (C ? R.start(60000, s) : R.start(300000, s));
 }
 t.Z = {
     init() {

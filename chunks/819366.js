@@ -25,8 +25,8 @@ var r = n(735250),
     A = n(594174),
     N = n(5192),
     O = n(51144),
-    R = n(377668);
-function v(e) {
+    v = n(377668);
+function R(e) {
     let { userId: t, className: a, children: s } = e,
         o = i.useCallback(() => {
             (0, f.k)({ kind: 'user' });
@@ -78,9 +78,9 @@ function C(e) {
         w = O.ZP.useName(b),
         x = (0, l.e7)([m.Z, T.ZP, S.Z], () => N.ZP.getNickname(P, a, b)),
         G = g.Z.getGuild(P),
-        k = (0, E.Ib)(G, M) && i === R.fL ? R.jM : null;
+        k = (0, E.Ib)(G, M) && i === v.fL ? v.jM : null;
     if (null == b)
-        return (0, r.jsx)(v, {
+        return (0, r.jsx)(R, {
             userId: f,
             className: t,
             children: C

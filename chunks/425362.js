@@ -74,13 +74,13 @@ e.exports = function (e) {
                 subLanguage: 'css'
             }
         },
-        R = {
+        v = {
             className: 'string',
             begin: '`',
             end: '`',
             contains: [e.BACKSLASH_ESCAPE, A]
         },
-        v = {
+        R = {
             className: 'comment',
             variants: [
                 e.COMMENT(/\/\*\*(?!\/)/, '\\*/', {
@@ -120,14 +120,14 @@ e.exports = function (e) {
                 e.C_LINE_COMMENT_MODE
             ]
         },
-        C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, N, O, R, { match: /\$\d+/ }, S];
+        C = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, N, O, v, { match: /\$\d+/ }, S];
     A.contains = C.concat({
         begin: /\{/,
         end: /\}/,
         keywords: I,
         contains: ['self'].concat(C)
     });
-    let y = [].concat(v, A.contains),
+    let y = [].concat(R, A.contains),
         D = y.concat([
             {
                 begin: /\(/,
@@ -221,8 +221,8 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE,
             N,
             O,
-            R,
             v,
+            R,
             { match: /\$\d+/ },
             S,
             M,
@@ -237,7 +237,7 @@ e.exports = function (e) {
                 keywords: 'return throw case',
                 relevance: 0,
                 contains: [
-                    v,
+                    R,
                     e.REGEXP_MODE,
                     {
                         className: 'function',

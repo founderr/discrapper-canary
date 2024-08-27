@@ -48,7 +48,7 @@ n.d(t, {
         return U;
     },
     ik: function () {
-        return v;
+        return R;
     },
     kA: function () {
         return y;
@@ -129,27 +129,27 @@ function N(e, t) {
 function O(e, t) {
     return !N(e, t);
 }
-function R(e, t) {
+function v(e, t) {
     return !N(e.id, t.id);
 }
-function v(e, t, n, r) {
+function R(e, t, n, r) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return Object.values(t)
-        .filter((t) => !m(t) && A(n, t.id, r) && R(e, t) && i(t.name))
+        .filter((t) => !m(t) && A(n, t.id, r) && v(e, t) && i(t.name))
         .sort(g)
         .map((e) => T(e));
 }
 function C(e, t, n, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : () => !0;
     return Object.values(t)
-        .filter((t) => !m(t) && A(n, t.id, i) && R(e, t) && a(t.name))
+        .filter((t) => !m(t) && A(n, t.id, i) && v(e, t) && a(t.name))
         .sort(g)
         .map((e) => T(e, r.e$(e.permissions, i)));
 }
 function y(e, t, n, r, i) {
     var a, s, o, l, u;
     let c = [];
-    return 0 === (c = ((a = e), (s = t), (o = n), (l = r), (u = i), Object.values(s).filter((e) => m(e) || (!A(o, e.id, l, u) && R(a, e)))).sort(g).map((e) => T(e))).length ? S(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
+    return 0 === (c = ((a = e), (s = t), (o = n), (l = r), (u = i), Object.values(s).filter((e) => m(e) || (!A(o, e.id, l, u) && v(a, e)))).sort(g).map((e) => T(e))).length ? S(I.Z.Messages.CHANNEL_PERMISSIONS_NO_ROLES) : c;
 }
 function D(e, t, n, i, a) {
     var s, o, l, u, c;
@@ -162,7 +162,7 @@ function D(e, t, n, i, a) {
         (c = a),
         Object.values(o).filter((e) => {
             var t;
-            return m(e) || (!A(l, e.id, u, c) && R(s, e)) || r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u);
+            return m(e) || (!A(l, e.id, u, c) && v(s, e)) || r.e$(r.$e(e.permissions, null === (t = l.permissionOverwrites[e.id]) || void 0 === t ? void 0 : t.allow), u);
         }))
             .sort(g)
             .map((e) => T(e, r.e$(e.permissions, i)))).length

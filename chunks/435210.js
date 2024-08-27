@@ -124,7 +124,7 @@ function d(e, t) {
         regexp: 'red'
     });
 function _(e, n, r) {
-    if (e.customInspect && n && R(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
+    if (e.customInspect && n && v(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
         var i,
             a,
             s = n.inspect(r, e);
@@ -148,7 +148,7 @@ function _(e, n, r) {
         i);
     if ((e.showHidden && (l = Object.getOwnPropertyNames(n)), O(n) && (l.indexOf('message') >= 0 || l.indexOf('description') >= 0))) return E(n);
     if (0 === l.length) {
-        if (R(n)) {
+        if (v(n)) {
             var c = n.name ? ': ' + n.name : '';
             return e.stylize('[Function' + c + ']', 'special');
         }
@@ -158,8 +158,8 @@ function _(e, n, r) {
     }
     var d = '',
         A = !1,
-        v = ['{', '}'];
-    if ((h(n) && ((A = !0), (v = ['[', ']'])), R(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), S(n) && (d = ' ' + RegExp.prototype.toString.call(n)), N(n) && (d = ' ' + Date.prototype.toUTCString.call(n)), O(n) && (d = ' ' + E(n)), 0 === l.length && (!A || 0 == n.length))) return v[0] + d + v[1];
+        R = ['{', '}'];
+    if ((h(n) && ((A = !0), (R = ['[', ']'])), v(n) && (d = ' [Function' + (n.name ? ': ' + n.name : '') + ']'), S(n) && (d = ' ' + RegExp.prototype.toString.call(n)), N(n) && (d = ' ' + Date.prototype.toUTCString.call(n)), O(n) && (d = ' ' + E(n)), 0 === l.length && (!A || 0 == n.length))) return R[0] + d + R[1];
     if (r < 0) return S(n) ? e.stylize(RegExp.prototype.toString.call(n), 'regexp') : e.stylize('[Object]', 'special');
     return (
         e.seen.push(n),
@@ -184,7 +184,7 @@ function _(e, n, r) {
             }, 0) > 60
                 ? n[0] + ('' === t ? '' : t + '\n ') + ' ' + e.join(',\n  ') + ' ' + n[1]
                 : n[0] + t + ' ' + e.join(', ') + ' ' + n[1];
-        })(a, d, v)
+        })(a, d, R)
     );
 }
 function E(e) {
@@ -252,18 +252,18 @@ function g(e) {
     return void 0 === e;
 }
 function S(e) {
-    return A(e) && '[object RegExp]' === v(e);
+    return A(e) && '[object RegExp]' === R(e);
 }
 function A(e) {
     return 'object' == typeof e && null !== e;
 }
 function N(e) {
-    return A(e) && '[object Date]' === v(e);
+    return A(e) && '[object Date]' === R(e);
 }
 function O(e) {
-    return A(e) && ('[object Error]' === v(e) || e instanceof Error);
+    return A(e) && ('[object Error]' === R(e) || e instanceof Error);
 }
-function R(e) {
+function v(e) {
     return 'function' == typeof e;
 }
 (t.isSymbol = function (e) {
@@ -277,8 +277,8 @@ function R(e) {
     (t.types.isDate = N),
     (t.isError = O),
     (t.types.isNativeError = O),
-    (t.isFunction = R);
-function v(e) {
+    (t.isFunction = v);
+function R(e) {
     return Object.prototype.toString.call(e);
 }
 function C(e) {

@@ -14,22 +14,22 @@ var r = n(735250),
     h = n(330708);
 t.Z = (e) => {
     let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: p, targetBoostedGuildTier: I, onClose: m = () => {}, closeLayer: T = () => {}, pauseAnimation: g = !1, applicationId: S, handleSubscribeModalClose: A, withHighlight: N = !1, ...O } = e,
-        { analyticsLocations: R } = (0, u.ZP)(),
-        v = (0, l.bp)() === E.IlC.POPOUT,
+        { analyticsLocations: v } = (0, u.ZP)(),
+        R = (0, l.bp)() === E.IlC.POPOUT,
         [C, y] = i.useState(!1),
         D = null != I ? Math.max((0, d.KK)(a, I), 1) : 1,
         L = (0, d.aq)(),
         b = async () => {
             y(!0),
                 await (0, _.u)({
-                    analyticsLocations: R,
+                    analyticsLocations: v,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: a,
                     numberOfBoostsToAdd: D,
                     onClose: m,
                     closeLayer: T,
-                    inPopout: v,
+                    inPopout: R,
                     applicationId: S,
                     handleSubscribeModalClose: A
                 }),

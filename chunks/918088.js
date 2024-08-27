@@ -6,7 +6,7 @@ n.d(t, {
         return L;
     },
     ef: function () {
-        return x;
+        return O;
     },
     r8: function () {
         return M;
@@ -43,10 +43,10 @@ let R = {
     editing: !1,
     showResults: !1
 };
-function x(e, t) {
+function O(e, t) {
     for (let n of e) if (('number' == typeof n.emoji.id ? ''.concat(n.emoji.id) : n.emoji.id) === t) return n;
 }
-let O = (e) =>
+let x = (e) =>
     (0, i.EQ)(e)
         .with(
             {
@@ -113,11 +113,11 @@ function v(e, t) {
         let t = _.Z.getMessage(e.channel_id, e.id);
         (A = !e.isSearchHit && null != t), (p = null !== (a = null == t ? void 0 : t.reactions) && void 0 !== a ? a : p);
     }
-    let x = T.size > 0,
-        O = p.some((e) => !0 === e.me_vote),
-        v = !C && O,
+    let O = T.size > 0,
+        x = p.some((e) => !0 === e.me_vote),
+        v = !C && x,
         L = v || m || f,
-        Z = E && A && (!O || C || L),
+        Z = E && A && (!x || C || L),
         P = null === (i = u.Z.getChannel(e.getChannelId())) || void 0 === i ? void 0 : null === (n = i.getGuildId) || void 0 === n ? void 0 : n.call(i),
         D = null != P ? d.ZP.getSelfMember(P) : null,
         b = (0, o.EY)(D),
@@ -127,11 +127,11 @@ function v(e, t) {
         canTapAnswers: Z,
         canRemoveVote: v && E && !m,
         canShowVoteCounts: L,
-        canSubmitVote: !N && x && !v && E && !b && !j,
+        canSubmitVote: !N && O && !v && E && !b && !j,
         expirationLabel: I,
-        hasSelectedAnswer: x,
+        hasSelectedAnswer: O,
         hasVoted: v,
-        hasVoteRecorded: O,
+        hasVoteRecorded: x,
         isEditingVote: C,
         isExpired: m,
         isInteractive: A,
@@ -163,20 +163,20 @@ function L(e, t) {
         q = Math.max(
             ...L.map((e) => {
                 var t, n;
-                let i = x(V, ''.concat(e.answer_id));
+                let i = O(V, ''.concat(e.answer_id));
                 return null !== (n = null == i ? void 0 : null === (t = i.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0;
             })
         ),
         X = L.map((e) => {
             var t, n, a;
             let o = ''.concat(e.answer_id),
-                u = x(V, o),
+                u = O(V, o),
                 d = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
                 _ = 0 === z ? 0 : d / z,
                 E = H.has(o),
                 T = d >= q && 0 !== d,
                 h = k && null !== (a = null == u ? void 0 : u.me_vote) && void 0 !== a && a,
-                N = O({
+                N = x({
                     didSelfVote: h,
                     hasVoted: k,
                     isExpired: G,

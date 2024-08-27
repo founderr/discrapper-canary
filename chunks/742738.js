@@ -32,10 +32,10 @@ function O() {
         if (null == c || !c.hasFeature(A.oNc.DISCOVERABLE)) return null;
         let E = (0, m.Lw)(u, l),
             O = (null == N ? void 0 : null === (e = N.party) || void 0 === e ? void 0 : e.id) === E ? N : null,
-            R = p.Z.getMutableParticipants(u.id, I.pV.SPEAKER),
-            v = R.filter((e) => e.type === I.Ui.STREAM).length,
-            C = R.length - v,
-            y = p.Z.getParticipantCount(o) - v,
+            v = p.Z.getMutableParticipants(u.id, I.pV.SPEAKER),
+            R = v.filter((e) => e.type === I.Ui.STREAM).length,
+            C = v.length - R,
+            y = p.Z.getParticipantCount(o) - R,
             D = (null == O ? void 0 : null === (t = O.party) || void 0 === t ? void 0 : t.size) != null ? O.party.size[1] : 0;
         return {
             application_id: S.gD,
@@ -54,7 +54,7 @@ function O() {
     })();
     return !l()(e, N) && ((N = e), !0);
 }
-class R extends (s = u.ZP.Store) {
+class v extends (s = u.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, f.Z, T.Z, E.Z);
     }
@@ -63,7 +63,7 @@ class R extends (s = u.ZP.Store) {
     }
 }
 (a = 'StageChannelSelfRichPresenceStore'),
-    (i = 'displayName') in (r = R)
+    (i = 'displayName') in (r = v)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -71,7 +71,7 @@ class R extends (s = u.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new R(c.Z, {
+    (t.Z = new v(c.Z, {
         CONNECTION_OPEN: O,
         STAGE_INSTANCE_CREATE: O,
         STAGE_INSTANCE_UPDATE: O,

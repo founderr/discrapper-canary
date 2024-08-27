@@ -27,8 +27,8 @@ var i = n(120356),
     A = n(652853),
     N = n(979038),
     O = n(448980),
-    R = n(194811),
-    v = n(373826),
+    v = n(194811),
+    R = n(373826),
     C = n(315324),
     y = n(582123),
     D = n(290274),
@@ -83,7 +83,7 @@ function G(e) {
         J = () => {
             var e;
             return i.type === P.IIU.HANG_STATUS
-                ? (0, r.jsx)(v.Z, {
+                ? (0, r.jsx)(R.Z, {
                       variant: 'heading-sm/semibold',
                       text: (0, T.O8)(i)
                   })
@@ -96,18 +96,18 @@ function G(e) {
                                 color: o.tokens.colors.TEXT_NORMAL,
                                 className: x.voiceIcon
                             }),
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(R.Z, {
                                 variant: 'heading-sm/semibold',
                                 text: B.name
                             })
                         ]
                     })
                   : (0, u.Z)(i)
-                    ? (0, r.jsx)(v.Z, {
+                    ? (0, r.jsx)(R.Z, {
                           variant: 'heading-sm/semibold',
                           text: i.name
                       })
-                    : (0, r.jsx)(v.Z, {
+                    : (0, r.jsx)(R.Z, {
                           variant: 'heading-sm/semibold',
                           text: null !== (e = i.details) && void 0 !== e ? e : i.name
                       });
@@ -116,7 +116,7 @@ function G(e) {
             i.type === P.IIU.HANG_STATUS
                 ? null
                 : (0, c.Z)(i) && null != k
-                  ? (0, r.jsx)(v.Z, {
+                  ? (0, r.jsx)(R.Z, {
                         variant: 'text-xs/normal',
                         text: w.Z.Messages.USER_PROFILE_IN_GUILD_DETAILS.format({ guildName: k.name }),
                         onClick: () => {
@@ -124,11 +124,11 @@ function G(e) {
                         }
                     })
                   : (0, u.Z)(i)
-                    ? (0, r.jsx)(v.Z, {
+                    ? (0, r.jsx)(R.Z, {
                           variant: 'text-xs/normal',
                           text: i.details
                       })
-                    : (0, r.jsx)(v.Z, {
+                    : (0, r.jsx)(R.Z, {
                           text: i.state,
                           variant: 'text-xs/normal'
                       }),
@@ -138,7 +138,7 @@ function G(e) {
                 ? null
                 : (0, u.Z)(i)
                   ? en()
-                  : (0, r.jsx)(v.Z, {
+                  : (0, r.jsx)(R.Z, {
                         text: null === (e = i.assets) || void 0 === e ? void 0 : e.large_text,
                         variant: 'text-xs/normal'
                     });
@@ -149,11 +149,11 @@ function G(e) {
                 ? (0, r.jsxs)('div', {
                       className: x.gameState,
                       children: [
-                          (0, r.jsx)(v.Z, {
+                          (0, r.jsx)(R.Z, {
                               variant: 'text-xs/normal',
                               text: i.state
                           }),
-                          (0, r.jsx)(v.Z, {
+                          (0, r.jsx)(R.Z, {
                               variant: 'text-xs/normal',
                               text: w.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
                                   count: '0',
@@ -166,11 +166,11 @@ function G(e) {
                   ? (0, r.jsxs)('div', {
                         className: x.gameState,
                         children: [
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(R.Z, {
                                 variant: 'text-xs/normal',
                                 text: i.state
                             }),
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(R.Z, {
                                 variant: 'text-xs/normal',
                                 text: w.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
                                     count: i.party.size[0],
@@ -180,7 +180,7 @@ function G(e) {
                         ]
                     })
                   : null == i.party
-                    ? (0, r.jsx)(v.Z, {
+                    ? (0, r.jsx)(R.Z, {
                           variant: 'text-xs/normal',
                           text: i.state
                       })
@@ -257,7 +257,7 @@ function G(e) {
                     className: a()(x.card, F),
                     ref: z,
                     children: [
-                        (0, r.jsx)(R.Z, {
+                        (0, r.jsx)(v.Z, {
                             text: X,
                             platform: (0, E.ZH)(i),
                             tags: (0, r.jsx)(D.Z, {

@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(780748),
     N = n(464581),
     O = n(732659),
-    R = n(86724),
-    v = n(847302),
+    v = n(86724),
+    R = n(847302),
     C = n(657198),
     y = n(321127),
     D = n(981631),
@@ -44,11 +44,11 @@ t.Z = i.forwardRef(function (e, t) {
                 if (void 0 !== i && i !== s) {
                     if (((e.children = i), 'parent' === t && !e.previewMarkdown)) {
                         try {
-                            (e.previewMarkdown = !0), (0, v.KH)(e, b.guild_id, b.id);
+                            (e.previewMarkdown = !0), (0, R.KH)(e, b.guild_id, b.id);
                         } finally {
                             e.previewMarkdown = !1;
                         }
-                        (0, v.KH)(e, b.guild_id, b.id), (a = void 0);
+                        (0, R.KH)(e, b.guild_id, b.id), (a = void 0);
                     }
                     'undo' !== t && void 0 !== i && i !== s && f.T.insertEntry(e, 'other', !1, s, o), (l = !0);
                 }
@@ -69,7 +69,7 @@ t.Z = i.forwardRef(function (e, t) {
                     (null != c &&
                         c[0].command.id !== (null === (r = u.Z.getActiveCommand(b.id)) || void 0 === r ? void 0 : r.id) &&
                         f.T.withMergedEntry(e, () => {
-                            (0, R.L)(e, b.id, null, !0);
+                            (0, v.L)(e, b.id, null, !0);
                         }),
                     l)
                 ) {
@@ -151,7 +151,7 @@ t.Z = i.forwardRef(function (e, t) {
                 );
         }, [b.id, eS, z, eA, J]);
     (0, S.Z)(t, eS, b, eN), (0, O.Z)(eS, eE, V);
-    let { handleKeyDown: eO, handleKeyUp: eR } = (0, A.Z)({
+    let { handleKeyDown: eO, handleKeyUp: ev } = (0, A.Z)({
             editor: eS,
             channel: b,
             disableEnterToSubmit: en,
@@ -164,7 +164,7 @@ t.Z = i.forwardRef(function (e, t) {
             hideAutocomplete: Q,
             moveSelection: X
         }),
-        { handlePaste: ev, handleGlobalPaste: eC } = (0, N.Z)(eS, eI, F),
+        { handlePaste: eR, handleGlobalPaste: eC } = (0, N.Z)(eS, eI, F),
         ey = i.useCallback(
             (e) => {
                 null == q || q();
@@ -215,9 +215,9 @@ t.Z = i.forwardRef(function (e, t) {
                     onFocus: H,
                     onBlur: Z,
                     onClick: ey,
-                    onPaste: ev,
+                    onPaste: eR,
                     onKeyDown: eO,
-                    onKeyUp: eR,
+                    onKeyUp: ev,
                     decorateExtra: eL,
                     renderExtraElement: eb,
                     renderExtraLeaf: eM,

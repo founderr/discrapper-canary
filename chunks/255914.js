@@ -15,7 +15,7 @@ n.d(t, {
         return O;
     },
     nt: function () {
-        return R;
+        return v;
     },
     u7: function () {
         return r;
@@ -127,9 +127,9 @@ class N {
     }
     static parseOutboundStats(e, t) {
         var n, r, i, a, s, o, l, u, c, d, _, E, f, h, p, I, m, T, g, O;
-        let R = new N();
+        let v = new N();
         return null == e
-            ? R
+            ? v
             : {
                   bytes: e.bytesSent,
                   framesCodec: e.framesEncoded,
@@ -319,7 +319,7 @@ class O {
             });
     }
 }
-class R extends O {
+class v extends O {
     appendTargetRates(e, t, n, r) {
         if (this.statsWindow.length < 2) return;
         (e = null != e ? e : 0), (t = null != t ? t : 0), (n = null != n ? n : 0), (r = null != r ? r : 0);

@@ -105,12 +105,12 @@ function O(e) {
     (t.isArrayBuffer = A),
     (N.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && N(new DataView(new ArrayBuffer(1), 0, 1))),
     (t.isDataView = O);
-var R = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
-function v(e) {
+var v = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+function R(e) {
     return '[object SharedArrayBuffer]' === c(e);
 }
 function C(e) {
-    return void 0 !== R && (void 0 === v.working && (v.working = v(new R())), v.working ? v(e) : e instanceof R);
+    return void 0 !== v && (void 0 === R.working && (R.working = R(new v())), R.working ? R(e) : e instanceof v);
 }
 t.isSharedArrayBuffer = C;
 t.isAsyncFunction = function (e) {

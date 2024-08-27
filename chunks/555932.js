@@ -27,8 +27,8 @@ function p(e) {
         A = _.oCV[t.premiumTier],
         N = _.oCV[S],
         O = (t.premiumSubscriberCount - A) / (N - A),
-        R = d.P[t.premiumTier],
-        v = d.P[S],
+        v = d.P[t.premiumTier],
+        R = d.P[S],
         C = t.premiumTier === _.Eu4.TIER_3,
         {
             progressBarFillWidthFactor: y,
@@ -86,7 +86,7 @@ function p(e) {
                 }
             );
         })({
-            fillFactor: C ? 1 : O * (v - R) + R,
+            fillFactor: C ? 1 : O * (R - v) + v,
             isRevealed: p || n,
             useReducedMotion: n,
             premiumTier: t.premiumTier,

@@ -26,8 +26,8 @@ var r = n(735250),
     A = n(271383),
     N = n(430824),
     O = n(572004),
-    R = n(746878),
-    v = n(285063),
+    v = n(746878),
+    R = n(285063),
     C = n(943362),
     y = n(551452),
     D = n(69626),
@@ -91,7 +91,7 @@ let G = {
                 'code',
                 {
                     className: 'inline',
-                    children: (0, R.S)(e, t, n)
+                    children: (0, v.S)(e, t, n)
                 },
                 n.key
             )
@@ -101,7 +101,7 @@ let G = {
             let a = () =>
                 (0, r.jsx)('code', {
                     className: s()(w.scrollbarGhostHairline, 'hljs'),
-                    children: (0, R.S)(e, t, i)
+                    children: (0, v.S)(e, t, i)
                 });
             return (0, r.jsx)(
                 'pre',
@@ -163,7 +163,7 @@ let G = {
     },
     staticRouteLink: {
         react: (e, t, n) =>
-            (0, R.k)(e.id)
+            (0, v.k)(e.id)
                 ? (0, r.jsxs)(
                       p.Z,
                       {
@@ -217,7 +217,7 @@ let G = {
                   )
                 : null
     },
-    timestamp: { react: (e, t, n) => (0, r.jsx)(v.Z, { node: e }, n.key) },
+    timestamp: { react: (e, t, n) => (0, r.jsx)(R.Z, { node: e }, n.key) },
     list: {
         react: (e, t, n) => {
             let r = e.ordered ? 'ol' : 'ul',
@@ -249,7 +249,7 @@ let G = {
                 h.Z,
                 {
                     guild: i,
-                    children: (0, R.S)(e, t, n)
+                    children: (0, v.S)(e, t, n)
                 },
                 n.key
             );
@@ -261,7 +261,7 @@ let G = {
                 f.Z,
                 {
                     iconType: e.iconType,
-                    children: (0, R.S)(e, t, n)
+                    children: (0, v.S)(e, t, n)
                 },
                 n.key
             )

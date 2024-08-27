@@ -45,7 +45,7 @@ function u(e) {
         c = (0, i.useRef)(null),
         d = (0, i.useRef)([]),
         { parentNode: _ } = (0, i.useContext)(o) || {},
-        h = (0, i.useMemo)(() => new v({ scopeRef: d }), [d]);
+        h = (0, i.useMemo)(() => new R({ scopeRef: d }), [d]);
     (0, r.bt)(() => {
         let e = _ || C.root;
         if (C.getTreeNode(e.scopeRef) && l && !T(l, e.scopeRef)) {
@@ -511,7 +511,7 @@ function O(e) {
     while (t);
     return n;
 }
-class R {
+class v {
     get size() {
         return this.fastMap.size;
     }
@@ -521,7 +521,7 @@ class R {
     addTreeNode(e, t, n) {
         let r = this.fastMap.get(null != t ? t : null);
         if (!r) return;
-        let i = new v({ scopeRef: e });
+        let i = new R({ scopeRef: e });
         r.addChild(i), (i.parent = r), this.fastMap.set(e, i), n && (i.nodeToRestore = n);
     }
     addNode(e) {
@@ -541,15 +541,15 @@ class R {
     }
     clone() {
         var e, t;
-        let n = new R();
+        let n = new v();
         for (let r of this.traverse()) n.addTreeNode(r.scopeRef, null !== (t = null === (e = r.parent) || void 0 === e ? void 0 : e.scopeRef) && void 0 !== t ? t : null, r.nodeToRestore);
         return n;
     }
     constructor() {
-        (this.fastMap = new Map()), (this.root = new v({ scopeRef: null })), this.fastMap.set(null, this.root);
+        (this.fastMap = new Map()), (this.root = new R({ scopeRef: null })), this.fastMap.set(null, this.root);
     }
 }
-class v {
+class R {
     addChild(e) {
         this.children.add(e), (e.parent = this);
     }
@@ -560,7 +560,7 @@ class v {
         (this.children = new Set()), (this.contain = !1), (this.scopeRef = e.scopeRef);
     }
 }
-let C = new R();
+let C = new v();
 function y(e = {}) {
     let { autoFocus: t = !1, isTextInput: n, within: r } = e,
         s = (0, i.useRef)({

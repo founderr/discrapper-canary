@@ -20,8 +20,8 @@ var r,
     A = o.Dispatch,
     N = o.Function,
     O = o.MessageChannel,
-    R = o.String,
-    v = 0,
+    v = o.String,
+    R = 0,
     C = {},
     y = 'onreadystatechange';
 _(function () {
@@ -42,7 +42,7 @@ var D = function (e) {
         D(e.data);
     },
     M = function (e) {
-        o.postMessage(R(e), r.protocol + '//' + r.host);
+        o.postMessage(v(e), r.protocol + '//' + r.host);
     };
 (!T || !g) &&
     ((T = function (e) {
@@ -50,11 +50,11 @@ var D = function (e) {
         var t = c(e) ? e : N(e),
             n = f(arguments, 1);
         return (
-            (C[++v] = function () {
+            (C[++R] = function () {
                 l(t, void 0, n);
             }),
-            i(v),
-            v
+            i(R),
+            R
         );
     }),
     (g = function (e) {

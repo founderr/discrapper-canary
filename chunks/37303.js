@@ -41,15 +41,15 @@ function C(e) {
         p = s.useCallback(() => C(!1), []),
         g = (0, o.tP)(t),
         { containerRef: S, size: A, height: R } = (0, m.h)(),
-        x = (0, l.q)({ location: T.dr.QUESTS_CARD }),
+        O = (0, l.q)({ location: T.dr.QUESTS_CARD }),
         {
-            expansionSpring: O,
+            expansionSpring: x,
             isAnimating: M,
             isExpanded: v,
             toggleExpanded: L
         } = (0, m.O)({
             initiallyExpanded:
-                !x ||
+                !O ||
                 r ||
                 (0, _.iM)({
                     location: n,
@@ -69,7 +69,7 @@ function C(e) {
                         maxHeight:
                             n === u.jn.QUESTS_EMBED
                                 ? void 0
-                                : O.to({
+                                : x.to({
                                       range: [0, 1],
                                       output: [_.DJ, Z]
                                   })
@@ -90,10 +90,10 @@ function C(e) {
                                 location: n,
                                 quest: t,
                                 size: A,
-                                expansionSpring: O,
+                                expansionSpring: x,
                                 isAnimating: M,
                                 isExpanded: v,
-                                isInConcurrentQuestExperiment: x,
+                                isInConcurrentQuestExperiment: O,
                                 contentPosition: c,
                                 toggleExpanded: L
                             }),

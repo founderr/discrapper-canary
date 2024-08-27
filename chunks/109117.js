@@ -38,7 +38,7 @@ async function _() {
             function O(e) {
                 return (null == n ? void 0 : n.storedInformation) == null || null == n.storedInformation[e] ? null : n.storedInformation[e];
             }
-            let R = {
+            let v = {
                 did_crash: t,
                 renderer_crash_reason: null !== (c = null == n ? void 0 : n.rendererCrashReason) && void 0 !== c ? c : null,
                 renderer_crash_exit_code: null !== (d = null == n ? void 0 : n.rendererCrashExitCode) && void 0 !== d ? d : null,
@@ -64,18 +64,18 @@ async function _() {
                     minidump_relative_crash_address: null,
                     minidump_exception_module_version: null,
                     minidump_exception_module_code_id: null,
-                    ...R
+                    ...v
                 };
             console.log('AppCrashedFatalReport lastCrash:', n, e);
-            let v = null == n ? void 0 : n.minidumpInformation;
+            let R = null == n ? void 0 : n.minidumpInformation;
             return {
                 electron_crash_reporter_did_crash: e,
-                minidump_exception_type: null !== (m = null == v ? void 0 : v.exceptionString) && void 0 !== m ? m : null,
-                minidump_exception_module_name: null !== (T = null == v ? void 0 : v.exceptionModuleName) && void 0 !== T ? T : null,
-                minidump_relative_crash_address: null !== (g = null == v ? void 0 : v.relativeCrashAddress) && void 0 !== g ? g : null,
-                minidump_exception_module_version: null !== (S = null == v ? void 0 : v.exceptionModuleVersion) && void 0 !== S ? S : null,
-                minidump_exception_module_code_id: null !== (A = null == v ? void 0 : v.exceptionModuleCodeId) && void 0 !== A ? A : null,
-                ...R
+                minidump_exception_type: null !== (m = null == R ? void 0 : R.exceptionString) && void 0 !== m ? m : null,
+                minidump_exception_module_name: null !== (T = null == R ? void 0 : R.exceptionModuleName) && void 0 !== T ? T : null,
+                minidump_relative_crash_address: null !== (g = null == R ? void 0 : R.relativeCrashAddress) && void 0 !== g ? g : null,
+                minidump_exception_module_version: null !== (S = null == R ? void 0 : R.exceptionModuleVersion) && void 0 !== S ? S : null,
+                minidump_exception_module_code_id: null !== (A = null == R ? void 0 : R.exceptionModuleCodeId) && void 0 !== A ? A : null,
+                ...v
             };
         })(a, s, n);
     o.default.track(u.rMx.APP_NATIVE_CRASH, l), i.K.set(d, { lastId: null == n ? void 0 : n.id }), s && setTimeout(async () => await E(), 10000);

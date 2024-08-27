@@ -38,7 +38,7 @@ function o(e) {
     return t;
 }
 function l(e, t) {
-    var n, i, o, l, u, c, d, _, E, f, h, p, I, m, T, g, S, A, N, O, R, v, C, y;
+    var n, i, o, l, u, c, d, _, E, f, h, p, I, m, T, g, S, A, N, O, v, R, C, y;
     let D = e.substreams.find((e) => !e.isRTX && !e.isFlexFEC);
     if (null == D) return;
     let L = e.substreams.reduce((e, t) => e + a(t.rtpStats), 0),
@@ -83,8 +83,8 @@ function l(e, t) {
         encoderQualityVmaf: null !== (A = null === (c = D.encoderQualityStats) || void 0 === c ? void 0 : c.imageQualityVmaf_v061) && void 0 !== A ? A : void 0,
         encoderQualityPsnr: null !== (N = null === (d = D.encoderQualityStats) || void 0 === d ? void 0 : d.imageQualityWebrtcPsnrDb) && void 0 !== N ? N : void 0,
         qualityDecodeErrors: null !== (O = null === (_ = D.encoderQualityStats) || void 0 === _ ? void 0 : _.decodeErrors) && void 0 !== O ? O : void 0,
-        qualityDecoderReboots: null !== (R = null === (E = D.encoderQualityStats) || void 0 === E ? void 0 : E.decoderReboots) && void 0 !== R ? R : void 0,
-        qualityScoreErrors: null !== (v = null === (f = D.encoderQualityStats) || void 0 === f ? void 0 : f.scoreErrors) && void 0 !== v ? v : void 0,
+        qualityDecoderReboots: null !== (v = null === (E = D.encoderQualityStats) || void 0 === E ? void 0 : E.decoderReboots) && void 0 !== v ? v : void 0,
+        qualityScoreErrors: null !== (R = null === (f = D.encoderQualityStats) || void 0 === f ? void 0 : f.scoreErrors) && void 0 !== R ? R : void 0,
         qualityFrameDrops: null !== (C = null === (h = D.encoderQualityStats) || void 0 === h ? void 0 : h.frameDrops) && void 0 !== C ? C : void 0,
         qualitySizeMismatches: null !== (y = null === (p = D.encoderQualityStats) || void 0 === p ? void 0 : p.sizeMismatches) && void 0 !== y ? y : void 0,
         filter: e.filter,

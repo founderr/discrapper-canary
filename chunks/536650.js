@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return h;
     }
 }),
     t(47120);
@@ -27,17 +27,17 @@ function C(e) {
         n
     );
 }
-function f(e) {
+function h(e) {
     let { name: n, iconURL: t, scrollerRef: _ } = e,
-        f = (0, o.ap)((0, s.ZP)()),
-        h = a.useRef(null),
-        E = a.useRef(null),
+        h = (0, o.ap)((0, s.ZP)()),
+        f = a.useRef(null),
         A = a.useRef(null),
-        N = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        x = (0, c.ZP)('number' == typeof t ? '' : t, null != N ? N : ''),
+        E = a.useRef(null),
+        x = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
+        N = (0, c.ZP)('number' == typeof t ? '' : t, null != x ? x : ''),
         v = a.useMemo(() => {
             var e, n;
-            let t = (0, l.compact)([d.Z.parseHexString(x), d.Z.parseHexString(f ? '#000000' : '#ffffff')]);
+            let t = (0, l.compact)([d.Z.parseHexString(N), d.Z.parseHexString(h ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -49,41 +49,41 @@ function f(e) {
                         ? void 0
                         : e.toHexString()) && void 0 !== n
                 ? n
-                : x;
-        }, [x, f]),
-        I = C(h),
-        g = C(E),
-        P = a.useCallback(() => {
+                : N;
+        }, [N, h]),
+        I = C(f),
+        g = C(A),
+        b = a.useCallback(() => {
             var e, n, t, i, a, o, r, s, c;
             let d = _.current,
-                u = h.current,
-                m = A.current,
+                u = f.current,
+                m = E.current,
                 p = parseInt(null !== (e = null == I ? void 0 : I.height) && void 0 !== e ? e : ''),
                 C = parseInt(null !== (n = null == g ? void 0 : g.height) && void 0 !== n ? n : '');
             if (null != d && null != u && null != m && !isNaN(p) && !isNaN(C)) {
                 let e = null !== (t = d.scrollTop) && void 0 !== t ? t : 0,
                     n = 0 !== d.scrollHeight ? d.scrollHeight : C + 20,
                     _ = 0 !== d.clientHeight ? d.clientHeight : C + 20,
-                    h = C - p,
-                    E = (0, l.clamp)(n - _, h + 1, C + 20);
-                let A = ((i = e), (a = h) === (o = E) ? 1 : (0, l.clamp)((i - a) / (o - a), 0, 1));
-                (u.style.filter = 'brightness('.concat(1 + ((f ? 1.4 : 0.6) - (r = 1)) * A, ')')),
+                    f = C - p,
+                    A = (0, l.clamp)(n - _, f + 1, C + 20);
+                let E = ((i = e), (a = f) === (o = A) ? 1 : (0, l.clamp)((i - a) / (o - a), 0, 1));
+                (u.style.filter = 'brightness('.concat(1 + ((h ? 1.4 : 0.6) - (r = 1)) * E, ')')),
                     (u.style.backgroundColor = 'color-mix(in oklab,'
-                        .concat(x, ' ')
-                        .concat((1 - A) * 100, '%, ')
+                        .concat(N, ' ')
+                        .concat((1 - E) * 100, '%, ')
                         .concat(v, ')')),
-                    (m.style.opacity = ''.concat(0 + (1 - (s = 0)) * A)),
-                    (m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * A, 'px)'));
+                    (m.style.opacity = ''.concat(0 + (1 - (s = 0)) * E)),
+                    (m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * E, 'px)'));
             }
-        }, [v, x, null == g ? void 0 : g.height, f, _, null == I ? void 0 : I.height]);
+        }, [v, N, null == g ? void 0 : g.height, h, _, null == I ? void 0 : I.height]);
     return (
         a.useEffect(() => {
-            P();
-        }, [P, f]),
+            b();
+        }, [b, h]),
         a.useEffect(() => {
             let e = _.current,
                 n = () => {
-                    P();
+                    b();
                 };
             return (
                 null == e || e.addEventListener('scroll', n),
@@ -91,7 +91,7 @@ function f(e) {
                     null == e || e.removeEventListener('scroll', n);
                 }
             );
-        }, [_, P]),
+        }, [_, b]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -101,7 +101,7 @@ function f(e) {
                             className: p.stickyBannerContainer,
                             children: (0, i.jsx)('div', {
                                 className: p.stickyBanner,
-                                ref: h
+                                ref: f
                             })
                         }),
                         (0, i.jsx)('div', {
@@ -111,7 +111,7 @@ function f(e) {
                         (0, i.jsx)('div', {
                             className: p.nameContainer,
                             children: (0, i.jsx)(r.Heading, {
-                                ref: A,
+                                ref: E,
                                 className: p.textApplicationName,
                                 variant: 'heading-md/extrabold',
                                 children: n
@@ -120,9 +120,9 @@ function f(e) {
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    ref: E,
+                    ref: A,
                     className: p.bannerBackground,
-                    style: { backgroundColor: x }
+                    style: { backgroundColor: N }
                 })
             ]
         })

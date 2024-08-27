@@ -109,8 +109,8 @@ let f = (e, t) => {
 };
 t.Z = l.memo(function (e) {
     let { wheelWidth: t, wheelHeight: n, itemWidth: g, itemHeight: m, showDeadZoneIndicator: C, activeItem: I, onItemSelect: E, onItemAction: N, interactive: x = !0, children: S } = e,
-        Z = l.useRef(null),
-        v = l.useRef([]),
+        v = l.useRef(null),
+        Z = l.useRef([]),
         T = l.useRef(!1),
         L = l.useRef(null),
         [A, b] = l.useState(0),
@@ -122,7 +122,7 @@ t.Z = l.memo(function (e) {
         O = l.useMemo(() => a().chunk(S, p), [S]),
         y = l.useCallback(
             (e, t) => {
-                null == v.current[A] ? (v.current[A] = []) : (v.current[A][t] = e);
+                null == Z.current[A] ? (Z.current[A] = []) : (Z.current[A][t] = e);
             },
             [A]
         ),
@@ -171,8 +171,8 @@ t.Z = l.memo(function (e) {
         k = l.useMemo(
             () =>
                 (0, r.throttle)((e) => {
-                    if (null == Z.current) return;
-                    let i = Z.current.getBoundingClientRect(),
+                    if (null == v.current) return;
+                    let i = v.current.getBoundingClientRect(),
                         l = i.left + i.width / 2,
                         r = {
                             x: l,
@@ -187,8 +187,8 @@ t.Z = l.memo(function (e) {
                         return;
                     }
                     let s = (0, o.ld)(r, a, Math.max(t, n));
-                    for (let e = 0; e < v.current[A].length; e++) {
-                        let t = v.current[A][e];
+                    for (let e = 0; e < Z.current[A].length; e++) {
+                        let t = Z.current[A][e];
                         if (null == t) continue;
                         let n = t.getBoundingClientRect();
                         if ((0, o.Vr)(r, s, n)) {
@@ -239,7 +239,7 @@ t.Z = l.memo(function (e) {
         onWheel: B,
         onClick: U,
         children: (0, i.jsxs)('div', {
-            ref: Z,
+            ref: v,
             className: u.chatWheel,
             style: {
                 width: t,

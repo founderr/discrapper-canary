@@ -17,7 +17,7 @@ var r = n(735250),
     d = n(686546),
     _ = n(648914);
 let E = (e) => {
-        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: E, foreground: f, background: h, icon: p, onClick: I, onContextMenu: m, tooltip: T = null, tooltipColor: g, tooltipPosition: S = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: O, 'aria-label': R, 'aria-hidden': v, 'aria-checked': C, 'aria-expanded': y, 'aria-haspopup': D } = e,
+        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: E, foreground: f, background: h, icon: p, onClick: I, onContextMenu: m, tooltip: T = null, tooltipColor: g, tooltipPosition: S = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: O, 'aria-label': v, 'aria-hidden': R, 'aria-checked': C, 'aria-expanded': y, 'aria-haspopup': D } = e,
             L = (0, r.jsx)(p, {
                 x: 0,
                 y: 0,
@@ -29,7 +29,7 @@ let E = (e) => {
                 secondaryColorClass: null != h ? h : void 0,
                 color: null != E ? E : 'currentColor'
             }),
-            b = R;
+            b = v;
         return (
             null == b && 'string' == typeof T && (b = T),
             (0, r.jsx)(u.Tooltip, {
@@ -53,7 +53,7 @@ let E = (e) => {
                                   colorClass: null != f ? f : void 0,
                                   secondaryColorClass: null != h ? h : void 0,
                                   color: null != E ? E : 'currentColor',
-                                  'aria-hidden': v,
+                                  'aria-hidden': R,
                                   onMouseEnter: T,
                                   onMouseLeave: g,
                                   onFocus: S,
@@ -75,7 +75,7 @@ let E = (e) => {
                               }),
                               role: O,
                               'aria-label': b,
-                              'aria-hidden': v,
+                              'aria-hidden': R,
                               'aria-checked': C,
                               'aria-haspopup': D,
                               'aria-expanded': y,

@@ -30,8 +30,8 @@ var i = n(735250),
     S = n(381961),
     A = n(970321),
     R = n(680005),
-    x = n(981631),
-    O = n(272242),
+    O = n(981631),
+    x = n(272242),
     M = n(689938),
     v = n(242271);
 let L = D(function (e) {
@@ -84,14 +84,14 @@ let L = D(function (e) {
             appName: _.name,
             title: M.Z.Messages.STOREFRONT_TITLE.format({ appName: _.name }),
             description: D,
-            link: ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, O.ApplicationDirectoryProfileSections.STORE)),
+            link: ''.concat(location.protocol, '//').concat(location.host).concat(O.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(t, x.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
                 (0, g.X)(t, g.B.STORE_EMBED);
             },
             iconSrc: R,
             onIconClick: () => {
                 b(),
-                    C.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                    C.default.track(O.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                         application_id: t,
                         area: 'app_icon'
                     });
@@ -100,7 +100,7 @@ let L = D(function (e) {
                 size: r.ButtonSizes.MEDIUM,
                 onClick: () => {
                     b(),
-                        C.default.track(x.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
+                        C.default.track(O.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
                             application_id: t,
                             area: 'open_store_button'
                         });
@@ -133,7 +133,7 @@ let L = D(function (e) {
         }, [D, Z, f, d]);
         let { subscriptionGroupListing: B } = (0, u.F5)(null == S ? void 0 : S.id, j);
         if (((0, u.FE)(null == S ? void 0 : S.id, null == S ? void 0 : S.primarySkuId), !y || null == S || null == f)) return null;
-        let k = f.type === x.epS.SUBSCRIPTION,
+        let k = f.type === O.epS.SUBSCRIPTION,
             F = null != B && (0, _.KW)(B.sku_flags),
             G = () => {
                 (0, r.openModalLazy)(async () => {
@@ -208,7 +208,7 @@ let L = D(function (e) {
                     : t.trim();
         '' === V && (V = void 0);
         let H = () => {
-            C.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+            C.default.track(O.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                 application_id: S.id,
                 sku_id: f.id,
                 area: 'purchase_button'
@@ -218,14 +218,14 @@ let L = D(function (e) {
             appName: S.name,
             title: f.name,
             description: V,
-            link: ''.concat(location.protocol, '//').concat(location.host).concat(x.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(S.id, O.ApplicationDirectoryProfileSections.STORE)),
+            link: ''.concat(location.protocol, '//').concat(location.host).concat(O.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(S.id, x.ApplicationDirectoryProfileSections.STORE)),
             onLinkCopy: () => {
                 (0, g.X)(S.id, g.B.SKU_EMBED, d);
             },
             iconSrc: U,
             onIconClick: () => {
                 G(),
-                    C.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                    C.default.track(O.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                         application_id: S.id,
                         sku_id: f.id,
                         area: 'app_icon'
@@ -238,7 +238,7 @@ let L = D(function (e) {
                         color: r.ButtonColors.CUSTOM,
                         onClick: () => {
                             w(),
-                                C.default.track(x.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
+                                C.default.track(O.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
                                     application_id: S.id,
                                     sku_id: f.id,
                                     area: 'view_details'

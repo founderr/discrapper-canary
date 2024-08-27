@@ -176,7 +176,7 @@ s.Z = (e) => {
                                                   (0, n.jsx)(c.Text, {
                                                       variant: 'text-md/normal',
                                                       color: 'always-white',
-                                                      children: 'Click to upload image'
+                                                      children: 'Upload Layer'
                                                   }),
                                                   (0, n.jsx)(d.Z, {
                                                       ref: p,

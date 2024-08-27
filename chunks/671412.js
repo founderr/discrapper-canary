@@ -26,8 +26,8 @@ var r = n(735250),
     A = n(429974),
     N = n(228168),
     O = n(981631),
-    R = n(474936),
-    v = n(234328);
+    v = n(474936),
+    R = n(234328);
 let C = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function y(e) {
     let { user: t, displayProfile: n, guildId: a, channelId: p, profileType: y, animateOnHover: D, onOpenProfile: L, isInteractionSource: b, onInteraction: M, showReplyPopout: P = !1, setInteractionToastShown: U, setInteractionSent: w, setIsReplyInteraction: x } = e,
@@ -35,7 +35,7 @@ function y(e) {
         { analyticsLocations: k } = (0, d.ZP)(c.Z.AVATAR),
         { trackUserProfileAction: B } = (0, I.KZ)(),
         F = y === N.y0.FULL_SIZE ? (0, A.z)(t.id, null == n ? void 0 : n.guildId) : void 0,
-        V = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, R.p9.TIER_2),
+        V = h.ZP.isPremiumAtLeast(null == n ? void 0 : n.premiumType, v.p9.TIER_2),
         H = i.useMemo(() => t.isNonUserBot() || (0, _.W)(t, p), [t, p]),
         [Z, Y] = i.useState(!1),
         j = () => {
@@ -56,11 +56,11 @@ function y(e) {
             };
         }),
         q = y === N.y0.FULL_SIZE ? l.AvatarSizes.SIZE_120 : l.AvatarSizes.SIZE_80,
-        Q = s()(v.avatar, {
-            [v.hoisted]: b,
-            [v.biteSize]: y === N.y0.BITE_SIZE,
-            [v.fullSize]: y === N.y0.FULL_SIZE,
-            [v.panel]: y === N.y0.PANEL
+        Q = s()(R.avatar, {
+            [R.hoisted]: b,
+            [R.biteSize]: y === N.y0.BITE_SIZE,
+            [R.fullSize]: y === N.y0.FULL_SIZE,
+            [R.panel]: y === N.y0.PANEL
         }),
         {
             avatarDecorationSrc: X,
@@ -77,7 +77,7 @@ function y(e) {
             avatarDecoration: X,
             size: q,
             'aria-label': t.username,
-            imageClassName: null != L ? v.overlay : void 0,
+            imageClassName: null != L ? R.overlay : void 0,
             status: H ? O.Skl.UNKNOWN : K,
             statusBackdropColor: V && !H ? (0, l.getStatusBackdropColor)(G) : void 0,
             isMobile: z,
@@ -99,8 +99,8 @@ function y(e) {
                           }),
                               null == L || L();
                       },
-                      className: v.clickable,
-                      focusProps: { ringClassName: v.focusRing },
+                      className: R.clickable,
+                      focusProps: { ringClassName: R.focusRing },
                       children: ee
                   });
     return (0, r.jsxs)('div', {

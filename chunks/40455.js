@@ -104,8 +104,8 @@ class T extends s.Z {
             CONNECTION_OPEN_SUPPLEMENTAL: S,
             GUILD_DELETE: C,
             LOGIN_SUCCESS: y,
-            THREAD_DELETE: v,
-            THREAD_UPDATE: R
+            THREAD_DELETE: R,
+            THREAD_UPDATE: v
         });
     }
 }
@@ -128,10 +128,10 @@ function N(e) {
 function O(e) {
     T.deleteChannel(e.channel.id);
 }
-function R(e) {
+function v(e) {
     A(e.channel);
 }
-function v(e) {
+function R(e) {
     T.deleteChannel(e.channel.id);
 }
 function C(e) {

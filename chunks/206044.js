@@ -22,8 +22,8 @@ var i = n(735250),
     S = n(611855),
     A = n(644646),
     R = n(670638),
-    x = n(87894),
-    O = n(46140),
+    O = n(87894),
+    x = n(46140),
     M = n(689938),
     v = n(892765);
 let L = (0, l.animated)(d.ChevronSmallDownIcon),
@@ -39,7 +39,7 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
                     e.stop();
                 };
             }, []),
-            (0, f.zK)(t, O.S7.FRACTIONS_QUEST))
+            (0, f.zK)(t, x.S7.FRACTIONS_QUEST))
         )
             return null;
         let _ = () => {
@@ -78,9 +78,9 @@ t.Z = (e) => {
         Y = (0, c.e7)([E.Z], () => E.Z.useReducedMotion),
         W = s.useMemo(() => (0, f.nP)(u.config.assets.hero), [u]),
         K = s.useRef(null),
-        z = (0, x.uq)(I),
+        z = (0, O.uq)(I),
         Q = I === C.jn.QUESTS_EMBED,
-        q = (0, N.t5)(u, O.dr.QUESTS_CARD, I),
+        q = (0, N.t5)(u, x.dr.QUESTS_CARD, I),
         X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         J = (0, N.B6)(u.config.expiresAt, {
             year: 'numeric',
@@ -149,7 +149,7 @@ t.Z = (e) => {
                             y: z
                                 ? D.to({
                                       range: [0, 1],
-                                      output: [x.DJ, 0]
+                                      output: [O.DJ, 0]
                                   })
                                 : void 0
                         },
@@ -176,7 +176,7 @@ t.Z = (e) => {
                                                     quest: u,
                                                     questContent: I,
                                                     className: v.headerCollapsedRewardTile,
-                                                    location: O.dr.QUESTS_CARD
+                                                    location: x.dr.QUESTS_CARD
                                                 })
                                             }),
                                             (0, i.jsxs)('div', {
@@ -275,9 +275,9 @@ t.Z = (e) => {
                             top: z
                                 ? D.to({
                                       range: [0, 1],
-                                      output: [x.DJ / 2 - x.Z$ / 2, x.jc]
+                                      output: [O.DJ / 2 - O.Z$ / 2, O.jc]
                                   })
-                                : x.jc
+                                : O.jc
                         },
                         children: [
                             (0, i.jsx)(R.r, {
@@ -306,7 +306,7 @@ t.Z = (e) => {
                                     })
                             }),
                             U &&
-                                !(0, x.W_)(I) &&
+                                !(0, O.W_)(I) &&
                                 (0, i.jsx)(d.Clickable, {
                                     onClick: ee,
                                     className: v.iconWrapper,

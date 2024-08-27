@@ -32,16 +32,16 @@ function O(e) {
     let { user: t, guildId: n, channelId: a, onClose: _ } = e,
         { newestAnalyticsLocation: g } = (0, l.ZP)(),
         { trackUserProfileAction: O } = (0, f.KZ)(),
-        { messageCtaEnabled: R, activeInviteToCallCtaEnabled: v, persistentCallCtaEnabled: C } = (0, h.l)({ location: 'BiteSizeProfileDirectMessageSection' }),
+        { messageCtaEnabled: v, activeInviteToCallCtaEnabled: R, persistentCallCtaEnabled: C } = (0, h.l)({ location: 'BiteSizeProfileDirectMessageSection' }),
         [y, D] = i.useState(''),
         [L, b] = i.useState((0, c.JM)(y)),
         M = i.useRef(!1);
-    if (R) {
+    if (v) {
         let e = (0, r.jsx)(m.Z, {
             user: t,
             className: A.biteSizeButton
         });
-        return v && null != e
+        return R && null != e
             ? (0, r.jsxs)('div', {
                   className: A.ctaRow,
                   children: [

@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     },
     C7: function () {
-        return R;
+        return v;
     },
     Ek: function () {
         return N;
@@ -129,13 +129,13 @@ function O(e) {
         };
     });
 }
-function R(e) {
+function v(e) {
     let t = (0, s.e7)([_.Z], () => _.Z.getChannel(null == e ? void 0 : e.parent_id)),
         n = (0, s.e7)([E.Z], () => null != t && E.Z.can(p.Plq.MANAGE_THREADS, t), [t]),
         r = (0, s.e7)([d.default], () => d.default.getId());
     return !!(null != e && null != t && e.isThread()) && (!!n || (!e.isLockedThread() && (e.ownerId === r || !1)));
 }
-function v(e, t) {
+function R(e, t) {
     return null != e && t.can(p.Plq.SEND_MESSAGES_IN_THREADS, e);
 }
 function C(e, t, n) {
@@ -143,12 +143,12 @@ function C(e, t, n) {
     return !!(null != e && e.isThread()) && ((null === (r = e.threadMetadata) || void 0 === r ? void 0 : r.locked) ? n : t);
 }
 function y(e) {
-    let t = (0, s.e7)([E.Z], () => v(e, E.Z)),
+    let t = (0, s.e7)([E.Z], () => R(e, E.Z)),
         n = U(e);
     return C(e, t, n);
 }
 function D(e) {
-    let t = v(e, E.Z),
+    let t = R(e, E.Z),
         n = (function (e) {
             return P(e, E.Z);
         })(e);

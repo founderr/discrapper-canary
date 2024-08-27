@@ -80,8 +80,8 @@ function S(e) {
                 [n, r]
             );
         })(i, a),
-        R = (0, E.NE)(i, a),
-        v = n.showThreadPromptOnReply && O >= 2 && R;
+        v = (0, E.NE)(i, a),
+        R = n.showThreadPromptOnReply && O >= 2 && v;
     function C(e) {
         e.stopPropagation(), (0, d.qx)(i.id, !u);
     }
@@ -172,7 +172,7 @@ function S(e) {
                         })
                     ]
                 }),
-                v &&
+                R &&
                     (0, r.jsx)(g, {
                         channel: i,
                         message: a,

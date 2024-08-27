@@ -27,8 +27,8 @@ var r = n(735250),
     A = n(541716),
     N = n(752305),
     O = n(30465),
-    R = n(140963),
-    v = n(4484),
+    v = n(140963),
+    R = n(4484),
     C = n(925994),
     y = n(981631),
     D = n(689938),
@@ -210,7 +210,7 @@ class U extends i.Component {
                 'aria-autocomplete': 'list'
             },
             H = T
-                ? (0, r.jsx)(v.Z, {
+                ? (0, r.jsx)(R.Z, {
                       ref: this.ref,
                       ...V,
                       type: I,
@@ -218,7 +218,7 @@ class U extends i.Component {
                       canUseCommands: null === (t = I.commands) || void 0 === t ? void 0 : t.enabled,
                       canOnlyUseTextCommands: C
                   })
-                : (0, r.jsx)(R.Z, {
+                : (0, r.jsx)(v.Z, {
                       ref: this.ref,
                       ...V,
                       value: c ? '' : l

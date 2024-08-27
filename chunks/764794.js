@@ -21,7 +21,7 @@ t.Z = i.memo(function (e) {
         { enabled: A } = d.Z.useExperiment({ location: 'ec41f5_1' }, { autoTrackExposure: !0 }),
         N = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP.format() : S ? m.Z.Messages.SHARE_NITRO_RESEND_TOOLTIP : m.Z.Messages.SHARE_NITRO_TOOLTIP,
         O = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null,
-        [R, v] = i.useState(!1),
+        [v, R] = i.useState(!1),
         [C, y] = i.useState(!1),
         D = (0, o.Z)(null, () => y(!1)),
         { analyticsLocations: L } = (0, c.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
@@ -48,8 +48,8 @@ t.Z = i.memo(function (e) {
                           (0, r.jsx)('div', {
                               onMouseEnter: () => {
                                   !C &&
-                                      !R &&
-                                      (v(!0),
+                                      !v &&
+                                      (R(!0),
                                       f.default.track(p.rMx.SHARE_NITRO_FLOW_STEPS, {
                                           location_stack: L,
                                           step: I.fz.BADGE_TOOLTIP_VIEWED,
@@ -57,7 +57,7 @@ t.Z = i.memo(function (e) {
                                       }));
                               },
                               onMouseLeave: () => {
-                                  v(!1);
+                                  R(!1);
                               },
                               children: (0, r.jsx)(h.Z, {
                                   ...e,
@@ -75,7 +75,7 @@ t.Z = i.memo(function (e) {
                                   },
                                   children: (0, r.jsx)(E.Z, {
                                       referralsRemaining: n,
-                                      hovered: R,
+                                      hovered: v,
                                       isResending: S,
                                       shouldShowBirthdayUX: A,
                                       isLightTheme: (0, s.ap)(M)

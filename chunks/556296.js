@@ -29,8 +29,8 @@ var i,
     A = n(13140),
     N = n(808506),
     O = n(981631),
-    R = n(356659),
-    v = n(710111),
+    v = n(356659),
+    R = n(710111),
     C = n(444675);
 function y(e, t, n) {
     return (
@@ -215,10 +215,10 @@ let K = [
         return !!N.Z.enabled && W(O.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, ']`');
     },
     function () {
-        return W(O.kg4.SOUNDBOARD_HOLD, v.D_, !1);
+        return W(O.kg4.SOUNDBOARD_HOLD, R.D_, !1);
     },
     function () {
-        return W(O.kg4.SAVE_CLIP, R.D_);
+        return W(O.kg4.SAVE_CLIP, v.D_);
     }
 ];
 function z() {

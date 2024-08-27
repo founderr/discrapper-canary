@@ -25,8 +25,8 @@ var i = n(735250),
     N = n(662146),
     x = n(689938),
     S = n(325093),
-    Z = n(81733);
-let v = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    v = n(81733);
+let Z = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     L = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function A(e) {
@@ -69,7 +69,7 @@ function A(e) {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
-            config: { duration: v }
+            config: { duration: Z }
         }),
         ei = l.useCallback((e) => (null == n ? void 0 : n(k, e)), [n, k]),
         el = (0, i.jsxs)(E.H, {
@@ -79,7 +79,7 @@ function A(e) {
                     hovered: V,
                     selected: r,
                     unread: b,
-                    className: Z.pill
+                    className: v.pill
                 }),
                 (0, i.jsx)(N.Z, {
                     text: J,
@@ -88,7 +88,7 @@ function A(e) {
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
                         ref: P ? q : void 0,
-                        className: a()({ [Z.wobble]: !K && W && !u }),
+                        className: a()({ [v.wobble]: !K && W && !u }),
                         'data-dnd-name': J,
                         children: K
                             ? (0, i.jsx)(I.Z, {})

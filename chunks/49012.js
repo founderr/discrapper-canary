@@ -28,13 +28,13 @@ var r = n(302454),
     A = n(375954),
     N = n(699516),
     O = n(944486),
-    R = n(626135),
-    v = n(981631),
+    v = n(626135),
+    R = n(981631),
     C = n(689938);
 function y(e, t) {
     var n;
     let r = m.Z.getChannel(O.Z.getChannelId());
-    return !!(null == r || r.type !== v.d4z.DM || N.Z.isFriend(null !== (n = r.getRecipientId()) && void 0 !== n ? n : '')) && e === t;
+    return !!(null == r || r.type !== R.d4z.DM || N.Z.isFriend(null !== (n = r.getRecipientId()) && void 0 !== n ? n : '')) && e === t;
 }
 function D(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
@@ -60,10 +60,10 @@ function D(e, t) {
             t = m.Z.getBasicChannel(b);
         P = null !== (F = null == t ? void 0 : t.guild_id) && void 0 !== F ? F : null;
         let n = T.Z.getGuild(P),
-            r = (null == e ? void 0 : null === (k = e.messageReference) || void 0 === k ? void 0 : k.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(v.iLy.IS_CROSSPOST)) && null != P;
+            r = (null == e ? void 0 : null === (k = e.messageReference) || void 0 === k ? void 0 : k.guild_id) != null && (null == e ? void 0 : e.webhookId) != null && (null == e ? void 0 : e.hasFlag(R.iLy.IS_CROSSPOST)) && null != P;
         r && (null == e ? void 0 : null === (B = e.messageReference) || void 0 === B ? void 0 : B.guild_id) != null ? ((w = e.messageReference.message_id), (x = e.messageReference.channel_id), (G = e.messageReference.guild_id)) : (G = P);
-        let i = (null == t ? void 0 : t.type) === v.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(v.oNc.COMMUNITY)) === !0,
-            a = (null == e ? void 0 : e.hasFlag(v.iLy.EPHEMERAL)) === !0;
+        let i = (null == t ? void 0 : t.type) === R.d4z.GUILD_ANNOUNCEMENT && (null == n ? void 0 : n.hasFeature(R.oNc.COMMUNITY)) === !0,
+            a = (null == e ? void 0 : e.hasFlag(R.iLy.EPHEMERAL)) === !0;
         U = null != e && !a && (r || i);
     }
     if (null != b) {
@@ -71,14 +71,14 @@ function D(e, t) {
             t = T.Z.getGuild(null == e ? void 0 : e.getGuildId());
         null != e &&
             null != t &&
-            t.hasFeature(v.oNc.DISCOVERABLE) &&
-            R.default.track(v.rMx.URL_CLICKED, {
+            t.hasFeature(R.oNc.DISCOVERABLE) &&
+            v.default.track(R.rMx.URL_CLICKED, {
                 url_domain: (0, S.F)(M),
                 guild_id: t.id,
                 channel_id: e.id
             }),
             (0, c.Z)(b) &&
-                R.default.track(v.rMx.CHANGE_LOG_CTA_CLICKED, {
+                v.default.track(R.rMx.CHANGE_LOG_CTA_CLICKED, {
                     cta_type: 'inline_link',
                     target: M
                 });

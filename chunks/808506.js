@@ -42,8 +42,8 @@ var a,
     A = n(710845),
     N = n(594190),
     O = n(454991),
-    R = n(633565),
-    v = n(48481),
+    v = n(633565),
+    R = n(48481),
     C = n(314897),
     y = n(77498),
     D = n(355863),
@@ -373,7 +373,7 @@ let eN = null;
 function eO(e, t, n) {
     I.Z.relayClickZoneClicked(e, t, n);
 }
-async function eR(e) {
+async function ev(e) {
     if (!!(0, w.VS)())
         (await eE()).setClickZones(
             e.map((e) => ({
@@ -385,7 +385,7 @@ async function eR(e) {
             }))
         );
 }
-function ev(e) {
+function eR(e) {
     return (
         !(q || !F || Q.has(e.type)) &&
         ('USER_SETTINGS_PROTO_UPDATE' === e.type &&
@@ -393,7 +393,7 @@ function ev(e) {
                 ...e,
                 settings: {
                     type: e.settings.type,
-                    proto: (0, v.cv)(e.settings.type, e.settings.proto)
+                    proto: (0, R.cv)(e.settings.type, e.settings.proto)
                 }
             }),
         V.add(e),
@@ -424,7 +424,7 @@ function eD(e) {
             let t = C.default.getToken();
             if (null == t) break;
             (0, p.te)(w.qU, D.Z.getDefaultLayout(w.qU)),
-                Promise.all([(0, R.Z)(t, e.pid), _.ZP.PersistedStore.getAllStates()]).then((t) => {
+                Promise.all([(0, v.Z)(t, e.pid), _.ZP.PersistedStore.getAllStates()]).then((t) => {
                     let [n, r] = t,
                         { pid: i, token: a } = e;
                     S.lW({
@@ -455,7 +455,7 @@ function eD(e) {
 }
 class eL extends (s = _.ZP.Store) {
     initialize() {
-        if (!(!G.iP || __OVERLAY__)) this.waitFor(N.ZP, C.default), S.sr(eD, ey), C.default.addChangeListener(eg), eh(O.v.enabled, O.v.legacyEnabled), E.Z.addInterceptor(ev);
+        if (!(!G.iP || __OVERLAY__)) this.waitFor(N.ZP, C.default), S.sr(eD, ey), C.default.addChangeListener(eg), eh(O.v.enabled, O.v.legacyEnabled), E.Z.addInterceptor(eR);
     }
     isInputLocked(e) {
         return !z.has(e);
@@ -561,7 +561,7 @@ let eb = new eL(
                   let { port: t } = e;
                   K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                   let n = new URLSearchParams();
-                  n.append('build_id', '03d30ead8c9b91909e511cce52bba310b49bf817'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
+                  n.append('build_id', '7a58365f59d5298e73c0f9d7e8553be821a76d23'), n.append('rpc', String(t)), n.append('rpc_auth_token', K), (r = ''.concat(location.protocol, '//').concat(location.host, '/overlay?').concat(n.toString()));
               },
               OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {
                   let { channelId: t, ring: n } = e;
@@ -599,7 +599,7 @@ let eb = new eL(
               },
               OVERLAY_SET_CLICK_ZONES: function (e) {
                   let { zones: t } = e;
-                  eR(t);
+                  ev(t);
               },
               OVERLAY_SET_ASSOCIATED_GAME: function (e) {
                   var t, n;

@@ -72,8 +72,8 @@ t.default = (function () {
                         value: 'time',
                         description: '"time"'
                     },
-                    R = 'plural',
-                    v = {
+                    v = 'plural',
+                    R = {
                         type: 'literal',
                         value: 'plural',
                         description: '"plural"'
@@ -259,7 +259,7 @@ t.default = (function () {
                                                             })()) === c &&
                                                                 (e = (function () {
                                                                     var e, n, r, i, a;
-                                                                    if (((e = $), t.substr($, 6) === R ? ((n = R), ($ += 6)) : ((n = c), 0 === er && ei(v)), n !== c)) {
+                                                                    if (((e = $), t.substr($, 6) === v ? ((n = v), ($ += 6)) : ((n = c), 0 === er && ei(R)), n !== c)) {
                                                                         if (ed() !== c) {
                                                                             if ((44 === t.charCodeAt($) ? ((r = ','), $++) : ((r = c), 0 === er && ei(I)), r !== c)) {
                                                                                 if (ed() !== c) {

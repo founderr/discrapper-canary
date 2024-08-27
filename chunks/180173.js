@@ -41,7 +41,7 @@ function A(e) {
                 setTab: t,
                 closePopout: n
             }),
-            0 === s.length ? (0, i.jsx)(x, {}) : (0, i.jsx)(o.AdvancedScrollerThin, { children: s.map((e) => (0, i.jsx)(R, { savedMessage: e }, e.saveData.messageId)) })
+            0 === s.length ? (0, i.jsx)(O, {}) : (0, i.jsx)(o.AdvancedScrollerThin, { children: s.map((e) => (0, i.jsx)(R, { savedMessage: e }, e.saveData.messageId)) })
         ]
     });
 }
@@ -98,7 +98,7 @@ function R(e) {
                 : (0, i.jsx)('div', { children: "The message isn't accessible. We will deal with this later." })
     });
 }
-function x() {
+function O() {
     return (0, i.jsx)(h.Z, {
         Icon: o.DoubleCheckmarkIcon,
         header: f.Z.Messages.MESSAGE_BOOKMARKS_EMPTY,

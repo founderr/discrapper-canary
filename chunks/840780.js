@@ -20,8 +20,8 @@ var i = n(735250),
     N = n(317381),
     x = n(620662),
     S = n(513202),
-    Z = n(835473),
-    v = n(67212),
+    v = n(835473),
+    Z = n(67212),
     T = n(757454),
     L = n(552740),
     A = n(933557),
@@ -86,11 +86,11 @@ function eS(e, t, n) {
         e
     );
 }
-let eZ = (0, m.Z)(function (e) {
+let ev = (0, m.Z)(function (e) {
     let { message: t } = e;
     return (0, i.jsx)(e_.Z, { children: t });
 });
-class ev extends l.PureComponent {
+class eZ extends l.PureComponent {
     componentDidUpdate(e) {
         !e.dropsActivityPanelExperienceBlocked && this.props.dropsActivityPanelExperienceBlocked && this.setState({ isDropsActivityPanelTooltipOpen: !1 });
     }
@@ -337,7 +337,7 @@ class ev extends l.PureComponent {
                                 children: t.name
                             })
                         }),
-                        (0, X.Qm)(l.type) ? c : (0, i.jsx)(eZ, { timestamps: s })
+                        (0, X.Qm)(l.type) ? c : (0, i.jsx)(ev, { timestamps: s })
                     ]
                 })
             ]
@@ -372,7 +372,7 @@ class ev extends l.PureComponent {
                               channelId: i.id,
                               pid: n.pid
                           })
-                        : (0, v.v$)((0, B.V9)(e), n.pid));
+                        : (0, Z.v$)((0, B.V9)(e), n.pid));
             }),
             eS(this, 'handleClickGoLiveButton', () => {
                 let { guildId: e, channel: t, canStartBroadcast: l } = this.props,
@@ -482,7 +482,7 @@ t.Z = (0, C.Z)(function (e) {
         { partnerGame: m, dropsActivityPanelExperienceBlocked: C, showDropsSparkles: E } = (0, P.c)(eE.X2.FORTNITE, a, u.z.QUEST_2_ENROLLMENT_TOOLTIP, u.z.QUEST_2_COMPLETION_TOOLTIP),
         x = (0, c.e7)([N.ZP], () => (null != d ? N.ZP.getSelfEmbeddedActivityForChannel(d.id) : null)),
         S = (0, c.e7)([en.Z, el.Z, et.ZP], () => (null != s ? H.JL(s, en.Z, el.Z, !1) : null != n && H.h_(et.ZP.getChannels(n), en.Z, el.Z).length > 0)),
-        [v] = (0, Z.Z)([
+        [Z] = (0, v.Z)([
             null !==
                 (t = (function () {
                     if (null != _ && null != _.id) return _.id;
@@ -499,7 +499,7 @@ t.Z = (0, C.Z)(function (e) {
         y = (0, T.Z)() && null != a,
         j = (0, c.e7)([ec.default, ea.Z], () => (null != d ? (0, A.F6)(d, ec.default, ea.Z) : void 0)),
         D = (0, q.Z)();
-    return (0, i.jsx)(ev, {
+    return (0, i.jsx)(eZ, {
         ...l,
         guildId: n,
         canGoLive: L,
@@ -510,7 +510,7 @@ t.Z = (0, C.Z)(function (e) {
         dropsActivityPanelExperienceBlocked: C,
         userId: r,
         runningGame: a,
-        application: v,
+        application: Z,
         useReducedMotion: f,
         isStreaming: M,
         channel: d,

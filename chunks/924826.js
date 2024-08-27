@@ -19,27 +19,27 @@ function c(e) {
         A = r.useRef(n ? (0, l.jb)(t, n) : null),
         N = r.useRef(!1),
         O = r.useRef(null),
-        R = r.useRef(c);
-    function v(e) {
+        v = r.useRef(c);
+    function R(e) {
         var t;
         return (null !== (t = O.current) && void 0 !== t ? t : document).querySelector(e);
     }
     function C(e) {
         var t;
-        null === (t = v(e)) || void 0 === t || t.focus();
+        null === (t = R(e)) || void 0 === t || t.focus();
     }
     r.useLayoutEffect(() => {
-        R.current = c;
+        v.current = c;
     }, [c]);
     let y = r.useCallback(
             (e, t) => {
-                R.current && (null != h ? h : C)(e, t);
+                v.current && (null != h ? h : C)(e, t);
             },
             [h]
         ),
         D = r.useCallback(
             (e) => {
-                R.current && (null != p ? p : C)(e);
+                v.current && (null != p ? p : C)(e);
             },
             [p]
         ),
@@ -92,7 +92,7 @@ function c(e) {
                     P(!1),
                         requestAnimationFrame(() => {
                             let e = A.current;
-                            null !== e && null == v((0, l.P1)(e)) && D((0, l.P1)(t, l.kn));
+                            null !== e && null == R((0, l.P1)(e)) && D((0, l.P1)(t, l.kn));
                         });
             }
             async function i() {
@@ -101,7 +101,7 @@ function c(e) {
                 let n = A.current;
                 if (I && null !== n) {
                     let t = (0, l.P1)(n),
-                        r = v(t);
+                        r = R(t);
                     if (null != r) {
                         if (!0 !== N.current) return y(t, (0, l.x3)(n));
                         if (await (0, s.JJ)(e, r)) return y(t, (0, l.x3)(n));
@@ -122,7 +122,7 @@ function c(e) {
                     let t = A.current;
                     if (null != t) {
                         var e;
-                        return null !== (e = v((0, l.P1)(t))) && void 0 !== e ? e : void 0;
+                        return null !== (e = R((0, l.P1)(t))) && void 0 !== e ? e : void 0;
                     }
                     return;
                 }
@@ -141,7 +141,7 @@ function c(e) {
         }, [b, w, E, L]),
         k = r.useCallback(
             (e) => {
-                if (!R.current || (!m && !U.current)) return;
+                if (!v.current || (!m && !U.current)) return;
                 let n = g === o.hy.HORIZONTAL ? o.R8.RIGHT : o.R8.DOWN,
                     r = g === o.hy.HORIZONTAL ? o.R8.LEFT : o.R8.UP;
                 switch (e.key) {
@@ -176,7 +176,7 @@ function c(e) {
                         let t = A.current;
                         if (null != t) {
                             var i;
-                            let n = v((0, l.P1)(t)),
+                            let n = R((0, l.P1)(t)),
                                 r = null !== (i = null == n ? void 0 : n.ownerDocument) && void 0 !== i ? i : document,
                                 a = m || n === r.activeElement;
                             null != n && a && (e.preventDefault(), e.stopPropagation(), null == n || n.click());

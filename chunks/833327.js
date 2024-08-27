@@ -16,7 +16,7 @@ function s(e) {
             })(t, e);
         });
 }
-(e.exports = R), (R.WritableState = O);
+(e.exports = v), (v.WritableState = O);
 var o = { deprecate: n(220342) },
     l = n(138772),
     u = n(413135).Buffer,
@@ -76,12 +76,12 @@ function O(e, t, i) {
         (this.bufferedRequestCount = 0),
         (this.corkedRequestsFree = new s(this));
 }
-function R(e) {
+function v(e) {
     var t = this instanceof (r = r || n(827664));
-    if (!t && !i.call(R, this)) return new R(e);
+    if (!t && !i.call(v, this)) return new v(e);
     (this._writableState = new O(e, this, t)), (this.writable = !0), e && ('function' == typeof e.write && (this._write = e.write), 'function' == typeof e.writev && (this._writev = e.writev), 'function' == typeof e.destroy && (this._destroy = e.destroy), 'function' == typeof e.final && (this._final = e.final)), l.call(this);
 }
-n(689118)(R, l),
+n(689118)(v, l),
     (O.prototype.getBuffer = function () {
         for (var e = this.bufferedRequest, t = []; e; ) t.push(e), (e = e.next);
         return t;
@@ -101,18 +101,18 @@ n(689118)(R, l),
     })(),
     'function' == typeof Symbol && Symbol.hasInstance && 'function' == typeof Function.prototype[Symbol.hasInstance]
         ? ((i = Function.prototype[Symbol.hasInstance]),
-          Object.defineProperty(R, Symbol.hasInstance, {
+          Object.defineProperty(v, Symbol.hasInstance, {
               value: function (e) {
-                  return !!i.call(this, e) || (this === R && e && e._writableState instanceof O);
+                  return !!i.call(this, e) || (this === v && e && e._writableState instanceof O);
               }
           }))
         : (i = function (e) {
               return e instanceof this;
           }),
-    (R.prototype.pipe = function () {
+    (v.prototype.pipe = function () {
         A(this, new I());
     });
-(R.prototype.write = function (e, t, n) {
+(v.prototype.write = function (e, t, n) {
     var r,
         i,
         s,
@@ -156,36 +156,36 @@ n(689118)(R, l),
                         }),
                             E ? (E.next = t.lastBufferedRequest) : (t.bufferedRequest = t.lastBufferedRequest),
                             (t.bufferedRequestCount += 1);
-                    } else v(e, t, !1, d, r, i, a);
+                    } else R(e, t, !1, d, r, i, a);
                     return _;
                 })(this, I, S, e, t, n));
     }
     return m;
 }),
-    (R.prototype.cork = function () {
+    (v.prototype.cork = function () {
         this._writableState.corked++;
     }),
-    (R.prototype.uncork = function () {
+    (v.prototype.uncork = function () {
         var e = this._writableState;
         e.corked && (e.corked--, !e.writing && !e.corked && !e.bufferProcessing && e.bufferedRequest && y(this, e));
     }),
-    (R.prototype.setDefaultEncoding = function (e) {
+    (v.prototype.setDefaultEncoding = function (e) {
         if (('string' == typeof e && (e = e.toLowerCase()), !(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((e + '').toLowerCase()) > -1))) throw new S(e);
         return (this._writableState.defaultEncoding = e), this;
     }),
-    Object.defineProperty(R.prototype, 'writableBuffer', {
+    Object.defineProperty(v.prototype, 'writableBuffer', {
         enumerable: !1,
         get: function () {
             return this._writableState && this._writableState.getBuffer();
         }
     });
-Object.defineProperty(R.prototype, 'writableHighWaterMark', {
+Object.defineProperty(v.prototype, 'writableHighWaterMark', {
     enumerable: !1,
     get: function () {
         return this._writableState.highWaterMark;
     }
 });
-function v(e, t, n, r, i, a, s) {
+function R(e, t, n, r, i, a, s) {
     (t.writelen = r), (t.writecb = s), (t.writing = !0), (t.sync = !0), t.destroyed ? t.onwrite(new m('write')) : n ? e._writev(i, t.onwrite) : e._write(i, a, t.onwrite), (t.sync = !1);
 }
 function C(e, t, n, r) {
@@ -205,14 +205,14 @@ function y(e, t) {
             i = t.corkedRequestsFree;
         i.entry = n;
         for (var a = 0, o = !0; n; ) (r[a] = n), !n.isBuf && (o = !1), (n = n.next), (a += 1);
-        (r.allBuffers = o), v(e, t, !0, t.length, r, '', i.finish), t.pendingcb++, (t.lastBufferedRequest = null), i.next ? ((t.corkedRequestsFree = i.next), (i.next = null)) : (t.corkedRequestsFree = new s(t)), (t.bufferedRequestCount = 0);
+        (r.allBuffers = o), R(e, t, !0, t.length, r, '', i.finish), t.pendingcb++, (t.lastBufferedRequest = null), i.next ? ((t.corkedRequestsFree = i.next), (i.next = null)) : (t.corkedRequestsFree = new s(t)), (t.bufferedRequestCount = 0);
     } else {
         for (; n; ) {
             var l = n.chunk,
                 u = n.encoding,
                 c = n.callback,
                 d = t.objectMode ? 1 : l.length;
-            if ((v(e, t, !1, d, l, u, c), (n = n.next), t.bufferedRequestCount--, t.writing)) break;
+            if ((R(e, t, !1, d, l, u, c), (n = n.next), t.bufferedRequestCount--, t.writing)) break;
         }
         null === n && (t.lastBufferedRequest = null);
     }
@@ -226,11 +226,11 @@ function L(e, t) {
         t.pendingcb--, n && A(e, n), (t.prefinished = !0), e.emit('prefinish'), b(e, t);
     });
 }
-(R.prototype._write = function (e, t, n) {
+(v.prototype._write = function (e, t, n) {
     n(new h('_write()'));
 }),
-    (R.prototype._writev = null),
-    (R.prototype.end = function (e, t, n) {
+    (v.prototype._writev = null),
+    (v.prototype.end = function (e, t, n) {
         var r = this._writableState;
         return (
             'function' == typeof e ? ((n = e), (e = null), (t = null)) : 'function' == typeof t && ((n = t), (t = null)),
@@ -243,7 +243,7 @@ function L(e, t) {
             this
         );
     }),
-    Object.defineProperty(R.prototype, 'writableLength', {
+    Object.defineProperty(v.prototype, 'writableLength', {
         enumerable: !1,
         get: function () {
             return this._writableState.length;
@@ -261,7 +261,7 @@ function b(e, t) {
     }
     return i;
 }
-Object.defineProperty(R.prototype, 'destroyed', {
+Object.defineProperty(v.prototype, 'destroyed', {
     enumerable: !1,
     get: function () {
         return void 0 !== this._writableState && this._writableState.destroyed;
@@ -270,8 +270,8 @@ Object.defineProperty(R.prototype, 'destroyed', {
         if (!!this._writableState) this._writableState.destroyed = e;
     }
 }),
-    (R.prototype.destroy = d.destroy),
-    (R.prototype._undestroy = d.undestroy),
-    (R.prototype._destroy = function (e, t) {
+    (v.prototype.destroy = d.destroy),
+    (v.prototype._undestroy = d.undestroy),
+    (v.prototype._destroy = function (e, t) {
         t(e);
     });

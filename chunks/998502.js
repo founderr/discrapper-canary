@@ -31,16 +31,16 @@ var r,
 let A = window.DiscordNative,
     N = ['jpg', 'jpeg', 'png'],
     O = null,
-    R = null,
     v = null,
+    R = null,
     C = {};
 null != A &&
     ((O = A.remoteApp
         .getVersion()
         .split('.')
         .map((e) => parseInt(e))),
-    (v = null === (r = (i = A.remoteApp).getModuleVersions) || void 0 === r ? void 0 : r.call(i)),
-    (R = null === (a = (s = A.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
+    (R = null === (r = (i = A.remoteApp).getModuleVersions) || void 0 === r ? void 0 : r.call(i)),
+    (v = null === (a = (s = A.remoteApp).getBuildNumber) || void 0 === a ? void 0 : a.call(s)));
 let y = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
     D = !1;
 async function L(e) {
@@ -234,10 +234,10 @@ function M(e) {
             return O;
         },
         get buildNumber() {
-            return R;
+            return v;
         },
         get moduleVersions() {
-            return v;
+            return R;
         },
         copy(e) {
             m.isPlatformEmbedded && A.clipboard.copy(e);

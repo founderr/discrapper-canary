@@ -19,8 +19,8 @@ var i = n(735250),
     N = n(25601),
     x = n(207055),
     S = n(981631),
-    Z = n(124368),
-    v = n(689938),
+    v = n(124368),
+    Z = n(689938),
     T = n(391463),
     L = n(140757),
     A = n(645829);
@@ -51,7 +51,7 @@ t.Z = l.memo(function (e) {
         D = (0, o.e7)([p.Z], () => p.Z.isMuted(t.id)),
         w = l.useCallback(
             (e) => {
-                (0, _.ok)(t, !e.shiftKey, Z.on.CHANNEL_LIST);
+                (0, _.ok)(t, !e.shiftKey, v.on.CHANNEL_LIST);
             },
             [t]
         ),
@@ -78,13 +78,13 @@ t.Z = l.memo(function (e) {
         V = l.useRef(null),
         F =
             j > 0
-                ? v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
+                ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
                       channelName: t.name,
                       mentionCount: j
                   })
                 : y
-                  ? v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({ channelName: t.name })
-                  : v.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({ channelName: t.name });
+                  ? Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({ channelName: t.name })
+                  : Z.Z.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({ channelName: t.name });
     return (0, i.jsxs)('li', {
         role: B,
         className: a()(T.containerDefault, { [T.selected]: r }),

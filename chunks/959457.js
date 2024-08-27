@@ -20,8 +20,8 @@ var a,
     A = n(199902),
     N = n(314897),
     O = n(592125),
-    R = n(131951),
-    v = n(158776),
+    v = n(131951),
+    R = n(158776),
     C = n(19780),
     y = n(981631),
     D = n(65154);
@@ -59,7 +59,7 @@ function B() {
 }
 class F extends (a = E.ZP.Store) {
     getActiveStreamKey() {
-        return (0, g.Z)(R.Z) ? i : null;
+        return (0, g.Z)(v.Z) ? i : null;
     }
     getRTCConnections() {
         return w;
@@ -71,7 +71,7 @@ class F extends (a = E.ZP.Store) {
         return w[e];
     }
     getStatsHistory(e, t, n) {
-        if (!(0, g.Z)(R.Z) || null == t) return null;
+        if (!(0, g.Z)(v.Z) || null == t) return null;
         if (n) {
             let n = A.Z.getActiveStreamForUser(t, e);
             if (null == n || 0 === A.Z.getViewerIds(n).length) return null;
@@ -110,7 +110,7 @@ class F extends (a = E.ZP.Store) {
         );
     }
     getQuality() {
-        if (!(0, g.Z)(R.Z)) return y.IE4.UNKNOWN;
+        if (!(0, g.Z)(v.Z)) return y.IE4.UNKNOWN;
         let e = this.getActiveStreamKey(),
             t = null != e ? w[e] : null;
         return null != t ? t.quality : y.IE4.UNKNOWN;
@@ -177,7 +177,7 @@ class F extends (a = E.ZP.Store) {
         : (s[o] = l),
     (t.Z = new F(
         h.Z,
-        !R.Z.isSupported() || __OVERLAY__
+        !v.Z.isSupported() || __OVERLAY__
             ? {}
             : {
                   CONNECTION_OPEN: function (e) {
@@ -239,7 +239,7 @@ class F extends (a = E.ZP.Store) {
                           var l, u, d;
                           null == M[t] && (b[t] = null);
                           let e = (0, m.my)(t);
-                          null == b[t] && null == P[t] && (b[t] = (0, T.L2)(e, v.Z));
+                          null == b[t] && null == P[t] && (b[t] = (0, T.L2)(e, R.Z));
                           let i = O.Z.getChannel(e.channelId),
                               _ = null != i && i.isBroadcastChannel(),
                               E = new I.A({
@@ -275,7 +275,7 @@ class F extends (a = E.ZP.Store) {
                               })),
                               (w[t] = o);
                       }
-                      (x = []), R.Z.getMediaEngine().on(f.aB.ConnectionStats, k);
+                      (x = []), v.Z.getMediaEngine().on(f.aB.ConnectionStats, k);
                   },
                   STREAM_SERVER_UPDATE: function (e) {
                       let t = w[e.streamKey];
@@ -292,7 +292,7 @@ class F extends (a = E.ZP.Store) {
                       let { streamKey: t } = e,
                           n = w[t];
                       if (null == n) return !1;
-                      t === i && ((i = null), R.Z.getMediaEngine().off(f.aB.ConnectionStats, k)), n.destroy('stream-end'), delete w[t];
+                      t === i && ((i = null), v.Z.getMediaEngine().off(f.aB.ConnectionStats, k)), n.destroy('stream-end'), delete w[t];
                   },
                   STREAM_STATS_UPDATE: function (e) {
                       let { stats: t } = e;

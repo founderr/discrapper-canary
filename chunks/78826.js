@@ -100,7 +100,7 @@ function _(e) {
     i.useEffect(() => {
         !O && (g.current = !0);
     }, [O]);
-    let R = i.useMemo(
+    let v = i.useMemo(
         () => ({
             registerAsset: N,
             unregisterAsset: A,
@@ -110,7 +110,7 @@ function _(e) {
         [N, A, f, O]
     );
     return (0, r.jsx)(u.Provider, {
-        value: R,
+        value: v,
         children: t
     });
 }

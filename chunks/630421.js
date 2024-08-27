@@ -30,21 +30,21 @@ function _(e) {
         A = e.adaptive,
         N = e.roundOffsets,
         O = e.isFixed,
-        R = T.x,
-        v = void 0 === R ? 0 : R,
+        v = T.x,
+        R = void 0 === v ? 0 : v,
         C = T.y,
         y = void 0 === C ? 0 : C,
         D =
             'function' == typeof N
                 ? N({
-                      x: v,
+                      x: R,
                       y: y
                   })
                 : {
-                      x: v,
+                      x: R,
                       y: y
                   };
-    (v = D.x), (y = D.y);
+    (R = D.x), (y = D.y);
     var L = T.hasOwnProperty('x'),
         b = T.hasOwnProperty('y'),
         M = r.t$,
@@ -55,13 +55,13 @@ function _(e) {
             x = 'clientHeight',
             G = 'clientWidth';
         w === (0, a.Z)(h) && ((w = (0, s.Z)(h)), 'static' !== (0, o.Z)(w).position && 'absolute' === g && ((x = 'scrollHeight'), (G = 'scrollWidth')));
-        (I === r.we || ((I === r.t$ || I === r.F2) && m === r.ut)) && ((P = r.I), (y -= (O && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height), (y *= S ? 1 : -1)), (I === r.t$ || ((I === r.we || I === r.I) && m === r.ut)) && ((M = r.F2), (v -= (O && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width), (v *= S ? 1 : -1));
+        (I === r.we || ((I === r.t$ || I === r.F2) && m === r.ut)) && ((P = r.I), (y -= (O && w === U && U.visualViewport ? U.visualViewport.height : w[x]) - p.height), (y *= S ? 1 : -1)), (I === r.t$ || ((I === r.we || I === r.I) && m === r.ut)) && ((M = r.F2), (R -= (O && w === U && U.visualViewport ? U.visualViewport.width : w[G]) - p.width), (R *= S ? 1 : -1));
     }
     var k = Object.assign({ position: g }, A && d);
     var B =
         !0 === N
             ? ((t = {
-                  x: v,
+                  x: R,
                   y: y
               }),
               (n = (0, a.Z)(h)),
@@ -73,10 +73,10 @@ function _(e) {
                   y: (0, c.NM)(u * _) / _ || 0
               })
             : {
-                  x: v,
+                  x: R,
                   y: y
               };
-    return ((v = B.x), (y = B.y), S) ? Object.assign({}, k, (((f = {})[P] = b ? '0' : ''), (f[M] = L ? '0' : ''), (f.transform = 1 >= (U.devicePixelRatio || 1) ? 'translate(' + v + 'px, ' + y + 'px)' : 'translate3d(' + v + 'px, ' + y + 'px, 0)'), f)) : Object.assign({}, k, (((E = {})[P] = b ? y + 'px' : ''), (E[M] = L ? v + 'px' : ''), (E.transform = ''), E));
+    return ((R = B.x), (y = B.y), S) ? Object.assign({}, k, (((f = {})[P] = b ? '0' : ''), (f[M] = L ? '0' : ''), (f.transform = 1 >= (U.devicePixelRatio || 1) ? 'translate(' + R + 'px, ' + y + 'px)' : 'translate3d(' + R + 'px, ' + y + 'px, 0)'), f)) : Object.assign({}, k, (((E = {})[P] = b ? y + 'px' : ''), (E[M] = L ? R + 'px' : ''), (E.transform = ''), E));
 }
 t.Z = {
     name: 'computeStyles',

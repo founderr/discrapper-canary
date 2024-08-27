@@ -41,8 +41,8 @@ function O(e, t, n) {
         e
     );
 }
-let R = 0;
-function v(e) {
+let v = 0;
+function R(e) {
     return null != e && 0 !== e ? e + 1 : 0;
 }
 class C extends E.Z {
@@ -269,7 +269,7 @@ class C extends E.Z {
                     ssrc: t,
                     videoSsrc: r,
                     videoSsrcs: n,
-                    rtxSsrc: v(r),
+                    rtxSsrc: R(r),
                     mute: this.getLocalMute(e),
                     volume: this.getLocalVolume(e)
                 };
@@ -571,7 +571,7 @@ class C extends E.Z {
                     }),
                     (this.videoStreamParameters[a].maxFrameRate = n),
                     (this.videoStreamParameters[a].maxBitrate = r)),
-                this.emit(p.Sh.Video, this.userId, null, this.audioSSRC, this.videoStreamParameters[a].ssrc, v(this.videoStreamParameters[a].ssrc), this.videoStreamParameters),
+                this.emit(p.Sh.Video, this.userId, null, this.audioSSRC, this.videoStreamParameters[a].ssrc, R(this.videoStreamParameters[a].ssrc), this.videoStreamParameters),
                 this.conn.setTransportOptions(this.applyQualityConstraints().constraints);
         }
     }
@@ -656,7 +656,7 @@ class C extends E.Z {
                 ssrc: this.remoteAudioSSRCs[e],
                 videoSsrc: t,
                 videoSsrcs: this.remoteVideoSSRCs[e],
-                rtxSsrc: v(t),
+                rtxSsrc: R(t),
                 mute: this.getLocalMute(e),
                 volume: this.getLocalVolume(e)
             };
@@ -826,7 +826,7 @@ class C extends E.Z {
     }
     constructor(e, t, n) {
         super(e, t),
-            O(this, 'mediaEngineConnectionId', 'Native-'.concat(R++)),
+            O(this, 'mediaEngineConnectionId', 'Native-'.concat(v++)),
             O(this, 'goLiveSourceIdentifier', void 0),
             O(this, 'selfMute', !1),
             O(this, 'selfVideo', !1),
@@ -913,11 +913,11 @@ class C extends E.Z {
                               });
                           })
                         : t > 0
-                          ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = v(t)))
+                          ? ((i[0].active = !0), (i[0].ssrc = t), (i[0].rtxSsrc = R(t)))
                           : (i[0].active = !1)
                     : t > 0 && (void 0 !== this.remoteVideoSSRCs[e] ? !this.remoteVideoSSRCs[e].includes(t) && (this.remoteVideoSSRCs[e] = [...this.remoteVideoSSRCs[e], t]) : (this.remoteVideoSSRCs[e] = [t])),
                     (this.videoStreamParameters = i),
-                    this.emit(p.Sh.Video, e, null != n && '' !== n ? n : null, e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e], t, v(t), this.videoStreamParameters);
+                    this.emit(p.Sh.Video, e, null != n && '' !== n ? n : null, e === this.userId ? this.audioSSRC : this.remoteAudioSSRCs[e], t, R(t), this.videoStreamParameters);
             }),
             O(this, 'handleFirstFrame', (e, t, n) => {
                 this.emit(p.Sh.FirstFrame, e, t, n);

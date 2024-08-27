@@ -22,8 +22,8 @@ var r,
 let A = new Map(),
     N = new Map(),
     O = new Set(),
-    R = 0,
     v = 0,
+    R = 0,
     C = new Set(),
     y = new Map(),
     D = !1;
@@ -69,19 +69,19 @@ class P extends (i = d.ZP.Store) {
             .find((t) => t.soundId === e);
     }
     isFetchingSounds() {
-        return 1 === v;
+        return 1 === R;
     }
     isFetchingDefaultSounds() {
-        return 1 === R;
+        return 1 === v;
     }
     isFetching() {
         return this.isFetchingSounds() || this.isFetchingDefaultSounds();
     }
     shouldFetchDefaultSounds() {
-        return 0 === R;
+        return 0 === v;
     }
     hasFetchedDefaultSounds() {
-        return 2 === R;
+        return 2 === v;
     }
     isUserPlayingSounds(e) {
         let t = y.get(e);
@@ -103,7 +103,7 @@ class P extends (i = d.ZP.Store) {
         return D;
     }
     hasFetchedAllSounds() {
-        return 2 === v && 2 === R;
+        return 2 === R && 2 === v;
     }
 }
 (l = 'SoundboardStore'),
@@ -117,10 +117,10 @@ class P extends (i = d.ZP.Store) {
         : (s[o] = l),
     (t.Z = new P(_.Z, {
         LOGOUT: function () {
-            A.clear(), N.clear(), y.clear(), (D = !1), (v = 0), (R = 0);
+            A.clear(), N.clear(), y.clear(), (D = !1), (R = 0), (v = 0);
         },
         GUILD_SOUNDBOARD_FETCH: function () {
-            v = 1;
+            R = 1;
         },
         GUILD_SOUNDBOARD_SOUND_CREATE: L,
         GUILD_SOUNDBOARD_SOUND_UPDATE: L,
@@ -160,11 +160,11 @@ class P extends (i = d.ZP.Store) {
             } else n === S.yP.PRELOADED_USER_SETTINGS && M(r);
         },
         SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function () {
-            R = 1;
+            v = 1;
         },
         SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS: function (e) {
             let { soundboardSounds: t } = e;
-            A.set(T.X8, t), (R = 2);
+            A.set(T.X8, t), (v = 2);
         },
         SOUNDBOARD_SOUNDS_RECEIVED: function (e) {
             let { updates: t } = e;
@@ -172,7 +172,7 @@ class P extends (i = d.ZP.Store) {
                 let { guildId: t, sounds: n } = e;
                 A.set(t, n);
             }),
-                (v = 2);
+                (R = 2);
         },
         GUILD_DELETE: function (e) {
             let { guild: t } = e;

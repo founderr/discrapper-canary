@@ -43,12 +43,12 @@ var r,
     A = n(602091),
     N = n(231338),
     O = n(689938),
-    R = n(229292);
+    v = n(229292);
 ((r = i || (i = {})).SMALL = 'small'), (r.MEDIUM = 'medium'), (r.LARGE = 'large'), (r.DYNAMIC = 'dynamic');
-let v = Object.freeze({
-    small: R.small,
-    medium: R.medium,
-    large: R.large,
+let R = Object.freeze({
+    small: v.small,
+    medium: v.medium,
+    large: v.large,
     dynamic: null
 });
 function C(e) {
@@ -84,16 +84,16 @@ function C(e) {
     return (0, a.jsx)(A.zM.Provider, {
         value: U,
         children: (0, a.jsx)(h.V, {
-            className: R.focusLock,
+            className: v.focusLock,
             role: o,
             returnRef: g,
             impressionType: c.ImpressionTypes.MODAL,
             'aria-labelledby': L ? void 0 : U.headerId,
             ...S,
             children: (0, a.jsx)(u.animated.div, {
-                className: l()(f, R.root, v[i], {
-                    [R.fullscreenOnMobile]: I,
-                    [R.rootWithShadow]: !m
+                className: l()(f, v.root, R[i], {
+                    [v.fullscreenOnMobile]: I,
+                    [v.rootWithShadow]: !m
                 }),
                 ref: D,
                 style: y,
@@ -115,7 +115,7 @@ function y(e) {
         justify: null !== (n = e.justify) && void 0 !== n ? n : S.Z.Justify.START,
         align: null !== (r = e.align) && void 0 !== r ? r : S.Z.Align.CENTER,
         wrap: null !== (i = e.wrap) && void 0 !== i ? i : S.Z.Wrap.NO_WRAP,
-        className: l()(R.header, e.className, { [R.separator]: null === (o = e.separator) || void 0 === o || o }),
+        className: l()(v.header, e.className, { [v.separator]: null === (o = e.separator) || void 0 === o || o }),
         id: c ? void 0 : u,
         children: e.children
     });
@@ -133,7 +133,7 @@ function D(e) {
             }
         })(i);
     return (0, a.jsx)(o, {
-        className: l()(R.content, t),
+        className: l()(v.content, t),
         ref: r,
         ...s,
         children: (0, a.jsx)(I.y, { children: n })
@@ -148,7 +148,7 @@ function L(e) {
         justify: null !== (n = e.justify) && void 0 !== n ? n : S.Z.Justify.START,
         align: null !== (r = e.align) && void 0 !== r ? r : S.Z.Align.STRETCH,
         wrap: null !== (i = e.wrap) && void 0 !== i ? i : S.Z.Wrap.NO_WRAP,
-        className: l()(R.footer, e.className, { [R.footerSeparator]: null === (s = e.separator) || void 0 === s || s }),
+        className: l()(v.footer, e.className, { [v.footerSeparator]: null === (s = e.separator) || void 0 === s || s }),
         children: (0, a.jsx)(I.y, { children: e.children })
     });
 }
@@ -159,15 +159,15 @@ function b(e) {
         look: f.zx.Looks.BLANK,
         size: f.zx.Sizes.NONE,
         onClick: e.onClick,
-        innerClassName: l()(e.innerClassName, { [R.closeWithCircleBackground]: e.withCircleBackground }),
+        innerClassName: l()(e.innerClassName, { [v.closeWithCircleBackground]: e.withCircleBackground }),
         className: l()(e.className, {
-            [R.hideOnFullscreen]: e.hideOnFullscreen,
-            [R.close]: !e.withCircleBackground
+            [v.hideOnFullscreen]: e.hideOnFullscreen,
+            [v.close]: !e.withCircleBackground
         }),
         children: (0, a.jsx)(m.D, {
             size: 'md',
             color: 'currentColor',
-            className: l()(e.innerClassName, R.closeIcon)
+            className: l()(e.innerClassName, v.closeIcon)
         })
     });
 }

@@ -25,25 +25,25 @@ var r = n(735250),
     A = n(539873),
     N = n(981631),
     O = n(921944),
-    R = n(474936),
-    v = n(689938),
+    v = n(474936),
+    R = n(689938),
     C = n(765630);
 let y = () => {
         var e, t, n;
         let i = (0, o.e7)([I.default], () => T.ZP.isPremium(I.default.getCurrentUser())),
             a = (0, f.N)(),
-            s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === R.Si.TIER_2;
+            s = (null == a ? void 0 : null === (e = a.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === v.Si.TIER_2;
         return (0, r.jsx)(h.Z, {
             size: l.Button.Sizes.MEDIUM,
             buttonText: i
-                ? v.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE
+                ? R.Z.Messages.BILLING_SWITCH_PLAN_UPGRADE
                 : s
                   ? (0, T.Rt)({
                         intervalType: null == a ? void 0 : null === (t = a.subscription_trial) || void 0 === t ? void 0 : t.interval,
                         intervalCount: null == a ? void 0 : null === (n = a.subscription_trial) || void 0 === n ? void 0 : n.interval_count
                     })
-                  : v.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
-            subscriptionTier: R.Si.TIER_2
+                  : R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+            subscriptionTier: v.Si.TIER_2
         });
     },
     D = (e) => {
@@ -68,7 +68,7 @@ let y = () => {
                     children: [
                         (0, r.jsx)(l.Heading, {
                             variant: 'heading-lg/extrabold',
-                            children: v.Z.Messages.APP_ICON_PREVIEW_TITLE
+                            children: R.Z.Messages.APP_ICON_PREVIEW_TITLE
                         }),
                         (0, r.jsx)(p.Z, { className: C.premiumIcon })
                     ]
@@ -90,7 +90,7 @@ let y = () => {
                     },
                     color: l.Button.Colors.PRIMARY,
                     size: l.Button.Sizes.MEDIUM,
-                    children: i || t ? v.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW : v.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS
+                    children: i || t ? R.Z.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW : R.Z.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS
                 })
             ]
         });
@@ -111,7 +111,7 @@ function b(e) {
     i.useEffect(() => {
         if (!!f)
             m.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: R.cd.APP_ICON_UPSELL,
+                type: v.cd.APP_ICON_UPSELL,
                 location_stack: a
             });
     }, [f, a]);

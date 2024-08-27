@@ -59,19 +59,19 @@ function O() {
               }
           })(),
           c.Z.remotePowerMonitor.on('resume', () => {
-              (g = !1), R({});
+              (g = !1), v({});
           }),
           c.Z.remotePowerMonitor.on('suspend', () => {
-              (g = !0), R({}), u.default.disconnect();
+              (g = !0), v({}), u.default.disconnect();
           }),
           c.Z.remotePowerMonitor.on('lock-screen', () => {
-              (S = !0), R({});
+              (S = !0), v({});
           }),
           c.Z.remotePowerMonitor.on('unlock-screen', () => {
-              (S = !1), R({});
+              (S = !1), v({});
           }))
         : setInterval(O, 0.25 * h.OSm));
-function R(e) {
+function v(e) {
     let { timestamp: t, type: n } = e,
         r = 'OVERLAY_SET_NOT_IDLE' === n && null != t;
     return (
@@ -86,7 +86,7 @@ function R(e) {
         !1)
     );
 }
-class v extends (s = o.ZP.Store) {
+class R extends (s = o.ZP.Store) {
     isIdle() {
         return m;
     }
@@ -98,7 +98,7 @@ class v extends (s = o.ZP.Store) {
     }
 }
 (a = 'IdleStore'),
-    (i = 'displayName') in (r = v)
+    (i = 'displayName') in (r = R)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -106,7 +106,7 @@ class v extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new v(l.Z, {
+    (t.Z = new R(l.Z, {
         IDLE: function (e) {
             m = e.idle;
         },
@@ -115,17 +115,17 @@ class v extends (s = o.ZP.Store) {
         },
         SPEAKING: function (e) {
             let { userId: t, speakingFlags: n } = e;
-            return n !== p.Dg.NONE && t === f.default.getId() && R({}), !1;
+            return n !== p.Dg.NONE && t === f.default.getId() && v({}), !1;
         },
         APP_STATE_UPDATE: function (e) {
             let { state: t } = e;
             return (A = t === h.$7l.BACKGROUND), (I = Date.now()), O(), !1;
         },
-        OVERLAY_SET_NOT_IDLE: R,
-        CHANNEL_SELECT: R,
-        VOICE_CHANNEL_SELECT: R,
-        WINDOW_FOCUS: R,
-        OVERLAY_INITIALIZE: R,
-        OVERLAY_SET_INPUT_LOCKED: R,
-        USER_SETTINGS_PROTO_UPDATE: R
+        OVERLAY_SET_NOT_IDLE: v,
+        CHANNEL_SELECT: v,
+        VOICE_CHANNEL_SELECT: v,
+        WINDOW_FOCUS: v,
+        OVERLAY_INITIALIZE: v,
+        OVERLAY_SET_INPUT_LOCKED: v,
+        USER_SETTINGS_PROTO_UPDATE: v
     }));

@@ -33,8 +33,8 @@ function O(e, t, n) {
         e
     );
 }
-let R = new u.Z('GameConsoleManager');
-async function v(e) {
+let v = new u.Z('GameConsoleManager');
+async function R(e) {
     let t = _.Z.getChannelId();
     i()(null == t, 'Syncing to remote while in voice!'), e.selfMute !== d.Z.isSelfMute() && (await o.Z.toggleSelfMute({ syncRemote: !1 })), e.selfDeaf !== d.Z.isSelfDeaf() && o.Z.toggleSelfDeaf({ syncRemote: !1 });
 }
@@ -67,7 +67,7 @@ class C extends l.Z {
                 if (null == t) return null;
                 this.awaitRemoteTimeout.stop(), (0, p.ef)(t.sessionId);
                 let n = f.Z.getVoiceStateForSession(c.default.getId(), t.sessionId);
-                null != n && v(n);
+                null != n && R(n);
             }),
             O(this, 'handleAudioStateToggle', (e) => {
                 let { syncRemote: t, context: n } = e;
@@ -85,7 +85,7 @@ class C extends l.Z {
                             selfMute: i
                         }),
                         this.rollbackCommandTimeout.start(3000, () => {
-                            v(o);
+                            R(o);
                         }));
             }),
             O(this, 'handleVoiceStateUpdates', (e) => {
@@ -104,7 +104,7 @@ class C extends l.Z {
                     let { sessionId: t } = e;
                     return t === n;
                 });
-                null != r && (this.rollbackCommandTimeout.stop(), v(r));
+                null != r && (this.rollbackCommandTimeout.stop(), R(r));
             }),
             O(this, 'handleSessionsChanged', () => {
                 let e = m.Z.getRemoteSessionId();
@@ -123,7 +123,7 @@ class C extends l.Z {
                 var t;
                 let { id: n, result: r, error: i } = e;
                 if (('failed' !== r && 'n/a' !== r) || null == i) return;
-                R.info('Console command Error result:', r, i);
+                v.info('Console command Error result:', r, i);
                 let a = m.Z.getAwaitingRemoteSessionInfo();
                 if ((null == a ? void 0 : a.commandId) !== n) return;
                 let s = m.Z.getDevice(a.type, null !== (t = a.deviceId) && void 0 !== t ? t : ''),

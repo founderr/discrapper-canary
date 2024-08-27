@@ -77,7 +77,7 @@ function O(e) {
         })
     });
 }
-function R(e) {
+function v(e) {
     let { file: t, alt: n, spoiler: a, size: o = g.q.MEDIUM, onMouseEnter: u } = e,
         [c, d] = i.useState(),
         [_, E] = i.useState({
@@ -154,7 +154,7 @@ function R(e) {
         })
     });
 }
-function v(e) {
+function R(e) {
     let { file: t, alt: n, spoiler: a, size: o = g.q.MEDIUM, onMouseEnter: l, onVideoLoadError: u } = e,
         [c, d] = i.useState(),
         _ = i.useRef(null);
@@ -198,7 +198,7 @@ function C(e) {
         [l, u] = i.useState(!1),
         c = a === g.q.SMALL;
     return n.isImage && n.item.platform === d.ow.WEB
-        ? (0, r.jsx)(R, {
+        ? (0, r.jsx)(v, {
               file: n.item.file,
               alt: n.description,
               spoiler: n.spoiler,
@@ -206,7 +206,7 @@ function C(e) {
               onMouseEnter: o
           })
         : !l && n.isVideo && n.item.platform === d.ow.WEB
-          ? (0, r.jsx)(v, {
+          ? (0, r.jsx)(R, {
                 file: n.item.file,
                 size: a,
                 alt: n.description,
@@ -233,8 +233,8 @@ function C(e) {
 }
 function y(e) {
     let { channelId: t, draftType: n, upload: a, keyboardModeEnabled: d, label: f, size: h = g.q.MEDIUM, canEdit: I = !0, hideFileName: N = !1, clip: O } = e,
-        R = null != O,
-        v = (h = R ? g.q.CLIP : h) === g.q.SMALL,
+        v = null != O,
+        R = (h = v ? g.q.CLIP : h) === g.q.SMALL,
         y = (0, o.e7)([p.Z], () => {
             var e;
             return null === (e = p.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
@@ -263,43 +263,43 @@ function y(e) {
             children: [
                 I
                     ? (0, r.jsx)(T.Z, {
-                          className: s()({ [A.action]: v }),
-                          tooltip: R ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : S.Z.Messages.ATTACHMENT_UTILITIES_SPOILER,
+                          className: s()({ [A.action]: R }),
+                          tooltip: v ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : S.Z.Messages.ATTACHMENT_UTILITIES_SPOILER,
                           onClick: () => u.Z.update(t, a.id, n, { spoiler: !a.spoiler }),
                           children: a.spoiler
                               ? (0, r.jsx)(l.EyeSlashIcon, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: s()({ [A.actionBarIcon]: v })
+                                    className: s()({ [A.actionBarIcon]: R })
                                 })
                               : (0, r.jsx)(l.EyeIcon, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: s()({ [A.actionBarIcon]: v })
+                                    className: s()({ [A.actionBarIcon]: R })
                                 })
                       })
                     : null,
-                I && !R
+                I && !v
                     ? (0, r.jsx)(T.Z, {
-                          className: s()({ [A.action]: v }),
+                          className: s()({ [A.action]: R }),
                           tooltip: S.Z.Messages.ATTACHMENT_UTILITIES_MODIFY,
                           onClick: D,
                           children: (0, r.jsx)(l.PencilIcon, {
                               size: 'xs',
                               color: 'currentColor',
-                              className: s()({ [A.actionBarIcon]: v })
+                              className: s()({ [A.actionBarIcon]: R })
                           })
                       })
                     : null,
                 (0, r.jsx)(T.Z, {
-                    className: s()({ [A.action]: v }),
-                    tooltip: R ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : S.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
+                    className: s()({ [A.action]: R }),
+                    tooltip: v ? S.Z.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : S.Z.Messages.ATTACHMENT_UTILITIES_REMOVE,
                     onClick: () => u.Z.remove(t, a.id, n),
                     dangerous: !0,
                     children: (0, r.jsx)(l.TrashIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: s()({ [A.actionBarIcon]: v })
+                        className: s()({ [A.actionBarIcon]: R })
                     })
                 })
             ]
@@ -310,14 +310,14 @@ function y(e) {
         handleEditModal: D,
         keyboardModeEnabled: d,
         size: h,
-        className: s()({ [A.attachmentItemSmall]: v }),
+        className: s()({ [A.attachmentItemSmall]: R }),
         children: [
             (0, r.jsx)(C, {
                 upload: a,
                 size: h
             }),
             !N &&
-                !R &&
+                !v &&
                 (0, r.jsx)('div', {
                     className: A.filenameContainer,
                     children: (0, r.jsx)(l.Text, {
@@ -326,7 +326,7 @@ function y(e) {
                         children: null != f ? f : a.filename
                     })
                 }),
-            R &&
+            v &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(_.Z, {

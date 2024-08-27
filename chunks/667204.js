@@ -33,8 +33,8 @@ var r = n(512722),
     A = n(706454),
     N = n(430824),
     O = n(117530),
-    R = n(594174),
-    v = n(403182),
+    v = n(594174),
+    R = n(403182),
     C = n(823379),
     y = n(380684),
     D = n(861990),
@@ -67,22 +67,22 @@ let V = (e, t) => {
         return t || n ? t : null;
     };
 async function Y(e) {
-    var t, n, r, s, l, c, d, f, h, p, I, m, T, g, N, R;
-    let { command: v, optionValues: C, context: y, commandTargetId: D, maxSizeCallback: b, commandOrigin: P = w.bB.CHAT, sectionName: G, interactionLifecycleOptionsFactory: B = q } = e,
+    var t, n, r, s, l, c, d, f, h, p, I, m, T, g, N, v;
+    let { command: R, optionValues: C, context: y, commandTargetId: D, maxSizeCallback: b, commandOrigin: P = w.bB.CHAT, sectionName: G, interactionLifecycleOptionsFactory: B = q } = e,
         F = null !== (r = U.Z.getCommandOrigin(y.channel.id)) && void 0 !== r ? r : P;
     null == y.autocomplete &&
         a.Z.dispatch({
             type: 'APPLICATION_COMMAND_USED',
             context: y,
-            command: v,
+            command: R,
             commandOrigin: F
         }),
         await S.Z.unarchiveThreadIfNecessary(y.channel.id);
     let Y = [],
         W = [],
         z = (0, x.D7)(F);
-    if (null != v.options)
-        for (let e of v.options) {
+    if (null != R.options)
+        for (let e of R.options) {
             if (e.type === u.jw.SUB_COMMAND || e.type === u.jw.SUB_COMMAND_GROUP || !(e.name in C)) continue;
             let t = (null === (s = y.autocomplete) || void 0 === s ? void 0 : s.name) === e.name || void 0,
                 n = null;
@@ -193,9 +193,9 @@ async function Y(e) {
                         focused: t
                     });
         }
-    if (null != v.subCommandPath)
-        for (let e = v.subCommandPath.length - 1; e >= 0; e -= 1) {
-            let { name: t, type: n } = v.subCommandPath[e];
+    if (null != R.subCommandPath)
+        for (let e = R.subCommandPath.length - 1; e >= 0; e -= 1) {
+            let { name: t, type: n } = R.subCommandPath[e];
             Y = [
                 {
                     type: n,
@@ -204,32 +204,32 @@ async function Y(e) {
                 }
             ];
         }
-    if (null != v.execute)
+    if (null != R.execute)
         return (
             _.ZP.trackWithMetadata(k.rMx.APPLICATION_COMMAND_USED, {
-                command_id: v.id,
-                application_id: v.applicationId,
-                command_type: v.type,
+                command_id: R.id,
+                application_id: R.applicationId,
+                command_type: R.type,
                 location: Q(F)
             }),
-            v.execute(Y, y)
+            R.execute(Y, y)
         );
-    if (v.inputType === w.iw.BUILT_IN || v.inputType === w.iw.BUILT_IN_TEXT || v.inputType === w.iw.BUILT_IN_INTEGRATION) return;
+    if (R.inputType === w.iw.BUILT_IN || R.inputType === w.iw.BUILT_IN_TEXT || R.inputType === w.iw.BUILT_IN_INTEGRATION) return;
     let X = {
-        version: v.version,
-        id: null !== (N = null === (t = v.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== N ? N : v.id,
-        guild_id: v.guildId,
-        name: null !== (R = null === (n = v.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== R ? R : v.name,
-        type: v.type,
+        version: R.version,
+        id: null !== (N = null === (t = R.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== N ? N : R.id,
+        guild_id: R.guildId,
+        name: null !== (v = null === (n = R.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== v ? v : R.name,
+        type: R.type,
         options: Y,
-        application_command: v.rootCommand
+        application_command: R.rootCommand
     };
     null != D && (X.target_id = D),
         null != y.autocomplete
-            ? (0, L.GV)(v, y, X)
+            ? (0, L.GV)(R, y, X)
             : (o.Z.clearAll(y.channel.id, z),
               K({
-                  applicationId: v.applicationId,
+                  applicationId: R.applicationId,
                   data: X,
                   context: y,
                   attachments: W,
@@ -239,7 +239,7 @@ async function Y(e) {
                   },
                   analytics_location: Q(F),
                   sectionName: G,
-                  interactionLifecycleOptions: await B(v, y, X)
+                  interactionLifecycleOptions: await B(R, y, X)
               }));
 }
 let j = (e) => {
@@ -354,7 +354,7 @@ async function q(e, t, n) {
             name: n.name,
             name_localized: e.displayName,
             type: u.B8.APPLICATION_COMMAND,
-            user: (0, T.pe)(R.default.getCurrentUser())
+            user: (0, T.pe)(v.default.getCurrentUser())
         },
         interaction_data: n
     };
@@ -407,9 +407,9 @@ async function X(e, t) {
     };
 }
 async function $(e, t, n, r) {
-    let i = (0, v.dg)(n),
+    let i = (0, R.dg)(n),
         a = (e) => {
-            null == r || r(i, e), I.yr(t, k.evJ.ENTITY_TOO_LARGE, F.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: (0, v.Ng)(i) }));
+            null == r || r(i, e), I.yr(t, k.evJ.ENTITY_TOO_LARGE, F.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: (0, R.Ng)(i) }));
         },
         { totalSize: s, largestUploadedFileSize: o } = await X(e, !1),
         l = (0, y.Xv)() ? D.Ld : D.zz;

@@ -29,8 +29,8 @@ var r = n(735250),
     A = n(380684),
     N = n(74538),
     O = n(960048),
-    R = n(861990),
-    v = n(98278),
+    v = n(861990),
+    R = n(98278),
     C = n(639119),
     y = n(197115),
     D = n(823188),
@@ -175,7 +175,7 @@ function F(e) {
             (0, r.jsx)(f.Heading, {
                 variant: 'heading-md/semibold',
                 color: 'text-normal',
-                children: M.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_TRIAL_DESCRIPTION.format({ onClick: v.z })
+                children: M.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_TRIAL_DESCRIPTION.format({ onClick: R.z })
             }),
             (0, r.jsx)(G, {
                 trialOffer: i,
@@ -216,10 +216,10 @@ function V(e) {
     });
 }
 function H(e) {
-    let { headingText: t, context: i, children: a, onClose: o, type: u, subscriptionTier: c, analyticsLocationObject: T, trialOffer: g, discountOffer: v } = e,
+    let { headingText: t, context: i, children: a, onClose: o, type: u, subscriptionTier: c, analyticsLocationObject: T, trialOffer: g, discountOffer: R } = e,
         C = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         y = (0, h.ZP)(),
-        D = (0, A.Xv)() ? R.Ld : R.zz,
+        D = (0, A.Xv)() ? v.Ld : v.zz,
         w = (0, S.BU)(D / S.XD, { useKibibytes: !0 });
     switch (u) {
         case L.cd.EMPTY_STICKER_PICKER_UPSELL:
@@ -248,7 +248,7 @@ function H(e) {
                             }),
                             (0, r.jsx)(x, {
                                 trialOffer: g,
-                                discountOffer: v,
+                                discountOffer: R,
                                 children: M.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
                                     planName: (0, N.jP)(c),
                                     onClick: () => (0, m.uL)(b.Z5c.APPLICATION_STORE)
@@ -264,7 +264,7 @@ function H(e) {
                             object: b.qAy.BUTTON_CTA
                         },
                         trialOffer: g,
-                        discountOffer: v
+                        discountOffer: R
                     })
                 ]
             });
@@ -288,7 +288,7 @@ function H(e) {
                                 }),
                                 (0, r.jsx)(x, {
                                     trialOffer: g,
-                                    discountOffer: v,
+                                    discountOffer: R,
                                     children: M.Z.Messages.STICKER_PICKER_PREMIUM_UPSELL_DESCRIPTION_NO_BOLD_V2.format({
                                         planName: (0, N.jP)(c),
                                         onClick: () => (0, m.uL)(b.Z5c.APPLICATION_STORE)
@@ -304,7 +304,7 @@ function H(e) {
                                 object: b.qAy.BUTTON_CTA
                             },
                             trialOffer: g,
-                            discountOffer: v
+                            discountOffer: R
                         })
                     ]
                 })
@@ -329,7 +329,7 @@ function H(e) {
                             }),
                             (0, r.jsx)(x, {
                                 trialOffer: g,
-                                discountOffer: v,
+                                discountOffer: R,
                                 children: M.Z.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL_NO_BOLD_V2.format({
                                     planName: (0, N.jP)(c),
                                     onClick: () => (0, m.uL)(b.Z5c.APPLICATION_STORE)
@@ -345,7 +345,7 @@ function H(e) {
                             object: b.qAy.BUTTON_CTA
                         },
                         trialOffer: g,
-                        discountOffer: v
+                        discountOffer: R
                     })
                 ]
             });
@@ -404,7 +404,7 @@ function H(e) {
                             }),
                             (0, r.jsx)(x, {
                                 trialOffer: g,
-                                discountOffer: v,
+                                discountOffer: R,
                                 children: H
                             })
                         ]
@@ -426,7 +426,7 @@ function H(e) {
                     }),
                     (0, r.jsx)(x, {
                         trialOffer: g,
-                        discountOffer: v,
+                        discountOffer: R,
                         children: M.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format({
                             planName: (0, N.jP)(c),
                             onClick: () => (0, m.uL)(b.Z5c.APPLICATION_STORE)
@@ -438,7 +438,7 @@ function H(e) {
                         analyticsLocationObject: T,
                         onClose: o,
                         trialOffer: g,
-                        discountOffer: v
+                        discountOffer: R
                     })
                 ]
             });
@@ -447,7 +447,7 @@ function H(e) {
                 l()(null != a, 'You must specify children for this upsell type'),
                 (0, r.jsx)(x, {
                     trialOffer: g,
-                    discountOffer: v,
+                    discountOffer: R,
                     children: M.Z.Messages.CLIENT_THEMES_EDITOR_UPSELL.format({
                         onClick: () => {
                             (0, m.uL)(b.Z5c.APPLICATION_STORE), (0, I.Mo)();
@@ -473,7 +473,7 @@ function H(e) {
                     (0, r.jsx)('div', { className: P.divider }),
                     (0, r.jsx)(x, {
                         trialOffer: g,
-                        discountOffer: v,
+                        discountOffer: R,
                         className: P.messageLengthBrandedContainer,
                         subscriptionTier: c,
                         children: M.Z.Messages.PREMIUM_CHAT_PERKS_MAX_MESSAGE_LENGTH_UPSELL.format({
@@ -488,7 +488,7 @@ function H(e) {
                         analyticsLocationObject: T,
                         onClose: o,
                         trialOffer: g,
-                        discountOffer: v
+                        discountOffer: R
                     })
                 ]
             });
@@ -505,7 +505,7 @@ function H(e) {
         case L.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL:
             return (0, r.jsx)(V, {
                 trialOffer: g,
-                discountOffer: v,
+                discountOffer: R,
                 headingText: t,
                 context: i,
                 children: a
@@ -518,7 +518,7 @@ function H(e) {
                     context: i,
                     children: a,
                     trialOffer: g,
-                    discountOffer: v
+                    discountOffer: R
                 })
             );
     }

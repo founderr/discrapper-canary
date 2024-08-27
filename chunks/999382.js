@@ -14,8 +14,8 @@ var d,
     A = n(570140),
     N = n(749210),
     O = n(131704),
-    R = n(601964),
-    v = n(758449),
+    v = n(601964),
+    R = n(758449),
     C = n(598077),
     y = n(430824),
     D = n(594174),
@@ -139,13 +139,13 @@ function ea(e) {
 }
 function es(e) {
     var t;
-    return new v.Z({
+    return new R.Z({
         code: e.code,
         temporary: e.temporary,
         revoked: e.revoked,
         inviter: null != e.inviter ? new C.Z(e.inviter) : null,
         channel: (0, O.jD)(e.channel),
-        guild: null != e.guild ? new R.ZP(e.guild) : null,
+        guild: null != e.guild ? new v.ZP(e.guild) : null,
         uses: e.uses,
         maxUses: e.max_uses,
         maxAge: e.max_age,

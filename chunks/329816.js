@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(793903),
     N = n(213609),
     O = n(613413),
-    R = n(94795),
-    v = n(327943),
+    v = n(94795),
+    R = n(327943),
     C = n(907459),
     y = n(559407),
     D = n(556766),
@@ -89,7 +89,7 @@ t.Z = function (e) {
         W = (0, c.e7)([H.Z], () => (H.Z.darkSidebar ? en.BRd.DARK : void 0)),
         q = (0, c.e7)([g.Z], () => (g.Z.useForcedColors ? 'yes' : 'no')),
         [et, eo, el] = (0, c.Wu)([L.Z], () => [L.Z.isEditorOpen, L.Z.isCoachmark, L.Z.isPreview]),
-        [eu, ec] = (0, c.Wu)([v.Z], () => [v.Z.isEditorOpen, v.Z.isUpsellPreview]),
+        [eu, ec] = (0, c.Wu)([R.Z], () => [R.Z.isEditorOpen, R.Z.isUpsellPreview]),
         ed = (0, c.e7)([Y.Z], () => Y.Z.getLayers().includes(en.S9g.USER_SETTINGS)),
         e_ = (0, c.e7)([j.default], () => z.ZP.canUseClientThemes(j.default.getCurrentUser())),
         eE = et && !ed,
@@ -108,7 +108,7 @@ t.Z = function (e) {
             }) &&
             eI &&
             !em &&
-            ((0, R.nJ)(),
+            ((0, v.nJ)(),
             f.Z.dispatch({
                 type: 'APP_ICON_TRACK_IMPRESSION',
                 markAsDismissed: ep

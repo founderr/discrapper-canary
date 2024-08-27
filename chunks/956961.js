@@ -27,8 +27,8 @@ var i = n(735250),
     S = n(981631),
     A = n(689938),
     R = n(72506),
-    x = n(674069);
-let O = {
+    O = n(674069);
+let x = {
     offset: {
         left: 4,
         right: -12
@@ -96,7 +96,7 @@ function v(e) {
     null == l || null == u)
         ? null
         : (0, i.jsxs)('div', {
-              className: x.container,
+              className: O.container,
               children: [
                   (0, i.jsx)(f.Z, {
                       channel: u,
@@ -164,10 +164,10 @@ function v(e) {
                       })
                   }),
                   (0, i.jsxs)('div', {
-                      className: r()(x.messageContainer, R.unloadedMessage),
+                      className: r()(O.messageContainer, R.unloadedMessage),
                       children: [
                           (0, i.jsx)(C.Z, {
-                              className: x.jumpMessageButton,
+                              className: O.jumpMessageButton,
                               onJump: T
                           }),
                           (0, i.jsx)(
@@ -175,10 +175,10 @@ function v(e) {
                               {
                                   message: l,
                                   channel: u,
-                                  className: x.message,
+                                  className: O.message,
                                   compact: h.jU.getSetting(),
                                   animateAvatar: !1,
-                                  focusProps: O,
+                                  focusProps: x,
                                   trackAnnouncementViews: !0
                               },
                               l.id
