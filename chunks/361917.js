@@ -19,8 +19,8 @@ var i = t(735250),
     p = t(566620),
     _ = t(127255),
     C = t(880308),
-    h = t(427996),
-    f = t(367907),
+    f = t(427996),
+    h = t(367907),
     A = t(399654),
     E = t(844439),
     x = t(254711),
@@ -28,8 +28,8 @@ var i = t(735250),
     v = t(10718),
     I = t(895924),
     g = t(148958),
-    b = t(424602),
-    S = t(541099),
+    S = t(424602),
+    b = t(541099),
     P = t(827498),
     L = t(87005),
     R = t(783097),
@@ -64,19 +64,18 @@ let V = [],
 function Y(e) {
     let { channel: n, entrypoint: t, searchQuery: l, setSearchQuery: o, setScroller: r, isScrollCloseToBottom: s } = e,
         u = (0, c.e7)([m.Z], () => m.Z.getIsEnabled(), []),
-        _ = b.nS.useExperiment({ location: 'app_launcher_home' }).enabled,
-        C = !!_ || t === P._b.TEXT,
-        h = t === P._b.TEXT && !n.isPrivate(),
+        _ = !!S.nS.useExperiment({ location: 'app_launcher_home' }).enabled || t === P._b.TEXT,
+        C = t === P._b.TEXT && !n.isPrivate(),
         f = (0, R.Yn)(t),
-        A = !(0, R.Yn)(t),
-        E = t === P._b.TEXT,
-        [x, N] = K(C),
-        [v, I] = K(h),
-        [g, S] = K(f),
-        [L, T] = K(A),
-        M = x && v && g && L,
-        j = (f || h) && !M,
-        y = A && u;
+        h = !(0, R.Yn)(t),
+        A = t === P._b.TEXT,
+        [E, x] = K(_),
+        [N, v] = K(C),
+        [I, g] = K(f),
+        [b, L] = K(h),
+        T = E && N && I && b,
+        M = (f || C) && !T,
+        j = h && u;
     a.useEffect(() => {
         (0, p.w1)({
             guildId: n.guild_id,
@@ -86,65 +85,64 @@ function Y(e) {
         a.useEffect(() => {
             t === P._b.VOICE && p.ux();
         }, [t]);
-    let O = l.length > 0;
+    let y = l.length > 0;
     return (0, i.jsxs)('div', {
         className: w.container,
         children: [
-            y ? (0, i.jsx)(G, {}) : null,
-            (0, i.jsx)(z, {
+            j ? (0, i.jsx)(z, {}) : null,
+            (0, i.jsx)(G, {
                 searchQuery: l,
                 setSearchQuery: o,
-                placeholder: E ? B.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : B.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
+                placeholder: A ? B.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : B.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
             }),
             (0, i.jsx)(d.Scroller, {
                 ref: r,
                 className: w.scrollableContent,
                 fade: !0,
-                children: O
+                children: y
                     ? (0, i.jsx)(U.Z, {
                           channel: n,
                           query: l,
                           entrypoint: t,
-                          enableGlobalSearch: t === P._b.TEXT || _,
                           isScrollCloseToBottom: s
                       })
                     : (0, i.jsxs)('div', {
                           children: [
-                              C &&
+                              _ &&
                                   (0, i.jsx)(X, {
                                       channel: n,
                                       entrypoint: t,
-                                      onEmptyState: N
+                                      onEmptyState: x
                                   }),
-                              h &&
+                              C &&
                                   (0, i.jsx)(Q, {
                                       channel: n,
-                                      onEmptyState: I
+                                      onEmptyState: v
                                   }),
                               f &&
                                   (0, i.jsx)(J, {
                                       channel: n,
                                       entrypoint: t,
-                                      onEmptyState: S
+                                      onEmptyState: g
                                   }),
-                              A &&
+                              h &&
                                   (0, i.jsx)(q, {
                                       channel: n,
-                                      onEmptyState: T
+                                      onEmptyState: L
                                   }),
-                              M &&
+                              T &&
                                   (0, i.jsx)(Z.A, {
                                       type: P.LG.HOME_EMPTY,
                                       textContent: t === P._b.TEXT ? B.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_SEARCH_SUGGEST_BODY : B.Z.Messages.APP_LAUNCHER_HOME_EMPTY_STATE_ACTIVITIES_BODY
                                   }),
-                              j && (0, i.jsx)(H.Z, {})
+                              M && (0, i.jsx)(H.Z, {})
                           ]
                       })
             })
         ]
     });
 }
-function G() {
+function z() {
     return (0, i.jsxs)('div', {
         className: w.developerShelfControlsContainer,
         children: [
@@ -153,11 +151,11 @@ function G() {
                 variant: 'text-sm/normal',
                 children: B.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE
             }),
-            (0, i.jsx)(h.W, { hideSearch: !0 })
+            (0, i.jsx)(f.W, { hideSearch: !0 })
         ]
     });
 }
-function z(e) {
+function G(e) {
     let { searchQuery: n, setSearchQuery: t, placeholder: l } = e,
         r = a.useRef(null),
         [s, c] = a.useState(!1),
@@ -165,9 +163,9 @@ function z(e) {
             () =>
                 o().debounce(
                     (e) => {
-                        (0, f.yw)(k.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
+                        (0, h.yw)(k.rMx.APP_LAUNCHER_SEARCH_QUERY_TYPED, {
                             query: e,
-                            source: S.Z.entrypoint(),
+                            source: b.Z.entrypoint(),
                             location: I.Vh.APP_LAUNCHER_HOME
                         });
                     },
@@ -182,8 +180,8 @@ function z(e) {
         m = a.useCallback(() => t(''), [t]),
         p = a.useCallback(() => {
             c(!0),
-                (0, f.yw)(k.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
-                    source: S.Z.entrypoint(),
+                (0, h.yw)(k.rMx.APP_LAUNCHER_SEARCH_FOCUSED, {
+                    source: b.Z.entrypoint(),
                     location: I.Vh.APP_LAUNCHER_HOME
                 });
         }, []),
@@ -248,7 +246,7 @@ function X(e) {
     a.useEffect(() => {
         if (!0 !== r.current)
             0 !== m.length &&
-                (0, f.yw)(k.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
+                (0, h.yw)(k.rMx.APP_LAUNCHER_FRECENTS_SEEN, {
                     num: m.length,
                     section_name: P.L3.RECENT_APPS,
                     location: P.G0.HOME,
@@ -316,7 +314,7 @@ function q(e) {
             numItems: l.length,
             numVisibleItems: l.length
         }),
-        { clickOnHomeActivityOpensAppDetail: s } = b.m1.getCurrentConfig({ location: 'ActivitiesShelfSection' }, { autoTrackExposure: !1 }),
+        { clickOnHomeActivityOpensAppDetail: s } = S.m1.getCurrentConfig({ location: 'ActivitiesShelfSection' }, { autoTrackExposure: !1 }),
         c = 0 === l.length;
     return (a.useEffect(() => {
         t(c);
@@ -395,18 +393,18 @@ function Q(e) {
                     .map((e) => ({ application: e })),
             [p]
         ),
-        { items: h, handleViewMore: f } = ee(B.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, M.U4.ROW, C, 4, _),
+        { items: f, handleViewMore: h } = ee(B.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER, M.U4.ROW, C, 4, _),
         { trackSectionImpressionRef: A } = (0, y.Z)({
             sectionName: _,
             numItems: C.length,
-            numVisibleItems: h.length
+            numVisibleItems: f.length
         }),
         E = r.fetchState.fetching || c.current,
-        b = !E && 0 === h.length;
+        S = !E && 0 === f.length;
     return (a.useEffect(() => {
-        l(b);
-    }, [b, l]),
-    b)
+        l(S);
+    }, [S, l]),
+    S)
         ? null
         : (0, i.jsxs)('div', {
               children: [
@@ -415,14 +413,14 @@ function Q(e) {
                       children: (0, i.jsx)(O.Z, {
                           title: B.Z.Messages.APP_LAUNCHER_HOME_APPS_IN_SERVER_HEADER,
                           buttonType: O.Z.buttonTypes.VIEW_MORE,
-                          onClickViewButton: f
+                          onClickViewButton: h
                       })
                   }),
                   (0, i.jsx)('div', {
                       className: w.sectionRowsContentContainer,
                       children: E
                           ? W.map((e) => (0, i.jsx)(j.Z, { look: M.U4.ROW }, e))
-                          : h.map((e, n) => {
+                          : f.map((e, n) => {
                                 let { application: t } = e;
                                 return null != t
                                     ? (0, i.jsx)(
@@ -510,11 +508,11 @@ function J(e) {
             recommendationsSections: s
         }),
         p = o === E.M.FETCHING,
-        h = !p && 0 === s.length;
+        f = !p && 0 === s.length;
     return (a.useEffect(() => {
-        l(h);
-    }, [h, l]),
-    h)
+        l(f);
+    }, [f, l]),
+    f)
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: p
@@ -655,9 +653,9 @@ function ee(e, n, t, i, l) {
                 : {
                       items: t.slice(0, i),
                       handleViewMore: () => {
-                          (0, f.yw)(k.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+                          (0, h.yw)(k.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                               section_name: l,
-                              source: S.Z.entrypoint(),
+                              source: b.Z.entrypoint(),
                               num: t.length
                           }),
                               o({
