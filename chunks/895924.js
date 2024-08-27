@@ -54,9 +54,10 @@ n.d(t, {
     ((f = l || (l = {}))[(f.CHAT = 0)] = 'CHAT'),
     (f[(f.APPLICATION_LAUNCHER = 1)] = 'APPLICATION_LAUNCHER'),
     (f[(f.IMAGE_RECS_MENU = 2)] = 'IMAGE_RECS_MENU'),
-    (f[(f.CONTEXT_MENU = 3)] = 'CONTEXT_MENU'),
-    (f[(f.VOICE_UI = 4)] = 'VOICE_UI'),
-    (f[(f.USER_PROFILE = 5)] = 'USER_PROFILE'),
-    (f[(f.NOW_PLAYING = 6)] = 'NOW_PLAYING'),
-    (f[(f.ACTIVITY_DETAILS = 7)] = 'ACTIVITY_DETAILS'),
-    (f[(f.ACTIVITIES_HOME = 8)] = 'ACTIVITIES_HOME');
+    (f[(f.IMAGE_RECS_SUBMENU = 3)] = 'IMAGE_RECS_SUBMENU'),
+    (f[(f.CONTEXT_MENU = 4)] = 'CONTEXT_MENU'),
+    (f[(f.VOICE_UI = 5)] = 'VOICE_UI'),
+    (f[(f.USER_PROFILE = 6)] = 'USER_PROFILE'),
+    (f[(f.NOW_PLAYING = 7)] = 'NOW_PLAYING'),
+    (f[(f.ACTIVITY_DETAILS = 8)] = 'ACTIVITY_DETAILS'),
+    (f[(f.ACTIVITIES_HOME = 9)] = 'ACTIVITIES_HOME');
