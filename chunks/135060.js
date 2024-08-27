@@ -1,5 +1,4 @@
 e.exports = {
-    container: 'container_dcf630',
     sectionDescription: 'sectionDescription_dcf630',
     card: 'card_dcf630',
     manageSubscriptionsButton: 'manageSubscriptionsButton_dcf630',

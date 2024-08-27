@@ -64,14 +64,14 @@ function H() {
             (0, E.yD)(B.RQ);
         }, []),
         (0, n.jsxs)('section', {
-            className: V.sectionAccountCredit,
             children: [
-                (0, n.jsx)(l.FormTitle, {
+                (0, n.jsx)(l.Heading, {
+                    variant: 'heading-md/bold',
                     className: V.accountCreditTitle,
-                    tag: l.FormTitleTags.H1,
                     children: y.Z.Messages.BILLING_SUBSCRIPTION_CREDIT
                 }),
-                (0, n.jsx)('p', {
+                (0, n.jsx)(l.Text, {
+                    variant: 'text-md/normal',
                     className: V.accountCreditDescription,
                     children: y.Z.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
                 }),
@@ -85,6 +85,9 @@ function H() {
         })
     );
 }
+function w() {
+    return (0, n.jsx)('hr', { className: V.hr });
+}
 s.Z = function () {
     let e = (0, o.e7)([D.ZP], () => D.ZP.getPremiumTypeSubscription()),
         s = (0, S.Z)({ subscriptionFilter: (e) => j.eS.has(e.status) }),
@@ -93,7 +96,17 @@ s.Z = function () {
         E = (0, o.e7)([D.ZP], () => D.ZP.hasFetchedSubscriptions()),
         C = (0, o.e7)([M.Z], () => M.Z.isBusy),
         m = (0, N.V)(),
-        P = (0, o.e7)([x.Z], () => x.Z.getSubsection());
+        P = (0, o.e7)([x.Z], () => x.Z.getSubsection()),
+        b = (0, o.e7)([D.ZP], () => {
+            var e, s;
+            return null !== (s = null === (e = D.ZP.getActiveApplicationSubscriptions()) || void 0 === e ? void 0 : e.length) && void 0 !== s ? s : 0;
+        }),
+        Z = (0, o.e7)([D.ZP], () => {
+            var e;
+            return Object.values(null !== (e = D.ZP.getSubscriptions()) && void 0 !== e ? e : {})
+                .filter((e) => e.type === U.NYc.GUILD)
+                .filter((e) => e.status !== U.O0b.ENDED).length;
+        });
     return (a.useEffect(
         () => (
             c.Z.wait(() => {
@@ -120,23 +133,39 @@ s.Z = function () {
                               t ? (0, n.jsx)(j.Yn, {}) : null,
                               null != e
                                   ? (0, n.jsx)(j.ZP, {
-                                        className: V.subscriptionDetails,
                                         subscription: e,
                                         paymentSource: i,
                                         busy: C,
                                         subscriptions: s
                                     })
-                                  : (0, n.jsx)(j.MM, { className: V.subscriptionDetails }),
-                              (0, n.jsx)(A.Z, { onClickManageSubscription: () => I.Z.setSection(U.oAB.SUBSCRIPTIONS, G.cP) }),
-                              (0, n.jsx)(g.Z, {
-                                  onClickManageSubscription: () => {
-                                      I.Z.setSection(U.oAB.SUBSCRIPTIONS, G.XZ), L.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
-                                  }
-                              }),
+                                  : (0, n.jsx)(j.MM, {}),
                               (0, n.jsx)(p.F, {
                                   setting: F.s6.SUBSCRIPTIONS_CREDITS,
                                   children: (0, n.jsx)(H, {})
                               }),
+                              Z > 0 &&
+                                  (0, n.jsxs)(n.Fragment, {
+                                      children: [
+                                          (0, n.jsx)(w, {}),
+                                          (0, n.jsx)(A.Z, {
+                                              count: Z,
+                                              onClickManageSubscription: () => I.Z.setSection(U.oAB.SUBSCRIPTIONS, G.cP)
+                                          })
+                                      ]
+                                  }),
+                              b > 0 &&
+                                  (0, n.jsxs)(n.Fragment, {
+                                      children: [
+                                          (0, n.jsx)(w, {}),
+                                          (0, n.jsx)(g.Z, {
+                                              count: b,
+                                              onClickManageSubscription: () => {
+                                                  I.Z.setSection(U.oAB.SUBSCRIPTIONS, G.XZ), L.default.track(U.rMx.PREMIUM_APPLICATION_SUBSCRIPTION_MANAGE_CTA_CLICKED);
+                                              }
+                                          })
+                                      ]
+                                  }),
+                              (0, n.jsx)(w, {}),
                               null != e
                                   ? (0, n.jsx)(v.Z, {
                                         subscription: e,

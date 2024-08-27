@@ -1,5 +1,4 @@
 e.exports = {
-    container: 'container_a78d9e',
     sectionDescription: 'sectionDescription_a78d9e',
     card: 'card_a78d9e',
     bannerImage: 'bannerImage_a78d9e',
