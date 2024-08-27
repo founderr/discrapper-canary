@@ -12,13 +12,13 @@ n.d(t, {
         return _.Skl;
     },
     W5: function () {
-        return v;
+        return R;
     },
     lm: function () {
         return I;
     },
     qb: function () {
-        return R;
+        return v;
     },
     rs: function () {
         return O;
@@ -35,7 +35,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(338545),
+    o = n(567526),
     l = n(780384),
     u = n(481060),
     c = n(44315),
@@ -296,11 +296,11 @@ function N(e) {
             'animate-always',
             [N]
         ),
-        v = Math.ceil(a * E.EW);
+        R = Math.ceil(a * E.EW);
     return (0, r.jsxs)('svg', {
         width: a,
-        height: v,
-        viewBox: '0 0 '.concat(a, ' ').concat(v),
+        height: R,
+        viewBox: '0 0 '.concat(a, ' ').concat(R),
         className: s()(f.mask, c),
         style: d,
         children: [
@@ -309,7 +309,7 @@ function N(e) {
                 x: 0,
                 y: 0,
                 width: a,
-                height: v,
+                height: R,
                 fill: O,
                 mask: 'url(#'.concat(I, ')')
             })
@@ -336,7 +336,7 @@ function O(e, t) {
             return d.ZP.Masks.STATUS_ONLINE;
     }
 }
-function v(e, t, n) {
+function R(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     return t === _.Skl.ONLINE && n && !r
         ? {
@@ -348,7 +348,7 @@ function v(e, t, n) {
               height: e
           };
 }
-function R(e) {
+function v(e) {
     let { status: t, isMobile: n = !1, size: i = 8, className: a, style: o, color: l } = e,
         u = t === _.Skl.ONLINE && n,
         c = p(t, l);
@@ -356,7 +356,7 @@ function R(e) {
         mask: O(t, u),
         className: s()(f.mask, a),
         style: o,
-        ...v(i, t, u),
+        ...R(i, t, u),
         children: (0, r.jsx)('div', {
             style: { backgroundColor: c },
             className: f.status

@@ -36,10 +36,10 @@ n.d(t, {
         return o;
     },
     Qr: function () {
-        return R;
+        return v;
     },
     Ut: function () {
-        return v;
+        return R;
     },
     WM: function () {
         return m;
@@ -113,8 +113,8 @@ let E = 'alt+c',
     A = 25,
     N = 0,
     O = 200,
-    v = 'clips-edit',
-    R = 'clips-gallery',
+    R = 'clips-edit',
+    v = 'clips-gallery',
     C = 640,
     y = 360,
     D = 100,

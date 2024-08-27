@@ -20,15 +20,15 @@ function g(e) {
     let { userId: l, guildId: n, channelId: g, location: m, onAction: _ } = e,
         C = a.useContext(c.AnalyticsContext),
         f = (0, s.Aq)(),
-        R = (0, i.e7)([o.Z], () => (null != g ? g : o.Z.getChannelId(n, !0)), [g, n]),
-        v = (0, d.ms)(n, !0);
-    return null != n && v
+        O = (0, i.e7)([o.Z], () => (null != g ? g : o.Z.getChannelId(n, !0)), [g, n]),
+        R = (0, d.ms)(n, !0);
+    return null != n && R
         ? (0, t.jsx)(r.MenuItem, {
               id: 'mod-view',
               label: I.Z.Messages.GUILD_MEMBER_MOD_VIEW_TITLE,
               action: () => {
                   null == _ || _(),
-                      (0, u.r)(n, l, null != R ? R : M.oC.MEMBER_SAFETY, {
+                      (0, u.r)(n, l, null != O ? O : M.oC.MEMBER_SAFETY, {
                           modViewPanel: Z.k.INFO,
                           sourceLocation: null != m ? m : C.location
                       }),

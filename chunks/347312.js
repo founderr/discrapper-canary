@@ -48,7 +48,7 @@ function N(e, t, n, r) {
     return 1 === i ? [t, !1] : [(0, d.BM)(e, t, i), !0];
 }
 function O(e) {
-    let { className: t, waveform: n, currentTime: a, duration: d, played: m, playing: O, onDrag: v, onDragStart: R, onDragEnd: C } = e,
+    let { className: t, waveform: n, currentTime: a, duration: d, played: m, playing: O, onDrag: R, onDragStart: v, onDragEnd: C } = e,
         { ref: y, width: D } = (0, u.Z)(),
         L = i.useMemo(() => {
             var e;
@@ -206,8 +206,8 @@ function O(e) {
         }, [y, x, M, D, a, d, m, O, G, k, B, F, V, H]);
     let [, Z] = (0, c.Z)({
         ref: y,
-        onDrag: v,
-        onDragStart: R,
+        onDrag: R,
+        onDragStart: v,
         onDragEnd: C
     });
     return (0, r.jsx)('canvas', {

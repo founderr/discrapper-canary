@@ -6,7 +6,7 @@ n.d(t, {
         return m;
     },
     It: function () {
-        return v;
+        return R;
     },
     St: function () {
         return T;
@@ -293,7 +293,7 @@ let O = (0, a.B)({
         }
     ]
 });
-function v(e) {
+function R(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = _(e, t),
         r = O.useExperiment({ location: e }, { autoTrackExposure: t });

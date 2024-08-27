@@ -6,7 +6,7 @@ n.d(t, {
         return O;
     },
     lo: function () {
-        return R;
+        return v;
     },
     yn: function () {
         return S;
@@ -64,7 +64,7 @@ let N = i.createContext({
     itemToString: A
 });
 function O(e) {
-    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: h, 'aria-label': T, multiSelect: g = !1, autoFocus: S = !1, maxVisibleItems: O = 5, itemToString: v = A, showScrollbar: R = !1 } = e,
+    let { placeholder: t, children: n, value: a, onChange: u, className: c, listClassName: h, 'aria-label': T, multiSelect: g = !1, autoFocus: S = !1, maxVisibleItems: O = 5, itemToString: R = A, showScrollbar: v = !1 } = e,
         [C, y] = i.useState(''),
         [D] = i.useState(!0),
         [L, b] = i.useState(null),
@@ -115,7 +115,7 @@ function O(e) {
             scrollToEnd: k,
             setFocus: B
         }),
-        V = R ? _.Tv : _.lW;
+        V = v ? _.Tv : _.lW;
     return (0, r.jsx)(l.bG, {
         navigator: F,
         children: (0, r.jsx)(l.SJ, {
@@ -140,7 +140,7 @@ function O(e) {
                             onKeyDown: i,
                             onBlur: () => b(null),
                             onClear: () => y(''),
-                            className: s()({ [I.searchWithScrollbar]: R }),
+                            className: s()({ [I.searchWithScrollbar]: v }),
                             inputProps: {
                                 'aria-multiline': !1,
                                 'aria-activedescendant': null != L ? L : void 0
@@ -169,7 +169,7 @@ function O(e) {
                                               activeDescendant: L,
                                               selected: a,
                                               setSelected: u,
-                                              itemToString: v
+                                              itemToString: R
                                           },
                                           children: (0, r.jsx)(V, {
                                               ...o,
@@ -177,7 +177,7 @@ function O(e) {
                                               'aria-multiselectable': g,
                                               id: M,
                                               ref: P,
-                                              className: s()(I.list, h, { [I.scroller]: R }),
+                                              className: s()(I.list, h, { [I.scroller]: v }),
                                               sections: [U.length],
                                               sectionHeight: 0,
                                               rowHeight: 40,
@@ -195,8 +195,8 @@ function O(e) {
         })
     });
 }
-let v = i.createContext(null);
-function R(e) {
+let R = i.createContext(null);
+function v(e) {
     var t;
     let { value: n, children: a, disabled: o = !1, selectedColor: u = T.STANDARD, ...d } = e,
         { activeDescendant: _, selected: E, setSelected: f, itemToString: h } = i.useContext(N),
@@ -218,31 +218,31 @@ function R(e) {
         role: 'option',
         'aria-selected': S,
         'aria-disabled': o,
-        children: (0, r.jsx)(v.Provider, {
+        children: (0, r.jsx)(R.Provider, {
             value: n,
             children: a
         })
     });
 }
-(R.Colors = T),
-    (R.Label = function (e) {
+(v.Colors = T),
+    (v.Label = function (e) {
         let { children: t } = e;
         return (0, r.jsx)('span', {
             className: I.itemLabel,
             children: t
         });
     }),
-    (R.Icon = function (e) {
+    (v.Icon = function (e) {
         let { children: t } = e;
         return (0, r.jsx)('span', {
             className: I.itemCheckbox,
             children: t
         });
     }),
-    (R.Checkbox = function (e) {
+    (v.Checkbox = function (e) {
         let { checked: t } = e,
             { selected: n } = i.useContext(N),
-            a = i.useContext(v);
+            a = i.useContext(R);
         return (0, r.jsx)('span', {
             className: I.itemCheckbox,
             children: (0, r.jsx)(u.X, {
@@ -253,9 +253,9 @@ function R(e) {
             })
         });
     }),
-    (R.Checkmark = function () {
+    (v.Checkmark = function () {
         let { selected: e } = i.useContext(N),
-            t = i.useContext(v);
+            t = i.useContext(R);
         return e.has(t)
             ? (0, r.jsx)('span', {
                   className: I.itemCheckbox,

@@ -205,8 +205,8 @@ let A = d(
                 )
         }),
     O = N(I(g)),
-    v = (e, t) => I((n) => T(n) && e <= n && t >= n),
-    R = (e) => I((t) => T(t) && t < e),
+    R = (e, t) => I((n) => T(n) && e <= n && t >= n),
+    v = (e) => I((t) => T(t) && t < e),
     C = (e) => I((t) => T(t) && t > e),
     y = (e) => I((t) => T(t) && t <= e),
     D = (e) => I((t) => T(t) && t >= e),
@@ -216,8 +216,8 @@ let A = d(
     P = () => I((e) => T(e) && e < 0),
     U = (e) =>
         Object.assign(d(e), {
-            between: (t, n) => U(h(e, v(t, n))),
-            lt: (t) => U(h(e, R(t))),
+            between: (t, n) => U(h(e, R(t, n))),
+            lt: (t) => U(h(e, v(t))),
             gt: (t) => U(h(e, C(t))),
             lte: (t) => U(h(e, y(t))),
             gte: (t) => U(h(e, D(t))),
@@ -381,8 +381,8 @@ var z = {
     any: A,
     _: A,
     string: O,
-    between: v,
-    lt: R,
+    between: R,
+    lt: v,
     gt: C,
     lte: y,
     gte: D,

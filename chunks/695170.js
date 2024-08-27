@@ -24,7 +24,7 @@ n.d(t, {
         return s;
     },
     ZY: function () {
-        return R;
+        return v;
     },
     d9: function () {
         return g;
@@ -115,11 +115,11 @@ var r = n(686942),
         if (!t) throw Error('Invalid UNTIL value: '.concat(e));
         return new Date(Date.UTC(parseInt(t[1], 10), parseInt(t[2], 10) - 1, parseInt(t[3], 10), parseInt(t[5], 10) || 0, parseInt(t[6], 10) || 0, parseInt(t[7], 10) || 0));
     },
-    v = function (e, t) {
+    R = function (e, t) {
         return e.toLocaleString('sv-SE', { timeZone: t }).replace(' ', 'T') + 'Z';
     },
-    R = function (e, t) {
-        var n = new Date(v(e, Intl.DateTimeFormat().resolvedOptions().timeZone)),
-            r = new Date(v(e, null != t ? t : 'UTC')).getTime() - n.getTime();
+    v = function (e, t) {
+        var n = new Date(R(e, Intl.DateTimeFormat().resolvedOptions().timeZone)),
+            r = new Date(R(e, null != t ? t : 'UTC')).getTime() - n.getTime();
         return new Date(e.getTime() - r);
     };

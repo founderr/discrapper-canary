@@ -1,7 +1,7 @@
 n(47120);
 var r = n(735250),
     i = n(470079),
-    a = n(338545),
+    a = n(567526),
     s = n(91192),
     o = n(442837),
     l = n(780384),
@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(617136),
     N = n(113434),
     O = n(497505),
-    v = n(918701),
-    R = n(602667),
+    R = n(918701),
+    v = n(602667),
     C = n(644646),
     y = n(667105),
     D = n(341907),
@@ -176,7 +176,7 @@ t.Z = function (e) {
                           handleClickCta: es,
                           tileAssetType: 'game'
                       };
-    return (0, r.jsx)(R.A, {
+    return (0, r.jsx)(v.A, {
         questOrQuests: T,
         questContent: O.jn.MEMBERS_LIST,
         trackGuildAndChannelMetadata: !0,
@@ -254,7 +254,7 @@ t.Z = function (e) {
                                                         gamePublisher: T.config.messages.gamePublisher
                                                     }),
                                                     className: U.assetTile,
-                                                    src: (0, v.uo)(T, K)
+                                                    src: (0, R.uo)(T, K)
                                                 }),
                                             'reward' === eu.tileAssetType &&
                                                 (0, r.jsx)(C.Z, {

@@ -147,9 +147,9 @@ var t, n;
                     return N[e];
                 });
             },
-            v = /\\([^0-9A-Za-z\s])/g,
-            R = function (e) {
-                return e.replace(v, '$1');
+            R = /\\([^0-9A-Za-z\s])/g,
+            v = function (e) {
+                return e.replace(R, '$1');
             },
             C = function (e, t, n) {
                 var r = n.inline || !1;
@@ -648,7 +648,7 @@ var t, n;
                     parse: function (e, t, n) {
                         return {
                             content: t(e[1], n),
-                            target: R(e[2]),
+                            target: v(e[2]),
                             title: e[3]
                         };
                     },
@@ -673,7 +673,7 @@ var t, n;
                     parse: function (e, t, n) {
                         return {
                             alt: e[1],
-                            target: R(e[2]),
+                            target: v(e[2]),
                             title: e[3]
                         };
                     },
@@ -877,7 +877,7 @@ var t, n;
             preprocess: d,
             sanitizeText: O,
             sanitizeUrl: S,
-            unescapeUrl: R,
+            unescapeUrl: v,
             htmlTag: T,
             reactElement: m,
             defaultRawParse: z,

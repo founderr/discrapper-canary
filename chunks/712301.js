@@ -34,13 +34,13 @@ function A(e, n) {
             [n, e.id]
         );
     if ((0, r.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == A) return null;
-    let C = e.id === d.default.getId();
-    if (!C && !M.Z.can(R.Plq.MOVE_MEMBERS, A)) return null;
-    let O = l.filter((n) => {
+    let O = e.id === d.default.getId();
+    if (!O && !M.Z.can(R.Plq.MOVE_MEMBERS, A)) return null;
+    let C = l.filter((n) => {
         let { channel: l } = n;
         return (
             l.id !== A.id &&
-            (C
+            (O
                 ? M.Z.can(R.Plq.CONNECT, l) && !(0, I.rY)(l, g.Z, E.Z)
                 : M.Z.can(R.Plq.MOVE_MEMBERS, l) &&
                   (M.Z.can(R.Plq.CONNECT, l) ||
@@ -52,12 +52,12 @@ function A(e, n) {
                   !(0, I.rY)(l, g.Z, E.Z))
         );
     });
-    return 0 === O.length
+    return 0 === C.length
         ? null
         : (0, t.jsx)(i.MenuItem, {
               id: 'voice-move',
               label: N.Z.Messages.MOVE_TO,
-              children: O.map((l) => {
+              children: C.map((l) => {
                   let { channel: r } = l;
                   return (0, t.jsx)(
                       i.MenuItem,

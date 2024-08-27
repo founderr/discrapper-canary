@@ -25,8 +25,8 @@ var r = n(735250),
     S = n(531578),
     A = n(375459);
 function N(e) {
-    let { summary: t, channel: _, members: T, guildId: N, unread: O, onClick: v } = e,
-        [R, C] = i.useState(!1),
+    let { summary: t, channel: _, members: T, guildId: N, unread: O, onClick: R } = e,
+        [v, C] = i.useState(!1),
         y = (0, c.Ye)(h.default.extractTimestamp(t.startId)),
         D = (0, a.e7)([p.Z], () => p.Z.summaryFeedback(t)),
         L = (e, n) => {
@@ -40,7 +40,7 @@ function N(e) {
         b = d.Z.can(g.Plq.MANAGE_MESSAGES, _);
     return (0, r.jsxs)(s.Clickable, {
         className: A.container,
-        onClick: v,
+        onClick: R,
         onContextMenu: (e) => {
             b &&
                 (0, o.jW)(e, async () => {
@@ -56,7 +56,7 @@ function N(e) {
         onMouseLeave: () => C(!1),
         children: [
             (0, r.jsx)(u.Z, {
-                hovered: R,
+                hovered: v,
                 unread: O,
                 className: A.unreadPill
             }),
@@ -111,7 +111,7 @@ function N(e) {
                     ]
                 })
             }),
-            R &&
+            v &&
                 !D &&
                 (0, r.jsxs)('div', {
                     className: A.feedbackContainer,

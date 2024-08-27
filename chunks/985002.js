@@ -13,13 +13,13 @@ function o(e) {
     let { onError: t, onSuccess: n } = null != e ? e : {},
         [o, c] = s.useState(!1),
         [d, _] = s.useState(!1),
-        [u, E] = s.useState(!1),
+        [E, u] = s.useState(!1),
         [T, I] = s.useState(!1),
         [R, C] = s.useState(!1),
         [g, N] = s.useState(!1),
         [p, A] = s.useState(!1),
         [m, f] = s.useState(!1),
-        S = o || d || u || T || g || m,
+        S = o || d || E || T || g || m,
         h = s.useCallback(
             async (e) => {
                 if (!S) {
@@ -55,14 +55,14 @@ function o(e) {
         x = s.useCallback(
             async (e) => {
                 if (!S) {
-                    E(!0);
+                    u(!0);
                     try {
                         await (0, r.Yw)(e.id, l.ne.INACTIVE), null == n || n();
                     } catch (n) {
                         let e = new a.Hx(n);
                         null == t || t(e);
                     } finally {
-                        E(!1);
+                        u(!1);
                     }
                 }
             },
@@ -159,7 +159,7 @@ function o(e) {
         ),
         isAcceptLoading: o,
         isDeclineLoading: d,
-        isDisconnectLoading: u,
+        isDisconnectLoading: E,
         isCancelLoading: T,
         isGetLinkCodeLoading: R,
         isSelectTeenUserLoading: p,

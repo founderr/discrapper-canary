@@ -34,8 +34,8 @@ var r,
     A = n(885110),
     N = n(594174),
     O = n(981631),
-    v = n(689938);
-function R(e, t, n) {
+    R = n(689938);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -62,11 +62,11 @@ function D(e, t, n, r) {
                 get title() {
                     switch (t) {
                         case O.Skl.ONLINE:
-                            return v.Z.Messages.STATUS_ONLINE;
+                            return R.Z.Messages.STATUS_ONLINE;
                         case O.Skl.OFFLINE:
-                            return v.Z.Messages.STATUS_OFFLINE;
+                            return R.Z.Messages.STATUS_OFFLINE;
                         default:
-                            return v.Z.Messages.STATUS_UNKNOWN;
+                            return R.Z.Messages.STATUS_UNKNOWN;
                     }
                 },
                 count: n,
@@ -195,7 +195,7 @@ class M {
         }
     }
     constructor(e, t) {
-        R(this, 'guildId', void 0), R(this, 'listId', void 0), R(this, 'ownerId', void 0), R(this, 'rows', []), R(this, 'groups', []), R(this, 'members', {}), R(this, 'version', 0), (this.guildId = e), (this.listId = t), this.updateOwnerId();
+        v(this, 'guildId', void 0), v(this, 'listId', void 0), v(this, 'ownerId', void 0), v(this, 'rows', []), v(this, 'groups', []), v(this, 'members', {}), v(this, 'version', 0), (this.guildId = e), (this.listId = t), this.updateOwnerId();
     }
 }
 let P = new (class e {
@@ -232,7 +232,7 @@ let P = new (class e {
         this._guildLists = {};
     }
     constructor() {
-        R(this, '_guildLists', {});
+        v(this, '_guildLists', {});
     }
 })();
 function U() {
@@ -268,7 +268,7 @@ class k extends (i = d.ZP.Store) {
         return P.get(e, b(t)).rows;
     }
 }
-R(k, 'displayName', 'ChannelMemberStore'),
+v(k, 'displayName', 'ChannelMemberStore'),
     (t.ZP = new k(_.Z, {
         CONNECTION_OPEN: U,
         OVERLAY_INITIALIZE: U,

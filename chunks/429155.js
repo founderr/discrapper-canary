@@ -7,8 +7,8 @@ var r = n(735250),
     l = n(98528),
     u = n(653248);
 let c = i.forwardRef(function (e, t) {
-    let { categories: n, store: c, hasSearchResults: d, listPadding: _, renderRow: E, renderSection: f, renderSectionHeader: h, renderSectionFooter: p, renderInspector: I, renderEmptySearchState: m, rowCount: T, rowCountBySection: g, rowHeight: S, sectionHeaderHeight: A, sectionFooterHeight: N, renderUpsell: O, setShowUpsell: v } = e,
-        R = i.useRef(!1),
+    let { categories: n, store: c, hasSearchResults: d, listPadding: _, renderRow: E, renderSection: f, renderSectionHeader: h, renderSectionFooter: p, renderInspector: I, renderEmptySearchState: m, rowCount: T, rowCountBySection: g, rowHeight: S, sectionHeaderHeight: A, sectionFooterHeight: N, renderUpsell: O, setShowUpsell: R } = e,
+        v = i.useRef(!1),
         C = i.useRef(null),
         y = (0, o.Iu)((e) => e.searchQuery),
         D = c.useStore((e) => e.activeCategoryIndex),
@@ -17,11 +17,11 @@ let c = i.forwardRef(function (e, t) {
             listRef: C,
             searchQuery: y,
             nitroLockedSectionStates: L,
-            setShowUpsell: v
+            setShowUpsell: R
         }),
         M = (0, l.Qs)({
             activeCategoryIndex: D,
-            isScrolling: R,
+            isScrolling: v,
             listRef: C,
             onActiveCategoryIndexChange: c.setActiveCategoryIndex,
             scrollOffset: 20,

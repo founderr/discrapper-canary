@@ -96,14 +96,14 @@ function o(e) {
             },
             [p]
         ),
-        v = r.useCallback(() => {
+        R = r.useCallback(() => {
             E({
                 type: i.B.SET_FOCUS_PATH,
                 path: []
             }),
                 I(!1);
         }, []),
-        R = r.useCallback((e) => e.every((e, t) => h[t] === e), [h]),
+        v = r.useCallback((e) => e.every((e, t) => h[t] === e), [h]),
         C = r.useCallback(
             () => ({
                 role: 'menu',
@@ -112,10 +112,10 @@ function o(e) {
                 onKeyDown: A,
                 onFocus: N,
                 onBlur: O,
-                onMouseLeave: v,
+                onMouseLeave: R,
                 'aria-activedescendant': h.length > 0 ? (0, s.qR)(t, h.join('--')) : void 0
             }),
-            [t, A, N, O, v, h]
+            [t, A, N, O, R, h]
         ),
         y = r.useCallback(
             (e) => {
@@ -123,12 +123,12 @@ function o(e) {
                 return {
                     role: 'menu',
                     tabIndex: -1,
-                    'aria-activedescendant': R(n) ? (0, s.qR)(t, h.join('--')) : void 0,
+                    'aria-activedescendant': v(n) ? (0, s.qR)(t, h.join('--')) : void 0,
                     focusIndex: _.focusIndex,
                     isUsingKeyboardNavigation: m
                 };
             },
-            [t, h, R, _.focusIndex, m]
+            [t, h, v, _.focusIndex, m]
         ),
         D = r.useCallback(
             (e) => {
@@ -137,7 +137,7 @@ function o(e) {
                 return {
                     ...(r
                         ? {
-                              'aria-expanded': R(n),
+                              'aria-expanded': v(n),
                               'aria-haspopup': !0
                           }
                         : {}),
@@ -148,7 +148,7 @@ function o(e) {
                     onMouseEnter: i ? S.get(o) : () => {}
                 };
             },
-            [t, R, g, S]
+            [t, v, g, S]
         );
     return r.useMemo(
         () => ({
@@ -156,9 +156,9 @@ function o(e) {
             getContainerProps: C,
             getSubmenuProps: y,
             getItemProps: D,
-            isFocused: R,
+            isFocused: v,
             isUsingKeyboardNavigation: m
         }),
-        [f, C, y, D, R, m]
+        [f, C, y, D, v, m]
     );
 }

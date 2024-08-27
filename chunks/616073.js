@@ -3,13 +3,13 @@ n.d(t, {
         return T;
     },
     L0: function () {
-        return R;
+        return v;
     },
     Ux: function () {
         return N;
     },
     Xe: function () {
-        return v;
+        return R;
     },
     aQ: function () {
         return S;
@@ -111,7 +111,7 @@ function N(e = {}) {
     return (0, r.useMemo)(() => new l.e(t, e), [t, e]);
 }
 let O = new Map();
-function v(e) {
+function R(e) {
     let { locale: t } = I(),
         n =
             t +
@@ -124,8 +124,8 @@ function v(e) {
     let r = new Intl.Collator(t, e);
     return O.set(n, r), r;
 }
-function R(e) {
-    let t = v({
+function v(e) {
+    let t = R({
             usage: 'search',
             ...e
         }),

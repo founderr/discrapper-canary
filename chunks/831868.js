@@ -37,10 +37,10 @@ function N(e, t) {
 function O(e, t, n) {
     e.bi_valid > 16 - n ? ((e.bi_buf |= (t << e.bi_valid) & 65535), N(e, e.bi_buf), (e.bi_buf = t >> (16 - e.bi_valid)), (e.bi_valid += n - 16)) : ((e.bi_buf |= (t << e.bi_valid) & 65535), (e.bi_valid += n));
 }
-function v(e, t, n) {
+function R(e, t, n) {
     O(e, n[2 * t], n[2 * t + 1]);
 }
-function R(e, t) {
+function v(e, t) {
     var n = 0;
     do (n |= 1 & e), (e >>>= 1), (n <<= 1);
     while (--t > 0);
@@ -55,7 +55,7 @@ function C(e, t, n) {
     for (r = 1; r <= 15; r++) a[r] = s = (s + n[r - 1]) << 1;
     for (i = 0; i <= t; i++) {
         var o = e[2 * i + 1];
-        if (0 !== o) e[2 * i] = R(a[o]++, o);
+        if (0 !== o) e[2 * i] = v(a[o]++, o);
     }
 }
 function y(e) {
@@ -86,9 +86,9 @@ function M(e, t, n) {
         s,
         o = 0;
     if (0 !== e.last_lit)
-        do (r = (e.pending_buf[e.d_buf + 2 * o] << 8) | e.pending_buf[e.d_buf + 2 * o + 1]), (i = e.pending_buf[e.l_buf + o]), o++, 0 === r ? v(e, i, t) : (v(e, (a = I[i]) + 256 + 1, t), 0 !== (s = c[a]) && O(e, (i -= m[a]), s), v(e, (a = A(--r)), n), 0 !== (s = d[a]) && O(e, (r -= T[a]), s));
+        do (r = (e.pending_buf[e.d_buf + 2 * o] << 8) | e.pending_buf[e.d_buf + 2 * o + 1]), (i = e.pending_buf[e.l_buf + o]), o++, 0 === r ? R(e, i, t) : (R(e, (a = I[i]) + 256 + 1, t), 0 !== (s = c[a]) && O(e, (i -= m[a]), s), R(e, (a = A(--r)), n), 0 !== (s = d[a]) && O(e, (r -= T[a]), s));
         while (o < e.last_lit);
-    v(e, 256, t);
+    R(e, 256, t);
 }
 function P(e, t) {
     var n,
@@ -164,9 +164,9 @@ function w(e, t, n) {
     for (0 === s && ((l = 138), (u = 3)), r = 0; r <= n; r++) {
         if (((i = s), (s = t[(r + 1) * 2 + 1]), !(++o < l) || i !== s)) {
             if (o < u)
-                do v(e, i, e.bl_tree);
+                do R(e, i, e.bl_tree);
                 while (0 != --o);
-            else 0 !== i ? (i !== a && (v(e, i, e.bl_tree), o--), v(e, 16, e.bl_tree), O(e, o - 3, 2)) : o <= 10 ? (v(e, 17, e.bl_tree), O(e, o - 3, 3)) : (v(e, 18, e.bl_tree), O(e, o - 11, 7));
+            else 0 !== i ? (i !== a && (R(e, i, e.bl_tree), o--), R(e, 16, e.bl_tree), O(e, o - 3, 2)) : o <= 10 ? (R(e, 17, e.bl_tree), O(e, o - 3, 3)) : (R(e, 18, e.bl_tree), O(e, o - 11, 7));
             (o = 0), (a = i), 0 === s ? ((l = 138), (u = 3)) : i === s ? ((l = 6), (u = 3)) : ((l = 7), (u = 4));
         }
     }
@@ -193,7 +193,7 @@ function G(e, t, n, r) {
             for (; e <= 255; ) (f[2 * e + 1] = 9), e++, u[9]++;
             for (; e <= 279; ) (f[2 * e + 1] = 7), e++, u[7]++;
             for (; e <= 287; ) (f[2 * e + 1] = 8), e++, u[8]++;
-            for (C(f, l + 1, u), e = 0; e < 30; e++) (h[2 * e + 1] = 5), (h[2 * e] = R(e, 5));
+            for (C(f, l + 1, u), e = 0; e < 30; e++) (h[2 * e + 1] = 5), (h[2 * e] = v(e, 5));
             (r = new g(f, c, 257, l, 15)), (i = new g(h, d, 0, 30, 15)), (a = new g([], _, 0, 19, 7));
         })(),
         (x = !0)),
@@ -248,5 +248,5 @@ function G(e, t, n, r) {
     }),
     (t._tr_align = function (e) {
         var t;
-        O(e, 2, 3), v(e, 256, f), 16 === (t = e).bi_valid ? (N(t, t.bi_buf), (t.bi_buf = 0), (t.bi_valid = 0)) : t.bi_valid >= 8 && ((t.pending_buf[t.pending++] = 255 & t.bi_buf), (t.bi_buf >>= 8), (t.bi_valid -= 8));
+        O(e, 2, 3), R(e, 256, f), 16 === (t = e).bi_valid ? (N(t, t.bi_buf), (t.bi_buf = 0), (t.bi_valid = 0)) : t.bi_valid >= 8 && ((t.pending_buf[t.pending++] = 255 & t.bi_buf), (t.bi_buf >>= 8), (t.bi_valid -= 8));
     });

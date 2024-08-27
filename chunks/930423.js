@@ -25,8 +25,8 @@ var r = n(939421),
     A = n(376425),
     N = n(334268),
     O = n(543659),
-    v = n(927105),
-    R = n(635311),
+    R = n(927105),
+    v = n(635311),
     C = n(705665),
     y = n(517898),
     D = n(694147),
@@ -49,7 +49,7 @@ function j(e, t, n) {
     var r;
     let i,
         { id: a, decrementAriaLabel: s, incrementAriaLabel: o, isDisabled: l, isReadOnly: u, isRequired: c, minValue: d, maxValue: _, autoFocus: E, label: f, formatOptions: h, onBlur: p = () => {}, onFocus: I, onFocusChange: m, onKeyDown: T, onKeyUp: g, description: S, errorMessage: A, ...N } = e,
-        { increment: O, incrementToMax: v, decrement: R, decrementToMin: C, numberValue: y, inputValue: D, commit: L, commitValidation: b } = t;
+        { increment: O, incrementToMax: R, decrement: v, decrementToMin: C, numberValue: y, inputValue: D, commit: L, commitValidation: b } = t;
     let M = (0, H.qb)((r = Y) && r.__esModule ? r.default : r, '@react-aria/numberfield'),
         P = (0, G.Me)(a),
         { focusProps: U } = (0, F.KK)({
@@ -75,8 +75,8 @@ function j(e, t, n) {
             maxValue: _,
             minValue: d,
             onIncrement: O,
-            onIncrementToMax: v,
-            onDecrement: R,
+            onIncrementToMax: R,
+            onDecrement: v,
             onDecrementToMin: C,
             value: y,
             textValue: W
@@ -88,9 +88,9 @@ function j(e, t, n) {
         }),
         J = (0, k.useCallback)(
             (e) => {
-                !(Math.abs(e.deltaY) <= Math.abs(e.deltaX)) && (e.deltaY > 0 ? O() : e.deltaY < 0 && R());
+                !(Math.abs(e.deltaY) <= Math.abs(e.deltaX)) && (e.deltaY > 0 ? O() : e.deltaY < 0 && v());
             },
-            [R, O]
+            [v, O]
         ),
         ee = l || u || !Q;
     (0, F.y0)(
@@ -233,8 +233,8 @@ Y = {
     'nb-NO': A.Z,
     'nl-NL': N.Z,
     'pl-PL': O.Z,
-    'pt-BR': v.Z,
-    'pt-PT': R.Z,
+    'pt-BR': R.Z,
+    'pt-PT': v.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
     'sk-SK': D.Z,

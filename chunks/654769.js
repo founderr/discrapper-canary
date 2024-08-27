@@ -79,12 +79,12 @@ m &&
 function O() {
     return null != N && 'granted' === N.permission;
 }
-function v(e) {
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
         n = arguments.length > 2 ? arguments[2] : void 0;
     e.includes('message') ? S(e, t, void 0, n) : (0, E.GN)(e, t);
 }
-function R(e) {
+function v(e) {
     return (c.Z.disableNotifications && null == e.overrideStreamerMode) || !O() || (_.isPlatformEmbedded && !f.ZP.shouldDisplayNotifications());
 }
 t.Z = {
@@ -98,11 +98,11 @@ t.Z = {
     showNotification: function (e, t, n, r, i) {
         var s, o, l, c;
         let E;
-        if (R(i)) {
-            null != i.sound && !1 !== i.playSoundIfDisabled && v(i.sound, null !== (o = i.volume) && void 0 !== o ? o : 1, i.soundpack);
+        if (v(i)) {
+            null != i.sound && !1 !== i.playSoundIfDisabled && R(i.sound, null !== (o = i.volume) && void 0 !== o ? o : 1, i.soundpack);
             return;
         }
-        null != i.sound && v(i.sound, null !== (l = i.volume) && void 0 !== l ? l : 1, i.soundpack);
+        null != i.sound && R(i.sound, null !== (l = i.volume) && void 0 !== l ? l : 1, i.soundpack);
         let p = null !== (c = null == i ? void 0 : i.tag) && void 0 !== c ? c : null;
         (0, _.isLinux)() && (n = a().escape(n));
         let m = {
@@ -133,5 +133,5 @@ t.Z = {
                   }
               };
     },
-    disabled: R
+    disabled: v
 };

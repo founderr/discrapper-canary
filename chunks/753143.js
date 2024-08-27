@@ -34,18 +34,18 @@ function l(e) {
             forceUpdate: I
         }),
         { items: O } = m.current,
-        v = null,
-        { scrollTop: R } = h();
+        R = null,
+        { scrollTop: v } = h();
     for (let e of O) {
-        if (0 === R) break;
+        if (0 === v) break;
         if ('footer' === e.type || 'header' === e.type || null == e.anchorId) continue;
         let t = 'row' === e.type ? e.row : void 0;
-        if (e.offsetTop >= R) {
-            v = {
+        if (e.offsetTop >= v) {
+            R = {
                 id: e.anchorId,
                 section: e.section,
                 row: t,
-                scrollOffset: e.offsetTop - R
+                scrollOffset: e.offsetTop - v
             };
             break;
         }
@@ -77,7 +77,7 @@ function l(e) {
             ...y,
             listComputer: T,
             forceUpdateOnChunkChange: N,
-            anchor: v,
+            anchor: R,
             isSidebarVisible: C
         }
     );

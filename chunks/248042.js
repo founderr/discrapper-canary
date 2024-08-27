@@ -34,8 +34,8 @@ var r = n(913527),
     A = n(1844),
     N = n(474936),
     O = n(981631),
-    v = n(689938);
-function R(e) {
+    R = n(689938);
+function v(e) {
     var t, n, r;
     let { experimentEnabled: a, premiumSubscription: s, mostRecentSubscription: o } = e,
         l = !1,
@@ -75,7 +75,7 @@ function C() {
         disable: g
     });
     let A =
-            !R({
+            !v({
                 experimentEnabled: r,
                 premiumSubscription: s,
                 mostRecentSubscription: i
@@ -104,7 +104,7 @@ async function y() {
     if ((d.Z.shouldFetchOffer() && !(0, _.I5)(t) && (await (0, E.T)('BogoPromotionUtils')), d.Z.hasFetchedOffer() && (d.Z.hasAnyUnexpiredOffer() || d.Z.hasAnyUnexpiredDiscountOffer()))) return !1;
     !c.ZP.hasFetchedMostRecentPremiumTypeSubscription() && (null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasHadSKU(N.Si.TIER_2)) && (await (0, s.ou)()), !c.ZP.hasFetchedSubscriptions() && (await (0, s.jg)());
     let l = c.ZP.getMostRecentPremiumTypeSubscription();
-    return !R({
+    return !v({
         experimentEnabled: i,
         premiumSubscription: c.ZP.getPremiumTypeSubscription(),
         mostRecentSubscription: l
@@ -145,8 +145,8 @@ function b() {
         case 'uk':
         case 'ja':
         case 'ko':
-            return v.Z.Messages.NITRO_BADGE_TEXT;
+            return R.Z.Messages.NITRO_BADGE_TEXT;
         default:
-            return v.Z.Messages.BOGO_PILL;
+            return R.Z.Messages.BOGO_PILL;
     }
 }

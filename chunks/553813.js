@@ -276,22 +276,22 @@ function O(e, t) {
         e = e.value;
     }
     if (!(this instanceof O)) return new O(e, t);
-    r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === v ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
+    r('comparator', e, t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === R ? (this.value = '') : (this.value = this.operator + this.semver.version), r('comp', this);
 }
 (t.gt = I), (t.lt = m), (t.eq = T), (t.neq = g), (t.gte = S), (t.lte = A), (t.cmp = N), (t.Comparator = O);
-var v = {};
-function R(e, t) {
+var R = {};
+function v(e, t) {
     if (
         ((!t || 'object' != typeof t) &&
             (t = {
                 loose: !!t,
                 includePrerelease: !1
             }),
-        e instanceof R)
+        e instanceof v)
     )
-        return !!t.loose === e.loose && !!t.includePrerelease === e.includePrerelease ? e : new R(e.raw, t);
-    if (e instanceof O) return new R(e.value, t);
-    if (!(this instanceof R)) return new R(e, t);
+        return !!t.loose === e.loose && !!t.includePrerelease === e.includePrerelease ? e : new v(e.raw, t);
+    if (e instanceof O) return new v(e.value, t);
+    if (!(this instanceof v)) return new v(e, t);
     if (
         ((this.options = t),
         (this.loose = !!t.loose),
@@ -322,13 +322,13 @@ function C(e, t) {
     var t = this.options.loose ? s[l.COMPARATORLOOSE] : s[l.COMPARATOR],
         n = e.match(t);
     if (!n) throw TypeError('Invalid comparator: ' + e);
-    (this.operator = void 0 !== n[1] ? n[1] : ''), '=' === this.operator && (this.operator = ''), n[2] ? (this.semver = new E(n[2], this.options.loose)) : (this.semver = v);
+    (this.operator = void 0 !== n[1] ? n[1] : ''), '=' === this.operator && (this.operator = ''), n[2] ? (this.semver = new E(n[2], this.options.loose)) : (this.semver = R);
 }),
     (O.prototype.toString = function () {
         return this.value;
     }),
     (O.prototype.test = function (e) {
-        if ((r('Comparator.test', e, this.options.loose), this.semver === v || e === v)) return !0;
+        if ((r('Comparator.test', e, this.options.loose), this.semver === R || e === R)) return !0;
         if ('string' == typeof e)
             try {
                 e = new E(e, this.options);
@@ -347,8 +347,8 @@ function C(e, t) {
                 }),
             '' === this.operator)
         )
-            return '' === this.value || ((n = new R(e.value, t)), L(this.value, n, t));
-        if ('' === e.operator) return '' === e.value || ((n = new R(this.value, t)), L(e.semver, n, t));
+            return '' === this.value || ((n = new v(e.value, t)), L(this.value, n, t));
+        if ('' === e.operator) return '' === e.value || ((n = new v(this.value, t)), L(e.semver, n, t));
         var n,
             r = ('>=' === this.operator || '>' === this.operator) && ('>=' === e.operator || '>' === e.operator),
             i = ('<=' === this.operator || '<' === this.operator) && ('<=' === e.operator || '<' === e.operator),
@@ -358,8 +358,8 @@ function C(e, t) {
             l = N(this.semver, '>', e.semver, t) && ('<=' === this.operator || '<' === this.operator) && ('>=' === e.operator || '>' === e.operator);
         return r || i || (a && s) || o || l;
     }),
-    (t.Range = R),
-    (R.prototype.format = function () {
+    (t.Range = v),
+    (v.prototype.format = function () {
         return (
             (this.range = this.set
                 .map(function (e) {
@@ -370,10 +370,10 @@ function C(e, t) {
             this.range
         );
     }),
-    (R.prototype.toString = function () {
+    (v.prototype.toString = function () {
         return this.range;
     }),
-    (R.prototype.parseRange = function (e) {
+    (v.prototype.parseRange = function (e) {
         var t = this.options.loose;
         e = e.trim();
         var n = t ? s[l.HYPHENRANGELOOSE] : s[l.HYPHENRANGE];
@@ -460,8 +460,8 @@ function C(e, t) {
             }, this))
         );
     }),
-    (R.prototype.intersects = function (e, t) {
-        if (!(e instanceof R)) throw TypeError('a Range is required');
+    (v.prototype.intersects = function (e, t) {
+        if (!(e instanceof v)) throw TypeError('a Range is required');
         return this.set.some(function (n) {
             return (
                 C(n, t) &&
@@ -479,7 +479,7 @@ function C(e, t) {
         });
     }),
     (t.toComparators = function (e, t) {
-        return new R(e, t).set.map(function (e) {
+        return new v(e, t).set.map(function (e) {
             return e
                 .map(function (e) {
                     return e.value;
@@ -495,7 +495,7 @@ function y(e) {
 function D(e, t, n, r, i, a, s, o, l, u, c, d, _) {
     return (t = y(n) ? '' : y(r) ? '>=' + n + '.0.0' : y(i) ? '>=' + n + '.' + r + '.0' : '>=' + t), (t + ' ' + (o = y(l) ? '' : y(u) ? '<' + (+l + 1) + '.0.0' : y(c) ? '<' + l + '.' + (+u + 1) + '.0' : d ? '<=' + l + '.' + u + '.' + c + '-' + d : '<=' + o)).trim();
 }
-R.prototype.test = function (e) {
+v.prototype.test = function (e) {
     if (!e) return !1;
     if ('string' == typeof e)
         try {
@@ -509,7 +509,7 @@ R.prototype.test = function (e) {
                 for (var i = 0; i < e.length; i++) if (!e[i].test(t)) return !1;
                 if (t.prerelease.length && !n.includePrerelease) {
                     for (i = 0; i < e.length; i++) {
-                        if ((r(e[i].semver), e[i].semver !== v)) {
+                        if ((r(e[i].semver), e[i].semver !== R)) {
                             if (e[i].semver.prerelease.length > 0) {
                                 var a = e[i].semver;
                                 if (a.major === t.major && a.minor === t.minor && a.patch === t.patch) return !0;
@@ -526,7 +526,7 @@ R.prototype.test = function (e) {
 };
 function L(e, t, n) {
     try {
-        t = new R(t, n);
+        t = new v(t, n);
     } catch (e) {
         return !1;
     }
@@ -537,7 +537,7 @@ function L(e, t, n) {
         var r = null,
             i = null;
         try {
-            var a = new R(t, n);
+            var a = new v(t, n);
         } catch (e) {
             return null;
         }
@@ -552,7 +552,7 @@ t.minSatisfying = function (e, t, n) {
     var r = null,
         i = null;
     try {
-        var a = new R(t, n);
+        var a = new v(t, n);
     } catch (e) {
         return null;
     }
@@ -564,7 +564,7 @@ t.minSatisfying = function (e, t, n) {
     );
 };
 t.minVersion = function (e, t) {
-    e = new R(e, t);
+    e = new v(e, t);
     var n = new E('0.0.0');
     if (e.test(n)) return n;
     if (((n = new E('0.0.0-0')), e.test(n))) return n;
@@ -590,7 +590,7 @@ t.minVersion = function (e, t) {
 };
 t.validRange = function (e, t) {
     try {
-        return new R(e, t).range || '*';
+        return new v(e, t).range || '*';
     } catch (e) {
         return null;
     }
@@ -602,7 +602,7 @@ t.gtr = function (e, t, n) {
     return b(e, t, '>', n);
 };
 function b(e, t, n, r) {
-    switch (((e = new E(e, r)), (t = new R(t, r)), n)) {
+    switch (((e = new E(e, r)), (t = new v(t, r)), n)) {
         case '>':
             (i = I), (a = A), (s = m), (o = '>'), (l = '>=');
             break;
@@ -619,7 +619,7 @@ function b(e, t, n, r) {
             _ = null;
         if (
             (c.forEach(function (e) {
-                e.semver === v && (e = new O('>=0.0.0')), (d = d || e), (_ = _ || e), i(e.semver, d.semver, r) ? (d = e) : s(e.semver, _.semver, r) && (_ = e);
+                e.semver === R && (e = new O('>=0.0.0')), (d = d || e), (_ = _ || e), i(e.semver, d.semver, r) ? (d = e) : s(e.semver, _.semver, r) && (_ = e);
             }),
             d.operator === o || d.operator === l)
         )
@@ -635,7 +635,7 @@ function b(e, t, n, r) {
         return n && n.prerelease.length ? n.prerelease : null;
     });
 t.intersects = function (e, t, n) {
-    return (e = new R(e, n)), (t = new R(t, n)), e.intersects(t);
+    return (e = new v(e, n)), (t = new v(t, n)), e.intersects(t);
 };
 t.coerce = function (e, t) {
     if (e instanceof E) return e;

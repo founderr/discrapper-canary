@@ -1,13 +1,13 @@
 n.d(t, {
     Z: function () {
-        return c;
+        return o;
     }
 });
 var r = n(470079),
     a = n(626135),
     i = n(353250),
-    o = n(981631);
-function c(e) {
+    c = n(981631);
+function o(e) {
     let t = r.useRef(!0);
     return (
         r.useEffect(
@@ -18,9 +18,9 @@ function c(e) {
         ),
         r.useEffect(
             () => (
-                a.default.track(o.rMx.OPEN_MODAL, { type: 'Guild Join Captcha' }),
+                a.default.track(c.rMx.OPEN_MODAL, { type: 'Guild Join Captcha' }),
                 () => {
-                    t.current && a.default.track(o.rMx.MODAL_DISMISSED, { type: 'Guild Join Captcha' });
+                    t.current && a.default.track(c.rMx.MODAL_DISMISSED, { type: 'Guild Join Captcha' });
                 }
             ),
             [t]

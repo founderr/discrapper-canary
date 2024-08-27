@@ -3,7 +3,7 @@ n.d(t, {
         return _;
     },
     v: function () {
-        return u;
+        return E;
     }
 });
 var s = n(704215),
@@ -27,6 +27,6 @@ function _() {
             dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? s.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
         };
 }
-function u(e) {
+function E(e) {
     return (null == e ? void 0 : e.showNotification) === !0 && (0, o.rM)(e).some((e) => !(0, a.un)(e));
 }

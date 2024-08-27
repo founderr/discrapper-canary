@@ -31,8 +31,8 @@ var r = n(735250),
     A = n(594174),
     N = n(272008),
     O = n(497505),
-    v = n(918701),
-    R = n(566078),
+    R = n(918701),
+    v = n(566078),
     C = n(114732),
     y = n(46140),
     D = n(675654),
@@ -51,8 +51,8 @@ function U(e) {
         [m, T] = i.useState(null),
         g = i.useRef(new o.qA()),
         S = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
-        R = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
-        y = (0, v.j8)(l),
+        v = (0, u.e7)([A.default], () => A.default.getCurrentUser()),
+        y = (0, R.j8)(l),
         L = (null === (t = l.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
         [M, P] = i.useState(L ? 'claimed' : 'loading');
     i.useEffect(() => {
@@ -61,7 +61,7 @@ function U(e) {
                 .then(() => P('claimed'))
                 .catch(() => P('error'));
     }, [l, d, L]);
-    let U = null == R || null == f || 'loading' === M;
+    let U = null == v || null == f || 'loading' === M;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.O_, {
@@ -82,7 +82,7 @@ function U(e) {
                           ? (0, r.jsx)(C.Z, { onClose: a })
                           : (0, r.jsx)(w, {
                                 quest: l,
-                                user: R,
+                                user: v,
                                 primaryColor: l.config.colors.primary,
                                 secondaryColor: l.config.colors.secondary,
                                 decoration: f,
@@ -110,9 +110,9 @@ function U(e) {
 }
 function w(e) {
     let { quest: t, user: n, decoration: i, decorationName: a, primaryColor: s, secondaryColor: o, backgroundUrl: l, isSaving: u, onClose: d, onConfirm: _ } = e,
-        E = (0, v.zK)(t, y.S7.IN_HOUSE_CONSOLE_QUEST),
-        h = R.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[O.y$.CROSS_PLATFORM],
-        p = (0, v.Kr)(t.config),
+        E = (0, R.zK)(t, y.S7.IN_HOUSE_CONSOLE_QUEST),
+        h = v.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[O.y$.CROSS_PLATFORM],
+        p = (0, R.Kr)(t.config),
         T =
             null == p
                 ? L.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_BODY.format({ decorationName: a })
@@ -209,7 +209,7 @@ function w(e) {
 function x(e) {
     var t, n;
     let { quest: a, location: s, onClose: o, transitionState: u } = e,
-        c = i.useMemo(() => (0, v.xn)(a.config), [a]),
+        c = i.useMemo(() => (0, R.xn)(a.config), [a]),
         [_, f] = (function (e) {
             let { product: t, isFetching: n } = (0, h.T)(e),
                 {} = (0, g.Z)({}),
@@ -221,7 +221,7 @@ function x(e) {
             return [r, () => (null == r ? Promise.reject() : ((0, d.cV)(r), P()))];
         })(null !== (n = null == c ? void 0 : c.skuId) && void 0 !== n ? n : null);
     if (null == c) return null;
-    let p = (0, v.zK)(a, y.S7.IN_HOUSE_CONSOLE_QUEST);
+    let p = (0, R.zK)(a, y.S7.IN_HOUSE_CONSOLE_QUEST);
     return (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null || p
         ? (0, r.jsx)(U, {
               onClose: o,

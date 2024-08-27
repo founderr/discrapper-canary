@@ -27,8 +27,8 @@ var r = n(735250),
     A = n(818611),
     N = n(981631),
     O = n(474936),
-    v = n(689938),
-    R = n(801802);
+    R = n(689938),
+    v = n(801802);
 function C(e) {
     let { user: t, categories: n, purchases: a, analyticsLocations: s, onClose: u, initialSelectedDecoration: E, initialSelectedDecorationId: I, isTryItOutFlow: m, guild: N } = e,
         {
@@ -69,20 +69,20 @@ function C(e) {
         children: [
             (0, r.jsxs)(o.ModalHeader, {
                 separator: !1,
-                className: R.modalHeader,
+                className: v.modalHeader,
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: 'heading-lg/semibold',
-                        children: v.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+                        children: R.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
                     }),
                     (0, r.jsx)(o.ModalCloseButton, {
-                        className: R.modalCloseButton,
+                        className: v.modalCloseButton,
                         onClick: u
                     })
                 ]
             }),
             (0, r.jsxs)(o.ModalContent, {
-                className: R.modalContent,
+                className: v.modalContent,
                 scrollbarType: 'none',
                 children: [
                     (0, r.jsx)(A.Z, {
@@ -96,7 +96,7 @@ function C(e) {
                         onOpenShop: B
                     }),
                     (0, r.jsx)(S.Z, {
-                        className: R.modalPreview,
+                        className: v.modalPreview,
                         user: t,
                         guildId: null == N ? void 0 : N.id,
                         avatarDecorationOverride: L
@@ -104,29 +104,29 @@ function C(e) {
                 ]
             }),
             (0, r.jsxs)(o.ModalFooter, {
-                className: R.modalFooter,
+                className: v.modalFooter,
                 children: [
                     (null != P && (!(0, d.qS)(P) || U)) || null === L
                         ? (0, r.jsx)(o.Button, {
                               onClick: k,
                               disabled: G,
-                              children: v.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
+                              children: R.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
                           })
                         : null == P && (U || !(0, d.G1)(M))
                           ? (0, r.jsx)(o.Button, {
-                                className: R.modalFooterShopButton,
+                                className: v.modalFooterShopButton,
                                 onClick: () => B(null == M ? void 0 : M.skuId),
-                                children: v.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+                                children: R.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                             })
                           : (0, r.jsx)(h.Z, {
                                 subscriptionTier: O.Si.TIER_2,
-                                buttonText: T.ZP.isPremium(t) ? v.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : v.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+                                buttonText: T.ZP.isPremium(t) ? R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
                             }),
                     (0, r.jsx)(o.Button, {
                         look: o.Button.Looks.LINK,
                         color: o.Button.Colors.PRIMARY,
                         onClick: u,
-                        children: v.Z.Messages.CANCEL
+                        children: R.Z.Messages.CANCEL
                     })
                 ]
             })
@@ -137,8 +137,8 @@ function y(e) {
     let { transitionState: t, analyticsLocations: n, onClose: d, onCloseModal: _, initialSelectedDecoration: f, initialSelectedDecorationId: h, isTryItOutFlow: p, guild: T } = e,
         g = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
         { analyticsLocations: S } = (0, u.ZP)(n, l.Z.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: A, purchases: O, isFetchingCategories: v, isFetchingPurchases: y } = (0, E.Z)(),
-        D = v || (y && 0 === O.size);
+        { categories: A, purchases: O, isFetchingCategories: R, isFetchingPurchases: y } = (0, E.Z)(),
+        D = R || (y && 0 === O.size);
     return (
         i.useEffect(() => {
             m.default.track(N.rMx.OPEN_MODAL, {
@@ -161,11 +161,11 @@ function y(e) {
                   value: S,
                   children: (0, r.jsx)(o.ModalRoot, {
                       transitionState: t,
-                      className: R.modal,
+                      className: v.modal,
                       size: D ? o.ModalSize.DYNAMIC : o.ModalSize.MEDIUM,
                       children: D
                           ? (0, r.jsx)(o.Spinner, {
-                                className: R.spinner,
+                                className: v.spinner,
                                 type: o.Spinner.Type.SPINNING_CIRCLE
                             })
                           : (0, r.jsx)(C, {

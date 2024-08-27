@@ -1,8 +1,8 @@
 t.r(n);
 var s = t(735250);
 t(470079);
-var i = t(481060),
-    l = t(239091),
+var l = t(481060),
+    i = t(239091),
     a = t(883385),
     o = t(108843),
     u = t(947440),
@@ -20,63 +20,63 @@ var i = t(481060),
     I = t(725119),
     T = t(700994),
     m = t(332031),
-    S = t(981631),
+    O = t(981631),
     C = t(689938);
 n.default = (0, o.Z)(
     (0, a.Z)(
         function (e) {
-            let { user: n, guildId: t, channelId: a, showMediaItems: o = !1, mediaEngineContext: d, onSelect: S } = e,
-                O = (0, I.Z)({
+            let { user: n, guildId: t, channelId: a, showMediaItems: o = !1, mediaEngineContext: d, onSelect: O } = e,
+                S = (0, I.Z)({
                     userId: n.id,
                     guildId: t,
                     channelId: a
                 }),
-                v = (0, N.Z)(n.id),
-                U = (0, f.Z)({ user: n }),
-                x = (0, M.Z)({
+                U = (0, N.Z)(n.id),
+                v = (0, f.Z)({ user: n }),
+                D = (0, M.Z)({
                     user: n,
                     guildId: t,
                     channelId: a
                 }),
-                D = (0, E.Z)({ user: n }),
+                x = (0, E.Z)({ user: n }),
                 b = (0, m.Z)(n.id),
                 L = (0, T.Z)(n.id),
                 h = (0, A.Z)(n.id, d),
                 R = (0, g.Z)({ user: n }),
                 j = (0, u.Z)(null, n),
                 p = (0, Z.Z)(n),
-                V = (0, _.Z)({ user: n }),
-                k = (0, r.Z)({
+                k = (0, _.Z)({ user: n }),
+                V = (0, r.Z)({
                     id: n.id,
                     label: C.Z.Messages.COPY_ID_USER
                 }),
-                F = (0, c.Z)(n),
-                P = n.isNonUserBot();
-            return (0, s.jsxs)(i.Menu, {
+                P = (0, c.Z)(n),
+                F = n.isNonUserBot();
+            return (0, s.jsxs)(l.Menu, {
                 navId: 'user-context',
-                onClose: l.Zy,
+                onClose: i.Zy,
                 'aria-label': C.Z.Messages.USER_ACTIONS_MENU_LABEL,
-                onSelect: S,
+                onSelect: O,
                 children: [
-                    !P &&
+                    !F &&
                         (0, s.jsxs)(s.Fragment, {
                             children: [
-                                (0, s.jsx)(i.MenuGroup, { children: F }),
-                                (0, s.jsxs)(i.MenuGroup, {
-                                    children: [O, v, U, x, D, b]
+                                (0, s.jsx)(l.MenuGroup, { children: P }),
+                                (0, s.jsxs)(l.MenuGroup, {
+                                    children: [S, U, v, D, x, b]
                                 }),
-                                o && (0, s.jsx)(i.MenuGroup, { children: L }),
-                                (0, s.jsx)(i.MenuGroup, { children: j }),
-                                (0, s.jsxs)(i.MenuGroup, {
-                                    children: [o && h, R, p, V]
+                                o && (0, s.jsx)(l.MenuGroup, { children: L }),
+                                (0, s.jsx)(l.MenuGroup, { children: j }),
+                                (0, s.jsxs)(l.MenuGroup, {
+                                    children: [o && h, R, p, k]
                                 })
                             ]
                         }),
-                    (0, s.jsx)(i.MenuGroup, { children: k })
+                    (0, s.jsx)(l.MenuGroup, { children: V })
                 ]
             });
         },
-        { object: S.qAy.CONTEXT_MENU }
+        { object: O.qAy.CONTEXT_MENU }
     ),
     [d.Z.CONTEXT_MENU, d.Z.USER_GENERIC_MENU]
 );

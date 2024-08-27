@@ -21,11 +21,11 @@ var r = n(735250),
     A = n(981631),
     N = n(408860),
     O = n(594402);
-let v = [];
-function R(e) {
+let R = [];
+function v(e) {
     let { channelId: t, type: n } = e,
         a = (0, u.e7)([E.Z], () => E.Z.keyboardModeEnabled),
-        R = (0, f.Z)('attachments', l.hy.HORIZONTAL),
+        v = (0, f.Z)('attachments', l.hy.HORIZONTAL),
         C = (0, u.e7)([m.Z], () => m.Z.getUploads(t, n.drafts.type)),
         {
             isApplicationCommand: y,
@@ -36,7 +36,7 @@ function R(e) {
             if (null == e)
                 return {
                     isApplicationCommand: !1,
-                    commandOptions: v,
+                    commandOptions: R,
                     commandOptionStates: null
                 };
             let n = h.Z.getOptionStates(t);
@@ -67,8 +67,8 @@ function R(e) {
         return c.Z.subscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e), () => c.Z.unsubscribe('APPLICATION_COMMAND_SET_ACTIVE_COMMAND', e);
     }, [t, n]);
     let U = i.useCallback(() => {
-        R.focusFirstVisibleItem();
-    }, [R]);
+        v.focusFirstVisibleItem();
+    }, [v]);
     return ((0, T.yp)({
         event: A.CkL.FOCUS_ATTACHMENT_AREA,
         handler: U
@@ -90,7 +90,7 @@ function R(e) {
         : (0, r.jsxs)(i.Fragment, {
               children: [
                   (0, r.jsx)(o.bG, {
-                      navigator: R,
+                      navigator: v,
                       children: (0, r.jsx)(o.SJ, {
                           children: (e) => {
                               let { ref: i, ...o } = e;
@@ -134,7 +134,7 @@ function R(e) {
 t.Z = i.memo(function (e) {
     let { channelId: t, type: n, canAttachFiles: i } = e;
     return i
-        ? (0, r.jsx)(R, {
+        ? (0, r.jsx)(v, {
               channelId: t,
               type: n
           })

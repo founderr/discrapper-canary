@@ -34,12 +34,12 @@ function N(e, t, n) {
     );
 }
 let O = g.kod,
-    v = {},
-    R = new Set(),
+    R = {},
+    v = new Set(),
     C = 0;
 function y(e) {
     var t;
-    let n = v[null != e ? e : O];
+    let n = R[null != e ? e : O];
     return {
         unread: !1,
         unreadByType: {},
@@ -52,7 +52,7 @@ function y(e) {
 }
 function D(e) {
     var t;
-    return (v[null != e ? e : O] = null !== (t = v[null != e ? e : O]) && void 0 !== t ? t : y(e));
+    return (R[null != e ? e : O] = null !== (t = R[null != e ? e : O]) && void 0 !== t ? t : y(e));
 }
 function L(e) {
     let t = D(e);
@@ -90,7 +90,7 @@ function x(e) {
 }
 function G(e, t) {}
 function k(e, t, n) {
-    return x(t), (t.mentionCount = i()(t.mentionCounts).values().sum()), (t.unread !== n.unread || t.mentionCount !== n.mentionCount) && ((v[null != e ? e : O] = t), null != e && (t.unread ? R.add(e) : R.delete(e)), C++, L(null != e ? e : O), G(t, n), !0);
+    return x(t), (t.mentionCount = i()(t.mentionCounts).values().sum()), (t.unread !== n.unread || t.mentionCount !== n.mentionCount) && ((R[null != e ? e : O] = t), null != e && (t.unread ? v.add(e) : v.delete(e)), C++, L(null != e ? e : O), G(t, n), !0);
 }
 function B(e, t) {
     let n = P(e),
@@ -113,7 +113,7 @@ function B(e, t) {
     ) {
         let e = _.Z.getChannel(r.unreadChannelId);
         if (!(null != e && !t.includes(e.id) && h.ZP.hasUnread(e.id) && M(e))) return V(n);
-        null != n && R.add(n), (i.unreadByType[A.W.CHANNEL] = !0);
+        null != n && v.add(n), (i.unreadByType[A.W.CHANNEL] = !0);
     }
     return k(n, i, r);
 }
@@ -166,11 +166,11 @@ function V(e, t) {
     }
     x(r);
     let i = D(n);
-    return (r.unread !== i.unread || r.mentionCount !== i.mentionCount) && ((v[null != n ? n : O] = r), null != n && (r.unread ? R.add(n) : R.delete(n)), C++, L(null != n ? n : O), G(r, i), !0);
+    return (r.unread !== i.unread || r.mentionCount !== i.mentionCount) && ((R[null != n ? n : O] = r), null != n && (r.unread ? v.add(n) : v.delete(n)), C++, L(null != n ? n : O), G(r, i), !0);
 }
 function H(e) {
     let { guilds: t } = e;
-    (v = {}), (C = 0), (R = new Set()), V(null);
+    (R = {}), (C = 0), (v = new Set()), V(null);
     let { length: n } = t;
     for (let e = 0; e < n; e++) {
         let n = t[e];
@@ -179,7 +179,7 @@ function H(e) {
 }
 function Z(e) {
     let { guilds: t, readState: n } = e;
-    (v = {}), (C = 0), (R = new Set());
+    (R = {}), (C = 0), (v = new Set());
     let r = n.entries.length < 500,
         i = new Set();
     for (let e of (r &&
@@ -196,7 +196,7 @@ function Z(e) {
         V(e.id, r ? i.has(e.id) : void 0);
 }
 function Y() {
-    for (let e of ((v = {}), (R = new Set()), V(null), Object.values(E.Z.getGuildIds()))) V(e);
+    for (let e of ((R = {}), (v = new Set()), V(null), Object.values(E.Z.getGuildIds()))) V(e);
 }
 function j(e) {
     let { guild: t } = e;
@@ -204,7 +204,7 @@ function j(e) {
 }
 function W(e) {
     let { guild: t } = e;
-    return null != v[t.id] && (delete v[t.id], R.delete(t.id), C++, !0);
+    return null != R[t.id] && (delete R[t.id], v.delete(t.id), C++, !0);
 }
 function K(e) {
     let {
@@ -325,10 +325,10 @@ function e_(e) {
                 return null !== (t = e.guild_id) && void 0 !== t ? t : O;
             })
         );
-    return c.default.keys(v).reduce((e, t) => (n.has(t) && V(t)) || e, !1);
+    return c.default.keys(R).reduce((e, t) => (n.has(t) && V(t)) || e, !1);
 }
 function eE() {
-    for (let e in v) v[e].ncMentionCount = 0;
+    for (let e in R) R[e].ncMentionCount = 0;
 }
 function ef(e) {
     let { guildId: t } = e;
@@ -340,31 +340,31 @@ class eh extends I.Z {
     }
     loadCache() {
         let e = this.readSnapshot(eh.LATEST_SNAPSHOT_VERSION);
-        null != e && ((v = e.guilds), (R = new Set(e.unreadGuilds)));
+        null != e && ((R = e.guilds), (v = new Set(e.unreadGuilds)));
     }
     takeSnapshot() {
         return {
             version: eh.LATEST_SNAPSHOT_VERSION,
             data: {
-                guilds: v,
-                unreadGuilds: Array.from(R)
+                guilds: R,
+                unreadGuilds: Array.from(v)
             }
         };
     }
     hasAnyUnread() {
-        return R.size > 0;
+        return v.size > 0;
     }
     getStoreChangeSentinel() {
         return C;
     }
     getMutableUnreadGuilds() {
-        return R;
-    }
-    getMutableGuildStates() {
         return v;
     }
+    getMutableGuildStates() {
+        return R;
+    }
     hasUnread(e) {
-        return R.has(e);
+        return v.has(e);
     }
     getMentionCount(e) {
         return D(e).mentionCount;
@@ -389,28 +389,28 @@ class eh extends I.Z {
     }
     getTotalMentionCount(e) {
         let t = 0;
-        for (let n in v) {
-            let r = v[n];
+        for (let n in R) {
+            let r = R[n];
             if (!0 !== e || n !== O) t += r.mentionCount;
         }
         return t;
     }
     getTotalNotificationsMentionCount(e) {
         let t = 0;
-        for (let n in v) {
-            let r = v[n];
+        for (let n in R) {
+            let r = R[n];
             if (!0 !== e || n !== O) t += r.ncMentionCount;
         }
         return t;
     }
     getPrivateChannelMentionCount() {
         var e;
-        let t = v[O];
+        let t = R[O];
         return null !== (e = null == t ? void 0 : t.mentionCount) && void 0 !== e ? e : 0;
     }
     getMentionCountForChannels(e, t) {
         let n = 0,
-            r = v[e];
+            r = R[e];
         return null == r
             ? 0
             : (t.forEach((e) => {
@@ -421,7 +421,7 @@ class eh extends I.Z {
     }
     getMentionCountForPrivateChannel(e) {
         var t, n;
-        return null !== (n = null === (t = v[O]) || void 0 === t ? void 0 : t.mentionCounts[e]) && void 0 !== n ? n : 0;
+        return null !== (n = null === (t = R[O]) || void 0 === t ? void 0 : t.mentionCounts[e]) && void 0 !== n ? n : 0;
     }
     getGuildChangeSentinel(e) {
         return D(e).sentinel;

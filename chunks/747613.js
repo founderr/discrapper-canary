@@ -5,7 +5,7 @@ var r = n(735250),
     s = n.n(a),
     o = n(392711),
     l = n.n(o),
-    u = n(338545),
+    u = n(567526),
     c = n(91192),
     d = n(946188),
     _ = n(477690),
@@ -21,13 +21,13 @@ var r = n(735250),
     A = n(689938),
     N = n(847838);
 let O = (0, I.hQ)(),
-    v = d.Z.convert.fromCodePoint('1f44f'),
-    R = (0, g.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
+    R = d.Z.convert.fromCodePoint('1f44f'),
+    v = (0, g.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_VERTICAL),
     C = (0, g.Mg)(_.Z.EMOJI_PICKER_CONSTANTS_DIVERSITY_EMOJI_SIZE),
     y = (e) => {
         let { fade: t, surrogate: n, onClick: i, delay: a, index: s } = e,
             o = (0, c.JA)('item-'.concat(s)),
-            l = T.ZP.getURL(v + n),
+            l = T.ZP.getURL(R + n),
             _ = (0, E.useSpring)(
                 {
                     opacity: 1,
@@ -71,7 +71,7 @@ let O = (0, I.hQ)(),
         let { id: t, selectedSurrogate: n, onClick: a, hasTabWrapper: o } = e,
             d = (0, p.Z)('diversity'),
             _ = (0, E.useSpring)({
-                height: (C + 2 * R) * (m.gw.length + 1),
+                height: (C + 2 * v) * (m.gw.length + 1),
                 from: { height: C },
                 config: { duration: 125 }
             });
@@ -115,7 +115,7 @@ let O = (0, I.hQ)(),
     };
 t.Z = (e) => {
     let { searchBarRef: t, selectedSurrogate: n, className: a, hasTabWrapper: s } = e,
-        o = T.ZP.getURL(v + n),
+        o = T.ZP.getURL(R + n),
         [l, u] = i.useState(!1),
         c = (0, h.Z)(null, () => u(!1)),
         d = i.useRef(null);

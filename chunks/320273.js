@@ -21,8 +21,8 @@ var r = n(147018),
     A = n(714050),
     N = n(803938),
     O = n(879),
-    v = n(981971),
-    R = n(11697),
+    R = n(981971),
+    v = n(11697),
     C = n(202934),
     y = n(641236),
     D = n(976418),
@@ -96,7 +96,7 @@ var r = n(147018),
         function (e, t) {
             P(this, {
                 type: M,
-                iterator: v(U(e).entries),
+                iterator: R(U(e).entries),
                 kind: t
             });
         },
@@ -126,10 +126,10 @@ ec.prototype = {
             s,
             o,
             l,
-            u = R(e);
+            u = v(e);
         if (u)
-            for (n = (t = v(e, u)).next; !(r = a(n, t)).done; ) {
-                if ((o = a((s = (i = v(g(r.value))).next), i)).done || (l = a(s, i)).done || !a(s, i).done) throw Y('Expected sequence with length 2');
+            for (n = (t = R(e, u)).next; !(r = a(n, t)).done; ) {
+                if ((o = a((s = (i = R(g(r.value))).next), i)).done || (l = a(s, i)).done || !a(s, i).done) throw Y('Expected sequence with length 2');
                 q(this.entries, {
                     key: A(o.value),
                     value: A(l.value)

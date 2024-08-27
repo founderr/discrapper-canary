@@ -1,6 +1,6 @@
 n.d(l, {
     Z: function () {
-        return A;
+        return P;
     }
 }),
     n(47120),
@@ -23,13 +23,13 @@ var t = n(735250),
     _ = n(594174),
     C = n(979651),
     f = n(630388),
-    R = n(5192),
-    v = n(813872),
-    N = n(981631),
-    O = n(590433),
+    O = n(5192),
+    R = n(813872),
+    v = n(981631),
+    N = n(590433),
     S = n(372897),
-    P = n(689938);
-function A(e, l, A, h) {
+    A = n(689938);
+function P(e, l, P, h) {
     let U = a.useMemo(() => ({ [l]: [e.id] }), [l, e.id]),
         T = null != h ? [h] : [];
     (0, d.$)(U), (0, i.e7)([m.Z], () => m.Z.getGuildVersion(l), [l]);
@@ -43,7 +43,7 @@ function A(e, l, A, h) {
             [e.id]
         ),
         x = (0, i.e7)([I.ZP], () => I.ZP.isGuestOrLurker(l, e.id), [l, e.id]),
-        j = (0, i.e7)([Z.Z], () => Z.Z.getChannel(A), [A]),
+        j = (0, i.e7)([Z.Z], () => Z.Z.getChannel(P), [P]),
         [, p] = (0, E.ZP)(e.id, l),
         D = null == j ? void 0 : j.isGuildStageVoice(),
         {
@@ -62,10 +62,10 @@ function A(e, l, A, h) {
             };
         }),
         V = (0, i.e7)([I.ZP], () => I.ZP.getMember(l, e.id)),
-        k = (0, v.Z)({
+        k = (0, R.Z)({
             userId: e.id,
             guildId: l,
-            channelId: A,
+            channelId: P,
             location: h
         }),
         F = (0, M.sE)(l, {
@@ -74,14 +74,14 @@ function A(e, l, A, h) {
         }),
         K = (0, c.Z)(l, e.id),
         w =
-            null != y && null != A && m.Z.canWithPartialContext(N.Plq.VIEW_CHANNEL, { channelId: y }) && !x
+            null != y && null != P && m.Z.canWithPartialContext(v.Plq.VIEW_CHANNEL, { channelId: y }) && !x
                 ? [
-                      (!D || (D && !q)) && m.Z.canWithPartialContext(N.Plq.MUTE_MEMBERS, { channelId: A })
+                      (!D || (D && !q)) && m.Z.canWithPartialContext(v.Plq.MUTE_MEMBERS, { channelId: P })
                           ? (0, t.jsx)(
                                 r.MenuCheckboxItem,
                                 {
                                     id: 'voice-mute',
-                                    label: P.Z.Messages.SERVER_VOICE_MUTE,
+                                    label: A.Z.Messages.SERVER_VOICE_MUTE,
                                     checked: B,
                                     color: 'danger',
                                     action: () => {
@@ -91,12 +91,12 @@ function A(e, l, A, h) {
                                 'voice-mute'
                             )
                           : null,
-                      (!D || (D && !q)) && m.Z.canWithPartialContext(N.Plq.DEAFEN_MEMBERS, { channelId: A })
+                      (!D || (D && !q)) && m.Z.canWithPartialContext(v.Plq.DEAFEN_MEMBERS, { channelId: P })
                           ? (0, t.jsx)(
                                 r.MenuCheckboxItem,
                                 {
                                     id: 'voice-deafen',
-                                    label: P.Z.Messages.SERVER_DEAFEN,
+                                    label: A.Z.Messages.SERVER_DEAFEN,
                                     checked: G,
                                     color: 'danger',
                                     action: () => u.Z.setServerDeaf(l, e.id, !G)
@@ -104,12 +104,12 @@ function A(e, l, A, h) {
                                 'voice-deafen'
                             )
                           : null,
-                      !L && null != b && m.Z.canWithPartialContext(N.Plq.MOVE_MEMBERS, { channelId: A })
+                      !L && null != b && m.Z.canWithPartialContext(v.Plq.MOVE_MEMBERS, { channelId: P })
                           ? (0, t.jsx)(
                                 r.MenuItem,
                                 {
                                     id: 'voice-disconnect',
-                                    label: L ? P.Z.Messages.DISCONNECT_SELF : P.Z.Messages.DISCONNECT_OTHER,
+                                    label: L ? A.Z.Messages.DISCONNECT_SELF : A.Z.Messages.DISCONNECT_OTHER,
                                     color: 'danger',
                                     action: () => u.Z.setChannel(l, e.id, null)
                                 },
@@ -122,22 +122,22 @@ function A(e, l, A, h) {
             if (l.ctrlKey || l.metaKey)
                 try {
                     var a;
-                    await s.Z.setCommunicationDisabledDuration(n, t, O.UK.DURATION_60_SEC, null, h), F(M.jQ.TIMEOUT), (0, r.showToast)((0, r.createToast)(P.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({ user: null !== (a = R.ZP.getName(n, null, e)) && void 0 !== a ? a : '' }), r.ToastType.SUCCESS));
+                    await s.Z.setCommunicationDisabledDuration(n, t, N.UK.DURATION_60_SEC, null, h), F(M.jQ.TIMEOUT), (0, r.showToast)((0, r.createToast)(A.Z.Messages.GUILD_COMMUNICATION_DISABLED_SUCCESS.format({ user: null !== (a = O.ZP.getName(n, null, e)) && void 0 !== a ? a : '' }), r.ToastType.SUCCESS));
                 } catch (e) {
-                    (0, r.showToast)((0, r.createToast)(P.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, r.ToastType.FAILURE));
+                    (0, r.showToast)((0, r.createToast)(A.Z.Messages.APPLICATION_STORE_LISTING_PURCHASE_GENERIC_ERROR, r.ToastType.FAILURE));
                 }
         },
         H = null,
-        W = null != b && m.Z.canManageUser(N.Plq.MODERATE_MEMBERS, e, b) && m.Z.canManageUser(N.Plq.KICK_MEMBERS, e, b) && m.Z.canManageUser(N.Plq.BAN_MEMBERS, e, b),
-        z = null != b && (m.Z.canManageUser(N.Plq.MANAGE_GUILD, e, b) || m.Z.canManageUser(N.Plq.MANAGE_ROLES, e, b));
-    if (!L && null != b && null != V && null != V.joinedAt && (W || z) && b.hasFeature(N.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
+        W = null != b && m.Z.canManageUser(v.Plq.MODERATE_MEMBERS, e, b) && m.Z.canManageUser(v.Plq.KICK_MEMBERS, e, b) && m.Z.canManageUser(v.Plq.BAN_MEMBERS, e, b),
+        z = null != b && (m.Z.canManageUser(v.Plq.MANAGE_GUILD, e, b) || m.Z.canManageUser(v.Plq.MANAGE_ROLES, e, b));
+    if (!L && null != b && null != V && null != V.joinedAt && (W || z) && b.hasFeature(v.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
         var Q;
         H = (0, f.yE)(null !== (Q = V.flags) && void 0 !== Q ? Q : 0, S.q.BYPASSES_VERIFICATION)
             ? (0, t.jsx)(
                   r.MenuItem,
                   {
                       id: 'verify',
-                      label: P.Z.Messages.MANUALLY_UNVERIFY_MEMBER,
+                      label: A.Z.Messages.MANUALLY_UNVERIFY_MEMBER,
                       action: () => {
                           var l;
                           return u.Z.setMemberFlags(b.id, e.id, (0, f.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, S.q.BYPASSES_VERIFICATION, !1));
@@ -149,7 +149,7 @@ function A(e, l, A, h) {
                   r.MenuItem,
                   {
                       id: 'verify',
-                      label: P.Z.Messages.MANUALLY_VERIFY_MEMBER,
+                      label: A.Z.Messages.MANUALLY_VERIFY_MEMBER,
                       action: () => {
                           var l;
                           return u.Z.setMemberFlags(b.id, e.id, (0, f.mB)(null !== (l = V.flags) && void 0 !== l ? l : 0, S.q.BYPASSES_VERIFICATION, !0));
@@ -171,7 +171,7 @@ function A(e, l, A, h) {
                                 r.MenuItem,
                                 {
                                     id: 'removetimeout',
-                                    label: P.Z.Messages.ENABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: e.username }),
+                                    label: A.Z.Messages.ENABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: e.username }),
                                     color: 'danger',
                                     action: () => {
                                         (0, o.q)(l, e.id, T);
@@ -183,7 +183,7 @@ function A(e, l, A, h) {
                                 r.MenuItem,
                                 {
                                     id: 'timeout',
-                                    label: P.Z.Messages.DISABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: e.username }),
+                                    label: A.Z.Messages.DISABLE_GUILD_COMMUNICATION_FOR_USER.format({ user: e.username }),
                                     color: 'danger',
                                     action: (n) => {
                                         if (n.ctrlKey || n.metaKey) return Y(n, l, e.id);
@@ -193,12 +193,12 @@ function A(e, l, A, h) {
                                 'timeout'
                             )
                       : null,
-                  m.Z.canManageUser(N.Plq.KICK_MEMBERS, e, b) && !e.isClyde()
+                  m.Z.canManageUser(v.Plq.KICK_MEMBERS, e, b) && !e.isClyde()
                       ? (0, t.jsx)(
                             r.MenuItem,
                             {
                                 id: 'kick',
-                                label: P.Z.Messages.KICK_USER.format({ user: e.username }),
+                                label: A.Z.Messages.KICK_USER.format({ user: e.username }),
                                 color: 'danger',
                                 action: () =>
                                     (0, r.openModalLazy)(async () => {
@@ -215,12 +215,12 @@ function A(e, l, A, h) {
                             'kick'
                         )
                       : null,
-                  m.Z.canManageUser(N.Plq.BAN_MEMBERS, e, b)
+                  m.Z.canManageUser(v.Plq.BAN_MEMBERS, e, b)
                       ? (0, t.jsx)(
                             r.MenuItem,
                             {
                                 id: 'ban',
-                                label: P.Z.Messages.BAN_USER.format({ user: e.username }),
+                                label: A.Z.Messages.BAN_USER.format({ user: e.username }),
                                 color: 'danger',
                                 action: () =>
                                     (0, r.openModalLazy)(async () => {

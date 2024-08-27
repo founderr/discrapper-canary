@@ -15,7 +15,7 @@ n.d(t, {
         return T;
     },
     GS: function () {
-        return R;
+        return v;
     },
     Gh: function () {
         return F;
@@ -78,7 +78,7 @@ n.d(t, {
         return P;
     },
     tv: function () {
-        return v;
+        return R;
     },
     u0: function () {
         return h;
@@ -200,11 +200,11 @@ function O(e) {
             return e;
     }
 }
-function v(e) {
+function R(e) {
     let { location: t } = e;
     u.default.track(d.rMx.CLAN_USER_INVITE_VIEWED, { location: t });
 }
-function R(e) {
+function v(e) {
     let { location: t } = e;
     u.default.track(d.rMx.CLAN_USER_INVITE_CLICKED, { location: t });
 }

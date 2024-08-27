@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(410154),
     d = n(915296),
     _ = n(314684),
-    u = n(565626),
-    E = n(32173),
+    E = n(565626),
+    u = n(32173),
     T = n(391110),
     I = n(75077),
     R = n(320319),
@@ -49,9 +49,9 @@ t.Z = (e) => {
     let { className: n, variant: r = T.R0.PERKS_DISCOVERABILITY, noBackground: N = !1, leftAlignHeaders: p = !1, showAllPerksButton: A, headerClassname: m, isFullScreen: f = !0 } = e,
         S = a.useRef(null),
         h = (0, _.yQ)(),
-        M = (0, u.Ag)(h),
+        M = (0, E.Ag)(h),
         x = (0, c.ZP)('perks-discoverability');
-    (0, u.I2)();
+    (0, E.I2)();
     let O = (0, d.HI)({ location: T.R0.PERKS_DISCOVERABILITY }),
         b = r === T.R0.WHATS_NEW,
         P = (0, _.IY)();
@@ -69,7 +69,7 @@ t.Z = (e) => {
             };
         }, [S, M, b, P]);
     let L = (0, I.Op)(b),
-        v = (0, E.Z)(),
+        v = (0, u.Z)(),
         Z = (0, I.mN)(),
         D = (0, I.sP)({
             perksCards: v,
@@ -85,7 +85,7 @@ t.Z = (e) => {
         G = a.useRef(new l.qA());
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (null == v ? void 0 : null === (t = v.freeBoost) || void 0 === t ? void 0 : t.name) === E.u.FREE_BOOST &&
+            (null == v ? void 0 : null === (t = v.freeBoost) || void 0 === t ? void 0 : t.name) === u.u.FREE_BOOST &&
                 (0, s.jsx)(l.O_, {
                     ref: U,
                     className: C.confettiCanvas,
@@ -136,7 +136,7 @@ t.Z = (e) => {
                             (0, s.jsx)(
                                 R.Z,
                                 {
-                                    confettiCanvas: e.name === E.u.FREE_BOOST ? j : void 0,
+                                    confettiCanvas: e.name === u.u.FREE_BOOST ? j : void 0,
                                     ...e,
                                     forceShadow: N
                                 },

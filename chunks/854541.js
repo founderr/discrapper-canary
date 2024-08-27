@@ -3,10 +3,10 @@ n.d(t, {
         return O;
     },
     Z$: function () {
-        return R;
+        return v;
     },
     jH: function () {
-        return v;
+        return R;
     },
     zH: function () {
         return C;
@@ -97,7 +97,7 @@ class O extends i.PureComponent {
         });
     }
 }
-class v extends i.PureComponent {
+class R extends i.PureComponent {
     render() {
         let { customColor: e, value: t, disabled: n, 'aria-label': i } = this.props;
         return (0, r.jsx)(N, {
@@ -109,19 +109,19 @@ class v extends i.PureComponent {
         });
     }
 }
-let R = i.memo(function (e) {
+let v = i.memo(function (e) {
     let { value: t, eagerUpdate: n = !1, onChange: a, onClose: o, suggestedColors: l, middle: _, footer: p, showEyeDropper: T, wrapperComponentType: A, className: N } = e,
         O = (0, h.Z)(),
-        v = (function (e) {
+        R = (function (e) {
             if (null == e) return null;
             if ('string' == typeof e) return (0, u.FX)(e) ? (0, u._i)(e) : null;
             return e;
         })(t),
-        R = null != v ? v : 0,
-        C = (0, u.Rf)(R),
-        y = (0, u.O)(R),
+        v = null != R ? R : 0,
+        C = (0, u.Rf)(v),
+        y = (0, u.O)(v),
         [D, L] = i.useState({
-            current: R,
+            current: v,
             pending: {
                 hex: C,
                 hsl: y
@@ -129,18 +129,18 @@ let R = i.memo(function (e) {
             input: C
         });
     i.useEffect(() => {
-        if (null == v || v === D.current) return;
-        let e = (0, u.Rf)(v),
-            t = (0, u.O)(v);
+        if (null == R || R === D.current) return;
+        let e = (0, u.Rf)(R),
+            t = (0, u.O)(R);
         L({
-            current: v,
+            current: R,
             pending: {
                 hex: e,
                 hsl: t
             },
             input: e
         });
-    }, [v, D]),
+    }, [R, D]),
         i.useEffect(() => o, [o]);
     let b = (e) => {
             let t = '#' === e[0] ? e : '#'.concat(e);

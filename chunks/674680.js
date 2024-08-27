@@ -13,12 +13,12 @@ var a = n(780384),
     c = n(955204),
     d = n(231338),
     _ = n(499872);
-let u = {
+let E = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
     },
-    E = {
+    u = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
@@ -32,7 +32,7 @@ function T(e) {
     let C = (0, r.getAvatarSpecs)(T),
         { name: g, rarity: N } = R,
         { color: p } = (0, c.F7)(N),
-        A = (0, a.wj)(I) ? u : E,
+        A = (0, a.wj)(I) ? E : u,
         m = (C.size - C.offset - 2 * C.stroke) * 0.8,
         f = C.size - C.stroke,
         S = {

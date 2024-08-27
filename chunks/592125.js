@@ -28,8 +28,8 @@ var r,
     A = n(314897),
     N = n(430824),
     O = n(594174),
-    v = n(981631);
-let R = new I.Z('ChannelStore'),
+    R = n(981631);
+let v = new I.Z('ChannelStore'),
     C = {},
     y = {},
     D = {},
@@ -65,10 +65,10 @@ class Z {
             let e = t
                     .map((e) => {
                         if (G.has(e)) return null;
-                        if (null != k[e]) return R.fileOnly('Skipping loading '.concat(e, ' because a load is pending')), null;
+                        if (null != k[e]) return v.fileOnly('Skipping loading '.concat(e, ' because a load is pending')), null;
                         let t = f.Z.getAsync(n, e).then(
                             (t) => (
-                                R.fileOnly('Lazy loaded channels for '.concat(e, ' #:').concat(t.length)),
+                                v.fileOnly('Lazy loaded channels for '.concat(e, ' #:').concat(t.length)),
                                 {
                                     guildId: e,
                                     channels: t
@@ -87,14 +87,14 @@ class Z {
                 i = e.map((e) => e.promise);
             try {
                 let t = await Promise.all(i);
-                if (B !== r) return R.fileOnly('lastResetTime has changed, skipping loads for ' + e.map((e) => e.guildId)), null;
+                if (B !== r) return v.fileOnly('lastResetTime has changed, skipping loads for ' + e.map((e) => e.guildId)), null;
                 let n = t.filter((e) => !G.has(e.guildId));
                 await d.Z.dispatch({
                     type: 'LOAD_CHANNELS',
                     channels: n
                 });
             } catch (t) {
-                for (let n of (R.error('Failed to load channels from disk for ' + e.map((e) => e.guildId), t), e)) delete k[n.guildId];
+                for (let n of (v.error('Failed to load channels from disk for ' + e.map((e) => e.guildId), t), e)) delete k[n.guildId];
                 throw t;
             }
             return null;
@@ -105,15 +105,15 @@ function Y(e, t, n) {
     if (null == e || 'null' === e || G.has(e) || (0 === t && h.Z.hasGuild(e))) return;
     let r = _.Z.database();
     if (null == r) return;
-    R.verbose('hydrating guild (guild: '.concat(e, ', trace: ').concat(n, ')'));
+    v.verbose('hydrating guild (guild: '.concat(e, ', trace: ').concat(n, ')'));
     let i = (0, E.Pv)('ensureGuildLoaded('.concat(e, ')'), () => f.Z.getSync(r, e), 'ensureGuildLoaded');
     if (null == i) {
-        G.add(e), h.Z.restored(e), R.log('load returned null; early returning (guild: '.concat(e, ', database: ').concat(r, ')'));
+        G.add(e), h.Z.restored(e), v.log('load returned null; early returning (guild: '.concat(e, ', database: ').concat(r, ')'));
         return;
     }
     let [a, s] = i;
     for (let n of ((0, p.ZP)(a), 0 !== t && (H += 1), G.add(e), h.Z.restored(e), u.Z.mark('\u2757', 'loaded guild channels (guild: '.concat(e, ')'), s), a)) !Object.hasOwn(y, n.id) && $((0, T._H)(n));
-    R.verbose('hydration complete (guild: '.concat(e, ', channels: ').concat(a.length, ', guilds_loaded: ').concat(H, ')'));
+    v.verbose('hydration complete (guild: '.concat(e, ', channels: ').concat(a.length, ', guilds_loaded: ').concat(H, ')'));
 }
 function j(e, t, n) {
     if (!Object.hasOwn(y, e) && !Object.hasOwn(L, e) && !Object.hasOwn(M, e) && !Object.hasOwn(x, e) && 1 === t) {
@@ -122,7 +122,7 @@ function j(e, t, n) {
     }
 }
 function W(e) {
-    if ((R.fileOnly('Deleting guild channels for '.concat(e)), null != D[e])) {
+    if ((v.fileOnly('Deleting guild channels for '.concat(e)), null != D[e])) {
         for (let t of S.default.keys(D[e])) delete y[t];
         delete D[e];
     }
@@ -146,7 +146,7 @@ function q(e) {
             })(e);
 }
 function Q(e) {
-    (L[e.id] = e), e.type === v.d4z.DM && (P[e.getRecipientId()] = e.id), (U += 1);
+    (L[e.id] = e), e.type === R.d4z.DM && (P[e.getRecipientId()] = e.id), (U += 1);
 }
 function X(e) {
     let t = y[e.parent_id];
@@ -166,7 +166,7 @@ function $(e) {
     (y[r] = e), (D[i] = null !== (t = D[i]) && void 0 !== t ? t : {}), (D[i][r] = e), (w[i] = (null !== (n = w[i]) && void 0 !== n ? n : 0) + 1);
 }
 function J(e) {
-    if (null != e.channels) for (let t of (R.fileOnly('GuildCreate contained full channels for '.concat(e.id, ' #:').concat(e.channels.length)), W(e.id), G.add(e.id), h.Z.restored(e.id), e.channels)) $(t);
+    if (null != e.channels) for (let t of (v.fileOnly('GuildCreate contained full channels for '.concat(e.id, ' #:').concat(e.channels.length)), W(e.id), G.add(e.id), h.Z.restored(e.id), e.channels)) $(t);
     if (null != e.channelUpdates) {
         let t = e.channelUpdates;
         for (let n of ((t.writes.length > 0 || t.deletes.length > 0) && h.Z.invalidate(e.id), t.deletes)) en(y[n]);
@@ -215,7 +215,7 @@ function er(e) {
     if (null == i) return !1;
     en(i),
         !(function (e) {
-            if ('basicPermissions' in e || e.type !== v.d4z.DM) return;
+            if ('basicPermissions' in e || e.type !== R.d4z.DM) return;
             let t = e.getRecipientId();
             if (P[t] === e.id) delete P[t];
         })(i);
@@ -348,17 +348,17 @@ function eu(e) {
                 (D = {}),
                 (w = {}),
                 t.forEach((e) => {
-                    if ('unavailable' === e.data_mode) R.fileOnly('Restoring guild channels b/c unavailable in bg sync, for '.concat(e.id, ' #:').concat(eu(e.id))), l().forEach(n[e.id], $);
+                    if ('unavailable' === e.data_mode) v.fileOnly('Restoring guild channels b/c unavailable in bg sync, for '.concat(e.id, ' #:').concat(eu(e.id))), l().forEach(n[e.id], $);
                     else if ('partial' === e.data_mode) {
                         var t, r;
-                        R.fileOnly('Restoring guild channels b/c partial in bg sync, for '.concat(e.id, ' #:').concat(eu(e.id))), l().forEach(n[e.id], $);
+                        v.fileOnly('Restoring guild channels b/c partial in bg sync, for '.concat(e.id, ' #:').concat(eu(e.id))), l().forEach(n[e.id], $);
                         let i = null !== (r = e.partial_updates.deleted_channel_ids) && void 0 !== r ? r : [];
                         i.length > 0 && (Y(e.id, 1, 'handleBackgroundSync'), i.forEach((e) => en(y[e]))), null === (t = e.partial_updates.channels) || void 0 === t || t.forEach((t) => $((0, T.q_)(t, e.id)));
-                    } else R.fileOnly('BG sync contained full channels for '.concat(e.id, ' #:').concat(e.channels.length)), W(e.id), G.add(e.id), h.Z.restored(e.id), e.channels.forEach((t) => $((0, T.q_)(t, e.id)));
+                    } else v.fileOnly('BG sync contained full channels for '.concat(e.id, ' #:').concat(e.channels.length)), W(e.id), G.add(e.id), h.Z.restored(e.id), e.channels.forEach((t) => $((0, T.q_)(t, e.id)));
                 });
         },
         CACHE_LOADED_LAZY: function (e) {
-            for (let [t, n] of e.guildChannels) for (let e of (R.fileOnly('Lazy cache contained full guild channels for '.concat(t, ' #:').concat(n.length)), G.add(t), n)) q((0, T._H)(e));
+            for (let [t, n] of e.guildChannels) for (let e of (v.fileOnly('Lazy cache contained full guild channels for '.concat(t, ' #:').concat(n.length)), G.add(t), n)) q((0, T._H)(e));
         },
         CACHE_LOADED: function (e) {
             var t;
@@ -366,7 +366,7 @@ function eu(e) {
             let { privateChannels: n, initialGuildChannels: r } = e;
             for (let e of [n, r]) for (let t of e) q((0, p.d7)((0, T._H)(t)));
             let i = null === (t = r[0]) || void 0 === t ? void 0 : t.guild_id;
-            null != i && (R.fileOnly('Early cache contained full guild channels for '.concat(i)), G.add(i));
+            null != i && (v.fileOnly('Early cache contained full guild channels for '.concat(i)), G.add(i));
         },
         CHANNEL_CREATE: function (e) {
             q(e.channel);
@@ -395,25 +395,25 @@ function eu(e) {
         },
         CONNECTION_OPEN: function (e) {
             let t = D;
-            for (let n of ((P = {}), (y = {}), (D = {}), (M = {}), (w = {}), (F = {}), (k = {}), (B = Date.now()), (b = e.initialPrivateChannels), e.initialPrivateChannels.forEach(Q), e.guilds)) 'partial' === n.dataMode && (l().forEach(t[n.id], $), R.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(eu(n.id)))), J(n);
+            for (let n of ((P = {}), (y = {}), (D = {}), (M = {}), (w = {}), (F = {}), (k = {}), (B = Date.now()), (b = e.initialPrivateChannels), e.initialPrivateChannels.forEach(Q), e.guilds)) 'partial' === n.dataMode && (l().forEach(t[n.id], $), v.fileOnly('Restoring guild channels for '.concat(n.id, ' #:').concat(eu(n.id)))), J(n);
             eo();
         },
         GUILD_CREATE: function (e) {
             J(e.guild);
         },
         GUILD_DELETE: function (e) {
-            R.fileOnly('GuildDelete of '.concat(e.guild.id)), W(e.guild.id), G.delete(e.guild.id), h.Z.invalidate(e.guild.id);
+            v.fileOnly('GuildDelete of '.concat(e.guild.id)), W(e.guild.id), G.delete(e.guild.id), h.Z.invalidate(e.guild.id);
         },
         LOAD_ARCHIVED_THREADS_SUCCESS: et,
         LOAD_CHANNELS: function (e) {
-            for (let { guildId: t, channels: n } of e.channels) for (let e of (R.fileOnly('Lazy loaded guild channels for '.concat(t)), (0, p.ZP)(n), G.add(t), h.Z.restored(t), n)) !Object.hasOwn(y, e.id) && $((0, T._H)(e));
+            for (let { guildId: t, channels: n } of e.channels) for (let e of (v.fileOnly('Lazy loaded guild channels for '.concat(t)), (0, p.ZP)(n), G.add(t), h.Z.restored(t), n)) !Object.hasOwn(y, e.id) && $((0, T._H)(e));
             return !1;
         },
         LOAD_MESSAGES_AROUND_SUCCESS: ei,
         LOAD_MESSAGES_SUCCESS: ei,
         LOAD_THREADS_SUCCESS: et,
         LOGOUT: function () {
-            R.fileOnly('initializeClear()'), (P = {}), (y = {}), (D = {}), (w = {}), (L = {}), (F = {}), (M = {}), (G = new Set()), (k = {}), (B = Date.now());
+            v.fileOnly('initializeClear()'), (P = {}), (y = {}), (D = {}), (w = {}), (L = {}), (F = {}), (M = {}), (G = new Set()), (k = {}), (B = Date.now());
         },
         OVERLAY_INITIALIZE: function (e) {
             for (let t of (e.guilds.length, e.channels)) q((0, p.d7)((0, T._H)(t)));

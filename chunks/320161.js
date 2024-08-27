@@ -13,13 +13,13 @@ var s = n(735250),
     c = n(572004),
     d = n(70956),
     _ = n(981631),
-    u = n(689938);
-let E = d.Z.Millis.SECOND,
-    T = 2 * E,
+    E = n(689938);
+let u = d.Z.Millis.SECOND,
+    T = 2 * u,
     I = d.Z.Millis.HALF_SECOND,
-    R = [() => u.Z.Messages.COPY_SUCCESS_1, () => u.Z.Messages.COPY_SUCCESS_2, () => u.Z.Messages.COPY_SUCCESS_3, () => u.Z.Messages.COPY_SUCCESS_4, () => u.Z.Messages.COPY_SUCCESS_5, () => u.Z.Messages.COPY_SUCCESS_6, () => u.Z.Messages.COPY_SUCCESS_7, () => u.Z.Messages.COPY_SUCCESS_8, () => u.Z.Messages.COPY_SUCCESS_9, () => u.Z.Messages.COPY_SUCCESS_10, () => u.Z.Messages.COPY_SUCCESS_11];
+    R = [() => E.Z.Messages.COPY_SUCCESS_1, () => E.Z.Messages.COPY_SUCCESS_2, () => E.Z.Messages.COPY_SUCCESS_3, () => E.Z.Messages.COPY_SUCCESS_4, () => E.Z.Messages.COPY_SUCCESS_5, () => E.Z.Messages.COPY_SUCCESS_6, () => E.Z.Messages.COPY_SUCCESS_7, () => E.Z.Messages.COPY_SUCCESS_8, () => E.Z.Messages.COPY_SUCCESS_9, () => E.Z.Messages.COPY_SUCCESS_10, () => E.Z.Messages.COPY_SUCCESS_11];
 function C(e) {
-    let { text: t, copyValue: n, children: d, onCopy: u, 'aria-label': C, delay: g = I } = e,
+    let { text: t, copyValue: n, children: d, onCopy: E, 'aria-label': C, delay: g = I } = e,
         [N, p] = a.useState(0),
         [A, m] = a.useState(!1),
         [f, S] = a.useState(!1),
@@ -39,7 +39,7 @@ function C(e) {
         O = x ? l.TooltipColors.RED : l.TooltipColors.GREEN,
         b = A ? O : l.TooltipColors.PRIMARY,
         P = () => {
-            null == u || u(), (0, c.JG)(n), o.default.track(_.rMx.TEXT_COPIED), !f && p(N + 1), S(!0), m(!0), h.start(E, () => S(!1)), M.start(T, () => p(0));
+            null == E || E(), (0, c.JG)(n), o.default.track(_.rMx.TEXT_COPIED), !f && p(N + 1), S(!0), m(!0), h.start(u, () => S(!1)), M.start(T, () => p(0));
         };
     return (0, s.jsx)(l.Tooltip, {
         text: (() => {

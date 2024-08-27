@@ -8,8 +8,8 @@ var a = n(120356),
     c = n(906732),
     d = n(78839),
     _ = n(775412),
-    u = n(520540),
-    E = n(197115),
+    E = n(520540),
+    u = n(197115),
     T = n(823188),
     I = n(184176),
     R = n(938736),
@@ -45,7 +45,7 @@ let m = (e) => {
                             }),
                             (0, s.jsx)('div', {
                                 className: N.buttonContainer,
-                                children: (0, s.jsx)(E.Z, {
+                                children: (0, s.jsx)(u.Z, {
                                     color: l.ButtonColors.BRAND,
                                     buttonText: g.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
                                     className: N.button,
@@ -60,8 +60,8 @@ let m = (e) => {
     },
     f = (e) => {
         let { inTrial: t, location: n } = e,
-            { subscriberHomeVariant: a } = u.g.useExperiment({ location: n }, { autoTrackExposure: !1 }),
-            i = a === u.p.VARIANT_2;
+            { subscriberHomeVariant: a } = E.g.useExperiment({ location: n }, { autoTrackExposure: !1 }),
+            i = a === E.p.VARIANT_2;
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)('img', {
@@ -88,7 +88,7 @@ let m = (e) => {
                             i &&
                                 (0, s.jsx)('div', {
                                     className: N.buttonContainer,
-                                    children: (0, s.jsx)(E.Z, {
+                                    children: (0, s.jsx)(u.Z, {
                                         color: l.ButtonColors.BRAND,
                                         buttonText: g.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
                                         className: N.button,
@@ -135,21 +135,21 @@ t.Z = (e) => {
         { analyticsLocations: a } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         r = (0, i.e7)([d.ZP], () => d.ZP.inReverseTrial()),
         l = (0, _._O)(),
-        u = (0, R.bD)(n),
-        E = (0, s.jsx)(m, {
+        E = (0, R.bD)(n),
+        u = (0, s.jsx)(m, {
             className: t,
             inTrial: l
         });
     return (
-        r && (E = (0, s.jsx)(S, {})),
-        u &&
-            (E = (0, s.jsx)(f, {
+        r && (u = (0, s.jsx)(S, {})),
+        E &&
+            (u = (0, s.jsx)(f, {
                 inTrial: l,
                 location: n
             })),
         (0, s.jsx)(c.Gt, {
             value: a,
-            children: E
+            children: u
         })
     );
 };

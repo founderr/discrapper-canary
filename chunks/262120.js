@@ -119,8 +119,8 @@ function i() {
     var N = Object.getPrototypeOf,
         O = N && N(N(b([])));
     O && O !== a && s.call(O, u) && (A = O);
-    var v = (S.prototype = T.prototype = Object.create(A));
-    function R(e) {
+    var R = (S.prototype = T.prototype = Object.create(A));
+    function v(e) {
         ['next', 'throw', 'return'].forEach(function (t) {
             _(e, t, function (e) {
                 return this._invoke(t, e);
@@ -193,7 +193,7 @@ function i() {
     }
     return (
         (g.prototype = S),
-        o(v, 'constructor', {
+        o(R, 'constructor', {
             value: S,
             configurable: !0
         }),
@@ -207,12 +207,12 @@ function i() {
             return !!t && (t === g || 'GeneratorFunction' === (t.displayName || t.name));
         }),
         (n.mark = function (e) {
-            return Object.setPrototypeOf ? Object.setPrototypeOf(e, S) : ((e.__proto__ = S), _(e, d, 'GeneratorFunction')), (e.prototype = Object.create(v)), e;
+            return Object.setPrototypeOf ? Object.setPrototypeOf(e, S) : ((e.__proto__ = S), _(e, d, 'GeneratorFunction')), (e.prototype = Object.create(R)), e;
         }),
         (n.awrap = function (e) {
             return { __await: e };
         }),
-        R(C.prototype),
+        v(C.prototype),
         _(C.prototype, c, function () {
             return this;
         }),
@@ -226,12 +226,12 @@ function i() {
                       return e.done ? e.value : s.next();
                   });
         }),
-        R(v),
-        _(v, d, 'Generator'),
-        _(v, u, function () {
+        v(R),
+        _(R, d, 'Generator'),
+        _(R, u, function () {
             return this;
         }),
-        _(v, 'toString', function () {
+        _(R, 'toString', function () {
             return '[object Generator]';
         }),
         (n.keys = function (e) {

@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(481060),
     d = n(634894),
     _ = n(410030),
-    u = n(100527),
-    E = n(906732),
+    E = n(100527),
+    u = n(906732),
     T = n(15640),
     I = n(594174),
     R = n(78839),
@@ -117,7 +117,7 @@ t.Z = (e) => {
     var t;
     let n,
         { className: r, hideCTAs: P = !1, headingOverride: L, hidePill: v = !1, selectedPlanColumnClassName: Z, selectedPlanTier: y = x.p9.TIER_2 } = e,
-        { analyticsLocations: H } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+        { analyticsLocations: H } = (0, u.ZP)(E.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
         k = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         w = (0, T.V)(),
         F = 'PlanComparisonTable';
@@ -231,7 +231,7 @@ t.Z = (e) => {
                 ? (0, s.jsx)(D, {})
                 : (0, s.jsx)(B, {}));
     let ei = Q === x.Si.TIER_0 || X === x.p9.TIER_0 || y === x.p9.TIER_0;
-    return (0, s.jsx)(E.Gt, {
+    return (0, s.jsx)(u.Gt, {
         value: H,
         children: (0, s.jsxs)('div', {
             className: i()(b.root, r),

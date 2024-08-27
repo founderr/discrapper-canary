@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(570140),
     d = n(355467),
     _ = n(179360),
-    u = n(821849),
-    E = n(497321),
+    E = n(821849),
+    u = n(497321),
     T = n(100527),
     I = n(906732),
     R = n(211242),
@@ -54,7 +54,7 @@ t.Z = function (e) {
     a.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, _.X8)(), d.tZ(), (0, u.Y2)(Y, null, D.JjL.DISCOVERY)]), (V.current = Date.now() - e), F(!1);
+            await Promise.all([d.jg(), (0, _.X8)(), d.tZ(), (0, E.Y2)(Y, null, D.JjL.DISCOVERY)]), (V.current = Date.now() - e), F(!1);
         });
     }, [Y]),
     a.useEffect(() => {
@@ -68,7 +68,7 @@ t.Z = function (e) {
             });
     }, [r, w]),
     (0, l.e7)([A.Z], () => A.Z.enabled))
-        ? (0, s.jsx)(E.Z, {})
+        ? (0, s.jsx)(u.Z, {})
         : n
           ? (0, s.jsx)(g.c8, {})
           : t === Z.EZ.ApplicationStoreHome && W

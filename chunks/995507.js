@@ -74,7 +74,7 @@ function A(e) {
     }
 }
 function N(e, n) {
-    (p = !1), I && ((I = !1), T(R), (R = -1)), (h = !0);
+    (p = !1), I && ((I = !1), T(v), (v = -1)), (h = !0);
     var a = f;
     try {
         for (S(n), E = r(c); null !== E && (!(E.expirationTime > n) || (e && !D())); ) {
@@ -98,22 +98,22 @@ function N(e, n) {
 }
 'undefined' != typeof navigator && void 0 !== navigator.scheduling && void 0 !== navigator.scheduling.isInputPending && navigator.scheduling.isInputPending.bind(navigator.scheduling);
 var O = !1,
-    v = null,
-    R = -1,
+    R = null,
+    v = -1,
     C = 5,
     y = -1;
 function D() {
     return !(t.unstable_now() - y < C);
 }
 function L() {
-    if (null !== v) {
+    if (null !== R) {
         var e = t.unstable_now();
         y = e;
         var n = !0;
         try {
-            n = v(!0, e);
+            n = R(!0, e);
         } finally {
-            n ? s() : ((O = !1), (v = null));
+            n ? s() : ((O = !1), (R = null));
         }
     } else O = !1;
 }
@@ -133,10 +133,10 @@ else if ('undefined' != typeof MessageChannel) {
         m(L, 0);
     };
 function P(e) {
-    (v = e), O || ((O = !0), s());
+    (R = e), O || ((O = !0), s());
 }
 function U(e, n) {
-    R = m(function () {
+    v = m(function () {
         e(t.unstable_now());
     }, n);
 }
@@ -228,7 +228,7 @@ function U(e, n) {
                 expirationTime: o,
                 sortIndex: -1
             }),
-            a > s ? ((e.sortIndex = a), n(d, e), null === r(c) && e === r(d) && (I ? (T(R), (R = -1)) : (I = !0), U(A, a - s))) : ((e.sortIndex = o), n(c, e), p || h || ((p = !0), P(N))),
+            a > s ? ((e.sortIndex = a), n(d, e), null === r(c) && e === r(d) && (I ? (T(v), (v = -1)) : (I = !0), U(A, a - s))) : ((e.sortIndex = o), n(c, e), p || h || ((p = !0), P(N))),
             e
         );
     }),

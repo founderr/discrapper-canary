@@ -113,11 +113,11 @@ function E(e, t) {
         S = 'vertical' === m,
         { direction: A } = (0, l.bU)(),
         { addGlobalListener: N, removeGlobalListener: O } = (0, r.xi)(),
-        v = c.get(t),
-        { labelProps: R, fieldProps: C } = (0, o.N)({
+        R = c.get(t),
+        { labelProps: v, fieldProps: C } = (0, o.N)({
             ...e,
             id: d(t, _),
-            'aria-labelledby': `${v.id} ${null !== (n = e['aria-labelledby']) && void 0 !== n ? n : ''}`.trim()
+            'aria-labelledby': `${R.id} ${null !== (n = e['aria-labelledby']) && void 0 !== n ? n : ''}`.trim()
         }),
         y = t.values[_],
         D = (0, a.useCallback)(() => {
@@ -220,8 +220,8 @@ function E(e, t) {
                 'aria-required': E || void 0,
                 'aria-invalid': h || 'invalid' === f || void 0,
                 'aria-errormessage': e['aria-errormessage'],
-                'aria-describedby': [v['aria-describedby'], e['aria-describedby']].filter(Boolean).join(' '),
-                'aria-details': [v['aria-details'], e['aria-details']].filter(Boolean).join(' '),
+                'aria-describedby': [R['aria-describedby'], e['aria-describedby']].filter(Boolean).join(' '),
+                'aria-details': [R['aria-details'], e['aria-details']].filter(Boolean).join(' '),
                 onChange: (e) => {
                     t.setThumbValue(_, parseFloat(e.target.value));
                 }
@@ -235,7 +235,7 @@ function E(e, t) {
                     touchAction: 'none'
                 }
             },
-            labelProps: R,
+            labelProps: v,
             isDragging: t.isThumbDragging(_),
             isDisabled: g,
             isFocused: L

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return R;
     }
 }),
     n(47120),
@@ -32,9 +32,9 @@ let N = (e) => {
 };
 function O(e) {
     let { user: t, currentUser: n, guild: l, guildMember: c, roles: d, highestRole: _, canManageRoles: E, onAddRole: f, onRemoveRole: O } = e,
-        v = i.useRef({}),
-        R = (e, t) => {
-            null != t ? (v.current[e] = t) : delete v.current[e];
+        R = i.useRef({}),
+        v = (e, t) => {
+            null != t ? (R.current[e] = t) : delete R.current[e];
         },
         [C, y] = i.useState(d),
         [D, L] = i.useState(268),
@@ -51,7 +51,7 @@ function O(e) {
             let t = 1 === e ? r : 268;
             for (let e = 0, r = n.length; r < d.length; r++) {
                 let i = d[r],
-                    a = v.current[i.id];
+                    a = R.current[i.id];
                 if (null == a) continue;
                 let s = Math.min(a.getBoundingClientRect().width, t);
                 if (e + s > t) break;
@@ -79,7 +79,7 @@ function O(e) {
                     guildId: l.id,
                     style: { maxWidth: b || i !== C.length - 1 ? 268 : D },
                     disableBorderColor: !0,
-                    ref: (t) => R(e.id, t),
+                    ref: (t) => v(e.id, t),
                     onRemove: () => O(e),
                     canRemove: E ? p.r6(l, n.id, _, e) : (null === (a = e.tags) || void 0 === a ? void 0 : a.guild_connections) === null && t.id === n.id
                 },
@@ -148,7 +148,7 @@ function O(e) {
         })
     });
 }
-function v(e) {
+function R(e) {
     let { user: t, currentUser: n, guild: a } = e,
         { trackUserProfileAction: s } = (0, I.KZ)(),
         o = (0, l.e7)([_.ZP], () => _.ZP.getMember(a.id, t.id)),
@@ -187,8 +187,8 @@ function v(e) {
             },
             [h, a.id, t.id, s]
         ),
-        v = S && null != o;
-    return 0 !== m.length || v
+        R = S && null != o;
+    return 0 !== m.length || R
         ? (0, r.jsx)('div', {
               children: (0, r.jsx)(O, {
                   user: t,

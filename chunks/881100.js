@@ -12,8 +12,8 @@ var s = n(399606),
     c = n(380684),
     d = n(74538),
     _ = n(474936),
-    u = n(981631),
-    E = n(526761),
+    E = n(981631),
+    u = n(526761),
     T = n(689938),
     I = n(323780),
     R = n(101732),
@@ -85,8 +85,8 @@ let H = (e, t, n) => ((0, a.wj)(e) ? t : n),
                 title: T.Z.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
                 description: (e) => {
                     let t = () => {
-                        r.Z.open(u.oAB.PROFILE_CUSTOMIZATION, null, {
-                            scrollPosition: E.Y_.TRY_IT_OUT,
+                        r.Z.open(E.oAB.PROFILE_CUSTOMIZATION, null, {
+                            scrollPosition: u.Y_.TRY_IT_OUT,
                             analyticsLocations: e
                         });
                     };

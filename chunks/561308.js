@@ -21,7 +21,7 @@ n.d(t, {
         return p;
     },
     V5: function () {
-        return v;
+        return R;
     },
     ap: function () {
         return y;
@@ -30,7 +30,7 @@ n.d(t, {
         return D;
     },
     dw: function () {
-        return R;
+        return v;
     },
     ig: function () {
         return U;
@@ -151,11 +151,11 @@ function O(e) {
     var t;
     return null === (t = T(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
 }
-function v(e) {
+function R(e) {
     var t;
     return null === (t = T(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
 }
-function R(e) {
+function v(e) {
     let t = T(e, s.N.RESURRECTED);
     return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }

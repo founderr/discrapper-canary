@@ -21,8 +21,8 @@ var i = n(266067),
     A = n(914010),
     N = n(70956),
     O = n(796798),
-    v = n(198620),
-    R = n(981631),
+    R = n(198620),
+    v = n(981631),
     C = n(176505),
     y = n(689938);
 function D(e, t, n) {
@@ -50,12 +50,12 @@ function b(e) {
         return;
     }
     let p = m.Z.getChannel(n);
-    if ((null == p ? void 0 : p.type) === R.d4z.GUILD_STORE || ((null == p ? void 0 : p.type) != null && R.TPd.GUILD_THREADS_ONLY.has(p.type))) {
+    if ((null == p ? void 0 : p.type) === v.d4z.GUILD_STORE || ((null == p ? void 0 : p.type) != null && v.TPd.GUILD_THREADS_ONLY.has(p.type))) {
         h && L.log('Skipping fetch because channel is a forum/store');
         return;
     }
     let I = _.Z.getOrCreate(n);
-    O.l.getCurrentConfig({ location: 'fetch_messages' }).enabled && I.some(v.k5) && (L.log('Found expired attachment link, clearing messages'), _.Z.clear(n), (I = _.Z.getOrCreate(n))),
+    O.l.getCurrentConfig({ location: 'fetch_messages' }).enabled && I.some(R.k5) && (L.log('Found expired attachment link, clearing messages'), _.Z.clear(n), (I = _.Z.getOrCreate(n))),
         null != I.jumpTargetId &&
             null == i &&
             ((I = I.mutate({
@@ -94,7 +94,7 @@ function b(e) {
             L.log('Jumping to start of thread '.concat(p.id)),
                 u.Z.fetchMessages({
                     channelId: n,
-                    limit: R.AQB,
+                    limit: v.AQB,
                     jump: {
                         messageId: n,
                         flash: !1
@@ -107,7 +107,7 @@ function b(e) {
             L.log('Jumping to most recent message in thread '.concat(p.id, ' - ').concat(e)),
                 u.Z.fetchMessages({
                     channelId: n,
-                    limit: R.AQB,
+                    limit: v.AQB,
                     jump: {
                         messageId: e,
                         flash: !1,
@@ -119,7 +119,7 @@ function b(e) {
         } else
             u.Z.fetchMessages({
                 channelId: n,
-                limit: R.AQB,
+                limit: v.AQB,
                 isPreload: o,
                 skipLocalFetch: d,
                 jump: { jumpType: c.SR.ANIMATED }
@@ -135,7 +135,7 @@ function U() {
         if (null != n) {
             var t;
             let e = (0, i.LX)(location.pathname, {
-                path: R.Z5c.CHANNEL(':guild', ':channel', ':message'),
+                path: v.Z5c.CHANNEL(':guild', ':channel', ':message'),
                 exact: !0
             });
             b({
@@ -201,7 +201,7 @@ function B() {
 }
 function F(e) {
     let { guildId: t, channelId: n, context: r } = e;
-    r === R.e3s &&
+    r === v.e3s &&
         (b({
             guildId: t,
             channelId: n
@@ -223,13 +223,13 @@ function H(e) {
     let { channelId: t } = e;
     u.Z.fetchMessages({
         channelId: t,
-        limit: R.AQB
+        limit: v.AQB
     });
 }
 function Z(e) {
     let { response: t } = e;
     if (null == t || null == t.body) return null;
-    if (t.body.code === R.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) {
+    if (t.body.code === v.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) {
         let e = t.body.retry_after;
         null != e &&
             l.Z.show({
@@ -254,7 +254,7 @@ function j(e) {
         c &&
         u.Z.fetchMessages({
             channelId: n,
-            limit: R.AQB,
+            limit: v.AQB,
             jump: r
         });
 }
@@ -273,7 +273,7 @@ function K(e) {
     if ('active' !== t) return !1;
     let n = S.Z.getChannelId();
     if (null == n) return !1;
-    u.Z.fetchNewLocalMessages(n, R.AQB);
+    u.Z.fetchNewLocalMessages(n, v.AQB);
 }
 class z extends d.Z {
     _initialize() {

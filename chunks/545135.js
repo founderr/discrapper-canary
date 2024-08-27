@@ -26,8 +26,8 @@ var i = t(512722),
     A = t(976192),
     h = t(904483),
     f = t(429824),
-    Z = t(919815),
-    O = t(858822),
+    O = t(919815),
+    Z = t(858822),
     p = t(993356),
     C = t(58338),
     m = t(422525),
@@ -53,7 +53,7 @@ function P(e) {
             channel: P
         }),
         j = (0, x.Z)(d),
-        D = (0, O.Z)(n),
+        D = (0, Z.Z)(n),
         y = (0, p.Z)(n),
         k = (0, m.Z)(n),
         F = (0, A.Z)({
@@ -80,10 +80,10 @@ function P(e) {
             id: n.id,
             label: U.Z.Messages.COPY_ID_GUILD
         }),
-        w = (0, Z.Z)(n, { section: b.jXE.GUILD_LIST }),
+        w = (0, O.Z)(n, { section: b.jXE.GUILD_LIST }),
         z = (0, M.Z)(n.id),
-        K = (0, C.Z)(n.id),
-        q = (0, N.ng)(n.id, !1),
+        q = (0, C.Z)(n.id),
+        K = (0, N.ng)(n.id, !1),
         X = (0, f.Z)(n),
         W = (0, _.Mn)('GuildContextMenu');
     function Q() {
@@ -142,7 +142,7 @@ function P(e) {
                   (0, s.jsx)(u.MenuGroup, { children: w }),
                   (0, s.jsx)(u.MenuGroup, { children: R }),
                   (0, s.jsxs)(u.MenuGroup, {
-                      children: [D, W || __OVERLAY__ ? null : y, W && !__OVERLAY__ ? K : null, q, j, z]
+                      children: [D, W || __OVERLAY__ ? null : y, W && !__OVERLAY__ ? q : null, K, j, z]
                   }),
                   (0, s.jsxs)(u.MenuGroup, {
                       children: [

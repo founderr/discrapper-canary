@@ -9,7 +9,7 @@ n.d(t, {
         return T;
     },
     Q_: function () {
-        return E;
+        return u;
     },
     bD: function () {
         return g;
@@ -27,9 +27,9 @@ var s,
     c = n(822070),
     d = n(520540),
     _ = n(898997),
-    u = n(689938);
+    E = n(689938);
 ((s = a || (a = {}))[(s.NOT_ELIGIBLE = 0)] = 'NOT_ELIGIBLE'), (s[(s.ELIGIBLE = 1)] = 'ELIGIBLE'), (s[(s.QUALIFIED = 2)] = 'QUALIFIED'), (s[(s.COOLDOWN = 3)] = 'COOLDOWN'), (s[(s.UNAPPLIED = 4)] = 'UNAPPLIED');
-let E = 3,
+let u = 3,
     T = (e) => {
         let t = g(e),
             n = (0, l.wE)(i.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE);
@@ -39,11 +39,11 @@ let E = 3,
         let { referralIncentiveLifecycleState: t, hasSentAll: n, referralsStatuses: s } = e;
         switch (t) {
             case 0:
-                return n ? u.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : u.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS;
+                return n ? E.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : E.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS;
             case 1:
-                return u.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASSES_KEEP_GOING.format({ discountRate: '40%' });
+                return E.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASSES_KEEP_GOING.format({ discountRate: '40%' });
             case 2:
-                return s.redeemed === E ? u.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING : u.Z.Messages.REFERRAL_INCENTIVE_DISCOUNT_UNLOCKED;
+                return s.redeemed === u ? E.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING : E.Z.Messages.REFERRAL_INCENTIVE_DISCOUNT_UNLOCKED;
         }
     },
     R = (e) => {
@@ -51,7 +51,7 @@ let E = 3,
         switch (n) {
             case 0:
                 return C({
-                    hasSentAll: s.sent >= E,
+                    hasSentAll: s.sent >= u,
                     hasSentAtLeastOne: s.sent >= 1,
                     numSentUsers: s.sent,
                     helpdeskArticle: t
@@ -60,31 +60,31 @@ let E = 3,
                 let a = {
                     discountRate: '40%',
                     learnMoreLink: 'PLACEHOLDER',
-                    subscriptionInterval: u.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
+                    subscriptionInterval: E.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
                 };
-                if (s.redeemed <= 1) return u.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASSES_CONVERT_GET_INCENTIVE.format(a);
-                return u.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASSES_REDEEMED.format(a);
+                if (s.redeemed <= 1) return E.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASSES_CONVERT_GET_INCENTIVE.format(a);
+                return E.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASSES_REDEEMED.format(a);
             case 2:
-                return s.redeemed === E
-                    ? u.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASS_COUNTDOWN_HAS_BEGUN.format({
+                return s.redeemed === u
+                    ? E.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASS_COUNTDOWN_HAS_BEGUN.format({
                           learnMoreLink: 'PLACEHOLDER',
                           numberOfTimerPeriods: '',
-                          timePeriodInterval: u.Z.Messages.GIFT_CONFIRMATION_NITRO_TIME_FRAME_MONTHS.format({ time: 6 })
+                          timePeriodInterval: E.Z.Messages.GIFT_CONFIRMATION_NITRO_TIME_FRAME_MONTHS.format({ time: 6 })
                       })
-                    : u.Z.Messages.REFERRAL_INCENTIVE_KEEP_SHARING_TO_EARN_ANOTHER_DISCOUNT.format({ learnMoreLink: 'PLACEHOLDER' });
+                    : E.Z.Messages.REFERRAL_INCENTIVE_KEEP_SHARING_TO_EARN_ANOTHER_DISCOUNT.format({ learnMoreLink: 'PLACEHOLDER' });
         }
     },
     C = (e) => {
         let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: s, helpdeskArticle: a } = e;
         return t
-            ? u.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({ helpdeskArticle: a })
+            ? E.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({ helpdeskArticle: a })
             : n
-              ? u.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
-                    numFriends: E - s,
+              ? E.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
+                    numFriends: u - s,
                     helpdeskArticle: a
                 })
-              : u.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER.format({
-                    numFriends: E,
+              : E.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER.format({
+                    numFriends: u,
                     helpdeskArticle: a
                 });
     },

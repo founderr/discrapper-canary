@@ -12,10 +12,10 @@ n.d(t, {
         return m;
     },
     VP: function () {
-        return R;
+        return v;
     },
     X: function () {
-        return v;
+        return R;
     },
     ZD: function () {
         return h;
@@ -259,14 +259,14 @@ function O(e, t, n) {
         channel_id: e.name === c.b.GUILD_SCHEDULED_EVENT ? e.record.channel_id : e.name === c.b.GUILD_DIRECTORY_ENTRY ? e.record.channelId : void 0
     });
 }
-function v(e, t) {
+function R(e, t) {
     o.Z.dispatch({
         type: 'IN_APP_REPORTS_SHOW_FEEDBACK',
         reportId: t,
         reportType: e.name
     });
 }
-function R(e, t, n, r, i) {
+function v(e, t, n, r, i) {
     return (
         e.some((e) => {
             var t;

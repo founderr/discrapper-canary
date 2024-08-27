@@ -20,10 +20,10 @@ let p = 0,
     A = {},
     N = {},
     O = {};
-function v(e, t) {
+function R(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function R(e, t) {
+function v(e, t) {
     let n = e[t];
     return null == n && ((n = {}), (e[t] = n)), n;
 }
@@ -41,15 +41,15 @@ function y(e) {
     return null !== (t = g.get(e)) && void 0 !== t ? t : new Set();
 }
 function D(e, t, n) {
-    let r = R(m, null != e ? e : f.ME),
+    let r = v(m, null != e ? e : f.ME),
         i = r[t],
         a = n(i);
     return i === a
         ? [!1, a, i]
         : (null != i &&
               (delete r[t],
-              null != i.channelId && (delete R(S, i.channelId)[t], delete R(A, i.channelId)[t]),
-              null != i.sessionId && delete R(N, t)[i.sessionId],
+              null != i.channelId && (delete v(S, i.channelId)[t], delete v(A, i.channelId)[t]),
+              null != i.sessionId && delete v(N, t)[i.sessionId],
               !(function (e, t) {
                   let n = y(e);
                   if (!!n.has(t)) (n = new Set(n)).delete(t), 0 === n.size ? g.delete(e) : g.set(e, n);
@@ -57,14 +57,14 @@ function D(e, t, n) {
           null != a &&
               ((r[t] = a),
               null != a.channelId &&
-                  ((R(S, a.channelId)[t] = a),
+                  ((v(S, a.channelId)[t] = a),
                   a.selfVideo &&
-                      ((R(A, a.channelId)[t] = a),
+                      ((v(A, a.channelId)[t] = a),
                       !(function (e, t) {
                           let n = y(e);
                           if (!n.has(t)) (n = new Set(n)).add(t), g.set(e, n);
                       })(null != e ? e : f.ME, t))),
-              null != a.sessionId && (R(N, t)[a.sessionId] = a)),
+              null != a.sessionId && (v(N, t)[a.sessionId] = a)),
           [!0, a, i]);
 }
 function L(e, t) {
@@ -104,13 +104,13 @@ class M extends (a = d.ZP.Store) {
         return I;
     }
     getVoiceStates(e) {
-        return R(m, null != e ? e : f.ME);
+        return v(m, null != e ? e : f.ME);
     }
     getVoiceStatesForChannel(e) {
-        return R(S, e);
+        return v(S, e);
     }
     getVideoVoiceStatesForChannel(e) {
-        return R(A, e);
+        return v(A, e);
     }
     getVoiceState(e, t) {
         return this.getVoiceStates(e)[t];
@@ -118,14 +118,14 @@ class M extends (a = d.ZP.Store) {
     getVoiceStateForChannel(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r;
-        return null === (t = R(S, e)) || void 0 === t ? void 0 : t[n];
+        return null === (t = v(S, e)) || void 0 === t ? void 0 : t[n];
     }
     getVoiceStateForUser(e) {
-        return Object.values(R(N, e))[0];
+        return Object.values(v(N, e))[0];
     }
     getVoiceStateForSession(e, t) {
         var n;
-        return null != t ? (null === (n = R(N, e)) || void 0 === n ? void 0 : n[t]) : null;
+        return null != t ? (null === (n = v(N, e)) || void 0 === n ? void 0 : n[t]) : null;
     }
     getUserVoiceChannelId(e, t) {
         var n;
@@ -150,12 +150,12 @@ class M extends (a = d.ZP.Store) {
         return null != n && (t !== r || (null != i && n.sessionId === i));
     }
     hasVideo(e) {
-        return Object.values(R(A, e)).length > 0;
+        return Object.values(v(A, e)).length > 0;
     }
     getVoicePlatformForChannel(e, t) {
         var n, a;
         let s = null != i && (null === (a = N[r]) || void 0 === a ? void 0 : null === (n = a[i]) || void 0 === n ? void 0 : n.channelId);
-        return t === r && e === s ? h.wR.DESKTOP : O[v(t, e)];
+        return t === r && e === s ? h.wR.DESKTOP : O[R(t, e)];
     }
     get userHasBeenMovedVersion() {
         return p;
@@ -217,6 +217,6 @@ class M extends (a = d.ZP.Store) {
         },
         RTC_CONNECTION_PLATFORM: function (e) {
             let { userId: t, channelId: n, platform: r } = e;
-            O[v(t, n)] = r;
+            O[R(t, n)] = r;
         }
     }));

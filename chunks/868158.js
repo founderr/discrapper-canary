@@ -1,12 +1,12 @@
 n.d(t, {
     Eb: function () {
-        return v;
+        return R;
     },
     Fx: function () {
         return y;
     },
     IM: function () {
-        return R;
+        return v;
     },
     J2: function () {
         return M;
@@ -78,7 +78,7 @@ function O(e, t) {
         }
     );
 }
-function v() {
+function R() {
     let e = o.Z.database(),
         t = (0, _.O)() ? l.Z.getCommittedVersions() : Promise.resolve({}),
         n = (0, _.O)() ? c.Z.getGuildIds() : Promise.resolve(new Set());
@@ -91,7 +91,7 @@ function v() {
         };
     });
 }
-function R(e, t, n) {
+function v(e, t, n) {
     var r;
     let { users: a, relationships: l, private_channels: u, merged_members: c, guilds: _, ...E } = e;
     (function (e) {

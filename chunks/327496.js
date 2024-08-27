@@ -29,7 +29,7 @@ let E = (e) => {
         var O;
         n = null !== (O = d[(t = (0, u.Zg)(h)).length - 1]) && void 0 !== O ? O : d[d.length - 1];
     }
-    let v = i.useCallback(
+    let R = i.useCallback(
         (e) => {
             if (null == T);
             else if ('string' == typeof T) N.push(T);
@@ -43,7 +43,7 @@ let E = (e) => {
     );
     return (0, r.jsxs)(l.Clickable, {
         ...A,
-        onClick: v,
+        onClick: R,
         className: s()(I, c.wrapper, { [c.selected]: S }),
         'aria-label': null != p && '' !== p ? p : null != h ? h : '',
         style: {

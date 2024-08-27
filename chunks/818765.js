@@ -8,8 +8,8 @@ var s = n(570140),
     c = n(111583),
     d = n(557177),
     _ = n(351780),
-    u = n(843693),
-    E = n(981631);
+    E = n(843693),
+    u = n(981631);
 let T = (0, d.uk)('poggermode_applause', r.Z.getSoundpack()),
     I = !1,
     R = !1,
@@ -42,14 +42,14 @@ let T = (0, d.uk)('poggermode_applause', r.Z.getSoundpack()),
     };
 class h extends a.Z {
     _initialize() {
-        u.ZP.addChangeListener(this.startAudio), s.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), s.Z.subscribe('TYPING_STOP', this.stopAudio), s.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), s.Z.subscribe('CHANNEL_SELECT', this.stopAudio), s.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio);
+        E.ZP.addChangeListener(this.startAudio), s.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), s.Z.subscribe('TYPING_STOP', this.stopAudio), s.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), s.Z.subscribe('CHANNEL_SELECT', this.stopAudio), s.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio);
     }
     _terminate() {
-        u.ZP.removeChangeListener(this.startAudio), s.Z.unsubscribe('RTC_CONNECTION_STATE', this.setVolume), s.Z.unsubscribe('TYPING_STOP', this.stopAudio), s.Z.unsubscribe('TYPING_STOP_LOCAL', this.stopAudio), s.Z.unsubscribe('CHANNEL_SELECT', this.stopAudio), s.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio), clearTimeout(g);
+        E.ZP.removeChangeListener(this.startAudio), s.Z.unsubscribe('RTC_CONNECTION_STATE', this.setVolume), s.Z.unsubscribe('TYPING_STOP', this.stopAudio), s.Z.unsubscribe('TYPING_STOP_LOCAL', this.stopAudio), s.Z.unsubscribe('CHANNEL_SELECT', this.stopAudio), s.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio), clearTimeout(g);
     }
     setVolume(e) {
         let { state: t } = e;
-        t === E.hes.RTC_CONNECTED ? (T.volume = 0.1) : (T.volume = 1);
+        t === u.hes.RTC_CONNECTED ? (T.volume = 0.1) : (T.volume = 1);
     }
     handleTypingStop(e) {
         let { userId: t } = e;
@@ -65,7 +65,7 @@ class h extends a.Z {
         if (null == t) return;
         let n = i.default.getId(),
             s = c.Z.isTyping(t, n),
-            a = u.ZP.getUserCombo(n, t),
+            a = E.ZP.getUserCombo(n, t),
             r = null !== (e = null == a ? void 0 : a.multiplier) && void 0 !== e ? e : 1;
         s && r >= 7 ? N() : p();
     }

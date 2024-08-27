@@ -72,8 +72,8 @@ class N extends s.Z {
             (r = {
                 POST_CONNECTION_OPEN: O,
                 CONNECTION_RESUMED: O,
-                CONNECTION_CLOSED: R,
-                APP_STATE_UPDATE: v
+                CONNECTION_CLOSED: v,
+                APP_STATE_UPDATE: R
             }),
             n in t
                 ? Object.defineProperty(t, n, {
@@ -88,10 +88,10 @@ class N extends s.Z {
 function O() {
     (A = !0), y(T, !0);
 }
-function v(e) {
+function R(e) {
     A && 'active' !== e.state && (clearTimeout(S), (S = null), C(!1));
 }
-function R() {
+function v() {
     A && (clearTimeout(S), (S = null), C(!1));
 }
 async function C(e) {

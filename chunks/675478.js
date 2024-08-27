@@ -9,7 +9,7 @@ n.d(t, {
         return M;
     },
     DZ: function () {
-        return v;
+        return R;
     },
     PS: function () {
         return C;
@@ -18,7 +18,7 @@ n.d(t, {
         return A;
     },
     aj: function () {
-        return R;
+        return v;
     },
     bE: function () {
         return U;
@@ -305,10 +305,10 @@ class N {
     }
 }
 let O = new N(u.o8, I.yP.PRELOADED_USER_SETTINGS),
-    v = new N(l.ji, I.yP.FRECENCY_AND_FAVORITES_SETTINGS),
-    R = {
+    R = new N(l.ji, I.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+    v = {
         [I.yP.PRELOADED_USER_SETTINGS]: O,
-        [I.yP.FRECENCY_AND_FAVORITES_SETTINGS]: v
+        [I.yP.FRECENCY_AND_FAVORITES_SETTINGS]: R
     };
 function C(e, t, n) {
     return O.updateAsync('guilds', (n) => (0, p.u0)(n, e, t), n);

@@ -8,7 +8,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(338545),
+    o = n(567526),
     l = n(442837),
     u = n(846519),
     c = n(481060),
@@ -26,15 +26,15 @@ var r = n(735250),
     A = n(825801),
     N = n(215105),
     O = n(429974),
-    v = n(228168),
-    R = n(981631),
+    R = n(228168),
+    v = n(981631),
     C = n(689938),
     y = n(209071);
 let D = 'text-sm/medium',
     L = 36,
     b = 144;
 function M(e) {
-    let { statusActivity: t, user: a, displayProfile: h, guildId: I, channelId: m, profileType: g, hasEntered: R = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
+    let { statusActivity: t, user: a, displayProfile: h, guildId: I, channelId: m, profileType: g, hasEntered: v = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
         { analyticsLocations: V } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
         { trackUserProfileAction: H } = (0, T.KZ)(),
         Z = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
@@ -59,17 +59,17 @@ function M(e) {
         [ec, ed] = i.useState(en),
         [e_, eE] = i.useState(!en),
         [ef, eh] = i.useState(!1),
-        ep = g === v.y0.FULL_SIZE ? (0, O.z)(a.id, null == h ? void 0 : h.guildId) : void 0;
+        ep = g === R.y0.FULL_SIZE ? (0, O.z)(a.id, null == h ? void 0 : h.guildId) : void 0;
     i.useLayoutEffect(() => {
         if (null == K.current || en) return;
         let e = K.current.getBoundingClientRect().height;
-        if ((ed(en || e <= ei), R)) {
+        if ((ed(en || e <= ei), v)) {
             var t, n, r, i;
             let e = null !== (r = null === (t = K.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : ea,
                 a = null !== (i = null === (n = q.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : es;
             eE(!en && e > a), (z.current = e), (Q.current = a);
         }
-    }, [R, en, ei, ea, es]);
+    }, [v, en, ei, ea, es]);
     let [eI, em] = (0, c.useSpring)(() => ({
         maxHeight: ''.concat(es, 'px'),
         config: {
@@ -114,7 +114,7 @@ function M(e) {
                       emoji: X,
                       animate: M,
                       hideTooltip: !1,
-                      tooltipDelay: v.vB
+                      tooltipDelay: R.vB
                   })
                 : null,
         eS = () =>
@@ -139,17 +139,17 @@ function M(e) {
         },
         eN = () =>
             (0, r.jsxs)('div', {
-                className: s()(y.content, y.clamp, y.placeholderWidth, { [y.panel]: g === v.y0.PANEL }),
+                className: s()(y.content, y.clamp, y.placeholderWidth, { [y.panel]: g === R.y0.PANEL }),
                 ref: q,
                 children: [eg(), eS()]
             }),
         eO = () =>
             (0, r.jsxs)('div', {
-                className: s()(y.content, y.unclamp, y.placeholderWidth, y.incorporeal, { [y.panel]: g === v.y0.PANEL }),
+                className: s()(y.content, y.unclamp, y.placeholderWidth, y.incorporeal, { [y.panel]: g === R.y0.PANEL }),
                 ref: K,
                 children: [eg(), eS()]
             }),
-        ev = () =>
+        eR = () =>
             (0, r.jsxs)('div', {
                 className: y.content,
                 children: [
@@ -164,7 +164,7 @@ function M(e) {
                     })
                 ]
             }),
-        eR = () => {
+        ev = () => {
             var e;
             return el
                 ? C.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL
@@ -186,9 +186,9 @@ function M(e) {
                 });
         },
         ey = {
-            [y.biteSize]: g === v.y0.BITE_SIZE,
-            [y.fullSize]: g === v.y0.FULL_SIZE,
-            [y.panel]: g === v.y0.PANEL
+            [y.biteSize]: g === R.y0.BITE_SIZE,
+            [y.fullSize]: g === R.y0.FULL_SIZE,
+            [y.panel]: g === R.y0.PANEL
         },
         eD = s()(y.background, { [y.editable]: eu }),
         eL = { [y.hoisted]: w },
@@ -213,7 +213,7 @@ function M(e) {
         ew = () =>
             (0, r.jsxs)(c.ClickableContainer, {
                 className: s()(y.visibleContainer, ey, eD, eL),
-                'aria-label': eR(),
+                'aria-label': ev(),
                 focusProps: { ringClassName: eb },
                 onClick: el ? eC : void 0,
                 onFocus: () => {
@@ -233,7 +233,7 @@ function M(e) {
                         className: eM,
                         children: (0, r.jsxs)('span', {
                             className: eP,
-                            children: [eo && eA(), el && ev()]
+                            children: [eo && eA(), el && eR()]
                         })
                     }),
                     eo &&
@@ -241,7 +241,7 @@ function M(e) {
                         (0, r.jsx)(A.Z, {
                             user: a,
                             sourceDetails: eU(),
-                            sourceType: v.n_.STATUS,
+                            sourceType: R.n_.STATUS,
                             isVisible: ef,
                             isExpandable: e_,
                             onInteraction: U,
@@ -268,7 +268,7 @@ function M(e) {
                     className: eM,
                     children: (0, r.jsxs)('span', {
                         className: eP,
-                        children: [el && ev(), eo && eN(), eo && eO()]
+                        children: [el && eR(), eo && eN(), eo && eO()]
                     })
                 })
             }),
@@ -281,7 +281,7 @@ function M(e) {
                         channelId: m,
                         profileType: g,
                         sourceDetails: eU(),
-                        sourceType: v.n_.STATUS,
+                        sourceType: R.n_.STATUS,
                         setPopoutRef: t,
                         modalKey: ep,
                         onInteraction: U,
@@ -295,7 +295,7 @@ function M(e) {
                 },
                 animationPosition: 'top',
                 position: 'bottom',
-                align: g === v.y0.FULL_SIZE ? 'center' : 'left',
+                align: g === R.y0.FULL_SIZE ? 'center' : 'left',
                 spacing: 6,
                 shouldShow: x,
                 children: () => ew()
@@ -310,7 +310,7 @@ function P(e) {
         s = (0, l.e7)([m.Z], () =>
             m.Z.findActivity(t.id, (e) => {
                 let { type: t } = e;
-                return t === R.IIU.CUSTOM_STATUS;
+                return t === v.IIU.CUSTOM_STATUS;
             })
         ),
         { analyticsLocations: o } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),

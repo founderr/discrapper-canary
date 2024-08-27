@@ -17,8 +17,8 @@ var r = n(735250),
     E = n(180160);
 function f(e) {
     let { users: t, maxUsers: a, guildId: o, channelId: f, className: h, avatarClassName: p, onFocus: I, size: m = u.AvatarSizes.SIZE_24, overflowCountVariant: T = 'text-xs/medium', overflowCountColor: g = 'interactive-normal', hideOverflowCount: S = !1, disableUsernameTooltip: A = !1, disableUserPopout: N = !1 } = e,
-        [O, v] = i.useState(!1);
-    function R() {
+        [O, R] = i.useState(!1);
+    function v() {
         return (0, r.jsx)(u.Dialog, {
             className: E.popoutWrapper,
             children: (0, r.jsx)(u.Scroller, {
@@ -33,7 +33,7 @@ function f(e) {
                             nick: _.ZP.getName(e),
                             disablePopout: 'function' == typeof N ? N(e.id) : N,
                             ignoreModalClicks: !0,
-                            onPopoutClose: () => v(!1),
+                            onPopoutClose: () => R(!1),
                             onContextMenu: (t) =>
                                 (0, c.jW)(
                                     t,
@@ -47,7 +47,7 @@ function f(e) {
                                                 channelId: f
                                             });
                                     },
-                                    { onClose: () => v(!1) }
+                                    { onClose: () => R(!1) }
                                 )
                         },
                         e.id
@@ -100,15 +100,15 @@ function f(e) {
                           (e[e.length - 1] = (0, r.jsx)(
                               u.Popout,
                               {
-                                  renderPopout: R,
+                                  renderPopout: v,
                                   shouldShow: O,
                                   position: 'bottom',
-                                  onRequestClose: () => v(!1),
+                                  onRequestClose: () => R(!1),
                                   children: () =>
                                       (0, r.jsx)(u.Button, {
                                           className: s()(E.avatar, E.overflow),
                                           onFocus: I,
-                                          onClick: () => v(!0),
+                                          onClick: () => R(!0),
                                           look: u.Button.Looks.BLANK,
                                           size: u.Button.Sizes.NONE,
                                           children: (0, r.jsxs)(u.Text, {

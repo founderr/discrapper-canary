@@ -12,8 +12,8 @@ var s = n(735250),
     c = n(594174),
     d = n(880257),
     _ = n(631885),
-    u = n(933970),
-    E = n(340453),
+    E = n(933970),
+    u = n(340453),
     T = n(292352),
     I = n(689938),
     R = n(135738);
@@ -63,7 +63,7 @@ function C(e) {
         children: [
             (0, s.jsx)('div', {
                 className: R.details,
-                children: (0, s.jsx)(E.Z, {
+                children: (0, s.jsx)(u.Z, {
                     otherUser: t,
                     status: T.ne.PENDING
                 })
@@ -71,7 +71,7 @@ function C(e) {
             (0, s.jsx)('div', {
                 className: R.actions,
                 children: r
-                    ? (0, s.jsx)(u.Z, {
+                    ? (0, s.jsx)(E.Z, {
                           icon: o.XSmallIcon,
                           className: R.__invalid_actionDeny,
                           tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_CANCEL,
@@ -81,13 +81,13 @@ function C(e) {
                           children: [
                               C
                                   ? null
-                                  : (0, s.jsx)(u.Z, {
+                                  : (0, s.jsx)(E.Z, {
                                         icon: o.CheckmarkLargeIcon,
                                         className: R.__invalid_actionAccept,
                                         tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_ACCEPT,
                                         onClick: N
                                     }),
-                              (0, s.jsx)(u.Z, {
+                              (0, s.jsx)(E.Z, {
                                   icon: o.XSmallIcon,
                                   className: R.__invalid_actionDeny,
                                   tooltip: I.Z.Messages.FAMILY_CENTER_LINK_ACTION_DECLINE,

@@ -42,8 +42,8 @@ function A(e, t, n) {
 }
 let N = {},
     O = {},
-    v = !1,
     R = !1,
+    v = !1,
     C = { flags: 0 },
     y = new l.ZP(),
     D = new l.ZP(),
@@ -202,7 +202,7 @@ function K(e) {
     return null !== (t = N[e]) && void 0 !== t ? t : j(e);
 }
 function z(e) {
-    (v = E.yE(e.flags, T.c.USE_NEW_NOTIFICATIONS)), (R = E.yE(e.flags, T.c.MENTION_ON_ALL_MESSAGES)), (C = e);
+    (R = E.yE(e.flags, T.c.USE_NEW_NOTIFICATIONS)), (v = E.yE(e.flags, T.c.MENTION_ON_ALL_MESSAGES)), (C = e);
 }
 function q(e) {
     return new Set(
@@ -218,13 +218,13 @@ function Q() {
     return !0;
 }
 function X() {
-    return v && c.xT.getCurrentConfig({ location: 'UserGuildSettingsStore' }, { autoTrackExposure: !1 }).enabled;
+    return R && c.xT.getCurrentConfig({ location: 'UserGuildSettingsStore' }, { autoTrackExposure: !1 }).enabled;
 }
 class $ extends (r = s.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(I.default, p.Z, u.Z, d.Z), null != e)) {
             var t, n;
-            (v = null !== (t = e.useNewNotifications) && void 0 !== t && t),
+            (R = null !== (t = e.useNewNotifications) && void 0 !== t && t),
                 'userGuildSettings' in e &&
                     ((N = e.userGuildSettings),
                     (P = a().mapValues(null !== (n = e.optedInChannelsByGuild) && void 0 !== n ? n : {}, (e) => new Set(e))),
@@ -234,10 +234,10 @@ class $ extends (r = s.ZP.PersistedStore) {
         }
     }
     getState() {
-        return { useNewNotifications: v };
+        return { useNewNotifications: R };
     }
     get mentionOnAllMessages() {
-        return R;
+        return v;
     }
     isSuppressEveryoneEnabled(e) {
         return K(e).suppress_everyone;
@@ -415,7 +415,7 @@ class $ extends (r = s.ZP.PersistedStore) {
         return C;
     }
     get useNewNotifications() {
-        return v;
+        return R;
     }
     getGuildUnreadSetting(e) {
         if (!X()) return g.i.ALL_MESSAGES;

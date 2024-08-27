@@ -46,8 +46,8 @@ var r,
     A = n(709054),
     N = n(968437),
     O = n(665906),
-    v = n(456077),
-    R = n(124368),
+    R = n(456077),
+    v = n(124368),
     C = n(981631),
     y = n(689938);
 function D(e) {
@@ -71,7 +71,7 @@ function M(e, t) {
     if ('' !== d) return b(d, 80);
     {
         let t = f.ZP.unparse(null !== (l = null == u ? void 0 : u.content) && void 0 !== l ? l : '', e.id, !0),
-            n = (0, v.Z)(t.split('\n')[0], !0);
+            n = (0, R.Z)(t.split('\n')[0], !0);
         n = n.replace(/^[ #-]+/, '');
         let r = [];
         for (;;) {
@@ -104,8 +104,8 @@ function P(e) {
                 S = '' !== e ? e : y.Z.Messages.THREAD;
             }
             let O = (0, N.WD)(t),
-                v = p.Z.getChannel(A.default.castMessageIdAsChannelId(n)),
-                R = await x(t, () => {
+                R = p.Z.getChannel(A.default.castMessageIdAsChannelId(n)),
+                v = await x(t, () => {
                     let e = null != n ? C.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : C.ANM.CHANNEL_THREADS(t.id);
                     return s.tn.post({
                         url: e,
@@ -117,16 +117,16 @@ function P(e) {
                         }
                     });
                 });
-            R !== v &&
+            v !== R &&
                 (u.Z.clearDraft(t.id, I.d.ThreadSettings),
                 u.Z.clearDraft(t.id, I.d.FirstThreadMessage),
-                null == l || l(R),
+                null == l || l(v),
                 (T || e.length > 0 || (null != a && a.length > 0) || (null != h && h.length > 0)) &&
                     (function (e, t, n, r, i) {
                         if (null != i && null != r && r.length > 0) i(e, r, t, n);
                         else if (null != n && n.length > 0) c.Z.sendStickers(e.id, n, t);
                         else c.Z.sendMessage(e.id, f.ZP.parse(e, t));
-                    })(R, e, a, h, E)),
+                    })(v, e, a, h, E)),
                 d.Z.clearAll(t.id, I.d.FirstThreadMessage);
         },
         [t, n, r, l, i, o, _, E]
@@ -234,9 +234,9 @@ async function x(e, t) {
                 title: r ? y.Z.Messages.CANNOT_CREATE_FORUM_POST : y.Z.Messages.CANNOT_CREATE_THREAD,
                 body: y.Z.Messages.RATE_LIMITED
             });
-        else if (R.fZ.has(null === (u = t.body) || void 0 === u ? void 0 : u.code)) throw t;
+        else if (v.fZ.has(null === (u = t.body) || void 0 === u ? void 0 : u.code)) throw t;
         else {
-            if (R.RN.has(null === (c = t.body) || void 0 === c ? void 0 : c.code))
+            if (v.RN.has(null === (c = t.body) || void 0 === c ? void 0 : c.code))
                 return new Promise((e, n) => {
                     null == t.body && n(),
                         _.Z.addConditionalChangeListener(() => {

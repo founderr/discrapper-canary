@@ -27,8 +27,8 @@ var r = n(735250),
     A = n(271383),
     N = n(626135),
     O = n(275759),
-    v = n(107484),
-    R = n(977392),
+    R = n(107484),
+    v = n(977392),
     C = n(134433),
     y = n(753194),
     D = n(458034),
@@ -228,8 +228,8 @@ function G(e) {
 function k(e) {
     let { userId: t, messageId: n, guild: a, channel: o } = e,
         { analyticsLocations: l } = (0, m.ZP)(),
-        c = (0, R.Z)(a, t, o.id, !0),
-        d = (0, u.e7)([v.Z], () => v.Z.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)),
+        c = (0, v.Z)(a, t, o.id, !0),
+        d = (0, u.e7)([R.Z], () => R.Z.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)),
         [f, h] = i.useState(null == d);
     if (null == c) return null;
     async function p() {

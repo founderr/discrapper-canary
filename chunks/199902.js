@@ -18,8 +18,8 @@ var o,
     A = n(131951),
     N = n(496675),
     O = n(19780),
-    v = n(944486),
-    R = n(979651),
+    R = n(944486),
+    v = n(979651),
     C = n(981631),
     y = n(70722);
 let D = null,
@@ -59,7 +59,7 @@ function x(e, t) {
 function G(e) {
     if (x(e.streamType, e.channelId)) return !0;
     let t = g.Z.getBasicChannel(e.channelId);
-    return null != t && (0, p.p9)(t, R.Z, S.Z, N.Z, E.Z)[0];
+    return null != t && (0, p.p9)(t, v.Z, S.Z, N.Z, E.Z)[0];
 }
 class k extends (o = d.ZP.Store) {
     initialize() {
@@ -90,7 +90,7 @@ class k extends (o = d.ZP.Store) {
         return null !== (t = this.getActiveStreamForStreamKey(n)) && void 0 !== t ? t : null;
     }
     getCurrentUserActiveStream() {
-        let e = v.Z.getVoiceChannelId(),
+        let e = R.Z.getVoiceChannelId(),
             t = g.Z.getChannel(e);
         return null == t ? null : this.getActiveStreamForUser(T.default.getId(), t.getGuildId());
     }
@@ -101,7 +101,7 @@ class k extends (o = d.ZP.Store) {
     }
     getStreamerActiveStreamMetadata() {
         var e;
-        let t = v.Z.getVoiceChannelId(),
+        let t = R.Z.getVoiceChannelId(),
             n = g.Z.getChannel(t);
         if (null == n) return null;
         let r = this.getActiveStreamForUser(T.default.getId(), n.getGuildId());

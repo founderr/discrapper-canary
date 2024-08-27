@@ -37,8 +37,8 @@ var s = n(470079),
     c = n(607070),
     d = n(605236),
     _ = n(706140),
-    u = n(243778),
-    E = n(594174),
+    E = n(243778),
+    u = n(594174),
     T = n(314884),
     I = n(580130),
     R = n(626135),
@@ -130,8 +130,8 @@ function b() {
             [],
             C.OL
         ),
-        t = (0, i.e7)([E.default], () => {
-            let e = E.default.getCurrentUser();
+        t = (0, i.e7)([u.default], () => {
+            let e = u.default.getCurrentUser();
             return null != e && (0, g.M5)(e, f.p9.TIER_2);
         });
     if (null != (0, m.kG)(e) || !!t) return (0, m.MR)([S.Ft.FREE_GUILD_BOOST_1_MONTH, S.Ft.FREE_GUILD_BOOST_3_MONTHS], e);
@@ -154,14 +154,14 @@ let P = (e) => {
         s.useEffect(() => {
             if (!1 !== a) n(P(e));
         }, [e, a]);
-        let [r] = (0, u.US)(a ? t : []);
+        let [r] = (0, E.US)(a ? t : []);
         return a ? (null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, m.Wb)(e.nitroTenureStatus) : null) : null;
     },
     v = () => {
         var e;
         let t = null === (e = M()) || void 0 === e ? void 0 : e.nitroTenureStatus,
             n = (0, N.c)({ location: 'Home' }) && null != t && t === S.EB.REDEEMABLE,
-            [s] = (0, u.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
+            [s] = (0, E.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
         return !!n && s === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     },
     Z = () => {
@@ -190,8 +190,8 @@ function D() {
             hasFetchedPremiumApplicationEntitlements: I.Z.isFetchedForApplication(f.RQ),
             isFetchingPremiumApplicationEntitlements: I.Z.isFetchingForApplication(f.RQ)
         })),
-        n = (0, i.e7)([E.default], () => {
-            let e = E.default.getCurrentUser();
+        n = (0, i.e7)([u.default], () => {
+            let e = u.default.getCurrentUser();
             return null != e && (0, g.M5)(e, f.p9.TIER_2);
         }),
         a = s.useRef(!1);

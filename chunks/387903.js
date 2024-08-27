@@ -27,8 +27,8 @@ var r,
     A = n(168524),
     N = n(565138),
     O = n(833858),
-    v = n(223135),
-    R = n(707409),
+    R = n(223135),
+    v = n(707409),
     C = n(769654),
     y = n(424678),
     D = n(750154),
@@ -178,7 +178,7 @@ class Q extends (i = o.PureComponent) {
         if (e.type === V.IIU.HANG_STATUS)
             return (0, s.jsx)('div', {
                 className: Z.assets,
-                children: (0, s.jsx)(v.Z, {
+                children: (0, s.jsx)(R.Z, {
                     hangStatusActivity: e,
                     className: u()(Z.assetsHangStatus, this.getTypeClass('assetsSmallImage', 'WithoutLargeImage'))
                 })
@@ -433,9 +433,9 @@ class Q extends (i = o.PureComponent) {
             ? null
             : (0, U.Z)(e)
               ? (0, s.jsx)(K, { timestamps: n })
-              : (0, s.jsx)(R.ZP, {
+              : (0, s.jsx)(v.ZP, {
                     start: n.start,
-                    location: R.ZP.Locations.USER_ACTIVITY,
+                    location: v.ZP.Locations.USER_ACTIVITY,
                     className: Z.playTime,
                     isApplicationStreaming: null != t
                 });
@@ -530,11 +530,11 @@ class Q extends (i = o.PureComponent) {
             A = this.renderChannelDetails(c),
             N = null != n ? n() : null,
             O = this.renderTimeBar(c),
-            v = ![e, m, T, g, S, O, N].some((e) => null != e);
+            R = ![e, m, T, g, S, O, N].some((e) => null != e);
         return (0, s.jsxs)('div', {
             className: u()(this.getTypeClass('activity'), r),
             children: [
-                this.renderHeader(v),
+                this.renderHeader(R),
                 (0, s.jsx)('div', {
                     className: u()(p ? Z.bodyAlignCenter : Z.bodyNormal, a && !d && !h && Z.wrap),
                     children: (0, s.jsxs)('div', {

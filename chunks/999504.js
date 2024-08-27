@@ -47,7 +47,7 @@ var S = Array.isArray,
         __self: !0,
         __source: !0
     };
-function v(e, t, r) {
+function R(e, t, r) {
     var i,
         a = {},
         s = null,
@@ -69,7 +69,7 @@ function v(e, t, r) {
         _owner: N.current
     };
 }
-function R(e) {
+function v(e) {
     return 'object' == typeof e && null !== e && e.$$typeof === n;
 }
 var C = /\/+/g;
@@ -124,7 +124,7 @@ function D(e, t, i) {
                               return e;
                           }))
                         : null != o &&
-                          (R(o) &&
+                          (v(o) &&
                               ((l = o),
                               (u = a + (!o.key || (_ && _.key === o.key) ? '' : ('' + o.key).replace(C, '$&/') + '/') + t),
                               (o = {
@@ -201,7 +201,7 @@ var b = { current: null },
         );
     },
     only: function (e) {
-        if (!R(e)) throw Error('React.Children.only expected to receive a single React element child.');
+        if (!v(e)) throw Error('React.Children.only expected to receive a single React element child.');
         return e;
     }
 }),
@@ -260,9 +260,9 @@ var b = { current: null },
             (e.Consumer = e)
         );
     }),
-    (t.createElement = v),
+    (t.createElement = R),
     (t.createFactory = function (e) {
-        var t = v.bind(null, e);
+        var t = R.bind(null, e);
         return (t.type = e), t;
     }),
     (t.createRef = function () {
@@ -274,7 +274,7 @@ var b = { current: null },
             render: e
         };
     }),
-    (t.isValidElement = R),
+    (t.isValidElement = v),
     (t.lazy = function (e) {
         return {
             $$typeof: _,

@@ -87,8 +87,8 @@ var g = n(304852),
     A = n(149203),
     N = n(981631),
     O = n(185923),
-    v = n(957825),
-    R = n(474936),
+    R = n(957825),
+    v = n(474936),
     C = n(689938);
 let y = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null == t ? void 0 : t.getGuildId();
@@ -105,10 +105,10 @@ let y = function (e, t) {
                 autoTrackExposure: !0
             }),
             I = H(n),
-            { topEmojis: N, newlyAddedEmojis: v } = (0, S.Z)(n, e),
-            { allEmojis: R } = (0, g.Z)({
+            { topEmojis: N, newlyAddedEmojis: R } = (0, S.Z)(n, e),
+            { allEmojis: v } = (0, g.Z)({
                 topEmojis: N,
-                newlyAddedEmojis: v
+                newlyAddedEmojis: R
             }),
             y = (0, s.e7)([l.ZP], () => l.ZP.getDisambiguatedEmojiContext(n), [n]),
             D = (0, s.e7)([E.Z], () => {
@@ -152,7 +152,7 @@ let y = function (e, t) {
                 })(s, A.En.GUILD),
                 l.ZP.categories.reduce((t, r) => {
                     if (r === A.UX.TOP_GUILD_EMOJI) {
-                        let { emojisDisabled: e, emojisUnfiltered: n } = c(R, !0);
+                        let { emojisDisabled: e, emojisUnfiltered: n } = c(v, !0);
                         if (null == n || 0 === n.length) return t;
                         t.push({
                             type: A.En.TOP_GUILD_EMOJI,
@@ -197,7 +197,7 @@ let y = function (e, t) {
                     return t;
                 }, [])
             );
-        }, [y, t, n, e, b, R, D, _, p, o, a, I, i]);
+        }, [y, t, n, e, b, v, D, _, p, o, a, I, i]);
     },
     D = (e) => {
         let t = (null == e ? void 0 : e.getGuildId()) != null;
@@ -279,13 +279,13 @@ let y = function (e, t) {
             { emoji: r, location: i, pickerIntention: a, category: s, subCategory: l = A.t0.NONE, position: u, newlyAddedHighlight: c, isBurstReaction: d } = e;
         switch (a) {
             case O.Hz.REACTION:
-                n = d ? R.cd.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : R.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
+                n = d ? v.cd.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED : v.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED;
                 break;
             case O.Hz.STATUS:
-                n = R.cd.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
+                n = v.cd.EMOJI_PICKER_STATUS_EMOJI_CLICKED;
                 break;
             default:
-                n = R.cd.EMOJI_PICKER_EMOJI_CLICKED;
+                n = v.cd.EMOJI_PICKER_EMOJI_CLICKED;
         }
         let _ = null !== (t = r.uniqueName) && void 0 !== t ? t : r.name;
         o.ZP.trackWithMetadata(N.rMx.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
@@ -309,7 +309,7 @@ let y = function (e, t) {
             i = null !== (t = n.uniqueName) && void 0 !== t ? t : n.name;
         o.ZP.trackWithMetadata(N.rMx.EXPRESSION_FAVORITED, {
             location: r,
-            expression_type: v.X1.EMOJI,
+            expression_type: R.X1.EMOJI,
             expression_id: n.id,
             expression_name: i,
             expression_guild_id: n.guildId,

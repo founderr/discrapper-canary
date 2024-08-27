@@ -51,8 +51,8 @@ function m(e, n) {
         }),
         {
             userRoles: A,
-            isGuildMember: C,
-            canManageRoles: O
+            isGuildMember: O,
+            canManageRoles: C
         } = (0, i.cj)(
             [c.ZP, E.Z],
             () => {
@@ -65,11 +65,11 @@ function m(e, n) {
             },
             [e, n, g]
         );
-    if (__OVERLAY__ || null == A || null == g || !C) return null;
+    if (__OVERLAY__ || null == A || null == g || !O) return null;
     let T = E.Z.getHighestRole(g),
-        v = Object.values(m).filter((e) => !(0, u.pM)(g.id, e.id)),
-        x = O
-            ? v.map((l) => {
+        h = Object.values(m).filter((e) => !(0, u.pM)(g.id, e.id)),
+        v = C
+            ? h.map((l) => {
                   let r = l.managed || !E.Z.isRoleHigher(g, T, l),
                       i = -1 !== A.indexOf(l.id);
                   return r && !i
@@ -101,7 +101,7 @@ function m(e, n) {
                             l.id
                         );
               })
-            : v
+            : h
                   .filter((e) => -1 !== A.indexOf(e.id))
                   .map((e) =>
                       (0, u.pM)(g.id, e.id)
@@ -115,13 +115,13 @@ function m(e, n) {
                                 e.id
                             )
                   );
-    return 0 === x.filter(M.lm).length
+    return 0 === v.filter(M.lm).length
         ? null
         : l
-          ? x
+          ? v
           : (0, t.jsx)(a.MenuItem, {
                 id: 'roles',
-                label: f.Z.Messages.ROLES_LIST.format({ numRoles: x.length }),
-                children: x
+                label: f.Z.Messages.ROLES_LIST.format({ numRoles: v.length }),
+                children: v
             });
 }

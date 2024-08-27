@@ -12,7 +12,7 @@ n.d(t, {
         return et;
     },
     IN: function () {
-        return R;
+        return v;
     },
     Me: function () {
         return c;
@@ -27,7 +27,7 @@ n.d(t, {
         return F;
     },
     V5: function () {
-        return v;
+        return R;
     },
     Zj: function () {
         return en;
@@ -272,20 +272,20 @@ function O(e) {
     var t;
     return 'undefined' != typeof window && null != window.navigator && e.test((null === (t = window.navigator.userAgentData) || void 0 === t ? void 0 : t.platform) || window.navigator.platform);
 }
-function v() {
+function R() {
     return O(/^Mac/i);
 }
-function R() {
+function v() {
     return O(/^iPhone/i);
 }
 function C() {
-    return O(/^iPad/i) || (v() && navigator.maxTouchPoints > 1);
+    return O(/^iPad/i) || (R() && navigator.maxTouchPoints > 1);
 }
 function y() {
-    return R() || C();
+    return v() || C();
 }
 function D() {
-    return v() || y();
+    return R() || y();
 }
 function L() {
     return (
@@ -320,9 +320,9 @@ function U(e, t) {
 function w(e, t, n = !0) {
     var r, i;
     let { metaKey: a, ctrlKey: s, altKey: o, shiftKey: l } = t;
-    N(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (v() ? (a = !0) : (s = !0));
+    N(/Firefox/i) && (null === (i = window.event) || void 0 === i ? void 0 : null === (r = i.type) || void 0 === r ? void 0 : r.startsWith('key')) && '_blank' === e.target && (R() ? (a = !0) : (s = !0));
     let u =
-        L() && v() && !C()
+        L() && R() && !C()
             ? new KeyboardEvent('keydown', {
                   keyIdentifier: 'Enter',
                   metaKey: a,

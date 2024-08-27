@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(624138),
     N = n(191177),
     O = n(285651),
-    v = n(217590),
-    R = n(453070),
+    R = n(217590),
+    v = n(453070),
     C = n(926491),
     y = n(373228),
     D = n(462109),
@@ -45,8 +45,8 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     W = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
     K = Y + 2 * W,
     z = j + 2 * W,
-    q = s()(v.Iw, 200),
-    Q = s()(v.m1, 200),
+    q = s()(R.Iw, 200),
+    Q = s()(R.m1, 200),
     X = i.forwardRef(function (e, t) {
         var a;
         let { containerWidth: s, channel: u, onSelectSticker: A, closePopout: Y } = e,
@@ -60,7 +60,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             [en, er] = (0, h.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], o.Z),
             ei = i.useRef('');
         i.useImperativeHandle(t, () => ({ onPickerOpen: eb }));
-        let ea = (0, R.Sd)(u),
+        let ea = (0, v.Sd)(u),
             es = 0 === ea.filter((e) => e.type !== y.Ih.EMPTY_GUILD_UPSELL).length,
             eo = (0, p.ep)({
                 gridWrapperRef: $,
@@ -73,14 +73,14 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             eu = i.useMemo(() => new Set(el), [el]),
             ec = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
             ed = i.useMemo(() => (0, w.S)(en, ec, u), [en, ec, u]),
-            e_ = (0, R.RJ)(),
-            eE = (0, R.LZ)(),
+            e_ = (0, v.RJ)(),
+            eE = (0, v.LZ)(),
             ef = (0, l.cj)([C.Z], () => C.Z.getAllGuildStickers()),
             { sendable: eh = [], sendableWithPremium: ep = [] } = null != ed ? ed : {},
             eI = eh.length + ep.length,
             em = i.useCallback(
                 (e) => {
-                    '' === en ? (0, v.On)(e) : (0, v.Yk)(e, en, eI), A(e.sticker, y.V0.STICKER_PICKER);
+                    '' === en ? (0, R.On)(e) : (0, R.Yk)(e, en, eI), A(e.sticker, y.V0.STICKER_PICKER);
                 },
                 [A, en, eI]
             ),
@@ -91,7 +91,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 stickersGrid: eA,
                 gutterWidth: eN,
                 columnCounts: eO
-            } = (0, R.el)({
+            } = (0, v.el)({
                 filteredStickers: ed,
                 stickersCategories: ea,
                 collapsedStickersCategories: eu,
@@ -100,7 +100,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 stickerNodeMargin: eT ? H : Z,
                 stickerNodeWidth: eT ? K : z
             }),
-            ev = i.useCallback(
+            eR = i.useCallback(
                 (e, t) => {
                     let { location: i } = t;
                     switch (e.type) {
@@ -125,7 +125,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 [j, ec, u, em]
             ),
             {
-                getItemProps: eR,
+                getItemProps: ev,
                 getRowProps: eC,
                 gridContainerProps: ey,
                 handleGridContainerKeyDown: eD,
@@ -134,7 +134,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 columnCounts: eO,
                 stickersListRef: J,
                 stickersGrid: eA,
-                onGridItemSelect: ev,
+                onGridItemSelect: eR,
                 store: f.ZN,
                 setInspectedStickerPosition: f.ZN.setInspectedExpressionPosition,
                 gridNavigatorId: x.Vr
@@ -152,7 +152,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 [...ef.values()].forEach((e) => {
                     r += e.length;
                 }),
-                (0, v.ev)({
+                (0, R.ev)({
                     containerWidth: s,
                     favoriteStickers: e_,
                     frequentlyUsedStickers: eE,
@@ -161,7 +161,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 });
         };
         i.useEffect(() => {
-            '' === ei.current && '' !== en && (0, v.n8)(), (ei.current = en);
+            '' === ei.current && '' !== en && (0, R.n8)(), (ei.current = en);
         }, [en]),
             i.useEffect(() => {
                 0 === eI ? q(en) : Q(en, eI, er);
@@ -204,7 +204,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                                 ref: J,
                                                 collapsedStickersCategories: eu,
                                                 filteredStickers: ed,
-                                                getStickerItemProps: eR,
+                                                getStickerItemProps: ev,
                                                 getStickerRowProps: eC,
                                                 gridWidth: eo,
                                                 gutterWidth: eN,
@@ -230,7 +230,7 @@ let B = (0, A.Mg)(u.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     });
 t.Z = i.forwardRef(
     (e, t) => (
-        (0, R.fP)(),
+        (0, v.fP)(),
         (0, r.jsx)('div', {
             className: k.wrapper,
             id: x.nZ,

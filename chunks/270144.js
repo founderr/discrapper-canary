@@ -18,7 +18,7 @@ n.d(t, {
         return P;
     },
     _k: function () {
-        return v;
+        return R;
     },
     h6: function () {
         return D;
@@ -92,7 +92,7 @@ let A = function (e, t) {
             { entitlementsLoaded: l }
         );
     },
-    v = function (e) {
+    R = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { includeSoftDeleted: !1 };
         return (0, s.Wu)(
             [T.Z],
@@ -110,7 +110,7 @@ let A = function (e, t) {
             [e, t.includeSoftDeleted]
         );
     },
-    R = [],
+    v = [],
     C = [];
 function y(e, t) {
     let n = (0, s.e7)([E.ZP], () => E.ZP.getSubscriptions()),
@@ -124,7 +124,7 @@ function y(e, t) {
                 var n, r;
                 return {
                     subscriptionGroupListing: null != e ? T.Z.getSubscriptionGroupListingForApplication(e) : null,
-                    guildEntitlements: null != e && null != t ? T.Z.getApplicationEntitlementsForGuild(e, t) : R,
+                    guildEntitlements: null != e && null != t ? T.Z.getApplicationEntitlementsForGuild(e, t) : v,
                     userEntitlements: null != e && null !== (r = null === (n = f.Z.getForApplication(e)) || void 0 === n ? void 0 : n.values()) && void 0 !== r ? r : C
                 };
             },

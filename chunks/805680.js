@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(315744),
     N = n(603074),
     O = n(453070),
-    v = n(926491),
-    R = n(457040),
+    R = n(926491),
+    v = n(457040),
     C = n(740492),
     y = n(585483),
     D = n(5967),
@@ -126,7 +126,7 @@ t.Z = i.memo(function (e) {
         er = (0, L.Iu)((e) => e.activeView),
         ei = (0, O.fQ)(Y),
         { renderWindow: ea, windowDispatch: es } = i.useContext(I.ZP),
-        eo = (0, d.e7)([v.Z], () => !v.Z.hasLoadedStickerPacks),
+        eo = (0, d.e7)([R.Z], () => !R.Z.hasLoadedStickerPacks),
         el = (0, A.P)('expression_picker'),
         eu = null != Q,
         ec = (0, _.Jw)(null != Q ? Q : ''),
@@ -278,7 +278,7 @@ t.Z = i.memo(function (e) {
                                                 })
                                               : null,
                                           er === b.X1.STICKER && ef
-                                              ? (0, r.jsx)(R.Z, {
+                                              ? (0, r.jsx)(v.Z, {
                                                     isLoading: eo,
                                                     channel: Y,
                                                     containerWidth: et,

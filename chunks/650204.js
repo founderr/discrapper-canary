@@ -22,8 +22,8 @@ var d = n(202226),
     A = n(63063),
     N = n(240849),
     O = n(998502),
-    v = n(513566),
-    R = n(534713),
+    R = n(513566),
+    v = n(534713),
     C = n(358085),
     y = n(703656),
     D = n(284737),
@@ -43,7 +43,7 @@ let F = 5 * B.Z.Millis.MINUTE,
     V = document.getElementById('app-mount');
 E()(null != V, 'Could not find app-mount'), (V.className = __OVERLAY__ ? '' : x.appMount);
 let H = (0, d.createRoot)(V),
-    Z = { '/oauth2/authorize': R.Z },
+    Z = { '/oauth2/authorize': v.Z },
     Y = (e) => H.render((0, c.jsx)(U.Z, { children: (0, c.jsx)(P.Z, { children: (0, c.jsx)(e, {}) }) }));
 if (null != M.Z) {
     null === (r = M.Z.setUncaughtExceptionHandler) ||
@@ -91,5 +91,5 @@ else {
                 (0, D.al)(window);
             });
     }
-    m.Z.initialize(), h.Z.initialize(), p.Z.init(), g.Z.init(), G.Z.init(), I.Z.initialize(), N.Z.initialize(), v.Z.initialize(), T.j(), Y(f.Z.App);
+    m.Z.initialize(), h.Z.initialize(), p.Z.init(), g.Z.init(), G.Z.init(), I.Z.initialize(), N.Z.initialize(), R.Z.initialize(), T.j(), Y(f.Z.App);
 }

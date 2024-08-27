@@ -8,13 +8,13 @@ var s = n(735250),
     a = n(470079),
     r = n(120356),
     i = n.n(r),
-    l = n(338545),
+    l = n(567526),
     o = n(442837),
     c = n(481060),
     d = n(110924),
     _ = n(607070),
-    u = n(819640),
-    E = n(617136),
+    E = n(819640),
+    u = n(617136),
     T = n(113434),
     I = n(569984),
     R = n(497505),
@@ -38,7 +38,7 @@ function O(e) {
         }),
         b = (0, N.Zy)({ location: h.dr.QUESTS_BAR }),
         P = (0, o.e7)([_.Z], () => _.Z.useReducedMotion),
-        L = (0, o.e7)([u.Z], () => u.Z.hasLayers()),
+        L = (0, o.e7)([E.Z], () => E.Z.hasLayers()),
         v = (null === (t = I.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         Z = (0, d.Z)(v),
         D = (null === (n = I.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
@@ -90,21 +90,21 @@ function O(e) {
         e_ = a.useCallback(() => {
             ed();
         }, [ed]),
-        eu = a.useCallback(() => {
+        eE = a.useCallback(() => {
             if ((window.clearTimeout(W.current), !!F.canCollapseOnBlur && !Y)) !K.current && ea(!1);
         }, [Y, F, ea]),
-        eE = a.useCallback(() => {
-            (0, E.dA)({
+        eu = a.useCallback(() => {
+            (0, u.dA)({
                 questId: I.id,
                 event: M.rMx.QUEST_HOVER,
-                properties: (0, E.mH)(R.jn.QUEST_BAR)
+                properties: (0, u.mH)(R.jn.QUEST_BAR)
             }),
                 (K.current = !0),
                 ed({ withDelay: !0 });
         }, [ed, I]),
         eT = a.useCallback(() => {
-            (K.current = !1), eu();
-        }, [eu]);
+            (K.current = !1), eE();
+        }, [eE]);
     a.useLayoutEffect(() => {
         D && F.shouldExpandOnQuestComplete && ei();
     }, [ei, D, F.shouldExpandOnQuestComplete]),
@@ -154,20 +154,20 @@ function O(e) {
     }, [D, ei, F.canCollapseOnBlur, er, B]),
     a.useEffect(() => {
         y &&
-            (0, E.dA)({
+            (0, u.dA)({
                 questId: I.id,
                 event: M.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                 properties: {
-                    ...(0, E.mH)(R.jn.QUEST_BAR),
+                    ...(0, u.mH)(R.jn.QUEST_BAR),
                     reason: 'asset_loading_error'
                 }
             }),
             !b &&
-                (0, E.dA)({
+                (0, u.dA)({
                     questId: I.id,
                     event: M.rMx.QUEST_CONTENT_RENDERING_FAILURE,
                     properties: {
-                        ...(0, E.mH)(R.jn.QUEST_BAR),
+                        ...(0, u.mH)(R.jn.QUEST_BAR),
                         reason: 'not_eligible_for_quest'
                     }
                 });
@@ -184,9 +184,9 @@ function O(e) {
                       children: (0, s.jsx)(l.animated.div, {
                           'aria-hidden': !k,
                           onMouseLeave: eT,
-                          onMouseEnter: eE,
+                          onMouseEnter: eu,
                           onFocus: e_,
-                          onBlur: eu,
+                          onBlur: eE,
                           className: i()(x.wrapper, {
                               [x.wrapperInvisible]: !k,
                               [x.wrapperVisible]: k && $

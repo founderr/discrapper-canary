@@ -35,20 +35,20 @@ let A = () => (0, h.f)(!1),
             });
         }, [N]);
         let O = (0, d.N)(),
-            v = (0, c.Ng)(),
-            R = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_0,
-            C = null != O || null != v;
+            R = (0, c.Ng)(),
+            v = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_0,
+            C = null != O || null != R;
         return (0, r.jsxs)('div', {
             className: s()(g.upsellWrapper, { [g.unifyTrialUpsell]: C }),
             children: [
                 C
                     ? (0, r.jsx)(_.ZP, {
                           trialOffer: O,
-                          discountOffer: v,
+                          discountOffer: R,
                           onClose: A,
                           type: m.cd.STICKER_PICKER_UPSELL,
                           subscriptionTier: null !== (a = null == O ? void 0 : null === (n = O.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : m.Si.TIER_2,
-                          children: R
+                          children: v
                               ? T.Z.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
                                     planName: (0, f.aq)(m.Xh.PREMIUM_MONTH_TIER_0),
                                     onClick: h
@@ -78,7 +78,7 @@ let A = () => (0, h.f)(!1),
                 !C &&
                     (0, r.jsx)(p.Z, {
                         analyticsSection: I.jXE.EXPRESSION_PICKER,
-                        buttonText: C ? (R ? T.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : T.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT) : void 0
+                        buttonText: C ? (v ? T.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : T.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT) : void 0
                     }),
                 (0, r.jsx)(o.Clickable, {
                     className: g.upsellClose,

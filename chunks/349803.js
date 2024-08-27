@@ -2,21 +2,21 @@ var s = n(735250);
 n(470079);
 var a = n(120356),
     r = n.n(a),
-    i = n(338545),
+    i = n(567526),
     l = n(481060),
     o = n(104494),
     c = n(639119),
     d = n(318747),
     _ = n(409100),
-    u = n(474936),
-    E = n(981631),
+    E = n(474936),
+    u = n(981631),
     T = n(225133);
 t.Z = function (e) {
     var t, n;
     let { isVisible: a, isFullscreen: I, subscriptionTier: R } = e,
         C = null === (t = (0, c.N)()) || void 0 === t ? void 0 : t.subscription_trial,
         g = (0, o.Ng)(),
-        N = (0, o.Wp)(g, u.Si.TIER_2) ? u.Si.TIER_2 : void 0,
+        N = (0, o.Wp)(g, E.Si.TIER_2) ? E.Si.TIER_2 : void 0,
         p = (0, l.useSpring)({
             transform: a ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: a ? 1 : 0,
@@ -25,7 +25,7 @@ t.Z = function (e) {
                 friction: 12
             }
         }),
-        A = { section: E.jXE.MARKETING_FLOATING_CTA };
+        A = { section: u.jXE.MARKETING_FLOATING_CTA };
     return (0, s.jsx)(i.animated.div, {
         className: r()(T.wrapper, {
             [T.fullscreenWrapper]: I,

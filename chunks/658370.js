@@ -8,8 +8,8 @@ var a = n(120356),
     c = n(104494),
     d = n(639119),
     _ = n(176782),
-    u = n(743612),
-    E = n(409100),
+    E = n(743612),
+    u = n(409100),
     T = n(474936),
     I = n(689938),
     R = n(817199);
@@ -35,7 +35,7 @@ t.Z = (e) => {
     return (0, s.jsxs)('div', {
         className: r()(R.cardDescription, null == P ? void 0 : null === (t = P.description) || void 0 === t ? void 0 : t.className),
         children: [
-            (0, s.jsx)(u.Z, {
+            (0, s.jsx)(E.Z, {
                 title: a,
                 cardVariantStyleInfo: P,
                 titleClassName: C,
@@ -43,7 +43,7 @@ t.Z = (e) => {
                 description: p
             }),
             m &&
-                (0, s.jsx)(E.Z, {
+                (0, s.jsx)(u.Z, {
                     className: g,
                     subscriptionTier: T.Si.TIER_2,
                     buttonText: b,

@@ -21,8 +21,8 @@ var c,
     A = n(823379),
     N = n(314897),
     O = n(592125),
-    v = n(984933),
-    R = n(430824),
+    R = n(984933),
+    v = n(430824),
     C = n(131951),
     y = n(914010),
     D = n(981631),
@@ -58,7 +58,7 @@ function G() {
 }
 function k(e) {
     if (null != e) {
-        let t = v.ZP.getDefaultChannel(e);
+        let t = R.ZP.getDefaultChannel(e);
         if (null != t) return t.id;
     }
 }
@@ -76,7 +76,7 @@ function F(e) {
 }
 function V() {
     let e = !1,
-        t = R.Z.getGuilds();
+        t = v.Z.getGuilds();
     return (
         h().each(M, (t, n) => {
             (null == t || (!O.Z.hasChannel(t) && t !== a && !w.has(t) && !(0, L.ME)(t))) && (delete M[n], delete P[n], (e = !0));
@@ -97,7 +97,7 @@ function H(e, t) {
         let n = y.Z.getGuildId();
         M[x(n)] === e && (t = n);
     }
-    let n = null != R.Z.getGuild(t) ? t : null,
+    let n = null != v.Z.getGuild(t) ? t : null,
         r = !1;
     o === e && ((o = null), (r = !0)), !(0, T.cn)() && (M[x(n)] === e && ((M[x(n)] = k(x(n))), y.Z.getGuildId() === n && (0, g.dL)(D.Z5c.CHANNEL(t, M[x(n)])), (r = !0)), null != n && U[n] === e && (delete U[n], (r = !0))), r && G();
 }
@@ -133,7 +133,7 @@ class Y extends (c = p.ZP.Store) {
                         null: null
                     });
         }
-        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(R.Z, O.Z, y.Z, v.ZP, C.Z);
+        this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type && 'VOICE_STATE_UPDATES' !== e.type), this.waitFor(v.Z, O.Z, y.Z, R.ZP, C.Z);
     }
     getChannelId(e) {
         var t, n;

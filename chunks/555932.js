@@ -6,7 +6,7 @@ n.d(t, {
     n(47120);
 var r = n(735250),
     i = n(470079),
-    a = n(338545),
+    a = n(567526),
     s = n(442837),
     o = n(481060),
     l = n(607070),
@@ -27,8 +27,8 @@ function p(e) {
         A = _.oCV[t.premiumTier],
         N = _.oCV[S],
         O = (t.premiumSubscriberCount - A) / (N - A),
-        v = d.P[t.premiumTier],
-        R = d.P[S],
+        R = d.P[t.premiumTier],
+        v = d.P[S],
         C = t.premiumTier === _.Eu4.TIER_3,
         {
             progressBarFillWidthFactor: y,
@@ -86,7 +86,7 @@ function p(e) {
                 }
             );
         })({
-            fillFactor: C ? 1 : O * (R - v) + v,
+            fillFactor: C ? 1 : O * (v - R) + R,
             isRevealed: p || n,
             useReducedMotion: n,
             premiumTier: t.premiumTier,

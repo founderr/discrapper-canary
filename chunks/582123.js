@@ -27,8 +27,8 @@ var r = n(735250),
 let N = 32;
 function O(e) {
     let { user: t, children: n, onClose: O } = e,
-        { analyticsLocations: v } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
-        { context: R } = (0, f.KZ)(),
+        { analyticsLocations: R } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
+        { context: v } = (0, f.KZ)(),
         { profileType: C, primaryColor: y } = (0, p.z)(),
         { selfPastActivityEnabled: D } = (0, h.z)({ location: 'UserProfileActivityEducationTooltipPopout' }),
         L = (0, a.e7)([E.default], () => {
@@ -44,8 +44,8 @@ function O(e) {
             (0, I.openUserProfileModal)({
                 userId: t.id,
                 section: m.oh.ACTIVITY,
-                sourceAnalyticsLocations: v,
-                ...R
+                sourceAnalyticsLocations: R,
+                ...v
             }),
                 null == O || O();
         };

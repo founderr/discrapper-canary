@@ -15,7 +15,7 @@ n.d(t, {
         return z;
     },
     Ev: function () {
-        return v;
+        return R;
     },
     Fr: function () {
         return O;
@@ -108,7 +108,7 @@ n.d(t, {
         return Z;
     },
     qm: function () {
-        return R;
+        return v;
     },
     um: function () {
         return ee;
@@ -146,8 +146,8 @@ var r,
     A = n(981631);
 let N = 160,
     O = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
-    v = '438122941302046720',
-    R = '773336526917861400',
+    R = '438122941302046720',
+    v = '773336526917861400',
     C = '880218832743055411',
     y = '1050941315912835122',
     D = '1070087967294631976',

@@ -21,9 +21,9 @@ var r,
     A = n(358085),
     N = n(417363),
     O = n(981631),
-    v = n(186901);
+    R = n(186901);
 ((s = r || (r = {})).INSTALL = 'Install'), (s.REPAIR = 'Repair'), ((o = i || (i = {})).PATCH = 'Patch'), (o.REPAIR = 'Repair');
-let R = [v.ff.AUTHENTICATION_FAILED, v.ff.NOT_ENTITLED],
+let v = [R.ff.AUTHENTICATION_FAILED, R.ff.NOT_ENTITLED],
     C = 'DispatchManagerStore',
     y = [],
     D = [],
@@ -206,8 +206,8 @@ class W extends (a = E.ZP.Store) {
             let { error: t } = e,
                 { code: n } = t;
             if (null != n) {
-                if (R.includes(n)) Y();
-                else if (n === v.ff.APPLICATION_NOT_FOUND) {
+                if (v.includes(n)) Y();
+                else if (n === R.ff.APPLICATION_NOT_FOUND) {
                     let { context: e } = t;
                     if (null != e) {
                         let { application_id: t, branch_id: n } = e;

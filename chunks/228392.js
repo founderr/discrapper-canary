@@ -3,7 +3,7 @@ n.d(t, {
         return y;
     },
     B5: function () {
-        return v;
+        return R;
     },
     Do: function () {
         return C;
@@ -24,7 +24,7 @@ n.d(t, {
         return h;
     },
     KR: function () {
-        return R;
+        return v;
     },
     MO: function () {
         return U;
@@ -206,7 +206,7 @@ function O(e) {
         sort_order: u
     });
 }
-function v(e) {
+function R(e) {
     let { guildId: t, channelId: n, postId: i, location: a } = e;
     r.ZP.trackWithMetadata(E.rMx.FORUM_CHANNEL_POST_CLICKED, {
         ...(0, _.n4)({ channelId: i }),
@@ -216,7 +216,7 @@ function v(e) {
         location: a
     });
 }
-function R(e) {
+function v(e) {
     let { guildId: t, channelId: n, sortOrder: i } = e;
     r.ZP.trackWithMetadata(E.rMx.FORUM_CHANNEL_POSTS_SORTED, {
         ...(0, _.xl)({ channelId: n }),

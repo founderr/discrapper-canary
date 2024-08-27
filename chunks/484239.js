@@ -8,8 +8,8 @@ var a = n(120356),
     c = n(743612),
     d = n(735825),
     _ = n(817199),
-    u = n(721239),
-    E = n(557634),
+    E = n(721239),
+    u = n(557634),
     T = n(992429);
 t.Z = (e) => {
     var t;
@@ -24,10 +24,10 @@ t.Z = (e) => {
             (n = T), (a = 'unlocked icon');
             break;
         case d.EB.PENDING:
-            (n = u), (a = 'locked icon');
+            (n = E), (a = 'locked icon');
             break;
         case d.EB.REDEEMED:
-            (n = E), (a = 'thumbs up icon');
+            (n = u), (a = 'thumbs up icon');
             break;
         default:
             (n = void 0), (a = '');

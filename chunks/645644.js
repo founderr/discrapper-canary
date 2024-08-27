@@ -34,7 +34,7 @@ function N(e, t, n) {
 }
 let O = new a.Y('OverlayUsageStatsManager');
 O.verbose = () => {};
-class v {
+class R {
     increment(e) {
         ++this.actions[e];
     }
@@ -57,7 +57,7 @@ class v {
         });
     }
 }
-class R {
+class v {
     static makeEmptyGroupAnalytics() {
         return {
             [A.Vk.Nudge]: 0,
@@ -121,23 +121,23 @@ class R {
             [A.bv.Clicked]: 0
         }),
             N(this, 'groupCounters', {
-                [A.bv.Viewed]: R.makeEmptyGroupAnalytics(),
-                [A.bv.Clicked]: R.makeEmptyGroupAnalytics()
+                [A.bv.Viewed]: v.makeEmptyGroupAnalytics(),
+                [A.bv.Clicked]: v.makeEmptyGroupAnalytics()
             }),
             N(this, 'counters', {
-                [A.n0.NewsNudge]: new v(),
-                [A.n0.WelcomeNudge]: new v(),
-                [A.n0.TextChat]: new v(),
-                [A.n0.ActivityUserJoin]: new v(),
-                [A.n0.ActivityInvite]: new v(),
-                [A.n0.IncomingCall]: new v(),
-                [A.n0.GoLiveNudge]: new v(),
-                [A.n0.GoLiveNonVoiceNudge]: new v(),
-                [A.n0.OverlayCrashed]: new v(),
-                [A.n0.StartBroadcastNotification]: new v(),
-                [A.n0.ClipsReminderNotification]: new v(),
-                [A.n0.ClipsNotification]: new v(),
-                [A.n0.KeybindIndicatorsNotification]: new v()
+                [A.n0.NewsNudge]: new R(),
+                [A.n0.WelcomeNudge]: new R(),
+                [A.n0.TextChat]: new R(),
+                [A.n0.ActivityUserJoin]: new R(),
+                [A.n0.ActivityInvite]: new R(),
+                [A.n0.IncomingCall]: new R(),
+                [A.n0.GoLiveNudge]: new R(),
+                [A.n0.GoLiveNonVoiceNudge]: new R(),
+                [A.n0.OverlayCrashed]: new R(),
+                [A.n0.StartBroadcastNotification]: new R(),
+                [A.n0.ClipsReminderNotification]: new R(),
+                [A.n0.ClipsNotification]: new R(),
+                [A.n0.KeybindIndicatorsNotification]: new R()
             });
     }
 }
@@ -388,7 +388,7 @@ class D {
         for (let t of Object.values(D.gamesByPid)) t.rtcConnectionTimer.toggle(e);
     }
     constructor(e) {
-        N(this, 'game', void 0), N(this, 'uuid', void 0), N(this, 'overlayStatus', void 0), N(this, 'notificationAnalytics', void 0), N(this, 'widgetAnalytics', void 0), N(this, 'screenAnalytics', void 0), N(this, 'uiUnlockedCount', void 0), N(this, 'uiLockedCount', void 0), N(this, 'gameFocusChangedCount', void 0), N(this, 'gameConcurrentGameCount', void 0), N(this, 'overlayMessageAckCount', void 0), N(this, 'overlayMessageCreateCount', void 0), N(this, 'gameTimer', void 0), N(this, 'gameFocusedTimer', void 0), N(this, 'unlockedTimer', void 0), N(this, 'rtcConnectionTimer', void 0), N(this, 'desktopFocusedTimer', void 0), N(this, 'desktopFocusChangedCount', void 0), N(this, 'desktopMessageAckCount', void 0), N(this, 'desktopMessageCreateCount', void 0), N(this, 'soundboardShownTimer', void 0), N(this, 'soundboardShownCount', void 0), N(this, 'soundboardKeepOpenCount', void 0), N(this, 'muteToggledCount', void 0), N(this, '_successfullyShown', void 0), (this.game = e), (this.uuid = crypto.randomUUID()), (this.notificationAnalytics = new R()), (this.widgetAnalytics = new C()), (this.uiUnlockedCount = 0), (this.uiLockedCount = 0), (this.gameFocusChangedCount = 0), (this.gameConcurrentGameCount = 0), (this.overlayMessageAckCount = 0), (this.overlayMessageCreateCount = 0), (this.gameTimer = s.G9.startNew()), (this.gameFocusedTimer = new s.G9()), (this.unlockedTimer = new s.G9()), (this.rtcConnectionTimer = new s.G9()), (this.desktopFocusedTimer = new s.G9()), (this.desktopFocusChangedCount = 0), (this.desktopMessageAckCount = 0), (this.desktopMessageCreateCount = 0), (this.soundboardShownTimer = new s.G9()), (this.soundboardShownCount = 0), (this.soundboardKeepOpenCount = 0), (this.muteToggledCount = 0), (this._successfullyShown = !1), (this.screenAnalytics = new y(e)), (this.overlayStatus = _.ZP.getGameOverlayStatus(e)), D.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), H.hasConnection() && this.rtcConnectionTimer.start();
+        N(this, 'game', void 0), N(this, 'uuid', void 0), N(this, 'overlayStatus', void 0), N(this, 'notificationAnalytics', void 0), N(this, 'widgetAnalytics', void 0), N(this, 'screenAnalytics', void 0), N(this, 'uiUnlockedCount', void 0), N(this, 'uiLockedCount', void 0), N(this, 'gameFocusChangedCount', void 0), N(this, 'gameConcurrentGameCount', void 0), N(this, 'overlayMessageAckCount', void 0), N(this, 'overlayMessageCreateCount', void 0), N(this, 'gameTimer', void 0), N(this, 'gameFocusedTimer', void 0), N(this, 'unlockedTimer', void 0), N(this, 'rtcConnectionTimer', void 0), N(this, 'desktopFocusedTimer', void 0), N(this, 'desktopFocusChangedCount', void 0), N(this, 'desktopMessageAckCount', void 0), N(this, 'desktopMessageCreateCount', void 0), N(this, 'soundboardShownTimer', void 0), N(this, 'soundboardShownCount', void 0), N(this, 'soundboardKeepOpenCount', void 0), N(this, 'muteToggledCount', void 0), N(this, '_successfullyShown', void 0), (this.game = e), (this.uuid = crypto.randomUUID()), (this.notificationAnalytics = new v()), (this.widgetAnalytics = new C()), (this.uiUnlockedCount = 0), (this.uiLockedCount = 0), (this.gameFocusChangedCount = 0), (this.gameConcurrentGameCount = 0), (this.overlayMessageAckCount = 0), (this.overlayMessageCreateCount = 0), (this.gameTimer = s.G9.startNew()), (this.gameFocusedTimer = new s.G9()), (this.unlockedTimer = new s.G9()), (this.rtcConnectionTimer = new s.G9()), (this.desktopFocusedTimer = new s.G9()), (this.desktopFocusChangedCount = 0), (this.desktopMessageAckCount = 0), (this.desktopMessageCreateCount = 0), (this.soundboardShownTimer = new s.G9()), (this.soundboardShownCount = 0), (this.soundboardKeepOpenCount = 0), (this.muteToggledCount = 0), (this._successfullyShown = !1), (this.screenAnalytics = new y(e)), (this.overlayStatus = _.ZP.getGameOverlayStatus(e)), D.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), H.hasConnection() && this.rtcConnectionTimer.start();
     }
 }
 function L(e) {

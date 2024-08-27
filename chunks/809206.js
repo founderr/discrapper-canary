@@ -27,7 +27,7 @@ n.d(t, {
         return p;
     },
     b9: function () {
-        return R;
+        return v;
     },
     cV: function () {
         return O;
@@ -42,7 +42,7 @@ n.d(t, {
         return I;
     },
     xn: function () {
-        return v;
+        return R;
     }
 });
 var r = n(544891),
@@ -196,13 +196,13 @@ function O(e) {
         avatarDecoration: e
     });
 }
-function v(e) {
+function R(e) {
     s.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function R() {
+function v() {
     s.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
 function C() {

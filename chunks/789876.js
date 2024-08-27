@@ -61,7 +61,7 @@ var r;
     function O(e) {
         return f++, l.push(e), A(), f;
     }
-    function v(e) {
+    function R(e) {
         var t = e - 1 - p;
         l[t] && (l[t] = null);
     }
@@ -90,7 +90,7 @@ var r;
         }
     else
         (a.requestIdleCallback = O),
-            (a.cancelIdleCallback = v),
+            (a.cancelIdleCallback = R),
             a.document &&
                 document.addEventListener &&
                 (a.addEventListener('scroll', T, !0),
@@ -111,7 +111,7 @@ var r;
                     }));
     return {
         request: O,
-        cancel: v
+        cancel: R
     };
 }),
     'function' == typeof define && define.amd ? define([], r) : e.exports ? (e.exports = r()) : (window.idleCallbackShim = r());

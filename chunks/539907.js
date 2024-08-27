@@ -1,6 +1,6 @@
 n.d(t, {
     j: function () {
-        return v;
+        return R;
     },
     t: function () {
         return g;
@@ -87,7 +87,7 @@ function O(e) {
     let { targetRef: t, overrideTargetRect: n } = e;
     return null != n ? n : (u()(null != t.current, 'Invalid ref'), t.current.getBoundingClientRect());
 }
-class v extends (r = a.Component) {
+class R extends (r = a.Component) {
     formatDimension(e) {
         return this.props.useRawTargetDimensions ? e : Math.ceil(e);
     }
@@ -359,7 +359,7 @@ class v extends (r = a.Component) {
             });
     }
 }
-m(v, 'defaultProps', {
+m(R, 'defaultProps', {
     nudgeAlignIntoViewport: !1,
     spacing: 0,
     autoInvert: !1,

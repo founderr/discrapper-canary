@@ -8,8 +8,8 @@ var a = n(120356),
     c = n(182567),
     d = n(78839),
     _ = n(63063),
-    u = n(74538),
-    E = n(276800),
+    E = n(74538),
+    u = n(276800),
     T = n(248042),
     I = n(409100),
     R = n(725727),
@@ -44,12 +44,12 @@ t.Z = function (e) {
                                 (0, s.jsx)(l.Heading, {
                                     variant: 'display-sm',
                                     color: 'always-white',
-                                    children: null == m || null == (0, u.he)(m) ? N.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : N.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
+                                    children: null == m || null == (0, E.he)(m) ? N.Z.Messages.BOGO_MARKETING_PAGE_BANNER_HEADER_2024 : N.Z.Messages.BOGO_MARKETING_PAGE_BANNER_NON_NITRO_HEADER_2024
                                 }),
                                 (0, s.jsx)(l.Text, {
                                     className: p.countdown,
                                     variant: 'text-sm/bold',
-                                    children: (0, s.jsx)(E.Z, { endDate: f })
+                                    children: (0, s.jsx)(u.Z, { endDate: f })
                                 }),
                                 (0, s.jsx)(l.Text, {
                                     variant: 'text-sm/medium',

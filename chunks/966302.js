@@ -8,7 +8,7 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(338545),
+    o = n(567526),
     l = n(442837),
     u = n(481060),
     c = n(26151),
@@ -26,8 +26,8 @@ var r = n(735250),
     A = n(560688),
     N = n(871499),
     O = n(136995),
-    v = n(25827),
-    R = n(131951),
+    R = n(25827),
+    v = n(131951),
     C = n(594174),
     y = n(451478),
     D = n(792125),
@@ -51,8 +51,8 @@ let k = {
     V = 267;
 function H(e) {
     let { header: t } = e,
-        n = R.Z.getCameraComponent(),
-        a = (0, l.e7)([R.Z], () => R.Z.getVideoDeviceId()),
+        n = v.Z.getCameraComponent(),
+        a = (0, l.e7)([v.Z], () => v.Z.getVideoDeviceId()),
         s = (0, T.Z)();
     return (
         i.useEffect(() => {
@@ -109,7 +109,7 @@ function Z(e) {
                     children: (e, t) => {
                         let { onClick: s } = e,
                             { isShown: u } = t;
-                        return (0, r.jsx)(v.C, {
+                        return (0, r.jsx)(R.C, {
                             join: !0,
                             enabled: o,
                             color: 'green',
@@ -141,13 +141,13 @@ function Y(e) {
         [p, I] = i.useState(!1),
         m = (0, f.x)(_),
         T = (0, h.ZP)(_),
-        [g, S] = (0, l.Wu)([R.Z], () => [R.Z.supports(U.AN.VIDEO), Object.keys(R.Z.getVideoDevices()).length]),
+        [g, S] = (0, l.Wu)([v.Z], () => [v.Z.supports(U.AN.VIDEO), Object.keys(v.Z.getVideoDevices()).length]),
         A = (0, l.e7)([y.Z], () => y.Z.isFocused()),
         N = (0, l.e7)([L.Z], () => L.Z.getMode(_.id)),
         O = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
-        v = (0, u.useSpring)(
+        R = (0, u.useSpring)(
             {
                 value: p ? 1 : 0,
                 config: {
@@ -210,9 +210,9 @@ function Y(e) {
                 className: s()(x.root, G.elevationHigh, { [x.previewCamera]: p }, p ? (0, D.Q)('dark') : null),
                 style: {
                     ...t,
-                    width: v.value.interpolate([0, 1], [Y.width, F]),
-                    minHeight: v.value.interpolate([0, 1], [Y.height, V]),
-                    translateX: v.value.interpolate([0, 1], [0, (-1 * Math.abs(F - Y.width)) / 2])
+                    width: R.value.interpolate([0, 1], [Y.width, F]),
+                    minHeight: R.value.interpolate([0, 1], [Y.height, V]),
+                    translateX: R.value.interpolate([0, 1], [0, (-1 * Math.abs(F - Y.width)) / 2])
                 },
                 children: [
                     p

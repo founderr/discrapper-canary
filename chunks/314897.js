@@ -20,8 +20,8 @@ var a,
     A = n(703656),
     N = n(786213),
     O = n(626135),
-    v = n(449934),
-    R = n(960048),
+    R = n(449934),
+    v = n(960048),
     C = n(117240),
     y = n(412788),
     D = n(981631),
@@ -143,7 +143,7 @@ function eI(e) {
             type: (null == e ? void 0 : e.isSwitchingAccount) ? 'user-data-only' : 'all'
         }),
         y.Z.clearAll();
-    g.ZH(), R.Z.clearUser(), h.K.remove(U), (w = null), (Z = (null == e ? void 0 : e.isSwitchingAccount) ? D.u34.LOGGING_IN : D.u34.NONE), (Y = D.$ib.NONE), (K = ''), ($ = ''), (q = null), (z = !1), (J = !1), (ee = !1), (et = {}), (en = {}), (eo = !1), (el = !1);
+    g.ZH(), v.Z.clearUser(), h.K.remove(U), (w = null), (Z = (null == e ? void 0 : e.isSwitchingAccount) ? D.u34.LOGGING_IN : D.u34.NONE), (Y = D.$ib.NONE), (K = ''), ($ = ''), (q = null), (z = !1), (J = !1), (ee = !1), (et = {}), (en = {}), (eo = !1), (el = !1);
 }
 class em extends (a = E.ZP.Store) {
     initialize() {
@@ -183,10 +183,10 @@ class em extends (a = E.ZP.Store) {
         return B;
     }
     getToken() {
-        return (0, v.LP)();
+        return (0, R.LP)();
     }
     isAuthenticated() {
-        return (0, v.$8)();
+        return (0, R.$8)();
     }
     getFingerprint() {
         return F;
@@ -283,12 +283,12 @@ class em extends (a = E.ZP.Store) {
             CONNECTION_OPEN: function (e) {
                 var t;
                 let { user: n, sessionId: r, authSessionIdHash: i, analyticsToken: a, auth: s, staticAuthSessionId: o } = e;
-                ec('handleConnectionOpen called'), R.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, N.Z)(n)), (G = r), (k = i), (B = o), (H = a), (w = n.id), (x = n.email), void 0 !== s && (W = s.authenticator_types), h.K.set(P, n.email), h.K.set(U, n.id);
+                ec('handleConnectionOpen called'), v.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, N.Z)(n)), (G = r), (k = i), (B = o), (H = a), (w = n.id), (x = n.email), void 0 !== s && (W = s.authenticator_types), h.K.set(P, n.email), h.K.set(U, n.id);
             },
             OVERLAY_INITIALIZE: function (e) {
                 var t;
                 let { user: n, sessionId: r, analyticsToken: i, token: a } = e;
-                R.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, N.Z)(n)), (G = r), (H = i), ef(a), eE(), (w = n.id), h.K.set(U, n.id);
+                v.Z.setUser(n.id, n.username, null !== (t = n.email) && void 0 !== t ? t : void 0, (0, N.Z)(n)), (G = r), (H = i), ef(a), eE(), (w = n.id), h.K.set(U, n.id);
             },
             CONNECTION_CLOSED: function (e) {
                 let { code: t } = e;

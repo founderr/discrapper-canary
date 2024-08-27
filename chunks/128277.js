@@ -25,8 +25,8 @@ var r = n(735250),
     A = n(582123),
     N = n(262210),
     O = n(666984),
-    v = n(290274),
-    R = n(318134),
+    R = n(290274),
+    v = n(318134),
     C = n(228168),
     y = n(981631),
     D = n(689938),
@@ -41,7 +41,7 @@ function b(e) {
         }),
         { largeImage: k } = (0, _.FO)(a),
         { analyticsLocations: B } = (0, d.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { onAction: F, trackViewRef: V } = (0, R.Z)({
+        { onAction: F, trackViewRef: V } = (0, v.Z)({
             display: 'live',
             user: t,
             activity: a,
@@ -132,7 +132,7 @@ function b(e) {
                         (0, r.jsx)(T.Z, {
                             text: D.Z.Messages.USER_ACTIVITY_LISTENING_TO,
                             platform: l.Z.get(y.ABu.SPOTIFY),
-                            tags: (0, r.jsx)(v.Z, {
+                            tags: (0, r.jsx)(R.Z, {
                                 display: 'live',
                                 user: t,
                                 activity: a,

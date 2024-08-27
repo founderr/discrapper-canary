@@ -32,12 +32,12 @@ var i = n(481060),
     C = n(700994),
     w = n(332031),
     x = n(981631),
-    U = n(689938);
+    P = n(689938);
 t.default = (0, s.Z)(
     (0, o.Z)(
         function (e) {
             var t;
-            let { user: n, channel: o, context: s, showChatItems: d = !0, showMediaItems: x = !1, showChannelCallItems: D = !1, showModalItems: P = !0, onSelect: L, onHeightUpdate: j } = e,
+            let { user: n, channel: o, context: s, showChatItems: d = !0, showMediaItems: x = !1, showChannelCallItems: U = !1, showModalItems: D = !0, onSelect: L, onHeightUpdate: j } = e,
                 H = (0, b.Z)({
                     userId: n.id,
                     guildId: null
@@ -71,7 +71,7 @@ t.default = (0, s.Z)(
                 et = (0, A.Z)({ user: n }),
                 en = (0, p.Z)({
                     id: n.id,
-                    label: U.Z.Messages.COPY_ID_USER
+                    label: P.Z.Messages.COPY_ID_USER
                 }),
                 er = (0, w.Z)(n.id),
                 ei = (0, I.Z)(n.id),
@@ -92,7 +92,7 @@ t.default = (0, s.Z)(
             return (0, r.jsxs)(i.Menu, {
                 navId: 'user-context',
                 onClose: a.Zy,
-                'aria-label': U.Z.Messages.USER_ACTIONS_MENU_LABEL,
+                'aria-label': P.Z.Messages.USER_ACTIONS_MENU_LABEL,
                 onSelect: L,
                 children: [
                     !ed &&
@@ -100,18 +100,18 @@ t.default = (0, s.Z)(
                             children: [
                                 (0, r.jsx)(i.MenuGroup, { children: eo }),
                                 (0, r.jsxs)(i.MenuGroup, {
-                                    children: [P && H, d && B, F, V, !ec && k, P && W, P && K, er]
+                                    children: [D && H, d && B, F, V, !ec && k, D && W, D && K, er]
                                 }),
                                 x && (0, r.jsx)(i.MenuGroup, { children: z }),
                                 eI &&
                                     (0, r.jsxs)(i.MenuGroup, {
                                         children: [!ec && Y, eu]
                                     }),
-                                (0, r.jsx)(i.MenuGroup, { children: P && Q }),
+                                (0, r.jsx)(i.MenuGroup, { children: D && Q }),
                                 (0, r.jsxs)(i.MenuGroup, {
-                                    children: [x && q, x && X, x && $, el, P && J, ee, P && et, x && es]
+                                    children: [x && q, x && X, x && $, el, D && J, ee, D && et, x && es]
                                 }),
-                                D &&
+                                U &&
                                     (0, r.jsxs)(i.MenuGroup, {
                                         children: [ea, ei]
                                     })

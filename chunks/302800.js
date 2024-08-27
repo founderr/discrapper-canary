@@ -35,8 +35,8 @@ var s,
     c = n(180650),
     d = n(704215),
     _ = n(44315),
-    u = n(410154),
-    E = n(893136),
+    E = n(410154),
+    u = n(893136),
     T = n(689938),
     I = n(644089),
     R = n(420224),
@@ -75,7 +75,7 @@ let b = {
             body: () => T.Z.Messages.COLLECTIBLES_ROBERT_COACHTIP_DESCRIPTION,
             imageSrc: A,
             assetIds: ['a_914f20f4984a11b5255f0e42c661fa5b', 'a_0f7fa66bc185c858f92a7918ea4dd47a', 'a_bba669bfb28f492b64852e00fde4989d'],
-            entryPointIcon: E._,
+            entryPointIcon: u._,
             entryPointBackgroundAssets: {
                 srcDark: m,
                 srcLight: f
@@ -183,19 +183,19 @@ let b = {
             .with('1262491137386614805', () => Z)
             .otherwise(() => null),
     G = {
-        [u.C5.TIDE]: {
+        [E.C5.TIDE]: {
             artSrc: n(94899),
             backgroundSrc: n(987583),
             title: () => T.Z.Messages.COLLECTIBLES_TIDE_SETTINGS_BANNER_TITLE,
             description: () => T.Z.Messages.COLLECTIBLES_TIDE_SETTINGS_BANNER_DESCRIPTION
         },
-        [u.C5.ROBERT]: {
+        [E.C5.ROBERT]: {
             artSrc: n(638431),
             backgroundSrc: n(619359),
             title: () => T.Z.Messages.COLLECTIBLES_ROBERT_SETTINGS_BANNER_TITLE,
             description: () => T.Z.Messages.COLLECTIBLES_ROBERT_SETTINGS_BANNER_DESCRIPTION
         },
-        [u.C5.STORM]: {
+        [E.C5.STORM]: {
             artSrc: n(152777),
             backgroundSrc: n(962560),
             title: () => T.Z.Messages.COLLECTIBLES_STORM_SETTINGS_BANNER_TITLE,

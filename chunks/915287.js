@@ -25,7 +25,7 @@ function _(e, t, n, a) {
             });
         });
     return i.forwardRef(function (a, f) {
-        let { className: h, onScroll: p, onResize: I = null, onContentResize: m = null, dir: T = 'ltr', sections: g, sectionHeight: S, rowHeight: A, footerHeight: N = 0, sidebarHeight: O, listHeaderHeight: v = 0, renderSection: R, renderRow: C, renderFooter: y, renderSidebar: D, renderListHeader: L, stickyListHeader: b, wrapSection: M, getAnchorId: P, paddingTop: U, paddingBottom: w, fade: x = !1, customTheme: G = !1, chunkSize: k, style: B, innerId: F, innerRole: V, innerAriaLabel: H, innerAriaMultiselectable: Z, innerAriaOrientation: Y, innerClassName: j, innerTag: W = 'div', ...K } = a,
+        let { className: h, onScroll: p, onResize: I = null, onContentResize: m = null, dir: T = 'ltr', sections: g, sectionHeight: S, rowHeight: A, footerHeight: N = 0, sidebarHeight: O, listHeaderHeight: R = 0, renderSection: v, renderRow: C, renderFooter: y, renderSidebar: D, renderListHeader: L, stickyListHeader: b, wrapSection: M, getAnchorId: P, paddingTop: U, paddingBottom: w, fade: x = !1, customTheme: G = !1, chunkSize: k, style: B, innerId: F, innerRole: V, innerAriaLabel: H, innerAriaMultiselectable: Z, innerAriaOrientation: Y, innerClassName: j, innerTag: W = 'div', ...K } = a,
             z = i.useRef(null),
             q = i.useRef(null),
             [Q, X] = i.useState(!1),
@@ -51,7 +51,7 @@ function _(e, t, n, a) {
                 rowHeight: A,
                 footerHeight: N,
                 sidebarHeight: O,
-                listHeaderHeight: v,
+                listHeaderHeight: R,
                 paddingTop: U,
                 paddingBottom: w,
                 chunkSize: k,
@@ -138,7 +138,7 @@ function _(e, t, n, a) {
         return (
             i.useLayoutEffect(() => {
                 2 !== J.current.dirty && (J.current.dirty = 2);
-            }, [er, R, C, y, M, en, et, J]),
+            }, [er, v, C, y, M, en, et, J]),
             (0, c.rS)({
                 scrollerRef: $,
                 anchor: eo,
@@ -214,7 +214,7 @@ function _(e, t, n, a) {
                                         items: er,
                                         renderListHeader: L,
                                         stickyListHeader: b,
-                                        renderSection: R,
+                                        renderSection: v,
                                         renderRow: C,
                                         renderFooter: y,
                                         wrapSection: M,
@@ -222,7 +222,7 @@ function _(e, t, n, a) {
                                     })
                                 })
                             }),
-                        [W, F, V, H, Z, Y, en, j, er, L, b, R, C, y, M, et]
+                        [W, F, V, H, Z, Y, en, j, er, L, b, v, C, y, M, et]
                     ),
                     i.useMemo(
                         () =>

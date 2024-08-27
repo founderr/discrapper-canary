@@ -3,7 +3,7 @@ n.d(t, {
         return O;
     },
     Z: function () {
-        return v;
+        return R;
     }
 });
 var r = n(735250),
@@ -44,9 +44,9 @@ function O(e, t, n) {
         [e, i, n, t]
     );
 }
-function v(e) {
+function R(e) {
     var t, n, c;
-    let { channel: h, currentUser: I, activeStreams: m, hideSelfOptions: v = !1, showReportOption: R = !1, handleGoLive: C, onClose: y, onSelect: D, appContext: L = S.IlC.APP } = e,
+    let { channel: h, currentUser: I, activeStreams: m, hideSelfOptions: R = !1, showReportOption: v = !1, handleGoLive: C, onClose: y, onSelect: D, appContext: L = S.IlC.APP } = e,
         b = (0, a.e7)([p.Z], () => p.Z.getGoLiveSource()),
         M = (0, a.e7)([f.Z], () => f.Z.getState().soundshareEnabled),
         P = p.Z.supports(A.AN.DESKTOP_CAPTURE_APPLICATIONS),
@@ -115,7 +115,7 @@ function v(e) {
                                     children: x
                                 })
                               : null,
-                          R ? G : null,
+                          v ? G : null,
                           H
                               ? (0, r.jsx)(s.MenuCheckboxItem, {
                                     id: 'stream-settings-audio-enable',
@@ -163,7 +163,7 @@ function v(e) {
                         );
                     })
                 }),
-                v ? null : j
+                R ? null : j
             ]
         })
     });

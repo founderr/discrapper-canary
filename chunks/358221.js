@@ -21,8 +21,8 @@ var r,
     A = n(606304),
     N = n(594174),
     O = n(33039),
-    v = n(979651),
-    R = n(413523),
+    R = n(979651),
+    v = n(413523),
     C = n(354459),
     y = n(981631);
 let D = new f.Z('ChannelRTCStore'),
@@ -40,7 +40,7 @@ let D = new f.Z('ChannelRTCStore'),
     V = {};
 function H(e) {
     let t = M[e];
-    return null == t && ((t = new R.ZP(e)), (M[e] = t)), t;
+    return null == t && ((t = new v.ZP(e)), (M[e] = t)), t;
 }
 function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b;
@@ -61,11 +61,11 @@ function Z(e) {
                           return;
                       }
                       let r = C.dF.NONE,
-                          i = n.toArray(R.sI.STREAM).find((e) => e.type === C.fO.STREAM && I.Z.getActiveStreamForStreamKey(e.id));
+                          i = n.toArray(v.sI.STREAM).find((e) => e.type === C.fO.STREAM && I.Z.getActiveStreamForStreamKey(e.id));
                       if (null != i) l()(i.type === C.fO.STREAM, 'Impossible condition'), (r = i.id);
                       else if (1 === n.size()) r = t;
-                      else if (1 === n.size(R.sI.VIDEO)) {
-                          let [e] = n.toArray(R.sI.VIDEO);
+                      else if (1 === n.size(v.sI.VIDEO)) {
+                          let [e] = n.toArray(v.sI.VIDEO);
                           r = e.id;
                       } else {
                           var a;
@@ -122,7 +122,7 @@ function z(e, t) {
     null == t ? delete P[e] : (P[e] = t), n !== W(e) && U[e].toggleCount++;
 }
 function q(e) {
-    return e.size(R.sI.STREAM) > 0 || e.size(R.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
+    return e.size(v.sI.STREAM) > 0 || e.size(v.sI.VIDEO) > 0 || e.hasEmbeddedActivity();
 }
 function Q(e) {
     delete M[e], delete P[e], delete w[e], delete x[e];
@@ -137,7 +137,7 @@ function X() {
             let n = S.Z.getVoiceChannelId();
             null != n && !e.includes(n) && e.push(n);
             let r = h.Z.getRemoteSessionId(),
-                i = v.Z.getVoiceStateForSession(m.default.getId(), r);
+                i = R.Z.getVoiceStateForSession(m.default.getId(), r);
             (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), c().difference(b, e).forEach(Q);
             let a = c().difference(e, b);
             return (b = e), a;
@@ -176,7 +176,7 @@ function ei(e) {
 }
 class ea extends (r = d.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, m.default, T.Z, g.Z, E.ZP, S.Z, A.Z, N.default, O.Z, v.Z), this.syncWith([E.ZP], $), this.syncWith([h.Z], X);
+        this.waitFor(I.Z, m.default, T.Z, g.Z, E.ZP, S.Z, A.Z, N.default, O.Z, R.Z), this.syncWith([E.ZP], $), this.syncWith([h.Z], X);
     }
     getParticipantsVersion(e) {
         return H(e).version;
@@ -187,29 +187,29 @@ class ea extends (r = d.ZP.Store) {
     }
     getSpeakingParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(R.sI.SPEAKING)) && void 0 !== t ? t : L;
+        return null !== (t = H(e).toArray(v.sI.SPEAKING)) && void 0 !== t ? t : L;
     }
     getFilteredParticipants(e) {
-        return k[e] ? H(e).toArray(R.sI.FILTERED) : H(e).toArray();
+        return k[e] ? H(e).toArray(v.sI.FILTERED) : H(e).toArray();
     }
     getVideoParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(R.sI.VIDEO)) && void 0 !== t ? t : L;
+        return null !== (t = H(e).toArray(v.sI.VIDEO)) && void 0 !== t ? t : L;
     }
     getStreamParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(R.sI.STREAM)) && void 0 !== t ? t : L;
+        return null !== (t = H(e).toArray(v.sI.STREAM)) && void 0 !== t ? t : L;
     }
     getActivityParticipants(e) {
         var t;
-        return null !== (t = H(e).toArray(R.sI.ACTIVITY)) && void 0 !== t ? t : L;
+        return null !== (t = H(e).toArray(v.sI.ACTIVITY)) && void 0 !== t ? t : L;
     }
     getParticipant(e, t) {
         return H(e).getParticipant(t);
     }
     getUserParticipantCount(e) {
         let t = H(e);
-        return t.size() - t.size(R.sI.STREAM) - t.size(R.sI.ACTIVITY);
+        return t.size() - t.size(v.sI.STREAM) - t.size(v.sI.ACTIVITY);
     }
     getParticipantsOpen(e) {
         var t;
@@ -323,7 +323,7 @@ class ea extends (r = d.ZP.Store) {
             let { channelId: t, id: n } = e,
                 r = H(t);
             null == n &&
-                r.toArray(R.sI.STREAM).forEach((e) => {
+                r.toArray(v.sI.STREAM).forEach((e) => {
                     (0, C._5)(e) && r.updateParticipant(e.user.id);
                 });
             let [, i] = j(t);

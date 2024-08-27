@@ -15,8 +15,8 @@ var s = n(735250),
     c = n(399606),
     d = n(704215),
     _ = n(481060),
-    u = n(150063),
-    E = n(758119),
+    E = n(150063),
+    u = n(758119),
     T = n(100527),
     I = n(906732),
     R = n(252618),
@@ -152,7 +152,7 @@ function K() {
         n = (0, g.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         r = (0, c.e7)([O.Z], () => O.Z.getIsInitialized()),
         l = (0, P.M)(),
-        { selectedTab: u, handleTabChange: T } = (0, b.Z)(),
+        { selectedTab: E, handleTabChange: T } = (0, b.Z)(),
         I = (0, C.Dt)(),
         N = S.default.getCurrentUser(),
         m = null != e,
@@ -173,29 +173,29 @@ function K() {
                 is_considered_adult: e,
                 num_of_accepted_links: t,
                 selected_teen_id: l,
-                initial_page: j.QH[u],
+                initial_page: j.QH[E],
                 source: j._6[j.Mu.SIDENAV]
             }),
             p.Z.increment({ name: o.V.FAMILY_CENTER_VIEW }));
     }, [r, m]),
     f)
-        ? ((0, E.mN)(G.L0.FAMILY_CENTER), null)
+        ? ((0, u.mN)(G.L0.FAMILY_CENTER), null)
         : (0, s.jsxs)('main', {
               className: i()(k.container),
               'aria-label': H.Z.Messages.FAMILY_CENTER_TITLE,
               children: [
                   (0, s.jsx)(R.yY, { location: H.Z.Messages.FAMILY_CENTER_TITLE }),
                   (0, s.jsx)(V, {
-                      section: u,
+                      section: E,
                       handleItemSelect: (e) => {
                           T(e);
                       }
                   }),
                   (0, s.jsx)(_.TabBar.Panel, {
-                      id: u,
+                      id: E,
                       'aria-labelledby': I,
                       className: k.contentPanel,
-                      children: (0, s.jsx)('div', { children: w[u]() })
+                      children: (0, s.jsx)('div', { children: w[E]() })
                   })
               ]
           });
@@ -215,7 +215,7 @@ function Y() {
         K = l && null != w && !V;
     if (
         (a.useEffect(() => {
-            u.Y(U.Z5c.FAMILY_CENTER),
+            E.Y(U.Z5c.FAMILY_CENTER),
                 (0, A.e)('family-center'),
                 !O.Z.isLoading() && O.Z.canRefetch() && x.ZP.initialPageLoad(),
                 !r &&
@@ -242,7 +242,7 @@ function Y() {
         }, [l, t]),
         K)
     )
-        return (0, E.mN)(G.L0.FAMILY_CENTER), null;
+        return (0, u.mN)(G.L0.FAMILY_CENTER), null;
     let Y = Z !== j.dG.SETTINGS ? Z : j.dG.ACTIVITY,
         z = F[Y];
     return (0, s.jsx)(I.Gt, {

@@ -6,7 +6,7 @@ n.d(t, {
         return S;
     },
     BO: function () {
-        return v;
+        return R;
     },
     D7: function () {
         return y;
@@ -15,7 +15,7 @@ n.d(t, {
         return A;
     },
     Ft: function () {
-        return R;
+        return v;
     },
     X0: function () {
         return L;
@@ -263,8 +263,8 @@ function N(e) {
 function O(e) {
     return i()(e).subtract(1).toString();
 }
-let v = u.vB(0);
-function R(e) {
+let R = u.vB(0);
+function v(e) {
     let { PermissionStore: t, guild: n, selfMember: r, applicationLevelPermissions: i, commandLevelPermissions: a, defaultMemberPermissions: s } = e;
     if (n.ownerId === r.userId || t.can(m.Pl.ADMINISTRATOR, n)) return !0;
     let o = n.id;
@@ -273,7 +273,7 @@ function R(e) {
         if ('boolean' == typeof e) return e;
     }
     let l = C(r, o, i);
-    return ('boolean' != typeof l || !!l) && (null == s || (!u.fS(s, v) && t.can(s, n)));
+    return ('boolean' != typeof l || !!l) && (null == s || (!u.fS(s, R) && t.can(s, n)));
 }
 function C(e, t, n) {
     let r = n[(0, _.rE)(e.userId, f.Kw.USER)];

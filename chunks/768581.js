@@ -13,10 +13,10 @@ n.d(t, {
         return N;
     },
     NZ: function () {
-        return R;
+        return v;
     },
     aN: function () {
-        return v;
+        return R;
     },
     ay: function () {
         return B;
@@ -145,7 +145,7 @@ function O(e) {
               canAnimate: i
           });
 }
-function v(e) {
+function R(e) {
     let t,
         { id: n, banner: r, canAnimate: i, size: a } = e;
     if (null == r) return;
@@ -153,7 +153,7 @@ function v(e) {
         o = i && k(r) ? 'gif' : 'png';
     return (t = (null != s ? ''.concat(location.protocol, '//').concat(s, '/banners/').concat(n, '/').concat(r, '.').concat(o) : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + _.ANM.USER_BANNER(n, r, o)) + '?size='.concat((0, l.oO)(a * (0, l.x_)())));
 }
-function R(e) {
+function v(e) {
     let { avatarDecoration: t, size: n, canAnimate: r = !1 } = e;
     if (null == t || (0, o.fO)(t)) return;
     if (/^data:/.test(t.asset)) return t.asset;
@@ -331,8 +331,8 @@ t.ZP = {
         return null != r ? V(r) : t.getAvatarSource(e.guildId, n);
     },
     getGuildMemberBannerURL: C,
-    getUserBannerURL: v,
-    getAvatarDecorationURL: R,
+    getUserBannerURL: R,
+    getAvatarDecorationURL: v,
     hasAnimatedGuildIcon: function (e) {
         return k(null == e ? void 0 : e.icon);
     },

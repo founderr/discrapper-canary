@@ -26,8 +26,8 @@ var r = n(735250),
     A = n(502762),
     N = n(544989),
     O = n(481932),
-    v = n(195387),
-    R = n(272510),
+    R = n(195387),
+    v = n(272510),
     C = n(171368),
     y = n(958120),
     D = n(215633),
@@ -94,7 +94,7 @@ function U(e) {
                             (0, r.jsxs)(N.Z, {
                                 profileType: L.y0.BITE_SIZE,
                                 children: [
-                                    (0, r.jsx)(v.Z, {
+                                    (0, r.jsx)(R.Z, {
                                         user: t,
                                         guildId: U,
                                         channelId: w,
@@ -105,7 +105,7 @@ function U(e) {
                                         user: t
                                     }),
                                     t.id !== n.id &&
-                                        (0, r.jsx)(R.Z, {
+                                        (0, r.jsx)(v.Z, {
                                             user: t,
                                             guildId: U,
                                             viewProfileItem: F

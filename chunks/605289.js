@@ -8,8 +8,8 @@ var a = n(120356),
     c = n(78839),
     d = n(985754),
     _ = n(222727),
-    u = n(318747),
-    E = n(409100),
+    E = n(318747),
+    u = n(409100),
     T = n(474936),
     I = n(981631),
     R = n(619476);
@@ -49,12 +49,12 @@ t.Z = function (e) {
             (0, s.jsxs)('div', {
                 className: R.ctaButtonContainer,
                 children: [
-                    (0, s.jsx)(E.Z, {
+                    (0, s.jsx)(u.Z, {
                         forceInverted: !0,
                         className: R.ctaButton,
                         subscriptionTier: T.Si.TIER_2
                     }),
-                    (0, s.jsx)(u.Z, {
+                    (0, s.jsx)(E.Z, {
                         forceWhite: !0,
                         subscriptionTier: T.Si.TIER_2,
                         className: R.ctaButton

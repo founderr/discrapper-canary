@@ -48,8 +48,8 @@ function O(e) {
         f = (0, a.e7)([E.default], () => h.ZP.isPremium(E.default.getCurrentUser(), T.p9.TIER_1)),
         S = (0, a.e7)([_.Z], () => _.Z.getChannel(null == n ? void 0 : n.channelId)),
         O = i.useMemo(() => (null != n ? [n] : []), [n]),
-        v = (0, o.zW)(null == S ? void 0 : S.id),
-        R = i.useCallback(() => {
+        R = (0, o.zW)(null == S ? void 0 : S.id),
+        v = i.useCallback(() => {
             null != S && (0, d.Z)(S.getGuildId(), S.id, m.jXE.STREAM_SETTINGS);
         }, [S]);
     if (null == n || null == S) return null;
@@ -61,7 +61,7 @@ function O(e) {
             renderPopout: (e) => {
                 let { closePopout: t } = e;
                 return (0, r.jsx)(p.Z, {
-                    children: v
+                    children: R
                         ? (0, r.jsx)(l.Z, { onClose: t })
                         : (0, r.jsx)(c.Z, {
                               channel: S,
@@ -69,7 +69,7 @@ function O(e) {
                               activeStreams: O,
                               onClose: t,
                               showReportOption: !0,
-                              handleGoLive: R
+                              handleGoLive: v
                           })
                 });
             },

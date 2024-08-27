@@ -46,19 +46,19 @@ let f = (e, t) => {
                 pendingThemeColors: _,
                 isPreview: T
             }),
-            { profileThemeStyle: O, profileThemeClassName: v } = (0, c.Z)({
+            { profileThemeStyle: O, profileThemeClassName: R } = (0, c.Z)({
                 theme: null != I ? I : S,
                 primaryColor: A,
                 secondaryColor: N
             }),
-            R = (null == i ? void 0 : i.canEditThemes) || T,
+            v = (null == i ? void 0 : i.canEditThemes) || T,
             C = null !== p && ((null == i ? void 0 : i.banner) != null || void 0 !== p);
         return (0, r.jsx)('div', {
-            className: s()(f(a, R), g ? E.showOutOfBoundaryComponents : void 0, v, o),
+            className: s()(f(a, v), g ? E.showOutOfBoundaryComponents : void 0, R, o),
             style: O,
             ref: t,
             children: (0, r.jsx)('div', {
-                className: h(a, R, C),
+                className: h(a, v, C),
                 children: (0, r.jsx)(l.ThemeContextProvider, {
                     theme: null != I ? I : S,
                     children: (0, r.jsx)(d.X, {

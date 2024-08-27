@@ -7,8 +7,8 @@ var s = n(735250),
     c = n(232567),
     d = n(100527),
     _ = n(906732),
-    u = n(204197),
-    E = n(598077),
+    E = n(204197),
+    u = n(598077),
     T = n(594174),
     I = n(626135),
     R = n(63063),
@@ -24,7 +24,7 @@ var s = n(735250),
     M = n(691766);
 let x = (e) => {
         let { userRecord: t, placement: n, trialStatus: a } = e,
-            { avatarSrc: r, eventHandlers: l } = (0, u.Z)({
+            { avatarSrc: r, eventHandlers: l } = (0, E.Z)({
                 user: t,
                 size: o.AvatarSizes.SIZE_32,
                 animateOnHover: !0
@@ -117,10 +117,10 @@ let x = (e) => {
 t.Z = (e) => {
     let { isInSettings: t = !1 } = e,
         r = (0, l.Wu)([g.Z], () => g.Z.getSentUserIds()),
-        u = (0, l.e7)([g.Z], () => g.Z.getRecipientStatus()),
+        E = (0, l.e7)([g.Z], () => g.Z.getRecipientStatus()),
         x = (0, m.uv)('ReferralProgramProgressBar'),
         O = (0, l.Wu)([T.default], () => r.map((e) => T.default.getUser(e)).filter((e) => null != e)),
-        P = a.useMemo(() => O.map((e) => new E.Z(e)), [O]),
+        P = a.useMemo(() => O.map((e) => new u.Z(e)), [O]),
         { subscriberHomeVariant: L } = N.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
         v = L === N.p.VARIANT_2;
     a.useEffect(() => {
@@ -131,9 +131,9 @@ t.Z = (e) => {
     let Z = {
         redeemed: 0,
         converted: 0,
-        sent: u.size
+        sent: E.size
     };
-    u.forEach((e) => {
+    E.forEach((e) => {
         e === C.Fe.REDEEMED && Z.redeemed++, e === C.Fe.CONVERTED && (Z.redeemed++, Z.converted++);
     });
     let D = Z.sent === m.Q_,
@@ -166,7 +166,7 @@ t.Z = (e) => {
                         }),
                         (0, s.jsx)(b, {
                             userRecords: P,
-                            recipientStatus: u
+                            recipientStatus: E
                         }),
                         (0, s.jsx)(o.Text, {
                             variant: t ? 'text-sm/normal' : 'text-lg/medium',

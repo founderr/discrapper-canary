@@ -30,8 +30,8 @@ var r = n(735250),
     A = n(41776),
     N = n(777861),
     O = n(565799),
-    v = n(501655),
-    R = n(517334),
+    R = n(501655),
+    v = n(517334),
     C = n(344185),
     y = n(199902),
     D = n(77498),
@@ -112,7 +112,7 @@ function K(e) {
                     },
                     [t]
                 ),
-                r = (0, R.ZP)(t),
+                r = (0, v.ZP)(t),
                 a = i.useMemo(() => r.map((e) => e.id), [r]),
                 s = (0, u.e7)([x.ZP], () => x.ZP.getVoiceStates(t), [t]),
                 o = (0, u.e7)([P.Z], () => P.Z.getBlockedIDs()),
@@ -129,8 +129,8 @@ function K(e) {
                 h = (0, u.Wu)([O.Z], () =>
                     l().flatMap(a, (t) => {
                         if (t === e.afkChannelId) return [];
-                        let n = O.Z.getMutableParticipants(t, v.pV.SPEAKER)
-                            .filter((e) => e.type === v.Ui.VOICE)
+                        let n = O.Z.getMutableParticipants(t, R.pV.SPEAKER)
+                            .filter((e) => e.type === R.Ui.VOICE)
                             .map((e) => {
                                 let { user: t } = e;
                                 return t;
@@ -140,7 +140,7 @@ function K(e) {
                 ),
                 p = (0, u.e7)([O.Z], () => {
                     let e = 0;
-                    for (let t of a) e += O.Z.getParticipantCount(t, v.pV.AUDIENCE);
+                    for (let t of a) e += O.Z.getParticipantCount(t, R.pV.AUDIENCE);
                     return e;
                 }),
                 I = (0, u.Wu)(

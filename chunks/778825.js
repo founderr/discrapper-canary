@@ -9,15 +9,15 @@ var f,
 let S = g.QZA.CLOSED,
     A = {};
 function N() {
-    O(), v(), (A = {}), (S = g.QZA.OPEN);
+    O(), R(), (A = {}), (S = g.QZA.OPEN);
 }
 function O() {
     (r = void 0), (u = void 0), (i = void 0);
 }
-function v() {
+function R() {
     (s = void 0), (o = void 0), (l = void 0), (c = void 0), (a = void 0);
 }
-class R extends (I = m.ZP.Store) {
+class v extends (I = m.ZP.Store) {
     getFormState() {
         return S;
     }
@@ -80,7 +80,7 @@ class R extends (I = m.ZP.Store) {
     }
 }
 (p = 'GuildIdentitySettingsStore'),
-    (h = 'displayName') in (f = R)
+    (h = 'displayName') in (f = v)
         ? Object.defineProperty(f, h, {
               value: p,
               enumerable: !0,
@@ -88,7 +88,7 @@ class R extends (I = m.ZP.Store) {
               writable: !0
           })
         : (f[h] = p),
-    (t.Z = new R(T.Z, {
+    (t.Z = new v(T.Z, {
         GUILD_IDENTITY_SETTINGS_INIT: function (e) {
             (d = e.guild), (S = g.QZA.OPEN), (A = {}), (_ = e.source), (E = e.analyticsLocations);
         },
@@ -142,7 +142,7 @@ class R extends (I = m.ZP.Store) {
             c = t;
         },
         GUILD_IDENTITY_SETTINGS_RESET_PENDING_MEMBER_CHANGES: O,
-        GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: v,
+        GUILD_IDENTITY_SETTINGS_RESET_PENDING_PROFILE_CHANGES: R,
         GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING: N,
         GUILD_IDENTITY_SETTINGS_SUBMIT_SUCCESS: N,
         GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS: function () {

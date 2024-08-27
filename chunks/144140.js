@@ -43,11 +43,11 @@ function O(e, t) {
     let r = (null !== (n = A[e.parentId]) && void 0 !== n ? n : 0) + 1;
     (A[e.parentId] = r), t(e);
 }
-function v(e) {
-    var t;
-    null === (t = e.threads) || void 0 === t || t.forEach(R);
-}
 function R(e) {
+    var t;
+    null === (t = e.threads) || void 0 === t || t.forEach(v);
+}
+function v(e) {
     N(e, (t) => {
         var n;
         null != e.messageCount && (t.count = e.messageCount);
@@ -58,13 +58,13 @@ function R(e) {
 function C(e) {
     if (null != e && !(e.id in S)) {
         let t = h.Z.getChannel(e.id);
-        if (null != t) return R(t), !0;
+        if (null != t) return v(t), !0;
     }
     return !1;
 }
 function y(e) {
     let { channel: t } = e;
-    R(t);
+    v(t);
 }
 function D(e) {
     let { threads: t } = e;
@@ -106,7 +106,7 @@ class b extends (r = u.ZP.Store) {
         : (i[a] = s),
     (t.Z = new b(c.Z, {
         CONNECTION_OPEN: function (e) {
-            (A = {}), g.clear(), e.guilds.forEach(v);
+            (A = {}), g.clear(), e.guilds.forEach(R);
         },
         OVERLAY_INITIALIZE: function (e) {
             let { threadMessages: t } = e;
@@ -121,7 +121,7 @@ class b extends (r = u.ZP.Store) {
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            v(t);
+            R(t);
         },
         GUILD_DELETE: function (e) {
             var t;
@@ -136,7 +136,7 @@ class b extends (r = u.ZP.Store) {
         THREAD_UPDATE: y,
         THREAD_LIST_SYNC: function (e) {
             let { threads: t, mostRecentMessages: n } = e;
-            t.forEach(R),
+            t.forEach(v),
                 null == n ||
                     n.forEach((e) => {
                         let t = h.Z.getChannel(e.channel_id);

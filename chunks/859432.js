@@ -16,9 +16,9 @@ var a = t(735250),
     f = t(241851),
     N = t(294978),
     p = t(513102),
-    Z = t(976192),
-    h = t(429824),
-    A = t(466330),
+    A = t(976192),
+    Z = t(429824),
+    h = t(466330),
     L = t(191471),
     C = t(162157),
     T = t(623624),
@@ -77,11 +77,11 @@ let z = i.memo(function (e) {
         Q = (0, o.e7)([U.ZP], () => U.ZP.isCurrentUserGuest(n.id)),
         $ = (0, m.Z)(n.id, !0),
         ee = (0, _.ZP)(n),
-        en = (0, A.Z)({
+        en = (0, h.Z)({
             source: w.t4x.GUILD_HEADER,
             guild: n
         }),
-        et = (0, Z.Z)({
+        et = (0, A.Z)({
             guildId: n.id,
             userId: z.id,
             analyticsLocation: {
@@ -95,7 +95,7 @@ let z = i.memo(function (e) {
         el = (0, b.Z)(n.id),
         es = (0, N.Z)(n),
         eo = (0, p.Z)(n),
-        eu = (0, h.Z)(n, !0),
+        eu = (0, Z.Z)(n, !0),
         { isFavoritesPerk: er } = (0, M.z)('GuildHeaderPopout'),
         { triggerDeadchat: ed } = I.Z.useExperiment(
             {

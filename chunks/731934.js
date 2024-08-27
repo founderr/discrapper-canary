@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(481060),
     d = n(209613),
     _ = n(82295),
-    u = n(863653),
-    E = n(785681),
+    E = n(863653),
+    u = n(785681),
     T = n(485664),
     I = n(880257),
     R = n(631885),
@@ -139,8 +139,8 @@ function L(e) {
     let { sectionType: t, sectionTitle: n, requests: r } = e,
         i = a.useRef(null),
         l = ''.concat(t, '-list'),
-        u = (0, d.Z)(l),
-        E = a.useCallback(
+        E = (0, d.Z)(l),
+        u = a.useCallback(
             (e) => {
                 let { row: n, listIndex: a } = e,
                     i = r[n],
@@ -179,7 +179,7 @@ function L(e) {
     return (0, s.jsx)('div', {
         className: h.section,
         children: (0, s.jsx)(o.bG, {
-            navigator: u,
+            navigator: E,
             children: (0, s.jsx)(o.SJ, {
                 children: (e) => {
                     let { ref: t, role: a, ...o } = e;
@@ -196,7 +196,7 @@ function L(e) {
                             sectionHeight: m.zE,
                             rowHeight: m.ip,
                             renderSection: T,
-                            renderRow: E,
+                            renderRow: u,
                             sections: [r.length],
                             chunkSize: 30,
                             fade: !0,
@@ -217,7 +217,7 @@ let v = () => {
                 count: t.length,
                 max: n
             },
-            r = (0, E.o)(S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(a), S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(a));
+            r = (0, u.o)(S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_TEEN.format(a), S.Z.Messages.FAMILY_CENTER_ACCEPTED_REQUESTS_TITLE_PARENT.format(a));
         return (0, s.jsx)(s.Fragment, {
             children:
                 t.length > 0
@@ -246,7 +246,7 @@ let v = () => {
     Z = () => {
         let e = (0, R.VM)(),
             t = (0, I.Z)() ? m.AG : m.i0,
-            n = (0, E.o)(S.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({ maxConnections: t }), S.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({ maxConnections: t }));
+            n = (0, u.o)(S.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_TEEN.format({ maxConnections: t }), S.Z.Messages.FAMILY_CENTER_REQUESTS_LIMIT_INFO_PARENT.format({ maxConnections: t }));
         return e
             ? (0, s.jsx)('div', {
                   className: h.maxConnectionInfo,
@@ -260,7 +260,7 @@ let v = () => {
     },
     D = () => {
         let e = (0, T.o)(),
-            t = (0, u.zF)('family-center-requests-page-desktop'),
+            t = (0, E.zF)('family-center-requests-page-desktop'),
             n = (0, l.EQ)({
                 helpline: e,
                 throughline: t
@@ -288,7 +288,7 @@ let v = () => {
     },
     B = () => {
         let e = (0, R.mq)(m.ne.PENDING),
-            t = (0, E.o)(S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({ count: e.length }), S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({ count: e.length }));
+            t = (0, u.o)(S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_TEEN.format({ count: e.length }), S.Z.Messages.FAMILY_CENTER_PENDING_REQUESTS_TITLE_PARENT.format({ count: e.length }));
         return 0 === e.length
             ? null
             : (0, s.jsx)(L, {

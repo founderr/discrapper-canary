@@ -33,8 +33,8 @@ let p = {},
     A = {},
     N = {},
     O = {},
-    v = !1;
-function R(e) {
+    R = !1;
+function v(e) {
     let t = m[e];
     if ((null == t ? void 0 : t.profileEffectExpiresAt) == null) return;
     let n = 1000 * t.profileEffectExpiresAt - Date.now();
@@ -49,7 +49,7 @@ function R(e) {
     else {
         let t = g[e];
         if (null == t) return;
-        t.start(Math.min(2147483647, n), () => R(e));
+        t.start(Math.min(2147483647, n), () => v(e));
     }
 }
 function C(e, t) {
@@ -75,7 +75,7 @@ function C(e, t) {
     }
 }
 function y() {
-    (p = {}), I.clear(), (m = {}), (T = {}), (A = {}), (N = {}), (O = {}), (v = !1);
+    (p = {}), I.clear(), (m = {}), (T = {}), (A = {}), (N = {}), (O = {}), (R = !1);
 }
 function D(e) {
     let { userId: t } = e;
@@ -102,7 +102,7 @@ function M(e) {
     I.delete(e.userId), (A[e.userId] = b(e.mutualFriends)), (N[e.userId] = e.mutualFriends.length);
 }
 function P(e) {
-    var t, n, r, i, o, l, u, d, _, h, I, v, y, D, L, M, P, U, w, x, G, k, B, F, V, H;
+    var t, n, r, i, o, l, u, d, _, h, I, R, y, D, L, M, P, U, w, x, G, k, B, F, V, H;
     if ((null === (n = p[e.user.id]) || void 0 === n || n.delete(null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id), null != e.mutual_guilds)) {
         let t = {};
         e.mutual_guilds.forEach((e) => {
@@ -139,7 +139,7 @@ function P(e) {
             bio: null !== (L = null === (u = e.user_profile) || void 0 === u ? void 0 : u.bio) && void 0 !== L ? L : '',
             profileEffectId: null === (_ = e.user_profile) || void 0 === _ ? void 0 : null === (d = _.profile_effect) || void 0 === d ? void 0 : d.id,
             profileEffectExpiresAt: null === (I = e.user_profile) || void 0 === I ? void 0 : null === (h = I.profile_effect) || void 0 === h ? void 0 : h.expires_at,
-            pronouns: null !== (M = null === (v = e.user_profile) || void 0 === v ? void 0 : v.pronouns) && void 0 !== M ? M : '',
+            pronouns: null !== (M = null === (R = e.user_profile) || void 0 === R ? void 0 : R.pronouns) && void 0 !== M ? M : '',
             connectedAccounts: null !== (P = e.connected_accounts.filter((e) => s.Z.isSupported(e.type))) && void 0 !== P ? P : [],
             applicationRoleConnections: null !== (U = e.application_role_connections) && void 0 !== U ? U : [],
             premiumSince: Z,
@@ -180,7 +180,7 @@ function P(e) {
         (null === (D = e.user_profile) || void 0 === D ? void 0 : null === (y = D.profile_effect) || void 0 === y ? void 0 : y.expires_at) != null)
     ) {
         let t = new a.V7();
-        (g[e.user.id] = t), R(e.user.id);
+        (g[e.user.id] = t), v(e.user.id);
     }
     if (null != e.guild_member_profile) {
         let t = {
@@ -234,10 +234,10 @@ function w(e) {
     };
 }
 function x(e) {
-    v = !0;
+    R = !0;
 }
 function G(e) {
-    (v = !1),
+    (R = !1),
         null != e.guild_id
             ? !(function (e) {
                   let { userId: t, guild_id: n, accent_color: r, banner: i, bio: s, pronouns: o, popout_animation_particle_type: l, theme_colors: u, profileEffectId: c, profileEffectExpiresAt: d } = e;
@@ -281,12 +281,12 @@ function G(e) {
                       null != c)
                   ) {
                       let e = new a.V7();
-                      (g[t] = e), R(t);
+                      (g[t] = e), v(t);
                   }
               })(e);
 }
 function k(e) {
-    v = !1;
+    R = !1;
 }
 function B(e) {
     let t = e.user.id;
@@ -324,7 +324,7 @@ class Y extends _.Z {
         return I.has(e);
     }
     get isSubmitting() {
-        return v;
+        return R;
     }
     getUserProfile(e) {
         return m[e];

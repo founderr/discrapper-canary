@@ -30,8 +30,8 @@ var r,
     A = n(705262),
     N = n(436774),
     O = n(768762),
-    v = n(197115),
-    R = n(727939),
+    R = n(197115),
+    v = n(727939),
     C = n(981631),
     y = n(921944),
     D = n(474936),
@@ -127,7 +127,7 @@ function U(e) {
                         })
                     }),
                     r &&
-                        (0, a.jsx)(v.Z, {
+                        (0, a.jsx)(R.Z, {
                             className: b.footerButton,
                             subscriptionTier: D.Si.TIER_2,
                             showGradient: !0,
@@ -166,7 +166,7 @@ function w(e) {
         A = s.useCallback(() => {
             (0, h.G8)(), (0, T.Mo)(), I(), null == n || n(y.L.DISMISS);
         }, [I, n]);
-    return (0, a.jsx)(R.Z, {
+    return (0, a.jsx)(v.Z, {
         className: b.draggableContainer,
         children: (0, a.jsxs)('div', {
             ref: m,

@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(481060),
     d = n(607070),
     _ = n(100527),
-    u = n(906732),
-    E = n(410154),
+    E = n(906732),
+    u = n(410154),
     T = n(626135),
     I = n(915296),
     R = n(103433),
@@ -31,9 +31,9 @@ t.Z = (e) => {
             return !1 !== s.canReveal && 'upcomingDropUntimed' !== s.name && (e[n] = s), e;
         }, {}),
         P = (0, I.HI)({ location: N.MQ.SEE_ALL }),
-        { analyticsLocations: L } = (0, u.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        { analyticsLocations: L } = (0, E.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [v, Z] = a.useState(!1),
-        D = (0, E.ZP)('perks-discoverability'),
+        D = (0, u.ZP)('perks-discoverability'),
         B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         j = (0, p.mN)();
     return (
@@ -46,7 +46,7 @@ t.Z = (e) => {
             ref: O,
             children: (0, s.jsx)('div', {
                 className: f.container,
-                children: (0, s.jsxs)(u.Gt, {
+                children: (0, s.jsxs)(E.Gt, {
                     value: L,
                     children: [
                         (0, s.jsx)(R.Z, {
@@ -126,12 +126,12 @@ t.Z = (e) => {
                             },
                             children: (0, s.jsx)('div', { className: f.bottomOfPageVisibilitySensor })
                         }),
-                        (0, s.jsx)(c.Image, {
+                        (0, s.jsx)('img', {
                             src: S,
                             className: f.bottomIllustration,
                             width: 112,
                             height: 85,
-                            zoomable: !1
+                            alt: m.Z.Messages.IMAGE
                         })
                     ]
                 })

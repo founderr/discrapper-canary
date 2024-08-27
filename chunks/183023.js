@@ -38,8 +38,8 @@ var r = n(735250),
     A = n(944386),
     N = n(565138),
     O = n(372769),
-    v = n(889564),
-    R = n(687476),
+    R = n(889564),
+    v = n(687476),
     C = n(761966),
     y = n(563927),
     D = n(98278),
@@ -270,9 +270,9 @@ let W = () => ({
                               userIsRoleSubscriber: !1
                           }
                         : {
-                              isRoleSubscriptionEmoji: v.yH(M),
-                              isUnusableRoleSubscriptionEmoji: v.Fv(M, null != q ? q : void 0),
-                              userIsRoleSubscriber: R.Z.getUserSubscriptionRoles(M.guildId).size > 0
+                              isRoleSubscriptionEmoji: R.yH(M),
+                              isUnusableRoleSubscriptionEmoji: R.Fv(M, null != q ? q : void 0),
+                              userIsRoleSubscriber: v.Z.getUserSubscriptionRoles(M.guildId).size > 0
                           },
                 [M, q]
             ),

@@ -28,8 +28,8 @@ var r,
     A = n(228488),
     N = n(540026),
     O = n(455813),
-    v = n(283756),
-    R = n(793148),
+    R = n(283756),
+    v = n(793148),
     C = n(981631),
     y = n(217702),
     D = n(689938),
@@ -196,7 +196,7 @@ class B extends (r = s.Component) {
                 }),
                 (0, a.jsx)('div', {
                     className: b.flex,
-                    children: (0, a.jsx)(R.Z, {
+                    children: (0, a.jsx)(v.Z, {
                         ref: this.setVolumeButtonRef,
                         muted: i,
                         value: f,
@@ -760,7 +760,7 @@ class Y extends (i = s.PureComponent) {
                     this.renderVideo(),
                     (0, a.jsx)('div', {
                         className: L.playCenter,
-                        children: (0, a.jsx)(v.Z, {
+                        children: (0, a.jsx)(R.Z, {
                             className: L.__invalid_playButton,
                             externalURL: n,
                             renderLinkComponent: s

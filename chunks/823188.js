@@ -44,8 +44,8 @@ var c = n(120356),
     A = n(706454),
     N = n(594174),
     O = n(78839),
-    v = n(709586),
-    R = n(483444),
+    R = n(709586),
+    v = n(483444),
     C = n(599250),
     y = n(930153),
     D = n(74538),
@@ -236,7 +236,7 @@ function Q(e) {
     if (!t && r) {
         let e = D.ZP.formatPriceString(D.ZP.getDefaultPrice(n === F.p9.TIER_0 ? F.Xh.PREMIUM_MONTH_TIER_0 : F.Xh.PREMIUM_MONTH_TIER_2), F.rV.MONTH);
         if (0 === i) {
-            var g, S, A, v;
+            var g, S, A, R;
             return (0, u.jsx)(I.Heading, {
                 variant: 'heading-md/normal',
                 color: 'always-white',
@@ -245,7 +245,7 @@ function Q(e) {
                     planName: (0, D.aq)(null !== (S = F.IW[null !== (g = null == T ? void 0 : T.sku_id) && void 0 !== g ? g : F.Si.NONE]) && void 0 !== S ? S : F.Xh.PREMIUM_MONTH_TIER_2),
                     duration: (0, D.if)({
                         intervalType: null !== (A = null == T ? void 0 : T.interval) && void 0 !== A ? A : F.rV.DAY,
-                        intervalCount: null !== (v = null == T ? void 0 : T.interval_count) && void 0 !== v ? v : 30,
+                        intervalCount: null !== (R = null == T ? void 0 : T.interval_count) && void 0 !== R ? R : 30,
                         capitalize: !1
                     }),
                     price: e
@@ -402,7 +402,7 @@ function J(e) {
         return (0, u.jsxs)(u.Fragment, {
             children: [
                 (0, u.jsx)(z, {
-                    Icon: (0, I.makeIconCompat)(v.Z),
+                    Icon: (0, I.makeIconCompat)(R.Z),
                     text: H.Z.Messages.PREMIUM_TIER_SERVER_BOOST_WITH_PERCENTAGE_ITEM.format({
                         numBoosts: F.cb,
                         percentageOff: (0, y.T3)(i, F.Rr / 100)
@@ -455,7 +455,7 @@ function J(e) {
                 text: H.Z.Messages.PREMIUM_TIER_HD_STREAMING_ITEM
             }),
             (0, u.jsx)(z, {
-                Icon: (0, I.makeIconCompat)(v.Z),
+                Icon: (0, I.makeIconCompat)(R.Z),
                 text: H.Z.Messages.PREMIUM_TIER_SERVER_BOOST_ITEM
             }),
             (0, u.jsx)(z, {
@@ -476,8 +476,8 @@ function ee(e) {
         g = (null == _ ? void 0 : _.trialId) != null ? (null == E ? void 0 : E.premiumType) : null,
         S = (0, b.Nx)(),
         A = (0, P.Ng)(),
-        v = (0, b.t7)(),
-        C = null != T || null != g ? 0 : null != A || v ? 1 : null,
+        R = (0, b.t7)(),
+        C = null != T || null != g ? 0 : null != A || R ? 1 : null,
         y = (0, x.Vi)(),
         D = !o && S,
         L = (0, x.W1)(),
@@ -497,7 +497,7 @@ function ee(e) {
                 ? (0, u.jsxs)(u.Fragment, {
                       children: [
                           (0, u.jsx)(K, {
-                              text: v ? H.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED : H.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: A.discount.amount }),
+                              text: R ? H.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED : H.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: A.discount.amount }),
                               className: Z.topRimPill,
                               colorOptions: G
                           }),
@@ -530,7 +530,7 @@ function ee(e) {
                       ]
                   }),
             !o &&
-                v &&
+                R &&
                 (0, u.jsxs)(u.Fragment, {
                     children: [
                         (0, u.jsx)(K, {
@@ -558,7 +558,7 @@ function ee(e) {
                 children: [
                     (0, u.jsxs)('div', {
                         children: [
-                            (0, u.jsx)(R.Z, { className: d()(Z.title, Z.tier2Title) }),
+                            (0, u.jsx)(v.Z, { className: d()(Z.title, Z.tier2Title) }),
                             !o &&
                                 T !== F.Si.TIER_2 &&
                                 y &&

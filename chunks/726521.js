@@ -49,7 +49,7 @@ var r = n(367907),
     c = n(443599),
     d = n(981631);
 function _(e, t) {
-    v(l.b.GUILD_DISCOVERY, { guild_id: e.id }),
+    R(l.b.GUILD_DISCOVERY, { guild_id: e.id }),
         (0, c.m)(
             {
                 name: l.b.GUILD_DISCOVERY,
@@ -60,7 +60,7 @@ function _(e, t) {
         );
 }
 function E(e, t) {
-    v(l.b.GUILD_DIRECTORY_ENTRY, {
+    R(l.b.GUILD_DIRECTORY_ENTRY, {
         channel_id: e.channelId,
         guild_id: e.guildId
     }),
@@ -74,7 +74,7 @@ function E(e, t) {
         );
 }
 function f(e, t, n) {
-    v(l.b.MESSAGE, {
+    R(l.b.MESSAGE, {
         message_id: e.id,
         channel_id: e.channel_id
     });
@@ -91,7 +91,7 @@ function f(e, t, n) {
 function h(e, t) {
     let n = i.Z.getStageInstanceByChannel(e.id);
     if (null != n)
-        v(l.b.STAGE_CHANNEL, {
+        R(l.b.STAGE_CHANNEL, {
             stage_instance_id: n.id,
             channel_id: n.channel_id,
             guild_id: n.guild_id
@@ -107,7 +107,7 @@ function h(e, t) {
 }
 function p(e, t) {
     var n;
-    v(l.b.GUILD_SCHEDULED_EVENT, {
+    R(l.b.GUILD_SCHEDULED_EVENT, {
         guild_scheduled_event_id: e.id,
         guild_id: e.guild_id,
         channel_id: null !== (n = e.channel_id) && void 0 !== n ? n : void 0
@@ -122,7 +122,7 @@ function p(e, t) {
         );
 }
 function I(e, t) {
-    v(l.b.FIRST_DM, {
+    R(l.b.FIRST_DM, {
         message_id: e.id,
         channel_id: e.channel_id
     }),
@@ -150,7 +150,7 @@ async function m(e, t) {
     } catch {}
 }
 function T(e, t, n) {
-    v(l.b.USER, { reported_user_id: e.id }),
+    R(l.b.USER, { reported_user_id: e.id }),
         (0, c.m)(
             {
                 name: l.b.USER,
@@ -164,7 +164,7 @@ function T(e, t, n) {
         );
 }
 function g(e, t, n) {
-    v(l.b.USER, { reported_user_id: e.id }),
+    R(l.b.USER, { reported_user_id: e.id }),
         (0, c.m)(
             {
                 name: l.b.USER,
@@ -179,7 +179,7 @@ function g(e, t, n) {
 }
 function S(e, t) {
     let n = new s.Z({});
-    v(l.BM.USER, { reported_user_id: n.id }),
+    R(l.BM.USER, { reported_user_id: n.id }),
         (0, c.m)(
             {
                 name: l.BM.USER,
@@ -195,7 +195,7 @@ function S(e, t) {
 }
 function A(e, t) {
     let n = new a.ZP({});
-    v(l.BM.MESSAGE, {
+    R(l.BM.MESSAGE, {
         message_id: void 0,
         channel_id: void 0
     }),
@@ -227,7 +227,7 @@ async function N(e, t, n) {
     }
 }
 function O(e, t) {
-    v(l.b.MESSAGE, {
+    R(l.b.MESSAGE, {
         message_id: e.id,
         channel_id: e.channel_id
     }),
@@ -240,7 +240,7 @@ function O(e, t) {
             t
         );
 }
-function v(e, t) {
+function R(e, t) {
     r.ZP.trackWithMetadata(d.rMx.IAR_MODAL_OPEN, {
         report_type: e,
         ...t

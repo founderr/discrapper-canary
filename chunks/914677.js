@@ -25,7 +25,7 @@ let c = 'url(#gradient)',
                 return;
         }
     },
-    u = (e, t) => {
+    E = (e, t) => {
         switch (t) {
             case l.Q.NITRO_GEM:
                 return c;
@@ -36,10 +36,10 @@ let c = 'url(#gradient)',
         }
     };
 t.Z = (e) => {
-    let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: E = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
+    let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: u = 0, progressCircleStrokeSize: T = 2, progressCircleVariation: I, progressCircleStroke: R } = e,
         C = 43 + T / 2,
         g = 2 * Math.PI * C,
-        [N, p] = a.useState(E);
+        [N, p] = a.useState(u);
     a.useEffect(() => {
         let e = setTimeout(() => {
             p(t);
@@ -50,7 +50,7 @@ t.Z = (e) => {
         m = (0, r.ap)(A),
         f = _(I),
         S = d(I, m),
-        h = null != R ? R : u(m, I);
+        h = null != R ? R : E(m, I);
     return (0, s.jsxs)('div', {
         className: o.circleContainer,
         children: [

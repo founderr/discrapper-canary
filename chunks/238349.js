@@ -26,8 +26,8 @@ var i,
 let A = [],
     N = null,
     O = null,
-    v = new Set(),
-    R = c.z.LATEST_ACTIVITY,
+    R = new Set(),
+    v = c.z.LATEST_ACTIVITY,
     C = 0,
     y = [],
     D = !1,
@@ -49,7 +49,7 @@ function x(e) {
     };
 }
 function G() {
-    (y = []), (r = null), (O = null), (v = new Set()), (R = c.z.LATEST_ACTIVITY), (C = 0), (L = []), (b = u().chain(A)), (M = u().chain(A)), U.clear(), P.clear();
+    (y = []), (r = null), (O = null), (R = new Set()), (v = c.z.LATEST_ACTIVITY), (C = 0), (L = []), (b = u().chain(A)), (M = u().chain(A)), U.clear(), P.clear();
 }
 function k() {
     var e;
@@ -66,7 +66,7 @@ function B(e) {
                   let { id: t } = e;
                   return t;
               })
-              .sort(x(R));
+              .sort(x(v));
 }
 function F(e) {
     var t;
@@ -82,12 +82,12 @@ function F(e) {
         0 !== P.size && ((L = L.filter((e) => !P.has(e))), P.clear()),
         0 !== U.size && ((L = Array.from(new Set([...L, ...U]))), U.clear()),
         ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && ((M = u().chain(L).sort(x(c.z.LATEST_ACTIVITY))), (b = u().chain(L).sort(x(c.z.CREATION_DATE))));
-    let i = (R === c.z.LATEST_ACTIVITY ? M : b).value();
+    let i = (v === c.z.LATEST_ACTIVITY ? M : b).value();
     let a = (y =
-        0 === v.size
+        0 === R.size
             ? i
             : i.filter(
-                  ((t = v),
+                  ((t = R),
                   function (e) {
                       var n;
                       let r = null === (n = p.Z.getChannel(e)) || void 0 === n ? void 0 : n.appliedTags;
@@ -113,9 +113,9 @@ class V extends (i = d.ZP.Store) {
     }
     getThreadIds(e, t, n) {
         let r = e !== O,
-            i = !(0, T.OL)(n, v),
-            a = t !== R;
-        return (O = e), (v = n), (R = t), r ? F({ refreshThreadIds: !0 }) : a ? F({ sortThreadIds: !0 }) : i && F(), y;
+            i = !(0, T.OL)(n, R),
+            a = t !== v;
+        return (O = e), (R = n), (v = t), r ? F({ refreshThreadIds: !0 }) : a ? F({ sortThreadIds: !0 }) : i && F(), y;
     }
     getCurrentThreadIds() {
         return y;

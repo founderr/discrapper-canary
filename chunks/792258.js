@@ -8,8 +8,8 @@ var a = n(120356),
     c = n(372769),
     d = n(914788),
     _ = n(981631),
-    u = n(689938),
-    E = n(335455);
+    E = n(689938),
+    u = n(335455);
 let T = [18, 18, 16, 16, 14, 12, 10];
 t.Z = (e) => {
     let { guildId: t } = e,
@@ -25,14 +25,14 @@ t.Z = (e) => {
         g = null !== (N = T[(C = (0, i.Zg)(I)).length - 1]) && void 0 !== N ? N : T[T.length - 1];
     }
     return (0, s.jsxs)('div', {
-        className: E.container,
+        className: u.container,
         children: [
             (0, s.jsxs)('div', {
                 style: { fontSize: g },
                 children: [
                     null != C
                         ? (0, s.jsx)('div', {
-                              className: r()(E.childWrapper, E.acronym),
+                              className: r()(u.childWrapper, u.acronym),
                               'aria-hidden': !0,
                               children: C
                           })
@@ -47,17 +47,17 @@ t.Z = (e) => {
                 ]
             }),
             (0, s.jsxs)('div', {
-                className: E.descriptors,
+                className: u.descriptors,
                 children: [
                     (0, s.jsxs)('div', {
-                        className: E.header,
+                        className: u.header,
                         children: [
                             a
                                 ? (0, s.jsx)(c.Z, {
                                       guild: n,
                                       tooltipPosition: 'bottom',
                                       tooltipColor: o.Tooltip.Colors.PRIMARY,
-                                      className: E.guildBadge
+                                      className: u.guildBadge
                                   })
                                 : null,
                             (0, s.jsx)(o.Text, {
@@ -70,7 +70,7 @@ t.Z = (e) => {
                         ? (0, s.jsx)(o.Text, {
                               variant: 'text-xs/medium',
                               color: 'text-muted',
-                              children: u.Z.Messages.FAMILY_CENTER_ACTIVITY_GUILD_ROW_MEMBER_COUNT.format({ members: n.approximateMemberCount })
+                              children: E.Z.Messages.FAMILY_CENTER_ACTIVITY_GUILD_ROW_MEMBER_COUNT.format({ members: n.approximateMemberCount })
                           })
                         : null
                 ]

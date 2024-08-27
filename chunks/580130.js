@@ -23,10 +23,10 @@ let h = {},
 function O(e) {
     (h[e.id] = d.Z.createFromServer(e)), null == I[e.sku_id] && (I[e.sku_id] = new Set()), null == m[e.application_id] && (m[e.application_id] = new Set()), null != e.subscription_id && (null == N[e.subscription_id] && (N[e.subscription_id] = new Set()), N[e.subscription_id].add(e.id)), m[e.application_id].add(e.id), I[e.sku_id].add(e.id);
 }
-function v(e) {
+function R(e) {
     p[e.id] = d.Z.createFromServer(e);
 }
-function R(e) {
+function v(e) {
     return O(e.entitlement);
 }
 class C extends (r = u.yh) {
@@ -115,7 +115,7 @@ class C extends (r = u.yh) {
         ENTITLEMENT_FETCH_APPLICATION_FAIL: function () {},
         ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function (e) {
             let { entitlements: t } = e;
-            (p = {}), t.forEach(v);
+            (p = {}), t.forEach(R);
         },
         SKU_PURCHASE_SUCCESS: function (e) {
             let { entitlements: t } = e;
@@ -125,8 +125,8 @@ class C extends (r = u.yh) {
             let { libraryApplications: t } = e;
             for (let e of t) if (null != e.entitlements) for (let t of e.entitlements) O(t);
         },
-        ENTITLEMENT_CREATE: R,
-        ENTITLEMENT_UPDATE: R,
+        ENTITLEMENT_CREATE: v,
+        ENTITLEMENT_UPDATE: v,
         ENTITLEMENT_DELETE: function (e) {
             return (function (e) {
                 delete h[e.id];

@@ -22,10 +22,10 @@ function _(e) {
         O = i.useCallback(() => {
             A(!1), null == I || I();
         }, [I]),
-        v = i.useCallback(() => {
+        R = i.useCallback(() => {
             A(!0), null == m || m();
         }, [m]),
-        R = i.useCallback(() => {
+        v = i.useCallback(() => {
             A(!1), null == T || T();
         }, [T]),
         C = i.useMemo(() => {
@@ -49,8 +49,8 @@ function _(e) {
         }),
         onFocus: N,
         onBlur: O,
-        onMouseOver: v,
-        onMouseLeave: R,
+        onMouseOver: R,
+        onMouseLeave: v,
         children: (0, r.jsx)(o.ZP, {
             className: c.mask,
             mask: h || (f && (n || S)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,

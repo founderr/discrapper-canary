@@ -348,10 +348,10 @@
             return this._applyCombination(C, arguments);
         },
         triad: function () {
-            return this._applyCombination(v, arguments);
+            return this._applyCombination(R, arguments);
         },
         tetrad: function () {
-            return this._applyCombination(R, arguments);
+            return this._applyCombination(v, arguments);
         }
     }),
         (_.fromRatio = function (e, t) {
@@ -461,7 +461,7 @@
         var t = _(e).toHsl();
         return (t.h = (t.h + 180) % 360), _(t);
     }
-    function v(e) {
+    function R(e) {
         var t = _(e).toHsl(),
             n = t.h;
         return [
@@ -478,7 +478,7 @@
             })
         ];
     }
-    function R(e) {
+    function v(e) {
         var t = _(e).toHsl(),
             n = t.h;
         return [

@@ -24,7 +24,7 @@ n.d(t, {
         return I;
     },
     av: function () {
-        return R;
+        return v;
     },
     cq: function () {
         return g;
@@ -45,7 +45,7 @@ n.d(t, {
         return a;
     },
     pw: function () {
-        return v;
+        return R;
     },
     rk: function () {
         return O;
@@ -185,15 +185,15 @@ let O = (e) => {
     for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
     return t;
 };
-function v(e) {
+function R(e) {
     return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0);
 }
-function R(e) {
-    return null == e || (!!v(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
+function v(e) {
+    return null == e || (!!R(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
 }
 function C(e) {
     var t, n;
-    return null != e && (!!R(e) || ((null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < d) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0));
+    return null != e && (!!v(e) || ((null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < d) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < 3) && !0));
 }
 function y(e) {
     return e.type === c.d4z.GUILD_TEXT && !u.Uu(c.Plq.SEND_MESSAGES, e) && u.Uu(c.Plq.VIEW_CHANNEL, e);

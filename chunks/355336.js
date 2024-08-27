@@ -25,17 +25,17 @@ function c(e, t) {
             S = i.useRef(null),
             A = i.useRef(null),
             [N, O] = i.useState(!1),
-            { scrollerRef: v, getScrollerState: R } = (0, l.Ke)(),
-            C = (0, l.t2)(v);
+            { scrollerRef: R, getScrollerState: v } = (0, l.Ke)(),
+            C = (0, l.t2)(R);
         i.useImperativeHandle(
             c,
             () => ({
-                getScrollerNode: () => v.current,
+                getScrollerNode: () => R.current,
                 isScrolling: () => null != S.current,
-                getScrollerState: R,
-                ...(0, l.Ue)(v, R, C)
+                getScrollerState: v,
+                ...(0, l.Ue)(R, v, C)
             }),
-            [v, R, C]
+            [R, v, C]
         );
         let y = i.useCallback(
             (e) => {
@@ -50,7 +50,7 @@ function c(e, t) {
         return (
             i.useEffect(() => () => clearTimeout(S.current), []),
             (0, l.zn)({
-                ref: v,
+                ref: R,
                 key: 'container',
                 onUpdate: E,
                 resizeObserver: a,
@@ -64,7 +64,7 @@ function c(e, t) {
                 listenerMap: n
             }),
             (0, r.jsx)('div', {
-                ref: v,
+                ref: R,
                 className: s()(_, {
                     [u.fade]: I,
                     [u.customTheme]: m,

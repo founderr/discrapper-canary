@@ -53,8 +53,8 @@ function S() {}
 let A = 20 * I.Z.Millis.SECOND,
     N = 1 * I.Z.Millis.MINUTE,
     O = 5 * I.Z.Millis.SECOND,
-    v = 5 * I.Z.Millis.SECOND;
-function R(e) {
+    R = 5 * I.Z.Millis.SECOND;
+function v(e) {
     return e.map((e) => ({
         name: e.name,
         type: e.type,
@@ -280,7 +280,7 @@ class D extends f.Z {
         if (((this.serverVersion = null !== (t = e.v) && void 0 !== t ? t : 3), this.serverVersion <= 3)) {
             let t = m.isPlatformEmbedded ? 0.25 : 0.1;
             this.heartbeatInterval = e.heartbeat_interval * t;
-        } else (this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier), !m.isPlatformEmbedded && (this.heartbeatInterval = Math.min(v, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
+        } else (this.heartbeatInterval = e.heartbeat_interval * this.heartbeatIntervalModifier), !m.isPlatformEmbedded && (this.heartbeatInterval = Math.min(R, null !== (n = this.heartbeatInterval) && void 0 !== n ? n : NaN));
         let i = Date.now() - this.connectionStartTime;
         this.logger.info(
             '[HELLO] heartbeat interval: '
@@ -432,7 +432,7 @@ class D extends f.Z {
               ? ((i = n.sdp),
                 (a = {
                     ...n,
-                    codecs: R(n.codecs),
+                    codecs: v(n.codecs),
                     rtc_connection_id: t
                 }))
               : 'address' in n &&
@@ -448,7 +448,7 @@ class D extends f.Z {
                 }),
                 (a = {
                     ...n,
-                    codecs: R(n.codecs),
+                    codecs: v(n.codecs),
                     rtc_connection_id: t,
                     experiments: r
                 })),
@@ -459,7 +459,7 @@ class D extends f.Z {
             });
     }
     updateSession(e) {
-        this.send(14, { codecs: R(e.codecs) });
+        this.send(14, { codecs: v(e.codecs) });
     }
     speaking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,

@@ -20,26 +20,26 @@ var t = l(735250),
     g = l(689938),
     I = l(936124);
 function m(e) {
-    let { guildId: n, userId: m, analyticsLocation: R, analyticsLocations: N, context: A, icon: C } = e,
-        O = E.Z.getGuild(n),
+    let { guildId: n, userId: m, analyticsLocation: R, analyticsLocations: N, context: A, icon: O } = e,
+        C = E.Z.getGuild(n),
         T = c.default.getId(),
-        v = (0, i.e7)([_.default], () => _.default.getUser(m)),
-        x = (0, i.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, m), [n, m]);
+        h = (0, i.e7)([_.default], () => _.default.getUser(m)),
+        v = (0, i.e7)([Z.ZP], () => Z.ZP.isGuestOrLurker(n, m), [n, m]);
     (0, i.e7)([M.Z], () => M.Z.getGuildVersion(n), [n]);
-    let h = r.useMemo(() => ({ [n]: [m] }), [n, m]);
-    (0, s.$)(h);
+    let x = r.useMemo(() => ({ [n]: [m] }), [n, m]);
+    (0, s.$)(x);
     let S = A === f.IlC.POPOUT,
-        b = (0, d.Z)({
-            guild: O,
+        p = (0, d.Z)({
+            guild: C,
             analyticsLocation: R
         }),
-        p = (0, u.Aq)();
-    if (null == O || S) return null;
-    let U = T === m && (M.Z.can(f.Plq.CHANGE_NICKNAME, O) || M.Z.can(f.Plq.MANAGE_NICKNAMES, O)),
+        b = (0, u.Aq)();
+    if (null == C || S) return null;
+    let U = T === m && (M.Z.can(f.Plq.CHANGE_NICKNAME, C) || M.Z.can(f.Plq.MANAGE_NICKNAMES, C)),
         P = T === m,
-        j = M.Z.canManageUser(f.Plq.MANAGE_NICKNAMES, m, O);
-    if (!(U || j || P) || null == v || x) return null;
-    let D = O.hasFeature(f.oNc.HUB) ? g.Z.Messages.HUB_EDIT_PROFILE : g.Z.Messages.CHANGE_IDENTITY,
+        j = M.Z.canManageUser(f.Plq.MANAGE_NICKNAMES, m, C);
+    if (!(U || j || P) || null == h || v) return null;
+    let D = C.hasFeature(f.oNc.HUB) ? g.Z.Messages.HUB_EDIT_PROFILE : g.Z.Messages.CHANGE_IDENTITY,
         L = P ? D : g.Z.Messages.CHANGE_NICKNAME;
     return (0, t.jsx)(a.MenuItem, {
         id: 'change-nickname',
@@ -50,17 +50,17 @@ function m(e) {
                 children: L
             })
         }),
-        icon: C,
+        icon: O,
         action: () => {
             P
-                ? ((0, o.Z)(v.id, v.getAvatarURL(n, 80), { guildId: n }), b(), p.dispatch(f.CkL.POPOUT_CLOSE))
+                ? ((0, o.Z)(h.id, h.getAvatarURL(n, 80), { guildId: n }), p(), b.dispatch(f.CkL.POPOUT_CLOSE), (0, a.closeAllModals)())
                 : (0, a.openModalLazy)(async () => {
                       let { default: e } = await l.e('17712').then(l.bind(l, 620021));
                       return (l) =>
                           (0, t.jsx)(e, {
                               ...l,
                               guildId: n,
-                              user: v,
+                              user: h,
                               analyticsSource: R,
                               analyticsLocations: N
                           });

@@ -122,7 +122,7 @@ let _ = 1500,
                     !1
                 );
             });
-        class v extends l.yh {
+        class R extends l.yh {
             initialize() {
                 null != g && this.waitFor(...g);
             }
@@ -130,5 +130,5 @@ let _ = 1500,
                 super(...e), d(this, 'submitEventsImmediately', O);
             }
         }
-        return d(v, 'displayName', 'AnalyticsTrackingStore'), new v(t, n);
+        return d(R, 'displayName', 'AnalyticsTrackingStore'), new R(t, n);
     };

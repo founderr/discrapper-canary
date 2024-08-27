@@ -1,6 +1,6 @@
 n.d(t, {
     LO: function () {
-        return v;
+        return R;
     },
     On: function () {
         return N;
@@ -12,7 +12,7 @@ n.d(t, {
         return A;
     },
     bp: function () {
-        return R;
+        return v;
     },
     ef: function () {
         return g;
@@ -127,7 +127,7 @@ async function O() {
     }
     return e;
 }
-async function v(e) {
+async function R(e) {
     let t;
     s.Z.dispatch({
         type: 'GAME_CONSOLE_FETCH_DEVICES_START',
@@ -155,7 +155,7 @@ async function v(e) {
         n
     );
 }
-function R(e, t) {
+function v(e, t) {
     s.Z.dispatch({
         type: 'GAME_CONSOLE_SELECT_DEVICE',
         platform: e,

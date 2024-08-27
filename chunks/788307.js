@@ -26,14 +26,14 @@ var r = n(735250),
     A = n(979651),
     N = n(6074),
     O = n(981631),
-    v = n(955859);
-let R = '14px';
+    R = n(955859);
+let v = '14px';
 function C(e) {
     let { emoji: t, className: n, animate: i = !0, hideTooltip: a, tooltipDelay: o } = e,
         c = I.Yk.useSetting(),
         d = null != t.id ? ':'.concat(t.name, ':') : E.ZP.translateSurrogatesToInlineEmoji(t.name),
         _ = {
-            className: s()(v.emoji, n),
+            className: s()(R.emoji, n),
             emojiId: t.id,
             emojiName: t.name,
             autoplay: !0,
@@ -76,7 +76,7 @@ let y = (e) => {
                             children: n
                         }),
                         (0, r.jsx)('div', {
-                            className: s()(v.textRuler, t),
+                            className: s()(R.textRuler, t),
                             ref: o,
                             'aria-hidden': !0,
                             children: n
@@ -137,16 +137,16 @@ t.Z = (e) => {
                   b &&
                       (0, r.jsx)(l.QuestsIcon, {
                           size: 'custom',
-                          className: v.questsIcon,
-                          height: R,
-                          width: R,
+                          className: R.questsIcon,
+                          height: v,
+                          width: v,
                           color: G.hex
                       }),
                   null != n && n.some((e) => (0, c.Z)(e, B))
                       ? (0, r.jsx)(N.Z, {
                             width: 16,
                             height: 16,
-                            className: v.icon
+                            className: R.icon
                         })
                       : null
               ]

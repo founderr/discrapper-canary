@@ -20,11 +20,11 @@ function s(e) {
         [T, g] = (0, i.zk)(h, p, I),
         [S, A] = (0, a.useState)(Array(T.length).fill(!1)),
         N = (0, a.useRef)(Array(T.length).fill(!0)),
-        [O, v] = (0, a.useState)(void 0),
-        R = (0, a.useRef)(T),
+        [O, R] = (0, a.useState)(void 0),
+        v = (0, a.useRef)(T),
         C = (0, a.useRef)(S),
         y = (e) => {
-            (R.current = e), g(e);
+            (v.current = e), g(e);
         },
         D = (e) => {
             (C.current = e), A(e);
@@ -45,7 +45,7 @@ function s(e) {
         if (n || !P(e)) return;
         let i = b(e),
             a = M(e);
-        (t = (0, r.N4)(t, i, a, _)), y(o(R.current, e, t));
+        (t = (0, r.N4)(t, i, a, _)), y(o(v.current, e, t));
     }
     function w(e) {
         return d.format(e);
@@ -65,10 +65,10 @@ function s(e) {
         setThumbDragging: function (e, t) {
             if (n || !P(e)) return;
             let r = C.current[e];
-            (C.current = o(C.current, e, t)), D(C.current), m && r && !C.current.some(Boolean) && m(R.current);
+            (C.current = o(C.current, e, t)), D(C.current), m && r && !C.current.some(Boolean) && m(v.current);
         },
         focusedThumb: O,
-        setFocusedThumb: v,
+        setFocusedThumb: R,
         getThumbPercent: (e) => L(T[e]),
         getValuePercent: L,
         getThumbValueLabel: (e) => w(T[e]),

@@ -24,12 +24,12 @@ function g(e, n, g) {
         R = (0, i.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
         N = (0, i.e7)([M.default], () => M.default.getCurrentUser()),
         A = (0, u.Z)(m, 'Context Menu'),
-        C = (0, o.Xb)(m);
+        O = (0, o.Xb)(m);
     if ((null == N ? void 0 : N.id) === e.id) return [A];
     if (null == R || null == m || null == N) return [];
-    let O = C || (m.ownerId === N.id && m.type === _.d4z.PRIVATE_THREAD);
+    let C = O || (m.ownerId === N.id && m.type === _.d4z.PRIVATE_THREAD);
     return [
-        O
+        C
             ? (0, t.jsx)(a.MenuItem, {
                   id: 'remove',
                   label: m.isForumPost() ? f.Z.Messages.REMOVE_USER_FROM_FORUM_POST.format({ user: e.username }) : f.Z.Messages.REMOVE_USER_FROM_THREAD.format({ user: e.username }),
@@ -40,7 +40,7 @@ function g(e, n, g) {
         E.Z.canManageUser(_.Plq.KICK_MEMBERS, e, R)
             ? (0, t.jsx)(a.MenuItem, {
                   id: 'kick',
-                  label: O ? f.Z.Messages.KICK_USER_FROM_SERVER.format({ user: e.username }) : f.Z.Messages.KICK_USER.format({ user: e.username }),
+                  label: C ? f.Z.Messages.KICK_USER_FROM_SERVER.format({ user: e.username }) : f.Z.Messages.KICK_USER.format({ user: e.username }),
                   color: 'danger',
                   action: () =>
                       (0, a.openModalLazy)(async () => {
@@ -57,7 +57,7 @@ function g(e, n, g) {
         E.Z.canManageUser(_.Plq.BAN_MEMBERS, e, R)
             ? (0, t.jsx)(a.MenuItem, {
                   id: 'ban',
-                  label: O ? f.Z.Messages.BAN_USER_FROM_SERVER.format({ user: e.username }) : f.Z.Messages.BAN_USER.format({ user: e.username }),
+                  label: C ? f.Z.Messages.BAN_USER_FROM_SERVER.format({ user: e.username }) : f.Z.Messages.BAN_USER.format({ user: e.username }),
                   color: 'danger',
                   action: () =>
                       (0, a.openModalLazy)(async () => {

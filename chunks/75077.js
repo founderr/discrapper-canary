@@ -35,8 +35,8 @@ var s = n(278074),
     c = n(74538),
     d = n(331119),
     _ = n(575595),
-    u = n(915296),
-    E = n(650032),
+    E = n(915296),
+    u = n(650032),
     T = n(391110),
     I = n(474936),
     R = n(735825),
@@ -101,10 +101,10 @@ let m = (e, t, n) => ((0, r.wj)(e) ? t : n),
             c = () => {
                 r !== i.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
-            { enabled: u } = E._.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
+            { enabled: E } = u._.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
             { enabled: T } = _.r.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
             { enabled: I } = d.C.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
-            R = u && !T && !I,
+            R = E && !T && !I,
             C = O();
         return null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && C ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !C && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
@@ -119,14 +119,14 @@ let m = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 })
                     .with(
                         {
-                            tileOrderVariant: u.mJ.VARIANT_1,
+                            tileOrderVariant: E.mJ.VARIANT_1,
                             isPremiumSubscriber: !1
                         },
                         () => [t.profiles, t.moreEmojiPower, t.largeUploads]
                     )
                     .with(
                         {
-                            tileOrderVariant: u.mJ.VARIANT_2,
+                            tileOrderVariant: E.mJ.VARIANT_2,
                             isPremiumSubscriber: !1
                         },
                         () => [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons]
@@ -149,14 +149,14 @@ let m = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 })
                     .with(
                         {
-                            tileOrderVariant: u.mJ.VARIANT_1,
+                            tileOrderVariant: E.mJ.VARIANT_1,
                             isPremiumSubscriber: !1
                         },
                         () => [t.hdVideo, t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]
                     )
                     .with(
                         {
-                            tileOrderVariant: u.mJ.VARIANT_2,
+                            tileOrderVariant: E.mJ.VARIANT_2,
                             isPremiumSubscriber: !1
                         },
                         () => [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]
@@ -170,14 +170,14 @@ let m = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 })
                     .with(
                         {
-                            tileOrderVariant: u.mJ.VARIANT_1,
+                            tileOrderVariant: E.mJ.VARIANT_1,
                             isPremiumSubscriber: !1
                         },
                         () => [t.clientThemes, t.customAppIcons, t.customSoundsEverywhere, t.specialStickerAccess]
                     )
                     .with(
                         {
-                            tileOrderVariant: u.mJ.VARIANT_2,
+                            tileOrderVariant: E.mJ.VARIANT_2,
                             isPremiumSubscriber: !1
                         },
                         () => [t.customSoundsEverywhere, t.specialStickerAccess]

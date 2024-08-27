@@ -45,8 +45,8 @@ let N = Object.freeze({
         textWidgetOpacity: S.wF.LOWER
     }),
     O = null,
-    v = {},
-    R = null,
+    R = {},
+    v = null,
     C = new Set(),
     y = !1,
     D = null,
@@ -55,8 +55,8 @@ let N = Object.freeze({
     M = new Set(),
     P = !1;
 function U(e) {
-    let t = v[e];
-    return null == t && (t = v[e] = { ...N }), t;
+    let t = R[e];
+    return null == t && (t = R[e] = { ...N }), t;
 }
 let w = { ...N },
     x = new Set(['AUDIO_SET_INPUT_DEVICE', 'AUDIO_SET_INPUT_VOLUME', 'AUDIO_SET_LOCAL_VIDEO_DISABLED', 'AUDIO_SET_LOCAL_VOLUME', 'AUDIO_SET_MODE', 'AUDIO_SET_NOISE_CANCELLATION', 'AUDIO_SET_NOISE_SUPPRESSION', 'AUDIO_SET_OUTPUT_DEVICE', 'AUDIO_SET_OUTPUT_VOLUME', 'AUDIO_TOGGLE_LOCAL_MUTE', 'AUDIO_TOGGLE_SELF_DEAF', 'AUDIO_TOGGLE_SELF_MUTE', 'BILLING_SUBSCRIPTION_UPDATE_SUCCESS', 'CATEGORY_COLLAPSE', 'CATEGORY_EXPAND', 'CHANNEL_ACK', 'CHANNEL_PRELOAD', 'GIFT_CODE_REDEEM', 'GIFT_CODE_REDEEM_FAILURE', 'GIFT_CODE_REDEEM_SUCCESS', 'HOTSPOT_HIDE', 'INVITE_MODAL_CLOSE', 'LAYOUT_CREATE', 'LAYOUT_CREATE_WIDGETS', 'LAYOUT_DELETE_ALL_WIDGETS', 'LAYOUT_DELETE_WIDGET', 'LAYOUT_SET_PINNED', 'LAYOUT_SET_TOP_WIDGET', 'LAYOUT_UPDATE_WIDGET', 'LOAD_MESSAGES', 'LOAD_MESSAGES_FAILURE', 'LOAD_MESSAGES_SUCCESS', 'MEDIA_ENGINE_SET_GO_LIVE_SOURCE', 'OVERLAY_ACTIVATE_REGION', 'OVERLAY_DEACTIVATE_ALL_REGIONS', 'OVERLAY_MESSAGE_EVENT_ACTION', 'OVERLAY_SET_AVATAR_SIZE_MODE', 'OVERLAY_SET_CLICK_ZONES', 'OVERLAY_SET_DISPLAY_NAME_MODE', 'OVERLAY_SET_DISPLAY_USER_MODE', 'OVERLAY_SET_INPUT_LOCKED', 'OVERLAY_SET_NOTIFICATION_POSITION_MODE', 'OVERLAY_SET_TEXT_CHAT_NOTIFICATION_MODE', 'OVERLAY_SET_SHOW_KEYBIND_INDICATORS', 'OVERLAY_SET_TEXT_WIDGET_OPACITY', 'OVERLAY_SET_UI_LOCKED', 'OVERLAY_NOTIFY_READY_TO_SHOW', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_OPEN', 'OVERLAY_OAUTH2_AUTHORIZE_MODAL_CLOSE', 'PREMIUM_PAYMENT_ERROR_CLEAR', 'PREMIUM_PAYMENT_MODAL_CLOSE', 'PREMIUM_PAYMENT_MODAL_OPEN', 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL', 'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS', 'PREMIUM_PAYMENT_UPDATE_FAIL', 'PREMIUM_PAYMENT_UPDATE_SUCCESS', 'PREMIUM_REQUIRED_MODAL_CLOSE', 'PREMIUM_REQUIRED_MODAL_OPEN', 'PURCHASE_CONFIRMATION_MODAL_CLOSE', 'PURCHASE_CONFIRMATION_MODAL_OPEN', 'SKU_PURCHASE_CLEAR_ERROR', 'SKU_PURCHASE_FAIL', 'SKU_PURCHASE_MODAL_CLOSE', 'SKU_PURCHASE_MODAL_OPEN', 'SKU_PURCHASE_PREVIEW_FETCH_SUCCESS', 'SKU_PURCHASE_SHOW_CONFIRMATION_STEP', 'SKU_PURCHASE_START', 'SKU_PURCHASE_SUCCESS', 'STREAM_CLOSE', 'STREAM_START', 'VOICE_CHANNEL_SELECT', 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE', 'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY']),
@@ -154,13 +154,13 @@ class V extends (r = i.ZP.PersistedStore) {
             __OVERLAY__ && (p.isPlatformEmbedded && I.ZP.requireModule('discord_overlay2'), C.delete((0, m.QF)())),
             null != e)
         ) {
-            v = e;
+            R = e;
             let t = d.default.getId();
             null != t && (null == (w = U(t)).textChatNotifications && (w.textChatNotifications = N.textChatNotifications), null == w.textWidgetOpacity && (w.textWidgetOpacity = N.textWidgetOpacity));
         }
     }
     getState() {
-        return v;
+        return R;
     }
     isUILocked(e) {
         return !C.has(e);
@@ -194,7 +194,7 @@ class V extends (r = i.ZP.PersistedStore) {
         return w.selectedChannelId;
     }
     getSelectedCallId() {
-        return R;
+        return v;
     }
     getDisplayUserMode() {
         return w.displayUserMode;
@@ -253,10 +253,10 @@ A(V, 'displayName', 'OverlayStore'),
     ]),
     (t.Z = new V(s.Z, {
         LOGOUT: function (e) {
-            !e.isSwitchingAccount && (v = {});
+            !e.isSwitchingAccount && (R = {});
         },
         MULTI_ACCOUNT_REMOVE_ACCOUNT: function (e) {
-            e.userId in v && delete v[e.userId];
+            e.userId in R && delete R[e.userId];
         },
         CONNECTION_CLOSED: function () {
             C.clear();
@@ -330,10 +330,10 @@ A(V, 'displayName', 'OverlayStore'),
         },
         OVERLAY_SELECT_CALL: function (e) {
             let { callId: t } = e;
-            R = t;
+            v = t;
         },
         CALL_DELETE: function () {
-            R = null;
+            v = null;
         },
         LAYOUT_CREATE: function () {},
         OVERLAY_SET_DISPLAY_NAME_MODE: function (e) {

@@ -527,7 +527,7 @@ var t, n;
                     );
                 };
             },
-            v = function (e) {
+            R = function (e) {
                 return function (t, n) {
                     return e.transporter.read(
                         {
@@ -538,7 +538,7 @@ var t, n;
                     );
                 };
             },
-            R = function (e) {
+            v = function (e) {
                 return function (t) {
                     return e.transporter.read(
                         {
@@ -1411,7 +1411,7 @@ var t, n;
             eO = function (e) {
                 return function (t, n) {
                     return l(
-                        ev(e)([t], n).then(function (e) {
+                        eR(e)([t], n).then(function (e) {
                             return { taskID: e.taskIDs[0] };
                         }),
                         function (t, n) {
@@ -1420,7 +1420,7 @@ var t, n;
                     );
                 };
             },
-            ev = function (e) {
+            eR = function (e) {
                 return function (t, n) {
                     var r = t.map(function (e) {
                         return { objectID: e };
@@ -1428,7 +1428,7 @@ var t, n;
                     return em(e)(r, e0.DeleteObject, n);
                 };
             },
-            eR = function (e) {
+            ev = function (e) {
                 return function (t, r) {
                     var i = r || {},
                         a = i.forwardToReplicas,
@@ -2406,7 +2406,7 @@ var t, n;
                                             partialUpdateObject: eG,
                                             partialUpdateObjects: ek,
                                             deleteObject: eO,
-                                            deleteObjects: ev,
+                                            deleteObjects: eR,
                                             deleteBy: eA,
                                             clearObjects: eT,
                                             browseObjects: eh,
@@ -2424,7 +2424,7 @@ var t, n;
                                             replaceAllSynonyms: eV,
                                             searchRules: eQ,
                                             getRule: eU,
-                                            deleteRule: eR,
+                                            deleteRule: ev,
                                             saveRule: eY,
                                             saveRules: ej,
                                             replaceAllRules: eF,
@@ -2445,8 +2445,8 @@ var t, n;
                                                 {
                                                     methods: {
                                                         addABTest: N,
-                                                        getABTest: v,
-                                                        getABTests: R,
+                                                        getABTest: R,
+                                                        getABTests: v,
                                                         stopABTest: C,
                                                         deleteABTest: O
                                                     }

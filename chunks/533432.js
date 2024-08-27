@@ -16,8 +16,8 @@ let p = i.forwardRef(function (e, t) {
     let { emojiListRef: n, gridNavigatorId: a, isFullRow: p, onKeyDown: I, onFocus: m, autoFocus: T, className: g, defaultSearchPlaceholder: S } = e,
         A = i.useRef(null),
         N = (0, d.Iu)((e) => e.searchQuery),
-        [O, v] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.Z),
-        R = i.useCallback(
+        [O, R] = c.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], o.Z),
+        v = i.useCallback(
             (e) => {
                 var t;
                 c.kJ.setActiveCategoryIndex('' === e ? 0 : _.c), c.kJ.setInspectedExpressionPosition(0, 0), c.kJ.setSearchPlaceholder(null), (0, d.ql)(e), null === (t = n.current) || void 0 === t || t.scrollTo(0);
@@ -39,7 +39,7 @@ let p = i.forwardRef(function (e, t) {
             query: N,
             ref: A,
             size: u.ZP.Sizes.MEDIUM,
-            placeholder: null != v ? v : S,
+            placeholder: null != R ? R : S,
             onClear: C,
             onKeyDown: (e) => {
                 switch (e.keyCode) {
@@ -52,7 +52,7 @@ let p = i.forwardRef(function (e, t) {
                 I(e);
             },
             onFocus: m,
-            onQueryChange: R,
+            onQueryChange: v,
             className: s()(g, { [h.searchBarFullRow]: p }),
             preventEscapePropagation: !1,
             useKeyboardNavigation: !1,

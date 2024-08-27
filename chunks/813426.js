@@ -20,8 +20,8 @@ var r = 'function' == typeof Map && Map.prototype,
     A = RegExp.prototype.test,
     N = Array.prototype.concat,
     O = Array.prototype.join,
-    v = Array.prototype.slice,
-    R = Math.floor,
+    R = Array.prototype.slice,
+    v = Math.floor,
     C = 'function' == typeof BigInt ? BigInt.prototype.valueOf : null,
     y = Object.getOwnPropertySymbols,
     D = 'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator ? Symbol.prototype.toString : null,
@@ -39,7 +39,7 @@ function U(e, t) {
     if (e === 1 / 0 || e === -1 / 0 || e != e || (e && e > -1000 && e < 1000) || A.call(/e/, t)) return t;
     var n = /[0-9](?=(?:[0-9]{3})+(?![0-9]))/g;
     if ('number' == typeof e) {
-        var r = e < 0 ? -R(-e) : R(e);
+        var r = e < 0 ? -v(-e) : v(e);
         if (r !== e) {
             var i = String(r),
                 a = m.call(t, i.length + 1);
@@ -81,8 +81,8 @@ e.exports = function e(t, r, i, o) {
         return g ? U(t, A) : A;
     }
     if ('bigint' == typeof t) {
-        var R = String(t) + 'n';
-        return g ? U(t, R) : R;
+        var v = String(t) + 'n';
+        return g ? U(t, v) : v;
     }
     var y = void 0 === l.depth ? 5 : l.depth;
     if ((void 0 === i && (i = 0), i >= y && y > 0 && 'object' == typeof t)) return B(t) ? '[Array]' : '[Object]';
@@ -101,7 +101,7 @@ e.exports = function e(t, r, i, o) {
     if (void 0 === o) o = [];
     else if (j(o, t) >= 0) return '[Circular]';
     function H(t, n, r) {
-        if ((n && (o = v.call(o)).push(n), r)) {
+        if ((n && (o = R.call(o)).push(n), r)) {
             var a = { depth: l.depth };
             return Z(l, 'quoteStyle') && (a.quoteStyle = l.quoteStyle), e(t, a, i + 1, o);
         }

@@ -3,7 +3,7 @@ n.d(t, {
         return L;
     },
     MP: function () {
-        return v;
+        return R;
     },
     Mg: function () {
         return S;
@@ -15,7 +15,7 @@ n.d(t, {
         return i;
     },
     Rx: function () {
-        return R;
+        return v;
     },
     nX: function () {
         return b;
@@ -250,7 +250,7 @@ function O(e) {
     }
     return p;
 }
-function v(e) {
+function R(e) {
     let { type: t, baseSDP: n, direction: r, audioCodec: i, audioPayloadType: a, audioBitRate: s, videoCodec: o, videoPayloadType: l, videoBitRate: u, rtxPayloadType: c, ssrcs: d, extensions: _ } = e,
         E = [];
     if ((T.info('generateSessionDescription: '.concat(JSON.stringify(d))), 'Firefox' === f().name)) {
@@ -332,7 +332,7 @@ function v(e) {
         sdp: N(E)
     });
 }
-function R(e) {
+function v(e) {
     let { type: t, baseSDP: n, audioCodec: r, audioPayloadType: i, audioBitRate: a, videoCodec: s, videoPayloadType: o, videoBitRate: l, sendingVideo: u, rtxPayloadType: c, ssrcs: d, extensions: _ } = e,
         E = [],
         f = 'answer' === t ? 'passive' : 'actpass';

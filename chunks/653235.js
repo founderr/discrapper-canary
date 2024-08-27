@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return R;
     }
 }),
     n(47120);
@@ -185,7 +185,7 @@ class O extends i.PureComponent {
             });
     }
 }
-function v(e) {
+function R(e) {
     let t = (0, o.e7)([E.Z], () => E.Z.getTrendingCategories()),
         n = (0, h.gG)(),
         i = (0, m.PY)();

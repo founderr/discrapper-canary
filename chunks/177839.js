@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(607070),
     d = n(100527),
     _ = n(906732),
-    u = n(66595),
-    E = n(535322),
+    E = n(66595),
+    u = n(535322),
     T = n(477734),
     I = n(626135),
     R = n(881100),
@@ -47,13 +47,13 @@ let p = (e) => (e ? g.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : g.Z.
                 className: i()(N.perkCard, a),
                 children: [
                     T
-                        ? (0, s.jsx)(E.Z, {
+                        ? (0, s.jsx)(u.Z, {
                               className: N.perkCardNewBadge,
                               shouldInheritBackgroundColor: !0,
                               shouldInheritTextColor: !0
                           })
                         : null,
-                    I ? (0, s.jsx)(u.Z, { className: N.perkCardEarlyAccessBadge }) : null,
+                    I ? (0, s.jsx)(E.Z, { className: N.perkCardEarlyAccessBadge }) : null,
                     (0, s.jsx)('img', {
                         src: r,
                         alt: '',
@@ -80,16 +80,16 @@ let p = (e) => (e ? g.Z.Messages.PREMIUM_MARKETING_PERKS_TITLE_NITRO_HOME : g.Z.
 t.Z = (e) => {
     let { className: t, isSubscriberNitroHome: n = !1 } = e,
         [r, d] = a.useState(!1),
-        u = (0, R.N)({ styles: N }),
-        E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        E = (0, R.N)({ styles: N }),
+        u = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         { analyticsLocations: g } = (0, _.ZP)(),
         f = (0, T._f)(),
-        S = [u.emoji, u.streaming, u.upload, u.customAppIcons, u.soundboard, f ? u.remix : u.videoBackground, u.superReactions, u.stickersPerkDiscoverability, u.badgeAlt];
+        S = [E.emoji, E.streaming, E.upload, E.customAppIcons, E.soundboard, f ? E.remix : E.videoBackground, E.superReactions, E.stickersPerkDiscoverability, E.badgeAlt];
     return (0, s.jsxs)('div', {
         className: i()(N.perksContainer, t, {
             [N.partiallyHidden]: n && !r,
             [N.subscriberNitroHome]: n,
-            [N.reducedMotion]: E
+            [N.reducedMotion]: u
         }),
         children: [
             (0, s.jsx)(o.Heading, {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return R;
     }
 });
 var r = n(735250),
@@ -25,11 +25,11 @@ var r = n(735250),
     A = n(731994),
     N = n(689938),
     O = n(984348);
-function v(e) {
+function R(e) {
     let { onClose: t, ...n } = e,
-        v = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        R = (0, a.e7)([c.Z], () => c.Z.theme),
-        C = null == v ? void 0 : v.premiumType,
+        R = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+        v = (0, a.e7)([c.Z], () => c.Z.theme),
+        C = null == R ? void 0 : R.premiumType,
         y = (0, I.N)(),
         D = (0, p.Ng)(),
         L = null != y || null != D,
@@ -40,7 +40,7 @@ function v(e) {
                 disable: L
             }
         ),
-        M = R === S.BRd.LIGHT ? 'light' : 'dark',
+        M = v === S.BRd.LIGHT ? 'light' : 'dark',
         P = b
             ? (0, r.jsx)('img', {
                   className: O.updatedArt,
@@ -49,9 +49,9 @@ function v(e) {
               })
             : (0, r.jsx)(o.Z, { icons: A.J6 }),
         U = i.useMemo(() => {
-            let e = h.ZP.getUserMaxFileSize(v);
+            let e = h.ZP.getUserMaxFileSize(R);
             return (0, E.BU)(e / 1024, { useKibibytes: !0 });
-        }, [v]),
+        }, [R]),
         w = i.useMemo(() => {
             let e = N.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({ maxSize: U });
             switch (C) {

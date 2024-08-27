@@ -152,10 +152,10 @@ for (let e in O) {
     });
     c[e] = s.ZP.filterUnsupportedEmojis(t);
 }
-function v(e) {
+function R(e) {
     return Object.prototype.hasOwnProperty.call(d, e) ? d[e] : null;
 }
-function R(e) {
+function v(e) {
     let t = E[e];
     return null != t
         ? {
@@ -190,12 +190,12 @@ function L(e, t) {
             else if (D.test(t)) {
                 r += t;
                 continue;
-            } else i.push(R(r)), (r = '');
+            } else i.push(v(r)), (r = '');
         } else if (t === y) {
             r = t;
             continue;
         }
-        let n = R(t);
+        let n = v(t);
         if (i.length > 0) {
             let e = i[i.length - 1];
             if ('text' === n.type && 'text' === e.type) {
@@ -205,7 +205,7 @@ function L(e, t) {
         }
         i.push(n);
     }
-    return null != r && '' !== r && i.push(R(r)), i;
+    return null != r && '' !== r && i.push(v(r)), i;
 }
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
@@ -227,7 +227,7 @@ t.ZP = {
     getCategories: function () {
         return Object.keys(c);
     },
-    getByName: v,
+    getByName: R,
     getByCategory: function (e) {
         return c[e];
     },
@@ -256,7 +256,7 @@ t.ZP = {
         return Object.prototype.hasOwnProperty.call(g, e) && (r = g[e]), t ? ':'.concat(r, ':') : r;
     },
     convertSurrogateToBase: function (e) {
-        return v(
+        return R(
             M(
                 m.reduce((e, t) => e.replace(t, ''), e),
                 !1

@@ -42,7 +42,7 @@ function O(e) {
             interaction: t
         });
 }
-class v extends (a = u.ZP.Store) {
+class R extends (a = u.ZP.Store) {
     getInteraction(e) {
         let t = g[e.id];
         return null != t ? T[t] : null;
@@ -67,7 +67,7 @@ class v extends (a = u.ZP.Store) {
     }
 }
 (l = 'InteractionStore'),
-    (o = 'displayName') in (s = v)
+    (o = 'displayName') in (s = R)
         ? Object.defineProperty(s, o, {
               value: l,
               enumerable: !0,
@@ -75,7 +75,7 @@ class v extends (a = u.ZP.Store) {
               writable: !0
           })
         : (s[o] = l),
-    (t.ZP = new v(c.Z, {
+    (t.ZP = new R(c.Z, {
         LOGOUT: function () {
             (T = {}),
                 (g = {}),

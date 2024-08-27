@@ -23,8 +23,8 @@ function g(e) {
     let { guildId: n, userId: t, analyticsLocation: g, analyticsLocations: L, context: T, icon: A } = e,
         h = (0, a.e7)([_.Z], () => _.Z.getGuild(n), [n]),
         f = (0, a.e7)([c.default], () => c.default.getId()),
-        Z = (0, a.e7)([N.default], () => N.default.getUser(t)),
-        O = (0, a.e7)([E.ZP], () => E.ZP.isGuestOrLurker(n, t), [n, t]),
+        O = (0, a.e7)([N.default], () => N.default.getUser(t)),
+        Z = (0, a.e7)([E.ZP], () => E.ZP.isGuestOrLurker(n, t), [n, t]),
         p = i.useMemo(() => ({ [n]: [t] }), [n, t]),
         C = (0, d.EJ)(h);
     (0, u.$)(p);
@@ -45,7 +45,7 @@ function g(e) {
             },
             []
         );
-    return null != h && !m && (G || b || x) && null != Z && !O && C && Z.isStaff()
+    return null != h && !m && (G || b || x) && null != O && !Z && C && O.isStaff()
         ? (0, s.jsxs)(s.Fragment, {
               children: [
                   (0, s.jsx)(l.MenuItem, {

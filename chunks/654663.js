@@ -20,25 +20,25 @@ var r = l(481060),
     R = l(710631),
     N = l(297047),
     A = l(88966),
-    C = l(712301),
-    O = l(520063),
+    O = l(712301),
+    C = l(520063),
     T = l(725119),
-    v = l(931617),
-    x = l(332031),
-    h = l(981631),
+    h = l(931617),
+    v = l(332031),
+    x = l(981631),
     S = l(689938);
 n.default = (0, s.Z)(
     (0, a.Z)(
         function (e) {
-            let { user: n, guildId: l, channel: a, context: s, onSelect: o, onHeightUpdate: b } = e,
-                p = (0, T.Z)({
+            let { user: n, guildId: l, channel: a, context: s, onSelect: o, onHeightUpdate: p } = e,
+                b = (0, T.Z)({
                     userId: n.id,
                     guildId: l,
                     channelId: a.id
                 }),
                 U = (0, N.Z)(n, l, s),
                 P = (0, A.Z)(n.id, s),
-                j = (0, x.Z)(n.id),
+                j = (0, v.Z)(n.id),
                 D = (0, m.Z)({
                     user: n,
                     context: s
@@ -54,22 +54,22 @@ n.default = (0, s.Z)(
                     guildId: l,
                     userId: n.id,
                     analyticsLocation: {
-                        page: h.ZY5.GUILD_CHANNEL,
-                        section: h.jXE.CHAT_USERNAME,
-                        object: h.qAy.CONTEXT_MENU_ITEM
+                        page: x.ZY5.GUILD_CHANNEL,
+                        section: x.jXE.CHAT_USERNAME,
+                        object: x.qAy.CONTEXT_MENU_ITEM
                     },
                     context: s
                 }),
-                y = (0, R.Z)({
+                k = (0, R.Z)({
                     user: n,
                     guildId: l
                 }),
-                k = (0, d.Z)(null, n),
+                y = (0, d.Z)(null, n),
                 V = (0, M.Z)(n),
                 K = (0, I.Z)({ user: n }),
-                H = (0, O.Z)(n, l, a.id),
-                B = (0, v.Z)(n.id, l),
-                q = (0, C.Z)(n, l),
+                H = (0, C.Z)(n, l, a.id),
+                B = (0, h.Z)(n.id, l),
+                q = (0, O.Z)(n, l),
                 w = (0, c.Z)({
                     id: n.id,
                     label: S.Z.Messages.COPY_ID_USER
@@ -80,7 +80,7 @@ n.default = (0, s.Z)(
                     commandTargetId: n.id,
                     channel: a,
                     guildId: l,
-                    onHeightUpdate: b
+                    onHeightUpdate: p
                 }),
                 z = n.isNonUserBot();
             return (0, t.jsxs)(r.Menu, {
@@ -94,11 +94,11 @@ n.default = (0, s.Z)(
                             children: [
                                 (0, t.jsx)(r.MenuGroup, { children: Y }),
                                 (0, t.jsxs)(r.MenuGroup, {
-                                    children: [p, U, P, D, L, G, j]
+                                    children: [b, U, P, D, L, G, j]
                                 }),
-                                (0, t.jsx)(r.MenuGroup, { children: k }),
+                                (0, t.jsx)(r.MenuGroup, { children: y }),
                                 (0, t.jsxs)(r.MenuGroup, {
-                                    children: [F, W, y, V, K]
+                                    children: [F, W, k, V, K]
                                 }),
                                 (0, t.jsx)(r.MenuGroup, { children: H }),
                                 (0, t.jsxs)(r.MenuGroup, {
@@ -110,7 +110,7 @@ n.default = (0, s.Z)(
                 ]
             });
         },
-        { object: h.qAy.CONTEXT_MENU }
+        { object: x.qAy.CONTEXT_MENU }
     ),
     [o.Z.CONTEXT_MENU, o.Z.THREAD_USER_MENU]
 );

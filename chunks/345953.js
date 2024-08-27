@@ -115,7 +115,7 @@ function O() {
         I.fy.INFREQUENT_USER_ACTION
     );
 }
-function v(e) {
+function R(e) {
     var t, n, r;
     let { context: i, userId: a, volume: s } = e;
     if (a === _.default.getId()) return;
@@ -131,7 +131,7 @@ function v(e) {
         (0, h.RF)(t, n, { volume: r }),
         A();
 }
-function R(e) {
+function v(e) {
     let { context: t, userId: n } = e;
     if (n !== _.default.getId()) {
         var r, i, a;
@@ -153,8 +153,8 @@ class y extends l.Z {
             (n = 'actions'),
             (r = {
                 POST_CONNECTION_OPEN: S,
-                AUDIO_SET_LOCAL_VOLUME: v,
-                AUDIO_TOGGLE_LOCAL_MUTE: R,
+                AUDIO_SET_LOCAL_VOLUME: R,
+                AUDIO_TOGGLE_LOCAL_MUTE: v,
                 AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: C
             }),
             n in t

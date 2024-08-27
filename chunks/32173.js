@@ -13,8 +13,8 @@ var i = n(399606),
     c = n(410030),
     d = n(100527),
     _ = n(906732),
-    u = n(779618),
-    E = n(300284),
+    E = n(779618),
+    u = n(300284),
     T = n(703656),
     I = n(547972),
     R = n(131951),
@@ -74,14 +74,14 @@ t.Z = () => {
         ec = null != a ? A.ZP.getSkuIdForPlan(a.planId) : null,
         ed = ec === b.Si.TIER_2,
         e_ = ec === b.Si.TIER_0,
-        { flipped: eu } = (0, f.JP)(),
-        { flipped: eE } = (0, f.as)(),
+        { flipped: eE } = (0, f.JP)(),
+        { flipped: eu } = (0, f.as)(),
         eT = (0, S.nY)({ showAnimations: !0 }),
         eI = null != eT ? eT.initialPercentage : void 0,
         eR = null != eT ? eT.percentage : void 0,
-        eC = (0, u.Z)(R.Z),
+        eC = (0, E.Z)(R.Z),
         eg = (0, h.Z)(),
-        eN = (0, E.Z)({
+        eN = (0, u.Z)({
             scrollPosition: L.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
@@ -108,7 +108,7 @@ t.Z = () => {
                       onCtaClick: eA,
                       pillText: Z.Z.Messages.EARLY_ACCESS,
                       perkImage: w,
-                      canReveal: eu,
+                      canReveal: eE,
                       dismissibleContentType: l.z.WHATS_NEW_AVATAR_DECOS_FLIP
                   }
                 : {
@@ -118,7 +118,7 @@ t.Z = () => {
                       description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
                       pillText: Z.Z.Messages.EARLY_ACCESS,
                       perkImage: w,
-                      canReveal: eu,
+                      canReveal: eE,
                       dismissibleContentType: l.z.WHATS_NEW_AVATAR_DECOS_FLIP
                   },
             clientThemes: {
@@ -239,7 +239,7 @@ t.Z = () => {
                       onCtaClick: eA,
                       pillText: Z.Z.Messages.EARLY_ACCESS,
                       perkImage: J,
-                      canReveal: eE,
+                      canReveal: eu,
                       dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
                   }
                 : {
@@ -249,7 +249,7 @@ t.Z = () => {
                       description: Z.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_PROFILE_EFFECTS_DESCRIPTION_NON_SUB,
                       pillText: Z.Z.Messages.EARLY_ACCESS,
                       perkImage: J,
-                      canReveal: eE,
+                      canReveal: eu,
                       dismissibleContentType: l.z.WHATS_NEW_PROFILE_EFFECTS_FLIP
                   },
             profiles: {

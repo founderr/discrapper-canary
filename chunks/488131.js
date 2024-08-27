@@ -1,6 +1,6 @@
 n.d(t, {
     NK: function () {
-        return v;
+        return R;
     },
     R6: function () {
         return N;
@@ -82,7 +82,7 @@ function O(e, t) {
             baseChannelId: t
         });
 }
-function v(e) {
+function R(e) {
     o.Z.dispatch({
         type: 'SIDEBAR_CLOSE',
         baseChannelId: e

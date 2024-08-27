@@ -1,26 +1,26 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return c;
     }
 });
 var r = n(735250);
 n(470079);
-var i = n(481060),
-    a = n(493683),
-    o = n(37234),
-    s = n(314897),
-    l = n(981631),
-    u = n(689938);
-function d(e, t) {
-    let n = s.default.getId(),
-        d = t === l.IlC.POPOUT;
-    return n === e || d
+var i = n(442837),
+    a = n(481060),
+    o = n(493683),
+    s = n(40851),
+    l = n(314897),
+    u = n(981631),
+    d = n(689938);
+function c(e, t) {
+    let n = (0, s.Aq)();
+    return (0, i.e7)([l.default], () => l.default.getId() === e) || t === u.IlC.POPOUT
         ? null
-        : (0, r.jsx)(i.MenuItem, {
+        : (0, r.jsx)(a.MenuItem, {
               id: 'message-user',
-              label: u.Z.Messages.USER_POPOUT_MESSAGE,
+              label: d.Z.Messages.USER_POPOUT_MESSAGE,
               action: () => {
-                  a.Z.openPrivateChannel(e), (0, o.xf)();
+                  o.Z.openPrivateChannel(e), n.dispatch(u.CkL.POPOUT_CLOSE), (0, a.closeAllModals)();
               }
           });
 }

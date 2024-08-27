@@ -39,10 +39,10 @@ function N(e) {
             let e = h.Z.getChannel(p.Z.getChannelId());
             return (null == e ? void 0 : e.isPrivate()) ? m.ZY5.DM_CHANNEL : m.ZY5.GUILD_CHANNEL;
         }),
-        { analyticsLocations: v } = (0, c.ZP)(u.Z.PREMIUM_UPSELL),
-        R = (0, _.Ng)(),
+        { analyticsLocations: R } = (0, c.ZP)(u.Z.PREMIUM_UPSELL),
+        v = (0, _.Ng)(),
         C = (0, E.N)(),
-        y = (0, _.Wp)(R, T.Si.TIER_2),
+        y = (0, _.Wp)(v, T.Si.TIER_2),
         D = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.Si.TIER_2;
     return (i.useEffect(() => {
         I.default.track(m.rMx.PREMIUM_UPSELL_VIEWED, {
@@ -51,15 +51,15 @@ function N(e) {
                 location_page: O,
                 location_section: m.jXE.CHANNEL_TEXT_AREA
             },
-            location_stack: v
+            location_stack: R
         });
-    }, [O, v]),
+    }, [O, R]),
     (D || y) && N < 0)
         ? (0, r.jsx)(f.ZP, {
               type: T.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
               subscriptionTier: T.Si.TIER_2,
               context: N,
-              discountOffer: R,
+              discountOffer: v,
               trialOffer: C,
               children: g.Z.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({ onLearnMore: A })
           })

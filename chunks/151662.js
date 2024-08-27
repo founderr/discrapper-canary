@@ -9,7 +9,7 @@ let c = {},
 function _() {
     (c = {}), (d = null);
 }
-class u extends (i = l.ZP.Store) {
+class E extends (i = l.ZP.Store) {
     getEmailSettings() {
         return {
             categories: c,
@@ -18,7 +18,7 @@ class u extends (i = l.ZP.Store) {
     }
 }
 (r = 'EmailSettingsStore'),
-    (a = 'displayName') in (s = u)
+    (a = 'displayName') in (s = E)
         ? Object.defineProperty(s, a, {
               value: r,
               enumerable: !0,
@@ -26,7 +26,7 @@ class u extends (i = l.ZP.Store) {
               writable: !0
           })
         : (s[a] = r),
-    (t.Z = new u(o.Z, {
+    (t.Z = new E(o.Z, {
         CONNECTION_OPEN: _,
         LOGOUT: _,
         EMAIL_SETTINGS_FETCH_SUCCESS: function (e) {

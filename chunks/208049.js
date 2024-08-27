@@ -15,13 +15,13 @@ n.d(t, {
         return D;
     },
     TB: function () {
-        return v;
+        return R;
     },
     XE: function () {
         return C;
     },
     hs: function () {
-        return R;
+        return v;
     },
     w: function () {
         return S;
@@ -125,7 +125,7 @@ async function O(e, t) {
         oldFormErrors: !0
     });
 }
-function v(e) {
+function R(e) {
     u.DZ.updateAsync(
         'favoriteSoundboardSounds',
         (t) =>
@@ -139,7 +139,7 @@ function v(e) {
         h.fy.INFREQUENT_USER_ACTION
     );
 }
-function R(e) {
+function v(e) {
     u.DZ.updateAsync(
         'favoriteSoundboardSounds',
         (t) => {

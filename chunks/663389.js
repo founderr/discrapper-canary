@@ -20,8 +20,8 @@ let E = _.QZA.CLOSED,
     A = !1,
     N = null,
     O = null,
-    v = null,
-    R = [],
+    R = null,
+    v = [],
     C = null,
     y = null;
 function D(e) {
@@ -50,12 +50,12 @@ function D(e) {
             })
         }),
         (O = null !== (r = e.onClose) && void 0 !== r ? r : null),
-        (v = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null),
-        (R = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
+        (R = null !== (i = e.analyticsLocation) && void 0 !== i ? i : null),
+        (v = null !== (a = e.analyticsLocations) && void 0 !== a ? a : []),
         (y = null !== (s = e.impressionSource) && void 0 !== s ? s : null);
 }
 function L() {
-    (E = _.QZA.CLOSED), (S = !1), (T = null), (C = null), (g = null), (f = null), (h = null), (p = {}), (I = {}), (O = null), (v = null), (R = []), (y = null);
+    (E = _.QZA.CLOSED), (S = !1), (T = null), (C = null), (g = null), (f = null), (h = null), (p = {}), (I = {}), (O = null), (R = null), (v = []), (y = null);
 }
 function b() {
     (E = _.QZA.OPEN), (m = {});
@@ -95,8 +95,8 @@ class M extends (s = u.ZP.Store) {
             errors: m,
             hasChanges: this.hasChanges(),
             openWithoutBackstack: A,
-            analyticsLocation: v,
-            analyticsLocations: R,
+            analyticsLocation: R,
+            analyticsLocations: v,
             initialSection: C,
             impressionSource: y
         };
@@ -131,7 +131,7 @@ class M extends (s = u.ZP.Store) {
         },
         USER_SETTINGS_MODAL_SET_SECTION: function (e) {
             var t;
-            (f = h), (h = e.section), (v = null), (R = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (p[h] = e.subsection);
+            (f = h), (h = e.section), (R = null), (v = null !== (t = e.analyticsLocations) && void 0 !== t ? t : []), null != e.subsection && (p[h] = e.subsection);
         },
         USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function (e) {
             let { forSection: t } = e;

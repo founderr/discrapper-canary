@@ -44,9 +44,9 @@ function O(e) {
     };
 }
 ((a = r || (r = {}))[(a.FAILED = 0)] = 'FAILED'), (a[(a.UNFETCHED = 1)] = 'UNFETCHED'), (a[(a.PENDING = 2)] = 'PENDING'), (a[(a.SUCCEEDED = 3)] = 'SUCCEEDED'), (a[(a.STILL_INDEXING = 4)] = 'STILL_INDEXING');
-let v = (0, c.Z)((e) => ({}));
-function R(e, t) {
-    let n = v.getState()[e];
+let R = (0, c.Z)((e) => ({}));
+function v(e, t) {
+    let n = R.getState()[e];
     return (
         null == n && (n = O(1)),
         (n = {
@@ -54,7 +54,7 @@ function R(e, t) {
             ...t
         }),
         (0, _.j)(() => {
-            v.setState((t) => ({
+            R.setState((t) => ({
                 ...t,
                 [e]: n
             }));
@@ -63,15 +63,15 @@ function R(e, t) {
     );
 }
 function C(e) {
-    return v.getState()[e];
+    return R.getState()[e];
 }
 function y(e) {
     let t = C(e);
-    return null == t && R(e, (t = O(1))), t;
+    return null == t && v(e, (t = O(1))), t;
 }
 async function D(e) {
     if ((await (0, E._v)(200), null != C(e)))
-        R(e, {
+        v(e, {
             requestState: 3,
             abortController: null,
             lastUpdated: Date.now()
@@ -81,7 +81,7 @@ function L(e) {
     var t;
     (t = N(e)),
         (0, _.j)(() => {
-            v.setState((e) => {
+            R.setState((e) => {
                 let n = { ...e };
                 return delete n[t], n;
             });
@@ -229,13 +229,13 @@ async function M(e) {
         (0, u.isEqual)(_, d.cursor)
     )
         return;
-    let v = (function (e, t, n, r, i) {
+    let R = (function (e, t, n, r, i) {
         let a = C(e);
         if ((null == a ? void 0 : a.requestState) === 2) {
             var s;
             null === (s = a.abortController) || void 0 === s || s.abort();
         }
-        return R(e, {
+        return v(e, {
             requestState: 2,
             abortController: new AbortController(),
             lastUpdated: Date.now(),
@@ -248,18 +248,18 @@ async function M(e) {
     try {
         if (
             (A.info('Making member search request', {
-                query: v.query,
+                query: R.query,
                 guildId: e
             }),
-            null == v.query)
+            null == R.query)
         )
             throw Error('Query is null');
-        await (0, g.D)(e, v.query, { signal: null !== (r = null === (n = v.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== r ? r : void 0 });
+        await (0, g.D)(e, R.query, { signal: null !== (r = null === (n = R.abortController) || void 0 === n ? void 0 : n.signal) && void 0 !== r ? r : void 0 });
     } catch (e) {
         if (-1 === e.code) return;
         !(function (e) {
             if (null != C(e))
-                R(e, {
+                v(e, {
                     requestState: 0,
                     abortController: null,
                     lastUpdated: Date.now()
@@ -270,13 +270,13 @@ async function M(e) {
     await D(c);
 }
 function P(e) {
-    return v((t) => {
+    return R((t) => {
         var n;
         return (null === (n = t[N(e)]) || void 0 === n ? void 0 : n.requestState) === 2;
     });
 }
 function U(e) {
-    return v((t) => {
+    return R((t) => {
         var n;
         return (null === (n = t[N(e)]) || void 0 === n ? void 0 : n.requestState) === 4;
     });
@@ -304,7 +304,7 @@ class w extends f.Z {
     }
     handleGuildMemberSearchStillIndexing(e) {
         let { guildId: t } = e;
-        R(N(t), {
+        v(N(t), {
             requestState: 4,
             abortController: null,
             lastUpdated: Date.now()
