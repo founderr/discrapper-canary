@@ -31,5 +31,7 @@ e.exports = {
     mediaModal: 'mediaModal_e881fc',
     gameArtwork: 'gameArtwork_e881fc',
     gameArtworkFocusRing: 'gameArtworkFocusRing_e881fc',
-    similarGames: 'similarGames_e881fc'
+    similarGames: 'similarGames_e881fc',
+    loadingSimilarGamesArtwork: 'loadingSimilarGamesArtwork_e881fc',
+    loadingHeadingSimilarGames: 'loadingHeadingSimilarGames_e881fc'
 };
