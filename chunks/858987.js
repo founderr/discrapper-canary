@@ -37,17 +37,17 @@ function M(e, n) {
 }
 function A(e) {
     let { legalTermsNodeRef: n, invoiceError: t, planError: r, disablePurchase: l, flashLegalTerms: o, isSubmitting: u, premiumSubscription: _, isGift: A, planGroup: L, isPrepaid: P, isTrial: R, makePurchase: S, needsPaymentSource: m, inReverseTrial: U, onNext: p } = e,
-        { selectedPlan: v, hasAcceptedTerms: C, purchaseType: O, paymentSourceId: h, activeSubscription: f } = (0, c.usePaymentContext)(),
+        { selectedPlan: O, hasAcceptedTerms: v, purchaseType: C, paymentSourceId: h, activeSubscription: f } = (0, c.usePaymentContext)(),
         g = N({
-            purchaseType: O,
-            plan: v,
+            purchaseType: C,
+            plan: O,
             premiumSubscription: _,
             isGift: A,
             planGroup: L,
             isPrepaidPaymentSource: P,
             inReverseTrial: U
         }),
-        { analyticsLocations: x } = (0, a.ZP)();
+        { analyticsLocations: Z } = (0, a.ZP)();
     if (null != t || null != r || l)
         return (0, s.jsx)(i.Button, {
             color: i.Button.Colors.GREEN,
@@ -70,8 +70,8 @@ function A(e) {
     if (R)
         return (0, s.jsxs)(i.ShinyButton, {
             innerClassName: T.innerButton,
-            'data-testid': C ? 'purchase' : 'submitButton',
-            onClick: C ? S : () => M(n, o),
+            'data-testid': v ? 'purchase' : 'submitButton',
+            onClick: v ? S : () => M(n, o),
             color: i.Button.Colors.GREEN,
             submitting: u,
             children: [
@@ -83,7 +83,7 @@ function A(e) {
                 g
             ]
         });
-    else if (!C)
+    else if (!v)
         return (0, s.jsx)(i.Tooltip, {
             text: E.Z.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP,
             children: (e) =>
@@ -103,7 +103,7 @@ function A(e) {
             isSubmitting: u,
             paymentSourceId: h,
             buttonLabel: g,
-            analyticsLocations: x
+            analyticsLocations: Z
         });
     else
         return (0, s.jsx)(i.Button, {

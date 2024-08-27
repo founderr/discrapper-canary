@@ -27,17 +27,17 @@ var s = n(735250),
     O = n(819640),
     k = n(594174),
     j = n(626135),
-    P = n(74538),
-    R = n(335131),
-    A = n(372047),
+    R = n(74538),
+    A = n(335131),
+    P = n(372047),
     B = n(328347),
     Z = n(280773),
     M = n(617452),
     y = n(223143),
     w = n(675052),
     D = n(298228),
-    H = n(937510),
-    F = n(853748),
+    F = n(937510),
+    H = n(853748),
     U = n(426171),
     G = n(823941),
     W = n(752053),
@@ -101,7 +101,7 @@ function el(e) {
 }
 function ed(e) {
     let { category: t, initialItemCardRef: n, includeBundles: a = !1, ...i } = e,
-        u = (0, H.l)(t.products),
+        u = (0, F.l)(t.products),
         f = (0, d.e7)([B.Z], () => B.Z.initialProductSkuId),
         p = r.useCallback(
             (e) => (t) => {
@@ -183,7 +183,7 @@ function eu(e) {
             }),
             null != h &&
                 null != t.unpublishedAt &&
-                (0, s.jsx)(F.$, {
+                (0, s.jsx)(H.$, {
                     unpublishedAt: t.unpublishedAt,
                     isVisible: C,
                     displayOptions: h,
@@ -201,17 +201,17 @@ t.default = function (e) {
         _ = (0, f.f9)(),
         { onClose: S } = (0, z.Db)(),
         L = (0, d.e7)([k.default], () => k.default.getCurrentUser()),
-        Z = P.ZP.canUseCollectibles(L),
-        { categories: H, isFetchingCategories: F, error: G, refreshCategories: X } = (0, y.Z)();
+        Z = R.ZP.canUseCollectibles(L),
+        { categories: F, isFetchingCategories: H, error: G, refreshCategories: X } = (0, y.Z)();
     (0, T.P)();
-    let $ = (0, D.O)(H),
-        { sortedPopularPickProducts: ee, popularProductToCategoryMap: en } = (0, w.a)(H),
+    let $ = (0, D.O)(F),
+        { sortedPopularPickProducts: ee, popularProductToCategoryMap: en } = (0, w.a)(F),
         el = (0, M.e)('CollectiblesShop'),
         ed = r.useRef(null),
         [ef, ep] = r.useState(!1);
     (0, U.Kp)({
-        categories: H,
-        isFetchingCategories: F,
+        categories: F,
+        isFetchingCategories: H,
         isLayer: c,
         initialItemCardRef: ed
     });
@@ -241,12 +241,12 @@ t.default = function (e) {
         }, [t]),
         r.useEffect(
             () => () => {
-                (0, R.K$)({
-                    categories: [...H.values()],
+                (0, A.K$)({
+                    categories: [...F.values()],
                     itemTypes: [l.Z.AVATAR_DECORATION, l.Z.PROFILE_EFFECT]
                 });
             },
-            [H]
+            [F]
         ),
         r.useEffect(() => {
             if (!t || c || _) return;
@@ -271,7 +271,7 @@ t.default = function (e) {
         })(),
         { setCategoryRef: ex, handleScrollToCategory: eE } = (0, U.xV)(eC.current),
         { condensedBannersAndDynamicHeadersEnabled: eI } = (0, J.O)({ location: 'CollectiblesShop' }),
-        { enabled: ev } = (0, A.Z)({ location: 'CollectiblesShop' }),
+        { enabled: ev } = (0, P.Z)({ location: 'CollectiblesShop' }),
         eS = (0, d.e7)([x.Z], () => x.Z.gradientPreset),
         eL = !(0, d.e7)([N.Z], () => (0, p.wj)(N.Z.theme)) && null == eS;
     return (0, s.jsxs)(h.Gt, {
@@ -317,7 +317,7 @@ t.default = function (e) {
                                                 })
                                             ]
                                         }),
-                                    F
+                                    H
                                         ? (0, s.jsx)(K.Z, {})
                                         : G
                                           ? (0, s.jsx)(W.Z, { onRetry: eh })

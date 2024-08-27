@@ -77,16 +77,16 @@ let I = (e) => {
         let { carouselId: t, items: n = [], renderItem: s, getItemId: r, onIntentionalChange: o, onChangeItem: l, className: u, controlsClassName: f, paginationButtonClassName: p, springConfig: m, delay: b, initialPaused: v = !1, unidirectional: S = !1, analyticsLocations: L } = e,
             { trackSlideView: T, trackPagination: N } = (0, h.X)(t, L),
             [O, k] = (0, i.useState)(0),
-            [j, P] = (0, i.useState)(!1),
-            [R, A] = (0, i.useState)(!1),
-            B = i.useCallback(() => A(!0), []),
-            Z = i.useCallback(() => A(!1), []),
+            [j, R] = (0, i.useState)(!1),
+            [A, P] = (0, i.useState)(!1),
+            B = i.useCallback(() => P(!0), []),
+            Z = i.useCallback(() => P(!1), []),
             M = (0, g.e7)([_.Z], () => _.Z.isFocused()),
-            y = null != b && !v && !R && M,
+            y = null != b && !v && !A && M,
             w = i.useCallback((e) => (n.length + O + e) % n.length, [n, O]),
             D = i.useCallback(
                 d()((e, t, s) => {
-                    null != s && (null == o || o(n[e], t, e, s), N(e, O, r(e), r(t))), P('GO_TO_SLIDE' === s), null == l || l(n[e], t, e), k(e);
+                    null != s && (null == o || o(n[e], t, e, s), N(e, O, r(e), r(t))), R('GO_TO_SLIDE' === s), null == l || l(n[e], t, e), k(e);
                 }, 200),
                 [n, o, l]
             );
