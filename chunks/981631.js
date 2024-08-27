@@ -4767,6 +4767,7 @@ let ie = Object.freeze({
     (nf.CHANNEL_BACK_NAVIGATED = 'channel_back_navigated'),
     (nf.MEDIA_ATTACHMENT_PLAYBACK_STARTED = 'media_attachment_playback_started'),
     (nf.MEDIA_ATTACHMENT_PLAYBACK_ENDED = 'media_attachment_playback_ended'),
+    (nf.MEDIA_PIP_ENDED = 'media_pip_ended'),
     (nf.FEEDBACK_FORM_VIEWED = 'feedback_form_viewed'),
     (nf.FEEDBACK_FORM_SUBMITTED = 'feedback_form_submitted'),
     (nf.HOTSPOT_HIDDEN = 'hotspot_hidden'),
