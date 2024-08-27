@@ -341,7 +341,8 @@ function $(e) {
                           mediaLayoutType: V.hV.RESPONSIVE,
                           width: 270,
                           height: 242,
-                          zoomable: !1
+                          zoomable: !1,
+                          imageClassName: Z.wumpusImage
                       })
                   })
                 : null,
@@ -548,7 +549,8 @@ function ee(e) {
                           mediaLayoutType: V.hV.RESPONSIVE,
                           width: 270,
                           height: 242,
-                          zoomable: !1
+                          zoomable: !1,
+                          imageClassName: Z.wumpusImage
                       })
                   })
                 : null,

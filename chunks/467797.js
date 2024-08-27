@@ -3,6 +3,7 @@ e.exports = {
     card: 'card_c87d73',
     withCardHover: 'withCardHover_c87d73',
     wumpusImageContainer: 'wumpusImageContainer_c87d73',
+    wumpusImage: 'wumpusImage_c87d73',
     tier0: 'tier0_c87d73',
     withTier0Rim: 'withTier0Rim_c87d73',
     tier2: 'tier2_c87d73',
