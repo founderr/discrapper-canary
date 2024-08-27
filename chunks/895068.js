@@ -3,7 +3,7 @@ n.d(t, {
         return a;
     },
     s: function () {
-        return Z;
+        return R;
     }
 }),
     n(47120);
@@ -16,49 +16,56 @@ var i,
     c = n(120356),
     d = n.n(c),
     u = n(143927),
-    _ = n(481060),
-    h = n(110924),
-    E = n(970606),
-    m = n(945124),
-    I = n(231467),
-    g = n(301544),
-    p = n(931515),
-    T = n(286083),
-    S = n(207796),
-    f = n(777734),
-    C = n(976757),
-    N = n(981631),
-    A = n(689938),
-    v = n(266489);
-function Z(e) {
+    _ = n(442837),
+    h = n(481060),
+    E = n(110924),
+    m = n(970606),
+    I = n(594174),
+    g = n(51144),
+    p = n(945124),
+    T = n(231467),
+    S = n(301544),
+    f = n(931515),
+    C = n(286083),
+    N = n(207796),
+    A = n(777734),
+    v = n(976757),
+    Z = n(981631),
+    L = n(689938),
+    O = n(266489);
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
-    return e === S.v0.SAVED_GUILDS ? 'saved_guilds' : t;
+    return e === N.v0.SAVED_GUILDS ? 'saved_guilds' : t;
 }
 ((s = i || (i = {})).TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.PAGINATION = 'pagination'), (s.HEADER_SPACER = 'header_spacer'), ((r = a || (a = {})).DEFAULT = 'default'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');
 t.ZP = o.memo(function (e) {
-    var t, n, i, a;
-    let { width: s, paddingVertical: r = 16, paddingHorizontal: c = 32, variant: Z = 'default', onUpdatePage: L } = e,
-        O = o.useMemo(() => Math.max(Math.min(null != s ? s : 1024, 1300) - 2 * c, 0), [s, c]),
-        R = o.useMemo(() => {
-            if (0 === O) return 1;
-            let e = O / 256,
-                t = O / 376,
-                n = O / e,
-                i = O / t;
+    var t, n, i, a, s;
+    let { width: r, paddingVertical: c = 16, paddingHorizontal: R = 32, variant: x = 'default', onUpdatePage: b } = e,
+        P = o.useMemo(() => Math.max(Math.min(null != r ? r : 1024, 1300) - 2 * R, 0), [r, R]),
+        M = o.useMemo(() => {
+            if (0 === P) return 1;
+            let e = P / 256,
+                t = P / 376,
+                n = P / e,
+                i = P / t;
             return i > 360 ? Math.max(Math.floor(t - (t - e) / 2), 1) : n < 240 ? Math.max(Math.max(e, t), 1) : Math.max(e, 1);
-        }, [O]),
-        { loaded: x, clans: b, searchResult: P, searchCriteria: M } = (0, p.ML)(R, 'saved_guilds' === Z),
-        D = (0, S.GN)((e) => e.selectedTraits, u.Z),
-        y = (0, h.Z)(P),
-        { currentPage: j, updatePage: U, totalItems: G, pageSize: k } = (0, T.$)();
+        }, [P]),
+        { loaded: D, clans: y, searchResult: j, searchCriteria: U } = (0, f.ML)(M, 'saved_guilds' === x),
+        G = (0, N.GN)((e) => e.selectedTraits, u.Z),
+        k = (0, N.GN)((e) => e.selectedGames, u.Z),
+        w = (0, E.Z)(j),
+        { currentPage: B, updatePage: H, totalItems: V, pageSize: F } = (0, C.$)(),
+        Y = (0, _.e7)([I.default], () => I.default.getCurrentUser());
     o.useEffect(() => {
-        if (null != P && !!(0, C.Pw)(P)) (!(null != y && (0, C.Pw)(y)) || !(y.loadedAt >= P.loadedAt)) && (0, E.Oe)('top_picks', M);
-    }, [M, P, y]);
-    let w =
-            ((t = b),
-            (n = R),
-            (i = Z),
-            (a = j),
+        if (null != j && !!(0, v.Pw)(j)) (!(null != w && (0, v.Pw)(w)) || !(w.loadedAt >= j.loadedAt)) && (0, m.Oe)('top_picks', U);
+    }, [U, j, w]);
+    let W = k.length > 0 || G.length > 0 ? L.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != Y ? L.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: g.ZP.getName(Y) }) : '';
+    let z =
+            ((t = y),
+            (n = M),
+            (i = x),
+            (a = B),
+            (s = W),
             o.useMemo(() => {
                 if (null == t) return [];
                 switch (i) {
@@ -94,9 +101,9 @@ t.ZP = o.memo(function (e) {
                                 items: t.slice(0, n),
                                 itemHeight: 400,
                                 sectionHeight: 24,
-                                header: a > 1 ? A.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE : A.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+                                header: a > 1 ? L.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE : L.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
                                 props: { style: { paddingTop: 8 } },
-                                subtitle: a > 1 ? void 0 : A.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE,
+                                subtitle: a > 1 ? void 0 : s,
                                 skeletonCount: n
                             },
                             {
@@ -105,7 +112,7 @@ t.ZP = o.memo(function (e) {
                                 itemHeight: 400,
                                 sectionHeight: a > 1 ? 0 : 24,
                                 props: { style: { paddingTop: 16 } },
-                                header: a > 1 ? void 0 : A.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE,
+                                header: a > 1 ? void 0 : L.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE,
                                 skeletonCount: 4 * n
                             },
                             {
@@ -118,34 +125,34 @@ t.ZP = o.memo(function (e) {
                     default:
                         return [];
                 }
-            }, [t, i, n, a])),
-        B = o.useCallback(
+            }, [t, i, n, a, s])),
+        K = o.useCallback(
             (e) => {
-                U(e),
-                    (0, E.Lx)({
-                        fromPage: j,
+                H(e),
+                    (0, m.Lx)({
+                        fromPage: B,
                         toPage: e
                     }),
-                    null == L || L();
+                    null == b || b();
             },
-            [U, L, j]
+            [H, b, B]
         ),
-        [, H] = o.useState(new Set()),
-        V = o.useMemo(() => new Set(M.games), [M.games]),
-        F = o.useCallback(
+        [, q] = o.useState(new Set()),
+        Q = o.useMemo(() => new Set(U.games), [U.games]),
+        X = o.useCallback(
             (e, t, n, i) => {
-                let { items: a } = w[e],
-                    s = (j - 1) * k + (e * R + t),
+                let { items: a } = z[e],
+                    s = (B - 1) * F + (e * M + t),
                     r = a[t];
                 null != r && n
                     ? (i.current = setTimeout(
                           () =>
-                              H((e) => {
+                              q((e) => {
                                   let t = new Set(e);
                                   return (
                                       t.add(r.id),
                                       t.size > e.size &&
-                                          (0, E.CK)({
+                                          (0, m.CK)({
                                               guildId: r.id,
                                               position: s
                                           }),
@@ -156,43 +163,43 @@ t.ZP = o.memo(function (e) {
                       ))
                     : clearTimeout(i.current);
             },
-            [w, H, R, j, k]
+            [z, q, M, B, F]
         ),
-        Y = o.useCallback(
+        J = o.useCallback(
             (e, t, n) => {
                 var i;
-                let { items: a } = w[e],
-                    s = e * R + t,
-                    r = (j - 1) * k + s,
+                let { items: a } = z[e],
+                    s = e * M + t,
+                    r = (B - 1) * F + s,
                     o = a[t];
                 return (0, l.jsx)(
-                    I.ZP,
+                    T.ZP,
                     {
                         clan: o,
                         index: s,
                         position: r,
-                        affinity: null !== (i = o.affininty) && void 0 !== i ? i : (0, m.y)(o, M),
-                        traitsToHighlight: D,
-                        className: v.card,
-                        source: N.jXE.DISCOVER_SEARCH,
-                        prioritizedGameIds: V,
+                        affinity: null !== (i = o.affininty) && void 0 !== i ? i : (0, p.y)(o, U),
+                        traitsToHighlight: G,
+                        className: O.card,
+                        source: Z.jXE.DISCOVER_SEARCH,
+                        prioritizedGameIds: Q,
                         onlyAnimateIconOnHover: !0,
-                        onVisibilityChange: (n, i) => F(e, t, n, i)
+                        onVisibilityChange: (n, i) => X(e, t, n, i)
                     },
                     n
                 );
             },
-            [w, R, j, k, M, D, V, F]
+            [z, M, B, F, U, G, Q, X]
         ),
-        W = o.useCallback((e) => (0, l.jsx)(g.Z, {}, e), []),
-        z = o.useCallback(
+        $ = o.useCallback((e) => (0, l.jsx)(S.Z, {}, e), []),
+        ee = o.useCallback(
             (e) => {
-                let { header: t, subtitle: n, section: i } = w[e];
+                let { header: t, subtitle: n, section: i } = z[e];
                 switch (i) {
                     case 'top_picks':
                         return (0, l.jsx)('div', {
-                            className: v.topPicksSection,
-                            children: (0, l.jsx)(f.Z, {
+                            className: O.topPicksSection,
+                            children: (0, l.jsx)(A.Z, {
                                 title: t,
                                 subtitle: n
                             })
@@ -200,98 +207,98 @@ t.ZP = o.memo(function (e) {
                     case 'pagination':
                         return (0, l.jsx)(l.Fragment, {
                             children:
-                                G > k &&
-                                (0, l.jsx)(_.Paginator, {
-                                    className: d()(v.paginationInput),
-                                    totalCount: G,
-                                    pageSize: k,
+                                V > F &&
+                                (0, l.jsx)(h.Paginator, {
+                                    className: d()(O.paginationInput),
+                                    totalCount: V,
+                                    pageSize: F,
                                     disablePaginationGap: !0,
                                     hideMaxPage: !0,
-                                    currentPage: j,
-                                    onPageChange: B
+                                    currentPage: B,
+                                    onPageChange: K
                                 })
                         });
                     case 'header_spacer':
-                        return (0, l.jsx)('div', { className: v.headerSpacer });
+                        return (0, l.jsx)('div', { className: O.headerSpacer });
                     default:
                         if (null == t) return null;
-                        return (0, l.jsx)(f.Z, {
+                        return (0, l.jsx)(A.Z, {
                             title: t,
                             subtitle: n
                         });
                 }
             },
-            [j, B, k, w, G]
+            [B, K, F, z, V]
         ),
-        K = o.useMemo(
+        et = o.useMemo(
             () =>
-                x
-                    ? w.map((e) => {
+                D
+                    ? z.map((e) => {
                           let { items: t } = e;
                           return t.length;
                       })
-                    : w.map((e) => {
+                    : z.map((e) => {
                           let { skeletonCount: t } = e;
                           return null != t ? t : 0;
                       }),
-            [x, w]
+            [D, z]
         );
-    return 0 === b.length && x && 'saved_guilds' === Z
+    return 0 === y.length && D && 'saved_guilds' === x
         ? (0, l.jsxs)('div', {
-              className: v.emptySavedGuilds,
+              className: O.emptySavedGuilds,
               children: [
-                  (0, l.jsx)(_.Heading, {
+                  (0, l.jsx)(h.Heading, {
                       variant: 'heading-md/medium',
                       color: 'header-primary',
-                      children: A.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
+                      children: L.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
                   }),
-                  (0, l.jsx)(_.Text, {
+                  (0, l.jsx)(h.Text, {
                       variant: 'text-sm/medium',
                       color: 'header-secondary',
-                      children: A.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
+                      children: L.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
                   })
               ]
           })
-        : 0 === b.length && x
+        : 0 === y.length && D
           ? (0, l.jsxs)('div', {
-                className: v.emptySavedGuilds,
+                className: O.emptySavedGuilds,
                 children: [
-                    (0, l.jsx)(_.Heading, {
+                    (0, l.jsx)(h.Heading, {
                         variant: 'heading-md/medium',
                         color: 'header-primary',
-                        children: A.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
+                        children: L.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
                     }),
-                    (0, l.jsx)(_.Text, {
+                    (0, l.jsx)(h.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: A.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION
+                        children: L.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION
                     })
                 ]
             })
           : (0, l.jsx)('div', {
-                className: v.sectionContainer,
+                className: O.sectionContainer,
                 style: {
-                    paddingTop: r,
-                    paddingLeft: c,
-                    paddingRight: c,
-                    paddingBottom: r,
-                    width: 'calc(100% - '.concat(2 * c, 'px)'),
+                    paddingTop: c,
+                    paddingLeft: R,
+                    paddingRight: R,
+                    paddingBottom: c,
+                    width: 'calc(100% - '.concat(2 * R, 'px)'),
                     gap: ''.concat(16, 'px')
                 },
-                children: K.map((e, t) => {
+                children: et.map((e, t) => {
                     var n, i;
-                    let a = w[t],
-                        s = z(t);
+                    let a = z[t],
+                        s = ee(t);
                     return (0, l.jsxs)(
                         'div',
                         {
-                            className: v.section,
+                            className: O.section,
                             style: { gap: ''.concat(16, 'px') },
                             children: [
                                 null != s &&
                                     (0, l.jsx)('div', {
                                         ...a.props,
-                                        className: d()(v.sectionHeader, null === (n = a.props) || void 0 === n ? void 0 : n.className),
+                                        className: d()(O.sectionHeader, null === (n = a.props) || void 0 === n ? void 0 : n.className),
                                         style: {
                                             height: ''.concat(a.sectionHeight, 'px'),
                                             ...(null === (i = a.props) || void 0 === i ? void 0 : i.style)
@@ -300,11 +307,11 @@ t.ZP = o.memo(function (e) {
                                     }),
                                 e > 0 &&
                                     (0, l.jsx)('div', {
-                                        className: v.sectionContent,
-                                        style: { gridTemplateColumns: 'repeat('.concat(R, ', minmax(252px, 1fr))') },
+                                        className: O.sectionContent,
+                                        style: { gridTemplateColumns: 'repeat('.concat(M, ', minmax(252px, 1fr))') },
                                         children: Array.from({ length: e }).map((e, n) => {
                                             let i = ''.concat(t, '-').concat(n);
-                                            return x ? Y(t, n, i) : W(i);
+                                            return D ? J(t, n, i) : $(i);
                                         })
                                     })
                             ]

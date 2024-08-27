@@ -20,8 +20,8 @@ var a = t(735250),
 function C(e) {
     let { gameApplicationIds: n, preventGameRemoval: t, onUpdateGames: i, minGames: l = 1, error: C } = e,
         { options: h, matchSorterOptions: x } = (0, c.P)(),
-        p = r.useMemo(() => Array.from(n), [n]),
-        g = r.useCallback(
+        g = r.useMemo(() => Array.from(n), [n]),
+        p = r.useCallback(
             (e) => {
                 if (!(e.length < l)) i(new Set(e));
             },
@@ -47,54 +47,55 @@ function C(e) {
                     autoFocus: !0,
                     wrapperClassName: s()(f.input, _.input),
                     options: h,
-                    value: p,
+                    value: g,
                     placeholder: m.Z.Messages.CLAN_SETUP_GAMES_SEARCH_PLACEHOLDER,
-                    onChange: g,
+                    onChange: p,
                     isDisabled: n.size === u.cm,
                     matchSorterOptions: x,
                     clearQueryOnSelect: !0,
                     customPillContainerClassName: _.pills,
                     renderCustomPill: E
                 }),
-                (0, a.jsxs)('div', {
-                    className: _.gamesContainer,
-                    children: [
-                        (0, a.jsx)(o.Text, {
-                            variant: 'text-xs/semibold',
-                            color: 'text-muted',
-                            children: m.Z.Messages.CLAN_SETUP_SELECTED_GAMES
-                        }),
-                        (0, a.jsx)('div', {
-                            className: _.gamesList,
-                            children: p.map((e) =>
-                                (0, a.jsx)(
-                                    o.Tooltip,
-                                    {
-                                        text: m.Z.Messages.CLAN_SETUP_GAMES_ONE_GAME_REQUIRED,
-                                        shouldShow: t,
-                                        tooltipContentClassName: _.tooltip,
-                                        children: (r) =>
-                                            (0, a.jsx)('div', {
-                                                ...r,
-                                                children: (0, a.jsx)(
-                                                    d.Z,
-                                                    {
-                                                        applicationId: e,
-                                                        imageContainerClassName: n.size > l ? _.clickableGame : void 0,
-                                                        selected: !0,
-                                                        locked: t,
-                                                        onClick: T
-                                                    },
-                                                    e
-                                                )
-                                            })
-                                    },
-                                    e
+                g.length > 0 &&
+                    (0, a.jsxs)('div', {
+                        className: _.gamesContainer,
+                        children: [
+                            (0, a.jsx)(o.Text, {
+                                variant: 'text-xs/semibold',
+                                color: 'text-muted',
+                                children: m.Z.Messages.CLAN_SETUP_SELECTED_GAMES
+                            }),
+                            (0, a.jsx)('div', {
+                                className: _.gamesList,
+                                children: g.map((e) =>
+                                    (0, a.jsx)(
+                                        o.Tooltip,
+                                        {
+                                            text: m.Z.Messages.CLAN_SETUP_GAMES_ONE_GAME_REQUIRED,
+                                            shouldShow: t,
+                                            tooltipContentClassName: _.tooltip,
+                                            children: (r) =>
+                                                (0, a.jsx)('div', {
+                                                    ...r,
+                                                    children: (0, a.jsx)(
+                                                        d.Z,
+                                                        {
+                                                            applicationId: e,
+                                                            imageContainerClassName: n.size > l ? _.clickableGame : void 0,
+                                                            selected: !0,
+                                                            locked: t,
+                                                            onClick: T
+                                                        },
+                                                        e
+                                                    )
+                                                })
+                                        },
+                                        e
+                                    )
                                 )
-                            )
-                        })
-                    ]
-                })
+                            })
+                        ]
+                    })
             ]
         })
     });

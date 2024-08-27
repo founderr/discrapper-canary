@@ -539,6 +539,7 @@ e.exports = Object.freeze({
     CLAN_DISCOVERY_OTHER_GUILDS_TITLE: 'Guilds For You',
     CLAN_DISCOVERY_OTHER_GUIDES_SUBTITLE: 'Other guild guides that match your preferences.',
     CLAN_DISCOVERY_TOP_PICKS_SUBTITLE: 'Best Guilds to join based on your preferences',
+    CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES: 'Recommended Guilds for **{name}**',
     CLAN_DISCOVERY_INSPIRATION_TITLE: 'A few Guilds for inspiration',
     CLAN_DISCOVERY_PREPILOT_SUBTITLE: 'Your fellow Guilds waiting to launch!',
     CLAN_DISCOVERY_PILOT_SUBTITLE: 'Select **Browse Guilds** to see them all',
