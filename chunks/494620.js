@@ -29,7 +29,10 @@ function m(e) {
     return (0, a.jsxs)('div', {
         className: i()(u.root, t, c[l]),
         children: [
-            (0, a.jsx)(s, { className: u.icon }),
+            (0, a.jsx)(s, {
+                className: u.icon,
+                color: 'currentColor'
+            }),
             (0, a.jsx)(o.Text, {
                 className: u.text,
                 variant: 'text-sm/medium',
