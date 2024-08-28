@@ -4262,6 +4262,7 @@ let ie = Object.freeze({
     (nf.OAUTH2_AUTHORIZE_SUCCESS_VIEWED = 'oauth2_authorize_success_viewed'),
     (nf.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED = 'oauth2_authorize_success_go_to_guild_clicked'),
     (nf.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED = 'oauth2_authorize_success_close_clicked'),
+    (nf.OAUTH2_AUTHORIZE_STEP_VIEWED = 'oauth2_authorize_step_viewed'),
     (nf.GUILD_OUTAGE_VIEWED = 'guild_outage_viewed'),
     (nf.CONTACT_SYNC_FLOW_KEY = 'relationship_sync_flow'),
     (nf.LOGIN_SUCCESSFUL = 'login_successful'),

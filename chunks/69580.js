@@ -293,7 +293,7 @@ function ei(e) {
                     } else ex(!1);
                 } catch (t) {
                     let e = t.body;
-                    (null == e ? void 0 : e.message) != null && '' !== e.message ? eU(Error(e.message)) : eU(e), eM(1), ex(!1);
+                    (null == e ? void 0 : e.message) != null && '' !== e.message ? eU(Error(e.message)) : eU(e), eM('AUTHORIZE_SCOPES'), ex(!1);
                 }
             },
             [eN, em, eA, null == eD ? void 0 : eD.application, eK, eO, et, e0, en, er, ei, ea, es, eo, e2, eY, eF, ez, eH, e4]
@@ -349,51 +349,63 @@ function ei(e) {
                           return Number(t);
                       })
                 : [];
-        }, [eX, eQ]);
+        }, [eX, eQ]),
+        tn = s.useRef(null);
     s.useEffect(() => {
-        if (null == eb && (!eQ || null != eX) && !!ey)
-            if (null != ev) {
-                var e;
-                eq(null !== (e = ev.integration_type) && void 0 !== e ? e : d.Y.GUILD_INSTALL), eM(1);
-            } else tt.length > 1 ? eM(0) : (1 === tt.length ? eq(tt[0]) : null != ef ? eq(ef) : eq(d.Y.GUILD_INSTALL), eM(1));
-    }, [ev, tt, eX, eQ, ef, eb, ey]),
+        eb !== tn.current &&
+            ((tn.current = eb),
+            (0, N.yw)(X.rMx.OAUTH2_AUTHORIZE_STEP_VIEWED, {
+                step: eb,
+                application_id: et,
+                integration_type: ez,
+                scopes: e0,
+                permissions: e2.toString()
+            }));
+    }, [et, ez, e2, e0, eb]),
+        s.useEffect(() => {
+            if (null == eb && (!eQ || null != eX) && !!ey)
+                if (null != ev) {
+                    var e;
+                    eq(null !== (e = ev.integration_type) && void 0 !== e ? e : d.Y.GUILD_INSTALL), eM('AUTHORIZE_SCOPES');
+                } else tt.length > 1 ? eM('SELECT_INSTALL_TYPE') : (1 === tt.length ? eq(tt[0]) : null != ef ? eq(ef) : eq(d.Y.GUILD_INSTALL), eM('AUTHORIZE_SCOPES'));
+        }, [ev, tt, eX, eQ, ef, eb, ey]),
         s.useEffect(() => {
             if (null == ez || null != eD || null != eP) return;
             ez === d.Y.USER_INSTALL && (eV(null), eZ(null));
             let e = e0.filter((e) => !F.ak.includes(e));
             0 === e0.length ? eU(Error('No scopes were provided.')) : e.length > 0 ? eU(Error('Invalid scope: '.concat(e[0]))) : (0, B._$)(e2) ? eU(Error('Invalid permission(s) provided.')) : te();
         }, [e6, te, e0, e2, ez, eD, eP]);
-    let tn = s.useCallback((e) => {
+    let tr = s.useCallback((e) => {
             e && ek(!0);
         }, []),
-        tr = (0, A.O)(tn);
+        ti = (0, A.O)(tr);
     if (eP instanceof Error) return { body: (0, a.jsx)(q.Lk, { message: eP.message }) };
-    let ti = !1,
-        ta = !0,
+    let ta = !1,
         ts = !0,
-        to = !0;
+        to = !0,
+        tl = !0;
     switch (eb) {
         case null:
             return { body: (0, a.jsx)(m.$, {}) };
-        case 0:
+        case 'SELECT_INSTALL_TYPE':
             if (null == eX) return { body: (0, a.jsx)(m.$, {}) };
             (p = (0, a.jsx)(K.Z, {
                 inApp: eS,
                 application: eX,
                 onSelect: (e) => {
-                    eq(e), eL(null), eM(1);
+                    eq(e), eL(null), eM('AUTHORIZE_SCOPES');
                 }
             })),
-                (ta = !1),
                 (ts = !1),
-                (to = !1);
+                (to = !1),
+                (tl = !1);
             break;
-        case 1:
+        case 'AUTHORIZE_SCOPES':
             if (null == eD || null == eW || null == ez) return { body: (0, a.jsx)(m.$, {}) };
-            let tl = null == eP || eP instanceof Error ? {} : eP,
-                tu = null == eB ? void 0 : eB.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
-                tc = ez === d.Y.GUILD_INSTALL && e0.includes(_.x.WEBHOOK_INCOMING),
-                td = tc || (ez === d.Y.GUILD_INSTALL && (e0.includes(_.x.BOT) || e0.includes(_.x.APPLICATIONS_COMMANDS)));
+            let tu = null == eP || eP instanceof Error ? {} : eP,
+                tc = null == eB ? void 0 : eB.sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
+                td = ez === d.Y.GUILD_INSTALL && e0.includes(_.x.WEBHOOK_INCOMING),
+                t_ = td || (ez === d.Y.GUILD_INSTALL && (e0.includes(_.x.BOT) || e0.includes(_.x.APPLICATIONS_COMMANDS)));
             (p = (0, a.jsxs)(a.Fragment, {
                 children: [
                     (0, a.jsx)(Z.Z, {
@@ -401,21 +413,21 @@ function ei(e) {
                         accountScopes: e1,
                         requestedScopes: e0,
                         integrationType: ez,
-                        errors: tl,
+                        errors: tu,
                         isTrustedName: eT
                     }),
-                    td
+                    t_
                         ? (0, a.jsx)(j.Z, {
-                              error: (null !== (n = null !== (t = tl[_.x.BOT]) && void 0 !== t ? t : tl[_.x.APPLICATIONS_COMMANDS]) && void 0 !== n ? n : [])[0],
+                              error: (null !== (n = null !== (t = tu[_.x.BOT]) && void 0 !== t ? t : tu[_.x.APPLICATIONS_COMMANDS]) && void 0 !== n ? n : [])[0],
                               selectedGuildId: eF,
                               onGuildChange: eV,
-                              guilds: null != tu ? tu : [],
+                              guilds: null != tc ? tc : [],
                               disabled: '' !== eF && null != eF && !0 === eh
                           })
                         : null,
-                    tc
+                    td
                         ? (0, a.jsx)(Q.Z, {
-                              error: (null !== (r = tl[_.x.WEBHOOK_INCOMING]) && void 0 !== r ? r : [])[0],
+                              error: (null !== (r = tu[_.x.WEBHOOK_INCOMING]) && void 0 !== r ? r : [])[0],
                               selectedChannelId: eH,
                               selectedGuildId: eF,
                               onChannelChange: eZ
@@ -423,11 +435,11 @@ function ei(e) {
                         : null
                 ]
             })),
-                e0.includes(_.x.BOT) && !E.fS(e2, U.Hn) && (O = 2),
-                tt.length > 1 && (I = 0),
-                (ti = (td && null == eK) || (tc && null == eH));
+                e0.includes(_.x.BOT) && !E.fS(e2, U.Hn) && (O = 'AUTHORIZE_BOT_PERMISSIONS'),
+                tt.length > 1 && (I = 'SELECT_INSTALL_TYPE'),
+                (ta = (t_ && null == eK) || (td && null == eH));
             break;
-        case 2:
+        case 'AUTHORIZE_BOT_PERMISSIONS':
             if (null == eD) return { body: (0, a.jsx)(m.$, {}) };
             (p = (0, a.jsx)(Y.Z, {
                 application: eD.application,
@@ -438,9 +450,9 @@ function ei(e) {
                 },
                 guild: eK
             })),
-                (I = 1);
+                (I = 'AUTHORIZE_SCOPES');
     }
-    if (ta && null != eD) {
+    if (ts && null != eD) {
         let e = null === (i = eD.bot) || void 0 === i ? void 0 : i.approximate_guild_count;
         C = (0, a.jsxs)(a.Fragment, {
             children: [
@@ -454,12 +466,12 @@ function ei(e) {
                 }),
                 (0, a.jsx)('div', {
                     className: J.intObserver,
-                    ref: tr
+                    ref: ti
                 })
             ]
         });
     }
-    ts &&
+    to &&
         null != eD &&
         null != eW &&
         (D = (0, a.jsx)(W.Z, {
@@ -472,8 +484,8 @@ function ei(e) {
             location: eC,
             isTrustedName: eT
         }));
-    let t_ = null == O && null != C && !eG;
-    to &&
+    let tE = null == O && null != C && !eG;
+    tl &&
         (z = (0, a.jsxs)('div', {
             className: l()(J.footer, { [J.inApp]: eS }),
             children: [
@@ -490,14 +502,14 @@ function ei(e) {
                           onClick: () => e8(!1),
                           children: $.Z.Messages.CANCEL
                       }),
-                0 !== eb
+                'SELECT_INSTALL_TYPE' !== eb
                     ? null != O
                         ? (0, a.jsx)(h.zx, {
                               onClick: () => eM(O),
-                              disabled: ti,
+                              disabled: ta,
                               children: $.Z.Messages.CONTINUE
                           })
-                        : t_
+                        : tE
                           ? (0, a.jsxs)('div', {
                                 className: J.action,
                                 children: [
@@ -550,14 +562,14 @@ function ei(e) {
                     : null
             ]
         }));
-    let tE = t_ ? (0, a.jsx)('div', { className: J.overlay }) : null;
+    let tf = tE ? (0, a.jsx)('div', { className: J.overlay }) : null;
     return {
         header: D,
         body: p,
         footer: z,
         nextStep: O,
         appDetails: C,
-        overlay: tE,
+        overlay: tf,
         sendAuthorize: e8
     };
 }
@@ -629,4 +641,4 @@ function el(e) {
     let { hostname: t = '', host: n, path: r, query: i } = c.parse(e);
     return null != r && null != i && (w.Z.isDiscordHostname(t) || n === window.location.host) && (r.startsWith('/api'.concat(X.ANM.OAUTH2_AUTHORIZE)) || r.startsWith(X.Z5c.OAUTH2_AUTHORIZE)) ? (0, x.y)(i) : null;
 }
-((i = r || (r = {}))[(i.SELECT_INSTALL_TYPE = 0)] = 'SELECT_INSTALL_TYPE'), (i[(i.AUTHORIZE_SCOPES = 1)] = 'AUTHORIZE_SCOPES'), (i[(i.AUTHORIZE_BOT_PERMISSIONS = 2)] = 'AUTHORIZE_BOT_PERMISSIONS');
+((i = r || (r = {})).SELECT_INSTALL_TYPE = 'SELECT_INSTALL_TYPE'), (i.AUTHORIZE_SCOPES = 'AUTHORIZE_SCOPES'), (i.AUTHORIZE_BOT_PERMISSIONS = 'AUTHORIZE_BOT_PERMISSIONS');
