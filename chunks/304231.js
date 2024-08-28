@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(950279),
     u = n(741595),
     _ = n(754961),
-    h = n(363915),
-    E = n(359380),
+    E = n(363915),
+    h = n(359380),
     m = n(207796),
     I = n(689938),
     g = n(225286);
@@ -27,7 +27,8 @@ function T() {
         title: I.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
         description: I.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
         onUpdateGames: n,
-        gameApplicationIds: t
+        gameApplicationIds: t,
+        minGames: 0
     });
 }
 function S() {
@@ -44,7 +45,7 @@ function f() {
     let e = (0, m.GN)((e) => e.selectedTraits, r.Z),
         t = a.useMemo(() => new Set(e), [e]),
         n = a.useCallback((e) => m.GN.getState().setSelectedTraits([...e]), []);
-    return (0, i.jsx)(E.Z, {
+    return (0, i.jsx)(h.Z, {
         title: I.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
         description: I.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
         onUpdateTraits: n,
@@ -60,7 +61,7 @@ t.Z = a.memo(function (e) {
         n = a.useRef(null),
         d = a.useRef(null),
         u = a.useRef(null),
-        E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        h = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         [N, A] = a.useState(0),
         [v, Z] = a.useState(0),
         L = (0, m.GN)((e) => e.selectedPlaystyle, r.Z),
@@ -108,7 +109,7 @@ t.Z = a.memo(function (e) {
                 ref: d,
                 from: {
                     opacity: 0,
-                    transform: E ? 'translateY(0px)' : 'translateY(40px)'
+                    transform: h ? 'translateY(0px)' : 'translateY(40px)'
                 },
                 to: {
                     opacity: 1,
@@ -123,7 +124,7 @@ t.Z = a.memo(function (e) {
                 ref: u,
                 from: {
                     opacity: 0,
-                    transform: E ? 'translateY(0px)' : 'translateY(40px)'
+                    transform: h ? 'translateY(0px)' : 'translateY(40px)'
                 },
                 to: {
                     opacity: 1,
@@ -152,7 +153,7 @@ t.Z = a.memo(function (e) {
             (0, i.jsx)(s.animated.div, {
                 className: g.sequencer,
                 style: D,
-                children: (0, i.jsx)(h.Z, {
+                children: (0, i.jsx)(E.Z, {
                     currentStep: N,
                     items: j,
                     renderItem: U,
