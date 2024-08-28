@@ -90,3 +90,16 @@ let s = (0, r.B)({
         }
     ]
 });
+(0, r.B)({
+    kind: 'user',
+    id: '2024-08_open_platform_link_sharing',
+    label: 'Open Platform Link Sharing',
+    defaultConfig: { enabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Enable app link sharing and install flow improvements',
+            config: { enabled: !0 }
+        }
+    ]
+});
