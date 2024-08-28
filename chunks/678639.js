@@ -40,7 +40,7 @@ function f(e) {
         })
     );
 }
-let x = [
+let y = [
         {
             key: 'name',
             cellClassName: p.__invalid_eventColumn,
@@ -50,7 +50,7 @@ let x = [
             }
         }
     ],
-    y = [
+    x = [
         {
             id: 'local',
             name: 'Local Variables',
@@ -81,7 +81,7 @@ let x = [
     ];
 function k(e) {
     let { store: t, initialHeight: r } = e,
-        { TabBar: n, renderSelectedTab: i } = (0, m.Z)({ tabs: y }, []);
+        { TabBar: n, renderSelectedTab: i } = (0, m.Z)({ tabs: x }, []);
     return (0, a.jsxs)(u.Z, {
         className: p.subPanel,
         minHeight: 100,
@@ -141,11 +141,14 @@ function v() {
                     'aria-label': 'Search stores'
                 })
             }),
-            (0, a.jsx)(h.Z, {
-                columns: x,
-                data: s,
-                selectedRowKey: d,
-                onClickRow: (e) => u(e.key)
+            (0, a.jsx)(c.ScrollerThin, {
+                className: p.tableContainer,
+                children: (0, a.jsx)(h.Z, {
+                    columns: y,
+                    data: s,
+                    selectedRowKey: d,
+                    onClickRow: u
+                })
             }),
             null != m &&
                 (0, a.jsx)(k, {

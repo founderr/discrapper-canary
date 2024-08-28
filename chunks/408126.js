@@ -1,5 +1,6 @@
 e.exports = {
     panel: 'panel_c2734c',
+    tableContainer: 'tableContainer_c2734c',
     subPanel: 'subPanel_c2734c',
     toolbar: 'toolbar_c2734c',
     toolbarButton: 'toolbarButton_c2734c',

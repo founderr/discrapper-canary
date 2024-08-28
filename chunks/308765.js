@@ -376,11 +376,6 @@ let i = {
         actions: ['CHANNEL_SELECT'],
         inlineRequire: () => n(414509).Z,
         neverLoadBeforeConnectionOpen: !0
-    },
-    DispatcherSchedulerManager: {
-        actions: ['POST_CONNECTION_OPEN', 'EXPERIMENTS_FETCH_SUCCESS', 'CACHE_LOADED', 'LOGIN_SUCCESS', 'EXPERIMENT_OVERRIDE_BUCKET'],
-        inlineRequire: () => n(902629).Z,
-        neverLoadBeforeConnectionOpen: !0
     }
 };
 (0, r.j)(i);

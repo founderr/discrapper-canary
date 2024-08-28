@@ -19,12 +19,12 @@ var a = r(735250),
     p = r(120816),
     b = r(31336),
     f = r(257785),
-    x = r(484036),
-    y = r(681619),
+    y = r(484036),
+    x = r(681619),
     k = r(621060),
     v = r(689938),
     _ = r(408126),
-    j = r(535271);
+    C = r(535271);
 let w = [
     {
         key: 'event',
@@ -39,18 +39,18 @@ let w = [
         cellClassName: _.locationColumn,
         render(e) {
             let { properties: t } = e;
-            return null == t.location ? null : t.location;
+            return t.location;
         }
     }
 ];
-function C(e) {
+function j(e) {
     let { children: t } = e;
     return (0, a.jsx)(d.ScrollerThin, {
         className: _.customPropertiesContainer,
         children: (0, a.jsx)('dl', { children: t })
     });
 }
-function T(e) {
+function S(e) {
     let { name: t, children: r } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -65,35 +65,26 @@ function T(e) {
         ]
     });
 }
-let S = [
+let N = [
         {
             id: 'details',
             name: 'Details',
             render: (e) => {
                 let {
-                        loggedEvent: { event: t, properties: r, timestamp: n, fingerprint: i },
-                        onClose: l
+                        loggedEvent: { event: t, properties: r, timestamp: n, fingerprint: i }
                     } = e,
-                    s = m.default.getUser(i),
-                    p = c()(n);
+                    l = m.default.getUser(i),
+                    s = c()(n);
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)(h.ZP, {
-                            className: o()(j.headerBar, _.subPanelHeaderBar),
+                            className: o()(C.headerBar, _.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)(h.ZP.Icon, {
                                     icon: d.AnalyticsIcon,
                                     tooltip: t
                                 }),
-                                (0, a.jsx)(h.ZP.Title, {
-                                    wrapperClassName: j.headerTitle,
-                                    children: t
-                                }),
-                                (0, a.jsx)(h.ZP.Icon, {
-                                    icon: d.CircleXIcon,
-                                    tooltip: 'Close',
-                                    onClick: l
-                                })
+                                (0, a.jsx)(h.ZP.Title, { children: t })
                             ]
                         }),
                         (0, a.jsxs)(f.E, {
@@ -103,14 +94,14 @@ let S = [
                                     name: 'Timestamp (local)',
                                     children: (0, a.jsx)('time', {
                                         dateTime: n.toISOString(),
-                                        title: (0, g.vc)(p, 'LLLL'),
-                                        children: (0, g.Y4)(p)
+                                        title: (0, g.vc)(s, 'LLLL'),
+                                        children: (0, g.Y4)(s)
                                     })
                                 }),
-                                null != s &&
+                                null != l &&
                                     (0, a.jsx)(f.Z9, {
                                         name: 'User',
-                                        children: (0, a.jsx)(u.Z, { user: s })
+                                        children: (0, a.jsx)(u.Z, { user: l })
                                     }),
                                 (0, a.jsx)(f.Z9, {
                                     name: 'Fingerprint',
@@ -118,11 +109,11 @@ let S = [
                                 })
                             ]
                         }),
-                        (0, a.jsx)(C, {
+                        (0, a.jsx)(j, {
                             children: Object.entries(r).map((e) => {
                                 let [t, r] = e;
                                 return (0, a.jsx)(
-                                    T,
+                                    S,
                                     {
                                         name: ''.concat(t, ':'),
                                         children:
@@ -142,11 +133,11 @@ let S = [
             }
         }
     ],
-    N = {
+    T = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(N)
+                Object.entries(T)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -173,17 +164,17 @@ let S = [
 function E() {
     let e = n.useRef(null),
         t = (0, s.e7)([p.Z], () => p.Z.loggedEvents),
-        [r, i] = n.useState(Object.keys(N)),
+        [r, i] = n.useState(Object.keys(T)),
         l = t.filter((e) => {
-            for (let t of r) if (N[t].filter(e)) return !0;
+            for (let t of r) if (T[t].filter(e)) return !0;
             return !1;
         }),
         [c, u] = n.useState(void 0),
         h = l.find((e) => e.key === c),
-        { TabBar: m, renderSelectedTab: g } = (0, k.Z)({ tabs: S }, []);
+        { TabBar: m, renderSelectedTab: g } = (0, k.Z)({ tabs: N }, []);
     return (0, a.jsxs)('div', {
         ref: e,
-        className: o()(j.panel, _.panel),
+        className: o()(C.panel, _.panel),
         children: [
             (0, a.jsxs)('div', {
                 className: _.toolbar,
@@ -205,7 +196,7 @@ function E() {
                     (0, a.jsx)('div', { className: _.toolbarDivider }),
                     (0, a.jsx)('div', {
                         className: _.filters,
-                        children: Object.entries(N).map((e) => {
+                        children: Object.entries(T).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 d.Clickable,
@@ -223,24 +214,21 @@ function E() {
                     })
                 ]
             }),
-            (0, a.jsx)(y.Z, {
-                columns: w,
-                data: l,
-                selectedRowKey: c,
-                onClickRow: (e) => u(e.key)
+            (0, a.jsx)(d.ScrollerThin, {
+                className: _.tableContainer,
+                children: (0, a.jsx)(x.Z, {
+                    columns: w,
+                    data: l,
+                    selectedRowKey: c,
+                    onClickRow: u
+                })
             }),
             null != h &&
-                (0, a.jsxs)(x.Z, {
+                (0, a.jsxs)(y.Z, {
                     className: _.subPanel,
                     minHeight: 100,
                     initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
-                    children: [
-                        (0, a.jsx)(m, {}),
-                        g({
-                            loggedEvent: h,
-                            onClose: () => u(void 0)
-                        })
-                    ]
+                    children: [(0, a.jsx)(m, {}), g({ loggedEvent: h })]
                 })
         ]
     });

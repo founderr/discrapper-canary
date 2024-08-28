@@ -1,20 +1,21 @@
 r.d(t, {
     Z: function () {
-        return u;
+        return h;
     }
 });
 var a = r(735250);
 r(470079);
 var n = r(442837),
-    i = r(814443),
-    o = r(594174),
-    l = r(681619),
-    c = r(914121),
-    s = r(535271);
-let d = [
+    i = r(481060),
+    o = r(814443),
+    l = r(594174),
+    c = r(681619),
+    s = r(914121),
+    d = r(535271);
+let u = [
     {
         key: 'user',
-        cellClassName: c.userCell,
+        cellClassName: s.userCell,
         render(e) {
             var t;
             let { user: r, key: a } = e;
@@ -23,19 +24,19 @@ let d = [
     },
     {
         key: 'affinity',
-        cellClassName: c.affinityCell,
+        cellClassName: s.affinityCell,
         render(e) {
             let { affinity: t } = e;
             return ''.concat(t);
         }
     }
 ];
-function u() {
-    let e = (0, n.Wu)([i.Z, o.default], () =>
-        i.Z.getUserAffinities().map((e) => {
+function h() {
+    let e = (0, n.Wu)([o.Z, l.default], () =>
+        o.Z.getUserAffinities().map((e) => {
             let { user_id: t, affinity: r } = e;
             return {
-                user: o.default.getUser(t),
+                user: l.default.getUser(t),
                 affinity: r,
                 key: t
             };
@@ -43,10 +44,12 @@ function u() {
     );
     return 0 === e.length
         ? null
-        : (0, a.jsx)(l.Z, {
-              className: s.panel,
-              columns: d,
-              rowClassName: c.row,
-              data: e
+        : (0, a.jsx)(i.ScrollerThin, {
+              children: (0, a.jsx)(c.Z, {
+                  className: d.panel,
+                  columns: u,
+                  rowClassName: s.row,
+                  data: e
+              })
           });
 }
