@@ -96,7 +96,7 @@ class S extends a.Z {
         return delete this.audioSsrcs[e], delete this.videoSsrcs[e], this.participants.delete(e), delete this.streamIds[e], this.update(Array.from(this.participants));
     }
     reset() {
-        this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.latestWants = I);
+        this.setConnection(null, !1), (this.audioSsrcs = {}), (this.videoSsrcs = {}), (this.remoteVideoSsrcs = {}), (this.framesReceived = {}), (this.streamIds = {}), (this.latestWants = I), E.w.off(E.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
     }
     setSelectedParticipant(e) {
         if (e === this.selectedParticipantId) return this.latestWants;
@@ -178,6 +178,7 @@ class S extends a.Z {
             p(this, 'handleLocalVideoDisabled', void 0),
             p(this, 'handleLocalMute', void 0),
             p(this, 'update', void 0),
+            p(this, 'incomingVideoEnabledChanged', void 0),
             (this.userId = e),
             (this.isStageChannel = t),
             (this.supportsSeamless = n),
@@ -255,10 +256,11 @@ class S extends a.Z {
                 }
                 return g ? i.latestWants : (null != i.connection && !(0, l.Z)(i.latestWants, n) && ((i.latestWants = n), i.emit('update', n)), n);
             }),
+            (this.incomingVideoEnabledChanged = () => {
+                this.update();
+            }),
             (this.delayedCall = new u.sW(100, this.update)),
             (this.offscreenTimeout = new u.V7()),
-            E.w.on(E.e.IncomingVideoEnabledChanged, () => {
-                this.update();
-            });
+            E.w.on(E.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged);
     }
 }

@@ -29,8 +29,8 @@ var r,
     A = n(811660),
     N = n(42352),
     O = n(148959),
-    v = n(227196),
-    R = n(926951),
+    R = n(227196),
+    v = n(926951),
     C = n(868616),
     y = n(848886),
     D = n(583215),
@@ -127,7 +127,7 @@ class el extends E.Z {
     }
     destroy() {
         var e, t, n, r, i;
-        if ((this.logger.info('Destroy RTCConnection'), Z.Z.removeOnlineCallback(this._handleNetworkOnline), Z.Z.removeOfflineCallback(this._handleNetworkOffline), (0, Y.isDesktop)() && (null === (i = this.powerMonitorListener) || void 0 === i || i.call(this)), this._backoff.cancel(), this._cleanupSocket(), null === (e = this._voiceQuality) || void 0 === e || e.stop(), (this._voiceQuality = null), clearInterval(this._voiceQualityPeriodicStatsInterval), (this._voiceQualityPeriodicStatsInterval = null), (this._voiceQualityPeriodicStatsSequenceId = 0), (this._noiseCancellationError = 0), null === (t = this._voiceDuration) || void 0 === t || t.stop(), (this._voiceDuration = null), null === (n = this._videoQuality) || void 0 === n || n.stop(), (this._videoQuality = null), (this._videoHealthManager = null), (this._secureFramesState = null), null === (r = this._localMediaSinkWantsManager) || void 0 === r || r.reset(), null != this._connection)) {
+        if ((this.logger.info('Destroy RTCConnection'), Z.Z.removeOnlineCallback(this._handleNetworkOnline), Z.Z.removeOfflineCallback(this._handleNetworkOffline), (0, Y.isDesktop)() && (null === (i = this.powerMonitorListener) || void 0 === i || i.call(this)), en.w.off(en.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged), en.w.off(en.e.WindowVisibilityChanged, this.windowVisibilityChanged), this._backoff.cancel(), this._cleanupSocket(), null === (e = this._voiceQuality) || void 0 === e || e.stop(), (this._voiceQuality = null), clearInterval(this._voiceQualityPeriodicStatsInterval), (this._voiceQualityPeriodicStatsInterval = null), (this._voiceQualityPeriodicStatsSequenceId = 0), (this._noiseCancellationError = 0), null === (t = this._voiceDuration) || void 0 === t || t.stop(), (this._voiceDuration = null), null === (n = this._videoQuality) || void 0 === n || n.stop(), (this._videoQuality = null), (this._videoHealthManager = null), (this._secureFramesState = null), null === (r = this._localMediaSinkWantsManager) || void 0 === r || r.reset(), null != this._connection)) {
             let e = this._connection;
             (this._connection = null), e.destroy();
         }
@@ -280,7 +280,7 @@ class el extends E.Z {
             e && (n ? t.push('force_krisp_enabled') : t.push('force_krisp_disabled'));
         }
         if ((G.Z.supports(ei.AN.FIXED_KEYFRAME_INTERVAL) && t.push('fixed_keyframe_interval'), 0 !== this._supportedBandwidthEstimationExperiments.length)) {
-            let { enabled: e, fullname: n } = R.Z.getConfig(!0, this._supportedBandwidthEstimationExperiments);
+            let { enabled: e, fullname: n } = v.Z.getConfig(!0, this._supportedBandwidthEstimationExperiments);
             e && t.push(n);
         }
         this._selectedExperiments = t;
@@ -499,7 +499,7 @@ class el extends E.Z {
                 this.userId === e && this.sendSpeaking(t, n), this.emit(K.z.Speaking, e, t);
             }),
             d.on(f.Sh.ToggleMuteFromNative, () => {
-                let { airpodsMuteSupported: e } = v.Z.getCurrentConfig({ location: 'RTCConnection ToggleMuteFromNative' }, { autoTrackExposure: !0 });
+                let { airpodsMuteSupported: e } = R.Z.getCurrentConfig({ location: 'RTCConnection ToggleMuteFromNative' }, { autoTrackExposure: !0 });
                 e && this.context === ei.Yn.DEFAULT && m.Z.toggleSelfMute({ playSoundEffect: !1 });
             }),
             d.on(f.Sh.NativeMuteChanged, (e) => {
@@ -861,7 +861,7 @@ class el extends E.Z {
     }
     _handleBandwidthEstimationExperiment(e) {
         this._bandwidthEstimationExperiment = e;
-        let t = R.Z.getMediaEngineExperiments(e);
+        let t = v.Z.getMediaEngineExperiments(e);
         if (null !== t && 0 !== t.length) {
             var n;
             null === (n = this._connection) || void 0 === n || n.setBandwidthEstimationExperiments(t);
@@ -1031,6 +1031,14 @@ class el extends E.Z {
     }
     getGoLiveSource() {
         return G.Z.getGoLiveSource();
+    }
+    incomingVideoEnabledChanged(e) {
+        var t, n;
+        null === (t = this._goLiveQualityManager) || void 0 === t || t.onIncomingVideoEnabled(e), null === (n = this._videoQuality) || void 0 === n || n.setOcclusionIncomingVideoEnabled(e);
+    }
+    windowVisibilityChanged(e) {
+        var t;
+        null === (t = this._videoQuality) || void 0 === t || t.setWindowOcclusionState(!e);
     }
     constructor({ userId: e, sessionId: t, guildId: n, channelId: r, context: i = ei.Yn.DEFAULT, rtcServerId: a, parentMediaSessionId: s }) {
         var l, u;
@@ -1233,14 +1241,8 @@ class el extends E.Z {
                     }
                 }));
         (this._remoteVideoSinkWants = Q.Yy),
-            en.w.on(en.e.IncomingVideoEnabledChanged, (e) => {
-                var t, n;
-                null === (t = this._goLiveQualityManager) || void 0 === t || t.onIncomingVideoEnabled(e), null === (n = this._videoQuality) || void 0 === n || n.setOcclusionIncomingVideoEnabled(e);
-            }),
-            en.w.on(en.e.WindowVisibilityChanged, (e) => {
-                var t;
-                null === (t = this._videoQuality) || void 0 === t || t.setWindowOcclusionState(!e);
-            }),
+            en.w.on(en.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
+            en.w.on(en.e.WindowVisibilityChanged, this.windowVisibilityChanged),
             B.ZP.shouldRecordNextConnection() ? ((this._recordingEnabled = !0), T.TC(!1)) : (this._recordingEnabled = !1),
             (this._soundshareStats = new X.Z()),
             Z.Z.addOnlineCallback(this._handleNetworkOnline),
