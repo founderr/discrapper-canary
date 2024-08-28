@@ -26,8 +26,8 @@ var s = n(735250),
     C = n(814225),
     h = n(709054),
     G = n(810568),
-    f = n(998058),
-    x = n(839392),
+    x = n(998058),
+    f = n(839392),
     v = n(96856),
     Z = n(567409),
     j = n(774073),
@@ -141,9 +141,9 @@ let y = 'GameProfileModal',
             r.useEffect(() => {
                 (0, R.Jn)();
             }, []);
-        let eo = (0, I.Wu)([x.Z], () => {
+        let eo = (0, I.Wu)([f.Z], () => {
                 var e;
-                return (null !== (e = x.Z.getSimilarGames(i)) && void 0 !== e ? e : []).slice(0, 25);
+                return (null !== (e = f.Z.getSimilarGames(i)) && void 0 !== e ? e : []).slice(0, 25);
             }),
             ei = (0, I.Wu)([P.Z], () =>
                 eo
@@ -156,10 +156,10 @@ let y = 'GameProfileModal',
             el.current = eo;
         }, [eo]),
             r.useEffect(() => {
-                0 === eo.length && (0, f.i)(i), T.Z.getDetectableGamesSupplemental([i, ...eo]);
+                0 === eo.length && (0, x.i)(i), T.Z.getDetectableGamesSupplemental([i, ...eo]);
             }, [i, eo]);
-        let ec = (0, I.e7)([x.Z, P.Z], () => {
-                let e = void 0 === x.Z.getSimilarGames(i),
+        let ec = (0, I.e7)([f.Z, P.Z], () => {
+                let e = void 0 === f.Z.getSimilarGames(i),
                     a = eo.some((e) => P.Z.isFetching(e));
                 return e || a;
             }),
@@ -243,8 +243,8 @@ let y = 'GameProfileModal',
             eS = null == eA ? void 0 : eA.getIconURL(160, M.$k ? 'webp' : 'png'),
             eL = null !== (t = em.coverImageUrl) && void 0 !== t ? t : eS,
             { summary: eM, websites: eC, publishers: eh, platforms: eG } = em,
-            ef = h.default.extractTimestamp(i),
-            ex = E()().diff(E()(ef), 'days') <= F.G,
+            ex = h.default.extractTimestamp(i),
+            ef = E()().diff(E()(ex), 'days') <= F.G,
             ev = eE.some((e) => (0, g.ig)(e) === u.o.GLOBAL);
         return (0, s.jsx)(m.ModalRoot, {
             transitionState: w,
@@ -293,7 +293,7 @@ let y = 'GameProfileModal',
                                                         color: 'text-muted',
                                                         children: eT
                                                     }),
-                                                    ex &&
+                                                    ef &&
                                                         (0, s.jsx)(m.Text, {
                                                             variant: 'eyebrow',
                                                             className: B.newBadge,
@@ -410,7 +410,8 @@ let y = 'GameProfileModal',
                                             (0, s.jsxs)(s.Fragment, {
                                                 children: [
                                                     (0, s.jsx)(m.Heading, {
-                                                        variant: 'heading-md/bold',
+                                                        variant: 'text-md/semibold',
+                                                        color: 'header-primary',
                                                         children: U.Z.Messages.GAME_PROFILE_SCREENSHOTS
                                                     }),
                                                     (0, s.jsx)(m.Scroller, {
@@ -468,7 +469,8 @@ let y = 'GameProfileModal',
                                             (0, s.jsxs)(s.Fragment, {
                                                 children: [
                                                     (0, s.jsx)(m.Heading, {
-                                                        variant: 'heading-md/bold',
+                                                        variant: 'text-md/semibold',
+                                                        color: 'header-primary',
                                                         children: U.Z.Messages.GAME_PROFILE_ALSO_PLAYING
                                                     }),
                                                     (0, s.jsx)('div', {
