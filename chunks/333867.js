@@ -1,8 +1,9 @@
 t.d(n, {
     Z: function () {
-        return f;
+        return m;
     }
-});
+}),
+    t(47120);
 var a = t(735250);
 t(470079);
 var s = t(772848),
@@ -14,10 +15,11 @@ var s = t(772848),
     u = t(409813),
     c = t(608579),
     E = t(981631);
-let h = 'payment-modal';
-function f(e) {
+let h = 'payment-modal',
+    f = new Set([u.h8.REVIEW, u.h8.CONFIRM]);
+function m(e) {
     let n;
-    let { skuId: t, isGift: f = !1, giftMessage: m, onClose: v, onComplete: C, analyticsLocations: p, analyticsObject: x } = e,
+    let { skuId: t, isGift: u = !1, giftMessage: m, onClose: v, onComplete: C, analyticsLocations: p, analyticsObject: x } = e,
         I = !1,
         T = (0, s.Z)(),
         g = (e) => {
@@ -30,7 +32,7 @@ function f(e) {
                 ...i,
                 loadId: T,
                 skuId: t,
-                isGift: f,
+                isGift: u,
                 giftMessage: m,
                 analyticsLocations: p,
                 onClose: (e) => {
@@ -51,7 +53,7 @@ function f(e) {
                         load_id: T,
                         payment_type: E.Zuq[E.GZQ.ONE_TIME],
                         location: x,
-                        is_gift: f,
+                        is_gift: u,
                         location_stack: p
                     }),
                     (0, l.fw)(),
@@ -60,7 +62,7 @@ function f(e) {
                     I && (0, o.qg)();
             },
             onCloseRequest: () => {
-                n === u.h8.REVIEW && (0, i.closeModal)(h);
+                null != n && f.has(n) && (0, i.closeModal)(h);
             }
         }
     );
