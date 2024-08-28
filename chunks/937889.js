@@ -25,7 +25,6 @@ n(665430);
 var s = n(55406),
     o = n(408433),
     l = n(981631);
-n(46140);
 let u = new Set([l.hBH.IMAGE, l.hBH.GIFV]),
     c = new Set(['strong', 'em', 'u', 'text', 'inlineCode', 's', 'spoiler']);
 function d(e, t) {
