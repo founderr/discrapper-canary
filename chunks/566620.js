@@ -209,6 +209,7 @@ async function q(e) {
                 applicationId: i,
                 channelId: r,
                 embeddedActivitiesManager: u,
+                isStart: s,
                 guildId: N
             }))
         )
@@ -234,15 +235,15 @@ async function q(e) {
 }
 async function Q(e) {
     let t,
-        { applicationId: n, channelId: i, embeddedActivitiesManager: a, guildId: o } = e,
-        l = N.default.getSessionId(),
-        u = C.default.getCurrentUser();
+        { applicationId: n, channelId: i, embeddedActivitiesManager: a, isStart: o, guildId: l } = e,
+        u = N.default.getSessionId(),
+        c = C.default.getCurrentUser();
     if (null == n) return !1;
-    let c = await (0, k.Z)(n, i);
+    let d = await (0, k.Z)(n, i);
     if (null == i) return D.S.dispatch(Y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1;
-    let d = O.Z.getChannel(i);
-    if (null == d || null == u || null == c) return !1;
-    let _ =
+    let _ = O.Z.getChannel(i);
+    if (null == _ || null == c || null == d) return !1;
+    let E =
         null != i
             ? (0, B.e4)({
                   channelId: i,
@@ -252,11 +253,11 @@ async function Q(e) {
                   VoiceStateStore: y.Z
               })
             : B.jy.NO_CHANNEL;
-    if (_ !== B.jy.CAN_LAUNCH)
+    if (E !== B.jy.CAN_LAUNCH)
         return (
-            _ === B.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
+            E === B.jy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION
                 ? (0, S.w)()
-                : _ === B.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
+                : E === B.jy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS &&
                   s.Z.show({
                       title: K.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GENERIC,
                       body: K.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
@@ -264,22 +265,25 @@ async function Q(e) {
                   }),
             !1
         );
-    let E = U.ZP.getCurrentEmbeddedActivity();
+    let f = U.ZP.getCurrentEmbeddedActivity();
     if (
-        ((null == E ? void 0 : E.applicationId) != null && (t = I.Z.getApplication(null == E ? void 0 : E.applicationId)),
-        !(await (0, G.p)({
-            applicationId: n,
-            application: c,
-            channel: d,
-            currentEmbeddedApplication: t,
-            embeddedActivitiesManager: a,
-            user: u
-        })))
+        ((null == f ? void 0 : f.applicationId) != null && (t = I.Z.getApplication(null == f ? void 0 : f.applicationId)),
+        !(
+            !o ||
+            (await (0, G.p)({
+                applicationId: n,
+                application: d,
+                channel: _,
+                currentEmbeddedApplication: t,
+                embeddedActivitiesManager: a,
+                user: c
+            }))
+        ))
     )
         return !1;
-    let f = (0, F.Z)(i),
-        h = Z.wP.includes(d.type);
-    if (f) {
+    let h = (0, F.Z)(i),
+        p = Z.wP.includes(_.type);
+    if (h) {
         if (
             !(await (0, V.Z)({
                 channelId: i,
@@ -287,21 +291,21 @@ async function Q(e) {
             }))
         )
             return !1;
-    } else if (!(0, P.WS)(d) || !h) return !1;
+    } else if (!(0, P.WS)(_) || !p) return !1;
     return (
         await M.Z.post({
             url: Y.ANM.ACTIVITY_CHANNEL_LAUNCH(i, n),
             body: {
-                session_id: l,
-                guild_id: null != o ? o : void 0
+                session_id: u,
+                guild_id: null != l ? l : void 0
             },
             trackedActionData: {
                 event: r.NetworkActionNames.EMBEDDED_ACTIVITIES_LAUNCH,
                 properties: {
-                    guild_id: o,
+                    guild_id: l,
                     channel_id: i,
                     application_id: n,
-                    session_id: l
+                    session_id: u
                 }
             },
             retries: 3,
