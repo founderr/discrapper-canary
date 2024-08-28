@@ -4,15 +4,26 @@ let i = (0, n(818083).B)({
     label: 'Reverse Trials',
     defaultConfig: {
         enabled: !1,
-        isFollowup: !1
+        isFollowup: !1,
+        inExperiment: !1
     },
     treatments: [
+        {
+            id: 0,
+            label: 'Users receives no trial.',
+            config: {
+                enabled: !1,
+                isFollowup: !1,
+                inExperiment: !0
+            }
+        },
         {
             id: 1,
             label: 'Users recieve 2 week trial.',
             config: {
                 enabled: !0,
-                isFollowup: !1
+                isFollowup: !1,
+                inExperiment: !0
             }
         },
         {
@@ -20,7 +31,8 @@ let i = (0, n(818083).B)({
             label: 'User recieves 1 week trial and 1 week followup trial',
             config: {
                 enabled: !0,
-                isFollowup: !0
+                isFollowup: !0,
+                inExperiment: !0
             }
         },
         {
@@ -28,7 +40,8 @@ let i = (0, n(818083).B)({
             label: 'Users recieve 2 week trial.',
             config: {
                 enabled: !0,
-                isFollowup: !1
+                isFollowup: !1,
+                inExperiment: !0
             }
         },
         {
@@ -36,7 +49,8 @@ let i = (0, n(818083).B)({
             label: 'User recieves 1 week trial and 1 week followup trial',
             config: {
                 enabled: !0,
-                isFollowup: !0
+                isFollowup: !0,
+                inExperiment: !0
             }
         }
     ]
