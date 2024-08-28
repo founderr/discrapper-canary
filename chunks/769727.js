@@ -125,10 +125,11 @@ function v(e) {
             location: 'ClanDiscoveryAdminContainer',
             includeConverted: !0
         }),
-        a = (0, _.iN)('ClanDiscoveryAdminContainer');
+        a = (0, _.iN)('ClanDiscoveryAdminContainer'),
+        l = (0, _.YH)('ClanDiscoveryAdminContainer');
     return (
         r.useEffect(() => {
-            if (i && !a && t !== g.v0.ADMIN_UPSELL) {
+            if (i && !a && t !== g.v0.ADMIN_UPSELL && !l) {
                 (0, g.fH)(g.v0.ADMIN_UPSELL);
                 return;
             }
@@ -136,7 +137,7 @@ function v(e) {
                 (0, g.fH)(g.v0.DISCOVERY);
                 return;
             }
-        }, [t, i, a]),
+        }, [t, i, a, l]),
         (0, s.jsx)(s.Fragment, { children: n })
     );
 }

@@ -11,6 +11,9 @@ n.d(t, {
     St: function () {
         return T;
     },
+    YH: function () {
+        return C;
+    },
     iN: function () {
         return _;
     },
@@ -298,3 +301,19 @@ function R(e) {
         }
     ]
 });
+let v = (0, a.B)({
+    kind: 'user',
+    id: '2024-07_rapidash_m3_admins_browse',
+    label: 'Rapidash M3 Admins Browse',
+    defaultConfig: { canAdminsBrowse: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Admins can browse',
+            config: { canAdminsBrowse: !0 }
+        }
+    ]
+});
+function C(e) {
+    return v.useExperiment({ location: e }).canAdminsBrowse;
+}

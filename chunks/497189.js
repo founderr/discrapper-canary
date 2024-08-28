@@ -75,7 +75,8 @@ function P(e) {
 function M(e) {
     let { selectedGuildId: t, setSelectedGuildId: n, eligibleGuilds: s, onButtonClick: l, buttonText: o, hasCompletedUpsell: d } = e,
         u = (0, m.iN)('clan_discovery_admin_upsell'),
-        _ = a.useMemo(
+        _ = (0, m.YH)('clan_discovery_admin_upsell'),
+        E = a.useMemo(
             () =>
                 s.map((e) => ({
                     value: e.id,
@@ -84,9 +85,9 @@ function M(e) {
             [s]
         );
     a.useEffect(() => {
-        0 === s.length && (0, C.Ce)();
-    }, [s]);
-    let E = s.length > 1;
+        0 === s.length && _ && (0, C.Ce)();
+    }, [s, _]);
+    let h = s.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             d
@@ -134,11 +135,11 @@ function M(e) {
             (0, i.jsxs)('div', {
                 className: Z.upsellButton,
                 children: [
-                    E &&
+                    h &&
                         (0, i.jsx)(c.SearchableSelect, {
                             className: Z.upsellSelect,
                             value: t,
-                            options: _,
+                            options: E,
                             onChange: n
                         }),
                     !d &&
@@ -148,7 +149,7 @@ function M(e) {
                                     look: c.ButtonLooks.FILLED,
                                     size: c.ButtonSizes.LARGE,
                                     color: c.ButtonColors.BRAND,
-                                    className: r()(Z.reserveButton, { [Z.buttonWithSelect]: E }),
+                                    className: r()(Z.reserveButton, { [Z.buttonWithSelect]: h }),
                                     onClick: l,
                                     children: (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',

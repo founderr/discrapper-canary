@@ -86,11 +86,12 @@ function C(e) {
             includeConverted: !0
         }),
         a = (0, o.iN)('global_discovery_guilds_tab'),
-        s = (0, _.GN)((e) => e.dismissedPilotAdminNux);
-    return ((0, d.LE)(), n && !(a && s))
-        ? (0, i.jsx)(S, { onScroll: t })
-        : (0, i.jsx)(f, {
+        s = (0, _.GN)((e) => e.dismissedPilotAdminNux),
+        r = (0, o.YH)('clan_discovery_admin_upsell');
+    return ((0, d.LE)(), !n || (a && s) || r)
+        ? (0, i.jsx)(f, {
               onScroll: t,
               withAdminContent: n && a
-          });
+          })
+        : (0, i.jsx)(S, { onScroll: t });
 }
