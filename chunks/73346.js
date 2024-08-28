@@ -15,7 +15,7 @@ n.d(t, {
         return N;
     },
     uF: function () {
-        return v;
+        return R;
     }
 }),
     n(653041),
@@ -128,14 +128,14 @@ async function O(e) {
     }
     return c.tn.get(e);
 }
-function v(e, t, n) {
+function R(e, t, n) {
     let r = t.getApplication(e);
     return null == r || null == r.primarySkuId ? null : n.get(r.primarySkuId);
 }
-let R = [];
+let v = [];
 function C(e, t, n, r, a) {
     let s = t.get(e);
-    if (null == s) return R;
+    if (null == s) return v;
     let o = s.applicationId,
         l = [],
         u = [],

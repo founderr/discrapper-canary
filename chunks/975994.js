@@ -25,8 +25,8 @@ var r = n(235003),
     A = n(773959),
     N = n(168147),
     O = n(408291),
-    v = n(396423),
-    R = n(701809),
+    R = n(396423),
+    v = n(701809),
     C = n(340132),
     y = n(355180),
     D = n(778341),
@@ -78,7 +78,7 @@ function q(e, t) {
             labelProps: A,
             inputProps: N,
             descriptionProps: O,
-            errorMessageProps: v
+            errorMessageProps: R
         } = (0, K.E)(
             {
                 ...e,
@@ -129,7 +129,7 @@ function q(e, t) {
             },
             o
         ),
-        R = (0, F.bE)({
+        v = (0, F.bE)({
             id: f.id,
             'aria-label': E.format('buttonLabel'),
             'aria-labelledby': e['aria-labelledby'] || A.id
@@ -189,7 +189,7 @@ function q(e, t) {
             labelProps: A,
             buttonProps: {
                 ...f,
-                ...R,
+                ...v,
                 excludeFromTabOrder: !0,
                 onPress: (e) => {
                     'touch' === e.pointerType && (o.current.focus(), t.toggle(null, 'manual'));
@@ -228,7 +228,7 @@ function q(e, t) {
                 linkBehavior: 'selection'
             }),
             descriptionProps: O,
-            errorMessageProps: v,
+            errorMessageProps: R,
             isInvalid: T,
             validationErrors: g,
             validationDetails: S
@@ -258,8 +258,8 @@ z = {
     'nb-NO': A.Z,
     'nl-NL': N.Z,
     'pl-PL': O.Z,
-    'pt-BR': v.Z,
-    'pt-PT': R.Z,
+    'pt-BR': R.Z,
+    'pt-PT': v.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
     'sk-SK': D.Z,

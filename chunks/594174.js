@@ -87,7 +87,7 @@ function O(e) {
         n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = I[e.id],
         i = void 0 !== e.id && e.id === d.default.getId();
-    if (null == r) void 0 !== (t = (r = new l.Z(e)).premiumType) && i && (r.premiumType = v((0, o.QI)(r), r.premiumType));
+    if (null == r) void 0 !== (t = (r = new l.Z(e)).premiumType) && i && (r.premiumType = R((0, o.QI)(r), r.premiumType));
     else if (n) {
         var a;
         let n = A(e);
@@ -97,7 +97,7 @@ function O(e) {
             (n = (function (e) {
                 var t;
                 let n = null !== (t = e.premium_type) && void 0 !== t ? t : e.premiumType,
-                    r = v((0, o.VR)(e), n);
+                    r = R((0, o.VR)(e), n);
                 return void 0 !== e.premiumType ? (e.premiumType = r) : void 0 !== e.premium_type && (e.premium_type = r), e;
             })(n)),
             (n = (function (e, t) {
@@ -119,13 +119,13 @@ function O(e) {
     let s = I[e.id] !== r;
     return (I[e.id] = r), s && m++, s;
 }
-function v(e, t) {
+function R(e, t) {
     if (!e) return t;
     let n = a.Z.getPremiumTypeOverride(),
         r = a.Z.getPremiumTypeActual();
     return n === h.F_ ? r : n;
 }
-function R(e, t) {
+function v(e, t) {
     var n, r, i, a, s;
     if (
         (null != e.author && 'SENDING' !== e.state && N(e.author) && O(e.author, t),
@@ -217,11 +217,11 @@ function U(e) {
 }
 function w(e) {
     let { messages: t } = e;
-    return t.forEach((e) => R(e, !0)), !1;
+    return t.forEach((e) => v(e, !0)), !1;
 }
 function x(e) {
     let { mostRecentMessages: t } = e;
-    return null == t || t.forEach((e) => R(e, !1)), !1;
+    return null == t || t.forEach((e) => v(e, !1)), !1;
 }
 function G(e) {
     let { messages: t } = e;
@@ -229,20 +229,20 @@ function G(e) {
 }
 function k(e) {
     let { firstMessages: t, owners: n } = e;
-    null != t && t.forEach((e) => R(e, !0)), null != n && n.forEach((e) => O(e.user, !0));
+    null != t && t.forEach((e) => v(e, !0)), null != n && n.forEach((e) => O(e.user, !0));
 }
 function B(e) {
     let { threads: t } = e;
     Object.values(t).forEach((e) => {
         let { first_message: t, most_recent_message: n, owner: r } = e;
-        null != t && R(t, !0), null != n && R(n, !0), null != r && null != r.user && O(r.user, !0);
+        null != t && v(t, !0), null != n && v(n, !0), null != r && null != r.user && O(r.user, !0);
     });
 }
 function F(e) {
     let { supplementalData: t } = e;
     Object.values(t).forEach((e) => {
         let { message_preview: t } = e;
-        null != t && R(t, !0);
+        null != t && v(t, !0);
     });
 }
 function V(e) {
@@ -267,7 +267,7 @@ function Z(e) {
 }
 function Y(e) {
     let { message: t } = e;
-    if ((R(t, !0), null != t.flags && u.yE(t.flags, E.iLy.URGENT))) {
+    if ((v(t, !0), null != t.flags && u.yE(t.flags, E.iLy.URGENT))) {
         let e = I[d.default.getId()];
         return null != e && ((I[d.default.getId()] = e.set('flags', u.mB(e.flags, E.xW$.HAS_UNREAD_URGENT_MESSAGES, !0))), !0);
     }
@@ -473,10 +473,10 @@ function eN(e) {
 function eO(e) {
     let { messageItems: t } = e;
     t.forEach((e) => {
-        null != e.message && R(e.message, !0);
+        null != e.message && v(e.message, !0);
     }, !1);
 }
-function ev(e) {
+function eR(e) {
     let { participants: t } = e;
     t.map((e) => {
         var t;
@@ -487,19 +487,19 @@ function ev(e) {
             O(e);
         });
 }
-class eR extends _.Z {
+class ev extends _.Z {
     initialize() {
         this.waitFor(d.default, a.Z);
     }
     takeSnapshot() {
         let e = this.getCurrentUser();
         return {
-            version: eR.LATEST_SNAPSHOT_VERSION,
+            version: ev.LATEST_SNAPSHOT_VERSION,
             data: { users: [e].filter(c.lm) }
         };
     }
     handleLoadCache(e) {
-        let t = this.readSnapshot(eR.LATEST_SNAPSHOT_VERSION);
+        let t = this.readSnapshot(ev.LATEST_SNAPSHOT_VERSION);
         if (null != t) for (let e of t.users) I[e.id] = new l.Z(e);
         if (null != e.users)
             for (let t of e.users) {
@@ -605,8 +605,8 @@ class eR extends _.Z {
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: eg,
             MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: eN,
             LOAD_GRAVITY_HYDRATED: eO,
-            EMBEDDED_ACTIVITY_UPDATE_V2: ev
+            EMBEDDED_ACTIVITY_UPDATE_V2: eR
         });
     }
 }
-p(eR, 'displayName', 'UserStore'), p(eR, 'LATEST_SNAPSHOT_VERSION', 1), (t.default = new eR());
+p(ev, 'displayName', 'UserStore'), p(ev, 'LATEST_SNAPSHOT_VERSION', 1), (t.default = new ev());

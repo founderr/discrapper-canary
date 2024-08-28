@@ -1,10 +1,10 @@
-var s = n(735250),
-    r = n(470079),
+var r = n(735250),
+    s = n(470079),
     a = n(481060),
     i = n(727637),
     o = n(906732),
-    c = n(241553),
-    l = n(333867),
+    l = n(241553),
+    c = n(333867),
     d = n(884697),
     u = n(231338),
     f = n(689938),
@@ -72,32 +72,32 @@ let g = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, returnRef: n, onSuccess: C, tooltipDelay: _, isGiftEasterEggEnabled: m, disableCustomColor: h = !1 } = e,
-        { analyticsLocations: b } = (0, o.ZP)(),
-        x = r.useRef(null),
-        E = (0, i.Z)(x),
-        I = h ? u.BR.DARK : u.BR.LIGHT;
+    let { product: t, returnRef: n, onSuccess: C, tooltipDelay: m, isGiftEasterEggEnabled: _, disableCustomColor: b = !1 } = e,
+        { analyticsLocations: h } = (0, o.ZP)(),
+        x = s.useRef(null),
+        I = (0, i.Z)(x),
+        E = b ? u.BR.DARK : u.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
-        : (0, s.jsx)(a.Tooltip, {
+        : (0, r.jsx)(a.Tooltip, {
               text: f.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-              delay: _,
+              delay: m,
               children: (e) =>
-                  (0, s.jsx)(a.Button, {
+                  (0, r.jsx)(a.Button, {
                       ...e,
                       buttonRef: x,
                       className: p.giftButton,
-                      color: h ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
+                      color: b ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
                       look: a.Button.Looks.FILLED,
                       size: a.ButtonSizes.ICON,
                       innerClassName: p.giftButtonInner,
                       'aria-label': f.Z.Messages.PREMIUM_GIFTING_BUTTON,
                       onClick: (e) => {
                           e.stopPropagation(),
-                              (0, l.Z)({
+                              (0, c.Z)({
                                   skuId: t.skuId,
                                   isGift: !0,
-                                  analyticsLocations: b,
+                                  analyticsLocations: h,
                                   returnRef: n,
                                   onClose:
                                       null != C
@@ -107,14 +107,14 @@ t.Z = (e) => {
                                           : void 0
                               });
                       },
-                      children: m
-                          ? (0, s.jsx)(c.e, {
-                                hovered: E,
+                      children: _
+                          ? (0, r.jsx)(l.e, {
+                                hovered: I,
                                 isContentDismissed: !0,
-                                themeOverride: I,
+                                themeOverride: E,
                                 boxColors: g
                             })
-                          : (0, s.jsx)(a.GiftIcon, {
+                          : (0, r.jsx)(a.GiftIcon, {
                                 size: 'md',
                                 color: 'currentColor'
                             })

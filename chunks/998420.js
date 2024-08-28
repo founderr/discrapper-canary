@@ -27,7 +27,7 @@ s.default = function (e) {
             location: null == A ? void 0 : A.name
         }),
         t.useEffect(() => {
-            I.Z.fetchVerificationForm(s);
+            I.ZP.fetchVerificationForm(s);
         }, [s]),
         (0, a.jsxs)(i.Gt, {
             value: n,

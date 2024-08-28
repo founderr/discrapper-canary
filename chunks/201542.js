@@ -30,7 +30,7 @@ function S(e) {
 t.Z = i.memo(function (e) {
     var t, n, a, d, A, N;
     let O,
-        { src: v, volume: R = 1, onVolumeChange: C, onMute: y, waveform: D, durationSecs: L, onVolumeShow: b, onVolumeHide: M, onPlay: P, onPause: U, onError: w } = e,
+        { src: R, volume: v = 1, onVolumeChange: C, onMute: y, waveform: D, durationSecs: L, onVolumeShow: b, onVolumeHide: M, onPlay: P, onPause: U, onError: w } = e,
         x = i.useRef(null),
         [G, k] = i.useState(0),
         [B, F] = i.useState(L),
@@ -39,7 +39,7 @@ t.Z = i.memo(function (e) {
         [j, W] = i.useState(!1),
         [K, z] = i.useState(!1),
         [q, Q] = i.useState('none'),
-        [X, $] = i.useState(() => ('function' == typeof R ? R() : R)),
+        [X, $] = i.useState(() => ('function' == typeof v ? v() : v)),
         J = i.useRef(void 0),
         ee = i.useCallback(() => {
             Y((e) => !e);
@@ -123,7 +123,7 @@ t.Z = i.memo(function (e) {
                 }
             );
         }, [t, n, a]),
-        (d = v),
+        (d = R),
         (A = Z),
         (N = Y),
         i.useEffect(() => {
@@ -147,7 +147,7 @@ t.Z = i.memo(function (e) {
               children: (0, r.jsx)(g, {
                   ref: x,
                   className: T.audioElement,
-                  src: v,
+                  src: R,
                   preload: q,
                   playing: Z && !j,
                   onEnded: ei,
@@ -168,7 +168,7 @@ t.Z = i.memo(function (e) {
               muted: V,
               volume: X,
               playing: Z && !j,
-              children: (0, r.jsx)('source', { src: v })
+              children: (0, r.jsx)('source', { src: R })
           }));
     let ef = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
         { enabled: eh } = (0, l.useRedesignIconContext)();

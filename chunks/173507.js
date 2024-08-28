@@ -1,28 +1,28 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 });
-var l = t(735250);
-t(470079);
-var a = t(481060),
-    r = t(695346),
-    i = t(981631);
-function s(e, n) {
-    r.qF.getSetting()
-        ? (0, a.openModalLazy)(
+var r = n(735250);
+n(470079);
+var i = n(481060),
+    a = n(695346),
+    s = n(981631);
+function o(e, t) {
+    a.qF.getSetting()
+        ? (0, i.openModalLazy)(
               async () => {
-                  let { default: n } = await Promise.all([t.e('5528'), t.e('59967')]).then(t.bind(t, 601572));
-                  return (t) =>
-                      (0, l.jsx)(n, {
-                          ...t,
+                  let { default: t } = await Promise.all([n.e('5528'), n.e('59967')]).then(n.bind(n, 601572));
+                  return (n) =>
+                      (0, r.jsx)(t, {
+                          ...n,
                           onEnable: e,
                           videoEnabled: !1
                       });
               },
               {
                   modalKey: 'camera-preview',
-                  contextKey: n === i.IlC.POPOUT ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT
+                  contextKey: t === s.IlC.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
               }
           )
         : null == e || e();

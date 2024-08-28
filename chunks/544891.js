@@ -6,7 +6,7 @@ n.d(t, {
         return D;
     },
     K0: function () {
-        return v;
+        return R;
     },
     f$: function () {
         return o.f$;
@@ -88,7 +88,7 @@ function E(e, t, n, r, s) {
     let T = () => {
         (t.backoff = null != t.backoff ? t.backoff : new a.Z()), (t.retried = (null != t.retried ? t.retried : 0) + 1), t.backoff.fail(() => y(t.url).then(() => E(e, t, n, r, s)));
     };
-    null == R || null === (f = R.prepareRequest) || void 0 === f || f.call(R, m),
+    null == v || null === (f = v.prepareRequest) || void 0 === f || f.call(v, m),
         m.ok((e) => null != e.status),
         m.then(
             (i) => {
@@ -124,7 +124,7 @@ function E(e, t, n, r, s) {
                                     err: e
                                 }));
                     };
-                if ((null == t ? void 0 : null === (a = t.interceptResponse) || void 0 === a ? void 0 : a.call(t, i, h, I)) !== !0 && (null == R ? void 0 : null === (u = R.interceptResponse) || void 0 === u ? void 0 : u.call(R, i, h, I)) !== !0) {
+                if ((null == t ? void 0 : null === (a = t.interceptResponse) || void 0 === a ? void 0 : a.call(t, i, h, I)) !== !0 && (null == v ? void 0 : null === (u = v.interceptResponse) || void 0 === u ? void 0 : u.call(v, i, h, I)) !== !0) {
                     if (i.ok) n(d);
                     else {
                         if (t.oldFormErrors && (null == d ? void 0 : null === (c = d.body) || void 0 === c ? void 0 : c.code) === o.f$) {
@@ -233,13 +233,13 @@ if (n.g.isServerRendering) {
         });
     (T = e), (g = e), (S = e), (A = e), (N = e);
 }
-function v() {
+function R() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return 'https:' + window.GLOBAL_ENV.API_ENDPOINT + (e ? '/v'.concat(window.GLOBAL_ENV.API_VERSION) : '');
 }
-let R = null;
+let v = null;
 function C(e) {
-    R = e;
+    v = e;
 }
 let y = () => Promise.resolve();
 function D(e) {

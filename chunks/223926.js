@@ -24,7 +24,7 @@ s.default = function (e) {
         [m, g] = l.useState(!1),
         x = l.useCallback(() => {
             var e;
-            u.Z.reportApplication({
+            u.ZP.reportApplication({
                 guild: s,
                 guildJoinRequest: n,
                 guildJoinRequestUser: t,

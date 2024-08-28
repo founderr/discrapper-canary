@@ -8,14 +8,14 @@ var i = n(735250),
     d = n(731455),
     u = n(689938),
     _ = n(86986),
-    h = n(882008);
+    E = n(882008);
 t.Z = function (e) {
     let { loadId: t } = e,
         n = (0, o.B)((e) => {
             let { searchCategoryId: t } = e;
             return t;
         }),
-        E = (0, s.e7)([l.Z], () => l.Z.getCategoryName(n)),
+        h = (0, s.e7)([l.Z], () => l.Z.getCategoryName(n)),
         m = a.useCallback(() => {
             var e;
             let n = o.B.getState();
@@ -27,14 +27,14 @@ t.Z = function (e) {
                 languageCode: null !== (e = n.searchLanguageCode) && void 0 !== e ? e : (0, c.X)()
             });
         }, [t]),
-        I = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({ categoryName: E }),
+        I = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({ categoryName: h }),
         g = n === d.Hk ? u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : u.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({ onClick: m });
     return (0, i.jsxs)('div', {
         className: _.container,
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                src: h,
+                src: E,
                 className: _.image
             }),
             (0, i.jsx)(r.Heading, {

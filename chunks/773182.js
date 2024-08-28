@@ -167,7 +167,7 @@ function M(e) {
     let { onActivate: t, children: n } = e,
         r = (0, o.e7)([E.Z], () => E.Z.hasJoinRequestCoackmark()),
         a = l.useCallback(() => {
-            I.Z.clearCoachmark();
+            I.ZP.clearCoachmark();
         }, []),
         s = (0, h.Z)(r),
         c = l.useRef(null);

@@ -6,28 +6,28 @@ n.d(t, {
         return o;
     }
 });
-var s = n(735250);
+var r = n(735250);
 n(470079);
-var r = n(481060);
+var s = n(481060);
 let a = 'collectibles shop product details modal',
     i = (e) => {
-        let { product: t, category: i, analyticsSource: o, analyticsLocations: c, returnRef: l } = e;
-        (0, r.openModalLazy)(
+        let { product: t, category: i, analyticsSource: o, analyticsLocations: l, returnRef: c } = e;
+        (0, s.openModalLazy)(
             async () => {
                 let { default: e } = await n.e('2026').then(n.bind(n, 702370));
                 return (n) =>
-                    (0, s.jsx)(e, {
+                    (0, r.jsx)(e, {
                         ...n,
                         product: t,
                         category: i,
                         analyticsSource: o,
-                        analyticsLocations: c,
-                        returnRef: l
+                        analyticsLocations: l,
+                        returnRef: c
                     });
             },
             { modalKey: a }
         );
     },
     o = () => {
-        (0, r.closeModal)(a);
+        (0, s.closeModal)(a);
     };

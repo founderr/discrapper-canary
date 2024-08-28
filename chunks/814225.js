@@ -1,6 +1,6 @@
 n.d(a, {
     P3: function () {
-        return u;
+        return d;
     },
     ZK: function () {
         return E;
@@ -12,8 +12,8 @@ n.d(a, {
     n(757143),
     n(47120);
 var s = n(913527),
-    t = n.n(s);
-if (12633 == n.j) var r = n(266067);
+    r = n.n(s);
+if (12633 == n.j) var t = n(266067);
 n(358085), n(73346);
 var o = n(981631),
     i = n(689938);
@@ -24,10 +24,10 @@ let l = {},
         ...o.EKQ
     });
 function E(e) {
-    let a = (0, r.LX)(e, { path: o.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug') });
+    let a = (0, t.LX)(e, { path: o.Z5c.APPLICATION_STORE_LISTING_SKU(':skuId', ':slug') });
     return null != a ? a.params.skuId : null;
 }
-function u(e) {
+function d(e) {
     switch (e) {
         case o.EKQ.ACTION:
             return i.Z.Messages.APPLICATION_STORE_GENRE_ACTION;
@@ -176,7 +176,7 @@ Object.keys(_).forEach((e) => {
         n = _[e];
     (l[a] = n), (c[n] = a);
 });
-let d = [
+let u = [
     ['YYYY-MM-DD', 'MMMM DD, Y'],
     ['YYYY-MM', 'MMMM Y'],
     ['MM-DD', 'MMMM DD'],
@@ -187,10 +187,10 @@ function I(e) {
     let { preorderReleaseAt: a, preorderApproximateReleaseDate: n } = e;
     if (null != a) return a.format('MMMM DD');
     if (null == n) return null;
-    for (let e = 0; e < d.length; e++) {
-        let [a, s] = d[e],
-            r = t()(n, a, !0);
-        if (r.isValid()) return r.format(s);
+    for (let e = 0; e < u.length; e++) {
+        let [a, s] = u[e],
+            t = r()(n, a, !0);
+        if (t.isValid()) return t.format(s);
     }
     return n;
 }

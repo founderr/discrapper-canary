@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(473121),
     N = n(449413),
     O = n(266080),
-    v = n(316617),
-    R = n(15682),
+    R = n(316617),
+    v = n(15682),
     C = n(189472),
     y = n(749534),
     D = n(521332),
@@ -139,7 +139,7 @@ t.Z = (e) => {
                 children: [
                     null != q ? (0, r.jsx)(M.Z, { element: q }) : null,
                     null != k(t, 'breadcrumbs') && (0, r.jsx)(_.Z, { history: V }),
-                    null != k(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(v.Z, { message: n.record }),
+                    null != k(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(R.Z, { message: n.record }),
                     null != k(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(P.Z, { user: n.record }) : null,
                     (function (e) {
                         let { elements: t } = e;
@@ -193,7 +193,7 @@ t.Z = (e) => {
                     null != k(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(T.Z, { entry: n.record }),
                     null != k(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(g.Z, { entry: n.record }),
                     null != z &&
-                        (0, r.jsx)(R.Z, {
+                        (0, r.jsx)(v.Z, {
                             element: z,
                             onChange: (e, t) => {
                                 let n = { ...ea };

@@ -22,8 +22,8 @@ var r,
     N = n(981631);
 let O = 1 * I.Z.Millis.MINUTE;
 (r || (r = {})).DISPATCH_APPLICATION_PROGRESS = 'dispatch_application_progress';
-let v = {},
-    R = 'file://',
+let R = {},
+    v = 'file://',
     C = !1,
     y = 0,
     D = 0,
@@ -76,7 +76,7 @@ let k = u().throttle(function (e) {
         ]).slice(0, 200);
     }, 200);
 function V(e, t, n) {
-    let r = n(v[t]),
+    let r = n(R[t]),
         i = n(e[t]);
     return null != r && null != i && 0 !== r ? Math.max(i - r, 0) : 0;
 }
@@ -85,38 +85,38 @@ class H extends (i = c.ZP.Store) {
         this.waitFor(f.default);
     }
     getState(e, t) {
-        return v[(0, m.Tu)(e, t)];
+        return R[(0, m.Tu)(e, t)];
     }
     isUpToDate(e, t) {
-        let n = v[(0, m.Tu)(e, t)];
+        let n = R[(0, m.Tu)(e, t)];
         return null != n && n.type === N.vxO.UP_TO_DATE;
     }
     shouldPatch(e, t) {
-        let n = v[(0, m.Tu)(e, t)];
+        let n = R[(0, m.Tu)(e, t)];
         return null != n && !0 === n.shouldPatch;
     }
     isInstalled(e, t) {
-        let n = v[(0, m.Tu)(e, t)];
+        let n = R[(0, m.Tu)(e, t)];
         return null != n ? n.type !== N.vxO.UNINSTALLING : A.Z.shouldBeInstalled(e, t);
     }
     supportsCloudSync(e, t) {
         null == t && (t = e);
-        let n = v[(0, m.Tu)(e, t)];
+        let n = R[(0, m.Tu)(e, t)];
         return null != n && null != n.storage && !!n.storage.sync;
     }
     isLaunchable(e, t) {
         if (!(0, g.Q)()) return !1;
-        let n = v[(0, m.Tu)(e, t)];
+        let n = R[(0, m.Tu)(e, t)];
         return null != n && n.type === N.vxO.UP_TO_DATE && null != n.launchOptions && 0 !== n.launchOptions.length;
     }
     getDefaultLaunchOption(e, t) {
-        let n = v[(0, m.Tu)(e, t)];
+        let n = R[(0, m.Tu)(e, t)];
         if (null == n) return null;
         let { defaultLaunchOptionId: r, launchOptions: i } = n;
         return null == r || null == i ? null : i[r];
     }
     getLaunchOptions(e, t) {
-        let n = v[(0, m.Tu)(e, t)];
+        let n = R[(0, m.Tu)(e, t)];
         return null == n || null == n.launchOptions ? [] : Object.values(n.launchOptions);
     }
     getHistoricalTotalBytesRead() {
@@ -180,7 +180,7 @@ class H extends (i = c.ZP.Store) {
                                                     let t;
                                                     let { executable: r, name: i, working_dir: a } = n,
                                                         s = _.Z.fileManager.join(e, r);
-                                                    (0, T.isMac)() && !s.startsWith(R) && (s = ''.concat(R).concat(s)),
+                                                    (0, T.isMac)() && !s.startsWith(v) && (s = ''.concat(v).concat(s)),
                                                         (t = null != a ? _.Z.fileManager.join(e, a) : _.Z.fileManager.dirname(s)),
                                                         (m[i] = {
                                                             ...n,
@@ -251,7 +251,7 @@ class H extends (i = c.ZP.Store) {
                             }
                             throw Error('Invalid Dispatch State. state='.concat(e.state.type));
                         })(r[e][t])),
-                        null != v[s])
+                        null != R[s])
                     ) {
                         let e = V(n, s, w);
                         e > 0 && k((y += e));
@@ -296,6 +296,6 @@ class H extends (i = c.ZP.Store) {
                                 });
                     }
                 }
-            !a && 'dispatch_application_progress' === E.Z.taskID && E.Z.clearProgress('dispatch_application_progress'), (v = n), (U = !0);
+            !a && 'dispatch_application_progress' === E.Z.taskID && E.Z.clearProgress('dispatch_application_progress'), (R = n), (U = !0);
         }
     }));

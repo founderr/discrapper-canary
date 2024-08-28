@@ -46,7 +46,7 @@ n.Z = (e) => {
                           (0, a.jsx)(o.Z, {
                               guild: f,
                               isClanContext: !0,
-                              onFieldsSave: (e, n) => (s.Z.updateVerificationFormFieldsLocal(e, [...n]), Promise.resolve()),
+                              onFieldsSave: (e, n) => (s.ZP.updateVerificationFormFieldsLocal(e, [...n]), Promise.resolve()),
                               verificationForm: C
                           })
                       ]

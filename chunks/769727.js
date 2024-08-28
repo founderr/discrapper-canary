@@ -9,8 +9,8 @@ var i,
     d = n(481060),
     u = n(393238),
     _ = n(963202),
-    h = n(605236),
-    E = n(931515),
+    E = n(605236),
+    h = n(931515),
     m = n(807933),
     I = n(702646),
     g = n(207796),
@@ -43,15 +43,15 @@ let N = {
                 },
                 [u]
             ),
-            E = (0, h.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
+            h = (0, E.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
         switch (
             (r.useEffect(() => {
-                !E &&
-                    (0, h.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
+                !h &&
+                    (0, E.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
                         dismissAction: f.L.TAKE_ACTION,
                         forceTrack: !0
                     });
-            }, [E]),
+            }, [h]),
             t)
         ) {
             case g.v0.ADMIN_UPSELL:
@@ -141,7 +141,7 @@ function v(e) {
     );
 }
 t.Z = r.memo(function () {
-    let { loading: e } = (0, E.LE)(),
+    let { loading: e } = (0, h.LE)(),
         t = (0, g.GN)((e) => e.mode, o.Z),
         { ref: n, width: i } = (0, u.Z)(),
         { enableClanCreation: a } = (0, _.C3)({

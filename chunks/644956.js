@@ -26,8 +26,8 @@ var i = n(120356),
     A = n(103575),
     N = n(592125),
     O = n(271383),
-    v = n(430824),
-    R = n(594174),
+    R = n(430824),
+    v = n(594174),
     C = n(689938),
     y = n(910212),
     D = n(610684);
@@ -80,18 +80,18 @@ function b(e) {
                   },
                   renderPopout: (e) => {
                       let t = N.Z.getChannel(s),
-                          a = v.Z.getGuild(b),
+                          a = R.Z.getGuild(b),
                           l = O.ZP.getMembers(a.id),
-                          u = v.Z.getRole(b, null != i ? i : a.getEveryoneRoleId()),
+                          u = R.Z.getRole(b, null != i ? i : a.getEveryoneRoleId()),
                           E = o()(l)
-                              .filter((e) => !!('@everyone' === m || e.roles.includes(i)) && null != R.default.getUser(e.userId))
+                              .filter((e) => !!('@everyone' === m || e.roles.includes(i)) && null != v.default.getUser(e.userId))
                               .sortBy((e) => {
                                   var t;
-                                  let n = R.default.getUser(e.userId);
+                                  let n = v.default.getUser(e.userId);
                                   return (null != n ? (null !== (t = e.nick) && void 0 !== t ? t : n.username) : '').toLocaleLowerCase();
                               })
                               .map((e) => {
-                                  let i = R.default.getUser(e.userId);
+                                  let i = v.default.getUser(e.userId);
                                   return (0, r.jsx)(
                                       c.Popout,
                                       {

@@ -245,7 +245,7 @@ s.Z = (e) => {
         []
     ),
         a.useEffect(() => {
-            T.Z.fetchVerificationForm(l, j);
+            T.ZP.fetchVerificationForm(l, j);
         }, [l, j]),
         a.useEffect(() => {
             null != D && X(D.formFields);

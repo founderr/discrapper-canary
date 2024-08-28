@@ -1,22 +1,22 @@
-var e = r(147018),
-    o = r(161581),
-    i = r(4340),
-    u = r(325008),
-    c = TypeError,
-    f = Object.defineProperty,
-    a = o.self !== o;
+var r = n(147018),
+    i = n(161581),
+    a = n(4340),
+    s = n(325008),
+    o = TypeError,
+    l = Object.defineProperty,
+    u = i.self !== i;
 try {
-    if (u) {
-        var s = Object.getOwnPropertyDescriptor(o, 'self');
-        (a || !s || !s.get || !s.enumerable) &&
-            i(o, 'self', {
+    if (s) {
+        var c = Object.getOwnPropertyDescriptor(i, 'self');
+        (u || !c || !c.get || !c.enumerable) &&
+            a(i, 'self', {
                 get: function () {
-                    return o;
+                    return i;
                 },
-                set: function (t) {
-                    if (this !== o) throw c('Illegal invocation');
-                    f(o, 'self', {
-                        value: t,
+                set: function (e) {
+                    if (this !== i) throw o('Illegal invocation');
+                    l(i, 'self', {
+                        value: e,
                         writable: !0,
                         configurable: !0,
                         enumerable: !0
@@ -26,12 +26,12 @@ try {
                 enumerable: !0
             });
     } else
-        e(
+        r(
             {
                 global: !0,
                 simple: !0,
-                forced: a
+                forced: u
             },
-            { self: o }
+            { self: i }
         );
-} catch (t) {}
+} catch (e) {}

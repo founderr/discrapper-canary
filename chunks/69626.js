@@ -1,9 +1,9 @@
 n.d(t, {
     ZP: function () {
-        return R;
+        return v;
     },
     wz: function () {
-        return v;
+        return R;
     }
 });
 var r = n(735250),
@@ -97,21 +97,21 @@ function O(e) {
             };
         }),
         { command: O } = l.YZ(I, null !== (t = n.commandKey) && void 0 !== t ? t : ''),
-        v = _.dN.useSetting(),
-        R = i.useMemo(() => {
-            if (null == O || null == I || O.name !== n.commandName || v) return !1;
+        R = _.dN.useSetting(),
+        v = i.useMemo(() => {
+            if (null == O || null == I || O.name !== n.commandName || R) return !1;
             let e = I.isPrivate();
             if ((0, d.xl)(I) || (!e && !S)) return !1;
             let t = (null == O ? void 0 : O.applicationId) === T.bi.BUILT_IN;
             return !!e || !!t || !!A || !1;
-        }, [I, O, S, A, n.commandName, v]),
+        }, [I, O, S, A, n.commandName, R]),
         C = i.useCallback(
             (e) => {
                 null == e || e.stopPropagation(), null != I && null != n.commandName && null != n.commandKey && N(I.id, n.commandName, n.commandKey, u.Vh.MENTION);
             },
             [I, n.commandKey, n.commandName]
         );
-    return R
+    return v
         ? (0, r.jsx)(
               s.Tooltip,
               {
@@ -138,7 +138,7 @@ function O(e) {
               children: [g.GI, o(n.content, f)]
           });
 }
-function v(e) {
+function R(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: o, onClick: l } = e,
         c = (0, a.e7)([p.Z], () => p.Z.getChannelId()),
         d = (e) => {
@@ -161,7 +161,7 @@ function v(e) {
         }
     });
 }
-function R(e) {
+function v(e) {
     return {
         react: (e, t, n) =>
             (0, r.jsx)(O, {

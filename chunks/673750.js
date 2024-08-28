@@ -45,11 +45,11 @@ function O(e, t, n) {
         e
     );
 }
-let v = null;
-__OVERLAY__ && (v = n(237997).Z), ((a = r || (r = {})).OVERLAY_UNLOCKED = 'overlay_unlocked'), (a.OVERLAY_UNLOCKED_PINNED = 'overlay_unlocked_pinned'), (a.OVERLAY_LOCKED_ACTIVATED = 'overlay_locked_activated'), ((s = i || (i = {}))[(s.SEND = 0)] = 'SEND'), (s[(s.EDIT = 1)] = 'EDIT'), (s[(s.COMMAND = 2)] = 'COMMAND');
-let R = (e) => 0 === e.type,
+let R = null;
+__OVERLAY__ && (R = n(237997).Z), ((a = r || (r = {})).OVERLAY_UNLOCKED = 'overlay_unlocked'), (a.OVERLAY_UNLOCKED_PINNED = 'overlay_unlocked_pinned'), (a.OVERLAY_LOCKED_ACTIVATED = 'overlay_locked_activated'), ((s = i || (i = {}))[(s.SEND = 0)] = 'SEND'), (s[(s.EDIT = 1)] = 'EDIT'), (s[(s.COMMAND = 2)] = 'COMMAND');
+let v = (e) => 0 === e.type,
     C = (e) => 1 === e.type,
-    y = (e) => (R(e) ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id),
+    y = (e) => (v(e) ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id),
     D = [1 * m.Z.Millis.MINUTE, 5 * m.Z.Millis.MINUTE];
 class L extends g.Z {
     isFull() {
@@ -120,7 +120,7 @@ class L extends g.Z {
                 });
             return;
         }
-        null != v && (v.isInstanceUILocked() ? (n = { location: 'overlay_locked_activated' }) : !v.isInstanceUILocked() && (n = v.isPinned(N.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
+        null != R && (R.isInstanceUILocked() ? (n = { location: 'overlay_locked_activated' }) : !R.isInstanceUILocked() && (n = R.isPinned(N.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
         let d = this.createResponseHandler(e.nonce, t),
             _ = new AbortController();
         if ((this.startQueueMetricTimers(e.nonce), null != i && null != a && '' !== a))

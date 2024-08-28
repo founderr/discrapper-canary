@@ -21,8 +21,8 @@ var r,
     A = n(630388),
     N = n(709054),
     O = n(314897),
-    v = n(592125),
-    R = n(796974),
+    R = n(592125),
+    v = n(796974),
     C = n(984933),
     y = n(271383),
     D = n(430824),
@@ -49,7 +49,7 @@ function B() {
 function F() {
     d.Z.forEach((e) => {
         let { channelId: t } = e;
-        null == v.Z.getChannel(t) && d.Z.clear(t);
+        null == R.Z.getChannel(t) && d.Z.clear(t);
     });
 }
 function V() {
@@ -79,11 +79,11 @@ function Z(e) {
 }
 class Y extends (r = u.ZP.Store) {
     initialize() {
-        this.waitFor(U.default, v.Z, R.Z, y.ZP, S.default, M.Z, P.Z, D.Z, b.Z, C.ZP), this.syncWith([p.Z], () => {});
+        this.waitFor(U.default, R.Z, v.Z, y.ZP, S.default, M.Z, P.Z, D.Z, b.Z, C.ZP), this.syncWith([p.Z], () => {});
     }
     getMessages(e) {
         if (p.Z.hasViewingRoles()) {
-            let t = v.Z.getChannel(e),
+            let t = R.Z.getChannel(e),
                 n = null == t ? void 0 : t.getGuildId();
             if (p.Z.isViewingRoles(n) && !L.Z.can(w.Plq.VIEW_CHANNEL, t)) return new d.Z(e);
         }
@@ -236,7 +236,7 @@ class Y extends (r = u.ZP.Store) {
                 return;
             }
             if (!i.ready) return !1;
-            null != n.nonce && n.state !== w.yb.SENDING && x.has(n.nonce) && ((i = i.remove(n.nonce)), x.delete(n.nonce)), (i = i.receiveMessage(n, !0 === R.Z.isAtBottom(t))), d.Z.commit(i);
+            null != n.nonce && n.state !== w.yb.SENDING && x.has(n.nonce) && ((i = i.remove(n.nonce)), x.delete(n.nonce)), (i = i.receiveMessage(n, !0 === v.Z.isAtBottom(t))), d.Z.commit(i);
         },
         MESSAGE_SEND_FAILED: function (e) {
             let { channelId: t, messageId: n, reason: r } = e,

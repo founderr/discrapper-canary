@@ -21,11 +21,11 @@ let T = Object.freeze([]),
     A = {},
     N = {},
     O = {};
-function v(e, t) {
+function R(e, t) {
     let n = g[e];
     return null != n ? n[t] : null;
 }
-let R = (e) => {
+let v = (e) => {
         switch (e.type) {
             case m.IIU.CUSTOM_STATUS:
                 return 4;
@@ -42,7 +42,7 @@ let R = (e) => {
     C = (e) => ((0, E.Z)(e) ? 1 : 0);
 function y(e, t) {
     var n, r, i, a, s;
-    return (n = e), R(t) - R(n) || ((r = e), C(t) - C(r)) || ((i = e), (null !== (a = t.created_at) && void 0 !== a ? a : 0) - (null !== (s = i.created_at) && void 0 !== s ? s : 0));
+    return (n = e), v(t) - v(n) || ((r = e), C(t) - C(r)) || ((i = e), (null !== (a = t.created_at) && void 0 !== a ? a : 0) - (null !== (s = i.created_at) && void 0 !== s ? s : 0));
 }
 function D(e) {
     if ((delete S[e], delete A[e], delete N[e], null == g[e])) return;
@@ -131,7 +131,7 @@ class w extends (r = d.ZP.Store) {
             a = I.default.getUser(e);
         if ((null != a && a.hasFlag(m.xW$.BOT_HTTP_INTERACTIONS) && (i = m.Skl.UNKNOWN), null == a ? void 0 : a.isClyde())) return m.Skl.ONLINE;
         if (null == r) return null !== (t = S[e]) && void 0 !== t ? t : i;
-        let s = v(e, r);
+        let s = R(e, r);
         return null !== (n = null == s ? void 0 : s.status) && void 0 !== n ? n : i;
     }
     getActivities(e) {
@@ -140,7 +140,7 @@ class w extends (r = d.ZP.Store) {
             var n;
             return null !== (n = A[e]) && void 0 !== n ? n : T;
         }
-        let r = v(e, t);
+        let r = R(e, t);
         return null == r || null == r.activities ? T : r.activities;
     }
     getPrimaryActivity(e) {

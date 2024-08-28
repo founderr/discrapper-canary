@@ -29,8 +29,8 @@ var r = n(735250),
     A = n(686546),
     N = n(246364),
     O = n(937111),
-    v = n(703656),
-    R = n(271383),
+    R = n(703656),
+    v = n(271383),
     C = n(594174),
     y = n(778045),
     D = n(207796),
@@ -172,7 +172,7 @@ function k(e) {
 }
 function B(e) {
     var t;
-    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: d, prioritizedGameIds: h, className: p, position: g, showBrandingFooter: N = !1, showFavoriteButton: O = !1, bannerUrl: v, onlyAnimateIconOnHover: R = !1, hasPendingJoinRequest: C = !1, atMaxMemberCapacity: L = !1 } = e,
+    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: d, prioritizedGameIds: h, className: p, position: g, showBrandingFooter: N = !1, showFavoriteButton: O = !1, bannerUrl: R, onlyAnimateIconOnHover: v = !1, hasPendingJoinRequest: C = !1, atMaxMemberCapacity: L = !1 } = e,
         {
             tag: b,
             badge: B,
@@ -207,7 +207,7 @@ function B(e) {
             K(!1);
         }, []),
         en = P.Z.Messages.CLAN_DISCOVERY_MEMBER_COUNT.format({ count: n.memberCount }),
-        er = null != v ? v : (0, I.pY)(n.id, H),
+        er = null != R ? R : (0, I.pY)(n.id, H),
         ei = null == a && null == er ? { background: 'linear-gradient(90deg, '.concat(F, ', ').concat(V, ')') } : void 0,
         ea =
             null != a
@@ -292,7 +292,7 @@ function B(e) {
                                                 guildName: n.name,
                                                 guildIcon: n.icon,
                                                 iconSize: 64,
-                                                animate: !R || W
+                                                animate: !v || W
                                             })
                                         })
                                     }),
@@ -415,7 +415,7 @@ t.ZP = function (e) {
     let { style: t, prioritizedGameIds: a, onVisibilityChange: s = () => {}, ...o } = e,
         { clan: _, affinity: p, index: I, position: m, source: T } = o,
         g = (0, u.e7)([C.default], () => C.default.getCurrentUser()),
-        S = (0, u.e7)([R.ZP], () => R.ZP.isMember(_.id, null == g ? void 0 : g.id), [_, g]),
+        S = (0, u.e7)([v.ZP], () => v.ZP.isMember(_.id, null == g ? void 0 : g.id), [_, g]),
         A = (0, u.e7)([O.Z], () => {
             var e;
             return (null === (e = O.Z.getRequest(_.id)) || void 0 === e ? void 0 : e.applicationStatus) === N.wB.SUBMITTED;
@@ -444,11 +444,11 @@ t.ZP = function (e) {
                 }),
                 S)
             ) {
-                (0, v.XU)(_.id);
+                (0, R.XU)(_.id);
                 return;
             }
             if (e) {
-                (0, v.uL)(b.Z5c.GUILD_MEMBER_VERIFICATION(_.id));
+                (0, R.uL)(b.Z5c.GUILD_MEMBER_VERIFICATION(_.id));
                 return;
             }
             y &&

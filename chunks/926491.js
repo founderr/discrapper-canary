@@ -21,8 +21,8 @@ let g = 2,
     A = new Map(),
     N = null,
     O = [],
-    v = null,
-    R = !1,
+    R = null,
+    v = !1,
     C = new Map(),
     y = (e, t) => {
         C = new Map(C.set(e, t));
@@ -139,10 +139,10 @@ class x extends (r = l.ZP.Store) {
         return L(), null == N && ((N = new Map()), U()), N;
     }
     get hasLoadedStickerPacks() {
-        return null != v && v + D > Date.now();
+        return null != R && R + D > Date.now();
     }
     get isFetchingStickerPacks() {
-        return R;
+        return v;
     }
     getStickerById(e) {
         return !A.has(e) && L(), A.get(e);
@@ -200,14 +200,14 @@ class x extends (r = l.ZP.Store) {
                 (C = new Map(C));
         },
         LOGOUT: () => {
-            (g = 0), (O = []), A.clear(), S.clear(), (N = null), C.clear(), (C = new Map(C)), (R = !1), (v = null);
+            (g = 0), (O = []), A.clear(), S.clear(), (N = null), C.clear(), (C = new Map(C)), (v = !1), (R = null);
         },
         STICKER_PACKS_FETCH_START: () => {
-            R = !0;
+            v = !0;
         },
         STICKER_PACKS_FETCH_SUCCESS: (e) => {
             let { packs: t } = e;
-            t.forEach((e) => P(e, !0)), (v = Date.now()), (R = !1);
+            t.forEach((e) => P(e, !0)), (R = Date.now()), (v = !1);
         },
         STICKER_PACK_FETCH_SUCCESS: (e) => {
             let { pack: t, ingestStickers: n } = e;

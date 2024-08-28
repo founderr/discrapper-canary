@@ -1,22 +1,22 @@
-var e = n(566885),
-    o = n(470592),
-    i = n(339718),
-    u = n(49693),
-    f = function (t) {
-        var r = 1 === t;
-        return function (n, f, a) {
-            for (var c, s = i(n), y = o(s), p = e(f, a), h = u(y); h-- > 0; )
-                if (p((c = y[h]), h, s))
-                    switch (t) {
+var r = n(566885),
+    i = n(470592),
+    a = n(339718),
+    s = n(49693),
+    o = function (e) {
+        var t = 1 === e;
+        return function (n, o, l) {
+            for (var u, c = a(n), d = i(c), _ = r(o, l), E = s(d); E-- > 0; )
+                if (_((u = d[E]), E, c))
+                    switch (e) {
                         case 0:
-                            return c;
+                            return u;
                         case 1:
-                            return h;
+                            return E;
                     }
-            return r ? -1 : void 0;
+            return t ? -1 : void 0;
         };
     };
-t.exports = {
-    findLast: f(0),
-    findLastIndex: f(1)
+e.exports = {
+    findLast: o(0),
+    findLastIndex: o(1)
 };

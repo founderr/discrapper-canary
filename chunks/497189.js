@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(749210),
     u = n(607070),
     _ = n(100527),
-    h = n(931240),
-    E = n(970606),
+    E = n(931240),
+    h = n(970606),
     m = n(963202),
     I = n(650461),
     g = n(353093),
@@ -86,7 +86,7 @@ function M(e) {
     a.useEffect(() => {
         0 === s.length && (0, C.Ce)();
     }, [s]);
-    let h = s.length > 1;
+    let E = s.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             d
@@ -134,7 +134,7 @@ function M(e) {
             (0, i.jsxs)('div', {
                 className: L.upsellButton,
                 children: [
-                    h &&
+                    E &&
                         (0, i.jsx)(c.SearchableSelect, {
                             className: L.upsellSelect,
                             value: t,
@@ -148,7 +148,7 @@ function M(e) {
                                     look: c.ButtonLooks.FILLED,
                                     size: c.ButtonSizes.LARGE,
                                     color: c.ButtonColors.BRAND,
-                                    className: r()(L.reserveButton, { [L.buttonWithSelect]: h }),
+                                    className: r()(L.reserveButton, { [L.buttonWithSelect]: E }),
                                     onClick: l,
                                     children: (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
@@ -193,7 +193,7 @@ t.Z = a.memo(function (e) {
         });
     a.useEffect(() => {
         !r &&
-            (0, E.TE)({
+            (0, h.TE)({
                 guildId: C,
                 location: _.Z.CLAN_DISCOVERY
             });
@@ -202,7 +202,7 @@ t.Z = a.memo(function (e) {
         P = (0, o.e7)([I.ZP], () => (null != C ? I.ZP.getStateForGuild(C).progress : null)),
         D = a.useCallback(() => {
             !r &&
-                ((0, E._9)({
+                ((0, h._9)({
                     guildId: C,
                     location: _.Z.CLAN_DISCOVERY
                 }),
@@ -298,7 +298,7 @@ t.Z = a.memo(function (e) {
         ),
         z = a.useMemo(() => (s ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_ADMIN_LIST_SERVER : null == P ? Z.Z.Messages.CLAN_DISCOVERY_UPSELL_RESERVE : Z.Z.Messages.CLAN_DISCOVERY_UPSELL_CONTINUE_SETUP), [P, s]),
         K = a.useCallback(async () => {
-            await (0, h.Zx)(C), d.Z.transitionToGuildSync('936317138904440892');
+            await (0, E.Zx)(C), d.Z.transitionToGuildSync('936317138904440892');
         }, [C]),
         q = a.useCallback(
             (e) =>

@@ -29,7 +29,7 @@ let O = (0, _.kt)({
         id: '1',
         type: o.d.DM
     }),
-    v = (e) => {
+    R = (e) => {
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case S.n_.ACTIVITY:
@@ -45,7 +45,7 @@ let O = (0, _.kt)({
                 (0, f.vE)(r);
         }
     },
-    R = (e) => {
+    v = (e) => {
         switch (e) {
             case S.n_.ACTIVITY:
                 return A.Z.Messages.USER_PROFILE_REPLY_TO_ACTIVITY_PLACEHOLDER;
@@ -72,7 +72,7 @@ function C(e) {
             var n;
             if (null == e) return;
             P({ action: U });
-            let r = v({
+            let r = R({
                 input: e,
                 username: null !== (n = E.Z.getNickname(t.id)) && void 0 !== n ? n : p.ZP.getName(t),
                 sourceType: _,
@@ -111,7 +111,7 @@ function C(e) {
                 innerClassName: N.inner,
                 editorClassName: N.editor,
                 type: u.I.USER_PROFILE_REPLY,
-                placeholder: R(_).format({ username: h.ZP.getName(n, a, t) }),
+                placeholder: v(_).format({ username: h.ZP.getName(n, a, t) }),
                 channel: O,
                 textValue: w,
                 richValue: G,

@@ -97,7 +97,7 @@ function N() {
 function O() {
     g();
 }
-class v extends s.Z {
+class R extends s.Z {
     forceRefreshIfOutdated() {
         let e = E.Z.getState();
         null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > 86400000 && g({ forceRefresh: !0 });
@@ -126,4 +126,4 @@ class v extends s.Z {
                 : (t[n] = r);
     }
 }
-t.Z = new v();
+t.Z = new R();

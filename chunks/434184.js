@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(321488),
     u = n(417183),
     _ = n(170245),
-    h = n(981631),
-    E = n(689938),
+    E = n(981631),
+    h = n(689938),
     m = n(935646);
 function I(e) {
     let { user: t, key: n, isFocused: I } = e,
@@ -41,13 +41,13 @@ function I(e) {
                         (0, i.jsx)(_.Z, {
                             user: t,
                             hovered: e,
-                            status: h.Skl.UNKNOWN,
-                            subText: E.Z.Messages.BLOCKED
+                            status: E.Skl.UNKNOWN,
+                            subText: h.Z.Messages.BLOCKED
                         }),
                         (0, i.jsx)(d.Z, {
                             icon: s.UserMinusIcon,
                             actionType: d.Z.ActionTypes.DENY,
-                            tooltip: E.Z.Messages.UNBLOCK,
+                            tooltip: h.Z.Messages.UNBLOCK,
                             onClick: T,
                             shouldHighlight: e
                         })

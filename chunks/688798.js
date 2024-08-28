@@ -21,7 +21,7 @@ var r = n(913527),
     A = n(596401),
     N = n(981631),
     O = n(930441);
-function v(e, t, n) {
+function R(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function v(e, t, n) {
         e
     );
 }
-async function R(e, t) {
+async function v(e, t) {
     let n = f.l4.getSetting(),
         r = I.default.extractTimestamp(e);
     if ((n >= e || i()().diff(r, 'days') > 30) && !t) return;
@@ -71,8 +71,8 @@ async function R(e, t) {
 class C extends c.Z {
     constructor(...e) {
         super(...e),
-            v(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
-            v(this, 'handleConnectionOpen', async (e) => {
+            R(this, 'actions', { POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e) }),
+            R(this, 'handleConnectionOpen', async (e) => {
                 let { canReceiveMessage: t, canReceiveUnpublishedMessages: n } = m.Z.getCurrentConfig({ location: 'changelog_manager' }, { autoTrackExposure: !1 }),
                     r = await s.Z.fetchChangelogConfig(),
                     i = r.body,
@@ -92,7 +92,7 @@ class C extends c.Z {
                 )
                     return;
                 if (t) {
-                    (0, u.PR)(A.sP), R(o, n);
+                    (0, u.PR)(A.sP), v(o, n);
                     return;
                 }
                 if (!0 !== i[o].show_on_startup) return;

@@ -362,7 +362,7 @@ function B(e) {
     let { guild: t, prompts: n, step: l, selectOption: c, completeOnboarding: u, setCurrentStep: h, headerId: g, disableTracking: x } = e,
         f = (0, o.e7)([d.Z], () => d.Z.getRulesPrompt(t.id));
     r.useEffect(() => {
-        a.Z.fetchVerificationForm(t.id);
+        a.ZP.fetchVerificationForm(t.id);
     }, [t.id]);
     let _ = n[l],
         N = l + 1 >= n.length && !j(f),

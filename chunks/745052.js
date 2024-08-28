@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(704215),
     u = n(481060),
     _ = n(150063),
-    h = n(45114),
-    E = n(230711),
+    E = n(45114),
+    h = n(230711),
     m = n(112724),
     I = n(183126),
     g = n(607070),
@@ -63,12 +63,12 @@ function ea() {
         d = n.length > 0 ? (null == n ? void 0 : n[0].channel.id) : null,
         _ = (0, G.e)({ location: 'message-request-page-web' });
     a.useEffect(() => {
-        if (!!_ && null != d) (0, h.ES)(d);
+        if (!!_ && null != d) (0, E.ES)(d);
     }, [d, _]);
-    let E = a.useCallback(() => {
+    let h = a.useCallback(() => {
             (0, u.showToast)((0, u.createToast)(et.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE));
         }, []),
-        { rejectAll: m } = (0, V.m)({ onError: E }),
+        { rejectAll: m } = (0, V.m)({ onError: h }),
         g = (0, p.Z)('message-requests-list'),
         { channelId: T } = (0, F._)(),
         S = a.useCallback(() => {
@@ -221,7 +221,7 @@ let er = function (e) {
                                           secondaryButtonCTA: et.Z.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
                                           className: en.messageRequestCoachmark,
                                           onClick: (e) => {
-                                              e.stopPropagation(), E.Z.open(J.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: ee.to.MESSAGE_REQUESTS });
+                                              e.stopPropagation(), h.Z.open(J.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: ee.to.MESSAGE_REQUESTS });
                                           },
                                           markAsDismissed: l,
                                           caretPosition: b.DF.TOP_CENTER,
@@ -251,13 +251,13 @@ let ec = (0, m.Z)(function (e) {
     }, []);
     let s = (0, c.e7)([P.Z], () => P.Z.theme),
         l = (0, z.w)(),
-        [d, h] = a.useState(!1),
-        E = (0, c.e7)([M.ZP], () => {
+        [d, E] = a.useState(!1),
+        h = (0, c.e7)([M.ZP], () => {
             let e = M.ZP.getSidebarState(M.uZ);
             return null != e && e.type === R.tI.VIEW_MESSAGE_REQUEST ? e : null;
         }),
-        m = null == E ? void 0 : E.channelId,
-        I = null != E,
+        m = null == h ? void 0 : h.channelId,
+        I = null != h,
         g = (0, w.T)(m),
         p = (0, k.J)(m);
     a.useEffect(() => {
@@ -317,7 +317,7 @@ let ec = (0, m.Z)(function (e) {
                     (0, i.jsx)(es, {
                         pageWidth: t,
                         onSidebarResize: (e, t) => {
-                            h(t);
+                            E(t);
                         }
                     })
             ]

@@ -49,11 +49,11 @@ let A = {
     };
 t.Z = function (e) {
     var t;
-    let { tabIndex: n, className: a, renderButtonContents: O, active: v, onClick: R, 'aria-controls': C, focusProps: y } = e,
+    let { tabIndex: n, className: a, renderButtonContents: O, active: R, onClick: v, 'aria-controls': C, focusProps: y } = e,
         [D, L] = i.useState(!1),
         [b, M] = i.useState(50),
         P = (0, l.e7)([f.ZP], () => f.ZP.inReverseTrial()),
-        U = D || v,
+        U = D || R,
         w = (0, p.l)(S, 'emojiButton', U ? 'Hovered' : 'Normal');
     let x =
             ((t = b),
@@ -78,7 +78,7 @@ t.Z = function (e) {
         text: N(),
         'aria-label': ''.concat(g.Z.Messages.PREMIUM_REVERSE_TRIAL_EMOJI_TOOLTIP.format()),
         position: 'top',
-        shouldShow: P && !v,
+        shouldShow: P && !R && H,
         tooltipClassName: S.premiumTooltip,
         tooltipContentClassName: S.premiumTooltipContainer,
         children: (e) =>
@@ -99,11 +99,11 @@ t.Z = function (e) {
                 onFocus: B,
                 onClick: (t) => {
                     var n;
-                    null == R || R(t), null === (n = e.onClick) || void 0 === n || n.call(e);
+                    null == v || v(t), null === (n = e.onClick) || void 0 === n || n.call(e);
                 },
                 'aria-label': g.Z.Messages.SELECT_EMOJI,
                 'aria-controls': C,
-                'aria-expanded': v,
+                'aria-expanded': R,
                 'aria-haspopup': 'dialog',
                 focusProps: y,
                 onContextMenu: e.onContextMenu,

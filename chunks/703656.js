@@ -4,13 +4,13 @@ n.d(t, {
         return A;
     },
     DB: function () {
-        return R;
+        return v;
     },
     DR: function () {
         return N;
     },
     Wf: function () {
-        return v;
+        return R;
     },
     XU: function () {
         return m;
@@ -107,7 +107,7 @@ function O(e) {
     }
     return !e.startsWith(c.Z5c.HANDOFF) && !0;
 }
-function v(e) {
+function R(e) {
     if (null == e) {
         var t;
         e = null !== (t = r.location.pathname) && void 0 !== t ? t : '';
@@ -127,7 +127,7 @@ function v(e) {
     else if (e.startsWith(c.Z5c.REPORT_SECOND_LOOK)) return c.Usc.REPORT_SECOND_LOOK;
     return e;
 }
-function R() {
+function v() {
     return E;
 }
 function C() {

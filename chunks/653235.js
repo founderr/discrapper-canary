@@ -38,8 +38,8 @@ function O(e, t, n) {
         e
     );
 }
-let v = (e, t) => (0, r.jsx)(T.G0, { columns: e }, t);
-class R extends i.PureComponent {
+let R = (e, t) => (0, r.jsx)(T.G0, { columns: e }, t);
+class v extends i.PureComponent {
     componentDidMount() {
         0 === this.props.trendingCategories.length && (0, E.Tg)();
     }
@@ -162,7 +162,7 @@ class R extends i.PureComponent {
                     ? (0, r.jsx)(T.u$, {
                           columns: e,
                           width: t,
-                          renderColumn: v
+                          renderColumn: R
                       })
                     : (0, r.jsx)(_.MasonryList, {
                           ref: this._masonryRef,
@@ -191,7 +191,7 @@ function C(e) {
     let t = (0, u.e7)([h.Z], () => h.Z.getTrendingCategories()),
         n = (0, I.gG)(),
         i = (0, g.PY)();
-    return (0, r.jsx)(R, {
+    return (0, r.jsx)(v, {
         ...e,
         ...i,
         trendingCategories: t,

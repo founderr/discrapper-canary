@@ -29,7 +29,7 @@ function p(e) {
         },
         f = async (e) => {
             try {
-                m(e), await d.Z.enableVerificationForm(n.id, e);
+                m(e), await d.ZP.enableVerificationForm(n.id, e);
             } catch {
                 m(u);
             }
@@ -142,10 +142,10 @@ function p(e) {
     });
 }
 async function T(e, n) {
-    await d.Z.updateVerificationForm(e, n);
+    await d.ZP.updateVerificationForm(e, n);
 }
 async function E(e, n) {
-    await d.Z.updateVerificationFormDescription(e, n);
+    await d.ZP.updateVerificationFormDescription(e, n);
 }
 function I(e) {
     var n, t, i;
@@ -159,7 +159,7 @@ function I(e) {
         M = (0, o.e7)([u.Z], () => (null != b ? b : u.Z.get(l.id))),
         j = null !== (t = null == M ? void 0 : M.formFields) && void 0 !== t ? t : [];
     r.useEffect(() => {
-        d.Z.fetchVerificationForm(l.id);
+        d.ZP.fetchVerificationForm(l.id);
     }, [l.id]);
     let R = null != M,
         L = !C;

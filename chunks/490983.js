@@ -21,8 +21,8 @@ var r,
     A = n(246946),
     N = n(230307),
     O = n(799777),
-    v = n(417363),
-    R = n(941128),
+    R = n(417363),
+    v = n(941128),
     C = n(70956),
     y = n(251625),
     D = n(823379),
@@ -50,7 +50,7 @@ let V = {
         [w.iEv.ACTIONS]: null
     },
     H = (0, y.oH)((e) => e.filter((e) => null != e.libraryApplication && e.shouldShowInLibrary)),
-    Z = (0, y.oH)((e) => e.filter((e) => null != e.libraryApplication && v.Z.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
+    Z = (0, y.oH)((e) => e.filter((e) => null != e.libraryApplication && R.Z.isLaunchable(e.libraryApplication.id, e.libraryApplication.branchId))),
     Y = (0, y.oH)((e, t) => e.filter((e) => l()(t.toLowerCase(), e.application.name.toLowerCase()))),
     j = (0, y.oH)((e, t, n, r) => {
         let i = V[t];
@@ -81,27 +81,27 @@ function z() {
                     let o = h.Z.getApplication(e.id);
                     if (null == o) return null;
                     let l = K(o, n);
-                    if ((t.add(e.id), !(0, L.Je)(e) && !v.Z.isInstalled(e.id, e.branchId))) return null;
+                    if ((t.add(e.id), !(0, L.Je)(e) && !R.Z.isInstalled(e.id, e.branchId))) return null;
                     return {
                         key: ''.concat(e.id, '-').concat(e.branchId),
                         application: o,
                         libraryApplication: e,
                         lastPlayed: l,
-                        supportsCloudSync: null != e && v.Z.supportsCloudSync(e.id, e.branchId),
+                        supportsCloudSync: null != e && R.Z.supportsCloudSync(e.id, e.branchId),
                         isNew: ((a = e), (s = l), null != a && _()(a.createdAt).isAfter(x) && 0 === s),
                         isLaunching: I.Z.launchingGames.has(e.id),
                         isRunning: r.has(e.id),
                         isLaunchable: (0, P.t)({
                             LibraryApplicationStore: S.Z,
                             LaunchableGameStore: I.Z,
-                            DispatchApplicationStore: v.Z,
+                            DispatchApplicationStore: R.Z,
                             ConnectedAppsStore: T.Z,
                             applicationId: e.id,
                             branchId: e.branchId
                         }),
                         isUpdatingFlags: S.Z.isUpdatingFlags(e.id, e.branchId),
                         shouldShowInLibrary: (0, L.d0)(o, e, A.Z),
-                        defaultAction: (0, U.i)(e, v.Z, R.Z)
+                        defaultAction: (0, U.i)(e, R.Z, v.Z)
                     };
                 })(r, n, t, e, !0)
             )
@@ -126,7 +126,7 @@ function z() {
                                 isLaunchable: (0, P.t)({
                                     LibraryApplicationStore: S.Z,
                                     LaunchableGameStore: I.Z,
-                                    DispatchApplicationStore: v.Z,
+                                    DispatchApplicationStore: R.Z,
                                     ConnectedAppsStore: T.Z,
                                     applicationId: e,
                                     branchId: null
@@ -157,7 +157,7 @@ function z() {
 }
 class q extends (r = E.ZP.Store) {
     initialize() {
-        this.syncWith([h.Z, g.Z, I.Z, p.ZP, v.Z, R.Z, S.Z, N.Z, A.Z, T.Z], z, 200), this.syncWith([O.Z, m.default], () => !0);
+        this.syncWith([h.Z, g.Z, I.Z, p.ZP, R.Z, v.Z, S.Z, N.Z, A.Z, T.Z], z, 200), this.syncWith([O.Z, m.default], () => !0);
     }
     get applicationFilterQuery() {
         return k;

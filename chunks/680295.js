@@ -25,7 +25,7 @@ let T = (e) => {
             A = i.useRef(null),
             [N, O] = i.useState([]);
         (0, p.Z)(T);
-        let [v, R] = i.useState(0),
+        let [R, v] = i.useState(0),
             [C, y] = i.useState(0),
             { accessibilityLabel: D } = T,
             [L, b] = i.useState(-S),
@@ -46,14 +46,14 @@ let T = (e) => {
                     let r = n.start + n.duration;
                     r > e && (e = r), n.loop && n.start < t && (t = n.start);
                 }),
-                    R(t),
+                    v(t),
                     y(e);
             }, [y, N]);
         let [w, x] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !0 !== u && !o && (M(), b(0)), !o && w && U.current && (M(), b(0)), a && o && !U.current && (P(), T.animationType === d.Q.PERSISTENT ? b(h === d.j.FromStart ? 0 : v) : b(0));
-            }, [o, w, v, a, M, P, U, T.animationType, u, h]),
+                !0 !== u && !o && (M(), b(0)), !o && w && U.current && (M(), b(0)), a && o && !U.current && (P(), T.animationType === d.Q.PERSISTENT ? b(h === d.j.FromStart ? 0 : R) : b(0));
+            }, [o, w, R, a, M, P, U, T.animationType, u, h]),
             (0, r.jsx)('div', {
                 ref: A,
                 className: s()(m.profileEffects, { [m.hovered]: o && l }),

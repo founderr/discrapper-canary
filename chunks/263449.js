@@ -1,56 +1,56 @@
-n.d(e, {
+r.d(t, {
     $e: function () {
-        return l;
-    },
-    aF: function () {
         return c;
     },
+    aF: function () {
+        return E;
+    },
     lW: function () {
-        return a;
+        return s;
     },
     nZ: function () {
-        return u;
+        return _;
     },
     s3: function () {
-        return h;
+        return u;
     },
     wi: function () {
-        return f;
+        return I;
     }
 });
-var r = n(899517),
-    i = n(833873),
-    s = n(356442),
-    o = n(307854);
+var n = r(899517),
+    a = r(833873),
+    o = r(356442),
+    i = r(307854);
+function _() {
+    let e = (0, o.c)();
+    return (0, a.G)(e).getCurrentScope();
+}
+function E() {
+    let e = (0, o.c)();
+    return (0, a.G)(e).getIsolationScope();
+}
+function s() {
+    return (0, n.Y)('globalScope', () => new i.s());
+}
+function c(...e) {
+    let t = (0, o.c)(),
+        r = (0, a.G)(t);
+    if (2 === e.length) {
+        let [t, n] = e;
+        return t ? r.withSetScope(t, n) : r.withScope(n);
+    }
+    return r.withScope(e[0]);
+}
+function I(...e) {
+    let t = (0, o.c)(),
+        r = (0, a.G)(t);
+    if (2 === e.length) {
+        let [t, n] = e;
+        return t ? r.withSetIsolationScope(t, n) : r.withIsolationScope(n);
+    }
+    return r.withIsolationScope(e[0]);
+}
 function u() {
-    let t = (0, s.c)();
-    return (0, i.G)(t).getCurrentScope();
-}
-function c() {
-    let t = (0, s.c)();
-    return (0, i.G)(t).getIsolationScope();
-}
-function a() {
-    return (0, r.Y)('globalScope', () => new o.s());
-}
-function l(...t) {
-    let e = (0, s.c)(),
-        n = (0, i.G)(e);
-    if (2 === t.length) {
-        let [e, r] = t;
-        return e ? n.withSetScope(e, r) : n.withScope(r);
-    }
-    return n.withScope(t[0]);
-}
-function f(...t) {
-    let e = (0, s.c)(),
-        n = (0, i.G)(e);
-    if (2 === t.length) {
-        let [e, r] = t;
-        return e ? n.withSetIsolationScope(e, r) : n.withIsolationScope(r);
-    }
-    return n.withIsolationScope(t[0]);
-}
-function h() {
-    return u().getClient();
+    return _().getClient();
 }

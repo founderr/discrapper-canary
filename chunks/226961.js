@@ -6,7 +6,7 @@ n.d(t, {
         return I;
     },
     fZ: function () {
-        return v;
+        return R;
     }
 }),
     n(47120),
@@ -91,19 +91,19 @@ let S = g.empty(),
 function O(e, t, n) {
     return ''.concat(e, ':').concat(t, ':').concat(n);
 }
-function v(e) {
+function R(e) {
     let [t, n] = e.split(':');
     return {
         context: t,
         section: n
     };
 }
-function R() {
+function v() {
     Object.values(d.Yn).forEach((e) => {
         h[e] = {};
     });
 }
-R();
+v();
 function C() {
     null != N && (N.destroy(), (N = null));
 }
@@ -244,7 +244,7 @@ _(y, 'displayName', 'RTCDebugStore'),
             p.set(T(t, n), r);
         },
         VOICE_CHANNEL_SELECT: function (e) {
-            null != e.channelId && (R(), p.clear());
+            null != e.channelId && (v(), p.clear());
         },
         RTC_CONNECTION_VIDEO: function (e) {
             if (null === e.streamId) {

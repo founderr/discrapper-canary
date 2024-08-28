@@ -21,8 +21,8 @@ var r,
     A = n(978519),
     N = n(706454),
     O = n(581883),
-    v = n(271383),
-    R = n(93093),
+    R = n(271383),
+    v = n(93093),
     C = n(430824),
     y = n(771845),
     D = n(594174),
@@ -72,7 +72,7 @@ class Q {
     }
     isUsable(e) {
         if (0 === e.roles.length) return !0;
-        let t = v.ZP.getMember(this.id, this._userId);
+        let t = R.ZP.getMember(this.id, this._userId);
         return null != t && (!!(t.roles.some((t) => e.roles.includes(t)) || (0, g.yH)(e)) || !1);
     }
     get rawEmojis() {
@@ -430,7 +430,7 @@ function eT(e) {
 }
 class eg extends (i = d.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(f.Z, R.Z, v.ZP, C.Z, N.default, S.Z, F.Z, D.default, m.Z), null != e && (null != e.pendingUsages && (q.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (q.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([O.Z], ep), this.syncWith([m.Z], eI);
+        this.waitFor(f.Z, v.Z, R.ZP, C.Z, N.default, S.Z, F.Z, D.default, m.Z), null != e && (null != e.pendingUsages && (q.pendingUsages = e.pendingUsages), null != e.emojiReactionPendingUsages && (q.emojiReactionPendingUsages = e.emojiReactionPendingUsages), null != e.expandedSectionsByGuildIds && (q.expandedSectionsByGuildIds = new Set(e.expandedSectionsByGuildIds))), this.syncWith([O.Z], ep), this.syncWith([m.Z], eI);
     }
     getState() {
         return q;
@@ -592,7 +592,7 @@ W(eg, 'displayName', 'EmojiStore'),
         },
         CACHED_EMOJIS_LOADED: function (e) {
             let { emojis: t } = e;
-            for (let [e, n] of t) !Object.hasOwn(et, e) && R.Z.isMember(e) && eh(e, n);
+            for (let [e, n] of t) !Object.hasOwn(et, e) && v.Z.isMember(e) && eh(e, n);
             ef();
         },
         GUILD_MEMBER_UPDATE: function (e) {

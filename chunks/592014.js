@@ -1,16 +1,16 @@
-n.d(e, {
+r.d(t, {
     T: function () {
-        return o;
+        return i;
     },
     X: function () {
-        return s;
+        return o;
     }
 });
-var r = n(899517),
-    i = n(307854);
-function s() {
-    return (0, r.Y)('defaultCurrentScope', () => new i.s());
-}
+var n = r(899517),
+    a = r(307854);
 function o() {
-    return (0, r.Y)('defaultIsolationScope', () => new i.s());
+    return (0, n.Y)('defaultCurrentScope', () => new a.s());
+}
+function i() {
+    return (0, n.Y)('defaultIsolationScope', () => new a.s());
 }

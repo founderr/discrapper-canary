@@ -1,4 +1,4 @@
-var r = Object.prototype.toString;
-t.exports = function (t) {
-    return r.call(t);
+var t = Object.prototype.toString;
+e.exports = function (e) {
+    return t.call(e);
 };

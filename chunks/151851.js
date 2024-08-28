@@ -26,8 +26,8 @@ var i = n(120356),
     A = n(689938),
     N = n(949011);
 let O = (e) => S.ZP.close(e),
-    v = (e) => S.ZP.minimize(e),
-    R = (e, t) => {
+    R = (e) => S.ZP.minimize(e),
+    v = (e, t) => {
         (0, T.isMac)() && !t.altKey ? S.ZP.fullscreen(e) : S.ZP.maximize(e);
     },
     C = (e) => {
@@ -48,14 +48,14 @@ let O = (e) => S.ZP.close(e),
                 }),
                 (0, r.jsx)(o.Clickable, {
                     className: N.winButtonMinMax,
-                    onClick: (e) => R(t, e),
+                    onClick: (e) => v(t, e),
                     'aria-label': A.Z.Messages.TITLE_BAR_MAXIMIZE_WINDOW,
                     tabIndex: -1,
                     children: (0, r.jsx)(h.Z, {})
                 }),
                 (0, r.jsx)(o.Clickable, {
                     className: N.winButtonMinMax,
-                    onClick: () => v(t),
+                    onClick: () => R(t),
                     'aria-label': A.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                     tabIndex: -1,
                     children: (0, r.jsx)(I.Z, {})
@@ -84,14 +84,14 @@ let O = (e) => S.ZP.close(e),
                               }),
                               (0, r.jsx)(o.Clickable, {
                                   className: N.macButtonMinimize,
-                                  onClick: () => v(n),
+                                  onClick: () => R(n),
                                   'aria-label': A.Z.Messages.TITLE_BAR_MINIMIZE_WINDOW,
                                   tabIndex: -1,
                                   children: (0, r.jsx)(m.Z, { color: '#975500' })
                               }),
                               (0, r.jsx)(o.Clickable, {
                                   className: N.macButtonMaximize,
-                                  onClick: (e) => R(n, e),
+                                  onClick: (e) => v(n, e),
                                   'aria-label': A.Z.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
                                   tabIndex: -1,
                                   children: (0, r.jsx)(p.Z, { color: '#006500' })

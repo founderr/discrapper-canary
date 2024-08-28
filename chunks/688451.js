@@ -155,9 +155,9 @@ function O(e, t) {
     t._ = t.p.length;
     var n = t.p[0],
         i = void 0 !== e && e !== n;
-    return t.h.O || I('ES5').S(t, e, i), i ? (n[H].P && (g(t), r(4)), a(e) && ((e = v(t, e)), t.l || C(t, e)), t.u && I('Patches').M(n[H].t, e, t.u, t.s)) : (e = v(t, n, [])), g(t), t.u && t.v(t.u, t.s), e !== F ? e : void 0;
+    return t.h.O || I('ES5').S(t, e, i), i ? (n[H].P && (g(t), r(4)), a(e) && ((e = R(t, e)), t.l || C(t, e)), t.u && I('Patches').M(n[H].t, e, t.u, t.s)) : (e = R(t, n, [])), g(t), t.u && t.v(t.u, t.s), e !== F ? e : void 0;
 }
-function v(e, t, n) {
+function R(e, t, n) {
     if (p(t)) return t;
     var r = t[H];
     if (!r)
@@ -165,7 +165,7 @@ function v(e, t, n) {
             s(
                 t,
                 function (i, a) {
-                    return R(e, r, t, i, a, n);
+                    return v(e, r, t, i, a, n);
                 },
                 !0
             ),
@@ -180,22 +180,22 @@ function v(e, t, n) {
             o = !1;
         3 === r.i && ((a = new Set(i)), i.clear(), (o = !0)),
             s(a, function (t, a) {
-                return R(e, r, i, t, a, n, o);
+                return v(e, r, i, t, a, n, o);
             }),
             C(e, i, !1),
             n && e.u && I('Patches').N(r, n, e.u, e.s);
     }
     return r.o;
 }
-function R(e, t, n, r, s, o, c) {
+function v(e, t, n, r, s, o, c) {
     if (i(s)) {
-        var d = v(e, s, o && t && 3 !== t.i && !l(t.R, r) ? o.concat(r) : void 0);
+        var d = R(e, s, o && t && 3 !== t.i && !l(t.R, r) ? o.concat(r) : void 0);
         if ((u(n, r, d), !i(d))) return;
         e.m = !1;
     } else c && n.add(s);
     if (a(s) && !p(s)) {
         if (!e.h.D && e._ < 1) return;
-        v(e, s), (t && t.A.l) || C(e, s);
+        R(e, s), (t && t.A.l) || C(e, s);
     }
 }
 function C(e, t, n) {

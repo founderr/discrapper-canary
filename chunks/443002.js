@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(827842);
 t.Z = function (e) {
     let { analyticsLocation: t, guild: n, onClose: N } = e,
-        [O, v] = i.useState(!0),
-        R = i.useRef(!1),
+        [O, R] = i.useState(!0),
+        v = i.useRef(!1),
         C = (0, a.Z)(() => Date.now()),
         { analyticsLocations: y } = (0, u.ZP)(),
         D = i.useCallback(() => {
@@ -39,7 +39,7 @@ t.Z = function (e) {
         L = i.useCallback(
             (e) => {
                 e &&
-                    !R.current &&
+                    !v.current &&
                     (c.default.track(g.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
                         type: g.ZY5.PREMIUM_GUILD_USER_MODAL,
                         location_stack: y,
@@ -47,7 +47,7 @@ t.Z = function (e) {
                         location_object: t.object,
                         guild_id: n.id
                     }),
-                    (R.current = !0));
+                    (v.current = !0));
             },
             [t, y, n.id]
         );
@@ -101,7 +101,7 @@ t.Z = function (e) {
                                         (0, r.jsx)(_.Z, {
                                             guild: n,
                                             closeLayer: D,
-                                            onCtaVisibilityChange: v
+                                            onCtaVisibilityChange: R
                                         }),
                                         (0, r.jsx)(h.Z, { guild: n }),
                                         (0, r.jsx)(p.Z, { guild: n })

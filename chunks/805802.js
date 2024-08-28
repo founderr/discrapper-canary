@@ -115,28 +115,28 @@ function c(e, t) {
                 N = I.tzid,
                 O = !1 === t.cache;
             if ((t.compatible && ((t.forceset = !0), (t.unfold = !0)), t.forceset || m.length > 1 || T.length || g.length || S.length)) {
-                var v = new a.p(O);
+                var R = new a.p(O);
                 return (
-                    v.dtstart(A),
-                    v.tzid(N || void 0),
+                    R.dtstart(A),
+                    R.tzid(N || void 0),
                     m.forEach(function (e) {
-                        v.rrule(new i.Ci(d(e, A, N), O));
+                        R.rrule(new i.Ci(d(e, A, N), O));
                     }),
                     T.forEach(function (e) {
-                        v.rdate(e);
+                        R.rdate(e);
                     }),
                     g.forEach(function (e) {
-                        v.exrule(new i.Ci(d(e, A, N), O));
+                        R.exrule(new i.Ci(d(e, A, N), O));
                     }),
                     S.forEach(function (e) {
-                        v.exdate(e);
+                        R.exdate(e);
                     }),
-                    t.compatible && t.dtstart && v.rdate(A),
-                    v
+                    t.compatible && t.dtstart && R.rdate(A),
+                    R
                 );
             }
-            var R = m[0] || {};
-            return new i.Ci(d(R, R.dtstart || t.dtstart || A, R.tzid || t.tzid || N), O);
+            var v = m[0] || {};
+            return new i.Ci(d(v, v.dtstart || t.dtstart || A, v.tzid || t.tzid || N), O);
         })(
             e,
             (function (e) {

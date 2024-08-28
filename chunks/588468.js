@@ -30,8 +30,8 @@ var r,
     A = n(430824),
     N = n(699516),
     O = n(594174),
-    v = n(768581),
-    R = n(51144),
+    R = n(768581),
+    v = n(51144),
     C = n(965386),
     y = n(981631),
     D = n(185923),
@@ -206,10 +206,10 @@ M(
                                 status: r
                             })
                         }),
-                        (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: null !== (e = null != n ? n : o) && void 0 !== e ? e : R.ZP.getName(t) }) }),
+                        (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: null !== (e = null != n ? n : o) && void 0 !== e ? e : v.ZP.getName(t) }) }),
                         (0, i.jsxs)(C.dY, {
                             children: [
-                                R.ZP.getUserTag(t, {
+                                v.ZP.getUserTag(t, {
                                     mode: 'username',
                                     identifiable: a ? 'never' : 'always'
                                 }),
@@ -333,7 +333,7 @@ M(
                                   className: b.emojiImage,
                                   src:
                                       null != e.id
-                                          ? v.ZP.getEmojiURL({
+                                          ? R.ZP.getEmojiURL({
                                                 id: e.id,
                                                 animated: e.animated && r,
                                                 size: D.$U

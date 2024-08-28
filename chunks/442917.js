@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(221888),
     N = n(933557),
     O = n(569545),
-    v = n(74299),
-    R = n(863908),
+    R = n(74299),
+    v = n(863908),
     C = n(803647),
     y = n(266910),
     D = n(788983),
@@ -97,7 +97,7 @@ class el extends i.PureComponent {
         let { participantOnScreen: e, currentUserId: t } = this.props;
         if (!(0, ei._5)(e)) return null;
         let n = this.activeStreamForSelectedParticipant;
-        return null == n ? null : (0, R.Z)(n, e.user, e.user.id === t, this.streamerPaused);
+        return null == n ? null : (0, v.Z)(n, e.user, e.user.id === t, this.streamerPaused);
     }
     isEmptyBroadcast() {
         var e;
@@ -307,7 +307,7 @@ t.Z = d.ZP.connectStores([F.Z, g.Z, B.default, Z.Z, Y.Z, k.Z, j.Z], (e) => {
         a = null == i || i.disabled,
         s = null != r && r.type !== ei.fO.ACTIVITY && r.type !== ei.fO.HIDDEN_STREAM ? Y.Z.getStreamId(r.user.id, t.getGuildId(), (0, S.Z)(r.type)) : null,
         o = !a && F.Z.isVideoEnabled(),
-        l = (0, v.Z)(F.Z),
+        l = (0, R.Z)(F.Z),
         u = B.default.getId(),
         d = k.Z.getCurrentUserActiveStream(),
         _ = (0, m.tA)(t.id);

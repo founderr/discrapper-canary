@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return v;
     },
     a: function () {
         return i;
@@ -28,7 +28,7 @@ var r,
     A = n(944192),
     N = n(981631),
     O = n(438379);
-function v(e) {
+function R(e) {
     let { compact: t } = e;
     return (0, a.jsx)(h.Z, {
         className: t ? O.botTagCompact : O.botTagCozy,
@@ -36,10 +36,10 @@ function v(e) {
         useRemSizes: !0
     });
 }
-function R(e) {
+function v(e) {
     var t;
     let n,
-        { author: r, message: i, channel: o, userOverride: h, compact: R = !1, withMentionPrefix: C = !1, showPopout: y = !1, className: D, onClick: L, onContextMenu: b, onPopoutRequestClose: M, renderPopout: P, renderRemixTag: U = !1, decorations: w } = e,
+        { author: r, message: i, channel: o, userOverride: h, compact: v = !1, withMentionPrefix: C = !1, showPopout: y = !1, className: D, onClick: L, onContextMenu: b, onPopoutRequestClose: M, renderPopout: P, renderRemixTag: U = !1, decorations: w } = e,
         x = s.useContext(I.Z),
         G = null !== (t = null == o ? void 0 : o.guild_id) && void 0 !== t ? t : x,
         { analyticsLocations: k } = (0, f.ZP)(E.Z.USERNAME),
@@ -64,7 +64,7 @@ function R(e) {
         },
         K = s.useMemo(
             () =>
-                R
+                v
                     ? (0, a.jsx)(p.ZP, {
                           clan: r.clan,
                           userId: i.author.id,
@@ -73,7 +73,7 @@ function R(e) {
                           profileViewedAnalytics: j
                       })
                     : null,
-            [R, j, r.clan, G, i.author.id]
+            [v, j, r.clan, G, i.author.id]
         );
     n =
         null != P && null != y
@@ -131,7 +131,7 @@ function R(e) {
     return (0, a.jsxs)(f.Gt, {
         value: k,
         children: [
-            null != z && R
+            null != z && v
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [' ', z, ' ']
                   })
@@ -144,7 +144,7 @@ function R(e) {
                   })
                 : null,
             n,
-            !R &&
+            !v &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(p.ZP, {
@@ -158,8 +158,8 @@ function R(e) {
                     ]
                 }),
             null != q ? (0, a.jsx)(a.Fragment, { children: q }) : null,
-            null == z || R ? null : z,
-            null != i && (0, S.f)(i) && Y && U ? (0, a.jsx)(v, {}) : null
+            null == z || v ? null : z,
+            null != i && (0, S.f)(i) && Y && U ? (0, a.jsx)(R, {}) : null
         ]
     });
 }

@@ -33,8 +33,8 @@ let p = 'default',
     A = null,
     N = {},
     O = null,
-    v = null,
-    R = {},
+    R = null,
+    v = {},
     C = {
         clipsEnabled: !1,
         storageLocation: p,
@@ -90,14 +90,14 @@ class L extends (r = i.ZP.DeviceSettingsStore) {
         return S === e;
     }
     getActiveAnimation() {
-        return v;
+        return R;
     }
     getStreamClipAnimations(e) {
         var t;
-        return null !== (t = R[e]) && void 0 !== t ? t : I;
+        return null !== (t = v[e]) && void 0 !== t ? t : I;
     }
     hasAnyClipAnimations() {
-        return Object.values(R).some((e) => e.length > 0);
+        return Object.values(v).some((e) => e.length > 0);
     }
     getHardwareClassification() {
         return y.hardwareClassification;
@@ -284,9 +284,9 @@ let b = new L(a.Z, {
         if (((g += 1), (y.hasTakenDecoupledClip = y.hasTakenDecoupledClip || t === _.X9.DECOUPLED), null != n && null != r)) {
             var i;
             let e = Date.now();
-            (v = null != v ? v : e),
-                (R[n] = [
-                    ...(null !== (i = R[n]) && void 0 !== i ? i : []),
+            (R = null != R ? R : e),
+                (v[n] = [
+                    ...(null !== (i = v[n]) && void 0 !== i ? i : []),
                     {
                         timestamp: e,
                         thumbnail: r
@@ -299,7 +299,7 @@ let b = new L(a.Z, {
     },
     CLIPS_SAVE_ANIMATION_END: function (e) {
         let { streamKey: t, timestamp: n } = e;
-        v === n && (v = null), null == n ? (R[t] = []) : (R[t] = R[t].filter((e) => e.timestamp !== n));
+        R === n && (R = null), null == n ? (v[t] = []) : (v[t] = v[t].filter((e) => e.timestamp !== n));
     },
     STREAM_START: function (e) {
         let { sourceName: t, pid: n } = e;
@@ -319,7 +319,7 @@ let b = new L(a.Z, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        if (((v = null), (R[t] = []), null == A || (0, l.my)(t).ownerId !== u.default.getId())) return !1;
+        if (((R = null), (v[t] = []), null == A || (0, l.my)(t).ownerId !== u.default.getId())) return !1;
         A =
             0 === A.newClipIds.length
                 ? null

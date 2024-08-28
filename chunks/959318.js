@@ -1,5 +1,5 @@
-var e = r(680625);
-t.exports = function (t) {
-    var n = +t;
-    return n != n || 0 === n ? 0 : e(n);
+var n = r(680625);
+e.exports = function (e) {
+    var t = +e;
+    return t != t || 0 === t ? 0 : n(t);
 };

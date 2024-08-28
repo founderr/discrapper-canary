@@ -37,8 +37,8 @@ var r = n(852163),
     A = n(83632),
     N = n(446405),
     O = n(17749),
-    v = n(360587),
-    R = n(651847),
+    R = n(360587),
+    v = n(651847),
     C = n(483578),
     y = n(392107),
     D = n(747658),
@@ -131,8 +131,8 @@ q = {
     'nb-NO': A.Z,
     'nl-NL': N.Z,
     'pl-PL': O.Z,
-    'pt-BR': v.Z,
-    'pt-PT': R.Z,
+    'pt-BR': R.Z,
+    'pt-PT': v.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
     'sk-SK': D.Z,
@@ -219,7 +219,7 @@ function ee(e, t, n) {
         value: (null === (r = t.value) || void 0 === r ? void 0 : r.toString()) || ''
     };
     'native' === e.validationBehavior && ((O.type = 'text'), (O.hidden = !0), (O.required = e.isRequired), (O.onChange = () => {}));
-    let v = (0, k.zL)(e);
+    let R = (0, k.zL)(e);
     return {
         labelProps: {
             ...l,
@@ -227,7 +227,7 @@ function ee(e, t, n) {
                 S.focusFirst();
             }
         },
-        fieldProps: (0, k.dG)(v, i, A, E, {
+        fieldProps: (0, k.dG)(R, i, A, E, {
             onKeyDown(t) {
                 e.onKeyDown && e.onKeyDown(t);
             },
@@ -540,7 +540,7 @@ function ei(e, t, n) {
                 document.activeElement === e && !u.focusPrevious() && u.focusNext();
             };
         }, [n, u]);
-    let v =
+    let R =
         (0, k.gn)() || 'timeZoneName' === e.type
             ? {
                   role: 'textbox',
@@ -551,7 +551,7 @@ function ei(e, t, n) {
               }
             : {};
     e !== (0, F.useMemo)(() => t.segments.find((e) => e.isEditable), [t.segments]) && !t.isInvalid && (l = void 0);
-    let R = (0, k.Me)(),
+    let v = (0, k.Me)(),
         C = !t.isDisabled && !t.isReadOnly && e.isEditable,
         y = 'literal' === e.type ? '' : a.of(e.type),
         D = (0, k.bE)({
@@ -562,8 +562,8 @@ function ei(e, t, n) {
         ? { segmentProps: { 'aria-hidden': !0 } }
         : {
               segmentProps: (0, k.dG)(f, D, {
-                  id: R,
-                  ...v,
+                  id: v,
+                  ...R,
                   'aria-invalid': t.isInvalid ? 'true' : void 0,
                   'aria-describedby': l,
                   'aria-readonly': t.isReadOnly || !e.isEditable ? 'true' : void 0,
@@ -635,7 +635,7 @@ function ea(e, t, n) {
         A = Q(t, n),
         N = [I['aria-describedby'], c['aria-describedby']].filter(Boolean).join(' ') || void 0,
         O = (0, F.useMemo)(() => (0, G.E7)(n, { accept: (e) => e.id !== g }), [n, g]),
-        v = {
+        R = {
             [J]: O,
             [$]: 'presentation',
             'aria-describedby': N,
@@ -649,7 +649,7 @@ function ea(e, t, n) {
             isRequired: e.isRequired,
             validationBehavior: e.validationBehavior
         },
-        R = (0, k.zL)(e),
+        v = (0, k.zL)(e),
         { focusWithinProps: C } = (0, H.L_)({
             ...e,
             isDisabled: t.isOpen,
@@ -660,7 +660,7 @@ function ea(e, t, n) {
         y = (0, F.useRef)(B.PS),
         D = (0, F.useRef)(B.PS);
     return {
-        groupProps: (0, k.dG)(R, A, c, I, C, {
+        groupProps: (0, k.dG)(v, A, c, I, C, {
             role: 'group',
             'aria-disabled': e.isDisabled || null,
             'aria-describedby': N,
@@ -694,7 +694,7 @@ function ea(e, t, n) {
         },
         startFieldProps: {
             ...m,
-            ...v,
+            ...R,
             value: null === (r = t.value) || void 0 === r ? void 0 : r.start,
             onChange: (e) => t.setDateTime('start', e),
             autoFocus: e.autoFocus,
@@ -711,7 +711,7 @@ function ea(e, t, n) {
         },
         endFieldProps: {
             ...T,
-            ...v,
+            ...R,
             value: null === (i = t.value) || void 0 === i ? void 0 : i.end,
             onChange: (e) => t.setDateTime('end', e),
             name: e.endName,

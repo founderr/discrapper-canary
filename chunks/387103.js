@@ -27,7 +27,7 @@ n.d(t, {
         return A;
     },
     PA: function () {
-        return R;
+        return v;
     },
     Vf: function () {
         return N;
@@ -54,7 +54,7 @@ n.d(t, {
         return f;
     },
     jx: function () {
-        return v;
+        return R;
     },
     l7: function () {
         return b;
@@ -294,10 +294,10 @@ function N(e) {
 function O(e) {
     return A(e.subtract({ months: e.month - 1 }));
 }
-function v(e) {
+function R(e) {
     return e.calendar.getMinimumMonthInYear ? e.calendar.getMinimumMonthInYear(e) : 1;
 }
-function R(e) {
+function v(e) {
     return e.calendar.getMinimumDayInMonth ? e.calendar.getMinimumDayInMonth(e) : 1;
 }
 function C(e, t) {
@@ -846,14 +846,14 @@ class eS {
         return (
             (function () {
                 return (
-                    null == ev &&
-                        (ev =
+                    null == eR &&
+                        (eR =
                             'h12' ===
                             new Intl.DateTimeFormat('fr', {
                                 hour: 'numeric',
                                 hour12: !1
                             }).resolvedOptions().hourCycle),
-                    ev
+                    eR
                 );
             })() &&
                 (!this.resolvedHourCycle &&
@@ -918,4 +918,4 @@ function eN(e, t = {}) {
     return eg.set(n, r), r;
 }
 let eO = null,
-    ev = null;
+    eR = null;

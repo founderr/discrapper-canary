@@ -21,13 +21,13 @@ var r = n(735250),
     A = n(252618),
     N = n(587061),
     O = n(392358),
-    v = n(981631);
+    R = n(981631);
 n(243997);
-let R = new Set([v.Z5c.LOGIN, v.Z5c.REGISTER]);
+let v = new Set([R.Z5c.LOGIN, R.Z5c.REGISTER]);
 t.Z = i.memo(function (e) {
     let { children: t, skipsSettingDefaultPageTitle: a } = e;
     (0, A.ZD)({ skipsSettingDefaultPageTitle: a });
-    let { clientThemesClassName: v, clientThemesCSS: C } = (0, f.ZP)(),
+    let { clientThemesClassName: R, clientThemesCSS: C } = (0, f.ZP)(),
         y = i.createElement('style', { [f.PQ]: !0 }, C);
     return (0, r.jsxs)(o.ql, {
         children: [
@@ -41,7 +41,7 @@ t.Z = i.memo(function (e) {
                     {
                         fontScale: f,
                         fontScaleClass: A,
-                        keyboardModeEnabled: v,
+                        keyboardModeEnabled: R,
                         saturation: C,
                         desaturateUserColors: y,
                         useForcedColors: D,
@@ -59,7 +59,7 @@ t.Z = i.memo(function (e) {
                         };
                     }),
                     b = (0, l.TH)(),
-                    M = i.useMemo(() => R.has(b.pathname), [b.pathname]);
+                    M = i.useMemo(() => v.has(b.pathname), [b.pathname]);
                 (0, N.Z)(window, M);
                 let P = (0, O.Z)(window, __OVERLAY__ || a),
                     U = (0, c.e7)([p.Z], () => p.Z.sidebarWidth),
@@ -74,7 +74,7 @@ t.Z = i.memo(function (e) {
                         {
                             overlay: __OVERLAY__,
                             'mouse-mode': P,
-                            'keyboard-mode': v,
+                            'keyboard-mode': R,
                             'reduce-motion': o.enabled,
                             'full-motion': !o.enabled,
                             'is-mobile': u.tq,
@@ -94,7 +94,7 @@ t.Z = i.memo(function (e) {
                         A
                     )
                 });
-            })(v),
+            })(R),
             (function () {
                 let [e, t] = i.useState([]);
                 return (

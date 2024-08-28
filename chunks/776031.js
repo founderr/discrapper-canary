@@ -24,8 +24,8 @@ var r = n(735250),
     S = n(689938);
 function A(e, t) {
     let { preset: A, resolution: N, fps: O } = (0, s.cj)([f.Z], () => f.Z.getState()),
-        v = (0, s.e7)([p.Z], () => p.Z.getGoLiveSource()),
-        R = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
+        R = (0, s.e7)([p.Z], () => p.Z.getGoLiveSource()),
+        v = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
         C = (0, s.e7)([h.Z], () => {
             var t;
             return null === (t = h.Z.getGuild(null == e ? void 0 : e.guildId)) || void 0 === t ? void 0 : t.premiumTier;
@@ -35,7 +35,7 @@ function A(e, t) {
         b = i.useCallback(
             (e, i, a, s) => {
                 if (e) {
-                    if (null != v) {
+                    if (null != R) {
                         let e = {
                             qualityOptions: {
                                 preset: T.tI.PRESET_CUSTOM,
@@ -44,15 +44,15 @@ function A(e, t) {
                             },
                             context: g.Yn.STREAM
                         };
-                        null != v.desktopSource
+                        null != R.desktopSource
                             ? (e.desktopSettings = {
-                                  sourceId: v.desktopSource.id,
+                                  sourceId: R.desktopSource.id,
                                   sound: !0
                               })
-                            : null != v.cameraSource &&
+                            : null != R.cameraSource &&
                               (e.cameraSettings = {
-                                  videoDeviceGuid: v.cameraSource.videoDeviceGuid,
-                                  audioDeviceGuid: v.cameraSource.audioDeviceGuid
+                                  videoDeviceGuid: R.cameraSource.videoDeviceGuid,
+                                  audioDeviceGuid: R.cameraSource.audioDeviceGuid
                               }),
                             D && (0, E.J1)(!(0, _.mc)(i, a)),
                             l.Z.setGoLiveSource(e);
@@ -78,13 +78,13 @@ function A(e, t) {
                         );
                 }
             },
-            [t, y, v, D]
+            [t, y, R, D]
         );
     if (null == e) return null;
     let M = A === T.tI.PRESET_DOCUMENTS ? T.ws.FPS_30 : O,
         P = T.af.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(T.tI.PRESET_CUSTOM, N, t, R, C);
+                i = (0, c.Z)(T.tI.PRESET_CUSTOM, N, t, v, C);
             return (
                 D && !L && (i = !1),
                 (0, r.jsx)(
@@ -102,7 +102,7 @@ function A(e, t) {
         }),
         U = T.km.map((e) => {
             let { value: t, label: n } = e,
-                i = (0, c.Z)(T.tI.PRESET_CUSTOM, t, M, R, C);
+                i = (0, c.Z)(T.tI.PRESET_CUSTOM, t, M, v, C);
             return (
                 D && !L && (i = !1),
                 (0, r.jsx)(

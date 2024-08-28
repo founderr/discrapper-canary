@@ -21,8 +21,8 @@ var r,
     A = n(373228),
     N = n(378233),
     O = n(419922),
-    v = n(490095),
-    R = n(652136),
+    R = n(490095),
+    v = n(652136),
     C = n(695346),
     y = n(626135),
     D = n(280930),
@@ -58,7 +58,7 @@ function k(e) {
                 sticker: s,
                 className: P.__invalid_sticker
             }),
-            r !== g.eb.SENDABLE && (0, a.jsx)(v.Z, { size: 14 })
+            r !== g.eb.SENDABLE && (0, a.jsx)(R.Z, { size: 14 })
         ]
     });
 }
@@ -67,7 +67,7 @@ t.Z = s.memo(function (e) {
     var t;
     let { editorRef: n, channel: r, isEditorFocused: i, onSelectSticker: o, stickerIconVisible: _ = !1, submitButtonVisible: E = !1 } = e,
         m = s.useContext(I.ZP),
-        [O, v] = s.useState(null),
+        [O, R] = s.useState(null),
         [U, w] = s.useState(!1),
         [B, F] = s.useState(null),
         V = (0, T.Iu)((e) => null != e.activeView),
@@ -82,7 +82,7 @@ t.Z = s.memo(function (e) {
             setTextInputValue: Y,
             setHasDismissed: w,
             setHasSelection: Q,
-            setFocusedSuggestionType: v
+            setFocusedSuggestionType: R
         });
     s.useEffect(() => {
         let e = (e) => {
@@ -92,7 +92,7 @@ t.Z = s.memo(function (e) {
                 let t = '' !== e && null != e;
                 if ((Q(t), t)) {
                     var r;
-                    v(null), null === (r = n.current) || void 0 === r || r.focus();
+                    R(null), null === (r = n.current) || void 0 === r || r.focus();
                 }
             };
         return (
@@ -160,7 +160,7 @@ t.Z = s.memo(function (e) {
             hasStickerResults: er,
             shouldRenderSuggestions: ei,
             focusedSuggestionType: O,
-            setFocusedSuggestionType: v,
+            setFocusedSuggestionType: R,
             setHasDismissed: w,
             setFocusedStickerListItem: F,
             setTextInputValue: Y
@@ -178,7 +178,7 @@ t.Z = s.memo(function (e) {
                 else if ((0, N.jl)(e)) {
                     let t = S.Z.getStickerPack(e.pack_id);
                     null != t &&
-                        (0, R.Z)({
+                        (0, v.Z)({
                             stickerPack: t,
                             analyticsLocations: $
                         });

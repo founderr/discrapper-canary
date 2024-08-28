@@ -124,30 +124,30 @@ e.exports = function (e) {
             end: /"""/,
             relevance: 2
         },
-        v = {
+        R = {
             scope: 'subst',
             begin: /\{/,
             end: /\}/,
             keywords: o
         },
-        R = {
+        v = {
             scope: 'string',
             begin: /\$"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, v]
+            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, e.BACKSLASH_ESCAPE, R]
         },
         C = {
             scope: 'string',
             begin: /(\$@|@\$)"/,
             end: /"/,
-            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, v]
+            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, { match: /""/ }, e.BACKSLASH_ESCAPE, R]
         },
         y = {
             scope: 'string',
             match: i(/'/, a(/[^\\']/, /\\(?:.|\d{3}|x[a-fA-F\d]{2}|u[a-fA-F\d]{4}|U[a-fA-F\d]{8})/), /'/)
         };
     return (
-        (v.contains = [C, R, N, A, y, n, l, u, p, T, g, S, d, E]),
+        (R.contains = [C, v, N, A, y, n, l, u, p, T, g, S, d, E]),
         {
             name: 'F#',
             aliases: ['fs', 'f#'],
@@ -162,11 +162,11 @@ e.exports = function (e) {
                             scope: 'string',
                             begin: /\$"""/,
                             end: /"""/,
-                            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, v],
+                            contains: [{ match: /\{\{/ }, { match: /\}\}/ }, R],
                             relevance: 2
                         },
                         C,
-                        R,
+                        v,
                         O,
                         N,
                         A,

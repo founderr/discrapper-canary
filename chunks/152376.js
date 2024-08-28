@@ -15,7 +15,7 @@ n.d(t, {
         return C;
     },
     dM: function () {
-        return v;
+        return R;
     },
     k$: function () {
         return g;
@@ -56,7 +56,7 @@ function T(e, t, n, r) {
             settings: d
         }),
         (0, p.jz)(e, t, d, s, p.UE.optedIn(n), r),
-        R(e),
+        v(e),
         f.default.track(I.rMx.CHANNEL_LIST_UPDATED, {
             ...(0, o.hH)(e),
             ...(0, o.v_)(_.Z.getChannel(t)),
@@ -90,7 +90,7 @@ function g(e, t, n, r) {
         settings: d
     }),
         (0, p.jz)(e, t, d, s, p.UE.optedIn(n), r),
-        R(e),
+        v(e),
         f.default.track(I.rMx.CHANNEL_LIST_UPDATED, {
             ...(0, o.hH)(e),
             ...(0, o.v_)(_.Z.getChannel(t)),
@@ -159,7 +159,7 @@ function O(e, t, n) {
             location: n
         });
 }
-function v(e, t, n, r) {
+function R(e, t, n, r) {
     if (null == e || u.Z.isFullServerPreview(e)) return;
     let i = E.ZP.getChannelIdFlags(e, t);
     !(0, h.yE)(i, m.ic.OPT_IN_ENABLED) && n && (i = (0, h.mB)(i, m.ic.OPT_IN_ENABLED, !0)),
@@ -170,7 +170,7 @@ function v(e, t, n, r) {
             location: r
         });
 }
-function R(e) {
+function v(e) {
     (0, d.PS)(e, (e) => (!(0, h.yE)(e.guildOnboardingProgress, i.nI.GUILD_NOTICE_CLEARED) || !!(0, h.yE)(e.guildOnboardingProgress, i.nI.GUILD_NOTICE_SHOWN)) && ((e.guildOnboardingProgress = (0, h.pj)(e.guildOnboardingProgress, i.nI.GUILD_NOTICE_CLEARED)), (e.guildOnboardingProgress = (0, h.mB)(e.guildOnboardingProgress, i.nI.GUILD_NOTICE_SHOWN, !1)), !0), d.fy.INFREQUENT_USER_ACTION);
 }
 function C(e, t) {

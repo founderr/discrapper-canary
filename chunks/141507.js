@@ -25,8 +25,8 @@ var r = n(735250),
     A = n(543241),
     N = n(199257),
     O = n(880949),
-    v = n(784222),
-    R = n(149203),
+    R = n(784222),
+    v = n(149203),
     C = n(689938),
     y = n(611540);
 function D(e) {
@@ -50,17 +50,17 @@ let L = (e) => {
                 return null === (e = U[t]) || void 0 === e ? void 0 : e[n];
             }, [U, B]);
         switch (null == F ? void 0 : F.type) {
-            case v.ld.EMOJI:
+            case R.ld.EMOJI:
                 t = null == F ? void 0 : F.emoji;
                 break;
-            case v.ld.EXPAND_OR_COLLAPSE_EMOJIS:
+            case R.ld.EXPAND_OR_COLLAPSE_EMOJIS:
                 t = {
                     type: 'EXPAND_OR_COLLAPSE_EMOJI',
                     guildId: null == F ? void 0 : F.guildId,
                     allNamesString: null == F ? void 0 : F.name
                 };
                 break;
-            case v.ld.CREATE_EMOJI:
+            case R.ld.CREATE_EMOJI:
             default:
                 t = {
                     type: 'CREATE_EMOJI',
@@ -77,21 +77,21 @@ let L = (e) => {
             K = (0, a.e7)([u.ZP], () => u.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: z } = (0, N.Z)(w, x),
             q = t.id,
-            Q = (null == F ? void 0 : F.type) === v.ld.EMOJI ? F.subCategory : R.t0.NONE;
+            Q = (null == F ? void 0 : F.type) === R.ld.EMOJI ? F.subCategory : v.t0.NONE;
         if (
             (i.useEffect(() => {
                 let e = Date.now();
                 return () => {
                     Date.now() - e >= 250 &&
                         D(t) &&
-                        Q !== R.t0.NONE &&
-                        (Q === R.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, _.Zg)(t.guildId, z[0].id),
+                        Q !== v.t0.NONE &&
+                        (Q === v.t0.NEWLY_ADDED_EMOJI && null !== t && t.type === c.B.GUILD && (0, _.Zg)(t.guildId, z[0].id),
                         null != B.source &&
                             (0, A.Gn)({
                                 emoji: t,
                                 subCategory: Q,
                                 position: F.columnIndex + 1,
-                                newlyAddedHighlight: Q === R.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(w, q)
+                                newlyAddedHighlight: Q === v.t0.NEWLY_ADDED_EMOJI && d.Z.isNewerThanLastSeen(w, q)
                             }));
                 };
             }),

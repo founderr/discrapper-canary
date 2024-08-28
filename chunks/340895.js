@@ -27,7 +27,7 @@ function O(e) {
     if (null == e || null == S.get(e)) return !1;
     S.delete(e), (A = new Set(A)).delete(e);
 }
-function v(e) {
+function R(e) {
     let { channelId: t, ringing: n } = e,
         i = n.includes(E.default.getId());
     if (!A.has(t) && i) {
@@ -55,12 +55,12 @@ function v(e) {
     }
     return !!A.has(t) && !i && O(t);
 }
-function R() {
+function v() {
     N = h.Z.getStatus() === I.Skl.DND || d.QZ.getSetting();
 }
 class C extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z, h.Z), this.syncWith([h.Z], R), this.syncWith([_.Z], R);
+        this.waitFor(f.Z, h.Z), this.syncWith([h.Z], v), this.syncWith([_.Z], v);
     }
     getIncomingCalls() {
         return N ? g : Array.from(S.values());
@@ -85,8 +85,8 @@ class C extends (i = l.ZP.Store) {
           })
         : (a[s] = o),
     (t.Z = new C(c.Z, {
-        CALL_CREATE: v,
-        CALL_UPDATE: v,
+        CALL_CREATE: R,
+        CALL_UPDATE: R,
         CALL_DELETE: function (e) {
             let { channelId: t } = e;
             return O(t);

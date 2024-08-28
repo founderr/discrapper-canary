@@ -1,86 +1,86 @@
 var n = r(147018),
-    o = r(926515),
-    i = r(992051),
-    c = r(539459),
-    u = r(354848),
-    a = r(673743),
+    a = r(926515),
+    o = r(992051),
+    i = r(539459),
+    _ = r(354848),
+    E = r(673743),
     s = r(144748),
-    f = r(276321),
-    p = r(865312),
-    l = r(251069),
-    y = r(859209),
-    v = r(641236),
-    d = r(874652),
-    h = r(84297),
-    L = c.PROPER,
-    O = c.CONFIGURABLE,
-    S = h.IteratorPrototype,
-    g = h.BUGGY_SAFARI_ITERATORS,
-    x = v('iterator'),
-    m = 'keys',
-    T = 'values',
-    b = 'entries',
-    _ = function () {
+    c = r(276321),
+    I = r(865312),
+    u = r(251069),
+    l = r(859209),
+    R = r(641236),
+    A = r(874652),
+    T = r(84297),
+    d = i.PROPER,
+    N = i.CONFIGURABLE,
+    p = T.IteratorPrototype,
+    O = T.BUGGY_SAFARI_ITERATORS,
+    f = R('iterator'),
+    S = 'keys',
+    D = 'values',
+    L = 'entries',
+    h = function () {
         return this;
     };
-t.exports = function (t, e, r, c, v, h, A) {
-    a(r, e, c);
-    var k,
+e.exports = function (e, t, r, i, R, T, C) {
+    E(r, t, i);
+    var g,
+        M,
         P,
-        j,
-        w = function (t) {
-            if (t === v && M) return M;
-            if (!g && t && t in C) return C[t];
-            switch (t) {
-                case m:
-                case T:
-                case b:
+        m = function (e) {
+            if (e === R && b) return b;
+            if (!O && e && e in y) return y[e];
+            switch (e) {
+                case S:
+                case D:
+                case L:
                     return function () {
-                        return new r(this, t);
+                        return new r(this, e);
                     };
             }
             return function () {
                 return new r(this);
             };
         },
-        R = e + ' Iterator',
-        I = !1,
-        C = t.prototype,
-        G = C[x] || C['@@iterator'] || (v && C[v]),
-        M = (!g && G) || w(v),
-        E = ('Array' === e && C.entries) || G;
+        U = t + ' Iterator',
+        G = !1,
+        y = e.prototype,
+        v = y[f] || y['@@iterator'] || (R && y[R]),
+        b = (!O && v) || m(R),
+        B = ('Array' === t && y.entries) || v;
     if (
-        (E && (k = s(E.call(new t()))) !== Object.prototype && k.next && (!i && s(k) !== S && (f ? f(k, S) : !u(k[x]) && y(k, x, _)), p(k, R, !0, !0), i && (d[R] = _)),
-        L &&
-            v === T &&
-            G &&
-            G.name !== T &&
-            (!i && O
-                ? l(C, 'name', T)
-                : ((I = !0),
-                  (M = function () {
-                      return o(G, this);
+        (B && (g = s(B.call(new e()))) !== Object.prototype && g.next && (!o && s(g) !== p && (c ? c(g, p) : !_(g[f]) && l(g, f, h)), I(g, U, !0, !0), o && (A[U] = h)),
+        d &&
+            R === D &&
+            v &&
+            v.name !== D &&
+            (!o && N
+                ? u(y, 'name', D)
+                : ((G = !0),
+                  (b = function () {
+                      return a(v, this);
                   }))),
-        v)
+        R)
     ) {
         if (
-            ((P = {
-                values: w(T),
-                keys: h ? M : w(m),
-                entries: w(b)
+            ((M = {
+                values: m(D),
+                keys: T ? b : m(S),
+                entries: m(L)
             }),
-            A)
+            C)
         )
-            for (j in P) (g || I || !(j in C)) && y(C, j, P[j]);
+            for (P in M) (O || G || !(P in y)) && l(y, P, M[P]);
         else
             n(
                 {
-                    target: e,
+                    target: t,
                     proto: !0,
-                    forced: g || I
+                    forced: O || G
                 },
-                P
+                M
             );
     }
-    return (!i || A) && C[x] !== M && y(C, x, M, { name: v }), (d[e] = M), P;
+    return (!o || C) && y[f] !== b && l(y, f, b, { name: R }), (A[t] = b), M;
 };

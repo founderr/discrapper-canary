@@ -25,8 +25,8 @@ var r = n(735250),
     A = n(284363),
     N = n(854218),
     O = n(981631),
-    v = n(689938),
-    R = n(906287);
+    R = n(689938),
+    v = n(906287);
 let C = {
     [A.Q.STAFF]: {
         IconComponent: c.StaffBadgeIcon,
@@ -82,15 +82,15 @@ let C = {
 function y(e) {
     let { guildTraits: t } = e;
     return (0, r.jsxs)('div', {
-        className: R.tooltipPremiumFooterContainer,
+        className: v.tooltipPremiumFooterContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: s()(R.tooltipPremiumFooterSegment, R.tooltipPremiumFooterTierSegment),
+                className: s()(v.tooltipPremiumFooterSegment, v.tooltipPremiumFooterTierSegment),
                 children: [
                     (0, r.jsx)(g.Z, {
                         width: 18,
                         height: 18,
-                        className: R.gemIcon
+                        className: v.gemIcon
                     }),
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xs/semibold',
@@ -100,11 +100,11 @@ function y(e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: s()(R.tooltipPremiumFooterSegment),
+                className: s()(v.tooltipPremiumFooterSegment),
                 children: (0, r.jsx)(c.Text, {
                     variant: 'text-xs/semibold',
                     color: 'always-white',
-                    children: v.Z.Messages.SERVER_BADGE_PREMIUM_FOOTER_BOOST_COUNT.format({ count: t.premiumSubscriberCount })
+                    children: R.Z.Messages.SERVER_BADGE_PREMIUM_FOOTER_BOOST_COUNT.format({ count: t.premiumSubscriberCount })
                 })
             })
         ]
@@ -117,55 +117,55 @@ function D(e) {
             tooltipSubtitle: a,
             tooltipDescription: s
         } = (function (e, t) {
-            let n = t === N.PZ.PUBLIC ? v.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN : v.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
+            let n = t === N.PZ.PUBLIC ? R.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN : R.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY;
             switch (e) {
                 case A.Q.STAFF:
                     return {
-                        tooltipTitle: v.Z.Messages.INTERNAL_EMPLOYEE_ONLY,
-                        tooltipSubtitle: v.Z.Messages.INTERNAL_EMPLOYEE_ONLY,
-                        tooltipDescription: v.Z.Messages.INTERNAL_EMPLOYEE_ONLY
+                        tooltipTitle: R.Z.Messages.INTERNAL_EMPLOYEE_ONLY,
+                        tooltipSubtitle: R.Z.Messages.INTERNAL_EMPLOYEE_ONLY,
+                        tooltipDescription: R.Z.Messages.INTERNAL_EMPLOYEE_ONLY
                     };
                 case A.Q.VERIFIED:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
-                        tooltipSubtitle: v.Z.Messages.GUILD_VERIFIED,
+                        tooltipTitle: R.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
+                        tooltipSubtitle: R.Z.Messages.GUILD_VERIFIED,
                         tooltipDescription: n
                     };
                 case A.Q.PARTNERED:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
-                        tooltipSubtitle: v.Z.Messages.GUILD_PARTNERED,
+                        tooltipTitle: R.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
+                        tooltipSubtitle: R.Z.Messages.GUILD_PARTNERED,
                         tooltipDescription: n
                     };
                 case A.Q.VERIFIED_AND_PARTNERED:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
-                        tooltipSubtitle: v.Z.Messages.GUILD_VERIFIED_AND_PARTNERED,
+                        tooltipTitle: R.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
+                        tooltipSubtitle: R.Z.Messages.GUILD_VERIFIED_AND_PARTNERED,
                         tooltipDescription: n
                     };
                 case A.Q.COMMUNITY:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
-                        tooltipDescription: v.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY
+                        tooltipTitle: R.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
+                        tooltipDescription: R.Z.Messages.SERVER_BADGE_DESCRIPTION_INVITE_ONLY
                     };
                 case A.Q.DISCOVERABLE:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
-                        tooltipDescription: v.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN
+                        tooltipTitle: R.Z.Messages.SERVER_BADGE_TITLE_COMMUNITY,
+                        tooltipDescription: R.Z.Messages.SERVER_BADGE_DESCRIPTION_ANYONE_CAN_JOIN
                     };
                 case A.Q.CLAN:
                     return {
-                        tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_CLAN,
-                        tooltipDescription: v.Z.Messages.SERVER_BADGE_DESCRIPTION_APPLICATION_REQUIRED
+                        tooltipTitle: R.Z.Messages.SERVER_BADGE_TITLE_CLAN,
+                        tooltipDescription: R.Z.Messages.SERVER_BADGE_DESCRIPTION_APPLICATION_REQUIRED
                     };
                 default:
-                    return { tooltipTitle: v.Z.Messages.SERVER_BADGE_TITLE_UNKNOWN };
+                    return { tooltipTitle: R.Z.Messages.SERVER_BADGE_TITLE_UNKNOWN };
             }
         })(t, n.visibility);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: R.tooltipBodyContainer,
+                className: v.tooltipBodyContainer,
                 children: [
                     (0, r.jsx)(c.Text, {
                         color: 'interactive-active',
@@ -195,7 +195,7 @@ function D(e) {
 function L(e) {
     let t,
         n,
-        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: E, className: T, flowerStarClassName: g, iconClassName: S, badgeStrokeColor: v, badgeColor: y, size: L = 16, disableBoostClick: b, 'aria-label': M = !1 } = e,
+        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: E, className: T, flowerStarClassName: g, iconClassName: S, badgeStrokeColor: R, badgeColor: y, size: L = 16, disableBoostClick: b, 'aria-label': M = !1 } = e,
         P = (0, o.e7)([m.default, I.ZP], () => {
             let e = m.default.getCurrentUser();
             return I.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
@@ -232,12 +232,12 @@ function L(e) {
                 badgeType: x,
                 guildTraits: w
             }),
-            tooltipContentClassName: R.tooltipRemovePadding,
+            tooltipContentClassName: v.tooltipRemovePadding,
             children: (t) =>
                 (0, r.jsx)(c.Clickable, {
                     ...t,
                     onClick: G,
-                    className: s()(R.clanBadgeContainer, T),
+                    className: s()(v.clanBadgeContainer, T),
                     children: (0, r.jsx)(_.KQ, {
                         src: e,
                         size: L
@@ -260,7 +260,7 @@ function L(e) {
             badgeType: x,
             guildTraits: w
         }),
-        tooltipContentClassName: R.tooltipRemovePadding,
+        tooltipContentClassName: v.tooltipRemovePadding,
         children: (e) =>
             (0, r.jsx)(c.Clickable, {
                 onClick: G,
@@ -270,7 +270,7 @@ function L(e) {
                     flowerStarClassName: g,
                     allowFullSizedIcon: !0,
                     color: null != n ? n : y,
-                    stroke: v,
+                    stroke: R,
                     size: L,
                     children: (0, r.jsx)(B, {
                         size: 'custom',

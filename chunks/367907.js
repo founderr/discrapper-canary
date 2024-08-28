@@ -46,8 +46,8 @@ var r = n(392711),
     A = n(9156),
     N = n(979651),
     O = n(626135),
-    v = n(70956),
-    R = n(700785),
+    R = n(70956),
+    v = n(700785),
     C = n(546416),
     y = n(981631),
     D = n(176505);
@@ -76,7 +76,7 @@ function b(e) {
         guild_num_voice_channels: l,
         guild_num_roles: L(r),
         guild_member_num_roles: null != a ? a.roles.length : 0,
-        guild_member_perms: String(null !== (t = p.Z.getGuildPermissions(n)) && void 0 !== t ? t : R.Hn),
+        guild_member_perms: String(null !== (t = p.Z.getGuildPermissions(n)) && void 0 !== t ? t : v.Hn),
         guild_is_vip: n.hasFeature(y.oNc.VIP_REGIONS),
         is_member: null != a,
         num_voice_channels_active: L(c)
@@ -104,7 +104,7 @@ function P(e) {
         channel_id: e.id,
         channel_type: e.type,
         channel_size_total: e.isPrivate() ? e.recipients.length : 0,
-        channel_member_perms: String(null != r && null !== (t = p.Z.getChannelPermissions(e)) && void 0 !== t ? t : R.Hn),
+        channel_member_perms: String(null != r && null !== (t = p.Z.getChannelPermissions(e)) && void 0 !== t ? t : v.Hn),
         channel_hidden: n
     };
 }
@@ -151,7 +151,7 @@ function x(e) {
     if (null == t || null == t.guild_id) return { channel_id: e };
     let n = f.Z.getGuild(t.guild_id);
     if (null == n) return { channel_id: e };
-    let r = T.ZP.getSnapshot(e, 10 * v.Z.Millis.SECOND);
+    let r = T.ZP.getSnapshot(e, 10 * R.Z.Millis.SECOND);
     return {
         channel_id: e,
         channel_was_unread: r.unread,

@@ -13,8 +13,8 @@ var a = n(481060),
     c = n(901040),
     d = n(239181);
 function u(e) {
-    let { tab: t, guilds: n, onScroll: u, onGuildCardClick: _, onGuildCardSeen: h } = e,
-        E = (0, s.ZP)(),
+    let { tab: t, guilds: n, onScroll: u, onGuildCardClick: _, onGuildCardSeen: E } = e,
+        h = (0, s.ZP)(),
         m = (0, l.Mf)(t),
         I = (0, l.a$)(t),
         g = (0, l.QW)(t),
@@ -39,8 +39,8 @@ function u(e) {
                         {
                             guild: e,
                             onView: (e) => _(e, t, p),
-                            theme: E,
-                            onGuildCardSeen: (e) => h(e, p)
+                            theme: h,
+                            onGuildCardSeen: (e) => E(e, p)
                         },
                         e.id
                     )

@@ -33,7 +33,7 @@ function _(e) {
         M = r.useCallback(async () => {
             if (null != Z && null != v) {
                 try {
-                    await c.Z.submitVerificationForm(n.id, {
+                    await c.ZP.submitVerificationForm(n.id, {
                         ...Z,
                         formFields: [
                             {

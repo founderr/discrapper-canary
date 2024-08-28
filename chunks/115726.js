@@ -1,43 +1,43 @@
-var e = r(581031),
-    i = r(339718),
-    u = Math.floor,
-    o = e(''.charAt),
-    a = e(''.replace),
-    c = e(''.slice),
-    s = /\$([$&'`]|\d{1,2}|<[^>]*>)/g,
-    f = /\$([$&'`]|\d{1,2})/g;
-n.exports = function (n, t, r, e, l, h) {
-    var v = r + n.length,
-        p = e.length,
-        d = f;
+var r = n(581031),
+    i = n(339718),
+    a = Math.floor,
+    s = r(''.charAt),
+    o = r(''.replace),
+    l = r(''.slice),
+    u = /\$([$&'`]|\d{1,2}|<[^>]*>)/g,
+    c = /\$([$&'`]|\d{1,2})/g;
+e.exports = function (e, t, n, r, d, _) {
+    var E = n + e.length,
+        f = r.length,
+        h = c;
     return (
-        void 0 !== l && ((l = i(l)), (d = s)),
-        a(h, d, function (i, a) {
-            var s;
-            switch (o(a, 0)) {
+        void 0 !== d && ((d = i(d)), (h = u)),
+        o(_, h, function (i, o) {
+            var u;
+            switch (s(o, 0)) {
                 case '$':
                     return '$';
                 case '&':
-                    return n;
+                    return e;
                 case '`':
-                    return c(t, 0, r);
+                    return l(t, 0, n);
                 case "'":
-                    return c(t, v);
+                    return l(t, E);
                 case '<':
-                    s = l[c(a, 1, -1)];
+                    u = d[l(o, 1, -1)];
                     break;
                 default:
-                    var f = +a;
-                    if (0 === f) return i;
-                    if (f > p) {
-                        var h = u(f / 10);
-                        if (0 === h) return i;
-                        if (h <= p) return void 0 === e[h - 1] ? o(a, 1) : e[h - 1] + o(a, 1);
+                    var c = +o;
+                    if (0 === c) return i;
+                    if (c > f) {
+                        var _ = a(c / 10);
+                        if (0 === _) return i;
+                        if (_ <= f) return void 0 === r[_ - 1] ? s(o, 1) : r[_ - 1] + s(o, 1);
                         return i;
                     }
-                    s = e[f - 1];
+                    u = r[c - 1];
             }
-            return void 0 === s ? '' : s;
+            return void 0 === u ? '' : u;
         })
     );
 };

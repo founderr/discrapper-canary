@@ -21,8 +21,8 @@ var r,
     A = n(272053),
     N = n(77498),
     O = n(981631);
-let v = [],
-    R = {};
+let R = [],
+    v = {};
 function C() {
     let e = [],
         t = T.Ok.getSetting();
@@ -36,7 +36,7 @@ function C() {
             ...r
         });
     let i = new Set();
-    c().forEach(R, (t) => {
+    c().forEach(v, (t) => {
         null != t.application_id && (i.add(t.name), e.push(t));
     });
     let a = h.ZP.getVisibleGame(),
@@ -69,17 +69,17 @@ function C() {
             emoji: null == t ? void 0 : t.emoji
         });
     }
-    !l()(v, e) && (v = e);
+    !l()(R, e) && (R = e);
 }
 class y extends (r = d.ZP.Store) {
     initialize() {
         this.waitFor(h.ZP, E.ZP, A.Z, S.Z, m.Z, g.Z, p.Z, N.Z), this.syncWith([I.Z, p.Z], () => C());
     }
     getActivities() {
-        return v;
+        return R;
     }
     getPrimaryActivity() {
-        return v[0];
+        return R[0];
     }
     getApplicationActivity(e) {
         return this.findActivity((t) => t.application_id === e);
@@ -88,10 +88,10 @@ class y extends (r = d.ZP.Store) {
         return this.findActivity((e) => e.type === O.IIU.CUSTOM_STATUS);
     }
     findActivity(e) {
-        return v.find(e);
+        return R.find(e);
     }
     getApplicationActivities() {
-        return R;
+        return v;
     }
 }
 (s = 'LocalActivityStore'),
@@ -106,19 +106,19 @@ class y extends (r = d.ZP.Store) {
     (t.Z = new y(_.Z, {
         OVERLAY_INITIALIZE: function (e) {
             let { localActivities: t } = e;
-            (R = { ...t }), C();
+            (v = { ...t }), C();
         },
         START_SESSION: function () {
-            (R = {}), C();
+            (v = {}), C();
         },
         LOCAL_ACTIVITY_UPDATE: function (e) {
             let { socketId: t, activity: n } = e;
-            if (l()(R[t], n)) return !1;
-            null != n ? (R[t] = n) : delete R[t], C();
+            if (l()(v[t], n)) return !1;
+            null != n ? (v[t] = n) : delete v[t], C();
         },
         RPC_APP_DISCONNECTED: function (e) {
             let { socketId: t } = e;
-            delete R[t], C();
+            delete v[t], C();
         },
         RUNNING_GAMES_CHANGE: C,
         LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: C,

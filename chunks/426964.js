@@ -20,8 +20,8 @@ var r = n(735250),
     A = n(905362),
     N = n(353093),
     O = n(954138),
-    v = n(169559),
-    R = n(284019),
+    R = n(169559),
+    v = n(284019),
     C = n(308083),
     y = n(981631),
     D = n(689938),
@@ -35,7 +35,7 @@ t.Z = i.memo(function (e) {
         w = null == n ? void 0 : n.identityGuildId,
         x = (0, S.Cc)(null != w ? w : null),
         G = null == n ? void 0 : n.tag,
-        k = (0, v.Z)('clan_guild_profile'),
+        k = (0, R.Z)('clan_guild_profile'),
         B = (0, O.Z)('base_clan_tag_chiplet'),
         F = (0, o.e7)([h.default], () => h.default.getId()),
         V = (0, o.e7)([p.ZP], () => (null != w ? p.ZP.getMember(w, F) : null), [w, F]),
@@ -136,25 +136,25 @@ t.Z = i.memo(function (e) {
                         ]
                     });
                 case !W && z:
-                    return (0, r.jsx)(R.Z, {
+                    return (0, r.jsx)(v.Z, {
                         onClick: ee,
                         ...en,
                         children: D.Z.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
                     });
                 case !W && q:
-                    return (0, r.jsx)(R.Z, {
+                    return (0, r.jsx)(v.Z, {
                         onClick: $,
                         ...en,
                         children: D.Z.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
                     });
                 case W && !K:
-                    return (0, r.jsx)(R.Z, {
+                    return (0, r.jsx)(v.Z, {
                         onClick: X,
                         ...en,
                         children: D.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
                     });
                 case W && K:
-                    return (0, r.jsx)(R.Z, {
+                    return (0, r.jsx)(v.Z, {
                         onClick: et,
                         ...en,
                         children: D.Z.Messages.CLAN_USER_GO_TO_CLAN_CTA

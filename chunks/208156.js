@@ -29,8 +29,8 @@ function T(e) {
         A = (0, u.e7)([c.Z], () => c.Z.getWindow(I.KJ3.CHANNEL_CALL_POPOUT)),
         N = (0, o.useMemoOne)(() => (0, l.Z)(), [t]),
         O = i.useRef(null),
-        v = (0, f.Z)(O, m, null == A ? window : A),
-        R = {
+        R = (0, f.Z)(O, m, null == A ? window : A),
+        v = {
             ...T,
             frame_id: N,
             platform: p.S4.DESKTOP
@@ -69,11 +69,11 @@ function T(e) {
                   referrerPolicy: S,
                   onLoad: function (e) {
                       var n;
-                      null == s || s(e.target), (O.current = e.target), v(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([d.Z.HELLO, R], null != t ? t : '');
+                      null == s || s(e.target), (O.current = e.target), R(!0), null === (n = e.target.contentWindow) || void 0 === n || n.postMessage([d.Z.HELLO, v], null != t ? t : '');
                   },
                   sandbox: (0, h.Z)({ allowPopups: g }),
                   className: n,
-                  src: ''.concat(t, '?').concat(new URLSearchParams(R))
+                  src: ''.concat(t, '?').concat(new URLSearchParams(v))
               })
             : null
     );

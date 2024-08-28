@@ -1,6 +1,6 @@
 n.d(t, {
     Yr: function () {
-        return R;
+        return v;
     },
     ZP: function () {
         return C;
@@ -46,8 +46,8 @@ function O(e, t, n) {
         e
     );
 }
-let v = '__EMBEDDED_ACTIVITIES__';
-function R(e) {
+let R = '__EMBEDDED_ACTIVITIES__';
+function v(e) {
     switch (e.type) {
         case S.fO.ACTIVITY:
             return '\0'.concat(e.sortKey);
@@ -94,15 +94,15 @@ class C {
         return null !== (t = this.participantByIndex.get(e)) && void 0 !== t ? t : null;
     }
     updateEmbeddedActivities() {
-        return this.updateParticipant(v);
+        return this.updateParticipant(R);
     }
     hasEmbeddedActivity() {
-        let e = this.participants[v];
+        let e = this.participants[R];
         return null != e && e.length > 0;
     }
     updateParticipant(e) {
         let t = this.participants[e],
-            n = e === v ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
+            n = e === R ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
         return (
             (null != t || 0 !== n.length) &&
             (null == t ||
@@ -195,17 +195,17 @@ class C {
             A = p.default.getUser(e);
         if (null == A) return g;
         let O = m.Z.getVoiceStateForChannel(this.channelId, e),
-            v = m.Z.getVoicePlatformForChannel(this.channelId, e),
-            R = E.Z.getChannel(this.channelId),
+            R = m.Z.getVoicePlatformForChannel(this.channelId, e),
+            v = E.Z.getChannel(this.channelId),
             C = null !== (r = null === (n = this.call) || void 0 === n ? void 0 : null === (t = n.ringing) || void 0 === t ? void 0 : t.includes(e)) && void 0 !== r && r;
         (null != O || C) &&
             ((l = {
                 type: S.fO.USER,
-                ...I.Z.getUserStreamData(e, null == R ? void 0 : R.getGuildId()),
+                ...I.Z.getUserStreamData(e, null == v ? void 0 : v.getGuildId()),
                 user: A,
                 id: A.id,
                 voiceState: O,
-                voicePlatform: v,
+                voicePlatform: R,
                 speaking: (0, o.O)({
                     userId: e,
                     checkIsMuted: !0
@@ -213,11 +213,11 @@ class C {
                 lastSpoke: null !== (i = this.lastSpoke[e]) && void 0 !== i ? i : 0,
                 soundsharing: h.Z.isSoundSharing(e),
                 ringing: C,
-                userNick: T.ZP.getName(null == R ? void 0 : R.getGuildId(), this.channelId, A),
+                userNick: T.ZP.getName(null == v ? void 0 : v.getGuildId(), this.channelId, A),
                 localVideoDisabled: f.Z.isLocalVideoDisabled(A.id)
             }),
             g.push(l));
-        let y = null !== (a = c.Z.getStreamForUser(e, null == R ? void 0 : R.getGuildId())) && void 0 !== a ? a : c.Z.getActiveStreamForUser(e, null == R ? void 0 : R.getGuildId());
+        let y = null !== (a = c.Z.getStreamForUser(e, null == v ? void 0 : v.getGuildId())) && void 0 !== a ? a : c.Z.getActiveStreamForUser(e, null == v ? void 0 : v.getGuildId());
         if (null != y && y.channelId === this.channelId) {
             let t = (0, u.V9)(y),
                 n = this.getParticipant(t),
@@ -230,13 +230,13 @@ class C {
                           }
                         : null;
             (_ = {
-                ...I.Z.getUserStreamData(e, null == R ? void 0 : R.getGuildId(), N.Yn.STREAM),
+                ...I.Z.getUserStreamData(e, null == v ? void 0 : v.getGuildId(), N.Yn.STREAM),
                 ...i,
                 type: r ? S.fO.HIDDEN_STREAM : S.fO.STREAM,
                 id: t,
                 userVideo: null !== (s = null == O ? void 0 : O.selfVideo) && void 0 !== s && s,
                 user: A,
-                userNick: T.ZP.getName(null == R ? void 0 : R.getGuildId(), this.channelId, A),
+                userNick: T.ZP.getName(null == v ? void 0 : v.getGuildId(), this.channelId, A),
                 stream: y
             }),
                 g.push(_);
@@ -255,7 +255,7 @@ class C {
                     var t;
                     let n = [];
                     return e.type === S.fO.USER && e.speaking && n.push('SPEAKING'), e.type === S.fO.USER && (null === (t = e.voiceState) || void 0 === t ? void 0 : t.selfVideo) ? (n.push('VIDEO'), !e.localVideoDisabled && n.push('FILTERED')) : (0, S._5)(e) && (n.push('STREAM'), e.type !== S.fO.HIDDEN_STREAM && null != e.streamId && n.push('FILTERED')), e.type === S.fO.ACTIVITY && (n.push('ACTIVITY'), n.push('FILTERED')), n;
-                }, R)
+                }, v)
             ),
             (this.channelId = e);
     }

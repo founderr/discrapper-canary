@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 }),
     n(47120);
@@ -18,8 +18,8 @@ var i = n(735250),
     _ = n(895924),
     E = n(581364),
     g = n(667204),
-    x = n(873387),
-    M = n(809090),
+    M = n(873387),
+    x = n(809090),
     A = n(147391),
     C = n(978983),
     I = n(592125),
@@ -28,11 +28,11 @@ var i = n(735250),
     N = n(626135),
     y = n(585483),
     P = n(619895),
-    v = n(844439),
-    b = n(981631),
-    T = n(689938),
-    O = n(834033);
-function R(e) {
+    b = n(844439),
+    v = n(981631),
+    S = n(689938),
+    T = n(834033);
+function O(e) {
     let { toggleShowMenu: t, showMenu: n, className: o, channelId: r, imageUrl: d, mimeType: c } = e,
         m = (0, a.e7)([I.Z], () => I.Z.getChannel(r));
     return null == m
@@ -40,7 +40,7 @@ function R(e) {
         : (0, i.jsx)(l.Popout, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, i.jsx)(S, {
+                  return (0, i.jsx)(R, {
                       onClose: t,
                       channel: m,
                       imageUrl: d,
@@ -55,14 +55,14 @@ function R(e) {
               children: (e) => {
                   let { onClick: n } = e;
                   return (0, i.jsx)(l.Tooltip, {
-                      text: T.Z.Messages.APP_IMAGE_REC_MENU_HEADER,
+                      text: S.Z.Messages.APP_IMAGE_REC_MENU_HEADER,
                       children: (e) =>
                           (0, i.jsx)(l.Clickable, {
                               ...e,
                               className: o,
                               focusProps: { offset: 2 },
                               onClick: t,
-                              'aria-label': T.Z.Messages.APP_IMAGE_REC_MENU_HEADER,
+                              'aria-label': S.Z.Messages.APP_IMAGE_REC_MENU_HEADER,
                               children: (0, i.jsx)(l.AppsIcon, {
                                   size: 'custom',
                                   color: 'currentColor',
@@ -74,21 +74,21 @@ function R(e) {
               }
           });
 }
-function S(e) {
-    let { onSelect: t, onClose: n, channel: I, imageUrl: R, mimeType: S } = e,
+function R(e) {
+    let { onSelect: t, onClose: n, channel: I, imageUrl: O, mimeType: R } = e,
         U = (0, a.e7)([f.Z], () => f.Z.getGuild(I.guild_id)),
         { fetchState: Z, imageRecCommandContexts: F } = (0, P.hR)({ channelId: I.id }),
-        w = Z === v.M.FETCHING,
-        j = (0, x.g)(I),
+        w = Z === b.M.FETCHING,
+        j = (0, M.g)(I),
         D = (0, s.PL)(!0, !0),
         k = (0, s.LD)(I.guild_id, !0);
     o.useEffect(() => {
-        (Z === v.M.ERROR || (Z === v.M.FETCHED && 0 === F.length)) && n();
+        (Z === b.M.ERROR || (Z === b.M.FETCHED && 0 === F.length)) && n();
     }, [Z, F.length, n]),
         o.useEffect(() => {
             var e, t;
             if (!w && 0 !== F.length)
-                N.default.track(b.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
+                N.default.track(v.rMx.APP_IMAGE_RECS_MENU_VIEWED, {
                     guild_id: null !== (e = null == I ? void 0 : I.guild_id) && void 0 !== e ? e : '',
                     channel_id: null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : '',
                     application_ids: [...F.map((e) => Number(e.command.applicationId))],
@@ -97,9 +97,9 @@ function S(e) {
         }, [F, I, w]);
     let L = o.useCallback(
             async (e) => {
-                let t = await fetch(R),
+                let t = await fetch(O),
                     n = await t.arrayBuffer(),
-                    i = S.join('/'),
+                    i = R.join('/'),
                     o = new File([n], 'image'.concat((0, P.Qm)({ contentType: i })), { type: i });
                 r.Z.setFile({
                     channelId: I.id,
@@ -112,9 +112,9 @@ function S(e) {
                     draftType: h.d.SlashCommand
                 });
             },
-            [R, I.id, S]
+            [O, I.id, R]
         ),
-        H = o.useCallback(
+        G = o.useCallback(
             async (e, t, n) => {
                 var i, o;
                 if (!j) return;
@@ -143,13 +143,13 @@ function S(e) {
                                 value: 'image'
                             }
                         },
-                        commandOrigin: _.bB.IMAGE_RECS_MENU
+                        commandOrigin: n === _.Vh.IMAGE_RECS_SUBMENU ? _.bB.IMAGE_RECS_SUBMENU : _.bB.IMAGE_RECS_MENU
                     }),
-                    y.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: I.id });
+                    y.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: I.id });
             },
             [I.id, L, j, D, k]
         ),
-        G = o.useCallback(
+        H = o.useCallback(
             async (e, t) => {
                 var n, i;
                 let o = e.applicationId,
@@ -171,25 +171,25 @@ function S(e) {
                     }),
                     r)
                 ) {
-                    let t = P.Id[e.id],
-                        n = t.additionalOptions;
-                    await L(t.imageOption),
+                    let n = P.Id[e.id],
+                        i = n.additionalOptions;
+                    await L(n.imageOption),
                         await (0, g.Z)({
                             command: { ...e },
                             optionValues: {
-                                [t.imageOption]: [
+                                [n.imageOption]: [
                                     {
                                         text: 'image',
                                         type: 'text'
                                     }
                                 ],
-                                ...(null == n ? {} : n[Math.floor(Math.random() * n.length)])
+                                ...(null == i ? {} : i[Math.floor(Math.random() * i.length)])
                             },
                             context: {
                                 channel: I,
                                 guild: U
                             },
-                            commandOrigin: _.bB.IMAGE_RECS_MENU
+                            commandOrigin: t === _.Vh.IMAGE_RECS_SUBMENU ? _.bB.IMAGE_RECS_SUBMENU : _.bB.IMAGE_RECS_MENU
                         });
                 }
             },
@@ -199,7 +199,7 @@ function S(e) {
         onSelect: t,
         navId: 'image-context-commands-popout',
         onClose: n,
-        'aria-label': T.Z.Messages.APP_IMAGE_REC_MENU_ARIA_LABEL,
+        'aria-label': S.Z.Messages.APP_IMAGE_REC_MENU_ARIA_LABEL,
         children: [
             (0, i.jsx)(
                 l.MenuItem,
@@ -207,10 +207,10 @@ function S(e) {
                     id: 'menu-image-rec-header',
                     render: () =>
                         (0, i.jsx)(l.Text, {
-                            className: O.title,
+                            className: T.title,
                             variant: 'text-md/bold',
                             color: 'header-primary',
-                            children: T.Z.Messages.APP_IMAGE_REC_MENU_HEADER
+                            children: S.Z.Messages.APP_IMAGE_REC_MENU_HEADER
                         }),
                     navigable: !1,
                     disabled: !0
@@ -239,14 +239,14 @@ function S(e) {
                               {
                                   id: e.command.id,
                                   action: () => {
-                                      o ? H(e.command, e.section, _.Vh.IMAGE_RECS_MENU) : G(e.command, _.Vh.IMAGE_RECS_MENU);
+                                      o ? G(e.command, e.section, _.Vh.IMAGE_RECS_MENU) : H(e.command, _.Vh.IMAGE_RECS_MENU);
                                   },
                                   label: null !== (t = P.Id[e.command.id].overrideCommandName) && void 0 !== t ? t : e.command.name,
                                   subtext: e.command.description,
                                   subtextLineClamp: 1,
                                   icon: o ? l.PencilIcon : n ? void 0 : l.SendMessageIcon,
                                   iconLeft: () =>
-                                      (0, i.jsx)(M.Z, {
+                                      (0, i.jsx)(x.Z, {
                                           channel: I,
                                           section: e.section,
                                           width: 32,
@@ -265,9 +265,9 @@ function S(e) {
                                                         l.MenuItem,
                                                         {
                                                             id: ''.concat(e.command.id, '-send'),
-                                                            label: T.Z.Messages.APP_IMAGE_REC_MENU_SEND_LABEL,
-                                                            subtext: T.Z.Messages.APP_IMAGE_REC_MENU_SEND_SUBTEXT,
-                                                            action: () => G(e.command, _.Vh.IMAGE_RECS_SUBMENU),
+                                                            label: S.Z.Messages.APP_IMAGE_REC_MENU_SEND_LABEL,
+                                                            subtext: S.Z.Messages.APP_IMAGE_REC_MENU_SEND_SUBTEXT,
+                                                            action: () => H(e.command, _.Vh.IMAGE_RECS_SUBMENU),
                                                             icon: l.SendMessageIcon
                                                         },
                                                         ''.concat(e.command.id, '-send')
@@ -276,9 +276,9 @@ function S(e) {
                                                         l.MenuItem,
                                                         {
                                                             id: ''.concat(e.command.id, '-edit'),
-                                                            label: T.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_LABEL,
-                                                            subtext: T.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_SUBTEXT,
-                                                            action: () => H(e.command, e.section, _.Vh.IMAGE_RECS_SUBMENU),
+                                                            label: S.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_LABEL,
+                                                            subtext: S.Z.Messages.APP_IMAGE_REC_MENU_CUSTOMIZE_SUBTEXT,
+                                                            action: () => G(e.command, e.section, _.Vh.IMAGE_RECS_SUBMENU),
                                                             icon: l.PencilIcon,
                                                             disabled: !j
                                                         },

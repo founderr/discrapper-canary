@@ -30,7 +30,7 @@ n.d(t, {
         return p;
     },
     nf: function () {
-        return v;
+        return R;
     },
     o: function () {
         return m;
@@ -86,7 +86,7 @@ async function h(e) {
     return (
         clearTimeout(o),
         s
-            ? v(a, n) && m(a, l, r.onCloseRequest, r.onCloseCallback, n)
+            ? R(a, n) && m(a, l, r.onCloseRequest, r.onCloseCallback, n)
             : p(
                   l,
                   {
@@ -207,6 +207,6 @@ function O(e, t) {
         r = e[n];
     return null != r && r.some((e) => e.key === t);
 }
-function v(e, t) {
+function R(e, t) {
     return O(f.getState(), e, t);
 }

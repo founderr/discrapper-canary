@@ -1,6 +1,6 @@
+function r(e) {}
 n.d(t, {
     r: function () {
-        return i;
+        return r;
     }
 });
-function i(e) {}

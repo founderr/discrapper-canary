@@ -40,8 +40,8 @@ var r = n(392711),
     A = n(654123),
     N = n(660020),
     O = n(980084),
-    v = n(24688),
-    R = n(200997),
+    R = n(24688),
+    v = n(200997),
     C = n(633302),
     y = n(134432),
     D = n(594174),
@@ -54,7 +54,7 @@ let U = {
         end: 15
     },
     w = [a],
-    x = [s, o, l, u, c, d, _, E, f, h, p, I, m, T, g, S, A, N, O, v, R],
+    x = [s, o, l, u, c, d, _, E, f, h, p, I, m, T, g, S, A, N, O, R, v],
     G = {
         [M.q.BASIC]: w,
         [M.q.PREMIUM]: x

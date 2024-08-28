@@ -41,8 +41,8 @@ function E(e, t, n) {
         { isInvalid: S, validationErrors: A, validationDetails: N } = t.displayValidation,
         {
             labelProps: O,
-            fieldProps: v,
-            descriptionProps: R,
+            fieldProps: R,
+            descriptionProps: v,
             errorMessageProps: C
         } = (0, l.U)({
             ...e,
@@ -52,7 +52,7 @@ function E(e, t, n) {
         });
     (g.onKeyDown = g.onKeyDownCapture), delete g.onKeyDownCapture;
     let y = (0, r.zL)(e, { labelable: !0 }),
-        D = (0, r.dG)(g, m, v),
+        D = (0, r.dG)(g, m, R),
         L = (0, r.Me)();
     return (
         _.set(t, {
@@ -110,9 +110,9 @@ function E(e, t, n) {
                 onBlur: (n) => {
                     !n.currentTarget.contains(n.relatedTarget) && (e.onBlur && e.onBlur(n), e.onFocusChange && e.onFocusChange(!1), t.setFocused(!1));
                 },
-                'aria-labelledby': [v['aria-labelledby'], D['aria-label'] && !v['aria-labelledby'] ? D.id : null].filter(Boolean).join(' ')
+                'aria-labelledby': [R['aria-labelledby'], D['aria-label'] && !R['aria-labelledby'] ? D.id : null].filter(Boolean).join(' ')
             },
-            descriptionProps: R,
+            descriptionProps: v,
             errorMessageProps: C,
             isInvalid: S,
             validationErrors: A,

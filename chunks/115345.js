@@ -44,8 +44,8 @@ var r = n(470079),
     A = n(823379),
     N = n(960048),
     O = n(709054),
-    v = n(223683),
-    R = n(630114),
+    R = n(223683),
+    v = n(630114),
     C = n(506712),
     y = n(468788),
     D = n(789662),
@@ -65,7 +65,7 @@ function U(e, t) {
                     var a;
                     let [s, o, l] = f.Z.hasConsented(L.pjP.PERSONALIZATION) ? (0, C.q)(e, t, n, r, !0) : (0, C.A)(e, n),
                         u = null !== (a = n.filter((t) => t.guild_id === e.id)[0]) && void 0 !== a ? a : {},
-                        c = (0, R.Z)(e, null != i ? i : s, u, r, t);
+                        c = (0, v.Z)(e, null != i ? i : s, u, r, t);
                     return {
                         guildId: e.id,
                         mode: s,
@@ -266,7 +266,7 @@ async function F(e) {
     return await e();
 }
 async function V() {
-    let e = await (0, v.Tn)();
+    let e = await (0, R.Tn)();
     e.length > 0
         ? (await (function () {
               return new Promise((e) => {
@@ -279,12 +279,12 @@ async function V() {
                       onCancel: () => e(!1)
                   });
               });
-          })()) && (0, v.dt)(e)
-        : (0, v.$U)('Backup from '.concat(new Date().toLocaleDateString()));
+          })()) && (0, R.dt)(e)
+        : (0, R.$U)('Backup from '.concat(new Date().toLocaleDateString()));
 }
 async function H() {
     o.K.set('turnedOffNewNotifications', !0), g.default.track(L.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(I.Z.getGuilds()).filter((e) => T.ZP.resolveGuildUnreadSetting(e) === b.i.ONLY_MENTIONS).length });
-    let e = await (0, v.Tn)(),
+    let e = await (0, R.Tn)(),
         t = a().sortBy(e, (e) => new Date(e.recorded_at).getTime());
     if (t.length > 0) {
         let e = t[t.length - 1];
@@ -297,7 +297,7 @@ async function H() {
                 onCancel: () => {}
             })
         ),
-            await (0, v.xx)(e.id),
+            await (0, R.xx)(e.id),
             await c.Z.setAccountFlag(y.c.USE_NEW_NOTIFICATIONS, !1);
     } else await c.Z.setAccountFlag(y.c.USE_NEW_NOTIFICATIONS, !1);
 }

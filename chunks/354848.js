@@ -1,9 +1,9 @@
-var e = r(174124),
-    o = e.all;
-t.exports = e.IS_HTMLDDA
-    ? function (t) {
-          return 'function' == typeof t || t === o;
+var n = r(174124),
+    a = n.all;
+e.exports = n.IS_HTMLDDA
+    ? function (e) {
+          return 'function' == typeof e || e === a;
       }
-    : function (t) {
-          return 'function' == typeof t;
+    : function (e) {
+          return 'function' == typeof e;
       };

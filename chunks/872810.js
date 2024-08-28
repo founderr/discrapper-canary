@@ -64,8 +64,8 @@ var r = n(512722),
     A = n(26151),
     N = n(493683),
     O = n(475179),
-    v = n(287734),
-    R = n(981631),
+    R = n(287734),
+    v = n(981631),
     C = n(70722);
 function y(e, t, n) {
     o.Z.dispatch({
@@ -73,7 +73,7 @@ function y(e, t, n) {
         streamType: null != e ? C.lo.GUILD : C.lo.CALL,
         guildId: e,
         channelId: t,
-        appContext: __OVERLAY__ ? R.IlC.OVERLAY : R.IlC.APP,
+        appContext: __OVERLAY__ ? v.IlC.OVERLAY : v.IlC.APP,
         ...n
     });
 }
@@ -118,7 +118,7 @@ function P(e, t) {
     let { guildId: n, channelId: r } = e;
     if (null != n && L(n, r)) return;
     b(e, t);
-    let i = d.Z.getWindowOpen(R.KJ3.CHANNEL_CALL_POPOUT),
+    let i = d.Z.getWindowOpen(v.KJ3.CHANNEL_CALL_POPOUT),
         a = p.Z.getVoiceChannelId();
     if (!i || a !== r) (0, c.Z)(e);
 }
@@ -128,7 +128,7 @@ function U(e) {
         o.Z.dispatch({
             type: 'STREAM_STOP',
             streamKey: e,
-            appContext: __OVERLAY__ ? R.IlC.OVERLAY : R.IlC.APP
+            appContext: __OVERLAY__ ? v.IlC.OVERLAY : v.IlC.APP
         });
 }
 function w(e) {
@@ -152,7 +152,7 @@ async function x(e, t, n) {
     });
     try {
         let e = await s.tn.get({
-            url: R.ANM.STREAM_PREVIEW(r),
+            url: v.ANM.STREAM_PREVIEW(r),
             query: { version: Date.now() },
             oldFormErrors: !0
         });
@@ -174,7 +174,7 @@ async function x(e, t, n) {
 async function G(e) {
     try {
         await S.Z.post({
-            url: R.ANM.STREAM_NOTIFY(e),
+            url: v.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
             trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY }
         });
@@ -189,7 +189,7 @@ function k(e) {
 }
 function B(e, t) {
     s.tn.patch({
-        url: R.ANM.STREAM(e),
+        url: v.ANM.STREAM(e),
         body: { region: t },
         oldFormErrors: !0
     });
@@ -222,7 +222,7 @@ function H(e, t) {
     let n = E.default.getId(),
         r = (0, u.my)(t),
         i = p.Z.getVoiceChannelId();
-    null != i && i !== e && v.default.disconnect(),
+    null != i && i !== e && R.default.disconnect(),
         N.Z.addRecipient(e, n, void 0, () => {
             A.Z.call(e, !1, !1, null, () => {
                 P(r);

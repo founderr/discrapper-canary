@@ -20,10 +20,10 @@ function a(e, t, n) {
 }
 class s {
     markAsSeen(e, t, n) {
-        this.categoryId !== e && this.flushSeenGuilds(n), this.guildIds.add(t);
+        this.categoryId !== e && ((this.categoryId = e), this.flushSeenGuilds(n)), this.guildIds.add(t);
     }
     flushSeenGuilds(e) {
-        this.guildIds.size > 0 && i.Az(e, Array.from(this.guildIds));
+        this.guildIds.size > 0 && (i.Az(e, Array.from(this.guildIds)), this.guildIds.clear());
     }
     constructor(e) {
         a(this, 'guildIds', new Set()), a(this, 'categoryId', void 0), (this.categoryId = e);

@@ -27,8 +27,8 @@ var r = n(735250),
     A = n(70956),
     N = n(709054),
     O = n(51144),
-    v = n(443603),
-    R = n(981631),
+    R = n(443603),
+    v = n(981631),
     C = n(921944),
     y = n(474936),
     D = n(689938),
@@ -176,10 +176,10 @@ t.Z = i.memo(function (e) {
                 subscriptionTier: y.Si.TIER_2,
                 analyticsLocations: a,
                 analyticsObject: {
-                    page: n.isPrivate() ? R.ZY5.DM_CHANNEL : R.ZY5.GUILD_CHANNEL,
-                    section: R.jXE.CHANNEL_TEXT_AREA,
-                    object: R.qAy.SEASONAL_BUTTON_ICON,
-                    objectType: R.Qqv.GIFT
+                    page: n.isPrivate() ? v.ZY5.DM_CHANNEL : v.ZY5.GUILD_CHANNEL,
+                    section: v.jXE.CHANNEL_TEXT_AREA,
+                    object: v.qAy.SEASONAL_BUTTON_ICON,
+                    objectType: v.Qqv.GIFT
                 }
             });
         },
@@ -199,7 +199,7 @@ t.Z = i.memo(function (e) {
                         markAsDismissed: G,
                         isDM: V
                     }),
-                (0, r.jsx)(v.Z, {
+                (0, r.jsx)(R.Z, {
                     innerClassName: b.button,
                     'aria-label': D.Z.Messages.PREMIUM_GIFT_BUTTON_LABEL,
                     isActive: !1,

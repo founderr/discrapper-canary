@@ -32,17 +32,17 @@ function O(e, t, n) {
         e
     );
 }
-let v = !1,
-    R = !0,
+let R = !1,
+    v = !0,
     C = !1;
 function y() {
-    v = !0;
+    R = !0;
 }
 function D() {
-    R && (r = void 0), (C = !1), (v = !1);
+    v && (r = void 0), (C = !1), (R = !1);
 }
 let L = () => {
-        R = !T.ZP.canUseClientThemes(m.default.getCurrentUser());
+        v = !T.ZP.canUseClientThemes(m.default.getCurrentUser());
     },
     b = () => {
         let e = f.L1.getSetting().backgroundGradientPresetId;
@@ -70,7 +70,7 @@ class P extends (a = s.ZP.PersistedStore) {
         null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? A.qt[e.gradientPresetId] : void 0), this.waitFor(m.default, _.Z, I.Z, c.Z, h.Z), this.syncWith([m.default], L), this.syncWith([c.Z], b), this.syncWith([h.Z], M);
     }
     getState() {
-        return R ? {} : { gradientPresetId: null == r ? void 0 : r.id };
+        return v ? {} : { gradientPresetId: null == r ? void 0 : r.id };
     }
     get gradientPreset() {
         return r;
@@ -79,10 +79,10 @@ class P extends (a = s.ZP.PersistedStore) {
         return null == this.gradientPreset ? null : (0, S.VK)(this.gradientPreset);
     }
     get isEditorOpen() {
-        return v;
+        return R;
     }
     get isPreview() {
-        return R;
+        return v;
     }
     get isCoachmark() {
         return C;
@@ -121,7 +121,7 @@ O(P, 'displayName', 'ClientThemesBackgroundStore'),
         },
         CLIENT_THEMES_EDITOR_OPEN: (e) => {
             (function () {
-                v = !0;
+                R = !0;
             })();
         },
         CLIENT_THEMES_EDITOR_CLOSE: (e) => {
@@ -139,7 +139,7 @@ O(P, 'displayName', 'ClientThemesBackgroundStore'),
                 (0, p.zi)(i.type) &&
                 ((C = !0),
                 (function () {
-                    v = !0;
+                    R = !0;
                 })());
         },
         LOGOUT: function () {

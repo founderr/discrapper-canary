@@ -14,8 +14,8 @@ var a = n(120356),
     d = n(577798);
 function u(e) {
     let { title: t, description: n, button: a, className: u, background: _ } = e,
-        h = (0, o.ZP)(),
-        E = (0, r.wj)(h),
+        E = (0, o.ZP)(),
+        h = (0, r.wj)(E),
         m = (0, c.v)({ location: 'QuestHomePage' });
     return (0, i.jsxs)('div', {
         className: s()(d.container, u),
@@ -34,7 +34,7 @@ function u(e) {
                         (0, i.jsx)(l.Text, {
                             className: d.description,
                             variant: 'text-md/medium',
-                            color: E ? 'text-muted' : 'header-primary',
+                            color: h ? 'text-muted' : 'header-primary',
                             children: n
                         }),
                         a

@@ -3,7 +3,7 @@ n.d(t, {
         return r;
     },
     n: function () {
-        return R;
+        return v;
     }
 }),
     n(47120),
@@ -43,15 +43,15 @@ function A(e, t, n) {
 let N = new u.Z('CloudUpload.tsx'),
     O = n(224497).Z;
 ((i = r || (r = {})).NOT_STARTED = 'NOT_STARTED'), (i.STARTED = 'STARTED'), (i.UPLOADING = 'UPLOADING'), (i.ERROR = 'ERROR'), (i.COMPLETED = 'COMPLETED'), (i.CANCELED = 'CANCELED');
-class v {
+class R {
     constructor() {
         A(this, 'numChunks', void 0), A(this, 'totalRequestCount', void 0), A(this, 'timing', {}), A(this, 'compressAndExtractDisabled', void 0), A(this, 'fileAlreadyPrepped', void 0), A(this, 'imageCompressionQuality', void 0), A(this, 'videoCompressionQuality', void 0), A(this, 'convertedMimeType', void 0), A(this, 'sourceMediaWidth', void 0), A(this, 'sourceMediaHeight', void 0), A(this, 'sourceMediaFormat', void 0), A(this, 'sourceVideoBitrate', void 0);
     }
 }
-class R extends T.ZP {
+class v extends T.ZP {
     static fromJson(e) {
         let { item: t, channelId: n, showLargeMessageDialog: r, reactNativeFileIndex: i } = e,
-            a = new R(t, n, r, i);
+            a = new v(t, n, r, i);
         return (
             'COMPLETED' !== a.status && (a.status = 'NOT_STARTED'),
             Object.entries(e).forEach((e) => {
@@ -338,7 +338,7 @@ class R extends T.ZP {
         N.log('Cancelled called for '.concat(this.id)), this._abortController.abort(), this.trackUploadFinished('CANCELED'), 'COMPLETED' === this.status && this.delete(), this.setStatus('CANCELED'), this.emit('complete'), this.removeAllListeners();
     }
     resetState() {
-        return (this.status = 'NOT_STARTED'), (this.uploadedFilename = void 0), (this.responseUrl = void 0), (this.error = void 0), (this.startTime = void 0), (this.uploadAnalytics = new v()), (this._abortController = new AbortController()), super.resetState();
+        return (this.status = 'NOT_STARTED'), (this.uploadedFilename = void 0), (this.responseUrl = void 0), (this.error = void 0), (this.startTime = void 0), (this.uploadAnalytics = new R()), (this._abortController = new AbortController()), super.resetState();
     }
     async delete() {
         if (null == this.uploadedFilename) return;
@@ -408,6 +408,6 @@ class R extends T.ZP {
     }
     constructor(e, t, n, r) {
         var i, a, s, o;
-        super(e, n), A(this, 'RESUME_INCOMPLETE_CODES', [308]), A(this, 'status', 'NOT_STARTED'), A(this, 'channelId', void 0), A(this, 'responseUrl', void 0), A(this, 'currentSize', void 0), A(this, 'preCompressionSize', void 0), A(this, 'postCompressionSize', void 0), A(this, 'loaded', 0), A(this, 'reactNativeFileIndex', void 0), A(this, 'error', void 0), A(this, 'reactNativeFilePrepped', !1), A(this, 'startTime', void 0), A(this, 'uploadAnalytics', new v()), A(this, '_abortController', void 0), A(this, '_xhr', void 0), A(this, '_aborted', !1), (this.channelId = t), (this.preCompressionSize = null !== (s = null === (i = e.file) || void 0 === i ? void 0 : i.size) && void 0 !== s ? s : 0), (this.currentSize = null !== (o = null === (a = e.file) || void 0 === a ? void 0 : a.size) && void 0 !== o ? o : 0), (this.reactNativeFileIndex = r), (this._abortController = new AbortController());
+        super(e, n), A(this, 'RESUME_INCOMPLETE_CODES', [308]), A(this, 'status', 'NOT_STARTED'), A(this, 'channelId', void 0), A(this, 'responseUrl', void 0), A(this, 'currentSize', void 0), A(this, 'preCompressionSize', void 0), A(this, 'postCompressionSize', void 0), A(this, 'loaded', 0), A(this, 'reactNativeFileIndex', void 0), A(this, 'error', void 0), A(this, 'reactNativeFilePrepped', !1), A(this, 'startTime', void 0), A(this, 'uploadAnalytics', new R()), A(this, '_abortController', void 0), A(this, '_xhr', void 0), A(this, '_aborted', !1), (this.channelId = t), (this.preCompressionSize = null !== (s = null === (i = e.file) || void 0 === i ? void 0 : i.size) && void 0 !== s ? s : 0), (this.currentSize = null !== (o = null === (a = e.file) || void 0 === a ? void 0 : a.size) && void 0 !== o ? o : 0), (this.reactNativeFileIndex = r), (this._abortController = new AbortController());
     }
 }

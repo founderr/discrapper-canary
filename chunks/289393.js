@@ -41,8 +41,8 @@ let T = new _.h(
     A = new Set(),
     N = {},
     O = {},
-    v = {},
     R = {},
+    v = {},
     C = new Map();
 function y(e) {
     return T.values(h(e));
@@ -92,11 +92,11 @@ class M extends (i = d.ZP.Store) {
         return O[e];
     }
     getMonetizationRestrictions(e) {
-        return v[e];
+        return R[e];
     }
     getMonetizationRestrictionsFetchState(e) {
         var t;
-        return null !== (t = R[e]) && void 0 !== t ? t : 0;
+        return null !== (t = v[e]) && void 0 !== t ? t : 0;
     }
     getApplicationIdForGuild(e) {
         return C.get(e);
@@ -113,7 +113,7 @@ class M extends (i = d.ZP.Store) {
         : (s[o] = l),
     (t.Z = new M(E.Z, {
         CONNECTION_OPEN: function () {
-            T.clear(), g.clear(), (S = {}), A.clear(), (N = {}), (O = {}), (v = {}), (R = {}), C.clear();
+            T.clear(), g.clear(), (S = {}), A.clear(), (N = {}), (O = {}), (R = {}), (v = {}), C.clear();
         },
         GUILD_ROLE_SUBSCRIPTIONS_UPDATE_SUBSCRIPTIONS_SETTINGS: function (e) {
             let { settings: t } = e;
@@ -166,18 +166,18 @@ class M extends (i = d.ZP.Store) {
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS: function (e) {
             let { guildId: t } = e;
-            R[t] = 1;
+            v[t] = 1;
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: function (e) {
             let { guildId: t, restrictions: n } = e;
-            (v[t] = n), (R[t] = 2);
+            (R[t] = n), (v[t] = 2);
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_FAILURE: function (e) {
             let { guildId: t } = e;
-            (R[t] = 2), (v[t] = f.m);
+            (v[t] = 2), (R[t] = f.m);
         },
         GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_ABORTED: function (e) {
             let { guildId: t } = e;
-            R[t] = 0;
+            v[t] = 0;
         }
     }));

@@ -9,7 +9,7 @@ var i = n(392711),
     d = n(526761),
     u = n(981631);
 let _ = 'selectedChannelGuildFrecency';
-function h(e) {
+function E(e) {
     var t;
     let n;
     ((t = n || (n = {})).IMAGE = 'IMAGE'), (t.VIDEO = 'VIDEO');
@@ -51,11 +51,11 @@ function h(e) {
               );
           });
 }
-let E = [
+let h = [
     {
         version: 2,
         run(e) {
-            let t = h(1);
+            let t = E(1);
             if (0 === t.length) return !1;
             for (let { url: n, favorite: i } of (null == e.favoriteGifs && (e.favoriteGifs = r.wK.create()), (e.favoriteGifs.gifs = {}), t)) e.favoriteGifs.gifs[n] = i;
             return (e.favoriteGifs.hideTooltip = t.length > 2), !0;
@@ -96,7 +96,7 @@ let E = [
         version: 6,
         run(e) {
             null == e.favoriteGifs && (e.favoriteGifs = r.wK.create()), null == e.favoriteGifs.gifs && (e.favoriteGifs.gifs = {});
-            let t = h(1);
+            let t = E(1);
             if (0 === t.length) return !1;
             a()(e.favoriteGifs.gifs)
                 .values()
@@ -184,4 +184,4 @@ let E = [
         cleanup() {}
     }
 ];
-t.Z = E;
+t.Z = h;

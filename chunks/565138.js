@@ -81,9 +81,9 @@ class A extends a.PureComponent {
     renderIcon() {
         var e, t;
         let { guild: n, className: r, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: _, tooltipPosition: E, onClick: f, to: h, badgeStrokeColor: m, animate: T, tabIndex: g, iconSrc: A, 'aria-hidden': N, ...O } = this.props,
-            v = S[l],
-            R = null != f ? d.Clickable : 'div';
-        return (0, i.jsxs)(R, {
+            R = S[l],
+            v = null != f ? d.Clickable : 'div';
+        return (0, i.jsxs)(v, {
             className: o()(I.icon, r, (0, p.l)(I, 'iconSize', l), {
                 [null !== (e = (0, p.l)(I, 'iconActive', l)) && void 0 !== e ? e : '']: s,
                 [I.iconInactive]: !s,
@@ -93,7 +93,7 @@ class A extends a.PureComponent {
             style:
                 null == n.icon
                     ? {
-                          fontSize: (null !== (t = v[n.acronym.length]) && void 0 !== t ? t : v[v.length - 1]) * c,
+                          fontSize: (null !== (t = R[n.acronym.length]) && void 0 !== t ? t : R[R.length - 1]) * c,
                           ...u
                       }
                     : u,

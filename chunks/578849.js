@@ -198,8 +198,8 @@ let S = '[a-zA-Z]\\w*',
     A = '[a-zA-Z_]\\w*',
     N = '\\b\\d+(\\.\\d+)?',
     O = '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',
-    v = '\\b(0b[01]+)',
-    R = {
+    R = '\\b(0b[01]+)',
+    v = {
         begin: '\\\\[\\s\\S]',
         relevance: 0
     },
@@ -233,7 +233,7 @@ var b = Object.freeze({
     UNDERSCORE_IDENT_RE: A,
     NUMBER_RE: N,
     C_NUMBER_RE: O,
-    BINARY_NUMBER_RE: v,
+    BINARY_NUMBER_RE: R,
     RE_STARTERS_RE: '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~',
     SHEBANG: (e = {}) => {
         let t = /^#![ ]*\//;
@@ -253,20 +253,20 @@ var b = Object.freeze({
             )
         );
     },
-    BACKSLASH_ESCAPE: R,
+    BACKSLASH_ESCAPE: v,
     APOS_STRING_MODE: {
         scope: 'string',
         begin: "'",
         end: "'",
         illegal: '\\n',
-        contains: [R]
+        contains: [v]
     },
     QUOTE_STRING_MODE: {
         scope: 'string',
         begin: '"',
         end: '"',
         illegal: '\\n',
-        contains: [R]
+        contains: [v]
     },
     PHRASAL_WORDS_MODE: { begin: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/ },
     COMMENT: C,
@@ -285,7 +285,7 @@ var b = Object.freeze({
     },
     BINARY_NUMBER_MODE: {
         scope: 'number',
-        begin: v,
+        begin: R,
         relevance: 0
     },
     REGEXP_MODE: {
@@ -297,12 +297,12 @@ var b = Object.freeze({
                 end: /\/[gimuy]*/,
                 illegal: /\n/,
                 contains: [
-                    R,
+                    v,
                     {
                         begin: /\[/,
                         end: /\]/,
                         relevance: 0,
-                        contains: [R]
+                        contains: [v]
                     }
                 ]
             }
@@ -455,19 +455,19 @@ var q = (function (e) {
     function N(e, t, s, o) {
         let c = Object.create(null);
         function d() {
-            if (!R.keywords) {
+            if (!v.keywords) {
                 D.addText(L);
                 return;
             }
             let e = 0;
-            R.keywordPatternRe.lastIndex = 0;
-            let t = R.keywordPatternRe.exec(L),
+            v.keywordPatternRe.lastIndex = 0;
+            let t = v.keywordPatternRe.exec(L),
                 n = '';
             for (; t; ) {
                 var r, i;
                 n += L.substring(e, t.index);
                 let a = S.case_insensitive ? t[0].toLowerCase() : t[0];
-                let s = ((r = R), (i = a), r.keywords[i]);
+                let s = ((r = v), (i = a), r.keywords[i]);
                 if (s) {
                     let [e, r] = s;
                     if ((D.addText(n), (n = ''), (c[a] = (c[a] || 0) + 1), c[a] <= 7 && (b += r), e.startsWith('_'))) n += t[0];
@@ -476,23 +476,23 @@ var q = (function (e) {
                         D.addKeyword(t[0], n);
                     }
                 } else n += t[0];
-                (e = R.keywordPatternRe.lastIndex), (t = R.keywordPatternRe.exec(L));
+                (e = v.keywordPatternRe.lastIndex), (t = v.keywordPatternRe.exec(L));
             }
             (n += L.substring(e)), D.addText(n);
         }
         function E() {
-            null != R.subLanguage
+            null != v.subLanguage
                 ? !(function () {
                       if ('' === L) return;
                       let e = null;
-                      if ('string' == typeof R.subLanguage) {
-                          if (!n[R.subLanguage]) {
+                      if ('string' == typeof v.subLanguage) {
+                          if (!n[v.subLanguage]) {
                               D.addText(L);
                               return;
                           }
-                          (e = N(R.subLanguage, L, !0, C[R.subLanguage])), (C[R.subLanguage] = e._top);
-                      } else e = O(L, R.subLanguage.length ? R.subLanguage : null);
-                      R.relevance > 0 && (b += e.relevance), D.addSublanguage(e._emitter, e.language);
+                          (e = N(v.subLanguage, L, !0, C[v.subLanguage])), (C[v.subLanguage] = e._top);
+                      } else e = O(L, v.subLanguage.length ? v.subLanguage : null);
+                      v.relevance > 0 && (b += e.relevance), D.addSublanguage(e._emitter, e.language);
                   })()
                 : d(),
                 (L = '');
@@ -511,7 +511,7 @@ var q = (function (e) {
             }
         }
         function h(e, t) {
-            return e.scope && 'string' == typeof e.scope && D.openNode(S.classNameAliases[e.scope] || e.scope), e.beginScope && (e.beginScope._wrap ? (D.addKeyword(L, S.classNameAliases[e.beginScope._wrap] || e.beginScope._wrap), (L = '')) : e.beginScope._multi && (f(e.beginScope, t), (L = ''))), (R = Object.create(e, { parent: { value: R } }));
+            return e.scope && 'string' == typeof e.scope && D.openNode(S.classNameAliases[e.scope] || e.scope), e.beginScope && (e.beginScope._wrap ? (D.addKeyword(L, S.classNameAliases[e.beginScope._wrap] || e.beginScope._wrap), (L = '')) : e.beginScope._multi && (f(e.beginScope, t), (L = ''))), (v = Object.create(e, { parent: { value: v } }));
         }
         let p = {};
         function I(n, i) {
@@ -532,7 +532,7 @@ var q = (function (e) {
                     for (let r of [n.__beforeBegin, n['on:begin']])
                         if (r && (r(e, i), i.isMatchIgnored)) {
                             var a;
-                            return (a = t), 0 === R.matcher.regexIndex ? ((L += a[0]), 1) : ((H = !0), 0);
+                            return (a = t), 0 === v.matcher.regexIndex ? ((L += a[0]), 1) : ((H = !0), 0);
                         }
                     return n.skip ? (L += t) : (n.excludeBegin && (L += t), E(), !n.returnBegin && !n.excludeBegin && (L = t)), h(n, e), n.returnBegin ? 0 : t.length;
                 })(i);
@@ -557,19 +557,19 @@ var q = (function (e) {
                                     }
                                 }
                                 if (t.endsWithParent) return e(t.parent, n, i);
-                            })(R, e, i);
+                            })(v, e, i);
                         if (!a) return z;
-                        let s = R;
-                        R.endScope && R.endScope._wrap ? (E(), D.addKeyword(n, R.endScope._wrap)) : R.endScope && R.endScope._multi ? (E(), f(R.endScope, e)) : s.skip ? (L += n) : (!(s.returnEnd || s.excludeEnd) && (L += n), E(), s.excludeEnd && (L = n));
-                        do R.scope && D.closeNode(), !R.skip && !R.subLanguage && (b += R.relevance), (R = R.parent);
-                        while (R !== a.parent);
+                        let s = v;
+                        v.endScope && v.endScope._wrap ? (E(), D.addKeyword(n, v.endScope._wrap)) : v.endScope && v.endScope._multi ? (E(), f(v.endScope, e)) : s.skip ? (L += n) : (!(s.returnEnd || s.excludeEnd) && (L += n), E(), s.excludeEnd && (L = n));
+                        do v.scope && D.closeNode(), !v.skip && !v.subLanguage && (b += v.relevance), (v = v.parent);
+                        while (v !== a.parent);
                         return a.starts && h(a.starts, e), s.returnEnd ? 0 : n.length;
                     })(i);
                     if (e !== z) return e;
                 }
             } else {
-                let e = Error('Illegal lexeme "' + a + '" for mode "' + (R.scope || '<unnamed>') + '"');
-                throw ((e.mode = R), e);
+                let e = Error('Illegal lexeme "' + a + '" for mode "' + (v.scope || '<unnamed>') + '"');
+                throw ((e.mode = v), e);
             }
             if ('illegal' === i.type && '' === a) return 1;
             if (F > 100000 && F > 3 * i.index) throw Error('potential infinite loop, way more iterations than matches');
@@ -723,13 +723,13 @@ var q = (function (e) {
                     })(e)
                 );
             })(S),
-            v = '',
-            R = o || A,
+            R = '',
+            v = o || A,
             C = {},
             D = new T.__emitter(T);
         !(function () {
             let e = [];
-            for (let t = R; t !== S; t = t.parent) t.scope && e.unshift(t.scope);
+            for (let t = v; t !== S; t = t.parent) t.scope && e.unshift(t.scope);
             e.forEach((e) => D.openNode(e));
         })();
         let L = '',
@@ -738,9 +738,9 @@ var q = (function (e) {
             F = 0,
             H = !1;
         try {
-            for (R.matcher.considerAll(); ; ) {
-                F++, H ? (H = !1) : R.matcher.considerAll(), (R.matcher.lastIndex = M);
-                let e = R.matcher.exec(t);
+            for (v.matcher.considerAll(); ; ) {
+                F++, H ? (H = !1) : v.matcher.considerAll(), (v.matcher.lastIndex = M);
+                let e = v.matcher.exec(t);
                 if (!e) break;
                 let n = t.substring(M, e.index),
                     r = I(n, e);
@@ -750,14 +750,14 @@ var q = (function (e) {
                 I(t.substring(M)),
                 D.closeAllNodes(),
                 D.finalize(),
-                (v = D.toHTML()),
+                (R = D.toHTML()),
                 {
                     language: e,
-                    value: v,
+                    value: R,
                     relevance: b,
                     illegal: !1,
                     _emitter: D,
-                    _top: R
+                    _top: v
                 }
             );
         } catch (n) {
@@ -772,7 +772,7 @@ var q = (function (e) {
                         index: M,
                         context: t.slice(M - 100, M + 100),
                         mode: n.mode,
-                        resultSoFar: v
+                        resultSoFar: R
                     },
                     _emitter: D
                 };
@@ -784,7 +784,7 @@ var q = (function (e) {
                     relevance: 0,
                     errorRaised: n,
                     _emitter: D,
-                    _top: R
+                    _top: v
                 };
             else throw n;
         }
@@ -816,7 +816,7 @@ var q = (function (e) {
         });
         return (s.secondBest = o), s;
     }
-    function v(e) {
+    function R(e) {
         let t = null,
             n = (function (e) {
                 let t = e.className + ' ';
@@ -865,20 +865,20 @@ var q = (function (e) {
                 text: r
             });
     }
-    let R = !1;
+    let v = !1;
     function C() {
         if ('loading' === document.readyState) {
-            R = !0;
+            v = !0;
             return;
         }
-        document.querySelectorAll(T.cssSelector).forEach(v);
+        document.querySelectorAll(T.cssSelector).forEach(R);
     }
     'undefined' != typeof window &&
         window.addEventListener &&
         window.addEventListener(
             'DOMContentLoaded',
             function () {
-                R && C();
+                v && C();
             },
             !1
         );
@@ -904,9 +904,9 @@ var q = (function (e) {
         highlight: A,
         highlightAuto: O,
         highlightAll: C,
-        highlightElement: v,
+        highlightElement: R,
         highlightBlock: function (e) {
-            return Z('10.7.0', 'highlightBlock will be removed entirely in v12.0'), Z('10.7.0', 'Please use highlightElement now.'), v(e);
+            return Z('10.7.0', 'highlightBlock will be removed entirely in v12.0'), Z('10.7.0', 'Please use highlightElement now.'), R(e);
         },
         configure: function (e) {
             T = a(T, e);

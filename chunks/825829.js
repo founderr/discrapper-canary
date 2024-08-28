@@ -15,7 +15,7 @@ n.d(t, {
         return D;
     },
     ZP: function () {
-        return R;
+        return v;
     },
     ge: function () {
         return y;
@@ -155,8 +155,8 @@ function A(e, t) {
         if (null != e) return e;
     }
     let O = f.Z.can(I.Plq.VIEW_CHANNEL, t);
-    let v = ((n = t), O ? (null !== (r = null == n ? void 0 : n.name) && void 0 !== r ? r : m.Z.Messages.UNKNOWN_CHANNEL_PLACEHOLDER) : m.Z.Messages.NO_ACCESS),
-        R = null != t && O ? l : I.VqG,
+    let R = ((n = t), O ? (null !== (r = null == n ? void 0 : n.name) && void 0 !== r ? r : m.Z.Messages.UNKNOWN_CHANNEL_PLACEHOLDER) : m.Z.Messages.NO_ACCESS),
+        v = null != t && O ? l : I.VqG,
         C = (function (e, t, n) {
             let r = S(e, o.G.VOICE_CHANNEL_STATUS_OUTCOME);
             return null == r
@@ -165,7 +165,7 @@ function A(e, t) {
                       channelName: t,
                       channelHook: n
                   });
-        })(e, v, l);
+        })(e, R, l);
     if (null != C) return C;
     if (null != N)
         return A === s.y.MODAL && null != _
@@ -183,24 +183,24 @@ function A(e, t) {
             : g !== a.P.BLOCKED
               ? m.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_APP_FLAGGED_HOOK.format({
                     applicationName: N,
-                    channelName: v,
-                    channelHook: R,
+                    channelName: R,
+                    channelHook: v,
                     integrationOwnerHook: d
                 })
               : m.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_APP_BLOCKED_HOOK.format({
                     applicationName: N,
-                    channelName: v,
-                    channelHook: R,
+                    channelName: R,
+                    channelHook: v,
                     integrationOwnerHook: d
                 });
     return g !== a.P.BLOCKED
         ? m.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_FLAGGED_HOOK.format({
-              channelName: v,
-              channelHook: R
+              channelName: R,
+              channelHook: v
           })
         : m.Z.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_BLOCKED_HOOK.format({
-              channelName: v,
-              channelHook: R
+              channelName: R,
+              channelHook: v
           });
 }
 function N(e) {
@@ -238,7 +238,7 @@ function O(e) {
         suspiciousMentionActivityUntil: null != d ? new Date(d) : void 0
     };
 }
-function v(e) {
+function R(e) {
     let t = S(e, o.G.CHANNEL_ID),
         n = S(e, o.G.ALERT_ACTIONS_EXECUTION),
         r = (0, h.t)(n);
@@ -265,8 +265,8 @@ function v(e) {
         alertActionsExecution: null != r ? r : void 0
     };
 }
-function R(e) {
-    let t = r.useMemo(() => v(e), [e]),
+function v(e) {
+    let t = r.useMemo(() => R(e), [e]),
         n = (0, _.e7)([E.Z], () => E.Z.getChannel(t.embedChannelId), [t.embedChannelId]);
     return {
         ...t,
@@ -275,7 +275,7 @@ function R(e) {
 }
 function C(e) {
     if (null == e) return null;
-    let { alertActionsExecution: t } = v(e);
+    let { alertActionsExecution: t } = R(e);
     return null != t ? t : null;
 }
 function y(e) {

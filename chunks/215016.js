@@ -41,21 +41,21 @@ function A(e, t, n) {
 }
 let N = [d.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'],
     O = 1220,
-    v = Array.from({ length: 16 }).map((e, t) => ({
+    R = Array.from({ length: 16 }).map((e, t) => ({
         id: ''.concat(t),
         height: Math.floor(100 * Math.random()) + 120
     }));
-function R(e) {
+function v(e) {
     var t;
     return null !== (t = e.id) && void 0 !== t ? t : e.src;
 }
 function C(e, t) {
-    let n = v[t];
+    let n = R[t];
     return null == n ? 0 : n.height;
 }
 function y(e, t, n, i) {
     if (!(e > 0))
-        return null == v[t]
+        return null == R[t]
             ? null
             : (0, r.jsx)(
                   'div',
@@ -71,7 +71,7 @@ function y(e, t, n, i) {
 }
 function D(e, t) {
     var n, r;
-    return e > 0 ? '' : null !== (r = null === (n = v[t]) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : '';
+    return e > 0 ? '' : null !== (r = null === (n = R[t]) || void 0 === n ? void 0 : n.id) && void 0 !== r ? r : '';
 }
 function L(e) {
     return e === c.EO.VIDEO;
@@ -257,7 +257,7 @@ class M extends i.PureComponent {
             A(this, 'handleSelect', (e) => {
                 let t;
                 let { data: n } = this.props,
-                    r = n.findIndex((t) => R(t) === e);
+                    r = n.findIndex((t) => v(t) === e);
                 -1 !== r && (t = n[r]), null != t && this.selectItem(t, r);
             }),
             A(this, 'handleClickItem', (e, t) => {
@@ -290,7 +290,7 @@ class M extends i.PureComponent {
                                       className: S.favButton,
                                       ...s
                                   }),
-                              focused: R(s) === a,
+                              focused: v(s) === a,
                               imagePool: this.props.imagePool,
                               videoPool: this.props.videoPool
                           },
@@ -359,7 +359,7 @@ class M extends i.PureComponent {
                           {
                               fade: !0,
                               className: s()(S.results, i),
-                              sections: [v.length],
+                              sections: [R.length],
                               columns: e,
                               itemGutter: 12,
                               getItemKey: D,

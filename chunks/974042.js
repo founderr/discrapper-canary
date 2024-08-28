@@ -9,8 +9,8 @@ var i,
     d = n(5254),
     u = n(735778),
     _ = n(199902),
-    h = n(271383),
-    E = n(430824),
+    E = n(271383),
+    h = n(430824),
     m = n(158776),
     I = n(699516),
     g = n(594174),
@@ -46,8 +46,8 @@ function f(e) {
 function C(e) {
     let t = [];
     return (
-        s()(h.ZP.memberOf(e))
-            .map(E.Z.getGuild)
+        s()(E.ZP.memberOf(e))
+            .map(h.Z.getGuild)
             .sortBy((e) => (null != e ? e.name.toLowerCase() : null))
             .forEach((e) => {
                 null != e && t.push(e);
@@ -182,7 +182,7 @@ function D(e) {
 }
 class y extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, m.Z, g.default, E.Z, h.ZP, _.Z, d.Z), this.syncWith([I.Z], M), this.syncWith([d.Z], M), this.syncWith([g.default], D(S)), this.syncWith([m.Z, _.Z], D(f)), P();
+        this.waitFor(I.Z, m.Z, g.default, h.Z, E.ZP, _.Z, d.Z), this.syncWith([I.Z], M), this.syncWith([d.Z], M), this.syncWith([g.default], D(S)), this.syncWith([m.Z, _.Z], D(f)), P();
     }
     getState() {
         return {

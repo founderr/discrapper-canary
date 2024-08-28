@@ -15,8 +15,8 @@ var i = n(664751),
     d = n(570140),
     u = n(979200),
     _ = n(489863),
-    h = n(166148),
-    E = n(307643),
+    E = n(166148),
+    h = n(307643),
     m = n(973616),
     I = n(594174),
     g = n(630388),
@@ -37,7 +37,7 @@ async function N(e, t, n) {
     if (null != N) throw new T.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let j = [];
     if (('string' == typeof O ? (j = O.split(' ').filter((e) => e.length > 0)) : Array.isArray(O) && (j = O), null == I.default.getCurrentUser())) throw new T.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'Client is not logged in');
-    let U = m.Z.createFromServer(await (0, E.UM)(S)),
+    let U = m.Z.createFromServer(await (0, h.UM)(S)),
         G = null != U && (0, g.yE)(U.flags, f.udG.EMBEDDED) && (null === (i = U.integrationTypesConfig) || void 0 === i ? void 0 : i[a.Y.USER_INSTALL]) != null;
     l = null == D ? (G ? a.Y.USER_INSTALL : a.Y.GUILD_INSTALL) : Number(D);
     try {
@@ -61,7 +61,7 @@ async function N(e, t, n) {
         let { body: e } = t;
         throw new T.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'OAuth2 Authorization Error: '.concat(e.message || 'Unknown Error'));
     }
-    if (P === h.s.NONE && null != o && o.authorized && d)
+    if (P === E.s.NONE && null != o && o.authorized && d)
         try {
             return (
                 await (0, _.Iq)({

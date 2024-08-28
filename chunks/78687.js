@@ -110,10 +110,10 @@ e.exports = function (e) {
             function O(e) {
                 return e + 10 + A();
             }
-            function v(e) {
+            function R(e) {
                 return e + 10 + N();
             }
-            function R(e, t, n) {
+            function v(e, t, n) {
                 var r = _(e),
                     i = E(e),
                     a = t + 10 + A(),
@@ -167,8 +167,8 @@ e.exports = function (e) {
                     A = document.createElement('div'),
                     N = document.createElement('div'),
                     O = document.createElement('div'),
-                    v = document.createElement('div'),
                     R = document.createElement('div'),
+                    v = document.createElement('div'),
                     y = document.createElement('div');
                 function D() {
                     var e = i(l);
@@ -178,7 +178,7 @@ e.exports = function (e) {
                     var e = i(l);
                     e && e.onShrink ? e.onShrink() : I('Aborting shrink scroll handler: element has been uninstalled');
                 }
-                (A.dir = 'ltr'), (A.style.cssText = h), (A.className = o), (N.className = o), (N.style.cssText = p), (O.style.cssText = m), (v.style.cssText = g), (R.style.cssText = T), (y.style.cssText = S), O.appendChild(v), R.appendChild(y), N.appendChild(O), N.appendChild(R), A.appendChild(N), _.appendChild(A), c(O, 'scroll', D), c(R, 'scroll', L), (i(l).onExpandScroll = D), (i(l).onShrinkScroll = L);
+                (A.dir = 'ltr'), (A.style.cssText = h), (A.className = o), (N.className = o), (N.style.cssText = p), (O.style.cssText = m), (R.style.cssText = g), (v.style.cssText = T), (y.style.cssText = S), O.appendChild(R), v.appendChild(y), N.appendChild(O), N.appendChild(v), A.appendChild(N), _.appendChild(A), c(O, 'scroll', D), c(v, 'scroll', L), (i(l).onExpandScroll = D), (i(l).onShrinkScroll = L);
             }
             function D() {
                 function s(t, n, r) {
@@ -220,7 +220,7 @@ e.exports = function (e) {
                                 I('Aborting because element container has not been initialized');
                                 return;
                             }
-                            R(l, o, c);
+                            v(l, o, c);
                         }),
                         d &&
                             r &&
@@ -285,7 +285,7 @@ e.exports = function (e) {
                     return;
                 }
                 var e = i(l).style;
-                S(l, e.width, e.height), R(l, e.width, e.height);
+                S(l, e.width, e.height), v(l, e.width, e.height);
             }
             function b() {
                 d(l);

@@ -9,8 +9,8 @@ var a = n(636977),
     d = n(285865),
     u = n(918701),
     _ = n(471985),
-    h = n(702428),
-    E = n(341907),
+    E = n(702428),
+    h = n(341907),
     m = n(703656),
     I = n(683301),
     g = n(150192),
@@ -53,7 +53,7 @@ let Z = (e) => {
                           icon: Z(e.categoryId)
                       })),
             L = (e) => {
-                (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== f.Gj.Quests && (0, m.uL)(C.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === f.Gj.Quests && (0, E.navigateToQuestHome)(N.dr.DISCOVERY_SIDEBAR, a.j.DISCOVERY_SIDEBAR);
+                (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== f.Gj.Quests && (0, m.uL)(C.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === f.Gj.Quests && (0, h.navigateToQuestHome)(N.dr.DISCOVERY_SIDEBAR, a.j.DISCOVERY_SIDEBAR);
             };
         return (0, i.jsxs)(r.Scroller, {
             className: v.sidebarContainer,
@@ -71,7 +71,7 @@ let Z = (e) => {
                     shouldDisplaySelectedCategory: !t
                 }),
                 n &&
-                    (0, i.jsx)(h.Z, {
+                    (0, i.jsx)(E.Z, {
                         onClick: () => L(f.Gj.Quests),
                         isSelected: e === f.Gj.Quests
                     })

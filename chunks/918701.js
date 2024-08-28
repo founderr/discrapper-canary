@@ -21,7 +21,7 @@ n.d(t, {
         return k;
     },
     FE: function () {
-        return eR;
+        return ev;
     },
     Fs: function () {
         return e$;
@@ -129,7 +129,7 @@ n.d(t, {
         return eE;
     },
     o9: function () {
-        return ev;
+        return eR;
     },
     oo: function () {
         return eI;
@@ -199,8 +199,8 @@ var h = n(572004),
     A = n(569984),
     N = n(497505),
     O = n(566078),
-    v = n(312046),
-    R = n(46140),
+    R = n(312046),
+    v = n(46140),
     C = n(981631),
     y = n(701488),
     D = n(689938);
@@ -292,7 +292,7 @@ function H(e) {
         config:
             ((t = e.config),
             (0, s.EQ)(t)
-                .with({ config_version: 2 }, (e) => (0, v.Q)(e))
+                .with({ config_version: 2 }, (e) => (0, R.Q)(e))
                 .exhaustive()),
         userStatus: null == e.user_status ? null : V(e.user_status),
         targetedContent: e.targeted_content
@@ -343,7 +343,7 @@ function W(e, t) {
 }
 let K = (e) => {
         var t, n;
-        let r = ev({
+        let r = eR({
                 quest: e,
                 idx: null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedTier
             }),
@@ -392,12 +392,12 @@ function en(e) {
     return D.Z.Messages.QUESTS_TITLE.format({ questName: r.config.messages.questName });
 }
 function er(e) {
-    return Object.keys(R.a_).includes(N.jn[e]);
+    return Object.keys(v.a_).includes(N.jn[e]);
 }
 function ei(e, t) {
     if (!er(t)) return !1;
     let n = N.jn[t];
-    return (0, I.yE)(e.dismissedQuestContent, R.a_[n]);
+    return (0, I.yE)(e.dismissedQuestContent, v.a_[n]);
 }
 function ea(e) {
     return (0, s.EQ)(e)
@@ -492,7 +492,7 @@ let em = (e) =>
 function eT(e) {
     let { quest: t } = e;
     return (0, s.EQ)(t.config)
-        .with({ configVersion: 2 }, (e) => eO(t, R.S7.PLAYTIME_TASK) || em(e))
+        .with({ configVersion: 2 }, (e) => eO(t, v.S7.PLAYTIME_TASK) || em(e))
         .exhaustive();
 }
 function eg(e) {
@@ -502,15 +502,15 @@ function eS(e, t) {
     return O.r.build(t.config).application.id === e || eA(t);
 }
 function eA(e) {
-    return eO(e, R.S7.FRACTIONS_QUEST);
+    return eO(e, v.S7.FRACTIONS_QUEST);
 }
 function eN(e) {
-    return !eO(e, R.S7.IN_HOUSE_CONSOLE_QUEST);
+    return !eO(e, v.S7.IN_HOUSE_CONSOLE_QUEST);
 }
 function eO(e, t) {
     return O.r.build(e.config).features.has(t);
 }
-function ev(e) {
+function eR(e) {
     let { quest: t, idx: n } = e;
     if (null == n) return null;
     let r = t.config.rewardsConfig.rewards[n];
@@ -518,7 +518,7 @@ function ev(e) {
         .with({ type: u.w.REWARD_CODE }, (e) => e)
         .otherwise(() => null);
 }
-function eR(e, t) {
+function ev(e, t) {
     let n = O.r.build(e.config).application.link;
     (0, T.q)({
         href: n,
@@ -749,7 +749,7 @@ function eX(e) {
         u = eI({ quest: a }),
         c = null != o ? o : null == s ? void 0 : s.platform,
         d = u
-            ? ev({
+            ? eR({
                   quest: a,
                   idx: null !== (r = null == s ? void 0 : s.tier) && void 0 !== r ? r : null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedTier
               })
@@ -789,5 +789,5 @@ function eJ(e) {
             })({ quest: e }),
         n = ek(e),
         r = [];
-    return t && r.push(R.cd.DESKTOP), n && r.push(R.cd.CONSOLE), r;
+    return t && r.push(v.cd.DESKTOP), n && r.push(v.cd.CONSOLE), r;
 }

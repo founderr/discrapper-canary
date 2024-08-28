@@ -21,8 +21,8 @@ var i,
     A = n(306680),
     N = n(944486),
     O = n(914010),
-    v = n(9156),
-    R = n(483360),
+    R = n(9156),
+    v = n(483360),
     C = n(823379),
     y = n(981631),
     D = n(689938);
@@ -95,32 +95,32 @@ function j(e, t) {
                           switch (x) {
                               case c.h8.USER: {
                                   let e = h.default.getId();
-                                  return R.ZP.getRecentlyTalked(r, 100).filter((t) => {
+                                  return v.ZP.getRecentlyTalked(r, 100).filter((t) => {
                                       let { record: n } = t;
                                       return n.id !== e;
                                   });
                               }
                               case c.h8.APPLICATION:
-                                  return R.ZP.queryApplications({
+                                  return v.ZP.queryApplications({
                                       query: '',
                                       limit: 100,
                                       fuzzy: !0
                                   });
                               case c.h8.GUILD:
-                                  return R.ZP.queryGuilds({
+                                  return v.ZP.queryGuilds({
                                       query: '',
                                       limit: 100,
                                       fuzzy: !0
                                   });
                               case c.h8.TEXT_CHANNEL:
-                                  return R.ZP.queryChannels({
+                                  return v.ZP.queryChannels({
                                       query: '',
                                       guildId: O.Z.getGuildId(),
                                       limit: 100,
                                       fuzzy: !0
                                   });
                               case c.h8.VOICE_CHANNEL:
-                                  return R.ZP.queryChannels({
+                                  return v.ZP.queryChannels({
                                       query: '',
                                       guildId: O.Z.getGuildId(),
                                       limit: 100,
@@ -158,7 +158,7 @@ function j(e, t) {
                               let e = m.ZP.getSelectableChannelIds(n)
                                   .filter((e) => {
                                       let t = p.Z.getChannel(e);
-                                      return !(null == t || e === r || V.includes(e) || v.ZP.isChannelMuted(t.guild_id, e) || (null != t.parent_id && v.ZP.isChannelMuted(t.guild_id, t.parent_id))) && (0, _.d)(t);
+                                      return !(null == t || e === r || V.includes(e) || R.ZP.isChannelMuted(t.guild_id, e) || (null != t.parent_id && R.ZP.isChannelMuted(t.guild_id, t.parent_id))) && (0, _.d)(t);
                                   })
                                   .map((e) => Z(e))
                                   .filter((e) => e);

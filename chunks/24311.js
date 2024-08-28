@@ -26,11 +26,11 @@ function h(e) {
     let O = () => {
             null == T || T(), s.Z.openPrivateChannel(t.id, !0, I), g.dispatch(E.CkL.POPOUT_CLOSE), (0, a.closeAllModals)();
         },
-        v = !l.ZP.disableCallUserConfirmationPrompt;
+        R = !l.ZP.disableCallUserConfirmationPrompt;
     return (0, r.jsx)(a.MenuItem, {
         id: null != m ? m : 'call',
         label: null != p ? p : f.Z.Messages.CALL,
-        action: v
+        action: R
             ? () => {
                   (0, a.openModalLazy)(async () => {
                       let { default: e } = await n.e('27157').then(n.bind(n, 736454));

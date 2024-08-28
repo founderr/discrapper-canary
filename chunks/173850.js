@@ -1,5 +1,5 @@
-var e = n(332916),
+var r = n(332916),
     i = n(581031);
-t.exports = function (t) {
-    if ('Function' === e(t)) return i(t);
+e.exports = function (e) {
+    if ('Function' === r(e)) return i(e);
 };

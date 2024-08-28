@@ -1,4 +1,4 @@
-let s = (0, n(818083).B)({
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2024-06_shop_popular_picks',
     label: 'Shop Popular Picks Experiment',
@@ -13,5 +13,5 @@ let s = (0, n(818083).B)({
 });
 t.Z = (e) => {
     let { location: t } = e;
-    return s.useExperiment({ location: t });
+    return r.useExperiment({ location: t });
 };

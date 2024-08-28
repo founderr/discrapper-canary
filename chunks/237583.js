@@ -1,14 +1,14 @@
 n(653041), n(47120);
 var s,
-    t = n(735250),
-    r = n(470079),
+    r = n(735250),
+    t = n(470079),
     o = n(120356),
     i = n.n(o),
     l = n(481060),
     c = n(598077),
     _ = n(940942),
     E = n(585867);
-function u(e, a, n) {
+function d(e, a, n) {
     return (
         a in e
             ? Object.defineProperty(e, a, {
@@ -21,27 +21,27 @@ function u(e, a, n) {
         e
     );
 }
-class d extends (s = r.PureComponent) {
+class u extends (s = t.PureComponent) {
     renderUsers() {
         let { users: e, max: a, renderUser: n = this.defaultRenderUser, renderMoreUsers: s } = this.props,
-            t = [],
-            r = e.length === a ? e.length : a - 1,
+            r = [],
+            t = e.length === a ? e.length : a - 1,
             o = 0;
-        for (; o < r && o < e.length; ) {
+        for (; o < t && o < e.length; ) {
             let a = o === e.length - 1;
-            t.push(n(e[o] || null, a ? null : _.avatarMasked, 'user-'.concat(o), a)), o++;
+            r.push(n(e[o] || null, a ? null : _.avatarMasked, 'user-'.concat(o), a)), o++;
         }
         if (o < e.length) {
             let a = Math.min(e.length - o, 99);
-            t.push(s('+'.concat(a), _.moreUsers, 'more-users', a));
+            r.push(s('+'.concat(a), _.moreUsers, 'more-users', a));
         }
-        return t;
+        return r;
     }
     renderIcon() {
         return this.props.icon
-            ? (0, t.jsx)('div', {
+            ? (0, r.jsx)('div', {
                   className: _.iconContainer,
-                  children: (0, t.jsx)(l.VoiceNormalIcon, {
+                  children: (0, r.jsx)(l.VoiceNormalIcon, {
                       size: 'xs',
                       color: 'currentColor',
                       colorClass: _.foreground,
@@ -52,7 +52,7 @@ class d extends (s = r.PureComponent) {
     }
     render() {
         let { className: e } = this.props;
-        return (0, t.jsxs)('div', {
+        return (0, r.jsxs)('div', {
             className: i()(e, _.container),
             ref: (e) => (this._ref = e),
             children: [this.renderIcon(), this.renderUsers()]
@@ -60,31 +60,31 @@ class d extends (s = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            u(this, '_ref', void 0),
-            u(this, 'defaultRenderUser', (e, a, n, s) => {
-                let { onClick: r, size: o, guildId: u } = this.props,
-                    d = e instanceof c.Z ? e : null != e ? e.user : null;
-                return null == d
-                    ? (0, t.jsx)('div', { className: i()(_.emptyUser, a) }, n)
-                    : (0, t.jsx)(
+            d(this, '_ref', void 0),
+            d(this, 'defaultRenderUser', (e, a, n, s) => {
+                let { onClick: t, size: o, guildId: d } = this.props,
+                    u = e instanceof c.Z ? e : null != e ? e.user : null;
+                return null == u
+                    ? (0, r.jsx)('div', { className: i()(_.emptyUser, a) }, n)
+                    : (0, r.jsx)(
                           l.Avatar,
                           {
                               tabIndex: 0,
-                              src: d.getAvatarURL(u, (0, l.getAvatarSize)(o)),
+                              src: u.getAvatarURL(d, (0, l.getAvatarSize)(o)),
                               size: o,
-                              'aria-label': d.username,
+                              'aria-label': u.username,
                               className: i()(a, E.cursorPointer, _.avatarSize),
-                              onClick: (e) => (null != r ? r(e, d, this._ref) : null)
+                              onClick: (e) => (null != t ? t(e, u, this._ref) : null)
                           },
-                          d.id
+                          u.id
                       );
             });
     }
 }
-u(d, 'defaultProps', {
+d(u, 'defaultProps', {
     max: 10,
     renderMoreUsers: function (e, a, n) {
-        return (0, t.jsx)(
+        return (0, r.jsx)(
             'div',
             {
                 className: a,
@@ -95,4 +95,4 @@ u(d, 'defaultProps', {
     },
     size: l.AvatarSizes.SIZE_24
 }),
-    (a.Z = d);
+    (a.Z = u);

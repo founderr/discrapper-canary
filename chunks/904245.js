@@ -21,8 +21,8 @@ var r = n(278074),
     A = n(539573),
     N = n(826581),
     O = n(409059),
-    v = n(264229),
-    R = n(366980),
+    R = n(264229),
+    v = n(366980),
     C = n(779832),
     y = n(459618),
     D = n(541288),
@@ -87,7 +87,7 @@ class ef {
 }
 function eh(e) {
     let { inviteKey: t, channelId: n, messageId: r, location: i, suggested: a = null, overrideProperties: s = {} } = e,
-        o = (0, v.fU)(t),
+        o = (0, R.fU)(t),
         l = W.Z.getChannel(n);
     if (null != l) {
         let e = null;
@@ -594,7 +594,7 @@ let ep = {
             eI._sendMessage(
                 e,
                 {
-                    content: (0, R.Z)(t),
+                    content: (0, v.Z)(t),
                     tts: !1,
                     validNonShortcutEmojis: [],
                     invalidEmojis: []
@@ -701,13 +701,13 @@ let ep = {
                 );
             let c = t.content,
                 { invalidEmojis: d, validNonShortcutEmojis: _, tts: m = !1 } = t,
-                { activityAction: T, location: g, suggestedInvite: S, stickerIds: v, messageReference: R, allowedMentions: C, poll: P, contentInventoryEntry: B } = n,
+                { activityAction: T, location: g, suggestedInvite: S, stickerIds: R, messageReference: v, allowedMentions: C, poll: P, contentInventoryEntry: B } = n,
                 H = null !== (i = n.flags) && void 0 !== i ? i : 0,
                 [Z, Y] = (0, V.Z)(c);
             Z && ((c = Y), (H = (0, et.pj)(H, eo.iLy.SUPPRESS_NOTIFICATIONS)));
             let K = (null === (r = n.messageReference) || void 0 === r ? void 0 : r.type) === eo.Uvt.FORWARD;
-            if ('' === c && null == T && null == v && null == P && !K) return Promise.resolve();
-            let z = null != R ? eo.uaV.REPLY : eo.uaV.DEFAULT,
+            if ('' === c && null == T && null == R && null == P && !K) return Promise.resolve();
+            let z = null != v ? eo.uaV.REPLY : eo.uaV.DEFAULT,
                 Q = null !== (a = n.nonce) && void 0 !== a ? a : (0, b.r)();
             if (!1 !== n.eagerDispatch) {
                 let t = (0, L.ZP)({
@@ -715,13 +715,13 @@ let ep = {
                     content: c,
                     tts: m,
                     type: z,
-                    messageReference: R,
+                    messageReference: v,
                     allowedMentions: C,
                     flags: 0 !== H ? H : void 0,
                     nonce: Q,
                     poll: (0, x.x9)(P)
                 });
-                (0, U.EL)(e, t.id), null != v && (t.sticker_items = v.map((e) => F.Z.getStickerById(e)).filter((e) => null != e)), eI.receiveMessage(e, t, !0, n);
+                (0, U.EL)(e, t.id), null != R && (t.sticker_items = R.map((e) => F.Z.getStickerById(e)).filter((e) => null != e)), eI.receiveMessage(e, t, !0, n);
             }
             if (!eE && null != d && d.length > 0) {
                 let t, n;
@@ -736,7 +736,7 @@ let ep = {
                     content: c,
                     nonce: Q,
                     tts: m,
-                    message_reference: R,
+                    message_reference: v,
                     allowed_mentions: C,
                     flags: H
                 }
@@ -755,7 +755,7 @@ let ep = {
             }
             return (
                 null != P && (X.message.poll = P),
-                null != v && (X.message.sticker_ids = v),
+                null != R && (X.message.sticker_ids = R),
                 w.Z.isEnabled() && (X.message.has_poggermode_enabled = !0),
                 null != B && (X.message.content_inventory_entry = B),
                 new Promise((t, r) => {
@@ -800,7 +800,7 @@ let ep = {
                                         }),
                                         s.Z.dispatch({
                                             type: 'STICKER_TRACK_USAGE',
-                                            stickerIds: v
+                                            stickerIds: R
                                         }),
                                         s.Z.dispatch({
                                             type: 'LOCAL_MESSAGE_CREATE',

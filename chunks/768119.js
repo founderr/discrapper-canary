@@ -52,15 +52,15 @@ function A(e, t) {
 }
 let N = 'SearchStore',
     O = !1,
-    v = {},
-    R = null;
+    R = {},
+    v = null;
 function C(e) {
     var t;
     let { searchId: n, query: r } = e;
     if ('string' != typeof r || '' === (r = r.trim())) return;
-    let i = (v[n] = null !== (t = v[n]) && void 0 !== t ? t : []),
+    let i = (R[n] = null !== (t = R[n]) && void 0 !== t ? t : []),
         a = i.indexOf(r);
-    -1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), d.K.set(N, { history: v });
+    -1 !== a ? (i.splice(a, 1), i.unshift(r)) : null != i[0] && '' !== i[0] && r.startsWith(i[0]) ? (i[0] = r) : a < 0 && i.unshift(r), i.length > 5 && i.splice(5, i.length), d.K.set(N, { history: R });
 }
 function y(e) {
     let { searchId: t } = e,
@@ -69,8 +69,8 @@ function y(e) {
     null != n.searchFetcher && n.searchFetcher.cancel(), delete m[t];
 }
 function D(e) {
-    if (e === R) return !1;
-    null != e && null == m[e] && g(e), (R = e);
+    if (e === v) return !1;
+    null != e && null == m[e] && g(e), (v = e);
 }
 class L extends (i = c.ZP.Store) {
     initialize() {
@@ -81,7 +81,7 @@ class L extends (i = c.ZP.Store) {
             Object.keys((t = e.history)).forEach((e) => {
                 Array.isArray(t[e]) && (t[e] = t[e].filter((e) => 'string' == typeof e && e.trim())), (!Array.isArray(t[e]) || 0 === t[e].length) && delete t[e];
             }),
-                (v = t);
+                (R = t);
         }
         O = !!d.K.get('tokenized');
     }
@@ -92,17 +92,17 @@ class L extends (i = c.ZP.Store) {
         return r;
     }
     getCurrentSearchId() {
-        return R;
+        return v;
     }
     isActive() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : R;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v;
         return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e));
     }
     isTokenized() {
         return O;
     }
     getSearchType(e) {
-        return A(null != e ? e : R, (e) => e.searchType);
+        return A(null != e ? e : v, (e) => e.searchType);
     }
     getRawResults(e) {
         return A(e, (e) => e.rawResults);
@@ -139,7 +139,7 @@ class L extends (i = c.ZP.Store) {
         return A(e, (e) => e.editorState);
     }
     getHistory(e) {
-        return v[e];
+        return R[e];
     }
     getOffset(e) {
         var t;
@@ -276,19 +276,19 @@ class L extends (i = c.ZP.Store) {
             D(null != t ? t : n);
         },
         CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
-            return null != R && y({ searchId: R });
+            return null != v && y({ searchId: v });
         },
         SEARCH_CLEAR_HISTORY: function (e) {
             let { searchId: t } = e;
-            null == t ? (d.K.remove(N), (v = {})) : (delete v[t], d.K.set(N, { history: v }));
+            null == t ? (d.K.remove(N), (R = {})) : (delete R[t], d.K.set(N, { history: R }));
         },
         SEARCH_REMOVE_HISTORY: function (e) {
             let { searchId: t, query: n } = e;
-            null != v[t] && ((v[t] = v[t].filter((e) => e !== n)), d.K.set(N, { history: v }));
+            null != R[t] && ((R[t] = R[t].filter((e) => e !== n)), d.K.set(N, { history: R }));
         },
         SEARCH_ADD_HISTORY: C,
         LOGOUT: function () {
-            d.K.remove(N), (v = {});
+            d.K.remove(N), (R = {});
         },
         CONNECTION_OPEN: function () {
             Object.keys(m).forEach((e) => {
@@ -297,7 +297,7 @@ class L extends (i = c.ZP.Store) {
         },
         SEARCH_MODAL_OPEN: function (e) {
             let { searchId: t, searchType: n } = e;
-            null != t && (R = t), (T = !0), (r = n);
+            null != t && (v = t), (T = !0), (r = n);
         },
         SEARCH_MODAL_CLOSE: function () {
             (T = !1), (r = void 0);

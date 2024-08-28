@@ -67,11 +67,11 @@ function A(e) {
         d = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         I = c.ZP.isPremium(d, m.p9.TIER_2),
         [A, N, O] = (0, i.Wu)([f.Z], () => [f.Z.getSounds(), f.Z.getFavorites(), f.Z.isFetching()]),
-        v = (0, p.h)(e, !1),
-        R = (0, i.Wu)([o.Z], () => {
+        R = (0, p.h)(e, !1),
+        v = (0, i.Wu)([o.Z], () => {
             let e = [];
             return (
-                v.forEach((t) => {
+                R.forEach((t) => {
                     let n = o.Z.getGuild(t);
                     null != n && e.push(n);
                 }),
@@ -111,7 +111,7 @@ function A(e) {
               })
             : (g({
                   sections: e,
-                  guildIds: v,
+                  guildIds: R,
                   allSounds: A,
                   potentialSoundIdsForSection: Array.from(N),
                   sectionType: h.bg.FAVORITES,
@@ -120,7 +120,7 @@ function A(e) {
               L &&
                   g({
                       sections: e,
-                      guildIds: v,
+                      guildIds: R,
                       allSounds: A,
                       potentialSoundIdsForSection: P,
                       sectionType: h.bg.RECENTLY_HEARD,
@@ -129,7 +129,7 @@ function A(e) {
               b &&
                   g({
                       sections: e,
-                      guildIds: v,
+                      guildIds: R,
                       allSounds: A,
                       potentialSoundIdsForSection: M.map((e) => e.soundId),
                       sectionType: h.bg.FREQUENTLY_USED,
@@ -176,13 +176,13 @@ function A(e) {
                               items: t
                           });
                   }
-              })(e, R, null == y ? void 0 : y.id, A, I),
+              })(e, v, null == y ? void 0 : y.id, A, I),
               C && S(e, A),
               {
                   categories: e,
                   isFetching: O
               });
-    }, [v, A, N, P, M, b, L, y, D, t, C, R, n, O, I]);
+    }, [R, A, N, P, M, b, L, y, D, t, C, v, n, O, I]);
 }
 function N(e, t, n) {
     return r.useMemo(

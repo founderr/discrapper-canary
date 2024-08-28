@@ -49,7 +49,7 @@ function g(e) {
     let { disabled: n, checked: r, option: a, size: s, onClick: l, infoClassName: c, titleClassName: d, radioItemClassName: E, radioItemIconClassName: p, radioBarClassName: m, hasSelection: T, radioPosition: g = 'left', icon: S, withTransparentBackground: A } = e,
         N = null !== (t = a.color) && void 0 !== t ? t : '',
         O = r || !T,
-        v = (0, i.jsxs)('div', {
+        R = (0, i.jsxs)('div', {
             className: p,
             children: [
                 r ? (0, i.jsx)(h.Z, { foreground: I.radioIconForeground }) : (0, i.jsx)(f.Z, {}),
@@ -88,7 +88,7 @@ function g(e) {
                 m
             ),
             children: [
-                'left' === g ? v : null,
+                'left' === g ? R : null,
                 (0, i.jsxs)('div', {
                     className: o()(I.info, c),
                     children: [
@@ -107,7 +107,7 @@ function g(e) {
                             : null
                     ]
                 }),
-                'right' === g ? v : null
+                'right' === g ? R : null
             ]
         })
     });

@@ -7,16 +7,16 @@ var I,
     A = n(442837),
     N = n(570140),
     O = n(981631);
-let v = O.QZA.CLOSED,
-    R = {};
+let R = O.QZA.CLOSED,
+    v = {};
 function C() {
-    (v = O.QZA.OPEN), (R = {});
+    (R = O.QZA.OPEN), (v = {});
 }
 function y() {
-    (v = O.QZA.CLOSED), (R = {});
+    (R = O.QZA.CLOSED), (v = {});
 }
 function D() {
-    L(), b(), (R = {});
+    L(), b(), (v = {});
 }
 function L() {
     (r = void 0), (i = void 0), (a = void 0), (s = void 0);
@@ -29,10 +29,10 @@ function M() {
 }
 class P extends (g = A.ZP.Store) {
     getFormState() {
-        return v;
+        return R;
     }
     getErrors() {
-        return R;
+        return v;
     }
     showNotice() {
         return void 0 !== r || void 0 !== o || void 0 !== l || void 0 !== u || void 0 !== c || void 0 !== d || void 0 !== a || void 0 !== s || void 0 !== i;
@@ -127,12 +127,12 @@ class P extends (g = A.ZP.Store) {
             D(), M(), y();
         },
         USER_SETTINGS_ACCOUNT_SUBMIT: function () {
-            (v = O.QZA.SUBMITTING), (R = {});
+            (R = O.QZA.SUBMITTING), (v = {});
         },
         USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE: function (e) {
             var t;
-            if (v !== O.QZA.SUBMITTING) return !1;
-            (v = O.QZA.OPEN), (R = null !== (t = e.errors) && void 0 !== t ? t : {});
+            if (R !== O.QZA.SUBMITTING) return !1;
+            (R = O.QZA.OPEN), (v = null !== (t = e.errors) && void 0 !== t ? t : {});
         },
         USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR: function (e) {
             let { avatar: t } = e;
@@ -195,7 +195,7 @@ class P extends (g = A.ZP.Store) {
             _ = t;
         },
         USER_SETTINGS_CLEAR_ERRORS: function () {
-            R = {};
+            v = {};
         },
         USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: L,
         USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES: b,

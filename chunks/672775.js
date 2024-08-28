@@ -14,8 +14,8 @@ function l(e) {
             onStepClick: d,
             onNextClick: u,
             onBackClick: _,
-            isNextDisabled: h,
-            isBackDisabled: E
+            isNextDisabled: E,
+            isBackDisabled: h
         } = (0, a.Z)({
             progress: n,
             updateCurrentStep: l
@@ -34,8 +34,8 @@ function l(e) {
                 stepFillColor: g
             }),
             (0, i.jsx)(s.i, {
-                isBackDisabled: E,
-                isNextDisabled: h,
+                isBackDisabled: h,
+                isNextDisabled: E,
                 onNextClick: u,
                 onBackClick: _,
                 nextButtonBackgroundColor: g,

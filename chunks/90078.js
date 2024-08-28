@@ -36,7 +36,7 @@ function c(e) {
         },
         [p, g]
     );
-    var v = r.useMemo(
+    var R = r.useMemo(
             function () {
                 return {
                     placement: n,
@@ -53,11 +53,11 @@ function c(e) {
             },
             [n, d, h, E, N]
         ),
-        R = (0, s.D)(f || m, g, v),
-        C = R.state,
-        y = R.styles,
-        D = R.forceUpdate,
-        L = R.update,
+        v = (0, s.D)(f || m, g, R),
+        C = v.state,
+        y = v.styles,
+        D = v.forceUpdate,
+        L = v.update,
         b = r.useMemo(
             function () {
                 return {

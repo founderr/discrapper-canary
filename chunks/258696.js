@@ -21,8 +21,8 @@ var r = n(735250),
     A = n(241553),
     N = n(319417),
     O = n(728386),
-    v = n(474936),
-    R = n(305489);
+    R = n(474936),
+    v = n(305489);
 function C(e) {
     let { disabled: t, channel: n } = e,
         { enabled: a } = _.ZP.useExperiment({ location: 'dc120b_1' }, { autoTrackExposure: !1 }),
@@ -57,7 +57,7 @@ let y = i.forwardRef(function (e, t) {
         Z = [],
         { enabled: Y } = E.Z.getCurrentConfig({ location: 'dc120b_4' }, { autoTrackExposure: !1 }),
         j = p.default.getCurrentUser(),
-        W = null !== (g = (0, s.e7)([d.Z], () => (Y && I.ZP.isPremiumExactly(j, v.p9.TIER_2) ? d.Z.getReferralsRemaining() : 0))) && void 0 !== g ? g : 0,
+        W = null !== (g = (0, s.e7)([d.Z], () => (Y && I.ZP.isPremiumExactly(j, R.p9.TIER_2) ? d.Z.getReferralsRemaining() : 0))) && void 0 !== g ? g : 0,
         K = (0, s.e7)([d.Z], () => {
             if (!P.isDM() || void 0 === P.recipients || P.recipients.length > 1 || !Y) return !1;
             let e = P.recipients[0];
@@ -77,7 +77,7 @@ let y = i.forwardRef(function (e, t) {
         (P.isDM() &&
             (null === (A = b.gifts) || void 0 === A ? void 0 : A.button) != null &&
             null == F &&
-            (I.ZP.isPremiumExactly(j, v.p9.TIER_2) && q && E.Z.trackExposure({ location: 'dc120b_5' }),
+            (I.ZP.isPremiumExactly(j, R.p9.TIER_2) && q && E.Z.trackExposure({ location: 'dc120b_5' }),
             z &&
                 Z.push(
                     (0, r.jsx)(
@@ -155,7 +155,7 @@ let y = i.forwardRef(function (e, t) {
     0 === Z.length)
         ? null
         : (0, r.jsx)('div', {
-              className: R.buttons,
+              className: v.buttons,
               ref: t,
               children: Z
           });

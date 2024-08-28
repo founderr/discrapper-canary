@@ -24,7 +24,7 @@ function _(e) {
         d = null != t && t.hasFeature(c.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && n && t.hasVerificationGate(),
         _ = (0, i.e7)([l.Z], () => l.Z.get(e), [e]);
     r.useEffect(() => {
-        d && o.Z.fetchVerificationForm(e);
+        d && o.ZP.fetchVerificationForm(e);
     }, [d, e]);
     let E = r.useMemo(() => {
         var e;

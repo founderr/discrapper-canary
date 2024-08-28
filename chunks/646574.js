@@ -61,15 +61,15 @@ function g(e) {
         S = E.default.getCurrentUser(),
         A = null == S || (0, f.I5)(S) ? [u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
         [N, O] = (0, _.US)(A),
-        [v, R] = i.useState(!1),
+        [R, v] = i.useState(!1),
         [C, y] = (0, c.useSpring)(() => ({})),
         D = (0, o.animated)(c.SuperReactionIcon);
     i.useEffect(() => {
         let e = N === u.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
-        e && (O(h.L.DISMISS), setTimeout(() => R(e), 200));
+        e && (O(h.L.DISMISS), setTimeout(() => v(e), 200));
     }, [N, O]);
-    let L = v ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? p.Z.Messages.SUPER_REACTION_TOGGLE_ENABLED : p.Z.Messages.SUPER_REACTION_TOGGLE_DISABLED,
-        b = v ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
+    let L = R ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_DESCRIPTION_DESKTOP_V2 : t ? p.Z.Messages.SUPER_REACTION_TOGGLE_ENABLED : p.Z.Messages.SUPER_REACTION_TOGGLE_DISABLED,
+        b = R ? p.Z.Messages.SUPER_REACTIONS_UNLIMITED_NOTICE_TITLE : void 0;
     return (0, r.jsxs)(c.TooltipContainer, {
         position: 'top',
         text: (0, r.jsx)(T, {
@@ -78,7 +78,7 @@ function g(e) {
             headingText: b
         }),
         color: c.Tooltip.Colors.BRAND,
-        forceOpen: v,
+        forceOpen: R,
         'aria-label': L,
         tooltipClassName: I.tooltip,
         children: [
@@ -92,7 +92,7 @@ function g(e) {
                         config: m
                     }),
                         null == n || n(),
-                        R(!1);
+                        v(!1);
                 },
                 id: a,
                 type: 'checkbox'

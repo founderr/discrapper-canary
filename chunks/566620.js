@@ -64,8 +64,8 @@ var r = n(990547),
     A = n(973616),
     N = n(314897),
     O = n(592125),
-    v = n(430824),
-    R = n(496675),
+    R = n(430824),
+    v = n(496675),
     C = n(594174),
     y = n(979651),
     D = n(585483),
@@ -147,7 +147,7 @@ async function q(e) {
                                 return !1;
                         }
                         let e = O.Z.getChannel(r),
-                            t = null != N ? v.Z.getGuild(N) : null;
+                            t = null != N ? R.Z.getGuild(N) : null;
                         return (
                             null != e &&
                             (await new Promise((r, i) => {
@@ -247,8 +247,8 @@ async function Q(e) {
             ? (0, B.e4)({
                   channelId: i,
                   ChannelStore: O.Z,
-                  GuildStore: v.Z,
-                  PermissionStore: R.Z,
+                  GuildStore: R.Z,
+                  PermissionStore: v.Z,
                   VoiceStateStore: y.Z
               })
             : B.jy.NO_CHANNEL;

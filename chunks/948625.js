@@ -1,35 +1,35 @@
 n.d(t, {
     E8: function () {
-        return A;
+        return P;
     },
     yc: function () {
-        return R;
+        return B;
     }
 });
-var s = n(180650),
-    r = n(44315),
+var r = n(180650),
+    s = n(44315),
     a = n(981631),
     i = n(689938),
     o = n(994745),
-    c = n(341364),
-    l = n(763542),
+    l = n(341364),
+    c = n(763542),
     d = n(354873),
     u = n(525071),
     f = n(737140),
     p = n(194349),
     g = n(523569),
     C = n(55817),
-    _ = n(696228),
-    m = n(202796),
-    h = n(570593),
-    b = n(199546),
+    m = n(696228),
+    _ = n(202796),
+    b = n(570593),
+    h = n(199546),
     x = n(613540),
-    E = n(769411),
-    I = n(125257),
+    I = n(769411),
+    E = n(125257),
     v = n(6412),
     S = n(238286);
-let L = () => i.Z.Messages.LIMITED_TIME,
-    T = () => i.Z.Messages.MOST_POPULAR,
+let T = () => i.Z.Messages.LIMITED_TIME,
+    L = () => i.Z.Messages.MOST_POPULAR,
     N = () => i.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
     O = () => i.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
     k = () => i.Z.Messages.TAKE_ME_THERE,
@@ -38,12 +38,12 @@ let L = () => i.Z.Messages.LIMITED_TIME,
             id: 'category_tide',
             backgroundStaticSrc: S,
             overflowSrcStatic: v,
-            logoSrc: I,
-            textColor: (0, r.Lq)(a.Ilk.WHITE_100),
-            badge: { label: L },
+            logoSrc: E,
+            textColor: (0, s.Lq)(a.Ilk.WHITE_100),
+            badge: { label: T },
             cta: {
                 label: k,
-                categorySkuId: s.T.TIDE
+                categorySkuId: r.T.TIDE
             }
         },
         {
@@ -52,37 +52,37 @@ let L = () => i.Z.Messages.LIMITED_TIME,
             backgroundVideoSrc: o,
             overflowSrcStatic: u,
             overflowSrcAnimatedBackground: d,
-            overflowSrcAnimated: l,
-            logoSrc: c,
-            textColor: (0, r.Lq)(a.Ilk.BLACK_500),
-            badge: { label: T },
+            overflowSrcAnimated: c,
+            logoSrc: l,
+            textColor: (0, s.Lq)(a.Ilk.BLACK_500),
+            badge: { label: L },
             cta: {
                 label: k,
-                categorySkuId: s.T.ANIME_V2
+                categorySkuId: r.T.ANIME_V2
             }
         },
         {
             id: 'category_galaxy',
-            backgroundStaticSrc: E,
-            backgroundVideoSrc: b,
+            backgroundStaticSrc: I,
+            backgroundVideoSrc: h,
             logoSrc: x,
-            textColor: (0, r.Lq)(a.Ilk.WHITE_100),
+            textColor: (0, s.Lq)(a.Ilk.WHITE_100),
             badge: { label: N },
             cta: {
                 label: k,
-                categorySkuId: s.T.GALAXY
+                categorySkuId: r.T.GALAXY
             }
         },
         {
             id: 'category_disxcore',
-            backgroundStaticSrc: h,
-            overflowSrcStatic: m,
-            logoSrc: _,
-            textColor: (0, r.Lq)(a.Ilk.WHITE_100),
+            backgroundStaticSrc: b,
+            overflowSrcStatic: _,
+            logoSrc: m,
+            textColor: (0, s.Lq)(a.Ilk.WHITE_100),
             badge: { label: O },
             cta: {
                 label: k,
-                categorySkuId: s.T.DISXCORE
+                categorySkuId: r.T.DISXCORE
             }
         },
         {
@@ -90,21 +90,21 @@ let L = () => i.Z.Messages.LIMITED_TIME,
             backgroundStaticSrc: C,
             backgroundVideoSrc: p,
             logoSrc: g,
-            textColor: (0, r.Lq)(a.Ilk.WHITE_100),
-            badge: { label: T },
+            textColor: (0, s.Lq)(a.Ilk.WHITE_100),
+            badge: { label: L },
             cta: {
                 label: k,
-                categorySkuId: s.T.CYBERPUNK
+                categorySkuId: r.T.CYBERPUNK
             }
         }
     ],
-    R = (e) =>
+    B = (e) =>
         j.filter((t) => {
             var n;
-            let s = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
-            return null == s || null != e[s];
+            let r = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
+            return null == r || null != e[r];
         }),
-    A = (e, t) => {
-        let { overflowSrcStatic: n, overflowSrcAnimated: s, overflowSrcAnimatedBackground: r } = e;
-        return null == n ? [] : t || null == s ? [n] : null == r ? [s] : [r, s];
+    P = (e, t) => {
+        let { overflowSrcStatic: n, overflowSrcAnimated: r, overflowSrcAnimatedBackground: s } = e;
+        return null == n ? [] : t || null == r ? [n] : null == s ? [r] : [s, r];
     };

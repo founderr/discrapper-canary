@@ -134,7 +134,7 @@ async function O(e) {
         throw new l.Z(e);
     }
 }
-function v(e) {
+function R(e) {
     if (f.Z.totalUnavailableGuilds > 0 || !_.Z.isConnected()) return e;
     let t = e
         .map((e) => {
@@ -144,17 +144,17 @@ function v(e) {
         .filter(h.lm);
     return [...(0, d.Z)(t).keys()];
 }
-function R(e) {
+function v(e) {
     var t, n, r;
     return null == e ? null : null !== (r = null !== (n = e.id) && void 0 !== n ? n : null === (t = c.ZP.convertSurrogateToBase(e.surrogates)) || void 0 === t ? void 0 : t.name) && void 0 !== r ? r : e.name;
 }
 function C(e) {
-    let t = R(e);
+    let t = v(e);
     if (null != t)
         E.DZ.updateAsync(
             'favoriteEmojis',
             (e) =>
-                ((e.emojis = v(e.emojis)), i().size(e.emojis) >= m.oX)
+                ((e.emojis = R(e.emojis)), i().size(e.emojis) >= m.oX)
                     ? (p.Z.show({
                           title: T.Z.Messages.FAVORITES_LIMIT_REACHED_TITLE,
                           body: T.Z.Messages.FAVORITES_LIMIT_REACHED_BODY.format({ count: m.oX })
@@ -165,12 +165,12 @@ function C(e) {
         );
 }
 function y(e) {
-    let t = R(e);
+    let t = v(e);
     if (null != t)
         E.DZ.updateAsync(
             'favoriteEmojis',
             (e) => {
-                if (((e.emojis = v(e.emojis)), !e.emojis.includes(t))) return !1;
+                if (((e.emojis = R(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
             m.fy.INFREQUENT_USER_ACTION

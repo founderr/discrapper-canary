@@ -44,7 +44,7 @@ var r = n(478497),
     },
     f = {},
     h = function e(t, n, a, s, o, u, d, _, h, p, I, m, T, g, S, A, N, O) {
-        for (var v, R, C = t, y = O, D = 0, L = !1; void 0 !== (y = y.get(f)) && !L; ) {
+        for (var R, v, C = t, y = O, D = 0, L = !1; void 0 !== (y = y.get(f)) && !L; ) {
             var b = y.get(t);
             if (((D += 1), void 0 !== b)) {
                 if (b === D) throw RangeError('Cyclic object value');
@@ -67,20 +67,20 @@ var r = n(478497),
             if (u) return h && !A ? h(n, E.encoder, N, 'key', g) : n;
             C = '';
         }
-        if ('string' == typeof (v = C) || 'number' == typeof v || 'boolean' == typeof v || 'symbol' == typeof v || 'bigint' == typeof v || i.isBuffer(C)) return h ? [S(A ? n : h(n, E.encoder, N, 'key', g)) + '=' + S(h(C, E.encoder, N, 'value', g))] : [S(n) + '=' + S(String(C))];
+        if ('string' == typeof (R = C) || 'number' == typeof R || 'boolean' == typeof R || 'symbol' == typeof R || 'bigint' == typeof R || i.isBuffer(C)) return h ? [S(A ? n : h(n, E.encoder, N, 'key', g)) + '=' + S(h(C, E.encoder, N, 'value', g))] : [S(n) + '=' + S(String(C))];
         var M = [];
         if (void 0 === C) return M;
-        if ('comma' === a && l(C)) A && h && (C = i.maybeMap(C, h)), (R = [{ value: C.length > 0 ? C.join(',') || null : void 0 }]);
-        else if (l(p)) R = p;
+        if ('comma' === a && l(C)) A && h && (C = i.maybeMap(C, h)), (v = [{ value: C.length > 0 ? C.join(',') || null : void 0 }]);
+        else if (l(p)) v = p;
         else {
             var P = Object.keys(C);
-            R = I ? P.sort(I) : P;
+            v = I ? P.sort(I) : P;
         }
         var U = _ ? n.replace(/\./g, '%2E') : n,
             w = s && l(C) && 1 === C.length ? U + '[]' : U;
         if (o && l(C) && 0 === C.length) return w + '[]';
-        for (var x = 0; x < R.length; ++x) {
-            var G = R[x],
+        for (var x = 0; x < v.length; ++x) {
+            var G = v[x],
                 k = 'object' == typeof G && void 0 !== G.value ? G.value : C[G];
             if (!d || null !== k) {
                 var B = m && _ ? G.replace(/\./g, '%2E') : G,

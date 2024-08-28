@@ -24,7 +24,7 @@ function I(e) {
         { context: S, trackUserProfileAction: A } = (0, _.KZ)(),
         N = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
         { messageCtaEnabled: O } = (0, f.l)({ location: 'BiteSizeProfileActivitySection' }),
-        { isApplicationStreaming: v, activity: R } = (0, s.cj)([u.Z, c.Z], () => {
+        { isApplicationStreaming: R, activity: v } = (0, s.cj)([u.Z, c.Z], () => {
             let e = null != u.Z.getAnyStreamForUser(t.id);
             return {
                 isApplicationStreaming: e,
@@ -41,7 +41,7 @@ function I(e) {
         });
     return (0, r.jsx)(o.Z, {
         type: o.P.BITE_SIZE_POPOUT,
-        activity: R,
+        activity: v,
         className: a()(p.activity, I),
         source: g,
         user: t,
@@ -51,11 +51,11 @@ function I(e) {
         onAction: () => {
             A({ action: 'JOIN_ACTIVITY' }),
                 (0, E.Ac)({
-                    activityType: v ? h.IIU.STREAMING : null == R ? void 0 : R.type,
-                    activityName: null == R ? void 0 : R.name,
-                    activityPlatform: null == R ? void 0 : R.platform,
-                    activitySessionId: null == R ? void 0 : R.session_id,
-                    applicationId: null == R ? void 0 : R.application_id,
+                    activityType: R ? h.IIU.STREAMING : null == v ? void 0 : v.type,
+                    activityName: null == v ? void 0 : v.name,
+                    activityPlatform: null == v ? void 0 : v.platform,
+                    activitySessionId: null == v ? void 0 : v.session_id,
+                    applicationId: null == v ? void 0 : v.application_id,
                     analyticsLocations: T,
                     ...S
                 }),

@@ -20,7 +20,7 @@ t.Z = {
         if (__OVERLAY__) return;
         d(e);
         let a = async (t) => {
-            await s.Z.submitVerificationForm(e, t);
+            await s.ZP.submitVerificationForm(e, t);
         };
         (0, i.ZD)(
             async () => {

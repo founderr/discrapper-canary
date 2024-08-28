@@ -33,8 +33,8 @@ let I = 1 * _.Z.Millis.MINUTE,
     A = 0,
     N = null,
     O = new Set(),
-    v = {};
-function R(e, t, n) {
+    R = {};
+function v(e, t, n) {
     return o.tn.get({
         url: ''.concat('https://api.twitch.tv/helix').concat(e),
         query: t,
@@ -46,13 +46,13 @@ function R(e, t, n) {
 }
 async function C(e, t) {
     var n;
-    let r = v[e];
+    let r = R[e];
     if (null != r) return r;
     let {
             body: { data: i }
-        } = await R('/games', { id: e }, t),
+        } = await v('/games', { id: e }, t),
         a = null === (n = i[0]) || void 0 === n ? void 0 : n.name;
-    return (v[e] = a), a;
+    return (R[e] = a), a;
 }
 let y = new (class e {
     start() {
@@ -75,7 +75,7 @@ let y = new (class e {
             var n, r, i, a, s;
             let {
                     body: { data: o }
-                } = await R(
+                } = await v(
                     '/streams',
                     {
                         user_id: e.id,

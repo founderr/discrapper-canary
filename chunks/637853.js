@@ -27,10 +27,10 @@ n.d(t, {
         return O;
     },
     kl: function () {
-        return R;
+        return v;
     },
     mn: function () {
-        return v;
+        return R;
     },
     p3: function () {
         return T;
@@ -124,13 +124,13 @@ function N(e) {
 function O(e) {
     return !!(null != e && (0, E.s)(e.guild_id, e.id)) && (e.isForumChannel() ? _.Uu(f.Plq.SEND_MESSAGES_IN_THREADS, e) : _.Uu(f.Plq.SEND_MESSAGES, e));
 }
-function v(e) {
+function R(e) {
     return (0, r.e7)([s.Z], () => {
         let t = s.Z.getChannel(e);
         return (0, d.lm)(t) && O(t);
     });
 }
-function R(e, t, n) {
+function v(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !0,
         i = C(e, t, (e) => e.id, r);
     return (

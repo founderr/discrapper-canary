@@ -22,22 +22,22 @@ let m = new Set(),
     A = (e) => 'user:'.concat(e),
     N = (e) => 'channel:'.concat(e),
     O = (e) => 'validity:'.concat(e),
-    v = new d.h(
+    R = new d.h(
         function (e) {
             let t = m.has(e.userId) ? 1 : 0;
             return null != e.viewers && (t = 2), [A(e.userId), N(e.channelId), O(t)];
         },
         (e) => e.channelId
     );
-function R(e, t, n) {
+function v(e, t, n) {
     if (f.default.getId() === e) return !1;
     if (null == t) {
-        let t = v.get(e);
-        return !!(null != t && (0, u.isEqual)(t.source, n)) && (v.delete(e), void 0);
+        let t = R.get(e);
+        return !!(null != t && (0, u.isEqual)(t.source, n)) && (R.delete(e), void 0);
     }
     !m.has(e) && !T.has(e) && (g.add(e), (S = [...g]));
     let r = (0, I.tI)(t, e, n);
-    v.set(e, r);
+    R.set(e, r);
 }
 function C(e) {
     return null != e
@@ -49,16 +49,16 @@ function C(e) {
 }
 class y extends (i = c.ZP.Store) {
     getBroadcasts() {
-        return v.values(O(2));
+        return R.values(O(2));
     }
     getBroadcastsToValidateChannels() {
-        return v.values(O(1));
+        return R.values(O(1));
     }
     getBroadcastByChannel(e) {
-        return v.values(N(e))[0];
+        return R.values(N(e))[0];
     }
     getBroadcastByUser(e) {
-        return v.get(e);
+        return R.get(e);
     }
     getUserIdsToValidate() {
         return S;
@@ -78,27 +78,27 @@ class y extends (i = c.ZP.Store) {
             let { updates: t } = e;
             return t.forEach((e) => {
                 let { user: t, broadcast: n, guildId: r } = e;
-                R(t.id, n, C(r));
+                v(t.id, n, C(r));
             });
         },
         PRESENCES_REPLACE: function (e) {
             let { presences: t } = e;
             return t.forEach((e) => {
                 let { user: t, broadcast: n, guildId: r } = e;
-                R(t.id, n, C(r));
+                v(t.id, n, C(r));
             });
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { presences: t, guilds: n } = e;
             t.forEach((e) => {
                 let { user: t, broadcast: n, guildId: r } = e;
-                R(t.id, n, C(r));
+                v(t.id, n, C(r));
             }),
                 n.forEach((e) => {
                     let { presences: t, id: n } = e;
                     t.forEach((e) => {
                         let { user: t, broadcast: r } = e;
-                        R(t.id, r, C(n));
+                        v(t.id, r, C(n));
                     });
                 });
         },
@@ -106,17 +106,17 @@ class y extends (i = c.ZP.Store) {
             let { data: t } = e;
             h.default.keys(t).forEach((e) => {
                 p.g.includes(t[e]) ? m.add(e) : T.add(e), g.clear(), (S = [...g]);
-                let n = v.get(e);
-                null != n && (v.delete(e), v.set(e, n));
+                let n = R.get(e);
+                null != n && (R.delete(e), R.set(e, n));
             });
         },
         BROADCAST_VIEWERS_UPDATE: function (e) {
             let { viewers: t } = e;
             Object.entries(t).forEach((e) => {
                 let [t, n] = e,
-                    r = v.get(t);
+                    r = R.get(t);
                 null != r &&
-                    v.set(t, {
+                    R.set(t, {
                         ...r,
                         viewers: n
                     });
@@ -124,18 +124,18 @@ class y extends (i = c.ZP.Store) {
         },
         CHANNEL_RECIPIENT_ADD: function (e) {
             let { channelId: t, user: n } = e,
-                r = v.values(N(t))[0];
+                r = R.values(N(t))[0];
             if (null == r || null == r.viewers || r.viewers.some((e) => e.id === n.id)) return !1;
-            v.set(r.userId, {
+            R.set(r.userId, {
                 ...r,
                 viewers: [...r.viewers, new E.Z(n)]
             });
         },
         CHANNEL_RECIPIENT_REMOVE: function (e) {
             let { channelId: t, user: n } = e,
-                r = v.values(N(t))[0];
+                r = R.values(N(t))[0];
             if (null == r || null == r.viewers) return !1;
-            v.set(r.userId, {
+            R.set(r.userId, {
                 ...r,
                 viewers: r.viewers.filter((e) => e.id !== n.id)
             });
@@ -143,15 +143,15 @@ class y extends (i = c.ZP.Store) {
         CHANNEL_CREATE: function (e) {
             var t;
             let { channel: n } = e,
-                r = v.values(N(n.id))[0];
+                r = R.values(N(n.id))[0];
             if (null == r) return !1;
             let i = null !== (t = n.rawRecipients) && void 0 !== t ? t : [];
-            v.set(r.userId, {
+            R.set(r.userId, {
                 ...r,
                 viewers: i.filter((e) => e.id !== r.userId).map((e) => new E.Z(e))
             });
         },
         LOGOUT: function () {
-            m.clear(), T.clear(), g.clear(), (S = []), v.clear();
+            m.clear(), T.clear(), g.clear(), (S = []), R.clear();
         }
     }));

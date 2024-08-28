@@ -38,7 +38,7 @@ function S(e, t, n) {
 class A extends (r = a.PureComponent) {
     render() {
         let e;
-        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: E, height: T, maxWidth: g = E, maxHeight: S = T, minWidth: A, minHeight: v, mediaLayoutType: R, limitResponsiveWidth: C = !0, accessory: y, zoomable: D, original: L, children: b, renderAccessory: M, onClick: P, tabIndex: U, dataSafeSrc: w, useFullWidth: x = !1, ...G } = this.props;
+        let { className: t, imageClassName: n, readyState: r, src: a, placeholder: s, placeholderVersion: l, alt: c, width: E, height: T, maxWidth: g = E, maxHeight: S = T, minWidth: A, minHeight: R, mediaLayoutType: v, limitResponsiveWidth: C = !0, accessory: y, zoomable: D, original: L, children: b, renderAccessory: M, onClick: P, tabIndex: U, dataSafeSrc: w, useFullWidth: x = !1, ...G } = this.props;
         if (1 === E && 1 === T) return null;
         let k = (0, _.Tj)({
                 width: E,
@@ -46,7 +46,7 @@ class A extends (r = a.PureComponent) {
                 maxWidth: g,
                 maxHeight: S,
                 minWidth: A,
-                minHeight: v
+                minHeight: R
             }),
             B = 0 !== k.width ? k.width / k.height : 1;
         '' !== a && r !== h.zo9.ERROR
@@ -55,12 +55,12 @@ class A extends (r = a.PureComponent) {
                   size: k,
                   alt: c,
                   className: n,
-                  mediaLayoutType: R
+                  mediaLayoutType: v
               }))
             : r !== h.zo9.LOADING &&
               (e = (0, i.jsx)(N, {
                   size: k,
-                  mediaLayoutType: R,
+                  mediaLayoutType: v,
                   alt: c
               })),
             (e = (0, i.jsx)(f.N, {
@@ -68,7 +68,7 @@ class A extends (r = a.PureComponent) {
                 aspectRatio: B,
                 placeholder: s,
                 placeholderVersion: l,
-                placeholderStyle: O(k, R),
+                placeholderStyle: O(k, v),
                 children: e
             }));
         let F = null != M ? M() : null;
@@ -103,7 +103,7 @@ class A extends (r = a.PureComponent) {
                                     aspectRatio: ''.concat(e.width, ' / ').concat(e.height)
                                 }
                               : e;
-                    })(k, C, x, R),
+                    })(k, C, x, v),
                     ...G,
                     children: [
                         null != L &&
@@ -161,7 +161,7 @@ function N(e) {
                     };
                 case p.hV.RESPONSIVE:
                     return {
-                        ...v(e),
+                        ...R(e),
                         display: 'flex'
                     };
                 default:
@@ -201,12 +201,12 @@ function O(e, t) {
                 maxWidth: 1 === (0, E.Z)() ? 'calc(100% + 1px)' : '100%'
             };
         case p.hV.RESPONSIVE:
-            return v(e);
+            return R(e);
         default:
             return e;
     }
 }
-function v(e) {
+function R(e) {
     let { width: t, height: n } = e;
     return {
         maxWidth: t,

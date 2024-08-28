@@ -58,7 +58,7 @@ function E(e) {
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      E(!n), c.Z.clearCoachmark();
+                      E(!n), c.ZP.clearCoachmark();
                   },
                   folderIconContent: (0, i.jsx)(a.HourglassIcon, {
                       size: 'custom',

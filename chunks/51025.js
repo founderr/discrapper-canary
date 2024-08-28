@@ -1,6 +1,6 @@
 n.d(t, {
     A1: function () {
-        return v;
+        return R;
     },
     LO: function () {
         return T;
@@ -15,7 +15,7 @@ n.d(t, {
         return D;
     },
     al: function () {
-        return R;
+        return v;
     },
     cG: function () {
         return g;
@@ -162,14 +162,14 @@ function N() {
 function O() {
     E.Z.pause();
 }
-function v(e, t) {
+function R(e, t) {
     i.Z.dispatch({
         type: 'DISPATCH_APPLICATION_MOVE_UP',
         applicationId: e,
         branchId: t
     });
 }
-function R(e, t) {
+function v(e, t) {
     E.Z.cancel(e, t),
         i.Z.dispatch({
             type: 'DISPATCH_APPLICATION_CANCEL',

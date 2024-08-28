@@ -1,14 +1,14 @@
 var s = n(735250),
-    t = n(470079),
-    r = n(120356),
-    o = n.n(r),
+    r = n(470079),
+    t = n(120356),
+    o = n.n(t),
     i = n(442837),
     l = n(481060),
     c = n(178762),
     _ = n(91140),
     E = n(297781),
-    u = n(592125),
-    d = n(944486),
+    d = n(592125),
+    u = n(944486),
     I = n(594174),
     A = n(5192),
     m = n(810568),
@@ -16,10 +16,10 @@ var s = n(735250),
     N = n(255341),
     O = n(707443);
 a.Z = (e) => {
-    let { entry: a, viewId: n, onClose: r } = e,
-        R = (0, i.e7)([d.Z, u.Z], () => u.Z.getChannel(d.Z.getChannelId())),
+    let { entry: a, viewId: n, onClose: t } = e,
+        R = (0, i.e7)([u.Z, d.Z], () => d.Z.getChannel(u.Z.getChannelId())),
         p = (0, i.e7)([I.default], () => I.default.getUser(a.author_id)),
-        { nick: P, avatar: g } = t.useMemo(() => {
+        { nick: g, avatar: P } = r.useMemo(() => {
             let e = null == p ? void 0 : p.getAvatarURL(null == R ? void 0 : R.guild_id, 48, !1);
             return {
                 nick: A.ZP.getName(null == R ? void 0 : R.guild_id, null == R ? void 0 : R.id, p),
@@ -31,10 +31,10 @@ a.Z = (e) => {
         : (0, s.jsx)(l.Popout, {
               position: 'right',
               renderPopout: (e) => {
-                  let { closePopout: t, updatePosition: o } = e;
+                  let { closePopout: r, updatePosition: o } = e;
                   return (0, s.jsx)(c.J, {
                       entry: a,
-                      closePopout: t,
+                      closePopout: r,
                       updatePopoutPosition: o,
                       onReaction: () => {
                           (0, m.UE)({
@@ -44,8 +44,8 @@ a.Z = (e) => {
                               recipientUserId: a.author_id,
                               viewId: n
                           }),
-                              r(),
-                              t();
+                              t(),
+                              r();
                       },
                       disableGameProfileLinks: !0
                   });
@@ -75,8 +75,8 @@ a.Z = (e) => {
                               children: [
                                   (0, s.jsx)('img', {
                                       className: N.avatar,
-                                      src: g,
-                                      alt: T.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: P })
+                                      src: P,
+                                      alt: T.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: g })
                                   }),
                                   (0, s.jsx)('div', {
                                       className: o()(N.playerInfo),
@@ -87,7 +87,7 @@ a.Z = (e) => {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
-                                                  children: P
+                                                  children: g
                                               }),
                                               (0, s.jsx)(E.Gk, {
                                                   location: E.Gt.GAME_PROFILE,

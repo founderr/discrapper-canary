@@ -1,17 +1,17 @@
-n.d(e, {
+r.d(t, {
     c: function () {
-        return s;
+        return o;
     },
     q: function () {
-        return o;
+        return i;
     }
 });
-var r = n(899517),
-    i = n(452896);
-function s() {
-    return o(r.n), r.n;
+var n = r(899517),
+    a = r(452896);
+function o() {
+    return i(n.n), n.n;
 }
-function o(t) {
-    let e = (t.__SENTRY__ = t.__SENTRY__ || {});
-    return (e.version = e.version || i.J), (e[i.J] = e[i.J] || {});
+function i(e) {
+    let t = (e.__SENTRY__ = e.__SENTRY__ || {});
+    return (t.version = t.version || a.J), (t[a.J] = t[a.J] || {});
 }

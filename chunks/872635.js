@@ -186,7 +186,7 @@ t.Z = i.forwardRef(function (e, t) {
                 }
             );
         }, [T, g, A, N]);
-    let { x: O, y: v } = i.useMemo(() => {
+    let { x: O, y: R } = i.useMemo(() => {
             var e, t, n, r;
             let i = null === (e = a.current) || void 0 === e ? void 0 : e.getSlateEditor();
             if ((null == i ? void 0 : i.selection) == null || h.M8.isCollapsed(i.selection) || !E)
@@ -219,15 +219,15 @@ t.Z = i.forwardRef(function (e, t) {
                 y: Math.max(S, Math.min(f.y, d.y))
             };
         }, [s, E, a]),
-        [R, C] = i.useState(0),
+        [v, C] = i.useState(0),
         [y, D] = i.useState(0);
     if (
         (i.useLayoutEffect(() => {
-            if (null == O || null == v || null == _.current) return;
+            if (null == O || null == R || null == _.current) return;
             let e = _.current.getBoundingClientRect();
             D(e.width / 2), C(e.height + 12);
-        }, [O, v]),
-        null == O || null == v)
+        }, [O, R]),
+        null == O || null == R)
     )
         return null;
     let L = null === (n = a.current) || void 0 === n ? void 0 : n.getSlateEditor();
@@ -239,7 +239,7 @@ t.Z = i.forwardRef(function (e, t) {
                   ref: _,
                   className: I.toolbar,
                   style: {
-                      top: v - R,
+                      top: R - v,
                       left: O - y
                   },
                   onMouseDown: (e) => {
