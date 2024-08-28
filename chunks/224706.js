@@ -243,11 +243,13 @@ t.Z = {
                     oldFormErrors: !0,
                     trackedActionData: {
                         event: i.NetworkActionNames.DETECTABLE_APPLICATIONS_FETCH,
-                        properties: (t) =>
-                            (0, o.iG)({
+                        properties: (t) => {
+                            var n;
+                            return (0, o.iG)({
                                 sent_etag: e,
-                                received_etag: t.headers.etag
-                            })
+                                received_etag: null == t ? void 0 : null === (n = t.headers) || void 0 === n ? void 0 : n.etag
+                            });
+                        }
                     }
                 }).then(
                     (e) => {
