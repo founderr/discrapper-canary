@@ -34,8 +34,9 @@ let i = (e, t) => {
     o = (e) => null != e && s.test(e),
     l = (e) => a(e, 'image'),
     u = /\.(webp|gif)$/i,
-    c = (e) => i(e, u),
-    d = (0, r.isIOS)() ? /\.(mp4|mov)$/i : ((0, r.isAndroid)(), /\.(mp4|webm|mov)$/i),
+    c = (e) => i(e, u);
+(0, r.isIOS)() || (0, r.isAndroid)();
+let d = (0, r.isIOS)() ? /\.(mp4|mov)$/i : ((0, r.isAndroid)(), /\.(mp4|webm|mov)$/i),
     _ = (e) => i(e, d),
     E = (e) => null != e && d.test(e),
     f = (e) => a(e, 'video');
