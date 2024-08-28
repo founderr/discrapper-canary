@@ -377,6 +377,7 @@ function $(e) {
 function J(e) {
     return {
         handleComplete: () => (0, N.Wf)(e),
+        handleProgress: (t) => (0, N.Wf)(e, t),
         handleResetStatusClick: () => (0, N.eT)(e),
         handleResetDismissibilityClick: () => (0, N.T0)(e),
         handleOverrideDeliveryClick: () => (0, N.EW)(e)

@@ -294,14 +294,15 @@ function O(e) {
     });
 }
 async function R(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     try {
-        let t = await i.tn.post({
+        let n = await i.tn.post({
             url: f.ANM.QUESTS_PREVIEW_COMPLETE(e),
-            body: {}
+            body: { percent: t }
         });
         a.Z.dispatch({
             type: 'QUESTS_PREVIEW_UPDATE_SUCCESS',
-            previewQuestUserStatus: (0, _.U3)(t.body)
+            previewQuestUserStatus: (0, _.U3)(n.body)
         });
     } catch (t) {
         a.Z.dispatch({
