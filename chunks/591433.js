@@ -15,8 +15,8 @@ var i = n(735250),
     d = n(410030),
     u = n(117496),
     _ = n(225784),
-    h = n(626135),
-    E = n(900849),
+    E = n(626135),
+    h = n(900849),
     m = n(540742),
     I = n(143021),
     g = n(393596),
@@ -39,15 +39,15 @@ let N = 56,
         left: 32,
         right: 32
     }),
-    L = r().throttle(E.c6, 1000, {
+    L = r().throttle(h.c6, 1000, {
         leading: !1,
         trailing: !0
     });
 function O(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: r } = e,
-        E = (0, d.ZP)(),
+        h = (0, d.ZP)(),
         { guilds: O, loading: R, searchResultsQuery: x, loadMore: b, searchCategoryId: P } = (0, I.f)({ loadId: t }),
-        M = a.useContext(h.AnalyticsContext),
+        M = a.useContext(E.AnalyticsContext),
         [D, y] = a.useState((0, u.P)()),
         [j, U] = a.useState(!0),
         G = a.useRef(j),
@@ -64,22 +64,19 @@ function O(e) {
         });
     a.useEffect(() => {
         y((0, u.P)());
-    }, [x]);
-    let V = a.useCallback(
-            (e) => {
-                L({
-                    loadId: t,
-                    searchId: D,
-                    query: x,
-                    guildResults: O,
-                    analyticsContext: M,
-                    categoryId: P,
-                    isTagSearch: !1
-                }),
-                    n(e, P);
-            },
-            [M, O, t, n, P, D, x]
-        ),
+    }, [x]),
+        a.useEffect(() => {
+            L({
+                loadId: t,
+                searchId: D,
+                query: x,
+                guildResults: O,
+                analyticsContext: M,
+                categoryId: P,
+                isTagSearch: !1
+            });
+        }, [M, O, t, P, D, x]);
+    let V = a.useCallback((e) => n(e, P), [n, P]),
         F = a.useMemo(() => (R ? [O.length, 0] : [O.length]), [O.length, R]),
         Y = 0 === O.length && !R,
         W = a.useCallback(
@@ -175,7 +172,7 @@ function O(e) {
                                     guild: e,
                                     onView: (e) => Q(e, t, P),
                                     onGuildCardSeen: V,
-                                    theme: E
+                                    theme: h
                                 },
                                 e.id
                             )
@@ -185,7 +182,7 @@ function O(e) {
                 }
                 return null;
             },
-            [O, Q, V, P, E]
+            [O, Q, V, P, h]
         ),
         J = a.useRef(null);
     a.useEffect(() => {

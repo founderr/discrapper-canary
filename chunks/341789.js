@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(766219),
     u = n(756101),
     _ = n(871348),
-    h = n(705063),
-    E = n(49898);
+    E = n(705063),
+    h = n(49898);
 let m = [];
 function I(e) {
     let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: o } = e,
@@ -27,7 +27,7 @@ function I(e) {
             (0, r.$z)(0, 30);
         }, []),
         (0, i.jsx)(u.Z, {
-            tab: E.vf.FEATURED,
+            tab: h.vf.FEATURED,
             guilds: c,
             onScroll: t,
             onGuildCardSeen: n,
@@ -38,7 +38,7 @@ function I(e) {
 function g(e) {
     let { tab: t, onScroll: n, onGuildCardSeen: o, onGuildCardClick: c } = e,
         _ = (0, d.lg)(t),
-        h = (0, s.Wu)([l.ZP], () => {
+        E = (0, s.Wu)([l.ZP], () => {
             var e, t;
             return null !== (t = null === (e = l.ZP.getDiscoverableGuilds()[_]) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : m;
         });
@@ -48,7 +48,7 @@ function g(e) {
         }, [_]),
         (0, i.jsx)(u.Z, {
             tab: t,
-            guilds: h,
+            guilds: E,
             onScroll: n,
             onGuildCardSeen: o,
             onGuildCardClick: c
@@ -60,32 +60,34 @@ function p(e) {
         p = (0, d.lg)(n),
         T = (0, s.e7)([l.ZP], () => l.ZP.isFetching()),
         S = (0, s.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().featured.guilds),
-        f = (0, s.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().gamesYouPlay.guilds);
+        f = (0, s.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().gamesYouPlay.guilds),
+        C = a.useRef(T);
     switch (
         (a.useEffect(() => {
-            S.length > 0 &&
+            C.current !== T &&
                 !T &&
                 c.Zt({
                     allGuilds: S,
                     loadId: t,
                     gamesYouPlayGuilds: f,
                     categoryId: p
-                });
+                }),
+                (C.current = T);
         }, [S, p, f, T, t]),
         n)
     ) {
-        case E.vf.FEATURED:
+        case h.vf.FEATURED:
             return (0, i.jsx)(I, {
                 tab: n,
                 onScroll: r,
                 onGuildCardClick: m,
                 onGuildCardSeen: u
             });
-        case E.vf.GAMING:
-        case E.vf.MUSIC:
-        case E.vf.ENTERTAINMENT:
-        case E.vf.TECH:
-        case E.vf.EDUCATION:
+        case h.vf.GAMING:
+        case h.vf.MUSIC:
+        case h.vf.ENTERTAINMENT:
+        case h.vf.TECH:
+        case h.vf.EDUCATION:
             return (0, i.jsx)(
                 g,
                 {
@@ -96,12 +98,12 @@ function p(e) {
                 },
                 n
             );
-        case E.vf.HUBS:
-            return (0, i.jsx)(h.X, {
+        case h.vf.HUBS:
+            return (0, i.jsx)(E.X, {
                 onScroll: r,
                 loadId: t
             });
-        case E.vf.GUILDS:
+        case h.vf.GUILDS:
             return (0, i.jsx)(_.U, { onScroll: r });
         default:
             (0, o.vE)(n);
