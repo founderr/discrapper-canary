@@ -1,3 +1,11 @@
+n.d(t, {
+    q0: function () {
+        return O;
+    },
+    xo: function () {
+        return v;
+    }
+});
 var r = n(544891),
     i = n(570140),
     a = n(668781),
@@ -89,13 +97,15 @@ let g = async (e, t) => {
             oldFormErrors: !0
         });
     },
-    O = async (e, t) => {
+    O = -1,
+    R = async function (e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 200;
         if (c.Z.isFullServerPreview(e)) {
             (0, u.aq)(e, { memberOptions: { isPending: !1 } });
             return;
         }
         try {
-            let { body: n } = await r.tn.put({
+            let { body: a } = await r.tn.put({
                 url: I.ANM.GUILD_MEMBER_REQUEST_TO_JOIN(e),
                 body: {
                     ...(0, l.jK)({ outcome: m.qz.UNKNOWN }),
@@ -107,10 +117,10 @@ let g = async (e, t) => {
                 i.Z.dispatch({
                     type: 'USER_GUILD_JOIN_REQUEST_UPDATE',
                     guildId: e,
-                    request: n
+                    request: a
                 }),
-                (0, p.YG)(t.formFields) && setTimeout(v, 200),
-                n
+                (0, p.YG)(t.formFields) && n !== O && setTimeout(v, n),
+                a
             );
         } catch (t) {
             let { status: e } = t;
@@ -134,10 +144,10 @@ let g = async (e, t) => {
                         message: T.Z.Messages.CLAN_APPLICATION_MISSING_PERMISSION
                     };
                 default:
-                    var n, d;
+                    var d, _;
                     throw {
                         ...t,
-                        message: null !== (d = ((n = new o.Hx(t)), n.getAnyErrorMessage())) && void 0 !== d ? d : T.Z.Messages.ERROR_GENERIC_TITLE
+                        message: null !== (_ = ((d = new o.Hx(t)), d.getAnyErrorMessage())) && void 0 !== _ ? _ : T.Z.Messages.ERROR_GENERIC_TITLE
                     };
             }
         }
@@ -145,7 +155,7 @@ let g = async (e, t) => {
 function v() {
     i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW' });
 }
-t.Z = {
+t.ZP = {
     fetchVerificationForm: g,
     updateVerificationForm: S,
     updateVerificationFormFieldsLocal: (e, t) => {
@@ -166,7 +176,7 @@ t.Z = {
         });
     },
     enableVerificationForm: N,
-    submitVerificationForm: O,
+    submitVerificationForm: R,
     clearCoachmark: function () {
         i.Z.dispatch({ type: 'USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR' });
     },

@@ -6,7 +6,7 @@ n.d(t, {
         return m;
     },
     It: function () {
-        return v;
+        return R;
     },
     St: function () {
         return T;
@@ -21,7 +21,7 @@ n.d(t, {
         return E;
     }
 }),
-    n(653041);
+    n(47120);
 var r = n(470079),
     i = n(442837),
     a = n(818083),
@@ -33,26 +33,17 @@ let c = (0, a.B)({
         kind: 'guild',
         id: '2024-07_rapidash_m3_guilds',
         label: 'Rapidash M3 Guilds',
-        defaultConfig: {
-            enableClanCreation: !1,
-            requireTargeting: !1
-        },
+        defaultConfig: { enableClanCreation: !1 },
         treatments: [
             {
                 id: 1,
                 label: 'Targeted guilds',
-                config: {
-                    enableClanCreation: !0,
-                    requireTargeting: !0
-                }
+                config: { enableClanCreation: !0 }
             },
             {
                 id: 2,
-                label: 'Untargeted guilds',
-                config: {
-                    enableClanCreation: !0,
-                    requireTargeting: !1
-                }
+                label: '(Defunct -- do not use) Targeted guilds',
+                config: { enableClanCreation: !0 }
             }
         ]
     }),
@@ -135,35 +126,33 @@ function I(e) {
                 return null != e && e.hasFeature(u.oNc.CLAN_PILOT_VALORANT) && (t || !e.hasFeature(u.oNc.CLAN));
             })(e, s)
         ),
-        E = a.requireTargeting
-            ? l.filter((e) =>
-                  (function (e) {
-                      let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                      return (
-                          null != e &&
-                          e.hasFeature(u.oNc.RAPIDASH_TEST) &&
-                          c.getCurrentConfig(
-                              {
-                                  guildId: e.id,
-                                  location: 'isM3TargetedGuild'
-                              },
-                              { autoTrackExposure: !1 }
-                          ).enableClanCreation &&
-                          (t || !e.hasFeature(u.oNc.CLAN))
-                      );
-                  })(e, s)
-              )
-            : l.filter((e) => s || !(null == e ? void 0 : e.hasFeature(u.oNc.CLAN))),
+        E = l.filter((e) =>
+            (function (e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                return (
+                    null != e &&
+                    e.hasFeature(u.oNc.RAPIDASH_TEST) &&
+                    c.getCurrentConfig(
+                        {
+                            guildId: e.id,
+                            location: 'isM3TargetedGuild'
+                        },
+                        { autoTrackExposure: !1 }
+                    ).enableClanCreation &&
+                    (t || !e.hasFeature(u.oNc.CLAN))
+                );
+            })(e, s)
+        ),
         f = d.length > 0 && r.enableClanCreation,
         h = _.length > 0 && n.enableClanCreation,
         I = E.length > 0 && a.enableClanCreation,
-        m = [];
+        m = new Map();
     return (
-        f && d.forEach((e) => m.push(e)),
-        h && _.forEach((e) => m.push(e)),
-        I && E.forEach((e) => m.push(e)),
+        f && d.forEach((e) => m.set(e.id, e)),
+        h && _.forEach((e) => m.set(e.id, e)),
+        I && E.forEach((e) => m.set(e.id, e)),
         {
-            guilds: m,
+            guilds: [...m.values()],
             enableClanCreation: f || h || I,
             defaultGameId: p({
                 genshinConfig: f ? r : void 0,
@@ -178,10 +167,7 @@ function m(e) {
         l = f.useExperiment({ location: t }, { autoTrackExposure: a }),
         u = h.useExperiment({ location: t }, { autoTrackExposure: a }),
         d = r.useMemo(() => {
-            let e = {
-                enableClanCreation: !1,
-                requireTargeting: !1
-            };
+            let e = { enableClanCreation: !1 };
             return (
                 o.forEach((n) => {
                     let r = c.getCurrentConfig(
@@ -191,7 +177,7 @@ function m(e) {
                         },
                         { autoTrackExposure: a }
                     );
-                    (e.enableClanCreation = e.enableClanCreation || r.enableClanCreation), (e.requireTargeting = e.requireTargeting || r.requireTargeting);
+                    e.enableClanCreation = e.enableClanCreation || r.enableClanCreation;
                 }),
                 e
             );
@@ -293,7 +279,7 @@ let O = (0, a.B)({
         }
     ]
 });
-function v(e) {
+function R(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = _(e, t),
         r = O.useExperiment({ location: e }, { autoTrackExposure: t });

@@ -8,6 +8,7 @@ e.exports = {
     clanContainer: 'clanContainer_d99f08',
     applyButtonContainer: 'applyButtonContainer_d99f08',
     applyButtonInner: 'applyButtonInner_d99f08',
+    successCheckmark: 'successCheckmark_d99f08',
     verificationForm: 'verificationForm_d99f08',
     profileCard: 'profileCard_d99f08',
     maxCapacityText: 'maxCapacityText_d99f08',
