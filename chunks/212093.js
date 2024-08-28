@@ -212,7 +212,8 @@ async function S(e) {
         l.Z.dispatch({
             type: 'GUILD_DISCOVERY_POPULAR_FETCH_FAILURE',
             categoryId: e
-        });
+        }),
+            E.rC({ categoryId: e });
     }
 }
 async function A(e, t) {
@@ -234,7 +235,8 @@ async function A(e, t) {
         l.Z.dispatch({
             type: 'GUILD_DISCOVERY_FETCH_FAILURE',
             section: f.Lcj.FEATURED
-        });
+        }),
+            E.rC({ categoryId: h.Hk });
     }
 }
 async function N() {

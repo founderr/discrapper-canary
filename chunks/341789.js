@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return T;
     }
 });
 var i = n(735250),
@@ -10,24 +10,25 @@ var i = n(735250),
     l = n(683301),
     o = n(823379),
     c = n(900849),
-    d = n(766219),
-    u = n(756101),
-    _ = n(871348),
-    E = n(705063),
-    h = n(49898);
-let m = [];
-function I(e) {
+    d = n(571457),
+    u = n(766219),
+    _ = n(756101),
+    E = n(871348),
+    h = n(705063),
+    m = n(49898);
+let I = [];
+function g(e) {
     let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: o } = e,
         c = (0, s.Wu)([l.ZP], () => {
             var e, t;
-            return null !== (t = null === (e = l.ZP.getDiscoverableGuilds().featured) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : m;
+            return null !== (t = null === (e = l.ZP.getDiscoverableGuilds().featured) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : I;
         });
     return (
         a.useEffect(() => {
             (0, r.$z)(0, 30);
         }, []),
-        (0, i.jsx)(u.Z, {
-            tab: h.vf.FEATURED,
+        (0, i.jsx)(_.Z, {
+            tab: m.vf.FEATURED,
             guilds: c,
             onScroll: t,
             onGuildCardSeen: n,
@@ -35,18 +36,18 @@ function I(e) {
         })
     );
 }
-function g(e) {
+function p(e) {
     let { tab: t, onScroll: n, onGuildCardSeen: o, onGuildCardClick: c } = e,
-        _ = (0, d.lg)(t),
+        d = (0, u.lg)(t),
         E = (0, s.Wu)([l.ZP], () => {
             var e, t;
-            return null !== (t = null === (e = l.ZP.getDiscoverableGuilds()[_]) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : m;
+            return null !== (t = null === (e = l.ZP.getDiscoverableGuilds()[d]) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : I;
         });
     return (
         a.useEffect(() => {
-            (0, r.K5)(_);
-        }, [_]),
-        (0, i.jsx)(u.Z, {
+            (0, r.K5)(d);
+        }, [d]),
+        (0, i.jsx)(_.Z, {
             tab: t,
             guilds: E,
             onScroll: n,
@@ -55,56 +56,59 @@ function g(e) {
         })
     );
 }
-function p(e) {
-    let { loadId: t, selectedTab: n, onScroll: r, onGuildCardSeen: u, onGuildCardClick: m } = e,
-        p = (0, d.lg)(n),
-        T = (0, s.e7)([l.ZP], () => l.ZP.isFetching()),
-        S = (0, s.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().featured.guilds),
-        f = (0, s.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().gamesYouPlay.guilds),
-        C = a.useRef(T);
+function T(e) {
+    let { loadId: t, selectedTab: n, onScroll: r, onGuildCardSeen: _, onGuildCardClick: I } = e,
+        T = (0, u.lg)(n),
+        S = (0, s.e7)([l.ZP], () => l.ZP.isFetching()),
+        f = (0, s.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().featured.guilds),
+        C = (0, s.Wu)([l.ZP], () => l.ZP.getDiscoverableGuilds().gamesYouPlay.guilds),
+        N = a.useRef(S);
     switch (
         (a.useEffect(() => {
-            C.current !== T &&
-                !T &&
+            N.current !== S &&
+                !S &&
                 c.Zt({
-                    allGuilds: S,
+                    allGuilds: f,
                     loadId: t,
-                    gamesYouPlayGuilds: f,
-                    categoryId: p
+                    gamesYouPlayGuilds: C,
+                    categoryId: T
                 }),
-                (C.current = T);
-        }, [S, p, f, T, t]),
+                (N.current = S);
+        }, [f, T, C, S, t]),
+        a.useEffect(() => {
+            (0, d.k)({ selectedCategoryId: T });
+        }, [T]),
         n)
     ) {
-        case h.vf.FEATURED:
-            return (0, i.jsx)(I, {
+        case m.vf.FEATURED:
+            return (0, i.jsx)(g, {
                 tab: n,
                 onScroll: r,
-                onGuildCardClick: m,
-                onGuildCardSeen: u
+                onGuildCardClick: I,
+                onGuildCardSeen: _
             });
-        case h.vf.GAMING:
-        case h.vf.MUSIC:
-        case h.vf.ENTERTAINMENT:
-        case h.vf.TECH:
-        case h.vf.EDUCATION:
+        case m.vf.GAMING:
+        case m.vf.MUSIC:
+        case m.vf.ENTERTAINMENT:
+        case m.vf.TECH:
+        case m.vf.EDUCATION:
             return (0, i.jsx)(
-                g,
+                p,
                 {
                     tab: n,
                     onScroll: r,
-                    onGuildCardClick: m,
-                    onGuildCardSeen: u
+                    onGuildCardClick: I,
+                    onGuildCardSeen: _
                 },
                 n
             );
-        case h.vf.HUBS:
-            return (0, i.jsx)(E.X, {
+        case m.vf.HUBS:
+            return (0, i.jsx)(h.X, {
                 onScroll: r,
                 loadId: t
             });
-        case h.vf.GUILDS:
-            return (0, i.jsx)(_.U, { onScroll: r });
+        case m.vf.GUILDS:
+            return (0, i.jsx)(E.U, { onScroll: r });
         default:
             (0, o.vE)(n);
     }
