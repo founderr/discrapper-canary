@@ -233,11 +233,8 @@ function h(e) {
     return (0, a.gh)(e, s.ZP);
 }
 function p(e, t, n, r) {
-    let i = !1;
-    if (null != r) for (let e of r) delete t[e], (i = !0);
-    if (null != n && n.length > 0) {
-        for (let e of n) t[e.id] = (0, o.CL)(e);
-        i = !0;
-    }
+    let i = (null != r && r.length > 0) || (null != n && n.length > 0);
+    if ((i && (t = { ...t }), null != r)) for (let e of r) delete t[e];
+    if (null != n && n.length > 0) for (let e of n) t[e.id] = (0, o.CL)(e);
     return i ? (0, o.iw)(e, Object.values(t)) : t;
 }

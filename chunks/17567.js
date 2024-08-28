@@ -43,12 +43,19 @@ t.Z = new (class e {
     handleGuildRoleChange(e, t) {
         let n = r.Z.getGuild(e.guildId),
             s = r.Z.getRoles(e.guildId);
-        null != n && this.put(i.cy(n, s), t);
+        null != n &&
+            this.put(
+                i.cy(n, {
+                    ...s,
+                    [e.role.id]: e.role
+                }),
+                t
+            );
     }
     handleGuildRoleDelete(e, t) {
         let n = r.Z.getGuild(e.guildId),
-            s = r.Z.getRoles(e.guildId);
-        null != n && this.put(i.cy(n, s), t);
+            s = { ...r.Z.getRoles(e.guildId) };
+        delete s[e.roleId], null != n && this.put(i.cy(n, s), t);
     }
     handleGuildMemberAdd(e, t) {
         if (null != e.joinedAt && e.user.id === a.default.getId()) {
