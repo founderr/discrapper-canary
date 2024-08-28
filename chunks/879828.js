@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return m;
+        return x;
     }
 });
 var s = t(735250),
@@ -8,78 +8,78 @@ var s = t(735250),
     o = t(704215),
     l = t(481060),
     r = t(605236),
-    a = t(929498),
-    c = t(678738),
-    d = t(151545),
-    u = t(527790),
-    I = t(304042),
-    _ = t(921944),
-    E = t(689938),
-    f = t(694842);
-function m(e) {
-    let { user: n, currentUser: t, onClose: m } = e,
-        { live: p, recent: x, stream: Z } = (0, a.Z)(n.id),
-        h = n.id === t.id,
-        v = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
+    a = t(63063),
+    c = t(929498),
+    d = t(678738),
+    u = t(151545),
+    I = t(527790),
+    _ = t(304042),
+    E = t(981631),
+    f = t(921944),
+    m = t(689938),
+    p = t(694842);
+function x(e) {
+    let { user: n, currentUser: t, onClose: x } = e,
+        { live: Z, recent: h, stream: v } = (0, c.Z)(n.id),
+        S = n.id === t.id,
+        T = (0, r.wE)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP);
     return (
         i.useEffect(() => {
-            if (!!h && !v)
+            if (!!S && !T)
                 (0, r.EW)(o.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP, {
-                    dismissAction: _.L.AUTO_DISMISS,
+                    dismissAction: f.L.AUTO_DISMISS,
                     forceTrack: !0
                 });
-        }, [h, v]),
+        }, [S, T]),
         (0, s.jsxs)(l.ScrollerThin, {
-            className: f.scroller,
+            className: p.scroller,
             fade: !0,
             children: [
-                (0, s.jsxs)(c.Z, {
+                (0, s.jsxs)(d.Z, {
                     children: [
-                        null != Z &&
-                            (0, s.jsx)(I.Z, {
+                        null != v &&
+                            (0, s.jsx)(_.Z, {
                                 user: n,
                                 currentUser: t,
-                                stream: Z,
-                                onClose: m
+                                stream: v,
+                                onClose: x
                             }),
-                        p.map((e, i) =>
+                        Z.map((e, i) =>
                             (0, s.jsx)(
-                                d.Z,
+                                u.Z,
                                 {
                                     user: n,
                                     currentUser: t,
                                     activity: e,
-                                    onClose: m
+                                    onClose: x
                                 },
                                 'live-'.concat(i)
                             )
                         )
                     ]
                 }),
-                (0, s.jsx)(c.Z, {
-                    heading: (0, s.jsxs)('div', {
-                        className: f.heading,
-                        children: [
-                            E.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
-                            (0, s.jsx)(l.Tooltip, {
-                                tooltipContentClassName: f.tooltipContent,
-                                text: E.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_INFORMATION_TOOLTIP,
-                                children: (e) =>
-                                    (0, s.jsx)(l.CircleInformationIcon, {
-                                        ...e,
-                                        size: 'xxs',
-                                        color: 'currentColor'
-                                    })
-                            })
-                        ]
-                    }),
-                    children: x.map((e) =>
+                (0, s.jsx)(d.Z, {
+                    heading: m.Z.Messages.USER_PROFILE_ACTIVITY_RECENT_ACTIVITY,
+                    subheading: S
+                        ? m.Z.Messages.USER_RECENT_ACTIVITY_LEARN_MORE.format({
+                              learnMoreHook: (e, n) =>
+                                  (0, s.jsx)(
+                                      l.Anchor,
+                                      {
+                                          href: a.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS),
+                                          children: e
+                                      },
+                                      n
+                                  )
+                          })
+                        : null,
+                    children: h.map((e) =>
                         (0, s.jsx)(
-                            u.Z,
+                            I.Z,
                             {
                                 user: n,
                                 entry: e,
-                                onClose: m
+                                onClose: x
                             },
                             e.id
                         )

@@ -28,11 +28,11 @@ function S(e) {
         { theme: g } = (0, m.z)(),
         { trackUserProfileAction: N } = (0, d.KZ)(),
         L = null == S ? void 0 : S.guildId,
-        j = (0, i.e7)([a.Z], () => (null != L ? a.Z.getGuild(L) : null)),
-        R = (0, i.e7)([c.Z], () => c.Z.getGuildId()),
-        O = (0, i.e7)([r.default], () => r.default.locale),
+        R = (0, i.e7)([a.Z], () => (null != L ? a.Z.getGuild(L) : null)),
+        j = (0, i.e7)([c.Z], () => c.Z.getGuildId()),
+        M = (0, i.e7)([r.default], () => r.default.locale),
         b = (0, I.Z)(n.id),
-        C = (0, u.Z)(n.id);
+        O = (0, u.Z)(n.id);
     return (0, s.jsxs)(o.ScrollerThin, {
         fade: !0,
         className: v.scroller,
@@ -43,11 +43,11 @@ function S(e) {
                     userBio: S.bio,
                     setLineClamp: !1
                 }),
-            null != j &&
+            null != R &&
                 (0, s.jsx)(x.Z, {
                     user: n,
                     currentUser: t,
-                    guild: j,
+                    guild: R,
                     scrollIntoView: T === Z.Tb.ROLES
                 }),
             (0, s.jsx)(f.Z, {
@@ -67,23 +67,23 @@ function S(e) {
                         className: v.connections,
                         userId: n.id,
                         theme: g,
-                        locale: O
+                        locale: M
                     })
                 }),
-            C.length > 0 &&
+            O.length > 0 &&
                 (0, s.jsx)(f.Z, {
                     heading: h.Z.Messages.APPS,
-                    children: C.map((e) =>
+                    children: O.map((e) =>
                         (0, s.jsx)(
                             p.tH,
                             {
                                 className: v.appsConnections,
                                 applicationRoleConnection: e,
-                                locale: O,
+                                locale: M,
                                 onApplicationClicked: () => {
                                     N({ action: 'PRESS_APP_CONNECTION' }), A();
                                 },
-                                selectedGuildId: null != R ? R : void 0
+                                selectedGuildId: null != j ? j : void 0
                             },
                             e.application.id
                         )

@@ -24,8 +24,8 @@ var s = t(735250),
 function h(e) {
     let { user: n, guildId: t, channelId: h, messageId: v, roleId: S, transitionState: T, onViewBlockedProfileClick: A, showGuildProfile: g = !0, sourceAnalyticsLocations: N = [] } = e,
         L = t === m.ME ? void 0 : t,
-        { analyticsLocations: j } = (0, r.ZP)([...N, l.Z.BLOCKED_PROFILE_MODAL]),
-        R = (0, c.ZB)({
+        { analyticsLocations: R } = (0, r.ZP)([...N, l.Z.BLOCKED_PROFILE_MODAL]),
+        j = (0, c.ZB)({
             layout: 'BLOCKED_PROFILE_MODAL',
             userId: n.id,
             guildId: L,
@@ -34,7 +34,7 @@ function h(e) {
             roleId: S,
             showGuildProfile: g
         }),
-        O = [
+        M = [
             {
                 icon: o.BellSlashIcon,
                 description: p.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_NOTIFIED
@@ -45,11 +45,11 @@ function h(e) {
             }
         ],
         b = (0, u.ZP)(n.id, g ? L : void 0),
-        C = i.createRef();
+        O = i.createRef();
     return (0, s.jsx)(r.Gt, {
-        value: j,
+        value: R,
         children: (0, s.jsx)(c.Mt, {
-            value: R,
+            value: j,
             children: (0, s.jsx)(o.ModalRoot, {
                 transitionState: T,
                 className: x.root,
@@ -59,7 +59,7 @@ function h(e) {
                     user: n,
                     displayProfile: b,
                     profileType: f.y0.FULL_SIZE,
-                    ref: C,
+                    ref: O,
                     children: (0, s.jsxs)('div', {
                         className: x.container,
                         children: [
@@ -91,7 +91,7 @@ function h(e) {
                                     }),
                                     (0, s.jsx)('div', {
                                         className: x.safetyTable,
-                                        children: O.map((e, n) => {
+                                        children: M.map((e, n) => {
                                             let { icon: t, description: i } = e;
                                             return (0, s.jsx)(
                                                 a.Z,
@@ -114,8 +114,8 @@ function h(e) {
                                             null == A || A(),
                                                 (0, d.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
-                                                    analyticsLocations: j,
-                                                    ...R
+                                                    analyticsLocations: R,
+                                                    ...j
                                                 });
                                         }
                                     })

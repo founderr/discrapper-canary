@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return j;
+        return R;
     }
 }),
     t(47120);
@@ -30,18 +30,18 @@ var i = t(481060),
     g = t(981631),
     N = t(689938),
     L = t(392214);
-function j(e) {
-    let { user: n, currentUser: t, guildId: j, channelId: R, messageId: O, roleId: b, sessionId: C, initialSection: M, initialSubsection: P, transitionState: y, onClose: U, sourceAnalyticsLocations: D = [] } = e,
-        F = j === g.ME ? void 0 : j,
+function R(e) {
+    let { user: n, currentUser: t, guildId: R, channelId: j, messageId: M, roleId: b, sessionId: O, initialSection: P, initialSubsection: C, transitionState: y, onClose: U, sourceAnalyticsLocations: D = [] } = e,
+        F = R === g.ME ? void 0 : R,
         B = (0, c.ZP)(n.id, F),
         { analyticsLocations: w } = (0, l.ZP)([...D, o.Z.SIMPLIFIED_PROFILE_MODAL]),
         G = (0, a.ZB)({
             layout: 'SIMPLIFIED_MODAL',
             userId: n.id,
-            sourceSessionId: C,
+            sourceSessionId: O,
             guildId: F,
-            channelId: R,
-            messageId: O,
+            channelId: j,
+            messageId: M,
             roleId: b
         }),
         V = (0, T.Z)(n);
@@ -80,7 +80,7 @@ function j(e) {
                                             user: n,
                                             displayProfile: B,
                                             guildId: F,
-                                            channelId: R,
+                                            channelId: j,
                                             profileType: A.y0.FULL_SIZE
                                         }),
                                         (0, s.jsxs)('div', {
@@ -119,7 +119,7 @@ function j(e) {
                                 (0, s.jsx)(m.Z, {
                                     user: n,
                                     profileType: A.y0.FULL_SIZE,
-                                    nickname: r.ZP.getName(F, R, n),
+                                    nickname: r.ZP.getName(F, j, n),
                                     pronouns: null == B ? void 0 : B.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
                                     nicknameIcons: (0, s.jsx)(E.Z, { userId: n.id }),
@@ -136,8 +136,8 @@ function j(e) {
                                         currentUser: t,
                                         displayProfile: B,
                                         items: V,
-                                        initialSection: null != M ? M : A.oh.BOT_INFO,
-                                        initialSubsection: P,
+                                        initialSection: null != P ? P : A.oh.BOT_INFO,
+                                        initialSubsection: C,
                                         onClose: U
                                     })
                                 })

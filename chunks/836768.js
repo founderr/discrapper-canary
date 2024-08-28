@@ -9,7 +9,7 @@ r.d(t, {
 var a = r(652874),
     n = r(868888),
     i = r(433517);
-let o = { selectedPage: r(49898).F$.SERVERS },
+let o = { selectedTab: r(49898).F$.SERVERS },
     l = (0, a.Z)(
         (0, n.tJ)(() => o, {
             name: 'global-discovery-ui-store',
@@ -21,7 +21,7 @@ let o = { selectedPage: r(49898).F$.SERVERS },
                 setItem: (e, t) => i.K.set(e, t),
                 removeItem: (e) => i.K.remove(e)
             }),
-            partialize: (e) => ({ selectedPage: e.selectedPage })
+            partialize: (e) => ({ selectedTab: e.selectedTab })
         })
     );
 function c() {

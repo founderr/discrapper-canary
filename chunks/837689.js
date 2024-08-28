@@ -89,7 +89,7 @@ class L extends o.Z {
             A(this, 'mayShowAnnouncementModal', async () => {
                 if ((await (0, T.l2)(), E.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
-                    t = m.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).enabled,
+                    t = m.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || m.Z.isAAMode({ location: 'announcementManager' }),
                     n = (0, c.un)(s.z.REVERSE_TRIAL_ENDED_UPSELL),
                     i = d.default.getCurrentUser();
                 if (t && !n && !(0, r.hasAnyModalOpen)() && !(0, _.I5)(i)) {

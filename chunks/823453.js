@@ -101,7 +101,7 @@ t.Z = i.memo(function (e) {
                     i.useEffect(() => {
                         Promise.all(
                             d.L.map((e) =>
-                                n(529305)('./'.concat(e, '.woff2')).then((e) => {
+                                n(959598)('./'.concat(e, '.woff2')).then((e) => {
                                     let { default: t } = e;
                                     return t;
                                 })

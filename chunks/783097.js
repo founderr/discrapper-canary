@@ -145,5 +145,5 @@ function D(n) {
     return n === E._b.TEXT;
 }
 function m(n) {
-    return (n.charAt(0).toLocaleUpperCase() + n.slice(1)).replaceAll('_', ' ');
+    return null == n ? '' : (n.charAt(0).toLocaleUpperCase() + n.slice(1)).replaceAll('_', ' ');
 }

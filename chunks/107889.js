@@ -29,22 +29,22 @@ var s = t(735250),
     g = t(705556),
     N = t(481932),
     L = t(195387),
-    j = t(272510),
-    R = t(225714),
-    O = t(171368),
+    R = t(272510),
+    j = t(225714),
+    M = t(171368),
     b = t(806926),
-    C = t(228168),
-    M = t(981631),
-    P = t(689938),
+    O = t(228168),
+    P = t(981631),
+    C = t(689938),
     y = t(392214);
 function U(e) {
     let { user: n, currentUser: t, guildId: U, channelId: D, messageId: F, roleId: B, sessionId: w, friendToken: G, initialSection: V, initialSubsection: k, transitionState: Y, onClose: W, showGuildProfile: K = !0, sourceAnalyticsLocations: z = [] } = e,
-        H = U === M.ME ? void 0 : U,
+        H = U === P.ME ? void 0 : U,
         { analyticsLocations: q } = (0, d.ZP)([...z, c.Z.SIMPLIFIED_PROFILE_MODAL]),
         Q = (0, x.Z)({
             user: n,
             currentUser: t,
-            location: M.Sbl.SIMPLIFIED_USER_PROFILE
+            location: P.Sbl.SIMPLIFIED_USER_PROFILE
         }),
         X = (0, E.ZB)({
             layout: Q ? 'SIMPLIFIED_MODAL' : 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE',
@@ -78,11 +78,11 @@ function U(e) {
                 : (null == eo ? void 0 : eo.guildId) != null
                   ? (0, s.jsx)(l.MenuItem, {
                         id: 'view-main-profile',
-                        label: P.Z.Messages.VIEW_MAIN_PROFILE,
-                        subtext: P.Z.Messages.AKA_DISPLAY_NAME.format({ displayName: _.ZP.getName(void 0, void 0, n) }),
+                        label: C.Z.Messages.VIEW_MAIN_PROFILE,
+                        subtext: C.Z.Messages.AKA_DISPLAY_NAME.format({ displayName: _.ZP.getName(void 0, void 0, n) }),
                         action: () => {
                             W(),
-                                (0, O.openUserProfileModal)({
+                                (0, M.openUserProfileModal)({
                                     ...X,
                                     showGuildProfile: !1,
                                     friendToken: G,
@@ -97,11 +97,11 @@ function U(e) {
                     })
                   : (0, s.jsx)(l.MenuItem, {
                         id: 'view-server-profile',
-                        label: P.Z.Messages.VIEW_SERVER_PROFILE,
-                        subtext: P.Z.Messages.AKA_DISPLAY_NAME.format({ displayName: _.ZP.getName(H, D, n) }),
+                        label: C.Z.Messages.VIEW_SERVER_PROFILE,
+                        subtext: C.Z.Messages.AKA_DISPLAY_NAME.format({ displayName: _.ZP.getName(H, D, n) }),
                         action: () => {
                             W(),
-                                (0, O.openUserProfileModal)({
+                                (0, M.openUserProfileModal)({
                                     ...X,
                                     showGuildProfile: !0,
                                     friendToken: G,
@@ -122,16 +122,16 @@ function U(e) {
                 transitionState: Y,
                 className: y.root,
                 hideShadow: !0,
-                'aria-label': P.Z.Messages.USER_PROFILE_MODAL,
+                'aria-label': C.Z.Messages.USER_PROFILE_MODAL,
                 children: [
                     (0, s.jsxs)(T.Z, {
                         user: n,
                         displayProfile: eo,
-                        profileType: C.y0.FULL_SIZE,
+                        profileType: O.y0.FULL_SIZE,
                         ref: ec,
                         children: [
                             (0, s.jsxs)(A.Z, {
-                                profileType: C.y0.FULL_SIZE,
+                                profileType: O.y0.FULL_SIZE,
                                 children: [
                                     (0, s.jsx)(L.Z, {
                                         user: n,
@@ -140,11 +140,11 @@ function U(e) {
                                         onClose: W
                                     }),
                                     (0, s.jsx)(N.Z, {
-                                        profileType: C.y0.FULL_SIZE,
+                                        profileType: O.y0.FULL_SIZE,
                                         user: n,
                                         friendToken: G
                                     }),
-                                    (0, s.jsx)(j.Z, {
+                                    (0, s.jsx)(R.Z, {
                                         user: n,
                                         guildId: H,
                                         viewProfileItem: ep()
@@ -156,7 +156,7 @@ function U(e) {
                                     (0, s.jsx)(Z.Z, {
                                         user: n,
                                         displayProfile: eo,
-                                        profileType: C.y0.FULL_SIZE
+                                        profileType: O.y0.FULL_SIZE
                                     }),
                                     (0, s.jsx)(S.Z, {
                                         isReply: ef,
@@ -174,10 +174,10 @@ function U(e) {
                                                 displayProfile: eo,
                                                 guildId: H,
                                                 channelId: D,
-                                                profileType: C.y0.FULL_SIZE,
-                                                isInteractionSource: et === C.n_.AVATAR || et === C.n_.STATUS,
+                                                profileType: O.y0.FULL_SIZE,
+                                                isInteractionSource: et === O.n_.AVATAR || et === O.n_.STATUS,
                                                 onInteraction: ei,
-                                                showReplyPopout: ee === C.P.REPLY && et === C.n_.AVATAR,
+                                                showReplyPopout: ee === O.P.REPLY && et === O.n_.AVATAR,
                                                 setInteractionToastShown: eI,
                                                 setInteractionSent: eE,
                                                 setIsReplyInteraction: em
@@ -185,7 +185,7 @@ function U(e) {
                                             (0, s.jsxs)('div', {
                                                 className: y.headerButtons,
                                                 children: [
-                                                    (0, s.jsx)(R.Z, {
+                                                    (0, s.jsx)(j.Z, {
                                                         user: n,
                                                         isCurrentUser: n.id === t.id,
                                                         relationshipType: er,
@@ -207,11 +207,11 @@ function U(e) {
                                                 displayProfile: eo,
                                                 guildId: H,
                                                 channelId: D,
-                                                profileType: C.y0.FULL_SIZE,
+                                                profileType: O.y0.FULL_SIZE,
                                                 hasEntered: Y === l.ModalTransitionState.ENTERED,
-                                                isInteractionSource: et === C.n_.STATUS,
+                                                isInteractionSource: et === O.n_.STATUS,
                                                 onInteraction: ei,
-                                                showReplyPopout: ee === C.P.REPLY && et === C.n_.STATUS,
+                                                showReplyPopout: ee === O.P.REPLY && et === O.n_.STATUS,
                                                 onClose: W,
                                                 setInteractionToastShown: eI,
                                                 setInteractionSent: eE,

@@ -27,8 +27,8 @@ function Z(e) {
         T = i.useMemo(() => (h ? S.find((e) => e.type === m.IIU.PLAYING) : null), [S, h]),
         A = i.useMemo(() => S.filter((e) => e !== T), [T, S]),
         { analyticsLocations: g, newestAnalyticsLocation: N } = (0, u.ZP)(),
-        { context: L, trackUserProfileAction: j } = (0, E.KZ)(),
-        R = {
+        { context: L, trackUserProfileAction: R } = (0, E.KZ)(),
+        j = {
             location: {
                 page: m.ZY5.USER_PROFILE,
                 section: m.jXE.PROFILE_MODAL
@@ -47,11 +47,11 @@ function Z(e) {
                       showChannelDetails: t === d.Y.SIMPLIFIED_PROFILE,
                       activity: T,
                       actionColor: p.actionColor,
-                      analyticsParams: R,
+                      analyticsParams: j,
                       showActions: o,
                       onClose: Z,
                       onAction: () => {
-                          j({ action: 'JOIN_ACTIVITY' }),
+                          R({ action: 'JOIN_ACTIVITY' }),
                               (0, f.Ac)({
                                   activityType: m.IIU.STREAMING,
                                   activityName: null == T ? void 0 : T.name,
@@ -76,11 +76,11 @@ function Z(e) {
                         className: l()(p.userProfileActivity, t === d.Y.SIMPLIFIED_PROFILE && p.simplifiedProfileActivity),
                         showChannelDetails: t === d.Y.SIMPLIFIED_PROFILE,
                         actionColor: p.actionColor,
-                        analyticsParams: R,
+                        analyticsParams: j,
                         showActions: o,
                         onClose: Z,
                         onAction: () => {
-                            j({ action: 'JOIN_ACTIVITY' }),
+                            R({ action: 'JOIN_ACTIVITY' }),
                                 (0, f.Ac)({
                                     activityType: e.type,
                                     activityName: e.name,
