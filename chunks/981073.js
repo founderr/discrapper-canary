@@ -1,6 +1,7 @@
 e.exports = {
     panel: 'panel_d5d68c',
-    tableContainer: 'tableContainer_d5d68c',
+    toolbar: 'toolbar_d5d68c',
+    searchBar: 'searchBar_d5d68c',
     actionColumn: 'actionColumn_d5d68c',
     totalTimeColumn: 'totalTimeColumn_d5d68c',
     subPanel: 'subPanel_d5d68c',
