@@ -8,7 +8,7 @@ e.exports = {
     image: 'image_e45025',
     imageWrapper: 'imageWrapper_e45025',
     imageHover: 'imageHover_e45025',
-    text: 'text_e45025',
+    heading: 'heading_e45025',
     buttonWrapper: 'buttonWrapper_e45025',
     button: 'button_e45025',
     buttonInner: 'buttonInner_e45025',

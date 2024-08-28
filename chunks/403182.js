@@ -105,7 +105,7 @@ let I = [
         klass: 'webcode'
     },
     {
-        reName: /\.(?:mp3|ogg|wav|flac)$/,
+        reName: /\.(?:mp3|ogg|opus|wav|aiff|flac)$/,
         klass: 'audio'
     }
 ];

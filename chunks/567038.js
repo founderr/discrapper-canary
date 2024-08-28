@@ -32,15 +32,15 @@ function S() {
                         i.Z.dispatch({ type: 'CASH_APP_PAY_AWARENESS_UPSELL_CTA_CLICKED' }),
                             (0, l.Z)({
                                 subscriptionTier: u.Si.TIER_2,
-                                analyticsLocations: [o.Z.CHECKOUT_RECOVERY_NAGBAR],
-                                analyticsLocation: I.Sbl.CHECKOUT_RECOVERY_NAGBAR
+                                analyticsLocations: [o.Z.CASH_APP_PAY_AWARENESS_NON_NITRO_FLOW_UPSELL],
+                                analyticsLocation: I.Sbl.CASH_APP_PAY_AWARENESS_NON_NITRO_FLOW_UPSELL
                             });
                     },
                     handleClose: () => {
                         i.Z.dispatch({ type: 'CASH_APP_PAY_AWARENESS_UPSELL_DISMISSED' });
                     },
                     handleImageClick: () => {
-                        r.Z.open(I.oAB.PREMIUM);
+                        r.Z.open(I.oAB.PREMIUM), i.Z.dispatch({ type: 'CASH_APP_PAY_AWARENESS_UPSELL_DISMISSED' });
                     },
                     buttonText: T.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_UPSELL_CTA,
                     useInitialGlow: !0,

@@ -13,7 +13,7 @@ var a,
     p = r(532901),
     b = r(3732),
     f = r(594402);
-function y(e, t, r) {
+function x(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,9 +26,9 @@ function y(e, t, r) {
         e
     );
 }
-let x = new RegExp('https?://'.concat(null !== (a = window.GLOBAL_ENV.CDN_HOST) && void 0 !== a ? a : ''));
+let y = new RegExp('https?://'.concat(null !== (a = window.GLOBAL_ENV.CDN_HOST) && void 0 !== a ? a : ''));
 function k(e) {
-    return 'string' == typeof e.content ? e.content : C(e.content);
+    return 'string' == typeof e.content ? e.content : j(e.content);
 }
 let v = {
         ...d().defaultRules,
@@ -100,7 +100,7 @@ let v = {
                 let n = a.match(e, t, r);
                 if (null != n && Array.isArray(n) && n.length >= 3) {
                     let e = n[2];
-                    if ('string' == typeof e) return null != e.match(x) ? n : null;
+                    if ('string' == typeof e) return null != e.match(y) ? n : null;
                 }
                 return !1;
             }
@@ -163,7 +163,7 @@ let v = {
         }
     },
     _ = d().parserFor(v),
-    C = d().reactFor(d().ruleOutput(v, 'react'));
+    j = d().reactFor(d().ruleOutput(v, 'react'));
 class w extends (n = o.PureComponent) {
     render() {
         let { className: e, children: t, state: r, parser: a, output: n } = this.props,
@@ -179,9 +179,9 @@ class w extends (n = o.PureComponent) {
         });
     }
 }
-y(w, 'rules', v),
-    y(w, 'defaultProps', {
+x(w, 'rules', v),
+    x(w, 'defaultProps', {
         parser: _,
-        output: C
+        output: j
     }),
     (t.Z = w);

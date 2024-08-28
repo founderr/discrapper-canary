@@ -48,7 +48,7 @@ function b() {
     let e = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         [t, r] = n.useState(!1),
         [b, f] = n.useState(!1),
-        [y, x] = n.useState(1);
+        [x, y] = n.useState(1);
     return (0, a.jsxs)('div', {
         className: h.container,
         children: [
@@ -84,9 +84,9 @@ function b() {
                 tag: l.FormTitleTags.H3,
                 children: (0, a.jsx)(l.SingleSelect, {
                     options: p,
-                    value: y,
+                    value: x,
                     onChange: (e) => {
-                        x(e);
+                        y(e);
                     },
                     popoutLayerContext: u.O$
                 })
@@ -99,7 +99,7 @@ function b() {
                         user: e,
                         available: t,
                         activateSuccess: b,
-                        demoDuration: y
+                        demoDuration: x
                     }),
                     (0, s.Vk)()),
                 children: 'Update'

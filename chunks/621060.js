@@ -42,19 +42,19 @@ function m(e) {
                 b(l);
             }
         }, [t, r]),
-        y = n.useRef(null);
+        x = n.useRef(null);
     n.useEffect(
         () => (
-            (y.current = new ResizeObserver(() => f())),
-            null != o.current && y.current.observe(o.current),
+            (x.current = new ResizeObserver(() => f())),
+            null != o.current && x.current.observe(o.current),
             () => {
                 var e;
-                null === (e = y.current) || void 0 === e || e.disconnect();
+                null === (e = x.current) || void 0 === e || e.disconnect();
             }
         ),
         [f]
     );
-    let x = n.useCallback(
+    let y = n.useCallback(
         (e) => {
             let { closePopout: n } = e;
             return (0, a.jsx)(l.Menu, {
@@ -115,7 +115,7 @@ function m(e) {
                 (0, a.jsx)(a.Fragment, {
                     children: (0, a.jsx)(l.Popout, {
                         layerContext: d.O$,
-                        renderPopout: x,
+                        renderPopout: y,
                         position: 'bottom',
                         align: 'right',
                         spacing: 0,

@@ -38,9 +38,9 @@ let E = a.memo(function (e) {
                                 })
                             }),
                             (0, n.jsx)('div', {
-                                className: c.text,
-                                children: (0, n.jsx)(o.Text, {
-                                    variant: 'text-md/normal',
+                                className: c.heading,
+                                children: (0, n.jsx)(o.Heading, {
+                                    variant: 'heading-sm/medium',
                                     children: s.format()
                                 })
                             })

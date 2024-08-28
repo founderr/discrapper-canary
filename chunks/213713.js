@@ -19,20 +19,20 @@ var a = r(735250),
     p = r(835473),
     b = r(681619),
     f = r(810568),
-    y = r(168524),
-    x = r(77498),
+    x = r(168524),
+    y = r(77498),
     k = r(823379),
     v = r(71585),
     _ = r(146282),
-    C = r(650613),
+    j = r(650613),
     w = r(789086),
-    j = r(206583),
-    S = r(787524),
-    N = r(535271);
-let T = [
+    C = r(206583),
+    T = r(787524),
+    S = r(535271);
+let N = [
     {
         key: 'type',
-        cellClassName: o()(S.cell, S.cellType),
+        cellClassName: o()(T.cell, T.cellType),
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(h.Text, {
@@ -43,7 +43,7 @@ let T = [
     },
     {
         key: 'count',
-        cellClassName: o()(S.cell, S.cellCount),
+        cellClassName: o()(T.cell, T.cellCount),
         render(e) {
             let { entries: t } = e;
             return (0, a.jsx)('div', {
@@ -56,7 +56,7 @@ let T = [
     },
     {
         key: 'only?',
-        cellClassName: S.cell,
+        cellClassName: T.cell,
         render(e) {
             let { type: t } = e;
             return (0, a.jsx)(E, { type: t });
@@ -85,7 +85,7 @@ function E(e) {
 }
 function I() {
     var e, t;
-    let r = (0, d.e7)([_.Z], () => _.Z.getFeed(j.YN.GLOBAL_FEED)),
+    let r = (0, d.e7)([_.Z], () => _.Z.getFeed(C.YN.GLOBAL_FEED)),
         i = (0, d.e7)([_.Z], () => _.Z.getDebugImpressionCappingDisabled()),
         l = (0, d.e7)([v.Z], () => v.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
@@ -101,23 +101,23 @@ function I() {
         })(null == r ? void 0 : null === (e = r.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
         E = (0, d.e7)([_.Z], () => {
             var e;
-            return (null === (e = _.Z.getFeedState(j.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null === (e = _.Z.getFeedState(C.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
         [I, R] = n.useState(''),
         O = (0, d.e7)(
-            [x.Z, g.Z],
+            [y.Z, g.Z],
             () => {
                 var e, t, r;
-                return parseInt(I) > 0 ? I : null !== (r = null === (e = x.Z.getGameByName(I)) || void 0 === e ? void 0 : e.id) && void 0 !== r ? r : null === (t = g.Z.getApplicationByName(I)) || void 0 === t ? void 0 : t.id;
+                return parseInt(I) > 0 ? I : null !== (r = null === (e = y.Z.getGameByName(I)) || void 0 === e ? void 0 : e.id) && void 0 !== r ? r : null === (t = g.Z.getApplicationByName(I)) || void 0 === t ? void 0 : t.id;
             },
             [I]
         ),
-        A = (0, y.Z)({
+        L = (0, x.Z)({
             applicationId: O,
             location: 'DevToolsContentInventory',
             source: f.m1.DevTools
         }),
-        L = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
+        A = Object.entries(null !== (t = u.K.get('GameProfileModal')) && void 0 !== t ? t : {})
             .filter((e) => {
                 let [t, r] = e;
                 return r;
@@ -126,18 +126,18 @@ function I() {
                 let [t] = e;
                 return t;
             }),
-        P = (0, p.Z)(L).filter(k.lm);
+        B = (0, p.Z)(A).filter(k.lm);
     return (0, a.jsx)('div', {
-        className: o()(N.panel),
+        className: o()(S.panel),
         children: (0, a.jsxs)(h.ScrollerThin, {
-            className: S.content,
+            className: T.content,
             children: [
                 (0, a.jsxs)(h.FormSection, {
                     children: [
                         (0, a.jsx)(h.FormTitle, { children: 'Inventory' }),
                         s.length > 0 &&
                             (0, a.jsx)(b.Z, {
-                                columns: T,
+                                columns: N,
                                 data: s
                             }),
                         (0, a.jsx)(h.Spacer, { size: 8 }),
@@ -147,7 +147,7 @@ function I() {
                             onClick: function () {
                                 m.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_MANUAL_REFRESH',
-                                    feedId: j.YN.GLOBAL_FEED
+                                    feedId: C.YN.GLOBAL_FEED
                                 });
                             },
                             submitting: E,
@@ -192,7 +192,7 @@ function I() {
                     ]
                 }),
                 false,
-                (0, a.jsx)(C.Z, {}),
+                (0, a.jsx)(j.Z, {}),
                 (0, a.jsxs)(h.FormSection, {
                     children: [
                         (0, a.jsx)(h.FormTitle, { children: 'Game Profile' }),
@@ -200,12 +200,12 @@ function I() {
                             placeholder: 'App ID or full name',
                             onChange: (e) => (0 === e.length || e.length >= 18) && R(e),
                             onKeyDown: (e) => {
-                                'Enter' === e.key && (I === e.currentTarget.value ? null == A || A() : R(e.currentTarget.value));
+                                'Enter' === e.key && (I === e.currentTarget.value ? null == L || L() : R(e.currentTarget.value));
                             },
-                            error: I.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : I + ' - try by id', '.') : void 0,
-                            style: null != A ? { border: '1px solid green' } : {}
+                            error: I.length > 0 && null == L ? 'No game profile for '.concat(null != O ? O : I + ' - try by id', '.') : void 0,
+                            style: null != L ? { border: '1px solid green' } : {}
                         }),
-                        (0, a.jsx)('ul', { children: P.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, a.jsx)('ul', { children: B.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(Z, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 })
             ]
@@ -214,7 +214,7 @@ function I() {
 }
 let Z = (e) => {
     let { application: t } = e,
-        r = (0, y.Z)({
+        r = (0, x.Z)({
             applicationId: t.id,
             location: 'DevToolsContentInventory',
             source: f.m1.DevTools
