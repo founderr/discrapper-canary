@@ -9,8 +9,5 @@ var i = t(470079),
 function o(e) {
     let { applicationId: n, channel: t } = e,
         o = (0, a.SY)(t, n).commands[0];
-    return i.useMemo(() => {
-        var e;
-        return (0, l.XZ)(null !== (e = null == o ? void 0 : o.name) && void 0 !== e ? e : '');
-    }, [null == o ? void 0 : o.name]);
+    return i.useMemo(() => (0, l.XZ)(null == o ? void 0 : o.name), [null == o ? void 0 : o.name]);
 }
