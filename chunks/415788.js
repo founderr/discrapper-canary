@@ -1,54 +1,57 @@
 t.r(s),
     t.d(s, {
         default: function () {
-            return b;
+            return A;
         }
     }),
     t(47120);
 var E = t(735250);
 t(470079);
 var a = t(120356),
-    r = t.n(a),
-    _ = t(704215),
-    n = t(243778),
-    L = t(790527),
-    o = t(474936),
-    i = t(981631),
-    u = t(921944),
-    R = t(689938),
-    S = t(475039);
-function b(e) {
+    _ = t.n(a),
+    r = t(704215),
+    n = t(100527),
+    L = t(906732),
+    R = t(243778),
+    o = t(790527),
+    i = t(474936),
+    u = t(981631),
+    S = t(921944),
+    b = t(689938),
+    c = t(475039);
+function A(e) {
     let s,
         a,
-        b,
-        { upsellType: c, onClose: A, transitionState: T } = e,
-        U = c === o.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL,
-        [d, C] = (0, n.US)([_.z.REVERSE_TRIAL_ENDED_UPSELL]);
+        A,
+        { upsellType: T, onClose: U, transitionState: d } = e,
+        I = T === i.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL,
+        [C, O] = (0, R.US)([r.z.REVERSE_TRIAL_ENDED_UPSELL]);
     return (
-        U ? ((s = R.Z.Messages.REVERSE_TRIAL_FOLLOW_UP_TRIAL_UPSELL_HEADER), (a = R.Z.Messages.REVERSE_TRIAL_FOLLOW_UP_TRIAL_UPSELL_SUBHEADER), (b = R.Z.Messages.BOGO_CLAIM_OFFER)) : ((s = R.Z.Messages.REVERSE_TRIAL_ENDED_UPSELL_HEADER), (a = R.Z.Messages.REVERSE_TRIAL_ENDED_UPSELL_SUBHEADER), (b = R.Z.Messages.PREMIUM_SETTINGS_GET)),
-        (0, E.jsx)(L.Z, {
+        (0, L.ZP)(n.Z.REVERSE_TRIAL_UPSELL_MODAL),
+        I ? ((s = b.Z.Messages.REVERSE_TRIAL_FOLLOW_UP_TRIAL_UPSELL_HEADER), (a = b.Z.Messages.REVERSE_TRIAL_FOLLOW_UP_TRIAL_UPSELL_SUBHEADER), (A = b.Z.Messages.BOGO_CLAIM_OFFER)) : ((s = b.Z.Messages.REVERSE_TRIAL_ENDED_UPSELL_HEADER), (a = b.Z.Messages.REVERSE_TRIAL_ENDED_UPSELL_SUBHEADER), (A = b.Z.Messages.PREMIUM_SETTINGS_GET)),
+        (0, E.jsx)(o.Z, {
             artURL: t(773585),
-            artContainerClassName: r()(S.artContainer, { [S.grayArt]: !U }),
+            artContainerClassName: _()(c.artContainer, { [c.grayArt]: !I }),
             enableArtBoxShadow: !1,
-            type: c,
+            type: T,
             title: s,
             body: a,
-            bodyClassName: S.subHeader,
+            bodyClassName: c.subHeader,
             glowUp: a,
             onSubscribeClick: () => {
-                C(u.L.TAKE_ACTION);
+                O(S.L.TAKE_ACTION);
             },
-            backButtonText: R.Z.Messages.CLOSE,
-            subscribeButtonText: b,
-            subscribeButtonClassname: S.subscribeButton,
+            backButtonText: b.Z.Messages.CLOSE,
+            subscribeButtonText: A,
+            subscribeButtonClassname: c.subscribeButton,
             useSubscribeButtonGradient: !0,
             hidePremiumOfferUpsell: !0,
             analyticsLocation: {
-                section: i.jXE.REVERSE_TRIAL_UPSELL_MODAL,
-                object: i.qAy.BUTTON_CTA
+                section: u.jXE.REVERSE_TRIAL_UPSELL_MODAL,
+                object: u.qAy.BUTTON_CTA
             },
-            transitionState: T,
-            onClose: () => (C(u.L.USER_DISMISS), A())
+            transitionState: d,
+            onClose: () => (O(S.L.USER_DISMISS), U())
         })
     );
 }
