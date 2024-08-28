@@ -12,28 +12,37 @@ var r = n(735250),
     u = n(607070),
     c = n(971865);
 function d(e) {
-    let { children: t, heading: n, className: a, scrollIntoView: d = !1, headingColor: _ = 'header-secondary' } = e,
-        E = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        f = i.useRef(null);
+    let { children: t, heading: n, subheading: a, className: d, scrollIntoView: _ = !1, headingColor: E = 'header-secondary' } = e,
+        f = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        h = i.useRef(null);
     return (
         i.useEffect(() => {
-            let e = f.current;
+            let e = h.current;
             if (null == e) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: E ? 'auto' : 'smooth' });
+                e.scrollIntoView({ behavior: f ? 'auto' : 'smooth' });
             });
             return () => cancelAnimationFrame(t);
-        }, [E]),
+        }, [f]),
         (0, r.jsxs)('section', {
-            ref: d ? f : void 0,
-            className: s()(c.section, a),
+            ref: _ ? h : void 0,
+            className: s()(c.section, d),
             children: [
                 null != n &&
-                    (0, r.jsx)(l.Heading, {
-                        variant: 'text-xs/semibold',
-                        color: _,
-                        className: c.heading,
-                        children: n
+                    (0, r.jsxs)('div', {
+                        children: [
+                            (0, r.jsx)(l.Heading, {
+                                variant: 'text-xs/semibold',
+                                color: E,
+                                className: c.heading,
+                                children: n
+                            }),
+                            null != a &&
+                                (0, r.jsx)(l.Text, {
+                                    variant: 'text-xs/normal',
+                                    children: a
+                                })
+                        ]
                     }),
                 t
             ]
