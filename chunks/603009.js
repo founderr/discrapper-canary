@@ -131,8 +131,7 @@ function b(e) {
                                 children: [
                                     (0, i.jsx)(N.Z, {
                                         guild: n,
-                                        iconSize: 64,
-                                        className: M.icon
+                                        iconSize: 64
                                     }),
                                     (0, i.jsx)('div', {
                                         className: M.guildTagContainer,

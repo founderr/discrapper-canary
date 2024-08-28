@@ -20,10 +20,23 @@ function h(e) {
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(l.Heading, {
-                variant: 'heading-lg/medium',
-                className: E.sectionTitle,
-                children: u.Z.Messages.GAMES
+            (0, i.jsxs)('div', {
+                className: _.sectionTitle,
+                children: [
+                    (0, i.jsx)(l.Heading, {
+                        variant: 'heading-lg/medium',
+                        children: u.Z.Messages.GAMES
+                    }),
+                    t.size > 0 &&
+                        (0, i.jsx)(l.Button, {
+                            look: l.Button.Looks.LINK,
+                            size: l.Button.Sizes.MIN,
+                            onClick: () => r(new Set()),
+                            color: l.Button.Colors.CUSTOM,
+                            className: _.resetButton,
+                            children: u.Z.Messages.CLAN_DISCOVERY_CLEAR_SELECTIONS
+                        })
+                ]
             }),
             (0, i.jsx)(o.p, {
                 gameApplicationIds: t,
@@ -39,10 +52,23 @@ function m(e) {
     let { traits: t, onUpdateTraits: n } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(l.Heading, {
-                variant: 'heading-lg/medium',
-                className: E.sectionTitle,
-                children: u.Z.Messages.CLAN_DISCOVERY_TRAITS
+            (0, i.jsxs)('div', {
+                className: _.sectionTitle,
+                children: [
+                    (0, i.jsx)(l.Heading, {
+                        variant: 'heading-lg/medium',
+                        children: u.Z.Messages.CLAN_DISCOVERY_TRAITS
+                    }),
+                    t.size > 0 &&
+                        (0, i.jsx)(l.Button, {
+                            look: l.Button.Looks.LINK,
+                            size: l.Button.Sizes.MIN,
+                            onClick: () => n(new Set()),
+                            color: l.Button.Colors.CUSTOM,
+                            className: _.resetButton,
+                            children: u.Z.Messages.CLAN_DISCOVERY_CLEAR_SELECTIONS
+                        })
+                ]
             }),
             (0, i.jsx)(d.d, {
                 availableTraits: t,
@@ -55,12 +81,23 @@ function I(e) {
     let { playstyle: t, onUpdatePlaystyle: n } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)('div', {
-                className: E.sectionTitle,
-                children: (0, i.jsx)(l.Heading, {
-                    variant: 'heading-lg/medium',
-                    children: u.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE
-                })
+            (0, i.jsxs)('div', {
+                className: _.sectionTitle,
+                children: [
+                    (0, i.jsx)(l.Heading, {
+                        variant: 'heading-lg/medium',
+                        children: u.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE
+                    }),
+                    null != t &&
+                        (0, i.jsx)(l.Button, {
+                            look: l.Button.Looks.LINK,
+                            size: l.Button.Sizes.MIN,
+                            onClick: () => n(null),
+                            color: l.Button.Colors.CUSTOM,
+                            className: _.resetButton,
+                            children: u.Z.Messages.CLAN_DISCOVERY_CLEAR_SELECTIONS
+                        })
+                ]
             }),
             (0, i.jsx)(c.R, {
                 playstyle: t,

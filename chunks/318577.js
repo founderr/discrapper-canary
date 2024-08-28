@@ -5,7 +5,6 @@ e.exports = {
     mainPanelContainer: 'mainPanelContainer_b22bc0',
     fixedWidthSidebar: 'fixedWidthSidebar_b22bc0',
     title: 'title_b22bc0',
-    sectionTitle: 'sectionTitle_b22bc0',
     subtitle: 'subtitle_b22bc0',
     divider: 'divider_b22bc0',
     inputContainer: 'inputContainer_b22bc0',
