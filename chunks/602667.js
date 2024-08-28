@@ -18,7 +18,7 @@ let c = (e) => {
         return {
             visible: r,
             visibleChanged: a,
-            reference: (0, s.O)((e) => n(e), 0.5)
+            reference: (0, s.O)((e) => n(e), u.PI)
         };
     },
     d = () => {
@@ -41,5 +41,5 @@ function _(e) {
             reference: o,
             impression: i.useRef(null)
         };
-    return (0, r.jsx)(u.u, { ...l }, (0, u.B)(e.questOrQuests, e.questContent));
+    return (0, r.jsx)(u.ui, { ...l }, (0, u.B5)(e.questOrQuests, e.questContent));
 }

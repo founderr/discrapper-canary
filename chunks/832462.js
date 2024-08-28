@@ -1,7 +1,7 @@
 t.r(n), t(757143);
 var o = t(735250),
-    r = t(470079),
-    c = t(593473),
+    c = t(470079),
+    r = t(593473),
     l = t(266067),
     i = t(478677),
     a = t(457330),
@@ -11,11 +11,11 @@ function d(e) {
     let { platformType: n } = e,
         t = (0, l.k6)();
     return (
-        r.useEffect(() => {
-            let { code: e, state: o } = c.parse(window.location.search),
-                r = ''.concat(u.Z5c.CONNECTIONS_ERROR(n)).concat(window.location.search);
+        c.useEffect(() => {
+            let { code: e, state: o } = r.parse(window.location.search),
+                c = ''.concat(u.Z5c.CONNECTIONS_ERROR(n)).concat(window.location.search);
             if (null == e || null == o) {
-                t.replace(r);
+                t.replace(c);
                 return;
             }
             a.Z.linkDispatchAuthCallback(n, {
@@ -24,10 +24,10 @@ function d(e) {
             }).then(
                 (e) => {
                     let { status: o } = e;
-                    204 === o ? t.replace(u.Z5c.CONNECTIONS_SUCCESS(n)) : t.replace(r);
+                    204 === o ? t.replace(u.Z5c.CONNECTIONS_SUCCESS(n)) : t.replace(c);
                 },
                 () => {
-                    t.replace(r);
+                    t.replace(c);
                 }
             );
         }, [t, n]),
@@ -37,6 +37,6 @@ function d(e) {
 n.default = function (e) {
     let { match: n } = e,
         t = n.params.type,
-        { two_way_link_type: r } = c.parse(window.location.search);
-    return [u.ABu.XBOX, u.ABu.PLAYSTATION_STAGING, u.ABu.PLAYSTATION, u.ABu.CRUNCHYROLL].includes(t) && r === i.g.DESKTOP ? (0, o.jsx)(d, { platformType: t }) : null;
+        { two_way_link_type: c } = r.parse(window.location.search);
+    return [u.ABu.XBOX, u.ABu.PLAYSTATION_STAGING, u.ABu.PLAYSTATION, u.ABu.CRUNCHYROLL].includes(t) && c === i.g.DESKTOP ? (0, o.jsx)(d, { platformType: t }) : null;
 };

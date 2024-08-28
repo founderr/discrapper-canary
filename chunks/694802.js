@@ -40,7 +40,7 @@ function u(e) {
 }
 t.Z = function (e) {
     let { quest: t } = e,
-        n = (0, a.p)({ location: i.dr.QUESTS_BAR }),
+        n = (0, a.pF)({ location: i.dr.QUESTS_BAR }),
         o = (0, r.qb)(t);
     if (0 === o.length) return null;
     let d = o.at(0);

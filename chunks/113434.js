@@ -513,7 +513,7 @@ function eo(e, t) {
         s = i.includes(P.cd.CONSOLE),
         o = H(e),
         l = Z(e),
-        _ = (0, L.p)({ location: P.dr.QUESTS_BAR }),
+        _ = (0, L.pF)({ location: P.dr.QUESTS_BAR }),
         E = u.useMemo(
             () =>
                 (0, c.EQ)(t)

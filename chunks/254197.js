@@ -46,7 +46,7 @@ let Z = o.forwardRef(function (e, t) {
                 questContentCTA: p.jZ.ACCEPT_QUEST
             });
         }, [G]),
-        et = (0, E.p)({ location: O.dr.QUESTS_BAR }),
+        et = (0, E.pF)({ location: O.dr.QUESTS_BAR }),
         { primaryVariant: en } = f.u.useExperiment({ location: O.dr.QUESTS_BAR }, { autoTrackExposure: !1 }),
         es = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         eo = (null === (r = G.userStatus) || void 0 === r ? void 0 : r.completedAt) != null,

@@ -14,8 +14,8 @@ t.r(n),
     t(47120),
     t(757143);
 var o = t(735250),
-    r = t(470079),
-    c = t(266067),
+    c = t(470079),
+    r = t(266067),
     l = t(481060),
     i = t(457330),
     a = t(726542),
@@ -28,16 +28,16 @@ let C = null != window.opener,
     g = (e) => new URLSearchParams(e.search);
 function N() {
     var e;
-    let n = (0, c.k6)(),
-        t = g((0, c.TH)()),
+    let n = (0, r.k6)(),
+        t = g((0, r.TH)()),
         l = t.get('code'),
         f = t.get('oauth_verifier'),
         p = null !== (e = t.get('state')) && void 0 !== e ? e : '',
         N = t.get('loading'),
-        { type: v } = (0, c.UO)(),
+        { type: v } = (0, r.UO)(),
         _ = (0, u.vJ)(v),
         E = null == f ? (null != l ? l : '') : f;
-    return (r.useEffect(() => {
+    return (c.useEffect(() => {
         (async function e() {
             let e;
             if (null != N) return;
@@ -45,10 +45,10 @@ function N() {
                 if (!!n.startsWith('openid.')) null == e && (e = {}), (e[n] = t.get(n));
             }
             let o = (e) => {
-                    let { status: o, body: r } = e;
+                    let { status: o, body: c } = e;
                     if (null != l) {
-                        if (null == r ? void 0 : r.redirect) {
-                            n.replace(d.Z5c.CONNECTIONS_SUCCESS(l)), (window.location = r.redirect);
+                        if (null == c ? void 0 : c.redirect) {
+                            n.replace(d.Z5c.CONNECTIONS_SUCCESS(l)), (window.location = c.redirect);
                             return;
                         }
                         if ([200, 204].includes(o)) {
@@ -58,33 +58,33 @@ function N() {
                         n.replace(''.concat(d.Z5c.CONNECTIONS_ERROR(l), '?').concat(t.toString()));
                     }
                 },
-                r = {
+                c = {
                     code: E,
                     openid_params: e,
                     state: p
                 };
-            async function c(e) {
+            async function r(e) {
                 if (null != l && a.Z.isSupported(l))
                     try {
-                        let n = await i.Z.callback(l, r, e);
+                        let n = await i.Z.callback(l, c, e);
                         o(n);
                     } catch (e) {
                         o(e);
                     }
             }
             if (C) {
-                await c(!1);
+                await r(!1);
                 return;
             }
             let l = (0, u.vJ)(v);
             try {
                 let e = await s.default.request(d.Etm.CONNECTIONS_CALLBACK, {
-                    ...r,
+                    ...c,
                     providerType: l
                 });
                 o(e);
             } catch (e) {
-                (null == e ? void 0 : e.errorCode) !== d.lTL.BAD_REQUEST_FOR_PROVIDER && (await c('RPCError' !== e.name));
+                (null == e ? void 0 : e.code) !== d.lTL.BAD_REQUEST_FOR_PROVIDER && (await r('RPCError' !== e.name));
             }
             s.default.disconnect();
         })();

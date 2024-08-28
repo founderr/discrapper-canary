@@ -590,7 +590,7 @@ t.Z = i.memo(
                     tG
                         ? null
                         : (0, r.jsx)(R.Z, {
-                              positionTargetRef: e6,
+                              positionTargetRef: null != e6.current ? e6 : e5,
                               type: eL,
                               onSelectGIF: tv,
                               onSelectEmoji: tC,
