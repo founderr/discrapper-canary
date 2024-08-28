@@ -33,9 +33,16 @@ async function _() {
 }
 async function E() {
     try {
-        let e = (await _()).filter((e) => d.hashes[e.name] !== e.hash);
-        for (let { name: t, hash: n, data: r } of e) o.default.track(t, r), ((d = { hashes: { ...d.hashes } }).hashes[t] = n);
-        e.length > 0 && h.emitChange();
+        let t = (await _()).filter((e) => d.hashes[e.name] !== e.hash);
+        for (let { name: n, hash: r, data: i } of t) {
+            var e;
+            let t = {
+                ...i,
+                gpus: null === (e = i.gpus) || void 0 === e ? void 0 : e.map((e) => JSON.stringify(e))
+            };
+            o.default.track(n, t), ((d = { hashes: { ...d.hashes } }).hashes[n] = r);
+        }
+        t.length > 0 && h.emitChange();
     } catch (e) {}
 }
 class f extends (r = i.ZP.PersistedStore) {
