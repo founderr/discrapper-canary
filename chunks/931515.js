@@ -147,9 +147,9 @@ function S(e) {
         }, [d, p]),
         A = (0, l.Wu)([u.Z], () => u.Z.getGuildProfiles(N), [N]),
         v = N.length === A.length || t,
-        Z = A.length === o || (0 === C.length && v);
+        L = A.length === o || (0 === C.length && v);
     return {
-        loaded: (0, m.Pw)(f) && Z,
+        loaded: (0, m.Pw)(f) && L,
         clans: A,
         searchCriteria: S,
         searchResult: f

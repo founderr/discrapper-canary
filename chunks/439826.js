@@ -108,9 +108,9 @@ function N(e) {
 function A(e) {
     var t;
     let { quest: n, isHovering: s, errorHints: l, warningHints: u, onCtxMenuClose: T, onCtxMenuOpen: A, onCtxMenuSelect: v } = e,
-        Z = (0, I.j8)(n),
-        L = (0, _.ZP)(),
-        O = (0, c.wj)(L) ? S.BRd.DARK : S.BRd.LIGHT,
+        L = (0, I.j8)(n),
+        Z = (0, _.ZP)(),
+        O = (0, c.wj)(Z) ? S.BRd.DARK : S.BRd.LIGHT,
         R = O === S.BRd.DARK,
         x = a.useMemo(() => (0, I.nP)(n.config.assets.hero), [n]),
         b = a.useContext(o.S).reducedMotion.enabled,
@@ -154,8 +154,8 @@ function A(e) {
                                           className: C.heroAsset,
                                           controls: !1,
                                           children: (0, i.jsx)('source', {
-                                              src: Z,
-                                              type: (0, I.mN)(Z)
+                                              src: L,
+                                              type: (0, I.mN)(L)
                                           })
                                       })
                                   )
@@ -167,7 +167,7 @@ function A(e) {
                                           ref: e,
                                           alt: ''.concat(n.config.messages.questName),
                                           className: C.heroAsset,
-                                          src: Z
+                                          src: L
                                       })
                               })
                 }),

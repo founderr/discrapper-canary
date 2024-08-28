@@ -30,8 +30,8 @@ var i,
     N = n(286083),
     A = n(207796),
     v = n(777734),
-    Z = n(976757),
-    L = n(981631),
+    L = n(976757),
+    Z = n(981631),
     O = n(689938),
     R = n(266489);
 function x(e) {
@@ -58,7 +58,7 @@ t.ZP = o.memo(function (e) {
         { currentPage: H, updatePage: V, totalItems: F, pageSize: Y } = (0, N.$)(),
         W = (0, _.e7)([I.default], () => I.default.getCurrentUser());
     o.useEffect(() => {
-        if (null != U && !!(0, Z.Pw)(U)) (!(null != B && (0, Z.Pw)(B)) || !(B.loadedAt >= U.loadedAt)) && (0, m.Oe)('top_picks', G);
+        if (null != U && !!(0, L.Pw)(U)) (!(null != B && (0, L.Pw)(B)) || !(B.loadedAt >= U.loadedAt)) && (0, m.Oe)('top_picks', G);
     }, [G, U, B]);
     let z = w.length > 0 || k.length > 0 ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != W ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: p.ZP.getName(W) }) : '';
     let K =
@@ -184,7 +184,7 @@ t.ZP = o.memo(function (e) {
                         affinity: null !== (i = o.affininty) && void 0 !== i ? i : (0, T.y)(o, G),
                         traitsToHighlight: k,
                         className: R.card,
-                        source: L.jXE.DISCOVER_SEARCH,
+                        source: Z.jXE.DISCOVER_SEARCH,
                         prioritizedGameIds: X,
                         onlyAnimateIconOnHover: !0,
                         onVisibilityChange: (n, i) => J(e, t, n, i)

@@ -1,34 +1,34 @@
-var r = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(780384),
+var r = n(780384),
     a = n(481060),
     i = n(410030),
     o = n(689938),
-    l = n(243709),
-    c = n(982240),
+    c = n(243709),
+    l = n(982240),
     d = n(533854);
 t.Z = (e) => {
     let { onRetry: t } = e,
         n = (0, i.ZP)();
-    return (0, r.jsxs)('div', {
-        className: l.wrapper,
+    return (0, s.jsxs)('div', {
+        className: c.wrapper,
         children: [
-            (0, r.jsx)('img', {
-                className: l.__invalid_loadIssueImg,
-                src: (0, s.wj)(n) ? c : d,
+            (0, s.jsx)('img', {
+                className: c.__invalid_loadIssueImg,
+                src: (0, r.wj)(n) ? l : d,
                 alt: ''
             }),
-            (0, r.jsx)(a.Heading, {
-                className: l.heading1,
+            (0, s.jsx)(a.Heading, {
+                className: c.heading1,
                 variant: 'heading-xl/semibold',
                 children: o.Z.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
             }),
-            (0, r.jsx)(a.Text, {
+            (0, s.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 children: o.Z.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
             }),
-            (0, r.jsx)(a.Button, {
-                className: l.reload,
+            (0, s.jsx)(a.Button, {
+                className: c.reload,
                 size: a.Button.Sizes.MEDIUM,
                 color: a.Button.Colors.BRAND,
                 onClick: t,

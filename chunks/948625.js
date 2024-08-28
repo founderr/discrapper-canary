@@ -1,18 +1,18 @@
 n.d(t, {
     E8: function () {
-        return P;
+        return Z;
     },
     yc: function () {
         return B;
     }
 });
-var r = n(180650),
-    s = n(44315),
+var s = n(180650),
+    r = n(44315),
     a = n(981631),
     i = n(689938),
     o = n(994745),
-    l = n(341364),
-    c = n(763542),
+    c = n(341364),
+    l = n(763542),
     d = n(354873),
     u = n(525071),
     f = n(737140),
@@ -28,8 +28,8 @@ var r = n(180650),
     E = n(125257),
     v = n(6412),
     S = n(238286);
-let T = () => i.Z.Messages.LIMITED_TIME,
-    L = () => i.Z.Messages.MOST_POPULAR,
+let L = () => i.Z.Messages.LIMITED_TIME,
+    T = () => i.Z.Messages.MOST_POPULAR,
     N = () => i.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
     O = () => i.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
     k = () => i.Z.Messages.TAKE_ME_THERE,
@@ -39,11 +39,11 @@ let T = () => i.Z.Messages.LIMITED_TIME,
             backgroundStaticSrc: S,
             overflowSrcStatic: v,
             logoSrc: E,
-            textColor: (0, s.Lq)(a.Ilk.WHITE_100),
-            badge: { label: T },
+            textColor: (0, r.Lq)(a.Ilk.WHITE_100),
+            badge: { label: L },
             cta: {
                 label: k,
-                categorySkuId: r.T.TIDE
+                categorySkuId: s.T.TIDE
             }
         },
         {
@@ -52,13 +52,13 @@ let T = () => i.Z.Messages.LIMITED_TIME,
             backgroundVideoSrc: o,
             overflowSrcStatic: u,
             overflowSrcAnimatedBackground: d,
-            overflowSrcAnimated: c,
-            logoSrc: l,
-            textColor: (0, s.Lq)(a.Ilk.BLACK_500),
-            badge: { label: L },
+            overflowSrcAnimated: l,
+            logoSrc: c,
+            textColor: (0, r.Lq)(a.Ilk.BLACK_500),
+            badge: { label: T },
             cta: {
                 label: k,
-                categorySkuId: r.T.ANIME_V2
+                categorySkuId: s.T.ANIME_V2
             }
         },
         {
@@ -66,11 +66,11 @@ let T = () => i.Z.Messages.LIMITED_TIME,
             backgroundStaticSrc: I,
             backgroundVideoSrc: h,
             logoSrc: x,
-            textColor: (0, s.Lq)(a.Ilk.WHITE_100),
+            textColor: (0, r.Lq)(a.Ilk.WHITE_100),
             badge: { label: N },
             cta: {
                 label: k,
-                categorySkuId: r.T.GALAXY
+                categorySkuId: s.T.GALAXY
             }
         },
         {
@@ -78,11 +78,11 @@ let T = () => i.Z.Messages.LIMITED_TIME,
             backgroundStaticSrc: b,
             overflowSrcStatic: _,
             logoSrc: m,
-            textColor: (0, s.Lq)(a.Ilk.WHITE_100),
+            textColor: (0, r.Lq)(a.Ilk.WHITE_100),
             badge: { label: O },
             cta: {
                 label: k,
-                categorySkuId: r.T.DISXCORE
+                categorySkuId: s.T.DISXCORE
             }
         },
         {
@@ -90,21 +90,21 @@ let T = () => i.Z.Messages.LIMITED_TIME,
             backgroundStaticSrc: C,
             backgroundVideoSrc: p,
             logoSrc: g,
-            textColor: (0, s.Lq)(a.Ilk.WHITE_100),
-            badge: { label: L },
+            textColor: (0, r.Lq)(a.Ilk.WHITE_100),
+            badge: { label: T },
             cta: {
                 label: k,
-                categorySkuId: r.T.CYBERPUNK
+                categorySkuId: s.T.CYBERPUNK
             }
         }
     ],
     B = (e) =>
         j.filter((t) => {
             var n;
-            let r = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
-            return null == r || null != e[r];
+            let s = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
+            return null == s || null != e[s];
         }),
-    P = (e, t) => {
-        let { overflowSrcStatic: n, overflowSrcAnimated: r, overflowSrcAnimatedBackground: s } = e;
-        return null == n ? [] : t || null == r ? [n] : null == s ? [r] : [s, r];
+    Z = (e, t) => {
+        let { overflowSrcStatic: n, overflowSrcAnimated: s, overflowSrcAnimatedBackground: r } = e;
+        return null == n ? [] : t || null == s ? [n] : null == r ? [s] : [r, s];
     };

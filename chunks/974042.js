@@ -158,19 +158,19 @@ class A {
     }
 }
 let v = !0,
-    Z = !1,
-    L = p.pJs.ONLINE,
+    L = !1,
+    Z = p.pJs.ONLINE,
     O = new A(),
     R = !0,
     x = !1;
 function b() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    v && (e || (L !== p.pJs.ONLINE && L !== p.pJs.ADD_FRIEND)) && !Z && ((v = !1), (Z = !0), o.Z.fetchRelationships());
+    v && (e || (Z !== p.pJs.ONLINE && Z !== p.pJs.ADD_FRIEND)) && !L && ((v = !1), (L = !0), o.Z.fetchRelationships());
 }
 function P() {
-    if (((v = !0), R ? (Z = !1) : b(), (O = O.reset()), x)) return;
+    if (((v = !0), R ? (L = !1) : b(), (O = O.reset()), x)) return;
     let e = O.getRelationshipCounts();
-    L = 0 === e[p.OGo.FRIEND] ? (0 !== e[p.OGo.PENDING_INCOMING] ? p.pJs.PENDING : p.pJs.ADD_FRIEND) : p.pJs.ONLINE;
+    Z = 0 === e[p.OGo.FRIEND] ? (0 !== e[p.OGo.PENDING_INCOMING] ? p.pJs.PENDING : p.pJs.ADD_FRIEND) : p.pJs.ONLINE;
 }
 function M() {
     O = R ? new A() : O.reset();
@@ -186,8 +186,8 @@ class y extends (i = r.ZP.Store) {
     }
     getState() {
         return {
-            fetching: Z,
-            section: L,
+            fetching: L,
+            section: Z,
             pendingCount: I.Z.getPendingCount(),
             rows: O
         };
@@ -199,23 +199,23 @@ T(y, 'displayName', 'FriendsStore'),
             P();
         },
         FRIENDS_SET_SECTION: function (e) {
-            (L = e.section), b();
+            (Z = e.section), b();
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
             return (R = null != t), M(), !R;
         },
         LOAD_RELATIONSHIPS_SUCCESS: function () {
-            Z = !1;
+            L = !1;
         },
         LOAD_RELATIONSHIPS_FAILURE: function () {
-            (v = !0), (Z = !0);
+            (v = !0), (L = !0);
         },
         DRAWER_SELECT_TAB: function (e) {
             let { tab: t } = e;
             return (R = t !== p.cII.FRIENDS), M(), !R;
         },
         FRIENDS_SET_INITIAL_SECTION: function (e) {
-            (L = e.section), (x = !0);
+            (Z = e.section), (x = !0);
         }
     }));

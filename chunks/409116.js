@@ -4,44 +4,44 @@ n.d(t, {
     }
 }),
     n(757143);
-var r = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
+var r = n(120356),
+    a = n.n(r),
     i = n(481060),
     o = n(937615),
-    l = n(884697),
-    c = n(222541);
+    c = n(884697),
+    l = n(222541);
 let d = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
     u = (e) => {
         var t;
         let {
-                price: { amount: n, currency: s },
+                price: { amount: n, currency: r },
                 renderPrice: u,
                 icon: f,
                 className: p,
-                discount: g = l.f_,
+                discount: g = c.f_,
                 variant: C = 'heading-md/semibold'
             } = e,
-            m = d((0, o.T4)(n, s)),
+            m = d((0, o.T4)(n, r)),
             _ =
-                g !== l.f_ && g.discountPercentage >= 5
-                    ? (0, r.jsxs)(r.Fragment, {
+                g !== c.f_ && g.discountPercentage >= 5
+                    ? (0, s.jsxs)(s.Fragment, {
                           children: [
                               m,
-                              (0, r.jsx)(i.Heading, {
+                              (0, s.jsx)(i.Heading, {
                                   variant: C,
                                   color: 'text-positive',
-                                  className: c.discount,
+                                  className: l.discount,
                                   children: ' (-'.concat(g.discountPercentage, '%)')
                               })
                           ]
                       })
                     : m;
-        return (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsxs)(i.Heading, {
+        return (0, s.jsx)(s.Fragment, {
+            children: (0, s.jsxs)(i.Heading, {
                 variant: C,
-                className: a()(c.container, p),
+                className: a()(l.container, p),
                 children: [f, null !== (t = null == u ? void 0 : u(_)) && void 0 !== t ? t : _]
             })
         });

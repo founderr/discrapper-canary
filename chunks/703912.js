@@ -32,7 +32,7 @@ async function N(e, t, n) {
         o,
         c,
         d,
-        { client_id: S, response_type: C = 'code', redirect_uri: N, code_challenge: A, code_challenge_method: v, state: Z, nonce: L, scope: O, permissions: R, guild_id: x, channel_id: b, prompt: P, disable_guild_select: M, integration_type: D, pid: y } = e;
+        { client_id: S, response_type: C = 'code', redirect_uri: N, code_challenge: A, code_challenge_method: v, state: L, nonce: Z, scope: O, permissions: R, guild_id: x, channel_id: b, prompt: P, disable_guild_select: M, integration_type: D, pid: y } = e;
     if (null == S) throw new T.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != N) throw new T.Z({ errorCode: f.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let j = [];
@@ -48,7 +48,7 @@ async function N(e, t, n) {
             redirectUri: N,
             codeChallenge: A,
             codeChallengeMethod: v,
-            state: Z,
+            state: L,
             integrationType: l
         });
     } catch (t) {
@@ -72,8 +72,8 @@ async function N(e, t, n) {
                     redirectUri: N,
                     codeChallenge: A,
                     codeChallengeMethod: v,
-                    state: Z,
-                    nonce: L,
+                    state: L,
+                    nonce: Z,
                     integrationType: l
                 })
             ).location;
@@ -97,7 +97,7 @@ async function N(e, t, n) {
             redirectUri: N,
             codeChallenge: A,
             codeChallengeMethod: v,
-            state: Z,
+            state: L,
             guildId: x,
             channelId: b,
             prompt: P,

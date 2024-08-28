@@ -24,11 +24,11 @@ var i = n(735250),
 t.Z = function (e) {
     let {} = e,
         t = (0, g.Z)(f.dr.QUEST_HOME_DESKTOP),
-        { tabs: v, selectedTab: Z, onSelectTab: L } = (0, S.z)(),
+        { tabs: v, selectedTab: L, onSelectTab: Z } = (0, S.z)(),
         { onScroll: O, scrollPosition: R } = (0, d.M)(),
         x = (0, l.ZP)(),
         b = p.Z.getState().getUtmCurrentContext(),
-        { quests: P, isFetchingCurrentQuests: M } = (0, I.bA)(Z),
+        { quests: P, isFetchingCurrentQuests: M } = (0, I.bA)(L),
         D = null;
     if (window.location.hash.length > 0) {
         let e = window.location.hash.slice(1);
@@ -66,8 +66,8 @@ t.Z = function (e) {
                           (0, i.jsx)(E.aV, { icon: r.QuestsIcon }),
                           (0, i.jsx)(h.Z, {
                               tabs: v,
-                              selectedTab: Z,
-                              onTabSelect: L
+                              selectedTab: L,
+                              onTabSelect: Z
                           })
                       ]
                   }),
@@ -88,7 +88,7 @@ t.Z = function (e) {
                       children:
                           M && 0 === P.length
                               ? (0, i.jsx)(r.Spinner, { className: A.spinner })
-                              : 0 === P.length && Z === I.e5.CLAIMED
+                              : 0 === P.length && L === I.e5.CLAIMED
                                 ? (0, i.jsxs)(r.EmptyState, {
                                       theme: x,
                                       children: [
@@ -98,7 +98,7 @@ t.Z = function (e) {
                                               width: 415,
                                               height: 200
                                           }),
-                                          (0, i.jsx)(r.EmptyStateText, { note: N.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({ onClick: () => L(I.e5.ALL) }) })
+                                          (0, i.jsx)(r.EmptyStateText, { note: N.Z.Messages.QUESTS_CLAIMED_QUEST_EMPTY_STATE.format({ onClick: () => Z(I.e5.ALL) }) })
                                       ]
                                   })
                                 : (0, i.jsx)('div', {

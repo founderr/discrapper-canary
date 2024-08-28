@@ -32,10 +32,10 @@ function S(e) {
         [L, k] = s.useState(null),
         [b, D] = s.useState(!1),
         w = s.useMemo(() => (0, T.UY)(_), [_]),
-        B = s.useCallback(() => {
+        F = s.useCallback(() => {
             D(!0), null == t || t();
         }, [t]),
-        F = s.useCallback(
+        B = s.useCallback(
             (e) => {
                 D(!1), n(e);
             },
@@ -94,8 +94,8 @@ function S(e) {
                     giftRecipient: Z,
                     giftMessage: P,
                     children: (0, a.jsx)(h.PaymentModal, {
-                        onClose: F,
-                        onComplete: B,
+                        onClose: B,
+                        onComplete: F,
                         applicationId: I.XAJ,
                         skuId: _,
                         initialPlanId: null,

@@ -3,13 +3,13 @@ n.d(t, {
         return h;
     }
 });
-var r = n(735250),
-    s = n(470079),
+var s = n(735250),
+    r = n(470079),
     a = n(120356),
     i = n.n(a),
     o = n(481060),
-    l = n(425493),
-    c = n(410030),
+    c = n(425493),
+    l = n(410030),
     d = n(984370),
     u = n(471731),
     f = n(486620),
@@ -20,14 +20,14 @@ var r = n(735250),
     _ = n(99065);
 function b(e) {
     let { isLayer: t, onClose: n, isFullScreen: a = !1 } = e;
-    return (0, r.jsxs)(d.Z, {
+    return (0, s.jsxs)(d.Z, {
         className: i()(_.headerBar, { [_.fullscreenHeaderBar]: a }),
         innerClassname: _.shopLogoContainer,
-        toolbar: a ? null : (0, r.jsx)(s.Fragment, {}),
+        toolbar: a ? null : (0, s.jsx)(r.Fragment, {}),
         children: [
-            (0, r.jsx)(f.Z, { className: _.shopLogo }),
+            (0, s.jsx)(f.Z, { className: _.shopLogo }),
             a &&
-                (0, r.jsx)(l.Z, {
+                (0, s.jsx)(c.Z, {
                     className: _.closeIcon,
                     closeAction: t ? g.DR : n,
                     keybind: 'ESC'
@@ -38,32 +38,32 @@ function b(e) {
 function h(e) {
     let { isFullScreen: t, isLayer: n, onClose: a, showBackButton: f, handleTransition: h } = e,
         { newShopLogoEnabled: x } = (0, C.O)({ location: 'CollectiblesShop' }),
-        I = (0, c.ZP)();
+        I = (0, l.ZP)();
     return x
-        ? (0, r.jsx)(b, {
+        ? (0, s.jsx)(b, {
               isLayer: n,
               onClose: a,
               isFullScreen: t
           })
-        : (0, r.jsxs)(d.Z, {
+        : (0, s.jsxs)(d.Z, {
               className: i()((0, p.Q)(I), _.headerBar, { [_.fullscreenHeaderBar]: t }),
-              toolbar: t ? null : (0, r.jsx)(s.Fragment, {}),
+              toolbar: t ? null : (0, s.jsx)(r.Fragment, {}),
               children: [
-                  (0, r.jsxs)(r.Fragment, {
+                  (0, s.jsxs)(s.Fragment, {
                       children: [
                           f &&
                               null != h &&
-                              (0, r.jsx)(o.Clickable, {
+                              (0, s.jsx)(o.Clickable, {
                                   onClick: h,
                                   className: _.back,
-                                  children: (0, r.jsx)(o.ArrowLargeLeftIcon, {})
+                                  children: (0, s.jsx)(o.ArrowLargeLeftIcon, {})
                               }),
-                          (0, r.jsx)(u.Z, { className: _.discordLogo })
+                          (0, s.jsx)(u.Z, { className: _.discordLogo })
                       ]
                   }),
-                  (0, r.jsx)(d.Z.Title, { children: m.Z.Messages.COLLECTIBLES_SHOP }),
+                  (0, s.jsx)(d.Z.Title, { children: m.Z.Messages.COLLECTIBLES_SHOP }),
                   t &&
-                      (0, r.jsx)(l.Z, {
+                      (0, s.jsx)(c.Z, {
                           className: _.closeIcon,
                           closeAction: n ? g.DR : a,
                           keybind: 'ESC'

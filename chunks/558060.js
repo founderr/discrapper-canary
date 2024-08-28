@@ -3,25 +3,25 @@ n.d(t, {
         return p;
     }
 });
-var r = n(735250);
+var s = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
+var r = n(120356),
+    a = n.n(r),
     i = n(481060),
     o = n(884697),
-    l = n(409116),
-    c = n(200615),
+    c = n(409116),
+    l = n(200615),
     d = n(981631),
     u = n(689938),
     f = n(889540);
 function p(e) {
-    let { product: t, isPremiumUser: n, discount: s, className: p, nitroUpsell: g = !1 } = e,
+    let { product: t, isPremiumUser: n, discount: r, className: p, nitroUpsell: g = !1 } = e,
         C = (0, o.ql)(t, d.tuJ.DEFAULT);
     if (null == C) return null;
     if (C.amount <= 0)
-        return (0, r.jsx)('div', {
+        return (0, s.jsx)('div', {
             className: a()(f.priceTagsContainer, p),
-            children: (0, r.jsx)(l.F, { price: C })
+            children: (0, s.jsx)(c.F, { price: C })
         });
     let m = (0, o.ql)(t, d.tuJ.PREMIUM_TIER_2),
         _ = !n && !(0, o.x6)(t),
@@ -29,15 +29,15 @@ function p(e) {
             (0, o.x6)(t) && n
                 ? {
                       ...C,
-                      amount: s.original
+                      amount: r.original
                   }
                 : C;
-    return (0, r.jsxs)('div', {
+    return (0, s.jsxs)('div', {
         className: a()(f.priceTagsContainer, p),
         children: [
-            (0, r.jsx)(l.F, {
+            (0, s.jsx)(c.F, {
                 price: b,
-                discount: n ? o.f_ : s,
+                discount: n ? o.f_ : r,
                 className: a()(f.price, {
                     [f.striked]: n,
                     [f.dimmed]: n,
@@ -45,16 +45,16 @@ function p(e) {
                 })
             }),
             null != m &&
-                (0, r.jsx)(l.F, {
+                (0, s.jsx)(c.F, {
                     price: m,
-                    discount: n ? s : o.f_,
+                    discount: n ? r : o.f_,
                     renderPrice: g
                         ? (e) =>
-                              (0, r.jsx)(i.Text, {
+                              (0, s.jsx)(i.Text, {
                                   variant: 'text-xs/medium',
                                   children: u.Z.Messages.COLLECTIBLES_NON_PREMIUM_PRICE_SUBSCRIBE_NOW.format({
                                       price: e,
-                                      subscribeNowHook: (e) => (0, r.jsx)(c.F, { text: e })
+                                      subscribeNowHook: (e) => (0, s.jsx)(l.F, { text: e })
                                   })
                               })
                         : _
@@ -65,12 +65,12 @@ function p(e) {
                         [f.fullPrice]: _
                     }),
                     variant: n ? void 0 : 'text-xs/semibold',
-                    icon: (0, r.jsx)(i.Tooltip, {
+                    icon: (0, s.jsx)(i.Tooltip, {
                         text: u.Z.Messages.COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT,
                         'aria-label': u.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
                         children: (e) => {
                             let { ...t } = e;
-                            return (0, r.jsx)(i.NitroWheelIcon, {
+                            return (0, s.jsx)(i.NitroWheelIcon, {
                                 size: 'md',
                                 color: 'currentColor',
                                 ...t,

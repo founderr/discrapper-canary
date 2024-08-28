@@ -40,7 +40,7 @@ t.Z = () => {
     if (null != T) {
         if (g) {
             if (null != n) {
-                var N, A, v, Z, L, O;
+                var N, A, v, L, Z, O;
                 C = {
                     type: h.k2.COACHTIP,
                     title: () => n.title,
@@ -53,8 +53,8 @@ t.Z = () => {
                 null != e &&
                     (C.entryPointBackgroundAssets = {
                         srcDark: null === (v = e.resting) || void 0 === v ? void 0 : v.dark,
-                        srcLight: null === (Z = e.resting) || void 0 === Z ? void 0 : Z.light,
-                        srcDarkHovered: null === (L = e.hovered) || void 0 === L ? void 0 : L.dark,
+                        srcLight: null === (L = e.resting) || void 0 === L ? void 0 : L.light,
+                        srcDarkHovered: null === (Z = e.hovered) || void 0 === Z ? void 0 : Z.dark,
                         srcLightHovered: null === (O = e.hovered) || void 0 === O ? void 0 : O.light
                     });
             }

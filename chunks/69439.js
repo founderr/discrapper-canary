@@ -56,9 +56,9 @@ function S(e) {
 }
 function f(e) {
     var t, n, a, f;
-    let { quest: C, location: N, onReceiveErrorHints: A, contentPosition: v, rowIndex: Z } = e,
-        L = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
-        O = (0, h.g2)({ useReducedMotion: L }),
+    let { quest: C, location: N, onReceiveErrorHints: A, contentPosition: v, rowIndex: L } = e,
+        Z = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
+        O = (0, h.g2)({ useReducedMotion: Z }),
         R = (0, d._s)({ quest: C }),
         x = (0, d.z)(C),
         b = (0, d.B6)(C.config.expiresAt, {
@@ -89,7 +89,7 @@ function f(e) {
             location: N,
             isCollectibleQuest: B,
             questContentPosition: v,
-            questContentRowIndex: Z,
+            questContentRowIndex: L,
             inGiftInventory: !0
         }),
         { startingConsoleQuest: X, startConsoleQuest: J } = (0, d.GI)({
@@ -101,7 +101,7 @@ function f(e) {
                         questContent: N,
                         questContentCTA: c.jZ.DEFIBRILLATOR,
                         questContentPosition: v,
-                        questContentRowIndex: Z
+                        questContentRowIndex: L
                     });
             },
             afterRequest: (e) => {

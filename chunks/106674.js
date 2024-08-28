@@ -27,11 +27,11 @@ var i = n(735250),
     N = n(981631),
     A = n(70722),
     v = n(689938),
-    Z = n(626634);
-function L(e) {
+    L = n(626634);
+function Z(e) {
     let { users: t } = e;
     return (0, i.jsxs)('div', {
-        className: Z.viewers,
+        className: L.viewers,
         children: [
             (0, i.jsx)(l.VoiceNormalIcon, {
                 size: 'custom',
@@ -84,7 +84,7 @@ function O(e) {
         };
     })(r, k);
     return (0, i.jsxs)('div', {
-        className: Z.container,
+        className: L.container,
         children: [
             (0, i.jsx)(l.Avatar, {
                 size: l.AvatarSizes.SIZE_32,
@@ -92,7 +92,7 @@ function O(e) {
                 'aria-label': D
             }),
             (0, i.jsxs)('div', {
-                className: Z.details,
+                className: L.details,
                 children: [
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/semibold',
@@ -104,9 +104,9 @@ function O(e) {
                         children: null != M ? v.Z.Messages.STREAMING.format({ name: M.name }) : v.Z.Messages.STREAMING_A_GAME
                     }),
                     (0, i.jsxs)('div', {
-                        className: Z.activity,
+                        className: L.activity,
                         children: [
-                            k.length > 0 && (0, i.jsx)(L, { users: k }),
+                            k.length > 0 && (0, i.jsx)(Z, { users: k }),
                             (0, i.jsxs)(l.Button, {
                                 onClick: () => {
                                     if (U === O) {
@@ -124,9 +124,9 @@ function O(e) {
                                 },
                                 color: w,
                                 size: l.ButtonSizes.SMALL,
-                                className: Z.button,
+                                className: L.button,
                                 disabled: H,
-                                innerClassName: Z.innerButton,
+                                innerClassName: L.innerButton,
                                 children: [
                                     (0, i.jsx)(l.MicrophoneArrowRightIcon, {
                                         size: 'custom',
@@ -143,7 +143,7 @@ function O(e) {
             }),
             null != j
                 ? (0, i.jsx)(h.Z, {
-                      className: Z.stream,
+                      className: L.stream,
                       stream: {
                           streamType: A.lo.CALL,
                           ownerId: r,
@@ -153,7 +153,7 @@ function O(e) {
                 : (0, i.jsx)(E.Z, {
                       game: M,
                       size: E.Z.Sizes.LARGE,
-                      className: Z.gameIcon
+                      className: L.gameIcon
                   })
         ]
     });

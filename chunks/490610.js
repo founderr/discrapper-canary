@@ -39,7 +39,7 @@ t.Z = a.memo(function (e) {
             [f, C, N]
         ),
         v = a.useMemo(() => (null != S && (0, m.Pw)(S) ? T : []), [T, S]),
-        Z = a.useCallback(
+        L = a.useCallback(
             (e) => {
                 e && (0, c.Oe)('top_picks', f);
             },
@@ -47,7 +47,7 @@ t.Z = a.memo(function (e) {
         );
     return 0 !== T.length && p
         ? (0, i.jsx)(o.$, {
-              onChange: Z,
+              onChange: L,
               threshold: 0.25,
               children: (0, i.jsxs)('div', {
                   className: r()(g.previewListContainer, s),

@@ -22,7 +22,7 @@ var a = n(636977),
     N = n(46140),
     A = n(689938),
     v = n(745322);
-let Z = (e) => {
+let L = (e) => {
         switch (e) {
             case f.Gj.Activity:
                 return f.fW.Activity;
@@ -38,7 +38,7 @@ let Z = (e) => {
                 return f.fW.Discover;
         }
     },
-    L = () => {
+    Z = () => {
         let { currentCategoryId: e, isViewingSearchResults: t } = (0, s.cj)([I.ZP], () => ({
                 currentCategoryId: I.ZP.getCurrentCategoryId(),
                 isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
@@ -50,9 +50,9 @@ let Z = (e) => {
                     ? void 0
                     : o.map((e) => ({
                           ...e,
-                          icon: Z(e.categoryId)
+                          icon: L(e.categoryId)
                       })),
-            L = (e) => {
+            Z = (e) => {
                 (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== f.Gj.Quests && (0, m.uL)(C.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === f.Gj.Quests && (0, h.navigateToQuestHome)(N.dr.DISCOVERY_SIDEBAR, a.j.DISCOVERY_SIDEBAR);
             };
         return (0, i.jsxs)(r.Scroller, {
@@ -61,18 +61,18 @@ let Z = (e) => {
                 (0, i.jsx)(T.V, { text: A.Z.Messages.DISCOVER }),
                 (0, i.jsx)(p.Z, {
                     categories: S,
-                    handleCategorySelect: L,
+                    handleCategorySelect: Z,
                     currentCategoryId: e,
                     shouldDisplaySelectedCategory: !t
                 }),
                 (0, i.jsx)(c.Z, {
-                    handleCategorySelect: L,
+                    handleCategorySelect: Z,
                     currentCategoryId: e,
                     shouldDisplaySelectedCategory: !t
                 }),
                 n &&
                     (0, i.jsx)(E.Z, {
-                        onClick: () => L(f.Gj.Quests),
+                        onClick: () => Z(f.Gj.Quests),
                         isSelected: e === f.Gj.Quests
                     })
             ]
@@ -85,5 +85,5 @@ t.Z = function () {
         }),
         t = e.length > 0,
         { clanDiscoveryEnabled: n } = (0, o.nk)('guild_discovery_sidebar');
-    return t || n ? (0, i.jsx)(S.Z, {}) : (0, i.jsx)(L, {});
+    return t || n ? (0, i.jsx)(S.Z, {}) : (0, i.jsx)(Z, {});
 };

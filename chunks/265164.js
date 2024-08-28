@@ -22,7 +22,7 @@ var i,
     N = n(207205),
     A = n(981631),
     v = n(206583);
-function Z(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function Z(e, t, n) {
         e
     );
 }
-let L = [],
+let Z = [],
     O = null,
     R = 0,
     x = [],
@@ -95,9 +95,9 @@ function X(e) {
     );
 }
 function J(e) {
-    if ((x.length > 0 && ((L = x), (x = []), (b = [])), B++, null != e)) (K = e.newUnread), (q = e.newRead);
+    if ((x.length > 0 && ((Z = x), (x = []), (b = [])), B++, null != e)) (K = e.newUnread), (q = e.newRead);
     else {
-        let [e, t] = $(L);
+        let [e, t] = $(Z);
         (K = e), (q = t);
     }
     if (null != P.load_id && O !== P.load_id) {
@@ -127,17 +127,17 @@ function $(e) {
 }
 function ee(e, t) {
     let n = [],
-        i = new Set(L.map((e) => e.id));
+        i = new Set(Z.map((e) => e.id));
     for (let a of e) {
         if (!i.has(a.id) && null == C.Z.getReadTimestamp(a.id) && (a.type !== f.Rr.MESSAGE || (!!(0, N.$U)(a.data.channel_id, a.data.message_id) && a.data.channel_id !== t)) && (a.type !== f.Rr.SUMMARY || (!!(0, N.$U)(a.data.channel_id, a.data.summary_id) && a.data.channel_id !== t))) n.push(a);
     }
     return n;
 }
 function et(e, t) {
-    if ((0, N.jv)(t) === N.aL.MUTED) (L = L.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.channel_id !== e)), (K = K.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.channel_id !== e)), (q = q.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.channel_id !== e)), (x = x.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.channel_id !== e)), (b = b.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.channel_id !== e));
+    if ((0, N.jv)(t) === N.aL.MUTED) (Z = Z.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.channel_id !== e)), (K = K.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.channel_id !== e)), (q = q.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.channel_id !== e)), (x = x.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.channel_id !== e)), (b = b.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.channel_id !== e));
 }
 function en(e, t) {
-    if ((0, N.jv)(t) === N.aL.MUTED) (L = L.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.guild_id !== e)), (K = K.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.guild_id !== e)), (q = q.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.guild_id !== e)), (x = x.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.guild_id !== e)), (b = b.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.guild_id !== e));
+    if ((0, N.jv)(t) === N.aL.MUTED) (Z = Z.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.guild_id !== e)), (K = K.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.guild_id !== e)), (q = q.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.guild_id !== e)), (x = x.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.guild_id !== e)), (b = b.filter((t) => (t.type !== f.Rr.MESSAGE && t.type !== f.Rr.SUMMARY) || t.data.guild_id !== e));
 }
 function ei(e) {
     let { type: t, messageId: n, userId: i, emoji: a, reactionType: s } = e,
@@ -162,9 +162,9 @@ class es extends (i = s.ZP.PersistedStore) {
     initialize(e) {
         if ((this.waitFor(h.Z, E.Z, m.ZP, d.Z, g.ZP, _.default, C.Z, l.Z), null != e)) {
             var t, n, i, a, s, r;
-            (L = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []),
+            (Z = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []),
                 (M = null !== (n = e.locallyAddedItems) && void 0 !== n ? n : {}),
-                L.forEach((e) => {
+                Z.forEach((e) => {
                     D[e.id] = e;
                 }),
                 (U = null !== (i = e.customGuildScores) && void 0 !== i ? i : {}),
@@ -177,7 +177,7 @@ class es extends (i = s.ZP.PersistedStore) {
         return B;
     }
     getDehydratedItems() {
-        return L;
+        return Z;
     }
     getNewDehydratedItems() {
         return x;
@@ -245,7 +245,7 @@ class es extends (i = s.ZP.PersistedStore) {
     }
     getState() {
         return {
-            dehydratedItems: L,
+            dehydratedItems: Z,
             locallyAddedItems: M,
             numOpens: z,
             customGuildScores: U,
@@ -254,12 +254,12 @@ class es extends (i = s.ZP.PersistedStore) {
         };
     }
 }
-Z(es, 'displayName', 'GravityStore'),
-    Z(es, 'persistKey', 'GravityStore'),
+L(es, 'displayName', 'GravityStore'),
+    L(es, 'persistKey', 'GravityStore'),
     (t.Z = new es(r.Z, {
         POST_CONNECTION_OPEN: function () {
-            if (L.length > 0) {
-                let [e, t] = $(L);
+            if (Z.length > 0) {
+                let [e, t] = $(Z);
                 (K = e), (q = t), (Q = 0), (0, N.em)([...K, ...q], 0, f.xy);
             }
         },
@@ -289,7 +289,7 @@ Z(es, 'displayName', 'GravityStore'),
                 }
             };
             o && (null == k[s] && (k[s] = 0), k[s]++, w.add(a)),
-                null == (x = 0 === x.length ? [...L] : [...x]).find((e) => e.id === i.id) && ((x = [c, ...x]), (M[i.id] = c)),
+                null == (x = 0 === x.length ? [...Z] : [...x]).find((e) => e.id === i.id) && ((x = [c, ...x]), (M[i.id] = c)),
                 (0, N.$U)(s, i.id) && (b = [c, ...b]),
                 b.length >= f.Lb && B > 0 && (V = !0),
                 (D[i.id] = c),
@@ -458,10 +458,10 @@ Z(es, 'displayName', 'GravityStore'),
             let { feedId: t } = e;
             if (t !== v.YN.GLOBAL_FEED) return !1;
             if (!F) {
-                let [e, t] = $((L = X(L)));
+                let [e, t] = $((Z = X(Z)));
                 (K = e), (q = t);
             }
-            let [n, i] = $((x = X((x = 0 === x.length ? [...L] : x))));
+            let [n, i] = $((x = X((x = 0 === x.length ? [...Z] : x))));
             b = ee(n);
         }
     }));

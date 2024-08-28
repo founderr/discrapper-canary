@@ -24,7 +24,7 @@ var i = n(735250),
 let f = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function C(e) {
     var t, n, s;
-    let { quest: C, questContent: N, isHovering: A, contentPosition: v, rowIndex: Z, onReceiveErrorHints: L } = e,
+    let { quest: C, questContent: N, isHovering: A, contentPosition: v, rowIndex: L, onReceiveErrorHints: Z } = e,
         O = E.r.build(C.config).defaultReward.messages.name,
         R = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: x, scrollHeight: b } = (0, d.Z)(),
@@ -145,8 +145,8 @@ function C(e) {
                 quest: C,
                 location: N,
                 contentPosition: v,
-                rowIndex: Z,
-                onReceiveErrorHints: L
+                rowIndex: L,
+                onReceiveErrorHints: Z
             })
         ]
     });

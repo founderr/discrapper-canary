@@ -27,8 +27,8 @@ var i = n(735250),
     N = n(626421),
     A = n(118379),
     v = n(652515),
-    Z = n(857428),
-    L = n(540059),
+    L = n(857428),
+    Z = n(540059),
     O = n(194729),
     R = n(668940),
     x = n(831565),
@@ -129,9 +129,9 @@ let eg = 'resizable-sidebar-width',
                 if ((null == e ? void 0 : e.type) === H.z.SERVER_SHOP)
                     switch (e.initialTab) {
                         case 'role_subscriptions':
-                            return Z.y.GUILD_ROLE_SUBSCRIPTIONS;
+                            return L.y.GUILD_ROLE_SUBSCRIPTIONS;
                         case 'guild_products':
-                            return Z.y.GUILD_PRODUCTS;
+                            return L.y.GUILD_PRODUCTS;
                         default:
                             return;
                     }
@@ -143,7 +143,7 @@ let eg = 'resizable-sidebar-width',
                     return d
                         ? (0, i.jsx)(eT, {
                               guildId: a,
-                              initialTab: Z.y.GUILD_ROLE_SUBSCRIPTIONS
+                              initialTab: L.y.GUILD_ROLE_SUBSCRIPTIONS
                           })
                         : (0, i.jsx)(U.Z, { guildId: a });
                 case eh.oC.GUILD_SHOP:
@@ -191,7 +191,7 @@ let eg = 'resizable-sidebar-width',
         }
         return (0, i.jsx)(C.Z, {});
     },
-    eZ = a.memo(function () {
+    eL = a.memo(function () {
         let { guildId: e, channelId: t } = (0, q.Z)(),
             n = (0, u.e7)([et.Z], () => (null != t ? t : et.Z.getChannelId(e))),
             a = (0, x.v)({ location: 'sidebar' });
@@ -215,7 +215,7 @@ let eg = 'resizable-sidebar-width',
               )
             : (0, i.jsx)(ed.Z, {});
     }),
-    eL = (e) => (0, i.jsx)(ev, { ...e }),
+    eZ = (e) => (0, i.jsx)(ev, { ...e }),
     eO = (e) => {
         let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null;
         return (0, x.a)({ location: 'sidebar' }) ? (0, i.jsx)(b.A, {}) : (0, i.jsx)(O.Z, { searchRoute: t });
@@ -288,7 +288,7 @@ function ew(e) {
     let l = 'app view user trigger debugging';
     h.R6.useExperiment({ location: l }, { autoTrackExposure: !1 }), h.R6.trackExposure({ location: l });
     let o = (0, u.e7)([f.Z], () => f.Z.isFullscreenInContext()),
-        c = (0, L.Q)('ChannelSidebar');
+        c = (0, Z.Q)('ChannelSidebar');
     a.useLayoutEffect(() => {
         if (c) {
             var e;
@@ -332,7 +332,7 @@ function ew(e) {
                   [eI.hidden]: o
               }),
               children: [
-                  (0, i.jsx)(eZ, {}),
+                  (0, i.jsx)(eL, {}),
                   c
                       ? (0, i.jsx)('div', {
                             className: eI.sidebarResizeHandle,
@@ -487,7 +487,7 @@ function eB() {
                                                 }),
                                                 (0, i.jsx)(S.Z, {
                                                     path: [eE.Z5c.CHANNEL_THREAD_VIEW(':guildId', ':channelId', ':threadId', ':messageId?'), eE.Z5c.CHANNEL(eE.ME, ':channelId'), eE.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')],
-                                                    render: eL,
+                                                    render: eZ,
                                                     impressionName: o.ImpressionNames.GUILD_CHANNEL,
                                                     disableTrack: !0
                                                 }),

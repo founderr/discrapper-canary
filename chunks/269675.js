@@ -26,8 +26,8 @@ var i = n(735250),
     N = n(504762),
     A = n(807152),
     v = n(176505),
-    Z = n(689938),
-    L = n(228819);
+    L = n(689938),
+    Z = n(228819);
 function O(e) {
     let { guildId: t } = e,
         n = (0, r.e7)([I.Z], () => I.Z.getGuild(t), [t]),
@@ -39,7 +39,7 @@ function O(e) {
         { shouldHideGuildPurchaseEntryPoints: M, restrictionsLoading: D } = (0, E.uP)(t),
         y = null == n || !P || b || D;
     (0, d.Tt)({
-        subsection: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+        subsection: L.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
         location: null == n ? void 0 : n.name
     }),
         (0, c.Z)(s.tq ? 'role-subscriptions-overview' : void 0);
@@ -57,27 +57,27 @@ function O(e) {
         return (0, i.jsx)(C.z, { errorType: e });
     }
     return (0, i.jsxs)('div', {
-        className: L.container,
+        className: Z.container,
         children: [
             (0, i.jsxs)(m.Z, {
                 toolbar: (0, i.jsx)(a.Fragment, {}),
-                className: L.headerBar,
+                className: Z.headerBar,
                 children: [
                     (0, i.jsx)(m.Z.Icon, {
                         icon: (0, l.makeIconCompat)(S.Z),
                         'aria-hidden': !0
                     }),
-                    (0, i.jsx)(m.Z.Title, { children: Z.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE })
+                    (0, i.jsx)(m.Z.Title, { children: L.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE })
                 ]
             }),
             (0, i.jsx)('div', { id: A.v }),
             (0, i.jsx)('div', {
-                className: L.content,
+                className: Z.content,
                 children: R
                     ? (0, i.jsx)(l.ScrollerNone, {
-                          className: L.scroller,
+                          className: Z.scroller,
                           children: (0, i.jsx)('div', {
-                              className: L.scrollerContent,
+                              className: Z.scrollerContent,
                               children: y ? (0, i.jsx)(l.Spinner, {}) : (0, i.jsx)(f.Z, { guild: n })
                           })
                       })

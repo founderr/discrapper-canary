@@ -28,8 +28,8 @@ var i = n(735250),
     N = n(676742),
     A = n(1585),
     v = n(304761),
-    Z = n(865427),
-    L = n(571250),
+    L = n(865427),
+    Z = n(571250),
     O = n(628581),
     R = n(55311),
     x = n(575175),
@@ -82,8 +82,8 @@ var i = n(735250),
     eN = n(51144),
     eA = n(998502),
     ev = n(870569),
-    eZ = n(345243),
-    eL = n(115530),
+    eL = n(345243),
+    eZ = n(115530),
     eO = n(981631),
     eR = n(215023),
     ex = n(288836),
@@ -210,11 +210,11 @@ class eU extends a.PureComponent {
                 children: [
                     (0, i.jsx)('div', {
                         className: eP.panelTitleContainer,
-                        children: (0, i.jsx)(eL.Z, { children: l })
+                        children: (0, i.jsx)(eZ.Z, { children: l })
                     }),
                     (0, i.jsx)('div', {
                         className: eP.panelSubtextContainer,
-                        children: (0, i.jsx)(eZ.Z, { children: null != e ? e : a })
+                        children: (0, i.jsx)(eL.Z, { children: null != e ? e : a })
                     })
                 ]
             })
@@ -529,10 +529,10 @@ function eG() {
             return null != e ? ec.Z.getChannel(e) : null;
         }),
         { mute: C, selfMute: N, suppress: A } = (0, el.Z)(g),
-        { selfDeaf: L, deaf: O } = (0, er.Z)(g),
+        { selfDeaf: Z, deaf: O } = (0, er.Z)(g),
         R = (0, l.e7)([v.C], () => {
             var e;
-            return (0, Z.fD)() ? (null === (e = v.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, L.fD)() ? (null === (e = v.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         x = (0, l.e7)([eI.ZP], () => eI.ZP.getPremiumTypeSubscription()),
         b = (0, l.e7)([eu.Z], () => eu.Z.getEverSpeakingWhileMuted()),
@@ -597,7 +597,7 @@ function eG() {
             hidePrivateData: I,
             occluded: M,
             premiumSubscription: x,
-            selfDeaf: L,
+            selfDeaf: Z,
             selfMute: N,
             serverDeaf: O,
             serverMute: C,
@@ -692,7 +692,7 @@ function eB(e) {
     return (
         a.useEffect(() => () => _(), [c, _]),
         (0, i.jsx)(ev.Z, {
-            tooltipText: (0, L.Z)(t, n, s),
+            tooltipText: (0, Z.Z)(t, n, s),
             onMouseEnter: h,
             onMouseLeave: m,
             icon: (0, i.jsx)(I, {

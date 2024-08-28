@@ -21,8 +21,8 @@ var i = n(735250),
     N = n(731455),
     A = n(981631),
     v = n(46140),
-    Z = n(689938),
-    L = n(653534);
+    L = n(689938),
+    Z = n(653534);
 let O = (e) => {
     switch (e) {
         case N.Gj.Activity:
@@ -71,12 +71,12 @@ t.Z = function () {
         }, [x, n]),
         (0, i.jsxs)(l.Scroller, {
             children: [
-                (0, i.jsx)(C.V, { text: Z.Z.Messages.DISCOVER }),
+                (0, i.jsx)(C.V, { text: L.Z.Messages.DISCOVER }),
                 (0, i.jsx)(
                     u.Z,
                     {
                         avatar: (0, i.jsx)(d.Z, {}),
-                        name: Z.Z.Messages.CLANS,
+                        name: L.Z.Messages.CLANS,
                         focusProps: {
                             offset: {
                                 right: 4,
@@ -87,9 +87,9 @@ t.Z = function () {
                         onClick: () => M(N.Gj.Clans),
                         wrapContent: !0,
                         selected: e === N.Gj.Clans,
-                        className: L.categoryItem,
-                        selectedClassName: L.selectedCategoryItem,
-                        innerClassName: L.itemInner
+                        className: Z.categoryItem,
+                        selectedClassName: Z.selectedCategoryItem,
+                        innerClassName: Z.itemInner
                     },
                     'clan-discovery-home'
                 ),
