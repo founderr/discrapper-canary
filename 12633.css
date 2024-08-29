@@ -27818,7 +27818,6 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 .buttons_d0696b {
     display: flex;
     flex-direction: row;
-    align-self: flex-end;
     height: var(--custom-channel-textarea-text-area-height);
     position: sticky;
     top: 0;
