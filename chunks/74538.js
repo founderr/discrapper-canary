@@ -1180,6 +1180,7 @@ t.ZP = Object.freeze({
                       t.currency
                   )
                 : (0, L.T4)(t.total, t.currency);
+        if (null != e.trialId && P.h8.includes(e.trialId) && null == e.paymentSourceId) return w.Z.Messages.REVERSE_TRIAL_PAYMENT_MODAL_INFO.format({ trialEnd: e.currentPeriodEnd });
         if (e.status === b.O0b.CANCELED) return w.Z.Messages.PREMIUM_SETTINGS_CANCELLED_INFO.format({ endDate: t.subscriptionPeriodStart });
         if (e.status === b.O0b.PAUSE_PENDING)
             return w.Z.Messages.PREMIUM_SETTINGS_PAUSE_PENDING_INFO.format({
