@@ -1,4 +1,7 @@
 n.d(t, {
+    BQ: function () {
+        return w;
+    },
     CQ: function () {
         return I;
     },
@@ -6,7 +9,7 @@ n.d(t, {
         return U;
     },
     Z2: function () {
-        return w;
+        return x;
     },
     bN: function () {
         return p;
@@ -133,10 +136,13 @@ function P(e) {
 function U(e) {
     return !h.$I.has(e.status);
 }
-function w(e) {
+function w(e, t) {
+    return new Date(e.scheduled_start_time).getTime() < Date.now() + 1000 * t;
+}
+function x(e) {
     return null != e && h.$I.has(e.status);
 }
-class x extends (r = u.ZP.Store) {
+class G extends (r = u.ZP.Store) {
     getGuildScheduledEvent(e) {
         var t;
         return null == e ? null : null !== (t = m.get(e)) && void 0 !== t ? t : null;
@@ -193,7 +199,7 @@ class x extends (r = u.ZP.Store) {
     }
 }
 (s = 'GuildScheduledEventStore'),
-    (a = 'displayName') in (i = x)
+    (a = 'displayName') in (i = G)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -201,7 +207,7 @@ class x extends (r = u.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.ZP = new x(d.Z, {
+    (t.ZP = new G(d.Z, {
         CONNECTION_OPEN: function (e) {
             let { guilds: t } = e;
             return m.clear(), (T = 0), (A = {}), (N = {}), g.forEach(O), t.forEach((e) => e.guild_scheduled_events.forEach((e) => O(e))), !0;
