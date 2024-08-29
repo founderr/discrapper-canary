@@ -100,13 +100,13 @@ class L extends g.Z {
         };
     }
     handleSend(e, t) {
-        let n;
-        let { channelId: r, file: i, filename: a, ...s } = e,
-            o = (0, h.d)(),
-            l = {
+        let n, r;
+        let { channelId: i, ...a } = e,
+            s = (0, h.d)(),
+            o = {
                 mobile_network_type: I.Z.getType(),
-                ...s,
-                ...(null != o && { signal_strength: o })
+                ...a,
+                ...(null != s && { signal_strength: s })
             };
         if (f.ZP.get('send_fail_100')) {
             this.logger.log('Skipping message send because send_fail_100 is enabled'),
@@ -121,57 +121,28 @@ class L extends g.Z {
             return;
         }
         null != R && (R.isInstanceUILocked() ? (n = { location: 'overlay_locked_activated' }) : !R.isInstanceUILocked() && (n = R.isPinned(N.Odu.TEXT) ? { location: 'overlay_unlocked_pinned' } : { location: 'overlay_unlocked' }));
-        let d = this.createResponseHandler(e.nonce, t),
-            _ = new AbortController();
-        if ((this.startQueueMetricTimers(e.nonce), null != i && null != a && '' !== a))
+        let l = this.createResponseHandler(e.nonce, t),
+            d = new AbortController();
+        this.startQueueMetricTimers(e.nonce);
+        (r = {
+            timeout: 60 * m.Z.Millis.SECOND,
+            retries: 3,
+            backoff: new u.Z()
+        }),
             c.tn.post(
                 {
-                    url: N.ANM.MESSAGES(r),
-                    fields: Object.entries(l).map((e) => {
-                        let [t, n] = e;
-                        return {
-                            name: t,
-                            value: n
-                        };
-                    }),
-                    attachments: [
-                        {
-                            name: 'file',
-                            file: i,
-                            filename: a
-                        }
-                    ],
+                    url: N.ANM.MESSAGES(i),
+                    body: o,
                     context: n,
                     oldFormErrors: !0,
-                    signal: _.signal,
+                    ...r,
+                    signal: d.signal,
                     onRequestCreated: () => {
-                        null != e.nonce && this.requests.set(e.nonce, _);
+                        null != e.nonce && this.requests.set(e.nonce, d);
                     }
                 },
-                d
+                l
             );
-        else {
-            let t;
-            (t = {
-                timeout: 60 * m.Z.Millis.SECOND,
-                retries: 3,
-                backoff: new u.Z()
-            }),
-                c.tn.post(
-                    {
-                        url: N.ANM.MESSAGES(r),
-                        body: l,
-                        context: n,
-                        oldFormErrors: !0,
-                        ...t,
-                        signal: _.signal,
-                        onRequestCreated: () => {
-                            null != e.nonce && this.requests.set(e.nonce, _);
-                        }
-                    },
-                    d
-                );
-        }
     }
     handleEdit(e, t) {
         let { channelId: n, messageId: r, ...i } = e,
