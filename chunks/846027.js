@@ -344,5 +344,12 @@ t.Z = {
                 type: 'MEDIA_ENGINE_INTERACTION_REQUIRED',
                 required: !1
             });
+    },
+    setEnableHardwareMuteNotice(e) {
+        !I() &&
+            r.Z.dispatch({
+                type: 'MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE',
+                enabled: e
+            });
     }
 };
