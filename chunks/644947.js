@@ -44,7 +44,8 @@ function l() {
                 name: n.V.CAPTCHA_SERVE_VOLUME_DISTRIBUTION,
                 tags: ['user_flow:'.concat(e)]
             },
-            t
+            t,
+            !0
         );
     (0, a.j)(() => u.setState({ captchaServeVolume: {} }));
 }
