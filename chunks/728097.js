@@ -5,12 +5,19 @@ e.exports = {
     row: 'row_ebba41',
     around: 'around_ebba41',
     between: 'between_ebba41',
-    flexEnd: 'flexEnd_ebba41',
     shop: 'shop_ebba41',
     banner: 'banner_ebba41',
     bannerImage: 'bannerImage_ebba41',
-    bannerGradient: 'bannerGradient_ebba41',
-    secondaryBanner: 'secondaryBanner_ebba41',
+    featuredBlocksContainer: 'featuredBlocksContainer_ebba41',
+    featuredBlock: 'featuredBlock_ebba41',
+    featuredBlockBadge: 'featuredBlockBadge_ebba41',
+    featuredBlockButton: 'featuredBlockButton_ebba41',
     mainContent: 'mainContent_ebba41',
-    feed: 'feed_ebba41'
+    heroHeaderContainer: 'heroHeaderContainer_ebba41',
+    heroHeaderBadgeLogoSummaryContainer: 'heroHeaderBadgeLogoSummaryContainer_ebba41',
+    heroHeaderLogo: 'heroHeaderLogo_ebba41',
+    heroHeaderButtonContainer: 'heroHeaderButtonContainer_ebba41',
+    limitedTimeBadge: 'limitedTimeBadge_ebba41',
+    feed: 'feed_ebba41',
+    feedSingleRow: 'feedSingleRow_ebba41'
 };

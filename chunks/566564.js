@@ -1,19 +1,24 @@
 n(47120);
-var r = n(735250),
-    a = n(470079),
+var a = n(735250),
+    r = n(470079),
     s = n(120356),
     o = n.n(s),
-    i = n(442837),
+    i = n(180650),
+    l = n(442837),
     c = n(481060),
-    l = n(594174),
-    d = n(597688),
-    u = n(1870),
-    f = n(884697),
-    p = n(223143),
-    g = n(709999),
-    C = n(728097);
-let m = ['1252404767737778217', '1252405010608951358', '1252405017688936508', '1252404132074225775'],
-    _ = [
+    d = n(594174),
+    u = n(597688),
+    f = n(1870),
+    p = n(884697),
+    g = n(223143),
+    C = n(823941),
+    m = n(709999),
+    _ = n(689938),
+    b = n(728097),
+    h = n(367815),
+    x = n(933285);
+let I = ['1252404767737778217', '1252405010608951358', '1252405017688936508', '1252404132074225775'],
+    E = [
         '1212569433839636530',
         '1232073608168472638',
         '1232071712695386162',
@@ -199,141 +204,181 @@ let m = ['1252404767737778217', '1252405010608951358', '1252405017688936508', '1
         '1202445890909110323'
     ];
 t.Z = (e) => {
-    var t, n, s, b, h, x;
-    let { handleTransition: I } = e,
-        { isFetching: E } = (0, p.Z)(),
-        v = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
-        S = a.createRef(),
-        [L, T] = a.useState(20),
-        N = (0, i.cj)([d.Z], () => ({
-            feature: d.Z.getCategory('1252404112650407998'),
-            secondary: [d.Z.getCategory('1197342727608746044'), d.Z.getCategory('1207046915880124426')]
+    var t, n, s, v, T, S, L, N;
+    let { handleTransition: k } = e,
+        { isFetching: O } = (0, g.Z)(),
+        B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        j = r.createRef(),
+        [Z, P] = r.useState(20),
+        R = (0, l.cj)([u.Z], () => ({
+            feature: u.Z.getCategory('1252404112650407998'),
+            secondary: [u.Z.getCategory('1197342727608746044'), u.Z.getCategory('1207046915880124426')]
         })),
-        k = a.useMemo(
+        A = r.useMemo(
             () =>
-                m
-                    .map((e) => d.Z.getProduct(e))
+                I.map((e) => u.Z.getProduct(e))
                     .filter((e) => null != e)
                     .map((e) => ({
                         ...e,
-                        category: d.Z.getCategoryForProduct(e.skuId)
+                        category: u.Z.getCategoryForProduct(e.skuId)
                     }))
                     .filter((e) => null != e.category),
-            [E]
+            [O]
         ),
-        O = a.useMemo(
+        y = r.useMemo(
             () =>
-                _.map((e) => d.Z.getProduct(e))
+                E.map((e) => u.Z.getProduct(e))
                     .filter((e) => null != e)
                     .map((e) => ({
                         ...e,
-                        category: d.Z.getCategoryForProduct(e.skuId)
+                        category: u.Z.getCategoryForProduct(e.skuId)
                     }))
                     .filter((e) => null != e.category)
                     .sort((e, t) => {
-                        let n = !!u.Z.getPurchase(e.skuId),
-                            r = !!u.Z.getPurchase(t.skuId);
-                        return Number(n) - Number(r);
+                        let n = !!f.Z.getPurchase(e.skuId),
+                            a = !!f.Z.getPurchase(t.skuId);
+                        return Number(n) - Number(a);
                     }),
-            [E]
+            [O]
         );
-    return null == v
+    return null == B
         ? null
-        : (O.length,
-          (0, r.jsx)(r.Fragment, {
-              children: (0, r.jsxs)('div', {
-                  className: C.shop,
+        : (y.length,
+          (0, a.jsx)(a.Fragment, {
+              children: (0, a.jsxs)('div', {
+                  className: b.shop,
                   children: [
-                      (0, r.jsxs)('div', {
-                          className: C.banner,
-                          children: [
-                              (0, r.jsx)('div', {
-                                  className: C.bannerImage,
-                                  style: { backgroundImage: 'url('.concat((0, f.uV)(null !== (b = null === (t = N.feature) || void 0 === t ? void 0 : t.banner) && void 0 !== b ? b : '', { size: 4096 }), ')') }
-                              }),
-                              (0, r.jsx)('div', { className: C.bannerGradient })
-                          ]
+                      (0, a.jsx)('div', {
+                          className: b.banner,
+                          children: (0, a.jsx)('div', {
+                              className: b.bannerImage,
+                              style: { backgroundImage: 'url('.concat((0, p.uV)(null !== (L = null === (t = R.feature) || void 0 === t ? void 0 : t.banner) && void 0 !== L ? L : '', { size: 2048 }), ')') }
+                          })
                       }),
-                      (0, r.jsxs)('div', {
-                          className: o()(C.content, C.mainContent),
+                      (0, a.jsxs)('div', {
+                          className: o()(b.content, b.mainContent),
                           children: [
-                              (0, r.jsx)('div', {
-                                  className: o()(C.row, C.flexEnd, C.section),
-                                  children: (0, r.jsx)(c.Button, {
-                                      color: c.ButtonColors.WHITE,
-                                      onClick: I,
-                                      children: 'View All Palworld'
-                                  })
-                              }),
-                              (0, r.jsx)('div', { className: C.section }),
-                              (0, r.jsx)('div', {
-                                  className: o()(C.row, C.section),
-                                  children: k.map((e) => {
-                                      if (null == e || null == e.category) return null;
-                                      let { category: t, ...n } = e;
-                                      return (0, r.jsx)(
-                                          g.Z,
-                                          {
-                                              product: n,
-                                              category: t,
-                                              user: v
-                                          },
-                                          null == e ? void 0 : e.skuId
-                                      );
-                                  })
-                              }),
-                              (0, r.jsxs)('div', {
-                                  className: o()(C.section, C.col2),
+                              (0, a.jsxs)('div', {
+                                  className: o()(b.heroHeaderContainer),
                                   children: [
-                                      (0, r.jsx)('div', {
-                                          className: o()(C.secondaryBanner, C.flexEnd),
-                                          style: { backgroundImage: 'url('.concat((0, f.uV)(null !== (h = null === (n = N.secondary[0]) || void 0 === n ? void 0 : n.banner) && void 0 !== h ? h : '', { size: 480 }), ')') },
-                                          children: (0, r.jsx)(c.Button, {
-                                              onClick: I,
-                                              children: 'View All Cyberpunk'
-                                          })
+                                      (0, a.jsxs)('div', {
+                                          className: o()(b.heroHeaderBadgeLogoSummaryContainer),
+                                          children: [
+                                              (null === (n = R.feature) || void 0 === n ? void 0 : n.unpublishedAt) != null &&
+                                                  (0, a.jsx)(c.TextBadge, {
+                                                      disableColor: !0,
+                                                      text: _.Z.Messages.LIMITED_TIME,
+                                                      className: b.limitedTimeBadge
+                                                  }),
+                                              (0, a.jsx)('img', {
+                                                  className: b.heroHeaderLogo,
+                                                  src: (0, p.uV)(null !== (N = null === (s = R.feature) || void 0 === s ? void 0 : s.logo) && void 0 !== N ? N : '', { size: C.n }),
+                                                  alt: null === (v = R.feature) || void 0 === v ? void 0 : v.name
+                                              }),
+                                              (0, a.jsx)(c.Text, {
+                                                  color: 'always-white',
+                                                  variant: 'text-md/normal',
+                                                  children: null === (T = R.feature) || void 0 === T ? void 0 : T.summary
+                                              })
+                                          ]
                                       }),
-                                      (0, r.jsx)('div', {
-                                          className: o()(C.secondaryBanner, C.flexEnd),
-                                          style: { backgroundImage: 'url('.concat((0, f.uV)(null !== (x = null === (s = N.secondary[1]) || void 0 === s ? void 0 : s.banner) && void 0 !== x ? x : '', { size: 480 }), ')') },
-                                          children: (0, r.jsx)(c.Button, {
-                                              onClick: I,
-                                              children: 'View All Elements'
+                                      (0, a.jsx)('div', {
+                                          className: b.heroHeaderButtonContainer,
+                                          children: (0, a.jsx)(c.Button, {
+                                              color: c.ButtonColors.WHITE,
+                                              onClick: () => k(),
+                                              children: _.Z.Messages.COLLECTIBLES_SHOP_THE_VAULT_COLLECTION
                                           })
                                       })
                                   ]
                               }),
-                              (0, r.jsx)('div', {
-                                  className: o()(C.row, C.between, C.section),
-                                  children: (0, r.jsx)(c.Heading, {
-                                      variant: 'heading-md/bold',
-                                      children: 'Most popular products'
-                                  })
-                              }),
-                              (0, r.jsx)('div', {
-                                  className: C.feed,
-                                  ref: S,
-                                  children: O.slice(0, L).map((e) => {
+                              (0, a.jsx)('div', {
+                                  className: o()(b.row, b.feed, b.feedSingleRow),
+                                  children: A.map((e) => {
                                       if (null == e || null == e.category) return null;
                                       let { category: t, ...n } = e;
-                                      return (0, r.jsx)(
-                                          g.Z,
+                                      return (0, a.jsx)(
+                                          m.Z,
                                           {
                                               product: n,
                                               category: t,
-                                              user: v
+                                              user: B
                                           },
                                           null == e ? void 0 : e.skuId
                                       );
                                   })
                               }),
-                              (0, r.jsxs)('div', {
-                                  className: o()(C.section, C.around),
+                              (0, a.jsxs)('div', {
+                                  className: o()(b.section, b.col2, b.featuredBlocksContainer),
                                   children: [
-                                      L < O.length && !1,
-                                      (0, r.jsx)(c.Button, {
+                                      (0, a.jsxs)('div', {
+                                          className: o()(b.featuredBlock),
+                                          style: { backgroundImage: 'url('.concat(x, ')') },
+                                          children: [
+                                              (null === (S = R.feature) || void 0 === S ? void 0 : S.unpublishedAt) != null &&
+                                                  (0, a.jsx)(c.TextBadge, {
+                                                      disableColor: !0,
+                                                      text: _.Z.Messages.LIMITED_TIME,
+                                                      className: b.featuredBlockBadge
+                                                  }),
+                                              (0, a.jsx)(c.Button, {
+                                                  className: b.featuredBlockButton,
+                                                  color: c.ButtonColors.WHITE,
+                                                  onClick: () => k(i.T.DOJO),
+                                                  children: _.Z.Messages.TAKE_ME_THERE
+                                              })
+                                          ]
+                                      }),
+                                      (0, a.jsxs)('div', {
+                                          className: o()(b.featuredBlock),
+                                          style: { backgroundImage: 'url('.concat(h, ')') },
+                                          children: [
+                                              (0, a.jsx)(c.TextBadge, {
+                                                  disableColor: !0,
+                                                  text: _.Z.Messages.MOST_POPULAR,
+                                                  className: b.featuredBlockBadge
+                                              }),
+                                              (0, a.jsx)(c.Button, {
+                                                  className: b.featuredBlockButton,
+                                                  color: c.ButtonColors.WHITE,
+                                                  onClick: () => k(i.T.ANIME_V2),
+                                                  children: _.Z.Messages.TAKE_ME_THERE
+                                              })
+                                          ]
+                                      })
+                                  ]
+                              }),
+                              (0, a.jsx)('div', {
+                                  className: o()(b.row, b.between, b.section),
+                                  children: (0, a.jsx)(c.Heading, {
+                                      variant: 'heading-md/bold',
+                                      children: 'Most popular products'
+                                  })
+                              }),
+                              (0, a.jsx)('div', {
+                                  className: b.feed,
+                                  ref: j,
+                                  children: y.slice(0, Z).map((e) => {
+                                      if (null == e || null == e.category) return null;
+                                      let { category: t, ...n } = e;
+                                      return (0, a.jsx)(
+                                          m.Z,
+                                          {
+                                              product: n,
+                                              category: t,
+                                              user: B
+                                          },
+                                          null == e ? void 0 : e.skuId
+                                      );
+                                  })
+                              }),
+                              (0, a.jsxs)('div', {
+                                  className: o()(b.section, b.around),
+                                  children: [
+                                      Z < y.length && !1,
+                                      (0, a.jsx)(c.Button, {
                                           onClick: () => {
-                                              I();
+                                              k();
                                           },
                                           children: 'See old shop'
                                       })
