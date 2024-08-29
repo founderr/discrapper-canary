@@ -8,8 +8,7 @@ var i = n(735250),
     d = n(617015),
     u = n(49175);
 t.Z = function (e) {
-    let { statusSections: t, renderRow: n, searchQuery: _ } = e,
-        h = (e) => (0 === t[e].length ? 0 : d.De + 16),
+    let { statusSections: t, renderRow: n, searchQuery: _, footer: h } = e,
         E = (e) => {
             let { section: i, row: a } = e,
                 s = t[i];
@@ -60,17 +59,22 @@ t.Z = function (e) {
         children: (0, i.jsx)(r.SJ, {
             children: (e) => {
                 let { ref: n, ...a } = e;
-                return (0, i.jsx)(o.ListAuto, {
-                    ref: (e) => {
-                        var t;
-                        (I.current = e), (n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
-                    },
-                    sectionHeight: h,
-                    renderRow: E,
-                    rowHeight: d.NV,
-                    sections: t.map((e) => ('' !== _ && 0 === e.length ? e.length + 1 : e.length)),
-                    className: u.peopleList,
-                    ...a
+                return (0, i.jsxs)(i.Fragment, {
+                    children: [
+                        (0, i.jsx)(o.ListAuto, {
+                            ref: (e) => {
+                                var t;
+                                (I.current = e), (n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+                            },
+                            sectionHeight: 0,
+                            renderRow: E,
+                            rowHeight: d.NV,
+                            sections: t.map((e) => ('' !== _ && 0 === e.length ? e.length + 1 : e.length)),
+                            className: u.peopleList,
+                            ...a
+                        }),
+                        h
+                    ]
                 });
             }
         })

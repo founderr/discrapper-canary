@@ -164,6 +164,21 @@ let S = {
             })
             .catch(() => {
                 s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL);
+            }),
+    clearPendingSpam: () =>
+        a.tn
+            .del({
+                url: I.ANM.USER_RELATIONSHIPS(),
+                query: {
+                    relationship_type: I.OGo.PENDING_INCOMING,
+                    only_spam: !0
+                }
+            })
+            .then(() => {
+                o.Z.dispatch({ type: 'RELATIONSHIP_PENDING_INCOMING_REMOVED' });
+            })
+            .catch(() => {
+                s.uv.announce(m.Z.Messages.A11Y_ANNOUNCEMENT_GENERIC_FAIL);
             })
 };
 t.Z = S;

@@ -66,7 +66,26 @@ let E = Object.freeze({
             darkSrc: n(138715),
             width: 415,
             height: 200,
-            renderContent: () => (0, a.jsx)(o.EmptyStateText, { note: u.Z.Messages.FRIENDS_EMPTY_STATE_PENDING })
+            renderContent: (e) =>
+                (0, a.jsxs)('div', {
+                    className: _.emptyStateContainer,
+                    children: [
+                        (0, a.jsx)(o.EmptyStateText, { note: u.Z.Messages.FRIENDS_EMPTY_STATE_PENDING }),
+                        null != e &&
+                            (0, a.jsx)(o.Button, {
+                                color: o.Button.Colors.PRIMARY,
+                                look: o.Button.Looks.OUTLINED,
+                                size: o.Button.Sizes.TINY,
+                                onClick: e,
+                                className: _.spamButton,
+                                children: (0, a.jsx)(o.Text, {
+                                    variant: 'text-xs/medium',
+                                    color: 'text-muted',
+                                    children: u.Z.Messages.FRIEND_REQUESTS_VIEW_SPAM_REQUESTS
+                                })
+                            })
+                    ]
+                })
         },
         SECTION_SUGGESTIONS: {
             lightSrc: n(979770),
