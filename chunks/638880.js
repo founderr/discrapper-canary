@@ -19,49 +19,51 @@ var r = n(812206),
     p = n(701488);
 async function I(e) {
     let t,
-        { applicationId: n, activityChannelId: I, locationObject: m, analyticsLocations: T, componentId: g, commandOrigin: S, sectionName: A } = e,
-        N = (0, _.Z)(),
-        O = i.Z.getChannel(I),
-        R = null == O ? void 0 : O.getGuildId(),
-        v = null == R || '' === R,
-        C = s.default.getCurrentUser();
-    if (null == O || (v && !O.isPrivate()) || null == I || null == C) return Promise.resolve(!1);
-    let y = u.ZP.getCurrentEmbeddedActivity();
-    if (((null == y ? void 0 : y.applicationId) != null && (t = r.Z.getApplication(null == y ? void 0 : y.applicationId)), a.Z.getVoiceChannelId() === I && (null == y ? void 0 : y.applicationId) === n && (null == y ? void 0 : y.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(R, I), Promise.resolve(!0);
+        { applicationId: n, activityChannelId: I, locationObject: m, analyticsLocations: T, componentId: g, commandOrigin: S, sectionName: A, source: N, partyId: O } = e,
+        R = (0, _.Z)(),
+        v = i.Z.getChannel(I),
+        C = null == v ? void 0 : v.getGuildId(),
+        y = null == C || '' === C,
+        D = s.default.getCurrentUser();
+    if (null == v || (y && !v.isPrivate()) || null == I || null == D) return Promise.resolve(!1);
+    let L = u.ZP.getCurrentEmbeddedActivity();
+    if (((null == L ? void 0 : L.applicationId) != null && (t = r.Z.getApplication(null == L ? void 0 : L.applicationId)), a.Z.getVoiceChannelId() === I && (null == L ? void 0 : L.applicationId) === n && (null == L ? void 0 : L.channelId) === a.Z.getVoiceChannelId())) return (0, h.Z)(C, I), Promise.resolve(!0);
     if (
         !(await (0, c.p)({
             applicationId: n,
             application: await (0, d.Z)(n, I),
-            channel: O,
+            channel: v,
             currentEmbeddedApplication: t,
-            embeddedActivitiesManager: N,
-            user: C
+            embeddedActivitiesManager: R,
+            user: D
         }))
     )
         return !1;
-    let D = (0, E.Z)(O.id),
-        L = p.wP.includes(O.type);
-    if (D) {
+    let b = (0, E.Z)(v.id),
+        M = p.wP.includes(v.type);
+    if (b) {
         if (
             !(await (0, f.Z)({
-                channelId: O.id,
+                channelId: v.id,
                 bypassChangeModal: null != t
             }))
         )
             return !1;
-    } else if (!(0, o.WS)(O) || !L) return !1;
+    } else if (!(0, o.WS)(v) || !M) return !1;
     return (
         (0, l.cG)(I, n),
         await (0, l.af)({
             channelId: I,
             applicationId: n,
             isStart: !1,
-            embeddedActivitiesManager: N,
+            embeddedActivitiesManager: R,
             analyticsLocations: T,
             locationObject: m,
             componentId: g,
             commandOrigin: S,
-            sectionName: A
+            sectionName: A,
+            source: N,
+            partyId: O
         })
     );
 }

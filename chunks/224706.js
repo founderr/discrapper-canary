@@ -26,12 +26,15 @@ var r = n(664751),
     C = n(701488),
     y = n(689938);
 function D(e) {
-    let { applicationId: t, secret: n, channelId: r, intent: i = C.Ws.PLAY, embedded: a = !1, analyticsLocations: s = [] } = e;
+    let { applicationId: t, secret: n, channelId: r, intent: i = C.Ws.PLAY, embedded: a = !1, source: s, partyId: o, locationObject: u, analyticsLocations: c } = e;
     L({
         applicationId: t,
         channelId: r,
         embedded: a,
-        analyticsLocations: s
+        source: s,
+        partyId: o,
+        locationObject: u,
+        analyticsLocations: c
     })
         .then(() => g.Z.waitConnected(t))
         .then(() => Promise.race([g.Z.waitSubscribed(t, v.zMe.ACTIVITY_JOIN)]))
@@ -52,36 +55,38 @@ function D(e) {
         );
 }
 async function L(e) {
-    let { applicationId: t, branchId: n, channelId: i, embedded: o = !1, analyticsLocations: d = [] } = e;
+    let { applicationId: t, branchId: n, channelId: i, embedded: o = !1, source: d, partyId: _, locationObject: h = {}, analyticsLocations: m = [] } = e;
     if (o)
         return null == i
             ? Promise.reject(Error('Invalid channel ID'))
             : (await (0, u.Z)({
                   applicationId: t,
                   activityChannelId: i,
-                  locationObject: {},
-                  analyticsLocations: d
+                  source: d,
+                  partyId: _,
+                  locationObject: h,
+                  analyticsLocations: m
               }),
               Promise.resolve());
     if (f.Z.isConnected(t)) return Promise.resolve();
-    let _ = null;
+    let T = null;
     if (null == n) {
         let e = p.Z.getActiveLibraryApplication(t);
         n = null != e ? e.branchId : t;
     }
     if (I.Z.isLaunchable(t, n)) {
-        var h;
+        var S;
         let e = I.Z.getState(t, n),
             i = p.Z.getActiveLaunchOptionId(t, n);
         if (null == e) throw Error('Missing dispatch game when launching');
         let o = p.Z.getLibraryApplication(t, n);
         if (null == o) throw Error('Missing library application when launching');
-        _ = ((h = t),
+        T = ((S = t),
         s.tn
             .post({
                 url: v.ANM.OAUTH2_AUTHORIZE,
                 query: {
-                    client_id: h,
+                    client_id: S,
                     response_type: 'token',
                     scope: [a.x.IDENTIFY].join(' ')
                 },
@@ -107,10 +112,10 @@ async function L(e) {
             )).then((t) => g.Z.launchDispatchApplication(e, t, E.default.locale, o.getBranchName(), i));
     } else {
         let e = c.Z.getApplication(t);
-        _ = null != e ? g.Z.launch(e) : g.Z.launchGame(t);
+        T = null != e ? g.Z.launch(e) : g.Z.launchGame(t);
     }
-    let m = Error('game not found');
-    return null != _
+    let A = Error('game not found');
+    return null != T
         ? (l.Z.dispatch({
               type: 'LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE',
               applicationId: t,
@@ -120,7 +125,7 @@ async function L(e) {
               type: 'GAME_LAUNCH_START',
               applicationId: t
           }),
-          _.then((e) => {
+          T.then((e) => {
               l.Z.dispatch({
                   type: 'GAME_LAUNCH_SUCCESS',
                   applicationId: t,
@@ -131,15 +136,15 @@ async function L(e) {
                   l.Z.dispatch({
                       type: 'GAME_LAUNCH_FAIL',
                       applicationId: t,
-                      error: m
+                      error: A
                   });
           }))
         : (l.Z.dispatch({
               type: 'GAME_LAUNCH_FAIL',
               applicationId: t,
-              error: m
+              error: A
           }),
-          Promise.reject(m));
+          Promise.reject(A));
 }
 t.Z = {
     addGame(e, t) {
@@ -336,7 +341,7 @@ t.Z = {
     },
     launch: L,
     async join(e) {
-        let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: s = C.Ws.PLAY, embedded: o = !1 } = e;
+        let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: s = C.Ws.PLAY, embedded: o = !1, source: u, partyId: c, locationObject: d, analyticsLocations: _ } = e;
         if (__OVERLAY__)
             return (
                 l.Z.dispatch({
@@ -361,7 +366,11 @@ t.Z = {
                     secret: e,
                     channelId: i,
                     intent: s,
-                    embedded: o
+                    embedded: o,
+                    partyId: c,
+                    source: u,
+                    locationObject: d,
+                    analyticsLocations: _
                 }),
                 !0
             );

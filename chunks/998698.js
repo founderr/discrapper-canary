@@ -32,7 +32,7 @@ function h(e) {
     let { channelId: n, command: r, section: i, initialValues: a, location: s, triggerSection: o, queryLength: l, sectionName: u, query: c, searchResultsPosition: _, source: E, commandOrigin: h } = e,
         p = f(n);
     if ((null == r ? void 0 : r.id) === (null === (t = p.activeCommand) || void 0 === t ? void 0 : t.id)) return !1;
-    (p.activeCommand = r), (p.activeCommandSection = i), (p.activeOptionName = null), (p.preferredCommandId = null), (p.initialValues = null != a ? a : {}), (p.commandOrigin = null != h ? h : null);
+    (p.activeCommand = r), (p.activeCommandSection = i), (p.activeOptionName = null), (p.preferredCommandId = null), (p.initialValues = null != a ? a : {}), (p.commandOrigin = null != h ? h : null), (p.source = E);
     let I = {};
     return (
         (null == r ? void 0 : r.options) != null &&
@@ -132,6 +132,9 @@ class m extends (r = o.ZP.Store) {
     }
     getCommandOrigin(e) {
         return f(e).commandOrigin;
+    }
+    getSource(e) {
+        return f(e).source;
     }
     getOption(e, t) {
         var n, r;

@@ -113,22 +113,27 @@ function V(e) {
     ec ? !eu && !et && null != V && (e_ = F.Z.Messages.USER_ACTIVITY_NOT_DETECTED.format({ name: V.name })) : (e_ = F.Z.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF);
     let eE = null !== (n = null == H ? void 0 : H.launchId) && void 0 !== n ? n : null == V ? void 0 : V.session_id,
         ef = async (e, t) => {
-            var n;
-            if (null != eE && null != J)
-                await l.Z.join({
-                    userId: e.id,
-                    sessionId: eE,
-                    applicationId: J,
-                    channelId: A.Z.getVoiceChannelId(),
-                    messageId: null,
-                    intent: k.Ws.PLAY,
-                    embedded: (0, w.Z)(t, B.xjy.EMBEDDED)
-                }),
+            var n, r;
+            if (null == eE || null == J) return;
+            let i = (0, w.Z)(t, B.xjy.EMBEDDED);
+            await l.Z.join({
+                userId: e.id,
+                sessionId: eE,
+                applicationId: J,
+                channelId: A.Z.getVoiceChannelId(),
+                messageId: null,
+                intent: k.Ws.PLAY,
+                embedded: i,
+                partyId: null != t ? (null == t ? void 0 : null === (n = t.party) || void 0 === n ? void 0 : n.id) : '',
+                locationObject: el.location,
+                analyticsLocations: z
+            }),
+                !i &&
                     (0, x.Z)({
                         type: B.q5t.JOIN,
                         userId: e.id,
                         applicationId: J,
-                        partyId: null != t ? (null == t ? void 0 : null === (n = t.party) || void 0 === n ? void 0 : n.id) : '',
+                        partyId: null != t ? (null == t ? void 0 : null === (r = t.party) || void 0 === r ? void 0 : r.id) : '',
                         locationObject: el.location,
                         analyticsLocations: z
                     });

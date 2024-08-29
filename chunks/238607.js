@@ -110,7 +110,7 @@ function B(e) {
                 return;
             }
             if ($ && null != W && null != K) {
-                var e;
+                var e, n;
                 await l.Z.join({
                     userId: t.id,
                     sessionId: K,
@@ -118,15 +118,19 @@ function B(e) {
                     channelId: D.Z.getVoiceChannelId(),
                     messageId: null,
                     intent: G.Ws.PLAY,
-                    embedded: j
+                    embedded: j,
+                    partyId: null == B ? void 0 : null === (e = B.party) || void 0 === e ? void 0 : e.id,
+                    locationObject: { page: x.ZY5.USER_PROFILE },
+                    analyticsLocations: H
                 }),
-                    (0, I.Z)({
-                        type: x.q5t.JOIN,
-                        userId: t.id,
-                        partyId: null == B ? void 0 : null === (e = B.party) || void 0 === e ? void 0 : e.id,
-                        applicationId: W,
-                        analyticsLocations: H
-                    });
+                    !j &&
+                        (0, I.Z)({
+                            type: x.q5t.JOIN,
+                            userId: t.id,
+                            partyId: null == B ? void 0 : null === (n = B.party) || void 0 === n ? void 0 : n.id,
+                            applicationId: W,
+                            analyticsLocations: H
+                        });
             }
             if ((ee(!0), null != z && null != W))
                 return c.pu({

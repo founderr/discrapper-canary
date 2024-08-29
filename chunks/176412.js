@@ -1,95 +1,97 @@
 t.d(n, {
     Bm: function () {
-        return S;
+        return P;
     },
     P7: function () {
-        return g;
+        return S;
     },
     ae: function () {
-        return I;
+        return g;
     }
 });
 var i = t(470079),
     a = t(392711),
     l = t.n(a),
-    o = t(25209),
-    r = t(481060),
-    s = t(2052),
-    c = t(542094),
-    d = t(513202),
-    u = t(367907),
-    m = t(895924),
-    p = t(691424),
-    _ = t(428595),
-    C = t(364458),
-    f = t(499254),
-    h = t(541099),
-    A = t(827498),
-    E = t(981631),
-    x = t(689938);
-let v = {
-        ..._.Z.RULES.commandMention,
-        parse: (e, n, t) => ({ content: _.Z.RULES.commandMention.parse(e, n, t).content })
+    o = t(442837),
+    r = t(25209),
+    s = t(481060),
+    c = t(2052),
+    d = t(542094),
+    u = t(513202),
+    m = t(367907),
+    p = t(895924),
+    _ = t(691424),
+    C = t(428595),
+    f = t(364458),
+    h = t(499254),
+    A = t(541099),
+    E = t(827498),
+    x = t(981631),
+    v = t(689938);
+let N = {
+        ...C.Z.RULES.commandMention,
+        parse: (e, n, t) => ({ content: C.Z.RULES.commandMention.parse(e, n, t).content })
     },
-    N = l().pick(
-        (0, C.Z)([
-            _.Z.RULES,
-            { commandMention: v },
-            (0, p.Z)({
+    I = l().pick(
+        (0, f.Z)([
+            C.Z.RULES,
+            { commandMention: N },
+            (0, _.Z)({
                 enableBuildOverrides: !1,
                 enableEmojiClick: !1
             })
         ]),
         ['commandMention', 'customEmoji', 'em', 'emoji', 'emoticon', 'highlight', 'inlineCode', 'looseEm', 's', 'strong', 'text', 'timestamp', 'u', 'spoiler']
     ),
-    I = o.w4(N);
-function g(e) {
-    let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: o = !0, launchingComponentId: p, submitting: _ = !1 } = e,
-        C = (0, s.O)(),
-        v = (0, c.Qv)({
+    g = r.w4(I);
+function S(e) {
+    let { channel: n, application: t, location: i, sectionName: a, commandName: l, autoDismissOnClick: r = !0, launchingComponentId: _, submitting: C = !1 } = e,
+        f = (0, c.O)(),
+        N = (0, d.Qv)({
             channelId: n.id,
             applicationId: t.id
         }),
-        N = (0, c.w1)({
+        I = (0, o.e7)([A.Z], () => A.Z.entrypoint()),
+        g = (0, d.w1)({
             applicationId: t.id,
-            embeddedActivitiesManager: d.Z,
+            embeddedActivitiesManager: u.Z,
             channelId: n.id,
-            locationObject: C.location,
+            locationObject: f.location,
             onActivityItemSelectedProp: (e) => {
-                let { applicationId: n } = e,
-                    t = h.Z.entrypoint();
-                o && f.y(A.ti.ACTIVITY),
-                    (0, u.yw)(E.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                let { applicationId: n } = e;
+                r && h.y(E.ti.ACTIVITY),
+                    (0, m.yw)(x.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: n,
                         section_name: a,
-                        action: v,
-                        source: t
+                        action: N,
+                        source: I
                     });
             },
-            launchingComponentId: p,
-            commandOrigin: m.bB.APPLICATION_LAUNCHER,
-            sectionName: a
+            launchingComponentId: _,
+            commandOrigin: p.bB.APPLICATION_LAUNCHER,
+            sectionName: a,
+            source: I
         }),
-        I = r.ButtonColors.BRAND,
-        g = null != l ? l : x.Z.Messages.LAUNCH;
+        S = s.ButtonColors.BRAND,
+        P = null != l ? l : v.Z.Messages.LAUNCH;
     return (
-        v === c.JS.JOIN ? ((I = r.ButtonColors.GREEN), (g = x.Z.Messages.JOIN_ACTIVITY)) : v === c.JS.LEAVE && !_ && ((I = r.ButtonColors.RED), (g = x.Z.Messages.LEAVE)),
+        N === d.JS.JOIN ? ((S = s.ButtonColors.GREEN), (P = v.Z.Messages.JOIN_ACTIVITY)) : N === d.JS.LEAVE && !C && ((S = s.ButtonColors.RED), (P = v.Z.Messages.LEAVE)),
         {
-            onActivityItemSelected: N,
-            activityAction: v,
-            buttonColor: I,
-            buttonText: g
+            onActivityItemSelected: g,
+            activityAction: N,
+            buttonColor: S,
+            buttonText: P
         }
     );
 }
-function S(e, n) {
-    let t = h.Z.entrypoint(),
+function P(e, n) {
+    let t = A.Z.entrypoint(),
         l = i.useMemo(
             () =>
                 (0, a.debounce)(
                     (e, n) => {
-                        (0, u.yw)(E.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, m.yw)(x.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: n
                         });

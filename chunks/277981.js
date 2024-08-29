@@ -170,7 +170,8 @@ let N = {
                 c.ZP.trackWithMetadata(m.rMx.APPLICATION_COMMAND_USED, {
                     command_id: e.id,
                     application_id: e.applicationId,
-                    command_type: e.type
+                    command_type: e.type,
+                    source: d.Z.getSource(s.id)
                 }));
         }
         return { type: p.z2.GIF };

@@ -60,8 +60,12 @@ function B(e) {
     return { releasePhase: null == e ? void 0 : null === (t = e.activity) || void 0 === t ? void 0 : t.client_platform_config[(0, b.Z)((0, A.getOS)())].release_phase };
 }
 function F(e) {
-    let { applicationId: t, analyticsLocations: n } = e;
-    null != n && (k[t] = n);
+    let { applicationId: t, analyticsLocations: n, source: r } = e;
+    (null != n || null != r) &&
+        (k[t] = {
+            locations: n,
+            source: r
+        });
 }
 async function V(e) {
     var t, n;
@@ -149,14 +153,16 @@ async function H(e) {
             mediaSessionIds: Z,
             activitiesInfraVersion: L
         };
-    (G[l] = Y),
+    G[l] = Y;
+    let j = k[l];
+    delete k[l],
         g.default.track(U.rMx.ACTIVITY_SESSION_JOINED, {
             channel_id: A.id,
             guild_id: A.getGuildId(),
             media_session_id: Z[0],
             activity_session_id: R,
             application_id: l,
-            location_stack: _ ? void 0 : k[l],
+            location_stack: _ ? void 0 : null == j ? void 0 : j.locations,
             user_premium_tier: M.premiumType,
             raw_thermal_state: H,
             n_participants: c.Z.getUserParticipantCount(A.id),
@@ -166,10 +172,11 @@ async function H(e) {
             shelf_rank: null == x ? void 0 : null === (n = x.activity) || void 0 === n ? void 0 : n.shelf_rank,
             shelf_sorted_rank: F > 0 ? F : null,
             activity_user_session_id: D,
-            channel_type: A.type
+            channel_type: A.type,
+            source: null == j ? void 0 : j.source
         }),
         g.default.track(U.rMx.ACTIVITY_IFRAME_MOUNT, {
-            location_stack: k[l],
+            location_stack: null == j ? void 0 : j.locations,
             channel_id: A.id,
             channel_type: A.type,
             guild_id: A.getGuildId(),

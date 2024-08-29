@@ -106,7 +106,8 @@ let S = {
             a.ZP.trackWithMetadata(I.rMx.APPLICATION_COMMAND_USED, {
                 command_id: f.id,
                 application_id: f.applicationId,
-                command_type: f.type
+                command_type: f.type,
+                source: s.Z.getSource(c.id)
             }));
         let h = r[l];
         return (

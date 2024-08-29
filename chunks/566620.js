@@ -102,17 +102,18 @@ function z(e, t) {
 }
 async function q(e) {
     var t, n;
-    let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c, commandOrigin: m, sectionName: S } = e,
-        A = O.Z.getChannel(r),
-        N = null !== (t = null == A ? void 0 : A.getGuildId()) && void 0 !== t ? t : void 0;
-    if (null == N && !(null !== (n = null == A ? void 0 : A.isPrivate()) && void 0 !== n && n)) return !1;
+    let { channelId: r, applicationId: i, isStart: s, analyticsLocations: o, locationObject: l, embeddedActivitiesManager: u, componentId: c, commandOrigin: m, sectionName: S, source: A, partyId: N } = e,
+        v = O.Z.getChannel(r),
+        y = null !== (t = null == v ? void 0 : v.getGuildId()) && void 0 !== t ? t : void 0;
+    if (null == y && !(null !== (n = null == v ? void 0 : v.isPrivate()) && void 0 !== n && n)) return !1;
     try {
         a.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
             applicationId: i,
             channelId: r,
             componentId: c,
-            analyticsLocations: s ? void 0 : o
+            analyticsLocations: s ? void 0 : o,
+            source: s ? void 0 : A
         });
         let e = C.default.getCurrentUser();
         null != e &&
@@ -121,7 +122,9 @@ async function q(e) {
                 userId: null == e ? void 0 : e.id,
                 applicationId: i,
                 locationObject: l,
-                analyticsLocations: null != o ? o : []
+                analyticsLocations: null != o ? o : [],
+                source: A,
+                partyId: N
             });
         let t = !0;
         if (s) {
@@ -135,7 +138,7 @@ async function q(e) {
                     }
                     if (null != n) {
                         if (n.handler === _.VC.APP_HANDLER) {
-                            let e = f.ZP.getGuildState(N),
+                            let e = f.ZP.getGuildState(y),
                                 t = f.ZP.getUserState();
                             if (
                                 !(await (0, E.L)({
@@ -147,7 +150,7 @@ async function q(e) {
                                 return !1;
                         }
                         let e = O.Z.getChannel(r),
-                            t = null != N ? R.Z.getGuild(N) : null;
+                            t = null != y ? R.Z.getGuild(y) : null;
                         return (
                             null != e &&
                             (await new Promise((r, i) => {
@@ -160,6 +163,7 @@ async function q(e) {
                                     },
                                     commandOrigin: m,
                                     sectionName: S,
+                                    source: A,
                                     interactionLifecycleOptionsFactory: () => ({
                                         onSuccess: () => r(),
                                         onFailure: () => i(Error())
@@ -175,17 +179,17 @@ async function q(e) {
                         (await (0, g.XV)({
                             applicationId: i,
                             channelId: r,
-                            guildId: N
+                            guildId: y
                         }),
                         !0)
                     );
                 },
                 n = j.Yq.includes(i),
-                a = (null == A ? void 0 : A.type) === Y.d4z.GUILD_VOICE,
+                a = (null == v ? void 0 : v.type) === Y.d4z.GUILD_VOICE,
                 s = I.Z.getApplication(i),
                 o = null != s && (0, L.yE)(s.flags, Y.udG.EMBEDDED),
                 l = null != s && (0, L.yE)(s.flags, Y.udG.EMBEDDED_RELEASED),
-                u = (0, P.l5)(A);
+                u = (0, P.l5)(v);
             if (n) {
                 if (((t = !1), !(await e({ canSendFakeCommand: !1 })))) throw Error();
             } else if (a) {
@@ -210,7 +214,7 @@ async function q(e) {
                 channelId: r,
                 embeddedActivitiesManager: u,
                 isStart: s,
-                guildId: N
+                guildId: y
             }))
         )
             throw new T.Z(T.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED);
@@ -223,7 +227,7 @@ async function q(e) {
         return (
             a.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
-                guildId: N,
+                guildId: y,
                 applicationId: i,
                 channelId: r,
                 error: e instanceof T.Z ? e : new d.Z(e)

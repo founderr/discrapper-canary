@@ -163,8 +163,8 @@ class L extends g.Z {
     }
     handleCommand(e, t) {
         let n,
-            { applicationId: r, guildId: i, channelId: a, data: s, nonce: o, attachments: u, maxSizeCallback: _, analytics_location: E, sectionName: f } = e,
-            h = {
+            { applicationId: r, guildId: i, channelId: a, data: s, nonce: o, attachments: u, maxSizeCallback: _, analytics_location: E, sectionName: f, source: h } = e,
+            I = {
                 type: d.B8.APPLICATION_COMMAND,
                 application_id: r,
                 guild_id: i,
@@ -173,26 +173,27 @@ class L extends g.Z {
                 data: s,
                 nonce: o,
                 analytics_location: E,
-                section_name: f
+                section_name: f,
+                source: h
             };
         if (null != u) {
-            (h.data.attachments = []), (n = []);
-            h.data.attachments = u.map((e, t) => (l()(e.status === A.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, S.B)(e, t)));
+            (I.data.attachments = []), (n = []);
+            I.data.attachments = u.map((e, t) => (l()(e.status === A.m.COMPLETED, 'Uploads must be staged before trying to send a message'), (0, S.B)(e, t)));
         }
-        let I = new AbortController();
+        let m = new AbortController();
         c.tn.post(
             {
                 url: N.ANM.INTERACTIONS,
                 fields: [
                     {
                         name: 'payload_json',
-                        value: JSON.stringify(h)
+                        value: JSON.stringify(I)
                     }
                 ],
                 attachments: n,
-                signal: I.signal,
+                signal: m.signal,
                 onRequestCreated: (e) => {
-                    this.requests.set(o, I),
+                    this.requests.set(o, m),
                         e.on('progress', (e) => {
                             let { total: t } = e,
                                 n = (0, T.dg)(i);
