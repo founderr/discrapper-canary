@@ -3,7 +3,7 @@ n.d(t, {
         return p;
     },
     ML: function () {
-        return S;
+        return f;
     },
     Qc: function () {
         return T;
@@ -100,19 +100,19 @@ function T() {
               searchResult: c
           };
 }
-function S(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { updatePaginationSettings: n, updatePaginationResults: a, pageSize: o, chunkedPages: d, currentPage: I } = (0, E.$)(),
         p = I - 1,
         T = (0, h.GN)((e) => e.savedGuildIds, r.Z),
-        S = g(),
-        f = (0, l.e7)([u.Z], () => u.Z.getSearchResult(S), [S]);
+        f = g(),
+        S = (0, l.e7)([u.Z], () => u.Z.getSearchResult(f), [f]);
     i.useEffect(() => {
         n(e);
     }, [e, n]),
         i.useEffect(() => {
-            t ? a(T) : (0, m.Pw)(f) ? a(f.guildIds) : a([]);
-        }, [T, t, a, f]);
+            t ? a(T) : (0, m.Pw)(S) ? a(S.guildIds) : a([]);
+        }, [T, t, a, S]);
     let C = (0, l.Wu)(
         [u.Z],
         () =>
@@ -143,15 +143,15 @@ function S(e) {
     })(C);
     let N = i.useMemo(() => {
             var e;
-            return null !== (e = d[p]) && void 0 !== e ? e : [];
-        }, [d, p]),
+            return t ? d[0] : null !== (e = d[p]) && void 0 !== e ? e : [];
+        }, [d, p, t]),
         A = (0, l.Wu)([u.Z], () => u.Z.getGuildProfiles(N), [N]),
         v = N.length === A.length || t,
         L = A.length === o || (0 === C.length && v);
     return {
-        loaded: (0, m.Pw)(f) && L,
+        loaded: (0, m.Pw)(S) && L,
         clans: A,
-        searchCriteria: S,
-        searchResult: f
+        searchCriteria: f,
+        searchResult: S
     };
 }

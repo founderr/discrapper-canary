@@ -9,7 +9,7 @@ var i = n(735250),
     s = n(120356),
     r = n.n(s),
     l = n(392711),
-    o = n(567526),
+    o = n(180081),
     c = n(442837),
     d = n(481060),
     u = n(207796),
@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(284019),
     p = n(672775),
     T = n(601463),
-    S = n(192565),
-    f = n(641037),
+    f = n(192565),
+    S = n(641037),
     C = n(689938),
     N = n(629209);
 let A = {
@@ -46,7 +46,7 @@ function v(e) {
                 submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        O = a.useMemo(() => (0, f.G)(L), [L]),
+        O = a.useMemo(() => (0, S.G)(L), [L]),
         [R, x] = a.useState(!1),
         [b, P] = a.useState(window.innerWidth),
         [M, D] = a.useState(1),
@@ -101,7 +101,7 @@ function v(e) {
             return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
         }, [M, y]);
     let V = a.useMemo(() => null != L && Object.values(L).some((e) => null != e), [L]),
-        F = a.useMemo(() => (null != L && Object.values(L).length > 0 ? (0, f.G)(L).find((e) => e.hasError) : null), [L]),
+        F = a.useMemo(() => (null != L && Object.values(L).length > 0 ? (0, S.G)(L).find((e) => e.hasError) : null), [L]),
         Y = a.useCallback(() => {
             D(1), E._9(t, { currentStep: null == F ? void 0 : F.index });
         }, [null == F ? void 0 : F.index, t]),
@@ -109,7 +109,7 @@ function v(e) {
             (0, u.fH)(u.v0.ADMIN_UPSELL);
         }, []),
         z = a.useCallback(() => {
-            (0, f.V)({
+            (0, S.V)({
                 guildId: t,
                 onSuccess: () => {
                     W(), n();
@@ -180,7 +180,7 @@ function v(e) {
                                 (0, i.jsx)(o.animated.div, {
                                     style: G,
                                     className: r()(N.stepsContainer, { [N.hidden]: !y }),
-                                    children: (0, i.jsx)(S.Z, { guildId: t })
+                                    children: (0, i.jsx)(f.Z, { guildId: t })
                                 }),
                                 (0, i.jsx)('div', {
                                     className: r()(N.navigationContainer, { [N.elevatedNavigationContainer]: !y }),

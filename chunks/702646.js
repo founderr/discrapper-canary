@@ -28,8 +28,8 @@ function p(e) {
     a.useEffect(() => {
         T && (E(!1), I(!1));
     }, [T]);
-    let S = d && (m || _),
-        f = a.useMemo(
+    let f = d && (m || _),
+        S = a.useMemo(
             () =>
                 null != l
                     ? (0, i.jsxs)(o.Clickable, {
@@ -71,7 +71,7 @@ function p(e) {
                                     color: 'none',
                                     children: n
                                 }),
-                                null != f &&
+                                null != S &&
                                     (0, i.jsx)(o.ChevronSmallDownIcon, {
                                         className: g.chevron,
                                         color: 'currentColor'
@@ -80,16 +80,16 @@ function p(e) {
                         })
                     ]
                 }),
-            [t, n, d, c, f]
+            [t, n, d, c, S]
         );
-    return null == f
+    return null == S
         ? C({})
         : (0, i.jsx)(o.Tooltip, {
-              text: f,
+              text: S,
               position: 'bottom',
               'aria-label': s,
-              shouldShow: S,
-              forceOpen: S,
+              shouldShow: f,
+              forceOpen: f,
               allowOverflow: !0,
               disableTooltipPointerEvents: !1,
               tooltipClassName: r()(g.filterTooltip, { [g.filterTooltipAutoWidth]: u }),
@@ -133,7 +133,7 @@ function T() {
         autoWidth: !0
     });
 }
-function S() {
+function f() {
     let e = a.useMemo(m.f4, []),
         t = (0, h.GN)((e) => e.selectedPlaystyle, l.Z),
         n = null != t ? e[t] : null,
@@ -177,7 +177,7 @@ function S() {
         ariaLabel: null != s ? s : I.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE
     });
 }
-function f() {
+function S() {
     let e = (0, h.GN)((e) => e.selectedTraits, l.Z),
         t = a.useCallback(() => {
             (0, h.fH)(h.v0.TRAITS, !0);
@@ -395,7 +395,7 @@ t.Z = function (e) {
                         : null,
                     (0, i.jsxs)('div', {
                         className: g.preferences,
-                        children: [(0, i.jsx)(T, {}), (0, i.jsx)(S, {}), (0, i.jsx)(f, {})]
+                        children: [(0, i.jsx)(T, {}), (0, i.jsx)(f, {}), (0, i.jsx)(S, {})]
                     }),
                     (0, i.jsx)('div', { className: g.actions })
                 ]

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return S;
     }
 }),
     n(47120);
@@ -35,7 +35,7 @@ let T = [
         }
     }
 ];
-function S(e) {
+function f(e) {
     let t,
         n,
         { value: a } = e;
@@ -54,8 +54,8 @@ function S(e) {
         children: [n, t]
     });
 }
-function f(e) {
-    var t, n, a, f;
+function S(e) {
+    var t, n, a, S;
     let { quest: C, location: N, onReceiveErrorHints: A, contentPosition: v, rowIndex: L } = e,
         Z = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
         O = (0, h.g2)({ useReducedMotion: Z }),
@@ -108,7 +108,7 @@ function f(e) {
                 O.stopAnimation(), A(e);
             }
         }),
-        $ = (null === (f = C.userStatus) || void 0 === f ? void 0 : f.claimedAt) != null,
+        $ = (null === (S = C.userStatus) || void 0 === S ? void 0 : S.claimedAt) != null,
         ee = null;
     return (U && j
         ? (ee = (0, i.jsx)(l.Button, {
@@ -141,7 +141,7 @@ function f(e) {
                               isSelected: () => !1,
                               options: T,
                               placeholder: g.Z.Messages.QUEST_MULTIPLATFORM_SELECT_SUBTITLE,
-                              renderOptionLabel: S,
+                              renderOptionLabel: f,
                               select: Y,
                               serialize: (e) => {
                                   switch (e) {

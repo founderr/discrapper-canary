@@ -1,9 +1,9 @@
 n.d(t, {
     A7: function () {
-        return S;
+        return f;
     },
     Em: function () {
-        return f;
+        return S;
     }
 });
 var i = n(735250),
@@ -47,7 +47,7 @@ let g = 'url(#dark-purple-gradient)',
                 fill: 'white'
             })
         }),
-    S = (e) => {
+    f = (e) => {
         let { children: t } = e;
         return (0, i.jsx)(r.Popout, {
             shouldShow: !0,
@@ -89,7 +89,7 @@ let g = 'url(#dark-purple-gradient)',
             children: t
         });
     },
-    f = (e) => {
+    S = (e) => {
         let { children: t } = e,
             n = (0, i.jsxs)('div', {
                 className: I.coachTipContainer,

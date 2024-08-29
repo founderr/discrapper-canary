@@ -7,7 +7,7 @@ var i = n(735250),
     a = n(470079),
     s = n(120356),
     r = n.n(s),
-    l = n(567526),
+    l = n(180081),
     o = n(442837),
     c = n(481060),
     d = n(393238),
@@ -20,8 +20,8 @@ var i = n(735250),
     g = n(46140),
     p = n(642145),
     T = n(689938),
-    S = n(803162);
-let f = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
+    f = n(803162);
+let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function C(e) {
     var t, n, s;
     let { quest: C, questContent: N, isHovering: A, contentPosition: v, rowIndex: L, onReceiveErrorHints: Z } = e,
@@ -46,7 +46,7 @@ function C(e) {
                     variant: 'text-md/semibold',
                     color: 'text-normal',
                     tag: 'span',
-                    className: S.header,
+                    className: f.header,
                     children: O
                 }),
             [O]
@@ -57,32 +57,32 @@ function C(e) {
                 return (0, i.jsx)(c.Text, {
                     variant: 'text-sm/medium',
                     color: 'text-muted',
-                    className: r()(S.description),
+                    className: r()(f.description),
                     children: G
                 });
         }, [G]),
         H = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, i.jsxs)('div', {
-        className: r()(S.container),
+        className: r()(f.container),
         children: [
             (0, i.jsxs)(l.animated.div, {
                 style: {
                     maxHeight: M.to([0, 1], [104, (null != b ? b : 0) + 12])
                 },
-                className: r()(S.rewardDescriptionContainer),
+                className: r()(f.rewardDescriptionContainer),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: S.assetWrapper,
+                        className: f.assetWrapper,
                         children: [
-                            !y && D && (0, i.jsx)('div', { className: S.completionAnimation }),
+                            !y && D && (0, i.jsx)('div', { className: f.completionAnimation }),
                             R && !y
                                 ? (0, i.jsxs)('div', {
-                                      className: S.progressWrapper,
+                                      className: f.progressWrapper,
                                       children: [
                                           D &&
                                               (0, i.jsx)(c.LottieAnimation, {
-                                                  importData: f,
-                                                  className: S.confetti,
+                                                  importData: S,
+                                                  className: f.confetti,
                                                   loop: !1,
                                                   autoplay: !1,
                                                   shouldAnimate: !H
@@ -93,11 +93,11 @@ function C(e) {
                                               percentComplete: j,
                                               percentCompleteText: A ? U : void 0,
                                               children: (0, i.jsx)('div', {
-                                                  className: S.circularRewardTileWrapper,
+                                                  className: f.circularRewardTileWrapper,
                                                   children: (0, i.jsx)(m.Z, {
                                                       quest: C,
                                                       questContent: N,
-                                                      className: S.circularQuestRewardTileAsset,
+                                                      className: f.circularQuestRewardTileAsset,
                                                       location: g.dr.QUEST_HOME_DESKTOP
                                                   })
                                               })
@@ -108,25 +108,25 @@ function C(e) {
                                       quest: C,
                                       autoplay: A,
                                       questContent: N,
-                                      className: S.questRewardTileAsset,
+                                      className: f.questRewardTileAsset,
                                       location: g.dr.QUEST_HOME_DESKTOP
                                   })
                         ]
                     }),
                     (0, i.jsxs)('div', {
                         ref: x,
-                        className: r()(S.textContainer, { [S.justifyCenter]: !P }),
+                        className: r()(f.textContainer, { [f.justifyCenter]: !P }),
                         children: [
                             (0, i.jsx)(c.Heading, {
                                 variant: 'eyebrow',
                                 color: 'text-brand',
-                                className: S.questName,
+                                className: f.questName,
                                 children: T.Z.Messages.QUEST.format({ questName: C.config.messages.questName })
                             }),
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                className: S.header,
+                                className: f.header,
                                 children: w
                             }),
                             B
@@ -137,7 +137,7 @@ function C(e) {
                             style: {
                                 opacity: M.to([0, 1], [1, 0])
                             },
-                            className: S.textOverflowBlur
+                            className: f.textOverflowBlur
                         })
                 ]
             }),

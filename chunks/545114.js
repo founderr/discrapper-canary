@@ -20,8 +20,8 @@ var i = n(735250),
     g = n(979233),
     p = n(88693),
     T = n(611928),
-    S = n(680180),
-    f = n(791734),
+    f = n(680180),
+    S = n(791734),
     C = n(341789),
     N = n(591433),
     A = n(282773),
@@ -83,7 +83,7 @@ function b() {
                 if (j) return (0, i.jsx)(_.Z, { className: r()(x.clanDiscoveryToolbar, !Q && x.rightAlignedToolbar) });
                 return null;
             default:
-                return (0, i.jsx)(S.Z, {
+                return (0, i.jsx)(f.Z, {
                     query: H,
                     placeholder: D === O.Hk ? R.Z.Messages.SEARCH : R.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: (0, m.vb)(P) }),
                     onTextChange: V,
@@ -108,7 +108,7 @@ function b() {
                             onClick: W ? F : void 0
                         }),
                     !Q &&
-                        (0, i.jsx)(f.Z, {
+                        (0, i.jsx)(S.Z, {
                             className: B,
                             tabs: q,
                             selectedTab: W ? null : P,

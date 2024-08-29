@@ -18058,7 +18058,7 @@ e.exports = Object.freeze({
     GLOBAL_DISCOVERY_SERVERS_POPULAR_EDUCATION: 'Popular Education Servers',
     GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE: 'Play games, make friends',
     GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_TITLE_2: 'Play games\n\nMake friends',
-    GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION: 'Join an exclusive Guild that plays the same games as you. Add your games to find more.',
+    GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION: 'Join an exclusive Guild that plays the same games as you. Find more Guilds by adding games in Preferences.',
     GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION_NUX_COMPLETED: 'Join an exclusive Guild that plays the same games as you.',
     GLOBAL_DISCOVERY_SERVERS_GAMING_TITLE: 'Find a server for a Game',
     GLOBAL_DISCOVERY_SERVERS_GAMING_DESCRIPTION: 'Get updates, connect with developers, and chat with other players.',

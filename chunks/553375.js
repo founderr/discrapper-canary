@@ -32,26 +32,26 @@ function c(e) {
             };
 }
 function d(e) {
-    let { user: t, activity: n, entry: a, onAction: l } = e,
-        { applicationId: d, sourceUserId: _ } = c({
+    let { user: t, activity: n, entry: a, onAction: l, isMenuOpen: d } = e,
+        { applicationId: _, sourceUserId: E } = c({
             activity: n,
             entry: a,
             user: t
         }),
-        E = (0, o.Z)({
+        f = (0, o.Z)({
             location: 'UserProfileActivityContextMenu',
             source: s.m1.UserProfileCardContextMenu,
-            trackEntryPointImpression: !0,
-            applicationId: d,
-            sourceUserId: _
+            trackEntryPointImpression: d,
+            applicationId: _,
+            sourceUserId: E
         });
-    return null == E
+    return null == f
         ? null
         : (0, r.jsx)(i.MenuItem, {
               id: 'game-profile',
               label: u.Z.Messages.VIEW_GAME_PROFILE,
               action: () => {
-                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), E();
+                  null == l || l({ action: 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM' }), f();
               }
           });
 }

@@ -22,8 +22,8 @@ var i = n(735250),
     g = n(410575),
     p = n(941129),
     T = n(83200),
-    S = n(634894),
-    f = n(586902),
+    f = n(634894),
+    S = n(586902),
     C = n(570928),
     N = n(676742),
     A = n(1585),
@@ -76,8 +76,8 @@ var i = n(735250),
     eg = n(626135),
     ep = n(768581),
     eT = n(572004),
-    eS = n(70956),
-    ef = n(74538),
+    ef = n(70956),
+    eS = n(74538),
     eC = n(374023),
     eN = n(51144),
     eA = n(998502),
@@ -103,7 +103,7 @@ function eM(e, t, n) {
     );
 }
 let eD = eA.ZP.getEnableHardwareAcceleration() ? E.AnimatedAvatar : E.Avatar,
-    ey = 30 * eS.Z.Millis.DAY;
+    ey = 30 * ef.Z.Millis.DAY;
 function ej(e) {
     let { speaking: t, streaming: n, currentUser: a, status: s, handleMouseLeave: l, renderNameTag: o } = e,
         c = (0, N.Z)(null == a ? void 0 : a.avatarDecoration),
@@ -521,7 +521,7 @@ function eG() {
             streaming: null != eE.Z.findActivity((e) => e.type === eO.IIU.STREAMING),
             status: eE.Z.getStatus()
         })),
-        _ = (0, f.Z)({ userId: r }),
+        _ = (0, S.Z)({ userId: r }),
         m = eN.ZP.useUserTag(n, { decoration: 'never' }),
         I = (0, l.e7)([eh.Z], () => eh.Z.hidePersonalInformation),
         g = (0, l.e7)([e_.Z, ec.Z], () => {
@@ -547,14 +547,14 @@ function eG() {
         J = (0, Q.D)(),
         $ = (0, p.u)(),
         ee = (0, X.t)(),
-        en = ef.ZP.canUsePremiumGuildMemberProfile(n),
+        en = eS.ZP.canUsePremiumGuildMemberProfile(n),
         ei = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eR.rL,
         ea = 'account';
-    (0, S.j)({
+    (0, f.j)({
         location: ea + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, S.j)({
+        (0, f.j)({
             location: ea + ' auto off',
             autoTrackExposure: !1
         }),
@@ -651,7 +651,7 @@ function ew(e) {
     let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: r, tooltipText: l, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: _, onClick: h, onContextMenu: m } = e,
         I = t || s || n,
         { Component: g, play: p, events: T } = (0, u.O)(I ? 'unmute' : 'mute'),
-        S = n || s ? E.MicrophoneDenyIcon : g;
+        f = n || s ? E.MicrophoneDenyIcon : g;
     return (
         a.useEffect(() => () => p(), [I, p]),
         (0, i.jsx)(ev.Z, {
@@ -664,7 +664,7 @@ function ew(e) {
             onMouseLeave: () => {
                 _(), T.onMouseLeave();
             },
-            icon: (0, i.jsx)(S, {
+            icon: (0, i.jsx)(f, {
                 size: 'custom',
                 width: 20,
                 height: 20,

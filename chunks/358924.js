@@ -16,8 +16,8 @@ var i,
     g = n(122810),
     p = n(833664),
     T = n(503438),
-    S = n(420660),
-    f = n(74433),
+    f = n(420660),
+    S = n(74433),
     C = n(906732),
     N = n(895924),
     A = n(812206),
@@ -389,7 +389,7 @@ let et = (e) => {
         let t,
             { activity: i, user: a, getAssetImage: r, guildId: l } = e,
             { name: c, details: d, assets: _, application_id: E } = i;
-        if (null != _ && (0, S.Z)(i)) {
+        if (null != _ && (0, f.Z)(i)) {
             var m;
             t = (0, s.jsx)(Z.Z, {
                 className: Y.twitchSectionPreviewWrapper,
@@ -465,7 +465,7 @@ let et = (e) => {
                     })
                 ]
             }),
-            m = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : F.Z.Messages.SHARING_SCREEN;
+            m = null !== (n = null === (t = (0, S.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : F.Z.Messages.SHARING_SCREEN;
         return (0, s.jsxs)(X, {
             children: [
                 (0, s.jsxs)('div', {

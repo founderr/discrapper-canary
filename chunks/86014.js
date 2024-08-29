@@ -16,7 +16,7 @@ var i = n(735250),
     g = n(308083),
     p = n(689938),
     T = n(266489);
-function S(e) {
+function f(e) {
     let { showPickGameButton: t, showAdminGuildPicker: n, inGlobalDiscovery: s } = e,
         { guilds: _ } = (0, c.C3)({
             location: 'ClanDiscoveryContentCtaContent',
@@ -28,7 +28,7 @@ function S(e) {
             for (let e of _) if (t.has(e.id)) return e.id;
             return null === (e = _[0]) || void 0 === e ? void 0 : e.id;
         }),
-        S = a.useMemo(
+        f = a.useMemo(
             () =>
                 _.map((e) => ({
                     value: e.id,
@@ -36,7 +36,7 @@ function S(e) {
                 })),
             [_]
         ),
-        f = n && _.length > 0,
+        S = n && _.length > 0,
         C = a.useCallback(() => {
             (0, o._9)({
                 guildId: E,
@@ -60,7 +60,7 @@ function S(e) {
                           children: (0, i.jsx)(r.Button, {
                               look: r.ButtonLooks.FILLED,
                               size: r.ButtonSizes.MEDIUM,
-                              color: f ? r.ButtonColors.TRANSPARENT : r.ButtonColors.BRAND,
+                              color: S ? r.ButtonColors.TRANSPARENT : r.ButtonColors.BRAND,
                               className: T.heroButton,
                               onClick: () => {
                                   (0, o.GS)({ location: s ? l.Z.GLOBAL_DISCOVERY : l.Z.CLAN_DISCOVERY }), (0, m.fH)(m.v0.GET_STARTED);
@@ -73,7 +73,7 @@ function S(e) {
                           })
                       })
                     : null,
-            [t, f, s]
+            [t, S, s]
         ),
         A = a.useMemo(
             () =>
@@ -84,7 +84,7 @@ function S(e) {
                                   (0, i.jsx)(r.SearchableSelect, {
                                       className: T.upsellSelect,
                                       value: E,
-                                      options: S,
+                                      options: f,
                                       onChange: I
                                   }),
                               (0, i.jsx)('div', {
@@ -104,7 +104,7 @@ function S(e) {
                           ]
                       })
                     : null,
-            [n, _.length, S, E, C]
+            [n, _.length, f, E, C]
         );
     return (0, i.jsxs)('div', {
         className: T.contentCtaContainer,
@@ -115,13 +115,13 @@ t.Z = a.memo(function (e) {
     let { width: t, paddingVertical: n = 16, paddingHorizontal: l = 32, variant: o = I.Bj.DEFAULT, onScroll: c, withAdminContent: d = !1, inGlobalDiscovery: u } = e,
         h = a.useRef(null),
         g = (0, m.GN)((e) => e.completedNux, s.Z),
-        f = a.useCallback(() => {
+        S = a.useCallback(() => {
             var e;
             null === (e = h.current) || void 0 === e || e.scrollToTop();
         }, []),
         C = a.useMemo(
             () =>
-                (0, i.jsx)(S, {
+                (0, i.jsx)(f, {
                     inGlobalDiscovery: u,
                     showPickGameButton: !g,
                     showAdminGuildPicker: d
@@ -142,7 +142,7 @@ t.Z = a.memo(function (e) {
         onScroll: c,
         children: (0, i.jsx)(I.ZP, {
             width: t,
-            onUpdatePage: f,
+            onUpdatePage: S,
             paddingHorizontal: l,
             paddingVertical: n,
             variant: o

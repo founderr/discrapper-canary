@@ -20,8 +20,8 @@ var i = n(735250),
     g = n(521868),
     p = n(299206),
     T = n(440051),
-    S = n(734934),
-    f = n(158238),
+    f = n(734934),
+    S = n(158238),
     C = n(300284),
     N = n(680295),
     A = n(785717),
@@ -178,8 +178,8 @@ function er(e) {
         eu = (function (e, t) {
             let n = T.Y.useExperiment({ location: 'account popout' }).expiringStatus,
                 a = V.Cr.useSetting(),
-                s = (0, S.p)(),
-                r = f.e.useExperiment({ location: 'account popout' }).allowQuietMode || s,
+                s = (0, f.p)(),
+                r = S.e.useExperiment({ location: 'account popout' }).allowQuietMode || s,
                 o = V.fv.useSetting(),
                 c = e === J.Skl.DND,
                 u = (t) => {
@@ -213,7 +213,7 @@ function er(e) {
                                 id: ''.concat(e, '-').concat(n),
                                 label: a(),
                                 action: () => {
-                                    (0, S.oW)(!0, n);
+                                    (0, f.oW)(!0, n);
                                 },
                                 dontCloseOnAction: !0
                             },
@@ -275,7 +275,7 @@ function er(e) {
                                                   ]
                                               }),
                                           action: () => {
-                                              (0, S.oW)(!s);
+                                              (0, f.oW)(!s);
                                           },
                                           dontCloseOnAction: !0,
                                           children: _
@@ -304,10 +304,10 @@ function er(e) {
         { newActivityCardsEnabled: em } = (0, Z.z)({ location: 'AccountProfilePopout' }),
         { customStatusBubbleEditEnabled: eI } = (0, L.K)({ location: 'AccountProfilePopout' }),
         eg = (0, C.Z)({ analyticsLocations: el }),
-        ep = (0, S.p)(),
+        ep = (0, f.p)(),
         eT = ed === J.Skl.DND,
-        eS = (0, Q.g)(),
-        ef = (0, g.o)({
+        ef = (0, Q.g)(),
+        eS = (0, g.o)({
             focusedClassName: et.menuItemFocused,
             customStatus: ec,
             analyticsLocations: el,
@@ -503,7 +503,7 @@ function er(e) {
                                                             'status-picker'
                                                         )
                                                     }),
-                                                    !eI && (0, i.jsx)(d.MenuGroup, { children: ef })
+                                                    !eI && (0, i.jsx)(d.MenuGroup, { children: eS })
                                                 ]
                                             })
                                         }),
@@ -531,7 +531,7 @@ function er(e) {
                                                                 }),
                                                                     (0, X.Z)();
                                                             },
-                                                            children: eS
+                                                            children: ef
                                                         })
                                                     }),
                                                     (0, i.jsx)(d.MenuGroup, { children: eC })
