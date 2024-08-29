@@ -197,12 +197,7 @@ function Z(e) {
                                         ]
                                     })
                                 });
-                            if (!(0, h.g)(s))
-                                return (0, i.jsx)('div', {
-                                    className: v.commandName,
-                                    children: o
-                                });
-                            {
+                            if ((0, h.g)(s)) {
                                 let e = (0, N.XZ)(o);
                                 return (0, i.jsx)(d.Clickable, {
                                     ...n,
@@ -225,6 +220,7 @@ function Z(e) {
                                     })
                                 });
                             }
+                            v.commandName;
                         }
                     });
                 })(e, P);
