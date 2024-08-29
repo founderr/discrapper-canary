@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(481060),
     u = n(2052),
     _ = n(393238),
-    E = n(727637),
-    h = n(100527),
+    h = n(727637),
+    E = n(100527),
     m = n(906732),
     I = n(676035),
     g = n(521868),
@@ -168,7 +168,7 @@ function er(e) {
         W = __OVERLAY__,
         q = (0, O.ZP)(t.id),
         er = (0, u.O)(),
-        { analyticsLocations: el } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
+        { analyticsLocations: el } = (0, m.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT),
         eo = (0, A.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: t.id
@@ -289,11 +289,11 @@ function er(e) {
             });
         })(ed, er),
         { ref: e_ } = (0, _.Z)(),
-        eE = (0, E.Z)(e_);
+        eh = (0, h.Z)(e_);
     a.useEffect(() => {
         null == s || s(e_.current);
     }, [e_, s]);
-    let eh = (e) => {
+    let eE = (e) => {
             null == n || n(),
                 (0, w.openUserProfileModal)({
                     sourceAnalyticsLocations: el,
@@ -353,7 +353,7 @@ function er(e) {
                                     user: t,
                                     displayProfile: q,
                                     profileType: $.y0.BITE_SIZE,
-                                    onOpenProfile: W ? void 0 : eh
+                                    onOpenProfile: W ? void 0 : eE
                                 }),
                                 (0, i.jsx)(P.Z, {
                                     user: t,
@@ -365,7 +365,7 @@ function er(e) {
                         (null == q ? void 0 : q.profileEffectId) != null &&
                             (0, i.jsx)(N.Z, {
                                 profileEffectId: null == q ? void 0 : q.profileEffectId,
-                                isHovering: eE
+                                isHovering: eh
                             }),
                         (0, i.jsxs)(d.Scroller, {
                             className: et.body,
@@ -375,7 +375,7 @@ function er(e) {
                                     className: et.username,
                                     profileType: $.y0.BITE_SIZE,
                                     nickname: z.ZP.getName(null, null, t),
-                                    onOpenProfile: eh,
+                                    onOpenProfile: eE,
                                     pronouns: null == q ? void 0 : q.pronouns,
                                     tags: (0, i.jsx)(x.Z, {
                                         displayProfile: q,
@@ -387,7 +387,7 @@ function er(e) {
                                             (0, i.jsx)(D.Z, { userId: t.id }),
                                             (0, i.jsx)(G.Z, {
                                                 user: t,
-                                                isHovering: eE
+                                                isHovering: eh
                                             })
                                         ]
                                     })

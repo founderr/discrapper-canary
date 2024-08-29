@@ -1,23 +1,23 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return p;
+        return f;
     }
 });
-var a = r(735250);
-r(470079);
-var n = r(120356),
-    i = r.n(n),
-    o = r(481060),
-    l = r(45114),
-    c = r(110478),
-    s = r(423932),
-    d = r(601948),
-    u = r(594174),
-    h = r(804637),
-    m = r(224499);
-let g = () => {
-    Promise.all([r.e('52030'), r.e('55900')])
-        .then(r.bind(r, 24031))
+var r = n(735250);
+n(470079);
+var a = n(120356),
+    l = n.n(a),
+    i = n(481060),
+    o = n(45114),
+    c = n(110478),
+    s = n(423932),
+    u = n(601948),
+    d = n(594174),
+    h = n(804637),
+    m = n(224499);
+let x = () => {
+    Promise.all([n.e('52030'), n.e('55900')])
+        .then(n.bind(n, 24031))
         .then((e) => {
             let { openMFAModal: t } = e;
             t(
@@ -41,40 +41,40 @@ let g = () => {
             );
         });
 };
-function p() {
-    let e = u.default.getCurrentUser(),
+function f() {
+    let e = d.default.getCurrentUser(),
         t = null == e ? void 0 : e.isStaff();
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, a.jsx)('div', {
-                className: i()(h.buttonsContainer, m.marginBottom20),
-                children: (0, a.jsx)(d.S, { isDevTools: !0 })
+            (0, r.jsx)('div', {
+                className: l()(h.buttonsContainer, m.marginBottom20),
+                children: (0, r.jsx)(u.S, { isDevTools: !0 })
             }),
-            (0, a.jsx)('div', {
-                className: i()(h.buttonsContainer, m.marginBottom20),
-                children: (0, a.jsx)(o.Button, {
-                    onClick: g,
+            (0, r.jsx)('div', {
+                className: l()(h.buttonsContainer, m.marginBottom20),
+                children: (0, r.jsx)(i.Button, {
+                    onClick: x,
                     children: 'Launch MFA'
                 })
             }),
-            (0, a.jsx)('div', {
-                className: i()(h.buttonsContainer, m.marginBottom20),
-                children: (0, a.jsx)(o.Button, {
+            (0, r.jsx)('div', {
+                className: l()(h.buttonsContainer, m.marginBottom20),
+                children: (0, r.jsx)(i.Button, {
                     onClick: () => (0, s.Z)(),
                     children: 'Launch Vibing Wumpus'
                 })
             }),
-            (0, a.jsx)('div', {
-                className: i()(h.buttonsContainer, m.marginBottom20),
-                children: (0, a.jsx)(o.Button, {
-                    onClick: l.YJ,
+            (0, r.jsx)('div', {
+                className: l()(h.buttonsContainer, m.marginBottom20),
+                children: (0, r.jsx)(i.Button, {
+                    onClick: o.YJ,
                     children: 'Clear Message Requests Read State'
                 })
             }),
             t &&
-                (0, a.jsx)('div', {
-                    className: i()(h.buttonsContainer, m.marginBottom20),
-                    children: (0, a.jsx)(o.Button, {
+                (0, r.jsx)('div', {
+                    className: l()(h.buttonsContainer, m.marginBottom20),
+                    children: (0, r.jsx)(i.Button, {
                         onClick: () => (0, c.N)(),
                         children: 'Launch Captcha Test Tool'
                     })

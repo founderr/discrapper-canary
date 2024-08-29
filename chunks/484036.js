@@ -1,48 +1,48 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
-    r(47120);
-var a = r(735250),
-    n = r(470079),
-    i = r(120356),
-    o = r.n(i),
-    l = r(347469),
-    c = r(545219);
+    n(47120);
+var r = n(735250),
+    a = n(470079),
+    l = n(120356),
+    i = n.n(l),
+    o = n(347469),
+    c = n(545219);
 function s(e) {
-    let { resizableNode: t, minHeight: r, onResize: n } = e,
-        i = (0, l.Z)({
-            minDimension: r,
+    let { resizableNode: t, minHeight: n, onResize: a } = e,
+        l = (0, o.Z)({
+            minDimension: n,
             resizableDomNodeRef: t,
-            onElementResize: n,
-            orientation: l.y.VERTICAL_TOP,
+            onElementResize: a,
+            orientation: o.y.VERTICAL_TOP,
             usePointerEvents: !0
         });
-    return (0, a.jsx)('div', {
-        onPointerDown: i,
+    return (0, r.jsx)('div', {
+        onPointerDown: l,
         className: c.resizeHandle
     });
 }
-function d(e) {
-    let { children: t, className: r, initialHeight: i, minHeight: l } = e,
-        d = n.useRef(null),
-        [u, h] = n.useState(i);
-    return (0, a.jsxs)('div', {
-        ref: d,
+function u(e) {
+    let { children: t, className: n, initialHeight: l, minHeight: o } = e,
+        u = a.useRef(null),
+        [d, h] = a.useState(l);
+    return (0, r.jsxs)('div', {
+        ref: u,
         className: c.container,
         style: {
-            minHeight: l,
-            height: u
+            minHeight: o,
+            height: d
         },
         children: [
-            (0, a.jsx)(s, {
-                resizableNode: d,
-                minHeight: l,
+            (0, r.jsx)(s, {
+                resizableNode: u,
+                minHeight: o,
                 onResize: h
             }),
-            (0, a.jsx)('div', {
-                className: o()(c.subPanelContent, r),
+            (0, r.jsx)('div', {
+                className: i()(c.subPanelContent, n),
                 children: t
             })
         ]

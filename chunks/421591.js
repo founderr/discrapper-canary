@@ -12,8 +12,8 @@ var i = t(735250),
     p = t(684256),
     _ = t(314734),
     C = t(981631),
-    f = t(79499);
-let h = {
+    h = t(79499);
+let f = {
         width: _.Gy,
         height: _.lv
     },
@@ -60,7 +60,7 @@ function E(e) {
         children: t
     });
 }
-function x(e) {
+function N(e) {
     let { channel: n, entrypoint: t } = e,
         [o, r] = a.useState(''),
         { setScroller: s, isCloseToBottom: c } = (function (e) {
@@ -90,25 +90,25 @@ function x(e) {
                 }
             );
         })(o),
-        { currentView: C, getMostRecentHistoryItemByType: h, setSlideReady: E } = (0, d.hH)();
+        { currentView: C, getMostRecentHistoryItemByType: f, setSlideReady: E } = (0, d.hH)();
     a.useEffect(() => {
         E(!1);
     }, [null == C ? void 0 : C.type, E]);
-    let x = a.useCallback(() => {
+    let N = a.useCallback(() => {
         E(!0);
     }, [E]);
     if (null == C) return null;
-    let v = h(d.gc.LIST),
-        N = h(d.gc.APPLICATION);
+    let x = f(d.gc.LIST),
+        v = f(d.gc.APPLICATION);
     return (0, i.jsxs)(l.Slides, {
         activeSlide: C.type,
         width: _.Gy,
-        onSlideReady: x,
+        onSlideReady: N,
         children: [
             (0, i.jsx)(l.Slide, {
                 id: d.gc.HOME,
                 children: (0, i.jsx)('div', {
-                    className: f.slideContent,
+                    className: h.slideContent,
                     style: A,
                     children: (0, i.jsx)(m.Z, {
                         isScrollCloseToBottom: c,
@@ -123,32 +123,32 @@ function x(e) {
             (0, i.jsx)(l.Slide, {
                 id: d.gc.LIST,
                 children: (0, i.jsx)('div', {
-                    className: f.slideContent,
+                    className: h.slideContent,
                     style: A,
                     children:
-                        null != v &&
+                        null != x &&
                         (0, i.jsx)(p.Z, {
                             channel: n,
                             entrypoint: t,
-                            title: v.title,
-                            look: v.look,
-                            items: v.items,
-                            sectionName: v.sectionName
+                            title: x.title,
+                            look: x.look,
+                            items: x.items,
+                            sectionName: x.sectionName
                         })
                 })
             }),
             (0, i.jsx)(l.Slide, {
                 id: d.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
-                    className: f.slideContent,
+                    className: h.slideContent,
                     style: A,
                     children:
-                        null != N &&
+                        null != v &&
                         (0, i.jsx)(u.Z, {
                             channel: n,
-                            application: N.application,
-                            sectionName: N.sectionName,
-                            installOnDemand: N.installOnDemand
+                            application: v.application,
+                            sectionName: v.sectionName,
+                            installOnDemand: v.installOnDemand
                         })
                 })
             })
@@ -177,16 +177,16 @@ n.Z = a.memo(
                 };
             }, [l]),
             (0, i.jsx)('div', {
-                className: f.drawerSizingWrapper,
+                className: h.drawerSizingWrapper,
                 ref: n,
-                style: h,
+                style: f,
                 children: (0, i.jsx)('div', {
-                    className: f.contentWrapper,
+                    className: h.contentWrapper,
                     children: (0, i.jsx)(s.Gt, {
                         value: u,
                         children: (0, i.jsx)(E, {
                             initHistory: d,
-                            children: (0, i.jsx)(x, {
+                            children: (0, i.jsx)(N, {
                                 channel: t,
                                 entrypoint: l
                             })

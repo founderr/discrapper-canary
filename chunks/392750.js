@@ -1,24 +1,24 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
-var a = r(735250);
-r(470079);
-var n = r(442837),
-    i = r(814443),
-    o = r(594174),
-    l = r(681619),
-    c = r(914121),
-    s = r(535271);
-let d = [
+var r = n(735250);
+n(470079);
+var a = n(442837),
+    l = n(814443),
+    i = n(594174),
+    o = n(681619),
+    c = n(914121),
+    s = n(535271);
+let u = [
     {
         key: 'user',
         cellClassName: c.userCell,
         render(e) {
             var t;
-            let { user: r, key: a } = e;
-            return null !== (t = null == r ? void 0 : r.username) && void 0 !== t ? t : a;
+            let { user: n, key: r } = e;
+            return null !== (t = null == n ? void 0 : n.username) && void 0 !== t ? t : r;
         }
     },
     {
@@ -30,22 +30,22 @@ let d = [
         }
     }
 ];
-function u() {
-    let e = (0, n.Wu)([i.Z, o.default], () =>
-        i.Z.getUserAffinities().map((e) => {
-            let { user_id: t, affinity: r } = e;
+function d() {
+    let e = (0, a.Wu)([l.Z, i.default], () =>
+        l.Z.getUserAffinities().map((e) => {
+            let { user_id: t, affinity: n } = e;
             return {
-                user: o.default.getUser(t),
-                affinity: r,
+                user: i.default.getUser(t),
+                affinity: n,
                 key: t
             };
         })
     );
     return 0 === e.length
         ? null
-        : (0, a.jsx)(l.Z, {
+        : (0, r.jsx)(o.Z, {
               className: s.panel,
-              columns: d,
+              columns: u,
               rowClassName: c.row,
               data: e
           });

@@ -146,7 +146,7 @@ s.Z = (e) => {
                 j(!1);
             }
         },
-        { isCancelled: F, isDeleted: y, isPastDue: V, subscriptionPlanPrice: Y, subscribedSinceDate: H, currentPeriodEndDate: w, currentPeriodEndLabel: k } = O,
+        { isCancelled: F, isDeleted: y, isPastDue: V, subscriptionPlanPrice: Y, subscribedSinceDate: w, currentPeriodEndDate: H, currentPeriodEndLabel: k } = O,
         W = (0, R.KW)(i.sku_flags),
         K = (0, R.KK)(i.sku_flags),
         z = i.soft_deleted || null == g || ((!K || null == d) && !W),
@@ -259,7 +259,7 @@ s.Z = (e) => {
                               children: [
                                   (0, n.jsx)(L, {
                                       label: k,
-                                      value: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_CURRENT_PERIOD_END_DATE.format({ timestamp: w.getTime() })
+                                      value: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_CURRENT_PERIOD_END_DATE.format({ timestamp: H.getTime() })
                                   }),
                                   (0, n.jsx)(L, {
                                       label: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_PRICE,
@@ -267,7 +267,7 @@ s.Z = (e) => {
                                   }),
                                   (0, n.jsx)(L, {
                                       label: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE,
-                                      value: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE_DATE.format({ timestamp: H.getTime() })
+                                      value: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE_DATE.format({ timestamp: w.getTime() })
                                   })
                               ]
                           }),

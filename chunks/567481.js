@@ -10,8 +10,8 @@ var a = n(481060),
     d = n(293273),
     u = n(885110),
     _ = n(996106),
-    E = n(914946),
-    h = n(452426),
+    h = n(914946),
+    E = n(452426),
     m = n(852926),
     I = n(186901),
     g = n(981631);
@@ -19,7 +19,7 @@ t.Z = {
     [g.Etm.SET_OVERLAY_LOCKED]: {
         scope: I.lH,
         validation: (e) =>
-            (0, h.Z)(e)
+            (0, E.Z)(e)
                 .required()
                 .keys({
                     locked: e.boolean().required(),
@@ -37,7 +37,7 @@ t.Z = {
     [g.Etm.OPEN_OVERLAY_ACTIVITY_INVITE]: {
         scope: I.lH,
         validation: (e) =>
-            (0, h.Z)(e)
+            (0, E.Z)(e)
                 .required()
                 .keys({
                     type: e.number().required().valid([g.mFx.JOIN]),
@@ -51,7 +51,7 @@ t.Z = {
                 a = t.application.id;
             if (null == a) throw new _.Z({ errorCode: g.lTL.INVALID_COMMAND }, 'No application.');
             let s = d.Z.getApplicationActivity(a);
-            if (null == s || null == s.secrets || !(0, E.t9)(n, s.party, s.secrets)) throw new _.Z({ errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
+            if (null == s || null == s.secrets || !(0, h.t9)(n, s.party, s.secrets)) throw new _.Z({ errorCode: g.lTL.NO_ELIGIBLE_ACTIVITY }, 'No eligible activity for application. Ensure an activity includes a party and appropriate secret.');
             let { lock: l } = (0, m.jU)(i),
                 o = (0, c.Z)(s, u.Z);
             return (0, r.h7)(s, o).then(() => {
@@ -62,7 +62,7 @@ t.Z = {
     [g.Etm.OPEN_OVERLAY_GUILD_INVITE]: {
         scope: I.lH,
         validation: (e) =>
-            (0, h.Z)(e)
+            (0, E.Z)(e)
                 .required()
                 .keys({
                     code: e.string().required(),
@@ -93,7 +93,7 @@ t.Z = {
     [g.Etm.OPEN_OVERLAY_VOICE_SETTINGS]: {
         scope: I.lH,
         validation: (e) =>
-            (0, h.Z)(e)
+            (0, E.Z)(e)
                 .required()
                 .keys({ pid: e.number().min(0).required() }),
         handler(e) {

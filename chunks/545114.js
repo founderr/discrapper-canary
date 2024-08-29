@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(963202),
     u = n(117496),
     _ = n(702646),
-    E = n(207796),
-    h = n(540742),
+    h = n(207796),
+    E = n(540742),
     m = n(766219),
     I = n(801543),
     g = n(979233),
@@ -40,7 +40,7 @@ function b() {
         j = (0, d.iN)('global_discovery_servers_layout'),
         { searchBarState: U, onTabsAvailableWidthChange: G, onCollapsedSearchBarClick: k, onSearchBarBlur: w, tabsClassName: B } = (0, p.U)({ isSearchBarVisible: y }),
         { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: Y, isSearchVisible: W } = (0, v.H)({ loadId: e.current }),
-        z = (0, E.GN)((e) => e.mode, l.Z),
+        z = (0, h.GN)((e) => e.mode, l.Z),
         K = a.useCallback(
             (e) => {
                 M(e), W && F();
@@ -57,7 +57,7 @@ function b() {
                     : b,
             [b, W]
         ),
-        Q = z === E.v0.SAVED_GUILDS,
+        Q = z === h.v0.SAVED_GUILDS,
         X = a.useRef(new I.Z(D)),
         { onGuildCardSeen: J, onGuildCardClick: $ } = (0, A.H)({
             guildDiscoveryCardSeenManager: X.current,
@@ -70,7 +70,7 @@ function b() {
             s();
         }, [P, s]),
         a.useEffect(() => {
-            !W && h.B.setState({ searchScrollPosition: null });
+            !W && E.B.setState({ searchScrollPosition: null });
         }, [W]),
         a.useEffect(() => {
             (0, c.N)();

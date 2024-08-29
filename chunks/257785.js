@@ -1,4 +1,4 @@
-r.d(t, {
+n.d(t, {
     E: function () {
         return c;
     },
@@ -6,40 +6,40 @@ r.d(t, {
         return s;
     },
     wl: function () {
-        return d;
+        return u;
     }
 });
-var a = r(735250);
-r(470079);
-var n = r(120356),
-    i = r.n(n),
-    o = r(481060),
-    l = r(535271);
+var r = n(735250);
+n(470079);
+var a = n(120356),
+    l = n.n(a),
+    i = n(481060),
+    o = n(535271);
 function c(e) {
-    let { className: t, children: r } = e;
-    return (0, a.jsx)('dl', {
-        className: i()(l.properties, t),
-        children: r
+    let { className: t, children: n } = e;
+    return (0, r.jsx)('dl', {
+        className: l()(o.properties, t),
+        children: n
     });
 }
 function s(e) {
-    let { name: t, children: r } = e;
-    return (0, a.jsxs)(a.Fragment, {
+    let { name: t, children: n } = e;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, a.jsx)('dt', {
-                className: l.propertyName,
+            (0, r.jsx)('dt', {
+                className: o.propertyName,
                 children: t
             }),
-            (0, a.jsx)('dd', { children: r })
+            (0, r.jsx)('dd', { children: n })
         ]
     });
 }
-function d(e) {
+function u(e) {
     let { value: t } = e;
-    return (0, a.jsx)(o.Checkbox, {
+    return (0, r.jsx)(i.Checkbox, {
         size: 16,
         value: t,
-        shape: o.Checkbox.Shapes.SMALL_BOX,
+        shape: i.Checkbox.Shapes.SMALL_BOX,
         displayOnly: !0
     });
 }

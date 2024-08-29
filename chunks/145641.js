@@ -9,8 +9,8 @@ var i = n(735250),
     u = n(49175);
 t.Z = function (e) {
     let { statusSections: t, renderRow: n, searchQuery: _ } = e,
-        E = (e) => (0 === t[e].length ? 0 : d.De + 16),
-        h = (e) => {
+        h = (e) => (0 === t[e].length ? 0 : d.De + 16),
+        E = (e) => {
             let { section: i, row: a } = e,
                 s = t[i];
             if (null == s || null == a) return null;
@@ -65,8 +65,8 @@ t.Z = function (e) {
                         var t;
                         (I.current = e), (n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
                     },
-                    sectionHeight: E,
-                    renderRow: h,
+                    sectionHeight: h,
+                    renderRow: E,
                     rowHeight: d.NV,
                     sections: t.map((e) => ('' !== _ && 0 === e.length ? e.length + 1 : e.length)),
                     className: u.peopleList,

@@ -11,7 +11,7 @@ var o = n(120356),
 t.Z = function (e) {
     let { className: t, color: n = i.Z.colors.WHITE, quest: o, isInventory: d } = e,
         C = (0, l.qb)(e.quest),
-        { percentComplete: m, completedRatioDisplay: E } = (0, l.I)(o);
+        { percentComplete: m, completedRatioDisplay: p } = (0, l.I)(o);
     return !d && C.length > 0
         ? (0, s.jsx)(u.Z, { children: C.at(0) })
         : (0, s.jsxs)('div', {
@@ -25,7 +25,7 @@ t.Z = function (e) {
                               variant: 'text-xs/semibold',
                               className: c.percentCompleteLabel,
                               color: 'none',
-                              children: E
+                              children: p
                           }),
                           (0, s.jsx)('div', {
                               className: c.percentCompleteLabelOffset,

@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(650461),
     u = n(603839),
     _ = n(374939),
-    E = n(901040),
-    h = n(84615),
+    h = n(901040),
+    E = n(84615),
     m = n(207796),
     I = n(895068),
     g = n(308083),
@@ -22,7 +22,7 @@ function f(e) {
             location: 'ClanDiscoveryContentCtaContent',
             includeConverted: !1
         }),
-        [E, I] = a.useState(() => {
+        [h, I] = a.useState(() => {
             var e;
             let t = new Set(d.ZP.getGuildIds());
             for (let e of _) if (t.has(e.id)) return e.id;
@@ -39,20 +39,20 @@ function f(e) {
         S = n && _.length > 0,
         C = a.useCallback(() => {
             (0, o._9)({
-                guildId: E,
+                guildId: h,
                 location: s ? l.Z.GLOBAL_DISCOVERY : l.Z.CLAN_DISCOVERY
             }),
-                (0, h.q4)(
+                (0, E.q4)(
                     (e) => {
                         let { closeLayer: t } = e;
                         return (0, i.jsx)(u.Z, {
                             onClose: t,
-                            guildId: E
+                            guildId: h
                         });
                     },
                     { layerKey: g.Pv }
                 );
-        }, [E, s]),
+        }, [h, s]),
         N = a.useMemo(
             () =>
                 t
@@ -83,7 +83,7 @@ function f(e) {
                               _.length > 0 &&
                                   (0, i.jsx)(r.SearchableSelect, {
                                       className: T.upsellSelect,
-                                      value: E,
+                                      value: h,
                                       options: f,
                                       onChange: I
                                   }),
@@ -104,7 +104,7 @@ function f(e) {
                           ]
                       })
                     : null,
-            [n, _.length, f, E, C]
+            [n, _.length, f, h, C]
         );
     return (0, i.jsxs)('div', {
         className: T.contentCtaContainer,
@@ -113,11 +113,11 @@ function f(e) {
 }
 t.Z = a.memo(function (e) {
     let { width: t, paddingVertical: n = 16, paddingHorizontal: l = 32, variant: o = I.Bj.DEFAULT, onScroll: c, withAdminContent: d = !1, inGlobalDiscovery: u } = e,
-        h = a.useRef(null),
+        E = a.useRef(null),
         g = (0, m.GN)((e) => e.completedNux, s.Z),
         S = a.useCallback(() => {
             var e;
-            null === (e = h.current) || void 0 === e || e.scrollToTop();
+            null === (e = E.current) || void 0 === e || e.scrollToTop();
         }, []),
         C = a.useMemo(
             () =>
@@ -129,7 +129,7 @@ t.Z = a.memo(function (e) {
             [g, d, u]
         );
     return (0, i.jsx)(_.Z, {
-        ref: h,
+        ref: E,
         title: (0, i.jsx)(r.Text, {
             className: T.globalDiscoveryTitle,
             variant: 'display-lg',
@@ -138,7 +138,7 @@ t.Z = a.memo(function (e) {
         }),
         description: g ? p.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION_NUX_COMPLETED : p.Z.Messages.GLOBAL_DISCOVERY_SERVERS_GUILDS_HERO_DESCRIPTION,
         button: C,
-        bannerBackground: (0, i.jsx)(E.Z, {}),
+        bannerBackground: (0, i.jsx)(h.Z, {}),
         onScroll: c,
         children: (0, i.jsx)(I.ZP, {
             width: t,

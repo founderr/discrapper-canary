@@ -9,7 +9,7 @@ n.d(t, {
         return I;
     },
     XB: function () {
-        return h;
+        return E;
     },
     jc: function () {
         return m;
@@ -31,8 +31,8 @@ var i = n(470079),
     d = n(286083),
     u = n(976757),
     _ = n(981631);
-let E = new Worker(new URL('/assets/' + n.u('59546'), n.b));
-function h() {
+let h = new Worker(new URL('/assets/' + n.u('59546'), n.b));
+function E() {
     return (
         l.Z.dispatch({ type: 'FETCH_STATIC_CLAN_LIST_START' }),
         r.tn
@@ -68,11 +68,11 @@ async function m(e) {
                 let {
                     data: { id: i, sortedClans: s }
                 } = t;
-                n === i && e(s), null == E || E.removeEventListener('message', a);
+                n === i && e(s), null == h || h.removeEventListener('message', a);
             };
-            null == E || E.addEventListener('message', a);
-            null == E ||
-                E.postMessage({
+            null == h || h.addEventListener('message', a);
+            null == h ||
+                h.postMessage({
                     id: n,
                     unsortedClans: t,
                     criteria: i

@@ -21,7 +21,7 @@ function o(e) {
                 u(!0);
             }
         }, []),
-        m = r.useCallback((e) => {
+        _ = r.useCallback((e) => {
             u(!1);
             try {
                 (0, s.pf)(e);
@@ -32,11 +32,11 @@ function o(e) {
     return (
         r.useEffect(() => {
             var e, r;
-            if (null == i && !c && !t && !n && !l) (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? p(o.id, d, a) : (null === (r = o.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null && m(o.id);
-        }, [p, m, c, t, n, a, o, l, i, d]),
+            if (null == i && !c && !t && !n && !l) (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != d ? p(o.id, d, a) : (null === (r = o.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null && _(o.id);
+        }, [p, _, c, t, n, a, o, l, i, d]),
         {
             claimCode: p,
-            fetchCode: m,
+            fetchCode: _,
             hasError: c,
             setHasError: u
         }

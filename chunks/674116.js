@@ -80,14 +80,14 @@ function F() {
             sidechainEnabled: I.Z.getSidechainCompression(),
             sidechainStrength: I.Z.getSidechainCompressionStrength()
         })),
-        H = (0, o.e7)([T.Z], () => T.Z.getSubsection()),
-        w = a.createRef();
+        w = (0, o.e7)([T.Z], () => T.Z.getSubsection()),
+        H = a.createRef();
     a.useEffect(() => {
-        if (H === P.GA) {
+        if (w === P.GA) {
             var e;
-            null == w || null === (e = w.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection();
+            null == H || null === (e = H.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection();
         }
-    }, [w, H]);
+    }, [H, w]);
     let k = E.Z.getCurrentConfig({ location: 'UserSettingsVoiceProcessing' }).sidechainAvailable && !(0, N.isWeb)();
     return (0, n.jsxs)(l.FormSection, {
         tag: l.FormTitleTags.H1,
@@ -125,7 +125,7 @@ function F() {
                 setting: L.s6.VOICE_AND_VIDEO_SOUNDBOARD,
                 children: (0, n.jsx)('div', {
                     style: { scrollMarginTop: '48px' },
-                    ref: w
+                    ref: H
                 })
             }),
             (0, n.jsx)(u.F, {

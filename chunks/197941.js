@@ -10,8 +10,8 @@ var a = n(243814),
     d = n(173507),
     u = n(199902),
     _ = n(131951),
-    E = n(449224),
-    h = n(358085),
+    h = n(449224),
+    E = n(358085),
     m = n(452426),
     I = n(736045),
     g = n(186901),
@@ -40,14 +40,14 @@ t.Z = {
                 } = e,
                 a = u.Z.getCurrentUserActiveStream(),
                 r = u.Z.getStreamerActiveStreamMetadata(),
-                d = (0, c.Z)(o.ZP, E.Z),
+                d = (0, c.Z)(o.ZP, h.Z),
                 _ = (0, I.Z)();
             if (null != _)
-                null != t && null != r && r.pid !== t && (0, h.isWindows)()
+                null != t && null != r && r.pid !== t && (0, E.isWindows)()
                     ? (0, l.WH)(_.guild_id, _.id, { pid: t })
                     : null != a
                       ? (0, l.L6)(!1)
-                      : null != t && (0, h.isWindows)()
+                      : null != t && (0, E.isWindows)()
                         ? (0, l.WH)(_.guild_id, _.id, { pid: t })
                         : null != d
                           ? (0, l.WH)(_.guild_id, _.id, { pid: d.pid })

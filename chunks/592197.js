@@ -1,14 +1,14 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return o;
+        return i;
     }
 });
-var a = r(735250);
-r(470079);
-var n = r(702904),
-    i = r(351930);
-function o() {
-    return (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(n.Z, {}), (0, a.jsx)(i.Z, {})]
+var r = n(735250);
+n(470079);
+var a = n(702904),
+    l = n(351930);
+function i() {
+    return (0, r.jsxs)(r.Fragment, {
+        children: [(0, r.jsx)(a.Z, {}), (0, r.jsx)(l.Z, {})]
     });
 }

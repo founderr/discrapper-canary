@@ -1,31 +1,31 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
-    r(47120);
-var a = r(735250),
-    n = r(470079),
-    i = r(442837),
-    o = r(481060),
-    l = r(581612),
-    c = r(91311),
-    s = r(701801);
-function d() {
-    let e = (0, i.e7)([c.Z], () => c.Z.allWithDescriptions(), [], i.pF),
-        t = n.useMemo(
+    n(47120);
+var r = n(735250),
+    a = n(470079),
+    l = n(442837),
+    i = n(481060),
+    o = n(581612),
+    c = n(91311),
+    s = n(701801);
+function u() {
+    let e = (0, l.e7)([c.Z], () => c.Z.allWithDescriptions(), [], l.pF),
+        t = a.useMemo(
             () =>
                 e.map((e) => {
-                    let [t, r, n] = e;
-                    return (0, a.jsx)(
-                        o.FormItem,
+                    let [t, n, a] = e;
+                    return (0, r.jsx)(
+                        i.FormItem,
                         {
-                            children: (0, a.jsx)(o.FormSwitch, {
-                                value: r,
+                            children: (0, r.jsx)(i.FormSwitch, {
+                                value: n,
                                 note: t,
-                                onChange: (e) => (0, l.Z)(t, e),
+                                onChange: (e) => (0, o.Z)(t, e),
                                 hideBorder: !0,
-                                children: n
+                                children: a
                             })
                         },
                         t
@@ -33,16 +33,16 @@ function d() {
                 }),
             [e]
         );
-    return (0, a.jsxs)('div', {
+    return (0, r.jsxs)('div', {
         className: s.container,
         children: [
-            (0, a.jsx)(o.Button, {
-                onClick: l.q,
+            (0, r.jsx)(i.Button, {
+                onClick: o.q,
                 className: s.button,
                 fullWidth: !0,
                 children: 'Clear all'
             }),
-            (0, a.jsx)('div', {
+            (0, r.jsx)('div', {
                 className: s.rowsContainer,
                 children: t
             })

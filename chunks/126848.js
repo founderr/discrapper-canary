@@ -23,21 +23,21 @@ function v(e) {
     let t,
         { decoration: n, label: s, isSelected: v } = e,
         x = (0, c.N)(),
-        N = (0, a.Ng)(),
-        g = (0, h.Vi)(),
+        g = (0, a.Ng)(),
+        N = (0, h.Vi)(),
         j = (0, r.e7)([p.Z], () => p.Z.isLocalizedPromoEnabled) && null == x && null == n,
         { enabled: C } = o._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
-        T = C && (null == x ? void 0 : x.trial_id) === b.a7;
+        P = C && (null == x ? void 0 : x.trial_id) === b.a7;
     return (
-        (t = g
+        (t = N
             ? (0, i.jsx)(u.Z, {})
-            : null != N
+            : null != g
               ? (0, i.jsx)(m.GN, {
                     isTabSelected: v,
-                    userDiscount: N,
+                    userDiscount: g,
                     includesAmountOff: !1
                 })
-              : null == x || T
+              : null == x || P
                 ? null != n
                     ? n
                     : j
@@ -50,14 +50,14 @@ function v(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: l()(S.premiumLabel, { [S.selected]: (v || j) && !g }),
+                    className: l()(S.premiumLabel, { [S.selected]: (v || j) && !N }),
                     children: [s, t]
                 }),
                 (0, i.jsx)('div', {
                     className: l()(S.background, {
                         [S.auPromo]: j && !v,
                         [S.auPromoSelected]: j && v,
-                        [S.selectedBackground]: !j && !g && v
+                        [S.selectedBackground]: !j && !N && v
                     })
                 })
             ]

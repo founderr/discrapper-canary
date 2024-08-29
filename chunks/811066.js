@@ -9,8 +9,8 @@ var i,
     d,
     u,
     _ = n(735250),
-    E = n(470079);
-function h(e, t, n) {
+    h = n(470079);
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -65,7 +65,7 @@ function T(e) {
     return m('QuantitativeValue', e);
 }
 ((c = a || (a = {})).DAMAGED = 'http://schema.org/DamagedCondition'), (c.NEW = 'http://schema.org/NewCondition'), (c.REFURBISHED = 'http://schema.org/RefurbishedCondition'), (c.USED = 'http://schema.org/UsedCondition'), ((d = s || (s = {})).DISCONTINUED = 'http://schema.org/Discontinued'), (d.IN_STOCK = 'http://schema.org/InStock'), (d.IN_STORE_ONLY = 'http://schema.org/InStoreOnly'), (d.LIMITED_AVAILABILITY = 'http://schema.org/LimitedAvailability'), (d.ONLINE_ONLY = 'http://schema.org/OnlineOnly'), (d.OUT_OF_STOCK = 'http://schema.org/OutOfStock'), (d.PREORDER = 'http://schema.org/PreOrder'), (d.PRESALE = 'http://schema.org/PreSale'), (d.SOLD_OUT = 'http://schema.org/SoldOut'), (p.ItemConditions = a), (p.ItemAvailability = s), ((u = r || (r = {})).YEARLY = 'ANN'), (u.MONTHLY = 'MON'), (T.UnitCodes = r);
-class f extends (l = E.Component) {
+class f extends (l = h.Component) {
     render() {
         let { debug: e, data: t } = this.props,
             n = JSON.stringify({
@@ -78,30 +78,30 @@ class f extends (l = E.Component) {
         });
     }
 }
-h(f, 'Thing', I),
-    h(f, 'Brand', I),
-    h(f, 'Person', function (e) {
+E(f, 'Thing', I),
+    E(f, 'Brand', I),
+    E(f, 'Person', function (e) {
         return m('Person', e);
     }),
-    h(f, 'Organization', function (e) {
+    E(f, 'Organization', function (e) {
         return m('Organization', e);
     }),
-    h(f, 'ItemPage', function (e) {
+    E(f, 'ItemPage', function (e) {
         return m('ItemPage', e);
     }),
-    h(f, 'Product', g),
-    h(f, 'Offer', p),
-    h(f, 'Rating', function (e) {
+    E(f, 'Product', g),
+    E(f, 'Offer', p),
+    E(f, 'Rating', function (e) {
         return m('Rating', e);
     }),
-    h(f, 'AggregateRating', function (e) {
+    E(f, 'AggregateRating', function (e) {
         return m('AggregateRating', e);
     }),
-    h(f, 'AggregateOffer', function (e) {
+    E(f, 'AggregateOffer', function (e) {
         return m('AggregateOffer', e);
     }),
-    h(f, 'QuantitativeValue', T),
-    h(f, 'UnitPriceSpecification', function (e) {
+    E(f, 'QuantitativeValue', T),
+    E(f, 'UnitPriceSpecification', function (e) {
         return m('UnitPriceSpecification', e);
     }),
     (t.Z = f);

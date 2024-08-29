@@ -14,7 +14,7 @@ var a = n(481060),
     d = n(901040),
     u = n(239181);
 function _(e) {
-    let { tab: t, guilds: n, onScroll: _, onGuildCardClick: E, onGuildCardSeen: h } = e,
+    let { tab: t, guilds: n, onScroll: _, onGuildCardClick: h, onGuildCardSeen: E } = e,
         m = (0, s.ZP)(),
         I = (0, o.Mf)(t),
         g = (0, o.a$)(t),
@@ -43,9 +43,9 @@ function _(e) {
                         r.Z,
                         {
                             guild: e,
-                            onView: (e) => E(e, t, T),
+                            onView: (e) => h(e, t, T),
                             theme: m,
-                            onGuildCardSeen: (e) => h(e, T)
+                            onGuildCardSeen: (e) => E(e, T)
                         },
                         e.id
                     )

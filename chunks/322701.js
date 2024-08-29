@@ -9,7 +9,7 @@ var a = n(924826),
     d = n(981631),
     u = n(49175);
 t.Z = function (e) {
-    let { statusSections: t, renderRow: n, searchQuery: _, sectionFilter: E, useReducedMotion: h } = e,
+    let { statusSections: t, renderRow: n, searchQuery: _, sectionFilter: h, useReducedMotion: E } = e,
         m = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled),
         I = (0, a.ZP)({
             id: 'people',
@@ -17,8 +17,8 @@ t.Z = function (e) {
             async scrollToStart() {},
             async scrollToEnd() {}
         }),
-        g = E !== d.pJs.ONLINE && E !== d.pJs.ALL,
-        p = h || '' !== _ || g,
+        g = h !== d.pJs.ONLINE && h !== d.pJs.ALL,
+        p = E || '' !== _ || g,
         T = t.map((e, t) =>
             p
                 ? (0, i.jsx)('div', { children: e.map(n) }, t)

@@ -27,8 +27,8 @@ function _(e, t, n) {
         e
     );
 }
-let E = 10 * l.Z.Millis.SECOND,
-    h = new Map(),
+let h = 10 * l.Z.Millis.SECOND,
+    E = new Map(),
     m = new Set(),
     I = (e, t, n) => {
         n([c.Z.CLOSE, t], e);
@@ -69,13 +69,13 @@ class g extends i.EventEmitter {
                 c.emit('disconnect', e, a ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : 'Unknown');
                 let [s] =
                     null !==
-                        (i = Array.from(h.entries()).find((t) => {
+                        (i = Array.from(E.entries()).find((t) => {
                             let [n, i] = t;
                             return i === e;
                         })) && void 0 !== i
                         ? i
                         : [null, null];
-                null != s && h.delete(s);
+                null != s && E.delete(s);
             }),
             _(this, 'handleIFrameMount', (e) => {
                 let { id: t } = e;
@@ -87,10 +87,10 @@ class g extends i.EventEmitter {
                                 application_id: t,
                                 channel_id: n.channelId,
                                 guild_id: n.guildId,
-                                timeout_ms: E
+                                timeout_ms: h
                             });
                         });
-                    }, E));
+                    }, h));
             }),
             _(this, 'handleIFrameUnmount', (e) => {
                 var t;
@@ -98,7 +98,7 @@ class g extends i.EventEmitter {
                 m.delete(n);
                 let [i, a] =
                     null !==
-                        (t = Array.from(h.entries()).find((e) => {
+                        (t = Array.from(E.entries()).find((e) => {
                             let [t, i] = e;
                             return i.frameId === n;
                         })) && void 0 !== t
@@ -114,10 +114,10 @@ class g extends i.EventEmitter {
                         },
                         !0
                     ),
-                    h.delete(i));
+                    E.delete(i));
             }),
             _(this, 'handleMessage', (e, t, n) => {
-                let i = h.get(t);
+                let i = E.get(t);
                 try {
                     this.routeEvent(i, t, e, n);
                 } catch (e) {
@@ -191,7 +191,7 @@ class g extends i.EventEmitter {
                 this.logger.info('Socket Opened: '.concat(a.id));
                 try {
                     if ((await this.validateSocketClient(a, e, t.client_id), !m.has(r))) throw (this.logger.error('Frame ID '.concat(r, ' no longer exists')), new o.Z({ closeCode: u.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(r)));
-                    h.set(e, a), m.delete(r), a.authorization.scopes.push(d.b_), this.emit('connect', a), this.logger.info('Socket Validated: '.concat(a.id));
+                    E.set(e, a), m.delete(r), a.authorization.scopes.push(d.b_), this.emit('connect', a), this.logger.info('Socket Validated: '.concat(a.id));
                 } catch (e) {
                     throw (this.logger.info('Socket Closed: '.concat(a.id, ', ').concat(e.message)), e);
                 }

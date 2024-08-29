@@ -9,8 +9,8 @@ var i,
     d = n(353926),
     u = n(924301),
     _ = n(786761),
-    E = n(314897),
-    h = n(592125),
+    h = n(314897),
+    E = n(592125),
     m = n(165630),
     I = n(430824),
     g = n(375954),
@@ -210,7 +210,7 @@ function ed(e) {
     let { type: t, messageId: n, userId: i, emoji: a, reactionType: s } = e,
         r = G[n];
     if (null == r || r.type !== A.Rr.MESSAGE) return !1;
-    let l = E.default.getId() === i;
+    let l = h.default.getId() === i;
     'MESSAGE_REACTION_ADD' === t ? (r.message = r.message.addReaction(a, l, e.colors, s)) : (r.message = r.message.removeReaction(a, l, s));
 }
 function eu(e) {
@@ -227,7 +227,7 @@ function eu(e) {
 }
 class e_ extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        if ((this.waitFor(g.Z, h.Z, p.ZP, d.Z, f.ZP, E.default, v.Z, l.Z), null != e)) {
+        if ((this.waitFor(g.Z, E.Z, p.ZP, d.Z, f.ZP, h.default, v.Z, l.Z), null != e)) {
             var t, n, i, a, s, r;
             (x = null !== (t = e.dehydratedItems) && void 0 !== t ? t : []),
                 (j = null !== (n = e.locallyAddedItems) && void 0 !== n ? n : {}),
@@ -336,8 +336,8 @@ R(e_, 'displayName', 'GravityStore'),
         MESSAGE_CREATE: function (e) {
             var t, n;
             let { message: i, guildId: a, channelId: s } = e;
-            if (!(0, L.rK)('GravityStore-handleMessageCreate') || null == a || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === E.default.getId() || T.Z.isBlocked(null === (n = i.author) || void 0 === n ? void 0 : n.id) || (a in w && w[a] < 0) || (null != B[a] && s in B[a] && null != B[a][s] && B[a][s] < 0)) return !1;
-            let r = h.Z.getChannel(s);
+            if (!(0, L.rK)('GravityStore-handleMessageCreate') || null == a || (null === (t = i.author) || void 0 === t ? void 0 : t.id) === h.default.getId() || T.Z.isBlocked(null === (n = i.author) || void 0 === n ? void 0 : n.id) || (a in w && w[a] < 0) || (null != B[a] && s in B[a] && null != B[a][s] && B[a][s] < 0)) return !1;
+            let r = E.Z.getChannel(s);
             if (null == r || r.type !== Z.d4z.GUILD_ANNOUNCEMENT || f.ZP.isChannelMuted(a, s)) return !1;
             let l = g.Z.getMessage(i.channel_id, i.id);
             null == l && (l = (0, _.e5)(i));
@@ -503,7 +503,7 @@ R(e_, 'displayName', 'GravityStore'),
             let { messageId: t, reactions: n } = e,
                 i = G[t];
             if (null == i || i.type !== A.Rr.MESSAGE) return !1;
-            let a = E.default.getId();
+            let a = h.default.getId();
             i.message = i.message.addReactionBatch(n, a);
         },
         MESSAGE_REACTION_REMOVE: ed,

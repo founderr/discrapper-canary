@@ -8,7 +8,7 @@ var r,
     c = n(572004),
     u = n(689938),
     p = n(375294);
-function m(e, t, n) {
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function m(e, t, n) {
         e
     );
 }
-class _ extends (r = s.PureComponent) {
+class m extends (r = s.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
@@ -70,11 +70,11 @@ class _ extends (r = s.PureComponent) {
         }
     }
     constructor(e) {
-        super(e), m(this, '_timeout', void 0), (this.state = { mode: d.CopyInput.Modes.DEFAULT }), (this._timeout = new i.V7()), (this.handleCopy = this.handleCopy.bind(this));
+        super(e), _(this, '_timeout', void 0), (this.state = { mode: d.CopyInput.Modes.DEFAULT }), (this._timeout = new i.V7()), (this.handleCopy = this.handleCopy.bind(this));
     }
 }
-m(_, 'defaultProps', {
+_(m, 'defaultProps', {
     isVertical: !1,
     delay: 300
 }),
-    (t.Z = _);
+    (t.Z = m);

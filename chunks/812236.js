@@ -2,6 +2,9 @@ n.d(t, {
     SY: function () {
         return d;
     },
+    Xu: function () {
+        return c;
+    },
     ZP: function () {
         return u;
     },
@@ -19,16 +22,13 @@ let l = 'no primary app command for application';
 async function u(e, t) {
     let n,
         r = i.Z.getChannel(e);
-    if (null != r) {
-        let e = c(r, t);
-        if (null == e.commands[0]) {
-            let e = {
-                    type: 'application',
-                    applicationId: t
-                },
-                i = new AbortController();
-            (0, a.j)(e, !1), await (0, a.a)(e, 0, i), (n = c(r, t).commands[0]);
-        } else n = e.commands[0];
+    if (null != r && null == (n = c(r, t))) {
+        let e = {
+                type: 'application',
+                applicationId: t
+            },
+            i = new AbortController();
+        (0, a.j)(e, !1), await (0, a.a)(e, 0, i), (n = c(r, t));
     }
     if (null != n) return n;
     throw Error(l);
@@ -44,7 +44,7 @@ function c(e, t) {
             allowFetch: !1,
             allowApplicationState: !0
         }
-    );
+    ).commands[0];
 }
 function d(e, t) {
     return (0, s.v1)(
@@ -57,5 +57,5 @@ function d(e, t) {
             allowFetch: !1,
             allowApplicationState: !0
         }
-    );
+    ).commands[0];
 }

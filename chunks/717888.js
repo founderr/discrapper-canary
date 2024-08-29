@@ -1,12 +1,12 @@
-var s = n(484155),
-    r = n(599773),
-    a = n(730179),
-    i = Math.min;
+var r = n(484155),
+    a = n(599773),
+    s = n(730179),
+    o = Math.min;
 e.exports = function (e, t) {
-    if ((e = a(e)) < 1 || e > 9007199254740991) return [];
+    if ((e = s(e)) < 1 || e > 9007199254740991) return [];
     var n = 4294967295,
-        o = i(e, 4294967295);
-    (t = r(t)), (e -= 4294967295);
-    for (var c = s(o, t); ++n < e; ) t(n);
+        i = o(e, 4294967295);
+    (t = a(t)), (e -= 4294967295);
+    for (var c = r(i, t); ++n < e; ) t(n);
     return c;
 };

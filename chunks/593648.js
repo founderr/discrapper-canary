@@ -45,8 +45,8 @@ var n = t(735250),
     y = t(468788),
     V = t(689938),
     Y = t(426514),
-    H = t(224499);
-function w(e, s, t) {
+    w = t(224499);
+function H(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -228,10 +228,10 @@ function W(e) {
                     ? (0, n.jsxs)(n.Fragment, {
                           children: [
                               (0, n.jsx)(d.FormTitle, {
-                                  className: H.marginBottom20,
+                                  className: w.marginBottom20,
                                   children: V.Z.Messages.SOUNDPACK_LABEL
                               }),
-                              (0, n.jsx)(M.Z, { className: r()(Y.soundpackSelect, H.marginBottom40) })
+                              (0, n.jsx)(M.Z, { className: r()(Y.soundpackSelect, w.marginBottom40) })
                           ]
                       })
                     : null,
@@ -283,19 +283,19 @@ function K() {
               children: [
                   (0, n.jsxs)(d.Heading, {
                       variant: 'heading-lg/semibold',
-                      className: r()(Y.titleWithBeta, H.marginBottom20),
+                      className: r()(Y.titleWithBeta, w.marginBottom20),
                       children: [V.Z.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, n.jsx)(S.Z, {})]
                   }),
                   (0, n.jsx)(d.FormText, {
                       type: d.FormTextTypes.DESCRIPTION,
-                      className: H.marginBottom20,
+                      className: w.marginBottom20,
                       children: V.Z.Messages.GUILD_COMMUNITY_ALERTS_DESCRIPTION
                   }),
                   (0, n.jsxs)(d.FormItem, {
                       title: V.Z.Messages.GUILD_COMMUNITY_ALERTS_CHOOSE_SERVER,
                       children: [
                           (0, n.jsx)(d.SingleSelect, {
-                              className: null != s ? H.marginBottom20 : H.marginBottom40,
+                              className: null != s ? w.marginBottom20 : w.marginBottom40,
                               value: s,
                               onChange: (e) => {
                                   t(e);
@@ -304,13 +304,13 @@ function K() {
                           }),
                           null != s
                               ? (0, n.jsxs)('div', {
-                                    className: H.marginTop20,
+                                    className: w.marginTop20,
                                     children: [
                                         (0, n.jsxs)(R.F, {
                                             setting: G.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
                                             children: [
                                                 (0, n.jsx)(d.FormSwitch, {
-                                                    className: r()(H.marginBottom20),
+                                                    className: r()(w.marginBottom20),
                                                     note: V.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_DESCRIPTION,
                                                     value: !e[s].disableRaidAlertNag,
                                                     onChange: () => {
@@ -325,14 +325,14 @@ function K() {
                                                     hideBorder: !0,
                                                     children: V.Z.Messages.GUILD_COMMUNITY_ALERTS_NAG_HEADER
                                                 }),
-                                                (0, n.jsx)(d.FormDivider, { className: r()(H.marginTop20, H.marginBottom40) })
+                                                (0, n.jsx)(d.FormDivider, { className: r()(w.marginTop20, w.marginBottom40) })
                                             ]
                                         }),
                                         (0, n.jsxs)(R.F, {
                                             setting: G.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
                                             children: [
                                                 (0, n.jsx)(d.FormSwitch, {
-                                                    className: H.marginBottom20,
+                                                    className: w.marginBottom20,
                                                     note: V.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_DESCRIPTION,
                                                     value: !e[s].disableRaidAlertPush,
                                                     onChange: () => {
@@ -347,13 +347,13 @@ function K() {
                                                     hideBorder: !0,
                                                     children: V.Z.Messages.GUILD_COMMUNITY_ALERTS_PUSH_HEADER
                                                 }),
-                                                (0, n.jsx)(d.FormDivider, { className: r()(H.marginTop20, H.marginBottom40) })
+                                                (0, n.jsx)(d.FormDivider, { className: r()(w.marginTop20, w.marginBottom40) })
                                             ]
                                         })
                                     ]
                                 })
                               : null,
-                          null != s ? null : (0, n.jsx)(d.FormDivider, { className: r()(H.marginTop20, H.marginBottom40) })
+                          null != s ? null : (0, n.jsx)(d.FormDivider, { className: r()(w.marginTop20, w.marginBottom40) })
                       ]
                   })
               ]
@@ -391,7 +391,7 @@ class z extends a.PureComponent {
                 (0, n.jsx)(R.F, {
                     setting: G.s6.NOTIFICATIONS_ENABLE_DESKTOP,
                     children: (0, n.jsx)(d.FormSwitch, {
-                        className: H.marginBottom20,
+                        className: w.marginBottom20,
                         value: e !== F.qrD.NEVER && !_,
                         onChange: this.handleDesktopChange,
                         note: V.Z.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
@@ -404,7 +404,7 @@ class z extends a.PureComponent {
                 (0, n.jsx)(R.F, {
                     setting: G.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, n.jsx)(d.FormSwitch, {
-                        className: E ? H.marginBottom20 : H.marginBottom40,
+                        className: E ? w.marginBottom20 : w.marginBottom40,
                         value: !t,
                         note: V.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
                         onChange: this.handleToggleShowUnreadBadge,
@@ -414,7 +414,7 @@ class z extends a.PureComponent {
                 (0, n.jsx)(R.F, {
                     setting: G.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
                     children: (0, n.jsx)(d.FormSwitch, {
-                        className: H.marginBottom40,
+                        className: w.marginBottom40,
                         value: a,
                         note: V.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_BODY,
                         onChange: this.handleToggleShowFlash,
@@ -434,10 +434,10 @@ class z extends a.PureComponent {
                             }),
                             (0, n.jsx)(d.FormText, {
                                 type: d.FormTextTypes.DESCRIPTION,
-                                className: H.marginTop8,
+                                className: w.marginTop8,
                                 children: V.Z.Messages.FORM_DESCRIPTION_PUSH_AFK_TIMEOUT
                             }),
-                            (0, n.jsx)(d.FormDivider, { className: r()(H.marginTop40, H.marginBottom40) })
+                            (0, n.jsx)(d.FormDivider, { className: r()(w.marginTop40, w.marginBottom40) })
                         ]
                     })
                 }),
@@ -456,13 +456,13 @@ class z extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            w(this, 'handleToggleShowUnreadBadge', () => {
+            H(this, 'handleToggleShowUnreadBadge', () => {
                 E.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
             }),
-            w(this, 'handleToggleShowFlash', () => {
+            H(this, 'handleToggleShowFlash', () => {
                 E.default.setTaskbarFlash(!this.props.taskbarFlash);
             }),
-            w(this, 'renderTTS', () => {
+            H(this, 'renderTTS', () => {
                 if (!I.Zh) return null;
                 let e = [
                     {
@@ -486,7 +486,7 @@ class z extends a.PureComponent {
                             children: [
                                 (0, n.jsx)(d.FormText, {
                                     type: d.FormTextTypes.DESCRIPTION,
-                                    className: H.marginBottom8,
+                                    className: w.marginBottom8,
                                     children: V.Z.Messages.FORM_DESCRIPTION_TTS
                                 }),
                                 (0, n.jsx)(d.RadioGroup, {
@@ -496,7 +496,7 @@ class z extends a.PureComponent {
                                 })
                             ]
                         }),
-                        (0, n.jsx)(d.FormDivider, { className: r()(H.marginTop40, H.marginBottom40) })
+                        (0, n.jsx)(d.FormDivider, { className: r()(w.marginTop40, w.marginBottom40) })
                     ]
                 });
             });
@@ -522,7 +522,7 @@ function X() {
         ? (0, n.jsx)(R.F, {
               setting: G.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
               children: (0, n.jsx)(d.FormSwitch, {
-                  className: H.marginBottom20,
+                  className: w.marginBottom20,
                   value: s,
                   onChange: (e) => {
                       u.Z.setAccountFlag(y.c.MENTION_ON_ALL_MESSAGES, e);
@@ -545,7 +545,7 @@ function q() {
                       ? (0, n.jsx)(R.F, {
                             setting: G.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                             children: (0, n.jsx)(d.FormSwitch, {
-                                className: H.marginBottom40,
+                                className: w.marginBottom40,
                                 style: { marginTop: -20 },
                                 value: t,
                                 disabled: i || !t,
@@ -558,7 +558,7 @@ function q() {
                         ? (0, n.jsx)(R.F, {
                               setting: G.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                               children: (0, n.jsx)(d.FormSwitch, {
-                                  className: H.marginBottom40,
+                                  className: w.marginBottom40,
                                   value: t,
                                   disabled: i || t,
                                   note: 'Turns on the new notification system',
@@ -608,7 +608,7 @@ function q() {
                                   ]
                               })
                           }),
-                          (0, n.jsx)(d.FormDivider, { className: r()(H.marginTop40, H.marginBottom40) })
+                          (0, n.jsx)(d.FormDivider, { className: r()(w.marginTop40, w.marginBottom40) })
                       ]
                   })
               ]

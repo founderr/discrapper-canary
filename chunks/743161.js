@@ -5,8 +5,8 @@ var r = t(735250),
     u = t(481060),
     c = t(541099),
     a = t(827498),
-    s = t(421591),
-    l = t(314734),
+    l = t(421591),
+    s = t(314734),
     E = t(689938),
     _ = t(551397);
 e.default = i.memo(function (n) {
@@ -14,15 +14,15 @@ e.default = i.memo(function (n) {
         d = (0, o.e7)([c.Z], () => c.Z.shouldShowModal());
     return (
         i.useEffect(() => {
-            !d && (0, u.closeModal)(l.e9);
+            !d && (0, u.closeModal)(s.e9);
         }),
         (0, r.jsx)('span', {
-            style: l.u$,
+            style: s.u$,
             children: (0, r.jsx)(u.ModalRoot, {
                 className: _.root,
                 'aria-label': E.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE,
                 ...t,
-                children: (0, r.jsx)(s.Z, {
+                children: (0, r.jsx)(l.Z, {
                     channel: e,
                     entrypoint: a._b.VOICE
                 })

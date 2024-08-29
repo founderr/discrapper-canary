@@ -14,14 +14,14 @@ var i = n(735250),
     d = n(907336),
     u = n(740474),
     _ = n(393596),
-    E = n(689938),
-    h = n(548998);
+    h = n(689938),
+    E = n(548998);
 function m(e) {
     let { count: t, categoryId: n } = e,
         a = t.toLocaleString(l.default.locale),
         s = (0, d.E)({ categoryId: n });
     return (0, i.jsxs)('div', {
-        className: h.label,
+        className: E.label,
         children: [
             (0, i.jsx)(r.Text, {
                 variant: 'text-sm/medium',
@@ -72,20 +72,20 @@ function I(e) {
     return null == l
         ? null
         : (0, i.jsxs)('div', {
-              className: h.container,
+              className: E.container,
               children: [
                   (0, i.jsx)(r.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-secondary',
-                      children: E.Z.Messages.GLOBAL_DISCOVERY_SHOW
+                      children: h.Z.Messages.GLOBAL_DISCOVERY_SHOW
                   }),
                   (0, i.jsx)(c.Z, {
-                      className: h.filter,
+                      className: E.filter,
                       items: p,
                       title: I,
                       onSelect: g,
                       selected: ''.concat(n),
-                      'aria-label': E.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
+                      'aria-label': h.Z.Messages.GLOBAL_DISCOVERY_SERVERS_LANGUAGE_FILTER
                   })
               ]
           });

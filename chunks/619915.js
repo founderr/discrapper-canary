@@ -17,8 +17,8 @@ n.d(t, {
 var i = n(470079),
     l = n(442837),
     r = n(835473),
-    a = n(158776),
-    o = n(594174),
+    o = n(158776),
+    a = n(594174),
     u = n(823379),
     c = n(317381);
 function d(e, t) {
@@ -44,14 +44,14 @@ function s(e) {
 }
 function p(e, t) {
     let n = e.map((e) => e.applicationId),
-        a = (0, r.Z)(n),
+        o = (0, r.Z)(n),
         c = new Set([]);
     for (let t of e) for (let e of t.userIds) c.add(e);
     let d = (0, l.Wu)(
-        [o.default],
+        [a.default],
         () => {
             let e = [];
-            for (let t of c) e.push(o.default.getUser(t));
+            for (let t of c) e.push(a.default.getUser(t));
             return e;
         },
         [c]
@@ -64,7 +64,7 @@ function p(e, t) {
             }),
             e
                 .map((e, i) => {
-                    let l = a[i],
+                    let l = o[i],
                         r = [];
                     if (null != r)
                         for (let i of e.userIds) {
@@ -84,17 +84,17 @@ function p(e, t) {
                 })
                 .filter(u.lm)
         );
-    }, [e, a, d, t]);
+    }, [e, o, d, t]);
 }
 function f(e) {
     return (0, l.e7)(
-        [a.Z],
+        [o.Z],
         () => {
             let t = new Map();
             return (
                 e.forEach((e) => {
                     var n;
-                    let i = a.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
+                    let i = o.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
                         var n;
                         return t.application_id === (null == e ? void 0 : null === (n = e.application) || void 0 === n ? void 0 : n.id);
                     });

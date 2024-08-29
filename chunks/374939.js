@@ -8,7 +8,7 @@ var i = n(735250),
     d = n(17845),
     u = n(89866);
 t.Z = a.forwardRef(function (e, t) {
-    let { title: n, description: a, onScroll: s, button: _, bannerClassName: E, bannerBackground: h, children: m } = e,
+    let { title: n, description: a, onScroll: s, button: _, bannerClassName: h, bannerBackground: E, children: m } = e,
         I = (0, l.e7)([c.Z], () => null != c.Z.gradientPreset);
     return (0, i.jsxs)(o.AdvancedScroller, {
         onScroll: s,
@@ -19,8 +19,8 @@ t.Z = a.forwardRef(function (e, t) {
                 title: n,
                 description: a,
                 button: _,
-                className: E,
-                background: h
+                className: h,
+                background: E
             }),
             (0, i.jsx)('section', {
                 className: r()(u.contentContainer, { [u.clientThemes]: I }),

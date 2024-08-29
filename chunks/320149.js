@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(355298),
     u = n(333984),
     _ = n(26373),
-    E = n(486622),
-    h = n(718538),
+    h = n(486622),
+    E = n(718538),
     m = n(359110),
     I = n(6025),
     g = n(433355),
@@ -30,14 +30,14 @@ function N(e) {
         v = (0, _.V)(),
         L = (0, s.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
         Z = (0, s.e7)([u.Z], () => u.Z.isSpam(t.id)),
-        O = (0, h.V)(t.id, t.getRecipientId()),
+        O = (0, E.V)(t.id, t.getRecipientId()),
         R = a.useCallback(() => {
             I.Z.closeChannelSidebar(g.uZ), L && A && (0, m.Kh)(t.id), Z && v && (0, m.Kh)(t.id);
         }, [t.id, Z, v, L, A]),
         x = a.useCallback(() => {
             (0, r.showToast)((0, r.createToast)(f.Z.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, r.ToastType.FAILURE));
         }, []),
-        { markAsNotSpam: b } = (0, E.m)({
+        { markAsNotSpam: b } = (0, h.m)({
             onAcceptSuccess: R,
             onError: x
         });

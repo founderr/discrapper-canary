@@ -1,19 +1,19 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return b;
+        return p;
     }
 }),
-    r(47120);
-var a = r(735250),
-    n = r(470079),
-    i = r(848246),
-    o = r(442837),
-    l = r(481060),
-    c = r(570140),
-    s = r(746599),
-    d = r(594174),
-    u = r(246992),
-    h = r(700768);
+    n(47120);
+var r = n(735250),
+    a = n(470079),
+    l = n(848246),
+    i = n(442837),
+    o = n(481060),
+    c = n(570140),
+    s = n(746599),
+    u = n(594174),
+    d = n(246992),
+    h = n(700768);
 let m = [
         {
             label: 'No Override',
@@ -24,7 +24,7 @@ let m = [
             value: !0
         }
     ],
-    g = [
+    x = [
         {
             label: 'No Override',
             value: !1
@@ -34,7 +34,7 @@ let m = [
             value: !0
         }
     ],
-    p = [
+    f = [
         {
             label: '1 day',
             value: 1
@@ -44,62 +44,62 @@ let m = [
             value: 7
         }
     ];
-function b() {
-    let e = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
-        [t, r] = n.useState(!1),
-        [b, f] = n.useState(!1),
-        [x, y] = n.useState(1);
-    return (0, a.jsxs)('div', {
+function p() {
+    let e = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+        [t, n] = a.useState(!1),
+        [p, g] = a.useState(!1),
+        [b, v] = a.useState(1);
+    return (0, r.jsxs)('div', {
         className: h.container,
         children: [
-            (0, a.jsx)(l.FormSection, {
+            (0, r.jsx)(o.FormSection, {
                 title: 'Override HQ Streaming: Available',
                 className: h.formElement,
-                tag: l.FormTitleTags.H3,
-                children: (0, a.jsx)(l.SingleSelect, {
+                tag: o.FormTitleTags.H3,
+                children: (0, r.jsx)(o.SingleSelect, {
                     options: m,
                     value: t,
                     onChange: (e) => {
-                        r(e);
+                        n(e);
                     },
-                    popoutLayerContext: u.O$
+                    popoutLayerContext: d.O$
                 })
             }),
-            (0, a.jsx)(l.FormSection, {
+            (0, r.jsx)(o.FormSection, {
                 title: 'Override HQ Streaming: Activate',
                 className: h.formElement,
-                tag: l.FormTitleTags.H3,
-                children: (0, a.jsx)(l.SingleSelect, {
-                    options: g,
-                    value: b,
+                tag: o.FormTitleTags.H3,
+                children: (0, r.jsx)(o.SingleSelect, {
+                    options: x,
+                    value: p,
                     onChange: (e) => {
-                        f(e);
+                        g(e);
                     },
-                    popoutLayerContext: u.O$
+                    popoutLayerContext: d.O$
                 })
             }),
-            (0, a.jsx)(l.FormSection, {
+            (0, r.jsx)(o.FormSection, {
                 title: 'Override Demo Duration',
                 className: h.formElement,
-                tag: l.FormTitleTags.H3,
-                children: (0, a.jsx)(l.SingleSelect, {
-                    options: p,
-                    value: x,
+                tag: o.FormTitleTags.H3,
+                children: (0, r.jsx)(o.SingleSelect, {
+                    options: f,
+                    value: b,
                     onChange: (e) => {
-                        y(e);
+                        v(e);
                     },
-                    popoutLayerContext: u.O$
+                    popoutLayerContext: d.O$
                 })
             }),
-            (0, a.jsx)(l.Button, {
+            (0, r.jsx)(o.Button, {
                 onClick: () =>
                     void (c.Z.dispatch({
                         type: 'PREMIUM_PERKS_DEMO_OVERRIDE',
-                        perkType: i.q.STREAM_HIGH_QUALITY,
+                        perkType: l.q.STREAM_HIGH_QUALITY,
                         user: e,
                         available: t,
-                        activateSuccess: b,
-                        demoDuration: x
+                        activateSuccess: p,
+                        demoDuration: b
                     }),
                     (0, s.Vk)()),
                 children: 'Update'

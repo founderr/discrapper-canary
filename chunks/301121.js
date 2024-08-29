@@ -46,8 +46,8 @@ var n,
     y = t(430824),
     V = t(663389),
     Y = t(594174),
-    H = t(626135),
-    w = t(63063),
+    w = t(626135),
+    H = t(63063),
     k = t(78451),
     W = t(358085),
     K = t(709054),
@@ -85,7 +85,7 @@ function e_() {
         s = (0, L.Z)(),
         t = null != e ? e : s;
     r.useEffect(() => {
-        H.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, { action: et.Y.VIEW_SETTINGS_PAGE });
+        w.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, { action: et.Y.VIEW_SETTINGS_PAGE });
     }, []);
     let n = r.useCallback((e) => {
         null != e &&
@@ -93,7 +93,7 @@ function e_() {
                 type: 'GUILD_IDENTITY_SETTINGS_SET_GUILD',
                 guild: e
             }),
-            H.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+            w.default.track(ei.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                 action: et.Y.SELECT_GUILD,
                 guild_id: null == e ? void 0 : e.id
             });
@@ -140,7 +140,7 @@ function eE() {
                               }),
                               (0, i.jsx)(T.FormSwitch, {
                                   value: n,
-                                  note: eo.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({ learnMoreLink: w.Z.getArticleURL(ei.BhN.SAFETY_ALERTS) }),
+                                  note: eo.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({ learnMoreLink: H.Z.getArticleURL(ei.BhN.SAFETY_ALERTS) }),
                                   onChange: U.Q,
                                   hideBorder: !0,
                                   children: eo.Z.Messages.SAFETY_ALERTS_SETTING_TITLE
@@ -157,7 +157,7 @@ function eE() {
           });
 }
 function eu(e, s) {
-    H.default.track(ei.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+    w.default.track(ei.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
         default_guilds_restricted: e,
         applied_to_existing_guilds: s
     });
@@ -175,7 +175,7 @@ function eI() {
                         ref: t,
                         children: (0, i.jsx)(T.FormSwitch, {
                             value: !s,
-                            note: eo.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_CAPTION.format({ helpdeskArticle: w.Z.getArticleURL(ei.BhN.MESSAGE_REQUESTS) }),
+                            note: eo.Z.Messages.MESSAGE_REQUESTS_SETTING_GENERAL_CAPTION.format({ helpdeskArticle: H.Z.getArticleURL(ei.BhN.MESSAGE_REQUESTS) }),
                             disabled: e,
                             onChange: () => {
                                 var e;
@@ -251,7 +251,7 @@ function eT() {
                         (0, i.jsx)(T.FormText, {
                             type: T.FormTextTypes.DESCRIPTION,
                             className: ec.marginBottom8,
-                            children: eo.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: w.Z.getArticleURL(ei.BhN.EXPLICIT_MEDIA_REDACTION) })
+                            children: eo.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: H.Z.getArticleURL(ei.BhN.EXPLICIT_MEDIA_REDACTION) })
                         }),
                         (0, i.jsx)(T.FormItem, {
                             ref: r,
@@ -431,7 +431,7 @@ class em extends r.PureComponent {
         });
     }
     trackDefaultDmsUpdated(e, s) {
-        H.default.track(ei.rMx.GUILD_DEFAULT_DMS_UPDATED, {
+        w.default.track(ei.rMx.GUILD_DEFAULT_DMS_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: s
         });
@@ -452,7 +452,7 @@ class em extends r.PureComponent {
         });
     }
     trackDefaultMessageRequestUpdated(e, s) {
-        H.default.track(ei.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
+        w.default.track(ei.rMx.GUILD_DEFAULT_MESSAGE_REQUEST_UPDATED, {
             default_guilds_restricted: e,
             applied_to_existing_guilds: s
         });
@@ -467,7 +467,7 @@ class em extends r.PureComponent {
                     (0, i.jsx)(T.FormText, {
                         type: T.FormTextTypes.DESCRIPTION,
                         className: ec.marginBottom8,
-                        children: eo.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({ appealLink: w.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING) })
+                        children: eo.Z.Messages.USER_EXPLICIT_CONTENT_FILTER_HELP_V3.format({ appealLink: H.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING) })
                     }),
                     (0, i.jsx)(T.RadioGroup, {
                         value: this.props.explicitContentFilter,
@@ -510,7 +510,7 @@ class em extends r.PureComponent {
                                               (0, i.jsx)(T.FormText, {
                                                   type: T.FormTextTypes.DESCRIPTION,
                                                   className: ec.marginBottom8,
-                                                  children: eo.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: w.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING) })
+                                                  children: eo.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: H.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING) })
                                               }),
                                               (0, i.jsx)(T.RadioGroup, {
                                                   value: s,
@@ -546,7 +546,7 @@ class em extends r.PureComponent {
                                       (0, i.jsx)(T.FormText, {
                                           type: T.FormTextTypes.DESCRIPTION,
                                           className: ec.marginBottom8,
-                                          children: eo.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: w.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING) })
+                                          children: eo.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: H.Z.getArticleURL(ei.BhN.SAFE_DIRECT_MESSAGING) })
                                       }),
                                       (0, i.jsx)(T.RadioGroup, {
                                           value: s,
@@ -579,7 +579,7 @@ class em extends r.PureComponent {
                     setting: ea.s6.PRIVACY_KEYWORD_FILTER,
                     children: (0, i.jsx)(T.FormSwitch, {
                         value: this.props.keywordFilter,
-                        note: eo.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({ learnMoreLink: w.Z.getArticleURL(ei.BhN.KEYWORD_FILTERS) }),
+                        note: eo.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({ learnMoreLink: H.Z.getArticleURL(ei.BhN.KEYWORD_FILTERS) }),
                         onChange: (e) =>
                             Q.gw.updateSetting({
                                 profanity: e,
@@ -654,7 +654,7 @@ class em extends r.PureComponent {
                     setting: ea.s6.PRIVACY_DATA_IMPROVE_DISCORD,
                     children: (0, i.jsx)(T.FormSwitch, {
                         value: e,
-                        note: eo.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({ helpdeskArticle: w.Z.getArticleURL(ei.BhN.DATA_USED_TO_IMPROVE_DISCORD) }),
+                        note: eo.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_NOTE.format({ helpdeskArticle: H.Z.getArticleURL(ei.BhN.DATA_USED_TO_IMPROVE_DISCORD) }),
                         onChange: this.handleUsageStatisticsChange,
                         children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE
                     })
@@ -663,7 +663,7 @@ class em extends r.PureComponent {
                     setting: ea.s6.PRIVACY_DATA_PERSONALIZE,
                     children: (0, i.jsx)(T.FormSwitch, {
                         value: s,
-                        note: eo.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({ helpdeskArticle: w.Z.getArticleURL(ei.BhN.DATA_USED_FOR_RECOMMENDED) }),
+                        note: eo.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_NOTE_LEARN_MORE.format({ helpdeskArticle: H.Z.getArticleURL(ei.BhN.DATA_USED_FOR_RECOMMENDED) }),
                         onChange: this.handlePersonalizationChange,
                         children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE
                     })
@@ -672,7 +672,7 @@ class em extends r.PureComponent {
                     setting: ea.s6.PRIVACY_DATA_QUESTS,
                     children: (0, i.jsx)(T.FormSwitch, {
                         value: !t,
-                        note: eo.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({ helpdeskArticle: w.Z.getArticleURL(ei.BhN.DATA_PRIVACY_CONTROLS) }),
+                        note: eo.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT_FORMATTED.format({ helpdeskArticle: H.Z.getArticleURL(ei.BhN.DATA_PRIVACY_CONTROLS) }),
                         onChange: this.handleChangeDropsOptedOut,
                         children: (0, i.jsx)('div', { children: eo.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT })
                     })
@@ -746,7 +746,7 @@ class em extends r.PureComponent {
                     (0, i.jsx)(T.FormText, {
                         type: T.FormTextTypes.DESCRIPTION,
                         className: ec.marginBottom20,
-                        children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({ helpdeskArticle: w.Z.getArticleURL(ei.BhN.GDPR_REQUEST_DATA) })
+                        children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_NOTE.format({ helpdeskArticle: H.Z.getArticleURL(ei.BhN.GDPR_REQUEST_DATA) })
                     }),
                     e,
                     o
@@ -899,7 +899,7 @@ class em extends r.PureComponent {
                 var e;
                 (e = {
                     header: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
-                    body: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({ helpdeskArticle: w.Z.getArticleURL(ei.BhN.GDPR_PACKAGE_CONTENTS) }),
+                    body: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({ helpdeskArticle: H.Z.getArticleURL(ei.BhN.GDPR_PACKAGE_CONTENTS) }),
                     confirmText: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
                     cancelText: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CANCEL,
                     confirmButtonColor: T.Button.Colors.BRAND,

@@ -5,35 +5,35 @@ n.d(t, {
 }),
     n(47120),
     n(653041);
-var s = n(470079),
-    r = n(399606),
-    a = n(1870),
-    i = n(215023);
-let o = (e) => {
+var r = n(470079),
+    a = n(399606),
+    s = n(1870),
+    o = n(215023);
+let i = (e) => {
         let t = new Map();
         return (
-            i.N.forEach((e, n) => {
+            o.N.forEach((e, n) => {
                 t.set(e, n);
             }),
             e.sort((e, n) => {
-                var s, r;
-                let a = null !== (s = t.get(e.skuId)) && void 0 !== s ? s : 1 / 0;
-                return a - (null !== (r = t.get(n.skuId)) && void 0 !== r ? r : 1 / 0);
+                var r, a;
+                let s = null !== (r = t.get(e.skuId)) && void 0 !== r ? r : 1 / 0;
+                return s - (null !== (a = t.get(n.skuId)) && void 0 !== a ? a : 1 / 0);
             })
         );
     },
     c = (e) => {
-        let t = (0, r.e7)([a.Z], () => a.Z.purchases),
-            { sortedPopularPickProducts: n } = (0, s.useMemo)(() => {
+        let t = (0, a.e7)([s.Z], () => s.Z.purchases),
+            { sortedPopularPickProducts: n } = (0, r.useMemo)(() => {
                 let n = [],
-                    s = [],
-                    r = new Map();
-                for (let a of e.values())
-                    a.products.forEach((e) => {
-                        i.N.includes(e.skuId) && (t.get(e.skuId) ? n.push(e) : s.push(e), r.set(e.skuId, a));
+                    r = [],
+                    a = new Map();
+                for (let s of e.values())
+                    s.products.forEach((e) => {
+                        o.N.includes(e.skuId) && (t.get(e.skuId) ? n.push(e) : r.push(e), a.set(e.skuId, s));
                     });
-                let a = o(n);
-                return { sortedPopularPickProducts: o(s).concat(a).slice(0, 12) };
+                let s = i(n);
+                return { sortedPopularPickProducts: i(r).concat(s).slice(0, 12) };
             }, [e, t]);
         return { sortedPopularPickProducts: n };
     };

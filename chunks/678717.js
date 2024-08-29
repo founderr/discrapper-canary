@@ -1,286 +1,286 @@
-r.r(t),
-    r.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
             return Y;
         }
     }),
-    r(653041),
-    r(47120);
-var a = r(735250),
-    n = r(470079),
-    i = r(120356),
-    o = r.n(i),
-    l = r(990547),
-    c = r(442837),
-    s = r(481060),
-    d = r(347469),
-    u = r(213609),
-    h = r(213713),
-    m = r(665149),
-    g = r(906467),
-    p = r(259580),
-    b = r(31336),
-    f = r(19759),
-    x = r(432877);
-r(381996);
-var y = r(392750),
-    k = r(926976),
-    v = r(592197),
-    _ = r(860337),
-    j = r(789654),
-    w = r(691867),
-    C = r(916790),
-    T = r(645973),
-    S = r(912072),
-    N = r(246992),
-    E = r(442954),
-    I = r(702904),
-    Z = r(178821),
-    R = r(248526),
-    O = r(958328),
-    L = r(514866),
-    A = r(678639),
-    B = r(351930),
-    P = r(771751),
-    M = r(596768),
-    D = r(621060),
-    U = r(689938),
-    G = r(941735),
-    F = r(535271);
+    n(653041),
+    n(47120);
+var r = n(735250),
+    a = n(470079),
+    l = n(120356),
+    i = n.n(l),
+    o = n(990547),
+    c = n(442837),
+    s = n(481060),
+    u = n(347469),
+    d = n(213609),
+    h = n(213713),
+    m = n(665149),
+    x = n(906467),
+    f = n(259580),
+    p = n(31336),
+    g = n(19759),
+    b = n(432877);
+n(381996);
+var v = n(392750),
+    _ = n(926976),
+    j = n(592197),
+    C = n(860337),
+    T = n(789654),
+    S = n(691867),
+    N = n(916790),
+    y = n(645973),
+    w = n(912072),
+    k = n(246992),
+    E = n(442954),
+    I = n(702904),
+    R = n(178821),
+    Z = n(248526),
+    O = n(958328),
+    L = n(514866),
+    A = n(678639),
+    B = n(351930),
+    P = n(771751),
+    M = n(596768),
+    D = n(621060),
+    U = n(689938),
+    G = n(941735),
+    F = n(535271);
 function H(e) {
-    let { resizableNode: t, onResize: r, onResizeEnd: n } = e,
-        i = (0, d.Z)({
-            minDimension: f.h,
+    let { resizableNode: t, onResize: n, onResizeEnd: a } = e,
+        l = (0, u.Z)({
+            minDimension: g.h,
             resizableDomNodeRef: t,
-            onElementResize: r,
-            onElementResizeEnd: n,
-            orientation: d.y.HORIZONTAL_LEFT
+            onElementResize: n,
+            onElementResizeEnd: a,
+            orientation: u.y.HORIZONTAL_LEFT
         });
-    return (0, a.jsx)('div', {
-        onMouseDown: i,
+    return (0, r.jsx)('div', {
+        onMouseDown: l,
         className: G.resizeHandle
     });
 }
 function z() {
     var e;
-    let t = n.useMemo(() => {
+    let t = a.useMemo(() => {
             let e = [
                 {
                     id: 'analytics',
                     name: 'Analytics',
-                    render: () => (0, a.jsx)(k.Z, {})
+                    render: () => (0, r.jsx)(_.Z, {})
                 },
                 {
                     id: 'triggers',
                     name: 'Triggers',
-                    render: () => (0, a.jsx)(M.Z, {})
+                    render: () => (0, r.jsx)(M.Z, {})
                 },
                 {
                     id: 'stores',
                     name: 'Stores',
-                    render: () => (0, a.jsx)(A.Z, {})
+                    render: () => (0, r.jsx)(A.Z, {})
                 },
                 {
                     id: 'dispatcher',
                     name: 'Dispatcher',
-                    render: () => (0, a.jsx)(C.Z, {})
+                    render: () => (0, r.jsx)(N.Z, {})
                 }
             ];
             return (
-                g.Z.isDeveloper &&
+                x.Z.isDeveloper &&
                     (e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
-                        render: () => (0, a.jsx)(L.Z, {})
+                        render: () => (0, r.jsx)(L.Z, {})
                     }),
                     e.push({
                         id: 'perks_demos',
                         name: 'Perks Demos',
-                        render: () => (0, a.jsx)(R.Z, {})
+                        render: () => (0, r.jsx)(Z.Z, {})
                     })),
-                g.Z.isDeveloper &&
+                x.Z.isDeveloper &&
                     (e.push({
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
-                        render: () => (0, a.jsx)(T.Z, {})
+                        render: () => (0, r.jsx)(y.Z, {})
                     }),
                     e.push({
                         id: 'clans',
                         name: 'Clans',
-                        render: () => (0, a.jsx)(_.Z, {})
+                        render: () => (0, r.jsx)(C.Z, {})
                     }),
                     e.push({
                         id: 'performance',
                         name: 'Performance',
-                        render: () => (0, a.jsx)(Z.Z, {})
+                        render: () => (0, r.jsx)(R.Z, {})
                     })),
                 e.push({
                     id: 'colors',
                     name: 'Colors',
-                    render: () => (0, a.jsx)(j.Z, {})
+                    render: () => (0, r.jsx)(T.Z, {})
                 }),
                 e.push({
                     id: 'design_toggles',
                     name: 'Design Toggles',
-                    render: () => (0, a.jsx)(w.Z, {})
+                    render: () => (0, r.jsx)(S.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, a.jsx)(S.Z, { devSettingsCategory: x.zU.OVERLAYS })
+                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
                     name: 'Messaging',
-                    render: () => (0, a.jsx)(S.Z, { devSettingsCategory: x.zU.MESSAGING })
+                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.MESSAGING })
                 }),
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, a.jsx)(S.Z, { devSettingsCategory: x.zU.REPORTING })
+                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
                     name: 'Permissions',
-                    render: () => (0, a.jsx)(O.Z, {})
+                    render: () => (0, r.jsx)(O.Z, {})
                 }),
                 e.push({
                     id: 'modals',
                     name: 'Modals',
-                    render: () => (0, a.jsx)(E.Z, {})
+                    render: () => (0, r.jsx)(E.Z, {})
                 }),
                 e.push({
                     id: 'affinity',
                     name: 'Affinity',
-                    render: () => (0, a.jsx)(y.Z, {})
+                    render: () => (0, r.jsx)(v.Z, {})
                 }),
-                g.Z.isDeveloper &&
+                x.Z.isDeveloper &&
                     e.push({
                         id: 'content_inventory',
                         name: 'Content Inventory',
-                        render: () => (0, a.jsx)(h.Z, {})
+                        render: () => (0, r.jsx)(h.Z, {})
                     }),
                 window.GLOBAL_ENV.RELEASE_CHANNEL.startsWith('staging') &&
                     (e.push({
                         id: 'trials',
                         name: 'Trials',
-                        render: () => (0, a.jsx)(P.Z, {})
+                        render: () => (0, r.jsx)(P.Z, {})
                     }),
                     e.push({
                         id: 'payments',
                         name: 'Payments',
-                        render: () => (0, a.jsx)(I.Z, {})
+                        render: () => (0, r.jsx)(I.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
                         name: 'Subscriptions',
-                        render: () => (0, a.jsx)(B.Z, {})
+                        render: () => (0, r.jsx)(B.Z, {})
                     }),
                     e.push({
                         id: 'billing',
                         name: 'Billing',
-                        render: () => (0, a.jsx)(v.Z, {})
+                        render: () => (0, r.jsx)(j.Z, {})
                     })),
                 e
             );
         }, []),
         {
-            TabBar: r,
-            renderSelectedTab: i,
-            selectedTabId: o
+            TabBar: n,
+            renderSelectedTab: l,
+            selectedTabId: i
         } = (0, D.Z)(
             {
                 tabs: t,
-                initialSelectedTabId: null !== (e = f.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
+                initialSelectedTabId: null !== (e = g.Z.lastOpenTabId) && void 0 !== e ? e : void 0,
                 onChangeTab: (e) => {
-                    (0, b.Qh)({ lastOpenTabId: e });
+                    (0, p.Qh)({ lastOpenTabId: e });
                 }
             },
             [t]
         );
     return (
-        (0, u.Z)({
-            type: l.ImpressionTypes.PANE,
-            name: l.ImpressionNames.VIEW_PANEL_DEVTOOLS,
-            properties: { panel: o }
+        (0, d.Z)({
+            type: o.ImpressionTypes.PANE,
+            name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
+            properties: { panel: i }
         }),
-        (0, a.jsxs)(N.Gk, {
+        (0, r.jsxs)(k.Gk, {
             children: [
-                (0, a.jsxs)(m.ZP, {
+                (0, r.jsxs)(m.ZP, {
                     className: F.headerBar,
-                    toolbar: (0, a.jsx)(m.ZP.Icon, {
+                    toolbar: (0, r.jsx)(m.ZP.Icon, {
                         icon: s.XSmallIcon,
                         tooltip: U.Z.Messages.CLOSE,
-                        onClick: b.SO
+                        onClick: p.SO
                     }),
                     children: [
-                        (0, a.jsx)(m.ZP.Icon, {
+                        (0, r.jsx)(m.ZP.Icon, {
                             icon: s.StaffBadgeIcon,
                             tooltip: 'DevTools'
                         }),
-                        (0, a.jsx)(m.ZP.Title, { children: 'DevTools' })
+                        (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
                     ]
                 }),
-                (0, a.jsx)(r, {}),
-                i(),
-                (0, a.jsx)(N.Br, { className: G.layerContainer })
+                (0, r.jsx)(n, {}),
+                l(),
+                (0, r.jsx)(k.Br, { className: G.layerContainer })
             ]
         })
     );
 }
 function V() {
-    let e = n.useRef(null),
-        t = (0, c.e7)([f.Z], () => f.Z.sidebarWidth),
-        [r, i] = n.useState(null),
-        l = n.useCallback((e) => (0, b.Qh)({ sidebarWidth: e }), []);
-    return (n.useEffect(() => {
-        null === r && null !== t && i(t);
-    }, [t, r]),
-    null === r)
+    let e = a.useRef(null),
+        t = (0, c.e7)([g.Z], () => g.Z.sidebarWidth),
+        [n, l] = a.useState(null),
+        o = a.useCallback((e) => (0, p.Qh)({ sidebarWidth: e }), []);
+    return (a.useEffect(() => {
+        null === n && null !== t && l(t);
+    }, [t, n]),
+    null === n)
         ? null
-        : (0, a.jsxs)('div', {
+        : (0, r.jsxs)('div', {
               ref: e,
-              className: o()(G.container),
+              className: i()(G.container),
               style: {
-                  minWidth: f.h,
-                  width: r
+                  minWidth: g.h,
+                  width: n
               },
               children: [
-                  (0, a.jsx)(H, {
+                  (0, r.jsx)(H, {
                       resizableNode: e,
-                      onResize: i,
-                      onResizeEnd: l
+                      onResize: l,
+                      onResizeEnd: o
                   }),
-                  (0, a.jsx)('div', {
+                  (0, r.jsx)('div', {
                       className: G.sidebarContent,
-                      children: (0, a.jsx)(z, {})
+                      children: (0, r.jsx)(z, {})
                   })
               ]
           });
 }
 function W() {
-    let e = (0, c.e7)([f.Z], () => f.Z.displayTools);
+    let e = (0, c.e7)([g.Z], () => g.Z.displayTools);
     return e
-        ? (0, a.jsx)('div', {
-              className: o()(G.container, G.mobileContainerExpanded),
-              children: (0, a.jsx)('div', {
+        ? (0, r.jsx)('div', {
+              className: i()(G.container, G.mobileContainerExpanded),
+              children: (0, r.jsx)('div', {
                   className: G.sidebarContent,
-                  children: (0, a.jsx)(z, {})
+                  children: (0, r.jsx)(z, {})
               })
           })
-        : (0, a.jsx)('div', {
+        : (0, r.jsx)('div', {
               className: G.container,
-              children: (0, a.jsx)(s.Clickable, {
-                  onClick: b.SO,
-                  children: (0, a.jsxs)(m.ZP, {
-                      className: o()(F.headerBar, G.mobileHeaderCollapsed),
-                      toolbar: (0, a.jsx)(p.Z, { direction: p.Z.Directions.UP }),
+              children: (0, r.jsx)(s.Clickable, {
+                  onClick: p.SO,
+                  children: (0, r.jsxs)(m.ZP, {
+                      className: i()(F.headerBar, G.mobileHeaderCollapsed),
+                      toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
-                          (0, a.jsx)(m.ZP.Icon, {
+                          (0, r.jsx)(m.ZP.Icon, {
                               icon: s.StaffBadgeIcon,
                               tooltip: 'DevTools'
                           }),
-                          (0, a.jsx)(m.ZP.Title, { children: 'DevTools' })
+                          (0, r.jsx)(m.ZP.Title, { children: 'DevTools' })
                       ]
                   })
               })
@@ -288,5 +288,5 @@ function W() {
 }
 function Y(e) {
     let { mobile: t } = e;
-    return t ? (0, a.jsx)(W, {}) : (0, a.jsx)(V, {});
+    return t ? (0, r.jsx)(W, {}) : (0, r.jsx)(V, {});
 }

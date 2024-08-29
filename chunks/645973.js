@@ -1,23 +1,23 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return u;
+        return d;
     }
 });
-var a = r(735250),
-    n = r(470079),
-    i = r(120356),
-    o = r.n(i),
-    l = r(481060),
-    c = r(718629),
-    s = r(405047),
-    d = r(535271);
-function u() {
-    let e = n.useRef(null);
-    return (0, a.jsx)('div', {
+var r = n(735250),
+    a = n(470079),
+    l = n(120356),
+    i = n.n(l),
+    o = n(481060),
+    c = n(718629),
+    s = n(405047),
+    u = n(535271);
+function d() {
+    let e = a.useRef(null);
+    return (0, r.jsx)('div', {
         ref: e,
-        className: o()(d.panel, s.panel),
-        children: (0, a.jsx)(l.Button, {
-            size: l.Button.Sizes.SMALL,
+        className: i()(u.panel, s.panel),
+        children: (0, r.jsx)(o.Button, {
+            size: o.Button.Sizes.SMALL,
             onClick: c.Z.clearUploadedKeyVersions,
             children: 'Reset Uploaded Key Versions Cache'
         })

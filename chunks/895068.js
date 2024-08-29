@@ -17,8 +17,8 @@ var i,
     d = n.n(c),
     u = n(180081),
     _ = n(143927),
-    E = n(442837),
-    h = n(481060),
+    h = n(442837),
+    E = n(481060),
     m = n(110924),
     I = n(970606),
     g = n(594174),
@@ -55,13 +55,13 @@ let P = {
 function D(e) {
     var t;
     let { clan: n, entranceDelay: i, hide: a, searchCriteria: s, className: r, source: o, ...c } = e,
-        _ = (0, h.useSpring)({
+        _ = (0, E.useSpring)({
             config: P,
             from: { translateY: -6 },
             to: { translateY: 0 },
             delay: i
         }),
-        E = (0, h.useSpring)({
+        h = (0, E.useSpring)({
             config: M,
             from: { opacity: 0 },
             to: { opacity: 1 },
@@ -70,7 +70,7 @@ function D(e) {
     return (0, l.jsx)(u.animated.div, {
         style: {
             translateY: _.translateY,
-            opacity: a ? 0 : E.opacity
+            opacity: a ? 0 : h.opacity
         },
         children: (0, l.jsx)(
             S.ZP,
@@ -103,7 +103,7 @@ t.ZP = o.memo(function (e) {
         k = (0, v.GN)((e) => e.selectedGames, _.Z),
         w = (0, m.Z)(j),
         { currentPage: B, updatePage: H, totalItems: V, pageSize: F } = (0, A.$)(),
-        Y = (0, E.e7)([g.default], () => g.default.getCurrentUser());
+        Y = (0, h.e7)([g.default], () => g.default.getCurrentUser());
     o.useEffect(() => {
         if (null != j && !!(0, Z.Pw)(j)) (!(null != w && (0, Z.Pw)(w)) || !(w.loadedAt >= j.loadedAt)) && (0, I.Oe)('top_picks', U);
     }, [U, j, w]);
@@ -216,7 +216,7 @@ t.ZP = o.memo(function (e) {
             },
             [z, q, P, B, F]
         ),
-        J = o.useContext(h.AccessibilityPreferencesContext).reducedMotion.enabled,
+        J = o.useContext(E.AccessibilityPreferencesContext).reducedMotion.enabled,
         $ = o.useCallback(
             (e, t, n) => {
                 let { items: i } = z[e],
@@ -259,7 +259,7 @@ t.ZP = o.memo(function (e) {
                         return (0, l.jsx)(l.Fragment, {
                             children:
                                 V > F &&
-                                (0, l.jsx)(h.Paginator, {
+                                (0, l.jsx)(E.Paginator, {
                                     className: d()(x.paginationInput),
                                     totalCount: V,
                                     pageSize: F,
@@ -298,12 +298,12 @@ t.ZP = o.memo(function (e) {
         ? (0, l.jsxs)('div', {
               className: x.emptySavedGuilds,
               children: [
-                  (0, l.jsx)(h.Heading, {
+                  (0, l.jsx)(E.Heading, {
                       variant: 'heading-md/medium',
                       color: 'header-primary',
                       children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
                   }),
-                  (0, l.jsx)(h.Text, {
+                  (0, l.jsx)(E.Text, {
                       variant: 'text-sm/medium',
                       color: 'header-secondary',
                       children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
@@ -314,12 +314,12 @@ t.ZP = o.memo(function (e) {
           ? (0, l.jsxs)('div', {
                 className: x.emptySavedGuilds,
                 children: [
-                    (0, l.jsx)(h.Heading, {
+                    (0, l.jsx)(E.Heading, {
                         variant: 'heading-md/medium',
                         color: 'header-primary',
                         children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
                     }),
-                    (0, l.jsx)(h.Text, {
+                    (0, l.jsx)(E.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION

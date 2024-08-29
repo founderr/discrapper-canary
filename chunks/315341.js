@@ -9,8 +9,8 @@ var i = n(442837),
     d = n(592125),
     u = n(915486),
     _ = n(48481),
-    E = n(981631),
-    h = n(71509);
+    h = n(981631),
+    E = n(71509);
 function m(e, t) {
     let n = !1;
     return (
@@ -99,7 +99,7 @@ let g = [
     },
     {
         version: 9,
-        run: (e) => (c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && l.K.set(h.Ip, 'true'), I(e, c.v6.MULTI_ACCOUNT_TOOLTIP, a.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
+        run: (e) => (c.qc.hasHiddenHotspot(c.v6.MULTI_ACCOUNT_TOOLTIP) && l.K.set(E.Ip, 'true'), I(e, c.v6.MULTI_ACCOUNT_TOOLTIP, a.z.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
         cleanup() {}
     },
     {
@@ -108,7 +108,7 @@ let g = [
             var t;
             let n = I(e, c.v6.HUB_LINK_CHANNEL_NOTICE, a.z.CHANNEL_NOTICE_HUBLINK),
                 i = null !== (t = l.K.get('channelNotices')) && void 0 !== t ? t : {};
-            return !1 === i[E.vID.INVITE] && m(e, a.z.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === i[E.vID.QUICKSWITCHER] && m(e, a.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === i[E.vID.GUILD_BOOSTING] && m(e, a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n;
+            return !1 === i[h.vID.INVITE] && m(e, a.z.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === i[h.vID.QUICKSWITCHER] && m(e, a.z.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === i[h.vID.GUILD_BOOSTING] && m(e, a.z.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n;
         },
         cleanup() {
             l.K.remove('channelNotices');

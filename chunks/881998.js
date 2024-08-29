@@ -4,13 +4,13 @@ var r,
     u,
     c = t(442837),
     a = t(570140),
-    s = t(592125),
-    l = t(757266),
+    l = t(592125),
+    s = t(757266),
     E = t(375954);
 let _ = null;
 class d extends (u = c.ZP.Store) {
     initialize() {
-        this.waitFor(s.Z, l.Z, E.Z);
+        this.waitFor(l.Z, s.Z, E.Z);
     }
     getApps() {
         return _;

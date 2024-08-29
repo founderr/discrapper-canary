@@ -1,21 +1,21 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return i;
+        return l;
     },
     q: function () {
-        return o;
+        return i;
     }
 });
-var a = r(570140),
-    n = r(91311);
-function i(e, t) {
-    let r = 'boolean' == typeof t ? t : !n.Z.get(e);
-    a.Z.dispatch({
+var r = n(570140),
+    a = n(91311);
+function l(e, t) {
+    let n = 'boolean' == typeof t ? t : !a.Z.get(e);
+    r.Z.dispatch({
         type: 'DEV_TOOLS_DESIGN_TOGGLE_WEB_SET',
         toggle: e,
-        value: r
+        value: n
     });
 }
-function o() {
-    for (let e in n.Z.all()) i(e, !1);
+function i() {
+    for (let e in a.Z.all()) l(e, !1);
 }

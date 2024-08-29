@@ -9,12 +9,12 @@ var i = n(72924),
     d = n(852926),
     u = n(186901),
     _ = n(981631),
-    E = n(474936);
-let h = [a.Z.RPC];
+    h = n(474936);
+let E = [a.Z.RPC];
 function m(e, t) {
     let n = {
-        subscriptionTier: E.Si.TIER_2,
-        analyticsLocations: h,
+        subscriptionTier: h.Si.TIER_2,
+        analyticsLocations: E,
         analyticsObject: t
     };
     switch (e) {
@@ -44,7 +44,7 @@ t.Z = {
             (0, c.f)(t.transport);
             let s = t.application.id;
             if (null == s) throw new r.Z({ errorCode: _.lTL.INVALID_COMMAND }, 'No application.');
-            let { lock: l, context: E } = (0, d.jU)(t.transport !== u.He.POST_MESSAGE ? a : null);
+            let { lock: l, context: h } = (0, d.jU)(t.transport !== u.He.POST_MESSAGE ? a : null);
             if (null == (0, o.Z)()) throw new r.Z({ errorCode: _.lTL.INVALID_CHANNEL }, 'Invalid channel');
             let I = { page: _.ZY5.IN_APP };
             return (async () => {
@@ -52,10 +52,10 @@ t.Z = {
                     let e = await (0, i.S)({
                         applicationId: s,
                         skuId: n,
-                        openPremiumPaymentModal: () => m(E, I),
-                        analyticsLocations: h,
+                        openPremiumPaymentModal: () => m(h, I),
+                        analyticsLocations: E,
                         analyticsLocationObject: I,
-                        context: E
+                        context: h
                     });
                     return l(), e;
                 } catch (e) {

@@ -1,8 +1,8 @@
-var s = n(735250),
-    r = n(470079),
-    a = n(481060),
-    i = n(727637),
-    o = n(906732),
+var r = n(735250),
+    a = n(470079),
+    s = n(481060),
+    o = n(727637),
+    i = n(906732),
     c = n(241553),
     l = n(333867),
     d = n(884697),
@@ -73,23 +73,23 @@ let g = {
 };
 t.Z = (e) => {
     let { product: t, returnRef: n, onSuccess: C, tooltipDelay: m, isGiftEasterEggEnabled: _, disableCustomColor: b = !1 } = e,
-        { analyticsLocations: h } = (0, o.ZP)(),
-        x = r.useRef(null),
-        I = (0, i.Z)(x),
+        { analyticsLocations: h } = (0, i.ZP)(),
+        x = a.useRef(null),
+        I = (0, o.Z)(x),
         E = b ? u.BR.DARK : u.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
-        : (0, s.jsx)(a.Tooltip, {
+        : (0, r.jsx)(s.Tooltip, {
               text: f.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
               delay: m,
               children: (e) =>
-                  (0, s.jsx)(a.Button, {
+                  (0, r.jsx)(s.Button, {
                       ...e,
                       buttonRef: x,
                       className: p.giftButton,
-                      color: b ? a.ButtonColors.BRAND : a.ButtonColors.CUSTOM,
-                      look: a.Button.Looks.FILLED,
-                      size: a.ButtonSizes.ICON,
+                      color: b ? s.ButtonColors.BRAND : s.ButtonColors.CUSTOM,
+                      look: s.Button.Looks.FILLED,
+                      size: s.ButtonSizes.ICON,
                       innerClassName: p.giftButtonInner,
                       'aria-label': f.Z.Messages.PREMIUM_GIFTING_BUTTON,
                       onClick: (e) => {
@@ -108,13 +108,13 @@ t.Z = (e) => {
                               });
                       },
                       children: _
-                          ? (0, s.jsx)(c.e, {
+                          ? (0, r.jsx)(c.e, {
                                 hovered: I,
                                 isContentDismissed: !0,
                                 themeOverride: E,
                                 boxColors: g
                             })
-                          : (0, s.jsx)(a.GiftIcon, {
+                          : (0, r.jsx)(s.GiftIcon, {
                                 size: 'md',
                                 color: 'currentColor'
                             })

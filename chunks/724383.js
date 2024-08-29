@@ -1,6 +1,6 @@
 n.d(t, {
     A: function () {
-        return h;
+        return E;
     }
 });
 var i = n(735250),
@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(545114),
     u = n(49898),
     _ = n(689938),
-    E = n(623641);
-function h() {
+    h = n(623641);
+function E() {
     let e = (0, c.Z)(),
         t = (function (e) {
             switch (e) {
@@ -31,7 +31,7 @@ function h() {
             (0, o.R)({ selectedTab: e });
         }, [e]),
         (0, i.jsxs)('section', {
-            className: E.container,
+            className: h.container,
             children: [
                 (0, i.jsx)(s.yY, {
                     location: (function (e) {
@@ -45,7 +45,7 @@ function h() {
                         }
                     })(e)
                 }),
-                (0, i.jsx)('div', { className: E.dragRegion }),
+                (0, i.jsx)('div', { className: h.dragRegion }),
                 t
             ]
         })

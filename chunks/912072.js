@@ -1,42 +1,42 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
         return m;
     }
 }),
-    r(47120);
-var a = r(735250),
-    n = r(470079),
-    i = r(120356),
-    o = r.n(i),
-    l = r(442837),
-    c = r(481060),
-    s = r(98357),
-    d = r(432877),
-    u = r(891362),
-    h = r(535271);
+    n(47120);
+var r = n(735250),
+    a = n(470079),
+    l = n(120356),
+    i = n.n(l),
+    o = n(442837),
+    c = n(481060),
+    s = n(98357),
+    u = n(432877),
+    d = n(891362),
+    h = n(535271);
 function m(e) {
     let { devSettingsCategory: t } = e,
-        r = (0, l.e7)([d.ZP], () => d.ZP.allByCategory(t), [t], l.pF),
-        i = n.useMemo(
+        n = (0, o.e7)([u.ZP], () => u.ZP.allByCategory(t), [t], o.pF),
+        l = a.useMemo(
             () =>
-                r.map((e) => {
-                    let [t, r, { label: n }] = e;
-                    return (0, a.jsx)(
+                n.map((e) => {
+                    let [t, n, { label: a }] = e;
+                    return (0, r.jsx)(
                         c.FormSwitch,
                         {
-                            value: r,
+                            value: n,
                             onChange: (e) => (0, s.Z)(t, e),
                             hideBorder: !0,
-                            className: u.switch,
-                            children: n
+                            className: d.switch,
+                            children: a
                         },
                         t
                     );
                 }),
-            [r]
+            [n]
         );
-    return (0, a.jsx)('div', {
-        className: o()(h.panel, u.panel),
-        children: i
+    return (0, r.jsx)('div', {
+        className: i()(h.panel, d.panel),
+        children: l
     });
 }

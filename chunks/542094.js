@@ -16,8 +16,8 @@ n.d(t, {
 var i,
     l,
     r = n(442837),
-    a = n(911969),
-    o = n(906732),
+    o = n(911969),
+    a = n(906732),
     u = n(835473),
     c = n(592125),
     d = n(358085),
@@ -26,23 +26,23 @@ var i,
     f = n(122613),
     v = n(619915),
     Z = n(761122),
-    _ = n(361213),
-    h = n(716600),
-    m = n(952561),
-    g = n(778569),
+    h = n(361213),
+    _ = n(716600),
+    g = n(952561),
+    m = n(778569),
     I = n(701488);
 ((l = i || (i = {}))[(l.START = 0)] = 'START'), (l[(l.JOIN = 1)] = 'JOIN'), (l[(l.LEAVE = 2)] = 'LEAVE');
 function E(e) {
-    let { activityItem: t, channel: n, locationObject: i, onActivityItemSelected: l, embeddedActivitiesManager: r, assetNames: o = ['embedded_cover'], backgroundResolution: u = 250, launchingComponentId: c, commandOrigin: s, source: p } = e,
-        { application: f, activity: h } = t,
-        m = h.client_platform_config[(0, Z.Z)((0, d.getOS)())],
-        E = null != m.label_until && Date.now() < Date.parse(m.label_until),
-        b = (0, g.Z)({
+    let { activityItem: t, channel: n, locationObject: i, onActivityItemSelected: l, embeddedActivitiesManager: r, assetNames: a = ['embedded_cover'], backgroundResolution: u = 250, launchingComponentId: c, commandOrigin: s, source: p } = e,
+        { application: f, activity: _ } = t,
+        g = _.client_platform_config[(0, Z.Z)((0, d.getOS)())],
+        E = null != g.label_until && Date.now() < Date.parse(g.label_until),
+        w = (0, m.Z)({
             applicationId: f.id,
             size: u,
-            names: o
+            names: a
         }),
-        w = null != h.activity_preview_video_asset_id ? (0, _.Z)(f.id, h.activity_preview_video_asset_id) : null,
+        b = null != _.activity_preview_video_asset_id ? (0, h.Z)(f.id, _.activity_preview_video_asset_id) : null,
         C = (0, v.ZP)(n).find((e) => {
             let { embeddedActivity: t } = e;
             return f.id === t.applicationId;
@@ -64,12 +64,12 @@ function E(e) {
         M = t.activity.client_platform_config[(0, Z.Z)((0, d.getOS)())].release_phase,
         O = I.eB.includes(M) ? M.replace('_', ' ').replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
     return {
-        imageBackground: b,
-        videoUrl: w,
+        imageBackground: w,
+        videoUrl: b,
         joinableEmbeddedApp: C,
         activityAction: S,
         onActivityItemSelected: T,
-        labelType: E ? m.label_type : a.ww.NONE,
+        labelType: E ? g.label_type : o.ww.NONE,
         staffReleasePhase: O
     };
 }
@@ -77,22 +77,22 @@ function A(e) {
     let { channelId: t, applicationId: n } = e,
         i = 0,
         l = (0, r.e7)([c.Z], () => c.Z.getChannel(t)),
-        a = (0, h.Z)(),
-        o = (0, m.Z)(),
+        o = (0, _.Z)(),
+        a = (0, g.Z)(),
         d = (0, u.q)(n),
         s = (0, v.ZP)(l).find((e) => {
             let { embeddedActivity: t } = e;
             return null != d && d.id === t.applicationId;
         });
-    return null == d ? i : (null != l && (null == a ? void 0 : a.channelId) === l.id && (null == o ? void 0 : o.id) === d.id ? (i = 2) : null != s && (i = 1), i);
+    return null == d ? i : (null != l && (null == o ? void 0 : o.channelId) === l.id && (null == a ? void 0 : a.id) === d.id ? (i = 2) : null != s && (i = 1), i);
 }
 function y(e) {
-    let { applicationId: t, channelId: n, locationObject: i, embeddedActivitiesManager: l, onActivityItemSelectedProp: r, launchingComponentId: a, commandOrigin: u, sectionName: c, source: d } = e,
+    let { applicationId: t, channelId: n, locationObject: i, embeddedActivitiesManager: l, onActivityItemSelectedProp: r, launchingComponentId: o, commandOrigin: u, sectionName: c, source: d } = e,
         v = A({
             channelId: n,
             applicationId: t
         }),
-        { analyticsLocations: Z } = (0, o.ZP)();
+        { analyticsLocations: Z } = (0, a.ZP)();
     switch (v) {
         case 0:
             return async () => {
@@ -101,7 +101,7 @@ function y(e) {
                     locationObject: i,
                     channelId: n,
                     analyticsLocations: Z,
-                    componentId: a,
+                    componentId: o,
                     commandOrigin: u,
                     sectionName: c,
                     source: d
@@ -115,7 +115,7 @@ function y(e) {
                         activityChannelId: n,
                         locationObject: i,
                         analyticsLocations: Z,
-                        componentId: a,
+                        componentId: o,
                         commandOrigin: u,
                         sectionName: c,
                         source: d

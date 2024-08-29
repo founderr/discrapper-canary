@@ -18,8 +18,8 @@ var i = n(735250),
     d = n(607070),
     u = n(600164),
     _ = n(210887),
-    E = n(617136),
-    h = n(113434),
+    h = n(617136),
+    E = n(113434),
     m = n(497505),
     I = n(918701),
     g = n(667105),
@@ -29,10 +29,10 @@ var i = n(735250),
     S = n(708901);
 function C(e) {
     let { questId: t, errorHints: n, transitionState: s, onClose: C } = e,
-        A = (0, h.B4)(t);
+        A = (0, E.B4)(t);
     null == A && C();
     let [v, L] = (0, a.useState)(n),
-        Z = (0, h.KX)(),
+        Z = (0, E.KX)(),
         O = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         R = (0, g.g2)({
             useReducedMotion: O,
@@ -42,14 +42,14 @@ function C(e) {
         b = (0, I.Bz)(A),
         P = (0, l.e7)([_.Z], () => _.Z.getState().theme),
         M = (0, o.wj)(P) ? p.BRd.DARK : p.BRd.LIGHT,
-        { startConsoleQuest: D, startingConsoleQuest: y } = (0, h.GI)({
+        { startConsoleQuest: D, startingConsoleQuest: y } = (0, E.GI)({
             questId: A.id,
             beforeRequest: () => {
                 R.startAnimation(),
-                    (0, E._3)({
+                    (0, h._3)({
                         questId: A.id,
                         questContent: m.jn.CONNECTIONS_MODAL,
-                        questContentCTA: E.jZ.DEFIBRILLATOR
+                        questContentCTA: h.jZ.DEFIBRILLATOR
                     });
             },
             afterRequest: (e) => {
@@ -182,7 +182,7 @@ function C(e) {
                                     { quest: A },
                                     {
                                         content: m.jn.CONNECTIONS_MODAL,
-                                        ctaContent: E.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
+                                        ctaContent: h.jZ.VIEW_CONSOLE_CONNECTIONS_LINK
                                     }
                                 );
                         },

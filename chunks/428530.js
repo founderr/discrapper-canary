@@ -1,51 +1,51 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return p;
+        return f;
     }
 }),
-    r(47120);
-var a = r(735250);
-r(470079);
-var n = r(346652),
-    i = r(692547),
-    o = r(410030),
-    l = r(95398),
-    c = r(981631),
-    s = r(535271);
-let d = {
-    base00: i.Z.colors.BACKGROUND_SECONDARY.css,
-    base03: i.Z.colors.TEXT_WARNING.css,
-    base07: i.Z.colors.TEXT_NORMAL.css,
-    base08: i.Z.colors.TEXT_MUTED.css,
-    base09: i.Z.colors.TEXT_POSITIVE.css,
-    base0B: i.Z.colors.TEXT_WARNING.css,
-    base0D: i.Z.colors.TEXT_BRAND.css
+    n(47120);
+var r = n(735250);
+n(470079);
+var a = n(346652),
+    l = n(692547),
+    i = n(410030),
+    o = n(95398),
+    c = n(981631),
+    s = n(535271);
+let u = {
+    base00: l.Z.colors.BACKGROUND_SECONDARY.css,
+    base03: l.Z.colors.TEXT_WARNING.css,
+    base07: l.Z.colors.TEXT_NORMAL.css,
+    base08: l.Z.colors.TEXT_MUTED.css,
+    base09: l.Z.colors.TEXT_POSITIVE.css,
+    base0B: l.Z.colors.TEXT_WARNING.css,
+    base0D: l.Z.colors.TEXT_BRAND.css
 };
-function u(e) {
+function d(e) {
     let t = {};
-    for (let [r, a] of Object.entries(e)) t[r] = a;
+    for (let [n, r] of Object.entries(e)) t[n] = r;
     return t;
 }
-let h = u(d),
-    m = u(d);
-function g(e) {
+let h = d(u),
+    m = d(u);
+function x(e) {
     return c.Jn9.test(e)
-        ? (0, a.jsx)(l.Z, {
-              type: l.Z.Types.TEXT,
-              children: () => (0, a.jsx)(a.Fragment, { children: e })
+        ? (0, r.jsx)(o.Z, {
+              type: o.Z.Types.TEXT,
+              children: () => (0, r.jsx)(r.Fragment, { children: e })
           })
         : e;
 }
-function p(e) {
+function f(e) {
     let { data: t } = e,
-        r = (0, o.ZP)();
-    return (0, a.jsx)('div', {
+        n = (0, i.ZP)();
+    return (0, r.jsx)('div', {
         className: s.inspectorWrapper,
-        children: (0, a.jsx)(n.L, {
+        children: (0, r.jsx)(a.L, {
             data: t,
-            theme: 'light' === r ? m : h,
+            theme: 'light' === n ? m : h,
             invertTheme: !1,
-            valueRenderer: g
+            valueRenderer: x
         })
     });
 }

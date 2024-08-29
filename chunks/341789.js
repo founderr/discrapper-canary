@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(571457),
     u = n(766219),
     _ = n(756101),
-    E = n(871348),
-    h = n(705063),
+    h = n(871348),
+    E = n(705063),
     m = n(49898);
 let I = [];
 function g(e) {
@@ -39,7 +39,7 @@ function g(e) {
 function p(e) {
     let { tab: t, onScroll: n, onGuildCardSeen: o, onGuildCardClick: c } = e,
         d = (0, u.lg)(t),
-        E = (0, s.Wu)([l.ZP], () => {
+        h = (0, s.Wu)([l.ZP], () => {
             var e, t;
             return null !== (t = null === (e = l.ZP.getDiscoverableGuilds()[d]) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : I;
         });
@@ -49,7 +49,7 @@ function p(e) {
         }, [d]),
         (0, i.jsx)(_.Z, {
             tab: t,
-            guilds: E,
+            guilds: h,
             onScroll: n,
             onGuildCardSeen: o,
             onGuildCardClick: c
@@ -103,12 +103,12 @@ function T(e) {
                 n
             );
         case m.vf.HUBS:
-            return (0, i.jsx)(h.X, {
+            return (0, i.jsx)(E.X, {
                 onScroll: r,
                 loadId: t
             });
         case m.vf.GUILDS:
-            return (0, i.jsx)(E.U, { onScroll: r });
+            return (0, i.jsx)(h.U, { onScroll: r });
         default:
             (0, o.vE)(n);
     }

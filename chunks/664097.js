@@ -1,13 +1,13 @@
 n.d(t, {
     o: function () {
-        return o;
+        return a;
     }
 });
 var i = n(470079),
     l = n(442837),
     r = n(115130),
-    a = n(701488);
-let o = () => {
+    o = n(701488);
+let a = () => {
     let { isEnabled: e, lastUsedObject: t } = (0, l.cj)(
             [r.Z],
             () => ({
@@ -24,7 +24,7 @@ let o = () => {
                       .map((e) => ({
                           application: e,
                           activity: {
-                              ...a.wT,
+                              ...o.wT,
                               ...e.embeddedActivityConfig,
                               application_id: e.id
                           }

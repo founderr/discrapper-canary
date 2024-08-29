@@ -21,22 +21,22 @@ var i = n(470079),
     d = n(963202),
     u = n(229893),
     _ = n(229765),
-    E = n(286083),
-    h = n(207796),
+    h = n(286083),
+    E = n(207796),
     m = n(976757),
     I = n(308083);
 function g() {
-    return (0, h.GN)(h.t1, s());
+    return (0, E.GN)(E.t1, s());
 }
 function p() {
-    let e = (0, h.GN)((e) => e.setGame, r.Z),
-        t = (0, h.GN)((e) => e.setSelectedGames, r.Z),
-        n = (0, h.GN)((e) => e.selectedGames, r.Z),
+    let e = (0, E.GN)((e) => e.setGame, r.Z),
+        t = (0, E.GN)((e) => e.setSelectedGames, r.Z),
+        n = (0, E.GN)((e) => e.selectedGames, r.Z),
         a = g(),
         s = (0, d.An)({ location: 'clan_discovery' }),
         c = (0, d.iN)('clan_discovery'),
-        { defaultGameId: E } = (0, d.nk)('clan_discovery'),
-        m = null != s ? s : E,
+        { defaultGameId: h } = (0, d.nk)('clan_discovery'),
+        m = null != s ? s : h,
         p = (function () {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                 t = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery());
@@ -50,7 +50,7 @@ function p() {
         T = (0, l.e7)([u.Z], () => u.Z.isLoading());
     return (
         i.useEffect(() => {
-            !(n.length > 0) && !c && (m === I.nJ ? (e(h.hz.VALORANT), t([m])) : m === I.xn ? (e(h.hz.GENSHIN), t([m])) : null == m && (e(h.hz.NONE), t([])));
+            !(n.length > 0) && !c && (m === I.nJ ? (e(E.hz.VALORANT), t([m])) : m === I.xn ? (e(E.hz.GENSHIN), t([m])) : null == m && (e(E.hz.NONE), t([])));
         }, [e, t, m, n, c]),
         i.useEffect(() => {
             if (c) (0, _.Cg)(a);
@@ -68,13 +68,13 @@ function p() {
 function T() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = (0, h.GN)((e) => e.savedGuildIds, r.Z),
+        n = (0, E.GN)((e) => e.savedGuildIds, r.Z),
         a = g(),
         s = (0, l.e7)([u.Z], () => u.Z.hasLoadedStaticClanDiscovery()),
         o = (0, d.iN)('clan_discovery'),
         c = (0, l.e7)([u.Z], () => u.Z.getSearchResult(a), [a]),
         _ = (0, l.Wu)([u.Z], () => (t && null != n ? u.Z.getGuildProfiles(n) : []), [t, n]),
-        E = i.useMemo(() => {
+        h = i.useMemo(() => {
             if ((0, m.Pw)(c)) {
                 let t = c.items;
                 return null != e ? t.slice(0, e) : t;
@@ -95,16 +95,16 @@ function T() {
           }
         : {
               loaded: s || o,
-              clans: E,
+              clans: h,
               searchCriteria: a,
               searchResult: c
           };
 }
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { updatePaginationSettings: n, updatePaginationResults: a, pageSize: o, chunkedPages: d, currentPage: I } = (0, E.$)(),
+        { updatePaginationSettings: n, updatePaginationResults: a, pageSize: o, chunkedPages: d, currentPage: I } = (0, h.$)(),
         p = I - 1,
-        T = (0, h.GN)((e) => e.savedGuildIds, r.Z),
+        T = (0, E.GN)((e) => e.savedGuildIds, r.Z),
         f = g(),
         S = (0, l.e7)([u.Z], () => u.Z.getSearchResult(f), [f]);
     i.useEffect(() => {
@@ -128,12 +128,12 @@ function f(e) {
             r = (0, l.Wu)([u.Z], () => e.filter((e) => u.Z.shouldFetchGuild(e)), [e]),
             o = (0, c.Z)(r),
             d = i.useRef(new AbortController()),
-            E = i.useCallback(async (e) => {
+            h = i.useCallback(async (e) => {
                 n(!0), null != a.current && (d.current.abort(), (d.current = new AbortController())), (a.current = (0, _.$s)(e, d.current.signal)), await a.current, null !== a.current && (n(!1), (a.current = null));
             }, []);
         i.useEffect(() => {
-            if (!(0 === r.length || s()(r, o))) E(r);
-        }, [E, r, o]),
+            if (!(0 === r.length || s()(r, o))) h(r);
+        }, [h, r, o]),
             i.useEffect(
                 () => () => {
                     a.current = null;
@@ -143,7 +143,7 @@ function f(e) {
     })(C);
     let N = i.useMemo(() => {
             var e;
-            return t ? d[0] : null !== (e = d[p]) && void 0 !== e ? e : [];
+            return null !== (e = t ? d[0] : d[p]) && void 0 !== e ? e : [];
         }, [d, p, t]),
         A = (0, l.Wu)([u.Z], () => u.Z.getGuildProfiles(N), [N]),
         v = N.length === A.length || t,

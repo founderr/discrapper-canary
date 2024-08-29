@@ -1,43 +1,43 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return g;
+        return x;
     }
 });
-var a = r(735250),
-    n = r(470079),
-    i = r(120356),
-    o = r.n(i),
-    l = r(481060),
-    c = r(931240),
-    s = r(207796),
-    d = r(540742),
-    u = r(836768),
-    h = r(10394),
-    m = r(535271);
-function g() {
-    let e = n.useRef(null);
-    return (0, a.jsxs)('div', {
+var r = n(735250),
+    a = n(470079),
+    l = n(120356),
+    i = n.n(l),
+    o = n(481060),
+    c = n(931240),
+    s = n(207796),
+    u = n(540742),
+    d = n(836768),
+    h = n(10394),
+    m = n(535271);
+function x() {
+    let e = a.useRef(null);
+    return (0, r.jsxs)('div', {
         ref: e,
-        className: o()(m.panel, h.panel),
+        className: i()(m.panel, h.panel),
         children: [
-            (0, a.jsx)(l.Button, {
-                size: l.Button.Sizes.SMALL,
+            (0, r.jsx)(o.Button, {
+                size: o.Button.Sizes.SMALL,
                 onClick: c.LX,
                 children: 'Reset Every Clan Setup State'
             }),
-            (0, a.jsx)(l.Button, {
-                size: l.Button.Sizes.SMALL,
+            (0, r.jsx)(o.Button, {
+                size: o.Button.Sizes.SMALL,
                 onClick: s.PJ,
                 children: 'Reset Clan Discovery State'
             }),
-            (0, a.jsx)(l.Button, {
-                size: l.Button.Sizes.SMALL,
-                onClick: u.u,
+            (0, r.jsx)(o.Button, {
+                size: o.Button.Sizes.SMALL,
+                onClick: d.u,
                 children: 'Reset Global Discovery State'
             }),
-            (0, a.jsx)(l.Button, {
-                size: l.Button.Sizes.SMALL,
-                onClick: d.t,
+            (0, r.jsx)(o.Button, {
+                size: o.Button.Sizes.SMALL,
+                onClick: u.t,
                 children: 'Reset Global Discovery Servers State'
             })
         ]

@@ -16,8 +16,8 @@ var i = n(735250),
     d = n(119269),
     u = n(938736),
     _ = n(227140),
-    E = n(981631),
-    h = n(921944),
+    h = n(981631),
+    E = n(921944),
     m = n(689938),
     I = n(256345);
 let g = 'url(#dark-purple-gradient)',
@@ -56,14 +56,14 @@ let g = 'url(#dark-purple-gradient)',
                     artClassName: I.coachmarkArt,
                     dismissIconClassName: I.exitIcon,
                     onDismissIconClick: () => {
-                        (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: h.L.TAKE_ACTION });
+                        (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: E.L.TAKE_ACTION });
                     },
                     dismissIcon: (0, i.jsx)(T, {}),
                     headerClassName: I.incentiveCoachtipContent,
                     contentClassName: I.incentiveCoachtipContainer,
                     pointerClassName: I.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, c.uL)(E.Z5c.NITRO_HOME), (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: h.L.TAKE_ACTION });
+                        (0, c.uL)(h.Z5c.NITRO_HOME), (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: E.L.TAKE_ACTION });
                     },
                     art: (0, i.jsx)(i.Fragment, {
                         children: (0, i.jsx)(d.Z, {

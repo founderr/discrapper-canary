@@ -1,15 +1,15 @@
-r.d(t, {
+n.d(t, {
     Z: function () {
-        return i;
+        return l;
     }
 });
-var a = r(570140),
-    n = r(432877);
-function i(e, t) {
-    let r = 'boolean' == typeof t ? t : !n.ZP.get(e);
-    a.Z.dispatch({
+var r = n(570140),
+    a = n(432877);
+function l(e, t) {
+    let n = 'boolean' == typeof t ? t : !a.ZP.get(e);
+    r.Z.dispatch({
         type: 'DEV_TOOLS_DEV_SETTING_SET',
         toggle: e,
-        value: r
+        value: n
     });
 }

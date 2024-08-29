@@ -16,8 +16,8 @@ var a = n(287734),
     d = n(420660),
     u = n(918701),
     _ = n(23404),
-    E = n(769654),
-    h = n(81063),
+    h = n(769654),
+    E = n(81063),
     m = n(761282),
     I = n(358924),
     g = n(868854),
@@ -64,7 +64,7 @@ function f(e) {
                         })(t),
                         onChannelContextMenu: n,
                         onGuildClick: () => {
-                            (0, E.X)(s.id);
+                            (0, h.X)(s.id);
                         }
                     },
                     'voice-'.concat(a.id)
@@ -101,7 +101,7 @@ function f(e) {
                 );
             }),
         N.forEach((e, t) => {
-            var n, a, s, E, m, g, S, v, Z;
+            var n, a, s, h, m, g, S, v, Z;
             let { activity: R, game: x, playingMembers: b, activityUser: P } = e;
             if (null == R || null == R.type) return null;
             if (N.length > 1 && R.type === T.IIU.PLAYING && !(0, r.Z)(R) && null != x)
@@ -143,9 +143,9 @@ function f(e) {
                         I.Z.RichPresenceSection,
                         {
                             activity: R,
-                            getAssetImage: h.getAssetImage
+                            getAssetImage: E.getAssetImage
                         },
-                        'rich-presence-'.concat(null !== (E = R.session_id) && void 0 !== E ? E : t, '-').concat(P.id)
+                        'rich-presence-'.concat(null !== (h = R.session_id) && void 0 !== h ? h : t, '-').concat(P.id)
                     )
                 );
             else if ((0, d.Z)(R)) {
@@ -158,7 +158,7 @@ function f(e) {
                             guildId: null == L ? void 0 : L.id,
                             activity: R,
                             user: e || n ? P : null,
-                            getAssetImage: h.getAssetImage
+                            getAssetImage: E.getAssetImage
                         },
                         'streaming-'.concat(null !== (m = R.session_id) && void 0 !== m ? m : t)
                     )
@@ -176,7 +176,7 @@ function f(e) {
                                       unknownSize: 0,
                                       totalSize: b.length
                                   },
-                                  getAssetImage: h.getAssetImage,
+                                  getAssetImage: E.getAssetImage,
                                   members: b
                               },
                               'spotify-'.concat(null !== (g = R.session_id) && void 0 !== g ? g : t, '-').concat(P.id)
@@ -188,7 +188,7 @@ function f(e) {
                                 I.Z.RichPresenceSection,
                                 {
                                     activity: R,
-                                    getAssetImage: h.getAssetImage
+                                    getAssetImage: E.getAssetImage
                                 },
                                 'rich-presence-'.concat(null !== (S = R.session_id) && void 0 !== S ? S : t, '-').concat(P.id)
                             )
