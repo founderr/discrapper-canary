@@ -78,6 +78,10 @@ function c(e) {
     i.useEffect(() => {
         E(H);
     }, [E, H]),
+        i.useEffect(() => {
+            var e, t;
+            d.setBottomPosition(null !== (t = null === (e = k.current) || void 0 === e ? void 0 : e.getBoundingClientRect().bottom) && void 0 !== t ? t : null);
+        }),
         i.useEffect(() => d.resetStoreState, [d.resetStoreState]),
         i.useLayoutEffect(() => {
             var e;

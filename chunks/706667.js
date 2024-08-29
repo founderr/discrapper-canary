@@ -2,7 +2,8 @@ n.d(t, {
     Z: function () {
         return c;
     }
-});
+}),
+    n(47120);
 var r = n(470079),
     i = n(442837),
     a = n(135869),
@@ -12,16 +13,17 @@ var r = n(470079),
     u = n(747071);
 function c(e, t) {
     let { currentPreviewRef: n } = r.useContext(a.Z),
-        c = (0, i.e7)([s.Z], () => s.Z.isPlayingSound(e.soundId), [e]),
-        d = r.useCallback(
+        [c, d] = r.useState(!1),
+        _ = (0, i.e7)([s.Z], () => s.Z.isPlayingSound(e.soundId), [e]),
+        E = r.useCallback(
             (r) => {
                 null != n.current && n.current.pause(), null != t && (0, o.GN)(e, t, r);
             },
             [e, n, t]
         ),
-        _ = r.useCallback(() => {
+        f = r.useCallback(() => {
             let t = new Audio((0, l.Z)(e.soundId));
-            null != n.current && n.current.pause(), (n.current = t), (t.currentTime = 0), (t.volume = (0, u.Z)(e.volume)), t.play();
+            null != n.current && n.current.pause(), (n.current = t), (t.currentTime = 0), (t.volume = (0, u.Z)(e.volume)), t.play(), d(!0), t.addEventListener('pause', () => d(!1), { once: !0 });
         }, [e, n]);
     return (
         r.useCallback(
@@ -32,9 +34,10 @@ function c(e, t) {
             [n]
         ),
         {
-            playSoundboardSound: d,
-            isPlayingSound: c,
-            previewSound: _
+            playSoundboardSound: E,
+            isPlayingSound: _,
+            previewSound: f,
+            isPreviewingSound: c
         }
     );
 }

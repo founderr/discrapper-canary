@@ -55,20 +55,22 @@ function x(e) {
             ref: L,
             renderPopout: (e) => {
                 let { closePopout: n } = e;
-                return (0, i.jsx)(m.Z, {
-                    children: (0, i.jsx)(h.Z, {
-                        guildId: T,
-                        channel: t,
-                        onClose: n,
-                        gridNotice:
-                            M === l.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                            (0, i.jsx)(d.o, {
-                                onClose: n,
-                                markAsDismissed: b
-                            }),
-                        analyticsSource: 'action bar button'
-                    })
-                });
+                return Z
+                    ? null
+                    : (0, i.jsx)(m.Z, {
+                          children: (0, i.jsx)(h.Z, {
+                              guildId: T,
+                              channel: t,
+                              onClose: n,
+                              gridNotice:
+                                  M === l.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                                  (0, i.jsx)(d.o, {
+                                      onClose: n,
+                                      markAsDismissed: b
+                                  }),
+                              analyticsSource: 'action bar button'
+                          })
+                      });
             },
             children: (e) =>
                 (0, i.jsx)(_.Z, {

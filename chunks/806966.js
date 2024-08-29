@@ -24,7 +24,8 @@ let a = -1,
             columnIndex: 0
         },
         activeCategoryIndex: 0,
-        searchPlaceholder: null
+        searchPlaceholder: null,
+        bottomPosition: null
     });
 function o() {
     let e = (0, r.Z)((e) => s);
@@ -50,6 +51,9 @@ function o() {
         },
         resetStoreState: () => {
             (0, i.j)(() => e.setState(s));
+        },
+        setBottomPosition: (t) => {
+            (0, i.j)(() => e.setState({ bottomPosition: t }));
         }
     };
 }

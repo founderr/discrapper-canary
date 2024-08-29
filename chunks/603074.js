@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return S;
     }
 });
 var r = n(735250),
@@ -17,51 +17,53 @@ var r = n(735250),
     f = n(675478),
     h = n(19780),
     p = n(208049),
-    I = n(763296),
-    m = n(526617),
-    T = n(127549);
-function g(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: g, onSelect: S, analyticsSource: A, suppressPlaySound: N, shouldShowUpsell: O = !0, gridNotice: R, autoWidth: v = !1, soundButtonOverlay: C, listPadding: y, renderHeader: D, defaultSoundsOnly: L } = e,
-        b = (0, l.e7)([I.Z], () => I.Z.isFetchingSounds() || I.Z.isFetchingDefaultSounds()),
-        M = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
-        { analyticsLocations: P } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
-    return (
-        (0, _.Z)({
-            type: o.ImpressionTypes.POPOUT,
-            name: o.ImpressionNames.SOUNDBOARD_POPOUT,
-            properties: {
-                source: A,
-                guild_id: t,
-                media_session_id: M
-            }
-        }),
+    I = n(522811),
+    m = n(763296),
+    T = n(526617),
+    g = n(127549);
+function S(e) {
+    let { guildId: t, channel: n, containerWidth: a, onClose: S, onSelect: A, analyticsSource: N, suppressPlaySound: O, shouldShowUpsell: R = !0, gridNotice: v, autoWidth: C = !1, soundButtonOverlay: y, listPadding: D, renderHeader: L, defaultSoundsOnly: b } = e,
+        M = (0, l.e7)([m.Z], () => m.Z.isFetchingSounds() || m.Z.isFetchingDefaultSounds()),
+        P = (0, l.e7)([h.Z], () => h.Z.getMediaSessionId()),
+        { analyticsLocations: U } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
+    (0, _.Z)({
+        type: o.ImpressionTypes.POPOUT,
+        name: o.ImpressionNames.SOUNDBOARD_POPOUT,
+        properties: {
+            source: N,
+            guild_id: t,
+            media_session_id: P
+        }
+    }),
         i.useEffect(() => {
             p.w(), f.DZ.loadIfNecessary(), (0, E.ql)('');
-        }, []),
-        (0, r.jsx)(d.Gt, {
-            value: P,
-            children: (0, r.jsx)(u.Dialog, {
-                className: s()(T.picker, {
-                    [T.fetching]: b,
-                    [T.autoWidth]: v
-                }),
-                children: b
-                    ? (0, r.jsx)(u.Spinner, {})
-                    : (0, r.jsx)(m.Z, {
-                          guildId: t,
-                          channel: n,
-                          onClose: g,
-                          onSelect: S,
-                          containerWidth: a,
-                          suppressPlaySound: N,
-                          shouldShowUpsell: O,
-                          gridNotice: R,
-                          soundButtonOverlay: C,
-                          listPadding: y,
-                          renderHeader: D,
-                          defaultSoundsOnly: L
-                      })
-            })
+        }, []);
+    let { refreshEnabled: w } = (0, I.Z)({ location: 'SoundboardSoundPicker' });
+    return (0, r.jsx)(d.Gt, {
+        value: U,
+        children: (0, r.jsx)(u.Dialog, {
+            className: s()(g.picker, {
+                [g.fetching]: M,
+                [g.autoWidth]: C,
+                [g.refresh]: w
+            }),
+            children: M
+                ? (0, r.jsx)(u.Spinner, {})
+                : (0, r.jsx)(T.Z, {
+                      guildId: t,
+                      channel: n,
+                      onClose: S,
+                      onSelect: A,
+                      containerWidth: a,
+                      suppressPlaySound: O,
+                      shouldShowUpsell: R,
+                      gridNotice: v,
+                      soundButtonOverlay: y,
+                      listPadding: D,
+                      renderHeader: L,
+                      defaultSoundsOnly: b,
+                      refreshEnabled: w
+                  })
         })
-    );
+    });
 }
