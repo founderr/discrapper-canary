@@ -12,13 +12,16 @@ n.d(t, {
         return T;
     },
     YH: function () {
-        return C;
+        return D;
     },
     iN: function () {
         return _;
     },
     nk: function () {
         return N;
+    },
+    r3: function () {
+        return C;
     },
     rx: function () {
         return E;
@@ -303,17 +306,34 @@ function R(e) {
 });
 let v = (0, a.B)({
     kind: 'user',
+    id: '2024-08_load_test_guild_recs',
+    label: 'Guild Recs Load Testing',
+    defaultConfig: { enabled: !1 },
+    treatments: [
+        {
+            id: 1,
+            label: 'Enable',
+            config: { enabled: !0 }
+        }
+    ]
+});
+function C(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return v.useExperiment({ location: e }, { autoTrackExposure: t }).enabled;
+}
+let y = (0, a.B)({
+    kind: 'user',
     id: '2024-07_rapidash_m3_admins_browse',
     label: 'Rapidash M3 Admins Browse',
     defaultConfig: { canAdminsBrowse: !1 },
     treatments: [
         {
             id: 1,
-            label: 'Admins can browse',
+            label: 'Enable',
             config: { canAdminsBrowse: !0 }
         }
     ]
 });
-function C(e) {
-    return v.useExperiment({ location: e }).canAdminsBrowse;
+function D(e) {
+    return y.useExperiment({ location: e }).canAdminsBrowse;
 }
