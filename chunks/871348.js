@@ -20,7 +20,7 @@ var i = n(735250),
     g = n(901040),
     p = n(689938),
     T = n(604167);
-function S(e) {
+function f(e) {
     let { onScroll: t } = e,
         { guilds: n } = (0, o.C3)({
             location: 'ClanDiscoveryAdminContainer',
@@ -52,7 +52,7 @@ function S(e) {
         })
     });
 }
-function f(e) {
+function S(e) {
     let { onScroll: t, withAdminContent: n } = e,
         a = (0, _.GN)((e) => e.mode, s.Z),
         { ref: r, width: o } = (0, l.Z)();
@@ -62,15 +62,13 @@ function f(e) {
         children: [
             (0, i.jsx)('div', {
                 className: T.list,
-                children:
-                    null != o &&
-                    (0, i.jsx)(h.Z, {
-                        inGlobalDiscovery: !0,
-                        width: o,
-                        variant: (0, m.s)(a, m.Bj.GLOBAL_DISCOVERY),
-                        onScroll: t,
-                        withAdminContent: n
-                    })
+                children: (0, i.jsx)(h.Z, {
+                    inGlobalDiscovery: !0,
+                    width: o,
+                    variant: (0, m.s)(a, m.Bj.GLOBAL_DISCOVERY),
+                    onScroll: t,
+                    withAdminContent: n
+                })
             }),
             (0, i.jsx)('div', {
                 className: T.selectors,
@@ -89,9 +87,9 @@ function C(e) {
         s = (0, _.GN)((e) => e.dismissedPilotAdminNux),
         r = (0, o.YH)('clan_discovery_admin_upsell');
     return ((0, d.LE)(), !n || (a && s) || r)
-        ? (0, i.jsx)(f, {
+        ? (0, i.jsx)(S, {
               onScroll: t,
               withAdminContent: n && a
           })
-        : (0, i.jsx)(S, { onScroll: t });
+        : (0, i.jsx)(f, { onScroll: t });
 }

@@ -3,7 +3,7 @@ var i,
     a,
     s = n(735250),
     r = n(470079),
-    l = n(567526),
+    l = n(180081),
     o = n(143927),
     c = n(704215),
     d = n(481060),
@@ -16,8 +16,8 @@ var i,
     g = n(207796),
     p = n(543550),
     T = n(86014),
-    S = n(895068),
-    f = n(921944),
+    f = n(895068),
+    S = n(921944),
     C = n(69878);
 ((a = i || (i = {})).TOP_PICKS = 'top_picks'), (a.OTHER_GUILDS = 'other_guilds');
 let N = {
@@ -27,43 +27,36 @@ let N = {
     },
     A = r.memo(function (e) {
         let { mode: t, width: n, withAdminContent: i } = e,
-            a = (0, d.useSpring)({
-                from: { opacity: 0 },
-                to: { opacity: 1 },
-                config: N,
-                delay: 500
-            }),
-            [{ scrollSpring: o }, u] = (0, d.useSpring)(() => ({
+            [{ scrollSpring: a }, o] = (0, d.useSpring)(() => ({
                 from: { scrollSpring: 0 },
                 config: N
             })),
-            _ = r.useCallback(
+            u = r.useCallback(
                 (e) => {
-                    u({ scrollSpring: e.currentTarget.scrollTop });
+                    o({ scrollSpring: e.currentTarget.scrollTop });
                 },
-                [u]
+                [o]
             ),
-            h = (0, E.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
+            _ = (0, E.wE)(c.z.NEW_GAMING_DISCOVERY_NOTIF);
         switch (
             (r.useEffect(() => {
-                !h &&
+                !_ &&
                     (0, E.EW)(c.z.NEW_GAMING_DISCOVERY_NOTIF, {
-                        dismissAction: f.L.TAKE_ACTION,
+                        dismissAction: S.L.TAKE_ACTION,
                         forceTrack: !0
                     });
-            }, [h]),
+            }, [_]),
             t)
         ) {
             case g.v0.ADMIN_UPSELL:
-                return (0, s.jsx)(p.$, { onScroll: _ });
+                return (0, s.jsx)(p.$, { onScroll: u });
             case g.v0.GET_STARTED:
             case g.v0.DISCOVERY:
             case g.v0.GAMES:
             case g.v0.PLAYSTYLE:
             case g.v0.TRAITS:
             case g.v0.PREFERENCES:
-                return (0, s.jsxs)(l.animated.div, {
-                    style: { opacity: a.opacity },
+                return (0, s.jsxs)('div', {
                     className: C.discoveryContainer,
                     children: [
                         (0, s.jsxs)('div', {
@@ -72,7 +65,7 @@ let N = {
                                 (0, s.jsx)(l.animated.div, {
                                     className: C.toolbarBackground,
                                     style: {
-                                        opacity: null == o ? void 0 : o.to([0, 100], [0, 1])
+                                        opacity: null == a ? void 0 : a.to([0, 100], [0, 1])
                                     }
                                 }),
                                 (0, s.jsx)(I.Z, { guildIcon: (0, s.jsx)(I.a, {}) })
@@ -83,8 +76,8 @@ let N = {
                             children: (0, s.jsx)(T.Z, {
                                 inGlobalDiscovery: !1,
                                 width: n,
-                                onScroll: _,
-                                variant: (0, S.s)(t),
+                                onScroll: u,
+                                variant: (0, f.s)(t),
                                 withAdminContent: i
                             })
                         }),
@@ -107,7 +100,7 @@ let N = {
                             children: (0, s.jsx)(T.Z, {
                                 inGlobalDiscovery: !1,
                                 width: n,
-                                variant: (0, S.s)(t),
+                                variant: (0, f.s)(t),
                                 withAdminContent: i
                             })
                         }),
