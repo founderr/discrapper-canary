@@ -758,19 +758,14 @@ function eX(e) {
     return null != c ? _[c] : void 0;
 }
 function e$(e) {
-    let { isTargetedDisclosure: t, gamePublisher: n, gameTitle: r, isInHouseQuest: i, hasQuestHomeExperiment: a } = e;
-    if (i) return t ? D.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_BAR : a ? D.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_HOME : D.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE;
+    let { isTargetedDisclosure: t, gamePublisher: n, gameTitle: r, isInHouseQuest: i } = e;
+    if (i) return t ? D.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_BAR : D.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_HOME;
     return t
         ? D.Z.Messages.QUESTS_DISCLOSURE_PUBLISHER_TARGETING.format({ gamePublisher: i ? D.Z.Messages.DISCORD : n })
-        : a
-          ? D.Z.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING_QUEST_HOME.format({
-                gamePublisher: n,
-                gameTitle: r
-            })
-          : D.Z.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING.format({
-                gamePublisher: n,
-                gameTitle: r
-            });
+        : D.Z.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING_QUEST_HOME.format({
+              gamePublisher: n,
+              gameTitle: r
+          });
 }
 function eJ(e) {
     let t =

@@ -8,73 +8,70 @@ var a = n(636977),
     c = n(677277),
     d = n(285865),
     u = n(918701),
-    _ = n(471985),
-    E = n(702428),
+    _ = n(702428),
     h = n(341907),
-    m = n(703656),
-    I = n(683301),
-    g = n(150192),
-    p = n(889010),
-    T = n(488905),
-    f = n(347137),
-    S = n(731455),
-    C = n(981631),
-    N = n(46140),
-    A = n(689938),
-    v = n(745322);
-let L = (e) => {
+    E = n(703656),
+    m = n(683301),
+    I = n(150192),
+    g = n(889010),
+    p = n(488905),
+    T = n(347137),
+    f = n(731455),
+    S = n(981631),
+    C = n(46140),
+    N = n(689938),
+    A = n(745322);
+let v = (e) => {
         switch (e) {
-            case S.Gj.Activity:
-                return S.fW.Activity;
-            case S.Gj.Music:
-                return S.fW.Music;
-            case S.Gj.Television:
-                return S.fW.Television;
-            case S.Gj.Science:
-                return S.fW.Science;
-            case S.Gj.Education:
-                return S.fW.Education;
+            case f.Gj.Activity:
+                return f.fW.Activity;
+            case f.Gj.Music:
+                return f.fW.Music;
+            case f.Gj.Television:
+                return f.fW.Television;
+            case f.Gj.Science:
+                return f.fW.Science;
+            case f.Gj.Education:
+                return f.fW.Education;
             default:
-                return S.fW.Discover;
+                return f.fW.Discover;
         }
     },
-    Z = () => {
-        let { currentCategoryId: e, isViewingSearchResults: t } = (0, s.cj)([I.ZP], () => ({
-                currentCategoryId: I.ZP.getCurrentCategoryId(),
-                isViewingSearchResults: I.ZP.getMostRecentQuery().length > 0
+    L = () => {
+        let { currentCategoryId: e, isViewingSearchResults: t } = (0, s.cj)([m.ZP], () => ({
+                currentCategoryId: m.ZP.getCurrentCategoryId(),
+                isViewingSearchResults: m.ZP.getMostRecentQuery().length > 0
             })),
-            n = (0, _.Z)(N.dr.QUEST_HOME_DESKTOP),
-            o = (0, s.e7)([g.Z], () => g.Z.getDiscoveryCategories(), [], g.j),
-            f =
-                null == o
+            n = (0, s.e7)([I.Z], () => I.Z.getDiscoveryCategories(), [], I.j),
+            o =
+                null == n
                     ? void 0
-                    : o.map((e) => ({
+                    : n.map((e) => ({
                           ...e,
-                          icon: L(e.categoryId)
+                          icon: v(e.categoryId)
                       })),
-            Z = (e) => {
-                (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== S.Gj.Quests && (0, m.uL)(C.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === S.Gj.Quests && (0, h.navigateToQuestHome)(N.dr.DISCOVERY_SIDEBAR, a.j.DISCOVERY_SIDEBAR);
+            T = (e) => {
+                (0, l.uY)(e, !0), d.Z.closeSidebar(), t && (0, l.AQ)(), (0, u.OG)() && e !== f.Gj.Quests && (0, E.uL)(S.Z5c.GUILD_DISCOVERY), !(0, u.OG)() && e === f.Gj.Quests && (0, h.navigateToQuestHome)(C.dr.DISCOVERY_SIDEBAR, a.j.DISCOVERY_SIDEBAR);
             };
         return (0, i.jsxs)(r.Scroller, {
-            className: v.sidebarContainer,
+            className: A.sidebarContainer,
             children: [
-                (0, i.jsx)(T.V, { text: A.Z.Messages.DISCOVER }),
-                (0, i.jsx)(p.Z, {
-                    categories: f,
-                    handleCategorySelect: Z,
+                (0, i.jsx)(p.V, { text: N.Z.Messages.DISCOVER }),
+                (0, i.jsx)(g.Z, {
+                    categories: o,
+                    handleCategorySelect: T,
                     currentCategoryId: e,
                     shouldDisplaySelectedCategory: !t
                 }),
                 (0, i.jsx)(c.Z, {
-                    handleCategorySelect: Z,
+                    handleCategorySelect: T,
                     currentCategoryId: e,
                     shouldDisplaySelectedCategory: !t
                 }),
-                n &&
-                    (0, i.jsx)(E.Z, {
-                        onClick: () => Z(S.Gj.Quests),
-                        isSelected: e === S.Gj.Quests
-                    })
+                (0, i.jsx)(_.Z, {
+                    onClick: () => T(f.Gj.Quests),
+                    isSelected: e === f.Gj.Quests
+                })
             ]
         });
     };
@@ -85,5 +82,5 @@ t.Z = function () {
         }),
         t = e.length > 0,
         { clanDiscoveryEnabled: n } = (0, o.nk)('guild_discovery_sidebar');
-    return t || n ? (0, i.jsx)(f.Z, {}) : (0, i.jsx)(Z, {});
+    return t || n ? (0, i.jsx)(T.Z, {}) : (0, i.jsx)(L, {});
 };

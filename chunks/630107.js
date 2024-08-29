@@ -1,88 +1,85 @@
-t.r(n),
-    t.d(n, {
+n.r(t),
+    n.d(t, {
         default: function () {
-            return h;
+            return I;
         }
     });
-var a = t(735250),
-    s = t(470079),
-    i = t(873546),
-    r = t(442837),
-    l = t(481060),
-    o = t(830064),
-    c = t(388905),
-    u = t(625128),
-    d = t(362762),
-    p = t(703656),
-    m = t(626135),
-    x = t(471985),
-    _ = t(46140),
-    b = t(981631),
-    E = t(186901),
-    N = t(689938),
-    g = t(309687),
-    I = t(821744);
+var a = n(735250),
+    s = n(470079),
+    i = n(873546),
+    r = n(442837),
+    l = n(481060),
+    o = n(830064),
+    c = n(388905),
+    u = n(625128),
+    d = n(362762),
+    p = n(703656),
+    m = n(626135),
+    x = n(981631),
+    _ = n(186901),
+    b = n(689938),
+    N = n(309687),
+    E = n(821744);
 r.ZP.initialize();
-let f = i.tq || i.Em;
-function h(e) {
-    let { match: n } = e,
-        t = (0, r.e7)([d.Z], () => d.Z.getState('quests')),
-        i = n.params.questId,
-        h = (0, x.Z)(_.dr.CODED_LINK);
+let g = i.tq || i.Em;
+function I(e) {
+    let { match: t } = e,
+        n = (0, r.e7)([d.Z], () => d.Z.getState('quests')),
+        i = t.params.questId;
     if (
         (s.useEffect(() => {
-            if (!f)
-                null == t
-                    ? (m.default.track(b.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT, { quest_id: i }),
-                      u.Z.openNativeAppModal('quests', b.Etm.DEEP_LINK, {
-                          type: E.jE.QUEST_HOME,
+            if (!g)
+                null == n
+                    ? (m.default.track(x.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT, { quest_id: i }),
+                      u.Z.openNativeAppModal('quests', x.Etm.DEEP_LINK, {
+                          type: _.jE.QUEST_HOME,
                           params: { questId: i }
                       }))
-                    : t === b.kEZ.OPEN_FAIL && (0, p.dL)(b.Z5c.QUEST_HOME);
-        }, [t, i]),
-        f)
+                    : n === x.kEZ.OPEN_FAIL && (0, p.dL)(x.Z5c.QUEST_HOME);
+        }, [n, i]),
+        g)
     )
         return (0, a.jsxs)('div', {
-            className: g.mobileWebContainer,
+            className: N.mobileWebContainer,
             children: [
                 (0, a.jsx)('img', {
-                    src: I,
+                    src: E,
                     alt: '',
-                    className: g.mobileWebImage
+                    className: N.mobileWebImage
                 }),
                 (0, a.jsx)(l.Heading, {
                     variant: 'display-lg',
                     color: 'text-brand',
-                    children: N.Z.Messages.QUESTS_LANDING_PAGE_ERROR_HEADING
+                    children: b.Z.Messages.QUESTS_LANDING_PAGE_ERROR_HEADING
                 }),
                 (0, a.jsx)(l.Text, {
                     variant: 'text-md/normal',
-                    className: g.mobileWebCopy,
-                    children: h ? N.Z.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY_DESKTOP_AND_MOBILE_QUEST_HOME : N.Z.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY_DESKTOP_AND_MOBILE
+                    className: N.mobileWebCopy,
+                    children: b.Z.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY_DESKTOP_AND_MOBILE_QUEST_HOME
                 })
             ]
         });
-    let j = null == t || t === b.kEZ.OPENING || t === b.kEZ.OPEN_FAIL;
+    let I = null == n || n === x.kEZ.OPENING || n === x.kEZ.OPEN_FAIL;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(o.Z, {
-                className: g.backgroundArtwork,
+                className: N.backgroundArtwork,
                 preserveAspectRatio: 'xMinYMin slice'
             }),
             (0, a.jsx)('div', {
-                className: g.container,
+                className: N.container,
                 children: (0, a.jsx)(c.ZP, {
-                    children: j
+                    children: I
                         ? (0, a.jsxs)(a.Fragment, {
-                              children: [(0, a.jsx)(c.Dx, { children: N.Z.Messages.APP_OPENING }), (0, a.jsx)(c.Hh, {})]
+                              children: [(0, a.jsx)(c.Dx, { children: b.Z.Messages.APP_OPENING }), (0, a.jsx)(c.Hh, {})]
                           })
                         : (0, a.jsxs)(a.Fragment, {
                               children: [
                                   (0, a.jsx)(c.Dx, {
-                                      className: g.appOpenedTitle,
-                                      children: N.Z.Messages.APP_OPENED_TITLE
+                                      className: N.appOpenedTitle,
+                                      children: b.Z.Messages.APP_OPENED_TITLE
                                   }),
-                                  (0, a.jsx)(c.DK, { children: N.Z.Messages.DEEPLINK_BROWSER_APP_OPENED })
+                                  (0, a.jsx)(c.DK, { children: b.Z.Messages.DEEPLINK_BROWSER_APP_OPENED })
                               ]
                           })
                 })
