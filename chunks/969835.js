@@ -91,6 +91,7 @@ function U(e) {
                         displayProfile: q,
                         profileType: L.y0.BITE_SIZE,
                         children: [
+                            null != er && (0, r.jsx)('div', { className: P.backdrop }),
                             (0, r.jsxs)(N.Z, {
                                 profileType: L.y0.BITE_SIZE,
                                 children: [
@@ -128,7 +129,6 @@ function U(e) {
                             (0, r.jsxs)('header', {
                                 className: P.header,
                                 children: [
-                                    null != er && (0, r.jsx)('div', { className: P.backdrop }),
                                     (0, r.jsx)(m.Z, {
                                         user: t,
                                         displayProfile: q,
