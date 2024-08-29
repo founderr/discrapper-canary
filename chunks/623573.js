@@ -563,11 +563,11 @@ let q = u.ZP.connectStores([E.Z, P.Z, N.Z], () => ({
     isAuthenticating: N.Z.isAwaitingAuthentication
 }))(z);
 function W(e) {
-    let { transitionState: t, analyticsLocation: s, onClose: n, onAddPaymentSource: a, initialStep: i = A.h8.PAYMENT_TYPE } = e,
-        l = (0, f.fL)(),
-        o = (0, f.vP)({
-            paymentModalArgs: l,
-            initialStep: i,
+    let { transitionState: t, analyticsLocation: s, onClose: n, onAddPaymentSource: a, toastContent: i, initialStep: l = A.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: o = !1 } = e,
+        h = (0, f.fL)(),
+        u = (0, f.vP)({
+            paymentModalArgs: h,
+            initialStep: l,
             prependSteps: [],
             appendSteps: [],
             onReturn: () => {
@@ -588,7 +588,9 @@ function W(e) {
                 ]
             }),
             analyticsLocation: s,
-            hideBreadcrumbs: !0
+            hideBreadcrumbs: !0,
+            toastContent: i,
+            overwriteSubscriptionPaymentSource: o
         });
     return (0, r.jsx)(c.ModalRoot, {
         transitionState: t,
@@ -600,7 +602,7 @@ function W(e) {
             onSubmit: function (e) {
                 e.preventDefault();
             },
-            children: o
+            children: u
         })
     });
 }

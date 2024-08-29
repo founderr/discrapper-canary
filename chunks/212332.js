@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return h;
     }
 });
 var i = n(735250),
@@ -17,13 +17,13 @@ var i = n(735250),
     I = n(559725),
     m = n(439041),
     T = n(981631),
-    h = n(689938);
-function N(e) {
+    N = n(689938);
+function h(e) {
     let { onClose: t } = e,
         a = d.default.getCurrentUser();
     r()(void 0 !== a, 'User must not be null');
-    let N = (0, _.I5)(a),
-        C = N ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
+    let h = (0, _.I5)(a),
+        C = h ? T.oAB.SUBSCRIPTIONS : T.oAB.BILLING;
     return (
         s.useEffect(() => {
             null == m.Z.cashAppPayComponent && (0, I.eI)();
@@ -35,7 +35,7 @@ function N(e) {
                     onClick: t,
                     noticeType: T.kVF.CASH_APP_PAY_AWARENESS_NAGBAR
                 }),
-                N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CONTENT : h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CONTENT,
+                h ? N.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CONTENT : N.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CONTENT,
                 (0, i.jsx)(l.PrimaryCTANoticeButton, {
                     onClick: () => {
                         c.Z.open(C),
@@ -48,7 +48,9 @@ function N(e) {
                                                 ...t,
                                                 initialStep: u.h8.CASH_APP_INFORMATION,
                                                 analyticsLocation: T.Sbl.CASH_APP_PAY_AWARENESS_NAGBAR,
-                                                onAddPaymentSource: (e) => (0, E.i1)(e.id)
+                                                onAddPaymentSource: (e) => (0, E.i1)(e.id),
+                                                toastContent: h ? N.Z.Messages.CASH_APP_PAY_AWARENESS_UPDATE_NITRO_PAYMENT_METHOD_TOAST : N.Z.Messages.CASH_APP_PAY_AWARENESS_UPDATE_NON_NITRO_PAYMENT_METHOD_TOAST,
+                                                overwriteSubscriptionPaymentSource: h
                                             });
                                     },
                                     {
@@ -60,7 +62,7 @@ function N(e) {
                             t();
                     },
                     noticeType: T.kVF.CASH_APP_PAY_AWARENESS_NAGBAR,
-                    children: N ? h.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CTA : h.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CTA
+                    children: h ? N.Z.Messages.CASH_APP_PAY_AWARENESS_SUBSCRIBER_CTA : N.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_CTA
                 })
             ]
         })
