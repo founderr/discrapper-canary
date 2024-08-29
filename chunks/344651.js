@@ -882,7 +882,14 @@ B(
     k(['RELATIONSHIP_UPDATE'], (e) => {
         V({
             type: 'RELATIONSHIP_UPDATE',
-            relationship: e
+            relationship: {
+                id: e.id,
+                type: e.type,
+                user: e.user,
+                nickname: e.nickname,
+                since: e.since,
+                isSpamRequest: e.is_spam_request || !1
+            }
         });
     }),
     k(['PRESENCE_UPDATE'], (e) => {
