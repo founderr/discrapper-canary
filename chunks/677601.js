@@ -200,11 +200,11 @@ class ek extends a.PureComponent {
     }
     renderContent(e) {
         var t;
-        let { selectedParticipant: n, inCall: a, hasConnectPermission: s, mode: l, popoutWindow: r, participantsOpen: o, participants: c, filteredParticipants: u, participantsVersion: d, channel: h, guild: p, layout: m, forceShowControls: _, awaitingRemoteSessionInfo: f, currentChannelActivities: E } = this.props,
-            C = m === eL.AEg.MINIMUM,
-            g = C || m === eL.AEg.NORMAL,
-            I = a && l === eL.WtW.VIDEO,
-            x = (null !== (t = null == E ? void 0 : E.length) && void 0 !== t ? t : 0) > 0 && h.isPrivate();
+        let { selectedParticipant: n, inCall: a, hasConnectPermission: s, mode: l, popoutWindow: r, participantsOpen: o, participants: c, filteredParticipants: u, participantsVersion: d, channel: h, guild: p, layout: m, forceShowControls: _, awaitingRemoteSessionInfo: f, currentChannelActivities: E, callContainerDimensions: C } = this.props,
+            g = m === eL.AEg.MINIMUM,
+            I = g || m === eL.AEg.NORMAL,
+            x = a && l === eL.WtW.VIDEO,
+            T = (null !== (t = null == E ? void 0 : E.length) && void 0 !== t ? t : 0) > 0 && h.isPrivate();
         return (
             (this._lastIdleProps = e),
             (0, i.jsx)(K.Z, {
@@ -217,8 +217,8 @@ class ek extends a.PureComponent {
                 renderVoiceChannelEffects: this.renderVoiceChannelEffects,
                 ...e,
                 screenMessage: this.screenMessage,
-                disableGradients: C,
-                idle: !_ && a && !C && e.idle,
+                disableGradients: g,
+                idle: !_ && a && !g && e.idle,
                 children:
                     a && this.popoutOpen && !this.inPopout
                         ? null
@@ -232,15 +232,16 @@ class ek extends a.PureComponent {
                               participants: c,
                               filteredParticipants: u,
                               participantsVersion: d,
-                              selectedParticipant: I ? n : null,
+                              selectedParticipant: x ? n : null,
                               layout: m,
                               idle: e.idle,
                               mode: l,
                               onSelectParticipant: this.handleSelectParticipant,
                               onContextMenuParticipant: this.handleContextMenu,
-                              showParticipants: o && (!g || x),
+                              showParticipants: o && (!I || T),
                               popoutWindow: this.inPopout ? r : null,
-                              awaitingRemoteSessionInfo: f
+                              awaitingRemoteSessionInfo: f,
+                              callContainerDimensions: C
                           })
             })
         );
