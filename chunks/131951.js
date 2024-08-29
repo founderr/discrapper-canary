@@ -760,6 +760,12 @@ class tN extends (l = p.ZP.Store) {
                         error: e
                     });
             }),
+            eR.on(I.aB.AudioDeviceModuleError, (e, t) => {
+                $.default.track(eE.rMx.AUDIO_DEVICE_MODULE_ERROR, {
+                    audio_device_module: e,
+                    code: t
+                });
+            }),
             to.reset(),
             (0, ed.q)().then((e) => {
                 null != e && (e4 = e.gpu_brand);

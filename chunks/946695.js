@@ -21,4 +21,5 @@ n.d(t, {
     (i.ClipsRecordingEnded = 'clips-recording-ended'),
     (i.NativeScreenSharePickerUpdate = 'native-screenshare-picker-updated'),
     (i.NativeScreenSharePickerCancel = 'native-screenshare-picker-cancelled'),
-    (i.NativeScreenSharePickerError = 'native-screenshare-picker-error');
+    (i.NativeScreenSharePickerError = 'native-screenshare-picker-error'),
+    (i.AudioDeviceModuleError = 'audio-device-module-error');

@@ -556,7 +556,7 @@ class T extends s.Z {
         return 0 === this.connections.size;
     }
     constructor() {
-        var e, t, n;
+        var e, t, n, r;
         super(),
             (e = this),
             p(this, 'Video', E.Z),
@@ -613,18 +613,22 @@ class T extends s.Z {
             }),
             p(this, 'handleNativeScreenSharePickerError', (e) => {
                 this.emit(o.aB.NativeScreenSharePickerError, e);
+            }),
+            p(this, 'handleAudioDeviceModuleErrorCallback', (e) => {
+                this.emit(o.aB.AudioDeviceModuleError, 'RustAudioDeviceModule', e);
             });
-        let r = (0, d.zS)();
+        let i = (0, d.zS)();
         if (
-            (r.setDeviceChangeCallback(this.handleDeviceChange),
-            r.setVolumeChangeCallback(this.handleVolumeChange),
-            r.setOnVoiceCallback(this.handleVoiceActivity),
-            null === (t = r.setVideoInputInitializationCallback) || void 0 === t || t.call(r, this.handleVideoInputInitialization),
-            r.setTransportOptions({
+            (i.setDeviceChangeCallback(this.handleDeviceChange),
+            i.setVolumeChangeCallback(this.handleVolumeChange),
+            i.setOnVoiceCallback(this.handleVoiceActivity),
+            null === (t = i.setVideoInputInitializationCallback) || void 0 === t || t.call(i, this.handleVideoInputInitialization),
+            i.setTransportOptions({
                 idleJitterBufferFlush: !0,
                 ducking: !1
             }),
-            null === (n = r.setNativeScreenSharePickerCallbacks) || void 0 === n || n.call(r, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
+            null === (n = i.setNativeScreenSharePickerCallbacks) || void 0 === n || n.call(i, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
+            null === (r = i.setAudioDeviceModuleErrorCallback) || void 0 === r || r.call(i, this.handleAudioDeviceModuleErrorCallback),
             this.on('removeListener', this.handleRemoveListener),
             this.on('newListener', this.handleNewListener),
             null != (0, d.zS)().getAudioSubsystem
@@ -632,7 +636,7 @@ class T extends s.Z {
                       (this.audioSubsystem = e), (this.audioLayer = t);
                   })
                 : null != (0, d.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? h.iA.LEGACY : h.iA.STANDARD),
-            null != r.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
+            null != i.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
             this.getDebugLogging() && !T.installedLogHooks)
         )
             for (let e of ((T.installedLogHooks = !0), ['trace', 'debug', 'info', 'warn', 'error', 'log'])) {
@@ -650,7 +654,7 @@ class T extends s.Z {
                         } catch (e) {}
                     });
             }
-        null != r.setActiveSinksChangeCallback && r.setActiveSinksChangeCallback(this.handleActiveSinksChange), (0, l.Z)(this);
+        null != i.setActiveSinksChangeCallback && i.setActiveSinksChangeCallback(this.handleActiveSinksChange), (0, l.Z)(this);
     }
 }
 p(T, 'installedLogHooks', !1);

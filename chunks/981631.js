@@ -3939,6 +3939,7 @@ let ie = Object.freeze({
     (nf.VOICE_CHANNEL_TOPIC_SET = 'voice_channel_topic_set'),
     (nf.VOICE_CHANNEL_TOPIC_VIEWED = 'voice_channel_topic_viewed'),
     (nf.VOICE_QUALITY_PERIODIC_STATS = 'voice_quality_periodic_stats'),
+    (nf.AUDIO_DEVICE_MODULE_ERROR = 'audio_device_module_error'),
     (nf.CHANNEL_SIDEBAR_VIEWED = 'channel_sidebar_viewed'),
     (nf.MEMBER_LIST_VIEWED = 'member_list_viewed'),
     (nf.MEMBER_LIST_TOGGLED = 'member_list_toggled'),
