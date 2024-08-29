@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 }),
     n(47120);
@@ -8,16 +8,26 @@ var i = n(735250),
     a = n(470079),
     s = n(120356),
     r = n.n(s),
-    l = n(497505),
-    o = n(415104),
-    c = n(82969);
-function d(e) {
+    l = n(481060),
+    o = n(497505),
+    c = n(415104),
+    d = n(82969);
+function u(e) {
     var t;
-    let { quests: n, selectedQuestId: s } = e;
+    let { quests: n, isFetching: s } = e,
+        u = null;
+    if (window.location.hash.length > 0) {
+        let e = window.location.hash.slice(1);
+        for (let t of n)
+            if (t.id === e) {
+                u = e;
+                break;
+            }
+    }
     a.useEffect(() => {
         for (let e of n)
-            if (e.id === s) {
-                let e = document.getElementById('quest-tile-'.concat(s));
+            if (e.id === u) {
+                let e = document.getElementById('quest-tile-'.concat(u));
                 null == e ||
                     e.scrollIntoView({
                         behavior: 'smooth',
@@ -25,12 +35,12 @@ function d(e) {
                     });
                 break;
             }
-    }, [n, s]);
-    let d = null != s,
-        [u, _] = a.useState(window.innerWidth);
+    }, [n, u]);
+    let _ = null != u,
+        [E, h] = a.useState(window.innerWidth);
     a.useEffect(() => {
         let e = () => {
-            _(window.innerWidth);
+            h(window.innerWidth);
         };
         return (
             window.addEventListener('resize', e),
@@ -39,29 +49,31 @@ function d(e) {
             }
         );
     }, []);
-    let E = (t = u) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
-    return (0, i.jsx)(
-        'div',
-        {
-            className: c.container,
-            children: n.map((e, t) => {
-                let n = Math.floor(t / E);
-                return (0, i.jsx)(
-                    o.Z,
-                    {
-                        quest: e,
-                        questContent: l.jn.QUEST_HOME_DESKTOP,
-                        contentPosition: t,
-                        rowIndex: n,
-                        className: r()(c.questTile, {
-                            [c.selected]: d && e.id === s,
-                            [c.unselected]: d && e.id !== s
-                        })
-                    },
-                    e.id
-                );
-            })
-        },
-        null != s ? s : ''
-    );
+    let m = (t = E) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
+    return s && 0 === n.length
+        ? (0, i.jsx)(l.Spinner, { className: d.spinner })
+        : (0, i.jsx)(
+              'div',
+              {
+                  className: d.container,
+                  children: n.map((e, t) => {
+                      let n = Math.floor(t / m);
+                      return (0, i.jsx)(
+                          c.Z,
+                          {
+                              quest: e,
+                              questContent: o.jn.QUEST_HOME_DESKTOP,
+                              contentPosition: t,
+                              rowIndex: n,
+                              className: r()(d.questTile, {
+                                  [d.selected]: _ && e.id === u,
+                                  [d.unselected]: _ && e.id !== u
+                              })
+                          },
+                          e.id
+                      );
+                  })
+              },
+              null != u ? u : ''
+          );
 }
