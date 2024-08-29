@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(481060),
     d = n(607070),
     _ = n(100527),
-    E = n(906732),
-    u = n(410154),
+    u = n(906732),
+    E = n(410154),
     T = n(626135),
     I = n(915296),
     R = n(103433),
@@ -17,8 +17,8 @@ var s = n(735250),
     g = n(32173),
     N = n(391110),
     p = n(75077),
-    A = n(981631),
-    m = n(689938),
+    m = n(981631),
+    A = n(689938),
     f = n(396001),
     S = n(865215);
 t.Z = (e) => {
@@ -31,13 +31,13 @@ t.Z = (e) => {
             return !1 !== s.canReveal && 'upcomingDropUntimed' !== s.name && (e[n] = s), e;
         }, {}),
         P = (0, I.HI)({ location: N.MQ.SEE_ALL }),
-        { analyticsLocations: L } = (0, E.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
-        [v, Z] = a.useState(!1),
-        D = (0, u.ZP)('perks-discoverability'),
+        { analyticsLocations: v } = (0, u.ZP)(_.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        [L, Z] = a.useState(!1),
+        D = (0, E.ZP)('perks-discoverability'),
         B = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         j = (0, p.mN)();
     return (
-        P === I.mJ.DEFAULT ? ((t = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = m.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = m.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
+        P === I.mJ.DEFAULT ? ((t = A.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (n = A.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD)) : ((t = A.Z.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD), (n = A.Z.Messages.MARKETING_PAGE_CAROUSEL_TITLE)),
         (0, s.jsx)(c.AdvancedScrollerAuto, {
             className: i()(f.allPerksScroller, {
                 [f.open]: r,
@@ -46,14 +46,14 @@ t.Z = (e) => {
             ref: O,
             children: (0, s.jsx)('div', {
                 className: f.container,
-                children: (0, s.jsxs)(E.Gt, {
-                    value: L,
+                children: (0, s.jsxs)(u.Gt, {
+                    value: v,
                     children: [
                         (0, s.jsx)(R.Z, {
                             className: f.heroHeading,
                             onBackClick: () => {
                                 h(!1),
-                                    T.default.track(A.rMx.NITRO_HOME_NAVIGATION, {
+                                    T.default.track(m.rMx.NITRO_HOME_NAVIGATION, {
                                         current_component: N.MQ.SEE_ALL,
                                         next_component: M,
                                         interaction_component: 'Back Button'
@@ -103,7 +103,7 @@ t.Z = (e) => {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
                                     className: f.heading,
-                                    children: m.Z.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
+                                    children: A.Z.Messages.NITRO_HOME_SHOW_UP_HOW_YOU_WANT
                                 }),
                                 (0, s.jsx)(C.Z, {
                                     className: f.cardCarousel,
@@ -122,7 +122,7 @@ t.Z = (e) => {
                         (0, s.jsx)('div', { className: f.footerSpacing }),
                         (0, s.jsx)(o.$, {
                             onChange: (e) => {
-                                e && !v && (T.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: L }), Z(!0));
+                                e && !L && (T.default.track(m.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: v }), Z(!0));
                             },
                             children: (0, s.jsx)('div', { className: f.bottomOfPageVisibilitySensor })
                         }),
@@ -131,7 +131,7 @@ t.Z = (e) => {
                             className: f.bottomIllustration,
                             width: 112,
                             height: 85,
-                            alt: m.Z.Messages.IMAGE
+                            alt: A.Z.Messages.IMAGE
                         })
                     ]
                 })

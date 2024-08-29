@@ -23,8 +23,8 @@ var i,
     Z = n(600164),
     I = n(112831),
     S = n(594190),
-    C = n(925329),
-    v = n(569545),
+    v = n(925329),
+    C = n(569545),
     x = n(914923),
     T = n(165393),
     N = n(989941),
@@ -76,15 +76,15 @@ function ei(e) {
         Z = (0, l.e7)([G.Z], () => G.Z.showKeybindIndicators),
         I = (0, l.e7)([D.default], () => D.default.getId()),
         S = (0, l.e7)([k.Z], () => k.Z.isLocalMute(i.id)),
-        C = (0, l.e7)([P.Z], () => P.Z.getCurrentUserActiveStream()),
-        v = (0, l.Wu)([P.Z], () => (null != C ? P.Z.getViewerIds(C) : [])),
+        v = (0, l.e7)([P.Z], () => P.Z.getCurrentUserActiveStream()),
+        C = (0, l.Wu)([P.Z], () => (null != v ? P.Z.getViewerIds(v) : [])),
         x = (0, g.Z)({
             userId: i.id,
             context: f
         }),
         T = (0, l.e7)([B.Z], () => B.Z.isPrioritySpeaker(i.id, f)),
         N = (0, l.e7)([P.Z], () => null != P.Z.getStreamForUser(i.id, _)),
-        O = a.useMemo(() => null != C && C.ownerId !== i.id && v.includes(i.id), [C, i.id, v]);
+        O = a.useMemo(() => null != v && v.ownerId !== i.id && C.includes(i.id), [v, i.id, C]);
     if (d === q.OYC.ONLY_WHILE_SPEAKING && n && !x) return null;
     let A = i.id === I,
         { mute: y, selfMute: R, suppress: M, deaf: b, selfDeaf: w } = m,
@@ -239,7 +239,7 @@ class es extends (i = a.PureComponent) {
                         className: et.streamerInner,
                         children: [
                             (null == c ? void 0 : c.id) != null && c.id === (null == o ? void 0 : o.id)
-                                ? (0, s.jsx)(C.Z, {
+                                ? (0, s.jsx)(v.Z, {
                                       className: et.gameIcon,
                                       game: o
                                   })
@@ -381,7 +381,7 @@ class es extends (i = a.PureComponent) {
             }),
             en(this, 'handleStopStream', () => {
                 let { stream: e } = this.props;
-                if (null != e) _.g((0, v.V9)(e));
+                if (null != e) _.g((0, C.V9)(e));
             });
     }
 }

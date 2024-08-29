@@ -1,6 +1,6 @@
 n.d(t, {
     B: function () {
-        return E;
+        return u;
     }
 });
 var s = n(470079),
@@ -12,13 +12,13 @@ var s = n(470079),
     c = n(276444),
     d = n(520540),
     _ = n(474936);
-let E = function (e) {
+let u = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, a.e7)([r.default], () => r.default.getCurrentUser()),
-        E = (0, l.t7)(),
-        u = (0, o._O)(),
+        u = (0, l.t7)(),
+        E = (0, o._O)(),
         { eligibleToFetch: T } = d.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-        I = T && null != n && n.verified && (0, i.M5)(n, _.p9.TIER_2) && !E && !u;
+        I = T && null != n && n.verified && (0, i.M5)(n, _.p9.TIER_2) && !u && !E;
     s.useEffect(() => {
         I && !t && c.Z.checkAndFetchReferralsRemaining();
     }, [I, t]);

@@ -23,8 +23,8 @@ var s = n(735250),
     Z = n(425493),
     I = n(951483),
     S = n(714338),
-    C = n(185666),
-    v = n(100527),
+    v = n(185666),
+    C = n(100527),
     x = n(906732),
     T = n(770471),
     N = n(757454),
@@ -133,7 +133,7 @@ class ef extends a.Component {
         E.Z.deactivateAllRegions();
     }
     componentDidMount() {
-        E.Z.startSession(), M.Z.initialize(), C.Z.initialize(), b.Z.initialize();
+        E.Z.startSession(), M.Z.initialize(), v.Z.initialize(), b.Z.initialize();
     }
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
@@ -220,7 +220,7 @@ class ef extends a.Component {
         window.addEventListener('keydown', this.onKeyDownGlobal, !0), window.addEventListener('keyup', this.onKeyUpGlobal, !0);
     }
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', ed, !1), M.Z.terminate(), C.Z.terminate(), b.Z.terminate();
+        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', ed, !1), M.Z.terminate(), v.Z.terminate(), b.Z.terminate();
     }
     renderInvalidSizeMessage() {
         return (0, s.jsx)(O.Z, {
@@ -335,7 +335,7 @@ function e_() {
         { canBroadcast: p } = T.Z.useExperiment({ location: 'overlay' }, { autoTrackExposure: !1 }),
         g = (0, N.Z)() && null != u,
         m = (0, f.e7)([L.Z], () => null != L.Z.getCurrentUserActiveStream()),
-        { analyticsLocations: E } = (0, x.ZP)(v.Z.OVERLAY),
+        { analyticsLocations: E } = (0, x.ZP)(C.Z.OVERLAY),
         { showKeybindIndicators: Z, dismissKeybindNotification: I } = (0, q.K)();
     return (0, s.jsx)(x.Gt, {
         value: E,

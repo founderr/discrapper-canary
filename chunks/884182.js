@@ -12,8 +12,8 @@ var i = t(735250),
     h = t(217702),
     I = t(159696);
 let x = Math.round((h.mT - 8) / 3),
-    p = Math.round((h.mT - 4) / 2),
-    g = Math.round((h.Jj - 4) / 2),
+    g = Math.round((h.mT - 4) / 2),
+    p = Math.round((h.Jj - 4) / 2),
     C = Math.round((2 * (h.mT - 4)) / 3),
     f = C / 2;
 function j(e) {
@@ -62,8 +62,8 @@ function T(e) {
                     className: I.oneByTwoGridItem,
                     children: (0, i.jsx)(O, {
                         props: e,
-                        maxWidth: p,
-                        maxHeight: p
+                        maxWidth: g,
+                        maxHeight: g
                     })
                 },
                 e.item.uniqueId
@@ -95,7 +95,7 @@ function E(e) {
                                 children: (0, i.jsx)(O, {
                                     props: e,
                                     maxWidth: f,
-                                    maxHeight: g
+                                    maxHeight: p
                                 })
                             },
                             e.item.uniqueId
@@ -115,8 +115,8 @@ function v(e) {
                 O,
                 {
                     props: e,
-                    maxWidth: p,
-                    maxHeight: g
+                    maxWidth: g,
+                    maxHeight: p
                 },
                 e.item.uniqueId
             )
@@ -171,8 +171,8 @@ n.Z = function (e) {
     let { items: n, inlineForwardButton: t } = e,
         {
             groupableVisualMediaItems: l,
-            nonGroupableVisualMediaItems: s,
-            nonVisualMediaItems: a
+            nonGroupableVisualMediaItems: a,
+            nonVisualMediaItems: r
         } = (function (e) {
             return o.useMemo(() => {
                 let [n, t] = d().partition(e, (e) => (0, c.R_)(e.item.type)),
@@ -189,7 +189,7 @@ n.Z = function (e) {
             l.length > 0 &&
                 (null != t
                     ? (0, i.jsxs)('div', {
-                          className: I.mosaicContainer,
+                          className: s()(I.mosaicContainer, 1 === l.length && I.single),
                           children: [
                               (0, i.jsx)('div', {
                                   className: I.visualMediaItemContainer,
@@ -202,8 +202,8 @@ n.Z = function (e) {
                           className: I.visualMediaItemContainer,
                           children: (0, i.jsx)(j, { visualMediaItems: l })
                       })),
-            s.length > 0 &&
-                s.map((e) => {
+            a.length > 0 &&
+                a.map((e) => {
                     let n = e.renderMosaicItemFooter({
                         item: e.item,
                         message: e.message
@@ -220,10 +220,10 @@ n.Z = function (e) {
                         e.item.uniqueId
                     );
                 }),
-            a.length > 0 &&
+            r.length > 0 &&
                 (0, i.jsx)('div', {
                     className: I.nonVisualMediaItemContainer,
-                    children: a.map((e) =>
+                    children: r.map((e) =>
                         (0, i.jsx)(
                             'div',
                             {

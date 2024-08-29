@@ -7,9 +7,9 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(470167),
     o = n(481060),
     c = n(572691),
@@ -20,37 +20,37 @@ var i = n(735250),
     I = n(163268),
     m = n(719548),
     T = n(689938),
-    N = n(553318);
-let h = (e) => {
+    h = n(553318);
+let N = (e) => {
         let { attachment: t } = e,
-            { url: n, description: s } = t;
+            { url: n, description: a } = t;
         return null == n
             ? null
-            : (0, i.jsx)(f, {
+            : (0, i.jsx)(C, {
                   url: n,
-                  description: s
+                  description: a
               });
     },
-    C = (e) => {
-        var t, n, s;
-        let { embed: a } = e;
-        if (!m.n2.has(a.type)) return null;
-        let r = void 0 !== a.video && a.type !== l.h.GIFV ? a.video.url : null !== (s = null === (t = a.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== s ? s : null === (n = a.image) || void 0 === n ? void 0 : n.url;
-        return null == r ? null : (0, i.jsx)(f, { url: r });
-    },
     f = (e) => {
+        var t, n, a;
+        let { embed: s } = e;
+        if (!m.n2.has(s.type)) return null;
+        let r = void 0 !== s.video && s.type !== l.h.GIFV ? s.video.url : null !== (a = null === (t = s.thumbnail) || void 0 === t ? void 0 : t.url) && void 0 !== a ? a : null === (n = s.image) || void 0 === n ? void 0 : n.url;
+        return null == r ? null : (0, i.jsx)(C, { url: r });
+    },
+    C = (e) => {
         let { url: t, description: n } = e,
-            s = (0, _.cb)(t);
+            a = (0, _.cb)(t);
         return (0, i.jsx)('div', {
-            className: N.mediaContainer,
-            children: s
+            className: h.mediaContainer,
+            children: a
                 ? (0, i.jsx)(d.Z, {
-                      className: r()(N.video, N.media),
+                      className: r()(h.video, h.media),
                       controls: !0,
                       src: t
                   })
                 : (0, i.jsx)('img', {
-                      className: r()(N.image, N.media),
+                      className: r()(h.image, h.media),
                       src: t,
                       alt: n
                   })
@@ -65,9 +65,9 @@ function p(e) {
         e();
 }
 function g(e) {
-    let { channelId: t, messageId: n, isReportFalsePositiveLoading: a, analyticsContext: r, attachmentPreview: l, embedPreview: c, onConfirmPress: d, transitionState: _, onClose: E } = e,
+    let { channelId: t, messageId: n, isReportFalsePositiveLoading: s, analyticsContext: r, attachmentPreview: l, embedPreview: c, onConfirmPress: d, transitionState: _, onClose: E } = e,
         m = (0, u.Dt)(),
-        f = s.useCallback(() => {
+        C = a.useCallback(() => {
             (0, I.aP)({
                 action: I.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: t,
@@ -76,7 +76,7 @@ function g(e) {
             }),
                 E();
         }, [t, n, r, E]),
-        p = s.useCallback(() => {
+        p = a.useCallback(() => {
             null == d || d(),
                 (0, I.aP)({
                     action: I.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
@@ -86,7 +86,7 @@ function g(e) {
                 });
         }, [t, n, r, d]);
     return (
-        s.useEffect(() => {
+        a.useEffect(() => {
             (0, I.aP)({
                 action: I.Yy.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED,
                 channelId: t,
@@ -102,43 +102,43 @@ function g(e) {
                 (0, i.jsxs)(o.ModalContent, {
                     children: [
                         (0, i.jsx)(o.ModalCloseButton, {
-                            onClick: f,
-                            className: N.closeButton
+                            onClick: C,
+                            className: h.closeButton
                         }),
                         (0, i.jsx)(o.Heading, {
                             id: m,
                             variant: 'heading-lg/semibold',
                             color: 'header-primary',
-                            className: N.header,
+                            className: h.header,
                             children: T.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_HEADER
                         }),
                         (0, i.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
-                            className: N.subheader,
+                            className: h.subheader,
                             children: T.Z.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_MODAL_DESCRIPTION
                         }),
-                        null != l && (0, i.jsx)(h, { attachment: l }),
-                        null != c && (0, i.jsx)(C, { embed: c })
+                        null != l && (0, i.jsx)(N, { attachment: l }),
+                        null != c && (0, i.jsx)(f, { embed: c })
                     ]
                 }),
                 (0, i.jsxs)(o.ModalFooter, {
                     children: [
                         (0, i.jsx)(o.Button, {
-                            className: N.button,
-                            disabled: a,
-                            submitting: a,
+                            className: h.button,
+                            disabled: s,
+                            submitting: s,
                             size: o.Button.Sizes.MEDIUM,
                             color: o.Button.Colors.BRAND,
                             onClick: p,
                             children: T.Z.Messages.CONFIRM
                         }),
                         (0, i.jsx)(o.Button, {
-                            className: N.button,
-                            disabled: a,
+                            className: h.button,
+                            disabled: s,
                             color: o.Button.Colors.TRANSPARENT,
                             size: o.Button.Sizes.MEDIUM,
-                            onClick: f,
+                            onClick: C,
                             children: T.Z.Messages.CANCEL
                         })
                     ]

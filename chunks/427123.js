@@ -1,7 +1,7 @@
 n(47120), n(653041);
 var i,
-    s,
     a,
+    s,
     r,
     l = n(392711),
     o = n.n(l),
@@ -13,10 +13,10 @@ var i,
     I = n(728345),
     m = n(812206),
     T = n(594190),
-    N = n(594174),
-    h = n(580130),
-    C = n(55563),
-    f = n(981631);
+    h = n(594174),
+    N = n(580130),
+    f = n(55563),
+    C = n(981631);
 let p = 'DetectedOffPlatformPremiumPerksStore',
     g = {},
     S = {},
@@ -30,12 +30,12 @@ function R() {
             !m.Z.isFetchingApplication(n) && !m.Z.didFetchingApplicationFail(n) && I.Z.fetchApplication(n);
             continue;
         }
-        let s = C.Z.get(t);
-        if (null == s) {
-            !C.Z.isFetching(t) && !C.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
+        let a = f.Z.get(t);
+        if (null == a) {
+            !f.Z.isFetching(t) && !f.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
             continue;
         }
-        h.Z.applicationIdsFetching.has(i.id) || h.Z.isEntitledToSku(N.default.getCurrentUser(), t, i.id, i.id) || !s.available
+        N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !a.available
             ? null != g[t] && (delete g[t], (e = !0))
             : ((g[t] = {
                   skuId: t,
@@ -45,25 +45,25 @@ function R() {
     }
     return e;
 }
-class O extends (i = c.ZP.Store) {
+class x extends (i = c.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(T.ZP, C.Z, h.Z), (A = null !== (e = u.K.get(p)) && void 0 !== e ? e : A);
+        this.waitFor(T.ZP, f.Z, N.Z), (A = null !== (e = u.K.get(p)) && void 0 !== e ? e : A);
     }
     getDetectedOffPlatformPremiumPerks() {
         return o().values(g);
     }
 }
 (r = 'DetectedOffPlatformPremiumPerksStore'),
-    (a = 'displayName') in (s = O)
-        ? Object.defineProperty(s, a, {
+    (s = 'displayName') in (a = x)
+        ? Object.defineProperty(a, s, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = r),
-    (t.Z = new O(d.Z, {
+        : (a[s] = r),
+    (t.Z = new x(d.Z, {
         LOGOUT: function () {
             (g = {}), (S = {});
         },
@@ -79,11 +79,11 @@ class O extends (i = c.ZP.Store) {
         RUNNING_GAMES_CHANGE: function () {
             let e = !1;
             for (let { id: t, distributor: n } of T.ZP.getRunningGames())
-                if (null != t && n !== f.GQo.DISCORD)
-                    for (let { skuId: n, applicationId: i } of f.Lg6) {
+                if (null != t && n !== C.GQo.DISCORD)
+                    for (let { skuId: n, applicationId: i } of C.Lg6) {
                         if (!(i !== t || A.includes(n)))
                             null == S[n] &&
-                                (!h.Z.applicationIdsFetched.has(i) && !h.Z.applicationIdsFetching.has(i) && null == h.Z.getForSku(n) && _.yD(i),
+                                (!N.Z.applicationIdsFetched.has(i) && !N.Z.applicationIdsFetching.has(i) && null == N.Z.getForSku(n) && _.yD(i),
                                 (S[n] = {
                                     skuId: n,
                                     applicationId: i

@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(925329),
     A = n(707409),
     v = n(210887),
-    L = n(283595),
-    Z = n(417363),
+    Z = n(283595),
+    L = n(417363),
     O = n(941128),
     R = n(451478),
     x = n(424218),
@@ -54,8 +54,8 @@ let G = (e) => {
             children: n
         });
     },
-    k = [d.Z.unsafe_rawColors.BLUE_345.css, d.Z.colors.INTERACTIVE_NORMAL.css],
-    w = (e) => {
+    w = [d.Z.unsafe_rawColors.BLUE_345.css, d.Z.colors.INTERACTIVE_NORMAL.css],
+    k = (e) => {
         let { tooltip: t, onClick: n, icon: a } = e;
         return (0, i.jsx)(_.Tooltip, {
             text: t,
@@ -268,7 +268,7 @@ class K extends a.PureComponent {
                 (0, i.jsx)(_.StackedProgress, {
                     percents: t,
                     size: _.Progress.Sizes.SMALL,
-                    foregroundColors: k,
+                    foregroundColors: w,
                     animate: this.isFocused
                 }),
                 (0, i.jsx)('div', {
@@ -345,7 +345,7 @@ class K extends a.PureComponent {
     }
     renderProgressPatching() {
         return (0, i.jsx)(P.Z, {
-            getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
+            getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -415,20 +415,20 @@ class K extends a.PureComponent {
     }
 }
 let q = () =>
-        (0, i.jsx)(w, {
+        (0, i.jsx)(k, {
             icon: _.PlayIcon,
             tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_RESUME,
             onClick: () => m.v4()
         }),
     Q = () =>
-        (0, i.jsx)(w, {
+        (0, i.jsx)(k, {
             icon: _.PauseIcon,
             tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_PAUSE,
             onClick: () => m.wO()
         }),
     X = (e) => {
         let { item: t } = e;
-        return (0, i.jsx)(w, {
+        return (0, i.jsx)(k, {
             icon: _.ArrowSmallUpIcon,
             tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_MOVE_UP,
             onClick: () => m.A1(t.applicationId, t.branchId)
@@ -436,7 +436,7 @@ let q = () =>
     },
     J = (e) => {
         let { item: t } = e;
-        return (0, i.jsx)(w, {
+        return (0, i.jsx)(k, {
             icon: _.XSmallIcon,
             tooltip: y.Z.Messages.GAME_LIBRARY_UPDATES_ACTION_REMOVE,
             onClick: () => m.al(t.applicationId, t.branchId)
@@ -531,14 +531,14 @@ class ee extends a.PureComponent {
                               (0, i.jsx)(M.Z, {
                                   className: r()(j.headerCell, j.networkProgress),
                                   title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_NETWORK,
-                                  getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesDownloaded,
                                   color: D.Ilk.GREEN_360,
                                   animate: a
                               }),
                               (0, i.jsx)(M.Z, {
                                   className: r()(j.headerCell, j.diskProgress),
                                   title: y.Z.Messages.GAME_LIBRARY_UPDATES_HEADER_DISK,
-                                  getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: L.Z.getHistoricalTotalBytesWritten,
                                   color: D.Ilk.BLUE_345,
                                   animate: a
                               })
@@ -610,7 +610,7 @@ function et(e, t, n, i) {
                     branchId: l,
                     state: c,
                     application: o,
-                    libraryApplication: L.Z.getLibraryApplication(r, l),
+                    libraryApplication: Z.Z.getLibraryApplication(r, l),
                     finished: t,
                     index: s
                 }),
@@ -619,10 +619,10 @@ function et(e, t, n, i) {
     }, []);
 }
 t.Z = (0, p.Z)(
-    c.ZP.connectStores([T.Z, Z.Z, O.Z, v.Z, R.Z], () => {
-        let e = et(O.Z.activeItems, !1, T.Z, Z.Z);
+    c.ZP.connectStores([T.Z, L.Z, O.Z, v.Z, R.Z], () => {
+        let e = et(O.Z.activeItems, !1, T.Z, L.Z);
         return {
-            applications: [...e, ...et(O.Z.finishedItems, !0, T.Z, Z.Z)],
+            applications: [...e, ...et(O.Z.finishedItems, !0, T.Z, L.Z)],
             paused: O.Z.paused,
             isFocused: R.Z.isFocused(),
             theme: v.Z.theme

@@ -6,27 +6,27 @@ n.d(t, {
         return o;
     },
     LA: function () {
-        return a;
+        return s;
     },
     NB: function () {
         return l;
     },
     cP: function () {
-        return s;
+        return a;
     }
 });
 var i = n(570140);
-function s(e, t, n, s, a) {
+function a(e, t, n, a, s) {
     i.Z.dispatch({
         type: 'SPEAK_TEXT',
         text: e,
         interrupt: t,
         maxLength: n,
-        onStart: s,
-        onEnd: a
+        onStart: a,
+        onEnd: s
     });
 }
-function a(e, t) {
+function s(e, t) {
     i.Z.dispatch({
         type: 'SPEAK_MESSAGE',
         channel: e,

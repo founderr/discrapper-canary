@@ -5,15 +5,15 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(739566),
-    a = n(834129),
+var a = n(739566),
+    s = n(834129),
     r = n(689938),
     l = n(324865);
 function o(e) {
     let { message: t, usernameHook: o, compact: c, isForumPost: u } = e,
-        d = (0, s.ZP)(t),
+        d = (0, a.ZP)(t),
         _ = o(d);
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(s.Z, {
         compact: c,
         className: l.channelNameChange,
         icon: n(819373),

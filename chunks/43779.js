@@ -24,7 +24,7 @@ var i = n(735250),
 let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function C(e) {
     var t, n, s;
-    let { quest: C, questContent: N, isHovering: A, contentPosition: v, rowIndex: L, onReceiveErrorHints: Z } = e,
+    let { quest: C, questContent: N, isHovering: A, contentPosition: v, rowIndex: Z, onReceiveErrorHints: L } = e,
         O = h.r.build(C.config).defaultReward.messages.name,
         R = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: x, scrollHeight: b } = (0, d.Z)(),
@@ -40,7 +40,7 @@ function C(e) {
         y = (null === (s = C.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
         { completedRatio: j, completedRatioDisplay: U } = (0, _.I)(C),
         G = (0, _.Bd)(C),
-        k = a.useCallback(
+        w = a.useCallback(
             () =>
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/semibold',
@@ -51,7 +51,7 @@ function C(e) {
                 }),
             [O]
         ),
-        w = a.useMemo(() => (y ? k() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: k })), [y, k]),
+        k = a.useMemo(() => (y ? w() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: w })), [y, w]),
         B = a.useMemo(() => {
             if (null != G)
                 return (0, i.jsx)(c.Text, {
@@ -127,7 +127,7 @@ function C(e) {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
                                 className: f.header,
-                                children: w
+                                children: k
                             }),
                             B
                         ]
@@ -145,8 +145,8 @@ function C(e) {
                 quest: C,
                 location: N,
                 contentPosition: v,
-                rowIndex: L,
-                onReceiveErrorHints: Z
+                rowIndex: Z,
+                onReceiveErrorHints: L
             })
         ]
     });

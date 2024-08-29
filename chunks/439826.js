@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return L;
     }
 }),
     n(571269),
@@ -28,7 +28,7 @@ var i,
     N = n(981631),
     A = n(689938),
     v = n(222307);
-function L(e) {
+function Z(e) {
     var t;
     let { quest: n, errorHints: i, warningHints: a } = e,
         { ref: l, height: o = 0 } = (0, h.Z)([i]),
@@ -103,12 +103,12 @@ function L(e) {
         })
     });
 }
-function Z(e) {
+function L(e) {
     var t;
     let { quest: n, isHovering: i, errorHints: a, warningHints: l, onCtxMenuClose: c, onCtxMenuOpen: h, onCtxMenuSelect: T } = e,
         C = (0, p.j8)(n),
-        Z = (0, E.ZP)(),
-        O = (0, u.wj)(Z) ? N.BRd.DARK : N.BRd.LIGHT,
+        L = (0, E.ZP)(),
+        O = (0, u.wj)(L) ? N.BRd.DARK : N.BRd.LIGHT,
         R = O === N.BRd.DARK,
         x = r.useMemo(() => (0, p.nP)(n.config.assets.hero), [n]),
         b = r.useContext(d.S).reducedMotion.enabled,
@@ -248,7 +248,7 @@ function Z(e) {
                                 })
                             ]
                         }),
-                        (0, s.jsx)(L, {
+                        (0, s.jsx)(Z, {
                             quest: n,
                             errorHints: a,
                             warningHints: l

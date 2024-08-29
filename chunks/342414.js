@@ -8,8 +8,8 @@ var a = n(120356),
     c = n(906732),
     d = n(78839),
     _ = n(775412),
-    E = n(520540),
-    u = n(197115),
+    u = n(520540),
+    E = n(197115),
     T = n(823188),
     I = n(184176),
     R = n(938736),
@@ -17,8 +17,8 @@ var a = n(120356),
     g = n(689938),
     N = n(636013),
     p = n(872905),
-    A = n(578478);
-let m = (e) => {
+    m = n(578478);
+let A = (e) => {
         let { className: t, inTrial: n } = e;
         return (0, s.jsx)(s.Fragment, {
             children: (0, s.jsxs)('div', {
@@ -45,7 +45,7 @@ let m = (e) => {
                             }),
                             (0, s.jsx)('div', {
                                 className: N.buttonContainer,
-                                children: (0, s.jsx)(u.Z, {
+                                children: (0, s.jsx)(E.Z, {
                                     color: l.ButtonColors.BRAND,
                                     buttonText: g.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
                                     className: N.button,
@@ -60,12 +60,12 @@ let m = (e) => {
     },
     f = (e) => {
         let { inTrial: t, location: n } = e,
-            { subscriberHomeVariant: a } = E.g.useExperiment({ location: n }, { autoTrackExposure: !1 }),
-            i = a === E.p.VARIANT_2;
+            { subscriberHomeVariant: a } = u.g.useExperiment({ location: n }, { autoTrackExposure: !1 }),
+            i = a === u.p.VARIANT_2;
         return (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)('img', {
-                    src: A,
+                    src: m,
                     alt: '',
                     className: N.headerArtV2
                 }),
@@ -88,7 +88,7 @@ let m = (e) => {
                             i &&
                                 (0, s.jsx)('div', {
                                     className: N.buttonContainer,
-                                    children: (0, s.jsx)(u.Z, {
+                                    children: (0, s.jsx)(E.Z, {
                                         color: l.ButtonColors.BRAND,
                                         buttonText: g.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_HEADING,
                                         className: N.button,
@@ -106,7 +106,7 @@ let m = (e) => {
         (0, s.jsxs)(s.Fragment, {
             children: [
                 (0, s.jsx)('img', {
-                    src: A,
+                    src: m,
                     alt: '',
                     className: N.headerArtV2
                 }),
@@ -135,15 +135,15 @@ t.Z = (e) => {
         { analyticsLocations: a } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
         r = (0, i.e7)([d.ZP], () => d.ZP.inReverseTrial()),
         l = (0, _._O)(),
-        E = (0, R.bD)(n),
-        u = (0, R.pn)(n),
-        T = (0, s.jsx)(m, {
+        u = (0, R.bD)(n),
+        E = (0, R.pn)(n),
+        T = (0, s.jsx)(A, {
             className: t,
             inTrial: l
         });
     return (
         r && (T = (0, s.jsx)(S, {})),
-        (E || u) &&
+        (u || E) &&
             (T = (0, s.jsx)(f, {
                 inTrial: l,
                 location: n

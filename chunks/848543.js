@@ -27,7 +27,7 @@ var i = n(735250),
     N = n(689938),
     A = n(532140);
 function v(e) {
-    let { channel: t, iconClassName: s, className: v, innerClassName: L, ...Z } = e,
+    let { channel: t, iconClassName: s, className: v, innerClassName: Z, ...L } = e,
         { mute: O, suppress: R } = (0, m.Z)(t),
         x = (0, l.e7)([I.Z], () => I.Z.isDeaf()),
         b = O || R || x,
@@ -36,7 +36,7 @@ function v(e) {
         y = (0, p.sR)({ isSoundboardButtonDisabled: b }),
         [j, U] = (0, E.cv)(y),
         { analyticsLocations: G } = (0, h.ZP)(_.Z.SOUNDBOARD_BUTTON);
-    function k(e) {
+    function w(e) {
         null != D &&
             (0, u.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
@@ -48,7 +48,7 @@ function v(e) {
             });
     }
     let {
-            Component: w,
+            Component: k,
             play: B,
             events: { onMouseEnter: H, onMouseLeave: V }
         } = (0, c.j)(),
@@ -83,7 +83,7 @@ function v(e) {
                                 [A.disabled]: b
                             }),
                             wrapperClassName: v,
-                            innerClassName: L,
+                            innerClassName: Z,
                             disabled: b,
                             onClick: () => {
                                 var t, n;
@@ -91,17 +91,17 @@ function v(e) {
                             },
                             onMouseEnter: (t) => {
                                 var n, i;
-                                null === (n = Z.onMouseEnter) || void 0 === n || n.call(Z, t), null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e), H();
+                                null === (n = L.onMouseEnter) || void 0 === n || n.call(L, t), null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e), H();
                             },
                             onMouseLeave: (t) => {
                                 var n, i;
-                                null === (n = Z.onMouseLeave) || void 0 === n || n.call(Z, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
+                                null === (n = L.onMouseLeave) || void 0 === n || n.call(L, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), V();
                             },
-                            onContextMenu: k,
+                            onContextMenu: w,
                             fullWidth: !0,
                             size: d.Button.Sizes.SMALL,
-                            ...Z,
-                            children: (0, i.jsx)(w, {
+                            ...L,
+                            children: (0, i.jsx)(k, {
                                 className: s,
                                 size: 'sm',
                                 color: P ? 'white' : d.tokens.colors.INTERACTIVE_ACTIVE

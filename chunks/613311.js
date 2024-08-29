@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(811066),
     A = n(252618),
     v = n(100159),
-    L = n(646288),
-    Z = n(984370),
+    Z = n(646288),
+    L = n(984370),
     O = n(706454),
     R = n(210887),
     x = n(430824),
@@ -35,8 +35,8 @@ var i = n(735250),
     j = n(551428),
     U = n(695103),
     G = n(451478),
-    k = n(626135),
-    w = n(572004),
+    w = n(626135),
+    k = n(572004),
     B = n(630388),
     H = n(937615),
     V = n(73346),
@@ -106,7 +106,7 @@ class ec extends a.PureComponent {
             analyticsContext: { loadId: e, loadDate: t }
         } = this.props;
         null != t &&
-            k.default.track(ea.rMx.STORE_LISTING_EXITED, {
+            w.default.track(ea.rMx.STORE_LISTING_EXITED, {
                 load_id: e,
                 duration_ms: Date.now() - t
             });
@@ -119,7 +119,7 @@ class ec extends a.PureComponent {
             images: 0,
             videos: 0
         });
-        k.default.track(ea.rMx.STORE_LISTING_VIEWED, {
+        w.default.track(ea.rMx.STORE_LISTING_VIEWED, {
             ...this._extraAnalyticsProperties,
             load_id: i.loadId,
             has_description: null != t.description && t.description.length > 0,
@@ -134,24 +134,24 @@ class ec extends a.PureComponent {
     }
     renderHeader(e, t) {
         let { channel: n, isAuthenticated: s } = this.props;
-        return (0, i.jsx)(Z.Z, {
+        return (0, i.jsx)(L.Z, {
             isAuthenticated: s,
             toolbar: this.renderHeaderToolbar(e, t),
             children:
                 null != n
                     ? (0, i.jsxs)(a.Fragment, {
                           children: [
-                              (0, i.jsx)(Z.Z.Icon, {
+                              (0, i.jsx)(L.Z.Icon, {
                                   icon: d.TagIcon,
                                   'aria-label': er.Z.Messages.STORE_CHANNEL
                               }),
-                              (0, i.jsx)(Z.Z.Title, { children: n.name })
+                              (0, i.jsx)(L.Z.Title, { children: n.name })
                           ]
                       })
                     : null != t && t.premium
                       ? (0, i.jsxs)(a.Fragment, {
                             children: [
-                                (0, i.jsx)(Z.Z.Icon, {
+                                (0, i.jsx)(L.Z.Icon, {
                                     icon: d.NitroWheelIcon,
                                     'aria-label': er.Z.Messages.PREMIUM
                                 }),
@@ -161,11 +161,11 @@ class ec extends a.PureComponent {
                       : null != t
                         ? (0, i.jsxs)(a.Fragment, {
                               children: [
-                                  (0, i.jsx)(Z.Z.Icon, {
+                                  (0, i.jsx)(L.Z.Icon, {
                                       icon: d.TagIcon,
                                       'aria-label': er.Z.Messages.STORE_CHANNEL
                                   }),
-                                  (0, i.jsx)(Z.Z.Title, { children: t.name })
+                                  (0, i.jsx)(L.Z.Title, { children: t.name })
                               ]
                           })
                         : null
@@ -395,7 +395,7 @@ class ec extends a.PureComponent {
             eo(this, 'trackCarouselScroll', (e, t, n) => {
                 let { sku: i } = this.props;
                 null != i &&
-                    k.default.track(ea.rMx.STORE_LISTING_MEDIA_SCROLLED, {
+                    w.default.track(ea.rMx.STORE_LISTING_MEDIA_SCROLLED, {
                         ...(0, v.Z)(i),
                         card_index: n,
                         card_type: e.type === ea.s9s.IMG ? 'image' : 'video'
@@ -404,7 +404,7 @@ class ec extends a.PureComponent {
             eo(this, 'copyCurrentUrl', () => {
                 var e;
                 let { location: t } = this.props;
-                (0, w.JG)(((e = t.pathname), ''.concat(location.protocol, '//').concat(location.host).concat(e))),
+                (0, k.JG)(((e = t.pathname), ''.concat(location.protocol, '//').concat(location.host).concat(e))),
                     this.setState({ showLinkCopied: !0 }, () => {
                         this.showCopyLinkTextTimeout.start(1500, () => {
                             this.setState({ showLinkCopied: !1 });
@@ -513,7 +513,7 @@ class ec extends a.PureComponent {
                             children: (0, i.jsxs)('div', {
                                 className: r()(el.headerPurchase, { [el.active]: o }),
                                 children: [
-                                    null != t ? (0, L.Z)(t) : null,
+                                    null != t ? (0, Z.Z)(t) : null,
                                     null != e && null != t ? (0, i.jsx)('div', { children: 'deprecated!' }) : null,
                                     (0, i.jsx)(X.Z, {
                                         messageStyle: X.G.SHORT,

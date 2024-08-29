@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(990547),
     o = n(831209),
     c = n(442837),
@@ -18,10 +18,10 @@ var i = n(735250),
     I = n(267101),
     m = n(336197),
     T = n(661824),
-    N = n(430824),
-    h = n(626135),
-    C = n(76535),
-    f = n(866104),
+    h = n(430824),
+    N = n(626135),
+    f = n(76535),
+    C = n(866104),
     p = n(886176),
     g = n(981631),
     S = n(689938),
@@ -29,32 +29,32 @@ var i = n(735250),
 function R(e) {
     var t;
     let { guildId: n } = e,
-        a = (0, c.e7)([N.Z], () => N.Z.getGuild(n)),
-        { loading: R, subscriptionsSettings: O } = (0, C.H)(n),
-        { listingsLoaded: x } = (0, I.eD)(n),
+        s = (0, c.e7)([h.Z], () => h.Z.getGuild(n)),
+        { loading: R, subscriptionsSettings: x } = (0, f.H)(n),
+        { listingsLoaded: O } = (0, I.eD)(n),
         M = (0, I.ue)(n, { publishedOnly: !0 }),
-        v = s.useCallback(async () => {
-            h.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, d.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
+        v = a.useCallback(async () => {
+            N.default.track(g.rMx.GUILD_SHOP_EMBED_CLICKED, { ...(0, d.hH)(n) }), await (0, m.Z)(g.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, _.Z)(
         {
             type: l.ImpressionTypes.VIEW,
             name: l.ImpressionNames.GUILD_SHOP_EMBED
         },
-        { disableTrack: null == a }
+        { disableTrack: null == s }
     );
     let L = M.length > 0 ? new Date(Math.min(...M.map((e) => Date.parse(e.published_at)))) : void 0;
-    return R || !x
+    return R || !O
         ? (0, i.jsx)('div', {
               className: r()(A.guildShopEmbed, A.spinnerContainer),
               children: (0, i.jsx)(u.Spinner, {})
           })
-        : null == a || null == O
+        : null == s || null == x
           ? null
           : (0, i.jsxs)('div', {
                 className: A.guildShopEmbed,
                 children: [
-                    (0, i.jsx)(f.Z, { coverImageAsset: null !== (t = O.cover_image_asset) && void 0 !== t ? t : null }),
+                    (0, i.jsx)(C.Z, { coverImageAsset: null !== (t = x.cover_image_asset) && void 0 !== t ? t : null }),
                     (0, i.jsx)(u.Spacer, { size: 16 }),
                     (0, i.jsxs)('div', {
                         className: A.serverShopLabel,
@@ -76,14 +76,14 @@ function R(e) {
                     (0, i.jsx)(u.Heading, {
                         variant: 'heading-md/semibold',
                         color: 'text-normal',
-                        children: S.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: a.name })
+                        children: S.Z.Messages.GUILD_STORE_HERO_TITLE.format({ guildName: s.name })
                     }),
                     (0, i.jsx)(u.Spacer, { size: 4 }),
                     (0, i.jsx)(u.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         lineClamp: 2,
-                        children: O.description
+                        children: x.description
                     }),
                     (0, i.jsx)(u.Spacer, { size: 16 }),
                     (0, i.jsx)(T.Z, {}),
@@ -91,7 +91,7 @@ function R(e) {
                     (0, i.jsxs)('div', {
                         className: A.guildShopEmbedFooter,
                         children: [
-                            (0, i.jsx)(E.Z, { guild: a }),
+                            (0, i.jsx)(E.Z, { guild: s }),
                             (0, i.jsxs)('ul', {
                                 className: A.guildShopSummary,
                                 children: [

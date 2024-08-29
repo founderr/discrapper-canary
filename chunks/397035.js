@@ -1,45 +1,45 @@
-t.d(n, {
+l.d(n, {
     Z: function () {
         return d;
     }
 });
-var l = t(470079),
-    a = t(835473),
-    i = t(81063),
-    r = t(591759),
-    o = t(561308),
-    s = t(206583),
-    c = t(701488),
-    u = t(689938);
+var t = l(470079),
+    r = l(835473),
+    a = l(81063),
+    i = l(591759),
+    s = l(561308),
+    u = l(206583),
+    o = l(701488),
+    c = l(689938);
 function d(e) {
     let n,
-        { entry: t, baseEntryData: d } = e,
-        m = (0, a.q)(t.extra.application_id),
-        _ = null == m ? void 0 : m.getIconURL(128),
-        f = (0, i.getAssetImage)(t.extra.application_id, t.extra.media_assets_large_image, [c.Si.LARGE, c.Si.LARGE]),
-        p = t.extra.media_title,
-        E = t.extra.media_subtitle,
-        I = (0, o.kr)(t) && !(0, o.n2)(t) ? u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : u.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
-        C = { type: s.kG.CRUNCHYROLL },
-        h = l.useMemo(() => {
-            if (null == t.extra.url) return;
-            let e = r.Z.safeParseWithQuery(t.extra.url);
+        { entry: l, baseEntryData: d } = e,
+        m = (0, r.q)(l.extra.application_id),
+        E = null == m ? void 0 : m.getIconURL(128),
+        p = (0, a.getAssetImage)(l.extra.application_id, l.extra.media_assets_large_image, [o.Si.LARGE, o.Si.LARGE]),
+        N = l.extra.media_title,
+        f = l.extra.media_subtitle,
+        _ = (0, s.kr)(l) && !(0, s.n2)(l) ? c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
+        C = { type: u.kG.CRUNCHYROLL },
+        T = t.useMemo(() => {
+            if (null == l.extra.url) return;
+            let e = i.Z.safeParseWithQuery(l.extra.url);
             if (null != e && null != e.protocol && null != e.hostname) return e;
-        }, [t.extra.url]);
+        }, [l.extra.url]);
     return (
-        null != h &&
+        null != T &&
             (n = {
-                href: r.Z.format(h),
-                ariaDescription: u.Z.Messages.CONTENT_INVENTORY_OPEN_CRUNCHYROLL_ITEM_A11Y_DESCRIPTION.format({ title: p })
+                href: i.Z.format(T),
+                ariaDescription: c.Z.Messages.CONTENT_INVENTORY_OPEN_CRUNCHYROLL_ITEM_A11Y_DESCRIPTION.format({ title: N })
             }),
         {
             ...d,
-            thumbnailUrl: null != f ? f : _,
-            title: p,
+            thumbnailUrl: null != p ? p : E,
+            title: N,
             titleClickable: n,
             thumbnailClickable: n,
-            subtitle: E,
-            userDescription: I,
+            subtitle: f,
+            userDescription: _,
             providerIconProps: C
         }
     );

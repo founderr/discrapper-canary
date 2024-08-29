@@ -23,8 +23,8 @@ var i = n(735250),
     Z = n(430824),
     I = n(131951),
     S = n(699516),
-    C = n(594174),
-    v = n(979651),
+    v = n(594174),
+    C = n(979651),
     x = n(362446),
     T = n(518084),
     N = n(981631),
@@ -50,7 +50,7 @@ class M extends s.PureComponent {
     }
     renderChannelLink(e) {
         let { guild: t } = this.props,
-            n = (0, p.F6)(e, C.default, S.Z),
+            n = (0, p.F6)(e, v.default, S.Z),
             s = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
             a = null != t ? t.id : N.ME;
         return (0, i.jsx)(r.rU, {
@@ -143,7 +143,7 @@ class M extends s.PureComponent {
 function b(e) {
     let { context: t, lobbyId: n, channel: s, ...a } = e,
         o = (0, l.e7)([Z.Z], () => Z.Z.getGuild(null == s ? void 0 : s.getGuildId())),
-        r = (0, l.e7)([v.Z], () => null != s && v.Z.hasVideo(s.id)),
+        r = (0, l.e7)([C.Z], () => null != s && C.Z.hasVideo(s.id)),
         [c, d] = (0, l.Wu)([I.Z], () => [I.Z.isSelfMute(t) || I.Z.isSelfMutedTemporarily(t), I.Z.isSelfDeaf(t)]),
         [u, h, p] = (0, l.Wu)([x.Z], () => [x.Z.getConnectionState(n), x.Z.getLastPing(n), x.Z.getQuality(n)]);
     return (0, i.jsx)(M, {

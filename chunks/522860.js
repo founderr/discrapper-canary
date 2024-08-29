@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(481060),
-    a = n(194082),
+var a = n(481060),
+    s = n(194082),
     r = n(739566),
     l = n(834129),
     o = n(689938);
@@ -16,7 +16,7 @@ function c(e) {
         I = (0, r.ZP)(n),
         m = null === (t = n.call) || void 0 === t ? void 0 : t.duration,
         T = _(I),
-        N = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
+        h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
             username: I.nick,
             activityName: null != u ? u.name : 'unknown',
             onJoinStream: d,
@@ -24,7 +24,7 @@ function c(e) {
         });
     return (
         null != m &&
-            (N = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
+            (h = o.Z.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ENDED.format({
                 username: I.nick,
                 duration: m.humanize(),
                 channelName: c.name,
@@ -33,16 +33,16 @@ function c(e) {
         (0, i.jsx)(l.Z, {
             iconNode:
                 null != m
-                    ? (0, i.jsx)(s.ScreenXIcon, {
+                    ? (0, i.jsx)(a.ScreenXIcon, {
                           size: 'custom',
                           color: 'currentColor',
                           width: 20,
                           height: 20
                       })
-                    : (0, i.jsx)(a.ZP, { size: a.ZP.Sizes.SMALL }),
+                    : (0, i.jsx)(s.ZP, { size: s.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
             compact: E,
-            children: N
+            children: h
         })
     );
 }

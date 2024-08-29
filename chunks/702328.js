@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(622535),
     d = n(481060),
     _ = n(634894),
-    E = n(100527),
-    u = n(906732),
+    u = n(100527),
+    E = n(906732),
     T = n(433811),
     I = n(214852),
     R = n(78839),
@@ -17,8 +17,8 @@ var s = n(735250),
     g = n(74538),
     N = n(140465),
     p = n(91802),
-    A = n(104494),
-    m = n(639119),
+    m = n(104494),
+    A = n(639119),
     f = n(8647),
     S = n(568126),
     h = n(605289),
@@ -27,8 +27,8 @@ var s = n(735250),
     O = n(135785),
     b = n(498765),
     P = n(635921),
-    L = n(177839),
-    v = n(794484),
+    v = n(177839),
+    L = n(794484),
     Z = n(392521),
     D = n(349803),
     B = n(179984),
@@ -36,15 +36,15 @@ var s = n(735250),
     U = n(391110),
     G = n(71363),
     y = n(781800),
-    H = n(474936),
-    k = n(981631),
+    k = n(474936),
+    H = n(981631),
     w = n(556613),
     F = n(865215),
     V = n(735035),
     W = n(786362);
 let K = (e) => {
         let { isFullscreen: t, selectedPremiumType: n } = e;
-        return (t && null == n) || (n === H.p9.TIER_2 && t) ? null : (0, s.jsx)(L.Z, { className: t ? w.perkCardsContainerSpacingFullscreen : w.perkCardsContainerSpacingSettings });
+        return (t && null == n) || (n === k.p9.TIER_2 && t) ? null : (0, s.jsx)(v.Z, { className: t ? w.perkCardsContainerSpacingFullscreen : w.perkCardsContainerSpacingSettings });
     },
     Y = (e) => {
         let { isFullscreen: t, inOfferExperience: n } = e;
@@ -56,11 +56,11 @@ let K = (e) => {
             ? (0, s.jsxs)('div', {
                   className: i()(w.whatsNewSectionBackground),
                   children: [
-                      (0, s.jsx)(v.Z, {
+                      (0, s.jsx)(L.Z, {
                           variant: U.R0.WHATS_NEW,
                           isFullScreen: t
                       }),
-                      (0, s.jsx)(v.Z, {
+                      (0, s.jsx)(L.Z, {
                           isFullScreen: t,
                           showAllPerksButton: t
                               ? (0, s.jsx)(y.Z, {
@@ -90,30 +90,30 @@ t.Z = (e) => {
     let { isFullscreen: n, entrypoint: r } = e;
     (0, I.z)(T.X);
     let b = a.useRef(null),
-        [L, v] = a.useState(!1),
+        [v, L] = a.useState(!1),
         [Z, y] = a.useState(!1),
         [Q, q] = a.useState(!1),
         [X, J] = a.useState(!1),
         $ = (0, o.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
         ee = null != $ ? (0, g.Af)($) : null,
         et = null != ee ? g.ZP.getSkuIdForPlan(ee.planId) : null,
-        en = null !== et && et !== H.Si.TIER_2 ? H.Si.TIER_2 : null,
+        en = null !== et && et !== k.Si.TIER_2 ? k.Si.TIER_2 : null,
         es = (0, p.n)(),
         ea = null != es,
         [er, ei] = a.useState(!1),
-        el = (0, A.Ng)(),
-        eo = (0, m.N)(),
+        el = (0, m.Ng)(),
+        eo = (0, A.N)(),
         ec = null == eo ? void 0 : null === (t = eo.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
         ed = (0, N.Nx)(),
         e_ = (0, M.Vi)(),
-        { analyticsLocations: eE } = (0, u.ZP)(E.Z.PREMIUM_MARKETING),
-        eu = 'PremiumMarketingHome';
+        { analyticsLocations: eu } = (0, E.ZP)(u.Z.PREMIUM_MARKETING),
+        eE = 'PremiumMarketingHome';
     (0, _.j)({
-        location: eu + ' auto on',
+        location: eE + ' auto on',
         autoTrackExposure: !0
     }),
         (0, _.j)({
-            location: eu + ' auto off',
+            location: eE + ' auto off',
             autoTrackExposure: !1
         }),
         a.useEffect(() => {
@@ -131,11 +131,11 @@ t.Z = (e) => {
                 children: (0, s.jsx)(x.ZP, {
                     showWumpus: !0,
                     tier0CTAButton:
-                        ec === H.Si.TIER_2 || e_ || null != el
+                        ec === k.Si.TIER_2 || e_ || null != el
                             ? (0, s.jsx)(j.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
-                                  subscriptionTier: H.Si.TIER_0,
+                                  subscriptionTier: k.Si.TIER_0,
                                   className: w.marginTopForButtons,
                                   look: d.ButtonLooks.OUTLINED,
                                   color: d.ButtonColors.WHITE,
@@ -144,16 +144,16 @@ t.Z = (e) => {
                             : (0, s.jsx)(j.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
-                                  subscriptionTier: H.Si.TIER_0,
+                                  subscriptionTier: k.Si.TIER_0,
                                   className: w.marginTopForButtons,
                                   buttonShineClassName: w.buttonShine
                               }),
                     tier2CTAButton:
-                        ec === H.Si.TIER_0
+                        ec === k.Si.TIER_0
                             ? (0, s.jsx)(j.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
-                                  subscriptionTier: H.Si.TIER_2,
+                                  subscriptionTier: k.Si.TIER_2,
                                   className: w.marginTopForButtons,
                                   look: d.ButtonLooks.OUTLINED,
                                   color: d.ButtonColors.WHITE,
@@ -162,7 +162,7 @@ t.Z = (e) => {
                             : (0, s.jsx)(j.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
-                                  subscriptionTier: H.Si.TIER_2,
+                                  subscriptionTier: k.Si.TIER_2,
                                   className: w.marginTopForButtons,
                                   isEligibleForBogoPromotion: e_,
                                   buttonShineClassName: w.buttonShine
@@ -189,7 +189,7 @@ t.Z = (e) => {
                           smallGap: !0
                       })
                     : (0, s.jsx)(c.$, {
-                          onChange: (e) => v(e),
+                          onChange: (e) => L(e),
                           threshold: 0,
                           active: !0,
                           children: (0, s.jsx)(P.Z, {
@@ -248,13 +248,13 @@ t.Z = (e) => {
                 }),
                 (0, s.jsx)('div', { className: n ? w.footerSpacingFullscreen : w.footerSpacing }),
                 (0, s.jsx)(D.Z, {
-                    isVisible: !L && !Z && X,
+                    isVisible: !v && !Z && X,
                     isFullscreen: n,
                     subscriptionTier: en
                 }),
                 (0, s.jsx)(c.$, {
                     onChange: (e) => {
-                        e && !Q && (C.default.track(k.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eE }), q(!0));
+                        e && !Q && (C.default.track(H.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }), q(!0));
                     },
                     children: (0, s.jsx)('div', { className: w.bottomOfPageVisibilitySensor })
                 }),

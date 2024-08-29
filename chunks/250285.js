@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(91192),
     d = n(906732),
     _ = n(171368),
-    E = n(981631),
-    u = n(872571);
+    u = n(981631),
+    E = n(872571);
 t.Z = (e) => {
     let { userId: t, children: n, isLast: r, className: T } = e,
         [I, R] = a.useState(!1),
@@ -18,7 +18,7 @@ t.Z = (e) => {
             (0, _.openUserProfileModal)({
                 userId: t,
                 sourceAnalyticsLocations: C,
-                analyticsLocation: { section: E.jXE.FAMILY_CENTER }
+                analyticsLocation: { section: u.jXE.FAMILY_CENTER }
             });
         }, [t, C]),
         N = () => {
@@ -37,9 +37,9 @@ t.Z = (e) => {
                 },
                 children: (0, s.jsx)(o.Z.div, {
                     style: { opacity: 1 },
-                    className: i()(u.rowItem, T, {
-                        [u.last]: r,
-                        [u.active]: I
+                    className: i()(E.rowItem, T, {
+                        [E.last]: r,
+                        [E.active]: I
                     }),
                     onMouseEnter: N,
                     onMouseLeave: p,

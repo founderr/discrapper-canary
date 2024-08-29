@@ -23,8 +23,8 @@ var i = n(735250),
     Z = n(944486),
     I = n(707878),
     S = n(518084),
-    C = n(689938),
-    v = n(825711);
+    v = n(689938),
+    C = n(825711);
 function x(e, t, n) {
     return (
         t in e
@@ -49,7 +49,7 @@ class T extends s.Component {
         let r = l.PhoneCallIcon,
             c = !1;
         return (
-            s ? (a ? ((e = C.Z.Messages.LEAVE_CALL), (r = l.PhoneHangUpIcon)) : (e = C.Z.Messages.JOIN_CALL)) : o ? ((e = C.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (t = l.Tooltip.Colors.RED), (c = !0)) : (e = C.Z.Messages.START_VOICE_CALL),
+            s ? (a ? ((e = v.Z.Messages.LEAVE_CALL), (r = l.PhoneHangUpIcon)) : (e = v.Z.Messages.JOIN_CALL)) : o ? ((e = v.Z.Messages.CALL_UNAVAILABLE_BLOCKED_USERS), (t = l.Tooltip.Colors.RED), (c = !0)) : (e = v.Z.Messages.START_VOICE_CALL),
             (0, i.jsx)(h.Z.Icon, {
                 icon: r,
                 tooltip: e,
@@ -64,20 +64,20 @@ class T extends s.Component {
             { showOpacitySlider: _ } = this.state;
         return _ && !n
             ? (0, i.jsxs)(S.ZP.Bar, {
-                  className: v.opacityHeader,
+                  className: C.opacityHeader,
                   children: [
                       (0, i.jsx)(I.Z, {}),
                       (0, i.jsx)(h.Z.Icon, {
                           icon: l.XSmallIcon,
                           onClick: this.handleCloseOpacitySettings,
-                          tooltip: C.Z.Messages.CLOSE
+                          tooltip: v.Z.Messages.CLOSE
                       })
                   ]
               })
             : (0, i.jsx)(S.ZP.Background, {
                   opacityOverride: n || u ? null : 1,
                   children: (0, i.jsx)('div', {
-                      className: o()(e, t, v.headerContainer),
+                      className: o()(e, t, C.headerContainer),
                       onMouseDown: c,
                       onContextMenu: d,
                       children: (0, i.jsxs)(h.Z, {
@@ -91,7 +91,7 @@ class T extends s.Component {
                                   : (0, i.jsx)(l.DragIcon, {
                                         size: 'custom',
                                         color: 'currentColor',
-                                        className: o()(v.dragIcon, t),
+                                        className: o()(C.dragIcon, t),
                                         width: 20,
                                         height: 20
                                     }),
@@ -130,7 +130,7 @@ class T extends s.Component {
             }),
             x(this, 'renderWidgetButtons', () => {
                 let { locked: e, handlePin: t, pinned: n } = this.props,
-                    a = n ? C.Z.Messages.OVERLAY_WIDGET_HIDE_IN_GAME : C.Z.Messages.OVERLAY_WIDGET_SHOW_IN_GAME;
+                    a = n ? v.Z.Messages.OVERLAY_WIDGET_HIDE_IN_GAME : v.Z.Messages.OVERLAY_WIDGET_SHOW_IN_GAME;
                 return e
                     ? null
                     : (0, i.jsxs)(s.Fragment, {
@@ -139,7 +139,7 @@ class T extends s.Component {
                               n
                                   ? (0, i.jsx)(h.Z.Icon, {
                                         icon: l.BrowserCheckeredIcon,
-                                        tooltip: C.Z.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY,
+                                        tooltip: v.Z.Messages.FORM_LABEL_OVERLAY_CHAT_OPACITY,
                                         onClick: this.handleOpenOpacitySettings
                                     })
                                   : null,

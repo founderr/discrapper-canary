@@ -40,7 +40,7 @@ function E(e) {
             onRejectSuccess: g,
             onError: I
         }),
-        L = S || C || N || A || v;
+        Z = S || C || N || A || v;
     return (0, i.jsxs)('div', {
         className: h.container,
         children: [
@@ -59,7 +59,7 @@ function E(e) {
                         onClick: (e) => {
                             e.stopPropagation(), f(E.id);
                         },
-                        disabled: L,
+                        disabled: Z,
                         submitting: C || v,
                         children: _.Z.Messages.MESSAGE_REQUEST_IGNORE
                     }),
@@ -70,7 +70,7 @@ function E(e) {
                         onClick: (e) => {
                             e.stopPropagation(), T(E.id);
                         },
-                        disabled: L,
+                        disabled: Z,
                         submitting: S || N || A,
                         children: _.Z.Messages.MESSAGE_REQUEST_ACCEPT
                     })

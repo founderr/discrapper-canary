@@ -1,12 +1,12 @@
 n.d(t, {
     RB: function () {
-        return O;
+        return x;
     },
     VH: function () {
         return S;
     },
     Vi: function () {
-        return x;
+        return O;
     },
     Vu: function () {
         return M;
@@ -16,8 +16,8 @@ n.d(t, {
     }
 });
 var i,
-    s,
     a,
+    s,
     r,
     l = n(692547),
     o = n(497089),
@@ -29,21 +29,21 @@ var i,
     I = n(319707),
     m = n(584914),
     T = n(334702),
-    N = n(333722),
-    h = n(549931),
-    C = n(178561),
-    f = n(39863),
+    h = n(333722),
+    N = n(549931),
+    f = n(178561),
+    C = n(39863),
     p = n(130312);
-((i = a || (a = {})).CHECKED = 'CHECKED'), (i.FRIENDS = 'FRIENDS'), (i.SHARE_SCREEN = 'SHARE_SCREEN'), (i.NEW_MESSAGE = 'NEW_MESSAGE');
+((i = s || (s = {})).CHECKED = 'CHECKED'), (i.FRIENDS = 'FRIENDS'), (i.SHARE_SCREEN = 'SHARE_SCREEN'), (i.NEW_MESSAGE = 'NEW_MESSAGE');
 let g = {
     CHECKED: _,
     FRIENDS: I,
-    SHARE_SCREEN: f,
-    NEW_MESSAGE: h
+    SHARE_SCREEN: C,
+    NEW_MESSAGE: N
 };
-((s = r || (r = {})).MISSED_MESSAGES = 'MISSED_MESSAGES'), (s.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER'), (s.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT'), (s.TOP_MESSAGES = 'TOP_MESSAGES'), (s.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER'), (s.UPDATE_PROFILE = 'UPDATE_PROFILE'), (s.FIND_FRIENDS = 'FIND_FRIENDS'), (s.ADD_FRIEND = 'ADD_FRIEND'), (s.FIRST_MESSAGE = 'FIRST_MESSAGE');
+((a = r || (r = {})).MISSED_MESSAGES = 'MISSED_MESSAGES'), (a.FRIEND_REQUEST_REMINDER = 'FRIEND_REQUEST_REMINDER'), (a.SCHEDULED_GUILD_EVENT = 'SCHEDULED_GUILD_EVENT'), (a.TOP_MESSAGES = 'TOP_MESSAGES'), (a.NOTIFICATION_CENTER = 'NOTIFICATION_CENTER'), (a.UPDATE_PROFILE = 'UPDATE_PROFILE'), (a.FIND_FRIENDS = 'FIND_FRIENDS'), (a.ADD_FRIEND = 'ADD_FRIEND'), (a.FIRST_MESSAGE = 'FIRST_MESSAGE');
 let S = {
-        MISSED_MESSAGES: N,
+        MISSED_MESSAGES: h,
         FRIEND_REQUEST_REMINDER: m,
         SCHEDULED_GUILD_EVENT: E,
         TOP_MESSAGES: T,
@@ -51,7 +51,7 @@ let S = {
         UPDATE_PROFILE: p,
         FIND_FRIENDS: u,
         ADD_FRIEND: u,
-        FIRST_MESSAGE: C
+        FIRST_MESSAGE: f
     },
     A = (e) => {
         switch (e.item_enum) {
@@ -83,11 +83,11 @@ let S = {
                 return 'NOTIFICATION_CENTER';
         }
     },
-    O = (e) => {
+    x = (e) => {
         if ('icHighlight' === e) return 'TOP_MESSAGES';
         return 'NOTIFICATION_CENTER';
     },
-    x = (e) => {
+    O = (e) => {
         switch (e) {
             case o.DY.GO_LIVE_PUSH:
                 return {

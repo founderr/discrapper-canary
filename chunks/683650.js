@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
+var a = n(120356),
+    s = n.n(a),
     r = n(481060),
     l = n(497505),
     o = n(266843),
@@ -32,7 +32,7 @@ function m() {
     let { containerRef: e, size: t } = (0, o.h)();
     return (0, i.jsxs)('div', {
         ref: (t) => (e.current = t),
-        className: a()(_.container, {
+        className: s()(_.container, {
             [_.wide]: 'lg' === t,
             [_.tall]: 'lg' !== t
         }),

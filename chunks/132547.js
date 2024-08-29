@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(100527),
     d = n(906732),
     _ = n(433811),
-    E = n(214852),
-    u = n(626135),
+    u = n(214852),
+    E = n(626135),
     T = n(314684),
     I = n(794484),
     R = n(347475),
@@ -17,14 +17,14 @@ var s = n(735250),
     g = n(938736),
     N = n(391110),
     p = n(71363),
-    A = n(781800),
-    m = n(981631),
+    m = n(781800),
+    A = n(981631),
     f = n(689938),
     S = n(396001),
     h = n(865215);
 let M = 'SubscriberNitroHome';
 t.Z = () => {
-    (0, E.z)(_.X);
+    (0, u.z)(_.X);
     let e = a.useRef(null),
         [t, n] = a.useState(!1),
         { analyticsLocations: r } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
@@ -56,7 +56,7 @@ t.Z = () => {
                                 className: S.perksDiscoverability,
                                 noBackground: !0,
                                 leftAlignHeaders: !0,
-                                showAllPerksButton: (0, s.jsx)(A.Z, {
+                                showAllPerksButton: (0, s.jsx)(m.Z, {
                                     setIsAllPerksVisible: n,
                                     previousComponent: N.MQ.HOME
                                 })
@@ -65,14 +65,14 @@ t.Z = () => {
                                 className: S.giftNitro,
                                 location: c.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                 analyticsLocation: {
-                                    page: m.ZY5.NITRO_HOME,
-                                    section: m.jXE.GIFT_BANNER
+                                    page: A.ZY5.NITRO_HOME,
+                                    section: A.jXE.GIFT_BANNER
                                 }
                             }),
                             (0, s.jsx)('div', { className: S.footerSpacing }),
                             (0, s.jsx)(l.$, {
                                 onChange: (e) => {
-                                    e && !x && (u.default.track(m.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), O(!0));
+                                    e && !x && (E.default.track(A.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: r }), O(!0));
                                 },
                                 children: (0, s.jsx)('div', { className: S.bottomOfPageVisibilitySensor })
                             }),

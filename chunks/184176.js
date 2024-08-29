@@ -8,8 +8,8 @@ var a = n(442837),
     c = n(78839),
     d = n(823188),
     _ = n(474936),
-    E = n(981631),
-    u = n(689938),
+    u = n(981631),
+    E = n(689938),
     T = n(653875);
 t.Z = () => {
     let e = (0, a.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
@@ -19,7 +19,7 @@ t.Z = () => {
         className: T.banner,
         children: [
             (0, s.jsx)(d.Cy, {
-                text: u.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
+                text: E.Z.Messages.PREMIUM_TIER_CARD_TRIAL_ACTIVATED,
                 className: T.trialPill,
                 colorOptions: d.VE.PREMIUM_TIER_2_WHITE_FILL
             }),
@@ -28,7 +28,7 @@ t.Z = () => {
                 children: (0, s.jsx)(r.Text, {
                     color: 'always-white',
                     variant: 'text-md/medium',
-                    children: u.Z.Messages.REVERSE_TRIAL_NITRO_HOME_HEADER_BODY_NEW.format({ weeks: t })
+                    children: E.Z.Messages.REVERSE_TRIAL_NITRO_HOME_HEADER_BODY_NEW.format({ weeks: t })
                 })
             }),
             (0, s.jsx)(r.Button, {
@@ -36,12 +36,12 @@ t.Z = () => {
                     (0, o.Z)({
                         initialPlanId: _.Xh.PREMIUM_MONTH_TIER_2,
                         analyticsLocations: n.analyticsLocations,
-                        analyticsObject: { object: E.qAy.BUTTON_CTA }
+                        analyticsObject: { object: u.qAy.BUTTON_CTA }
                     });
                 },
                 look: r.ButtonLooks.OUTLINED,
                 color: r.ButtonColors.WHITE,
-                children: u.Z.Messages.REVERSE_TRIAL_NITRO_HOME_HEADER_BUTTON_LABEL
+                children: E.Z.Messages.REVERSE_TRIAL_NITRO_HOME_HEADER_BUTTON_LABEL
             })
         ]
     });

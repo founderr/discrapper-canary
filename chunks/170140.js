@@ -1,11 +1,11 @@
 n.d(t, {
     J: function () {
-        return h;
+        return N;
     }
 });
 var i = n(470079),
-    s = n(399606),
-    a = n(430198),
+    a = n(399606),
+    s = n(430198),
     r = n(754688),
     l = n(314897),
     o = n(592125),
@@ -17,47 +17,47 @@ var i = n(470079),
     I = n(312146),
     m = n(487554),
     T = n(874748),
-    N = n(981631);
-function h(e, t) {
+    h = n(981631);
+function N(e, t) {
     let n = (0, I.p$)(),
-        h = (0, T.LR)(e),
-        C = (0, s.e7)(
+        N = (0, T.LR)(e),
+        f = (0, a.e7)(
             [c.ZP, l.default],
             () => {
                 let e = l.default.getId();
-                return c.ZP.isMember(null == h ? void 0 : h.guildId, e);
+                return c.ZP.isMember(null == N ? void 0 : N.guildId, e);
             },
-            [h]
+            [N]
         ),
-        f = (0, s.e7)([a.Z], () => null != h && (null == h ? void 0 : h.channelId) != null && a.Z.isChannelGated(h.guildId, h.channelId), [h]),
-        p = t.hasFlag(N.iLy.IS_CROSSPOST),
+        C = (0, a.e7)([s.Z], () => null != N && (null == N ? void 0 : N.channelId) != null && s.Z.isChannelGated(N.guildId, N.channelId), [N]),
+        p = t.hasFlag(h.iLy.IS_CROSSPOST),
         {
             rawMediaPostEmbedData: g,
             guild: S,
             parentChannel: A,
             user: R,
-            selectedGuildId: O,
-            canAccess: x
-        } = (0, s.cj)(
+            selectedGuildId: x,
+            canAccess: O
+        } = (0, a.cj)(
             [m.Z, u.Z, o.Z, _.default, d.Z],
             () => {
                 var e;
-                let t = null === (e = m.Z.getMediaPostEmbed(null == h ? void 0 : h.threadId)) || void 0 === e ? void 0 : e.media,
-                    n = u.Z.getGuild(null == h ? void 0 : h.guildId),
-                    i = o.Z.getChannel(null == h ? void 0 : h.channelId),
-                    s = _.default.getUser(null == t ? void 0 : t.author_id),
-                    a = d.Z.getGuildId(),
+                let t = null === (e = m.Z.getMediaPostEmbed(null == N ? void 0 : N.threadId)) || void 0 === e ? void 0 : e.media,
+                    n = u.Z.getGuild(null == N ? void 0 : N.guildId),
+                    i = o.Z.getChannel(null == N ? void 0 : N.channelId),
+                    a = _.default.getUser(null == t ? void 0 : t.author_id),
+                    s = d.Z.getGuildId(),
                     l = null != i && (0, r.YO)(i);
                 return {
                     rawMediaPostEmbedData: t,
                     guild: n,
                     parentChannel: i,
-                    user: s,
-                    selectedGuildId: a,
+                    user: a,
+                    selectedGuildId: s,
                     canAccess: l
                 };
             },
-            [h]
+            [N]
         ),
         M = i.useMemo(() => {
             let e = (0, T.ku)({
@@ -65,8 +65,8 @@ function h(e, t) {
                 guild: S,
                 parentChannel: A,
                 user: R,
-                selectedGuildId: O,
-                canAccess: x
+                selectedGuildId: x,
+                canAccess: O
             });
             return null == e
                 ? null
@@ -74,14 +74,14 @@ function h(e, t) {
                       ...e,
                       user: R
                   };
-        }, [g, S, A, R, O, x]);
+        }, [g, S, A, R, x, O]);
     return (
         i.useEffect(() => {
-            if ((null == h ? void 0 : h.threadId) != null) {
-                let e = m.Z.getEmbedFetchState(h.threadId);
-                !0 === n && e === m.M.NOT_FETCHED && (!C || !1 !== f) && (C || !p) && (0, E.xP)(null == h ? void 0 : h.threadId);
+            if ((null == N ? void 0 : N.threadId) != null) {
+                let e = m.Z.getEmbedFetchState(N.threadId);
+                !0 === n && e === m.M.NOT_FETCHED && (!f || !1 !== C) && (f || !p) && (0, E.xP)(null == N ? void 0 : N.threadId);
             }
-        }, [h, n, C, f, p]),
+        }, [N, n, f, C, p]),
         M
     );
 }

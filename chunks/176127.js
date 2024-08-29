@@ -5,8 +5,8 @@ n.d(t, {
 });
 var i = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
+var a = n(120356),
+    s = n.n(a),
     r = n(442837),
     l = n(435064),
     o = n(687795);
@@ -21,7 +21,7 @@ function c() {
                   .filter((e) => t.includes(e.id));
     });
     return (0, i.jsx)('div', {
-        className: a()(o.thumbnailStack, {
+        className: s()(o.thumbnailStack, {
             [o['height-1']]: 1 === e.length,
             [o['height-2']]: 2 === e.length,
             [o['height-3']]: 3 === e.length,

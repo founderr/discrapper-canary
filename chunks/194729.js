@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(918701),
     A = n(121711),
     v = n(703656),
-    L = n(108427),
-    Z = n(706454),
+    Z = n(108427),
+    L = n(706454),
     O = n(210887),
     R = n(480294),
     x = n(683301),
@@ -35,8 +35,8 @@ var i = n(735250),
     j = n(296386),
     U = n(150192),
     G = n(769727),
-    k = n(229765),
-    w = n(584885),
+    w = n(229765),
+    k = n(584885),
     B = n(59222),
     H = n(749436),
     V = n(26580),
@@ -97,7 +97,7 @@ class X extends a.PureComponent {
             });
         } else null != l && l !== F.Hk && E.Z.wait(() => (0, m.uY)(l));
         let u = null !== (t = null === (e = (0, v.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
-        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, L.e)('guild_discovery');
+        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, Z.e)('guild_discovery');
     }
     componentDidUpdate(e) {
         let {
@@ -137,7 +137,7 @@ class X extends a.PureComponent {
         r.guilds = r.guilds.filter((e) => !s.includes(e.id));
         let { loadingGuildId: l } = this.state;
         return t
-            ? (0, i.jsx)(w.Z, {
+            ? (0, i.jsx)(k.Z, {
                   loadId: this.loadId,
                   title: W.Z.Messages.GUILD_DISCOVERY_HEADER_GAMES_YOU_PLAY,
                   guildsData: r,
@@ -212,7 +212,7 @@ class X extends a.PureComponent {
     renderRecommendedGuildsSection() {
         let { guilds: e, theme: t } = this.props,
             { loadingGuildId: n } = this.state;
-        return (0, i.jsx)(w.Z, {
+        return (0, i.jsx)(k.Z, {
             loadId: this.loadId,
             title: W.Z.Messages.GUILD_DISCOVERY_FEATURED_HEADER,
             guildsData: e.featured,
@@ -228,7 +228,7 @@ class X extends a.PureComponent {
     renderPopularGuildsSection() {
         let { guilds: e, theme: t, currentCategoryId: n } = this.props,
             { loadingGuildId: a } = this.state;
-        return (0, i.jsx)(w.Z, {
+        return (0, i.jsx)(k.Z, {
             loadId: this.loadId,
             title: W.Z.Messages.GUILD_DISCOVERY_POPULAR_HEADER,
             guildsData: e[n],
@@ -258,7 +258,7 @@ class X extends a.PureComponent {
         return (0, i.jsxs)('div', {
             className: z.pageWrapper,
             children: [
-                (0, i.jsx)(k.KY, {
+                (0, i.jsx)(w.KY, {
                     location: 'guild_discovery',
                     query: this._getLoadTestQuery()
                 }),
@@ -419,10 +419,10 @@ class X extends a.PureComponent {
             });
     }
 }
-let J = _.ZP.connectStores([O.Z, Z.default, P.Z, R.Z, x.ZP, U.Z, b.Z], () => {
+let J = _.ZP.connectStores([O.Z, L.default, P.Z, R.Z, x.ZP, U.Z, b.Z], () => {
     var e;
     let t = F.dU,
-        n = Z.default.locale,
+        n = L.default.locale,
         i = null !== (e = o().find(t, { code: n })) && void 0 !== e ? e : t[0],
         a = Object.keys(P.Z.applicationStatistics),
         s = R.Z.hasConsented(Y.pjP.PERSONALIZATION) && a.length > 0,

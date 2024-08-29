@@ -39,21 +39,21 @@ function A(e) {
             isGracePeriodVisible: p.Z.isVisible(n)
         })),
         v = (0, r.e7)([E.Z], () => E.Z.isVisible(e)),
-        L = (0, r.e7)([f.Z], () => f.Z.isVisible(e)),
-        Z = (0, r.e7)([g.Z], () => g.Z.can(N.Plq.ADMINISTRATOR, e)),
+        Z = (0, r.e7)([f.Z], () => f.Z.isVisible(e)),
+        L = (0, r.e7)([g.Z], () => g.Z.can(N.Plq.ADMINISTRATOR, e)),
         O = null != a && Date.now() - a <= N.Dge,
         R = null != e ? e.premiumSubscriberCount : 0,
         x = (0, C.rF)(R, n) !== N.Eu4.NONE,
         b = null != i && Date.now() - i <= 43200000,
-        P = !b && !O && Z && x,
+        P = !b && !O && L && x,
         M = (0, c.m)(n),
         D = (0, r.e7)([T.Z], () => T.Z.isVisible(e)),
         y = _.Z.useShouldShowChannelNotice(n),
         j = (0, h.h6)(e),
         { enableStudyGroup: U } = (0, u.s)(e),
         G = j.length > 0,
-        k = U && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
-        w = (0, d.Vm)(n),
+        w = U && !(null == e ? void 0 : e.hasFeature(N.oNc.HUB)),
+        k = (0, d.Vm)(n),
         B = (0, r.e7)([m.Z], () => null != m.Z.getActiveGuildSignUp(n));
     if (
         (s.useEffect(() => {
@@ -78,12 +78,12 @@ function A(e) {
     )
         return 0;
     if (A) return 1;
-    if (L) return 2;
-    else if (M || null != w) return 3;
+    if (Z) return 2;
+    else if (M || null != k) return 3;
     else if (D) return 4;
     else if (y) return 5;
     else if (G) return 6;
-    else if (k) return 7;
+    else if (w) return 7;
     else if (B) return 8;
     return null;
 }

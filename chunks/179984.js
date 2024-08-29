@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(481060),
     d = n(634894),
     _ = n(410030),
-    E = n(100527),
-    u = n(906732),
+    u = n(100527),
+    E = n(906732),
     T = n(15640),
     I = n(594174),
     R = n(78839),
@@ -17,8 +17,8 @@ var s = n(735250),
     g = n(775412),
     N = n(104494),
     p = n(639119),
-    A = n(230916),
-    m = n(248042),
+    m = n(230916),
+    A = n(248042),
     f = n(823188),
     S = n(21023),
     h = n(318747),
@@ -27,11 +27,11 @@ var s = n(735250),
     O = n(689938),
     b = n(59486),
     P = n(102655),
-    L = n(768236),
-    v = n(314907),
+    v = n(768236),
+    L = n(314907),
     Z = n(826701);
 let D = () => {
-        let e = (0, m.W1)();
+        let e = (0, A.W1)();
         return (0, s.jsx)(f.Cy, {
             text: e,
             className: b.bogoPillWithSparkles,
@@ -51,7 +51,7 @@ let D = () => {
         let t,
             { premiumType: n } = e,
             a = (0, _.ZP)();
-        t = n === x.p9.TIER_0 ? ((0, o.wj)(a) ? P : L) : (0, o.wj)(a) ? v : Z;
+        t = n === x.p9.TIER_0 ? ((0, o.wj)(a) ? P : v) : (0, o.wj)(a) ? L : Z;
         let r = (0, C.Px)(n);
         return (0, s.jsx)('img', {
             src: t,
@@ -116,9 +116,9 @@ let D = () => {
 t.Z = (e) => {
     var t;
     let n,
-        { className: r, hideCTAs: P = !1, headingOverride: L, hidePill: v = !1, selectedPlanColumnClassName: Z, selectedPlanTier: y = x.p9.TIER_2 } = e,
-        { analyticsLocations: H } = (0, u.ZP)(E.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
-        k = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
+        { className: r, hideCTAs: P = !1, headingOverride: v, hidePill: L = !1, selectedPlanColumnClassName: Z, selectedPlanTier: y = x.p9.TIER_2 } = e,
+        { analyticsLocations: k } = (0, E.ZP)(u.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+        H = (0, l.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         w = (0, T.V)(),
         F = 'PlanComparisonTable';
     (0, d.j)({
@@ -138,13 +138,13 @@ t.Z = (e) => {
         q = (0, g.rT)(),
         X = (0, N.Ng)(),
         J = null != X && (0, N.Wp)(X, x.Si.TIER_2),
-        $ = (0, A.A)(x.Xh.PREMIUM_MONTH_TIER_2),
+        $ = (0, m.A)(x.Xh.PREMIUM_MONTH_TIER_2),
         ee = ''.concat($, '/').concat((0, C.eP)(x.rV.MONTH)),
         et = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
         en = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
         es = (0, S.n)(et, en, J, ee),
-        ea = (0, m.Vi)();
-    if (!k || !w) return null;
+        ea = (0, A.Vi)();
+    if (!H || !w) return null;
     let er = {
         label: (0, s.jsx)(c.Heading, {
             className: b.__invalid_textColor,
@@ -219,7 +219,7 @@ t.Z = (e) => {
               withBottomBorderRadius: !0,
               buttonsRow: null == Q
           }),
-        (n = v
+        (n = L
             ? null
             : null != Q || null != q
               ? (0, s.jsx)(f.Cy, {
@@ -231,8 +231,8 @@ t.Z = (e) => {
                 ? (0, s.jsx)(D, {})
                 : (0, s.jsx)(B, {}));
     let ei = Q === x.Si.TIER_0 || q === x.p9.TIER_0 || y === x.p9.TIER_0;
-    return (0, s.jsx)(u.Gt, {
-        value: H,
+    return (0, s.jsx)(E.Gt, {
+        value: k,
         children: (0, s.jsxs)('div', {
             className: i()(b.root, r),
             'data-testid': 'v2-marketing-page-comparison-table',
@@ -240,7 +240,7 @@ t.Z = (e) => {
                 (0, s.jsx)(c.Heading, {
                     className: i()(b.titleText, b.__invalid_textColor),
                     variant: 'heading-xxl/extrabold',
-                    children: null != L ? L : O.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
+                    children: null != v ? v : O.Z.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
                 }),
                 (0, s.jsxs)('div', {
                     className: b.tableWrapper,

@@ -1,6 +1,6 @@
 n.d(t, {
     g: function () {
-        return k;
+        return w;
     }
 }),
     n(47120);
@@ -28,8 +28,8 @@ var r = n(91192),
     N = n(655525),
     A = n(314684),
     v = n(52188),
-    L = n(248042),
-    Z = n(924540),
+    Z = n(248042),
+    L = n(924540),
     O = n(649765),
     R = n(565626),
     x = n(701910),
@@ -42,11 +42,11 @@ var r = n(91192),
     U = n(54463);
 let G = 'NitroTabButton';
 ((a = i || (i = {}))[(a.BOGO_PROMOTION = 0)] = 'BOGO_PROMOTION'), (a[(a.TENURE_REWARD = 1)] = 'TENURE_REWARD'), (a[(a.NEW_PERKS_BADGE = 2)] = 'NEW_PERKS_BADGE'), (a[(a.DISCOUNT_OFFER = 3)] = 'DISCOUNT_OFFER'), (a[(a.TRIAL_OFFER = 4)] = 'TRIAL_OFFER'), (a[(a.LOCALIZED_PRICING = 5)] = 'LOCALIZED_PRICING'), (a[(a.REFERRAL_PROGRAM = 6)] = 'REFERRAL_PROGRAM'), (a[(a.REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY = 7)] = 'REFERRAL_PROGRAM_INCENTIVE_FIRST_DISCOVERY'), (a[(a.REFERRAL_PROGRAM_INCENTIVE_AWARD = 8)] = 'REFERRAL_PROGRAM_INCENTIVE_AWARD');
-let k = (e) => {
+let w = (e) => {
     let t,
         n,
         i,
-        { selected: a, route: k, locationState: w, ...B } = e,
+        { selected: a, route: w, locationState: k, ...B } = e,
         H = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
         V = (0, l.e7)([m.ZP], () => m.ZP.getPremiumTypeSubscription()),
         F = (0, g.Qo)(H, V),
@@ -55,7 +55,7 @@ let k = (e) => {
         z = (0, S.Ng)(),
         K = (0, l.e7)([m.ZP], () => m.ZP.inReverseTrial()),
         q = (0, l.e7)([E.Z], () => E.Z.isLocalizedPromoEnabled) && null == W,
-        Q = (0, L.Vi)(),
+        Q = (0, Z.Vi)(),
         X = (0, R.ZP)(),
         J = (0, A.$_)(),
         $ = (0, b.Kn)(G),
@@ -89,7 +89,7 @@ let k = (e) => {
                 : X
                   ? ((n = (0, s.jsx)(x.Z, {})), (i = 2))
                   : null != z
-                    ? ((n = (0, s.jsx)(Z.GN, {
+                    ? ((n = (0, s.jsx)(L.GN, {
                           userDiscount: z,
                           isTabSelected: a,
                           includesAmountOff: !1
@@ -103,17 +103,17 @@ let k = (e) => {
                             })),
                             (i = 6))
                           : q && ((n = (0, s.jsx)(v.k, { entryPoint: v.U.PrivateMessages })), !a && (t = U.localizeBadge), (i = 5))
-                      : ((n = (0, s.jsx)(Z.$H, {
+                      : ((n = (0, s.jsx)(L.$H, {
                             trialOffer: W,
                             isTabSelected: a
                         })),
                         (i = 4));
     let ed = (0, s.jsx)(d.Qj, {
         selected: a,
-        route: k,
+        route: w,
         icon: c.NitroWheelIcon,
         text: j.Z.Messages.PREMIUM,
-        locationState: w,
+        locationState: k,
         onClick: () => {
             I.default.track(D.rMx.NITRO_TAB_VISITED, {
                 badge_decorator: i,

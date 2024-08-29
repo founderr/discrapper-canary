@@ -30,8 +30,8 @@ var i,
     N = n(931515),
     A = n(286083),
     v = n(207796),
-    L = n(777734),
-    Z = n(976757),
+    Z = n(777734),
+    L = n(976757),
     O = n(981631),
     R = n(689938),
     x = n(266489);
@@ -100,14 +100,14 @@ t.ZP = o.memo(function (e) {
         }, [b]),
         { loaded: M, clans: y, searchResult: j, searchCriteria: U } = (0, N.ML)(P, 'saved_guilds' === S),
         G = (0, v.GN)((e) => e.selectedTraits, _.Z),
-        k = (0, v.GN)((e) => e.selectedGames, _.Z),
-        w = (0, m.Z)(j),
+        w = (0, v.GN)((e) => e.selectedGames, _.Z),
+        k = (0, m.Z)(j),
         { currentPage: B, updatePage: H, totalItems: V, pageSize: F } = (0, A.$)(),
         Y = (0, h.e7)([g.default], () => g.default.getCurrentUser());
     o.useEffect(() => {
-        if (null != j && !!(0, Z.Pw)(j)) (!(null != w && (0, Z.Pw)(w)) || !(w.loadedAt >= j.loadedAt)) && (0, I.Oe)('top_picks', U);
-    }, [U, j, w]);
-    let W = k.length > 0 || G.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != Y ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: T.ZP.getName(Y) }) : '';
+        if (null != j && !!(0, L.Pw)(j)) (!(null != k && (0, L.Pw)(k)) || !(k.loadedAt >= j.loadedAt)) && (0, I.Oe)('top_picks', U);
+    }, [U, j, k]);
+    let W = w.length > 0 || G.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != Y ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: T.ZP.getName(Y) }) : '';
     let z =
             ((t = y),
             (n = P),
@@ -250,7 +250,7 @@ t.ZP = o.memo(function (e) {
                     case 'top_picks':
                         return (0, l.jsx)('div', {
                             className: x.topPicksSection,
-                            children: (0, l.jsx)(L.Z, {
+                            children: (0, l.jsx)(Z.Z, {
                                 title: t,
                                 subtitle: n
                             })
@@ -273,7 +273,7 @@ t.ZP = o.memo(function (e) {
                         return (0, l.jsx)('div', { className: x.headerSpacer });
                     default:
                         if (null == t) return null;
-                        return (0, l.jsx)(L.Z, {
+                        return (0, l.jsx)(Z.Z, {
                             title: t,
                             subtitle: n
                         });

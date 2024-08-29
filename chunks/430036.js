@@ -23,8 +23,8 @@ var i = n(735250),
     Z = n(655687),
     I = n(823748),
     S = n(25007),
-    C = n(199649),
-    v = n(1397),
+    v = n(199649),
+    C = n(1397),
     x = n(541716),
     T = n(752305),
     N = n(974251),
@@ -116,7 +116,7 @@ class ei extends s.Component {
             });
         return e.isPrivate()
             ? (0, i.jsx)(
-                  C.Z,
+                  v.Z,
                   {
                       channel: e,
                       children: c
@@ -124,7 +124,7 @@ class ei extends s.Component {
                   e.id
               )
             : (0, i.jsx)(
-                  v.Z,
+                  C.Z,
                   {
                       channel: e,
                       children: c

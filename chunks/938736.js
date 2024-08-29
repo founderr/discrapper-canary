@@ -12,10 +12,10 @@ n.d(t, {
         return S;
     },
     Nq: function () {
-        return E;
+        return u;
     },
     Q_: function () {
-        return u;
+        return E;
     },
     TW: function () {
         return C;
@@ -27,7 +27,7 @@ n.d(t, {
         return g;
     },
     uv: function () {
-        return A;
+        return m;
     },
     vx: function () {
         return N;
@@ -45,8 +45,8 @@ var s = n(442837),
     c = n(898997),
     d = n(981631),
     _ = n(689938);
-let E = '40%',
-    u = 3,
+let u = '40%',
+    E = 3,
     T = 8,
     I = (e) => {
         let { hasSentAll: t, hasSentAtLeastOne: n, numSentUsers: s, helpdeskArticle: a } = e;
@@ -54,11 +54,11 @@ let E = '40%',
             ? _.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_ALL_SHARED_NO_REFRESH.format({ helpdeskArticle: a })
             : n
               ? _.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER_AT_LEAST_ONE_SHARED.format({
-                    numFriends: u - s,
+                    numFriends: E - s,
                     helpdeskArticle: a
                 })
               : _.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_SUBHEADER.format({
-                    numFriends: u,
+                    numFriends: E,
                     helpdeskArticle: a
                 });
     },
@@ -69,7 +69,7 @@ let E = '40%',
         return t && a;
     },
     C = (e) => {
-        let t = A(e);
+        let t = m(e);
         return null != t && t !== d.g2L.NOT_ELIGIBLE;
     },
     g = (e) => {
@@ -91,19 +91,19 @@ let E = '40%',
             a = (0, s.e7)([i.Z], () => i.Z.getIsSenderEligibleForIncentive());
         return t && n && a;
     },
-    A = (e) => {
+    m = (e) => {
         let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !1 }),
             a = (0, s.e7)([i.Z], () => i.Z.getIsFetchingReferralIncentiveEligibility()),
             r = (0, s.e7)([i.Z], () => i.Z.getSenderIncentiveState());
         return a ? d.g2L.NOT_ELIGIBLE : n && t ? r : d.g2L.NOT_ELIGIBLE;
     },
-    m = (e) => {
-        let t = A(e);
+    A = (e) => {
+        let t = m(e);
         return t === d.g2L.COOLDOWN || t === d.g2L.UNAPPLIED || t === d.g2L.QUALIFIED;
     },
     f = (e) => {
-        let t = m(e),
+        let t = A(e),
             n = (0, r.wE)(a.z.REFERRAL_INCENTIVE_AWARDED_INFO);
         return t && !n;
     },
@@ -119,13 +119,13 @@ let E = '40%',
             case d.g2L.NOT_ELIGIBLE:
                 return n ? _.Z.Messages.REFERRAL_PROGRAM_PROGRESS_BAR_HEADER_ALL_SHARED : _.Z.Messages.REFERRAL_PROGRAM_SHARE_NITRO_WITH_FRIENDS;
             case d.g2L.ELIGIBLE:
-                if (s.sent < 2) return _.Z.Messages.REFERRAL_INCENTIVE_SHARE_NITRO_GET_DISCOUNT.format({ discountRate: E });
-                if (s.redeemed === u) return _.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING;
-                return _.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASSES_KEEP_GOING.format({ discountRate: E });
+                if (s.sent < 2) return _.Z.Messages.REFERRAL_INCENTIVE_SHARE_NITRO_GET_DISCOUNT.format({ discountRate: u });
+                if (s.redeemed === E) return _.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING;
+                return _.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASSES_KEEP_GOING.format({ discountRate: u });
             case d.g2L.QUALIFIED:
             case d.g2L.COOLDOWN:
             case d.g2L.UNAPPLIED:
-                return s.redeemed === u ? _.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING : _.Z.Messages.REFERRAL_INCENTIVE_DISCOUNT_UNLOCKED;
+                return s.redeemed === E ? _.Z.Messages.REFERRAL_INCENTIVE_NITRO_FRIEND_PASSES_INCOMING : _.Z.Messages.REFERRAL_INCENTIVE_DISCOUNT_UNLOCKED;
         }
     },
     M = (e) => {
@@ -133,14 +133,14 @@ let E = '40%',
         switch (n) {
             case d.g2L.NOT_ELIGIBLE:
                 return I({
-                    hasSentAll: s.sent >= u,
+                    hasSentAll: s.sent >= E,
                     hasSentAtLeastOne: s.sent >= 1,
                     numSentUsers: s.sent,
                     helpdeskArticle: t
                 });
             case d.g2L.ELIGIBLE:
                 let r = {
-                    discountRate: E,
+                    discountRate: u,
                     learnMoreLink: t,
                     subscriptionInterval: _.Z.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
                 };
@@ -149,7 +149,7 @@ let E = '40%',
             case d.g2L.QUALIFIED:
             case d.g2L.COOLDOWN:
             case d.g2L.UNAPPLIED:
-                if (s.redeemed < u) return _.Z.Messages.REFERRAL_INCENTIVE_KEEP_SHARING_TO_EARN_ANOTHER_DISCOUNT.format({ learnMoreLink: t });
+                if (s.redeemed < E) return _.Z.Messages.REFERRAL_INCENTIVE_KEEP_SHARING_TO_EARN_ANOTHER_DISCOUNT.format({ learnMoreLink: t });
                 if (!a)
                     return _.Z.Messages.REFERRAL_INCENTIVE_FRIEND_PASS_COUNTDOWN_HAS_BEGUN.format({
                         learnMoreLink: t,

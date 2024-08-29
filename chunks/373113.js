@@ -3,59 +3,59 @@ n.d(t, {
         return s;
     }
 });
-var r = n(735250);
+var a = n(735250);
 n(470079);
-var a = n(29768);
+var r = n(29768);
 function s() {
-    return (0, r.jsxs)('div', {
-        className: a.__invalid_snowflakes,
+    return (0, a.jsxs)('div', {
+        className: r.__invalid_snowflakes,
         children: [
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             }),
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             }),
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             }),
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             }),
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             }),
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             }),
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             }),
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             }),
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             }),
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             }),
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             }),
-            (0, r.jsx)('div', {
-                className: a.snowflake,
+            (0, a.jsx)('div', {
+                className: r.snowflake,
                 children: '\u2745'
             })
         ]

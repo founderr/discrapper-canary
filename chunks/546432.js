@@ -30,8 +30,8 @@ var i = t(735250),
     h = t(167080),
     I = t(163268),
     x = t(25610),
-    p = t(947849),
-    g = t(124347),
+    g = t(947849),
+    p = t(124347),
     C = t(976853),
     f = t(592125),
     j = t(626135),
@@ -83,7 +83,7 @@ let k = (e) => {
     let n,
         t,
         l,
-        { mimeType: a, downloadURL: u, onRemoveItem: d, showDownload: c, showImageAppPicker: I, isVisualMediaType: x, channelId: p } = e;
+        { mimeType: a, downloadURL: u, onRemoveItem: d, showDownload: c, showImageAppPicker: I, isVisualMediaType: x, channelId: g } = e;
     c &&
         (n = (0, i.jsx)(r.Tooltip, {
             text: O.Z.Messages.DOWNLOAD,
@@ -117,14 +117,14 @@ let k = (e) => {
                         })
                     })
             }));
-    let [g, C] = o.useState(!1),
+    let [p, C] = o.useState(!1),
         f = o.useCallback(() => C((e) => !e), []);
     return (I &&
         (l = (0, i.jsx)(m.Z, {
             toggleShowMenu: f,
-            showMenu: g,
-            channelId: p,
-            className: s()(_.hoverButton, { [_.selected]: g }),
+            showMenu: p,
+            channelId: g,
+            className: s()(_.hoverButton, { [_.selected]: p }),
             imageUrl: u,
             mimeType: a
         })),
@@ -133,7 +133,7 @@ let k = (e) => {
         : (0, i.jsxs)('div', {
               className: s()(_.hoverButtonGroup, {
                   [_.nonMediaMosaicItem]: !x,
-                  [_.forceShowHover]: g
+                  [_.forceShowHover]: p
               }),
               children: [l, n, t]
           });
@@ -148,7 +148,7 @@ function H(e) {
         ei = (0, C.Z)(en),
         eo = d.P.useExperiment({ location: 'MediaMosaicItem' }, { autoTrackExposure: !0 }).imageRecsEnabled,
         el = o.useMemo(() => (null != $ && -1 !== $.indexOf('/') ? $.split('/') : ['unknown', 'unknown']), [$]),
-        es = 'IMAGE' === J && !g.u.test(t.downloadUrl),
+        es = 'IMAGE' === J && !p.u.test(t.downloadUrl),
         ea = !1;
     if (R) {
         (null == X || null == q) && (ea = !0);
@@ -217,7 +217,7 @@ function H(e) {
         }, [F, m, z, J, R, K, t, el, er, c, eo, ei, en, es, ea, U]);
     switch (J) {
         case 'IMAGE':
-            return (0, i.jsx)(p.h.Consumer, {
+            return (0, i.jsx)(g.h.Consumer, {
                 children: (e) =>
                     (0, i.jsx)(M, {
                         item: t,
@@ -305,15 +305,15 @@ function H(e) {
 }
 n.ZP = function (e) {
     var n;
-    let { className: t, item: l, message: a, getObscureReason: r, useFullWidth: u, mediaLayoutType: d, isSingleMosaicItem: m, footer: h, ...p } = e,
-        { width: g, height: C, type: f } = l,
+    let { className: t, item: l, message: a, getObscureReason: r, useFullWidth: u, mediaLayoutType: d, isSingleMosaicItem: m, footer: h, ...g } = e,
+        { width: p, height: C, type: f } = l,
         j = r(l, (0, x.V)(a.channel_id, a.author.id)),
         [M, E] = o.useState(null != j),
         y = d === N.hV.MOSAIC,
-        w = !y && ((null != g && g < 200) || (null != C && C < 50));
+        w = !y && ((null != p && p < 200) || (null != C && C < 50));
     let O = 'IMAGE' === (n = f) || 'VIDEO' === n,
         _ = S(f),
-        L = m && null != j && (0, I.bR)(g, C),
+        L = m && null != j && (0, I.bR)(p, C),
         [V, P] = o.useState(!1),
         b = () => {
             P(!0);
@@ -324,7 +324,7 @@ n.ZP = function (e) {
         k = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             return (0, i.jsx)(H, {
-                ...p,
+                ...g,
                 item: l,
                 message: a,
                 getObscureReason: r,

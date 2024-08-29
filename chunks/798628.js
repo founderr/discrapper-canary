@@ -10,21 +10,21 @@ n.d(t, {
     }
 });
 var i = n(652874),
-    s = n(731965),
-    a = n(902704);
+    a = n(731965),
+    s = n(902704);
 let r = {},
     l = (0, i.Z)((e) => ({
         polls: {},
         updatePollState(t, n, i) {
-            (0, s.j)(() => {
+            (0, a.j)(() => {
                 e((e) => {
-                    var s;
+                    var a;
                     return {
                         polls: {
                             ...e.polls,
                             [t]: {
                                 ...e.polls[t],
-                                [n]: i(null === (s = e.polls[t]) || void 0 === s ? void 0 : s[n])
+                                [n]: i(null === (a = e.polls[t]) || void 0 === a ? void 0 : a[n])
                             }
                         }
                     };
@@ -36,7 +36,7 @@ function o(e) {
     return l((t) => {
         var n;
         return null !== (n = t.polls[e]) && void 0 !== n ? n : r;
-    }, a.Z);
+    }, s.Z);
 }
 function c(e, t, n) {
     l.getState().updatePollState(e, t, n);

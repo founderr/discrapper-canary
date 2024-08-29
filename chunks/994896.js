@@ -1,9 +1,9 @@
 n.d(t, {
     O: function () {
-        return a;
+        return r;
     }
 });
-let r = (0, n(818083).B)({
+let a = (0, n(818083).B)({
         kind: 'user',
         id: '2024-05_shop_condensed_category_banners',
         label: 'Collectibles Shop Dynamic Header & Condensed Category Banners',
@@ -42,7 +42,7 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    a = (e) => {
+    r = (e) => {
         let { location: t } = e;
-        return r.useExperiment({ location: t });
+        return a.useExperiment({ location: t });
     };

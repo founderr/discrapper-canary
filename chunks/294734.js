@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    s = n(470079),
-    a = n(793030),
+    a = n(470079),
+    s = n(793030),
     r = n(442837),
     l = n(902704),
     o = n(692547),
@@ -17,57 +17,57 @@ var i = n(735250),
     I = n(438075),
     m = n(695346),
     T = n(592125),
-    N = n(906467),
-    h = n(430824),
-    C = n(496675),
-    f = n(699516),
+    h = n(906467),
+    N = n(430824),
+    f = n(496675),
+    C = n(699516),
     p = n(594174),
     g = n(100604),
     S = n(694784),
     A = n(39154),
     R = n(245216),
-    O = n(689938),
-    x = n(977306);
+    x = n(689938),
+    O = n(977306);
 function M() {
     return (0, i.jsxs)('div', {
-        className: x.headerContainer,
+        className: O.headerContainer,
         children: [
             (0, i.jsx)(R.Z, {
                 size: 'xs',
-                className: x.headerIcon,
+                className: O.headerIcon,
                 color: o.Z.colors.TEXT_LOW_CONTRAST
             }),
-            (0, i.jsx)(a.x, {
-                className: x.headerText,
+            (0, i.jsx)(s.x, {
+                className: O.headerText,
                 variant: 'text-sm/semibold',
                 color: 'text-low-contrast',
-                children: O.Z.Messages.MESSAGE_FORWARDED
+                children: x.Z.Messages.MESSAGE_FORWARDED
             })
         ]
     });
 }
 function v(e) {
     let { message: t, snapshot: n, index: d } = e,
-        _ = s.useMemo(() => new g.r(t, n, d), [t, n, d]),
-        E = (0, r.e7)([T.Z, p.default, f.Z, C.Z, h.Z, u.Z], () => _.getForwardInfo(T.Z, p.default, f.Z, C.Z, h.Z, u.Z).footerInfo, [_], l.Z),
-        I = s.useCallback(() => {
+        _ = a.useMemo(() => new g.r(t, n, d), [t, n, d]),
+        E = (0, r.e7)([T.Z, p.default, C.Z, f.Z, N.Z, u.Z], () => _.getForwardInfo(T.Z, p.default, C.Z, f.Z, N.Z, u.Z).footerInfo, [_], l.Z),
+        I = a.useCallback(() => {
             (0, S.Z)(t);
         }, [t]);
     return null == E
         ? null
         : (0, i.jsxs)(c.Clickable, {
-              className: x.footerContainer,
+              className: O.footerContainer,
               onClick: I,
               children: [
                   null != E.originIconUrl
                       ? (0, i.jsx)('img', {
-                            className: x.originIcon,
+                            className: O.originIcon,
                             src: E.originIconUrl,
                             alt: ''
                         })
                       : null,
-                  (0, i.jsx)(a.x, {
-                      className: x.footerText,
+                  (0, i.jsx)(s.x, {
+                      className: O.footerText,
                       variant: 'text-sm/medium',
                       color: 'none',
                       children: ''.concat(E.originLabel, '  \u2022  ').concat(E.timestampLabel)
@@ -81,20 +81,20 @@ function v(e) {
 }
 function L(e) {
     var t;
-    let { message: n, snapshot: a, index: l } = e,
-        o = s.useMemo(() => (0, A.Z)(n, a), [n, a]),
+    let { message: n, snapshot: s, index: l } = e,
+        o = a.useMemo(() => (0, A.Z)(n, s), [n, s]),
         c = m.RS.useSetting(),
         u = m.NA.useSetting(),
-        h = (0, r.e7)([N.Z], () => N.Z.isDeveloper),
-        C = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()),
-        { content: f, hasSpoilerEmbeds: p } = (0, E.Z)(o, {
+        N = (0, r.e7)([h.Z], () => h.Z.isDeveloper),
+        f = (0, d.A)((null !== (t = o.editedTimestamp) && void 0 !== t ? t : o.timestamp).valueOf()),
+        { content: C, hasSpoilerEmbeds: p } = (0, E.Z)(o, {
             hideSimpleEmbedContent: c && u,
             isInteracting: !1,
             formatInline: !1,
-            allowList: C,
-            allowHeading: C,
+            allowList: f,
+            allowHeading: f,
             allowLinks: !0,
-            allowDevLinks: h,
+            allowDevLinks: N,
             previewLinkTarget: !0
         }),
         g = (0, r.e7)([T.Z], () => T.Z.getChannel(n.channel_id)),
@@ -104,16 +104,16 @@ function L(e) {
         : (0, i.jsxs)(
               'div',
               {
-                  className: x.container,
+                  className: O.container,
                   children: [
-                      (0, i.jsx)('div', { className: x.quote }),
+                      (0, i.jsx)('div', { className: O.quote }),
                       (0, i.jsxs)('div', {
-                          className: x.content,
+                          className: O.content,
                           children: [
                               (0, i.jsx)(M, {}),
                               (0, i.jsx)(_.ZP, {
                                   message: o,
-                                  content: f
+                                  content: C
                               }),
                               (0, I.Z)({
                                   channelMessageProps: {
@@ -128,7 +128,7 @@ function L(e) {
                               }),
                               (0, i.jsx)(v, {
                                   message: n,
-                                  snapshot: a,
+                                  snapshot: s,
                                   index: l
                               })
                           ]

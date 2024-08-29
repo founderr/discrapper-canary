@@ -1,6 +1,6 @@
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
+    a = n(470079),
+    s = n(442837),
     r = n(481060),
     l = n(528963),
     o = n(143740),
@@ -10,14 +10,14 @@ var i = n(735250),
     _ = n(493249);
 t.Z = (e) => {
     let { channelId: t, messageId: n } = e,
-        E = (0, a.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
-        I = s.useCallback(() => {
+        E = (0, s.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
+        I = a.useCallback(() => {
             l.Z.dismissPublishBump(n), (0, o.Z)(t, n);
         }, [t, n]),
-        m = s.useCallback(() => {
+        m = a.useCallback(() => {
             l.Z.dismissPublishBump(n);
         }, [n]),
-        T = s.useCallback(() => {
+        T = a.useCallback(() => {
             l.Z.permanentlyHidePublishBump(t);
         }, [t]);
     return E

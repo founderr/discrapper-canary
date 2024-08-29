@@ -1,44 +1,44 @@
 n.d(t, {
     U: function () {
-        return l;
+        return c;
     }
 });
-var r = n(735250);
+var a = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var r = n(120356),
+    s = n.n(r),
     o = n(481060),
     i = n(689938),
-    c = n(613616);
-let l = (e) => {
+    l = n(613616);
+let c = (e) => {
     let { className: t, isPartiallyPurchased: n } = e;
     return n
-        ? (0, r.jsx)(o.Tooltip, {
-              tooltipClassName: c.partiallyOwnedDisclaimer,
+        ? (0, a.jsx)(o.Tooltip, {
+              tooltipClassName: l.partiallyOwnedDisclaimer,
               position: 'top',
               align: 'left',
               text: i.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED_DISCLAIMER,
               children: (e) =>
-                  (0, r.jsxs)('div', {
-                      className: s()(c.partialOwnStateContainer, t),
+                  (0, a.jsxs)('div', {
+                      className: s()(l.partialOwnStateContainer, t),
                       ...e,
                       children: [
-                          (0, r.jsx)('span', {
-                              className: c.iconWrapper,
-                              children: (0, r.jsx)(o.CircleInformationIcon, {
+                          (0, a.jsx)('span', {
+                              className: l.iconWrapper,
+                              children: (0, a.jsx)(o.CircleInformationIcon, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: c.infoIcon
+                                  className: l.infoIcon
                               })
                           }),
-                          (0, r.jsx)(o.Text, {
+                          (0, a.jsx)(o.Text, {
                               variant: 'text-md/semibold',
                               children: i.Z.Messages.COLLECTIBLES_PARTIALLY_OWNED
                           })
                       ]
                   })
           })
-        : (0, r.jsx)(o.Text, {
+        : (0, a.jsx)(o.Text, {
               variant: 'text-md/semibold',
               className: t,
               children: i.Z.Messages.COLLECTIBLES_ALREADY_OWNED

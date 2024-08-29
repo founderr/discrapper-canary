@@ -27,8 +27,8 @@ var i = n(735250),
     N = n(626421),
     A = n(118379),
     v = n(652515),
-    L = n(857428),
-    Z = n(540059),
+    Z = n(857428),
+    L = n(540059),
     O = n(194729),
     R = n(668940),
     x = n(831565),
@@ -40,8 +40,8 @@ var i = n(735250),
     j = n(326145),
     U = n(269675),
     G = n(242601),
-    k = n(416568),
-    w = n(613609),
+    w = n(416568),
+    k = n(613609),
     B = n(160404),
     H = n(225675),
     V = n(745052),
@@ -129,9 +129,9 @@ let eg = 'resizable-sidebar-width',
                 if ((null == e ? void 0 : e.type) === H.z.SERVER_SHOP)
                     switch (e.initialTab) {
                         case 'role_subscriptions':
-                            return L.y.GUILD_ROLE_SUBSCRIPTIONS;
+                            return Z.y.GUILD_ROLE_SUBSCRIPTIONS;
                         case 'guild_products':
-                            return L.y.GUILD_PRODUCTS;
+                            return Z.y.GUILD_PRODUCTS;
                         default:
                             return;
                     }
@@ -143,7 +143,7 @@ let eg = 'resizable-sidebar-width',
                     return d
                         ? (0, i.jsx)(eT, {
                               guildId: a,
-                              initialTab: L.y.GUILD_ROLE_SUBSCRIPTIONS
+                              initialTab: Z.y.GUILD_ROLE_SUBSCRIPTIONS
                           })
                         : (0, i.jsx)(U.Z, { guildId: a });
                 case eE.oC.GUILD_SHOP:
@@ -191,7 +191,7 @@ let eg = 'resizable-sidebar-width',
         }
         return (0, i.jsx)(C.Z, {});
     },
-    eL = a.memo(function () {
+    eZ = a.memo(function () {
         let { guildId: e, channelId: t } = (0, q.Z)(),
             n = (0, u.e7)([et.Z], () => (null != t ? t : et.Z.getChannelId(e))),
             a = (0, x.v)({ location: 'sidebar' });
@@ -215,7 +215,7 @@ let eg = 'resizable-sidebar-width',
               )
             : (0, i.jsx)(ed.Z, {});
     }),
-    eZ = (e) => (0, i.jsx)(ev, { ...e }),
+    eL = (e) => (0, i.jsx)(ev, { ...e }),
     eO = (e) => {
         let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null;
         return (0, x.a)({ location: 'sidebar' }) ? (0, i.jsx)(b.A, {}) : (0, i.jsx)(O.Z, { searchRoute: t });
@@ -232,7 +232,7 @@ let eg = 'resizable-sidebar-width',
     ex = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
-            ? (0, i.jsx)(w.Z, {
+            ? (0, i.jsx)(k.Z, {
                   guildId: t.params.guildId,
                   inviteCode: t.params.inviteCode
               })
@@ -254,7 +254,7 @@ let eg = 'resizable-sidebar-width',
     ej = () => (0, i.jsx)(z.Z, {}),
     eU = () => (0, i.jsx)(V.Z, {}),
     eG = () => (0, i.jsx)(W.Z, {}),
-    ek = (e) => {
+    ew = (e) => {
         let { match: t } = e;
         switch (t.params.feature) {
             case 'addFriends':
@@ -282,13 +282,13 @@ let eg = 'resizable-sidebar-width',
                 return (0, i.jsx)(l.l_, { to: eh.Z5c.ME });
         }
     };
-function ew(e) {
+function ek(e) {
     let { hasNotice: t, sidebarTheme: n, hideSidebar: s } = e;
     (0, m.t)(!0);
     let l = 'app view user trigger debugging';
     E.R6.useExperiment({ location: l }, { autoTrackExposure: !1 }), E.R6.trackExposure({ location: l });
     let o = (0, u.e7)([S.Z], () => S.Z.isFullscreenInContext()),
-        c = (0, Z.Q)('ChannelSidebar');
+        c = (0, L.Q)('ChannelSidebar');
     a.useLayoutEffect(() => {
         if (c) {
             var e;
@@ -332,7 +332,7 @@ function ew(e) {
                   [eI.hidden]: o
               }),
               children: [
-                  (0, i.jsx)(eL, {}),
+                  (0, i.jsx)(eZ, {}),
                   c
                       ? (0, i.jsx)('div', {
                             className: eI.sidebarResizeHandle,
@@ -394,7 +394,7 @@ function eB() {
             children: [
                 h &&
                     !_ &&
-                    (0, i.jsx)(k.Z, {
+                    (0, i.jsx)(w.Z, {
                         className: eI.guilds,
                         themeOverride: n
                     }),
@@ -408,7 +408,7 @@ function eB() {
                                 className: eI.content,
                                 children: [
                                     (0, i.jsx)(N.Z, {}),
-                                    (0, i.jsx)(ew, {
+                                    (0, i.jsx)(ek, {
                                         hasNotice: t,
                                         sidebarTheme: n,
                                         hideSidebar: s || r || c || _ || m || !h
@@ -487,7 +487,7 @@ function eB() {
                                                 }),
                                                 (0, i.jsx)(f.Z, {
                                                     path: [eh.Z5c.CHANNEL_THREAD_VIEW(':guildId', ':channelId', ':threadId', ':messageId?'), eh.Z5c.CHANNEL(eh.ME, ':channelId'), eh.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')],
-                                                    render: eZ,
+                                                    render: eL,
                                                     impressionName: o.ImpressionNames.GUILD_CHANNEL,
                                                     disableTrack: !0
                                                 }),
@@ -545,7 +545,7 @@ function eB() {
                                                 (0, i.jsx)(f.Z, {
                                                     path: eh.Z5c.FEATURE(':feature'),
                                                     exact: !0,
-                                                    render: ek,
+                                                    render: ew,
                                                     disableTrack: !0
                                                 })
                                             ]

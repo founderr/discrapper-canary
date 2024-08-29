@@ -13,12 +13,12 @@ var a = n(780384),
     c = n(955204),
     d = n(231338),
     _ = n(499872);
-let E = {
+let u = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
     },
-    u = {
+    E = {
         trophy: d.Il.PRIMARY_400,
         locked: d.Il.PRIMARY_400,
         unlocked: d.Il.GREEN_330
@@ -32,12 +32,12 @@ function T(e) {
     let C = (0, r.getAvatarSpecs)(T),
         { name: g, rarity: N } = R,
         { color: p } = (0, c.F7)(N),
-        A = (0, a.wj)(I) ? E : u,
-        m = (C.size - C.offset - 2 * C.stroke) * 0.8,
+        m = (0, a.wj)(I) ? u : E,
+        A = (C.size - C.offset - 2 * C.stroke) * 0.8,
         f = C.size - C.stroke,
         S = {
-            width: 0.4 * m,
-            height: 0.4 * m
+            width: 0.4 * A,
+            height: 0.4 * A
         },
         h = {
             width: S.width + 1,
@@ -59,9 +59,9 @@ function T(e) {
                 className: _.trophyIconContainer,
                 children: (0, s.jsx)(r.TrophyIcon, {
                     size: 'custom',
-                    color: d ? p : (0, l.Lq)(A.trophy),
-                    width: m,
-                    height: m
+                    color: d ? p : (0, l.Lq)(m.trophy),
+                    width: A,
+                    height: A
                 })
             }),
             !d &&
@@ -70,7 +70,7 @@ function T(e) {
                     style: h,
                     children: (0, s.jsx)(r.LockIcon, {
                         size: 'custom',
-                        color: (0, l.Lq)(A.locked),
+                        color: (0, l.Lq)(m.locked),
                         ...S
                     })
                 }),

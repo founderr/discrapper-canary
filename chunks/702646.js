@@ -1,6 +1,6 @@
 n.d(t, {
     a: function () {
-        return L;
+        return Z;
     }
 }),
     n(47120);
@@ -322,7 +322,7 @@ function v(e) {
         ]
     });
 }
-function L() {
+function Z() {
     return (0, i.jsxs)('div', {
         className: g.guildsIconContainer,
         children: [
@@ -338,7 +338,7 @@ function L() {
         ]
     });
 }
-function Z(e) {
+function L(e) {
     let { guildIcon: t, className: n } = e,
         s = (0, E.GN)((e) => e.mode, l.Z),
         { enableClanCreation: o } = (0, c.C3)({
@@ -378,7 +378,7 @@ t.Z = function (e) {
     let { guildIcon: t, className: n } = e,
         a = (0, E.GN)((e) => e.mode, l.Z);
     return (0, c.iN)('discovery_toolbar')
-        ? (0, i.jsx)(Z, {
+        ? (0, i.jsx)(L, {
               guildIcon: t,
               className: n
           })

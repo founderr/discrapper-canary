@@ -1,15 +1,15 @@
 n.d(t, {
     Z: function () {
-        return a;
+        return s;
     }
 });
 var i = n(735250);
 n(470079);
-var s = n(325767);
-function a(e) {
-    let { width: t = 440, height: n = 200, avatar: a, ...r } = e;
+var a = n(325767);
+function s(e) {
+    let { width: t = 440, height: n = 200, avatar: s, ...r } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, s.Z)(r),
+        ...(0, a.Z)(r),
         width: t,
         height: n,
         viewBox: '0 0 '.concat(t, ' ').concat(n),
@@ -88,7 +88,7 @@ function a(e) {
                 y: '100',
                 width: '56',
                 height: '56',
-                children: a
+                children: s
             })
         ]
     });

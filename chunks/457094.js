@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(100527),
     A = n(838134),
     v = n(77987),
-    L = n(679891),
-    Z = n(491575),
+    Z = n(679891),
+    L = n(491575),
     O = n(954709),
     R = n(314533),
     x = n(9029),
@@ -35,8 +35,8 @@ var i = n(735250),
     j = n(750995),
     U = n(696287),
     G = n(408026),
-    k = n(763916),
-    w = n(306721),
+    w = n(763916),
+    k = n(306721),
     B = n(531551),
     H = n(38618),
     V = n(972830),
@@ -76,8 +76,8 @@ var i = n(735250),
     eN = n(479313),
     eA = n(911560),
     ev = n(703016),
-    eL = n(171368),
-    eZ = n(429974),
+    eZ = n(171368),
+    eL = n(429974),
     eO = n(332754),
     eR = n(507468),
     ex = n(357269),
@@ -89,8 +89,8 @@ var i = n(735250),
     ej = n(896797),
     eU = n(430824),
     eG = n(819640),
-    ek = n(283595),
-    ew = n(944486),
+    ew = n(283595),
+    ek = n(944486),
     eB = n(914010),
     eH = n(695103),
     eV = n(241890),
@@ -126,7 +126,7 @@ let e0 = !1;
             !eG.Z.getLayers().includes(eQ.S9g.USER_SETTINGS) && E.Z.open(eQ.oAB.ACCOUNT);
         }),
         eK.ZP.on('LAUNCH_APPLICATION', (e, t) => {
-            let n = ek.Z.getActiveLibraryApplication(t);
+            let n = ew.Z.getActiveLibraryApplication(t);
             eq.playApplication(t, n, {
                 analyticsParams: {
                     location: {
@@ -158,7 +158,7 @@ let e1 = l.ZP.connectStores([H.Z, ej.Z, eM.default], () => ({
             }
         }
     ),
-    e4 = (0, v.e)(Z.Z, null, { passProps: !1 }),
+    e4 = (0, v.e)(L.Z, null, { passProps: !1 }),
     e7 = (0, v.e)(A.default, null, { passProps: !1 }),
     e2 = [eQ.Z5c.GUILD_BOOSTING_MARKETING(':guildId'), ...Array.from(eX.Vg).map((e) => eQ.Z5c.CHANNEL(':guildId', e))];
 function e5(e) {
@@ -192,7 +192,7 @@ let e3 = [
                 { id: l } = t.params;
             return (
                 (0, V.h)(() =>
-                    (0, eL.openUserProfileModal)({
+                    (0, eZ.openUserProfileModal)({
                         userId: l,
                         guildId: eQ.ME,
                         friendToken: a,
@@ -211,10 +211,10 @@ let e3 = [
                 { gameId: n, action: a } = t.params;
             return (
                 eY.Z.whenInitialized(() => {
-                    ek.Z.whenInitialized(() => {
+                    ew.Z.whenInitialized(() => {
                         switch (a) {
                             case 'launch': {
-                                let e = ek.Z.getActiveLibraryApplication(n);
+                                let e = ew.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
                                 eq.playApplication(e.id, e, {
                                     analyticsParams: {
@@ -230,7 +230,7 @@ let e3 = [
                                 eH.Z.whenInitialized(() => h.Wt(n));
                                 break;
                             case 'uninstall': {
-                                let e = ek.Z.getActiveLibraryApplication(n);
+                                let e = ew.Z.getActiveLibraryApplication(n);
                                 if (null == e) return;
                                 (0, d.W)(e.id, e.branchId, eQ.Sbl.URI_SCHEME);
                             }
@@ -382,16 +382,16 @@ class e8 extends a.PureComponent {
     componentDidMount() {
         eK.ZP.setZoomFactor(m.Z.zoom),
             eI.Z.init(),
-            L.Z.initialize(),
+            Z.Z.initialize(),
             eo.Z.initialize(),
             G.Z.initialize(),
             eP.Z.initialize(),
-            k.Z.initialize(),
+            w.Z.initialize(),
             ed.Z.initialize(),
             J.Z.initialize(),
             I.Z.init(),
             B.Z.init(),
-            w.Z.init(),
+            k.Z.init(),
             ei.Z.initialize(),
             S.Z.initialize(),
             j.Z.initialize(),
@@ -410,7 +410,7 @@ class e8 extends a.PureComponent {
             eO.Z.init(),
             eS.Z.initialize(),
             eC.Z.initialize(),
-            eZ.Z.initialize(),
+            eL.Z.initialize(),
             eR.Z.init(),
             y.Z.initialize(),
             g.Z.initialize(),
@@ -439,7 +439,7 @@ class e8 extends a.PureComponent {
             (this.historyUnlisten = eh.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        eP.Z.terminate(), ed.Z.terminate(), eo.Z.terminate(), L.Z.terminate(), f.ZP.terminate(), eb.Z.terminate(), T.Z.terminate(), eu.Z.terminate(), el.Z.terminate(), eZ.Z.terminate(), p.Z.terminate(), y.Z.terminate(), $.Z.terminate(), g.Z.terminate(), e_.Z.terminate(), eg.Z.terminate(), ef.Z.terminate(), es.Z.terminate(), ea.Z.terminate(), er.Z.terminate(), R.Z.terminate(), x.Z.terminate(), ec.Z.terminate(), M.Z.terminate(), U.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        eP.Z.terminate(), ed.Z.terminate(), eo.Z.terminate(), Z.Z.terminate(), f.ZP.terminate(), eb.Z.terminate(), T.Z.terminate(), eu.Z.terminate(), el.Z.terminate(), eL.Z.terminate(), p.Z.terminate(), y.Z.terminate(), $.Z.terminate(), g.Z.terminate(), e_.Z.terminate(), eg.Z.terminate(), ef.Z.terminate(), es.Z.terminate(), ea.Z.terminate(), er.Z.terminate(), R.Z.terminate(), x.Z.terminate(), ec.Z.terminate(), M.Z.terminate(), U.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -467,7 +467,7 @@ class e8 extends a.PureComponent {
                     E = eB.Z.getGuildId(),
                     m = E !== i;
                 if ((c && m && u.Z.selectGuild(i), c && d)) {
-                    let n = ew.Z.getChannelId(E),
+                    let n = ek.Z.getChannelId(E),
                         r = n !== a;
                     if (!e0 || m || r || null != l) {
                         (e0 = !0),

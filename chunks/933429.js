@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(47120);
 var i,
-    s,
     a,
+    s,
     r,
     l = n(913527),
     o = n.n(l),
@@ -18,31 +18,31 @@ var i,
     I = n(579806),
     m = n(726542),
     T = n(812206),
-    N = n(223892),
-    h = n(674525),
-    C = n(605236),
-    f = n(524347),
+    h = n(223892),
+    N = n(674525),
+    f = n(605236),
+    C = n(524347),
     p = n(853197),
     g = n(353926),
     S = n(594190),
     A = n(38618),
     R = n(569545),
-    O = n(615365),
-    x = n(528011),
+    x = n(615365),
+    O = n(528011),
     M = n(487419),
     v = n(715903),
     L = n(223606),
     Z = n(150340),
     P = n(160404),
-    D = n(41776),
-    b = n(347649),
+    b = n(41776),
+    D = n(347649),
     j = n(332473),
     U = n(514851),
     y = n(30684),
     B = n(616106),
     k = n(666072),
-    F = n(995598),
-    G = n(774276),
+    G = n(995598),
+    F = n(774276),
     w = n(518638),
     V = n(1844),
     H = n(621615),
@@ -59,8 +59,8 @@ var i,
     et = n(592125),
     en = n(553795),
     ei = n(427123),
-    es = n(271383),
-    ea = n(430824),
+    ea = n(271383),
+    es = n(430824),
     er = n(131951),
     el = n(292959),
     eo = n(496675),
@@ -72,24 +72,24 @@ var i,
     eI = n(246946),
     em = n(558724),
     eT = n(23434),
-    eN = n(594174),
-    eh = n(979651),
-    eC = n(351402),
-    ef = n(853872),
+    eh = n(594174),
+    eN = n(979651),
+    ef = n(351402),
+    eC = n(853872),
     ep = n(78839),
     eg = n(295226),
     eS = n(580130),
     eA = n(695103),
     eR = n(358085),
-    eO = n(74538),
-    ex = n(922156),
+    ex = n(74538),
+    eO = n(922156),
     eM = n(436181),
     ev = n(941128),
     eL = n(981631),
     eZ = n(188785),
     eP = n(288836),
-    eD = n(474936),
-    eb = n(46140),
+    eb = n(474936),
+    eD = n(46140),
     ej = n(231338),
     eU = n(65154);
 let ey = {
@@ -127,8 +127,8 @@ let ey = {
         [eL.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: 'hidePremiumTier2TrialOfferEndingNotice'
     },
     ek = new Set([eL.kVF.NO_INPUT_DETECTED, eL.kVF.STREAMER_MODE, eL.kVF.VIDEO_UNSUPPORTED_BROWSER, eL.kVF.SPOTIFY_AUTO_PAUSED, eL.kVF.DISPATCH_ERROR, eL.kVF.DISPATCH_ERROR, eL.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eL.kVF.BLOCKED_BY_PROXY]),
-    eF = {},
-    eG = Object.freeze({
+    eG = {},
+    eF = Object.freeze({
         id: null,
         message: null,
         buttonText: null,
@@ -140,19 +140,19 @@ function eV(e) {
     return eB[e] + '-untilAtLeast';
 }
 function eH(e, t, n) {
-    var i, s, a;
+    var i, a, s;
     if (null == e) return;
     let r = eB[e];
-    if ((null != r && !t && _.K.set(r, !0), ek.has(e) && (eF[e] = !0), null != n && null != r)) {
-        (i = e), (s = n), _.K.set(eV(i), s.format('YYYY-MM-DDTHH:mm:ss.SSSZ'));
+    if ((null != r && !t && _.K.set(r, !0), ek.has(e) && (eG[e] = !0), null != n && null != r)) {
+        (i = e), (a = n), _.K.set(eV(i), a.format('YYYY-MM-DDTHH:mm:ss.SSSZ'));
     } else {
-        (a = e), _.K.remove(eV(a));
+        (s = e), _.K.remove(eV(s));
     }
 }
 function eY(e) {
     if (null == e) return !1;
     let t = (function (e) {
-        let { enabled: t } = G.cI.getCurrentConfig(
+        let { enabled: t } = F.cI.getCurrentConfig(
             { location: 'NoticeStore_isNoticeDismissed' },
             {
                 autoTrackExposure: !0,
@@ -161,7 +161,7 @@ function eY(e) {
         );
         return t ? null : ey[e];
     })(e);
-    if (null != t) return (0, C.un)(t);
+    if (null != t) return (0, f.un)(t);
     let n = eB[e];
     if (null != n) {
         let t = (function (e) {
@@ -170,21 +170,21 @@ function eY(e) {
         })(e);
         if (null != t) return null == t ? void 0 : t.isAfter(o()());
     }
-    let i = eF[e];
+    let i = eG[e];
     return !!i || (null != n && '' !== n ? _.K.get(n) : !!ek.has(e) && i);
 }
 let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VIEWING_ROLES, eL.kVF.INVITED_TO_SPEAK, eL.kVF.LURKING_GUILD, eL.kVF.VOICE_DISABLED, eL.kVF.NO_INPUT_DETECTED, eL.kVF.HARDWARE_MUTE, eL.kVF.H264_DISABLED, eL.kVF.DISPATCH_ERROR, eL.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eL.kVF.SPOTIFY_AUTO_PAUSED, eL.kVF.DROPS_PROGRESS_INTERRUPTION, eL.kVF.WIN32_DEPRECATED_MESSAGE, eL.kVF.WIN7_8_DEPRECATED_MESSAGE, eL.kVF.MACOS_17_18_DEPRECATED_MESSAGE, eL.kVF.BLOCKED_BY_PROXY, eL.kVF.VOICE_CONNECTED_LAST_SESSION, eL.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION, eL.kVF.GUILD_RAID_NOTIFICATION, eL.kVF.QUESTS_PROGRESS_INTERRUPTION, eL.kVF.UNCLAIMED_ACCOUNT, eL.kVF.POMELO_ELIGIBLE, eL.kVF.PENDING_MEMBER, eL.kVF.CASH_APP_PAY_AWARENESS_NAGBAR, eL.kVF.CHECKOUT_RECOVERY_NAGBAR, eL.kVF.OUTBOUND_PROMOTION, eL.kVF.CORRUPT_INSTALLATION, eL.kVF.VIDEO_UNSUPPORTED_BROWSER, eL.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK, eL.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL, eL.kVF.STREAMER_MODE, eL.kVF.SCHEDULED_MAINTENANCE, eL.kVF.BOUNCED_EMAIL_DETECTED, eL.kVF.UNVERIFIED_ACCOUNT, eL.kVF.PREMIUM_TIER_2_TRIAL_ENDING, eL.kVF.PREMIUM_TIER_0_TRIAL_ENDING, eL.kVF.PREMIUM_UNCANCEL, eL.kVF.PREMIUM_MISSING_PAYMENT, eL.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT, eL.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT, eL.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT, eL.kVF.PREMIUM_REACTIVATE, eL.kVF.ACTIVATE_SERVER_SUBSCRIPTION, eL.kVF.MFA_SMS_BACKUP, eL.kVF.APPLICATION_TEST_MODE, eL.kVF.LOCALIZED_PRICING, eL.kVF.DOWNLOAD_NAG, eL.kVF.CONNECT_SPOTIFY, eL.kVF.CONNECT_PLAYSTATION, eL.kVF.SURVEY, eL.kVF.SERVER_USAGE_SURVEY, eL.kVF.SAFETY_USER_SENTIMENT_NAGBAR, eL.kVF.DROPS_GO_LIVE_BANNER, eL.kVF.DROPS_ENDED_INCOMPLETE, eL.kVF.GUILD_ONBOARDING_UPSELL_NAGBAR, eL.kVF.UU_MIGRATION],
     eK = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VIEWING_ROLES, eL.kVF.INVITED_TO_SPEAK, eL.kVF.LURKING_GUILD, eL.kVF.VOICE_DISABLED, eL.kVF.NO_INPUT_DETECTED, eL.kVF.HARDWARE_MUTE, eL.kVF.H264_DISABLED, eL.kVF.DISPATCH_ERROR, eL.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS, eL.kVF.SPOTIFY_AUTO_PAUSED, eL.kVF.BLOCKED_BY_PROXY, eL.kVF.VOICE_CONNECTED_LAST_SESSION, eL.kVF.PENDING_MEMBER, eL.kVF.STREAMER_MODE, eL.kVF.SCHEDULED_MAINTENANCE],
     ez = {
         [eL.kVF.GUILD_RAID_NOTIFICATION]: {
-            predicate: () => (0, x.g)().show && !eY(eL.kVF.GUILD_RAID_NOTIFICATION),
+            predicate: () => (0, O.g)().show && !eY(eL.kVF.GUILD_RAID_NOTIFICATION),
             metadata: () => ({ dismissUntil: o()().add(3, 'hours').toDate() })
         },
         [eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE]: {
             predicate: (e) => {
                 let { currentUser: t, selectedGuildId: n } = e;
                 if (null == n) return !1;
-                let i = es.ZP.getMember(n, t.id);
+                let i = ea.ZP.getMember(n, t.id);
                 return null != i && !i.isPending && (0, v.EY)(i);
             }
         },
@@ -209,7 +209,7 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
         [eL.kVF.LURKING_GUILD]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e;
-                return null != t && D.Z.isLurking(t);
+                return null != t && b.Z.isLurking(t);
             }
         },
         [eL.kVF.VOICE_DISABLED]: { predicate: () => null != eu.Z.getRemoteDisconnectVoiceChannelId() },
@@ -218,15 +218,15 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
             predicate: (e) => {
                 let { voiceChannelId: t, voiceState: n } = e,
                     i = et.Z.getChannel(t),
-                    s = (null == i ? void 0 : i.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
-                return !1 === er.Z.getInputDetected() && !s;
+                    a = (null == i ? void 0 : i.isGuildStageVoice()) && (null == n ? void 0 : n.suppress);
+                return !1 === er.Z.getInputDetected() && !a;
             }
         },
         [eL.kVF.H264_DISABLED]: {
             predicate: (e) => {
                 let { voiceChannelId: t } = e,
                     n = et.Z.getChannel(t);
-                return !er.Z.getOpenH264() && null != t && eh.Z.hasVideo(t) && null != n && n.isGuildStageVoice();
+                return !er.Z.getOpenH264() && null != t && eN.Z.hasVideo(t) && null != n && n.isGuildStageVoice();
             }
         },
         [eL.kVF.HARDWARE_MUTE]: {
@@ -243,8 +243,8 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
             }
         },
         [eL.kVF.DISPATCH_ERROR]: {
-            predicate: () => null != ex.Z.getLastError(),
-            metadata: () => ({ error: ex.Z.getLastError() })
+            predicate: () => null != eO.Z.getLastError(),
+            metadata: () => ({ error: eO.Z.getLastError() })
         },
         [eL.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS]: {
             predicate: () => null != eM.Z.getLastProgress(),
@@ -261,8 +261,8 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
         [eL.kVF.PENDING_MEMBER]: {
             predicate: (e) => {
                 var t, n, i;
-                let { selectedGuildId: s, currentUser: a } = e;
-                return null !== (i = null != s && null != a && !(null === (t = ea.Z.getGuild(s)) || void 0 === t ? void 0 : t.hasFeature(eL.oNc.GUILD_ONBOARDING)) && (null === (n = es.ZP.getMember(s, a.id)) || void 0 === n ? void 0 : n.isPending)) && void 0 !== i && i;
+                let { selectedGuildId: a, currentUser: s } = e;
+                return null !== (i = null != a && null != s && !(null === (t = es.Z.getGuild(a)) || void 0 === t ? void 0 : t.hasFeature(eL.oNc.GUILD_ONBOARDING)) && (null === (n = ea.ZP.getMember(a, s.id)) || void 0 === n ? void 0 : n.isPending)) && void 0 !== i && i;
             }
         },
         [eL.kVF.OUTBOUND_PROMOTION]: { predicate: () => (0, w.tq)() },
@@ -270,13 +270,13 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
         [eL.kVF.VIDEO_UNSUPPORTED_BROWSER]: {
             predicate: (e) => {
                 let { voiceChannelId: t } = e;
-                return null != t && eh.Z.hasVideo(t) && !er.Z.supports(eU.AN.VIDEO) && !eY(eL.kVF.VIDEO_UNSUPPORTED_BROWSER);
+                return null != t && eN.Z.hasVideo(t) && !er.Z.supports(eU.AN.VIDEO) && !eY(eL.kVF.VIDEO_UNSUPPORTED_BROWSER);
             }
         },
         [eL.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK]: {
             predicate: (e) => {
                 let { currentUser: t } = e;
-                return eO.ZP.canRedeemPremiumPerks(t) && ei.Z.getDetectedOffPlatformPremiumPerks().length > 0;
+                return ex.ZP.canRedeemPremiumPerks(t) && ei.Z.getDetectedOffPlatformPremiumPerks().length > 0;
             },
             metadata: () => ei.Z.getDetectedOffPlatformPremiumPerks()[0]
         },
@@ -305,7 +305,7 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
         [eL.kVF.SERVER_USAGE_SURVEY]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e;
-                return null != t && O.Z.getCurrentConfig({ location: 'notice_store' }).showSurvey && !eY(eL.kVF.SERVER_USAGE_SURVEY);
+                return null != t && x.Z.getCurrentConfig({ location: 'notice_store' }).showSurvey && !eY(eL.kVF.SERVER_USAGE_SURVEY);
             },
             metadata: (e) => {
                 let { selectedGuildId: t, currentUser: n } = e;
@@ -353,25 +353,25 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
             metadata: () => ({ dismissUntil: o()().add(5, 'days').toDate() })
         },
         [eL.kVF.CONNECT_PLAYSTATION]: { predicate: () => en.Z.isSuggestedAccountType(eL.ABu.PLAYSTATION) && null == en.Z.getAccount(null, eL.ABu.PLAYSTATION) && !eY(eL.kVF.CONNECT_PLAYSTATION) },
-        [eL.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: { predicate: () => eg.Z.getAlmostExpiringTrialOffers([eD.Si.TIER_2]).length > 0 && !eY(eL.kVF.PREMIUM_TIER_2_TRIAL_ENDING) },
-        [eL.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: { predicate: () => eg.Z.getAlmostExpiringTrialOffers([eD.Si.TIER_0]).length > 0 && !eY(eL.kVF.PREMIUM_TIER_0_TRIAL_ENDING) },
+        [eL.kVF.PREMIUM_TIER_2_TRIAL_ENDING]: { predicate: () => eg.Z.getAlmostExpiringTrialOffers([eb.Si.TIER_2]).length > 0 && !eY(eL.kVF.PREMIUM_TIER_2_TRIAL_ENDING) },
+        [eL.kVF.PREMIUM_TIER_0_TRIAL_ENDING]: { predicate: () => eg.Z.getAlmostExpiringTrialOffers([eb.Si.TIER_0]).length > 0 && !eY(eL.kVF.PREMIUM_TIER_0_TRIAL_ENDING) },
         [eL.kVF.PREMIUM_UNCANCEL]: {
             predicate: (e) => {
                 let { premiumSubscription: t, currentUser: n } = e,
                     i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0,
-                    s = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eL.O0b.CANCELED && 1 >= o()().diff(o()(t.canceledAt), 'days'),
-                    a = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
-                    r = null != t && t.status === eL.O0b.CANCELED && !a && i <= 7 && i >= 0 && (0, eO.M5)(n, eD.p9.TIER_2) && !s && !n.hasFreePremium() && !t.isPurchasedExternally;
+                    a = (null == t ? void 0 : t.canceledAt) != null && (null == t ? void 0 : t.status) === eL.O0b.CANCELED && 1 >= o()().diff(o()(t.canceledAt), 'days'),
+                    s = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
+                    r = null != t && t.status === eL.O0b.CANCELED && !s && i <= 7 && i >= 0 && (0, ex.M5)(n, eb.p9.TIER_2) && !a && !n.hasFreePremium() && !t.isPurchasedExternally;
                 return !eY(eL.kVF.PREMIUM_UNCANCEL) && r;
             },
             metadata: (e) => {
                 var t;
                 let { premiumSubscription: n } = e,
                     i = null != n ? o()(n.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0,
-                    s = null != n ? (null === (t = (0, eO.Af)(n)) || void 0 === t ? void 0 : t.planId) : null;
+                    a = null != n ? (null === (t = (0, ex.Af)(n)) || void 0 === t ? void 0 : t.planId) : null;
                 return {
                     daysLeft: i,
-                    premiumType: null != s ? eO.ZP.getPremiumType(s) : null,
+                    premiumType: null != a ? ex.ZP.getPremiumType(a) : null,
                     premiumSubscription: n
                 };
             }
@@ -380,12 +380,12 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
             predicate: (e) => {
                 let { premiumSubscription: t, currentUser: n } = e,
                     i = null != t ? o()(t.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0,
-                    s = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf('day'), 'days') : 0,
-                    a = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
-                    r = eS.Z.applicationIdsFetched.has(eD.RQ),
-                    l = eS.Z.getForApplication(eD.RQ),
-                    c = null != t ? (0, eO.Af)(t) : null,
-                    u = null != c ? eO.ZP.getSkuIdForPlan(c.planId) : null,
+                    a = null != t ? o()(t.currentPeriodEnd).diff(o()(t.currentPeriodStart).startOf('day'), 'days') : 0,
+                    s = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
+                    r = eS.Z.applicationIdsFetched.has(eb.RQ),
+                    l = eS.Z.getForApplication(eb.RQ),
+                    c = null != t ? (0, ex.Af)(t) : null,
+                    u = null != c ? ex.ZP.getSkuIdForPlan(c.planId) : null,
                     d =
                         null != l &&
                         null != c &&
@@ -393,17 +393,17 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
                             let { skuId: t, consumed: n } = e;
                             return !n && t === u;
                         }).length > 0,
-                    _ = null != t && i <= (s > 14 ? 7 : 2) && i >= 0 && t.status !== eL.O0b.PAST_DUE && !a && r && !d && null === t.paymentSourceId && !n.hasFreePremium() && !t.isPurchasedExternally;
+                    _ = null != t && i <= (a > 14 ? 7 : 2) && i >= 0 && t.status !== eL.O0b.PAST_DUE && !s && r && !d && null === t.paymentSourceId && !n.hasFreePremium() && !t.isPurchasedExternally;
                 return !eY(eL.kVF.PREMIUM_MISSING_PAYMENT) && _;
             },
             metadata: (e) => {
                 var t;
                 let { premiumSubscription: n } = e,
                     i = null != n ? o()(n.currentPeriodEnd).diff(o()().startOf('day'), 'days') : 0,
-                    s = null != n ? (null === (t = (0, eO.Af)(n)) || void 0 === t ? void 0 : t.planId) : null;
+                    a = null != n ? (null === (t = (0, ex.Af)(n)) || void 0 === t ? void 0 : t.planId) : null;
                 return {
                     daysLeft: i,
-                    premiumType: null != s ? eO.ZP.getPremiumType(s) : null,
+                    premiumType: null != a ? ex.ZP.getPremiumType(a) : null,
                     premiumSubscription: n
                 };
             }
@@ -411,10 +411,10 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
         [eL.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT]: {
             predicate: (e) => {
                 let { premiumSubscription: t, currentUser: n } = e,
-                    i = null != t && null != t.paymentSourceId ? ef.Z.getPaymentSource(t.paymentSourceId) : null,
-                    s = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
-                    a = null != t && t.status === eL.O0b.PAST_DUE && !s && null != i && i.invalid && !n.hasFreePremium() && !t.isPurchasedExternally;
-                return !eY(eL.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT) && a;
+                    i = null != t && null != t.paymentSourceId ? eC.Z.getPaymentSource(t.paymentSourceId) : null,
+                    a = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
+                    s = null != t && t.status === eL.O0b.PAST_DUE && !a && null != i && i.invalid && !n.hasFreePremium() && !t.isPurchasedExternally;
+                return !eY(eL.kVF.PREMIUM_PAST_DUE_INVALID_PAYMENT) && s;
             },
             metadata: (e) => {
                 let { premiumSubscription: t } = e;
@@ -425,8 +425,8 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
             predicate: (e) => {
                 let { premiumSubscription: t, currentUser: n } = e,
                     i = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
-                    s = null != t && t.status === eL.O0b.PAST_DUE && !i && null === t.paymentSourceId && !n.hasFreePremium() && !t.isPurchasedExternally;
-                return !eY(eL.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT) && s;
+                    a = null != t && t.status === eL.O0b.PAST_DUE && !i && null === t.paymentSourceId && !n.hasFreePremium() && !t.isPurchasedExternally;
+                return !eY(eL.kVF.PREMIUM_PAST_DUE_MISSING_PAYMENT) && a;
             },
             metadata: (e) => {
                 let { premiumSubscription: t } = e;
@@ -466,9 +466,9 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
             predicate: (e) => {
                 let { premiumSubscription: t, currentUser: n } = e,
                     i = null != t && o()(t.currentPeriodEnd).isBefore(o()()),
-                    s = null != t && null != t.paymentSourceId ? ef.Z.getPaymentSource(t.paymentSourceId) : null,
-                    a = null != s && ej.Uk.has(s.type),
-                    r = null != t && t.status === eL.O0b.PAST_DUE && !i && a && !n.hasFreePremium() && !t.isPurchasedExternally;
+                    a = null != t && null != t.paymentSourceId ? eC.Z.getPaymentSource(t.paymentSourceId) : null,
+                    s = null != a && ej.Uk.has(a.type),
+                    r = null != t && t.status === eL.O0b.PAST_DUE && !i && s && !n.hasFreePremium() && !t.isPurchasedExternally;
                 return !eY(eL.kVF.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT) && r;
             },
             metadata: (e) => {
@@ -482,32 +482,32 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
                     let e = t.status === eL.O0b.PAST_DUE ? o()().diff(t.currentPeriodStart, 'days') : 0;
                     return {
                         daysPastDue: e,
-                        dismissUntil: (0, eO.lY)(t).expiresDate.toDate()
+                        dismissUntil: (0, ex.lY)(t).expiresDate.toDate()
                     };
                 }
             }
         },
         [eL.kVF.DROPS_GO_LIVE_BANNER]: {
-            predicate: () => !eY(eL.kVF.DROPS_GO_LIVE_BANNER) && (0, C.un)(d.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, C.un)(d.z.QUEST_2_COMPLETION_TOOLTIP) && (0, p.Tn)(eP.X2.FORTNITE),
+            predicate: () => !eY(eL.kVF.DROPS_GO_LIVE_BANNER) && (0, f.un)(d.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(d.z.QUEST_2_COMPLETION_TOOLTIP) && (0, p.Tn)(eP.X2.FORTNITE),
             metadata: () => ({ partnerGame: eP.X2.FORTNITE })
         },
         [eL.kVF.DROPS_PROGRESS_INTERRUPTION]: {
-            predicate: () => f.Z.isCurrentQuestInterrupted && null != f.Z.currentDropQuestGameTitle,
+            predicate: () => C.Z.isCurrentQuestInterrupted && null != C.Z.currentDropQuestGameTitle,
             metadata: () => ({
-                gameTitle: f.Z.currentDropQuestGameTitle,
+                gameTitle: C.Z.currentDropQuestGameTitle,
                 reloadCallback: () => window.location.reload(!0)
             })
         },
-        [eL.kVF.POMELO_ELIGIBLE]: { predicate: () => (0, j.e)() && !eY(eL.kVF.POMELO_ELIGIBLE) && !(0, b.ov)() },
+        [eL.kVF.POMELO_ELIGIBLE]: { predicate: () => (0, j.e)() && !eY(eL.kVF.POMELO_ELIGIBLE) && !(0, D.ov)() },
         [eL.kVF.DROPS_ENDED_INCOMPLETE]: {
-            predicate: () => !eY(eL.kVF.DROPS_ENDED_INCOMPLETE) && (0, C.un)(d.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, C.un)(d.z.QUEST_2_COMPLETION_TOOLTIP) && (0, p.FL)(eP.X2.FORTNITE),
+            predicate: () => !eY(eL.kVF.DROPS_ENDED_INCOMPLETE) && (0, f.un)(d.z.QUEST_2_ENROLLMENT_TOOLTIP) && !(0, f.un)(d.z.QUEST_2_COMPLETION_TOOLTIP) && (0, p.FL)(eP.X2.FORTNITE),
             metadata: () => ({ partnerGame: eP.X2.FORTNITE })
         },
-        [eL.kVF.UU_MIGRATION]: { predicate: () => (0, j.e)() && !eY(eL.kVF.UU_MIGRATION) && (0, b.ov)() },
+        [eL.kVF.UU_MIGRATION]: { predicate: () => (0, j.e)() && !eY(eL.kVF.UU_MIGRATION) && (0, D.ov)() },
         [eL.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e,
-                    n = null != t ? ea.Z.getGuild(t) : null;
+                    n = null != t ? es.Z.getGuild(t) : null;
                 return (null != t && null != L.Z.getMentionRaidDetected(t) && (null == n ? void 0 : n.hasFeature(eL.oNc.COMMUNITY)) && !eY(eL.kVF.AUTO_MODERATION_MENTION_RAID_DETECTION)) || !1;
             },
             metadata: (e) => {
@@ -520,7 +520,7 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
                 return n;
             }
         },
-        [eL.kVF.ACTIVATE_SERVER_SUBSCRIPTION]: { predicate: () => !eY(eL.kVF.ACTIVATE_SERVER_SUBSCRIPTION) && 0 !== h.Z.getEligibleGuildsForNagActivate().length && (0, N.Lm)() },
+        [eL.kVF.ACTIVATE_SERVER_SUBSCRIPTION]: { predicate: () => !eY(eL.kVF.ACTIVATE_SERVER_SUBSCRIPTION) && 0 !== N.Z.getEligibleGuildsForNagActivate().length && (0, h.Lm)() },
         [eL.kVF.GUILD_ONBOARDING_UPSELL_NAGBAR]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e;
@@ -539,7 +539,7 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
                 if (null == e) return !1;
                 let t = (0, R.V9)(e),
                     n = W.Z.getStreamHeartbeatFailure(t);
-                return null != n && Date.now() - n.firstFailedAt >= eb.Ot;
+                return null != n && Date.now() - n.firstFailedAt >= eD.Ot;
             },
             metadata: () => {
                 let e = X.Z.getCurrentUserActiveStream();
@@ -550,8 +550,8 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
             predicate: (e) => {
                 var t;
                 let { currentUser: n } = e,
-                    i = null !== (t = ef.Z.paymentSources) && void 0 !== t ? t : {};
-                return y.Z.getIsTargeted() && !(0, eO.I5)(n) && 0 !== Object.keys(i).length && (0, F.Y)();
+                    i = null !== (t = eC.Z.paymentSources) && void 0 !== t ? t : {};
+                return y.Z.getIsTargeted() && !(0, ex.I5)(n) && 0 !== Object.keys(i).length && (0, G.Y)();
             }
         },
         [eL.kVF.CASH_APP_PAY_AWARENESS_NAGBAR]: {
@@ -564,20 +564,20 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
 function eQ() {
     if (!A.Z.isConnected()) return !1;
     ew = null;
-    let e = eN.default.getCurrentUser();
+    let e = eh.default.getCurrentUser();
     if (null == e) return !1;
     let t = ep.ZP.getPremiumSubscription(),
-        n = eC.Z.isLocalizedPromoEnabled,
+        n = ef.Z.isLocalizedPromoEnabled,
         i = e_.Z.getGuildId(),
-        s = ed.Z.getVoiceChannelId(),
-        a = null != s ? eh.Z.getVoiceStateForChannel(s) : null;
+        a = ed.Z.getVoiceChannelId(),
+        s = null != a ? eN.Z.getVoiceStateForChannel(a) : null;
     for (let o of eZ.a ? eK : eW) {
         if (null != ez[o]) {
             if (
                 ez[o].predicate({
                     selectedGuildId: i,
-                    voiceChannelId: s,
-                    voiceState: a,
+                    voiceChannelId: a,
+                    voiceState: s,
                     currentUser: e,
                     premiumSubscription: t,
                     isLocalizedPromoEnabled: n
@@ -593,7 +593,7 @@ function eQ() {
                               selectedGuildId: i
                           });
                 ew = {
-                    ...eG,
+                    ...eF,
                     type: o,
                     metadata: n
                 };
@@ -604,11 +604,11 @@ function eQ() {
     null != ew && eY(ew.type) && (ew = null);
 }
 function eq() {
-    return !eI.Z.enabled && delete eF[eL.kVF.STREAMER_MODE], eQ();
+    return !eI.Z.enabled && delete eG[eL.kVF.STREAMER_MODE], eQ();
 }
 class eX extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([em.Z, ec.Z, ei.Z, e_.Z, V.Z, eg.Z, $.Z, en.Z, q.Z, M.Z, W.Z, X.Z], eQ), this.waitFor(eN.default, eE.Z, ea.Z, es.ZP, eu.Z, er.Z, eI.Z, g.Z, e_.Z, eT.Z, z.Z, S.ZP, ec.Z, ex.Z, eM.Z, eA.Z, el.Z, ep.ZP, ev.Z, ei.Z, ef.Z, eo.Z, V.Z, eS.Z, eg.Z, en.Z, D.Z, f.Z, h.Z, Y.Z, W.Z, X.Z);
+        this.syncWith([em.Z, ec.Z, ei.Z, e_.Z, V.Z, eg.Z, $.Z, en.Z, q.Z, M.Z, W.Z, X.Z], eQ), this.waitFor(eh.default, eE.Z, es.Z, ea.ZP, eu.Z, er.Z, eI.Z, g.Z, e_.Z, eT.Z, z.Z, S.ZP, ec.Z, eO.Z, eM.Z, eA.Z, el.Z, ep.ZP, ev.Z, ei.Z, eC.Z, eo.Z, V.Z, eS.Z, eg.Z, en.Z, b.Z, C.Z, N.Z, Y.Z, W.Z, X.Z);
     }
     hasNotice() {
         return null != ew && null != ew.type;
@@ -621,14 +621,14 @@ class eX extends (i = c.ZP.Store) {
     }
 }
 (r = 'NoticeStore'),
-    (a = 'displayName') in (s = eX)
-        ? Object.defineProperty(s, a, {
+    (s = 'displayName') in (a = eX)
+        ? Object.defineProperty(a, s, {
               value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[a] = r),
+        : (a[s] = r),
     (t.Z = new eX(E.Z, {
         CURRENT_USER_UPDATE: eQ,
         MEDIA_ENGINE_SET_AUDIO_ENABLED: eQ,
@@ -683,10 +683,10 @@ class eX extends (i = c.ZP.Store) {
         STREAMER_MODE_UPDATE: eq,
         RUNNING_STREAMER_TOOLS_CHANGE: eq,
         DISPATCH_APPLICATION_ERROR: function () {
-            return delete eF[eL.kVF.DISPATCH_ERROR], eQ();
+            return delete eG[eL.kVF.DISPATCH_ERROR], eQ();
         },
         DISPATCH_APPLICATION_LAUNCH_SETUP_START: function () {
-            return delete eF[eL.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS], eQ();
+            return delete eG[eL.kVF.DISPATCH_INSTALL_SCRIPT_PROGRESS], eQ();
         },
         DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: function () {
             return eQ();
@@ -705,7 +705,7 @@ class eX extends (i = c.ZP.Store) {
             return eH(t), eQ();
         },
         LOGOUT: function () {
-            (eF = {}), (ew = null);
+            (eG = {}), (ew = null);
         },
         SUBSCRIPTION_PLANS_FETCH_SUCCESS: eQ,
         AUTO_MODERATION_MENTION_RAID_DETECTION: eQ,

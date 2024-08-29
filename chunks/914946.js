@@ -12,7 +12,7 @@ n.d(t, {
         return G;
     },
     Xb: function () {
-        return k;
+        return w;
     },
     YK: function () {
         return q;
@@ -21,7 +21,7 @@ n.d(t, {
         return $;
     },
     aE: function () {
-        return w;
+        return k;
     },
     bu: function () {
         return J;
@@ -79,8 +79,8 @@ var i,
     N = n(70956),
     A = n(5192),
     v = n(226951),
-    L = n(996106),
-    Z = n(863141),
+    Z = n(996106),
+    L = n(863141),
     O = n(186901),
     R = n(981631);
 let x = null !== (i = a.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
@@ -126,8 +126,8 @@ function G(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let a = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(k) : [],
-                s = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map((t) => w(i, e.id, t));
+            let a = (!e.isNSFW() || (null === (n = S.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [],
+                s = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map((t) => k(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -143,7 +143,7 @@ function G(e, t) {
         })
     );
 }
-function k(e) {
+function w(e) {
     let t = u.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(y),
         n = I.Z.getChannel(e.channel_id),
         i = null != e.author ? (0, _.ij)(new m.Z(e.author), n) : void 0;
@@ -168,7 +168,7 @@ function k(e) {
         type: e.type
     };
 }
-function w(e, t, n) {
+function k(e, t, n) {
     let { mute: i, deaf: a, selfMute: s, selfDeaf: r, suppress: l, userId: o } = n,
         c = S.default.getUser(o);
     if (null == c) throw Error('Invalid user id: '.concat(o));
@@ -184,14 +184,14 @@ function w(e, t, n) {
             self_deaf: r,
             suppress: l
         },
-        user: (0, Z.Z)(c)
+        user: (0, L.Z)(c)
     };
 }
 function B(e, t, n, i) {
     let a = S.default.getUser(t);
     return {
         type: e,
-        user: null != a ? (0, Z.Z)(a) : null,
+        user: null != a ? (0, L.Z)(a) : null,
         presence: {
             status: f.Z.getStatus(t),
             activity: null != i ? f.Z.getApplicationActivity(t, i) : f.Z.getPrimaryActivity(t)
@@ -250,8 +250,8 @@ function z(e, t, n) {
                 if ('string' == typeof n) {
                     if (e.transport === O.He.POST_MESSAGE) {
                         let e = (0, d.Z)(t);
-                        if (null == e || !U(n, [e])) throw new L.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
-                    } else if (!U(n, a)) throw new L.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                        if (null == e || !U(n, [e])) throw new Z.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                    } else if (!U(n, a)) throw new Z.Z({ closeCode: R.$VG.INVALID_ORIGIN }, 'Invalid Origin');
                 }
                 e.application = {
                     id: s,
@@ -262,7 +262,7 @@ function z(e, t, n) {
                 };
             },
             () => {
-                throw new L.Z({ closeCode: R.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+                throw new Z.Z({ closeCode: R.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
             }
         );
 }
@@ -325,9 +325,9 @@ function X(e, t) {
     };
 }
 function J(e) {
-    if (e !== O.He.POST_MESSAGE) throw new L.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== O.He.POST_MESSAGE) throw new Z.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function $(e) {
-    if (null == e.id) throw new L.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'Invalid application');
+    if (null == e.id) throw new Z.Z({ errorCode: R.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

@@ -3,15 +3,15 @@ n.d(t, {
         return o;
     }
 });
-var r = n(470079),
-    a = n(626135),
+var a = n(470079),
+    r = n(626135),
     s = n(981631);
 let o = (e, t) => {
-    let n = r.useCallback(
-        (n, r) =>
-            a.default.track(s.rMx.SLIDE_CAROUSEL_ITEM_VIEWED, {
+    let n = a.useCallback(
+        (n, a) =>
+            r.default.track(s.rMx.SLIDE_CAROUSEL_ITEM_VIEWED, {
                 carousel_id: e,
-                slide_id: null != r ? r : n.toString(),
+                slide_id: null != a ? a : n.toString(),
                 slide_index: n,
                 location_stack: t
             }),
@@ -19,11 +19,11 @@ let o = (e, t) => {
     );
     return {
         trackSlideView: n,
-        trackPagination: r.useCallback(
-            (n, r, o, i) =>
-                a.default.track(s.rMx.SLIDE_CAROUSEL_PAGINATION_CLICKED, {
+        trackPagination: a.useCallback(
+            (n, a, o, i) =>
+                r.default.track(s.rMx.SLIDE_CAROUSEL_PAGINATION_CLICKED, {
                     carousel_id: e,
-                    current_slide_index: r,
+                    current_slide_index: a,
                     next_slide_index: n,
                     current_slide_id: i,
                     next_slide_id: o,

@@ -7,8 +7,8 @@ n.d(t, {
     n(653041);
 var i = n(735250);
 n(470079);
-var s = n(512722),
-    a = n.n(s),
+var a = n(512722),
+    s = n.n(a),
     r = n(442837),
     l = n(955415),
     o = n(131704),
@@ -21,11 +21,11 @@ var s = n(512722),
     m = n(29062);
 function T(e) {
     let t,
-        { invite: n, author: s, currentUserId: T, onTransitionToInviteChannel: N, onAcceptInstantInvite: h } = e,
-        C = T === s.id,
-        f = n.state === E.r2o.ACCEPTING,
+        { invite: n, author: a, currentUserId: T, onTransitionToInviteChannel: h, onAcceptInstantInvite: N } = e,
+        f = T === a.id,
+        C = n.state === E.r2o.ACCEPTING,
         p = (0, r.e7)([c.Z], () => (null != n.channel ? c.Z.getChannel(n.channel.id) : null), [n]);
-    a()(null == p || p.isPrivate(), 'must be a private channel');
+    s()(null == p || p.isPrivate(), 'must be a private channel');
     let g = null != p;
     if (null == p) {
         if (null == n.channel) return (0, i.jsx)(_.Z, {});
@@ -47,16 +47,16 @@ function T(e) {
                       .map((e) => e.username)
                       .join(', ')
                 : I.Z.Messages.UNNAMED);
-    let A = g ? N : h,
+    let A = g ? h : N,
         R = I.Z.Messages.JOIN_GUILD,
-        O = l.Z.Button.Colors.GREEN;
-    g && ((R = I.Z.Messages.JOINED_GUILD), (O = l.Z.Button.Colors.PRIMARY));
-    let x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+        x = l.Z.Button.Colors.GREEN;
+    g && ((R = I.Z.Messages.JOINED_GUILD), (x = l.Z.Button.Colors.PRIMARY));
+    let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
     return (
-        C && (x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM),
+        f && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM),
         (0, i.jsxs)(l.Z, {
             children: [
-                (0, i.jsx)(l.Z.Header, { text: x }),
+                (0, i.jsx)(l.Z.Header, { text: O }),
                 (0, i.jsxs)(l.Z.Body, {
                     children: [
                         (0, i.jsxs)('div', {
@@ -75,9 +75,9 @@ function T(e) {
                         }),
                         (0, i.jsx)(l.Z.Button, {
                             onClick: A,
-                            submitting: f,
+                            submitting: C,
                             isDisabled: g,
-                            color: O,
+                            color: x,
                             children: R
                         })
                     ]

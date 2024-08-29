@@ -1,10 +1,10 @@
-var r = n(735250),
-    a = n(470079),
+var a = n(735250),
+    r = n(470079),
     s = n(481060),
     o = n(727637),
     i = n(906732),
-    c = n(241553),
-    l = n(333867),
+    l = n(241553),
+    c = n(333867),
     d = n(884697),
     u = n(231338),
     f = n(689938),
@@ -74,16 +74,16 @@ let g = {
 t.Z = (e) => {
     let { product: t, returnRef: n, onSuccess: C, tooltipDelay: m, isGiftEasterEggEnabled: _, disableCustomColor: b = !1 } = e,
         { analyticsLocations: h } = (0, i.ZP)(),
-        x = a.useRef(null),
+        x = r.useRef(null),
         I = (0, o.Z)(x),
         E = b ? u.BR.DARK : u.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
-        : (0, r.jsx)(s.Tooltip, {
+        : (0, a.jsx)(s.Tooltip, {
               text: f.Z.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
               delay: m,
               children: (e) =>
-                  (0, r.jsx)(s.Button, {
+                  (0, a.jsx)(s.Button, {
                       ...e,
                       buttonRef: x,
                       className: p.giftButton,
@@ -94,7 +94,7 @@ t.Z = (e) => {
                       'aria-label': f.Z.Messages.PREMIUM_GIFTING_BUTTON,
                       onClick: (e) => {
                           e.stopPropagation(),
-                              (0, l.Z)({
+                              (0, c.Z)({
                                   skuId: t.skuId,
                                   isGift: !0,
                                   analyticsLocations: h,
@@ -108,13 +108,13 @@ t.Z = (e) => {
                               });
                       },
                       children: _
-                          ? (0, r.jsx)(c.e, {
+                          ? (0, a.jsx)(l.e, {
                                 hovered: I,
                                 isContentDismissed: !0,
                                 themeOverride: E,
                                 boxColors: g
                             })
-                          : (0, r.jsx)(s.GiftIcon, {
+                          : (0, a.jsx)(s.GiftIcon, {
                                 size: 'md',
                                 color: 'currentColor'
                             })

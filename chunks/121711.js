@@ -22,20 +22,20 @@ t.Z = function (e) {
     let {} = e,
         { tabs: t, selectedTab: n, onSelectTab: N } = (0, T.z)(),
         { onScroll: A, scrollPosition: v } = (0, c.M)(),
-        L = I.Z.getState().getUtmCurrentContext();
+        Z = I.Z.getState().getUtmCurrentContext();
     a.useEffect(() => {
         (0, l.h)({
             name: s.ImpressionNames.QUEST_HOME,
             type: s.ImpressionTypes.VIEW,
             properties: {
-                utm_source_current: L.utmSourceCurrent,
-                utm_medium_current: L.utmMediumCurrent,
-                utm_campaign_current: L.utmCampaignCurrent,
-                utm_content_current: L.utmContentCurrent
+                utm_source_current: Z.utmSourceCurrent,
+                utm_medium_current: Z.utmMediumCurrent,
+                utm_campaign_current: Z.utmCampaignCurrent,
+                utm_content_current: Z.utmContentCurrent
             }
         });
     }, []);
-    let Z = a.useCallback(() => {
+    let L = a.useCallback(() => {
         window.open(E.Z.getArticleURL(f.BhN.QUESTS_LEARN_MORE));
     }, []);
     (0, o.Tt)({ location: S.Z.Messages.QUESTS });
@@ -61,7 +61,7 @@ t.Z = function (e) {
                 onScroll: A,
                 button: (0, i.jsx)(d.u, {
                     text: S.Z.Messages.LEARN_MORE,
-                    onClick: Z
+                    onClick: L
                 }),
                 bannerClassName: C.bannerContainer,
                 bannerBackground: (0, i.jsx)('div', {

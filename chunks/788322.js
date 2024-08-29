@@ -1,6 +1,6 @@
 n.d(t, {
     Y: function () {
-        return L;
+        return Z;
     }
 }),
     n(47120);
@@ -27,13 +27,13 @@ var i = n(735250),
     N = n(607921),
     A = n(129512),
     v = n(330065);
-let L = () => (0, i.jsx)('div', { className: N.placeholder });
+let Z = () => (0, i.jsx)('div', { className: N.placeholder });
 t.Z = (e) => {
     var t;
-    let { guild: s, theme: L, onView: Z, onTagClick: O } = e,
+    let { guild: s, theme: Z, onView: L, onTagClick: O } = e,
         { id: R, discoverySplash: x, icon: b, name: P, description: M, presenceCount: D, memberCount: y, keywords: j } = s,
         [U, G] = a.useState(!1),
-        [k, w] = a.useState(!1),
+        [w, k] = a.useState(!1),
         { analyticsLocations: B } = (0, c.ZP)(),
         H = m.ZP.getGuildDiscoverySplashURL({
             id: R,
@@ -50,7 +50,7 @@ t.Z = (e) => {
                           case S.BRd.LIGHT:
                               return v;
                       }
-                  })(L),
+                  })(Z),
         F =
             null !==
                 (t = m.ZP.getGuildIconURL({
@@ -74,11 +74,11 @@ t.Z = (e) => {
                     });
                     return;
                 }
-                w(!0);
+                k(!0);
                 try {
-                    null != Z && (await Z(s.id));
+                    null != L && (await L(s.id));
                 } finally {
-                    w(!1);
+                    k(!1);
                 }
             }
         };
@@ -90,7 +90,7 @@ t.Z = (e) => {
             (0, i.jsxs)('div', {
                 className: N.card,
                 children: [
-                    k
+                    w
                         ? (0, i.jsx)(l.Spinner, {
                               type: l.Spinner.Type.PULSING_ELLIPSIS,
                               className: N.spinner
@@ -99,7 +99,7 @@ t.Z = (e) => {
                     (0, i.jsxs)(l.Clickable, {
                         className: r()(N.container, {
                             [N.hover]: U,
-                            [N.submitting]: k
+                            [N.submitting]: w
                         }),
                         onClick: Y,
                         onContextMenu: (e) => {

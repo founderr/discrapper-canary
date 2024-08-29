@@ -8,14 +8,14 @@ var a = n(120356),
     c = n(743612),
     d = n(735825),
     _ = n(817199),
-    E = n(721239),
-    u = n(557634),
+    u = n(721239),
+    E = n(557634),
     T = n(992429);
 t.Z = (e) => {
     var t;
     let n,
         a,
-        { title: I, titleClassName: R, buttonClassName: C, perkImage: g, isCarousel: N, onCtaClick: p, perkComponent: A, subtitle: m = '', descriptionCta: f = '', cardVariant: S, subtitleClassName: h } = e,
+        { title: I, titleClassName: R, buttonClassName: C, perkImage: g, isCarousel: N, onCtaClick: p, perkComponent: m, subtitle: A = '', descriptionCta: f = '', cardVariant: S, subtitleClassName: h } = e,
         M = (0, o._)(S),
         x = (0, l.yQ)(),
         O = (null == x ? void 0 : x.nitroTenureStatus) === d.EB.REDEEMABLE;
@@ -24,10 +24,10 @@ t.Z = (e) => {
             (n = T), (a = 'unlocked icon');
             break;
         case d.EB.PENDING:
-            (n = E), (a = 'locked icon');
+            (n = u), (a = 'locked icon');
             break;
         case d.EB.REDEEMED:
-            (n = u), (a = 'thumbs up icon');
+            (n = E), (a = 'thumbs up icon');
             break;
         default:
             (n = void 0), (a = '');
@@ -40,7 +40,7 @@ t.Z = (e) => {
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
                 cardVariantStyleInfo: M,
                 titleClassName: R,
-                subtitle: m,
+                subtitle: A,
                 subtitleClassName: h
             }),
             null != g &&
@@ -52,14 +52,14 @@ t.Z = (e) => {
                         [_.carouselCardImage]: N
                     })
                 }),
-            null != A &&
+            null != m &&
                 (0, s.jsx)(s.Fragment, {
                     children: (0, s.jsxs)('div', {
                         className: _.cardIllustrationNoHover,
                         children: [
                             (0, s.jsx)('div', {
                                 className: _.cardComponent,
-                                children: A
+                                children: m
                             }),
                             0 !== f.length &&
                                 null != p &&

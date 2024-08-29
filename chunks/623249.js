@@ -31,8 +31,8 @@ function C(e) {
     let { questId: t, errorHints: n, transitionState: s, onClose: C } = e,
         A = (0, E.B4)(t);
     null == A && C();
-    let [v, L] = (0, a.useState)(n),
-        Z = (0, E.KX)(),
+    let [v, Z] = (0, a.useState)(n),
+        L = (0, E.KX)(),
         O = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         R = (0, g.g2)({
             useReducedMotion: O,
@@ -53,7 +53,7 @@ function C(e) {
                     });
             },
             afterRequest: (e) => {
-                R.stopAnimation(), L(e);
+                R.stopAnimation(), Z(e);
             }
         });
     return (0, i.jsxs)(c.ModalRoot, {
@@ -91,7 +91,7 @@ function C(e) {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         className: f.upperBodyText,
-                        children: Z.message
+                        children: L.message
                     })
                 ]
             }),

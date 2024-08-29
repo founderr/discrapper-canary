@@ -6,10 +6,10 @@ n.d(t, {
         return I;
     },
     VM: function () {
-        return E;
+        return u;
     },
     gU: function () {
-        return u;
+        return E;
     },
     j_: function () {
         return R;
@@ -44,13 +44,13 @@ function _() {
         t = (0, s.e7)([a.default], () => a.default.getCurrentUser());
     return null == e || null == t ? null : (0, c._w)(t.id, e);
 }
-function E() {
+function u() {
     let e = (0, o.Z)(),
         t = d(c.ne.ACTIVE),
         n = e ? c.AG : c.i0;
     return t.length >= n;
 }
-function u() {
+function E() {
     let e = (0, s.e7)([a.default], () => a.default.getCurrentUser()),
         t = (0, s.e7)([r.Z], () => r.Z.getLinkedUsers());
     return null == e ? 0 : Object.values(t).filter((t) => null != t && t.link_status === c.ne.PENDING && e.id !== t.requestor_id).length;

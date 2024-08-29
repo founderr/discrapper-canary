@@ -27,8 +27,8 @@ var i = n(735250),
     N = n(243778),
     A = n(922409),
     v = n(899740),
-    L = n(28476),
-    Z = n(880257),
+    Z = n(28476),
+    L = n(880257),
     O = n(631885),
     R = n(457396),
     x = n(51596),
@@ -40,8 +40,8 @@ var i = n(735250),
     j = n(699516),
     U = n(923834),
     G = n(55563),
-    k = n(774343),
-    w = n(517802),
+    w = n(774343),
+    k = n(517802),
     B = n(436088),
     H = n(814225),
     V = n(515753),
@@ -113,7 +113,7 @@ let q = (e) => {
         return (0, i.jsx)(V.Qj, {
             selected: t,
             route: n,
-            icon: (0, h.makeIconCompat)(w.Z),
+            icon: (0, h.makeIconCompat)(k.Z),
             iconClassName: r()(K.activitiesBirthdayIcon, { [K.activitiesBirthdayIconLight]: 'light' === c }),
             text: z.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_TAB_TITLE,
             locationState: a,
@@ -136,7 +136,7 @@ let q = (e) => {
         let { selected: t } = e,
             n = (0, o.JA)('messageRequests'),
             { channelId: a } = (0, A._)();
-        if (!(0, L.a)()) return null;
+        if (!(0, Z.a)()) return null;
         let s = null == a ? void 0 : () => E.Z.preload(W.ME, a);
         return (0, i.jsx)(V.Qj, {
             selected: t,
@@ -153,7 +153,7 @@ let q = (e) => {
             n = z.Z.Messages.FAMILY_CENTER_SIDEBAR_TITLE,
             s = (0, o.JA)('family-center'),
             r = D.Ex.useSetting(),
-            l = (0, Z.Z)(),
+            l = (0, L.Z)(),
             [c, d] = a.useState(!0);
         return r && l
             ? (0, i.jsx)(V.Qj, {
@@ -313,7 +313,7 @@ let ea = (e) => {
     });
 };
 function es() {
-    let e = (0, d.e7)([k.Z], () => k.Z.getHomeLink()),
+    let e = (0, d.e7)([w.Z], () => w.Z.getHomeLink()),
         t = (0, d.e7)(
             [G.Z],
             () => {

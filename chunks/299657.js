@@ -8,8 +8,8 @@ var s = n(735250),
     c = n(570140),
     d = n(355467),
     _ = n(179360),
-    E = n(821849),
-    u = n(497321),
+    u = n(821849),
+    E = n(497321),
     T = n(100527),
     I = n(906732),
     R = n(211242),
@@ -17,8 +17,8 @@ var s = n(735250),
     g = n(89057),
     N = n(433811),
     p = n(214852),
-    A = n(246946),
-    m = n(594174),
+    m = n(246946),
+    A = n(594174),
     f = n(78839),
     S = n(626135),
     h = n(111361),
@@ -27,8 +27,8 @@ var s = n(735250),
     O = n(91802),
     b = n(104494),
     P = n(639119),
-    L = n(2359),
-    v = n(132547),
+    v = n(2359),
+    L = n(132547),
     Z = n(474936),
     D = n(981631),
     B = n(874296);
@@ -38,10 +38,10 @@ t.Z = function (e) {
     let n = (0, R.Q)(),
         { sourceAnalyticsLocations: r, analyticsLocations: j } = (0, I.ZP)(T.Z.PREMIUM_MARKETING),
         U = (0, l.e7)([f.ZP], () => f.ZP.hasFetchedSubscriptions()),
-        G = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
+        G = (0, l.e7)([A.default], () => A.default.getCurrentUser()),
         y = (0, P.N)(),
-        H = (0, b.Ng)(),
-        k = (0, C.V)(),
+        k = (0, b.Ng)(),
+        H = (0, C.V)(),
         [w, F] = a.useState(!0),
         V = a.useRef(0),
         W = (0, h.M5)(G, Z.p9.TIER_2),
@@ -54,12 +54,12 @@ t.Z = function (e) {
     a.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, _.X8)(), d.tZ(), (0, E.Y2)(Y, null, D.JjL.DISCOVERY)]), (V.current = Date.now() - e), F(!1);
+            await Promise.all([d.jg(), (0, _.X8)(), d.tZ(), (0, u.Y2)(Y, null, D.JjL.DISCOVERY)]), (V.current = Date.now() - e), F(!1);
         });
     }, [Y]),
     a.useEffect(() => {
-        n && (null != y || null != H) && (0, x.a)(y, H);
-    }, [n, y, H]),
+        n && (null != y || null != k) && (0, x.a)(y, k);
+    }, [n, y, k]),
     a.useEffect(() => {
         !w &&
             S.default.track(D.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
@@ -67,19 +67,19 @@ t.Z = function (e) {
                 load_duration_ms: V.current
             });
     }, [r, w]),
-    (0, l.e7)([A.Z], () => A.Z.enabled))
-        ? (0, s.jsx)(u.Z, {})
+    (0, l.e7)([m.Z], () => m.Z.enabled))
+        ? (0, s.jsx)(E.Z, {})
         : n
           ? (0, s.jsx)(g.c8, {})
           : t === Z.EZ.ApplicationStoreHome && W
             ? (0, s.jsx)(I.Gt, {
                   value: j,
-                  children: (0, s.jsx)(v.Z, {})
+                  children: (0, s.jsx)(L.Z, {})
               })
-            : U && k && !w
+            : U && H && !w
               ? (0, s.jsx)(I.Gt, {
                     value: j,
-                    children: (0, s.jsx)(L.Z, { entrypoint: t })
+                    children: (0, s.jsx)(v.Z, { entrypoint: t })
                 })
               : (0, s.jsx)('div', {
                     className: i()(B.container, B.loading),

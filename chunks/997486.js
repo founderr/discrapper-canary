@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(93735),
-    s = n(786761),
-    a = n(3148),
+    a = n(786761),
+    s = n(3148),
     r = n(131704),
     l = n(598077),
     o = n(981631),
@@ -38,8 +38,8 @@ function _(e) {
         };
     return {
         fakeChannel: _,
-        fakeMessage: (0, s.e5)({
-            ...(0, a.ZP)({
+        fakeMessage: (0, a.e5)({
+            ...(0, s.ZP)({
                 channelId: d,
                 content: c.Z.Messages.FOR_LATER_TUTORIAL_MESSAGE
             }),

@@ -1,36 +1,36 @@
-t.d(n, {
+l.d(n, {
     Z: function () {
-        return s;
+        return u;
     }
 });
-var l = t(423875),
-    a = t(740605),
-    i = t(206583),
-    r = t(616922),
-    o = t(689938);
-function s(e) {
+var t = l(423875),
+    r = l(740605),
+    a = l(206583),
+    i = l(616922),
+    s = l(689938);
+function u(e) {
     let n,
-        { entry: t, baseEntryData: s } = e,
-        { provider: c, image_url: u } = t.extra.media,
-        d = t.extra.artist.name,
+        { entry: l, baseEntryData: u } = e,
+        { provider: o, image_url: c } = l.extra.media,
+        d = l.extra.artist.name,
         m = {
-            onClick: () => (0, a.o)(r.Hw.ALBUM, t.extra.media.external_parent_id),
-            ariaDescription: o.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: t.extra.media.parent_title })
+            onClick: () => (0, r.o)(i.Hw.ALBUM, l.extra.media.external_parent_id),
+            ariaDescription: s.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: l.extra.media.parent_title })
         },
-        _ = {
-            onClick: () => (0, a.o)(r.Hw.ARTIST, t.extra.artist.external_id),
-            ariaDescription: o.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: d })
+        E = {
+            onClick: () => (0, r.o)(i.Hw.ARTIST, l.extra.artist.external_id),
+            ariaDescription: s.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: d })
         };
     return (
-        c === l.p.SPOTIFY && (n = { type: i.kG.SPOTIFY }),
+        o === t.p.SPOTIFY && (n = { type: a.kG.SPOTIFY }),
         {
-            ...s,
+            ...u,
             title: d,
-            thumbnailUrl: u,
-            titleClickable: _,
+            thumbnailUrl: c,
+            titleClickable: E,
             subtitleClickable: m,
             thumbnailClickable: m,
-            userDescription: o.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
+            userDescription: s.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
             providerIconProps: n
         }
     );

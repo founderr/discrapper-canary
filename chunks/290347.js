@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return Z;
     }
 }),
     n(47120),
@@ -71,12 +71,12 @@ let N = [],
             ]
         });
     };
-function L(e) {
-    let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: L, modalTopExtra: Z, header: O, headerClassName: R, subHeader: x, subHeaderExtra: b, featureCards: P, changeLogId: M, button: D, body: y } = e,
+function Z(e) {
+    let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: Z, modalTopExtra: L, header: O, headerClassName: R, subHeader: x, subHeaderExtra: b, featureCards: P, changeLogId: M, button: D, body: y } = e,
         { onClose: j, transitionState: U } = n,
         G = (0, h.Dt)(),
-        k = P.length % 2 == 0,
-        w = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        w = P.length % 2 == 0,
+        k = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         [B, H] = a.useState(Date.now()),
         [V, F] = a.useState(0),
         [Y, W] = a.useState(0),
@@ -152,7 +152,7 @@ function L(e) {
             [M, s.type]
         ),
         a.useEffect(() => {
-            null != L && (0, m.kk)(L);
+            null != Z && (0, m.kk)(Z);
             let e = Date.now();
             return (
                 g.default.track(f.rMx.CHANGE_LOG_OPENED, { change_log_id: M }),
@@ -161,10 +161,10 @@ function L(e) {
                         change_log_id: M,
                         seconds_open: Math.round((Date.now() - e) / 1000)
                     }),
-                        null != L && (0, m.EW)(L, { dismissAction: S.L.DISMISS });
+                        null != Z && (0, m.EW)(Z, { dismissAction: S.L.DISMISS });
                 }
             );
-        }, [L, M]),
+        }, [Z, M]),
         (0, i.jsxs)(c.ModalRoot, {
             className: r()(C.root, t),
             transitionState: U,
@@ -175,7 +175,7 @@ function L(e) {
                     onClick: j
                 }),
                 (0, i.jsx)(T.Z, { className: C.splash }),
-                null == Z ? void 0 : Z(),
+                null == L ? void 0 : L(),
                 (0, i.jsxs)(c.ModalContent, {
                     className: C.content,
                     children: [
@@ -187,7 +187,7 @@ function L(e) {
                         'video' === s.type
                             ? (0, i.jsx)(E.Z, {
                                   className: r()(C.video, A),
-                                  autoPlay: !w,
+                                  autoPlay: !k,
                                   loop: !0,
                                   muted: !0,
                                   controls: !0,
@@ -264,13 +264,13 @@ function L(e) {
                                 children: y
                             }),
                         (0, i.jsx)('div', {
-                            className: r()(C.featureCardGroup, { [C.wideStyle]: k }),
+                            className: r()(C.featureCardGroup, { [C.wideStyle]: w }),
                             children: P.map((e, t) =>
                                 (0, i.jsx)(
                                     v,
                                     {
                                         ...e,
-                                        wideStyle: k
+                                        wideStyle: w
                                     },
                                     ''.concat(e.header, '_').concat(t)
                                 )

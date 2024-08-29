@@ -22,8 +22,8 @@ var i,
     N = n(895924),
     A = n(812206),
     v = n(933557),
-    L = n(194082),
-    Z = n(264165),
+    Z = n(194082),
+    L = n(264165),
     O = n(630186),
     R = n(925329),
     x = n(382182),
@@ -35,8 +35,8 @@ var i,
     j = n(594174),
     U = n(395361),
     G = n(639351),
-    k = n(81063),
-    w = n(823379),
+    w = n(81063),
+    k = n(823379),
     B = n(51144),
     H = n(599706),
     V = n(981631),
@@ -391,7 +391,7 @@ let et = (e) => {
             { name: c, details: d, assets: _, application_id: h } = i;
         if (null != _ && (0, f.Z)(i)) {
             var m;
-            t = (0, s.jsx)(Z.Z, {
+            t = (0, s.jsx)(L.Z, {
                 className: Y.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, s.jsxs)(u.Clickable, {
@@ -480,7 +480,7 @@ let et = (e) => {
                         (0, s.jsxs)('div', {
                             children: [K(B.ZP.getName(a)), q(m)]
                         }),
-                        (0, s.jsx)(L.ZP, { size: L.ZP.Sizes.SMALL })
+                        (0, s.jsx)(Z.ZP, { size: Z.ZP.Sizes.SMALL })
                     ]
                 }),
                 E
@@ -493,7 +493,7 @@ let et = (e) => {
             d = t.application_id;
         r.useEffect(() => {
             if (null != d)
-                (0, k.fetchAssetIds)(d, ['embedded_background']).then((e) => {
+                (0, w.fetchAssetIds)(d, ['embedded_background']).then((e) => {
                     let [t] = e;
                     return o(t);
                 });
@@ -501,7 +501,7 @@ let et = (e) => {
         let _ = (0, c.Wu)([j.default, D.default], () =>
                 Array.from(a)
                     .map((e) => (D.default.getId() === e ? null : j.default.getUser(e)))
-                    .filter(w.lm)
+                    .filter(k.lm)
             ),
             E = (0, h.O)(),
             { analyticsLocations: I } = (0, C.ZP)();
@@ -509,7 +509,7 @@ let et = (e) => {
         let g = A.Z.getApplication(d);
         if (null == g) return null;
         let p = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            T = (0, k.getAssetImage)(g.id, l, 300);
+            T = (0, w.getAssetImage)(g.id, l, 300);
         return (0, s.jsxs)(X, {
             children: [
                 (0, s.jsxs)('div', {

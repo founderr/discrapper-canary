@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return k;
+        return w;
     }
 }),
     n(47120);
@@ -27,8 +27,8 @@ var i,
     N = n(854698),
     A = n(703656),
     v = n(922482),
-    L = n(565799),
-    Z = n(501655),
+    Z = n(565799),
+    L = n(501655),
     O = n(427679),
     R = n(448206),
     x = n(184301),
@@ -41,12 +41,12 @@ var i,
     U = n(689938),
     G = n(167555);
 ((a = i || (i = {}))[(a.STAGE = 0)] = 'STAGE'), (a[(a.EVENT_EXTERNAL = 1)] = 'EVENT_EXTERNAL'), (a[(a.EVENT_VOICE = 2)] = 'EVENT_VOICE'), (a[(a.STUDY_ROOM = 3)] = 'STUDY_ROOM');
-function k(e) {
+function w(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         i = (0, f.y)(t.id),
         a = (0, S.k5)(t.id),
         l = (0, c.e7)([O.Z], () => O.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
-        { isStageNoticeHidden: k, isEventNoticeHidden: w } = (0, c.cj)(
+        { isStageNoticeHidden: w, isEventNoticeHidden: k } = (0, c.cj)(
             [p.Z],
             () => ({
                 isStageNoticeHidden: p.Z.isLiveChannelNoticeHidden({ stageId: null == l ? void 0 : l.id }),
@@ -55,8 +55,8 @@ function k(e) {
             [l, a]
         ),
         B = null == i ? void 0 : i.id,
-        H = (0, c.Wu)([L.Z], () => [...new Set(L.Z.getMutableParticipants(B, Z.pV.SPEAKER).map((e) => e.user))], [B]),
-        V = (0, c.e7)([L.Z], () => (null != B ? L.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
+        H = (0, c.Wu)([Z.Z], () => [...new Set(Z.Z.getMutableParticipants(B, L.pV.SPEAKER).map((e) => e.user))], [B]),
+        V = (0, c.e7)([Z.Z], () => (null != B ? Z.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0), [B]),
         F = (0, c.e7)([P.Z], () => P.Z.can(y.Plq.CONNECT, i)),
         Y = (0, R.Z)(null == i ? void 0 : i.id),
         W = null == a ? void 0 : a.creator_id,
@@ -282,11 +282,11 @@ function k(e) {
                 eventCreator: z,
                 speakers: H,
                 listenerCount: V,
-                isEventNoticeHidden: w,
-                isStageNoticeHidden: k,
+                isEventNoticeHidden: k,
+                isStageNoticeHidden: w,
                 isStudyRoomNotice: n
             }),
-        [a, l, i, F, Y, z, H, V, w, k, n]
+        [a, l, i, F, Y, z, H, V, k, w, n]
     );
     return null == K
         ? null

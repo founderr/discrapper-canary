@@ -155,25 +155,25 @@ class N {
 }
 let A = !0,
     v = !1,
-    L = g.pJs.ONLINE,
-    Z = new N(),
+    Z = g.pJs.ONLINE,
+    L = new N(),
     O = !0,
     R = !1;
 function x() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    A && (e || (L !== g.pJs.ONLINE && L !== g.pJs.ADD_FRIEND)) && !v && ((A = !1), (v = !0), o.Z.fetchRelationships());
+    A && (e || (Z !== g.pJs.ONLINE && Z !== g.pJs.ADD_FRIEND)) && !v && ((A = !1), (v = !0), o.Z.fetchRelationships());
 }
 function b() {
-    if (((A = !0), O ? (v = !1) : x(), (Z = Z.reset()), R)) return;
-    let e = Z.getRelationshipCounts();
-    L = 0 === e[g.OGo.FRIEND] ? (0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND) : g.pJs.ONLINE;
+    if (((A = !0), O ? (v = !1) : x(), (L = L.reset()), R)) return;
+    let e = L.getRelationshipCounts();
+    Z = 0 === e[g.OGo.FRIEND] ? (0 !== e[g.OGo.PENDING_INCOMING] ? g.pJs.PENDING : g.pJs.ADD_FRIEND) : g.pJs.ONLINE;
 }
 function P() {
-    Z = O ? new N() : Z.reset();
+    L = O ? new N() : L.reset();
 }
 function M(e) {
     return function () {
-        return !O && !!Z.update(e) && ((Z = Z.clone()), !0);
+        return !O && !!L.update(e) && ((L = L.clone()), !0);
     };
 }
 class D extends (i = r.ZP.Store) {
@@ -183,9 +183,9 @@ class D extends (i = r.ZP.Store) {
     getState() {
         return {
             fetching: v,
-            section: L,
+            section: Z,
             pendingCount: m.Z.getPendingCount(),
-            rows: Z
+            rows: L
         };
     }
 }
@@ -195,7 +195,7 @@ p(D, 'displayName', 'FriendsStore'),
             b();
         },
         FRIENDS_SET_SECTION: function (e) {
-            (L = e.section), x();
+            (Z = e.section), x();
         },
         CHANNEL_SELECT: function (e) {
             let { channelId: t } = e;
@@ -212,6 +212,6 @@ p(D, 'displayName', 'FriendsStore'),
             return (O = t !== g.cII.FRIENDS), P(), !O;
         },
         FRIENDS_SET_INITIAL_SECTION: function (e) {
-            (L = e.section), (R = !0);
+            (Z = e.section), (R = !0);
         }
     }));

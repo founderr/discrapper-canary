@@ -32,7 +32,7 @@ async function N(e, t, n) {
         o,
         c,
         d,
-        { client_id: f, response_type: C = 'code', redirect_uri: N, code_challenge: A, code_challenge_method: v, state: L, nonce: Z, scope: O, permissions: R, guild_id: x, channel_id: b, prompt: P, disable_guild_select: M, integration_type: D, pid: y } = e;
+        { client_id: f, response_type: C = 'code', redirect_uri: N, code_challenge: A, code_challenge_method: v, state: Z, nonce: L, scope: O, permissions: R, guild_id: x, channel_id: b, prompt: P, disable_guild_select: M, integration_type: D, pid: y } = e;
     if (null == f) throw new T.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != N) throw new T.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let j = [];
@@ -48,7 +48,7 @@ async function N(e, t, n) {
             redirectUri: N,
             codeChallenge: A,
             codeChallengeMethod: v,
-            state: L,
+            state: Z,
             integrationType: l
         });
     } catch (t) {
@@ -72,8 +72,8 @@ async function N(e, t, n) {
                     redirectUri: N,
                     codeChallenge: A,
                     codeChallengeMethod: v,
-                    state: L,
-                    nonce: Z,
+                    state: Z,
+                    nonce: L,
                     integrationType: l
                 })
             ).location;
@@ -82,9 +82,9 @@ async function N(e, t, n) {
             throw new T.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'OAuth2 Authorize Error: '.concat(e.message || 'Unknown Error'));
         }
     null == n || n(o.application, b, y);
-    let k = p.Hn;
+    let w = p.Hn;
     try {
-        k = r.vB(null != R ? R : 0);
+        w = r.vB(null != R ? R : 0);
     } catch (e) {}
     return (
         null != o.integration_type && Object.values(a.Y).includes(o.integration_type) && (s = new Map()).set(o.integration_type, o),
@@ -92,12 +92,12 @@ async function N(e, t, n) {
             clientId: f,
             authorizations: s,
             scopes: j,
-            parsedPermissions: k,
+            parsedPermissions: w,
             responseType: C,
             redirectUri: N,
             codeChallenge: A,
             codeChallengeMethod: v,
-            state: L,
+            state: Z,
             guildId: x,
             channelId: b,
             prompt: P,

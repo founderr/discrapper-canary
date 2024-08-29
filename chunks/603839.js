@@ -36,8 +36,8 @@ function v(e) {
         s = (0, m.Wg)(),
         {
             progress: v,
-            errors: L,
-            submitting: Z
+            errors: Z,
+            submitting: L
         } = (0, c.cj)([m.ZP], () => {
             var e, n, i, a;
             return {
@@ -46,7 +46,7 @@ function v(e) {
                 submitting: null === (i = m.ZP.getStateForGuild(t)) || void 0 === i ? void 0 : i.submitting
             };
         }),
-        O = a.useMemo(() => (0, S.G)(L), [L]),
+        O = a.useMemo(() => (0, S.G)(Z), [Z]),
         [R, x] = a.useState(!1),
         [b, P] = a.useState(window.innerWidth),
         [M, D] = a.useState(1),
@@ -58,14 +58,14 @@ function v(e) {
             onStart: () => j(!0),
             onRest: () => j(1 === M)
         }),
-        k = (0, d.useSpring)(
+        w = (0, d.useSpring)(
             {
                 transform: 'translateX('.concat(1 === M ? 0 : (-1 * (b - 380)) / 2 + 47.5, 'px)'),
                 config: A
             },
             'respect-motion-settings'
         ),
-        w = (0, d.useTransition)(0 === M, {
+        k = (0, d.useTransition)(0 === M, {
             from: { opacity: 0 },
             enter: {
                 opacity: 1,
@@ -100,8 +100,8 @@ function v(e) {
             let e = (0, _.pP)((0, l.debounce)(() => P(window.innerWidth), 250));
             return (0, _.YP)(e, document.body), () => (0, _.UC)(e, document.body);
         }, [M, y]);
-    let V = a.useMemo(() => null != L && Object.values(L).some((e) => null != e), [L]),
-        F = a.useMemo(() => (null != L && Object.values(L).length > 0 ? (0, S.G)(L).find((e) => e.hasError) : null), [L]),
+    let V = a.useMemo(() => null != Z && Object.values(Z).some((e) => null != e), [Z]),
+        F = a.useMemo(() => (null != Z && Object.values(Z).length > 0 ? (0, S.G)(Z).find((e) => e.hasError) : null), [Z]),
         Y = a.useCallback(() => {
             D(1), h._9(t, { currentStep: null == F ? void 0 : F.index });
         }, [null == F ? void 0 : F.index, t]),
@@ -202,7 +202,7 @@ function v(e) {
                             })
                         }),
                         (0, i.jsx)(o.animated.div, {
-                            style: k,
+                            style: w,
                             className: r()(N.sidebar, { [N.sidebarResponsive]: y }),
                             children: (0, i.jsx)(T.Z, {
                                 guildId: t,
@@ -210,7 +210,7 @@ function v(e) {
                                 setSigned: y ? void 0 : x,
                                 sidebarWidth: 380,
                                 windowWidth: b,
-                                transition: w,
+                                transition: k,
                                 brandPrimaryColor: v.brandPrimaryColor
                             })
                         })
@@ -234,7 +234,7 @@ function v(e) {
                                         ...e,
                                         themeColor: v.brandPrimaryColor,
                                         disabled: !R || V,
-                                        submitting: Z,
+                                        submitting: L,
                                         look: d.Button.Looks.FILLED,
                                         size: d.Button.Sizes.MEDIUM,
                                         color: d.Button.Colors.BRAND,

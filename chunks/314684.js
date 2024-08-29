@@ -1,12 +1,12 @@
 n.d(t, {
     $_: function () {
-        return L;
+        return v;
     },
     FM: function () {
         return B;
     },
     IB: function () {
-        return v;
+        return L;
     },
     IY: function () {
         return Z;
@@ -37,8 +37,8 @@ var s = n(470079),
     c = n(607070),
     d = n(605236),
     _ = n(706140),
-    E = n(243778),
-    u = n(594174),
+    u = n(243778),
+    E = n(594174),
     T = n(314884),
     I = n(580130),
     R = n(626135),
@@ -46,15 +46,15 @@ var s = n(470079),
     g = n(111361),
     N = n(595878),
     p = n(944880),
-    A = n(513785),
-    m = n(106255),
+    m = n(513785),
+    A = n(106255),
     f = n(474936),
     S = n(735825),
     h = n(981631);
 function M() {
     let e = (function () {
             var e;
-            let t = (0, i.cj)([A.Z], () => A.Z.getState());
+            let t = (0, i.cj)([m.Z], () => m.Z.getState());
             if (null != t) return null !== (e = t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_1_MONTH]) && void 0 !== e ? e : t.userTenureRewardStatusByRewardId[S.Ft.FREE_GUILD_BOOST_3_MONTHS];
         })(),
         t = b(),
@@ -83,7 +83,7 @@ function M() {
                 showNotification: !0,
                 showCard: !0
             };
-        if (!(null != e && (0, m.u7)(e))) return null;
+        if (!(null != e && (0, A.u7)(e))) return null;
         else {
             if (null == e.redeemable_at || null == e.next_tenure_reward_id) return null;
             let t = r()(e.redeemable_at).diff(r().utc(), 'days'),
@@ -130,11 +130,11 @@ function b() {
             [],
             C.OL
         ),
-        t = (0, i.e7)([u.default], () => {
-            let e = u.default.getCurrentUser();
+        t = (0, i.e7)([E.default], () => {
+            let e = E.default.getCurrentUser();
             return null != e && (0, g.M5)(e, f.p9.TIER_2);
         });
-    if (null != (0, m.kG)(e) || !!t) return (0, m.MR)([S.Ft.FREE_GUILD_BOOST_1_MONTH, S.Ft.FREE_GUILD_BOOST_3_MONTHS], e);
+    if (null != (0, A.kG)(e) || !!t) return (0, A.MR)([S.Ft.FREE_GUILD_BOOST_1_MONTH, S.Ft.FREE_GUILD_BOOST_3_MONTHS], e);
 }
 let P = (e) => {
         if (null == e || (null == e ? void 0 : e.showNotification) === !1) return [];
@@ -147,21 +147,21 @@ let P = (e) => {
                 return [];
         }
     },
-    L = () => {
+    v = () => {
         let e = M(),
             [t, n] = s.useState(P(e)),
             a = (0, N.c)({ location: 'Home' });
         s.useEffect(() => {
             if (!1 !== a) n(P(e));
         }, [e, a]);
-        let [r] = (0, E.US)(a ? t : []);
-        return a ? (null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, m.Wb)(e.nitroTenureStatus) : null) : null;
+        let [r] = (0, u.US)(a ? t : []);
+        return a ? (null != e && !0 === e.showNotification && (r === l.z.TENURE_REWARD_REDEEMABLE || r === l.z.TENURE_REWARD_PENDING) ? (0, A.Wb)(e.nitroTenureStatus) : null) : null;
     },
-    v = () => {
+    L = () => {
         var e;
         let t = null === (e = M()) || void 0 === e ? void 0 : e.nitroTenureStatus,
             n = (0, N.c)({ location: 'Home' }) && null != t && t === S.EB.REDEEMABLE,
-            [s] = (0, E.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
+            [s] = (0, u.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
         return !!n && s === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     },
     Z = () => {
@@ -190,8 +190,8 @@ function D() {
             hasFetchedPremiumApplicationEntitlements: I.Z.isFetchedForApplication(f.RQ),
             isFetchingPremiumApplicationEntitlements: I.Z.isFetchingForApplication(f.RQ)
         })),
-        n = (0, i.e7)([u.default], () => {
-            let e = u.default.getCurrentUser();
+        n = (0, i.e7)([E.default], () => {
+            let e = E.default.getCurrentUser();
             return null != e && (0, g.M5)(e, f.p9.TIER_2);
         }),
         a = s.useRef(!1);

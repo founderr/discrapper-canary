@@ -22,8 +22,8 @@ var i = n(735250),
     N = n(163417),
     A = n(492347),
     v = n(42575),
-    L = n(617015),
-    Z = n(981631),
+    Z = n(617015),
+    L = n(981631),
     O = n(689938),
     R = n(49175);
 t.Z = function (e) {
@@ -34,7 +34,7 @@ t.Z = function (e) {
         M = (0, l.e7)([I.Z], () => I.Z.getRelationshipCount()),
         [D, y] = a.useState(() => {
             let e = {};
-            for (let t of Object.values(Z.pJs)) e[t] = '';
+            for (let t of Object.values(L.pJs)) e[t] = '';
             return e;
         }),
         j = a.useCallback(
@@ -57,36 +57,36 @@ t.Z = function (e) {
         return (0, i.jsxs)('div', {
             className: R.emptyStateContainer,
             children: [
-                t === Z.pJs.ONLINE && (0, i.jsx)(m.Z, {}),
+                t === L.pJs.ONLINE && (0, i.jsx)(m.Z, {}),
                 (0, i.jsx)(
                     S.Z,
                     {
                         type: t,
                         onClick: () => {
-                            c.Z.setSection(Z.pJs.ADD_FRIEND);
+                            c.Z.setSection(L.pJs.ADD_FRIEND);
                         }
                     },
                     b
                 )
             ]
         });
-    let k = [G],
-        w = 0 === G.length && '' !== D[t],
-        B = G.filter((e) => e.type === Z.OGo.PENDING_INCOMING).length,
-        H = t === Z.pJs.PENDING && B > 0 && B >= L.yf;
+    let w = [G],
+        k = 0 === G.length && '' !== D[t],
+        B = G.filter((e) => e.type === L.OGo.PENDING_INCOMING).length,
+        H = t === L.pJs.PENDING && B > 0 && B >= Z.yf;
     return (0, i.jsx)(E.Gt, {
         value: s,
         children: (0, i.jsxs)(u.Z, {
-            section: Z.jXE.FRIENDS_LIST,
+            section: L.jXE.FRIENDS_LIST,
             children: [
                 (0, i.jsx)(o.SearchBar, {
-                    className: r()(R.searchBar, w ? R.searchEmptyState : null),
+                    className: r()(R.searchBar, k ? R.searchEmptyState : null),
                     query: D[t],
                     onChange: j,
                     onClear: U,
                     size: o.SearchBar.Sizes.MEDIUM
                 }),
-                t === Z.pJs.ONLINE && '' === D[t] && (0, i.jsx)(m.Z, {}),
+                t === L.pJs.ONLINE && '' === D[t] && (0, i.jsx)(m.Z, {}),
                 (0, i.jsxs)('div', {
                     className: R.sectionTitle,
                     children: [
@@ -94,13 +94,13 @@ t.Z = function (e) {
                             id: n,
                             title: (function (e, t) {
                                 switch (e) {
-                                    case Z.pJs.ONLINE:
+                                    case L.pJs.ONLINE:
                                         return O.Z.Messages.FRIENDS_ONLINE_HEADER.format({ online: t.toString() });
-                                    case Z.pJs.PENDING:
+                                    case L.pJs.PENDING:
                                         return O.Z.Messages.FRIENDS_PENDING_HEADER.format({ count: t.toString() });
-                                    case Z.pJs.SUGGESTIONS:
+                                    case L.pJs.SUGGESTIONS:
                                         return O.Z.Messages.FRIENDS_FRIEND_SUGGESTIONS_HEADER.format({ count: t.toString() });
-                                    case Z.pJs.BLOCKED:
+                                    case L.pJs.BLOCKED:
                                         return O.Z.Messages.FRIENDS_BLOCKED_HEADER.format({ count: t.toString() });
                                     default:
                                         return O.Z.Messages.FRIENDS_ALL_HEADER.format({ count: t.toString() });
@@ -121,33 +121,33 @@ t.Z = function (e) {
                             })
                     ]
                 }),
-                w
+                k
                     ? (0, i.jsx)('div', {
                           className: R.emptyStateContainer,
                           children: (0, i.jsx)(S.Z, { type: S.j.SECTION_NO_RESULTS }, b)
                       })
                     : (0, i.jsx)(N.Z, {
                           relationshipCount: M,
-                          statusSections: k,
+                          statusSections: w,
                           renderRow: function (e) {
                               switch (t) {
-                                  case Z.pJs.BLOCKED:
+                                  case L.pJs.BLOCKED:
                                       return (0, i.jsx)(T.Z, {
                                           ...e,
                                           isFocused: P
                                       });
-                                  case Z.pJs.PENDING:
+                                  case L.pJs.PENDING:
                                       return (0, i.jsx)(C.Z, {
                                           ...e,
                                           isFocused: P
                                       });
-                                  case Z.pJs.SUGGESTIONS:
+                                  case L.pJs.SUGGESTIONS:
                                       return (0, i.jsx)(v.Z, {
                                           ...e,
                                           isFocused: P
                                       });
-                                  case Z.pJs.ONLINE:
-                                  case Z.pJs.ALL:
+                                  case L.pJs.ONLINE:
+                                  case L.pJs.ALL:
                                   default:
                                       return (0, i.jsx)(f.Z, {
                                           ...e,

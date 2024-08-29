@@ -18,8 +18,8 @@ var i,
     Z = n(158979),
     I = n(181912),
     S = n(194295),
-    C = n(998033),
-    v = n(181364),
+    v = n(998033),
+    C = n(181364),
     x = n(24313),
     T = n(435064),
     N = n(668761),
@@ -151,7 +151,7 @@ class ei extends (a = f.ZP.Store) {
                                       return (0, O.Z)(e);
                                   case W.nc.NEWS:
                                   default:
-                                      return (0, v.Z)(e);
+                                      return (0, C.Z)(e);
                               }
                           })(t);
                       null != n &&
@@ -207,7 +207,7 @@ class ei extends (a = f.ZP.Store) {
                       }
                       if (((!k.Z.isInstanceUILocked() || k.Z.isPinned(G.Odu.TEXT)) && s === L.Z.getChannelId()) || k.Z.getTextChatNotificationMode() === G.Ypu.DISABLED || D.Z.disableNotifications || !(0, B.eF)(a, s)) return !1;
                       let l = !M.Z.isSoundDisabled(j.Ay);
-                      et((0, C.Z)(o, a, r, l), {
+                      et((0, v.Z)(o, a, r, l), {
                           type: 1,
                           channelId: o.id,
                           messageType: a.type

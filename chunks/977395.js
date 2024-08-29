@@ -3,7 +3,7 @@ n.d(t, {
         return o;
     }
 });
-var r = n(91641),
-    a = n(166350),
+var a = n(91641),
+    r = n(166350),
     s = n(987338);
-let o = new r.E([a.NR, a.ZI, a.Ob, a.uc, a.m1], s.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });
+let o = new a.E([r.NR, r.ZI, r.Ob, r.uc, r.m1], s.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });

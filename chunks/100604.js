@@ -1,11 +1,11 @@
 n.d(t, {
     r: function () {
-        return N;
+        return h;
     }
 });
 var i = n(933557),
-    s = n(356264),
-    a = n(592125),
+    a = n(356264),
+    s = n(592125),
     r = n(430824),
     l = n(496675),
     o = n(699516),
@@ -45,46 +45,46 @@ function T(e, t) {
         })
     };
 }
-class N {
+class h {
     getForwardInfo() {
         var e, t, n, u, m;
-        let N = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.Z,
-            h = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
-            C = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
-            f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
+        let h = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : s.Z,
+            N = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.default,
+            f = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.Z,
+            C = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.Z,
             p = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Z,
-            g = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : s.Z,
+            g = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : a.Z,
             { snapshotIndex: S, parentMessage: A, messageSnapshot: R } = this,
-            { useOldIcon: O } = (0, E.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
-            { showForwardBreadcrumb: x } = _.u.getCurrentConfig({ location: 'MessageForward' });
-        if (!x)
+            { useOldIcon: x } = (0, E.WT)({ location: 'GetForwardInfo' }, { autoTrackExposure: !1 }),
+            { showForwardBreadcrumb: O } = _.u.getCurrentConfig({ location: 'MessageForward' });
+        if (!O)
             return {
                 snapshotIndex: S,
-                useOldIcon: O
+                useOldIcon: x
             };
         let M = (0, d.Xf)(R.message.timestamp),
-            v = N.getChannel(this.parentMessage.channel_id);
+            v = h.getChannel(this.parentMessage.channel_id);
         if (null != v && v.guild_id === (null === (e = A.messageReference) || void 0 === e ? void 0 : e.guild_id)) {
-            let e = N.getChannel(null === (u = A.messageReference) || void 0 === u ? void 0 : u.channel_id);
+            let e = h.getChannel(null === (u = A.messageReference) || void 0 === u ? void 0 : u.channel_id);
             if (null == e) {
                 let e = p.getGuild(v.guild_id);
                 return null == e
                     ? {
                           snapshotIndex: S,
-                          useOldIcon: O
+                          useOldIcon: x
                       }
                     : {
                           snapshotIndex: S,
                           footerInfo: T(e, M),
-                          useOldIcon: O
+                          useOldIcon: x
                       };
             }
-            if (!f.can(e.accessPermissions, e))
+            if (!C.can(e.accessPermissions, e))
                 return {
                     snapshotIndex: S,
-                    useOldIcon: O
+                    useOldIcon: x
                 };
-            let t = (0, i.F6)(e, h, C, !0);
+            let t = (0, i.F6)(e, N, f, !0);
             return {
                 snapshotIndex: S,
                 footerInfo: {
@@ -95,31 +95,31 @@ class N {
                         timestamp: M
                     })
                 },
-                useOldIcon: O
+                useOldIcon: x
             };
         }
         let L = null === (t = A.messageReference) || void 0 === t ? void 0 : t.guild_id;
         if (null == L)
             return {
                 snapshotIndex: S,
-                useOldIcon: O
+                useOldIcon: x
             };
         let Z = null !== (m = p.getGuild(L)) && void 0 !== m ? m : g.getGuild(L);
         if (null == Z)
             return {
                 snapshotIndex: S,
-                useOldIcon: O
+                useOldIcon: x
             };
-        let P = N.getChannel(null === (n = A.messageReference) || void 0 === n ? void 0 : n.channel_id);
-        return null == P || f.can(P.accessPermissions, P)
+        let P = h.getChannel(null === (n = A.messageReference) || void 0 === n ? void 0 : n.channel_id);
+        return null == P || C.can(P.accessPermissions, P)
             ? {
                   snapshotIndex: S,
                   footerInfo: T(Z, M),
-                  useOldIcon: O
+                  useOldIcon: x
               }
             : {
                   snapshotIndex: S,
-                  useOldIcon: O
+                  useOldIcon: x
               };
     }
     constructor(e, t, n) {

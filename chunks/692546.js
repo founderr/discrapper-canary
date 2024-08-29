@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return v;
+        return C;
     }
 }),
     n(47120);
@@ -69,16 +69,16 @@ function S(e, t) {
                   })
               }),
               (function () {
-                  if (!C)
+                  if (!v)
                       f.ZP.requireModule('discord_overlay2').setClickZoneCallback((e, t, n) => {
                           let i = I.get(e);
                           null != i && (!E && ((m.x = t), (m.y = n)), i.instance.click());
                       }),
-                          (C = !0);
+                          (v = !0);
               })()));
 }
-let C = !1;
-class v extends (i = s.PureComponent) {
+let v = !1;
+class C extends (i = s.PureComponent) {
     componentDidMount() {
         this.props.observe ? this.observeZone() : this.updateZone();
     }
@@ -121,7 +121,7 @@ class v extends (i = s.PureComponent) {
             });
     }
 }
-g(v, 'defaultProps', {
+g(C, 'defaultProps', {
     observe: !0,
     observeInterval: 1000
 });

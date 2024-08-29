@@ -1,13 +1,13 @@
 n.d(t, {
     l: function () {
-        return N;
+        return h;
     }
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(866442),
     o = n(596454),
     c = n(434650),
@@ -17,22 +17,22 @@ var i = n(735250),
     E = n(287151),
     I = n(952527),
     m = n(219021);
-let T = s.memo(function (e) {
+let T = a.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: s, hideEmoji: a, emoji: c, className: T, count: N, me: h, me_burst: C, burst_count: f, burst_colors: p, readOnly: g, isLurking: S, isGuest: A, isPendingMember: R, type: O } = e,
-            x = O === _.O.BURST,
-            M = (0, E.y4)(h, C, O),
-            v = (0, d.v)(x && null != p ? p : []),
-            L = s ? m : I,
-            Z = x ? f : N,
+            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: T, count: h, me: N, me_burst: f, burst_count: C, burst_colors: p, readOnly: g, isLurking: S, isGuest: A, isPendingMember: R, type: x } = e,
+            O = x === _.O.BURST,
+            M = (0, E.y4)(N, f, x),
+            v = (0, d.v)(O && null != p ? p : []),
+            L = a ? m : I,
+            Z = O ? C : h,
             P = (0, u.y)(Z, E.aO),
-            D = {};
-        if (x && null != v) {
-            var b;
-            let { accentColor: e, backgroundColor: i, opacity: s } = v,
-                a = null !== (b = (0, l.wK)(null != i ? i : '', s)) && void 0 !== b ? b : '';
-            M && (D.borderColor = i), (D.background = a), (t = e), (n = e);
+            b = {};
+        if (O && null != v) {
+            var D;
+            let { accentColor: e, backgroundColor: i, opacity: a } = v,
+                s = null !== (D = (0, l.wK)(null != i ? i : '', a)) && void 0 !== D ? D : '';
+            M && (b.borderColor = i), (b.background = s), (t = e), (n = e);
         }
         let j = {
             minWidth: P,
@@ -44,14 +44,14 @@ let T = s.memo(function (e) {
                 [L.reactionMe]: M,
                 [L.reactionReadOnly]: g && !S && !R && !A
             }),
-            style: D,
+            style: b,
             children: [
                 (0, i.jsx)(o.Z, {
-                    className: r()({ [L.hideEmoji]: a }),
+                    className: r()({ [L.hideEmoji]: s }),
                     emojiId: c.id,
                     emojiName: c.name,
                     size: 'reaction',
-                    animated: x && c.animated
+                    animated: O && c.animated
                 }),
                 (0, i.jsx)('div', {
                     className: L.reactionCount,
@@ -61,11 +61,11 @@ let T = s.memo(function (e) {
             ]
         });
     }),
-    N = s.memo(function (e) {
-        let { showImmediate: t, reactions: n, ...a } = e,
-            [r, l] = s.useState(!1),
-            [o, u] = s.useTransition(),
-            d = s.useCallback(
+    h = a.memo(function (e) {
+        let { showImmediate: t, reactions: n, ...s } = e,
+            [r, l] = a.useState(!1),
+            [o, u] = a.useTransition(),
+            d = a.useCallback(
                 (e) => {
                     e &&
                         !r &&
@@ -86,7 +86,7 @@ let T = s.memo(function (e) {
                     return (0, i.jsx)(
                         m,
                         {
-                            ...a,
+                            ...s,
                             ...e
                         },
                         ((t = e),

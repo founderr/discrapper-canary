@@ -5,15 +5,15 @@ n.d(t, {
 }),
     n(47120),
     n(653041);
-var r = n(470079),
-    a = n(399606),
+var a = n(470079),
+    r = n(399606),
     s = n(1870);
 let o = (e) => {
-    let t = (0, a.e7)([s.Z], () => s.Z.purchases);
-    return (0, r.useMemo)(() => {
+    let t = (0, r.e7)([s.Z], () => s.Z.purchases);
+    return (0, a.useMemo)(() => {
         let n = [],
-            r = [];
-        for (let a of e.values()) a.products.every((e) => !!t.get(e.skuId)) ? n.push(a) : r.push(a);
-        return r.concat(n);
+            a = [];
+        for (let r of e.values()) r.products.every((e) => !!t.get(e.skuId)) ? n.push(r) : a.push(r);
+        return a.concat(n);
     }, [e, t]);
 };

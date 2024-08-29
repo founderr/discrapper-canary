@@ -1,9 +1,9 @@
 n.d(t, {
     L9: function () {
-        return x;
+        return O;
     },
     ZK: function () {
-        return O;
+        return x;
     },
     d4: function () {
         return R;
@@ -23,8 +23,8 @@ n.d(t, {
 }),
     n(789020);
 var i = n(735250),
-    s = n(470079),
-    a = n(442837),
+    a = n(470079),
+    s = n(442837),
     r = n(993365),
     l = n(981729),
     o = n(481060),
@@ -36,13 +36,13 @@ var i = n(735250),
     I = n(630388),
     m = n(591759),
     T = n(850908),
-    N = n(524444),
-    h = n(981631),
-    C = n(689938),
-    f = n(789714);
+    h = n(524444),
+    N = n(981631),
+    f = n(689938),
+    C = n(789714);
 function p(e) {
     let t = e.item.originalItem;
-    return (0, N.Yi)({
+    return (0, h.Yi)({
         ...e,
         alt: t.description,
         src: (0, E.q)({
@@ -60,12 +60,12 @@ function p(e) {
 }
 function g(e) {
     let t = e.item.originalItem,
-        n = s.useCallback(() => {
+        n = a.useCallback(() => {
             var e;
-            return (0, I.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, h.J0y.IS_CLIP)
+            return (0, I.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP)
                 ? (0, i.jsxs)(l.DY, {
-                      text: C.Z.Messages.CLIPS_BETA_TAG_HOVER,
-                      className: f.clipPill,
+                      text: f.Z.Messages.CLIPS_BETA_TAG_HOVER,
+                      className: C.clipPill,
                       children: [
                           (0, i.jsx)(o.ClipsIcon, {
                               size: 'xs',
@@ -74,20 +74,20 @@ function g(e) {
                           (0, i.jsx)(r.x, {
                               variant: 'text-xs/semibold',
                               color: 'always-white',
-                              children: C.Z.Messages.CLIP_TAG
+                              children: f.Z.Messages.CLIP_TAG
                           })
                       ]
                   })
                 : null;
         }, [t]),
-        a = m.Z.toURLSafe(t.proxy_url);
-    return null == a
+        s = m.Z.toURLSafe(t.proxy_url);
+    return null == s
         ? null
-        : (a.searchParams.append('format', 'webp'),
-          (0, N.lV)({
+        : (s.searchParams.append('format', 'webp'),
+          (0, h.lV)({
               ...e,
               alt: t.description,
-              poster: a.toString(),
+              poster: s.toString(),
               fileSize: t.size,
               fileName: (0, T.Z)(t),
               src: t.url,
@@ -102,7 +102,7 @@ function g(e) {
 }
 function S(e) {
     let t = e.item.originalItem;
-    return (0, N.hX)({
+    return (0, h.hX)({
         ...e,
         fileSize: t.size,
         fileName: (0, T.Z)(t),
@@ -112,42 +112,42 @@ function S(e) {
 function A(e) {
     let { message: t, item: n } = e,
         i = n.originalItem,
-        a = s.useCallback(
-            (e, n, s) => {
-                var a;
-                (0, d.tb)(t.id, null !== (a = i.duration_secs) && void 0 !== a ? a : null, n, t.author.id);
-            },
-            [t, i.duration_secs]
-        ),
-        r = s.useCallback(
-            (e, n) => {
+        s = a.useCallback(
+            (e, n, a) => {
                 var s;
-                (0, d.EW)(t.id, null !== (s = i.duration_secs) && void 0 !== s ? s : null, e, t.author.id, n);
+                (0, d.tb)(t.id, null !== (s = i.duration_secs) && void 0 !== s ? s : null, n, t.author.id);
             },
             [t, i.duration_secs]
         ),
-        l = s.useCallback(
+        r = a.useCallback(
+            (e, n) => {
+                var a;
+                (0, d.EW)(t.id, null !== (a = i.duration_secs) && void 0 !== a ? a : null, e, t.author.id, n);
+            },
+            [t, i.duration_secs]
+        ),
+        l = a.useCallback(
             (e) => {
                 var n;
                 (0, d.Np)(t.id, null !== (n = null == e ? void 0 : e.message) && void 0 !== n ? n : null);
             },
             [t]
         );
-    return (0, N.wj)({
+    return (0, h.wj)({
         ...e,
         fileSize: i.size,
         fileName: (0, T.Z)(i),
         src: i.url,
         durationSecs: i.duration_secs,
         waveform: i.waveform,
-        onPlay: a,
+        onPlay: s,
         onPause: r,
         onError: l
     });
 }
 function R(e) {
     let t = e.item.originalItem;
-    return (0, N.xi)({
+    return (0, h.xi)({
         ...e,
         url: t.url,
         fileName: (0, T.Z)(t),
@@ -155,16 +155,16 @@ function R(e) {
         contentType: t.content_type
     });
 }
-function O(e) {
+function x(e) {
     let t = e.item.originalItem;
-    return (0, N.ur)({
+    return (0, h.ur)({
         ...e,
         url: t.url,
         fileName: (0, T.Z)(t),
         fileSize: t.size
     });
 }
-function x(e) {
+function O(e) {
     if ('CLIP' === e.item.type)
         return (0, i.jsx)(M, {
             attachment: e.item.originalItem,
@@ -174,9 +174,9 @@ function x(e) {
 }
 function M(e) {
     var t;
-    let { attachment: n, message: s } = e,
-        r = s.channel_id,
-        l = (0, a.e7)([_.Z], () => {
+    let { attachment: n, message: a } = e,
+        r = a.channel_id,
+        l = (0, s.e7)([_.Z], () => {
             var e;
             return null === (e = _.Z.getBasicChannel(r)) || void 0 === e ? void 0 : e.guild_id;
         }),

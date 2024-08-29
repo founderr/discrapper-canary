@@ -28,8 +28,8 @@ var i = n(735250),
     N = n(676742),
     A = n(1585),
     v = n(304761),
-    L = n(865427),
-    Z = n(571250),
+    Z = n(865427),
+    L = n(571250),
     O = n(628581),
     R = n(55311),
     x = n(575175),
@@ -41,8 +41,8 @@ var i = n(735250),
     j = n(605236),
     U = n(243778),
     G = n(730417),
-    k = n(524347),
-    w = n(853197),
+    w = n(524347),
+    k = n(853197),
     B = n(810280),
     H = n(60762),
     V = n(258609),
@@ -82,8 +82,8 @@ var i = n(735250),
     eN = n(51144),
     eA = n(998502),
     ev = n(870569),
-    eL = n(345243),
-    eZ = n(115530),
+    eZ = n(345243),
+    eL = n(115530),
     eO = n(981631),
     eR = n(215023),
     ex = n(288836),
@@ -210,11 +210,11 @@ class eU extends a.PureComponent {
                 children: [
                     (0, i.jsx)('div', {
                         className: eP.panelTitleContainer,
-                        children: (0, i.jsx)(eZ.Z, { children: l })
+                        children: (0, i.jsx)(eL.Z, { children: l })
                     }),
                     (0, i.jsx)('div', {
                         className: eP.panelSubtextContainer,
-                        children: (0, i.jsx)(eL.Z, { children: null != e ? e : a })
+                        children: (0, i.jsx)(eZ.Z, { children: null != e ? e : a })
                     })
                 ]
             })
@@ -261,7 +261,7 @@ class eU extends a.PureComponent {
                           grow: 0,
                           className: eP.buttons,
                           children: [
-                              (0, i.jsx)(ew, {
+                              (0, i.jsx)(ek, {
                                   selfMute: n,
                                   serverMute: s,
                                   suppress: l,
@@ -502,7 +502,7 @@ class eU extends a.PureComponent {
                     : (this.setState({ shouldShowSpeakingWhileMutedTooltip: !1 }), this.speakingWhileMutedTooltipTimeout.stop());
             }),
             eM(this, 'renderSettingsGear', () =>
-                (0, i.jsx)(ek, {
+                (0, i.jsx)(ew, {
                     isEligibleForPomelo: this.props.isEligibleForPomelo,
                     webBuildOverride: this.props.webBuildOverride,
                     onClick: this.handleOpenAccountSettings,
@@ -529,10 +529,10 @@ function eG() {
             return null != e ? ec.Z.getChannel(e) : null;
         }),
         { mute: C, selfMute: N, suppress: A } = (0, el.Z)(g),
-        { selfDeaf: Z, deaf: O } = (0, er.Z)(g),
+        { selfDeaf: L, deaf: O } = (0, er.Z)(g),
         R = (0, l.e7)([v.C], () => {
             var e;
-            return (0, L.fD)() ? (null === (e = v.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, Z.fD)() ? (null === (e = v.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         x = (0, l.e7)([eI.ZP], () => eI.ZP.getPremiumTypeSubscription()),
         b = (0, l.e7)([eu.Z], () => eu.Z.getEverSpeakingWhileMuted()),
@@ -540,8 +540,8 @@ function eG() {
         M = (0, h.useModalsStore)(h.hasAnyModalOpenSelector) || P || eC.s.isDisallowPopupsSet(),
         y = (0, W.b)(),
         U = (0, l.e7)([V.Z], () => null != V.Z.getAwaitingRemoteSessionInfo()),
-        B = (0, l.e7)([k.Z], () => k.Z.isCurrentQuestCompleted),
-        H = (0, l.e7)([k.Z], () => k.Z.currentDropQuestGameTitle),
+        B = (0, l.e7)([w.Z], () => w.Z.isCurrentQuestCompleted),
+        H = (0, l.e7)([w.Z], () => w.Z.currentDropQuestGameTitle),
         Y = (0, F.n)(),
         q = (0, T.O)(),
         J = (0, Q.D)(),
@@ -588,7 +588,7 @@ function eG() {
             settings: []
         };
     return (
-        !M && (eg && ep.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), s && (ep.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), B && H === (null === (t = (0, w.BS)(ex.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && ep.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), Y && q && ep.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), J && (1 === $ ? ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), es && ep.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), ee && ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), en && ep.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), ei && ep.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
+        !M && (eg && ep.settings.push(o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), s && (ep.settings.push(o.z.QUEST_2_ENROLLMENT_TOOLTIP), B && H === (null === (t = (0, k.BS)(ex.X2.FORTNITE)) || void 0 === t ? void 0 : t.title) && ep.settings.push(o.z.QUEST_2_COMPLETION_TOOLTIP)), Y && q && ep.settings.push(o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING), J && (1 === $ ? ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), es && ep.settings.push(o.z.SOUNDBOARD_VOLUME_EDUCATION), ee && ep.settings.push(o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING), en && ep.settings.push(o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), ei && ep.avatar.push(o.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP)),
         (0, i.jsx)(eU, {
             currentUser: n,
             customStatusActivity: c,
@@ -597,7 +597,7 @@ function eG() {
             hidePrivateData: I,
             occluded: M,
             premiumSubscription: x,
-            selfDeaf: Z,
+            selfDeaf: L,
             selfMute: N,
             serverDeaf: O,
             serverMute: C,
@@ -612,7 +612,7 @@ function eG() {
         })
     );
 }
-function ek(e) {
+function ew(e) {
     let { webBuildOverride: t, isEligibleForPomelo: n, onClick: a, onContextMenu: s } = e,
         r = (0, h.useRedesignIconContext)().enabled,
         l = null,
@@ -647,7 +647,7 @@ function ek(e) {
         })
     );
 }
-function ew(e) {
+function ek(e) {
     let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: r, tooltipText: l, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: _, onClick: E, onContextMenu: m } = e,
         I = t || s || n,
         { Component: g, play: p, events: T } = (0, u.O)(I ? 'unmute' : 'mute'),
@@ -692,7 +692,7 @@ function eB(e) {
     return (
         a.useEffect(() => () => _(), [c, _]),
         (0, i.jsx)(ev.Z, {
-            tooltipText: (0, Z.Z)(t, n, s),
+            tooltipText: (0, L.Z)(t, n, s),
             onMouseEnter: E,
             onMouseLeave: m,
             icon: (0, i.jsx)(I, {

@@ -27,11 +27,11 @@ var i = n(735250),
     N = n(981631),
     A = n(70722),
     v = n(689938),
-    L = n(626634);
-function Z(e) {
+    Z = n(626634);
+function L(e) {
     let { users: t } = e;
     return (0, i.jsxs)('div', {
-        className: L.viewers,
+        className: Z.viewers,
         children: [
             (0, i.jsx)(l.VoiceNormalIcon, {
                 size: 'custom',
@@ -61,7 +61,7 @@ function O(e) {
         j = (0, s.e7)([m.Z], () => m.Z.getPreviewURL(null, O, r)),
         U = (0, s.e7)([g.Z], () => g.Z.getVoiceChannelId()),
         G = (0, S.ZP)(),
-        k = (0, f.Z)(O);
+        w = (0, f.Z)(O);
     if (
         (a.useEffect(() => {
             x && U === O && b(!1);
@@ -70,7 +70,7 @@ function O(e) {
     )
         return null;
     let {
-        buttonColor: w,
+        buttonColor: k,
         buttonCTA: B,
         disabled: H
     } = (function (e, t) {
@@ -82,9 +82,9 @@ function O(e) {
             buttonCTA: a ? v.Z.Messages.BROADCAST_FULL : i ? v.Z.Messages.VIEW_BROADCAST : v.Z.Messages.JOIN_BROADCAST,
             disabled: a
         };
-    })(r, k);
+    })(r, w);
     return (0, i.jsxs)('div', {
-        className: L.container,
+        className: Z.container,
         children: [
             (0, i.jsx)(l.Avatar, {
                 size: l.AvatarSizes.SIZE_32,
@@ -92,7 +92,7 @@ function O(e) {
                 'aria-label': D
             }),
             (0, i.jsxs)('div', {
-                className: L.details,
+                className: Z.details,
                 children: [
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/semibold',
@@ -104,9 +104,9 @@ function O(e) {
                         children: null != M ? v.Z.Messages.STREAMING.format({ name: M.name }) : v.Z.Messages.STREAMING_A_GAME
                     }),
                     (0, i.jsxs)('div', {
-                        className: L.activity,
+                        className: Z.activity,
                         children: [
-                            k.length > 0 && (0, i.jsx)(Z, { users: k }),
+                            w.length > 0 && (0, i.jsx)(L, { users: w }),
                             (0, i.jsxs)(l.Button, {
                                 onClick: () => {
                                     if (U === O) {
@@ -122,11 +122,11 @@ function O(e) {
                                             broadcast_channel_id: O
                                         });
                                 },
-                                color: w,
+                                color: k,
                                 size: l.ButtonSizes.SMALL,
-                                className: L.button,
+                                className: Z.button,
                                 disabled: H,
-                                innerClassName: L.innerButton,
+                                innerClassName: Z.innerButton,
                                 children: [
                                     (0, i.jsx)(l.MicrophoneArrowRightIcon, {
                                         size: 'custom',
@@ -143,7 +143,7 @@ function O(e) {
             }),
             null != j
                 ? (0, i.jsx)(E.Z, {
-                      className: L.stream,
+                      className: Z.stream,
                       stream: {
                           streamType: A.lo.CALL,
                           ownerId: r,
@@ -153,7 +153,7 @@ function O(e) {
                 : (0, i.jsx)(h.Z, {
                       game: M,
                       size: h.Z.Sizes.LARGE,
-                      className: L.gameIcon
+                      className: Z.gameIcon
                   })
         ]
     });

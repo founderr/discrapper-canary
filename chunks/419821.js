@@ -12,8 +12,8 @@ var s = n(735250),
     c = n(594174),
     d = n(933970),
     _ = n(340453),
-    E = n(292352),
-    u = n(689938),
+    u = n(292352),
+    E = n(689938),
     T = n(135738);
 function I(e) {
     let { user: t } = e,
@@ -37,7 +37,7 @@ function I(e) {
                 className: T.details,
                 children: (0, s.jsx)(_.Z, {
                     otherUser: t,
-                    status: E.ne.ACTIVE
+                    status: u.ne.ACTIVE
                 })
             }),
             (0, s.jsx)('div', {
@@ -45,7 +45,7 @@ function I(e) {
                 children: (0, s.jsx)(d.Z, {
                     icon: o.XSmallIcon,
                     className: T.__invalid_actionDeny,
-                    tooltip: u.Z.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
+                    tooltip: E.Z.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
                     onClick: I
                 })
             })

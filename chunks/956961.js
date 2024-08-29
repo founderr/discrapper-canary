@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(47120);
 var i = n(735250),
-    s = n(470079),
-    a = n(120356),
-    r = n.n(a),
+    a = n(470079),
+    s = n(120356),
+    r = n.n(s),
     l = n(913527),
     o = n.n(l),
     c = n(442837),
@@ -18,17 +18,17 @@ var i = n(735250),
     I = n(703656),
     m = n(324701),
     T = n(768943),
-    N = n(695346),
-    h = n(592125),
-    C = n(655354),
-    f = n(324081),
+    h = n(695346),
+    N = n(592125),
+    f = n(655354),
+    C = n(324081),
     p = n(240126),
     g = n(791914),
     S = n(981631),
     A = n(689938),
     R = n(72506),
-    O = n(674069);
-let x = {
+    x = n(674069);
+let O = {
     offset: {
         left: 4,
         right: -12
@@ -36,10 +36,10 @@ let x = {
 };
 function M(e) {
     let { setTab: t, closePopout: n } = e,
-        a = (0, c.e7)([T.Z], () => T.Z.getMessageReminders()),
-        [r, l] = s.useState(!1),
-        o = s.useMemo(() => a.filter((e) => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [a]),
-        _ = r ? a : o;
+        s = (0, c.e7)([T.Z], () => T.Z.getMessageReminders()),
+        [r, l] = a.useState(!1),
+        o = a.useMemo(() => s.filter((e) => null == e.saveData.dueAt || e.saveData.dueAt < new Date()), [s]),
+        _ = r ? s : o;
     return (0, i.jsxs)('div', {
         className: R.container,
         children: [
@@ -60,7 +60,7 @@ function M(e) {
                         children: (0, i.jsx)(d.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: r ? A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({ count: o.length }) : A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({ count: a.length })
+                            children: r ? A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_OVERDUE.format({ count: o.length }) : A.Z.Messages.MESSAGE_REMINDERS_HEADER_SHOW_ALL.format({ count: s.length })
                         })
                     })
                 ]
@@ -71,40 +71,40 @@ function M(e) {
 }
 function v(e) {
     let t,
-        { messageReminder: s } = e,
-        a = s.saveData,
-        l = s.message,
-        u = (0, c.e7)([h.Z], () => h.Z.getChannel(a.channelId)),
+        { messageReminder: a } = e,
+        s = a.saveData,
+        l = a.message,
+        u = (0, c.e7)([N.Z], () => N.Z.getChannel(s.channelId)),
         T = () => {
-            (0, I.uL)(S.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), a.channelId, a.messageId));
+            (0, I.uL)(S.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), s.channelId, s.messageId));
         },
         p = null;
-    return (null != a.dueAt &&
-        (a.dueAt > new Date()
+    return (null != s.dueAt &&
+        (s.dueAt > new Date()
             ? ((t = 'text-muted'),
               (p = A.Z.Messages.MESSAGE_REMINDERS_DUE_IN.format({
                   duration: o()
-                      .duration(a.dueAt.getTime() - Date.now(), 'millisecond')
+                      .duration(s.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
               (p = A.Z.Messages.MESSAGE_REMINDERS_OVERDUE.format({
                   duration: o()
-                      .duration(Date.now() - a.dueAt.getTime(), 'millisecond')
+                      .duration(Date.now() - s.dueAt.getTime(), 'millisecond')
                       .humanize()
               })))),
     null == l || null == u)
         ? null
         : (0, i.jsxs)('div', {
-              className: O.container,
+              className: x.container,
               children: [
-                  (0, i.jsx)(f.Z, {
+                  (0, i.jsx)(C.Z, {
                       channel: u,
                       gotoChannel: T,
                       children: (0, i.jsxs)('div', {
                           className: R.reminderActions,
                           children: [
-                              null != s.saveData.notes && s.saveData.notes.length > 0
+                              null != a.saveData.notes && a.saveData.notes.length > 0
                                   ? (0, i.jsxs)(d.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-muted',
@@ -115,7 +115,7 @@ function v(e) {
                                                 size: 'xxs',
                                                 color: 'currentColor'
                                             }),
-                                            s.saveData.notes
+                                            a.saveData.notes
                                         ]
                                     })
                                   : null,
@@ -150,7 +150,7 @@ function v(e) {
                               (0, i.jsx)(d.TooltipContainer, {
                                   text: A.Z.Messages.MESSAGE_REMINDERS_MARK_AS_DONE,
                                   children: (0, i.jsx)(d.Clickable, {
-                                      onClick: () => (0, m.x)(a),
+                                      onClick: () => (0, m.x)(s),
                                       className: R.delete,
                                       children: (0, i.jsx)(d.TrashIcon, {
                                           size: 'custom',
@@ -164,10 +164,10 @@ function v(e) {
                       })
                   }),
                   (0, i.jsxs)('div', {
-                      className: r()(O.messageContainer, R.unloadedMessage),
+                      className: r()(x.messageContainer, R.unloadedMessage),
                       children: [
-                          (0, i.jsx)(C.Z, {
-                              className: O.jumpMessageButton,
+                          (0, i.jsx)(f.Z, {
+                              className: x.jumpMessageButton,
                               onJump: T
                           }),
                           (0, i.jsx)(
@@ -175,10 +175,10 @@ function v(e) {
                               {
                                   message: l,
                                   channel: u,
-                                  className: O.message,
-                                  compact: N.jU.getSetting(),
+                                  className: x.message,
+                                  compact: h.jU.getSetting(),
                                   animateAvatar: !1,
-                                  focusProps: x,
+                                  focusProps: O,
                                   trackAnnouncementViews: !0
                               },
                               l.id

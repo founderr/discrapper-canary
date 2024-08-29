@@ -29,7 +29,7 @@ function u() {
         dsn: 'https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984',
         autoSessionTracking: !1,
         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-        release: 'discord_web-793cef262b23a863973cb518c316f5c07d64b189',
+        release: 'discord_web-174791d4fb8306cd4b0eb780333f2e0ed7ab33e3',
         beforeSend: function (e, t) {
             var r, n;
             return !((null != (r = e).exception && null != r.exception.values && r.exception.values.every((e) => null == e.stacktrace || (null != e.stacktrace.frames && 1 === e.stacktrace.frames.length)) && 'canary' !== window.GLOBAL_ENV.RELEASE_CHANNEL) || s.some((e) => window.navigator.appVersion.toLowerCase().indexOf(e) >= 0)) && !c() && !('Aborted' === (n = e).message || 'cancel captcha' === n.message) && I() ? e : null;
@@ -51,8 +51,8 @@ function u() {
         ignoreErrors: ['EADDRINUSE', 'BetterDiscord', 'EnhancedDiscord', 'Powercord', 'RecipeWebview', 'jQuery', 'localStorage', 'has already been declared', 'Cannot call hover while not dragging.', 'Cannot call beginDrag while dragging.', 'getHostNode', 'setupCSS', 'on missing remote object', 'ChunkLoadError', "Cannot find module 'discord_utils'", 'Failed to setup Krisp module', "Error invoking remote method 'DISCORD_NATIVE_MODULES_INSTALL': Error: Module updater is not available!", 'Non-Error promise rejection captured with keys:', 'Request has been terminated', 'Cannot resolve a Slate point from DOM point', 'Failed to fetch', 'no suitable image found', 'ResizeObserver loop limit exceeded', 'ResizeObserver loop completed with undelivered notifications.', 'The play() request was interrupted', 'could not play audio', 'notosans-400-normalitalic'],
         denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
     }),
-        i.YA('buildNumber', ((e = '323040'), '323040'));
-    i.YA('builtAt', String('1724955540169'));
+        i.YA('buildNumber', ((e = '323089'), '323089'));
+    i.YA('builtAt', String('1724960879738'));
     let t = window.GLOBAL_ENV.SENTRY_TAGS;
     if (null != t && 'object' == typeof t) for (let e in t) i.YA(e, t[e]);
     return _;

@@ -16,17 +16,17 @@ function u(e) {
     let { chunks: n, className: t, onCopy: c, ...u } = e,
         h = s.useMemo(() => (null == n ? void 0 : n.join(' ')), [n]),
         [f, x] = s.useState(!1),
-        m = s.useCallback(() => {
+        _ = s.useCallback(() => {
             x(!0), (0, l.JG)(h), null == c || c();
         }, [c, h]),
-        _ = f ? i.CircleCheckIcon : i.CopyIcon;
+        m = f ? i.CircleCheckIcon : i.CopyIcon;
     return (0, o.jsx)(i.Clickable, {
         className: r()(d.container, t),
-        onClick: m,
+        onClick: _,
         children: (0, o.jsx)(i.Tooltip, {
             text: f ? a.Z.Messages.COPIED : a.Z.Messages.COPY,
             children: (e) =>
-                (0, o.jsx)(_, {
+                (0, o.jsx)(m, {
                     ...u,
                     ...e,
                     size: 'xxs',

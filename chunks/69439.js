@@ -56,7 +56,7 @@ function S(e) {
 }
 function C(e) {
     var t, n, s, C;
-    let { quest: N, location: A, onReceiveErrorHints: v, contentPosition: L, rowIndex: Z } = e,
+    let { quest: N, location: A, onReceiveErrorHints: v, contentPosition: Z, rowIndex: L } = e,
         O = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         R = (0, m.g2)({ useReducedMotion: O }),
         x = (0, u._s)({ quest: N }),
@@ -73,13 +73,13 @@ function C(e) {
         j = (null === (n = N.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
         U = j && (null === (s = N.userStatus) || void 0 === s ? void 0 : s.claimedAt) == null,
         G = (0, E.iQ)(N),
-        k = !(0, E.zi)(N),
-        w = (0, u._Q)(N),
+        w = !(0, E.zi)(N),
+        k = (0, u._Q)(N),
         B = (0, E.zK)(N, g.S7.IN_HOUSE_CONSOLE_QUEST),
         H = (0, E.Xv)(N.config),
         V = (0, u.Rf)(N),
         [F, Y, W] = (0, u.me)(N, V),
-        z = k && w === u.OH.ACCEPTED,
+        z = w && k === u.OH.ACCEPTED,
         K = z && F === h.LI.SELECT,
         q = z && !K && Y.length > 1,
         Q = a.useCallback(
@@ -89,13 +89,13 @@ function C(e) {
             [W, v]
         ),
         { text: X, onClick: J } = (0, m.Ks)({
-            progressState: w,
+            progressState: k,
             quest: N,
             isInHouseQuest: B,
             location: A,
             isCollectibleQuest: H,
-            questContentPosition: L,
-            questContentRowIndex: Z,
+            questContentPosition: Z,
+            questContentRowIndex: L,
             inGiftInventory: !0
         }),
         { startingConsoleQuest: $, startConsoleQuest: ee } = (0, u.GI)({
@@ -106,8 +106,8 @@ function C(e) {
                         questId: N.id,
                         questContent: A,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
-                        questContentPosition: L,
-                        questContentRowIndex: Z
+                        questContentPosition: Z,
+                        questContentRowIndex: L
                     });
             },
             afterRequest: (e) => {
@@ -131,8 +131,8 @@ function C(e) {
                 onClick: null != J ? J : void 0,
                 children: X
             }))
-          : k
-            ? k && U
+          : w
+            ? w && U
                 ? (en = (0, i.jsx)(o.Button, {
                       color: o.ButtonColors.BRAND,
                       submitting: M,
@@ -140,7 +140,7 @@ function C(e) {
                       className: T.button,
                       children: X
                   }))
-                : k && y && !et
+                : w && y && !et
                   ? (en = K
                         ? (0, i.jsx)(o.Select, {
                               className: T.platformSelectorPrimary,
@@ -182,7 +182,7 @@ function C(e) {
                                 className: T.button,
                                 children: p.Z.Messages.QUEST_ACCEPTED
                             }))
-                  : k &&
+                  : w &&
                     !y &&
                     (en = (0, i.jsx)(o.Button, {
                         submitting: D,

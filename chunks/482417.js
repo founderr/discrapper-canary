@@ -1,40 +1,40 @@
-t.d(n, {
+l.d(n, {
     Z: function () {
-        return s;
+        return u;
     }
 }),
-    t(47120);
-var l = t(423875),
-    a = t(740605),
-    i = t(206583),
-    r = t(616922),
-    o = t(689938);
-function s(e) {
+    l(47120);
+var t = l(423875),
+    r = l(740605),
+    a = l(206583),
+    i = l(616922),
+    s = l(689938);
+function u(e) {
     let n,
-        { entry: t, baseEntryData: s } = e,
-        c = t.extra.entries[0].media,
-        u = c.artists[0],
-        { title: d, provider: m, image_url: _ } = c,
-        f = u.name,
-        p = {
-            onClick: () => (0, a.o)(r.Hw.TRACK, c.external_id),
-            ariaDescription: o.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: d })
+        { entry: l, baseEntryData: u } = e,
+        o = l.extra.entries[0].media,
+        c = o.artists[0],
+        { title: d, provider: m, image_url: E } = o,
+        p = c.name,
+        N = {
+            onClick: () => (0, r.o)(i.Hw.TRACK, o.external_id),
+            ariaDescription: s.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: d })
         },
-        E = {
-            onClick: () => (0, a.o)(r.Hw.ARTIST, u.external_id),
-            ariaDescription: o.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: f })
+        f = {
+            onClick: () => (0, r.o)(i.Hw.ARTIST, c.external_id),
+            ariaDescription: s.Z.Messages.CONTENT_INVENTORY_OPEN_SPOTIFY_ITEM_A11Y_DESCRIPTION.format({ itemName: p })
         };
     return (
-        m === l.p.SPOTIFY && (n = { type: i.kG.SPOTIFY }),
+        m === t.p.SPOTIFY && (n = { type: a.kG.SPOTIFY }),
         {
-            ...s,
+            ...u,
             title: d,
-            subtitle: f,
-            thumbnailUrl: _,
-            titleClickable: p,
-            subtitleClickable: E,
-            thumbnailClickable: p,
-            userDescription: o.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
+            subtitle: p,
+            thumbnailUrl: E,
+            titleClickable: N,
+            subtitleClickable: f,
+            thumbnailClickable: N,
+            userDescription: s.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
             providerIconProps: n
         }
     );

@@ -3,26 +3,26 @@ n.d(t, {
         return s;
     },
     Ob: function () {
-        return c;
+        return l;
     },
     ZI: function () {
         return o;
     },
     m1: function () {
-        return l;
+        return c;
     },
     uc: function () {
         return i;
     }
 });
-var r = n(987170),
-    a = n(987338);
-let s = (0, r.Z)({
+var a = n(987170),
+    r = n(987338);
+let s = (0, a.Z)({
         kind: 'user',
         id: '2024-07_ctp_collectibles_shop_open_vanilla',
         label: 'CTP collectibles shop open - A/A test - Vanilla',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: r.$P.COLLECTIBLES_SHOP_OPEN,
         treatments: [
             {
                 id: 1,
@@ -31,12 +31,12 @@ let s = (0, r.Z)({
             }
         ]
     }),
-    o = (0, r.Z)({
+    o = (0, a.Z)({
         kind: 'user',
         id: '2024-07_ctp_collectibles_shop_open_filters',
         label: 'CTP collectibles shop open - A/A test - Filters',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: r.$P.COLLECTIBLES_SHOP_OPEN,
         treatments: [
             {
                 id: 1,
@@ -45,12 +45,12 @@ let s = (0, r.Z)({
             }
         ]
     }),
-    i = (0, r.Z)({
+    i = (0, a.Z)({
         kind: 'user',
         id: '2024-07_ctp_collectibles_shop_open_multiple_buckets',
         label: 'CTP collectibles shop open - A/A test - Multiple buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: r.$P.COLLECTIBLES_SHOP_OPEN,
         treatments: [
             {
                 id: 1,
@@ -64,12 +64,12 @@ let s = (0, r.Z)({
             }
         ]
     }),
-    c = (0, r.Z)({
+    l = (0, a.Z)({
         kind: 'user',
         id: '2024-07_ctp_collectibles_shop_open_everyone',
         label: 'CTP collectibles shop open - A/A test - Everyone',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: r.$P.COLLECTIBLES_SHOP_OPEN,
         treatments: [
             {
                 id: 1,
@@ -78,12 +78,12 @@ let s = (0, r.Z)({
             }
         ]
     }),
-    l = (0, r.Z)({
+    c = (0, a.Z)({
         kind: 'user',
         id: '2024-07_ctp_collectibles_shop_open_uneven_buckets',
         label: 'CTP collectibles shop open - A/A test - Uneven buckets',
         defaultConfig: { doSomething: !1 },
-        commonTriggerPoint: a.$P.COLLECTIBLES_SHOP_OPEN,
+        commonTriggerPoint: r.$P.COLLECTIBLES_SHOP_OPEN,
         treatments: [
             {
                 id: 1,

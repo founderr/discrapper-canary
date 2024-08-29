@@ -6,7 +6,7 @@ n.d(t, {
         return M;
     },
     gx: function () {
-        return m;
+        return A;
     },
     k3: function () {
         return g;
@@ -18,7 +18,7 @@ n.d(t, {
         return h;
     },
     t2: function () {
-        return A;
+        return m;
     },
     vZ: function () {
         return N;
@@ -35,8 +35,8 @@ var s = n(278074),
     c = n(74538),
     d = n(331119),
     _ = n(575595),
-    E = n(915296),
-    u = n(650032),
+    u = n(915296),
+    E = n(650032),
     T = n(391110),
     I = n(474936),
     R = n(735825),
@@ -77,7 +77,7 @@ let g = (e) => {
                 return;
         }
     };
-function A(e, t) {
+function m(e, t) {
     switch (e) {
         case R.EB.PENDING:
             return null != t ? C.Z.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({ days: t }) : '';
@@ -89,7 +89,7 @@ function A(e, t) {
             return '';
     }
 }
-let m = (e, t, n) => ((0, r.wj)(e) ? t : n),
+let A = (e, t, n) => ((0, r.wj)(e) ? t : n),
     f = 'getWhatsNewRow',
     S = (e) => {
         let { cards: t, perksCards: n, isFullScreen: s, showTenureCard: a, shopMarketingVariation: r } = e,
@@ -101,10 +101,10 @@ let m = (e, t, n) => ((0, r.wj)(e) ? t : n),
             c = () => {
                 r !== i.C5.DEFAULT ? o({ card: n.specialShopPerks }) : o({ card: n.specialMemberPricing });
             },
-            { enabled: E } = u._.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
+            { enabled: u } = E._.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
             { enabled: T } = _.r.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
             { enabled: I } = d.C.getCurrentConfig({ location: f }, { autoTrackExposure: !1 }),
-            R = E && !T && !I,
+            R = u && !T && !I,
             C = O();
         return null != n.freeBoost && !0 === a && o({ card: n.freeBoost }), null != n.shyProject && o({ card: n.shyProject }), s && C ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : s && !C && (R || null != n.shyProject ? R && o({ card: n.referralProgram }) : c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), c(), o({ card: n.unlimitedSuperReactions }), t;
     },
@@ -119,14 +119,14 @@ let m = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 })
                     .with(
                         {
-                            tileOrderVariant: E.mJ.VARIANT_1,
+                            tileOrderVariant: u.mJ.VARIANT_1,
                             isPremiumSubscriber: !1
                         },
                         () => [t.profiles, t.moreEmojiPower, t.largeUploads]
                     )
                     .with(
                         {
-                            tileOrderVariant: E.mJ.VARIANT_2,
+                            tileOrderVariant: u.mJ.VARIANT_2,
                             isPremiumSubscriber: !1
                         },
                         () => [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons]
@@ -149,14 +149,14 @@ let m = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 })
                     .with(
                         {
-                            tileOrderVariant: E.mJ.VARIANT_1,
+                            tileOrderVariant: u.mJ.VARIANT_1,
                             isPremiumSubscriber: !1
                         },
                         () => [t.hdVideo, t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]
                     )
                     .with(
                         {
-                            tileOrderVariant: E.mJ.VARIANT_2,
+                            tileOrderVariant: u.mJ.VARIANT_2,
                             isPremiumSubscriber: !1
                         },
                         () => [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]
@@ -170,14 +170,14 @@ let m = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 })
                     .with(
                         {
-                            tileOrderVariant: E.mJ.VARIANT_1,
+                            tileOrderVariant: u.mJ.VARIANT_1,
                             isPremiumSubscriber: !1
                         },
                         () => [t.clientThemes, t.customAppIcons, t.customSoundsEverywhere, t.specialStickerAccess]
                     )
                     .with(
                         {
-                            tileOrderVariant: E.mJ.VARIANT_2,
+                            tileOrderVariant: u.mJ.VARIANT_2,
                             isPremiumSubscriber: !1
                         },
                         () => [t.customSoundsEverywhere, t.specialStickerAccess]

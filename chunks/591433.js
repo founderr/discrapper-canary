@@ -28,13 +28,13 @@ var i = n(735250),
     N = n(992945);
 let A = 56,
     v = 94,
-    L = Object.freeze({
+    Z = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 202
     }),
-    Z = Object.freeze({
+    L = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
@@ -51,14 +51,14 @@ function R(e) {
         D = a.useContext(E.AnalyticsContext),
         [y, j] = a.useState((0, u.P)()),
         [U, G] = a.useState(!0),
-        k = a.useRef(U),
-        [w, B] = a.useState(3),
-        H = a.useRef(w),
+        w = a.useRef(U),
+        [k, B] = a.useState(3),
+        H = a.useRef(k),
         V = (0, c.y)((e) => {
             let t = null == e ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = t.width;
-            n < 1024 && k.current ? ((k.current = !1), G(!1)) : n > 1024 && !k.current && ((k.current = !0), G(!0));
+            n < 1024 && w.current ? ((w.current = !1), G(!1)) : n > 1024 && !w.current && ((w.current = !0), G(!0));
             let i = 1;
             for (n -= U ? 420 : 0, n -= 250; n > 0; ) (n -= 234), (i += 1);
             i !== H.current && ((H.current = i), B(i));
@@ -221,7 +221,7 @@ function R(e) {
                 }, 250),
             [P]
         ),
-        et = U ? L : Z;
+        et = U ? Z : L;
     return (0, i.jsxs)('div', {
         className: N.container,
         ref: V,
@@ -234,7 +234,7 @@ function R(e) {
                 ref: $,
                 className: N.masonryList,
                 sections: Y,
-                columns: w,
+                columns: k,
                 itemGutter: 16,
                 padding: et,
                 renderItem: J,

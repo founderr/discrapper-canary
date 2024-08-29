@@ -8,8 +8,8 @@ var a = n(481060),
     c = n(568671),
     d = n(292352),
     _ = n(689938),
-    E = n(31778),
-    u = n(633488),
+    u = n(31778),
+    E = n(633488),
     T = n(361848);
 let I = () => {
     let e = (0, o.mq)(d.ne.ACTIVE),
@@ -18,7 +18,7 @@ let I = () => {
     return (0, o.VM)() || (t && e.length > 0)
         ? null
         : (0, s.jsx)('div', {
-              className: E.button,
+              className: u.button,
               children: t
                   ? (0, s.jsx)(a.Button, {
                         fullWidth: !1,
@@ -34,13 +34,13 @@ t.Z = () => {
         t = (0, r.o)(_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_TEEN, _.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_HEADER_PARENT),
         n = (0, r.o)(_.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_TEEN.format({ articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), _.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_DESCRIPTION_PARENT.format({ articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
     return (0, s.jsxs)('div', {
-        className: E.container,
+        className: u.container,
         children: [
             (0, s.jsxs)('div', {
                 children: [
                     (0, s.jsx)('div', {
                         children: (0, s.jsxs)('div', {
-                            className: E.headerText,
+                            className: u.headerText,
                             children: [
                                 (0, s.jsx)(a.Heading, {
                                     variant: 'heading-xl/medium',
@@ -58,9 +58,9 @@ t.Z = () => {
                 ]
             }),
             (0, s.jsx)('div', {
-                className: E.headerImage,
+                className: u.headerImage,
                 children: (0, s.jsx)('img', {
-                    src: e ? u : T,
+                    src: e ? E : T,
                     alt: _.Z.Messages.FAMILY_CENTER_ACTIVITY_BANNER_IMAGE_ALT
                 })
             })

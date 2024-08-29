@@ -11,9 +11,9 @@ var o = t(735250),
     h = t(245581),
     f = t(760373),
     x = t(689938),
-    m = t(756843);
+    _ = t(756843);
 n.default = function (e) {
-    let { transitionState: n, streamKey: t, channelId: _ } = e,
+    let { transitionState: n, streamKey: t, channelId: m } = e,
         E = (0, c.e7)([i.Z], () => {
             var e;
             return null === (e = i.Z.getSecureFramesState(t)) || void 0 === e ? void 0 : e.epochAuthenticator;
@@ -23,19 +23,19 @@ n.default = function (e) {
             chunkSize: f.y6,
             desiredLength: f.YP
         }),
-        I = s.useCallback(() => {
-            (0, l.ih)({ channelId: _ });
-        }, [_]);
+        p = s.useCallback(() => {
+            (0, l.ih)({ channelId: m });
+        }, [m]);
     return (0, o.jsxs)(h.Z, {
         transitionState: n,
         title: x.Z.Messages.E2EE_STREAM_PRIVACY_CODE,
         subtitle: x.Z.Messages.E2EE_STREAM_VERIFICATION_SUBTITLE,
         children: [
             (0, o.jsxs)('div', {
-                className: m.verification,
+                className: _.verification,
                 children: [
                     (0, o.jsxs)('div', {
-                        className: m.header,
+                        className: _.header,
                         children: [
                             (0, o.jsx)(r.Heading, {
                                 variant: 'text-sm/bold',
@@ -44,22 +44,22 @@ n.default = function (e) {
                             }),
                             null != v &&
                                 (0, o.jsx)(u.H, {
-                                    className: m.copyIcon,
+                                    className: _.copyIcon,
                                     chunks: v,
                                     color: r.tokens.colors.INTERACTIVE_NORMAL,
-                                    onCopy: I
+                                    onCopy: p
                                 })
                         ]
                     }),
                     (0, o.jsx)(d.b, {
-                        className: m.code,
+                        className: _.code,
                         chunks: v,
                         columns: f.WK
                     })
                 ]
             }),
             (0, o.jsx)(r.Text, {
-                className: m.footer,
+                className: _.footer,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: x.Z.Messages.E2EE_STREAM_VERIFICATION_FOOTER_TEXT.format({ helpArticle: f.l4 })

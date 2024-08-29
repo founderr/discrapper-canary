@@ -26,8 +26,8 @@ var i = n(735250),
     N = n(680295),
     A = n(785717),
     v = n(221292),
-    L = n(481046),
-    Z = n(27144),
+    Z = n(481046),
+    L = n(27144),
     O = n(318661),
     R = n(78675),
     x = n(741308),
@@ -39,8 +39,8 @@ var i = n(735250),
     j = n(530),
     U = n(544989),
     G = n(309494),
-    k = n(969205),
-    w = n(171368),
+    w = n(969205),
+    k = n(171368),
     B = n(580512),
     H = n(67152),
     V = n(695346),
@@ -295,14 +295,14 @@ function er(e) {
     }, [e_, s]);
     let eE = (e) => {
             null == n || n(),
-                (0, w.openUserProfileModal)({
+                (0, k.openUserProfileModal)({
                     sourceAnalyticsLocations: el,
                     ...eo,
                     ...e
                 });
         },
-        { newActivityCardsEnabled: em } = (0, Z.z)({ location: 'AccountProfilePopout' }),
-        { customStatusBubbleEditEnabled: eI } = (0, L.K)({ location: 'AccountProfilePopout' }),
+        { newActivityCardsEnabled: em } = (0, L.z)({ location: 'AccountProfilePopout' }),
+        { customStatusBubbleEditEnabled: eI } = (0, Z.K)({ location: 'AccountProfilePopout' }),
         eg = (0, C.Z)({ analyticsLocations: el }),
         ep = (0, f.p)(),
         eT = ed === J.Skl.DND,
@@ -336,7 +336,7 @@ function er(e) {
                         !eI &&
                             (0, i.jsx)(U.Z, {
                                 profileType: $.y0.BITE_SIZE,
-                                children: (0, i.jsx)(k.Z, {
+                                children: (0, i.jsx)(w.Z, {
                                     userId: t.id,
                                     onClose: n
                                 })

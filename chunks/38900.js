@@ -1,34 +1,34 @@
-var r = n(735250);
+var a = n(735250);
 n(470079);
-var a = n(120356),
-    s = n.n(a),
+var r = n(120356),
+    s = n.n(r),
     o = n(53824),
     i = n(291256),
-    c = n(801895),
-    l = n(775409);
+    l = n(801895),
+    c = n(775409);
 let d = () => 4 * Math.random() + 8,
     u = [d(), d(), d()];
 t.Z = () =>
-    (0, r.jsx)('div', {
+    (0, a.jsx)('div', {
         className: o.skeletons,
         children: u.map((e) =>
-            (0, r.jsxs)(
+            (0, a.jsxs)(
                 'div',
                 {
                     className: o.cardsContainer,
                     children: [
-                        (0, r.jsx)('div', {
-                            className: s()(c.skeleton, i.shopBanner),
-                            children: (0, r.jsx)('div', { className: c.bannerBody })
+                        (0, a.jsx)('div', {
+                            className: s()(l.skeleton, i.shopBanner),
+                            children: (0, a.jsx)('div', { className: l.bannerBody })
                         }),
                         Array.from({ length: e }, (e, t) => t).map((e) =>
-                            (0, r.jsx)(
+                            (0, a.jsx)(
                                 'div',
                                 {
-                                    className: s()(c.skeleton, l.shopCard),
-                                    children: (0, r.jsxs)('div', {
-                                        className: c.cardBody,
-                                        children: [(0, r.jsx)('div', { className: c.cardAvatar }), (0, r.jsx)('div', { className: c.cardTitle }), (0, r.jsx)('div', { className: c.cardDescription }), (0, r.jsx)('div', { className: c.cardSummary })]
+                                    className: s()(l.skeleton, c.shopCard),
+                                    children: (0, a.jsxs)('div', {
+                                        className: l.cardBody,
+                                        children: [(0, a.jsx)('div', { className: l.cardAvatar }), (0, a.jsx)('div', { className: l.cardTitle }), (0, a.jsx)('div', { className: l.cardDescription }), (0, a.jsx)('div', { className: l.cardSummary })]
                                     })
                                 },
                                 e

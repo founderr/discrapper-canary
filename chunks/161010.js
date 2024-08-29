@@ -1,6 +1,6 @@
 n.d(t, {
     M: function () {
-        return s;
+        return a;
     }
 });
 let i = (0, n(818083).B)({
@@ -16,6 +16,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function s(e) {
+function a(e) {
     return i.getCurrentConfig({ location: e }).enabled;
 }

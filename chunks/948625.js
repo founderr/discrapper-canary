@@ -3,16 +3,16 @@ n.d(t, {
         return Z;
     },
     yc: function () {
-        return B;
+        return j;
     }
 });
-var r = n(180650),
-    a = n(44315),
+var a = n(180650),
+    r = n(44315),
     s = n(981631),
     o = n(689938),
     i = n(994745),
-    c = n(341364),
-    l = n(763542),
+    l = n(341364),
+    c = n(763542),
     d = n(354873),
     u = n(525071),
     f = n(737140),
@@ -27,23 +27,23 @@ var r = n(180650),
     I = n(769411),
     E = n(125257),
     v = n(6412),
-    S = n(238286);
-let L = () => o.Z.Messages.LIMITED_TIME,
-    T = () => o.Z.Messages.MOST_POPULAR,
+    T = n(238286);
+let S = () => o.Z.Messages.LIMITED_TIME,
+    L = () => o.Z.Messages.MOST_POPULAR,
     N = () => o.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
     k = () => o.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
     O = () => o.Z.Messages.TAKE_ME_THERE,
-    j = [
+    B = [
         {
             id: 'category_tide',
-            backgroundStaticSrc: S,
+            backgroundStaticSrc: T,
             overflowSrcStatic: v,
             logoSrc: E,
-            textColor: (0, a.Lq)(s.Ilk.WHITE_100),
-            badge: { label: L },
+            textColor: (0, r.Lq)(s.Ilk.WHITE_100),
+            badge: { label: S },
             cta: {
                 label: O,
-                categorySkuId: r.T.TIDE
+                categorySkuId: a.T.TIDE
             }
         },
         {
@@ -52,13 +52,13 @@ let L = () => o.Z.Messages.LIMITED_TIME,
             backgroundVideoSrc: i,
             overflowSrcStatic: u,
             overflowSrcAnimatedBackground: d,
-            overflowSrcAnimated: l,
-            logoSrc: c,
-            textColor: (0, a.Lq)(s.Ilk.BLACK_500),
-            badge: { label: T },
+            overflowSrcAnimated: c,
+            logoSrc: l,
+            textColor: (0, r.Lq)(s.Ilk.BLACK_500),
+            badge: { label: L },
             cta: {
                 label: O,
-                categorySkuId: r.T.ANIME_V2
+                categorySkuId: a.T.ANIME_V2
             }
         },
         {
@@ -66,11 +66,11 @@ let L = () => o.Z.Messages.LIMITED_TIME,
             backgroundStaticSrc: I,
             backgroundVideoSrc: h,
             logoSrc: x,
-            textColor: (0, a.Lq)(s.Ilk.WHITE_100),
+            textColor: (0, r.Lq)(s.Ilk.WHITE_100),
             badge: { label: N },
             cta: {
                 label: O,
-                categorySkuId: r.T.GALAXY
+                categorySkuId: a.T.GALAXY
             }
         },
         {
@@ -78,11 +78,11 @@ let L = () => o.Z.Messages.LIMITED_TIME,
             backgroundStaticSrc: b,
             overflowSrcStatic: _,
             logoSrc: m,
-            textColor: (0, a.Lq)(s.Ilk.WHITE_100),
+            textColor: (0, r.Lq)(s.Ilk.WHITE_100),
             badge: { label: k },
             cta: {
                 label: O,
-                categorySkuId: r.T.DISXCORE
+                categorySkuId: a.T.DISXCORE
             }
         },
         {
@@ -90,21 +90,21 @@ let L = () => o.Z.Messages.LIMITED_TIME,
             backgroundStaticSrc: C,
             backgroundVideoSrc: p,
             logoSrc: g,
-            textColor: (0, a.Lq)(s.Ilk.WHITE_100),
-            badge: { label: T },
+            textColor: (0, r.Lq)(s.Ilk.WHITE_100),
+            badge: { label: L },
             cta: {
                 label: O,
-                categorySkuId: r.T.CYBERPUNK
+                categorySkuId: a.T.CYBERPUNK
             }
         }
     ],
-    B = (e) =>
-        j.filter((t) => {
+    j = (e) =>
+        B.filter((t) => {
             var n;
-            let r = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
-            return null == r || null != e[r];
+            let a = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
+            return null == a || null != e[a];
         }),
     Z = (e, t) => {
-        let { overflowSrcStatic: n, overflowSrcAnimated: r, overflowSrcAnimatedBackground: a } = e;
-        return null == n ? [] : t || null == r ? [n] : null == a ? [r] : [a, r];
+        let { overflowSrcStatic: n, overflowSrcAnimated: a, overflowSrcAnimatedBackground: r } = e;
+        return null == n ? [] : t || null == a ? [n] : null == r ? [a] : [r, a];
     };

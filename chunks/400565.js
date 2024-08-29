@@ -4,8 +4,8 @@ n.d(t, {
     }
 });
 var i = n(735250),
-    s = n(470079),
-    a = n(686546),
+    a = n(470079),
+    s = n(686546),
     r = n(598077),
     l = n(865112),
     o = n(31308);
@@ -23,10 +23,10 @@ let c = (e) => {
                   })
               });
     },
-    u = s.memo(function (e) {
+    u = a.memo(function (e) {
         let { item: t } = e,
             n = null,
-            s = !1;
+            a = !1;
         if (null != t.icon_name)
             n = (0, i.jsx)('img', {
                 alt: '',
@@ -39,7 +39,7 @@ let c = (e) => {
                 className: o.image,
                 src: e.getAvatarURL(void 0, 40)
             })),
-                (s = !0);
+                (a = !0);
         } else
             n =
                 null != t.icon_url
@@ -56,8 +56,8 @@ let c = (e) => {
         return (0, i.jsxs)('div', {
             className: o.container,
             children: [
-                (0, i.jsx)(a.ZP, {
-                    mask: null == u ? a.QS.AVATAR_DEFAULT : a.QS.AVATAR_STATUS_ROUND_16,
+                (0, i.jsx)(s.ZP, {
+                    mask: null == u ? s.QS.AVATAR_DEFAULT : s.QS.AVATAR_STATUS_ROUND_16,
                     width: 40,
                     height: 40,
                     rightOverhang: 3,
@@ -65,7 +65,7 @@ let c = (e) => {
                     className: o.mask,
                     children: (0, i.jsx)('div', {
                         className: o.imageContainer,
-                        style: s ? void 0 : { backgroundColor: (0, l.Vu)(t) },
+                        style: a ? void 0 : { backgroundColor: (0, l.Vu)(t) },
                         children: n
                     })
                 }),

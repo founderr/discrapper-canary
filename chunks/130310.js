@@ -8,7 +8,7 @@ var a = n(120356),
     c = n(689938),
     d = n(909481),
     _ = n(224499);
-let E = (e) => {
+let u = (e) => {
     let { header: t, description: n, icon: a, inModal: l } = e;
     return (0, s.jsxs)('div', {
         className: r()(d.row, _.marginBottom8, { [d.inModal]: l }),
@@ -49,7 +49,7 @@ t.Z = (e) => {
                 color: 'header-secondary',
                 children: n
             }),
-            (0, s.jsx)(E, {
+            (0, s.jsx)(u, {
                 header: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_FRIEND_ADD_HEADER,
                 description: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_FRIEND_ADD_DESCRIPTION,
                 icon: (0, s.jsx)(i.FriendsIcon, {
@@ -60,7 +60,7 @@ t.Z = (e) => {
                 }),
                 inModal: t
             }),
-            (0, s.jsx)(E, {
+            (0, s.jsx)(u, {
                 header: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_GUILD_PARTICIPATION_HEADER,
                 description: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_GUILD_PARTICIPATION_DESCRIPTION,
                 icon: (0, s.jsx)(i.ServerGridIcon, {
@@ -71,7 +71,7 @@ t.Z = (e) => {
                 }),
                 inModal: t
             }),
-            (0, s.jsx)(E, {
+            (0, s.jsx)(u, {
                 header: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_USERS_MESSAGED_HEADER,
                 description: c.Z.Messages.FAMILY_CENTER_DATA_CONFIRMATION_USERS_MESSAGED_DESCRIPTION,
                 icon: (0, s.jsx)(o.Z, {
@@ -87,7 +87,7 @@ t.Z = (e) => {
                 color: 'header-secondary',
                 children: a
             }),
-            (0, s.jsx)(E, {
+            (0, s.jsx)(u, {
                 header: r,
                 description: _,
                 icon: (0, s.jsx)(i.XSmallIcon, {

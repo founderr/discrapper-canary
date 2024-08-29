@@ -7,8 +7,8 @@ var s = n(735250),
     c = n(442837),
     d = n(481060),
     _ = n(37234),
-    E = n(960412),
-    u = n(151662),
+    u = n(960412),
+    E = n(151662),
     T = n(695346),
     I = n(981631),
     R = n(930441),
@@ -17,10 +17,10 @@ var s = n(735250),
     N = n(224499);
 t.Z = () => {
     let e = T.Ex.useSetting(),
-        { categories: t, initialized: n } = (0, c.cj)([u.Z], () => u.Z.getEmailSettings());
+        { categories: t, initialized: n } = (0, c.cj)([E.Z], () => E.Z.getEmailSettings());
     return (
         a.useEffect(() => {
-            null == n && (0, E.Y7)();
+            null == n && (0, u.Y7)();
         }, [n]),
         (0, s.jsxs)('div', {
             className: g.container,
@@ -78,7 +78,7 @@ t.Z = () => {
                     note: C.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH_NOTE,
                     hideBorder: !0,
                     onChange: function (e) {
-                        (0, E.pR)(R.$Z.FAMILY_CENTER_DIGEST, e);
+                        (0, u.pR)(R.$Z.FAMILY_CENTER_DIGEST, e);
                     },
                     children: C.Z.Messages.FAMILY_CENTER_SETTINGS_EMAIL_DIGEST_ENABLE_SWITCH
                 })
