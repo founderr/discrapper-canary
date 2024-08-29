@@ -2,68 +2,43 @@ n(47120);
 var i = n(470079),
     a = n(115434),
     s = n(442837),
-    r = n(704215),
-    l = n(243778),
-    o = n(594174),
-    c = n(51144),
-    d = n(874703),
-    u = n(105622),
-    _ = n(599960),
-    h = n(683167),
-    E = n(302800),
-    m = n(921944);
-let I = 'useCollectiblesShopTabNewBadge';
+    r = n(243778),
+    l = n(594174),
+    o = n(51144),
+    c = n(874703),
+    d = n(105622),
+    u = n(302800),
+    _ = n(921944);
 t.Z = () => {
-    let e = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
-        t = (0, h.I)(I),
-        n = (0, s.e7)([d.Z], () => d.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
-        g = (0, u.J)(I),
-        p = i.useMemo(() => {
-            if (!(0, c.Fc)(e)) return [];
-            if (g) return null != n ? [n.dismissibleContent] : [];
-            switch (t) {
-                case E.LM.TIDE:
-                    return [r.z.COLLECTIBLES_SHOP_TIDE_COACHTIP];
-                case E.LM.DARK_FANTASY:
-                    return [r.z.COLLECTIBLES_SHOP_DARK_FANTASY_MARKETING];
-                case E.LM.ROBERT:
-                    return [r.z.COLLECTIBLES_SHOP_ROBERT_MARKETING];
-                case E.LM.STORM:
-                    return [r.z.COLLECTIBLES_SHOP_STORM_MARKETING];
-                default:
-                    return [];
-            }
-        }, [e, g, n, t]),
-        [T, f] = (0, l.US)(p, void 0, !0),
-        S = (0, _.E)(I),
-        C = null;
-    if (null != T) {
-        if (g) {
-            if (null != n) {
-                var N, A, v, L, Z, O;
-                C = {
-                    type: E.k2.COACHTIP,
-                    title: () => n.title,
-                    body: () => n.body,
-                    imageSrc: n.avatar,
-                    assetIds: n.decorations,
-                    entrypointBackgroundStyle: null === (N = n.refTargetBackground) || void 0 === N ? void 0 : N.style
-                };
-                let e = null === (A = n.refTargetBackground) || void 0 === A ? void 0 : A.asset;
-                null != e &&
-                    (C.entryPointBackgroundAssets = {
-                        srcDark: null === (v = e.resting) || void 0 === v ? void 0 : v.dark,
-                        srcLight: null === (L = e.resting) || void 0 === L ? void 0 : L.light,
-                        srcDarkHovered: null === (Z = e.hovered) || void 0 === Z ? void 0 : Z.dark,
-                        srcLightHovered: null === (O = e.hovered) || void 0 === O ? void 0 : O.light
-                    });
-            }
-        } else S === E.k2.COACHTIP ? (C = E.fY[T]) : S === E.k2.COACHTIP_HEADLINE_ONLY ? (C = E.zM[T]) : S === E.k2.BADGE && (C = { type: E.k2.BADGE });
+    let e = (0, s.e7)([l.default], () => l.default.getCurrentUser()),
+        t = (0, d.J)('useCollectiblesShopTabNewBadge'),
+        n = (0, s.e7)([c.Z], () => c.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
+        h = i.useMemo(() => ((0, o.Fc)(e) && t && null != n ? [n.dismissibleContent] : []), [e, t, n]),
+        [E, m] = (0, r.US)(h, void 0, !0),
+        I = null;
+    if (null != E && t && null != n) {
+        var g, p, T, f, S, C;
+        I = {
+            type: u.k2.COACHTIP,
+            title: () => n.title,
+            body: () => n.body,
+            imageSrc: n.avatar,
+            assetIds: n.decorations,
+            entrypointBackgroundStyle: null === (g = n.refTargetBackground) || void 0 === g ? void 0 : g.style
+        };
+        let e = null === (p = n.refTargetBackground) || void 0 === p ? void 0 : p.asset;
+        null != e &&
+            (I.entryPointBackgroundAssets = {
+                srcDark: null === (T = e.resting) || void 0 === T ? void 0 : T.dark,
+                srcLight: null === (f = e.resting) || void 0 === f ? void 0 : f.light,
+                srcDarkHovered: null === (S = e.hovered) || void 0 === S ? void 0 : S.dark,
+                srcLightHovered: null === (C = e.hovered) || void 0 === C ? void 0 : C.light
+            });
     }
     return {
-        collectiblesShopTabNewBadgeDisplayOptions: C,
+        collectiblesShopTabNewBadgeDisplayOptions: I,
         dismissCollectiblesShopTabNewBadge: () => {
-            null != C && f(m.L.AUTO);
+            null != I && m(_.L.AUTO);
         }
     };
 };
