@@ -19,14 +19,14 @@ var s = n(442837),
     p = n(122269);
 function _(e) {
     var t;
-    let { user: n, displayProfile: _, guild: h, pendingAvatar: g, pendingNickname: I, pendingGlobalName: v, pendingBio: C, pendingPronouns: x, isTryItOutFlow: A, hideBioSection: P } = e,
+    let { user: n, displayProfile: _, guild: h, pendingAvatar: I, pendingNickname: g, pendingGlobalName: v, pendingBio: C, pendingPronouns: x, isTryItOutFlow: P, hideBioSection: A } = e,
         Z = (0, s.e7)([u.ZP], () => (null == h ? null : u.ZP.getMember(h.id, n.id))),
         T = (0, s.e7)([f.Z], () => f.Z.hidePersonalInformation),
         N = (0, i.Z)('ProfileCustomizationPreviewBody'),
         S = null == _ ? void 0 : null === (t = _.getPreviewBio(C)) || void 0 === t ? void 0 : t.value,
         j = null != x ? x : null == _ ? void 0 : _.pronouns,
         R = (0, m.Ly)({
-            pendingNickname: I,
+            pendingNickname: g,
             pendingGlobalName: v,
             user: n,
             guildMember: Z
@@ -40,7 +40,7 @@ function _(e) {
                 profileType: E.y0.BITE_SIZE,
                 usernameIcon: (() => {
                     if (!(null != Z)) return;
-                    if (null !== g && !!(null != Z.avatar || null != g))
+                    if (null !== I && !!(null != Z.avatar || null != I))
                         return (0, r.jsx)(c.Z, {
                             user: n,
                             nickname: R
@@ -48,7 +48,7 @@ function _(e) {
                 })(),
                 nickname: R,
                 pronouns: j,
-                isTryItOut: A,
+                isTryItOut: P,
                 tags: (0, r.jsx)(a.Z, {
                     displayProfile: _,
                     profileType: E.y0.BITE_SIZE
@@ -59,7 +59,7 @@ function _(e) {
                     userId: n.id,
                     inline: !1
                 }),
-            !P &&
+            !A &&
                 null != S &&
                 '' !== S &&
                 (0, r.jsx)(d.Z, {

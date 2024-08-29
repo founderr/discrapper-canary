@@ -230,7 +230,7 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
             }
         },
         [eL.kVF.HARDWARE_MUTE]: {
-            predicate: () => eu.Z.isConnected() && er.Z.isHardwareMute(),
+            predicate: () => eu.Z.isConnected() && er.Z.isHardwareMute() && er.Z.isEnableHardwareMuteNotice(),
             metadata: () => {
                 let e = er.Z.getInputDeviceId(),
                     t = ee.Z.getVendor(e),

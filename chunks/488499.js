@@ -1,25 +1,25 @@
-n.d(t, {
+n.d(i, {
     Z: function () {
-        return s;
+        return l;
     }
 });
-var i = n(735250);
+var o = n(735250);
 n(470079);
-var o = n(180781),
-    a = n(321867),
-    r = n(486324);
-function s(e) {
-    let { type: t, analyticsPage: n, analyticsSection: s, isGIF: l, banner: c } = e;
-    return [r.pC.BANNER, r.pC.AVATAR].includes(t) && l
-        ? (0, i.jsx)(a.Z, {
-              analyticsSection: s,
-              type: t
+var t = n(180781),
+    r = n(321867),
+    a = n(486324);
+function l(e) {
+    let { type: i, analyticsPage: n, analyticsSection: l, isGIF: s, banner: c } = e;
+    return [a.pC.BANNER, a.pC.AVATAR].includes(i) && s
+        ? (0, o.jsx)(r.Z, {
+              analyticsSection: l,
+              type: i
           })
-        : t === r.pC.GUILD_BANNER
-          ? (0, i.jsx)(o.Z, {
-                analyticsSection: s,
+        : i === a.pC.GUILD_BANNER
+          ? (0, o.jsx)(t.Z, {
+                analyticsSection: l,
                 analyticsPage: n,
-                isGIF: l,
+                isGIF: s,
                 banner: c
             })
           : null;

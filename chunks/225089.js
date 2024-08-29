@@ -15,7 +15,7 @@ var s = n(481060),
 function u(e) {
     let { user: t, displayProfile: n, guildId: u, canUsePremiumCustomization: f, pendingBanner: m, isTryItOutFlow: E, disabledInputs: p, onUpsellClick: _ } = e,
         h = f || (null == n ? void 0 : n.canUsePremiumProfileCustomization) || !1,
-        g = h ? s.PencilIcon : s.NitroWheelIcon;
+        I = h ? s.PencilIcon : s.NitroWheelIcon;
     return (0, r.jsx)(i.Z, {
         user: t,
         displayProfile: n,
@@ -35,7 +35,7 @@ function u(e) {
                 },
                 className: d.clickable,
                 children: [
-                    (0, r.jsx)(g, {
+                    (0, r.jsx)(I, {
                         size: 'xs',
                         color: 'white'
                     }),

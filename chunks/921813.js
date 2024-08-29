@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return g;
     }
 });
 var r = n(735250);
@@ -19,15 +19,15 @@ var s = n(481060),
     p = n(165747),
     _ = n(981631),
     h = n(228168),
-    g = n(60638);
-function I(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: I, onUpsellClick: v, pendingBanner: C, pendingBio: x, pendingPronouns: A, pendingAvatar: P, pendingAvatarDecoration: Z, pendingNickname: T, pendingGlobalName: N, pendingThemeColors: S, pendingProfileEffectId: j, avatarClassName: R, isTryItOutFlow: M = !1, disabledInputs: O = !1, hideCustomStatus: L = !1, hideBioSection: y = !1, hideMessageInput: b = !0, hideExampleButton: B = !1 } = e,
+    I = n(60638);
+function g(e) {
+    let { user: t, guild: n, canUsePremiumCustomization: g, onUpsellClick: v, pendingBanner: C, pendingBio: x, pendingPronouns: P, pendingAvatar: A, pendingAvatarDecoration: Z, pendingNickname: T, pendingGlobalName: N, pendingThemeColors: S, pendingProfileEffectId: j, avatarClassName: R, isTryItOutFlow: M = !1, disabledInputs: O = !1, hideCustomStatus: L = !1, hideBioSection: y = !1, hideMessageInput: b = !0, hideExampleButton: B = !1 } = e,
         D = (0, l.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: U, avatarDecorationSrc: k } = (0, d.Z)({
             user: t,
             guildId: null == n ? void 0 : n.id,
             avatarDecorationOverride: Z,
-            avatarOverride: P,
+            avatarOverride: A,
             size: s.AvatarSizes.SIZE_80,
             showPending: !0
         }),
@@ -39,7 +39,7 @@ function I(e) {
             user: t,
             displayProfile: D,
             pendingThemeColors: S,
-            isPreview: I
+            isPreview: g
         });
     return (0, r.jsxs)(c.Z, {
         user: t,
@@ -47,17 +47,17 @@ function I(e) {
         profileType: h.y0.BITE_SIZE,
         pendingThemeColors: S,
         pendingProfileEffectId: w,
-        className: g.container,
-        forceShowPremium: I,
+        className: I.container,
+        forceShowPremium: g,
         children: [
             (0, r.jsxs)('header', {
-                className: g.header,
+                className: I.header,
                 children: [
                     (0, r.jsx)(m.Z, {
                         user: t,
                         displayProfile: D,
                         guildId: null == n ? void 0 : n.id,
-                        canUsePremiumCustomization: I,
+                        canUsePremiumCustomization: g,
                         pendingBanner: C,
                         isTryItOutFlow: M,
                         disabledInputs: O,
@@ -67,7 +67,7 @@ function I(e) {
                         user: t,
                         guild: n,
                         displayProfile: D,
-                        canUsePremiumCustomization: I,
+                        canUsePremiumCustomization: g,
                         previewAvatar: U,
                         previewAvatarDecoration: k,
                         previewTheme: G,
@@ -88,11 +88,11 @@ function I(e) {
                 user: t,
                 displayProfile: D,
                 guild: n,
-                pendingAvatar: P,
+                pendingAvatar: A,
                 pendingNickname: T,
                 pendingGlobalName: N,
                 pendingBio: x,
-                pendingPronouns: A,
+                pendingPronouns: P,
                 isTryItOutFlow: M,
                 hideBioSection: y
             }),

@@ -1,14 +1,14 @@
-i.d(t, {
+n.d(t, {
     M: function () {
-        return c;
+        return u;
     }
 });
-var n = i(442837),
-    o = i(987170),
-    a = i(594174),
-    l = i(111361),
-    s = i(474936);
-let r = (0, o.Z)({
+var r = n(442837),
+    i = n(987170),
+    a = n(594174),
+    s = n(111361),
+    o = n(474936);
+let l = (0, i.Z)({
     id: '2024-08_premium_user_profile_upsell_desktop',
     label: 'User Profile Upsell',
     kind: 'user',
@@ -21,9 +21,9 @@ let r = (0, o.Z)({
         }
     ]
 });
-function c(e) {
-    let t = (0, n.e7)([a.default], () => l.ZP.isPremium(a.default.getCurrentUser(), s.p9.TIER_2));
-    return r.useExperiment(
+function u(e) {
+    let t = (0, r.e7)([a.default], () => s.ZP.isPremium(a.default.getCurrentUser(), o.p9.TIER_2));
+    return l.useExperiment(
         { location: e },
         {
             autoTrackExposure: !t,

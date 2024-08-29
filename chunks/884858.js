@@ -1,14 +1,14 @@
 n.d(i, {
     Z: function () {
-        return o;
+        return s;
     }
 });
 var t = n(531643),
     a = n(403182),
-    l = n(689938);
-function o(e) {
+    o = n(689938);
+function s(e) {
     (0, t.openUploadError)({
-        title: l.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-        help: l.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: (0, a.Ng)(e) })
+        title: o.Z.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+        help: o.Z.Messages.UPLOAD_AREA_TOO_LARGE_HELP.format({ maxSize: (0, a.Ng)(e) })
     });
 }

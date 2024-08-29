@@ -1,17 +1,17 @@
-i.d(t, {
+t.d(i, {
     C: function () {
         return a;
     },
     K: function () {
-        return l;
+        return s;
     }
 });
-var n = i(981631),
-    o = i(486324);
-function a(e, t) {
-    let { isGIF: i } = t;
-    if (e === o.pC.GUILD_BANNER) return i ? n.oNc.ANIMATED_BANNER : n.oNc.BANNER;
+var n = t(981631),
+    o = t(486324);
+function a(e, i) {
+    let { isGIF: t } = i;
+    if (e === o.pC.GUILD_BANNER) return t ? n.oNc.ANIMATED_BANNER : n.oNc.BANNER;
 }
-function l(e) {
+function s(e) {
     return e === o.pC.AVATAR || e === o.pC.BANNER;
 }

@@ -813,7 +813,7 @@ class eS extends a.PureComponent {
             }),
             er(this, 'handleOpenImageCroppingModal', (e, t) => {
                 (0, E.openModalLazy)(async () => {
-                    let { default: a } = await Promise.all([n.e('48017'), n.e('76501')]).then(n.bind(n, 850085));
+                    let { default: a } = await Promise.all([n.e('48017'), n.e('68759')]).then(n.bind(n, 850085));
                     return (n) =>
                         (0, s.jsx)(a, {
                             onCrop: this.handleIconChange,
@@ -848,7 +848,7 @@ class eS extends a.PureComponent {
                     return;
                 }
                 (0, E.openModalLazy)(async () => {
-                    let { default: a } = await Promise.all([n.e('48017'), n.e('76501')]).then(n.bind(n, 850085));
+                    let { default: a } = await Promise.all([n.e('48017'), n.e('68759')]).then(n.bind(n, 850085));
                     return (n) =>
                         (0, s.jsx)(a, {
                             imgURI: e,
