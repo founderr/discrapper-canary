@@ -1,4 +1,7 @@
 n.d(t, {
+    B4: function () {
+        return eu;
+    },
     B6: function () {
         return V;
     },
@@ -598,4 +601,8 @@ function el(e) {
         f = (0, S.isMac)() && i.taskType === d.X.STREAM_ON_DESKTOP && _,
         h = [];
     return f && h.push(w.Z.Messages.QUESTS_PROGRESS_MAC_STREAMING_TIP), E && h.push(w.Z.Messages.QUESTS_PROGRESS_WEB_TIP), h;
+}
+function eu(e) {
+    var t;
+    return null !== (t = (0, f.e7)([O.Z], () => O.Z.quests).get(e)) && void 0 !== t ? t : null;
 }
