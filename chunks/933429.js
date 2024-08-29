@@ -18,8 +18,8 @@ var i,
     I = n(579806),
     m = n(726542),
     T = n(812206),
-    h = n(223892),
-    N = n(674525),
+    N = n(223892),
+    h = n(674525),
     C = n(605236),
     f = n(524347),
     p = n(853197),
@@ -72,8 +72,8 @@ var i,
     eI = n(246946),
     em = n(558724),
     eT = n(23434),
-    eh = n(594174),
-    eN = n(979651),
+    eN = n(594174),
+    eh = n(979651),
     eC = n(351402),
     ef = n(853872),
     ep = n(78839),
@@ -226,7 +226,7 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
             predicate: (e) => {
                 let { voiceChannelId: t } = e,
                     n = et.Z.getChannel(t);
-                return !er.Z.getOpenH264() && null != t && eN.Z.hasVideo(t) && null != n && n.isGuildStageVoice();
+                return !er.Z.getOpenH264() && null != t && eh.Z.hasVideo(t) && null != n && n.isGuildStageVoice();
             }
         },
         [eL.kVF.HARDWARE_MUTE]: {
@@ -270,7 +270,7 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
         [eL.kVF.VIDEO_UNSUPPORTED_BROWSER]: {
             predicate: (e) => {
                 let { voiceChannelId: t } = e;
-                return null != t && eN.Z.hasVideo(t) && !er.Z.supports(eU.AN.VIDEO) && !eY(eL.kVF.VIDEO_UNSUPPORTED_BROWSER);
+                return null != t && eh.Z.hasVideo(t) && !er.Z.supports(eU.AN.VIDEO) && !eY(eL.kVF.VIDEO_UNSUPPORTED_BROWSER);
             }
         },
         [eL.kVF.DETECTED_OFF_PLATFORM_PREMIUM_PERK]: {
@@ -520,7 +520,7 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
                 return n;
             }
         },
-        [eL.kVF.ACTIVATE_SERVER_SUBSCRIPTION]: { predicate: () => !eY(eL.kVF.ACTIVATE_SERVER_SUBSCRIPTION) && 0 !== N.Z.getEligibleGuildsForNagActivate().length && (0, h.Lm)() },
+        [eL.kVF.ACTIVATE_SERVER_SUBSCRIPTION]: { predicate: () => !eY(eL.kVF.ACTIVATE_SERVER_SUBSCRIPTION) && 0 !== h.Z.getEligibleGuildsForNagActivate().length && (0, N.Lm)() },
         [eL.kVF.GUILD_ONBOARDING_UPSELL_NAGBAR]: {
             predicate: (e) => {
                 let { selectedGuildId: t } = e;
@@ -564,13 +564,13 @@ let eW = [eL.kVF.QUARANTINED, eL.kVF.AUTOMOD_QUARANTINED_USER_PROFILE, eL.kVF.VI
 function eQ() {
     if (!A.Z.isConnected()) return !1;
     ew = null;
-    let e = eh.default.getCurrentUser();
+    let e = eN.default.getCurrentUser();
     if (null == e) return !1;
     let t = ep.ZP.getPremiumSubscription(),
         n = eC.Z.isLocalizedPromoEnabled,
         i = e_.Z.getGuildId(),
         s = ed.Z.getVoiceChannelId(),
-        a = null != s ? eN.Z.getVoiceStateForChannel(s) : null;
+        a = null != s ? eh.Z.getVoiceStateForChannel(s) : null;
     for (let o of eZ.a ? eK : eW) {
         if (null != ez[o]) {
             if (
@@ -608,7 +608,7 @@ function eq() {
 }
 class eX extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([em.Z, ec.Z, ei.Z, e_.Z, V.Z, eg.Z, $.Z, en.Z, q.Z, M.Z, W.Z, X.Z], eQ), this.waitFor(eh.default, eE.Z, ea.Z, es.ZP, eu.Z, er.Z, eI.Z, g.Z, e_.Z, eT.Z, z.Z, S.ZP, ec.Z, ex.Z, eM.Z, eA.Z, el.Z, ep.ZP, ev.Z, ei.Z, ef.Z, eo.Z, V.Z, eS.Z, eg.Z, en.Z, D.Z, f.Z, N.Z, Y.Z, W.Z, X.Z);
+        this.syncWith([em.Z, ec.Z, ei.Z, e_.Z, V.Z, eg.Z, $.Z, en.Z, q.Z, M.Z, W.Z, X.Z], eQ), this.waitFor(eN.default, eE.Z, ea.Z, es.ZP, eu.Z, er.Z, eI.Z, g.Z, e_.Z, eT.Z, z.Z, S.ZP, ec.Z, ex.Z, eM.Z, eA.Z, el.Z, ep.ZP, ev.Z, ei.Z, ef.Z, eo.Z, V.Z, eS.Z, eg.Z, en.Z, D.Z, f.Z, h.Z, Y.Z, W.Z, X.Z);
     }
     hasNotice() {
         return null != ew && null != ew.type;

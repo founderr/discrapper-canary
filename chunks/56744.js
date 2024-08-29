@@ -27,18 +27,18 @@ let E = s.memo(function (e) {
                     : null,
             [I, m]
         ),
-        h = (0, a.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]),
-        N = (0, u.Uj)(I),
+        N = (0, a.e7)([o.Z], () => null != I && o.Z.isBlockedForMessage(I), [I]),
+        h = (0, u.Uj)(I),
         C = (0, u.Uj)(t);
     return (0, i.jsx)(d.Z, {
-        repliedAuthor: N,
+        repliedAuthor: h,
         baseAuthor: C,
         baseMessage: t,
         channel: n,
         referencedMessage: _,
         content: T,
         compact: E,
-        isReplyAuthorBlocked: h
+        isReplyAuthorBlocked: N
     });
 });
 function I(e, t, n, s, a) {

@@ -20,7 +20,7 @@ function E(e) {
         { listingsLoaded: I } = (0, r.FE)(t, null == E ? void 0 : E.primarySkuId),
         m = (0, s.e7)([l.Z], () => l.Z.getSubscriptionGroupListingForApplication(t), [t]),
         T = null != m ? (0, o.Pw)(m) : null,
-        { openModal: h, canOpenModal: N } = (0, c.Z)({
+        { openModal: N, canOpenModal: h } = (0, c.Z)({
             guildId: n,
             groupListingId: null == m ? void 0 : m.id,
             showBenefitsFirst: !0,
@@ -30,8 +30,8 @@ function E(e) {
     return (0, i.jsx)(a.Button, {
         color: a.Button.Colors.BRAND,
         size: a.Button.Sizes.SMALL,
-        onClick: () => h(),
-        disabled: !N || !I,
+        onClick: () => N(),
+        disabled: !h || !I,
         children: (0, i.jsxs)('div', {
             className: _.button,
             children: [

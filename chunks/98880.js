@@ -32,13 +32,13 @@ var i,
     A = t(182906),
     E = t(823531),
     x = t(367907),
-    N = t(220082),
-    v = t(70097),
+    v = t(220082),
+    N = t(70097),
     I = t(695346),
     g = t(973616),
     S = t(768581),
-    b = t(541099),
-    P = t(573761),
+    P = t(541099),
+    b = t(573761),
     L = t(783097),
     R = t(695676),
     T = t(176412),
@@ -100,7 +100,7 @@ function D(e) {
             sectionName: a,
             sectionPosition: r
         }),
-        N = o.useMemo(() => {
+        v = o.useMemo(() => {
             let e = m ? H.containerDisabled : H.container;
             return s()(
                 e,
@@ -115,12 +115,12 @@ function D(e) {
     return m
         ? (0, l.jsx)('div', {
               ref: c ? x : void 0,
-              className: N,
+              className: v,
               children: i
           })
         : (0, l.jsx)(d.Clickable, {
               innerRef: c ? x : void 0,
-              className: N,
+              className: v,
               onClick: t,
               onContextMenu: f,
               'aria-label': O.Z.Messages.APP_LAUNCHER_APP_CARD_ARIA_LABEL.format({
@@ -158,21 +158,21 @@ function w(e) {
     let { application: n, look: t, bannerImageStyle: i, enableVideoBanner: a, disableBannerFadeIn: r, children: c } = e,
         { iconURL: u, name: m, description: p } = o.useMemo(() => (0, L.sl)(n, { fakeAppIconURL: U }), [n]),
         _ = o.useMemo(() => (null == p ? null : (0, T.ae)(p)), [p]),
-        C = (0, N.ZP)(u, ''),
+        C = (0, v.ZP)(u, ''),
         [f, h] = o.useState(!1),
         A = o.useCallback(() => {
             !0 === a && h(!0);
         }, [a]),
-        E = (0, P.R)(n),
+        E = (0, b.R)(n),
         x = 'large_banner' === t || 'medium_banner' === t,
-        v = o.useCallback(() => h(!1), []);
+        N = o.useCallback(() => h(!1), []);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)('div', {
                 onMouseEnter: A,
                 onFocus: A,
-                onMouseLeave: v,
-                onBlur: v,
+                onMouseLeave: N,
+                onBlur: N,
                 className: s()(H.bannerImageContainer, {
                     [H.mediumBanner]: 'medium_banner' === t,
                     [H.largeBanner]: 'large_banner' === t
@@ -300,7 +300,7 @@ function W(e) {
                       children: (0, l.jsx)('div', {
                           className: s()(H.activityVideo, { [H.videoFadeOut]: !t }),
                           onAnimationEnd: () => (t ? null : d(!1)),
-                          children: (0, l.jsx)(v.Z, {
+                          children: (0, l.jsx)(N.Z, {
                               src: r,
                               mediaLayoutType: Z.hV.MOSAIC,
                               loop: !0,
@@ -356,7 +356,7 @@ function z(e) {
                     application_id: n.id,
                     section_name: t,
                     search_results_position: i,
-                    source: b.Z.entrypoint(),
+                    source: P.Z.entrypoint(),
                     location: r,
                     query: a
                 }),

@@ -13,12 +13,12 @@ var i,
     I = n(630388),
     m = n(110630),
     T = n(981631);
-let h = 'ChannelFollowingBumpChannels',
-    N = new Set(),
+let N = 'ChannelFollowingBumpChannels',
+    h = new Set(),
     C = new Set();
 class f extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(u.default), (N = new Set(o.K.get(h)));
+        this.waitFor(u.default), (h = new Set(o.K.get(N)));
     }
     shouldShowBump(e) {
         return C.has(e);
@@ -37,7 +37,7 @@ class f extends (i = l.ZP.Store) {
         MESSAGE_CREATE: function (e) {
             var t;
             let { channelId: n, message: i, optimistic: s } = e;
-            if (s || N.has(n)) return !1;
+            if (s || h.has(n)) return !1;
             let a = d.Z.getChannel(n),
                 r = E.default.getCurrentUser();
             if (!(null != a && a.type === T.d4z.GUILD_ANNOUNCEMENT && (0, m.Z)(i) && (null != r && (null === (t = i.author) || void 0 === t ? void 0 : t.id) === r.id ? _.Z.can(T.Plq.SEND_MESSAGES, a) : _.Z.can(T.Plq.MANAGE_MESSAGES, a)) && !I.yE(Number(i.flags), T.iLy.CROSSPOSTED))) return !1;
@@ -56,6 +56,6 @@ class f extends (i = l.ZP.Store) {
         },
         CHANNEL_FOLLOWING_PUBLISH_BUMP_HIDE_PERMANENTLY: function (e) {
             let { channelId: t } = e;
-            N.add(t), o.K.set(h, N), C.clear();
+            h.add(t), o.K.set(N, h), C.clear();
         }
     }));

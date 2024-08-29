@@ -20,7 +20,7 @@ function f(e) {
     var n;
     let { command: t, application: f, onClick: h, query: A, searchResultsPosition: E } = e,
         x = s.Sb.useSetting(),
-        N = a.useCallback(
+        v = a.useCallback(
             (e) => {
                 if ((0, d.BQ)(f) && x) {
                     let n = f instanceof c.Z ? f : c.Z.createFromServer(f);
@@ -34,13 +34,13 @@ function f(e) {
             },
             [f, x]
         ),
-        { iconURL: v, name: I, description: g } = a.useMemo(() => (0, d.sl)(f, { fakeAppIconURL: C }), [f]),
+        { iconURL: N, name: I, description: g } = a.useMemo(() => (0, d.sl)(f, { fakeAppIconURL: C }), [f]),
         S = a.useMemo(() => {
             var e;
             let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : g;
             return null == n ? null : (0, u.ae)(n, void 0);
         }, [g, null == t ? void 0 : t.displayDescription]),
-        { trackSearchResultsItemImpressionRef: b } = (0, p.Z)({
+        { trackSearchResultsItemImpressionRef: P } = (0, p.Z)({
             applicationId: f.id,
             commandId: null == t ? void 0 : t.id,
             query: A,
@@ -48,14 +48,14 @@ function f(e) {
         });
     return (0, i.jsx)(l.Clickable, {
         className: _.clickable,
-        innerRef: (e) => (b.current = e),
+        innerRef: (e) => (P.current = e),
         onClick: h,
-        onContextMenu: N,
+        onContextMenu: v,
         children: (0, i.jsxs)(l.FocusBlock, {
             className: _.focusBlock,
             children: [
                 (0, i.jsx)(m.Z, {
-                    src: v,
+                    src: N,
                     className: _.icon,
                     'aria-hidden': !0,
                     rendersPlaceholder: !0

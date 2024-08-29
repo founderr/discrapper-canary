@@ -22,8 +22,8 @@ var i = n(735250),
     I = n(703656),
     m = n(984933),
     T = n(430824),
-    h = n(626135),
-    N = n(652515),
+    N = n(626135),
+    h = n(652515),
     C = n(550951),
     f = n(857428),
     p = n(333866),
@@ -40,7 +40,7 @@ function O(e) {
         R = (0, l.e7)([T.Z], () => T.Z.getGuild(r)),
         O = (0, l.e7)([E.Z], () => E.Z.isViewingServerShop(r)),
         x = (0, C.g)(R, 'guild_shop_page'),
-        M = (0, N.RF)(r, 'guild_shop_page'),
+        M = (0, h.RF)(r, 'guild_shop_page'),
         v = (null == R ? void 0 : R.hasFeature(S.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0,
         L = (0, _.mY)(null == R ? void 0 : R.id),
         Z = null === (t = (0, d.YB)(r)) || void 0 === t ? void 0 : t.server_shop_tab_order,
@@ -67,7 +67,7 @@ function O(e) {
                         var n;
                         (0, I.dL)(S.Z5c.CHANNEL(r, null === (n = m.ZP.getDefaultChannel(r)) || void 0 === n ? void 0 : n.id)), (t.action_taken = g.mz.DISMISS_FULL_PREVIEW);
                     }
-                    h.default.track(S.rMx.GUILD_SHOP_PREVIEW_CLICK, t);
+                    N.default.track(S.rMx.GUILD_SHOP_PREVIEW_CLICK, t);
                 }
             },
             children: n

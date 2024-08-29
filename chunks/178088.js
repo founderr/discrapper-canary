@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(675478),
     m = n(581883),
     T = n(585483),
-    h = n(153209),
-    N = n(180173),
+    N = n(153209),
+    h = n(180173),
     C = n(956961),
     f = n(903672),
     p = n(946443),
@@ -104,7 +104,7 @@ function R(e) {
                     'aria-label': A.Z.Messages.INBOX,
                     children:
                         P === l.X.FOR_YOU
-                            ? (0, i.jsx)(h.Z, {
+                            ? (0, i.jsx)(N.Z, {
                                   setTab: D,
                                   badgeState: O,
                                   closePopout: U
@@ -123,7 +123,7 @@ function R(e) {
                                       closePopout: U
                                   })
                                 : F && P === l.X.BOOKMARKS
-                                  ? (0, i.jsx)(N.Z, {
+                                  ? (0, i.jsx)(h.Z, {
                                         setTab: D,
                                         onJump: w,
                                         closePopout: U

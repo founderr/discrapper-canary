@@ -59,8 +59,8 @@ var i,
     I,
     m,
     T,
-    h = n(981631);
-function N(e, t, n) {
+    N = n(981631);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -75,19 +75,19 @@ function N(e, t, n) {
 }
 ((i = u || (u = {})).SETTINGS = 'SETTINGS'), (i.ACCOUNT_STANDING = 'ACCOUNT_STANDING'), (i.GUILD_SETTINGS = 'GUILD_SETTINGS'), (i.ENCRYPTION = 'ENCRYPTION');
 class C {}
-N(C, 'TOS_LINK', 'https://discord.com/terms'), N(C, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), N(C, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), N(C, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), N(C, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), N(C, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
+h(C, 'TOS_LINK', 'https://discord.com/terms'), h(C, 'COMMUNITY_GUIDELINES', 'https://discord.com/guidelines'), h(C, 'APPEALS_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), h(C, 'WARNING_SYSTEM_HELPCENTER_LINK', 'https://support.discord.com/hc/articles/18210965981847'), h(C, 'AGE_VERIFICATION_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731'), h(C, 'SPAM_LINK', 'https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__');
 class f {}
-N(f, 'CLASSIFICATION_ID', 'classification_id'), N(f, 'INCIDENT_TIMESTAMP', 'incident_time'), ((s = d || (d = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (s.LEARN_MORE_LINK = 'learn_more_link');
+h(f, 'CLASSIFICATION_ID', 'classification_id'), h(f, 'INCIDENT_TIMESTAMP', 'incident_time'), ((s = d || (d = {})).POLICY_VIOLATION_DETAIL = 'policy_violation_detail'), (s.LEARN_MORE_LINK = 'learn_more_link');
 class p {}
-N(p, 'ICON_TYPE', 'icon_type'),
-    N(p, 'HEADER', 'header'),
-    N(p, 'BODY', 'body'),
-    N(p, 'CTAS', 'ctas'),
-    N(p, 'TIMESTAMP', 'timestamp'),
-    N(p, 'THEME', 'theme'),
-    N(p, 'CLIENT_VERSION_MESSAGE', 'client_version_message'),
-    N(p, 'LEARN_MORE_LINK', 'learn_more_link'),
-    N(p, 'CLASSIFICATION_ID', 'classification_id'),
+h(p, 'ICON_TYPE', 'icon_type'),
+    h(p, 'HEADER', 'header'),
+    h(p, 'BODY', 'body'),
+    h(p, 'CTAS', 'ctas'),
+    h(p, 'TIMESTAMP', 'timestamp'),
+    h(p, 'THEME', 'theme'),
+    h(p, 'CLIENT_VERSION_MESSAGE', 'client_version_message'),
+    h(p, 'LEARN_MORE_LINK', 'learn_more_link'),
+    h(p, 'CLASSIFICATION_ID', 'classification_id'),
     ((a = _ || (_ = {}))[(a.ViewViolationDetail = 0)] = 'ViewViolationDetail'),
     (a[(a.ViewViolationsDropdown = 1)] = 'ViewViolationsDropdown'),
     (a[(a.ClickLetUsKnow = 2)] = 'ClickLetUsKnow'),
@@ -100,12 +100,12 @@ N(p, 'ICON_TYPE', 'icon_type'),
     (r[(r.StandingTab = 1)] = 'StandingTab'),
     (r[(r.AppealIngestion = 2)] = 'AppealIngestion'),
     Object.freeze({
-        SPEED_BUMP: h.jXE.APPEAL_INGESTION_SPEED_BUMP,
-        COLLECT_SIGNAL: h.jXE.APPEAL_INGESTION_COLLECT_SIGNAL,
-        CONFIRM_SUBMISSION: h.jXE.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-        REQUEST_SENT: h.jXE.APPEAL_INGESTION_REQUEST_SENT,
-        THANKS: h.jXE.APPEAL_INGESTION_THANKS,
-        SPAM: h.jXE.APPEAL_INGESTION_SPAM
+        SPEED_BUMP: N.jXE.APPEAL_INGESTION_SPEED_BUMP,
+        COLLECT_SIGNAL: N.jXE.APPEAL_INGESTION_COLLECT_SIGNAL,
+        CONFIRM_SUBMISSION: N.jXE.APPEAL_INGESTION_CONFIRM_SUBMISSION,
+        REQUEST_SENT: N.jXE.APPEAL_INGESTION_REQUEST_SENT,
+        THANKS: N.jXE.APPEAL_INGESTION_THANKS,
+        SPAM: N.jXE.APPEAL_INGESTION_SPAM
     }),
     ((l = I || (I = {}))[(l.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'),
     (l[(l.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'),

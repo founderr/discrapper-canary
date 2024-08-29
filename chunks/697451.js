@@ -17,8 +17,8 @@ var i = n(735250),
     I = n(403404),
     m = n(100527),
     T = n(906732),
-    h = n(783097),
-    N = n(592180),
+    N = n(783097),
+    h = n(592180),
     C = n(103575),
     f = n(768581),
     p = n(585483),
@@ -105,7 +105,7 @@ function Z(e) {
                             ? T
                             : void 0;
                 }
-                let h = () =>
+                let N = () =>
                     null != s.interaction &&
                     (function (e) {
                         let { user: t, guildId: n, guildAvatar: s, onClick: a, onContextMenu: l, onMouseDown: o } = e;
@@ -133,9 +133,9 @@ function Z(e) {
                           shouldShow: c,
                           position: 'right',
                           onRequestClose: E,
-                          children: h
+                          children: N
                       })
-                    : h();
+                    : N();
             })(e, (e) => Z(e, U.user, [m.Z.AVATAR])),
             n = (function (e, t, n) {
                 var s;
@@ -161,7 +161,7 @@ function Z(e) {
             'user'
         );
     };
-    if ((null == a ? void 0 : a.activityInstance) === null || (0, N.g)(a))
+    if ((null == a ? void 0 : a.activityInstance) === null || (0, h.g)(a))
         n = M.Z.Messages.APPLICATION_COMMAND_USED_SHORT.format({
             userHook: y,
             commandHook: () => {
@@ -197,8 +197,8 @@ function Z(e) {
                                         ]
                                     })
                                 });
-                            if ((0, N.g)(s)) {
-                                let e = (0, h.XZ)(o);
+                            if ((0, h.g)(s)) {
+                                let e = (0, N.XZ)(o);
                                 return (0, i.jsx)(d.Clickable, {
                                     ...n,
                                     tag: 'span',

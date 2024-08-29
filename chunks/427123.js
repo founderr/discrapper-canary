@@ -13,8 +13,8 @@ var i,
     I = n(728345),
     m = n(812206),
     T = n(594190),
-    h = n(594174),
-    N = n(580130),
+    N = n(594174),
+    h = n(580130),
     C = n(55563),
     f = n(981631);
 let p = 'DetectedOffPlatformPremiumPerksStore',
@@ -35,7 +35,7 @@ function R() {
             !C.Z.isFetching(t) && !C.Z.didFetchingSkuFail(t) && E.$N(i.id, t);
             continue;
         }
-        N.Z.applicationIdsFetching.has(i.id) || N.Z.isEntitledToSku(h.default.getCurrentUser(), t, i.id, i.id) || !s.available
+        h.Z.applicationIdsFetching.has(i.id) || h.Z.isEntitledToSku(N.default.getCurrentUser(), t, i.id, i.id) || !s.available
             ? null != g[t] && (delete g[t], (e = !0))
             : ((g[t] = {
                   skuId: t,
@@ -48,7 +48,7 @@ function R() {
 class O extends (i = c.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(T.ZP, C.Z, N.Z), (A = null !== (e = u.K.get(p)) && void 0 !== e ? e : A);
+        this.waitFor(T.ZP, C.Z, h.Z), (A = null !== (e = u.K.get(p)) && void 0 !== e ? e : A);
     }
     getDetectedOffPlatformPremiumPerks() {
         return o().values(g);
@@ -83,7 +83,7 @@ class O extends (i = c.ZP.Store) {
                     for (let { skuId: n, applicationId: i } of f.Lg6) {
                         if (!(i !== t || A.includes(n)))
                             null == S[n] &&
-                                (!N.Z.applicationIdsFetched.has(i) && !N.Z.applicationIdsFetching.has(i) && null == N.Z.getForSku(n) && _.yD(i),
+                                (!h.Z.applicationIdsFetched.has(i) && !h.Z.applicationIdsFetching.has(i) && null == h.Z.getForSku(n) && _.yD(i),
                                 (S[n] = {
                                     skuId: n,
                                     applicationId: i

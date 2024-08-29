@@ -36,13 +36,13 @@ var i = n(735250),
     I = n(630388),
     m = n(591759),
     T = n(850908),
-    h = n(524444),
-    N = n(981631),
+    N = n(524444),
+    h = n(981631),
     C = n(689938),
     f = n(789714);
 function p(e) {
     let t = e.item.originalItem;
-    return (0, h.Yi)({
+    return (0, N.Yi)({
         ...e,
         alt: t.description,
         src: (0, E.q)({
@@ -62,7 +62,7 @@ function g(e) {
     let t = e.item.originalItem,
         n = s.useCallback(() => {
             var e;
-            return (0, I.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, N.J0y.IS_CLIP)
+            return (0, I.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, h.J0y.IS_CLIP)
                 ? (0, i.jsxs)(l.DY, {
                       text: C.Z.Messages.CLIPS_BETA_TAG_HOVER,
                       className: f.clipPill,
@@ -84,7 +84,7 @@ function g(e) {
     return null == a
         ? null
         : (a.searchParams.append('format', 'webp'),
-          (0, h.lV)({
+          (0, N.lV)({
               ...e,
               alt: t.description,
               poster: a.toString(),
@@ -102,7 +102,7 @@ function g(e) {
 }
 function S(e) {
     let t = e.item.originalItem;
-    return (0, h.hX)({
+    return (0, N.hX)({
         ...e,
         fileSize: t.size,
         fileName: (0, T.Z)(t),
@@ -133,7 +133,7 @@ function A(e) {
             },
             [t]
         );
-    return (0, h.wj)({
+    return (0, N.wj)({
         ...e,
         fileSize: i.size,
         fileName: (0, T.Z)(i),
@@ -147,7 +147,7 @@ function A(e) {
 }
 function R(e) {
     let t = e.item.originalItem;
-    return (0, h.xi)({
+    return (0, N.xi)({
         ...e,
         url: t.url,
         fileName: (0, T.Z)(t),
@@ -157,7 +157,7 @@ function R(e) {
 }
 function O(e) {
     let t = e.item.originalItem;
-    return (0, h.ur)({
+    return (0, N.ur)({
         ...e,
         url: t.url,
         fileName: (0, T.Z)(t),

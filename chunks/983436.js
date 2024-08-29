@@ -18,8 +18,8 @@ var i = n(735250),
 function m(e) {
     var t;
     let { guild: n, channel: m, messageData: T } = e,
-        h = u.Z.getGuildId(),
-        N = c.Z.getChannelId(h),
+        N = u.Z.getGuildId(),
+        h = c.Z.getChannelId(N),
         C = s.useCallback(() => {
             var e;
             d.default.track(_.rMx.CHANNEL_LINK_PREVIEW_JOINED, {
@@ -27,12 +27,12 @@ function m(e) {
                 link_guild_id: n.id,
                 link_channel_id: m.id,
                 link_channel_type: m.type,
-                guild_id: h,
-                channel_id: N
+                guild_id: N,
+                channel_id: h
             }),
                 (0, r.K)(n.id, m.id),
                 a.default.selectVoiceChannel(m.id);
-        }, [null === (t = T.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, h, N]),
+        }, [null === (t = T.author) || void 0 === t ? void 0 : t.id, n.id, m.id, m.type, N, h]),
         f = (0, i.jsx)(o.Z.Channel, { channel: m });
     return (0, i.jsx)(o.Z, {
         children: (0, i.jsxs)(o.Z.Body, {

@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(626135),
     m = n(709054),
     T = n(838440),
-    h = n(981631),
-    N = n(310004);
+    N = n(981631),
+    h = n(310004);
 function C(e) {
     let { assets: t, currentUser: n, message: i } = e,
         s = (m.default.extractTimestamp(n.id) + m.default.extractTimestamp(i.id)) % t.length;
@@ -27,7 +27,7 @@ function C(e) {
 }
 function f(e) {
     let { currentUser: t, channel: n, message: a, buttonLabels: u, stickers: d, event: _, eventProperties: E } = e,
-        [m, h] = s.useState(!1),
+        [m, N] = s.useState(!1),
         f = s.useMemo(
             () =>
                 C({
@@ -84,15 +84,15 @@ function f(e) {
                 }));
         }, [n, a, f, _, E]);
     return (0, i.jsxs)(r.Button, {
-        className: N.CTAMessageButtonOuter,
-        innerClassName: N.CTAMessageButton,
+        className: h.CTAMessageButtonOuter,
+        innerClassName: h.CTAMessageButton,
         color: r.ButtonColors.PRIMARY,
-        onMouseEnter: () => h(!0),
-        onMouseLeave: () => h(!1),
+        onMouseEnter: () => N(!0),
+        onMouseLeave: () => N(!1),
         onClick: g,
         children: [
             (0, i.jsx)(c.ZP, {
-                className: N.CTAMessageSticker,
+                className: h.CTAMessageSticker,
                 isInteracting: m,
                 sticker: f,
                 size: 28
@@ -111,7 +111,7 @@ function p(e) {
                 let s = t.guild_id;
                 if (null == i || null == s) return !1;
                 let a = (0, u.xl)(t),
-                    r = _.Z.can(h.Plq.SEND_MESSAGES, t),
+                    r = _.Z.can(N.Plq.SEND_MESSAGES, t),
                     l = null === (e = d.ZP.getMember(s, i.id)) || void 0 === e ? void 0 : e.isPending,
                     o = n.author.bot;
                 return r && !a && !l && !o;
@@ -123,7 +123,7 @@ function p(e) {
         });
     return null != c && I
         ? (0, i.jsx)('div', {
-              className: N.CTAMessage,
+              className: h.CTAMessage,
               children: (0, i.jsx)(f, {
                   currentUser: c,
                   channel: t,

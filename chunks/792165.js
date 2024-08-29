@@ -18,14 +18,14 @@ var s = n(442837),
     I = n(981631),
     m = n(921944),
     T = n(474936),
-    h = n(526761),
-    N = n(689938),
+    N = n(526761),
+    h = n(689938),
     C = n(641969);
 function f(e) {
     var t;
     let { onClose: n, markAsDismissed: f } = e,
         p = (0, s.e7)([_.default], () => _.default.getCurrentUser());
-    let g = (t = null == p ? void 0 : p.premiumType) === T.p9.TIER_2 ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : N.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
+    let g = (t = null == p ? void 0 : p.premiumType) === T.p9.TIER_2 ? h.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_TIER_2 : null == t ? h.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_SUB : h.Z.Messages.CALL_SOUNDS_UPSELL_DESCRIPTION_NON_TIER_2,
         S = E.ZP.canUseCustomCallSounds(p);
     return (0, i.jsxs)(d.Z, {
         isShown: !0,
@@ -37,7 +37,7 @@ function f(e) {
                 ? (0, i.jsx)(o.Clickable, {
                       className: C.close,
                       onClick: () => (null == f ? void 0 : f(m.L.DISMISS)),
-                      'aria-label': N.Z.Messages.CLOSE,
+                      'aria-label': h.Z.Messages.CLOSE,
                       children: (0, i.jsx)(o.XSmallIcon, {
                           size: 'xs',
                           color: 'currentColor',
@@ -55,7 +55,7 @@ function f(e) {
                     }),
                     (0, i.jsx)(r.X, {
                         variant: 'heading-sm/bold',
-                        children: N.Z.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB
+                        children: h.Z.Messages.CALL_SOUNDS_UPSELL_TITLE_NON_SUB
                     })
                 ]
             }),
@@ -66,12 +66,12 @@ function f(e) {
             S
                 ? (0, i.jsx)(a.zx, {
                       onClick: function () {
-                          c.Z.open(I.oAB.VOICE, h.GA), null == n || n(), null == f || f(m.L.PRIMARY);
+                          c.Z.open(I.oAB.VOICE, N.GA), null == n || n(), null == f || f(m.L.PRIMARY);
                       },
-                      children: N.Z.Messages.CHECK_IT_OUT
+                      children: h.Z.Messages.CHECK_IT_OUT
                   })
                 : (0, i.jsx)(u.Z, {
-                      buttonText: N.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
+                      buttonText: h.Z.Messages.PREMIUM_UPSELL_GET_NITRO,
                       subscriptionTier: T.Si.TIER_2,
                       premiumModalAnalyticsLocation: {
                           section: I.jXE.SOUNDBOARD_SOUND_PICKER,

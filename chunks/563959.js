@@ -20,8 +20,8 @@ var i = n(735250),
     I = n(91047),
     m = n(628566),
     T = n(693912),
-    h = n(981631);
-function N(e, t) {
+    N = n(981631);
+function h(e, t) {
     return s.useCallback(
         (s) => (l, o) => {
             var c;
@@ -31,10 +31,10 @@ function N(e, t) {
                     bot: s.bot,
                     botIconFirst: !0
                 }),
-                h = _.default.getUser(null === (c = s.bot) || void 0 === c ? void 0 : c.id),
-                N = m.Z.getIntegration(e.id, s.id),
+                N = _.default.getUser(null === (c = s.bot) || void 0 === c ? void 0 : c.id),
+                h = m.Z.getIntegration(e.id, s.id),
                 C =
-                    e.isPrivate() && null != N
+                    e.isPrivate() && null != h
                         ? (t) => {
                               (0, r.jW)(t, async () => {
                                   let { default: t } = await n.e('30887').then(n.bind(n, 496281));
@@ -42,12 +42,12 @@ function N(e, t) {
                                       (0, i.jsx)(t, {
                                           ...n,
                                           channel: e,
-                                          integration: N
+                                          integration: h
                                       });
                               });
                           }
-                        : null != h
-                          ? (t) => (0, I.Pv)(t, h, e)
+                        : null != N
+                          ? (t) => (0, I.Pv)(t, N, e)
                           : void 0,
                 { bot: f } = s;
             return null == f
@@ -93,7 +93,7 @@ function C(e) {
             guildId: s.guild_id,
             messageId: t.id
         }),
-        _ = N(s, t);
+        _ = h(s, t);
     return (0, i.jsx)(c.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
@@ -102,7 +102,7 @@ function C(e) {
             application: u,
             username: r.nick,
             usernameHook: d(r),
-            applicationNameHook: null != u ? _(u) : h.dG4
+            applicationNameHook: null != u ? _(u) : N.dG4
         })
     });
 }
@@ -116,7 +116,7 @@ function f(e) {
             guildId: s.guild_id,
             messageId: t.id
         }),
-        _ = N(s, t);
+        _ = h(s, t);
     return (0, i.jsx)(c.Z, {
         icon: n(474019),
         timestamp: t.timestamp,
@@ -125,7 +125,7 @@ function f(e) {
             application: u,
             username: r.nick,
             usernameHook: d(r),
-            applicationNameHook: null != u ? _(u) : h.dG4
+            applicationNameHook: null != u ? _(u) : N.dG4
         })
     });
 }

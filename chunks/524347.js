@@ -12,13 +12,13 @@ var i,
     I = n(314897),
     m = n(70956),
     T = n(960359),
-    h = n(853197),
-    N = n(288836);
+    N = n(853197),
+    h = n(288836);
 let C = null,
     f = null,
     p = {},
     g = {},
-    S = N._e.LOADING_INITIAL_PROGRESS,
+    S = h._e.LOADING_INITIAL_PROGRESS,
     A = new u.V7(),
     R = {
         completed: !1,
@@ -36,7 +36,7 @@ let C = null,
                   });
     },
     x = (e) => {
-        (R.retries = 0), (R.completed = e.completed), (R.initialProgressFetched = !0), (R.progress = e.progress), (R.lastCheckedAt = o().now()), (S = R.completed ? N._e.QUEST_COMPLETION : N._e.TRACK_PROGRESS);
+        (R.retries = 0), (R.completed = e.completed), (R.initialProgressFetched = !0), (R.progress = e.progress), (R.lastCheckedAt = o().now()), (S = R.completed ? h._e.QUEST_COMPLETION : h._e.TRACK_PROGRESS);
     },
     M = (e, t, n) => {
         if (!R.completed || e.dropsQuestId !== R.dropsQuestId) (R.game = t), (R.dropsQuestId = e.dropsQuestId), (R.gameTitle = e.title), (R.completed = !1), (R.interrupted = !1), (R.streamKey = n), (R.retries = 0), (R.lastCheckedAt = o().now()), A.start(5000, () => O(!0));
@@ -50,7 +50,7 @@ class v extends (r = c.ZP.Store) {
     }
     getIsPartnerGameQuestComplete(e) {
         var t;
-        let n = (0, h.BS)(e);
+        let n = (0, N.BS)(e);
         if (null == n || null == f) return !1;
         let i = !!(null === (t = f[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at);
         return (R.completed && R.gameTitle === n.title) || i;
@@ -103,7 +103,7 @@ class v extends (r = c.ZP.Store) {
             p[e.dropsQuestId] = e.isEligible;
         },
         DROPS_PLATFORM_AVAILABILITY_SUCCESS: (e) => {
-            C = e.availablePlatforms.filter((e) => N.El.includes(e));
+            C = e.availablePlatforms.filter((e) => h.El.includes(e));
         },
         DROPS_USER_STATUS_FETCH_SUCCESS: (e) => {
             var t;
@@ -120,7 +120,7 @@ class v extends (r = c.ZP.Store) {
         },
         DROPS_FETCH_PROGRESS_SUCCESS: x,
         DROPS_FETCH_PROGRESS_FAILURE: (e) => {
-            if (!R.initialProgressFetched) (R.initialProgressFetched = !0), (S = N._e.STREAM_CTA);
+            if (!R.initialProgressFetched) (R.initialProgressFetched = !0), (S = h._e.STREAM_CTA);
         },
         DROPS_HEARTBEAT_SUCCESS: (e) => {
             x(e), (p[e.dropsQuestId] = !0), O();
@@ -131,7 +131,7 @@ class v extends (r = c.ZP.Store) {
                 (R.retries = R.retries + 1), O();
                 return;
             }
-            (S = N._e.STREAM_CTA), 403 === n ? (p[t] = !1) : (R.interrupted = !0);
+            (S = h._e.STREAM_CTA), 403 === n ? (p[t] = !1) : (R.interrupted = !0);
         },
         DROPS_UNENROLL_USER: (e) => {
             (f = null),
@@ -148,7 +148,7 @@ class v extends (r = c.ZP.Store) {
                     });
         },
         STREAM_CLOSE: () => {
-            R.completed && (S = N._e.QUEST_COMPLETION), (R.interrupted = !1), (R.retries = 0), A.stop();
+            R.completed && (S = h._e.QUEST_COMPLETION), (R.interrupted = !1), (R.retries = 0), A.stop();
         },
         STREAM_START: function (e) {
             var t;
@@ -162,14 +162,14 @@ class v extends (r = c.ZP.Store) {
             if (null == a) return;
             let l = _.ZP.getGameForPID(a);
             if (null == l) return;
-            let o = Object.values(N.Zv).find((e) =>
+            let o = Object.values(h.Zv).find((e) =>
                 e.gameSearchTerm.find((e) => {
                     var t;
                     return e.toLowerCase() === (null === (t = l.name) || void 0 === t ? void 0 : t.toLowerCase());
                 })
             );
-            if (null == o || (0, h.hM)(o)) return;
-            let c = null === (t = (0, h.j7)(o)) || void 0 === t ? void 0 : t.getCurrentConfig({ location: '1' }, { autoTrackExposure: !1 });
+            if (null == o || (0, N.hM)(o)) return;
+            let c = null === (t = (0, N.j7)(o)) || void 0 === t ? void 0 : t.getCurrentConfig({ location: '1' }, { autoTrackExposure: !1 });
             if (null == c || !c.dropsEnabled) return;
             let u = c.autoEnrollment;
             (null != g[o.dropsQuestId] && g[o.dropsQuestId].isEnrolled) || u

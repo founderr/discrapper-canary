@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(838440),
     m = n(779139),
     T = n(981631),
-    h = n(689938),
-    N = n(298226);
+    N = n(689938),
+    h = n(298226);
 let C = (e) => {
         let { channel: t, message: n } = e,
             [a, c] = s.useState(!1),
@@ -35,22 +35,22 @@ let C = (e) => {
                 });
             }, [t, n, u]);
         return (0, i.jsx)('div', {
-            className: N.welcomeCTA,
+            className: h.welcomeCTA,
             children: (0, i.jsxs)(r.Button, {
-                className: N.welcomeCTAButtonOuter,
-                innerClassName: N.welcomeCTAButton,
+                className: h.welcomeCTAButtonOuter,
+                innerClassName: h.welcomeCTAButton,
                 color: r.ButtonColors.PRIMARY,
                 onMouseEnter: () => c(!0),
                 onMouseLeave: () => c(!1),
                 onClick: d,
                 children: [
                     (0, i.jsx)(o.ZP, {
-                        className: N.welcomeCTASticker,
+                        className: h.welcomeCTASticker,
                         isInteracting: a,
                         sticker: u,
                         size: 28
                     }),
-                    h.Z.Messages.WELCOME_CTA_LABEL
+                    N.Z.Messages.WELCOME_CTA_LABEL
                 ]
             })
         });

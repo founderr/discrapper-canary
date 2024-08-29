@@ -20,11 +20,11 @@ let E = new Map(),
     I = new Map(),
     m = [],
     T = 0,
-    h = [];
-class N extends (s = c.ZP.Store) {
+    N = [];
+class h extends (s = c.ZP.Store) {
     getIntegrations(e) {
         var t;
-        return null !== (t = E.get(e)) && void 0 !== t ? t : h;
+        return null !== (t = E.get(e)) && void 0 !== t ? t : N;
     }
     getIntegration(e, t) {
         var n;
@@ -48,7 +48,7 @@ function C(e) {
     return e.sort((e, t) => e.application.name.localeCompare(t.application.name));
 }
 (o = 'PrivateChannelIntegrationStore'),
-    (l = 'displayName') in (r = N)
+    (l = 'displayName') in (r = h)
         ? Object.defineProperty(r, l, {
               value: o,
               enumerable: !0,
@@ -56,7 +56,7 @@ function C(e) {
               writable: !0
           })
         : (r[l] = o);
-let f = new N(u.Z, {
+let f = new h(u.Z, {
     LOGOUT() {
         E.clear();
     },

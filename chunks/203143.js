@@ -21,8 +21,8 @@ var i = n(512722),
     I = n(367907),
     m = n(41776),
     T = n(566006),
-    h = n(48854),
-    N = n(869765),
+    N = n(48854),
+    h = n(869765),
     C = n(314897),
     f = n(592125),
     p = n(703558),
@@ -343,7 +343,7 @@ async function G(e) {
                 items: c,
                 token: e,
                 poll: d,
-                nonce: (0, h.r)(),
+                nonce: (0, N.r)(),
                 maxSizeCallback: () => {}
             });
         } else await _.Z.sendPollMessage(t.id, d);
@@ -385,7 +385,7 @@ t.Z = {
                         channelId: t,
                         messageId: n
                     };
-                let a = N.Z.getMessage(t, n);
+                let a = h.Z.getMessage(t, n);
                 if (null != a.message)
                     return {
                         channelId: t,

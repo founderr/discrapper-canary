@@ -19,8 +19,8 @@ var i = n(735250),
     I = n(222677),
     m = n(995774),
     T = n(931651),
-    h = n(594174),
-    N = n(630388),
+    N = n(594174),
+    h = n(630388),
     C = n(74538),
     f = n(566006),
     p = n(981631),
@@ -48,8 +48,8 @@ class M extends s.Component {
             { isReactionPickerActive: o } = this.state,
             c = t.state === p.yb.SENDING,
             E = e === f.O.BURST;
-        if (c || (0, N.yE)(t.flags, p.iLy.EPHEMERAL)) return null;
-        let I = h.default.getCurrentUser(),
+        if (c || (0, h.yE)(t.flags, p.iLy.EPHEMERAL)) return null;
+        let I = N.default.getCurrentUser(),
             m = (0, C.I5)(I),
             T = E ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
         !m && E && (T = (0, i.jsx)(_.X, { tooltipText: A.Z.Messages.ADD_BURST_REACTION }));
@@ -112,7 +112,7 @@ class M extends s.Component {
             x(this, 'handleAddReactionClick', (e) => {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
-                let i = h.default.getCurrentUser();
+                let i = N.default.getCurrentUser();
                 t === f.O.BURST &&
                     !(0, C.I5)(i) &&
                     (0, E.openBurstReactionsUpsellModal)({

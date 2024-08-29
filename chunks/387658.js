@@ -22,13 +22,13 @@ var i = t(735250),
     A = t(585483),
     E = t(499254),
     x = t(541099),
-    N = t(827498),
-    v = t(496158),
+    v = t(827498),
+    N = t(496158),
     I = t(676161),
     g = t(660090),
     S = t(783097),
-    b = t(845936),
-    P = t(176412),
+    P = t(845936),
+    b = t(176412),
     L = t(870205),
     R = t(981631),
     T = t(689079),
@@ -42,7 +42,7 @@ function H(e) {
     let { channel: l, command: o, section: s, sectionName: c } = e,
         u = a.useCallback(() => {
             let e = x.Z.entrypoint();
-            E.y(N.ti.COMMAND),
+            E.y(v.ti.COMMAND),
                 (0, h.Mo)({
                     command: o,
                     location: f.Vh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -60,7 +60,7 @@ function H(e) {
                 A.S.dispatch(R.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
         }, [l.id, o, s, c]),
         m = (null !== (t = null === (n = o.options) || void 0 === n ? void 0 : n.length) && void 0 !== t ? t : 0) > 0,
-        _ = a.useMemo(() => (0, P.ae)(o.displayDescription, void 0), [o.displayDescription]),
+        _ = a.useMemo(() => (0, b.ae)(o.displayDescription, void 0), [o.displayDescription]),
         C = a.useMemo(
             () =>
                 (0, i.jsxs)('div', {
@@ -154,14 +154,14 @@ function k(e) {
     let { channel: n, command: t, sectionName: l } = e,
         o = (0, _.PL)(!0, !0),
         r = (0, _.LD)(n.guild_id, !0),
-        c = (0, v.D)(n),
+        c = (0, N.D)(n),
         [u, m] = a.useState(!1),
         p = a.useCallback(
             async (e) => {
                 e.stopPropagation();
                 let n = x.Z.lastShownEntrypoint();
                 try {
-                    (await (0, b.L)({
+                    (await (0, P.L)({
                         applicationId: t.applicationId,
                         userIndexState: o,
                         guildIndexState: r,
@@ -175,7 +175,7 @@ function k(e) {
                             context: c,
                             sectionName: l
                         }),
-                        E.y(N.ti.COMMAND));
+                        E.y(v.ti.COMMAND));
                 } finally {
                     m(!1);
                 }

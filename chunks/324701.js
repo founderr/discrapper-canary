@@ -32,7 +32,7 @@ async function m(e) {
         });
         return;
     }
-    let h = await (0, u.XA)(m).catch((e) => {
+    let N = await (0, u.XA)(m).catch((e) => {
         var t, n, i;
         return (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code) === d.evJ.TOO_MANY_SAVED_MESSAGES
             ? (a.Z.show({
@@ -45,7 +45,7 @@ async function m(e) {
               null)
             : ((0, s.showToast)((0, s.createToast)(null !== (i = null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.message) && void 0 !== i ? i : I.Z.Messages.ERROR_GENERIC_TITLE, s.ToastType.FAILURE)), null);
     });
-    if (t && null != h) {
+    if (t && null != N) {
         let e = null != m.dueAt ? I.Z.Messages.MESSAGE_REMINDERS_CREATE_SUCCESS : I.Z.Messages.MESSAGE_BOOKMARKS_CREATE_SUCCESS_LONG,
             t = null != m.dueAt ? s.ToastType.CLOCK : s.ToastType.BOOKMARK;
         (0, s.showToast)((0, s.createToast)(e, t));

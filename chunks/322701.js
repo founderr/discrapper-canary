@@ -9,18 +9,18 @@ var a = n(924826),
     d = n(981631),
     u = n(49175);
 t.Z = function (e) {
-    let { statusSections: t, renderRow: n, searchQuery: _, sectionFilter: E, useReducedMotion: h, footer: m } = e,
-        I = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled),
-        g = (0, a.ZP)({
+    let { statusSections: t, renderRow: n, searchQuery: _, sectionFilter: E, useReducedMotion: h } = e,
+        m = (0, r.e7)([c.Z], () => c.Z.keyboardModeEnabled),
+        I = (0, a.ZP)({
             id: 'people',
-            isEnabled: I,
+            isEnabled: m,
             async scrollToStart() {},
             async scrollToEnd() {}
         }),
-        p = E !== d.pJs.ONLINE && E !== d.pJs.ALL,
-        T = h || '' !== _ || p,
-        f = t.map((e, t) =>
-            T
+        g = E !== d.pJs.ONLINE && E !== d.pJs.ALL,
+        p = h || '' !== _ || g,
+        T = t.map((e, t) =>
+            p
                 ? (0, i.jsx)('div', { children: e.map(n) }, t)
                 : (0, i.jsx)(
                       l.W,
@@ -33,15 +33,15 @@ t.Z = function (e) {
                   )
         );
     return (0, i.jsx)(s.bG, {
-        navigator: g,
+        navigator: I,
         children: (0, i.jsx)(s.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;
-                return (0, i.jsxs)(o.ScrollerAuto, {
+                return (0, i.jsx)(o.ScrollerAuto, {
                     ref: t,
                     className: u.peopleList,
                     ...n,
-                    children: [f, m]
+                    children: T
                 });
             }
         })

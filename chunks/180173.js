@@ -18,8 +18,8 @@ var s = n(120356),
     I = n(592125),
     m = n(655354),
     T = n(324081),
-    h = n(240126),
-    N = n(791914),
+    N = n(240126),
+    h = n(791914),
     C = n(981631),
     f = n(689938),
     p = n(72506),
@@ -36,7 +36,7 @@ function A(e) {
     return (0, i.jsxs)('div', {
         className: p.container,
         children: [
-            (0, i.jsx)(N.Z, {
+            (0, i.jsx)(h.Z, {
                 tab: l.X.BOOKMARKS,
                 setTab: t,
                 closePopout: n
@@ -99,7 +99,7 @@ function R(e) {
     });
 }
 function O() {
-    return (0, i.jsx)(h.Z, {
+    return (0, i.jsx)(N.Z, {
         Icon: o.DoubleCheckmarkIcon,
         header: f.Z.Messages.MESSAGE_BOOKMARKS_EMPTY,
         tip: f.Z.Messages.MESSAGE_BOOKMARKS_EMPTY_TIP

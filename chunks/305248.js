@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(592125),
     m = n(823379),
     T = n(709054),
-    h = n(124368),
-    N = n(742644);
+    N = n(124368),
+    h = n(742644);
 function C(e) {
     let { channel: t, channelRecord: n, deleteChannel: a } = e,
         C = (0, l.Wu)(
@@ -41,7 +41,7 @@ function C(e) {
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
         f = s.useCallback((e, t) => {
-            (0, E.ok)(e, t, h.on.INBOX);
+            (0, E.ok)(e, t, N.on.INBOX);
         }, []);
     return (
         s.useEffect(() => {
@@ -55,14 +55,14 @@ function C(e) {
                 });
         }),
         (0, i.jsx)('div', {
-            className: N.container,
+            className: h.container,
             children: C.map((e) =>
                 (0, i.jsx)(
                     d.oL,
                     {
                         createStore: () => (0, d.NU)(n),
                         children: (0, i.jsx)(u.ZP, {
-                            className: N.forumPost,
+                            className: h.forumPost,
                             threadId: e.id,
                             goToThread: f
                         })

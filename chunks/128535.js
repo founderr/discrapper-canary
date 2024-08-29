@@ -14,8 +14,8 @@ var s = n(120356),
     I = n(113434),
     m = n(918701),
     T = n(566078),
-    h = n(667105),
-    N = n(981631),
+    N = n(667105),
+    h = n(981631),
     C = n(689938),
     f = n(410301);
 let p = (e) => (0 === e.length ? f.warning : f.danger),
@@ -37,7 +37,7 @@ let p = (e) => (0 === e.length ? f.warning : f.danger),
                 let i = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
                     s = (0, m.C9)(e),
                     a = (0, m._j)(e),
-                    l = a === N.ABu.XBOX;
+                    l = a === h.ABu.XBOX;
                 return s.format({
                     account_name: null == i ? void 0 : i.name,
                     onClick: () => {
@@ -66,16 +66,16 @@ let p = (e) => (0 === e.length ? f.warning : f.danger),
 t.Z = function (e) {
     let t = T.r.build(e.quest.config).application.name,
         n = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        s = (0, h.k3)(e.quest.id, e.location),
+        s = (0, N.k3)(e.quest.id, e.location),
         r = (0, E.n)(),
-        u = (0, h.g2)({
+        u = (0, N.g2)({
             useReducedMotion: n,
             className: f.refreshIcon
         }),
         {
             errorHints: d,
             startingConsoleQuest: m,
-            startConsoleQuest: N
+            startConsoleQuest: h
         } = (0, I.GI)({
             questId: e.quest.id,
             beforeRequest: () => {
@@ -124,7 +124,7 @@ t.Z = function (e) {
                 className: f.cta,
                 children: (0, i.jsx)(o.Button, {
                     color: o.ButtonColors.PRIMARY,
-                    onClick: N,
+                    onClick: h,
                     disabled: m,
                     children: (0, i.jsxs)('div', {
                         className: f.ctaInner,

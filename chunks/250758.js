@@ -13,8 +13,8 @@ var i,
     I = n(405656),
     m = n(51144),
     T = n(271383),
-    h = n(768119),
-    N = n(246946),
+    N = n(768119),
+    h = n(246946),
     C = n(594174),
     f = n(981631);
 let p = {},
@@ -88,7 +88,7 @@ function R(e, t, n) {
     let i,
         s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 10;
     if (null == e || '' === e) return null;
-    if (h.Z.getSearchType(n) === f.aib.GUILD && (e === f.dCx.FILTER_FROM || e === f.dCx.FILTER_MENTIONS)) {
+    if (N.Z.getSearchType(n) === f.aib.GUILD && (e === f.dCx.FILTER_FROM || e === f.dCx.FILTER_MENTIONS)) {
         let e = g[n];
         null == e
             ? (i = null)
@@ -119,13 +119,13 @@ function O(e) {
         n = (function () {
             let e = (0, d.cn)() && !1;
             return {
-                [f.dCx.FILTER_FROM]: !N.Z.hidePersonalInformation,
-                [f.dCx.FILTER_MENTIONS]: !N.Z.hidePersonalInformation,
+                [f.dCx.FILTER_FROM]: !h.Z.hidePersonalInformation,
+                [f.dCx.FILTER_MENTIONS]: !h.Z.hidePersonalInformation,
                 [f.dCx.FILTER_HAS]: !0,
                 [f.dCx.FILTER_BEFORE]: !0,
                 [f.dCx.FILTER_AFTER]: !0,
                 [f.dCx.FILTER_ON]: !0,
-                [f.dCx.FILTER_IN]: h.Z.getSearchType() === f.aib.GUILD,
+                [f.dCx.FILTER_IN]: N.Z.getSearchType() === f.aib.GUILD,
                 [f.dCx.FILTER_PINNED]: !e
             };
         })(),
@@ -148,9 +148,9 @@ function x(e, t) {
                         null != n &&
                             '' !== n &&
                             ((function (e) {
-                                let t = h.Z.getSearchType(e),
+                                let t = N.Z.getSearchType(e),
                                     n = [f.dCx.FILTER_HAS];
-                                return !N.Z.hidePersonalInformation && (n.push(f.dCx.FILTER_FROM), n.push(f.dCx.FILTER_MENTIONS)), t === f.aib.GUILD && n.push(f.dCx.FILTER_IN), n;
+                                return !h.Z.hidePersonalInformation && (n.push(f.dCx.FILTER_FROM), n.push(f.dCx.FILTER_MENTIONS)), t === f.aib.GUILD && n.push(f.dCx.FILTER_IN), n;
                             })(t).forEach((n) => {
                                 if (null == n) return;
                                 let s = R(n, e, t, 3);
@@ -182,8 +182,8 @@ function x(e, t) {
                 (0, d.cn)(),
                 n.push(
                     (function (e) {
-                        if (N.Z.hidePersonalInformation) return null;
-                        let t = h.Z.getHistory(e);
+                        if (h.Z.hidePersonalInformation) return null;
+                        let t = N.Z.getHistory(e);
                         return null == t
                             ? null
                             : {
@@ -212,7 +212,7 @@ function v(e) {
     });
 }
 function L() {
-    let e = h.Z.getCurrentSearchId();
+    let e = N.Z.getCurrentSearchId();
     if (null == e || null == p[e]) return;
     let { query: t, mode: n, tokens: i, cursorScope: s } = p[e];
     p[e] = S({
@@ -226,7 +226,7 @@ function L() {
 }
 class Z extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(T.ZP, N.Z);
+        this.waitFor(T.ZP, h.Z);
     }
     getState(e) {
         var t;

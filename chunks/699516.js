@@ -123,7 +123,7 @@ class v extends (r = u.ZP.Store) {
                         ...m,
                         [e.relationship.id]: e.relationship.since
                     }),
-                e.relationship.isSpamRequest && T.add(e.relationship.id),
+                (0, d.A)({ location: 'relationship_store' }) && e.relationship.isSpamRequest ? T.add(e.relationship.id) : T.delete(e.relationship.id),
                 R(),
                 e.relationship.type === h.OGo.FRIEND &&
                     t === h.OGo.PENDING_OUTGOING &&
@@ -133,15 +133,15 @@ class v extends (r = u.ZP.Store) {
                     });
         },
         RELATIONSHIP_REMOVE: function (e) {
-            (p = { ...p }), delete p[e.relationship.id], null != I[e.relationship.id] && ((I = { ...I }), delete I[e.relationship.id]), null != m[e.relationship.id] && ((m = { ...m }), delete m[e.relationship.id]), R();
+            (p = { ...p }), delete p[e.relationship.id], null != I[e.relationship.id] && ((I = { ...I }), delete I[e.relationship.id]), null != m[e.relationship.id] && ((m = { ...m }), delete m[e.relationship.id]), T.delete(e.relationship.id), R();
         },
         RELATIONSHIP_UPDATE: function (e) {
-            null == e.relationship.since ? delete m[e.relationship.id] : (m[e.relationship.id] = e.relationship.since), null == e.relationship.nickname ? delete I[e.relationship.id] : (I[e.relationship.id] = e.relationship.nickname);
+            null == e.relationship.since ? delete m[e.relationship.id] : (m[e.relationship.id] = e.relationship.since), null == e.relationship.nickname ? delete I[e.relationship.id] : (I[e.relationship.id] = e.relationship.nickname), (0, d.A)({ location: 'relationship_store' }) && e.relationship.isSpamRequest ? T.add(e.relationship.id) : T.delete(e.relationship.id);
         },
         RELATIONSHIP_PENDING_INCOMING_REMOVED: function (e) {
             (p = { ...p }),
                 E.default.keys(p).forEach((e) => {
-                    p[e] === h.OGo.PENDING_INCOMING && delete p[e];
+                    p[e] === h.OGo.PENDING_INCOMING && (delete p[e], T.delete(e));
                 }),
                 R();
         }

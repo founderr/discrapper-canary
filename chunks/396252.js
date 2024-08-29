@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return N;
     }
 });
 var i = n(735250);
@@ -18,12 +18,12 @@ var s = n(120356),
     I = n(674563),
     m = n(689938),
     T = n(549766);
-function h(e) {
+function N(e) {
     var t;
-    let { message: n, compact: s, usernameHook: h, channel: N } = e,
-        C = (0, r.e7)([c.Z], () => c.Z.getGuild(N.guild_id)),
+    let { message: n, compact: s, usernameHook: N, channel: h } = e,
+        C = (0, r.e7)([c.Z], () => c.Z.getGuild(h.guild_id)),
         f = (0, u.ZP)(n),
-        p = h(f),
+        p = N(f),
         {
             avatarSrc: g,
             eventHandlers: { onMouseEnter: S, onMouseLeave: A }

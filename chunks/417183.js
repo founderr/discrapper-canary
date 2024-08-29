@@ -51,7 +51,7 @@ class h extends a.PureComponent {
     }
     render() {
         let { height: e, opacity: t, hovered: n, isContextMenuActive: a } = this.state,
-            { children: s, user: d, onClick: u, isActive: E, className: h, activeClassName: m } = this.props;
+            { children: s, user: d, onClick: u, isActive: E } = this.props;
         return (0, i.jsx)(o.mh, {
             id: d.id,
             children: (o) =>
@@ -61,7 +61,7 @@ class h extends a.PureComponent {
                         right: -8
                     },
                     children: (0, i.jsx)(l.Z.div, {
-                        className: r()(h, _.peopleListItem, null != m ? { [m]: E || a } : null, { [_.active]: E || a }),
+                        className: r()(_.peopleListItem, { [_.active]: E || a }),
                         onContextMenu: (e) => this.handleContextMenu(e, d),
                         onMouseEnter: this.handleMouseEnter,
                         onMouseLeave: this.handleMouseLeave,

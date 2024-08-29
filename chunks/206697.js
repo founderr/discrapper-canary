@@ -17,8 +17,8 @@ var i = n(735250),
     I = n(695346),
     m = n(594174),
     T = n(111361),
-    h = n(74538),
-    N = n(997486),
+    N = n(74538),
+    h = n(997486),
     C = n(981631),
     f = n(474936),
     p = n(689938),
@@ -33,7 +33,7 @@ let A = {
 function R() {
     let e = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
         t = (0, T.I5)(e, f.p9.TIER_2),
-        { fakeMessage: n, fakeChannel: a } = s.useMemo(() => (0, N.Z)({ showAttachment: !1 }), []);
+        { fakeMessage: n, fakeChannel: a } = s.useMemo(() => (0, h.Z)({ showAttachment: !1 }), []);
     return (0, i.jsxs)('div', {
         className: S.messagesScroller,
         children: [
@@ -54,7 +54,7 @@ function R() {
     });
 }
 function O() {
-    let e = (0, h.Px)(f.p9.TIER_2),
+    let e = (0, N.Px)(f.p9.TIER_2),
         t = p.Z.Messages.FOR_LATER_PREMIUM_UPSELL.format({ nitroTierName: e });
     return (0, i.jsxs)('div', {
         className: g.upsellContainer,

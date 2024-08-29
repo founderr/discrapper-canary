@@ -18,8 +18,8 @@ var s = n(120356),
     I = n(91159),
     m = n(576799),
     T = n(488131),
-    h = n(981631),
-    N = n(689938),
+    N = n(981631),
+    h = n(689938),
     C = n(384880);
 function f(e) {
     let { message: t, compact: n } = e,
@@ -41,13 +41,13 @@ function p(e) {
                 s = (0, r.e7)([E.Z], () => E.Z.getCount(e.id)),
                 a = (0, I.Ok)(e);
             return (null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.archived)
-                ? N.Z.Messages.NO_RECENT_THREAD_MESSAGES
+                ? h.Z.Messages.NO_RECENT_THREAD_MESSAGES
                 : null == s || 0 === s
-                  ? N.Z.Messages.NO_THREAD_MESSAGES
+                  ? h.Z.Messages.NO_THREAD_MESSAGES
                   : null == n
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, i.jsx)('span', { children: N.Z.Messages.NO_RECENT_THREAD_MESSAGES }),
+                              (0, i.jsx)('span', { children: h.Z.Messages.NO_RECENT_THREAD_MESSAGES }),
                               (0, i.jsx)('span', {
                                   className: C.timestamp,
                                   children: (0, I.Ye)(a)
@@ -84,7 +84,7 @@ function p(e) {
                     e.stopPropagation();
                     let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
                         i = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-                    (e.which === h.yXg.SPACE || e.which === h.yXg.ENTER) && (e.preventDefault(), (n || i) && (0, T.ok)(t, i));
+                    (e.which === N.yXg.SPACE || e.which === N.yXg.ENTER) && (e.preventDefault(), (n || i) && (0, T.ok)(t, i));
                 },
                 onContextMenu: function (e) {
                     (0, o.jW)(e, async () => {
@@ -96,14 +96,14 @@ function p(e) {
                             });
                     });
                 },
-                'aria-roledescription': N.Z.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
+                'aria-roledescription': h.Z.Messages.THREAD_MESSAGE_ROLE_DESCRIPTION,
                 className: a()(C.container, { [C.systemMessageContainer]: c }),
                 children: (0, i.jsxs)(l.BlockInteractions, {
                     children: [
                         (0, i.jsxs)('div', {
                             className: C.topLine,
                             children: [
-                                (0, i.jsx)(l.HiddenVisually, { children: N.Z.Messages.THREAD }),
+                                (0, i.jsx)(l.HiddenVisually, { children: h.Z.Messages.THREAD }),
                                 (0, i.jsx)('span', {
                                     className: C.name,
                                     children: t.name

@@ -34,10 +34,10 @@ function f(e) {
         A = a.useRef(null),
         E = a.useRef(null),
         x = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        N = (0, c.ZP)('number' == typeof t ? '' : t, null != x ? x : ''),
-        v = a.useMemo(() => {
+        v = (0, c.ZP)('number' == typeof t ? '' : t, null != x ? x : ''),
+        N = a.useMemo(() => {
             var e, n;
-            let t = (0, l.compact)([d.Z.parseHexString(N), d.Z.parseHexString(f ? '#000000' : '#ffffff')]);
+            let t = (0, l.compact)([d.Z.parseHexString(v), d.Z.parseHexString(f ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -49,8 +49,8 @@ function f(e) {
                         ? void 0
                         : e.toHexString()) && void 0 !== n
                 ? n
-                : N;
-        }, [N, f]),
+                : v;
+        }, [v, f]),
         I = C(h),
         g = C(A),
         S = a.useCallback(() => {
@@ -69,13 +69,13 @@ function f(e) {
                 let E = ((i = e), (a = h) === (o = A) ? 1 : (0, l.clamp)((i - a) / (o - a), 0, 1));
                 (u.style.filter = 'brightness('.concat(1 + ((f ? 1.4 : 0.6) - (r = 1)) * E, ')')),
                     (u.style.backgroundColor = 'color-mix(in oklab,'
-                        .concat(N, ' ')
+                        .concat(v, ' ')
                         .concat((1 - E) * 100, '%, ')
-                        .concat(v, ')')),
+                        .concat(N, ')')),
                     (m.style.opacity = ''.concat(0 + (1 - (s = 0)) * E)),
                     (m.style.transform = 'translateY('.concat((c = p / 4) + (0 - c) * E, 'px)'));
             }
-        }, [v, N, null == g ? void 0 : g.height, f, _, null == I ? void 0 : I.height]);
+        }, [N, v, null == g ? void 0 : g.height, f, _, null == I ? void 0 : I.height]);
     return (
         a.useEffect(() => {
             S();
@@ -122,7 +122,7 @@ function f(e) {
                 (0, i.jsx)('div', {
                     ref: A,
                     className: p.bannerBackground,
-                    style: { backgroundColor: N }
+                    style: { backgroundColor: v }
                 })
             ]
         })

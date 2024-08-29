@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return P;
+        return b;
     }
 }),
     t(47120);
@@ -22,13 +22,13 @@ var i = t(735250),
     A = t(88410),
     E = t(327027),
     x = t(783097),
-    N = t(695676),
-    v = t(520315),
+    v = t(695676),
+    N = t(520315),
     I = t(29380),
     g = t(689938),
     S = t(655863),
-    b = t(910212);
-function P(e) {
+    P = t(910212);
+function b(e) {
     let { channel: n, application: t, videoUrl: l, imageCoverUrl: r, sectionName: s } = e,
         d = a.useMemo(() => {
             var e;
@@ -36,12 +36,12 @@ function P(e) {
         }, [t]),
         u = (0, c.e7)([m.Z], () => m.Z.getIsEnabled()),
         p = null != l || null != r,
-        { isSlideReady: f } = (0, N.hH)(),
+        { isSlideReady: f } = (0, v.hH)(),
         [A, E] = a.useState(!1);
     a.useEffect(() => {
         f && E(!0);
     }, [f]);
-    let v = h.nS.useExperiment({ location: 'AppLauncherAppProfile' }, { autoTrackExposure: !1 }).enabled;
+    let N = h.nS.useExperiment({ location: 'AppLauncherAppProfile' }, { autoTrackExposure: !1 }).enabled;
     return (0, i.jsxs)('div', {
         className: S.container,
         children: [
@@ -94,7 +94,7 @@ function P(e) {
                     })
                 ]
             }),
-            v ? (0, i.jsx)(L, { application: t }) : null
+            N ? (0, i.jsx)(L, { application: t }) : null
         ]
     });
 }
@@ -279,7 +279,7 @@ function y(e) {
             ref: C,
             isTransitioning: h,
             onTransitionEnd: A
-        } = (0, v.Z)({
+        } = (0, N.Z)({
             isExpanded: t,
             ..._
         }),
@@ -293,7 +293,7 @@ function y(e) {
                 onTransitionEnd: A,
                 children: (0, i.jsx)(d.x, {
                     ref: c,
-                    className: b.markup,
+                    className: P.markup,
                     variant: 'text-sm/medium',
                     lineClamp: E ? void 0 : 1,
                     style: { maxHeight: E ? void 0 : _.minHeightOverride },

@@ -13,8 +13,8 @@ var i = n(735250),
     I = n(710845),
     m = n(825829),
     T = n(623624),
-    h = n(533694),
-    N = n(182180),
+    N = n(533694),
+    h = n(182180),
     C = n(924301),
     f = n(225890),
     p = n(434404),
@@ -67,8 +67,8 @@ var i = n(735250),
     eI = n(296571),
     em = n(587737),
     eT = n(482239),
-    eh = n(328749),
-    eN = n(4305),
+    eN = n(328749),
+    eh = n(4305),
     eC = n(910548),
     ef = n(981631),
     ep = n(70722),
@@ -210,7 +210,7 @@ let eO = Object.freeze({
             I = !_ && null != t.call && !t.call.participants.includes(u),
             m = _ && (null == E || E.channelId !== d),
             T = s.useCallback(() => c.default.selectVoiceChannel(d), [d]),
-            h = (0, z.l)({
+            N = (0, z.l)({
                 user: o,
                 channelId: d,
                 guildId: r.guild_id,
@@ -221,7 +221,7 @@ let eO = Object.freeze({
             message: t,
             missed: I,
             joinable: m,
-            usernameHook: h,
+            usernameHook: N,
             onClickJoinCall: T
         });
     },
@@ -294,7 +294,7 @@ let eO = Object.freeze({
             });
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(eN.Z, {
+                (0, i.jsx)(eh.Z, {
                     message: t,
                     guildId: s.guild_id,
                     compact: n,
@@ -435,7 +435,7 @@ let eO = Object.freeze({
             onContextMenuThread: _
         });
     },
-    [ef.uaV.THREAD_STARTER_MESSAGE]: eh.Z,
+    [ef.uaV.THREAD_STARTER_MESSAGE]: eN.Z,
     [ef.uaV.GUILD_INVITE_REMINDER]: function (e) {
         let { message: t, channel: n, compact: s } = e,
             r = (0, a.e7)([k.default], () => k.default.getCurrentUser()),
@@ -492,12 +492,12 @@ let eO = Object.freeze({
             usernameHook: a
         });
     },
-    [ef.uaV.ROLE_SUBSCRIPTION_PURCHASE]: N.Z,
+    [ef.uaV.ROLE_SUBSCRIPTION_PURCHASE]: h.Z,
     [ef.uaV.PURCHASE_NOTIFICATION]: function (e) {
         var t;
         let { message: n, channel: s, compact: a } = e;
         return (null === (t = n.purchaseNotification) || void 0 === t ? void 0 : t.type) === d.Eh.GUILD_PRODUCT
-            ? (0, i.jsx)(h.Z, {
+            ? (0, i.jsx)(N.Z, {
                   message: n,
                   channel: s,
                   compact: a

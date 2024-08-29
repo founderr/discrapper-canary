@@ -13,7 +13,7 @@ var s = n(442837),
     c = n(701560),
     u = n(785547);
 function d(e) {
-    let { application: t, fullWidth: n = !1, size: d = a.Button.Sizes.LARGE, color: _, customDisabledColor: E, hideNotLaunchable: I, tooltipPosition: m, onClick: T, className: h, source: N, hover: C, innerClassName: f } = e,
+    let { application: t, fullWidth: n = !1, size: d = a.Button.Sizes.LARGE, color: _, customDisabledColor: E, hideNotLaunchable: I, tooltipPosition: m, onClick: T, className: N, source: h, hover: C, innerClassName: f } = e,
         p = {
             fullWidth: n,
             size: d,
@@ -21,7 +21,7 @@ function d(e) {
             customDisabledColor: E,
             tooltipPosition: m,
             onClick: T,
-            className: h,
+            className: N,
             hover: C,
             innerClassName: f
         },
@@ -33,7 +33,7 @@ function d(e) {
         ? (0, i.jsx)(u.Z, {
               ...p,
               libraryApplication: g,
-              source: N
+              source: h
           })
         : R
           ? (0, i.jsx)('div', { children: 'deprecated!' })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return h;
+        return N;
     }
 });
 var i = n(735250),
@@ -17,11 +17,11 @@ var i = n(735250),
     I = n(981631),
     m = n(689938),
     T = n(29062);
-function h(e) {
+function N(e) {
     var t;
-    let { invite: n, getAcceptInviteContext: h } = e,
-        N = (0, a.e7)([u.default], () => u.default.getId()),
-        C = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === N,
+    let { invite: n, getAcceptInviteContext: N } = e,
+        h = (0, a.e7)([u.default], () => u.default.getId()),
+        C = (null === (t = n.inviter) || void 0 === t ? void 0 : t.id) === h,
         f = n.state === I.r2o.ACCEPTING,
         p = (0, a.e7)([_.Z], () => {
             var e;
@@ -31,12 +31,12 @@ function h(e) {
             null != n.inviter && null != d.Z.getDMFromUserId(n.inviter.id) && r.Z.openPrivateChannel([n.inviter.id]);
         }, [n.inviter]),
         S = s.useCallback(() => {
-            let e = h('Invite Button Embed');
+            let e = N('Invite Button Embed');
             l.Z.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e
             });
-        }, [n.code, h]);
+        }, [n.code, N]);
     if (null == n.inviter) return null;
     let A = p ? g : S,
         R = m.Z.Messages.INVITE_BUTTON_ADD_FRIEND,

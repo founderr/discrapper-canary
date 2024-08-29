@@ -17,7 +17,7 @@ let _ = (e) => {
         let { isFocused: t, navigatedAway: n, isDesktop: _, withMentions: E = !1, initialPageSize: I } = e,
             m = (0, s.e7)([u.Z], () => u.Z.shouldReload()),
             T = i.useRef(!1),
-            [h, N] = i.useState(!1),
+            [N, h] = i.useState(!1),
             {
                 initialized: C,
                 loading: f,
@@ -66,7 +66,7 @@ let _ = (e) => {
                     null != S &&
                     (e || !A) &&
                     ((T.current = !0),
-                    N(!0),
+                    h(!0),
                     await (0, o.jk)(
                         {
                             after: S,
@@ -79,7 +79,7 @@ let _ = (e) => {
                             T.current = !1;
                         }
                     ),
-                    N(!1));
+                    h(!1));
             },
             [C, g, S, A, E, R, O]
         );
@@ -89,7 +89,7 @@ let _ = (e) => {
             items: p,
             hasMore: g,
             loadMore: M,
-            loadingMore: h,
+            loadingMore: N,
             setReadNotifItemToAcked: (e) => {
                 !e.acked && (e.acked = !0);
             },

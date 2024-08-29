@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return N;
+        return h;
     },
     Z: function () {
         return C;
@@ -21,8 +21,8 @@ var i = n(735250),
     I = n(206044),
     m = n(266843),
     T = n(46140),
-    h = n(861495);
-function N(e) {
+    N = n(861495);
+function h(e) {
     let { questId: t, ...n } = e,
         s = (0, r.e7)([c.Z], () => c.Z.getQuest(t));
     if (null == s) return null;
@@ -36,7 +36,7 @@ function N(e) {
 }
 function C(e) {
     let { quest: t, location: n, initiallyExpanded: r, contentPosition: c } = e,
-        [N, C] = s.useState(!1),
+        [h, C] = s.useState(!1),
         f = s.useCallback(() => C(!0), []),
         p = s.useCallback(() => C(!1), []),
         g = (0, o.tP)(t),
@@ -74,7 +74,7 @@ function C(e) {
                                       output: [_.DJ, Z]
                                   })
                     },
-                    className: h.questsCard,
+                    className: N.questsCard,
                     onFocus: f,
                     onMouseEnter: f,
                     onBlur: p,
@@ -85,7 +85,7 @@ function C(e) {
                         },
                         children: [
                             (0, i.jsx)(I.Z, {
-                                isFocused: N,
+                                isFocused: h,
                                 isQuestExpired: g,
                                 location: n,
                                 quest: t,
@@ -102,7 +102,7 @@ function C(e) {
                                 isQuestExpired: g,
                                 location: n,
                                 size: A,
-                                isFocused: N,
+                                isFocused: h,
                                 isExpanded: v,
                                 isAnimating: M,
                                 contentPosition: c

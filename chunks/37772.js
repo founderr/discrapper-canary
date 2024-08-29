@@ -13,8 +13,8 @@ var i = n(735250),
     I = n(869765),
     m = n(695346),
     T = n(592125),
-    h = n(699516),
-    N = n(630388),
+    N = n(699516),
+    h = n(630388),
     C = n(709054),
     f = n(493892),
     p = n(901461),
@@ -95,7 +95,7 @@ t.Z = s.memo(function e(t) {
               channel: W,
               hasThread: !1
           })
-        : (h.Z.isBlockedForMessage(o) ? (s = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, f.DQ)(o) && V && (s = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== s)
+        : (N.Z.isBlockedForMessage(o) ? (s = j.Z.Messages.BLOCKED_MESSAGE_COUNT) : (0, f.DQ)(o) && V && (s = j.Z.Messages.HIDDEN_SPAM_MESSAGE_COUNT), void 0 !== s)
           ? (0, i.jsx)(B, {
                 className: U,
                 compact: D,
@@ -105,7 +105,7 @@ t.Z = s.memo(function e(t) {
           : (0, i.jsx)(A.Z, {
                 compact: D,
                 className: r()(U, {
-                    [y.ephemeral]: (0, N.yE)(o.flags, b.iLy.EPHEMERAL),
+                    [y.ephemeral]: (0, h.yE)(o.flags, b.iLy.EPHEMERAL),
                     [y.disableInteraction]: G,
                     [y.groupStart]: t.isGroupStart
                 }),

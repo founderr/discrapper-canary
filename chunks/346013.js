@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(100527),
     m = n(367907),
     T = n(676742),
-    h = n(1585),
-    N = n(841762),
+    N = n(1585),
+    h = n(841762),
     C = n(336197),
     f = n(406432),
     p = n(348238),
@@ -108,7 +108,7 @@ function B(e) {
         ),
         ec = (0, M.NZ)({
             avatarDecoration: J,
-            size: (0, h.y9)(_.AvatarSizes.SIZE_40),
+            size: (0, N.y9)(_.AvatarSizes.SIZE_40),
             canAnimate: en
         }),
         eu = null === (n = F.user) || void 0 === n ? void 0 : n.getAvatarURL(F.guildId, 40, en),
@@ -134,7 +134,7 @@ function B(e) {
                                   onContextMenu: w,
                                   onError: () => z(!0)
                               })
-                            : (0, i.jsx)(N.Z, {
+                            : (0, i.jsx)(h.Z, {
                                   src: !(H && (V || Y)) && eE ? ''.concat(e_, '?format=png') : e_,
                                   backgroundSrc: ''.concat(e_, '?format=png'),
                                   alt: j.Z.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,

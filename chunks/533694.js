@@ -59,15 +59,15 @@ function T(e) {
     var t, s, a;
     let { channel: r, message: d, compact: I } = e,
         T = (0, l.ZP)(d),
-        h = (0, o.l)({
+        N = (0, o.l)({
             user: d.author,
             channelId: r.id,
             guildId: r.guild_id,
             messageId: d.id
         })(T),
-        N = E.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
+        h = E.Z.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
             username: T.nick,
-            usernameHook: h,
+            usernameHook: N,
             productName: null !== (a = null === (s = d.purchaseNotification) || void 0 === s ? void 0 : null === (t = s.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== a ? a : '',
             handleProductListingClick: () => {
                 var e, t, n;
@@ -80,7 +80,7 @@ function T(e) {
                 icon: n(570111),
                 timestamp: d.timestamp,
                 compact: I,
-                children: N
+                children: h
             }),
             (0, i.jsx)(m, {
                 username: T.nick,

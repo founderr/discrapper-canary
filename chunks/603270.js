@@ -21,8 +21,8 @@ var i = n(735250),
     I = n(592125),
     m = n(509545),
     T = n(238),
-    h = n(55563),
-    N = n(551428),
+    N = n(55563),
+    h = n(551428),
     C = n(626135),
     f = n(572004),
     p = n(601911),
@@ -37,7 +37,7 @@ var i = n(735250),
 let L = D(function (e) {
         let { appId: t, message: o } = e,
             u = (0, A.R)(t),
-            [_, m, h, N, f, S, R] = (0, a.Wu)(
+            [_, m, N, h, f, S, R] = (0, a.Wu)(
                 [c.Z, T.Z, I.Z],
                 () => {
                     var e;
@@ -49,10 +49,10 @@ let L = D(function (e) {
                 [t, o.channel_id]
             );
         s.useEffect(() => {
-            f === T.N.NONE && (0, l.k)(t), null == _ && !m && !h && (0, d.UM)(t);
-        }, [_, t, h, m, f]);
-        let L = N.subscriptions.length,
-            Z = N.otps.length,
+            f === T.N.NONE && (0, l.k)(t), null == _ && !m && !N && (0, d.UM)(t);
+        }, [_, t, N, m, f]);
+        let L = h.subscriptions.length,
+            Z = h.otps.length,
             D = s.useMemo(
                 () =>
                     L > 0 && Z > 0
@@ -114,16 +114,16 @@ let L = D(function (e) {
         var t, l;
         let { skuId: d, message: T } = e,
             [f, S, L, Z, D, b, j, U] = (0, a.Wu)(
-                [h.Z, N.Z, m.Z, I.Z, c.Z],
+                [N.Z, h.Z, m.Z, I.Z, c.Z],
                 () => {
                     var e, t, n, i;
                     let s = null === (e = I.Z.getBasicChannel(T.channel_id)) || void 0 === e ? void 0 : e.guild_id,
-                        a = h.Z.get(d),
+                        a = N.Z.get(d),
                         r = null !== (n = null == a ? void 0 : null === (t = a.application) || void 0 === t ? void 0 : t.id) && void 0 !== n ? n : null == a ? void 0 : a.applicationId,
                         l = null !== (i = null != r ? c.Z.getApplication(r) : void 0) && void 0 !== i ? i : null == a ? void 0 : a.application,
                         o = null != l ? (0, p.y)(l, 45) : void 0,
                         u = m.Z.getForSKU(d);
-                    return [a, l, N.Z.getForSKU(d), h.Z.isFetching(d), h.Z.didFetchingSkuFail(d), u.length > 0 ? u[0] : null, s, o];
+                    return [a, l, h.Z.getForSKU(d), N.Z.isFetching(d), N.Z.didFetchingSkuFail(d), u.length > 0 ? u[0] : null, s, o];
                 },
                 [T.channel_id, d]
             ),

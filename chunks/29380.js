@@ -21,18 +21,18 @@ var i = t(735250),
     h = t(689938),
     A = t(872674);
 function E(e) {
-    let { channel: n, application: t, sectionName: E, commandName: x, buttonSize: N = o.ButtonSizes.MEDIUM } = e,
-        v = a.useId(),
+    let { channel: n, application: t, sectionName: E, commandName: x, buttonSize: v = o.ButtonSizes.MEDIUM } = e,
+        N = a.useId(),
         I = a.useCallback(() => {
             m.y(p.ti.ACTIVITY);
         }, []),
         { submitting: g, wasSubmitting: S } = (0, _.Z)({
             applicationId: t.id,
             channelId: n.id,
-            launchingComponentId: v,
+            launchingComponentId: N,
             onSubmissionComplete: I
         }),
-        [b, P] = a.useState(!1),
+        [P, b] = a.useState(!1),
         L = (0, c.Qv)({
             applicationId: t.id,
             channelId: n.id
@@ -48,7 +48,7 @@ function E(e) {
             sectionName: E,
             commandName: x,
             autoDismissOnClick: L === c.JS.LEAVE,
-            launchingComponentId: v,
+            launchingComponentId: N,
             submitting: null != S ? S : g
         }),
         j = (function (e) {
@@ -80,12 +80,12 @@ function E(e) {
             return (0, i.jsx)(o.Button, {
                 ...a,
                 type: 'submit',
-                size: N,
+                size: v,
                 color: T,
                 disabled: j,
-                submitting: b,
+                submitting: P,
                 onClick: () => {
-                    P(!0), R(), null == n || n();
+                    b(!0), R(), null == n || n();
                 },
                 'aria-label': h.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
                     buttonText: M,

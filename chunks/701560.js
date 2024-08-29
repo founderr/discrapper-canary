@@ -19,8 +19,8 @@ var i,
     I = n(757266),
     m = n(417363),
     T = n(358085),
-    h = n(346329),
-    N = n(981631),
+    N = n(346329),
+    h = n(981631),
     C = n(689938),
     f = n(713958);
 function p(e, t, n) {
@@ -40,7 +40,7 @@ class g extends (i = a.PureComponent) {
     get analyticsLocation() {
         return {
             ...this.props.analyticsContext.location,
-            object: N.qAy.BUTTON_CTA
+            object: h.qAy.BUTTON_CTA
         };
     }
     renderDropdown() {
@@ -130,7 +130,7 @@ class g extends (i = a.PureComponent) {
             }),
             p(this, 'handleClick', () => {
                 let { applicationId: e, libraryApplication: t, analyticsListSort: n, analyticsListIndex: i } = this.props;
-                h.playApplication(e, t, {
+                N.playApplication(e, t, {
                     analyticsParams: {
                         location: this.analyticsLocation,
                         list_sort: n,

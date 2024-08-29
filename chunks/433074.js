@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(626135),
     m = n(135431),
     T = n(674588),
-    h = n(264043),
-    N = n(132871),
+    N = n(264043),
+    h = n(132871),
     C = n(147890),
     f = n(981631),
     p = n(689938),
@@ -27,7 +27,7 @@ var i = n(735250),
 function S(e) {
     var t, n;
     let { code: S, message: A } = e,
-        [R, O, x] = (0, r.Wu)([h.Z], () => [h.Z.getApplication(S), h.Z.isInvalidApplication(S), h.Z.getApplicationFetchState(S)], [S]),
+        [R, O, x] = (0, r.Wu)([N.Z], () => [N.Z.getApplication(S), N.Z.isInvalidApplication(S), N.Z.getApplicationFetchState(S)], [S]),
         M = (0, r.e7)([u.default], () => u.default.locale),
         v = (0, r.e7)([_.Z], () => {
             var e;
@@ -44,7 +44,7 @@ function S(e) {
     }, [S]),
         s.useEffect(() => {
             Z &&
-                x === h.M.FETCHED &&
+                x === N.M.FETCHED &&
                 I.default.track(f.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: S,
                     device_platform: a.tq ? 'mobile_web' : 'desktop_web',
@@ -72,10 +72,10 @@ function S(e) {
             channel_id: A.channel_id
         }),
             (0, C.goToAppDirectory)({
-                view: N.ApplicationDirectoryViews.APPLICATION,
+                view: h.ApplicationDirectoryViews.APPLICATION,
                 guildId: v,
                 applicationId: S,
-                entrypoint: { name: N.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
+                entrypoint: { name: h.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
     };
     if (O)
@@ -98,7 +98,7 @@ function S(e) {
                 })
             ]
         });
-    if (null == R || x === h.M.FETCHING)
+    if (null == R || x === N.M.FETCHING)
         return (0, i.jsxs)(c.Z, {
             containerRef: b,
             children: [(0, i.jsx)(c.Z.Header, { text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER }), (0, i.jsx)(c.Z.Body, { resolving: !0 })]

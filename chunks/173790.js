@@ -21,29 +21,29 @@ var i = t(735250),
     A = t(675993),
     E = t(689079),
     x = t(689938),
-    N = t(254044),
-    v = t(413097);
+    v = t(254044),
+    N = t(413097);
 function I(e) {
     var n;
     let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
         S = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
-        b = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        P = (0, _.ye)(b) ? g : A.Z,
+        P = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
+        b = (0, _.ye)(P) ? g : A.Z,
         L = a.useRef(null),
         { iconURL: R, name: T } = a.useMemo(
             () =>
-                (0, _.sl)(b, {
-                    fakeAppIconURL: v,
+                (0, _.sl)(P, {
+                    fakeAppIconURL: N,
                     size: 84
                 }),
-            [b]
+            [P]
         );
     return (
         a.useEffect(() => {
-            I ? d.ZP.queryInstallOnDemandApp(b.id, t.id) : d.ZP.maybeQueryForInstallLessApps(b.id, t.id);
-        }, [b.id, t.id, I]),
+            I ? d.ZP.queryInstallOnDemandApp(P.id, t.id) : d.ZP.maybeQueryForInstallLessApps(P.id, t.id);
+        }, [P.id, t.id, I]),
         (0, i.jsxs)(r.ScrollerNone, {
-            className: N.container,
+            className: v.container,
             fade: !0,
             ref: L,
             role: 'region',
@@ -57,18 +57,18 @@ function I(e) {
                 null != R &&
                     (0, i.jsx)(C.Z, {
                         src: R,
-                        className: N.appIcon
+                        className: v.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(P, {
+                (0, i.jsx)(b, {
                     channel: t,
-                    application: b,
+                    application: P,
                     sectionName: c
                 }),
                 S === p._b.TEXT
                     ? (0, i.jsx)(f.Z, {
                           channel: t,
-                          application: b,
+                          application: P,
                           sectionName: c,
                           installOnDemand: I
                       })

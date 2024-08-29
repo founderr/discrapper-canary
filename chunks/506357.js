@@ -17,8 +17,8 @@ var i = n(735250),
     I = n(528011),
     m = n(666657),
     T = n(533244),
-    h = n(981631),
-    N = n(176505),
+    N = n(981631),
+    h = n(176505),
     C = n(689938),
     f = n(679168);
 function p(e) {
@@ -29,13 +29,13 @@ function p(e) {
         R = null != S ? S : null,
         O = (0, a.e7)([u.Z], () => (null != R ? u.Z.getGuild(R) : null), [R]),
         { shouldShowIncidentActions: x, incidentData: M, isUnderLockdown: v } = (0, I.mI)(R),
-        L = (0, o.n2)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : h.lds),
+        L = (0, o.n2)(null !== (t = null == O ? void 0 : O.id) && void 0 !== t ? t : N.lds),
         Z = s.useCallback(() => null != O && (0, c._X)(O.id), [O]);
     if (null == O || null == M || !x) return null;
     let P = (e) => {
-            if (e && L && A !== N.oC.MEMBER_SAFETY && Z()) {
-                E.default.track(h.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
-                    notice_type: h.kVF.GUILD_RAID_NOTIFICATION,
+            if (e && L && A !== h.oC.MEMBER_SAFETY && Z()) {
+                E.default.track(N.rMx.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                    notice_type: N.kVF.GUILD_RAID_NOTIFICATION,
                     guild_id: O.id
                 });
                 return;
@@ -67,7 +67,7 @@ function p(e) {
             children: [
                 (0, i.jsx)(r.NoticeCloseButton, {
                     onClick: g,
-                    noticeType: h.kVF.GUILD_RAID_NOTIFICATION
+                    noticeType: N.kVF.GUILD_RAID_NOTIFICATION
                 }),
                 D,
                 b,
@@ -88,14 +88,14 @@ function p(e) {
             ]
         });
     let j = (0, T.CG)(M) ? C.Z.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({ guildName: O.name }) : (0, T.kk)(M) ? C.Z.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({ guildName: O.name }) : C.Z.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({ guildName: O.name }),
-        U = L && A === N.oC.MEMBER_SAFETY;
+        U = L && A === h.oC.MEMBER_SAFETY;
     return (0, i.jsxs)(r.Notice, {
         className: f.notice,
         color: r.NoticeColors.WARNING,
         children: [
             (0, i.jsx)(r.NoticeCloseButton, {
                 onClick: g,
-                noticeType: h.kVF.GUILD_RAID_NOTIFICATION
+                noticeType: N.kVF.GUILD_RAID_NOTIFICATION
             }),
             D,
             j,

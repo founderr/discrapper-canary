@@ -22,13 +22,13 @@ var i = t(735250),
     A = t(392370),
     E = t(98880),
     x = t(520315),
-    N = t(532309),
-    v = t(561160),
+    v = t(532309),
+    N = t(561160),
     I = t(41558),
     g = t(106771),
     S = t(79984),
-    b = t(314734),
-    P = t(981631),
+    P = t(314734),
+    b = t(981631),
     L = t(689938),
     R = t(429032);
 let T = Array(6)
@@ -58,7 +58,7 @@ function y(e) {
         {
             fetchState: E,
             applicationResults: x,
-            fetchNextPage: N
+            fetchNextPage: v
         } = (0, A.Q2)({
             query: t,
             channel: n,
@@ -67,8 +67,8 @@ function y(e) {
             entrypoint: l
         });
     a.useEffect(() => {
-        s && E === m.M.FETCHED && N();
-    }, [N, E, s]);
+        s && E === m.M.FETCHED && v();
+    }, [v, E, s]);
     let I = null == E || E === m.M.FETCHING,
         g = a.useMemo(() => {
             let e = f.map((e) => ({
@@ -96,11 +96,11 @@ function y(e) {
             ];
         }, [x, f]),
         S = g.length > 0,
-        b = p && !S && !I;
+        P = p && !S && !I;
     return u
         ? (0, i.jsx)(k, {})
-        : b
-          ? (0, i.jsx)(v.A, {
+        : P
+          ? (0, i.jsx)(N.A, {
                 type: h.LG.SEARCH_EMPTY,
                 searchQuery: t,
                 textContent: l === h._b.TEXT ? L.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_BODY : L.Z.Messages.APP_LAUNCHER_SEARCH_EMPTY_STATE_ACTIVITIES_BODY
@@ -128,12 +128,12 @@ function Z(e) {
     let { channel: l, commandResults: o, query: r } = e,
         m = o.length > 4,
         A = a.useMemo(() => (m ? o.slice(0, 4) : o), [o, m]),
-        [E, N] = a.useState(!1),
-        v = null !== (n = (0, s.Z)(E)) && void 0 !== n ? n : E,
-        S = a.useCallback(() => N((e) => !e), []),
+        [E, v] = a.useState(!1),
+        N = null !== (n = (0, s.Z)(E)) && void 0 !== n ? n : E,
+        S = a.useCallback(() => v((e) => !e), []),
         T = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
         M = E && !T;
-    a.useLayoutEffect(() => N(!1), [T]);
+    a.useLayoutEffect(() => v(!1), [T]);
     let {
         ref: j,
         isTransitioning: y,
@@ -142,17 +142,17 @@ function Z(e) {
         key: r,
         isExpanded: M,
         durationMs: 200,
-        maxAnimationHeight: b.K7
+        maxAnimationHeight: P.K7
     });
     a.useEffect(() => {
-        !v &&
+        !N &&
             E &&
-            (0, c.yw)(P.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+            (0, c.yw)(b.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: h.L3.SEARCH,
                 source: f.Z.entrypoint(),
                 num: o.length
             });
-    }, [o.length, v, E]);
+    }, [o.length, N, E]);
     let O = M || y,
         H = M ? I.Z.buttonTypes.VIEW_LESS : I.Z.buttonTypes.VIEW_MORE,
         U = O ? o : A;
@@ -196,7 +196,7 @@ function Z(e) {
                                         searchResultsPosition: n,
                                         source: e
                                     }),
-                                    _.S.dispatch(P.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                                    _.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                             }
                         },
                         t.id
@@ -207,7 +207,7 @@ function Z(e) {
     });
 }
 function O(e) {
-    let { trackSearchResultsItemImpressionRef: n } = (0, N.Z)({
+    let { trackSearchResultsItemImpressionRef: n } = (0, v.Z)({
         applicationId: e.application.id,
         query: e.query,
         searchResultsPosition: e.resultsPosition

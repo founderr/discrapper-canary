@@ -18,8 +18,8 @@ var i = n(735250),
     I = n(724757),
     m = n(294218),
     T = n(373662),
-    h = n(703656),
-    N = n(695346),
+    N = n(703656),
+    h = n(695346),
     C = n(675478),
     f = n(581883),
     p = n(592125),
@@ -200,7 +200,7 @@ function F(e) {
         l = (0, u.e7)([p.Z], () => p.Z.getChannel(t.saveData.channelId)),
         o = s.useCallback(
             (e) => {
-                !e.shiftKey && n(), (0, h.uL)(Z.Z5c.CHANNEL(null == l ? void 0 : l.getGuildId(), t.saveData.channelId, t.saveData.messageId));
+                !e.shiftKey && n(), (0, N.uL)(Z.Z5c.CHANNEL(null == l ? void 0 : l.getGuildId(), t.saveData.channelId, t.saveData.messageId));
             },
             [n, t, l]
         );
@@ -254,7 +254,7 @@ function F(e) {
                           message: t.message,
                           channel: l,
                           className: b.message,
-                          compact: N.jU.getSetting(),
+                          compact: h.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: j,
                           trackAnnouncementViews: !0

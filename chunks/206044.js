@@ -13,8 +13,8 @@ var i = n(735250),
     I = n(70097),
     m = n(210887),
     T = n(572004),
-    h = n(617136),
-    N = n(113434),
+    N = n(617136),
+    h = n(113434),
     C = n(497505),
     f = n(918701),
     p = n(566078),
@@ -43,10 +43,10 @@ let L = (0, l.animated)(d.ChevronSmallDownIcon),
         )
             return null;
         let _ = () => {
-            (0, h._3)({
+            (0, N._3)({
                 questId: t.id,
                 questContent: n,
-                questContentCTA: h.jZ.COPY_QUEST_URL,
+                questContentCTA: N.jZ.COPY_QUEST_URL,
                 questContentPosition: a
             }),
                 (0, T.JG)((0, f.Rs)(t.id)),
@@ -80,14 +80,14 @@ t.Z = (e) => {
         K = s.useRef(null),
         z = (0, O.uq)(I),
         Q = I === C.jn.QUESTS_EMBED,
-        q = (0, N.t5)(u, x.dr.QUESTS_CARD, I),
+        q = (0, h.t5)(u, x.dr.QUESTS_CARD, I),
         X = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
-        J = (0, N.B6)(u.config.expiresAt, {
+        J = (0, h.B6)(u.config.expiresAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
         }),
-        $ = (0, N.B6)(p.r.build(u.config).rewardsExpireAt, {
+        $ = (0, h.B6)(p.r.build(u.config).rewardsExpireAt, {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
@@ -96,10 +96,10 @@ t.Z = (e) => {
             e.stopPropagation(),
                 e.currentTarget.blur(),
                 B(),
-                (0, h._3)({
+                (0, N._3)({
                     questId: u.id,
                     questContent: I,
-                    questContentCTA: j ? h.jZ.COLLAPSE : h.jZ.EXPAND,
+                    questContentCTA: j ? N.jZ.COLLAPSE : N.jZ.EXPAND,
                     questContentPosition: y
                 });
         };
