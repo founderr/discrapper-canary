@@ -2,11 +2,17 @@ n.d(t, {
     AQ: function () {
         return d;
     },
+    Jf: function () {
+        return E;
+    },
     KK: function () {
         return u;
     },
     KW: function () {
         return c;
+    },
+    OL: function () {
+        return _;
     },
     Pw: function () {
         return l;
@@ -35,4 +41,13 @@ function c(e) {
 }
 function d(e, t, n) {
     return e.subscription_plans[0].sku_id === t.skuId && (u(e.sku_flags) ? null != n && t.guildId === n && n !== s.ME : !!c(e.sku_flags) && null == t.guildId);
+}
+function _(e) {
+    return !1 === e.available;
+}
+function E(e, t) {
+    var n;
+    let r = null !== (n = null == t ? void 0 : t.deleted) && void 0 !== n && n,
+        i = null != t && _(t);
+    return e.status === s.O0b.CANCELED || r || i;
 }
