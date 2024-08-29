@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return E;
+        return N;
     }
 }),
     t(47120);
@@ -15,43 +15,45 @@ var i = t(735250),
     u = t(496675),
     m = t(499254),
     p = t(827498),
-    _ = t(890280),
-    C = t(176412),
+    _ = t(783097),
+    C = t(890280),
+    h = t(176412),
     f = t(231338),
-    h = t(689938),
-    A = t(872674);
-function E(e) {
-    let { channel: n, application: t, sectionName: E, commandName: x, buttonSize: v = o.ButtonSizes.MEDIUM } = e,
-        N = a.useId(),
-        I = a.useCallback(() => {
+    A = t(689938),
+    E = t(872674);
+function N(e) {
+    let { channel: n, application: t, sectionName: N, primaryEntryPointCommand: x, buttonSize: v = o.ButtonSizes.MEDIUM } = e,
+        I = a.useId(),
+        g = a.useCallback(() => {
             m.y(p.ti.ACTIVITY);
         }, []),
-        { submitting: g, wasSubmitting: S } = (0, _.Z)({
+        { submitting: P, wasSubmitting: S } = (0, C.Z)({
             applicationId: t.id,
             channelId: n.id,
-            launchingComponentId: N,
-            onSubmissionComplete: I
+            launchingComponentId: I,
+            onSubmissionComplete: g
         }),
-        [P, b] = a.useState(!1),
-        L = (0, c.Qv)({
+        [L, b] = a.useState(!1),
+        R = (0, c.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
+        T = a.useMemo(() => (0, _.XZ)(x.displayName), [x.displayName]),
         {
-            onActivityItemSelected: R,
-            buttonColor: T,
-            buttonText: M
-        } = (0, C.P7)({
+            onActivityItemSelected: M,
+            buttonColor: y,
+            buttonText: j
+        } = (0, h.P7)({
             channel: n,
             application: t,
             location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: E,
-            commandName: x,
-            autoDismissOnClick: L === c.JS.LEAVE,
-            launchingComponentId: N,
-            submitting: null != S ? S : g
+            sectionName: N,
+            commandName: T,
+            autoDismissOnClick: R === c.JS.LEAVE,
+            launchingComponentId: I,
+            submitting: null != S ? S : P
         }),
-        j = (function (e) {
+        Z = (function (e) {
             let { channel: n, activityAction: t } = e,
                 i = (0, l.e7)([u.Z], () => u.Z.can(f.Pl.USE_EMBEDDED_ACTIVITIES, n)),
                 a = (0, s.KF)(n.id),
@@ -69,29 +71,29 @@ function E(e) {
             return o;
         })({
             channel: n,
-            activityAction: L
+            activityAction: R
         });
     return (0, i.jsx)(o.Tooltip, {
-        shouldShow: j,
-        tooltipContentClassName: A.tooltipContent,
-        text: h.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START,
+        shouldShow: Z,
+        tooltipContentClassName: E.tooltipContent,
+        text: A.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START,
         children: (e) => {
             let { onClick: n, ...a } = e;
             return (0, i.jsx)(o.Button, {
                 ...a,
                 type: 'submit',
                 size: v,
-                color: T,
-                disabled: j,
-                submitting: P,
+                color: y,
+                disabled: Z,
+                submitting: L,
                 onClick: () => {
-                    b(!0), R(), null == n || n();
+                    b(!0), M(), null == n || n();
                 },
-                'aria-label': h.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
-                    buttonText: M,
+                'aria-label': A.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
+                    buttonText: j,
                     applicationName: t.name
                 }),
-                children: M
+                children: j
             });
         }
     });

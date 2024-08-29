@@ -2,7 +2,8 @@ t.d(n, {
     Z: function () {
         return I;
     }
-});
+}),
+    t(47120);
 var i = t(735250),
     a = t(470079),
     l = t(442837),
@@ -16,61 +17,64 @@ var i = t(735250),
     p = t(827498),
     _ = t(783097),
     C = t(753972),
-    f = t(387658),
-    h = t(536650),
+    h = t(387658),
+    f = t(536650),
     A = t(675993),
     E = t(689079),
-    x = t(689938),
-    v = t(254044),
-    N = t(413097);
+    N = t(689938),
+    x = t(254044),
+    v = t(413097);
 function I(e) {
     var n;
     let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
-        S = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
-        P = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        b = (0, _.ye)(P) ? g : A.Z,
-        L = a.useRef(null),
-        { iconURL: R, name: T } = a.useMemo(
+        P = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
+        S = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
+        L = (0, _.ye)(S) ? g : A.Z,
+        b = a.useRef(null),
+        [R, T] = a.useState(!1),
+        { iconURL: M, name: y } = a.useMemo(
             () =>
-                (0, _.sl)(P, {
-                    fakeAppIconURL: N,
+                (0, _.sl)(S, {
+                    fakeAppIconURL: v,
                     size: 84
                 }),
-            [P]
+            [S]
         );
     return (
         a.useEffect(() => {
-            I ? d.ZP.queryInstallOnDemandApp(P.id, t.id) : d.ZP.maybeQueryForInstallLessApps(P.id, t.id);
-        }, [P.id, t.id, I]),
+            I ? d.ZP.queryInstallOnDemandApp(S.id, t.id) : d.ZP.maybeQueryForInstallLessApps(S.id, t.id);
+        }, [S.id, t.id, I]),
         (0, i.jsxs)(r.ScrollerNone, {
-            className: v.container,
+            className: x.container,
             fade: !0,
-            ref: L,
+            ref: b,
             role: 'region',
-            'aria-label': x.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: T }),
+            'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: y }),
             children: [
-                (0, i.jsx)(h.Z, {
-                    name: T,
-                    iconURL: R,
-                    scrollerRef: L
+                (0, i.jsx)(f.Z, {
+                    name: y,
+                    iconURL: M,
+                    scrollerRef: b
                 }),
-                null != R &&
+                null != M &&
                     (0, i.jsx)(C.Z, {
-                        src: R,
-                        className: v.appIcon
+                        src: M,
+                        className: x.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(b, {
+                (0, i.jsx)(L, {
                     channel: t,
-                    application: P,
-                    sectionName: c
+                    application: S,
+                    sectionName: c,
+                    hasCommands: R
                 }),
-                S === p._b.TEXT
-                    ? (0, i.jsx)(f.Z, {
+                P === p._b.TEXT
+                    ? (0, i.jsx)(h.Z, {
                           channel: t,
-                          application: P,
+                          application: S,
                           sectionName: c,
-                          installOnDemand: I
+                          installOnDemand: I,
+                          setHasCommands: T
                       })
                     : null
             ]
@@ -78,19 +82,20 @@ function I(e) {
     );
 }
 function g(e) {
-    let { channel: n, application: t, sectionName: a } = e,
-        l = (0, c.Z)({
+    let { channel: n, application: t, sectionName: a, hasCommands: l } = e,
+        o = (0, c.Z)({
             applicationId: t.id,
             size: 2048,
             names: ['embedded_cover']
         }),
-        o = (0, _.yJ)(t),
-        r = null != o && null != o.activity_preview_video_asset_id ? (0, s.Z)(t.id, o.activity_preview_video_asset_id) : null;
+        r = (0, _.yJ)(t),
+        d = null != r && null != r.activity_preview_video_asset_id ? (0, s.Z)(t.id, r.activity_preview_video_asset_id) : null;
     return (0, i.jsx)(A.Z, {
         channel: n,
         application: t,
-        imageCoverUrl: l.url,
-        videoUrl: r,
-        sectionName: a
+        imageCoverUrl: o.url,
+        videoUrl: d,
+        sectionName: a,
+        hasCommands: l
     });
 }

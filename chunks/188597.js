@@ -1,12 +1,9 @@
 n.d(t, {
     $s: function () {
-        return N;
+        return A;
     },
     Sg: function () {
-        return S;
-    },
-    XV: function () {
-        return T;
+        return g;
     },
     ow: function () {
         return I;
@@ -15,7 +12,7 @@ n.d(t, {
         return r;
     },
     t$: function () {
-        return A;
+        return S;
     },
     tM: function () {
         return m;
@@ -51,10 +48,10 @@ let m = async (e) => {
                     customId: i,
                     componentId: s
                 },
-                onFailure: (e, t) => g(f, e, t)
+                onFailure: (e, t) => T(f, e, t)
             }),
             null != I && (0, _.B0)(n, m, I, s);
-        let T = {
+        let S = {
             type: l.B8.MESSAGE_COMPONENT,
             nonce: m,
             guild_id: h,
@@ -80,42 +77,18 @@ let m = async (e) => {
         await a.tn.post(
             {
                 url: p.ANM.INTERACTIONS,
-                body: T,
+                body: S,
                 timeout: 3000
             },
             (e) => {
-                S(m, e, o, f, h);
+                g(m, e, o, f, h);
             }
         );
     },
-    T = async (e) => {
-        let { applicationId: t, channelId: n, guildId: r } = e,
-            i = d.default.fromTimestamp(Date.now()),
-            s = { type: l.yU.PRIMARY_ENTRY_POINT },
-            o = {
-                type: l.B8.APPLICATION_COMMAND,
-                nonce: i,
-                guild_id: r,
-                channel_id: n,
-                application_id: t,
-                session_id: c.default.getSessionId(),
-                data: s
-            };
-        await a.tn.post(
-            {
-                url: p.ANM.INTERACTIONS,
-                body: o,
-                timeout: 3000
-            },
-            (e) => {
-                S(i, e, t, n, r);
-            }
-        );
-    },
-    g = (e, t, n) => {
+    T = (e, t, n) => {
         null == n && null != t && o.Z.sendClydeError(e, t);
     },
-    S = (e, t, n, r, i) => {
+    g = (e, t, n, r, i) => {
         if (!t.ok) {
             if (!t.hasErr) {
                 var a;
@@ -143,7 +116,7 @@ let m = async (e) => {
         }
     };
 ((i = r || (r = {}))[(i.SENDING = 0)] = 'SENDING'), (i[(i.CREATED = 1)] = 'CREATED'), (i[(i.FAILED = 2)] = 'FAILED'), (i[(i.TIMED_OUT = 3)] = 'TIMED_OUT'), (i[(i.EPHEMERAL_SUCCESS = 4)] = 'EPHEMERAL_SUCCESS');
-let A = (e, t) => {
+let S = (e, t) => {
     var n;
     let r = null == t ? void 0 : t.state,
         i = e.state === p.yb.SENT && I(e.id) < Date.now();
@@ -157,7 +130,7 @@ let A = (e, t) => {
     else if (o && e.state === p.yb.SEND_FAILED) return 2;
     else if (null != e.interaction && e.hasFlag(p.iLy.EPHEMERAL)) return 4;
 };
-function N(e) {
+function A(e) {
     let t = e.options;
     for (; (null == t ? void 0 : t.length) === 1 && (t[0].type === l.jw.SUB_COMMAND_GROUP || t[0].type === l.jw.SUB_COMMAND); ) t = t[0].options;
     for (let e of null != t ? t : []) if (e.type === l.jw.ATTACHMENT) return !1;

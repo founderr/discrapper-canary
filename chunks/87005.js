@@ -1,6 +1,6 @@
 t.d(n, {
     f: function () {
-        return _;
+        return h;
     }
 }),
     t(47120);
@@ -10,32 +10,35 @@ var i = t(470079),
     o = t(384275),
     r = t(911969),
     s = t(10718),
-    c = t(148958),
-    d = t(881998);
-t(445392), t(783097);
-var u = t(689079);
-let m = {
+    c = t(812236),
+    d = t(148958),
+    u = t(881998);
+t(445392);
+var m = t(783097),
+    p = t(689079);
+let _ = {
         commandTypes: [r.yU.CHAT, r.yU.PRIMARY_ENTRY_POINT]
     },
-    p = {
+    C = {
         placeholderCount: 0,
-        limit: u.tn,
+        limit: p.tn,
         includeFrecency: !0
     };
-function _(e) {
-    let { sectionDescriptors: n, loading: t } = s.wi(e, m, p);
+function h(e, n) {
+    let { sectionDescriptors: t, loading: r } = s.wi(e, _, C);
     return {
-        loading: t,
-        frecentApps: (function (e) {
+        loading: r,
+        frecentApps: (function (e, n, t) {
             i.useEffect(() => {
                 o.Z.fetch();
             }, []);
-            let n = (0, l.Wu)([d.Z], () => {
+            let r = (0, l.Wu)([u.Z], () => {
                     var e, n;
-                    return null !== (n = null === (e = d.Z.getApps()) || void 0 === e ? void 0 : e.filter((e) => e.scopes.includes(a.x.APPLICATIONS_COMMANDS))) && void 0 !== n ? n : [];
+                    return null !== (n = null === (e = u.Z.getApps()) || void 0 === e ? void 0 : e.filter((e) => e.scopes.includes(a.x.APPLICATIONS_COMMANDS))) && void 0 !== n ? n : [];
                 }),
-                t = e.filter((e) => e.id !== u.bi.FRECENCY && e.id !== u.bi.BUILT_IN);
-            return (0, c.h)(t, n);
-        })(n)
+                s = e.filter((e) => e.id !== p.bi.FRECENCY && e.id !== p.bi.BUILT_IN),
+                _ = (0, d.h)(s, r);
+            return i.useMemo(() => (t ? _.filter((e) => null != e.application && (0, m.ye)(e.application) && null != (0, c.Xu)(n, e.id)) : _), [_, n, t]);
+        })(t, e, n)
     };
 }
