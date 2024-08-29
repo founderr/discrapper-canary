@@ -294,6 +294,7 @@ var n, r;
     (r.GUILD_MEMBER_MOD_VIEW = 'guild member mod view'),
     (r.GUILD_MEMBER_APPLICATION_REVIEW = 'guild member application review'),
     (r.FOR_LATER_HELPERS = 'for later helpers'),
+    (r.FOR_LATER_POPOUT = 'for later popout'),
     (r.GUILD_PRODUCT_EMBED_CARD = 'guild product embed card'),
     (r.GUILD_PRODUCT_INFO_MODAL = 'guild product info modal'),
     (r.GUILD_PRODUCT_PAYMENT_MODAL = 'guild product payment modal'),
