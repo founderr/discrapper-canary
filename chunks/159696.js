@@ -18,5 +18,6 @@ e.exports = {
     nonVisualMediaItemContainer: 'nonVisualMediaItemContainer_cda674',
     nonVisualMediaItem: 'nonVisualMediaItem_cda674',
     hasFooter: 'hasFooter_cda674',
-    mosaicContainer: 'mosaicContainer_cda674'
+    mosaicContainer: 'mosaicContainer_cda674',
+    single: 'single_cda674'
 };

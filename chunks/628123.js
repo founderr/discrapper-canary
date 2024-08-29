@@ -90,7 +90,8 @@ class y extends i.PureComponent {
             error_message: e.message,
             error_stack: e.stack,
             sentry_issue_id: i,
-            uses_client_mods: r
+            uses_client_mods: r,
+            error_level: 'fatal'
         }),
             C(r),
             S.ZP.cleanupDisplaySleep();

@@ -18,8 +18,8 @@ var i = n(735250),
     Z = n(70956),
     I = n(960048),
     S = n(792125),
-    C = n(145597),
-    v = n(692546),
+    v = n(145597),
+    C = n(692546),
     x = n(518084),
     T = n(987650),
     N = n(981631),
@@ -40,8 +40,8 @@ function y(e, t, n) {
 }
 let R = 10 * Z.Z.Millis.SECOND;
 function M() {
-    let e = (0, C.QF)(),
-        t = (0, C.Ht)();
+    let e = (0, v.QF)(),
+        t = (0, v.Ht)();
     (0, f.lW)({
         type: N.BmY.DISPATCH,
         pid: e,
@@ -69,7 +69,7 @@ class b extends s.PureComponent {
             { notificationTimer: s } = this;
         return null == s
             ? null
-            : (0, i.jsx)(v.Z, {
+            : (0, i.jsx)(C.Z, {
                   observe: !1,
                   children: (0, i.jsxs)(h.Clickable, {
                       className: o()((0, S.Q)(N.BRd.DARK), A.container),
@@ -161,11 +161,11 @@ class P extends s.PureComponent {
             error: e,
             info: t
         });
-        let i = (0, C.QF)(),
-            s = (0, C.Ht)();
+        let i = (0, v.QF)(),
+            s = (0, v.Ht)();
         (0, f.lW)({
             type: N.BmY.DISPATCH,
-            pid: (0, C.QF)(),
+            pid: (0, v.QF)(),
             token: s,
             payloads: [
                 {
@@ -186,7 +186,8 @@ class P extends s.PureComponent {
             extra: t,
             error_message: e.message,
             error_stack: e.stack,
-            sentry_issue_id: a
+            sentry_issue_id: a,
+            error_level: 'fatal'
         }),
             L();
     }
