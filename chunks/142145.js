@@ -12,7 +12,16 @@ t.Z = (e) => {
         N = i.useRef(null),
         [O, R] = i.useState(!1),
         v = !0;
-    if ((!E && (v = !1), f < d.start && (v = !1), !d.loop && f > d.duration + d.start && (v = !1), _ === o.Q.PERSISTENT && !p && null != T && f >= g && I(!0), d.loop && void 0 !== d.loopDelay && d.loopDelay > 0)) {
+    if (
+        (i.useEffect(() => {
+            null != N.current && (N.current.playsInline = !0);
+        }, [N]),
+        !E && (v = !1),
+        f < d.start && (v = !1),
+        !d.loop && f > d.duration + d.start && (v = !1),
+        _ === o.Q.PERSISTENT && !p && null != T && f >= g && I(!0),
+        d.loop && void 0 !== d.loopDelay && d.loopDelay > 0)
+    ) {
         let e = d.duration + d.loopDelay,
             t = Math.floor((f - d.start) / e);
         f - d.start - t * e > d.duration && (_ === o.Q.INTERMITTENT && !p && null != T && t >= T && I(!0), (v = !1));
