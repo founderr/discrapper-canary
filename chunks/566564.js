@@ -1,4 +1,3 @@
-n(47120);
 var a = n(735250),
     r = n(470079),
     s = n(120356),
@@ -13,221 +12,37 @@ var a = n(735250),
     g = n(223143),
     C = n(823941),
     m = n(709999),
-    _ = n(689938),
-    b = n(728097),
-    h = n(367815),
-    x = n(933285);
-let I = ['1252404767737778217', '1252405010608951358', '1252405017688936508', '1252404132074225775'],
-    E = [
-        '1212569433839636530',
-        '1232073608168472638',
-        '1232071712695386162',
-        '1232071157746765906',
-        '1212570343567261736',
-        '1232070870093008937',
-        '1144308439720394944',
-        '1232073286582538261',
-        '1228234634379132958',
-        '1228251144065777765',
-        '1197344764174008452',
-        '1232073448415821854',
-        '1144307957425778779',
-        '1139323093991575696',
-        '1228251351415263242',
-        '1228246010116050965',
-        '1252404745977462836',
-        '1212569856189407352',
-        '1212582298893946880',
-        '1252405017688936508',
-        '1237654942202990602',
-        '1207047014769234001',
-        '1144308196723408958',
-        '1232072121950146560',
-        '1144305233707671573',
-        '1144307629225672846',
-        '1256321669467865088',
-        '1154896005045694555',
-        '1144307257807491094',
-        '1139323093551165533',
-        '1197344326133502032',
-        '1232072859485208687',
-        '1207047597294886923',
-        '1197344693630009424',
-        '1212582372877541427',
-        '1243617249974288404',
-        '1256321669493166214',
-        '1256321669426053198',
-        '1212582452640350238',
-        '1207049364464345158',
-        '1207047808838799410',
-        '1228237157554978817',
-        '1237653964582031400',
-        '1139323101008642101',
-        '1139323101881061466',
-        '1207048656289534022',
-        '1228233390260486164',
-        '1228251846032756796',
-        '1139323099687436419',
-        '1207048289610899526',
-        '1139323092645183591',
-        '1237654224712765440',
-        '1237654783209508904',
-        '1139323100568244355',
-        '1245088205330710539',
-        '1220513989729976411',
-        '1252405004925669396',
-        '1256321669493166217',
-        '1228252219502100530',
-        '1144046002110738634',
-        '1220513977683935373',
-        '1252405239693447208',
-        '1207049498065375343',
-        '1252404132074225775',
-        '1252404767737778217',
-        '1212581147675205652',
-        '1252404760448077864',
-        '1217626024540508170',
-        '1256321669426053195',
-        '1237654867330469949',
-        '1237650542772228096',
-        '1243619479645065287',
-        '1256321669467865094',
-        '1252405251949203497',
-        '1256321669467865091',
-        '1197344396983664670',
-        '1220513984273186816',
-        '1256321669388308601',
-        '1237650411410685972',
-        '1252404753321689119',
-        '1228252042791878707',
-        '1243618816639107223',
-        '1220432740638523543',
-        '1197344636558114986',
-        '1197344575832981605',
-        '1212570596970467378',
-        '1245088094437507163',
-        '1232072520249643028',
-        '1139323099251232828',
-        '1220514048068812901',
-        '1243620093431119922',
-        '1220432697718083614',
-        '1237654031732703272',
-        '1245087661316898877',
-        '1245088254647205991',
-        '1217626509737459852',
-        '1245087968759382207',
-        '1217627230818009171',
-        '1237654124443734026',
-        '1237654692985700352',
-        '1217625794382401577',
-        '1252405010608951358',
-        '1144048390594908212',
-        '1245087724265013299',
-        '1237650618777075712',
-        '1144006094134456352',
-        '1212581390936178768',
-        '1220513995308400680',
-        '1220432647453409384',
-        '1256321669467865097',
-        '1237654615474962472',
-        '1243619781362450442',
-        '1217626219651006495',
-        '1217625572168044604',
-        '1217627051217911848',
-        '1245087912350187520',
-        '1256321669426053192',
-        '1217624148080332820',
-        '1144003752978829455',
-        '1144048977138946230',
-        '1237650179721527347',
-        '1207048049571139584',
-        '1243618548673417298',
-        '1217625289681801316',
-        '1245088023452975104',
-        '1243620329331626044',
-        '1144049603109470370',
-        '1245087850177888356',
-        '1237649939027333232',
-        '1237650103980920872',
-        '1207049115339591681',
-        '1237650023794081823',
-        '1144049316009353338',
-        '1245481938202918912',
-        '1144049924397334651',
-        '1158572178179108968',
-        '1243619153688920206',
-        '1158572275507937342',
-        '1157411984371880118',
-        '1158572263411556373',
-        '1243617981435478102',
-        '1146328961417224193',
-        '1157411685687115858',
-        '1157409074422481023',
-        '1159280677246742548',
-        '1179493515126898811',
-        '1157412388509864068',
-        '1202061726212947968',
-        '1144057023726628945',
-        '1174459546748600481',
-        '1157412779335090267',
-        '1179493515118514195',
-        '1202074101343322184',
-        '1159280847262859364',
-        '1157407831348228141',
-        '1139323095744790568',
-        '1179493515118514186',
-        '1202073975178665984',
-        '1202061510529257522',
-        '1144056139584127058',
-        '1174460780842856588',
-        '1174459415924064376',
-        '1146328960951668776',
-        '1144056631374647458',
-        '1179493515126898814',
-        '1144057737475534889',
-        '1144057249392771145',
-        '1157407831348228139',
-        '1174459480348565554',
-        '1202059628112777256',
-        '1179493515118514189',
-        '1179493515076579369',
-        '1179493515076579372',
-        '1202073882111266846',
-        '1179493515038818329',
-        '1179493515118514192',
-        '1202070083816661043',
-        '1179493515076579375',
-        '1202073775840178206',
-        '1179493515038818332',
-        '1157409869448618016',
-        '1139323096180994169',
-        '1202445890909110323'
-    ];
+    _ = n(215023),
+    b = n(689938),
+    h = n(728097),
+    x = n(367815),
+    I = n(933285);
 t.Z = (e) => {
-    var t, n, s, v, T, S, L, N;
-    let { handleTransition: k } = e,
-        { isFetching: O } = (0, g.Z)(),
+    var t, n, s, E, v, L, T, S;
+    let { handleTransition: N, numVisibleItems: O } = e,
+        { isFetching: k } = (0, g.Z)(),
         B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         j = r.createRef(),
-        [Z, P] = r.useState(20),
-        R = (0, l.cj)([u.Z], () => ({
+        Z = (0, l.cj)([u.Z], () => ({
             feature: u.Z.getCategory('1252404112650407998'),
             secondary: [u.Z.getCategory('1197342727608746044'), u.Z.getCategory('1207046915880124426')]
         })),
-        A = r.useMemo(
+        P = r.useMemo(
             () =>
-                I.map((e) => u.Z.getProduct(e))
+                _.$O
+                    .map((e) => u.Z.getProduct(e))
                     .filter((e) => null != e)
                     .map((e) => ({
                         ...e,
                         category: u.Z.getCategoryForProduct(e.skuId)
                     }))
                     .filter((e) => null != e.category),
-            [O]
+            [k]
         ),
-        y = r.useMemo(
+        R = r.useMemo(
             () =>
-                E.map((e) => u.Z.getProduct(e))
+                _.yo
+                    .map((e) => u.Z.getProduct(e))
                     .filter((e) => null != e)
                     .map((e) => ({
                         ...e,
@@ -239,62 +54,61 @@ t.Z = (e) => {
                             a = !!f.Z.getPurchase(t.skuId);
                         return Number(n) - Number(a);
                     }),
-            [O]
+            [k]
         );
     return null == B
         ? null
-        : (y.length,
-          (0, a.jsx)(a.Fragment, {
+        : (0, a.jsx)(a.Fragment, {
               children: (0, a.jsxs)('div', {
-                  className: b.shop,
+                  className: h.shop,
                   children: [
                       (0, a.jsx)('div', {
-                          className: b.banner,
+                          className: h.banner,
                           children: (0, a.jsx)('div', {
-                              className: b.bannerImage,
-                              style: { backgroundImage: 'url('.concat((0, p.uV)(null !== (L = null === (t = R.feature) || void 0 === t ? void 0 : t.banner) && void 0 !== L ? L : '', { size: 2048 }), ')') }
+                              className: h.bannerImage,
+                              style: { backgroundImage: 'url('.concat((0, p.uV)(null !== (T = null === (t = Z.feature) || void 0 === t ? void 0 : t.banner) && void 0 !== T ? T : '', { size: 2048 }), ')') }
                           })
                       }),
                       (0, a.jsxs)('div', {
-                          className: o()(b.content, b.mainContent),
+                          className: o()(h.content, h.mainContent),
                           children: [
                               (0, a.jsxs)('div', {
-                                  className: o()(b.heroHeaderContainer),
+                                  className: o()(h.heroHeaderContainer),
                                   children: [
                                       (0, a.jsxs)('div', {
-                                          className: o()(b.heroHeaderBadgeLogoSummaryContainer),
+                                          className: o()(h.heroHeaderBadgeLogoSummaryContainer),
                                           children: [
-                                              (null === (n = R.feature) || void 0 === n ? void 0 : n.unpublishedAt) != null &&
+                                              (null === (n = Z.feature) || void 0 === n ? void 0 : n.unpublishedAt) != null &&
                                                   (0, a.jsx)(c.TextBadge, {
                                                       disableColor: !0,
-                                                      text: _.Z.Messages.LIMITED_TIME,
-                                                      className: b.limitedTimeBadge
+                                                      text: b.Z.Messages.LIMITED_TIME,
+                                                      className: h.limitedTimeBadge
                                                   }),
                                               (0, a.jsx)('img', {
-                                                  className: b.heroHeaderLogo,
-                                                  src: (0, p.uV)(null !== (N = null === (s = R.feature) || void 0 === s ? void 0 : s.logo) && void 0 !== N ? N : '', { size: C.n }),
-                                                  alt: null === (v = R.feature) || void 0 === v ? void 0 : v.name
+                                                  className: h.heroHeaderLogo,
+                                                  src: (0, p.uV)(null !== (S = null === (s = Z.feature) || void 0 === s ? void 0 : s.logo) && void 0 !== S ? S : '', { size: C.n }),
+                                                  alt: null === (E = Z.feature) || void 0 === E ? void 0 : E.name
                                               }),
                                               (0, a.jsx)(c.Text, {
                                                   color: 'always-white',
                                                   variant: 'text-md/normal',
-                                                  children: null === (T = R.feature) || void 0 === T ? void 0 : T.summary
+                                                  children: null === (v = Z.feature) || void 0 === v ? void 0 : v.summary
                                               })
                                           ]
                                       }),
                                       (0, a.jsx)('div', {
-                                          className: b.heroHeaderButtonContainer,
+                                          className: h.heroHeaderButtonContainer,
                                           children: (0, a.jsx)(c.Button, {
                                               color: c.ButtonColors.WHITE,
-                                              onClick: () => k(),
-                                              children: _.Z.Messages.COLLECTIBLES_SHOP_THE_VAULT_COLLECTION
+                                              onClick: () => N(),
+                                              children: b.Z.Messages.COLLECTIBLES_SHOP_THE_VAULT_COLLECTION
                                           })
                                       })
                                   ]
                               }),
                               (0, a.jsx)('div', {
-                                  className: o()(b.row, b.feed, b.feedSingleRow),
-                                  children: A.map((e) => {
+                                  className: o()(h.row, h.feed, h.feedSingleRow),
+                                  children: P.map((e) => {
                                       if (null == e || null == e.category) return null;
                                       let { category: t, ...n } = e;
                                       return (0, a.jsx)(
@@ -309,56 +123,69 @@ t.Z = (e) => {
                                   })
                               }),
                               (0, a.jsxs)('div', {
-                                  className: o()(b.section, b.col2, b.featuredBlocksContainer),
+                                  className: o()(h.section, h.col2, h.featuredBlocksContainer),
                                   children: [
                                       (0, a.jsxs)('div', {
-                                          className: o()(b.featuredBlock),
-                                          style: { backgroundImage: 'url('.concat(x, ')') },
+                                          className: o()(h.featuredBlock),
+                                          style: { backgroundImage: 'url('.concat(I, ')') },
                                           children: [
-                                              (null === (S = R.feature) || void 0 === S ? void 0 : S.unpublishedAt) != null &&
+                                              (null === (L = Z.feature) || void 0 === L ? void 0 : L.unpublishedAt) != null &&
                                                   (0, a.jsx)(c.TextBadge, {
                                                       disableColor: !0,
-                                                      text: _.Z.Messages.LIMITED_TIME,
-                                                      className: b.featuredBlockBadge
+                                                      text: b.Z.Messages.LIMITED_TIME,
+                                                      className: h.featuredBlockBadge
                                                   }),
                                               (0, a.jsx)(c.Button, {
-                                                  className: b.featuredBlockButton,
+                                                  className: h.featuredBlockButton,
                                                   color: c.ButtonColors.WHITE,
-                                                  onClick: () => k(i.T.DOJO),
-                                                  children: _.Z.Messages.TAKE_ME_THERE
+                                                  onClick: () => N(i.T.DOJO),
+                                                  children: b.Z.Messages.TAKE_ME_THERE
                                               })
                                           ]
                                       }),
                                       (0, a.jsxs)('div', {
-                                          className: o()(b.featuredBlock),
-                                          style: { backgroundImage: 'url('.concat(h, ')') },
+                                          className: o()(h.featuredBlock),
+                                          style: { backgroundImage: 'url('.concat(x, ')') },
                                           children: [
                                               (0, a.jsx)(c.TextBadge, {
                                                   disableColor: !0,
-                                                  text: _.Z.Messages.MOST_POPULAR,
-                                                  className: b.featuredBlockBadge
+                                                  text: b.Z.Messages.MOST_POPULAR,
+                                                  className: h.featuredBlockBadge
                                               }),
                                               (0, a.jsx)(c.Button, {
-                                                  className: b.featuredBlockButton,
+                                                  className: h.featuredBlockButton,
                                                   color: c.ButtonColors.WHITE,
-                                                  onClick: () => k(i.T.ANIME_V2),
-                                                  children: _.Z.Messages.TAKE_ME_THERE
+                                                  onClick: () => N(i.T.ANIME_V2),
+                                                  children: b.Z.Messages.TAKE_ME_THERE
+                                              })
+                                          ]
+                                      })
+                                  ]
+                              }),
+                              (0, a.jsxs)('div', {
+                                  className: o()(h.row, h.between, h.section),
+                                  children: [
+                                      (0, a.jsx)(c.Heading, {
+                                          variant: 'heading-lg/semibold',
+                                          children: b.Z.Messages.COLLECTIBLES_POPULAR_PICKS
+                                      }),
+                                      (0, a.jsxs)(c.Clickable, {
+                                          className: h.shopAll,
+                                          onClick: () => N(),
+                                          children: [
+                                              (0, a.jsx)(c.ServerGridIcon, {}),
+                                              (0, a.jsx)(c.Text, {
+                                                  variant: 'text-sm/medium',
+                                                  children: b.Z.Messages.COLLECTIBLES_SHOP_ALL
                                               })
                                           ]
                                       })
                                   ]
                               }),
                               (0, a.jsx)('div', {
-                                  className: o()(b.row, b.between, b.section),
-                                  children: (0, a.jsx)(c.Heading, {
-                                      variant: 'heading-md/bold',
-                                      children: 'Most popular products'
-                                  })
-                              }),
-                              (0, a.jsx)('div', {
-                                  className: b.feed,
+                                  className: h.feed,
                                   ref: j,
-                                  children: y.slice(0, Z).map((e) => {
+                                  children: R.slice(0, O).map((e) => {
                                       if (null == e || null == e.category) return null;
                                       let { category: t, ...n } = e;
                                       return (0, a.jsx)(
@@ -372,21 +199,30 @@ t.Z = (e) => {
                                       );
                                   })
                               }),
-                              (0, a.jsxs)('div', {
-                                  className: o()(b.section, b.around),
-                                  children: [
-                                      Z < y.length && !1,
-                                      (0, a.jsx)(c.Button, {
-                                          onClick: () => {
-                                              k();
-                                          },
-                                          children: 'See old shop'
-                                      })
-                                  ]
-                              })
+                              O >= _.iA &&
+                                  (0, a.jsxs)('div', {
+                                      className: h.endOfFeed,
+                                      children: [
+                                          (0, a.jsx)(c.Heading, {
+                                              variant: 'heading-md/semibold',
+                                              children: b.Z.Messages.COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_TEXT
+                                          }),
+                                          (0, a.jsx)(c.Button, {
+                                              className: h.endOfFeedButton,
+                                              onClick: () => {
+                                                  N();
+                                              },
+                                              children: (0, a.jsx)(c.Text, {
+                                                  variant: 'text-md/medium',
+                                                  color: 'always-white',
+                                                  children: b.Z.Messages.COLLECTIBLES_SHOP_FEED_END_OF_SCROLL_BUTTON
+                                              })
+                                          })
+                                      ]
+                                  })
                           ]
                       })
                   ]
               })
-          }));
+          });
 };

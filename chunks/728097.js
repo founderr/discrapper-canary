@@ -3,7 +3,6 @@ e.exports = {
     content: 'content_ebba41',
     col2: 'col2_ebba41',
     row: 'row_ebba41',
-    around: 'around_ebba41',
     between: 'between_ebba41',
     shop: 'shop_ebba41',
     banner: 'banner_ebba41',
@@ -18,6 +17,9 @@ e.exports = {
     heroHeaderLogo: 'heroHeaderLogo_ebba41',
     heroHeaderButtonContainer: 'heroHeaderButtonContainer_ebba41',
     limitedTimeBadge: 'limitedTimeBadge_ebba41',
+    shopAll: 'shopAll_ebba41',
     feed: 'feed_ebba41',
-    feedSingleRow: 'feedSingleRow_ebba41'
+    feedSingleRow: 'feedSingleRow_ebba41',
+    endOfFeed: 'endOfFeed_ebba41',
+    endOfFeedButton: 'endOfFeedButton_ebba41'
 };
