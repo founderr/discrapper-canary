@@ -189,8 +189,7 @@ class O extends (r = a.PureComponent) {
                 ref: this.handleSetDraggableRef,
                 className: o()(h.pictureInPictureWindow, s, {
                     [h.hidden]: r,
-                    [h.borderRadius]: a,
-                    [h.pictureInPictureWindowFloatingPIP]: null == this.props.dockedRect
+                    [h.borderRadius]: a
                 }),
                 maxX: e,
                 maxY: t,
