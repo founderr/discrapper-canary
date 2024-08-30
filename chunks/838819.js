@@ -20,8 +20,8 @@ var a = n(735250),
     I = n(977395),
     E = n(214852),
     v = n(479446),
-    L = n(981632),
-    T = n(290026),
+    T = n(981632),
+    L = n(290026),
     S = n(210887),
     N = n(819640),
     O = n(594174),
@@ -30,13 +30,13 @@ var a = n(735250),
     j = n(335131),
     Z = n(372047),
     P = n(328347),
-    R = n(307043),
-    A = n(223143),
+    A = n(307043),
+    R = n(223143),
     y = n(675052),
     M = n(298228),
     w = n(937510),
-    D = n(309956),
-    H = n(853748),
+    H = n(309956),
+    D = n(853748),
     F = n(426171),
     U = n(823941),
     G = n(752053),
@@ -141,7 +141,7 @@ function ep(e) {
                     className: o()(ed.hiddenWumpus, { [ed.hiddenWumpusEnabled]: i }),
                     onClick: () => l(!0),
                     style: { left: ''.concat(f.current, '%') },
-                    children: (0, a.jsx)(L.Z, {
+                    children: (0, a.jsx)(T.Z, {
                         idleAnimationState: v.S.IDLE,
                         giftStyle: el.Cj.BOX
                     })
@@ -159,7 +159,7 @@ function ep(e) {
             }),
             null != _ &&
                 null != t.unpublishedAt &&
-                (0, a.jsx)(H.$, {
+                (0, a.jsx)(D.$, {
                     unpublishedAt: t.unpublishedAt,
                     isVisible: g,
                     displayOptions: _,
@@ -173,9 +173,9 @@ t.default = function (e) {
     (0, E.z)(I.f);
     let { analyticsSource: n, analyticsLocations: s } = (0, c.cj)([P.Z], () => P.Z.getAnalytics()),
         { analyticsLocations: i } = (0, _.ZP)([...s, m.Z.COLLECTIBLES_SHOP]),
-        { sessionId: C, scrollerRef: v, scrollHandler: L } = (0, b._)(es.rMx.COLLECTIBLES_SHOP_SCROLLED, n),
-        w = (0, R.u)('CollectiblesShop'),
-        { feedState: H, catalogState: U, transitionToCatalog: K, transitionToFeed: q } = (0, D.B)(w, v),
+        { sessionId: C, scrollerRef: v, scrollHandler: T } = (0, b._)(es.rMx.COLLECTIBLES_SHOP_SCROLLED, n),
+        w = (0, A.u)('CollectiblesShop'),
+        { feedState: D, catalogState: U, transitionToCatalog: K, transitionToFeed: q } = (0, H.B)(w, v),
         [Q, ea] = r.useState(!1),
         [eu, ef] = r.useState(er.IV),
         eg = (0, c.e7)([N.Z], () => N.Z.getLayers().includes(es.S9g.COLLECTIBLES_SHOP)),
@@ -183,17 +183,17 @@ t.default = function (e) {
         { onClose: em } = (0, z.Db)(),
         e_ = (0, c.e7)([O.default], () => O.default.getCurrentUser()),
         eb = B.ZP.canUseCollectibles(e_),
-        { categories: eh, isFetchingCategories: ex, error: eI, refreshCategories: eE } = (0, A.Z)();
-    (0, T.P)();
+        { categories: eh, isFetchingCategories: ex, error: eI, refreshCategories: eE } = (0, R.Z)();
+    (0, L.P)();
     let ev = (0, M.O)(eh),
-        { sortedPopularPickProducts: eL } = (0, y.a)(eh),
-        eT = r.useRef(null),
+        { sortedPopularPickProducts: eT } = (0, y.a)(eh),
+        eL = r.useRef(null),
         [eS, eN] = r.useState(!1);
     (0, F.Kp)({
         categories: eh,
         isFetchingCategories: ex,
         isLayer: eg,
-        initialItemCardRef: eT
+        initialItemCardRef: eL
     }),
         r.useEffect(() => {
             k.default.track(es.rMx.COLLECTIBLES_SHOP_VIEWED, {
@@ -250,12 +250,12 @@ t.default = function (e) {
         })(),
         { setCategoryRef: ej, handleScrollToCategory: eZ } = (0, F.xV)(v.current),
         { condensedBannersAndDynamicHeadersEnabled: eP } = (0, J.O)({ location: 'CollectiblesShop' }),
-        { enabled: eR } = (0, Z.Z)({ location: 'CollectiblesShop' }),
-        eA = (0, c.e7)([h.Z], () => h.Z.gradientPreset),
-        ey = !(0, c.e7)([S.Z], () => (0, f.wj)(S.Z.theme)) && null == eA,
+        { enabled: eA } = (0, Z.Z)({ location: 'CollectiblesShop' }),
+        eR = (0, c.e7)([h.Z], () => h.Z.gradientPreset),
+        ey = !(0, c.e7)([S.Z], () => (0, f.wj)(S.Z.theme)) && null == eR,
         eM = r.useCallback(
-            async (e) => {
-                await K(), e && eZ(e);
+            async (e, t) => {
+                await K(t), e && eZ(e);
             },
             [K, eZ]
         );
@@ -269,18 +269,18 @@ t.default = function (e) {
                     className: ed.shopScroll,
                     ref: v,
                     onScroll: () => {
-                        if ((L(), null != v.current)) {
+                        if ((T(), null != v.current)) {
                             let e = v.current.getDistanceFromBottom();
                             eu >= er.iA ? ea(e < 20) : e <= 200 && ef(eu + er.IV);
                         }
                     },
                     children: [
-                        H !== er.f7.HIDDEN &&
+                        D !== er.f7.HIDDEN &&
                             (0, a.jsxs)('div', {
                                 className: o()(ed.shopViewWrapper, {
-                                    [ed.visible]: H === er.f7.VISIBLE,
-                                    [ed.in]: H === er.f7.IN,
-                                    [ed.out]: H === er.f7.OUT
+                                    [ed.visible]: D === er.f7.VISIBLE,
+                                    [ed.in]: D === er.f7.IN,
+                                    [ed.out]: D === er.f7.OUT
                                 }),
                                 children: [
                                     (0, a.jsx)(W.I, {
@@ -309,6 +309,7 @@ t.default = function (e) {
                                         isLayer: eg,
                                         onClose: em,
                                         showBackButton: w,
+                                        transparent: w,
                                         handleTransition: q
                                     }),
                                     (0, a.jsx)('div', {
@@ -322,7 +323,7 @@ t.default = function (e) {
                                                         categories: ev,
                                                         handleScrollToCategory: eZ
                                                     }),
-                                                eR &&
+                                                eA &&
                                                     (0, a.jsxs)('div', {
                                                         className: o()(ed.popularPicksContainer, ey ? ed.defaultLightModeCustomGradient : ed.popularPicksGradient),
                                                         children: [
@@ -332,7 +333,7 @@ t.default = function (e) {
                                                                 children: ec.Z.Messages.COLLECTIBLES_POPULAR_PICKS
                                                             }),
                                                             (0, a.jsx)($.Z, {
-                                                                products: eL,
+                                                                products: eT,
                                                                 user: e_
                                                             })
                                                         ]
@@ -357,7 +358,7 @@ t.default = function (e) {
                                                                             children: (0, a.jsx)(ep, {
                                                                                 isPremiumUser: eb,
                                                                                 category: e,
-                                                                                initialItemCardRef: eT,
+                                                                                initialItemCardRef: eL,
                                                                                 setIsGiftEasterEggEnabled: eN,
                                                                                 isGiftEasterEggEnabled: eS,
                                                                                 isFullScreen: t,
@@ -382,12 +383,12 @@ t.default = function (e) {
                     children: [
                         (0, a.jsx)(en.Z, {
                             peaking: Q,
-                            transitioning: H === er.f7.OUT
+                            transitioning: D === er.f7.OUT
                         }),
                         (0, a.jsx)(en.Z, {
                             style: { left: 1208 },
                             peaking: Q,
-                            transitioning: H === er.f7.OUT
+                            transitioning: D === er.f7.OUT
                         })
                     ]
                 })

@@ -18,15 +18,12 @@ var a = n(735250),
     x = n(367815),
     I = n(933285);
 t.Z = (e) => {
-    var t, n, s, E, v, L, T, S;
+    var t, n, s, E, v, T, L, S;
     let { handleTransition: N, numVisibleItems: O } = e,
         { isFetching: k } = (0, g.Z)(),
         B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         j = r.createRef(),
-        Z = (0, l.cj)([u.Z], () => ({
-            feature: u.Z.getCategory('1252404112650407998'),
-            secondary: [u.Z.getCategory('1197342727608746044'), u.Z.getCategory('1207046915880124426')]
-        })),
+        Z = (0, l.cj)([u.Z], () => ({ feature: u.Z.getCategory(i.T.THE_VAULT) })),
         P = r.useMemo(
             () =>
                 _.$O
@@ -39,7 +36,7 @@ t.Z = (e) => {
                     .filter((e) => null != e.category),
             [k]
         ),
-        R = r.useMemo(
+        A = r.useMemo(
             () =>
                 _.yo
                     .map((e) => u.Z.getProduct(e))
@@ -66,7 +63,7 @@ t.Z = (e) => {
                           className: h.banner,
                           children: (0, a.jsx)('div', {
                               className: h.bannerImage,
-                              style: { backgroundImage: 'url('.concat((0, p.uV)(null !== (T = null === (t = Z.feature) || void 0 === t ? void 0 : t.banner) && void 0 !== T ? T : '', { size: 2048 }), ')') }
+                              style: { backgroundImage: 'url('.concat((0, p.uV)(null !== (L = null === (t = Z.feature) || void 0 === t ? void 0 : t.banner) && void 0 !== L ? L : '', { size: 2048 }), ')') }
                           })
                       }),
                       (0, a.jsxs)('div', {
@@ -129,7 +126,7 @@ t.Z = (e) => {
                                           className: o()(h.featuredBlock),
                                           style: { backgroundImage: 'url('.concat(I, ')') },
                                           children: [
-                                              (null === (L = Z.feature) || void 0 === L ? void 0 : L.unpublishedAt) != null &&
+                                              (null === (T = Z.feature) || void 0 === T ? void 0 : T.unpublishedAt) != null &&
                                                   (0, a.jsx)(c.TextBadge, {
                                                       disableColor: !0,
                                                       text: b.Z.Messages.LIMITED_TIME,
@@ -185,7 +182,7 @@ t.Z = (e) => {
                               (0, a.jsx)('div', {
                                   className: h.feed,
                                   ref: j,
-                                  children: R.slice(0, O).map((e) => {
+                                  children: A.slice(0, O).map((e) => {
                                       if (null == e || null == e.category) return null;
                                       let { category: t, ...n } = e;
                                       return (0, a.jsx)(
@@ -210,7 +207,7 @@ t.Z = (e) => {
                                           (0, a.jsx)(c.Button, {
                                               className: h.endOfFeedButton,
                                               onClick: () => {
-                                                  N();
+                                                  N(void 0, !0);
                                               },
                                               children: (0, a.jsx)(c.Text, {
                                                   variant: 'text-md/medium',

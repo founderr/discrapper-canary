@@ -13,15 +13,18 @@ let s = (e, t) => {
         s(e ? r.f7.VISIBLE : r.f7.HIDDEN), i(e ? r.f7.HIDDEN : r.f7.VISIBLE);
     }, [e]);
     let l = (e) => new Promise((t) => setTimeout(t, e)),
-        c = a.useCallback(async () => {
-            s(r.f7.OUT), await l(r.lb), await l(0.25 * r.lb), null != t.current && t.current.scrollTo({ to: 0 }), i(r.f7.IN), s(r.f7.HIDDEN), await l(0.33 * r.lb), i(r.f7.VISIBLE);
-        }, [t]);
+        c = a.useCallback(
+            async (e) => {
+                e && (s(r.f7.OUT), await l(1.1 * r.lb)), null != t.current && t.current.scrollTo({ to: 0 }), e && i(r.f7.IN), s(r.f7.HIDDEN), i(r.f7.VISIBLE);
+            },
+            [t]
+        );
     return {
         feedState: n,
         catalogState: o,
         transitionToCatalog: c,
-        transitionToFeed: a.useCallback(async () => {
-            i(r.f7.OUT), await l(r.lb), null != t.current && t.current.scrollTo({ to: 0 }), i(r.f7.HIDDEN), s(r.f7.IN), await l(r.lb), s(r.f7.VISIBLE);
+        transitionToFeed: a.useCallback(() => {
+            null != t.current && t.current.scrollTo({ to: 0 }), i(r.f7.HIDDEN), s(r.f7.VISIBLE);
         }, [t])
     };
 };

@@ -4,103 +4,122 @@ var a = n(735250),
     s = n(120356),
     o = n.n(s),
     i = n(979554),
-    l = n(597688),
-    c = n(616066),
-    d = n(215023),
-    u = n(843702);
-let f = [
-    {
-        left: 0,
-        top: 20,
-        rotation: -32,
-        size: 96,
-        skuId: '1252404767737778217'
+    l = n(876917),
+    c = n(597688),
+    d = n(616066),
+    u = n(215023),
+    f = n(843702);
+let p = {
+        x: 160,
+        y: 160
     },
-    {
-        left: 128,
-        top: 48,
-        rotation: 24,
-        size: 96,
-        skuId: '1252404767737778217'
+    g = {
+        x: 200,
+        y: 600
     },
-    {
-        left: 256,
-        top: 12,
-        rotation: 8,
-        size: 96,
-        skuId: '1252404767737778217'
-    },
-    {
-        left: 384,
-        top: 44,
-        rotation: -48,
-        size: 96,
-        skuId: '1252404767737778217'
-    },
-    {
-        left: 512,
-        top: 52,
-        rotation: 12,
-        size: 96,
-        skuId: '1252404767737778217'
-    },
-    {
-        left: 640,
-        top: 28,
-        rotation: -4,
-        size: 96,
-        skuId: '1252404767737778217'
-    },
-    {
-        left: 768,
-        top: 28,
-        rotation: -4,
-        size: 96,
-        skuId: '1252404767737778217'
-    }
-];
+    C = [
+        {
+            left: 0,
+            top: 20,
+            rotation: -32,
+            size: p,
+            skuId: '1232072859485208687'
+        },
+        {
+            left: 192,
+            top: 48,
+            rotation: -24,
+            size: g,
+            skuId: '1139323099687436419'
+        },
+        {
+            left: 256,
+            top: 12,
+            rotation: 8,
+            size: p,
+            skuId: '1262491690900656261'
+        },
+        {
+            left: 384,
+            top: 44,
+            rotation: -48,
+            size: p,
+            skuId: '1252404767737778217'
+        },
+        {
+            left: 512,
+            top: 52,
+            rotation: 12,
+            size: g,
+            skuId: '1139323100568244355'
+        },
+        {
+            left: 640,
+            top: 28,
+            rotation: -4,
+            size: p,
+            skuId: '1228251144065777765'
+        },
+        {
+            left: 768,
+            top: 28,
+            rotation: -4,
+            size: p,
+            skuId: '1144046002110738634'
+        }
+    ];
 t.Z = (e) => {
     let { peaking: t, transitioning: n, style: s } = e,
         p = window.innerHeight,
-        [g, C] = r.useState(!1),
-        m = f.map((e) => {
+        [g, m] = r.useState(!1),
+        _ = C.map((e) => {
             let { skuId: t } = e;
-            return l.Z.getProduct(t);
+            return c.Z.getProduct(t);
         });
     return (
         r.useEffect(() => {
             n &&
                 setTimeout(() => {
-                    C(!0);
-                }, d.lb);
+                    m(!0);
+                }, u.lb);
         }, [n]),
         (0, a.jsx)('div', {
             style: s,
-            className: o()(u.jumbleWrapper, {
-                [u.peaking]: t,
-                [u.transitioned]: g
+            className: o()(f.jumbleWrapper, {
+                [f.peaking]: t,
+                [f.transitioned]: g
             }),
-            children: f.map((e, t) => {
+            children: C.map((e, t) => {
                 var r, s;
-                let { top: o, left: l, rotation: d, size: f, skuId: g } = e,
-                    C = null === (r = m[t]) || void 0 === r ? void 0 : r.items[0],
-                    _ = null === (s = m[t]) || void 0 === s ? void 0 : s.type;
-                return (0, a.jsx)(
+                let { top: o, left: c, rotation: g, size: C, skuId: m } = e,
+                    b = null === (r = _[t]) || void 0 === r ? void 0 : r.items[0],
+                    h = null === (s = _[t]) || void 0 === s ? void 0 : s.type,
+                    x = h === i.Z.AVATAR_DECORATION ? 384 : 512;
+                return (0, a.jsxs)(
                     'div',
                     {
-                        className: u.asset,
+                        className: f.asset,
                         style: {
-                            top: n ? -p - 256 : o,
-                            left: n ? ''.concat(l - 75 - 350 * Math.random()) : l,
-                            transform: 'rotate('.concat(d, 'deg)'),
-                            height: f,
-                            width: f,
+                            top: n ? -p - x : o,
+                            left: n ? ''.concat(c - 75 - 350 * Math.random()) : c,
+                            transform: 'rotate('.concat(g, 'deg)'),
+                            height: C.y,
+                            width: C.x,
                             transitionDelay: ''.concat(Math.random() / 3, 's'),
-                            transitionDuration: ''.concat(1.5 - Math.random() / 2, 's')
+                            transitionDuration: ''.concat(u.lb - 200 * Math.random(), 'ms')
                         },
-                        children: null != C && _ === i.Z.AVATAR_DECORATION && (0, a.jsx)(c.R, { item: C })
+                        children: [
+                            null != b && h === i.Z.AVATAR_DECORATION && (0, a.jsx)(d.R, { item: b }),
+                            null != b &&
+                                h === i.Z.PROFILE_EFFECT &&
+                                (0, a.jsx)(l.Z, {
+                                    profileEffectId: b.id,
+                                    isPurchased: !1,
+                                    isHovering: !0
+                                })
+                        ]
                     },
-                    g + t
+                    m + t
                 );
             })
         })
