@@ -1,12 +1,15 @@
 n.r(t),
     n.d(t, {
         navigateToQuestHome: function () {
-            return h;
+            return p;
         },
         openDisclosureModal: function () {
-            return f;
+            return h;
         },
         openQuestInGameRewardModal: function () {
+            return f;
+        },
+        openQuestsNitroRewardModal: function () {
             return E;
         },
         openQuestsRewardCodeModal: function () {
@@ -38,7 +41,7 @@ function _(e) {
 }
 function E(e, t) {
     (0, i.openModalLazy)(async () => {
-        let { default: i } = await n.e('88938').then(n.bind(n, 390238));
+        let { default: i } = await n.e('838').then(n.bind(n, 824393));
         return (n) =>
             (0, r.jsx)(i, {
                 ...n,
@@ -48,6 +51,17 @@ function E(e, t) {
     });
 }
 function f(e, t) {
+    (0, i.openModalLazy)(async () => {
+        let { default: i } = await n.e('88938').then(n.bind(n, 390238));
+        return (n) =>
+            (0, r.jsx)(i, {
+                ...n,
+                quest: e,
+                location: t
+            });
+    });
+}
+function h(e, t) {
     (0, o._3)({
         questId: e.id,
         questContent: t.content,
@@ -64,7 +78,7 @@ function f(e, t) {
                 });
         });
 }
-function h(e, t, n) {
+function p(e, t, n) {
     let r = u.Z.getState().setUtmCurrentContext;
     r({
         utmSourceCurrent: 'Discord Widget',
