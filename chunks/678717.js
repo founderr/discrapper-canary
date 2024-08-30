@@ -29,8 +29,8 @@ var v = n(392750),
     C = n(860337),
     T = n(789654),
     S = n(691867),
-    N = n(916790),
-    y = n(645973),
+    y = n(916790),
+    N = n(645973),
     w = n(912072),
     k = n(246992),
     E = n(442954),
@@ -83,7 +83,7 @@ function z() {
                 {
                     id: 'dispatcher',
                     name: 'Dispatcher',
-                    render: () => (0, r.jsx)(N.Z, {})
+                    render: () => (0, r.jsx)(y.Z, {})
                 }
             ];
             return (
@@ -102,7 +102,7 @@ function z() {
                     (e.push({
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
-                        render: () => (0, r.jsx)(y.Z, {})
+                        render: () => (0, r.jsx)(N.Z, {})
                     }),
                     e.push({
                         id: 'clans',

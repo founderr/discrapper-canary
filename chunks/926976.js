@@ -43,14 +43,14 @@ let S = [
         }
     }
 ];
-function N(e) {
+function y(e) {
     let { children: t } = e;
     return (0, r.jsx)(u.ScrollerThin, {
         className: C.customPropertiesContainer,
         children: (0, r.jsx)('dl', { children: t })
     });
 }
-function y(e) {
+function N(e) {
     let { name: t, children: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -118,11 +118,11 @@ let w = [
                                 })
                             ]
                         }),
-                        (0, r.jsx)(N, {
+                        (0, r.jsx)(y, {
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, r.jsx)(
-                                    y,
+                                    N,
                                     {
                                         name: ''.concat(t, ':'),
                                         children:

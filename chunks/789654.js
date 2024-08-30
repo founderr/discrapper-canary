@@ -82,8 +82,8 @@ function S() {
             rawPalette: m.b,
             semanticTokens: j
         }),
-        [S, N] = a.useState(''),
-        [y, w] = a.useState({}),
+        [S, y] = a.useState(''),
+        [N, w] = a.useState({}),
         [k, E] = a.useState({}),
         I = a.useMemo(
             () =>
@@ -141,8 +141,8 @@ function S() {
                 .concat(e, ' {\n        ')
                 .concat(r.join('\n'), '\n\n        ')
                 .concat(
-                    Object.keys(y)
-                        .filter((e) => y[e])
+                    Object.keys(N)
+                        .filter((e) => N[e])
                         .map((e) => '--'.concat(e, ': magenta !important;'))
                         .join('\n'),
                     '\n\n        '
@@ -155,7 +155,7 @@ function S() {
                     '\n      }\n\n      html {\n        '
                 )
                 .concat(a.join('\n'), '\n      }\n    ');
-        }, [e, n, t, y, k]),
+        }, [e, n, t, N, k]),
         O = a.useCallback((e) => {
             let t = '',
                 n = '',
@@ -308,8 +308,8 @@ function S() {
                             (0, r.jsx)(x.SearchBar, {
                                 size: x.SearchBar.Sizes.SMALL,
                                 query: S,
-                                onChange: N,
-                                onClear: () => N(''),
+                                onChange: y,
+                                onClear: () => y(''),
                                 placeholder: 'Search tokens',
                                 'aria-label': 'Search tokens'
                             }),
@@ -352,7 +352,7 @@ function S() {
                                                 }));
                                             },
                                             children: (0, r.jsx)(x.Checkbox, {
-                                                value: y[t],
+                                                value: N[t],
                                                 onChange: () => {
                                                     w((e) => ({
                                                         ...e,

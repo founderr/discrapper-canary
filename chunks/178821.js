@@ -133,8 +133,8 @@ function p(e) {
                 i
             ];
         })(_, v),
-        N = performance.now() - i.current < 5000,
-        y = j(s, b.current);
+        y = performance.now() - i.current < 5000,
+        N = j(s, b.current);
     a.useEffect(
         () => (
             T(),
@@ -183,7 +183,7 @@ function p(e) {
                         className: u.secondaryInfoText,
                         children: ['(Dropped: ', ((p.current / g.current) * 100).toFixed(4), '%)']
                     }),
-                    N &&
+                    y &&
                         (0, r.jsx)(c.Tooltip, {
                             position: 'left',
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -244,10 +244,10 @@ function p(e) {
                                 (0, r.jsxs)(c.Text, {
                                     tag: 'span',
                                     variant: 'text-md/semibold',
-                                    color: y > 1 ? 'text-danger' : 'text-secondary',
-                                    children: [y.toFixed(2), 'ms']
+                                    color: N > 1 ? 'text-danger' : 'text-secondary',
+                                    children: [N.toFixed(2), 'ms']
                                 }),
-                                N &&
+                                y &&
                                     (0, r.jsx)(c.Tooltip, {
                                         position: 'left',
                                         text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
