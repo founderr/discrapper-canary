@@ -47,12 +47,11 @@ class p extends d.Z {
     leaveActivity(e) {
         let { channelId: t, applicationId: n, showFeedback: r } = e;
         a.Z.wait(() => {
-            (0, c.rp)(t, n),
-                (0, c.mW)({
-                    channelId: t,
-                    applicationId: n,
-                    showFeedback: r
-                });
+            (0, c.mW)({
+                channelId: t,
+                applicationId: n,
+                showFeedback: r
+            });
         });
     }
     hidePIPEmbed(e) {

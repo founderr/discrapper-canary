@@ -254,12 +254,6 @@ class H extends (r = u.ZP.Store) {
         PUSH_NOTIFICATION_CLICK: function () {
             return v.Wb.expeditedHeartbeat(5000, 'user clicked on notification', !0), !1;
         },
-        EMBEDDED_ACTIVITY_DISCONNECT: function (e) {
-            var t, n;
-            let { channelId: r, applicationId: i } = e,
-                a = null !== (n = null === (t = I.Z.getChannel(r)) || void 0 === t ? void 0 : t.getGuildId()) && void 0 !== n ? n : null;
-            v.Wb.embeddedActivityClose(a, r, i);
-        },
         REQUEST_FORUM_UNREADS: function (e) {
             let { guildId: t, channelId: n, threads: r } = e;
             v.Wb.requestForumUnreads(t, n, r);

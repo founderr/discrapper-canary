@@ -219,7 +219,10 @@ class Y extends l.Z {
                         if (e.userIds.has(n)) {
                             let t = v.ZP.getSelfEmbeddedActivityForChannel(e.channelId);
                             null == t
-                                ? (0, R.rp)(e.channelId, e.applicationId)
+                                ? this.leaveActivity({
+                                      channelId: e.channelId,
+                                      applicationId: e.applicationId
+                                  })
                                 : null == r &&
                                   this.hidePIPEmbed({
                                       channelId: t.channelId,
