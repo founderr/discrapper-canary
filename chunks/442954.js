@@ -21,6 +21,10 @@ function d() {
             PremiumSubscriptionAprilMarketingDecoModal: async () => {
                 let { default: e } = await n.e('18327').then(n.bind(n, 731433));
                 return (t) => (0, r.jsx)(e, { ...t });
+            },
+            CollectiblesExpiryModal: async () => {
+                let { default: e } = await n.e('77370').then(n.bind(n, 83950));
+                return (t) => (0, r.jsx)(e, { ...t });
             }
         },
         t = Object.keys(e).map((e) => ({

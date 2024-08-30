@@ -273,6 +273,7 @@ var n, r;
     (r.COLLECTIBLES_PAYMENT_MODAL = 'collectibles payment modal'),
     (r.COLLECTIBLES_COLLECTED_MODAL = 'collectibles collected modal'),
     (r.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP = 'collectibles feature education tooltip'),
+    (r.COLLECTIBLES_EXPIRY_MODAL = 'collectibles expiry modal'),
     (r.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL = 'premium subscription april campaign modal'),
     (r.PREMIUM_BILLING_INFO = 'premium billing info'),
     (r.PREMIUM_SUBSCRIPTION_DETAILS = 'premium subscription details'),

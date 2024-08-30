@@ -1,15 +1,16 @@
 n.d(t, {
     Z: function () {
-        return s;
+        return o;
     }
 }),
     n(47120);
 var r = n(470079),
     i = n(846519),
-    a = n(864106);
-function s(e) {
+    a = n(864106),
+    s = n(215023);
+function o(e) {
     let [t, n] = r.useState(!1),
-        s = r.useRef(null);
+        o = r.useRef(null);
     return (
         r.useEffect(() => {
             let t = () => {
@@ -19,24 +20,24 @@ function s(e) {
                 }
                 let r = (0, a.fO)(e);
                 n(r);
-                let o = 1000 * e.expiresAt - Date.now();
-                if (!r && o > 0) {
+                let l = 1000 * e.expiresAt + s.Cm - Date.now();
+                if (!r && l > 0) {
                     let e = new i.V7();
-                    e.start(Math.min(2147483647, o), () => t()), (s.current = e);
+                    e.start(Math.min(2147483647, l), () => t()), (o.current = e);
                 }
             };
             return (
                 t(),
                 () => {
                     var e;
-                    return null === (e = s.current) || void 0 === e ? void 0 : e.stop();
+                    return null === (e = o.current) || void 0 === e ? void 0 : e.stop();
                 }
             );
         }, [e]),
         r.useEffect(() => {
             if (t) {
                 var e;
-                null === (e = s.current) || void 0 === e || e.stop();
+                null === (e = o.current) || void 0 === e || e.stop();
             }
         }, [t]),
         t ? void 0 : e
