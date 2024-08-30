@@ -1,9 +1,9 @@
 n.d(t, {
     A7: function () {
-        return f;
+        return S;
     },
     Em: function () {
-        return S;
+        return C;
     }
 });
 var i = n(735250),
@@ -47,7 +47,8 @@ let g = 'url(#dark-purple-gradient)',
                 fill: 'white'
             })
         }),
-    f = (e) => {
+    f = () => (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: E.L.TAKE_ACTION }),
+    S = (e) => {
         let { children: t } = e;
         return (0, i.jsx)(r.Popout, {
             shouldShow: !0,
@@ -55,15 +56,13 @@ let g = 'url(#dark-purple-gradient)',
                 (0, i.jsx)(o.Z, {
                     artClassName: I.coachmarkArt,
                     dismissIconClassName: I.exitIcon,
-                    onDismissIconClick: () => {
-                        (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: E.L.TAKE_ACTION });
-                    },
+                    onDismissIconClick: f,
                     dismissIcon: (0, i.jsx)(T, {}),
                     headerClassName: I.incentiveCoachtipContent,
                     contentClassName: I.incentiveCoachtipContainer,
                     pointerClassName: I.incentiveTooltipPointer,
                     onTryFeature: () => {
-                        (0, c.uL)(h.Z5c.NITRO_HOME), (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: E.L.TAKE_ACTION });
+                        (0, c.uL)(h.Z5c.NITRO_HOME), f();
                     },
                     art: (0, i.jsx)(i.Fragment, {
                         children: (0, i.jsx)(d.Z, {
@@ -89,7 +88,7 @@ let g = 'url(#dark-purple-gradient)',
             children: t
         });
     },
-    S = (e) => {
+    C = (e) => {
         let { children: t } = e,
             n = (0, i.jsxs)('div', {
                 className: I.coachTipContainer,
