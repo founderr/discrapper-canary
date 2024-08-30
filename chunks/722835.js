@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return g;
     }
 });
 var i = n(872810),
@@ -14,21 +14,22 @@ var i = n(872810),
     u = n(449224),
     _ = n(382182),
     h = n(74299),
-    E = n(960861),
-    m = n(989941);
-function I() {
+    E = n(299570),
+    m = n(960861),
+    I = n(989941);
+function g() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (!(0, h.Z)(o.Z) || null != s.Z.getCurrentUserActiveStream()) return !1;
     let t = d.Z.getVoiceChannelId(),
         n = r.Z.getChannel(t);
     if (null == n) return !1;
-    let I = n.getGuildId();
+    let g = n.getGuildId();
     if (!(0, _.JL)(n, l.Z, c.Z, !1)) return !1;
-    if (E.ZP.enabled()) E.ZP.presentPicker();
+    if (m.ZP.enabled()) (0, E.T)();
     else {
-        let t = (0, m.Z)(a.ZP, u.Z);
+        let t = (0, I.Z)(a.ZP, u.Z);
         if (null == t || (t.isLauncher && !e)) return !1;
-        (0, i.WH)(I, n.id, { pid: t.pid });
+        (0, i.WH)(g, n.id, { pid: t.pid });
     }
     return !0;
 }

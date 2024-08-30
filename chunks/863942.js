@@ -1,2 +1,2 @@
-var l = t(22092);
-(0, t(192291).exportTypedArrayStaticMethod)('from', t(12367), l);
+var e = o(22092);
+(0, o(192291).exportTypedArrayStaticMethod)('from', o(12367), e);
