@@ -67,7 +67,9 @@ t.Z = {
         }
     },
     [S.Etm.GET_CHANNEL_PERMISSIONS]: {
-        scope: s.x.GUILDS_MEMBERS_READ,
+        scope: {
+            [f.Gp.ANY]: [s.x.GUILDS_MEMBERS_READ, s.x.GUILDS_CHANNELS_READ]
+        },
         handler(e) {
             let t = (0, T.Z)();
             if (null == t) throw new I.Z({ errorCode: S.lTL.INVALID_CHANNEL }, 'Invalid channel');
