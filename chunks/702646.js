@@ -229,7 +229,8 @@ function C(e) {
                 a.length > 0
                     ? (0, i.jsx)(o.NumberBadge, {
                           count: a.length,
-                          color: h.Z.BG_MOD_SUBTLE
+                          color: h.Z.INTERACTIVE_ACTIVE,
+                          className: g.badgeInnerText
                       })
                     : null
             ]
@@ -269,7 +270,8 @@ function N() {
                 r > 0
                     ? (0, i.jsx)(o.NumberBadge, {
                           count: r,
-                          color: h.Z.BG_MOD_SUBTLE
+                          color: h.Z.INTERACTIVE_ACTIVE,
+                          className: g.badgeInnerText
                       })
                     : null
             ]
@@ -299,7 +301,7 @@ function A(e) {
                       children: (0, i.jsx)(o.ArrowLargeLeftIcon, { color: 'currentColor' })
                   }),
                   (0, i.jsx)(o.Heading, {
-                      variant: 'heading-lg/semibold',
+                      variant: 'heading-md/semibold',
                       color: 'none',
                       children: t
                   })

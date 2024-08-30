@@ -20,5 +20,6 @@ e.exports = {
     traitsTooltip: 'traitsTooltip_ac1501',
     trait: 'trait_ac1501',
     backArrow: 'backArrow_ac1501',
-    savedInnerContainer: 'savedInnerContainer_ac1501'
+    savedInnerContainer: 'savedInnerContainer_ac1501',
+    badgeInnerText: 'badgeInnerText_ac1501'
 };
