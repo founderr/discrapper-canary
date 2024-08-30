@@ -25,7 +25,7 @@ var i = n(735250),
     Z = n(588580),
     L = n(374065),
     O = n(451576),
-    R = n(938655),
+    R = n(119315),
     x = n(403404),
     b = n(100527),
     P = n(906732),
@@ -327,7 +327,7 @@ function eH(e) {
                       wrapperClassName: ey.button,
                       children: [
                           T
-                              ? (0, i.jsx)(R.A, {
+                              ? (0, i.jsx)(R.r, {
                                     top: -1,
                                     right: -1
                                 })

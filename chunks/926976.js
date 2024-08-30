@@ -17,15 +17,15 @@ var r = n(735250),
     m = n(594174),
     x = n(55935),
     f = n(120816),
-    p = n(31336),
-    g = n(257785),
+    g = n(31336),
+    p = n(257785),
     b = n(484036),
     v = n(681619),
     _ = n(621060),
     j = n(689938),
     C = n(408126),
     T = n(535271);
-let S = [
+let N = [
     {
         key: 'event',
         cellClassName: C.eventColumn,
@@ -43,14 +43,14 @@ let S = [
         }
     }
 ];
-function y(e) {
+function S(e) {
     let { children: t } = e;
     return (0, r.jsx)(u.ScrollerThin, {
         className: C.customPropertiesContainer,
         children: (0, r.jsx)('dl', { children: t })
     });
 }
-function N(e) {
+function y(e) {
     let { name: t, children: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -96,10 +96,10 @@ let w = [
                                 })
                             ]
                         }),
-                        (0, r.jsxs)(g.E, {
+                        (0, r.jsxs)(p.E, {
                             className: C.commonProperties,
                             children: [
-                                (0, r.jsx)(g.Z9, {
+                                (0, r.jsx)(p.Z9, {
                                     name: 'Timestamp (local)',
                                     children: (0, r.jsx)('time', {
                                         dateTime: a.toISOString(),
@@ -108,21 +108,21 @@ let w = [
                                     })
                                 }),
                                 null != s &&
-                                    (0, r.jsx)(g.Z9, {
+                                    (0, r.jsx)(p.Z9, {
                                         name: 'User',
                                         children: (0, r.jsx)(d.Z, { user: s })
                                     }),
-                                (0, r.jsx)(g.Z9, {
+                                (0, r.jsx)(p.Z9, {
                                     name: 'Fingerprint',
                                     children: (0, r.jsx)('code', { children: l })
                                 })
                             ]
                         }),
-                        (0, r.jsx)(y, {
+                        (0, r.jsx)(S, {
                             children: Object.entries(n).map((e) => {
                                 let [t, n] = e;
                                 return (0, r.jsx)(
-                                    N,
+                                    y,
                                     {
                                         name: ''.concat(t, ':'),
                                         children:
@@ -142,11 +142,11 @@ let w = [
             }
         }
     ],
-    k = {
+    I = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(k)
+                Object.entries(I)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -173,9 +173,9 @@ let w = [
 function E() {
     let e = a.useRef(null),
         t = (0, s.e7)([f.Z], () => f.Z.loggedEvents),
-        [n, l] = a.useState(Object.keys(k)),
+        [n, l] = a.useState(Object.keys(I)),
         o = t.filter((e) => {
-            for (let t of n) if (k[t].filter(e)) return !0;
+            for (let t of n) if (I[t].filter(e)) return !0;
             return !1;
         }),
         [c, d] = a.useState(void 0),
@@ -192,7 +192,7 @@ function E() {
                         className: C.toolbarButton,
                         look: u.Button.Looks.BLANK,
                         size: u.Button.Sizes.ICON,
-                        onClick: p.Zw,
+                        onClick: g.Zw,
                         children: (0, r.jsx)('span', {
                             title: j.Z.Messages.CLEAR,
                             children: (0, r.jsx)(u.TrashIcon, {
@@ -205,7 +205,7 @@ function E() {
                     (0, r.jsx)('div', { className: C.toolbarDivider }),
                     (0, r.jsx)('div', {
                         className: C.filters,
-                        children: Object.entries(k).map((e) => {
+                        children: Object.entries(I).map((e) => {
                             let [t, a] = e;
                             return (0, r.jsx)(
                                 u.Clickable,
@@ -224,7 +224,7 @@ function E() {
                 ]
             }),
             (0, r.jsx)(v.Z, {
-                columns: S,
+                columns: N,
                 data: o,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)

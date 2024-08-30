@@ -17,7 +17,7 @@ let h = 1000 / 60,
     m = 1000 / 45,
     x = 3 * h,
     f = Math.ceil(3000 / h);
-function p(e) {
+function g(e) {
     let { socket: t, isAverageFrameTime: n } = e,
         [l, i] = (function (e) {
             let t = e.dispatcher.getIsSchedulerBackgrounded(),
@@ -36,8 +36,8 @@ function p(e) {
             averageFrameTime: s,
             timeSinceLastDrop: d,
             onResetFrameData: m,
-            droppedFramesRef: p,
-            renderedFrameCount: g,
+            droppedFramesRef: g,
+            renderedFrameCount: p,
             bufferFramecountRef: b,
             frameCheckerEffect: v
         } = (function (e, t) {
@@ -68,10 +68,10 @@ function p(e) {
                     },
                     [e, t]
                 ),
-                p = 0 === c.current ? 0 : i.current / c.current;
+                g = 0 === c.current ? 0 : i.current / c.current;
             return {
-                currentFPS: 0 === p ? 0 : (h / p) * 60,
-                averageFrameTime: p,
+                currentFPS: 0 === g ? 0 : (h / g) * 60,
+                averageFrameTime: g,
                 timeSinceLastDrop: (performance.now() - u.current) / 1000,
                 droppedFramesRef: l,
                 bufferFramecountRef: c,
@@ -111,7 +111,7 @@ function p(e) {
                 }
             ];
         })(t),
-        [T, S] = (function (e, t) {
+        [T, N] = (function (e, t) {
             let n = a.useRef(null),
                 r = a.useRef(null),
                 l = a.useRef(null),
@@ -133,13 +133,13 @@ function p(e) {
                 i
             ];
         })(_, v),
-        y = performance.now() - i.current < 5000,
-        N = j(s, b.current);
+        S = performance.now() - i.current < 5000,
+        y = j(s, b.current);
     a.useEffect(
         () => (
             T(),
             () => {
-                S();
+                N();
             }
         ),
         []
@@ -174,16 +174,16 @@ function p(e) {
                         tag: 'span',
                         variant: 'text-md/bold',
                         color: d < 2 ? 'text-danger' : d < 5 ? 'text-warning' : 'text-primary',
-                        children: p.current
+                        children: g.current
                     }),
                     (0, r.jsxs)(c.Text, {
                         tag: 'span',
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         className: u.secondaryInfoText,
-                        children: ['(Dropped: ', ((p.current / g.current) * 100).toFixed(4), '%)']
+                        children: ['(Dropped: ', ((g.current / p.current) * 100).toFixed(4), '%)']
                     }),
-                    y &&
+                    S &&
                         (0, r.jsx)(c.Tooltip, {
                             position: 'left',
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -211,7 +211,7 @@ function p(e) {
                         tag: 'span',
                         variant: 'text-md/semibold',
                         color: 'text-secondary',
-                        children: g.current.toFixed(0)
+                        children: p.current.toFixed(0)
                     })
                 ]
             }),
@@ -244,10 +244,10 @@ function p(e) {
                                 (0, r.jsxs)(c.Text, {
                                     tag: 'span',
                                     variant: 'text-md/semibold',
-                                    color: N > 1 ? 'text-danger' : 'text-secondary',
-                                    children: [N.toFixed(2), 'ms']
+                                    color: y > 1 ? 'text-danger' : 'text-secondary',
+                                    children: [y.toFixed(2), 'ms']
                                 }),
-                                y &&
+                                S &&
                                     (0, r.jsx)(c.Tooltip, {
                                         position: 'left',
                                         text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -278,7 +278,7 @@ function p(e) {
         ]
     });
 }
-function g(e) {
+function p(e) {
     let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: l } = e,
         [i, o] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled());
     a.useEffect(() => {
@@ -520,11 +520,11 @@ function _() {
             children: (0, r.jsxs)(c.ScrollerThin, {
                 className: u.panel,
                 children: [
-                    (0, r.jsx)(p, {
+                    (0, r.jsx)(g, {
                         socket: e,
                         isAverageFrameTime: t
                     }),
-                    (0, r.jsx)(g, {
+                    (0, r.jsx)(p, {
                         socket: e,
                         isAverageFrameTime: t,
                         onToggleAverageFrameTime: n

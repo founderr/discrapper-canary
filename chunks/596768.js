@@ -17,16 +17,16 @@ var r = n(735250),
     m = n(570140),
     x = n(665149),
     f = n(55935),
-    p = n(120816),
-    g = n(31336),
+    g = n(120816),
+    p = n(31336),
     b = n(257785),
     v = n(484036),
     _ = n(681619),
     j = n(621060),
     C = n(689938),
     T = n(408126),
-    S = n(535271);
-let y = [
+    N = n(535271);
+let S = [
         {
             key: 'id',
             cellClassName: T.eventColumn,
@@ -52,7 +52,7 @@ let y = [
             }
         }
     ],
-    N = [
+    y = [
         {
             id: 'details',
             name: 'Details',
@@ -64,7 +64,7 @@ let y = [
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(x.ZP, {
-                            className: i()(S.headerBar, T.subPanelHeaderBar),
+                            className: i()(N.headerBar, T.subPanelHeaderBar),
                             children: [
                                 (0, r.jsx)(x.ZP.Icon, {
                                     icon: h.AnalyticsIcon,
@@ -127,13 +127,13 @@ let y = [
 function w() {
     let [e, t] = a.useState(''),
         n = a.useRef(null),
-        l = (0, d.Wu)([p.Z], () => p.Z.loggedTriggers),
+        l = (0, d.Wu)([g.Z], () => g.Z.loggedTriggers),
         o = a.useMemo(() => l.filter((t) => 0 === e.length || c()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [s, u] = a.useState(void 0),
         x = o.find((e) => e.key === s),
-        { TabBar: f, renderSelectedTab: b } = (0, j.Z)({ tabs: N }, []),
-        w = (0, d.e7)([p.Z], () => p.Z.trackTriggers),
-        k = a.useCallback((e) => {
+        { TabBar: f, renderSelectedTab: b } = (0, j.Z)({ tabs: y }, []),
+        w = (0, d.e7)([g.Z], () => g.Z.trackTriggers),
+        I = a.useCallback((e) => {
             m.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
@@ -141,7 +141,7 @@ function w() {
         }, []);
     return (0, r.jsxs)('div', {
         ref: n,
-        className: i()(S.panel, T.panel),
+        className: i()(N.panel, T.panel),
         children: [
             (0, r.jsxs)('div', {
                 className: T.toolbar,
@@ -151,7 +151,7 @@ function w() {
                         className: T.triggersEnable,
                         children: (0, r.jsx)(h.Switch, {
                             checked: w,
-                            onChange: k,
+                            onChange: I,
                             className: T.__invalid_toolbarSwitch
                         })
                     }),
@@ -159,7 +159,7 @@ function w() {
                         className: T.toolbarButton,
                         look: h.Button.Looks.BLANK,
                         size: h.Button.Sizes.ICON,
-                        onClick: g.Zw,
+                        onClick: p.Zw,
                         children: (0, r.jsx)('span', {
                             title: C.Z.Messages.CLEAR,
                             children: (0, r.jsx)(h.TrashIcon, {
@@ -179,7 +179,7 @@ function w() {
                 ]
             }),
             (0, r.jsx)(_.Z, {
-                columns: y,
+                columns: S,
                 data: o,
                 selectedRowKey: s,
                 onClickRow: (e) => u(e.key)

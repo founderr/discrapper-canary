@@ -17,8 +17,8 @@ var r = n(735250),
     m = n(301801),
     x = n(4912),
     f = n(55935),
-    p = n(428530),
-    g = n(257785),
+    g = n(428530),
+    p = n(257785),
     b = n(484036),
     v = n(681619),
     _ = n(621060),
@@ -27,7 +27,7 @@ var r = n(735250),
 function T(e) {
     return parseFloat(e.toFixed(3));
 }
-let S = [
+let N = [
     {
         key: 'store',
         cellClassName: j.actionColumn,
@@ -45,7 +45,7 @@ let S = [
         }
     }
 ];
-function y(e) {
+function S(e) {
     let { actionLog: t } = e,
         n = a.useMemo(
             () =>
@@ -57,12 +57,12 @@ function y(e) {
         );
     return (0, r.jsx)(u.ScrollerThin, {
         children: (0, r.jsx)(v.Z, {
-            columns: S,
+            columns: N,
             data: n
         })
     });
 }
-let N = [
+let y = [
     {
         id: 'action',
         name: 'Action',
@@ -72,10 +72,10 @@ let N = [
                 a = s()(n.createdAt);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsxs)(g.E, {
+                    (0, r.jsxs)(p.E, {
                         className: j.actionProperties,
                         children: [
-                            (0, r.jsx)(g.Z9, {
+                            (0, r.jsx)(p.Z9, {
                                 name: 'Created at',
                                 children: (0, r.jsx)('time', {
                                     dateTime: null === (t = n.createdAt) || void 0 === t ? void 0 : t.toISOString(),
@@ -83,7 +83,7 @@ let N = [
                                     children: (0, f.Y4)(a)
                                 })
                             }),
-                            (0, r.jsxs)(g.Z9, {
+                            (0, r.jsxs)(p.Z9, {
                                 name: 'Total Time',
                                 children: [T(n.totalTime), ' ms']
                             })
@@ -91,7 +91,7 @@ let N = [
                     }),
                     (0, r.jsx)(u.ScrollerThin, {
                         className: j.inspectorContainer,
-                        children: (0, r.jsx)(p.Z, { data: n.action })
+                        children: (0, r.jsx)(g.Z, { data: n.action })
                     })
                 ]
             });
@@ -102,7 +102,7 @@ let N = [
         name: 'Store Handlers',
         render(e) {
             let { actionLog: t } = e;
-            return (0, r.jsx)(y, { actionLog: t });
+            return (0, r.jsx)(S, { actionLog: t });
         }
     }
 ];
@@ -112,7 +112,7 @@ function w(e) {
             () =>
                 t.error
                     ? [
-                          ...N,
+                          ...y,
                           {
                               id: 'error',
                               name: (0, r.jsxs)(r.Fragment, {
@@ -136,14 +136,14 @@ function w(e) {
                                           }),
                                           (0, r.jsx)(u.ScrollerThin, {
                                               className: j.inspectorContainer,
-                                              children: (0, r.jsx)(p.Z, { data: t.error })
+                                              children: (0, r.jsx)(g.Z, { data: t.error })
                                           })
                                       ]
                                   });
                               }
                           }
                       ]
-                    : N,
+                    : y,
             [t]
         ),
         { TabBar: o, renderSelectedTab: c } = (0, _.Z)({ tabs: l }, [l]);
@@ -167,7 +167,7 @@ function w(e) {
         ]
     });
 }
-let k = [
+let I = [
     {
         key: 'action',
         cellClassName: j.actionColumn,
@@ -216,15 +216,15 @@ function E() {
         ),
         [s, h] = a.useState(c),
         [x, f] = a.useState(),
-        p = a.useRef(null),
-        g = a.useCallback(
+        g = a.useRef(null),
+        p = a.useCallback(
             (0, o.debounce)(
                 async (e, t) => {
                     if ('' === e) {
                         h(t);
                         return;
                     }
-                    p.current = (0, o.uniqueId)();
+                    g.current = (0, o.uniqueId)();
                     let n = await (0, m.H)(
                         t,
                         (e) => {
@@ -234,7 +234,7 @@ function E() {
                         e,
                         !0
                     );
-                    if (null != p.current) h(n);
+                    if (null != g.current) h(n);
                 },
                 100,
                 { leading: !0 }
@@ -243,10 +243,10 @@ function E() {
         );
     return (
         a.useEffect(() => {
-            g(t, c);
-        }, [t, g, c]),
+            p(t, c);
+        }, [t, p, c]),
         a.useEffect(() => {
-            p.current = null;
+            g.current = null;
         }, [t, c]),
         (0, r.jsxs)('div', {
             ref: e,
@@ -263,7 +263,7 @@ function E() {
                     })
                 }),
                 (0, r.jsx)(v.Z, {
-                    columns: k,
+                    columns: I,
                     data: s,
                     selectedRowKey: null == x ? void 0 : x.id.toString(),
                     onClickRow: (e) => f(e.actionLog)

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return p;
     }
 }),
     n(47120);
@@ -17,7 +17,7 @@ var r = n(735250),
     m = n(246992),
     x = n(535271),
     f = n(384712);
-let p = [
+let g = [
     {
         label: 'VISA',
         value: 'pm_card_us'
@@ -59,7 +59,7 @@ let p = [
         value: 'pm_card_pl'
     }
 ];
-function g() {
+function p() {
     let [e, t] = a.useState('pm_card_us'),
         n = Object.values((0, o.e7)([h.Z], () => h.Z.paymentSources)),
         l = async () => {
@@ -98,7 +98,7 @@ function g() {
                             (0, r.jsx)(s.Select, {
                                 serialize: (e) => e,
                                 isSelected: (t) => t === e,
-                                options: p,
+                                options: g,
                                 select: t,
                                 popoutLayerContext: m.O$
                             }),

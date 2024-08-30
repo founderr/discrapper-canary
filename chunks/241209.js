@@ -11,8 +11,8 @@ var r,
     m = n(772096),
     x = n(428595),
     f = n(532901),
-    p = n(3732),
-    g = n(594402);
+    g = n(3732),
+    p = n(594402);
 function b(e, t, n) {
     return (
         t in e
@@ -52,7 +52,7 @@ let j = {
                 (0, l.jsx)(
                     'div',
                     {
-                        className: p.paragraph,
+                        className: g.paragraph,
                         children: t(e.content, n)
                     },
                     n.key
@@ -85,7 +85,7 @@ let j = {
                 (0, l.jsx)(
                     'blockquote',
                     {
-                        className: p.blockquote,
+                        className: g.blockquote,
                         children: _(e)
                     },
                     n.key
@@ -112,7 +112,7 @@ let j = {
                 (0, l.jsx)(
                     'code',
                     {
-                        className: p.codeInline,
+                        className: g.codeInline,
                         children: _(e)
                     },
                     n.key
@@ -126,7 +126,7 @@ let j = {
                         'pre',
                         {
                             children: (0, l.jsx)('code', {
-                                className: c()(g.scrollbarGhostHairline, 'hljs'),
+                                className: c()(p.scrollbarGhostHairline, 'hljs'),
                                 children: _(e)
                             })
                         },
@@ -148,7 +148,7 @@ let j = {
                                           'pre',
                                           {
                                               children: (0, l.jsx)('code', {
-                                                  className: c()(g.scrollbarGhostHairline, 'hljs', n.language),
+                                                  className: c()(p.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               })
                                           },
@@ -164,7 +164,7 @@ let j = {
     },
     C = u().parserFor(j),
     T = u().reactFor(u().ruleOutput(j, 'react'));
-class S extends (a = i.PureComponent) {
+class N extends (a = i.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: r, output: a } = this.props,
             i = a(
@@ -174,14 +174,14 @@ class S extends (a = i.PureComponent) {
                 })
             );
         return (0, l.jsx)('div', {
-            className: c()(p.markdown, e),
+            className: c()(g.markdown, e),
             children: i
         });
     }
 }
-b(S, 'rules', j),
-    b(S, 'defaultProps', {
+b(N, 'rules', j),
+    b(N, 'defaultProps', {
         parser: C,
         output: T
     }),
-    (t.Z = S);
+    (t.Z = N);

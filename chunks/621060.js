@@ -29,8 +29,8 @@ function m(e) {
         i = a.useRef(null),
         m = a.useRef(0),
         x = a.useRef(new Map()),
-        [f, p] = a.useState([]),
-        g = a.useCallback(() => {
+        [f, g] = a.useState([]),
+        p = a.useCallback(() => {
             var e, r, a, l;
             if (null == i.current) return;
             let o = [],
@@ -39,20 +39,20 @@ function m(e) {
                 for (let i of ((m.current = c), (c -= null !== (r = null === (e = x.current.get(n)) || void 0 === e ? void 0 : e.width) && void 0 !== r ? r : 0), t)) {
                     if (i.id !== n) (c -= null !== (l = null === (a = x.current.get(i.id)) || void 0 === a ? void 0 : a.width) && void 0 !== l ? l : 0) < 0 && o.push(i.id);
                 }
-                p(o);
+                g(o);
             }
         }, [t, n]),
         b = a.useRef(null);
     a.useEffect(
         () => (
-            (b.current = new ResizeObserver(() => g())),
+            (b.current = new ResizeObserver(() => p())),
             null != i.current && b.current.observe(i.current),
             () => {
                 var e;
                 null === (e = b.current) || void 0 === e || e.disconnect();
             }
         ),
-        [g]
+        [p]
     );
     let v = a.useCallback(
         (e) => {

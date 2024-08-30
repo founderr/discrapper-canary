@@ -18,7 +18,7 @@ var r = n(735250),
     m = n(981631),
     x = n(535271),
     f = n(384712);
-let p = [
+let g = [
         {
             label: 'Nitro Monthly',
             value: '511651880837840896'
@@ -52,7 +52,7 @@ let p = [
             value: '1267969164312576000'
         }
     ],
-    g = {
+    p = {
         [m.O0b.UNPAID]: 'Unpaid',
         [m.O0b.ACTIVE]: 'Active',
         [m.O0b.PAST_DUE]: 'Past Due',
@@ -145,7 +145,7 @@ function _() {
                                     (0, r.jsx)(s.Select, {
                                         serialize: (e) => e,
                                         isSelected: (t) => t === e,
-                                        options: p,
+                                        options: g,
                                         select: t,
                                         popoutLayerContext: h.O$
                                     }),
@@ -171,7 +171,7 @@ function _() {
 function j(e) {
     let { subscription: t } = e,
         n = (e) => {
-            if ((null == e && (e = t.status), e in g)) return g[e];
+            if ((null == e && (e = t.status), e in p)) return p[e];
             throw Error('Unknown status');
         },
         a = async (e) => {

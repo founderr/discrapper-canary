@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return p;
+        return g;
     }
 }),
     n(47120);
@@ -44,10 +44,10 @@ let m = [
             value: 7
         }
     ];
-function p() {
+function g() {
     let e = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
         [t, n] = a.useState(!1),
-        [p, g] = a.useState(!1),
+        [g, p] = a.useState(!1),
         [b, v] = a.useState(1);
     return (0, r.jsxs)('div', {
         className: h.container,
@@ -71,9 +71,9 @@ function p() {
                 tag: o.FormTitleTags.H3,
                 children: (0, r.jsx)(o.SingleSelect, {
                     options: x,
-                    value: p,
+                    value: g,
                     onChange: (e) => {
-                        g(e);
+                        p(e);
                     },
                     popoutLayerContext: d.O$
                 })
@@ -98,7 +98,7 @@ function p() {
                         perkType: l.q.STREAM_HIGH_QUALITY,
                         user: e,
                         available: t,
-                        activateSuccess: p,
+                        activateSuccess: g,
                         demoDuration: b
                     }),
                     (0, s.Vk)()),

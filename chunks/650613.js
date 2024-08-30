@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return p;
     }
 }),
     n(47120),
@@ -18,7 +18,7 @@ var r = n(735250),
     m = n(561308),
     x = n(206583),
     f = n(454477);
-function p(e) {
+function g(e) {
     let { id: t } = e,
         n = (0, a.e7)([c.default], () => c.default.getUser(t));
     return null == n
@@ -37,7 +37,7 @@ function p(e) {
               })
           });
 }
-function g() {
+function p() {
     var e;
     let t = (0, a.e7)([d.Z], () => d.Z.getFeed(x.YN.GLOBAL_FEED)),
         n = (0, a.e7)([d.Z], () => d.Z.getFilters()),
@@ -67,7 +67,7 @@ function g() {
                         {
                             className: f.locatorEntry,
                             children: [
-                                (0, r.jsx)(p, {
+                                (0, r.jsx)(g, {
                                     type: t.author_type,
                                     id: t.author_id
                                 }),

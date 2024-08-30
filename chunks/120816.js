@@ -12,8 +12,8 @@ var r,
 let m = 0,
     x = [],
     f = [],
-    p = !1;
-class g extends (r = s.ZP.Store) {
+    g = !1;
+class p extends (r = s.ZP.Store) {
     initialize() {
         this.waitFor(h.Z);
     }
@@ -24,11 +24,11 @@ class g extends (r = s.ZP.Store) {
         return f;
     }
     get trackTriggers() {
-        return p;
+        return g;
     }
 }
 (i = 'AnalyticsLogStore'),
-    (l = 'displayName') in (a = g)
+    (l = 'displayName') in (a = p)
         ? Object.defineProperty(a, l, {
               value: i,
               enumerable: !0,
@@ -36,7 +36,7 @@ class g extends (r = s.ZP.Store) {
               writable: !0
           })
         : (a[l] = i),
-    (t.Z = new g(u.Z, {
+    (t.Z = new p(u.Z, {
         TRACK: function (e) {
             let { event: t, properties: n, fingerprint: r } = e;
             if (h.Z.isDeveloper) {
@@ -56,7 +56,7 @@ class g extends (r = s.ZP.Store) {
         TRACK_TRIGGER: function (e) {
             let { experimentId: t, descriptor: n, exposureType: r, excluded: a, location: l, previouslyTracked: i } = e;
             if (!!h.Z.isDeveloper)
-                p &&
+                g &&
                     (f = [
                         ...f,
                         {
@@ -74,7 +74,7 @@ class g extends (r = s.ZP.Store) {
         },
         SET_TRACK_TRIGGERS: function (e) {
             let { enabled: t } = e;
-            p = t;
+            g = t;
         },
         ANALYTICS_LOG_CLEAR: function () {
             (x = []), (f = []);

@@ -17,10 +17,10 @@ var r = n(735250),
     m = n(621060),
     x = n(535271),
     f = n(813879);
-function p(e, t) {
+function g(e, t) {
     return e.store.getName().localeCompare(t.store.getName());
 }
-function g(e) {
+function p(e) {
     let { store: t, dataGetter: n } = e,
         [l, i] = a.useState(n(t));
     return (
@@ -61,7 +61,7 @@ let b = [
                           className: f.inspectorContainer,
                           children: ['Store is missing ', (0, r.jsx)('code', { children: '__getLocalVars' }), ' method.']
                       })
-                    : (0, r.jsx)(g, {
+                    : (0, r.jsx)(p, {
                           store: t,
                           dataGetter: (e) => e.__getLocalVars()
                       });
@@ -72,7 +72,7 @@ let b = [
             name: 'Store Instance',
             render(e) {
                 let { store: t } = e;
-                return (0, r.jsx)(g, {
+                return (0, r.jsx)(p, {
                     store: t,
                     dataGetter: (e) => e
                 });
@@ -114,7 +114,7 @@ function j() {
                             key: e._dispatchToken,
                             store: e
                         }))
-                        .sort(p),
+                        .sort(g),
                 [l]
             )
             .filter((e) =>

@@ -13,8 +13,8 @@ var a = r(521464),
     l = r(870271),
     b = r(599295),
     f = r(470079),
-    h = r(639519),
-    d = r.n(h),
+    d = r(639519),
+    h = r.n(d),
     p = r(949179),
     y = r(261411),
     g = r(852153),
@@ -50,11 +50,11 @@ function k(e) {
     return { expanded: !e.isCircular && e.shouldExpandNode(e.keyPath, e.data, e.level) };
 }
 var w = (function (e) {
-    (0, o.Z)(d, e);
+    (0, o.Z)(h, e);
     var t,
         r,
-        h =
-            ((t = d),
+        d =
+            ((t = h),
             (r = (function () {
                 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                 if ('function' == typeof Proxy) return !0;
@@ -69,11 +69,11 @@ var w = (function (e) {
                     a = (0, c.Z)(t);
                 return (e = r ? Reflect.construct(a, arguments, (0, c.Z)(this).constructor) : a.apply(this, arguments)), (0, i.Z)(this, e);
             });
-    function d(e) {
+    function h(e) {
         var t;
         return (
-            (0, a.Z)(this, d),
-            (t = h.call(this, e)),
+            (0, a.Z)(this, h),
+            (t = d.call(this, e)),
             (0, u.Z)((0, s.Z)(t), 'handleClick', function () {
                 t.props.expandable && t.setState({ expanded: !t.state.expanded });
             }),
@@ -82,7 +82,7 @@ var w = (function (e) {
         );
     }
     return (
-        (0, n.Z)(d, [
+        (0, n.Z)(h, [
             {
                 key: 'UNSAFE_componentWillReceiveProps',
                 value: function (e) {
@@ -114,8 +114,8 @@ var w = (function (e) {
                         i = e.styling,
                         c = e.collectionLimit,
                         u = e.keyPath,
-                        h = e.labelRenderer,
-                        d = e.expandable,
+                        d = e.labelRenderer,
+                        h = e.expandable,
                         m = this.state.expanded,
                         k =
                             m || (s && 0 === this.props.level)
@@ -126,12 +126,12 @@ var w = (function (e) {
                                           i = t.circularCache,
                                           c = t.keyPath,
                                           u = t.postprocessValue,
-                                          h = t.sortObjectKeys,
-                                          d = [];
+                                          d = t.sortObjectKeys,
+                                          h = [];
                                       return (
-                                          (0, y.Z)(n, s, h, o, r, a).forEach(function (r) {
+                                          (0, y.Z)(n, s, d, o, r, a).forEach(function (r) {
                                               if (void 0 !== r.to)
-                                                  d.push(
+                                                  h.push(
                                                       f.createElement(
                                                           v.Z,
                                                           (0, b.Z)({}, t, {
@@ -146,7 +146,7 @@ var w = (function (e) {
                                                   var a = r.key,
                                                       n = r.value,
                                                       s = -1 !== i.indexOf(n);
-                                                  d.push(
+                                                  h.push(
                                                       f.createElement(
                                                           g.Z,
                                                           (0, b.Z)({}, t, {
@@ -163,50 +163,50 @@ var w = (function (e) {
                                                   );
                                               }
                                           }),
-                                          d
+                                          h
                                       );
                                   })(O(O({}, this.props), {}, { level: this.props.level + 1 }))
                                 : null,
                         w = t(a, n, f.createElement('span', i('nestedNodeItemType', m), r), o(n, c), u),
-                        E = [u, a, m, d];
+                        E = [u, a, m, h];
                     return s
                         ? f.createElement('li', i.apply(void 0, ['rootNode'].concat(E)), f.createElement('ul', i.apply(void 0, ['rootNodeChildren'].concat(E)), k))
                         : f.createElement(
                               'li',
                               i.apply(void 0, ['nestedNode'].concat(E)),
-                              d &&
+                              h &&
                                   f.createElement(p.Z, {
                                       styling: i,
                                       nodeType: a,
                                       expanded: m,
                                       onClick: this.handleClick
                                   }),
-                              f.createElement('label', (0, b.Z)({}, i.apply(void 0, [['label', 'nestedNodeLabel']].concat(E)), { onClick: this.handleClick }), h.apply(void 0, E)),
+                              f.createElement('label', (0, b.Z)({}, i.apply(void 0, [['label', 'nestedNodeLabel']].concat(E)), { onClick: this.handleClick }), d.apply(void 0, E)),
                               f.createElement('span', (0, b.Z)({}, i.apply(void 0, ['nestedNodeItemString'].concat(E)), { onClick: this.handleClick }), w),
                               f.createElement('ul', i.apply(void 0, ['nestedNodeChildren'].concat(E)), k)
                           );
                 }
             }
         ]),
-        d
+        h
     );
 })(f.Component);
 (0, u.Z)(w, 'propTypes', {
-    getItemString: d().func.isRequired,
-    nodeTypeIndicator: d().any,
-    nodeType: d().string.isRequired,
-    data: d().any,
-    hideRoot: d().bool.isRequired,
-    createItemString: d().func.isRequired,
-    styling: d().func.isRequired,
-    collectionLimit: d().number,
-    keyPath: d().arrayOf(d().oneOfType([d().string, d().number])).isRequired,
-    labelRenderer: d().func.isRequired,
-    shouldExpandNode: d().func,
-    level: d().number.isRequired,
-    sortObjectKeys: d().oneOfType([d().func, d().bool]),
-    isCircular: d().bool,
-    expandable: d().bool
+    getItemString: h().func.isRequired,
+    nodeTypeIndicator: h().any,
+    nodeType: h().string.isRequired,
+    data: h().any,
+    hideRoot: h().bool.isRequired,
+    createItemString: h().func.isRequired,
+    styling: h().func.isRequired,
+    collectionLimit: h().number,
+    keyPath: h().arrayOf(h().oneOfType([h().string, h().number])).isRequired,
+    labelRenderer: h().func.isRequired,
+    shouldExpandNode: h().func,
+    level: h().number.isRequired,
+    sortObjectKeys: h().oneOfType([h().func, h().bool]),
+    isCircular: h().bool,
+    expandable: h().bool
 }),
     (0, u.Z)(w, 'defaultProps', {
         data: [],
