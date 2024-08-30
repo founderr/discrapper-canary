@@ -1047,7 +1047,8 @@ B(
             userId: e.user_id,
             emoji: e.emoji,
             colors: e.burst_colors,
-            reactionType: e.type
+            reactionType: e.type,
+            messageAuthorId: e.message_author_id
         });
     }),
     k(['MESSAGE_POLL_VOTE_ADD', 'MESSAGE_POLL_VOTE_REMOVE'], (e, t) => {

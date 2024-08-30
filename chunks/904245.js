@@ -329,6 +329,18 @@ let ep = {
                 focus: { messageId: n }
             });
         },
+        fetchMessage(e) {
+            let { channelId: t, messageId: n } = e;
+            return i.tn.get({
+                url: eo.ANM.MESSAGES(t),
+                query: {
+                    limit: 1,
+                    around: n
+                },
+                retries: 2,
+                oldFormErrors: !0
+            });
+        },
         fetchMessages(e) {
             let { channelId: t, before: n, after: r, limit: a, jump: l, focus: u, isPreload: c, skipLocalFetch: d, truncate: _ } = e,
                 E = W.Z.getChannel(t),
