@@ -23839,8 +23839,7 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 .upsellContainer_ad7baa {
     display: flex;
     align-items: center;
-    padding: 0 12px;
-    height: 52px;
+    padding: 12px;
     border-radius: 12px;
     background: linear-gradient(var(--background-secondary), var(--background-secondary))padding-box, var(--custom-premium-colors-premium-gradient-tier-2-tri-color)border-box
 }

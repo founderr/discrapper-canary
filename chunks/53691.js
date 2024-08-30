@@ -14,8 +14,8 @@ var i = n(120356),
     c = n(474936),
     d = n(32986);
 function _(e) {
-    let { showUpsell: t, upsellText: n, ctaText: i, ctaAnalyticsObject: _, className: E, showShadow: f = !0, position: h = 'floating' } = e,
-        p = (0, o.useSpring)({
+    let { showUpsell: t, text: n, textVariant: i, button: _, buttonAnalyticsObject: E, className: f, showShadow: h = !0, position: p = 'floating' } = e,
+        I = (0, o.useSpring)({
             transform: t ? 'translateY(0%)' : 'translateY(120%)',
             opacity: t ? 1 : 0,
             config: {
@@ -24,15 +24,15 @@ function _(e) {
             }
         });
     return (0, r.jsxs)(s.animated.div, {
-        style: { ...p },
+        style: { ...I },
         className: a()(
             d.upsellContainer,
             {
-                [d.upsellContainerShadow]: f,
-                [d.upsellContainerFloating]: 'floating' === h,
-                [d.upsellContainerInline]: 'inline' === h
+                [d.upsellContainerShadow]: h,
+                [d.upsellContainerFloating]: 'floating' === p,
+                [d.upsellContainerInline]: 'inline' === p
             },
-            E
+            f
         ),
         children: [
             (0, r.jsx)(o.NitroWheelIcon, {
@@ -40,20 +40,21 @@ function _(e) {
                 color: l.JX.PREMIUM_TIER_2
             }),
             (0, r.jsx)(o.Text, {
-                variant: 'text-sm/medium',
+                variant: null != i ? i : 'text-sm/medium',
                 color: 'header-primary',
                 className: d.upsellText,
                 children: n
             }),
-            (0, r.jsx)(u.Z, {
-                className: d.upsellButton,
-                size: o.ButtonSizes.TINY,
-                shinyButtonClassName: d.upsellButton,
-                subscriptionTier: c.Si.TIER_2,
-                buttonText: i,
-                premiumModalAnalyticsLocation: _,
-                tabIndex: t ? 0 : -1
-            })
+            'string' == typeof _
+                ? (0, r.jsx)(u.Z, {
+                      className: d.upsellButton,
+                      shinyButtonClassName: d.upsellButton,
+                      subscriptionTier: c.Si.TIER_2,
+                      buttonText: _,
+                      premiumModalAnalyticsLocation: E,
+                      tabIndex: t ? 0 : -1
+                  })
+                : _
         ]
     });
 }

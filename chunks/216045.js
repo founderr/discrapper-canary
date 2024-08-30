@@ -1,72 +1,166 @@
 t.d(s, {
     Z: function () {
-        return f;
+        return U;
     }
-});
-var n = t(735250),
-    a = t(470079),
-    i = t(512722),
-    r = t.n(i),
-    o = t(442837),
-    l = t(570140),
-    c = t(232567),
-    d = t(809206),
-    u = t(497321),
-    _ = t(634894),
-    E = t(100527),
-    T = t(906732),
-    I = t(475977),
-    S = t(957730),
-    N = t(296810),
-    m = t(921813),
-    C = t(935147),
-    g = t(246946),
-    A = t(25990),
-    h = t(594174),
-    O = t(74538),
-    p = t(695346),
-    x = t(265159),
-    R = t(532495);
-function f() {
-    let e = (0, o.e7)([h.default], () => {
-        let e = h.default.getCurrentUser();
-        return r()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
+}),
+    t(47120);
+var n,
+    a,
+    i = t(735250),
+    r = t(470079),
+    o = t(120356),
+    l = t.n(o),
+    c = t(512722),
+    d = t.n(c),
+    u = t(442837),
+    _ = t(622535),
+    E = t(481060),
+    T = t(570140),
+    I = t(232567),
+    S = t(809206),
+    N = t(497321),
+    m = t(634894),
+    C = t(100527),
+    g = t(906732),
+    A = t(475977),
+    h = t(957730),
+    O = t(31590),
+    p = t(53691),
+    x = t(296810),
+    R = t(921813),
+    f = t(935147),
+    M = t(246946),
+    D = t(25990),
+    P = t(594174),
+    L = t(74538),
+    b = t(695346),
+    Z = t(265159),
+    v = t(532495),
+    j = t(689938),
+    B = t(663921);
+function U() {
+    let e = (0, u.e7)([P.default], () => {
+        let e = P.default.getCurrentUser();
+        return d()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
     });
-    a.useEffect(() => {
-        (0, c.In)(e.id);
+    r.useEffect(() => {
+        (0, I.In)(e.id);
     }, [e.id]);
-    let s = (0, o.e7)([g.Z], () => g.Z.hidePersonalInformation),
-        { pendingBio: t, ...i } = (0, o.cj)([A.Z], () => A.Z.getAllPending()),
-        f = p.dN.useSetting() && null != t ? S.ZP.parse(void 0, t).content : t,
-        M = O.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: D } = (0, T.ZP)(E.Z.PROFILE);
-    a.useEffect(() => () => l.Z.wait(d.W3), []);
-    let P = 'UserSettingsProfileCustomization';
-    return ((0, _.j)({
-        location: P + ' auto on',
+    let s = (0, u.e7)([M.Z], () => M.Z.hidePersonalInformation),
+        { pendingBio: t, ...n } = (0, u.cj)([D.Z], () => D.Z.getAllPending()),
+        a = b.dN.useSetting() && null != t ? h.ZP.parse(void 0, t).content : t,
+        o = L.ZP.canUsePremiumProfileCustomization(e),
+        { analyticsLocations: c } = (0, g.ZP)(C.Z.PROFILE);
+    r.useEffect(() => () => T.Z.wait(S.W3), []);
+    let U = 'UserSettingsProfileCustomization';
+    (0, m.j)({
+        location: U + ' auto on',
         autoTrackExposure: !0
     }),
-    (0, _.j)({
-        location: P + ' auto off',
-        autoTrackExposure: !1
-    }),
-    s)
-        ? (0, n.jsx)(u.Z, {})
-        : (0, n.jsxs)(T.Gt, {
-              value: D,
+        (0, m.j)({
+            location: U + ' auto off',
+            autoTrackExposure: !1
+        });
+    let {
+            enabled: G,
+            showSegmentedControl: y,
+            showFloatingUpsell: F
+        } = O.Z.useExperiment(
+            { location: 'UserSettingsProfileCustomization' },
+            {
+                autoTrackExposure: !o,
+                disable: o
+            }
+        ),
+        [V, w] = r.useState(0),
+        [k, Y] = r.useState(!1),
+        H = r.useMemo(
+            () =>
+                y
+                    ? [
+                          {
+                              name: 'Non Nitro',
+                              value: 0
+                          },
+                          {
+                              name: 'Try It Out',
+                              value: 1
+                          }
+                      ]
+                    : [],
+            [y]
+        ),
+        W = !G || F || (y && 0 === V),
+        K = !G || (!o && (F || (y && 1 === V))),
+        z = r.useRef(null);
+    return s
+        ? (0, i.jsx)(N.Z, {})
+        : (0, i.jsxs)(g.Gt, {
+              value: c,
               children: [
-                  (0, n.jsx)(I.Z, {}),
-                  (0, n.jsx)(N.Z, {
-                      profilePreview: (0, n.jsx)(m.Z, {
-                          user: e,
-                          canUsePremiumCustomization: M,
-                          onUpsellClick: x.Z,
-                          pendingBio: f,
-                          ...i
+                  (0, i.jsx)(A.Z, {}),
+                  y &&
+                      !o &&
+                      (0, i.jsx)(E.SegmentedControl, {
+                          className: l()({
+                              [B.segmentedControlNonNitro]: 0 === V,
+                              [B.segmentedControlTryItOut]: 1 === V
+                          }),
+                          options: H,
+                          value: V,
+                          onChange: (e) => w(e.value),
+                          look: 'pill'
                       }),
-                      children: (0, n.jsx)(R.Z, {})
-                  }),
-                  !M && (0, n.jsx)(C.Z, { user: e })
+                  W &&
+                      (0, i.jsx)(x.Z, {
+                          profilePreview: (0, i.jsx)(R.Z, {
+                              user: e,
+                              canUsePremiumCustomization: o,
+                              onUpsellClick: Z.Z,
+                              pendingBio: a,
+                              ...n
+                          }),
+                          children: (0, i.jsx)(v.Z, {})
+                      }),
+                  K &&
+                      (0, i.jsx)(_.$, {
+                          onChange: (e) => Y(e),
+                          threshold: 0.25,
+                          active: F,
+                          children: (0, i.jsx)('div', {
+                              ref: z,
+                              children: (0, i.jsx)(f.Z, { user: e })
+                          })
+                      }),
+                  F &&
+                      (0, i.jsx)(p.p, {
+                          className: B.floatingNitroUpsell,
+                          showUpsell: F && !k,
+                          text: 'Get Nitro and Stuff',
+                          textVariant: 'heading-md/medium',
+                          button: (0, i.jsxs)(E.ShinyButton, {
+                              className: B.floatingNitroButton,
+                              innerClassName: B.floatingNitroButtonInner,
+                              onClick: () => {
+                                  var e;
+                                  return null == z ? void 0 : null === (e = z.current) || void 0 === e ? void 0 : e.scrollIntoView({ behavior: 'smooth' });
+                              },
+                              color: E.Button.Colors.GREEN,
+                              size: E.ButtonSizes.MEDIUM,
+                              children: [
+                                  (0, i.jsx)(E.NitroWheelIcon, {
+                                      size: 'sm',
+                                      color: 'currentColor'
+                                  }),
+                                  (0, i.jsx)(E.Text, {
+                                      variant: 'text-sm/medium',
+                                      color: 'currentColor',
+                                      children: j.Z.Messages.TRY_IT_OUT
+                                  })
+                              ]
+                          })
+                      })
               ]
           });
 }
+((a = n || (n = {}))[(a.NON_NITRO = 0)] = 'NON_NITRO'), (a[(a.TRY_IT_OUT = 1)] = 'TRY_IT_OUT');
