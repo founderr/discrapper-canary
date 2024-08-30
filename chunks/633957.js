@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return O;
     }
 }),
     n(47120);
@@ -27,13 +27,13 @@ var i = n(735250),
     S = n(701488),
     A = n(689938),
     R = n(810250);
-function x(e) {
+function O(e) {
     var t;
-    let { application: n, channelId: x, guildId: O } = e,
+    let { application: n, channelId: O, guildId: x } = e,
         { analyticsLocations: M } = (0, I.ZP)(E.Z.ACTIVITY_INSTANCE_EMBED),
         v = (0, l.O)(),
-        L = (0, s.e7)([N.Z], () => N.Z.getChannel(x)),
-        Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : x,
+        L = (0, s.e7)([N.Z], () => N.Z.getChannel(O)),
+        Z = (null == L ? void 0 : null === (t = L.isThread) || void 0 === t ? void 0 : t.call(L)) ? (null == L ? void 0 : L.parent_id) : O,
         P = (0, s.e7)([h.default], () => h.default.getId()),
         {
             embeddedActivity: b,
@@ -61,7 +61,7 @@ function x(e) {
         }, [n]),
         k = (0, d.s5)({
             userId: P,
-            channelId: x,
+            channelId: O,
             application: B
         }),
         G = null == b,
@@ -77,7 +77,7 @@ function x(e) {
             G
                 ? await (0, u.Z)({
                       targetApplicationId: n.id,
-                      channelId: x,
+                      channelId: O,
                       locationObject: v.location,
                       analyticsLocations: M,
                       componentId: w,
@@ -85,7 +85,7 @@ function x(e) {
                   })
                 : await (0, c.Z)({
                       applicationId: b.applicationId,
-                      activityChannelId: x,
+                      activityChannelId: O,
                       locationObject: v.location,
                       analyticsLocations: M,
                       componentId: w,
@@ -141,7 +141,7 @@ function x(e) {
                         }),
                         !G &&
                             (0, i.jsx)(_.Z, {
-                                guildId: O,
+                                guildId: x,
                                 users: U,
                                 max: 4,
                                 size: _.u.SIZE_32

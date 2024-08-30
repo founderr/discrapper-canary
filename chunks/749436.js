@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 }),
     n(47120);
@@ -255,7 +255,7 @@ class L extends (i = s.PureComponent) {
             });
     }
 }
-function O(e) {
+function R(e) {
     let t = (0, d.e7)([T.Z], () => T.Z.getDiscoveryCategories(), [], T.j),
         n = (0, d.e7)([h.ZP], () => h.ZP.getTopCategoryCounts(e.mostRecentQuery));
     return (0, a.jsx)(L, {

@@ -29,10 +29,10 @@ t.Z = (e) => {
         r.Z.wait(() => S());
     }, [N]);
     let L = (0, u.Z)(Z ? m : E),
-        { analyticsLocations: O } = (0, l.ZP)();
+        { analyticsLocations: R } = (0, l.ZP)();
     if (null == g) return null;
-    let { guilds: R, loading: x } = g,
-        b = null == R || 0 === R.length;
+    let { guilds: O, loading: x } = g,
+        b = null == O || 0 === O.length;
     if (!x && b) return null;
     let P = async (e) => {
         if ((0, o.yU)())
@@ -42,19 +42,19 @@ t.Z = (e) => {
                     page: _.ZY5.GUILD_DISCOVERY,
                     section: _.jXE.GUILD_CAP_UPSELL_MODAL
                 },
-                analyticsLocations: O
+                analyticsLocations: R
             });
         else {
-            let t = R.findIndex((t) => t.id === e);
+            let t = O.findIndex((t) => t.id === e);
             await f(e, t, p, A);
         }
     };
-    if (x || null == R) {
+    if (x || null == O) {
         let e = [];
         for (let t = 0; t < L; t++) e.push((0, i.jsx)(d.Z.Placeholder, {}, t));
         t = e;
     } else
-        t = R.slice(0, L).map((e) =>
+        t = O.slice(0, L).map((e) =>
             (0, i.jsx)(
                 d.Z,
                 {

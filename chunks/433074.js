@@ -27,7 +27,7 @@ var i = n(735250),
 function S(e) {
     var t, n;
     let { code: S, message: A } = e,
-        [R, x, O] = (0, r.Wu)([h.Z], () => [h.Z.getApplication(S), h.Z.isInvalidApplication(S), h.Z.getApplicationFetchState(S)], [S]),
+        [R, O, x] = (0, r.Wu)([h.Z], () => [h.Z.getApplication(S), h.Z.isInvalidApplication(S), h.Z.getApplicationFetchState(S)], [S]),
         M = (0, r.e7)([u.default], () => u.default.locale),
         v = (0, r.e7)([_.Z], () => {
             var e;
@@ -44,7 +44,7 @@ function S(e) {
     }, [S]),
         a.useEffect(() => {
             Z &&
-                O === h.M.FETCHED &&
+                x === h.M.FETCHED &&
                 I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
                     application_id: S,
                     device_platform: s.tq ? 'mobile_web' : 'desktop_web',
@@ -52,17 +52,17 @@ function S(e) {
                     guild_id: v,
                     channel_id: A.channel_id
                 });
-        }, [Z, S, null == L ? void 0 : L.id, A.channel_id, v, A.author.id, O]),
+        }, [Z, S, null == L ? void 0 : L.id, A.channel_id, v, A.author.id, x]),
         a.useEffect(() => {
             Z &&
-                x &&
+                O &&
                 I.default.track(C.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                     device_platform: s.tq ? 'mobile_web' : 'desktop_web',
                     sender_user_id: A.author.id,
                     guild_id: v,
                     channel_id: A.channel_id
                 });
-        }, [Z, v, x, A.author.id, A.channel_id]);
+        }, [Z, v, O, A.author.id, A.channel_id]);
     let j = (e) => {
         I.default.track(C.rMx.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
             application_id: S,
@@ -78,7 +78,7 @@ function S(e) {
                 entrypoint: { name: N.ApplicationDirectoryEntrypointNames.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
     };
-    if (x)
+    if (O)
         return (0, i.jsxs)(c.Z, {
             containerRef: D,
             children: [
@@ -98,7 +98,7 @@ function S(e) {
                 })
             ]
         });
-    if (null == R || O === h.M.FETCHING)
+    if (null == R || x === h.M.FETCHING)
         return (0, i.jsxs)(c.Z, {
             containerRef: D,
             children: [(0, i.jsx)(c.Z.Header, { text: p.Z.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER }), (0, i.jsx)(c.Z.Body, { resolving: !0 })]

@@ -12,7 +12,7 @@ t.d(s, {
         return V;
     },
     q8: function () {
-        return F;
+        return y;
     }
 }),
     t(639576),
@@ -108,8 +108,8 @@ function j() {
     let { shouldMergeGameSettings: B } = p.b.useExperiment({ location: 'settings' }),
         U = (0, M.eA)({ location: 'settings' }),
         G = (0, _.Xo)({ location: 'settings' }),
-        F = null !== (s = null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== s && s,
-        y = (0, C.y0)({ location: 'settings' }),
+        y = null !== (s = null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== s && s,
+        F = (0, C.y0)({ location: 'settings' }),
         V = (0, l.Q)(),
         w = (0, m.Zy)({ location: b.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
         { enabled: k } = I.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
@@ -129,8 +129,8 @@ function j() {
         shouldMergeGameSettings: B,
         isUserSettingsSearchEnabled: U,
         isKeywordFilteringEnabled: G,
-        isStaff: F,
-        isInappropriateConversationWarningEnabled: y,
+        isStaff: y,
+        isInappropriateConversationWarningEnabled: F,
         paymentsBlocked: V,
         isEligibleForQuests: w,
         showGiftNitro: k,
@@ -199,7 +199,7 @@ function U(e, s) {
     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         n = arguments.length > 3 ? arguments[3] : void 0,
         a = [],
-        i = y(s),
+        i = F(s),
         o = (function (e, s) {
             let t = new Map();
             return (
@@ -245,7 +245,7 @@ function G() {
         t = n.useMemo(() => v({ shouldMergeGameSettings: s }), [s]);
     return n.useMemo(() => U(t, e), [t, e]);
 }
-function F(e) {
+function y(e) {
     let s = j(),
         t = (function () {
             let { shouldMergeGameSettings: e } = p.b.useExperiment({ location: 'settings' }),
@@ -271,7 +271,7 @@ function F(e) {
         a = (0, M.c3)({ location: 'settings' });
     return n.useMemo(() => U(t, s, a, new Set(e)), [t, s, a, e]);
 }
-function y(e) {
+function F(e) {
     return new Map(
         Object.entries(e).filter((e) => {
             let [s, t] = e;
@@ -280,7 +280,7 @@ function y(e) {
     );
 }
 function V(e) {
-    return Array.from(y(e).entries()).map((e) => {
+    return Array.from(F(e).entries()).map((e) => {
         let [s, t] = e;
         return [s, t.searchableTitles];
     });

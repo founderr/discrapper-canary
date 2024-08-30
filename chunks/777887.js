@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return L;
     }
 });
 var r = n(735250);
@@ -30,9 +30,9 @@ var i = n(442837),
     v = n(689938),
     C = n(122269),
     y = n(155330);
-function D(e) {
-    let { user: t, currentUser: n, displayProfile: D, guild: L, isHovering: b, onOpenProfile: M, channelId: P, onClose: U } = e,
-        w = u.ZP.getName(null == L ? void 0 : L.id, P, t),
+function L(e) {
+    let { user: t, currentUser: n, displayProfile: L, guild: D, isHovering: b, onOpenProfile: M, channelId: P, onClose: U } = e,
+        w = u.ZP.getName(null == D ? void 0 : D.id, P, t),
         x = (0, i.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application;
@@ -49,9 +49,9 @@ function D(e) {
                 profileType: R.y0.BITE_SIZE,
                 onOpenProfile: M,
                 nickname: w,
-                pronouns: null == D ? void 0 : D.pronouns,
+                pronouns: null == L ? void 0 : L.pronouns,
                 tags: (0, r.jsx)(_.Z, {
-                    displayProfile: D,
+                    displayProfile: L,
                     profileType: R.y0.BITE_SIZE,
                     onClose: U
                 }),
@@ -80,14 +80,14 @@ function D(e) {
                     }),
                     (0, r.jsx)(T.Z, {
                         user: t,
-                        guildId: null == L ? void 0 : L.id,
+                        guildId: null == D ? void 0 : D.id,
                         className: y.button
                     })
                 ]
             }),
             (0, r.jsx)(A.Z, {
                 user: t,
-                bio: null == D ? void 0 : D.bio,
+                bio: null == L ? void 0 : L.bio,
                 hidePersonalInformation: k,
                 onClose: U
             }),
@@ -100,7 +100,7 @@ function D(e) {
                   })
                 : (0, r.jsx)(S.Z, {
                       user: t,
-                      guild: L,
+                      guild: D,
                       channelId: P,
                       onClose: U
                   }),
@@ -110,16 +110,16 @@ function D(e) {
                     applicationId: x.id,
                     commandIds: x.popularApplicationCommandIds,
                     channel: G,
-                    guildId: null == L ? void 0 : L.id,
+                    guildId: null == D ? void 0 : D.id,
                     onClick: U
                 }),
-            null != L &&
+            null != D &&
                 (0, r.jsx)(p.Z, {
                     heading: v.Z.Messages.ROLES,
                     children: (0, r.jsx)(N.Z, {
                         user: t,
                         currentUser: n,
-                        guild: L
+                        guild: D
                     })
                 })
         ]

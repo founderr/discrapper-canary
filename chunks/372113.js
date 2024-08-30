@@ -22,8 +22,8 @@ var a = n(120356),
     S = n(87894),
     A = n(2660),
     R = n(46140),
-    x = n(981631),
-    O = n(689938),
+    O = n(981631),
+    x = n(689938),
     M = n(315010),
     v = n(789002);
 let L = (e, t, n) => ((0, S.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
@@ -144,7 +144,7 @@ t.Z = (e) => {
                 'aria-hidden': !F,
                 children: [
                     (0, i.jsx)(l.Tooltip, {
-                        text: z ? O.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
+                        text: z ? x.Z.Messages.QUESTS_REWARD_TILE_EXPIRED_QUEST : null,
                         tooltipContentClassName: M.rewardTileExpirationTooltip,
                         shouldShow: z,
                         children: (e) =>
@@ -173,7 +173,7 @@ t.Z = (e) => {
                             (0, i.jsx)(l.Text, {
                                 variant: L(n, a, j),
                                 className: M.taskInstructions,
-                                children: I ? O.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({ questName: t.config.messages.questName }) : V
+                                children: I ? x.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_HEADING.format({ questName: t.config.messages.questName }) : V
                             }),
                             (0, i.jsx)(l.Text, {
                                 variant: 'lg' === a ? 'text-sm/medium' : 'text-xs/medium',
@@ -194,7 +194,7 @@ t.Z = (e) => {
                                         g = h.r.build(l.config).defaultReward.messages.nameWithArticle,
                                         A = (0, T.Kr)(l.config),
                                         M = (0, T.b7)(l);
-                                    if (I && N && f) return O.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: C });
+                                    if (I && N && f) return x.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: C });
                                     if (m) {
                                         let e = p
                                                 ? (0, T.o9)({
@@ -204,19 +204,19 @@ t.Z = (e) => {
                                                 : null,
                                             t = null !== (s = null == e ? void 0 : e.messages.nameWithArticle) && void 0 !== s ? s : null;
                                         return null != t
-                                            ? O.Z.Messages.QUEST_REWARD_COMPLETED_CLAIMED.format({
+                                            ? x.Z.Messages.QUEST_REWARD_COMPLETED_CLAIMED.format({
                                                   reward: t,
                                                   date: C
                                               })
-                                            : O.Z.Messages.QUEST_REWARD_COMPLETED.format({
+                                            : x.Z.Messages.QUEST_REWARD_COMPLETED.format({
                                                   reward: g,
                                                   date: C
                                               });
                                     }
                                     if (I)
                                         return p
-                                            ? O.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: C })
-                                            : O.Z.Messages.QUEST_REWARD_COMPLETED.format({
+                                            ? x.Z.Messages.QUEST_REWARD_COMPLETED_UNCLAIMED.format({ date: C })
+                                            : x.Z.Messages.QUEST_REWARD_COMPLETED.format({
                                                   reward: g,
                                                   date: C
                                               });
@@ -227,21 +227,21 @@ t.Z = (e) => {
                                           })
                                         : null;
                                     return _
-                                        ? O.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({ reward: null !== (r = null == v ? void 0 : v.messages.nameWithArticle) && void 0 !== r ? r : g })
+                                        ? x.Z.Messages.QUESTS_EXPIRED_QUEST_CARD_SUBHEADING.format({ reward: null !== (r = null == v ? void 0 : v.messages.nameWithArticle) && void 0 !== r ? r : g })
                                         : null != v && null != v.approximateCount
-                                          ? O.Z.Messages.QUEST_REWARD_TIERED.format({
+                                          ? x.Z.Messages.QUEST_REWARD_TIERED.format({
                                                 maxReward: v.messages.nameWithArticle,
                                                 maxRewardCount: (0, d.Bs)(v.approximateCount, c),
-                                                helpCenterLink: u.Z.getArticleURL(x.BhN.QUESTS_LEARN_MORE)
+                                                helpCenterLink: u.Z.getArticleURL(O.BhN.QUESTS_LEARN_MORE)
                                             })
                                           : null != A
-                                            ? O.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
+                                            ? x.Z.Messages.QUEST_REWARD_WITH_EXPIRATION.format({
                                                   reward: g,
                                                   duration: A
                                               })
                                             : null != M
                                               ? M.description
-                                              : O.Z.Messages.QUEST_REWARD.format({ reward: g });
+                                              : x.Z.Messages.QUEST_REWARD.format({ reward: g });
                                 })({
                                     quest: t,
                                     location: n,
@@ -266,7 +266,7 @@ t.Z = (e) => {
                                                 questContentCTA: _.jZ.LEARN_MORE
                                             });
                                     },
-                                    children: O.Z.Messages.QUESTS_LEARN_MORE_V2
+                                    children: x.Z.Messages.QUESTS_LEARN_MORE_V2
                                 }),
                             I && !U
                                 ? null

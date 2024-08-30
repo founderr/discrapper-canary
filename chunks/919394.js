@@ -1,6 +1,6 @@
 t.d(n, {
     SO: function () {
-        return N;
+        return I;
     }
 }),
     t(653041),
@@ -177,7 +177,7 @@ let T = (e, n) => ({
             maxWidth: m.kC
         });
     },
-    N = async (e) => {
+    I = async (e) => {
         let { applicationImageSrc: n, entry: t, avatarSrcs: a, description: l, timestamp: i, colors: r, channelId: u } = e,
             c = t.extra.game_name,
             d = T(a, n);

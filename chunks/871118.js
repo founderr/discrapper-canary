@@ -40,19 +40,19 @@ function h(e) {
     let { stream: n, className: t, noText: i = !1 } = e,
         o = (0, s.e7)([c.Z], () => c.Z.getBasicChannel(n.channelId)),
         h = (0, s.e7)([d.Z], () => null != o && d.Z.canBasicChannel(_.S7T.CONNECT, o)),
-        { url: x, isLoading: N } = (0, s.cj)([u.Z], () => ({
+        { url: x, isLoading: I } = (0, s.cj)([u.Z], () => ({
             url: h ? u.Z.getPreviewURL(n.guildId, n.channelId, n.ownerId) : null,
             isLoading: h && u.Z.getIsPreviewLoading(n.guildId, n.channelId, n.ownerId)
         })),
-        I = l.useRef(N ? null : x);
+        N = l.useRef(I ? null : x);
     l.useEffect(() => {
-        !N && (I.current = x);
-    }, [x, N]);
-    let p = null == x || N ? I.current : x;
+        !I && (N.current = x);
+    }, [x, I]);
+    let p = null == x || I ? N.current : x;
     return null == p
         ? (0, a.jsx)(T, {
               className: t,
-              isLoading: N,
+              isLoading: I,
               noText: i,
               previewText: h ? void 0 : m.Z.Messages.STREAM_NO_PERMISSION_CTA
           })

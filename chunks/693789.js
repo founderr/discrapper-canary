@@ -64,9 +64,9 @@ function p() {
     });
 }
 function I(e) {
-    let { look: t = E.FILLED, color: n = f.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: I = !0, disabled: m = !1, submitting: T = !1, type: g = 'button', style: S, wrapperClassName: A, className: N, innerClassName: O, onClick: R, onDoubleClick: v, onMouseDown: C, onMouseUp: y, onMouseEnter: D, onMouseLeave: L, onKeyDown: b, children: M, rel: P, buttonRef: U, focusProps: w, 'aria-label': x, submittingStartedLabel: G, submittingFinishedLabel: k, ...B } = e,
+    let { look: t = E.FILLED, color: n = f.BRAND, size: a = h.MEDIUM, fullWidth: o = !1, grow: I = !0, disabled: m = !1, submitting: T = !1, type: g = 'button', style: S, wrapperClassName: A, className: N, innerClassName: O, onClick: R, onDoubleClick: v, onMouseDown: C, onMouseUp: y, onMouseEnter: L, onMouseLeave: D, onKeyDown: b, children: M, rel: P, buttonRef: U, focusProps: w, 'aria-label': x, submittingStartedLabel: G, submittingFinishedLabel: k, ...B } = e,
         F = m || T,
-        V = F && (null != D || null != L),
+        V = F && (null != L || null != D),
         H = (function (e, t) {
             var n, r, i, a;
             let s = null == e ? void 0 : e.offset;
@@ -96,8 +96,8 @@ function I(e) {
             onDoubleClick: F ? (e) => e.preventDefault() : v,
             onMouseUp: m ? void 0 : y,
             onMouseDown: m ? void 0 : C,
-            onMouseEnter: D,
-            onMouseLeave: L,
+            onMouseEnter: L,
+            onMouseLeave: D,
             onKeyDown: m ? void 0 : b,
             type: g,
             disabled: m,
@@ -140,8 +140,8 @@ function I(e) {
               children: [
                   Y,
                   (0, r.jsx)('span', {
-                      onMouseEnter: D,
-                      onMouseLeave: L,
+                      onMouseEnter: L,
+                      onMouseLeave: D,
                       className: _.disabledButtonOverlay
                   })
               ]

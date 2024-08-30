@@ -23,14 +23,14 @@ t.Z = i.memo(function (e) {
         O = A ? m.Z.Messages.SHARE_NITRO_BIRTHDAY_TOOLTIP_UNFORMATTED : null,
         [R, v] = i.useState(!1),
         [C, y] = i.useState(!1),
-        D = (0, o.Z)(null, () => y(!1)),
-        { analyticsLocations: L } = (0, c.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
+        L = (0, o.Z)(null, () => y(!1)),
+        { analyticsLocations: D } = (0, c.ZP)(u.Z.REFERRAL_TRIALS_COMPOSER_BUTTON),
         b = g.isDM() && void 0 !== g.recipients ? g.recipients[0] : null,
         M = (0, l.ZP)();
     return t
         ? null
         : (0, r.jsxs)('div', {
-              ref: D,
+              ref: L,
               className: T.buttonContainer,
               children: [
                   (0, r.jsx)(_.Z, {
@@ -51,7 +51,7 @@ t.Z = i.memo(function (e) {
                                       !R &&
                                       (v(!0),
                                       f.default.track(p.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                          location_stack: L,
+                                          location_stack: D,
                                           step: I.fz.BADGE_TOOLTIP_VIEWED,
                                           other_user_id: Number(b)
                                       }));
@@ -68,7 +68,7 @@ t.Z = i.memo(function (e) {
                                   onClick: () => {
                                       y((e) => !e),
                                           f.default.track(p.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                              location_stack: L,
+                                              location_stack: D,
                                               step: I.fz.BADGE_CLICKED,
                                               other_user_id: Number(b)
                                           });

@@ -259,16 +259,16 @@ var n = (function () {
                 }
                 C.push(v), y(C, 0.75 * o);
                 for (
-                    var D = new r(function (e, n) {
+                    var L = new r(function (e, n) {
                         return t.naturalOrder(e.count() * e.volume(), n.count() * n.volume());
                     });
                     C.size();
 
                 )
-                    D.push(C.pop());
-                y(D, o - D.size());
-                for (var L = new a(); D.size(); ) L.push(D.pop());
-                return L;
+                    L.push(C.pop());
+                y(L, o - L.size());
+                for (var D = new a(); L.size(); ) D.push(L.pop());
+                return D;
             }
         }
     );

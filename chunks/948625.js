@@ -27,8 +27,8 @@ var a = n(180650),
     I = n(769411),
     E = n(125257),
     v = n(6412),
-    L = n(238286);
-let T = () => o.Z.Messages.LIMITED_TIME,
+    T = n(238286);
+let L = () => o.Z.Messages.LIMITED_TIME,
     S = () => o.Z.Messages.MOST_POPULAR,
     N = () => o.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
     O = () => o.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
@@ -36,11 +36,11 @@ let T = () => o.Z.Messages.LIMITED_TIME,
     B = [
         {
             id: 'category_tide',
-            backgroundStaticSrc: L,
+            backgroundStaticSrc: T,
             overflowSrcStatic: v,
             logoSrc: E,
             textColor: (0, r.Lq)(s.Ilk.WHITE_100),
-            badge: { label: T },
+            badge: { label: L },
             cta: {
                 label: k,
                 categorySkuId: a.T.TIDE

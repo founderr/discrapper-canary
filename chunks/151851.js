@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return L;
     }
 });
 var r = n(735250);
@@ -107,7 +107,7 @@ let O = (e) => S.ZP.close(e),
             ]
         });
     };
-function D(e) {
+function L(e) {
     let { focused: t, type: n, windowKey: i, macOSFrame: a = !1, themeOverride: o } = e,
         u = (0, c.bp)(),
         _ = (0, s.e7)([d.Z], () => d.Z.isFullscreenInContext(u)),

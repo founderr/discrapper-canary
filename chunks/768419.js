@@ -23,8 +23,8 @@ var s,
     v = n(979651),
     C = n(626135),
     y = n(81063),
-    D = n(70956),
-    L = n(823379),
+    L = n(70956),
+    D = n(823379),
     b = n(781518),
     M = n(616922),
     P = n(981631);
@@ -43,13 +43,13 @@ function U(e, t, n) {
 }
 let w = I.Z.get(P.ABu.SPOTIFY),
     x = 'hm://pusher/v1/connections/',
-    G = 30 * D.Z.Millis.SECOND,
-    k = 30 * D.Z.Millis.SECOND,
-    B = 5 * D.Z.Millis.MINUTE,
-    F = 5 * D.Z.Millis.SECOND,
-    V = 1.5 * D.Z.Millis.SECOND,
-    H = 1 * D.Z.Millis.MINUTE,
-    Z = 3 * D.Z.Millis.SECOND;
+    G = 30 * L.Z.Millis.SECOND,
+    k = 30 * L.Z.Millis.SECOND,
+    B = 5 * L.Z.Millis.MINUTE,
+    F = 5 * L.Z.Millis.SECOND,
+    V = 1.5 * L.Z.Millis.SECOND,
+    H = 1 * L.Z.Millis.MINUTE,
+    Z = 3 * L.Z.Millis.SECOND;
 ((l = s || (s = {})).PLAYER_STATE_CHANGED = 'PLAYER_STATE_CHANGED'), (l.DEVICE_STATE_CHANGED = 'DEVICE_STATE_CHANGED');
 let Y = {
         MESSAGE: 'message',
@@ -307,7 +307,7 @@ function ep(e, t, n) {
                     image: null === (a = O.album) || void 0 === a ? void 0 : a.images[0],
                     type: null !== (u = null === (s = O.album) || void 0 === s ? void 0 : s.type) && void 0 !== u ? u : M.Hw.ALBUM
                 },
-                artists: Array.isArray(O.artists) ? O.artists.filter((e) => (0, L.lm)(e.id) && (0, L.lm)(e.name)) : [],
+                artists: Array.isArray(O.artists) ? O.artists.filter((e) => (0, D.lm)(e.id) && (0, D.lm)(e.name)) : [],
                 isLocal: O.is_local || !1
             });
     } else

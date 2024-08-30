@@ -50,8 +50,8 @@ __OVERLAY__ && (R = n(237997).Z), ((a = r || (r = {})).OVERLAY_UNLOCKED = 'overl
 let v = (e) => 0 === e.type,
     C = (e) => 1 === e.type,
     y = (e) => (v(e) ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id),
-    D = [1 * m.Z.Millis.MINUTE, 5 * m.Z.Millis.MINUTE];
-class L extends g.Z {
+    L = [1 * m.Z.Millis.MINUTE, 5 * m.Z.Millis.MINUTE];
+class D extends g.Z {
     isFull() {
         return this.queue.length >= this.maxSize;
     }
@@ -82,7 +82,7 @@ class L extends g.Z {
         return this.queue.push(...n), this.logger.log('Cancel pending send requests', t.length), t;
     }
     startQueueMetricTimers(e) {
-        let t = D.map((e) =>
+        let t = L.map((e) =>
             setTimeout(() => {
                 (0, _.yw)(N.rMx.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e)
@@ -208,4 +208,4 @@ class L extends g.Z {
         super(new E.Z('MessageQueue')), O(this, 'maxSize', void 0), O(this, 'requests', void 0), O(this, 'analyticsTimeouts', void 0), (this.maxSize = e), (this.requests = new Map()), (this.analyticsTimeouts = new Map());
     }
 }
-t.ZP = new L();
+t.ZP = new D();

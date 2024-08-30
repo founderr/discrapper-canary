@@ -87,13 +87,13 @@ let u = '40%',
     },
     p = (e) => {
         let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !1 }),
+            { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
             a = (0, s.e7)([i.Z], () => i.Z.getIsSenderEligibleForIncentive());
         return t && n && a;
     },
     m = (e) => {
         let { enabled: t } = o.g.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-            { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !1 }),
+            { enabled: n } = l.$.useExperiment({ location: e }, { autoTrackExposure: !0 }),
             a = (0, s.e7)([i.Z], () => i.Z.getIsFetchingReferralIncentiveEligibility()),
             r = (0, s.e7)([i.Z], () => i.Z.getSenderIncentiveState());
         return a ? d.g2L.NOT_ELIGIBLE : n && t ? r : d.g2L.NOT_ELIGIBLE;

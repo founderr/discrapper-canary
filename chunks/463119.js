@@ -36,7 +36,7 @@ let L = (e) => {
             text: v.Z.Messages.NEW
         });
     },
-    O = (e) => {
+    R = (e) => {
         let { selected: t, locationState: n, icon: s, onMouseEnter: r, onMouseLeave: o, children: c, ...u } = e,
             h = (0, l.JA)('shop'),
             E = m.Z.HOME_PAGE_SHOP_TAB,
@@ -64,9 +64,9 @@ let L = (e) => {
             children: c
         });
     },
-    R = (e) => {
+    O = (e) => {
         let { selected: t, locationState: n } = e;
-        return (0, i.jsx)(O, {
+        return (0, i.jsx)(R, {
             selected: t,
             locationState: n,
             children: (0, i.jsx)(L, {})
@@ -113,7 +113,7 @@ let L = (e) => {
     b = (e) => {
         var t, n, s, l, u, _, m, I, g, p, T, S;
         let C, N;
-        let { selected: A, locationState: R, displayOptions: b } = e,
+        let { selected: A, locationState: O, displayOptions: b } = e,
             P = (0, o.e7)([E.Z], () => E.Z.useReducedMotion),
             [M, D] = a.useState(0),
             [y, j] = a.useState(!1),
@@ -144,10 +144,10 @@ let L = (e) => {
             hideOnClick: !1,
             'aria-label': 'string' == typeof H ? H : v.Z.Messages.COLLECTIBLES_SEE_WHATS_NEW,
             children: (e) =>
-                (0, i.jsxs)(O, {
+                (0, i.jsxs)(R, {
                     className: null != b.entryPointClassName ? (0, f.l)(Z, b.entryPointClassName) : void 0,
                     selected: A,
-                    locationState: R,
+                    locationState: O,
                     icon: b.entryPointIcon,
                     ...e,
                     onMouseEnter: () => k(e.onMouseEnter),
@@ -197,7 +197,7 @@ let L = (e) => {
             hideOnClick: !1,
             'aria-label': s.title(),
             children: (e) =>
-                (0, i.jsx)(O, {
+                (0, i.jsx)(R, {
                     selected: t,
                     locationState: n,
                     ...e,
@@ -223,12 +223,12 @@ let L = (e) => {
                         displayOptions: a
                     });
                 case N.k2.BADGE:
-                    return (0, i.jsx)(R, {
+                    return (0, i.jsx)(O, {
                         selected: t,
                         locationState: n
                     });
             }
-        return (0, i.jsx)(O, {
+        return (0, i.jsx)(R, {
             selected: t,
             locationState: n
         });

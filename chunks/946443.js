@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return O;
     },
     h: function () {
         return M;
@@ -30,8 +30,8 @@ var i = n(735250),
     S = n(981631),
     A = n(689938),
     R = n(758046);
-function x(e) {
-    let { setTab: t, onJump: n, showTutorial: s, setSeenTutorial: l, closePopout: x, badgeState: M } = e,
+function O(e) {
+    let { setTab: t, onJump: n, showTutorial: s, setSeenTutorial: l, closePopout: O, badgeState: M } = e,
         v = a.useRef(null),
         [L, Z] = (0, g.ZP)(v),
         { loadState: P, channels: b } = L,
@@ -70,12 +70,12 @@ function x(e) {
         }, []),
         a.useEffect(
             () => (
-                E.Z.subscribe('CONNECTION_OPEN', x),
+                E.Z.subscribe('CONNECTION_OPEN', O),
                 () => {
-                    E.Z.unsubscribe('CONNECTION_OPEN', x);
+                    E.Z.unsubscribe('CONNECTION_OPEN', O);
                 }
             ),
-            [x]
+            [O]
         );
     let U = (0, u.e7)([I.Z], () => I.Z.messageGroupSpacing),
         y = (0, m.Z)('unreads', v);
@@ -88,7 +88,7 @@ function x(e) {
                     tab: d.X.UNREADS,
                     setTab: t,
                     badgeState: M,
-                    closePopout: x
+                    closePopout: O
                 }),
                 (0, i.jsx)(f.Z, {
                     Icon: _.InboxIcon,
@@ -106,7 +106,7 @@ function x(e) {
                 tab: d.X.UNREADS,
                 setTab: t,
                 badgeState: M,
-                closePopout: x,
+                closePopout: O,
                 children: (0, i.jsx)(N.Z, {
                     type: 'top-header',
                     onClick: j
@@ -125,7 +125,7 @@ function x(e) {
                             ...a,
                             onScroll: P === g.jd.Done ? void 0 : D,
                             className: R.scroller,
-                            children: [s ? (0, i.jsx)(O, { setSeenTutorial: l }) : null, (0, p.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: R.spinner })]
+                            children: [s ? (0, i.jsx)(x, { setSeenTutorial: l }) : null, (0, p.Z)(b, Z, n), P === g.jd.Done ? null : (0, i.jsx)(_.Spinner, { className: R.spinner })]
                         });
                     }
                 })
@@ -133,7 +133,7 @@ function x(e) {
         ]
     });
 }
-function O(e) {
+function x(e) {
     let { setSeenTutorial: t } = e;
     return (0, i.jsxs)('div', {
         className: R.tutorial,

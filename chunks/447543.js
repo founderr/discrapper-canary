@@ -30,8 +30,8 @@ var r = n(525654),
     v = n(895886),
     C = n(143816),
     y = n(703656),
-    D = n(922482),
-    L = n(131704),
+    L = n(922482),
+    D = n(131704),
     b = n(314897),
     M = n(592125),
     P = n(984933),
@@ -68,7 +68,7 @@ function ee(e) {
         case Q.Iq.ROLE_SUBSCRIPTIONS_PURCHASE:
             i.targetType = e.target_type;
     }
-    return (!(null != w.Z.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id)) || e.new_member) && null != e.channel && (0, L.zi)(e.channel.type) && (i.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (i.guildScheduledEvent = e.guild_scheduled_event), i;
+    return (!(null != w.Z.getGuild(null === (t = e.guild) || void 0 === t ? void 0 : t.id)) || e.new_member) && null != e.channel && (0, D.zi)(e.channel.type) && (i.welcomeModalChannelId = e.channel.id), null != e.guild_scheduled_event && (i.guildScheduledEvent = e.guild_scheduled_event), i;
 }
 function et(e) {
     let { guildId: t, channel: r, options: i, analyticsLocations: a = [] } = e,
@@ -79,14 +79,14 @@ function et(e) {
         u = (function (e, t, n) {
             var r, i;
             if ((null == n ? void 0 : n.targetType) === Q.Iq.ROLE_SUBSCRIPTIONS_PURCHASE) return z.oC.ROLE_SUBSCRIPTIONS;
-            if ((null == n ? void 0 : n.targetType) == null && !L.tx.has(t.type) && (0, g.s)(e)) return z.oC.GUILD_HOME;
+            if ((null == n ? void 0 : n.targetType) == null && !D.tx.has(t.type) && (0, g.s)(e)) return z.oC.GUILD_HOME;
             let a = M.Z.getChannel(t.id);
             return k.Z.can(K.Plq.VIEW_CHANNEL, a) ? t.id : null !== (i = null === (r = P.ZP.getDefaultChannel(e, !0, K.Plq.CREATE_INSTANT_INVITE)) || void 0 === r ? void 0 : r.id) && void 0 !== i ? i : t.id;
         })(t, r, i),
         { targetUserId: c, targetType: d, targetApplicationId: _ } = null != i ? i : {},
         p = o === K.d4z.GUILD_STAGE_VOICE,
         S = K.Z5c.CHANNEL(t, u);
-    L.tx.has(o)
+    D.tx.has(o)
         ? (0, I.h)(() => {
               Promise.resolve()
                   .then(n.bind(n, 287734))
@@ -94,7 +94,7 @@ function et(e) {
                       let { default: n } = e,
                           s = () => {
                               if (p) {
-                                  (0, D.Cq)(r instanceof L.Sf ? r : (0, L.kt)(r)), (0, y.uL)(S);
+                                  (0, L.Cq)(r instanceof D.Sf ? r : (0, D.kt)(r)), (0, y.uL)(S);
                                   return;
                               }
                               n.selectVoiceChannel(u),

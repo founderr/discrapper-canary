@@ -18,8 +18,8 @@ var a = t(735250),
     T = t(639351),
     h = t(823379),
     x = t(379357),
-    N = t(192918),
-    I = t(22211),
+    I = t(192918),
+    N = t(22211),
     p = t(561308),
     C = t(919394),
     g = t(438226),
@@ -45,10 +45,10 @@ n.Z = (e) => {
     let { channel: n, entry: t, disableGameProfileLinks: i, onReaction: E, onVoiceChannelPreview: T } = e,
         { largeImage: R } = (0, x.rv)({ entry: t }),
         { user: y, details: L, appName: w, activity: B } = (0, A.n)(t),
-        { primaryColor: k, secondaryColor: U } = (0, v.Z)(null == R ? void 0 : R.src),
-        b = (0, r.e7)([m.default], () => m.default.locale),
-        { streamPreviewUrl: G, stream: D } = (0, I.Z)(t),
-        { displayParticipants: H, participant1: V, participant2: Y, numOtherParticipants: F } = (0, N.Z)(t, 3),
+        { primaryColor: b, secondaryColor: k } = (0, v.Z)(null == R ? void 0 : R.src),
+        U = (0, r.e7)([m.default], () => m.default.locale),
+        { streamPreviewUrl: D, stream: G } = (0, N.Z)(t),
+        { displayParticipants: H, participant1: V, participant2: Y, numOtherParticipants: F } = (0, I.Z)(t, 3),
         W = l.useCallback(
             (e) => {
                 if ((null == R ? void 0 : R.src) == null || null == n || null == y) return;
@@ -66,21 +66,21 @@ n.Z = (e) => {
                     applicationImageSrc: null == R ? void 0 : R.src,
                     avatarSrcs: H.map((e) => e.getAvatarURL(n.guild_id, 128)),
                     description: a,
-                    timestamp: (0, p.yh)(t, b),
-                    colors: [k, U],
+                    timestamp: (0, p.yh)(t, U),
+                    colors: [b, k],
                     channelId: e
                 });
             },
-            [null == R ? void 0 : R.src, n, H, t, b, F, V, Y, k, U, y]
+            [null == R ? void 0 : R.src, n, H, t, U, F, V, Y, b, k, y]
         );
     if (null == y) return null;
     let z = null != t.extra.platform ? j[t.extra.platform] : null,
         q = (0, a.jsx)(M.Gk, {
-            location: null == G ? M.Gt.POPOUT : M.Gt.STREAMING_POPOUT,
+            location: null == D ? M.Gt.POPOUT : M.Gt.STREAMING_POPOUT,
             children: f.W.map((e, n) => (0, a.jsx)(e, { entry: t }, n))
         }),
         K =
-            null == G
+            null == D
                 ? (0, a.jsx)(P.wG, {
                       channel: n,
                       headerIcons:
@@ -99,13 +99,13 @@ n.Z = (e) => {
                   })
                 : (0, a.jsx)(P.jL, {
                       channel: n,
-                      streamPreviewSrc: G,
+                      streamPreviewSrc: D,
                       title: t.extra.game_name,
                       subtitle: L,
                       badges: q,
                       userDescription: O.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING_V2,
                       entry: t,
-                      stream: D
+                      stream: G
                   }),
         J =
             (0, o.Z)(B, S.xjy.JOIN) || (0, u.Z)(B)

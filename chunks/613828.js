@@ -118,8 +118,8 @@ m(function (e, t) {
                       strict: A
                   })
                 : null,
-            D = !!(T ? T(y, n) : y),
-            L = D
+            L = !!(T ? T(y, n) : y),
+            D = L
                 ? (function () {
                       for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                       return t
@@ -129,11 +129,11 @@ m(function (e, t) {
                           .join(' ');
                   })(f, c)
                 : f,
-            b = D ? (0, o.Z)({}, N, {}, E) : N,
+            b = L ? (0, o.Z)({}, N, {}, E) : N,
             M = (0, o.Z)(
                 {
-                    'aria-current': (D && i) || null,
-                    className: L,
+                    'aria-current': (L && i) || null,
+                    className: D,
                     style: b,
                     to: s
                 },

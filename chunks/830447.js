@@ -164,7 +164,7 @@ function T(e) {
     }, [C.isUsingKeyboardNavigation]);
     let y = i.useRef(null);
     (0, c.T)(y);
-    let D = o ? d.u2 : d.zJ;
+    let L = o ? d.u2 : d.zJ;
     return (0, r.jsx)(p.r.Provider, {
         value: A,
         children: (0, r.jsx)('div', {
@@ -172,7 +172,7 @@ function T(e) {
             ...C.getContainerProps(),
             ref: y,
             'aria-label': e['aria-label'],
-            children: (0, r.jsxs)(D, {
+            children: (0, r.jsxs)(L, {
                 className: m.scroller,
                 children: [
                     0 === N.length &&

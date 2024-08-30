@@ -40,8 +40,8 @@ var n = t(735250),
     B = t(921944),
     U = t(959517),
     G = t(689938),
-    F = t(45031),
-    y = t(224499);
+    y = t(45031),
+    F = t(224499);
 function V(e, s, t) {
     return (
         s in e
@@ -120,10 +120,10 @@ let w = {
         return s
             ? null
             : (0, n.jsxs)('div', {
-                  className: F.themeTitle,
+                  className: y.themeTitle,
                   children: [
                       (0, n.jsx)('div', {
-                          className: F.title,
+                          className: y.title,
                           children: G.Z.Messages.THEME
                       }),
                       (0, n.jsx)(b.g, {})
@@ -134,16 +134,16 @@ class Q extends a.Component {
     renderZoomSlider() {
         return M.isPlatformEmbedded
             ? (0, n.jsxs)(d.FormItem, {
-                  className: y.marginTop20,
+                  className: F.marginTop20,
                   children: [
                       (0, n.jsx)(d.FormTitle, {
                           id: k,
                           tag: d.FormTitleTags.H5,
-                          className: y.marginBottom8,
+                          className: F.marginBottom8,
                           children: G.Z.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
                       }),
                       (0, n.jsx)(d.Slider, {
-                          className: r()(y.marginTop20, y.marginBottom4),
+                          className: r()(F.marginTop20, F.marginBottom4),
                           initialValue: this.props.zoom,
                           defaultValue: j.yqN.ZOOM_DEFAULT,
                           markers: j.yqN.ZOOM_SCALES,
@@ -162,18 +162,18 @@ class Q extends a.Component {
     }
     renderFontScaleSlider() {
         return (0, n.jsxs)(d.FormItem, {
-            className: y.marginTop20,
+            className: F.marginTop20,
             children: [
                 (0, n.jsx)(d.FormTitle, {
                     id: Y,
                     tag: d.FormTitleTags.H5,
-                    className: y.marginBottom8,
+                    className: F.marginBottom8,
                     children: G.Z.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
                 }),
                 (0, n.jsx)(m.Z, {
                     align: m.Z.Align.CENTER,
                     children: (0, n.jsx)(d.Slider, {
-                        className: r()(y.marginTop20, y.marginBottom4),
+                        className: r()(F.marginTop20, F.marginBottom4),
                         initialValue: this.props.fontSize,
                         defaultValue: j.yqN.FONT_SIZE_DEFAULT,
                         markers: j.yqN.FONT_SIZES,
@@ -191,16 +191,16 @@ class Q extends a.Component {
     renderMessageGroupSpacingSlider() {
         let { messageDisplayCompact: e, messageGroupSpacing: s } = this.props;
         return (0, n.jsxs)(d.FormItem, {
-            className: y.marginTop20,
+            className: F.marginTop20,
             children: [
                 (0, n.jsx)(d.FormTitle, {
                     id: H,
                     tag: d.FormTitleTags.H5,
-                    className: y.marginBottom8,
+                    className: F.marginBottom8,
                     children: G.Z.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
                 }),
                 (0, n.jsx)(d.Slider, {
-                    className: r()(y.marginTop20, y.marginBottom4),
+                    className: r()(F.marginTop20, F.marginBottom4),
                     initialValue: s,
                     defaultValue: e ? U.c8 : U.pq,
                     markers: U.fP,
@@ -219,7 +219,7 @@ class Q extends a.Component {
             i = (0, c.wj)(s) ? this.darkMessages : this.lightMessages;
         return (0, n.jsx)(d.FocusBlock, {
             children: (0, n.jsx)(d.Card, {
-                className: r()(F.preview, y.marginBottom40, e ? F.compactPreview : void 0, 'group-spacing-'.concat(null != t ? t : e ? U.c8 : U.pq)),
+                className: r()(y.preview, F.marginBottom40, e ? y.compactPreview : void 0, 'group-spacing-'.concat(null != t ? t : e ? U.c8 : U.pq)),
                 outline: !0,
                 'aria-hidden': !0,
                 children: i.map((s, t) =>
@@ -230,7 +230,7 @@ class Q extends a.Component {
                             message: s,
                             compact: e,
                             isGroupStart: t % 2 == 0,
-                            className: 0 === t ? F.firstMessage : void 0,
+                            className: 0 === t ? y.firstMessage : void 0,
                             hideSimpleEmbedContent: a
                         },
                         s.id
@@ -243,17 +243,17 @@ class Q extends a.Component {
         let { theme: e, useForcedColors: s, darkSidebar: t, gradientPreset: a } = this.props;
         return s
             ? (0, n.jsx)(d.FormItem, {
-                  className: r()(y.marginTop8, y.marginBottom40),
+                  className: r()(F.marginTop8, F.marginBottom40),
                   title: (0, n.jsx)('div', {
-                      className: F.themeTitle,
+                      className: y.themeTitle,
                       children: (0, n.jsx)('div', {
-                          className: F.title,
+                          className: y.title,
                           children: G.Z.Messages.THEME
                       })
                   }),
                   children: (0, n.jsx)(d.FormText, {
                       type: d.FormText.Types.DEFAULT,
-                      className: F.forcedColorsWarning,
+                      className: y.forcedColorsWarning,
                       children: (0, S.b)()
                           ? G.Z.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
                                 onClick: () => {
@@ -264,7 +264,7 @@ class Q extends a.Component {
                   })
               })
             : (0, n.jsxs)(d.FormItem, {
-                  className: y.marginTop8,
+                  className: F.marginTop8,
                   title: (0, n.jsx)(z, {}),
                   children: [
                       (0, n.jsx)(b.i, {}),
@@ -276,7 +276,7 @@ class Q extends a.Component {
                           value: t && (0, c.ap)(e) && !s,
                           disabled: e !== j.BRd.LIGHT || s || null != a,
                           onChange: this.handleDarkSidebarChecked,
-                          className: y.marginTop20,
+                          className: F.marginTop20,
                           children: G.Z.Messages.ACCESSIBILITY_DARK_SIDEBAR
                       })
                   ]
@@ -285,7 +285,7 @@ class Q extends a.Component {
     renderDisplayMode() {
         return (0, n.jsxs)(d.FormItem, {
             title: G.Z.Messages.MESSAGE_DISPLAY_MODE_LABEL,
-            className: y.marginTop8,
+            className: F.marginTop8,
             children: [
                 (0, n.jsx)(d.RadioGroup, {
                     options: [
@@ -305,7 +305,7 @@ class Q extends a.Component {
                     value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
                     disabled: !this.props.messageDisplayCompact,
                     onChange: this.handleDisplayCompactAvatarsChanged,
-                    className: y.marginTop20,
+                    className: F.marginTop20,
                     children: G.Z.Messages.DISPLAY_COMPACT_AVATARS
                 })
             ]
@@ -316,7 +316,7 @@ class Q extends a.Component {
     }
     renderScalingAndSpacing() {
         return (0, n.jsxs)(n.Fragment, {
-            children: [this.renderFontScaleSlider(), this.renderMessageGroupSpacingSlider(), this.renderZoomSlider(), (0, n.jsx)(d.FormDivider, { className: y.marginTop20 })]
+            children: [this.renderFontScaleSlider(), this.renderMessageGroupSpacingSlider(), this.renderZoomSlider(), (0, n.jsx)(d.FormDivider, { className: F.marginTop20 })]
         });
     }
     render() {
@@ -338,7 +338,7 @@ class Q extends a.Component {
                 }),
                 (0, n.jsx)(d.Text, {
                     variant: 'text-md/normal',
-                    className: y.marginTop20,
+                    className: F.marginTop20,
                     children: G.Z.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
                         onAccessibilityClick() {
                             _.Z.open(j.oAB.ACCESSIBILITY);

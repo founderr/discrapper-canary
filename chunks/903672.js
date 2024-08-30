@@ -26,8 +26,8 @@ var i = n(735250),
     S = n(791914),
     A = n(981631),
     R = n(689938),
-    x = n(674069);
-let O = {
+    O = n(674069);
+let x = {
     offset: {
         left: 4,
         right: -12
@@ -48,7 +48,7 @@ function v(e) {
             hasMore: f,
             loading: p,
             guildFilter: g,
-            roleFilter: O,
+            roleFilter: x,
             everyoneFilter: v
         } = (0, s.cj)([N.Z], () => ({
             messages: N.Z.getMentions(),
@@ -59,15 +59,15 @@ function v(e) {
             everyoneFilter: N.Z.everyoneFilter
         })),
         L = (0, u.Z)(g),
-        P = (0, u.Z)(O),
+        P = (0, u.Z)(x),
         D = (0, u.Z)(v);
     a.useEffect(() => {
         if (!N.Z.hasLoadedEver) {
             M(I, !0);
             return;
         }
-        ((null != L && g !== L) || (null != P && O !== P) || (null != D && v !== D)) && M(I, !0);
-    }, [L, g, P, O, D, v, I, !0]);
+        ((null != L && g !== L) || (null != P && x !== P) || (null != D && v !== D)) && M(I, !0);
+    }, [L, g, P, x, D, v, I, !0]);
     a.useEffect(() => {
         d.l.getCurrentConfig({ location: 'mentions' }).enabled && (null == T ? void 0 : T.some(_.k5)) && (o.Z.clearMentions(), M(I, !0));
     }, []),
@@ -90,8 +90,8 @@ function v(e) {
     );
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(c.ZP, {
-            className: x.recentMentionsPopout,
-            scrollerClassName: x.scroller,
+            className: O.recentMentionsPopout,
+            scrollerClassName: O.scroller,
             onFetch: () => null,
             onJump: n,
             onCloseMessage: function (e) {
@@ -147,7 +147,7 @@ function P(e) {
     let r = T.Z.didAgree(s.getGuildId()),
         c = !!s.isNSFW() && !r;
     return (0, i.jsxs)('div', {
-        className: x.container,
+        className: O.container,
         children: [
             (0, i.jsx)(p.Z, {
                 channel: s,
@@ -155,7 +155,7 @@ function P(e) {
                 children:
                     null != a
                         ? (0, i.jsx)(l.CircleIconButton, {
-                              className: x.closeButton,
+                              className: O.closeButton,
                               tooltip: R.Z.Messages.CLOSE,
                               color: l.CircleIconButtonColors.TERTIARY,
                               icon: (0, i.jsx)(l.XSmallIcon, {
@@ -167,10 +167,10 @@ function P(e) {
                         : null
             }),
             (0, i.jsxs)('div', {
-                className: x.messageContainer,
+                className: O.messageContainer,
                 children: [
                     (0, i.jsx)(f.Z, {
-                        className: x.jumpMessageButton,
+                        className: O.jumpMessageButton,
                         onJump: n
                     }),
                     (0, i.jsx)(
@@ -178,11 +178,11 @@ function P(e) {
                         {
                             message: t,
                             channel: s,
-                            className: x.message,
+                            className: O.message,
                             hideAccessories: c,
                             compact: I.jU.getSetting(),
                             animateAvatar: !1,
-                            focusProps: O,
+                            focusProps: x,
                             trackAnnouncementViews: !0
                         },
                         t.id

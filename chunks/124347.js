@@ -119,7 +119,7 @@ class v extends (i = o.Component) {
         null != i && this._cancellers.add(i);
     }
     render() {
-        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: I, minHeight: m, maxWidth: T, maxHeight: g, onClick: A, renderAccessory: N, tabIndex: O, limitResponsiveWidth: R, useFullWidth: C, placeholder: y, placeholderVersion: D, dataSafeSrc: L } = this.props,
+        let { alt: e, zoomThumbnailPlaceholder: t, onZoom: n, shouldLink: r, onContextMenu: i, autoPlay: a, original: o, className: u, imageClassName: c, children: _, animated: E, shouldAnimate: f, width: h, height: p, minWidth: I, minHeight: m, maxWidth: T, maxHeight: g, onClick: A, renderAccessory: N, tabIndex: O, limitResponsiveWidth: R, useFullWidth: C, placeholder: y, placeholderVersion: L, dataSafeSrc: D } = this.props,
             { readyState: b, hasMouseOver: M, hasFocus: P } = this.state,
             U = null != n,
             w = this.getRatio(),
@@ -142,8 +142,8 @@ class v extends (i = o.Component) {
                 height: G,
                 src: '',
                 placeholder: y,
-                placeholderVersion: D,
-                dataSafeSrc: L,
+                placeholderVersion: L,
+                dataSafeSrc: D,
                 children:
                     null != _
                         ? (e) => {

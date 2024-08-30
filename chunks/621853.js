@@ -75,10 +75,10 @@ function y(e, t) {
         r.start(Math.min(2147483647, i), () => y(e, t));
     }
 }
-function D() {
+function L() {
     (I = {}), m.clear(), (T = {}), (g = {}), (N = {}), (O = {}), (R = {}), (v = !1);
 }
-function L(e) {
+function D(e) {
     let { userId: t } = e;
     m.add(t);
 }
@@ -103,7 +103,7 @@ function P(e) {
     m.delete(e.userId), (N[e.userId] = M(e.mutualFriends)), (O[e.userId] = e.mutualFriends.length);
 }
 function U(e) {
-    var t, n, r, i, o, l, u, d, _, f, p, m, v, D, L, b, P, U, w, x, G, k, B, F, V, H;
+    var t, n, r, i, o, l, u, d, _, f, p, m, v, L, D, b, P, U, w, x, G, k, B, F, V, H;
     if ((null === (n = I[e.user.id]) || void 0 === n || n.delete(null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id), null != e.mutual_guilds)) {
         let t = {};
         e.mutual_guilds.forEach((e) => {
@@ -137,7 +137,7 @@ function U(e) {
             accentColor: null === (i = e.user_profile) || void 0 === i ? void 0 : i.accent_color,
             themeColors: null === (o = e.user_profile) || void 0 === o ? void 0 : o.theme_colors,
             popoutAnimationParticleType: null === (l = e.user_profile) || void 0 === l ? void 0 : l.popout_animation_particle_type,
-            bio: null !== (L = null === (u = e.user_profile) || void 0 === u ? void 0 : u.bio) && void 0 !== L ? L : '',
+            bio: null !== (D = null === (u = e.user_profile) || void 0 === u ? void 0 : u.bio) && void 0 !== D ? D : '',
             profileEffectId: null === (_ = e.user_profile) || void 0 === _ ? void 0 : null === (d = _.profile_effect) || void 0 === d ? void 0 : d.id,
             profileEffectExpiresAt: null === (p = e.user_profile) || void 0 === p ? void 0 : null === (f = p.profile_effect) || void 0 === f ? void 0 : f.expires_at,
             pronouns: null !== (b = null === (m = e.user_profile) || void 0 === m ? void 0 : m.pronouns) && void 0 !== b ? b : '',
@@ -178,7 +178,7 @@ function U(e) {
                       )
                     : e.badges
         }),
-        (null === (D = e.user_profile) || void 0 === D ? void 0 : null === (v = D.profile_effect) || void 0 === v ? void 0 : v.expires_at) != null)
+        (null === (L = e.user_profile) || void 0 === L ? void 0 : null === (v = L.profile_effect) || void 0 === v ? void 0 : v.expires_at) != null)
     ) {
         let t = new a.V7();
         (S[e.user.id] = t), C(e.user.id);
@@ -364,7 +364,7 @@ class j extends _.Z {
             USER_PROFILE_UPDATE_START: G,
             USER_PROFILE_UPDATE_SUCCESS: k,
             USER_PROFILE_UPDATE_FAILURE: B,
-            MUTUAL_FRIENDS_FETCH_START: L,
+            MUTUAL_FRIENDS_FETCH_START: D,
             MUTUAL_FRIENDS_FETCH_SUCCESS: P,
             MUTUAL_FRIENDS_FETCH_FAILURE: b,
             USER_UPDATE: F,
@@ -376,7 +376,7 @@ class j extends _.Z {
             RELATIONSHIP_ADD: Z,
             RELATIONSHIP_REMOVE: Z,
             RELATIONSHIP_UPDATE: Z,
-            LOGOUT: D
+            LOGOUT: L
         }),
             p(this, 'loadCache', () => {
                 let e = this.readSnapshot(j.LATEST_SNAPSHOT_VERSION);

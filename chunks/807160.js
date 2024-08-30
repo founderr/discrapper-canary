@@ -42,8 +42,8 @@ var n,
     B = t(46141),
     U = t(430824),
     G = t(853872),
-    F = t(509545),
-    y = t(230307),
+    y = t(509545),
+    F = t(230307),
     V = t(259580),
     w = t(572004),
     k = t(55935),
@@ -522,12 +522,12 @@ class eu extends (a = o.PureComponent) {
                     (0, H.uZ)(s) ? (t.push(H.ZP.getDisplayName(s, !1, T)), (n = (0, H.Wz)(q.GP[s].skuId))) : (t.push(''.concat(a > 1 ? ''.concat(a, 'x ') : '').concat(H.ZP.getDisplayName(s, !1, T))), null == n && (n = (0, H.Wz)(q.GP[s].skuId)));
                 });
             else if (_.type === X.NYc.GUILD) {
-                let e = F.Z.get(_.items[0].planId);
+                let e = y.Z.get(_.items[0].planId);
                 u()(null != e, 'Guild subscription plan should already have been loaded');
                 let s = e.interval === q.rV.YEAR ? $.Z.Messages.YEARLY_GUILD_SUBSCRIPTION : $.Z.Messages.MONTHLY_GUILD_SUBSCRIPTION;
                 t.push(s.format({ planName: e.name })), (n = e.skuId);
             } else if (_.type === X.NYc.APPLICATION) {
-                let e = F.Z.get(_.items[0].planId);
+                let e = y.Z.get(_.items[0].planId);
                 u()(null != e, 'Application subscription plan should already have been loaded'), null != a ? t.push($.Z.Messages.MONTHLY_APPLICATION_SUBSCRIPTION_V2.format({ tier: null == d ? void 0 : d.name })) : t.push($.Z.Messages.APPLICATION_SUBSCRIPTION_FROM_DELETED_APPLICATION), (n = e.skuId);
             }
             (s = t.join(', ')),
@@ -773,10 +773,10 @@ function e_(e) {
             applicationStatistics: E,
             gameApplication: T,
             paymentSources: I
-        } = (0, S.cj)([G.Z, y.Z, g.Z], () => {
+        } = (0, S.cj)([G.Z, F.Z, g.Z], () => {
             var e, s;
             return {
-                applicationStatistics: null != d ? y.Z.getCurrentUserStatisticsForApplication(d) : null,
+                applicationStatistics: null != d ? F.Z.getCurrentUserStatisticsForApplication(d) : null,
                 gameApplication: null !== (s = g.Z.getApplication(null != d ? d : '')) && void 0 !== s ? s : null === (e = n.sku) || void 0 === e ? void 0 : e.application,
                 paymentSources: G.Z.paymentSources
             };

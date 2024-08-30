@@ -24,6 +24,6 @@ var r,
     l,
     u = n(687522),
     c = n(636977);
-((s = r || (r = {})).FIRST_LAYOUT = 'FIRST_LAYOUT'), (s.SCROLL = 'SCROLL');
+((s = r || (r = {})).FIRST_LAYOUT = 'FIRST_LAYOUT'), (s.SCROLL = 'SCROLL'), (s.VISIBILITY_CHANGED = 'VISIBILITY_CHANGED');
 let d = new Set(Object.values(u.y).filter((e) => 'number' == typeof e));
 ((o = i || (i = {})).GENERIC = 'generic'), (o.RATE_LIMITED = 'rate_limited'), ((l = a || (a = {})).DESKTOP = 'desktop'), (l.CONSOLE = 'console'), (l.SELECT = 'select');

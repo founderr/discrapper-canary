@@ -31,8 +31,8 @@ var i = n(120356),
     v = n(373826),
     C = n(315324),
     y = n(582123),
-    D = n(290274),
-    L = n(553375),
+    L = n(290274),
+    D = n(553375),
     b = n(318134),
     M = n(228168),
     P = n(981631),
@@ -52,7 +52,7 @@ function G(e) {
             location: 'UserProfileActivityCard',
             source: I.m1.UserProfile,
             trackEntryPointImpression: !0,
-            ...(0, L.n)({
+            ...(0, D.n)({
                 user: t,
                 activity: i,
                 entry: j
@@ -260,7 +260,7 @@ function G(e) {
                         (0, r.jsx)(R.Z, {
                             text: X,
                             platform: (0, E.ZH)(i),
-                            tags: (0, r.jsx)(D.Z, {
+                            tags: (0, r.jsx)(L.Z, {
                                 display: 'live',
                                 user: t,
                                 activity: i,

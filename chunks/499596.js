@@ -1,71 +1,71 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
-var l = t(735250);
-t(470079);
-var s = t(120356),
-    a = t.n(s),
-    r = t(481060),
-    i = t(884338),
-    o = t(933557),
-    u = t(471445),
-    c = t(5192),
-    d = t(689938),
-    m = t(640436);
-function E(e) {
-    let { channel: n, users: t, selected: s = !1 } = e,
-        E = (0, o.ZP)(n),
-        S = null;
-    null != t &&
-        t.length > 0 &&
-        (S = (0, l.jsx)(i.Z, {
-            guildId: n.guild_id,
-            className: m.voiceUserList,
-            users: t,
+var l = n(735250);
+n(470079);
+var s = n(120356),
+    i = n.n(s),
+    r = n(481060),
+    a = n(884338),
+    o = n(933557),
+    c = n(471445),
+    d = n(5192),
+    u = n(689938),
+    f = n(640436);
+function h(e) {
+    let { channel: t, users: n, selected: s = !1 } = e,
+        h = (0, o.ZP)(t),
+        m = null;
+    null != n &&
+        n.length > 0 &&
+        (m = (0, l.jsx)(a.Z, {
+            guildId: t.guild_id,
+            className: f.voiceUserList,
+            users: n,
             renderUser: (e) => {
                 if (null == e) return null;
-                let t = c.ZP.getName(n.guild_id, n.id, e),
-                    s = e.getAvatarURL(n.guild_id, 24);
+                let n = d.ZP.getName(t.guild_id, t.id, e),
+                    s = e.getAvatarURL(t.guild_id, 24);
                 return (0, l.jsx)(r.TooltipContainer, {
-                    text: t,
+                    text: n,
                     children: (0, l.jsx)('img', {
                         src: null != s ? s : void 0,
                         'aria-label': e.username,
                         alt: '',
-                        className: m.avatar
+                        className: f.avatar
                     })
                 });
             },
             renderMoreUsers: (e) => {
-                let s = (function (e, n) {
-                    let t = n.id,
-                        l = n.guild_id;
+                let s = (function (e, t) {
+                    let n = t.id,
+                        l = t.guild_id;
                     return e.length <= 1
                         ? null
                         : 2 === e.length
-                          ? d.Z.Messages.GO_LIVE_MODAL_OVERFLOW_TWO_USERS.format({
-                                nickname0: c.ZP.getName(l, t, e[0]),
-                                nickname1: c.ZP.getName(l, t, e[1])
+                          ? u.Z.Messages.GO_LIVE_MODAL_OVERFLOW_TWO_USERS.format({
+                                nickname0: d.ZP.getName(l, n, e[0]),
+                                nickname1: d.ZP.getName(l, n, e[1])
                             })
                           : 3 === e.length
-                            ? d.Z.Messages.GO_LIVE_MODAL_OVERFLOW_THREE_USERS.format({
-                                  nickname0: c.ZP.getName(l, t, e[0]),
-                                  nickname1: c.ZP.getName(l, t, e[1]),
-                                  nickname2: c.ZP.getName(l, t, e[2])
+                            ? u.Z.Messages.GO_LIVE_MODAL_OVERFLOW_THREE_USERS.format({
+                                  nickname0: d.ZP.getName(l, n, e[0]),
+                                  nickname1: d.ZP.getName(l, n, e[1]),
+                                  nickname2: d.ZP.getName(l, n, e[2])
                               })
-                            : d.Z.Messages.GO_LIVE_MODAL_OVERFLOW_FOUR_OR_MORE_USERS.format({
-                                  nickname0: c.ZP.getName(l, t, e[0]),
-                                  nickname1: c.ZP.getName(l, t, e[1]),
+                            : u.Z.Messages.GO_LIVE_MODAL_OVERFLOW_FOUR_OR_MORE_USERS.format({
+                                  nickname0: d.ZP.getName(l, n, e[0]),
+                                  nickname1: d.ZP.getName(l, n, e[1]),
                                   remainingCount: e.length - 2
                               });
-                })(t.slice(4), n);
+                })(n.slice(4), t);
                 return (0, l.jsx)('div', {
                     children: (0, l.jsx)(r.TooltipContainer, {
                         text: s,
                         children: (0, l.jsx)('div', {
-                            className: m.userListOverflow,
+                            className: f.userListOverflow,
                             children: e
                         })
                     })
@@ -74,16 +74,16 @@ function E(e) {
             max: 5,
             showUserPopout: !1
         }));
-    let _ = (0, u.KS)(n);
+    let x = (0, c.KS)(t);
     return (0, l.jsxs)('div', {
-        className: a()(m.channelInfo, { [m.selected]: s }),
+        className: i()(f.channelInfo, { [f.selected]: s }),
         children: [
-            (0, l.jsx)(_, { className: m.channelIcon }),
+            (0, l.jsx)(x, { className: f.channelIcon }),
             (0, l.jsx)('div', {
-                className: m.channelName,
-                children: E
+                className: f.channelName,
+                children: h
             }),
-            S
+            m
         ]
     });
 }

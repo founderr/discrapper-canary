@@ -29,12 +29,12 @@ var r = n(735250),
     v = n(318134),
     C = n(228168),
     y = n(981631),
-    D = n(689938),
-    L = n(139665);
+    L = n(689938),
+    D = n(139665);
 function b(e) {
     let { user: t, currentUser: n, activity: a, guild: b, channel: M, className: P, onClose: U } = e,
         { profileType: w } = (0, I.z)(),
-        x = { [L.fullSize]: w === C.y0.FULL_SIZE },
+        x = { [D.fullSize]: w === C.y0.FULL_SIZE },
         G = (0, f.Bq)({
             activity: a,
             user: t
@@ -67,7 +67,7 @@ function b(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(o.Clickable, {
-                                            className: s()(L.clickable, L.inline),
+                                            className: s()(D.clickable, D.inline),
                                             onClick: () => {
                                                 F({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, h.d$)(a, t.id, n);
                                             },
@@ -97,7 +97,7 @@ function b(e) {
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)('div', { className: L.voiceChannelDivider }),
+                          (0, r.jsx)('div', { className: D.voiceChannelDivider }),
                           (0, r.jsx)(S.Z, {
                               user: t,
                               guild: b,
@@ -111,7 +111,7 @@ function b(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: s()(L.actions, x),
+                      className: s()(D.actions, x),
                       children: (0, r.jsx)(O.Z, {
                           user: t,
                           activity: a,
@@ -126,11 +126,11 @@ function b(e) {
             children: (e) => {
                 let { onAutoDismiss: n } = e;
                 return (0, r.jsxs)(p.Z.Overlay, {
-                    className: s()(L.card, P),
+                    className: s()(D.card, P),
                     ref: V,
                     children: [
                         (0, r.jsx)(T.Z, {
-                            text: D.Z.Messages.USER_ACTIVITY_LISTENING_TO,
+                            text: L.Z.Messages.USER_ACTIVITY_LISTENING_TO,
                             platform: l.Z.get(y.ABu.SPOTIFY),
                             tags: (0, r.jsx)(R.Z, {
                                 display: 'live',
@@ -142,10 +142,10 @@ function b(e) {
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: L.body,
+                            className: D.body,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: s()(L.content, x),
+                                    className: s()(D.content, x),
                                     children: [
                                         (0, r.jsx)(E.E, {
                                             image: k,
@@ -155,7 +155,7 @@ function b(e) {
                                             size: E.J.SIZE_60
                                         }),
                                         (0, r.jsxs)('div', {
-                                            className: L.details,
+                                            className: D.details,
                                             children: [
                                                 (0, r.jsxs)('div', {
                                                     children: [
@@ -172,7 +172,7 @@ function b(e) {
                                                 (0, r.jsx)(m.Z, {
                                                     user: t,
                                                     activity: a,
-                                                    className: L.badges
+                                                    className: D.badges
                                                 }),
                                                 Z()
                                             ]

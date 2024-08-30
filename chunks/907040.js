@@ -31,8 +31,8 @@ var r,
     v = n(28546),
     C = n(691251),
     y = n(98528),
-    D = n(770812),
-    L = n(434404),
+    L = n(770812),
+    D = n(434404),
     b = n(536442),
     M = n(609218),
     P = n(695346),
@@ -72,7 +72,7 @@ let ea = (e, t) => {
                 (e, r) => {
                     switch (e.type) {
                         case W.ld.CREATE_EMOJI:
-                            i(void 0, !0), L.Z.open(e.guildId, $.pNK.EMOJI);
+                            i(void 0, !0), D.Z.open(e.guildId, $.pNK.EMOJI);
                             return;
                         case W.ld.EMOJI: {
                             if (null != e.emoji && r.altKey) {
@@ -185,11 +185,11 @@ t.Z = s.memo(
     s.forwardRef(function (e, t) {
         var n, r;
         let i,
-            { pickerIntention: o, channel: u, guildId: c, closePopout: d, emojiSize: f = X.Su.MEDIUM, hasTabWrapper: p = !1, containerContext: C = 0, includeCreateEmojiButton: L, onSelectEmoji: k, containerWidth: ea, onNavigateAway: e_, persistSearch: eE, className: ef, headerClassName: eh, analyticsOverride: ep = ed, searchProps: eI = {}, wrapper: em, shouldHidePickerActions: eT = !1, messageId: eg, renderHeader: eS, listHeaderClassName: eA } = e,
+            { pickerIntention: o, channel: u, guildId: c, closePopout: d, emojiSize: f = X.Su.MEDIUM, hasTabWrapper: p = !1, containerContext: C = 0, includeCreateEmojiButton: D, onSelectEmoji: k, containerWidth: ea, onNavigateAway: e_, persistSearch: eE, className: ef, headerClassName: eh, analyticsOverride: ep = ed, searchProps: eI = {}, wrapper: em, shouldHidePickerActions: eT = !1, messageId: eg, renderHeader: eS, listHeaderClassName: eA } = e,
             { onFocus: eN, onKeyDown: eO, autoFocus: eR = !0, accessory: ev } = eI,
             eC = (0, _.e7)([U.ZP], () => (null != c ? U.ZP.getDefaultChannel(c) : null), [c]),
-            [ey, eD] = s.useState(null),
-            eL = s.useRef(''),
+            [ey, eL] = s.useState(null),
+            eD = s.useRef(''),
             eb = (0, v.Iu)((e) => e.searchQuery),
             eM = s.useRef(null),
             eP = s.useRef(null),
@@ -232,7 +232,7 @@ t.Z = s.memo(
             } = (0, W.YH)({
                 gridWidth: eJ,
                 channel: u,
-                includeCreateEmojiButton: L,
+                includeCreateEmojiButton: D,
                 pickerIntention: o,
                 emojiSearchResults: ez,
                 collapsedSections: eX,
@@ -259,7 +259,7 @@ t.Z = s.memo(
                 selectedChannel: u,
                 closePopout: d,
                 onSelectEmoji: k,
-                setUpsellConfigs: eD,
+                setUpsellConfigs: eL,
                 emojiSelectAnalytics: (e) => {
                     '' !== eb
                         ? (0, B.y$)({
@@ -337,12 +337,12 @@ t.Z = s.memo(
                 (null === (e = e2[n]) || void 0 === e ? void 0 : e[t]) == null && 0 !== t && R.kJ.setInspectedExpressionPosition(0, 0);
             }, [e2]),
             s.useEffect(() => {
-                if (('' === eL.current && '' !== eb && (0, B.PC)(ej, o), 0 === eq && '' !== eb)) eu(ej, eb);
-                else if ('' !== eb && eL.current !== eb) {
+                if (('' === eD.current && '' !== eb && (0, B.PC)(ej, o), 0 === eq && '' !== eb)) eu(ej, eb);
+                else if ('' !== eb && eD.current !== eb) {
                     var e;
                     ec(eq, null !== (e = null == ez ? void 0 : ez.locked.length) && void 0 !== e ? e : 0, ej, eb, o);
                 }
-                eL.current = eb;
+                eD.current = eb;
             }, [eb, ej, eq, ez, o]);
         let tr = null != em ? em : p ? 'div' : h.Dialog,
             ti = null != eJ;
@@ -354,14 +354,14 @@ t.Z = s.memo(
                     emojiDescriptor: ey.emojiDescriptor,
                     pickerIntention: o,
                     analyticsLocation: ej,
-                    onClose: () => eD(null),
+                    onClose: () => eL(null),
                     channel: u,
                     containerContext: e
                 }));
         } else
             (null == ey ? void 0 : ey.type) === W.Bg.ROLE_SUBSCRIPTION
-                ? (i = (0, a.jsx)(D.Z, {
-                      onClose: () => eD(null),
+                ? (i = (0, a.jsx)(L.Z, {
+                      onClose: () => eL(null),
                       guildId: ey.guildId,
                       emojiId: ey.emojiId
                   }))
@@ -443,7 +443,7 @@ t.Z = s.memo(
                                                                 isBurst: ex
                                                             });
                                                         },
-                                                        setUpsellConfigs: eD,
+                                                        setUpsellConfigs: eL,
                                                         rowCount: e2.length,
                                                         rowCountBySection: e0,
                                                         sectionDescriptors: e1,

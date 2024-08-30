@@ -1,60 +1,60 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return g;
+        return _;
     }
 });
-var l = t(735250);
-t(470079);
-var s = t(442837),
-    a = t(481060),
-    r = t(984933),
-    i = t(430824),
-    o = t(496675),
-    u = t(594174),
-    c = t(938475),
-    d = t(382182),
-    m = t(499596),
-    E = t(148381),
-    S = t(689938),
-    _ = t(787422);
-function g(e) {
-    let { selectedChannelId: n, guildId: t, onChangeSelectedChannelId: g } = e,
-        h = (0, s.e7)([u.default], () => u.default.getCurrentUser()),
-        x = (0, s.e7)([i.Z, r.ZP, o.Z], () => (0, d.h_)(r.ZP.getChannels(t), i.Z, o.Z)),
-        Z = (0, s.e7)([c.ZP], () => c.ZP.getVoiceStates(t)),
-        f = x.map((e) => {
-            var t;
+var l = n(735250);
+n(470079);
+var s = n(442837),
+    i = n(481060),
+    r = n(984933),
+    a = n(430824),
+    o = n(496675),
+    c = n(594174),
+    d = n(938475),
+    u = n(382182),
+    f = n(499596),
+    h = n(148381),
+    m = n(689938),
+    x = n(787422);
+function _(e) {
+    let { selectedChannelId: t, guildId: n, onChangeSelectedChannelId: _ } = e,
+        g = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
+        p = (0, s.e7)([a.Z, r.ZP, o.Z], () => (0, u.h_)(r.ZP.getChannels(n), a.Z, o.Z)),
+        C = (0, s.e7)([d.ZP], () => d.ZP.getVoiceStates(n)),
+        S = p.map((e) => {
+            var n;
             return {
-                name: (0, l.jsx)(m.Z, {
+                name: (0, l.jsx)(f.Z, {
                     channel: e,
                     users:
-                        null === (t = Z[e.id]) || void 0 === t
+                        null === (n = C[e.id]) || void 0 === n
                             ? void 0
-                            : t
+                            : n
                                   .filter((e) => {
-                                      let { user: n } = e;
-                                      return n.id !== (null == h ? void 0 : h.id);
+                                      let { user: t } = e;
+                                      return t.id !== (null == g ? void 0 : g.id);
                                   })
                                   .map((e) => {
-                                      let { user: n } = e;
-                                      return n;
+                                      let { user: t } = e;
+                                      return t;
                                   }),
-                    selected: e.id === n
+                    selected: e.id === t
                 }),
                 value: e.id
             };
         });
-    return (0, l.jsx)(E.Z, {
-        title: S.Z.Messages.GO_LIVE_MODAL_SELECT_CHANNEL_FORM_TITLE,
-        scrollerInnerClassName: _.channelSelectScrollerInner,
-        children: (0, l.jsx)(a.RadioGroup, {
-            options: f,
-            value: n,
-            itemInfoClassName: _.channelInfoWrapper,
-            itemTitleClassName: _.channelTitleWrapper,
+    return (0, l.jsx)(h.Z, {
+        title: m.Z.Messages.GO_LIVE_MODAL_SELECT_CHANNEL_FORM_TITLE,
+        scrollerInnerClassName: x.channelSelectScrollerInner,
+        children: (0, l.jsx)(i.RadioGroup, {
+            options: S,
+            value: t,
+            itemInfoClassName: x.channelInfoWrapper,
+            itemTitleClassName: x.channelTitleWrapper,
             onChange: (e) => {
-                let { value: n } = e;
-                return g(n);
+                let { value: t } = e;
+                return _(t);
             }
         })
     });

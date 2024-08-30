@@ -54,11 +54,11 @@ function C(e) {
     var t, a;
     let { channel: s, user: E, nick: C, mute: N, deaf: A, serverMute: v, serverDeaf: Z } = e,
         L = (0, l.e7)([m.Z], () => m.Z.isLocalMute(E.id)),
-        O = (0, d.Z)({
+        R = (0, d.Z)({
             userId: E.id,
             checkSoundSharing: !0
         }),
-        R = null !== (t = s.getGuildId()) && void 0 !== t ? t : void 0,
+        O = null !== (t = s.getGuildId()) && void 0 !== t ? t : void 0,
         x = E.getAvatarURL(s.guild_id, 24),
         b = null != C ? C : I.ZP.getName(E),
         {
@@ -90,14 +90,14 @@ function C(e) {
                   })
                 : b;
     function j(e) {
-        null != R
+        null != O
             ? (0, c.jW)(e, async () => {
                   let { default: e } = await Promise.all([n.e('79695'), n.e('90286'), n.e('12435'), n.e('46563')]).then(n.bind(n, 757387));
                   return (t) =>
                       (0, i.jsx)(e, {
                           ...t,
                           user: E,
-                          guildId: R,
+                          guildId: O,
                           channel: s,
                           showMediaItems: !0
                       });
@@ -114,8 +114,8 @@ function C(e) {
     }
     return (0, i.jsx)(o.Popout, {
         preload: () =>
-            (0, _.Z)(E.id, E.getAvatarURL(R, 80), {
-                guildId: R,
+            (0, _.Z)(E.id, E.getAvatarURL(O, 80), {
+                guildId: O,
                 channelId: s.id
             }),
         position: 'top',
@@ -123,7 +123,7 @@ function C(e) {
             (0, i.jsx)(h.Z, {
                 location: 'RTCConnectionVoiceUsers',
                 userId: E.id,
-                guildId: R,
+                guildId: O,
                 channelId: s.id,
                 ...e
             }),
@@ -139,9 +139,9 @@ function C(e) {
                         focusProps: f,
                         children: (0, i.jsx)(u.Z, {
                             shakeLocation: g.oZ.VOICE_USER,
-                            isShaking: O,
+                            isShaking: R,
                             children: (0, i.jsx)('div', {
-                                className: r()(T.avatar, { [T.speaking]: O }),
+                                className: r()(T.avatar, { [T.speaking]: R }),
                                 style: { backgroundImage: 'url('.concat(x, ')') },
                                 children:
                                     null != P

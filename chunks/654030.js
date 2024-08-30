@@ -22,8 +22,8 @@ var i,
     S = n(598077),
     A = n(757266),
     R = n(831506),
-    x = n(271383),
-    O = n(283595),
+    O = n(271383),
+    x = n(283595),
     M = n(293273),
     v = n(594174),
     L = n(181106),
@@ -211,7 +211,7 @@ class G extends (i = s.PureComponent) {
     }
 }
 B(G, 'defaultProps', { isPreview: !1 }),
-    (t.Z = r.ZP.connectStores([f.Z, R.Z, M.Z, O.Z, h.Z, Z.Z, A.Z, L.Z, v.default, x.ZP], (e) => {
+    (t.Z = r.ZP.connectStores([f.Z, R.Z, M.Z, x.Z, h.Z, Z.Z, A.Z, L.Z, v.default, O.ZP], (e) => {
         let { activity: t, analyticsLocations: n, application: i, partyId: a, userId: s, guildId: r } = e,
             { id: l } = null != i ? i : {},
             o = null != t && null != t.party && t.party.id === a ? R.Z.getParty(t.party.id) : null,
@@ -219,7 +219,7 @@ B(G, 'defaultProps', { isPreview: !1 }),
             u = !1;
         null != l && (u = L.Z.getState(l, U.mFx.JOIN) === U.OcF.LOADING);
         let d = Array.from(null != o ? o : []).map((e) => {
-                let t = null != r ? x.ZP.getMember(r, e) : null,
+                let t = null != r ? O.ZP.getMember(r, e) : null,
                     n = null != t ? t.nick : null,
                     i = v.default.getUser(e),
                     a = null == i;
@@ -245,7 +245,7 @@ B(G, 'defaultProps', { isPreview: !1 }),
             isLaunchable:
                 null != l &&
                 (0, D.t)({
-                    LibraryApplicationStore: O.Z,
+                    LibraryApplicationStore: x.Z,
                     LaunchableGameStore: h.Z,
                     DispatchApplicationStore: Z.Z,
                     ConnectedAppsStore: A.Z,

@@ -24,8 +24,8 @@ var r = n(735250),
     v = n(284019),
     C = n(308083),
     y = n(981631),
-    D = n(689938),
-    L = n(931797);
+    L = n(689938),
+    D = n(931797);
 function b(e) {
     e.stopPropagation();
 }
@@ -68,7 +68,7 @@ t.Z = i.memo(function (e) {
                     tagUserId: null == U ? void 0 : U.tagUserId,
                     location: l.Z.CLAN_GUILD_PROFILE
                 }),
-                    (0, s.showToast)((0, s.createToast)(D.Z.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, s.ToastType.SUCCESS));
+                    (0, s.showToast)((0, s.createToast)(L.Z.Messages.CLAN_USER_WAITLIST_TOAST_SUCCESS, s.ToastType.SUCCESS));
         }, [w, Y, U]),
         X = i.useCallback(
             (e) => {
@@ -104,7 +104,7 @@ t.Z = i.memo(function (e) {
                 color: s.Button.Colors.BRAND,
                 size: s.Button.Sizes.SMALL,
                 fullWidth: !0,
-                className: L.button,
+                className: D.button,
                 themeColor: null !== (t = null == x ? void 0 : null === (e = x.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
             };
         }, [null == x ? void 0 : null === (t = x.branding) || void 0 === t ? void 0 : t.primaryColor]),
@@ -118,17 +118,17 @@ t.Z = i.memo(function (e) {
                         color: s.Button.Colors.PRIMARY,
                         size: s.Button.Sizes.SMALL,
                         fullWidth: !0,
-                        children: D.Z.Messages.CLAN_USER_WAITLIST_CTA
+                        children: L.Z.Messages.CLAN_USER_WAITLIST_CTA
                     });
                 case !W && !k && Y:
                     return (0, r.jsxs)(s.Button, {
-                        innerClassName: L.waitlistedButton,
+                        innerClassName: D.waitlistedButton,
                         onClick: J,
                         color: s.Button.Colors.PRIMARY,
                         size: s.Button.Sizes.SMALL,
                         fullWidth: !0,
                         children: [
-                            D.Z.Messages.CLAN_USER_WAITLISTED,
+                            L.Z.Messages.CLAN_USER_WAITLISTED,
                             (0, r.jsx)(s.CircleInformationIcon, {
                                 size: 'xs',
                                 color: 'currentColor'
@@ -139,25 +139,25 @@ t.Z = i.memo(function (e) {
                     return (0, r.jsx)(v.Z, {
                         onClick: ee,
                         ...en,
-                        children: D.Z.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
+                        children: L.Z.Messages.CLAN_USER_APPLICATION_EXISTS_TAG_GUILD_PROFILE_CTA
                     });
                 case !W && q:
                     return (0, r.jsx)(v.Z, {
                         onClick: $,
                         ...en,
-                        children: D.Z.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
+                        children: L.Z.Messages.CLAN_USER_APPLY_TAG_GUILD_PROFILE_CTA
                     });
                 case W && !K:
                     return (0, r.jsx)(v.Z, {
                         onClick: X,
                         ...en,
-                        children: D.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
+                        children: L.Z.Messages.CLAN_USER_ADOPT_TAG_GUILD_PROFILE_CTA
                     });
                 case W && K:
                     return (0, r.jsx)(v.Z, {
                         onClick: et,
                         ...en,
-                        children: D.Z.Messages.CLAN_USER_GO_TO_CLAN_CTA
+                        children: L.Z.Messages.CLAN_USER_GO_TO_CLAN_CTA
                     });
                 default:
                     return null;
@@ -165,7 +165,7 @@ t.Z = i.memo(function (e) {
         }, [B, W, k, Y, z, q, K, Q, J, ee, en, $, X, et]),
         ei = i.useMemo(
             () => ({
-                className: L.container,
+                className: D.container,
                 onClick: b
             }),
             []
@@ -180,14 +180,14 @@ t.Z = i.memo(function (e) {
               children: [
                   (0, r.jsx)(u.xV, {
                       clan: x,
-                      className: L.cardContainer,
+                      className: D.cardContainer,
                       isMember: W,
                       hasPendingJoinRequest: H,
                       atMaxMemberCapacity: Z
                   }),
                   null != er &&
                       (0, r.jsx)('div', {
-                          className: L.buttonContainer,
+                          className: D.buttonContainer,
                           children: er
                       })
               ]

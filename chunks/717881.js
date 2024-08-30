@@ -29,8 +29,8 @@ var r = n(735250),
     v = n(979651),
     C = n(626135),
     y = n(153066),
-    D = n(981631),
-    L = n(689938),
+    L = n(981631),
+    D = n(689938),
     b = n(71851);
 function M(e) {
     let { type: t, source: n, activity: i, applicationStream: a, user: s, guildId: o, channelId: u, onAction: d, isEmbedded: E = (0, c.Z)(i), actionColor: f } = e;
@@ -64,11 +64,11 @@ t.Z = function (e) {
             { autoTrackExposure: !1 }
         ),
         x = (0, o.e7)([A.Z], () => (a ? A.Z.getAnyStreamForUser(n.id) : null)),
-        G = w && R.Z.can(D.Plq.CONNECT, U),
-        k = (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS && G ? U : null,
+        G = w && R.Z.can(L.Plq.CONNECT, U),
+        k = (null == t ? void 0 : t.type) === L.IIU.HANG_STATUS && G ? U : null,
         B = (0, o.e7)([O.Z, v.Z, N.Z], () => {
             var e, r;
-            return (0, u.Z)(t, D.xjy.EMBEDDED) ? O.Z.getGuild(null === (e = N.Z.getChannel(null === (r = v.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? O.Z.getGuild(k.getGuildId()) : null;
+            return (0, u.Z)(t, L.xjy.EMBEDDED) ? O.Z.getGuild(null === (e = N.Z.getChannel(null === (r = v.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) || void 0 === r ? void 0 : r.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != k ? O.Z.getGuild(k.getGuildId()) : null;
         }),
         F = (0, o.e7)([O.Z], () => (null != x ? O.Z.getGuild(x.guildId) : null)),
         V = (0, o.e7)([E.Z], () => {
@@ -79,15 +79,15 @@ t.Z = function (e) {
         Z = (0, T.Z)(n),
         Y = H && null != t && Z;
     return (i.useEffect(() => {
-        (null == t ? void 0 : t.type) === D.IIU.HANG_STATUS &&
+        (null == t ? void 0 : t.type) === L.IIU.HANG_STATUS &&
             G &&
-            C.default.track(D.rMx.VIEW_HANG_STATUS, {
+            C.default.track(L.rMx.VIEW_HANG_STATUS, {
                 source: 'UserProfilePopout',
                 guild_id: null == k ? void 0 : k.guild_id,
                 channel_id: null == k ? void 0 : k.id
             });
     }, [null == t ? void 0 : t.type, G, k]),
-    (null == t ? void 0 : t.type) !== D.IIU.HANG_STATUS || G)
+    (null == t ? void 0 : t.type) !== L.IIU.HANG_STATUS || G)
         ? (0, r.jsx)(d.Z, {
               ...P,
               activity: t,
@@ -114,12 +114,12 @@ t.Z = function (e) {
                                         showReact: !0,
                                         showReply: !0,
                                         popoutProps: {
-                                            replyHeaderText: L.Z.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({ activity: t.name }),
-                                            replyPlaceholder: L.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: '@'.concat(n.globalName) })
+                                            replyHeaderText: D.Z.Messages.ACTIVITY_REACTION_REPLY_TITLE.format({ activity: t.name }),
+                                            replyPlaceholder: D.Z.Messages.TEXTAREA_PLACEHOLDER.format({ channel: '@'.concat(n.globalName) })
                                         },
                                         onInteraction: (e) => {
                                             let { interactionType: r, emoji: i, reply: a } = e;
-                                            C.default.track(D.rMx.ACTIVITY_REACTOR_INTERACTED, {
+                                            C.default.track(L.rMx.ACTIVITY_REACTOR_INTERACTED, {
                                                 application_id: t.application_id,
                                                 interaction_type: r,
                                                 ...y

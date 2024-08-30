@@ -57,8 +57,8 @@ function S(e) {
 function C(e) {
     var t, n, s, C;
     let { quest: N, location: A, onReceiveErrorHints: v, contentPosition: Z, rowIndex: L } = e,
-        O = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-        R = (0, m.g2)({ useReducedMotion: O }),
+        R = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
+        O = (0, m.g2)({ useReducedMotion: R }),
         x = (0, u._s)({ quest: N }),
         b = (0, u.z)(N),
         P = (0, u.B6)(N.config.expiresAt, {
@@ -101,7 +101,7 @@ function C(e) {
         { startingConsoleQuest: $, startConsoleQuest: ee } = (0, u.GI)({
             questId: N.id,
             beforeRequest: () => {
-                R.startAnimation(),
+                O.startAnimation(),
                     (0, d._3)({
                         questId: N.id,
                         questContent: A,
@@ -111,7 +111,7 @@ function C(e) {
                     });
             },
             afterRequest: (e) => {
-                R.stopAnimation(), v(e);
+                O.stopAnimation(), v(e);
             }
         }),
         et = (null === (C = N.userStatus) || void 0 === C ? void 0 : C.claimedAt) != null,
@@ -173,7 +173,7 @@ function C(e) {
                                     className: T.button,
                                     children: (0, i.jsxs)('div', {
                                         className: T.ctaInner,
-                                        children: [R.render(), p.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
+                                        children: [O.render(), p.Z.Messages.QUESTS_MICROHPONE_UNIT_BUTTON_CTA]
                                     })
                                 })
                           : (0, i.jsx)(o.Button, {

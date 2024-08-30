@@ -42,7 +42,7 @@ n.d(t, {
         return r;
     },
     MO: function () {
-        return D;
+        return L;
     },
     OF: function () {
         return ei;
@@ -96,7 +96,7 @@ n.d(t, {
         return U;
     },
     js: function () {
-        return L;
+        return D;
     },
     l4: function () {
         return G;
@@ -150,8 +150,8 @@ let N = 160,
     v = '773336526917861400',
     C = '880218832743055411',
     y = '1050941315912835122',
-    D = '1070087967294631976',
-    L = '1007373802981822582',
+    L = '1070087967294631976',
+    D = '1007373802981822582',
     b = '1039835161136746497',
     M = '852509694341283871',
     P = '903769130790969345',
@@ -175,7 +175,7 @@ let N = 160,
         LARGE: 160
     },
     Q = ['in_development', 'activities_team', 'employee_release'],
-    X = [Z, '235088799074484224', L, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1220052815590723654', '1222080278672179220', '1227719606223765687'];
+    X = [Z, '235088799074484224', D, '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1220052815590723654', '1222080278672179220', '1227719606223765687'];
 ((_ = r || (r = {})).ADS = 'ADS'), (_.FAILED_LOAD = 'FAILED_LOAD'), (_.LAGGING = 'LAGGING'), (_.CONFUSING = 'CONFUSING'), (_.NOT_FUN = 'NOT_FUN'), (_.OTHER = 'OTHER'), ((E = i || (i = {}))[(E.PLAY = 0)] = 'PLAY'), (E[(E.SPECTATE = 1)] = 'SPECTATE'), ((f = a || (a = {})).DESKTOP = 'desktop'), (f.MOBILE = 'mobile'), ((h = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = 'BETRAYAL_MARKETING_TOOLTIP'), (h.FISHINGTON_MARKETING_TOOLTIP = 'FISHINGTON_MARKETING_TOOLTIP'), (h.POKER_MARKETING_TOOLTIP = 'POKER_MARKETING_TOOLTIP'), (h.YOUTUBE_MARKETING_TOOLTIP = 'YOUTUBE_MARKETING_TOOLTIP'), ((p = o || (o = {}))[(p.UNLOCKED = 1)] = 'UNLOCKED'), (p[(p.PORTRAIT = 2)] = 'PORTRAIT'), (p[(p.LANDSCAPE = 3)] = 'LANDSCAPE'), ((I = l || (l = {}))[(I.DIRECTORY = 0)] = 'DIRECTORY'), (I[(I.SELECT_CHANNEL = 1)] = 'SELECT_CHANNEL'), (I[(I.DETAIL_PAGE = 2)] = 'DETAIL_PAGE');
 let $ = 'activity-shelf',
     J = new Set(['755600276941176913', C, y, U]),

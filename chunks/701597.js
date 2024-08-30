@@ -188,7 +188,7 @@ class u {
                 framerate: l,
                 pixelCount: a * s
             },
-            bitrateMin: 15000,
+            bitrateMin: 150000,
             bitrateMax: this.goliveSimulcastLQBitrate,
             bitrateTarget: this.goliveSimulcastLQBitrate
         });

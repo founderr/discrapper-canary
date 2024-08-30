@@ -40,8 +40,8 @@ var n = t(735250),
     B = t(689938),
     U = t(844824),
     G = t(224499),
-    F = t(328756);
-let y = (0, N.hQ)(),
+    y = t(328756);
+let F = (0, N.hQ)(),
     V = (0, N.hQ)(),
     w = (0, N.hQ)(),
     k = l().debounce((e) => {
@@ -146,7 +146,7 @@ function W() {
                                     d.AnimatedAvatar,
                                     {
                                         'aria-label': B.Z.Messages.USER_SETTINGS_AVATAR,
-                                        src: F,
+                                        src: y,
                                         size: d.AvatarSizes.SIZE_32,
                                         status: e
                                     },
@@ -180,7 +180,7 @@ function K() {
         className: G.marginTop20,
         children: [
             (0, n.jsx)(d.FormTitle, {
-                id: y,
+                id: F,
                 className: G.marginBottom8,
                 children: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
             }),
@@ -191,7 +191,7 @@ function K() {
                 children: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_DESCRIPTION
             }),
             (0, n.jsx)(d.Slider, {
-                'aria-labelledby': y,
+                'aria-labelledby': F,
                 'aria-describedby': V,
                 markers: Z.yqN.SATURATION_INCREMENTS,
                 equidistant: !0,

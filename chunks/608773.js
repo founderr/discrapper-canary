@@ -41,8 +41,8 @@ var r = n(852163),
     v = n(651847),
     C = n(483578),
     y = n(392107),
-    D = n(747658),
-    L = n(123143),
+    L = n(747658),
+    D = n(123143),
     b = n(95988),
     M = n(695474),
     P = n(85074),
@@ -135,8 +135,8 @@ q = {
     'pt-PT': v.Z,
     'ro-RO': C.Z,
     'ru-RU': y.Z,
-    'sk-SK': D.Z,
-    'sl-SI': L.Z,
+    'sk-SK': L.Z,
+    'sl-SI': D.Z,
     'sr-SP': b.Z,
     'sv-SE': M.Z,
     'tr-TR': P.Z,
@@ -554,14 +554,14 @@ function ei(e, t, n) {
     let v = (0, k.Me)(),
         C = !t.isDisabled && !t.isReadOnly && e.isEditable,
         y = 'literal' === e.type ? '' : a.of(e.type),
-        D = (0, k.bE)({
+        L = (0, k.bE)({
             'aria-label': `${y}${s ? `, ${s}` : ''}${o ? ', ' : ''}`,
             'aria-labelledby': o
         });
     return 'literal' === e.type
         ? { segmentProps: { 'aria-hidden': !0 } }
         : {
-              segmentProps: (0, k.dG)(f, D, {
+              segmentProps: (0, k.dG)(f, L, {
                   id: v,
                   ...R,
                   'aria-invalid': t.isInvalid ? 'true' : void 0,
@@ -658,7 +658,7 @@ function ea(e, t, n) {
             onFocusWithinChange: e.onFocusChange
         }),
         y = (0, F.useRef)(B.PS),
-        D = (0, F.useRef)(B.PS);
+        L = (0, F.useRef)(B.PS);
     return {
         groupProps: (0, k.dG)(v, A, c, I, C, {
             role: 'group',
@@ -703,7 +703,7 @@ function ea(e, t, n) {
                 realtimeValidation: t.realtimeValidation,
                 displayValidation: t.displayValidation,
                 updateValidation(e) {
-                    (y.current = e), t.updateValidation((0, B.W0)(e, D.current));
+                    (y.current = e), t.updateValidation((0, B.W0)(e, L.current));
                 },
                 resetValidation: t.resetValidation,
                 commitValidation: t.commitValidation
@@ -719,7 +719,7 @@ function ea(e, t, n) {
                 realtimeValidation: t.realtimeValidation,
                 displayValidation: t.displayValidation,
                 updateValidation(e) {
-                    (D.current = e), t.updateValidation((0, B.W0)(y.current, e));
+                    (L.current = e), t.updateValidation((0, B.W0)(y.current, e));
                 },
                 resetValidation: t.resetValidation,
                 commitValidation: t.commitValidation

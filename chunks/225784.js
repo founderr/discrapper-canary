@@ -36,7 +36,7 @@ function L(e, t, n) {
         e
     );
 }
-class O extends (i = s.PureComponent) {
+class R extends (i = s.PureComponent) {
     getDefaultSplashURL(e, t) {
         if (t) return Z;
         switch (e) {
@@ -50,7 +50,7 @@ class O extends (i = s.PureComponent) {
         var e;
         let { guild: t, className: n, theme: i, onTagClick: s } = this.props,
             { loaded: r, hasBeenSeen: d, isVisible: A, submitting: v } = this.state,
-            { name: Z, description: L, presenceCount: O, memberCount: R, keywords: x } = t,
+            { name: Z, description: L, presenceCount: R, memberCount: O, keywords: x } = t,
             b = null === (e = t.features) || void 0 === e ? void 0 : e.has(S.oNc.HUB),
             P = m.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
@@ -174,7 +174,7 @@ class O extends (i = s.PureComponent) {
                                               (0, a.jsxs)('div', {
                                                   className: N.memberInfo,
                                                   children: [
-                                                      null != O &&
+                                                      null != R &&
                                                           (0, a.jsxs)('div', {
                                                               className: N.memberCount,
                                                               children: [
@@ -183,11 +183,11 @@ class O extends (i = s.PureComponent) {
                                                                       className: N.memberCountText,
                                                                       variant: 'text-xs/normal',
                                                                       color: 'header-secondary',
-                                                                      children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: O })
+                                                                      children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: R })
                                                                   })
                                                               ]
                                                           }),
-                                                      null != R &&
+                                                      null != O &&
                                                           (0, a.jsxs)('div', {
                                                               className: N.memberCount,
                                                               children: [
@@ -196,7 +196,7 @@ class O extends (i = s.PureComponent) {
                                                                       className: N.memberCountText,
                                                                       variant: 'text-xs/normal',
                                                                       color: 'header-secondary',
-                                                                      children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: R })
+                                                                      children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: O })
                                                                   })
                                                               ]
                                                           })
@@ -250,4 +250,4 @@ class O extends (i = s.PureComponent) {
             });
     }
 }
-L(O, 'Placeholder', (e) => (0, a.jsx)('div', { className: l()(e.className, N.cardPlaceholder) })), (t.Z = O);
+L(R, 'Placeholder', (e) => (0, a.jsx)('div', { className: l()(e.className, N.cardPlaceholder) })), (t.Z = R);

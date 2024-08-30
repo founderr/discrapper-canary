@@ -48,12 +48,12 @@ t.Z = function () {
             isViewingSearchResults: g.ZP.getMostRecentQuery().length > 0,
             currentHomepageCategoryId: g.ZP.getCurrentHomepageCategoryId()
         })),
-        O = (0, E.OG)(),
-        R = (0, o.e7)([T.Z], () => T.Z.getClanDiscoveryCategories(), [], T.j),
+        R = (0, E.OG)(),
+        O = (0, o.e7)([T.Z], () => T.Z.getClanDiscoveryCategories(), [], T.j),
         x =
-            null == R
+            null == O
                 ? void 0
-                : R.map((e) => ({
+                : O.map((e) => ({
                       ...e,
                       icon: L(e.categoryId)
                   })),
@@ -65,8 +65,8 @@ t.Z = function () {
             (0, p.le)(!1, !0);
         }, [e]),
         a.useEffect(() => {
-            !O && null == n && (0, c.uY)(C.Gj.Clans, !0);
-        }, [O, n]),
+            !R && null == n && (0, c.uY)(C.Gj.Clans, !0);
+        }, [R, n]),
         (0, i.jsxs)(l.Scroller, {
             children: [
                 (0, i.jsx)(S.V, { text: v.Z.Messages.DISCOVER }),

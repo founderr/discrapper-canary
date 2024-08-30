@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(981631),
     C = n(689938),
     y = n(209071);
-let D = 'text-sm/medium',
-    L = 36,
+let L = 'text-sm/medium',
+    D = 36,
     b = 144;
 function M(e) {
     let { statusActivity: t, user: a, displayProfile: h, guildId: I, channelId: m, profileType: g, hasEntered: v = !0, animate: M = !0, editEnabled: P, onInteraction: U, isInteractionSource: w, showReplyPopout: x = !1, onClose: G, setInteractionToastShown: k, setInteractionSent: B, setIsReplyInteraction: F } = e,
@@ -52,7 +52,7 @@ function M(e) {
         er = et ? 1.25 : 0,
         ei = 18 + er,
         ea = b + er,
-        es = L + er,
+        es = D + er,
         eo = et || ee,
         el = P && !eo,
         eu = P && eo,
@@ -120,7 +120,7 @@ function M(e) {
         eS = () =>
             ee
                 ? (0, r.jsx)(c.Text, {
-                      variant: D,
+                      variant: L,
                       className: y.statusText,
                       children: J
                   })
@@ -158,7 +158,7 @@ function M(e) {
                         colorClass: y.addStatusIconColor
                     }),
                     (0, r.jsx)(c.Text, {
-                        variant: D,
+                        variant: L,
                         className: y.addStatusPrompt,
                         children: C.Z.Messages.USER_SETTINGS_ADD_STATUS
                     })
@@ -190,8 +190,8 @@ function M(e) {
             [y.fullSize]: g === R.y0.FULL_SIZE,
             [y.panel]: g === R.y0.PANEL
         },
-        eD = s()(y.background, { [y.editable]: eu }),
-        eL = { [y.hoisted]: w },
+        eL = s()(y.background, { [y.editable]: eu }),
+        eD = { [y.hoisted]: w },
         eb = s()({
             [y.statusBubbleShape]: (!ee && et) || !ec,
             [y.statusBubbleSingleLineWithTextShape]: (ec && ee) || el
@@ -212,7 +212,7 @@ function M(e) {
         },
         ew = () =>
             (0, r.jsxs)(c.ClickableContainer, {
-                className: s()(y.visibleContainer, ey, eD, eL),
+                className: s()(y.visibleContainer, ey, eL, eD),
                 'aria-label': ev(),
                 focusProps: { ringClassName: eb },
                 onClick: el ? eC : void 0,

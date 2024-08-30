@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(77987),
     Z = n(679891),
     L = n(491575),
-    O = n(954709),
-    R = n(644679),
+    R = n(954709),
+    O = n(644679),
     x = n(314533),
     b = n(9029),
     P = n(935347),
@@ -78,8 +78,8 @@ var i = n(735250),
     ev = n(911560),
     eZ = n(703016),
     eL = n(171368),
-    eO = n(429974),
-    eR = n(332754),
+    eR = n(429974),
+    eO = n(332754),
     ex = n(507468),
     eb = n(357269),
     eP = n(282506),
@@ -160,8 +160,8 @@ let e4 = l.ZP.connectStores([V.Z, eU.Z, eD.default], () => ({
         }
     ),
     e7 = (0, v.e)(L.Z, null, { passProps: !1 }),
-    e5 = (0, v.e)(A.default, null, { passProps: !1 }),
-    e2 = [eX.Z5c.GUILD_BOOSTING_MARKETING(':guildId'), ...Array.from(eJ.Vg).map((e) => eX.Z5c.CHANNEL(':guildId', e))];
+    e2 = (0, v.e)(A.default, null, { passProps: !1 }),
+    e5 = [eX.Z5c.GUILD_BOOSTING_MARKETING(':guildId'), ...Array.from(eJ.Vg).map((e) => eX.Z5c.CHANNEL(':guildId', e))];
 function e3(e) {
     let { guildId: t, channelId: n = null, messageId: i = null, threadId: a = null } = e.params;
     return {
@@ -361,7 +361,7 @@ let e9 = [
     },
     {
         path: [eX.Z5c.APPLICATION_DIRECTORY],
-        render: e5,
+        render: e2,
         isSessionRequired: !0
     }
 ];
@@ -408,10 +408,10 @@ class te extends a.PureComponent {
             p.Z.initialize(),
             eZ.Z.init(),
             eF.Z.init(),
-            eR.Z.init(),
+            eO.Z.init(),
             eC.Z.initialize(),
             eN.Z.initialize(),
-            eO.Z.initialize(),
+            eR.Z.initialize(),
             ex.Z.init(),
             j.Z.initialize(),
             g.Z.initialize(),
@@ -435,13 +435,13 @@ class te extends a.PureComponent {
             eh.Z.initialize(),
             ed.Z.initialize(),
             D.Z.initialize(),
-            O.Z.initialize(),
             R.Z.initialize(),
+            O.Z.initialize(),
             (this.rewriterUnlisten = eE.Z.addRouteRewriter(this.ensureChannelMatchesGuild)),
             (this.historyUnlisten = eE.Z.addRouteChangeListener(this.handleHistoryChange));
     }
     componentWillUnmount() {
-        eM.Z.terminate(), eu.Z.terminate(), ec.Z.terminate(), Z.Z.terminate(), f.ZP.terminate(), eP.Z.terminate(), T.Z.terminate(), e_.Z.terminate(), eo.Z.terminate(), eO.Z.terminate(), p.Z.terminate(), j.Z.terminate(), ee.Z.terminate(), g.Z.terminate(), eh.Z.terminate(), ep.Z.terminate(), eS.Z.terminate(), er.Z.terminate(), es.Z.terminate(), el.Z.terminate(), x.Z.terminate(), b.Z.terminate(), ed.Z.terminate(), D.Z.terminate(), G.Z.terminate(), O.Z.terminate(), R.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
+        eM.Z.terminate(), eu.Z.terminate(), ec.Z.terminate(), Z.Z.terminate(), f.ZP.terminate(), eP.Z.terminate(), T.Z.terminate(), e_.Z.terminate(), eo.Z.terminate(), eR.Z.terminate(), p.Z.terminate(), j.Z.terminate(), ee.Z.terminate(), g.Z.terminate(), eh.Z.terminate(), ep.Z.terminate(), eS.Z.terminate(), er.Z.terminate(), es.Z.terminate(), el.Z.terminate(), x.Z.terminate(), b.Z.terminate(), ed.Z.terminate(), D.Z.terminate(), G.Z.terminate(), R.Z.terminate(), O.Z.terminate(), this.historyUnlisten(), this.rewriterUnlisten();
     }
     handleHistoryChange(e) {
         let { pathname: t, search: n } = e;
@@ -509,7 +509,7 @@ class te extends a.PureComponent {
                     var I;
                     if (
                         ((I = e),
-                        !e2.some((e) => {
+                        !e5.some((e) => {
                             var t;
                             return (null === (t = (0, r.LX)(I, e)) || void 0 === t ? void 0 : t.isExact) === !0;
                         }))

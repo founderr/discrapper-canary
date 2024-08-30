@@ -1,37 +1,37 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 }),
-    t(47120);
-var l = t(470079),
-    s = t(913527),
-    a = t.n(s),
-    r = t(848246),
-    i = t(442837),
-    o = t(846519),
-    u = t(114064),
-    c = t(689938);
-function d(e) {
+    n(47120);
+var l = n(470079),
+    s = n(913527),
+    i = n.n(s),
+    r = n(848246),
+    a = n(442837),
+    o = n(846519),
+    c = n(114064),
+    d = n(689938);
+function u(e) {
     return e.toString().padStart(2, '0');
 }
-function m(e) {
-    let n = a().duration(e.diff(a()()));
-    return ''.concat(d(n.hours()), ':').concat(d(n.minutes()), ':').concat(d(n.seconds()));
+function f(e) {
+    let t = i().duration(e.diff(i()()));
+    return ''.concat(u(t.hours()), ':').concat(u(t.minutes()), ':').concat(u(t.seconds()));
 }
-function E() {
-    let [e, n] = l.useState(m(a()(u.Z.activatedEndTime(r.q.STREAM_HIGH_QUALITY)))),
-        t = (0, i.e7)([u.Z], () => u.Z.activatedEndTime(r.q.STREAM_HIGH_QUALITY)),
-        s = l.useMemo(() => a()(t), [t]),
-        d = l.useRef(new o.Xp()),
-        E = l.useCallback(() => {
-            n(m(s));
+function h() {
+    let [e, t] = l.useState(f(i()(c.Z.activatedEndTime(r.q.STREAM_HIGH_QUALITY)))),
+        n = (0, a.e7)([c.Z], () => c.Z.activatedEndTime(r.q.STREAM_HIGH_QUALITY)),
+        s = l.useMemo(() => i()(n), [n]),
+        u = l.useRef(new o.Xp()),
+        h = l.useCallback(() => {
+            t(f(s));
         }, [s]);
     return (
         l.useEffect(() => {
-            let e = a().duration(s.diff(a()()));
-            1 > e.seconds() ? (n('00:00:00'), d.current.stop()) : 1 > e.days() ? (E(), d.current.start(1000, E)) : (n(c.Z.Messages.HUMANIZE_DURATION_DAYS.format({ time: Math.floor(e.asDays()) })), d.current.stop());
-        }, [s, E]),
+            let e = i().duration(s.diff(i()()));
+            1 > e.seconds() ? (t('00:00:00'), u.current.stop()) : 1 > e.days() ? (h(), u.current.start(1000, h)) : (t(d.Z.Messages.HUMANIZE_DURATION_DAYS.format({ time: Math.floor(e.asDays()) })), u.current.stop());
+        }, [s, h]),
         e
     );
 }

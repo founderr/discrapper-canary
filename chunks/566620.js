@@ -65,8 +65,8 @@ var r = n(990547),
     v = n(594174),
     C = n(979651),
     y = n(585483),
-    D = n(630388),
-    L = n(823379),
+    L = n(630388),
+    D = n(823379),
     b = n(573261),
     M = n(595519),
     P = n(317381),
@@ -168,7 +168,7 @@ async function z(e) {
                 n = Y.Yq.includes(i),
                 a = (null == R ? void 0 : R.type) === Z.d4z.GUILD_VOICE,
                 s = I.Z.getApplication(i),
-                o = null != s && (0, D.yE)(s.flags, Z.udG.EMBEDDED),
+                o = null != s && (0, L.yE)(s.flags, Z.udG.EMBEDDED),
                 l = (0, M.l5)(R);
             if (n) {
                 if (((t = !1), !(await e()))) throw Error();
@@ -357,7 +357,7 @@ async function ee(e) {
     var t, n, i, s;
     let { guildId: o, force: l = !1 } = e,
         u = P.ZP.getShelfActivities(o),
-        c = u.map((e) => I.Z.getApplication(e.application_id)).filter(L.lm);
+        c = u.map((e) => I.Z.getApplication(e.application_id)).filter(D.lm);
     if (!l && !P.ZP.shouldFetchShelf(o)) {
         if (null === (t = P.ZP.getShelfFetchStatus(o)) || void 0 === t ? void 0 : t.isFetching) {
             let e, t;

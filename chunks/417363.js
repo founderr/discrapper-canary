@@ -26,8 +26,8 @@ let R = {},
     v = 'file://',
     C = !1,
     y = 0,
-    D = 0,
     L = 0,
+    D = 0,
     b = [],
     M = [],
     P = [],
@@ -256,9 +256,9 @@ class H extends (i = c.ZP.Store) {
                         let e = V(n, s, w);
                         e > 0 && k((y += e));
                         let r = V(n, s, x);
-                        r > 0 && F((D += r));
+                        r > 0 && F((L += r));
                         let o = V(n, s, G);
-                        if ((o > 0 && B((L += o)), i === t)) {
+                        if ((o > 0 && B((D += o)), i === t)) {
                             let e = n[s];
                             if (!0 !== e.paused && (e.type === N.vxO.UNINSTALLING || e.type === N.vxO.INSTALLING || e.type === N.vxO.UPDATING))
                                 switch (e.stage) {

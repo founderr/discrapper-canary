@@ -22,14 +22,14 @@ var a = t(735250),
     T = t(907040),
     h = t(633302),
     x = t(806966),
-    N = t(176354),
-    I = t(823379),
+    I = t(176354),
+    N = t(823379),
     p = t(354459),
     C = t(185923),
     g = t(420212),
     v = t(894967);
 let f = C.Hz.CHAT,
-    M = [h.ZP.getByName('thumbsup'), h.ZP.getByName('eyes'), h.ZP.getByName('laughing'), h.ZP.getByName('watermelon'), h.ZP.getByName('fork_and_knife'), h.ZP.getByName('yum')].filter(I.lm);
+    M = [h.ZP.getByName('thumbsup'), h.ZP.getByName('eyes'), h.ZP.getByName('laughing'), h.ZP.getByName('watermelon'), h.ZP.getByName('fork_and_knife'), h.ZP.getByName('yum')].filter(N.lm);
 function P(e) {
     let { emoji: n, isDisabled: t = !1, onClick: i, className: s } = e,
         _ = l.useRef(null),
@@ -83,21 +83,21 @@ function Z(e) {
     });
 }
 function A(e) {
-    let { channel: n, title: t, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: E, emojiSearchProps: h, recentlyUsedEmojis: I, analyticsOverride: A } = e,
+    let { channel: n, title: t, closePopout: i, onFocus: o, onSelectEmoji: c, onSelectDisabledEmoji: d, onExpandedToggle: E, emojiSearchProps: h, recentlyUsedEmojis: N, analyticsOverride: A } = e,
         S = (0, _.Dt)(),
         [O, j] = l.useState(!1),
         R = (0, m.wC)(n.guild_id),
         y = (0, s.uniqBy)([...R, ...M], 'name')
             .filter(
                 (e) =>
-                    !N.ZP.isEmojiFilteredOrLocked({
+                    !I.ZP.isEmojiFilteredOrLocked({
                         emoji: e,
                         channel: n,
                         intention: f
                     })
             )
             .slice(0, p.e5);
-    null != I && I.length > 0 && y.splice(y.length - 1, 1, I[0]);
+    null != N && N.length > 0 && y.splice(y.length - 1, 1, N[0]);
     let L = (e) => {
             j(e), null == E || E(e);
         },
@@ -152,7 +152,7 @@ function A(e) {
                         children: (0, a.jsx)('div', {
                             className: r()(v.slots, v.slotsWide),
                             children: y.map((e) => {
-                                let t = N.ZP.isEmojiDisabled({
+                                let t = I.ZP.isEmojiDisabled({
                                     emoji: e,
                                     channel: n,
                                     intention: C.Hz.CHAT

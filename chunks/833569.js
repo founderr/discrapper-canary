@@ -45,8 +45,8 @@ var n,
     B = t(42818),
     U = t(798769),
     G = t(459965),
-    F = t(119269),
-    y = t(474936),
+    y = t(119269),
+    F = t(474936),
     V = t(981631),
     w = t(689938),
     k = t(758294);
@@ -82,7 +82,7 @@ function H(e) {
             break;
         default:
             switch (n) {
-                case y.p9.TIER_0:
+                case F.p9.TIER_0:
                     O = d
                         ? w.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_0_PAYMENT_BLOCKED_RUSSIA.format({
                               date: t.currentPeriodEnd,
@@ -90,7 +90,7 @@ function H(e) {
                           })
                         : w.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_0.format({ date: t.currentPeriodEnd });
                     break;
-                case y.p9.TIER_1:
+                case F.p9.TIER_1:
                     O = d
                         ? w.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_1_PAYMENT_BLOCKED_RUSSIA.format({
                               date: t.currentPeriodEnd,
@@ -110,14 +110,14 @@ function H(e) {
     let R =
             (t.items.some((e) => {
                 let { planId: s } = e;
-                return !y.dJ.has(s);
+                return !F.dJ.has(s);
             }) &&
                 null == t.renewalMutations) ||
             (null === (s = t.renewalMutations) || void 0 === s
                 ? void 0
                 : s.items.find((e) => {
                       let { planId: s } = e;
-                      return !y.dJ.has(s);
+                      return !F.dJ.has(s);
                   })) != null,
         f = R
             ? (0, i.jsx)(T.Button, {
@@ -311,7 +311,7 @@ function X(e) {
     r.useEffect(() => {
         h.default.track(V.rMx.CANCELLATION_FLOW_STARTED, z(n));
     }, [n]);
-    let j = f === y.p9.TIER_0 || f === y.p9.TIER_1 || f === y.p9.TIER_2;
+    let j = f === F.p9.TIER_0 || f === F.p9.TIER_1 || f === F.p9.TIER_2;
     null == _ && (_ = j ? 1 : 2);
     let { analyticsLocations: B } = (0, m.ZP)(l, N.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
         [U, Y, W, X] = (function (e, s, t) {
@@ -412,7 +412,7 @@ function X(e) {
                     p &&
                     (0, i.jsx)('div', {
                         className: k.subtitleIcon,
-                        children: (0, i.jsx)(F.Z, {
+                        children: (0, i.jsx)(y.Z, {
                             staticPercentage: 100,
                             iconClassName: k.iconClassName,
                             showAnimations: !1,

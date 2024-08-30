@@ -28,8 +28,8 @@ var i = n(735250),
     S = n(474936),
     A = n(689938),
     R = n(952527),
-    x = n(219021);
-function O(e, t, n) {
+    O = n(219021);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,7 +53,7 @@ class M extends a.Component {
             m = (0, f.I5)(I),
             T = E ? A.Z.Messages.ADD_BURST_REACTION : A.Z.Messages.ADD_REACTION;
         !m && E && (T = (0, i.jsx)(_.X, { tooltipText: A.Z.Messages.ADD_BURST_REACTION }));
-        let S = s ? x : R;
+        let S = s ? O : R;
         return (0, i.jsx)(u.Popout, {
             shouldShow: o,
             onRequestClose: this.handleReactionPickerToggle,
@@ -100,16 +100,16 @@ class M extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            O(this, 'state', { isReactionPickerActive: !1 }),
-            O(this, 'onAddReaction', (e, t) => {
+            x(this, 'state', { isReactionPickerActive: !1 }),
+            x(this, 'onAddReaction', (e, t) => {
                 if (null == e) return;
                 let { channel: n, message: i, isForumToolbar: a } = this.props;
                 (0, I.rU)(n.id, i.id, (0, m.g1)(e), a ? I.TW.FORUM_TOOLBAR : I.TW.MESSAGE_INLINE_BUTTON, { burst: t });
             }),
-            O(this, 'handleReactionPickerToggle', () => {
+            x(this, 'handleReactionPickerToggle', () => {
                 this.setState((e) => ({ isReactionPickerActive: !e.isReactionPickerActive }));
             }),
-            O(this, 'handleAddReactionClick', (e) => {
+            x(this, 'handleAddReactionClick', (e) => {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let i = h.default.getCurrentUser();
@@ -125,7 +125,7 @@ class M extends a.Component {
                     }),
                     this.handleReactionPickerToggle();
             }),
-            O(this, 'renderReactionPopout', (e) => {
+            x(this, 'renderReactionPopout', (e) => {
                 let { closePopout: t } = e,
                     { type: n, channel: a, message: s } = this.props,
                     r = {

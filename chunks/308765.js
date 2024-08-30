@@ -13,7 +13,7 @@ let i = {
         loadAfterConnectionOpen: !0
     },
     CallIdleManager: {
-        actions: ['VOICE_STATE_UPDATES', 'EMBEDDED_ACTIVITY_DISCONNECT', 'CONNECTION_CLOSED'],
+        actions: ['VOICE_STATE_UPDATES', 'EMBEDDED_ACTIVITY_CLOSE', 'CONNECTION_CLOSED'],
         inlineRequire: () => n(288444).Z
     },
     ChangelogManager: {

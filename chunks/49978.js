@@ -20,52 +20,52 @@ var a = n(735250),
     m = n(70097),
     v = n(740492),
     p = n(592125),
-    I = n(430824),
-    f = n(496675),
-    x = n(944486),
+    x = n(430824),
+    I = n(496675),
+    f = n(944486),
     _ = n(566620),
-    h = n(317381),
-    C = n(122613),
+    C = n(317381),
+    h = n(122613),
     T = n(678173),
     E = n(696068),
     S = n(361213),
-    b = n(778569),
-    N = n(412019),
+    N = n(778569),
+    b = n(412019),
     j = n(981631),
     A = n(689938),
     M = n(617010);
-function Z(e) {
+function y(e) {
     return (0, l.e7)(
-        [I.Z, f.Z],
+        [x.Z, I.Z],
         () => {
-            let t = I.Z.getGuild(e);
-            return null != t && f.Z.can(j.Plq.CREATE_INSTANT_INVITE, t);
+            let t = x.Z.getGuild(e);
+            return null != t && I.Z.can(j.Plq.CREATE_INSTANT_INVITE, t);
         },
         [e]
     );
 }
-let y = ['embedded_background'];
+let Z = ['embedded_background'];
 function D(e) {
     var t, n;
-    let { applicationId: c, guildId: d, selectedChannelId: u, setSelectedChannelId: f, enableSelectedTextChannelInvite: h } = e,
-        C = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
+    let { applicationId: c, guildId: d, selectedChannelId: u, setSelectedChannelId: I, enableSelectedTextChannelInvite: C } = e,
+        h = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
         j = (0, T.T)(null != d ? d : null, null != c ? c : null),
-        [D, L] = i.useState(h && !v.ZP.disableInviteWithTextChannelActivityLaunch),
+        [D, L] = i.useState(C && !v.ZP.disableInviteWithTextChannelActivityLaunch),
         O = (0, E.F)(d);
     i.useEffect(() => {
         var e;
-        _.w1({ guildId: d }), f(null !== (e = (0, E.d)({ guildId: d })) && void 0 !== e ? e : void 0);
-    }, [d, f]);
+        _.w1({ guildId: d }), I(null !== (e = (0, E.d)({ guildId: d })) && void 0 !== e ? e : void 0);
+    }, [d, I]);
     let B = null == j ? void 0 : j.activity.activity_preview_video_asset_id,
         V = null != B ? (0, S.Z)(null !== (t = null == j ? void 0 : j.application.id) && void 0 !== t ? t : '', B) : null,
-        { url: R } = (0, b.Z)({
+        { url: R } = (0, N.Z)({
             applicationId: null !== (n = null == j ? void 0 : j.application.id) && void 0 !== n ? n : '',
             size: 1024,
-            names: y
+            names: Z
         }),
-        k = (0, l.e7)([I.Z], () => I.Z.getGuild(d)),
-        P = (0, l.e7)([p.Z, x.Z], () => p.Z.getChannel(x.Z.getChannelId())),
-        H = Z(null != d ? d : void 0);
+        k = (0, l.e7)([x.Z], () => x.Z.getGuild(d)),
+        P = (0, l.e7)([p.Z, f.Z], () => p.Z.getChannel(f.Z.getChannelId())),
+        H = y(null != d ? d : void 0);
     if ((null == j ? void 0 : j.application) == null || null == k) return null;
     let F = (null == P ? void 0 : P.name) == null || (null == P ? void 0 : P.name) === '' ? A.Z.Messages.EMBEDDED_ACTIVITIES_FALLBACK_CHANNEL_NAME : '#'.concat(P.name);
     return (0, a.jsxs)(s.Scroller, {
@@ -79,7 +79,7 @@ function D(e) {
                           className: M.video,
                           src: V,
                           loop: !0,
-                          autoPlay: !C,
+                          autoPlay: !h,
                           poster: R,
                           muted: !0
                       })
@@ -109,7 +109,7 @@ function D(e) {
                 },
                 select: (e) => {
                     let { channel: t } = e;
-                    return f(t.id);
+                    return I(t.id);
                 },
                 serialize: (e) => {
                     let { channel: t } = e;
@@ -119,7 +119,7 @@ function D(e) {
                     let e = O.find((e) => e.value.channel.id === u);
                     return null == e
                         ? null
-                        : (0, a.jsx)(N.O, {
+                        : (0, a.jsx)(b.O, {
                               channel: e.value.channel,
                               users: e.value.users
                           });
@@ -128,13 +128,13 @@ function D(e) {
                     let {
                         value: { channel: t, users: n }
                     } = e;
-                    return (0, a.jsx)(N.O, {
+                    return (0, a.jsx)(b.O, {
                         channel: t,
                         users: n
                     });
                 }
             }),
-            H && h
+            H && C
                 ? (0, a.jsxs)(s.Clickable, {
                       className: M.checkboxContainer,
                       onClick: () => {
@@ -160,35 +160,35 @@ function D(e) {
 }
 function L(e) {
     let { applicationId: t, guildId: n, locationObject: i, onBack: r, onClose: o, selectedChannelId: g, enableSelectedTextChannelInvite: m } = e,
-        { analyticsLocations: I } = (0, d.ZP)(c.Z.ACTIVITY_CHANNEL_SELECTOR),
-        f = (0, T.T)(null != n ? n : null, null != t ? t : null),
-        E = (0, l.e7)([p.Z, x.Z], () => p.Z.getChannel(x.Z.getChannelId())),
+        { analyticsLocations: x } = (0, d.ZP)(c.Z.ACTIVITY_CHANNEL_SELECTOR),
+        I = (0, T.T)(null != n ? n : null, null != t ? t : null),
+        E = (0, l.e7)([p.Z, f.Z], () => p.Z.getChannel(f.Z.getChannelId())),
         S = (0, l.e7)([v.ZP], () => m && !v.ZP.disableInviteWithTextChannelActivityLaunch),
-        b = (0, l.e7)([h.ZP], () => null != g && '' !== g && h.ZP.getEmbeddedActivitiesForChannel(g).some((e) => e.applicationId === t)),
-        N = Z(n),
-        y = async () => {
+        N = (0, l.e7)([C.ZP], () => null != g && '' !== g && C.ZP.getEmbeddedActivitiesForChannel(g).some((e) => e.applicationId === t)),
+        b = y(n),
+        Z = async () => {
             var e;
-            if (null != g && '' !== g && null != f && null != n && '' !== n)
-                (await (0, C.Z)({
-                    targetApplicationId: null === (e = f.application) || void 0 === e ? void 0 : e.id,
+            if (null != g && '' !== g && null != I && null != n && '' !== n)
+                (await (0, h.Z)({
+                    targetApplicationId: null === (e = I.application) || void 0 === e ? void 0 : e.id,
                     locationObject: i,
                     channelId: g,
-                    analyticsLocations: I,
+                    analyticsLocations: x,
                     commandOrigin: u.bB.APPLICATION_LAUNCHER
                 })) &&
                     (o(),
                     null != E &&
-                        N &&
+                        b &&
                         S &&
                         (await _.sN({
                             activityChannelId: g,
                             invitedChannelId: E.id,
-                            applicationId: f.application.id,
+                            applicationId: I.application.id,
                             location: j.Sbl.ACTIVITY_SHELF
                         })));
         };
     return (0, a.jsx)(d.Gt, {
-        value: I,
+        value: x,
         children: (0, a.jsxs)('div', {
             className: M.footerContainer,
             children: [
@@ -205,10 +205,10 @@ function L(e) {
                     ? (0, a.jsx)('div', {})
                     : (0, a.jsx)(s.Button, {
                           className: M.launchButton,
-                          onClick: y,
-                          color: b ? s.Button.Colors.GREEN : void 0,
+                          onClick: Z,
+                          color: N ? s.Button.Colors.GREEN : void 0,
                           fullWidth: !0,
-                          children: b ? A.Z.Messages.EMBEDDED_ACTIVITIES_JOIN : A.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH
+                          children: N ? A.Z.Messages.EMBEDDED_ACTIVITIES_JOIN : A.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH
                       })
             ]
         })

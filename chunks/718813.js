@@ -57,13 +57,13 @@ let A = (0, m.Un)({
         webpackId: 994763,
         name: 'GuildSettings'
     }),
-    O = {
+    R = {
         [S.S9g.USER_SETTINGS]: () => (0, a.jsx)(A, {}),
         [S.S9g.CHANNEL_SETTINGS]: () => (0, a.jsx)(v, {}),
         [S.S9g.GUILD_SETTINGS]: () => (0, a.jsx)(L, {}),
         [S.S9g.COLLECTIBLES_SHOP]: () => (0, a.jsx)(Z, {})
     },
-    R = 'SHOWN',
+    O = 'SHOWN',
     x = 'HIDDEN',
     b = {
         friction: 10,
@@ -84,7 +84,7 @@ class M extends (i = s.PureComponent) {
     componentDidUpdate(e) {
         let { mode: t } = this.props,
             { mode: n } = e;
-        return t === n ? void 0 : t === R && n === x ? this.animateIn() : t === x && n === R ? this.animateUnder() : void 0;
+        return t === n ? void 0 : t === O && n === x ? this.animateIn() : t === x && n === O ? this.animateUnder() : void 0;
     }
     componentWillEnter(e) {
         let { opacity: t, scale: n } = this.state;
@@ -202,7 +202,7 @@ class D extends s.PureComponent {
                 (0, a.jsx)(
                     M,
                     {
-                        mode: 0 !== i || n ? x : R,
+                        mode: 0 !== i || n ? x : O,
                         baseLayer: !0,
                         children: e
                     },
@@ -216,11 +216,11 @@ class D extends s.PureComponent {
     renderComponent(e, t, n) {
         let i;
         return (
-            (i = 'string' == typeof e ? O[e]() : (0, a.jsx)(e, {})),
+            (i = 'string' == typeof e ? R[e]() : (0, a.jsx)(e, {})),
             (0, a.jsxs)(
                 M,
                 {
-                    mode: t === n - 1 ? R : x,
+                    mode: t === n - 1 ? O : x,
                     children: [(0, a.jsx)(P, {}), i]
                 },
                 'layer-'.concat(t)

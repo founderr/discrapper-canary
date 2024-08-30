@@ -211,7 +211,7 @@ function G(e) {
         ]
     });
 }
-function F(e) {
+function y(e) {
     let {
             settings: { enabled: s, combosEnabled: t, comboSoundsEnabled: n, combosRequiredCount: a },
             updateSettings: i
@@ -257,7 +257,7 @@ function F(e) {
         ]
     });
 }
-function y(e) {
+function F(e) {
     let {
             settings: { enabled: s, screenshakeEnabled: t, shakeIntensity: n, screenshakeEnabledLocations: a },
             updateSettings: i
@@ -440,11 +440,11 @@ function Y(e) {
                     updateSettings: E
                 }),
                 (0, o.jsx)(w, { onChangePage: s }),
-                (0, o.jsx)(F, {
+                (0, o.jsx)(y, {
                     settings: n,
                     updateSettings: E
                 }),
-                (0, o.jsx)(y, {
+                (0, o.jsx)(F, {
                     settings: n,
                     updateSettings: E
                 }),

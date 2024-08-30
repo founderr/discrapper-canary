@@ -25,8 +25,8 @@ var r,
     v = n(652136),
     C = n(695346),
     y = n(626135),
-    D = n(280930),
-    L = n(606301),
+    L = n(280930),
+    D = n(606301),
     b = n(981631),
     M = n(689938),
     P = n(701481);
@@ -76,9 +76,9 @@ t.Z = s.memo(function (e) {
         [j, W] = s.useState(''),
         [K, z] = s.useState(!1),
         [q, Q] = s.useState(!1),
-        X = (0, D.Z)(Z, U, r),
+        X = (0, L.Z)(Z, U, r),
         { analyticsLocations: $ } = (0, p.ZP)(h.Z.EXPRESSION_SUGGESTIONS),
-        { handleTextChange: J, debouncedSetTextInputValue: ee } = (0, D.m)({
+        { handleTextChange: J, debouncedSetTextInputValue: ee } = (0, L.m)({
             setTextInputValue: Y,
             setHasDismissed: w,
             setHasSelection: Q,
@@ -189,7 +189,7 @@ t.Z = s.memo(function (e) {
         eo = s.useRef([]),
         el = s.useRef(!1);
     s.useEffect(() => {
-        ei && (eo.current = X), ei !== el.current && (m.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, L.Tk)(Z), W(Z))), (el.current = ei);
+        ei && (eo.current = X), ei !== el.current && (m.emit(ei ? 'sticker-suggestions-shown' : 'sticker-suggestions-hidden'), ei && ((0, D.Tk)(Z), W(Z))), (el.current = ei);
     }, [m, ei, X, Z]);
     let eu = !ei,
         ec = ei ? X : eo.current;

@@ -239,7 +239,7 @@ function y(e) {
             var e;
             return null === (e = p.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
         }),
-        D = (e) => {
+        L = (e) => {
             e.stopPropagation(),
                 (0, l.openModal)((e) =>
                     (0, r.jsx)(c.default, {
@@ -283,7 +283,7 @@ function y(e) {
                     ? (0, r.jsx)(T.Z, {
                           className: s()({ [A.action]: v }),
                           tooltip: S.Z.Messages.ATTACHMENT_UTILITIES_MODIFY,
-                          onClick: D,
+                          onClick: L,
                           children: (0, r.jsx)(l.PencilIcon, {
                               size: 'xs',
                               color: 'currentColor',
@@ -307,7 +307,7 @@ function y(e) {
         draftType: n,
         id: a.id,
         channelId: t,
-        handleEditModal: D,
+        handleEditModal: L,
         keyboardModeEnabled: d,
         size: h,
         className: s()({ [A.attachmentItemSmall]: v }),

@@ -3,7 +3,7 @@ n.d(t, {
         return l.J;
     },
     Jt: function () {
-        return D;
+        return L;
     },
     K0: function () {
         return R;
@@ -242,6 +242,6 @@ function C(e) {
     v = e;
 }
 let y = () => Promise.resolve();
-function D(e) {
+function L(e) {
     y = e;
 }

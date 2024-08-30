@@ -1,14 +1,14 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return i;
+        return a;
     }
 });
-var l = t(735250);
-t(470079);
-var s = t(120356),
-    a = t.n(s),
-    r = t(127788);
-function i(e) {
-    let { separator: n = !1 } = e;
-    return (0, l.jsx)('div', { className: a()(r.divider, { [r.separator]: n }) });
+var l = n(735250);
+n(470079);
+var s = n(120356),
+    i = n.n(s),
+    r = n(127788);
+function a(e) {
+    let { separator: t = !1 } = e;
+    return (0, l.jsx)('div', { className: i()(r.divider, { [r.separator]: t }) });
 }

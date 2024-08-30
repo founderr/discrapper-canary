@@ -25,11 +25,11 @@ var r = n(481060),
     v = n(630388),
     C = n(226351),
     y = n(981631),
-    D = n(689938);
-async function L(e) {
+    L = n(689938);
+async function D(e) {
     var t, n, r;
     let d,
-        { channelId: _, uploads: L, draftType: b, parsedMessage: M, options: P = {}, raiseEndpointErrors: U = !1 } = e,
+        { channelId: _, uploads: D, draftType: b, parsedMessage: M, options: P = {}, raiseEndpointErrors: U = !1 } = e,
         w = new E.Z(y.ANM.MESSAGES(_)),
         x = new C.o(),
         G = {
@@ -110,7 +110,7 @@ async function L(e) {
                                   }
                               };
                 (0, l.openUploadError)({
-                    title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+                    title: L.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
                     help: (0, h.uF)(r, e)
                 });
                 return;
@@ -129,15 +129,15 @@ async function L(e) {
                 else {
                     var E;
                     (0, l.openUploadError)({
-                        title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-                        help: null !== (E = null == n ? void 0 : n.message) && void 0 !== E ? E : D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
+                        title: L.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+                        help: null !== (E = null == n ? void 0 : n.message) && void 0 !== E ? E : L.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_RETRY_HELP
                     });
                 }
                 '' !== G.content && '' === O.Z.getDraft(_, b) && a.Z.saveDraft(_, G.content, b),
                     0 === R.Z.getUploadCount(_, b) &&
                         o.Z.setUploads({
                             channelId: _,
-                            uploads: L,
+                            uploads: D,
                             draftType: b
                         });
             }
@@ -151,7 +151,7 @@ async function L(e) {
                 messageRecord: t
             });
         }),
-        await w.uploadFiles(L, G),
+        await w.uploadFiles(D, G),
         x.resolve(),
         x.promise
     );
@@ -171,7 +171,7 @@ t.Z = {
                     t
                 );
             });
-        L({
+        D({
             channelId: t,
             uploads: s,
             draftType: r
@@ -226,8 +226,8 @@ t.Z = {
                     return;
                 }
                 (0, l.openUploadError)({
-                    title: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
-                    help: D.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_HELP.format({
+                    title: L.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_TITLE,
+                    help: L.Z.Messages.UPLOAD_AREA_UPLOAD_FAILED_HELP.format({
                         onClick: () => {
                             (0, r.closeModal)(l.UPLOAD_ERROR_MODAL_KEY),
                                 e({
@@ -250,7 +250,7 @@ t.Z = {
             }),
             p.upload(o, h);
     },
-    uploadFiles: L,
+    uploadFiles: D,
     cancel(e) {
         i.Z.dispatch({
             type: 'UPLOAD_CANCEL_REQUEST',

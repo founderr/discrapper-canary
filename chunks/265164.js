@@ -24,8 +24,8 @@ var i,
     v = n(584925),
     Z = n(207205),
     L = n(981631),
-    O = n(206583);
-function R(e, t, n) {
+    R = n(206583);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -125,7 +125,7 @@ function en(e) {
     let i = e.filter((e) => e.type !== A.Rr.ACTIVITY),
         s = new Set(i.map((e) => e.id)),
         r = {},
-        d = null !== (n = null === (t = l.Z.getFeed(O.YN.GLOBAL_FEED)) || void 0 === t ? void 0 : t.entries) && void 0 !== n ? n : [];
+        d = null !== (n = null === (t = l.Z.getFeed(R.YN.GLOBAL_FEED)) || void 0 === t ? void 0 : t.entries) && void 0 !== n ? n : [];
     return (
         d.sort((e, t) => e.rank - t.rank),
         d.forEach((e, t) => {
@@ -321,8 +321,8 @@ class e_ extends (i = s.ZP.PersistedStore) {
         };
     }
 }
-R(e_, 'displayName', 'GravityStore'),
-    R(e_, 'persistKey', 'GravityStore'),
+O(e_, 'displayName', 'GravityStore'),
+    O(e_, 'persistKey', 'GravityStore'),
     (t.Z = new e_(r.Z, {
         POST_CONNECTION_OPEN: function () {
             if (x.length > 0) {
@@ -523,7 +523,7 @@ R(e_, 'displayName', 'GravityStore'),
         MESSAGE_ACK: eu,
         CONTENT_INVENTORY_SET_FEED: function (e) {
             let { feedId: t } = e;
-            if (t !== O.YN.GLOBAL_FEED) return !1;
+            if (t !== R.YN.GLOBAL_FEED) return !1;
             if (!z) {
                 let [e, t] = ea((x = en(x)));
                 (X = e), (J = t), ee();

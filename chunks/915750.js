@@ -34,20 +34,20 @@ function E(e, t, n) {
 }
 let f = 0.5;
 class h {
-    constructor({ questOrQuests: e, questContent: t, questContentPosition: n, questContentRowIndex: r, triggeredByStatusChange: i, trackGuildAndChannelMetadata: o }) {
+    constructor({ questOrQuests: e, questContent: t, triggeredByStatusChange: n, trackGuildAndChannelMetadata: r, questContentPosition: i, questContentRowIndex: o }) {
         var p = this;
         E(this, 'id', void 0),
             E(this, 'quests', void 0),
             E(this, 'questContent', void 0),
-            E(this, 'questContentPosition', void 0),
-            E(this, 'trackGuildAndChannelMetadata', void 0),
             E(this, 'triggeredByStatusChange', void 0),
+            E(this, 'trackGuildAndChannelMetadata', void 0),
+            E(this, 'questContentPosition', void 0),
+            E(this, 'questContentRowIndex', void 0),
             E(this, 'heartbeatTimeoutId', void 0),
             E(this, 'lastBeatTime', void 0),
             E(this, 'minViewTimeReachedTimeoutId', void 0),
             E(this, 'minViewTimeSeconds', void 0),
             E(this, 'minViewportPercentage', void 0),
-            E(this, 'questContentRowIndex', void 0),
             E(this, 'isRunning', !1),
             E(this, 'onMinViewTimeReached', () => {
                 this.quests.forEach((e) => {
@@ -141,13 +141,13 @@ class h {
             }),
             (this.id = (0, a.Z)()),
             (this.questContent = t),
-            (this.questContentPosition = n),
+            (this.questContentPosition = i),
             (this.minViewTimeSeconds = 1),
             (this.minViewportPercentage = f),
             (this.quests = Array.isArray(e) ? e : [e]),
-            (this.trackGuildAndChannelMetadata = o),
-            (this.triggeredByStatusChange = i),
-            (this.questContentRowIndex = r);
+            (this.trackGuildAndChannelMetadata = r),
+            (this.triggeredByStatusChange = n),
+            (this.questContentRowIndex = o);
     }
 }
 let p = (e, t) => {

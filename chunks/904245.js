@@ -25,8 +25,8 @@ var r = n(278074),
     v = n(366980),
     C = n(779832),
     y = n(459618),
-    D = n(541288),
-    L = n(3148),
+    L = n(541288),
+    D = n(3148),
     b = n(48854),
     M = n(785359),
     P = n(646504),
@@ -182,7 +182,7 @@ let ep = {
                 }),
                 eI.receiveMessage(
                     e,
-                    (0, L.cs)({
+                    (0, D.cs)({
                         messageId: r,
                         channelId: e,
                         content: t,
@@ -191,7 +191,7 @@ let ep = {
                 );
         },
         sendNitroSystemMessage(e, t, n) {
-            let r = (0, L.ZP)({
+            let r = (0, D.ZP)({
                 channelId: e,
                 nonce: n,
                 type: eo.uaV.NITRO_NOTIFICATION,
@@ -663,7 +663,7 @@ let ep = {
                 })
                 .then(
                     (n) => (
-                        D.Z.donateSentMessage(n.body.content, e),
+                        L.Z.donateSentMessage(n.body.content, e),
                         eI.receiveMessage(e, n.body),
                         s.Z.dispatch({
                             type: 'STICKER_TRACK_USAGE',
@@ -722,7 +722,7 @@ let ep = {
             let z = null != v ? eo.uaV.REPLY : eo.uaV.DEFAULT,
                 Q = null !== (a = n.nonce) && void 0 !== a ? a : (0, b.r)();
             if (!1 !== n.eagerDispatch) {
-                let t = (0, L.ZP)({
+                let t = (0, D.ZP)({
                     channelId: e,
                     content: c,
                     tts: m,
@@ -780,7 +780,7 @@ let ep = {
                             (o) => {
                                 let d = Date.now() - i;
                                 if (o.ok) {
-                                    D.Z.donateSentMessage(c, e),
+                                    L.Z.donateSentMessage(c, e),
                                         eI.receiveMessage(e, o.body, !0, {
                                             sendAnalytics: {
                                                 duration: d,

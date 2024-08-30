@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return D;
+        return L;
     }
 }),
     n(47120);
@@ -33,8 +33,8 @@ function y(e) {
     var t;
     let { statusActivity: a, profileType: h, editEnabled: p, hasEntered: I = !0, animate: T = !0, onClose: A } = e,
         { analyticsLocations: y } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
-        { trackUserProfileAction: D } = (0, m.KZ)(),
-        L = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
+        { trackUserProfileAction: L } = (0, m.KZ)(),
+        D = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
         [b] = i.useState(() => new u.V7()),
         [M, P] = i.useState(!0),
         U = i.useRef(null),
@@ -81,10 +81,10 @@ function y(e) {
                     let e = Math.min(null !== (t = w.current) && void 0 !== t ? t : W, W);
                     ei({
                         maxHeight: ''.concat(e, 'px'),
-                        delay: L ? 0 : 300,
+                        delay: D ? 0 : 300,
                         config: {
                             clamp: !0,
-                            duration: L ? 0 : 150
+                            duration: D ? 0 : 150
                         }
                     });
                 } else {
@@ -94,7 +94,7 @@ function y(e) {
                         delay: 0
                     });
                 }
-                if (L) {
+                if (D) {
                     P(!e);
                     return;
                 }
@@ -192,7 +192,7 @@ function y(e) {
                     focusProps: { ringClassName: ed },
                     onClick: q
                         ? () => {
-                              D({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
+                              L({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
                                   null == A || A(),
                                   (0, c.openModalLazy)(async () => {
                                       let { default: e } = await n.e('51714').then(n.bind(n, 211065));
@@ -211,7 +211,7 @@ function y(e) {
                         !e.currentTarget.contains(e.relatedTarget) && (en(!1), ea(!1));
                     },
                     onMouseOver: () => {
-                        D({ action: 'HOVER_CUSTOM_STATUS' }), en(!0), ea(!0);
+                        L({ action: 'HOVER_CUSTOM_STATUS' }), en(!0), ea(!0);
                     },
                     onMouseLeave: () => {
                         en(!1), ea(!1);
@@ -251,7 +251,7 @@ function y(e) {
         })
     });
 }
-function D(e) {
+function L(e) {
     let { user: t, ...n } = e,
         i = (0, l.e7)([p.default], () => p.default.getId() === t.id),
         a = (0, h.a)(),

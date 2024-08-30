@@ -4,8 +4,8 @@ var r = n(735250),
     a = n(392711),
     s = n(36793),
     l = n(481060),
-    u = n(100527),
-    o = n(906732),
+    o = n(100527),
+    u = n(906732),
     c = n(488499),
     h = n(81245),
     d = n(53691),
@@ -18,26 +18,26 @@ var r = n(735250),
     w = n(689938),
     R = n(323125);
 t.default = (e) => {
-    let { file: t, imgURI: n, transitionState: f, allowSkip: M = !1, onCrop: _, onClose: I, uploadType: L = g.pC.AVATAR, showUpsellHeader: N = !1, analyticsPage: x } = e,
-        [v, O] = i.useState({
+    let { file: t, imgURI: n, transitionState: f, allowSkip: M = !1, onCrop: _, onClose: I, uploadType: L = g.pC.AVATAR, showUpsellHeader: N = !1, analyticsPage: v } = e,
+        [x, O] = i.useState({
             width: 0,
             height: 0
         }),
-        [D, T] = i.useState({
+        [D, y] = i.useState({
             top: 0,
             bottom: 0,
             left: 0,
             right: 0
         }),
-        [y, P] = i.useState(!1),
-        [B, S] = i.useState(1),
-        [b, j] = i.useState({
+        [T, b] = i.useState(!1),
+        [P, B] = i.useState(1),
+        [S, j] = i.useState({
             x: 0,
             y: 0
         }),
         [U, G] = i.useState(null),
         [V, k] = i.useState(!1),
-        { analyticsLocations: F } = (0, o.ZP)(u.Z.IMAGE_CROPPING_MODAL),
+        { analyticsLocations: F } = (0, u.ZP)(o.Z.IMAGE_CROPPING_MODAL),
         H = i.useRef({
             x: 0,
             y: 0
@@ -53,9 +53,9 @@ t.default = (e) => {
                 N &&
                 A.default.track(C.rMx.OPEN_MODAL, {
                     type: C.jXE.CROP_GIF_MODAL,
-                    location: { page: x }
+                    location: { page: v }
                 });
-        }, [N, x, J]);
+        }, [N, v, J]);
     let K = () => {
             switch (L) {
                 case g.pC.BANNER:
@@ -95,7 +95,7 @@ t.default = (e) => {
             [z]
         ),
         Y = i.useCallback(() => {
-            if (null == z.current || B > 1) return;
+            if (null == z.current || P > 1) return;
             let { width: e, height: t } = z.current.getBoundingClientRect(),
                 { width: n, height: r } = (0, E.Es)(L, e, t),
                 i = (0, E.AK)(L, n, r, t);
@@ -104,19 +104,19 @@ t.default = (e) => {
                 height: r
             }),
                 O(i),
-                T((0, E.kH)(n, r, i));
-        }, [L, B]),
+                y((0, E.kH)(n, r, i));
+        }, [L, P]),
         W = i.useCallback(
             (e) => {
                 let { x: t, y: n } = H.current;
-                if (!y || (e.clientX === t && e.clientY === n)) return;
-                let r = e.clientX - b.x;
-                X(r, e.clientY - b.y, D);
+                if (!T || (e.clientX === t && e.clientY === n)) return;
+                let r = e.clientX - S.x;
+                X(r, e.clientY - S.y, D);
             },
-            [D, y, b, X]
+            [D, T, S, X]
         ),
         $ = () => {
-            P(!1);
+            b(!1);
         },
         q = () => {
             let e = K();
@@ -130,13 +130,13 @@ t.default = (e) => {
                 r = K();
             if (J)
                 try {
-                    let { result: i, cancelFn: a } = await (0, E.$p)(t, n, v, H.current, r);
+                    let { result: i, cancelFn: a } = await (0, E.$p)(t, n, x, H.current, r);
                     (Z.current = a), (e = await i), (Z.current = null);
                 } catch (e) {
                     var i;
                     throw (null === (i = Z.current) || void 0 === i || i.call(Z), (Z.current = null), Error('Error cropping GIF'));
                 }
-            else e = (0, s.PT)(n, v, H.current, r);
+            else e = (0, s.PT)(n, x, H.current, r);
             await _(e, t), k(!1), I();
         };
     i.useEffect(
@@ -156,10 +156,10 @@ t.default = (e) => {
             []
         ),
         i.useEffect(() => {
-            if (y) return window.addEventListener('mousemove', W), () => window.removeEventListener('mousemove', W);
-        }, [W, y]);
+            if (T) return window.addEventListener('mousemove', W), () => window.removeEventListener('mousemove', W);
+        }, [W, T]);
     let ee = (0, h.M)('ImageCroppingModal');
-    return (0, r.jsx)(o.Gt, {
+    return (0, r.jsx)(u.Gt, {
         value: F,
         children: (0, r.jsxs)(l.ModalRoot, {
             onAnimationEnd: Y,
@@ -170,7 +170,7 @@ t.default = (e) => {
                     !ee &&
                     (0, r.jsx)(c.Z, {
                         type: L,
-                        analyticsPage: x,
+                        analyticsPage: v,
                         analyticsSection: C.jXE.CROP_GIF_MODAL,
                         isGIF: J,
                         banner: n
@@ -196,11 +196,11 @@ t.default = (e) => {
                                         ...(() => {
                                             if (null == U) return {};
                                             let e = U.width / U.height,
-                                                t = q() && e > g.MY ? v.height / U.height : 1;
+                                                t = q() && e > g.MY ? x.height / U.height : 1;
                                             return {
-                                                width: U.width * B * t,
-                                                minWidth: U.width * B * t,
-                                                height: U.height * B * t
+                                                width: U.width * P * t,
+                                                minWidth: U.width * P * t,
+                                                height: U.height * P * t
                                             };
                                         })()
                                     },
@@ -214,7 +214,7 @@ t.default = (e) => {
                                             x: t,
                                             y: e.clientY - H.current.y
                                         }),
-                                            P(!0);
+                                            b(!0);
                                     },
                                     draggable: !1
                                 }),
@@ -222,8 +222,8 @@ t.default = (e) => {
                                     className: L === g.pC.AVATAR ? R.overlayAvatar : R.overlayBanner,
                                     style: {
                                         opacity: null == U ? 0 : 1,
-                                        width: v.width,
-                                        height: v.height
+                                        width: x.width,
+                                        height: x.height
                                     }
                                 })
                             ]
@@ -244,9 +244,9 @@ t.default = (e) => {
                                     asValueChanges: (e) => {
                                         if (null == U) return;
                                         let { width: t, height: n } = U,
-                                            r = (0, E.kH)(t * e, n * e, v),
+                                            r = (0, E.kH)(t * e, n * e, x),
                                             { x: i, y: s } = H.current;
-                                        (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && X(i, s, r), S(e), T(r);
+                                        (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(s, r.top, r.bottom)) && X(i, s, r), B(e), y(r);
                                     },
                                     disabled: V,
                                     equidistant: !0,
@@ -267,9 +267,9 @@ t.default = (e) => {
                             (0, r.jsx)('div', {
                                 children: (0, r.jsx)(d.p, {
                                     showUpsell: !0,
-                                    upsellText: 'Wear GIFs with Nitro',
-                                    ctaText: w.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA,
-                                    ctaAnalyticsObject: { section: C.jXE.EMOJI_PICKER_FLOATING_UPSELL },
+                                    text: 'Wear GIFs with Nitro',
+                                    button: w.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA,
+                                    buttonAnalyticsObject: { section: C.jXE.EMOJI_PICKER_FLOATING_UPSELL },
                                     position: 'inline',
                                     className: R.nitroUpsell,
                                     showShadow: !1

@@ -150,7 +150,7 @@ let P = (e) => {
     v = () => {
         let e = M(),
             [t, n] = s.useState(P(e)),
-            a = (0, N.c)({ location: 'Home' });
+            a = (0, N.cG)({ location: 'Home' });
         s.useEffect(() => {
             if (!1 !== a) n(P(e));
         }, [e, a]);
@@ -160,7 +160,7 @@ let P = (e) => {
     L = () => {
         var e;
         let t = null === (e = M()) || void 0 === e ? void 0 : e.nitroTenureStatus,
-            n = (0, N.c)({ location: 'Home' }) && null != t && t === S.EB.REDEEMABLE,
+            n = (0, N.cG)({ location: 'Home' }) && null != t && t === S.EB.REDEEMABLE,
             [s] = (0, u.US)(n ? [l.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
         return !!n && s === l.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     },

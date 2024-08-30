@@ -140,11 +140,11 @@ s.Z = function (e) {
         B = null != _ ? (0, d.G)(_, P) : 0,
         U = Math.max(0, B - L.length),
         G = Z > B,
-        F = B === i.length,
-        y = F ? U : 1,
+        y = B === i.length,
+        F = y ? U : 1,
         V = a.useMemo(() => {
             let e = [];
-            for (let s = 0; s < y; s++)
+            for (let s = 0; s < F; s++)
                 e.push(
                     (0, n.jsx)(
                         g.Z,
@@ -156,13 +156,13 @@ s.Z = function (e) {
                     )
                 );
             return e;
-        }, [y, A]),
+        }, [F, A]),
         w = null != P,
         k = a.useMemo(() => b.find((e) => e.isAvailable()), [b]);
     if (0 === b.length) return null;
     let Y = b.length;
-    if (((s = F ? (1 === Y && w ? x.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (j ? x.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : x.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({ numUnappliedGuildBoostSlots: Y })) : (j ? x.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : x.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({ numUnappliedGuildBoostSlots: Y })), C.ZP.isPremium(h))) {
-        if (F && 1 === Y && w) t = P.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? x.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : x.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
+    if (((s = y ? (1 === Y && w ? x.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_TITLE : (j ? x.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : x.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_INCLUDED_WITH_SUBSCRIPTION).format({ numUnappliedGuildBoostSlots: Y })) : (j ? x.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOSTS_ALL_COOLDOWN : x.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_UNAPPLIED_GUILD_BOOST_HEADING_V2).format({ numUnappliedGuildBoostSlots: Y })), C.ZP.isPremium(h))) {
+        if (y && 1 === Y && w) t = P.skuId === p.Ft.FREE_GUILD_BOOST_1_MONTH ? x.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_1_MONTH_VARIANT : x.Z.Messages.SINGLE_UNUSED_GUILD_BOOST_NITRO_REWARD_SUBTITLE_3_MONTHS_VARIANT;
         else {
             let e = (e, s) =>
                 (0, n.jsx)(
@@ -270,7 +270,7 @@ s.Z = function (e) {
                             })
                         ]
                     }),
-                    (!F || v) &&
+                    (!y || v) &&
                         (0, n.jsx)('ul', {
                             className: R.unappliedBoostSlots,
                             children: b.map((e) =>

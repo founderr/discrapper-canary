@@ -108,8 +108,8 @@ function L(e) {
     let { quest: n, isHovering: i, errorHints: a, warningHints: l, onCtxMenuClose: c, onCtxMenuOpen: h, onCtxMenuSelect: T } = e,
         C = (0, p.j8)(n),
         L = (0, E.ZP)(),
-        O = (0, u.wj)(L) ? N.BRd.DARK : N.BRd.LIGHT,
-        R = O === N.BRd.DARK,
+        R = (0, u.wj)(L) ? N.BRd.DARK : N.BRd.LIGHT,
+        O = R === N.BRd.DARK,
         x = r.useMemo(() => (0, p.nP)(n.config.assets.hero), [n]),
         b = r.useContext(d.S).reducedMotion.enabled,
         P = (0, p.Mi)(n, g.jn.GIFT_INVENTORY_FOR_YOU),
@@ -171,8 +171,8 @@ function L(e) {
                 }),
                 (0, s.jsx)('div', {
                     className: o()(v.overlay, {
-                        [v.darkThemeGradient]: R,
-                        [v.lightThemeGradient]: !R
+                        [v.darkThemeGradient]: O,
+                        [v.lightThemeGradient]: !O
                     })
                 }),
                 (0, s.jsxs)('div', {
@@ -226,7 +226,7 @@ function L(e) {
                                             ref: e,
                                             className: v.partnerBranding,
                                             alt: n.config.messages.gameTitle,
-                                            src: (0, p.Gs)(n, O)
+                                            src: (0, p.Gs)(n, R)
                                         })
                                 }),
                                 (0, s.jsxs)('div', {

@@ -57,7 +57,7 @@ let N = (0, _.kt)({
         }
     };
 function v(e) {
-    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, onInteraction: S, setPopoutRef: v, modalKey: C, setInteractionToastShown: y, setInteractionSent: D, setIsReplyInteraction: L, onClose: b } = e,
+    let { user: t, guildId: n, channelId: a, profileType: o, sourceType: _, sourceDetails: E, onInteraction: S, setPopoutRef: v, modalKey: C, setInteractionToastShown: y, setInteractionSent: L, setIsReplyInteraction: D, onClose: b } = e,
         { trackUserProfileAction: M } = (0, p.KZ)(),
         { sendReply: P } = (0, I.Q)(_),
         [U, w] = i.useState(''),
@@ -76,8 +76,8 @@ function v(e) {
                 sourceType: _,
                 sourceDetails: E
             });
-            L(!0),
-                D(!1),
+            D(!0),
+                L(!1),
                 y(!0),
                 await (0, m.Z)({
                     userId: t.id,
@@ -86,7 +86,7 @@ function v(e) {
                     openChannel: !1,
                     whenReady: !1
                 }),
-                D(!0),
+                L(!0),
                 setTimeout(() => {
                     y(!1);
                 }, T._);

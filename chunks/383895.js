@@ -1,14 +1,14 @@
-var s = n(735250),
+var t = n(735250),
     r = n(470079),
-    t = n(120356),
-    o = n.n(t),
+    s = n(120356),
+    o = n.n(s),
     i = n(442837),
     l = n(481060),
     c = n(178762),
-    _ = n(91140),
-    E = n(297781),
-    d = n(592125),
-    u = n(944486),
+    d = n(91140),
+    u = n(297781),
+    _ = n(592125),
+    E = n(944486),
     I = n(594174),
     A = n(5192),
     m = n(810568),
@@ -16,8 +16,8 @@ var s = n(735250),
     N = n(255341),
     O = n(707443);
 a.Z = (e) => {
-    let { entry: a, viewId: n, onClose: t } = e,
-        R = (0, i.e7)([u.Z, d.Z], () => d.Z.getChannel(u.Z.getChannelId())),
+    let { entry: a, viewId: n, onClose: s } = e,
+        R = (0, i.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
         p = (0, i.e7)([I.default], () => I.default.getUser(a.author_id)),
         { nick: g, avatar: P } = r.useMemo(() => {
             let e = null == p ? void 0 : p.getAvatarURL(null == R ? void 0 : R.guild_id, 48, !1);
@@ -28,11 +28,11 @@ a.Z = (e) => {
         }, [p, R]);
     return null == p
         ? null
-        : (0, s.jsx)(l.Popout, {
+        : (0, t.jsx)(l.Popout, {
               position: 'right',
               renderPopout: (e) => {
                   let { closePopout: r, updatePosition: o } = e;
-                  return (0, s.jsx)(c.J, {
+                  return (0, t.jsx)(c.J, {
                       entry: a,
                       closePopout: r,
                       updatePopoutPosition: o,
@@ -44,7 +44,7 @@ a.Z = (e) => {
                               recipientUserId: a.author_id,
                               viewId: n
                           }),
-                              t(),
+                              s(),
                               r();
                       },
                       disableGameProfileLinks: !0
@@ -61,44 +61,44 @@ a.Z = (e) => {
                   });
               },
               children: (e) =>
-                  (0, s.jsx)(l.Clickable, {
+                  (0, t.jsx)(l.Clickable, {
                       ...e,
                       className: N.profileEntryCard,
-                      children: (0, s.jsx)(l.FocusRing, {
+                      children: (0, t.jsx)(l.FocusRing, {
                           offset: {
                               top: 4,
                               bottom: 4,
                               left: 4,
                               right: 4
                           },
-                          children: (0, s.jsxs)(s.Fragment, {
+                          children: (0, t.jsxs)(t.Fragment, {
                               children: [
-                                  (0, s.jsx)('img', {
+                                  (0, t.jsx)('img', {
                                       className: N.avatar,
                                       src: P,
                                       alt: T.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: g })
                                   }),
-                                  (0, s.jsx)('div', {
+                                  (0, t.jsx)('div', {
                                       className: o()(N.playerInfo),
-                                      children: (0, s.jsxs)('div', {
+                                      children: (0, t.jsxs)('div', {
                                           className: o()(O.column, O.gapXs),
                                           children: [
-                                              (0, s.jsx)(l.Text, {
+                                              (0, t.jsx)(l.Text, {
                                                   variant: 'text-md/medium',
                                                   color: 'text-primary',
                                                   lineClamp: 1,
                                                   children: g
                                               }),
-                                              (0, s.jsx)(E.Gk, {
-                                                  location: E.Gt.GAME_PROFILE,
-                                                  children: _.W.map((e, n) => (0, s.jsx)(e, { entry: a }, n))
+                                              (0, t.jsx)(u.Gk, {
+                                                  location: u.Gt.GAME_PROFILE,
+                                                  children: d.W.map((e, n) => (0, t.jsx)(e, { entry: a }, n))
                                               })
                                           ]
                                       })
                                   }),
-                                  (0, s.jsx)('div', {
+                                  (0, t.jsx)('div', {
                                       className: N.reactions,
-                                      children: (0, s.jsx)(l.ArrowAngleLeftUpIcon, {})
+                                      children: (0, t.jsx)(l.ArrowAngleLeftUpIcon, {})
                                   })
                               ]
                           })

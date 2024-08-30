@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(121711),
     Z = n(703656),
     L = n(108427),
-    O = n(706454),
-    R = n(210887),
+    R = n(706454),
+    O = n(210887),
     x = n(480294),
     b = n(683301),
     P = n(430824),
@@ -420,10 +420,10 @@ class J extends a.PureComponent {
             });
     }
 }
-let $ = _.ZP.connectStores([R.Z, O.default, M.Z, x.Z, b.ZP, G.Z, P.Z], () => {
+let $ = _.ZP.connectStores([O.Z, R.default, M.Z, x.Z, b.ZP, G.Z, P.Z], () => {
     var e;
     let t = Y.dU,
-        n = O.default.locale,
+        n = R.default.locale,
         i = null !== (e = o().find(t, { code: n })) && void 0 !== e ? e : t[0],
         a = Object.keys(M.Z.applicationStatistics),
         s = x.Z.hasConsented(W.pjP.PERSONALIZATION) && a.length > 0,
@@ -439,7 +439,7 @@ let $ = _.ZP.connectStores([R.Z, O.default, M.Z, x.Z, b.ZP, G.Z, P.Z], () => {
         currentCategoryName: G.Z.getCategoryName(r),
         categories: G.Z.getDiscoveryCategories(),
         userGuilds: P.Z.getGuilds(),
-        theme: R.Z.theme,
+        theme: O.Z.theme,
         mightHaveGamesYouPlay: s,
         availableLanguages: t,
         defaultLanguage: i

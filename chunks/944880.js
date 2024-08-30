@@ -37,7 +37,7 @@ function g() {
         null != s && a.Z.dispatch({ type: 'USER_TENURE_REWARD_STATUS_RESET' });
         return;
     }
-    if (!!(0, _.d)({ location: 'tenure_reward_manager' }))
+    if (!!(0, _.dR)({ location: 'tenure_reward_manager' }))
         if (
             (!0 === e ||
                 (function (e) {

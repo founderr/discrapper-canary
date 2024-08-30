@@ -64,15 +64,15 @@ s.Z = function () {
             gift: 'true'
         }),
         U = 'true' !== j.gift && null != D,
-        [G, F] = a.useState(P.length > 0 ? P[0].value : null),
-        { analyticsLocations: y } = (0, _.ZP)(u.Z.PAYMENT_FLOW_TEST_PAGE),
+        [G, y] = a.useState(P.length > 0 ? P[0].value : null),
+        { analyticsLocations: F } = (0, _.ZP)(u.Z.PAYMENT_FLOW_TEST_PAGE),
         [V, w] = a.useState(''),
         [k, Y] = a.useState(x.lds),
         [H, W] = a.useState(''),
         [K, z] = a.useState(x.lds),
         [Q, X] = a.useState(x.lds);
     return (0, n.jsx)(_.Gt, {
-        value: y,
+        value: F,
         children: (0, n.jsxs)(o.FormSection, {
             title: 'Payment Flow Modals',
             tag: o.FormTitleTags.H1,
@@ -141,7 +141,7 @@ s.Z = function () {
                             onClick: () =>
                                 (0, C.Z)({
                                     subscriptionTier: t,
-                                    analyticsLocations: y
+                                    analyticsLocations: F
                                 }),
                             children: 'Select Plan'
                         })
@@ -277,7 +277,7 @@ s.Z = function () {
                         (0, n.jsx)(o.SingleSelect, {
                             value: G,
                             options: P,
-                            onChange: (e) => F(e)
+                            onChange: (e) => y(e)
                         })
                     ]
                 }),
@@ -334,7 +334,7 @@ s.Z = function () {
                                 (0, g.Z)({
                                     applicationId: H,
                                     skuId: K,
-                                    analyticsLocations: y
+                                    analyticsLocations: F
                                 }),
                             children: 'Open Standard Payment Modal for SKU'
                         })
@@ -354,7 +354,7 @@ s.Z = function () {
                             onClick: () =>
                                 (0, m.Z)({
                                     skuId: Q,
-                                    analyticsLocations: y
+                                    analyticsLocations: F
                                 }),
                             children: 'Open Collectibles Payment Modal for SKU'
                         })

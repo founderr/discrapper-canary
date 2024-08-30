@@ -1,49 +1,49 @@
-t.d(e, {
+n.d(t, {
     Z: function () {
-        return d;
+        return u;
     }
 });
-var i = t(735250);
-t(470079);
-var l = t(481060),
-    r = t(424602),
-    o = t(397698),
-    a = t(776862),
-    u = t(701488),
-    c = t(981631);
-function d(n) {
-    let { channel: e, guildId: d, locationObject: s, openInPopout: C, initialSelectedApplicationId: h, initialSlide: f = u.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: v, opensAppLauncherModal: _ = !1 } = n,
-        m = v.length > 0 ? v[v.length - 1] : 'open-activity-shelf',
-        { enabled: x } = r.m1.getCurrentConfig({ location: m }, { autoTrackExposure: !1 });
-    if (_ && x) {
-        null != e &&
-            (0, o.Z)({
-                openInPopout: C,
-                channel: e,
-                analyticsLocation: m
+var i = n(735250);
+n(470079);
+var a = n(481060),
+    s = n(424602),
+    r = n(397698),
+    l = n(776862),
+    o = n(701488),
+    c = n(981631);
+function u(e) {
+    let { channel: t, guildId: u, locationObject: d, openInPopout: _, initialSelectedApplicationId: E, initialSlide: I = o.ag.DIRECTORY, enableSelectedTextChannelInvite: m = !1, analyticsLocations: T, opensAppLauncherModal: h = !1 } = e,
+        N = T.length > 0 ? T[T.length - 1] : 'open-activity-shelf',
+        { enabled: f } = s.m1.getCurrentConfig({ location: N }, { autoTrackExposure: !1 });
+    if (h && f) {
+        null != t &&
+            (0, r.Z)({
+                openInPopout: _,
+                channel: t,
+                analyticsLocation: N
             });
         return;
     }
-    C && (0, a.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-    let E = C ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
-    return (0, l.openModalLazy)(
+    _ && (0, l.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
+    let C = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+    return (0, a.openModalLazy)(
         async () => {
-            let { default: n } = await Promise.all([t.e('36036'), t.e('64430')]).then(t.bind(t, 471840));
-            return (t) =>
-                (0, i.jsx)(n, {
-                    ...t,
-                    channel: e,
-                    guildId: d,
-                    locationObject: s,
-                    initialSlide: f,
-                    initialSelectedApplicationId: h,
-                    enableSelectedTextChannelInvite: p,
-                    analyticsLocations: v
+            let { default: e } = await Promise.all([n.e('36036'), n.e('64430')]).then(n.bind(n, 471840));
+            return (n) =>
+                (0, i.jsx)(e, {
+                    ...n,
+                    channel: t,
+                    guildId: u,
+                    locationObject: d,
+                    initialSlide: I,
+                    initialSelectedApplicationId: E,
+                    enableSelectedTextChannelInvite: m,
+                    analyticsLocations: T
                 });
         },
         {
-            modalKey: u.AC,
-            contextKey: E
+            modalKey: o.AC,
+            contextKey: C
         }
     );
 }

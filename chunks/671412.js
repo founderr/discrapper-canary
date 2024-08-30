@@ -30,7 +30,7 @@ var r = n(735250),
     v = n(234328);
 let C = p.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
 function y(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: p, profileType: y, animateOnHover: D, onOpenProfile: L, isInteractionSource: b, onInteraction: M, showReplyPopout: P = !1, setInteractionToastShown: U, setInteractionSent: w, setIsReplyInteraction: x } = e,
+    let { user: t, displayProfile: n, guildId: a, channelId: p, profileType: y, animateOnHover: L, onOpenProfile: D, isInteractionSource: b, onInteraction: M, showReplyPopout: P = !1, setInteractionToastShown: U, setInteractionSent: w, setIsReplyInteraction: x } = e,
         { theme: G } = (0, S.z)(),
         { analyticsLocations: k } = (0, d.ZP)(c.Z.AVATAR),
         { trackUserProfileAction: B } = (0, I.KZ)(),
@@ -70,14 +70,14 @@ function y(e) {
             user: t,
             guildId: null != n ? n.guildId : a,
             size: q,
-            animateOnHover: D
+            animateOnHover: L
         }),
         ee = (0, r.jsx)(C, {
             src: $,
             avatarDecoration: X,
             size: q,
             'aria-label': t.username,
-            imageClassName: null != L ? v.overlay : void 0,
+            imageClassName: null != D ? v.overlay : void 0,
             status: H ? O.Skl.UNKNOWN : K,
             statusBackdropColor: V && !H ? (0, l.getStatusBackdropColor)(G) : void 0,
             isMobile: z,
@@ -85,7 +85,7 @@ function y(e) {
             statusTooltipDelay: N.vB
         }),
         et = () =>
-            null == L
+            null == D
                 ? (0, r.jsx)('div', {
                       ...J,
                       children: ee
@@ -97,7 +97,7 @@ function y(e) {
                               action: 'PRESS_VIEW_PROFILE',
                               analyticsLocations: k
                           }),
-                              null == L || L();
+                              null == D || D();
                       },
                       className: v.clickable,
                       focusProps: { ringClassName: v.focusRing },

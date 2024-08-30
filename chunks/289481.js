@@ -99,7 +99,7 @@ let R = a.memo(function (e) {
                 mentionCount: t.mentionCount,
                 toggleCollapsed: r,
                 channelState: t,
-                children: [(0, i.jsx)(h.Z, { channel: l }), (0, i.jsx)(x, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(O, { ...e })]
+                children: [(0, i.jsx)(h.Z, { channel: l }), (0, i.jsx)(O, { ...e }), 'nsfw' === t.type ? null : (0, i.jsx)(x, { ...e })]
             }),
             children: t.collapsed
                 ? null
@@ -119,7 +119,7 @@ let R = a.memo(function (e) {
         })
     });
 });
-function x(e) {
+function O(e) {
     let { channel: t, markChannelRead: n, markGuildRead: a, getNumUnreadChannels: s } = e,
         r = (0, E.Z)() && null != t.guildId;
     return (0, i.jsx)(c.CircleIconButton, {
@@ -146,7 +146,7 @@ function x(e) {
         }
     });
 }
-function O(e) {
+function x(e) {
     let { channel: t, toggle: n, getNumUnreadChannels: a } = e;
     function s() {
         n(t),

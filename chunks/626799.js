@@ -28,7 +28,7 @@ var i,
     S = n(981631),
     A = n(689938),
     R = n(805123);
-function x(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,7 +41,7 @@ function x(e, t, n) {
         e
     );
 }
-class O extends (i = s.Component) {
+class x extends (i = s.Component) {
     get analyticsLocation() {
         let {
             analyticsContext: { location: e },
@@ -88,20 +88,20 @@ class O extends (i = s.Component) {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'state', {
+            O(this, 'state', {
                 playing: !1,
                 muted: !0
             }),
-            x(this, 'handleToggleMute', () => {
+            O(this, 'handleToggleMute', () => {
                 this.setState({ muted: !this.state.muted });
             }),
-            x(this, 'handleMouseEnter', () => {
+            O(this, 'handleMouseEnter', () => {
                 this.setState({ playing: !0 });
             }),
-            x(this, 'handleMouseLeave', () => {
+            O(this, 'handleMouseLeave', () => {
                 this.setState({ playing: !1 });
             }),
-            x(this, 'getStoreListingLocation', () => {
+            O(this, 'getStoreListingLocation', () => {
                 let { sku: e } = this.props;
                 if (null == e) throw Error('Should not be link to ApplicationStoreListing without SKU');
                 return (0, g.ZI)(e.id, {
@@ -109,13 +109,13 @@ class O extends (i = s.Component) {
                     analyticsSource: this.analyticsLocation
                 });
             }),
-            x(this, 'handleActionButtonClick', (e) => e.preventDefault()),
-            x(this, 'handleBuyButtonClick', (e) => e.preventDefault()),
-            x(this, 'handleLinkClick', (e) => {
+            O(this, 'handleActionButtonClick', (e) => e.preventDefault()),
+            O(this, 'handleBuyButtonClick', (e) => e.preventDefault()),
+            O(this, 'handleLinkClick', (e) => {
                 let { onEmbedClick: t } = this.props;
                 null != t && t(e);
             }),
-            x(this, 'renderApplicationTile', (e, t) => {
+            O(this, 'renderApplicationTile', (e, t) => {
                 let { inLibrary: n, width: i, renderCustomTitle: s, renderCustomTagline: r, renderCustomMedia: l } = this.props,
                     { playing: o, muted: c } = this.state,
                     u = i > I.aL;
@@ -134,7 +134,7 @@ class O extends (i = s.Component) {
                     isEmbed: !0
                 });
             }),
-            x(this, 'renderActions', (e) => {
+            O(this, 'renderActions', (e) => {
                 let { inLibrary: t, application: n, skuId: i, libraryApplication: s, renderCustomActions: r } = this.props;
                 if (null != r)
                     return (0, a.jsx)('div', {
@@ -169,7 +169,7 @@ class O extends (i = s.Component) {
             });
     }
 }
-x(O, 'defaultProps', { renderFallback: S.dG4 });
+O(x, 'defaultProps', { renderFallback: S.dG4 });
 let M = [C.Z, f.Z, N.Z, p.Z];
 function v(e) {
     let { skuId: t } = e,
@@ -184,6 +184,6 @@ function v(e) {
         libraryApplication: null != n ? N.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }
-let L = (0, T.Z)((0, m.Z)(O));
+let L = (0, T.Z)((0, m.Z)(x));
 t.Z = l.ZP.connectStores(M, v)(L);
-let Z = (0, m.Z)(l.ZP.connectStores(M, v)(O));
+let Z = (0, m.Z)(l.ZP.connectStores(M, v)(x));

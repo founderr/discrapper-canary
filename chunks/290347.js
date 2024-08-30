@@ -72,7 +72,7 @@ let N = [],
         });
     };
 function Z(e) {
-    let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: Z, modalTopExtra: L, header: O, headerClassName: R, subHeader: x, subHeaderExtra: b, featureCards: P, changeLogId: M, button: D, body: y } = e,
+    let { className: t, renderModalProps: n, heroArt: s, heroArtClassName: A, modalDismissibleContent: Z, modalTopExtra: L, header: R, headerClassName: O, subHeader: x, subHeaderExtra: b, featureCards: P, changeLogId: M, button: D, body: y } = e,
         { onClose: j, transitionState: U } = n,
         G = (0, h.Dt)(),
         w = P.length % 2 == 0,
@@ -181,8 +181,8 @@ function Z(e) {
                     children: [
                         (0, i.jsx)(c.Heading, {
                             variant: 'display-md',
-                            className: r()(C.headerText, R),
-                            children: O
+                            className: r()(C.headerText, O),
+                            children: R
                         }),
                         'video' === s.type
                             ? (0, i.jsx)(E.Z, {

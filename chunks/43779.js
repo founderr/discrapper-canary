@@ -25,8 +25,8 @@ let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function C(e) {
     var t, n, s;
     let { quest: C, questContent: N, isHovering: A, contentPosition: v, rowIndex: Z, onReceiveErrorHints: L } = e,
-        O = h.r.build(C.config).defaultReward.messages.name,
-        R = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+        R = h.r.build(C.config).defaultReward.messages.name,
+        O = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: x, scrollHeight: b } = (0, d.Z)(),
         P = 104 !== b,
         { expansionSpring: M } = (0, c.useSpring)({
@@ -47,9 +47,9 @@ function C(e) {
                     color: 'text-normal',
                     tag: 'span',
                     className: f.header,
-                    children: O
+                    children: R
                 }),
-            [O]
+            [R]
         ),
         k = a.useMemo(() => (y ? w() : T.Z.Messages.QUESTS_CLAIM_THE_REWARD_HOOK.format({ rewardHook: w })), [y, w]),
         B = a.useMemo(() => {
@@ -75,7 +75,7 @@ function C(e) {
                         className: f.assetWrapper,
                         children: [
                             !y && D && (0, i.jsx)('div', { className: f.completionAnimation }),
-                            R && !y
+                            O && !y
                                 ? (0, i.jsxs)('div', {
                                       className: f.progressWrapper,
                                       children: [

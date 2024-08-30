@@ -29,8 +29,8 @@ var a = n(613828),
     S = n(122613),
     A = n(147865),
     R = n(778569),
-    x = n(884338),
-    O = n(403404),
+    O = n(884338),
+    x = n(403404),
     M = n(701488),
     v = n(981631),
     L = n(689938),
@@ -89,7 +89,7 @@ function b(e) {
                         : t();
                 }
             } else
-                (0, O.Z)({
+                (0, x.Z)({
                     guildId: k,
                     locationObject: U.location,
                     openInPopout: Q,
@@ -139,7 +139,7 @@ function b(e) {
                                       K.length > 0
                                           ? (0, i.jsx)('div', {
                                                 className: Z.avatars,
-                                                children: (0, i.jsx)(x.Z, {
+                                                children: (0, i.jsx)(O.Z, {
                                                     guildId: k,
                                                     users: K,
                                                     max: 4

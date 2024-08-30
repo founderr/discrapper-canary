@@ -1,53 +1,53 @@
 var r,
     i,
-    o,
-    c,
-    a = n(442837),
-    l = n(570140),
-    u = n(358085),
+    u,
+    l,
+    o = n(442837),
+    c = n(570140),
+    a = n(358085),
     s = n(998502),
     d = n(869614),
     f = n(281083),
-    _ = n(672598);
-let p = !1,
-    m = !0,
-    g = !1;
-class h extends (c = a.ZP.Store) {
+    E = n(672598);
+let v = !1,
+    p = !0,
+    S = !1;
+class P extends (l = o.ZP.Store) {
     initialize() {
-        !(!u.isPlatformEmbedded || __OVERLAY__) &&
+        !(!a.isPlatformEmbedded || __OVERLAY__) &&
             s.ZP.getGPUDriverVersions().then((e) => {
-                (p = (0, _.Z)(e)), (m = (0, d.Z)(e)), (g = (0, f.Z)(e)), this.emitChange();
+                (v = (0, E.Z)(e)), (p = (0, d.Z)(e)), (S = (0, f.Z)(e)), this.emitChange();
             });
     }
     get GPUDriversOutdated() {
-        return p;
+        return v;
     }
     get canUseHardwareAcceleration() {
-        return m;
+        return p;
     }
     get problematicGPUDriver() {
-        return g;
+        return S;
     }
     getState() {
         return {
-            GPUDriversOutdated: p,
-            canUseHardwareAcceleration: m,
-            problematicGPUDriver: g
+            GPUDriversOutdated: v,
+            canUseHardwareAcceleration: p,
+            problematicGPUDriver: S
         };
     }
 }
-(o = 'StreamingCapabilitiesStore'),
-    (i = 'displayName') in (r = h)
+(u = 'StreamingCapabilitiesStore'),
+    (i = 'displayName') in (r = P)
         ? Object.defineProperty(r, i, {
-              value: o,
+              value: u,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[i] = o),
-    (t.Z = new h(l.Z, {
+        : (r[i] = u),
+    (t.Z = new P(c.Z, {
         OVERLAY_INITIALIZE: function (e) {
             let { streamingCapabilitiesStoreState: t } = e;
-            (p = t.GPUDriversOutdated), (m = t.canUseHardwareAcceleration);
+            (v = t.GPUDriversOutdated), (p = t.canUseHardwareAcceleration);
         }
     }));

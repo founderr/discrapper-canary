@@ -8,8 +8,8 @@ var r = n(735250),
 let u = i.memo(
     i.forwardRef((e, t) => {
         let { onScroll: n, onResize: a, listPadding: u = [0, 0, 0, 0], renderRow: c, renderSection: d, renderSectionHeader: _, renderSectionFooter: E, renderListHeader: f, rowCount: h, rowCountBySection: p, rowHeight: I, sectionMarginBottom: m, sectionHeaderHeight: T, sectionFooterHeight: g, listHeaderHeight: S, stickyHeaders: A = !1, className: N, hideScrollbar: O = !1, fade: R = !1, initialScrollTop: v = 0, role: C = 'list' } = e,
-            [y, D] = i.useState(-1),
-            [L, b] = i.useState(-1),
+            [y, L] = i.useState(-1),
+            [D, b] = i.useState(-1),
             M = i.useRef(null),
             P = i.useRef(0),
             U = i.useRef(-1);
@@ -106,7 +106,7 @@ let u = i.memo(
             if (null == t) return;
             let { offsetWidth: n, offsetHeight: r, scrollTop: i } = t;
             b(r),
-                D(i),
+                L(i),
                 null == a ||
                     a({
                         width: n,
@@ -114,8 +114,8 @@ let u = i.memo(
                     });
         }, [a]);
         i.useLayoutEffect(() => {
-            -1 === L && j();
-        }, [L, j]),
+            -1 === D && j();
+        }, [D, j]),
             i.useEffect(() => {
                 var e;
                 let t = null === (e = M.current) || void 0 === e ? void 0 : e.getScrollerNode(),
@@ -131,7 +131,7 @@ let u = i.memo(
                 (window.cancelAnimationFrame(U.current),
                 (U.current = window.requestAnimationFrame(() => {
                     let { scrollTop: e } = t;
-                    (P.current = e), null == n || n(e), D(e);
+                    (P.current = e), null == n || n(e), L(e);
                 })));
         }, [n]);
         i.useImperativeHandle(
@@ -161,7 +161,7 @@ let u = i.memo(
                                 } = i,
                                 u = G(s),
                                 c = o - (A ? u : 0) - r <= P.current,
-                                d = l + r >= P.current + L;
+                                d = l + r >= P.current + D;
                             if (c) {
                                 let i = P.current + u - o,
                                     a = A ? P.current - i : o;
@@ -172,7 +172,7 @@ let u = i.memo(
                                         animate: n
                                     });
                             } else if (d) {
-                                let e = l - (P.current + L);
+                                let e = l - (P.current + D);
                                 null === (a = M.current) ||
                                     void 0 === a ||
                                     a.scrollTo({
@@ -198,7 +198,7 @@ let u = i.memo(
                         });
                 },
                 getListDimensions: () => ({
-                    height: L,
+                    height: D,
                     totalHeight: H
                 }),
                 getSectionDescriptors: () => F.current,
@@ -212,15 +212,15 @@ let u = i.memo(
                     return null === (t = M.current) || void 0 === t ? void 0 : t.scrollIntoViewNode({ node: e });
                 }
             }),
-            [G, A, H, L]
+            [G, A, H, D]
         );
         let { visibleItems: K, listOffset: z } = i.useMemo(() => {
-                if (-1 === L || -1 === y)
+                if (-1 === D || -1 === y)
                     return {
                         visibleItems: null,
                         listOffset: 0
                     };
-                let e = y + L,
+                let e = y + D,
                     t = 0,
                     n = u[0],
                     r = [],
@@ -267,7 +267,7 @@ let u = i.memo(
                     visibleItems: r,
                     listOffset: n
                 };
-            }, [x, k, G, B, u, c, d, E, _, y, Y, A, f, w, L]),
+            }, [x, k, G, B, u, c, d, E, _, y, Y, A, f, w, D]),
             q = i.useMemo(() => {
                 var e, t, n;
                 return {

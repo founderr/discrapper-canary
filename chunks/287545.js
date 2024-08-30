@@ -33,8 +33,8 @@ var i = n(772848),
     v = n(317381),
     C = n(969345),
     y = n(148720),
-    D = n(122613),
-    L = n(782769),
+    L = n(122613),
+    D = n(782769),
     b = n(761122),
     M = n(983695),
     P = n(917107),
@@ -131,8 +131,8 @@ async function H(e) {
         R = f.compositeInstanceId,
         y = null == O && (null == A ? void 0 : A.isVocal()) === !0 && (null == A ? void 0 : A.isPrivate()) === !1;
     if (null == R || y) return;
-    let D = (0, i.Z)(),
-        L = 'location' in f ? 2 : 1,
+    let L = (0, i.Z)(),
+        D = 'location' in f ? 2 : 1,
         b = null == A ? void 0 : A.getGuildId(),
         M = T.default.getCurrentUser();
     if (null == A || null == M) return;
@@ -148,10 +148,10 @@ async function H(e) {
         Z = null != O ? [O] : [],
         Y = {
             activitySessionId: R,
-            activityUserSessionId: D,
+            activityUserSessionId: L,
             launchId: f.launchId,
             mediaSessionIds: Z,
-            activitiesInfraVersion: L
+            activitiesInfraVersion: D
         };
     G[l] = Y;
     let j = k[l];
@@ -171,7 +171,7 @@ async function H(e) {
             activity_premium_tier_requirement: null == x ? void 0 : null === (t = x.activity) || void 0 === t ? void 0 : t.premium_tier_requirement,
             shelf_rank: null == x ? void 0 : null === (n = x.activity) || void 0 === n ? void 0 : n.shelf_rank,
             shelf_sorted_rank: F > 0 ? F : null,
-            activity_user_session_id: D,
+            activity_user_session_id: L,
             channel_type: A.type,
             source: null == j ? void 0 : j.source
         }),
@@ -183,12 +183,12 @@ async function H(e) {
             application_id: l,
             instance_id: f.launchId,
             initial_media_session_id: Z[0],
-            activity_user_session_id: D,
+            activity_user_session_id: L,
             raw_thermal_state: H,
             is_activity_start: _,
             shelf_rank: null == x ? void 0 : null === (r = x.activity) || void 0 === r ? void 0 : r.shelf_rank,
             shelf_sorted_rank: F > 0 ? F : null,
-            activities_infra_version: L
+            activities_infra_version: D
         });
 }
 function Z(e) {
@@ -306,7 +306,7 @@ class Y extends l.Z {
                 let c = v.ZP.getSelfEmbeddedActivityForChannel(i);
                 if ((null == c ? void 0 : c.applicationId) === a) return;
                 let d = await u.Z.fetchApplication(a);
-                if (!(0, L.a)(l)) {
+                if (!(0, D.a)(l)) {
                     this.showLaunchErrorModal(w.Z.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS);
                     return;
                 }
@@ -343,7 +343,7 @@ class Y extends l.Z {
                           analyticsLocations: s,
                           commandOrigin: o
                       })
-                    : await (0, D.Z)({
+                    : await (0, L.Z)({
                           targetApplicationId: a,
                           channelId: i,
                           analyticsLocations: s,

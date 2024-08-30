@@ -29,8 +29,8 @@ var i = n(735250),
     S = n(230711),
     A = n(726542),
     R = n(100527),
-    x = n(906732),
-    O = n(812206),
+    O = n(906732),
+    x = n(812206),
     M = n(391650),
     v = n(600164),
     L = n(605236),
@@ -119,7 +119,7 @@ let eC =
                   R = (0, o.e7)([et.Z], () => et.Z.getGuildId()),
                   eu = (0, o.e7)([es.Z], () => es.Z.getNotice()),
                   eC = (0, o.e7)([J.Z], () => J.Z.getGuild(R)),
-                  { analyticsLocations: ep } = (0, x.ZP)(),
+                  { analyticsLocations: ep } = (0, O.ZP)(),
                   eg = null == eu ? void 0 : eu.type,
                   eS = (0, B.J)(R);
               a.useEffect(() => {
@@ -159,15 +159,15 @@ let eC =
                   case ed.kVF.INVITED_TO_SPEAK:
                       return (0, i.jsx)(q.Z, {});
                   case ed.kVF.GUILD_RAID_NOTIFICATION:
-                      let { dismissUntil: ex } = eu.metadata;
-                      return (0, i.jsx)(D.Z, { onDismiss: () => ef(ex) });
-                  case ed.kVF.WIN32_DEPRECATED_MESSAGE:
                       let { dismissUntil: eO } = eu.metadata;
+                      return (0, i.jsx)(D.Z, { onDismiss: () => ef(eO) });
+                  case ed.kVF.WIN32_DEPRECATED_MESSAGE:
+                      let { dismissUntil: ex } = eu.metadata;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.WARNING,
                           children: [
                               (0, i.jsx)(c.NoticeCloseButton, {
-                                  onClick: () => ef(eO),
+                                  onClick: () => ef(ex),
                                   noticeType: ed.kVF.WIN32_DEPRECATED_MESSAGE
                               }),
                               em.Z.Messages.WINDOWS_32_BIT_DEPRECATED_WARNING.format({ helpCenterLink: el.Z.getArticleURL(ed.BhN.WIN32_DEPRECATE) })
@@ -415,7 +415,7 @@ let eC =
                       if (null == eu.metadata) return null;
                       let { skuId: eb, applicationId: eD } = eu.metadata,
                           ej = ei.Z.get(eb),
-                          eU = O.Z.getApplication(eD);
+                          eU = x.Z.getApplication(eD);
                       if (null == ej || null == eU) return null;
                       let ey = { page: ed.ZY5.IN_APP };
                       return (0, i.jsxs)(c.Notice, {
@@ -460,7 +460,7 @@ let eC =
                       if (null == eu.metadata) return null;
                       let { skuId: e, applicationId: t } = eu.metadata,
                           n = ei.Z.get(e),
-                          a = O.Z.getApplication(t);
+                          a = x.Z.getApplication(t);
                       if (null == n || null == a) return null;
                       return (0, i.jsxs)(c.Notice, {
                           color: c.NoticeColors.PREMIUM_TIER_1,
@@ -945,8 +945,8 @@ let eC =
           })
         : null;
 function ep() {
-    let { analyticsLocations: e } = (0, x.ZP)(R.Z.NOTICE);
-    return (0, i.jsx)(x.Gt, {
+    let { analyticsLocations: e } = (0, O.ZP)(R.Z.NOTICE);
+    return (0, i.jsx)(O.Gt, {
         value: e,
         children: (0, i.jsx)(eC, {})
     });

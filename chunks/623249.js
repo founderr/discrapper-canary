@@ -33,9 +33,9 @@ function C(e) {
     null == A && C();
     let [v, Z] = (0, a.useState)(n),
         L = (0, E.KX)(),
-        O = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        R = (0, g.g2)({
-            useReducedMotion: O,
+        R = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+        O = (0, g.g2)({
+            useReducedMotion: R,
             className: f.colorTransition
         }),
         x = v.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
@@ -45,7 +45,7 @@ function C(e) {
         { startConsoleQuest: D, startingConsoleQuest: y } = (0, E.GI)({
             questId: A.id,
             beforeRequest: () => {
-                R.startAnimation(),
+                O.startAnimation(),
                     (0, h._3)({
                         questId: A.id,
                         questContent: m.jn.CONNECTIONS_MODAL,
@@ -53,7 +53,7 @@ function C(e) {
                     });
             },
             afterRequest: (e) => {
-                R.stopAnimation(), Z(e);
+                O.stopAnimation(), Z(e);
             }
         });
     return (0, i.jsxs)(c.ModalRoot, {
@@ -110,7 +110,7 @@ function C(e) {
                                 className: r()(f.refreshWrapper, { [f.disabled]: y }),
                                 onClick: D,
                                 children: [
-                                    R.render(),
+                                    O.render(),
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'currentColor',

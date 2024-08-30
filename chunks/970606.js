@@ -9,7 +9,7 @@ n.d(t, {
         return G;
     },
     EK: function () {
-        return D;
+        return L;
     },
     GO: function () {
         return T;
@@ -30,7 +30,7 @@ n.d(t, {
         return N;
     },
     Pq: function () {
-        return L;
+        return D;
     },
     Q2: function () {
         return M;
@@ -222,7 +222,7 @@ function y(e) {
         location: n
     });
 }
-function D(e) {
+function L(e) {
     let { guildId: t, isMember: n, hasJoinRequest: r, affinity: i, index: a, position: s } = e;
     u.default.track(d.rMx.CLAN_DISCOVERY_CARD_CLICKED, {
         ...f(),
@@ -234,7 +234,7 @@ function D(e) {
         position: s
     });
 }
-function L(e) {
+function D(e) {
     u.default.track(d.rMx.MEMBER_VERIFICATION_APPLICATION_VIEWED, { guild_id: e });
 }
 function b(e) {

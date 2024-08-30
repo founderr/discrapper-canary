@@ -19,22 +19,22 @@ var a = n(735250),
     m = n(367907),
     v = n(565384),
     p = n(906732),
-    I = n(835473),
-    f = n(600164),
-    x = n(592125),
+    x = n(835473),
+    I = n(600164),
+    f = n(592125),
     _ = n(451478),
-    h = n(626135),
-    C = n(585483),
+    C = n(626135),
+    h = n(585483),
     T = n(624138),
     E = n(115130),
     S = n(566620),
-    b = n(421),
-    N = n(895395),
+    N = n(421),
+    b = n(895395),
     j = n(49978),
     A = n(427996),
     M = n(701488),
-    Z = n(981631),
-    y = n(689938),
+    y = n(981631),
+    Z = n(689938),
     D = n(226786),
     L = n(361205),
     O = n(812320);
@@ -45,12 +45,12 @@ function k(e) {
     let { channel: t, guildId: n, locationObject: l, onClose: c, initialSelectedApplicationId: g, initialSlide: _ = M.ag.DIRECTORY, enableSelectedTextChannelInvite: T, analyticsLocations: B, ...R } = e,
         k = (0, o.e7)([E.Z], () => E.Z.getIsEnabled(), []),
         { analyticsLocations: H } = (0, p.ZP)(B),
-        [F, U] = i.useState(_),
-        w = (0, u.Z)(F),
+        [F, w] = i.useState(_),
+        U = (0, u.Z)(F),
         [Y, G] = i.useState(null),
         [W, z] = i.useState(g),
         [q, J] = i.useState(void 0),
-        [K] = (0, I.Z)(null == W ? [] : [W]),
+        [K] = (0, x.Z)(null == W ? [] : [W]),
         X = i.useRef(null),
         $ = i.useMemo(
             () => ({
@@ -61,23 +61,23 @@ function k(e) {
             [l.section, W]
         );
     i.useEffect(() => {
-        if (F === M.ag.DIRECTORY && null != w && w !== M.ag.DIRECTORY && null != Y) {
+        if (F === M.ag.DIRECTORY && null != U && U !== M.ag.DIRECTORY && null != Y) {
             var e;
             null === (e = X.current) || void 0 === e || e.scrollTo({ top: Y });
         }
-    }, [Y, w, F]);
+    }, [Y, U, F]);
     let Q = i.useCallback((e) => {
             var t;
             let { applicationId: n } = e,
                 a = null === (t = X.current) || void 0 === t ? void 0 : t.scrollTop;
-            null != a && G(a), z(n), U(M.ag.SELECT_CHANNEL);
+            null != a && G(a), z(n), w(M.ag.SELECT_CHANNEL);
         }, []),
         ee = i.useCallback((e) => {
             let { applicationId: t } = e;
-            z(t), U(M.ag.DETAIL_PAGE);
+            z(t), w(M.ag.DETAIL_PAGE);
         }, []);
     i.useEffect(() => {
-        h.default.track(Z.rMx.OPEN_MODAL, {
+        C.default.track(y.rMx.OPEN_MODAL, {
             type: 'Activity Shelf',
             channel_id: null == t ? void 0 : t.id,
             guild_id: n
@@ -85,18 +85,18 @@ function k(e) {
     }, [t, n]),
         i.useEffect(
             () => (
-                C.S.subscribe(Z.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, Q),
+                h.S.subscribe(y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, Q),
                 () => {
-                    C.S.unsubscribe(Z.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, Q);
+                    h.S.unsubscribe(y.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, Q);
                 }
             ),
             [Q]
         ),
         i.useEffect(
             () => (
-                C.S.subscribe(Z.CkL.SHOW_ACTIVITY_DETAILS, ee),
+                h.S.subscribe(y.CkL.SHOW_ACTIVITY_DETAILS, ee),
                 () => {
-                    C.S.unsubscribe(Z.CkL.SHOW_ACTIVITY_DETAILS, ee);
+                    h.S.unsubscribe(y.CkL.SHOW_ACTIVITY_DETAILS, ee);
                 }
             ),
             [ee]
@@ -105,7 +105,7 @@ function k(e) {
             S.ux();
         }, []);
     let et = () => {
-            U(M.ag.DIRECTORY);
+            w(M.ag.DIRECTORY);
         },
         en = i.useRef(Date.now()),
         ea = i.useRef(!1),
@@ -138,11 +138,11 @@ function k(e) {
                         guild_id: n,
                         location: (0, v.k$)(),
                         ...(0, m.hH)(n),
-                        ...(0, m.v_)(x.Z.getChannel(null == t ? void 0 : t.id)),
+                        ...(0, m.v_)(f.Z.getChannel(null == t ? void 0 : t.id)),
                         ...$,
                         ...e
                     };
-                h.default.track(Z.rMx.ACTIVITY_SHELF_CLOSE, a);
+                C.default.track(y.rMx.ACTIVITY_SHELF_CLOSE, a);
             },
             [null == t ? void 0 : t.id, $, n]
         ),
@@ -150,22 +150,22 @@ function k(e) {
             value: H,
             children: (0, a.jsxs)(d.ModalRoot, {
                 className: s()(D.root),
-                'aria-label': y.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE,
+                'aria-label': Z.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE,
                 ...R,
                 children: [
                     (0, a.jsx)('img', {
-                        alt: y.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT,
+                        alt: Z.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT,
                         src: L,
                         className: D.shelfTopBackground
                     }),
                     (0, a.jsx)('img', {
-                        alt: y.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT,
+                        alt: Z.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT,
                         src: O,
                         className: D.shelfTopForeground
                     }),
                     (0, a.jsxs)(d.ModalHeader, {
                         separator: !1,
-                        justify: f.Z.Justify.BETWEEN,
+                        justify: I.Z.Justify.BETWEEN,
                         className: s()(D.modalHeader),
                         children: [
                             (0, a.jsxs)('div', {
@@ -192,7 +192,7 @@ function k(e) {
                                                                   }),
                                                                   (0, a.jsx)(d.Text, {
                                                                       variant: 'text-sm/semibold',
-                                                                      children: y.Z.Messages.BACK
+                                                                      children: Z.Z.Messages.BACK
                                                                   })
                                                               ]
                                                           })
@@ -202,7 +202,7 @@ function k(e) {
                                             className: D.activityShelfTitle,
                                             children: (0, a.jsx)(d.Heading, {
                                                 variant: 'heading-xl/extrabold',
-                                                children: y.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
+                                                children: Z.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE
                                             })
                                         });
                                     })(),
@@ -210,7 +210,7 @@ function k(e) {
                                         if (F === M.ag.DIRECTORY)
                                             return (0, a.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
-                                                children: k ? y.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE : y.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_SUBTITLE
+                                                children: k ? Z.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_SHELF_SUBTITLE : Z.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_SUBTITLE
                                             });
                                         return null;
                                     })()
@@ -238,7 +238,7 @@ function k(e) {
                                 },
                                 children: (0, a.jsx)(P, {
                                     slide: F,
-                                    children: (0, a.jsx)(N.Z, {
+                                    children: (0, a.jsx)(b.Z, {
                                         scrollerRef: X,
                                         channel: t,
                                         guildId: n,
@@ -276,7 +276,7 @@ function k(e) {
                                     children:
                                         null == W
                                             ? null
-                                            : (0, a.jsx)(b.Z, {
+                                            : (0, a.jsx)(N.Z, {
                                                   applicationId: W,
                                                   channelId: null == t ? void 0 : t.id,
                                                   guildId: n,
@@ -293,7 +293,7 @@ function k(e) {
                         children: (() => {
                             switch (F) {
                                 case M.ag.DIRECTORY:
-                                    return (0, a.jsx)(N.d, {});
+                                    return (0, a.jsx)(b.d, {});
                                 case M.ag.SELECT_CHANNEL:
                                     return (0, a.jsx)(j.q, {
                                         onBack: et,

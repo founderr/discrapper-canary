@@ -29,8 +29,8 @@ var r = n(735250),
     v = n(981631),
     C = n(122269);
 function y(e) {
-    let { user: t, currentUser: n, displayProfile: y, guild: D, isHovering: L, onOpenProfile: b, channelId: M, onClose: P } = e,
-        U = d.ZP.getName(null == D ? void 0 : D.id, M, t),
+    let { user: t, currentUser: n, displayProfile: y, guild: L, isHovering: D, onOpenProfile: b, channelId: M, onClose: P } = e,
+        U = d.ZP.getName(null == L ? void 0 : L.id, M, t),
         w = (0, a.e7)([u.Z], () => u.Z.getRelationshipType(t.id)),
         x = (0, a.e7)([c.Z], () => c.Z.hidePersonalInformation),
         G = (0, o.Z)('username'),
@@ -51,7 +51,7 @@ function y(e) {
                 profileType: R.y0.BITE_SIZE,
                 onOpenProfile: b,
                 usernameIcon:
-                    t.hasAvatarForGuild(null == D ? void 0 : D.id) &&
+                    t.hasAvatarForGuild(null == L ? void 0 : L.id) &&
                     (0, r.jsx)(g.Z, {
                         user: t,
                         nickname: U
@@ -69,7 +69,7 @@ function y(e) {
                         !x &&
                             (0, r.jsx)(T.Z, {
                                 userId: t.id,
-                                isHovering: L,
+                                isHovering: D,
                                 onOpenProfile: b
                             })
                     ]
@@ -79,7 +79,7 @@ function y(e) {
                 (0, r.jsx)(I.Z.Overlay, {
                     children: (0, r.jsx)(p.Z, {
                         user: t,
-                        guildId: null == D ? void 0 : D.id,
+                        guildId: null == L ? void 0 : L.id,
                         channelId: M
                     })
                 }),
@@ -109,15 +109,15 @@ function y(e) {
                   })
                 : (0, r.jsx)(S.Z, {
                       user: t,
-                      guild: D,
+                      guild: L,
                       channelId: M,
                       onClose: P
                   }),
-            null != D &&
+            null != L &&
                 (0, r.jsx)(N.Z, {
                     user: t,
                     currentUser: n,
-                    guild: D
+                    guild: L
                 })
         ]
     });

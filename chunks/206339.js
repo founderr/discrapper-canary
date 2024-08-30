@@ -35,7 +35,7 @@ var n = t(735250),
     B = t(474936),
     U = t(689938),
     G = t(161368);
-function F(e) {
+function y(e) {
     let s,
         { outboundPromotion: t, code: i, addClaimedOutboundPromotionCode: o, disabled: l } = e,
         [c, u] = a.useState(!1),
@@ -161,7 +161,7 @@ s.Z = function () {
             });
     }, [h]);
     let p = b.bh.useSetting(),
-        y = null != A || !h,
+        F = null != A || !h,
         { promotionsLoaded: V, activeOutboundPromotions: w, claimedEndedOutboundPromotions: k, claimedOutboundPromotionCodeMap: Y, addClaimedOutboundPromotionCode: H } = (0, O.lG)(),
         W = w.length + k.length > 0,
         K =
@@ -175,7 +175,7 @@ s.Z = function () {
     function z() {
         T.Z.open(j.oAB.PREMIUM);
     }
-    return I && V && y
+    return I && V && F
         ? (0, n.jsxs)(n.Fragment, {
               children: [
                   h
@@ -238,7 +238,7 @@ s.Z = function () {
                                   k.map((e) => {
                                       let { code: s, promotion: t } = e;
                                       return (0, n.jsx)(
-                                          F,
+                                          y,
                                           {
                                               outboundPromotion: t,
                                               code: s,
@@ -250,7 +250,7 @@ s.Z = function () {
                                   }),
                                   w.map((e) =>
                                       (0, n.jsx)(
-                                          F,
+                                          y,
                                           {
                                               outboundPromotion: e,
                                               code: Y[e.id],

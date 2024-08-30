@@ -24,8 +24,8 @@ var r = n(161581),
     v = 'ArrayBuffer',
     C = 'DataView',
     y = 'prototype',
-    D = 'Wrong index',
-    L = N.getterFor(v),
+    L = 'Wrong index',
+    D = N.getterFor(v),
     b = N.getterFor(C),
     M = N.set,
     P = r[v],
@@ -69,7 +69,7 @@ var r = n(161581),
     $ = function (e, t, n, r) {
         var i = b(e),
             a = h(n);
-        if (a + t > i.byteLength) throw F(D);
+        if (a + t > i.byteLength) throw F(L);
         var s = i.bytes,
             o = a + i.byteOffset,
             l = S(s, o, o + t);
@@ -80,7 +80,7 @@ var r = n(161581),
             o = h(n),
             l = r(+i),
             u = !!a;
-        if (o + t > s.byteLength) throw F(D);
+        if (o + t > s.byteLength) throw F(L);
         for (var c = s.bytes, d = o + s.byteOffset, _ = 0; _ < t; _++) c[d + _] = l[u ? _ : t - _ - 1];
     };
 if (s) {
@@ -133,7 +133,7 @@ if (s) {
     })[y]),
         (G = (x = function (e, t, n) {
             _(this, G), _(e, w);
-            var r = L(e),
+            var r = D(e),
                 i = r.byteLength,
                 s = E(t);
             if (s < 0 || s > i) throw F('Wrong offset');
@@ -147,7 +147,7 @@ if (s) {
             }),
                 !a && ((this.buffer = e), (this.byteLength = n), (this.byteOffset = s));
         })[y]),
-        a && (X(U, 'byteLength', L), X(x, 'buffer', b), X(x, 'byteLength', b), X(x, 'byteOffset', b)),
+        a && (X(U, 'byteLength', D), X(x, 'buffer', b), X(x, 'byteLength', b), X(x, 'byteOffset', b)),
         c(G, {
             getInt8: function (e) {
                 return ($(this, 1, e)[0] << 24) >> 24;

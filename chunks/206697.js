@@ -1,6 +1,6 @@
 n.d(t, {
     w: function () {
-        return x;
+        return O;
     }
 });
 var i = n(735250),
@@ -31,7 +31,7 @@ let R = {
         right: -12
     }
 };
-function x() {
+function O() {
     let e = (0, c.e7)([T.default], () => T.default.getCurrentUser()),
         t = (0, h.I5)(e, p.p9.TIER_2),
         { fakeMessage: n, fakeChannel: s } = a.useMemo(() => (0, f.Z)({ showAttachment: !1 }), []);
@@ -50,11 +50,11 @@ function x() {
                     trackAnnouncementViews: !0
                 })
             }),
-            t ? null : (0, i.jsx)(O, {})
+            t ? null : (0, i.jsx)(x, {})
         ]
     });
 }
-function O() {
+function x() {
     let e = (0, N.Px)(p.p9.TIER_2),
         t = a.useCallback(
             () =>

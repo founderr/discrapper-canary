@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(596040),
     Z = n(588580),
     L = n(374065),
-    O = n(451576),
-    R = n(119315),
+    R = n(451576),
+    O = n(119315),
     x = n(403404),
     b = n(100527),
     P = n(906732),
@@ -78,8 +78,8 @@ var i = n(735250),
     ev = n(626135),
     eZ = n(63063),
     eL = n(51144),
-    eO = n(870569),
-    eR = n(345243),
+    eR = n(870569),
+    eO = n(345243),
     ex = n(594117),
     eb = n(226323),
     eP = n(981631),
@@ -164,7 +164,7 @@ function ew() {
 function ek() {
     let e = (0, d.e7)([et.Z], () => et.Z.isMuted()),
         t = e ? eD.Z.Messages.STAGE_MUSIC_UNMUTE : eD.Z.Messages.STAGE_MUSIC_MUTE;
-    return (0, i.jsx)(eO.Z, {
+    return (0, i.jsx)(eR.Z, {
         'aria-label': t,
         tooltipText: t,
         icon: e ? I.MusicSlashIcon : I.MusicIcon,
@@ -286,9 +286,9 @@ function eH(e) {
         T = (0, Z.a)(),
         f = h !== L.jy.CAN_LAUNCH,
         { enabled: S } = M.nS.useExperiment({ location: 'RTCConnection' }, { autoTrackExposure: !0 }),
-        { Component: v, events: O, play: b } = (0, u.s)(),
+        { Component: v, events: R, play: b } = (0, u.s)(),
         { Component: D, events: y, play: j } = (0, _.w)();
-    return (S ? ((t = y), (n = j)) : ((t = O), (n = b)), s)
+    return (S ? ((t = y), (n = j)) : ((t = R), (n = b)), s)
         ? (0, i.jsx)(I.Tooltip, {
               text: E,
               children: (e) =>
@@ -327,7 +327,7 @@ function eH(e) {
                       wrapperClassName: ey.button,
                       children: [
                           T
-                              ? (0, i.jsx)(R.r, {
+                              ? (0, i.jsx)(O.r, {
                                     top: -1,
                                     right: -1
                                 })
@@ -367,9 +367,9 @@ function eV(e) {
         C = _ ? eD.Z.Messages.SHARE_YOUR_SCREEN : eD.Z.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE,
         N = m || l || g,
         v = null != T,
-        { Component: Z, events: L, play: O } = (0, h.P)(v ? 'disable' : 'enable');
-    a.useEffect(() => () => O(), [O, v]);
-    let R = (0, i.jsx)(Z, {
+        { Component: Z, events: L, play: R } = (0, h.P)(v ? 'disable' : 'enable');
+    a.useEffect(() => () => R(), [R, v]);
+    let O = (0, i.jsx)(Z, {
         color: 'currentColor',
         className: r()(ey.buttonIcon, { [ey.withText]: !N })
     });
@@ -416,10 +416,10 @@ function eV(e) {
                         innerClassName: ey.buttonContents,
                         wrapperClassName: ey.button,
                         children: N
-                            ? R
+                            ? O
                             : (0, i.jsxs)(U.Z, {
                                   align: U.Z.Align.CENTER,
-                                  children: [R, eD.Z.Messages.GO_LIVE_SHARE_SCREEN]
+                                  children: [O, eD.Z.Messages.GO_LIVE_SHARE_SCREEN]
                               })
                     })
             });
@@ -446,7 +446,7 @@ class eF extends a.PureComponent {
                         to: e,
                         onClick: this.handleChannelLinkClick,
                         onContextMenu: this.handleChannelLinkContextMenu,
-                        children: (0, i.jsx)(eR.Z, {
+                        children: (0, i.jsx)(eO.Z, {
                             className: ey.channel,
                             children: d
                         })
@@ -468,7 +468,7 @@ class eF extends a.PureComponent {
                       forceOpen: !0,
                       children: (e) => {
                           let { 'aria-label': t } = e;
-                          return (0, i.jsx)(eO.Z, {
+                          return (0, i.jsx)(eR.Z, {
                               'aria-label': t,
                               tooltipText: null,
                               disabled: !0,
@@ -650,7 +650,7 @@ function eY(e) {
         { play: r, Component: l, events: o } = (0, m.P)(s ? 'disable' : 'enable');
     return (
         a.useEffect(() => () => r(), [s, r]),
-        (0, i.jsx)(eO.Z, {
+        (0, i.jsx)(eR.Z, {
             ...t,
             onMouseEnter: () => {
                 var e;
@@ -726,12 +726,12 @@ t.Z = (0, S.Z)(function (e) {
     a.useEffect(() => {
         (p || T) && L(!1);
     }, [p, T, L]);
-    let { analyticsLocations: R } = (0, P.ZP)(b.Z.RTC_PANEL),
+    let { analyticsLocations: O } = (0, P.ZP)(b.Z.RTC_PANEL),
         x = (0, v.Z)(null != c ? c : eP.lds, null == o ? void 0 : o.id),
-        M = (0, O.Z)(null == o ? void 0 : o.id),
+        M = (0, R.Z)(null == o ? void 0 : o.id),
         y = (0, D.ZP)();
     return (0, i.jsx)(P.Gt, {
-        value: R,
+        value: O,
         children: (0, i.jsxs)('div', {
             className: ey.wrapper,
             children: [

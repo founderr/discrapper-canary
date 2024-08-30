@@ -33,8 +33,8 @@ var r = n(735250),
     v = n(98278),
     C = n(639119),
     y = n(197115),
-    D = n(823188),
-    L = n(474936),
+    L = n(823188),
+    D = n(474936),
     b = n(981631),
     M = n(689938),
     P = n(134072),
@@ -56,11 +56,11 @@ function x(e) {
     let { className: a, children: o, withBottomMargin: l, discountOffer: u, trialOffer: c } = e,
         d = null !== (t = null == c ? void 0 : c.expires_at) && void 0 !== t ? t : null == u ? void 0 : u.expires_at,
         _ = null == c ? void 0 : c.subscription_trial,
-        E = null !== (i = null !== (n = e.subscriptionTier) && void 0 !== n ? n : null == _ ? void 0 : _.sku_id) && void 0 !== i ? i : L.Si.TIER_2;
+        E = null !== (i = null !== (n = e.subscriptionTier) && void 0 !== n ? n : null == _ ? void 0 : _.sku_id) && void 0 !== i ? i : D.Si.TIER_2;
     return (0, r.jsxs)('div', {
         className: s()(a, P.gradientUpsellWrapper, {
-            [P.gradientUpsellWrapperTier0]: E === L.Si.TIER_0,
-            [P.gradientUpsellWrapperTier2]: E === L.Si.TIER_2,
+            [P.gradientUpsellWrapperTier0]: E === D.Si.TIER_0,
+            [P.gradientUpsellWrapperTier2]: E === D.Si.TIER_2,
             [P.gradientUpsellWrapperWithBottomMargin]: l
         }),
         children: [
@@ -72,8 +72,8 @@ function x(e) {
                         color: 'currentColor',
                         className: P.logoIcon
                     }),
-                    E === L.Si.TIER_0 && (0, r.jsx)(g.Z, { className: P.logoWordmark }),
-                    E === L.Si.TIER_2 && (0, r.jsx)(T.Z, { className: P.logoWordmark })
+                    E === D.Si.TIER_0 && (0, r.jsx)(g.Z, { className: P.logoWordmark }),
+                    E === D.Si.TIER_2 && (0, r.jsx)(T.Z, { className: P.logoWordmark })
                 ]
             }),
             (0, r.jsx)(f.Text, {
@@ -82,9 +82,9 @@ function x(e) {
                 color: 'none',
                 children: o
             }),
-            (0, r.jsx)(D.Cy, {
+            (0, r.jsx)(L.Cy, {
                 text: null != u ? M.Z.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({ percent: u.discount.amount }) : M.Z.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT,
-                colorOptions: E === L.Si.TIER_0 ? D.VE.PREMIUM_TIER_0_WHITE_FILL : D.VE.PREMIUM_TIER_2_WHITE_FILL
+                colorOptions: E === D.Si.TIER_0 ? L.VE.PREMIUM_TIER_0_WHITE_FILL : L.VE.PREMIUM_TIER_2_WHITE_FILL
             }),
             (0, r.jsx)(f.Text, {
                 variant: 'eyebrow',
@@ -124,12 +124,12 @@ function G(e) {
 function k(e) {
     var t, n;
     let i = null === (t = (0, C.N)()) || void 0 === t ? void 0 : t.subscription_trial,
-        a = null !== (n = null == i ? void 0 : i.sku_id) && void 0 !== n ? n : L.Si.TIER_2;
+        a = null !== (n = null == i ? void 0 : i.sku_id) && void 0 !== n ? n : D.Si.TIER_2;
     return (0, r.jsx)(f.Text, {
         variant: 'text-xs/bold',
         className: s()(P.trialBadge, e.className, {
-            [P.trialBadgeGradientTier0]: a === L.Si.TIER_0,
-            [P.trialBadgeGradientTier2]: a === L.Si.TIER_2
+            [P.trialBadgeGradientTier0]: a === D.Si.TIER_0,
+            [P.trialBadgeGradientTier2]: a === D.Si.TIER_2
         }),
         color: 'none',
         children: (0, N.a5)({
@@ -167,10 +167,10 @@ function F(e) {
     return (0, r.jsxs)('div', {
         className: P.tryOutUpsellContainer,
         children: [
-            (0, r.jsx)(D.Cy, {
+            (0, r.jsx)(L.Cy, {
                 className: P.topRimPill,
                 text: M.Z.Messages.PREMIUM_FREE_NITRO_TRIAL_TEXT,
-                colorOptions: D.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
+                colorOptions: L.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL
             }),
             (0, r.jsx)(f.Heading, {
                 variant: 'heading-md/semibold',
@@ -180,7 +180,7 @@ function F(e) {
             (0, r.jsx)(G, {
                 trialOffer: i,
                 className: P.subscribeButtonWide,
-                subscriptionTier: L.Si.TIER_2,
+                subscriptionTier: D.Si.TIER_2,
                 analyticsLocationObject: n,
                 onClose: t
             }),
@@ -219,10 +219,10 @@ function H(e) {
     let { headingText: t, context: i, children: a, onClose: o, type: u, subscriptionTier: c, analyticsLocationObject: T, trialOffer: g, discountOffer: v } = e,
         C = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
         y = (0, h.ZP)(),
-        D = (0, A.Xv)() ? R.Ld : R.zz,
-        w = (0, S.BU)(D / S.XD, { useKibibytes: !0 });
+        L = (0, A.Xv)() ? R.Ld : R.zz,
+        w = (0, S.BU)(L / S.XD, { useKibibytes: !0 });
     switch (u) {
-        case L.cd.EMPTY_STICKER_PICKER_UPSELL:
+        case D.cd.EMPTY_STICKER_PICKER_UPSELL:
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(f.Clickable, {
@@ -268,7 +268,7 @@ function H(e) {
                     })
                 ]
             });
-        case L.cd.STICKER_PICKER_UPSELL:
+        case D.cd.STICKER_PICKER_UPSELL:
             return (
                 l()(null != a, 'You must specify children for this upsell type'),
                 (0, r.jsxs)(r.Fragment, {
@@ -309,7 +309,7 @@ function H(e) {
                     ]
                 })
             );
-        case L.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI:
+        case D.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI:
             l()(null != a, 'You must specify children for this upsell type');
             let k = (0, E.ap)(y) ? n(537381) : n(341048);
             return (0, r.jsxs)(r.Fragment, {
@@ -349,22 +349,22 @@ function H(e) {
                     })
                 ]
             });
-        case L.cd.UPLOAD_ERROR_UPSELL:
-        case L.cd.BURST_REACTION_UPSELL:
-        case L.cd.STREAM_QUALITY_UPSELL:
-        case L.cd.MESSAGE_LENGTH_UPSELL:
+        case D.cd.UPLOAD_ERROR_UPSELL:
+        case D.cd.BURST_REACTION_UPSELL:
+        case D.cd.STREAM_QUALITY_UPSELL:
+        case D.cd.MESSAGE_LENGTH_UPSELL:
             let H;
             switch (u) {
-                case L.cd.UPLOAD_ERROR_UPSELL:
+                case D.cd.UPLOAD_ERROR_UPSELL:
                     H = M.Z.Messages.UPLOAD_AREA_PREMIUM_UPSELL_WITH_SIZE_AND_ACTION_V2.format({
                         planName: (0, N.jP)(c),
-                        premiumMaxSize: c === L.Si.TIER_0 ? M.Z.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED : w,
+                        premiumMaxSize: c === D.Si.TIER_0 ? M.Z.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED : w,
                         onClick: () => {
                             (0, m.uL)(b.Z5c.APPLICATION_STORE), null == o || o();
                         }
                     });
                     break;
-                case L.cd.BURST_REACTION_UPSELL:
+                case D.cd.BURST_REACTION_UPSELL:
                     H = M.Z.Messages.SUPER_REACTIONS_LAUNCH_COACHMARK_DESCRIPTION_CLICK_V2.format({
                         planName: (0, N.jP)(c),
                         onClick: () => {
@@ -372,14 +372,14 @@ function H(e) {
                         }
                     });
                     break;
-                case L.cd.STREAM_QUALITY_UPSELL:
+                case D.cd.STREAM_QUALITY_UPSELL:
                     H = M.Z.Messages.STREAM_PREMIUM_UPSELL_WITH_ACTION.format({
                         onClick: () => {
                             (0, m.uL)(b.Z5c.APPLICATION_STORE), null == o || o(), (0, _.pT)();
                         }
                     });
                     break;
-                case L.cd.MESSAGE_LENGTH_UPSELL:
+                case D.cd.MESSAGE_LENGTH_UPSELL:
                     H = M.Z.Messages.PREMIUM_CHAT_PERKS_MAX_MESSAGE_LENGTH_UPSELL.format({
                         premiumMaxMessageLength: b.en1,
                         onClick: () => {
@@ -411,7 +411,7 @@ function H(e) {
                     })
                 })
             );
-        case L.cd.BURST_REACTION_QUICK_ACTION_UPSELL:
+        case D.cd.BURST_REACTION_QUICK_ACTION_UPSELL:
             return (0, r.jsxs)('div', {
                 className: P.contentContainer,
                 children: [
@@ -442,7 +442,7 @@ function H(e) {
                     })
                 ]
             });
-        case L.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
+        case D.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT:
             return (
                 l()(null != a, 'You must specify children for this upsell type'),
                 (0, r.jsx)(x, {
@@ -455,7 +455,7 @@ function H(e) {
                     })
                 })
             );
-        case L.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
+        case D.cd.MESSAGE_LENGTH_IN_EDITOR_UPSELL:
             return (0, r.jsxs)('div', {
                 className: s()(P.messageLengthUpsellContainer, { [P.messageLengthUpsellAppearAnimation]: !C }),
                 children: [
@@ -492,17 +492,17 @@ function H(e) {
                     })
                 ]
             });
-        case L.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL:
-        case L.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
+        case D.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL:
+        case D.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL:
             return (0, r.jsx)(F, {});
-        case L.cd.GUILD_CAP_MODAL_UPSELL:
-        case L.cd.PREMIUM_GUILD_IDENTITY_MODAL:
-        case L.cd.CUSTOM_PROFILE_UPSELL:
-        case L.cd.VIDEO_BACKGROUNDS_MODAL:
-        case L.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED:
-        case L.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
-        case L.cd.EMOJI_PICKER_EMOJI_CLICKED:
-        case L.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL:
+        case D.cd.GUILD_CAP_MODAL_UPSELL:
+        case D.cd.PREMIUM_GUILD_IDENTITY_MODAL:
+        case D.cd.CUSTOM_PROFILE_UPSELL:
+        case D.cd.VIDEO_BACKGROUNDS_MODAL:
+        case D.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED:
+        case D.cd.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED:
+        case D.cd.EMOJI_PICKER_EMOJI_CLICKED:
+        case D.cd.CUSTOM_NOTIFICATION_SOUNDS_UPSELL:
             return (0, r.jsx)(V, {
                 trialOffer: g,
                 discountOffer: v,

@@ -1,11 +1,11 @@
 let r;
 n.d(t, {
     Z: function () {
-        return o;
+        return u;
     }
 });
 var i = n(145597);
-function o(e, t) {
+function u(e, t) {
     if (__OVERLAY__) {
         let e = t.getGame(),
             n = (0, i.QF)();

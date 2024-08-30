@@ -24,8 +24,8 @@ var a,
     v = n(158776),
     C = n(19780),
     y = n(981631),
-    D = n(65154);
-let L = {},
+    L = n(65154);
+let D = {},
     b = {},
     M = {},
     P = {},
@@ -44,7 +44,7 @@ function k(e) {
         e
             .filter((e) => {
                 let { connection: t } = e;
-                return t.context === D.Yn.STREAM;
+                return t.context === L.Yn.STREAM;
             })
             .forEach((e) => {
                 let { stats: t } = e;
@@ -202,7 +202,7 @@ class F extends (a = E.ZP.Store) {
                               ownerId: N.default.getId()
                           });
                       if (
-                          ((L[o] = i),
+                          ((D[o] = i),
                           _().forEach(w, (e) => {
                               let { analyticsContext: t } = e;
                               t.setActionContext(i);
@@ -223,7 +223,7 @@ class F extends (a = E.ZP.Store) {
                   },
                   STREAM_STOP: function (e) {
                       let { appContext: t, streamKey: n } = e;
-                      (L[n] = t),
+                      (D[n] = t),
                           _().forEach(w, (e) => {
                               let { analyticsContext: n } = e;
                               n.setActionContext(t);
@@ -256,7 +256,7 @@ class F extends (a = E.ZP.Store) {
                                       else if ((null === (r = platform) || void 0 === r ? void 0 : r.name) === 'Safari') return 'window';
                                       return 'unknown';
                                   })(P[t]),
-                                  actionContext: L[t],
+                                  actionContext: D[t],
                                   numViewers: null != s ? s.length : 0,
                                   isBroadcast: _
                               });

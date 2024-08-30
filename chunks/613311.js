@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(100159),
     Z = n(646288),
     L = n(984370),
-    O = n(706454),
-    R = n(210887),
+    R = n(706454),
+    O = n(210887),
     x = n(430824),
     b = n(496675),
     P = n(525395),
@@ -556,7 +556,7 @@ class ec extends a.PureComponent {
 }
 t.Z = (0, g.Z)(
     (0, p.Z)(
-        l.ZP.connectStores([M.Z, R.Z, O.default, G.Z, j.Z, y.Z, U.Z, T.Z, f.Z, P.Z, x.Z, D.Z], (e) => {
+        l.ZP.connectStores([M.Z, O.Z, R.default, G.Z, j.Z, y.Z, U.Z, T.Z, f.Z, P.Z, x.Z, D.Z], (e) => {
             let t,
                 n,
                 i,
@@ -586,8 +586,8 @@ t.Z = (0, g.Z)(
                 }),
                 isInTestMode: null != s && c,
                 matureAgree: M.Z.didMatureAgree,
-                theme: R.Z.theme,
-                locale: O.default.locale,
+                theme: O.Z.theme,
+                locale: R.default.locale,
                 guild: null != o ? x.Z.getGuild(o.getGuildId()) : null
             };
         })(ec)

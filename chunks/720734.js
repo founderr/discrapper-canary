@@ -30,8 +30,8 @@ var i = n(735250),
     v = n(304761),
     Z = n(865427),
     L = n(571250),
-    O = n(628581),
-    R = n(55311),
+    R = n(628581),
+    O = n(55311),
     x = n(575175),
     b = n(64220),
     P = n(377171),
@@ -84,8 +84,8 @@ var i = n(735250),
     ev = n(870569),
     eZ = n(345243),
     eL = n(115530),
-    eO = n(981631),
-    eR = n(215023),
+    eR = n(981631),
+    eO = n(215023),
     ex = n(288836),
     eb = n(689938),
     eP = n(108079);
@@ -114,7 +114,7 @@ function ej(e) {
     return null == a
         ? null
         : (0, i.jsx)(g.Z, {
-              object: eO.qAy.AVATAR,
+              object: eR.qAy.AVATAR,
               children: (0, i.jsx)(h.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: t, setPopoutRef: n } = e;
@@ -150,7 +150,7 @@ function ej(e) {
                                   src: a.getAvatarURL(void 0, 32, !1),
                                   avatarDecoration: d,
                                   'aria-label': a.username,
-                                  status: n ? eO.Skl.STREAMING : s,
+                                  status: n ? eR.Skl.STREAMING : s,
                                   isSpeaking: t,
                                   className: eP.avatar
                               }),
@@ -191,7 +191,7 @@ class eU extends a.PureComponent {
             { customStatusActivity: n, userTag: a, currentUser: s, status: r } = this.props;
         if (null == s) return null;
         let l = eN.ZP.getName(s),
-            o = null != r && r !== eO.Skl.UNKNOWN,
+            o = null != r && r !== eR.Skl.UNKNOWN,
             c = null != n;
         return (
             (c || (o && s.isPomelo())) &&
@@ -266,7 +266,7 @@ class eU extends a.PureComponent {
                                   serverMute: s,
                                   suppress: l,
                                   awaitingRemote: a,
-                                  tooltipText: d ? eb.Z.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, O.Z)(n, s, l, a),
+                                  tooltipText: d ? eb.Z.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, R.Z)(n, s, l, a),
                                   tooltipColor: d ? h.TooltipColors.GREEN : void 0,
                                   tooltipForceOpen: d || void 0,
                                   onMouseEnter: this.handleMouseEnterMute,
@@ -395,13 +395,13 @@ class eU extends a.PureComponent {
             }),
             eM(this, 'handleToggleSelfDeaf', () => {
                 let { serverDeaf: e } = this.props;
-                (0, R.Z)(e);
+                (0, O.Z)(e);
             }),
             eM(this, 'handleOpenAccountSettings', () => {
                 this.handleOpenSettings();
             }),
             eM(this, 'handleOpenSettings', function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eO.oAB.ACCOUNT,
+                let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eR.oAB.ACCOUNT,
                     t = arguments.length > 1 ? arguments[1] : void 0,
                     n = arguments.length > 2 ? arguments[2] : void 0;
                 I.Z.open(e, t, n);
@@ -469,7 +469,7 @@ class eU extends a.PureComponent {
                         identifiable: 'always'
                     })
                 ),
-                    eg.default.track(eO.rMx.TEXT_COPIED, { type: 'User Tag' });
+                    eg.default.track(eR.rMx.TEXT_COPIED, { type: 'User Tag' });
                 let i = {
                     shouldShowCopiedFeedback: !0,
                     shouldShowNametagTooltip: !0
@@ -518,7 +518,7 @@ function eG() {
         r = (0, l.e7)([eo.default], () => eo.default.getId()),
         c = (0, D.a)(),
         { streaming: d, status: u } = (0, l.cj)([eh.Z], () => ({
-            streaming: null != eh.Z.findActivity((e) => e.type === eO.IIU.STREAMING),
+            streaming: null != eh.Z.findActivity((e) => e.type === eR.IIU.STREAMING),
             status: eh.Z.getStatus()
         })),
         _ = (0, S.Z)({ userId: r }),
@@ -529,8 +529,8 @@ function eG() {
             return null != e ? ec.Z.getChannel(e) : null;
         }),
         { mute: C, selfMute: N, suppress: A } = (0, el.Z)(g),
-        { selfDeaf: L, deaf: O } = (0, er.Z)(g),
-        R = (0, l.e7)([v.C], () => {
+        { selfDeaf: L, deaf: R } = (0, er.Z)(g),
+        O = (0, l.e7)([v.C], () => {
             var e;
             return (0, Z.fD)() ? (null === (e = v.C.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
@@ -548,7 +548,7 @@ function eG() {
         $ = (0, p.u)(),
         ee = (0, X.t)(),
         en = eS.ZP.canUsePremiumGuildMemberProfile(n),
-        ei = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eR.rL,
+        ei = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eO.rL,
         ea = 'account';
     (0, f.j)({
         location: ea + ' auto on',
@@ -567,7 +567,7 @@ function eG() {
                 { enabled: r } = K.Z.useExperiment({ location: '08bd40_1' }, { autoTrackExposure: !0 }),
                 c = a.useMemo(() => {
                     let e = new Date().getTime();
-                    return null != s && (s.status === eO.O0b.ACTIVE || e - s.currentPeriodEnd.getTime() < ey);
+                    return null != s && (s.status === eR.O0b.ACTIVE || e - s.currentPeriodEnd.getTime() < ey);
                 }, [s]);
             return (
                 a.useEffect(() => {
@@ -599,14 +599,14 @@ function eG() {
             premiumSubscription: x,
             selfDeaf: L,
             selfMute: N,
-            serverDeaf: O,
+            serverDeaf: R,
             serverMute: C,
             speaking: _,
             speakingWhileMuted: b,
             status: u,
             streaming: d,
             suppress: A,
-            webBuildOverride: R,
+            webBuildOverride: O,
             awaitingRemote: U,
             isEligibleForPomelo: y
         })

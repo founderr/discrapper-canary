@@ -5,8 +5,8 @@ l.d(n, {
 });
 var t = l(470079),
     r = l(835473),
-    a = l(81063),
-    i = l(591759),
+    i = l(81063),
+    a = l(591759),
     s = l(561308),
     u = l(206583),
     o = l(701488),
@@ -15,32 +15,32 @@ function d(e) {
     let n,
         { entry: l, baseEntryData: d } = e,
         m = (0, r.q)(l.extra.application_id),
-        E = null == m ? void 0 : m.getIconURL(128),
-        p = (0, a.getAssetImage)(l.extra.application_id, l.extra.media_assets_large_image, [o.Si.LARGE, o.Si.LARGE]),
-        N = l.extra.media_title,
-        f = l.extra.media_subtitle,
-        _ = (0, s.kr)(l) && !(0, s.n2)(l) ? c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
-        C = { type: u.kG.CRUNCHYROLL },
-        T = t.useMemo(() => {
+        p = null == m ? void 0 : m.getIconURL(128),
+        E = (0, i.getAssetImage)(l.extra.application_id, l.extra.media_assets_large_image, [o.Si.LARGE, o.Si.LARGE]),
+        f = l.extra.media_title,
+        N = l.extra.media_subtitle,
+        C = (0, s.kr)(l) && !(0, s.n2)(l) ? c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
+        v = { type: u.kG.CRUNCHYROLL },
+        _ = t.useMemo(() => {
             if (null == l.extra.url) return;
-            let e = i.Z.safeParseWithQuery(l.extra.url);
+            let e = a.Z.safeParseWithQuery(l.extra.url);
             if (null != e && null != e.protocol && null != e.hostname) return e;
         }, [l.extra.url]);
     return (
-        null != T &&
+        null != _ &&
             (n = {
-                href: i.Z.format(T),
-                ariaDescription: c.Z.Messages.CONTENT_INVENTORY_OPEN_CRUNCHYROLL_ITEM_A11Y_DESCRIPTION.format({ title: N })
+                href: a.Z.format(_),
+                ariaDescription: c.Z.Messages.CONTENT_INVENTORY_OPEN_CRUNCHYROLL_ITEM_A11Y_DESCRIPTION.format({ title: f })
             }),
         {
             ...d,
-            thumbnailUrl: null != p ? p : E,
-            title: N,
+            thumbnailUrl: null != E ? E : p,
+            title: f,
             titleClickable: n,
             thumbnailClickable: n,
-            subtitle: f,
-            userDescription: _,
-            providerIconProps: C
+            subtitle: N,
+            userDescription: C,
+            providerIconProps: v
         }
     );
 }

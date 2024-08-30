@@ -38,8 +38,8 @@ var r = n(735250),
     v = n(594174),
     C = n(768581),
     y = n(585483),
-    D = n(630388),
-    L = n(74538),
+    L = n(630388),
+    D = n(74538),
     b = n(276554),
     M = n(421399),
     P = n(453687),
@@ -195,7 +195,7 @@ function W(e) {
             var t, n;
             let { props: a, guildId: s, handleRenderPopout: _, showCommunicationDisabledStyles: E = !1, className: f } = e,
                 { message: h, author: p, compact: I = !1, subscribeToGroupId: m, animate: T = !0, onContextMenu: g, onClickAvatar: O, onPopoutRequestClose: R, showAvatarPopout: v } = a,
-                [D, L] = i.useState(!1),
+                [L, D] = i.useState(!1),
                 { analyticsLocations: b } = (0, d.ZP)(c.Z.AVATAR),
                 M = (0, l.e7)([N.ZP], () => {
                     var e;
@@ -213,7 +213,7 @@ function W(e) {
                     user: U,
                     guildId: s,
                     size: x,
-                    animateOnHover: null != m ? !D : !T,
+                    animateOnHover: null != m ? !L : !T,
                     showPending: !0
                 }),
                 H = h.isInteractionPlaceholder(),
@@ -232,7 +232,7 @@ function W(e) {
                         : k;
                 }, [H, null === (t = h.application) || void 0 === t ? void 0 : t.icon, null === (n = h.application) || void 0 === n ? void 0 : n.id, U.avatar, x, k]);
             return (i.useEffect(() => {
-                if (null != m) return y.S.subscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), L), () => void y.S.unsubscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), L);
+                if (null != m) return y.S.subscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), D), () => void y.S.unsubscribeKeyed(G.LPv.ANIMATE_CHAT_AVATAR, ''.concat(m, ':').concat(w), D);
             }, [w, m]),
             I && !M)
                 ? void 0
@@ -348,8 +348,8 @@ function W(e) {
         }),
         en = [],
         er = v.default.getCurrentUser(),
-        ei = L.ZP.isPremium(t.author),
-        ea = L.ZP.isPremium(er),
+        ei = D.ZP.isPremium(t.author),
+        ea = D.ZP.isPremium(er),
         es = null == W ? void 0 : W.isPrivate();
     (0, b.R)(null != g, 'Message Username') &&
         ei &&
@@ -392,7 +392,7 @@ function W(e) {
                 )
             );
     let eo = [];
-    (0, D.yE)(t.flags, G.iLy.SUPPRESS_NOTIFICATIONS) && eo.push((0, r.jsx)(m.Z, {}, 'suppress-notifications'));
+    (0, L.yE)(t.flags, G.iLy.SUPPRESS_NOTIFICATIONS) && eo.push((0, r.jsx)(m.Z, {}, 'suppress-notifications'));
     let el = {};
     (el[M.a.SYSTEM_TAG] = et), (el[M.a.BADGES] = en);
     let eu = H(e, K, el),

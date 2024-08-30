@@ -27,11 +27,11 @@ var i = n(735250),
     S = n(981631),
     A = n(689938),
     R = n(717229);
-let x = {
+let O = {
     left: 4,
     right: -12
 };
-function O(e) {
+function x(e) {
     var t;
     let { channel: n, message: s, compact: r, isGroupStart: o, treatSpam: u, gotoChannel: d } = e,
         _ = (0, l.JA)(null !== (t = s.id) && void 0 !== t ? t : ''),
@@ -45,7 +45,7 @@ function O(e) {
             [n.id]
         );
     return (0, i.jsx)(c.FocusRing, {
-        offset: x,
+        offset: O,
         children: (0, i.jsxs)(
             'div',
             {
@@ -79,7 +79,7 @@ function M(e) {
     let { channel: a, channelRecord: s, gotoChannel: l } = e,
         { enabled: m } = u.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
         p = T.jU.useSetting(),
-        x = (0, o.e7)([N.Z], () => N.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)),
+        O = (0, o.e7)([N.Z], () => N.Z.can(S.Plq.CREATE_INSTANT_INVITE, s)),
         M = (0, E.P1)(s),
         v = !1,
         L = 0 === a.messages.length || r()(a.messages[0].timestamp).isSame(r()(), 'day'),
@@ -90,7 +90,7 @@ function M(e) {
             t = null,
             n = a.messages.slice(0, g.hC);
         n.forEach((n) => {
-            if (!(0, d.Z)(n, x)) {
+            if (!(0, d.Z)(n, O)) {
                 if (!L && (null == e || !e.isSame(n.timestamp, 'day'))) {
                     let t = (0, C.vc)(n.timestamp, 'LL');
                     P.push(
@@ -110,7 +110,7 @@ function M(e) {
                     (v = v || (0, E.DQ)(n)),
                     P.push(
                         (0, i.jsx)(
-                            O,
+                            x,
                             {
                                 channel: s,
                                 message: n,

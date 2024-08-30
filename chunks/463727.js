@@ -1,4 +1,4 @@
-let l = (0, t(818083).B)({
+let l = (0, n(818083).B)({
     kind: 'user',
     id: '2023-06_golive_capture_card',
     label: 'GoLive Capture Card Support',
@@ -11,4 +11,4 @@ let l = (0, t(818083).B)({
         }
     ]
 });
-n.Z = l;
+t.Z = l;

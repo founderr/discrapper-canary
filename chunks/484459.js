@@ -22,12 +22,12 @@ async function _(e, t) {
     let v = c.Z.getGuildMemberProfile(e, S),
         C = c.Z.getMutualGuilds(e),
         y = c.Z.getMutualFriends(e),
-        D = c.Z.getMutualFriendsCount(e);
+        L = c.Z.getMutualFriendsCount(e);
     h = h || null != S;
-    let L = null == y && I,
-        b = null == D && p,
+    let D = null == y && I,
+        b = null == L && p,
         M = null != S && null == v;
-    if (!(null == C && h) && !L && !b && !M && !R) return;
+    if (!(null == C && h) && !D && !b && !M && !R) return;
     (0, o.z)(), null != t && (0, a.vM)(t);
     let P = {
             withMutualGuilds: h,

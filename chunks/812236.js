@@ -57,5 +57,5 @@ function d(e, t) {
             allowFetch: !1,
             allowApplicationState: !0
         }
-    ).commands[0];
+    );
 }

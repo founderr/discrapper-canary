@@ -31,8 +31,8 @@ var r,
     v = n(707409),
     C = n(769654),
     y = n(424678),
-    D = n(750154),
-    L = n(768581),
+    L = n(750154),
+    D = n(768581),
     b = n(630388),
     M = n(153066),
     P = n(740265),
@@ -201,8 +201,8 @@ class Q extends (i = o.PureComponent) {
                 onClick: this.handleOpenSpotifyAlbum,
                 children: f
             });
-        else if ((0, D.dS)(e)) {
-            let t = (0, D.rq)(e);
+        else if ((0, L.dS)(e)) {
+            let t = (0, L.rq)(e);
             if (null == t) return null;
             f = (0, s.jsx)(m.ZP, {
                 mask: m.ZP.Masks.SQUIRCLE,
@@ -211,7 +211,7 @@ class Q extends (i = o.PureComponent) {
                 children: (0, s.jsx)('img', {
                     src:
                         null !==
-                            (r = L.ZP.getGuildIconURL({
+                            (r = D.ZP.getGuildIconURL({
                                 id: t.guildId,
                                 icon: c.small_image,
                                 size: F.Si.SMALL
@@ -249,7 +249,7 @@ class Q extends (i = o.PureComponent) {
                     })
                 ]
             })),
-        !(0, D.dS)(e) &&
+        !(0, L.dS)(e) &&
             null != c.small_image &&
             (a = (0, s.jsx)(E.Tooltip, {
                 text: '' !== c.small_text ? c.small_text : null,
@@ -325,7 +325,7 @@ class Q extends (i = o.PureComponent) {
                               onClick: this.handleOpenSpotifyTrack,
                               children: i
                           }))
-                        : (0, D.dS)(e) && (c = e.name)),
+                        : (0, L.dS)(e) && (c = e.name)),
             null == c)
         )
             return null;
@@ -368,7 +368,7 @@ class Q extends (i = o.PureComponent) {
                             n
                         )
                 });
-            else if ((0, D.dS)(e)) {
+            else if ((0, L.dS)(e)) {
                 var l;
                 a = null === (l = e.assets) || void 0 === l ? void 0 : l.small_text;
             }
@@ -479,13 +479,13 @@ class Q extends (i = o.PureComponent) {
                               )
                             : c
                 }))),
-        (null != u && 0 !== u.length && e.type !== V.IIU.CUSTOM_STATUS) || (0, D.dS)(e))
+        (null != u && 0 !== u.length && e.type !== V.IIU.CUSTOM_STATUS) || (0, L.dS)(e))
             ? ((null == o ? void 0 : o.size) == null && [F.Zc].includes(null !== (n = e.application_id) && void 0 !== n ? n : '')
                   ? (i = H.Z.Messages.USER_ACTIVITY_STATE_SIZE.format({
                         count: '0',
                         max: null !== (r = null == t ? void 0 : t.getMaxParticipants()) && void 0 !== r ? r : 0
                     }))
-                  : (0, D.dS)(e) && (null == o ? void 0 : o.size) != null
+                  : (0, L.dS)(e) && (null == o ? void 0 : o.size) != null
                     ? (i = H.Z.Messages.USER_ACTIVITY_STAGE_STATE_SIZE.format({
                           numSpeakers: o.size[0],
                           numListeners: o.size[1] - o.size[0]

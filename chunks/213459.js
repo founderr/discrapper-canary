@@ -51,8 +51,8 @@ var r,
     v = n(367790),
     C = n(895924),
     y = n(581364),
-    D = n(807169),
-    L = n(104793),
+    L = n(807169),
+    D = n(104793),
     b = n(689079),
     M = n(981631),
     P = n(674563);
@@ -196,7 +196,7 @@ class z extends (r = c.ZP.Store) {
             i = this.getUserState(),
             a = this.getApplicationState(n.applicationId),
             s = this.getApplicationStates(),
-            o = (0, D.k)(e, t.commandTypes),
+            o = (0, L.k)(e, t.commandTypes),
             l = !1 !== t.applicationCommands && o.hasBaseAccessPermissions,
             u = !1;
         n.allowFetch &&
@@ -604,7 +604,7 @@ let ee = Object.freeze({
     }
 });
 function et(e, t, n) {
-    let r = (0, D.Hs)(e, t.commandTypes),
+    let r = (0, L.Hs)(e, t.commandTypes),
         i = !1 !== t.applicationCommands,
         a = Q(e, i, n.allowFetch),
         o = $(i, n.allowFetch),
@@ -652,8 +652,8 @@ function en(e) {
         { commandTypes: R } = o,
         C = null == _ ? void 0 : _.toLowerCase(),
         y = null == C ? void 0 : C.split(' '),
-        D = E === v.D.ONLY_TEXT,
-        L = E !== v.D.DENY ? (0, A.Kh)(R, !0, D) : [],
+        L = E === v.D.ONLY_TEXT,
+        D = E !== v.D.DENY ? (0, A.Kh)(R, !0, L) : [],
         M = [],
         P = {
             permissionContext: o,
@@ -721,9 +721,9 @@ function en(e) {
             }
             return eu(e.section.name, t.section.name);
         }),
-        L.length > 0 || !0 === m)
+        D.length > 0 || !0 === m)
     ) {
-        let e = er(A.Tm[b.bi.BUILT_IN], L, !0, !0, P);
+        let e = er(A.Tm[b.bi.BUILT_IN], D, !0, !0, P);
         null != e && M.push(e);
     }
     let k = M.flatMap((e) =>
@@ -774,17 +774,17 @@ function er(e, t, n, r, i) {
     let a,
         { query: s, splitQuery: o, allowEmptySections: l, scoreMethod: u, permissionContext: c, installOnDemand: d } = i,
         { context: _, userId: E, roleIds: f, isImpersonating: h } = c,
-        p = null != _.guild_id ? L.ML(e.permissions, _.guild_id, E, f, h) : null,
-        I = null != _.guild_id ? L.ZJ(e.permissions, _, _.guild_id) : null,
+        p = null != _.guild_id ? D.ML(e.permissions, _.guild_id, E, f, h) : null,
+        I = null != _.guild_id ? D.ZJ(e.permissions, _, _.guild_id) : null,
         m = [];
     for (let i of t)
-        L.Ft(i, c, {
+        D.Ft(i, c, {
             applicationAllowedForUser: p,
             applicationAllowedForChannel: I,
             commandBotId: e.botId,
             isGuildInstalled: n,
             isUserInstalled: r || d
-        }) === L.mF.ALLOWED && m.push(i);
+        }) === D.mF.ALLOWED && m.push(i);
     return 0 !==
         (a =
             u !== v.p.NONE && null != s && null != o

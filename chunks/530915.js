@@ -74,17 +74,17 @@ let E = (e) => {
         });
     },
     v = (e) => {
-        let { carouselId: t, items: n = [], renderItem: a, getItemId: r, onIntentionalChange: i, onChangeItem: c, className: u, controlsClassName: f, paginationButtonClassName: p, springConfig: _, delay: h, initialPaused: v = !1, unidirectional: L = !1, analyticsLocations: T } = e,
-            { trackSlideView: S, trackPagination: N } = (0, b.X)(t, T),
+        let { carouselId: t, items: n = [], renderItem: a, getItemId: r, onIntentionalChange: i, onChangeItem: c, className: u, controlsClassName: f, paginationButtonClassName: p, springConfig: _, delay: h, initialPaused: v = !1, unidirectional: T = !1, analyticsLocations: L } = e,
+            { trackSlideView: S, trackPagination: N } = (0, b.X)(t, L),
             [O, k] = (0, o.useState)(0),
             [B, j] = (0, o.useState)(!1),
             [Z, P] = (0, o.useState)(!1),
-            R = o.useCallback(() => P(!0), []),
-            A = o.useCallback(() => P(!1), []),
+            A = o.useCallback(() => P(!0), []),
+            R = o.useCallback(() => P(!1), []),
             y = (0, g.e7)([m.Z], () => m.Z.isFocused()),
             M = null != h && !v && !Z && y,
             w = o.useCallback((e) => (n.length + O + e) % n.length, [n, O]),
-            D = o.useCallback(
+            H = o.useCallback(
                 d()((e, t, a) => {
                     null != a && (null == i || i(n[e], t, e, a), N(e, O, r(e), r(t))), j('GO_TO_SLIDE' === a), null == c || c(n[e], t, e), k(e);
                 }, 200),
@@ -97,19 +97,19 @@ let E = (e) => {
             (0, o.useEffect)(() => {
                 if (M) {
                     let e = w(1),
-                        t = setInterval(() => D(e, O), h);
+                        t = setInterval(() => H(e, O), h);
                     return () => clearInterval(t);
                 }
-            }, [M, h, O, w, D]),
+            }, [M, h, O, w, H]),
             (0, s.jsxs)('div', {
                 className: l()(x.carouselContainer, u),
-                onMouseEnter: R,
-                onMouseLeave: A,
+                onMouseEnter: A,
+                onMouseLeave: R,
                 children: [
                     (0, s.jsx)(C.Slides, {
                         activeSlide: String(O),
                         springConfig: null != _ ? _ : I,
-                        directionOverride: L && !B ? 'forwards' : void 0,
+                        directionOverride: T && !B ? 'forwards' : void 0,
                         fadeInOut: !0,
                         children: n.map((e, t) =>
                             (0, s.jsx)(
@@ -132,13 +132,13 @@ let E = (e) => {
                             currentSlideIndex: O,
                             numSlides: n.length,
                             onNext: () => {
-                                D(w(1), O, 'NEXT');
+                                H(w(1), O, 'NEXT');
                             },
                             onPrevious: () => {
-                                D(w(-1), O, 'PREVIOUS');
+                                H(w(-1), O, 'PREVIOUS');
                             },
                             onIndicatorClick: (e) => {
-                                D(e, O, 'GO_TO_SLIDE');
+                                H(e, O, 'GO_TO_SLIDE');
                             }
                         })
                 ]

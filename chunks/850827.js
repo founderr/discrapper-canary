@@ -25,8 +25,8 @@ var i = n(120356),
     v = n(636245),
     C = n(697761),
     y = n(611459),
-    D = n(544671),
-    L = n(757182),
+    L = n(544671),
+    D = n(757182),
     b = n(910424),
     M = n(981631),
     P = n(638937);
@@ -81,7 +81,7 @@ t.Z = (0, c.Z)((e) => {
                 );
             if (W) {
                 let e = (0, r.jsx)(
-                        D.Z,
+                        L.Z,
                         {
                             activity: t,
                             user: i,
@@ -157,7 +157,7 @@ t.Z = (0, c.Z)((e) => {
                   : (0, r.jsxs)(r.Fragment, {
                         children: [
                             (0, r.jsx)(
-                                L.Z,
+                                D.Z,
                                 {
                                     activity: t,
                                     color: G,

@@ -39,7 +39,7 @@ function p(e) {
         R = a.useCallback(() => {
             p(!1);
         }, []),
-        x = a.useCallback(() => {
+        O = a.useCallback(() => {
             (0, I.n)({
                 channelId: c,
                 messageId: u,
@@ -55,7 +55,7 @@ function p(e) {
                 }
             );
     }, [f, S]);
-    let O = (0, i.jsx)(d.Text, {
+    let x = (0, i.jsx)(d.Text, {
         variant: 'text-xs/semibold',
         color: 'none',
         className: C.voteCount,
@@ -84,12 +84,12 @@ function p(e) {
                                       onMouseLeave: R,
                                       onFocus: A,
                                       onBlur: R,
-                                      onClick: x,
+                                      onClick: O,
                                       className: C.voteCountButton,
                                       'aria-describedby': g ? o : void 0,
                                       look: d.Button.Looks.BLANK,
                                       size: d.Button.Sizes.NONE,
-                                      children: O
+                                      children: x
                                   })
                           }),
                           g &&
@@ -99,7 +99,7 @@ function p(e) {
                               })
                       ]
                   })
-                : (0, i.jsx)(i.Fragment, { children: O }),
+                : (0, i.jsx)(i.Fragment, { children: x }),
             (0, i.jsxs)(d.Text, {
                 variant: 'text-md/bold',
                 color: 'none',

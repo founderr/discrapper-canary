@@ -28,9 +28,9 @@ function c(e) {
         text: (0, a.jsx)('span', { children: m })
     });
     if (!d) return p;
-    let I = r.Z.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({ activity: t });
+    let x = r.Z.Messages.EMBEDDED_ACTIVITIES_FREE_PREVIEW_TOOLTIP.format({ activity: t });
     return (0, a.jsx)(l.TooltipContainer, {
-        text: I,
+        text: x,
         tooltipContentClassName: o.tooltip,
         children: p
     });

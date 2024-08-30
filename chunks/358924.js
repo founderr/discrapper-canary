@@ -24,8 +24,8 @@ var i,
     v = n(933557),
     Z = n(194082),
     L = n(264165),
-    O = n(630186),
-    R = n(925329),
+    R = n(630186),
+    O = n(925329),
     x = n(382182),
     b = n(871118),
     P = n(707409),
@@ -220,7 +220,7 @@ ee.Icon = $;
 let et = (e) => {
     let { children: t, className: n, ...i } = e;
     return (0, s.jsx)(u.FocusRing, {
-        children: (0, s.jsx)(O.Z, {
+        children: (0, s.jsx)(R.Z, {
             className: o()(n, Y.wrapper),
             padded: !0,
             ...i,
@@ -231,7 +231,7 @@ let et = (e) => {
 (et.Header = ee),
     (et.Body = (e) => {
         let { children: t } = e;
-        return (0, s.jsx)(O.Z, {
+        return (0, s.jsx)(R.Z, {
             inset: !0,
             padded: !1,
             className: Y.body,
@@ -515,9 +515,9 @@ let et = (e) => {
                 (0, s.jsxs)('div', {
                     className: Y.embeddedActivityTopRow,
                     children: [
-                        (0, s.jsx)(R.Z, {
+                        (0, s.jsx)(O.Z, {
                             game: g,
-                            size: R.Z.Sizes.XSMALL,
+                            size: O.Z.Sizes.XSMALL,
                             className: Y.embeddedActivityIcon
                         }),
                         (0, s.jsx)('div', {

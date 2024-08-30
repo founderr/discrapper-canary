@@ -1,8 +1,8 @@
 n.d(t, {
-    c: function () {
+    cG: function () {
         return i;
     },
-    d: function () {
+    dR: function () {
         return a;
     }
 });

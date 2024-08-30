@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(863908),
     C = n(803647),
     y = n(266910),
-    D = n(788983),
-    L = n(703656),
+    L = n(788983),
+    D = n(703656),
     b = n(937995),
     M = n(618158),
     P = n(922745),
@@ -217,7 +217,7 @@ class el extends i.PureComponent {
                 let { channel: t } = this.props;
                 (0, h.Ou)();
                 let n = null !== (e = t.getGuildId()) && void 0 !== e ? e : er.ME;
-                f.Z.channelListScrollTo(n, t.id), (0, L.XU)(n, t.id);
+                f.Z.channelListScrollTo(n, t.id), (0, D.XU)(n, t.id);
             }),
             eo(this, 'handleStartStream', () => {
                 let { canGoLive: e, channel: t } = this.props,
@@ -235,7 +235,7 @@ class el extends i.PureComponent {
             }),
             eo(this, 'handleOpenPopout', () => {
                 let { channel: e } = this.props;
-                D.hP(e);
+                L.hP(e);
             }),
             eo(this, 'renderBottomLeftControls', () => {
                 let { canSeeParticipantName: e } = this.viewProperties;

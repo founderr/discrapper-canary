@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(417363),
     C = n(358085),
     y = n(804739),
-    D = n(566620),
-    L = n(317381),
+    L = n(566620),
+    D = n(317381),
     b = n(638880),
     M = n(255621),
     P = n(452634),
@@ -68,8 +68,8 @@ function V(e) {
                         applicationId: J
                     }))
         ),
-        en = (0, a.e7)([L.ZP], () =>
-            Array.from(L.ZP.getSelfEmbeddedActivities().values()).some((e) => {
+        en = (0, a.e7)([D.ZP], () =>
+            Array.from(D.ZP.getSelfEmbeddedActivities().values()).some((e) => {
                 let { applicationId: t, channelId: n } = e;
                 return (t === (null == V ? void 0 : V.application_id) || t === (null == H ? void 0 : H.applicationId)) && n === ee;
             })
@@ -103,7 +103,7 @@ function V(e) {
                     })
                   : void 0
         ),
-        eo = (0, a.e7)([L.ZP], () => Array.from(L.ZP.getSelfEmbeddedActivities().values()).some((e) => e.applicationId === (null == H ? void 0 : H.applicationId) && e.channelId === (null == H ? void 0 : H.channelId))),
+        eo = (0, a.e7)([D.ZP], () => Array.from(D.ZP.getSelfEmbeddedActivities().values()).some((e) => e.applicationId === (null == H ? void 0 : H.applicationId) && e.channelId === (null == H ? void 0 : H.channelId))),
         el = (0, c.O)(),
         eu = !C.isPlatformEmbedded;
     if (!((0, w.Z)(V, B.xjy.JOIN) || j) || null == J) return null;
@@ -155,7 +155,7 @@ function V(e) {
                 es && (null == Y || Y(), ef(Z, V)),
                     Q(!0),
                     null != ee && null != J
-                        ? (e = await D.pu({
+                        ? (e = await L.pu({
                               channelId: ee,
                               applicationId: J,
                               userId: Z.id,

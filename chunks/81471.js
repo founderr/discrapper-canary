@@ -25,7 +25,7 @@ let N = a.memo(function (e) {
         v = (0, l.e7)([I.Z], () => null != N && I.Z.isBlockedForMessage(N), [N]),
         Z = (0, l.e7)([m.Z], () => m.Z.can(p.Plq.MANAGE_MESSAGES, t)),
         L = E.cC.useSetting(),
-        { content: O } = a.useMemo(
+        { content: R } = a.useMemo(
             () =>
                 (null == N ? void 0 : N.content) != null && '' !== N.content
                     ? (0, _.ZP)(N, {
@@ -36,9 +36,9 @@ let N = a.memo(function (e) {
                     : { content: null },
             [N, A]
         ),
-        R = null;
+        O = null;
     if (s)
-        R = (0, i.jsx)(o.Text, {
+        O = (0, i.jsx)(o.Text, {
             className: S.messageReplacement,
             variant: 'text-sm/normal',
             color: 'text-muted',
@@ -46,19 +46,19 @@ let N = a.memo(function (e) {
         });
     else if (n) {
         if (null != N && v)
-            R = (0, i.jsx)(o.Text, {
+            O = (0, i.jsx)(o.Text, {
                 className: S.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: f.Z.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
             });
         else if (null != N) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, h.f)(N, O, v, r()(S.messageContent, C.inlineFormat), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, h.f)(N, R, v, r()(S.messageContent, C.inlineFormat), {
                 leadingIconClass: S.messageContentIcon,
                 trailingIconClass: S.messageContentIcon,
                 iconSize: T.WW
             });
-            R =
+            O =
                 null != t
                     ? (0, i.jsx)(o.Text, {
                           variant: 'text-sm/normal',
@@ -74,18 +74,18 @@ let N = a.memo(function (e) {
                           children: e
                       });
         } else
-            R = (0, i.jsx)(o.Text, {
+            O = (0, i.jsx)(o.Text, {
                 className: S.messageReplacement,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: f.Z.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
             });
-    } else R = null;
+    } else O = null;
     return (0, i.jsx)(c.a.Provider, {
         value: (0, u.Z)(L, Z),
         children: (0, i.jsx)(o.FocusBlock, {
             className: S.messageFocusBlock,
-            children: R
+            children: O
         })
     });
 });

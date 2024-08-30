@@ -31,14 +31,14 @@ var i = n(120356),
     v = n(582123),
     C = n(622058),
     y = n(290274),
-    D = n(318134),
-    L = n(228168),
+    L = n(318134),
+    D = n(228168),
     b = n(689938),
     M = n(139665);
 function P(e) {
     let { user: t, entry: n, header: i, className: l, onClose: d } = e,
         { profileType: f } = (0, N.z)(),
-        h = { [M.fullSize]: f === L.y0.FULL_SIZE },
+        h = { [M.fullSize]: f === D.y0.FULL_SIZE },
         { largeImage: I } = (0, c.rv)({
             entry: n,
             showCoverImage: !1
@@ -52,7 +52,7 @@ function P(e) {
             trackEntryPointImpression: !0
         }),
         { analyticsLocations: C } = (0, u.ZP)(),
-        { onAction: y, trackViewRef: b } = (0, D.Z)({
+        { onAction: y, trackViewRef: b } = (0, L.Z)({
             display: 'recent',
             user: t,
             entry: n,
@@ -141,10 +141,10 @@ function P(e) {
 function U(e) {
     let { user: t, entry: n, header: i, className: s } = e,
         { profileType: o } = (0, N.z)(),
-        l = { [M.fullSize]: o === L.y0.FULL_SIZE },
+        l = { [M.fullSize]: o === D.y0.FULL_SIZE },
         { largeImage: d } = (0, c.rv)({ entry: n }),
         { analyticsLocations: E } = (0, u.ZP)(),
-        { trackViewRef: f } = (0, D.Z)({
+        { trackViewRef: f } = (0, L.Z)({
             display: 'recent',
             user: t,
             entry: n,
@@ -197,10 +197,10 @@ function w(e) {
     var t, n, i;
     let { user: s, entry: o, header: l, className: d } = e,
         { profileType: E } = (0, N.z)(),
-        h = { [M.fullSize]: E === L.y0.FULL_SIZE },
+        h = { [M.fullSize]: E === D.y0.FULL_SIZE },
         { largeImage: p } = (0, c.rv)({ entry: o }),
         { analyticsLocations: I } = (0, u.ZP)(),
-        { trackViewRef: T } = (0, D.Z)({
+        { trackViewRef: T } = (0, L.Z)({
             display: 'recent',
             user: s,
             entry: o,
@@ -248,10 +248,10 @@ function w(e) {
 function x(e) {
     let { user: t, entry: n, header: i, className: s } = e,
         { profileType: o } = (0, N.z)(),
-        l = { [M.fullSize]: o === L.y0.FULL_SIZE },
+        l = { [M.fullSize]: o === D.y0.FULL_SIZE },
         { largeImage: d } = (0, c.rv)({ entry: n }),
         { analyticsLocations: E } = (0, u.ZP)(),
-        { trackViewRef: f } = (0, D.Z)({
+        { trackViewRef: f } = (0, L.Z)({
             display: 'recent',
             user: t,
             entry: n,
@@ -313,7 +313,7 @@ function G(e) {
                       let { onAutoDismiss: o } = e,
                           l = (e) =>
                               (0, r.jsx)(O.Z, {
-                                  text: c === L.y0.FULL_SIZE ? null : e,
+                                  text: c === D.y0.FULL_SIZE ? null : e,
                                   tags: s
                                       ? null
                                       : (0, r.jsx)(y.Z, {

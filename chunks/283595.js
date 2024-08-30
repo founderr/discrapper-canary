@@ -43,13 +43,13 @@ function y(e) {
         g[(0, f.Tu)(e.id, e.branchId)] = e;
     }
 }
-function D(e) {
+function L(e) {
     let { libraryApplication: t } = e,
         n = _.Z.createFromServer(t),
         r = (0, f.Tu)(n.id, n.branchId);
     (g[r] = n), A.delete(r);
 }
-function L(e, t) {
+function D(e, t) {
     var n;
     let r = (0, f.Tu)(e, t);
     return null !== (n = g[r]) && void 0 !== n ? n : S[r];
@@ -85,12 +85,12 @@ class M extends (r = u.ZP.Store) {
     }
     hasApplication(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = L(e, t);
+            r = D(e, t);
         return !(null == r || (!n && r.isHidden())) && (0, f.Je)(r);
     }
     getLibraryApplication(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            r = L(e, t);
+            r = D(e, t);
         return n && null != r ? ((0, f.Je)(r) ? r : null) : r;
     }
     getActiveLibraryApplication(e) {
@@ -158,11 +158,11 @@ class M extends (r = u.ZP.Store) {
         LIBRARY_APPLICATION_FLAGS_UPDATE_START: function (e) {
             let { applicationId: t, branchId: n, flags: r } = e,
                 i = (0, f.Tu)(t, n),
-                a = L(t, n);
+                a = D(t, n);
             null != a && !a.isHidden() && E.yE(r, p.eHb.HIDDEN) && (R = !0), A.add(i);
         },
-        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: D,
-        LIBRARY_APPLICATION_UPDATE: D,
+        LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: L,
+        LIBRARY_APPLICATION_UPDATE: L,
         LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function (e) {
             let { applicationId: t, branchId: n, launchOptionId: r } = e;
             (O[(0, f.Tu)(t, n)] = r), v();

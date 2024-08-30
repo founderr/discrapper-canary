@@ -42,8 +42,8 @@ function b() {
         U = (0, r.e7)([x.Z], () => x.Z.getUserProfile(B.id)),
         {
             pendingAvatar: G,
-            pendingGlobalName: F,
-            pendingBanner: y,
+            pendingGlobalName: y,
+            pendingBanner: F,
             pendingBio: V,
             pendingPronouns: w,
             pendingAccentColor: k,
@@ -60,7 +60,7 @@ function b() {
         W = (0, _.gS)(),
         K = D.ZP.canUsePremiumProfileCustomization(B),
         z = (0, E.gd)(G, B.avatar),
-        Q = (0, E.f$)(y, null == U ? void 0 : U.banner),
+        Q = (0, E.f$)(F, null == U ? void 0 : U.banner),
         X = 'DefaultCustomizationSections';
     (0, l.j)({
         location: X + ' auto on',
@@ -83,7 +83,7 @@ function b() {
                 placeholder: B.username,
                 errors: $,
                 currentGlobalName: B.globalName,
-                pendingGlobalName: F,
+                pendingGlobalName: y,
                 onGlobalNameChange: o.UZ
             }),
             (0, n.jsx)(

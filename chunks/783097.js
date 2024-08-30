@@ -6,7 +6,7 @@ n.d(t, {
         return N;
     },
     Cb: function () {
-        return O;
+        return x;
     },
     Hu: function () {
         return M;
@@ -33,7 +33,7 @@ n.d(t, {
         return Z;
     },
     sl: function () {
-        return x;
+        return O;
     },
     vJ: function () {
         return g;
@@ -123,7 +123,7 @@ function R(e) {
         };
     return I();
 }
-function x(e) {
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { fakeAppIconURL: n, ...i } = t;
     return N(e)
@@ -142,7 +142,7 @@ function x(e) {
               description: T.Z.Messages.APP_LAUNCHER_BUILT_IN_SECTION_DESCRIPTION
           };
 }
-function O(e) {
+function x(e) {
     return !!N(e) && ('is_monetized' in e ? e.is_monetized : e.isMonetized);
 }
 function M(e) {

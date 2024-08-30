@@ -122,8 +122,8 @@ s.Z = (e) => {
         { listing: t, groupListing: i, guild: l, expanded: T, handleToggleExpanded: N, subscriptionInfo: A } = (0, x.Z)(s),
         [h, p] = a.useState(!1),
         G = (0, m.Dt)(),
-        { analyticsLocations: F } = (0, I.ZP)(),
-        { shouldHideGuildPurchaseEntryPoints: y } = (0, C.uP)(null == l ? void 0 : l.id),
+        { analyticsLocations: y } = (0, I.ZP)(),
+        { shouldHideGuildPurchaseEntryPoints: F } = (0, C.uP)(null == l ? void 0 : l.id),
         V = (null == s ? void 0 : s.paymentGateway) === P.gg$.APPLE_PARTNER;
     if (null == i || null == t || null == A) return null;
     let w = () => {
@@ -140,7 +140,7 @@ s.Z = (e) => {
         },
         Y = async () => {
             try {
-                p(!0), await d.pl(s, F), (0, D.h)();
+                p(!0), await d.pl(s, y), (0, D.h)();
             } finally {
                 p(!1);
             }
@@ -277,7 +277,7 @@ s.Z = (e) => {
                                   isTrial: q,
                                   isCancelled: H,
                                   isResubscribing: h,
-                                  shouldHideRoleSubscriptionEntryPoints: y,
+                                  shouldHideRoleSubscriptionEntryPoints: F,
                                   onCancelSubscriptionClick: k,
                                   onChangePlanClick: w,
                                   onResubscribeClick: Y

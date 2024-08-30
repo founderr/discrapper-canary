@@ -1,40 +1,40 @@
-var l = t(735250);
-t(470079);
-var s = t(442837),
-    a = t(780384),
-    r = t(481060),
-    i = t(210887),
-    o = t(918701),
-    u = t(231338),
-    c = t(689938),
-    d = t(814605);
-n.Z = function (e) {
-    let { quest: n } = e,
-        t = (0, s.e7)([i.Z], () => i.Z.getState().theme),
-        m = (0, a.wj)(t) ? u.BR.DARK : u.BR.LIGHT;
+var l = n(735250);
+n(470079);
+var s = n(442837),
+    i = n(780384),
+    r = n(481060),
+    a = n(210887),
+    o = n(918701),
+    c = n(231338),
+    d = n(689938),
+    u = n(814605);
+t.Z = function (e) {
+    let { quest: t } = e,
+        n = (0, s.e7)([a.Z], () => a.Z.getState().theme),
+        f = (0, i.wj)(n) ? c.BR.DARK : c.BR.LIGHT;
     return (0, l.jsx)('div', {
-        className: d.wrapper,
+        className: u.wrapper,
         children: (0, l.jsxs)('div', {
-            className: d.content,
+            className: u.content,
             children: [
                 (0, l.jsx)('img', {
-                    src: (0, o.uo)(n, m),
+                    src: (0, o.uo)(t, f),
                     alt: '',
-                    className: d.gameTile
+                    className: u.gameTile
                 }),
                 (0, l.jsxs)('div', {
-                    className: d.copy,
+                    className: u.copy,
                     children: [
                         (0, l.jsx)(r.Heading, {
                             color: 'always-white',
                             variant: 'text-sm/medium',
-                            children: c.Z.Messages.QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING.format({ gameTitle: n.config.messages.gameTitle })
+                            children: d.Z.Messages.QUESTS_STREAM_SOURCE_SELECT_NOTICE_HEADING.format({ gameTitle: t.config.messages.gameTitle })
                         }),
                         (0, l.jsx)(r.Text, {
-                            className: d.subheading,
+                            className: u.subheading,
                             color: 'always-white',
                             variant: 'text-xs/medium',
-                            children: c.Z.Messages.QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING
+                            children: d.Z.Messages.QUESTS_STREAM_SOURCE_SELECT_NOTICE_SUBHEADING
                         })
                     ]
                 })

@@ -12,7 +12,7 @@ n.d(t, {
         return y;
     },
     AS: function () {
-        return D;
+        return L;
     },
     Av: function () {
         return j;
@@ -90,7 +90,7 @@ n.d(t, {
         return A;
     },
     iA: function () {
-        return L;
+        return D;
     },
     jg: function () {
         return W;
@@ -155,8 +155,8 @@ var r,
     v,
     C,
     y,
-    D,
     L,
+    D,
     b,
     M,
     P,
@@ -267,10 +267,10 @@ let F = 100,
     (c.CAPTURE_TIMEOUT_EXPERIMENTS = 'CAPTURE_TIMEOUT_EXPERIMENTS'),
     (c.SCREEN_SOUNDSHARE = 'SCREEN_SOUNDSHARE'),
     (c.NATIVE_SCREENSHARE_PICKER = 'NATIVE_SCREENSHARE_PICKER'),
-    ((d = D || (D = {})).NATIVE = 'NATIVE'),
+    ((d = L || (L = {})).NATIVE = 'NATIVE'),
     (d.WEBRTC = 'WEBRTC'),
     (d.DUMMY = 'DUMMY'),
-    ((_ = L || (L = {})).LEGACY = 'legacy'),
+    ((_ = D || (D = {})).LEGACY = 'legacy'),
     (_.STANDARD = 'standard'),
     (_.EXPERIMENTAL = 'experimental'),
     ((E = b || (b = {})).OPUS = 'opus'),

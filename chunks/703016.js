@@ -24,8 +24,8 @@ var i = n(913527),
     v = n(441729),
     Z = n(653477),
     L = n(981631),
-    O = n(689938);
-let R = [],
+    R = n(689938);
+let O = [],
     x = null,
     b = null,
     P = null,
@@ -33,7 +33,7 @@ let R = [],
 function D(e, t, n, i) {
     let s = I.Z.getGuild(n),
         r = e
-            .replace(M, O.Z.Messages.SPOILER)
+            .replace(M, R.Z.Messages.SPOILER)
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var i;
                 let a = C.default.getUser(t);
@@ -42,13 +42,13 @@ function D(e, t, n, i) {
             })
             .replace(/<@&?(\d+)>/g, (e, t) => {
                 let n = null != s ? I.Z.getRole(s.id, t) : null;
-                return null != n && null != n.name ? n.name : O.Z.Messages.MESSAGE_TTS_DELETED_ROLE;
+                return null != n && null != n.name ? n.name : R.Z.Messages.MESSAGE_TTS_DELETED_ROLE;
             })
             .replace(/<#(\d+)>/g, (e, t) => {
                 let n = E.Z.getChannel(t);
                 return null == n ? e : (0, l.F6)(n, C.default, T.Z);
             })
-            .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(O.Z.Messages.EMOJI, ' ').concat(t))
+            .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(R.Z.Messages.EMOJI, ' ').concat(t))
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => '/'.concat(t))
             .replace(/<t:(\d+):([A-Z]|[a-z])>/g, (e, t, n) => {
                 let i = o.Qh[n],
@@ -57,11 +57,11 @@ function D(e, t, n, i) {
                 return null != i ? i(r) : r.format();
             });
     return null == i
-        ? O.Z.Messages.MESSAGE_TTS.format({
+        ? R.Z.Messages.MESSAGE_TTS.format({
               username: t,
               body: r
           })
-        : O.Z.Messages.MESSAGE_TTS_REPLY.format({
+        : R.Z.Messages.MESSAGE_TTS_REPLY.format({
               username: t,
               body: r,
               replyUsername: i
@@ -113,11 +113,11 @@ function B(e) {
         C = h.ZP.getCurrentSidebarChannelId(I),
         A = l === I || l === C,
         v = u.OW.getSetting() && o.tts && A,
-        O = p.Z.getTTSType(),
-        x = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== _.default.getId() && (O === L.PrB.ALL_CHANNELS || (O === L.PrB.SELECTED_CHANNEL && A));
+        R = p.Z.getTTSType(),
+        x = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== _.default.getId() && (R === L.PrB.ALL_CHANNELS || (R === L.PrB.SELECTED_CHANNEL && A));
     if ((v || x) && !T.Z.isBlockedForMessage(o)) {
-        if (R.indexOf(o.id) >= 0) return !1;
-        R.unshift(o.id) > 10 && R.pop();
+        if (O.indexOf(o.id) >= 0) return !1;
+        O.unshift(o.id) > 10 && O.pop();
         let e = d.getGuildId();
         if (null != e && S.ZP.getMutedChannels(e).has(l)) return !1;
         let t = null !== (s = null !== (a = m.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== a ? a : N.ZP.getName(o.author)) && void 0 !== s ? s : '',

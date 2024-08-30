@@ -114,7 +114,7 @@ function R() {
         C = null;
     })();
 }
-class x extends (a = l.ZP.PersistedStore) {
+class O extends (a = l.ZP.PersistedStore) {
     initialize(e) {
         (N = null != e ? e : h), this.syncWith([E.Z], R);
     }
@@ -131,9 +131,9 @@ class x extends (a = l.ZP.PersistedStore) {
         return N.lastSeen;
     }
 }
-T(x, 'displayName', 'SurveyStore'),
-    T(x, 'persistKey', 'SurveyStore'),
-    T(x, 'migrations', [
+T(O, 'displayName', 'SurveyStore'),
+    T(O, 'persistKey', 'SurveyStore'),
+    T(O, 'migrations', [
         (e) => {
             let t = { ...e };
             return delete t.validSurveys, delete t.currentSurvey, delete t.iosIsPushNotificationClicked, delete t.iosIsInviteShown, delete t.iosFirstRunDate, t;
@@ -153,7 +153,7 @@ T(x, 'displayName', 'SurveyStore'),
             };
         }
     ]),
-    (t.Z = new x(o.Z, {
+    (t.Z = new O(o.Z, {
         CONNECTION_OPEN: function () {
             var e;
             if (!(null != N.lastFetched && Date.now() - (null !== (e = N.lastFetched) && void 0 !== e ? e : 0) < p) || null != N.surveyOverride) (0, c.wk)(N.surveyOverride, !0);

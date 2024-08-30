@@ -77,12 +77,12 @@ function Z(e) {
                 [n.location, t]
             );
         })(e),
-        O = [];
+        R = [];
     for (let e of L) {
         let { activity: t } = e;
         null != t &&
             null != t.type &&
-            O.push(
+            R.push(
                 (function (e, t) {
                     let { canJoin: n, activity: a, activityUser: s } = e;
                     if (!n || null == a) return null;
@@ -124,5 +124,5 @@ function Z(e) {
                 })(e, n)
             );
     }
-    return [Z, ...O];
+    return [Z, ...R];
 }

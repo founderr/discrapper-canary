@@ -21,7 +21,7 @@
                     if (i === E) throw Error('Generator is already running');
                     if (i === f) {
                         if ('throw' === a) throw s;
-                        return D();
+                        return L();
                     }
                     for (r.method = a, r.arg = s; ; ) {
                         var o = r.delegate;
@@ -188,9 +188,9 @@
                 return (a.next = a);
             }
         }
-        return { next: D };
+        return { next: L };
     }
-    function D() {
+    function L() {
         return {
             value: n,
             done: !0

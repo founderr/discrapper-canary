@@ -156,7 +156,7 @@ function G() {
         })
     );
 }
-function F(e) {
+function y(e) {
     let { daysPastDue: s, subscription: t, openInvoiceId: i } = e,
         { analyticsLocations: r } = (0, S.ZP)(I.Z.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER);
     return (
@@ -191,7 +191,7 @@ function F(e) {
         })
     );
 }
-function y(e) {
+function F(e) {
     let { subscription: s, renewalInvoicePreview: t, className: a } = e;
     return (0, n.jsxs)('div', {
         className: r()(j.billingInformation, a),
@@ -294,7 +294,7 @@ function w(e) {
                           children: (0, n.jsxs)('div', {
                               className: j.details,
                               children: [
-                                  (0, n.jsx)(y, {
+                                  (0, n.jsx)(F, {
                                       subscription: s,
                                       renewalInvoicePreview: C,
                                       className: j.detailsBlock
@@ -381,7 +381,7 @@ function H(e) {
         P = (0, M.U)(),
         L = !C && P,
         B = (null == a ? void 0 : a.status) === Z.O0b.PAST_DUE ? d()().diff(d()(a.currentPeriodStart), 'days') : 0,
-        [y] = (0, f.Ox)({
+        [F] = (0, f.Ox)({
             subscriptionId: a.id,
             preventFetch: !L
         });
@@ -405,11 +405,11 @@ function H(e) {
                   children: [
                       R ? (0, n.jsx)(U, {}) : null,
                       D ? (0, n.jsx)(G, {}) : null,
-                      L && null != y
-                          ? (0, n.jsx)(F, {
+                      L && null != F
+                          ? (0, n.jsx)(y, {
                                 daysPastDue: B,
                                 subscription: a,
-                                openInvoiceId: y.id
+                                openInvoiceId: F.id
                             })
                           : null,
                       t,

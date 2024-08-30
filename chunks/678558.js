@@ -17,8 +17,8 @@ t.Z = (e) => {
         { analyticsLocations: R } = (0, u.ZP)(),
         v = (0, l.bp)() === E.IlC.POPOUT,
         [C, y] = i.useState(!1),
-        D = null != I ? Math.max((0, d.KK)(a, I), 1) : 1,
-        L = (0, d.aq)(),
+        L = null != I ? Math.max((0, d.KK)(a, I), 1) : 1,
+        D = (0, d.aq)(),
         b = async () => {
             y(!0),
                 await (0, _.u)({
@@ -26,7 +26,7 @@ t.Z = (e) => {
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
                     guild: a,
-                    numberOfBoostsToAdd: D,
+                    numberOfBoostsToAdd: L,
                     onClose: m,
                     closeLayer: T,
                     inPopout: v,
@@ -50,9 +50,9 @@ t.Z = (e) => {
             ]
         })),
         (O.disabled = !0)),
-    null != L)
+    null != D)
         ? (0, r.jsx)(o.Tooltip, {
-              text: L,
+              text: D,
               'aria-label': !1,
               children: (e) =>
                   (0, r.jsx)(o.ShinyButton, {

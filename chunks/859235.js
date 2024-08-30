@@ -27,7 +27,7 @@ t.Z = s.forwardRef(function (e, t) {
         { onFocus: O, ...R } = (0, u.JA)(n),
         { handleFocus: v, handleBlur: C } = (0, f.b)(O),
         y = 0 === N,
-        D = null != o;
+        L = null != o;
     return (0, a.jsx)(c.FocusRing, {
         children: (0, a.jsx)('li', {
             ...R,
@@ -58,7 +58,7 @@ t.Z = s.forwardRef(function (e, t) {
                 className: I.uploadContainer,
                 children: [
                     s,
-                    D
+                    L
                         ? (0, a.jsx)('div', {
                               className: I.actionBarContainer,
                               children: (0, a.jsx)('div', {

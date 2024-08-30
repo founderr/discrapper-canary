@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(46140),
     Z = n(981631),
     L = n(689938),
-    O = n(775513);
-function R(e) {
+    R = n(775513);
+function O(e) {
     var t;
     let { quest: n } = e,
         a = (0, h.B6)(n.config.expiresAt),
@@ -34,15 +34,15 @@ function R(e) {
         u = (0, o.w)(r) ? Z.BRd.DARK : Z.BRd.LIGHT,
         _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return (0, i.jsxs)('div', {
-        className: O.heading,
+        className: R.heading,
         children: [
             (0, i.jsx)('img', {
-                className: O.headingGameTile,
+                className: R.headingGameTile,
                 alt: '',
                 src: (0, I.uo)(n, u)
             }),
             (0, i.jsxs)('div', {
-                className: O.headingCopy,
+                className: R.headingCopy,
                 children: [
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-md/semibold',
@@ -119,7 +119,7 @@ t.Z = function (e) {
                       ref: (t) => {
                           e.current = t;
                       },
-                      className: r()(O.wrapper, { [O.wrapperQuestAccepted]: G }),
+                      className: r()(R.wrapper, { [R.wrapperQuestAccepted]: G }),
                       onClick: P,
                       onKeyPress: P,
                       onFocus: x,
@@ -128,9 +128,9 @@ t.Z = function (e) {
                       onMouseLeave: b,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: O.utils,
+                              className: R.utils,
                               children: [
-                                  G ? (0, i.jsx)(R, { quest: o }) : (0, i.jsx)(f.Z, { textOpacity: 0.5 }),
+                                  G ? (0, i.jsx)(O, { quest: o }) : (0, i.jsx)(f.Z, { textOpacity: 0.5 }),
                                   (0, i.jsx)(S.r, {
                                       quest: o,
                                       questContent: m.jn.ACTIVITY_PANEL,
@@ -143,7 +143,7 @@ t.Z = function (e) {
                                               children: (0, i.jsx)(c.MoreHorizontalIcon, {
                                                   size: 'md',
                                                   color: 'currentColor',
-                                                  className: O.submenuIcon
+                                                  className: R.submenuIcon
                                               })
                                           })
                                   })
@@ -152,9 +152,9 @@ t.Z = function (e) {
                           !G &&
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(R, { quest: o }),
+                                      (0, i.jsx)(O, { quest: o }),
                                       (0, i.jsx)(c.Text, {
-                                          className: O.instructions,
+                                          className: R.instructions,
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
                                           children: V
@@ -165,20 +165,20 @@ t.Z = function (e) {
                               !w &&
                               (0, i.jsx)(N.Z, {
                                   autoplay: p,
-                                  className: O.rewardTileWithInstructions,
+                                  className: R.rewardTileWithInstructions,
                                   quest: o,
                                   questContent: m.jn.ACTIVITY_PANEL,
                                   location: v.dr.ACTIVITY_PANEL,
                                   taskDetails: H
                               }),
                           (0, i.jsxs)('div', {
-                              className: O.ctas,
+                              className: R.ctas,
                               children: [
                                   !G &&
                                       (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)(c.Button, {
-                                                  className: O.cta,
+                                                  className: R.cta,
                                                   color: c.Button.Colors.PRIMARY,
                                                   fullWidth: !0,
                                                   size: c.Button.Sizes.SMALL,
@@ -186,7 +186,7 @@ t.Z = function (e) {
                                                   children: L.Z.Messages.QUESTS_LEARN_MORE_V2
                                               }),
                                               (0, i.jsx)(c.Button, {
-                                                  className: O.cta,
+                                                  className: R.cta,
                                                   color: c.Button.Colors.BRAND,
                                                   fullWidth: !0,
                                                   onClick: M,
@@ -199,7 +199,7 @@ t.Z = function (e) {
                                   G &&
                                       !w &&
                                       (0, i.jsx)(c.Button, {
-                                          className: O.cta,
+                                          className: R.cta,
                                           color: c.Button.Colors.BRAND,
                                           fullWidth: !0,
                                           onClick: D,
@@ -208,7 +208,7 @@ t.Z = function (e) {
                                       }),
                                   w &&
                                       (0, i.jsx)(c.Button, {
-                                          className: O.cta,
+                                          className: R.cta,
                                           color: c.Button.Colors.BRAND,
                                           fullWidth: !0,
                                           onClick: j,

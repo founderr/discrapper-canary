@@ -70,12 +70,12 @@ var i = n(735250),
     S = n(50284),
     A = n(981631),
     R = n(689938);
-function x(e, t, n) {
+function O(e, t, n) {
     return a.useCallback(() => {
         n({ [e]: !t });
     }, [e, n, t]);
 }
-function O(e, t, n) {
+function x(e, t, n) {
     return a.useCallback(
         (i) => {
             let a = m.default.getUser(e);
@@ -96,16 +96,16 @@ function O(e, t, n) {
     );
 }
 function M(e, t, n, i) {
-    let a = x('usernameProfile', n, i);
-    return O(e.author.id, t.id, a);
+    let a = O('usernameProfile', n, i);
+    return x(e.author.id, t.id, a);
 }
 function v(e, t, n, i) {
-    let a = x('referencedUsernameProfile', n, i);
-    return O(null == e ? void 0 : e.author.id, t.id, a);
+    let a = O('referencedUsernameProfile', n, i);
+    return x(null == e ? void 0 : e.author.id, t.id, a);
 }
 function L(e, t, n, i) {
-    let a = x('interactionUsernameProfile', n, i);
-    return O(null == e ? void 0 : e.user.id, t.id, a);
+    let a = O('interactionUsernameProfile', n, i);
+    return x(null == e ? void 0 : e.user.id, t.id, a);
 }
 function Z(e) {
     return a.useCallback(
@@ -116,13 +116,13 @@ function Z(e) {
     );
 }
 function P(e, t) {
-    return Z(x('avatarProfile', e, t));
+    return Z(O('avatarProfile', e, t));
 }
 function b(e, t) {
-    return Z(x('referencedAvatarProfile', e, t));
+    return Z(O('referencedAvatarProfile', e, t));
 }
 function D(e, t) {
-    return Z(x('interactionAvatarProfile', e, t));
+    return Z(O('interactionAvatarProfile', e, t));
 }
 function j(e, t, s, l) {
     let { id: o } = t,
@@ -288,7 +288,7 @@ function w(e, t) {
     }, [n, e.id, t]);
 }
 function V(e, t) {
-    let n = x('interactionData', e, t);
+    let n = O('interactionData', e, t);
     return a.useCallback(
         (e) => {
             e.preventDefault(), e.stopPropagation(), n();

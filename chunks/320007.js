@@ -35,8 +35,8 @@ function N(e) {
             remindersEnabled: _.Z.getSettings().remindersEnabled,
             hasAnyClipAnimations: _.Z.hasAnyClipAnimations()
         })),
-        x = null != S && S.newClipIds.length > 0,
-        O = (0, I.n)((e) => e.clipsButtonRef),
+        O = null != S && S.newClipIds.length > 0,
+        x = (0, I.n)((e) => e.clipsButtonRef),
         M = (0, I.n)((e) => e.setClipsButtonRef),
         v = (0, s.e7)([c.Z], () => c.Z.hasLayers()),
         { preventIdle: L, allowIdle: Z } = (0, o.Y)('animation');
@@ -52,14 +52,14 @@ function N(e) {
     return (a.useEffect(() => (R ? L() : Z(), () => Z()), [R, L, Z]), C && f && p)
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  null != O &&
+                  null != x &&
                       t &&
                       A &&
-                      x &&
+                      O &&
                       !(0, r.hasAnyModalOpen)() &&
                       !v &&
                       (0, i.jsx)(m.Z, {
-                          clipIconRef: O,
+                          clipIconRef: x,
                           lastClipsSession: S,
                           onOpenClipsGallery: P
                       }),

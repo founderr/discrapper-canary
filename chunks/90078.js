@@ -56,8 +56,8 @@ function c(e) {
         v = (0, s.D)(f || m, g, R),
         C = v.state,
         y = v.styles,
-        D = v.forceUpdate,
-        L = v.update,
+        L = v.forceUpdate,
+        D = v.update,
         b = r.useMemo(
             function () {
                 return {
@@ -70,11 +70,11 @@ function c(e) {
                         style: y.arrow,
                         ref: O
                     },
-                    forceUpdate: D || o,
-                    update: L || l
+                    forceUpdate: L || o,
+                    update: D || l
                 };
             },
-            [S, O, n, C, y, L, D]
+            [S, O, n, C, y, D, L]
         );
     return (0, a.$p)(I)(b);
 }

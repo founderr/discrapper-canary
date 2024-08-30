@@ -25,7 +25,7 @@ var a = n(120356),
     p = n(689938),
     g = n(745571);
 function S(e) {
-    var t, n, a, S, A, R, x, O, M, v;
+    var t, n, a, S, A, R, O, x, M, v;
     let { message: L, channel: Z } = e,
         P =
             null === (a = L.embeds[0]) || void 0 === a
@@ -55,7 +55,7 @@ function S(e) {
         j = (0, r.e7)([m.Z], () => m.Z.getChannel(b)),
         U = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
         y = (0, r.e7)([], () => L.author.id === (null == U ? void 0 : U.id)),
-        B = null === (x = Z.recipients) || void 0 === x ? void 0 : x.find((e) => e !== L.author.id),
+        B = null === (O = Z.recipients) || void 0 === O ? void 0 : O.find((e) => e !== L.author.id),
         k = (0, r.e7)([h.default], () => (null != B ? h.default.getUser(B) : null)),
         G = (0, d.ZP)(L),
         F = (0, f._T)(Z.getGuildId(), Z.id, k),
@@ -67,12 +67,12 @@ function S(e) {
                 : null === (M = v.fields) || void 0 === M
                   ? void 0
                   : null ===
-                          (O = M.find((e) => {
+                          (x = M.find((e) => {
                               let { rawName: t } = e;
                               return 'voice_user_ids' === t;
-                          })) || void 0 === O
+                          })) || void 0 === x
                     ? void 0
-                    : O.rawValue,
+                    : x.rawValue,
         Y = null != H ? H.split(',') : [],
         W = (0, r.Wu)([h.default], () => Y.map((e) => h.default.getUser(e)).filter(Boolean)),
         K = y && null != k ? p.Z.Messages.WAVED_AT_USER.format({ username: F }) : p.Z.Messages.WAVED_AT_YOU.format({ username: G.nick }),

@@ -22,8 +22,8 @@ var i = n(735250),
     S = n(453070),
     A = n(926491),
     R = n(378233),
-    x = n(419922),
-    O = n(688179),
+    O = n(419922),
+    x = n(688179),
     M = n(981631),
     v = n(474936),
     L = n(689938),
@@ -45,7 +45,7 @@ function U(e) {
     let { sticker: t, description: n } = e;
     return (0, i.jsxs)(d.Z, {
         children: [
-            (0, i.jsx)(x.ZP, {
+            (0, i.jsx)(O.ZP, {
                 sticker: t,
                 size: 48,
                 isInteracting: !0
@@ -107,7 +107,7 @@ let y = (e) => {
                           className: Z.stickersList,
                           children: E.map((e) =>
                               (0, i.jsx)(
-                                  x.ZP,
+                                  O.ZP,
                                   {
                                       isInteracting: !0,
                                       size: 80,
@@ -127,7 +127,7 @@ let y = (e) => {
                                       size: o.Button.Sizes.SMALL,
                                       onClick: () => {
                                           _ &&
-                                              (0, O.m)({
+                                              (0, x.m)({
                                                   stickerPack: c,
                                                   stickerPickerCategories: I
                                               }),
@@ -145,7 +145,7 @@ let y = (e) => {
         let t,
             { sticker: n, channel: s, closePopout: _, refreshPositionKey: h } = e,
             [S, A] = a.useState(null),
-            [R, O] = a.useState(!1),
+            [R, x] = a.useState(!1),
             b = C.default.getCurrentUser(),
             D = g.ZP.canUseCustomStickersEverywhere(b),
             y = (0, l.e7)([f.Z], () => f.Z.getGuild(n.guild_id)),
@@ -165,7 +165,7 @@ let y = (e) => {
             });
         a.useEffect(() => {
             (async () => {
-                (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, I.Z)(n.id)), O(!0);
+                (null == y || y.hasFeature(M.oNc.DISCOVERABLE)) && A(await (0, I.Z)(n.id)), x(!0);
             })();
         }, [n.id, B]);
         let Y = n.guild_id === s.getGuildId(),
@@ -306,7 +306,7 @@ let y = (e) => {
                                                                                       null == a || a(), w(null);
                                                                                   },
                                                                                   ...s,
-                                                                                  children: (0, i.jsx)(x.ZP, {
+                                                                                  children: (0, i.jsx)(O.ZP, {
                                                                                       size: 32,
                                                                                       enlargeOnInteraction: !0,
                                                                                       enlargeWithName: !1,

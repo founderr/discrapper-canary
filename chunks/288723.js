@@ -54,8 +54,8 @@ t.Z = {
                     }, []),
                     C = t.rects.reference,
                     y = t.rects.popper,
-                    D = new Map(),
-                    L = !0,
+                    L = new Map(),
+                    D = !0,
                     b = v[0],
                     M = 0;
                 M < v.length;
@@ -84,17 +84,17 @@ t.Z = {
                         return e;
                     }))
                 ) {
-                    (b = P), (L = !1);
+                    (b = P), (D = !1);
                     break;
                 }
-                D.set(P, V);
+                L.set(P, V);
             }
-            if (L) {
+            if (D) {
                 for (
                     var H = S ? 3 : 1,
                         Z = function (e) {
                             var t = v.find(function (t) {
-                                var n = D.get(t);
+                                var n = L.get(t);
                                 if (n)
                                     return n.slice(0, e).every(function (e) {
                                         return e;

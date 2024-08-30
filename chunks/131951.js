@@ -22,8 +22,8 @@ var o,
     v = n(779618),
     C = n(710845),
     y = n(811660),
-    D = n(353926),
-    L = n(646047),
+    L = n(353926),
+    D = n(646047),
     b = n(594190),
     M = n(502286),
     P = n(227196),
@@ -142,8 +142,8 @@ let eR = (0, I.Mt)((0, I.jj)()),
     ev = {},
     eC = new Set([eI.Yn.DEFAULT]),
     ey = eR.supports(eI.AN.AUTO_ENABLE),
-    eD = !1,
-    eL = eI.Yn.STREAM,
+    eL = !1,
+    eD = eI.Yn.STREAM,
     eb = { [eI.w5]: td(em.Z.Messages.NO_INPUT_DEVICES) },
     eM = { [eI.w5]: td(em.Z.Messages.NO_OUTPUT_DEVICES) },
     eP = { [eI.w5]: td(em.Z.Messages.NO_VIDEO_DEVICES) },
@@ -210,7 +210,7 @@ function tn() {
     let i = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : ek,
         s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a,
         o = a;
-    if (((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == s ? void 0 : null === (e = s.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, et.isWindows)() && A.pn(o.desktopSource.soundshareId), eR.setGoLiveSource(null, eL)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == s ? void 0 : null === (t = s.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == s ? void 0 : null === (n = s.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eR.setGoLiveSource(null, eL), (ek || i) && ((eB = (ek = i) ? tE(eP, e8().videoDeviceId) : eI.Av), eR.setVideoInputDevice(eB)), (a = s), null != s)) {
+    if (((null == o ? void 0 : o.desktopSource) != null && o.desktopSource.id !== (null == s ? void 0 : null === (e = s.desktopSource) || void 0 === e ? void 0 : e.id) && (null != o.desktopSource.soundshareId && (0, et.isWindows)() && A.pn(o.desktopSource.soundshareId), eR.setGoLiveSource(null, eD)), (null == o ? void 0 : o.cameraSource) != null && (o.cameraSource.videoDeviceGuid !== (null == s ? void 0 : null === (t = s.cameraSource) || void 0 === t ? void 0 : t.videoDeviceGuid) || o.cameraSource.audioDeviceGuid !== (null == s ? void 0 : null === (n = s.cameraSource) || void 0 === n ? void 0 : n.audioDeviceGuid)) && eR.setGoLiveSource(null, eD), (ek || i) && ((eB = (ek = i) ? tE(eP, e8().videoDeviceId) : eI.Av), eR.setVideoInputDevice(eB)), (a = s), null != s)) {
         let e = {
             resolution: s.quality.resolution,
             frameRate: s.quality.frameRate
@@ -234,7 +234,7 @@ function tn() {
                     },
                     quality: e
                 },
-                eL
+                eD
             );
         }
         null != s.cameraSource &&
@@ -246,7 +246,7 @@ function tn() {
                     },
                     quality: e
                 },
-                eL
+                eD
             );
     }
 }
@@ -795,7 +795,7 @@ class tO extends (l = p.ZP.Store) {
                 [eI.AN.DESKTOP_CAPTURE]: eR.supports(eI.AN.DESKTOP_CAPTURE),
                 [eI.AN.HYBRID_VIDEO]: eR.supports(eI.AN.HYBRID_VIDEO)
             }),
-            this.waitFor(ea.default, eo.Z, el.Z, eu.Z, ec.Z, b.ZP, q.Z.storage, X.Z, D.Z, R.Z);
+            this.waitFor(ea.default, eo.Z, el.Z, eu.Z, ec.Z, b.ZP, q.Z.storage, X.Z, L.Z, R.Z);
     }
     supports(e) {
         return eR.supports(e);
@@ -891,12 +891,12 @@ class tO extends (l = p.ZP.Store) {
     }
     isScreenSharing() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eI.Yn.STREAM;
-        return eL === e && null != a;
+        return eD === e && null != a;
     }
     isSoundSharing() {
         var e;
         let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eI.Yn.STREAM;
-        return eL === t && null != a && (null === (e = a.desktopSource) || void 0 === e ? void 0 : e.soundshareId) != null;
+        return eD === t && null != a && (null === (e = a.desktopSource) || void 0 === e ? void 0 : e.soundshareId) != null;
     }
     isLocalMute(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eI.Yn.DEFAULT;
@@ -933,7 +933,7 @@ class tO extends (l = p.ZP.Store) {
         return a;
     }
     getGoLiveContext() {
-        return eL;
+        return eD;
     }
     getLocalPan(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : eI.Yn.DEFAULT,
@@ -1060,7 +1060,7 @@ class tO extends (l = p.ZP.Store) {
             appSupported: e3,
             krispModuleLoaded: eq,
             goLiveSource: a,
-            goLiveContext: eL
+            goLiveContext: eD
         };
     }
     getInputDetected() {
@@ -1076,7 +1076,7 @@ class tO extends (l = p.ZP.Store) {
         eR.eachConnection((n) => n.setCanHavePriority(e, t));
     }
     isInteractionRequired() {
-        return eD;
+        return eL;
     }
     getVideoHook() {
         return e8().videoHook;
@@ -1450,7 +1450,7 @@ eT(tO, 'displayName', 'MediaEngineStore'),
                     c = !1 === o ? null : J.Z.getPidFromDesktopSource(i);
                 et.isPlatformEmbedded && !0 === o && (({ soundshareId: e, soundshareSession: r } = th(c)), null != e && tp(e, r)),
                     !(function (e) {
-                        if (e !== eL) null != a && eR.setGoLiveSource(null, eL), (eL = e);
+                        if (e !== eD) null != a && eR.setGoLiveSource(null, eD), (eD = e);
                     })(l),
                     tn(l === eI.Yn.STREAM && ek, {
                         desktopSource: {
@@ -1496,7 +1496,7 @@ eT(tO, 'displayName', 'MediaEngineStore'),
             eR.eachConnection((e) => e.setExperimentalEncoders(t.experimentalEncoders));
         },
         MEDIA_ENGINE_INTERACTION_REQUIRED: function (e) {
-            return eD !== e.required && ((eD = e.required), !e.required && eR.interact(), !0);
+            return eL !== e.required && ((eL = e.required), !e.required && eR.interact(), !0);
         },
         USER_SETTINGS_MODAL_INIT: tN,
         USER_SETTINGS_MODAL_SET_SECTION: tN,
@@ -1513,7 +1513,7 @@ eT(tO, 'displayName', 'MediaEngineStore'),
         },
         OVERLAY_INITIALIZE: function (e) {
             let { mediaEngineState: t } = e;
-            (ev = t.settingsByContext), (eb = t.inputDevices), (eM = t.outputDevices), (e3 = t.appSupported), (eq = t.krispModuleLoaded), (eL = t.goLiveContext);
+            (ev = t.settingsByContext), (eb = t.inputDevices), (eM = t.outputDevices), (e3 = t.appSupported), (eq = t.krispModuleLoaded), (eD = t.goLiveContext);
         },
         MEDIA_ENGINE_SET_OPEN_H264: function (e) {
             let { enabled: t } = e,
@@ -1527,7 +1527,7 @@ eT(tO, 'displayName', 'MediaEngineStore'),
         },
         APP_STATE_UPDATE: function (e) {
             let { state: t } = e,
-                n = L.Z.isEnabled();
+                n = D.Z.isEnabled();
             if (t === eE.$7l.BACKGROUND && ek && !n) (eH = !0), tn(!1);
             else {
                 if (t !== eE.$7l.ACTIVE || !eH) return !1;

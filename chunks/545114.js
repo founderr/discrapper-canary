@@ -28,8 +28,8 @@ var i = n(735250),
     v = n(143021),
     Z = n(775260),
     L = n(49898),
-    O = n(731455),
-    R = n(689938),
+    R = n(731455),
+    O = n(689938),
     x = n(645664);
 function b() {
     let e = a.useRef((0, u.P)()),
@@ -85,7 +85,7 @@ function b() {
             default:
                 return (0, i.jsx)(f.Z, {
                     query: H,
-                    placeholder: D === O.Hk ? R.Z.Messages.SEARCH : R.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: (0, m.vb)(P) }),
+                    placeholder: D === R.Hk ? O.Z.Messages.SEARCH : O.Z.Messages.GLOBAL_DISCOVERY_SEARCH_PLACEHOLDER.format({ title: (0, m.vb)(P) }),
                     onTextChange: V,
                     onClear: F,
                     onSubmit: Y,

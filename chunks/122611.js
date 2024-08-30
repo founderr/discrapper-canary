@@ -24,8 +24,8 @@ var i = n(735250),
     v = n(617899),
     Z = n(8521),
     L = n(760326),
-    O = n(536687),
-    R = n(652785),
+    R = n(536687),
+    O = n(652785),
     x = n(981631),
     b = n(921944);
 function P(e) {
@@ -34,17 +34,17 @@ function P(e) {
 function M(e) {
     var t;
     let { guild: n } = e,
-        [_, m] = a.useState(null !== (t = l.K.get(R.Iv)) && void 0 !== t ? t : 0),
+        [_, m] = a.useState(null !== (t = l.K.get(O.Iv)) && void 0 !== t ? t : 0),
         g = (e) => {
-            l.K.set(R.Iv, e), m(e);
+            l.K.set(O.Iv, e), m(e);
         },
         { defaultGameId: p, enableClanCreation: T } = (0, o.St)({
             guild: n,
             location: 'ChannelNoticesGuard',
             includeConverted: !1
         }),
-        f = (0, s.Wu)(R.HG, () =>
-            R.XN.filter((e) => {
+        f = (0, s.Wu)(O.HG, () =>
+            O.XN.filter((e) => {
                 let { type: t, store: i } = e;
                 if (t === x.vID.CLAN_ADMIN_UPSELL) return !n.hasFeature(x.oNc.CLAN) && T;
                 return null == i ? void 0 : i.channelNoticePredicate(n, _);
@@ -116,24 +116,24 @@ function M(e) {
 }
 t.Z = (e) => {
     let { guild: t } = e;
-    switch ((0, O.Z)(t)) {
-        case O.R.ENABLE_PUBLIC_GUILD:
+    switch ((0, R.Z)(t)) {
+        case R.R.ENABLE_PUBLIC_GUILD:
             return (0, i.jsx)(f.Z, { guild: t });
-        case O.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
+        case R.R.APPLIED_GUILD_BOOST_GRACE_PERIOD:
             return (0, i.jsx)(_.Z, { guild: t });
-        case O.R.MAX_MEMBER_COUNT:
+        case R.R.MAX_MEMBER_COUNT:
             return (0, i.jsx)(Z.Z, { guild: t });
-        case O.R.GUILD_LIVE_CHANNEL:
+        case R.R.GUILD_LIVE_CHANNEL:
             return (0, i.jsx)(m.ZP, { guild: t });
-        case O.R.GUILD_MFA_WARNING:
+        case R.R.GUILD_MFA_WARNING:
             return (0, i.jsx)(N.Z, { guild: t });
-        case O.R.COMMANDS_MIGRATION:
+        case R.R.COMMANDS_MIGRATION:
             return (0, i.jsx)(p.Z, { guild: t });
-        case O.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
+        case R.R.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, i.jsx)(T.Z, { guild: t });
-        case O.R.HUB_STUDY_ROOM:
+        case R.R.HUB_STUDY_ROOM:
             return (0, i.jsx)(g.Z, { guild: t });
-        case O.R.SIGNUP:
+        case R.R.SIGNUP:
             return (0, i.jsx)(S.Z, { guild: t });
     }
     return C.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, { guild: e.guild });

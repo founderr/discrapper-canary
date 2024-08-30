@@ -27,8 +27,8 @@ var a = n(735250),
     I = n(994896),
     E = n(215023),
     v = n(474936),
-    L = n(689938),
-    T = n(291256);
+    T = n(689938),
+    L = n(291256);
 let S = (0, C.IC)(96),
     N = {
         [i.T.DISXCORE]: {
@@ -116,11 +116,11 @@ let S = (0, C.IC)(96),
         return g.ZP.canUseCollectibles(o)
             ? (0, a.jsx)(a.Fragment, { children: t.summary })
             : (0, a.jsx)(a.Fragment, {
-                  children: L.Z.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
+                  children: T.Z.Messages.COLLECTIBLES_SFA_STARTER_BANNER_DESCRIPTION.format({
                       getPremium: (e) =>
                           (0, a.jsx)(c.Clickable, {
                               innerRef: s,
-                              className: T.getPremiumHook,
+                              className: L.getPremiumHook,
                               onClick: () => {
                                   (0, u.Z)({
                                       subscriptionTier: v.Si.TIER_2,
@@ -159,32 +159,32 @@ function k(e) {
             outlineColor: null != _ ? _.border.toHslString() : void 0
         };
     return (0, a.jsxs)('div', {
-        className: o()(T.condensedBannerContainer),
+        className: o()(L.condensedBannerContainer),
         children: [
             (0, a.jsx)('img', {
                 src: f,
                 style: h,
-                className: T.condensedBannerImage,
+                className: L.condensedBannerImage,
                 alt: ''
             }),
             null != p &&
                 (0, a.jsx)('img', {
                     src: p,
-                    className: o()(T.overflowImage, {
-                        [T.overflowImageLeft]: u,
-                        [T.tideOverflowImage]: l.skuId === i.T.TIDE
+                    className: o()(L.overflowImage, {
+                        [L.overflowImageLeft]: u,
+                        [L.tideOverflowImage]: l.skuId === i.T.TIDE
                     }),
                     alt: ''
                 }),
             (0, a.jsx)('img', {
-                className: o()(T.condensedCategoryLogo, { [T.condensedCategoryLogoLeft]: !u }),
+                className: o()(L.condensedCategoryLogo, { [L.condensedCategoryLogoLeft]: !u }),
                 src: g,
                 alt: l.name
             }),
             !d &&
                 (0, a.jsx)(b.Z, {
                     category: l,
-                    className: o()(T.limitedTimeBadge, { [T.limitedTimeBadgeLeft]: u }),
+                    className: o()(L.limitedTimeBadge, { [L.limitedTimeBadgeLeft]: u }),
                     display: 'banner'
                 })
         ]
@@ -195,8 +195,8 @@ function B(e) {
     let { category: l, className: d, hideLimitedTimeBadge: u = !1, index: f = 0 } = e,
         { backgroundColors: g } = (0, m.Z)(l.styles),
         v = !!(null === (t = E.Ve[l.skuId]) || void 0 === t ? void 0 : t.showDarkBannerText),
-        { condensedBannersEnabled: L } = (0, I.O)({ location: 'Collectibles Shop Banner' });
-    if (L) {
+        { condensedBannersEnabled: T } = (0, I.O)({ location: 'Collectibles Shop Banner' });
+    if (T) {
         let e = N[l.skuId];
         if (null != e)
             return (0, a.jsx)(k, {
@@ -210,7 +210,7 @@ function B(e) {
         ? (0, a.jsx)(h.G, { category: l })
         : (0, a.jsxs)(_.Z, {
               asset: l.banner,
-              className: o()(T.shopBanner, d),
+              className: o()(L.shopBanner, d),
               style:
                   null != g
                       ? {
@@ -221,36 +221,36 @@ function B(e) {
               children: [
                   (null === (n = E.Ve[l.skuId]) || void 0 === n ? void 0 : n.addAttributionLogo)
                       ? (0, a.jsxs)('div', {
-                            className: T.discordLogo,
+                            className: L.discordLogo,
                             children: [
                                 (0, a.jsx)(c.ClydeIcon, {
                                     size: 'custom',
                                     width: 28,
                                     height: 28,
                                     color: 'currentColor',
-                                    className: T.discordIcon
+                                    className: L.discordIcon
                                 }),
-                                (0, a.jsx)(p.Z, { className: T.discordWordmark })
+                                (0, a.jsx)(p.Z, { className: L.discordWordmark })
                             ]
                         })
                       : (0, a.jsx)(c.Spacer, { size: 28 }),
                   (null === (r = E.Ve[l.skuId]) || void 0 === r ? void 0 : r.addLogo)
                       ? (0, a.jsx)('img', {
-                            className: T.categoryLogo,
+                            className: L.categoryLogo,
                             src: (0, C.uV)(l.logo, { size: S }),
                             alt: l.name,
                             style: { maxWidth: null === (s = E.Ve[l.skuId]) || void 0 === s ? void 0 : s.logoMaxWidth }
                         })
                       : (0, a.jsx)(c.Spacer, { size: 96 }),
                   (0, a.jsx)(c.Text, {
-                      className: o()(T.summary, { [T.blackSummary]: v }),
+                      className: o()(L.summary, { [L.blackSummary]: v }),
                       variant: 'text-md/normal',
                       children: l.skuId === i.T.DISXCORE ? (0, a.jsx)(O, { category: l }) : l.summary
                   }),
                   !u &&
                       (0, a.jsx)(b.Z, {
                           category: l,
-                          className: T.limitedTimeBadge,
+                          className: L.limitedTimeBadge,
                           display: 'banner'
                       })
               ]

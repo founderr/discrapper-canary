@@ -168,7 +168,7 @@ function Z() {
                         .exhaustive())
             });
     }
-    function F(e, s) {
+    function y(e, s) {
         var t, n;
         if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
             o({
@@ -187,7 +187,7 @@ function Z() {
                         .exhaustive())
             });
     }
-    function y(e, s) {
+    function F(e, s) {
         var t, n;
         if ('rewardName' === e || 'rewardNameWithArticle' === e)
             o({
@@ -255,25 +255,25 @@ function Z() {
                     (0, n.jsx)(A.Z, {
                         title: 'Quest Name',
                         assetKey: 'questName',
-                        onMessageChange: F,
+                        onMessageChange: y,
                         initialValue: r.config.messages.questName
                     }),
                     (0, n.jsx)(A.Z, {
                         title: 'Game Title',
                         assetKey: 'gameTitle',
-                        onMessageChange: F,
+                        onMessageChange: y,
                         initialValue: r.config.messages.gameTitle
                     }),
                     (0, n.jsx)(A.Z, {
                         title: 'Reward Name',
                         assetKey: 'rewardName',
-                        onMessageChange: y,
+                        onMessageChange: F,
                         initialValue: U.name
                     }),
                     (0, n.jsx)(A.Z, {
                         title: 'Reward Name With Article',
                         assetKey: 'rewardNameWithArticle',
-                        onMessageChange: y,
+                        onMessageChange: F,
                         initialValue: U.nameWithArticle
                     })
                 ]

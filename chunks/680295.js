@@ -27,8 +27,8 @@ let T = (e) => {
         (0, p.Z)(T);
         let [R, v] = i.useState(0),
             [C, y] = i.useState(0),
-            { accessibilityLabel: D } = T,
-            [L, b] = i.useState(-S),
+            { accessibilityLabel: L } = T,
+            [D, b] = i.useState(-S),
             {
                 stop: M,
                 reset: P,
@@ -72,7 +72,7 @@ let T = (e) => {
                                         left: null !== (l = null === (s = e.position) || void 0 === s ? void 0 : s.x) && void 0 !== l ? l : 0
                                     },
                                     src: n,
-                                    alt: D
+                                    alt: L
                                 },
                                 e.src + i
                             );
@@ -83,8 +83,8 @@ let T = (e) => {
                                 layerConfig: e,
                                 animationType: T.animationType,
                                 ticking: U.current,
-                                time: L,
-                                accessibilityLabel: D,
+                                time: D,
+                                accessibilityLabel: L,
                                 hasPlayedThrough: w,
                                 setHasPlayedThrough: x,
                                 urlQueryString: I,

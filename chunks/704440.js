@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return D;
     }
 }),
     n(773603),
@@ -108,22 +108,22 @@ let C = async (e, t, n) => {
             ]
         });
     };
-function D(e) {
+function L(e) {
     let { referralsRemaining: t, channel: n, onClose: a, isResending: o } = e,
         [u, d] = i.useState(!1),
         [I, R] = i.useState(!1),
-        D = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null,
-        { analyticsLocations: L } = (0, E.ZP)(_.Z.REFERRAL_TRIALS_POPOUT),
+        L = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null,
+        { analyticsLocations: D } = (0, E.ZP)(_.Z.REFERRAL_TRIALS_POPOUT),
         { enabled: b } = m.Z.useExperiment({ location: '200c24_1' }, { autoTrackExposure: !0 }),
         M = new Date('2023-06-15T08:00:00-08:00');
-    return null == D
+    return null == L
         ? null
         : u
           ? (0, r.jsx)(y, {
                 onClose: a,
                 referralsRemaining: t,
-                recipient: D,
-                analyticsLocations: L,
+                recipient: L,
+                analyticsLocations: D,
                 shouldShowBirthdayUX: b
             })
           : (0, r.jsxs)('div', {
@@ -183,12 +183,12 @@ function D(e) {
                             submitting: I,
                             onClick: () => {
                                 o
-                                    ? C(D, a, R)
+                                    ? C(L, a, R)
                                     : (d(!0),
                                       f.default.track(g.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                          location_stack: L,
+                                          location_stack: D,
                                           step: T.fz.FLOW_STARTED,
-                                          other_user_id: Number(D)
+                                          other_user_id: Number(L)
                                       }));
                             },
                             children: o ? S.Z.Messages.SHARE_NITRO_RESEND_BUTTON_TEXT : S.Z.Messages.SHARE_NITRO_BUTTON_TEXT
@@ -197,7 +197,7 @@ function D(e) {
                 ]
             });
 }
-function L(e) {
+function D(e) {
     let { shouldShowPopout: t, referralsRemaining: n, channel: i, onClose: a, isResending: s } = e;
     return t
         ? (0, r.jsx)('div', {
@@ -207,7 +207,7 @@ function L(e) {
                   position: 'top',
                   align: 'center',
                   renderPopout: (e) =>
-                      (0, r.jsx)(D, {
+                      (0, r.jsx)(L, {
                           ...e,
                           referralsRemaining: n,
                           channel: i,

@@ -41,8 +41,8 @@ var n = t(735250),
     B = t(675478),
     U = t(33656),
     G = t(726985),
-    F = t(981631),
-    y = t(468788),
+    y = t(981631),
+    F = t(468788),
     V = t(689938),
     w = t(426514),
     k = t(224499);
@@ -106,7 +106,7 @@ function W(e) {
                 let n = s.filter((s) => s !== e);
                 !t && n.push(e),
                     e === m.Z.ringtone &&
-                        P.default.track(F.rMx.EVENT_RINGTONE_TOGGLED, {
+                        P.default.track(y.rMx.EVENT_RINGTONE_TOGGLED, {
                             toggled_on: t,
                             sound_name: e
                         }),
@@ -361,12 +361,12 @@ function K() {
 }
 class z extends a.PureComponent {
     handleDesktopChange(e) {
-        let s = e ? F.qrD.ALL : F.qrD.NEVER;
-        if (s !== F.qrD.NEVER) {
+        let s = e ? y.qrD.ALL : y.qrD.NEVER;
+        if (s !== y.qrD.NEVER) {
             var t;
             (t = 'UserSettingsModal'),
                 L.Z.requestPermission((e) => {
-                    let s = e ? F.$Ab.ENABLED : F.$Ab.BLOCKED;
+                    let s = e ? y.$Ab.ENABLED : y.$Ab.BLOCKED;
                     _.default.setPermissionsState(s, t);
                 });
         } else _.default.setDesktopType(s);
@@ -392,7 +392,7 @@ class z extends a.PureComponent {
                     setting: G.s6.NOTIFICATIONS_ENABLE_DESKTOP,
                     children: (0, n.jsx)(d.FormSwitch, {
                         className: k.marginBottom20,
-                        value: e !== F.qrD.NEVER && !u,
+                        value: e !== y.qrD.NEVER && !u,
                         onChange: this.handleDesktopChange,
                         note: V.Z.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
                         disabled: u,
@@ -467,15 +467,15 @@ class z extends a.PureComponent {
                 let e = [
                     {
                         name: V.Z.Messages.TTS_ALLS,
-                        value: F.PrB.ALL_CHANNELS
+                        value: y.PrB.ALL_CHANNELS
                     },
                     {
                         name: V.Z.Messages.TTS_CURRENT,
-                        value: F.PrB.SELECTED_CHANNEL
+                        value: y.PrB.SELECTED_CHANNEL
                     },
                     {
                         name: V.Z.Messages.TTS_NEVER,
-                        value: F.PrB.NEVER
+                        value: y.PrB.NEVER
                     }
                 ];
                 return (0, n.jsxs)(x.F, {
@@ -525,7 +525,7 @@ function X() {
                   className: k.marginBottom20,
                   value: s,
                   onChange: (e) => {
-                      E.Z.setAccountFlag(y.c.MENTION_ON_ALL_MESSAGES, e);
+                      E.Z.setAccountFlag(F.c.MENTION_ON_ALL_MESSAGES, e);
                   },
                   note: "Increments the mention count when receiving a message in a channel set to 'All Messages'",
                   children: 'Mention on all messages?'
@@ -600,7 +600,7 @@ function q() {
                                               hideBorder: !0,
                                               value: t,
                                               onChange: (e) => {
-                                                  E.Z.setAccountFlag(y.c.USE_NEW_NOTIFICATIONS, e);
+                                                  E.Z.setAccountFlag(F.c.USE_NEW_NOTIFICATIONS, e);
                                               },
                                               children: 'Toggle new system on/off'
                                           })

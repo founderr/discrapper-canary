@@ -59,7 +59,7 @@ let U = l()((0, S.Rv)())
         .groupBy((e) => e.group)
         .value(),
     G = c.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }))(u.EmptyState);
-class F extends a.PureComponent {
+class y extends a.PureComponent {
     renderMessage() {
         let { keybind: e } = this.props,
             s = R.BB(e.shortcut);
@@ -178,7 +178,7 @@ class F extends a.PureComponent {
             });
     }
 }
-class y extends a.PureComponent {
+class F extends a.PureComponent {
     componentDidMount() {
         _.Z.enableAll(!1);
     }
@@ -300,7 +300,7 @@ class y extends a.PureComponent {
                 {
                     className: b.row,
                     children: (0, n.jsx)(
-                        F,
+                        y,
                         {
                             keybind: e,
                             keybindDescriptions: this.keybindDescriptions,
@@ -473,7 +473,7 @@ function V() {
         s = (0, c.e7)([A.Z], () => (0, g.Z)(A.Z)),
         t = (0, c.e7)([O.Z], () => O.Z.isSupported()),
         a = (0, m.Go)();
-    return (0, n.jsx)(y, {
+    return (0, n.jsx)(F, {
         keybinds: e,
         canGoLive: s,
         overlaySupported: t,

@@ -30,13 +30,13 @@ var i = n(735250),
 let Z = () => (0, i.jsx)('div', { className: N.placeholder });
 t.Z = (e) => {
     var t;
-    let { guild: s, theme: Z, onView: L, onTagClick: O } = e,
-        { id: R, discoverySplash: x, icon: b, name: P, description: M, presenceCount: D, memberCount: y, keywords: j } = s,
+    let { guild: s, theme: Z, onView: L, onTagClick: R } = e,
+        { id: O, discoverySplash: x, icon: b, name: P, description: M, presenceCount: D, memberCount: y, keywords: j } = s,
         [U, G] = a.useState(!1),
         [w, k] = a.useState(!1),
         { analyticsLocations: B } = (0, c.ZP)(),
         H = m.ZP.getGuildDiscoverySplashURL({
-            id: R,
+            id: O,
             splash: x,
             size: 240 * (0, _.x_)()
         }),
@@ -54,7 +54,7 @@ t.Z = (e) => {
         F =
             null !==
                 (t = m.ZP.getGuildIconURL({
-                    id: R,
+                    id: O,
                     icon: b,
                     size: 32
                 })) && void 0 !== t
@@ -166,11 +166,11 @@ t.Z = (e) => {
                                     }),
                                     W &&
                                         null != j &&
-                                        null != O &&
+                                        null != R &&
                                         (0, i.jsx)(T.F, {
                                             guildId: s.id,
                                             discoveryTagStyle: T.B.ALT,
-                                            onTagClick: (e) => O(e, s.id),
+                                            onTagClick: (e) => R(e, s.id),
                                             tags: j,
                                             section: I.P1.SEARCH
                                         }),

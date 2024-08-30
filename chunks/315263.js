@@ -32,7 +32,7 @@ var r = n(729594),
 n(782568);
 var C = n(981631),
     y = n(46140);
-async function D(e, t) {
+async function L(e, t) {
     await s.Z.dispatch({
         type: 'INVITE_MODAL_OPEN',
         invite: e,
@@ -40,7 +40,7 @@ async function D(e, t) {
         context: C.IlC.APP
     });
 }
-async function L(e) {
+async function D(e) {
     var t;
     let n = S.Z.getInvite(e.code);
     if (null == n) {
@@ -49,12 +49,12 @@ async function L(e) {
     }
     if (null == n) return;
     if (n.state === C.r2o.EXPIRED || n.state === C.r2o.BANNED || n.state === C.r2o.ERROR) {
-        await D(n, e.code);
+        await L(n, e.code);
         return;
     }
     let r = O.ZP.getFlattenedGuildIds(),
         i = null == n ? void 0 : null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-    null != i && r.includes(i) ? o.Z.transitionToInviteSync(n) : await D(n, e.code);
+    null != i && r.includes(i) ? o.Z.transitionToInviteSync(n) : await L(n, e.code);
 }
 let b = {
     skipExtensionCheck: void 0,
@@ -63,7 +63,7 @@ let b = {
 function M(e) {
     let { skipExtensionCheck: t, analyticsLocations: s } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b,
         o = (0, _.zO)(e);
-    if (null != o && (o.type === d.g.INVITE || o.type === d.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), L(o), !0);
+    if (null != o && (o.type === d.g.INVITE || o.type === d.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), D(o), !0);
     if (null != o && o.type === d.g.APP_DIRECTORY_PROFILE)
         return (e) => {
             var t;
@@ -119,8 +119,8 @@ function M(e) {
                 }),
             !0
         );
-    let { path: S, hostname: O = '', host: D, query: M, hash: P } = r.parse(e),
-        U = v.Z.isDiscordHostname(O) || v.Z.isDiscordLocalhost(D, O);
+    let { path: S, hostname: O = '', host: L, query: M, hash: P } = r.parse(e),
+        U = v.Z.isDiscordHostname(O) || v.Z.isDiscordLocalhost(L, O);
     if (U && (null == S ? void 0 : S.startsWith('/application-directory'))) {
         let e;
         let t = S.split('/'),

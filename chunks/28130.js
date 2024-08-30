@@ -28,7 +28,7 @@ var n = t(735250),
     M = t(869783),
     E = t(689938),
     T = t(403661);
-let A = [
+let b = [
     {
         gif: t(495682),
         png: t(458060)
@@ -46,14 +46,14 @@ let A = [
         png: t(690695)
     }
 ];
-function b(e) {
+function A(e) {
     let { shouldAnimate: i = !0 } = e,
         [t, a] = o.useState(!1);
     return (0, n.jsx)('div', {
         className: T.gifGrid,
         onMouseMove: () => a(!0),
         onMouseLeave: () => a(!1),
-        children: A.map((e) =>
+        children: b.map((e) =>
             (0, n.jsx)(
                 'div',
                 {
@@ -123,14 +123,14 @@ function v(e) {
     });
 }
 function P(e) {
-    let { transitionState: i, onClose: c, onComplete: h, uploadType: A, maxFileSizeBytes: L, showUpsellHeader: P, filters: F, analyticsLocation: S, analyticsLocations: B = [], modalSubTitle: U, imageSpecifications: y, modalTitle: G = E.Z.Messages.SELECT_IMAGE_MODAL_TITLE, uploadOptionTitle: Z = E.Z.Messages.UPLOAD_IMAGE } = e,
+    let { transitionState: i, onClose: c, onComplete: h, uploadType: b, maxFileSizeBytes: L, showUpsellHeader: P, filters: F, analyticsLocation: S, analyticsLocations: B = [], modalSubTitle: U, imageSpecifications: y, modalTitle: G = E.Z.Messages.SELECT_IMAGE_MODAL_TITLE, uploadOptionTitle: Z = E.Z.Messages.UPLOAD_IMAGE } = e,
         k = (0, a.e7)([m.Z], () => m.Z.isFocused()),
         D = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
         R = (0, a.e7)([x.Z], () => x.Z.getGuildId()),
         w = (0, a.e7)([p.Z], () => p.Z.getGuild(R)),
         { reducedMotion: W } = o.useContext(s.AccessibilityPreferencesContext),
         H = (0, s.useModalContext)(),
-        z = !C.ZP.canUseAnimatedAvatar(D) && A === N.pC.AVATAR,
+        z = !C.ZP.canUseAnimatedAvatar(D) && b === N.pC.AVATAR,
         { analyticsLocations: K } = (0, r.ZP)(B, l.Z.SELECT_IMAGE_MODAL);
     function V(e, i) {
         let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -199,7 +199,7 @@ function P(e) {
                                         color: 'interactive-normal',
                                         children: (0, n.jsx)(v, {
                                             title: Z,
-                                            uploadType: A,
+                                            uploadType: b,
                                             guild: w
                                         })
                                     }),
@@ -214,7 +214,7 @@ function P(e) {
                                                             imgURI: e,
                                                             file: i,
                                                             onCrop: V,
-                                                            uploadType: A,
+                                                            uploadType: b,
                                                             showUpsellHeader: P,
                                                             allowSkip: !0,
                                                             analyticsPage: null == S ? void 0 : S.page,
@@ -240,7 +240,7 @@ function P(e) {
                                             let { default: e } = await t.e('72891').then(t.bind(t, 195297));
                                             return (i) =>
                                                 (0, n.jsx)(e, {
-                                                    uploadType: A,
+                                                    uploadType: b,
                                                     onComplete: (e, i) => V(e, i, !0),
                                                     showUpsellHeader: P,
                                                     analyticsPage: null == S ? void 0 : S.page,
@@ -254,7 +254,7 @@ function P(e) {
                                     (0, n.jsxs)('div', {
                                         className: T.contentCircle,
                                         children: [
-                                            (0, n.jsx)(b, { shouldAnimate: k && !W.enabled }),
+                                            (0, n.jsx)(A, { shouldAnimate: k && !W.enabled }),
                                             (0, n.jsx)('div', {
                                                 className: T.gifIconContainer,
                                                 children: (0, n.jsx)(s.GifIcon, {
@@ -271,7 +271,7 @@ function P(e) {
                                         variant: 'text-sm/semibold',
                                         color: 'interactive-normal',
                                         children: (0, n.jsx)(O, {
-                                            uploadType: A,
+                                            uploadType: b,
                                             guild: w
                                         })
                                     })
@@ -290,9 +290,9 @@ function P(e) {
                         X &&
                         (0, n.jsx)(u.p, {
                             showUpsell: !0,
-                            upsellText: 'Wear GIFs with Nitro',
-                            ctaText: E.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA,
-                            ctaAnalyticsObject: { section: j.jXE.EMOJI_PICKER_FLOATING_UPSELL },
+                            text: 'Wear GIFs with Nitro',
+                            button: E.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA,
+                            buttonAnalyticsObject: { section: j.jXE.EMOJI_PICKER_FLOATING_UPSELL },
                             position: 'inline',
                             showShadow: !1,
                             className: T.nitroUpsell

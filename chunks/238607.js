@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(283595),
     C = n(496675),
     y = n(699516),
-    D = n(944486),
-    L = n(979651),
+    L = n(944486),
+    D = n(979651),
     b = n(181106),
     M = n(417363),
     P = n(358085),
@@ -72,7 +72,7 @@ function B(e) {
             })
         ),
         X = (0, a.e7)([b.Z], () => null != W && b.Z.getState(W, x.mFx.JOIN) === x.OcF.LOADING),
-        $ = (0, a.e7)([A.Z, R.Z, O.Z, y.Z, D.Z, L.Z, C.Z], () =>
+        $ = (0, a.e7)([A.Z, R.Z, O.Z, y.Z, L.Z, D.Z, C.Z], () =>
             (0, E.Z)({
                 user: t,
                 activity: B,
@@ -84,8 +84,8 @@ function B(e) {
                 GuildStore: R.Z,
                 GuildMemberCountStore: O.Z,
                 RelationshipStore: y.Z,
-                SelectedChannelStore: D.Z,
-                VoiceStateStore: L.Z,
+                SelectedChannelStore: L.Z,
+                VoiceStateStore: D.Z,
                 PermissionStore: C.Z
             })
         ),
@@ -115,7 +115,7 @@ function B(e) {
                     userId: t.id,
                     sessionId: K,
                     applicationId: W,
-                    channelId: D.Z.getVoiceChannelId(),
+                    channelId: L.Z.getVoiceChannelId(),
                     messageId: null,
                     intent: G.Ws.PLAY,
                     embedded: j,

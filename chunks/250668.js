@@ -24,8 +24,8 @@ var r = n(147018),
     v = n(537443).f,
     C = n(12367),
     y = n(335225).forEach,
-    D = n(930990),
-    L = n(4340),
+    L = n(930990),
+    D = n(4340),
     b = n(97131),
     M = n(347722),
     P = n(644659),
@@ -53,7 +53,7 @@ var r = n(147018),
         return i;
     },
     J = function (e, t) {
-        L(e, t, {
+        D(e, t, {
             configurable: !0,
             get: function () {
                 return w(this)[t];
@@ -103,7 +103,7 @@ s
                   var i = w(e);
                   i.view[d](t * s + i.byteOffset, n ? I(r) : r, !0);
               },
-              L = function (e, t) {
+              D = function (e, t) {
                   k(e, t, {
                       get: function () {
                           return A(this, t);
@@ -153,7 +153,7 @@ s
                         u < l;
 
                     )
-                        L(e, u++);
+                        D(e, u++);
                 })),
                 R && R(m, W),
                 (T = m.prototype = N(K))),
@@ -173,6 +173,6 @@ s
               ),
               !(Q in m) && _(m, Q, s),
               !(Q in T) && _(T, Q, s),
-              D(l);
+              L(l);
       }))
     : (e.exports = function () {});

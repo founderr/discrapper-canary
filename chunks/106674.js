@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return R;
     }
 }),
     n(47120);
@@ -49,23 +49,23 @@ function L(e) {
         ]
     });
 }
-function O(e) {
+function R(e) {
     var t;
     let { broadcast: n } = e,
-        { userId: r, applicationId: d, channelId: O, streamKey: R } = n,
+        { userId: r, applicationId: d, channelId: R, streamKey: O } = n,
         [x, b] = a.useState(!1),
         P = (0, s.e7)([p.default], () => p.default.getUser(r)),
         [M] = (0, _.Z)([d]),
         D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P),
         y = (0, C.Z)(),
-        j = (0, s.e7)([m.Z], () => m.Z.getPreviewURL(null, O, r)),
+        j = (0, s.e7)([m.Z], () => m.Z.getPreviewURL(null, R, r)),
         U = (0, s.e7)([g.Z], () => g.Z.getVoiceChannelId()),
         G = (0, S.ZP)(),
-        w = (0, f.Z)(O);
+        w = (0, f.Z)(R);
     if (
         (a.useEffect(() => {
-            x && U === O && b(!1);
-        }, [U, x, O]),
+            x && U === R && b(!1);
+        }, [U, x, R]),
         null == P || null == D)
     )
         return null;
@@ -109,17 +109,17 @@ function O(e) {
                             w.length > 0 && (0, i.jsx)(L, { users: w }),
                             (0, i.jsxs)(l.Button, {
                                 onClick: () => {
-                                    if (U === O) {
-                                        o.default.selectPrivateChannel(O);
+                                    if (U === R) {
+                                        o.default.selectPrivateChannel(R);
                                         return;
                                     }
                                     b(!0),
-                                        (0, c.W1)(O, R),
+                                        (0, c.W1)(R, O),
                                         u.ZP.trackWithMetadata(N.rMx.BROADCAST_VIEWED, {
                                             num_active_broadcasts: y.length,
                                             broadcast_position: y.findIndex((e) => e.userId === r) + 1,
                                             is_broadcasting: G,
-                                            broadcast_channel_id: O
+                                            broadcast_channel_id: R
                                         });
                                 },
                                 color: k,
@@ -147,7 +147,7 @@ function O(e) {
                       stream: {
                           streamType: A.lo.CALL,
                           ownerId: r,
-                          channelId: O
+                          channelId: R
                       }
                   })
                 : (0, i.jsx)(h.Z, {

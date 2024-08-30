@@ -1,15 +1,15 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return a;
+        return i;
     }
 });
-var l = t(735250);
-t(470079);
-var s = t(907261);
-function a(e) {
-    let { children: n } = e;
+var l = n(735250);
+n(470079);
+var s = n(907261);
+function i(e) {
+    let { children: t } = e;
     return (0, l.jsx)('div', {
         className: s.card,
-        children: n
+        children: t
     });
 }

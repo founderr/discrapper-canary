@@ -142,7 +142,7 @@ function j(e) {
             analyticsLocation: E.Z.GUILD_BOOST_SLOT_CANCELLATION_MODAL_RENEWAL_INVOICE_PREVIEW
         });
     if (null == G || null == P || null == Z || null == B) return (0, i.jsx)(d.Spinner, {});
-    let F =
+    let y =
             (a.items.some((e) => {
                 let { planId: s } = e;
                 return !D.Z1.has(s);
@@ -154,11 +154,11 @@ function j(e) {
                       let { planId: s } = e;
                       return !D.Z1.has(s);
                   })) != null,
-        y = p.some((e) => {
+        F = p.some((e) => {
             let { planId: s } = e;
             return D.Z1.has(s);
         }),
-        V = F || y ? G.total - B.total : -B.total,
+        V = y || F ? G.total - B.total : -B.total,
         { interval: w, intervalCount: k } = P;
     return (0, i.jsxs)(i.Fragment, {
         children: [

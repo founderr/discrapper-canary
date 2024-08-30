@@ -33,8 +33,8 @@ var r = n(735250),
     v = n(271383),
     C = n(594174),
     y = n(778045),
-    D = n(207796),
-    L = n(355932),
+    L = n(207796),
+    D = n(355932),
     b = n(981631),
     M = n(308083),
     P = n(689938),
@@ -119,7 +119,7 @@ function G(e) {
                 ),
             [a]
         );
-    return (0, r.jsx)(L.ZP, {
+    return (0, r.jsx)(D.ZP, {
         className: U.traitsContainer,
         items: t,
         renderItem: o,
@@ -172,7 +172,7 @@ function k(e) {
 }
 function B(e) {
     var t;
-    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: d, prioritizedGameIds: h, className: p, position: g, showBrandingFooter: N = !1, showFavoriteButton: O = !1, bannerUrl: R, onlyAnimateIconOnHover: v = !1, hasPendingJoinRequest: C = !1, atMaxMemberCapacity: L = !1 } = e,
+    let { clan: n, bannerComponent: a, expanded: u, isMember: c = !1, traitsToHighlight: d, prioritizedGameIds: h, className: p, position: g, showBrandingFooter: N = !1, showFavoriteButton: O = !1, bannerUrl: R, onlyAnimateIconOnHover: v = !1, hasPendingJoinRequest: C = !1, atMaxMemberCapacity: D = !1 } = e,
         {
             tag: b,
             badge: B,
@@ -185,7 +185,7 @@ function B(e) {
         [W, K] = i.useState(!1),
         z = i.useRef(null),
         [q, Q] = i.useState(!1),
-        X = (0, D.GN)((e) => e.savedGuildIds.includes(n.id), o.Z),
+        X = (0, L.GN)((e) => e.savedGuildIds.includes(n.id), o.Z),
         $ = (0, f.iN)('guild_card'),
         J = i.useCallback(
             (e) => {
@@ -196,7 +196,7 @@ function B(e) {
                         guildId: n.id,
                         isFavorited: !X
                     }),
-                    (0, D.qQ)(n.id, !X);
+                    (0, L.qQ)(n.id, !X);
             },
             [n.id, X, g]
         ),
@@ -247,7 +247,7 @@ function B(e) {
                     ea,
                     (0, r.jsx)(k, {
                         hasPendingJoinRequest: C,
-                        atMaxMemberCapacity: L,
+                        atMaxMemberCapacity: D,
                         isGuildMember: c
                     }),
                     $ &&
@@ -421,13 +421,13 @@ t.ZP = function (e) {
             return (null === (e = O.Z.getRequest(_.id)) || void 0 === e ? void 0 : e.applicationStatus) === N.wB.SUBMITTED;
         }),
         y = (0, f.iN)('ClanGuildProfile'),
-        D = _.memberCount >= M.Du,
-        L = i.useRef(-1),
-        P = i.useCallback((e) => s(e, L), [s]),
+        L = _.memberCount >= M.Du,
+        D = i.useRef(-1),
+        P = i.useCallback((e) => s(e, D), [s]),
         w = (0, d.O)(P, 1);
     i.useEffect(
         () => () => {
-            null == s || s(!1, L);
+            null == s || s(!1, D);
         },
         [s]
     );
@@ -489,7 +489,7 @@ t.ZP = function (e) {
                 prioritizedGameIds: a,
                 showBrandingFooter: !0,
                 hasPendingJoinRequest: A,
-                atMaxMemberCapacity: D
+                atMaxMemberCapacity: L
             })
         })
     });

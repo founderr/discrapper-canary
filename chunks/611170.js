@@ -1,6 +1,6 @@
 l.d(n, {
     a: function () {
-        return i;
+        return a;
     },
     r: function () {
         return s;
@@ -8,8 +8,8 @@ l.d(n, {
 });
 var t = l(591759),
     r = l(524444),
-    a = l(231338);
-function i(e) {
+    i = l(231338);
+function a(e) {
     let n = e.item.originalItem.media;
     return (0, r.Yi)({
         ...e,
@@ -18,7 +18,7 @@ function i(e) {
         original: n.url,
         placeholder: n.placeholder,
         placeholderVersion: n.placeholderVersion,
-        renderForwardComponent: a.Vq
+        renderForwardComponent: i.Vq
     });
 }
 function s(e) {
@@ -34,6 +34,6 @@ function s(e) {
               src: n.proxyUrl,
               placeholder: n.placeholder,
               placeholderVersion: n.placeholderVersion,
-              renderForwardComponent: a.Vq
+              renderForwardComponent: i.Vq
           }));
 }

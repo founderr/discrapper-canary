@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return R;
+        return O;
     }
 }),
     n(47120),
@@ -40,14 +40,14 @@ let A = 56,
         left: 32,
         right: 32
     }),
-    O = r().throttle(m.c6, 1000, {
+    R = r().throttle(m.c6, 1000, {
         leading: !1,
         trailing: !0
     });
-function R(e) {
+function O(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: r } = e,
         m = (0, d.ZP)(),
-        { guilds: R, loading: x, searchResultsQuery: b, loadMore: P, searchCategoryId: M } = (0, g.f)({ loadId: t }),
+        { guilds: O, loading: x, searchResultsQuery: b, loadMore: P, searchCategoryId: M } = (0, g.f)({ loadId: t }),
         D = a.useContext(E.AnalyticsContext),
         [y, j] = a.useState((0, u.P)()),
         [U, G] = a.useState(!0),
@@ -67,19 +67,19 @@ function R(e) {
         j((0, u.P)());
     }, [b]),
         a.useEffect(() => {
-            O({
+            R({
                 loadId: t,
                 searchId: y,
                 query: b,
-                guildResults: R,
+                guildResults: O,
                 analyticsContext: D,
                 categoryId: M,
                 isTagSearch: !1
             });
-        }, [D, R, t, M, y, b]);
+        }, [D, O, t, M, y, b]);
     let F = a.useCallback((e) => n(e, M), [n, M]),
-        Y = a.useMemo(() => (x ? [R.length, 0] : [R.length]), [R.length, x]),
-        W = 0 === R.length && !x,
+        Y = a.useMemo(() => (x ? [O.length, 0] : [O.length]), [O.length, x]),
+        W = 0 === O.length && !x,
         z = a.useCallback(
             (e, n, a) => {
                 switch (e) {
@@ -131,14 +131,14 @@ function R(e) {
             (e, t) => {
                 switch (e) {
                     case 0:
-                        return R[t].id;
+                        return O[t].id;
                     case 1:
                         return 'loading';
                     default:
                         throw Error('[getItemKey] Failed for section: '.concat(e));
                 }
             },
-            [R]
+            [O]
         ),
         Q = a.useCallback((e) => {
             switch (e) {
@@ -162,7 +162,7 @@ function R(e) {
         J = a.useCallback(
             (e, t, n, a) => {
                 if (0 === e) {
-                    let e = R[t];
+                    let e = O[t];
                     return (0, i.jsx)(
                         'div',
                         {
@@ -183,7 +183,7 @@ function R(e) {
                 }
                 return null;
             },
-            [R, X, F, M, m]
+            [O, X, F, M, m]
         ),
         $ = a.useRef(null);
     a.useEffect(() => {

@@ -29,14 +29,14 @@ var r,
 function N(e) {
     let { containerContext: t, image: n, title: r, description: i, enableSocialProof: o, analyticsLocationSection: N, upsellViewedTrackingData: O, onClose: R, onDisplay: v, onLearnMore: C } = e,
         y = (0, u.e7)([p.Z], () => p.Z.affinities),
-        D = (0, u.e7)([p.Z], () => p.Z.hasFetched);
+        L = (0, u.e7)([p.Z], () => p.Z.hasFetched);
     s.useEffect(() => {
-        !D && o && d.MH();
-    }, [D, o]),
+        !L && o && d.MH();
+    }, [L, o]),
         s.useEffect(() => {
             h.default.track(g.rMx.PREMIUM_UPSELL_VIEWED, O), null == v || v();
         }, [v, O]);
-    let L = y.length > 1 && o;
+    let D = y.length > 1 && o;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(c.Backdrop, {
@@ -63,11 +63,11 @@ function N(e) {
                                 alt: 'Nitro Perk'
                             }),
                             (0, a.jsx)(c.Heading, {
-                                className: l()(A.title, { [A.titleNoSocialProof]: !L }),
+                                className: l()(A.title, { [A.titleNoSocialProof]: !D }),
                                 variant: 'heading-xl/bold',
                                 children: r
                             }),
-                            L && (0, a.jsx)(m.Z, { affinities: y }),
+                            D && (0, a.jsx)(m.Z, { affinities: y }),
                             (0, a.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 className: A.body,

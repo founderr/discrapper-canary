@@ -34,8 +34,8 @@ var n = t(735250),
     B = t(474936),
     U = t(981631),
     G = t(526761),
-    F = t(726985),
-    y = t(689938),
+    y = t(726985),
+    F = t(689938),
     V = t(897821);
 function w() {
     return (0, n.jsx)(l.Card, {
@@ -51,7 +51,7 @@ function w() {
                 }),
                 (0, n.jsx)('span', {
                     className: V.cardText,
-                    children: y.Z.Messages.USER_SETTINGS_NO_SUBSCRIPTION_CREDIT
+                    children: F.Z.Messages.USER_SETTINGS_NO_SUBSCRIPTION_CREDIT
                 })
             ]
         })
@@ -68,12 +68,12 @@ function k() {
                 (0, n.jsx)(l.Heading, {
                     variant: 'heading-md/bold',
                     className: V.accountCreditTitle,
-                    children: y.Z.Messages.BILLING_SUBSCRIPTION_CREDIT
+                    children: F.Z.Messages.BILLING_SUBSCRIPTION_CREDIT
                 }),
                 (0, n.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     className: V.accountCreditDescription,
-                    children: y.Z.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
+                    children: F.Z.Messages.BILLING_ACCOUNT_CREDIT_DESCRIPTION
                 }),
                 null != e && b.ZP.hasAccountCredit(e)
                     ? (0, n.jsx)(Z.Z, {
@@ -140,7 +140,7 @@ s.Z = function () {
                                     })
                                   : (0, n.jsx)(j.MM, {}),
                               (0, n.jsx)(p.F, {
-                                  setting: F.s6.SUBSCRIPTIONS_CREDITS,
+                                  setting: y.s6.SUBSCRIPTIONS_CREDITS,
                                   children: (0, n.jsx)(k, {})
                               }),
                               Z > 0 &&

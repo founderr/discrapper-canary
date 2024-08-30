@@ -42,8 +42,8 @@ var n,
     B = t(604849),
     U = t(278828),
     G = t(921801),
-    F = t(480294),
-    y = t(430824),
+    y = t(480294),
+    F = t(430824),
     V = t(663389),
     w = t(594174),
     k = t(626135),
@@ -191,7 +191,7 @@ function eT() {
                                             Q.mX.updateSetting(e), eE(e, !1);
                                         },
                                         onCancel: () => {
-                                            Q.mX.updateSetting(e), Q.zA.updateSetting(e ? K.default.keys(y.Z.getGuilds()) : []), eE(e, !0);
+                                            Q.mX.updateSetting(e), Q.zA.updateSetting(e ? K.default.keys(F.Z.getGuilds()) : []), eE(e, !0);
                                         }
                                     })
                                 );
@@ -426,7 +426,7 @@ class eC extends r.PureComponent {
                 Q.iG.updateSetting(e), this.trackDefaultDmsUpdated(e, !1);
             },
             onCancel: () => {
-                Q.iG.updateSetting(e), Q.h2.updateSetting(e ? K.default.keys(y.Z.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0);
+                Q.iG.updateSetting(e), Q.h2.updateSetting(e ? K.default.keys(F.Z.getGuilds()) : []), this.trackDefaultDmsUpdated(e, !0);
             }
         });
     }
@@ -447,7 +447,7 @@ class eC extends r.PureComponent {
                 Q.mX.updateSetting(e), this.trackDefaultMessageRequestUpdated(e, !1);
             },
             onCancel: () => {
-                Q.mX.updateSetting(e), Q.zA.updateSetting(e ? K.default.keys(y.Z.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0);
+                Q.mX.updateSetting(e), Q.zA.updateSetting(e ? K.default.keys(F.Z.getGuilds()) : []), this.trackDefaultMessageRequestUpdated(e, !0);
             }
         });
     }
@@ -946,10 +946,10 @@ function eg() {
             let e = w.default.getCurrentUser();
             return d()(null != e, 'ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined'), e;
         }),
-        s = (0, E.cj)([F.Z], () => ({
-            fetchedConsents: F.Z.fetchedConsents,
-            usageStatistics: F.Z.hasConsented(ei.pjP.USAGE_STATISTICS),
-            personalization: F.Z.hasConsented(ei.pjP.PERSONALIZATION)
+        s = (0, E.cj)([y.Z], () => ({
+            fetchedConsents: y.Z.fetchedConsents,
+            usageStatistics: y.Z.hasConsented(ei.pjP.USAGE_STATISTICS),
+            personalization: y.Z.hasConsented(ei.pjP.PERSONALIZATION)
         })),
         t = (0, E.e7)([Z.Z], () => Z.Z.getFetchError()),
         n = (0, E.e7)([V.Z], () => V.Z.getSubsection()),

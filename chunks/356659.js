@@ -24,7 +24,7 @@ n.d(t, {
         return S;
     },
     JO: function () {
-        return D;
+        return L;
     },
     Kw: function () {
         return b;
@@ -87,7 +87,7 @@ n.d(t, {
         return w;
     },
     yl: function () {
-        return L;
+        return D;
     }
 });
 var r,
@@ -117,8 +117,8 @@ let E = 'alt+c',
     v = 'clips-gallery',
     C = 640,
     y = 360,
-    D = 100,
-    L = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
+    L = 100,
+    D = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
     b = 15,
     M = 30000,
     P = 30,

@@ -31,8 +31,8 @@ var i = n(120356),
     v = n(315324),
     C = n(582123),
     y = n(648926),
-    D = n(290274),
-    L = n(318134),
+    L = n(290274),
+    D = n(318134),
     b = n(228168),
     M = n(981631),
     P = n(689938),
@@ -48,7 +48,7 @@ function k(e) {
             [U.fullSize]: F === b.y0.FULL_SIZE
         },
         { analyticsLocations: Z } = (0, _.ZP)(d.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        { onAction: Y, trackViewRef: j } = (0, L.Z)({
+        { onAction: Y, trackViewRef: j } = (0, D.Z)({
             display: 'live',
             user: t,
             stream: i,
@@ -222,7 +222,7 @@ function k(e) {
                             tags: (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)(E.ZP, { size: E.OH.SMALL }),
-                                    (0, r.jsx)(D.Z, {
+                                    (0, r.jsx)(L.Z, {
                                         display: 'live',
                                         user: t,
                                         onClose: B,

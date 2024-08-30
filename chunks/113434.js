@@ -104,8 +104,8 @@ var r,
     v = n(918701),
     C = n(796111),
     y = n(977156),
-    D = n(665430),
-    L = n(585500),
+    L = n(665430),
+    D = n(585500),
     b = n(566078),
     M = n(46140),
     P = n(981631),
@@ -478,7 +478,7 @@ function ei(e) {
     var t, n;
     let r = Y(e),
         i = (0, v.b7)(e),
-        a = (0, L.D)({
+        a = (0, D.D)({
             quest: e,
             taskDetails: r,
             location: M.dr.QUEST_HOME_DESKTOP,
@@ -503,7 +503,7 @@ function ea(e, t) {
         s = i.includes(M.cd.CONSOLE),
         o = V(e),
         l = H(e),
-        _ = (0, D.pF)({ location: M.dr.QUESTS_BAR }),
+        _ = (0, L.pF)({ location: M.dr.QUESTS_BAR }),
         E = u.useMemo(
             () =>
                 (0, c.EQ)(t)

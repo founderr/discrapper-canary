@@ -52,29 +52,29 @@ function g(e) {
                           children: E.Z.Messages.BOGO_TERMS_APPLY
                       })
                 : void 0,
-        O = {
+        R = {
             type: 'video',
             src: S ? g.heroArtVideoLinkLightTheme : g.videoLink
         };
     null != g.heroArtVideoSubtitles &&
-        (O.subtitles = g.heroArtVideoSubtitles.map((e) => ({
+        (R.subtitles = g.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1
         }))),
         ('' !== g.heroArtImageLinkDarkTheme || '' !== g.heroArtImageLinkLightTheme) &&
-            (O = {
+            (R = {
                 type: 'image',
                 src: S ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
             });
-    let R = S ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
+    let O = S ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
         x =
             '' !== g.modalTopPill
                 ? () =>
                       (0, i.jsx)(u.Cy, {
                           text: g.modalTopPill,
                           className: m.modalTopPill,
-                          colorOptions: R
+                          colorOptions: O
                       })
                 : void 0;
     return {
@@ -84,7 +84,7 @@ function g(e) {
         subHeader: g.subheader,
         subHeaderExtra: L,
         body: g.body,
-        heroArt: O,
+        heroArt: R,
         featureCards: g.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,

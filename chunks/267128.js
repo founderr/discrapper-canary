@@ -32,8 +32,8 @@ var r = n(735250),
     v = n(217702),
     C = n(981631),
     y = n(689938),
-    D = n(438379);
-function L(e) {
+    L = n(438379);
+function D(e) {
     let { width: t = 12, height: n = 8, color: i = 'currentColor', className: a, foreground: s } = e;
     return (0, r.jsx)('svg', {
         className: a,
@@ -85,8 +85,8 @@ function M(e, t, n, i, a) {
     else if (d.type === C.uaV.CHANNEL_PINNED_MESSAGE) s = y.Z.Messages.MESSAGE_PINNED;
     else if (g) {
         if (R) {
-            var D, L;
-            o = null == d ? void 0 : null === (L = d.poll) || void 0 === L ? void 0 : null === (D = L.question) || void 0 === D ? void 0 : D.text;
+            var L, D;
+            o = null == d ? void 0 : null === (D = d.poll) || void 0 === D ? void 0 : null === (L = D.question) || void 0 === L ? void 0 : L.text;
         } else
             v
                 ? (s = (0, h.N4)(d))
@@ -161,19 +161,19 @@ function P(e) {
                 { analyticsLocations: I } = (0, d.ZP)(c.Z.AVATAR);
             if (a || n.state !== p.Y.LOADED || o)
                 return (0, r.jsx)('div', {
-                    className: D.replyBadge,
-                    children: (0, r.jsx)(L, { className: D.replyIcon })
+                    className: L.replyBadge,
+                    children: (0, r.jsx)(D, { className: L.replyIcon })
                 });
-            if (n.message.type === C.uaV.USER_JOIN || n.message.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE || n.message.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || n.message.type === C.uaV.GUILD_GAMING_STATS_PROMPT) return (0, r.jsx)(b, { className: D.userJoinSystemMessageIcon });
+            if (n.message.type === C.uaV.USER_JOIN || n.message.type === C.uaV.ROLE_SUBSCRIPTION_PURCHASE || n.message.type === C.uaV.GUILD_DEADCHAT_REVIVE_PROMPT || n.message.type === C.uaV.GUILD_GAMING_STATS_PROMPT) return (0, r.jsx)(b, { className: L.userJoinSystemMessageIcon });
             if (n.message.type === C.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
                 return (0, r.jsx)(u.TicketIcon, {
                     size: 'md',
                     color: 'currentColor',
-                    className: D.ticketIcon
+                    className: L.ticketIcon
                 });
             if (n.message.type === C.uaV.POLL_RESULT)
                 return (0, r.jsx)(u.PollsIcon, {
-                    className: D.repliedTextContentLeadingIcon,
+                    className: L.repliedTextContentLeadingIcon,
                     width: v.WW,
                     height: v.WW,
                     size: 'custom'
@@ -199,8 +199,8 @@ function P(e) {
                         onClick: o,
                         onContextMenu: u,
                         className: s()({
-                            [D.replyAvatar]: !0,
-                            [D.clickable]: null != o
+                            [L.replyAvatar]: !0,
+                            [L.clickable]: null != o
                         })
                     })
                 );
@@ -249,23 +249,23 @@ function P(e) {
                         renderedContent: o,
                         trailingIcon: l,
                         leadingIcon: c
-                    } = M(n.message, t, i, D.repliedTextContent, {
-                        trailingIconClass: D.repliedTextContentTrailingIcon,
-                        leadingIconClass: D.repliedTextContentLeadingIcon,
+                    } = M(n.message, t, i, L.repliedTextContent, {
+                        trailingIconClass: L.repliedTextContentTrailingIcon,
+                        leadingIconClass: L.repliedTextContentLeadingIcon,
                         iconSize: v.WW
                     });
                     return (0, r.jsxs)(r.Fragment, {
                         children: [
                             c,
                             (0, r.jsx)(u.Clickable, {
-                                className: s()(D.repliedTextPreview, D.clickable),
+                                className: s()(L.repliedTextPreview, L.clickable),
                                 onClick: a,
                                 children: (0, r.jsx)(u.BlockInteractions, {
                                     children:
                                         null != o
                                             ? o
                                             : (0, r.jsx)('span', {
-                                                  className: D.repliedTextPlaceholder,
+                                                  className: L.repliedTextPlaceholder,
                                                   children: e
                                               })
                                 })
@@ -276,18 +276,18 @@ function P(e) {
                 }
                 case p.Y.NOT_LOADED:
                     return (0, r.jsx)(u.Clickable, {
-                        className: s()(D.repliedTextPreview, D.clickable),
+                        className: s()(L.repliedTextPreview, L.clickable),
                         onClick: a,
                         children: (0, r.jsx)('span', {
-                            className: D.repliedTextPlaceholder,
+                            className: L.repliedTextPlaceholder,
                             children: y.Z.Messages.REPLY_QUOTE_MESSAGE_NOT_LOADED
                         })
                     });
                 case p.Y.DELETED:
                     return (0, r.jsx)('div', {
-                        className: D.repliedTextPreview,
+                        className: L.repliedTextPreview,
                         children: (0, r.jsx)('span', {
-                            className: D.repliedTextPlaceholder,
+                            className: L.repliedTextPlaceholder,
                             children: y.Z.Messages.REPLY_QUOTE_MESSAGE_DELETED
                         })
                     });
@@ -305,7 +305,7 @@ function P(e) {
             })),
         (0, r.jsxs)('div', {
             id: (0, A.Gq)(o),
-            className: s()(D.repliedMessage, P),
+            className: s()(L.repliedMessage, P),
             'aria-label': t,
             children: [h, m, N]
         })

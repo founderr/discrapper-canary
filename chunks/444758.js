@@ -136,7 +136,7 @@ function y(e, t, n, r, i) {
         ]
     };
 }
-function D(e, t, n, r) {
+function L(e, t, n, r) {
     if (!e.canViewChannel)
         return (function (e, t) {
             let n = {
@@ -221,7 +221,7 @@ function D(e, t, n, r) {
         })(a, e, o, null != t)
     };
 }
-let L = {
+let D = {
         order: m.ZP.order,
         requiredFirstCharacters: ['<'],
         match: (e) => /^<#(\d+)>/.exec(e),
@@ -233,7 +233,7 @@ let L = {
                     id: r
                 };
             let i = R(r, n.mentionChannels);
-            return null == i ? y(null, r, null, S(n.channelId)) : D(i, null, S(n.channelId));
+            return null == i ? y(null, r, null, S(n.channelId)) : L(i, null, S(n.channelId));
         }
     },
     b = {
@@ -250,7 +250,7 @@ let L = {
                 s = e[3];
             if (null == a) return v(r);
             let o = R(a, null);
-            return null == o ? y(i, a, s, S(n.channelId), r) : D(o, s, S(n.channelId), r);
+            return null == o ? y(i, a, s, S(n.channelId), r) : L(o, s, S(n.channelId), r);
         }
     },
     M = {
@@ -265,13 +265,13 @@ let L = {
                 o = e[4];
             if (null == a || null == s) return v(r);
             let l = R(s, null);
-            if (null != l) return D(l, o, S(n.channelId), r);
+            if (null != l) return L(l, o, S(n.channelId), r);
             let u = R(a, null);
-            return null != u ? D(u, o, S(n.channelId), r) : y(i, a, o, S(n.channelId), r);
+            return null != u ? L(u, o, S(n.channelId), r) : y(i, a, o, S(n.channelId), r);
         }
     };
 t.Z = {
-    channelMention: L,
+    channelMention: D,
     channelOrMessageUrl: b,
     mediaPostLink: M
 };

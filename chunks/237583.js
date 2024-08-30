@@ -1,98 +1,98 @@
-n(653041), n(47120);
-var s,
-    r = n(735250),
-    t = n(470079),
-    o = n(120356),
-    i = n.n(o),
-    l = n(481060),
-    c = n(598077),
-    _ = n(940942),
-    E = n(585867);
-function d(e, a, n) {
+t(653041), t(47120);
+var r,
+    i = t(735250),
+    o = t(470079),
+    l = t(120356),
+    u = t.n(l),
+    a = t(481060),
+    s = t(598077),
+    c = t(940942),
+    d = t(585867);
+function _(e, n, t) {
     return (
-        a in e
-            ? Object.defineProperty(e, a, {
-                  value: n,
+        n in e
+            ? Object.defineProperty(e, n, {
+                  value: t,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[a] = n),
+            : (e[n] = t),
         e
     );
 }
-class u extends (s = t.PureComponent) {
+class f extends (r = o.PureComponent) {
     renderUsers() {
-        let { users: e, max: a, renderUser: n = this.defaultRenderUser, renderMoreUsers: s } = this.props,
-            r = [],
-            t = e.length === a ? e.length : a - 1,
-            o = 0;
-        for (; o < t && o < e.length; ) {
-            let a = o === e.length - 1;
-            r.push(n(e[o] || null, a ? null : _.avatarMasked, 'user-'.concat(o), a)), o++;
+        let { users: e, max: n, renderUser: t = this.defaultRenderUser, renderMoreUsers: r } = this.props,
+            i = [],
+            o = e.length === n ? e.length : n - 1,
+            l = 0;
+        for (; l < o && l < e.length; ) {
+            let n = l === e.length - 1;
+            i.push(t(e[l] || null, n ? null : c.avatarMasked, 'user-'.concat(l), n)), l++;
         }
-        if (o < e.length) {
-            let a = Math.min(e.length - o, 99);
-            r.push(s('+'.concat(a), _.moreUsers, 'more-users', a));
+        if (l < e.length) {
+            let n = Math.min(e.length - l, 99);
+            i.push(r('+'.concat(n), c.moreUsers, 'more-users', n));
         }
-        return r;
+        return i;
     }
     renderIcon() {
         return this.props.icon
-            ? (0, r.jsx)('div', {
-                  className: _.iconContainer,
-                  children: (0, r.jsx)(l.VoiceNormalIcon, {
+            ? (0, i.jsx)('div', {
+                  className: c.iconContainer,
+                  children: (0, i.jsx)(a.VoiceNormalIcon, {
                       size: 'xs',
                       color: 'currentColor',
-                      colorClass: _.foreground,
-                      className: _.icon
+                      colorClass: c.foreground,
+                      className: c.icon
                   })
               })
             : null;
     }
     render() {
         let { className: e } = this.props;
-        return (0, r.jsxs)('div', {
-            className: i()(e, _.container),
+        return (0, i.jsxs)('div', {
+            className: u()(e, c.container),
             ref: (e) => (this._ref = e),
             children: [this.renderIcon(), this.renderUsers()]
         });
     }
     constructor(...e) {
         super(...e),
-            d(this, '_ref', void 0),
-            d(this, 'defaultRenderUser', (e, a, n, s) => {
-                let { onClick: t, size: o, guildId: d } = this.props,
-                    u = e instanceof c.Z ? e : null != e ? e.user : null;
-                return null == u
-                    ? (0, r.jsx)('div', { className: i()(_.emptyUser, a) }, n)
-                    : (0, r.jsx)(
-                          l.Avatar,
+            _(this, '_ref', void 0),
+            _(this, 'defaultRenderUser', (e, n, t, r) => {
+                let { onClick: o, size: l, guildId: _ } = this.props,
+                    f = e instanceof s.Z ? e : null != e ? e.user : null;
+                return null == f
+                    ? (0, i.jsx)('div', { className: u()(c.emptyUser, n) }, t)
+                    : (0, i.jsx)(
+                          a.Avatar,
                           {
                               tabIndex: 0,
-                              src: u.getAvatarURL(d, (0, l.getAvatarSize)(o)),
-                              size: o,
-                              'aria-label': u.username,
-                              className: i()(a, E.cursorPointer, _.avatarSize),
-                              onClick: (e) => (null != t ? t(e, u, this._ref) : null)
+                              src: f.getAvatarURL(_, (0, a.getAvatarSize)(l)),
+                              size: l,
+                              'aria-label': f.username,
+                              className: u()(n, d.cursorPointer, c.avatarSize),
+                              onClick: (e) => (null != o ? o(e, f, this._ref) : null)
                           },
-                          u.id
+                          f.id
                       );
             });
     }
 }
-d(u, 'defaultProps', {
+_(f, 'defaultProps', {
     max: 10,
-    renderMoreUsers: function (e, a, n) {
-        return (0, r.jsx)(
+    renderMoreUsers: function (e, n, t) {
+        return (0, i.jsx)(
             'div',
             {
-                className: a,
+                className: n,
                 children: e
             },
-            n
+            t
         );
     },
-    size: l.AvatarSizes.SIZE_24
+    size: a.AvatarSizes.SIZE_24
 }),
-    (a.Z = u);
+    (n.Z = f);

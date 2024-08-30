@@ -25,7 +25,7 @@ var r,
     v = n(88751),
     C = n(427679);
 let y = 'NO_GUILD',
-    D = new _.h(
+    L = new _.h(
         (e) => [
             (function (e) {
                 var t;
@@ -34,21 +34,21 @@ let y = 'NO_GUILD',
         ],
         (e) => e.id
     ),
-    L = new Set(),
+    D = new Set(),
     b = {};
 function M(e) {
-    return D.values(null != e ? e : void 0, !0).map((e) => {
+    return L.values(null != e ? e : void 0, !0).map((e) => {
         let { id: t } = e;
         return t;
     });
 }
 function P(e) {
-    !L.has(e) &&
-        (L.add(e),
+    !D.has(e) &&
+        (D.add(e),
         c()(I.Z.getMutableGuildChannelsForGuild(e))
             .values()
             .forEach((e) => {
-                x(e) && D.set(e.id, e);
+                x(e) && L.set(e.id, e);
             }));
 }
 function U(e) {
@@ -71,7 +71,7 @@ function G(e) {
         return e(r)
             ? (!(function (e, t) {
                   let n = I.Z.getChannel(e);
-                  null != n && n.isGuildStageVoice() ? (0 === t.size() ? B(n.id) : null == D.get(n.id) && D.set(n.id, n)) : B(e);
+                  null != n && n.isGuildStageVoice() ? (0 === t.size() ? B(n.id) : null == L.get(n.id) && L.set(n.id, n)) : B(e);
               })(n, r),
               !0)
             : t;
@@ -82,10 +82,10 @@ function k(e) {
     return G((t) => t.updateParticipant(e), t);
 }
 function B(e) {
-    return null != e && (delete b[e], D.delete(e), !0);
+    return null != e && (delete b[e], L.delete(e), !0);
 }
 function F() {
-    L.clear(), D.clear(), (b = {});
+    D.clear(), L.clear(), (b = {});
 }
 function V(e, t, n) {
     if (null == n || e.has(n)) return;
@@ -103,14 +103,14 @@ function Z(e) {
 function Y(e) {
     let { guild: t } = e;
     !(function (e) {
-        for (let t of D.values(e)) D.delete(t.id), delete b[t.id];
-        L.delete(e);
+        for (let t of L.values(e)) L.delete(t.id), delete b[t.id];
+        D.delete(e);
     })(t.id);
 }
 function j(e) {
     let { streamKey: t } = e,
         { channelId: n, guildId: r, ownerId: i } = (0, f.my)(t);
-    return !!(null != r && L.has(r)) && k(i, [n]);
+    return !!(null != r && D.has(r)) && k(i, [n]);
 }
 let W = [];
 class K extends (r = d.ZP.Store) {
@@ -138,10 +138,10 @@ class K extends (r = d.ZP.Store) {
         return null !== (r = null === (n = U(e)) || void 0 === n ? void 0 : n.size(t)) && void 0 !== r ? r : 0;
     }
     getChannels(e) {
-        return P(null != e ? e : y), D.values(null != e ? e : y);
+        return P(null != e ? e : y), L.values(null != e ? e : y);
     }
     getChannelsVersion() {
-        return D.version;
+        return L.version;
     }
     getParticipant(e, t) {
         var n, r;
@@ -164,7 +164,7 @@ class K extends (r = d.ZP.Store) {
             let { voiceStates: t } = e,
                 n = new Set();
             return t.reduce((e, t) => {
-                if (null == t.guildId || !L.has(t.guildId)) return e;
+                if (null == t.guildId || !D.has(t.guildId)) return e;
                 let r = new Set();
                 return (V(n, r, t.oldChannelId), V(n, r, t.channelId), 0 === r.size) ? e : k(t.userId, Array.from(r)) || e;
             }, !1);
@@ -187,19 +187,19 @@ class K extends (r = d.ZP.Store) {
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e,
                 n = t.reduce((e, t) => {
-                    if (!t.isGuildStageVoice() || !L.has(t.guild_id)) return e;
-                    let n = D.get(t.id);
-                    return null == n || l()(t.permissionOverwrites, n.permissionOverwrites) ? e : (e.push(t.id), D.set(t.id, t), e);
+                    if (!t.isGuildStageVoice() || !D.has(t.guild_id)) return e;
+                    let n = L.get(t.id);
+                    return null == n || l()(t.permissionOverwrites, n.permissionOverwrites) ? e : (e.push(t.id), L.set(t.id, t), e);
                 }, []);
             return G((e) => e.rebuild(), n), n.length > 0;
         },
         GUILD_ROLE_UPDATE: function (e) {
             let { guildId: t } = e;
-            if (L.has(t)) return G((e) => e.rebuild(), M(t));
+            if (D.has(t)) return G((e) => e.rebuild(), M(t));
         },
         RTC_CONNECTION_VIDEO: function (e) {
             let { channelId: t, guildId: n, userId: r } = e;
-            return !!(null != n && L.has(n)) && k(r, [t]);
+            return !!(null != n && D.has(n)) && k(r, [t]);
         },
         STREAM_CLOSE: j,
         STREAM_DELETE: j,

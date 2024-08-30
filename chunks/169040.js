@@ -1,6 +1,6 @@
 t.d(n, {
     $S: function () {
-        return N;
+        return I;
     },
     As: function () {
         return m;
@@ -9,7 +9,7 @@ t.d(n, {
         return M;
     },
     Iq: function () {
-        return I;
+        return N;
     },
     Md: function () {
         return o;
@@ -87,8 +87,8 @@ let a = 'M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
     T = 120,
     h = 12,
     x = 96,
-    N = 32,
-    I = 120,
+    I = 32,
+    N = 120,
     p = 260,
     C = 88,
     g = 99,

@@ -32,11 +32,11 @@ async function N(e, t, n) {
         o,
         c,
         d,
-        { client_id: f, response_type: C = 'code', redirect_uri: N, code_challenge: A, code_challenge_method: v, state: Z, nonce: L, scope: O, permissions: R, guild_id: x, channel_id: b, prompt: P, disable_guild_select: M, integration_type: D, pid: y } = e;
+        { client_id: f, response_type: C = 'code', redirect_uri: N, code_challenge: A, code_challenge_method: v, state: Z, nonce: L, scope: R, permissions: O, guild_id: x, channel_id: b, prompt: P, disable_guild_select: M, integration_type: D, pid: y } = e;
     if (null == f) throw new T.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'No Client ID provided');
     if (null != N) throw new T.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Redirect URI cannot be used in the RPC OAuth2 Authorization flow');
     let j = [];
-    if (('string' == typeof O ? (j = O.split(' ').filter((e) => e.length > 0)) : Array.isArray(O) && (j = O), null == I.default.getCurrentUser())) throw new T.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Client is not logged in');
+    if (('string' == typeof R ? (j = R.split(' ').filter((e) => e.length > 0)) : Array.isArray(R) && (j = R), null == I.default.getCurrentUser())) throw new T.Z({ errorCode: S.lTL.OAUTH2_ERROR }, 'Client is not logged in');
     let U = m.Z.createFromServer(await (0, E.UM)(f)),
         G = null != U && (0, g.yE)(U.flags, S.udG.EMBEDDED) && (null === (i = U.integrationTypesConfig) || void 0 === i ? void 0 : i[a.Y.USER_INSTALL]) != null;
     l = null == D ? (G ? a.Y.USER_INSTALL : a.Y.GUILD_INSTALL) : Number(D);
@@ -84,7 +84,7 @@ async function N(e, t, n) {
     null == n || n(o.application, b, y);
     let w = p.Hn;
     try {
-        w = r.vB(null != R ? R : 0);
+        w = r.vB(null != O ? O : 0);
     } catch (e) {}
     return (
         null != o.integration_type && Object.values(a.Y).includes(o.integration_type) && (s = new Map()).set(o.integration_type, o),

@@ -21,8 +21,8 @@ var a = t(735250),
     T = t(908841),
     h = t(5192),
     x = t(379357),
-    N = t(561308),
-    I = t(256726),
+    I = t(561308),
+    N = t(256726),
     p = t(206295),
     C = t(551228),
     g = t(591853),
@@ -58,7 +58,7 @@ function j(e) {
                 s = Math.floor((Math.max(l - t, 0) / r) * 100);
             return {
                 seekBarStyles: { width: ''.concat(s, '%') },
-                durationTimestamp: (0, N.T_)({ start: 0 }, r)
+                durationTimestamp: (0, I.T_)({ start: 0 }, r)
             };
         }, [n, i]);
     return null == s
@@ -89,52 +89,52 @@ function R(e) {
     let v,
         A,
         R,
-        { channel: y, entry: L, closePopout: w, onReaction: B, onVoiceChannelPreview: k } = e,
-        { largeImage: U } = (0, x.rv)({ entry: L }),
-        { activity: b, currentEntry: G, artist: D, title: H, user: V } = (0, C.pi)(L),
-        { primaryColor: Y, secondaryColor: F } = (0, p.Z)(null == U ? void 0 : U.src),
-        W = (0, r.e7)([c.Z, E.default], () => ((null == b ? void 0 : b.type) === M.IIU.LISTENING && null != V ? (0, _.Z)(c.Z, E.default, V, b) : void 0), [b, V], s.Z),
+        { channel: y, entry: L, closePopout: w, onReaction: B, onVoiceChannelPreview: b } = e,
+        { largeImage: k } = (0, x.rv)({ entry: L }),
+        { activity: U, currentEntry: D, artist: G, title: H, user: V } = (0, C.pi)(L),
+        { primaryColor: Y, secondaryColor: F } = (0, p.Z)(null == k ? void 0 : k.src),
+        W = (0, r.e7)([c.Z, E.default], () => ((null == U ? void 0 : U.type) === M.IIU.LISTENING && null != V ? (0, _.Z)(c.Z, E.default, V, U) : void 0), [U, V], s.Z),
         z = l.useCallback(() => {
             var e;
             if (null == y || null == V) return;
-            let n = null === (e = b.timestamps) || void 0 === e ? void 0 : e.start,
-                t = (0, N.T_)(null != n ? { start: n } : L, Date.now());
-            return (0, I.CR)({
+            let n = null === (e = U.timestamps) || void 0 === e ? void 0 : e.start,
+                t = (0, I.T_)(null != n ? { start: n } : L, Date.now());
+            return (0, N.CR)({
                 user: V,
                 channel: y,
-                mediaImageSrc: null == U ? void 0 : U.src,
-                artist: D,
+                mediaImageSrc: null == k ? void 0 : k.src,
+                artist: G,
                 description: O(
                     {
-                        artist: D,
+                        artist: G,
                         media: H
                     },
                     y,
                     V
                 ),
                 colors: [Y, F],
-                badges: (0, I.jE)({ timestamp: t })
+                badges: (0, N.jE)({ timestamp: t })
             });
-        }, [b, D, y, L, null == U ? void 0 : U.src, Y, F, H, V]);
-    if (null == b || null == G) return null;
-    let q = D,
+        }, [U, G, y, L, null == k ? void 0 : k.src, Y, F, H, V]);
+    if (null == U || null == D) return null;
+    let q = G,
         K = [];
-    if (G.media.provider === i.p.SPOTIFY) {
+    if (D.media.provider === i.p.SPOTIFY) {
         (A = () => {
-            (0, u.aG)(b);
+            (0, u.aG)(U);
         }),
             (R = () => {
-                (0, u.Z5)(b, V.id);
+                (0, u.Z5)(U, V.id);
             }),
             (v = () => {
-                (0, u.aG)(b);
+                (0, u.aG)(U);
             });
         (q = (0, a.jsx)(d.Z, {
-            artists: D,
-            canOpen: null != b.sync_id,
+            artists: G,
+            canOpen: null != U.sync_id,
             linkClassName: S.popoutTextSecondary,
             onOpenSpotifyArtist: (e) => {
-                (0, u.d$)(b, V.id, e);
+                (0, u.d$)(U, V.id, e);
             }
         })),
             (null == W ? void 0 : W.syncDisabled) === !1 &&
@@ -157,19 +157,19 @@ function R(e) {
         channel: y,
         entry: L,
         headerIcons:
-            G.media.provider === i.p.SPOTIFY
+            D.media.provider === i.p.SPOTIFY
                 ? (0, a.jsx)(f.Z, {
                       onClick: v,
                       'aria-label': Z.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
                       Icon: T.Z
                   })
                 : null,
-        userDescription: (0, N.kr)(L) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING_V2 : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
+        userDescription: (0, I.kr)(L) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENING_V2 : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_LISTENED_V2,
         title: H,
         onClickTitle: A,
         subtitle: q,
         badges: null,
-        children: (null === (n = b.timestamps) || void 0 === n ? void 0 : n.start) != null && (0, a.jsx)(j, { activity: b })
+        children: (null === (n = U.timestamps) || void 0 === n ? void 0 : n.start) != null && (0, a.jsx)(j, { activity: U })
     });
     return (0, a.jsxs)(g.yR, {
         children: [
@@ -177,12 +177,12 @@ function R(e) {
             (0, a.jsx)(g.St, {
                 children: (0, a.jsx)(g.WT, {
                     onReaction: B,
-                    onVoiceChannelPreview: k,
+                    onVoiceChannelPreview: b,
                     user: V,
                     channel: y,
                     generateReactionImage: z,
                     reactionImageAltText:
-                        ((t = D),
+                        ((t = G),
                         (h = V),
                         Z.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_LISTENING.format({
                             username: h.username,

@@ -12,7 +12,7 @@ n.d(t, {
         return A;
     },
     R: function () {
-        return D;
+        return L;
     },
     TB: function () {
         return R;
@@ -30,7 +30,7 @@ n.d(t, {
         return y;
     },
     xz: function () {
-        return L;
+        return D;
     }
 }),
     n(47120),
@@ -163,14 +163,14 @@ function y(e, t) {
         userId: t
     });
 }
-function D(e, t) {
+function L(e, t) {
     s.Z.dispatch({
         type: 'GUILD_SOUNDBOARD_SOUND_PLAY_END',
         soundId: e,
         userId: t
     });
 }
-function L(e) {
+function D(e) {
     s.Z.dispatch({
         type: 'USER_SOUNDBOARD_SET_VOLUME',
         volume: e

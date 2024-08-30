@@ -29,8 +29,8 @@ var i = n(735250),
     v = n(652515),
     Z = n(857428),
     L = n(540059),
-    O = n(194729),
-    R = n(668940),
+    R = n(194729),
+    O = n(668940),
     x = n(831565),
     b = n(724383),
     P = n(705334),
@@ -203,7 +203,7 @@ let eg = 'resizable-sidebar-width',
                 return window.location.pathname.startsWith(eh.Z5c.GUILD_DISCOVERY) || (0, K.OG)();
             })()
         )
-            return a ? (0, i.jsx)(P._, {}) : (0, i.jsx)(R.Z, {});
+            return a ? (0, i.jsx)(P._, {}) : (0, i.jsx)(O.Z, {});
         return null != e
             ? (0, i.jsx)(
                   G.Z,
@@ -216,11 +216,11 @@ let eg = 'resizable-sidebar-width',
             : (0, i.jsx)(ed.Z, {});
     }),
     eL = (e) => (0, i.jsx)(ev, { ...e }),
-    eO = (e) => {
-        let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null;
-        return (0, x.a)({ location: 'sidebar' }) ? (0, i.jsx)(b.A, {}) : (0, i.jsx)(O.Z, { searchRoute: t });
-    },
     eR = (e) => {
+        let t = null != e && e.length > 0 && e.startsWith('?') ? e.split('?')[1] : null;
+        return (0, x.a)({ location: 'sidebar' }) ? (0, i.jsx)(b.A, {}) : (0, i.jsx)(R.Z, { searchRoute: t });
+    },
+    eO = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
             ? (0, i.jsx)(D.Z, {
@@ -495,7 +495,7 @@ function eB() {
                                                     path: eh.Z5c.GLOBAL_DISCOVERY,
                                                     render: (e) => {
                                                         let { location: t } = e;
-                                                        return eO(t.search);
+                                                        return eR(t.search);
                                                     },
                                                     impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
                                                     disableTrack: !0
@@ -504,7 +504,7 @@ function eB() {
                                                     path: eh.Z5c.GLOBAL_DISCOVERY_SERVERS,
                                                     render: (e) => {
                                                         let { location: t } = e;
-                                                        return eO(t.search);
+                                                        return eR(t.search);
                                                     },
                                                     impressionName: o.ImpressionNames.GLOBAL_DISCOVERY,
                                                     disableTrack: !0
@@ -513,7 +513,7 @@ function eB() {
                                                     path: eh.Z5c.QUEST_HOME,
                                                     render: (e) => {
                                                         let { location: t } = e;
-                                                        return eO(t.search);
+                                                        return eR(t.search);
                                                     },
                                                     impressionName: o.ImpressionNames.QUEST_HOME,
                                                     disableTrack: !0
@@ -522,14 +522,14 @@ function eB() {
                                                     path: eh.Z5c.GUILD_DISCOVERY,
                                                     render: (e) => {
                                                         let { location: t } = e;
-                                                        return eO(t.search);
+                                                        return eR(t.search);
                                                     },
                                                     impressionName: o.ImpressionNames.GUILD_DISCOVERY,
                                                     disableTrack: !0
                                                 }),
                                                 (0, i.jsx)(f.Z, {
                                                     path: eh.Z5c.GUILD_MEMBER_VERIFICATION(':guildId', ':inviteCode?'),
-                                                    render: eR,
+                                                    render: eO,
                                                     impressionName: o.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                                                     disableTrack: !0
                                                 }),

@@ -14,10 +14,10 @@ var a = t(735250),
     T = t(591853),
     h = t(410441),
     x = t(797342),
-    N = t(689938);
-let I = (e, n, t, a) => {
+    I = t(689938);
+let N = (e, n, t, a) => {
         let l = (function (e) {
-                if (e === i._.WEEK) return N.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
+                if (e === i._.WEEK) return I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME_WEEK_POPOUT;
             })(a),
             r = s.ZP.getName(n.guild_id, n.id, t),
             o = e.extra.game_name;
@@ -29,7 +29,7 @@ let I = (e, n, t, a) => {
             .replaceAll('*', '');
     },
     p = (e, n) =>
-        N.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+        I.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: n.username,
             activity: e.extra.game_name
         });
@@ -47,8 +47,8 @@ n.Z = (e) => {
                         entry: t,
                         applicationImageSrc: null == g ? void 0 : g.src,
                         avatarSrcs: [v.getAvatarURL(null == n ? void 0 : n.guild_id, 128)],
-                        description: I(t, n, v, S),
-                        timestamp: N.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(A / r.Z.Seconds.HOUR) }),
+                        description: N(t, n, v, S),
+                        timestamp: I.Z.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({ hours: Math.round(A / r.Z.Seconds.HOUR) }),
                         colors: [P, Z],
                         channelId: e
                     });
@@ -66,10 +66,10 @@ n.Z = (e) => {
                         ? null
                         : (0, a.jsx)(h.Z, {
                               Icon: j,
-                              'aria-label': N.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
+                              'aria-label': I.Z.Messages.GAME_LIBRARY_LIST_HEADER_PLATFORM
                           }),
                 entry: t,
-                userDescription: N.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+                userDescription: I.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                 title: M,
                 subtitle: f,
                 badges: (0, a.jsx)(E.Gk, {

@@ -27,8 +27,8 @@ var i = n(735250),
     S = n(585483),
     A = n(70956),
     R = n(111361),
-    x = n(324701),
-    O = n(768943),
+    O = n(324701),
+    x = n(768943),
     M = n(767893),
     v = n(206697),
     L = n(74551),
@@ -58,12 +58,12 @@ function y(e) {
             var e, t;
             return null !== (t = null === (e = C.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : d.Pr.ALL;
         }),
-        s = (0, u.e7)([O.Z, C.Z], () => {
+        s = (0, u.e7)([x.Z, C.Z], () => {
             var e, t;
             let n = null !== (t = null === (e = C.Z.settings.forLater) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : d.Pr.ALL;
-            return n === d.Pr.ALL ? O.Z.getSavedMessages() : n === d.Pr.BOOKMARKS ? O.Z.getMessageBookmarks() : O.Z.getMessageReminders();
+            return n === d.Pr.ALL ? x.Z.getSavedMessages() : n === d.Pr.BOOKMARKS ? x.Z.getMessageBookmarks() : x.Z.getMessageReminders();
         }),
-        r = (0, u.e7)([O.Z], () => O.Z.getOverdueMessageReminderCount());
+        r = (0, u.e7)([x.Z], () => x.Z.getOverdueMessageReminderCount());
     return (0, i.jsx)(_.Dialog, {
         'aria-label': b.Z.Messages.FOR_LATER,
         children: (0, i.jsxs)('div', {
@@ -139,7 +139,7 @@ function B(e) {
             clearInterval(e);
         };
     }, []);
-    let T = (0, u.e7)([O.Z], () => O.Z.hasOverdueReminder(I), [I]);
+    let T = (0, u.e7)([x.Z], () => x.Z.hasOverdueReminder(I), [I]);
     return (0, i.jsx)(_.Popout, {
         animation: _.Popout.Animation.NONE,
         position: r,
@@ -228,7 +228,7 @@ function G(e) {
                               label: b.Z.Messages.FOR_LATER_REMOVE,
                               icon: _.TrashIcon,
                               dangerous: !0,
-                              onClick: () => (0, x.x)(t.saveData)
+                              onClick: () => (0, O.x)(t.saveData)
                           },
                           'delete'
                       )
@@ -279,12 +279,27 @@ function F(e) {
                   (0, i.jsx)(
                       T.sF,
                       {
-                          label: b.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
-                          icon: _.CheckmarkLargeIcon,
-                          onClick: () => (0, x.x)(t.saveData)
+                          label: b.Z.Messages.MESSAGE_BOOKMARKS_CREATE,
+                          icon: _.BookmarkOutlineIcon,
+                          onClick: () =>
+                              (0, O.z)({
+                                  channelId: t.saveData.channelId,
+                                  messageId: t.saveData.messageId,
+                                  dueAt: void 0
+                              })
                       },
-                      'mark-complete'
+                      'create-bookmark'
                   ),
+                  (0, i.jsx)(
+                      T.sF,
+                      {
+                          label: b.Z.Messages.JUMP_TO_MESSAGE,
+                          icon: _.ArrowLargeRightIcon,
+                          onClick: (e) => a(e)
+                      },
+                      'jump-to-message'
+                  ),
+                  (0, i.jsx)(T.fO, {}),
                   (0, i.jsx)(
                       T.sF,
                       {
@@ -303,29 +318,14 @@ function F(e) {
                       },
                       'edit-reminder'
                   ),
-                  (0, i.jsx)(T.fO, {}),
                   (0, i.jsx)(
                       T.sF,
                       {
-                          label: b.Z.Messages.MESSAGE_BOOKMARKS_CREATE,
-                          icon: _.BookmarkOutlineIcon,
-                          onClick: () =>
-                              (0, x.z)({
-                                  channelId: t.saveData.channelId,
-                                  messageId: t.saveData.messageId,
-                                  dueAt: void 0
-                              })
+                          label: b.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
+                          icon: _.CheckmarkLargeIcon,
+                          onClick: () => (0, O.x)(t.saveData)
                       },
-                      'create-bookmark'
-                  ),
-                  (0, i.jsx)(
-                      T.sF,
-                      {
-                          label: b.Z.Messages.JUMP_TO_MESSAGE,
-                          icon: _.ArrowLargeRightIcon,
-                          onClick: (e) => a(e)
-                      },
-                      'jump-to-message'
+                      'mark-complete'
                   )
               ]
           })
@@ -352,20 +352,20 @@ function F(e) {
                   (0, i.jsx)(
                       T.sF,
                       {
-                          label: b.Z.Messages.MESSAGE_BOOKMARKS_REMOVE,
-                          icon: _.BookmarkIcon,
-                          onClick: () => (0, x.x)(t.saveData)
-                      },
-                      'remove-bookmark'
-                  ),
-                  (0, i.jsx)(
-                      T.sF,
-                      {
                           label: b.Z.Messages.JUMP_TO_MESSAGE,
                           icon: _.ArrowLargeRightIcon,
                           onClick: (e) => a(e)
                       },
                       'jump-to-message'
+                  ),
+                  (0, i.jsx)(
+                      T.sF,
+                      {
+                          label: b.Z.Messages.MESSAGE_BOOKMARKS_REMOVE,
+                          icon: _.BookmarkIcon,
+                          onClick: () => (0, O.x)(t.saveData)
+                      },
+                      'remove-bookmark'
                   )
               ]
           });

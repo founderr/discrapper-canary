@@ -153,7 +153,7 @@ n.d(t, {
         return l;
     },
     dB: function () {
-        return eL;
+        return eD;
     },
     dJ: function () {
         return z;
@@ -162,7 +162,7 @@ n.d(t, {
         return eO;
     },
     dT: function () {
-        return eD;
+        return eL;
     },
     eZ: function () {
         return e2;
@@ -294,8 +294,8 @@ var r,
     v,
     C,
     y,
-    D,
     L,
+    D,
     b,
     M,
     P,
@@ -530,8 +530,8 @@ let et = Object.freeze({
     ev = [eO, '1267969164312576000'],
     eC = '1150904354090532864',
     ey = '1199128659810582528',
-    eD = '1204865493622587392',
-    eL = '1204867673024888832',
+    eL = '1204865493622587392',
+    eD = '1204867673024888832',
     eb = '1215346678383509504',
     eM = '1215366184820539392',
     eP = '1223319122125783040',
@@ -759,7 +759,7 @@ let ek = Object.freeze({
         }
     }),
     eW = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
-((y = c || (c = {})).SOUNDBOARD_PLAY = 'soundboard play'), (y.PROFILE_THEME_COLOR = 'profile_theme_color'), (y.PROFILE_BANNER = 'profile_banner'), (y.ANIMATED_AVATAR = 'animated_avatar'), (y.AVATAR_DECORATION = 'avatar_decoration'), (y.CLIENT_THEME = 'client_theme'), (y.SHARED_CANVAS = 'shared_canvas'), (y.PROFILE_EFFECT = 'profile_effect'), ((D = d || (d = {})).FREE = 'free'), (D.PREMIUM_STANDARD = 'premium-standard');
+((y = c || (c = {})).SOUNDBOARD_PLAY = 'soundboard play'), (y.PROFILE_THEME_COLOR = 'profile_theme_color'), (y.PROFILE_BANNER = 'profile_banner'), (y.ANIMATED_AVATAR = 'animated_avatar'), (y.AVATAR_DECORATION = 'avatar_decoration'), (y.CLIENT_THEME = 'client_theme'), (y.SHARED_CANVAS = 'shared_canvas'), (y.PROFILE_EFFECT = 'profile_effect'), ((L = d || (d = {})).FREE = 'free'), (L.PREMIUM_STANDARD = 'premium-standard');
 let eK = {
     '1024422698568122368': 16,
     '511651876987469824': 16,
@@ -767,7 +767,7 @@ let eK = {
     '944037208325619722': 8,
     '642251038925127690': 5
 };
-((L = _ || (_ = {})).HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (L.MID_STREAMING_QUALITY = 'mid_streaming_quality');
+((D = _ || (_ = {})).HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (D.MID_STREAMING_QUALITY = 'mid_streaming_quality');
 let ez = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1

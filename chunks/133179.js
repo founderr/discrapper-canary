@@ -1,37 +1,37 @@
-t.d(n, {
+n.d(t, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var l = t(735250);
-t(470079);
-var s = t(120356),
-    a = t.n(s),
-    r = t(481060),
-    i = t(600164),
-    o = t(624743);
-function u(e) {
-    let { source: n, selectedSource: t } = e,
-        { id: s, name: u, url: c } = n,
-        d = (null == t ? void 0 : t.id) === s;
+var l = n(735250);
+n(470079);
+var s = n(120356),
+    i = n.n(s),
+    r = n(481060),
+    a = n(600164),
+    o = n(624743);
+function c(e) {
+    let { source: t, selectedSource: n } = e,
+        { id: s, name: c, url: d } = t,
+        u = (null == n ? void 0 : n.id) === s;
     return (0, l.jsx)(l.Fragment, {
-        children: (0, l.jsxs)(i.Z, {
-            direction: i.Z.Direction.VERTICAL,
-            justify: i.Z.Justify.CENTER,
-            align: i.Z.Align.CENTER,
+        children: (0, l.jsxs)(a.Z, {
+            direction: a.Z.Direction.VERTICAL,
+            justify: a.Z.Justify.CENTER,
+            align: a.Z.Align.CENTER,
             children: [
-                (0, l.jsx)(i.Z, {
-                    justify: i.Z.Justify.CENTER,
-                    align: i.Z.Align.CENTER,
+                (0, l.jsx)(a.Z, {
+                    justify: a.Z.Justify.CENTER,
+                    align: a.Z.Align.CENTER,
                     children: (0, l.jsx)('div', {
-                        style: { backgroundImage: 'url('.concat(c, ')') },
-                        className: a()(o.sourceThumbnail, { [o.selected]: d })
+                        style: { backgroundImage: 'url('.concat(d, ')') },
+                        className: i()(o.sourceThumbnail, { [o.selected]: u })
                     })
                 }),
                 (0, l.jsx)(r.Text, {
-                    className: a()(o.sourceName, { [o.selected]: d }),
+                    className: i()(o.sourceName, { [o.selected]: u }),
                     variant: 'text-sm/normal',
-                    children: u
+                    children: c
                 })
             ]
         })

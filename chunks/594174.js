@@ -177,7 +177,7 @@ function y(e) {
                 avatar: 'c1f86b313385cb97985f1b118851c28c'
             }));
 }
-function D(e) {
+function L(e) {
     let { guilds: t, lazyPrivateChannels: n } = e;
     t.forEach((e) => {
         e.members.forEach((t) => {
@@ -194,13 +194,13 @@ function D(e) {
                     });
             });
 }
-function L(e) {
+function D(e) {
     return !('incomplete' in e);
 }
 function b(e) {
     if (null != e.users)
         for (let t of e.users) {
-            if (!(t.id in I && L(t))) I[t.id] = new l.Z(t);
+            if (!(t.id in I && D(t))) I[t.id] = new l.Z(t);
         }
 }
 function M(e) {
@@ -503,7 +503,7 @@ class ev extends _.Z {
         if (null != t) for (let e of t.users) I[e.id] = new l.Z(e);
         if (null != e.users)
             for (let t of e.users) {
-                if (!(t.id in I && L(t))) I[t.id] = new l.Z(t);
+                if (!(t.id in I && D(t))) I[t.id] = new l.Z(t);
             }
         for (let t of [e.privateChannels, e.initialGuildChannels])
             for (let e of t) {
@@ -545,7 +545,7 @@ class ev extends _.Z {
     constructor() {
         super({
             CONNECTION_OPEN: y,
-            CONNECTION_OPEN_SUPPLEMENTAL: D,
+            CONNECTION_OPEN_SUPPLEMENTAL: L,
             UPDATE_CLIENT_PREMIUM_TYPE: U,
             OVERLAY_INITIALIZE: b,
             CACHE_LOADED: (e) => this.handleLoadCache(e),

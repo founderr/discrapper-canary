@@ -34,8 +34,8 @@ var r,
     v = n(51144),
     C = n(965386),
     y = n(981631),
-    D = n(185923),
-    L = n(689938),
+    L = n(185923),
+    D = n(689938),
     b = n(664323);
 function M(e, t, n) {
     return (
@@ -253,7 +253,7 @@ M(
                                 ]
                             })
                         }),
-                        t ? null : (0, i.jsx)(C.dY, { children: L.Z.Messages.MENTION_USERS_WITH_ROLE })
+                        t ? null : (0, i.jsx)(C.dY, { children: D.Z.Messages.MENTION_USERS_WITH_ROLE })
                     ]
                 });
             }
@@ -336,7 +336,7 @@ M(
                                           ? R.ZP.getEmojiURL({
                                                 id: e.id,
                                                 animated: e.animated && r,
-                                                size: D.$U
+                                                size: L.$U
                                             })
                                           : e.url
                               })
@@ -395,7 +395,7 @@ M(
                         children: [
                             (0, i.jsx)(C.Tw, { children: a(o, l || !0 === s) }),
                             (0, i.jsxs)(C.z5, {
-                                children: [(0, i.jsx)(C.BR, { children: o.name }), null != r && (0, i.jsx)(C.wL, { children: L.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({ queryMatch: r }) })]
+                                children: [(0, i.jsx)(C.BR, { children: o.name }), null != r && (0, i.jsx)(C.wL, { children: D.Z.Messages.AUTOCOMPLETE_STICKERS_QUERY_MATCH.format({ queryMatch: r }) })]
                             }),
                             null != n && (0, i.jsx)(C.dY, { children: n })
                         ]

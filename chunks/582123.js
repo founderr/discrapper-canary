@@ -30,12 +30,12 @@ function O(e) {
         { analyticsLocations: R } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
         { context: v } = (0, f.KZ)(),
         { profileType: C, primaryColor: y } = (0, p.z)(),
-        { selfPastActivityEnabled: D } = (0, h.z)({ location: 'UserProfileActivityEducationTooltipPopout' }),
-        L = (0, a.e7)([E.default], () => {
+        { selfPastActivityEnabled: L } = (0, h.z)({ location: 'UserProfileActivityEducationTooltipPopout' }),
+        D = (0, a.e7)([E.default], () => {
             var e;
             return (null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
         }),
-        b = D && L && C === m.y0.BITE_SIZE,
+        b = L && D && C === m.y0.BITE_SIZE,
         [M, P] = i.useState(!1);
     (0, l.Z)(() => P(!0), b ? 200 : null);
     let U = M ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],

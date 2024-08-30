@@ -11,8 +11,8 @@ var m,
     v = n(570140),
     C = n(497505),
     y = n(918701),
-    D = n(5881),
-    L = n(46140);
+    L = n(5881),
+    D = n(46140);
 function b() {
     (r = !1), (i = !1), (a = new Map()), (s = new Map()), (o = 0), (l = new Set()), (u = new Set()), (c = new Set()), (d = new Set()), (E = new Map()), (f = new Map()), (h = new Map()), (p = null), (I = new Map()), (_ = new Set());
 }
@@ -118,7 +118,7 @@ class G extends (m = R.ZP.Store) {
         },
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function (e) {
             let { quests: t } = e;
-            for (let e of ((r = !1), (a = new Map()), t)) a.set(e.id, e), e.targetedContent.includes(C.jn.QUEST_BAR) && (0, D.T)({ location: L.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
+            for (let e of ((r = !1), (a = new Map()), t)) a.set(e.id, e), e.targetedContent.includes(C.jn.QUEST_BAR) && (0, L.T)({ location: D.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
         },
         QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function () {
             (o = 0), (r = !1);
@@ -242,7 +242,7 @@ class G extends (m = R.ZP.Store) {
         },
         QUESTS_USER_STATUS_UPDATE: function (e) {
             let { user_status: t } = e;
-            (0, D.T)({ location: L.dr.QUESTS_STORE }).log('Received user status update for '.concat(t.quest_id), t), M(t.quest_id, { userStatus: (0, y.U3)(t) });
+            (0, L.T)({ location: D.dr.QUESTS_STORE }).log('Received user status update for '.concat(t.quest_id), t), M(t.quest_id, { userStatus: (0, y.U3)(t) });
         },
         STREAM_CLOSE: function (e) {
             let { streamKey: t } = e;

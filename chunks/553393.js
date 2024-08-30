@@ -25,8 +25,8 @@ var r = n(735250),
     v = n(602667),
     C = n(644646),
     y = n(667105),
-    D = n(341907),
-    L = n(46140),
+    L = n(341907),
+    D = n(46140),
     b = n(981631),
     M = n(231338),
     P = n(689938),
@@ -129,7 +129,7 @@ t.Z = function (e) {
                 questContentCTA: A.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, D.navigateToQuestHome)(L.dr.MEMBERS_LIST, O.jn.MEMBERS_LIST, T.id);
+                (0, L.navigateToQuestHome)(D.dr.MEMBERS_LIST, O.jn.MEMBERS_LIST, T.id);
         },
         eo = (e) => {
             e.stopPropagation(), ea();
@@ -262,7 +262,7 @@ t.Z = function (e) {
                                                     quest: T,
                                                     questContent: O.jn.MEMBERS_LIST,
                                                     learnMoreStyle: 'icon',
-                                                    location: L.dr.MEMBERS_LIST,
+                                                    location: D.dr.MEMBERS_LIST,
                                                     onClick: er
                                                 })
                                         ]

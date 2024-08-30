@@ -32,8 +32,8 @@ var i,
     v = n(777734),
     Z = n(976757),
     L = n(981631),
-    O = n(689938),
-    R = n(266489);
+    R = n(689938),
+    O = n(266489);
 function x(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'default';
     return e === A.v0.SAVED_GUILDS ? 'saved_guilds' : t;
@@ -46,13 +46,13 @@ function b(e) {
             opacity: a ? 0 : void 0,
             animationDelay: ''.concat(i, 'ms')
         },
-        className: R.animatedCard,
+        className: O.animatedCard,
         children: (0, l.jsx)(
             f.ZP,
             {
                 clan: n,
                 affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, T.y)(n, s),
-                className: d()(R.card, r),
+                className: d()(O.card, r),
                 source: null != o ? o : L.jXE.DISCOVER_SEARCH,
                 onlyAnimateIconOnHover: !0,
                 ...c
@@ -83,7 +83,7 @@ t.ZP = o.memo(function (e) {
     o.useEffect(() => {
         if (null != j && !!(0, Z.Pw)(j)) (!(null != k && (0, Z.Pw)(k)) || !(k.loadedAt >= j.loadedAt)) && (0, m.Oe)('top_picks', U);
     }, [U, j, k]);
-    let W = w.length > 0 || G.length > 0 ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != Y ? O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: p.ZP.getName(Y) }) : '';
+    let W = w.length > 0 || G.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != Y ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: p.ZP.getName(Y) }) : '';
     let z =
             ((t = y),
             (n = M),
@@ -120,7 +120,7 @@ t.ZP = o.memo(function (e) {
                                 items: t.slice(0, n),
                                 itemHeight: 400,
                                 sectionHeight: 24,
-                                header: a > 1 ? O.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE : O.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
+                                header: a > 1 ? R.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE : R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_TITLE,
                                 props: { style: { paddingTop: 8 } },
                                 subtitle: a > 1 ? void 0 : s,
                                 skeletonCount: n
@@ -132,7 +132,7 @@ t.ZP = o.memo(function (e) {
                                       itemHeight: 400,
                                       sectionHeight: a > 1 ? 0 : 24,
                                       props: { style: { paddingTop: 16 } },
-                                      header: a > 1 ? void 0 : O.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE,
+                                      header: a > 1 ? void 0 : R.Z.Messages.CLAN_DISCOVERY_OTHER_GUILDS_TITLE,
                                       skeletonCount: 4 * n
                                   }
                                 : null,
@@ -219,7 +219,7 @@ t.ZP = o.memo(function (e) {
                 switch (i) {
                     case 'top_picks':
                         return (0, l.jsx)('div', {
-                            className: R.topPicksSection,
+                            className: O.topPicksSection,
                             children: (0, l.jsx)(v.Z, {
                                 title: t,
                                 subtitle: n
@@ -230,7 +230,7 @@ t.ZP = o.memo(function (e) {
                             children:
                                 V > F &&
                                 (0, l.jsx)(h.Paginator, {
-                                    className: d()(R.paginationInput),
+                                    className: d()(O.paginationInput),
                                     totalCount: V,
                                     pageSize: F,
                                     disablePaginationGap: !0,
@@ -240,7 +240,7 @@ t.ZP = o.memo(function (e) {
                                 })
                         });
                     case 'header_spacer':
-                        return (0, l.jsx)('div', { className: R.headerSpacer });
+                        return (0, l.jsx)('div', { className: O.headerSpacer });
                     default:
                         if (null == t) return null;
                         return (0, l.jsx)(v.Z, {
@@ -266,7 +266,7 @@ t.ZP = o.memo(function (e) {
         );
     return 0 === y.length && D
         ? (0, l.jsx)('div', {
-              className: R.emptySavedGuilds,
+              className: O.emptySavedGuilds,
               children:
                   'saved_guilds' === L
                       ? (0, l.jsxs)(l.Fragment, {
@@ -274,12 +274,12 @@ t.ZP = o.memo(function (e) {
                                 (0, l.jsx)(h.Heading, {
                                     variant: 'heading-md/medium',
                                     color: 'header-primary',
-                                    children: O.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
+                                    children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_TITLE
                                 }),
                                 (0, l.jsx)(h.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: O.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
+                                    children: R.Z.Messages.CLAN_DISCOVERY_SAVED_GUILDS_EMPTY_DESCRIPTION
                                 })
                             ]
                         })
@@ -288,18 +288,18 @@ t.ZP = o.memo(function (e) {
                                 (0, l.jsx)(h.Heading, {
                                     variant: 'heading-md/medium',
                                     color: 'header-primary',
-                                    children: O.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
+                                    children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_TITLE
                                 }),
                                 (0, l.jsx)(h.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-secondary',
-                                    children: O.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION
+                                    children: R.Z.Messages.CLAN_DISCOVERY_EMPTY_LIST_DESCRIPTION
                                 })
                             ]
                         })
           })
         : (0, l.jsx)('div', {
-              className: R.sectionContainer,
+              className: O.sectionContainer,
               style: {
                   paddingTop: T,
                   paddingLeft: f,
@@ -315,13 +315,13 @@ t.ZP = o.memo(function (e) {
                   return (0, l.jsxs)(
                       'div',
                       {
-                          className: R.section,
+                          className: O.section,
                           style: { gap: ''.concat(16, 'px') },
                           children: [
                               null != s &&
                                   (0, l.jsx)('div', {
                                       ...a.props,
-                                      className: d()(R.sectionHeader, null === (n = a.props) || void 0 === n ? void 0 : n.className),
+                                      className: d()(O.sectionHeader, null === (n = a.props) || void 0 === n ? void 0 : n.className),
                                       style: {
                                           height: ''.concat(a.sectionHeight, 'px'),
                                           ...(null === (i = a.props) || void 0 === i ? void 0 : i.style)
@@ -330,7 +330,7 @@ t.ZP = o.memo(function (e) {
                                   }),
                               e > 0 &&
                                   (0, l.jsx)('div', {
-                                      className: R.sectionContent,
+                                      className: O.sectionContent,
                                       style: { gridTemplateColumns: 'repeat('.concat(M, ', minmax(252px, 1fr))') },
                                       children: Array.from({ length: e }).map((e, n) => {
                                           let i = ''.concat(t, '-').concat(n);

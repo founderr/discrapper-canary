@@ -22,8 +22,8 @@ var i = n(735250),
     S = n(443877),
     A = n(492593),
     R = n(938353),
-    x = n(25015),
-    O = n(689674),
+    O = n(25015),
+    x = n(689674),
     M = n(963550),
     v = n(845080),
     L = n(295790),
@@ -69,7 +69,7 @@ t.Z = a.memo(function e(t) {
         X = (0, d.A)((null !== (n = o.editedTimestamp) && void 0 !== n ? n : o.timestamp).valueOf()),
         J = (0, _.Z)(null == s ? void 0 : s.id),
         { disableReactionCreates: $ } = (0, S.Z)(s),
-        { content: ee, hasSpoilerEmbeds: et } = (0, x.Z)(o, {
+        { content: ee, hasSpoilerEmbeds: et } = (0, O.Z)(o, {
             hideSimpleEmbedContent: z && Q,
             allowList: X,
             allowHeading: X,
@@ -80,7 +80,7 @@ t.Z = a.memo(function e(t) {
         ei = (0, l.e7)([T.Z], () => o.hasFlag(D.iLy.HAS_THREAD) && T.Z.getChannel(f.default.castMessageIdAsChannelId(o.id))),
         ea = o.type === D.uaV.THREAD_STARTER_MESSAGE && Y.state === I.Y.LOADED && null != W,
         es = !ea && void 0 === a,
-        er = (0, O.Z)({
+        er = (0, x.Z)({
             message: o,
             channel: s,
             enabled: es

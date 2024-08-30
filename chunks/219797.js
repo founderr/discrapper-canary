@@ -1,9 +1,9 @@
 n.d(t, {
     L9: function () {
-        return O;
+        return x;
     },
     ZK: function () {
-        return x;
+        return O;
     },
     d4: function () {
         return R;
@@ -155,7 +155,7 @@ function R(e) {
         contentType: t.content_type
     });
 }
-function x(e) {
+function O(e) {
     let t = e.item.originalItem;
     return (0, h.ur)({
         ...e,
@@ -164,7 +164,7 @@ function x(e) {
         fileSize: t.size
     });
 }
-function O(e) {
+function x(e) {
     if ('CLIP' === e.item.type)
         return (0, i.jsx)(M, {
             attachment: e.item.originalItem,

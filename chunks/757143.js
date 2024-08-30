@@ -43,14 +43,14 @@ s(
                 var f = u(i);
                 !f && (i = E(i));
                 var p = s.global;
-                p && ((L = s.unicode), (s.lastIndex = 0));
+                p && ((D = s.unicode), (s.lastIndex = 0));
                 for (var T = []; null !== (b = m(s, o)); ) {
                     if ((N(T, b), !p)) break;
-                    '' === E(b[0]) && (s.lastIndex = h(o, _(s.lastIndex), L));
+                    '' === E(b[0]) && (s.lastIndex = h(o, _(s.lastIndex), D));
                 }
                 for (var v = '', C = 0, y = 0; y < T.length; y++) {
-                    for (var D, L, b, M, P = E((b = T[y])[0]), U = g(S(d(b.index), o.length), 0), w = [], x = 1; x < b.length; x++) {
-                        N(w, void 0 === (D = b[x]) ? D : String(D));
+                    for (var L, D, b, M, P = E((b = T[y])[0]), U = g(S(d(b.index), o.length), 0), w = [], x = 1; x < b.length; x++) {
+                        N(w, void 0 === (L = b[x]) ? L : String(L));
                     }
                     var G = b.groups;
                     if (f) {

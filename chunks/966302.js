@@ -30,8 +30,8 @@ var r = n(735250),
     v = n(131951),
     C = n(594174),
     y = n(451478),
-    D = n(792125),
-    L = n(358221),
+    L = n(792125),
+    D = n(358221),
     b = n(584511),
     M = n(793865),
     P = n(981631),
@@ -143,7 +143,7 @@ function Y(e) {
         T = (0, h.ZP)(_),
         [g, S] = (0, l.Wu)([v.Z], () => [v.Z.supports(U.AN.VIDEO), Object.keys(v.Z.getVideoDevices()).length]),
         A = (0, l.e7)([y.Z], () => y.Z.isFocused()),
-        N = (0, l.e7)([L.Z], () => L.Z.getMode(_.id)),
+        N = (0, l.e7)([D.Z], () => D.Z.getMode(_.id)),
         O = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
@@ -207,7 +207,7 @@ function Y(e) {
         dragAnywhere: !0,
         children: (0, r.jsx)(r.Fragment, {
             children: (0, r.jsxs)(o.animated.div, {
-                className: s()(x.root, G.elevationHigh, { [x.previewCamera]: p }, p ? (0, D.Q)('dark') : null),
+                className: s()(x.root, G.elevationHigh, { [x.previewCamera]: p }, p ? (0, L.Q)('dark') : null),
                 style: {
                     ...t,
                     width: R.value.interpolate([0, 1], [Y.width, F]),

@@ -34,8 +34,8 @@ var i = n(735250),
     S = n(451478),
     A = n(626135),
     R = n(585483),
-    x = n(981631),
-    O = n(689938),
+    O = n(981631),
+    x = n(689938),
     M = n(409804);
 function v(e, t, n) {
     return (
@@ -93,7 +93,7 @@ class b extends a.PureComponent {
             children: [
                 (0, i.jsx)('div', {
                     className: r()(M.__invalid_text, { hidden: e }),
-                    children: O.Z.Messages.JUMP
+                    children: x.Z.Messages.JUMP
                 }),
                 (0, i.jsx)(d.Spinner, {
                     type: d.Spinner.Type.PULSING_ELLIPSIS,
@@ -137,7 +137,7 @@ class b extends a.PureComponent {
 }
 let D = u.ZP.connectStores([p.Z], (e) => {
     let { channel: t } = e;
-    return { canManageMessages: null != t && p.Z.can(x.Plq.MANAGE_MESSAGES, t) };
+    return { canManageMessages: null != t && p.Z.can(O.Plq.MANAGE_MESSAGES, t) };
 })(b);
 function j(e) {
     let { analyticsName: t, items: n, hasMore: s, loading: l, loadMore: _, renderHeader: E, renderEmptyState: T, renderItem: h, getProTip: f, scrollerClassName: C, className: p, listName: v } = e,
@@ -146,7 +146,7 @@ function j(e) {
         b = (0, u.e7)([g.Z], () => g.Z.hasNotice()),
         D = (0, u.e7)([S.Z], () => S.Z.windowSize());
     a.useEffect(() => {
-        A.default.track(x.rMx.OPEN_POPOUT, { type: t });
+        A.default.track(O.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
         a.useEffect(() => {
             function e() {
@@ -158,10 +158,10 @@ function j(e) {
                 null === (e = Z.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
             }
             return (
-                R.S.subscribe(x.CkL.SCROLL_PAGE_DOWN, t),
-                R.S.subscribe(x.CkL.SCROLL_PAGE_UP, e),
+                R.S.subscribe(O.CkL.SCROLL_PAGE_DOWN, t),
+                R.S.subscribe(O.CkL.SCROLL_PAGE_UP, e),
                 () => {
-                    R.S.unsubscribe(x.CkL.SCROLL_PAGE_DOWN, t), R.S.unsubscribe(x.CkL.SCROLL_PAGE_UP, e);
+                    R.S.unsubscribe(O.CkL.SCROLL_PAGE_DOWN, t), R.S.unsubscribe(O.CkL.SCROLL_PAGE_UP, e);
                 }
             );
         }, []);
@@ -211,7 +211,7 @@ function j(e) {
                         color: d.Button.Colors.PRIMARY,
                         size: d.Button.Sizes.MAX,
                         onClick: _,
-                        children: O.Z.Messages.LOAD_MORE_MESSAGES
+                        children: x.Z.Messages.LOAD_MORE_MESSAGES
                     })
                 })
               : (0, i.jsx)('div', {
@@ -281,13 +281,13 @@ function U(e) {
         let { id: i, blocked: a, author: s, channel_id: r } = e;
         if (a)
             _.Z.show({
-                title: O.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
-                body: O.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({ name: s.username }),
-                confirmText: O.Z.Messages.OKAY
+                title: x.Z.Messages.UNBLOCK_TO_JUMP_TITLE,
+                body: x.Z.Messages.UNBLOCK_TO_JUMP_BODY.format({ name: s.username }),
+                confirmText: x.Z.Messages.OKAY
             });
         else if (!L) {
             let e = f.Z.getChannel(r);
-            null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(x.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
+            null != e && (E.Z.trackJump(r, i, t), (0, h.uL)(O.Z5c.CHANNEL(e.getGuildId(), r, i))), null == d || d(n);
         }
     }
     a.useEffect(() => {

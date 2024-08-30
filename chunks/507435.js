@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return x;
+        return O;
     }
 });
 var i,
@@ -170,7 +170,7 @@ function R(e) {
         ]
     });
 }
-function x(e) {
+function O(e) {
     var t;
     let { message: n, channel: i, compact: a, disableInteraction: l = !1 } = e,
         o = n.embeds[0],

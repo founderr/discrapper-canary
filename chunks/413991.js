@@ -6,60 +6,60 @@ l.d(n, {
     l(47120);
 var t = l(735250),
     r = l(470079),
-    a = l(481060),
-    i = l(911969),
+    i = l(481060),
+    a = l(911969),
     s = l(970184),
     u = l(293979),
     o = l(203079);
 function c(e) {
     let n;
-    let { type: l, style: c, label: d, placeholder: m, minLength: E, maxLength: p, required: N, value: f } = e,
-        [_, C] = r.useState(null != f ? f : ''),
+    let { type: l, style: c, label: d, placeholder: m, minLength: p, maxLength: E, required: f, value: N } = e,
+        [C, v] = r.useState(null != N ? N : ''),
         {
-            state: T,
-            executeStateUpdate: v,
-            error: h
+            state: _,
+            executeStateUpdate: h,
+            error: x
         } = (0, s.Ee)(
             e,
-            null != f
+            null != N
                 ? {
                       type: l,
-                      value: f
+                      value: N
                   }
                 : void 0
         ),
-        x = (0, u.hz)(e.id);
+        T = (0, u.hz)(e.id);
     r.useEffect(() => {
-        (null == T ? void 0 : T.type) === l && C(T.value);
-    }, [l, T]);
+        (null == _ ? void 0 : _.type) === l && v(_.value);
+    }, [l, _]);
     let I = {
         name: d,
-        value: _,
+        value: C,
         placeholder: m,
-        minLength: E,
-        maxLength: p,
-        required: N,
+        minLength: p,
+        maxLength: E,
+        required: f,
         onChange: (e) => {
-            C(e),
-                v({
+            v(e),
+                h({
                     type: l,
                     value: e
                 });
         },
-        autoFocus: x
+        autoFocus: T
     };
     switch (c) {
-        case i.FO.SMALL:
-            n = (0, t.jsx)(a.TextInput, { ...I });
+        case a.FO.SMALL:
+            n = (0, t.jsx)(i.TextInput, { ...I });
             break;
-        case i.FO.PARAGRAPH:
-            n = (0, t.jsx)(a.TextArea, { ...I });
+        case a.FO.PARAGRAPH:
+            n = (0, t.jsx)(i.TextArea, { ...I });
     }
-    return (0, t.jsx)(a.FormItem, {
+    return (0, t.jsx)(i.FormItem, {
         title: d,
-        required: N,
+        required: f,
         className: o.formItem,
-        error: h,
+        error: x,
         children: n
     });
 }

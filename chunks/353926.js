@@ -45,8 +45,8 @@ let m = 'scientist:triggered',
     v = [],
     C = [],
     y = {},
-    D = {},
     L = {},
+    D = {},
     b = {},
     M = {},
     P = 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL,
@@ -159,7 +159,7 @@ function j(e) {
     };
 }
 function W(e) {
-    !P && 'CONNECTION_OPEN' === e.type && k(e.user) && (P = !0), (y = {}), (D = {}), (L = {});
+    !P && 'CONNECTION_OPEN' === e.type && k(e.user) && (P = !0), (y = {}), (L = {}), (D = {});
     let t = 'CONNECTION_OPEN' === e.type || null == e.fingerprint || e.fingerprint === d.default.getFingerprint(),
         { experiments: r, guildExperiments: i } = e;
     t && K(r, i), n(598984).Vx.trackExposure(), (N = !0);
@@ -183,7 +183,7 @@ function K(e, t) {
         null != t &&
             t.forEach((e) => {
                 let [t, n, r, i, a, s, o, l, u, c] = e;
-                D[t] = {
+                L[t] = {
                     hashKey: n,
                     revision: r,
                     populations: i.map(j),
@@ -237,7 +237,7 @@ function q(e) {
 }
 function Q(e) {
     let { serializedExperimentStore: t, user: n } = e;
-    !P && k(n) && (P = !0), (N = t.hasLoadedExperiments), (O = t.trackedExposureExperiments), (y = t.loadedUserExperiments), (b = t.userExperimentOverrides), (M = t.guildExperimentOverrides), (D = q(t.loadedGuildExperiments)), (L = {});
+    !P && k(n) && (P = !0), (N = t.hasLoadedExperiments), (O = t.trackedExposureExperiments), (y = t.loadedUserExperiments), (b = t.userExperimentOverrides), (M = t.guildExperimentOverrides), (L = q(t.loadedGuildExperiments)), (D = {});
 }
 function X() {
     N = !0;
@@ -328,9 +328,9 @@ function er(e) {
 }
 function ei(e) {
     let { guild: t } = e;
-    for (let e in L) {
+    for (let e in D) {
         let [n] = e.split(':');
-        t.id === n && delete L[e];
+        t.id === n && delete D[e];
     }
 }
 class ea extends _.Z {
@@ -379,7 +379,7 @@ class ea extends _.Z {
     }
     loadCache() {
         let e = this.readSnapshot(ea.LATEST_SNAPSHOT_VERSION);
-        null != e && ('loadedUserExperiments' in e ? ((y = e.loadedUserExperiments), (D = q(e.loadedGuildExperiments))) : K(e.rawUserExperiments, e.rawGuildExperiments));
+        null != e && ('loadedUserExperiments' in e ? ((y = e.loadedUserExperiments), (L = q(e.loadedGuildExperiments))) : K(e.rawUserExperiments, e.rawGuildExperiments));
     }
     takeSnapshot() {
         return {
@@ -409,11 +409,11 @@ class ea extends _.Z {
             r = M[e];
         if (P && null != r) return r;
         let i = ''.concat(n, ':').concat(e);
-        if (i in L) return L[i];
+        if (i in D) return D[i];
         let a = (function e(t, n) {
             var r, i;
             let a = w(n),
-                s = D[''.concat(a)];
+                s = L[''.concat(a)];
             if (null == s) return null;
             let { revision: o, aaMode: l } = s,
                 u = s.overrides[t],
@@ -467,7 +467,7 @@ class ea extends _.Z {
                 triggerDebuggingEnabled: c
             };
         })(n, e);
-        return (L[i] = a), a;
+        return (D[i] = a), a;
     }
     getUserExperimentBucket(e) {
         let t = this.getUserExperimentDescriptor(e);
@@ -481,13 +481,13 @@ class ea extends _.Z {
         return y;
     }
     getGuildExperiments() {
-        return D;
+        return L;
     }
     getLoadedUserExperiment(e) {
         return y[w(e)];
     }
     getLoadedGuildExperiment(e) {
-        return D[w(e)];
+        return L[w(e)];
     }
     getRecentExposures(e, t) {
         let n = ''.concat(e, '|').concat(t, '|');
@@ -526,15 +526,15 @@ class ea extends _.Z {
             let r = t[n];
             null != r && (e[r] = y[n].bucket);
         }
-        for (let t in L) {
-            let n = L[t];
+        for (let t in D) {
+            let n = D[t];
             null != n && (e[t] = n.bucket);
         }
         return e;
     }
     getSerializedState() {
         let e = {};
-        for (let t in D) for (let n of ((e[t] = JSON.parse(JSON.stringify(D[t]))), e[t].populations)) n.filters = [];
+        for (let t in L) for (let n of ((e[t] = JSON.parse(JSON.stringify(L[t]))), e[t].populations)) n.filters = [];
         return {
             hasLoadedExperiments: N,
             trackedExposureExperiments: O,

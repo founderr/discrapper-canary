@@ -39,7 +39,7 @@ t.Z = function (e) {
         window.open(E.Z.getArticleURL(f.BhN.QUESTS_LEARN_MORE));
     }, []);
     (0, o.Tt)({ location: S.Z.Messages.QUESTS });
-    let O = a.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []);
+    let R = a.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []);
     return (0, i.jsxs)('div', {
         className: C.container,
         children: [
@@ -66,7 +66,7 @@ t.Z = function (e) {
                 bannerClassName: C.bannerContainer,
                 bannerBackground: (0, i.jsx)('div', {
                     className: C.bannerImage,
-                    style: O,
+                    style: R,
                     children: (0, i.jsx)('div', { className: C.bannerGradient })
                 }),
                 children: n === m.e5.CLAIMED ? (0, i.jsx)(p.Z, { onSelectTab: N }) : (0, i.jsx)(g.Z, {})

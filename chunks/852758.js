@@ -39,8 +39,8 @@ function Z() {
             theme: g.Z.theme
         })),
         Z = T.Z.getVerificationTypes(e),
-        [L, O] = a.useState(0),
-        R = (0, _.Z)(Z);
+        [L, R] = a.useState(0),
+        O = (0, _.Z)(Z);
     (0, E.Z)(
         {
             type: s.ImpressionTypes.MODAL,
@@ -93,7 +93,7 @@ function Z() {
             []
         ),
         a.useEffect(() => {
-            (null == R ? void 0 : R[0]) === S.PUi.PHONE &&
+            (null == O ? void 0 : O[0]) === S.PUi.PHONE &&
                 (null == Z ? void 0 : Z[0]) === S.PUi.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
@@ -112,7 +112,7 @@ function Z() {
                         onCloseCallback: x
                     }
                 );
-        }, [Z, R]),
+        }, [Z, O]),
         (0, i.jsx)(f.Z, {
             types: Z,
             captchaKey: L,
@@ -124,7 +124,7 @@ function Z() {
                         oldFormErrors: !0
                     })
                     .then(d.xf, () => {
-                        O((e) => e + 1);
+                        R((e) => e + 1);
                     });
             },
             theme: t,

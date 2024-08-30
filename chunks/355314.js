@@ -31,13 +31,13 @@ function R(e) {
         v = (0, a.e7)([c.Z], () => c.Z.theme),
         C = null == R ? void 0 : R.premiumType,
         y = (0, I.N)(),
-        D = (0, p.Ng)(),
-        L = null != y || null != D,
+        L = (0, p.Ng)(),
+        D = null != y || null != L,
         { enabled: b } = m.MP.useExperiment(
             { location: 'File Upload Roadblock' },
             {
-                autoTrackExposure: !L,
-                disable: L
+                autoTrackExposure: !D,
+                disable: D
             }
         ),
         M = v === S.BRd.LIGHT ? 'light' : 'dark',

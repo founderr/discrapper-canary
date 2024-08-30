@@ -21,12 +21,12 @@ t.Z = (e) => {
         I = n.length,
         { analyticsLocations: E } = (0, l.cj)([g.Z], () => g.Z.getAnalytics()),
         { analyticsLocations: v } = (0, u.ZP)([...E, d.Z.COLLECTIBLES_SHOP_POPULAR_PICKS_CAROUSEL]),
-        { trackPagination: L } = (0, m.X)('collectibles_shop_popular_picks_carousel', v),
-        T = r.useCallback((e) => ({ x: (e - h) * 100 }), [h]),
-        [S, N] = (0, c.useSprings)(n.length, T);
+        { trackPagination: T } = (0, m.X)('collectibles_shop_popular_picks_carousel', v),
+        L = r.useCallback((e) => ({ x: (e - h) * 100 }), [h]),
+        [S, N] = (0, c.useSprings)(n.length, L);
     return (r.useEffect(() => {
-        N(T);
-    }, [N, T]),
+        N(L);
+    }, [N, L]),
     null == s || 0 === n.length)
         ? null
         : (0, a.jsx)('div', {
@@ -41,7 +41,7 @@ t.Z = (e) => {
                           onClick: () => {
                               x((e) => {
                                   let t = e - 4;
-                                  return L(t / 4, h / 4), t;
+                                  return T(t / 4, h / 4), t;
                               });
                           },
                           disabled: h - 4 < 0,
@@ -81,7 +81,7 @@ t.Z = (e) => {
                           onClick: () => {
                               x((e) => {
                                   let t = e + 4;
-                                  return L(t / 4, h / 4), t;
+                                  return T(t / 4, h / 4), t;
                               });
                           },
                           disabled: h + 4 >= I,

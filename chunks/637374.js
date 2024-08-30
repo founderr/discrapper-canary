@@ -22,8 +22,8 @@ var i = n(735250),
     S = n(314897),
     A = n(82142),
     R = n(283595),
-    x = n(594174),
-    O = n(509545),
+    O = n(594174),
+    x = n(509545),
     M = n(55563),
     v = n(199480),
     L = n(626135),
@@ -348,11 +348,11 @@ class V extends a.Component {
     }
 }
 let H = (0, I.Z)((0, E.Z)(V));
-t.Z = c.ZP.connectStores([A.Z, M.Z, x.default, R.Z, O.Z, S.default, m.Z], (e) => {
+t.Z = c.ZP.connectStores([A.Z, M.Z, O.default, R.Z, x.Z, S.default, m.Z], (e) => {
     let { code: t, author: n, currentUser: i } = e,
         a = A.Z.get(t),
         s = null != a ? M.Z.get(a.skuId) : null,
-        r = null != a && null != a.userId ? x.default.getUser(a.userId) : null,
+        r = null != a && null != a.userId ? O.default.getUser(a.userId) : null,
         l = m.Z.useReducedMotion;
     return {
         sku: s,

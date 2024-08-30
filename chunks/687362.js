@@ -16,7 +16,7 @@ var s = n(704215),
     d = n(689938);
 function _() {
     let e = (0, o.yQ)(),
-        t = (0, l.c)({ location: r.MQ.HOME });
+        t = (0, l.cG)({ location: r.MQ.HOME });
     if (null != e && !!t)
         return {
             title: (0, i.k3)(e.nitroTenureStatus),

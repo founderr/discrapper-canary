@@ -39,9 +39,9 @@ function m(e) {
             if (null != T) null == g || g(), o.default.selectVoiceChannel(T.channelId), !C && (0, l.iV)(T, { forceMultiple: e }), v.dispatch(h.CkL.POPOUT_CLOSE), E.S.dispatch(h.CkL.MODAL_CLOSE), s.Z.popAll();
         };
     if (null == T) return null;
-    let D = (0, c.P9)(R);
-    t ? (D = p.Z.Messages.WATCH_STREAM_STREAMING) : C && (D = p.Z.Messages.WATCH_STREAM_WATCHING);
-    let L = {
+    let L = (0, c.P9)(R);
+    t ? (L = p.Z.Messages.WATCH_STREAM_STREAMING) : C && (L = p.Z.Messages.WATCH_STREAM_WATCHING);
+    let D = {
         color: n,
         look: m
     };
@@ -52,7 +52,7 @@ function m(e) {
                 {
                     disabled: t || C || !O,
                     onClick: () => y(!1),
-                    ...L,
+                    ...D,
                     fullWidth: !0,
                     children: [
                         (0, r.jsx)(a.ScreenArrowIcon, {
@@ -60,7 +60,7 @@ function m(e) {
                             color: 'currentColor',
                             className: I.streamIcon
                         }),
-                        D
+                        L
                     ]
                 },
                 'play'
@@ -75,7 +75,7 @@ function m(e) {
                                   var t;
                                   null === (t = e.onClick) || void 0 === t || t.call(e), y(!0);
                               },
-                              ...L,
+                              ...D,
                               className: I.iconButton,
                               size: I.iconButtonSize,
                               children: (0, r.jsx)(a.EyePlusIcon, {

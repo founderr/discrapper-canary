@@ -12,7 +12,7 @@ n.d(t, {
         return q;
     },
     Ex: function () {
-        return eD;
+        return eL;
     },
     Fg: function () {
         return H;
@@ -63,7 +63,7 @@ n.d(t, {
         return eE;
     },
     R_: function () {
-        return eL;
+        return eD;
     },
     SE: function () {
         return eR;
@@ -120,7 +120,7 @@ n.d(t, {
         return er;
     },
     d$: function () {
-        return L;
+        return D;
     },
     d4: function () {
         return S;
@@ -180,7 +180,7 @@ n.d(t, {
         return ed;
     },
     uL: function () {
-        return D;
+        return L;
     },
     up: function () {
         return f;
@@ -350,11 +350,11 @@ let m = (0, o.Zc)(
         (e) => (null == e ? void 0 : e.value),
         (e) => a.D5.create({ value: e })
     ),
-    D = '0',
-    L = (0, o.Zc)(
+    L = '0',
+    D = (0, o.Zc)(
         'notifications',
         'notificationCenterAckedBeforeId',
-        (e) => (null != e ? e : D),
+        (e) => (null != e ? e : L),
         (e) => e
     ),
     b = (0, o.Zc)(
@@ -855,13 +855,13 @@ let eT = (0, o.KM)(
         (e) => e === i.E5.ON_FOR_LARGE_GUILDS,
         (e) => (!0 === e ? i.E5.ON_FOR_LARGE_GUILDS : i.E5.OFF)
     ),
-    eD = (0, o.Zc)(
+    eL = (0, o.Zc)(
         'privacy',
         'familyCenterEnabledV2',
         (e) => (null == e ? void 0 : e.value),
         (e) => a.D5.create({ value: e })
     ),
-    eL = (0, o.Zc)(
+    eD = (0, o.Zc)(
         'privacy',
         'hideLegacyUsername',
         (e) => {

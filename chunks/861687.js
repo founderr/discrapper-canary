@@ -33,8 +33,8 @@ var r,
     v = n(926951),
     C = n(868616),
     y = n(848886),
-    D = n(583215),
-    L = n(576574),
+    L = n(583215),
+    D = n(576574),
     b = n(307320),
     M = n(420363);
 n(527702);
@@ -477,10 +477,10 @@ class el extends E.Z {
         }
         let _ = ['unk'];
         if ((G.Z.supports(ei.AN.AMD_EXPERIMENTAL_RATE_CONTROL) && _.push('amdRelaxRc'), this.context === ei.Yn.STREAM)) {
-            let { nvMediumVbvSizeMs: e } = L.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
+            let { nvMediumVbvSizeMs: e } = D.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
             if (e > 0) {
                 _.push('nvRelaxRc=' + e);
-                let { nvEnableNewPresets: t } = D.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
+                let { nvEnableNewPresets: t } = L.Z.getCurrentConfig({ location: 'handleReady' }, { autoTrackExposure: !0 });
                 t && _.push('nvNewPresets');
             }
             if (null != this.guildId) {

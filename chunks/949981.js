@@ -49,14 +49,14 @@ function T(e) {
                 : I.Z.Messages.UNNAMED);
     let A = g ? h : N,
         R = I.Z.Messages.JOIN_GUILD,
-        x = l.Z.Button.Colors.GREEN;
-    g && ((R = I.Z.Messages.JOINED_GUILD), (x = l.Z.Button.Colors.PRIMARY));
-    let O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
+        O = l.Z.Button.Colors.GREEN;
+    g && ((R = I.Z.Messages.JOINED_GUILD), (O = l.Z.Button.Colors.PRIMARY));
+    let x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
     return (
-        f && (O = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM),
+        f && (x = I.Z.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM),
         (0, i.jsxs)(l.Z, {
             children: [
-                (0, i.jsx)(l.Z.Header, { text: O }),
+                (0, i.jsx)(l.Z.Header, { text: x }),
                 (0, i.jsxs)(l.Z.Body, {
                     children: [
                         (0, i.jsxs)('div', {
@@ -77,7 +77,7 @@ function T(e) {
                             onClick: A,
                             submitting: C,
                             isDisabled: g,
-                            color: x,
+                            color: O,
                             children: R
                         })
                     ]

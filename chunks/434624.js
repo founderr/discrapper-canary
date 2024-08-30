@@ -20,15 +20,15 @@ var i = n(735250),
 let T = a.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: T, count: h, me: N, me_burst: f, burst_count: C, burst_colors: p, readOnly: g, isLurking: S, isGuest: A, isPendingMember: R, type: x } = e,
-            O = x === _.O.BURST,
-            M = (0, E.y4)(N, f, x),
-            v = (0, d.v)(O && null != p ? p : []),
+            { useChatFontScaling: a, hideEmoji: s, emoji: c, className: T, count: h, me: N, me_burst: f, burst_count: C, burst_colors: p, readOnly: g, isLurking: S, isGuest: A, isPendingMember: R, type: O } = e,
+            x = O === _.O.BURST,
+            M = (0, E.y4)(N, f, O),
+            v = (0, d.v)(x && null != p ? p : []),
             L = a ? m : I,
-            Z = O ? C : h,
+            Z = x ? C : h,
             P = (0, u.y)(Z, E.aO),
             b = {};
-        if (O && null != v) {
+        if (x && null != v) {
             var D;
             let { accentColor: e, backgroundColor: i, opacity: a } = v,
                 s = null !== (D = (0, l.wK)(null != i ? i : '', a)) && void 0 !== D ? D : '';
@@ -51,7 +51,7 @@ let T = a.memo(function (e) {
                     emojiId: c.id,
                     emojiName: c.name,
                     size: 'reaction',
-                    animated: O && c.animated
+                    animated: x && c.animated
                 }),
                 (0, i.jsx)('div', {
                     className: L.reactionCount,

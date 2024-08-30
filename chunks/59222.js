@@ -63,7 +63,7 @@ let S = 12,
             ]
         });
 t.Z = (e) => {
-    let { loadId: t, searchResults: n, mostRecentQuery: s, defaultLanguage: l, availableLanguages: u, isFetchingSearch: v, scroller: Z, loadingGuildId: L, theme: O, currentCategoryId: R, currentCategoryName: x, onViewGuild: b, onGuildCardSeen: P, placeholder: M, onTagClick: D } = e,
+    let { loadId: t, searchResults: n, mostRecentQuery: s, defaultLanguage: l, availableLanguages: u, isFetchingSearch: v, scroller: Z, loadingGuildId: L, theme: R, currentCategoryId: O, currentCategoryName: x, onViewGuild: b, onGuildCardSeen: P, placeholder: M, onTagClick: D } = e,
         y = r().uniqueId('GuildDiscovery'),
         { guilds: j, loading: U, total: G } = n,
         [w, k] = a.useState(!1),
@@ -72,7 +72,7 @@ t.Z = (e) => {
         F = (0, o.e7)([_.ZP], () => _.ZP.hasSearchError()),
         Y = (e, t, n) => {
             d.bR(s, {
-                categoryId: n ? p.Hk : R,
+                categoryId: n ? p.Hk : O,
                 preferredLocale: l.code,
                 offset: e,
                 length: t,
@@ -89,7 +89,7 @@ t.Z = (e) => {
         V(!!t), 1 === n && k(!0);
     }, [s]);
     let z =
-        R === p.Hk
+        O === p.Hk
             ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
                   count: null != G ? G.toLocaleString() : '0',
                   query: s
@@ -129,14 +129,14 @@ t.Z = (e) => {
                 placeholder: M,
                 availableLanguages: u,
                 isSearchPage: !0,
-                currentCategoryId: R,
+                currentCategoryId: O,
                 isTagSearch: H
             }),
             F
                 ? (0, i.jsx)(A, {})
                 : G <= 0
                   ? (0, i.jsx)(N, {
-                        categoryId: R,
+                        categoryId: O,
                         categoryName: x,
                         onClick: () => {
                             d.uY(p.Hk), Y(0, S, !0);
@@ -162,7 +162,7 @@ t.Z = (e) => {
                                             loadingPlaceholderCount: S,
                                             onViewGuild: b,
                                             loadingGuildId: L,
-                                            theme: O,
+                                            theme: R,
                                             analyticsContext: E.P1.SEARCH,
                                             onGuildCardSeen: P,
                                             onTagClick: D

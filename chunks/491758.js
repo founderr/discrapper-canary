@@ -41,7 +41,7 @@ function L() {
         { showClipsHeaderEntrypoint: U } = N.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     r()(null != v, 'Save clip keybind unset');
     let G = (0, o.e7)([E.default], () => E.default.locale),
-        F = a.useMemo(
+        y = a.useMemo(
             () => [
                 {
                     value: O.OT.SECONDS_30,
@@ -58,7 +58,7 @@ function L() {
             ],
             [G]
         ),
-        y = a.useMemo(
+        F = a.useMemo(
             () => [
                 {
                     value: x.LY.RESOLUTION_480,
@@ -198,7 +198,7 @@ function L() {
                         title: f.Z.Messages.CLIPS_SETTINGS_LENGTH,
                         note: f.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
                         value: L,
-                        options: F
+                        options: y
                     }),
                     (0, n.jsx)(h.Q, {
                         className: D.formItem,
@@ -210,7 +210,7 @@ function L() {
                         title: f.Z.Messages.CLIPS_SETTINGS_RESOLUTION,
                         note: f.Z.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
                         value: b.resolution,
-                        options: y
+                        options: F
                     }),
                     (0, n.jsx)(h.Q, {
                         className: D.formItem,

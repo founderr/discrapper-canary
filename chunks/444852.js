@@ -1,9 +1,9 @@
 n.d(t, {
     A: function () {
-        return D;
+        return L;
     },
     Z: function () {
-        return L;
+        return D;
     }
 }),
     n(653041),
@@ -46,7 +46,7 @@ function y(e, t, n) {
         e
     );
 }
-class D {
+class L {
     setActionContext(e) {
         this.actionContext = e;
     }
@@ -57,7 +57,7 @@ class D {
         y(this, 'streamRegion', void 0), y(this, 'streamApplication', void 0), y(this, 'streamSourceType', void 0), y(this, 'actionContext', void 0), y(this, 'maxViewers', void 0), y(this, 'isBroadcast', void 0), (this.streamRegion = e), (this.streamApplication = t), (this.streamSourceType = n), (this.actionContext = r), (this.maxViewers = i), (this.isBroadcast = a);
     }
 }
-class L extends o.Z {
+class D extends o.Z {
     get isOwner() {
         let { ownerId: e } = this._streamContext;
         return h.default.getId() === e;
@@ -145,9 +145,9 @@ class L extends o.Z {
                                     gpu_memory: i
                                 };
                             }
-                            let D = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != I ? I : 0) + (null != p ? p : 0),
-                                L = (null == g ? void 0 : null === (N = g.desktopSource) || void 0 === N ? void 0 : N.sourcePid) != null ? E.ZP.getGameForPID(g.desktopSource.sourcePid) : null,
-                                { gameName: b, gameId: M, exe: P, distributor: U } = (0, _.G8)(L);
+                            let L = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != r ? r : 0) + (null != i ? i : 0) + (null != a ? a : 0) + (null != u ? u : 0) + (null != I ? I : 0) + (null != p ? p : 0),
+                                D = (null == g ? void 0 : null === (N = g.desktopSource) || void 0 === N ? void 0 : N.sourcePid) != null ? E.ZP.getGameForPID(g.desktopSource.sourcePid) : null,
+                                { gameName: b, gameId: M, exe: P, distributor: U } = (0, _.G8)(D);
                             A.default.track(v.rMx.SCREENSHARE_FINISHED, {
                                 screenshare_frames: e,
                                 videohook_frames: t,
@@ -161,7 +161,7 @@ class L extends o.Z {
                                 quartz_frames: u,
                                 screencapturekit_frames: I,
                                 go_live_camera_frames: p,
-                                total_frames: D,
+                                total_frames: L,
                                 desktop_capturer_type: c,
                                 media_session_id: m,
                                 rtc_connection_id: T,

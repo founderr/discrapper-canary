@@ -571,7 +571,7 @@ var t, n;
                     );
                 };
             },
-            D = function (e) {
+            L = function (e) {
                 return function (t, n) {
                     return e.transporter.write(
                         {
@@ -583,7 +583,7 @@ var t, n;
                     );
                 };
             };
-        function L(e) {
+        function D(e) {
             return (function t(n) {
                 return e.request(n).then(function (r) {
                     if ((void 0 !== e.batch && e.batch(r.hits), !e.shouldStop(r))) return r.cursor ? t({ cursor: r.cursor }) : t({ page: (n.page || 0) + 1 });
@@ -1183,7 +1183,7 @@ var t, n;
             },
             eh = function (e) {
                 return function (n) {
-                    return L(
+                    return D(
                         t(
                             t(
                                 {
@@ -1213,7 +1213,7 @@ var t, n;
             ep = function (e) {
                 return function (n) {
                     var r = t({ hitsPerPage: 1000 }, n);
-                    return L(
+                    return D(
                         t(
                             t(
                                 {
@@ -1246,7 +1246,7 @@ var t, n;
             eI = function (e) {
                 return function (n) {
                     var r = t({ hitsPerPage: 1000 }, n);
-                    return L(
+                    return D(
                         t(
                             t(
                                 {
@@ -1484,7 +1484,7 @@ var t, n;
                         });
                 };
             },
-            eD = function (e) {
+            eL = function (e) {
                 return function (t, n, r) {
                     return e.transporter.read(
                         {
@@ -1500,7 +1500,7 @@ var t, n;
                     );
                 };
             },
-            eL = function (e) {
+            eD = function (e) {
                 return function (i, a) {
                     var s = a || {},
                         o = s.query,
@@ -2080,7 +2080,7 @@ var t, n;
                 g,
                 S,
                 A,
-                L,
+                D,
                 em = {
                     appId: e,
                     apiKey: n,
@@ -2318,7 +2318,7 @@ var t, n;
                                     {
                                         methods: {
                                             getPersonalizationStrategy: y,
-                                            setPersonalizationStrategy: D
+                                            setPersonalizationStrategy: L
                                         }
                                     }
                                 )).region || 'us'),
@@ -2393,7 +2393,7 @@ var t, n;
                                         methods: {
                                             batch: ef,
                                             delete: eN,
-                                            findAnswers: eD,
+                                            findAnswers: eL,
                                             getObject: eb,
                                             getObjects: eP,
                                             saveObject: eH,
@@ -2411,7 +2411,7 @@ var t, n;
                                             clearObjects: eT,
                                             browseObjects: eh,
                                             getObjectPosition: eM,
-                                            findObject: eL,
+                                            findObject: eD,
                                             exists: ey,
                                             saveSynonym: eW,
                                             saveSynonyms: eK,
@@ -2492,7 +2492,7 @@ var t, n;
                 (A = s(void 0 !== g.authMode ? g.authMode : d.WithinHeaders, S, g.apiKey)),
                 u(
                     {
-                        transporter: (L = T(
+                        transporter: (D = T(
                             t(
                                 t(
                                     {
@@ -2527,13 +2527,13 @@ var t, n;
                         )),
                         appId: S,
                         addAlgoliaAgent: function (e, t) {
-                            L.userAgent.add({
+                            D.userAgent.add({
                                 segment: e,
                                 version: t
                             });
                         },
                         clearCache: function () {
-                            return Promise.all([L.requestsCache.clear(), L.responsesCache.clear()]).then(function () {});
+                            return Promise.all([D.requestsCache.clear(), D.responsesCache.clear()]).then(function () {});
                         }
                     },
                     g.methods

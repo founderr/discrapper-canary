@@ -1,44 +1,44 @@
-t.d(e, {
+n.d(t, {
     Z: function () {
-        return C;
+        return _;
     }
 });
-var i = t(735250);
-t(470079);
-var l = t(481060),
-    r = t(776862),
-    o = t(306680),
-    a = t(626135),
-    u = t(499254),
-    c = t(827498),
-    d = t(314734),
-    s = t(981631);
-function C(n) {
-    let { channel: e, openInPopout: C, analyticsLocation: h } = n;
-    C && (0, r.Z)(s.KJ3.CHANNEL_CALL_POPOUT);
-    let f = C ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
-    (0, u.y)(c.ti.DISMISSED), (0, u._)(c._b.VOICE);
-    let p = e.id,
-        v = o.ZP.hasUnread(p) || o.ZP.getMentionCount(p) > 0;
+var i = n(735250);
+n(470079);
+var a = n(481060),
+    s = n(776862),
+    r = n(306680),
+    l = n(626135),
+    o = n(499254),
+    c = n(827498),
+    u = n(314734),
+    d = n(981631);
+function _(e) {
+    let { channel: t, openInPopout: _, analyticsLocation: E } = e;
+    _ && (0, s.Z)(d.KJ3.CHANNEL_CALL_POPOUT);
+    let I = _ ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+    (0, o.y)(c.ti.DISMISSED), (0, o._)(c._b.VOICE);
+    let m = t.id,
+        T = r.ZP.hasUnread(m) || r.ZP.getMentionCount(m) > 0;
     return (
-        a.default.track(s.rMx.VOICE_PANEL_TAB_OPENED, {
+        l.default.track(d.rMx.VOICE_PANEL_TAB_OPENED, {
             tab: 'activities',
-            location: h,
+            location: E,
             source: c._b.VOICE,
-            is_chat_badged: v
+            is_chat_badged: T
         }),
-        (0, l.openModalLazy)(
+        (0, a.openModalLazy)(
             async () => {
-                let { default: n } = await Promise.all([t.e('36036'), t.e('21351'), t.e('39170')]).then(t.bind(t, 743161));
-                return (t) =>
-                    (0, i.jsx)(n, {
-                        channel: e,
-                        ...t
+                let { default: e } = await Promise.all([n.e('36036'), n.e('21351'), n.e('81056')]).then(n.bind(n, 743161));
+                return (n) =>
+                    (0, i.jsx)(e, {
+                        channel: t,
+                        ...n
                     });
             },
             {
-                modalKey: d.e9,
-                contextKey: f
+                modalKey: u.e9,
+                contextKey: I
             }
         )
     );

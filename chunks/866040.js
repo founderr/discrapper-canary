@@ -1,89 +1,89 @@
-t.d(e, {
+l.d(n, {
     Z: function () {
-        return v;
+        return N;
     }
 }),
-    t(411104);
-var i = t(735250),
-    l = t(470079),
-    r = t(442837),
-    o = t(481060),
-    a = t(239091),
-    u = t(751688),
-    c = t(184301),
-    d = t(103575),
-    s = t(210887),
-    C = t(5192),
-    h = t(981631),
-    f = t(303540);
-function p(n) {
-    let { participants: e, channel: l } = n;
-    return (0, i.jsx)(o.Scroller, {
-        className: f.popout,
-        children: e.map((n) =>
-            (0, i.jsx)(
+    l(411104);
+var t = l(735250),
+    r = l(470079),
+    i = l(442837),
+    a = l(481060),
+    s = l(239091),
+    u = l(751688),
+    o = l(184301),
+    c = l(103575),
+    d = l(210887),
+    m = l(5192),
+    p = l(981631),
+    E = l(303540);
+function f(e) {
+    let { participants: n, channel: r } = e;
+    return (0, t.jsx)(a.Scroller, {
+        className: E.popout,
+        children: n.map((e) =>
+            (0, t.jsx)(
                 u.Z,
                 {
-                    guildId: null == l ? void 0 : l.guild_id,
-                    user: n,
-                    nick: C.ZP.getNickname(null == l ? void 0 : l.guild_id, null == l ? void 0 : l.id, n),
-                    onContextMenu: (e) => {
-                        (0, a.jW)(e, async () => {
-                            let { default: e } = await Promise.all([t.e('79695'), t.e('69220'), t.e('46611')]).then(t.bind(t, 881351));
-                            return (t) =>
-                                (0, i.jsx)(e, {
-                                    ...t,
-                                    user: n
+                    guildId: null == r ? void 0 : r.guild_id,
+                    user: e,
+                    nick: m.ZP.getNickname(null == r ? void 0 : r.guild_id, null == r ? void 0 : r.id, e),
+                    onContextMenu: (n) => {
+                        (0, s.jW)(n, async () => {
+                            let { default: n } = await Promise.all([l.e('79695'), l.e('69220'), l.e('46611')]).then(l.bind(l, 881351));
+                            return (l) =>
+                                (0, t.jsx)(n, {
+                                    ...l,
+                                    user: e
                                 });
                         });
                     }
                 },
-                n.id
+                e.id
             )
         )
     });
 }
-function v(n) {
-    let { children: e, participants: t, channel: a } = n,
-        u = (0, r.e7)([s.Z], () => s.Z.theme),
-        C = 1 === t.length ? t[0] : null,
-        f = (0, l.useCallback)(
-            (n) => {
-                if (null != C)
-                    return (0, i.jsx)(d.Z, {
-                        ...n,
+function N(e) {
+    let { children: n, participants: l, channel: s } = e,
+        u = (0, i.e7)([d.Z], () => d.Z.theme),
+        m = 1 === l.length ? l[0] : null,
+        E = (0, r.useCallback)(
+            (e) => {
+                if (null != m)
+                    return (0, t.jsx)(c.Z, {
+                        ...e,
                         location: 'Content Inventory Embed',
-                        userId: C.id,
-                        guildId: null == a ? void 0 : a.guild_id,
-                        channelId: null == a ? void 0 : a.id,
+                        userId: m.id,
+                        guildId: null == s ? void 0 : s.guild_id,
+                        channelId: null == s ? void 0 : s.id,
                         analyticsParams: {
                             location: {
-                                page: h.ZY5.GUILD_CHANNEL,
-                                section: h.jXE.CONTENT_INVENTORY_EMBED
+                                page: p.ZY5.GUILD_CHANNEL,
+                                section: p.jXE.CONTENT_INVENTORY_EMBED
                             }
                         }
                     });
-                if (null != t)
-                    return (0, i.jsx)(p, {
-                        participants: t,
-                        channel: a
+                if (null != l)
+                    return (0, t.jsx)(f, {
+                        participants: l,
+                        channel: s
                     });
                 throw Error('One of participant or participants is required');
             },
-            [a, t, C]
+            [s, l, m]
         );
-    return (0, i.jsx)(o.ThemeContextProvider, {
+    return (0, t.jsx)(a.ThemeContextProvider, {
         theme: u,
-        children: (0, i.jsx)(o.Popout, {
-            renderPopout: f,
+        children: (0, t.jsx)(a.Popout, {
+            renderPopout: E,
             preload: () =>
-                null != C
-                    ? (0, c.Z)(C, {
-                          guildId: null == a ? void 0 : a.guild_id,
-                          channelId: null == a ? void 0 : a.id
+                null != m
+                    ? (0, o.Z)(m, {
+                          guildId: null == s ? void 0 : s.guild_id,
+                          channelId: null == s ? void 0 : s.id
                       })
                     : Promise.resolve(),
-            children: e
+            children: n
         })
     });
 }

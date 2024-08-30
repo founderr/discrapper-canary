@@ -24,7 +24,7 @@ n.d(t, {
         return W;
     },
     LK: function () {
-        return D;
+        return L;
     },
     N: function () {
         return a;
@@ -87,7 +87,7 @@ n.d(t, {
         return x;
     },
     mv: function () {
-        return L;
+        return D;
     },
     nJ: function () {
         return M;
@@ -145,8 +145,8 @@ let I = 200,
     C = 5;
 f()('2024-01-01T00:00:00');
 let y = '',
-    D = ['cozy', 'crunchy', 'chaos'];
-function L(e) {
+    L = ['cozy', 'crunchy', 'chaos'];
+function D(e) {
     switch (e) {
         case h.z.SOCIAL:
             return p.Z.Messages.CLAN_SETUP_PLAYSTYLE_SOCIAL_TITLE;

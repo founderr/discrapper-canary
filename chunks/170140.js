@@ -36,8 +36,8 @@ function N(e, t) {
             guild: S,
             parentChannel: A,
             user: R,
-            selectedGuildId: x,
-            canAccess: O
+            selectedGuildId: O,
+            canAccess: x
         } = (0, a.cj)(
             [m.Z, u.Z, o.Z, _.default, d.Z],
             () => {
@@ -65,8 +65,8 @@ function N(e, t) {
                 guild: S,
                 parentChannel: A,
                 user: R,
-                selectedGuildId: x,
-                canAccess: O
+                selectedGuildId: O,
+                canAccess: x
             });
             return null == e
                 ? null
@@ -74,7 +74,7 @@ function N(e, t) {
                       ...e,
                       user: R
                   };
-        }, [g, S, A, R, x, O]);
+        }, [g, S, A, R, O, x]);
     return (
         i.useEffect(() => {
             if ((null == N ? void 0 : N.threadId) != null) {

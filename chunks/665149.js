@@ -17,8 +17,8 @@ var r = n(735250),
     d = n(686546),
     _ = n(648914);
 let E = (e) => {
-        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: E, foreground: f, background: h, icon: p, onClick: I, onContextMenu: m, tooltip: T = null, tooltipColor: g, tooltipPosition: S = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: O, 'aria-label': R, 'aria-hidden': v, 'aria-checked': C, 'aria-expanded': y, 'aria-haspopup': D } = e,
-            L = (0, r.jsx)(p, {
+        let { className: t, iconClassName: n, children: i, selected: a = !1, disabled: o = !1, showBadge: l = !1, badgePosition: c = 'bottom', color: E, foreground: f, background: h, icon: p, onClick: I, onContextMenu: m, tooltip: T = null, tooltipColor: g, tooltipPosition: S = 'bottom', tooltipDisabled: A, hideOnClick: N = !0, role: O, 'aria-label': R, 'aria-hidden': v, 'aria-checked': C, 'aria-expanded': y, 'aria-haspopup': L } = e,
+            D = (0, r.jsx)(p, {
                 x: 0,
                 y: 0,
                 width: 24,
@@ -77,16 +77,16 @@ let E = (e) => {
                               'aria-label': b,
                               'aria-hidden': v,
                               'aria-checked': C,
-                              'aria-haspopup': D,
+                              'aria-haspopup': L,
                               'aria-expanded': y,
                               tabIndex: o || null == I ? -1 : 0,
                               children: [
                                   l
                                       ? (0, r.jsx)(d.ZP, {
                                             mask: 'top' === c ? d.ZP.Masks.HEADER_BAR_BADGE_TOP : d.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                            children: L
+                                            children: D
                                         })
-                                      : L,
+                                      : D,
                                   l ? (0, r.jsx)('span', { className: s()(_.iconBadge, 'top' === c ? _.iconBadgeTop : _.iconBadgeBottom) }) : null,
                                   i
                               ]

@@ -8,7 +8,7 @@ n.d(t, {
     RL: function () {
         return m;
     },
-    Ym: function () {
+    cN: function () {
         return p;
     },
     gr: function () {
@@ -45,7 +45,7 @@ function h(e) {
 }
 function p(e, t) {
     let n = e.extra;
-    return null != n && (('application_id' in t && t.application_id === n.application_id) || ('game_name' in n && t.name === n.game_name));
+    return null != n && (('application_id' in t && t.application_id === n.application_id) || ('game_name' in n ? t.name === n.game_name : 'activity_name' in n && t.name === n.activity_name));
 }
 function I(e, t) {
     if (f(e)) {

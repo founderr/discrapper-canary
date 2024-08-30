@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return D;
     }
 });
 var r = n(735250),
@@ -110,7 +110,7 @@ function y(e) {
         ]
     });
 }
-function D(e) {
+function L(e) {
     let { badgeType: t, guildTraits: n } = e,
         {
             tooltipTitle: i,
@@ -192,10 +192,10 @@ function D(e) {
         ]
     });
 }
-function L(e) {
+function D(e) {
     let t,
         n,
-        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: E, className: T, flowerStarClassName: g, iconClassName: S, badgeStrokeColor: R, badgeColor: y, size: L = 16, disableBoostClick: b, 'aria-label': M = !1 } = e,
+        { guild: a, tooltipColor: l = c.Tooltip.Colors.BRAND, tooltipPosition: E, className: T, flowerStarClassName: g, iconClassName: S, badgeStrokeColor: R, badgeColor: y, size: D = 16, disableBoostClick: b, 'aria-label': M = !1 } = e,
         P = (0, o.e7)([m.default, I.ZP], () => {
             let e = m.default.getCurrentUser();
             return I.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
@@ -223,12 +223,12 @@ function L(e) {
     if (x === A.Q.NONE) return null;
     if (x === A.Q.CLAN) {
         var k;
-        let e = (0, d.ky)(a.id, null === (k = a.clan) || void 0 === k ? void 0 : k.badge, L);
+        let e = (0, d.ky)(a.id, null === (k = a.clan) || void 0 === k ? void 0 : k.badge, D);
         return (0, r.jsx)(c.Tooltip, {
             color: l,
             position: E,
             'aria-label': M,
-            text: (0, r.jsx)(D, {
+            text: (0, r.jsx)(L, {
                 badgeType: x,
                 guildTraits: w
             }),
@@ -240,7 +240,7 @@ function L(e) {
                     className: s()(v.clanBadgeContainer, T),
                     children: (0, r.jsx)(_.KQ, {
                         src: e,
-                        size: L
+                        size: D
                     })
                 })
         });
@@ -251,12 +251,12 @@ function L(e) {
     let K = (0, u.wj)(U) ? H : Z,
         z = (0, u.wj)(U) ? F : V;
     (t = null != t ? t : K), (n = null != n ? n : z);
-    let q = Math.floor(0.75 * L) - (null != W ? W : 0);
+    let q = Math.floor(0.75 * D) - (null != W ? W : 0);
     return (0, r.jsx)(c.Tooltip, {
         color: l,
         position: E,
         'aria-label': M,
-        text: (0, r.jsx)(D, {
+        text: (0, r.jsx)(L, {
             badgeType: x,
             guildTraits: w
         }),
@@ -271,7 +271,7 @@ function L(e) {
                     allowFullSizedIcon: !0,
                     color: null != n ? n : y,
                     stroke: R,
-                    size: L,
+                    size: D,
                     children: (0, r.jsx)(B, {
                         size: 'custom',
                         width: q,

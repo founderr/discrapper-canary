@@ -61,16 +61,16 @@ function A(e) {
 function R(e) {
     let { channel: t, gotoChannel: n } = e;
     return t.isPrivate()
-        ? (0, i.jsx)(x, {
+        ? (0, i.jsx)(O, {
               channel: t,
               gotoChannel: n
           })
-        : (0, i.jsx)(O, {
+        : (0, i.jsx)(x, {
               channel: t,
               gotoChannel: n
           });
 }
-function x(e) {
+function O(e) {
     let { channel: t, gotoChannel: n } = e,
         a = (0, l.e7)([C.default], () => (t.isDM() ? C.default.getUser(t.getRecipientId()) : null)),
         s = null == a ? (0, u.x)(t) : a.getAvatarURL(void 0, 40);
@@ -85,7 +85,7 @@ function x(e) {
         })
     });
 }
-function O(e) {
+function x(e) {
     let { channel: t, gotoChannel: n } = e,
         a = (0, l.e7)([N.Z], () => N.Z.getGuild(t.guild_id));
     return null == a

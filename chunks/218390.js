@@ -35,8 +35,8 @@ var n = t(735250),
     B = t(898997),
     U = t(197115),
     G = t(823188),
-    F = t(504865),
-    y = t(179984),
+    y = t(504865),
+    F = t(179984),
     V = t(938736),
     w = t(386733),
     k = t(474936),
@@ -106,7 +106,7 @@ function X() {
                                   })
                               ]
                           })
-                        : (0, n.jsx)(F.Z, {
+                        : (0, n.jsx)(y.Z, {
                               variant: void 0,
                               subscriptionTier: k.Si.TIER_2,
                               interval: S.interval
@@ -258,7 +258,7 @@ s.Z = function () {
                         (0, n.jsx)(X, {}),
                         (f || P) && (0, n.jsx)(w.Z, { isInSettings: !0 }),
                         (0, n.jsx)(q, {}),
-                        (0, n.jsx)(y.Z, {
+                        (0, n.jsx)(F.Z, {
                             className: W.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: H.Z.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,

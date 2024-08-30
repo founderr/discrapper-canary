@@ -40,7 +40,7 @@ function g(e) {
         n = new Set();
     for (let r of e) {
         let e = (function (e) {
-            return (0, f.n2)(e) ? null : (0, f.kr)(e) && e.author_type === s.i.USER ? c.Z.getActivities(e.author_id).find((t) => (t.type === h.IIU.PLAYING && (0, _.dX)(e) ? (0, E.Ym)(e, t) : !!(t.type === h.IIU.LISTENING && (0, _.dU)(e)) && (0, E.pB)(e, t))) : void 0;
+            return (0, f.n2)(e) ? null : (0, f.kr)(e) && e.author_type === s.i.USER ? c.Z.getActivities(e.author_id).find((t) => (t.type === h.IIU.PLAYING && (0, _.m9)(e) ? (0, E.cN)(e, t) : !!(t.type === h.IIU.LISTENING && (0, _.dU)(e)) && (0, E.pB)(e, t))) : void 0;
         })(r.content);
         if (void 0 !== e) {
             let i = T(r.content);

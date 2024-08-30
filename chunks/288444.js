@@ -54,7 +54,7 @@ class I extends s.Z {
             E(this, 'actions', {
                 VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
                 CONNECTION_CLOSED: this.handleConnectionClosed,
-                EMBEDDED_ACTIVITY_DISCONNECT: this.handleEmbeddedActivityDisconnect
+                EMBEDDED_ACTIVITY_CLOSE: this.handleEmbeddedActivityDisconnect
             });
     }
 }

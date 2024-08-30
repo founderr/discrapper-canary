@@ -25,8 +25,8 @@ var a = t(735250),
     T = t(69259),
     h = t(370370),
     x = t(107062),
-    N = t(91140),
-    I = t(227172),
+    I = t(91140),
+    N = t(227172),
     p = t(551228),
     C = t(678869),
     g = t(278399),
@@ -45,7 +45,7 @@ let R = (e) => {
         let { entry: n, ...t } = e;
         switch (n.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, a.jsx)(N.Z, {
+                return (0, a.jsx)(I.Z, {
                     ...t,
                     entry: n
                 });
@@ -111,7 +111,7 @@ let R = (e) => {
         let { entry: n, ...t } = e;
         switch (n.content_type) {
             case o.s.PLAYED_GAME:
-                return (0, a.jsx)(I.Z, {
+                return (0, a.jsx)(N.Z, {
                     ...t,
                     entry: n
                 });
@@ -149,14 +149,14 @@ n.ZP = l.memo((e) => {
     let { index: i, ...o } = e,
         [m, h] = l.useState('default'),
         x = (0, s.JA)(''.concat(i)),
-        N = null === (n = E.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff(),
-        { isRich: I, appName: p } = (0, A.n)(o.entry),
+        I = null === (n = E.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff(),
+        { isRich: N, appName: p } = (0, A.n)(o.entry),
         C = {
             entry: o.entry,
             channelId: o.channel.id,
             guildId: o.channel.guild_id,
             requestId: o.requestId,
-            richPresenceName: I ? p : void 0
+            richPresenceName: N ? p : void 0
         },
         g = l.useRef(!1),
         [v, f] = l.useState(!1),
@@ -167,7 +167,7 @@ n.ZP = l.memo((e) => {
     }, [v, Z]);
     let O = l.useCallback(
             (e) => {
-                if (!!N)
+                if (!!I)
                     (0, d.jW)(e, async () => {
                         let { default: e } = await t.e('153').then(t.bind(t, 330150));
                         return () =>
@@ -177,7 +177,7 @@ n.ZP = l.memo((e) => {
                             });
                     });
             },
-            [o, N]
+            [o, I]
         ),
         j = l.useCallback(() => {
             h(String(Date.now()));

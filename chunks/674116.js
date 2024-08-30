@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return F;
+        return y;
     }
 }),
     t(653041);
@@ -54,7 +54,7 @@ function G(e, s, t) {
         })
     );
 }
-function F() {
+function y() {
     let {
             inputMode: e,
             qosEnabled: s,
@@ -63,8 +63,8 @@ function F() {
             attenuateWhileSpeakingOthers: u,
             audioSubsystem: S,
             silenceWarning: b,
-            legacyAudioSubsystemSupported: F,
-            experimentalAudioSubsystemSupported: y,
+            legacyAudioSubsystemSupported: y,
+            experimentalAudioSubsystemSupported: F,
             sidechainEnabled: V,
             sidechainStrength: w
         } = (0, o.cj)([T.Z], () => ({
@@ -256,7 +256,7 @@ function F() {
                                                     }),
                                                 t
                                             );
-                                        })(F, y),
+                                        })(y, F),
                                         onChange: (e) => {
                                             G(v.Z.Messages.SWITCH_SUBSYSTEM, v.Z.Messages.SWITCH_SUBSYSTEM_BODY, () => c.Z.setAudioSubsystem(e));
                                         }

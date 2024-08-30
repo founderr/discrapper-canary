@@ -38,15 +38,15 @@ function O(e) {
         });
     }, [v]);
     let y = (0, _.N)(),
-        D = (0, d.Ng)(),
-        L = null != y || null != D,
+        L = (0, d.Ng)(),
+        D = null != y || null != L,
         b = (null == y ? void 0 : null === (t = y.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.Si.TIER_0;
     return (0, r.jsxs)('div', {
-        className: s()(N.emptyState, O, { [N.unifyTrialUpsell]: L }),
+        className: s()(N.emptyState, O, { [N.unifyTrialUpsell]: D }),
         children: [
-            L
+            D
                 ? (0, r.jsx)(E.ZP, {
-                      discountOffer: D,
+                      discountOffer: L,
                       trialOffer: y,
                       onClose: R,
                       type: S.cd.EMPTY_STICKER_PICKER_UPSELL,
@@ -82,10 +82,10 @@ function O(e) {
                           })
                       ]
                   }),
-            !L &&
+            !D &&
                 (0, r.jsx)(m.Z, {
                     analyticsSection: g.jXE.EXPRESSION_PICKER,
-                    buttonText: L ? (b ? A.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : A.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT) : void 0
+                    buttonText: D ? (b ? A.Z.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : A.Z.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT) : void 0
                 })
         ]
     });

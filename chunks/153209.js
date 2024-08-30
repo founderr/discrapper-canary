@@ -38,16 +38,16 @@ function p(e) {
         { initialized: N, items: p, loading: g, loadMore: S } = (0, d.y6)(),
         A = (0, s.e7)([o.Z], () => o.Z.localItems),
         R = a.useMemo(() => [...[...p, ...A].sort((e, t) => -1 * m.default.compare(e.id, t.id))], [p, A]),
-        x = p.length > 0 ? p[0] : null,
-        O = E.d$.useSetting(),
+        O = p.length > 0 ? p[0] : null,
+        x = E.d$.useSetting(),
         M = a.useMemo(() => {
-            if (null != x && 0 >= m.default.compare(x.id, O)) return !1;
+            if (null != O && 0 >= m.default.compare(O.id, x)) return !1;
             for (let e of R) {
-                if (0 >= m.default.compare(e.id, O)) break;
-                if (!(0, u.r)(e, O)) return !0;
+                if (0 >= m.default.compare(e.id, x)) break;
+                if (!(0, u.r)(e, x)) return !0;
             }
             return !1;
-        }, [x, O, R]);
+        }, [O, x, R]);
     return (0, i.jsxs)('div', {
         className: f.container,
         children: [
@@ -59,7 +59,7 @@ function p(e) {
                 children: M
                     ? (0, i.jsx)(C, {
                           onClick: () => {
-                              null != x && (E.d$.updateSetting(x.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
+                              null != O && (E.d$.updateSetting(O.id), I.default.track(h.rMx.NOTIFICATION_CENTER_ACTION, { action_type: c.ud.MARK_ALL_READ }));
                           }
                       })
                     : null

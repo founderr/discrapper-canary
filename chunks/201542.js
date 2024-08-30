@@ -30,10 +30,10 @@ function S(e) {
 t.Z = i.memo(function (e) {
     var t, n, a, d, A, N;
     let O,
-        { src: R, volume: v = 1, onVolumeChange: C, onMute: y, waveform: D, durationSecs: L, onVolumeShow: b, onVolumeHide: M, onPlay: P, onPause: U, onError: w } = e,
+        { src: R, volume: v = 1, onVolumeChange: C, onMute: y, waveform: L, durationSecs: D, onVolumeShow: b, onVolumeHide: M, onPlay: P, onPause: U, onError: w } = e,
         x = i.useRef(null),
         [G, k] = i.useState(0),
-        [B, F] = i.useState(L),
+        [B, F] = i.useState(D),
         [V, H] = i.useState(!1),
         [Z, Y] = i.useState(!1),
         [j, W] = i.useState(!1),
@@ -194,7 +194,7 @@ t.Z = i.memo(function (e) {
             }),
             (0, r.jsx)(p.Z, {
                 className: T.waveform,
-                waveform: D,
+                waveform: L,
                 currentTime: G,
                 duration: null != B ? B : 1,
                 playing: Z,

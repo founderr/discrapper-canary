@@ -17,12 +17,12 @@ var l = t(481060),
 function m(e) {
     var n;
     let { user: t, guildId: m, channel: E, entry: T, onSelect: h, disableGameProfileLinks: x } = e,
-        N = (0, u.Z)({
+        I = (0, u.Z)({
             userId: t.id,
             guildId: m,
             channelId: null == E ? void 0 : E.id
         }),
-        I = (0, r.Z)({
+        N = (0, r.Z)({
             id: t.id,
             label: d.Z.Messages.COPY_ID_USER
         }),
@@ -51,7 +51,7 @@ function m(e) {
                     children: [
                         (0, a.jsxs)(l.MenuGroup, {
                             children: [
-                                N,
+                                I,
                                 null != C &&
                                     (0, a.jsx)(l.MenuItem, {
                                         id: 'game-profile',
@@ -60,7 +60,7 @@ function m(e) {
                                     })
                             ]
                         }),
-                        (0, a.jsx)(l.MenuGroup, { children: I })
+                        (0, a.jsx)(l.MenuGroup, { children: N })
                     ]
                 })
             });

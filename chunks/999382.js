@@ -18,8 +18,8 @@ var d,
     v = n(758449),
     C = n(598077),
     y = n(430824),
-    D = n(594174),
-    L = n(709054),
+    L = n(594174),
+    D = n(709054),
     b = n(372454),
     M = n(330010),
     P = n(981631),
@@ -66,7 +66,7 @@ function er(e) {
     let { guildId: n, section: i, subsection: a, location: u } = e,
         d = y.Z.getGuild(n);
     if (null == d) return ei();
-    (s = o = d), (B = P.QZA.OPEN), (F = {}), (l = L.default.castGuildIdAsEveryoneGuildRoleId(n)), (j = o.mfaLevel), (Q = q), (c = null), (W = u);
+    (s = o = d), (B = P.QZA.OPEN), (F = {}), (l = D.default.castGuildIdAsEveryoneGuildRoleId(n)), (j = o.mfaLevel), (Q = q), (c = null), (W = u);
     ea({
         section: null !== (t = null != i ? i : r) && void 0 !== t ? t : P.pNK.OVERVIEW,
         subsection: null != a ? a : null
@@ -158,7 +158,7 @@ function eo(e) {
 }
 class el extends (d = T.ZP.Store) {
     initialize() {
-        this.waitFor(y.Z, D.default);
+        this.waitFor(y.Z, L.default);
     }
     getMetadata() {
         return Q;

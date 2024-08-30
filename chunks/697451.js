@@ -26,8 +26,8 @@ var i = n(735250),
     S = n(739566),
     A = n(421399),
     R = n(310423),
-    x = n(223021),
-    O = n(981631),
+    O = n(223021),
+    x = n(981631),
     M = n(689938),
     v = n(438379);
 function L(e) {
@@ -79,7 +79,7 @@ function Z(e) {
             [l, s.id, s.interactionData]
         ),
         b = (0, S.Sw)(null === (t = s.interaction) || void 0 === t ? void 0 : t.user, l),
-        D = a.useMemo(() => (e.compact ? (0, x.Z)((0, g.vc)(u()(), 'LT')) : null), [e.compact]),
+        D = a.useMemo(() => (e.compact ? (0, O.Z)((0, g.vc)(u()(), 'LT')) : null), [e.compact]),
         j = (0, _.NX)(l.id),
         U = s.interaction;
     if (null == U || null == b) return null;
@@ -178,7 +178,7 @@ function Z(e) {
                         positionKey: null != a.interactionData ? 'ready' : 'loading',
                         children: (e) => {
                             let { onClick: t, ...n } = e;
-                            if (a.type === O.uaV.CHAT_INPUT_COMMAND || a.type === O.uaV.INTERACTION_PREMIUM_UPSELL)
+                            if (a.type === x.uaV.CHAT_INPUT_COMMAND || a.type === x.uaV.INTERACTION_PREMIUM_UPSELL)
                                 return (0, i.jsx)(d.Clickable, {
                                     ...n,
                                     tag: 'span',
@@ -208,7 +208,7 @@ function Z(e) {
                                     ...n,
                                     tag: 'span',
                                     onClick: () => {
-                                        p.S.dispatchToLastSubscribed(O.CkL.OPEN_APP_LAUNCHER, { applicationId: a.applicationId });
+                                        p.S.dispatchToLastSubscribed(x.CkL.OPEN_APP_LAUNCHER, { applicationId: a.applicationId });
                                     },
                                     children: (0, i.jsxs)('div', {
                                         className: r()(v.appLauncherOnboardingCommandName, v.clickable),
@@ -237,10 +237,10 @@ function Z(e) {
                 channel: l,
                 guildId: l.guild_id,
                 locationObject: {
-                    page: l.isPrivate() ? O.ZY5.DM_CHANNEL : O.ZY5.GUILD_CHANNEL,
-                    section: O.jXE.CHANNEL_TEXT_AREA,
-                    object: O.qAy.APP_COMMAND,
-                    objectType: O.Qqv.ACTIVITY
+                    page: l.isPrivate() ? x.ZY5.DM_CHANNEL : x.ZY5.GUILD_CHANNEL,
+                    section: x.jXE.CHANNEL_TEXT_AREA,
+                    object: x.qAy.APP_COMMAND,
+                    objectType: x.Qqv.ACTIVITY
                 },
                 openInPopout: !1,
                 enableSelectedTextChannelInvite: !0,

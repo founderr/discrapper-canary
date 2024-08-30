@@ -44,15 +44,15 @@ let S = 1200,
         }
     };
 function N(e) {
-    let { user: t, channel: n, sourceType: i, sourceDetails: d, isVisible: N, isExpandable: O, onInteraction: R, setInteractionToastShown: v, setInteractionSent: C, setIsReplyInteraction: y, onClose: D } = e,
-        { trackUserProfileAction: L } = (0, E.KZ)(),
+    let { user: t, channel: n, sourceType: i, sourceDetails: d, isVisible: N, isExpandable: O, onInteraction: R, setInteractionToastShown: v, setInteractionSent: C, setIsReplyInteraction: y, onClose: L } = e,
+        { trackUserProfileAction: D } = (0, E.KZ)(),
         { sendReact: b, pressReact: M, pressReply: P } = (0, h.Q)(i),
         U = (0, s.e7)([c.default], () => c.default.getId() === t.id),
         w = (0, f.Z)(t.id);
     if (t.bot || U || !w) return null;
     let x = async (e) => {
         if (null == e) return;
-        L({ action: b });
+        D({ action: b });
         let n = A({
             emoji: e,
             username: _.ZP.getName(t),
@@ -108,7 +108,7 @@ function N(e) {
                             guildId: null == n ? void 0 : n.guild_id,
                             closePopout: t,
                             onSelectEmoji: (e, n) => {
-                                x(e), n && (t(), null == D || D());
+                                x(e), n && (t(), null == L || L());
                             },
                             pickerIntention: m.Hz.PROFILE,
                             channel: n
@@ -121,7 +121,7 @@ function N(e) {
                         (0, r.jsx)(l.zx, {
                             ...e,
                             onClick: (t) => {
-                                L({ action: M }), e.onClick(t);
+                                D({ action: M }), e.onClick(t);
                             },
                             className: a()(g.button, g.left),
                             'aria-label': T.Z.Messages.USER_PROFILE_SEND_REACTION,
@@ -139,7 +139,7 @@ function N(e) {
                 'aria-label': !1,
                 children: (0, r.jsx)(l.zx, {
                     onClick: () => {
-                        L({ action: P }),
+                        D({ action: P }),
                             null == R ||
                                 R({
                                     interactionType: I.P.REPLY,

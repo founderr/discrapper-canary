@@ -14,8 +14,8 @@ var a = t(735250),
     T = t(206295),
     h = t(278399),
     x = t(297781),
-    N = t(591853),
-    I = t(410441),
+    I = t(591853),
+    N = t(410441),
     p = t(616922),
     C = t(689938);
 let g = (e, n, t, a) => {
@@ -62,9 +62,9 @@ n.Z = (e) => {
             n = o.Z.isProtocolRegistered() ? p.C7.PLAYER_OPEN(e, t.extra.media.external_parent_id) : p.C7.WEB_OPEN(e, t.extra.media.external_parent_id);
         window.open(n);
     };
-    return (0, a.jsxs)(N.yR, {
+    return (0, a.jsxs)(I.yR, {
         children: [
-            (0, a.jsx)(N.wG, {
+            (0, a.jsx)(I.wG, {
                 onClickTitle: y,
                 onClickSubtitle: () => {
                     let e = p.Hw.ARTIST,
@@ -76,7 +76,7 @@ n.Z = (e) => {
                 entry: t,
                 headerIcons:
                     M === r.p.SPOTIFY
-                        ? (0, a.jsx)(I.Z, {
+                        ? (0, a.jsx)(N.Z, {
                               Icon: c.Z,
                               'aria-label': C.Z.Messages.SPOTIFY
                           })
@@ -89,8 +89,8 @@ n.Z = (e) => {
                     children: h.Ho.map((e, n) => (0, a.jsx)(e, { entry: t }, n))
                 })
             }),
-            (0, a.jsx)(N.St, {
-                children: (0, a.jsx)(N.WT, {
+            (0, a.jsx)(I.St, {
+                children: (0, a.jsx)(I.WT, {
                     onReaction: i,
                     onVoiceChannelPreview: _,
                     user: A,

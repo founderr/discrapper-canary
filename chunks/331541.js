@@ -28,8 +28,8 @@ var i = n(735250),
     v = n(221292),
     Z = n(481046),
     L = n(27144),
-    O = n(318661),
-    R = n(78675),
+    R = n(318661),
+    O = n(78675),
     x = n(741308),
     b = n(899007),
     P = n(438163),
@@ -166,7 +166,7 @@ function es(e, t, n, a) {
 function er(e) {
     let { currentUser: t, onClose: n, setPopoutRef: s } = e,
         W = __OVERLAY__,
-        q = (0, O.ZP)(t.id),
+        q = (0, R.ZP)(t.id),
         er = (0, u.O)(),
         { analyticsLocations: el } = (0, m.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT),
         eo = (0, A.ZB)({
@@ -344,7 +344,7 @@ function er(e) {
                         (0, i.jsxs)('header', {
                             className: en.header,
                             children: [
-                                (0, i.jsx)(R.Z, {
+                                (0, i.jsx)(O.Z, {
                                     user: t,
                                     displayProfile: q,
                                     profileType: $.y0.BITE_SIZE
