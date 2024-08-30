@@ -1,45 +1,32 @@
 l.d(n, {
     Z: function () {
-        return m;
+        return c;
     }
 });
-var t = l(442837),
-    r = l(2052),
-    a = l(99981),
-    i = l(906732),
-    s = l(835473),
-    u = l(914010),
-    o = l(561308),
-    c = l(701488),
-    d = l(689938);
-function m(e) {
+var t = l(499254),
+    r = l(827498),
+    i = l(835473),
+    a = l(541716),
+    s = l(561308),
+    u = l(701488),
+    o = l(689938);
+function c(e) {
     let { entry: n } = e,
-        l = (0, s.q)(n.extra.application_id),
-        m = null == l ? void 0 : l.getIconURL(c.Si.LARGE),
-        E = (0, t.e7)([u.Z], () => u.Z.getGuildId()),
-        p = n.extra.activity_name,
-        N = (0, r.O)(),
-        { analyticsLocations: f } = (0, i.ZP)(),
-        _ = (0, o.kr)(n) && !(0, o.n2)(n) ? d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : d.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
-        C = {
+        l = (0, i.q)(n.extra.application_id),
+        c = null == l ? void 0 : l.getIconURL(u.Si.LARGE),
+        d = n.extra.activity_name,
+        m = (0, s.kr)(n) && !(0, s.n2)(n) ? o.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : o.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+        p = {
             onClick: () => {
-                null != E &&
-                    (0, a.q)({
-                        guildId: E,
-                        channelId: void 0,
-                        locationObject: N.location,
-                        initialSelectedApplicationId: n.extra.application_id,
-                        initialSlide: c.ag.SELECT_CHANNEL,
-                        analyticsLocations: f
-                    });
+                t._(r._b.TEXT, a.I.NORMAL, { applicationId: n.extra.application_id });
             },
-            ariaDescription: d.Z.Messages.CONTENT_INVENTORY_OPEN_ACTIVITY_A11Y_DESCRIPTION.format({ title: p })
+            ariaDescription: o.Z.Messages.CONTENT_INVENTORY_OPEN_ACTIVITY_A11Y_DESCRIPTION.format({ title: d })
         };
     return {
-        thumbnailUrl: m,
-        title: p,
-        titleClickable: C,
-        thumbnailClickable: C,
-        userDescription: _
+        thumbnailUrl: c,
+        title: d,
+        titleClickable: p,
+        thumbnailClickable: p,
+        userDescription: m
     };
 }

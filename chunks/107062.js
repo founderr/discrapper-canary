@@ -3,34 +3,33 @@ var a = t(735250),
     l = t(470079),
     i = t(442837),
     r = t(481060),
-    s = t(2052),
-    o = t(620662),
-    u = t(841784),
-    c = t(429589),
-    d = t(403404),
-    _ = t(906732),
-    m = t(522474),
+    s = t(620662),
+    o = t(841784),
+    u = t(429589),
+    c = t(499254),
+    d = t(827498),
+    _ = t(812236),
+    m = t(541716),
     E = t(706454),
     T = t(823379),
     h = t(5192),
     x = t(379357),
-    N = t(192918),
-    I = t(561308),
+    I = t(192918),
+    N = t(561308),
     p = t(907152),
     C = t(206295),
     g = t(297781),
     v = t(591853),
     f = t(797342),
     M = t(981631),
-    P = t(701488),
-    Z = t(689938);
-let A = (e, n) =>
-        Z.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+    P = t(689938);
+let Z = (e, n) =>
+        P.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: n.username,
             activity: e.extra.activity_name
         }),
-    S = (e, n, t) => {
-        let a = Z.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME,
+    A = (e, n, t) => {
+        let a = P.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME,
             l = h.ZP.getName(n.guild_id, n.id, t),
             i = e.extra.activity_name;
         return a
@@ -40,110 +39,122 @@ let A = (e, n) =>
             })
             .replaceAll('*', '');
     },
-    O = (e) => {
+    S = (e) => {
         let { entry: n, channel: t, users: a, countOthers: l } = e;
-        return Z.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED.plainFormat({
+        return P.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED.plainFormat({
             gameName: n.extra.activity_name,
             user1: h.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, a[0]),
             user2: h.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, a[1]),
             countOthers: l
         }).replaceAll('*', '');
-    };
-n.ZP = (e) => {
-    let { channel: n, entry: t, onReaction: h, onVoiceChannelPreview: j } = e,
-        { largeImage: R } = (0, x.rv)({ entry: t }),
-        { user: y, details: L, activity: w } = (0, f.n)(t),
-        { primaryColor: B, secondaryColor: k } = (0, C.Z)(null == R ? void 0 : R.src),
-        U = (0, i.e7)([E.default], () => E.default.locale),
-        { displayParticipants: b, participant1: G, participant2: D, numOtherParticipants: H } = (0, N.Z)(t, 3),
-        V = (0, s.O)(),
-        { analyticsLocations: Y } = (0, _.ZP)(),
-        F = m.Z.getWindowOpen(M.KJ3.CHANNEL_CALL_POPOUT),
-        W = () => {
-            (0, d.Z)({
-                guildId: null == n ? void 0 : n.guild_id,
-                locationObject: V.location,
-                openInPopout: F,
-                initialSelectedApplicationId: t.extra.application_id,
-                initialSlide: P.ag.SELECT_CHANNEL,
-                analyticsLocations: Y
-            });
-        },
-        z = l.useCallback(
-            (e) => {
-                if ((null == R ? void 0 : R.src) == null || null == n || null == y) return;
-                let a =
-                    H > 0
-                        ? O({
-                              entry: t,
-                              channel: n,
-                              users: [G, D],
-                              countOthers: H
-                          })
-                        : S(t, n, y);
-                return (0, p.C4)({
-                    entry: t,
-                    applicationImageSrc: null == R ? void 0 : R.src,
-                    avatarSrcs: b.map((e) => e.getAvatarURL(n.guild_id, 128)),
-                    description: a,
-                    timestamp: (0, I.yh)(t, U),
-                    colors: [B, k],
-                    channelId: e
-                });
-            },
-            [null == R ? void 0 : R.src, n, b, t, U, H, G, D, B, k, y]
-        );
-    if (null == y) return null;
-    let q = (0, a.jsx)(g.PZ, {
-            location: g.Gt.POPOUT,
-            entry: t
-        }),
-        K = (0, a.jsx)(v.wG, {
-            channel: n,
-            userDescription: (0, I.kr)(t) ? Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : Z.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
-            title: t.extra.activity_name,
-            subtitle: L,
-            badges: q,
-            entry: t,
-            onClickTitle: W,
-            onClickSubtitle: W,
-            onClickThumbnail: W
-        }),
-        J =
-            (0, o.Z)(w, M.xjy.JOIN) || (0, u.Z)(w)
-                ? (0, a.jsx)(c.Z, {
-                      activity: w,
-                      user: y,
+    },
+    O = (e) => {
+        let { channel: n, entry: t, onReaction: c, onVoiceChannelPreview: d, appLoading: _, handleViewActivityClick: m } = e,
+            { largeImage: h } = (0, x.rv)({ entry: t }),
+            { user: O, details: j, activity: R, embeddedActivity: y } = (0, f.n)(t),
+            { primaryColor: L, secondaryColor: w } = (0, C.Z)(null == h ? void 0 : h.src),
+            B = (0, i.e7)([E.default], () => E.default.locale),
+            { displayParticipants: b, participant1: k, participant2: U, numOtherParticipants: D } = (0, I.Z)(t, 3),
+            G = l.useCallback(
+                (e) => {
+                    if ((null == h ? void 0 : h.src) == null || null == n || null == O) return;
+                    let a =
+                        D > 0
+                            ? S({
+                                  entry: t,
+                                  channel: n,
+                                  users: [k, U],
+                                  countOthers: D
+                              })
+                            : A(t, n, O);
+                    return (0, p.C4)({
+                        entry: t,
+                        applicationImageSrc: null == h ? void 0 : h.src,
+                        avatarSrcs: b.map((e) => e.getAvatarURL(n.guild_id, 128)),
+                        description: a,
+                        timestamp: (0, N.yh)(t, B),
+                        colors: [L, w],
+                        channelId: e
+                    });
+                },
+                [null == h ? void 0 : h.src, n, b, t, B, D, k, U, L, w, O]
+            );
+        if (null == O) return null;
+        let H = (0, a.jsx)(g.PZ, {
+                location: g.Gt.POPOUT,
+                entry: t
+            }),
+            V = (0, a.jsx)(v.wG, {
+                channel: n,
+                userDescription: (0, N.kr)(t) ? P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+                title: t.extra.activity_name,
+                subtitle: j,
+                badges: H,
+                entry: t,
+                onClickTitle: m,
+                onClickSubtitle: m,
+                onClickThumbnail: m
+            }),
+            Y = (0, s.Z)(R, M.xjy.JOIN) || (0, o.Z)(R),
+            F = Y
+                ? (0, a.jsx)(u.Z, {
+                      isEmbedded: (0, o.Z)(R),
+                      embeddedActivity: y,
+                      activity: R,
+                      user: O,
                       ButtonComponent: (e) =>
                           (0, a.jsx)(v.Ll, {
-                              IconComponent: r.GameControllerIcon,
+                              IconComponent: r.ActivitiesIcon,
                               ...e
                           })
                   })
                 : null,
-        X = [
-            J,
-            (0, a.jsx)(v.Ll, {
-                onClick: W,
+            W = (0, a.jsx)(v.Ll, {
+                onClick: m,
                 IconComponent: r.ActivitiesIcon,
-                children: Z.Z.Messages.CONTENT_INVENTORY_VIEW_ACTIVITY
-            })
-        ].filter(T.lm);
-    return (0, a.jsxs)(v.yR, {
-        children: [
-            K,
-            (0, a.jsx)(v.St, {
-                children: (0, a.jsx)(v.WT, {
-                    onReaction: h,
-                    onVoiceChannelPreview: j,
-                    user: y,
-                    channel: n,
-                    generateReactionImage: z,
-                    reactionImageAltText: A(t, y),
-                    entry: t,
-                    buttons: X
+                disabled: _,
+                children: _ ? P.Z.Messages.DEFAULT_INPUT_PLACEHOLDER : P.Z.Messages.CONTENT_INVENTORY_VIEW_ACTIVITY
+            }),
+            z = [Y ? F : W].filter(T.lm);
+        return (0, a.jsxs)(v.yR, {
+            children: [
+                V,
+                (0, a.jsx)(v.St, {
+                    children: (0, a.jsx)(v.WT, {
+                        onReaction: c,
+                        onVoiceChannelPreview: d,
+                        user: O,
+                        channel: n,
+                        generateReactionImage: G,
+                        reactionImageAltText: Z(t, O),
+                        entry: t,
+                        buttons: z
+                    })
                 })
-            })
-        ]
-    });
+            ]
+        });
+    },
+    j = (e) => (0, a.jsx)(O, { ...e }),
+    R = (e) => {
+        let { channel: n, entry: t } = e;
+        l.useEffect(() => {
+            (0, _.ZP)(n.id, t.extra.application_id);
+        }, [t.extra.application_id, n]);
+        let { loading: i } = (0, _.SY)(n, t.extra.application_id);
+        return (0, a.jsx)(O, {
+            ...e,
+            appLoading: i,
+            handleViewActivityClick: () => {
+                if (!i) c._(d._b.TEXT, m.I.NORMAL, { applicationId: t.extra.application_id });
+            }
+        });
+    };
+n.ZP = function (e) {
+    let { channel: n, ...t } = e;
+    return null == n
+        ? (0, a.jsx)(j, { ...t })
+        : (0, a.jsx)(R, {
+              channel: n,
+              ...t
+          });
 };

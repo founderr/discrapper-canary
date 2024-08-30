@@ -218,16 +218,17 @@ function b(e) {
 }
 function R(e) {
     let { channel: n, application: t, sectionName: a, hasCommands: l, isDeveloperOfThisApp: o } = e,
-        r = (0, m.SY)(n, t.id);
+        { commands: r } = (0, m.SY)(n, t.id),
+        c = r[0];
     return (0, f.BQ)(t)
-        ? null != r
+        ? null != c
             ? (0, i.jsx)('div', {
                   className: v.entrypointContainer,
                   children: (0, i.jsx)(N.Z, {
                       channel: n,
                       application: t,
                       sectionName: a,
-                      primaryEntryPointCommand: r,
+                      primaryEntryPointCommand: c,
                       buttonSize: s.ButtonSizes.MAX
                   })
               })
