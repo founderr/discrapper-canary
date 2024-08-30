@@ -32,7 +32,7 @@ function S() {
                         i.Z.dispatch({ type: 'CASH_APP_PAY_AWARENESS_UPSELL_CTA_CLICKED' }),
                             (0, l.Z)({
                                 subscriptionTier: E.Si.TIER_2,
-                                analyticsLocations: [o.Z.CASH_APP_PAY_AWARENESS_NON_NITRO_FLOW_UPSELL],
+                                analyticsLocations: [o.Z.USER_SETTINGS, o.Z.CASH_APP_PAY_AWARENESS_NON_NITRO_FLOW_UPSELL],
                                 analyticsLocation: T.Sbl.CASH_APP_PAY_AWARENESS_NON_NITRO_FLOW_UPSELL
                             });
                     },
@@ -44,7 +44,9 @@ function S() {
                     },
                     buttonText: I.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_UPSELL_CTA,
                     useInitialGlow: !0,
-                    useGlowOnHover: !0
+                    useGlowOnHover: !0,
+                    analyticsLocations: T.Sbl.USER_SETTINGS,
+                    upsellType: 'CASH_APP_PAY_AWARENESS_NITRO_UPSELL'
                 })
             })
         ]
