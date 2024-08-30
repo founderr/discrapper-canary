@@ -312,58 +312,60 @@ let k = Object.freeze({
         });
     },
     j = (e) => {
-        let { systemSelectorFirst: t } = e,
-            { delay: n } = s.useContext(B),
-            { analyticsLocations: r } = (0, p.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
-            [i, o, l] = (0, c.Wu)([O.Z, R.ZP, y.Z], () => [O.Z.theme, null == y.Z.gradientPreset, R.ZP.useSystemTheme === P.K.ON]),
-            u = (e) => {
+        let { systemSelectorFirst: t, hideSystemSelector: n = !1 } = e,
+            { delay: r } = s.useContext(B),
+            { analyticsLocations: i } = (0, p.ZP)(h.Z.CLIENT_THEMES_THEME_SELECTOR),
+            [o, l, u] = (0, c.Wu)([O.Z, R.ZP, y.Z], () => [O.Z.theme, null == y.Z.gradientPreset, R.ZP.useSystemTheme === P.K.ON]),
+            d = (e) => {
                 (0, C.xs)(),
                     F({
                         isPersisted: !0,
-                        analyticsLocations: r,
+                        analyticsLocations: i,
                         themeName: 'default '.concat(e)
                     }),
-                    (0, E.ZI)({ theme: e }, n);
+                    (0, E.ZI)({ theme: e }, r);
             },
-            d = (0, m.Q)('appearance_settings');
+            _ = (0, m.Q)('appearance_settings');
         return (0, a.jsxs)(a.Fragment, {
             children: [
-                t &&
+                !n &&
+                    t &&
                     (0, a.jsx)(D.bD, {
                         theme: 'system',
-                        isSelected: o && l,
-                        onSelect: () => u('system')
+                        isSelected: l && u,
+                        onSelect: () => d('system')
                     }),
                 (0, a.jsx)(D.bD, {
                     theme: w.BR.LIGHT,
-                    isSelected: o && !l && i === w.BR.LIGHT,
-                    onSelect: () => u(w.BR.LIGHT)
+                    isSelected: l && !u && o === w.BR.LIGHT,
+                    onSelect: () => d(w.BR.LIGHT)
                 }),
                 (0, a.jsx)(D.bD, {
                     theme: w.BR.DARK,
-                    isSelected: o && !l && i === w.BR.DARK,
-                    onSelect: () => u(w.BR.DARK)
+                    isSelected: l && !u && o === w.BR.DARK,
+                    onSelect: () => d(w.BR.DARK)
                 }),
-                d &&
+                _ &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(D.bD, {
                                 theme: w.BR.DARKER,
-                                isSelected: o && !l && i === w.BR.DARKER,
-                                onSelect: () => u(w.BR.DARKER)
+                                isSelected: l && !u && o === w.BR.DARKER,
+                                onSelect: () => d(w.BR.DARKER)
                             }),
                             (0, a.jsx)(D.bD, {
                                 theme: w.BR.MIDNIGHT,
-                                isSelected: o && !l && i === w.BR.MIDNIGHT,
-                                onSelect: () => u(w.BR.MIDNIGHT)
+                                isSelected: l && !u && o === w.BR.MIDNIGHT,
+                                onSelect: () => d(w.BR.MIDNIGHT)
                             })
                         ]
                     }),
-                !t &&
+                !n &&
+                    !t &&
                     (0, a.jsx)(D.bD, {
                         theme: 'system',
-                        isSelected: o && l,
-                        onSelect: () => u('system')
+                        isSelected: l && u,
+                        onSelect: () => d('system')
                     })
             ]
         });
@@ -392,10 +394,10 @@ let k = Object.freeze({
         });
     };
 (W.Basic = (e) => {
-    let { className: t } = e;
+    let { className: t, hideSystemSelector: n } = e;
     return (0, a.jsx)('section', {
         className: l()(G.presets, t),
-        children: (0, a.jsx)(j, {})
+        children: (0, a.jsx)(j, { hideSystemSelector: n })
     });
 }),
     (W.Gradient = (e) => {
