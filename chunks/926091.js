@@ -1,0 +1,16 @@
+e.exports = {
+    panel: 'panel_bcec8d',
+    toolbar: 'toolbar_bcec8d',
+    colorPreview: 'colorPreview_bcec8d',
+    overrides: 'overrides_bcec8d',
+    override: 'override_bcec8d',
+    overrideContent: 'overrideContent_bcec8d',
+    rawOverrides: 'rawOverrides_bcec8d',
+    colorInput: 'colorInput_bcec8d',
+    overrideHeader: 'overrideHeader_bcec8d',
+    title: 'title_bcec8d',
+    overrideHeading: 'overrideHeading_bcec8d',
+    clickabeIcon: 'clickabeIcon_bcec8d',
+    removeOverride: 'removeOverride_bcec8d',
+    divider: 'divider_bcec8d'
+};

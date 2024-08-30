@@ -16,7 +16,5 @@ e.exports = {
     propertyName: 'propertyName_a6b188',
     toolbar: 'toolbar_a6b188',
     toolbarGroup: 'toolbarGroup_a6b188',
-    toolbarGroupLabel: 'toolbarGroupLabel_a6b188',
-    toolbarButton: 'toolbarButton_a6b188',
-    toolbarDivider: 'toolbarDivider_a6b188'
+    toolbarButton: 'toolbarButton_a6b188'
 };
