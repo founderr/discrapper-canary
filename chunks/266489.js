@@ -17,5 +17,6 @@ e.exports = {
     contentCtaContainer: 'contentCtaContainer_a24e0c',
     upsellSelect: 'upsellSelect_a24e0c',
     heroButton: 'heroButton_a24e0c',
+    heroButtonInner: 'heroButtonInner_a24e0c',
     globalDiscoveryTitle: 'globalDiscoveryTitle_a24e0c'
 };

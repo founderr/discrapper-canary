@@ -57,19 +57,23 @@ function f(e) {
             () =>
                 t
                     ? (0, i.jsx)('div', {
-                          children: (0, i.jsx)(r.Button, {
+                          children: (0, i.jsxs)(r.Button, {
                               look: r.ButtonLooks.FILLED,
-                              size: r.ButtonSizes.MEDIUM,
+                              size: r.ButtonSizes.LARGE,
                               color: S ? r.ButtonColors.TRANSPARENT : r.ButtonColors.BRAND,
                               className: T.heroButton,
+                              innerClassName: T.heroButtonInner,
                               onClick: () => {
                                   (0, o.GS)({ location: s ? l.Z.GLOBAL_DISCOVERY : l.Z.CLAN_DISCOVERY }), (0, m.fH)(m.v0.GET_STARTED);
                               },
-                              children: (0, i.jsx)(r.Text, {
-                                  variant: 'text-sm/medium',
-                                  color: 'header-primary',
-                                  children: p.Z.Messages.CLAN_DISCOVERY_UPSELL_USER_CTA
-                              })
+                              children: [
+                                  (0, i.jsx)(r.Text, {
+                                      variant: 'text-md/medium',
+                                      color: 'none',
+                                      children: p.Z.Messages.CLAN_DISCOVERY_UPSELL_USER_CTA
+                                  }),
+                                  (0, i.jsx)(r.ArrowSmallRightIcon, { color: 'currentColor' })
+                              ]
                           })
                       })
                     : null,
