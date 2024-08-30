@@ -62,6 +62,7 @@ let T = Object.freeze({
         'intel: direct3d': 'intel_direct_3d',
         intel: 'intel',
         VideoToolbox: 'videotoolbox',
+        OpenH264: 'openh264',
         libvpx: 'vp8_libvpx'
     }),
     g = Object.freeze({
