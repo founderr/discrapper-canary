@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return m;
     }
 });
 var n = t(735250);
@@ -12,44 +12,44 @@ var a = t(120356),
     l = t(692547),
     c = t(481060),
     d = t(220082),
-    _ = t(318661),
-    E = t(721987),
-    u = t(74538),
-    I = t(193528),
-    T = t(993413),
+    u = t(318661),
+    _ = t(721987),
+    E = t(74538),
+    T = t(193528),
+    I = t(993413),
     S = t(689938),
     N = t(798721);
-function C(e) {
-    let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: C, guildId: m, className: A, showPremiumIcon: O = !0, showResetThemeButton: g = !1, forcedDivider: h } = e,
-        p = (0, _.ZP)(s.id, m),
-        { primaryColor: R, secondaryColor: x } = (0, E.Z)({
+function m(e) {
+    let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: m, guildId: C, className: g, showPremiumIcon: A = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
+        p = (0, u.ZP)(s.id, C),
+        { primaryColor: x, secondaryColor: R } = (0, _.Z)({
             user: s,
             displayProfile: p,
             pendingThemeColors: a,
             isPreview: !0
         }),
-        M = u.ZP.canUsePremiumProfileCustomization(s),
-        f = null != t ? t : s.getAvatarURL(m, 80),
+        f = E.ZP.canUsePremiumProfileCustomization(s),
+        M = null != t ? t : s.getAvatarURL(C, 80),
         D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(),
-        P = (0, d.Cf)(f, D, !1);
-    if (null == R || null == x) return null;
+        P = (0, d.Cf)(M, D, !1);
+    if (null == x || null == R) return null;
     let L = (e) => {
         r(o()(e, null == p ? void 0 : p.themeColors) ? void 0 : e);
     };
-    return (0, n.jsx)(T.Z, {
+    return (0, n.jsx)(I.Z, {
         title: S.Z.Messages.USER_SETTINGS_PROFILE_THEME,
-        disabled: !M && !C,
-        className: i()(N.__invalid_profileThemesSection, A),
-        showPremiumIcon: O,
-        forcedDivider: h,
+        disabled: !f && !m,
+        className: i()(N.__invalid_profileThemesSection, g),
+        showPremiumIcon: A,
+        forcedDivider: O,
         children: (0, n.jsxs)('div', {
             className: N.sectionContainer,
             children: [
                 (0, n.jsx)('div', {
                     className: N.sparkleContainer,
-                    children: (0, n.jsx)(I.Z, {
-                        onChange: (e) => L([e, x]),
-                        color: R,
+                    children: (0, n.jsx)(T.Z, {
+                        onChange: (e) => L([e, R]),
+                        color: x,
                         suggestedColors: P,
                         showEyeDropper: !0,
                         label: (0, n.jsx)(c.Text, {
@@ -63,9 +63,9 @@ function C(e) {
                 }),
                 (0, n.jsx)('div', {
                     className: N.sparkleContainer,
-                    children: (0, n.jsx)(I.Z, {
-                        onChange: (e) => L([R, e]),
-                        color: x,
+                    children: (0, n.jsx)(T.Z, {
+                        onChange: (e) => L([x, e]),
+                        color: R,
                         suggestedColors: P,
                         showEyeDropper: !0,
                         label: (0, n.jsx)(c.Text, {
@@ -77,8 +77,8 @@ function C(e) {
                         })
                     })
                 }),
-                g &&
-                    null != m &&
+                h &&
+                    null != C &&
                     (0, n.jsx)(c.Button, {
                         className: N.resetButton,
                         color: c.Button.Colors.PRIMARY,

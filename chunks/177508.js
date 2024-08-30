@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     t(390547),
@@ -13,10 +13,10 @@ var n = t(735250),
     l = t(481060),
     c = t(522967);
 let d = Object.keys(l.Button.Colors).filter((e) => 'CUSTOM' !== e),
-    _ = Object.keys(l.Button.Looks).filter((e) => 'BLANK' !== e);
-function E() {
+    u = Object.keys(l.Button.Looks).filter((e) => 'BLANK' !== e);
+function _() {
     let e = d.flatMap((e) => [
-        ..._.map((s) =>
+        ...u.map((s) =>
             (0, n.jsxs)(
                 l.Button,
                 {
@@ -48,12 +48,12 @@ function E() {
                     })
                 ]
             }),
-            (0, n.jsx)(u, {}),
-            (0, n.jsx)(I, {})
+            (0, n.jsx)(E, {}),
+            (0, n.jsx)(T, {})
         ]
     });
 }
-function u() {
+function E() {
     return (0, n.jsxs)('div', {
         className: c.shinyButtonExamples,
         children: [
@@ -73,12 +73,12 @@ function u() {
         ]
     });
 }
-function I() {
+function T() {
     let [e, s] = a.useState(null),
         [t, i] = a.useState(null),
         [r, d] = a.useState([]),
-        [_, E] = a.useState([]),
-        [u, I] = a.useState([]);
+        [u, _] = a.useState([]),
+        [E, T] = a.useState([]);
     return (0, n.jsxs)('div', {
         className: c.searchableSelectExamples,
         children: [
@@ -110,15 +110,15 @@ function I() {
                 placeholder: 'Multi select (clearable)',
                 multi: !0,
                 clearable: !0,
-                value: u,
-                onChange: (e) => I(e),
+                value: E,
+                onChange: (e) => T(e),
                 options: o.G
             }),
             (0, n.jsx)(l.SearchableSelect, {
                 placeholder: 'Multi select (custom pills)',
                 multi: !0,
-                value: _,
-                onChange: (e) => E(e),
+                value: u,
+                onChange: (e) => _(e),
                 options: o.G,
                 hidePills: !0,
                 customPillContainerClassName: c.customPillContainer,

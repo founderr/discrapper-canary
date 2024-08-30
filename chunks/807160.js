@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return eE;
+        return e_;
     }
 }),
     t(47120),
@@ -14,24 +14,24 @@ var n,
     l = t(120356),
     c = t.n(l),
     d = t(512722),
-    _ = t.n(d),
-    E = t(913527),
-    u = t.n(E),
-    I = t(91192),
-    T = t(314877),
+    u = t.n(d),
+    _ = t(913527),
+    E = t.n(_),
+    T = t(91192),
+    I = t(314877),
     S = t(442837),
     N = t(481060),
-    C = t(37234),
-    m = t(782568),
-    A = t(812206),
-    O = t(593061),
-    g = t(600164),
-    h = t(925329),
+    m = t(37234),
+    C = t(782568),
+    g = t(812206),
+    A = t(593061),
+    h = t(600164),
+    O = t(925329),
     p = t(267101),
-    R = t(240864),
-    x = t(942833),
-    M = t(400916),
-    f = t(916001),
+    x = t(240864),
+    R = t(942833),
+    f = t(400916),
+    M = t(916001),
     D = t(539290),
     P = t(336197),
     L = t(690221),
@@ -45,10 +45,10 @@ var n,
     F = t(509545),
     y = t(230307),
     V = t(259580),
-    Y = t(572004),
-    w = t(55935),
-    H = t(630388),
-    k = t(74538),
+    w = t(572004),
+    k = t(55935),
+    Y = t(630388),
+    H = t(74538),
     W = t(937615),
     K = t(244526),
     z = t(712358),
@@ -80,8 +80,8 @@ let ea = [X.PyE.FAILED, X.PyE.REVERSED, X.PyE.CANCELED],
         let { description: s, cost: t } = e;
         return (0, r.jsx)('li', {
             className: ee.paymentDetail,
-            children: (0, r.jsxs)(g.Z, {
-                justify: g.Z.Justify.BETWEEN,
+            children: (0, r.jsxs)(h.Z, {
+                justify: h.Z.Justify.BETWEEN,
                 children: [(0, r.jsx)('div', { children: s }), (0, r.jsx)('div', { children: t })]
             })
         });
@@ -91,7 +91,7 @@ function eo(e) {
         [a, i] = o.useState(!1),
         [l, c] = o.useState(!1),
         d = () => {
-            (0, Y.JG)(s), c(!0), i(!0);
+            (0, w.JG)(s), c(!0), i(!0);
         };
     return (0, r.jsx)(N.Tooltip, {
         forceOpen: l,
@@ -119,8 +119,8 @@ let el = (e) => {
     let { description: s, detail: t } = e;
     return (0, r.jsx)('li', {
         className: ee.guildProductDetail,
-        children: (0, r.jsxs)(g.Z, {
-            justify: g.Z.Justify.BETWEEN,
+        children: (0, r.jsxs)(h.Z, {
+            justify: h.Z.Justify.BETWEEN,
             children: [(0, r.jsx)('div', { children: s }), (0, r.jsx)('div', { children: t })]
         })
     });
@@ -128,11 +128,11 @@ let el = (e) => {
 function ec(e) {
     let { guildId: s, guildProductListingId: t } = e,
         n = (0, p.hO)(s, t, { requireCurrentGuild: !1 }),
-        a = (0, x.C)(n),
+        a = (0, R.C)(n),
         i = (0, S.e7)([U.Z], () => U.Z.getGuild(s)),
         l = (null == n ? void 0 : n.role_id) != null && (null == n ? void 0 : n.attachments_count) === 0 ? $.Z.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : a,
         c = o.useCallback(async () => {
-            (null == i ? void 0 : i.hasFeature(X.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, P.Z)(X.Z5c.GUILD_PRODUCT(s, t)) : await (0, P.Z)(X.Z5c.CHANNEL(s)), (0, C.xf)();
+            (null == i ? void 0 : i.hasFeature(X.oNc.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, P.Z)(X.Z5c.GUILD_PRODUCT(s, t)) : await (0, P.Z)(X.Z5c.CHANNEL(s)), (0, m.xf)();
         }, [i, s, t]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -156,17 +156,17 @@ function ed(e) {
     var s, t;
     let { guildId: n, guildProductListingId: a } = e,
         i = (0, p.hO)(n, a, { requireCurrentGuild: !1 }),
-        o = (0, S.e7)([R.Z], () => R.Z.getGuildProductFetchState(a) === R.M.FETCHING),
+        o = (0, S.e7)([x.Z], () => x.Z.getGuildProductFetchState(a) === x.M.FETCHING),
         l = null == i ? void 0 : i.role_id,
         c = (0, S.e7)([U.Z], () => (null != l ? U.Z.getRole(n, l) : void 0), [n, l]),
         d = (null !== (t = null == i ? void 0 : null === (s = i.attachments) || void 0 === s ? void 0 : s.length) && void 0 !== t ? t : 0) > 0,
-        _ = null != c;
+        u = null != c;
     return o
         ? (0, r.jsx)('div', {
               className: ee.guildProductBenefits,
               children: (0, r.jsx)(N.Spinner, {})
           })
-        : null != i && (d || _)
+        : null != i && (d || u)
           ? (0, r.jsxs)('div', {
                 className: ee.guildProductBenefits,
                 children: [
@@ -179,13 +179,13 @@ function ed(e) {
                                     className: ee.guildProductBenefitLabel,
                                     children: $.Z.Messages.GUILD_PRODUCT_BILLING_ACCESS_DOWNLOADABLES
                                 }),
-                                (0, r.jsx)(M.Z, {
+                                (0, r.jsx)(f.Z, {
                                     guildId: n,
                                     productId: i.id
                                 })
                             ]
                         }),
-                    _ &&
+                    u &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
                                 d && (0, r.jsx)('div', { className: ee.divider }),
@@ -195,19 +195,19 @@ function ed(e) {
                                     className: ee.guildProductBenefitLabel,
                                     children: $.Z.Messages.GUILD_PRODUCT_CONFIRMATION_MODAL_ROLE_UNLOCKED
                                 }),
-                                (0, r.jsx)(f.Z, { role: c })
+                                (0, r.jsx)(M.Z, { role: c })
                             ]
                         })
                 ]
             })
           : null;
 }
-class e_ extends (a = o.PureComponent) {
+class eu extends (a = o.PureComponent) {
     get daysSincePurchase() {
         let { payment: e } = this.props,
             s = null != e.sku ? e.sku.releaseDate : null,
             t = null != s && s.isAfter(e.createdAt) ? s : e.createdAt;
-        return u()().diff(t, 'days');
+        return E()().diff(t, 'days');
     }
     get isPremium() {
         let { payment: e } = this.props;
@@ -295,7 +295,7 @@ class e_ extends (a = o.PureComponent) {
     renderPaymentBreakdown() {
         let { payment: e, locale: s, application: t } = this.props,
             { taxInclusive: n, tax: a, amount: i, amountRefunded: l, currency: d } = e,
-            _ = null == t ? void 0 : t.guildId;
+            u = null == t ? void 0 : t.guildId;
         return (0, r.jsxs)('div', {
             className: c()(ee.paymentText, ee.paymentBreakdown),
             children: [
@@ -338,10 +338,10 @@ class e_ extends (a = o.PureComponent) {
                             cost: (0, W.T4)(i, d)
                         }),
                         e.isGuildProductPurchase &&
-                            null != _ &&
+                            null != u &&
                             null != e.sku &&
                             (0, r.jsx)(ec, {
-                                guildId: _,
+                                guildId: u,
                                 guildProductListingId: e.sku.id
                             }),
                         l > 0 &&
@@ -364,7 +364,7 @@ class e_ extends (a = o.PureComponent) {
     }
     renderInvoiceDownload() {
         let { payment: e } = this.props;
-        return (0, r.jsx)(O.Z, { payment: e });
+        return (0, r.jsx)(A.Z, { payment: e });
     }
     renderRefundDetails() {
         let e;
@@ -511,36 +511,36 @@ class e_ extends (a = o.PureComponent) {
         let { compactMode: t, payment: n, application: a, guild: i, stickerPack: l } = this.props,
             { expanded: c } = this.state,
             d = n.sku,
-            E = n.subscription,
-            I = null != n.paymentSource && X.Uk1.has(n.paymentSource.type);
-        if (null != E && 0 !== E.items.length) {
+            _ = n.subscription,
+            T = null != n.paymentSource && X.Uk1.has(n.paymentSource.type);
+        if (null != _ && 0 !== _.items.length) {
             let t = [],
                 n = null;
-            if (E.type === X.NYc.PREMIUM)
-                E.items.forEach((e) => {
+            if (_.type === X.NYc.PREMIUM)
+                _.items.forEach((e) => {
                     let { planId: s, quantity: a } = e;
-                    (0, k.uZ)(s) ? (t.push(k.ZP.getDisplayName(s, !1, I)), (n = (0, k.Wz)(q.GP[s].skuId))) : (t.push(''.concat(a > 1 ? ''.concat(a, 'x ') : '').concat(k.ZP.getDisplayName(s, !1, I))), null == n && (n = (0, k.Wz)(q.GP[s].skuId)));
+                    (0, H.uZ)(s) ? (t.push(H.ZP.getDisplayName(s, !1, T)), (n = (0, H.Wz)(q.GP[s].skuId))) : (t.push(''.concat(a > 1 ? ''.concat(a, 'x ') : '').concat(H.ZP.getDisplayName(s, !1, T))), null == n && (n = (0, H.Wz)(q.GP[s].skuId)));
                 });
-            else if (E.type === X.NYc.GUILD) {
-                let e = F.Z.get(E.items[0].planId);
-                _()(null != e, 'Guild subscription plan should already have been loaded');
+            else if (_.type === X.NYc.GUILD) {
+                let e = F.Z.get(_.items[0].planId);
+                u()(null != e, 'Guild subscription plan should already have been loaded');
                 let s = e.interval === q.rV.YEAR ? $.Z.Messages.YEARLY_GUILD_SUBSCRIPTION : $.Z.Messages.MONTHLY_GUILD_SUBSCRIPTION;
                 t.push(s.format({ planName: e.name })), (n = e.skuId);
-            } else if (E.type === X.NYc.APPLICATION) {
-                let e = F.Z.get(E.items[0].planId);
-                _()(null != e, 'Application subscription plan should already have been loaded'), null != a ? t.push($.Z.Messages.MONTHLY_APPLICATION_SUBSCRIPTION_V2.format({ tier: null == d ? void 0 : d.name })) : t.push($.Z.Messages.APPLICATION_SUBSCRIPTION_FROM_DELETED_APPLICATION), (n = e.skuId);
+            } else if (_.type === X.NYc.APPLICATION) {
+                let e = F.Z.get(_.items[0].planId);
+                u()(null != e, 'Application subscription plan should already have been loaded'), null != a ? t.push($.Z.Messages.MONTHLY_APPLICATION_SUBSCRIPTION_V2.format({ tier: null == d ? void 0 : d.name })) : t.push($.Z.Messages.APPLICATION_SUBSCRIPTION_FROM_DELETED_APPLICATION), (n = e.skuId);
             }
             (s = t.join(', ')),
-                (e = (0, r.jsx)(h.Z, {
+                (e = (0, r.jsx)(O.Z, {
                     className: ee.descriptionIcon,
                     guildClassName: ee.guildDescriptionIcon,
                     game: a,
                     guild: i,
-                    size: h.Z.Sizes.XSMALL,
+                    size: O.Z.Sizes.XSMALL,
                     skuId: n
                 }));
         } else if (null != d) {
-            var T;
+            var I;
             if (((s = n.isGuildProductPurchase && n.isSoftDeletedProduct ? $.Z.Messages.GUILD_PRODUCT_BILLING_DELISTED_PRODUCT : d.name), null != l)) {
                 let s = (0, v.Zt)(l);
                 e = (0, r.jsx)(j.ZP, {
@@ -552,7 +552,7 @@ class e_ extends (a = o.PureComponent) {
                 });
             } else
                 e =
-                    (null === (T = n.sku) || void 0 === T ? void 0 : T.productLine) === X.POd.COLLECTIBLES
+                    (null === (I = n.sku) || void 0 === I ? void 0 : I.productLine) === X.POd.COLLECTIBLES
                         ? (0, r.jsx)(N.ShopIcon, {
                               size: 'custom',
                               width: 23,
@@ -560,12 +560,12 @@ class e_ extends (a = o.PureComponent) {
                               color: 'currentColor',
                               className: ee.shopIcon
                           })
-                        : (0, r.jsx)(h.Z, {
+                        : (0, r.jsx)(O.Z, {
                               className: ee.descriptionIcon,
                               guildClassName: ee.guildDescriptionIcon,
                               game: a,
                               guild: i,
-                              size: h.Z.Sizes.XSMALL,
+                              size: O.Z.Sizes.XSMALL,
                               skuId: d.id
                           });
         } else
@@ -577,9 +577,9 @@ class e_ extends (a = o.PureComponent) {
                 (s = n.description);
         let S = (0, r.jsx)('div', {
                 className: ee.date,
-                children: (0, w.vc)(u()(n.createdAt), 'MM/DD/YYYY')
+                children: (0, k.vc)(E()(n.createdAt), 'MM/DD/YYYY')
             }),
-            C = n.isGift
+            m = n.isGift
                 ? (0, r.jsx)(N.Tooltip, {
                       text: $.Z.Messages.BILLING_GIFT_PURCHASE_TOOLTIP,
                       children: (e) =>
@@ -599,7 +599,7 @@ class e_ extends (a = o.PureComponent) {
                       (0, r.jsxs)('div', {
                           children: [s, S]
                       }),
-                      C
+                      m
                   ]
               })
             : (0, r.jsxs)(o.Fragment, {
@@ -607,7 +607,7 @@ class e_ extends (a = o.PureComponent) {
                       S,
                       (0, r.jsxs)('div', {
                           className: ee.description,
-                          children: [e, (0, r.jsx)('div', { children: s }), C]
+                          children: [e, (0, r.jsx)('div', { children: s }), m]
                       })
                   ]
               });
@@ -625,7 +625,7 @@ class e_ extends (a = o.PureComponent) {
                                 buttonPosition: D.E.RIGHT,
                                 notice: $.Z.Messages.GUILD_PRODUCT_BILLING_PRODUCT_UNAVAILABLE,
                                 ctaLabel: $.Z.Messages.GUILD_PRODUCT_BILLING_CONTACT_SUPPORT,
-                                onClick: () => (0, m.Z)(et(t))
+                                onClick: () => (0, C.Z)(et(t))
                             })
                           : null != n &&
                             null != e.sku &&
@@ -658,7 +658,7 @@ class e_ extends (a = o.PureComponent) {
     render() {
         let { payment: e, className: s, compactMode: t } = this.props,
             { expanded: n } = this.state;
-        return (0, r.jsx)(I.mh, {
+        return (0, r.jsx)(T.mh, {
             id: e.id,
             children: (e) =>
                 (0, r.jsxs)(N.Clickable, {
@@ -667,9 +667,9 @@ class e_ extends (a = o.PureComponent) {
                     focusProps: { offset: 4 },
                     ...e,
                     children: [
-                        (0, r.jsxs)(g.Z, {
+                        (0, r.jsxs)(h.Z, {
                             className: ee.summaryInfo,
-                            align: g.Z.Align.CENTER,
+                            align: h.Z.Align.CENTER,
                             children: [
                                 this.renderDescription(),
                                 (0, r.jsxs)('div', {
@@ -731,7 +731,7 @@ class e_ extends (a = o.PureComponent) {
                     rule: 'SKU_STICKER_PACK',
                     canRefund: () => {
                         let { payment: e } = this.props;
-                        return null == e.sku || !(0, H.yE)(e.sku.flags, X.l4R.STICKER_PACK);
+                        return null == e.sku || !(0, Y.yE)(e.sku.flags, X.l4R.STICKER_PACK);
                     }
                 },
                 {
@@ -746,7 +746,7 @@ class e_ extends (a = o.PureComponent) {
                     rule: 'GUILD_PRODUCT',
                     canRefund: () => {
                         let { payment: e } = this.props;
-                        return null == e.sku || !(0, H.yE)(e.sku.flags, T.l.GUILD_PRODUCT);
+                        return null == e.sku || !(0, Y.yE)(e.sku.flags, I.l.GUILD_PRODUCT);
                     }
                 },
                 {
@@ -762,41 +762,41 @@ class e_ extends (a = o.PureComponent) {
             });
     }
 }
-function eE(e) {
+function e_(e) {
     var s, t;
     let { payment: n, locale: a, compactMode: i, className: l } = e,
         c = null != n.sku && en.includes(n.sku.type),
         d = null != n.sku && c ? n.sku.applicationId : null,
-        _ = null === (s = n.sku) || void 0 === s ? void 0 : s.applicationId,
-        E = (null === (t = n.subscription) || void 0 === t ? void 0 : t.type) === X.NYc.APPLICATION,
+        u = null === (s = n.sku) || void 0 === s ? void 0 : s.applicationId,
+        _ = (null === (t = n.subscription) || void 0 === t ? void 0 : t.type) === X.NYc.APPLICATION,
         {
-            applicationStatistics: u,
-            gameApplication: I,
-            paymentSources: T
-        } = (0, S.cj)([G.Z, y.Z, A.Z], () => {
+            applicationStatistics: E,
+            gameApplication: T,
+            paymentSources: I
+        } = (0, S.cj)([G.Z, y.Z, g.Z], () => {
             var e, s;
             return {
                 applicationStatistics: null != d ? y.Z.getCurrentUserStatisticsForApplication(d) : null,
-                gameApplication: null !== (s = A.Z.getApplication(null != d ? d : '')) && void 0 !== s ? s : null === (e = n.sku) || void 0 === e ? void 0 : e.application,
+                gameApplication: null !== (s = g.Z.getApplication(null != d ? d : '')) && void 0 !== s ? s : null === (e = n.sku) || void 0 === e ? void 0 : e.application,
                 paymentSources: G.Z.paymentSources
             };
         }),
-        N = (0, S.e7)([A.Z], () => (null != _ ? A.Z.getApplication(_) : null));
+        N = (0, S.e7)([g.Z], () => (null != u ? g.Z.getApplication(u) : null));
     o.useEffect(() => {
-        E && null != _ && (0, Z.UM)(_);
-    }, [_, E]);
-    let C = (0, S.e7)([U.Z], () => U.Z.getGuild(null == I ? void 0 : I.guildId)),
-        m = c ? I : void 0;
-    return (0, r.jsx)(e_, {
-        applicationStatistics: u,
-        application: E ? N : m,
-        guild: C,
+        _ && null != u && (0, Z.UM)(u);
+    }, [u, _]);
+    let m = (0, S.e7)([U.Z], () => U.Z.getGuild(null == T ? void 0 : T.guildId)),
+        C = c ? T : void 0;
+    return (0, r.jsx)(eu, {
+        applicationStatistics: E,
+        application: _ ? N : C,
+        guild: m,
         stickerPack: null,
-        paymentSources: T,
+        paymentSources: I,
         locale: a,
         compactMode: i,
         className: l,
         payment: n
     });
 }
-es(e_, 'defaultProps', { compactMode: !1 });
+es(eu, 'defaultProps', { compactMode: !1 });

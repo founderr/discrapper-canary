@@ -1,6 +1,6 @@
 t.d(s, {
     Yn: function () {
-        return u;
+        return E;
     }
 }),
     t(411104),
@@ -13,24 +13,24 @@ var n = t(735250),
     l = t(200483),
     c = t(981631),
     d = t(689938);
-function _(e) {
+function u(e) {
     let { onError: s, onSuccess: t, PasswordConfirm: r, ...l } = e,
-        [_, E] = a.useState('');
+        [u, _] = a.useState('');
     return (0, n.jsx)(r, {
         ...l,
         handleSubmit: (e) => o.Z.enableMFAStart(e),
         onError: (e) => {
             var n;
-            if (('object' == typeof (n = e) && null != n && (0, i.nr)(n, 'code') && 'number' == typeof n.code ? n.code : 0) === c.evJ.MFA_INVALID_SECRET) t(_), l.onClose();
+            if (('object' == typeof (n = e) && null != n && (0, i.nr)(n, 'code') && 'number' == typeof n.code ? n.code : 0) === c.evJ.MFA_INVALID_SECRET) t(u), l.onClose();
             else s(e);
         },
-        onPasswordChange: E,
+        onPasswordChange: _,
         title: d.Z.Messages.TWO_FA_ENABLE,
         actionText: d.Z.Messages.CONTINUE,
         skipErrorMsgAbortCode: c.evJ.MFA_INVALID_SECRET
     });
 }
-function E(e, s) {
+function _(e, s) {
     return new Promise((a) => {
         (0, r.openModalLazy)(async () => {
             let { default: i } = await Promise.all([t.e('72426'), t.e('23746')]).then(t.bind(t, 837651));
@@ -44,7 +44,7 @@ function E(e, s) {
         });
     });
 }
-function u() {
+function E() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return new Promise((s) => {
         (0, r.openModalLazy)(
@@ -63,12 +63,12 @@ function u() {
         );
     });
 }
-async function I() {
+async function T() {
     let e = await new Promise((e, s) => {
         (0, r.openModalLazy)(async () => {
             let { default: a } = await t.e('24642').then(t.bind(t, 279837));
             return (t) =>
-                (0, n.jsx)(_, {
+                (0, n.jsx)(u, {
                     ...t,
                     onSuccess: e,
                     onError: s,
@@ -95,8 +95,8 @@ async function I() {
                     });
             });
         }));
-        await E(e, null == a ? void 0 : a.token);
-    } else await E(e);
-    await u();
+        await _(e, null == a ? void 0 : a.token);
+    } else await _(e);
+    await E();
 }
-s.ZP = { enableMFA: I };
+s.ZP = { enableMFA: T };

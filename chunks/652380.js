@@ -7,22 +7,22 @@ var n = t(735250),
     l = t(742635),
     c = t(458708),
     d = t(481060),
-    _ = t(70956),
-    E = t(497505),
-    u = t(210724),
-    I = t(130653),
-    T = t(78826),
+    u = t(70956),
+    _ = t(497505),
+    E = t(210724),
+    T = t(130653),
+    I = t(78826),
     S = t(37303),
     N = t(134483),
-    C = t(478977),
-    m = t(456799),
-    A = t(210851),
-    O = t(602683),
-    g = t(916028),
-    h = t(15033),
+    m = t(478977),
+    C = t(456799),
+    g = t(210851),
+    A = t(602683),
+    h = t(916028),
+    O = t(15033),
     p = t(899457),
-    R = t(673105);
-function x(e, s, t) {
+    x = t(673105);
+function R(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -35,9 +35,9 @@ function x(e, s, t) {
         e
     );
 }
-let M = ['svg', 'png', 'gif', 'webp'],
-    f = [...M, 'jpg', 'jpeg'],
-    D = Array.from(new Set([...f, 'gif', 'mp4', 'webm']));
+let f = ['svg', 'png', 'gif', 'webp'],
+    M = [...f, 'jpg', 'jpeg'],
+    D = Array.from(new Set([...M, 'gif', 'mp4', 'webm']));
 function P() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: s = 0, completedAt: t = null, enrolledAt: n = null, claimedAt: a = null } = e;
@@ -126,7 +126,7 @@ function Z() {
     var e, s, t;
     let [r, o] = a.useState(b),
         [l, c] = a.useState(p.a.UNENROLLED),
-        [x, L] = a.useState([]),
+        [R, L] = a.useState([]),
         [Z, v] = a.useState(!1),
         [j, B] = a.useState(null);
     let U =
@@ -232,12 +232,12 @@ function Z() {
         children: [
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-lg/bold',
-                className: R.heading,
+                className: x.heading,
                 children: 'Quest Preview Tool'
             }),
             (0, n.jsx)('div', {
-                className: R.fields,
-                children: (0, n.jsx)(g.Z, {
+                className: x.fields,
+                children: (0, n.jsx)(h.Z, {
                     onSelect: function (e) {
                         if ((B(e), null != e)) o(e);
                     },
@@ -246,31 +246,31 @@ function Z() {
             }),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-md/semibold',
-                className: R.subheading,
+                className: x.subheading,
                 children: 'Messages'
             }),
             (0, n.jsxs)('div', {
-                className: R.fields,
+                className: x.fields,
                 children: [
-                    (0, n.jsx)(O.Z, {
+                    (0, n.jsx)(A.Z, {
                         title: 'Quest Name',
                         assetKey: 'questName',
                         onMessageChange: F,
                         initialValue: r.config.messages.questName
                     }),
-                    (0, n.jsx)(O.Z, {
+                    (0, n.jsx)(A.Z, {
                         title: 'Game Title',
                         assetKey: 'gameTitle',
                         onMessageChange: F,
                         initialValue: r.config.messages.gameTitle
                     }),
-                    (0, n.jsx)(O.Z, {
+                    (0, n.jsx)(A.Z, {
                         title: 'Reward Name',
                         assetKey: 'rewardName',
                         onMessageChange: y,
                         initialValue: U.name
                     }),
-                    (0, n.jsx)(O.Z, {
+                    (0, n.jsx)(A.Z, {
                         title: 'Reward Name With Article',
                         assetKey: 'rewardNameWithArticle',
                         onMessageChange: y,
@@ -280,34 +280,34 @@ function Z() {
             }),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-md/semibold',
-                className: R.subheading,
+                className: x.subheading,
                 children: 'Assets'
             }),
             (0, n.jsxs)('div', {
-                className: R.fields,
+                className: x.fields,
                 children: [
-                    (0, n.jsx)(A.Z, {
+                    (0, n.jsx)(g.Z, {
                         title: 'Game Tile Asset',
                         assetKey: 'gameTile',
                         onFileChange: G,
-                        filters: f,
+                        filters: M,
                         initialValue: r.config.assets.gameTile
                     }),
-                    (0, n.jsx)(A.Z, {
+                    (0, n.jsx)(g.Z, {
                         title: 'Logotype',
                         assetKey: 'logotype',
                         onFileChange: G,
-                        filters: M,
+                        filters: f,
                         initialValue: r.config.assets.logotype
                     }),
-                    (0, n.jsx)(A.Z, {
+                    (0, n.jsx)(g.Z, {
                         title: 'Quest Bar Hero Asset',
                         assetKey: 'questBarHero',
                         onFileChange: G,
                         filters: D,
                         initialValue: r.config.assets.questBarHero
                     }),
-                    (0, n.jsx)(A.Z, {
+                    (0, n.jsx)(g.Z, {
                         title: 'Reward Tile Asset',
                         assetKey: 'rewardTile',
                         onFileChange: function (e, s) {
@@ -343,7 +343,7 @@ function Z() {
                         filters: D,
                         initialValue: U.rewardTile
                     }),
-                    (0, n.jsx)(A.Z, {
+                    (0, n.jsx)(g.Z, {
                         title: 'Gift Inventory Hero',
                         assetKey: 'hero',
                         onFileChange: G,
@@ -353,10 +353,10 @@ function Z() {
                 ]
             }),
             (0, n.jsx)('div', {
-                className: R.fields,
+                className: x.fields,
                 children: (0, n.jsx)('div', {
-                    className: R.fullWidthField,
-                    children: (0, n.jsx)(h.Z, {
+                    className: x.fullWidthField,
+                    children: (0, n.jsx)(O.Z, {
                         onChange: function (e) {
                             var s, t;
                             o({
@@ -373,29 +373,29 @@ function Z() {
                             }),
                                 L(e);
                         },
-                        values: x
+                        values: R
                     })
                 })
             }),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-md/semibold',
-                className: R.subheading,
+                className: x.subheading,
                 children: 'Colors & Quest States'
             }),
             (0, n.jsxs)('div', {
-                className: R.fields,
+                className: x.fields,
                 children: [
                     (0, n.jsxs)('div', {
-                        className: R.fields,
+                        className: x.fields,
                         style: { marginBottom: 0 },
                         children: [
-                            (0, n.jsx)(C.Z, {
+                            (0, n.jsx)(m.Z, {
                                 title: 'Primary',
                                 colorKey: 'primary',
                                 onChange: V,
                                 value: r.config.colors.primary
                             }),
-                            (0, n.jsx)(C.Z, {
+                            (0, n.jsx)(m.Z, {
                                 title: 'Secondary',
                                 colorKey: 'secondary',
                                 onChange: V,
@@ -423,7 +423,7 @@ function Z() {
                                         ...r,
                                         userStatus: P({
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.25
+                                            streamProgressSeconds: 10 * u.Z.Seconds.MINUTE * 0.25
                                         })
                                     });
                                     break;
@@ -432,7 +432,7 @@ function Z() {
                                         ...r,
                                         userStatus: P({
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.5
+                                            streamProgressSeconds: 10 * u.Z.Seconds.MINUTE * 0.5
                                         })
                                     });
                                     break;
@@ -441,7 +441,7 @@ function Z() {
                                         ...r,
                                         userStatus: P({
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.75
+                                            streamProgressSeconds: 10 * u.Z.Seconds.MINUTE * 0.75
                                         })
                                     });
                                     break;
@@ -451,7 +451,7 @@ function Z() {
                                         userStatus: P({
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: 10 * _.Z.Seconds.MINUTE
+                                            streamProgressSeconds: 10 * u.Z.Seconds.MINUTE
                                         })
                                     });
                                     break;
@@ -462,7 +462,7 @@ function Z() {
                                             claimedAt: new Date().toISOString(),
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: 10 * _.Z.Seconds.MINUTE
+                                            streamProgressSeconds: 10 * u.Z.Seconds.MINUTE
                                         })
                                     });
                             }
@@ -473,18 +473,18 @@ function Z() {
             }),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-lg/bold',
-                className: R.heading,
+                className: x.heading,
                 children: 'Component Previews'
             }),
             (0, n.jsxs)('div', {
-                className: R.componentPreviews,
+                className: x.componentPreviews,
                 children: [
-                    (0, n.jsxs)(m.Z, {
+                    (0, n.jsxs)(C.Z, {
                         withBorder: !0,
                         children: [
                             (0, n.jsx)(d.FormTitle, { children: 'Quest Bar' }),
                             (0, n.jsxs)('div', {
-                                className: R.questBarPreviewWrapper,
+                                className: x.questBarPreviewWrapper,
                                 children: [
                                     (null === (e = r.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null &&
                                         (0, n.jsx)(d.Text, {
@@ -493,33 +493,33 @@ function Z() {
                                             children: 'The Quest Bar is hidden when the user has claimed the reward.'
                                         }),
                                     (0, n.jsx)('div', {
-                                        className: R.questBarPreview,
-                                        children: (0, n.jsx)(T.p, {
+                                        className: x.questBarPreview,
+                                        children: (0, n.jsx)(I.p, {
                                             isPreview: !0,
                                             source: 'preview',
                                             questId: '0',
-                                            children: (0, n.jsx)(I.Z, { children: (0, n.jsx)(u.P, { quest: r }) })
+                                            children: (0, n.jsx)(T.Z, { children: (0, n.jsx)(E.P, { quest: r }) })
                                         })
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, n.jsxs)(m.Z, {
+                    (0, n.jsxs)(C.Z, {
                         children: [
                             (0, n.jsx)(d.FormTitle, { children: 'Gift Inventory' }),
-                            (0, n.jsx)(T.p, {
+                            (0, n.jsx)(I.p, {
                                 isPreview: !0,
                                 source: 'preview',
                                 questId: '0',
                                 children: (0, n.jsx)(S.Z, {
                                     quest: r,
-                                    location: E.jn.GIFT_INVENTORY_FOR_YOU
+                                    location: _.jn.GIFT_INVENTORY_FOR_YOU
                                 })
                             })
                         ]
                     }),
-                    (0, n.jsxs)(m.Z, {
+                    (0, n.jsxs)(C.Z, {
                         withBorder: !0,
                         children: [
                             (0, n.jsx)(d.FormTitle, { children: 'Channel Call Header' }),
@@ -530,13 +530,13 @@ function Z() {
                                     children: 'The Quest Channel Call Header is hidden when the user has claimed the reward.'
                                 }),
                             (0, n.jsx)('div', {
-                                className: R.questBarPreviewWrapper,
-                                children: (0, n.jsx)(T.p, {
+                                className: x.questBarPreviewWrapper,
+                                children: (0, n.jsx)(I.p, {
                                     isPreview: !0,
                                     source: 'preview',
                                     questId: '0',
                                     children: (0, n.jsx)('div', {
-                                        className: R.questChannelCallHeaderPreview,
+                                        className: x.questChannelCallHeaderPreview,
                                         children: (0, n.jsx)(N.Z, {
                                             channelId: '123',
                                             previewQuest: r,
@@ -548,7 +548,7 @@ function Z() {
                         ]
                     }),
                     (0, n.jsx)('div', {
-                        className: R.channelCallParticipationToggle,
+                        className: x.channelCallParticipationToggle,
                         children: (0, n.jsx)(d.FormItem, {
                             children: (0, n.jsx)(d.FormSwitch, {
                                 value: Z,
@@ -573,9 +573,9 @@ class v extends a.Component {
         let { error: e, renderKey: s } = this.state;
         return null != e
             ? (0, n.jsxs)('div', {
-                  className: R.errorBoundary,
+                  className: x.errorBoundary,
                   children: [
-                      (0, n.jsx)(d.CircleWarningIcon, { className: R.errorBoundaryIcon }),
+                      (0, n.jsx)(d.CircleWarningIcon, { className: x.errorBoundaryIcon }),
                       (0, n.jsx)(d.Heading, {
                           variant: 'heading-lg/semibold',
                           children: 'Something broke in the Quest preview tool :('
@@ -587,9 +587,9 @@ class v extends a.Component {
                       }),
                       null != e.message &&
                           (0, n.jsx)(d.Card, {
-                              className: R.errorMessageWrapper,
+                              className: x.errorMessageWrapper,
                               children: (0, n.jsx)('code', {
-                                  className: R.errorMessage,
+                                  className: x.errorMessage,
                                   children: e.message
                               })
                           })
@@ -599,11 +599,11 @@ class v extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'state', {
+            R(this, 'state', {
                 error: null,
                 renderKey: 0
             }),
-            x(this, 'handleResetState', () => {
+            R(this, 'handleResetState', () => {
                 this.setState((e) => ({
                     error: null,
                     renderKey: e.renderKey + 1

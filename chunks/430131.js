@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var n = t(735250);
@@ -12,27 +12,27 @@ var a = t(442837),
     l = t(52597),
     c = t(981631),
     d = t(689938),
-    _ = t(290605);
-function E(e) {
-    let { errors: s, pendingNick: t, currentNick: E, username: u, guild: I } = e,
-        T = null != t ? t : E,
-        S = (0, a.e7)([o.Z], () => o.Z.can(c.Plq.CHANGE_NICKNAME, I) || o.Z.can(c.Plq.MANAGE_NICKNAMES, I));
+    u = t(290605);
+function _(e) {
+    let { errors: s, pendingNick: t, currentNick: _, username: E, guild: T } = e,
+        I = null != t ? t : _,
+        S = (0, a.e7)([o.Z], () => o.Z.can(c.Plq.CHANGE_NICKNAME, T) || o.Z.can(c.Plq.MANAGE_NICKNAMES, T));
     return (0, n.jsxs)(r.Z, {
         title: d.Z.Messages.SERVER_NICKNAME,
         errors: s,
         children: [
             (0, n.jsx)(i.TextInput, {
-                value: null != T ? T : '',
-                placeholder: u,
+                value: null != I ? I : '',
+                placeholder: E,
                 maxLength: c.l$U,
                 onChange: function (e) {
-                    (0, l.wi)(e, E);
+                    (0, l.wi)(e, _);
                 },
                 disabled: !S
             }),
             !S &&
                 (0, n.jsx)(i.FormText, {
-                    className: _.nicknameDisabled,
+                    className: u.nicknameDisabled,
                     type: i.FormText.Types.DESCRIPTION,
                     children: d.Z.Messages.CHANGE_IDENTITY_NICKNAME_PERMISSIONS_DISABLED
                 })

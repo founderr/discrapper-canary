@@ -7,13 +7,13 @@ var n,
     l = t(570140),
     c = t(461655);
 let d = [];
-function _(e) {
+function u(e) {
     let { payment: s } = e,
         t = c.Z.createFromServer(s),
         n = d.findIndex((e) => e.id === s.id);
     -1 === n ? (d.push(t), d.sort((e, s) => s.createdAt.getTime() - e.createdAt.getTime())) : (d[n] = t), (d = [...d]);
 }
-class E extends (n = o.ZP.Store) {
+class _ extends (n = o.ZP.Store) {
     getPayment(e) {
         return d.find((s) => s.id === e);
     }
@@ -22,7 +22,7 @@ class E extends (n = o.ZP.Store) {
     }
 }
 (r = 'PaymentStore'),
-    (i = 'displayName') in (a = E)
+    (i = 'displayName') in (a = _)
         ? Object.defineProperty(a, i, {
               value: r,
               enumerable: !0,
@@ -30,7 +30,7 @@ class E extends (n = o.ZP.Store) {
               writable: !0
           })
         : (a[i] = r),
-    (s.Z = new E(l.Z, {
+    (s.Z = new _(l.Z, {
         BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
             let { payments: s } = e;
             for (let e of s) {
@@ -40,8 +40,8 @@ class E extends (n = o.ZP.Store) {
             }
             d.sort((e, s) => s.createdAt.getTime() - e.createdAt.getTime()), (d = [...d]);
         },
-        PAYMENT_UPDATE: _,
-        BILLING_PAYMENT_FETCH_SUCCESS: _,
+        PAYMENT_UPDATE: u,
+        BILLING_PAYMENT_FETCH_SUCCESS: u,
         LOGOUT: function () {
             d = [];
         }

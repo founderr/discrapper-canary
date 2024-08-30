@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return _;
+        return u;
     }
 });
 var n = t(735250);
@@ -12,23 +12,23 @@ var a = t(120356),
     l = t(993413),
     c = t(689938),
     d = t(308152);
-function _(e) {
-    let { children: s, className: t, layoutClassName: a, profilePreview: _, previewTitle: E } = e,
-        u = () =>
+function u(e) {
+    let { children: s, className: t, layoutClassName: a, profilePreview: u, previewTitle: _ } = e,
+        E = () =>
             (0, n.jsx)(l.Z, {
-                title: null != E ? E : c.Z.Messages.PROFILE_CUSTOMIZATION_PREVIEW,
+                title: null != _ ? _ : c.Z.Messages.PROFILE_CUSTOMIZATION_PREVIEW,
                 className: d.preview,
-                children: _
+                children: u
             });
     return (0, n.jsx)('div', {
         className: t,
         children: (0, n.jsxs)(o.FormSection, {
             className: d.profileCustomizationSection,
             children: [
-                r.tq && u(),
+                r.tq && E(),
                 (0, n.jsxs)('div', {
                     className: i()(d.baseLayout, a),
-                    children: [s, !r.tq && u()]
+                    children: [s, !r.tq && E()]
                 })
             ]
         })

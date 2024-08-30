@@ -1,6 +1,6 @@
 t.d(s, {
     L: function () {
-        return E;
+        return _;
     }
 }),
     t(47120);
@@ -12,25 +12,25 @@ var n = t(735250),
     l = t(689938),
     c = t(453951),
     d = t(680674),
-    _ = t(74316);
-let E = a.memo(function (e) {
-    let { message: s, handleClick: t, handleClose: i, buttonText: E, useInitialGlow: u, useGlowOnHover: I, handleImageClick: T, className: S } = e,
-        [N, C] = a.useState(u);
+    u = t(74316);
+let _ = a.memo(function (e) {
+    let { message: s, handleClick: t, handleClose: i, buttonText: _, useInitialGlow: E, useGlowOnHover: T, handleImageClick: I, className: S } = e,
+        [N, m] = a.useState(E);
     return (
         a.useEffect(() => {
-            setTimeout(() => C(!1), 3000);
+            setTimeout(() => m(!1), 3000);
         }, []),
         (0, n.jsx)('div', {
             className: c.wrapper,
             children: (0, n.jsxs)('div', {
-                className: r()(c.content, N ? c.initialGlowUp : c.initialGlowDown, I ? c.contentGlow : null, S),
+                className: r()(c.content, N ? c.initialGlowUp : c.initialGlowDown, T ? c.contentGlow : null, S),
                 children: [
                     (0, n.jsxs)('div', {
                         className: c.innerContent,
                         children: [
                             (0, n.jsx)('div', {
-                                className: r()(c.imageWrapper, void 0 !== T ? c.imageHover : null),
-                                ...(void 0 !== T ? { onClick: T } : {}),
+                                className: r()(c.imageWrapper, void 0 !== I ? c.imageHover : null),
+                                ...(void 0 !== I ? { onClick: I } : {}),
                                 children: (0, n.jsx)('img', {
                                     alt: '',
                                     className: c.image,
@@ -59,9 +59,9 @@ let E = a.memo(function (e) {
                                 (0, n.jsx)('img', {
                                     alt: '',
                                     className: c.buttonNitroIcon,
-                                    src: _
+                                    src: u
                                 }),
-                                E
+                                _
                             ]
                         })
                     }),

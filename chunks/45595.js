@@ -1,9 +1,9 @@
 t.d(s, {
     H: function () {
-        return E;
+        return _;
     },
     Z: function () {
-        return u;
+        return E;
     }
 }),
     t(47120);
@@ -15,21 +15,21 @@ var n = t(735250),
     l = t(772848),
     c = t(110924),
     d = t(725424);
-let _ = (0, l.Z)();
-function E() {
+let u = (0, l.Z)();
+function _() {
     return (0, n.jsx)('div', {
-        id: _,
+        id: u,
         className: d.noticeBar
     });
 }
-function u(e) {
+function E(e) {
     let { show: s, children: t } = e,
         [n, i] = a.useState(!1),
-        [l, E] = a.useState(!1),
-        u = (0, c.Z)(s);
-    !s || !1 !== u || n || l ? !s && u && !l && !n && (E(!0), setTimeout(() => E(!1), 500)) : (i(!0), setTimeout(() => i(!1), 500));
-    let I = window.document.getElementById(_);
-    return null != t && a.isValidElement(t) && null != I && (s || n || l)
+        [l, _] = a.useState(!1),
+        E = (0, c.Z)(s);
+    !s || !1 !== E || n || l ? !s && E && !l && !n && (_(!0), setTimeout(() => _(!1), 500)) : (i(!0), setTimeout(() => i(!1), 500));
+    let T = window.document.getElementById(u);
+    return null != t && a.isValidElement(t) && null != T && (s || n || l)
         ? o.createPortal(
               a.cloneElement(t, {
                   className: r()({
@@ -37,7 +37,7 @@ function u(e) {
                       [d.slideOut]: l
                   })
               }),
-              I
+              T
           )
         : null;
 }

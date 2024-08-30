@@ -11,9 +11,9 @@ let r = [];
 function o(e) {
     let { visible: s, autocompleterResultTypes: t, autocompleterOptions: o, autocompleterBeforeCreateSearchContext: l } = e,
         [c, d] = n.useState(''),
-        [_, E] = n.useState(r),
-        u = n.useCallback((e, s) => {
-            '' === (s = s.trim()).trim() ? E(r) : E(e);
+        [u, _] = n.useState(r),
+        E = n.useCallback((e, s) => {
+            '' === (s = s.trim()).trim() ? _(r) : _(e);
         }, []);
     n.useEffect(
         () =>
@@ -22,19 +22,19 @@ function o(e) {
             }),
         []
     );
-    let [I] = n.useState(() => new i.Z(u, t, void 0, o));
+    let [T] = n.useState(() => new i.Z(E, t, void 0, o));
     return (
         n.useEffect(() => {
-            s ? (null == l || l(I), I.createSearchContext()) : (I.clean(), d(''));
-        }, [s, I, l]),
+            s ? (null == l || l(T), T.createSearchContext()) : (T.clean(), d(''));
+        }, [s, T, l]),
         {
-            queryResults: _,
+            queryResults: u,
             query: c,
             updateQuery: n.useCallback(
                 (e) => {
-                    d(e), I.search(e);
+                    d(e), T.search(e);
                 },
-                [I]
+                [T]
             )
         }
     );

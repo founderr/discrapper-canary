@@ -12,7 +12,7 @@ var a = t(481060),
     l = t(105756);
 function c(e) {
     let { className: s, currentUser: t, handleDisableAccount: c, handleDeleteAccount: d } = e,
-        _ = t.isClaimed();
+        u = t.isClaimed();
     return (0, n.jsx)(i.F, {
         setting: r.s6.ACCOUNT_DISABLE_ACCOUNT,
         children: (0, n.jsxs)(a.FormSection, {
@@ -22,12 +22,12 @@ function c(e) {
                 (0, n.jsx)(a.FormText, {
                     className: l.description,
                     type: a.FormText.Types.DESCRIPTION,
-                    children: _ ? o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_DESCRIPTION : o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_DESCRIPTION_UNCLAIMED
+                    children: u ? o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_DESCRIPTION : o.Z.Messages.USER_SETTINGS_ACCOUNT_REMOVAL_DESCRIPTION_UNCLAIMED
                 }),
                 (0, n.jsxs)('div', {
                     className: l.buttonContainer,
                     children: [
-                        _
+                        u
                             ? (0, n.jsx)(a.Button, {
                                   className: l.disableButton,
                                   look: a.ButtonLooks.FILLED,

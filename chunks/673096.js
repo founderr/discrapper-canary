@@ -9,13 +9,13 @@ let c = [];
 function d() {
     c = [];
 }
-class _ extends (n = o.ZP.Store) {
+class u extends (n = o.ZP.Store) {
     getSessions() {
         return c;
     }
 }
 (r = 'AuthSessionsStore'),
-    (i = 'displayName') in (a = _)
+    (i = 'displayName') in (a = u)
         ? Object.defineProperty(a, i, {
               value: r,
               enumerable: !0,
@@ -23,7 +23,7 @@ class _ extends (n = o.ZP.Store) {
               writable: !0
           })
         : (a[i] = r),
-    (s.Z = new _(l.Z, {
+    (s.Z = new u(l.Z, {
         LOGOUT: d,
         LOGIN_SUCCESS: d,
         FETCH_AUTH_SESSIONS_SUCCESS: function (e) {

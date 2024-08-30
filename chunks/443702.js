@@ -11,50 +11,50 @@ var n = t(735250),
     l = t(481060),
     c = t(570140),
     d = t(355467),
-    _ = t(230711),
-    E = t(497321),
-    u = t(231428),
-    I = t(390954),
-    T = t(89057),
+    u = t(230711),
+    _ = t(497321),
+    E = t(231428),
+    T = t(390954),
+    I = t(89057),
     S = t(567038),
     N = t(921801),
-    C = t(246946),
-    m = t(594174),
-    A = t(351402),
-    O = t(853872),
-    g = t(78839),
-    h = t(706454),
+    m = t(246946),
+    C = t(594174),
+    g = t(351402),
+    A = t(853872),
+    h = t(78839),
+    O = t(706454),
     p = t(726985),
-    R = t(981631),
-    x = t(689938),
-    M = t(451723);
-class f extends a.PureComponent {
+    x = t(981631),
+    R = t(689938),
+    f = t(451723);
+class M extends a.PureComponent {
     componentDidMount() {
         c.Z.wait(() => {
             d.tZ(), d.jg();
         });
     }
     handleRedemptionRedirect() {
-        _.Z.setSection(R.oAB.INVENTORY);
+        u.Z.setSection(x.oAB.INVENTORY);
     }
     render() {
         let { syncing: e, hide: s, paymentSources: t, defaultPaymentSourceId: a, locale: i, premiumSubscription: r, isRemovingPaymentSource: o, isUpdatingPaymentSource: c } = this.props;
         return s
-            ? (0, n.jsx)(E.Z, {})
+            ? (0, n.jsx)(_.Z, {})
             : (0, n.jsxs)('div', {
-                  className: M.__invalid_userSettingsBilling,
+                  className: f.__invalid_userSettingsBilling,
                   children: [
                       e && 0 === Object.keys(t).length
                           ? (0, n.jsx)('div', {
-                                className: M.syncing,
+                                className: f.syncing,
                                 children: (0, n.jsx)(l.Spinner, {})
                             })
                           : (0, n.jsx)(N.F, {
                                 setting: p.s6.BILLING_PAYMENT_METHODS,
-                                children: (0, n.jsx)(I.Z, {
+                                children: (0, n.jsx)(T.Z, {
                                     paymentSources: t,
                                     defaultPaymentSourceId: a,
-                                    premiumSubscriptionPaymentSourceId: null != r && r.status !== R.O0b.CANCELED ? r.paymentSourceId : null,
+                                    premiumSubscriptionPaymentSourceId: null != r && r.status !== x.O0b.CANCELED ? r.paymentSourceId : null,
                                     locale: i,
                                     removing: o,
                                     submitting: c
@@ -63,20 +63,20 @@ class f extends a.PureComponent {
                       (0, n.jsx)(N.F, {
                           setting: p.s6.BILLING_TRANSACTION_HISTORY,
                           children: (0, n.jsx)('div', {
-                              className: M.paymentHistory,
+                              className: f.paymentHistory,
                               children: (0, n.jsxs)(l.HeadingLevel, {
                                   component: (0, n.jsx)(l.FormTitle, {
                                       tag: 'h1',
-                                      children: x.Z.Messages.BILLING_PAYMENT_HISTORY
+                                      children: R.Z.Messages.BILLING_PAYMENT_HISTORY
                                   }),
-                                  children: [(0, n.jsx)(T.oQ, {}), (0, n.jsx)(u.Z, { locale: i })]
+                                  children: [(0, n.jsx)(I.oQ, {}), (0, n.jsx)(E.Z, { locale: i })]
                               })
                           })
                       }),
                       (0, n.jsx)(l.Card, {
-                          className: M.codeRedemptionRedirect,
+                          className: f.codeRedemptionRedirect,
                           type: l.Card.Types.CUSTOM,
-                          children: x.Z.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({ onClick: this.handleRedemptionRedirect })
+                          children: R.Z.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({ onClick: this.handleRedemptionRedirect })
                       }),
                       (0, n.jsx)(S.Z, {})
                   ]
@@ -84,24 +84,24 @@ class f extends a.PureComponent {
     }
 }
 function D() {
-    let e = (0, o.cj)([h.default, A.Z, O.Z, m.default, C.Z, g.ZP], () => {
-        let e = g.ZP.getPremiumTypeSubscription(),
-            s = m.default.getCurrentUser();
+    let e = (0, o.cj)([O.default, g.Z, A.Z, C.default, m.Z, h.ZP], () => {
+        let e = h.ZP.getPremiumTypeSubscription(),
+            s = C.default.getCurrentUser();
         return (
             r()(null != s, 'UserSettingsBilling: currentUser cannot be undefined'),
             {
-                locale: h.default.locale,
-                hide: C.Z.enabled,
+                locale: O.default.locale,
+                hide: m.Z.enabled,
                 isClaimed: s.isClaimed(),
                 isVerified: s.verified,
                 premiumSubscription: e,
-                defaultPaymentSourceId: O.Z.defaultPaymentSourceId,
-                paymentSources: O.Z.paymentSources,
-                syncing: A.Z.isSyncing,
-                isRemovingPaymentSource: A.Z.isRemovingPaymentSource,
-                isUpdatingPaymentSource: A.Z.isUpdatingPaymentSource
+                defaultPaymentSourceId: A.Z.defaultPaymentSourceId,
+                paymentSources: A.Z.paymentSources,
+                syncing: g.Z.isSyncing,
+                isRemovingPaymentSource: g.Z.isRemovingPaymentSource,
+                isUpdatingPaymentSource: g.Z.isUpdatingPaymentSource
             }
         );
     });
-    return (0, n.jsx)(f, { ...e });
+    return (0, n.jsx)(M, { ...e });
 }

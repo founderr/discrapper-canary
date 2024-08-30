@@ -1,27 +1,27 @@
-I.d(_, {
+n.d(i, {
     s: function () {
-        return N;
+        return r;
     }
 });
-var A = I(735250);
-I(470079);
-var O = I(481060),
-    T = I(621145),
-    S = I(689938),
-    C = I(473860);
-let N = (E) => {
-    let { flaggedContent: _ } = E;
-    return 0 === _.length
+var t = n(735250);
+n(470079);
+var a = n(481060),
+    l = n(621145),
+    s = n(689938),
+    o = n(473860);
+let r = (e) => {
+    let { flaggedContent: i } = e;
+    return 0 === i.length
         ? null
-        : (0, A.jsxs)('div', {
-              className: C.classificationEvidenceContainer,
+        : (0, t.jsxs)('div', {
+              className: o.classificationEvidenceContainer,
               children: [
-                  (0, A.jsx)(O.Text, {
+                  (0, t.jsx)(a.Text, {
                       variant: 'eyebrow',
                       color: 'text-muted',
-                      children: S.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
+                      children: s.Z.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
                   }),
-                  (0, A.jsx)(T.Z, { flaggedContent: _ })
+                  (0, t.jsx)(l.Z, { flaggedContent: i })
               ]
           });
 };

@@ -9,11 +9,11 @@ var a = t(481060),
     i = t(993413),
     r = t(689938);
 function o(e) {
-    let { sectionTitle: s, errors: t, onPronounsChange: o, pendingPronouns: l, placeholder: c, currentPronouns: d, disabled: _ = !1 } = e;
+    let { sectionTitle: s, errors: t, onPronounsChange: o, pendingPronouns: l, placeholder: c, currentPronouns: d, disabled: u = !1 } = e;
     return (0, n.jsx)(i.Z, {
         title: s,
         errors: t,
-        disabled: _,
+        disabled: u,
         children: (0, n.jsx)(a.TextInput, {
             placeholder: null != c ? c : r.Z.Messages.PROFILE_CUSTOMIZATION_PRONOUNS_PLACEHOLDER,
             maxLength: 40,
@@ -21,7 +21,7 @@ function o(e) {
             onChange: function (e) {
                 o(e === d ? void 0 : e);
             },
-            disabled: _
+            disabled: u
         })
     });
 }

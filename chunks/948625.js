@@ -27,22 +27,22 @@ var a = n(180650),
     I = n(769411),
     E = n(125257),
     v = n(6412),
-    T = n(238286);
-let S = () => o.Z.Messages.LIMITED_TIME,
-    L = () => o.Z.Messages.MOST_POPULAR,
+    L = n(238286);
+let T = () => o.Z.Messages.LIMITED_TIME,
+    S = () => o.Z.Messages.MOST_POPULAR,
     N = () => o.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
-    k = () => o.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
-    O = () => o.Z.Messages.TAKE_ME_THERE,
+    O = () => o.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
+    k = () => o.Z.Messages.TAKE_ME_THERE,
     B = [
         {
             id: 'category_tide',
-            backgroundStaticSrc: T,
+            backgroundStaticSrc: L,
             overflowSrcStatic: v,
             logoSrc: E,
             textColor: (0, r.Lq)(s.Ilk.WHITE_100),
-            badge: { label: S },
+            badge: { label: T },
             cta: {
-                label: O,
+                label: k,
                 categorySkuId: a.T.TIDE
             }
         },
@@ -55,9 +55,9 @@ let S = () => o.Z.Messages.LIMITED_TIME,
             overflowSrcAnimated: c,
             logoSrc: l,
             textColor: (0, r.Lq)(s.Ilk.BLACK_500),
-            badge: { label: L },
+            badge: { label: S },
             cta: {
-                label: O,
+                label: k,
                 categorySkuId: a.T.ANIME_V2
             }
         },
@@ -69,7 +69,7 @@ let S = () => o.Z.Messages.LIMITED_TIME,
             textColor: (0, r.Lq)(s.Ilk.WHITE_100),
             badge: { label: N },
             cta: {
-                label: O,
+                label: k,
                 categorySkuId: a.T.GALAXY
             }
         },
@@ -79,9 +79,9 @@ let S = () => o.Z.Messages.LIMITED_TIME,
             overflowSrcStatic: _,
             logoSrc: m,
             textColor: (0, r.Lq)(s.Ilk.WHITE_100),
-            badge: { label: k },
+            badge: { label: O },
             cta: {
-                label: O,
+                label: k,
                 categorySkuId: a.T.DISXCORE
             }
         },
@@ -91,9 +91,9 @@ let S = () => o.Z.Messages.LIMITED_TIME,
             backgroundVideoSrc: p,
             logoSrc: g,
             textColor: (0, r.Lq)(s.Ilk.WHITE_100),
-            badge: { label: L },
+            badge: { label: S },
             cta: {
-                label: O,
+                label: k,
                 categorySkuId: a.T.CYBERPUNK
             }
         }

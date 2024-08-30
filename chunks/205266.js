@@ -1,6 +1,6 @@
 t.d(s, {
     t: function () {
-        return _;
+        return u;
     }
 });
 var n = t(735250);
@@ -12,7 +12,7 @@ var a = t(704215),
     l = t(981631),
     c = t(689938),
     d = t(359734);
-let _ = () => {
+let u = () => {
     let e = r.Z.getArticleURL(l.BhN.PS_CONNECTION);
     return (0, n.jsx)(o.t, {
         title: c.Z.Messages.PS_TWO_WAY_UPSELL_TITLE,

@@ -7,27 +7,27 @@ var a = t(873546),
     l = t(892729),
     c = t(949914),
     d = t(689938),
-    _ = t(24503);
+    u = t(24503);
 s.Z = (e) => {
     let { onGoBack: s } = e,
         t = (0, l.Z)(),
-        { loading: E } = (0, o.sp)(t);
-    return ((0, r.Z)(a.tq ? 'role-subscriptions-user-setting' : void 0), E)
+        { loading: _ } = (0, o.sp)(t);
+    return ((0, r.Z)(a.tq ? 'role-subscriptions-user-setting' : void 0), _)
         ? (0, n.jsx)(i.Spinner, {})
         : 0 === t.length
           ? null
           : (0, n.jsxs)('div', {
-                className: _.__invalid_container,
+                className: u.__invalid_container,
                 children: [
                     (0, n.jsxs)(i.Button, {
                         look: i.Button.Looks.BLANK,
-                        innerClassName: _.backButtonContents,
+                        innerClassName: u.backButtonContents,
                         onClick: s,
                         children: [
                             (0, n.jsx)(i.ArrowSmallRightIcon, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: _.arrowIcon
+                                className: u.arrowIcon
                             }),
                             d.Z.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_SUBSCRIPTIONS_PAGE_BACK_BUTTON_CTA
                         ]
@@ -39,11 +39,11 @@ s.Z = (e) => {
                     }),
                     (0, n.jsx)(i.Text, {
                         variant: 'text-sm/normal',
-                        className: _.pageDescription,
+                        className: u.pageDescription,
                         children: d.Z.Messages.GUILD_ROLE_MANAGE_SUBSCRIPTION_PAGE_DESCRIPTION
                     }),
                     (0, n.jsx)('div', {
-                        className: _.subscriptionsContainer,
+                        className: u.subscriptionsContainer,
                         children: t.map((e) => (0, n.jsx)(c.Z, { subscription: e }, e.id))
                     })
                 ]

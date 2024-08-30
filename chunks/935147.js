@@ -11,24 +11,24 @@ var n = t(735250),
     l = t(634894),
     c = t(100527),
     d = t(906732),
-    _ = t(588126),
-    E = t(175756),
-    u = t(104494),
-    I = t(639119),
-    T = t(165583),
+    u = t(588126),
+    _ = t(175756),
+    E = t(104494),
+    T = t(639119),
+    I = t(165583),
     S = t(197115),
     N = t(350327),
-    C = t(996073),
-    m = t(25990),
-    A = t(626135),
-    O = t(74538),
-    g = t(296810),
-    h = t(921813),
+    m = t(996073),
+    C = t(25990),
+    g = t(626135),
+    A = t(74538),
+    h = t(296810),
+    O = t(921813),
     p = t(433411),
-    R = t(532432),
-    x = t(504983),
-    M = t(134795),
-    f = t(513901),
+    x = t(532432),
+    R = t(504983),
+    f = t(134795),
+    M = t(513901),
     D = t(451392),
     P = t(981631),
     L = t(474936),
@@ -39,43 +39,43 @@ function j(e) {
     var s, j, B;
     let { user: U } = e,
         { reducedMotion: G } = a.useContext(r.AccessibilityPreferencesContext),
-        F = O.ZP.isPremium(U),
+        F = A.ZP.isPremium(U),
         {
             pendingAvatar: y,
             pendingBanner: V,
-            pendingThemeColors: Y,
-            pendingPronouns: w,
-            pendingBio: H,
-            tryItOutThemeColors: k,
+            pendingThemeColors: w,
+            pendingPronouns: k,
+            pendingBio: Y,
+            tryItOutThemeColors: H,
             tryItOutAvatar: W,
             tryItOutBanner: K,
             tryItOutAvatarDecoration: z,
             tryItOutProfileEffectId: Q
-        } = (0, i.cj)([m.Z], () => {
-            let e = m.Z.getAllPending(),
-                s = m.Z.getErrors(),
-                t = m.Z.getAllTryItOut();
+        } = (0, i.cj)([C.Z], () => {
+            let e = C.Z.getAllPending(),
+                s = C.Z.getErrors(),
+                t = C.Z.getAllTryItOut();
             return {
                 ...e,
                 ...t,
                 errors: s
             };
         }),
-        X = (0, _.Z)(z),
-        q = (0, E.Z)(Q),
+        X = (0, u.Z)(z),
+        q = (0, _.Z)(Q),
         J = a.useRef(null);
-    (0, C.Z)(J, b.Y_.TRY_IT_OUT);
+    (0, m.Z)(J, b.Y_.TRY_IT_OUT);
     let { analyticsLocations: $, sourceAnalyticsLocations: ee } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM);
     a.useEffect(() => {
-        A.default.track(P.rMx.PREMIUM_UPSELL_VIEWED, {
+        g.default.track(P.rMx.PREMIUM_UPSELL_VIEWED, {
             type: L.cd.PREMIUM_PROFILE_TRY_IT_OUT,
             location: { page: P.ZY5.USER_SETTINGS },
             location_stack: ee
         });
     }, [ee, U]);
-    let es = (null === (j = (0, I.N)()) || void 0 === j ? void 0 : null === (s = j.subscription_trial) || void 0 === s ? void 0 : s.sku_id) === L.Si.TIER_2,
-        et = (0, u.Ng)(),
-        en = (0, u.Wp)(et, L.Si.TIER_2),
+    let es = (null === (j = (0, T.N)()) || void 0 === j ? void 0 : null === (s = j.subscription_trial) || void 0 === s ? void 0 : s.sku_id) === L.Si.TIER_2,
+        et = (0, E.Ng)(),
+        en = (0, E.Wp)(et, L.Si.TIER_2),
         ea = 'TryOutPremiumSection';
     return (
         (0, l.j)({
@@ -88,14 +88,14 @@ function j(e) {
         }),
         (0, n.jsx)(d.Gt, {
             value: $,
-            children: (0, n.jsxs)(x.Z, {
+            children: (0, n.jsxs)(R.Z, {
                 ref: J,
                 className: v.tryItOutSection,
-                type: x.Y.PREMIUM,
+                type: R.Y.PREMIUM,
                 isShown: !0,
                 hasBackground: !0,
                 children: [
-                    (0, n.jsx)(g.Z, {
+                    (0, n.jsx)(h.Z, {
                         layoutClassName: v.tryItOutLayout,
                         previewTitle: (0, n.jsxs)(n.Fragment, {
                             children: [
@@ -107,13 +107,13 @@ function j(e) {
                                 Z.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_PREVIEW
                             ]
                         }),
-                        profilePreview: (0, n.jsx)(h.Z, {
+                        profilePreview: (0, n.jsx)(O.Z, {
                             user: U,
-                            pendingPronouns: w,
-                            pendingBio: H,
+                            pendingPronouns: k,
+                            pendingBio: Y,
                             pendingBanner: null !== (B = null != K ? K : V) && void 0 !== B ? B : t(466045),
                             pendingAvatar: null != W ? W : y,
-                            pendingThemeColors: null != k ? k : Y,
+                            pendingThemeColors: null != H ? H : w,
                             pendingAvatarDecoration: X,
                             pendingProfileEffectId: q,
                             avatarClassName: null != W || null != y || G.enabled ? void 0 : v.spinningAvatar,
@@ -141,19 +141,19 @@ function j(e) {
                                     className: v.customizationSection,
                                     user: U,
                                     pendingAvatar: null != W ? W : y,
-                                    pendingColors: null != k ? k : Y,
+                                    pendingColors: null != H ? H : w,
                                     onThemeColorsChange: N.rf,
                                     showPremiumIcon: !1,
                                     preventDisabled: !0
                                 }),
-                                (0, n.jsx)(M.Z, {
+                                (0, n.jsx)(f.Z, {
                                     className: v.customizationSection,
                                     isTryItOutFlow: !0,
                                     showRemoveBannerButton: null != K,
                                     onBannerChange: N.f4,
                                     showPremiumIcon: !1
                                 }),
-                                (0, n.jsx)(R.Z, {
+                                (0, n.jsx)(x.Z, {
                                     className: v.customizationSection,
                                     isTryItOutFlow: !0,
                                     onAvatarChange: N.c_,
@@ -172,7 +172,7 @@ function j(e) {
                                     'decoration'
                                 ),
                                 (0, n.jsx)(
-                                    f.Z,
+                                    M.Z,
                                     {
                                         className: v.customizationSection,
                                         isTryItOutFlow: !0,
@@ -192,7 +192,7 @@ function j(e) {
                                             }),
                                             (0, n.jsx)(S.Z, {
                                                 onSubscribeModalClose: (e) => {
-                                                    e && ((0, o.I5)(W), (0, N.g_)(K), (0, N.z5)(k));
+                                                    e && ((0, o.I5)(W), (0, N.g_)(K), (0, N.z5)(H));
                                                 },
                                                 subscriptionTier: L.Si.TIER_2,
                                                 className: v.premiumSubscribeButton,
@@ -208,7 +208,7 @@ function j(e) {
                         (0, n.jsxs)('div', {
                             children: [
                                 (0, n.jsx)('div', { className: v.premiumTier2Divider }),
-                                (0, n.jsx)(T.ZP, {
+                                (0, n.jsx)(I.ZP, {
                                     type: L.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                     subscriptionTier: L.Si.TIER_2
                                 })

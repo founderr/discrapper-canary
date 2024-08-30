@@ -12,37 +12,37 @@ var a = t(442837),
     l = t(963249),
     c = t(514851),
     d = t(922518),
-    _ = t(643939),
-    E = t(45595),
-    u = t(474936),
-    I = t(981631),
-    T = t(689938);
+    u = t(643939),
+    _ = t(45595),
+    E = t(474936),
+    T = t(981631),
+    I = t(689938);
 function S() {
     let e = (0, a.e7)([d.Z], () => d.Z.shouldDisplayUpsell(), []),
-        s = c.Z.getForCampaign(I.$Dd.CASH_APP_PAY_AWARENESS),
+        s = c.Z.getForCampaign(T.$Dd.CASH_APP_PAY_AWARENESS),
         t = null != s && !0 === s.is_eligible;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(E.H, {}),
-            (0, n.jsx)(E.Z, {
+            (0, n.jsx)(_.H, {}),
+            (0, n.jsx)(_.Z, {
                 show: t && e,
-                children: (0, n.jsx)(_.L, {
-                    message: T.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_UPSELL_CONTENT,
+                children: (0, n.jsx)(u.L, {
+                    message: I.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_UPSELL_CONTENT,
                     handleClick: () => {
                         i.Z.dispatch({ type: 'CASH_APP_PAY_AWARENESS_UPSELL_CTA_CLICKED' }),
                             (0, l.Z)({
-                                subscriptionTier: u.Si.TIER_2,
+                                subscriptionTier: E.Si.TIER_2,
                                 analyticsLocations: [o.Z.CASH_APP_PAY_AWARENESS_NON_NITRO_FLOW_UPSELL],
-                                analyticsLocation: I.Sbl.CASH_APP_PAY_AWARENESS_NON_NITRO_FLOW_UPSELL
+                                analyticsLocation: T.Sbl.CASH_APP_PAY_AWARENESS_NON_NITRO_FLOW_UPSELL
                             });
                     },
                     handleClose: () => {
                         i.Z.dispatch({ type: 'CASH_APP_PAY_AWARENESS_UPSELL_DISMISSED' });
                     },
                     handleImageClick: () => {
-                        r.Z.open(I.oAB.PREMIUM), i.Z.dispatch({ type: 'CASH_APP_PAY_AWARENESS_UPSELL_DISMISSED' });
+                        r.Z.open(T.oAB.PREMIUM), i.Z.dispatch({ type: 'CASH_APP_PAY_AWARENESS_UPSELL_DISMISSED' });
                     },
-                    buttonText: T.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_UPSELL_CTA,
+                    buttonText: I.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_UPSELL_CTA,
                     useInitialGlow: !0,
                     useGlowOnHover: !0
                 })

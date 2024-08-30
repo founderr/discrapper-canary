@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return u;
+        return E;
     }
 });
 var n = t(735250);
@@ -12,30 +12,30 @@ var a = t(399606),
     l = t(63063),
     c = t(981631),
     d = t(65154),
-    _ = t(689938),
-    E = t(488535);
-function u() {
+    u = t(689938),
+    _ = t(488535);
+function E() {
     return (0, a.e7)([o.Z], () => o.Z.supports(d.AN.LOOPBACK))
         ? (0, n.jsx)('div', {
-              className: E.micTest,
+              className: _.micTest,
               children: (0, n.jsx)(r.Z, {
-                  title: _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_TITLE,
-                  description: _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_DESCRIPTION,
+                  title: u.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_TITLE,
+                  description: u.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_DESCRIPTION,
                   notchBackground: r._.GRAY,
-                  captionVoice: _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_VOICE_CAPTION,
+                  captionVoice: u.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_VOICE_CAPTION,
                   captionNoVoice: (0, n.jsxs)(n.Fragment, {
                       children: [
-                          _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_VOICE_NO_INPUT_NOTICE,
+                          u.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_VOICE_NO_INPUT_NOTICE,
                           (0, n.jsx)(i.Anchor, {
-                              className: E.micTestHelpLink,
+                              className: _.micTestHelpLink,
                               href: l.Z.getArticleURL(c.BhN.NO_INPUT_DETECTED),
-                              children: _.Z.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
+                              children: u.Z.Messages.NOTICE_NO_INPUT_DETECTED_HELP_LINK_TEXT
                           })
                       ]
                   }),
-                  buttonTest: _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_BUTTON_INACTIVE,
-                  buttonStop: _.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_BUTTON_ACTIVE,
-                  buttonClassName: E.micTestButton,
+                  buttonTest: u.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_BUTTON_INACTIVE,
+                  buttonStop: u.Z.Messages.USER_SETTINGS_VOICE_MIC_TEST_BUTTON_ACTIVE,
+                  buttonClassName: _.micTestButton,
                   buttonColor: i.Button.Colors.BRAND,
                   location: {
                       page: c.ZY5.USER_SETTINGS,

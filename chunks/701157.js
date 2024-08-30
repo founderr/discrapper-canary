@@ -7,43 +7,43 @@ var n = t(735250),
     l = t(771845),
     c = t(11844),
     d = t(300037),
-    _ = t(689938),
-    E = t(127114);
+    u = t(689938),
+    _ = t(127114);
 s.Z = function (e) {
     let { hasAppliedGuildBoosts: s, subscriptionIsPausedOrPausePending: t } = e,
-        u = (0, i.e7)([o.Z], () => o.Z.affinities),
-        I = (0, i.e7)([l.ZP], () => l.ZP.getFlattenedGuildIds()),
-        T = a.useMemo(() => {
-            let e = u.slice(0, 3).map((e) => e.guildId);
-            for (let s = 0; s < I.length && !(e.length >= 3); s++) {
-                let t = I[s];
+        E = (0, i.e7)([o.Z], () => o.Z.affinities),
+        T = (0, i.e7)([l.ZP], () => l.ZP.getFlattenedGuildIds()),
+        I = a.useMemo(() => {
+            let e = E.slice(0, 3).map((e) => e.guildId);
+            for (let s = 0; s < T.length && !(e.length >= 3); s++) {
+                let t = T[s];
                 !e.includes(t) && e.push(t);
             }
             return e;
-        }, [u, I]);
-    return 0 === T.length
+        }, [E, T]);
+    return 0 === I.length
         ? null
         : (0, n.jsxs)('div', {
-              className: E.wrapper,
+              className: _.wrapper,
               children: [
                   s &&
                       (0, n.jsx)(r.Heading, {
                           variant: 'heading-lg/semibold',
-                          className: E.header,
-                          children: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_RECOMMENDED_SERVERS_HEADING
+                          className: _.header,
+                          children: u.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_RECOMMENDED_SERVERS_HEADING
                       }),
-                  T.map((e) =>
+                  I.map((e) =>
                       (0, n.jsx)(
                           d.Z,
                           {
-                              className: E.recommendedServerCard,
+                              className: _.recommendedServerCard,
                               guildId: e,
                               boostingVariant: !0
                           },
                           e
                       )
                   ),
-                  I.length > 3 && !1 === t && (0, n.jsx)(c.Z, {})
+                  T.length > 3 && !1 === t && (0, n.jsx)(c.Z, {})
               ]
           });
 };

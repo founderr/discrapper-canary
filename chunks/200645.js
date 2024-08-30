@@ -6,8 +6,8 @@ var n = t(735250),
     l = t(358085),
     c = t(998502),
     d = t(689938),
-    _ = t(224499);
-function E(e, s, t) {
+    u = t(224499);
+function _(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -20,7 +20,7 @@ function E(e, s, t) {
         e
     );
 }
-class u extends a.PureComponent {
+class E extends a.PureComponent {
     async componentDidMount() {
         this.setState({
             openOnStartup: await c.ZP.getSetting('OPEN_ON_STARTUP', !0),
@@ -37,7 +37,7 @@ class u extends a.PureComponent {
             children: [
                 (0, n.jsx)(o.FormTitle, { children: d.Z.Messages.USER_SETTINGS_STARTUP_BEHAVIOR }),
                 (0, n.jsx)(o.FormSwitch, {
-                    className: _.marginBottom20,
+                    className: u.marginBottom20,
                     value: e,
                     note: d.Z.Messages.USER_SETTINGS_OPEN_ON_STARTUP_BODY,
                     onChange: this.handleToggleOpenOnStartup,
@@ -46,7 +46,7 @@ class u extends a.PureComponent {
                 (0, l.isWindows)()
                     ? (0, n.jsx)(o.FormSwitch, {
                           disabled: !e,
-                          className: r()(_.marginTop8, _.marginBottom20),
+                          className: r()(u.marginTop8, u.marginBottom20),
                           value: !!e && s,
                           note: d.Z.Messages.USER_SETTINGS_START_MINIMIZED_BODY,
                           onChange: this.handleToggleStartMinimized,
@@ -54,11 +54,11 @@ class u extends a.PureComponent {
                       })
                     : null,
                 (0, n.jsx)(o.FormTitle, {
-                    className: r()(_.marginTop20, _.marginBottom8),
+                    className: r()(u.marginTop20, u.marginBottom8),
                     children: d.Z.Messages.USER_SETTINGS_CLOSE_BUTTON
                 }),
                 (0, n.jsx)(o.FormSwitch, {
-                    className: _.marginBottom20,
+                    className: u.marginBottom20,
                     value: t,
                     note: d.Z.Messages.USER_SETTINGS_MINIMIZE_TO_TRAY_BODY,
                     onChange: this.handleToggleMinimizeToTray,
@@ -69,15 +69,15 @@ class u extends a.PureComponent {
     }
     constructor(e) {
         super(e),
-            E(this, 'handleToggleOpenOnStartup', () => {
+            _(this, 'handleToggleOpenOnStartup', () => {
                 let e = !this.state.openOnStartup;
                 this.setState({ openOnStartup: e }), c.ZP.send('TOGGLE_OPEN_ON_STARTUP', e);
             }),
-            E(this, 'handleToggleStartMinimized', () => {
+            _(this, 'handleToggleStartMinimized', () => {
                 let e = !this.state.startMinimized;
                 this.setState({ startMinimized: e }), c.ZP.send('TOGGLE_START_MINIMIZED', e);
             }),
-            E(this, 'handleToggleMinimizeToTray', () => {
+            _(this, 'handleToggleMinimizeToTray', () => {
                 let e = !this.state.minimizeToTray;
                 this.setState({ minimizeToTray: e }), c.ZP.send('TOGGLE_MINIMIZE_TO_TRAY', e);
             }),
@@ -88,4 +88,4 @@ class u extends a.PureComponent {
             });
     }
 }
-s.Z = u;
+s.Z = E;

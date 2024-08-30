@@ -1,16 +1,16 @@
 t.r(s),
     t.d(s, {
         ConnectedPrivacySettings: function () {
-            return A;
+            return g;
         },
         PrivacySettingSurfaces: function () {
             return n;
         },
         PrivacySettings: function () {
-            return C;
+            return m;
         },
         default: function () {
-            return m;
+            return C;
         }
     }),
     t(47120);
@@ -22,25 +22,25 @@ var n,
     l = t(921801),
     c = t(695346),
     d = t(626135),
-    _ = t(63063),
-    E = t(88658),
-    u = t(981631),
-    I = t(703115),
-    T = t(726985),
+    u = t(63063),
+    _ = t(88658),
+    E = t(981631),
+    T = t(703115),
+    I = t(726985),
     S = t(689938),
     N = t(205548);
-function C(e) {
-    let { isGuildRestricted: s, handleRestrictedGuildChange: t, isGuildActivityRestricted: n, handleActivityRestrictedGuildChange: a, isGuildActivityJoiningRestricted: r, handleActivityJoiningRestrictedGuildChange: c, isGuildMessageRequestRestricted: d, handleMessageRequestRestrictedGuildChange: E, guild: I } = e,
-        C = I.hasFeature(u.oNc.HUB);
+function m(e) {
+    let { isGuildRestricted: s, handleRestrictedGuildChange: t, isGuildActivityRestricted: n, handleActivityRestrictedGuildChange: a, isGuildActivityJoiningRestricted: r, handleActivityJoiningRestrictedGuildChange: c, isGuildMessageRequestRestricted: d, handleMessageRequestRestrictedGuildChange: _, guild: T } = e,
+        m = T.hasFeature(E.oNc.HUB);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(l.F, {
-                setting: T.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS,
+                setting: I.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS,
                 children: [
                     (0, i.jsx)(o.FormItem, {
                         children: (0, i.jsx)(o.FormSwitch, {
                             value: !s,
-                            note: C ? S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
+                            note: m ? S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
                             onChange: t,
                             hideBorder: !0,
                             children: S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES
@@ -50,14 +50,14 @@ function C(e) {
                 ]
             }),
             (0, i.jsx)(l.F, {
-                setting: T.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS,
+                setting: I.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS,
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.FormItem, {
                             children: (0, i.jsx)(o.FormSwitch, {
                                 value: !d,
-                                note: C ? S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: _.Z.getArticleURL(u.BhN.MESSAGE_REQUESTS) }) : S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: _.Z.getArticleURL(u.BhN.MESSAGE_REQUESTS) }),
-                                onChange: E,
+                                note: m ? S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }) : S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }),
+                                onChange: _,
                                 disabled: s,
                                 hideBorder: !0,
                                 children: S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS
@@ -68,7 +68,7 @@ function C(e) {
                 })
             }),
             (0, i.jsx)(l.F, {
-                setting: T.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS,
+                setting: I.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS,
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.FormItem, {
@@ -76,7 +76,7 @@ function C(e) {
                                 value: !n,
                                 onChange: a,
                                 hideBorder: !0,
-                                note: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS_DESC.format({ helpdeskArticle: _.Z.getArticleURL(u.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                                note: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS_DESC.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS) }),
                                 children: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS
                             })
                         }),
@@ -85,14 +85,14 @@ function C(e) {
                 })
             }),
             (0, i.jsxs)(l.F, {
-                setting: T.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING,
+                setting: I.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING,
                 children: [
                     (0, i.jsx)(o.FormItem, {
                         children: (0, i.jsx)(o.FormSwitch, {
                             value: !r,
                             onChange: c,
                             hideBorder: !0,
-                            note: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING_DESC.format({ helpdeskArticle: _.Z.getArticleURL(u.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                            note: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING_DESC.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS) }),
                             children: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING
                         })
                     }),
@@ -110,7 +110,7 @@ function C(e) {
         ]
     });
 }
-function m(e) {
+function C(e) {
     let { guild: s, transitionState: t, onClose: n } = e,
         a = ''.concat(S.Z.Messages.PRIVACY_SETTINGS, '\u2014').concat(null != s ? s.toString() : '??');
     return (0, i.jsxs)(o.ModalRoot, {
@@ -126,7 +126,7 @@ function m(e) {
             }),
             (0, i.jsx)(o.ModalContent, {
                 className: N.content,
-                children: (0, i.jsx)(A, {
+                children: (0, i.jsx)(g, {
                     guild: s,
                     ingress: 'server_privacy_modal'
                 })
@@ -140,20 +140,20 @@ function m(e) {
         ]
     });
 }
-function A(e) {
+function g(e) {
     let { guild: s, ingress: t = 'server_privacy_modal' } = e,
         n = s.id,
         a = c.h2.useSetting().includes(n),
         o = c.zA.useSetting().includes(n),
         l = c.SE.useSetting().includes(n),
-        _ = c.iH.useSetting().includes(n),
-        T = r.useCallback(
+        u = c.iH.useSetting().includes(n),
+        I = r.useCallback(
             (e) => {
-                let s = new Set((0, E.YK)());
+                let s = new Set((0, _.YK)());
                 e ? s.delete(n) : s.add(n),
                     c.h2.updateSetting(Array.from(s)),
-                    d.default.track(u.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: I.Y.DIRECT_MESSAGES_TOGGLE,
+                    d.default.track(E.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: T.Y.DIRECT_MESSAGES_TOGGLE,
                         ingress: t,
                         guild_id: n
                     });
@@ -162,11 +162,11 @@ function A(e) {
         ),
         S = r.useCallback(
             (e) => {
-                let s = new Set((0, E._o)());
+                let s = new Set((0, _._o)());
                 e ? s.delete(n) : s.add(n),
                     c.SE.updateSetting([...s]),
-                    d.default.track(u.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: I.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
+                    d.default.track(E.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: T.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
                         ingress: t,
                         guild_id: n
                     });
@@ -175,39 +175,39 @@ function A(e) {
         ),
         N = r.useCallback(
             (e) => {
-                let s = new Set((0, E.rr)());
+                let s = new Set((0, _.rr)());
                 e ? s.delete(n) : s.add(n),
                     c.iH.updateSetting([...s]),
-                    d.default.track(u.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: I.Y.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
+                    d.default.track(E.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: T.Y.RESTRICT_GUILD_ACTIVITY_JOIN_TOGGLE,
                         ingress: t,
                         guild_id: n
                     });
             },
             [n, t]
         ),
-        m = r.useCallback(
+        C = r.useCallback(
             (e) => {
-                let s = new Set((0, E.gl)());
+                let s = new Set((0, _.gl)());
                 e ? s.delete(n) : s.add(n),
                     c.zA.updateSetting(Array.from(s)),
-                    d.default.track(u.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
-                        action: I.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
+                    d.default.track(E.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                        action: T.Y.RESTRICT_GUILD_MESSAGE_REQUEST_TOGGLE,
                         ingress: t,
                         guild_id: n
                     });
             },
             [n, t]
         );
-    return (0, i.jsx)(C, {
+    return (0, i.jsx)(m, {
         isGuildRestricted: a,
-        handleRestrictedGuildChange: T,
+        handleRestrictedGuildChange: I,
         isGuildActivityRestricted: l,
         handleActivityRestrictedGuildChange: S,
-        isGuildActivityJoiningRestricted: _,
+        isGuildActivityJoiningRestricted: u,
         handleActivityJoiningRestrictedGuildChange: N,
         isGuildMessageRequestRestricted: o,
-        handleMessageRequestRestrictedGuildChange: m,
+        handleMessageRequestRestrictedGuildChange: C,
         guild: s
     });
 }

@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return h;
+        return O;
     }
 });
 var n = t(735250),
@@ -11,91 +11,91 @@ var n = t(735250),
     l = t(780384),
     c = t(481060),
     d = t(846027),
-    _ = t(600164),
-    E = t(921801),
-    u = t(131951),
-    I = t(210887),
-    T = t(996073),
+    u = t(600164),
+    _ = t(921801),
+    E = t(131951),
+    T = t(210887),
+    I = t(996073),
     S = t(526761),
     N = t(726985),
-    C = t(689938),
-    m = t(224499);
-let A = t(651714),
-    O = t(297166);
-function g() {
-    let { experimentalEncoders: e } = (0, o.cj)([u.Z], () => ({ experimentalEncoders: u.Z.getExperimentalEncoders() }));
-    return (0, n.jsx)(E.F, {
+    m = t(689938),
+    C = t(224499);
+let g = t(651714),
+    A = t(297166);
+function h() {
+    let { experimentalEncoders: e } = (0, o.cj)([E.Z], () => ({ experimentalEncoders: E.Z.getExperimentalEncoders() }));
+    return (0, n.jsx)(_.F, {
         setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
         children: (0, n.jsx)(c.FormSwitch, {
-            className: r()(m.marginTop8, m.marginBottom20),
+            className: r()(C.marginTop8, C.marginBottom20),
             value: e,
             onChange: (e) => d.Z.setExperimentalEncoders(e),
             disabled: !1,
-            children: C.Z.Messages.EXPERIMENTAL_ENCODERS
+            children: m.Z.Messages.EXPERIMENTAL_ENCODERS
         })
     });
 }
-function h() {
-    let e = (0, o.e7)([I.Z], () => I.Z.theme),
-        { openH264: s, hardwareH264: t } = (0, o.cj)([u.Z], () => ({
-            openH264: u.Z.getOpenH264(),
-            hardwareH264: u.Z.getHardwareH264()
+function O() {
+    let e = (0, o.e7)([T.Z], () => T.Z.theme),
+        { openH264: s, hardwareH264: t } = (0, o.cj)([E.Z], () => ({
+            openH264: E.Z.getOpenH264(),
+            hardwareH264: E.Z.getHardwareH264()
         })),
         i = a.useRef(null);
     return (
-        (0, T.Z)(i, S.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION),
+        (0, I.Z)(i, S.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(E.F, {
+                (0, n.jsx)(_.F, {
                     setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_AUDIO,
                     children: (0, n.jsx)(c.FormSection, {
-                        className: m.marginBottom20,
-                        title: C.Z.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
+                        className: C.marginBottom20,
+                        title: m.Z.Messages.USER_SETTINGS_VOICE_CODEC_TITLE,
                         children: (0, n.jsx)(c.FormNotice, {
-                            className: m.marginBottom20,
+                            className: C.marginBottom20,
                             type: c.FormNoticeTypes.PRIMARY,
                             imageData: {
-                                src: (0, l.ap)(e) ? A : O,
+                                src: (0, l.ap)(e) ? g : A,
                                 width: 70,
                                 height: 40
                             },
-                            align: _.Z.Align.CENTER,
-                            body: C.Z.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
+                            align: u.Z.Align.CENTER,
+                            body: m.Z.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
                         })
                     })
                 }),
-                (0, n.jsx)(E.F, {
+                (0, n.jsx)(_.F, {
                     setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
                     children: (0, n.jsxs)(c.FormSection, {
-                        className: m.marginBottom20,
-                        title: C.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
+                        className: C.marginBottom20,
+                        title: m.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
                         children: [
-                            (0, n.jsx)(E.F, {
+                            (0, n.jsx)(_.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
                                 children: (0, n.jsx)(c.FormSwitch, {
-                                    className: r()(m.marginTop8, m.marginBottom20),
+                                    className: r()(C.marginTop8, C.marginBottom20),
                                     value: s,
                                     onChange: (e) => d.Z.setOpenH264(e),
                                     disabled: !1,
-                                    note: C.Z.Messages.FORM_HELP_OPEN_H264,
-                                    children: C.Z.Messages.USER_SETTINGS_VOICE_OPEN_H264
+                                    note: m.Z.Messages.FORM_HELP_OPEN_H264,
+                                    children: m.Z.Messages.USER_SETTINGS_VOICE_OPEN_H264
                                 })
                             }),
                             (0, n.jsx)('div', {
                                 style: { scrollMarginTop: '48px' },
                                 ref: i
                             }),
-                            (0, n.jsx)(E.F, {
+                            (0, n.jsx)(_.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
                                 children: (0, n.jsx)(c.FormSwitch, {
-                                    className: r()(m.marginTop8, m.marginBottom20),
+                                    className: r()(C.marginTop8, C.marginBottom20),
                                     value: t,
                                     onChange: (e) => d.Z.setHardwareH264(e),
-                                    note: C.Z.Messages.FORM_HELP_HARDWARE_H264,
-                                    children: C.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_H264
+                                    note: m.Z.Messages.FORM_HELP_HARDWARE_H264,
+                                    children: m.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_H264
                                 })
                             }),
-                            (0, n.jsx)(g, {})
+                            (0, n.jsx)(h, {})
                         ]
                     })
                 })

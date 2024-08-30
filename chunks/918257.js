@@ -12,48 +12,48 @@ var a = t(120356),
     l = t(208049),
     c = t(242291),
     d = t(63063),
-    _ = t(36703),
-    E = t(981631),
-    u = t(689938),
-    I = t(238515);
-let T = (0, o.hQ)();
+    u = t(36703),
+    _ = t(981631),
+    E = t(689938),
+    T = t(238515);
+let I = (0, o.hQ)();
 function S() {
     let e = (0, c.pI)();
     return (0, n.jsxs)('div', {
-        className: i()(I.soundboardRow),
+        className: i()(T.soundboardRow),
         children: [
             (0, n.jsxs)('div', {
-                className: i()(I.soundboardColumn, I.leftColumn),
+                className: i()(T.soundboardColumn, T.leftColumn),
                 children: [
                     (0, n.jsx)(r.FormTitle, {
                         tag: r.FormTitleTags.H5,
-                        className: I.soundboardTitle,
-                        children: u.Z.Messages.USER_SETTINGS_SOUNDBOARD
+                        className: T.soundboardTitle,
+                        children: E.Z.Messages.USER_SETTINGS_SOUNDBOARD
                     }),
                     (0, n.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: u.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME_DESCRIPTION_WITH_LINK.format({ helpCenterArticle: d.Z.getArticleURL(E.BhN.SOUNDBOARD) })
+                        children: E.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME_DESCRIPTION_WITH_LINK.format({ helpCenterArticle: d.Z.getArticleURL(_.BhN.SOUNDBOARD) })
                     })
                 ]
             }),
             (0, n.jsxs)('div', {
-                className: i()(I.soundboardColumn, I.__invalid_rightColumn),
+                className: i()(T.soundboardColumn, T.__invalid_rightColumn),
                 children: [
                     (0, n.jsx)(r.FormTitle, {
-                        id: T,
+                        id: I,
                         tag: r.FormTitleTags.H5,
-                        className: I.soundboardSubtitle,
-                        children: u.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME
+                        className: T.soundboardSubtitle,
+                        children: E.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME
                     }),
                     (0, n.jsx)(r.Slider, {
-                        initialValue: (0, _.P)(e),
+                        initialValue: (0, u.P)(e),
                         maxValue: 100,
                         onValueRender: (e) => ''.concat(e.toFixed(0), '%'),
                         asValueChanges: function (s) {
-                            (e = (0, _.A)(s)), (0, l.xz)(e);
+                            (e = (0, u.A)(s)), (0, l.xz)(e);
                         },
-                        'aria-labelledby': T
+                        'aria-labelledby': I
                     })
                 ]
             })

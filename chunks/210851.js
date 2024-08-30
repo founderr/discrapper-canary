@@ -6,9 +6,9 @@ var n = t(735250),
     o = t(673105);
 s.Z = function (e) {
     var s, t;
-    let { assetKey: l, filters: c, initialValue: d, onFileChange: _, title: E } = e,
-        [u, I] = a.useState(null),
-        [T, S] = a.useState(!1);
+    let { assetKey: l, filters: c, initialValue: d, onFileChange: u, title: _ } = e,
+        [E, T] = a.useState(null),
+        [I, S] = a.useState(!1);
     return (0, n.jsxs)(i.FormItem, {
         children: [
             (0, n.jsx)(i.FormTitle, {
@@ -16,7 +16,7 @@ s.Z = function (e) {
                 children: (0, n.jsxs)('div', {
                     className: o.headingWithTooltip,
                     children: [
-                        E,
+                        _,
                         (0, n.jsx)(i.Tooltip, {
                             text: 'Supported asset formats: '.concat(c.join(', ')),
                             children: (e) =>
@@ -29,21 +29,21 @@ s.Z = function (e) {
                 })
             }),
             (0, n.jsx)(r.Z, {
-                filename: null !== (t = null !== (s = null == u ? void 0 : u.name) && void 0 !== s ? s : d) && void 0 !== t ? t : '',
+                filename: null !== (t = null !== (s = null == E ? void 0 : E.name) && void 0 !== s ? s : d) && void 0 !== t ? t : '',
                 filters: [
                     {
-                        name: E,
+                        name: _,
                         extensions: c
                     }
                 ],
                 buttonText: 'Browse',
                 placeholder: 'Select an asset',
                 onFileSelect: function (e) {
-                    if ((I(null != e ? e : null), null == e)) return;
+                    if ((T(null != e ? e : null), null == e)) return;
                     S(!0);
                     let s = new FileReader();
                     (s.onload = function () {
-                        'string' == typeof s.result && (_(l, s.result), S(!1));
+                        'string' == typeof s.result && (u(l, s.result), S(!1));
                     }),
                         (s.onerror = function (e) {
                             console.error(e);

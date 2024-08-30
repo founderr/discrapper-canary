@@ -12,8 +12,8 @@ var a = t(481060),
     l = t(689938),
     c = t(641280);
 function d(e) {
-    let { guildBoostSlot: s, onClose: d, hasCancelableGuildBoostSlot: _, premiumSubscription: E, onSelect: u } = e,
-        I = {
+    let { guildBoostSlot: s, onClose: d, hasCancelableGuildBoostSlot: u, premiumSubscription: _, onSelect: E } = e,
+        T = {
             transfer: {
                 label: null != s.premiumGuildSubscription ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SELECT_SERVER_BUTTON,
                 subtext: s.isOnCooldown() ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON_DISABLED_TOOLTIP : null,
@@ -21,8 +21,8 @@ function d(e) {
             },
             cancel: {
                 label: l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SLOT_CANCEL_BUTTON,
-                subtext: _ ? null : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_TOOLTIP,
-                disabled: !_
+                subtext: u ? null : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_TOOLTIP,
+                disabled: !u
             },
             uncancel: {
                 label: l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SLOT_UNCANCEL_BUTTON,
@@ -30,16 +30,16 @@ function d(e) {
                 disabled: !1
             }
         };
-    switch (E.status) {
+    switch (_.status) {
         case o.O0b.PAST_DUE:
-            (I.cancel.disabled = !0), (I.cancel.subtext = l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_PAST_DUE_TOOLTIP), (I.uncancel.disabled = !0);
+            (T.cancel.disabled = !0), (T.cancel.subtext = l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_PAST_DUE_TOOLTIP), (T.uncancel.disabled = !0);
             break;
         case o.O0b.PAUSE_PENDING:
         case o.O0b.PAUSED:
-            (I.transfer.disabled = !0), (I.transfer.subtext = l.Z.Messages.GUILD_BOOSTING_TRANSFER_DISABLED_FOR_PAUSED_SUBSCRIPTION), (I.cancel.disabled = !0), (I.cancel.subtext = l.Z.Messages.GUILD_BOOSTING_CANCEL_DISABLED_FOR_PAUSED_SUBSCRIPTION), (I.uncancel.disabled = !0);
+            (T.transfer.disabled = !0), (T.transfer.subtext = l.Z.Messages.GUILD_BOOSTING_TRANSFER_DISABLED_FOR_PAUSED_SUBSCRIPTION), (T.cancel.disabled = !0), (T.cancel.subtext = l.Z.Messages.GUILD_BOOSTING_CANCEL_DISABLED_FOR_PAUSED_SUBSCRIPTION), (T.uncancel.disabled = !0);
     }
     return (0, n.jsxs)(a.Menu, {
-        onSelect: u,
+        onSelect: E,
         navId: 'subscription-context',
         variant: 'fixed',
         'aria-label': l.Z.Messages.GENERIC_ACTIONS_MENU_LABEL,
@@ -47,8 +47,8 @@ function d(e) {
         children: [
             (0, n.jsx)(a.MenuItem, {
                 id: 'apply',
-                label: I.transfer.label,
-                subtext: I.transfer.subtext,
+                label: T.transfer.label,
+                subtext: T.transfer.subtext,
                 action: function () {
                     (0, a.openModalLazy)(async () => {
                         let { default: e } = await Promise.resolve().then(t.bind(t, 760558));
@@ -60,13 +60,13 @@ function d(e) {
                             });
                     });
                 },
-                disabled: I.transfer.disabled
+                disabled: T.transfer.disabled
             }),
             (0, r.tl)(s)
                 ? (0, n.jsx)(a.MenuItem, {
                       id: 'uncancel',
-                      label: I.uncancel.label,
-                      subtext: I.uncancel.subtext,
+                      label: T.uncancel.label,
+                      subtext: T.uncancel.subtext,
                       action: function () {
                           (0, a.openModalLazy)(async () => {
                               let { default: e } = await Promise.resolve().then(t.bind(t, 450468));
@@ -77,12 +77,12 @@ function d(e) {
                                   });
                           });
                       },
-                      disabled: I.uncancel.disabled
+                      disabled: T.uncancel.disabled
                   })
                 : (0, n.jsx)(a.MenuItem, {
                       id: 'cancel',
-                      label: I.cancel.label,
-                      subtext: I.cancel.subtext,
+                      label: T.cancel.label,
+                      subtext: T.cancel.subtext,
                       action: function () {
                           (0, a.openModalLazy)(async () => {
                               let { default: e } = await Promise.resolve().then(t.bind(t, 401786));
@@ -93,10 +93,10 @@ function d(e) {
                                   });
                           });
                       },
-                      disabled: I.cancel.disabled,
+                      disabled: T.cancel.disabled,
                       color: 'danger'
                   }),
-            E.isPausedOrPausePending
+            _.isPausedOrPausePending
                 ? (0, n.jsx)(a.MenuItem, {
                       id: 'manage-subscription',
                       label: l.Z.Messages.BILLING_MANAGE_SUBSCRIPTION,

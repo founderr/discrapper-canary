@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return E;
+        return _;
     }
 });
 var n = t(735250);
@@ -12,34 +12,34 @@ var a = t(120356),
     l = t(993413),
     c = t(486324),
     d = t(689938),
-    _ = t(949985);
-function E(e) {
-    let { showRemoveBannerButton: s, errors: t, onBannerChange: a, guildId: E, className: u, disabled: I = !1, showPremiumIcon: T = !0, isTryItOutFlow: S = !1, forcedDivider: N, withHighlight: C = !1 } = e,
-        m = C ? r.ShinyButton : r.Button;
+    u = t(949985);
+function _(e) {
+    let { showRemoveBannerButton: s, errors: t, onBannerChange: a, guildId: _, className: E, disabled: T = !1, showPremiumIcon: I = !0, isTryItOutFlow: S = !1, forcedDivider: N, withHighlight: m = !1 } = e,
+        C = m ? r.ShinyButton : r.Button;
     return (0, n.jsx)(l.Z, {
-        className: u,
+        className: E,
         title: d.Z.Messages.USER_SETTINGS_PROFILE_BANNER,
-        showPremiumIcon: T,
+        showPremiumIcon: I,
         errors: t,
-        disabled: I,
+        disabled: T,
         forcedDivider: N,
         children: (0, n.jsxs)('div', {
-            className: _.buttonsContainer,
+            className: u.buttonsContainer,
             children: [
-                (0, n.jsx)(m, {
-                    className: i()({ [_.buttonHighlighted]: C }),
+                (0, n.jsx)(C, {
+                    className: i()({ [u.buttonHighlighted]: m }),
                     size: r.Button.Sizes.SMALL,
-                    onClick: () => (0, o.$r)(c.pC.BANNER, E, S, void 0),
+                    onClick: () => (0, o.$r)(c.pC.BANNER, _, S, void 0),
                     children: d.Z.Messages.CHANGE_BANNER
                 }),
                 s &&
                     (0, n.jsx)(r.Button, {
-                        className: _.removeButton,
+                        className: u.removeButton,
                         color: r.Button.Colors.PRIMARY,
                         look: r.Button.Looks.LINK,
                         size: r.Button.Sizes.SMALL,
                         onClick: () => a(null),
-                        children: null != E ? d.Z.Messages.USER_SETTINGS_RESET_BANNER : d.Z.Messages.USER_SETTINGS_REMOVE_BANNER
+                        children: null != _ ? d.Z.Messages.USER_SETTINGS_RESET_BANNER : d.Z.Messages.USER_SETTINGS_REMOVE_BANNER
                     })
             ]
         })

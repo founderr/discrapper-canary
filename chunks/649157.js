@@ -7,7 +7,7 @@ var n = t(735250),
     l = t(706454),
     c = t(689938),
     d = t(311929),
-    _ = t(444675);
+    u = t(444675);
 s.Z = i.ZP.connectStores([l.default], () => ({ currentLocale: l.default.locale }))(function (e) {
     let [s, i] = a.useState(e.currentLocale),
         [l] = a.useState(() =>
@@ -45,9 +45,9 @@ s.Z = i.ZP.connectStores([l.default], () => ({ currentLocale: l.default.locale }
                 };
             })
         ),
-        E = a.useCallback((e) => {
+        _ = a.useCallback((e) => {
             let { value: s } = e;
-            i(s), _.nextTick(() => o.ZP.updateLocale(s));
+            i(s), u.nextTick(() => o.ZP.updateLocale(s));
         }, []);
     return (0, n.jsx)(r.FormSection, {
         tag: r.FormTitleTags.H1,
@@ -56,7 +56,7 @@ s.Z = i.ZP.connectStores([l.default], () => ({ currentLocale: l.default.locale }
             children: (0, n.jsx)(r.FormItem, {
                 title: c.Z.Messages.LANGUAGE_SELECT,
                 children: (0, n.jsx)(r.RadioGroup, {
-                    onChange: E,
+                    onChange: _,
                     options: l,
                     value: s
                 })

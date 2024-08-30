@@ -1,23 +1,23 @@
-var A = I(735250);
-I(470079);
-var O = I(481060),
-    T = I(570140);
-_.Z = {
-    open(E) {
-        T.Z.dispatch({
+var t = n(735250);
+n(470079);
+var a = n(481060),
+    l = n(570140);
+i.Z = {
+    open(e) {
+        l.Z.dispatch({
             type: 'SAFETY_HUB_APPEAL_OPEN',
-            classificationId: E
+            classificationId: e
         }),
-            (0, O.openModalLazy)(async () => {
-                let { default: _ } = await I.e('65652').then(I.bind(I, 208265));
-                return (I) =>
-                    (0, A.jsx)(_, {
-                        classificationId: E,
-                        ...I
+            (0, a.openModalLazy)(async () => {
+                let { default: i } = await n.e('65652').then(n.bind(n, 208265));
+                return (n) =>
+                    (0, t.jsx)(i, {
+                        classificationId: e,
+                        ...n
                     });
             });
     },
     close() {
-        T.Z.dispatch({ type: 'SAFETY_HUB_APPEAL_CLOSE' });
+        l.Z.dispatch({ type: 'SAFETY_HUB_APPEAL_CLOSE' });
     }
 };

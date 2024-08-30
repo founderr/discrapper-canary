@@ -1,6 +1,6 @@
 t.d(s, {
     D: function () {
-        return A;
+        return g;
     }
 }),
     t(47120);
@@ -12,34 +12,34 @@ var n = t(735250),
     l = t(410030),
     c = t(607070),
     d = t(530618),
-    _ = t(74538),
-    E = t(937615),
-    u = t(230916),
-    I = t(798769),
-    T = t(474936),
+    u = t(74538),
+    _ = t(937615),
+    E = t(230916),
+    T = t(798769),
+    I = t(474936),
     S = t(689938),
     N = t(960699),
-    C = t(982404),
-    m = t(299156);
-function A(e) {
-    let { premiumSubscription: s, premiumType: t, onClose: A, confettiCanvas: O, userWasChurned: g = !1, userDiscountOffer: h } = e,
+    m = t(982404),
+    C = t(299156);
+function g(e) {
+    let { premiumSubscription: s, premiumType: t, onClose: g, confettiCanvas: A, userWasChurned: h = !1, userDiscountOffer: O } = e,
         p = (0, l.ZP)(),
-        R = (0, r.wj)(p) ? C : m,
-        x = a.useRef(null),
-        [M, f] = a.useState(!1),
-        D = (0, u._)(s, T.Xh.PREMIUM_MONTH_TIER_2, h),
-        P = (0, _.aS)(T.Xh.PREMIUM_MONTH_TIER_2),
-        L = (0, E.T4)(P.amount, P.currency),
+        x = (0, r.wj)(p) ? m : C,
+        R = a.useRef(null),
+        [f, M] = a.useState(!1),
+        D = (0, E._)(s, I.Xh.PREMIUM_MONTH_TIER_2, O),
+        P = (0, u.aS)(I.Xh.PREMIUM_MONTH_TIER_2),
+        L = (0, _.T4)(P.amount, P.currency),
         b = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
         (a.useEffect(() => {
-            null != x.current && null != D && f(!0);
-        }, [x, M, D]),
-        null == h || null == D)
+            null != R.current && null != D && M(!0);
+        }, [R, f, D]),
+        null == O || null == D)
     )
         return null;
     let Z = S.Z.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
-            numMonths: h.discount.user_usage_limit,
+            numMonths: O.discount.user_usage_limit,
             discountedPrice: D,
             regularPrice: L
         }),
@@ -47,19 +47,19 @@ function A(e) {
             className: N.whatYouLoseButtonContainer,
             children: (0, n.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
-                onClick: A,
+                onClick: g,
                 children: S.Z.Messages.PREMIUM_DISCOUNT_SWEET
             })
         });
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(I.Z, {
+            (0, n.jsx)(T.Z, {
                 premiumType: t,
                 className: N.cancellationHeader,
-                onClose: A
+                onClose: g
             }),
             (0, n.jsx)('div', {
-                ref: x,
+                ref: R,
                 children: (0, n.jsx)(o.ModalContent, {
                     className: N.body,
                     children:
@@ -71,12 +71,12 @@ function A(e) {
                                           children: [
                                               (0, n.jsx)('img', {
                                                   alt: '',
-                                                  src: R,
+                                                  src: x,
                                                   className: N.nitroIcon
                                               }),
                                               (0, n.jsx)(o.Heading, {
                                                   variant: 'heading-xl/bold',
-                                                  children: g ? S.Z.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : S.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
+                                                  children: h ? S.Z.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : S.Z.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
                                               })
                                           ]
                                       }),
@@ -91,10 +91,10 @@ function A(e) {
                 })
             }),
             !b &&
-                M &&
+                f &&
                 (0, n.jsx)(d.Z, {
-                    confettiTarget: x.current,
-                    confettiCanvas: O,
+                    confettiTarget: R.current,
+                    confettiCanvas: A,
                     confettiVelocityMultiplier: 0.75
                 })
         ]

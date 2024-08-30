@@ -22,7 +22,7 @@ let d = () => [
         description: l.Z.Messages.HYPESQUAD_PERK_DESCRIPTION_SQUAD_CHALLENGES
     }
 ];
-class _ extends a.Component {
+class u extends a.Component {
     render() {
         return (0, n.jsxs)('div', {
             className: c.features,
@@ -41,4 +41,4 @@ class _ extends a.Component {
         });
     }
 }
-s.Z = _;
+s.Z = u;

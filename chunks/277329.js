@@ -12,14 +12,14 @@ var a = t(442837),
     l = t(663389),
     c = t(309739),
     d = t(293389),
-    _ = t(327885),
-    E = t(326528),
-    u = t(332325),
-    I = t(981631),
-    T = t(689938),
+    u = t(327885),
+    _ = t(326528),
+    E = t(332325),
+    T = t(981631),
+    I = t(689938),
     S = t(672280);
 function N() {
-    let e = (0, E.b)(),
+    let e = (0, _.b)(),
         s = (0, a.e7)([l.Z], () => l.Z.getSubsection()),
         t = null != s && e.some((e) => e.id === s) ? s : e[0].id;
     return (0, n.jsxs)(n.Fragment, {
@@ -27,13 +27,13 @@ function N() {
             (0, n.jsx)(i.Heading, {
                 className: S.heading,
                 variant: 'heading-xl/semibold',
-                children: T.Z.Messages.GAMES
+                children: I.Z.Messages.GAMES
             }),
             (0, n.jsx)(i.TabBar, {
                 className: S.tabBar,
                 selectedItem: t,
                 onItemSelect: (e) => {
-                    r.Z.setSection(I.oAB.GAMES, e);
+                    r.Z.setSection(T.oAB.GAMES, e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
@@ -62,22 +62,22 @@ function N() {
             }),
             (() => {
                 switch (t) {
-                    case u.Z.CLIPS:
+                    case E.Z.CLIPS:
                         return (0, n.jsx)(o.Z, {
                             className: S.body,
                             showHeader: !1
                         });
-                    case u.Z.OVERLAY:
-                        return (0, n.jsx)(_.Z, {
+                    case E.Z.OVERLAY:
+                        return (0, n.jsx)(u.Z, {
                             className: S.body,
                             showHeader: !1
                         });
-                    case u.Z.ACTIVITY_PRIVACY:
+                    case E.Z.ACTIVITY_PRIVACY:
                         return (0, n.jsx)(c.Z, {
                             className: S.body,
                             showHeader: !1
                         });
-                    case u.Z.MY_GAMES:
+                    case E.Z.MY_GAMES:
                     default:
                         return (0, n.jsx)(d.Z, {
                             className: S.body,

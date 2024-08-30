@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return m;
+        return C;
     }
 });
 var n = t(735250),
@@ -11,64 +11,64 @@ var n = t(735250),
     l = t(906732),
     c = t(642619),
     d = t(626135),
-    _ = t(74538),
-    E = t(150039),
-    u = t(993413),
-    I = t(504983),
-    T = t(981631),
+    u = t(74538),
+    _ = t(150039),
+    E = t(993413),
+    T = t(504983),
+    I = t(981631),
     S = t(474936),
     N = t(689938),
-    C = t(733691);
-function m(e) {
-    let { user: s, guild: t, className: i, sectionTitle: m, forcedDivider: A = !1, withTutorial: O = !1, showBorder: g = !1, isTryItOutFlow: h = !1, initialSelectedEffectId: p } = e,
-        R = (0, E.Kg)(s, t),
-        x = _.ZP.canUsePremiumProfileCustomization(s),
-        { analyticsLocations: M } = (0, l.ZP)(),
-        { pendingProfileEffectId: f, errors: D } = (0, E.bd)(t),
+    m = t(733691);
+function C(e) {
+    let { user: s, guild: t, className: i, sectionTitle: C, forcedDivider: g = !1, withTutorial: A = !1, showBorder: h = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: p } = e,
+        x = (0, _.Kg)(s, t),
+        R = u.ZP.canUsePremiumProfileCustomization(s),
+        { analyticsLocations: f } = (0, l.ZP)(),
+        { pendingProfileEffectId: M, errors: D } = (0, _.bd)(t),
         P = a.useCallback(
             () =>
                 (0, c.H)({
-                    analyticsLocations: M,
+                    analyticsLocations: f,
                     initialSelectedEffectId: p,
                     guild: t
                 }),
-            [M, p, t]
+            [f, p, t]
         );
     a.useEffect(() => {
-        x &&
-            d.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+        R &&
+            d.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: S.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: M
+                location_stack: f
             });
-    }, [x, M]);
+    }, [R, f]);
     let L = null != t,
-        b = h || void 0 !== f ? null != f : null != R,
-        Z = O ? o.ShinyButton : o.Button;
-    return (0, n.jsx)(u.Z, {
-        forcedDivider: A,
-        borderType: I.Y.PREMIUM,
+        b = O || void 0 !== M ? null != M : null != x,
+        Z = A ? o.ShinyButton : o.Button;
+    return (0, n.jsx)(E.Z, {
+        forcedDivider: g,
+        borderType: T.Y.PREMIUM,
         hasBackground: !0,
-        title: m,
-        showBorder: g,
+        title: C,
+        showBorder: h,
         errors: D,
         className: i,
         children: (0, n.jsxs)('div', {
-            className: C.buttonsContainer,
+            className: m.buttonsContainer,
             children: [
                 (0, n.jsx)(Z, {
                     size: o.Button.Sizes.SMALL,
                     onClick: P,
-                    className: r()({ [C.buttonHighlighted]: O }),
+                    className: r()({ [m.buttonHighlighted]: A }),
                     children: N.Z.Messages.USER_SETTINGS_CHANGE_PROFILE_EFFECT
                 }),
                 b &&
                     (0, n.jsx)(o.Button, {
-                        className: C.removeButton,
+                        className: m.removeButton,
                         color: o.Button.Colors.PRIMARY,
                         look: o.Button.Looks.LINK,
                         size: o.Button.Sizes.SMALL,
                         onClick: function () {
-                            (0, E.s6)(null, R, t);
+                            (0, _.s6)(null, x, t);
                         },
                         children: L ? N.Z.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : N.Z.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
                     })

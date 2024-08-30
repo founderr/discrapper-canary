@@ -3,7 +3,7 @@ t.d(s, {
         return d;
     },
     p: function () {
-        return _;
+        return u;
     }
 }),
     t(47120);
@@ -33,6 +33,6 @@ function d() {
         );
     }, [e]);
 }
-function _(e) {
+function u(e) {
     return (Date.now() - e.valueOf()) / 1000 / 60 / 60 < 1 ? c.Z.Messages.AUTH_SESSIONS_ACTIVE_RECENTLY : i()(e).fromNow();
 }

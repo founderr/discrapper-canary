@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return _;
+        return u;
     }
 });
 var n = t(735250);
@@ -12,7 +12,7 @@ var a = t(120356),
     l = t(135060),
     c = t(653869),
     d = t(834300);
-function _(e) {
+function u(e) {
     let { onClickManageSubscription: s, count: t } = e;
     return (0, n.jsxs)('div', {
         children: [

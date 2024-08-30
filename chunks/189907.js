@@ -18,7 +18,7 @@ function d(e, s, t) {
         e
     );
 }
-class _ extends (n = i.PureComponent) {
+class u extends (n = i.PureComponent) {
     render() {
         let { children: e, className: s, onMouseEnter: t, onMouseLeave: n } = this.props;
         return (0, a.jsx)('div', {
@@ -29,7 +29,7 @@ class _ extends (n = i.PureComponent) {
         });
     }
 }
-d(_, 'Header', (e) => {
+d(u, 'Header', (e) => {
     let { children: s, className: t, splashArtURL: n } = e;
     return (0, a.jsxs)(l.Z, {
         className: o()(c.header, t),
@@ -43,11 +43,11 @@ d(_, 'Header', (e) => {
         ]
     });
 }),
-    d(_, 'Body', (e) => {
+    d(u, 'Body', (e) => {
         let { children: s, className: t } = e;
         return (0, a.jsx)('div', {
             className: o()(c.body, t),
             children: s
         });
     }),
-    (s.Z = _);
+    (s.Z = u);

@@ -74,42 +74,42 @@ let E = (e) => {
         });
     },
     v = (e) => {
-        let { carouselId: t, items: n = [], renderItem: a, getItemId: r, onIntentionalChange: i, onChangeItem: c, className: u, controlsClassName: f, paginationButtonClassName: p, springConfig: _, delay: h, initialPaused: v = !1, unidirectional: T = !1, analyticsLocations: S } = e,
-            { trackSlideView: L, trackPagination: N } = (0, b.X)(t, S),
-            [k, O] = (0, o.useState)(0),
+        let { carouselId: t, items: n = [], renderItem: a, getItemId: r, onIntentionalChange: i, onChangeItem: c, className: u, controlsClassName: f, paginationButtonClassName: p, springConfig: _, delay: h, initialPaused: v = !1, unidirectional: L = !1, analyticsLocations: T } = e,
+            { trackSlideView: S, trackPagination: N } = (0, b.X)(t, T),
+            [O, k] = (0, o.useState)(0),
             [B, j] = (0, o.useState)(!1),
             [Z, P] = (0, o.useState)(!1),
             R = o.useCallback(() => P(!0), []),
             A = o.useCallback(() => P(!1), []),
             y = (0, g.e7)([m.Z], () => m.Z.isFocused()),
             M = null != h && !v && !Z && y,
-            w = o.useCallback((e) => (n.length + k + e) % n.length, [n, k]),
+            w = o.useCallback((e) => (n.length + O + e) % n.length, [n, O]),
             D = o.useCallback(
                 d()((e, t, a) => {
-                    null != a && (null == i || i(n[e], t, e, a), N(e, k, r(e), r(t))), j('GO_TO_SLIDE' === a), null == c || c(n[e], t, e), O(e);
+                    null != a && (null == i || i(n[e], t, e, a), N(e, O, r(e), r(t))), j('GO_TO_SLIDE' === a), null == c || c(n[e], t, e), k(e);
                 }, 200),
                 [n, i, c]
             );
         return (
             (0, o.useEffect)(() => {
-                L(k, r(k));
-            }, [L, k, r]),
+                S(O, r(O));
+            }, [S, O, r]),
             (0, o.useEffect)(() => {
                 if (M) {
                     let e = w(1),
-                        t = setInterval(() => D(e, k), h);
+                        t = setInterval(() => D(e, O), h);
                     return () => clearInterval(t);
                 }
-            }, [M, h, k, w, D]),
+            }, [M, h, O, w, D]),
             (0, s.jsxs)('div', {
                 className: l()(x.carouselContainer, u),
                 onMouseEnter: R,
                 onMouseLeave: A,
                 children: [
                     (0, s.jsx)(C.Slides, {
-                        activeSlide: String(k),
+                        activeSlide: String(O),
                         springConfig: null != _ ? _ : I,
-                        directionOverride: T && !B ? 'forwards' : void 0,
+                        directionOverride: L && !B ? 'forwards' : void 0,
                         fadeInOut: !0,
                         children: n.map((e, t) =>
                             (0, s.jsx)(
@@ -129,16 +129,16 @@ let E = (e) => {
                         (0, s.jsx)(E, {
                             className: f,
                             paginationButtonClassName: p,
-                            currentSlideIndex: k,
+                            currentSlideIndex: O,
                             numSlides: n.length,
                             onNext: () => {
-                                D(w(1), k, 'NEXT');
+                                D(w(1), O, 'NEXT');
                             },
                             onPrevious: () => {
-                                D(w(-1), k, 'PREVIOUS');
+                                D(w(-1), O, 'PREVIOUS');
                             },
                             onIndicatorClick: (e) => {
-                                D(e, k, 'GO_TO_SLIDE');
+                                D(e, O, 'GO_TO_SLIDE');
                             }
                         })
                 ]

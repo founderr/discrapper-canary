@@ -6,16 +6,16 @@ var n = t(735250),
     l = t(100527),
     c = t(906732),
     d = t(626135),
-    _ = t(335131),
-    E = t(410154),
-    u = t(302800),
-    I = t(981631),
-    T = t(474936),
+    u = t(335131),
+    _ = t(410154),
+    E = t(302800),
+    T = t(981631),
+    I = t(474936),
     S = t(689938),
     N = t(853601),
-    C = t(786792),
-    m = t(161594);
-let A = (e) => {
+    m = t(786792),
+    C = t(161594);
+let g = (e) => {
     var s, t, a, i, l;
     let { displayOptions: c, marketingVariant: d } = e;
     return (0, n.jsxs)(n.Fragment, {
@@ -25,9 +25,9 @@ let A = (e) => {
                 'aria-hidden': !0,
                 role: 'presentation',
                 children: (0, n.jsx)('img', {
-                    src: null !== (a = null == c ? void 0 : c.artSrc) && void 0 !== a ? a : m,
+                    src: null !== (a = null == c ? void 0 : c.artSrc) && void 0 !== a ? a : C,
                     className: r()(N.art, {
-                        [N.tideArt]: null != d && d === E.C5.TIDE,
+                        [N.tideArt]: null != d && d === _.C5.TIDE,
                         [N.defaultArt]: (null == c ? void 0 : c.artSrc) == null
                     }),
                     alt: ''
@@ -56,30 +56,30 @@ s.Z = () => {
     var e;
     let { analyticsLocations: s } = (0, c.ZP)(l.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
         t = a.useRef(null),
-        i = (0, E.ZP)('CollectiblesUpsellBanner'),
-        m = u.GX[i];
+        i = (0, _.ZP)('CollectiblesUpsellBanner'),
+        C = E.GX[i];
     return (
         a.useEffect(() => {
-            d.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: T.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
+            d.default.track(T.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: I.cd.COLLECTIBLES_PROFILE_SETTINGS_UPSELL,
                 location_stack: s
             });
         }, [s]),
         (0, n.jsxs)('div', {
             ref: t,
             className: r()(N.container, {
-                [N.robertContainer]: i === E.C5.ROBERT,
-                [N.stormContainer]: i === E.C5.STORM
+                [N.robertContainer]: i === _.C5.ROBERT,
+                [N.stormContainer]: i === _.C5.STORM
             }),
-            style: { backgroundImage: 'url('.concat(null !== (e = null == m ? void 0 : m.backgroundSrc) && void 0 !== e ? e : C, ')') },
+            style: { backgroundImage: 'url('.concat(null !== (e = null == C ? void 0 : C.backgroundSrc) && void 0 !== e ? e : m, ')') },
             children: [
-                (0, n.jsx)(A, {
-                    displayOptions: m,
+                (0, n.jsx)(g, {
+                    displayOptions: C,
                     marketingVariant: i
                 }),
                 (0, n.jsx)(o.Button, {
                     onClick: () => {
-                        (0, _.mK)({
+                        (0, u.mK)({
                             analyticsLocations: s,
                             analyticsSource: l.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
                         });

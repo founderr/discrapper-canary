@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return _;
+        return u;
     }
 });
 var n = t(735250);
@@ -12,7 +12,7 @@ var a = t(481060),
     l = t(726985),
     c = t(689938),
     d = t(224499);
-function _() {
+function u() {
     let { enabled: e } = (0, i.S)({ location: 'UserSettingsStreamPreviews' }),
         s = o.I0.useSetting();
     return e

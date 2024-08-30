@@ -3,13 +3,13 @@ t.d(s, {
         return d;
     },
     Qe: function () {
-        return E;
+        return _;
     },
     U0: function () {
-        return u;
+        return E;
     },
     bV: function () {
-        return _;
+        return u;
     },
     uZ: function () {
         return c;
@@ -34,7 +34,7 @@ let o = null !== (i = null === (n = window) || void 0 === n ? void 0 : n.crypto)
     l = 'Uint8Array' in window,
     c = null != o && 'getRandomValues' in o && l,
     d = 'PublicKeyCredential' in window && l;
-function _() {
+function u() {
     var e, s;
     return (
         (s = ((e = 20), o.getRandomValues(new Uint8Array(20)))),
@@ -47,10 +47,10 @@ function _() {
             .trim()
     );
 }
-function E(e) {
+function _(e) {
     return e.replace(/[\s._-]+/g, '').toUpperCase();
 }
-function u(e, s) {
+function E(e, s) {
     let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'Discord';
-    return 'otpauth://totp/'.concat(encodeURI(t), ':').concat(encodeURI(e), '?secret=').concat(E(s), '&issuer=').concat(encodeURIComponent(t));
+    return 'otpauth://totp/'.concat(encodeURI(t), ':').concat(encodeURI(e), '?secret=').concat(_(s), '&issuer=').concat(encodeURIComponent(t));
 }

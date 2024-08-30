@@ -20,12 +20,12 @@ var a = n(735250),
     I = n(1585),
     E = n(333867),
     v = n(197115),
-    T = n(300284),
-    S = n(876917),
-    L = n(642619),
+    L = n(300284),
+    T = n(876917),
+    S = n(642619),
     N = n(210887),
-    k = n(74538),
-    O = n(335131),
+    O = n(74538),
+    k = n(335131),
     B = n(1870),
     j = n(884697),
     Z = n(664018),
@@ -80,7 +80,7 @@ t.Z = function (e) {
         en = Q || ee,
         [ea] = t.items,
         er = (0, p.e7)([b.Z], () => b.Z.useReducedMotion),
-        es = k.ZP.canUseCollectibles(n),
+        es = O.ZP.canUseCollectibles(n),
         eo = (0, j.XM)(t, es, !1),
         ei = r.useMemo(() => (0, j.BH)(t, es), [t, es]),
         el = (0, j.G1)(t),
@@ -108,10 +108,10 @@ t.Z = function (e) {
         r.useEffect(() => {
             null == i || i(J);
         }, [i]);
-    let ex = (0, T.Z)({ analyticsLocations: $ }),
+    let ex = (0, L.Z)({ analyticsLocations: $ }),
         eI = r.useRef(null),
         { handleUseNow: eE, isApplying: ev } = (0, R.W)({ product: t }),
-        eT = () => {
+        eL = () => {
             if (((0, m.xf)(), ex(), t.type === f.Z.AVATAR_DECORATION && null != ea)) {
                 l()(ea.type === t.type, "product type is equivlant to first item's check for avatar deco"),
                     (0, I.ps)({
@@ -121,12 +121,12 @@ t.Z = function (e) {
                 return;
             }
             t.type === f.Z.PROFILE_EFFECT &&
-                (0, L.H)({
+                (0, S.H)({
                     initialSelectedEffectId: ea.id,
                     analyticsLocations: $
                 });
         },
-        eS = (e) => (n) => {
+        eT = (e) => (n) => {
             (eI.current = n.currentTarget),
                 (0, H.T)({
                     product: t,
@@ -136,9 +136,9 @@ t.Z = function (e) {
                     returnRef: eI
                 });
         },
-        eL = eS(h.Z.COLLECTIBLES_SHOP_CARD),
-        eN = eS(h.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
-        ek = () =>
+        eS = eT(h.Z.COLLECTIBLES_SHOP_CARD),
+        eN = eT(h.Z.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
+        eO = () =>
             (0, a.jsx)('div', {
                 className: z.hoverUpsellContainer,
                 children: (0, a.jsx)(v.Z, {
@@ -150,7 +150,7 @@ t.Z = function (e) {
                     subscriptionTier: W.Si.TIER_2
                 })
             }),
-        eO = () =>
+        ek = () =>
             ed || eu
                 ? (0, a.jsx)(y.U, {
                       className: z.priceTag,
@@ -181,14 +181,14 @@ t.Z = function (e) {
                         tooltipDelay: 250
                     }),
         ej = () => {
-            if (el && !es && !ec) return ek();
+            if (el && !es && !ec) return eO();
             let e = el
                 ? {
                       submitting: ef,
                       submittingStartedLabel: V.Z.Messages.COLLECTIBLES_COLLECTING,
                       submittingFinishedLabel: V.Z.Messages.COLLECTIBLES_COLLECTING_FINISHED,
                       onClick: async () => {
-                          await (0, O.fK)(t.skuId),
+                          await (0, k.fK)(t.skuId),
                               (0, G.Z)({
                                   product: t,
                                   analyticsLocations: $
@@ -211,7 +211,7 @@ t.Z = function (e) {
                         : ed
                           ? (0, a.jsx)(Y, {
                                 disabled: ep,
-                                onClick: em ? eE : eT,
+                                onClick: em ? eE : eL,
                                 submitting: ev,
                                 children: V.Z.Messages.COLLECTIBLES_USE_NOW
                             })
@@ -237,7 +237,7 @@ t.Z = function (e) {
                       [z.mysteryShopCard]: eh
                   }),
                   onBlur: () => et(!1),
-                  onClick: eL,
+                  onClick: eS,
                   id: 'shop-item-'.concat(t.skuId),
                   children: [
                       el &&
@@ -262,7 +262,7 @@ t.Z = function (e) {
                               .with(f.Z.PROFILE_EFFECT, () =>
                                   (0, a.jsx)('div', {
                                       className: z.profileEffectShopPreview,
-                                      children: (0, a.jsx)(S.Z, {
+                                      children: (0, a.jsx)(T.Z, {
                                           isHovering: en,
                                           profileEffectId: ea.id,
                                           isPurchased: ed,
@@ -321,7 +321,7 @@ t.Z = function (e) {
                                   children: [
                                       (0, a.jsx)('div', {
                                           className: eu ? void 0 : z.innerBlur,
-                                          children: eO()
+                                          children: ek()
                                       }),
                                       (0, a.jsx)('div', {
                                           className: z.innerHover,

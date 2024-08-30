@@ -27,24 +27,24 @@ var n = t(470079),
     l = t(211242),
     c = t(770471),
     d = t(924557),
-    _ = t(706140),
-    E = t(592204),
-    u = t(610697),
-    I = t(631885),
-    T = t(223639),
+    u = t(706140),
+    _ = t(592204),
+    E = t(610697),
+    T = t(631885),
+    I = t(223639),
     S = t(160913),
     N = t(725727),
-    C = t(977156),
-    m = t(237292),
-    A = t(314897),
-    O = t(283595),
-    g = t(663389),
-    h = t(594174),
+    m = t(977156),
+    C = t(237292),
+    g = t(314897),
+    A = t(283595),
+    h = t(663389),
+    O = t(594174),
     p = t(202527),
-    R = t(187819),
-    x = t(695346),
-    M = t(620163),
-    f = t(295545),
+    x = t(187819),
+    R = t(695346),
+    f = t(620163),
+    M = t(295545),
     D = t(168308),
     P = t(839469),
     L = t(726985),
@@ -91,11 +91,11 @@ function j() {
     var e, s;
     let t = (0, N.YO)().length,
         n = (0, S.U)(),
-        r = (0, a.e7)([g.Z], () => g.Z.getProps().impressionSource),
-        P = (0, I.gU)(),
+        r = (0, a.e7)([h.Z], () => h.Z.getProps().impressionSource),
+        P = (0, T.gU)(),
         L = (0, D.bC)(),
         Z = (0, d.Go)(),
-        [v] = (0, _.cv)(Z ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []),
+        [v] = (0, u.cv)(Z ? [i.z.CLIPS_SETTINGS_BETA_TAG] : []),
         j = 'useGenerateUserSettingsSections';
     (0, o.j)({
         location: j + ' auto on',
@@ -106,20 +106,20 @@ function j() {
             autoTrackExposure: !1
         });
     let { shouldMergeGameSettings: B } = p.b.useExperiment({ location: 'settings' }),
-        U = (0, f.eA)({ location: 'settings' }),
-        G = (0, E.Xo)({ location: 'settings' }),
-        F = null !== (s = null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== s && s,
-        y = (0, m.y0)({ location: 'settings' }),
+        U = (0, M.eA)({ location: 'settings' }),
+        G = (0, _.Xo)({ location: 'settings' }),
+        F = null !== (s = null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== s && s,
+        y = (0, C.y0)({ location: 'settings' }),
         V = (0, l.Q)(),
-        Y = (0, C.Zy)({ location: b.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
-        { enabled: w } = T.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
-        H = (0, a.e7)([O.Z], () => O.Z.hasLibraryApplication()),
-        k = (0, a.e7)([A.default], () => A.default.hasTOTPEnabled()),
+        w = (0, m.Zy)({ location: b.dr.USER_SETTINGS_SEARCH_GIFT_INVENTORY }),
+        { enabled: k } = I.Z.useExperiment({ location: 'UserSettingsInventory' }, { autoTrackExposure: !0 }),
+        Y = (0, a.e7)([A.Z], () => A.Z.hasLibraryApplication()),
+        H = (0, a.e7)([g.default], () => g.default.hasTOTPEnabled()),
         { canBroadcast: W } = c.Z.useExperiment({ location: 'user_settings_activity_privacy' }, { autoTrackExposure: !0 }),
-        K = x.Sb.useSetting(),
-        z = (0, u.Z)(),
-        Q = (0, R._p)({ location: 'settings-renderer-utils-web' });
-    return (0, M.i)({
+        K = R.Sb.useSetting(),
+        z = (0, E.Z)(),
+        Q = (0, x._p)({ location: 'settings-renderer-utils-web' });
+    return (0, f.i)({
         unseenGiftCount: t,
         showPrepaidPaymentPastDueWarning: n,
         impressionSource: r,
@@ -132,11 +132,11 @@ function j() {
         isStaff: F,
         isInappropriateConversationWarningEnabled: y,
         paymentsBlocked: V,
-        isEligibleForQuests: Y,
-        showGiftNitro: w,
+        isEligibleForQuests: w,
+        showGiftNitro: k,
         isStricterMessageRequestsEnabled: z,
-        hasLibraryApplication: H,
-        hasTOTPEnabled: k,
+        hasLibraryApplication: Y,
+        hasTOTPEnabled: H,
         canBroadcastActivity: W,
         developerMode: K,
         isSafetySettingsV2Enabled: Q
@@ -145,7 +145,7 @@ function j() {
 function B(e) {
     let { searchResults: s } = (0, P.E)(),
         t = j();
-    if (!(0, f.eA)({ location: 'settings' })) return new Set();
+    if (!(0, M.eA)({ location: 'settings' })) return new Set();
     let n = t[e],
         a = Object.fromEntries(
             Object.entries(t).filter((e) => {
@@ -268,7 +268,7 @@ function F(e) {
                 [s]
             );
         })(),
-        a = (0, f.c3)({ location: 'settings' });
+        a = (0, M.c3)({ location: 'settings' });
     return n.useMemo(() => U(t, s, a, new Set(e)), [t, s, a, e]);
 }
 function y(e) {

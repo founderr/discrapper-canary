@@ -6,16 +6,16 @@ var n = t(735250),
     l = t(481060),
     c = t(346951),
     d = t(644744),
-    _ = t(792423),
-    E = t(674985),
-    u = t(594174),
-    I = t(843200),
-    T = t(689938),
+    u = t(792423),
+    _ = t(674985),
+    E = t(594174),
+    T = t(843200),
+    I = t(689938),
     S = t(477810);
 class N extends a.PureComponent {
     renderIntroHeader() {
         let { houseMembership: e } = this.props;
-        return null == e ? T.Z.Messages.HYPESQUAD_HEADING : T.Z.Messages.HYPESQUAD_HEADING_EXISTING_MEMBER;
+        return null == e ? I.Z.Messages.HYPESQUAD_HEADING : I.Z.Messages.HYPESQUAD_HEADING_EXISTING_MEMBER;
     }
     render() {
         let { houseMembership: e, isClaimed: s, isVerified: t } = this.props;
@@ -30,15 +30,15 @@ class N extends a.PureComponent {
                     }),
                     (0, n.jsx)(l.Text, {
                         variant: 'text-lg/normal',
-                        children: T.Z.Messages.HYPESQUAD_SUBHEADING
+                        children: I.Z.Messages.HYPESQUAD_SUBHEADING
                     })
                 ]
             }),
             children: [
-                (0, n.jsx)(I.Z, {
+                (0, n.jsx)(T.Z, {
                     className: S.verificationNotice,
-                    unclaimedNotice: T.Z.Messages.HYPESQUAD_UNCLAIMED_ACCOUNT_NOTICE,
-                    unverifiedNotice: T.Z.Messages.HYPESQUAD_UNVERIFIED_EMAIL_NOTICE
+                    unclaimedNotice: I.Z.Messages.HYPESQUAD_UNCLAIMED_ACCOUNT_NOTICE,
+                    unverifiedNotice: I.Z.Messages.HYPESQUAD_UNVERIFIED_EMAIL_NOTICE
                 }),
                 (0, n.jsx)(d.Z, {
                     houseMembership: e,
@@ -46,17 +46,17 @@ class N extends a.PureComponent {
                     isVerified: t
                 }),
                 (0, n.jsx)(c.Z, {}),
-                (0, n.jsx)(_.Z, { isHypeSquadOnlineMember: null != e })
+                (0, n.jsx)(u.Z, { isHypeSquadOnlineMember: null != e })
             ]
         });
     }
 }
-s.Z = o.ZP.connectStores([u.default, E.Z], () => {
-    let e = u.default.getCurrentUser();
+s.Z = o.ZP.connectStores([E.default, _.Z], () => {
+    let e = E.default.getCurrentUser();
     return (
         r()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
         {
-            houseMembership: E.Z.getHouseMembership(),
+            houseMembership: _.Z.getHouseMembership(),
             isClaimed: e.isClaimed(),
             isVerified: e.verified
         }

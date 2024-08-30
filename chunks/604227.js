@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return E;
+        return _;
     }
 }),
     t(47120),
@@ -15,17 +15,17 @@ var a = t(525654),
     l = t(304761),
     c = t(320161),
     d = t(689938),
-    _ = t(844185);
-function E() {
-    var e, s, t, a, E, u;
-    let I = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        T = '323312',
-        S = ((e = '0a2604153c5cf9b65b132096d75858a688885a56'), e.substring(0, 7)),
+    u = t(844185);
+function _() {
+    var e, s, t, a, _, E;
+    let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
+        I = '323376',
+        S = ((e = 'a2c76727185548cd1392159df06e048003133e9f'), e.substring(0, 7)),
         N = null === o.Z || void 0 === o.Z ? void 0 : o.Z.remoteApp.getVersion(),
-        C = null === o.Z || void 0 === o.Z ? void 0 : null === (s = (t = o.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(t),
-        m = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (E = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(E),
-        A = null === (u = l.C.getCurrentBuildOverride().overrides) || void 0 === u ? void 0 : u.discord_web,
-        O = (function () {
+        m = null === o.Z || void 0 === o.Z ? void 0 : null === (s = (t = o.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(t),
+        C = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (_ = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(_),
+        g = null === (E = l.C.getCurrentBuildOverride().overrides) || void 0 === E ? void 0 : E.discord_web,
+        A = (function () {
             var e;
             let s = null === i() || void 0 === i() ? void 0 : null === (e = i().os) || void 0 === e ? void 0 : e.toString();
             if (null == s || null == o.Z) return null;
@@ -33,35 +33,35 @@ function E() {
                 [n, a, r] = t.split('.').map((e) => parseInt(e, 10));
             return s.includes('Windows 10') && void 0 !== r && r >= 22000 && (s = s.replace('Windows 10', 'Windows 11')), s.includes('OS X 10.15.7') && void 0 !== n && n >= 20 && (s = 'macOS '.concat(n - 9)), ''.concat(s, ' (').concat(t, ')');
         })(),
-        g = [I, T, '('.concat(S, ')')];
+        h = [T, I, '('.concat(S, ')')];
     return (
-        null != N && (g.push('Host '.concat(N)), null != m && g.push(m.toLowerCase()), null != C && g.push('('.concat(C, ')'))),
-        g.push('Build Override: '.concat(null != A ? A.id : 'N/A')),
-        null != O && g.push(O),
+        null != N && (h.push('Host '.concat(N)), null != C && h.push(C.toLowerCase()), null != m && h.push('('.concat(m, ')'))),
+        h.push('Build Override: '.concat(null != g ? g.id : 'N/A')),
+        null != A && h.push(A),
         (0, n.jsx)(c.Z, {
-            copyValue: g.join(' '),
+            copyValue: h.join(' '),
             text: d.Z.Messages.COPY_VERSION,
             'aria-label': !1,
             children: (e) =>
                 (0, n.jsx)(r.Clickable, {
                     ...e,
                     'aria-label': d.Z.Messages.COPY_VERSION,
-                    className: _.clickable,
+                    className: u.clickable,
                     children: (0, n.jsxs)('div', {
-                        className: _.info,
+                        className: u.info,
                         children: [
                             (0, n.jsxs)(r.Text, {
                                 tag: 'span',
-                                className: _.line,
+                                className: u.line,
                                 variant: 'text-xs/normal',
                                 color: 'text-muted',
                                 children: [
-                                    I,
-                                    ' ',
                                     T,
                                     ' ',
+                                    I,
+                                    ' ',
                                     (0, n.jsxs)('span', {
-                                        className: _.versionHash,
+                                        className: u.versionHash,
                                         children: ['(', S, ')']
                                     })
                                 ]
@@ -72,22 +72,22 @@ function E() {
                                       children: [
                                           (0, n.jsxs)(r.Text, {
                                               tag: 'span',
-                                              className: _.line,
+                                              className: u.line,
                                               variant: 'text-xs/normal',
                                               color: 'text-muted',
                                               children: [
                                                   'Host ',
                                                   N,
                                                   ' ',
-                                                  null != m
-                                                      ? (0, n.jsxs)('span', {
-                                                            className: _.appArch,
-                                                            children: [m.toLowerCase(), ' ']
-                                                        })
-                                                      : null,
                                                   null != C
                                                       ? (0, n.jsxs)('span', {
-                                                            children: ['(', C, ')']
+                                                            className: u.appArch,
+                                                            children: [C.toLowerCase(), ' ']
+                                                        })
+                                                      : null,
+                                                  null != m
+                                                      ? (0, n.jsxs)('span', {
+                                                            children: ['(', m, ')']
                                                         })
                                                       : null
                                               ]
@@ -96,13 +96,13 @@ function E() {
                                       ]
                                   })
                                 : null,
-                            null != O
+                            null != A
                                 ? (0, n.jsx)(r.Text, {
                                       tag: 'span',
-                                      className: _.line,
+                                      className: u.line,
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: O
+                                      children: A
                                   })
                                 : null
                         ]

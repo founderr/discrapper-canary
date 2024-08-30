@@ -1,6 +1,6 @@
 t.d(s, {
     h: function () {
-        return A;
+        return g;
     }
 }),
     t(47120);
@@ -12,14 +12,14 @@ var n = t(735250),
     l = t(355467),
     c = t(100527),
     d = t(906732),
-    _ = t(313201),
-    E = t(73346),
-    u = t(584825),
-    I = t(305342),
-    T = t(293810),
+    u = t(313201),
+    _ = t(73346),
+    E = t(584825),
+    T = t(305342),
+    I = t(293810),
     S = t(689938),
     N = t(850371);
-let C = (e) => {
+let m = (e) => {
         let [s, t] = a.useState(!1),
             [n, i] = a.useState(null);
         return {
@@ -36,20 +36,20 @@ let C = (e) => {
             submitting: s
         };
     },
-    m = (e) => {
+    C = (e) => {
         var s;
-        let { transitionState: t, groupListing: a, guildId: i, listing: l, subscription: m, onClose: A } = e,
-            O = (0, _.Dt)(),
-            g = (0, u.YB)(i),
-            h = (null == g ? void 0 : null === (s = g.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null ? (0, E._W)(g.cover_image_asset.application_id, g.cover_image_asset, 440) : void 0,
+        let { transitionState: t, groupListing: a, guildId: i, listing: l, subscription: C, onClose: g } = e,
+            A = (0, u.Dt)(),
+            h = (0, E.YB)(i),
+            O = (null == h ? void 0 : null === (s = h.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null ? (0, _._W)(h.cover_image_asset.application_id, h.cover_image_asset, 440) : void 0,
             { analyticsLocations: p } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: R, error: x, submitting: M } = C(p),
-            f = async () => {
-                (await R(m.id)) && A();
+            { cancelSubscription: x, error: R, submitting: f } = m(p),
+            M = async () => {
+                (await x(C.id)) && g();
             },
-            D = l.role_benefits.benefits.filter((e) => e.ref_type === T.Qs.CHANNEL),
-            P = l.role_benefits.benefits.filter((e) => e.ref_type === T.Qs.INTANGIBLE),
-            L = r()(m.currentPeriodEnd).format('MMMM Do, YYYY'),
+            D = l.role_benefits.benefits.filter((e) => e.ref_type === I.Qs.CHANNEL),
+            P = l.role_benefits.benefits.filter((e) => e.ref_type === I.Qs.INTANGIBLE),
+            L = r()(C.currentPeriodEnd).format('MMMM Do, YYYY'),
             b = S.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
                 numChannels: D.length,
                 numAdditionalBenefits: P.length,
@@ -58,28 +58,28 @@ let C = (e) => {
         return (0, n.jsxs)(o.ModalRoot, {
             transitionState: t,
             className: N.__invalid_modal,
-            'aria-labelledby': O,
+            'aria-labelledby': A,
             children: [
                 (0, n.jsxs)('div', {
                     children: [
                         (0, n.jsx)('img', {
-                            src: h,
+                            src: O,
                             alt: '',
                             className: N.headerImage
                         }),
                         (0, n.jsx)(o.ModalCloseButton, {
                             withCircleBackground: !0,
                             className: N.closeButton,
-                            onClick: A
+                            onClick: g
                         })
                     ]
                 }),
-                null != x ? (0, n.jsx)(o.FormErrorBlock, { children: x.message }) : null,
+                null != R ? (0, n.jsx)(o.FormErrorBlock, { children: R.message }) : null,
                 (0, n.jsxs)(o.ModalContent, {
                     className: N.content,
                     children: [
                         (0, n.jsx)(o.Heading, {
-                            id: O,
+                            id: A,
                             variant: 'text-md/medium',
                             className: N.title,
                             children: S.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_TITLE
@@ -89,7 +89,7 @@ let C = (e) => {
                             variant: 'text-sm/normal',
                             children: b
                         }),
-                        (0, n.jsx)(I.c, {
+                        (0, n.jsx)(T.c, {
                             listingId: l.id,
                             guildId: a.guild_id,
                             className: N.benefits
@@ -101,15 +101,15 @@ let C = (e) => {
                     children: [
                         (0, n.jsx)(o.Button, {
                             color: o.Button.Colors.RED,
-                            onClick: f,
-                            submitting: M,
+                            onClick: M,
+                            submitting: f,
                             children: S.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
                         }),
                         (0, n.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.WHITE,
                             className: N.goBackButton,
-                            onClick: A,
+                            onClick: g,
                             children: S.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_NEVERMIND_CTA
                         })
                     ]
@@ -117,9 +117,9 @@ let C = (e) => {
             ]
         });
     },
-    A = (e) => {
+    g = (e) => {
         (0, o.openModal)((s) =>
-            (0, n.jsx)(m, {
+            (0, n.jsx)(C, {
                 ...s,
                 ...e
             })

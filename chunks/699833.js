@@ -26,7 +26,7 @@ function _(e) {
         : (0, i.jsxs)(l.Clickable, {
               onClick: () => {
                   (0, l.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e('18831'), n.e('73255')]).then(n.bind(n, 41164));
+                      let { default: e } = await Promise.all([n.e('25183'), n.e('18831'), n.e('73255')]).then(n.bind(n, 41164));
                       return (t) =>
                           (0, i.jsx)(e, {
                               classificationId: T,

@@ -17,24 +17,24 @@ var n,
     l = t.n(o),
     c = t(887024),
     d = t(512722),
-    _ = t.n(d),
-    E = t(442837),
-    u = t(780384),
-    I = t(481060),
-    T = t(355467),
+    u = t.n(d),
+    _ = t(442837),
+    E = t(780384),
+    T = t(481060),
+    I = t(355467),
     S = t(410030),
     N = t(100527),
-    C = t(906732),
-    m = t(211242),
-    A = t(600164),
-    O = t(509545),
-    g = t(626135),
-    h = t(122289),
+    m = t(906732),
+    C = t(211242),
+    g = t(600164),
+    A = t(509545),
+    h = t(626135),
+    O = t(122289),
     p = t(63063),
-    R = t(74538),
-    x = t(937615),
-    M = t(374649),
-    f = t(140465),
+    x = t(74538),
+    R = t(937615),
+    f = t(374649),
+    M = t(140465),
     D = t(314684),
     P = t(653798),
     L = t(625881),
@@ -48,66 +48,66 @@ var n,
     F = t(119269),
     y = t(474936),
     V = t(981631),
-    Y = t(689938),
-    w = t(758294);
+    w = t(689938),
+    k = t(758294);
 ((a = n || (n = {}))[(a.WHAT_YOU_LOSE = 1)] = 'WHAT_YOU_LOSE'), (a[(a.CONFIRM = 2)] = 'CONFIRM'), (a[(a.PREVIEW = 3)] = 'PREVIEW'), (a[(a.CONFIRM_DISCOUNT = 4)] = 'CONFIRM_DISCOUNT'), (a[(a.DISCOUNT_APPLIED = 5)] = 'DISCOUNT_APPLIED'), (a[(a.PAUSE_SELECT = 6)] = 'PAUSE_SELECT'), (a[(a.PAUSE_CONFIRM = 7)] = 'PAUSE_CONFIRM');
-async function H(e) {
+async function Y(e) {
     let { premiumSubscription: s, onClose: t, setHasError: n, setIsCancelling: a, analyticsLocations: i, analyticsLocation: r } = e;
     try {
-        if ((a(!0), n(!1), [V.O0b.PAST_DUE, V.O0b.PAUSED, V.O0b.BILLING_RETRY].includes(s.status))) await (0, T.EO)(s.id, i, r);
+        if ((a(!0), n(!1), [V.O0b.PAST_DUE, V.O0b.PAUSED, V.O0b.BILLING_RETRY].includes(s.status))) await (0, I.EO)(s.id, i, r);
         else {
             var o, l;
             let e = null !== (l = null === (o = s.renewalMutations) || void 0 === o ? void 0 : o.items) && void 0 !== l ? l : s.items;
-            await (0, T.Mg)(s, { items: (0, R.Ue)(e) }, i, r);
+            await (0, I.Mg)(s, { items: (0, x.Ue)(e) }, i, r);
         }
         t();
     } catch {
         n(!0), a(!1);
     }
 }
-function k(e) {
+function H(e) {
     var s;
     let { premiumSubscription: t, premiumType: n, setStep: a, onClose: o, whatYouLoseExperienceEnabled: l, analyticsLocation: c } = e,
-        d = (0, m.Q)(),
-        [_, E] = r.useState(!1),
-        [T, N] = r.useState(!1),
-        O = (0, S.ZP)(),
-        { analyticsLocations: g } = (0, C.ZP)(),
-        h = null;
+        d = (0, C.Q)(),
+        [u, _] = r.useState(!1),
+        [I, N] = r.useState(!1),
+        A = (0, S.ZP)(),
+        { analyticsLocations: h } = (0, m.ZP)(),
+        O = null;
     switch (t.status) {
         case V.O0b.PAST_DUE:
         case V.O0b.PAUSED:
         case V.O0b.BILLING_RETRY:
-            h = Y.Z.Messages.PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY;
+            O = w.Z.Messages.PREMIUM_CANCEL_PAST_DUE_CONFIRM_BODY;
             break;
         default:
             switch (n) {
                 case y.p9.TIER_0:
-                    h = d
-                        ? Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_0_PAYMENT_BLOCKED_RUSSIA.format({
+                    O = d
+                        ? w.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_0_PAYMENT_BLOCKED_RUSSIA.format({
                               date: t.currentPeriodEnd,
                               helpdeskArticle: p.Z.getArticleURL(V.BhN.BLOCKED_PAYMENTS)
                           })
-                        : Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_0.format({ date: t.currentPeriodEnd });
+                        : w.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_0.format({ date: t.currentPeriodEnd });
                     break;
                 case y.p9.TIER_1:
-                    h = d
-                        ? Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_1_PAYMENT_BLOCKED_RUSSIA.format({
+                    O = d
+                        ? w.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_1_PAYMENT_BLOCKED_RUSSIA.format({
                               date: t.currentPeriodEnd,
                               helpdeskArticle: p.Z.getArticleURL(V.BhN.BLOCKED_PAYMENTS)
                           })
-                        : Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_1.format({ date: t.currentPeriodEnd });
+                        : w.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_1.format({ date: t.currentPeriodEnd });
                     break;
                 default:
-                    h = d
-                        ? Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_2_PAYMENT_BLOCKED_RUSSIA.format({
+                    O = d
+                        ? w.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_2_PAYMENT_BLOCKED_RUSSIA.format({
                               date: t.currentPeriodEnd,
                               helpdeskArticle: p.Z.getArticleURL(V.BhN.BLOCKED_PAYMENTS)
                           })
-                        : Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_2.format({ date: t.currentPeriodEnd });
+                        : w.Z.Messages.PREMIUM_CANCEL_CONFIRM_BODY_TIER_2.format({ date: t.currentPeriodEnd });
             }
     }
-    let x =
+    let R =
             (t.items.some((e) => {
                 let { planId: s } = e;
                 return !y.dJ.has(s);
@@ -119,66 +119,66 @@ function k(e) {
                       let { planId: s } = e;
                       return !y.dJ.has(s);
                   })) != null,
-        M = x
-            ? (0, i.jsx)(I.Button, {
+        f = R
+            ? (0, i.jsx)(T.Button, {
                   onClick: () => a(3),
-                  children: Y.Z.Messages.NEXT
+                  children: w.Z.Messages.NEXT
               })
-            : (0, i.jsx)(I.Button, {
-                  color: I.Button.Colors.RED,
-                  disabled: _,
+            : (0, i.jsx)(T.Button, {
+                  color: T.Button.Colors.RED,
+                  disabled: u,
                   onClick: async () => {
-                      await H({
+                      await Y({
                           setHasError: N,
                           onClose: o,
                           premiumSubscription: t,
-                          setIsCancelling: E,
-                          analyticsLocations: g,
+                          setIsCancelling: _,
+                          analyticsLocations: h,
                           analyticsLocation: c
                       });
                   },
-                  children: l ? Y.Z.Messages.CONFIRM : Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({ planPremiumType: R.ZP.getDisplayPremiumType(t.planId) })
+                  children: l ? w.Z.Messages.CONFIRM : w.Z.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({ planPremiumType: x.ZP.getDisplayPremiumType(t.planId) })
               }),
-        f = (0, i.jsx)(I.Button, {
-            look: I.Button.Looks.LINK,
-            color: (0, u.ap)(O) ? I.Button.Colors.PRIMARY : I.Button.Colors.WHITE,
+        M = (0, i.jsx)(T.Button, {
+            look: T.Button.Looks.LINK,
+            color: (0, E.ap)(A) ? T.Button.Colors.PRIMARY : T.Button.Colors.WHITE,
             onClick: o,
-            children: l ? Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK : Y.Z.Messages.CANCEL
+            children: l ? w.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK : w.Z.Messages.CANCEL
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             l
                 ? (0, i.jsx)(U.Z, {
                       premiumType: n,
-                      className: w.cancellationHeader,
+                      className: k.cancellationHeader,
                       onClose: o
                   })
-                : (0, i.jsxs)(I.ModalHeader, {
+                : (0, i.jsxs)(T.ModalHeader, {
                       separator: !1,
                       children: [
-                          (0, i.jsx)(I.FormTitle, {
-                              tag: I.FormTitleTags.H4,
-                              children: Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_TITLE.format({ planPremiumType: R.ZP.getDisplayPremiumType(t.planId) })
+                          (0, i.jsx)(T.FormTitle, {
+                              tag: T.FormTitleTags.H4,
+                              children: w.Z.Messages.PREMIUM_CANCEL_CONFIRM_TITLE.format({ planPremiumType: x.ZP.getDisplayPremiumType(t.planId) })
                           }),
-                          (0, i.jsx)(I.ModalCloseButton, { onClick: o })
+                          (0, i.jsx)(T.ModalCloseButton, { onClick: o })
                       ]
                   }),
-            (0, i.jsxs)(I.ModalContent, {
-                className: w.body,
+            (0, i.jsxs)(T.ModalContent, {
+                className: k.body,
                 children: [
-                    T
-                        ? (0, i.jsx)(I.FormErrorBlock, {
-                              className: w.errorBlock,
-                              children: Y.Z.Messages.BILLING_ERROR_GENERIC
+                    I
+                        ? (0, i.jsx)(T.FormErrorBlock, {
+                              className: k.errorBlock,
+                              children: w.Z.Messages.BILLING_ERROR_GENERIC
                           })
                         : null,
-                    (0, i.jsx)('div', { className: w.cancelImage }),
-                    (0, i.jsx)('div', { children: h })
+                    (0, i.jsx)('div', { className: k.cancelImage }),
+                    (0, i.jsx)('div', { children: O })
                 ]
             }),
-            (0, i.jsxs)(I.ModalFooter, {
-                justify: A.Z.Justify.START,
-                children: [M, f]
+            (0, i.jsxs)(T.ModalFooter, {
+                justify: g.Z.Justify.START,
+                children: [f, M]
             })
         ]
     });
@@ -186,37 +186,37 @@ function k(e) {
 function W(e) {
     var s, t;
     let { premiumSubscription: n } = e,
-        { analyticsLocations: a } = (0, C.ZP)(),
-        [r] = (0, M.ED)({
+        { analyticsLocations: a } = (0, m.ZP)(),
+        [r] = (0, f.ED)({
             subscriptionId: n.id,
-            items: (0, R.Ue)(null !== (t = null === (s = n.renewalMutations) || void 0 === s ? void 0 : s.items) && void 0 !== t ? t : n.items),
+            items: (0, x.Ue)(null !== (t = null === (s = n.renewalMutations) || void 0 === s ? void 0 : s.items) && void 0 !== t ? t : n.items),
             renewal: !0,
             analyticsLocations: a,
             analyticsLocation: N.Z.CANCEL_INVOICE_PREVIEW
         }),
-        o = (0, E.e7)([O.Z], () => O.Z.get(n.planId));
-    if (null == r || null == o) return (0, i.jsx)(I.Spinner, { className: w.loading });
-    let { intervalType: l, intervalCount: c } = R.ZP.getIntervalForInvoice(r);
+        o = (0, _.e7)([A.Z], () => A.Z.get(n.planId));
+    if (null == r || null == o) return (0, i.jsx)(T.Spinner, { className: k.loading });
+    let { intervalType: l, intervalCount: c } = x.ZP.getIntervalForInvoice(r);
     return (0, i.jsxs)('div', {
-        className: w.__invalid_bodyText,
+        className: k.__invalid_bodyText,
         children: [
             (0, i.jsx)('div', {
-                className: w.renewalInvoiceDate,
+                className: k.renewalInvoiceDate,
                 children:
                     0 !== r.total
-                        ? Y.Z.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE_WITH_CHARGE.format({
+                        ? w.Z.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE_WITH_CHARGE.format({
                               renewalDate: r.subscriptionPeriodStart,
-                              rate: (0, x.og)((0, x.T4)(r.total, r.currency), l, c)
+                              rate: (0, R.og)((0, R.T4)(r.total, r.currency), l, c)
                           })
-                        : Y.Z.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE.format({ renewalDate: r.subscriptionPeriodStart })
+                        : w.Z.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE.format({ renewalDate: r.subscriptionPeriodStart })
             }),
             (0, i.jsxs)(P.PO, {
                 children: [
-                    (0, i.jsx)(P.q9, { children: Y.Z.Messages.PREMIUM_SUBSCRIPTION_UPDATES }),
+                    (0, i.jsx)(P.q9, { children: w.Z.Messages.PREMIUM_SUBSCRIPTION_UPDATES }),
                     (0, i.jsx)(P.R$, {
-                        label: Y.Z.Messages.PREMIUM_SUBSCRIPTION_CANCELLED.format({ planName: R.ZP.getDisplayName(o.id) }),
-                        value: (0, R.PK)(o),
-                        className: w.invoiceCancelRow
+                        label: w.Z.Messages.PREMIUM_SUBSCRIPTION_CANCELLED.format({ planName: x.ZP.getDisplayName(o.id) }),
+                        value: (0, x.PK)(o),
+                        className: k.invoiceCancelRow
                     }),
                     (0, i.jsx)(P.KU, {}),
                     (0, i.jsx)(B.nd, {
@@ -232,44 +232,44 @@ function W(e) {
 function K(e) {
     let { premiumSubscription: s, premiumType: t, onBack: n, onClose: a, analyticsLocation: o } = e,
         [c, d] = r.useState(!1),
-        [_, E] = r.useState(!1),
-        { analyticsLocations: u } = (0, C.ZP)();
+        [u, _] = r.useState(!1),
+        { analyticsLocations: E } = (0, m.ZP)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(U.Z, {
                 premiumType: t,
                 onClose: a
             }),
-            (0, i.jsxs)(I.ModalContent, {
-                className: l()(w.previewStep, w.body),
+            (0, i.jsxs)(T.ModalContent, {
+                className: l()(k.previewStep, k.body),
                 children: [
-                    _
-                        ? (0, i.jsx)(I.FormErrorBlock, {
-                              className: w.errorBlock,
-                              children: Y.Z.Messages.BILLING_ERROR_GENERIC
+                    u
+                        ? (0, i.jsx)(T.FormErrorBlock, {
+                              className: k.errorBlock,
+                              children: w.Z.Messages.BILLING_ERROR_GENERIC
                           })
                         : null,
                     (0, i.jsx)(W, { premiumSubscription: s })
                 ]
             }),
-            (0, i.jsxs)(I.ModalFooter, {
-                align: A.Z.Align.CENTER,
-                justify: A.Z.Justify.BETWEEN,
+            (0, i.jsxs)(T.ModalFooter, {
+                align: g.Z.Align.CENTER,
+                justify: g.Z.Justify.BETWEEN,
                 children: [
-                    (0, i.jsx)(I.Button, {
-                        color: I.Button.Colors.RED,
+                    (0, i.jsx)(T.Button, {
+                        color: T.Button.Colors.RED,
                         disabled: c,
                         onClick: async () => {
-                            await H({
-                                setHasError: E,
+                            await Y({
+                                setHasError: _,
                                 onClose: a,
                                 premiumSubscription: s,
                                 setIsCancelling: d,
-                                analyticsLocations: u,
+                                analyticsLocations: E,
                                 analyticsLocation: o
                             });
                         },
-                        children: Y.Z.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({ planPremiumType: R.ZP.getDisplayPremiumType(s.planId) })
+                        children: w.Z.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({ planPremiumType: x.ZP.getDisplayPremiumType(s.planId) })
                     }),
                     (0, i.jsx)(j.Z, { onClick: n })
                 ]
@@ -282,7 +282,7 @@ function z(e) {
     return {
         subscription_id: e.id,
         subscription_type: e.type,
-        subscription_plan_id: null === (s = (0, R.Af)(e)) || void 0 === s ? void 0 : s.id,
+        subscription_plan_id: null === (s = (0, x.Af)(e)) || void 0 === s ? void 0 : s.id,
         subscription_plan_gateway_plan_id: e.paymentGatewayPlanId,
         subscription_status: e.status
     };
@@ -299,28 +299,28 @@ let Q = {
 function X(e) {
     var s;
     let t,
-        { premiumSubscription: n, transitionState: a, onClose: o, analyticsLocations: l, analyticsLocation: d, initialStep: E } = e,
-        T = r.useRef(new c.qA()),
-        [m, A] = r.useState(null),
-        O = (0, D.yQ)(),
-        p = (null == O ? void 0 : O.showCard) === !0,
-        x = null === (s = (0, R.Af)(n)) || void 0 === s ? void 0 : s.planId,
-        M = null != x ? R.ZP.getPremiumType(x) : null;
-    _()(null != M, 'Should not be cancelling Nitro without premiumType');
+        { premiumSubscription: n, transitionState: a, onClose: o, analyticsLocations: l, analyticsLocation: d, initialStep: _ } = e,
+        I = r.useRef(new c.qA()),
+        [C, g] = r.useState(null),
+        A = (0, D.yQ)(),
+        p = (null == A ? void 0 : A.showCard) === !0,
+        R = null === (s = (0, x.Af)(n)) || void 0 === s ? void 0 : s.planId,
+        f = null != R ? x.ZP.getPremiumType(R) : null;
+    u()(null != f, 'Should not be cancelling Nitro without premiumType');
     let P = (0, S.ZP)();
     r.useEffect(() => {
-        g.default.track(V.rMx.CANCELLATION_FLOW_STARTED, z(n));
+        h.default.track(V.rMx.CANCELLATION_FLOW_STARTED, z(n));
     }, [n]);
-    let j = M === y.p9.TIER_0 || M === y.p9.TIER_1 || M === y.p9.TIER_2;
-    null == E && (E = j ? 1 : 2);
-    let { analyticsLocations: B } = (0, C.ZP)(l, N.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
-        [U, H, W, X] = (function (e, s, t) {
+    let j = f === y.p9.TIER_0 || f === y.p9.TIER_1 || f === y.p9.TIER_2;
+    null == _ && (_ = j ? 1 : 2);
+    let { analyticsLocations: B } = (0, m.ZP)(l, N.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
+        [U, Y, W, X] = (function (e, s, t) {
             let [n, a] = r.useState(e),
                 [i, o] = r.useState(Date.now()),
                 [l] = r.useState(Date.now()),
                 c = r.useCallback(
                     (e) => {
-                        g.default.track(V.rMx.CANCELLATION_FLOW_STEP, {
+                        h.default.track(V.rMx.CANCELLATION_FLOW_STEP, {
                             from_step: Q[n],
                             to_step: Q[e],
                             step_duration_ms: Date.now() - i,
@@ -334,12 +334,12 @@ function X(e) {
                     [t, l, i, n, s]
                 );
             return [n, c, i, l];
-        })(E, n, l),
+        })(_, n, l),
         [q, J] = r.useState(null);
     (0, G.w)(n, o, !1);
     let $ = (e) => {
             o(),
-                g.default.track(V.rMx.CANCELLATION_FLOW_STEP, {
+                h.default.track(V.rMx.CANCELLATION_FLOW_STEP, {
                     from_step: Q[e],
                     to_step: null,
                     step_duration_ms: Date.now() - W,
@@ -348,32 +348,32 @@ function X(e) {
                     ...z(n)
                 });
         },
-        ee = (0, f.UV)(),
-        { churnUserDiscountOffer: es, isFetchingChurnDiscountOffer: et } = (0, f.WR)(!ee || 1 !== U);
+        ee = (0, M.UV)(),
+        { churnUserDiscountOffer: es, isFetchingChurnDiscountOffer: et } = (0, M.WR)(!ee || 1 !== U);
     switch (U) {
         case 6:
             t = (0, i.jsx)(Z.of, {
                 premiumSubscription: n,
-                premiumType: M,
-                setStep: H,
+                premiumType: f,
+                setStep: Y,
                 onClose: () => $(U),
                 pauseDuration: q,
                 setPauseDuration: J,
                 footer: (0, i.jsxs)('div', {
-                    className: w.whatYouLoseButtonContainer,
+                    className: k.whatYouLoseButtonContainer,
                     children: [
-                        (0, i.jsx)(I.Button, {
+                        (0, i.jsx)(T.Button, {
                             disabled: null === q,
                             onClick: () => {
-                                0 === q ? H(1) : H(7);
+                                0 === q ? Y(1) : Y(7);
                             },
-                            children: Y.Z.Messages.CONTINUE
+                            children: w.Z.Messages.CONTINUE
                         }),
-                        (0, i.jsx)(I.Button, {
-                            look: I.Button.Looks.LINK,
-                            color: (0, u.wj)(P) ? I.Button.Colors.WHITE : I.Button.Colors.PRIMARY,
+                        (0, i.jsx)(T.Button, {
+                            look: T.Button.Looks.LINK,
+                            color: (0, E.wj)(P) ? T.Button.Colors.WHITE : T.Button.Colors.PRIMARY,
                             onClick: o,
-                            children: Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
+                            children: w.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
                         })
                     ]
                 }),
@@ -384,7 +384,7 @@ function X(e) {
             if (null == q) {
                 let e = Error('No pause duration to set');
                 throw (
-                    ((0, h.q2)(e, {
+                    ((0, O.q2)(e, {
                         extra: {
                             subscriptionId: n.id,
                             status: n.status
@@ -395,8 +395,8 @@ function X(e) {
             }
             t = (0, i.jsx)(Z.Sz, {
                 premiumSubscription: n,
-                premiumType: M,
-                setStep: H,
+                premiumType: f,
+                setStep: Y,
                 onClose: () => $(U),
                 analyticsLocation: d,
                 pauseDuration: q
@@ -404,51 +404,51 @@ function X(e) {
             break;
         case 1:
             t = (0, i.jsx)(v.Z, {
-                premiumType: M,
-                titleText: Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
-                subtitleText: p ? Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD_V2 : Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
-                subtitleClassName: p ? w.subtitleSection : void 0,
+                premiumType: f,
+                titleText: w.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
+                subtitleText: p ? w.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD_V2 : w.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
+                subtitleClassName: p ? k.subtitleSection : void 0,
                 subtitleIcon:
                     p &&
                     (0, i.jsx)('div', {
-                        className: w.subtitleIcon,
+                        className: k.subtitleIcon,
                         children: (0, i.jsx)(F.Z, {
                             staticPercentage: 100,
-                            iconClassName: w.iconClassName,
+                            iconClassName: k.iconClassName,
                             showAnimations: !1,
-                            innerCircleClassName: w.innerCircle,
+                            innerCircleClassName: k.innerCircle,
                             progressCircleStrokeSize: 5,
                             backgroundCircleSize: '38%'
                         })
                     }),
                 footer: (0, i.jsxs)('div', {
-                    className: w.whatYouLoseButtonContainer,
+                    className: k.whatYouLoseButtonContainer,
                     children: [
-                        (0, i.jsx)(I.Button, {
-                            onClick: () => H(2),
-                            children: Y.Z.Messages.CONTINUE
+                        (0, i.jsx)(T.Button, {
+                            onClick: () => Y(2),
+                            children: w.Z.Messages.CONTINUE
                         }),
-                        (0, i.jsx)(I.Button, {
-                            look: I.Button.Looks.LINK,
-                            color: (0, u.wj)(P) ? I.Button.Colors.WHITE : I.Button.Colors.PRIMARY,
+                        (0, i.jsx)(T.Button, {
+                            look: T.Button.Looks.LINK,
+                            color: (0, E.wj)(P) ? T.Button.Colors.WHITE : T.Button.Colors.PRIMARY,
                             onClick: () => $(U),
-                            children: Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
+                            children: w.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
                         })
                     ]
                 }),
                 onClose: () => $(U),
-                onDiscountClaim: () => H(4),
-                onContinue: () => H(2),
+                onDiscountClaim: () => Y(4),
+                onContinue: () => Y(2),
                 isLoading: ee && et,
                 churnUserDiscountOffer: es,
                 analyticsLocations: B
             });
             break;
         case 2:
-            t = (0, i.jsx)(k, {
+            t = (0, i.jsx)(H, {
                 premiumSubscription: n,
-                premiumType: M,
-                setStep: H,
+                premiumType: f,
+                setStep: Y,
                 onClose: () => $(U),
                 whatYouLoseExperienceEnabled: j,
                 analyticsLocation: d
@@ -457,8 +457,8 @@ function X(e) {
         case 3:
             t = (0, i.jsx)(K, {
                 premiumSubscription: n,
-                premiumType: M,
-                onBack: () => H(2),
+                premiumType: f,
+                onBack: () => Y(2),
                 onClose: () => $(U),
                 analyticsLocation: d
             });
@@ -466,33 +466,33 @@ function X(e) {
         case 4:
             t = (0, i.jsx)(L.Z, {
                 premiumSubscription: n,
-                premiumType: M,
+                premiumType: f,
                 onClose: () => $(U),
-                onConfirm: () => H(5),
+                onConfirm: () => Y(5),
                 userDiscountOffer: es
             });
             break;
         case 5:
             t = (0, i.jsx)(b.D, {
                 premiumSubscription: n,
-                premiumType: M,
+                premiumType: f,
                 onClose: () => $(U),
-                confettiCanvas: m,
+                confettiCanvas: C,
                 userDiscountOffer: es
             });
             break;
         default:
             throw Error('Unexpected step: '.concat(U));
     }
-    return (0, i.jsxs)(C.Gt, {
+    return (0, i.jsxs)(m.Gt, {
         value: B,
         children: [
             (0, i.jsx)(c.O_, {
-                ref: A,
-                className: w.confettiCanvas,
-                environment: T.current
+                ref: g,
+                className: k.confettiCanvas,
+                environment: I.current
             }),
-            (0, i.jsx)(I.ModalRoot, {
+            (0, i.jsx)(T.ModalRoot, {
                 transitionState: a,
                 children: t
             })

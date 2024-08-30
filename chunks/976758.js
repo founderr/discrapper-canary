@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return T;
+        return I;
     }
 });
 var n = t(735250);
@@ -12,11 +12,11 @@ var a = t(442837),
     l = t(313201),
     c = t(131951),
     d = t(36703),
-    _ = t(689938),
-    E = t(224499);
-let u = (0, l.hQ)(),
-    I = (0, l.hQ)();
-function T() {
+    u = t(689938),
+    _ = t(224499);
+let E = (0, l.hQ)(),
+    T = (0, l.hQ)();
+function I() {
     let { inputVolume: e, outputVolume: s } = (0, a.cj)([c.Z], () => ({
         inputVolume: c.Z.getInputVolume(),
         outputVolume: c.Z.getOutputVolume()
@@ -28,15 +28,15 @@ function T() {
                 basis: '50%',
                 children: [
                     (0, n.jsx)(i.FormTitle, {
-                        id: u,
+                        id: E,
                         tag: i.FormTitleTags.H5,
-                        className: E.marginBottom4,
-                        children: _.Z.Messages.FORM_LABEL_INPUT_VOLUME
+                        className: _.marginBottom4,
+                        children: u.Z.Messages.FORM_LABEL_INPUT_VOLUME
                     }),
                     (0, n.jsx)(i.Slider, {
                         initialValue: (0, d.P)(e),
                         asValueChanges: (e) => r.Z.setInputVolume((0, d.A)(e)),
-                        'aria-labelledby': u
+                        'aria-labelledby': E
                     })
                 ]
             }),
@@ -44,17 +44,17 @@ function T() {
                 basis: '50%',
                 children: [
                     (0, n.jsx)(i.FormTitle, {
-                        id: I,
+                        id: T,
                         tag: i.FormTitleTags.H5,
-                        className: E.marginBottom4,
-                        children: _.Z.Messages.FORM_LABEL_OUTPUT_VOLUME
+                        className: _.marginBottom4,
+                        children: u.Z.Messages.FORM_LABEL_OUTPUT_VOLUME
                     }),
                     (0, n.jsx)(i.Slider, {
                         initialValue: (0, d.P)(s),
                         maxValue: 200,
                         onValueRender: (e) => ''.concat(e.toFixed(0), '%'),
                         asValueChanges: (e) => r.Z.setOutputVolume((0, d.A)(e)),
-                        'aria-labelledby': I
+                        'aria-labelledby': T
                     })
                 ]
             })

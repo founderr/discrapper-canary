@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return u;
+        return E;
     }
 });
 var n = t(735250);
@@ -12,9 +12,9 @@ var a = t(442837),
     l = t(39604),
     c = t(442334),
     d = t(689938),
-    _ = t(992133),
-    E = t(677787);
-function u() {
+    u = t(992133),
+    _ = t(677787);
+function E() {
     let e = (0, a.e7)([o.Z], () => o.Z.getSettings().storageLocation),
         s = async () => {
             let e = await r.Z.fileManager.showOpenDialog({
@@ -26,9 +26,9 @@ function u() {
         children: (0, n.jsx)(c.O, {
             title: d.Z.Messages.CLIPS_SETTINGS_STORAGE_LOCATION,
             note: d.Z.Messages.CLIPS_SETTINGS_STORAGE_LOCATION_HELP,
-            className: _.formItem,
+            className: u.formItem,
             children: (0, n.jsx)(i.Clickable, {
-                className: E.selectControl,
+                className: _.selectControl,
                 'aria-label': d.Z.Messages.CLIPS_SETTINGS_STORAGE_LOCATION_LABEL.format({ storageLocation: e }),
                 onClick: s,
                 children: (0, n.jsx)(i.TextInput, {

@@ -6,12 +6,12 @@ var n = t(735250),
     l = t(709586),
     c = t(267642),
     d = t(981631),
-    _ = t(689938),
-    E = t(123600);
+    u = t(689938),
+    _ = t(123600);
 s.Z = function () {
     let e = a.useRef(null),
         { analyticsLocations: s } = (0, r.ZP)();
-    function u(t) {
+    function E(t) {
         null != e.current && (0, i.closeModal)(e.current),
             (0, o.u)({
                 analyticsLocation: {
@@ -24,14 +24,14 @@ s.Z = function () {
                 guild: t
             });
     }
-    async function I() {
+    async function T() {
         e.current = await (0, i.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(t.bind(t, 719228));
                 return (s) =>
                     (0, n.jsx)(e, {
                         ...s,
-                        onSelectGuild: u
+                        onSelectGuild: E
                     });
             },
             {
@@ -41,30 +41,30 @@ s.Z = function () {
             }
         );
     }
-    let T = (0, c.aq)();
+    let I = (0, c.aq)();
     return (0, n.jsxs)('div', {
-        className: E.wrapper,
+        className: _.wrapper,
         children: [
             (0, n.jsx)(l.Z, {
-                className: E.boostIcon,
+                className: _.boostIcon,
                 width: 16,
                 height: 16
             }),
             (0, n.jsx)(i.Text, {
-                className: E.copy,
+                className: _.copy,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_GUILD_CTA.format({
+                children: u.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_GUILD_CTA.format({
                     boostAnyGuildHook: (e, s) => {
-                        let t = null != T,
+                        let t = null != I,
                             a = (0, n.jsx)(
                                 i.Button,
                                 {
-                                    className: E.cta,
+                                    className: _.cta,
                                     disabled: t,
                                     color: i.Button.Colors.LINK,
                                     look: i.Button.Looks.LINK,
-                                    onClick: t ? void 0 : I,
+                                    onClick: t ? void 0 : T,
                                     children: e
                                 },
                                 s
@@ -73,7 +73,7 @@ s.Z = function () {
                             ? (0, n.jsx)(
                                   i.Tooltip,
                                   {
-                                      text: T,
+                                      text: I,
                                       children: (e) =>
                                           (0, n.jsx)('span', {
                                               ...e,

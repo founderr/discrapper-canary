@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return g;
     }
 }),
     t(47120);
@@ -12,34 +12,34 @@ var n = t(735250),
     l = t(2052),
     c = t(932724),
     d = t(716161),
-    _ = t(672339),
-    E = t(747545),
-    u = t(131951),
-    I = t(594174),
-    T = t(981631),
+    u = t(672339),
+    _ = t(747545),
+    E = t(131951),
+    T = t(594174),
+    I = t(981631),
     S = t(689938),
     N = t(133953);
-let C = 387,
-    m = 218;
-function A(e) {
+let m = 387,
+    C = 218;
+function g(e) {
     let { previewEnabled: s, onEnablePreview: t } = e,
-        A = u.Z.getCameraComponent(),
-        [O, g] = a.useState((0, c.P)(I.default.getCurrentUser())),
-        h = a.useRef(!1),
-        p = a.useRef(O),
-        R = (0, l.O)(),
-        x = (0, i.e7)([u.Z], () => Object.values(u.Z.getVideoDevices()).length > 0);
+        g = E.Z.getCameraComponent(),
+        [A, h] = a.useState((0, c.P)(T.default.getCurrentUser())),
+        O = a.useRef(!1),
+        p = a.useRef(A),
+        x = (0, l.O)(),
+        R = (0, i.e7)([E.Z], () => Object.values(E.Z.getVideoDevices()).length > 0);
     return (
         a.useEffect(
             () => () => {
-                h.current && o.Z.wait(() => (0, d.Up)(p.current));
+                O.current && o.Z.wait(() => (0, d.Up)(p.current));
             },
             []
         ),
-        (0, n.jsx)(E.Z, {
-            selectedBackgroundOption: O,
+        (0, n.jsx)(_.Z, {
+            selectedBackgroundOption: A,
             onSelectBackgroundOption: (e) => {
-                (h.current = !0), (p.current = e), g(e), (0, _.wG)(e, { location: R.location }).catch(T.dG4);
+                (O.current = !0), (p.current = e), h(e), (0, u.wG)(e, { location: x.location }).catch(I.dG4);
             },
             renderCamera: (e) =>
                 s
@@ -48,13 +48,13 @@ function A(e) {
                           children: (0, n.jsxs)('div', {
                               className: N.camera,
                               children: [
-                                  (0, n.jsx)(A, {
+                                  (0, n.jsx)(g, {
                                       deviceId: e,
-                                      width: C,
-                                      height: m,
+                                      width: m,
+                                      height: C,
                                       disabled: !s
                                   }),
-                                  (0, n.jsx)(E.S, {})
+                                  (0, n.jsx)(_.S, {})
                               ]
                           })
                       })
@@ -63,12 +63,12 @@ function A(e) {
                           children: [
                               (0, n.jsx)('div', { className: N.previewImage }),
                               (0, n.jsx)(r.Tooltip, {
-                                  text: x ? null : S.Z.Messages.CAMERA_UNAVAILABLE,
+                                  text: R ? null : S.Z.Messages.CAMERA_UNAVAILABLE,
                                   children: (e) =>
                                       (0, n.jsx)(r.Button, {
                                           ...e,
                                           onClick: t,
-                                          disabled: !x,
+                                          disabled: !R,
                                           children: S.Z.Messages.TEST_VIDEO
                                       })
                               })
