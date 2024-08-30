@@ -116,29 +116,31 @@ function g(e) {
     });
 }
 async function p(e) {
-    let t = c.Z.getSearchResult(e);
-    if ('loaded' === t.status) return t;
-    let n = s().v3(JSON.stringify(e));
+    let t = c.Z.getSearchResult(e),
+        { resetPagination: n, updatePaginationResults: i } = d.$.getState();
+    if ('loaded' === t.status) return n(), i(t.guildIds), t;
+    let a = s().v3(JSON.stringify(e));
     try {
-        var i, a;
+        var r, o;
         let t = await g(e),
             s = t.body.guilds.map(u.Gh),
-            r = null !== (i = t.body.guild_ids) && void 0 !== i ? i : [];
-        d.$.getState().resetPagination();
-        let o = {
-            status: 'loaded',
-            loadedAt: Date.now(),
-            items: s,
-            guildIds: r
-        };
+            c = null !== (r = t.body.guild_ids) && void 0 !== r ? r : [],
+            d = {
+                status: 'loaded',
+                loadedAt: Date.now(),
+                items: s,
+                guildIds: c
+            };
         return (
+            n(),
+            i(c),
             l.Z.dispatch({
                 type: 'FETCH_CLAN_DISCOVERY_SEARCH_RESULT_SUCCESS',
-                criteriaHash: n,
-                searchResult: o,
-                recommendationId: null !== (a = t.body.recommendation_id) && void 0 !== a ? a : ''
+                criteriaHash: a,
+                searchResult: d,
+                recommendationId: null !== (o = t.body.recommendation_id) && void 0 !== o ? o : ''
             }),
-            o
+            d
         );
     } catch (e) {
         return {
@@ -158,11 +160,12 @@ async function T(e, t) {
                 })
             ).body.guilds.map(u.Gh),
             i = n.filter((t) => !e.some((e) => e.id === t));
-        await l.Z.dispatch({
-            type: 'FETCH_CLAN_DISCOVERY_PROFILE_LIST_SUCCESS',
-            guilds: e,
-            failedGuildIds: i
-        });
+        i.length > 0 && d.$.getState().removeGuilds(i),
+            await l.Z.dispatch({
+                type: 'FETCH_CLAN_DISCOVERY_PROFILE_LIST_SUCCESS',
+                guilds: e,
+                failedGuildIds: i
+            });
     } catch (e) {
         await l.Z.dispatch({
             type: 'FETCH_CLAN_DISCOVERY_PROFILE_LIST_SUCCESS',

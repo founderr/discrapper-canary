@@ -3,6 +3,7 @@ e.exports = {
     section: 'section_a24e0c',
     sectionHeader: 'sectionHeader_a24e0c',
     sectionContent: 'sectionContent_a24e0c',
+    animatedCard: 'animatedCard_a24e0c',
     emptySavedGuilds: 'emptySavedGuilds_a24e0c',
     paginationInput: 'paginationInput_a24e0c',
     previewListContainer: 'previewListContainer_a24e0c',

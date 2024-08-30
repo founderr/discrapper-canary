@@ -27,11 +27,14 @@ let c = [],
     p = {},
     I = new Set();
 function m(e) {
-    I.has(e.id) && I.delete(e.id),
+    return (
+        I.has(e.id) && I.delete(e.id),
         (d[e.id] = {
             lastFetchTimestamp: Date.now(),
             guild: e
-        });
+        }),
+        !0
+    );
 }
 class T extends (r = s.ZP.Store) {
     getSearchResult(e) {
@@ -52,11 +55,9 @@ class T extends (r = s.ZP.Store) {
         let t = d[e];
         return null == t || t.lastFetchTimestamp < Date.now() - l.Z.Millis.HOUR;
     }
-    getGuildProfiles(e) {
-        return e.reduce((e, t) => {
-            let n = d[t];
-            return null == n ? e : (e.push(n.guild), e);
-        }, []);
+    getGuildProfile(e) {
+        var t, n;
+        return null !== (n = null === (t = d[e]) || void 0 === t ? void 0 : t.guild) && void 0 !== n ? n : null;
     }
     getCurrentRecommendationId() {
         return f;
