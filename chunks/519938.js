@@ -59,10 +59,11 @@ function l(e, t) {
         position: t
     });
 }
-function u(e) {
+function u(e, t) {
     r.Z.dispatch({
         type: 'PICTURE_IN_PICTURE_RESIZE',
-        width: e
+        width: e,
+        pipType: t
     });
 }
 function c(e, t) {

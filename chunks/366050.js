@@ -2,11 +2,10 @@ let r, i;
 n(47120);
 var a,
     s = n(442837),
-    o = n(433517),
-    l = n(570140),
-    u = n(981631),
-    c = n(354459);
-function d(e, t, n) {
+    o = n(570140),
+    l = n(981631),
+    u = n(354459);
+function c(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,83 +18,100 @@ function d(e, t, n) {
         e
     );
 }
-let _ = 'PictureInPictureLocation',
-    E = new Map(),
-    f = {},
-    h = u.VD2.BOTTOM_RIGHT,
-    p = c.l8;
-class I extends (a = s.ZP.PersistedStore) {
+let d = new Map(),
+    _ = {},
+    E = l.VD2.BOTTOM_RIGHT,
+    f = {
+        [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
+        [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
+    };
+class h extends (a = s.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
-            let e = o.K.get(_);
-            null != e && o.K.remove(_), (h = null != e ? e : u.VD2.BOTTOM_RIGHT), (p = c.l8);
+            (E = l.VD2.BOTTOM_RIGHT),
+                (f = {
+                    [u.cL.VIDEO]: u.l8[u.cL.VIDEO],
+                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
+                });
             return;
         }
-        (h = e.openPosition), (p = e.pipWidth);
+        (E = e.openPosition), (f = e.pipWidths);
     }
     get pipWindow() {
         var e;
-        return null == r && null == i ? null : E.get(null !== (e = null != r ? r : i) && void 0 !== e ? e : '');
+        return null == r && null == i ? null : d.get(null !== (e = null != r ? r : i) && void 0 !== e ? e : '');
     }
     get pipVideoWindow() {
-        return null == r ? null : E.get(r);
+        return null == r ? null : d.get(r);
     }
     get pipActivityWindow() {
-        return null == i ? null : E.get(i);
-    }
-    get pipWidth() {
-        return p;
+        return null == i ? null : d.get(i);
     }
     get pipWindows() {
-        return E;
+        return d;
+    }
+    pipWidth(e) {
+        return f[e];
     }
     isEmbeddedActivityHidden() {
         return null == i;
     }
     getDockedRect(e) {
-        return f[e];
+        return _[e];
     }
     isOpen(e) {
-        return null != e && E.has(e);
+        return null != e && d.has(e);
     }
     getState() {
         return {
-            openPosition: h,
-            pipWidth: p
+            openPosition: E,
+            pipWidths: f
         };
     }
 }
-d(I, 'displayName', 'PictureInPictureStore'),
-    d(I, 'persistKey', 'PictureInPictureStore'),
-    (t.Z = new I(l.Z, {
+c(h, 'displayName', 'PictureInPictureStore'),
+    c(h, 'persistKey', 'PictureInPictureStore'),
+    c(h, 'migrations', [
+        (e) => {
+            var t, n;
+            return {
+                pipWidths: {
+                    [u.cL.VIDEO]: null !== (t = e.pipWidth) && void 0 !== t ? t : u.l8[u.cL.VIDEO],
+                    [u.cL.CAMERA_PREVIEW]: u.l8[u.cL.CAMERA_PREVIEW]
+                },
+                openPosition: null !== (n = e.openPosition) && void 0 !== n ? n : l.VD2.BOTTOM_RIGHT
+            };
+        }
+    ]),
+    (t.Z = new h(o.Z, {
         PICTURE_IN_PICTURE_OPEN: function (e) {
             var t, n;
             let { id: a, component: s, props: o } = e;
-            if (null != E.get(a)) return;
-            let l = {
+            if (null != d.get(a)) return;
+            let u = {
                 id: a,
                 component: s,
-                position: null !== (t = o.position) && void 0 !== t ? t : h,
+                position: null !== (t = o.position) && void 0 !== t ? t : E,
                 props: o,
                 docked: null !== (n = o.docked) && void 0 !== n && n
             };
-            E.set(a, l), s === u.NYg.VIDEO ? null == r && (r = a) : s === u.NYg.EMBED_IFRAME && null == i && (i = a);
+            d.set(a, u), s === l.NYg.VIDEO ? null == r && (r = a) : s === l.NYg.EMBED_IFRAME && null == i && (i = a);
         },
         PICTURE_IN_PICTURE_CLOSE: function (e) {
             let { id: t } = e;
-            if (!E.has(t)) return !1;
+            if (!d.has(t)) return !1;
             {
-                E.delete(t);
-                let e = Array.from(E.keys());
+                d.delete(t);
+                let e = Array.from(d.keys());
                 r === t
                     ? (r = e.find((e) => {
-                          let t = E.get(e);
-                          return null != t && t.component === u.NYg.VIDEO;
+                          let t = d.get(e);
+                          return null != t && t.component === l.NYg.VIDEO;
                       }))
                     : i === t &&
                       (i = e.find((e) => {
-                          let t = E.get(e);
-                          return null != t && t.component === u.NYg.EMBED_IFRAME;
+                          let t = d.get(e);
+                          return null != t && t.component === l.NYg.EMBED_IFRAME;
                       }));
             }
         },
@@ -104,27 +120,27 @@ d(I, 'displayName', 'PictureInPictureStore'),
             if (null == t || (r !== t && i !== t)) return !1;
             {
                 let e = new Map();
-                E.forEach((t, r) => {
+                d.forEach((t, r) => {
                     e.set(r, {
                         ...t,
                         position: n
                     });
                 }),
-                    (E = e),
-                    (h = n);
+                    (d = e),
+                    (E = n);
             }
         },
         PICTURE_IN_PICTURE_RESIZE: function (e) {
-            let { width: t } = e;
-            p = t;
+            let { width: t, pipType: n } = e;
+            f[n] = t;
         },
         PICTURE_IN_PICTURE_HIDE: function (e) {
             let { id: t } = e;
             if (r !== t && i !== t) return !1;
             {
-                let e = E.get(t);
+                let e = d.get(t);
                 if (null == e) return !1;
-                E.set(t, {
+                d.set(t, {
                     ...e,
                     hidden: !0
                 });
@@ -134,9 +150,9 @@ d(I, 'displayName', 'PictureInPictureStore'),
             let { id: t } = e;
             if (r !== t && i !== t) return !1;
             {
-                let e = E.get(t);
+                let e = d.get(t);
                 if (null == e) return !1;
-                E.set(t, {
+                d.set(t, {
                     ...e,
                     hidden: !1
                 });
@@ -144,14 +160,14 @@ d(I, 'displayName', 'PictureInPictureStore'),
         },
         PICTURE_IN_PICTURE_UPDATE_RECT: function (e) {
             let { id: t, rect: n } = e;
-            f[t] = n;
+            _[t] = n;
         },
         PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: function (e) {
             let { id: t } = e,
-                n = E.get(t);
-            null != n && (n.component === u.NYg.VIDEO ? (r = t) : n.component === u.NYg.EMBED_IFRAME && (i = t));
+                n = d.get(t);
+            null != n && (n.component === l.NYg.VIDEO ? (r = t) : n.component === l.NYg.EMBED_IFRAME && (i = t));
         },
         LOGOUT: function () {
-            (r = null), (i = null), (E = new Map());
+            (r = null), (i = null), (d = new Map());
         }
     }));

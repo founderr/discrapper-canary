@@ -24603,6 +24603,10 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
     opacity: 1
 }
 
+.reduce-motion .popover_a64b81 {
+    pointer-events: all
+}
+
 .statusPopover_a64b81 {
     right: min(8px, 50% - 29px)
 }

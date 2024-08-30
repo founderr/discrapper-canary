@@ -1,56 +1,70 @@
-var r, i, a, s, o, l;
-function u(e) {
+var r, i, a, s, o, l, u, c;
+function d(e) {
     return !((null == e ? void 0 : e.type) !== 0 && (null == e ? void 0 : e.type) !== 1);
 }
-function c(e) {
+function _(e) {
     return (null == e ? void 0 : e.type) === 2;
 }
-function d(e) {
+function E(e) {
     return (null == e ? void 0 : e.type) === 3;
 }
 n.d(t, {
     $i: function () {
-        return E;
+        return h;
     },
     I: function () {
-        return d;
+        return E;
     },
     Io: function () {
-        return c;
+        return _;
     },
     Rv: function () {
-        return f;
+        return p;
     },
     _5: function () {
-        return u;
+        return d;
+    },
+    cL: function () {
+        return s;
     },
     dF: function () {
         return i;
     },
     e5: function () {
-        return h;
+        return I;
     },
     fO: function () {
         return r;
     },
     l8: function () {
-        return _;
+        return f;
     },
     wR: function () {
         return a;
     }
 }),
-    ((s = r || (r = {}))[(s.STREAM = 0)] = 'STREAM'),
-    (s[(s.HIDDEN_STREAM = 1)] = 'HIDDEN_STREAM'),
-    (s[(s.USER = 2)] = 'USER'),
-    (s[(s.ACTIVITY = 3)] = 'ACTIVITY'),
-    ((o = i || (i = {})).NONE = 'NONE'),
-    (o.AUTO = 'AUTO'),
-    ((l = a || (a = {}))[(l.DESKTOP = 0)] = 'DESKTOP'),
-    (l[(l.MOBILE = 1)] = 'MOBILE'),
-    (l[(l.XBOX = 2)] = 'XBOX'),
-    (l[(l.PLAYSTATION = 3)] = 'PLAYSTATION');
-let _ = 320,
-    E = 960,
-    f = 200,
-    h = 8;
+    ((o = r || (r = {}))[(o.STREAM = 0)] = 'STREAM'),
+    (o[(o.HIDDEN_STREAM = 1)] = 'HIDDEN_STREAM'),
+    (o[(o.USER = 2)] = 'USER'),
+    (o[(o.ACTIVITY = 3)] = 'ACTIVITY'),
+    ((l = i || (i = {})).NONE = 'NONE'),
+    (l.AUTO = 'AUTO'),
+    ((u = a || (a = {}))[(u.DESKTOP = 0)] = 'DESKTOP'),
+    (u[(u.MOBILE = 1)] = 'MOBILE'),
+    (u[(u.XBOX = 2)] = 'XBOX'),
+    (u[(u.PLAYSTATION = 3)] = 'PLAYSTATION'),
+    ((c = s || (s = {}))[(c.VIDEO = 0)] = 'VIDEO'),
+    (c[(c.CAMERA_PREVIEW = 1)] = 'CAMERA_PREVIEW');
+let f = {
+        0: 320,
+        1: 160
+    },
+    h = {
+        0: 960,
+        1: 480
+    },
+    p = {
+        0: 200,
+        1: 160
+    },
+    I = 8;

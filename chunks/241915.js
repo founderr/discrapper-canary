@@ -45,30 +45,30 @@ let I = 80,
         [E.VD2.BOTTOM_LEFT]: c.y.HORIZONTAL_RIGHT,
         [E.VD2.BOTTOM_RIGHT]: c.y.HORIZONTAL_LEFT
     };
-function A(e) {
-    let t = 40 * Math.round(e / 40);
-    return (0, l.clamp)(t, f.Rv, f.$i);
+function A(e, t) {
+    let n = 40 * Math.round(e / 40);
+    return (0, l.clamp)(n, f.Rv[t], f.$i[t]);
 }
 function N(e) {
-    let { resizableNode: t, onResize: n, onResizeEnd: r, position: s } = e,
-        l = (0, c.Z)({
-            minDimension: f.Rv,
-            maxDimension: f.$i + 20,
+    let { resizableNode: t, onResize: n, onResizeEnd: r, pipType: s, position: l } = e,
+        u = (0, c.Z)({
+            minDimension: f.Rv[s],
+            maxDimension: f.$i[s] + 20,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: r,
-            orientation: S[s],
+            orientation: S[l],
             usePointerEvents: !0
         }),
-        u = a.useCallback(
+        d = a.useCallback(
             (e) => {
-                e.stopPropagation(), l(e);
+                e.stopPropagation(), u(e);
             },
-            [l]
+            [u]
         );
     return (0, i.jsx)('div', {
-        onMouseDown: u,
-        className: o()(h.resizeHandle, g[s])
+        onMouseDown: d,
+        className: o()(h.resizeHandle, g[l])
     });
 }
 class O extends (r = a.PureComponent) {
@@ -163,25 +163,25 @@ class O extends (r = a.PureComponent) {
     getWidth() {
         var e, t;
         let { width: n } = this.props;
-        return null !== (t = null !== (e = this._width) && void 0 !== e ? e : n) && void 0 !== t ? t : f.l8;
+        return null !== (t = null !== (e = this._width) && void 0 !== e ? e : n) && void 0 !== t ? t : f.l8[f.cL.VIDEO];
     }
     get inPopout() {
         return this.props.appContext === E.IlC.POPOUT;
     }
     render() {
-        let { maxX: e, maxY: t, dockedRect: n, hidden: r, roundCorners: a, className: s, position: l, isResizable: u = !1 } = this.props,
-            c = this.getWidth(),
-            _ = {};
+        let { maxX: e, maxY: t, dockedRect: n, hidden: r, roundCorners: a, className: s, position: l, type: u, isResizable: c = !1 } = this.props,
+            _ = this.getWidth(),
+            E = {};
         return (
             null != n
-                ? (_ = {
+                ? (E = {
                       transform: 'translate3d('.concat(n.x, ', ').concat(n.y, ', 0)'),
                       width: n.width,
                       height: n.height
                   })
-                : u &&
-                  (_ = {
-                      width: c,
+                : c &&
+                  (E = {
+                      width: _,
                       transition: this.state.isResizing ? 'none' : 'width 0.2s ease-in-out'
                   }),
             (0, i.jsxs)(d.Z, {
@@ -200,14 +200,15 @@ class O extends (r = a.PureComponent) {
                 children: [
                     (0, i.jsx)('div', {
                         ref: this.handleSetInnerDivRef,
-                        style: _,
+                        style: E,
                         children: this.props.children
                     }),
-                    u
+                    c
                         ? (0, i.jsx)(N, {
                               onResize: this.handleResize,
                               onResizeEnd: this.handleResizeEnd,
                               resizableNode: this._innerDivRef,
+                              pipType: u,
                               position: l
                           })
                         : null
@@ -233,10 +234,10 @@ class O extends (r = a.PureComponent) {
                 this.setPosition(this.props.position);
             }),
             p(this, 'ensureWidth', () => {
-                let { id: e, onResize: t, edgeOffsetLeft: n, edgeOffsetRight: r, maxX: i, isResizable: a } = this.props;
+                let { onResize: e, edgeOffsetLeft: t, edgeOffsetRight: n, maxX: r, type: i, isResizable: a } = this.props;
                 if (!a) return;
-                let s = A(i - (n + r));
-                this.getWidth() > s && ((this._width = s), null == t || t(e, s));
+                let s = A(r - (t + n), i);
+                this.getWidth() > s && ((this._width = s), null == e || e(s));
             }),
             p(this, 'handleSetInnerDivRef', (e) => {
                 this._innerDivRef.current = e;
@@ -253,9 +254,9 @@ class O extends (r = a.PureComponent) {
                 (this._width = e), !this.state.isResizing && this.setState({ isResizing: !0 });
             }),
             p(this, 'handleResizeEnd', (e) => {
-                let { id: t, onResize: n } = this.props,
-                    r = A(e);
-                (this._width = r), null == n || n(t, r), this.setState({ isResizing: !1 }), this.ensureWidth();
+                let { onResize: t, type: n } = this.props,
+                    r = A(e, n);
+                (this._width = r), null == t || t(r), this.setState({ isResizing: !1 }), this.ensureWidth();
             }),
             p(this, 'handleDragStart', (e, t) => {
                 (this._velocityX = 0), (this._velocityY = 0), (this._lastMoveX = e), (this._lastMoveY = t), (this._lastMoveTime = new Date());
@@ -283,41 +284,42 @@ p(O, 'defaultProps', {
     roundCorners: !0
 });
 t.Z = a.memo((e) => {
-    let { selectedPIPWindow: t, pipWindows: n, pipWidth: r, maxX: a, maxY: s, onWindowMove: o, onWindowResize: l, dockedRect: u, pictureInPictureComponents: c, appContext: d, roundCorners: _ } = e;
+    let { selectedPIPWindow: t, pipWindows: n, pipType: r, pipWidth: a, maxX: s, maxY: o, onWindowMove: l, onWindowResize: u, dockedRect: c, pictureInPictureComponents: d, appContext: _, roundCorners: f } = e;
     return (0, i.jsx)('div', {
         className: h.pictureInPicture,
         children: (() => {
             if (null == t) return null;
             let e = n.map((e) => {
                     if (e.id !== t.id && e.component !== E.NYg.EMBED_IFRAME) return null;
-                    let n = 'string' == typeof e.component ? c[e.component] : e.component;
+                    let n = 'string' == typeof e.component ? d[e.component] : e.component;
                     return (0, i.jsx)(
                         n,
                         {
-                            width: r,
+                            width: a,
                             ...e.props
                         },
                         e.id
                     );
                 }),
-                f = n.some((e) => e.component === E.NYg.EMBED_IFRAME);
+                h = n.some((e) => e.component === E.NYg.EMBED_IFRAME);
             return (0, i.jsx)(O, {
-                appContext: d,
+                appContext: _,
                 position: t.position,
                 id: t.id,
+                type: r,
                 hidden: t.hidden,
-                onMove: o,
-                onResize: l,
-                maxX: a,
-                maxY: s,
-                width: r,
-                dockedRect: u,
+                onMove: l,
+                onResize: u,
+                maxX: s,
+                maxY: o,
+                width: a,
+                dockedRect: c,
                 edgeOffsetTop: I,
                 edgeOffsetBottom: m,
                 edgeOffsetLeft: T,
                 edgeOffsetRight: I,
-                roundCorners: _,
-                isResizable: !f,
+                roundCorners: f,
+                isResizable: !h,
                 children: e
             });
         })()
