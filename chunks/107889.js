@@ -162,6 +162,8 @@ function U(e) {
                                         isReply: ef,
                                         sent: e_,
                                         shown: eu,
+                                        userId: n.id,
+                                        onClose: W,
                                         className: y.toast
                                     }),
                                     null != ee && (0, s.jsx)('div', { className: y.backdrop }),
