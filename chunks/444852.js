@@ -6,8 +6,7 @@ n.d(t, {
         return D;
     }
 }),
-    n(653041),
-    n(47120);
+    n(653041);
 var r = n(392711),
     i = n.n(r),
     a = n(46973),
@@ -94,21 +93,18 @@ class D extends o.Z {
         return this.analyticsContext.maxViewers;
     }
     updateStats(e) {
-        var t, n, r, a, s, o, l;
-        for (let { connection: t, stats: o } of e)
-            if (t === this._connection) {
-                let e = o.transport.inboundBitrateEstimate;
-                if (null != e) {
-                    if (e > 100000000) break;
-                    if ((this._bandwidthSamples.push(e), this._bandwidthSamples.length > 10 && this._bandwidthSamples.shift(), 10 === this._bandwidthSamples.length)) {
-                        let e = i().mean(this._bandwidthSamples),
-                            t = null !== (r = null === (n = this._goLiveQualityManager) || void 0 === n ? void 0 : n.isDowngraded()) && void 0 !== r && r;
-                        t && e > 1500000 ? null === (a = this._goLiveQualityManager) || void 0 === a || a.setGoLiveStreamDowngraded(!1) : !t && e < 1000000 && (null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!0));
-                    }
-                    break;
-                }
+        var t, n, r, a, s, o, l, u;
+        let c = !this.isOwner && (null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.getUserID()) != null,
+            d = null === (n = e.find((e) => e.connection === this._connection)) || void 0 === n ? void 0 : n.stats;
+        if (null != d && c) {
+            let e = d.transport.inboundBitrateEstimate;
+            if (null != e && e < 100000000 && (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 10 && this._bandwidthSamples.shift(), 10 === this._bandwidthSamples.length)) {
+                let e = i().mean(this._bandwidthSamples),
+                    t = null !== (a = null === (r = this._goLiveQualityManager) || void 0 === r ? void 0 : r.isDowngraded()) && void 0 !== a && a;
+                t && e > 1500000 ? null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!1) : !t && e < 1000000 && (null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!0));
             }
-        (null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.getUserID()) != null && (null === (l = this._videoQuality) || void 0 === l || l.setViewedSimulcastQuality(!(null === (o = this._goLiveQualityManager) || void 0 === o ? void 0 : o.isDowngraded())));
+        }
+        c && (null === (u = this._videoQuality) || void 0 === u || u.setViewedSimulcastQuality(!(null === (l = this._goLiveQualityManager) || void 0 === l ? void 0 : l.isDowngraded())));
     }
     _initializeEvents() {
         let e = !1;
