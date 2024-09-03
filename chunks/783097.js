@@ -29,6 +29,9 @@ n.d(t, {
     lf: function () {
         return S;
     },
+    nB: function () {
+        return P;
+    },
     pF: function () {
         return Z;
     },
@@ -171,4 +174,19 @@ function Z(e) {
             });
     }
     return t;
+}
+function P(e) {
+    return e instanceof c.Z
+        ? {
+              applicationId: e.id,
+              customInstallUrl: e.customInstallUrl,
+              installParams: e.installParams,
+              integrationTypesConfig: e.integrationTypesConfig
+          }
+        : {
+              applicationId: e.id,
+              customInstallUrl: e.custom_install_url,
+              installParams: e.install_params,
+              integrationTypesConfig: e.integration_types_config
+          };
 }

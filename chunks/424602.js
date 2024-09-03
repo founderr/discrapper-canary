@@ -7,6 +7,9 @@ n.d(t, {
     },
     nS: function () {
         return s;
+    },
+    zQ: function () {
+        return o;
     }
 });
 var r = n(818083);
@@ -78,28 +81,28 @@ let i = (0, r.B)({
     ]
 });
 let s = (0, r.B)({
-    kind: 'user',
-    id: '2024-07_open_platform_app_launcher',
-    label: 'Open Platform App Launcher',
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'Enable the App Launcher changes for Open Platform',
-            config: { enabled: !0 }
-        }
-    ]
-});
-(0, r.B)({
-    kind: 'user',
-    id: '2024-08_open_platform_link_sharing',
-    label: 'Open Platform Link Sharing',
-    defaultConfig: { enabled: !1 },
-    treatments: [
-        {
-            id: 1,
-            label: 'Enable app link sharing and install flow improvements',
-            config: { enabled: !0 }
-        }
-    ]
-});
+        kind: 'user',
+        id: '2024-07_open_platform_app_launcher',
+        label: 'Open Platform App Launcher',
+        defaultConfig: { enabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'Enable the App Launcher changes for Open Platform',
+                config: { enabled: !0 }
+            }
+        ]
+    }),
+    o = (0, r.B)({
+        kind: 'user',
+        id: '2024-08_open_platform_link_sharing',
+        label: 'Open Platform Link Sharing',
+        defaultConfig: { enabled: !1 },
+        treatments: [
+            {
+                id: 1,
+                label: 'Enable app link sharing and install flow improvements',
+                config: { enabled: !0 }
+            }
+        ]
+    });

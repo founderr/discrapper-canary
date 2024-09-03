@@ -41,6 +41,7 @@ function v(e) {
                         e.preventDefault();
                         return;
                     }
+                    if (i.classList.contains(g.NN)) return;
                     i = i.parentNode;
                 }
                 S();
