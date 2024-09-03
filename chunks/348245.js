@@ -265,7 +265,8 @@ function W(e) {
             type: 'MESSAGE_SEND_FAILED',
             channelId: t,
             messageId: n.id,
-            reason: null != r ? r : null
+            reason: null != r ? r : null,
+            shouldNotify: !1
         });
 }
 function K(e) {
