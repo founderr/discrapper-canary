@@ -3,13 +3,13 @@ t.d(s, {
         return V;
     },
     Yn: function () {
-        return Y;
+        return k;
     },
     ZP: function () {
         return H;
     },
     eS: function () {
-        return k;
+        return w;
     }
 }),
     t(47120);
@@ -35,8 +35,8 @@ var n = t(735250),
     h = t(594174),
     O = t(626135),
     p = t(63063),
-    x = t(74538),
-    R = t(212895),
+    R = t(74538),
+    x = t(212895),
     f = t(374649),
     M = t(160913),
     D = t(987997),
@@ -53,9 +53,9 @@ function B(e) {
             let e = h.default.getCurrentUser();
             return l()(null != e, 'GuildBoostingHeader: currentUser cannot be undefined'), e;
         });
-    if (0 === (0, x.uV)(t.additionalPlans)) return null;
+    if (0 === (0, R.uV)(t.additionalPlans)) return null;
     let { status: d } = t,
-        _ = (0, x.v6)(t);
+        _ = (0, R.v6)(t);
     if (_) s = j.guildBoostingSubscriptionRowCanceled;
     else
         switch (d) {
@@ -83,7 +83,7 @@ function B(e) {
                         children: [
                             (0, n.jsx)('div', { className: r()(j.guildBoostingWordmark, { [j.canceled]: _ }) }),
                             (0, n.jsx)('div', {
-                                children: (0, x.bt)({
+                                children: (0, R.bt)({
                                     subscription: t,
                                     renewalInvoicePreview: a,
                                     user: c
@@ -156,7 +156,7 @@ function G() {
         })
     );
 }
-function y(e) {
+function F(e) {
     let { daysPastDue: s, subscription: t, openInvoiceId: i } = e,
         { analyticsLocations: r } = (0, S.ZP)(I.Z.PAST_DUE_ONE_TIME_PAYMENT_METHOD_BANNER);
     return (
@@ -191,7 +191,7 @@ function y(e) {
         })
     );
 }
-function F(e) {
+function y(e) {
     let { subscription: s, renewalInvoicePreview: t, className: a } = e;
     return (0, n.jsxs)('div', {
         className: r()(j.billingInformation, a),
@@ -201,7 +201,7 @@ function F(e) {
                 className: j.detailBlockHeader,
                 children: v.Z.Messages.PREMIUM_SETTINGS_BILLING_INFO
             }),
-            (0, n.jsx)('div', { children: x.ZP.getBillingInformationString(s, t) })
+            (0, n.jsx)('div', { children: R.ZP.getBillingInformationString(s, t) })
         ]
     });
 }
@@ -238,7 +238,7 @@ function V() {
         ]
     });
 }
-function w(e) {
+function Y(e) {
     let { subscription: s, analyticsLocation: t, paymentSource: a, busy: i, fromStandaloneBillingPage: o, showInvalidPaymentMethod: l, showNoPaymentMethod: c, fetchedCurrentInvoicePreview: d, fetchedRenewalInvoicePreview: u } = e,
         { analyticsLocations: _ } = (0, S.ZP)(I.Z.SUBSCRIPTION_DETAILS),
         T =
@@ -294,7 +294,7 @@ function w(e) {
                           children: (0, n.jsxs)('div', {
                               className: j.details,
                               children: [
-                                  (0, n.jsx)(F, {
+                                  (0, n.jsx)(y, {
                                       subscription: s,
                                       renewalInvoicePreview: C,
                                       className: j.detailsBlock
@@ -309,7 +309,7 @@ function w(e) {
                                           }),
                                           (0, n.jsx)(L.Z, {
                                               subscription: s,
-                                              onPaymentSourceAdded: R.i1,
+                                              onPaymentSourceAdded: x.i1,
                                               highlightAddPaymentMethodButton: c || l,
                                               analyticsLocation: t,
                                               currentInvoicePreview: N,
@@ -324,8 +324,8 @@ function w(e) {
               ]
           });
 }
-let k = new Set([Z.O0b.ACTIVE, Z.O0b.PAST_DUE, Z.O0b.CANCELED, Z.O0b.PAUSE_PENDING, Z.O0b.PAUSED]);
-function Y() {
+let w = new Set([Z.O0b.ACTIVE, Z.O0b.PAST_DUE, Z.O0b.CANCELED, Z.O0b.PAUSE_PENDING, Z.O0b.PAUSED]);
+function k() {
     return (
         a.useEffect(() => {
             O.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_duplicate_subscriptions' });
@@ -375,13 +375,13 @@ function H(e) {
         g = d()(a.currentPeriodEnd),
         O = null != a.paymentSourceId,
         p = null !== (s = null == m ? void 0 : m.total) && void 0 !== s ? s : 0,
-        x = null == r ? void 0 : r.invalid,
-        R = !O && p > 0 && (7 >= g.diff(d()(), 'days') || a.status === Z.O0b.PAST_DUE) && !C && !a.isPurchasedExternally,
-        D = x && a.status === Z.O0b.PAST_DUE && !C && !a.isPurchasedExternally,
+        R = null == r ? void 0 : r.invalid,
+        x = !O && p > 0 && (7 >= g.diff(d()(), 'days') || a.status === Z.O0b.PAST_DUE) && !C && !a.isPurchasedExternally,
+        D = R && a.status === Z.O0b.PAST_DUE && !C && !a.isPurchasedExternally,
         P = (0, M.U)(),
         L = !C && P,
         B = (null == a ? void 0 : a.status) === Z.O0b.PAST_DUE ? d()().diff(d()(a.currentPeriodStart), 'days') : 0,
-        [F] = (0, f.Ox)({
+        [y] = (0, f.Ox)({
             subscriptionId: a.id,
             preventFetch: !L
         });
@@ -403,13 +403,13 @@ function H(e) {
                       children: v.Z.Messages.USER_SETTINGS_SUBSCRIPTIONS_HEADER
                   }),
                   children: [
-                      R ? (0, n.jsx)(U, {}) : null,
+                      x ? (0, n.jsx)(U, {}) : null,
                       D ? (0, n.jsx)(G, {}) : null,
-                      L && null != F
-                          ? (0, n.jsx)(y, {
+                      L && null != y
+                          ? (0, n.jsx)(F, {
                                 daysPastDue: B,
                                 subscription: a,
-                                openInvoiceId: F.id
+                                openInvoiceId: y.id
                             })
                           : null,
                       t,
@@ -423,13 +423,13 @@ function H(e) {
                           children: [
                               (0, n.jsx)('div', {
                                   className: T.length > 0 ? j.dupSubscriptionRow : j.__invalid_singleSubscription,
-                                  children: (0, n.jsx)(w, {
+                                  children: (0, n.jsx)(Y, {
                                       subscription: a,
                                       analyticsLocation: c,
                                       paymentSource: r,
                                       busy: o,
                                       fromStandaloneBillingPage: l,
-                                      showNoPaymentMethod: R,
+                                      showNoPaymentMethod: x,
                                       showInvalidPaymentMethod: D,
                                       fetchedCurrentInvoicePreview: N,
                                       fetchedRenewalInvoicePreview: m
@@ -446,13 +446,13 @@ function H(e) {
                                                   className: j.duplicateHeader,
                                                   children: 'Duplicate Subscriptions'
                                               }),
-                                              (0, n.jsx)(w, {
+                                              (0, n.jsx)(Y, {
                                                   subscription: e,
                                                   analyticsLocation: c,
                                                   paymentSource: r,
                                                   busy: o,
                                                   fromStandaloneBillingPage: l,
-                                                  showNoPaymentMethod: R,
+                                                  showNoPaymentMethod: x,
                                                   showInvalidPaymentMethod: D,
                                                   fetchedCurrentInvoicePreview: null,
                                                   fetchedRenewalInvoicePreview: null

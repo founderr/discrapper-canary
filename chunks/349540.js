@@ -11,7 +11,7 @@ class u extends r.Z {
     }
     maybeFetchActiveOutboundPromotions() {
         let e = i.default.getCurrentUser(),
-            t = a.ZP.isPremium(e),
+            t = a.ZP.isPremiumExactly(e, l.p9.TIER_2),
             n = s.g.getCurrentConfig(
                 { location: 'maybeFetchActiveOutboundPromotions' },
                 {
@@ -19,7 +19,7 @@ class u extends r.Z {
                     disable: t
                 }
             ).enabled;
-        (a.ZP.isPremiumExactly(e, l.p9.TIER_2) || n) && (0, o.vM)();
+        (t || n) && (0, o.vM)();
     }
     constructor(...e) {
         var t, n, r;

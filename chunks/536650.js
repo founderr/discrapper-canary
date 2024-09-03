@@ -38,11 +38,11 @@ function E(e) {
         I = a.useRef(null),
         g = a.useRef(null),
         P = a.useRef(null),
-        S = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-        b = (0, c.ZP)('number' == typeof f ? '' : f, null != S ? S : ''),
-        L = a.useMemo(() => {
+        L = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
+        S = (0, c.ZP)('number' == typeof f ? '' : f, null != L ? L : ''),
+        b = a.useMemo(() => {
             var e, n;
-            let t = (0, l.compact)([d.Z.parseHexString(b), d.Z.parseHexString(x ? '#000000' : '#ffffff')]);
+            let t = (0, l.compact)([d.Z.parseHexString(S), d.Z.parseHexString(x ? '#000000' : '#ffffff')]);
             return null !==
                 (n =
                     null ===
@@ -54,8 +54,8 @@ function E(e) {
                         ? void 0
                         : e.toHexString()) && void 0 !== n
                 ? n
-                : b;
-        }, [b, x]),
+                : S;
+        }, [S, x]),
         R = A(v),
         T = A(I),
         M = a.useCallback(() => {
@@ -76,9 +76,9 @@ function E(e) {
                 if (
                     ((m.style.filter = 'brightness('.concat(1 + ((x ? 1.4 : 0.6) - (r = 1)) * N, ')')),
                     (m.style.backgroundColor = 'color-mix(in oklab,'
-                        .concat(b, ' ')
+                        .concat(S, ' ')
                         .concat((1 - N) * 100, '%, ')
-                        .concat(L, ')')),
+                        .concat(b, ')')),
                     (p.style.opacity = ''.concat(0 + (1 - (s = 0)) * N)),
                     (p.style.transform = 'translateY('.concat((c = C / 4) + (0 - c) * N, 'px)')),
                     null != _)
@@ -86,7 +86,7 @@ function E(e) {
                     _.style.opacity = ''.concat(1 + (0 - (d = 1)) * N);
                 }
             }
-        }, [L, b, null == T ? void 0 : T.height, x, E, null == R ? void 0 : R.height]);
+        }, [b, S, null == T ? void 0 : T.height, x, E, null == R ? void 0 : R.height]);
     return (
         a.useEffect(() => {
             M();
@@ -143,7 +143,7 @@ function E(e) {
                 (0, i.jsx)('div', {
                     ref: I,
                     className: h.bannerBackground,
-                    style: { backgroundColor: b }
+                    style: { backgroundColor: S }
                 })
             ]
         })

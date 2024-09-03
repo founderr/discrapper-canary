@@ -21,8 +21,8 @@ var n = t(735250),
     h = t(908951),
     O = t(255078),
     p = t(853872),
-    x = t(171246),
-    R = t(41959),
+    R = t(171246),
+    x = t(41959),
     f = t(650919),
     M = t(981631),
     D = t(689938),
@@ -146,12 +146,12 @@ s.Z = (e) => {
                 j(!1);
             }
         },
-        { isCancelled: y, isDeleted: F, isPastDue: V, subscriptionPlanPrice: w, subscribedSinceDate: k, currentPeriodEndDate: Y, currentPeriodEndLabel: H } = A,
-        W = (0, x.KW)(i.sku_flags),
-        K = (0, x.KK)(i.sku_flags),
+        { isCancelled: F, isDeleted: y, isPastDue: V, subscriptionPlanPrice: Y, subscribedSinceDate: w, currentPeriodEndDate: k, currentPeriodEndLabel: H } = A,
+        W = (0, R.KW)(i.sku_flags),
+        K = (0, R.KK)(i.sku_flags),
         z = i.soft_deleted || null == h || ((!K || null == d) && !W),
         Q = () =>
-            y || F
+            F || y
                 ? (0, n.jsx)(u.TextBadge, { text: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_CANCELED })
                 : V
                   ? (0, n.jsx)(u.Tooltip, {
@@ -201,8 +201,8 @@ s.Z = (e) => {
                     return (0, n.jsxs)(n.Fragment, {
                         children: [
                             null != h &&
-                                (0, n.jsx)(R.Z, {
-                                    size: R.H.SMALL,
+                                (0, n.jsx)(x.Z, {
+                                    size: x.H.SMALL,
                                     className: P.applicationIcon,
                                     application: h,
                                     asset: null != i.image_asset ? (0, N.m)(i.image_asset) : null
@@ -242,7 +242,7 @@ s.Z = (e) => {
                       id: p,
                       children: [
                           (0, n.jsx)('div', { className: P.divider }),
-                          F
+                          y
                               ? (0, n.jsx)(u.HelpMessage, {
                                     messageType: u.HelpMessageTypes.WARNING,
                                     className: P.deletedHelpMessage,
@@ -259,15 +259,15 @@ s.Z = (e) => {
                               children: [
                                   (0, n.jsx)(L, {
                                       label: H,
-                                      value: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_CURRENT_PERIOD_END_DATE.format({ timestamp: Y.getTime() })
+                                      value: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_CURRENT_PERIOD_END_DATE.format({ timestamp: k.getTime() })
                                   }),
                                   (0, n.jsx)(L, {
                                       label: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_PRICE,
-                                      value: w
+                                      value: Y
                                   }),
                                   (0, n.jsx)(L, {
                                       label: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE,
-                                      value: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE_DATE.format({ timestamp: k.getTime() })
+                                      value: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_INFO_SUBSCRIBED_SINCE_DATE.format({ timestamp: w.getTime() })
                                   })
                               ]
                           }),
@@ -275,11 +275,11 @@ s.Z = (e) => {
                           s.status === M.O0b.ACTIVE &&
                               (0, n.jsx)(b, {
                                   subscription: s,
-                                  disabled: F
+                                  disabled: y
                               }),
                           !z &&
                               (0, n.jsx)(Z, {
-                                  isCancelled: y,
+                                  isCancelled: F,
                                   onCancelSubscriptionClick: U,
                                   isResubscribing: v,
                                   onResubscribeClick: G

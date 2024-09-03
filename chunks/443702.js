@@ -25,8 +25,8 @@ var n = t(735250),
     h = t(78839),
     O = t(706454),
     p = t(726985),
-    x = t(981631),
-    R = t(689938),
+    R = t(981631),
+    x = t(689938),
     f = t(451723);
 class M extends a.PureComponent {
     componentDidMount() {
@@ -35,7 +35,7 @@ class M extends a.PureComponent {
         });
     }
     handleRedemptionRedirect() {
-        u.Z.setSection(x.oAB.INVENTORY);
+        u.Z.setSection(R.oAB.INVENTORY);
     }
     render() {
         let { syncing: e, hide: s, paymentSources: t, defaultPaymentSourceId: a, locale: i, premiumSubscription: r, isRemovingPaymentSource: o, isUpdatingPaymentSource: c } = this.props;
@@ -54,7 +54,7 @@ class M extends a.PureComponent {
                                 children: (0, n.jsx)(T.Z, {
                                     paymentSources: t,
                                     defaultPaymentSourceId: a,
-                                    premiumSubscriptionPaymentSourceId: null != r && r.status !== x.O0b.CANCELED ? r.paymentSourceId : null,
+                                    premiumSubscriptionPaymentSourceId: null != r && r.status !== R.O0b.CANCELED ? r.paymentSourceId : null,
                                     locale: i,
                                     removing: o,
                                     submitting: c
@@ -67,7 +67,7 @@ class M extends a.PureComponent {
                               children: (0, n.jsxs)(l.HeadingLevel, {
                                   component: (0, n.jsx)(l.FormTitle, {
                                       tag: 'h1',
-                                      children: R.Z.Messages.BILLING_PAYMENT_HISTORY
+                                      children: x.Z.Messages.BILLING_PAYMENT_HISTORY
                                   }),
                                   children: [(0, n.jsx)(I.oQ, {}), (0, n.jsx)(E.Z, { locale: i })]
                               })
@@ -76,7 +76,7 @@ class M extends a.PureComponent {
                       (0, n.jsx)(l.Card, {
                           className: f.codeRedemptionRedirect,
                           type: l.Card.Types.CUSTOM,
-                          children: R.Z.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({ onClick: this.handleRedemptionRedirect })
+                          children: x.Z.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({ onClick: this.handleRedemptionRedirect })
                       }),
                       (0, n.jsx)(S.Z, {})
                   ]

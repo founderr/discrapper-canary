@@ -21,8 +21,8 @@ var n = t(735250),
     h = t(713938),
     O = t(881998),
     p = t(246946),
-    x = t(768581),
-    R = t(49012),
+    R = t(768581),
+    x = t(49012),
     f = t(210887),
     M = t(436267),
     D = t(149418),
@@ -110,14 +110,14 @@ let U = (e) => {
             },
             l = () => {
                 null != t.terms_of_service_url &&
-                    (0, R.q)({
+                    (0, x.q)({
                         href: t.terms_of_service_url,
                         shouldConfirm: !0
                     });
             },
             d = () => {
                 null != t.privacy_policy_url &&
-                    (0, R.q)({
+                    (0, x.q)({
                         href: t.privacy_policy_url,
                         shouldConfirm: !0
                     });
@@ -128,7 +128,7 @@ let U = (e) => {
             outline: !0,
             children: (0, n.jsxs)(E.HeadingLevel, {
                 component: (() => {
-                    let e = x.ZP.getApplicationIconURL({
+                    let e = R.ZP.getApplicationIconURL({
                             id: t.id,
                             icon: t.icon
                         }),

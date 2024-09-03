@@ -1,8 +1,8 @@
 var t = n(735250),
     r = n(470079),
     s = n(120356),
-    o = n.n(s),
-    i = n(442837),
+    i = n.n(s),
+    o = n(442837),
     l = n(481060),
     c = n(178762),
     d = n(91140),
@@ -17,8 +17,8 @@ var t = n(735250),
     O = n(707443);
 a.Z = (e) => {
     let { entry: a, viewId: n, onClose: s } = e,
-        R = (0, i.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        p = (0, i.e7)([I.default], () => I.default.getUser(a.author_id)),
+        R = (0, o.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
+        p = (0, o.e7)([I.default], () => I.default.getUser(a.author_id)),
         { nick: g, avatar: P } = r.useMemo(() => {
             let e = null == p ? void 0 : p.getAvatarURL(null == R ? void 0 : R.guild_id, 48, !1);
             return {
@@ -31,11 +31,11 @@ a.Z = (e) => {
         : (0, t.jsx)(l.Popout, {
               position: 'right',
               renderPopout: (e) => {
-                  let { closePopout: r, updatePosition: o } = e;
+                  let { closePopout: r, updatePosition: i } = e;
                   return (0, t.jsx)(c.J, {
                       entry: a,
                       closePopout: r,
-                      updatePopoutPosition: o,
+                      updatePopoutPosition: i,
                       onReaction: () => {
                           (0, m.UE)({
                               action: m.as.SendMessageUser,
@@ -79,9 +79,9 @@ a.Z = (e) => {
                                       alt: T.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: g })
                                   }),
                                   (0, t.jsx)('div', {
-                                      className: o()(N.playerInfo),
+                                      className: i()(N.playerInfo),
                                       children: (0, t.jsxs)('div', {
-                                          className: o()(O.column, O.gapXs),
+                                          className: i()(O.column, O.gapXs),
                                           children: [
                                               (0, t.jsx)(l.Text, {
                                                   variant: 'text-md/medium',

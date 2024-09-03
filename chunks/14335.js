@@ -22,7 +22,7 @@ var i = n(735250),
     f = n(689938),
     C = n(323421);
 function p() {
-    let e = (0, r.e7)([_.default], () => I.ZP.isPremium(_.default.getCurrentUser())),
+    let e = (0, r.e7)([_.default], () => I.ZP.isPremiumExactly(_.default.getCurrentUser(), h.p9.TIER_2)),
         { enabled: t, getNitroCTA: n } = m.g.useExperiment(
             { location: 'OutboundPromotionNotice' },
             {

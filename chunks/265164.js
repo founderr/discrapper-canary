@@ -222,7 +222,7 @@ function eu(e) {
     });
     let a = W,
         [s, r] = ea(M);
-    if (((D = es(s, t)), (W = z ? D.length >= A.Lb : i.length > 0), 0 === n.length && a === W)) return !1;
+    if (((D = es(s, t)), (W = z ? D.length >= A.Lb : W && i.length > 0), 0 === n.length && a === W)) return !1;
     if (0 !== n.length) (X = i), (J = [...J, ...n]);
 }
 class e_ extends (i = s.ZP.PersistedStore) {
@@ -358,7 +358,7 @@ O(e_, 'displayName', 'GravityStore'),
             o && (null == H[s] && (H[s] = 0), H[s]++, V.add(a)),
                 null == (M = 0 === M.length ? [...x] : [...M]).find((e) => e.id === i.id) && ((M = [c, ...M]), (j[i.id] = c)),
                 (0, Z.$U)(s, i.id) && (D = [c, ...D]),
-                D.length >= A.Lb && F > 0 && (W = !0),
+                D.length >= A.Lb && z && (W = !0),
                 (U[i.id] = c),
                 (G[i.id] = {
                     ...c,
@@ -366,7 +366,7 @@ O(e_, 'displayName', 'GravityStore'),
                 });
         },
         LOAD_GRAVITY_DEHYDRATED: function (e) {
-            let { items: t, loadId: n, startTime: i } = e;
+            let { items: t, loadId: n, startTime: i, isReloading: a } = e;
             (M = t.filter((e) => A.zd.has(e.type))),
                 !(function () {
                     let e = new Set();
@@ -386,16 +386,16 @@ O(e_, 'displayName', 'GravityStore'),
                     load_time_millis: Date.now() - i,
                     feed_item_ids: M.map((e) => e.id)
                 });
-            let [a, s] = ea(M);
-            if (((D = es(a)), z && 0 !== F)) {
+            let [s, r] = ea(M);
+            if (((D = es(s)), z && 0 !== F)) {
                 let e = D.length > A.Lb;
-                (W = e), e && (0, Z.em)([...a, ...s], 0, A.xy);
+                !a && (W = e), e && (0, Z.em)([...s, ...r], 0, A.xy);
             } else
                 (F = 0),
-                    a.length > 0 && !z && Date.now() - P > 2 * C.Z.Millis.HOUR && ((W = !0), (Y = !0)),
+                    s.length > 0 && !z && Date.now() - P > 2 * C.Z.Millis.HOUR && ((W = !0), (Y = !0)),
                     ei({
-                        newUnread: a,
-                        newRead: s
+                        newUnread: s,
+                        newRead: r
                     });
         },
         LOAD_GRAVITY_HYDRATED: function (e) {

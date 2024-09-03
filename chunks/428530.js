@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return x;
     }
 }),
     n(47120);
@@ -10,8 +10,8 @@ var a = n(346652),
     l = n(692547),
     i = n(410030),
     o = n(95398),
-    c = n(981631),
-    s = n(535271);
+    s = n(981631),
+    c = n(535271);
 let u = {
     base00: l.Z.colors.BACKGROUND_SECONDARY.css,
     base03: l.Z.colors.TEXT_WARNING.css,
@@ -28,24 +28,24 @@ function d(e) {
 }
 let h = d(u),
     m = d(u);
-function x(e) {
-    return c.Jn9.test(e)
+function f(e) {
+    return s.Jn9.test(e)
         ? (0, r.jsx)(o.Z, {
               type: o.Z.Types.TEXT,
               children: () => (0, r.jsx)(r.Fragment, { children: e })
           })
         : e;
 }
-function f(e) {
+function x(e) {
     let { data: t } = e,
         n = (0, i.ZP)();
     return (0, r.jsx)('div', {
-        className: s.inspectorWrapper,
+        className: c.inspectorWrapper,
         children: (0, r.jsx)(a.L, {
             data: t,
             theme: 'light' === n ? m : h,
             invertTheme: !1,
-            valueRenderer: x
+            valueRenderer: f
         })
     });
 }

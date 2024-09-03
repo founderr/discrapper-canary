@@ -16,20 +16,20 @@ var s = n(120356),
     h = n(248042),
     m = n(924540),
     p = n(351402),
-    f = n(170671),
-    b = n(474936),
+    b = n(170671),
+    f = n(474936),
     S = n(840309);
 function v(e) {
     let t,
         { decoration: n, label: s, isSelected: v } = e,
         x = (0, c.N)(),
         g = (0, a.Ng)(),
-        N = (0, h.Vi)(),
-        j = (0, r.e7)([p.Z], () => p.Z.isLocalizedPromoEnabled) && null == x && null == n,
+        j = (0, h.Vi)(),
+        N = (0, r.e7)([p.Z], () => p.Z.isLocalizedPromoEnabled) && null == x && null == n,
         { enabled: C } = o._.useExperiment({ location: 'UserSettingsPremiumLabel' }, { autoTrackExposure: !1 }),
-        P = C && (null == x ? void 0 : x.trial_id) === b.a7;
+        P = C && (null == x ? void 0 : x.trial_id) === f.a7;
     return (
-        (t = N
+        (t = j
             ? (0, i.jsx)(u.Z, {})
             : null != g
               ? (0, i.jsx)(m.GN, {
@@ -40,9 +40,9 @@ function v(e) {
               : null == x || P
                 ? null != n
                     ? n
-                    : j
+                    : N
                       ? (0, i.jsx)(d.k, { entryPoint: d.U.SettingsMenu })
-                      : (0, i.jsx)(f.Z, { isSelected: v })
+                      : (0, i.jsx)(b.Z, { isSelected: v })
                 : (0, i.jsx)(m.$H, {
                       isTabSelected: v,
                       trialOffer: x
@@ -50,14 +50,14 @@ function v(e) {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: l()(S.premiumLabel, { [S.selected]: (v || j) && !N }),
+                    className: l()(S.premiumLabel, { [S.selected]: (v || N) && !j }),
                     children: [s, t]
                 }),
                 (0, i.jsx)('div', {
                     className: l()(S.background, {
-                        [S.auPromo]: j && !v,
-                        [S.auPromoSelected]: j && v,
-                        [S.selectedBackground]: !j && !N && v
+                        [S.auPromo]: N && !v,
+                        [S.auPromoSelected]: N && v,
+                        [S.selectedBackground]: !N && !j && v
                     })
                 })
             ]

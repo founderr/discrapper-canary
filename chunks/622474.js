@@ -126,7 +126,7 @@ function p(e) {
         ]
     });
 }
-function x(e) {
+function R(e) {
     let { drop: s, code: t, platform: i } = e,
         [o, c] = a.useState(!1),
         d = void 0 !== t,
@@ -293,7 +293,7 @@ s.Z = function (e) {
                             ? (0, n.jsxs)(n.Fragment, {
                                   children: [
                                       (0, n.jsx)(
-                                          x,
+                                          R,
                                           {
                                               drop: a,
                                               code: null !== (s = e.dropsStatus.code) && void 0 !== s ? s : void 0,

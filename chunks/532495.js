@@ -26,8 +26,8 @@ var a = t(512722),
     h = t(451392),
     O = t(906364),
     p = t(350327),
-    x = t(621853),
-    R = t(318661),
+    R = t(621853),
+    x = t(318661),
     f = t(25990),
     M = t(594174),
     D = t(74538),
@@ -39,15 +39,15 @@ function b() {
             let e = M.default.getCurrentUser();
             return i()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
         }),
-        U = (0, r.e7)([x.Z], () => x.Z.getUserProfile(B.id)),
+        U = (0, r.e7)([R.Z], () => R.Z.getUserProfile(B.id)),
         {
             pendingAvatar: G,
-            pendingGlobalName: y,
-            pendingBanner: F,
+            pendingGlobalName: F,
+            pendingBanner: y,
             pendingBio: V,
-            pendingPronouns: w,
-            pendingAccentColor: k,
-            pendingThemeColors: Y,
+            pendingPronouns: Y,
+            pendingAccentColor: w,
+            pendingThemeColors: k,
             errors: H
         } = (0, r.cj)([f.Z], () => {
             let e = f.Z.getAllPending(),
@@ -60,7 +60,7 @@ function b() {
         W = (0, _.gS)(),
         K = D.ZP.canUsePremiumProfileCustomization(B),
         z = (0, E.gd)(G, B.avatar),
-        Q = (0, E.f$)(F, null == U ? void 0 : U.banner),
+        Q = (0, E.f$)(y, null == U ? void 0 : U.banner),
         X = 'DefaultCustomizationSections';
     (0, l.j)({
         location: X + ' auto on',
@@ -70,7 +70,7 @@ function b() {
             location: X + ' auto off',
             autoTrackExposure: !1
         });
-    let q = (0, R.ZP)(B.id),
+    let q = (0, x.ZP)(B.id),
         J = null == q ? void 0 : q.getLegacyUsername(),
         $ = (null !== (t = null === (e = H.global_name) || void 0 === e ? void 0 : e.length) && void 0 !== t ? t : 0) > 0 ? H.global_name : null !== (a = null == W ? void 0 : W.nick) && void 0 !== a ? a : [],
         ee = (null !== (b = null === (s = H.bio) || void 0 === s ? void 0 : s.length) && void 0 !== b ? b : 0) > 0 ? H.bio : null !== (Z = null == W ? void 0 : W.bio) && void 0 !== Z ? Z : [],
@@ -83,7 +83,7 @@ function b() {
                 placeholder: B.username,
                 errors: $,
                 currentGlobalName: B.globalName,
-                pendingGlobalName: y,
+                pendingGlobalName: F,
                 onGlobalNameChange: o.UZ
             }),
             (0, n.jsx)(
@@ -92,7 +92,7 @@ function b() {
                     sectionTitle: P.Z.Messages.USER_SETTINGS_PRONOUNS,
                     errors: H.pronouns,
                     onPronounsChange: p.ID,
-                    pendingPronouns: w,
+                    pendingPronouns: Y,
                     currentPronouns: null !== (v = null == U ? void 0 : U.pronouns) && void 0 !== v ? v : ''
                 },
                 'pronouns'
@@ -140,7 +140,7 @@ function b() {
                           (0, n.jsx)(h.Z, {
                               user: B,
                               pendingAvatar: G,
-                              pendingColors: Y,
+                              pendingColors: k,
                               onThemeColorsChange: p.z5,
                               forcedDivider: !0
                           })
@@ -151,7 +151,7 @@ function b() {
                       {
                           user: B,
                           savedUserColor: null == U ? void 0 : U.accentColor,
-                          pendingColor: k,
+                          pendingColor: w,
                           setPendingAccentColor: p.CM
                       },
                       'color'

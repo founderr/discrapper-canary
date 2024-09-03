@@ -26,8 +26,8 @@ var n = t(735250),
     h = t(572004),
     O = t(287880),
     p = t(714565),
-    x = t(202858),
-    R = t(726985),
+    R = t(202858),
+    x = t(726985),
     f = t(981631),
     M = t(815660),
     D = t(689938),
@@ -142,7 +142,7 @@ class v extends a.PureComponent {
             });
         }
         return (0, n.jsx)(S.F, {
-            setting: R.s6.ACCOUNT_SMS_BACKUP,
+            setting: x.s6.ACCOUNT_SMS_BACKUP,
             children: (0, n.jsxs)(l.FormSection, {
                 className: L.marginTop40,
                 title: D.Z.Messages.MFA_SMS_AUTH,
@@ -161,7 +161,7 @@ class v extends a.PureComponent {
         let e;
         let { backupCodes: s } = this.props,
             t = (0, n.jsx)(S.F, {
-                setting: R.s6.ACCOUNT_VIEW_BACKUP_CODES,
+                setting: x.s6.ACCOUNT_VIEW_BACKUP_CODES,
                 children: (0, n.jsx)(l.Button, {
                     onClick: this.sendMFABackupCodesVerificationKeyEmail,
                     size: l.Button.Sizes.SMALL,
@@ -236,7 +236,7 @@ class v extends a.PureComponent {
                             wrap: !0,
                             children: [
                                 (0, n.jsx)(S.F, {
-                                    setting: R.s6.ACCOUNT_REMOVE_2FA,
+                                    setting: x.s6.ACCOUNT_REMOVE_2FA,
                                     children: (0, n.jsx)(l.Button, {
                                         onClick: this.handleDisableMFA,
                                         size: l.Button.Sizes.SMALL,
@@ -246,9 +246,9 @@ class v extends a.PureComponent {
                                     })
                                 }),
                                 (0, n.jsx)(S.F, {
-                                    setting: R.s6.ACCOUNT_ENABLE_2FA,
+                                    setting: x.s6.ACCOUNT_ENABLE_2FA,
                                     children: (0, n.jsx)(l.Button, {
-                                        onClick: x.ZP.enableMFA,
+                                        onClick: R.ZP.enableMFA,
                                         size: l.ButtonSizes.SMALL,
                                         children: D.Z.Messages.TWO_FA_ENABLE
                                     })
@@ -260,7 +260,7 @@ class v extends a.PureComponent {
                 e,
                 this.renderMFASMS(),
                 (0, n.jsx)(S.F, {
-                    setting: R.s6.ACCOUNT_SECURITY_KEYS,
+                    setting: x.s6.ACCOUNT_SECURITY_KEYS,
                     children: (0, n.jsx)(m.Z, {})
                 })
             ]
@@ -277,7 +277,7 @@ class v extends a.PureComponent {
                 }),
                 (0, n.jsx)(l.FormItem, {
                     children: (0, n.jsx)(l.Button, {
-                        onClick: x.ZP.enableMFA,
+                        onClick: R.ZP.enableMFA,
                         size: l.ButtonSizes.SMALL,
                         children: D.Z.Messages.TWO_FA_ENABLE
                     })

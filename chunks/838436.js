@@ -37,12 +37,12 @@ function c(e) {
     });
 }
 function d(e) {
-    let { setting: s, children: t } = e;
+    let { setting: s, className: t, children: a } = e;
     return (0, n.jsx)(o.F, {
         setting: s,
         children: (0, n.jsx)('div', {
-            className: l.container,
-            children: t
+            className: i()(l.container, t),
+            children: a
         })
     });
 }

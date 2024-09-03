@@ -3,14 +3,14 @@ var r,
     l = n(735250),
     i = n(470079),
     o = n(120356),
-    c = n.n(o),
-    s = n(302454),
-    u = n.n(s),
+    s = n.n(o),
+    c = n(302454),
+    u = n.n(c),
     d = n(663993),
     h = n(770146),
     m = n(772096),
-    x = n(428595),
-    f = n(532901),
+    f = n(428595),
+    x = n(532901),
     g = n(3732),
     p = n(594402);
 function b(e, t, n) {
@@ -30,7 +30,7 @@ let v = new RegExp('https?://'.concat(null !== (r = window.GLOBAL_ENV.CDN_HOST) 
 function _(e) {
     return 'string' == typeof e.content ? e.content : T(e.content);
 }
-let j = {
+let C = {
         ...u().defaultRules,
         heading: {
             ...u().defaultRules.heading,
@@ -76,7 +76,7 @@ let j = {
         },
         link: {
             ...m.ZP,
-            ...(0, f.Z)({ enableBuildOverrides: !1 }),
+            ...(0, x.Z)({ enableBuildOverrides: !1 }),
             order: 6
         },
         blockQuote: {
@@ -106,7 +106,7 @@ let j = {
             }
         },
         inlineCode: {
-            ...x.Z.RULES.inlineCode,
+            ...f.Z.RULES.inlineCode,
             order: 6,
             react: (e, t, n) =>
                 (0, l.jsx)(
@@ -126,7 +126,7 @@ let j = {
                         'pre',
                         {
                             children: (0, l.jsx)('code', {
-                                className: c()(p.scrollbarGhostHairline, 'hljs'),
+                                className: s()(p.scrollbarGhostHairline, 'hljs'),
                                 children: _(e)
                             })
                         },
@@ -148,7 +148,7 @@ let j = {
                                           'pre',
                                           {
                                               children: (0, l.jsx)('code', {
-                                                  className: c()(p.scrollbarGhostHairline, 'hljs', n.language),
+                                                  className: s()(p.scrollbarGhostHairline, 'hljs', n.language),
                                                   dangerouslySetInnerHTML: { __html: n.value }
                                               })
                                           },
@@ -162,8 +162,8 @@ let j = {
             }
         }
     },
-    C = u().parserFor(j),
-    T = u().reactFor(u().ruleOutput(j, 'react'));
+    j = u().parserFor(C),
+    T = u().reactFor(u().ruleOutput(C, 'react'));
 class N extends (a = i.PureComponent) {
     render() {
         let { className: e, children: t, state: n, parser: r, output: a } = this.props,
@@ -174,14 +174,14 @@ class N extends (a = i.PureComponent) {
                 })
             );
         return (0, l.jsx)('div', {
-            className: c()(g.markdown, e),
+            className: s()(g.markdown, e),
             children: i
         });
     }
 }
-b(N, 'rules', j),
+b(N, 'rules', C),
     b(N, 'defaultProps', {
-        parser: C,
+        parser: j,
         output: T
     }),
     (t.Z = N);

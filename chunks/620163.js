@@ -318,12 +318,12 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eM.s6.PRIVACY_SENSITIVE_MEDIA]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eb.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_FILTER, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_BLUR, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_SENSITIVE_CONTENT, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_EXPLICIT],
-                parent: eM.s6.PRIVACY_USER_SETTINGS
+                parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
             [eM.s6.PRIVACY_SENSITIVE_MEDIA_V2]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eb.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_FILTER, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_BLUR, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_SENSITIVE_CONTENT, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_EXPLICIT],
-                parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL
+                parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
             [eM.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY,
@@ -333,7 +333,7 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eM.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eb.Z.Messages.SETTINGS_DM_SPAM_FILTER, eb.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_MESSAGES, eb.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_INBOX],
-                parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL
+                parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY
             },
             [eM.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY,
@@ -437,7 +437,7 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             [eM.s6.PRIVACY_KEYWORD_FILTER_V2]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eb.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE, eb.Z.Messages.USER_KEYWORD_FILTERS_SEARCH_TERM_KEYWORD],
-                parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL,
+                parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
                 predicate: () => ew
             },
             [eM.s6.PRIVACY_TERMS_POLICY]: {

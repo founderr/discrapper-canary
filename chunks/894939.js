@@ -26,8 +26,8 @@ var n = t(735250),
     h = t(710111),
     O = t(689938),
     p = t(484090),
-    x = t(224499);
-function R(e) {
+    R = t(224499);
+function x(e) {
     return (0, i.e7)([E.Z], () => {
         if (null == e) return null;
         let { guildId: s, soundId: t } = e;
@@ -38,7 +38,7 @@ function f() {
     let { analyticsLocations: e } = (0, l.ZP)(),
         [s, t] = a.useState(h.hY),
         o = (0, I.tT)(s),
-        m = R(o),
+        m = x(o),
         f = (0, i.e7)([E.Z], () => E.Z.hasFetchedAllSounds()),
         D = (null == o ? void 0 : o.type) === I.zx.GLOBAL,
         P = f && null != o && null == m;
@@ -55,7 +55,7 @@ function f() {
     return (0, n.jsxs)(r.FormSection, {
         className: p.container,
         tag: r.FormTitleTags.H1,
-        titleClassName: x.__invalid_marginBottom16,
+        titleClassName: R.__invalid_marginBottom16,
         title: O.Z.Messages.SOUNDBOARD,
         children: [
             (0, n.jsx)(u.F, {
@@ -89,7 +89,7 @@ function f() {
                         hideDivider: !0
                     }),
                     (0, n.jsxs)(d.Z, {
-                        className: x.marginTop20,
+                        className: R.marginTop20,
                         title: O.Z.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND.format({
                             nitroWheelHook: () =>
                                 (0, n.jsx)(r.NitroWheelIcon, {
@@ -126,7 +126,7 @@ function M(e) {
             var e, t, n;
             return null === (n = m.Z.settings.guilds) || void 0 === n ? void 0 : null === (t = n.guilds) || void 0 === t ? void 0 : null === (e = t[s]) || void 0 === e ? void 0 : e.joinSound;
         }),
-        a = R(t);
+        a = x(t);
     if (null == t || null == a) return null;
     let { emojiId: l, emojiName: c } = a,
         d = null != l || null != c;

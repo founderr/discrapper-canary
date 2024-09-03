@@ -31,13 +31,13 @@ function O(e) {
     async function p() {
         await (0, _.dP)(s, s.planId, O, r), i();
     }
-    let x = m.Z.get(s.planId);
-    l()(null != x, 'Missing subscriptionPlan');
-    let R = (0, C.aS)(s.planId, !1, !1, {
+    let R = m.Z.get(s.planId);
+    l()(null != R, 'Missing subscriptionPlan');
+    let x = (0, C.aS)(s.planId, !1, !1, {
             paymentSourceId: s.paymentSourceId,
             currency: s.currency
         }),
-        f = (0, g.og)((0, g.T4)(R.amount, R.currency), x.interval, x.intervalCount);
+        f = (0, g.og)((0, g.T4)(x.amount, x.currency), R.interval, R.intervalCount);
     return (0, n.jsxs)(u.ModalRoot, {
         transitionState: a,
         'aria-label': A.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,

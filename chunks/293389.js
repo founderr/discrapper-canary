@@ -21,8 +21,8 @@ var n = t(735250),
     h = t(981631),
     O = t(689938),
     p = t(806406),
-    x = t(256507),
-    R = t(257995),
+    R = t(256507),
+    x = t(257995),
     f = t(440376),
     M = t(224499);
 let D = o.ZP.connectStores([A.Z], () => ({ theme: A.Z.theme }))(c.EmptyState),
@@ -37,7 +37,7 @@ function L(e) {
             label: null != e.name ? e.name : ''
         }));
     return (0, n.jsxs)(c.Dialog, {
-        className: r()(p.addGamePopout, x.elevationBorderHigh),
+        className: r()(p.addGamePopout, R.elevationBorderHigh),
         'aria-label': O.Z.Messages.SETTINGS_GAMES_ADD_NEW_GAME,
         children: [
             (0, n.jsx)(c.SearchableSelect, {
@@ -57,7 +57,7 @@ function L(e) {
             }),
             (0, n.jsx)(c.FormDivider, { className: r()(M.marginTop8, M.marginBottom8) }),
             (0, n.jsxs)('div', {
-                className: r()(p.actions, R.horizontal),
+                className: r()(p.actions, x.horizontal),
                 children: [
                     (0, n.jsx)(c.Button, {
                         className: p.cancelButton,
@@ -83,8 +83,8 @@ function b(e) {
     let { rawGame: t, nowPlaying: i = !1, isOverride: T } = e,
         C = (0, o.cj)([S.Z, E.ZP, N.Z], () => (0, E.FZ)(t)),
         [g, A] = a.useState(!1),
-        [x, M] = a.useState(null !== (s = C.name) && void 0 !== s ? s : '???'),
-        D = r()(R.flexCenter, {
+        [R, M] = a.useState(null !== (s = C.name) && void 0 !== s ? s : '???'),
+        D = r()(x.flexCenter, {
             [p.game]: !i,
             [p.activeGame]: i,
             [f.card]: !i,
@@ -94,7 +94,7 @@ function b(e) {
         d.Z.deleteEntry(C);
     }
     function b() {
-        C.name !== x && d.Z.editName(C, x);
+        C.name !== R && d.Z.editName(C, R);
     }
     function Z(e) {
         13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
@@ -116,7 +116,7 @@ function b(e) {
         className: D,
         children: [
             (0, n.jsxs)('div', {
-                className: r()(p.gameNameLastPlayed, R.vertical),
+                className: r()(p.gameNameLastPlayed, x.vertical),
                 children: [
                     C.verified && !T
                         ? (0, n.jsxs)('div', {
@@ -148,7 +148,7 @@ function b(e) {
                               className: r()(p.gameName, p.gameNameInput),
                               type: 'text',
                               maxLength: 128,
-                              value: x,
+                              value: R,
                               onBlur: b,
                               onKeyDown: Z,
                               onChange: (e) => M(e.target.value)
@@ -174,7 +174,7 @@ function b(e) {
                 : g
                   ? null
                   : (0, n.jsx)('div', {
-                        className: r()(R.flexCenter, R.noWrap, R.justifyBetween, p.toggleContainer),
+                        className: r()(x.flexCenter, x.noWrap, x.justifyBetween, p.toggleContainer),
                         children: (0, n.jsx)(c.Tooltip, {
                             text: O.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION,
                             children: (e) => {
@@ -211,7 +211,7 @@ function b(e) {
                               colorClass: p.fill
                           });
                 return (0, n.jsx)('div', {
-                    className: r()(R.flexCenter, R.noWrap, R.justifyBetween, p.toggleContainer),
+                    className: r()(x.flexCenter, x.noWrap, x.justifyBetween, p.toggleContainer),
                     children: (0, n.jsx)(c.Tooltip, {
                         text: O.Z.Messages.SETTINGS_GAMES_TOGGLE_DETECTION,
                         children: (e) => {
@@ -255,7 +255,7 @@ function b(e) {
                           })
                         : null;
                 return (0, n.jsxs)('div', {
-                    className: r()(R.flexCenter, R.noWrap, R.justifyBetween, p.toggleContainer),
+                    className: r()(x.flexCenter, x.noWrap, x.justifyBetween, p.toggleContainer),
                     children: [
                         a,
                         (0, n.jsx)(c.Tooltip, {
@@ -289,9 +289,9 @@ function b(e) {
 }
 function Z() {
     return (0, n.jsx)('div', {
-        className: r()(R.flexCenter, p.notDetected, p.activeGame),
+        className: r()(x.flexCenter, p.notDetected, p.activeGame),
         children: (0, n.jsxs)('div', {
-            className: r()(p.gameNameLastPlayed, R.vertical),
+            className: r()(p.gameNameLastPlayed, x.vertical),
             children: [
                 (0, n.jsx)('div', {
                     className: p.gameName,

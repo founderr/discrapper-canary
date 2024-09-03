@@ -21,8 +21,8 @@ var n = t(735250),
     m = t(733691);
 function C(e) {
     let { user: s, guild: t, className: i, sectionTitle: C, forcedDivider: g = !1, withTutorial: A = !1, showBorder: h = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: p } = e,
-        x = (0, _.Kg)(s, t),
-        R = u.ZP.canUsePremiumProfileCustomization(s),
+        R = (0, _.Kg)(s, t),
+        x = u.ZP.canUsePremiumProfileCustomization(s),
         { analyticsLocations: f } = (0, l.ZP)(),
         { pendingProfileEffectId: M, errors: D } = (0, _.bd)(t),
         P = a.useCallback(
@@ -35,14 +35,14 @@ function C(e) {
             [f, p, t]
         );
     a.useEffect(() => {
-        R &&
+        x &&
             d.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: S.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
                 location_stack: f
             });
-    }, [R, f]);
+    }, [x, f]);
     let L = null != t,
-        b = O || void 0 !== M ? null != M : null != x,
+        b = O || void 0 !== M ? null != M : null != R,
         Z = A ? o.ShinyButton : o.Button;
     return (0, n.jsx)(E.Z, {
         forcedDivider: g,
@@ -68,7 +68,7 @@ function C(e) {
                         look: o.Button.Looks.LINK,
                         size: o.Button.Sizes.SMALL,
                         onClick: function () {
-                            (0, _.s6)(null, x, null == t ? void 0 : t.id);
+                            (0, _.s6)(null, R, null == t ? void 0 : t.id);
                         },
                         children: L ? N.Z.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : N.Z.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
                     })

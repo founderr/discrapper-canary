@@ -10,7 +10,7 @@ function i(e) {
     if (null != n) return n;
     let s = {};
     s.client_id = t;
-    let o = null != a && Object.values(a).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null);
+    let o = null != a && Object.values(a).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null);
     if (null != i && !o) {
         let { permissions: e, scopes: t } = i;
         null != e && (s.permissions = e), null != t && (s.scope = t.join(' '));

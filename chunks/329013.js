@@ -28,8 +28,8 @@ var n = t(735250),
     h = t(981631),
     O = t(921944),
     p = t(474936),
-    x = t(689938),
-    R = t(582889),
+    R = t(689938),
+    x = t(582889),
     f = t(224499);
 let M = () => {
         (0, T.EW)(r.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
@@ -58,18 +58,18 @@ let M = () => {
                 !r || l
                     ? null
                     : (0, n.jsxs)('div', {
-                          className: R.tryItOutButtons,
+                          className: x.tryItOutButtons,
                           children: [
                               (0, n.jsx)(o.Button, {
                                   color: D ? o.Button.Colors.BRAND : o.Button.Colors.PRIMARY,
                                   onClick: () => M(),
-                                  children: D ? x.Z.Messages.PREVIEW : x.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
+                                  children: D ? R.Z.Messages.PREVIEW : R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
                               }),
                               (0, n.jsx)(C.Z, {
                                   showGradient: D,
                                   subscriptionTier: p.Si.TIER_2,
-                                  buttonText: D ? x.Z.Messages.PREMIUM_UPSELL_GET_NITRO : T ? x.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == u ? void 0 : u.discount.amount }) : x.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
-                                  className: R.premiumCta
+                                  buttonText: D ? R.Z.Messages.PREMIUM_UPSELL_GET_NITRO : T ? R.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == u ? void 0 : u.discount.amount }) : R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+                                  className: x.premiumCta
                               })
                           ]
                       });
@@ -87,14 +87,14 @@ let M = () => {
                         type: E.yH.SETTINGS,
                         children: D
                             ? (0, n.jsx)(E.ZP.BasicAndGradient, {
-                                  className: R.basicThemeSelectors,
+                                  className: x.basicThemeSelectors,
                                   renderCTAButtons: P
                               })
                             : (0, n.jsxs)(n.Fragment, {
                                   children: [
-                                      (0, n.jsx)(E.ZP.Basic, { className: R.basicThemeSelectors }),
+                                      (0, n.jsx)(E.ZP.Basic, { className: x.basicThemeSelectors }),
                                       (0, n.jsxs)(g.Z, {
-                                          className: R.featureBorder,
+                                          className: x.featureBorder,
                                           isShown: r,
                                           type: g.Y.PREMIUM,
                                           children: [
@@ -107,12 +107,12 @@ let M = () => {
                                                   (0, n.jsxs)('div', {
                                                       children: [
                                                           (0, n.jsx)(o.Button, {
-                                                              className: R.previewThemeButtonWide,
+                                                              className: x.previewThemeButtonWide,
                                                               color: o.Button.Colors.PRIMARY,
                                                               onClick: () => M(),
-                                                              children: x.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
+                                                              children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
                                                           }),
-                                                          (0, n.jsx)('div', { className: R.premiumTier2Divider }),
+                                                          (0, n.jsx)('div', { className: x.premiumTier2Divider }),
                                                           (0, n.jsx)(m.ZP, {
                                                               type: p.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                                                               subscriptionTier: p.Si.TIER_2
@@ -135,5 +135,5 @@ let M = () => {
             : (0, n.jsx)(o.Button, {
                   size: o.ButtonSizes.SMALL,
                   onClick: () => M(),
-                  children: x.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEMES_TITLE
+                  children: R.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEMES_TITLE
               });

@@ -27,8 +27,8 @@ var r = t(120356),
     h = t(689938),
     O = t(224499);
 let p = t(775322),
-    x = t(853453),
-    R = (0, E.hQ)();
+    R = t(853453),
+    x = (0, E.hQ)();
 ((a = n || (n = {}))[(a.NONE = 0)] = 'NONE'), (a[(a.STANDARD = 1)] = 'STANDARD'), (a[(a.KRISP = 2)] = 'KRISP');
 let f = {
     page: A.ZY5.USER_SETTINGS,
@@ -79,7 +79,7 @@ function D() {
             className: O.marginBottom20,
             children: [
                 (0, i.jsx)(d.FormTitle, {
-                    id: R,
+                    id: x,
                     tag: d.FormTitleTags.H3,
                     className: O.marginBottom8,
                     children: h.Z.Messages.NOISE_SUPPRESSION
@@ -101,7 +101,7 @@ function D() {
                         className: O.marginBottom8,
                         type: d.FormNoticeTypes.PRIMARY,
                         imageData: {
-                            src: (0, c.ap)(e) ? p : x,
+                            src: (0, c.ap)(e) ? p : R,
                             width: 70,
                             height: 40
                         },

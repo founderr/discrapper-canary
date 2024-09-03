@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return x;
+        return R;
     }
 }),
     t(47120);
@@ -45,7 +45,7 @@ function p(e) {
         })
     );
 }
-function x() {
+function R() {
     let [e, s] = a.useState(!1),
         { debugLogging: t, aecDumpEnabled: d } = (0, i.cj)([I.Z], () => ({
             aecDumpSupported: I.Z.isAecDumpSupported(),
@@ -53,8 +53,8 @@ function x() {
             aecDumpEnabled: I.Z.getAecDump(),
             supportsConnectionReplay: I.Z.supports(g.AN.CONNECTION_REPLAY)
         })),
-        x = (0, i.e7)([T.default], () => T.default.isStreamInfoOverlayEnabled),
-        R = (0, i.e7)([S.ZP], () => S.ZP.shouldRecordNextConnection());
+        R = (0, i.e7)([T.default], () => T.default.isStreamInfoOverlayEnabled),
+        x = (0, i.e7)([S.ZP], () => S.ZP.shouldRecordNextConnection());
     async function f() {
         s(!0);
         try {
@@ -103,7 +103,7 @@ function x() {
             (0, n.jsx)(E.F, {
                 setting: m.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_STREAM_INFO_OVERLAY,
                 children: (0, n.jsx)(r.FormSwitch, {
-                    value: x,
+                    value: R,
                     onChange: (e) => (0, l.y)({ isStreamInfoOverlayEnabled: e }),
                     note: A.Z.Messages.FORM_HELP_STREAM_INFO_OVERLAY,
                     children: A.Z.Messages.FORM_LABEL_STREAM_INFO_OVERLAY
@@ -123,7 +123,7 @@ function x() {
                 children: [
                     (0, n.jsx)(r.FormSwitch, {
                         hideBorder: !0,
-                        value: R,
+                        value: x,
                         onChange: (e) => c.TC(e),
                         note: A.Z.Messages.FORM_HELP_CONNECTION_LOG,
                         children: A.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG

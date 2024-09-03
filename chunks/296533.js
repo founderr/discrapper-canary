@@ -151,7 +151,7 @@ function p(e) {
         ]
     });
 }
-function x(e) {
+function R(e) {
     let { guildId: s, guildBoostSlotRecords: t, premiumSubscription: a, hasCancelableGuildBoostSlot: i, showAltText: o } = e,
         l = (0, r.e7)([E.Z], () => E.Z.getGuild(s), [s]);
     return (0, n.jsxs)('div', {
@@ -178,7 +178,7 @@ function x(e) {
         ]
     });
 }
-function R(e) {
+function x(e) {
     let { guildId: s, appliedGuildBoosts: t, premiumSubscription: a } = e,
         i = (0, r.e7)([E.Z], () => E.Z.getGuild(s), [s]),
         o = I.default.fromTimestamp(Date.now());
@@ -247,7 +247,7 @@ function f(e) {
                       className: h.container,
                       children: I.default.keys(i).map((e) =>
                           (0, n.jsx)(
-                              R,
+                              x,
                               {
                                   guildId: e,
                                   premiumSubscription: t,
@@ -303,7 +303,7 @@ function M(e) {
                 className: h.container,
                 children: I.default.keys(l).map((e) =>
                     (0, n.jsx)(
-                        x,
+                        R,
                         {
                             guildId: e,
                             guildBoostSlotRecords: l[e],

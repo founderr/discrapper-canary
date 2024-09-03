@@ -15,7 +15,7 @@ function c(e) {
         u = a.useMemo(() => (0, r.zi)(n, l), [l, n]),
         E = (0, r.P8)(n),
         _ = (e) => e.toString(),
-        I = (0, s.jsxs)('div', {
+        x = (0, s.jsxs)('div', {
             className: d.title,
             children: [
                 o.Z.Messages.CREATE_EVENT_RECUR_LABEL,
@@ -26,7 +26,7 @@ function c(e) {
             ]
         });
     return (0, s.jsx)(t.FormItem, {
-        title: I,
+        title: x,
         required: !0,
         children: (0, s.jsx)(t.Select, {
             placeholder: 'gaming',

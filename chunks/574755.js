@@ -27,8 +27,8 @@ var n = t(735250),
 function p(e) {
     let { className: s, showHeader: t = !0 } = e,
         p = u.tU.useSetting(),
-        { enableViewerClipping: x } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
-        { analyticsLocations: R } = (0, l.ZP)(),
+        { enableViewerClipping: R } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
+        { analyticsLocations: x } = (0, l.ZP)(),
         f = (0, E.Go)(),
         { viewerClipsEnabled: M } = (0, i.cj)([T.Z], () => T.Z.getSettings()),
         D = (0, I.Z)(_.Z);
@@ -37,7 +37,7 @@ function p(e) {
             (0, c.EW)(r.z.CLIPS_SETTINGS_BETA_TAG);
         }),
         (0, n.jsxs)(l.Gt, {
-            value: R,
+            value: x,
             children: [
                 (f || t) &&
                     (0, n.jsx)(o.FormSection, {
@@ -68,7 +68,7 @@ function p(e) {
                             onChange: (e) => S.yg({ allowVoiceRecording: e }),
                             children: g.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
                         }),
-                        x &&
+                        R &&
                             D &&
                             (0, n.jsx)(o.FormSwitch, {
                                 hideBorder: !0,

@@ -43,9 +43,9 @@ let m = (e) => {
             h = (0, E.YB)(i),
             O = (null == h ? void 0 : null === (s = h.cover_image_asset) || void 0 === s ? void 0 : s.application_id) != null ? (0, _._W)(h.cover_image_asset.application_id, h.cover_image_asset, 440) : void 0,
             { analyticsLocations: p } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
-            { cancelSubscription: x, error: R, submitting: f } = m(p),
+            { cancelSubscription: R, error: x, submitting: f } = m(p),
             M = async () => {
-                (await x(C.id)) && g();
+                (await R(C.id)) && g();
             },
             D = l.role_benefits.benefits.filter((e) => e.ref_type === I.Qs.CHANNEL),
             P = l.role_benefits.benefits.filter((e) => e.ref_type === I.Qs.INTANGIBLE),
@@ -74,7 +74,7 @@ let m = (e) => {
                         })
                     ]
                 }),
-                null != R ? (0, n.jsx)(o.FormErrorBlock, { children: R.message }) : null,
+                null != x ? (0, n.jsx)(o.FormErrorBlock, { children: x.message }) : null,
                 (0, n.jsxs)(o.ModalContent, {
                     className: N.content,
                     children: [

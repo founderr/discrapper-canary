@@ -27,22 +27,22 @@ t.Z = (e) => {
         b = (0, u.Z)(R),
         [y, I] = o.useState(null),
         [M, O] = o.useState(null),
-        k = o.useRef(
+        U = o.useRef(
             new l.qA({
                 gravity: 0,
                 wind: 0
             })
         ),
-        U = (0, l.uR)(y, M),
-        q = o.useCallback(() => {
+        k = (0, l.uR)(y, M),
+        L = o.useCallback(() => {
             if (j) return;
             let e = E.current,
                 t = B.current;
-            if (null != t && null != e && U.isReady) {
+            if (null != t && null != e && k.isReady) {
                 var n, s, o, r;
                 let { x: a, y: l } = e.getBoundingClientRect(),
                     { x: i, y: c } = t.getBoundingClientRect();
-                U.createMultipleConfetti(
+                k.createMultipleConfetti(
                     ((n = a - i),
                     (s = l - c),
                     (o = e.clientHeight),
@@ -89,22 +89,22 @@ t.Z = (e) => {
                     100
                 );
             }
-        }, [E, B, U, j]),
+        }, [E, B, k, j]),
         Z = (0, u.Z)(S);
     return (o.useEffect(() => {
-        v && S && !Z && (A(), q());
-    }, [S, v, A, q, Z]),
+        v && S && !Z && (A(), L());
+    }, [S, v, A, L, Z]),
     o.useEffect(() => {
         v &&
             !R &&
             b &&
             setTimeout(() => {
-                A(), q();
+                A(), L();
             }, 200);
-    }, [v, b, R, A, q]),
+    }, [v, b, R, A, L]),
     o.useEffect(() => {
-        if (!!U.isReady) !N.current && v && (A(), q()), (N.current = v);
-    }, [v, N, q, A, U]),
+        if (!!k.isReady) !N.current && v && (A(), L()), (N.current = v);
+    }, [v, N, L, A, k]),
     j)
         ? null
         : (0, s.jsxs)('div', {
@@ -134,7 +134,7 @@ t.Z = (e) => {
                           (0, s.jsx)(l.O_, {
                               ref: I,
                               className: _.confetti,
-                              environment: k.current
+                              environment: U.current
                           }),
                           (0, s.jsx)(l.Ji, {
                               ref: O,

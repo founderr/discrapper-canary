@@ -115,31 +115,31 @@ function A(e) {
         { analyticsLocations: A } = (0, _.ZP)(),
         [h, O] = a.useState(!1),
         p = (0, u.ZP)(),
-        x = null,
         R = null,
+        x = null,
         f = [S.O0b.PAST_DUE, S.O0b.PAUSED].includes(s.status) ? s.currentPeriodStart : s.currentPeriodEnd,
         M = r()(f).add(o, 'days').toDate();
     switch (s.status) {
         case S.O0b.PAST_DUE:
-            R = N.Z.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
+            x = N.Z.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
                 pauseDuration: o,
                 resumeDate: M
             });
             break;
         case S.O0b.PAUSED:
-            R = N.Z.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({ resumeDate: M });
+            x = N.Z.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({ resumeDate: M });
             break;
         default:
-            R = N.Z.Messages.PREMIUM_PAUSE_CONFIRM_BODY.format({
+            x = N.Z.Messages.PREMIUM_PAUSE_CONFIRM_BODY.format({
                 pauseDate: f,
                 resumeDate: M,
                 pauseDuration: o
             });
     }
     return (
-        (x = (0, n.jsx)('div', {
+        (R = (0, n.jsx)('div', {
             className: m.body,
-            children: R
+            children: x
         })),
         (0, n.jsxs)(n.Fragment, {
             children: [
@@ -167,7 +167,7 @@ function A(e) {
                                   children: N.Z.Messages.BILLING_ERROR_GENERIC
                               })
                             : null,
-                        x
+                        R
                     ]
                 }),
                 (0, n.jsx)(c.ModalFooter, {

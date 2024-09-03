@@ -27,8 +27,8 @@ var A = t(13140),
     h = t(981631),
     O = t(689938),
     p = t(232603);
-let x = R(null);
-function R(e) {
+let R = x(null);
+function x(e) {
     var s;
     let t = C.Z.getNotificationPositionMode(),
         n = t !== h._vf.DISABLED,
@@ -93,8 +93,8 @@ function M(e) {
     }
     return (
         !(function () {
-            let e = R(x);
-            !o().isEqual(e, x) && (g.default.track(h.rMx.OVERLAY_SETTINGS_UPDATED, e), (x = e));
+            let e = x(R);
+            !o().isEqual(e, R) && (g.default.track(h.rMx.OVERLAY_SETTINGS_UPDATED, e), (R = e));
         })(),
         (0, n.jsxs)(n.Fragment, {
             children: [

@@ -21,8 +21,8 @@ var n = t(735250),
     h = t(572004),
     O = t(669079),
     p = t(296848),
-    x = t(474936),
-    R = t(689938),
+    R = t(474936),
+    x = t(689938),
     f = t(286748);
 function M(e, s, t) {
     return (
@@ -44,11 +44,11 @@ class D extends a.PureComponent {
     get copyButtonText() {
         switch (this.state.copyMode) {
             case c.CopyInputModes.SUCCESS:
-                return R.Z.Messages.BILLING_GIFT_COPIED;
+                return x.Z.Messages.BILLING_GIFT_COPIED;
             case c.CopyInputModes.ERROR:
-                return R.Z.Messages.FAILED;
+                return x.Z.Messages.FAILED;
             default:
-                return R.Z.Messages.COPY;
+                return x.Z.Messages.COPY;
         }
     }
     handleRevoke(e) {
@@ -67,7 +67,7 @@ class D extends a.PureComponent {
                     text: this.copyButtonText,
                     mode: t,
                     supportsCopy: h.wS,
-                    hideMessage: e ? R.Z.Messages.GIFT_INVENTORY_HIDDEN : null,
+                    hideMessage: e ? x.Z.Messages.GIFT_INVENTORY_HIDDEN : null,
                     onCopy: this.handleCopy,
                     buttonColor: c.ButtonColors.BRAND,
                     buttonLook: c.ButtonLooks.FILLED
@@ -77,13 +77,13 @@ class D extends a.PureComponent {
                     children: [
                         null != s.expiresAt
                             ? (0, n.jsxs)(a.Fragment, {
-                                  children: [R.Z.Messages.GIFT_INVENTORY_EXPIRES_IN.format({ hours: s.expiresAt.diff(r()(), 'h') }), ' ', '\u2014\xA0']
+                                  children: [x.Z.Messages.GIFT_INVENTORY_EXPIRES_IN.format({ hours: s.expiresAt.diff(r()(), 'h') }), ' ', '\u2014\xA0']
                               })
                             : null,
                         (0, n.jsx)(c.Clickable, {
                             tag: 'a',
                             onClick: () => this.handleRevoke(s.code),
-                            children: R.Z.Messages.REVOKE
+                            children: x.Z.Messages.REVOKE
                         })
                     ]
                 })
@@ -117,16 +117,16 @@ class P extends a.PureComponent {
         let { sku: s, subscriptionPlan: t, giftCodeBatchId: a } = this.props;
         return (
             (e =
-                a === x.m8
-                    ? R.Z.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE
-                    : a === x.rX && null != t
-                      ? (t.interval === x.rV.MONTH ? R.Z.Messages.STICKERS_GIFT_INVENTORY_TITLE_MONTH : R.Z.Messages.STICKERS_GIFT_INVENTORY_TITLE_YEAR).format({
+                a === R.m8
+                    ? x.Z.Messages.BLACK_FRIDAY_PROMOTION_GIFT_INVENTORY_TITLE
+                    : a === R.rX && null != t
+                      ? (t.interval === R.rV.MONTH ? x.Z.Messages.STICKERS_GIFT_INVENTORY_TITLE_MONTH : x.Z.Messages.STICKERS_GIFT_INVENTORY_TITLE_YEAR).format({
                             skuName: s.name,
                             intervalCount: t.intervalCount
                         })
                       : null == t
                         ? s.name
-                        : (t.interval === x.rV.MONTH ? R.Z.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS : R.Z.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS).format({
+                        : (t.interval === R.rV.MONTH ? x.Z.Messages.GIFT_INVENTORY_SUBSCRIPTION_MONTHS : x.Z.Messages.GIFT_INVENTORY_SUBSCRIPTION_YEARS).format({
                               skuName: s.name,
                               intervalCount: t.intervalCount
                           })),
@@ -144,14 +144,14 @@ class P extends a.PureComponent {
             children: [
                 (0, n.jsx)('div', {
                     className: f.codeText,
-                    children: R.Z.Messages.GIFT_INVENTORY_GENERATE_HELP
+                    children: x.Z.Messages.GIFT_INVENTORY_GENERATE_HELP
                 }),
                 (0, n.jsx)(c.Button, {
                     submitting: this.state.isCreating,
                     size: c.Button.Sizes.SMALL,
                     color: c.Button.Colors.BRAND,
                     onClick: this.handleGenerateGiftCode,
-                    children: R.Z.Messages.GIFT_INVENTORY_GENERATE_LINK
+                    children: x.Z.Messages.GIFT_INVENTORY_GENERATE_LINK
                 })
             ]
         });
@@ -195,7 +195,7 @@ class P extends a.PureComponent {
                                                 this.renderTitle(),
                                                 (0, n.jsx)('div', {
                                                     className: f.subTextHeader,
-                                                    children: R.Z.Messages.GIFT_INVENTORY_COPIES.format({ copies: e.length })
+                                                    children: x.Z.Messages.GIFT_INVENTORY_COPIES.format({ copies: e.length })
                                                 })
                                             ]
                                         })

@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return x;
+        return R;
     }
 });
 var n = t(735250);
@@ -103,7 +103,7 @@ function p(e) {
         })
     );
 }
-function x() {
+function R() {
     let e = (0, r.e7)([E.Z], () => E.Z.getMode()),
         s = [
             {

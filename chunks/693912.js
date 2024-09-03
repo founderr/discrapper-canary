@@ -1,85 +1,85 @@
 _.d(E, {
     B2: function () {
-        return S;
+        return r;
     },
     DS: function () {
         return a;
     },
     hj: function () {
-        return r;
+        return S;
     },
     nh: function () {
         return M;
     }
 });
-var s = _(63063),
+var n = _(63063),
     t = _(981631),
-    n = _(689938);
+    s = _(689938);
 function a(e) {
     let { application: E, username: _, usernameHook: a = t.dG4, applicationNameHook: M = t.dG4 } = e;
     return null != E
-        ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED.format({
+        ? s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED.format({
               username: _,
               otherUsername: E.name,
               usernameHook: a,
               otherUsernameHook: M,
-              helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+              helpCenterLink: n.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           })
-        : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION.format({
+        : s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION.format({
               username: _,
               usernameHook: a,
-              helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+              helpCenterLink: n.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           });
 }
 function M(e) {
     let { application: E, username: _, usernameHook: a = t.dG4, applicationNameHook: M = t.dG4 } = e;
     return null != E
-        ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED.format({
+        ? s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED.format({
               username: _,
               otherUsername: E.name,
               usernameHook: a,
               otherUsernameHook: M,
-              helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
+              helpCenterLink: n.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           })
-        : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION.format({
+        : s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION.format({
               username: _,
               usernameHook: a,
-              helpCenterLink: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
-          });
-}
-function S(e) {
-    let { application: E, username: _, usernameOnClick: a, applicationNameOnClick: M, medium: S } = e;
-    return null != E
-        ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_MOBILE.astFormat({
-              username: _,
-              otherUsername: E.name,
-              usernameOnClick: a,
-              otherUsernameOnClick: M,
-              medium: S,
-              helpCenterLink: { url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
-          })
-        : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION_MOBILE.astFormat({
-              username: _,
-              usernameOnClick: a,
-              medium: S,
-              helpCenterLink: { url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+              helpCenterLink: n.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS)
           });
 }
 function r(e) {
-    let { application: E, username: _, usernameOnClick: a, applicationNameOnClick: M, medium: S } = e;
+    let { application: E, username: _, usernameOnClick: a, applicationNameOnClick: M, medium: r } = e;
     return null != E
-        ? n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_MOBILE.astFormat({
+        ? s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_MOBILE.astFormat({
               username: _,
               otherUsername: E.name,
               usernameOnClick: a,
               otherUsernameOnClick: M,
-              medium: S,
-              helpCenterLink: { url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+              medium: r,
+              helpCenterLink: { url: n.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           })
-        : n.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION_MOBILE.astFormat({
+        : s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_ADDED_DELETED_APPLICATION_MOBILE.astFormat({
               username: _,
               usernameOnClick: a,
-              medium: S,
-              helpCenterLink: { url: s.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+              medium: r,
+              helpCenterLink: { url: n.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+          });
+}
+function S(e) {
+    let { application: E, username: _, usernameOnClick: a, applicationNameOnClick: M, medium: r } = e;
+    return null != E
+        ? s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_MOBILE.astFormat({
+              username: _,
+              otherUsername: E.name,
+              usernameOnClick: a,
+              otherUsernameOnClick: M,
+              medium: r,
+              helpCenterLink: { url: n.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
+          })
+        : s.Z.Messages.PRIVATE_CHANNEL_INTEGRATION_REMOVED_DELETED_APPLICATION_MOBILE.astFormat({
+              username: _,
+              usernameOnClick: a,
+              medium: r,
+              helpCenterLink: { url: n.Z.getArticleURL(t.BhN.PRIVATE_CHANNEL_INTEGRATIONS) }
           });
 }

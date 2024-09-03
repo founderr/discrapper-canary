@@ -1,7 +1,7 @@
 t.r(s),
     t.d(s, {
         default: function () {
-            return R;
+            return x;
         }
     }),
     t(47120),
@@ -78,7 +78,7 @@ function p(e) {
         ]
     });
 }
-function x(e) {
+function R(e) {
     let { onClose: s } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -105,7 +105,7 @@ function x(e) {
         ]
     });
 }
-function R(e) {
+function x(e) {
     let s,
         { guildBoostSlotId: t, transitionState: n, onClose: a } = e,
         { analyticsLocations: o } = (0, I.ZP)(T.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
@@ -126,7 +126,7 @@ function R(e) {
                 });
                 break;
             case 2:
-                s = (0, i.jsx)(x, { onClose: a });
+                s = (0, i.jsx)(R, { onClose: a });
                 break;
             default:
                 throw Error('Unexpected step: '.concat(d));

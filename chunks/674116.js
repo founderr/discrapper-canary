@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return y;
+        return F;
     }
 }),
     t(653041);
@@ -26,8 +26,8 @@ var n = t(735250),
     h = t(325808),
     O = t(823087),
     p = t(546997),
-    x = t(520384),
-    R = t(167540),
+    R = t(520384),
+    x = t(167540),
     f = t(803567),
     M = t(269876),
     D = t(976758),
@@ -54,7 +54,7 @@ function G(e, s, t) {
         })
     );
 }
-function y() {
+function F() {
     let {
             inputMode: e,
             qosEnabled: s,
@@ -63,10 +63,10 @@ function y() {
             attenuateWhileSpeakingOthers: u,
             audioSubsystem: S,
             silenceWarning: b,
-            legacyAudioSubsystemSupported: y,
-            experimentalAudioSubsystemSupported: F,
+            legacyAudioSubsystemSupported: F,
+            experimentalAudioSubsystemSupported: y,
             sidechainEnabled: V,
-            sidechainStrength: w
+            sidechainStrength: Y
         } = (0, o.cj)([T.Z], () => ({
             inputMode: T.Z.getMode(),
             qosEnabled: T.Z.getQoS(),
@@ -80,14 +80,14 @@ function y() {
             sidechainEnabled: T.Z.getSidechainCompression(),
             sidechainStrength: T.Z.getSidechainCompressionStrength()
         })),
-        k = (0, o.e7)([I.Z], () => I.Z.getSubsection()),
-        Y = a.createRef();
+        w = (0, o.e7)([I.Z], () => I.Z.getSubsection()),
+        k = a.createRef();
     a.useEffect(() => {
-        if (k === P.GA) {
+        if (w === P.GA) {
             var e;
-            null == Y || null === (e = Y.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection();
+            null == k || null === (e = k.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection();
         }
-    }, [Y, k]);
+    }, [k, w]);
     let H = _.Z.getCurrentConfig({ location: 'UserSettingsVoiceProcessing' }).sidechainAvailable && !(0, N.isWeb)();
     return (0, n.jsxs)(l.FormSection, {
         tag: l.FormTitleTags.H1,
@@ -125,7 +125,7 @@ function y() {
                 setting: L.s6.VOICE_AND_VIDEO_SOUNDBOARD,
                 children: (0, n.jsx)('div', {
                     style: { scrollMarginTop: '48px' },
-                    ref: Y
+                    ref: k
                 })
             }),
             (0, n.jsx)(E.F, {
@@ -134,7 +134,7 @@ function y() {
             }),
             (0, n.jsx)(E.F, {
                 setting: L.s6.VOICE_AND_VIDEO_VIDEO,
-                children: (0, n.jsx)(R.Z, {})
+                children: (0, n.jsx)(x.Z, {})
             }),
             (0, n.jsx)(E.F, {
                 setting: L.s6.VOICE_AND_VIDEO_ADVANCED,
@@ -150,7 +150,7 @@ function y() {
                             setting: L.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
                             children: (0, n.jsx)(f.Z, {})
                         }),
-                        (0, n.jsx)(x.Z, {}),
+                        (0, n.jsx)(R.Z, {}),
                         (0, n.jsx)(E.F, {
                             setting: L.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
                             children: (0, n.jsx)(l.FormSection, {
@@ -220,7 +220,7 @@ function y() {
                                             children: v.Z.Messages.SIDECHAIN_COMPRESSION_STRENGTH
                                         }),
                                         (0, n.jsx)(l.Slider, {
-                                            initialValue: w,
+                                            initialValue: Y,
                                             minValue: 1,
                                             onValueChange: (e) => c.Z.setSidechainCompressionStrength(e)
                                         })
@@ -256,7 +256,7 @@ function y() {
                                                     }),
                                                 t
                                             );
-                                        })(y, F),
+                                        })(F, y),
                                         onChange: (e) => {
                                             G(v.Z.Messages.SWITCH_SUBSYSTEM, v.Z.Messages.SWITCH_SUBSYSTEM_BODY, () => c.Z.setAudioSubsystem(e));
                                         }

@@ -15,8 +15,8 @@ var s = l(735250),
     u = l(430824),
     E = l(496675),
     _ = l(699516),
-    I = l(594174),
-    x = l(924301),
+    x = l(594174),
+    I = l(924301),
     m = l(518756),
     N = l(545165),
     T = l(77810),
@@ -56,7 +56,7 @@ let Z = (e) => e === S.WX.EXTERNAL,
                     value: null == a ? void 0 : a.id,
                     options: E.map((e) => ({
                         value: e.id,
-                        label: (0, d.F6)(e, I.default, _.Z, !0)
+                        label: (0, d.F6)(e, x.default, _.Z, !0)
                     })),
                     onChange: (e) => {
                         let n = E.find((n) => n.id === e);
@@ -127,11 +127,11 @@ function V(e) {
             null === (e = _.current) || void 0 === e || e.focus();
         }
     }, [i, d]);
-    let I = D(t),
+    let x = D(t),
         m = R(t),
         N = (0, g.xV)(l),
         T = (0, g.xC)(d),
-        h = (0, x.xt)(l);
+        h = (0, I.xt)(l);
     return null == d || d === S.WX.NONE
         ? null
         : Z(d)
@@ -141,7 +141,7 @@ function V(e) {
                 required: !0,
                 children: (0, s.jsx)(o.TextInput, {
                     className: A.__invalid_textInput,
-                    onChange: I,
+                    onChange: x,
                     placeholder: L.Z.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_PLACEHOLDER,
                     maxLength: S.gG,
                     value: null != N ? N : '',
@@ -166,9 +166,9 @@ function G(e) {
         c = (0, m.Z)(n, C.d4z.GUILD_VOICE),
         E = (0, m.Z)(n, C.d4z.GUILD_STAGE_VOICE),
         _ = (0, N.sR)(n, C.d4z.GUILD_VOICE),
-        I = (0, T.q)(i),
+        x = (0, T.q)(i),
         h = null == i ? void 0 : i.hasFeature(C.oNc.COMMUNITY),
-        g = (0, x.xt)(l),
+        g = (0, I.xt)(l),
         v = p(t, l),
         Z = a.useMemo(() => {
             let e = [
@@ -194,12 +194,12 @@ function G(e) {
                           value: S.WX.STAGE_INSTANCE,
                           desc: L.Z.Messages.GUILD_EVENT_LOCATION_OPTION_STAGE_HINT,
                           icon: o.StageIcon,
-                          ...M(S.WX.STAGE_INSTANCE, g, E, I.length)
+                          ...M(S.WX.STAGE_INSTANCE, g, E, x.length)
                       },
                       ...e
                   ]
                 : e;
-        }, [d, c, E, h, _.length, I.length, g]);
+        }, [d, c, E, h, _.length, x.length, g]);
     return (0, s.jsx)(o.RadioGroup, {
         value: l.entityType,
         options: Z,
@@ -211,11 +211,11 @@ function O(e) {
     let { guildId: n, guildEvent: a, validationErrorMessage: t, onChange: i, isSlideReady: d = !1 } = e,
         { entityType: c } = a,
         _ = (0, r.e7)([u.Z], () => u.Z.getGuild(n), [n]),
-        I = (0, T.q)(_),
-        x = (0, r.e7)([E.Z], () => E.Z.can(C.Plq.MANAGE_CHANNELS, _)),
+        x = (0, T.q)(_),
+        I = (0, r.e7)([E.Z], () => E.Z.can(C.Plq.MANAGE_CHANNELS, _)),
         m = null == _ ? void 0 : _.hasFeature(C.oNc.COMMUNITY),
         N = p(i, a),
-        h = m && !Z(c) && 0 === I.length && x && null != c;
+        h = m && !Z(c) && 0 === x.length && I && null != c;
     return (0, s.jsxs)('div', {
         className: A.container,
         children: [

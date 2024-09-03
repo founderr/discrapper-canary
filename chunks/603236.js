@@ -18,8 +18,8 @@ var s = l(735250),
     u = l(914010),
     E = l(246946),
     _ = l(626135),
-    I = l(572004),
-    x = l(630388),
+    x = l(572004),
+    I = l(630388),
     m = l(971130),
     N = l(530436),
     T = l(245335),
@@ -32,8 +32,8 @@ var s = l(735250),
 let A = o.ZP.connectStores([E.Z], () => ({ hideValue: E.Z.hideInstantInvites }))((e) => {
         let { value: n, autoFocus: l, hideValue: t, onCopy: r, disabled: o } = e,
             [u, E] = a.useState(!1),
-            [_, x] = a.useState(!1),
-            m = a.useMemo(() => new d.sW(1000, () => x(!1)), [x]);
+            [_, I] = a.useState(!1),
+            m = a.useMemo(() => new d.sW(1000, () => I(!1)), [I]);
         return (
             a.useEffect(
                 () => () => {
@@ -61,13 +61,13 @@ let A = o.ZP.connectStores([E.Z], () => ({ hideValue: E.Z.hideInstantInvites }))
                         'aria-label': g.Z.Messages.FORM_LABEL_INVITE_LINK,
                         disabled: o
                     }),
-                    I.wS
+                    x.wS
                         ? (0, s.jsx)(c.Button, {
                               size: c.Button.Sizes.SMALL,
                               color: _ ? c.Button.Colors.GREEN : c.Button.Colors.BRAND,
                               className: v.copyButton,
                               onClick: () => {
-                                  x(!0), m.delay(), r(n);
+                                  I(!0), m.delay(), r(n);
                               },
                               disabled: o,
                               children: _ ? g.Z.Messages.INVITE_COPIED : g.Z.Messages.COPY
@@ -81,7 +81,7 @@ let A = o.ZP.connectStores([E.Z], () => ({ hideValue: E.Z.hideInstantInvites }))
         let { guild: n, noInvitesAvailable: l, showFriends: t, onClose: o, modalState: d, isGuestInviteCreationToggleEnabled: E, inviteFlags: S, setInviteFlags: C, showGuestInviteToggleForCurrentVoiceChannel: Z, copyValue: f, changePage: j, inviteChannel: M, source: D, code: R, guildScheduledEvent: p, disabled: V } = e,
             { maxAge: G, maxUses: O, networkError: U, showVanityURL: y } = d,
             b = a.useCallback(() => {
-                (0, I.JG)(f),
+                (0, x.JG)(f),
                     _.default.track(h.rMx.COPY_INSTANT_INVITE, {
                         server: u.Z.getGuildId(),
                         channel: null == M ? void 0 : M.id,
@@ -104,8 +104,8 @@ let A = o.ZP.connectStores([E.Z], () => ({ hideValue: E.Z.hideInstantInvites }))
                           className: v.temporaryMembershipContainerBackground,
                           children: (0, s.jsx)(c.FormSwitch, {
                               className: v.temporaryMembershipContainer,
-                              value: (0, x.yE)(S, r.$.IS_GUEST_INVITE),
-                              onChange: (e) => C((0, x.mB)(S, r.$.IS_GUEST_INVITE, e)),
+                              value: (0, I.yE)(S, r.$.IS_GUEST_INVITE),
+                              onChange: (e) => C((0, I.mB)(S, r.$.IS_GUEST_INVITE, e)),
                               note: g.Z.Messages.GUEST_MEMBERSHIP_EXPLANATION,
                               disabled: V,
                               hideBorder: !0,

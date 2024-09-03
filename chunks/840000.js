@@ -33,7 +33,7 @@ function h(e) {
                 flipX: a,
                 className: L
             }),
-            (0, C.jsx)(A, {
+            (0, C.jsx)(v, {
                 flipX: a,
                 className: L
             })
@@ -178,7 +178,7 @@ function N(e) {
     });
 }
 let D = [o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css, o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, o.Z.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css];
-function A(e) {
+function v(e) {
     let { className: L, flipX: a } = e;
     return (0, C.jsx)(f, {
         flipX: a,

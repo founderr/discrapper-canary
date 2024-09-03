@@ -21,8 +21,8 @@ var n = t(735250),
     h = t(663993),
     O = t(600164),
     p = t(112831),
-    x = t(482215),
-    R = t(38618),
+    R = t(482215),
+    x = t(38618),
     f = t(921801),
     M = t(857192),
     D = t(558724),
@@ -35,8 +35,8 @@ var n = t(735250),
     B = t(908442),
     U = t(943822),
     G = t(440376),
-    y = t(224499),
-    F = t(594402);
+    F = t(224499),
+    y = t(594402);
 function V(e, s, t) {
     return (
         s in e
@@ -50,8 +50,8 @@ function V(e, s, t) {
         e
     );
 }
-let w = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios', 'discord_android'],
-    k = [
+let Y = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios', 'discord_android'],
+    w = [
         {
             value: 'branch',
             label: 'Branch Name'
@@ -61,7 +61,7 @@ let w = ['discord_web', 'discord_marketing', 'discord_developers', 'discord_ios'
             label: 'Build ID'
         }
     ];
-function Y(e) {
+function k(e) {
     return 'discord_ios' in e || 'discord_android' in e;
 }
 class H extends a.Component {
@@ -69,14 +69,14 @@ class H extends a.Component {
         let { project: e, overrideType: s, overrideId: t, disabled: a, error: i } = this.props;
         return (0, n.jsxs)(O.Z, {
             direction: O.Z.Direction.VERTICAL,
-            className: r()(U.buildOverrideGroup, y.marginBottom20, G.card, U.row),
+            className: r()(U.buildOverrideGroup, F.marginBottom20, G.card, U.row),
             children: [
                 (0, n.jsx)(N.Z, {
                     className: r()(U.removeBuildOverride, { [U.removeBuildOverrideDisabled]: a }),
                     onClick: a ? void 0 : this.handleRemoveBuildOverride
                 }),
                 (0, n.jsxs)(O.Z, {
-                    className: y.marginBottom8,
+                    className: F.marginBottom8,
                     children: [
                         (0, n.jsx)(O.Z.Child, {
                             basis: '50%',
@@ -84,7 +84,7 @@ class H extends a.Component {
                                 title: 'Override Type',
                                 className: U.item,
                                 children: (0, n.jsx)(_.SingleSelect, {
-                                    options: k,
+                                    options: w,
                                     onChange: this.handleOverrideTypeChanged,
                                     value: s,
                                     isDisabled: a
@@ -163,12 +163,12 @@ class W extends a.Component {
         let { buildOverrides: e } = this.state;
         if (null == e) return [];
         let s = Object.keys(e);
-        return l().without(w, ...s);
+        return l().without(Y, ...s);
     }
     renderEmpty() {
         return (0, n.jsxs)(_.EmptyState, {
             theme: b.Z.theme,
-            className: r()(y.marginTop40, y.marginBottom20),
+            className: r()(F.marginTop40, F.marginBottom20),
             children: [
                 (0, n.jsx)(_.EmptyStateImage, {
                     darkSrc: t(770227),
@@ -243,7 +243,7 @@ class W extends a.Component {
                 (0, n.jsx)(O.Z.Child, {
                     grow: 0,
                     children: (0, n.jsx)(_.Button, {
-                        disabled: Y(null != s ? s : {}),
+                        disabled: k(null != s ? s : {}),
                         onClick: this.handleSaveChanges,
                         submitting: e,
                         color: _.Button.Colors.GREEN,
@@ -265,10 +265,10 @@ class W extends a.Component {
     render() {
         let e;
         let { loading: s, saving: t, buildOverrides: a } = this.state;
-        e = s ? (0, n.jsx)(_.Spinner, { className: y.marginTop20 }) : null != a && 0 === Object.keys(a).length ? this.renderEmpty() : this.renderItems();
+        e = s ? (0, n.jsx)(_.Spinner, { className: F.marginTop20 }) : null != a && 0 === Object.keys(a).length ? this.renderEmpty() : this.renderItems();
         let i = !t && !s && this.getAvailableProjects().length > 0,
             r =
-                Y(null != a ? a : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL
+                k(null != a ? a : {}) && 'stable' !== window.GLOBAL_ENV.RELEASE_CHANNEL
                     ? (0, n.jsx)(_.Text, {
                           color: 'text-danger',
                           variant: 'text-md/normal',
@@ -278,10 +278,10 @@ class W extends a.Component {
         return (0, n.jsx)(f.F, {
             setting: v.s6.DEVELOPER_OPTIONS_BUILD_OVERRIDE,
             children: (0, n.jsxs)(_.FormSection, {
-                className: y.marginTop60,
+                className: F.marginTop60,
                 children: [
                     (0, n.jsxs)(O.Z, {
-                        className: y.marginBottom20,
+                        className: F.marginBottom20,
                         children: [
                             (0, n.jsx)(O.Z.Child, {
                                 children: (0, n.jsx)(_.FormTitle, {
@@ -449,7 +449,7 @@ class W extends a.Component {
 class K extends a.Component {
     isMobile() {
         var e;
-        return Y(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
+        return k(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {});
     }
     renderSettingsForm() {
         let { ttlSeconds: e, releaseChannel: s, userIdEntry: t, userIdEntryError: a, allowedVersions: i, allowedVersionEntry: r, allowedVersionEntryError: o, allowLoggedOut: l, experiments: c, experimentsError: d } = this.state,
@@ -463,7 +463,7 @@ class K extends a.Component {
             children: [
                 (0, n.jsx)(_.FormItem, {
                     title: 'Expire After',
-                    className: y.marginBottom20,
+                    className: F.marginBottom20,
                     children: (0, n.jsx)(_.SingleSelect, {
                         value: null != u ? u.value : null,
                         options: B.S6,
@@ -474,7 +474,7 @@ class K extends a.Component {
                     ? null
                     : (0, n.jsx)(_.FormItem, {
                           title: 'Release Channel',
-                          className: y.marginBottom20,
+                          className: F.marginBottom20,
                           children: (0, n.jsx)(_.SingleSelect, {
                               value: s,
                               options: B.F$,
@@ -486,7 +486,7 @@ class K extends a.Component {
                           children: [
                               (0, n.jsx)(_.FormItem, {
                                   title: 'Add allowed app version (required)',
-                                  className: y.marginBottom20,
+                                  className: F.marginBottom20,
                                   children: (0, n.jsxs)(O.Z, {
                                       direction: O.Z.Direction.HORIZONTAL,
                                       children: [
@@ -511,7 +511,7 @@ class K extends a.Component {
                               }),
                               (0, n.jsx)(_.FormItem, {
                                   title: 'Remove allowed app version',
-                                  className: y.marginBottom20,
+                                  className: F.marginBottom20,
                                   children: (0, n.jsx)(_.SingleSelect, {
                                       value: null,
                                       options: E,
@@ -527,7 +527,7 @@ class K extends a.Component {
                     : (0, n.jsx)(n.Fragment, {
                           children: (0, n.jsxs)(_.FormItem, {
                               title: 'Limit to User IDs (optional)',
-                              className: y.marginBottom20,
+                              className: F.marginBottom20,
                               children: [
                                   (0, n.jsx)(O.Z, {
                                       direction: O.Z.Direction.HORIZONTAL,
@@ -545,7 +545,7 @@ class K extends a.Component {
                                   (0, n.jsx)(_.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'text-muted',
-                                      className: y.marginTop8,
+                                      className: F.marginTop8,
                                       children: 'User IDs can be separated by whitespace or commas.'
                                   })
                               ]
@@ -553,7 +553,7 @@ class K extends a.Component {
                       }),
                 (0, n.jsxs)(_.FormItem, {
                     title: 'Client Experiment Override',
-                    className: y.marginBottom20,
+                    className: F.marginBottom20,
                     children: [
                         (0, n.jsx)(O.Z, {
                             direction: O.Z.Direction.HORIZONTAL,
@@ -571,7 +571,7 @@ class K extends a.Component {
                         (0, n.jsx)(_.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
-                            className: y.marginTop8,
+                            className: F.marginTop8,
                             children: 'Locally override the given experiments to the given bucket. This ONLY applies locally and WILL NOT affect the server. When the user clears build override, the experiment override is removed as well.'
                         })
                     ]
@@ -596,7 +596,7 @@ class K extends a.Component {
                     return null == a
                         ? s()
                         : (0, n.jsx)('code', {
-                              className: 'hljs scroller '.concat(a.language, ' ').concat(F.scrollbarGhost, ' ').concat(U.codebox),
+                              className: 'hljs scroller '.concat(a.language, ' ').concat(y.scrollbarGhost, ' ').concat(U.codebox),
                               dangerouslySetInnerHTML: { __html: a.value }
                           });
                 }
@@ -625,7 +625,7 @@ class K extends a.Component {
                 }),
                 (0, n.jsx)(p.Z, {
                     color: e,
-                    className: ''.concat(y.marginBottom8, ' ').concat(y.marginTop8),
+                    className: ''.concat(F.marginBottom8, ' ').concat(F.marginTop8),
                     children: s
                 })
             ]
@@ -778,7 +778,7 @@ class K extends a.Component {
 }
 function z(e) {
     let { layoutDebuggingEnabled: s, cssDebuggingEnabled: t } = e,
-        { horizontalSpacing: i, verticalSpacing: r, maxHorizontalSpacing: o, maxVerticalSpacing: l } = (0, x.i)(),
+        { horizontalSpacing: i, verticalSpacing: r, maxHorizontalSpacing: o, maxVerticalSpacing: l } = (0, R.i)(),
         c = a.useMemo(() => Array.from({ length: o + 1 }, (e, s) => s), [o]),
         d = a.useMemo(() => Array.from({ length: l + 1 }, (e, s) => s), [l]);
     return (0, n.jsxs)(n.Fragment, {
@@ -813,11 +813,11 @@ function z(e) {
                 setting: v.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS,
                 children: [
                     (0, n.jsxs)(_.FormSection, {
-                        className: y.marginBottom20,
+                        className: F.marginBottom20,
                         children: [
                             (0, n.jsx)(_.FormTitle, { children: 'Horizontal Grid Spacing' }),
                             (0, n.jsx)(_.FormText, {
-                                className: y.marginBottom20,
+                                className: F.marginBottom20,
                                 type: _.FormTextTypes.DESCRIPTION,
                                 children: 'Adjust the spacing between horizontal grid lines. Set to 0 to disable horizontal grid lines.'
                             }),
@@ -826,7 +826,7 @@ function z(e) {
                                 minValue: 0,
                                 maxValue: o,
                                 markers: c,
-                                onValueChange: (e) => x.i.getState().setHorizontalSpacing(e),
+                                onValueChange: (e) => R.i.getState().setHorizontalSpacing(e),
                                 onValueRender: (e) => ''.concat(Math.round(e), 'px'),
                                 onMarkerRender: (e) => (e % 4 == 0 ? ''.concat(e) : void 0),
                                 equidistant: !0
@@ -834,11 +834,11 @@ function z(e) {
                         ]
                     }),
                     (0, n.jsxs)(_.FormSection, {
-                        className: y.marginBottom20,
+                        className: F.marginBottom20,
                         children: [
                             (0, n.jsx)(_.FormTitle, { children: 'Vertical Grid Spacing' }),
                             (0, n.jsx)(_.FormText, {
-                                className: y.marginBottom20,
+                                className: F.marginBottom20,
                                 type: _.FormTextTypes.DESCRIPTION,
                                 children: 'Adjust the spacing between vertical grid lines. Set to 0 to disable vertical grid lines.'
                             }),
@@ -847,7 +847,7 @@ function z(e) {
                                 minValue: 0,
                                 maxValue: l,
                                 markers: d,
-                                onValueChange: (e) => x.i.getState().setVerticalSpacing(e),
+                                onValueChange: (e) => R.i.getState().setVerticalSpacing(e),
                                 onValueRender: (e) => ''.concat(Math.round(e), 'px'),
                                 onMarkerRender: (e) => (e % 4 == 0 ? ''.concat(e) : void 0),
                                 equidistant: !0
@@ -875,7 +875,7 @@ function X() {
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsxs)('div', {
-                      className: [U.buttonsContainer, y.marginBottom20].join(' '),
+                      className: [U.buttonsContainer, F.marginBottom20].join(' '),
                       children: [
                           (0, n.jsx)(f.F, {
                               setting: v.s6.DEVELOPER_OPTIONS_OVERRIDE_OPEN_OVERLAY,
@@ -889,7 +889,7 @@ function X() {
                               setting: v.s6.DEVELOPER_OPTIONS_RESET_SOCKET,
                               children: (0, n.jsx)(_.Button, {
                                   onClick: () => {
-                                      R.Z.getSocket().close(), R.Z.getSocket().connect();
+                                      x.Z.getSocket().close(), x.Z.getSocket().connect();
                                   },
                                   children: 'Reset Socket'
                               })
@@ -1105,7 +1105,7 @@ let q = d.ZP.connectStores([M.default], () => ({
                             setting: v.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE,
                             children: [
                                 (0, n.jsx)('div', {
-                                    className: [U.buttonsContainer, y.marginBottom20].join(' '),
+                                    className: [U.buttonsContainer, F.marginBottom20].join(' '),
                                     children: (0, n.jsx)(Z.S, {})
                                 }),
                                 (0, n.jsx)(_.FormDivider, { className: U.divider })
@@ -1129,7 +1129,7 @@ function J() {
         children: (0, n.jsxs)(_.FormSection, {
             tag: _.FormTitleTags.H1,
             title: 'Survey Override',
-            className: y.marginTop60,
+            className: F.marginTop60,
             children: [
                 (0, n.jsx)(_.FormTitle, { children: 'Copy the ID of the Survey you want to test:' }),
                 (0, n.jsxs)('form', {
@@ -1162,7 +1162,7 @@ function $() {
         children: (0, n.jsxs)(_.FormSection, {
             tag: _.FormTitleTags.H1,
             title: 'Changelog Override',
-            className: y.marginTop60,
+            className: F.marginTop60,
             children: [
                 (0, n.jsx)(_.FormTitle, { children: 'Enter the ID of the changelog you want to test' }),
                 (0, n.jsxs)('div', {

@@ -35,14 +35,14 @@ function f(e) {
             let i = await (0, o.Il)(d.Xj, new Uint8Array(t), e, new Uint8Array(r), n);
             f(l.fromByteArray(i)), _(!1);
         }, []),
-        C = r.useRef(null);
+        R = r.useRef(null);
     return (
         r.useEffect(() => {
-            if (null != S && null != I && null == C.current) {
+            if (null != S && null != I && null == R.current) {
                 _(!0);
-                C.current = setTimeout(() => g(n, I, t, S), 300);
+                R.current = setTimeout(() => g(n, I, t, S), 300);
             }
-            let e = C.current;
+            let e = R.current;
             return () => {
                 null != e && clearTimeout(e);
             };

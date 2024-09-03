@@ -21,8 +21,8 @@ var n = t(735250),
     h = t(518638),
     O = t(725727),
     p = t(454982),
-    x = t(197115),
-    R = t(504983),
+    R = t(197115),
+    x = t(504983),
     f = t(703656),
     M = t(594174),
     D = t(580130),
@@ -35,7 +35,7 @@ var n = t(735250),
     B = t(474936),
     U = t(689938),
     G = t(161368);
-function y(e) {
+function F(e) {
     let s,
         { outboundPromotion: t, code: i, addClaimedOutboundPromotionCode: o, disabled: l } = e,
         [c, u] = a.useState(!1),
@@ -67,8 +67,8 @@ function y(e) {
                   onClickDetails: T
               }));
     let O = m ? U.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : U.Z.Messages.PROMOTION_CARD_ACTION_CLAIM,
-        x = a.useCallback(() => E(!1), []),
-        { outboundTitle: R, outboundTermsAndConditions: f } = t;
+        R = a.useCallback(() => E(!1), []),
+        { outboundTitle: x, outboundTermsAndConditions: f } = t;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)('div', {
@@ -92,7 +92,7 @@ function y(e) {
                                         children: [
                                             (0, n.jsx)(d.Heading, {
                                                 variant: 'heading-md/semibold',
-                                                children: R
+                                                children: x
                                             }),
                                             (0, n.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
@@ -128,12 +128,12 @@ function y(e) {
                     renderModal: (e) =>
                         (0, n.jsx)(p.Z, {
                             ...e,
-                            onClose: x,
+                            onClose: R,
                             onClaim: o,
                             code: i,
                             outboundPromotion: t
                         }),
-                    onCloseRequest: x
+                    onCloseRequest: R
                 })
         ]
     });
@@ -144,7 +144,7 @@ s.Z = function () {
             let { giftCodeBatchId: s } = e;
             return null == s;
         }),
-        i = (0, c.e7)([M.default], () => L.ZP.isPremium(M.default.getCurrentUser())),
+        i = (0, c.e7)([M.default], () => L.ZP.isPremiumExactly(M.default.getCurrentUser(), B.p9.TIER_2)),
         o = l().groupBy(s, (e) => (0, P.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
         [I, C] = a.useState(!1),
         A = (0, c.e7)([m.Z], () => m.Z.userStatus);
@@ -161,9 +161,9 @@ s.Z = function () {
             });
     }, [h]);
     let p = b.bh.useSetting(),
-        F = null != A || !h,
-        { promotionsLoaded: V, activeOutboundPromotions: w, claimedEndedOutboundPromotions: k, claimedOutboundPromotionCodeMap: Y, addClaimedOutboundPromotionCode: H } = (0, O.lG)(),
-        W = w.length + k.length > 0,
+        y = null != A || !h,
+        { promotionsLoaded: V, activeOutboundPromotions: Y, claimedEndedOutboundPromotions: w, claimedOutboundPromotionCodeMap: k, addClaimedOutboundPromotionCode: H } = (0, O.lG)(),
+        W = Y.length + w.length > 0,
         K =
             g.g.useExperiment(
                 { location: 'EntitlementGifts' },
@@ -175,7 +175,7 @@ s.Z = function () {
     function z() {
         T.Z.open(j.oAB.PREMIUM);
     }
-    return I && V && F
+    return I && V && y
         ? (0, n.jsxs)(n.Fragment, {
               children: [
                   h
@@ -213,7 +213,7 @@ s.Z = function () {
                                                 })
                                             ]
                                         }),
-                                        (0, n.jsx)(x.Z, {
+                                        (0, n.jsx)(R.Z, {
                                             showGradient: !0,
                                             className: G.promoNitroButton,
                                             subscriptionTier: B.Si.TIER_2,
@@ -225,20 +225,20 @@ s.Z = function () {
                                     variant: 'heading-md/semibold',
                                     children: W ? U.Z.Messages.GIFT_INVENTORY_YOUR_GIFTS : void 0
                                 });
-                      return (0, n.jsx)(R.Z, {
+                      return (0, n.jsx)(x.Z, {
                           className: G.containerWithMargin,
                           isShown: K,
-                          type: R.Y.PREMIUM,
+                          type: x.Y.PREMIUM,
                           hasBackground: !0,
                           children: (0, n.jsxs)(d.FormSection, {
                               className: r()({ [G.containerWithMargin]: !K }),
                               children: [
                                   u,
                                   W ? (0, n.jsx)(d.FormDivider, { className: G.divider }) : null,
-                                  k.map((e) => {
+                                  w.map((e) => {
                                       let { code: s, promotion: t } = e;
                                       return (0, n.jsx)(
-                                          y,
+                                          F,
                                           {
                                               outboundPromotion: t,
                                               code: s,
@@ -248,12 +248,12 @@ s.Z = function () {
                                           t.id
                                       );
                                   }),
-                                  w.map((e) =>
+                                  Y.map((e) =>
                                       (0, n.jsx)(
-                                          y,
+                                          F,
                                           {
                                               outboundPromotion: e,
-                                              code: Y[e.id],
+                                              code: k[e.id],
                                               addClaimedOutboundPromotionCode: H,
                                               disabled: !i
                                           },

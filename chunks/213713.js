@@ -9,27 +9,27 @@ var r = n(735250),
     l = n(120356),
     i = n.n(l),
     o = n(392711),
-    c = n.n(o),
-    s = n(876215),
+    s = n.n(o),
+    c = n(876215),
     u = n(442837),
     d = n(433517),
     h = n(481060),
     m = n(570140),
-    x = n(812206),
-    f = n(835473),
+    f = n(812206),
+    x = n(835473),
     g = n(681619),
     p = n(810568),
     b = n(168524),
     v = n(77498),
     _ = n(823379),
-    j = n(71585),
-    C = n(146282),
+    C = n(71585),
+    j = n(146282),
     T = n(650613),
     N = n(789086),
     S = n(206583),
     y = n(787524),
-    w = n(535271);
-let I = [
+    I = n(535271);
+let w = [
     {
         key: 'type',
         cellClassName: i()(y.cell, y.cellType),
@@ -37,7 +37,7 @@ let I = [
             let { type: t } = e;
             return (0, r.jsx)(h.Text, {
                 variant: 'text-md/semibold',
-                children: s.s[t]
+                children: c.s[t]
             });
         }
     },
@@ -66,7 +66,7 @@ let I = [
 function E(e) {
     var t, n;
     let { type: a } = e,
-        l = (0, u.e7)([C.Z], () => C.Z.getFilters()),
+        l = (0, u.e7)([j.Z], () => j.Z.getFilters()),
         i = null !== (n = null == l ? void 0 : null === (t = l.types) || void 0 === t ? void 0 : t.has(a)) && void 0 !== n && n;
     return (0, r.jsx)(h.Checkbox, {
         value: i,
@@ -85,11 +85,11 @@ function E(e) {
 }
 function k() {
     var e, t;
-    let n = (0, u.e7)([C.Z], () => C.Z.getFeed(S.YN.GLOBAL_FEED)),
-        l = (0, u.e7)([C.Z], () => C.Z.getDebugImpressionCappingDisabled()),
-        o = (0, u.e7)([j.Z], () => j.Z.getDebugFastImpressionCappingEnabled()),
-        s = (function (e) {
-            let t = c().groupBy(e, (e) => e.content_type);
+    let n = (0, u.e7)([j.Z], () => j.Z.getFeed(S.YN.GLOBAL_FEED)),
+        l = (0, u.e7)([j.Z], () => j.Z.getDebugImpressionCappingDisabled()),
+        o = (0, u.e7)([C.Z], () => C.Z.getDebugFastImpressionCappingEnabled()),
+        c = (function (e) {
+            let t = s().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
                 let n = t[e];
                 return {
@@ -99,16 +99,16 @@ function k() {
                 };
             });
         })(null == n ? void 0 : null === (e = n.entries) || void 0 === e ? void 0 : e.map((e) => e.content)),
-        E = (0, u.e7)([C.Z], () => {
+        E = (0, u.e7)([j.Z], () => {
             var e;
-            return (null === (e = C.Z.getFeedState(S.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
+            return (null === (e = j.Z.getFeedState(S.YN.GLOBAL_FEED)) || void 0 === e ? void 0 : e.loading) === !0;
         }),
         [k, Z] = a.useState(''),
         O = (0, u.e7)(
-            [v.Z, x.Z],
+            [v.Z, f.Z],
             () => {
                 var e, t, n;
-                return parseInt(k) > 0 ? k : null !== (n = null === (e = v.Z.getGameByName(k)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = x.Z.getApplicationByName(k)) || void 0 === t ? void 0 : t.id;
+                return parseInt(k) > 0 ? k : null !== (n = null === (e = v.Z.getGameByName(k)) || void 0 === e ? void 0 : e.id) && void 0 !== n ? n : null === (t = f.Z.getApplicationByName(k)) || void 0 === t ? void 0 : t.id;
             },
             [k]
         ),
@@ -126,19 +126,19 @@ function k() {
                 let [t] = e;
                 return t;
             }),
-        B = (0, f.Z)(L).filter(_.lm);
+        P = (0, x.Z)(L).filter(_.lm);
     return (0, r.jsx)('div', {
-        className: i()(w.panel),
+        className: i()(I.panel),
         children: (0, r.jsxs)(h.ScrollerThin, {
             className: y.content,
             children: [
                 (0, r.jsxs)(h.FormSection, {
                     children: [
                         (0, r.jsx)(h.FormTitle, { children: 'Inventory' }),
-                        s.length > 0 &&
+                        c.length > 0 &&
                             (0, r.jsx)(g.Z, {
-                                columns: I,
-                                data: s
+                                columns: w,
+                                data: c
                             }),
                         (0, r.jsx)(h.Spacer, { size: 8 }),
                         (0, r.jsx)(N.Z, {}),
@@ -205,7 +205,7 @@ function k() {
                             error: k.length > 0 && null == A ? 'No game profile for '.concat(null != O ? O : k + ' - try by id', '.') : void 0,
                             style: null != A ? { border: '1px solid green' } : {}
                         }),
-                        (0, r.jsx)('ul', { children: B.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(R, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, r.jsx)('ul', { children: P.map((e) => (0, r.jsx)('li', { children: (0, r.jsx)(R, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 })
             ]

@@ -33,14 +33,13 @@ var i,
     P = n(740492),
     y = n(451478),
     D = n(358085),
-    k = n(792125),
-    U = n(998502),
-    w = n(473159),
-    B = n(928518),
-    H = n(981631),
-    G = n(689938),
-    V = n(138997);
-function F(e, t, n) {
+    k = n(998502),
+    U = n(473159),
+    w = n(928518),
+    B = n(981631),
+    H = n(689938),
+    G = n(138997);
+function V(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -53,11 +52,11 @@ function F(e, t, n) {
         e
     );
 }
-class W extends (i = s.Component) {
+class F extends (i = s.Component) {
     componentDidMount() {
         let { guestWindow: e } = this.props,
             t = e.document;
-        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, w.O)(e), e.addEventListener('blur', this.handleBlur), t.addEventListener('contextmenu', this.handleContextMenu, !0), e.addEventListener('beforeunload', this.warnPopoutClose);
+        null == t.querySelector('title') && null != t.head && t.head.appendChild(t.createElement('title')), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, U.O)(e), e.addEventListener('blur', this.handleBlur), t.addEventListener('contextmenu', this.handleContextMenu, !0), e.addEventListener('beforeunload', this.warnPopoutClose);
     }
     componentDidUpdate(e) {
         let { title: t, fontScale: n, locale: i, clientThemesCSS: a } = this.props;
@@ -126,53 +125,54 @@ class W extends (i = s.Component) {
             children: (0, a.jsx)(
                 L.Z,
                 {
-                    children: (0, a.jsx)(p.ThemeContextProvider, {
+                    children: (0, a.jsx)(p.ThemeProvider, {
                         theme: e,
-                        children: (0, a.jsx)(p.RedesignIconContextProvider, {
-                            children: (0, a.jsx)('div', {
-                                'data-popout-root': !0,
-                                ref: this.rootRef,
-                                className: r()((0, k.Q)(e), (0, N.Z)(), T, C, I),
-                                children: (0, a.jsx)(p.FocusRingScope, {
-                                    containerRef: this.rootRef,
-                                    children: (0, a.jsx)(E.Z, {
-                                        children: (0, a.jsxs)(S.Z, {
-                                            children: [
-                                                (0, a.jsx)(v.Co, {}),
-                                                (0, a.jsx)(_.Wu, {
-                                                    appContext: H.IlC.POPOUT,
-                                                    renderWindow: f,
-                                                    children: (0, a.jsxs)(R.yP, {
-                                                        children: [
-                                                            (0, a.jsxs)('div', {
-                                                                className: V.popout,
-                                                                children: [
-                                                                    h && null != x
-                                                                        ? (0, a.jsx)(A.Z, {
-                                                                              focused: n,
-                                                                              type: x,
-                                                                              windowKey: l,
-                                                                              macOSFrame: !0
-                                                                          })
-                                                                        : null,
-                                                                    (0, a.jsx)('div', {
-                                                                        className: r()(V.content, g),
-                                                                        children: s
-                                                                    })
-                                                                ]
-                                                            }),
-                                                            (0, a.jsx)(p.Modals, {}),
-                                                            (0, a.jsx)(m.Z, {}),
-                                                            (0, a.jsx)(R.Un, {})
-                                                        ]
+                        children: (e) =>
+                            (0, a.jsx)(p.RedesignIconContextProvider, {
+                                children: (0, a.jsx)('div', {
+                                    'data-popout-root': !0,
+                                    ref: this.rootRef,
+                                    className: r()(e, (0, N.Z)(), T, C, I),
+                                    children: (0, a.jsx)(p.FocusRingScope, {
+                                        containerRef: this.rootRef,
+                                        children: (0, a.jsx)(E.Z, {
+                                            children: (0, a.jsxs)(S.Z, {
+                                                children: [
+                                                    (0, a.jsx)(v.Co, {}),
+                                                    (0, a.jsx)(_.Wu, {
+                                                        appContext: B.IlC.POPOUT,
+                                                        renderWindow: f,
+                                                        children: (0, a.jsxs)(R.yP, {
+                                                            children: [
+                                                                (0, a.jsxs)('div', {
+                                                                    className: G.popout,
+                                                                    children: [
+                                                                        h && null != x
+                                                                            ? (0, a.jsx)(A.Z, {
+                                                                                  focused: n,
+                                                                                  type: x,
+                                                                                  windowKey: l,
+                                                                                  macOSFrame: !0
+                                                                              })
+                                                                            : null,
+                                                                        (0, a.jsx)('div', {
+                                                                            className: r()(G.content, g),
+                                                                            children: s
+                                                                        })
+                                                                    ]
+                                                                }),
+                                                                (0, a.jsx)(p.Modals, {}),
+                                                                (0, a.jsx)(m.Z, {}),
+                                                                (0, a.jsx)(R.Un, {})
+                                                            ]
+                                                        })
                                                     })
-                                                })
-                                            ]
+                                                ]
+                                            })
                                         })
                                     })
                                 })
                             })
-                        })
                     })
                 },
                 t
@@ -181,30 +181,30 @@ class W extends (i = s.Component) {
     }
     constructor(...e) {
         super(...e),
-            F(this, 'rootRef', s.createRef()),
-            F(this, '_cleanupWindowActionCreators', void 0),
-            F(this, 'warnPopoutClose', (e) => {
+            V(this, 'rootRef', s.createRef()),
+            V(this, '_cleanupWindowActionCreators', void 0),
+            V(this, 'warnPopoutClose', (e) => {
                 if (this.props.connectedToEmbeddedActivity && !P.ZP.disableEmbeddedActivityPopOutAlert) {
-                    if (((e.returnValue = G.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE), !!D.isPlatformEmbedded))
+                    if (((e.returnValue = H.Z.Messages.EMBEDDED_ACTIVITIES_ARE_YOU_SURE_WANT_TO_LEAVE), !!D.isPlatformEmbedded))
                         (0, g.Z)(() => {
-                            B.Z.unmountWindow(this.props.windowKey), D.isPlatformEmbedded && U.ZP.close(this.props.windowKey);
+                            w.Z.unmountWindow(this.props.windowKey), D.isPlatformEmbedded && k.ZP.close(this.props.windowKey);
                         });
                 }
             }),
-            F(this, 'handleBlur', () => {
+            V(this, 'handleBlur', () => {
                 var e, t;
                 null === (e = (t = this.props).onBlur) || void 0 === e || e.call(t);
             }),
-            F(this, 'handleContextMenu', (e) => {
+            V(this, 'handleContextMenu', (e) => {
                 e.preventDefault();
             });
     }
 }
-F(W, 'defaultProps', { withTitleBar: !0 });
-let z = s.forwardRef(function (e, t) {
-    let { guestWindow: n, focused: i } = (0, h.cj)([B.Z], () => ({
-        guestWindow: B.Z.getWindow(e.windowKey),
-        focused: B.Z.getWindowFocused(e.windowKey)
+V(F, 'defaultProps', { withTitleBar: !0 });
+let W = s.forwardRef(function (e, t) {
+    let { guestWindow: n, focused: i } = (0, h.cj)([w.Z], () => ({
+        guestWindow: w.Z.getWindow(e.windowKey),
+        focused: w.Z.getWindowFocused(e.windowKey)
     }));
     c()(null != n, 'Missing guestWindow reference');
     let s = (0, h.e7)([y.Z], () => y.Z.isFocused()),
@@ -224,7 +224,7 @@ let z = s.forwardRef(function (e, t) {
         : (0, a.jsx)(p.DnDProvider, {
               children: (0, a.jsx)(x.Gt, {
                   value: E,
-                  children: (0, a.jsx)(W, {
+                  children: (0, a.jsx)(F, {
                       ref: t,
                       ...e,
                       guestWindow: n,
@@ -250,4 +250,4 @@ let z = s.forwardRef(function (e, t) {
               })
           });
 });
-t.Z = z;
+t.Z = W;

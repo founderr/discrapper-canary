@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return h;
+        return _;
     }
 });
 var t = l(735250);
@@ -14,12 +14,11 @@ var r = l(120356),
     c = l(206295),
     d = l(297781),
     m = l(313201),
-    p = l(792125),
-    E = l(231338),
-    f = l(689938),
-    N = l(917056),
-    C = l(671656);
-function v(e) {
+    p = l(231338),
+    E = l(689938),
+    f = l(917056),
+    N = l(671656);
+function C(e) {
     let { className: n, clickableClassName: l, clickable: r, children: s } = e,
         u = (0, m.Dt)();
     if (null != r && 'href' in r) {
@@ -58,95 +57,96 @@ function v(e) {
         ]
     });
 }
-function _(e) {
+function v(e) {
     let { clickable: n, ...l } = e;
-    return (0, t.jsx)(v, {
+    return (0, t.jsx)(C, {
         ...l,
         clickable: {
             ...n,
             ariaDescription: ''
         },
-        clickableClassName: C.clickable
+        clickableClassName: N.clickable
     });
 }
-function h(e) {
-    let { entry: n, channel: l, title: r, subtitle: C, thumbnailUrl: h, titleClickable: x, subtitleClickable: T, thumbnailClickable: I, providerIconProps: g, style: S = {} } = e,
-        O = (0, m.Dt)(),
-        { primaryColor: j, secondaryColor: Z } = (0, c.Z)(h);
+function _(e) {
+    let { entry: n, channel: l, title: r, subtitle: N, thumbnailUrl: _, titleClickable: h, subtitleClickable: x, thumbnailClickable: T, providerIconProps: I, style: g = {} } = e,
+        S = (0, m.Dt)(),
+        { primaryColor: O, secondaryColor: j } = (0, c.Z)(_);
     return (
-        null != h && (S.background = 'linear-gradient(45deg, '.concat(j, ', ').concat(Z, ')')),
-        (0, t.jsx)(a.ThemeContextProvider, {
-            theme: E.BR.DARK,
-            children: (0, t.jsxs)('figure', {
-                'aria-roledescription': f.Z.Messages.CONTENT_INVENTORY_ACTIVITY_CARD_ARIA_ROLE_DESCRIPTION,
-                'aria-labelledby': O,
-                'data-disable-adaptive-theme': !0,
-                className: i()(N.container, (0, p.Q)(E.BR.DARK)),
-                style: S,
-                children: [
-                    (0, t.jsx)(v, {
-                        className: N.thumbnailContainer,
-                        clickableClassName: N.clickable,
-                        clickable: I,
-                        children: (0, t.jsx)(u.f, {
-                            src: h,
-                            constrain: 'width',
-                            size: 64,
-                            'aria-hidden': !0
-                        })
-                    }),
-                    (0, t.jsxs)('div', {
-                        className: N.infoContainer,
-                        children: [
-                            (0, t.jsx)(s.Z, {
-                                channel: l,
-                                entry: n,
-                                className: N.users
-                            }),
-                            (0, t.jsx)(a.Spacer, { size: 2 }),
-                            (0, t.jsx)(_, {
-                                clickable: x,
-                                className: N.clickableText,
-                                children: (0, t.jsx)(a.Heading, {
-                                    id: O,
-                                    variant: 'heading-md/medium',
-                                    lineClamp: 1,
-                                    className: i()(N.textPrimary, N.truncatedText),
-                                    scaleFontToUserSetting: !0,
-                                    children: r
-                                })
-                            }),
-                            null != C
-                                ? (0, t.jsxs)(t.Fragment, {
-                                      children: [
-                                          (0, t.jsx)(a.Spacer, { size: 2 }),
-                                          (0, t.jsx)(_, {
-                                              clickable: T,
-                                              className: N.clickableText,
-                                              children: (0, t.jsx)(a.Text, {
-                                                  variant: 'text-sm/normal',
-                                                  className: i()(N.textSecondary, N.truncatedText),
-                                                  lineClamp: 1,
-                                                  scaleFontToUserSetting: !0,
-                                                  children: C
-                                              })
-                                          })
-                                      ]
-                                  })
-                                : null,
-                            (0, t.jsx)(d.PZ, {
-                                className: N.badges,
-                                entry: n,
-                                location: d.Gt.EMBED
+        null != _ && (g.background = 'linear-gradient(45deg, '.concat(O, ', ').concat(j, ')')),
+        (0, t.jsx)(a.ThemeProvider, {
+            theme: p.BR.DARK,
+            children: (e) =>
+                (0, t.jsxs)('figure', {
+                    'aria-roledescription': E.Z.Messages.CONTENT_INVENTORY_ACTIVITY_CARD_ARIA_ROLE_DESCRIPTION,
+                    'aria-labelledby': S,
+                    'data-disable-adaptive-theme': !0,
+                    className: i()(f.container, e),
+                    style: g,
+                    children: [
+                        (0, t.jsx)(C, {
+                            className: f.thumbnailContainer,
+                            clickableClassName: f.clickable,
+                            clickable: T,
+                            children: (0, t.jsx)(u.f, {
+                                src: _,
+                                constrain: 'width',
+                                size: 64,
+                                'aria-hidden': !0
                             })
-                        ]
-                    }),
-                    (0, t.jsx)('div', {
-                        className: N.headerIcons,
-                        children: null != g ? (0, t.jsx)(o.Z, { ...g }) : null
-                    })
-                ]
-            })
+                        }),
+                        (0, t.jsxs)('div', {
+                            className: f.infoContainer,
+                            children: [
+                                (0, t.jsx)(s.Z, {
+                                    channel: l,
+                                    entry: n,
+                                    className: f.users
+                                }),
+                                (0, t.jsx)(a.Spacer, { size: 2 }),
+                                (0, t.jsx)(v, {
+                                    clickable: h,
+                                    className: f.clickableText,
+                                    children: (0, t.jsx)(a.Heading, {
+                                        id: S,
+                                        variant: 'heading-md/medium',
+                                        lineClamp: 1,
+                                        className: i()(f.textPrimary, f.truncatedText),
+                                        scaleFontToUserSetting: !0,
+                                        children: r
+                                    })
+                                }),
+                                null != N
+                                    ? (0, t.jsxs)(t.Fragment, {
+                                          children: [
+                                              (0, t.jsx)(a.Spacer, { size: 2 }),
+                                              (0, t.jsx)(v, {
+                                                  clickable: x,
+                                                  className: f.clickableText,
+                                                  children: (0, t.jsx)(a.Text, {
+                                                      variant: 'text-sm/normal',
+                                                      className: i()(f.textSecondary, f.truncatedText),
+                                                      lineClamp: 1,
+                                                      scaleFontToUserSetting: !0,
+                                                      children: N
+                                                  })
+                                              })
+                                          ]
+                                      })
+                                    : null,
+                                (0, t.jsx)(d.PZ, {
+                                    className: f.badges,
+                                    entry: n,
+                                    location: d.Gt.EMBED
+                                })
+                            ]
+                        }),
+                        (0, t.jsx)('div', {
+                            className: f.headerIcons,
+                            children: null != I ? (0, t.jsx)(o.Z, { ...I }) : null
+                        })
+                    ]
+                })
         })
     );
 }

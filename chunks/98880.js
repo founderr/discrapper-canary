@@ -6,10 +6,10 @@ t.d(n, {
         return Y;
     },
     kA: function () {
-        return G;
+        return z;
     },
     qR: function () {
-        return z;
+        return G;
     }
 }),
     t(47120),
@@ -37,8 +37,8 @@ var i,
     I = t(695346),
     g = t(973616),
     P = t(768581),
-    S = t(541099),
-    L = t(783097),
+    L = t(541099),
+    S = t(783097),
     b = t(695676),
     R = t(176412),
     T = t(226026),
@@ -62,11 +62,11 @@ function U(e) {
         look: i,
         children:
             'icon' === i
-                ? (0, l.jsx)(D, {
+                ? (0, l.jsx)(B, {
                       application: t,
                       children: s
                   })
-                : (0, l.jsx)(B, {
+                : (0, l.jsx)(D, {
                       application: t,
                       look: i,
                       bannerImageStyle: o,
@@ -81,7 +81,7 @@ function k(e) {
         C = I.Sb.useSetting(),
         h = o.useCallback(
             (e) => {
-                if ((0, L.BQ)(n) && C) {
+                if ((0, S.BQ)(n) && C) {
                     let t = n instanceof g.Z ? n : g.Z.createFromServer(n);
                     (0, u.vq)(e, (e) =>
                         (0, l.jsx)(E.Z, {
@@ -93,7 +93,7 @@ function k(e) {
             },
             [n, C]
         ),
-        { name: f, description: A } = o.useMemo(() => (0, L.sl)(n, { fakeAppIconURL: H }), [n]),
+        { name: f, description: A } = o.useMemo(() => (0, S.sl)(n, { fakeAppIconURL: H }), [n]),
         { trackItemImpressionRef: N } = (0, T.Z)({
             applicationId: n.id,
             sectionName: a,
@@ -129,9 +129,9 @@ function k(e) {
               children: (0, l.jsx)(d.FocusBlock, { children: i })
           });
 }
-function D(e) {
+function B(e) {
     let { application: n, children: t } = e,
-        { name: i, iconURL: a } = o.useMemo(() => (0, L.sl)(n, { fakeAppIconURL: H }), [n]);
+        { name: i, iconURL: a } = o.useMemo(() => (0, S.sl)(n, { fakeAppIconURL: H }), [n]);
     return (0, l.jsx)(d.Tooltip, {
         tooltipContentClassName: O.tooltipContent,
         text: i,
@@ -153,16 +153,16 @@ function D(e) {
         }
     });
 }
-function B(e) {
+function D(e) {
     let { application: n, look: t, bannerImageStyle: i, enableVideoBanner: a, disableBannerFadeIn: r, children: c } = e,
-        { iconURL: u, name: m, description: p } = o.useMemo(() => (0, L.sl)(n, { fakeAppIconURL: H }), [n]),
+        { iconURL: u, name: m, description: p } = o.useMemo(() => (0, S.sl)(n, { fakeAppIconURL: H }), [n]),
         _ = o.useMemo(() => (null == p ? null : (0, R.ae)(p)), [p]),
         C = (0, x.ZP)(u, ''),
         [h, f] = o.useState(!1),
         A = o.useCallback(() => {
             !0 === a && f(!0);
         }, [a]),
-        E = (0, L.lf)(n),
+        E = (0, S.lf)(n),
         N = 'large_banner' === t || 'medium_banner' === t,
         v = o.useCallback(() => f(!1), []);
     return (0, l.jsxs)(l.Fragment, {
@@ -256,8 +256,8 @@ function B(e) {
 }
 function w(e) {
     let { application: n, fallbackColor: t, showVideo: i, disableFadeIn: a } = e;
-    if ((0, L.BQ)(n)) {
-        if ((0, L.ye)(n))
+    if ((0, S.BQ)(n)) {
+        if ((0, S.ye)(n))
             return (0, l.jsx)(V, {
                 application: n,
                 showVideo: i,
@@ -283,7 +283,7 @@ function V(e) {
             names: ['embedded_cover']
         }),
         r = o.useMemo(() => {
-            let e = (0, L.yJ)(n);
+            let e = (0, S.yJ)(n);
             return null != e && null != e.activity_preview_video_asset_id ? (0, C.Z)(n.id, e.activity_preview_video_asset_id) : null;
         }, [n]),
         [c, d] = o.useState(t);
@@ -355,7 +355,7 @@ function Y(e) {
                     application_id: n.id,
                     section_name: t,
                     search_results_position: i,
-                    source: S.Z.entrypoint(),
+                    source: L.Z.entrypoint(),
                     location: r,
                     query: a
                 }),
@@ -369,16 +369,16 @@ function Y(e) {
         [n, l, r, s, a, i, t]
     );
 }
-function G(e) {
+function z(e) {
     let n = Y(e);
     return (0, l.jsx)(U, {
         ...e,
         onClick: n
     });
 }
-function z(e) {
+function G(e) {
     let { channel: n, application: t, location: i, sectionName: a, isOneClickCTA: r, ...s } = e;
-    if (!(0, L.BQ)(t)) throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
+    if (!(0, S.BQ)(t)) throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
     let u = o.useId(),
         [m, p] = (0, c.Wu)([_.ZP], () => [_.ZP.isLaunchingActivity(), _.ZP.getLaunchState(t.id, n.id)]),
         C = null != p && p.isLaunching && p.componentId === u,
@@ -410,7 +410,7 @@ function z(e) {
                         })
                       : null
               })
-            : (0, l.jsx)(G, {
+            : (0, l.jsx)(z, {
                   ...s,
                   sectionName: a,
                   application: t,

@@ -10,10 +10,10 @@ var r = n(470079),
     s = n(866442),
     o = n(442837),
     l = n(780384),
-    u = n(607070),
-    c = n(629935),
-    d = n(168551),
-    _ = n(792125),
+    u = n(481060),
+    c = n(607070),
+    d = n(629935),
+    _ = n(168551),
     E = n(168631);
 let f = Object.freeze({
     '--profile-gradient-primary-color': 'var(--background-secondary-alt)',
@@ -32,7 +32,7 @@ let f = Object.freeze({
 });
 function h(e) {
     let { theme: t, primaryColor: n, secondaryColor: i } = e,
-        [h, p] = (0, o.Wu)([u.Z], () => [u.Z.desaturateUserColors, u.Z.syncProfileThemeWithUserTheme]),
+        [h, p] = (0, o.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.syncProfileThemeWithUserTheme]),
         I = (0, E.fq)(t),
         m = (0, E.wu)(t, n, p),
         T = (0, E.lM)(t, n),
@@ -56,7 +56,7 @@ function h(e) {
                 '--profile-note-background-color': I.noteBackgroundColor,
                 '--profile-role-pill-background-color': I.rolePillBackgroundColor,
                 '--profile-role-pill-border-color': I.rolePillBorderColor,
-                ...(0, c.W4)({
+                ...(0, d.W4)({
                     enabled: !0,
                     primaryColor: n,
                     secondaryColor: i,
@@ -65,8 +65,8 @@ function h(e) {
                 })
             };
         }, [n, i, I, m, T, g, S, t, h]),
-        profileThemeClassName: a()((0, _.Q)(t), {
-            [d.e3]: null != n,
+        profileThemeClassName: a()((0, u.getThemeClass)(t), {
+            [_.e3]: null != n,
             'custom-profile-theme': null != n
         })
     };

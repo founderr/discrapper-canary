@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return T;
     }
 }),
     n(47120);
@@ -19,10 +19,10 @@ var s = n(735250),
     m = n(723359),
     h = n(689938),
     E = n(178819);
-function N(e) {
+function T(e) {
     let { onComplete: t, onClose: n } = e,
-        [o, N] = a.useState(null),
-        [T, x] = a.useState(null),
+        [o, T] = a.useState(null),
+        [N, x] = a.useState(null),
         [A, v] = a.useState(!1),
         b = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
         C = a.createRef();
@@ -44,9 +44,9 @@ function N(e) {
     }, [b, t]);
     let g = a.useCallback(
             (e) => {
-                N(e);
+                T(e);
             },
-            [N]
+            [T]
         ),
         M = a.useCallback(() => {
             var e;
@@ -86,7 +86,7 @@ function N(e) {
                           name: 'birthday',
                           onChange: g,
                           onPopulated: M,
-                          error: T,
+                          error: N,
                           value: o
                       })
                   }),

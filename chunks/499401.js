@@ -3,19 +3,19 @@ _.d(E, {
         return t;
     }
 });
-var s = _(689938);
+var n = _(689938);
 function t(e) {
-    let { application: E, username: _, usernameOnClick: t, medium: n } = e;
+    let { application: E, username: _, usernameOnClick: t, medium: s } = e;
     return null != E
-        ? s.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_MOBILE.astFormat({
+        ? n.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_MOBILE.astFormat({
               username: _,
               applicationName: E.name,
               usernameOnClick: t,
-              medium: n
+              medium: s
           })
-        : s.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION_MOBILE.astFormat({
+        : n.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION_MOBILE.astFormat({
               username: _,
               usernameOnClick: t,
-              medium: n
+              medium: s
           });
 }

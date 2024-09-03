@@ -15,8 +15,8 @@ var a = l(442837),
     u = l(984933),
     E = l(430824),
     _ = l(341165),
-    I = l(626135),
-    x = l(572004),
+    x = l(626135),
+    I = l(572004),
     m = l(971130),
     N = l(230900),
     T = l(981631),
@@ -109,9 +109,9 @@ function C(e) {
                         autoFocus: !1,
                         onCopy: (e) => {
                             if (U) return;
-                            (0, x.JG)(e);
+                            (0, I.JG)(e);
                             let n = (0, N.xC)(A.entity_type);
-                            I.default.track(T.rMx.COPY_INSTANT_INVITE, {
+                            x.default.track(T.rMx.COPY_INSTANT_INVITE, {
                                 server: A.guild_id,
                                 channel: R,
                                 channel_type: n,

@@ -9,8 +9,8 @@ var r = n(735250),
     l = n(848246),
     i = n(442837),
     o = n(481060),
-    c = n(570140),
-    s = n(746599),
+    s = n(570140),
+    c = n(746599),
     u = n(594174),
     d = n(246992),
     h = n(700768);
@@ -24,7 +24,7 @@ let m = [
             value: !0
         }
     ],
-    x = [
+    f = [
         {
             label: 'No Override',
             value: !1
@@ -34,7 +34,7 @@ let m = [
             value: !0
         }
     ],
-    f = [
+    x = [
         {
             label: '1 day',
             value: 1
@@ -70,7 +70,7 @@ function g() {
                 className: h.formElement,
                 tag: o.FormTitleTags.H3,
                 children: (0, r.jsx)(o.SingleSelect, {
-                    options: x,
+                    options: f,
                     value: g,
                     onChange: (e) => {
                         p(e);
@@ -83,7 +83,7 @@ function g() {
                 className: h.formElement,
                 tag: o.FormTitleTags.H3,
                 children: (0, r.jsx)(o.SingleSelect, {
-                    options: f,
+                    options: x,
                     value: b,
                     onChange: (e) => {
                         v(e);
@@ -93,7 +93,7 @@ function g() {
             }),
             (0, r.jsx)(o.Button, {
                 onClick: () =>
-                    void (c.Z.dispatch({
+                    void (s.Z.dispatch({
                         type: 'PREMIUM_PERKS_DEMO_OVERRIDE',
                         perkType: l.q.STREAM_HIGH_QUALITY,
                         user: e,
@@ -101,7 +101,7 @@ function g() {
                         activateSuccess: g,
                         demoDuration: b
                     }),
-                    (0, s.Vk)()),
+                    (0, c.Vk)()),
                 children: 'Update'
             })
         ]

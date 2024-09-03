@@ -27,8 +27,8 @@ var i = t(735250),
     I = t(41558),
     g = t(106771),
     P = t(79984),
-    S = t(314734),
-    L = t(981631),
+    L = t(314734),
+    S = t(981631),
     b = t(689938),
     R = t(429032);
 let T = Array(6)
@@ -96,10 +96,10 @@ function j(e) {
             ];
         }, [N, h]),
         P = g.length > 0,
-        S = p && !P && !I;
+        L = p && !P && !I;
     return u
         ? (0, i.jsx)(k, {})
-        : S
+        : L
           ? (0, i.jsx)(v.A, {
                 type: f.LG.SEARCH_EMPTY,
                 searchQuery: t,
@@ -142,12 +142,12 @@ function Z(e) {
         key: r,
         isExpanded: M,
         durationMs: 200,
-        maxAnimationHeight: S.K7
+        maxAnimationHeight: L.K7
     });
     a.useEffect(() => {
         !v &&
             E &&
-            (0, c.yw)(L.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+            (0, c.yw)(S.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: f.L3.SEARCH,
                 source: h.Z.entrypoint(),
                 num: o.length
@@ -196,7 +196,7 @@ function Z(e) {
                                         searchResultsPosition: n,
                                         source: e
                                     }),
-                                    _.S.dispatch(L.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                                    _.S.dispatch(S.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                             }
                         },
                         t.id

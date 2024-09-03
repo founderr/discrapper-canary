@@ -31,7 +31,7 @@ function O(e) {
         a = (0, h.B6)(n.config.expiresAt),
         s = (0, h.B6)(p.r.build(n.config).rewardsExpireAt),
         r = (0, l.e7)([d.Z], () => d.Z.getState().theme),
-        u = (0, o.w)(r) ? Z.BRd.DARK : Z.BRd.LIGHT,
+        u = (0, o.wj)(r) ? Z.BRd.DARK : Z.BRd.LIGHT,
         _ = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return (0, i.jsxs)('div', {
         className: R.heading,

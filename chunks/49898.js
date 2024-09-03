@@ -1,4 +1,4 @@
-var r, a, l, i, o, c;
+var r, a, l, i, o, s;
 n.d(t, {
     F$: function () {
         return r;
@@ -16,7 +16,7 @@ n.d(t, {
         return l;
     },
     mc: function () {
-        return s;
+        return c;
     },
     vf: function () {
         return a;
@@ -25,9 +25,9 @@ n.d(t, {
     n(47120),
     ((i = r || (r = {})).SERVERS = 'servers'),
     (i.QUESTS = 'quests');
-let s = 12633 == n.j ? ['servers', 'quests'] : null;
+let c = 12633 == n.j ? ['servers', 'quests'] : null;
 ((o = a || (a = {})).GUILDS = 'guilds'), (o.FEATURED = 'featured'), (o.GAMING = 'gaming'), (o.MUSIC = 'music'), (o.ENTERTAINMENT = 'entertainment'), (o.TECH = 'tech'), (o.EDUCATION = 'education'), (o.HUBS = 'hubs');
 let u = new Set(['guilds', 'hubs']),
     d = 24,
     h = 240;
-((c = l || (l = {})).DEFAULT = 'default'), (c.FLOATING = 'floating'), (c.COLLAPSED = 'collapsed');
+((s = l || (l = {})).DEFAULT = 'default'), (s.FLOATING = 'floating'), (s.COLLAPSED = 'collapsed');

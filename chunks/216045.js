@@ -26,8 +26,8 @@ var n,
     h = t(957730),
     O = t(31590),
     p = t(53691),
-    x = t(296810),
-    R = t(921813),
+    R = t(296810),
+    x = t(921813),
     f = t(935147),
     M = t(246946),
     D = t(25990),
@@ -63,8 +63,8 @@ function U() {
         });
     let {
             enabled: G,
-            showSegmentedControl: y,
-            showFloatingUpsell: F
+            showSegmentedControl: F,
+            showFloatingUpsell: y
         } = O.Z.useExperiment(
             { location: 'UserSettingsProfileCustomization' },
             {
@@ -72,11 +72,11 @@ function U() {
                 disable: o
             }
         ),
-        [V, w] = r.useState(0),
-        [k, Y] = r.useState(!1),
+        [V, Y] = r.useState(0),
+        [w, k] = r.useState(!1),
         H = r.useMemo(
             () =>
-                y
+                F
                     ? [
                           {
                               name: 'Non Nitro',
@@ -88,10 +88,10 @@ function U() {
                           }
                       ]
                     : [],
-            [y]
+            [F]
         ),
-        W = !G || F || (y && 0 === V),
-        K = !G || (!o && (F || (y && 1 === V))),
+        W = !G || y || (F && 0 === V),
+        K = !G || (!o && (y || (F && 1 === V))),
         z = r.useRef(null);
     return s
         ? (0, i.jsx)(N.Z, {})
@@ -99,7 +99,7 @@ function U() {
               value: c,
               children: [
                   (0, i.jsx)(A.Z, {}),
-                  y &&
+                  F &&
                       !o &&
                       (0, i.jsx)(E.SegmentedControl, {
                           className: l()({
@@ -108,12 +108,12 @@ function U() {
                           }),
                           options: H,
                           value: V,
-                          onChange: (e) => w(e.value),
+                          onChange: (e) => Y(e.value),
                           look: 'pill'
                       }),
                   W &&
-                      (0, i.jsx)(x.Z, {
-                          profilePreview: (0, i.jsx)(R.Z, {
+                      (0, i.jsx)(R.Z, {
+                          profilePreview: (0, i.jsx)(x.Z, {
                               user: e,
                               canUsePremiumCustomization: o,
                               onUpsellClick: Z.Z,
@@ -124,18 +124,18 @@ function U() {
                       }),
                   K &&
                       (0, i.jsx)(_.$, {
-                          onChange: (e) => Y(e),
+                          onChange: (e) => k(e),
                           threshold: 0.25,
-                          active: F,
+                          active: y,
                           children: (0, i.jsx)('div', {
                               ref: z,
                               children: (0, i.jsx)(f.Z, { user: e })
                           })
                       }),
-                  F &&
+                  y &&
                       (0, i.jsx)(p.p, {
                           className: B.floatingNitroUpsell,
-                          showUpsell: F && !k,
+                          showUpsell: y && !w,
                           text: 'Get Nitro and Stuff',
                           textVariant: 'heading-md/medium',
                           button: (0, i.jsxs)(E.ShinyButton, {

@@ -97,7 +97,7 @@ function O() {
                 [t, n]
             );
         })('RecentDismissibleOverrides', []),
-        x = (e) => {
+        R = (e) => {
             p((s) => {
                 let t = new Set(s);
                 t.delete(e);
@@ -105,10 +105,10 @@ function O() {
                 return n.unshift(e), n;
             });
         },
-        R = s.map((e) => l.z[e]),
-        f = O.filter((e) => e.toLowerCase().includes(_.toLowerCase())).filter((e) => !R.includes(e)),
+        x = s.map((e) => l.z[e]),
+        f = O.filter((e) => e.toLowerCase().includes(_.toLowerCase())).filter((e) => !x.includes(e)),
         M = Object.keys(l.z)
-            .filter((e) => !R.includes(e))
+            .filter((e) => !x.includes(e))
             .filter((e) => !O.includes(e))
             .filter((e) => e.toLowerCase().includes(_.toLowerCase()))
             .sort((e, s) => e.localeCompare(s));
@@ -177,9 +177,9 @@ function O() {
                                       children: (0, n.jsx)(d.FormTitle, { children: 'Recently Shown' })
                                   }),
                                   (0, n.jsx)(h, {
-                                      items: R,
+                                      items: x,
                                       dismissedContents: A,
-                                      handleChange: x
+                                      handleChange: R
                                   })
                               ]
                           })
@@ -194,7 +194,7 @@ function O() {
                                   (0, n.jsx)(h, {
                                       items: f,
                                       dismissedContents: A,
-                                      handleChange: x
+                                      handleChange: R
                                   })
                               ]
                           })
@@ -206,7 +206,7 @@ function O() {
                     (0, n.jsx)(h, {
                         items: M,
                         dismissedContents: A,
-                        handleChange: x
+                        handleChange: R
                     })
                 ]
             })

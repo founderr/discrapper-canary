@@ -60,7 +60,7 @@ function h() {
         })),
         [h, O] = a.useState('upright'),
         p = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
-        x = new Map([
+        R = new Map([
             ['normal', 400],
             ['medium', 500],
             ['semibold', 600],
@@ -73,7 +73,7 @@ function h() {
                 s(Math.round((window.outerWidth / window.innerWidth) * 100));
             });
     }, []);
-    let R = S.isPlatformEmbedded ? t : e,
+    let x = S.isPlatformEmbedded ? t : e,
         f = (0, o.e7)([T.C], () => {
             var e, s;
             return (0, I.fD)() ? (null === (s = T.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
@@ -108,7 +108,7 @@ function h() {
                                     tag: 'div',
                                     variant: 'heading-lg/bold',
                                     style: { display: 'inline-block' },
-                                    children: ['Zoom: ', R, '%']
+                                    children: ['Zoom: ', x, '%']
                                 }),
                                 null != f
                                     ? (0, n.jsxs)(l.Text, {
@@ -225,11 +225,11 @@ function h() {
                                                         variant: 'eyebrow',
                                                         children: [e, 'px']
                                                     }),
-                                                    100 !== R
+                                                    100 !== x
                                                         ? (0, n.jsxs)(l.Heading, {
                                                               variant: 'eyebrow',
                                                               color: 'text-muted',
-                                                              children: ['(', (e * R) / 100, ')']
+                                                              children: ['(', (e * x) / 100, ')']
                                                           })
                                                         : null
                                                 ]
@@ -248,7 +248,7 @@ function h() {
                                                         className: r()(g.text, { [g.breakAnywhere]: !a.includes(' ') }),
                                                         style: {
                                                             fontSize: e,
-                                                            fontWeight: x.get(s)
+                                                            fontWeight: R.get(s)
                                                         },
                                                         children: [
                                                             (0, n.jsx)('p', { children: a }),

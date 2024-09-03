@@ -25,8 +25,8 @@ var n = t(735250),
     h = t(778825),
     O = t(856607),
     p = t(594496),
-    x = t(856768),
-    R = t(981631),
+    R = t(856768),
+    x = t(981631),
     f = t(689938);
 function M(e) {
     (0, l.openModalLazy)(async () => {
@@ -35,7 +35,7 @@ function M(e) {
             (0, n.jsx)(s, {
                 source: {
                     ...e,
-                    page: R.ZY5.GUILD_MEMBER_PROFILE_SETTINGS
+                    page: x.ZY5.GUILD_MEMBER_PROFILE_SETTINGS
                 },
                 ...t
             });
@@ -57,9 +57,9 @@ function D(e) {
     return (a.useEffect(() => () => c.Z.wait(A.W3), []),
     a.useEffect(() => {
         null != L &&
-            _.ZP.trackWithMetadata(R.rMx.SETTINGS_PANE_VIEWED, {
+            _.ZP.trackWithMetadata(x.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: 'guild',
-                destination_pane: R.jXE.SETTINGS_CUSTOMIZE_PROFILE,
+                destination_pane: x.jXE.SETTINGS_CUSTOMIZE_PROFILE,
                 source: L
             });
     }, [L]),
@@ -71,12 +71,12 @@ function D(e) {
                 children: [
                     (0, n.jsx)(l.Text, {
                         variant: 'text-sm/normal',
-                        children: f.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({ helpCenterLink: C.Z.getArticleURL(R.BhN.GUILD_PROFILES) })
+                        children: f.Z.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({ helpCenterLink: C.Z.getArticleURL(x.BhN.GUILD_PROFILES) })
                     }),
                     null != s
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  (0, n.jsx)(x.Z, {
+                                  (0, n.jsx)(R.Z, {
                                       guildId: s.id,
                                       onChange: (e) => {
                                           null != e && (0, A.HP)(e);

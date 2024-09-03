@@ -22,7 +22,7 @@ var a = t(120356),
 function m(e) {
     let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: m, guildId: C, className: g, showPremiumIcon: A = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
         p = (0, u.ZP)(s.id, C),
-        { primaryColor: x, secondaryColor: R } = (0, _.Z)({
+        { primaryColor: R, secondaryColor: x } = (0, _.Z)({
             user: s,
             displayProfile: p,
             pendingThemeColors: a,
@@ -32,7 +32,7 @@ function m(e) {
         M = null != t ? t : s.getAvatarURL(C, 80),
         D = (0, c.useToken)(l.Z.unsafe_rawColors.PRIMARY_530).hex(),
         P = (0, d.Cf)(M, D, !1);
-    if (null == x || null == R) return null;
+    if (null == R || null == x) return null;
     let L = (e) => {
         r(o()(e, null == p ? void 0 : p.themeColors) ? void 0 : e);
     };
@@ -48,8 +48,8 @@ function m(e) {
                 (0, n.jsx)('div', {
                     className: N.sparkleContainer,
                     children: (0, n.jsx)(T.Z, {
-                        onChange: (e) => L([e, R]),
-                        color: x,
+                        onChange: (e) => L([e, x]),
+                        color: R,
                         suggestedColors: P,
                         showEyeDropper: !0,
                         label: (0, n.jsx)(c.Text, {
@@ -64,8 +64,8 @@ function m(e) {
                 (0, n.jsx)('div', {
                     className: N.sparkleContainer,
                     children: (0, n.jsx)(T.Z, {
-                        onChange: (e) => L([x, e]),
-                        color: R,
+                        onChange: (e) => L([R, e]),
+                        color: x,
                         suggestedColors: P,
                         showEyeDropper: !0,
                         label: (0, n.jsx)(c.Text, {

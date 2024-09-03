@@ -30,7 +30,7 @@ function I(e) {
         { location: a } = (0, l.O)(),
         { analyticsLocations: s } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
         u = (0, o.ZP)(),
-        m = (0, r.a)(u);
+        m = (0, r.ap)(u);
     if ('announcementModalVariant1' === n.properties.oneofKind) {
         let e = (0, h.N)({
             content: n.properties.announcementModalVariant1,

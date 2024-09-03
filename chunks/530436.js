@@ -17,7 +17,7 @@ function u(e) {
         _ = a.useCallback(() => {
             u(), i.Z.open(E, o.pNK.INSTANT_INVITES);
         }, [E, u]),
-        I = a.useCallback(
+        x = a.useCallback(
             (e) =>
                 (0, s.jsx)(t.Clickable, {
                     className: c.errorLink,
@@ -31,7 +31,7 @@ function u(e) {
                 }),
             [_]
         ),
-        x = a.useCallback(
+        I = a.useCallback(
             (e) =>
                 (0, s.jsx)(t.Anchor, {
                     href: o.EYA.INVITES_HELP,
@@ -50,8 +50,8 @@ function u(e) {
                 ? l.getAnyErrorMessage()
                 : r.Z.can(o.Plq.MANAGE_GUILD, n)
                   ? d.Z.Messages.TOO_MANY_INVITES_ERROR.format({
-                        inviteListHook: I,
-                        inviteHelpHook: x
+                        inviteListHook: x,
+                        inviteHelpHook: I
                     })
                   : d.Z.Messages.TOO_MANY_INVITES_ERROR_MEMBER;
     return (0, s.jsx)(t.Text, {

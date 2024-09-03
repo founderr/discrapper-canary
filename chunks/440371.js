@@ -13,14 +13,14 @@ var a = l(913527),
     d = l(689938),
     c = l(201750);
 function u(e) {
-    let { className: n, onScheduleChange: l, onRecurrenceChange: a, onTimeChange: u, timeSelected: E = !0, schedule: _, recurrenceRule: I, showEndDate: x = !1, requireEndDate: m = !1, disableStartDateTime: N = !1 } = e;
+    let { className: n, onScheduleChange: l, onRecurrenceChange: a, onTimeChange: u, timeSelected: E = !0, schedule: _, recurrenceRule: x, showEndDate: I = !1, requireEndDate: m = !1, disableStartDateTime: N = !1 } = e;
     if (null == _) return null;
     let T = null,
         h = _.startDate,
         g = t()(),
         v = t()().add(r.G3, 'days'),
         S = t()().add(r.Ib, 'days');
-    null != I && (v.add(r.hn, 'years'), S.add(r.hn, 'years'));
+    null != x && (v.add(r.hn, 'years'), S.add(r.hn, 'years'));
     let C = (e) => {
         l({
             ..._,
@@ -28,7 +28,7 @@ function u(e) {
         });
     };
     return (
-        x &&
+        I &&
             (T =
                 null != _.endDate || m
                     ? (0, s.jsxs)(s.Fragment, {
@@ -153,7 +153,7 @@ function u(e) {
                     (0, s.jsx)(o.Z, {
                         onRecurrenceChange: a,
                         startDate: h,
-                        recurrenceRule: I
+                        recurrenceRule: x
                     })
             ]
         })

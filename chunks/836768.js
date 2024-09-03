@@ -3,7 +3,7 @@ n.d(t, {
         return o;
     },
     u: function () {
-        return c;
+        return s;
     }
 });
 var r = n(652874),
@@ -24,6 +24,6 @@ let i = { selectedTab: n(49898).F$.SERVERS },
             partialize: (e) => ({ selectedTab: e.selectedTab })
         })
     );
-function c() {
+function s() {
     o.setState(i);
 }

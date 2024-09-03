@@ -146,7 +146,7 @@ function O(e) {
           };
 }
 function x(e) {
-    return !!N(e) && ('is_monetized' in e ? e.is_monetized : e.isMonetized);
+    return !!N(e) && (e instanceof c.Z ? e.isMonetized : e.is_monetized);
 }
 function M(e) {
     let t = A(e);

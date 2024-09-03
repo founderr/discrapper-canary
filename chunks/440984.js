@@ -24,8 +24,8 @@ var n = t(735250),
 function g(e) {
     let { premiumSubscription: s, premiumType: t, onClose: g, confettiCanvas: A, userWasChurned: h = !1, userDiscountOffer: O } = e,
         p = (0, l.ZP)(),
-        x = (0, r.wj)(p) ? m : C,
-        R = a.useRef(null),
+        R = (0, r.wj)(p) ? m : C,
+        x = a.useRef(null),
         [f, M] = a.useState(!1),
         D = (0, E._)(s, I.Xh.PREMIUM_MONTH_TIER_2, O),
         P = (0, u.aS)(I.Xh.PREMIUM_MONTH_TIER_2),
@@ -33,8 +33,8 @@ function g(e) {
         b = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
         (a.useEffect(() => {
-            null != R.current && null != D && M(!0);
-        }, [R, f, D]),
+            null != x.current && null != D && M(!0);
+        }, [x, f, D]),
         null == O || null == D)
     )
         return null;
@@ -59,7 +59,7 @@ function g(e) {
                 onClose: g
             }),
             (0, n.jsx)('div', {
-                ref: R,
+                ref: x,
                 children: (0, n.jsx)(o.ModalContent, {
                     className: N.body,
                     children:
@@ -71,7 +71,7 @@ function g(e) {
                                           children: [
                                               (0, n.jsx)('img', {
                                                   alt: '',
-                                                  src: x,
+                                                  src: R,
                                                   className: N.nitroIcon
                                               }),
                                               (0, n.jsx)(o.Heading, {
@@ -93,7 +93,7 @@ function g(e) {
             !b &&
                 f &&
                 (0, n.jsx)(d.Z, {
-                    confettiTarget: R.current,
+                    confettiTarget: x.current,
                     confettiCanvas: A,
                     confettiVelocityMultiplier: 0.75
                 })

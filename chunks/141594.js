@@ -21,7 +21,7 @@ t.Z = () => {
         A = (0, r.e7)([u.Z], () => u.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
         v = i.useMemo(() => ((0, d.Fc)(S) && C && null != A && !N ? [A.dismissibleContent] : []), [S, C, A, N]),
         [Z, L] = (0, o.US)(v, void 0, !0),
-        [R, O] = (0, o.XR)(N ? l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == A ? void 0 : A.version) && void 0 !== e ? e : 0, void 0, !0),
+        [R, O] = (0, o.XR)(N && (null == A ? void 0 : A.type) === s.Z.COACHTIP ? l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == A ? void 0 : A.version) && void 0 !== e ? e : 0, void 0, !0),
         x = null;
     if ((null != Z || null != R) && C && null != A && A.type === s.Z.COACHTIP) {
         x = {

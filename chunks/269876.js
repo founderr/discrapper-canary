@@ -29,13 +29,13 @@ function A() {
         {
             inputMode: O,
             automaticVADSupported: p,
-            isEnabled: x
+            isEnabled: R
         } = (0, o.cj)([T.Z], () => ({
             inputMode: T.Z.getMode(),
             automaticVADSupported: T.Z.supports(I.AN.AUTOMATIC_VAD),
             isEnabled: T.Z.isEnabled()
         }));
-    function R(e, t) {
+    function x(e, t) {
         s(e), i((t & I.Dg.VOICE) === I.Dg.VOICE);
     }
     function f(e, s) {
@@ -48,10 +48,10 @@ function A() {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                T.Z.getMediaEngine().on(l.aB.VoiceActivity, R), e.stop();
+                T.Z.getMediaEngine().on(l.aB.VoiceActivity, x), e.stop();
             }),
             () => {
-                T.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, R), e.stop();
+                T.Z.getMediaEngine().removeListener(l.aB.VoiceActivity, x), e.stop();
             }
         );
     }, []);
@@ -128,7 +128,7 @@ function A() {
                         M
                     ]
                 }),
-                !x &&
+                !R &&
                     (0, n.jsx)(u.FormText, {
                         type: u.FormText.Types.DESCRIPTION,
                         className: r()(N.inputDisabledWarning, C.marginBottom8),

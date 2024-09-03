@@ -1,158 +1,158 @@
 _(47120);
-var I = _(253923),
-    N = _(230711),
-    R = _(581364),
-    O = _(797610),
-    A = _(200876),
-    P = _(456269),
-    t = _(228392),
-    e = _(676317),
-    T = _(434404),
-    M = _(71275),
-    i = _(60222),
-    l = _(665906),
-    s = _(131704),
+var s = _(230711),
+    I = _(581364),
+    e = _(797610),
+    N = _(200876),
+    R = _(456269),
+    M = _(228392),
+    O = _(676317),
+    A = _(434404),
+    P = _(208884),
+    t = _(71275),
+    T = _(60222),
+    i = _(665906),
+    l = _(131704),
     n = _(430824),
     r = _(63063),
-    C = _(981631),
-    o = _(71080),
-    D = _(689938);
-function L(E) {
-    let S = (0, i.A)(E),
-        _ = (0, P.Eg)(E),
-        I = n.Z.getGuild(E),
-        t = null == I ? void 0 : I.hasFeature(C.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
-        e = null != I && (0, A.l)(I),
-        T = (0, O.M9)(I),
-        M = (0, R.vC)(E, { location: 'get_permission_options' });
+    a = _(981631),
+    C = _(71080),
+    o = _(689938);
+function D(E) {
+    let S = (0, T.A)(E),
+        _ = (0, R.Eg)(E),
+        M = n.Z.getGuild(E),
+        O = null == M ? void 0 : M.hasFeature(a.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
+        A = null != M && (0, N.l)(M),
+        P = (0, e.M9)(M),
+        t = (0, I.vC)(E, { location: 'get_permission_options' });
     return {
-        PRIORITY_SPEAKER_DESCRIPTION: D.Z.Messages.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_APP.format({
-            keybind: D.Z.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY,
+        PRIORITY_SPEAKER_DESCRIPTION: o.Z.Messages.ROLE_PERMISSIONS_PRIORITY_SPEAKER_DESCRIPTION_APP.format({
+            keybind: o.Z.Messages.KEYBIND_PUSH_TO_TALK_PRIORITY,
             onClick: () => {
-                N.Z.open(C.oAB.KEYBINDS);
+                s.Z.open(a.oAB.KEYBINDS);
             }
         }),
-        SOUNDBOARD_DESCRIPTION: D.Z.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_LEARN_MORE.format({ helpCenterArticle: r.Z.getArticleURL(C.BhN.SOUNDBOARD) }),
+        SOUNDBOARD_DESCRIPTION: o.Z.Messages.ROLE_PERMISSIONS_USE_SOUNDBOARD_DESCRIPTION_LEARN_MORE.format({ helpCenterArticle: r.Z.getArticleURL(a.BhN.SOUNDBOARD) }),
         showStageChannelPermissions: S,
         showExperimental: !0,
         showForumPermissions: _,
-        showMembershipManualApprovalPermissions: t,
-        showCreatorMonetizationAnalyticsPermission: e,
-        showClydeAIPermissions: T,
-        externalAppsEnabled: M
+        showMembershipManualApprovalPermissions: O,
+        showCreatorMonetizationAnalyticsPermission: A,
+        showClydeAIPermissions: P,
+        externalAppsEnabled: t
     };
 }
-function a(E, S) {
+function g(E, S) {
     return E ? [S()] : [];
 }
 S.Z = {
-    generateChannelPermissionSpec: function (E, S, _, N) {
-        var R, A, i, r, a, U;
-        let g = (0, P.Eg)(E),
-            G = (0, o.IG)(S, _, g, N),
-            u = L(E),
-            c =
-                l.tM.getCurrentConfig({
+    generateChannelPermissionSpec: function (E, S, _, s) {
+        var I, N, T, r, g, L;
+        let U = (0, R.Eg)(E),
+            Z = (0, C.IG)(S, _, U, s),
+            G = D(E),
+            u =
+                i.tM.getCurrentConfig({
                     guildId: E,
                     location: '3ad37d_1'
-                }).enabled && s.Um.has(S.type),
-            p = (0, M.tu)(E),
-            d = (0, e.ze)(E),
-            f = S.isMediaChannel(),
-            V = n.Z.getGuild(E),
-            H = (0, O.M9)(V);
+                }).enabled && l.Um.has(S.type),
+            c = (0, t.tu)(E),
+            p = (0, O.ze)(E),
+            d = S.isMediaChannel(),
+            f = n.Z.getGuild(E),
+            V = (0, e.M9)(f);
         switch (S.type) {
-            case C.d4z.GUILD_CATEGORY:
+            case a.d4z.GUILD_CATEGORY:
                 return [
-                    I.zO(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CATEGORY),
-                    I.Ny(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP),
-                    I.vq(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
+                    P.zO(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CATEGORY),
+                    P.Ny(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP),
+                    P.vq(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
                         showPrivateThreads: !0,
                         showCreateThreads: !0,
-                        showClydeAIPermissions: H
+                        showClydeAIPermissions: V
                     }),
-                    I.WV(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE),
-                    I.xU(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_APPS),
-                    ...((R = u.showStageChannelPermissions), (A = () => I.kv(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_STAGE)), R ? [A()] : []),
-                    I.uu(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS)
+                    P.WV(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE),
+                    P.xU(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_APPS),
+                    ...((I = G.showStageChannelPermissions), (N = () => P.kv(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_STAGE)), I ? [N()] : []),
+                    P.uu(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS)
                 ];
-            case C.d4z.GUILD_VOICE:
+            case a.d4z.GUILD_VOICE:
                 return [
-                    I.zO(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, { showManageWebhooks: !0 }),
-                    I.Ny(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP),
-                    I.WV(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE),
-                    I.aW(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
-                        sectionDescription: d
-                            ? D.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
+                    P.zO(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, { showManageWebhooks: !0 }),
+                    P.Ny(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP),
+                    P.WV(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE),
+                    P.aW(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
+                        sectionDescription: p
+                            ? o.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
                                   setUpAutomod: () => {
-                                      T.Z.open(E, C.pNK.GUILD_AUTOMOD);
+                                      A.Z.open(E, a.pNK.GUILD_AUTOMOD);
                                   }
                               })
                             : void 0
                     }),
-                    I.uu(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS),
-                    I.xU(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_APPS)
+                    P.uu(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS),
+                    P.xU(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_APPS)
                 ];
-            case C.d4z.GUILD_STAGE_VOICE:
+            case a.d4z.GUILD_STAGE_VOICE:
                 return [
-                    I.zO(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, { showManageWebhooks: !1 }),
-                    I.Ny(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP),
-                    I.FX(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE, p),
-                    I.kv(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_STAGE),
-                    I.uu(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS),
-                    I.aW(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
-                        sectionDescription: d
-                            ? D.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
+                    P.zO(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL, { showManageWebhooks: !1 }),
+                    P.Ny(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP),
+                    P.FX(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE, c),
+                    P.kv(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_STAGE),
+                    P.uu(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_GUILD_EVENTS),
+                    P.aW(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT, {
+                        sectionDescription: p
+                            ? o.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE_CHAT_DESCRIPTION.format({
                                   setUpAutomod: () => {
-                                      T.Z.open(E, C.pNK.GUILD_AUTOMOD);
+                                      A.Z.open(E, a.pNK.GUILD_AUTOMOD);
                                   }
                               })
                             : void 0
                     })
                 ];
-            case C.d4z.GUILD_FORUM:
-            case C.d4z.GUILD_MEDIA:
-                let h = f ? D.Z.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL : D.Z.Messages.ROLE_PERMISSIONS_SECTION_FORUMS,
-                    B = f ? D.Z.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL_DESCRIPTION : D.Z.Messages.ROLE_PERMISSIONS_SECTION_FORUMS_DESCRIPTION;
+            case a.d4z.GUILD_FORUM:
+            case a.d4z.GUILD_MEDIA:
+                let H = d ? o.Z.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL : o.Z.Messages.ROLE_PERMISSIONS_SECTION_FORUMS,
+                    h = d ? o.Z.Messages.ROLE_PERMISSIONS_SECTION_MEDIA_CHANNEL_DESCRIPTION : o.Z.Messages.ROLE_PERMISSIONS_SECTION_FORUMS_DESCRIPTION;
                 return [
-                    I.zO(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL),
-                    I.Ny(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP),
-                    I.vq(G, h, {
+                    P.zO(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL),
+                    P.Ny(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP),
+                    P.vq(Z, H, {
                         showPrivateThreads: !1,
                         showCreateThreads: !1,
-                        sectionDescription: d
-                            ? B.format({
+                        sectionDescription: p
+                            ? h.format({
                                   setUpAutomod: () => {
-                                      !f && (0, t.MO)(), T.Z.open(E, C.pNK.GUILD_AUTOMOD);
+                                      !d && (0, M.MO)(), A.Z.open(E, a.pNK.GUILD_AUTOMOD);
                                   }
                               })
                             : void 0,
-                        showClydeAIPermissions: H
+                        showClydeAIPermissions: V
                     }),
-                    I.xU(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_APPS),
-                    ...((i = c), (r = () => I.WV(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE)), i ? [r()] : [])
+                    P.xU(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_APPS),
+                    ...((T = u), (r = () => P.WV(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE)), T ? [r()] : [])
                 ];
             default:
                 return [
-                    I.zO(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL),
-                    I.Ny(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP),
-                    I.vq(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
-                        showPrivateThreads: S.type !== C.d4z.GUILD_ANNOUNCEMENT,
+                    P.zO(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_GENERAL_CHANNEL),
+                    P.Ny(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_MEMBERSHIP),
+                    P.vq(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_TEXT, {
+                        showPrivateThreads: S.type !== a.d4z.GUILD_ANNOUNCEMENT,
                         showCreateThreads: !0,
-                        showClydeAIPermissions: H
+                        showClydeAIPermissions: V
                     }),
-                    I.xU(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_APPS),
-                    ...((a = c), (U = () => I.WV(G, D.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE)), a ? [U()] : [])
+                    P.xU(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_APPS),
+                    ...((g = u), (L = () => P.WV(Z, o.Z.Messages.ROLE_PERMISSIONS_SECTION_VOICE)), g ? [L()] : [])
                 ];
         }
     },
     generateGuildPermissionSpec: function (E) {
         var S, _;
-        let N = new Set();
+        let s = new Set();
         return (
-            !E.hasFeature(C.oNc.COMMUNITY) && N.add(C.Plq.VIEW_GUILD_ANALYTICS.toString()),
-            (S = I.s4(D.Z.Messages, L(E.id))),
-            0 === (_ = N).size
+            !E.hasFeature(a.oNc.COMMUNITY) && s.add(a.Plq.VIEW_GUILD_ANALYTICS.toString()),
+            (S = P.s4(D(E.id))),
+            0 === (_ = s).size
                 ? S
                 : S.map((E) => ({
                       ...E,
@@ -161,6 +161,6 @@ S.Z = {
         );
     },
     getGuildPermissionSpecMap: function (E) {
-        return I.WW(D.Z.Messages, L(E.id));
+        return P.WW(D(E.id));
     }
 };

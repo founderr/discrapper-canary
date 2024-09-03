@@ -11,9 +11,9 @@ var a = t(481060),
     d = t(916069),
     p = t(895563),
     m = t(212205),
-    f = t(478035),
-    x = t(62420),
-    h = t(423589),
+    h = t(478035),
+    f = t(62420),
+    x = t(423589),
     g = t(398048),
     N = t(109764),
     E = t(3689),
@@ -22,8 +22,8 @@ var a = t(481060),
     _ = t(367722),
     j = t(461535),
     C = t(776568),
-    b = t(218035),
-    T = t(775666),
+    T = t(218035),
+    b = t(775666),
     I = t(593589),
     S = t(442754),
     L = t(981631),
@@ -35,18 +35,18 @@ function M(e) {
         u = (0, p.l)(n),
         d = (0, p.P)(n),
         g = (0, m.Z)(n),
-        E = (0, f.Z)(n),
-        Z = (0, x.Z)(n),
+        E = (0, h.Z)(n),
+        Z = (0, f.Z)(n),
         _ = (0, C.ZP)(n),
-        I = (0, b.Z)(n),
+        I = (0, T.Z)(n),
         S = (0, v.Z)(n),
         L = (0, c.Z)({
             id: n.id,
             label: O.Z.Messages.COPY_ID_CHANNEL
         }),
         M = (0, o.Z)(n),
-        A = (0, T.ZP)(n),
-        P = (0, h.Mn)('ChannelContextFavoritesMenu');
+        A = (0, b.ZP)(n),
+        P = (0, x.Mn)('ChannelContextFavoritesMenu');
     return (0, l.jsxs)(a.Menu, {
         navId: 'channel-context',
         onClose: r.Zy,
@@ -75,8 +75,8 @@ function A(e) {
         u = (0, p.l)(n),
         d = (0, p.P)(n),
         m = (0, S.Z)(n),
-        f = (0, C.ZP)(n),
-        x = (0, v.Z)(n),
+        h = (0, C.ZP)(n),
+        f = (0, v.Z)(n),
         L = (0, _.Z)(n, t),
         M = (0, g.Z)(n, t),
         A = (0, E.Z)(n, t),
@@ -86,9 +86,9 @@ function A(e) {
             label: O.Z.Messages.COPY_ID_CHANNEL
         }),
         y = (0, I.Z)(n, 'list_text_channel_context_menu'),
-        G = (0, b.Z)(n),
-        w = (0, T.ZP)(n),
-        U = (0, h.Mn)('ChannelContextMenuNormal');
+        G = (0, T.Z)(n),
+        w = (0, b.ZP)(n),
+        U = (0, x.Mn)('ChannelContextMenuNormal');
     return (0, l.jsxs)(a.Menu, {
         navId: 'channel-context',
         onClose: r.Zy,
@@ -112,14 +112,14 @@ function A(e) {
             (0, l.jsxs)(
                 a.MenuGroup,
                 {
-                    children: [f, U ? w : G]
+                    children: [h, U ? w : G]
                 },
                 'notifications'
             ),
             (0, l.jsxs)(
                 a.MenuGroup,
                 {
-                    children: [x, M, A, P]
+                    children: [f, M, A, P]
                 },
                 'admin-actions'
             ),

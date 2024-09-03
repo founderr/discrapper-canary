@@ -9,8 +9,8 @@ var r = n(735250),
     l = n(120356),
     i = n.n(l),
     o = n(481060),
-    c = n(246992),
-    s = n(535271),
+    s = n(246992),
+    c = n(535271),
     u = n(384712);
 function d() {
     let e = {
@@ -33,7 +33,7 @@ function d() {
         })),
         [l, d] = a.useState(t[0].value);
     return (0, r.jsx)(o.ScrollerThin, {
-        className: i()(s.panel),
+        className: i()(c.panel),
         children: (0, r.jsx)('div', {
             className: u.panelInner,
             children: (0, r.jsxs)('section', {
@@ -53,7 +53,7 @@ function d() {
                                 placeholder: 'Trial ID',
                                 serialize: (e) => String(e),
                                 select: (e) => d(e),
-                                popoutLayerContext: c.O$
+                                popoutLayerContext: s.O$
                             }),
                             (0, r.jsx)(o.Button, {
                                 onClick: () => {

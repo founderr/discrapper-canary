@@ -26,7 +26,7 @@ function m(e) {
     let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: m, currentBio: C, disabled: g = !1 } = e,
         [A, h] = a.useState(null != d ? d : C),
         [O, p] = a.useState((0, o.JM)(A)),
-        x = a.useRef(!1);
+        R = a.useRef(!1);
     return (
         a.useEffect(() => {
             if (void 0 === d) {
@@ -55,12 +55,12 @@ function m(e) {
                     richValue: O,
                     type: r.I.PROFILE_BIO_INPUT,
                     onBlur: () => {
-                        x.current = !1;
+                        R.current = !1;
                     },
                     onFocus: () => {
-                        x.current = !0;
+                        R.current = !0;
                     },
-                    focused: x.current,
+                    focused: R.current,
                     onSubmit: function () {
                         return new Promise((e) => {
                             e({

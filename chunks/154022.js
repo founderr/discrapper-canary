@@ -26,8 +26,8 @@ var n = t(735250),
     h = t(440849),
     O = t(921801),
     p = t(196051),
-    x = t(441729),
-    R = t(626135),
+    R = t(441729),
+    x = t(626135),
     f = t(63063),
     M = t(695346),
     D = t(263937),
@@ -40,14 +40,14 @@ var n = t(735250),
     B = t(689938),
     U = t(844824),
     G = t(224499),
-    y = t(328756);
-let F = (0, N.hQ)(),
+    F = t(328756);
+let y = (0, N.hQ)(),
     V = (0, N.hQ)(),
-    w = (0, N.hQ)(),
-    k = l().debounce((e) => {
+    Y = (0, N.hQ)(),
+    w = l().debounce((e) => {
         (0, E.o2)(e);
     }, 250),
-    Y = l().debounce((e) => {
+    k = l().debounce((e) => {
         (0, p.Ct)(e);
     }, 250);
 function H(e) {
@@ -146,7 +146,7 @@ function W() {
                                     d.AnimatedAvatar,
                                     {
                                         'aria-label': B.Z.Messages.USER_SETTINGS_AVATAR,
-                                        src: y,
+                                        src: F,
                                         size: d.AvatarSizes.SIZE_32,
                                         status: e
                                     },
@@ -180,7 +180,7 @@ function K() {
         className: G.marginTop20,
         children: [
             (0, n.jsx)(d.FormTitle, {
-                id: F,
+                id: y,
                 className: G.marginBottom8,
                 children: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
             }),
@@ -191,7 +191,7 @@ function K() {
                 children: B.Z.Messages.ACCESSIBILITY_SETTINGS_SATURATION_DESCRIPTION
             }),
             (0, n.jsx)(d.Slider, {
-                'aria-labelledby': F,
+                'aria-labelledby': y,
                 'aria-describedby': V,
                 markers: Z.yqN.SATURATION_INCREMENTS,
                 equidistant: !0,
@@ -199,7 +199,7 @@ function K() {
                 maxValue: 1,
                 minValue: 0,
                 initialValue: e,
-                onValueChange: k,
+                onValueChange: w,
                 onMarkerRender: (e) => ((100 * e) % 2 == 0 ? ''.concat(100 * e, '%') : void 0)
             }),
             (0, n.jsx)(d.FormSwitch, {
@@ -455,7 +455,7 @@ function es() {
                     value: s,
                     note: B.Z.Messages.LEGACY_CHAT_INPUT_DESCRIPTION,
                     onChange: (e) => {
-                        R.default.track(Z.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                        x.default.track(Z.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                             enabled: e,
                             location: { section: Z.jXE.SETTINGS_ACCESSIBILITY }
                         }),
@@ -469,7 +469,7 @@ function es() {
 }
 function et() {
     let e = M.OW.useSetting(),
-        s = (0, c.e7)([x.Z], () => x.Z.speechRate),
+        s = (0, c.e7)([R.Z], () => R.Z.speechRate),
         [t, i] = a.useState(!1);
     return _.Zh
         ? (0, n.jsxs)(n.Fragment, {
@@ -492,7 +492,7 @@ function et() {
                       className: G.marginBottom20,
                       children: [
                           (0, n.jsx)(d.FormTitle, {
-                              id: w,
+                              id: Y,
                               className: G.marginBottom20,
                               children: B.Z.Messages.ACCESSIBILITY_SETTINGS_TTS_RATE_LABEL
                           }),
@@ -537,7 +537,7 @@ function et() {
                               initialValue: s,
                               defaultValue: 1,
                               stickToMarkers: !0,
-                              onValueChange: Y,
+                              onValueChange: k,
                               onValueRender: (e) => 'x'.concat(e.toFixed(2)),
                               onMarkerRender: (e) =>
                                   0 === e
@@ -555,7 +555,7 @@ function et() {
                                           : e % 1 == 0
                                             ? ''
                                             : void 0,
-                              'aria-labelledby': w
+                              'aria-labelledby': Y
                           })
                       ]
                   })

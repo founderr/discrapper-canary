@@ -25,8 +25,8 @@ var n = t(735250),
     h = t(442334),
     O = t(356659),
     p = t(981631),
-    x = t(37113),
-    R = t(526761),
+    R = t(37113),
+    x = t(526761),
     f = t(689938),
     M = t(899013),
     D = t(992133),
@@ -41,7 +41,7 @@ function L() {
         { showClipsHeaderEntrypoint: U } = N.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     r()(null != v, 'Save clip keybind unset');
     let G = (0, o.e7)([E.default], () => E.default.locale),
-        y = a.useMemo(
+        F = a.useMemo(
             () => [
                 {
                     value: O.OT.SECONDS_30,
@@ -58,26 +58,26 @@ function L() {
             ],
             [G]
         ),
-        F = a.useMemo(
+        y = a.useMemo(
             () => [
                 {
-                    value: x.LY.RESOLUTION_480,
-                    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: x.LY.RESOLUTION_480 })
+                    value: R.LY.RESOLUTION_480,
+                    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: R.LY.RESOLUTION_480 })
                 },
                 {
-                    value: x.LY.RESOLUTION_720,
-                    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: x.LY.RESOLUTION_720 })
+                    value: R.LY.RESOLUTION_720,
+                    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: R.LY.RESOLUTION_720 })
                 },
                 {
-                    value: x.LY.RESOLUTION_1080,
-                    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: x.LY.RESOLUTION_1080 })
+                    value: R.LY.RESOLUTION_1080,
+                    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: R.LY.RESOLUTION_1080 })
                 },
                 {
-                    value: x.LY.RESOLUTION_1440,
-                    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: x.LY.RESOLUTION_1440 })
+                    value: R.LY.RESOLUTION_1440,
+                    label: f.Z.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({ resolution: R.LY.RESOLUTION_1440 })
                 },
                 {
-                    value: x.LY.RESOLUTION_SOURCE,
+                    value: R.LY.RESOLUTION_SOURCE,
                     label: f.Z.Messages.SCREENSHARE_SOURCE
                 }
             ],
@@ -86,21 +86,21 @@ function L() {
         V = a.useMemo(
             () => [
                 {
-                    value: x.ws.FPS_15,
-                    label: f.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({ fps: x.ws.FPS_15 })
+                    value: R.ws.FPS_15,
+                    label: f.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({ fps: R.ws.FPS_15 })
                 },
                 {
-                    value: x.ws.FPS_30,
-                    label: f.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({ fps: x.ws.FPS_30 })
+                    value: R.ws.FPS_30,
+                    label: f.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({ fps: R.ws.FPS_30 })
                 },
                 {
-                    value: x.ws.FPS_60,
-                    label: f.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({ fps: x.ws.FPS_60 })
+                    value: R.ws.FPS_60,
+                    label: f.Z.Messages.SCREENSHARE_FPS_ABBREVIATED.format({ fps: R.ws.FPS_60 })
                 }
             ],
             [G]
         ),
-        w = a.useCallback(
+        Y = a.useCallback(
             (e) => {
                 c.Z.setKeybind({
                     ...v,
@@ -118,7 +118,7 @@ function L() {
                         (0, n.jsx)(T.Z, {
                             look: T.z.WARNING,
                             className: D.formItem,
-                            children: f.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({ onClick: () => d.Z.open(p.oAB.VOICE, null, { scrollPosition: R.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
+                            children: f.Z.Messages.CLIPS_SETTINGS_HW_ENCODING_MUST_BE_ENABLED_INFOBOX.format({ onClick: () => d.Z.open(p.oAB.VOICE, null, { scrollPosition: x.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
                     Z === C.x.BELOW_MINIMUM
                         ? (0, n.jsx)(T.Z, {
@@ -198,7 +198,7 @@ function L() {
                         title: f.Z.Messages.CLIPS_SETTINGS_LENGTH,
                         note: f.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
                         value: L,
-                        options: y
+                        options: F
                     }),
                     (0, n.jsx)(h.Q, {
                         className: D.formItem,
@@ -210,7 +210,7 @@ function L() {
                         title: f.Z.Messages.CLIPS_SETTINGS_RESOLUTION,
                         note: f.Z.Messages.CLIPS_SETTINGS_RESOLUTION_NOTE,
                         value: b.resolution,
-                        options: F
+                        options: y
                     }),
                     (0, n.jsx)(h.Q, {
                         className: D.formItem,
@@ -232,7 +232,7 @@ function L() {
                             className: M.keyRecorder,
                             children: (0, n.jsx)(u.Z, {
                                 defaultValue: v.shortcut,
-                                onChange: w
+                                onChange: Y
                             })
                         })
                     })

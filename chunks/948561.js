@@ -168,10 +168,10 @@ function w(e) {
 }
 function x(e, t) {
     let { messagesPendingScan: n, attributesByChannelId: r } = (function (e) {
-        let t = e.filter((e) => (0, g.qP)(e) && (0, N.HH)(e)),
+        let t = e.filter((e) => (0, g.OR)(e) && (0, N.HH)(e)),
             n = e
                 .map((e) => {
-                    if (null != e && 'referenced_message' in e && null != e.referenced_message && (0, g.qP)(e.referenced_message) && (0, N.HH)(e.referenced_message)) return e.referenced_message;
+                    if (null != e && 'referenced_message' in e && null != e.referenced_message && (0, g.OR)(e.referenced_message) && (0, N.HH)(e.referenced_message)) return e.referenced_message;
                 })
                 .filter(function (e) {
                     return null != e;
@@ -265,12 +265,12 @@ function W(e) {
         0 !== t.length &&
         (function (e) {
             let { messagesPendingScan: t, attributesByChannelId: n } = (function (e) {
-                let t = e.filter((e) => (0, g.qP)(e) && (0, N.HH)(e)),
+                let t = e.filter((e) => (0, g.OR)(e) && (0, N.HH)(e)),
                     n = e
                         .map((e) => {
                             if (v.OBS.has(e.type) && null != e.messageReference) {
                                 let t = _.Z.getMessageByReference(e.messageReference);
-                                if (t.state === _.Y.LOADED && null != t.message && (0, g.qP)(t.message) && (0, N.HH)(t.message)) return t.message;
+                                if (t.state === _.Y.LOADED && null != t.message && (0, g.OR)(t.message) && (0, N.HH)(t.message)) return t.message;
                             }
                         })
                         .filter(function (e) {

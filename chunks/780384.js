@@ -18,7 +18,7 @@ n.d(t, {
         return s.TC;
     },
     ap: function () {
-        return o.a;
+        return o.ap;
     },
     bg: function () {
         return s.bg;
@@ -30,7 +30,7 @@ n.d(t, {
         return s.wM;
     },
     wj: function () {
-        return o.w;
+        return o.wj;
     }
 });
 var r = n(680732),

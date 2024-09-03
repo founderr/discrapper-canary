@@ -18,8 +18,8 @@ var o = n(735250),
     m = n(782605),
     h = n(981631),
     E = n(689938),
-    N = n(264123);
-let T = ((s = window.GLOBAL_ENV.INVITE_HOST), (a = ''), null == s && ((s = location.host), (a = h.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(s).concat(a, '/'));
+    T = n(264123);
+let N = ((s = window.GLOBAL_ENV.INVITE_HOST), (a = ''), null == s && ((s = location.host), (a = h.Z5c.INVITE(''))), ''.concat(location.protocol, '//').concat(s).concat(a, '/'));
 function x(e) {
     let { onBack: t, onComplete: n, onConnect: s, isSlideReady: a } = e,
         [l, x] = r.useState(''),
@@ -73,12 +73,12 @@ function x(e) {
         M = (0, o.jsxs)(o.Fragment, {
             children: [
                 (0, o.jsxs)(c.ModalHeader, {
-                    className: N.header,
+                    className: T.header,
                     direction: f.Z.Direction.VERTICAL,
                     separator: !1,
                     children: [
                         (0, o.jsx)(p.Z, {
-                            className: N.title,
+                            className: T.title,
                             size: p.Z.Sizes.SIZE_24,
                             color: p.Z.Colors.HEADER_PRIMARY,
                             children: E.Z.Messages.JOIN_SERVER_TITLE
@@ -94,16 +94,16 @@ function x(e) {
                     children: [
                         (0, o.jsx)('form', {
                             onSubmit: g,
-                            className: N.inputForm,
+                            className: T.inputForm,
                             children: (0, o.jsx)(c.FormItem, {
                                 title: E.Z.Messages.FORM_LABEL_INVITE_LINK,
                                 error: b,
-                                titleClassName: i()(N.formTitle, { [N.error]: null != b }),
+                                titleClassName: i()(T.formTitle, { [T.error]: null != b }),
                                 children: (0, o.jsx)(c.TextInput, {
                                     value: l,
                                     onChange: x,
-                                    className: N.input,
-                                    inputClassName: N.inputInner,
+                                    className: T.input,
+                                    inputClassName: T.inputInner,
                                     inputRef: I
                                 })
                             })
@@ -111,12 +111,12 @@ function x(e) {
                         (0, o.jsx)(c.Text, {
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
-                            children: E.Z.Messages.JOIN_SERVER_EXAMPLES.format({ examples: ''.concat(T).concat('cool-people', ', ').concat('hTKzmak') })
+                            children: E.Z.Messages.JOIN_SERVER_EXAMPLES.format({ examples: ''.concat(N).concat('cool-people', ', ').concat('hTKzmak') })
                         }),
                         (0, o.jsx)(c.Text, {
                             variant: 'text-xs/normal',
                             color: 'header-secondary',
-                            className: N.connectCTA,
+                            className: T.connectCTA,
                             children: E.Z.Messages.JOIN_GUILD_CONNECT.format({
                                 onClick: () => {
                                     s(), u.Z.open(h.oAB.CONNECTIONS);
@@ -139,7 +139,7 @@ function x(e) {
                     children: E.Z.Messages.JOIN
                 }),
                 (0, o.jsx)(c.Button, {
-                    className: N.__invalid_skipButton,
+                    className: T.__invalid_skipButton,
                     look: c.Button.Looks.BLANK,
                     size: c.Button.Sizes.MIN,
                     onClick: t,

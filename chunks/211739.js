@@ -9,30 +9,30 @@ _.d(E, {
         return M;
     },
     mJ: function () {
-        return n;
+        return s;
     }
 });
-var s = _(570140);
+var n = _(570140);
 function t(e) {
-    s.Z.dispatch({
+    n.Z.dispatch({
         type: 'CATEGORY_COLLAPSE',
         id: e
     });
 }
-function n(e) {
-    s.Z.dispatch({
+function s(e) {
+    n.Z.dispatch({
         type: 'CATEGORY_EXPAND',
         id: e
     });
 }
 function a(e) {
-    s.Z.dispatch({
+    n.Z.dispatch({
         type: 'CATEGORY_COLLAPSE_ALL',
         guildId: e
     });
 }
 function M(e) {
-    s.Z.dispatch({
+    n.Z.dispatch({
         type: 'CATEGORY_EXPAND_ALL',
         guildId: e
     });

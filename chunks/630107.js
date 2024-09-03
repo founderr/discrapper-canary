@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return I;
+            return h;
         }
     });
 var a = n(735250),
@@ -22,7 +22,7 @@ var a = n(735250),
     E = n(821744);
 r.ZP.initialize();
 let g = i.tq || i.Em;
-function I(e) {
+function h(e) {
     let { match: t } = e,
         n = (0, r.e7)([d.Z], () => d.Z.getState('quests')),
         i = t.params.questId;
@@ -59,7 +59,7 @@ function I(e) {
                 })
             ]
         });
-    let I = null == n || n === x.kEZ.OPENING || n === x.kEZ.OPEN_FAIL;
+    let h = null == n || n === x.kEZ.OPENING || n === x.kEZ.OPEN_FAIL;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(o.Z, {
@@ -69,7 +69,7 @@ function I(e) {
             (0, a.jsx)('div', {
                 className: N.container,
                 children: (0, a.jsx)(c.ZP, {
-                    children: I
+                    children: h
                         ? (0, a.jsxs)(a.Fragment, {
                               children: [(0, a.jsx)(c.Dx, { children: b.Z.Messages.APP_OPENING }), (0, a.jsx)(c.Hh, {})]
                           })

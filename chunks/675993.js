@@ -31,7 +31,7 @@ function I(e) {
             return null !== (e = (0, h.jD)(t)) && void 0 !== e ? e : '';
         }, [t]),
         C = (0, r.e7)([c.Z], () => c.Z.inDevModeForApplication(t.id)),
-        A = null != l || null != s,
+        A = null != l,
         { isSlideReady: E } = (0, f.hH)(),
         [v, I] = a.useState(!1);
     return (

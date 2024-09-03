@@ -26,8 +26,8 @@ var a = t(512722),
     h = t(18438),
     O = t(778825),
     p = t(52597),
-    x = t(430131),
-    R = t(133484),
+    R = t(430131),
+    x = t(133484),
     f = t(689938),
     M = t(84482);
 function D(e) {
@@ -45,7 +45,7 @@ function D(e) {
             pendingPronouns: B,
             pendingThemeColors: U,
             errors: G,
-            guild: y
+            guild: F
         } = (0, r.cj)([O.Z], () => {
             let { pendingAvatar: e, pendingNickname: s, pendingBio: t, pendingPronouns: n, pendingBanner: a, pendingThemeColors: i } = O.Z.getAllPending();
             return {
@@ -59,17 +59,17 @@ function D(e) {
                 guild: O.Z.getGuild()
             };
         }),
-        F = null != P ? P : y;
-    i()(null != F, 'guild should not be null');
-    let V = (0, l.gS)(F.id),
-        w = (0, r.e7)([m.ZP], () => (null == F.id ? null : m.ZP.getMember(F.id, L.id))),
-        k = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(L.id, F.id)),
-        Y = g.ZP.canUsePremiumProfileCustomization(L),
-        H = (0, c.gd)(b, null == w ? void 0 : w.avatar),
-        W = (0, c.f$)(v, null == k ? void 0 : k.banner),
-        K = (0, p.p)(U, null == k ? void 0 : k.themeColors),
-        z = null !== (s = null == k ? void 0 : k.bio) && void 0 !== s ? s : '',
-        Q = null !== (t = null == k ? void 0 : k.pronouns) && void 0 !== t ? t : '',
+        y = null != P ? P : F;
+    i()(null != y, 'guild should not be null');
+    let V = (0, l.gS)(y.id),
+        Y = (0, r.e7)([m.ZP], () => (null == y.id ? null : m.ZP.getMember(y.id, L.id))),
+        w = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(L.id, y.id)),
+        k = g.ZP.canUsePremiumProfileCustomization(L),
+        H = (0, c.gd)(b, null == Y ? void 0 : Y.avatar),
+        W = (0, c.f$)(v, null == w ? void 0 : w.banner),
+        K = (0, p.p)(U, null == w ? void 0 : w.themeColors),
+        z = null !== (s = null == w ? void 0 : w.bio) && void 0 !== s ? s : '',
+        Q = null !== (t = null == w ? void 0 : w.pronouns) && void 0 !== t ? t : '',
         X = (e, s, t) => {
             t(null != e ? e : null != s ? null : void 0);
         };
@@ -77,13 +77,13 @@ function D(e) {
         className: M.sectionsContainer,
         children: [
             (0, n.jsx)(
-                x.Z,
+                R.Z,
                 {
                     errors: null !== (a = null == G ? void 0 : G.nick) && void 0 !== a ? a : null == V ? void 0 : V.nick,
                     username: A.ZP.getName(L),
                     pendingNick: Z,
-                    currentNick: null == w ? void 0 : w.nick,
-                    guild: F
+                    currentNick: null == Y ? void 0 : Y.nick,
+                    guild: y
                 },
                 'nick'
             ),
@@ -100,9 +100,9 @@ function D(e) {
                 },
                 'pronouns'
             ),
-            (0, n.jsxs)(R.Z, {
+            (0, n.jsxs)(x.Z, {
                 user: L,
-                showOverlay: !Y,
+                showOverlay: !k,
                 children: [
                     (0, n.jsx)(
                         _.Z,
@@ -123,10 +123,10 @@ function D(e) {
                                 ]
                             }),
                             showRemoveAvatarButton: H,
-                            onAvatarChange: (e) => X(e, null == w ? void 0 : w.avatar, h.I5),
+                            onAvatarChange: (e) => X(e, null == Y ? void 0 : Y.avatar, h.I5),
                             errors: null == G ? void 0 : G.avatar,
-                            guildId: F.id,
-                            disabled: !Y
+                            guildId: y.id,
+                            disabled: !k
                         },
                         'avatar'
                     ),
@@ -149,7 +149,7 @@ function D(e) {
                                 ]
                             }),
                             user: L,
-                            guild: F
+                            guild: y
                         },
                         'decoration'
                     ),
@@ -172,7 +172,7 @@ function D(e) {
                                 ]
                             }),
                             user: L,
-                            guild: F
+                            guild: y
                         },
                         'effect'
                     ),
@@ -181,9 +181,9 @@ function D(e) {
                         {
                             showRemoveBannerButton: W,
                             errors: null == G ? void 0 : G.banner,
-                            onBannerChange: (e) => X(e, null == k ? void 0 : k.banner, h.g_),
-                            guildId: null == F ? void 0 : F.id,
-                            disabled: !Y
+                            onBannerChange: (e) => X(e, null == w ? void 0 : w.banner, h.g_),
+                            guildId: null == y ? void 0 : y.id,
+                            disabled: !k
                         },
                         'banner'
                     ),
@@ -192,9 +192,9 @@ function D(e) {
                         pendingAvatar: b,
                         pendingColors: U,
                         onThemeColorsChange: (e) => {
-                            (0, p.ce)(e, null == k ? void 0 : k.themeColors);
+                            (0, p.ce)(e, null == w ? void 0 : w.themeColors);
                         },
-                        guildId: null == F ? void 0 : F.id,
+                        guildId: null == y ? void 0 : y.id,
                         showResetThemeButton: K
                     }),
                     (0, n.jsx)(
@@ -220,7 +220,7 @@ function D(e) {
                             errors: null !== (D = null == G ? void 0 : G.bio) && void 0 !== D ? D : null == V ? void 0 : V.bio,
                             pendingBio: j,
                             currentBio: z,
-                            disabled: !Y
+                            disabled: !k
                         },
                         'about'
                     )

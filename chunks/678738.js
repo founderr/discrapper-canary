@@ -30,11 +30,11 @@ function d(e) {
             children: [
                 null != n &&
                     (0, r.jsxs)('div', {
+                        className: c.headings,
                         children: [
                             (0, r.jsx)(l.Heading, {
                                 variant: 'text-xs/semibold',
                                 color: E,
-                                className: c.heading,
                                 children: n
                             }),
                             null != a &&

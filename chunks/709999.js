@@ -87,7 +87,7 @@ t.Z = function (e) {
         ec = (0, j.rN)(t),
         { isPurchased: ed, isPartiallyPurchased: eu } = (0, R.L)(t),
         [ef, ep] = (0, p.Wu)([B.Z], () => [B.Z.isClaiming === t.skuId, null != B.Z.isClaiming && B.Z.isClaiming !== t.skuId]),
-        eg = (0, p.e7)([N.Z], () => (0, g.w)(N.Z.theme)),
+        eg = (0, p.e7)([N.Z], () => (0, g.wj)(N.Z.theme)),
         eC = (0, P.m)('CollectiblesCollectedModal'),
         em = (0, j.x6)(t) || eC,
         e_ = (0, j.Yq)(t.skuId),

@@ -27,8 +27,8 @@ var n = t(735250),
     h = t(556296),
     O = t(808506),
     p = t(63063),
-    x = t(358085),
-    R = t(13140),
+    R = t(358085),
+    x = t(13140),
     f = t(210887),
     M = t(659947),
     D = t(981631),
@@ -59,10 +59,10 @@ let U = l()((0, S.Rv)())
         .groupBy((e) => e.group)
         .value(),
     G = c.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }))(u.EmptyState);
-class y extends a.PureComponent {
+class F extends a.PureComponent {
     renderMessage() {
         let { keybind: e } = this.props,
-            s = R.BB(e.shortcut);
+            s = x.BB(e.shortcut);
         return N.Z.hasBind(s)
             ? (0, n.jsx)(u.FormText, {
                   className: b.keybindMessage,
@@ -178,7 +178,7 @@ class y extends a.PureComponent {
             });
     }
 }
-class F extends a.PureComponent {
+class y extends a.PureComponent {
     componentDidMount() {
         _.Z.enableAll(!1);
     }
@@ -236,12 +236,12 @@ class F extends a.PureComponent {
                     label: L.Z.Messages.KEYBIND_ACTIVATE_OVERLAY_CHAT
                 })),
             s &&
-                (0, x.isWindows)() &&
+                (0, R.isWindows)() &&
                 a.push({
                     value: D.kg4.TOGGLE_GO_LIVE_STREAMING,
                     label: L.Z.Messages.KEYBIND_TOGGLE_GO_LIVE_STREAMING
                 }),
-            (0, x.isDesktop)() &&
+            (0, R.isDesktop)() &&
                 (a.push(
                     {
                         value: D.kg4.NAVIGATE_BACK,
@@ -291,7 +291,7 @@ class F extends a.PureComponent {
                 [D.kg4.TOGGLE_VOICE_MODE]: L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_VOICE_MODE,
                 [D.kg4.TOGGLE_STREAMER_MODE]: L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_STREAMER_MODE
             };
-        return e && ((n[D.kg4.TOGGLE_OVERLAY] = L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY), (n[D.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK)), s && (0, x.isWindows)() && (n[D.kg4.TOGGLE_GO_LIVE_STREAMING] = L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, x.isDesktop)() && ((n[D.kg4.NAVIGATE_BACK] = L.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK), (n[D.kg4.NAVIGATE_FORWARD] = L.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD), (n[D.kg4.SOUNDBOARD] = (0, x.isWindows)() ? L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD), (n[D.kg4.SOUNDBOARD_HOLD] = (0, x.isWindows)() ? L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD), t && (n[D.kg4.SAVE_CLIP] = L.Z.Messages.CLIPS_KEYBIND_DESCRIPTION)), n;
+        return e && ((n[D.kg4.TOGGLE_OVERLAY] = L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY), (n[D.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_OVERLAY_INPUT_LOCK)), s && (0, R.isWindows)() && (n[D.kg4.TOGGLE_GO_LIVE_STREAMING] = L.Z.Messages.KEYBIND_DESCRIPTION_TOGGLE_GO_LIVE_STREAMING), (0, R.isDesktop)() && ((n[D.kg4.NAVIGATE_BACK] = L.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_BACK), (n[D.kg4.NAVIGATE_FORWARD] = L.Z.Messages.KEYBIND_DESCRIPTION_NAVIGATE_FORWARD), (n[D.kg4.SOUNDBOARD] = (0, R.isWindows)() ? L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_NO_POPOUT_WHEEL_SUPPORT : L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD), (n[D.kg4.SOUNDBOARD_HOLD] = (0, R.isWindows)() ? L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD_NO_POPOUT_WHEEL_SUPPORT : L.Z.Messages.KEYBIND_DESCRIPTION_SOUNDBOARD_HOLD), t && (n[D.kg4.SAVE_CLIP] = L.Z.Messages.CLIPS_KEYBIND_DESCRIPTION)), n;
     }
     renderKeybinds(e) {
         return e.map((e) =>
@@ -300,7 +300,7 @@ class F extends a.PureComponent {
                 {
                     className: b.row,
                     children: (0, n.jsx)(
-                        y,
+                        F,
                         {
                             keybind: e,
                             keybindDescriptions: this.keybindDescriptions,
@@ -339,7 +339,7 @@ class F extends a.PureComponent {
                 (0, n.jsx)(u.FormSection, {
                     tag: u.FormTitleTags.H1,
                     title: L.Z.Messages.KEYBINDS,
-                    children: x.isPlatformEmbedded
+                    children: R.isPlatformEmbedded
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
                                   (0, n.jsxs)(C.Z, {
@@ -473,11 +473,11 @@ function V() {
         s = (0, c.e7)([A.Z], () => (0, g.Z)(A.Z)),
         t = (0, c.e7)([O.Z], () => O.Z.isSupported()),
         a = (0, m.Go)();
-    return (0, n.jsx)(F, {
+    return (0, n.jsx)(y, {
         keybinds: e,
         canGoLive: s,
         overlaySupported: t,
-        allowSoundboard: (0, x.isWindows)(),
+        allowSoundboard: (0, R.isWindows)(),
         enableClips: a
     });
 }

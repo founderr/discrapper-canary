@@ -14,8 +14,8 @@ var s = l(735250),
     u = l(594174),
     E = l(236373),
     _ = l(230900),
-    I = l(405613),
-    x = l(460838),
+    x = l(405613),
+    I = l(460838),
     m = l(689938),
     N = l(98758);
 function T(e) {
@@ -32,7 +32,7 @@ function T(e) {
     return (0, s.jsxs)('div', {
         className: N.content,
         children: [
-            (0, s.jsx)(x.Z, {
+            (0, s.jsx)(I.Z, {
                 className: N.previewCard,
                 guild: M,
                 channel: j,
@@ -40,7 +40,7 @@ function T(e) {
                 creator: R,
                 name: A,
                 description: f,
-                imageSource: ((l = (0, E.Gb)(g, h, v)), null == (T = Z) && null == l.image ? null : null != T && /^data:/.test(T) ? T : (0, I.Z)(l)),
+                imageSource: ((l = (0, E.Gb)(g, h, v)), null == (T = Z) && null == l.image ? null : null != T && /^data:/.test(T) ? T : (0, x.Z)(l)),
                 isActive: !1,
                 isUserLurking: p,
                 speakers: [],

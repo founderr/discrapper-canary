@@ -16,8 +16,8 @@ var s,
     u = l(607070),
     E = l(745510),
     _ = l(96698),
-    I = l(313201),
-    x = l(433775),
+    x = l(313201),
+    I = l(433775),
     m = l(984933),
     N = l(430824),
     T = l(971130),
@@ -107,8 +107,8 @@ function B(e) {
     );
 }
 function P(e) {
-    let { guildId: n, guildEvent: l, guildEventId: a, editBroadcastInfoData: c, isEdit: E, formErrors: x, transitionState: m, loading: N, error: T, onChange: h, onSave: v, onClose: S, createdEvent: C } = e,
-        L = (0, I.Dt)(),
+    let { guildId: n, guildEvent: l, guildEventId: a, editBroadcastInfoData: c, isEdit: E, formErrors: I, transitionState: m, loading: N, error: T, onChange: h, onSave: v, onClose: S, createdEvent: C } = e,
+        L = (0, x.Dt)(),
         A = i.useRef(l),
         Z = !(0, r.isEqual)(A.current, l),
         p = i.useMemo(
@@ -116,14 +116,14 @@ function P(e) {
                 {
                     slideId: 0,
                     label: O.Z.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_1,
-                    valid: null == x.entity,
-                    userErrorMessage: x.entity
+                    valid: null == I.entity,
+                    userErrorMessage: I.entity
                 },
                 {
                     slideId: 1,
                     label: O.Z.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_2,
-                    valid: null == x.schedule && null == x.topic && (!E || Z),
-                    userErrorMessage: x.schedule
+                    valid: null == I.schedule && null == I.topic && (!E || Z),
+                    userErrorMessage: I.schedule
                 },
                 {
                     slideId: 2,
@@ -131,7 +131,7 @@ function P(e) {
                     valid: !0
                 }
             ],
-            [x, E, Z]
+            [I, E, Z]
         ),
         V = Object.keys(s).length,
         G = (0, g.xt)(l),
@@ -197,7 +197,7 @@ function P(e) {
                                         children: (0, t.jsx)(j.Z, {
                                             guildId: n,
                                             guildEvent: l,
-                                            validationErrorMessage: x.entity,
+                                            validationErrorMessage: I.entity,
                                             isSlideReady: k,
                                             onChange: h
                                         })
@@ -211,7 +211,7 @@ function P(e) {
                                             editBroadcastInfoData: c,
                                             onChange: h,
                                             error: T,
-                                            validationErrorMessage: x.schedule,
+                                            validationErrorMessage: I.schedule,
                                             isSlideReady: k
                                         })
                                     }),
@@ -276,8 +276,8 @@ function k(e) {
         u = (0, o.e7)([N.Z], () => N.Z.getGuild(n)),
         E = (0, o.e7)([g.ZP], () => g.ZP.getGuildScheduledEvent(s), [s]),
         _ = (0, o.e7)([m.ZP], () => m.ZP.getDefaultChannel(n), [n]),
-        I = (0, L.j$)(E, _),
-        [T, f] = i.useState(I),
+        x = (0, L.j$)(E, _),
+        [T, f] = i.useState(x),
         [j] = i.useState((0, L.Ql)(E)),
         [M, D] = i.useState(null),
         R = (e) => {
@@ -295,7 +295,7 @@ function k(e) {
                 ),
                 l ? D(e) : r();
         },
-        U = (0, x.Z)(u, null == E ? void 0 : E.id, T),
+        U = (0, I.Z)(u, null == E ? void 0 : E.id, T),
         [B, { loading: k, error: z }] = (0, h.Z)(async () => {
             if (null != M) return;
             let e = { broadcastToDirectoryChannels: U.broadcastToDirectoryChannels };

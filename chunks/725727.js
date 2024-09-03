@@ -49,7 +49,7 @@ function I() {
                     : [...t, e]
             );
         }, []),
-        O = u.ZP.isPremium(t),
+        O = u.ZP.isPremiumExactly(t, h.p9.TIER_2),
         R =
             d.g.useExperiment(
                 { location: 'useOutboundPromotions' },
@@ -57,7 +57,7 @@ function I() {
                     autoTrackExposure: !O,
                     disable: O
                 }
-            ).enabled || u.ZP.isPremiumExactly(t, h.p9.TIER_2);
+            ).enabled || O;
     r.useEffect(() => {
         a.Z.wait(() => {
             R && null == e && E.ZP.fetchActiveOutboundPromotions();

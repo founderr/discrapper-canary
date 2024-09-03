@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return x;
+        return R;
     }
 }),
     t(653041),
@@ -46,7 +46,7 @@ function p() {
         })
     });
 }
-function x(e) {
+function R(e) {
     var s, t;
     let { keybind: i } = e,
         l = a.useRef(i);
@@ -55,7 +55,7 @@ function x(e) {
         _ = a.useCallback(() => {
             (0, r.openModalLazy)(
                 async () => (e) =>
-                    (0, n.jsx)(R, {
+                    (0, n.jsx)(x, {
                         ...e,
                         onSelect: (e) => {
                             u(e),
@@ -89,14 +89,14 @@ function x(e) {
         })
     });
 }
-function R(e) {
+function x(e) {
     let { transitionState: s, onClose: t, onSelect: o } = e,
         c = a.useId(),
         m = a.useRef(null),
         {
             mouseFocusEnabled: A,
-            enableMouseFocus: x,
-            disableMouseFocus: R
+            enableMouseFocus: R,
+            disableMouseFocus: x
         } = (function () {
             let e = a.useRef(!1),
                 s = a.useCallback(() => {
@@ -169,7 +169,7 @@ function R(e) {
         })();
     return (0, n.jsx)('div', {
         className: N.voiceModalContainer,
-        onMouseMove: x,
+        onMouseMove: R,
         children: (0, n.jsxs)(r.ModalRoot, {
             transitionState: s,
             size: r.ModalSize.MEDIUM,
@@ -181,7 +181,7 @@ function R(e) {
                         value: f,
                         onChange: M,
                         onKeyDown: function (e) {
-                            R();
+                            x();
                             let s = e.key.toLowerCase();
                             if ('arrowdown' === s || 'arrowup' === s || 'enter' === s || 'escape' === s)
                                 switch ((e.preventDefault(), s)) {

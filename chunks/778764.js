@@ -29,20 +29,20 @@ function h(e) {
         _ = (0, d.Dt)(),
         [N, h] = a.useState(''),
         [O, p] = a.useState(!0),
-        [x, R] = a.useState(m.x.INIT),
+        [R, x] = a.useState(m.x.INIT),
         [f, M] = a.useState(''),
         [D, P] = a.useState(null),
         L = async () => {
             let e;
-            R(m.x.REGISTER);
+            x(m.x.REGISTER);
             let s = E.isPlatformEmbedded && I.ZP.supportsFeature(C.eRX.WEBAUTHN) ? I.ZP.webAuthnRegister(c) : i.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await s;
             } catch (e) {
-                T.Z.captureException(e), P(g.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), R(m.x.INIT);
+                T.Z.captureException(e), P(g.Z.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(m.x.INIT);
                 return;
             }
-            M(e), R(m.x.NAME);
+            M(e), x(m.x.NAME);
         };
     return (0, n.jsxs)(o.ModalRoot, {
         transitionState: s,
@@ -55,7 +55,7 @@ function h(e) {
                     (0, n.jsxs)(o.Heading, {
                         id: _,
                         variant: 'heading-lg/semibold',
-                        children: [x === m.x.INIT && g.Z.Messages.TWO_FA_WEBAUTHN_REGISTER, x === m.x.REGISTER && g.Z.Messages.TWO_FA_WEBAUTHN_INTERACT, x === m.x.NAME && g.Z.Messages.TWO_FA_WEBAUTHN_NAME]
+                        children: [R === m.x.INIT && g.Z.Messages.TWO_FA_WEBAUTHN_REGISTER, R === m.x.REGISTER && g.Z.Messages.TWO_FA_WEBAUTHN_INTERACT, R === m.x.NAME && g.Z.Messages.TWO_FA_WEBAUTHN_NAME]
                     }),
                     (0, n.jsx)(o.ModalCloseButton, {
                         onClick: r,
@@ -64,7 +64,7 @@ function h(e) {
                 ]
             }),
             (0, n.jsxs)(o.Slides, {
-                activeSlide: x,
+                activeSlide: R,
                 width: 440,
                 children: [
                     (0, n.jsxs)(o.Slide, {
@@ -140,7 +140,7 @@ function h(e) {
                                         })
                                         .then(() => r())
                                         .catch(() => {
-                                            P(g.Z.Messages.ERROR_OCCURRED_TRY_AGAIN), R(m.x.INIT);
+                                            P(g.Z.Messages.ERROR_OCCURRED_TRY_AGAIN), x(m.x.INIT);
                                         });
                             },
                             children: [
@@ -185,7 +185,7 @@ function h(e) {
                                             look: o.Button.Looks.LINK,
                                             color: o.Button.Colors.PRIMARY,
                                             onClick: () => {
-                                                R(m.x.INIT);
+                                                x(m.x.INIT);
                                             },
                                             children: g.Z.Messages.BACK
                                         })

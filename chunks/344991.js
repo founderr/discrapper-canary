@@ -74,15 +74,15 @@ function v(e) {
     a.useEffect(() => {
         if (!(T || g || (O.size === Z.size && Array.from(O.keys()).every((e) => Z.has(e))))) Y();
     }, [T, g, Z, O, Y]);
-    let B = 0 === O.size || T,
-        w = {
+    let w = 0 === O.size || T,
+        B = {
             isDisabled: x || U,
             wrapperClassName: f.select,
             options: (e) =>
                 new Promise((n) => {
                     n(l(e));
                 }),
-            placeholder: B ? (null != _ ? _ : E.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
+            placeholder: w ? (null != _ ? _ : E.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
             onClose: () => I(!1),
             onOpen: () => I(!0),
             onBlur: () => S(!1),
@@ -119,11 +119,11 @@ function v(e) {
                                   inputClassNames: u()({
                                       [f.soloInput]: 0 === O.size,
                                       [f.inlineInput]: O.size > 0,
-                                      [f.hidden]: !B
+                                      [f.hidden]: !w
                                   }),
                                   closeOnSelect: !1,
                                   centerCaret: !0,
-                                  ...w
+                                  ...B
                               },
                               A
                           )
@@ -135,7 +135,7 @@ function v(e) {
                                   onChange: (e) => j(null != e ? new Map([[e.value, e]]) : new Map()),
                                   clearable: !0,
                                   centerCaret: !0,
-                                  ...w
+                                  ...B
                               },
                               A
                           ),

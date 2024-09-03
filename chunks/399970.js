@@ -34,8 +34,8 @@ function C(e) {
         })),
         [g, A] = r.useState(null != n ? n : ''),
         [h, O] = r.useState('8080'),
-        [p, x] = r.useState('localhost'),
-        R = (0, E.Dt)(),
+        [p, R] = r.useState('localhost'),
+        x = (0, E.Dt)(),
         f = m.test(g);
     async function M() {
         d.q$();
@@ -54,11 +54,11 @@ function C(e) {
     let D = null != n && n === g,
         P = D
             ? function () {
-                  d.mc(), A(''), x(null);
+                  d.mc(), A(''), R(null);
               }
             : M;
     return (0, i.jsxs)(l.ModalRoot, {
-        'aria-labelledby': R,
+        'aria-labelledby': x,
         transitionState: t,
         children: [
             (0, i.jsxs)(l.ModalHeader, {
@@ -66,7 +66,7 @@ function C(e) {
                 separator: !1,
                 children: [
                     (0, i.jsx)(l.FormTitle, {
-                        id: R,
+                        id: x,
                         tag: 'h1',
                         className: N.marginReset,
                         children: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
@@ -129,7 +129,7 @@ function C(e) {
                                             }
                                         ],
                                         onChange: function (e) {
-                                            x(e);
+                                            R(e);
                                         },
                                         placeholder: 'URL Origin Type'
                                     })

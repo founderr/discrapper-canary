@@ -18,7 +18,7 @@ var a = t(735250),
 function g(e) {
     let { movDark: n = c, movLight: t = d, mp4Dark: i = m, mp4Light: r = b, pngDark: o = x, pngLight: l = h, webmDark: u = f, webmLight: g = _ } = e,
         v = (0, s.vu)(),
-        N = [
+        j = [
             (0, a.jsx)(
                 'source',
                 {
@@ -36,7 +36,7 @@ function g(e) {
                 'png'
             )
         ],
-        j = [
+        N = [
             (0, a.jsx)(
                 'source',
                 {
@@ -56,7 +56,7 @@ function g(e) {
         ];
     return (
         (v > 52 || -1 === v) &&
-            (N.unshift(
+            (j.unshift(
                 (0, a.jsx)(
                     'source',
                     {
@@ -66,7 +66,7 @@ function g(e) {
                     'webm'
                 )
             ),
-            j.unshift(
+            N.unshift(
                 (0, a.jsx)(
                     'source',
                     {
@@ -77,7 +77,7 @@ function g(e) {
                 )
             )),
         (0, s.rO)() &&
-            (N.unshift(
+            (j.unshift(
                 (0, a.jsx)(
                     'source',
                     {
@@ -87,7 +87,7 @@ function g(e) {
                     'hevc'
                 )
             ),
-            j.unshift(
+            N.unshift(
                 (0, a.jsx)(
                     'source',
                     {
@@ -98,21 +98,21 @@ function g(e) {
                 )
             )),
         {
-            [p.BRd.DARK]: N,
-            [p.BRd.LIGHT]: j
+            [p.BRd.DARK]: j,
+            [p.BRd.LIGHT]: N
         }
     );
 }
 let v = l.Z.getAppSpinnerSources(),
-    N = null != v ? g(v) : null,
-    j = g({});
+    j = null != v ? g(v) : null,
+    N = g({});
 n.Z = (e) => {
     var n;
     let { loop: t = !0, autoPlay: l = !0, setRef: s, className: c, onReady: d } = e,
         { theme: m } = (0, o.useThemeContext)(),
         { reducedMotion: x } = i.useContext(o.AccessibilityPreferencesContext),
-        f = j;
-    null != N && (f = N);
+        f = N;
+    null != j && (f = j);
     let b = null !== (n = f[(0, r.wj)(m) ? p.BRd.DARK : p.BRd.LIGHT]) && void 0 !== n ? n : f[p.BRd.DARK];
     return (0, a.jsx)(
         u.Z,

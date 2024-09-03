@@ -6,13 +6,13 @@ n.r(t),
     });
 var s = n(735250),
     a = n(470079),
-    i = n(593473),
-    r = n(442837),
+    r = n(593473),
+    i = n(442837),
     l = n(544891),
     o = n(536285),
     c = n(388905),
-    u = n(600164),
-    d = n(703656),
+    d = n(600164),
+    u = n(703656),
     p = n(314897),
     m = n(981631),
     x = n(689938),
@@ -31,7 +31,7 @@ function f(e, t, n) {
         e
     );
 }
-r.ZP.initialize();
+i.ZP.initialize();
 let b = {
     HANDOFF: 'handoff',
     DONE: 'done',
@@ -138,9 +138,9 @@ class g extends a.PureComponent {
             default:
                 e = this.renderHandoff();
         }
-        return (0, s.jsx)(u.Z, {
-            justify: u.Z.Justify.CENTER,
-            align: u.Z.Align.CENTER,
+        return (0, s.jsx)(d.Z, {
+            justify: d.Z.Justify.CENTER,
+            align: d.Z.Align.CENTER,
             className: h.wrapper,
             children: e
         });
@@ -155,10 +155,10 @@ class g extends a.PureComponent {
                 this.setState({ stage: b.FAILED }), _();
             }),
             f(this, 'handleOpenApp', () => {
-                (0, d.uL)(m.Z5c.ME);
+                (0, u.uL)(m.Z5c.ME);
             });
         let { search: n } = e.location,
-            s = null != n && '' !== n ? (0, i.parse)(n) : {};
+            s = null != n && '' !== n ? (0, r.parse)(n) : {};
         this.state = {
             key: null !== (t = s.key) && void 0 !== t ? t : '',
             stage: 'true' === s.done ? b.DONE : b.HANDOFF

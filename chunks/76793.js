@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return x;
+        return R;
     }
 });
 var n = t(735250),
@@ -167,7 +167,7 @@ function p(e) {
               ]
           });
 }
-function x() {
+function R() {
     let e = (0, i.e7)([d.Z], () => d.Z.getPersistentCodesEnabled()),
         s = (0, E.s)();
     return (0, n.jsxs)(n.Fragment, {

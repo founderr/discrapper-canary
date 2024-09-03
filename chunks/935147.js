@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return y;
+        return F;
     }
 });
 var n = t(735250),
@@ -25,8 +25,8 @@ var n = t(735250),
     h = t(996073),
     O = t(25990),
     p = t(626135),
-    x = t(74538),
-    R = t(296810),
+    R = t(74538),
+    x = t(296810),
     f = t(921813),
     M = t(433411),
     D = t(532432),
@@ -39,14 +39,14 @@ var n = t(735250),
     B = t(526761),
     U = t(689938),
     G = t(772058);
-function y(e) {
-    var s, i, y;
-    let { user: F } = e,
+function F(e) {
+    var s, i, F;
+    let { user: y } = e,
         { reducedMotion: V } = a.useContext(l.AccessibilityPreferencesContext),
-        w = x.ZP.isPremium(F),
+        Y = R.ZP.isPremium(y),
         {
-            pendingAvatar: k,
-            pendingBanner: Y,
+            pendingAvatar: w,
+            pendingBanner: k,
             pendingThemeColors: H,
             pendingPronouns: W,
             pendingBio: K,
@@ -76,7 +76,7 @@ function y(e) {
             location: { page: v.ZY5.USER_SETTINGS },
             location_stack: en
         });
-    }, [en, F]);
+    }, [en, y]);
     let ea = (null === (i = (0, S.N)()) || void 0 === i ? void 0 : null === (s = i.subscription_trial) || void 0 === s ? void 0 : s.sku_id) === j.Si.TIER_2,
         ei = (0, I.Ng)(),
         er = (0, I.Wp)(ei, j.Si.TIER_2),
@@ -99,7 +99,7 @@ function y(e) {
             isShown: !0,
             hasBackground: !0,
             children: [
-                (0, n.jsx)(R.Z, {
+                (0, n.jsx)(x.Z, {
                     layoutClassName: G.tryItOutLayout,
                     previewTitle: (0, n.jsxs)(n.Fragment, {
                         children: [
@@ -112,15 +112,15 @@ function y(e) {
                         ]
                     }),
                     profilePreview: (0, n.jsx)(f.Z, {
-                        user: F,
+                        user: y,
                         pendingPronouns: W,
                         pendingBio: K,
-                        pendingBanner: null !== (y = null != X ? X : Y) && void 0 !== y ? y : t(466045),
-                        pendingAvatar: null != Q ? Q : k,
+                        pendingBanner: null !== (F = null != X ? X : k) && void 0 !== F ? F : t(466045),
+                        pendingAvatar: null != Q ? Q : w,
                         pendingThemeColors: null != z ? z : H,
                         pendingAvatarDecoration: $,
                         pendingProfileEffectId: ee,
-                        avatarClassName: null != Q || null != k || V.enabled ? void 0 : G.spinningAvatar,
+                        avatarClassName: null != Q || null != w || V.enabled ? void 0 : G.spinningAvatar,
                         canUsePremiumCustomization: !0,
                         isTryItOutFlow: !0,
                         hideExampleButton: !0
@@ -143,8 +143,8 @@ function y(e) {
                             }),
                             (0, n.jsx)(Z.Z, {
                                 className: G.customizationSection,
-                                user: F,
-                                pendingAvatar: null != Q ? Q : k,
+                                user: y,
+                                pendingAvatar: null != Q ? Q : w,
                                 pendingColors: null != z ? z : H,
                                 onThemeColorsChange: A.rf,
                                 showPremiumIcon: !1,
@@ -170,7 +170,7 @@ function y(e) {
                                 {
                                     isTryItOutFlow: !0,
                                     className: G.customizationSection,
-                                    user: F,
+                                    user: y,
                                     sectionTitle: U.Z.Messages.USER_SETTINGS_AVATAR_DECORATION
                                 },
                                 'decoration'
@@ -181,7 +181,7 @@ function y(e) {
                                     className: G.customizationSection,
                                     isTryItOutFlow: !0,
                                     initialSelectedEffectId: ee,
-                                    user: F,
+                                    user: y,
                                     sectionTitle: U.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
                                 },
                                 'effect'
@@ -202,7 +202,7 @@ function y(e) {
                                                 subscriptionTier: j.Si.TIER_2,
                                                 className: G.premiumSubscribeButton,
                                                 size: l.Button.Sizes.MEDIUM,
-                                                buttonText: w ? U.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : er ? U.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == ei ? void 0 : ei.discount.amount }) : U.Z.Messages.PREMIUM_UPSELL_GET_NITRO
+                                                buttonText: Y ? U.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : er ? U.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == ei ? void 0 : ei.discount.amount }) : U.Z.Messages.PREMIUM_UPSELL_GET_NITRO
                                             })
                                     ]
                                 })

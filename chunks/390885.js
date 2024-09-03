@@ -116,14 +116,14 @@ f.subscribe(
     },
     (e) => (null != e.currentFlow ? e.flows[e.currentFlow] : void 0)
 );
-function g() {
+function C() {
     return null != f.getState().activeFlow();
 }
 t.Z = {
     flowStart: _,
     flowStepOrStart: function (e, t) {
-        g() ? p(e, t) : _(e, t);
+        C() ? p(e, t) : _(e, t);
     },
     flowStep: p,
-    hasActiveFlow: g
+    hasActiveFlow: C
 };

@@ -21,8 +21,8 @@ var n = t(735250),
     h = t(908951),
     O = t(703656),
     p = t(853872),
-    x = t(245950),
-    R = t(404203),
+    R = t(245950),
+    x = t(404203),
     f = t(330181),
     M = t(954821),
     D = t(980864),
@@ -119,17 +119,17 @@ let j = (e) => {
     };
 s.Z = (e) => {
     let { subscription: s } = e,
-        { listing: t, groupListing: i, guild: l, expanded: T, handleToggleExpanded: N, subscriptionInfo: A } = (0, x.Z)(s),
+        { listing: t, groupListing: i, guild: l, expanded: T, handleToggleExpanded: N, subscriptionInfo: A } = (0, R.Z)(s),
         [h, p] = a.useState(!1),
         G = (0, m.Dt)(),
-        { analyticsLocations: y } = (0, I.ZP)(),
-        { shouldHideGuildPurchaseEntryPoints: F } = (0, C.uP)(null == l ? void 0 : l.id),
+        { analyticsLocations: F } = (0, I.ZP)(),
+        { shouldHideGuildPurchaseEntryPoints: y } = (0, C.uP)(null == l ? void 0 : l.id),
         V = (null == s ? void 0 : s.paymentGateway) === P.gg$.APPLE_PARTNER;
     if (null == i || null == t || null == A) return null;
-    let w = () => {
+    let Y = () => {
             null != l && ((0, O.uL)(P.Z5c.CHANNEL(l.id, L.oC.ROLE_SUBSCRIPTIONS)), (0, u.xf)(), _.Z.show(P.kVF.BACK_TO_PREVIOUS_SCREEN, void 0, Z.Z.Messages.GUILD_ROLE_SUBSCRIPTION_PURCHASE_BACK_TO_SUBSCRIPTION_USER_SETTING_CTA, () => E.Z.open(P.oAB.SUBSCRIPTIONS, b.cP)));
         },
-        k = () => {
+        w = () => {
             null != l &&
                 (0, M.h)({
                     guildId: l.id,
@@ -138,9 +138,9 @@ s.Z = (e) => {
                     subscription: s
                 });
         },
-        Y = async () => {
+        k = async () => {
             try {
-                p(!0), await d.pl(s, y), (0, D.h)();
+                p(!0), await d.pl(s, F), (0, D.h)();
             } finally {
                 p(!1);
             }
@@ -186,7 +186,7 @@ s.Z = (e) => {
     return (0, n.jsxs)('div', {
         className: v.container,
         children: [
-            (0, n.jsx)(R.Z, {
+            (0, n.jsx)(x.Z, {
                 onClick: N,
                 className: v.headerContainer,
                 children: (e) => {
@@ -277,10 +277,10 @@ s.Z = (e) => {
                                   isTrial: q,
                                   isCancelled: H,
                                   isResubscribing: h,
-                                  shouldHideRoleSubscriptionEntryPoints: F,
-                                  onCancelSubscriptionClick: k,
-                                  onChangePlanClick: w,
-                                  onResubscribeClick: Y
+                                  shouldHideRoleSubscriptionEntryPoints: y,
+                                  onCancelSubscriptionClick: w,
+                                  onChangePlanClick: Y,
+                                  onResubscribeClick: k
                               })
                       ]
                   })

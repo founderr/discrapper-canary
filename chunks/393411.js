@@ -1,6 +1,6 @@
 t.d(s, {
     R: function () {
-        return F;
+        return y;
     }
 }),
     t(411104);
@@ -27,8 +27,8 @@ var a = t(120356),
     h = t(212895),
     O = t(296848),
     p = t(140465),
-    x = t(879463),
-    R = t(104494),
+    R = t(879463),
+    x = t(104494),
     f = t(987997),
     M = t(833569),
     D = t(823188),
@@ -122,7 +122,7 @@ function G(e) {
         ]
     });
 }
-function y() {
+function F() {
     return (0, n.jsxs)('div', {
         className: Z.wordMark,
         children: [
@@ -134,10 +134,10 @@ function y() {
         ]
     });
 }
-function F() {
+function y() {
     let { analyticsLocations: e } = (0, _.ZP)(u.Z.ACCOUNT_CREDIT_BANNER);
     return (0, n.jsx)(U, {
-        wordMark: (0, n.jsx)(y, {}),
+        wordMark: (0, n.jsx)(F, {}),
         subscriptionInfo: (0, n.jsx)('div', {
             className: Z.planInfo,
             children: b.Z.Messages.PREMIUM_TIER_1_ACCOUNT_CREDIT_BANNER_DESCRIPTION
@@ -157,12 +157,12 @@ function F() {
 }
 s.Z = function (e) {
     var s;
-    let { subscription: a, renewalInvoicePreview: r, paymentSource: E, busy: D, analyticsLocation: F } = e,
+    let { subscription: a, renewalInvoicePreview: r, paymentSource: E, busy: D, analyticsLocation: y } = e,
         { analyticsLocations: V } = (0, _.ZP)(u.Z.SUBSCRIPTION_HEADER),
-        { enabled: w } = (0, x.ZP)({ location: 'subscription_header' });
-    (!P.pj.has(a.planId) || !L.JwP.ALL_PAUSEABLE.has(a.status)) && (w = !1);
-    let k = (0, R.Ng)(),
-        Y = null == k ? void 0 : null === (s = k.discount) || void 0 === s ? void 0 : s.amount,
+        { enabled: Y } = (0, R.ZP)({ location: 'subscription_header' });
+    (!P.pj.has(a.planId) || !L.JwP.ALL_PAUSEABLE.has(a.status)) && (Y = !1);
+    let w = (0, x.Ng)(),
+        k = null == w ? void 0 : null === (s = w.discount) || void 0 === s ? void 0 : s.amount,
         H = (0, p.t7)(),
         W = (0, p.lr)(),
         K = (0, l.e7)([N.ZP], () => N.ZP.inReverseTrial()),
@@ -182,7 +182,7 @@ s.Z = function (e) {
                     (0, n.jsx)(s, {
                         ...t,
                         premiumSubscription: a,
-                        analyticsLocation: F,
+                        analyticsLocation: y,
                         analyticsLocations: V,
                         initialStep: e
                     });
@@ -204,7 +204,7 @@ s.Z = function (e) {
                         : (0, T.Z)({
                               initialPlanId: a.planIdFromItems,
                               analyticsLocations: V,
-                              analyticsLocation: F,
+                              analyticsLocation: y,
                               analyticsObject: j,
                               subscription: a
                           });
@@ -225,7 +225,7 @@ s.Z = function (e) {
                 ? (0, T.Z)({
                       initialPlanId: a.planIdFromItems,
                       analyticsLocations: V,
-                      analyticsLocation: F,
+                      analyticsLocation: y,
                       analyticsObject: j,
                       subscription: a,
                       skipConfirm: !0
@@ -266,7 +266,7 @@ s.Z = function (e) {
             });
             break;
         case P.p9.TIER_1:
-            er = (0, n.jsx)(y, {});
+            er = (0, n.jsx)(F, {});
             break;
         case P.p9.TIER_2:
             er = (0, n.jsx)(m.Z, {
@@ -397,7 +397,7 @@ s.Z = function (e) {
                         (0, n.jsxs)('div', {
                             className: Z.toolsButtons,
                             children: [
-                                w
+                                Y
                                     ? (0, n.jsx)(c.Button, {
                                           className: Z.toolsButton,
                                           size: c.Button.Sizes.SMALL,
@@ -426,7 +426,7 @@ s.Z = function (e) {
                                             onClick: () => {
                                                 (0, T.Z)({
                                                     analyticsLocations: V,
-                                                    analyticsLocation: F,
+                                                    analyticsLocation: y,
                                                     analyticsObject: j,
                                                     subscription: a
                                                 });
@@ -441,6 +441,6 @@ s.Z = function (e) {
         })(),
         statusClasses: ei,
         shouldUseDiscountMarketing: H,
-        discountAmount: Y
+        discountAmount: k
     });
 };

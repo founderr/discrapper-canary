@@ -31,7 +31,7 @@ s.Z = (e) => {
         A = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
         [h, O] = a.useState(!0),
         p = a.useRef(null),
-        [x, R] = a.useState(!1),
+        [R, x] = a.useState(!1),
         [f, M] = a.useState(!1),
         [D, P] = a.useState(!1),
         [L, b] = a.useState([]),
@@ -73,7 +73,7 @@ s.Z = (e) => {
                               className: r()(N.col, N.preview),
                               children: [
                                   (0, n.jsx)('img', {
-                                      src: x ? m : C,
+                                      src: R ? m : C,
                                       alt: '',
                                       width: 450
                                   }),
@@ -124,10 +124,10 @@ s.Z = (e) => {
                                                   }),
                                                   (0, n.jsx)('input', {
                                                       type: 'checkbox',
-                                                      checked: x,
+                                                      checked: R,
                                                       className: N.checkBox,
                                                       onChange: () => {
-                                                          R(!x);
+                                                          x(!R);
                                                       }
                                                   })
                                               ]

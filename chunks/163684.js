@@ -14,7 +14,7 @@ let r = (0, n(818083).B)({
     treatments: [
         {
             id: 1,
-            label: 'Enable upsells for outbound promos w/ Nagbar variant 1 - gift inventory cta',
+            label: 'Enable upsells for outbound promos w/ Nagbar variant 1 - gift inventory cta (population 1)',
             config: {
                 enabled: !0,
                 getNitroCTA: !1
@@ -22,10 +22,10 @@ let r = (0, n(818083).B)({
         },
         {
             id: 2,
-            label: 'Enable upsells for outbound promos w/ Nagbar variant 2 - get nitro cta',
+            label: 'Enable upsells for outbound promos w/ Nagbar variant 2 - gift inventory cta (population 2)',
             config: {
                 enabled: !0,
-                getNitroCTA: !0
+                getNitroCTA: !1
             }
         }
     ]

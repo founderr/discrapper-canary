@@ -3,10 +3,10 @@ n.d(t, {
         return h;
     }
 });
-var o = n(735250);
+var i = n(735250);
 n(470079);
-var i = n(913527),
-    r = n.n(i),
+var o = n(913527),
+    r = n.n(o),
     c = n(442837),
     a = n(481060),
     l = n(92114),
@@ -17,7 +17,7 @@ var i = n(913527),
     _ = n(689938);
 function h(e, t) {
     let n = null == e ? void 0 : e.id,
-        { muted: i, muteConfig: h } = (0, c.cj)(
+        { muted: o, muteConfig: h } = (0, c.cj)(
             [d.ZP],
             () => ({
                 muted: null != n ? d.ZP.isMuted(n) : void 0,
@@ -28,43 +28,43 @@ function h(e, t) {
         f = (0, s.U)(h);
     return null == n
         ? null
-        : i
-          ? (0, o.jsx)(a.MenuItem, {
+        : o
+          ? (0, i.jsx)(a.MenuItem, {
                 id: 'unmute-guild',
                 label: _.Z.Messages.UNMUTE_SERVER,
                 subtext: f,
                 action: () => l.Z.updateGuildNotificationSettings(n, { muted: !1 }, g.ZB.Unmuted)
             })
-          : (0, o.jsx)(a.MenuItem, {
+          : (0, i.jsx)(a.MenuItem, {
                 id: 'mute-guild',
                 label: _.Z.Messages.MUTE_SERVER,
                 action: () => l.Z.updateGuildNotificationSettings(n, { muted: !0 }, g.ZB.Muted),
                 children: (0, u.k)().map((e) => {
-                    let { value: i, label: c } = e;
-                    return (0, o.jsx)(
+                    let { value: o, label: c } = e;
+                    return (0, i.jsx)(
                         a.MenuItem,
                         {
-                            id: ''.concat(i),
+                            id: ''.concat(o),
                             label: c,
                             action: () =>
                                 (function (e) {
                                     if (null == n) return;
-                                    let o = e > 0 ? r()().add(e, 'second').toISOString() : null;
+                                    let i = e > 0 ? r()().add(e, 'second').toISOString() : null;
                                     l.Z.updateGuildNotificationSettings(
                                         n,
                                         {
                                             muted: !0,
                                             mute_config: {
                                                 selected_time_window: e,
-                                                end_time: o
+                                                end_time: i
                                             }
                                         },
                                         g.ZB.Muted,
                                         t
                                     );
-                                })(i)
+                                })(o)
                         },
-                        i
+                        o
                     );
                 })
             });

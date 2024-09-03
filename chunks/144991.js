@@ -4,8 +4,8 @@ var i = t(735250),
     s = t(120356),
     l = t.n(s),
     r = t(149765),
-    o = t(253923),
-    d = t(481060),
+    o = t(481060),
+    d = t(208884),
     c = t(453628),
     u = t(996987),
     I = t(262401),
@@ -24,14 +24,14 @@ class _ extends a.PureComponent {
         t(e, n);
     }
     renderDisabledIndicator(e) {
-        return (0, i.jsx)(d.Tooltip, {
+        return (0, i.jsx)(o.Tooltip, {
             text: e,
             position: 'top',
-            color: d.Tooltip.Colors.RED,
+            color: o.Tooltip.Colors.RED,
             children: (e) =>
                 (0, i.jsx)('span', {
                     ...e,
-                    children: (0, i.jsx)(d.DenyIcon, {
+                    children: (0, i.jsx)(o.DenyIcon, {
                         size: 'sm',
                         color: 'currentColor',
                         className: I.icon
@@ -53,7 +53,7 @@ class _ extends a.PureComponent {
                       disabled: N,
                       value: this.getOverwriteValue(s),
                       onChange: (e) => this.handleChange(s, e),
-                      note: (0, o._u)(t),
+                      note: (0, d._u)(t),
                       helpdeskArticleId: a,
                       children: [
                           E,
@@ -66,12 +66,12 @@ class _ extends a.PureComponent {
                   String(s)
               )
             : (0, i.jsxs)(
-                  d.FormSwitch,
+                  o.FormSwitch,
                   {
                       disabled: N,
                       value: this.getPermissionValue(s, r),
                       onChange: (e) => this.handleChange(s, e),
-                      note: (0, o._u)(t),
+                      note: (0, d._u)(t),
                       children: [
                           E,
                           (0, i.jsx)('span', {
@@ -85,17 +85,17 @@ class _ extends a.PureComponent {
     }
     render() {
         let { spec: e, className: n } = this.props;
-        return (0, i.jsx)(d.FormSection, {
+        return (0, i.jsx)(o.FormSection, {
             className: n,
-            children: (0, i.jsxs)(d.HeadingLevel, {
-                component: (0, i.jsx)(d.FormTitle, {
-                    tag: d.FormTitleTags.H5,
+            children: (0, i.jsxs)(o.HeadingLevel, {
+                component: (0, i.jsx)(o.FormTitle, {
+                    tag: o.FormTitleTags.H5,
                     className: null != e.description ? m.marginBottom8 : m.marginBottom20,
                     children: e.title
                 }),
                 children: [
                     null != e.description &&
-                        (0, i.jsx)(d.Text, {
+                        (0, i.jsx)(o.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-secondary',
                             className: m.marginBottom20,

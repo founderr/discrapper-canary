@@ -30,12 +30,12 @@ var s = n(735250),
     I = n(50476),
     M = n(658590),
     O = n(46140),
-    k = n(743294),
-    U = n(689938),
-    q = n(159296);
+    U = n(743294),
+    k = n(689938),
+    L = n(159296);
 let Z = o.forwardRef(function (e, t) {
     var n, r;
-    let { children: Z, className: L, collapsedHeight: w, isExpanded: P, isExpansionAnimationComplete: Q, expansionSpring: W, onCtxMenuOpen: D, onCtxMenuClose: H, onCtxMenuSelect: V, overlayRef: z, quest: G, useReducedMotion: F, taskDetails: Y } = e,
+    let { children: Z, className: q, collapsedHeight: P, isExpanded: w, isExpansionAnimationComplete: Q, expansionSpring: W, onCtxMenuOpen: D, onCtxMenuClose: H, onCtxMenuSelect: V, overlayRef: z, quest: G, useReducedMotion: F, taskDetails: Y } = e,
         K = o.useRef(null),
         X = (0, c.e7)([g.Z], () => g.Z.isEnrolling(G.id), [G]),
         J = (0, m.B6)(G.config.expiresAt),
@@ -50,7 +50,7 @@ let Z = o.forwardRef(function (e, t) {
         { primaryVariant: en } = f.u.useExperiment({ location: O.dr.QUESTS_BAR }, { autoTrackExposure: !1 }),
         es = (null === (n = G.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
         eo = (null === (r = G.userStatus) || void 0 === r ? void 0 : r.completedAt) != null,
-        er = P && Q,
+        er = w && Q,
         ea = (0, m._s)({ quest: G }),
         el = Y.percentComplete > 0,
         ei = (0, m.z)(G),
@@ -66,9 +66,9 @@ let Z = o.forwardRef(function (e, t) {
         em = (0, h.vI)(G, O.dr.QUESTS_BAR, !0);
     return (0, s.jsxs)(l.animated.div, {
         'aria-hidden': !er,
-        className: a()(L, q.contentExpanded, {
-            [q.contentInteractable]: er,
-            [q.contentExpandedAccepted]: es
+        className: a()(q, L.contentExpanded, {
+            [L.contentInteractable]: er,
+            [L.contentExpandedAccepted]: es
         }),
         style: {
             transform: (0, l.to)(
@@ -79,7 +79,7 @@ let Z = o.forwardRef(function (e, t) {
                     }),
                     W.to({
                         range: [0, 1],
-                        output: [0, w]
+                        output: [0, P]
                     })
                 ],
                 (e, t) => 'translateY(calc('.concat(e, '% + ').concat(t, 'px))')
@@ -88,9 +88,9 @@ let Z = o.forwardRef(function (e, t) {
         children: [
             es &&
                 (0, s.jsx)(l.animated.div, {
-                    className: a()(q.postEnrollmentBackground, q.postEnrollmentBackgroundCollapsed),
+                    className: a()(L.postEnrollmentBackground, L.postEnrollmentBackgroundCollapsed),
                     style: {
-                        backgroundImage: 'linear-gradient(90deg, '.concat(k.aY, ', ').concat(k.v6, ')'),
+                        backgroundImage: 'linear-gradient(90deg, '.concat(U.aY, ', ').concat(U.v6, ')'),
                         opacity: W.to({
                             range: [0, 1],
                             output: [1, 0]
@@ -102,16 +102,16 @@ let Z = o.forwardRef(function (e, t) {
                 style: { opacity: 1 },
                 children: es
                     ? (0, s.jsxs)('div', {
-                          className: q.questAcceptedContent,
+                          className: L.questAcceptedContent,
                           ref: t,
                           children: [
                               (0, s.jsxs)('div', {
-                                  className: q.questAcceptedHeader,
+                                  className: L.questAcceptedHeader,
                                   children: [
                                       (0, s.jsx)(d.Text, {
                                           variant: 'text-xxs/medium',
-                                          className: a()(q.flex, q.headerText),
-                                          children: U.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: J })
+                                          className: a()(L.flex, L.headerText),
+                                          children: k.Z.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({ expirationDate: J })
                                       }),
                                       (0, s.jsx)(v.r, {
                                           onOpen: D,
@@ -124,24 +124,24 @@ let Z = o.forwardRef(function (e, t) {
                                           children: (e) =>
                                               (0, s.jsx)(d.Clickable, {
                                                   ...e,
-                                                  className: q.submenuWrapper,
-                                                  'aria-label': U.Z.Messages.ACTIONS,
+                                                  className: L.submenuWrapper,
+                                                  'aria-label': k.Z.Messages.ACTIONS,
                                                   children: (0, s.jsx)(d.MoreHorizontalIcon, {
                                                       size: 'md',
                                                       color: 'currentColor',
-                                                      className: a()(q.submenuIcon, q.interactiveNormal)
+                                                      className: a()(L.submenuIcon, L.interactiveNormal)
                                                   })
                                               })
                                       })
                                   ]
                               }),
-                              (0, s.jsx)('div', { className: q.divider }),
+                              (0, s.jsx)('div', { className: L.divider }),
                               (0, s.jsx)(B.Z, {
                                   expansionSpring: W,
                                   overlayRef: z,
                                   progressBarRef: K,
                                   quest: G,
-                                  isExpanded: P
+                                  isExpanded: w
                               }),
                               (0, s.jsx)(y.Z, {
                                   contentLocation: 'expanded',
@@ -174,7 +174,7 @@ let Z = o.forwardRef(function (e, t) {
                                   children: (0, s.jsx)(j.y, {
                                       quest: G,
                                       useReducedMotion: F,
-                                      isExpanded: P,
+                                      isExpanded: w,
                                       awaitingConsoleConnections: ea,
                                       hasMadeProgress: el,
                                       isProgressing: ei,
@@ -187,39 +187,39 @@ let Z = o.forwardRef(function (e, t) {
                       })
                     : (0, s.jsx)('div', {
                           children: (0, s.jsxs)('div', {
-                              className: q.questPromoContent,
+                              className: L.questPromoContent,
                               ref: t,
                               children: [
                                   (0, s.jsxs)('div', {
-                                      className: q.details,
+                                      className: L.details,
                                       children: [
                                           (0, s.jsx)(T.Z, {
-                                              className: a()(q.rewardTile, { [q.hiddenRewardTile]: em }),
+                                              className: a()(L.rewardTile, { [L.hiddenRewardTile]: em }),
                                               learnMoreStyle: 'text',
                                               quest: G,
                                               questContent: _.jn.QUEST_BAR_V2,
                                               location: O.dr.QUESTS_BAR
                                           }),
                                           (0, s.jsx)(d.Heading, {
-                                              className: q.title,
+                                              className: L.title,
                                               variant: 'heading-md/medium',
-                                              children: U.Z.Messages.QUESTS_TITLE.format({ questName: G.config.messages.questName })
+                                              children: k.Z.Messages.QUESTS_TITLE.format({ questName: G.config.messages.questName })
                                           }),
                                           (0, s.jsx)(d.Text, {
-                                              className: q.description,
+                                              className: L.description,
                                               variant: 'text-xs/normal',
                                               children: ex
                                           })
                                       ]
                                   }),
                                   (0, s.jsx)(d.Button, {
-                                      className: q.cta,
+                                      className: L.cta,
                                       color: d.Button.Colors.BRAND,
                                       fullWidth: !0,
                                       onClick: er ? ee : void 0,
                                       size: d.Button.Sizes.SMALL,
                                       submitting: X,
-                                      children: U.Z.Messages.QUESTS_ACCEPT_QUEST
+                                      children: k.Z.Messages.QUESTS_ACCEPT_QUEST
                                   })
                               ]
                           })
@@ -227,11 +227,11 @@ let Z = o.forwardRef(function (e, t) {
             }),
             es
                 ? (0, s.jsx)('div', {
-                      className: a()(q.postEnrollmentBackground, q.postEnrollmentBackgroundExpanded),
-                      style: { backgroundImage: 'linear-gradient(90deg, '.concat(k.aY, ', ').concat(k.v6, ')') }
+                      className: a()(L.postEnrollmentBackground, L.postEnrollmentBackgroundExpanded),
+                      style: { backgroundImage: 'linear-gradient(90deg, '.concat(U.aY, ', ').concat(U.v6, ')') }
                   })
                 : (0, s.jsxs)(l.animated.div, {
-                      className: q.heroAssetWrapper,
+                      className: L.heroAssetWrapper,
                       style: {
                           backdropFilter: W.to([0, 1], [5, 0]).to((e) => 'blur('.concat(e, 'px)')),
                           filter: W.to([0, 1], [0.8, 1]).to((e) => 'brightness('.concat(e, ')')),
@@ -239,13 +239,13 @@ let Z = o.forwardRef(function (e, t) {
                       },
                       children: [
                           (0, s.jsx)(l.animated.div, {
-                              className: q.heroAssetDarken,
+                              className: L.heroAssetDarken,
                               style: {
                                   opacity: W.to([0, 1], [1, 0])
                               }
                           }),
                           (0, s.jsx)(l.animated.div, {
-                              className: q.heroAssetTint,
+                              className: L.heroAssetTint,
                               style: {
                                   backgroundColor: G.config.colors.primary,
                                   opacity: W.to([0, 1], [1, 0])
@@ -261,7 +261,7 @@ let Z = o.forwardRef(function (e, t) {
                                             loop: !0,
                                             muted: !0,
                                             playsInline: !0,
-                                            className: q.heroAsset,
+                                            className: L.heroAsset,
                                             controls: !1,
                                             children: (0, s.jsx)('source', {
                                                 src: ep,
@@ -275,12 +275,12 @@ let Z = o.forwardRef(function (e, t) {
                                         (0, s.jsx)('img', {
                                             ref: e,
                                             alt: '',
-                                            className: q.heroAsset,
+                                            className: L.heroAsset,
                                             src: ep
                                         })
                                 }),
                           (0, s.jsx)(l.animated.div, {
-                              className: q.legibilityGradient,
+                              className: L.legibilityGradient,
                               style: {
                                   opacity: W.to({
                                       range: [0, 1],

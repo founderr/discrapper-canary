@@ -21,8 +21,8 @@ var n = t(735250),
     h = t(916028),
     O = t(15033),
     p = t(899457),
-    x = t(673105);
-function R(e, s, t) {
+    R = t(673105);
+function x(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -126,7 +126,7 @@ function Z() {
     var e, s, t;
     let [r, o] = a.useState(b),
         [l, c] = a.useState(p.a.UNENROLLED),
-        [R, L] = a.useState([]),
+        [x, L] = a.useState([]),
         [Z, v] = a.useState(!1),
         [j, B] = a.useState(null);
     let U =
@@ -168,7 +168,7 @@ function Z() {
                         .exhaustive())
             });
     }
-    function y(e, s) {
+    function F(e, s) {
         var t, n;
         if ('questName' === e || 'gameTitle' === e || 'gamePublisher' === e)
             o({
@@ -187,7 +187,7 @@ function Z() {
                         .exhaustive())
             });
     }
-    function F(e, s) {
+    function y(e, s) {
         var t, n;
         if ('rewardName' === e || 'rewardNameWithArticle' === e)
             o({
@@ -232,11 +232,11 @@ function Z() {
         children: [
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-lg/bold',
-                className: x.heading,
+                className: R.heading,
                 children: 'Quest Preview Tool'
             }),
             (0, n.jsx)('div', {
-                className: x.fields,
+                className: R.fields,
                 children: (0, n.jsx)(h.Z, {
                     onSelect: function (e) {
                         if ((B(e), null != e)) o(e);
@@ -246,45 +246,45 @@ function Z() {
             }),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-md/semibold',
-                className: x.subheading,
+                className: R.subheading,
                 children: 'Messages'
             }),
             (0, n.jsxs)('div', {
-                className: x.fields,
+                className: R.fields,
                 children: [
                     (0, n.jsx)(A.Z, {
                         title: 'Quest Name',
                         assetKey: 'questName',
-                        onMessageChange: y,
+                        onMessageChange: F,
                         initialValue: r.config.messages.questName
                     }),
                     (0, n.jsx)(A.Z, {
                         title: 'Game Title',
                         assetKey: 'gameTitle',
-                        onMessageChange: y,
+                        onMessageChange: F,
                         initialValue: r.config.messages.gameTitle
                     }),
                     (0, n.jsx)(A.Z, {
                         title: 'Reward Name',
                         assetKey: 'rewardName',
-                        onMessageChange: F,
+                        onMessageChange: y,
                         initialValue: U.name
                     }),
                     (0, n.jsx)(A.Z, {
                         title: 'Reward Name With Article',
                         assetKey: 'rewardNameWithArticle',
-                        onMessageChange: F,
+                        onMessageChange: y,
                         initialValue: U.nameWithArticle
                     })
                 ]
             }),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-md/semibold',
-                className: x.subheading,
+                className: R.subheading,
                 children: 'Assets'
             }),
             (0, n.jsxs)('div', {
-                className: x.fields,
+                className: R.fields,
                 children: [
                     (0, n.jsx)(g.Z, {
                         title: 'Game Tile Asset',
@@ -353,9 +353,9 @@ function Z() {
                 ]
             }),
             (0, n.jsx)('div', {
-                className: x.fields,
+                className: R.fields,
                 children: (0, n.jsx)('div', {
-                    className: x.fullWidthField,
+                    className: R.fullWidthField,
                     children: (0, n.jsx)(O.Z, {
                         onChange: function (e) {
                             var s, t;
@@ -373,20 +373,20 @@ function Z() {
                             }),
                                 L(e);
                         },
-                        values: R
+                        values: x
                     })
                 })
             }),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-md/semibold',
-                className: x.subheading,
+                className: R.subheading,
                 children: 'Colors & Quest States'
             }),
             (0, n.jsxs)('div', {
-                className: x.fields,
+                className: R.fields,
                 children: [
                     (0, n.jsxs)('div', {
-                        className: x.fields,
+                        className: R.fields,
                         style: { marginBottom: 0 },
                         children: [
                             (0, n.jsx)(m.Z, {
@@ -473,18 +473,18 @@ function Z() {
             }),
             (0, n.jsx)(d.Heading, {
                 variant: 'heading-lg/bold',
-                className: x.heading,
+                className: R.heading,
                 children: 'Component Previews'
             }),
             (0, n.jsxs)('div', {
-                className: x.componentPreviews,
+                className: R.componentPreviews,
                 children: [
                     (0, n.jsxs)(C.Z, {
                         withBorder: !0,
                         children: [
                             (0, n.jsx)(d.FormTitle, { children: 'Quest Bar' }),
                             (0, n.jsxs)('div', {
-                                className: x.questBarPreviewWrapper,
+                                className: R.questBarPreviewWrapper,
                                 children: [
                                     (null === (e = r.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null &&
                                         (0, n.jsx)(d.Text, {
@@ -493,7 +493,7 @@ function Z() {
                                             children: 'The Quest Bar is hidden when the user has claimed the reward.'
                                         }),
                                     (0, n.jsx)('div', {
-                                        className: x.questBarPreview,
+                                        className: R.questBarPreview,
                                         children: (0, n.jsx)(I.p, {
                                             isPreview: !0,
                                             source: 'preview',
@@ -530,13 +530,13 @@ function Z() {
                                     children: 'The Quest Channel Call Header is hidden when the user has claimed the reward.'
                                 }),
                             (0, n.jsx)('div', {
-                                className: x.questBarPreviewWrapper,
+                                className: R.questBarPreviewWrapper,
                                 children: (0, n.jsx)(I.p, {
                                     isPreview: !0,
                                     source: 'preview',
                                     questId: '0',
                                     children: (0, n.jsx)('div', {
-                                        className: x.questChannelCallHeaderPreview,
+                                        className: R.questChannelCallHeaderPreview,
                                         children: (0, n.jsx)(N.Z, {
                                             channelId: '123',
                                             previewQuest: r,
@@ -548,7 +548,7 @@ function Z() {
                         ]
                     }),
                     (0, n.jsx)('div', {
-                        className: x.channelCallParticipationToggle,
+                        className: R.channelCallParticipationToggle,
                         children: (0, n.jsx)(d.FormItem, {
                             children: (0, n.jsx)(d.FormSwitch, {
                                 value: Z,
@@ -573,9 +573,9 @@ class v extends a.Component {
         let { error: e, renderKey: s } = this.state;
         return null != e
             ? (0, n.jsxs)('div', {
-                  className: x.errorBoundary,
+                  className: R.errorBoundary,
                   children: [
-                      (0, n.jsx)(d.CircleWarningIcon, { className: x.errorBoundaryIcon }),
+                      (0, n.jsx)(d.CircleWarningIcon, { className: R.errorBoundaryIcon }),
                       (0, n.jsx)(d.Heading, {
                           variant: 'heading-lg/semibold',
                           children: 'Something broke in the Quest preview tool :('
@@ -587,9 +587,9 @@ class v extends a.Component {
                       }),
                       null != e.message &&
                           (0, n.jsx)(d.Card, {
-                              className: x.errorMessageWrapper,
+                              className: R.errorMessageWrapper,
                               children: (0, n.jsx)('code', {
-                                  className: x.errorMessage,
+                                  className: R.errorMessage,
                                   children: e.message
                               })
                           })
@@ -599,11 +599,11 @@ class v extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            R(this, 'state', {
+            x(this, 'state', {
                 error: null,
                 renderKey: 0
             }),
-            R(this, 'handleResetState', () => {
+            x(this, 'handleResetState', () => {
                 this.setState((e) => ({
                     error: null,
                     renderKey: e.renderKey + 1

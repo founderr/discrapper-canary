@@ -643,19 +643,19 @@ let { Themes: n } = r(15202).V,
         BADGE_BRAND_TEXT: {
             category: 'text',
             [n.DARK]: {
-                raw: 'BRAND_500',
+                raw: 'BRAND_560',
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BRAND_500',
+                raw: 'BRAND_560',
                 opacity: 1
             },
             [n.MIDNIGHT]: {
-                raw: 'BRAND_500',
+                raw: 'BRAND_560',
                 opacity: 1
             },
             [n.DARKER]: {
-                raw: 'BRAND_500',
+                raw: 'BRAND_560',
                 opacity: 1
             }
         },
@@ -3888,7 +3888,7 @@ let { Themes: n } = r(15202).V,
                 opacity: 1
             },
             [n.LIGHT]: {
-                raw: 'BRAND_500',
+                raw: 'BRAND_560',
                 opacity: 1
             },
             [n.MIDNIGHT]: {

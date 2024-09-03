@@ -27,8 +27,8 @@ function g(e) {
         [A, h] = a.useState((0, c.P)(T.default.getCurrentUser())),
         O = a.useRef(!1),
         p = a.useRef(A),
-        x = (0, l.O)(),
-        R = (0, i.e7)([E.Z], () => Object.values(E.Z.getVideoDevices()).length > 0);
+        R = (0, l.O)(),
+        x = (0, i.e7)([E.Z], () => Object.values(E.Z.getVideoDevices()).length > 0);
     return (
         a.useEffect(
             () => () => {
@@ -39,7 +39,7 @@ function g(e) {
         (0, n.jsx)(_.Z, {
             selectedBackgroundOption: A,
             onSelectBackgroundOption: (e) => {
-                (O.current = !0), (p.current = e), h(e), (0, u.wG)(e, { location: x.location }).catch(I.dG4);
+                (O.current = !0), (p.current = e), h(e), (0, u.wG)(e, { location: R.location }).catch(I.dG4);
             },
             renderCamera: (e) =>
                 s
@@ -63,12 +63,12 @@ function g(e) {
                           children: [
                               (0, n.jsx)('div', { className: N.previewImage }),
                               (0, n.jsx)(r.Tooltip, {
-                                  text: R ? null : S.Z.Messages.CAMERA_UNAVAILABLE,
+                                  text: x ? null : S.Z.Messages.CAMERA_UNAVAILABLE,
                                   children: (e) =>
                                       (0, n.jsx)(r.Button, {
                                           ...e,
                                           onClick: t,
-                                          disabled: !R,
+                                          disabled: !x,
                                           children: S.Z.Messages.TEST_VIDEO
                                       })
                               })
