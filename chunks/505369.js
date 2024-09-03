@@ -5,17 +5,18 @@ var i = n(544891),
     l = n(207205),
     o = n(981631);
 t.Z = {
-    async fetchDehydrated() {
+    async fetchDehydrated(e) {
         if (!(0, l.rK)('fetchDehydrated')) return;
-        let e = r.Z.negativeContentOnly();
+        let t = r.Z.negativeContentOnly();
         try {
-            let t = Date.now(),
-                n = await i.tn.get({ url: e ? o.ANM.GRAVITY_ITEMS_NEGATIVE : o.ANM.GRAVITY_ITEMS_DEHYDRATED });
+            let n = Date.now(),
+                s = await i.tn.get({ url: t ? o.ANM.GRAVITY_ITEMS_NEGATIVE : o.ANM.GRAVITY_ITEMS_DEHYDRATED });
             await a.Z.dispatch({
                 type: 'LOAD_GRAVITY_DEHYDRATED',
-                items: n.body.items,
-                loadId: n.body.load_id,
-                startTime: t
+                items: s.body.items,
+                loadId: s.body.load_id,
+                startTime: n,
+                isReloading: e
             });
         } catch (e) {
             s.Z.captureException(e);
