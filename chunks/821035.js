@@ -48,50 +48,46 @@ function C() {
         };
     return (
         s && (h.unshift(p), O.unshift(p)),
-        (0, n.jsxs)('div', {
+        (0, n.jsxs)(_.U, {
+            setting: T.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             className: N.settingsBackgroundFlashElement,
             children: [
-                (0, n.jsxs)(_.U, {
-                    setting: T.s6.PRIVACY_SENSITIVE_MEDIA_V2,
-                    children: [
-                        (0, n.jsx)(_.H, {
-                            header: S.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
-                            description: S.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: c.Z.getArticleURL(I.BhN.EXPLICIT_MEDIA_REDACTION) })
-                        }),
-                        (0, n.jsx)(i.FormItem, {
-                            ref: A,
-                            tag: i.FormTitleTags.H3,
-                            title: S.Z.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
-                            titleClassName: m.selectItemTitle,
-                            children: (0, n.jsx)(i.SingleSelect, {
-                                options: h,
-                                value: C,
-                                onChange: (e) => (0, r.zj)({ explicitContentFriendDm: e })
-                            })
-                        }),
-                        (0, n.jsx)(i.FormItem, {
-                            tag: i.FormTitleTags.H3,
-                            title: S.Z.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS,
-                            titleClassName: m.selectItemTitle,
-                            children: (0, n.jsx)(i.SingleSelect, {
-                                options: h,
-                                value: g,
-                                onChange: (e) => (0, r.zj)({ explicitContentNonFriendDm: e })
-                            })
-                        }),
-                        s &&
-                            (0, n.jsx)(i.FormItem, {
-                                tag: i.FormTitleTags.H3,
-                                title: S.Z.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
-                                titleClassName: m.selectItemTitle,
-                                children: (0, n.jsx)(i.SingleSelect, {
-                                    options: O,
-                                    value: t,
-                                    onChange: (e) => (0, r.zj)({ explicitContentGuilds: e })
-                                })
-                            })
-                    ]
+                (0, n.jsx)(_.H, {
+                    header: S.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
+                    description: S.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: c.Z.getArticleURL(I.BhN.EXPLICIT_MEDIA_REDACTION) })
                 }),
+                (0, n.jsx)(i.FormItem, {
+                    ref: A,
+                    tag: i.FormTitleTags.H3,
+                    title: S.Z.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
+                    titleClassName: m.selectItemTitle,
+                    children: (0, n.jsx)(i.SingleSelect, {
+                        options: h,
+                        value: C,
+                        onChange: (e) => (0, r.zj)({ explicitContentFriendDm: e })
+                    })
+                }),
+                (0, n.jsx)(i.FormItem, {
+                    tag: i.FormTitleTags.H3,
+                    title: S.Z.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS,
+                    titleClassName: m.selectItemTitle,
+                    children: (0, n.jsx)(i.SingleSelect, {
+                        options: h,
+                        value: g,
+                        onChange: (e) => (0, r.zj)({ explicitContentNonFriendDm: e })
+                    })
+                }),
+                s &&
+                    (0, n.jsx)(i.FormItem, {
+                        tag: i.FormTitleTags.H3,
+                        title: S.Z.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
+                        titleClassName: m.selectItemTitle,
+                        children: (0, n.jsx)(i.SingleSelect, {
+                            options: O,
+                            value: t,
+                            onChange: (e) => (0, r.zj)({ explicitContentGuilds: e })
+                        })
+                    }),
                 (0, n.jsx)(u.Z, { scrollPosition: E.to.EXPLICIT_MEDIA_REDACTION })
             ]
         })
