@@ -280,12 +280,20 @@ function g(e) {
 }
 function p(e) {
     let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: l } = e,
-        [i, o] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled());
+        [i, o] = a.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
+        s = a.useRef(null);
     a.useEffect(() => {
-        let e = t.dispatcher.getIsRequestIdleCallbackEnabled();
-        e !== i && o(e);
-    }, [t.dispatcher, i]);
-    let s = (e) => {
+        let e = setInterval(() => {
+            o(t.dispatcher.getIsRequestIdleCallbackEnabled());
+        }, m);
+        return (
+            (s.current = e),
+            () => {
+                null != s.current && clearInterval(s.current);
+            }
+        );
+    }, [t.dispatcher]);
+    let d = (e) => {
         t.dispatcher.toggleRequestIdleCallback(e), o(e);
     };
     return (0, r.jsxs)('div', {
@@ -314,7 +322,7 @@ function p(e) {
             }),
             (0, r.jsx)(c.Checkbox, {
                 value: i,
-                onChange: () => s(!i),
+                onChange: () => d(!i),
                 size: 18,
                 type: c.Checkbox.Types.INVERTED,
                 shape: c.Checkbox.Shapes.BOX,
