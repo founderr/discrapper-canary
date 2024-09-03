@@ -15,7 +15,7 @@ let s = (e, t) => {
     let l = (e) => new Promise((t) => setTimeout(t, e)),
         c = a.useCallback(
             async (e) => {
-                e && (s(r.f7.OUT), await l(1.1 * r.lb)), null != t.current && t.current.scrollTo({ to: 0 }), e && i(r.f7.IN), s(r.f7.HIDDEN), i(r.f7.VISIBLE);
+                e && (s(r.f7.OUT), await l(1.1 * r.lb)), e && i(r.f7.IN), s(r.f7.HIDDEN), null != t.current && t.current.scrollTo({ to: 0 }), i(r.f7.VISIBLE);
             },
             [t]
         );

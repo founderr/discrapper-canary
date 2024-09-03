@@ -3,7 +3,7 @@ n.d(t, {
         return s;
     },
     qy: function () {
-        return c;
+        return A;
     },
     sJ: function () {
         return o;
@@ -15,7 +15,7 @@ var a,
     o,
     r = n(544891),
     i = n(981631);
-async function c(e, t) {
+async function A(e, t) {
     await r.tn.post({
         url: i.ANM.CAPTCHA_TEST,
         body: {

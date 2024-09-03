@@ -56,7 +56,7 @@ function x(e) {
                             user: a,
                             hovered: e,
                             status: E,
-                            subText: N.Z.Messages.POTENTIAL_SPAM,
+                            subText: a.username,
                             className: g.userInfo
                         }),
                         (0, t.jsxs)('div', {
