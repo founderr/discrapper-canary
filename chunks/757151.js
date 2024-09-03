@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return g;
+        return A;
     }
 });
 var n = t(735250),
@@ -10,65 +10,75 @@ var n = t(735250),
     o = t(924356),
     l = t(122897),
     c = t(821035),
-    d = t(394655),
-    u = t(893996),
-    _ = t(726985),
-    E = t(981631),
-    T = t(689938),
-    I = t(202490);
-let S = () =>
-        (0, n.jsxs)(u.Z, {
-            title: T.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_CONTENT,
-            webSetting: _.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-            children: [(0, n.jsx)(c.P, {}), (0, n.jsx)(l.Z, {}), (0, n.jsx)(d.Z, {}), (0, n.jsx)(o.Z, {})]
+    d = t(694569),
+    u = t(394655),
+    _ = t(893996),
+    E = t(726985),
+    T = t(981631),
+    I = t(689938),
+    S = t(202490);
+let N = () =>
+        (0, n.jsxs)(n.Fragment, {
+            children: [
+                (0, n.jsxs)(_.Z, {
+                    title: I.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_CONTENT,
+                    webSetting: E.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+                    children: [(0, n.jsx)(c.P, {}), (0, n.jsx)(l.Z, {}), (0, n.jsx)(u.Z, {}), (0, n.jsx)(o.Z, {})]
+                }),
+                (0, n.jsx)(_.Z, {
+                    title: I.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_FRIEND_REQUESTS,
+                    webSetting: E.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
+                    children: (0, n.jsx)(d.Z, {})
+                })
+            ]
         }),
-    N = () => (0, n.jsx)('div', {}),
-    m = () =>
-        (0, n.jsx)(u.Z, {
-            title: T.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
-            webSetting: _.s6.PRIVACY_AND_SAFETY_STANDING_CATEGORY,
+    m = () => (0, n.jsx)('div', {}),
+    C = () =>
+        (0, n.jsx)(_.Z, {
+            title: I.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
+            webSetting: E.s6.PRIVACY_AND_SAFETY_STANDING_CATEGORY,
             children: (0, n.jsx)(i.Z, {})
         }),
-    C = (e) => {
+    g = (e) => {
         let { children: s } = e;
         return (0, n.jsx)('div', {
-            className: I.settingsSection,
+            className: S.settingsSection,
             children: s
         });
     };
-function g(e) {
-    return (0, n.jsxs)(C, {
+function A(e) {
+    return (0, n.jsxs)(g, {
         children: [
             (0, n.jsx)(a.HeadingLevel, {
                 children: (0, n.jsx)(a.Heading, {
                     variant: 'heading-xl/semibold',
-                    children: T.Z.Messages.PRIVACY_AND_SAFETY
+                    children: I.Z.Messages.PRIVACY_AND_SAFETY
                 })
             }),
             (0, n.jsx)(r.Z, {
-                parentSetting: _.s6.PRIVACY_AND_SAFETY_V2,
-                settingsSection: E.oAB.PRIVACY_AND_SAFETY_V2,
-                panelClassName: I.tabPanel,
+                parentSetting: E.s6.PRIVACY_AND_SAFETY_V2,
+                settingsSection: T.oAB.PRIVACY_AND_SAFETY_V2,
+                panelClassName: S.tabPanel,
                 tabs: [
                     {
-                        title: T.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_CONTENT_SOCIAL,
-                        component: S,
-                        setting: _.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL
-                    },
-                    {
-                        title: T.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_DATA_PRIVACY,
+                        title: I.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_CONTENT_SOCIAL,
                         component: N,
-                        setting: _.s6.PRIVACY_AND_SAFETY_DATA_PRIVACY
+                        setting: E.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL
                     },
                     {
-                        title: T.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_STANDING,
+                        title: I.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_DATA_PRIVACY,
                         component: m,
-                        setting: _.s6.PRIVACY_AND_SAFETY_STANDING
+                        setting: E.s6.PRIVACY_AND_SAFETY_DATA_PRIVACY
                     },
                     {
-                        title: T.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_ENCRYPTION,
-                        component: m,
-                        setting: _.s6.PRIVACY_AND_SAFETY_ENCRYPTION
+                        title: I.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_STANDING,
+                        component: C,
+                        setting: E.s6.PRIVACY_AND_SAFETY_STANDING
+                    },
+                    {
+                        title: I.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_ENCRYPTION,
+                        component: C,
+                        setting: E.s6.PRIVACY_AND_SAFETY_ENCRYPTION
                     }
                 ]
             })

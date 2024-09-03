@@ -19,15 +19,14 @@ let _ = new l.h(
             return null !== (r = null === (n = (t = i).dueAt) || void 0 === n ? void 0 : n.getTime()) && void 0 !== r ? r : 10000000000000 - t.savedAt.getTime();
         }
     ),
-    E = 0,
-    f = new Set();
-function h(e) {
+    E = 0;
+function f(e) {
     let { channelId: t, messageId: n } = e;
     return ''.concat(t, '-').concat(n);
 }
-function p(e) {
+function h(e) {
     let { messageId: t, channelId: n } = e,
-        r = h({
+        r = f({
             messageId: t,
             channelId: n
         }),
@@ -36,7 +35,7 @@ function p(e) {
     let a = { ...i };
     return (a.message = null), _.set(r, a), !0;
 }
-class I extends (r = o.ZP.Store) {
+class p extends (r = o.ZP.Store) {
     initialize() {}
     getSavedMessages() {
         return _.values(d._l.ALL);
@@ -58,7 +57,7 @@ class I extends (r = o.ZP.Store) {
     }
     isMessageBookmarked(e, t) {
         let n = _.get(
-            h({
+            f({
                 channelId: e,
                 messageId: t
             })
@@ -67,7 +66,7 @@ class I extends (r = o.ZP.Store) {
     }
     isMessageReminder(e, t) {
         let n = _.get(
-            h({
+            f({
                 channelId: e,
                 messageId: t
             })
@@ -80,15 +79,12 @@ class I extends (r = o.ZP.Store) {
             return null == n.dueAt || e > n.dueAt;
         });
     }
-    hasSentNotification(e) {
-        return f.has(e);
-    }
     getState() {
         return { savedMessages: _ };
     }
 }
 (s = 'SavedMessagesStore'),
-    (a = 'displayName') in (i = I)
+    (a = 'displayName') in (i = p)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -96,25 +92,22 @@ class I extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new I(u.Z, {
+    (t.Z = new p(u.Z, {
         SAVED_MESSAGES_UPDATE: function (e) {
             let { savedMessages: t } = e;
-            for (let e of ((E = new Date().getTime()), _.clear(), t)) _.set(h(e.saveData), e);
-            t.forEach((e) => {
-                null != e.saveData.dueAt && (null != e.saveData.dueAt && e.saveData.dueAt > new Date() && f.delete(e.saveData.messageId), null != e.saveData.dueAt && e.saveData.dueAt < new Date() && f.add(e.saveData.messageId));
-            });
+            for (let e of ((E = new Date().getTime()), _.clear(), t)) _.set(f(e.saveData), e);
         },
         SAVED_MESSAGE_CREATE: function (e) {
             let { savedMessage: t } = e;
-            _.set(h(t.saveData), t);
+            _.set(f(t.saveData), t);
         },
         SAVED_MESSAGE_DELETE: function (e) {
             let { savedMessageData: t } = e;
-            _.delete(h(t));
+            _.delete(f(t));
         },
         MESSAGE_DELETE: function (e) {
             let { id: t, channelId: n } = e;
-            return p({
+            return h({
                 messageId: t,
                 channelId: n
             });
@@ -122,7 +115,7 @@ class I extends (r = o.ZP.Store) {
         MESSAGE_DELETE_BULK: function (e) {
             let { ids: t, channelId: n } = e;
             for (let e of t)
-                p({
+                h({
                     messageId: e,
                     channelId: n
                 });
@@ -130,7 +123,7 @@ class I extends (r = o.ZP.Store) {
         MESSAGE_UPDATE: function (e) {
             let { message: t } = e;
             if (null == t.id || null == t.channel_id) return !1;
-            let n = h({
+            let n = f({
                     messageId: t.id,
                     channelId: t.channel_id
                 }),
@@ -138,9 +131,5 @@ class I extends (r = o.ZP.Store) {
             if ((null == r ? void 0 : r.message) == null) return !1;
             let i = { ...r };
             (i.message = (0, c.wi)(r.message, t)), _.set(n, i);
-        },
-        MESSAGE_REMINDER_NOTIFIED: function (e) {
-            let { messageId: t } = e;
-            f.add(t);
         }
     }));

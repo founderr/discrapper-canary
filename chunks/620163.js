@@ -43,8 +43,8 @@ var a = t(990547),
     F = t(358085),
     y = t(998502),
     V = t(392735),
-    w = t(695346),
-    Y = t(604227),
+    Y = t(695346),
+    w = t(604227),
     k = t(38915),
     H = t(498639),
     W = t(748717),
@@ -92,12 +92,12 @@ var a = t(990547),
 let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     ej = eO.Z,
     eB = (e) => {
-        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eB, impressionSource: eU, numOfPendingFamilyRequests: eG, isOverlaySupported: eF, isClipsBetaTagShowing: ey = !1, shouldMergeGameSettings: eV, isUserSettingsSearchEnabled: ew, isKeywordFilteringEnabled: eY, isStaff: ek, isInappropriateConversationWarningEnabled: eH, paymentsBlocked: eW, isEligibleForQuests: eK, showGiftNitro: ez, isStricterMessageRequestsEnabled: eQ, hasLibraryApplication: eX, hasTOTPEnabled: eq, canBroadcastActivity: eJ, developerMode: e$, isSafetySettingsV2Enabled: e0 } = e;
+        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eB, impressionSource: eU, numOfPendingFamilyRequests: eG, isOverlaySupported: eF, isClipsBetaTagShowing: ey = !1, shouldMergeGameSettings: eV, isUserSettingsSearchEnabled: eY, isKeywordFilteringEnabled: ew, isStaff: ek, isInappropriateConversationWarningEnabled: eH, paymentsBlocked: eW, isEligibleForQuests: eK, showGiftNitro: ez, isStricterMessageRequestsEnabled: eQ, hasLibraryApplication: eX, hasTOTPEnabled: eq, canBroadcastActivity: eJ, developerMode: e$, isSafetySettingsV2Enabled: e0 } = e;
         return Object.freeze({
             [eM.s6.SEARCH_NO_RESULTS]: {
                 section: _.ID.CUSTOM,
                 element: em.Z,
-                predicate: () => ew
+                predicate: () => eY
             },
             [eM.s6.ACCOUNT]: {
                 section: eD.oAB.ACCOUNT,
@@ -305,6 +305,16 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eb.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_CONTENT_SOCIAL],
                 parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL
             },
+            [eM.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY]: {
+                section: eD.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eb.Z.Messages.FRIEND_REQUESTS],
+                parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL
+            },
+            [eM.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS]: {
+                section: eD.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eb.Z.Messages.FRIEND_REQUESTS],
+                parent: eM.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY
+            },
             [eM.s6.PRIVACY_SENSITIVE_MEDIA]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eb.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_FILTER, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_BLUR, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_SENSITIVE_CONTENT, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_EXPLICIT],
@@ -422,13 +432,13 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eD.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eb.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE, eb.Z.Messages.USER_KEYWORD_FILTERS_SEARCH_TERM_KEYWORD],
                 parent: eM.s6.PRIVACY_USER_SETTINGS,
-                predicate: () => eY
+                predicate: () => ew
             },
             [eM.s6.PRIVACY_KEYWORD_FILTER_V2]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eb.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_SEARCHABLE, eb.Z.Messages.USER_KEYWORD_FILTERS_SEARCH_TERM_KEYWORD],
                 parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL,
-                predicate: () => eY
+                predicate: () => ew
             },
             [eM.s6.PRIVACY_TERMS_POLICY]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY,
@@ -518,7 +528,8 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eD.oAB.FRIEND_REQUESTS,
                 searchableTitles: [eb.Z.Messages.FRIEND_REQUESTS],
                 label: eb.Z.Messages.FRIEND_REQUESTS,
-                element: eo.Z
+                element: eo.Z,
+                predicate: () => !e0
             },
             [eM.s6.PREMIUM]: {
                 section: eD.oAB.PREMIUM,
@@ -861,7 +872,7 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eD.oAB.VOICE,
                 searchableTitles: [eb.Z.Messages.FORM_LABEL_STREAM_INFO_OVERLAY],
                 parent: eM.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => w.Sb.getSetting()
+                predicate: () => Y.Sb.getSetting()
             },
             [eM.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_AEC_DUMP]: {
                 section: eD.oAB.VOICE,
@@ -1541,7 +1552,7 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [eM.s6.CLIENT_DEBUG_INFO]: {
                 section: _.ID.CUSTOM,
-                element: Y.Z
+                element: w.Z
             }
         });
     };
