@@ -254,10 +254,11 @@ t.default = function (e) {
         eR = (0, c.e7)([h.Z], () => h.Z.gradientPreset),
         ey = !(0, c.e7)([S.Z], () => (0, f.wj)(S.Z.theme)) && null == eR,
         eM = r.useCallback(
-            async (e, t) => {
-                await K(t), e && eZ(e);
+            async (e, n) => {
+                let a = n && !t;
+                await K(a), e && eZ(e);
             },
-            [K, eZ]
+            [K, eZ, t]
         );
     return (0, a.jsxs)(_.Gt, {
         value: i,
@@ -378,7 +379,8 @@ t.default = function (e) {
                 })
             }),
             eS && (0, a.jsx)(X.Z, {}),
-            U !== er.f7.VISIBLE &&
+            !t &&
+                U !== er.f7.VISIBLE &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(en.Z, {

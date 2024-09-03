@@ -3,7 +3,8 @@ n.d(t, {
         return o;
     }
 }),
-    n(653041);
+    n(653041),
+    n(47120);
 var i = n(652874),
     a = n(731965),
     s = n(229893);
@@ -26,6 +27,7 @@ let o = (0, i.Z)((e) => ({
     chunkedPages: [],
     fetchableGuildIds: [],
     _rawItems: [],
+    _removedItems: [],
     updatePage: (t) => {
         (0, a.j)(() => {
             e((e) => {
@@ -55,12 +57,13 @@ let o = (0, i.Z)((e) => ({
     updatePaginationResults: (t) => {
         (0, a.j)(() => {
             e((e) => {
-                let { pageSize: n, currentPage: i } = e;
+                let { _removedItems: n, pageSize: i, currentPage: a } = e,
+                    s = t.filter((e) => !n.includes(e));
                 return {
-                    _rawItems: t,
-                    chunkedPages: r(t, n),
-                    totalItems: t.length,
-                    fetchableGuildIds: l(t, i - 1, n)
+                    _rawItems: s,
+                    chunkedPages: r(s, i),
+                    totalItems: s.length,
+                    fetchableGuildIds: l(s, a - 1, i)
                 };
             });
         });
@@ -78,13 +81,15 @@ let o = (0, i.Z)((e) => ({
     removeGuilds: (t) => {
         (0, a.j)(() => {
             e((e) => {
-                let { _rawItems: n, pageSize: i, currentPage: a } = e,
-                    s = n.filter((e) => !t.includes(e));
+                let { _rawItems: n, _removedItems: i, pageSize: a, currentPage: s } = e,
+                    o = n.filter((e) => !t.includes(e)),
+                    c = t.filter((e) => !i.includes(e));
                 return {
-                    _rawItems: s,
-                    chunkedPages: r(s, i),
-                    totalItems: s.length,
-                    fetchableGuildIds: l(s, a - 1, i)
+                    _rawItems: o,
+                    _removedItems: [...i, ...c],
+                    chunkedPages: r(o, a),
+                    totalItems: o.length,
+                    fetchableGuildIds: l(o, s - 1, a)
                 };
             });
         });

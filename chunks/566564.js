@@ -96,6 +96,7 @@ t.Z = (e) => {
                                       (0, a.jsx)('div', {
                                           className: h.heroHeaderButtonContainer,
                                           children: (0, a.jsx)(c.Button, {
+                                              className: h.heroHeaderButton,
                                               color: c.ButtonColors.WHITE,
                                               onClick: () => N(),
                                               children: b.Z.Messages.COLLECTIBLES_SHOP_THE_VAULT_COLLECTION
@@ -122,9 +123,10 @@ t.Z = (e) => {
                               (0, a.jsxs)('div', {
                                   className: o()(h.section, h.col2, h.featuredBlocksContainer),
                                   children: [
-                                      (0, a.jsxs)('div', {
+                                      (0, a.jsxs)(c.Clickable, {
                                           className: o()(h.featuredBlock),
                                           style: { backgroundImage: 'url('.concat(I, ')') },
+                                          onClick: () => N(i.T.DOJO),
                                           children: [
                                               (null === (T = Z.feature) || void 0 === T ? void 0 : T.unpublishedAt) != null &&
                                                   (0, a.jsx)(c.TextBadge, {
@@ -140,9 +142,10 @@ t.Z = (e) => {
                                               })
                                           ]
                                       }),
-                                      (0, a.jsxs)('div', {
+                                      (0, a.jsxs)(c.Clickable, {
                                           className: o()(h.featuredBlock),
                                           style: { backgroundImage: 'url('.concat(x, ')') },
+                                          onClick: () => N(i.T.ANIME_V2),
                                           children: [
                                               (0, a.jsx)(c.TextBadge, {
                                                   disableColor: !0,

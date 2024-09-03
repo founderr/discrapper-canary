@@ -16,6 +16,7 @@ e.exports = {
     heroHeaderBadgeLogoSummaryContainer: 'heroHeaderBadgeLogoSummaryContainer_ebba41',
     heroHeaderLogo: 'heroHeaderLogo_ebba41',
     heroHeaderButtonContainer: 'heroHeaderButtonContainer_ebba41',
+    heroHeaderButton: 'heroHeaderButton_ebba41',
     limitedTimeBadge: 'limitedTimeBadge_ebba41',
     shopAll: 'shopAll_ebba41',
     feed: 'feed_ebba41',
