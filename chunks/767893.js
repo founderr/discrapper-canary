@@ -25,21 +25,13 @@ let N = {
     right: -4
 };
 function f(e) {
-    let { channel: t, children: n, jumpToMessage: a } = e;
+    let { channel: t, children: n } = e;
     return (0, i.jsx)(r.tE, {
         offset: N,
         children: (0, i.jsxs)('div', {
             className: h.channelHeader,
             'data-recents-channel': t.id,
-            children: [
-                (0, i.jsx)(C, { channel: t }),
-                t.isPrivate() ? null : (0, i.jsx)(l.Fbu, { size: 'xxs' }),
-                (0, i.jsx)(p, {
-                    channel: t,
-                    jumpToMessage: a
-                }),
-                n
-            ]
+            children: [(0, i.jsx)(C, { channel: t }), t.isPrivate() ? null : (0, i.jsx)(l.Fbu, { size: 'xxs' }), (0, i.jsx)(p, { channel: t }), n]
         })
     });
 }
@@ -68,29 +60,25 @@ function C(e) {
     });
 }
 function p(e) {
-    let { channel: t, jumpToMessage: n } = e,
-        a = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id)),
-        s = (0, d.ZP)(t, !1),
-        r = (0, _.KS)(t, a),
-        l = t.isPrivate() || null == r,
-        u = t.isDM() ? T.Z.Messages.FOR_LATER_DIRECT_MESSAGE_WITH.format({ username: s }) : s;
+    let { channel: t } = e,
+        n = (0, o.e7)([I.Z], () => I.Z.getGuild(t.guild_id)),
+        a = (0, d.ZP)(t, !1),
+        s = (0, _.KS)(t, n),
+        r = t.isPrivate() || null == s,
+        l = t.isDM() ? T.Z.Messages.FOR_LATER_DIRECT_MESSAGE_WITH.format({ username: a }) : a;
     return (0, i.jsxs)('div', {
         className: h.channelNameSection,
         children: [
-            l
+            r
                 ? null
-                : (0, i.jsx)(r, {
+                : (0, i.jsx)(s, {
                       className: h.channelTypeIcon,
                       size: 'xxs'
                   }),
-            (0, i.jsx)(c.Clickable, {
-                onClick: n,
-                className: h.channelName,
-                children: (0, i.jsx)(c.Heading, {
-                    variant: 'text-md/semibold',
-                    color: 'header-secondary',
-                    children: u
-                })
+            (0, i.jsx)(c.Heading, {
+                variant: 'text-md/semibold',
+                color: 'header-secondary',
+                children: l
             })
         ]
     });

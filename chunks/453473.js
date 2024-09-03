@@ -238,16 +238,18 @@ function G(e) {
         : (0, i.jsxs)('div', {
               className: D.messageContainer,
               children: [
+                  (0, i.jsx)(_.Clickable, {
+                      className: D.clickableMessageBackground,
+                      onClick: o,
+                      'aria-label': b.Z.Messages.JUMP_TO_MESSAGE
+                  }),
                   null != t.saveData.dueAt
                       ? (0, i.jsx)(L.Z, {
                             reminder: t,
                             throttledNow: s
                         })
                       : null,
-                  (0, i.jsx)(M.Z, {
-                      channel: l,
-                      jumpToMessage: o
-                  }),
+                  (0, i.jsx)(M.Z, { channel: l }),
                   (0, i.jsx)(
                       m.Z,
                       {
