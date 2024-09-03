@@ -34823,7 +34823,7 @@ img.thumbnail_c64476 {
 }
 
 .section_ba4d80:empty,
-.section_ba4d80:has(>.heading_ba4d80:only-child) {
+.section_ba4d80:has(>.headings_ba4d80:only-child) {
     display: none
 }
 
