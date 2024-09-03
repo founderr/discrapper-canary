@@ -1,90 +1,90 @@
 n.d(t, {
     $7: function () {
-        return es;
+        return el;
     },
     $8: function () {
-        return eZ;
+        return ej;
     },
     $e: function () {
-        return Y;
+        return W;
     },
     $n: function () {
-        return e3;
+        return e5;
     },
     A5: function () {
-        return eu;
+        return ed;
     },
     AU: function () {
-        return em;
+        return eg;
     },
     Bo: function () {
-        return e6;
+        return e8;
     },
     C2: function () {
-        return eS;
+        return eN;
     },
     Cj: function () {
         return h;
     },
     Cn: function () {
-        return ep;
+        return em;
     },
     EA: function () {
         return o;
     },
     ET: function () {
-        return eN;
+        return eR;
     },
     EZ: function () {
         return E;
     },
     F_: function () {
-        return V;
+        return Z;
     },
     GP: function () {
-        return et;
+        return er;
     },
     HO: function () {
-        return ej;
+        return eK;
     },
     Hk: function () {
-        return eg;
+        return eA;
     },
     IW: function () {
-        return J;
+        return et;
     },
     Lw: function () {
-        return eB;
+        return eV;
     },
     M_: function () {
-        return e5;
+        return e7;
     },
     Nl: function () {
-        return eP;
+        return ew;
     },
     No: function () {
-        return $;
+        return ee;
     },
     QI: function () {
-        return e0;
+        return e2;
     },
     QP: function () {
         return c;
     },
     RQ: function () {
-        return j;
+        return K;
     },
     RU: function () {
-        return ey;
+        return eD;
     },
     Rg: function () {
-        return ef;
+        return ep;
     },
     Rr: function () {
-        return er;
+        return ea;
     },
     Rt: function () {
-        return eR;
+        return eC;
     },
     Si: function () {
         return i;
@@ -93,178 +93,184 @@ n.d(t, {
         return T;
     },
     TD: function () {
-        return eq;
+        return eX;
     },
     TL: function () {
-        return eT;
+        return eS;
     },
     Tp: function () {
-        return e$;
+        return e0;
     },
     UA: function () {
-        return ea;
-    },
-    UD: function () {
-        return q;
-    },
-    Ue: function () {
         return eo;
     },
+    UD: function () {
+        return X;
+    },
+    Ue: function () {
+        return eu;
+    },
     Uq: function () {
-        return eF;
+        return eH;
     },
     V4: function () {
-        return e1;
+        return e3;
+    },
+    VU: function () {
+        return S;
     },
     Xh: function () {
         return a;
     },
     Y1: function () {
-        return eW;
-    },
-    YQ: function () {
-        return W;
-    },
-    Z1: function () {
-        return Q;
-    },
-    Zh: function () {
-        return H;
-    },
-    _k: function () {
-        return eY;
-    },
-    a1: function () {
-        return eX;
-    },
-    a7: function () {
-        return eA;
-    },
-    b6: function () {
-        return Z;
-    },
-    bg: function () {
         return ez;
     },
+    YQ: function () {
+        return z;
+    },
+    Z1: function () {
+        return $;
+    },
+    Zh: function () {
+        return Y;
+    },
+    _k: function () {
+        return eW;
+    },
+    a1: function () {
+        return eJ;
+    },
+    a7: function () {
+        return eO;
+    },
+    b6: function () {
+        return j;
+    },
+    bg: function () {
+        return eQ;
+    },
     cb: function () {
-        return ei;
+        return es;
     },
     cd: function () {
         return l;
     },
     dB: function () {
-        return eD;
+        return eM;
     },
     dJ: function () {
-        return z;
+        return Q;
     },
     dO: function () {
-        return eO;
+        return ev;
     },
     dT: function () {
-        return eL;
+        return eb;
+    },
+    eG: function () {
+        return e9;
     },
     eZ: function () {
-        return e2;
+        return e4;
     },
     ee: function () {
-        return ex;
+        return ek;
     },
     ff: function () {
-        return eE;
+        return eh;
     },
     fz: function () {
         return g;
     },
     gW: function () {
-        return eU;
+        return ex;
     },
     gh: function () {
-        return ec;
+        return e_;
     },
     h1: function () {
         return d;
     },
     h8: function () {
-        return ev;
+        return ey;
     },
     hs: function () {
-        return eC;
+        return eL;
     },
     i_: function () {
-        return eh;
+        return eI;
     },
     ih: function () {
-        return eM;
+        return eU;
     },
     in: function () {
         return u;
     },
     jy: function () {
-        return eJ;
+        return e1;
     },
     m0: function () {
-        return eQ;
+        return e$;
     },
     m8: function () {
-        return ed;
+        return eE;
     },
     mn: function () {
-        return ee;
+        return en;
     },
     n5: function () {
-        return ew;
-    },
-    nG: function () {
         return eG;
     },
+    nG: function () {
+        return eB;
+    },
     nH: function () {
-        return eK;
+        return eq;
     },
     nL: function () {
         return f;
     },
     o4: function () {
-        return X;
+        return J;
     },
     p9: function () {
         return r;
     },
     pH: function () {
-        return eH;
+        return eY;
     },
     pj: function () {
-        return en;
+        return ei;
     },
     rB: function () {
-        return eb;
+        return eP;
     },
     rV: function () {
         return s;
     },
     rX: function () {
-        return e_;
+        return ef;
     },
     rt: function () {
-        return e4;
+        return e6;
     },
     vL: function () {
-        return ek;
+        return eF;
     },
     wb: function () {
-        return eV;
+        return eZ;
     },
     wh: function () {
-        return eI;
+        return eT;
     },
     y7: function () {
-        return K;
+        return q;
     },
     ys: function () {
         return _;
     },
     zp: function () {
-        return el;
+        return ec;
     }
 }),
     n(47120);
@@ -304,12 +310,14 @@ var r,
     x,
     G,
     k,
-    B = n(981631),
-    F = n(185923);
-((S = r || (r = {}))[(S.TIER_1 = 1)] = 'TIER_1'), (S[(S.TIER_2 = 2)] = 'TIER_2'), (S[(S.TIER_0 = 3)] = 'TIER_0');
-let V = void 0,
-    H = void 0,
-    Z = [
+    B,
+    F,
+    V = n(981631),
+    H = n(185923);
+((A = r || (r = {}))[(A.TIER_1 = 1)] = 'TIER_1'), (A[(A.TIER_2 = 2)] = 'TIER_2'), (A[(A.TIER_0 = 3)] = 'TIER_0');
+let Z = void 0,
+    Y = void 0,
+    j = [
         {
             value: null,
             label: 'Non-Nitro'
@@ -327,28 +335,28 @@ let V = void 0,
             label: 'Standard'
         }
     ],
-    Y = Object.freeze({
+    W = Object.freeze({
         3: 0,
         1: 1,
         2: 2
     }),
-    j = '521842831262875670';
-((A = i || (i = {})).NONE = '628379670982688768'), (A.TIER_0 = '978380684370378762'), (A.TIER_1 = '521846918637420545'), (A.TIER_2 = '521847234246082599'), (A.GUILD = '590663762298667008'), (A.LEGACY = '521842865731534868');
-let W = ['628379670982688768', '978380684370378762', '521846918637420545', '521847234246082599', '590663762298667008'],
-    K = Object.freeze({
+    K = '521842831262875670';
+((N = i || (i = {})).NONE = '628379670982688768'), (N.TIER_0 = '978380684370378762'), (N.TIER_1 = '521846918637420545'), (N.TIER_2 = '521847234246082599'), (N.GUILD = '590663762298667008'), (N.LEGACY = '521842865731534868');
+let z = ['628379670982688768', '978380684370378762', '521846918637420545', '521847234246082599', '590663762298667008'],
+    q = Object.freeze({
         '978380684370378762': 3,
         '521846918637420545': 1,
         '521847234246082599': 2,
         '628379670982688768': 2,
         '521842865731534868': 2
     });
-((N = a || (a = {})).NONE_MONTH = '628379151761408000'), (N.NONE_YEAR = '628381571568631808'), (N.PREMIUM_MONTH_TIER_0 = '978380692553465866'), (N.PREMIUM_YEAR_TIER_0 = '1024422698568122368'), (N.PREMIUM_MONTH_TIER_1 = '511651871736201216'), (N.PREMIUM_YEAR_TIER_1 = '511651876987469824'), (N.PREMIUM_MONTH_TIER_2 = '511651880837840896'), (N.PREMIUM_YEAR_TIER_2 = '511651885459963904'), (N.PREMIUM_MONTH_GUILD = '590665532894740483'), (N.PREMIUM_YEAR_GUILD = '590665538238152709'), (N.NONE_3_MONTH = '944265614527037440'), (N.NONE_6_MONTH = '944265636643602432'), (N.PREMIUM_3_MONTH_TIER_2 = '642251038925127690'), (N.PREMIUM_6_MONTH_TIER_2 = '944037208325619722'), (N.PREMIUM_3_MONTH_GUILD = '944037355453415424'), (N.PREMIUM_6_MONTH_GUILD = '944037391444738048'), (N.PREMIUM_MONTH_LEGACY = '511651856145973248'), (N.PREMIUM_YEAR_LEGACY = '511651860671627264');
-let z = new Set(['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904', '511651856145973248', '511651860671627264']),
-    q = new Set(['511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904']),
-    Q = new Set(['590665532894740483', '944037355453415424', '944037391444738048', '590665538238152709']),
-    X = new Set(['642251038925127690', '944037208325619722', '944037355453415424', '944037391444738048']),
-    $ = new Set(['978380692553465866', '511651871736201216', '511651880837840896']),
-    J = Object.freeze({
+((O = a || (a = {})).NONE_MONTH = '628379151761408000'), (O.NONE_YEAR = '628381571568631808'), (O.PREMIUM_MONTH_TIER_0 = '978380692553465866'), (O.PREMIUM_YEAR_TIER_0 = '1024422698568122368'), (O.PREMIUM_MONTH_TIER_1 = '511651871736201216'), (O.PREMIUM_YEAR_TIER_1 = '511651876987469824'), (O.PREMIUM_MONTH_TIER_2 = '511651880837840896'), (O.PREMIUM_YEAR_TIER_2 = '511651885459963904'), (O.PREMIUM_MONTH_GUILD = '590665532894740483'), (O.PREMIUM_YEAR_GUILD = '590665538238152709'), (O.NONE_3_MONTH = '944265614527037440'), (O.NONE_6_MONTH = '944265636643602432'), (O.PREMIUM_3_MONTH_TIER_2 = '642251038925127690'), (O.PREMIUM_6_MONTH_TIER_2 = '944037208325619722'), (O.PREMIUM_3_MONTH_GUILD = '944037355453415424'), (O.PREMIUM_6_MONTH_GUILD = '944037391444738048'), (O.PREMIUM_MONTH_LEGACY = '511651856145973248'), (O.PREMIUM_YEAR_LEGACY = '511651860671627264');
+let Q = new Set(['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904', '511651856145973248', '511651860671627264']),
+    X = new Set(['511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904']),
+    $ = new Set(['590665532894740483', '944037355453415424', '944037391444738048', '590665538238152709']),
+    J = new Set(['642251038925127690', '944037208325619722', '944037355453415424', '944037391444738048']),
+    ee = new Set(['978380692553465866', '511651871736201216', '511651880837840896']),
+    et = Object.freeze({
         '978380684370378762': '978380692553465866',
         '521846918637420545': '511651871736201216',
         '521847234246082599': '511651880837840896',
@@ -356,7 +364,7 @@ let z = new Set(['978380692553465866', '1024422698568122368', '51165187173620121
         '590663762298667008': void 0,
         '521842865731534868': void 0
     }),
-    ee = Object.freeze({
+    en = Object.freeze({
         '978380684370378762': '1024422698568122368',
         '521846918637420545': '511651876987469824',
         '521847234246082599': '511651885459963904',
@@ -364,8 +372,8 @@ let z = new Set(['978380692553465866', '1024422698568122368', '51165187173620121
         '590663762298667008': void 0,
         '521842865731534868': void 0
     });
-((O = s || (s = {}))[(O.MONTH = 1)] = 'MONTH'), (O[(O.YEAR = 2)] = 'YEAR'), (O[(O.DAY = 3)] = 'DAY'), ((R = o || (o = {}))[(R.DAY = 1)] = 'DAY'), (R[(R.WEEK = 2)] = 'WEEK'), (R[(R.MONTH = 3)] = 'MONTH'), (R[(R.YEAR = 4)] = 'YEAR');
-let et = Object.freeze({
+((R = s || (s = {}))[(R.MONTH = 1)] = 'MONTH'), (R[(R.YEAR = 2)] = 'YEAR'), (R[(R.DAY = 3)] = 'DAY'), ((v = o || (o = {}))[(v.DAY = 1)] = 'DAY'), (v[(v.WEEK = 2)] = 'WEEK'), (v[(v.MONTH = 3)] = 'MONTH'), (v[(v.YEAR = 4)] = 'YEAR');
+let er = Object.freeze({
         628379151761408000: {
             id: '628379151761408000',
             name: 'None Monthly',
@@ -503,50 +511,42 @@ let et = Object.freeze({
             intervalCount: 1
         }
     }),
-    en = new Set(['511651880837840896']),
-    er = 30,
-    ei = 2,
-    ea = 3,
-    es = 28,
-    eo = 30,
-    el = 7,
-    eu = 7,
-    ec = 30,
-    ed = '775514091874680832',
-    e_ = '845031178288889946',
-    eE = 432000000,
-    ef = 14,
-    eh = '520373071933079552',
-    ep = '902329034132684800',
-    eI = '983601860436819968',
-    em = '983601860436819969',
-    eT = '984244797441048577',
-    eg = '1215818925846036480',
-    eS = '1004850445463584768',
-    eA = '1073698058383917056',
-    eN = '1070132870233980928',
-    eO = '1267968635301789696',
-    eR = '1268347360493174784',
-    ev = [eO, '1267969164312576000'],
-    eC = '1150904354090532864',
-    ey = '1199128659810582528',
-    eL = '1204865493622587392',
-    eD = '1204867673024888832',
-    eb = '1215346678383509504',
-    eM = '1215366184820539392',
-    eP = '1223319122125783040',
-    eU = '1223380890109870080',
-    ew = '1265748546523762828',
-    ex = [eP, eU],
-    eG = Object.freeze({
-        [eh]: {
-            id: eh,
-            skus: ['521847234246082599']
-        },
-        [ep]: {
-            id: ep,
-            skus: ['521847234246082599']
-        },
+    ei = new Set(['511651880837840896']),
+    ea = 30,
+    es = 2,
+    eo = 3,
+    el = 28,
+    eu = 30,
+    ec = 7,
+    ed = 7,
+    e_ = 30,
+    eE = '775514091874680832',
+    ef = '845031178288889946',
+    eh = 432000000,
+    ep = 14,
+    eI = '520373071933079552',
+    em = '902329034132684800',
+    eT = '983601860436819968',
+    eg = '983601860436819969',
+    eS = '984244797441048577',
+    eA = '1215818925846036480',
+    eN = '1004850445463584768',
+    eO = '1073698058383917056',
+    eR = '1070132870233980928',
+    ev = '1267968635301789696',
+    eC = '1268347360493174784',
+    ey = [ev, '1267969164312576000'],
+    eL = '1150904354090532864',
+    eD = '1199128659810582528',
+    eb = '1204865493622587392',
+    eM = '1204867673024888832',
+    eP = '1215346678383509504',
+    eU = '1215366184820539392',
+    ew = '1223319122125783040',
+    ex = '1223380890109870080',
+    eG = '1265748546523762828',
+    ek = [ew, ex],
+    eB = Object.freeze({
         [eI]: {
             id: eI,
             skus: ['521847234246082599']
@@ -559,242 +559,261 @@ let et = Object.freeze({
             id: eT,
             skus: ['521847234246082599']
         },
+        [eg]: {
+            id: eg,
+            skus: ['521847234246082599']
+        },
         [eS]: {
             id: eS,
             skus: ['521847234246082599']
         },
         [eN]: {
             id: eN,
+            skus: ['521847234246082599']
+        },
+        [eR]: {
+            id: eR,
             skus: ['978380684370378762']
+        },
+        [eO]: {
+            id: eO,
+            skus: ['521847234246082599']
         },
         [eA]: {
             id: eA,
             skus: ['521847234246082599']
         },
-        [eg]: {
-            id: eg,
-            skus: ['521847234246082599']
-        },
-        [eR]: {
-            id: eR,
+        [eC]: {
+            id: eC,
             skus: ['521847234246082599']
         }
     });
-((v = l || (l = {})).ANIMATED_GUILD_BANNER_TOOLTIP = 'animated_guild_banner_tooltip'),
-    (v.EMOJI_PICKER_SEARCH = 'emoji_picker_search'),
-    (v.EMOJI_PICKER_EMOJI_CLICKED = 'emoji_picker_emoji_clicked'),
-    (v.EMOJI_PICKER_STICKER_CLICKED = 'emoji_picker_sticker_clicked'),
-    (v.EMOJI_PICKER_REACTION_EMOJI_CLICKED = 'emoji_picker_reaction_emoji_clicked'),
-    (v.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED = 'emoji_picker_super_reaction_emoji_clicked'),
-    (v.EMOJI_PICKER_STATUS_EMOJI_CLICKED = 'emoji_picker_status_emoji_clicked'),
-    (v.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED = 'emoji_picker_top_server_emoji_clicked'),
-    (v.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED = 'emoji_picker_newly_added_emoji_clicked'),
-    (v.EMOJI_AUTOSUGGEST_CLICKED = 'emoji_autosuggest_clicked'),
-    (v.EMOJI_AUTOCOMPLETE_INLINE = 'emoji_autocomplete_inline'),
-    (v.EMOJI_AUTOCOMPLETE_MODAL = 'emoji_autocomplete_modal'),
-    (v.EMOJI_IN_MESSAGE_HOVER = 'emoji_in_message_hover'),
-    (v.EMOJI_IN_REACTION_HOVER = 'emoji_in_reaction_hover'),
-    (v.EMOJI_IN_BURST_REACTION_HOVER = 'emoji_in_burst_reaction_hover'),
-    (v.EMOJI_IN_BURST_REACTION_HOVER_UPSELL = 'emoji_in_burst_reaction_hover_upsell'),
-    (v.EMOJI_PICKER_FLOATING_UPSELL = 'emoji_picker_floating_upsell'),
-    (v.STICKER_IN_MESSAGE_HOVER = 'sticker_in_message_hover'),
-    (v.EMPTY_STICKER_PICKER_UPSELL = 'empty_sticker_picker_upsell'),
-    (v.STREAM_QUALITY_INDICATOR = 'stream_quality_indicator'),
-    (v.GIFT_STREAM_QUALITY_INDICATOR = 'gift_stream_quality_indicator'),
-    (v.STREAM_QUALITY_UPSELL = 'stream_quality_upsell'),
-    (v.MESSAGE_LENGTH_UPSELL = 'message_length_upsell'),
-    (v.MESSAGE_LENGTH_IN_EDITOR_UPSELL = 'message_length_in_editor_upsell'),
-    (v.CUSTOM_PROFILE_UPSELL = 'custom profiles upsell modal'),
-    (v.CUSTOM_PROFILE_TRY_OUT_UPSELL = 'try out custom profile in settings upsell'),
-    (v.VIDEO_BACKGROUNDS_MODAL = 'video backgrounds modal'),
-    (v.VIDEO_BACKGROUNDS_INLINE = 'video backgrounds inline'),
-    (v.GUILD_CAP_INLINE_SERVER_LIST = 'guild_cap_inline_server_list'),
-    (v.GUILD_PREMIUM_UPSELL_MODAL = 'premium guild premium upsell modal'),
-    (v.GUILD_CAP_INLINE_INVITE_MODAL = 'guild_cap_inline_invite_modal'),
-    (v.GUILD_CAP_MODAL_UPSELL = 'guild_cap_modal_upsell'),
-    (v.PREMIUM_GUILD_IDENTITY_MODAL = 'premium guild identity upsell alert'),
-    (v.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON = 'custom profiles settings banner upsell'),
-    (v.STICKER_PICKER_UPSELL = 'sticker_picker_upsell'),
-    (v.ANIMATED_AVATAR_PREVIEW_GIF_MODAL = 'animated avatar preview gif modal'),
-    (v.PREMIUM_PROGRESS_BAR = 'premium_progress_bar_tooltip'),
-    (v.INVITE_SPLASH_UPSELL = 'premium_invite_splash_upsell'),
-    (v.ANIMATED_USER_AVATAR_MODAL = 'animated user avatar upsell modal'),
-    (v.UPLOAD_ERROR_UPSELL = 'upload error upsell'),
-    (v.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE = 'premium guild member profile upsell inline'),
-    (v.CONCURRENT_ACTIVITIES = 'Concurrent Activities'),
-    (v.PREMIUM_UNCANCEL_WINBACK_MODAL_VIEWED = 'premium_uncancel_winback_modal_viewed'),
-    (v.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET = 'animated_video_background_new_preset'),
-    (v.LOW_PRICE_EXPERIMENT_TOOLTIP = 'low_price_experiment_tooltip'),
-    (v.PREMIUM_PROFILE_BADGE_UPSELL = 'premium_profile_badge_upsell'),
-    (v.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI = 'emoji'),
-    (v.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_PROFILE_CUSTOMIZATION = 'profile customization'),
-    (v.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_HD_STREAMING = 'hd streaming'),
-    (v.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_LARGER_FILE_UPLOADS = 'larger file uploads'),
-    (v.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_BOGO = 'bogo'),
-    (v.VOICE_CHANNEL_EFFECTS_UPSELL = 'voice_channel_effects_upsell'),
-    (v.VOICE_CHANNEL_EFFECTS_BAR_EMOJI_UPSELL = 'Voice Channel Effect Bar Emoji Upsell'),
-    (v.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED = 'voice_channel_effects_toggle_clicked'),
-    (v.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED = 'voice_channel_effects_toggle_clicked_expanded'),
-    (v.PROFILE_EFFECTS_INLINE_SETTINGS = 'profile_effects_inline_settings'),
-    (v.PROFILE_EFFECTS_INLINE_SETTINGS_MOBILE = 'profile_effects_inline_settings_mobile'),
-    (v.HIGH_VIDEO_QUALITY_UPSELL = 'high_video_quality_upsell'),
-    (v.PREMIUM_PROFILE_TRY_IT_OUT = 'premium_profile_try_it_out'),
-    (v.BURST_REACTION_RAIL_UPSELL = 'burst_reaction_rail_upsell'),
-    (v.BURST_REACTION_UPSELL = 'burst_reaction_upsell'),
-    (v.BURST_REACTION_QUICK_ACTION_UPSELL = 'burst_reaction_quick_action_upsell'),
-    (v.BURST_REACTION_CONTEXT_MENU_UPSELL = 'burst_reaction_context_menu_upsell'),
-    (v.PREMIUM_CLIENT_THEME_TRY_IT_OUT = 'premium_client_theme_try_it_out'),
-    (v.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL = 'premium_client_theme_settings_upsell'),
-    (v.VIDEO_STAGE_LIMIT = 'video_stage_limit'),
-    (v.SOUND_PICKER_SOUND_CLICKED = 'sound_picker_sound_clicked'),
-    (v.APP_ICON_UPSELL = 'app_icon_upsell'),
-    (v.COLLECTIBLES_SHOP = 'collectibles_shop'),
-    (v.COLLECTIBLES_PROFILE_SETTINGS_UPSELL = 'collectibles_profile_settings_upsell'),
-    (v.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL = 'collectibles_premium_marketing_page_upsell'),
-    (v.CLIPS_GUILD_SIDEBAR_COACHMARK_PREMIUM_EARLY_ACCESS_UPSELL = 'clips_guild_sidebar_coachmark_premium_early_access_upsell'),
-    (v.CLIPS_GO_LIVE_PREMIUM_EARLY_ACCESS_ROADBLOCK_UPSELL = 'clips_go_live_premium_early_access_roadblock_upsell'),
-    (v.CUSTOM_NOTIFICATION_SOUNDS_UPSELL = 'custom_notification_sounds_upsell'),
-    (v.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL = 'custom_notification_sounds_settings_inline_upsell'),
-    (v.HD_STREAMING_VIEWER_UPSELL = 'hd_streaming_viewer_upsell'),
-    (v.REVERSE_TRIAL_ENDED_UPSELL = 'reverse_trial_ended_upsell'),
-    (v.REVERSE_TRIAL_FOLLOWUP_UPSELL = 'reverse_trial_followup_upsell'),
-    (v.FOR_LATER_MODAL_UPSELL = 'for_later_modal_upsell'),
-    (v.EMOJI_EVERYWHERE_INLINE_UPSELL = 'emoji_everywhere_inline_upsell'),
-    (v.EMOJI_EVERYWHERE_UPSELL = 'emoji_everywhere_upsell'),
-    (v.SOUNDBOARD_EVERYWHERE_INLINE_UPSELL = 'soundboard_everywhere_inline_upsell'),
-    (v.SOUNDBOARD_EVERYWHERE_UPSELL = 'soundboard_everywhere_upsell'),
-    (v.LARGER_FILE_UPLOAD_INLINE_UPSELL = 'larger_file_upload_inline_upsell'),
-    (v.LARGER_FILE_UPLOAD_UPSELL = 'larger_file_upload_upsell'),
-    (v.ANIMATED_EMOJI_UPSELL = 'animated_emoji_upsell'),
-    (v.CLIENT_THEMES_UPSELL = 'client_themes_upsell'),
-    (v.APP_ICONS_INLINE_UPSELL = 'app_icons_inline_upsell'),
-    (v.APP_ICONS_UPSELL = 'app_icons_upsell'),
-    ((C = u || (u = {}))[(C.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'),
-    (C[(C.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'),
-    (C[(C.GUILD_BOOST = 4)] = 'GUILD_BOOST'),
-    (C[(C.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0');
-let ek = Object.freeze({
+((C = l || (l = {})).ANIMATED_GUILD_BANNER_TOOLTIP = 'animated_guild_banner_tooltip'),
+    (C.EMOJI_PICKER_SEARCH = 'emoji_picker_search'),
+    (C.EMOJI_PICKER_EMOJI_CLICKED = 'emoji_picker_emoji_clicked'),
+    (C.EMOJI_PICKER_STICKER_CLICKED = 'emoji_picker_sticker_clicked'),
+    (C.EMOJI_PICKER_REACTION_EMOJI_CLICKED = 'emoji_picker_reaction_emoji_clicked'),
+    (C.EMOJI_PICKER_SUPER_REACTION_EMOJI_CLICKED = 'emoji_picker_super_reaction_emoji_clicked'),
+    (C.EMOJI_PICKER_STATUS_EMOJI_CLICKED = 'emoji_picker_status_emoji_clicked'),
+    (C.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED = 'emoji_picker_top_server_emoji_clicked'),
+    (C.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED = 'emoji_picker_newly_added_emoji_clicked'),
+    (C.EMOJI_AUTOSUGGEST_CLICKED = 'emoji_autosuggest_clicked'),
+    (C.EMOJI_AUTOCOMPLETE_INLINE = 'emoji_autocomplete_inline'),
+    (C.EMOJI_AUTOCOMPLETE_MODAL = 'emoji_autocomplete_modal'),
+    (C.EMOJI_IN_MESSAGE_HOVER = 'emoji_in_message_hover'),
+    (C.EMOJI_IN_REACTION_HOVER = 'emoji_in_reaction_hover'),
+    (C.EMOJI_IN_BURST_REACTION_HOVER = 'emoji_in_burst_reaction_hover'),
+    (C.EMOJI_IN_BURST_REACTION_HOVER_UPSELL = 'emoji_in_burst_reaction_hover_upsell'),
+    (C.EMOJI_PICKER_FLOATING_UPSELL = 'emoji_picker_floating_upsell'),
+    (C.STICKER_IN_MESSAGE_HOVER = 'sticker_in_message_hover'),
+    (C.EMPTY_STICKER_PICKER_UPSELL = 'empty_sticker_picker_upsell'),
+    (C.STREAM_QUALITY_INDICATOR = 'stream_quality_indicator'),
+    (C.GIFT_STREAM_QUALITY_INDICATOR = 'gift_stream_quality_indicator'),
+    (C.STREAM_QUALITY_UPSELL = 'stream_quality_upsell'),
+    (C.MESSAGE_LENGTH_UPSELL = 'message_length_upsell'),
+    (C.MESSAGE_LENGTH_IN_EDITOR_UPSELL = 'message_length_in_editor_upsell'),
+    (C.CUSTOM_PROFILE_UPSELL = 'custom profiles upsell modal'),
+    (C.CUSTOM_PROFILE_TRY_OUT_UPSELL = 'try out custom profile in settings upsell'),
+    (C.VIDEO_BACKGROUNDS_MODAL = 'video backgrounds modal'),
+    (C.VIDEO_BACKGROUNDS_INLINE = 'video backgrounds inline'),
+    (C.GUILD_CAP_INLINE_SERVER_LIST = 'guild_cap_inline_server_list'),
+    (C.GUILD_PREMIUM_UPSELL_MODAL = 'premium guild premium upsell modal'),
+    (C.GUILD_CAP_INLINE_INVITE_MODAL = 'guild_cap_inline_invite_modal'),
+    (C.GUILD_CAP_MODAL_UPSELL = 'guild_cap_modal_upsell'),
+    (C.PREMIUM_GUILD_IDENTITY_MODAL = 'premium guild identity upsell alert'),
+    (C.CUSTOM_PROFILE_SETTINGS_BANNER_BUTTON = 'custom profiles settings banner upsell'),
+    (C.STICKER_PICKER_UPSELL = 'sticker_picker_upsell'),
+    (C.ANIMATED_AVATAR_PREVIEW_GIF_MODAL = 'animated avatar preview gif modal'),
+    (C.PREMIUM_PROGRESS_BAR = 'premium_progress_bar_tooltip'),
+    (C.INVITE_SPLASH_UPSELL = 'premium_invite_splash_upsell'),
+    (C.ANIMATED_USER_AVATAR_MODAL = 'animated user avatar upsell modal'),
+    (C.UPLOAD_ERROR_UPSELL = 'upload error upsell'),
+    (C.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE = 'premium guild member profile upsell inline'),
+    (C.CONCURRENT_ACTIVITIES = 'Concurrent Activities'),
+    (C.PREMIUM_UNCANCEL_WINBACK_MODAL_VIEWED = 'premium_uncancel_winback_modal_viewed'),
+    (C.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET = 'animated_video_background_new_preset'),
+    (C.LOW_PRICE_EXPERIMENT_TOOLTIP = 'low_price_experiment_tooltip'),
+    (C.PREMIUM_PROFILE_BADGE_UPSELL = 'premium_profile_badge_upsell'),
+    (C.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI = 'emoji'),
+    (C.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_PROFILE_CUSTOMIZATION = 'profile customization'),
+    (C.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_HD_STREAMING = 'hd streaming'),
+    (C.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_LARGER_FILE_UPLOADS = 'larger file uploads'),
+    (C.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_BOGO = 'bogo'),
+    (C.VOICE_CHANNEL_EFFECTS_UPSELL = 'voice_channel_effects_upsell'),
+    (C.VOICE_CHANNEL_EFFECTS_BAR_EMOJI_UPSELL = 'Voice Channel Effect Bar Emoji Upsell'),
+    (C.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED = 'voice_channel_effects_toggle_clicked'),
+    (C.VOICE_CHANNEL_EFFECTS_TOGGLE_CLICKED_EXPANDED = 'voice_channel_effects_toggle_clicked_expanded'),
+    (C.PROFILE_EFFECTS_INLINE_SETTINGS = 'profile_effects_inline_settings'),
+    (C.PROFILE_EFFECTS_INLINE_SETTINGS_MOBILE = 'profile_effects_inline_settings_mobile'),
+    (C.HIGH_VIDEO_QUALITY_UPSELL = 'high_video_quality_upsell'),
+    (C.PREMIUM_PROFILE_TRY_IT_OUT = 'premium_profile_try_it_out'),
+    (C.BURST_REACTION_RAIL_UPSELL = 'burst_reaction_rail_upsell'),
+    (C.BURST_REACTION_UPSELL = 'burst_reaction_upsell'),
+    (C.BURST_REACTION_QUICK_ACTION_UPSELL = 'burst_reaction_quick_action_upsell'),
+    (C.BURST_REACTION_CONTEXT_MENU_UPSELL = 'burst_reaction_context_menu_upsell'),
+    (C.PREMIUM_CLIENT_THEME_TRY_IT_OUT = 'premium_client_theme_try_it_out'),
+    (C.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL = 'premium_client_theme_settings_upsell'),
+    (C.VIDEO_STAGE_LIMIT = 'video_stage_limit'),
+    (C.SOUND_PICKER_SOUND_CLICKED = 'sound_picker_sound_clicked'),
+    (C.APP_ICON_UPSELL = 'app_icon_upsell'),
+    (C.COLLECTIBLES_SHOP = 'collectibles_shop'),
+    (C.COLLECTIBLES_PROFILE_SETTINGS_UPSELL = 'collectibles_profile_settings_upsell'),
+    (C.COLLECTIBLES_PREMIUM_MARKETING_PAGE_UPSELL = 'collectibles_premium_marketing_page_upsell'),
+    (C.CLIPS_GUILD_SIDEBAR_COACHMARK_PREMIUM_EARLY_ACCESS_UPSELL = 'clips_guild_sidebar_coachmark_premium_early_access_upsell'),
+    (C.CLIPS_GO_LIVE_PREMIUM_EARLY_ACCESS_ROADBLOCK_UPSELL = 'clips_go_live_premium_early_access_roadblock_upsell'),
+    (C.CUSTOM_NOTIFICATION_SOUNDS_UPSELL = 'custom_notification_sounds_upsell'),
+    (C.CUSTOM_NOTIFICATION_SOUNDS_SETTINGS_UPSELL = 'custom_notification_sounds_settings_inline_upsell'),
+    (C.HD_STREAMING_VIEWER_UPSELL = 'hd_streaming_viewer_upsell'),
+    (C.REVERSE_TRIAL_ENDED_UPSELL = 'reverse_trial_ended_upsell'),
+    (C.REVERSE_TRIAL_FOLLOWUP_UPSELL = 'reverse_trial_followup_upsell'),
+    (C.FOR_LATER_MODAL_UPSELL = 'for_later_modal_upsell'),
+    (C.EMOJI_EVERYWHERE_INLINE_UPSELL = 'emoji_everywhere_inline_upsell'),
+    (C.EMOJI_EVERYWHERE_UPSELL = 'emoji_everywhere_upsell'),
+    (C.SOUNDBOARD_EVERYWHERE_INLINE_UPSELL = 'soundboard_everywhere_inline_upsell'),
+    (C.SOUNDBOARD_EVERYWHERE_UPSELL = 'soundboard_everywhere_upsell'),
+    (C.LARGER_FILE_UPLOAD_INLINE_UPSELL = 'larger_file_upload_inline_upsell'),
+    (C.LARGER_FILE_UPLOAD_UPSELL = 'larger_file_upload_upsell'),
+    (C.ANIMATED_EMOJI_UPSELL = 'animated_emoji_upsell'),
+    (C.CLIENT_THEMES_UPSELL = 'client_themes_upsell'),
+    (C.APP_ICONS_INLINE_UPSELL = 'app_icons_inline_upsell'),
+    (C.APP_ICONS_UPSELL = 'app_icons_upsell'),
+    ((y = u || (u = {}))[(y.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'),
+    (y[(y.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'),
+    (y[(y.GUILD_BOOST = 4)] = 'GUILD_BOOST'),
+    (y[(y.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0');
+let eF = Object.freeze({
         '978380684370378762': 8,
         '521846918637420545': 1,
         '521847234246082599': 2,
         '590663762298667008': 4
     }),
-    eB = 52428800,
-    eF = 524288000,
-    eV = 1073741824,
-    eH = {
-        [B.Eu4.NONE]: 5,
-        [B.Eu4.TIER_1]: 10,
-        [B.Eu4.TIER_2]: 15,
-        [B.Eu4.TIER_3]: 30
-    },
-    eZ = {
-        [B.Eu4.NONE]: eH[B.Eu4.NONE],
-        [B.Eu4.TIER_1]: eH[B.Eu4.NONE] + eH[B.Eu4.TIER_1],
-        [B.Eu4.TIER_2]: eH[B.Eu4.NONE] + eH[B.Eu4.TIER_1] + eH[B.Eu4.TIER_2],
-        [B.Eu4.TIER_3]: eH[B.Eu4.NONE] + eH[B.Eu4.TIER_1] + eH[B.Eu4.TIER_2] + eH[B.Eu4.TIER_3]
-    },
+    eV = 52428800,
+    eH = 524288000,
+    eZ = 1073741824,
     eY = {
-        [B.Eu4.NONE]: 8,
-        [B.Eu4.TIER_1]: 24,
-        [B.Eu4.TIER_2]: 36,
-        [B.Eu4.TIER_3]: 48
+        [V.Eu4.NONE]: 5,
+        [V.Eu4.TIER_1]: 10,
+        [V.Eu4.TIER_2]: 15,
+        [V.Eu4.TIER_3]: 30
     },
-    ej = Object.freeze({
-        [B.Eu4.NONE]: {
+    ej = {
+        [V.Eu4.NONE]: eY[V.Eu4.NONE],
+        [V.Eu4.TIER_1]: eY[V.Eu4.NONE] + eY[V.Eu4.TIER_1],
+        [V.Eu4.TIER_2]: eY[V.Eu4.NONE] + eY[V.Eu4.TIER_1] + eY[V.Eu4.TIER_2],
+        [V.Eu4.TIER_3]: eY[V.Eu4.NONE] + eY[V.Eu4.TIER_1] + eY[V.Eu4.TIER_2] + eY[V.Eu4.TIER_3]
+    },
+    eW = {
+        [V.Eu4.NONE]: 8,
+        [V.Eu4.TIER_1]: 24,
+        [V.Eu4.TIER_2]: 36,
+        [V.Eu4.TIER_3]: 48
+    },
+    eK = Object.freeze({
+        [V.Eu4.NONE]: {
             features: [],
             limits: {
-                emoji: F.jZ,
-                bitrate: B.eWB,
-                fileSize: B.mBz,
+                emoji: H.jZ,
+                bitrate: V.eWB,
+                fileSize: V.mBz,
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eY[B.Eu4.NONE],
+                soundboardSounds: eW[V.Eu4.NONE],
                 maxConcurrentActivities: 2,
-                stickers: eZ[B.Eu4.NONE],
-                stageVideoUsers: B.B9o
+                stickers: ej[V.Eu4.NONE],
+                stageVideoUsers: V.B9o
             }
         },
-        [B.Eu4.TIER_1]: {
-            features: [B.oNc.INVITE_SPLASH, B.oNc.ANIMATED_ICON],
+        [V.Eu4.TIER_1]: {
+            features: [V.oNc.INVITE_SPLASH, V.oNc.ANIMATED_ICON],
             limits: {
                 emoji: 100,
                 bitrate: 128000,
-                fileSize: B.mBz,
+                fileSize: V.mBz,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eY[B.Eu4.TIER_1],
+                soundboardSounds: eW[V.Eu4.TIER_1],
                 maxConcurrentActivities: 3,
-                stickers: eZ[B.Eu4.TIER_1],
-                stageVideoUsers: B.B9o
+                stickers: ej[V.Eu4.TIER_1],
+                stageVideoUsers: V.B9o
             }
         },
-        [B.Eu4.TIER_2]: {
-            features: [B.oNc.INVITE_SPLASH, B.oNc.ANIMATED_ICON, B.oNc.BANNER, B.oNc.ROLE_ICONS],
+        [V.Eu4.TIER_2]: {
+            features: [V.oNc.INVITE_SPLASH, V.oNc.ANIMATED_ICON, V.oNc.BANNER, V.oNc.ROLE_ICONS],
             limits: {
                 emoji: 150,
                 bitrate: 256000,
                 fileSize: 52428800,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eY[B.Eu4.TIER_2],
+                soundboardSounds: eW[V.Eu4.TIER_2],
                 maxConcurrentActivities: 5,
-                stickers: eZ[B.Eu4.TIER_2],
-                stageVideoUsers: B.eez
+                stickers: ej[V.Eu4.TIER_2],
+                stageVideoUsers: V.eez
             }
         },
-        [B.Eu4.TIER_3]: {
-            features: [B.oNc.INVITE_SPLASH, B.oNc.ANIMATED_ICON, B.oNc.BANNER, B.oNc.ANIMATED_BANNER, B.oNc.VANITY_URL, B.oNc.ROLE_ICONS],
+        [V.Eu4.TIER_3]: {
+            features: [V.oNc.INVITE_SPLASH, V.oNc.ANIMATED_ICON, V.oNc.BANNER, V.oNc.ANIMATED_BANNER, V.oNc.VANITY_URL, V.oNc.ROLE_ICONS],
             limits: {
                 emoji: 250,
                 bitrate: 384000,
                 fileSize: 104857600,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eY[B.Eu4.TIER_3],
+                soundboardSounds: eW[V.Eu4.TIER_3],
                 maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-                stickers: eZ[B.Eu4.TIER_3],
-                stageVideoUsers: B.RcX
+                stickers: ej[V.Eu4.TIER_3],
+                stageVideoUsers: V.RcX
             }
         }
     }),
-    eW = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
-((y = c || (c = {})).SOUNDBOARD_PLAY = 'soundboard play'), (y.PROFILE_THEME_COLOR = 'profile_theme_color'), (y.PROFILE_BANNER = 'profile_banner'), (y.ANIMATED_AVATAR = 'animated_avatar'), (y.AVATAR_DECORATION = 'avatar_decoration'), (y.CLIENT_THEME = 'client_theme'), (y.SHARED_CANVAS = 'shared_canvas'), (y.PROFILE_EFFECT = 'profile_effect'), ((L = d || (d = {})).FREE = 'free'), (L.PREMIUM_STANDARD = 'premium-standard');
-let eK = {
+    ez = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
+((L = c || (c = {})).SOUNDBOARD_PLAY = 'soundboard play'), (L.PROFILE_THEME_COLOR = 'profile_theme_color'), (L.PROFILE_BANNER = 'profile_banner'), (L.ANIMATED_AVATAR = 'animated_avatar'), (L.AVATAR_DECORATION = 'avatar_decoration'), (L.CLIENT_THEME = 'client_theme'), (L.SHARED_CANVAS = 'shared_canvas'), (L.PROFILE_EFFECT = 'profile_effect'), ((D = d || (d = {})).FREE = 'free'), (D.PREMIUM_STANDARD = 'premium-standard');
+let eq = {
     '1024422698568122368': 16,
     '511651876987469824': 16,
     '511651885459963904': 16,
     '944037208325619722': 8,
     '642251038925127690': 5
 };
-((D = _ || (_ = {})).HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (D.MID_STREAMING_QUALITY = 'mid_streaming_quality');
-let ez = Object.freeze({
+((b = _ || (_ = {})).HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (b.MID_STREAMING_QUALITY = 'mid_streaming_quality');
+let eQ = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1
 });
-((b = E || (E = {}))[(b.UserSettings = 0)] = 'UserSettings'), (b[(b.ApplicationStoreHome = 1)] = 'ApplicationStoreHome'), ((M = f || (f = {}))[(M.DEFAULT = 0)] = 'DEFAULT'), (M[(M.WINTER = 1)] = 'WINTER'), ((P = h || (h = {}))[(P.SNOWGLOBE = 1)] = 'SNOWGLOBE'), (P[(P.BOX = 2)] = 'BOX'), (P[(P.CUP = 3)] = 'CUP'), (P[(P.STANDARD_BOX = 4)] = 'STANDARD_BOX'), (P[(P.CAKE = 5)] = 'CAKE'), (P[(P.CHEST = 6)] = 'CHEST'), (P[(P.COFFEE = 7)] = 'COFFEE'), (P[(P.SEASONAL_STANDARD_BOX = 8)] = 'SEASONAL_STANDARD_BOX'), (P[(P.SEASONAL_CAKE = 9)] = 'SEASONAL_CAKE'), (P[(P.SEASONAL_CHEST = 10)] = 'SEASONAL_CHEST'), (P[(P.SEASONAL_COFFEE = 11)] = 'SEASONAL_COFFEE'), ((U = p || (p = {})).USER_NOT_VERIFIED = 'user_not_verified'), (U.NO_CODE_BODY = 'no_code_body'), (U.NO_PROMOTION = 'no_promotion'), (U.CODE_CLAIMED = 'code_claimed'), (U.EXISTING_SUBSCRIBER = 'existing_subscriber'), (U.PREVIOUS_SUBSCRIBER = 'previous_subscriber'), (U.BLOCKED_PAYMENT = 'blocked_payment');
-let eq = Object.freeze({
+((M = E || (E = {}))[(M.UserSettings = 0)] = 'UserSettings'), (M[(M.ApplicationStoreHome = 1)] = 'ApplicationStoreHome'), ((P = f || (f = {}))[(P.DEFAULT = 0)] = 'DEFAULT'), (P[(P.WINTER = 1)] = 'WINTER'), ((U = h || (h = {}))[(U.SNOWGLOBE = 1)] = 'SNOWGLOBE'), (U[(U.BOX = 2)] = 'BOX'), (U[(U.CUP = 3)] = 'CUP'), (U[(U.STANDARD_BOX = 4)] = 'STANDARD_BOX'), (U[(U.CAKE = 5)] = 'CAKE'), (U[(U.CHEST = 6)] = 'CHEST'), (U[(U.COFFEE = 7)] = 'COFFEE'), (U[(U.SEASONAL_STANDARD_BOX = 8)] = 'SEASONAL_STANDARD_BOX'), (U[(U.SEASONAL_CAKE = 9)] = 'SEASONAL_CAKE'), (U[(U.SEASONAL_CHEST = 10)] = 'SEASONAL_CHEST'), (U[(U.SEASONAL_COFFEE = 11)] = 'SEASONAL_COFFEE'), ((w = p || (p = {})).USER_NOT_VERIFIED = 'user_not_verified'), (w.NO_CODE_BODY = 'no_code_body'), (w.NO_PROMOTION = 'no_promotion'), (w.CODE_CLAIMED = 'code_claimed'), (w.EXISTING_SUBSCRIBER = 'existing_subscriber'), (w.PREVIOUS_SUBSCRIBER = 'previous_subscriber'), (w.BLOCKED_PAYMENT = 'blocked_payment');
+let eX = Object.freeze({
         IS_BLOCKED_IOS: 32,
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128
     }),
-    eQ = Object.freeze({
-        3: { fileSize: eB },
+    e$ = Object.freeze({
+        3: { fileSize: eV },
         1: { fileSize: 52428800 },
-        2: { fileSize: eV }
+        2: { fileSize: eZ }
     }),
-    eX = Object.freeze({
-        3: { fileSize: eB },
+    eJ = Object.freeze({
+        3: { fileSize: eV },
         1: { fileSize: 52428800 },
-        2: { fileSize: eF }
+        2: { fileSize: eH }
     });
-((w = I || (I = {})).EXPLORE_ALL_PERKS_CLICKED = 'explore_all_perks_clicked'), (w.HELPER_COLLAPSED = 'helper_collapsed'), (w.HELPER_UNCOLLAPSED = 'helper_uncollapsed'), (w.UNLOCK_EMOJI_CLICKED = 'unlock_emoji_clicked'), (w.CUSTOM_PROFILES_CLICKED = 'custom_profiles_clicked'), (w.SERVER_BOOSTS_CLICKED = 'server_boosts_clicked'), (w.HELPER_DISMISSED = 'premium_feature_helper_dismissed'), (w.HELPER_RENDERED = 'premium_feature_helper_rendered'), ((x = m || (m = {})).EMOJI_TUTORIAL_STARTED = 'emoji_tutorial_started'), (x.EMOJI_INTRO_VIEWED = 'emoji_intro_viewed'), (x.EMOJI_PROMPT_VIEWED = 'emoji_prompt_viewed'), (x.CUSTOM_PROFILE_TUTORIAL_STARTED = 'custom_profile_tutorial_started'), (x.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = 'custom_profile_avatar_intro_viewed'), (x.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = 'custom_profile_avatar_decorations_viewed'), (x.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = 'custom_profile_banner_intro_viewed'), (x.CUSTOM_PROFILE_THEME_INTRO_VIEWED = 'custom_profile_theme_intro_viewed'), (x.SERVER_PROFILE_INTRO_VIEWED = 'server_profile_intro_viewed'), (x.SERVER_BOOST_TUTORIAL_STARTED = 'server_boost_tutorial_started'), (x.BOOST_INTRO_VIEWED = 'boost_intro_viewed'), (x.BOOST_PROMPT_VIEWED = 'boost_prompt_viewed'), ((G = T || (T = {})).BOOST = 'boost'), (G.DISMISS = 'dismiss'), ((k = g || (g = {})).BADGE_TOOLTIP_VIEWED = 'share_nitro_bagde_tooltip_viewed'), (k.BADGE_CLICKED = 'share_nitro_badge_clicked'), (k.FLOW_STARTED = 'share_nitro_flow_started'), (k.FLOW_COMPLETED = 'share_nitro_flow_completed');
-let e$ = new Set(['PL', 'TR']),
-    eJ = [1, 2, 3],
-    e0 = [4, 5, 7, 6],
-    e1 = [8, 9, 11, 10],
-    e2 = e1.concat(eJ),
-    e3 = 190,
-    e4 = 3,
-    e5 = 30,
-    e6 = 20;
+((x = I || (I = {})).EXPLORE_ALL_PERKS_CLICKED = 'explore_all_perks_clicked'), (x.HELPER_COLLAPSED = 'helper_collapsed'), (x.HELPER_UNCOLLAPSED = 'helper_uncollapsed'), (x.UNLOCK_EMOJI_CLICKED = 'unlock_emoji_clicked'), (x.CUSTOM_PROFILES_CLICKED = 'custom_profiles_clicked'), (x.SERVER_BOOSTS_CLICKED = 'server_boosts_clicked'), (x.HELPER_DISMISSED = 'premium_feature_helper_dismissed'), (x.HELPER_RENDERED = 'premium_feature_helper_rendered'), ((G = m || (m = {})).EMOJI_TUTORIAL_STARTED = 'emoji_tutorial_started'), (G.EMOJI_INTRO_VIEWED = 'emoji_intro_viewed'), (G.EMOJI_PROMPT_VIEWED = 'emoji_prompt_viewed'), (G.CUSTOM_PROFILE_TUTORIAL_STARTED = 'custom_profile_tutorial_started'), (G.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = 'custom_profile_avatar_intro_viewed'), (G.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = 'custom_profile_avatar_decorations_viewed'), (G.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = 'custom_profile_banner_intro_viewed'), (G.CUSTOM_PROFILE_THEME_INTRO_VIEWED = 'custom_profile_theme_intro_viewed'), (G.SERVER_PROFILE_INTRO_VIEWED = 'server_profile_intro_viewed'), (G.SERVER_BOOST_TUTORIAL_STARTED = 'server_boost_tutorial_started'), (G.BOOST_INTRO_VIEWED = 'boost_intro_viewed'), (G.BOOST_PROMPT_VIEWED = 'boost_prompt_viewed'), ((k = T || (T = {})).BOOST = 'boost'), (k.DISMISS = 'dismiss'), ((B = g || (g = {})).BADGE_TOOLTIP_VIEWED = 'share_nitro_bagde_tooltip_viewed'), (B.BADGE_CLICKED = 'share_nitro_badge_clicked'), (B.FLOW_STARTED = 'share_nitro_flow_started'), (B.FLOW_COMPLETED = 'share_nitro_flow_completed');
+let e0 = new Set(['PL', 'TR']),
+    e1 = [1, 2, 3],
+    e2 = [4, 5, 7, 6],
+    e3 = [8, 9, 11, 10],
+    e4 = e3.concat(e1),
+    e5 = 190,
+    e6 = 3,
+    e7 = 30,
+    e8 = 20;
+((F = S || (S = {})).PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month'), (F.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month'), (F.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month'), (F.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month'), (F.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month'), (F.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month'), (F.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month'), (F.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month');
+let e9 = {
+    premium_tenure_1_month: 1,
+    premium_tenure_3_month: 3,
+    premium_tenure_6_month: 6,
+    premium_tenure_12_month: 12,
+    premium_tenure_24_month: 24,
+    premium_tenure_36_month: 36,
+    premium_tenure_60_month: 60,
+    premium_tenure_72_month: 72
+};

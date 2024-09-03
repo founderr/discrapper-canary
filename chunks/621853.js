@@ -10,9 +10,10 @@ var r = n(392711),
     d = n(158776),
     _ = n(412788),
     E = n(771845),
-    f = n(215023),
-    h = n(689938);
-function p(e, t, n) {
+    f = n(291175),
+    h = n(215023),
+    p = n(689938);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -25,68 +26,68 @@ function p(e, t, n) {
         e
     );
 }
-let I = {},
-    m = new Set(),
-    T = {},
+let m = {},
+    T = new Set(),
     g = {},
     S = {},
     A = {},
     N = {},
     O = {},
     R = {},
-    v = !1;
-function C(e) {
-    let t = T[e];
+    v = {},
+    C = !1;
+function y(e) {
+    let t = g[e];
     if ((null == t ? void 0 : t.profileEffectExpiresAt) == null) return;
-    let n = 1000 * t.profileEffectExpiresAt + f.Cm - Date.now();
+    let n = 1000 * t.profileEffectExpiresAt + h.Cm - Date.now();
     if (n <= 0)
-        (T[e] = {
+        (g[e] = {
             ...t,
             profileEffectId: void 0,
             profileEffectExpiresAt: void 0
         }),
-            delete S[e],
-            W.emitChange();
+            delete A[e],
+            K.emitChange();
     else {
-        let t = S[e];
+        let t = A[e];
         if (null == t) return;
-        t.start(Math.min(2147483647, n), () => C(e));
+        t.start(Math.min(2147483647, n), () => y(e));
     }
 }
-function y(e, t) {
-    let n = g[e];
+function L(e, t) {
+    let n = S[e];
     if (null == n) return;
     let r = n[t];
     if ((null == r ? void 0 : r.profileEffectExpiresAt) == null) return;
-    let i = 1000 * r.profileEffectExpiresAt + f.Cm - Date.now();
+    let i = 1000 * r.profileEffectExpiresAt + h.Cm - Date.now();
     if (i <= 0)
         (n[t] = {
             ...r,
             profileEffectId: void 0,
             profileEffectExpiresAt: void 0
         }),
-            null != A[e] && delete A[e][t],
-            W.emitChange();
+            null != N[e] && delete N[e][t],
+            K.emitChange();
     else {
-        let n = A[e];
+        let n = N[e];
         if (null == n) return;
         let r = n[t];
         if (null == r) return;
-        r.start(Math.min(2147483647, i), () => y(e, t));
+        r.start(Math.min(2147483647, i), () => L(e, t));
     }
 }
-function L() {
-    (I = {}), m.clear(), (T = {}), (g = {}), (N = {}), (O = {}), (R = {}), (v = !1);
-}
-function D(e) {
-    let { userId: t } = e;
-    m.add(t);
+function D() {
+    (m = {}), T.clear(), (g = {}), (S = {}), (O = {}), (R = {}), (v = {}), (C = !1);
 }
 function b(e) {
     let { userId: t } = e;
-    m.delete(t);
+    T.add(t);
 }
 function M(e) {
+    let { userId: t } = e;
+    T.delete(t);
+}
+function P(e) {
     return i()(e)
         .map((e) => ({
             key: e.id,
@@ -99,12 +100,12 @@ function M(e) {
         })
         .value();
 }
-function P(e) {
-    m.delete(e.userId), (N[e.userId] = M(e.mutualFriends)), (O[e.userId] = e.mutualFriends.length);
-}
 function U(e) {
-    var t, n, r, i, o, l, u, d, _, f, p, m, v, L, D, b, P, U, w, x, G, k, B, F, V, H;
-    if ((null === (n = I[e.user.id]) || void 0 === n || n.delete(null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id), null != e.mutual_guilds)) {
+    T.delete(e.userId), (O[e.userId] = P(e.mutualFriends)), (R[e.userId] = e.mutualFriends.length);
+}
+function w(e) {
+    var t, n, r, i, o, l, u, d, _, h, I, T, C, D, b, M, U, w, x, G, k, B, F, V, H, Z;
+    if ((null === (n = m[e.user.id]) || void 0 === n || n.delete(null === (t = e.guild_member_profile) || void 0 === t ? void 0 : t.guild_id), null != e.mutual_guilds)) {
         let t = {};
         e.mutual_guilds.forEach((e) => {
             let { id: n, nick: r } = e,
@@ -115,7 +116,7 @@ function U(e) {
                     nick: r
                 });
         }),
-            (R[e.user.id] = E.ZP.getFlattenedGuildIds()
+            (v[e.user.id] = E.ZP.getFlattenedGuildIds()
                 .filter((e) => null != t[e])
                 .map((e) => ({
                     guild: t[e].guild,
@@ -124,64 +125,70 @@ function U(e) {
     }
     if (null != e.mutual_friends_count) {
         let t = e.mutual_friends_count;
-        O[e.user.id] = t;
+        R[e.user.id] = t;
     }
-    null != e.mutual_friends && ((N[e.user.id] = M(e.mutual_friends)), (O[e.user.id] = e.mutual_friends.length));
-    let Z = null != e.premium_since ? new Date(e.premium_since) : null,
-        Y = null != e.premium_guild_since ? new Date(e.premium_guild_since) : null,
-        j = e.application;
+    null != e.mutual_friends && ((O[e.user.id] = P(e.mutual_friends)), (R[e.user.id] = e.mutual_friends.length));
+    let Y = null != e.premium_since ? new Date(e.premium_since) : null,
+        j = null != e.premium_guild_since ? new Date(e.premium_guild_since) : null,
+        W = e.application;
     if (
-        ((T[e.user.id] = {
+        ((g[e.user.id] = {
             userId: e.user.id,
             banner: null === (r = e.user_profile) || void 0 === r ? void 0 : r.banner,
             accentColor: null === (i = e.user_profile) || void 0 === i ? void 0 : i.accent_color,
             themeColors: null === (o = e.user_profile) || void 0 === o ? void 0 : o.theme_colors,
             popoutAnimationParticleType: null === (l = e.user_profile) || void 0 === l ? void 0 : l.popout_animation_particle_type,
-            bio: null !== (D = null === (u = e.user_profile) || void 0 === u ? void 0 : u.bio) && void 0 !== D ? D : '',
+            bio: null !== (b = null === (u = e.user_profile) || void 0 === u ? void 0 : u.bio) && void 0 !== b ? b : '',
             profileEffectId: null === (_ = e.user_profile) || void 0 === _ ? void 0 : null === (d = _.profile_effect) || void 0 === d ? void 0 : d.id,
-            profileEffectExpiresAt: null === (p = e.user_profile) || void 0 === p ? void 0 : null === (f = p.profile_effect) || void 0 === f ? void 0 : f.expires_at,
-            pronouns: null !== (b = null === (m = e.user_profile) || void 0 === m ? void 0 : m.pronouns) && void 0 !== b ? b : '',
-            connectedAccounts: null !== (P = e.connected_accounts.filter((e) => s.Z.isSupported(e.type))) && void 0 !== P ? P : [],
-            applicationRoleConnections: null !== (U = e.application_role_connections) && void 0 !== U ? U : [],
-            premiumSince: Z,
+            profileEffectExpiresAt: null === (I = e.user_profile) || void 0 === I ? void 0 : null === (h = I.profile_effect) || void 0 === h ? void 0 : h.expires_at,
+            pronouns: null !== (M = null === (T = e.user_profile) || void 0 === T ? void 0 : T.pronouns) && void 0 !== M ? M : '',
+            connectedAccounts: null !== (U = e.connected_accounts.filter((e) => s.Z.isSupported(e.type))) && void 0 !== U ? U : [],
+            applicationRoleConnections: null !== (w = e.application_role_connections) && void 0 !== w ? w : [],
+            premiumSince: Y,
             premiumType: e.premium_type,
-            premiumGuildSince: Y,
+            premiumGuildSince: j,
             lastFetched: Date.now(),
             legacyUsername: e.legacy_username,
             application:
-                null != j
+                null != W
                     ? {
-                          id: j.id,
-                          primarySkuId: j.primary_sku_id,
-                          customInstallUrl: j.custom_install_url,
-                          installParams: j.install_params,
-                          integrationTypesConfig: j.integration_types_config,
-                          flags: j.flags,
-                          popularApplicationCommandIds: j.popular_application_command_ids,
-                          storefront_available: j.storefront_available
+                          id: W.id,
+                          primarySkuId: W.primary_sku_id,
+                          customInstallUrl: W.custom_install_url,
+                          installParams: W.install_params,
+                          integrationTypesConfig: W.integration_types_config,
+                          flags: W.flags,
+                          popularApplicationCommandIds: W.popular_application_command_ids,
+                          storefront_available: W.storefront_available
                       }
                     : null,
             badges:
                 null != e.badges
-                    ? e.badges.map((e) =>
-                          'premium' === e.id && null != Z
+                    ? e.badges.map((e) => {
+                          if ('premium' === e.id && null != Y)
+                              return {
+                                  ...e,
+                                  description: p.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({ date: Y })
+                              };
+                          let t = (0, f.g)(e.id);
+                          return null != t && null != Y
                               ? {
                                     ...e,
-                                    description: h.Z.Messages.PREMIUM_BADGE_TOOLTIP.format({ date: Z })
+                                    description: (0, f.s)(t, Y)
                                 }
-                              : e.id.startsWith('guild_booster_lvl') && null != Y
+                              : e.id.startsWith('guild_booster_lvl') && null != j
                                 ? {
                                       ...e,
-                                      description: h.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({ date: Y })
+                                      description: p.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TOOLTIP.format({ date: j })
                                   }
-                                : e
-                      )
+                                : e;
+                      })
                     : e.badges
         }),
-        (null === (L = e.user_profile) || void 0 === L ? void 0 : null === (v = L.profile_effect) || void 0 === v ? void 0 : v.expires_at) != null)
+        (null === (D = e.user_profile) || void 0 === D ? void 0 : null === (C = D.profile_effect) || void 0 === C ? void 0 : C.expires_at) != null)
     ) {
         let t = new a.V7();
-        (S[e.user.id] = t), C(e.user.id);
+        (A[e.user.id] = t), y(e.user.id);
     }
     if (null != e.guild_member_profile) {
         let t = {
@@ -189,31 +196,31 @@ function U(e) {
             guildId: e.guild_member_profile.guild_id,
             banner: e.guild_member_profile.banner,
             accentColor: e.guild_member_profile.accent_color,
-            themeColors: null === (w = e.guild_member_profile) || void 0 === w ? void 0 : w.theme_colors,
-            popoutAnimationParticleType: null === (x = e.guild_member_profile) || void 0 === x ? void 0 : x.popout_animation_particle_type,
-            profileEffectId: null === (k = e.guild_member_profile) || void 0 === k ? void 0 : null === (G = k.profile_effect) || void 0 === G ? void 0 : G.id,
-            profileEffectExpiresAt: null === (F = e.guild_member_profile) || void 0 === F ? void 0 : null === (B = F.profile_effect) || void 0 === B ? void 0 : B.expires_at,
+            themeColors: null === (x = e.guild_member_profile) || void 0 === x ? void 0 : x.theme_colors,
+            popoutAnimationParticleType: null === (G = e.guild_member_profile) || void 0 === G ? void 0 : G.popout_animation_particle_type,
+            profileEffectId: null === (B = e.guild_member_profile) || void 0 === B ? void 0 : null === (k = B.profile_effect) || void 0 === k ? void 0 : k.id,
+            profileEffectExpiresAt: null === (V = e.guild_member_profile) || void 0 === V ? void 0 : null === (F = V.profile_effect) || void 0 === F ? void 0 : F.expires_at,
             bio: e.guild_member_profile.bio,
             pronouns: e.guild_member_profile.pronouns,
             badges: e.guild_badges
         };
-        if ((null != g[e.user.id] ? (g[e.user.id][e.guild_member_profile.guild_id] = t) : (g[e.user.id] = { [e.guild_member_profile.guild_id]: t }), (null === (H = e.guild_member_profile) || void 0 === H ? void 0 : null === (V = H.profile_effect) || void 0 === V ? void 0 : V.expires_at) != null)) {
+        if ((null != S[e.user.id] ? (S[e.user.id][e.guild_member_profile.guild_id] = t) : (S[e.user.id] = { [e.guild_member_profile.guild_id]: t }), (null === (Z = e.guild_member_profile) || void 0 === Z ? void 0 : null === (H = Z.profile_effect) || void 0 === H ? void 0 : H.expires_at) != null)) {
             let t = new a.V7();
-            (A[e.user.id][e.guild_member_profile.guild_id] = t), y(e.user.id, e.guild_member_profile.guild_id);
+            (N[e.user.id][e.guild_member_profile.guild_id] = t), L(e.user.id, e.guild_member_profile.guild_id);
         }
     }
 }
-function w(e) {
+function x(e) {
     var t;
     let { userId: n, guildId: r } = e;
-    (I[n] = null !== (t = I[n]) && void 0 !== t ? t : new Set()), I[n].add(r);
+    (m[n] = null !== (t = m[n]) && void 0 !== t ? t : new Set()), m[n].add(r);
 }
-function x(e) {
+function G(e) {
     var t, n;
     let { userId: r, guildId: i, apiError: a } = e;
-    null === (t = I[r]) || void 0 === t || t.delete(i);
+    null === (t = m[r]) || void 0 === t || t.delete(i);
     let s =
-        null !== (n = T[r]) && void 0 !== n
+        null !== (n = g[r]) && void 0 !== n
             ? n
             : {
                   connectedAccounts: [],
@@ -228,25 +235,25 @@ function x(e) {
                   bio: '',
                   pronouns: ''
               };
-    T[r] = {
+    g[r] = {
         ...s,
         lastFetched: Date.now(),
         fetchError: a
     };
 }
-function G(e) {
-    v = !0;
-}
 function k(e) {
-    (v = !1),
+    C = !0;
+}
+function B(e) {
+    (C = !1),
         null != e.guild_id
             ? !(function (e) {
                   let { userId: t, guild_id: n, accent_color: r, banner: i, bio: s, pronouns: o, popout_animation_particle_type: l, theme_colors: u, profileEffectId: c, profileEffectExpiresAt: d } = e;
-                  if (null == n || null == g[t]) return !1;
-                  let _ = g[t][n];
+                  if (null == n || null == S[t]) return !1;
+                  let _ = S[t][n];
                   if (null == _) return !1;
                   if (
-                      ((g[t][n] = {
+                      ((S[t][n] = {
                           ..._,
                           accentColor: r,
                           banner: i,
@@ -260,15 +267,15 @@ function k(e) {
                       null != d)
                   ) {
                       let e = new a.V7();
-                      null != A[t] ? (A[t][n] = e) : (A[t] = { [n]: e }), y(t, n);
+                      null != N[t] ? (N[t][n] = e) : (N[t] = { [n]: e }), L(t, n);
                   }
               })(e)
             : !(function (e) {
                   let { userId: t, accent_color: n, banner: r, bio: i, pronouns: s, popout_animation_particle_type: o, theme_colors: l, profileEffectId: u, profileEffectExpiresAt: c } = e,
-                      d = T[t];
+                      d = g[t];
                   if (null == d) return !1;
                   if (
-                      ((T[t] = {
+                      ((g[t] = {
                           ...d,
                           accentColor: n,
                           banner: r,
@@ -282,75 +289,75 @@ function k(e) {
                       null != c)
                   ) {
                       let e = new a.V7();
-                      (S[t] = e), C(t);
+                      (A[t] = e), y(t);
                   }
               })(e);
 }
-function B(e) {
-    v = !1;
-}
 function F(e) {
-    let t = e.user.id;
-    if (null == T[t] || (null != I[t] && I[t].size > 0)) return !1;
-    (T[t].lastFetched = 0), (T[t].fetchError = void 0);
+    C = !1;
 }
 function V(e) {
-    if (0 === Object.keys(R).length && 0 === Object.keys(T).length) return !1;
-    (R = {}),
-        Object.values(T).forEach((e) => {
+    let t = e.user.id;
+    if (null == g[t] || (null != m[t] && m[t].size > 0)) return !1;
+    (g[t].lastFetched = 0), (g[t].fetchError = void 0);
+}
+function H(e) {
+    if (0 === Object.keys(v).length && 0 === Object.keys(g).length) return !1;
+    (v = {}),
+        Object.values(g).forEach((e) => {
             (e.lastFetched = 0), (e.fetchError = void 0);
         });
 }
-function H(e) {
-    let t = e.user.id;
-    if (null == R[t] && null == T[t]) return !1;
-    delete R[t], (T[t].lastFetched = 0), (T[t].fetchError = void 0);
-}
 function Z(e) {
+    let t = e.user.id;
+    if (null == v[t] && null == g[t]) return !1;
+    delete v[t], (g[t].lastFetched = 0), (g[t].fetchError = void 0);
+}
+function Y(e) {
     let t = e.relationship.id;
-    if (null == N[t] && null == O[t] && null == T[t]) return !1;
-    delete N[t], delete O[t], (T[t].lastFetched = 0), (T[t].fetchError = void 0);
+    if (null == O[t] && null == R[t] && null == g[t]) return !1;
+    delete O[t], delete R[t], (g[t].lastFetched = 0), (g[t].fetchError = void 0);
 }
-function Y() {
-    (I = {}), (T = {}), (g = {});
+function j() {
+    (m = {}), (g = {}), (S = {});
 }
-class j extends _.Z {
+class W extends _.Z {
     initialize() {
-        this.waitFor(E.ZP), this.syncWith([o.default], Y);
+        this.waitFor(E.ZP), this.syncWith([o.default], j);
     }
     isFetchingProfile(e, t) {
-        return null != I[e] && (null != t ? I[e].has(t) : I[e].size > 0);
+        return null != m[e] && (null != t ? m[e].has(t) : m[e].size > 0);
     }
     isFetchingFriends(e) {
-        return m.has(e);
+        return T.has(e);
     }
     get isSubmitting() {
-        return v;
+        return C;
     }
     getUserProfile(e) {
-        return T[e];
+        return g[e];
     }
     getGuildMemberProfile(e, t) {
         var n;
-        return null == t ? null : null === (n = g[e]) || void 0 === n ? void 0 : n[t];
+        return null == t ? null : null === (n = S[e]) || void 0 === n ? void 0 : n[t];
     }
     getMutualFriends(e) {
-        return N[e];
-    }
-    getMutualFriendsCount(e) {
         return O[e];
     }
-    getMutualGuilds(e) {
+    getMutualFriendsCount(e) {
         return R[e];
+    }
+    getMutualGuilds(e) {
+        return v[e];
     }
     takeSnapshot() {
         let e = u.default.getId();
         return {
-            version: j.LATEST_SNAPSHOT_VERSION,
+            version: W.LATEST_SNAPSHOT_VERSION,
             data: [
                 {
                     userId: e,
-                    profile: T[e]
+                    profile: g[e]
                 }
             ]
         };
@@ -358,36 +365,36 @@ class j extends _.Z {
     constructor() {
         super({
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            USER_PROFILE_FETCH_START: w,
-            USER_PROFILE_FETCH_FAILURE: x,
-            USER_PROFILE_FETCH_SUCCESS: U,
-            USER_PROFILE_UPDATE_START: G,
-            USER_PROFILE_UPDATE_SUCCESS: k,
-            USER_PROFILE_UPDATE_FAILURE: B,
-            MUTUAL_FRIENDS_FETCH_START: D,
-            MUTUAL_FRIENDS_FETCH_SUCCESS: P,
-            MUTUAL_FRIENDS_FETCH_FAILURE: b,
-            USER_UPDATE: F,
-            GUILD_MEMBER_UPDATE: F,
-            GUILD_JOIN: V,
-            GUILD_DELETE: V,
-            GUILD_MEMBER_ADD: H,
-            GUILD_MEMBER_REMOVE: H,
-            RELATIONSHIP_ADD: Z,
-            RELATIONSHIP_REMOVE: Z,
-            RELATIONSHIP_UPDATE: Z,
-            LOGOUT: L
+            USER_PROFILE_FETCH_START: x,
+            USER_PROFILE_FETCH_FAILURE: G,
+            USER_PROFILE_FETCH_SUCCESS: w,
+            USER_PROFILE_UPDATE_START: k,
+            USER_PROFILE_UPDATE_SUCCESS: B,
+            USER_PROFILE_UPDATE_FAILURE: F,
+            MUTUAL_FRIENDS_FETCH_START: b,
+            MUTUAL_FRIENDS_FETCH_SUCCESS: U,
+            MUTUAL_FRIENDS_FETCH_FAILURE: M,
+            USER_UPDATE: V,
+            GUILD_MEMBER_UPDATE: V,
+            GUILD_JOIN: H,
+            GUILD_DELETE: H,
+            GUILD_MEMBER_ADD: Z,
+            GUILD_MEMBER_REMOVE: Z,
+            RELATIONSHIP_ADD: Y,
+            RELATIONSHIP_REMOVE: Y,
+            RELATIONSHIP_UPDATE: Y,
+            LOGOUT: D
         }),
-            p(this, 'loadCache', () => {
-                let e = this.readSnapshot(j.LATEST_SNAPSHOT_VERSION);
+            I(this, 'loadCache', () => {
+                let e = this.readSnapshot(W.LATEST_SNAPSHOT_VERSION);
                 null != e &&
                     e.forEach((e) => {
                         let { userId: t, profile: n } = e;
-                        T[t] = n;
+                        g[t] = n;
                     });
             });
     }
 }
-p(j, 'displayName', 'UserProfileStore'), p(j, 'LATEST_SNAPSHOT_VERSION', 1);
-let W = new j();
-t.Z = W;
+I(W, 'displayName', 'UserProfileStore'), I(W, 'LATEST_SNAPSHOT_VERSION', 1);
+let K = new W();
+t.Z = K;
