@@ -290,6 +290,11 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eb.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_STANDING],
                 parent: eM.s6.PRIVACY_AND_SAFETY_V2
             },
+            [eM.s6.PRIVACY_AND_SAFETY_STANDING_CATEGORY]: {
+                section: eD.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eb.Z.Messages.SAFETY_HUB_PAGE_TITLE],
+                parent: eM.s6.PRIVACY_AND_SAFETY_STANDING
+            },
             [eM.s6.PRIVACY_AND_SAFETY_ENCRYPTION]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eb.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_ENCRYPTION],
