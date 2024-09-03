@@ -1,55 +1,56 @@
 _.d(E, {
     ZP: function () {
-        return G;
+        return c;
     },
     k: function () {
-        return T;
+        return L;
     }
 }),
     _(47120);
-var s = _(735250);
+var n = _(735250);
 _(470079);
 var t = _(913527),
-    n = _.n(t),
+    s = _.n(t),
     a = _(442837),
     M = _(481060),
-    S = _(211739),
-    r = _(92114),
+    r = _(211739),
+    S = _(92114),
+    u = _(401412),
     N = _(777861),
-    u = _(9156),
-    A = _(621600),
-    O = _(933557),
-    i = _(981631),
-    l = _(969943),
-    I = _(689938);
-let T = () => [
+    A = _(9156),
+    i = _(621600),
+    l = _(933557),
+    O = _(981631),
+    I = _(969943),
+    T = _(689938);
+let L = () => [
         {
-            value: l.Oe.MINUTES_15,
-            label: I.Z.Messages.MUTE_DURATION_15_MINUTES
+            value: I.Oe.MINUTES_15,
+            label: T.Z.Messages.MUTE_DURATION_15_MINUTES
         },
         {
-            value: l.Oe.HOURS_1,
-            label: I.Z.Messages.MUTE_DURATION_1_HOUR
+            value: I.Oe.HOURS_1,
+            label: T.Z.Messages.MUTE_DURATION_1_HOUR
         },
         {
-            value: l.Oe.HOURS_3,
-            label: I.Z.Messages.MUTE_DURATION_3_HOURS
+            value: I.Oe.HOURS_3,
+            label: T.Z.Messages.MUTE_DURATION_3_HOURS
         },
         {
-            value: l.Oe.HOURS_8,
-            label: I.Z.Messages.MUTE_DURATION_8_HOURS
+            value: I.Oe.HOURS_8,
+            label: T.Z.Messages.MUTE_DURATION_8_HOURS
         },
         {
-            value: l.Oe.HOURS_24,
-            label: I.Z.Messages.MUTE_DURATION_24_HOURS
+            value: I.Oe.HOURS_24,
+            label: T.Z.Messages.MUTE_DURATION_24_HOURS
         },
         {
-            value: l.Oe.ALWAYS,
-            label: I.Z.Messages.MUTE_DURATION_ALWAYS
+            value: I.Oe.ALWAYS,
+            label: T.Z.Messages.MUTE_DURATION_ALWAYS
         }
     ],
-    L = (e) => {
-        let E = e > 0 ? n()().add(e, 'second').toISOString() : null;
+    o = (e) => {
+        let E = e > 0 ? s()().add(e, 'second').toISOString() : null;
         return {
             muted: !0,
             mute_config: {
@@ -58,51 +59,57 @@ let T = () => [
             }
         };
     };
-function G(e, E) {
-    let [_, t] = (0, a.Wu)([u.ZP], () => [u.ZP.isChannelMuted(e.guild_id, e.id), u.ZP.getChannelMuteConfig(e.guild_id, e.id)]),
-        n = (0, N.U)(t),
-        l = (0, O.ZP)(e, !0);
-    function G(E) {
-        E && e.type === i.d4z.GUILD_CATEGORY && (0, S.c4)(e.id), r.Z.updateChannelOverrideSettings(e.guild_id, e.id, { muted: E }, A.UE.muted(E));
+function c(e, E) {
+    let [_, t] = (0, a.Wu)([A.ZP], () => [A.ZP.isChannelMuted(e.guild_id, e.id), A.ZP.getChannelMuteConfig(e.guild_id, e.id)]),
+        s = (0, N.U)(t),
+        I = (0, l.ZP)(e, !0);
+    function c(E) {
+        E && e.type === O.d4z.GUILD_CATEGORY && (0, r.c4)(e.id), S.Z.updateChannelOverrideSettings(e.guild_id, e.id, { muted: E }, i.UE.muted(E));
     }
-    let R = I.Z.Messages.MUTE_CHANNEL_GENERIC,
-        C = I.Z.Messages.UNMUTE_CHANNEL_GENERIC;
+    let C = T.Z.Messages.MUTE_CHANNEL_GENERIC,
+        G = T.Z.Messages.UNMUTE_CHANNEL_GENERIC;
     switch (e.type) {
-        case i.d4z.GUILD_CATEGORY:
-            (R = I.Z.Messages.MUTE_CATEGORY), (C = I.Z.Messages.UNMUTE_CATEGORY);
+        case O.d4z.GUILD_CATEGORY:
+            (C = T.Z.Messages.MUTE_CATEGORY), (G = T.Z.Messages.UNMUTE_CATEGORY);
             break;
-        case i.d4z.GROUP_DM:
-            (R = I.Z.Messages.MUTE_CONVERSATION), (C = I.Z.Messages.UNMUTE_CONVERSATION);
+        case O.d4z.GROUP_DM:
+            (C = T.Z.Messages.MUTE_CONVERSATION), (G = T.Z.Messages.UNMUTE_CONVERSATION);
             break;
-        case i.d4z.DM:
-            (R = I.Z.Messages.MUTE_CHANNEL.format({ name: l })), (C = I.Z.Messages.UNMUTE_CHANNEL.format({ name: l }));
+        case O.d4z.DM:
+            (C = T.Z.Messages.MUTE_CHANNEL.format({ name: I })), (G = T.Z.Messages.UNMUTE_CHANNEL.format({ name: I }));
             break;
         default:
-            (R = I.Z.Messages.MUTE_CHANNEL_GENERIC), (C = I.Z.Messages.UNMUTE_CHANNEL_GENERIC);
+            (C = T.Z.Messages.MUTE_CHANNEL_GENERIC), (G = T.Z.Messages.UNMUTE_CHANNEL_GENERIC);
     }
     return _
-        ? (0, s.jsx)(M.MenuItem, {
+        ? (0, n.jsx)(M.MenuItem, {
               id: 'unmute-channel',
-              label: C,
-              subtext: n,
-              action: () => G(!1)
+              label: G,
+              subtext: s,
+              action: () => c(!1)
           })
-        : (0, s.jsx)(M.MenuItem, {
+        : (0, n.jsx)(M.MenuItem, {
               id: 'mute-channel',
-              label: R,
-              action: () => G(!0),
-              children: T().map((_) => {
-                  let { value: t, label: n } = _;
-                  return (0, s.jsx)(
+              label: C,
+              action: () => {
+                  c(!0),
+                      (0, u.s)({
+                          channelId: e.id,
+                          location: 'channel_context_menu'
+                      });
+              },
+              children: L().map((_) => {
+                  let { value: t, label: s } = _;
+                  return (0, n.jsx)(
                       M.MenuItem,
                       {
                           id: ''.concat(t),
-                          label: n,
+                          label: s,
                           action: () =>
                               (function (_) {
-                                  e.type === i.d4z.GUILD_CATEGORY && (0, S.c4)(e.id);
-                                  let s = L(_);
-                                  r.Z.updateChannelOverrideSettings(e.guild_id, e.id, s, A.ZB.Muted, E);
+                                  e.type === O.d4z.GUILD_CATEGORY && (0, r.c4)(e.id);
+                                  let n = o(_);
+                                  S.Z.updateChannelOverrideSettings(e.guild_id, e.id, n, i.ZB.Muted, E);
                               })(t)
                       },
                       t

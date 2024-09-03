@@ -163,9 +163,8 @@ function O(e) {
         }, [t, i, d]),
         et = a.useCallback(() => {
             var e;
-            let n = null === (e = m.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id;
-            if (null == n) return;
-            let l = (0, A.wR)(n, t, i);
+            let n = null === (e = m.Z.getChannel(t)) || void 0 === e ? void 0 : e.guild_id,
+                l = (0, A.wR)(n, t, i);
             (0, o.showToast)((0, o.createToast)(y.Z.Messages.COPIED_LINK, o.ToastType.LINK)), (0, I.JG)(l), (0, N.xp)(t, i);
         }, [t, i]),
         en = a.useCallback(() => {
