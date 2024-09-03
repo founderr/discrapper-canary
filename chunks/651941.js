@@ -40,10 +40,6 @@ class u extends (i = a.ZP.PersistedStore) {
     getUserVerifiedKeys(e) {
         return c[e];
     }
-    getUserVerifiedKeysCount(e) {
-        let t = c[e];
-        return null == t ? 0 : Object.keys(t).length;
-    }
 }
 o(u, 'displayName', 'VerifiedKeyStore'),
     o(u, 'persistKey', 'VerifiedKeyStore'),
