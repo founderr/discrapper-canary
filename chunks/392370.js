@@ -1,9 +1,9 @@
 t.d(n, {
     Q2: function () {
-        return b;
+        return S;
     },
     pe: function () {
-        return S;
+        return L;
     }
 }),
     t(47120),
@@ -41,7 +41,7 @@ function g(e, n) {
 function P(e, n) {
     return (0, m.un)(e.displayName, n.displayName);
 }
-function S(e) {
+function L(e) {
     let { channel: n, query: t, commandLimit: a, applicationLimit: o, searchesCommands: r = !0, searchesBots: s = !0, searchesActivities: C = !0 } = e;
     t.startsWith(''.concat(v.GI)) && (t = t.substring(1));
     let {
@@ -79,7 +79,7 @@ function S(e) {
             channel: n,
             includeBuiltIn: !0
         }),
-        { apps: S } = (function (e) {
+        { apps: L } = (function (e) {
             let { channel: n, onlyWithCommands: t, includeBuiltIn: a, allowFetch: l = !0, includeEmbeddedApps: o, includeNonEmbeddedApps: r } = e,
                 s = (0, p.Hs)(n, [c.yU.CHAT]).hasBaseAccessPermissions,
                 d = (0, m.em)(n, s, l),
@@ -117,8 +117,8 @@ function S(e) {
             includeEmbeddedApps: C,
             includeNonEmbeddedApps: s
         }),
-        b = (0, d.Z)({ guildId: n.getGuildId() }),
-        L = i.useMemo(() => {
+        S = (0, d.Z)({ guildId: n.getGuildId() }),
+        b = i.useMemo(() => {
             var e;
             if (!r) return [];
             return (0, A.N)(h, {
@@ -206,10 +206,10 @@ function S(e) {
             });
         }, [r, h, a, n, t]),
         R = i.useMemo(() => {
-            if (0 === L.length) return [];
-            let e = new Map(S.map((e) => [e.id, e]));
+            if (0 === b.length) return [];
+            let e = new Map(L.map((e) => [e.id, e]));
             return l().compact(
-                L.map((n) => {
+                b.map((n) => {
                     var t;
                     let i = e.get(n.applicationId);
                     if (null == i) return null;
@@ -221,32 +221,30 @@ function S(e) {
                     };
                 })
             );
-        }, [S, L, f]),
+        }, [L, b, f]),
         T = i.useMemo(() => {
             var e;
             let i = [];
             if (C) {
                 let e = new Set(
-                    S.map((e) => {
+                    L.map((e) => {
                         let { id: n } = e;
                         return n;
                     })
                 );
-                i.push(...S),
+                i.push(...L),
                     i.push(
-                        ...b
-                            .filter((n) => {
-                                let {
-                                    application: { id: t }
-                                } = n;
-                                return !e.has(t);
-                            })
-                            .map((e) => {
-                                let { application: n } = e;
-                                return n;
-                            })
+                        ...S.filter((n) => {
+                            let {
+                                application: { id: t }
+                            } = n;
+                            return !e.has(t);
+                        }).map((e) => {
+                            let { application: n } = e;
+                            return n;
+                        })
                     );
-            } else s && (i = S);
+            } else s && (i = L);
             return (0, A.N)(i, {
                 limit: o,
                 filterPredicates: [
@@ -298,7 +296,7 @@ function S(e) {
                 ],
                 sortComparers: [I, g]
             });
-        }, [s, C, o, n, t, S, b]),
+        }, [s, C, o, n, t, L, S]),
         M = R.length > 0,
         y = T.length > 0;
     return {
@@ -310,7 +308,7 @@ function S(e) {
         loading: E && r
     };
 }
-function b(e) {
+function S(e) {
     let { channel: n, query: t, fetches: a = !0, pageLimit: l = 1 / 0, entrypoint: c } = e;
     t.startsWith(''.concat(v.GI)) && (t = t.substring(1));
     let d = c === E._b.VOICE,

@@ -565,6 +565,7 @@ e.exports = Object.freeze({
     APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE: 'Learn More',
     APP_LAUNCHER_HOME_LEARN_MORE_SECTION_LEARN_MORE_ARIA_LABEL: '{sectionTitle} {sectionBody}',
     APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_IN_THREAD: 'Activities cannot be launched in Threads at this time',
+    APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_ON_DEVICE: 'This activity cannot be launched on this device at this time',
     APP_LAUNCHER_GLOBAL_SEARCH_COACHMARK_TITLE: 'Find New Apps',
     APP_LAUNCHER_GLOBAL_SEARCH_COACHMARK_DESCRIPTION: 'Discover games, music, and other fun things to do with friends!',
     APP_LAUNCHER_ENTRYPOINT_BUTTON_ARIA_LABEL: 'Apps',

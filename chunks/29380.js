@@ -1,6 +1,6 @@
 t.d(n, {
     Z: function () {
-        return N;
+        return I;
     }
 }),
     t(47120);
@@ -10,90 +10,103 @@ var i = t(735250),
     o = t(481060),
     r = t(595519),
     s = t(374065),
-    c = t(542094),
-    d = t(895924),
-    u = t(496675),
-    m = t(499254),
-    p = t(827498),
-    _ = t(783097),
-    C = t(890280),
-    h = t(176412),
-    f = t(231338),
-    A = t(689938),
-    E = t(872674);
-function N(e) {
-    let { channel: n, application: t, sectionName: N, primaryEntryPointCommand: x, buttonSize: v = o.ButtonSizes.MEDIUM } = e,
-        I = a.useId(),
-        g = a.useCallback(() => {
-            m.y(p.ti.ACTIVITY);
+    c = t(761122),
+    d = t(542094),
+    u = t(895924),
+    m = t(973616),
+    p = t(496675),
+    _ = t(358085),
+    C = t(499254),
+    h = t(827498),
+    f = t(783097),
+    A = t(890280),
+    E = t(176412),
+    N = t(231338),
+    x = t(689938),
+    v = t(872674);
+function I(e) {
+    let { channel: n, application: t, sectionName: I, primaryEntryPointCommand: g, buttonSize: P = o.ButtonSizes.MEDIUM } = e,
+        L = a.useId(),
+        S = a.useCallback(() => {
+            C.y(h.ti.ACTIVITY);
         }, []),
-        { submitting: P, wasSubmitting: S } = (0, C.Z)({
+        { submitting: b, wasSubmitting: R } = (0, A.Z)({
             applicationId: t.id,
             channelId: n.id,
-            launchingComponentId: I,
-            onSubmissionComplete: g
+            launchingComponentId: L,
+            onSubmissionComplete: S
         }),
-        [L, b] = a.useState(!1),
-        R = (0, c.Qv)({
+        [T, M] = a.useState(!1),
+        y = (0, d.Qv)({
             applicationId: t.id,
             channelId: n.id
         }),
-        T = a.useMemo(() => (0, _.XZ)(x.displayName), [x.displayName]),
+        j = a.useMemo(() => (0, f.XZ)(g.displayName), [g.displayName]),
         {
-            onActivityItemSelected: M,
-            buttonColor: y,
-            buttonText: j
-        } = (0, h.P7)({
+            onActivityItemSelected: Z,
+            buttonColor: O,
+            buttonText: H
+        } = (0, E.P7)({
             channel: n,
             application: t,
-            location: d.Vh.APP_LAUNCHER_APPLICATION_VIEW,
-            sectionName: N,
-            commandName: T,
-            autoDismissOnClick: R === c.JS.LEAVE,
-            launchingComponentId: I,
-            submitting: null != S ? S : P
+            location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW,
+            sectionName: I,
+            commandName: j,
+            autoDismissOnClick: y === d.JS.LEAVE,
+            launchingComponentId: L,
+            submitting: null != R ? R : b
         }),
-        Z = (function (e) {
-            let { channel: n, activityAction: t } = e,
-                i = (0, l.e7)([u.Z], () => u.Z.can(f.Pl.USE_EMBEDDED_ACTIVITIES, n)),
-                a = (0, s.KF)(n.id),
-                o = !1;
-            switch (t) {
-                case c.JS.LEAVE:
-                    o = !1;
+        { disabled: U, reason: k } = (function (e) {
+            let { channel: n, application: t, activityAction: i } = e,
+                a = (0, l.e7)([p.Z], () => p.Z.can(N.Pl.USE_EMBEDDED_ACTIVITIES, n)),
+                o = (0, s.KF)(n.id),
+                u = !1,
+                C = x.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START;
+            switch (i) {
+                case d.JS.LEAVE:
+                    u = !1;
                     break;
-                case c.JS.START:
-                    n.isGuildVoice() ? a !== s.jy.CAN_LAUNCH && (o = !0) : !(0, r.WS)(n) && (o = !0);
+                case d.JS.START:
+                    n.isGuildVoice() ? o !== s.jy.CAN_LAUNCH && (u = !0) : !(0, r.WS)(n) && (u = !0);
                     break;
-                case c.JS.JOIN:
-                    n.isGuildVoice() ? (o = !i) : !(0, r.WS)(n) && (o = !0);
+                case d.JS.JOIN:
+                    n.isGuildVoice() ? (u = !a) : !(0, r.WS)(n) && (u = !0);
             }
-            return o;
+            if (i !== d.JS.LEAVE) {
+                let e = t instanceof m.Z ? t.embeddedActivityConfig : t.embedded_activity_config,
+                    i = (0, c.Z)((0, _.getOS)());
+                null == e || e.supported_platforms.includes(i) ? n.isThread() && ((u = !0), (C = x.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_IN_THREAD)) : ((u = !0), (C = x.Z.Messages.APP_LAUNCHER_ACTIVITY_NOT_AVAILABLE_ON_DEVICE));
+            }
+            return {
+                disabled: u,
+                reason: C
+            };
         })({
             channel: n,
-            activityAction: R
+            application: t,
+            activityAction: y
         });
     return (0, i.jsx)(o.Tooltip, {
-        shouldShow: Z,
-        tooltipContentClassName: E.tooltipContent,
-        text: A.Z.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START,
+        shouldShow: U,
+        tooltipContentClassName: v.tooltipContent,
+        text: k,
         children: (e) => {
             let { onClick: n, ...a } = e;
             return (0, i.jsx)(o.Button, {
                 ...a,
                 type: 'submit',
-                size: v,
-                color: y,
-                disabled: Z,
-                submitting: L,
+                size: P,
+                color: O,
+                disabled: U,
+                submitting: T,
                 onClick: () => {
-                    b(!0), M(), null == n || n();
+                    M(!0), Z(), null == n || n();
                 },
-                'aria-label': A.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
-                    buttonText: j,
+                'aria-label': x.Z.Messages.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED_BUTTON_ARIA_LABEL.format({
+                    buttonText: H,
                     applicationName: t.name
                 }),
-                children: j
+                children: H
             });
         }
     });
