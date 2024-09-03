@@ -1,28 +1,30 @@
 var n = t(735250);
 t(470079);
-var a = t(481060),
-    i = t(230711),
-    r = t(528084),
-    o = t(313482);
+var a = t(120356),
+    i = t.n(a),
+    r = t(481060),
+    o = t(230711),
+    l = t(528084),
+    c = t(313482);
 s.Z = (e) => {
-    let { tabs: s, settingsSection: t, parentSetting: l } = e,
-        { viewableTabs: c, selectedTab: d } = (0, r.a)(s, l);
+    let { tabs: s, settingsSection: t, parentSetting: a, panelClassName: d } = e,
+        { viewableTabs: u, selectedTab: _ } = (0, l.a)(s, a);
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(a.TabBar, {
-                className: o.tabBar,
-                selectedItem: d.setting,
+            (0, n.jsx)(r.TabBar, {
+                className: c.tabBar,
+                selectedItem: _.setting,
                 onItemSelect: (e) => {
-                    i.Z.setSection(t, e);
+                    o.Z.setSection(t, e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
                 look: 'brand',
-                children: c.map((e) =>
+                children: u.map((e) =>
                     (0, n.jsx)(
-                        a.TabBar.Item,
+                        r.TabBar.Item,
                         {
-                            className: o.tab,
+                            className: c.tab,
                             id: e.setting,
                             'aria-label': e.title,
                             children: e.title
@@ -31,14 +33,14 @@ s.Z = (e) => {
                     )
                 )
             }),
-            (0, n.jsx)(a.TabBar.Panel, {
-                id: d.setting,
-                'aria-labelledby': d.title,
-                className: o.tabBarPanel,
+            (0, n.jsx)(r.TabBar.Panel, {
+                id: _.setting,
+                'aria-labelledby': _.title,
+                className: i()(c.tabBarPanel, d),
                 children: ((e) => {
                     let s = e.component;
                     return 'function' == typeof s ? (0, n.jsx)(s, {}) : s;
-                })(d)
+                })(_)
             })
         ]
     });

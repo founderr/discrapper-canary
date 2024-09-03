@@ -40,8 +40,8 @@ var a = t(990547),
     B = t(626135),
     U = t(572004),
     G = t(49012),
-    y = t(358085),
-    F = t(998502),
+    F = t(358085),
+    y = t(998502),
     V = t(392735),
     w = t(695346),
     k = t(604227),
@@ -92,7 +92,7 @@ var a = t(990547),
 let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     ej = eO.Z,
     eB = (e) => {
-        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eB, impressionSource: eU, numOfPendingFamilyRequests: eG, isOverlaySupported: ey, isClipsBetaTagShowing: eF = !1, shouldMergeGameSettings: eV, isUserSettingsSearchEnabled: ew, isKeywordFilteringEnabled: ek, isStaff: eY, isInappropriateConversationWarningEnabled: eH, paymentsBlocked: eW, isEligibleForQuests: eK, showGiftNitro: ez, isStricterMessageRequestsEnabled: eQ, hasLibraryApplication: eX, hasTOTPEnabled: eq, canBroadcastActivity: eJ, developerMode: e$, isSafetySettingsV2Enabled: e0 } = e;
+        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eB, impressionSource: eU, numOfPendingFamilyRequests: eG, isOverlaySupported: eF, isClipsBetaTagShowing: ey = !1, shouldMergeGameSettings: eV, isUserSettingsSearchEnabled: ew, isKeywordFilteringEnabled: ek, isStaff: eY, isInappropriateConversationWarningEnabled: eH, paymentsBlocked: eW, isEligibleForQuests: eK, showGiftNitro: ez, isStricterMessageRequestsEnabled: eQ, hasLibraryApplication: eX, hasTOTPEnabled: eq, canBroadcastActivity: eJ, developerMode: e$, isSafetySettingsV2Enabled: e0 } = e;
         return Object.freeze({
             [eM.s6.SEARCH_NO_RESULTS]: {
                 section: _.ID.CUSTOM,
@@ -295,15 +295,30 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eb.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_ENCRYPTION],
                 parent: eM.s6.PRIVACY_AND_SAFETY_V2
             },
+            [eM.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY]: {
+                section: eD.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eb.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_CONTENT_SOCIAL],
+                parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL
+            },
             [eM.s6.PRIVACY_SENSITIVE_MEDIA]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eb.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_FILTER, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_BLUR, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_SENSITIVE_CONTENT, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_EXPLICIT],
                 parent: eM.s6.PRIVACY_USER_SETTINGS
             },
+            [eM.s6.PRIVACY_SENSITIVE_MEDIA_V2]: {
+                section: eD.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eb.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_FILTER, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_BLUR, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_SENSITIVE_CONTENT, eb.Z.Messages.OBSCURED_CONTENT_SEARCH_TERM_EXPLICIT],
+                parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL
+            },
             [eM.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eb.Z.Messages.SETTINGS_DM_SPAM_FILTER, eb.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_MESSAGES, eb.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_INBOX],
                 parent: eM.s6.PRIVACY_USER_SETTINGS
+            },
+            [eM.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2]: {
+                section: eD.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eb.Z.Messages.SETTINGS_DM_SPAM_FILTER, eb.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_MESSAGES, eb.Z.Messages.SETTINGS_DM_SPAM_FILTER_SEARCH_TERM_INBOX],
+                parent: eM.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL
             },
             [eM.s6.PRIVACY_SERVER_PRIVACY_DEFAULTS]: {
                 section: eD.oAB.PRIVACY_AND_SAFETY,
@@ -479,7 +494,7 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eb.Z.Messages.CLIPS],
                 label: eb.Z.Messages.CLIPS,
                 ariaLabel: eb.Z.Messages.CLIPS,
-                icon: eF ? (0, n.jsx)(N.Z, {}) : void 0,
+                icon: ey ? (0, n.jsx)(N.Z, {}) : void 0,
                 element: m.Z,
                 predicate: () => !eV
             },
@@ -757,7 +772,7 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eD.oAB.VOICE,
                 searchableTitles: [eb.Z.Messages.EXPERIMENTAL_ENCODERS],
                 parent: eM.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
-                predicate: () => 'stable' !== F.ZP.releaseChannel && v.Z.isExperimentalEncodersSupported()
+                predicate: () => 'stable' !== y.ZP.releaseChannel && v.Z.isExperimentalEncodersSupported()
             },
             [eM.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING]: {
                 section: eD.oAB.VOICE,
@@ -819,7 +834,7 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eD.oAB.VOICE,
                 searchableTitles: [eb.Z.Messages.FORM_LABEL_VOICE_DIAGNOSTICS],
                 parent: eM.s6.VOICE_AND_VIDEO_ADVANCED,
-                predicate: () => y.isPlatformEmbedded
+                predicate: () => F.isPlatformEmbedded
             },
             [eM.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING]: {
                 section: eD.oAB.VOICE,
@@ -842,13 +857,13 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eD.oAB.VOICE,
                 searchableTitles: [eb.Z.Messages.FORM_CHECKBOX_CONNECTION_LOG],
                 parent: eM.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => ('canary' === F.ZP.releaseChannel || 'development' === F.ZP.releaseChannel) && eY && v.Z.supports(eL.AN.CONNECTION_REPLAY)
+                predicate: () => ('canary' === y.ZP.releaseChannel || 'development' === y.ZP.releaseChannel) && eY && v.Z.supports(eL.AN.CONNECTION_REPLAY)
             },
             [eM.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
                 section: eD.oAB.VOICE,
                 searchableTitles: [eb.Z.Messages.FORM_CHECKBOX_DEBUG_LOGGING],
                 parent: eM.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => y.isPlatformEmbedded && v.Z.supports(eL.AN.DEBUG_LOGGING) && null != E.Z.fileManager.readLogFiles
+                predicate: () => F.isPlatformEmbedded && v.Z.supports(eL.AN.DEBUG_LOGGING) && null != E.Z.fileManager.readLogFiles
             },
             [eM.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS]: {
                 section: eD.oAB.VOICE,
@@ -986,7 +1001,7 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eD.oAB.NOTIFICATIONS,
                 searchableTitles: [eb.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_FLASH_LABEL],
                 parent: eM.s6.NOTIFICATIONS,
-                predicate: () => (0, y.isWindows)()
+                predicate: () => (0, F.isWindows)()
             },
             [eM.s6.NOTIFICATIONS_UNREAD_SETTINGS]: {
                 section: eD.oAB.NOTIFICATIONS,
@@ -1099,14 +1114,14 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eb.Z.Messages.USER_SETTINGS_WINDOWS_SETTINGS],
                 label: eb.Z.Messages.USER_SETTINGS_WINDOWS_SETTINGS,
                 element: eO.Z,
-                predicate: () => y.isPlatformEmbedded && (0, y.isWindows)()
+                predicate: () => F.isPlatformEmbedded && (0, F.isWindows)()
             },
             [eM.s6.LINUX_SETTINGS]: {
                 section: eD.oAB.LINUX,
                 searchableTitles: [eb.Z.Messages.USER_SETTINGS_LINUX_SETTINGS],
                 label: eb.Z.Messages.USER_SETTINGS_LINUX_SETTINGS,
                 element: ej,
-                predicate: () => y.isPlatformEmbedded && (0, y.isLinux)()
+                predicate: () => F.isPlatformEmbedded && (0, F.isLinux)()
             },
             [eM.s6.STREAMER_MODE]: {
                 section: eD.oAB.STREAMER_MODE,
@@ -1171,7 +1186,7 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eD.oAB.ADVANCED,
                 searchableTitles: [eb.Z.Messages.HARDWARE_ACCELERATION],
                 parent: eM.s6.SETTINGS_ADVANCED,
-                predicate: () => y.isPlatformEmbedded
+                predicate: () => F.isPlatformEmbedded
             },
             [eM.s6.SETTINGS_ADVANCED_SHOW_GAME_LIBRARY]: {
                 section: eD.oAB.ADVANCED,
@@ -1226,7 +1241,7 @@ let ev = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eb.Z.Messages.OVERLAY],
                 label: eb.Z.Messages.OVERLAY,
                 element: eT.Z,
-                predicate: () => !eV && ey
+                predicate: () => !eV && eF
             },
             [eM.s6.CHANGELOG]: {
                 section: 'changelog',

@@ -17163,6 +17163,7 @@ e.exports = Object.freeze({
     PRIVACY_AND_SAFETY_TAB_TITLE_DATA_PRIVACY: 'Data & privacy',
     PRIVACY_AND_SAFETY_TAB_TITLE_STANDING: 'Standing',
     PRIVACY_AND_SAFETY_TAB_TITLE_ENCRYPTION: 'Encryption',
+    PRIVACY_AND_SAFETY_CATEGORY_TITLE_CONTENT: 'Content',
     SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE: 'Your account is $[all good!](hook)',
     SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE_V2: 'Your account is $[all good](hook)',
     SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION: "Thanks for upholding Discord's [Terms of Service]({termsOfService}) and [Community Guidelines]({communityGuidelines}).",
