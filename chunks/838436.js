@@ -1,40 +1,47 @@
 t.d(s, {
     H: function () {
-        return o;
+        return c;
     },
     U: function () {
-        return l;
+        return d;
     }
 });
 var n = t(735250);
 t(470079);
-var a = t(481060),
-    i = t(921801),
-    r = t(5718);
-function o(e) {
-    let { header: s, description: t } = e;
+var a = t(120356),
+    i = t.n(a),
+    r = t(481060),
+    o = t(921801),
+    l = t(5718);
+function c(e) {
+    let { header: s, description: t, relatedId: a, disabled: o } = e;
     return (0, n.jsxs)('div', {
-        className: r.header,
+        className: l.header,
         children: [
-            (0, n.jsx)(a.Heading, {
+            (0, n.jsx)(r.Heading, {
                 variant: 'text-md/medium',
                 color: 'header-primary',
-                children: s
+                children: (0, n.jsx)('label', {
+                    htmlFor: a,
+                    className: i()(l.title, { [l.disabled]: o }),
+                    children: s
+                })
             }),
-            (0, n.jsx)(a.Text, {
+            (0, n.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
+                className: i()(l.description, { [l.disabled]: o }),
                 children: t
             })
         ]
     });
 }
-function l(e) {
+function d(e) {
     let { setting: s, children: t } = e;
-    return (0, n.jsx)(i.F, {
+    return (0, n.jsx)(o.F, {
         setting: s,
         children: (0, n.jsx)('div', {
-            className: r.container,
+            className: l.container,
             children: t
         })
     });
