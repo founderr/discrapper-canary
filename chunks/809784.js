@@ -10,6 +10,5 @@ e.exports = {
     successContent: 'successContent_c1a031',
     successTitle: 'successTitle_c1a031',
     successPromotion: 'successPromotion_c1a031',
-    successImage: 'successImage_c1a031',
-    modalLight: 'modalLight_c1a031'
+    successImage: 'successImage_c1a031'
 };

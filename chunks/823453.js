@@ -15,20 +15,19 @@ var r = n(735250),
     p = n(706454),
     I = n(210887),
     m = n(451478),
-    T = n(792125),
-    g = n(597952),
-    S = n(252618),
-    A = n(80006),
-    N = n(587061),
-    O = n(392358),
-    R = n(981631);
+    T = n(597952),
+    g = n(252618),
+    S = n(80006),
+    A = n(587061),
+    N = n(392358),
+    O = n(981631);
 n(243997);
-let v = new Set([R.Z5c.LOGIN, R.Z5c.REGISTER]);
+let R = new Set([O.Z5c.LOGIN, O.Z5c.REGISTER]);
 t.Z = i.memo(function (e) {
     let { children: t, skipsSettingDefaultPageTitle: a } = e;
-    (0, S.ZD)({ skipsSettingDefaultPageTitle: a });
-    let { clientThemesClassName: R, clientThemesCSS: C } = (0, E.ZP)(),
-        y = i.createElement('style', { [E.PQ]: !0 }, C);
+    (0, g.ZD)({ skipsSettingDefaultPageTitle: a });
+    let { clientThemesClassName: O, clientThemesCSS: v } = (0, E.ZP)(),
+        C = i.createElement('style', { [E.PQ]: !0 }, v);
     return (0, r.jsxs)(o.ql, {
         children: [
             (function (e) {
@@ -38,40 +37,40 @@ t.Z = i.memo(function (e) {
                     })),
                     a = (0, c.e7)([m.Z], () => m.Z.isFocused(), []),
                     { reducedMotion: o } = i.useContext(_.AccessibilityPreferencesContext),
-                    { accessibilitySettings: d, appWrapperClassName: E } = (0, A.I)(),
-                    { fontScale: S, fontScaleClass: R, saturation: C, desaturateUserColors: y, useForcedColors: L, systemForcedColors: D } = d,
-                    b = (0, l.TH)(),
-                    M = i.useMemo(() => v.has(b.pathname), [b.pathname]);
-                (0, N.Z)(window, M);
-                let P = (0, O.Z)(window, __OVERLAY__ || a),
-                    U = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
-                    w = (0, _.useRedesignIconContext)().enabled,
-                    x = (0, f.Q)('AppHelmet');
+                    { accessibilitySettings: d, appWrapperClassName: E } = (0, S.I)(),
+                    { fontScale: g, fontScaleClass: O, saturation: v, desaturateUserColors: C, useForcedColors: y, systemForcedColors: L } = d,
+                    D = (0, l.TH)(),
+                    b = i.useMemo(() => R.has(D.pathname), [D.pathname]);
+                (0, A.Z)(window, b);
+                let M = (0, N.Z)(window, __OVERLAY__ || a),
+                    P = (0, c.e7)([h.Z], () => h.Z.sidebarWidth),
+                    U = (0, _.useRedesignIconContext)().enabled,
+                    w = (0, f.Q)('AppHelmet');
                 return (0, r.jsx)('html', {
                     lang: t,
-                    style: 'font-size: '.concat(S, '%; --saturation-factor: ').concat(C, '; --devtools-sidebar-width: ').concat(U, 'px;'),
+                    style: 'font-size: '.concat(g, '%; --saturation-factor: ').concat(v, '; --devtools-sidebar-width: ').concat(P, 'px;'),
                     className: s()(
                         e,
                         E,
                         {
                             overlay: __OVERLAY__,
-                            'mouse-mode': P,
+                            'mouse-mode': M,
                             'reduce-motion': o.enabled,
                             'full-motion': !o.enabled,
                             'is-mobile': u.tq,
                             'app-focused': a,
-                            'desaturate-user-colors': y,
-                            'disable-forced-colors': !L && 'active' === D,
-                            'enable-forced-colors': L,
-                            'show-redesigned-icons': w,
-                            'visual-refresh': x
+                            'desaturate-user-colors': C,
+                            'disable-forced-colors': !y && 'active' === L,
+                            'enable-forced-colors': y,
+                            'show-redesigned-icons': U,
+                            'visual-refresh': w
                         },
-                        (0, T.Q)(n),
-                        (0, g.Z)(),
-                        R
+                        (0, _.getThemeClass)(n),
+                        (0, T.Z)(),
+                        O
                     )
                 });
-            })(R),
+            })(O),
             (function () {
                 let [e, t] = i.useState([]);
                 return (
@@ -102,7 +101,7 @@ t.Z = i.memo(function (e) {
                     })
                 );
             })(),
-            y,
+            C,
             t
         ]
     });

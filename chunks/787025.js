@@ -1,9 +1,9 @@
 n.d(t, {
     G: function () {
-        return I;
+        return p;
     },
     j: function () {
-        return m;
+        return I;
     }
 }),
     n(47120);
@@ -16,49 +16,52 @@ var r = n(735250),
     u = n(568154),
     c = n(252618),
     d = n(449934),
-    _ = n(792125),
-    E = n(981631),
-    f = n(898625),
-    h = n(689938),
-    p = n(68560);
-function I(e) {
+    _ = n(981631),
+    E = n(898625),
+    f = n(689938),
+    h = n(68560);
+function p(e) {
     let { children: t, wrapperClassName: n, embedded: a } = e,
-        [o, I] = i.useState(f.hO.INITIAL),
-        m = i.useCallback((e) => {
-            I((t) => Math.max(t, e));
+        [o, p] = i.useState(E.hO.INITIAL),
+        I = i.useCallback((e) => {
+            p((t) => Math.max(t, e));
         }, []);
     return (
-        (0, c.Tt)({ location: h.Z.Messages.OAUTH2_TITLE }),
-        (0, r.jsx)(l.ThemeContextProvider, {
-            theme: E.BRd.DARK,
-            children: (0, r.jsx)(u.Z, {
-                embedded: a,
-                className: s()((0, _.Q)(E.BRd.DARK), p.wave),
-                splash: (0, d.gK)(),
-                waveState: o,
-                showLogo: !0,
-                updateWaveState: m,
-                children: (0, r.jsx)('div', {
-                    className: s()(p.oauth2Wrapper, n),
-                    children: t
+        (0, c.Tt)({ location: f.Z.Messages.OAUTH2_TITLE }),
+        (0, r.jsx)(l.ThemeProvider, {
+            theme: _.BRd.DARK,
+            children: (e) =>
+                (0, r.jsx)(l.ThemeContextProvider, {
+                    theme: _.BRd.DARK,
+                    children: (0, r.jsx)(u.Z, {
+                        embedded: a,
+                        className: s()(e, h.wave),
+                        splash: (0, d.gK)(),
+                        waveState: o,
+                        showLogo: !0,
+                        updateWaveState: I,
+                        children: (0, r.jsx)('div', {
+                            className: s()(h.oauth2Wrapper, n),
+                            children: t
+                        })
+                    })
                 })
-            })
         })
     );
 }
-function m(e) {
+function I(e) {
     let { children: t, footer: n, transitionState: i, overlay: a, ...s } = e;
     return (0, r.jsxs)(o.Y0, {
         size: o.Cg.DYNAMIC,
         transitionState: i,
-        className: p.oauth2Wrapper,
+        className: h.oauth2Wrapper,
         ...s,
         children: [
             (0, r.jsx)(o.hz, { children: t }),
             a,
             null != n &&
                 (0, r.jsx)(o.mz, {
-                    className: p.footer,
+                    className: h.footer,
                     children: n
                 })
         ]

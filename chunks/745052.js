@@ -33,44 +33,43 @@ var i = n(735250),
     D = n(592125),
     y = n(819640),
     j = n(626135),
-    U = n(792125),
-    G = n(879041),
-    w = n(647090),
-    k = n(385956),
-    B = n(610697),
-    H = n(26373),
-    V = n(486622),
-    F = n(922409),
-    Y = n(899740),
-    W = n(177033),
-    z = n(355350),
-    K = n(307947),
-    q = n(96479),
-    Q = n(480874),
-    X = n(687683),
-    J = n(981631),
-    $ = n(921944),
-    ee = n(526761),
-    et = n(689938),
-    en = n(23947),
-    ei = n(625032);
-function ea() {
+    U = n(879041),
+    G = n(647090),
+    w = n(385956),
+    k = n(610697),
+    B = n(26373),
+    H = n(486622),
+    V = n(922409),
+    F = n(899740),
+    Y = n(177033),
+    W = n(355350),
+    z = n(307947),
+    K = n(96479),
+    q = n(480874),
+    Q = n(687683),
+    X = n(981631),
+    J = n(921944),
+    $ = n(526761),
+    ee = n(689938),
+    et = n(23947),
+    en = n(625032);
+function ei() {
     let e = a.useRef(null),
-        t = (0, Y.q)(),
-        n = (0, W.Z)(),
-        s = (0, H.K)(),
+        t = (0, F.q)(),
+        n = (0, Y.Z)(),
+        s = (0, B.K)(),
         c = (0, I.N)(),
         d = n.length > 0 ? (null == n ? void 0 : n[0].channel.id) : null,
-        _ = (0, G.e)({ location: 'message-request-page-web' });
+        _ = (0, U.e)({ location: 'message-request-page-web' });
     a.useEffect(() => {
         if (!!_ && null != d) (0, h.ES)(d);
     }, [d, _]);
     let E = a.useCallback(() => {
-            (0, u.showToast)((0, u.createToast)(et.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE));
+            (0, u.showToast)((0, u.createToast)(ee.Z.Messages.MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE, u.ToastType.FAILURE));
         }, []),
-        { rejectAll: m } = (0, V.m)({ onError: E }),
+        { rejectAll: m } = (0, H.m)({ onError: E }),
         g = (0, p.Z)('message-requests-list'),
-        { channelId: T } = (0, F._)(),
+        { channelId: T } = (0, V._)(),
         f = a.useCallback(() => {
             m(n.map((e) => e.channel.id));
         }, [n, m]),
@@ -82,12 +81,12 @@ function ea() {
                     c = null === (a = n[l + 1]) || void 0 === a ? void 0 : null === (t = a.channel) || void 0 === t ? void 0 : t.id,
                     d = o.channel.id;
                 return (0, i.jsx)(
-                    q.Z,
+                    K.Z,
                     {
                         index: l,
                         className: r()({
-                            [en.selected]: null != T && T === d,
-                            [en.siblingSelected]: null != T && T === c
+                            [et.selected]: null != T && T === d,
+                            [et.siblingSelected]: null != T && T === c
                         }),
                         channel: o.channel,
                         user: o.user,
@@ -103,14 +102,14 @@ function ea() {
                 (0, i.jsxs)(
                     S.Z,
                     {
-                        className: en.sectionTitle,
+                        className: et.sectionTitle,
                         children: [
-                            t > 0 ? et.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({ count: t }) : et.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE,
+                            t > 0 ? ee.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE_WITH_COUNT.format({ count: t }) : ee.Z.Messages.MESSAGE_REQUESTS_PAGE_TITLE,
                             c && t > 0
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(u.Text, {
-                                              className: en.titleDivider,
+                                              className: et.titleDivider,
                                               variant: 'eyebrow',
                                               color: 'header-secondary',
                                               tag: 'span',
@@ -121,9 +120,9 @@ function ea() {
                                               look: u.ButtonLooks.LINK,
                                               color: u.ButtonColors.LINK,
                                               size: u.ButtonSizes.SMALL,
-                                              className: en.clearAllButton,
-                                              'aria-label': et.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
-                                              children: et.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL
+                                              className: et.clearAllButton,
+                                              'aria-label': ee.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL,
+                                              children: ee.Z.Messages.MESSAGE_REQUESTS_CLEAR_ALL
                                           })
                                       ]
                                   })
@@ -135,7 +134,7 @@ function ea() {
             [t, f, c]
         );
     return (n.length !== t && Z.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
-        ? (0, i.jsx)(K.Z, { section: X.pS.REQUESTS })
+        ? (0, i.jsx)(z.Z, { section: Q.pS.REQUESTS })
         : (0, i.jsx)(l.bG, {
               navigator: g,
               children: (0, i.jsx)(l.SJ, {
@@ -144,17 +143,17 @@ function ea() {
                       return (0, i.jsx)(
                           u.List,
                           {
-                              className: en.list,
+                              className: et.list,
                               innerRole: s,
-                              innerAriaLabel: et.Z.Messages.MESSAGE_REQUESTS,
+                              innerAriaLabel: ee.Z.Messages.MESSAGE_REQUESTS,
                               ref: (t) => {
                                   var n;
                                   (e.current = t), (a.current = null !== (n = null == t ? void 0 : t.getScrollerNode()) && void 0 !== n ? n : null);
                               },
                               paddingTop: 24,
                               paddingBottom: 24,
-                              sectionHeight: X.oi,
-                              rowHeight: X.WN,
+                              sectionHeight: Q.oi,
+                              rowHeight: Q.WN,
                               renderSection: N,
                               renderRow: C,
                               sections: [n.length],
@@ -168,12 +167,12 @@ function ea() {
               })
           });
 }
-function es(e) {
+function ea(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
         a = (0, c.e7)([M.ZP], () => M.ZP.getSidebarState(M.uZ)),
         s = (0, c.e7)([D.Z], () => D.Z.getChannel(null == a ? void 0 : a.channelId));
     if (null == a || a.type !== O.tI.VIEW_MESSAGE_REQUEST || null == s || !s.isPrivate()) return null;
-    let r = t - J.R7I;
+    let r = t - X.R7I;
     return (0, i.jsx)(T.Z, {
         sidebarType: T.y.MessageRequestSidebar,
         maxWidth: r,
@@ -184,21 +183,21 @@ function es(e) {
         })
     });
 }
-let er = function (e) {
+let es = function (e) {
         let { markAsDismissed: t } = e;
         return (0, i.jsx)(b.ZP, {
-            header: et.Z.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
-            content: et.Z.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
-            buttonCTA: et.Z.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
-            className: en.messageRequestCoachmark,
-            onClick: () => t($.L.UNKNOWN),
+            header: ee.Z.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
+            content: ee.Z.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT_TEENS,
+            buttonCTA: ee.Z.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
+            className: et.messageRequestCoachmark,
+            onClick: () => t(J.L.UNKNOWN),
             markAsDismissed: t,
             caretPosition: b.DF.TOP_CENTER,
-            headerClassName: en.__invalid_header
+            headerClassName: et.__invalid_header
         });
     },
-    el = (e) => {
-        let t = (0, B.Z)(),
+    er = (e) => {
+        let t = (0, k.Z)(),
             n = () => y.Z.hasLayers() || (0, u.hasAnyModalOpen)(),
             s = (0, c.e7)([g.Z], () => g.Z.useReducedMotion);
         return (
@@ -213,19 +212,19 @@ let er = function (e) {
                         return (0, i.jsx)(u.Popout, {
                             renderPopout: () =>
                                 t
-                                    ? (0, i.jsx)(er, { markAsDismissed: l })
+                                    ? (0, i.jsx)(es, { markAsDismissed: l })
                                     : (0, i.jsx)(b.ZP, {
-                                          header: et.Z.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
-                                          content: et.Z.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
-                                          buttonCTA: et.Z.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
-                                          secondaryButtonCTA: et.Z.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
-                                          className: en.messageRequestCoachmark,
+                                          header: ee.Z.Messages.MESSAGE_REQUESTS_COACHMARK_TITLE,
+                                          content: ee.Z.Messages.MESSAGE_REQUESTS_COACHMARK_CONTENT,
+                                          buttonCTA: ee.Z.Messages.MESSAGE_REQUESTS_COACHMARK_CONFIRM,
+                                          secondaryButtonCTA: ee.Z.Messages.MESSAGE_REQUESTS_COACHMARK_DISMISS,
+                                          className: et.messageRequestCoachmark,
                                           onClick: (e) => {
-                                              e.stopPropagation(), E.Z.open(J.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: ee.to.MESSAGE_REQUESTS });
+                                              e.stopPropagation(), E.Z.open(X.oAB.PRIVACY_AND_SAFETY, null, { scrollPosition: $.to.MESSAGE_REQUESTS });
                                           },
                                           markAsDismissed: l,
                                           caretPosition: b.DF.TOP_CENTER,
-                                          headerClassName: en.__invalid_header
+                                          headerClassName: et.__invalid_header
                                       }),
                             position: 'bottom',
                             align: 'center',
@@ -239,18 +238,18 @@ let er = function (e) {
             })
         );
     };
-function eo(e) {
+function el(e) {
     let { section: t } = e;
-    return t === X.pS.SPAM ? (0, i.jsx)(Q.Z, {}) : (0, i.jsx)(ea, {});
+    return t === Q.pS.SPAM ? (0, i.jsx)(q.Z, {}) : (0, i.jsx)(ei, {});
 }
-let ec = (0, m.Z)(function (e) {
+let eo = (0, m.Z)(function (e) {
     let { width: t } = e,
-        n = (0, Y.q)();
+        n = (0, F.q)();
     a.useEffect(() => {
-        _.Y(J.Z5c.MESSAGE_REQUESTS), (0, x.e)('message-requests'), j.default.track(J.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), Z.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
+        _.Y(X.Z5c.MESSAGE_REQUESTS), (0, x.e)('message-requests'), j.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), Z.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     }, []);
     let s = (0, c.e7)([P.Z], () => P.Z.theme),
-        l = (0, z.w)(),
+        l = (0, W.w)(),
         [d, h] = a.useState(!1),
         E = (0, c.e7)([M.ZP], () => {
             let e = M.ZP.getSidebarState(M.uZ);
@@ -258,63 +257,68 @@ let ec = (0, m.Z)(function (e) {
         }),
         m = null == E ? void 0 : E.channelId,
         I = null != E,
-        g = (0, k.T)(m),
-        p = (0, w.J)(m);
+        g = (0, w.T)(m),
+        p = (0, G.J)(m);
     a.useEffect(() => {
         null != m && !g && p && I && ((0, L.Kh)(m), R.Z.closeChannelSidebar(M.uZ));
     }, [m, p, I, g]);
-    let [T, f] = a.useState(X.pS.REQUESTS);
+    let [T, f] = a.useState(Q.pS.REQUESTS),
+        S = (e) => {
+            f(e);
+        };
     return (
-        (0, C.Tt)({ location: et.Z.Messages.MESSAGE_REQUESTS }),
+        (0, C.Tt)({ location: ee.Z.Messages.MESSAGE_REQUESTS }),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: r()(ei.chat, en.container, {
-                        [ei.threadSidebarOpen]: I,
-                        [ei.threadSidebarFloating]: I && d
+                    className: r()(en.chat, et.container, {
+                        [en.threadSidebarOpen]: I,
+                        [en.threadSidebarFloating]: I && d
                     }),
                     children: [
-                        (0, i.jsxs)(v.Z, {
-                            className: (0, U.Q)(s),
-                            toolbar: !0,
-                            children: [
-                                (0, i.jsx)(v.Z.Icon, {
-                                    icon: u.EnvelopeIcon,
-                                    'aria-hidden': !0
-                                }),
-                                (0, i.jsx)(el, { children: (0, i.jsx)(v.Z.Title, { children: et.Z.Messages.MESSAGE_REQUESTS }) }),
-                                (0, i.jsx)(v.Z.Divider, {}),
-                                (0, i.jsxs)(u.TabBar, {
-                                    'aria-label': et.Z.Messages.MESSAGE_REQUESTS,
-                                    selectedItem: T,
-                                    type: 'top-pill',
-                                    onItemSelect: (e) => {
-                                        f(e);
-                                    },
-                                    className: en.__invalid_tabBar,
+                        (0, i.jsx)(u.ThemeProvider, {
+                            theme: s,
+                            children: (e) =>
+                                (0, i.jsxs)(v.Z, {
+                                    className: e,
+                                    toolbar: !0,
                                     children: [
-                                        (0, i.jsx)(u.TabBar.Item, {
-                                            id: X.pS.REQUESTS,
-                                            className: en.__invalid_item,
-                                            children: et.Z.Messages.MESSAGE_REQUESTS_REQUESTS_TAB_TITLE
+                                        (0, i.jsx)(v.Z.Icon, {
+                                            icon: u.EnvelopeIcon,
+                                            'aria-hidden': !0
                                         }),
-                                        (0, i.jsx)(u.TabBar.Item, {
-                                            id: X.pS.SPAM,
-                                            className: en.__invalid_item,
-                                            children: 0 === l ? et.Z.Messages.MESSAGE_REQUESTS_SPAM_TAB_TITLE : et.Z.Messages.MESSAGE_REQUESTS_SPAM_TAB_TITLE_WITH_COUNT.format({ count: l })
+                                        (0, i.jsx)(er, { children: (0, i.jsx)(v.Z.Title, { children: ee.Z.Messages.MESSAGE_REQUESTS }) }),
+                                        (0, i.jsx)(v.Z.Divider, {}),
+                                        (0, i.jsxs)(u.TabBar, {
+                                            'aria-label': ee.Z.Messages.MESSAGE_REQUESTS,
+                                            selectedItem: T,
+                                            type: 'top-pill',
+                                            onItemSelect: S,
+                                            className: et.__invalid_tabBar,
+                                            children: [
+                                                (0, i.jsx)(u.TabBar.Item, {
+                                                    id: Q.pS.REQUESTS,
+                                                    className: et.__invalid_item,
+                                                    children: ee.Z.Messages.MESSAGE_REQUESTS_REQUESTS_TAB_TITLE
+                                                }),
+                                                (0, i.jsx)(u.TabBar.Item, {
+                                                    id: Q.pS.SPAM,
+                                                    className: et.__invalid_item,
+                                                    children: 0 === l ? ee.Z.Messages.MESSAGE_REQUESTS_SPAM_TAB_TITLE : ee.Z.Messages.MESSAGE_REQUESTS_SPAM_TAB_TITLE_WITH_COUNT.format({ count: l })
+                                                })
+                                            ]
                                         })
                                     ]
                                 })
-                            ]
                         }),
                         (0, i.jsx)('div', {
-                            className: ei.content,
-                            children: (0, i.jsx)(eo, { section: T })
+                            className: en.content,
+                            children: (0, i.jsx)(el, { section: T })
                         })
                     ]
                 }),
                 I &&
-                    (0, i.jsx)(es, {
+                    (0, i.jsx)(ea, {
                         pageWidth: t,
                         onSidebarResize: (e, t) => {
                             h(t);
@@ -324,4 +328,4 @@ let ec = (0, m.Z)(function (e) {
         })
     );
 });
-t.Z = ec;
+t.Z = eo;

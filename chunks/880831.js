@@ -1,9 +1,9 @@
 n.d(t, {
     Z: function () {
-        return j;
+        return L;
     },
     z: function () {
-        return R;
+        return b;
     }
 }),
     n(47120);
@@ -30,12 +30,11 @@ var i = n(735250),
     N = n(768581),
     S = n(70956),
     v = n(823379),
-    Z = n(792125),
-    A = n(981631),
-    M = n(217702),
-    b = n(118465);
-let R = 10 * S.Z.Millis.SECOND;
-function L(e) {
+    Z = n(981631),
+    A = n(217702),
+    M = n(118465);
+let b = 10 * S.Z.Millis.SECOND;
+function R(e) {
     var t;
     let { message: n } = e,
         s = (0, c.e7)([T.Z], () => T.Z.isBlockedForMessage(n)),
@@ -63,14 +62,14 @@ function L(e) {
                   }).content
                 : null,
         {
-            contentPlaceholder: A,
+            contentPlaceholder: b,
             renderedContent: R,
             trailingIcon: L,
             leadingIcon: j
-        } = (0, C.f)(n, Z, s, b.messageContent, {
-            trailingIconClass: b.messageContentTrailingIcon,
-            leadingIconClass: b.messageContentLeadingIcon,
-            iconSize: M.WW
+        } = (0, C.f)(n, Z, s, M.messageContent, {
+            trailingIconClass: M.messageContentTrailingIcon,
+            leadingIconClass: M.messageContentLeadingIcon,
+            iconSize: A.WW
         }),
         O = (0, g.cv)(n),
         P =
@@ -79,7 +78,7 @@ function L(e) {
                       (0, i.jsx)(
                           I.ZP,
                           {
-                              className: b.sticker,
+                              className: M.sticker,
                               size: 128,
                               sticker: e,
                               isInteracting: d
@@ -89,7 +88,7 @@ function L(e) {
                   )
                 : null;
     return (0, i.jsxs)(u.Clickable, {
-        className: b.toast,
+        className: M.toast,
         onMouseEnter: () => {
             x(!0);
         },
@@ -99,8 +98,8 @@ function L(e) {
         onClick: v,
         children: [
             (0, i.jsxs)('div', {
-                className: l()(b.messageContentWrapper, { [b.mentioned]: n.mentioned }),
-                children: [null != P ? null : j, null !== (t = null != R ? R : P) && void 0 !== t ? t : (0, i.jsx)('span', { children: A }), null != P ? null : L]
+                className: l()(M.messageContentWrapper, { [M.mentioned]: n.mentioned }),
+                children: [null != P ? null : j, null !== (t = null != R ? R : P) && void 0 !== t ? t : (0, i.jsx)('span', { children: b }), null != P ? null : L]
             }),
             (0, i.jsx)('img', {
                 alt: '',
@@ -112,12 +111,12 @@ function L(e) {
                               avatar: r.guildMemberAvatar
                           })
                         : n.author.getAvatarURL(o, 32),
-                className: b.avatar
+                className: M.avatar
             })
         ]
     });
 }
-function j(e) {
+function L(e) {
     let { channelId: t, className: n } = e,
         [s, h] = a.useState(!1),
         { toastsHidden: p, toastMessages: m } = (function (e) {
@@ -133,7 +132,7 @@ function j(e) {
             a.useEffect(() => {
                 function e(e) {
                     let { channelId: t, message: i } = e;
-                    if (t === n && i.type !== A.uaV.STAGE_START && i.type !== A.uaV.STAGE_END && i.type !== A.uaV.STAGE_TOPIC && i.type !== A.uaV.STAGE_SPEAKER && i.type !== A.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(_, l)), o((e) => [...e, i.id]);
+                    if (t === n && i.type !== Z.uaV.STAGE_START && i.type !== Z.uaV.STAGE_END && i.type !== Z.uaV.STAGE_TOPIC && i.type !== Z.uaV.STAGE_SPEAKER && i.type !== Z.uaV.STAGE_RAISE_HAND) clearTimeout(m.current), (m.current = setTimeout(_, l)), o((e) => [...e, i.id]);
                 }
                 return (
                     d.Z.subscribe('MESSAGE_CREATE', e),
@@ -165,7 +164,7 @@ function j(e) {
             channelId: t,
             isFrozen: s,
             count: 3,
-            lingerMs: R
+            lingerMs: b
         }),
         _ = a.useRef({}),
         [f, E] = a.useState({}),
@@ -210,21 +209,25 @@ function j(e) {
                 };
             }
         });
-    return (0, i.jsx)('div', {
-        className: l()(n, (0, Z.Q)(A.BRd.DARK)),
-        onMouseEnter: () => {
-            h(!0);
-        },
-        onMouseLeave: () => {
-            h(!1);
-        },
-        children: I((e, t) =>
-            (0, i.jsx)(o.animated.div, {
-                ref: (e) => C(t.message.id, null != e ? e.offsetHeight : null),
-                className: b.toastWrapper,
-                style: e,
-                children: (0, i.jsx)(L, { message: t.message })
+    return (0, i.jsx)(u.ThemeProvider, {
+        theme: Z.BRd.DARK,
+        children: (e) =>
+            (0, i.jsx)('div', {
+                className: l()(n, e),
+                onMouseEnter: () => {
+                    h(!0);
+                },
+                onMouseLeave: () => {
+                    h(!1);
+                },
+                children: I((e, t) =>
+                    (0, i.jsx)(o.animated.div, {
+                        ref: (e) => C(t.message.id, null != e ? e.offsetHeight : null),
+                        className: M.toastWrapper,
+                        style: e,
+                        children: (0, i.jsx)(R, { message: t.message })
+                    })
+                )
             })
-        )
     });
 }

@@ -1,6 +1,6 @@
 l.d(n, {
     S: function () {
-        return T;
+        return N;
     }
 }),
     l(47120);
@@ -13,12 +13,11 @@ var s,
     d = l.n(o),
     c = l(481060),
     u = l(624138),
-    E = l(792125),
-    _ = l(813197),
-    I = l(981631),
+    E = l(813197),
+    _ = l(981631),
     x = l(689938),
-    m = l(953752);
-function N(e, n, l) {
+    I = l(953752);
+function m(e, n, l) {
     return (
         n in e
             ? Object.defineProperty(e, n, {
@@ -31,37 +30,41 @@ function N(e, n, l) {
         e
     );
 }
-function T(e) {
+function N(e) {
     let { className: n, icon: l = null } = e;
-    return (0, a.jsx)('div', {
-        className: r()(m.imageUploaderIcon, n, (0, E.Q)(I.BRd.LIGHT)),
-        children: l
+    return (0, a.jsx)(c.ThemeProvider, {
+        theme: _.BRd.LIGHT,
+        children: (e) =>
+            (0, a.jsx)('div', {
+                className: r()(I.imageUploaderIcon, n, e),
+                children: l
+            })
     });
 }
-class h extends (s = t.PureComponent) {
+class T extends (s = t.PureComponent) {
     handleExternalFileChange(e) {
         d()(null != this.inputRef.current, 'ImageInputRef asked to handleExternalFileChange when not mounted'), this.inputRef.current.handleFileChange(e);
     }
     render() {
         var e;
         let n, l, s, t;
-        let { image: i, hint: o, name: d, makeURL: E, disabled: N, onChange: h, showIcon: g, showIconDisabled: v, className: S, imageClassName: C, iconClassName: L, iconWrapperClassName: A, icon: Z, hideSize: f, imageStyle: j, showRemoveButton: M, maxFileSizeBytes: D, onFileSizeError: R, onOpenImageSelectModal: p, 'aria-label': V } = this.props;
+        let { image: i, hint: o, name: d, makeURL: m, disabled: T, onChange: h, showIcon: g, showIconDisabled: v, className: S, imageClassName: C, iconClassName: L, iconWrapperClassName: A, icon: Z, hideSize: f, imageStyle: j, showRemoveButton: M, maxFileSizeBytes: D, onFileSizeError: R, onOpenImageSelectModal: p, 'aria-label': V } = this.props;
         if (
-            (null != (n = null != i && /^data:/.test(i) ? i : E(i))
+            (null != (n = null != i && /^data:/.test(i) ? i : m(i))
                 ? (l = 'url("'.concat(n, '")'))
                 : null != d &&
                   (s = (0, a.jsx)(c.Heading, {
                       variant: 'heading-xxl/normal',
                       color: 'always-white',
-                      className: m.imageUploaderAcronym,
+                      className: I.imageUploaderAcronym,
                       children: (0, u.Zg)(d)
                   })),
-            N)
+            T)
         )
             return (0, a.jsx)('div', {
-                className: r()(m.imageUploader, m.disabled, S),
+                className: r()(I.imageUploader, I.disabled, S),
                 children: (0, a.jsxs)('div', {
-                    className: r()(m.imageUploaderInner, C),
+                    className: r()(I.imageUploaderInner, C),
                     style: {
                         ...j,
                         backgroundImage: l
@@ -70,7 +73,7 @@ class h extends (s = t.PureComponent) {
                         s,
                         v &&
                             (0, a.jsx)('div', {
-                                className: r()(m.imageUploaderIcon, m.imageUploaderIconDisabled, L),
+                                className: r()(I.imageUploaderIcon, I.imageUploaderIconDisabled, L),
                                 children: Z
                             })
                     ]
@@ -78,26 +81,26 @@ class h extends (s = t.PureComponent) {
             });
         null != i
             ? (t = (0, a.jsx)(c.Anchor, {
-                  className: m.removeButton,
+                  className: I.removeButton,
                   onClick: this.handleRemove,
                   children: x.Z.Messages.REMOVE
               }))
             : !f &&
               (t = (0, a.jsx)('small', {
-                  className: m.sizeInfo,
-                  children: x.Z.Messages.MINIMUM_SIZE.format({ size: I.IXf })
+                  className: I.sizeInfo,
+                  children: x.Z.Messages.MINIMUM_SIZE.format({ size: _.IXf })
               }));
         let G = null !== (e = null != V ? V : o) && void 0 !== e ? e : x.Z.Messages.CHANGE_AVATAR;
         return (0, a.jsxs)('div', {
-            className: r()(m.imageUploader, S),
+            className: r()(I.imageUploader, S),
             children: [
                 (0, a.jsx)(c.FocusRing, {
                     within: !0,
                     children: (0, a.jsxs)('div', {
-                        className: g ? r()(m.imageUploaderIconWrapper, A) : void 0,
+                        className: g ? r()(I.imageUploaderIconWrapper, A) : void 0,
                         children: [
                             (0, a.jsxs)('div', {
-                                className: r()(m.imageUploaderInner, C),
+                                className: r()(I.imageUploaderInner, C),
                                 style: {
                                     ...j,
                                     backgroundImage: l
@@ -109,14 +112,14 @@ class h extends (s = t.PureComponent) {
                                     }),
                                     null != p
                                         ? (0, a.jsx)(c.Clickable, {
-                                              className: m.imageUploaderFileInput,
+                                              className: I.imageUploaderFileInput,
                                               'aria-label': G,
                                               onClick: p
                                           })
-                                        : (0, a.jsx)(_.ZP, {
+                                        : (0, a.jsx)(E.ZP, {
                                               ref: this.inputRef,
                                               onChange: h,
-                                              className: m.imageUploaderFileInput,
+                                              className: I.imageUploaderFileInput,
                                               'aria-label': G,
                                               tabIndex: 0,
                                               maxFileSizeBytes: D,
@@ -126,12 +129,12 @@ class h extends (s = t.PureComponent) {
                             }),
                             null != o &&
                                 (0, a.jsx)('div', {
-                                    className: m.imageUploaderHint,
+                                    className: I.imageUploaderHint,
                                     'aria-hidden': 'true',
                                     children: o
                                 }),
                             g &&
-                                (0, a.jsx)(T, {
+                                (0, a.jsx)(N, {
                                     className: L,
                                     icon: Z
                                 })
@@ -144,13 +147,13 @@ class h extends (s = t.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            N(this, 'inputRef', t.createRef()),
-            N(this, 'handleRemove', () => {
+            m(this, 'inputRef', t.createRef()),
+            m(this, 'handleRemove', () => {
                 this.props.onChange(null);
             });
     }
 }
-N(h, 'defaultProps', {
+m(T, 'defaultProps', {
     name: '',
     makeURL: (e) => e,
     disabled: !1,
@@ -160,4 +163,4 @@ N(h, 'defaultProps', {
     maxFileSizeBytes: 1 / 0,
     icon: null
 }),
-    (n.Z = h);
+    (n.Z = T);

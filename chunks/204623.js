@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return N;
+        return A;
     }
 }),
     n(47120);
@@ -18,13 +18,12 @@ var r = n(735250),
     f = n(176354),
     h = n(63063),
     p = n(358085),
-    I = n(792125),
-    m = n(998502),
-    T = n(151851),
-    g = n(981631),
-    S = n(689938);
-let A = l.ZP.connectStores([E.Z], () => ({ focused: E.Z.isFocused() }))(T.Z);
-class N extends i.PureComponent {
+    I = n(998502),
+    m = n(151851),
+    T = n(981631),
+    g = n(689938);
+let S = l.ZP.connectStores([E.Z], () => ({ focused: E.Z.isFocused() }))(m.Z);
+class A extends i.PureComponent {
     getPlatform() {
         var e;
         let t = null === (e = s().os) || void 0 === e ? void 0 : e.family;
@@ -33,18 +32,18 @@ class N extends i.PureComponent {
     componentDidMount() {
         !(function () {
             let e = window.require('electron').remote.getCurrentWindow();
-            (m.ZP.minimize = () => e.minimize()),
-                (m.ZP.maximize = () => {
+            (I.ZP.minimize = () => e.minimize()),
+                (I.ZP.maximize = () => {
                     e.isMaximized() ? e.unmaximize() : e.maximize();
                 }),
-                (m.ZP.close = () => e.close());
+                (I.ZP.close = () => e.close());
         })();
     }
     render() {
         let e = (0, r.jsx)('div', {
                 children: (0, r.jsxs)('p', {
                     children: [
-                        S.Z.Messages.VERY_OUT_OF_DATE_DESCRIPTION,
+                        g.Z.Messages.VERY_OUT_OF_DATE_DESCRIPTION,
                         ' ',
                         (0, r.jsx)(d.Z, {
                             src: f.ZP.getURL(u.Z.convert.fromCodePoint('1f44c')),
@@ -57,14 +56,14 @@ class N extends i.PureComponent {
             t = (0, r.jsx)(c.Button, {
                 size: c.ButtonSizes.LARGE,
                 onClick: this.handleDownload,
-                children: S.Z.Messages.DOWNLOAD
+                children: g.Z.Messages.DOWNLOAD
             });
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, I.Q)(g.BRd.DARK) }) }),
-                (0, r.jsx)(A, { type: this.getPlatform() }),
+                (0, r.jsx)(o.ql, { children: (0, r.jsx)('html', { className: (0, c.getThemeClass)(T.BRd.DARK) }) }),
+                (0, r.jsx)(S, { type: this.getPlatform() }),
                 (0, r.jsx)(_.Z, {
-                    title: S.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
+                    title: g.Z.Messages.UNSUPPORTED_BROWSER_TITLE,
                     note: e,
                     action: t
                 })
@@ -77,7 +76,7 @@ class N extends i.PureComponent {
             (t = this),
             (n = 'handleDownload'),
             (r = () => {
-                window.open(this.getPlatform() === p.PlatformTypes.WINDOWS ? h.Z.getArticleURL(g.BhN.CORRUPT_INSTALLATION) : g.EYA.DOWNLOAD);
+                window.open(this.getPlatform() === p.PlatformTypes.WINDOWS ? h.Z.getArticleURL(T.BhN.CORRUPT_INSTALLATION) : T.EYA.DOWNLOAD);
             }),
             n in t
                 ? Object.defineProperty(t, n, {

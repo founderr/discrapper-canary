@@ -1,8 +1,11 @@
 n.d(t, {
-    a: function () {
+    Qe: function () {
+        return s;
+    },
+    ap: function () {
         return i;
     },
-    w: function () {
+    wj: function () {
         return a;
     }
 });
@@ -19,4 +22,9 @@ function a(e) {
         default:
             return !1;
     }
+}
+function s(e) {
+    if (null == e) return;
+    let t = r.Al.get(e);
+    return null != t ? 'theme-'.concat(t, ' theme-').concat(e, ' images-').concat(t) : 'theme-'.concat(e, ' images-').concat(e);
 }

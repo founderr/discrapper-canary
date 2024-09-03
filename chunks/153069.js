@@ -18,12 +18,11 @@ var o,
     T = s(314897),
     N = s(896797),
     A = s(585483),
-    E = s(792125),
-    I = s(981631),
-    M = s(689938),
-    R = s(360083),
-    O = s(224499);
-function S(e, t, s) {
+    E = s(981631),
+    I = s(689938),
+    M = s(360083),
+    R = s(224499);
+function O(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,13 +35,13 @@ function S(e, t, s) {
         e
     );
 }
-class x extends (o = r.PureComponent) {
+class S extends (o = r.PureComponent) {
     componentDidMount() {
         window.addEventListener('keydown', this.handleTabOrEnter);
     }
     componentDidUpdate(e) {
         let { authenticated: t, transitionTo: s } = this.props;
-        if ((t && !e.authenticated && s(I.Z5c.APP), e.errors !== this.props.errors)) {
+        if ((t && !e.authenticated && s(E.Z5c.APP), e.errors !== this.props.errors)) {
             var o, n, r;
             this.hasError('password') ? null === (o = this.passwordRef) || void 0 === o || o.focus() : this.hasError('email') || this.hasError('login') ? null === (n = this.loginRef) || void 0 === n || n.focus() : this.hasError('code') && (null === (r = this.codeRef) || void 0 === r || r.focus());
         }
@@ -62,31 +61,31 @@ class x extends (o = r.PureComponent) {
                     (0, n.jsx)(
                         h.Dx,
                         {
-                            className: i()(O.marginBottom8, R.title),
-                            children: M.Z.Messages.MULTI_ACCOUNT_LOGIN_TITLE
+                            className: i()(R.marginBottom8, M.title),
+                            children: I.Z.Messages.MULTI_ACCOUNT_LOGIN_TITLE
                         },
                         'title'
                     ),
                     (0, n.jsx)(d.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        className: R.subtitle,
-                        children: M.Z.Messages.MULTI_ACCOUNT_LOGIN_SUBTITLE
+                        className: M.subtitle,
+                        children: I.Z.Messages.MULTI_ACCOUNT_LOGIN_SUBTITLE
                     })
                 ]
             });
         return (0, n.jsxs)('div', {
-            className: R.mainLoginContainer,
+            className: M.mainLoginContainer,
             children: [
                 o,
                 (0, n.jsxs)(h.gO, {
-                    className: R.loginForm,
+                    className: M.loginForm,
                     children: [
                         (0, n.jsx)(C.Z, {
                             alpha2: t.alpha2,
                             countryCode: t.code.split(' ')[0],
-                            className: O.marginBottom20,
-                            label: M.Z.Messages.FORM_LABEL_EMAIL_OR_PHONE_NUMBER,
+                            className: R.marginBottom20,
+                            label: I.Z.Messages.FORM_LABEL_EMAIL_OR_PHONE_NUMBER,
                             error: null !== (e = this.renderError('login')) && void 0 !== e ? e : this.renderError('email'),
                             onChange: (e, t) =>
                                 this.setState({
@@ -103,7 +102,7 @@ class x extends (o = r.PureComponent) {
                             required: !0
                         }),
                         (0, n.jsx)(h.II, {
-                            label: M.Z.Messages.FORM_LABEL_PASSWORD,
+                            label: I.Z.Messages.FORM_LABEL_PASSWORD,
                             error: this.renderError('password'),
                             onChange: (e) => this.setState({ password: e }),
                             name: 'password',
@@ -119,8 +118,8 @@ class x extends (o = r.PureComponent) {
                             onClick: this.handleForgotPassword,
                             look: d.Button.Looks.LINK,
                             color: d.Button.Colors.LINK,
-                            className: i()(O.marginTop4),
-                            children: M.Z.Messages.FORGOT_PASSWORD
+                            className: i()(R.marginTop4),
+                            children: I.Z.Messages.FORGOT_PASSWORD
                         })
                     ]
                 })
@@ -130,7 +129,7 @@ class x extends (o = r.PureComponent) {
     renderDefault() {
         let { authBoxClassName: e, loginStatus: t, closeLogin: s, theme: o } = this.props;
         return (0, n.jsxs)('div', {
-            className: R.__invalid_pageContainer,
+            className: M.__invalid_pageContainer,
             children: [
                 (0, n.jsx)(h.ZP, {
                     tag: 'form',
@@ -139,29 +138,33 @@ class x extends (o = r.PureComponent) {
                     theme: o,
                     children: this.renderDefaultForm()
                 }),
-                (0, n.jsxs)('div', {
-                    'data-theme': o,
-                    'data-disable-adaptive-theme': !0,
-                    className: i()((0, E.Q)(o), R.navRow),
-                    children: [
-                        (0, n.jsx)(d.Button, {
-                            type: 'button',
-                            look: d.Button.Looks.LINK,
-                            'aria-label': 'back',
-                            onClick: s,
-                            size: d.Button.Sizes.SMALL,
-                            className: i()((0, E.Q)(o), R.backButton),
-                            children: M.Z.Messages.BACK
-                        }),
-                        (0, n.jsx)(d.Button, {
-                            'aria-label': 'continue',
-                            submitting: t === I.u34.LOGGING_IN,
-                            color: d.Button.Colors.BRAND,
-                            onClick: this.handleLogin,
-                            className: R.continueButton,
-                            children: M.Z.Messages.CONTINUE
+                (0, n.jsx)(d.ThemeProvider, {
+                    theme: o,
+                    children: (e) =>
+                        (0, n.jsxs)('div', {
+                            'data-theme': o,
+                            'data-disable-adaptive-theme': !0,
+                            className: i()(e, M.navRow),
+                            children: [
+                                (0, n.jsx)(d.Button, {
+                                    type: 'button',
+                                    look: d.Button.Looks.LINK,
+                                    'aria-label': 'back',
+                                    onClick: s,
+                                    size: d.Button.Sizes.SMALL,
+                                    className: i()(e, M.backButton),
+                                    children: I.Z.Messages.BACK
+                                }),
+                                (0, n.jsx)(d.Button, {
+                                    'aria-label': 'continue',
+                                    submitting: t === E.u34.LOGGING_IN,
+                                    color: d.Button.Colors.BRAND,
+                                    onClick: this.handleLogin,
+                                    className: M.continueButton,
+                                    children: I.Z.Messages.CONTINUE
+                                })
+                            ]
                         })
-                    ]
                 })
             ]
         });
@@ -186,9 +189,9 @@ class x extends (o = r.PureComponent) {
     }
     renderDisabledAccount() {
         let { authBoxClassName: e, theme: t } = this.props,
-            s = this.props.loginStatus === I.u34.ACCOUNT_DISABLED,
-            o = s ? M.Z.Messages.ACCOUNT_DISABLED_TITLE : M.Z.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_TITLE,
-            r = s ? M.Z.Messages.ACCOUNT_DISABLED_DESCRIPTION : M.Z.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_DESCRIPTION;
+            s = this.props.loginStatus === E.u34.ACCOUNT_DISABLED,
+            o = s ? I.Z.Messages.ACCOUNT_DISABLED_TITLE : I.Z.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_TITLE,
+            r = s ? I.Z.Messages.ACCOUNT_DISABLED_DESCRIPTION : I.Z.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_DESCRIPTION;
         return (0, n.jsxs)(h.ZP, {
             tag: 'form',
             onSubmit: this.handleReset,
@@ -196,11 +199,11 @@ class x extends (o = r.PureComponent) {
             theme: t,
             children: [
                 (0, n.jsx)(h.Dx, {
-                    className: O.marginBottom8,
+                    className: R.marginBottom8,
                     children: o
                 }),
                 (0, n.jsx)(h.DK, {
-                    className: O.marginBottom20,
+                    className: R.marginBottom20,
                     children: r
                 }),
                 (0, n.jsxs)(h.gO, {
@@ -209,11 +212,11 @@ class x extends (o = r.PureComponent) {
                             color: d.Button.Colors.BRAND,
                             type: 'submit',
                             fullWidth: !0,
-                            children: M.Z.Messages._RETURN_TO_LOGIN
+                            children: I.Z.Messages._RETURN_TO_LOGIN
                         }),
                         (0, n.jsx)('div', {
-                            className: i()(O.marginTop8, R.needAccount),
-                            children: M.Z.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({ onClick: this.handleCancelAccountDeletion })
+                            className: i()(R.marginTop8, M.needAccount),
+                            children: I.Z.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({ onClick: this.handleCancelAccountDeletion })
                         })
                     ]
                 })
@@ -237,10 +240,10 @@ class x extends (o = r.PureComponent) {
             tag: 'form',
             className: e,
             children: (0, n.jsx)('div', {
-                className: O.marginTop20,
+                className: R.marginTop20,
                 children: (0, n.jsx)(f.Z, {
-                    title: M.Z.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_TITLE,
-                    subtitle: M.Z.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_SUBTITLE_RESEND.format({ onResendClick: this.handleResendCode }),
+                    title: I.Z.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_TITLE,
+                    subtitle: I.Z.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_SUBTITLE_RESEND.format({ onResendClick: this.handleResendCode }),
                     error: t,
                     onSubmit: this.handlePasswordReset,
                     onCancel: void 0
@@ -252,51 +255,51 @@ class x extends (o = r.PureComponent) {
         let { loginStatus: e } = this.props;
         if (null != this.state.resetPasswordPhoneToken) return this.renderResetPhonePassword();
         switch (e) {
-            case I.u34.LOGGING_IN_MFA_SMS:
-            case I.u34.MFA_SMS_STEP:
-            case I.u34.LOGGING_IN_MFA:
-            case I.u34.MFA_STEP:
+            case E.u34.LOGGING_IN_MFA_SMS:
+            case E.u34.MFA_SMS_STEP:
+            case E.u34.LOGGING_IN_MFA:
+            case E.u34.MFA_STEP:
                 return this.renderMFA();
-            case I.u34.ACCOUNT_SCHEDULED_FOR_DELETION:
-            case I.u34.ACCOUNT_DISABLED:
+            case E.u34.ACCOUNT_SCHEDULED_FOR_DELETION:
+            case E.u34.ACCOUNT_DISABLED:
                 return this.renderDisabledAccount();
-            case I.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION:
+            case E.u34.PASSWORD_RECOVERY_PHONE_VERIFICATION:
                 return this.renderPhonePasswordRecovery();
-            case I.u34.LOGGING_IN:
-            case I.u34.NONE:
+            case E.u34.LOGGING_IN:
+            case E.u34.NONE:
             default:
                 return this.renderDefault();
         }
     }
     constructor(e) {
         super(e),
-            S(this, 'loginRef', void 0),
-            S(this, 'passwordRef', void 0),
-            S(this, 'codeRef', void 0),
-            S(this, 'handleAuthToken', async (e) => {
+            O(this, 'loginRef', void 0),
+            O(this, 'passwordRef', void 0),
+            O(this, 'codeRef', void 0),
+            O(this, 'handleAuthToken', async (e) => {
                 await c.Z.loginToken(e, !1);
             }),
-            S(this, 'handleTabOrEnter', (e) => {
+            O(this, 'handleTabOrEnter', (e) => {
                 if ('Tab' === e.key && !e.shiftKey && e.target === this.loginRef) {
                     var t;
                     null === (t = this.passwordRef) || void 0 === t || t.focus(), e.stopPropagation(), e.preventDefault();
                 }
                 'Enter' === e.key && (e.target === this.loginRef || e.target === this.passwordRef) && (this.handleLogin(), e.stopPropagation(), e.preventDefault());
             }),
-            S(this, 'setLoginRef', (e) => {
+            O(this, 'setLoginRef', (e) => {
                 this.loginRef = e;
             }),
-            S(this, 'setPasswordRef', (e) => {
+            O(this, 'setPasswordRef', (e) => {
                 this.passwordRef = e;
             }),
-            S(this, 'setCodeRef', (e) => {
+            O(this, 'setCodeRef', (e) => {
                 this.codeRef = e;
             }),
-            S(this, 'getFullLogin', () => {
+            O(this, 'getFullLogin', () => {
                 let { loginPrefix: e, login: t } = this.state;
                 return e + t;
             }),
-            S(this, 'renderError', (e) => {
+            O(this, 'renderError', (e) => {
                 let { errors: t } = this.props;
                 if (this.hasError(e)) {
                     let s = t[e];
@@ -304,28 +307,28 @@ class x extends (o = r.PureComponent) {
                 }
                 return null;
             }),
-            S(this, 'handleForgotPassword', async (e) => {
+            O(this, 'handleForgotPassword', async (e) => {
                 var t;
                 null == e || e.preventDefault(), null === (t = this.loginRef) || void 0 === t || t.focus();
                 let s = this.getFullLogin();
                 try {
-                    A.S.dispatch(I.CkL.WAVE_EMPHASIZE),
+                    A.S.dispatch(E.CkL.WAVE_EMPHASIZE),
                         await c.Z.forgotPassword(s),
                         (0, d.openModal)((e) =>
                             (0, n.jsx)(d.ConfirmModal, {
-                                header: M.Z.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_HEADER,
-                                confirmText: M.Z.Messages.OKAY,
+                                header: I.Z.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_HEADER,
+                                confirmText: I.Z.Messages.OKAY,
                                 confirmButtonColor: d.Button.Colors.BRAND,
                                 ...e,
                                 children: (0, n.jsx)(d.Text, {
                                     variant: 'text-md/normal',
-                                    children: M.Z.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_BODY.format({ email: s })
+                                    children: I.Z.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_BODY.format({ email: s })
                                 })
                             })
                         );
                 } catch {}
             }),
-            S(this, 'handleLogin', (e) => {
+            O(this, 'handleLogin', (e) => {
                 let { password: t, undelete: s } = this.state;
                 null != e && e.preventDefault(),
                     c.Z.login({
@@ -335,7 +338,7 @@ class x extends (o = r.PureComponent) {
                         isMultiAccount: !0
                     });
             }),
-            S(this, 'handlePasswordReset', async (e) => {
+            O(this, 'handlePasswordReset', async (e) => {
                 this.setState({ phoneVerifyError: null });
                 try {
                     let { token: t } = await p.Z.verifyPhone(this.getFullLogin(), e, !1, !0);
@@ -344,7 +347,7 @@ class x extends (o = r.PureComponent) {
                     null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
                 }
             }),
-            S(this, 'handleTokenSubmitMFA', (e) => {
+            O(this, 'handleTokenSubmitMFA', (e) => {
                 let { mfaType: t, data: s, ticket: o } = e;
                 return c.Z.loginMFAv2({
                     code: s,
@@ -353,10 +356,10 @@ class x extends (o = r.PureComponent) {
                     isMultiAccount: !0
                 });
             }),
-            S(this, 'handleResendCode', () => {
+            O(this, 'handleResendCode', () => {
                 p.Z.resendCode(this.getFullLogin());
             }),
-            S(this, 'handleReset', (e) => {
+            O(this, 'handleReset', (e) => {
                 null != e && e.preventDefault(),
                     c.Z.loginReset(!0),
                     this.setState({
@@ -369,7 +372,7 @@ class x extends (o = r.PureComponent) {
                         resetPasswordPhoneToken: null
                     });
             }),
-            S(this, 'handleCancelAccountDeletion', () => {
+            O(this, 'handleCancelAccountDeletion', () => {
                 this.setState({ undelete: !0 }, this.handleLogin);
             }),
             (this.state = {
@@ -384,7 +387,7 @@ class x extends (o = r.PureComponent) {
             });
     }
 }
-S(x, 'defaultProps', {
+O(S, 'defaultProps', {
     transitionTo: (e) => s.g.location.assign(e),
     replaceWith: (e) => s.g.location.replace(e)
 });
@@ -401,7 +404,7 @@ t.Z = function (e) {
         country: m.Z.getCountryCode(),
         theme: g.Z.theme
     }));
-    return (0, n.jsx)(x, {
+    return (0, n.jsx)(S, {
         ...e,
         ...t
     });
