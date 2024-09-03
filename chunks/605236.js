@@ -1,6 +1,6 @@
 n.d(t, {
     EW: function () {
-        return N;
+        return R;
     },
     H4: function () {
         return S;
@@ -13,6 +13,9 @@ n.d(t, {
     },
     wE: function () {
         return g;
+    },
+    wH: function () {
+        return v;
     }
 }),
     n(47120);
@@ -81,40 +84,44 @@ function A(e, t, n) {
             }
         });
 }
-async function N(e) {
+function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    !(function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        ((0, f.cI)(e) || t.forceTrack) &&
-            (function (e, t) {
-                var n;
-                let [r] = (0, f.Aq)(),
-                    a = _.Z.getRenderedAtTimestamp(e),
-                    s = new Date(),
-                    o = null == a ? null : s.getTime() - a;
-                l.default.track(m.rMx.DISMISSIBLE_CONTENT_DISMISSED, {
-                    type: i.z[e],
-                    action: null !== (n = null == t ? void 0 : t.dismissAction) && void 0 !== n ? n : I.L.UNKNOWN,
-                    content_count: r,
-                    group_name: null == t ? void 0 : t.groupName,
-                    bypass_fatigue: c.O.has(e),
-                    guild_id: null == t ? void 0 : t.guildId,
-                    shown_duration: o,
-                    version: null == t ? void 0 : t.version
-                });
-            })(e, t),
-            (0, d.Vr)(e);
-    })(e, t),
-        await (0, s.nm)(e),
-        !(function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                n = !_.Z.hasUserHitDCCap();
-            (0, f.gE)(
-                {
-                    content: e,
-                    groupName: null == t ? void 0 : t.groupName
-                },
-                n
-            );
-        })(e, t);
+    ((0, f.cI)(e) || t.forceTrack) &&
+        (function (e, t) {
+            var n;
+            let [r] = (0, f.Aq)(),
+                a = _.Z.getRenderedAtTimestamp(e),
+                s = new Date(),
+                o = null == a ? null : s.getTime() - a;
+            l.default.track(m.rMx.DISMISSIBLE_CONTENT_DISMISSED, {
+                type: i.z[e],
+                action: null !== (n = null == t ? void 0 : t.dismissAction) && void 0 !== n ? n : I.L.UNKNOWN,
+                content_count: r,
+                group_name: null == t ? void 0 : t.groupName,
+                bypass_fatigue: c.O.has(e),
+                guild_id: null == t ? void 0 : t.guildId,
+                shown_duration: o,
+                version: null == t ? void 0 : t.version
+            });
+        })(e, t),
+        (0, d.Vr)(e);
+}
+function O(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        n = !_.Z.hasUserHitDCCap();
+    (0, f.gE)(
+        {
+            content: e,
+            groupName: null == t ? void 0 : t.groupName
+        },
+        n
+    );
+}
+async function R(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    N(e, t), await (0, s.nm)(e), O(e, t);
+}
+async function v(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    N(e, n), await (0, s.Bn)(e, t), O(e, n);
 }
