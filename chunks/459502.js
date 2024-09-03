@@ -9,7 +9,7 @@ n(470079);
 var a = n(442837),
     s = n(692547),
     l = n(481060),
-    r = n(889161),
+    r = n(357156),
     o = n(592125),
     c = n(15274),
     u = n(924301),
@@ -23,7 +23,7 @@ function f(e) {
         f = (0, a.e7)([o.Z], () => o.Z.getChannel(t), [t]),
         E = (0, d.sz)(t),
         C = null != (0, d.qY)(t),
-        { canManageGuildEvent: g } = (0, r.XJ)(f),
+        { canManageGuildEvent: g } = (0, r.X)(f),
         I = (0, a.cj)([u.ZP], () => E.reduce((e, t) => ((e[t.id] = u.ZP.getUserCount(t.id, (0, h.DK)(t))), e), {}));
     return E.length < 1 || C
         ? null

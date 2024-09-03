@@ -68,7 +68,7 @@ function C(e) {
                         look: o.Button.Looks.LINK,
                         size: o.Button.Sizes.SMALL,
                         onClick: function () {
-                            (0, _.s6)(null, x, t);
+                            (0, _.s6)(null, x, null == t ? void 0 : t.id);
                         },
                         children: L ? N.Z.Messages.USER_SETTINGS_USE_DEFAULT_PROFILE_EFFECT : N.Z.Messages.USER_SETTINGS_REMOVE_PROFILE_EFFECT
                     })

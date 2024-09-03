@@ -71,7 +71,7 @@ t.Z = l.forwardRef(function (e, t) {
             for (let a of Object.values(e.currentTarget.audioTracks)) a.label.includes(':application') ? (a.enabled = !0) : a.label.includes(':voice') ? ((a.enabled = !1), !t.includes(a.label) && t.push(a.label)) : (a.enabled = !1);
             g(t);
         }, []),
-        w = l.useCallback((e, t) => {
+        N = l.useCallback((e, t) => {
             h.current[t] = e;
         }, []);
     return (l.useImperativeHandle(t, () => ({
@@ -99,7 +99,7 @@ t.Z = l.forwardRef(function (e, t) {
                       muted: !c,
                       preload: 'auto',
                       className: s.hidden,
-                      ref: (e) => w(e, 'application'),
+                      ref: (e) => N(e, 'application'),
                       onLoadedMetadata: y
                   }),
                   x.map((e) =>
@@ -107,7 +107,7 @@ t.Z = l.forwardRef(function (e, t) {
                           u,
                           {
                               audioTrackLabel: e,
-                              setRef: w,
+                              setRef: N,
                               src: d,
                               muted: !m
                           },

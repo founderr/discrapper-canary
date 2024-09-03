@@ -8,7 +8,7 @@ n(470079);
 var a = n(442837),
     s = n(481060),
     l = n(40851),
-    r = n(889161),
+    r = n(357156),
     o = n(390322),
     c = n(871499),
     u = n(592125),
@@ -23,7 +23,7 @@ function E(e) {
         E = (0, l.bp)(),
         C = (0, m.qY)(t),
         g = (0, a.e7)([u.Z], () => u.Z.getChannel(t), [t]),
-        { canManageGuildEvent: I } = (0, r.XJ)(g),
+        { canManageGuildEvent: I } = (0, r.X)(g),
         x = I(C);
     if (null == C) return null;
     let T = () => {

@@ -10,7 +10,7 @@ var r = n(735250),
     _ = n(28546),
     E = n(26323),
     f = n(434404),
-    h = n(889161),
+    h = n(357156),
     p = n(430824),
     I = n(267642),
     m = n(981631),
@@ -22,7 +22,7 @@ t.Z = (e) => {
         { location: O } = (0, u.O)(),
         { analyticsLocations: R } = (0, d.ZP)(),
         v = (0, o.e7)([p.Z], () => p.Z.getGuild(n)),
-        { canManageAllExpressions: C } = (0, h.XJ)(v),
+        { canManageAllExpressions: C } = (0, h.X)(v),
         y = null != v && 0 === (0, I.A3)(v.premiumTier) && !v.hasFeature(m.oNc.MORE_STICKERS);
     return (i.useEffect(() => {
         C &&

@@ -3,9 +3,9 @@ n(470079);
 var s = n(481060),
     i = n(689938);
 t.Z = (e) => {
-    let { onChangeAvatar: t, onChangeAvatarDecoration: n, onClose: l, className: a } = e;
+    let { onChangeAvatar: t, onChangeAvatarDecoration: n, onClose: l, className: o } = e;
     return (0, r.jsxs)(s.Menu, {
-        className: a,
+        className: o,
         onClose: l,
         onSelect: void 0,
         navId: 'user-settings-change-avatar',

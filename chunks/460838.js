@@ -17,7 +17,7 @@ var t,
     u = a(447003),
     _ = a(471445),
     f = a(565138),
-    p = a(889161),
+    p = a(357156),
     h = a(496675),
     b = a(725436),
     m = a(274311),
@@ -34,7 +34,7 @@ var t,
     S = a(453470);
 function E(e) {
     let { channel: n, onClick: a } = e,
-        { canManageAllEvents: t } = (0, p.XJ)(n),
+        { canManageAllEvents: t } = (0, p.X)(n),
         c = (0, d.e7)([h.Z], () => !n.isGuildVocal() || h.Z.can(T.Plq.CONNECT, n), [n]),
         r = o.useMemo(() => (0, u.Z)(n), [n]),
         f = (0, _.KS)(n);
@@ -121,8 +121,8 @@ function j(e) {
           });
 }
 function B(e) {
-    let { className: n, guild: a, channel: t, creator: c, name: o, entityType: r, description: d, imageLocation: u = 0, imageSource: _, isActive: f, isUserLurking: p, isJoined: h = !1, isMember: b = !1, isHub: T = !1, speakers: Z, speakerCount: E, rsvped: B, canInvite: U, location: y, truncate: R, onContextMenu: L, onJoinClick: P, onJoinGuildClick: A, onGoToGuildClick: M, onRsvpClick: D, onStartClick: G, onInviteClick: H, onEndClick: O, onClick: z, isNew: F, guildEvent: V, eventPreview: X, recurrenceRule: q, recurrenceId: J } = e,
-        W = (0, m.Q)(t, r),
+    let { className: n, guild: a, channel: t, creator: c, name: o, entityType: r, description: d, imageLocation: u = 0, imageSource: _, isActive: f, isUserLurking: p, isJoined: h = !1, isMember: b = !1, isHub: T = !1, speakers: Z, speakerCount: E, rsvped: B, canInvite: U, location: y, truncate: R, onContextMenu: L, onJoinClick: P, onJoinGuildClick: A, onGoToGuildClick: M, onRsvpClick: D, onStartClick: G, onInviteClick: H, onEndClick: O, onClick: z, isNew: F, guildEvent: V, eventPreview: X, recurrenceRule: q, recurrenceId: W } = e,
+        J = (0, m.Q)(t, r),
         K = r === w.WX.EXTERNAL,
         Q = K ? (e) => e.stopPropagation() : void 0,
         Y = [];
@@ -133,7 +133,7 @@ function B(e) {
     let $ = Y.length > 0;
     return (0, i.jsxs)(s.ClickableContainer, {
         'aria-label': o,
-        onClick: () => (null == z ? void 0 : z(J)),
+        onClick: () => (null == z ? void 0 : z(W)),
         onContextMenu: L,
         className: l()(
             S.card,
@@ -159,7 +159,7 @@ function B(e) {
                         isNew: F,
                         guildEvent: V,
                         eventPreview: X,
-                        recurrenceId: J
+                        recurrenceId: W
                     }),
                     f &&
                         null != a &&
@@ -195,7 +195,7 @@ function B(e) {
                                       onGoToGuildClick: M,
                                       guildName: null == a ? void 0 : a.name,
                                       canInvite: U,
-                                      isChannelPublic: W,
+                                      isChannelPublic: J,
                                       onInviteClick: H
                                   })
                                 : (0, i.jsx)(g.ZP, {
@@ -205,7 +205,7 @@ function B(e) {
                                       isUserLurking: p,
                                       rsvped: B,
                                       canInvite: U,
-                                      isChannelPublic: W,
+                                      isChannelPublic: J,
                                       onContextMenu: L,
                                       onJoinClick: P,
                                       onRsvpClick: D,

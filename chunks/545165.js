@@ -9,7 +9,7 @@ l.d(n, {
     l(47120),
     l(653041);
 var s = l(442837),
-    a = l(889161);
+    a = l(357156);
 l(427679);
 var t = l(984933);
 function i(e, n) {
@@ -18,7 +18,7 @@ function i(e, n) {
     let s = l.getChannels(e)[t.Zb],
         i = [];
     for (let { channel: e } of s) {
-        let { canCreateGuildEvent: l, canManageAllEvents: s } = (0, a.Gw)(e),
+        let { canCreateGuildEvent: l, canManageAllEvents: s } = (0, a.G)(e),
             t = l || s;
         if (e.type === n) e.isGuildVoice() && t ? i.push(e) : e.isGuildStageVoice() && t && i.push(e);
     }

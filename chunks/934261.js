@@ -3,8 +3,8 @@ n(470079);
 var s = n(442837),
     i = n(481060),
     l = n(809206),
-    a = n(597688),
-    o = n(884697),
+    o = n(597688),
+    a = n(884697),
     c = n(18438),
     d = n(778825),
     u = n(957730),
@@ -24,11 +24,11 @@ let A = (e) => {
         var t;
         let { effectIsOwned: n, pendingProfileEffectRecord: l, product: c, purchase: d } = e,
             u = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
-            f = (0, s.e7)([a.Z], () => a.Z.getProduct(null == l ? void 0 : l.skuId)),
+            f = (0, s.e7)([o.Z], () => o.Z.getProduct(null == l ? void 0 : l.skuId)),
             m = (0, s.e7)([p.default], () => p.default.locale),
             E = C.ZP.canUseCollectibles(u),
-            _ = (0, o.qS)(d),
-            h = (0, o.G1)(c),
+            _ = (0, a.qS)(d),
+            h = (0, a.G1)(c),
             I = (null == d ? void 0 : d.expiresAt) != null ? (0, v.TD)(Date.now(), d.expiresAt) : null,
             A = Z(!E && _, h, E);
         return null != l
@@ -100,7 +100,7 @@ let A = (e) => {
     Z = (e, t, n) => (e ? x.Z.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER_CHURNED : t && n ? x.Z.Messages.CHANGE_DECORATION_MODAL_PREVIEW_STARTER_PREMIUM : t && !n ? x.Z.Messages.CHANGE_PFX_MODAL_PREVIEW_STARTER : x.Z.Messages.CHANGE_PROFILE_EFFECT_MODAL_PREVIEW_PURCHASE_PREMIUM);
 t.Z = (e) => {
     var t;
-    let { user: n, pendingProfileEffectRecord: i, canApplySelectedChange: a, product: o, purchase: p, guild: g } = e,
+    let { user: n, pendingProfileEffectRecord: i, canApplySelectedChange: o, product: a, purchase: p, guild: g } = e,
         {
             pendingGlobalName: v,
             pendingNickname: x,
@@ -151,9 +151,9 @@ t.Z = (e) => {
             }),
             !1,
             (0, r.jsx)(A, {
-                effectIsOwned: a,
+                effectIsOwned: o,
                 pendingProfileEffectRecord: i,
-                product: o,
+                product: a,
                 purchase: p,
                 userIsPremium: O
             })

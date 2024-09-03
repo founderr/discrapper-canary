@@ -13,7 +13,7 @@ var a = n(442837),
     c = n(596449),
     u = n(459502),
     d = n(856691),
-    h = n(889161),
+    h = n(357156),
     p = n(496675),
     m = n(146085),
     _ = n(979339),
@@ -76,7 +76,7 @@ function T(e) {
     let { channel: t, onContinueClick: n } = e,
         s = (0, a.e7)([p.Z], () => p.Z.can(m.yP, t), [t]),
         r = t.guild_id,
-        { canCreateGuildEvent: o } = (0, h.XJ)(t),
+        { canCreateGuildEvent: o } = (0, h.X)(t),
         T = (0, f.Z)(t.id),
         { usersInSummary: N } = (0, _.Z)(t.id);
     return (0, i.jsxs)('div', {

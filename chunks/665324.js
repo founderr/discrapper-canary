@@ -18,7 +18,7 @@ var s = n(735250),
     I = n(596454),
     E = n(410030),
     T = n(623624),
-    m = n(889161),
+    m = n(357156),
     N = n(208049),
     S = n(763296),
     h = n(22382),
@@ -143,7 +143,7 @@ function F(e) {
             var e;
             return [null !== (e = S.Z.getSoundsForGuild(t.id)) && void 0 !== e ? e : v.Hy, S.Z.isFetchingSounds() || S.Z.isFetchingDefaultSounds()];
         }),
-        { canCreateExpressions: l } = (0, m.XJ)(t),
+        { canCreateExpressions: l } = (0, m.X)(t),
         o = a.useRef(null),
         d = (0, E.ZP)(),
         _ = t.premiumTier,
@@ -266,7 +266,7 @@ function k(e) {
     let { sound: t, isPlaying: i, onPlaySound: l, guild: o } = e,
         { soundId: d, name: E, user: T, userId: S, emojiId: h, emojiName: g } = t,
         x = (0, c.e7)([p.default], () => (null != T ? T : p.default.getUser(S)), [S, T]),
-        { canManageGuildExpression: R } = (0, m.XJ)(o),
+        { canManageGuildExpression: R } = (0, m.X)(o),
         L = a.useMemo(() => R(t), [t, R]),
         O = null != h || null != g,
         [A, M] = a.useState(!1);

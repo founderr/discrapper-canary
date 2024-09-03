@@ -7,7 +7,7 @@ var l = t(735250);
 t(470079);
 var i = t(442837),
     u = t(481060),
-    s = t(889161),
+    s = t(357156),
     r = t(924301),
     a = t(894017),
     d = t(79874),
@@ -15,7 +15,7 @@ var i = t(442837),
     o = t(689938);
 function c(e) {
     let { guildEventId: n, guild: c, channel: _, recurrenceId: T, isRecurrenceItem: N } = e,
-        { canManageGuildEvent: I } = (0, s.XJ)(null != _ ? _ : c),
+        { canManageGuildEvent: I } = (0, s.X)(null != _ ? _ : c),
         Z = (0, i.e7)([r.ZP], () => r.ZP.getGuildScheduledEvent(n)),
         f = I(Z),
         g = (0, E.Z)(),

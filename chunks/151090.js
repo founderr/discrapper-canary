@@ -9,7 +9,7 @@ s(470079);
 var a = s(442837),
     l = s(481060),
     t = s(239091),
-    i = s(889161),
+    i = s(357156),
     c = s(430824),
     d = s(496675),
     r = s(771845),
@@ -20,7 +20,7 @@ function I(e) {
         Z = (0, a.e7)([r.ZP, d.Z, u.default, c.Z], () =>
             r.ZP.getFlattenedGuildIds().some((e) => {
                 let n = c.Z.getGuild(e);
-                return null != n && (0, i.Gw)(n, d.Z, u.default).canCreateExpressions;
+                return null != n && (0, i.G)(n, d.Z, u.default).canCreateExpressions;
             })
         );
     return (0, o.jsxs)(l.Menu, {

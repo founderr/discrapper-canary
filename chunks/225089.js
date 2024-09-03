@@ -8,8 +8,8 @@ n(470079);
 var s = n(481060),
     i = n(78675),
     l = n(654904),
-    a = n(486324),
-    o = n(228168),
+    o = n(486324),
+    a = n(228168),
     c = n(689938),
     d = n(360247);
 function u(e) {
@@ -20,7 +20,7 @@ function u(e) {
         user: t,
         displayProfile: n,
         guildId: u,
-        profileType: o.y0.BITE_SIZE,
+        profileType: a.y0.BITE_SIZE,
         pendingBanner: m,
         canUsePremiumProfileCustomization: f,
         children:
@@ -31,7 +31,7 @@ function u(e) {
                         null == _ || _();
                         return;
                     }
-                    (0, l.$r)(a.pC.BANNER, u, E);
+                    (0, l.$r)(o.pC.BANNER, u, E);
                 },
                 className: d.clickable,
                 children: [

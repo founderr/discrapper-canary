@@ -3,8 +3,8 @@ var r = n(735250),
     s = n(470079),
     i = n(120356),
     l = n.n(i),
-    a = n(278074),
-    o = n(831209),
+    o = n(278074),
+    a = n(831209),
     c = n(399606),
     d = n(481060),
     u = n(37234),
@@ -30,7 +30,7 @@ let x = () => 80,
     },
     A = (e) => {
         var t;
-        let { user: n, profileEffect: i, innerRef: l, section: a, isSelected: u, ...I } = e,
+        let { user: n, profileEffect: i, innerRef: l, section: o, isSelected: u, ...I } = e,
             x = (0, _.V)(i.id),
             A = (0, c.e7)([f.Z], () => {
                 let e = f.Z.getProduct(i.skuId);
@@ -40,7 +40,7 @@ let x = () => 80,
             T = s.useRef(null),
             { accessibilityLabel: N, thumbnailPreviewSrc: S, title: j } = null !== (t = null == x ? void 0 : x.config) && void 0 !== t ? t : {},
             R = p.ZP.canUseCollectibles(n),
-            M = a === h.$0.PREMIUM_PURCHASE && !R,
+            M = o === h.$0.PREMIUM_PURCHASE && !R,
             O = (0, E.M)('ProfileEffectPresetItem');
         return (0, r.jsxs)(P, {
             className: !M || u || O ? void 0 : v.decorationGridItemChurned,
@@ -58,7 +58,7 @@ let x = () => 80,
                     src: S,
                     alt: j
                 }),
-                a === h.$0.PURCHASE || (a === h.$0.PREMIUM_PURCHASE && R)
+                o === h.$0.PURCHASE || (o === h.$0.PREMIUM_PURCHASE && R)
                     ? null
                     : Z
                       ? (0, r.jsx)(d.PremiumBadge, {
@@ -88,16 +88,16 @@ let x = () => 80,
                                           size: 'xxs',
                                           color: 'currentColor'
                                       }),
-                            color: o.Z.BACKGROUND_ACCENT,
+                            color: a.Z.BACKGROUND_ACCENT,
                             className: v.lockBadge
                         })
             ]
         });
     };
 t.Z = (e) => {
-    let { user: t, guild: n, pendingProfileEffect: s, selectedProfileEffectRef: i, onSelect: l, onClose: o } = e,
+    let { user: t, guild: n, pendingProfileEffect: s, selectedProfileEffectRef: i, onSelect: l, onClose: a } = e,
         c = () => {
-            o(), (0, u.jN)(I.S9g.COLLECTIBLES_SHOP);
+            a(), (0, u.jN)(I.S9g.COLLECTIBLES_SHOP);
         },
         f = (0, h.ZP)(),
         m = null != s;
@@ -115,9 +115,9 @@ t.Z = (e) => {
                 let { items: t } = e;
                 return t.length;
             }),
-            renderItem: (e, o, u, E) => {
+            renderItem: (e, a, u, E) => {
                 let { section: p, items: _ } = f[e];
-                return (0, a.EQ)(_[o])
+                return (0, o.EQ)(_[a])
                     .with(h.Tm, () =>
                         (0, r.jsxs)(
                             P,

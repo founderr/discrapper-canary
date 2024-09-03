@@ -8,8 +8,8 @@ n(470079);
 var s = n(481060),
     i = n(680295),
     l = n(318661),
-    a = n(721987),
-    o = n(438163),
+    o = n(721987),
+    a = n(438163),
     c = n(502762),
     d = n(204197),
     u = n(654904),
@@ -35,7 +35,7 @@ function g(e) {
             pendingProfileEffectId: j,
             displayProfile: D
         }),
-        { theme: G, primaryColor: F } = (0, a.Z)({
+        { theme: G, primaryColor: F } = (0, o.Z)({
             user: t,
             displayProfile: D,
             pendingThemeColors: S,
@@ -78,7 +78,7 @@ function g(e) {
                         onUpsellClick: () => (null == v ? void 0 : v({ object: _.qAy.AVATAR }))
                     }),
                     !L &&
-                        (0, r.jsx)(o.Z, {
+                        (0, r.jsx)(a.Z, {
                             user: t,
                             profileType: h.y0.BITE_SIZE
                         })

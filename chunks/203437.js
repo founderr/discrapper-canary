@@ -11,7 +11,7 @@ var l = t(735250),
     r = t(442837),
     u = t(481060),
     o = t(565138),
-    c = t(889161),
+    c = t(357156),
     d = t(430824),
     f = t(496675),
     m = t(771845),
@@ -46,7 +46,7 @@ function y(e) {
             let e = {};
             for (let n of m.ZP.getFlattenedGuildIds()) {
                 let t = d.Z.getGuild(n);
-                if (null != t) (0, c.Gw)(t, f.Z, h.default).canCreateExpressions && (e[t.id] = t);
+                if (null != t) (0, c.G)(t, f.Z, h.default).canCreateExpressions && (e[t.id] = t);
             }
             return e;
         }),

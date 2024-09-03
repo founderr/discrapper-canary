@@ -35,7 +35,7 @@ n.d(t, {
     n(733860);
 var r = n(470079),
     i = n(442837),
-    a = n(889161),
+    a = n(357156),
     s = n(695346),
     o = n(516373),
     l = n(430824),
@@ -78,7 +78,7 @@ let A = (e) => {
                 let r = function (t, n) {
                     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                         i = (0, T.J8)(t[0]) ? l.Z.getGuild(t[0].guild_id) : void 0,
-                        { canCreateExpressions: s } = (0, a.Gw)(i),
+                        { canCreateExpressions: s } = (0, a.G)(i),
                         o = u.Z.getGuildId(),
                         c = d.findIndex((e) => e.type === m.Ih.FAVORITE),
                         A = d.findIndex((e) => e.type === m.Ih.RECENT),
@@ -177,7 +177,7 @@ let A = (e) => {
             }
             if ((null == e ? void 0 : e.getGuildId()) != null) {
                 let t = l.Z.getGuild(e.getGuildId()),
-                    { canManageAllExpressions: n } = (0, a.Gw)(t),
+                    { canManageAllExpressions: n } = (0, a.G)(t),
                     i = r.findIndex((t) => t.id === e.getGuildId());
                 i >= 1
                     ? r.unshift(r.splice(i, 1)[0])

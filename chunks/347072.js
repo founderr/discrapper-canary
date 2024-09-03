@@ -8,13 +8,13 @@ n(470079);
 var i = n(120356),
     a = n.n(i),
     s = n(481060),
-    o = n(889161),
+    o = n(357156),
     l = n(343747),
     u = n(689938),
     c = n(78877);
 function d(e) {
     let { guild: t, focused: n, onSelectItem: i, refreshEnabled: d, ..._ } = e,
-        { canCreateExpressions: E } = (0, o.XJ)(t);
+        { canCreateExpressions: E } = (0, o.X)(t);
     return (0, r.jsx)(s.Tooltip, {
         text: u.Z.Messages.SOUNDBOARD_SOUND_UPLOAD_BUTTON_DISABLED,
         shouldShow: !E,

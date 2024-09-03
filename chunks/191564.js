@@ -9,8 +9,8 @@ var r = n(735250),
     s = n(470079),
     i = n(979554),
     l = n(442837),
-    a = n(481060),
-    o = n(100527),
+    o = n(481060),
+    a = n(100527),
     c = n(906732),
     d = n(335131),
     u = n(884697),
@@ -35,31 +35,31 @@ function N(e) {
             c(),
                 (0, d.mK)({
                     analyticsLocations: g,
-                    analyticsSource: o.Z.EDIT_PROFILE_EFFECT_MODAL,
+                    analyticsSource: a.Z.EDIT_PROFILE_EFFECT_MODAL,
                     initialProductSkuId: null != I ? I.skuId : void 0
                 });
         }, [c, g, I]),
         x = (0, E.M)('ProfileEffectModalFooter');
-    return (0, r.jsxs)(a.ModalFooter, {
+    return (0, r.jsxs)(o.ModalFooter, {
         className: T.modalFooter,
         children: [
             (0, r.jsxs)('div', {
                 className: T.buttonsRight,
                 children: [
-                    (0, r.jsx)(a.Button, {
-                        look: a.Button.Looks.LINK,
-                        color: a.Button.Colors.PRIMARY,
+                    (0, r.jsx)(o.Button, {
+                        look: o.Button.Looks.LINK,
+                        color: o.Button.Colors.PRIMARY,
                         onClick: c,
                         children: Z.Z.Messages.CANCEL
                     }),
                     (null != i && (!(0, u.qS)(i) || m)) || null === h
-                        ? (0, r.jsx)(a.Button, {
+                        ? (0, r.jsx)(o.Button, {
                               onClick: l,
                               disabled: f,
                               children: Z.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
                           })
                         : m || !(0, u.G1)(n)
-                          ? (0, r.jsx)(a.Button, {
+                          ? (0, r.jsx)(o.Button, {
                                 onClick: C,
                                 children: Z.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                             })
@@ -75,7 +75,7 @@ function N(e) {
     });
 }
 function S(e) {
-    let { user: t, guild: n, categories: i, purchases: l, onClose: o, initialSelectedProfileEffectId: c, currentSavedEffectId: d, analyticsLocations: m } = e,
+    let { user: t, guild: n, categories: i, purchases: l, onClose: a, initialSelectedProfileEffectId: c, currentSavedEffectId: d, analyticsLocations: m } = e,
         { pendingProfileEffectId: E } = (0, h.bd)(n),
         [p, _] = s.useMemo(() => {
             let e = (0, u.bl)(i, l);
@@ -100,21 +100,21 @@ function S(e) {
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)(a.ModalHeader, {
+            (0, r.jsxs)(o.ModalHeader, {
                 separator: !1,
                 className: T.modalHeader,
                 children: [
-                    (0, r.jsx)(a.Heading, {
+                    (0, r.jsx)(o.Heading, {
                         variant: 'heading-lg/semibold',
                         children: Z.Z.Messages.PROFILE_EFFECT_MODAL_HEADER
                     }),
-                    (0, r.jsx)(a.ModalCloseButton, {
+                    (0, r.jsx)(o.ModalCloseButton, {
                         className: T.modalCloseButton,
-                        onClick: o
+                        onClick: a
                     })
                 ]
             }),
-            (0, r.jsxs)(a.ModalContent, {
+            (0, r.jsxs)(o.ModalContent, {
                 className: T.modalContent,
                 children: [
                     (0, r.jsx)(x.Z, {
@@ -123,7 +123,7 @@ function S(e) {
                         pendingProfileEffect: I,
                         selectedProfileEffectRef: R,
                         onSelect: L,
-                        onClose: o
+                        onClose: a
                     }),
                     (0, r.jsx)(C.Z, {
                         user: t,
@@ -138,9 +138,9 @@ function S(e) {
             (0, r.jsx)(N, {
                 user: t,
                 onApply: () => {
-                    (0, h.s6)(I, d, n), o();
+                    (0, h.s6)(I, d, null == n ? void 0 : n.id), a();
                 },
-                onClose: o,
+                onClose: a,
                 product: S,
                 purchase: j,
                 canUseCollectibles: M,
@@ -156,7 +156,7 @@ function j(e) {
     let { transitionState: t, analyticsLocations: n, initialSelectedEffectId: u, guild: f, onClose: E } = e,
         { isFetching: p, categories: _, purchases: v } = (0, m.Z)(),
         C = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
-        { analyticsLocations: x } = (0, c.ZP)(n, o.Z.EDIT_PROFILE_EFFECT_MODAL),
+        { analyticsLocations: x } = (0, c.ZP)(n, a.Z.EDIT_PROFILE_EFFECT_MODAL),
         A = (0, h.Kg)(C, f);
     return (
         s.useEffect(() => {
@@ -176,14 +176,14 @@ function j(e) {
         ),
         (0, r.jsx)(c.Gt, {
             value: x,
-            children: (0, r.jsx)(a.ModalRoot, {
+            children: (0, r.jsx)(o.ModalRoot, {
                 transitionState: t,
                 className: T.modal,
-                size: p ? a.ModalSize.DYNAMIC : a.ModalSize.MEDIUM,
+                size: p ? o.ModalSize.DYNAMIC : o.ModalSize.MEDIUM,
                 children: p
-                    ? (0, r.jsx)(a.Spinner, {
+                    ? (0, r.jsx)(o.Spinner, {
                           className: T.spinner,
-                          type: a.Spinner.Type.SPINNING_CIRCLE
+                          type: o.Spinner.Type.SPINNING_CIRCLE
                       })
                     : (0, r.jsx)(S, {
                           user: C,

@@ -7,14 +7,14 @@ var l = t(735250);
 t(470079);
 var i = t(442837),
     u = t(481060),
-    s = t(889161),
+    s = t(357156),
     r = t(924301),
     a = t(554747),
     d = t(981631),
     E = t(689938);
 function o(e, n, o) {
     var c;
-    let { canManageGuildEvent: _ } = (0, s.XJ)(null != o ? o : n),
+    let { canManageGuildEvent: _ } = (0, s.X)(null != o ? o : n),
         T = (0, i.e7)([r.ZP], () => r.ZP.getGuildScheduledEvent(e), [e]),
         N = _(T),
         I = null != (0, a.qY)(null !== (c = null == o ? void 0 : o.id) && void 0 !== c ? c : d.lds),

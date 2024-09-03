@@ -60,7 +60,7 @@ n.Z = a.memo(function (e) {
             },
             [N]
         ),
-        w = a.useCallback(
+        U = a.useCallback(
             (e) => {
                 null != _ && (_.currentTime = e);
             },
@@ -107,7 +107,7 @@ n.Z = a.memo(function (e) {
             }),
             (0, l.jsx)(d.Z, {
                 playing: v,
-                onPlaybackChange: w,
+                onPlaybackChange: U,
                 onPausePlayback: j,
                 onChangePosition: I,
                 disabled: p

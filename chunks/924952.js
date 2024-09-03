@@ -7,14 +7,14 @@ var t = i(735250);
 i(470079);
 var l = i(442837),
     s = i(481060),
-    a = i(889161),
+    a = i(357156),
     u = i(471253),
     o = i(924301),
     r = i(482241),
     d = i(765305),
     c = i(689938);
 function Z(e, n, i) {
-    let { canManageGuildEvent: Z } = (0, a.XJ)(null != i ? i : n),
+    let { canManageGuildEvent: Z } = (0, a.X)(null != i ? i : n),
         E = (0, l.e7)([o.ZP], () => o.ZP.isActive(e)),
         M = (0, l.e7)([o.ZP], () => o.ZP.getGuildScheduledEvent(e), [e]),
         _ = Z(M);

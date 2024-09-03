@@ -93,7 +93,7 @@ class v extends (I = m.ZP.Store) {
             (d = e.guild), (S = g.QZA.OPEN), (A = {}), (_ = e.source), (E = e.analyticsLocations);
         },
         GUILD_IDENTITY_SETTINGS_RESET_AND_CLOSE_FORM: function () {
-            N(), (S = g.QZA.CLOSED), (A = {}), (d = null), (_ = void 0), (E = []);
+            N(), (S = g.QZA.CLOSED), (A = {}), (_ = void 0), (E = []);
         },
         GUILD_IDENTITY_SETTINGS_SET_GUILD: function (e) {
             (d = e.guild), (A = {});

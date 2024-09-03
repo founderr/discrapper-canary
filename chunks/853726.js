@@ -8,8 +8,8 @@ n(470079);
 var s = n(442837),
     i = n(954138),
     l = n(979264),
-    a = n(741308),
-    o = n(530),
+    o = n(741308),
+    a = n(530),
     c = n(790711),
     d = n(67152),
     u = n(271383),
@@ -35,7 +35,7 @@ function _(e) {
         inert: '',
         className: p.body,
         children: [
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(a.Z, {
                 user: n,
                 profileType: E.y0.BITE_SIZE,
                 usernameIcon: (() => {
@@ -49,7 +49,7 @@ function _(e) {
                 nickname: R,
                 pronouns: j,
                 isTryItOut: P,
-                tags: (0, r.jsx)(a.Z, {
+                tags: (0, r.jsx)(o.Z, {
                     displayProfile: _,
                     profileType: E.y0.BITE_SIZE
                 })
