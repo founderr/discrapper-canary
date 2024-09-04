@@ -21,46 +21,46 @@ var r = n(735250),
     I = n(186917),
     m = n(360850);
 let T = (e) => {
-        let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: o = !1, useOpacityOnHover: l = !0, autoPlay: u = !0, restartMethod: h, urlQueryString: I, profileEffectConfig: T, noBorderRadius: g = !1, introDelay: S = c.lG } = e,
-            A = i.useRef(null),
-            [N, O] = i.useState([]);
+        let { bannerAdjustment: t = 0, maxLoops: n, resetOnHover: a = !1, isHovering: o = !1, useOpacityOnHover: l = !0, autoPlay: u = !0, restartMethod: h, urlQueryString: I, profileEffectConfig: T, noBorderRadius: g = !1, introDelay: S = c.lG, debugForTool: A = !1 } = e,
+            N = i.useRef(null),
+            [O, R] = i.useState([]);
         (0, p.Z)(T);
-        let [R, v] = i.useState(0),
-            [C, y] = i.useState(0),
-            { accessibilityLabel: L } = T,
-            [D, b] = i.useState(-S),
+        let [v, C] = i.useState(0),
+            [y, L] = i.useState(0),
+            { accessibilityLabel: D } = T,
+            [b, M] = i.useState(-S),
             {
-                stop: M,
-                reset: P,
-                ticking: U
+                stop: P,
+                reset: U,
+                ticking: w
             } = (0, _.Z)((e) => {
-                b((t) => t + e);
+                M((t) => t + e);
             });
         i.useEffect(() => {
-            b(-S), O((0, E.Hd)(T.effects));
+            M(-S), R((0, E.Hd)(T.effects));
         }, [T]),
             i.useEffect(() => {
                 let e = 0,
                     t = 1 / 0;
-                N.forEach((n) => {
+                O.forEach((n) => {
                     let r = n.start + n.duration;
                     r > e && (e = r), n.loop && n.start < t && (t = n.start);
                 }),
-                    v(t),
-                    y(e);
-            }, [y, N]);
-        let [w, x] = i.useState(!1);
+                    C(t),
+                    L(e);
+            }, [L, O]);
+        let [x, G] = i.useState(!1);
         return (
             i.useEffect(() => {
-                !0 !== u && !o && (M(), b(0)), !o && w && U.current && (M(), b(0)), a && o && !U.current && (P(), T.animationType === d.Q.PERSISTENT ? b(h === d.j.FromStart ? 0 : R) : b(0));
-            }, [o, w, R, a, M, P, U, T.animationType, u, h]),
+                !0 !== u && !o && (P(), M(0)), !o && x && w.current && (P(), M(0)), a && o && !w.current && (U(), T.animationType === d.Q.PERSISTENT ? M(h === d.j.FromStart ? 0 : v) : M(0));
+            }, [o, x, v, a, P, U, w, T.animationType, u, h]),
             (0, r.jsx)('div', {
-                ref: A,
+                ref: N,
                 className: s()(m.profileEffects, { [m.hovered]: o && l }),
                 children: (0, r.jsx)('div', {
                     className: g ? m.innerNoRadius : m.inner,
-                    children: N.map((e, i) => {
-                        if (!U.current && T.animationType === d.Q.PERSISTENT && null != T.staticFrameSrc && 0 === i && !0 === u) {
+                    children: O.map((e, i) => {
+                        if (!w.current && T.animationType === d.Q.PERSISTENT && null != T.staticFrameSrc && 0 === i && !0 === u) {
                             var a, s, o, l;
                             let { staticFrameSrc: n } = T;
                             return (0, r.jsx)(
@@ -72,7 +72,7 @@ let T = (e) => {
                                         left: null !== (l = null === (s = e.position) || void 0 === s ? void 0 : s.x) && void 0 !== l ? l : 0
                                     },
                                     src: n,
-                                    alt: L
+                                    alt: D
                                 },
                                 e.src + i
                             );
@@ -82,15 +82,16 @@ let T = (e) => {
                             {
                                 layerConfig: e,
                                 animationType: T.animationType,
-                                ticking: U.current,
-                                time: D,
-                                accessibilityLabel: L,
-                                hasPlayedThrough: w,
-                                setHasPlayedThrough: x,
+                                ticking: w.current,
+                                time: b,
+                                accessibilityLabel: D,
+                                hasPlayedThrough: x,
+                                setHasPlayedThrough: G,
                                 urlQueryString: I,
                                 maxLoops: n,
-                                loopEnd: C,
-                                bannerAdjustment: t
+                                loopEnd: y,
+                                bannerAdjustment: t,
+                                debugForTool: A
                             },
                             e.src + i
                         );

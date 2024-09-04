@@ -1,4 +1,4 @@
-t(47120), t(642549), t(518263), t(970173), t(520712), t(268111), t(941497), t(32026), t(480839), t(744285), t(492257), t(873817), t(315314), t(610138), t(216116), t(78328), t(815648);
+t(47120), t(642549), t(518263), t(970173), t(520712), t(268111), t(941497), t(32026), t(480839), t(744285), t(492257), t(873817), t(315314), t(610138), t(216116), t(78328), t(815648), t(653041);
 var n = t(735250),
     a = t(470079),
     i = t(120356),
@@ -252,169 +252,230 @@ s.Z = (e) => {
                                           })
                                       ]
                                   }),
-                                  f &&
+                                  L.some((e) => {
+                                      var s;
+                                      return (null !== (s = e.randomizedSources) && void 0 !== s ? s : []).length > 0;
+                                  }) &&
                                       (0, n.jsxs)('div', {
-                                          className: r()(N.userProfilePreview, N.preview),
+                                          className: r()(N.section, N.randomizedRules),
                                           children: [
-                                              (0, n.jsx)(u.Z, {
-                                                  user: A,
-                                                  pendingAvatar: void 0,
-                                                  pendingProfileEffectId: null,
-                                                  canUsePremiumCustomization: !0,
-                                                  isTryItOutFlow: !0
+                                              (0, n.jsx)(c.Text, {
+                                                  variant: 'text-md/bold',
+                                                  children: 'Rules of Randomized Effects'
                                               }),
-                                              (0, n.jsx)(S.Z, {
-                                                  config: {
-                                                      type: o.Z.PROFILE_EFFECT,
-                                                      title: 'debug',
-                                                      description: 'debug',
-                                                      accessibilityLabel: 'debug',
-                                                      reducedMotionSrc: '',
-                                                      effects: D ? (0, I.Tp)(L) : L,
-                                                      animationType: 0
-                                                  },
-                                                  profileEffectId: 'debug'
+                                              (0, n.jsxs)('ol', {
+                                                  children: [(0, n.jsx)('li', { children: 'When an effect has randomization, all layers with random options must have the same number of options.' }), (0, n.jsx)('li', { children: 'The duration for the random options of a layer must be the same' }), (0, n.jsx)('li', { children: 'If multiple layers have randomization, the same option will be used for all layers. (For example, the second option will be used for ALL layers)' }), (0, n.jsx)('li', { children: 'Click "Replay Animation" to "reroll" the randomization' })]
                                               })
                                           ]
-                                      })
+                                      }),
+                                  (0, n.jsx)('div', {
+                                      children:
+                                          f &&
+                                          (0, n.jsxs)('div', {
+                                              className: r()(N.userProfilePreview, N.preview),
+                                              children: [
+                                                  (0, n.jsx)(u.Z, {
+                                                      user: A,
+                                                      pendingAvatar: void 0,
+                                                      pendingProfileEffectId: null,
+                                                      canUsePremiumCustomization: !0,
+                                                      isTryItOutFlow: !0
+                                                  }),
+                                                  (0, n.jsx)(S.Z, {
+                                                      config: {
+                                                          type: o.Z.PROFILE_EFFECT,
+                                                          title: 'debug',
+                                                          description: 'debug',
+                                                          accessibilityLabel: 'debug',
+                                                          reducedMotionSrc: '',
+                                                          effects: D ? (0, I.Tp)(L) : L,
+                                                          animationType: 0
+                                                      },
+                                                      profileEffectId: 'debug'
+                                                  })
+                                              ]
+                                          })
+                                  })
                               ]
-                          })
-                      ]
-                  }),
-                  (0, n.jsx)('div', {
-                      className: r()(N.grid, N.layers),
-                      children: L.map((e, s) =>
-                          (0, n.jsxs)(
-                              'div',
-                              {
-                                  className: N.layerForm,
-                                  children: [
-                                      (0, n.jsx)(c.Heading, {
-                                          variant: 'heading-md/bold',
-                                          children: e.name
-                                      }),
-                                      (0, n.jsx)('img', {
-                                          src: e.base64,
-                                          className: N.layerPreview,
-                                          alt: ''
-                                      }),
-                                      (0, n.jsxs)('div', {
-                                          className: r()(N.grid, N.section),
+                          }),
+                          (0, n.jsx)('div', {
+                              className: r()(N.grid, N.layers),
+                              children: L.map((e, s) => {
+                                  var t;
+                                  return (0, n.jsxs)(
+                                      'div',
+                                      {
+                                          className: N.layerForm,
                                           children: [
-                                              (0, n.jsxs)('div', {
-                                                  className: N.col,
-                                                  children: [
-                                                      (0, n.jsx)(c.Text, {
-                                                          variant: 'text-md/bold',
-                                                          children: 'Start'
-                                                      }),
-                                                      (0, n.jsx)('input', {
-                                                          type: 'number',
-                                                          value: e.start,
-                                                          className: N.input,
-                                                          onChange: (e) => {
-                                                              b((t) => {
-                                                                  let n = [...t],
-                                                                      a = t[s];
-                                                                  return (a.start = +e.target.value), (n[s] = a), n;
-                                                              });
-                                                          },
-                                                          contentEditable: !0
-                                                      })
-                                                  ]
+                                              (0, n.jsx)(c.Heading, {
+                                                  variant: 'heading-md/bold',
+                                                  children: e.name
                                               }),
-                                              (0, n.jsxs)('div', {
-                                                  className: N.col,
-                                                  children: [
-                                                      (0, n.jsx)(c.Text, {
-                                                          variant: 'text-md/bold',
-                                                          children: 'Duration'
-                                                      }),
-                                                      (0, n.jsx)('input', {
-                                                          type: 'number',
-                                                          value: e.duration,
-                                                          className: N.input,
-                                                          onChange: (e) => {
-                                                              b((t) => {
-                                                                  let n = [...t],
-                                                                      a = t[s];
-                                                                  return (a.duration = +e.target.value), (n[s] = a), n;
-                                                              });
-                                                          },
-                                                          contentEditable: !0
-                                                      })
-                                                  ]
-                                              })
-                                          ]
-                                      }),
-                                      (0, n.jsxs)('div', {
-                                          className: r()(N.grid, N.section),
-                                          children: [
-                                              (0, n.jsxs)('div', {
-                                                  className: N.col,
-                                                  children: [
-                                                      (0, n.jsx)(c.Text, {
-                                                          variant: 'text-md/bold',
-                                                          children: 'Loop'
-                                                      }),
-                                                      (0, n.jsx)('input', {
-                                                          type: 'checkbox',
-                                                          checked: e.loop,
-                                                          className: N.checkBox,
-                                                          onChange: (e) => {
-                                                              b((t) => {
-                                                                  let n = [...t],
-                                                                      a = t[s];
-                                                                  return (a.loop = e.target.checked), (n[s] = a), n;
-                                                              });
-                                                          }
-                                                      })
-                                                  ]
+                                              (0, n.jsx)('img', {
+                                                  src: e.base64,
+                                                  className: N.layerPreview,
+                                                  alt: ''
                                               }),
-                                              (0, n.jsx)('div', {
-                                                  className: N.col,
-                                                  children:
-                                                      e.loop &&
-                                                      (0, n.jsxs)(n.Fragment, {
+                                              (null !== (t = e.randomizedSources) && void 0 !== t ? t : []).map((e, s) =>
+                                                  (0, n.jsx)(
+                                                      'img',
+                                                      {
+                                                          src: e,
+                                                          className: N.layerPreview,
+                                                          alt: ''
+                                                      },
+                                                      s
+                                                  )
+                                              ),
+                                              (0, n.jsxs)('div', {
+                                                  className: r()(N.grid, N.section),
+                                                  children: [
+                                                      (0, n.jsxs)('div', {
+                                                          className: N.col,
                                                           children: [
                                                               (0, n.jsx)(c.Text, {
                                                                   variant: 'text-md/bold',
-                                                                  children: 'Loop Delay'
+                                                                  children: 'Start'
                                                               }),
                                                               (0, n.jsx)('input', {
                                                                   type: 'number',
-                                                                  value: e.loopDelay,
+                                                                  value: e.start,
                                                                   className: N.input,
                                                                   onChange: (e) => {
                                                                       b((t) => {
                                                                           let n = [...t],
                                                                               a = t[s];
-                                                                          return (a.loopDelay = +e.target.value), (n[s] = a), n;
+                                                                          return (a.start = +e.target.value), (n[s] = a), n;
+                                                                      });
+                                                                  },
+                                                                  contentEditable: !0
+                                                              })
+                                                          ]
+                                                      }),
+                                                      (0, n.jsxs)('div', {
+                                                          className: N.col,
+                                                          children: [
+                                                              (0, n.jsx)(c.Text, {
+                                                                  variant: 'text-md/bold',
+                                                                  children: 'Duration'
+                                                              }),
+                                                              (0, n.jsx)('input', {
+                                                                  type: 'number',
+                                                                  value: e.duration,
+                                                                  className: N.input,
+                                                                  onChange: (e) => {
+                                                                      b((t) => {
+                                                                          let n = [...t],
+                                                                              a = t[s];
+                                                                          return (a.duration = +e.target.value), (n[s] = a), n;
                                                                       });
                                                                   },
                                                                   contentEditable: !0
                                                               })
                                                           ]
                                                       })
+                                                  ]
+                                              }),
+                                              (0, n.jsxs)('div', {
+                                                  className: r()(N.grid, N.section),
+                                                  children: [
+                                                      (0, n.jsxs)('div', {
+                                                          className: N.col,
+                                                          children: [
+                                                              (0, n.jsx)(c.Text, {
+                                                                  variant: 'text-md/bold',
+                                                                  children: 'Loop'
+                                                              }),
+                                                              (0, n.jsx)('input', {
+                                                                  type: 'checkbox',
+                                                                  checked: e.loop,
+                                                                  className: N.checkBox,
+                                                                  onChange: (e) => {
+                                                                      b((t) => {
+                                                                          let n = [...t],
+                                                                              a = t[s];
+                                                                          return (a.loop = e.target.checked), (n[s] = a), n;
+                                                                      });
+                                                                  }
+                                                              })
+                                                          ]
+                                                      }),
+                                                      (0, n.jsx)('div', {
+                                                          className: N.col,
+                                                          children:
+                                                              e.loop &&
+                                                              (0, n.jsxs)(n.Fragment, {
+                                                                  children: [
+                                                                      (0, n.jsx)(c.Text, {
+                                                                          variant: 'text-md/bold',
+                                                                          children: 'Loop Delay'
+                                                                      }),
+                                                                      (0, n.jsx)('input', {
+                                                                          type: 'number',
+                                                                          value: e.loopDelay,
+                                                                          className: N.input,
+                                                                          onChange: (e) => {
+                                                                              b((t) => {
+                                                                                  let n = [...t],
+                                                                                      a = t[s];
+                                                                                  return (a.loopDelay = +e.target.value), (n[s] = a), n;
+                                                                              });
+                                                                          },
+                                                                          contentEditable: !0
+                                                                      })
+                                                                  ]
+                                                              })
+                                                      })
+                                                  ]
+                                              }),
+                                              (0, n.jsxs)('div', {
+                                                  className: r()(N.row, N.end),
+                                                  children: [
+                                                      (0, n.jsxs)('div', {
+                                                          className: N.uploadButton,
+                                                          children: [
+                                                              (0, n.jsx)(c.Text, {
+                                                                  variant: 'text-sm/normal',
+                                                                  color: 'always-white',
+                                                                  children: 'Add Alternative'
+                                                              }),
+                                                              (0, n.jsx)(d.Z, {
+                                                                  ref: p,
+                                                                  onChange: (e) => {
+                                                                      let t = e.currentTarget.files;
+                                                                      if (null == t) return;
+                                                                      let n = t[0],
+                                                                          a = new FileReader();
+                                                                      (a.onload = (e) => {
+                                                                          b((t) => {
+                                                                              if (null == e.target || 'string' != typeof e.target.result) return t;
+                                                                              let n = [...t];
+                                                                              return null == t[s].randomizedSources && (t[s].randomizedSources = []), t[s].randomizedSources.push(e.target.result), n;
+                                                                          });
+                                                                      }),
+                                                                          a.readAsDataURL(n);
+                                                                  },
+                                                                  multiple: !1
+                                                              })
+                                                          ]
+                                                      }),
+                                                      (0, n.jsx)(c.Button, {
+                                                          color: c.ButtonColors.RED,
+                                                          look: c.ButtonLooks.LINK,
+                                                          onClick: () => {
+                                                              b((s) => s.filter((s) => s !== e));
+                                                          },
+                                                          children: 'Remove Layer'
+                                                      })
+                                                  ]
                                               })
                                           ]
-                                      }),
-                                      (0, n.jsx)('div', {
-                                          className: r()(N.row, N.end),
-                                          children: (0, n.jsx)(c.Button, {
-                                              color: c.ButtonColors.RED,
-                                              look: c.ButtonLooks.LINK,
-                                              onClick: () => {
-                                                  b((s) => s.filter((s) => s !== e));
-                                              },
-                                              children: 'Remove Layer'
-                                          })
-                                      })
-                                  ]
-                              },
-                              s
-                          )
-                      )
+                                      },
+                                      s
+                                  );
+                              })
+                          })
+                      ]
                   })
               ]
           });
