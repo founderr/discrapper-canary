@@ -1,19 +1,20 @@
 n.d(t, {
     T: function () {
-        return i;
-    },
-    m1: function () {
         return a;
     },
-    nS: function () {
+    m1: function () {
         return s;
     },
-    zQ: function () {
+    nS: function () {
         return o;
+    },
+    zQ: function () {
+        return l;
     }
 });
-var r = n(818083);
-let i = (0, r.B)({
+var r = n(818083),
+    i = n(987338);
+let a = (0, r.B)({
         kind: 'user',
         id: '2023-11_app_launcher_desktop',
         label: 'App Launcher - Desktop',
@@ -26,7 +27,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (0, r.B)({
+    s = (0, r.B)({
         kind: 'user',
         id: '2024-06_desktop_app_launcher_in_activities_shelf',
         label: 'Desktop App Launcher In Activities Shelf',
@@ -80,7 +81,7 @@ let i = (0, r.B)({
         }
     ]
 });
-let s = (0, r.B)({
+let o = (0, r.B)({
         kind: 'user',
         id: '2024-07_open_platform_app_launcher',
         label: 'Open Platform App Launcher',
@@ -93,11 +94,12 @@ let s = (0, r.B)({
             }
         ]
     }),
-    o = (0, r.B)({
+    l = (0, r.B)({
         kind: 'user',
         id: '2024-08_open_platform_link_sharing',
         label: 'Open Platform Link Sharing',
         defaultConfig: { enabled: !1 },
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
