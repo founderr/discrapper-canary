@@ -61,6 +61,12 @@ let _ = {
             chance: 0.5,
             hotspot: o.v6.IN_APP_REPORTS_FEEDBACK,
             storageKey: 'inAppReportsFeedback'
+        },
+        [c.nw.USER_DM_MUTE]: {
+            cooldown: 0,
+            chance: 0.5,
+            hotspot: o.v6.USER_DM_MUTE_FEEDBACK,
+            storageKey: 'userDmMute'
         }
     };
 function f(e) {

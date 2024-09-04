@@ -39,7 +39,8 @@ class T extends h.Z {
                 STREAM_CLOSE: (e) => this.handleStreamClose(e),
                 VIDEO_BACKGROUND_SHOW_FEEDBACK: (e) => this.handleVideoBackgroundShowFeedback(e),
                 EMBEDDED_ACTIVITY_CLOSE: (e) => this.handleActivityClose(e),
-                IN_APP_REPORTS_SHOW_FEEDBACK: (e) => this.handleInAppReportsFeedback(e)
+                IN_APP_REPORTS_SHOW_FEEDBACK: (e) => this.handleInAppReportsFeedback(e),
+                USER_DM_MUTE_SHOW_FEEDBACK: (e) => this.handleUserDmMuteFeedback(e)
             }),
             m(this, 'handleVoiceChannelFeedback', (e) => {
                 let { analyticsData: t } = e;
@@ -133,6 +134,19 @@ class T extends h.Z {
                                 ...n,
                                 reportId: t,
                                 reportType: a
+                            });
+                    });
+                });
+            }),
+            m(this, 'handleUserDmMuteFeedback', (e) => {
+                let { channel: t } = e;
+                this.possiblyShowFeedbackModal(p.nw.USER_DM_MUTE, () => {
+                    (0, i.openModalLazy)(async () => {
+                        let { default: e } = await n.e('10620').then(n.bind(n, 408561));
+                        return (n) =>
+                            (0, r.jsx)(e, {
+                                ...n,
+                                channel: t
                             });
                     });
                 });
