@@ -3,13 +3,13 @@ n.d(s, {
         return A;
     },
     Mx: function () {
-        return T;
+        return S;
     },
     PZ: function () {
         return Z;
     },
     h4: function () {
-        return S;
+        return T;
     },
     ic: function () {
         return M;
@@ -18,10 +18,10 @@ n.d(s, {
         return L;
     },
     rU: function () {
-        return R;
+        return U;
     },
     s8: function () {
-        return U;
+        return R;
     }
 }),
     n(47120);
@@ -37,8 +37,8 @@ var r,
     h = n(790145),
     p = n(245216),
     m = n(925329),
-    C = n(565138),
-    x = n(754688),
+    x = n(565138),
+    C = n(754688),
     N = n(237583),
     f = n(430824),
     E = n(699516),
@@ -119,10 +119,10 @@ class M extends i.Component {
         let { guild: e } = this.props;
         return (0, t.jsx)('div', {
             className: I.guildIconContainer,
-            children: (0, t.jsx)(C.Z, {
+            children: (0, t.jsx)(x.Z, {
                 tabIndex: -1,
                 guild: e,
-                size: C.Z.Sizes.MINI,
+                size: x.Z.Sizes.MINI,
                 className: I.guildIcon
             })
         });
@@ -436,7 +436,7 @@ class L extends i.Component {
         });
     }
 }
-class T extends i.Component {
+class S extends i.Component {
     renderContent() {
         let { children: e, application: s } = this.props;
         return (0, t.jsxs)('div', {
@@ -471,7 +471,7 @@ class T extends i.Component {
         });
     }
 }
-class S extends i.Component {
+class T extends i.Component {
     render() {
         return (0, t.jsx)('div', {
             className: I.__invalid_resultDefault,
@@ -485,11 +485,11 @@ class S extends i.Component {
         });
     }
 }
-class R extends i.Component {
+class U extends i.Component {
     renderContent() {
         let e, s;
         let { link: n, children: r } = this.props,
-            i = (0, x.Qj)(n.path);
+            i = (0, C.Qj)(n.path);
         return (
             null == i || void 0 === i.messageId
                 ? ((e = _.Z.Messages.QUICKSWITCHER_LINK_UNKNOWN),
@@ -497,7 +497,7 @@ class R extends i.Component {
                       size: 'xs',
                       color: 'currentColor'
                   })))
-                : (0, x.VO)(i)
+                : (0, C.VO)(i)
                   ? ((e = _.Z.Messages.QUICKSWITCHER_LINK_MESSAGE),
                     (s = (0, t.jsx)(p.Z, {
                         size: 'xs',
@@ -538,7 +538,7 @@ class R extends i.Component {
         });
     }
 }
-class U extends i.Component {
+class R extends i.Component {
     renderContent() {
         let e;
         let { navigationRecord: s, children: n } = this.props,
@@ -554,6 +554,13 @@ class U extends i.Component {
             case a.Ky.NITRO_HOME:
                 (r = _.Z.Messages.PREMIUM),
                     (e = (0, t.jsx)(l.NitroWheelIcon, {
+                        size: 'xs',
+                        color: 'currentColor'
+                    }));
+                break;
+            case a.Ky.QUEST_HOME:
+                (r = _.Z.Messages.QUESTS),
+                    (e = (0, t.jsx)(l.QuestsIcon, {
                         size: 'xs',
                         color: 'currentColor'
                     }));

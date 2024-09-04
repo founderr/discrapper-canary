@@ -450,7 +450,8 @@ t.ZP = {
             },
             s = {
                 [l.Ky.SHOP]: K.Z.Messages.COLLECTIBLES_SHOP,
-                [l.Ky.NITRO_HOME]: K.Z.Messages.PREMIUM
+                [l.Ky.NITRO_HOME]: K.Z.Messages.PREMIUM,
+                [l.Ky.QUEST_HOME]: K.Z.Messages.QUESTS
             },
             o = [];
         for (let e in s) {

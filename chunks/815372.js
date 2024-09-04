@@ -24,7 +24,7 @@ function o(e, t, n) {
         e
     );
 }
-((i = r || (r = {})).SHOP = 'SHOP'), (i.NITRO_HOME = 'NITRO_HOME');
+((i = r || (r = {})).SHOP = 'SHOP'), (i.NITRO_HOME = 'NITRO_HOME'), (i.QUEST_HOME = 'QUEST_HOME');
 class l extends a.Z {
     static fromType(e) {
         switch (e) {
@@ -37,6 +37,11 @@ class l extends a.Z {
                 return new l({
                     path: s.Z5c.NITRO_HOME,
                     type: 'NITRO_HOME'
+                });
+            case 'QUEST_HOME':
+                return new l({
+                    path: s.Z5c.QUEST_HOME,
+                    type: 'QUEST_HOME'
                 });
             default:
                 throw Error('Unhandled InAppNavigationType');

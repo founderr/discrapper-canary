@@ -18,58 +18,57 @@ var i = n(735250),
     S = n(981631),
     f = n(689938),
     C = n(296561);
-t.Z = function (e) {
-    let {} = e,
-        { tabs: t, selectedTab: n, onSelectTab: N } = (0, T.z)(),
-        { onScroll: A, scrollPosition: v } = (0, c.M)(),
-        Z = I.Z.getState().getUtmCurrentContext();
+t.Z = function () {
+    let { tabs: e, selectedTab: t, onSelectTab: n } = (0, T.z)(),
+        { onScroll: N, scrollPosition: A } = (0, c.M)(),
+        v = I.Z.getState().getUtmCurrentContext();
     a.useEffect(() => {
         (0, l.h)({
             name: s.ImpressionNames.QUEST_HOME,
             type: s.ImpressionTypes.VIEW,
             properties: {
-                utm_source_current: Z.utmSourceCurrent,
-                utm_medium_current: Z.utmMediumCurrent,
-                utm_campaign_current: Z.utmCampaignCurrent,
-                utm_content_current: Z.utmContentCurrent
+                utm_source_current: v.utmSourceCurrent,
+                utm_medium_current: v.utmMediumCurrent,
+                utm_campaign_current: v.utmCampaignCurrent,
+                utm_content_current: v.utmContentCurrent
             }
         });
     }, []);
-    let L = a.useCallback(() => {
+    let Z = a.useCallback(() => {
         window.open(E.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE));
     }, []);
     (0, o.Tt)({ location: f.Z.Messages.QUESTS });
-    let R = a.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []);
+    let L = a.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []);
     return (0, i.jsxs)('div', {
         className: C.container,
         children: [
             (0, i.jsxs)(_.ZP, {
                 children: [
                     (0, i.jsx)('div', { className: C.dragRegion }),
-                    (0, i.jsx)(_.z6, { scrollPosition: v }),
+                    (0, i.jsx)(_.z6, { scrollPosition: A }),
                     (0, i.jsx)(_.aV, { icon: r.QuestsIcon }),
                     (0, i.jsx)(h.Z, {
-                        tabs: t,
-                        selectedTab: n,
-                        onTabSelect: N
+                        tabs: e,
+                        selectedTab: t,
+                        onTabSelect: n
                     })
                 ]
             }),
             (0, i.jsx)(u.Z, {
                 title: f.Z.Messages.QUESTS_HOME_HERO_TITLE,
                 description: f.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
-                onScroll: A,
+                onScroll: N,
                 button: (0, i.jsx)(d.u, {
                     text: f.Z.Messages.LEARN_MORE,
-                    onClick: L
+                    onClick: Z
                 }),
                 bannerClassName: C.bannerContainer,
                 bannerBackground: (0, i.jsx)('div', {
                     className: C.bannerImage,
-                    style: R,
+                    style: L,
                     children: (0, i.jsx)('div', { className: C.bannerGradient })
                 }),
-                children: n === m.e5.CLAIMED ? (0, i.jsx)(p.Z, { onSelectTab: N }) : (0, i.jsx)(g.Z, {})
+                children: t === m.e5.CLAIMED ? (0, i.jsx)(p.Z, { onSelectTab: n }) : (0, i.jsx)(g.Z, {})
             })
         ]
     });
