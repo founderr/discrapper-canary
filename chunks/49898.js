@@ -4,30 +4,21 @@ n.d(t, {
         return r;
     },
     Kl: function () {
-        return d;
-    },
-    MU: function () {
         return u;
     },
     U1: function () {
-        return h;
+        return d;
     },
     WB: function () {
-        return l;
+        return a;
     },
     mc: function () {
         return c;
-    },
-    vf: function () {
-        return a;
     }
 }),
-    n(47120),
     ((i = r || (r = {})).SERVERS = 'servers'),
     (i.QUESTS = 'quests');
-let c = 12633 == n.j ? ['servers', 'quests'] : null;
-((o = a || (a = {})).GUILDS = 'guilds'), (o.FEATURED = 'featured'), (o.GAMING = 'gaming'), (o.MUSIC = 'music'), (o.ENTERTAINMENT = 'entertainment'), (o.TECH = 'tech'), (o.EDUCATION = 'education'), (o.HUBS = 'hubs');
-let u = new Set(['guilds', 'hubs']),
-    d = 24,
-    h = 240;
-((s = l || (l = {})).DEFAULT = 'default'), (s.FLOATING = 'floating'), (s.COLLAPSED = 'collapsed');
+let c = 12633 == n.j ? ['servers', 'quests'] : null,
+    u = 24,
+    d = 240;
+((o = a || (a = {})).DEFAULT = 'default'), (o.FLOATING = 'floating'), (o.COLLAPSED = 'collapsed'), ((s = l || (l = {})).ROOT = 'root'), (s.SERVER_TAB = 'server_tab');
