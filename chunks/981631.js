@@ -3343,6 +3343,7 @@ let o$ = 'help_center_cta';
     (r3.SECURE_FRAMES_VERIFIED_DEVICES = 'Secure Frames Verified Devices'),
     (r3.SECURE_FRAMES = 'Secure Frames'),
     (r3.REVERSE_TRIAL_UPSELL_MODAL = 'Reverse trial Upsell Modal'),
+    (r3.WEB_SETTING_TREE_TOOL = 'Web Setting Tree Tool'),
     ((r2 = eT || (eT = {})).TOOLTIP = 'Tooltip'),
     (r2.CARD = 'Card'),
     (r2.CAROUSEL = 'Carousel'),
@@ -3570,7 +3571,8 @@ let oq = Object.freeze({
     QUESTS: 'Quests',
     QUEST_PREVIEW_TOOL: 'Quest Preview Tool',
     SECURE_FRAMES: 'Secure Frames',
-    SECURE_FRAMES_VERIFIED_DEVICES: 'Secure Frames Verified Devices'
+    SECURE_FRAMES_VERIFIED_DEVICES: 'Secure Frames Verified Devices',
+    WEB_SETTING_TREE_TOOL: 'Web Setting Tree Tool'
 });
 ((r4 = ep || (ep = {})).APPLICATION_STORE = 'Application Store Verified Guild Invite - Lurker'),
     (r4.CHAT_INPUT_BLOCKER = 'Chat Input Blocker - Lurker Mode'),

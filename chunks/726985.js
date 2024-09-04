@@ -1,10 +1,10 @@
 var A, O;
 I.d(_, {
     CF: function () {
-        return S;
+        return T;
     },
     QF: function () {
-        return T;
+        return S;
     },
     s6: function () {
         return A;
@@ -256,6 +256,7 @@ I.d(_, {
     (O.QUEST_PREVIEW_TOOL = 'QUEST_PREVIEW_TOOL'),
     (O.LOGOUT = 'LOGOUT'),
     (O.SOCIAL_LINKS = 'SOCIAL_LINKS'),
-    (O.CLIENT_DEBUG_INFO = 'CLIENT_DEBUG_INFO');
-let S = '',
-    T = [];
+    (O.CLIENT_DEBUG_INFO = 'CLIENT_DEBUG_INFO'),
+    (O.WEB_SETTING_TREE_TOOL = 'WEB_SETTING_TREE_TOOL');
+let T = '',
+    S = [];
