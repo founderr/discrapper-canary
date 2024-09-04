@@ -62,13 +62,17 @@ function A(e) {
         F = [];
     !R && F.push(l.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, m.Z)(t.id) && !R && F.push(l.z.ACTIVITY_GDM_ROCKET_SPARKLE);
     let { enabled: W } = g.nS.useExperiment({ location: 'CenterControlTrayActivityButton' });
-    return (
-        W && !R && F.push(l.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP),
-        (0, i.jsx)(I.ZP, {
-            contentTypes: F,
-            children: (e) => {
-                let { visibleContent: a, markAsDismissed: s } = e;
-                return (0, i.jsx)(r.Popout, {
+    W && !R && F.push(l.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
+    let z = a.useRef(!1);
+    return (0, i.jsx)(I.ZP, {
+        contentTypes: F,
+        children: (e) => {
+            let { visibleContent: a, markAsDismissed: s } = e,
+                o = a === l.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !L;
+            return (
+                !0 === z.current && !1 === o && s(S.L.AUTO_DISMISS),
+                z.current !== o && (z.current = o),
+                (0, i.jsx)(r.Popout, {
                     fixed: !0,
                     shouldShow: L,
                     animationPosition: 'bottom',
@@ -99,7 +103,7 @@ function A(e) {
                                     text: v.Z.Messages.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP,
                                     color: r.TooltipColors.BRAND,
                                     forceOpen: !0,
-                                    shouldShow: a === l.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !L,
+                                    shouldShow: o,
                                     children: (e) =>
                                         (0, i.jsx)('div', {
                                             ...e,
@@ -127,8 +131,8 @@ function A(e) {
                                     : null
                             ]
                         })
-                });
-            }
-        })
-    );
+                })
+            );
+        }
+    });
 }
