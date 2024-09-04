@@ -10,21 +10,22 @@ let c = [],
     d = {},
     _ = {},
     E = {},
-    f = {};
-function h(e) {
-    for (let t of ((d[e.id] = e), (E[e.name.toLowerCase()] = e), e.aliases)) E[t.toLowerCase()] = e;
-    delete f[e.id];
-}
+    f = {},
+    h = {};
 function p(e) {
-    h(u.Z.createFromServer(e));
+    for (let t of ((d[e.id] = e), (f[e.id] = Date.now()), (E[e.name.toLowerCase()] = e), e.aliases)) E[t.toLowerCase()] = e;
+    delete h[e.id];
 }
 function I(e) {
+    p(u.Z.createFromServer(e));
+}
+function m(e) {
     let { entitlements: t } = e,
         n = !1;
-    for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (h(u.Z.createFromServer(e.application)), (n = !0));
+    for (let { sku: e } of t) (null == e ? void 0 : e.application) != null && (p(u.Z.createFromServer(e.application)), (n = !0));
     return n;
 }
-class m extends (r = o.ZP.Store) {
+class T extends (r = o.ZP.Store) {
     _getAllApplications() {
         return Object.values(d);
     }
@@ -45,18 +46,21 @@ class m extends (r = o.ZP.Store) {
         let t = e.toLowerCase();
         return Object.prototype.hasOwnProperty.call(E, t) ? E[t] : void 0;
     }
+    getApplicationLastUpdated(e) {
+        return f[e];
+    }
     isFetchingApplication(e) {
-        return !0 === f[e];
+        return !0 === h[e];
     }
     didFetchingApplicationFail(e) {
-        return !1 === f[e];
+        return !1 === h[e];
     }
     getFetchingOrFailedFetchingIds() {
-        return Object.keys(f);
+        return Object.keys(h);
     }
 }
 (s = 'ApplicationStore'),
-    (a = 'displayName') in (i = m)
+    (a = 'displayName') in (i = T)
         ? Object.defineProperty(i, a, {
               value: s,
               enumerable: !0,
@@ -64,68 +68,68 @@ class m extends (r = o.ZP.Store) {
               writable: !0
           })
         : (i[a] = s),
-    (t.Z = new m(l.Z, {
+    (t.Z = new T(l.Z, {
         LOGOUT: function () {
-            (d = {}), (_ = {}), (E = {}), (f = {});
+            (d = {}), (_ = {}), (E = {}), (f = {}), (h = {});
         },
         OVERLAY_INITIALIZE: function (e) {
             let { applications: t } = e;
-            for (let e of t) h(new u.Z(e));
+            for (let e of t) p(new u.Z(e));
         },
         APPLICATION_FETCH: function (e) {
             let { applicationId: t } = e,
-                n = f[t];
-            return (f[t] = !0), !0 !== n;
+                n = h[t];
+            return (h[t] = !0), !0 !== n;
         },
         APPLICATION_FETCH_SUCCESS: function (e) {
             let { application: t } = e;
-            p(t);
+            I(t);
         },
         APPLICATION_FETCH_FAIL: function (e) {
             let { applicationId: t } = e,
-                n = f[t];
-            return (f[t] = !1), !1 !== n;
+                n = h[t];
+            return (h[t] = !1), !1 !== n;
         },
         APPLICATIONS_FETCH: function (e) {
             let { applicationIds: t } = e,
                 n = !1;
             for (let e of t) {
-                let t = f[e];
-                (f[e] = !0), (n = !0 !== t);
+                let t = h[e];
+                (h[e] = !0), (n = !0 !== t);
             }
             return n;
         },
         APPLICATIONS_FETCH_SUCCESS: function (e) {
             let { applications: t } = e;
-            for (let e of t) h(u.Z.createFromServer(e));
+            for (let e of t) p(u.Z.createFromServer(e));
         },
         APPLICATIONS_FETCH_FAIL: function (e) {
             let { applicationIds: t } = e,
                 n = !1;
             for (let e of t) {
-                let t = f[e];
-                (f[e] = !1), (n = !1 !== t);
+                let t = h[e];
+                (h[e] = !1), (n = !1 !== t);
             }
             return n;
         },
         APPLICATION_UPDATE: function (e) {
             let { application: t } = e;
-            p(t);
+            I(t);
         },
-        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: I,
-        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: I,
-        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: I,
+        APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: m,
+        ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: m,
+        ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: m,
         GUILD_SETTINGS_LOADED_INTEGRATIONS: function (e) {
             let { integrations: t, guildId: n } = e,
                 r = !1,
                 i = [];
-            for (let { application: e } of t) null != e && (h(e), i.push(e.id), (r = !0));
+            for (let { application: e } of t) null != e && (p(e), i.push(e.id), (r = !0));
             return r && (_[n] = i), r;
         },
         GUILD_APPLICATIONS_FETCH_SUCCESS: function (e) {
             let { guildId: t, applications: n } = e,
                 r = [];
-            for (let e of n) r.push(e.id), h(u.Z.createFromServer(e));
+            for (let e of n) r.push(e.id), p(u.Z.createFromServer(e));
             _[t] = r;
         },
         BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
@@ -134,7 +138,7 @@ class m extends (r = o.ZP.Store) {
             for (let e of t) {
                 var r;
                 let t = null === (r = e.sku) || void 0 === r ? void 0 : r.application;
-                !(null == t || n.has(t.id)) && h(u.Z.createFromServer(t));
+                !(null == t || n.has(t.id)) && p(u.Z.createFromServer(t));
             }
             return n.size > 0;
         },
@@ -142,27 +146,27 @@ class m extends (r = o.ZP.Store) {
             var t;
             let { payment: n } = e;
             if ((null === (t = n.sku) || void 0 === t ? void 0 : t.application) == null) return !1;
-            h(u.Z.createFromServer(n.sku.application));
+            p(u.Z.createFromServer(n.sku.application));
         },
         INVITE_RESOLVE_SUCCESS: function (e) {
             let { invite: t } = e;
             if (null == t.target_application) return !1;
-            h(u.Z.createFromServer(t.target_application));
+            p(u.Z.createFromServer(t.target_application));
         },
         GIFT_CODE_RESOLVE_SUCCESS: function (e) {
             var t;
             let { giftCode: n } = e;
             if ((null === (t = n.store_listing) || void 0 === t ? void 0 : t.sku.application) == null) return !1;
-            h(u.Z.createFromServer(n.store_listing.sku.application));
+            p(u.Z.createFromServer(n.store_listing.sku.application));
         },
         LIBRARY_FETCH_SUCCESS: function (e) {
             let { libraryApplications: t } = e;
-            for (let e of t) h(u.Z.createFromServer(e.application));
+            for (let e of t) p(u.Z.createFromServer(e.application));
         },
         STORE_LISTING_FETCH_SUCCESS: function (e) {
             let { storeListing: t } = e;
             if (null == t.sku.application) return !1;
-            h(u.Z.createFromServer(t.sku.application));
+            p(u.Z.createFromServer(t.sku.application));
         },
         LOAD_MESSAGES_SUCCESS: function (e) {
             let { messages: t } = e;
@@ -172,7 +176,7 @@ class m extends (r = o.ZP.Store) {
                     null === (t = e.attachments) ||
                         void 0 === t ||
                         t.forEach((e) => {
-                            null != e.application && h(u.Z.createFromServer(e.application));
+                            null != e.application && p(u.Z.createFromServer(e.application));
                         });
                 })(e)
             );
@@ -181,7 +185,7 @@ class m extends (r = o.ZP.Store) {
             let { recommendations: t } = e;
             t.forEach((e) => {
                 e.items.forEach((e) => {
-                    h(u.Z.createFromServer(e.application));
+                    p(u.Z.createFromServer(e.application));
                 });
             });
         }

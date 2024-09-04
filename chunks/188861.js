@@ -22,7 +22,13 @@ t.Z = (function () {
                 i = t.data,
                 a = t.origin;
             e.handleMessage(i, a, (e, t) => {
-                n.postMessage(e, t);
+                !(function (e) {
+                    try {
+                        return e.closed;
+                    } catch {
+                        return !1;
+                    }
+                })(n) && n.postMessage(e, t);
             });
         }),
         e

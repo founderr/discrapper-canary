@@ -75,7 +75,7 @@ async function c(e) {
     ).body;
 }
 async function d(e) {
-    let { clientId: t, scopes: n, responseType: r, redirectUri: a, codeChallenge: s, codeChallengeMethod: o, state: u, integrationType: c, nonce: d } = e;
+    let { clientId: t, scopes: n, responseType: r, redirectUri: a, codeChallenge: s, codeChallengeMethod: o, state: u, integrationType: c, nonce: d, signal: _ } = e;
     return (
         await i.tn.get({
             url: l.ANM.OAUTH2_AUTHORIZE,
@@ -90,6 +90,7 @@ async function d(e) {
                 integration_type: c,
                 nonce: d
             },
+            signal: _,
             retries: 3,
             oldFormErrors: !0
         })
