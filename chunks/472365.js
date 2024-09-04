@@ -147,22 +147,22 @@ function w(e) {
     function M() {
         null != f && L.Z.acceptInvite(f);
     }
-    let { guild: j, channel: w, inviter: G, target_application: U } = f,
+    let { guild: j, channel: w, inviter: U, target_application: G } = f,
         k = null != j,
         B = null != f.stage_instance,
-        H = null == f.guild && null == f.channel && null != f.inviter;
-    if (null != U) (t = null == j ? void 0 : j.name), (n = I.Z.createFromServer(U).getCoverImageURL(1024));
+        V = null == f.guild && null == f.channel && null != f.inviter;
+    if (null != G) (t = null == j ? void 0 : j.name), (n = I.Z.createFromServer(G).getCoverImageURL(1024));
     else if (null != j)
         (t = j.name),
             (n = v.ZP.getGuildSplashURL({
                 id: j.id,
                 splash: j.splash
             }));
-    else if (((null == (t = w.name) || '' === t) && null != G && (t = G.username), null == t)) throw Error('no name for group DM invite');
-    let V = (0, m.yU)(),
+    else if (((null == (t = w.name) || '' === t) && null != U && (t = U.username), null == t)) throw Error('no name for group DM invite');
+    let H = (0, m.yU)(),
         F = B ? R.Z.Messages.INSTANT_INVITE_ACCEPT_STAGE : R.Z.Messages.INVITE_MODAL_BUTTON.format({ guildName: t });
     return (
-        H && (F = R.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON),
+        V && (F = R.Z.Messages.ACCEPT_INVITE_MODAL_BUTTON),
         (0, i.jsx)(d.Gt, {
             value: S,
             children: (0, i.jsxs)(o.ModalRoot, {
@@ -201,10 +201,10 @@ function w(e) {
                                         : null,
                                     (0, i.jsxs)('div', {
                                         children: [
-                                            V ? (0, i.jsx)(y, {}) : null,
-                                            null == U
+                                            H ? (0, i.jsx)(y, {}) : null,
+                                            null == G
                                                 ? (0, i.jsx)(o.Tooltip, {
-                                                      text: V ? R.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
+                                                      text: H ? R.Z.Messages.TOO_MANY_USER_GUILDS_DESCRIPTION : null,
                                                       position: 'bottom',
                                                       children: (e) => {
                                                           let { onMouseEnter: t, onMouseLeave: n } = e;
@@ -212,11 +212,11 @@ function w(e) {
                                                               size: h.zx.Sizes.LARGE,
                                                               onClick: M,
                                                               submitting: N,
-                                                              disabled: V,
+                                                              disabled: H,
                                                               color: B ? h.zx.Colors.GREEN : h.zx.Colors.BRAND,
                                                               onMouseEnter: t,
                                                               onMouseLeave: n,
-                                                              children: V ? R.Z.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : F
+                                                              children: H ? R.Z.Messages.GUILD_CAP_INVITE_MODAL_BUTTON : F
                                                           });
                                                       }
                                                   })

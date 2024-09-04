@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(558831),
     T = n(304231),
     S = n(981631),
-    f = n(689938),
-    C = n(172149);
+    C = n(689938),
+    f = n(172149);
 let N = {
         mass: 1,
         tension: 280,
@@ -41,8 +41,8 @@ let N = {
                 onSave: s,
                 onReset: r,
                 children: (0, i.jsx)(E.Z, {
-                    title: f.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
-                    description: f.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
+                    title: C.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
+                    description: C.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
                     onUpdatePlaystyle: n,
                     playstyle: t
                 })
@@ -63,8 +63,8 @@ let N = {
                 onSave: s,
                 onReset: r,
                 children: (0, i.jsx)(m.Z, {
-                    title: f.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
-                    description: f.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
+                    title: C.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
+                    description: C.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
                     onUpdateTraits: n,
                     traits: t,
                     hidePreview: !0
@@ -86,8 +86,8 @@ let N = {
                 onSave: s,
                 onReset: r,
                 children: (0, i.jsx)(h.Z, {
-                    title: f.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
-                    description: f.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
+                    title: C.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
+                    description: C.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
                     onUpdateGames: n,
                     gameApplicationIds: t
                 })
@@ -143,17 +143,17 @@ let N = {
                 t = a.useCallback(() => {
                     (0, g.fH)(g.v0.DISCOVERY);
                 }, []),
-                n = a.useMemo(() => (e === S.BRd.DARK ? C.genericOnboardingBackgroundImageDark : C.genericOnboardingBackgroundImageLight), [e]);
+                n = a.useMemo(() => (e === S.BRd.DARK ? f.genericOnboardingBackgroundImageDark : f.genericOnboardingBackgroundImageLight), [e]);
             return (0, i.jsx)('div', {
-                className: C.container,
+                className: f.container,
                 children: (0, i.jsx)('div', {
-                    className: C.innerContainer,
+                    className: f.innerContainer,
                     children: (0, i.jsxs)('div', {
-                        className: r()(n, C.userOnboarding),
+                        className: r()(n, f.userOnboarding),
                         children: [
-                            (0, i.jsx)('div', { className: C.backgroundImageBlur }),
+                            (0, i.jsx)('div', { className: f.backgroundImageBlur }),
                             (0, i.jsx)('div', {
-                                className: C.backgroundImageContent,
+                                className: f.backgroundImageContent,
                                 children: (0, i.jsx)(T.Z, { onDismiss: t })
                             })
                         ]

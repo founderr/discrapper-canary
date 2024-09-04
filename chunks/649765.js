@@ -1,9 +1,9 @@
 n.d(t, {
     A7: function () {
-        return f;
+        return C;
     },
     Em: function () {
-        return C;
+        return f;
     }
 });
 var i = n(735250),
@@ -48,7 +48,7 @@ let g = 'url(#dark-purple-gradient)',
             })
         }),
     S = () => (0, l.EW)(s.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: E.L.TAKE_ACTION }),
-    f = (e) => {
+    C = (e) => {
         let { children: t } = e;
         return (0, i.jsx)(r.Popout, {
             shouldShow: !0,
@@ -88,7 +88,7 @@ let g = 'url(#dark-purple-gradient)',
             children: t
         });
     },
-    C = (e) => {
+    f = (e) => {
         let { children: t } = e,
             n = (0, i.jsxs)('div', {
                 className: I.coachTipContainer,

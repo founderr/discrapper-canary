@@ -21,8 +21,8 @@ var i = n(735250),
     p = n(299206),
     T = n(440051),
     S = n(734934),
-    f = n(158238),
-    C = n(300284),
+    C = n(158238),
+    f = n(300284),
     N = n(680295),
     A = n(785717),
     v = n(221292),
@@ -179,7 +179,7 @@ function er(e) {
             let n = T.Y.useExperiment({ location: 'account popout' }).expiringStatus,
                 a = V.Cr.useSetting(),
                 s = (0, S.p)(),
-                r = f.e.useExperiment({ location: 'account popout' }).allowQuietMode || s,
+                r = C.e.useExperiment({ location: 'account popout' }).allowQuietMode || s,
                 o = V.fv.useSetting(),
                 c = e === J.Skl.DND,
                 u = (t) => {
@@ -303,17 +303,17 @@ function er(e) {
         },
         { newActivityCardsEnabled: em } = (0, L.z)({ location: 'AccountProfilePopout' }),
         { customStatusBubbleEditEnabled: eI } = (0, Z.K)({ location: 'AccountProfilePopout' }),
-        eg = (0, C.Z)({ analyticsLocations: el }),
+        eg = (0, f.Z)({ analyticsLocations: el }),
         ep = (0, S.p)(),
         eT = ed === J.Skl.DND,
         eS = (0, Q.g)(),
-        ef = (0, g.o)({
+        eC = (0, g.o)({
             focusedClassName: et.menuItemFocused,
             customStatus: ec,
             analyticsLocations: el,
             trackUserProfileAction: v.pQ
         }),
-        eC = (0, p.Z)({
+        ef = (0, p.Z)({
             id: t.id,
             label: ee.Z.Messages.COPY_ID_USER,
             showIconFirst: !0,
@@ -503,7 +503,7 @@ function er(e) {
                                                             'status-picker'
                                                         )
                                                     }),
-                                                    !eI && (0, i.jsx)(d.MenuGroup, { children: ef })
+                                                    !eI && (0, i.jsx)(d.MenuGroup, { children: eC })
                                                 ]
                                             })
                                         }),
@@ -534,7 +534,7 @@ function er(e) {
                                                             children: eS
                                                         })
                                                     }),
-                                                    (0, i.jsx)(d.MenuGroup, { children: eC })
+                                                    (0, i.jsx)(d.MenuGroup, { children: ef })
                                                 ]
                                             })
                                         })

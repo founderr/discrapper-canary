@@ -7,37 +7,37 @@ var r = n(735250),
     l = n(360850);
 t.Z = (e) => {
     var t, n, u, c;
-    let { layerConfig: d, animationType: _, ticking: E, time: f, accessibilityLabel: h, hasPlayedThrough: p, setHasPlayedThrough: I, urlQueryString: m, maxLoops: T, loopEnd: g, bannerAdjustment: S } = e,
-        A = (0, a.nY)('Profile Effect - Web'),
-        N = i.useRef(null),
-        [O, R] = i.useState(!1),
-        v = !0;
+    let { layerConfig: d, animationType: _, ticking: E, time: f, accessibilityLabel: h, hasPlayedThrough: p, setHasPlayedThrough: I, urlQueryString: m, maxLoops: T, loopEnd: g, bannerAdjustment: S, debugForTool: A = !1 } = e,
+        N = (0, a.nY)('Profile Effect - Web'),
+        O = i.useRef(null),
+        [R, v] = i.useState(!1),
+        C = !0;
     if (
         (i.useEffect(() => {
-            null != N.current && (N.current.playsInline = !0);
-        }, [N]),
-        !E && (v = !1),
-        f < d.start && (v = !1),
-        !d.loop && f > d.duration + d.start && (v = !1),
+            null != O.current && (O.current.playsInline = !0);
+        }, [O]),
+        !E && (C = !1),
+        f < d.start && (C = !1),
+        !d.loop && f > d.duration + d.start && (C = !1),
         _ === o.Q.PERSISTENT && !p && null != T && f >= g && I(!0),
         d.loop && void 0 !== d.loopDelay && d.loopDelay > 0)
     ) {
         let e = d.duration + d.loopDelay,
             t = Math.floor((f - d.start) / e);
-        f - d.start - t * e > d.duration && (_ === o.Q.INTERMITTENT && !p && null != T && t >= T && I(!0), (v = !1));
+        f - d.start - t * e > d.duration && (_ === o.Q.INTERMITTENT && !p && null != T && t >= T && I(!0), (C = !1));
     }
-    return A
-        ? (null != N.current && O !== v && (!v && N.current.pause(), v && ((N.current.currentTime = 0), N.current.play()), R(v)),
+    return N && !A
+        ? (null != O.current && R !== C && (!C && O.current.pause(), C && ((O.current.currentTime = 0), O.current.play()), v(C)),
           (0, r.jsx)('video', {
               muted: !0,
               autoPlay: !0,
               loop: _ === o.Q.PERSISTENT && !d.src.includes('intro'),
               className: l.effect,
-              ref: N,
+              ref: O,
               src: d.src,
-              style: { opacity: v ? 1 : 0 }
+              style: { opacity: C ? 1 : 0 }
           }))
-        : v
+        : C
           ? (0, r.jsx)('img', {
                 src: null != m ? ''.concat(d.src, '?query=').concat(m) : d.src,
                 className: l.effect,

@@ -1,9 +1,9 @@
 _.d(E, {
     Xs: function () {
-        return t;
+        return n;
     }
 });
-let n = (0, _(818083).B)({
+let t = (0, _(818083).B)({
     kind: 'user',
     id: '2024-09_dm_mute_feedback',
     label: 'DM Mute Feedback Experiment',
@@ -16,7 +16,7 @@ let n = (0, _(818083).B)({
         }
     ]
 });
-function t(e) {
-    let { enabled: E } = n.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+function n(e) {
+    let { enabled: E } = t.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
     return E;
 }

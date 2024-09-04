@@ -106,24 +106,24 @@ t.ZP = l.memo(function (e) {
         j = (0, d.Z)(L),
         D = !j && L.hasCommunityInfoSubheader(),
         w = !j && P,
-        G = (0, p.xR)(A) && y && !v,
-        [U, k] = l.useState(!1),
+        U = (0, p.xR)(A) && y && !v,
+        [G, k] = l.useState(!1),
         B = l.useRef(),
-        H = l.useRef(null),
-        V = l.useRef(),
+        V = l.useRef(null),
+        H = l.useRef(),
         F = h.QK.getSetting();
     l.useEffect(() => {
-        if (G && t && !B.current && F)
+        if (U && t && !B.current && F)
             return (
                 k(!0),
-                (V.current = setTimeout(() => {
+                (H.current = setTimeout(() => {
                     k(!1);
                 }, 5000)),
                 () => {
-                    clearTimeout(V.current);
+                    clearTimeout(H.current);
                 }
             );
-    }, [G, t, F]),
+    }, [U, t, F]),
         l.useEffect(() => {
             B.current = t;
         }, [t]);
@@ -139,7 +139,7 @@ t.ZP = l.memo(function (e) {
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsxs)('div', {
-                        ref: H,
+                        ref: V,
                         className: a()(r, {
                             [C.container]: !0,
                             [C.clickable]: null != s,
@@ -178,7 +178,7 @@ t.ZP = l.memo(function (e) {
                                                           'aria-controls': T,
                                                           'aria-expanded': Z,
                                                           focusProps: {
-                                                              ringTarget: H,
+                                                              ringTarget: V,
                                                               offset: 4
                                                           },
                                                           onClick: s,
@@ -205,16 +205,16 @@ t.ZP = l.memo(function (e) {
                                       guild: L,
                                       controller: n,
                                       guildBanner: A,
-                                      animate: U
+                                      animate: G
                                   })
                                 : null
                         ]
                     }),
-                    G && W()
+                    U && W()
                         ? (0, i.jsx)('div', {
                               className: C.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  k(!0), clearTimeout(V.current);
+                                  k(!0), clearTimeout(H.current);
                               },
                               onMouseLeave: () => k(!1),
                               style: { height: b }

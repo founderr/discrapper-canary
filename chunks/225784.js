@@ -17,8 +17,8 @@ var i,
     p = n(879484),
     T = n(26580),
     S = n(206887),
-    f = n(981631),
-    C = n(689938),
+    C = n(981631),
+    f = n(689938),
     N = n(963477),
     A = n(129512),
     v = n(330065),
@@ -40,9 +40,9 @@ class R extends (i = s.PureComponent) {
     getDefaultSplashURL(e, t) {
         if (t) return Z;
         switch (e) {
-            case f.BRd.DARK:
+            case C.BRd.DARK:
                 return A;
-            case f.BRd.LIGHT:
+            case C.BRd.LIGHT:
                 return v;
         }
     }
@@ -51,7 +51,7 @@ class R extends (i = s.PureComponent) {
         let { guild: t, className: n, theme: i, onTagClick: s } = this.props,
             { loaded: r, hasBeenSeen: d, isVisible: A, submitting: v } = this.state,
             { name: Z, description: L, presenceCount: R, memberCount: O, keywords: x } = t,
-            b = null === (e = t.features) || void 0 === e ? void 0 : e.has(f.oNc.HUB),
+            b = null === (e = t.features) || void 0 === e ? void 0 : e.has(C.oNc.HUB),
             P = m.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
@@ -183,7 +183,7 @@ class R extends (i = s.PureComponent) {
                                                                       className: N.memberCountText,
                                                                       variant: 'text-xs/normal',
                                                                       color: 'header-secondary',
-                                                                      children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: R })
+                                                                      children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: R })
                                                                   })
                                                               ]
                                                           }),
@@ -196,7 +196,7 @@ class R extends (i = s.PureComponent) {
                                                                       className: N.memberCountText,
                                                                       variant: 'text-xs/normal',
                                                                       color: 'header-secondary',
-                                                                      children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: O })
+                                                                      children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: O })
                                                                   })
                                                               ]
                                                           })

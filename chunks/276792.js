@@ -20,8 +20,8 @@ var a = n(704215),
     I = n(74316);
 function g(e) {
     var t, n;
-    let { content: g, renderModalProps: p, analyticsLocations: T, analyticsLocation: S, isLightTheme: f } = e,
-        C = 'AnnouncementModalVariant1_'.concat(a.z[Number(g.dismissKey)]),
+    let { content: g, renderModalProps: p, analyticsLocations: T, analyticsLocation: S, isLightTheme: C } = e,
+        f = 'AnnouncementModalVariant1_'.concat(a.z[Number(g.dismissKey)]),
         { onClose: N } = p,
         A = null != g.button && '' !== g.button.copy ? g.button.copy : E.Z.Messages.BILLING_SUBSCRIBE_TO_PLAN,
         v = (null === (t = g.button) || void 0 === t ? void 0 : t.buttonAction) === s.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
@@ -54,7 +54,7 @@ function g(e) {
                 : void 0,
         R = {
             type: 'video',
-            src: f ? g.heroArtVideoLinkLightTheme : g.videoLink
+            src: C ? g.heroArtVideoLinkLightTheme : g.videoLink
         };
     null != g.heroArtVideoSubtitles &&
         (R.subtitles = g.heroArtVideoSubtitles.map((e) => ({
@@ -65,9 +65,9 @@ function g(e) {
         ('' !== g.heroArtImageLinkDarkTheme || '' !== g.heroArtImageLinkLightTheme) &&
             (R = {
                 type: 'image',
-                src: f ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
+                src: C ? g.heroArtImageLinkLightTheme : g.heroArtImageLinkDarkTheme
             });
-    let O = f ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
+    let O = C ? u.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
         x =
             '' !== g.modalTopPill
                 ? () =>
@@ -88,10 +88,10 @@ function g(e) {
         featureCards: g.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
-            imageSrc: f ? e.imageLinkLightTheme : e.imageLink,
+            imageSrc: C ? e.imageLinkLightTheme : e.imageLink,
             tagText: '' !== e.pill ? e.pill : void 0
         })),
-        changeLogId: C,
+        changeLogId: f,
         button: () => {
             let e = Date.now();
             return (0, i.jsxs)(r.ShinyButton, {
@@ -101,10 +101,10 @@ function g(e) {
                 size: r.Button.Sizes.SMALL,
                 onClick: () => {
                     c.default.track(h.rMx.CHANGE_LOG_CTA_CLICKED, {
-                        change_log_id: C,
+                        change_log_id: f,
                         cta_type: v,
                         seconds_open: Math.round((Date.now() - e) / 1000),
-                        target: C
+                        target: f
                     }),
                         Z();
                 },

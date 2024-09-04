@@ -796,7 +796,7 @@ class el extends E.Z {
             this._userIds.add(e), null === (t = this._connection) || void 0 === t || t.createUser(e, 0);
         }),
             this.emit(K.z.ClientConnect, e),
-            null === (t = this._goLiveQualityManager) || void 0 === t || t.onClientConnect(e);
+            null === (t = this._goLiveQualityManager) || void 0 === t || t.updateCallUserIds(this._userIds);
     }
     _handleClientDisconnect(e) {
         var t, n, r, i;
@@ -823,7 +823,7 @@ class el extends E.Z {
                 null === (i = this._videoHealthManager) || void 0 === i || i.deleteUser(e));
         }
         let s = this._connection;
-        null != s && s.destroyUser(e), null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.destroyUser(e), this._userIds.delete(e), this.emit(K.z.ClientDisconnect, e), null === (n = this._goLiveQualityManager) || void 0 === n || n.onClientDisconnect(e);
+        null != s && s.destroyUser(e), null === (t = this._localMediaSinkWantsManager) || void 0 === t || t.destroyUser(e), this._userIds.delete(e), this.emit(K.z.ClientDisconnect, e), null === (n = this._goLiveQualityManager) || void 0 === n || n.updateCallUserIds(this._userIds);
     }
     _handleCodecs(e, t) {
         let n = this._connection;

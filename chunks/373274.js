@@ -43,12 +43,12 @@ var i,
     j = n(734307),
     D = n(854444),
     w = n(761091),
-    G = n(301342),
-    U = n(471995),
+    U = n(301342),
+    G = n(471995),
     k = n(906817),
     B = n(429122),
-    H = n(285573),
-    V = n(995993),
+    V = n(285573),
+    H = n(995993),
     F = n(910595),
     W = n(466935),
     z = n(120818),
@@ -461,7 +461,7 @@ class eu extends (i = r.PureComponent) {
             }),
             ec(this, 'renderListHeader', () => {
                 let { guild: e, guildChannels: t, guildBanner: n } = this.props;
-                return (0, l.jsx)(U.B, {
+                return (0, l.jsx)(G.B, {
                     guild: e,
                     guildChannels: t,
                     hasBanner: null != n
@@ -545,7 +545,7 @@ class eu extends (i = r.PureComponent) {
                         case ei.z.CHANNELS_AND_ROLES:
                             if (g) return null;
                             return (0, l.jsx)(
-                                V.m,
+                                H.m,
                                 {
                                     guild: i,
                                     selected: s === ea.oC.CHANNEL_BROWSER || s === ea.oC.CUSTOMIZE_COMMUNITY
@@ -554,7 +554,7 @@ class eu extends (i = r.PureComponent) {
                             );
                         case ei.z.GUILD_DIRECTORY:
                             return (0, l.jsx)(
-                                H.Z,
+                                V.Z,
                                 {
                                     guild: i,
                                     selectedChannelId: s,
@@ -669,7 +669,7 @@ class eu extends (i = r.PureComponent) {
                         );
                     case er.d4z.GUILD_CATEGORY:
                         if (t !== u.voiceChannelsSectionNumber) return null;
-                        return (0, l.jsx)(G.kw, { channel: v }, 'readonly-'.concat(v.id));
+                        return (0, l.jsx)(U.kw, { channel: v }, 'readonly-'.concat(v.id));
                     case er.d4z.PUBLIC_THREAD:
                     case er.d4z.PRIVATE_THREAD:
                         return (0, l.jsx)(

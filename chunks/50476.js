@@ -19,11 +19,11 @@ t.Z = function (e) {
         children: [
             (0, s.jsxs)(l, {
                 onClick: t,
-                children: [r.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP, (0, s.jsx)(o.ScreenIcon, {})]
+                children: [r.Z.Messages.QUEST_MULTIPLATFORM_SELECT_DESKTOP, (0, s.jsx)(o.ScreenIcon, { size: 'sm' })]
             }),
             (0, s.jsxs)(l, {
                 onClick: n,
-                children: [r.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE, (0, s.jsx)(o.GameControllerIcon, {})]
+                children: [r.Z.Messages.QUEST_MULTIPLATFORM_SELECT_CONSOLE, (0, s.jsx)(o.GameControllerIcon, { size: 'sm' })]
             })
         ]
     });

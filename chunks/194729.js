@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(963202),
     T = n(252618),
     S = n(571457),
-    f = n(440190),
-    C = n(665149),
+    C = n(440190),
+    f = n(665149),
     N = n(5955),
     A = n(918701),
     v = n(121711),
@@ -268,7 +268,7 @@ class J extends a.PureComponent {
                     location: m
                 }),
                 (0, i.jsx)('div', { className: r()(K.dragRegion, K.pageHeaderDrag, { [K.searchPageDrag]: d }) }),
-                u.tq && (0, i.jsx)(C.ZP, { children: (0, i.jsx)(a.Fragment, {}) }),
+                u.tq && (0, i.jsx)(f.ZP, { children: (0, i.jsx)(a.Fragment, {}) }),
                 (0, i.jsx)(h.AdvancedScrollerAuto, {
                     className: K.scroller,
                     ref: this._scroller,
@@ -451,10 +451,10 @@ function ee(e) {
             fetching: n,
             loadId: a,
             recommendedGuilds: s
-        } = (0, _.cj)([f.Z], () => ({
-            recommendedGuilds: f.Z.getRecommendedGuilds(),
-            loadId: f.Z.getLoadId(),
-            fetching: f.Z.isFetching()
+        } = (0, _.cj)([C.Z], () => ({
+            recommendedGuilds: C.Z.getRecommendedGuilds(),
+            loadId: C.Z.getLoadId(),
+            fetching: C.Z.isFetching()
         }));
     return (0, i.jsx)($, {
         searchRoute: t,

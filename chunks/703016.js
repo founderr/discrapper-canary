@@ -17,8 +17,8 @@ var i = n(913527),
     p = n(292959),
     T = n(699516),
     S = n(944486),
-    f = n(9156),
-    C = n(594174),
+    C = n(9156),
+    f = n(594174),
     N = n(51144),
     A = n(196051),
     v = n(441729),
@@ -36,7 +36,7 @@ function D(e, t, n, i) {
             .replace(M, R.Z.Messages.SPOILER)
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var i;
-                let a = C.default.getUser(t);
+                let a = f.default.getUser(t);
                 if (null == a) return e;
                 return null !== (i = m.ZP.getNick(n, a.id)) && void 0 !== i ? i : N.ZP.getName(a);
             })
@@ -46,7 +46,7 @@ function D(e, t, n, i) {
             })
             .replace(/<#(\d+)>/g, (e, t) => {
                 let n = E.Z.getChannel(t);
-                return null == n ? e : (0, l.F6)(n, C.default, T.Z);
+                return null == n ? e : (0, l.F6)(n, f.default, T.Z);
             })
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(R.Z.Messages.EMOJI, ' ').concat(t))
             .replace(/<\/([^\s]+?):(\d+)>/g, (e, t) => '/'.concat(t))
@@ -110,8 +110,8 @@ function B(e) {
     let d = E.Z.getChannel(l);
     if (null == d) return !1;
     let I = S.Z.getChannelId(),
-        C = h.ZP.getCurrentSidebarChannelId(I),
-        A = l === I || l === C,
+        f = h.ZP.getCurrentSidebarChannelId(I),
+        A = l === I || l === f,
         v = u.OW.getSetting() && o.tts && A,
         R = p.Z.getTTSType(),
         x = (null === (t = o.author) || void 0 === t ? void 0 : t.id) !== _.default.getId() && (R === L.PrB.ALL_CHANNELS || (R === L.PrB.SELECTED_CHANNEL && A));
@@ -119,7 +119,7 @@ function B(e) {
         if (O.indexOf(o.id) >= 0) return !1;
         O.unshift(o.id) > 10 && O.pop();
         let e = d.getGuildId();
-        if (null != e && f.ZP.getMutedChannels(e).has(l)) return !1;
+        if (null != e && C.ZP.getMutedChannels(e).has(l)) return !1;
         let t = null !== (s = null !== (a = m.ZP.getNick(e, null === (n = o.author) || void 0 === n ? void 0 : n.id)) && void 0 !== a ? a : N.ZP.getName(o.author)) && void 0 !== s ? s : '',
             c = o.type === L.uaV.REPLY ? (null === (i = o.referenced_message) || void 0 === i ? void 0 : i.author) : null,
             u = null != c ? (null !== (r = m.ZP.getNick(e, null == c ? void 0 : c.id)) && void 0 !== r ? r : N.ZP.getName(c)) : null;

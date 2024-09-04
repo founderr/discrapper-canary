@@ -15,15 +15,15 @@ var i = n(470079),
 let I = 'useCollectiblesShopTabNewBadge';
 t.Z = () => {
     var e, t, n, g, p, T, S;
-    let f = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
-        C = (0, h.J)(I),
+    let C = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
+        f = (0, h.J)(I),
         N = (0, _.n)(I),
         A = (0, r.e7)([u.Z], () => u.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
-        v = i.useMemo(() => ((0, d.Fc)(f) && C && null != A && !N ? [A.dismissibleContent] : []), [f, C, A, N]),
+        v = i.useMemo(() => ((0, d.Fc)(C) && f && null != A && !N ? [A.dismissibleContent] : []), [C, f, A, N]),
         [Z, L] = (0, o.US)(v, void 0, !0),
         [R, O] = (0, o.XR)(N && (null == A ? void 0 : A.type) === s.Z.COACHTIP ? l.z.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, null !== (e = null == A ? void 0 : A.version) && void 0 !== e ? e : 0, void 0, !0),
         x = null;
-    if ((null != Z || null != R) && C && null != A && A.type === s.Z.COACHTIP) {
+    if ((null != Z || null != R) && f && null != A && A.type === s.Z.COACHTIP) {
         x = {
             type: E.k2.COACHTIP,
             title: () => A.title,

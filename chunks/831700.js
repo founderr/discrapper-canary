@@ -41,12 +41,12 @@ var l = n(120356),
     j = n(9156),
     D = n(979651),
     w = n(934415),
-    G = n(98597),
-    U = n(648501),
+    U = n(98597),
+    G = n(648501),
     k = n(473403),
     B = n(830993),
-    H = n(653577),
-    V = n(207055),
+    V = n(653577),
+    H = n(207055),
     F = n(981631),
     W = n(647086),
     z = n(689938),
@@ -64,7 +64,7 @@ function K(e, t, n) {
         e
     );
 }
-class q extends G.ZP {
+class q extends U.ZP {
     componentWillUnmount() {
         this.activitiesHideTimeout.stop();
     }
@@ -88,7 +88,7 @@ class q extends G.ZP {
         let { channel: t, connected: n, enableHangStatus: l, allowChannelTopic: r } = this.props,
             a = null === (e = (0, I.D)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle,
             { hovered: s } = this.state;
-        return (0, i.jsx)(H.Z, {
+        return (0, i.jsx)(V.Z, {
             onClick: this.handleVoiceStatusClick,
             channel: t,
             connected: n,
@@ -100,7 +100,7 @@ class q extends G.ZP {
     }
     renderVoiceUsers() {
         let { channel: e, voiceStates: t, collapsed: n, withGuildIcon: l, tabIndex: r } = this.props;
-        return (0, i.jsx)(V.Z, {
+        return (0, i.jsx)(H.Z, {
             channel: e,
             collapsed: n,
             collapsedMax: 6,
@@ -359,7 +359,7 @@ function X(e) {
             },
             { autoTrackExposure: !1 }
         ),
-        R = (0, U.Z)({
+        R = (0, G.Z)({
             channel: n,
             isChannelSelected: s,
             isChannelCollapsed: o,

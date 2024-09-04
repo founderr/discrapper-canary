@@ -23,8 +23,8 @@ var i = n(735250),
     p = n(941129),
     T = n(83200),
     S = n(634894),
-    f = n(586902),
-    C = n(570928),
+    C = n(586902),
+    f = n(570928),
     N = n(676742),
     A = n(1585),
     v = n(304761),
@@ -77,8 +77,8 @@ var i = n(735250),
     ep = n(768581),
     eT = n(572004),
     eS = n(70956),
-    ef = n(74538),
-    eC = n(374023),
+    eC = n(74538),
+    ef = n(374023),
     eN = n(51144),
     eA = n(998502),
     ev = n(870569),
@@ -195,7 +195,7 @@ class eU extends a.PureComponent {
             c = null != n;
         return (
             (c || (o && s.isPomelo())) &&
-                (e = (0, i.jsx)(C.Z, {
+                (e = (0, i.jsx)(f.Z, {
                     hoverText: a,
                     forceHover: t,
                     children: c
@@ -521,14 +521,14 @@ function eG() {
             streaming: null != eh.Z.findActivity((e) => e.type === eR.IIU.STREAMING),
             status: eh.Z.getStatus()
         })),
-        _ = (0, f.Z)({ userId: r }),
+        _ = (0, C.Z)({ userId: r }),
         m = eN.ZP.useUserTag(n, { decoration: 'never' }),
         I = (0, l.e7)([eE.Z], () => eE.Z.hidePersonalInformation),
         g = (0, l.e7)([e_.Z, ec.Z], () => {
             let e = e_.Z.getChannelId();
             return null != e ? ec.Z.getChannel(e) : null;
         }),
-        { mute: C, selfMute: N, suppress: A } = (0, el.Z)(g),
+        { mute: f, selfMute: N, suppress: A } = (0, el.Z)(g),
         { selfDeaf: L, deaf: R } = (0, er.Z)(g),
         O = (0, l.e7)([v.C], () => {
             var e;
@@ -537,7 +537,7 @@ function eG() {
         x = (0, l.e7)([eI.ZP], () => eI.ZP.getPremiumTypeSubscription()),
         b = (0, l.e7)([eu.Z], () => eu.Z.getEverSpeakingWhileMuted()),
         P = (0, l.e7)([ed.Z], () => ed.Z.hasLayers()),
-        M = (0, h.useModalsStore)(h.hasAnyModalOpenSelector) || P || eC.s.isDisallowPopupsSet(),
+        M = (0, h.useModalsStore)(h.hasAnyModalOpenSelector) || P || ef.s.isDisallowPopupsSet(),
         y = (0, W.b)(),
         U = (0, l.e7)([V.Z], () => null != V.Z.getAwaitingRemoteSessionInfo()),
         B = (0, l.e7)([w.Z], () => w.Z.isCurrentQuestCompleted),
@@ -547,7 +547,7 @@ function eG() {
         J = (0, Q.D)(),
         $ = (0, p.u)(),
         ee = (0, X.t)(),
-        en = ef.ZP.canUsePremiumGuildMemberProfile(n),
+        en = eC.ZP.canUsePremiumGuildMemberProfile(n),
         ei = (null == n ? void 0 : null === (e = n.avatarDecoration) || void 0 === e ? void 0 : e.skuId) === eO.rL,
         ea = 'account';
     (0, S.j)({
@@ -600,7 +600,7 @@ function eG() {
             selfDeaf: L,
             selfMute: N,
             serverDeaf: R,
-            serverMute: C,
+            serverMute: f,
             speaking: _,
             speakingWhileMuted: b,
             status: u,

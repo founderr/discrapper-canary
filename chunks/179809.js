@@ -30,11 +30,11 @@ let Z = (0, _.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     T = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
     L = (0, _.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_MARGIN);
 function A(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: _, mentionCount: A = 0, unread: b = !1, defaultFolderName: M, useCircleMask: R = !1, draggable: P = !1, sorting: O = !1, onDragStart: y, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: G, folderIconContent: U } = e,
-        { id: k, name: B, children: H } = t,
-        [V, F] = l.useState(!1),
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: u, mediaState: _, mentionCount: A = 0, unread: b = !1, defaultFolderName: M, useCircleMask: R = !1, draggable: P = !1, sorting: O = !1, onDragStart: y, onDragEnd: j, onExpandCollapse: D, onContextMenu: w, renderChildNode: U, folderIconContent: G } = e,
+        { id: k, name: B, children: V } = t,
+        [H, F] = l.useState(!1),
         [W, z] = l.useState(!1),
-        Y = V || W;
+        Y = H || W;
     l.useEffect(() => {
         O && F(!1);
     }, [O]);
@@ -64,7 +64,7 @@ function A(e) {
         J = null != B && '' !== B ? B : null != M && '' !== M ? M : x.Z.Messages.SERVER_FOLDER_PLACEHOLDER,
         $ = (0, c.Ie)(''.concat(k)),
         ee = 'folder-items-'.concat(k),
-        et = H.length * (T + L),
+        et = V.length * (T + L),
         en = (0, d.useTransition)(!K && u, {
             from: { height: 0 },
             enter: { height: 1 },
@@ -76,7 +76,7 @@ function A(e) {
             children: [
                 (0, i.jsx)(g.Z, {
                     disabled: K || u,
-                    hovered: V,
+                    hovered: H,
                     selected: r,
                     unread: b,
                     className: v.pill
@@ -106,7 +106,7 @@ function A(e) {
                                   onHoverChange: F,
                                   onKeyDown: X,
                                   treeItemProps: $,
-                                  folderIconContent: U
+                                  folderIconContent: G
                               })
                     })
                 }),
@@ -142,7 +142,7 @@ function A(e) {
                             style: { height: e.height.to((e) => e * et) },
                             className: S.__invalid_expandedGuilds,
                             role: 'group',
-                            children: H.map(G)
+                            children: V.map(U)
                         },
                         l
                     )

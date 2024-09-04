@@ -21,8 +21,8 @@ var i = n(735250),
     p = n(131951),
     T = n(292959),
     S = n(19780),
-    f = n(944486),
-    C = n(606304),
+    C = n(944486),
+    f = n(606304),
     N = n(979651),
     A = n(938475),
     v = n(823379),
@@ -42,9 +42,9 @@ function R(e, t, n, i) {
 function O() {
     return (
         R(
-            [p.Z, f.Z],
+            [p.Z, C.Z],
             () => ({
-                inVoiceChannel: null != f.Z.getVoiceChannelId(),
+                inVoiceChannel: null != C.Z.getVoiceChannelId(),
                 selfMute: p.Z.isSelfMute(),
                 selfDeaf: p.Z.isSelfDeaf(),
                 audioPermissionReady: p.Z.isNativeAudioPermissionReady(),
@@ -70,9 +70,9 @@ function O() {
 function x() {
     return (
         R(
-            [I.Z, S.Z, f.Z, c.Z],
+            [I.Z, S.Z, C.Z, c.Z],
             () => {
-                let e = I.Z.getChannel(f.Z.getVoiceChannelId()),
+                let e = I.Z.getChannel(C.Z.getVoiceChannelId()),
                     t = null == e ? void 0 : e.type,
                     n = null == e ? void 0 : e.getGuildId(),
                     i = S.Z.getWasEverRtcConnected(),
@@ -108,8 +108,8 @@ function x() {
 function b() {
     return (
         R(
-            [C.Z],
-            () => C.Z.isCurrentUserSpeaking(),
+            [f.Z],
+            () => f.Z.isCurrentUserSpeaking(),
             (e, t) => {
                 if (e !== t) {
                     let e = p.Z.isSelfMute();
@@ -150,9 +150,9 @@ function M() {
 function D() {
     return (
         R(
-            [f.Z, N.Z],
+            [C.Z, N.Z],
             () => {
-                let e = f.Z.getVoiceChannelId();
+                let e = C.Z.getVoiceChannelId();
                 if (null == e) return _.xO.NONE;
                 let t = N.Z.getVoiceStateForChannel(e);
                 return (0, _.gf)(t);
@@ -167,10 +167,10 @@ function D() {
 function y() {
     return (
         R(
-            [f.Z, E.Z, m.default, N.Z, I.Z],
+            [C.Z, E.Z, m.default, N.Z, I.Z],
             () => {
                 let e, t;
-                let n = f.Z.getVoiceChannelId(),
+                let n = C.Z.getVoiceChannelId(),
                     i = m.default.getId();
                 let a = [],
                     s = null,
@@ -230,10 +230,10 @@ function y() {
 function j() {
     return (
         R(
-            [f.Z, o.ZP, m.default],
+            [C.Z, o.ZP, m.default],
             () => {
-                let e = f.Z.getVoiceChannelId(),
-                    t = f.Z.getChannelId(),
+                let e = C.Z.getVoiceChannelId(),
+                    t = C.Z.getChannelId(),
                     n = o.ZP.getConnectedActivityChannelId(),
                     i = m.default.getId(),
                     a = (0, v.lm)(t) ? o.ZP.getEmbeddedActivitiesForChannel(t) : o.i6,
@@ -271,11 +271,11 @@ function j() {
 function U() {
     return (
         R(
-            [u.Z, f.Z],
+            [u.Z, C.Z],
             () => ({
                 hangStatus: u.Z.getCurrentHangStatus(),
                 customHangStatus: u.Z.getCustomHangStatus(),
-                inVoice: null != f.Z.getVoiceChannelId()
+                inVoice: null != C.Z.getVoiceChannelId()
             }),
             (e, t) => {
                 var n, i;

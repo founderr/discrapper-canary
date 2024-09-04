@@ -84,7 +84,7 @@ t.ZP = (e) => {
             to: { width: j },
             config: P
         },
-        [G, U] = (0, d.useSpring)(() => w),
+        [U, G] = (0, d.useSpring)(() => w),
         k = () => {
             (0, _.yw)(Z.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                 location: { section: Z.jXE.PREMIUM_GUILD_PROGRESS_BAR },
@@ -104,12 +104,12 @@ t.ZP = (e) => {
                 });
         },
         B = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_GOAL.format({ levelName: (0, I.e9)(R) }),
-        H = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
+        V = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_BLURB.format({
             numBoosts: u,
             numTotal: (0, I.vn)(t.id)[R]
         });
-    M && ((B = (0, I.e9)(R)), (H = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({ numBoosts: u })));
-    let V = (0, o.JA)('boosts-'.concat(t.id));
+    M && ((B = (0, I.e9)(R)), (V = T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_PROGRESS_BAR_COMPLETED_BLURB.format({ numBoosts: u })));
+    let H = (0, o.JA)('boosts-'.concat(t.id));
     return (0, i.jsx)('li', {
         children: (0, i.jsx)(d.Tooltip, {
             text: M ? T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP_COMPLETE : T.Z.Messages.PREMIUM_GUILD_SUBSCRIPTIONS_NUDGE_TOOLTIP.format({ levelName: (0, I.nW)(R) }),
@@ -119,7 +119,7 @@ t.ZP = (e) => {
             hideOnClick: !0,
             children: (e) =>
                 (0, i.jsxs)(d.Clickable, {
-                    ...V,
+                    ...H,
                     ...e,
                     'aria-label': void 0,
                     role: 'button',
@@ -132,7 +132,7 @@ t.ZP = (e) => {
                     onClick: k,
                     onMouseEnter: () => {
                         var t;
-                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), U(w);
+                        null === (t = e.onMouseEnter) || void 0 === t || t.call(e), G(w);
                     },
                     className: a()(L.container, { [L.containerWithMargin]: n }),
                     onContextMenu: (e) => {
@@ -164,7 +164,7 @@ t.ZP = (e) => {
                                         (0, i.jsx)(d.Text, {
                                             color: 'interactive-normal',
                                             variant: 'text-xs/normal',
-                                            children: H
+                                            children: V
                                         }),
                                         (0, i.jsx)(C.Z, {
                                             className: L.count,
@@ -181,7 +181,7 @@ t.ZP = (e) => {
                             children: [
                                 (0, i.jsx)(s.animated.div, {
                                     className: L.progressBar,
-                                    style: G
+                                    style: U
                                 }),
                                 M
                                     ? (0, i.jsx)('span', {

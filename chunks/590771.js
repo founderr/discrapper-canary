@@ -59,21 +59,21 @@ function p(e) {
     let { loadId: t, selectedTab: n, onScroll: r, onGuildCardSeen: _, onGuildCardClick: p } = e,
         T = (0, u.lg)(n),
         S = (0, s.e7)([o.ZP], () => o.ZP.isFetching()),
-        f = (0, s.Wu)([o.ZP], () => o.ZP.getDiscoverableGuilds().featured.guilds),
-        C = (0, s.Wu)([o.ZP], () => o.ZP.getDiscoverableGuilds().gamesYouPlay.guilds),
+        C = (0, s.Wu)([o.ZP], () => o.ZP.getDiscoverableGuilds().featured.guilds),
+        f = (0, s.Wu)([o.ZP], () => o.ZP.getDiscoverableGuilds().gamesYouPlay.guilds),
         N = a.useRef(S);
     switch (
         (a.useEffect(() => {
             N.current !== S &&
                 !S &&
                 d.Zt({
-                    allGuilds: f,
+                    allGuilds: C,
                     loadId: t,
-                    gamesYouPlayGuilds: C,
+                    gamesYouPlayGuilds: f,
                     categoryId: T
                 }),
                 (N.current = S);
-        }, [f, T, C, S, t]),
+        }, [C, T, f, S, t]),
         a.useEffect(() => {
             (0, l.k)({ selectedCategoryId: T });
         }, [T]),

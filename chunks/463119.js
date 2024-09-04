@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(377171),
     T = n(633302),
     S = n(153066),
-    f = n(335131),
-    C = n(141594),
+    C = n(335131),
+    f = n(141594),
     N = n(302800),
     A = n(981631),
     v = n(689938),
@@ -43,7 +43,7 @@ let L = (e) => {
             { analyticsLocations: g } = (0, I.ZP)(E),
             p = a.useCallback(
                 () =>
-                    (0, f.mK)({
+                    (0, C.mK)({
                         openInLayer: !1,
                         analyticsSource: E,
                         analyticsLocations: g
@@ -111,8 +111,8 @@ let L = (e) => {
         });
     }),
     b = (e) => {
-        var t, n, s, l, u, _, m, I, g, p, T, f;
-        let C, N;
+        var t, n, s, l, u, _, m, I, g, p, T, C;
+        let f, N;
         let { selected: A, locationState: O, displayOptions: b } = e,
             P = (0, o.e7)([E.Z], () => E.Z.useReducedMotion),
             [M, D] = a.useState(0),
@@ -120,7 +120,7 @@ let L = (e) => {
             U = (0, h.ZP)(),
             G = b.entrypointDecorationAssets,
             w = (0, c.wj)(U);
-        y ? (w ? ((C = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (N = null === (s = b.entrypointBackgroundStyle) || void 0 === s ? void 0 : null === (n = s.hovered) || void 0 === n ? void 0 : n.dark)) : ((C = null === (l = b.entryPointBackgroundAssets) || void 0 === l ? void 0 : l.srcLightHovered), (N = null === (_ = b.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (u = _.hovered) || void 0 === u ? void 0 : u.light))) : w ? ((C = null === (m = b.entryPointBackgroundAssets) || void 0 === m ? void 0 : m.srcDark), (N = null === (g = b.entrypointBackgroundStyle) || void 0 === g ? void 0 : null === (I = g.resting) || void 0 === I ? void 0 : I.dark)) : ((C = null === (p = b.entryPointBackgroundAssets) || void 0 === p ? void 0 : p.srcLight), (N = null === (f = b.entrypointBackgroundStyle) || void 0 === f ? void 0 : null === (T = f.resting) || void 0 === T ? void 0 : T.light));
+        y ? (w ? ((f = null === (t = b.entryPointBackgroundAssets) || void 0 === t ? void 0 : t.srcDarkHovered), (N = null === (s = b.entrypointBackgroundStyle) || void 0 === s ? void 0 : null === (n = s.hovered) || void 0 === n ? void 0 : n.dark)) : ((f = null === (l = b.entryPointBackgroundAssets) || void 0 === l ? void 0 : l.srcLightHovered), (N = null === (_ = b.entrypointBackgroundStyle) || void 0 === _ ? void 0 : null === (u = _.hovered) || void 0 === u ? void 0 : u.light))) : w ? ((f = null === (m = b.entryPointBackgroundAssets) || void 0 === m ? void 0 : m.srcDark), (N = null === (g = b.entrypointBackgroundStyle) || void 0 === g ? void 0 : null === (I = g.resting) || void 0 === I ? void 0 : I.dark)) : ((f = null === (p = b.entryPointBackgroundAssets) || void 0 === p ? void 0 : p.srcLight), (N = null === (C = b.entrypointBackgroundStyle) || void 0 === C ? void 0 : null === (T = C.resting) || void 0 === T ? void 0 : T.light));
         let k = a.useCallback(
                 (e) => {
                     D((e) => (e + 1) % b.assetIds.length), j(!0), null == e || e();
@@ -157,9 +157,9 @@ let L = (e) => {
                             className: Z.marketingButtonBackground,
                             style: { background: N },
                             children:
-                                null != C &&
+                                null != f &&
                                 (0, i.jsx)('img', {
-                                    src: C,
+                                    src: f,
                                     className: Z.marketingButtonBackgroundImage,
                                     alt: '',
                                     'aria-hidden': !0
@@ -207,7 +207,7 @@ let L = (e) => {
     },
     M = (e) => {
         let { selected: t, locationState: n } = e,
-            { collectiblesShopTabNewBadgeDisplayOptions: a } = (0, C.Z)();
+            { collectiblesShopTabNewBadgeDisplayOptions: a } = (0, f.Z)();
         if (null != a)
             switch (a.type) {
                 case N.k2.TOOLTIP:

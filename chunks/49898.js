@@ -1,7 +1,7 @@
-var r, a, l, i, o, s;
+var i, l, r, a, s, o;
 n.d(t, {
     F$: function () {
-        return r;
+        return i;
     },
     Kl: function () {
         return u;
@@ -10,15 +10,15 @@ n.d(t, {
         return d;
     },
     WB: function () {
-        return a;
+        return l;
     },
     mc: function () {
         return c;
     }
 }),
-    ((i = r || (r = {})).SERVERS = 'servers'),
-    (i.QUESTS = 'quests');
-let c = 12633 == n.j ? ['servers', 'quests'] : null,
+    ((a = i || (i = {})).SERVERS = 'servers'),
+    (a.QUESTS = 'quests');
+let c = ['servers', 'quests'],
     u = 24,
     d = 240;
-((o = a || (a = {})).DEFAULT = 'default'), (o.FLOATING = 'floating'), (o.COLLAPSED = 'collapsed'), ((s = l || (l = {})).ROOT = 'root'), (s.SERVER_TAB = 'server_tab');
+((s = l || (l = {})).DEFAULT = 'default'), (s.FLOATING = 'floating'), (s.COLLAPSED = 'collapsed'), ((o = r || (r = {})).ROOT = 'root'), (o.SERVER_TAB = 'server_tab');

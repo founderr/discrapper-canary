@@ -30,7 +30,7 @@ function E(e) {
         p = (0, a.e7)([c.Z], () => c.Z.getGuild(t.id), [t.id]),
         T = (0, a.e7)([d.Z], () => d.Z.can(_.Plq.ADMINISTRATOR, p)),
         { canSeeInAppReportingButtons: S } = u.N.useExperiment({ location: '0e35b9_1' }, { autoTrackExposure: !1 }),
-        f = () => {
+        C = () => {
             (0, r.Zy)(), null == m || m();
         };
     return (0, i.jsxs)(s.Menu, {
@@ -46,7 +46,7 @@ function E(e) {
                               id: 'report-guild-discovery-listing',
                               label: h.Z.Messages.REPORT_SERVER_NO_NAME,
                               action: () => {
-                                  (0, o.lt)(t), f();
+                                  (0, o.lt)(t), C();
                               },
                               icon: s.FlagIcon,
                               color: 'danger'

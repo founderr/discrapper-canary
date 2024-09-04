@@ -17,8 +17,8 @@ var r = n(756647),
     p = n(594174),
     T = n(626135),
     S = n(585483),
-    f = n(591759),
-    C = n(998502),
+    C = n(591759),
+    f = n(998502),
     N = n(996106),
     A = n(186901),
     v = n(981631);
@@ -75,7 +75,7 @@ function Z(e, t) {
                 let { guildTemplate: i } = await E.Z.resolveGuildTemplate(t);
                 if (null == i) throw new N.Z({ errorCode: v.lTL.INVALID_GUILD_TEMPLATE }, 'Invalid guild template id: '.concat(t));
                 return (
-                    C.ZP.focus(),
+                    f.ZP.focus(),
                     (0, l.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([n.e('10778'), n.e('44839')]).then(n.bind(n, 766775));
                         return (t) =>
@@ -102,7 +102,7 @@ function Z(e, t) {
                         _.Z.resolveGiftCode(t, !0, !0)
                             .then((i) => {
                                 let { giftCode: a } = i;
-                                C.ZP.focus(),
+                                f.ZP.focus(),
                                     T.default.track(v.rMx.OPEN_MODAL, {
                                         type: 'gift_accept',
                                         location: v.SaU
@@ -128,12 +128,12 @@ function Z(e, t) {
                 let {
                     args: { type: t, params: n }
                 } = e;
-                switch ((C.ZP.focus(), t)) {
+                switch ((f.ZP.focus(), t)) {
                     case A.jE.USER_SETTINGS:
                         null != n && ((0, m.dL)(v.Z5c.SETTINGS(n.section, n.subsection)), Z(n.fingerprint, 'settings'));
                         break;
                     case A.jE.CHANGELOG:
-                        null != n && ((0, m.dL)(f.Z.formatPathWithQuery(v.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
+                        null != n && ((0, m.dL)(C.Z.formatPathWithQuery(v.Z5c.CHANGELOGS(n.date), n.query)), Z(n.fingerprint, 'changelog'));
                         break;
                     case A.jE.LIBRARY:
                         (0, m.dL)(v.Z5c.APPLICATION_LIBRARY), null != n && Z(n.fingerprint, 'library');
@@ -177,7 +177,7 @@ function Z(e, t) {
                 let {
                     args: { handoffToken: t, fingerprint: n }
                 } = e;
-                C.ZP.focus(null, !0), (0, d.lx)(t, n);
+                f.ZP.focus(null, !0), (0, d.lx)(t, n);
             }
         },
         [v.Etm.CONNECTIONS_CALLBACK]: {

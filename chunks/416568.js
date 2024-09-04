@@ -34,12 +34,12 @@ var i = n(735250),
     j = n(709054),
     D = n(727258),
     w = n(605951),
-    G = n(474109),
-    U = n(741616),
+    U = n(474109),
+    G = n(741616),
     k = n(187835),
     B = n(162050),
-    H = n(118122),
-    V = n(193154),
+    V = n(118122),
+    H = n(193154),
     F = n(602147),
     W = n(773182),
     z = n(222059),
@@ -307,11 +307,11 @@ function ec(e) {
     }
     (0, w.Z)(eM.scrollToGuild);
     let ew = o.getRoots(),
-        eG = (0, v.Z)(),
-        eU = (0, b.U)(),
+        eU = (0, v.Z)(),
+        eG = (0, b.U)(),
         ek = ei.map((e) =>
             (0, i.jsx)(
-                V.Z,
+                H.Z,
                 {
                     id: e.id,
                     name: e.name,
@@ -335,7 +335,7 @@ function ec(e) {
                         role: 'tree',
                         className: en.tree,
                         children: [
-                            (0, i.jsx)(G.Z, {
+                            (0, i.jsx)(U.Z, {
                                 ref: ed,
                                 isVisible: eM.isItemVisible,
                                 onJumpTo: eM.handleJumpToGuild,
@@ -351,11 +351,11 @@ function ec(e) {
                                 onScroll: eM.handleScroll,
                                 children: [
                                     (0, i.jsx)(z.u, {}),
-                                    eG ? (0, i.jsx)(Z.Z, {}) : null,
+                                    eU ? (0, i.jsx)(Z.Z, {}) : null,
                                     (0, i.jsx)(B.Z, {}),
                                     (0, i.jsx)(Y.Z, { isOnHubVerificationRoute: ey }),
-                                    (0, i.jsx)(U.Z, {}),
-                                    eU,
+                                    (0, i.jsx)(G.Z, {}),
+                                    eG,
                                     m.map((e) => (0, i.jsx)($.Z, { guildId: e }, e)),
                                     (0, i.jsx)(J.Z, { onActivate: ej }),
                                     (0, i.jsx)(K.Z, {}),
@@ -366,7 +366,7 @@ function ec(e) {
                                     ek,
                                     n
                                         ? null
-                                        : (0, i.jsx)(H.Z, {
+                                        : (0, i.jsx)(V.Z, {
                                               disableTooltip: h.length > 0,
                                               lastTargetNode: ew[ew.length - 1]
                                           }),
@@ -410,7 +410,7 @@ function ec(e) {
                                         })
                                     })
                                   : null,
-                            (0, i.jsx)(G.Z, {
+                            (0, i.jsx)(U.Z, {
                                 reverse: !0,
                                 ref: eh,
                                 isVisible: eM.isItemVisible,

@@ -87,8 +87,8 @@ function I(e) {
             maxLines: 1,
             containerWidth: _
         }),
-        f = a.useMemo(() => s.slice(0, g + 1), [g, s]),
-        C = a.useMemo(() => s.slice(g + 1), [g, s]),
+        C = a.useMemo(() => s.slice(0, g + 1), [g, s]),
+        f = a.useMemo(() => s.slice(g + 1), [g, s]),
         N = a.useRef(null),
         A = a.useCallback(() => {
             var e;
@@ -133,7 +133,7 @@ function I(e) {
                         (0, i.jsx)('div', {
                             ref: T,
                             children: (0, i.jsx)(m, {
-                                tabs: C,
+                                tabs: f,
                                 onTabSelect: l,
                                 selectedTab: n
                             })
@@ -147,7 +147,7 @@ function I(e) {
                     onItemSelect: l,
                     className: E.tabs,
                     children: [
-                        f.map((e) =>
+                        C.map((e) =>
                             (0, i.jsx)(
                                 o.TabBar.Item,
                                 {
@@ -159,9 +159,9 @@ function I(e) {
                                 e.id
                             )
                         ),
-                        0 !== C.length
+                        0 !== f.length
                             ? (0, i.jsx)(m, {
-                                  tabs: C,
+                                  tabs: f,
                                   onTabSelect: l,
                                   selectedTab: n
                               })

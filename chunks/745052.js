@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(209613),
     T = n(325708),
     S = n(320149),
-    f = n(82295),
-    C = n(252618),
+    C = n(82295),
+    f = n(252618),
     N = n(605236),
     A = n(243778),
     v = n(984370),
@@ -73,7 +73,7 @@ function ei() {
         S = a.useCallback(() => {
             m(n.map((e) => e.channel.id));
         }, [n, m]),
-        C = a.useCallback(
+        f = a.useCallback(
             (e) => {
                 var t, a;
                 let { row: l } = e,
@@ -100,7 +100,7 @@ function ei() {
         N = a.useCallback(
             () =>
                 (0, i.jsxs)(
-                    f.Z,
+                    C.Z,
                     {
                         className: et.sectionTitle,
                         children: [
@@ -155,7 +155,7 @@ function ei() {
                               sectionHeight: Q.oi,
                               rowHeight: Q.WN,
                               renderSection: N,
-                              renderRow: C,
+                              renderRow: f,
                               sections: [n.length],
                               chunkSize: 30,
                               fade: !0,
@@ -263,11 +263,11 @@ let eo = (0, m.Z)(function (e) {
         null != m && !g && p && I && ((0, L.Kh)(m), R.Z.closeChannelSidebar(M.uZ));
     }, [m, p, I, g]);
     let [T, S] = a.useState(Q.pS.REQUESTS),
-        f = (e) => {
+        C = (e) => {
             S(e);
         };
     return (
-        (0, C.Tt)({ location: ee.Z.Messages.MESSAGE_REQUESTS }),
+        (0, f.Tt)({ location: ee.Z.Messages.MESSAGE_REQUESTS }),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -293,7 +293,7 @@ let eo = (0, m.Z)(function (e) {
                                             'aria-label': ee.Z.Messages.MESSAGE_REQUESTS,
                                             selectedItem: T,
                                             type: 'top-pill',
-                                            onItemSelect: f,
+                                            onItemSelect: C,
                                             className: et.__invalid_tabBar,
                                             children: [
                                                 (0, i.jsx)(u.TabBar.Item, {

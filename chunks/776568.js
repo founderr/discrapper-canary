@@ -1,16 +1,16 @@
 _.d(E, {
     ZP: function () {
-        return c;
+        return o;
     },
     k: function () {
         return L;
     }
 }),
     _(47120);
-var n = _(735250);
+var t = _(735250);
 _(470079);
-var t = _(913527),
-    s = _.n(t),
+var n = _(913527),
+    s = _.n(n),
     a = _(442837),
     M = _(481060),
     r = _(211739),
@@ -49,7 +49,7 @@ let L = () => [
             label: T.Z.Messages.MUTE_DURATION_ALWAYS
         }
     ],
-    o = (e) => {
+    c = (e) => {
         let E = e > 0 ? s()().add(e, 'second').toISOString() : null;
         return {
             muted: !0,
@@ -59,11 +59,11 @@ let L = () => [
             }
         };
     };
-function c(e, E) {
-    let [_, t] = (0, a.Wu)([A.ZP], () => [A.ZP.isChannelMuted(e.guild_id, e.id), A.ZP.getChannelMuteConfig(e.guild_id, e.id)]),
-        s = (0, N.U)(t),
+function o(e, E) {
+    let [_, n] = (0, a.Wu)([A.ZP], () => [A.ZP.isChannelMuted(e.guild_id, e.id), A.ZP.getChannelMuteConfig(e.guild_id, e.id)]),
+        s = (0, N.U)(n),
         I = (0, l.ZP)(e, !0);
-    function c(E) {
+    function o(E) {
         E && e.type === O.d4z.GUILD_CATEGORY && (0, r.c4)(e.id), S.Z.updateChannelOverrideSettings(e.guild_id, e.id, { muted: E }, i.UE.muted(E));
     }
     let C = T.Z.Messages.MUTE_CHANNEL_GENERIC,
@@ -82,37 +82,37 @@ function c(e, E) {
             (C = T.Z.Messages.MUTE_CHANNEL_GENERIC), (G = T.Z.Messages.UNMUTE_CHANNEL_GENERIC);
     }
     return _
-        ? (0, n.jsx)(M.MenuItem, {
+        ? (0, t.jsx)(M.MenuItem, {
               id: 'unmute-channel',
               label: G,
               subtext: s,
-              action: () => c(!1)
+              action: () => o(!1)
           })
-        : (0, n.jsx)(M.MenuItem, {
+        : (0, t.jsx)(M.MenuItem, {
               id: 'mute-channel',
               label: C,
               action: () => {
-                  c(!0),
+                  o(!0),
                       (0, u.s)({
                           channelId: e.id,
                           location: 'channel_context_menu'
                       });
               },
               children: L().map((_) => {
-                  let { value: t, label: s } = _;
-                  return (0, n.jsx)(
+                  let { value: n, label: s } = _;
+                  return (0, t.jsx)(
                       M.MenuItem,
                       {
-                          id: ''.concat(t),
+                          id: ''.concat(n),
                           label: s,
                           action: () =>
                               (function (_) {
                                   e.type === O.d4z.GUILD_CATEGORY && (0, r.c4)(e.id);
-                                  let n = o(_);
-                                  S.Z.updateChannelOverrideSettings(e.guild_id, e.id, n, i.ZB.Muted, E);
-                              })(t)
+                                  let t = c(_);
+                                  S.Z.updateChannelOverrideSettings(e.guild_id, e.id, t, i.ZB.Muted, E);
+                              })(n)
                       },
-                      t
+                      n
                   );
               })
           });

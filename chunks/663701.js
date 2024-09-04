@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(770471),
     T = n(158631),
     S = n(143614),
-    f = n(463119),
-    C = n(377171),
+    C = n(463119),
+    f = n(377171),
     N = n(243778),
     A = n(922409),
     v = n(899740),
@@ -75,7 +75,7 @@ let q = (e) => {
                 r.length > 0 &&
                     l &&
                     (0, i.jsx)(h.TextBadge, {
-                        color: C.Z.BG_BRAND,
+                        color: f.Z.BG_BRAND,
                         text: (0, i.jsxs)('div', {
                             className: K.broadcastingBadge,
                             children: [
@@ -128,7 +128,7 @@ let q = (e) => {
         return e > 0
             ? (0, i.jsx)(h.NumberBadge, {
                   count: e,
-                  color: 0 === t ? C.Z.ICON_MUTED : void 0
+                  color: 0 === t ? f.Z.ICON_MUTED : void 0
               })
             : null;
     },
@@ -198,7 +198,7 @@ let q = (e) => {
                         return t === u.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(h.TextBadge, {
                                   text: z.Z.Messages.NEW,
-                                  color: C.Z.BG_BRAND
+                                  color: f.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -293,7 +293,7 @@ let ea = (e) => {
                         : null,
                     (0, i.jsx)($, { selected: null == u ? null != a && a.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
                     (0, i.jsx)(
-                        f.i,
+                        C.i,
                         {
                             selected: u === W.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(W.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {
