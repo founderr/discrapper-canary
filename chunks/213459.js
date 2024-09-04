@@ -808,7 +808,7 @@ function er(e, t, n, r, i) {
                           (i === v.p.COMMAND_ONLY || i === v.p.COMMAND_OR_APPLICATION) &&
                               (n = (function (e, t, n, r) {
                                   var i;
-                                  let a = e.name,
+                                  let a = e.untranslatedName,
                                       s = e.displayName;
                                   if (a.startsWith(t) || s.startsWith(t)) return 0;
                                   if ((a.startsWith(n) && a.split(' ').slice(1).join(' ').startsWith(r)) || (s.startsWith(n) && s.split(' ').slice(1).join(' ').startsWith(r))) return 1;
@@ -818,7 +818,10 @@ function er(e, t, n, r, i) {
                                       if (n.startsWith(t) || ''.concat(a, ' ').concat(n).startsWith(t) || (null != s && ''.concat(s, ' ').concat(n).startsWith(t)) || (null != r && (r.startsWith(t) || ''.concat(a, ' ').concat(r).startsWith(t) || (null != s && ''.concat(s, ' ').concat(r).startsWith(t))))) return 3;
                                       (n.includes(t) || (null == r ? void 0 : r.includes(t))) && (o = !0);
                                   }
-                                  return o ? 4 : e.description.toLocaleLowerCase().includes(t) ? 7 : void 0;
+                                  if (o) return 4;
+                                  let l = e.untranslatedDescription.toLocaleLowerCase(),
+                                      u = e.displayDescription.toLocaleLowerCase();
+                                  if (l.includes(t) || u.includes(t)) return 7;
                               })(t, e, u, c)),
                               (void 0 === n || (void 0 !== a && a < n)) && (n = a),
                               void 0 !== n &&
