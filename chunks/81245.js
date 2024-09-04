@@ -1,5 +1,8 @@
 n.d(t, {
-    M: function () {
+    Mu: function () {
+        return c;
+    },
+    iM: function () {
         return u;
     }
 });
@@ -22,12 +25,23 @@ let l = (0, i.Z)({
     ]
 });
 function u(e) {
-    let t = (0, r.e7)([a.default], () => s.ZP.isPremium(a.default.getCurrentUser(), o.p9.TIER_2));
-    return l.useExperiment(
+    let t = s.ZP.isPremium(a.default.getCurrentUser(), o.p9.TIER_2);
+    return l.getCurrentConfig(
         { location: e },
         {
             autoTrackExposure: !t,
             disable: t
+        }
+    ).enabled;
+}
+function c(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = (0, r.e7)([a.default], () => s.ZP.isPremium(a.default.getCurrentUser(), o.p9.TIER_2));
+    return l.useExperiment(
+        { location: e },
+        {
+            autoTrackExposure: !n && !t,
+            disable: n || t
         }
     ).enabled;
 }

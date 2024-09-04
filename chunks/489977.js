@@ -5,61 +5,67 @@ var a = n(481060),
     r = n(809206),
     l = n(317770),
     o = n(18438),
-    c = n(350327),
-    d = n(594174),
-    u = n(74538),
-    _ = n(486324);
-let h = (e) => {
-        let { imageSrc: t, file: s, guildId: l, isTryItOutFlow: h } = e;
-        if (h) {
-            (0, c.c_)(t);
+    c = n(81245),
+    d = n(378879),
+    u = n(350327),
+    _ = n(594174),
+    h = n(74538),
+    E = n(486324);
+function m(e, t) {
+    let n = e === E.pC.AVATAR ? 'handleUploadAvatar' : 'handleUploadBanner';
+    return !!(0, c.iM)(n) && (0, d.openProfileUpsellModal)(e, t);
+}
+let I = (e) => {
+        let { imageSrc: t, file: s, guildId: l, isTryItOutFlow: c } = e;
+        if (c) {
+            (0, u.c_)(t);
             return;
         }
-        let E = d.default.getCurrentUser(),
-            m = null != l ? o.I5 : r.I5;
-        if (u.ZP.canUseAnimatedAvatar(E) || 'image/gif' !== s.type) {
-            m(t);
+        let d = _.default.getCurrentUser(),
+            I = null != l ? o.I5 : r.I5;
+        if (h.ZP.canUseAnimatedAvatar(d) || 'image/gif' !== s.type) {
+            I(t);
             return;
         }
-        if (null != E)
+        if (!(null == d || m(E.pC.AVATAR, t)))
             return (0, a.openModalLazy)(async () => {
                 let { default: e } = await n.e('12736').then(n.bind(n, 844594));
                 return (n) =>
                     (0, i.jsx)(e, {
-                        user: E,
+                        user: d,
                         imageSrc: t,
-                        uploadType: _.pC.AVATAR,
-                        onSubscribe: () => m(t),
+                        uploadType: E.pC.AVATAR,
+                        onSubscribe: () => I(t),
                         ...n
                     });
             });
     },
-    E = (e) => {
+    g = (e) => {
         let { imageSrc: t, guildId: s, isTryItOutFlow: r } = e;
         if (r) {
-            (0, c.f4)(t);
+            (0, u.f4)(t);
             return;
         }
-        let l = d.default.getCurrentUser(),
-            h = null != s ? o.g_ : c.g_;
-        if (u.ZP.canUsePremiumProfileCustomization(l)) {
-            h(t);
+        let l = _.default.getCurrentUser(),
+            c = null != s ? o.g_ : u.g_;
+        if (h.ZP.canUsePremiumProfileCustomization(l)) {
+            c(t);
             return;
         }
-        if (null != l)
+        if (!(null == l || m(E.pC.BANNER, t)))
             return (0, a.openModalLazy)(async () => {
                 let { default: e } = await n.e('12736').then(n.bind(n, 844594));
                 return (n) =>
                     (0, i.jsx)(e, {
                         user: l,
                         imageSrc: t,
-                        uploadType: _.pC.BANNER,
-                        onSubscribe: () => h(t),
+                        uploadType: E.pC.BANNER,
+                        onSubscribe: () => c(t),
                         ...n
                     });
             });
     };
-class m extends l.Z {
+class p extends l.Z {
     _initialize() {
         s.Z.subscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
     }
@@ -67,7 +73,7 @@ class m extends l.Z {
         s.Z.unsubscribe('PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL', this.maybeOpenProfilePreviewModal);
     }
     maybeOpenProfilePreviewModal(e) {
-        return e.uploadType === _.pC.AVATAR ? h(e) : e.uploadType === _.pC.BANNER ? E(e) : void 0;
+        return e.uploadType === E.pC.AVATAR ? I(e) : e.uploadType === E.pC.BANNER ? g(e) : void 0;
     }
 }
-t.Z = new m();
+t.Z = new p();

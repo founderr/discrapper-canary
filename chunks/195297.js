@@ -1,7 +1,7 @@
 n.r(i),
     n.d(i, {
         default: function () {
-            return h;
+            return R;
         }
     }),
     n(47120);
@@ -9,105 +9,106 @@ var o = n(735250),
     t = n(470079),
     r = n(120356),
     a = n.n(r),
-    s = n(481060),
-    l = n(100527),
+    l = n(481060),
+    s = n(100527),
     c = n(906732),
     d = n(313201),
     u = n(455708),
     _ = n(81245),
-    g = n(53691),
+    g = n(530329),
     E = n(626135),
     f = n(488499),
-    I = n(58384),
-    N = n(981631),
-    T = n(689938),
-    p = n(321393);
-function h(e) {
-    let { transitionState: i, onClose: r, onComplete: h, uploadType: R, showUpsellHeader: m, analyticsPage: x } = e,
-        [C, b] = t.useState(!1),
-        B = (0, s.useModalContext)(),
-        A = (0, d.Dt)(),
-        { analyticsLocations: M } = (0, c.ZP)(l.Z.GIF_PICKER);
-    async function P(e) {
+    N = n(58384),
+    T = n(981631),
+    I = n(486324),
+    p = n(689938),
+    h = n(321393);
+function R(e) {
+    let { transitionState: i, onClose: r, onComplete: R, uploadType: m, showUpsellHeader: x, analyticsPage: C } = e,
+        [B, A] = t.useState(!1),
+        b = (0, l.useModalContext)(),
+        M = (0, d.Dt)(),
+        { analyticsLocations: P } = (0, c.ZP)(s.Z.GIF_PICKER);
+    async function j(e) {
         let { gifSrc: i } = e;
-        if (null == i || C) return;
-        b(!0);
-        let t = (0, I.Q)(i),
+        if (null == i || B) return;
+        A(!0);
+        let t = (0, N.Q)(i),
             a = await fetch(t),
-            l = await a.blob();
+            s = await a.blob();
         r(),
-            (0, s.openModalLazy)(
+            (0, l.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('48017'), n.e('40629')]).then(n.bind(n, 850085));
                     return (i) =>
                         (0, o.jsx)(e, {
                             imgURI: t,
-                            file: new File([l], 'tenor.gif', { type: 'image/gif' }),
-                            onCrop: h,
-                            uploadType: R,
-                            showUpsellHeader: m,
+                            file: new File([s], 'tenor.gif', { type: 'image/gif' }),
+                            onCrop: R,
+                            uploadType: m,
+                            showUpsellHeader: x,
                             ...i
                         });
                 },
-                { contextKey: B }
+                { contextKey: b }
             );
     }
     t.useEffect(() => {
-        E.default.track(N.rMx.OPEN_MODAL, {
-            type: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location: { page: x }
+        E.default.track(T.rMx.OPEN_MODAL, {
+            type: T.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+            location: { page: C }
         });
-    }, [x]);
-    let L = (0, _.M)('GIFPickerCroppingModal');
+    }, [C]);
+    let L = m === I.pC.AVATAR || m === I.pC.BANNER,
+        Z = (0, _.Mu)('GIFPickerCroppingModal', !L);
     return (0, o.jsx)(c.Gt, {
-        value: M,
-        children: (0, o.jsxs)(s.ModalRoot, {
-            'aria-labelledby': A,
+        value: P,
+        children: (0, o.jsxs)(l.ModalRoot, {
+            'aria-labelledby': M,
             transitionState: i,
-            size: s.ModalSize.SMALL,
+            size: l.ModalSize.SMALL,
             children: [
-                m &&
-                    !L &&
+                x &&
+                    !Z &&
                     (0, o.jsx)(f.Z, {
-                        type: R,
-                        analyticsPage: x,
-                        analyticsSection: N.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+                        type: m,
+                        analyticsPage: C,
+                        analyticsSection: T.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                         isGIF: !0
                     }),
-                (0, o.jsxs)(s.ModalHeader, {
-                    className: p.modalHeader,
+                (0, o.jsxs)(l.ModalHeader, {
+                    className: h.modalHeader,
                     separator: !1,
                     children: [
-                        (0, o.jsx)(s.FormTitle, {
-                            className: p.titleCase,
-                            tag: s.FormTitleTags.H1,
-                            children: T.Z.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF
+                        (0, o.jsx)(l.FormTitle, {
+                            className: h.titleCase,
+                            tag: l.FormTitleTags.H1,
+                            children: p.Z.Messages.SELECT_IMAGE_MODAL_CHOOSE_GIF
                         }),
-                        (0, o.jsx)(s.ModalCloseButton, {
+                        (0, o.jsx)(l.ModalCloseButton, {
                             onClick: r,
-                            className: p.modalCloseButton
+                            className: h.modalCloseButton
                         })
                     ]
                 }),
                 (0, o.jsxs)('div', {
                     children: [
                         (0, o.jsx)(u.Z, {
-                            contentClassName: a()({ [p.gifPickerContent]: m && L }),
-                            className: a()(p.gifPicker, { [p.loadingOverlay]: C }),
-                            onSelectGIF: P,
+                            contentClassName: a()({ [h.gifPickerContent]: x && Z }),
+                            className: a()(h.gifPicker, { [h.loadingOverlay]: B }),
+                            onSelectGIF: j,
                             hideFavorites: !0
                         }),
-                        C && (0, o.jsx)(s.Spinner, { className: p.spinner })
+                        B && (0, o.jsx)(l.Spinner, { className: h.spinner })
                     ]
                 }),
-                m &&
-                    L &&
-                    (0, o.jsx)(g.p, {
+                x &&
+                    Z &&
+                    (0, o.jsx)(g.Z, {
+                        uploadType: m,
                         showUpsell: !0,
-                        text: 'Wear GIFs with Nitro',
-                        button: T.Z.Messages.EMOJI_PICKER_PREMIUM_UPSELL_CTA,
-                        buttonAnalyticsObject: { section: N.jXE.EMOJI_PICKER_FLOATING_UPSELL },
-                        className: p.nitroUpsell
+                        className: h.nitroUpsell,
+                        onSecondaryClick: r
                     })
             ]
         })

@@ -1,5 +1,7 @@
 e.exports = {
     root: 'root_ffaecb',
+    contentContainer: 'contentContainer_ffaecb',
+    bodyContent: 'bodyContent_ffaecb',
     header: 'header_ffaecb',
     enhancedHeader: 'enhancedHeader_ffaecb',
     subHeader: 'subHeader_ffaecb',
