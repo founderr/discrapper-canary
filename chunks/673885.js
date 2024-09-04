@@ -3,11 +3,11 @@ n.d(s, {
         return _;
     }
 });
-var a = n(735250);
+var t = n(735250);
 n(470079);
-var t = n(120356),
-    r = n.n(t),
-    l = n(481060),
+var a = n(120356),
+    l = n.n(a),
+    r = n(481060),
     i = n(906732),
     o = n(171368),
     c = n(768581),
@@ -16,42 +16,42 @@ var t = n(120356),
     I = n(689938),
     E = n(691700);
 function _(e) {
-    let { user: s, guildId: n, className: t } = e,
+    let { user: s, guildId: n, className: a } = e,
         { username: _ } = s,
         T = c.ZP.getUserAvatarURL(s),
-        { analyticsLocations: N } = (0, i.ZP)(),
-        R = () => {
+        { analyticsLocations: m } = (0, i.ZP)(),
+        M = () => {
             (0, o.openUserProfileModal)({
                 userId: s.id,
                 guildId: n,
-                sourceAnalyticsLocations: N,
+                sourceAnalyticsLocations: m,
                 analyticsLocation: {
                     section: u.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
                     object: u.qAy.JOIN_REQUEST
                 }
             });
         };
-    return (0, a.jsxs)('div', {
-        className: r()(E.container, t),
+    return (0, t.jsxs)('div', {
+        className: l()(E.container, a),
         children: [
-            (0, a.jsx)(l.Anchor, {
-                onClick: R,
-                children: (0, a.jsx)(l.Avatar, {
+            (0, t.jsx)(r.Anchor, {
+                onClick: M,
+                children: (0, t.jsx)(r.Avatar, {
                     src: T,
-                    size: l.AvatarSizes.SIZE_80,
+                    size: r.AvatarSizes.SIZE_80,
                     'aria-label': _,
                     className: E.avatar
                 })
             }),
-            (0, a.jsx)('div', {
+            (0, t.jsx)('div', {
                 className: E.username,
-                children: (0, a.jsx)(l.Heading, {
+                children: (0, t.jsx)(r.Heading, {
                     variant: 'heading-lg/semibold',
                     children: d.ZP.getFormattedName(s)
                 })
             }),
-            (0, a.jsx)(l.Anchor, {
-                onClick: R,
+            (0, t.jsx)(r.Anchor, {
+                onClick: M,
                 children: I.Z.Messages.VIEW_PROFILE
             })
         ]

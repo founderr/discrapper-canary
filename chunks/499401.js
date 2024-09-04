@@ -1,21 +1,21 @@
 _.d(E, {
     Y: function () {
-        return n;
+        return t;
     }
 });
-var t = _(689938);
-function n(e) {
-    let { application: E, username: _, usernameOnClick: n, medium: s } = e;
+var n = _(689938);
+function t(e) {
+    let { application: E, username: _, usernameOnClick: t, medium: s } = e;
     return null != E
-        ? t.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_MOBILE.astFormat({
+        ? n.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_MOBILE.astFormat({
               username: _,
               applicationName: E.name,
-              usernameOnClick: n,
+              usernameOnClick: t,
               medium: s
           })
-        : t.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION_MOBILE.astFormat({
+        : n.Z.Messages.SYSTEM_MESSAGE_APPLICATION_SUBSCRIPTION_PURCHASE_FROM_DELETED_APPLICATION_MOBILE.astFormat({
               username: _,
-              usernameOnClick: n,
+              usernameOnClick: t,
               medium: s
           });
 }

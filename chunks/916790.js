@@ -106,7 +106,7 @@ let y = [
         }
     }
 ];
-function I(e) {
+function w(e) {
     let { actionLog: t, initialHeight: n } = e,
         l = a.useMemo(
             () =>
@@ -167,7 +167,7 @@ function I(e) {
         ]
     });
 }
-let w = [
+let I = [
     {
         key: 'action',
         cellClassName: C.actionColumn,
@@ -263,13 +263,13 @@ function k() {
                     })
                 }),
                 (0, r.jsx)(v.Z, {
-                    columns: w,
+                    columns: I,
                     data: c,
                     selectedRowKey: null == x ? void 0 : x.id.toString(),
                     onClickRow: (e) => f(e.actionLog)
                 }),
                 null != x &&
-                    (0, r.jsx)(I, {
+                    (0, r.jsx)(w, {
                         actionLog: x,
                         initialHeight: null != e.current ? e.current.clientHeight / 2 : 300
                     })

@@ -28,9 +28,9 @@ var c,
     p = t(726542),
     S = t(367907),
     I = t(385499),
-    f = t(277800),
-    M = t(471445),
-    v = t(335191),
+    M = t(277800),
+    f = t(471445),
+    v = t(819602),
     g = t(706454),
     y = t(598077),
     j = t(314897),
@@ -62,7 +62,7 @@ function K(e) {
 }
 function q(e) {
     let { channel: n, className: t } = e,
-        c = (0, M.KS)(n);
+        c = (0, f.KS)(n);
     return (0, a.jsxs)('div', {
         className: i()(z.channelName, t),
         children: [
@@ -166,11 +166,11 @@ function Q(e) {
                 let _ = x[e],
                     O = _.find((e) => null == e.operator),
                     E = _.filter((e) => null != e.operator),
-                    f = (null == O || O.result) && E.every((e) => e.result),
-                    M = _.find((e) => null != e.application),
+                    M = (null == O || O.result) && E.every((e) => e.result),
+                    f = _.find((e) => null != e.application),
                     v = p.Z.get(e),
                     g = null == v || v.enabled,
-                    j = null == M ? void 0 : M.application,
+                    j = null == f ? void 0 : f.application,
                     L = (null == j ? void 0 : j.bot) != null ? new y.Z(j.bot) : null;
                 P.SJ.includes(null !== (n = null == j ? void 0 : j.id) && void 0 !== n ? n : '')
                     ? (u = (0, a.jsx)(w.Z, {
@@ -184,9 +184,9 @@ function Q(e) {
                           verified: L.isVerifiedBot()
                       }));
                 let k = o[null !== (c = null == v ? void 0 : v.type) && void 0 !== c ? c : F.Kt],
-                    G = !f && null != k && k <= r;
+                    G = !M && null != k && k <= r;
                 return (
-                    (C = f
+                    (C = M
                         ? (0, a.jsx)(T.CheckmarkLargeIcon, {
                               size: 'md',
                               color: 'currentColor',
@@ -214,9 +214,9 @@ function Q(e) {
                     (0, a.jsxs)(
                         T.Clickable,
                         {
-                            className: i()(z.connectionsChecksGroup, f ? z.connectionsChecksGroupPassed : null, g ? null : z.connectionsChecksGroupPlatformDisabled),
+                            className: i()(z.connectionsChecksGroup, M ? z.connectionsChecksGroupPassed : null, g ? null : z.connectionsChecksGroupPlatformDisabled),
                             onClick:
-                                !f && g
+                                !M && g
                                     ? () => {
                                           var e, n, c;
                                           return (
@@ -238,7 +238,7 @@ function Q(e) {
                                       }
                                     : void 0,
                             children: [
-                                !f && G
+                                !M && G
                                     ? (0, a.jsx)('div', {
                                           className: z.connectionsChecksGroupRequirementsNotMet,
                                           children: (0, a.jsx)(T.Text, {
@@ -390,7 +390,7 @@ function J(e) {
         [C, _] = l.useState(!1),
         [h, O] = l.useState(!0),
         [A, I] = l.useState(!1),
-        [M, y] = l.useState(!0),
+        [f, y] = l.useState(!0),
         [R, P] = l.useState(!1),
         U = (0, N.e7)([k.Z], () => k.Z.getAccounts()),
         w = (0, N.e7)([j.default], () => j.default.getId()),
@@ -400,7 +400,7 @@ function J(e) {
         en = (0, x.ZP)(),
         et = (0, N.e7)([g.default], () => g.default.locale),
         ec = (0, N.e7)([G.ZP], () => G.ZP.getMember(c, w)),
-        eo = Object.values((0, N.e7)([L.Z], () => L.Z.getMutableGuildChannelsForGuild(c))).filter((e) => b.Z.can(V.Plq.VIEW_CHANNEL, e) && b.Z.can(V.Plq.SEND_MESSAGES, e) && (0, f.Z)(e).includes(o));
+        eo = Object.values((0, N.e7)([L.Z], () => L.Z.getMutableGuildChannelsForGuild(c))).filter((e) => b.Z.can(V.Plq.VIEW_CHANNEL, e) && b.Z.can(V.Plq.SEND_MESSAGES, e) && (0, M.Z)(e).includes(o));
     function ea() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         null == t || t(), e && (0, T.closeModal)(H.s$, T.DEFAULT_MODAL_CONTEXT);
@@ -599,7 +599,7 @@ function J(e) {
                                                                                         theme: en,
                                                                                         locale: et,
                                                                                         className: z.accountConnectedPreviewConnectedUserAccount,
-                                                                                        showMetadata: M,
+                                                                                        showMetadata: f,
                                                                                         showInvisibleIcon: R
                                                                                     })
                                                                                 ]

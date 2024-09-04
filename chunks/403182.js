@@ -145,5 +145,5 @@ function N(e) {
 }
 function O() {
     let e = c.default.getCurrentUser();
-    return null != e && e.isStaff() ? ((0, d.Xv)() ? 1073741824 : 524288000) : (0, d.Xv)() ? 1073741824 : 524288000;
+    return null != e && e.isStaff() ? 524288000 : 524288000;
 }

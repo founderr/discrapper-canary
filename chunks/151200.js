@@ -15,8 +15,8 @@ var r = l(120356),
     d = l(297781),
     m = l(313201),
     p = l(231338),
-    E = l(689938),
-    f = l(917056),
+    f = l(689938),
+    E = l(917056),
     N = l(671656);
 function C(e) {
     let { className: n, clickableClassName: l, clickable: r, children: s } = e,
@@ -78,15 +78,15 @@ function _(e) {
             theme: p.BR.DARK,
             children: (e) =>
                 (0, t.jsxs)('figure', {
-                    'aria-roledescription': E.Z.Messages.CONTENT_INVENTORY_ACTIVITY_CARD_ARIA_ROLE_DESCRIPTION,
+                    'aria-roledescription': f.Z.Messages.CONTENT_INVENTORY_ACTIVITY_CARD_ARIA_ROLE_DESCRIPTION,
                     'aria-labelledby': S,
                     'data-disable-adaptive-theme': !0,
-                    className: i()(f.container, e),
+                    className: i()(E.container, e),
                     style: g,
                     children: [
                         (0, t.jsx)(C, {
-                            className: f.thumbnailContainer,
-                            clickableClassName: f.clickable,
+                            className: E.thumbnailContainer,
+                            clickableClassName: E.clickable,
                             clickable: T,
                             children: (0, t.jsx)(u.f, {
                                 src: _,
@@ -96,22 +96,22 @@ function _(e) {
                             })
                         }),
                         (0, t.jsxs)('div', {
-                            className: f.infoContainer,
+                            className: E.infoContainer,
                             children: [
                                 (0, t.jsx)(s.Z, {
                                     channel: l,
                                     entry: n,
-                                    className: f.users
+                                    className: E.users
                                 }),
                                 (0, t.jsx)(a.Spacer, { size: 2 }),
                                 (0, t.jsx)(v, {
                                     clickable: h,
-                                    className: f.clickableText,
+                                    className: E.clickableText,
                                     children: (0, t.jsx)(a.Heading, {
                                         id: S,
                                         variant: 'heading-md/medium',
                                         lineClamp: 1,
-                                        className: i()(f.textPrimary, f.truncatedText),
+                                        className: i()(E.textPrimary, E.truncatedText),
                                         scaleFontToUserSetting: !0,
                                         children: r
                                     })
@@ -122,10 +122,10 @@ function _(e) {
                                               (0, t.jsx)(a.Spacer, { size: 2 }),
                                               (0, t.jsx)(v, {
                                                   clickable: x,
-                                                  className: f.clickableText,
+                                                  className: E.clickableText,
                                                   children: (0, t.jsx)(a.Text, {
                                                       variant: 'text-sm/normal',
-                                                      className: i()(f.textSecondary, f.truncatedText),
+                                                      className: i()(E.textSecondary, E.truncatedText),
                                                       lineClamp: 1,
                                                       scaleFontToUserSetting: !0,
                                                       children: N
@@ -135,14 +135,14 @@ function _(e) {
                                       })
                                     : null,
                                 (0, t.jsx)(d.PZ, {
-                                    className: f.badges,
+                                    className: E.badges,
                                     entry: n,
                                     location: d.Gt.EMBED
                                 })
                             ]
                         }),
                         (0, t.jsx)('div', {
-                            className: f.headerIcons,
+                            className: E.headerIcons,
                             children: null != I ? (0, t.jsx)(o.Z, { ...I }) : null
                         })
                     ]

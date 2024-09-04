@@ -1034,11 +1034,11 @@ class el extends E.Z {
     }
     incomingVideoEnabledChanged(e) {
         var t, n;
-        null === (t = this._goLiveQualityManager) || void 0 === t || t.onIncomingVideoEnabled(e), null === (n = this._videoQuality) || void 0 === n || n.setOcclusionIncomingVideoEnabled(e);
+        null === (t = this._goLiveQualityManager) || void 0 === t || t.onIncomingVideoEnabled(e), null === (n = this.getOrCreateVideoQuality()) || void 0 === n || n.setOcclusionIncomingVideoEnabled(e);
     }
     windowVisibilityChanged(e) {
         var t;
-        null === (t = this._videoQuality) || void 0 === t || t.setWindowOcclusionState(!e);
+        null === (t = this.getOrCreateVideoQuality()) || void 0 === t || t.setWindowOcclusionState(!e);
     }
     constructor({ userId: e, sessionId: t, guildId: n, channelId: r, context: i = ei.Yn.DEFAULT, rtcServerId: a, parentMediaSessionId: s }) {
         var l, u;
@@ -1241,8 +1241,8 @@ class el extends E.Z {
                     }
                 }));
         (this._remoteVideoSinkWants = Q.Yy),
-            en.w.on(en.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged),
-            en.w.on(en.e.WindowVisibilityChanged, this.windowVisibilityChanged),
+            en.w.on(en.e.IncomingVideoEnabledChanged, this.incomingVideoEnabledChanged.bind(this)),
+            en.w.on(en.e.WindowVisibilityChanged, this.windowVisibilityChanged.bind(this)),
             B.ZP.shouldRecordNextConnection() ? ((this._recordingEnabled = !0), T.TC(!1)) : (this._recordingEnabled = !1),
             (this._soundshareStats = new X.Z()),
             Z.Z.addOnlineCallback(this._handleNetworkOnline),

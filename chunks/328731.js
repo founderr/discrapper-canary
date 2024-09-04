@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var t = l(735250),
@@ -14,15 +14,15 @@ var t = l(735250),
     d = l(91907),
     m = l(866040),
     p = l(689938),
-    E = l(182408);
-function f(e) {
+    f = l(182408);
+function E(e) {
     let { entry: n, channel: l, className: r } = e,
-        { displayParticipants: f, participant1: N, participant2: C, numOtherParticipants: v, orderedParticipants: _ } = (0, o.Z)(n),
+        { displayParticipants: E, participant1: N, participant2: C, numOtherParticipants: v, orderedParticipants: _ } = (0, o.Z)(n),
         h = [N, C];
     return (0, t.jsxs)('div', {
-        className: i()(E.container, r),
+        className: i()(f.container, r),
         children: [
-            f.length > 0
+            E.length > 0
                 ? (0, t.jsxs)(t.Fragment, {
                       children: [
                           (0, t.jsx)(m.Z, {
@@ -30,13 +30,13 @@ function f(e) {
                               channel: l,
                               children: (e) =>
                                   (0, t.jsx)(a.Clickable, {
-                                      className: E.clickable,
+                                      className: f.clickable,
                                       ...e,
                                       children: (0, t.jsx)(s.Z, {
                                           maxUsers: 3,
-                                          users: f,
+                                          users: E,
                                           size: a.AvatarSizes.SIZE_20,
-                                          avatarClassName: E.stackedAvatar,
+                                          avatarClassName: f.stackedAvatar,
                                           hideOverflowCount: !0,
                                           disableUsernameTooltip: !0
                                       })
@@ -52,7 +52,7 @@ function f(e) {
             (0, t.jsx)(a.Heading, {
                 variant: 'text-sm/semibold',
                 color: 'text-secondary',
-                className: i()(E.truncatedText, E.usersHeader),
+                className: i()(f.truncatedText, f.usersHeader),
                 scaleFontToUserSetting: !0,
                 children: p.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
                     user0: u.ZP.getName(l.guild_id, l.id, h[0]),

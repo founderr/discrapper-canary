@@ -18,8 +18,8 @@ var r = l(120356),
     d = l(378975),
     m = l(413991),
     p = l(12067),
-    E = l(676149),
-    f = l(861529),
+    f = l(676149),
+    E = l(861529),
     N = l(770009),
     C = l(889515),
     v = l(751319);
@@ -49,11 +49,11 @@ function _(e) {
                 case a.re.INPUT_TEXT:
                     return (0, t.jsx)(m.Z, { ...e }, n);
                 case a.re.TEXT:
-                    return (0, t.jsx)(f.Z, { ...e }, n);
+                    return (0, t.jsx)(E.Z, { ...e }, n);
                 case a.re.MEDIA_GALLERY:
                     return (0, t.jsx)(p.Z, { ...e }, n);
                 case a.re.SEPARATOR:
-                    return (0, t.jsx)(E.Z, { ...e }, n);
+                    return (0, t.jsx)(f.Z, { ...e }, n);
                 case a.re.CONTENT_INVENTORY_ENTRY:
                     return (0, t.jsx)(N.Z, { ...e }, n);
             }

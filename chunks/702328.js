@@ -93,7 +93,7 @@ t.Z = (e) => {
         [v, L] = a.useState(!1),
         [Z, y] = a.useState(!1),
         [Q, q] = a.useState(!1),
-        [X, J] = a.useState(!1),
+        [J, X] = a.useState(!1),
         $ = (0, o.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
         ee = null != $ ? (0, g.Af)($) : null,
         et = null != ee ? g.ZP.getSkuIdForPlan(ee.planId) : null,
@@ -117,7 +117,7 @@ t.Z = (e) => {
             autoTrackExposure: !1
         }),
         a.useEffect(() => {
-            J(!0);
+            X(!0);
         }, []);
     let eT = (0, s.jsx)('div', {
             className: i()({
@@ -248,7 +248,7 @@ t.Z = (e) => {
                 }),
                 (0, s.jsx)('div', { className: n ? w.footerSpacingFullscreen : w.footerSpacing }),
                 (0, s.jsx)(D.Z, {
-                    isVisible: !v && !Z && X,
+                    isVisible: !v && !Z && J,
                     isFullscreen: n,
                     subscriptionTier: en
                 }),

@@ -30,7 +30,7 @@ var a = t(442837),
     Z = t(981631),
     j = t(689938);
 function S(e) {
-    let { guild: n, channel: S, guildScheduledEvent: L, isActive: D, recurrenceId: k, onActionTaken: R } = e,
+    let { guild: n, channel: S, guildScheduledEvent: L, isActive: k, recurrenceId: D, onActionTaken: R } = e,
         { scheduled_start_time: y, id: M, entity_type: B, guild_id: P } = L,
         { canManageGuildEvent: w } = (0, d.X)(null != S ? S : n),
         A = w(L),
@@ -39,12 +39,12 @@ function S(e) {
         { withinStartWindow: U } = (0, b.ub)(y),
         V = (0, a.e7)([h.Z], () => (null == S ? !void 0 : !S.isGuildVocal()) || h.Z.can(Z.Plq.CONNECT, S), [S]),
         F = (0, s.J)(P),
-        H = (0, E.Z)(k, M);
+        H = (0, E.Z)(D, M);
     function z(e) {
-        e.stopPropagation(), (0, N.Z)(M, k, P);
+        e.stopPropagation(), (0, N.Z)(M, D, P);
     }
     async function W(e) {
-        e.stopPropagation(), await o.Z.joinGuild(P), v.Z.addConditionalChangeListener(() => null == v.Z.getGuild(P) || (!D && z(e), X(e), !1));
+        e.stopPropagation(), await o.Z.joinGuild(P), v.Z.addConditionalChangeListener(() => null == v.Z.getGuild(P) || (!k && z(e), X(e), !1));
     }
     function X(e) {
         e.stopPropagation();
@@ -54,7 +54,7 @@ function S(e) {
     return {
         onDeleteClick: A
             ? function (e) {
-                  if ((e.stopPropagation(), !!A && !D))
+                  if ((e.stopPropagation(), !!A && !k))
                       (0, l.openModal)((e) =>
                           (0, i.jsx)(l.ConfirmModal, {
                               ...e,
@@ -78,7 +78,7 @@ function S(e) {
                         return (t) =>
                             (0, i.jsx)(e, {
                                 guildEventId: M,
-                                recurrenceId: k,
+                                recurrenceId: D,
                                 channel: S,
                                 guild: n,
                                 ...t
@@ -139,7 +139,7 @@ function S(e) {
             }
         },
         onEndClick:
-            A && B === T.WX.EXTERNAL && D
+            A && B === T.WX.EXTERNAL && k
                 ? function (e) {
                       if ((e.stopPropagation(), !A)) return;
                       let n = () => {

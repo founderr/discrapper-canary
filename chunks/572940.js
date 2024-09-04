@@ -1,24 +1,24 @@
-var a = n(735250),
-    t = n(470079),
-    r = n(481060),
-    l = n(246364),
+var t = n(735250),
+    a = n(470079),
+    l = n(481060),
+    r = n(246364),
     i = n(689938);
 s.Z = function (e) {
     let { className: s, sortOrder: n, onSortChange: o } = e,
-        c = t.useMemo(
+        c = a.useMemo(
             () => [
                 {
-                    value: l.Nw.TIMESTAMP_DESC,
+                    value: r.Nw.TIMESTAMP_DESC,
                     label: i.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_SORT_NEWEST
                 },
                 {
-                    value: l.Nw.TIMESTAMP_ASC,
+                    value: r.Nw.TIMESTAMP_ASC,
                     label: i.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_SORT_OLDEST
                 }
             ],
             []
         );
-    return (0, a.jsx)(r.SingleSelect, {
+    return (0, t.jsx)(l.SingleSelect, {
         className: s,
         onChange: o,
         value: n,

@@ -31,8 +31,8 @@ var v = n(392750),
     N = n(691867),
     S = n(916790),
     y = n(645973),
-    I = n(912072),
-    w = n(246992),
+    w = n(912072),
+    I = n(246992),
     k = n(442954),
     E = n(702904),
     R = n(178821),
@@ -46,8 +46,8 @@ var v = n(392750),
     M = n(621060),
     F = n(689938),
     U = n(941735),
-    G = n(535271);
-function H(e) {
+    H = n(535271);
+function G(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: a } = e,
         l = (0, u.Z)({
             minDimension: p.h,
@@ -127,17 +127,17 @@ function z() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, r.jsx)(I.Z, { devSettingsCategory: b.zU.OVERLAYS })
+                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
                     name: 'Messaging',
-                    render: () => (0, r.jsx)(I.Z, { devSettingsCategory: b.zU.MESSAGING })
+                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.MESSAGING })
                 }),
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, r.jsx)(I.Z, { devSettingsCategory: b.zU.REPORTING })
+                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -204,10 +204,10 @@ function z() {
             name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: i }
         }),
-        (0, r.jsxs)(w.Gk, {
+        (0, r.jsxs)(I.Gk, {
             children: [
                 (0, r.jsxs)(m.ZP, {
-                    className: G.headerBar,
+                    className: H.headerBar,
                     toolbar: (0, r.jsx)(m.ZP.Icon, {
                         icon: c.XSmallIcon,
                         tooltip: F.Z.Messages.CLOSE,
@@ -223,7 +223,7 @@ function z() {
                 }),
                 (0, r.jsx)(n, {}),
                 l(),
-                (0, r.jsx)(w.Br, { className: U.layerContainer })
+                (0, r.jsx)(I.Br, { className: U.layerContainer })
             ]
         })
     );
@@ -246,7 +246,7 @@ function V() {
                   width: n
               },
               children: [
-                  (0, r.jsx)(H, {
+                  (0, r.jsx)(G, {
                       resizableNode: e,
                       onResize: l,
                       onResizeEnd: o
@@ -273,7 +273,7 @@ function W() {
               children: (0, r.jsx)(c.Clickable, {
                   onClick: g.SO,
                   children: (0, r.jsxs)(m.ZP, {
-                      className: i()(G.headerBar, U.mobileHeaderCollapsed),
+                      className: i()(H.headerBar, U.mobileHeaderCollapsed),
                       toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
                           (0, r.jsx)(m.ZP.Icon, {

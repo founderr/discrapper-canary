@@ -16,8 +16,8 @@ function d(e) {
         { entry: l, baseEntryData: d } = e,
         m = (0, r.q)(l.extra.application_id),
         p = null == m ? void 0 : m.getIconURL(128),
-        E = (0, i.getAssetImage)(l.extra.application_id, l.extra.media_assets_large_image, [o.Si.LARGE, o.Si.LARGE]),
-        f = l.extra.media_title,
+        f = (0, i.getAssetImage)(l.extra.application_id, l.extra.media_assets_large_image, [o.Si.LARGE, o.Si.LARGE]),
+        E = l.extra.media_title,
         N = l.extra.media_subtitle,
         C = (0, s.kr)(l) && !(0, s.n2)(l) ? c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING_V2 : c.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED_V2,
         v = { type: u.kG.CRUNCHYROLL },
@@ -30,12 +30,12 @@ function d(e) {
         null != _ &&
             (n = {
                 href: a.Z.format(_),
-                ariaDescription: c.Z.Messages.CONTENT_INVENTORY_OPEN_CRUNCHYROLL_ITEM_A11Y_DESCRIPTION.format({ title: f })
+                ariaDescription: c.Z.Messages.CONTENT_INVENTORY_OPEN_CRUNCHYROLL_ITEM_A11Y_DESCRIPTION.format({ title: E })
             }),
         {
             ...d,
-            thumbnailUrl: null != E ? E : p,
-            title: f,
+            thumbnailUrl: null != f ? f : p,
+            title: E,
             titleClickable: n,
             thumbnailClickable: n,
             subtitle: N,

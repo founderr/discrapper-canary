@@ -8,15 +8,15 @@ n(470079);
 var s = n(442837),
     i = n(954138),
     l = n(979264),
-    o = n(741308),
+    o = n(648052),
     a = n(530),
-    c = n(790711),
-    d = n(67152),
+    c = n(420654),
+    d = n(116854),
     u = n(271383),
     f = n(246946),
     m = n(654904),
     E = n(228168),
-    p = n(122269);
+    p = n(115879);
 function _(e) {
     var t;
     let { user: n, displayProfile: _, guild: h, pendingAvatar: I, pendingNickname: g, pendingGlobalName: v, pendingBio: C, pendingPronouns: x, isTryItOutFlow: P, hideBioSection: A } = e,
@@ -41,7 +41,7 @@ function _(e) {
                 usernameIcon: (() => {
                     if (!(null != Z)) return;
                     if (null !== I && !!(null != Z.avatar || null != I))
-                        return (0, r.jsx)(c.Z, {
+                        return (0, r.jsx)(d.Z, {
                             user: n,
                             nickname: R
                         });
@@ -62,7 +62,7 @@ function _(e) {
             !A &&
                 null != S &&
                 '' !== S &&
-                (0, r.jsx)(d.Z, {
+                (0, r.jsx)(c.Z, {
                     user: n,
                     bio: S,
                     hidePersonalInformation: T

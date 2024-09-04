@@ -13,7 +13,7 @@ var t = l(735250),
     o = l(203079);
 function c(e) {
     let n;
-    let { type: l, style: c, label: d, placeholder: m, minLength: p, maxLength: E, required: f, value: N } = e,
+    let { type: l, style: c, label: d, placeholder: m, minLength: p, maxLength: f, required: E, value: N } = e,
         [C, v] = r.useState(null != N ? N : ''),
         {
             state: _,
@@ -37,8 +37,8 @@ function c(e) {
         value: C,
         placeholder: m,
         minLength: p,
-        maxLength: E,
-        required: f,
+        maxLength: f,
+        required: E,
         onChange: (e) => {
             v(e),
                 h({
@@ -57,7 +57,7 @@ function c(e) {
     }
     return (0, t.jsx)(i.FormItem, {
         title: d,
-        required: f,
+        required: E,
         className: o.formItem,
         error: x,
         children: n

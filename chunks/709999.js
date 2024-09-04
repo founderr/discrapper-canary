@@ -29,8 +29,8 @@ var a = n(735250),
     B = n(1870),
     j = n(884697),
     Z = n(664018),
-    A = n(890249),
-    P = n(635552),
+    P = n(890249),
+    A = n(635552),
     R = n(724994),
     y = n(390698),
     M = n(813083),
@@ -88,7 +88,7 @@ t.Z = function (e) {
         { isPurchased: ed, isPartiallyPurchased: eu } = (0, R.L)(t),
         [ef, ep] = (0, p.Wu)([B.Z], () => [B.Z.isClaiming === t.skuId, null != B.Z.isClaiming && B.Z.isClaiming !== t.skuId]),
         eg = (0, p.e7)([N.Z], () => (0, g.wj)(N.Z.theme)),
-        eC = (0, A.m)('CollectiblesCollectedModal'),
+        eC = (0, P.m)('CollectiblesCollectedModal'),
         em = (0, j.x6)(t) || eC,
         e_ = (0, j.Yq)(t.skuId),
         { hoverVariant: eb } = (0, Z.E)('CollectiblesShopTallCard'),
@@ -110,7 +110,7 @@ t.Z = function (e) {
         }, [i]);
     let ex = (0, T.Z)({ analyticsLocations: $ }),
         eI = r.useRef(null),
-        { handleUseNow: eE, isApplying: ev } = (0, P.W)({ product: t }),
+        { handleUseNow: eE, isApplying: ev } = (0, A.W)({ product: t }),
         eT = () => {
             if (((0, m.xf)(), ex(), t.type === f.Z.AVATAR_DECORATION && null != ea)) {
                 l()(ea.type === t.type, "product type is equivlant to first item's check for avatar deco"),

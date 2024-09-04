@@ -37,8 +37,8 @@ var t = n(735250),
     k = n(206583),
     y = n(689938),
     B = n(707443);
-let U = 'GameProfileModal',
-    w = (e) => {
+let w = 'GameProfileModal',
+    U = (e) => {
         let { game: a, onClose: n, trackClick: r } = e,
             s = (0, I.e7)([N.Z], () => {
                 var e;
@@ -127,7 +127,7 @@ let U = 'GameProfileModal',
             { width: V, height: X } = (0, C.b)(),
             [J, q] = r.useState(() => {
                 var e;
-                return null === (e = A.K.get(U)) || void 0 === e ? void 0 : e[o];
+                return null === (e = A.K.get(w)) || void 0 === e ? void 0 : e[o];
             }),
             $ = (0, I.e7)([S.default], () => S.default.locale),
             [ee, ea] = r.useState(null),
@@ -336,9 +336,9 @@ let U = 'GameProfileModal',
                                                         color: J ? m.Button.Colors.PRIMARY : m.Button.Colors.BRAND,
                                                         onClick: () => {
                                                             var e;
-                                                            let a = null !== (e = A.K.get(U)) && void 0 !== e ? e : {};
+                                                            let a = null !== (e = A.K.get(w)) && void 0 !== e ? e : {};
                                                             (a[o] = !a[o]),
-                                                                A.K.set(U, a),
+                                                                A.K.set(w, a),
                                                                 eg(a[o] ? f.as.FollowGame : f.as.UnfollowGame),
                                                                 a[o] &&
                                                                     (0, b.L)() &&
@@ -490,7 +490,7 @@ let U = 'GameProfileModal',
                                                         style: {},
                                                         children: ec.map((e) =>
                                                             (0, t.jsx)(
-                                                                w,
+                                                                U,
                                                                 {
                                                                     game: e,
                                                                     onClose: Y,

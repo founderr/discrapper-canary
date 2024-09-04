@@ -17,10 +17,10 @@ var r = n(735250),
     E = n(785717),
     f = n(221292),
     h = n(318661),
-    p = n(78675),
-    I = n(741308),
-    m = n(588822),
-    T = n(899007),
+    p = n(899007),
+    I = n(648052),
+    m = n(867176),
+    T = n(280885),
     g = n(502762),
     S = n(530),
     A = n(679332),
@@ -28,7 +28,7 @@ var r = n(735250),
     O = n(171368),
     R = n(228168),
     v = n(689938),
-    C = n(122269);
+    C = n(115879);
 function y(e) {
     let { user: t, guildId: n, channelId: y, messageId: L, roleId: D, setPopoutRef: b, closePopout: M, disableUserProfileLink: P = __OVERLAY__, newAnalyticsLocations: U = [] } = e,
         w = (0, h.ZP)(t.id, n),
@@ -90,13 +90,13 @@ function y(e) {
                             (0, r.jsxs)('header', {
                                 className: C.header,
                                 children: [
-                                    (0, r.jsx)(p.Z, {
+                                    (0, r.jsx)(m.Z, {
                                         user: t,
                                         displayProfile: w,
                                         guildId: n,
                                         profileType: R.y0.BITE_SIZE
                                     }),
-                                    (0, r.jsx)(T.Z, {
+                                    (0, r.jsx)(p.Z, {
                                         user: t,
                                         displayProfile: w,
                                         guildId: n,
@@ -122,7 +122,7 @@ function y(e) {
                                             onClose: M
                                         })
                                     }),
-                                    (0, r.jsx)(m.Z, {
+                                    (0, r.jsx)(T.Z, {
                                         userId: t.id,
                                         userBio: null == w ? void 0 : w.bio,
                                         setLineClamp: !1,

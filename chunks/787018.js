@@ -13,7 +13,7 @@ var s = t(735250),
     c = t(785717),
     d = t(221292),
     u = t(318661),
-    I = t(299261),
+    I = t(471879),
     _ = t(502762),
     E = t(475413),
     f = t(228168),
@@ -44,8 +44,8 @@ function h(e) {
                 description: p.Z.Messages.USER_PROFILE_BLOCKED_SPEED_BUMP_ACTION_SHEET_STILL_BLOCKED
             }
         ],
-        b = (0, u.ZP)(n.id, g ? L : void 0),
-        O = i.createRef();
+        O = (0, u.ZP)(n.id, g ? L : void 0),
+        P = i.createRef();
     return (0, s.jsx)(r.Gt, {
         value: R,
         children: (0, s.jsx)(c.Mt, {
@@ -57,9 +57,9 @@ function h(e) {
                 'aria-label': p.Z.Messages.USER_PROFILE_MODAL,
                 children: (0, s.jsx)(_.Z, {
                     user: n,
-                    displayProfile: b,
+                    displayProfile: O,
                     profileType: f.y0.FULL_SIZE,
-                    ref: O,
+                    ref: P,
                     children: (0, s.jsxs)('div', {
                         className: x.container,
                         children: [

@@ -16,8 +16,8 @@ var a = t(735250),
     N = t(230711),
     T = t(410030),
     S = t(607070),
-    p = t(44315),
-    A = t(112831),
+    A = t(44315),
+    p = t(112831),
     L = t(543241),
     x = t(906411),
     R = t(565138),
@@ -26,7 +26,7 @@ var a = t(735250),
     g = t(484459),
     O = t(318661),
     h = t(813549),
-    P = t(78675),
+    P = t(867176),
     j = t(502762),
     U = t(652853),
     Z = t(430824),
@@ -111,7 +111,7 @@ function eu(e) {
 function e_(e) {
     let { ...s } = e,
         { theme: t } = (0, U.z)(),
-        n = (0, p.O0)(W.tPk.INTERACTIVE_ACTIVE, t);
+        n = (0, A.O0)(W.tPk.INTERACTIVE_ACTIVE, t);
     return (0, a.jsx)(m.NitroWheelIcon, {
         size: 'md',
         ...s,
@@ -132,7 +132,7 @@ function ed(e) {
                     profileType: null,
                     className: K.profileCard,
                     children: [
-                        (0, a.jsx)(P.p, {
+                        (0, a.jsx)(P.b, {
                             user: s,
                             displayProfile: i,
                             avatarSize: m.AvatarSizes.SIZE_56,
@@ -486,14 +486,14 @@ s.Z = function (e) {
     n.useEffect(() => {
         (0, g.Z)(S.id, S.getAvatarURL(null, 80));
     }, [S]);
-    let p = null != C && !I;
+    let A = null != C && !I;
     return (n.useEffect(() => {
-        p &&
+        A &&
             G.default.track(W.rMx.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED, {
                 location_stack: _,
                 discount_id: null == C ? void 0 : C.discount_id
             });
-    }, [p, _, C]),
+    }, [A, _, C]),
     I)
         ? (0, a.jsxs)(a.Fragment, {
               children: [
@@ -516,8 +516,8 @@ s.Z = function (e) {
                   (0, a.jsxs)(m.ModalContent, {
                       className: K.body,
                       children: [
-                          (0, a.jsx)(A.Z, {
-                              size: A.Z.Sizes.SIZE_24,
+                          (0, a.jsx)(p.Z, {
+                              size: p.Z.Sizes.SIZE_24,
                               className: K.title,
                               children: t
                           }),
@@ -540,8 +540,8 @@ s.Z = function (e) {
                           })
                       ]
                   }),
-                  !p && (0, a.jsx)(m.ModalFooter, { children: r }),
-                  p &&
+                  !A && (0, a.jsx)(m.ModalFooter, { children: r }),
+                  A &&
                       (0, a.jsx)(k.Z, {
                           churnUserDiscountOffer: C,
                           onDiscountClaim: c,

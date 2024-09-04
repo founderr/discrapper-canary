@@ -21,8 +21,8 @@ var a = t(735250),
     N = t(93127),
     T = t(814443),
     S = t(590783),
-    p = t(699516),
-    A = t(246946),
+    A = t(699516),
+    p = t(246946),
     L = t(594174),
     x = t(572004),
     R = t(669079),
@@ -34,8 +34,8 @@ var a = t(735250),
     P = t(851212);
 function j(e) {
     let { giftCode: s, application: t, sku: i, subscriptionPlan: l, selectedGiftStyle: o, onClose: _, hasSentMessage: d, giftRecipient: C, giftMessageError: N, isSendingMessage: T } = e,
-        [p, L] = n.useState(u.CopyInput.Modes.DEFAULT),
-        j = (0, c.e7)([A.Z], () => A.Z.enabled),
+        [A, L] = n.useState(u.CopyInput.Modes.DEFAULT),
+        j = (0, c.e7)([p.Z], () => p.Z.enabled),
         Z = d || (null != o && null != C),
         v = (null == i ? void 0 : i.productLine) === g.POd.COLLECTIBLES,
         b = () => (null != l ? l.skuId : null != i ? i.id : null),
@@ -72,7 +72,7 @@ function j(e) {
         y = () => {
             let e;
             if (null == s) return null;
-            switch (p) {
+            switch (A) {
                 case u.CopyInput.Modes.SUCCESS:
                     e = h.Z.Messages.BILLING_GIFT_COPIED;
                     break;
@@ -90,7 +90,7 @@ function j(e) {
                         (0, a.jsx)(u.CopyInput, {
                             hideMessage: j ? h.Z.Messages.GIFT_INVENTORY_HIDDEN : null,
                             value: (0, R.Nz)(s),
-                            mode: p,
+                            mode: A,
                             text: e,
                             onCopy: (e) => G(e, s),
                             supportsCopy: x.wS,
@@ -199,12 +199,12 @@ let U = (e) => {
     let [i, r] = n.useState(),
         [l, m] = n.useState(!1),
         [E, S] = n.useState(!1),
-        { userAffinities: A, isLoading: x } = (0, c.cj)([T.Z], () => ({
+        { userAffinities: p, isLoading: x } = (0, c.cj)([T.Z], () => ({
             userAffinities: T.Z.getUserAffinitiesUserIds(),
             isLoading: T.Z.getFetching()
         })),
-        R = Array.from(A.values()),
-        f = (0, c.e7)([p.Z], () => p.Z.getFriendIDs()),
+        R = Array.from(p.values()),
+        f = (0, c.e7)([A.Z], () => A.Z.getFriendIDs()),
         g = o().difference(f, R),
         O = [...R, ...g],
         j = (0, c.e7)([L.default], () => L.default.filter((e) => O.includes(e.id) && !e.bot), [O]);

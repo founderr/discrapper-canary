@@ -18,10 +18,10 @@ var i = n(735250),
     _ = n(785717),
     f = n(221292),
     E = n(318661),
-    C = n(78675),
-    g = n(741308),
-    I = n(588822),
-    x = n(899007),
+    C = n(899007),
+    g = n(648052),
+    I = n(867176),
+    x = n(280885),
     T = n(900927),
     N = n(678738),
     S = n(502762),
@@ -31,8 +31,8 @@ var i = n(735250),
     M = n(171368),
     b = n(228168),
     R = n(689938),
-    L = n(317986),
-    j = n(27251);
+    L = n(61291),
+    j = n(836272);
 function O(e) {
     let { user: t, channel: n } = e,
         O = __OVERLAY__ || !(0, d.Z)(t.id),
@@ -74,13 +74,13 @@ function O(e) {
                             (0, i.jsxs)('header', {
                                 className: L.header,
                                 children: [
-                                    (0, i.jsx)(C.Z, {
+                                    (0, i.jsx)(I.Z, {
                                         user: t,
                                         displayProfile: P,
                                         profileType: b.y0.PANEL,
                                         animateOnHover: !w
                                     }),
-                                    (0, i.jsx)(x.Z, {
+                                    (0, i.jsx)(C.Z, {
                                         user: t,
                                         displayProfile: P,
                                         channelId: n.id,
@@ -110,7 +110,7 @@ function O(e) {
                                             (0, i.jsx)(N.Z, {
                                                 heading: R.Z.Messages.USER_POPOUT_ABOUT_ME,
                                                 headingColor: 'header-primary',
-                                                children: (0, i.jsx)(I.Z, {
+                                                children: (0, i.jsx)(x.Z, {
                                                     userBio: null == P ? void 0 : P.bio,
                                                     userId: t.id,
                                                     animateOnHover: !0,

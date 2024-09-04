@@ -144,7 +144,7 @@ function g(e) {
         ),
         []
     );
-    let I = a.useCallback(() => {
+    let w = a.useCallback(() => {
         m(), j(), T();
     }, [m, j, T]);
     return (0, r.jsxs)('div', {
@@ -271,7 +271,7 @@ function g(e) {
                 className: u.bottomPanelButton,
                 children: (0, r.jsx)(s.Button, {
                     size: s.Button.Sizes.SMALL,
-                    onClick: I,
+                    onClick: w,
                     children: 'Reset Frame Data'
                 })
             })

@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return f;
+        return E;
     }
 });
 var t = l(876215),
@@ -17,20 +17,20 @@ let p = {
         [r.z.XBOX]: o.kG.XBOX,
         [r.z.PLAYSTATION]: o.kG.PLAYSTATION
     },
-    E = { [c._.EMBED]: a.m1.Embed };
-function f(e) {
+    f = { [c._.EMBED]: a.m1.Embed };
+function E(e) {
     let n,
         l,
         { entry: r, location: a, baseEntryData: o } = e,
         c = (0, i.q)(r.extra.application_id),
-        f = null == c ? void 0 : c.getIconURL(d.Si.LARGE),
+        E = null == c ? void 0 : c.getIconURL(d.Si.LARGE),
         N = r.extra.game_name;
     if (null != r.extra.platform) {
         let e = p[r.extra.platform];
         null != e && (n = { type: e });
     }
     l = r.content_type === t.s.PLAYED_GAME ? ((0, u.kr)(r) && !(0, u.n2)(r) ? m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2) : m.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2;
-    let C = E[a],
+    let C = f[a],
         v = {
             onClick: (0, s.Z)({
                 location: C,
@@ -43,7 +43,7 @@ function f(e) {
         };
     return {
         ...o,
-        thumbnailUrl: f,
+        thumbnailUrl: E,
         title: N,
         titleClickable: v,
         thumbnailClickable: v,

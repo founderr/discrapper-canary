@@ -15,19 +15,19 @@ var t = l(735250),
     d = l(970184),
     m = l(280501),
     p = l(689938),
-    E = l(252443);
-function f(e) {
+    f = l(252443);
+function E(e) {
     let { emoji: n, label: l, description: r, isDisabled: i, isOffset: s } = e,
-        o = a()(E.labelContainer, {
-            [E.disabled]: i,
-            [E.offset]: null == n && s
+        o = a()(f.labelContainer, {
+            [f.disabled]: i,
+            [f.offset]: null == n && s
         });
     return (0, t.jsxs)('div', {
-        className: E.option,
+        className: f.option,
         children: [
             null != n
                 ? (0, t.jsx)(u.Z, {
-                      className: E.emoji,
+                      className: f.emoji,
                       emojiId: n.id,
                       emojiName: n.name,
                       animated: n.animated
@@ -37,12 +37,12 @@ function f(e) {
                 className: o,
                 children: [
                     (0, t.jsx)('strong', {
-                        className: E.label,
+                        className: f.label,
                         children: l
                     }),
                     null != r
                         ? (0, t.jsx)('span', {
-                              className: E.description,
+                              className: f.description,
                               children: r
                           })
                         : null
@@ -54,13 +54,13 @@ function f(e) {
 function N(e) {
     let { emoji: n, label: l } = e;
     return (0, t.jsx)('div', {
-        className: E.option,
+        className: f.option,
         children: (0, t.jsxs)('div', {
-            className: a()(E.value, E.singleValue),
+            className: a()(f.value, f.singleValue),
             children: [
                 null != n
                     ? (0, t.jsx)(u.Z, {
-                          className: E.emoji,
+                          className: f.emoji,
                           src: n.src,
                           emojiId: n.id,
                           emojiName: n.name,
@@ -68,7 +68,7 @@ function N(e) {
                       })
                     : null,
                 (0, t.jsx)('span', {
-                    className: E.singleValueLabel,
+                    className: f.singleValueLabel,
                     children: l
                 })
             ]
@@ -78,18 +78,18 @@ function N(e) {
 function C(e) {
     let { options: n } = e;
     return (0, t.jsx)('div', {
-        className: E.option,
+        className: f.option,
         children: (0, t.jsx)('div', {
-            className: E.value,
+            className: f.value,
             children: n.map((e, n) =>
                 (0, t.jsxs)(
                     'div',
                     {
-                        className: E.optionTag,
+                        className: f.optionTag,
                         children: [
                             null != e.emoji
                                 ? (0, t.jsx)(u.Z, {
-                                      className: E.smallEmoji,
+                                      className: f.smallEmoji,
                                       src: e.emoji.src,
                                       emojiId: e.emoji.id,
                                       emojiName: e.emoji.name,
@@ -99,7 +99,7 @@ function C(e) {
                             (0, t.jsx)(
                                 'span',
                                 {
-                                    className: E.tag,
+                                    className: f.tag,
                                     children: e.label
                                 },
                                 e.value
@@ -160,11 +160,11 @@ function v(e) {
     return (0, t.jsxs)(r.Fragment, {
         children: [
             (0, t.jsxs)('div', {
-                className: E.container,
+                className: f.container,
                 children: [
                     (0, t.jsx)(s.Select, {
                         isDisabled: _ || g,
-                        className: E.select,
+                        className: f.select,
                         options: l.map((e) => ({
                             ...e,
                             disabled: O && !M.has(e.value) && M.size === u
@@ -174,9 +174,9 @@ function v(e) {
                         onOpen: () => R(!0),
                         maxVisibleItems: 5,
                         closeOnSelect: !O,
-                        optionClassName: E.selectOption,
+                        optionClassName: f.selectOption,
                         renderOptionLabel: (e) =>
-                            (0, t.jsx)(f, {
+                            (0, t.jsx)(E, {
                                 ...e,
                                 isDisabled: O && !M.has(e.value) && M.size === u,
                                 isOffset: P
@@ -186,7 +186,7 @@ function v(e) {
                     }),
                     j
                         ? (0, t.jsx)('div', {
-                              className: E.__invalid_loading,
+                              className: f.__invalid_loading,
                               children: (0, t.jsx)(s.Dots, {
                                   dotRadius: 3.5,
                                   themed: !0
@@ -198,7 +198,7 @@ function v(e) {
             null != S
                 ? (0, t.jsx)(c.st, {
                       ...(0, c.c4)(S),
-                      className: E.error
+                      className: f.error
                   })
                 : null
         ]

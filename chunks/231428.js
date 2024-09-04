@@ -218,7 +218,7 @@ function v(e) {
         }, [l, r]),
         (0, a.jsx)(b, {
             ...e,
-            payments: l() ? s : [],
+            payments: s,
             subscription: t
         })
     );

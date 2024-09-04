@@ -14,8 +14,8 @@ var t = l(735250),
     d = l(488915),
     m = l(171246),
     p = l(509545),
-    E = l(55563),
-    f = l(551428),
+    f = l(55563),
+    E = l(551428),
     N = l(937615),
     C = l(147496),
     v = l(519896),
@@ -25,13 +25,13 @@ function x(e) {
     r.useEffect(() => {
         if (null != e) (0, s.$N)('', e), (0, u.km)(e);
     }, [e]);
-    let n = (0, i.e7)([E.Z], () => (null != e ? E.Z.get(e) : void 0), [e]);
+    let n = (0, i.e7)([f.Z], () => (null != e ? f.Z.get(e) : void 0), [e]);
     r.useEffect(() => {
         (null == n ? void 0 : n.type) === _.epS.SUBSCRIPTION && (0, o.GZ)(n.id);
     }, [n]);
     let l = (0, i.Wu)([p.Z], () => (null != e ? p.Z.getForSKU(e) : []), [e]),
         x = r.useMemo(() => (null != l ? l.map((e) => e.id)[0] : void 0), [l]),
-        T = (0, i.e7)([f.Z], () => (null != e ? f.Z.getForSKU(e) : void 0), [e]);
+        T = (0, i.e7)([E.Z], () => (null != e ? E.Z.getForSKU(e) : void 0), [e]);
     r.useEffect(() => {
         if (null != x) (0, c.vY)(x);
     }, [x]);

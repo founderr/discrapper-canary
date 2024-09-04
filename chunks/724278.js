@@ -30,20 +30,20 @@ var i = t(735250),
     j = t(390072),
     S = t(981631),
     L = t(689938),
-    D = t(55109);
-function k(e) {
+    k = t(55109);
+function D(e) {
     var n;
     let { creator: t, guildId: a, channelId: l } = e,
         { analyticsLocations: r } = (0, d.ZP)(),
         s = (0, o.e7)([v.ZP], () => v.ZP.getMember(a, t.id), [t, a]);
     return (0, i.jsxs)('div', {
-        className: D.row,
+        className: k.row,
         children: [
             (0, i.jsx)(c.Avatar, {
                 size: c.AvatarSizes.SIZE_20,
                 src: t.getAvatarURL(a, 20),
                 'aria-label': null !== (n = null == s ? void 0 : s.nick) && void 0 !== n ? n : f.ZP.getName(t),
-                className: D.icon
+                className: k.icon
             }),
             (0, i.jsx)(c.Text, {
                 color: 'header-secondary',
@@ -63,7 +63,7 @@ function k(e) {
                                         sourceAnalyticsLocations: r,
                                         analyticsLocation: { section: S.jXE.SCHEDULED_GUILD_EVENT_INFORMATION_DIALOG }
                                     }),
-                                className: D.creator,
+                                className: k.creator,
                                 tag: 'span',
                                 role: 'link',
                                 children: (0, i.jsx)(c.NameWithRole, {
@@ -93,30 +93,30 @@ function R(e) {
                     guild: n,
                     size: u.Z.Sizes.MINI,
                     active: !0,
-                    className: r()(D.guildIcon, D.icon)
+                    className: r()(k.guildIcon, k.icon)
                 }),
                 (0, i.jsx)(_.Z, {
                     guild: n,
                     tooltipPosition: 'top',
                     tooltipColor: c.Tooltip.Colors.PRIMARY,
                     size: 16,
-                    className: D.guildBadge
+                    className: k.guildBadge
                 }),
                 (0, i.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    className: D.linkText,
+                    className: k.linkText,
                     children: n.name
                 })
             ]
         });
     return (0, i.jsx)('div', {
-        className: D.row,
+        className: k.row,
         children:
             null != t
                 ? (0, i.jsx)(c.Clickable, {
                       onClick: o,
-                      className: D.clickable,
+                      className: k.clickable,
                       role: 'link',
                       children: s
                   })
@@ -126,18 +126,18 @@ function R(e) {
 function y(e) {
     let { userCount: n, onClick: t } = e;
     return (0, i.jsxs)('div', {
-        className: D.row,
+        className: k.row,
         children: [
             (0, i.jsx)(c.GroupIcon, {
                 size: 'custom',
                 color: 'currentColor',
                 width: 20,
                 height: 20,
-                className: D.icon
+                className: k.icon
             }),
             (0, i.jsx)(c.Clickable, {
                 onClick: t,
-                className: D.interestedCount,
+                className: k.interestedCount,
                 children: (0, i.jsx)(c.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
@@ -169,7 +169,7 @@ function M(e) {
         ref: g,
         children: [
             (0, i.jsxs)('div', {
-                className: D.header,
+                className: k.header,
                 children: [
                     (0, i.jsx)(Z.z, {
                         startTime: L.toISOString(),
@@ -183,13 +183,13 @@ function M(e) {
                         id: r,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',
-                        className: D.title,
+                        className: k.title,
                         children: n.name
                     })
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: D.body,
+                className: k.body,
                 children: [
                     (0, i.jsx)(R, {
                         guild: t,
@@ -209,7 +209,7 @@ function M(e) {
                     !_ &&
                         null != A &&
                         (0, i.jsx)(
-                            k,
+                            D,
                             {
                                 creator: A,
                                 guildId: t.id,
@@ -219,7 +219,7 @@ function M(e) {
                         ),
                     null != n.description &&
                         (0, i.jsx)('div', {
-                            className: D.description,
+                            className: k.description,
                             children: (0, i.jsx)(N.Z, {
                                 description: n.description,
                                 truncate: !1,
@@ -228,7 +228,7 @@ function M(e) {
                         })
                 ]
             }),
-            null != G && (0, i.jsx)('hr', { className: D.divider }),
+            null != G && (0, i.jsx)('hr', { className: k.divider }),
             null != G &&
                 (0, i.jsx)(T.Z, {
                     guildId: t.id,

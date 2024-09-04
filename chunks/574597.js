@@ -14,8 +14,8 @@ var t = l(735250),
     d = l(14263),
     m = l(592125),
     p = l(430824),
-    E = l(158776),
-    f = l(594174),
+    f = l(158776),
+    E = l(594174),
     N = l(970184),
     C = l(280501),
     v = l(811654),
@@ -36,12 +36,12 @@ function T(e) {
         renderIcon: (e, n) => {
             let l = n === _.tE.PILL_ICON_SIZE;
             if ((null == e ? void 0 : e.type) === C.tM.USER) {
-                let r = f.default.getUser(e.value);
+                let r = E.default.getUser(e.value);
                 if (null == r) return;
                 return (0, t.jsx)(a.Avatar, {
                     size: l ? a.AvatarSizes.SIZE_16 : a.AvatarSizes.SIZE_24,
                     src: r.getAvatarURL(null == g ? void 0 : g.id, n),
-                    status: l ? null : E.Z.getStatus(r.id),
+                    status: l ? null : f.Z.getStatus(r.id),
                     'aria-hidden': !0
                 });
             }
@@ -63,7 +63,7 @@ function T(e) {
         renderOptionLabel: (e) => {
             let n = null;
             if (e.type === C.tM.USER) {
-                let l = f.default.getUser(e.value);
+                let l = E.default.getUser(e.value);
                 null != l &&
                     (n = (0, t.jsx)(s.Z, {
                         className: x.tag,

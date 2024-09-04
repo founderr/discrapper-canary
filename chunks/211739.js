@@ -3,7 +3,7 @@ _.d(E, {
         return a;
     },
     c4: function () {
-        return n;
+        return t;
     },
     lc: function () {
         return M;
@@ -12,27 +12,27 @@ _.d(E, {
         return s;
     }
 });
-var t = _(570140);
-function n(e) {
-    t.Z.dispatch({
+var n = _(570140);
+function t(e) {
+    n.Z.dispatch({
         type: 'CATEGORY_COLLAPSE',
         id: e
     });
 }
 function s(e) {
-    t.Z.dispatch({
+    n.Z.dispatch({
         type: 'CATEGORY_EXPAND',
         id: e
     });
 }
 function a(e) {
-    t.Z.dispatch({
+    n.Z.dispatch({
         type: 'CATEGORY_COLLAPSE_ALL',
         guildId: e
     });
 }
 function M(e) {
-    t.Z.dispatch({
+    n.Z.dispatch({
         type: 'CATEGORY_EXPAND_ALL',
         guildId: e
     });

@@ -29,8 +29,8 @@ var a = n(735250),
     B = n(74538),
     j = n(335131),
     Z = n(372047),
-    A = n(328347),
-    P = n(307043),
+    P = n(328347),
+    A = n(307043),
     R = n(223143),
     y = n(675052),
     M = n(298228),
@@ -104,7 +104,7 @@ function eu(e) {
 function ef(e) {
     let { category: t, initialItemCardRef: n, ...s } = e,
         o = (0, w.l)(t.products),
-        l = (0, c.e7)([A.Z], () => A.Z.initialProductSkuId),
+        l = (0, c.e7)([P.Z], () => P.Z.initialProductSkuId),
         d = r.useCallback(
             (e) => (t) => {
                 e.skuId === l && (n.current = t.current);
@@ -171,10 +171,10 @@ function ep(e) {
 t.default = function (e) {
     let { isFullScreen: t = !0 } = e;
     (0, E.z)(I.f);
-    let { analyticsSource: n, analyticsLocations: s } = (0, c.cj)([A.Z], () => A.Z.getAnalytics()),
+    let { analyticsSource: n, analyticsLocations: s } = (0, c.cj)([P.Z], () => P.Z.getAnalytics()),
         { analyticsLocations: i } = (0, _.ZP)([...s, m.Z.COLLECTIBLES_SHOP]),
         { sessionId: C, scrollerRef: v, scrollHandler: T } = (0, b._)(es.rMx.COLLECTIBLES_SHOP_SCROLLED, n),
-        w = (0, P.u)('CollectiblesShop'),
+        w = (0, A.u)('CollectiblesShop'),
         { feedState: D, catalogState: U, transitionToCatalog: K, transitionToFeed: q } = (0, H.B)(w, v),
         [Q, ea] = r.useState(!1),
         [eu, ef] = r.useState(er.IV),
@@ -249,8 +249,8 @@ t.default = function (e) {
             );
         })(),
         { setCategoryRef: ej, handleScrollToCategory: eZ } = (0, F.xV)(v.current),
-        { condensedBannersAndDynamicHeadersEnabled: eA } = (0, J.O)({ location: 'CollectiblesShop' }),
-        { enabled: eP } = (0, Z.Z)({ location: 'CollectiblesShop' }),
+        { condensedBannersAndDynamicHeadersEnabled: eP } = (0, J.O)({ location: 'CollectiblesShop' }),
+        { enabled: eA } = (0, Z.Z)({ location: 'CollectiblesShop' }),
         eR = (0, c.e7)([h.Z], () => h.Z.gradientPreset),
         ey = !(0, c.e7)([S.Z], () => (0, f.wj)(S.Z.theme)) && null == eR,
         eM = r.useCallback(
@@ -318,13 +318,13 @@ t.default = function (e) {
                                         children: (0, a.jsxs)('main', {
                                             className: o()(ed.page, { [ed.pageFullscreen]: t }),
                                             children: [
-                                                eA &&
+                                                eP &&
                                                     ev.length > 0 &&
                                                     (0, a.jsx)(V.h, {
                                                         categories: ev,
                                                         handleScrollToCategory: eZ
                                                     }),
-                                                eP &&
+                                                eA &&
                                                     (0, a.jsxs)('div', {
                                                         className: o()(ed.popularPicksContainer, ey ? ed.defaultLightModeCustomGradient : ed.popularPicksGradient),
                                                         children: [

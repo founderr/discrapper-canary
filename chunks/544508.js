@@ -8,8 +8,8 @@ var n = s(735250),
     u = s(481060),
     c = s(607070),
     d = s(745510),
-    E = s(78675),
-    _ = s(899007),
+    E = s(899007),
+    _ = s(867176),
     g = s(51144),
     m = s(346585),
     S = s(81259),
@@ -123,12 +123,12 @@ t.Z = i.forwardRef(function (e, t) {
                 (0, n.jsxs)('div', {
                     className: h.profileCard,
                     children: [
-                        (0, n.jsx)(E.Z, {
+                        (0, n.jsx)(_.Z, {
                             user: j,
                             displayProfile: x,
                             profileType: N.y0.PANEL
                         }),
-                        (0, n.jsx)(_.Z, {
+                        (0, n.jsx)(E.Z, {
                             user: j,
                             displayProfile: x,
                             profileType: N.y0.PANEL

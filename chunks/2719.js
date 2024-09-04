@@ -25,8 +25,8 @@ var n = t(735250),
     A = t(921801),
     h = t(290421),
     O = t(318661),
-    p = t(78675),
-    R = t(80132),
+    p = t(184325),
+    R = t(867176),
     x = t(204197),
     f = t(25990),
     M = t(594174),
@@ -452,7 +452,7 @@ function z() {
     return (0, n.jsxs)('div', {
         className: F.accountProfileCard,
         children: [
-            (0, n.jsx)(p.p, {
+            (0, n.jsx)(R.b, {
                 user: s,
                 displayProfile: t,
                 avatarSize: u.AvatarSizes.SIZE_80,
@@ -486,7 +486,7 @@ function z() {
                                     (0, n.jsx)(W, { user: s })
                                 ]
                             }),
-                            (0, n.jsx)(R.Z, {
+                            (0, n.jsx)(p.Z, {
                                 badges: a,
                                 className: F.badgeList,
                                 badgeClassName: F.badge

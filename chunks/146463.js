@@ -1,8 +1,8 @@
-var a = n(735250);
+var t = n(735250);
 n(470079);
-var t = n(120356),
-    r = n.n(t),
-    l = n(91192),
+var a = n(120356),
+    l = n.n(a),
+    r = n(91192),
     i = n(442837),
     o = n(481060),
     c = n(209613),
@@ -12,131 +12,131 @@ var t = n(120356),
     E = n(693546),
     _ = n(826581),
     T = n(246364),
-    N = n(328977),
-    R = n(571728),
-    M = n(762660),
-    C = n(689938),
-    m = n(811140);
-let A = () => null;
-function x(e) {
+    m = n(328977),
+    M = n(571728),
+    R = n(762660),
+    N = n(689938),
+    C = n(811140);
+let x = () => null;
+function h(e) {
     let { status: s } = e,
-        n = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE,
-        t = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY;
+        n = N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE,
+        a = N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY;
     switch (s) {
         case T.wB.REJECTED:
-            (n = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_TITLE), (t = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_BODY);
+            (n = N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_TITLE), (a = N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_REJECTED_APPLICATIONS_BODY);
             break;
         case T.wB.APPROVED:
-            (n = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_TITLE), (t = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_BODY);
+            (n = N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_TITLE), (a = N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_APPROVED_APPLICATIONS_BODY);
             break;
         default:
-            (n = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE), (t = C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY);
+            (n = N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_TITLE), (a = N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_EMPTY_PENDING_APPLICATIONS_BODY);
     }
-    return (0, a.jsxs)('div', {
-        className: m.emptyContainer,
+    return (0, t.jsxs)('div', {
+        className: C.emptyContainer,
         children: [
-            (0, a.jsxs)('div', {
-                className: m.emptyIcon,
+            (0, t.jsxs)('div', {
+                className: C.emptyIcon,
                 children: [
-                    (0, a.jsx)(I.Z, { className: m.star }),
-                    (0, a.jsx)(o.CheckmarkLargeIcon, {
+                    (0, t.jsx)(I.Z, { className: C.star }),
+                    (0, t.jsx)(o.CheckmarkLargeIcon, {
                         size: 'md',
                         color: 'currentColor',
-                        className: m.checkmark
+                        className: C.checkmark
                     }),
-                    (0, a.jsx)(u.Z, { className: m.plus })
+                    (0, t.jsx)(u.Z, { className: C.plus })
                 ]
             }),
-            (0, a.jsx)(o.Heading, {
+            (0, t.jsx)(o.Heading, {
                 variant: 'heading-xl/semibold',
                 children: n
             }),
-            (0, a.jsx)(o.Text, {
+            (0, t.jsx)(o.Text, {
                 color: 'header-secondary',
-                className: m.emptyBody,
+                className: C.emptyBody,
                 variant: 'text-sm/normal',
-                children: t
+                children: a
             })
         ]
     });
 }
 s.Z = function (e) {
     var s;
-    let { applicationStatus: n, guildJoinRequests: t, guildId: u, onScroll: I, listRef: h, atMaxMemberCapacity: S } = e,
-        P = (0, i.e7)([d.Z], () => d.Z.getGuild(u), [u]),
-        g = (0, i.e7)([_.Z], () => _.Z.isFetching()),
-        j = g ? [t.length + 25] : [t.length],
-        b = (0, N.L)({ guildId: u }),
-        v = null !== (s = (0, R.A)({ guildId: u })) && void 0 !== s ? s : 0,
-        p = (0, c.Z)('guild-join-requests'),
+    let { applicationStatus: n, guildJoinRequests: a, guildId: u, onScroll: I, listRef: A, atMaxMemberCapacity: b } = e,
+        S = (0, i.e7)([d.Z], () => d.Z.getGuild(u), [u]),
+        j = (0, i.e7)([_.Z], () => _.Z.isFetching()),
+        P = j ? [a.length + 25] : [a.length],
+        p = (0, m.L)({ guildId: u }),
+        g = null !== (s = (0, M.A)({ guildId: u })) && void 0 !== s ? s : 0,
+        v = (0, c.Z)('guild-join-requests'),
         f = (e) => {
             let { row: s } = e,
-                l = t[s];
-            return null == l
-                ? (0, a.jsx)(M.h, {}, s)
-                : (0, a.jsx)(
-                      M.C,
+                r = a[s];
+            return null == r
+                ? (0, t.jsx)(R.h, {}, s)
+                : (0, t.jsx)(
+                      R.C,
                       {
-                          className: r()({
-                              [m.selected]: b === l,
-                              [m.siblingSelected]: b === t[s - 1]
+                          className: l()({
+                              [C.selected]: p === r,
+                              [C.siblingSelected]: p === a[s - 1]
                           }),
-                          guild: P,
-                          guildJoinRequest: l,
-                          onClick: () => E.Z.setSelectedGuildJoinRequest(u, l),
+                          guild: S,
+                          guildJoinRequest: r,
+                          onClick: () => E.Z.setSelectedGuildJoinRequest(u, r),
                           applicationStatus: n,
-                          atMaxMemberCapacity: S
+                          atMaxMemberCapacity: b
                       },
-                      ''.concat(l.userId, '-').concat(l.applicationStatus, '-').concat(s)
+                      ''.concat(r.userId, '-').concat(r.applicationStatus, '-').concat(s)
                   );
         };
-    return g || 0 !== t.length
-        ? (0, a.jsxs)(a.Fragment, {
+    return j || 0 !== a.length
+        ? (0, t.jsxs)(t.Fragment, {
               children: [
-                  0 !== v &&
+                  0 !== g &&
                       n === T.wB.SUBMITTED &&
-                      (0, a.jsx)(o.Text, {
-                          className: m.title,
+                      (0, t.jsx)(o.Text, {
+                          className: C.title,
                           variant: 'text-xs/semibold',
                           color: 'header-secondary',
                           children: (function (e, s) {
                               let n = s.toLocaleString();
                               switch (e) {
                                   case T.wB.SUBMITTED:
-                                      return C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING_COUNT_HYPEN.format({ count: n });
+                                      return N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING_COUNT_HYPEN.format({ count: n });
                                   case T.wB.REJECTED:
-                                      return C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED_COUNT_HYPEN.format({ count: n });
+                                      return N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED_COUNT_HYPEN.format({ count: n });
                                   case T.wB.APPROVED:
-                                      return C.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED_COUNT_HYPEN.format({ count: n });
+                                      return N.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED_COUNT_HYPEN.format({ count: n });
                                   default:
                                       return '';
                               }
-                          })(n, v).toUpperCase()
+                          })(n, g).toUpperCase()
                       }),
-                  (0, a.jsx)(l.bG, {
-                      navigator: p,
-                      children: (0, a.jsx)(l.SJ, {
+                  (0, t.jsx)(r.bG, {
+                      navigator: v,
+                      children: (0, t.jsx)(r.SJ, {
                           children: (e) => {
-                              let { ref: s, role: n, ...t } = e;
-                              return (0, a.jsx)(
+                              let { ref: s, role: n, ...a } = e;
+                              return (0, t.jsx)(
                                   o.List,
                                   {
                                       innerRole: n,
-                                      innerAriaLabel: C.Z.Messages.MEMBERS,
+                                      innerAriaLabel: N.Z.Messages.MEMBERS,
                                       ref: (e) => {
                                           var n;
-                                          (h.current = e), (s.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+                                          (A.current = e), (s.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                                       },
                                       paddingTop: 0,
                                       paddingBottom: 16,
                                       sectionHeight: 0,
                                       rowHeight: 64,
-                                      renderSection: A,
+                                      renderSection: x,
                                       renderRow: f,
-                                      sections: j,
+                                      sections: P,
                                       onScroll: I,
                                       fade: !0,
-                                      ...t
+                                      ...a
                                   },
                                   'guild-application-review'
                               );
@@ -145,5 +145,5 @@ s.Z = function (e) {
                   })
               ]
           })
-        : (0, a.jsx)(x, { status: n });
+        : (0, t.jsx)(h, { status: n });
 };

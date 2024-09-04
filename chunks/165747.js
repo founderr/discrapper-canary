@@ -6,9 +6,9 @@ n.d(t, {
 var r = n(735250);
 n(470079);
 var s = n(475413),
-    i = n(901952),
+    i = n(955418),
     l = n(689938),
-    o = n(122269);
+    o = n(115879);
 function a(e) {
     let { user: t, hideMessageInput: n, hideExampleButton: a } = e;
     return n

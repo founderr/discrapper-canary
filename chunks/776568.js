@@ -7,10 +7,10 @@ _.d(E, {
     }
 }),
     _(47120);
-var t = _(735250);
+var n = _(735250);
 _(470079);
-var n = _(913527),
-    s = _.n(n),
+var t = _(913527),
+    s = _.n(t),
     a = _(442837),
     M = _(481060),
     r = _(211739),
@@ -60,8 +60,8 @@ let L = () => [
         };
     };
 function o(e, E) {
-    let [_, n] = (0, a.Wu)([A.ZP], () => [A.ZP.isChannelMuted(e.guild_id, e.id), A.ZP.getChannelMuteConfig(e.guild_id, e.id)]),
-        s = (0, N.U)(n),
+    let [_, t] = (0, a.Wu)([A.ZP], () => [A.ZP.isChannelMuted(e.guild_id, e.id), A.ZP.getChannelMuteConfig(e.guild_id, e.id)]),
+        s = (0, N.U)(t),
         I = (0, l.ZP)(e, !0);
     function o(E) {
         E && e.type === O.d4z.GUILD_CATEGORY && (0, r.c4)(e.id), S.Z.updateChannelOverrideSettings(e.guild_id, e.id, { muted: E }, i.UE.muted(E));
@@ -82,13 +82,13 @@ function o(e, E) {
             (C = T.Z.Messages.MUTE_CHANNEL_GENERIC), (G = T.Z.Messages.UNMUTE_CHANNEL_GENERIC);
     }
     return _
-        ? (0, t.jsx)(M.MenuItem, {
+        ? (0, n.jsx)(M.MenuItem, {
               id: 'unmute-channel',
               label: G,
               subtext: s,
               action: () => o(!1)
           })
-        : (0, t.jsx)(M.MenuItem, {
+        : (0, n.jsx)(M.MenuItem, {
               id: 'mute-channel',
               label: C,
               action: () => {
@@ -99,20 +99,20 @@ function o(e, E) {
                       });
               },
               children: L().map((_) => {
-                  let { value: n, label: s } = _;
-                  return (0, t.jsx)(
+                  let { value: t, label: s } = _;
+                  return (0, n.jsx)(
                       M.MenuItem,
                       {
-                          id: ''.concat(n),
+                          id: ''.concat(t),
                           label: s,
                           action: () =>
                               (function (_) {
                                   e.type === O.d4z.GUILD_CATEGORY && (0, r.c4)(e.id);
-                                  let t = c(_);
-                                  S.Z.updateChannelOverrideSettings(e.guild_id, e.id, t, i.ZB.Muted, E);
-                              })(n)
+                                  let n = c(_);
+                                  S.Z.updateChannelOverrideSettings(e.guild_id, e.id, n, i.ZB.Muted, E);
+                              })(t)
                       },
-                      n
+                      t
                   );
               })
           });

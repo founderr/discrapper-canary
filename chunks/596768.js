@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return I;
+        return w;
     }
 }),
     n(47120);
@@ -124,7 +124,7 @@ let S = [
             }
         }
     ];
-function I() {
+function w() {
     let [e, t] = a.useState(''),
         n = a.useRef(null),
         l = (0, d.Wu)([g.Z], () => g.Z.loggedTriggers),
@@ -132,8 +132,8 @@ function I() {
         [c, u] = a.useState(void 0),
         x = o.find((e) => e.key === c),
         { TabBar: f, renderSelectedTab: b } = (0, C.Z)({ tabs: y }, []),
-        I = (0, d.e7)([g.Z], () => g.Z.trackTriggers),
-        w = a.useCallback((e) => {
+        w = (0, d.e7)([g.Z], () => g.Z.trackTriggers),
+        I = a.useCallback((e) => {
             m.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
@@ -150,8 +150,8 @@ function I() {
                         title: 'Enables tracking of all triggers',
                         className: T.triggersEnable,
                         children: (0, r.jsx)(h.Switch, {
-                            checked: I,
-                            onChange: w,
+                            checked: w,
+                            onChange: I,
                             className: T.__invalid_toolbarSwitch
                         })
                     }),

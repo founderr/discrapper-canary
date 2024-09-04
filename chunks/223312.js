@@ -4,14 +4,14 @@ n.d(s, {
     }
 }),
     n(47120);
-var a = n(470079),
-    t = n(442837),
-    r = n(826581),
-    l = n(246364);
+var t = n(470079),
+    a = n(442837),
+    l = n(826581),
+    r = n(246364);
 function i(e) {
     let { guildId: s, applicationStatus: n, sortOrder: i } = e,
-        o = (0, t.e7)([r.Z], () => r.Z.getRequests(s, n), [n, s]);
+        o = (0, a.e7)([l.Z], () => l.Z.getRequests(s, n), [n, s]);
     return {
-        guildJoinRequests: a.useMemo(() => (i === l.Nw.TIMESTAMP_DESC ? [...o].reverse() : o), [i, o])
+        guildJoinRequests: t.useMemo(() => (i === r.Nw.TIMESTAMP_DESC ? [...o].reverse() : o), [i, o])
     };
 }

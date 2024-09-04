@@ -1,11 +1,11 @@
 n.d(s, {
     z: function () {
-        return r;
+        return l;
     }
 });
-var a = n(442837),
-    t = n(826581);
-function r(e) {
+var t = n(442837),
+    a = n(826581);
+function l(e) {
     let { guildId: s } = e;
-    return (0, a.e7)([t.Z], () => t.Z.getSelectedApplicationTab(s), [s]);
+    return (0, t.e7)([a.Z], () => a.Z.getSelectedApplicationTab(s), [s]);
 }

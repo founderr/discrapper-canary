@@ -55,12 +55,12 @@ function O(e) {
         K = a.useRef(!1),
         [Y, z] = a.useState(!1),
         [Q, q] = a.useState(!1),
-        [X, J] = a.useState(!0),
+        [J, X] = a.useState(!0),
         [$, ee] = a.useState(!0),
         [et, en] = a.useState(F.preEnrollmentExpandedHeight),
         es = a.useRef(null),
         ea = a.useCallback((e) => {
-            J(!1), q(e);
+            X(!1), q(e);
         }, []),
         er = a.useCallback(() => {
             var e, t;
@@ -122,10 +122,10 @@ function O(e) {
             from: { expansionSpring: 0 },
             config: eI,
             onRest: () => {
-                J(!0);
+                X(!0);
             },
             onStart: () => {
-                J(!1);
+                X(!1);
             }
         }));
     a.useEffect(() => {
@@ -214,7 +214,7 @@ function O(e) {
                                       expandedContentRef: es,
                                       expansionSpring: eR,
                                       isExpanded: Q,
-                                      isExpansionAnimationComplete: X,
+                                      isExpansionAnimationComplete: J,
                                       onCtxMenuClosed: eo,
                                       onCtxMenuOpened: el,
                                       onCtxMenuSelection: ec,

@@ -18,10 +18,10 @@ var t = l(735250),
     d = l(498187),
     m = l(482417),
     p = l(301419),
-    E = l(397035);
-let f = r.createContext(void 0);
+    f = l(397035);
+let E = r.createContext(void 0);
 function N() {
-    let e = r.useContext(f);
+    let e = r.useContext(E);
     return a()(null != e, 'useEntryDataContext must be used within a EntryDataContextProvider'), e;
 }
 function C(e) {
@@ -81,7 +81,7 @@ function _(e) {
             entry: n,
             ...r
         });
-    return (0, t.jsx)(f.Provider, {
+    return (0, t.jsx)(E.Provider, {
         value: {
             parsedEntry: i,
             ...r
@@ -95,7 +95,7 @@ function h(e) {
             entry: n,
             ...r
         });
-    return (0, t.jsx)(f.Provider, {
+    return (0, t.jsx)(E.Provider, {
         value: {
             parsedEntry: i,
             ...r
@@ -109,7 +109,7 @@ function x(e) {
             entry: n,
             ...r
         });
-    return (0, t.jsx)(f.Provider, {
+    return (0, t.jsx)(E.Provider, {
         value: {
             parsedEntry: i,
             ...r
@@ -123,7 +123,7 @@ function T(e) {
             entry: n,
             ...r
         });
-    return (0, t.jsx)(f.Provider, {
+    return (0, t.jsx)(E.Provider, {
         value: {
             parsedEntry: i,
             ...r
@@ -133,11 +133,11 @@ function T(e) {
 }
 function I(e) {
     let { entry: n, children: l, ...r } = e,
-        i = (0, E.Z)({
+        i = (0, f.Z)({
             entry: n,
             ...r
         });
-    return (0, t.jsx)(f.Provider, {
+    return (0, t.jsx)(E.Provider, {
         value: {
             parsedEntry: i,
             ...r
@@ -151,7 +151,7 @@ function g(e) {
             entry: n,
             ...r
         });
-    return (0, t.jsx)(f.Provider, {
+    return (0, t.jsx)(E.Provider, {
         value: {
             parsedEntry: i,
             ...r

@@ -26,8 +26,8 @@ var i = t(735250),
     j = t(464766),
     S = t(724278),
     L = t(462747),
-    D = t(462179),
-    k = t(765305),
+    k = t(462179),
+    D = t(765305),
     R = t(981631),
     y = t(946508);
 function M(e) {
@@ -37,7 +37,7 @@ function M(e) {
         g = (0, I.ZP)(n),
         v = (0, l.e7)([u.Z], () => u.Z.isLurking(t.id), [t.id]),
         h = (0, x.T)(null == a ? void 0 : a.id, n.id),
-        m = (0, D.Z)({
+        m = (0, k.Z)({
             guild: t,
             channel: a,
             guildScheduledEvent: n,
@@ -71,7 +71,7 @@ function M(e) {
 n.default = (e) => {
     let { guildScheduledEventId: n, parentGuildId: t, transitionState: u, initialRecurrenceId: I, onClose: x } = e,
         { analyticsLocations: N } = (0, c.ZP)(o.Z.GUILD_EVENT_MODAL),
-        [Z, D] = a.useState(I),
+        [Z, k] = a.useState(I),
         B = (0, l.e7)([f.ZP], () => f.ZP.getGuildScheduledEvent(n), [n]),
         P = null == B ? void 0 : B.id,
         w = null == B ? void 0 : B.guild_id,
@@ -80,7 +80,7 @@ n.default = (e) => {
         U = null == B ? void 0 : B.channel_id,
         V = (0, l.e7)([_.Z], () => _.Z.getChannel(U), [U]),
         F = (0, s.Dt)(),
-        [H, z] = a.useState(k.fL.EVENT_INFO),
+        [H, z] = a.useState(D.fL.EVENT_INFO),
         W = (0, E.Z)(P, Z),
         X = (0, p.Z)(w, P, Z),
         [J, { loading: Y, error: K }] = (0, v.Z)(() => h.Z.getGuildEventUsers(null == B ? void 0 : B.id, Z, w));
@@ -88,7 +88,7 @@ n.default = (e) => {
         null == B
             ? x()
             : g.default.track(R.rMx.OPEN_MODAL, {
-                  type: k.zw,
+                  type: D.zw,
                   guild_id: B.guild_id
               });
     }, [B, x]);
@@ -104,7 +104,7 @@ n.default = (e) => {
     )
         return null;
     let ee = (e) => {
-            if (e !== H) e === k.fL.RSVP_LIST && J(), z(e);
+            if (e !== H) e === D.fL.RSVP_LIST && J(), z(e);
         },
         en = null != Z ? Z : (0, b.DK)(B);
     return (0, i.jsx)(c.Gt, {
@@ -139,22 +139,22 @@ n.default = (e) => {
                             centered: !1,
                             children: [
                                 (0, i.jsx)(r.Slide, {
-                                    id: k.fL.EVENT_INFO,
+                                    id: D.fL.EVENT_INFO,
                                     children: (0, i.jsx)(S.Z, {
                                         guildEvent: B,
                                         guild: A,
                                         channel: V,
                                         headerId: F,
                                         onClose: x,
-                                        onClickInterestedCount: () => ee(k.fL.RSVP_LIST),
+                                        onClickInterestedCount: () => ee(D.fL.RSVP_LIST),
                                         isHub: O,
                                         containerRef: q,
                                         recurrenceId: en,
-                                        setRecurrenceId: D
+                                        setRecurrenceId: k
                                     })
                                 }),
                                 (0, i.jsx)(r.Slide, {
-                                    id: k.fL.RSVP_LIST,
+                                    id: D.fL.RSVP_LIST,
                                     children: (0, i.jsx)(L.Z, {
                                         guildEvent: B,
                                         recurrenceId: en,

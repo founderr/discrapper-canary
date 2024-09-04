@@ -3,10 +3,10 @@ l.d(n, {
         return p;
     },
     _H: function () {
-        return E;
+        return f;
     },
     af: function () {
-        return f;
+        return E;
     },
     tx: function () {
         return N;
@@ -25,7 +25,7 @@ var t = l(524846),
     m = l(280501);
 l(892902);
 let p = 1000;
-function E(e, n, l) {
+function f(e, n, l) {
     let t = i.Z.getChannel(l);
     if (null == t) return [];
     let a = e === r.re.USER_SELECT || e === r.re.MENTIONABLE_SELECT,
@@ -60,7 +60,7 @@ function E(e, n, l) {
         }))
     ];
 }
-function f(e, n, l) {
+function E(e, n, l) {
     let t = i.Z.getChannel(n);
     return null == t
         ? []

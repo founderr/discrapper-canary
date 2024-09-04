@@ -28,8 +28,8 @@ var r = n(735250),
     N = n(789086),
     S = n(206583),
     y = n(787524),
-    I = n(535271);
-let w = [
+    w = n(535271);
+let I = [
     {
         key: 'type',
         cellClassName: i()(y.cell, y.cellType),
@@ -128,7 +128,7 @@ function E() {
             }),
         P = (0, f.Z)(L).filter(_.lm);
     return (0, r.jsx)('div', {
-        className: i()(I.panel),
+        className: i()(w.panel),
         children: (0, r.jsxs)(h.ScrollerThin, {
             className: y.content,
             children: [
@@ -137,7 +137,7 @@ function E() {
                         (0, r.jsx)(h.FormTitle, { children: 'Inventory' }),
                         c.length > 0 &&
                             (0, r.jsx)(g.Z, {
-                                columns: w,
+                                columns: I,
                                 data: c
                             }),
                         (0, r.jsx)(h.Spacer, { size: 8 }),

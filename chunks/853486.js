@@ -1,7 +1,7 @@
-var a = n(735250),
-    t = n(470079),
-    r = n(481060),
-    l = n(665149),
+var t = n(735250),
+    a = n(470079),
+    l = n(481060),
+    r = n(665149),
     i = n(51144),
     o = n(246364),
     c = n(666233),
@@ -12,80 +12,80 @@ var a = n(735250),
     _ = n(689938),
     T = n(189522);
 s.Z = function (e) {
-    let { guild: s, guildJoinRequest: N, guildJoinRequestUser: R, onClose: M } = e,
-        C = t.useMemo(() => {
+    let { guild: s, guildJoinRequest: m, guildJoinRequestUser: M, onClose: R } = e,
+        N = a.useMemo(() => {
             var e;
-            return null !== (e = N.formResponses) && void 0 !== e ? e : [];
-        }, [N.formResponses]),
-        m = s.hasFeature(E.oNc.CLAN) && N.applicationStatus === o.wB.SUBMITTED,
-        A = t.useCallback(
+            return null !== (e = m.formResponses) && void 0 !== e ? e : [];
+        }, [m.formResponses]),
+        C = s.hasFeature(E.oNc.CLAN) && m.applicationStatus === o.wB.SUBMITTED,
+        x = a.useCallback(
             () =>
-                (0, r.openModalLazy)(async () => {
+                (0, l.openModalLazy)(async () => {
                     let { default: e } = await n.e('17945').then(n.bind(n, 223926));
                     return (n) =>
-                        (0, a.jsx)(e, {
+                        (0, t.jsx)(e, {
                             ...n,
                             guild: s,
-                            guildJoinRequest: N,
-                            user: R
+                            guildJoinRequest: m,
+                            user: M
                         });
                 }),
-            [s, N, R]
+            [s, m, M]
         );
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, a.jsxs)(l.ZP, {
-                toolbar: (0, a.jsx)(l.ZP.Icon, {
-                    icon: r.XSmallIcon,
-                    onClick: M,
+            (0, t.jsxs)(r.ZP, {
+                toolbar: (0, t.jsx)(r.ZP.Icon, {
+                    icon: l.XSmallIcon,
+                    onClick: R,
                     tooltip: _.Z.Messages.CLOSE
                 }),
                 children: [
-                    (0, a.jsx)(l.ZP.Icon, {
-                        icon: r.UserIcon,
+                    (0, t.jsx)(r.ZP.Icon, {
+                        icon: l.UserIcon,
                         disabled: !0,
                         'aria-label': _.Z.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATION
                     }),
-                    (0, a.jsx)(r.Heading, {
+                    (0, t.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
-                        children: i.ZP.getName(R)
+                        children: i.ZP.getName(M)
                     })
                 ]
             }),
-            (0, a.jsx)(d.Z, {
-                guildJoinRequest: N,
-                guildJoinRequestUser: R,
+            (0, t.jsx)(d.Z, {
+                guildJoinRequest: m,
+                guildJoinRequestUser: M,
                 guild: s
             }),
-            (0, a.jsxs)(r.Scroller, {
+            (0, t.jsxs)(l.Scroller, {
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, t.jsxs)('div', {
                         className: T.container,
                         children: [
-                            (0, a.jsx)(I.Z, {
-                                user: R,
+                            (0, t.jsx)(I.Z, {
+                                user: M,
                                 guildId: s.id
                             }),
-                            m &&
-                                (0, a.jsxs)('div', {
+                            C &&
+                                (0, t.jsxs)('div', {
                                     className: T.actionButtons,
                                     children: [
-                                        (0, a.jsx)(u.Z, { joinRequest: N }),
-                                        (0, a.jsx)(r.Button, {
-                                            color: r.ButtonColors.PRIMARY,
-                                            onClick: A,
+                                        (0, t.jsx)(u.Z, { joinRequest: m }),
+                                        (0, t.jsx)(l.Button, {
+                                            color: l.ButtonColors.PRIMARY,
+                                            onClick: x,
                                             children: _.Z.Messages.CLAN_MEMBER_APPLICATION_REPORT_CTA
                                         })
                                     ]
                                 })
                         ]
                     }),
-                    (0, a.jsx)('div', {
+                    (0, t.jsx)('div', {
                         className: T.disabledFormRenderer,
-                        children: (0, a.jsx)(c.Z, {
+                        children: (0, t.jsx)(c.Z, {
                             guildId: s.id,
-                            formFields: C,
-                            user: R
+                            formFields: N,
+                            user: M
                         })
                     })
                 ]

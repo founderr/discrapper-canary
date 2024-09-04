@@ -1,13 +1,13 @@
 n.d(s, {
     Z: function () {
-        return m;
+        return C;
     }
 });
-var a = n(735250);
+var t = n(735250);
 n(470079);
-var t = n(913527),
-    r = n.n(t),
-    l = n(442837),
+var a = n(913527),
+    l = n.n(a),
+    r = n(442837),
     i = n(692547),
     o = n(481060),
     c = n(239091),
@@ -17,93 +17,93 @@ var t = n(913527),
     E = n(594174),
     _ = n(709054),
     T = n(246364),
-    N = n(360328),
-    R = n(981631),
-    M = n(689938),
-    C = n(385747);
-function m(e) {
+    m = n(360328),
+    M = n(981631),
+    R = n(689938),
+    N = n(385747);
+function C(e) {
     var s;
-    let { guildJoinRequest: t, guild: m, guildJoinRequestUser: A } = e,
-        { createdAt: x, actionedAt: h, guildId: S, userId: P } = t,
-        { approveRequest: g, rejectRequest: j, submitting: b } = (0, N.s)(S, P, t.joinRequestId),
-        v = null === (s = t.actionedByUser) || void 0 === s ? void 0 : s.id,
-        p = (0, l.e7)([E.default], () => E.default.getUser(v)),
-        f = (0, l.e7)([I.ZP], () => (null != v ? I.ZP.getMember(S, v) : null), [v, S]),
-        Z = (0, l.e7)([u.Z], () => u.Z.getMemberCount(S)),
-        B = (null != Z ? Z : 0) >= m.maxMembers,
-        O = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING,
-        L = (0, a.jsx)(o.ClockIcon, {
+    let { guildJoinRequest: a, guild: C, guildJoinRequestUser: x } = e,
+        { createdAt: h, actionedAt: A, guildId: b, userId: S } = a,
+        { approveRequest: j, rejectRequest: P, submitting: p } = (0, m.s)(b, S, a.joinRequestId),
+        g = null === (s = a.actionedByUser) || void 0 === s ? void 0 : s.id,
+        v = (0, r.e7)([E.default], () => E.default.getUser(g)),
+        f = (0, r.e7)([I.ZP], () => (null != g ? I.ZP.getMember(b, g) : null), [g, b]),
+        Z = (0, r.e7)([u.Z], () => u.Z.getMemberCount(b)),
+        O = (null != Z ? Z : 0) >= C.maxMembers,
+        B = R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING,
+        L = (0, t.jsx)(o.ClockIcon, {
             size: 'custom',
             color: 'currentColor',
             width: 24,
             height: 24,
-            className: C.icon
+            className: N.icon
         });
-    t.applicationStatus === T.wB.APPROVED
-        ? ((O = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED),
-          (L = (0, a.jsx)(o.CircleCheckIcon, {
+    a.applicationStatus === T.wB.APPROVED
+        ? ((B = R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED),
+          (L = (0, t.jsx)(o.CircleCheckIcon, {
               size: 'md',
-              className: C.iconApproved,
+              className: N.iconApproved,
               color: i.Z.colors.WHITE.css,
               secondaryColor: 'currentColor'
           })))
-        : t.applicationStatus === T.wB.REJECTED &&
-          ((O = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED),
-          (L = (0, a.jsx)(o.CircleXIcon, {
+        : a.applicationStatus === T.wB.REJECTED &&
+          ((B = R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED),
+          (L = (0, t.jsx)(o.CircleXIcon, {
               size: 'md',
               color: i.Z.colors.WHITE.css,
               secondaryColor: i.Z.colors.STATUS_DANGER.css
           })));
     let D =
-        null != p && null != h
-            ? M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
-                  date: r()(_.default.extractTimestamp(h)).format('ll'),
+        null != v && null != A
+            ? R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
+                  date: l()(_.default.extractTimestamp(A)).format('ll'),
                   usernameHook: function () {
                       var e;
-                      return (0, a.jsx)(
+                      return (0, t.jsx)(
                           o.Clickable,
                           {
-                              className: C.actionedByUser,
+                              className: N.actionedByUser,
                               onClick: () =>
                                   (0, d.openUserProfileModal)({
-                                      userId: p.id,
-                                      guildId: S,
+                                      userId: v.id,
+                                      guildId: b,
                                       analyticsLocation: {
-                                          section: R.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                                          object: R.qAy.ACTIONED_BY_USER
+                                          section: M.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                                          object: M.qAy.ACTIONED_BY_USER
                                       }
                                   }),
                               tag: 'div',
                               role: 'link',
-                              children: (0, a.jsx)(o.Text, {
+                              children: (0, t.jsx)(o.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'header-primary',
-                                  children: null !== (e = null == f ? void 0 : f.nick) && void 0 !== e ? e : p.username
+                                  children: null !== (e = null == f ? void 0 : f.nick) && void 0 !== e ? e : v.username
                               })
                           },
                           'username-hook'
                       );
                   }
               })
-            : r()(x).format('lll');
-    return (0, a.jsxs)('div', {
-        className: C.container,
+            : l()(h).format('lll');
+    return (0, t.jsxs)('div', {
+        className: N.container,
         children: [
-            (0, a.jsxs)('div', {
-                className: C.wrapper,
+            (0, t.jsxs)('div', {
+                className: N.wrapper,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: C.inline,
+                    (0, t.jsxs)('div', {
+                        className: N.inline,
                         children: [
                             L,
-                            (0, a.jsxs)('div', {
+                            (0, t.jsxs)('div', {
                                 children: [
-                                    (0, a.jsx)(o.Heading, {
+                                    (0, t.jsx)(o.Heading, {
                                         variant: 'heading-sm/semibold',
-                                        children: O
+                                        children: B
                                     }),
-                                    (0, a.jsx)(o.Text, {
-                                        className: C.headerSubtext,
+                                    (0, t.jsx)(o.Text, {
+                                        className: N.headerSubtext,
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
                                         children: D
@@ -112,66 +112,66 @@ function m(e) {
                             })
                         ]
                     }),
-                    (0, a.jsxs)('div', {
-                        className: C.inline,
+                    (0, t.jsxs)('div', {
+                        className: N.inline,
                         children: [
-                            t.applicationStatus === T.wB.SUBMITTED &&
-                                (0, a.jsxs)('div', {
-                                    className: C.buttons,
+                            a.applicationStatus === T.wB.SUBMITTED &&
+                                (0, t.jsxs)('div', {
+                                    className: N.buttons,
                                     children: [
-                                        (0, a.jsx)(o.Tooltip, {
-                                            text: M.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
-                                            shouldShow: B,
+                                        (0, t.jsx)(o.Tooltip, {
+                                            text: R.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
+                                            shouldShow: O,
                                             children: (e) =>
-                                                (0, a.jsx)(o.Button, {
+                                                (0, t.jsx)(o.Button, {
                                                     ...e,
                                                     color: o.Button.Colors.GREEN,
-                                                    submitting: b,
-                                                    disabled: B,
-                                                    onClick: g,
-                                                    children: M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
+                                                    submitting: p,
+                                                    disabled: O,
+                                                    onClick: j,
+                                                    children: R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
                                                 })
                                         }),
-                                        (0, a.jsx)(o.Button, {
+                                        (0, t.jsx)(o.Button, {
                                             color: o.Button.Colors.RED,
-                                            onClick: j,
-                                            disabled: b,
-                                            children: M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
+                                            onClick: P,
+                                            disabled: p,
+                                            children: R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
                                         })
                                     ]
                                 }),
-                            (0, a.jsx)(o.Clickable, {
+                            (0, t.jsx)(o.Clickable, {
                                 onClick: (e) => {
                                     (0, c.jW)(e, async () => {
                                         let { default: e } = await n.e('84259').then(n.bind(n, 597409));
                                         return (s) =>
-                                            (0, a.jsx)(e, {
+                                            (0, t.jsx)(e, {
                                                 ...s,
-                                                guild: m,
-                                                user: A
+                                                guild: C,
+                                                user: x
                                             });
                                     });
                                 },
-                                className: C.overflow,
-                                children: (0, a.jsx)(o.MoreHorizontalIcon, {
+                                className: N.overflow,
+                                children: (0, t.jsx)(o.MoreHorizontalIcon, {
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 20,
                                     height: 20,
-                                    className: C.iconInteractive
+                                    className: N.iconInteractive
                                 })
                             })
                         ]
                     })
                 ]
             }),
-            t.applicationStatus === T.wB.REJECTED &&
-                null != t.rejectionReason &&
-                (0, a.jsx)('div', {
-                    className: C.rejectionReason,
-                    children: (0, a.jsx)(o.Text, {
+            a.applicationStatus === T.wB.REJECTED &&
+                null != a.rejectionReason &&
+                (0, t.jsx)('div', {
+                    className: N.rejectionReason,
+                    children: (0, t.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: t.rejectionReason
+                        children: a.rejectionReason
                     })
                 })
         ]

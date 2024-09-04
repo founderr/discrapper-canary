@@ -1,5 +1,5 @@
-var t,
-    n,
+var n,
+    t,
     s = _(25209),
     a = _(97797),
     M = _(35125),
@@ -21,7 +21,7 @@ let C = {
     '365975655608745985': 'https://www.pokecord.com/getting-started',
     512412940897484800: 'http://jameslantz.net/smilebot'
 };
-((t = n || (n = {})).NORMAL = 'NORMAL'), (t.CLAN = 'CLAN');
+((n = t || (t = {})).NORMAL = 'NORMAL'), (n.CLAN = 'CLAN');
 let G = () => [o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012_HOOK, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013_HOOK],
     R = () => [o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_002, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_003, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_004, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_005, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_006, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_007, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_008, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_009, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_010, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_011, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_012, o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_013],
     g = () => [o.Z.Messages.CLAN_WELCOME_MESSAGE_0_HOOK, o.Z.Messages.CLAN_WELCOME_MESSAGE_1_HOOK, o.Z.Messages.CLAN_WELCOME_MESSAGE_2_HOOK, o.Z.Messages.CLAN_WELCOME_MESSAGE_3_HOOK, o.Z.Messages.CLAN_WELCOME_MESSAGE_4_HOOK, o.Z.Messages.CLAN_WELCOME_MESSAGE_5_HOOK, o.Z.Messages.CLAN_WELCOME_MESSAGE_6_HOOK, o.Z.Messages.CLAN_WELCOME_MESSAGE_7_HOOK, o.Z.Messages.CLAN_WELCOME_MESSAGE_8_HOOK, o.Z.Messages.CLAN_WELCOME_MESSAGE_9_HOOK],
@@ -46,8 +46,8 @@ let G = () => [o.Z.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_JOIN_001_HOOK, o.Z.Messa
     };
 function D(e, E) {
     let _ = U(E),
-        t = L.default.extractTimestamp(e) % _.length;
-    return _[t];
+        n = L.default.extractTimestamp(e) % _.length;
+    return _[n];
 }
 function m(e) {
     return (0, s.Rp)(
@@ -74,7 +74,7 @@ function p(e) {
 }
 E.Z = {
     stringify: function (e, E) {
-        var _, t, n, L;
+        var _, n, t, L;
         let C = null === (_ = e.mentions) || void 0 === _ ? void 0 : _[0],
             G = null != C && 'string' != typeof C ? I.default.getUser(C.id) : void 0,
             R = e.channel_id,
@@ -171,7 +171,7 @@ E.Z = {
                     })
                 );
             case c.uaV.PURCHASE_NOTIFICATION:
-                if (e instanceof A.ZP || (null === (n = e.purchase_notification) || void 0 === n ? void 0 : null === (t = n.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) == null) return null;
+                if (e instanceof A.ZP || (null === (t = e.purchase_notification) || void 0 === t ? void 0 : null === (n = t.guild_product_purchase) || void 0 === n ? void 0 : n.product_name) == null) return null;
                 return (0, s.Rp)(
                     (0, a.i)({
                         username: g,
@@ -221,15 +221,15 @@ E.Z = {
                 return e.content;
             case c.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED:
                 return (function (e, E, _) {
-                    let t = l.Z.getChannel(E);
-                    if (null == t) return null;
-                    let n = O.Z.getGuild(t.getGuildId());
-                    return null == n
+                    let n = l.Z.getChannel(E);
+                    if (null == n) return null;
+                    let t = O.Z.getGuild(n.getGuildId());
+                    return null == t
                         ? null
                         : (0, s.Rp)(
                               o.Z.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_NOTIFICATION.astFormat({
                                   username: e,
-                                  guildName: n.name,
+                                  guildName: t.name,
                                   time:
                                       '' !== _
                                           ? new Date(_).toLocaleString(o.Z.getLocale(), {
@@ -244,13 +244,13 @@ E.Z = {
                 return (function (e, E) {
                     let _ = l.Z.getChannel(E);
                     if (null == _) return null;
-                    let t = O.Z.getGuild(_.getGuildId());
-                    return null == t
+                    let n = O.Z.getGuild(_.getGuildId());
+                    return null == n
                         ? null
                         : (0, s.Rp)(
                               o.Z.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_NOTIFICATION.astFormat({
                                   username: e,
-                                  guildName: t.name
+                                  guildName: n.name
                               })
                           );
                 })(g, R);
@@ -260,8 +260,8 @@ E.Z = {
     },
     getSystemMessageUserJoin: function (e, E) {
         let _ = Z(E),
-            t = L.default.extractTimestamp(e) % _.length;
-        return _[t];
+            n = L.default.extractTimestamp(e) % _.length;
+        return _[n];
     },
     getSystemMessageUserJoinMobile: D,
     getSystemMessageBotJoin: function (e) {

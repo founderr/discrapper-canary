@@ -136,13 +136,13 @@ t.Z = (e) => {
         z = (0, p.N)(),
         Q = null == z ? void 0 : null === (t = z.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
         q = (0, g.rT)(),
-        X = (0, N.Ng)(),
-        J = null != X && (0, N.Wp)(X, x.Si.TIER_2),
+        J = (0, N.Ng)(),
+        X = null != J && (0, N.Wp)(J, x.Si.TIER_2),
         $ = (0, m.A)(x.Xh.PREMIUM_MONTH_TIER_2),
         ee = ''.concat($, '/').concat((0, C.eP)(x.rV.MONTH)),
         et = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_0),
         en = (0, C.CY)(x.Xh.PREMIUM_MONTH_TIER_2),
-        es = (0, S.n)(et, en, J, ee),
+        es = (0, S.n)(et, en, X, ee),
         ea = (0, A.Vi)();
     if (!H || !w) return null;
     let er = {
