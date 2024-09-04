@@ -1,198 +1,223 @@
 o.r(r),
     o.d(r, {
         default: function () {
-            return O;
+            return v;
         }
     }),
     o(47120);
-var a = o(735250),
-    t = o(470079),
-    n = o(120356),
-    s = o.n(n),
-    i = o(887024),
-    d = o(442837),
-    l = o(481060),
-    c = o(230711),
-    _ = o(607070),
-    u = o(530618),
-    C = o(688465),
-    R = o(272008),
-    h = o(497505),
-    g = o(918701),
-    m = o(566078),
-    M = o(644646),
-    x = o(46140),
-    N = o(981631),
-    A = o(675654),
-    E = o(689938),
-    S = o(397965);
-function j(e) {
+var a,
+    t,
+    n = o(735250),
+    s = o(470079),
+    l = o(120356),
+    i = o.n(l),
+    d = o(887024),
+    c = o(442837),
+    u = o(481060),
+    _ = o(230711),
+    C = o(607070),
+    R = o(530618),
+    h = o(688465),
+    g = o(272008),
+    m = o(497505),
+    M = o(918701),
+    x = o(566078),
+    A = o(644646),
+    N = o(46140),
+    E = o(981631),
+    S = o(675654),
+    j = o(689938),
+    f = o(397965);
+((t = a || (a = {}))[(t.AlreadySubscribed = 0)] = 'AlreadySubscribed'), (t[(t.Other = 1)] = 'Other');
+function O(e) {
     var r, o;
-    let { transitionState: n, onClose: C, quest: M, location: x } = e,
-        E = t.useRef(null),
-        [j, O] = t.useState(null),
-        p = t.useRef(new i.qA()),
-        v = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
-        B = (0, g.j8)(M),
-        D = (null === (r = M.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
-        [I, w] = t.useState(D ? { state: 'claimed' } : { state: 'loading' });
-    let L = ((o = M), m.r.build(o.config).defaultReward);
-    t.useEffect(() => {
+    let { transitionState: a, onClose: t, quest: l, location: h } = e,
+        A = s.useRef(null),
+        [N, j] = s.useState(null),
+        O = s.useRef(new d.qA()),
+        v = (0, c.e7)([C.Z], () => C.Z.useReducedMotion),
+        B = (0, M.j8)(l),
+        D = (null === (r = l.userStatus) || void 0 === r ? void 0 : r.claimedAt) != null,
+        [I, w] = s.useState(D ? { state: 'claimed' } : { state: 'loading' });
+    let L = ((o = l), x.r.build(o.config).defaultReward);
+    s.useEffect(() => {
         !D &&
-            (0, R.QB)(M.id, h.y$.CROSS_PLATFORM, x)
-                .then(() => w({ state: 'claimed' }))
+            (0, g.QB)(l.id, m.y$.CROSS_PLATFORM, h)
+                .then((e) => {
+                    if (null == e) {
+                        w({
+                            state: 'error',
+                            errorReason: 1
+                        });
+                        return;
+                    }
+                    if (null != e.claimedAt) {
+                        w({ state: 'claimed' });
+                        return;
+                    }
+                    let r = e.errors;
+                    r.length > 0 && 5 === r[0].code
+                        ? w({
+                              state: 'error',
+                              errorReason: 0
+                          })
+                        : w({
+                              state: 'error',
+                              errorReason: 1
+                          });
+                })
                 .catch((e) => {
                     w({
                         state: 'error',
-                        errorCode: e.body.code
+                        errorReason: 100004 === e.body.code ? 0 : 1
                     });
                 });
-    }, [M, x, D]);
-    let k = 'loading' === I.state,
-        F = !v && !D && 'claimed' === I.state;
-    return (0, a.jsxs)(a.Fragment, {
+    }, [l, h, D]);
+    let y = 'loading' === I.state,
+        b = !v && !D && 'claimed' === I.state;
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, a.jsx)(i.O_, {
-                ref: O,
-                className: S.confettiCanvas,
-                environment: p.current
+            (0, n.jsx)(d.O_, {
+                ref: j,
+                className: f.confettiCanvas,
+                environment: O.current
             }),
-            (0, a.jsx)('div', {
-                ref: E,
-                children: (0, a.jsx)(l.ModalRoot, {
-                    transitionState: n,
-                    size: l.ModalSize.DYNAMIC,
-                    className: s()(S.rootContainer, { [S.rootContainerLoading]: k }),
+            (0, n.jsx)('div', {
+                ref: A,
+                children: (0, n.jsx)(u.ModalRoot, {
+                    transitionState: a,
+                    size: u.ModalSize.DYNAMIC,
+                    className: i()(f.rootContainer, { [f.rootContainerLoading]: y }),
                     hideShadow: !0,
-                    children: k
-                        ? (0, a.jsx)(l.Spinner, { type: l.Spinner.Type.SPINNING_CIRCLE })
+                    children: y
+                        ? (0, n.jsx)(u.Spinner, { type: u.Spinner.Type.SPINNING_CIRCLE })
                         : 'error' === I.state
-                          ? (0, a.jsx)(f, {
-                                errorCode: I.errorCode,
-                                onClose: C
+                          ? (0, n.jsx)(T, {
+                                errorReason: I.errorReason,
+                                onClose: t
                             })
-                          : (0, a.jsx)(T, {
-                                quest: M,
-                                primaryColor: M.config.colors.primary,
-                                secondaryColor: M.config.colors.secondary,
+                          : (0, n.jsx)(p, {
+                                quest: l,
+                                primaryColor: l.config.colors.primary,
+                                secondaryColor: l.config.colors.secondary,
                                 rewardNameWithArticle: L.messages.nameWithArticle,
                                 backgroundUrl: B,
-                                location: x,
-                                onClose: C,
+                                location: h,
+                                onClose: t,
                                 onLearnMore: () => {
-                                    c.Z.open(N.oAB.PREMIUM, null, {}), C();
+                                    _.Z.open(E.oAB.PREMIUM, null, {}), t();
                                 }
                             })
                 })
             }),
-            F &&
-                (0, a.jsx)(u.Z, {
-                    confettiTarget: E.current,
-                    confettiCanvas: j,
-                    sprites: A.CA,
-                    colors: A.Br
+            b &&
+                (0, n.jsx)(R.Z, {
+                    confettiTarget: A.current,
+                    confettiCanvas: N,
+                    sprites: S.CA,
+                    colors: S.Br
                 })
         ]
     });
 }
-function f(e) {
-    let { onClose: r, errorCode: o } = e,
-        t = 100004 === o ? E.Z.Messages.QUESTS_NITRO_REWARD_MODAL_ERROR_HAVE_A_SUB : E.Z.Messages.QUESTS_NITRO_REWARD_MODAL_ERROR_MISC;
-    return (0, a.jsxs)(a.Fragment, {
+function T(e) {
+    let { onClose: r, errorReason: o } = e,
+        a = 0 === o ? j.Z.Messages.QUESTS_NITRO_REWARD_MODAL_ERROR_HAVE_A_SUB : j.Z.Messages.QUESTS_NITRO_REWARD_MODAL_ERROR_MISC;
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, a.jsxs)(l.ModalHeader, {
+            (0, n.jsxs)(u.ModalHeader, {
                 separator: !1,
-                className: S.errorHeader,
+                className: f.errorHeader,
                 children: [
-                    (0, a.jsx)(l.Heading, {
-                        className: S.errorTitle,
+                    (0, n.jsx)(u.Heading, {
+                        className: f.errorTitle,
                         variant: 'heading-xl/medium',
-                        children: E.Z.Messages.BILLING_REFUND_MODAL_HEADER_ERROR
+                        children: j.Z.Messages.BILLING_REFUND_MODAL_HEADER_ERROR
                     }),
-                    (0, a.jsx)(l.ModalCloseButton, {
+                    (0, n.jsx)(u.ModalCloseButton, {
                         onClick: r,
-                        className: S.errorModalCloseButton
+                        className: f.errorModalCloseButton
                     })
                 ]
             }),
-            (0, a.jsx)(l.ModalContent, {
-                className: S.errorContent,
-                children: (0, a.jsx)(l.Text, {
+            (0, n.jsx)(u.ModalContent, {
+                className: f.errorContent,
+                children: (0, n.jsx)(u.Text, {
                     variant: 'text-md/normal',
-                    children: t
+                    children: a
                 })
             }),
-            (0, a.jsx)(l.ModalFooter, {
-                className: S.errorModalFooter,
-                children: (0, a.jsx)(l.Button, {
-                    color: l.Button.Colors.BRAND,
-                    size: l.Button.Sizes.MEDIUM,
+            (0, n.jsx)(u.ModalFooter, {
+                className: f.errorModalFooter,
+                children: (0, n.jsx)(u.Button, {
+                    color: u.Button.Colors.BRAND,
+                    size: u.Button.Sizes.MEDIUM,
                     onClick: r,
-                    children: E.Z.Messages.CLOSE
+                    children: j.Z.Messages.CLOSE
                 })
             })
         ]
     });
 }
-function T(e) {
-    let { quest: r, rewardNameWithArticle: o, primaryColor: t, secondaryColor: n, backgroundUrl: i, location: d, onClose: c, onLearnMore: _ } = e;
-    return (0, a.jsxs)('div', {
-        className: S.claimedRootContainer,
+function p(e) {
+    let { quest: r, rewardNameWithArticle: o, primaryColor: a, secondaryColor: t, backgroundUrl: s, location: l, onClose: d, onLearnMore: c } = e;
+    return (0, n.jsxs)('div', {
+        className: f.claimedRootContainer,
         children: [
-            (0, a.jsxs)('div', {
-                className: S.headerContainer,
+            (0, n.jsxs)('div', {
+                className: f.headerContainer,
                 children: [
-                    (0, a.jsx)('img', {
-                        className: S.headerBackground,
-                        src: i,
-                        alt: E.Z.Messages.QUESTS_NITRO_REWARD_MODAL_BACKGROUND_IMAGE_ALT
+                    (0, n.jsx)('img', {
+                        className: f.headerBackground,
+                        src: s,
+                        alt: j.Z.Messages.QUESTS_NITRO_REWARD_MODAL_BACKGROUND_IMAGE_ALT
                     }),
-                    (0, a.jsx)(C.Z, { className: S.beta }),
-                    (0, a.jsxs)('div', {
-                        className: S.headerForeground,
+                    (0, n.jsx)(h.Z, { className: f.beta }),
+                    (0, n.jsxs)('div', {
+                        className: f.headerForeground,
                         children: [
-                            (0, a.jsx)('div', {
-                                className: S.previewContainer,
-                                children: (0, a.jsx)(M.Z, {
+                            (0, n.jsx)('div', {
+                                className: f.previewContainer,
+                                children: (0, n.jsx)(A.Z, {
                                     autoplay: !0,
-                                    className: s()(S.rewardTile),
+                                    className: i()(f.rewardTile),
                                     learnMoreStyle: null,
                                     quest: r,
-                                    questContent: d,
-                                    location: x.dr.INGAME_REWARD_MODAL
+                                    questContent: l,
+                                    location: N.dr.INGAME_REWARD_MODAL
                                 })
                             }),
-                            (0, a.jsx)(l.ModalCloseButton, {
-                                className: S.close,
+                            (0, n.jsx)(u.ModalCloseButton, {
+                                className: f.close,
                                 withCircleBackground: !0,
-                                onClick: c
+                                onClick: d
                             })
                         ]
                     })
                 ]
             }),
-            (0, a.jsx)(l.ModalFooter, {
-                className: S.footerContainer,
+            (0, n.jsx)(u.ModalFooter, {
+                className: f.footerContainer,
                 separator: !1,
-                children: (0, a.jsxs)('div', {
-                    className: S.gradient,
-                    style: { backgroundImage: 'linear-gradient(55deg, '.concat(t, ', ').concat(n, ')') },
+                children: (0, n.jsxs)('div', {
+                    className: f.gradient,
+                    style: { backgroundImage: 'linear-gradient(55deg, '.concat(a, ', ').concat(t, ')') },
                     children: [
-                        (0, a.jsx)(l.Heading, {
+                        (0, n.jsx)(u.Heading, {
                             variant: 'heading-lg/bold',
                             color: 'always-white',
-                            className: S.heading,
-                            children: E.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_HEADER
+                            className: f.heading,
+                            children: j.Z.Messages.QUESTS_REWARD_AVATAR_DECORATION_HEADER
                         }),
-                        (0, a.jsx)(l.Text, {
+                        (0, n.jsx)(u.Text, {
                             variant: 'text-sm/normal',
                             color: 'always-white',
-                            className: S.text,
-                            children: E.Z.Messages.QUESTS_NITRO_REWARD_MODAL_FOOTER_IN_GAME_BODY.format({ rewardNameWithArticle: o })
+                            className: f.text,
+                            children: j.Z.Messages.QUESTS_NITRO_REWARD_MODAL_FOOTER_IN_GAME_BODY.format({ rewardNameWithArticle: o })
                         }),
-                        (0, a.jsx)(l.Button, {
-                            onClick: _,
-                            children: E.Z.Messages.QUESTS_LEARN_MORE_V2
+                        (0, n.jsx)(u.Button, {
+                            onClick: c,
+                            children: j.Z.Messages.QUESTS_LEARN_MORE_V2
                         })
                     ]
                 })
@@ -200,14 +225,14 @@ function T(e) {
         ]
     });
 }
-function O(e) {
-    let { quest: r, location: o, onClose: t, transitionState: n } = e;
-    return (0, g.zK)(r, x.S7.FRACTIONS_QUEST)
-        ? (0, a.jsx)(j, {
-              onClose: t,
-              transitionState: n,
+function v(e) {
+    let { quest: r, location: o, onClose: a, transitionState: t } = e;
+    return (0, M.zK)(r, N.S7.FRACTIONS_QUEST)
+        ? (0, n.jsx)(O, {
+              onClose: a,
+              transitionState: t,
               quest: r,
               location: o
           })
-        : (t(), null);
+        : (a(), null);
 }

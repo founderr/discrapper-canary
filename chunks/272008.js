@@ -212,17 +212,20 @@ async function S(e, t, n) {
                     }
                 }),
                 s = (0, _.Xh)(r.body);
-            0 === s.errors.length
-                ? a.Z.dispatch({
-                      type: 'QUESTS_CLAIM_REWARD_SUCCESS',
-                      questId: e,
-                      entitlements: s
-                  })
-                : a.Z.dispatch({
-                      type: 'QUESTS_CLAIM_REWARD_FAILURE',
-                      error: s.errors,
-                      questId: e
-                  });
+            return (
+                0 === s.errors.length
+                    ? a.Z.dispatch({
+                          type: 'QUESTS_CLAIM_REWARD_SUCCESS',
+                          questId: e,
+                          entitlements: s
+                      })
+                    : a.Z.dispatch({
+                          type: 'QUESTS_CLAIM_REWARD_FAILURE',
+                          error: s.errors,
+                          questId: e
+                      }),
+                s
+            );
         } catch (t) {
             throw (
                 (a.Z.dispatch({
