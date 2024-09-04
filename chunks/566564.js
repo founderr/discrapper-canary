@@ -34,10 +34,16 @@ t.Z = (e) => {
                         ...e,
                         category: u.Z.getCategoryForProduct(e.skuId)
                     }))
-                    .filter((e) => null != e.category),
+                    .filter((e) => null != e.category)
+                    .sort((e, t) => {
+                        let n = !!f.Z.getPurchase(e.skuId),
+                            a = !!f.Z.getPurchase(t.skuId);
+                        return Number(n) - Number(a);
+                    })
+                    .slice(0, 4),
             [O]
         ),
-        A = r.useMemo(
+        P = r.useMemo(
             () =>
                 _.yo
                     .map((e) => u.Z.getProduct(e))
@@ -129,7 +135,7 @@ t.Z = (e) => {
                                           style: { backgroundImage: 'url('.concat(I, ')') },
                                           onClick: () => S(i.T.DOJO),
                                           children: [
-                                              (null === (T = j.feature) || void 0 === T ? void 0 : T.unpublishedAt) != null &&
+                                              (null === (T = u.Z.getCategory(i.T.DOJO)) || void 0 === T ? void 0 : T.unpublishedAt) != null &&
                                                   (0, a.jsx)(c.TextBadge, {
                                                       disableColor: !0,
                                                       text: b.Z.Messages.LIMITED_TIME,
@@ -186,7 +192,7 @@ t.Z = (e) => {
                               (0, a.jsx)('div', {
                                   className: h.feed,
                                   ref: B,
-                                  children: A.slice(0, N).map((e) => {
+                                  children: P.slice(0, N).map((e) => {
                                       if (null == e || null == e.category) return null;
                                       let { category: t, ...n } = e;
                                       return (0, a.jsx)(
