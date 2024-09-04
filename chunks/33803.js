@@ -22,7 +22,7 @@ var i = n(735250),
     f = n(36459),
     C = n(336197),
     p = n(359110),
-    g = n(103575),
+    g = n(347475),
     S = n(496675),
     A = n(594174),
     R = n(5192),
@@ -76,7 +76,6 @@ function H(e, t) {
             return (n) =>
                 (0, i.jsx)(g.Z, {
                     ...n,
-                    location: 'AutomodFlagToChannel',
                     userId: t.id,
                     user: t,
                     channelId: e.id,

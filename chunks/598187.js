@@ -23,7 +23,7 @@ var i = n(735250),
     C = n(226192),
     p = n(36459),
     g = n(434404),
-    S = n(103575),
+    S = n(347475),
     A = n(204197),
     R = n(592125),
     O = n(271383),
@@ -164,7 +164,6 @@ function G(e) {
                                             ? (0, i.jsx)(i.Fragment, {})
                                             : (0, i.jsx)(S.Z, {
                                                   ...e,
-                                                  location: 'AutomodNotification',
                                                   userId: r.id,
                                                   user: r,
                                                   guildId: l,

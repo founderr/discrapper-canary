@@ -36,10 +36,9 @@ async function m(e) {
         k = b === f.Skl.ONLINE ? G : b;
     (p = await (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e('12661'), n.e('17373')]).then(n.bind(n, 304113));
+            let { default: e } = await Promise.all([n.e('82412'), n.e('33217')]).then(n.bind(n, 533835));
             return (t) =>
                 (0, r.jsx)(e, {
-                    location: 'handleOpenUserProfileModal',
                     user: y,
                     guildId: A,
                     friendToken: O,

@@ -1,56 +1,53 @@
-var s = n(735250);
-n(470079);
-var a = n(120356),
-    r = n.n(a),
-    i = n(481060),
-    l = n(906732),
-    o = n(646476),
-    c = n(197115),
-    d = n(689938),
-    _ = n(63837),
-    u = n(568147),
-    E = n(332796);
-t.Z = (e) => {
-    let { className: t, imageClassName: n, textContainerOverrideStyles: a, location: T, analyticsLocation: I } = e,
-        { analyticsLocations: R } = (0, l.ZP)(T),
-        C = (0, o.rK)(),
-        { enabled: g } = o.RO.useExperiment({ location: 'GiftNitro' }, { autoTrackExposure: C }),
-        N = g && C;
-    return (0, s.jsx)(l.Gt, {
-        value: R,
-        children: (0, s.jsxs)('div', {
-            className: r()(_.container, t),
-            children: [
-                (0, s.jsxs)('div', {
-                    className: _.textContainer,
-                    style: a,
-                    children: [
-                        (0, s.jsx)(i.Heading, {
-                            variant: 'heading-lg/extrabold',
-                            className: _.heading,
-                            children: N ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.Z.Messages.GIFT_NITRO
-                        }),
-                        (0, s.jsx)(i.Text, {
-                            variant: 'text-sm/medium',
-                            children: N ? d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.Z.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
-                        }),
-                        (0, s.jsx)(c.Z, {
-                            isGift: !0,
-                            className: _.giftCardButton,
-                            look: i.Button.Looks.OUTLINED,
-                            buttonText: d.Z.Messages.GIFT_NITRO,
-                            buttonTextClassName: _.giftButtonCTA,
-                            color: i.Button.Colors.CUSTOM,
-                            premiumModalAnalyticsLocation: I
-                        })
-                    ]
-                }),
-                (0, s.jsx)('img', {
-                    src: N ? E : u,
-                    className: r()(_.bannerImage, n),
-                    alt: 'gift nitro banner'
-                })
-            ]
-        })
-    });
-};
+n.d(t, {
+    Z: function () {
+        return h;
+    }
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(512722),
+    s = n.n(a),
+    o = n(442837),
+    l = n(699516),
+    u = n(594174),
+    c = n(971393),
+    d = n(614417),
+    _ = n(601665),
+    E = n(103113),
+    f = n(738953);
+function h(e) {
+    let { userId: t, user: n, ...a } = e,
+        h = (0, o.e7)([u.default], () => u.default.getUser(t), [t]),
+        p = null != n ? n : h;
+    s()(null != p, 'UserProfilePopoutWrapper: user cannot be undefined');
+    let I = (0, o.e7)([u.default], () => u.default.getCurrentUser());
+    s()(null != I, 'UserProfilePopoutWrapper: currentUser cannot be undefined');
+    let m = (0, o.e7)([l.Z], () => l.Z.isBlocked(p.id)),
+        [T, g] = i.useState(m),
+        S = (0, c.sS)({ location: 'UserProfilePopoutWrapper' });
+    return T && S
+        ? (0, r.jsx)(d.Z, {
+              ...a,
+              user: p,
+              currentUser: I,
+              onViewBlockedProfileClick: () => g(!1)
+          })
+        : p.isNonUserBot()
+          ? (0, r.jsx)(E.Z, {
+                ...a,
+                user: p,
+                currentUser: I
+            })
+          : p.bot
+            ? (0, r.jsx)(_.Z, {
+                  ...a,
+                  user: p,
+                  currentUser: I
+              })
+            : (0, r.jsx)(f.Z, {
+                  ...a,
+                  user: p,
+                  currentUser: I
+              });
+}

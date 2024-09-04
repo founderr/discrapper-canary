@@ -23,7 +23,7 @@ var i = n(120356),
     T = n(480608),
     g = n(124072),
     S = n(184301),
-    A = n(103575),
+    A = n(347475),
     N = n(592125),
     O = n(271383),
     R = n(430824),
@@ -103,7 +103,6 @@ function b(e) {
                                           renderPopout: (n) =>
                                               (0, r.jsx)(A.Z, {
                                                   ...n,
-                                                  location: 'RoleMention',
                                                   userId: e.userId,
                                                   guildId: a.id,
                                                   channelId: t.id,

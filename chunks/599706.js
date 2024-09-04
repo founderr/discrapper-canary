@@ -4,63 +4,54 @@ n(470079);
 var a = n(392711),
     s = n.n(a),
     r = n(481060),
-    l = n(730749),
-    o = n(100527),
-    c = n(184301),
-    u = n(103575),
-    d = n(463618),
-    _ = n(823379),
-    E = n(981631),
-    I = n(607746);
-let m = (0, l.Z)((e) => {
-    let { member: t, empty: n, analyticsContext: a, guildId: s } = e;
-    if (n) return (0, i.jsx)('div', { className: I.partyMemberEmpty });
-    if (null == t)
-        return (0, i.jsx)('div', {
-            className: I.partyMemberUnknown,
-            children: (0, i.jsx)(d.Z, { className: I.partyMemberUnknownIcon })
-        });
-    let l = {
-        location: {
-            ...a.location,
-            object: E.qAy.AVATAR
-        }
-    };
-    return (0, i.jsx)('div', {
-        className: I.partyMemberKnown,
-        children: (0, i.jsx)(r.Popout, {
-            preload: () => (0, c.Z)(t.id, t.getAvatarURL(s, 80), { guildId: s }),
-            renderPopout: (e) =>
-                (0, i.jsx)(u.Z, {
-                    ...e,
-                    location: 'PartyAvatars',
-                    userId: t.id,
-                    guildId: s,
-                    analyticsParams: l,
-                    newAnalyticsLocations: [o.Z.AVATAR]
-                }),
-            position: 'left',
-            children: (e) =>
-                (0, i.jsx)(r.Avatar, {
-                    ...e,
-                    src: t.getAvatarURL(s, 24),
-                    'aria-label': t.username,
-                    size: r.AvatarSizes.SIZE_24,
-                    className: I.partyMember
+    l = n(100527),
+    o = n(184301),
+    c = n(347475),
+    u = n(463618),
+    d = n(823379),
+    _ = n(607746);
+let E = (e) => {
+    let { member: t, empty: n, guildId: a } = e;
+    return n
+        ? (0, i.jsx)('div', { className: _.partyMemberEmpty })
+        : null == t
+          ? (0, i.jsx)('div', {
+                className: _.partyMemberUnknown,
+                children: (0, i.jsx)(u.Z, { className: _.partyMemberUnknownIcon })
+            })
+          : (0, i.jsx)('div', {
+                className: _.partyMemberKnown,
+                children: (0, i.jsx)(r.Popout, {
+                    preload: () => (0, o.Z)(t.id, t.getAvatarURL(a, 80), { guildId: a }),
+                    renderPopout: (e) =>
+                        (0, i.jsx)(c.Z, {
+                            ...e,
+                            userId: t.id,
+                            guildId: a,
+                            newAnalyticsLocations: [l.Z.AVATAR]
+                        }),
+                    position: 'left',
+                    children: (e) =>
+                        (0, i.jsx)(r.Avatar, {
+                            ...e,
+                            src: t.getAvatarURL(a, 24),
+                            'aria-label': t.username,
+                            size: r.AvatarSizes.SIZE_24,
+                            className: _.partyMember
+                        })
                 })
-        })
-    });
-});
+            });
+};
 t.Z = (e) => {
     let { partySize: t, members: n, minAvatarsShown: a = 1, maxAvatarsShown: r = 2, guildId: l } = e,
         { unknownSize: o, totalSize: c, knownSize: u } = t;
     if (c < a) return null;
-    let d = s()(n)
-        .filter(_.lm)
+    let I = s()(n)
+        .filter(d.lm)
         .take(r)
         .map((e) =>
             (0, i.jsx)(
-                m,
+                E,
                 {
                     member: e,
                     guildId: l
@@ -69,12 +60,12 @@ t.Z = (e) => {
             )
         )
         .value();
-    for (let e = 0; e < o && d.length < r; e++) d.push((0, i.jsx)(m, { guildId: l }, 'unknown-member-'.concat(e)));
-    let E = c - u - o;
-    for (let e = 0; e < E && d.length < r; e++)
-        d.push(
+    for (let e = 0; e < o && I.length < r; e++) I.push((0, i.jsx)(E, { guildId: l }, 'unknown-member-'.concat(e)));
+    let m = c - u - o;
+    for (let e = 0; e < m && I.length < r; e++)
+        I.push(
             (0, i.jsx)(
-                m,
+                E,
                 {
                     empty: !0,
                     guildId: l
@@ -82,12 +73,12 @@ t.Z = (e) => {
                 'empty-member-'.concat(e)
             )
         );
-    let T = Math.max(Math.min(c - d.length, 99), 0);
+    let T = Math.max(Math.min(c - I.length, 99), 0);
     if (1 === T) {
         let e = n[r];
-        d.push(
+        I.push(
             (0, i.jsx)(
-                m,
+                E,
                 {
                     member: e,
                     guildId: l
@@ -97,14 +88,14 @@ t.Z = (e) => {
         );
     }
     return (0, i.jsx)('div', {
-        className: I.wrapper,
+        className: _.wrapper,
         children: (0, i.jsxs)('div', {
-            className: I.partyMembers,
+            className: _.partyMembers,
             children: [
-                d,
+                I,
                 T > 1
                     ? (0, i.jsxs)('div', {
-                          className: I.partyMemberOverflow,
+                          className: _.partyMemberOverflow,
                           children: ['+', T]
                       })
                     : null

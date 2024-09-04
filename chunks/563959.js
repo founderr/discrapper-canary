@@ -14,7 +14,7 @@ var i = n(735250),
     o = n(942951),
     c = n(834129),
     u = n(184301),
-    d = n(103575),
+    d = n(347475),
     _ = n(594174),
     E = n(768581),
     I = n(91047),
@@ -64,7 +64,6 @@ function N(e, t) {
                           renderPopout: (n) =>
                               (0, i.jsx)(d.Z, {
                                   ...n,
-                                  location: 'PrivateChannelIntegrationSystemMessage',
                                   userId: C.id,
                                   guildId: e.guild_id,
                                   channelId: e.id,

@@ -17,7 +17,7 @@ var r = n(735250),
     f = n(927723),
     h = n(124072),
     p = n(184301),
-    I = n(103575),
+    I = n(347475),
     m = n(592125),
     T = n(271383),
     g = n(430824),
@@ -112,7 +112,6 @@ function C(e) {
                   renderPopout: (e) => (
                       s()(null != b, 'Unexpected missing user'),
                       (0, r.jsx)(I.Z, {
-                          location: 'UserMention',
                           userId: b.id,
                           guildId: null != P ? P : void 0,
                           channelId: a,

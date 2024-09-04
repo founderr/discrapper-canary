@@ -13,7 +13,7 @@ var a = t(120356),
     s = t(129861),
     d = t(939863),
     u = t(184301),
-    _ = t(103575),
+    _ = t(347475),
     g = t(314897),
     v = t(158776),
     h = t(885110),
@@ -99,7 +99,6 @@ function T(e) {
               renderPopout: (e) =>
                   (0, i.jsx)(_.Z, {
                       ...e,
-                      location: 'EventDetailRsvpTab',
                       userId: n.user_id,
                       guildId: t
                   }),

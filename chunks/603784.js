@@ -10,7 +10,7 @@ var s = n(735250),
     _ = n(100527),
     I = n(933557),
     E = n(184301),
-    T = n(103575),
+    T = n(347475),
     m = n(210887),
     N = n(699516),
     S = n(594174),
@@ -135,7 +135,6 @@ class A extends a.PureComponent {
                 renderPopout: (e) =>
                     (0, s.jsx)(T.Z, {
                         ...e,
-                        location: 'GuildSettingsAuditLogEntry',
                         userId: i,
                         guildId: t,
                         newAnalyticsLocations: [_.Z.AVATAR]

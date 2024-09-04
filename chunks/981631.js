@@ -3342,7 +3342,6 @@ let o$ = 'help_center_cta';
     (r3.SECURE_FRAMES_VOICE_BOTTOM_SHEET = 'Secure Frames Voice Bottom Sheet'),
     (r3.SECURE_FRAMES_VERIFIED_DEVICES = 'Secure Frames Verified Devices'),
     (r3.SECURE_FRAMES = 'Secure Frames'),
-    (r3.CONTENT_INVENTORY_EMBED = 'Content Inventory Embed'),
     (r3.REVERSE_TRIAL_UPSELL_MODAL = 'Reverse trial Upsell Modal'),
     ((r2 = eT || (eT = {})).TOOLTIP = 'Tooltip'),
     (r2.CARD = 'Card'),

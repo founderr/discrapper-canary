@@ -29,7 +29,7 @@ var i,
     T = n(701362),
     N = n(224184),
     S = n(184301),
-    v = n(103575),
+    v = n(347475),
     Z = n(597998),
     A = n(314897),
     M = n(430824),
@@ -183,7 +183,6 @@ class w extends (i = s.PureComponent) {
                 let { channel: t, user: n } = this.props,
                     i = t.getGuildId();
                 return (0, a.jsx)(v.Z, {
-                    location: 'VoiceUser',
                     userId: n.id,
                     guildId: null != i ? i : void 0,
                     channelId: t.id,

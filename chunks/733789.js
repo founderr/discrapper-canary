@@ -7,7 +7,7 @@ var i = n(735250),
     o = n(100527),
     c = n(707409),
     d = n(184301),
-    u = n(103575),
+    u = n(347475),
     _ = n(237583),
     h = n(51144),
     E = n(981631),
@@ -86,7 +86,6 @@ class T extends a.PureComponent {
                 renderPopout: (t) =>
                     (0, i.jsx)(u.Z, {
                         ...t,
-                        location: 'ApplicationRecommendationActivity',
                         userId: e.id,
                         newAnalyticsLocations: [o.Z.USERNAME]
                     }),
@@ -154,7 +153,6 @@ class T extends a.PureComponent {
                               renderPopout: (t) =>
                                   (0, i.jsx)(u.Z, {
                                       ...t,
-                                      location: 'ApplicationRecommendationActivity',
                                       userId: e.id,
                                       newAnalyticsLocations: [o.Z.AVATAR]
                                   }),

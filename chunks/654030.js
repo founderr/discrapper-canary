@@ -17,7 +17,7 @@ var i,
     N = n(952164),
     f = n(768419),
     C = n(456432),
-    p = n(103575),
+    p = n(347475),
     g = n(789407),
     S = n(598077),
     A = n(757266),
@@ -143,7 +143,6 @@ class G extends (i = s.PureComponent) {
                     ? null
                     : (0, a.jsx)(p.Z, {
                           ...t,
-                          location: 'ActivityInviteEmbed',
                           userId: e.id,
                           guildId: null != i ? i : void 0,
                           channelId: n,

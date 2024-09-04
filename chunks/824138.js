@@ -9,7 +9,7 @@ var i = n(735250),
     d = n(100527),
     u = n(600164),
     _ = n(184301),
-    h = n(103575),
+    h = n(347475),
     E = n(237583),
     m = n(63063),
     I = n(870569),
@@ -104,7 +104,6 @@ class A extends a.PureComponent {
                                 o()(null != e, ''),
                                 (0, i.jsx)(h.Z, {
                                     ...t,
-                                    location: 'ListeningAlong',
                                     userId: e.id,
                                     newAnalyticsLocations: [d.Z.AVATAR]
                                 })

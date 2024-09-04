@@ -19,7 +19,7 @@ var i = n(735250),
     f = n(382182),
     E = n(352978),
     C = n(184301),
-    g = n(103575),
+    g = n(347475),
     I = n(199902),
     x = n(430824),
     T = n(496675),
@@ -47,7 +47,6 @@ let R = 16 / 9,
             renderPopout: (e) =>
                 (0, i.jsx)(g.Z, {
                     ...e,
-                    location: 'StageTile',
                     guildId: l,
                     channelId: s.id,
                     userId: r.id

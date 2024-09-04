@@ -19,7 +19,7 @@ var i = n(735250),
     m = n(554300),
     _ = n(556084),
     f = n(184301),
-    E = n(103575),
+    E = n(347475),
     C = n(158776),
     g = n(699516),
     I = n(111583),
@@ -59,7 +59,6 @@ function y(e) {
         renderPopout: (e) =>
             (0, i.jsx)(E.Z, {
                 ...e,
-                location: 'PrivateChannelRecipients',
                 userId: t.id,
                 channelId: a.id
             }),
@@ -126,7 +125,6 @@ function D(e) {
               renderPopout: (e) =>
                   (0, i.jsx)(E.Z, {
                       ...e,
-                      location: 'PrivateChannelRecipients',
                       userId: d.id,
                       channelId: c.id
                   }),

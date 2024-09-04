@@ -14,7 +14,7 @@ var a = n(120356),
     u = n(906732),
     d = n(471445),
     h = n(184301),
-    p = n(103575),
+    p = n(347475),
     m = n(271383),
     _ = n(594174),
     f = n(51144),
@@ -58,7 +58,6 @@ function x(e) {
                       }),
                   renderPopout: (e) =>
                       (0, i.jsx)(p.Z, {
-                          location: 'ThreadEmptyMessage',
                           userId: g.id,
                           guildId: E.guild_id,
                           channelId: E.id,

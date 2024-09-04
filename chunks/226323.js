@@ -15,7 +15,7 @@ var i = n(735250),
     d = n(586902),
     u = n(512384),
     _ = n(184301),
-    h = n(103575),
+    h = n(347475),
     E = n(314897),
     m = n(131951),
     I = n(51144),
@@ -121,7 +121,6 @@ function f(e) {
         position: 'top',
         renderPopout: (e) =>
             (0, i.jsx)(h.Z, {
-                location: 'RTCConnectionVoiceUsers',
                 userId: E.id,
                 guildId: O,
                 channelId: s.id,

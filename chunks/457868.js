@@ -27,7 +27,7 @@ var i = n(735250),
     N = n(965376),
     S = n(159299),
     v = n(184301),
-    Z = n(103575),
+    Z = n(347475),
     A = n(199902),
     M = n(271383),
     b = n(430824),
@@ -120,16 +120,9 @@ let W = w.ZP.getEnableHardwareAcceleration(),
             renderPopout: (e) =>
                 (0, i.jsx)(Z.Z, {
                     ...e,
-                    location: 'ThreadMembers',
                     userId: E.id,
                     guildId: t.guild_id,
-                    channelId: t.id,
-                    analyticsParams: {
-                        location: {
-                            page: H.ZY5.GUILD_CHANNEL,
-                            section: H.jXE.THREAD_MEMBER_LIST
-                        }
-                    }
+                    channelId: t.id
                 }),
             position: d.tq ? 'window_center' : 'left',
             spacing: 16,

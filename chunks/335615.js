@@ -37,7 +37,7 @@ var i = n(735250),
     j = n(518738),
     O = n(155409),
     P = n(184301),
-    y = n(103575),
+    y = n(347475),
     D = n(439170),
     k = n(430824),
     U = n(111583),
@@ -161,17 +161,10 @@ class Q extends a.Component {
             Y(this, 'renderUserPopout', (e) =>
                 (0, i.jsx)(y.Z, {
                     ...e,
-                    location: 'ChannelMembers',
                     userId: this.props.user.id,
                     guildId: this.props.guildId,
                     channelId: this.props.channel.id,
-                    roleId: this.props.colorRoleId,
-                    analyticsParams: {
-                        location: {
-                            page: F.ZY5.GUILD_CHANNEL,
-                            section: F.jXE.MEMBER_LIST
-                        }
-                    }
+                    roleId: this.props.colorRoleId
                 })
             );
     }

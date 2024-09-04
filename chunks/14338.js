@@ -12,7 +12,7 @@ var i = n(735250),
     c = n(586902),
     u = n(40851),
     d = n(184301),
-    h = n(103575),
+    h = n(347475),
     p = n(237583),
     m = n(768581),
     _ = n(363422);
@@ -50,7 +50,6 @@ function f(e) {
         renderPopout: (e) =>
             (0, i.jsx)(h.Z, {
                 ...e,
-                location: 'StageSpeakerSummary',
                 guildId: t.guild_id,
                 channelId: t.id,
                 userId: s.id

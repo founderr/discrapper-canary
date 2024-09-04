@@ -78,7 +78,7 @@ var i = n(735250),
     ev = n(900157),
     eZ = n(108427),
     eA = n(171368),
-    eM = n(346967),
+    eM = n(430670),
     eb = n(524329),
     eR = n(995532),
     eL = n(738643),
@@ -270,15 +270,7 @@ class e9 extends a.PureComponent {
     renderSidebar() {
         let { searchId: e, channel: t, parentChannel: n, guild: a, needSubscriptionToAccess: s, section: l, showCall: r, showActivityPanel: c } = this.props;
         if ((o()(null != t, 'Missing channel in Channel.renderSidebar'), __OVERLAY__ || s));
-        else if (l === eJ.ULH.PROFILE && t.isPrivate() && !r && !c)
-            return (0, i.jsx)(
-                eM.Z,
-                {
-                    location: 'Channel',
-                    channel: t
-                },
-                'private-channel-profile-'.concat(t.id)
-            );
+        else if (l === eJ.ULH.PROFILE && t.isPrivate() && !r && !c) return (0, i.jsx)(eM.Z, { channel: t }, 'private-channel-profile-'.concat(t.id));
         else if (l === eJ.ULH.MEMBERS)
             switch (t.type) {
                 case eJ.d4z.GROUP_DM:

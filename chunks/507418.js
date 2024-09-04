@@ -10,7 +10,7 @@ var a = n(512722),
     r = n(83474),
     l = n(245315),
     o = n(556041),
-    c = n(103575),
+    c = n(347475),
     u = n(592125),
     d = n(368859);
 function _(e, t) {
@@ -30,7 +30,6 @@ function _(e, t) {
         s()(null != n, 'renderUserGuildPopout: channel should never be null'),
         (0, i.jsx)(c.Z, {
             ...e,
-            location: 'renderUserGuildPopout',
             channelId: t.channel_id,
             messageId: t.id,
             guildId: n.guild_id,

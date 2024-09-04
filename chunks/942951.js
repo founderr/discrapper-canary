@@ -9,7 +9,7 @@ var i = n(735250),
     a = n(100527),
     l = n(906732),
     r = n(184301),
-    c = n(103575),
+    c = n(347475),
     u = n(592125),
     d = n(91047);
 function h(e) {
@@ -57,7 +57,6 @@ function h(e) {
                                   renderPopout: (t) =>
                                       (0, i.jsx)(c.Z, {
                                           ...t,
-                                          location: 'useUsernameHook',
                                           userId: h.id,
                                           guildId: p,
                                           channelId: m,

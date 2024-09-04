@@ -19,7 +19,7 @@ var i,
     _ = n(58540),
     f = n(665149),
     E = n(484459),
-    C = n(103575),
+    C = n(347475),
     g = n(271383),
     I = n(496675),
     x = n(158776),
@@ -101,7 +101,6 @@ let L = l.memo(function (e) {
                     renderPopout: (e) =>
                         (0, s.jsx)(C.Z, {
                             ...e,
-                            location: 'RequestToSpeakSidebar',
                             userId: i.user.id,
                             guildId: f,
                             channelId: t.id

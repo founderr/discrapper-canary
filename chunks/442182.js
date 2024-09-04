@@ -16,7 +16,7 @@ var s = n(735250),
     _ = n(100527),
     I = n(906732),
     E = n(184301),
-    T = n(103575),
+    T = n(347475),
     m = n(594174),
     N = n(626135),
     S = n(243730),
@@ -112,7 +112,6 @@ function v(e) {
             children: (0, s.jsx)(o.Popout, {
                 renderPopout: (e) =>
                     (0, s.jsx)(T.Z, {
-                        location: 'GuildSettingsRolesEditMembers',
                         guildId: i,
                         userId: t.id,
                         roleId: l,

@@ -15,7 +15,7 @@ var i = n(735250),
     h = n(239091),
     p = n(40851),
     m = n(184301),
-    _ = n(103575),
+    _ = n(347475),
     f = n(271383),
     E = n(709586),
     C = n(5192),
@@ -124,7 +124,6 @@ t.Z = a.memo(function (e) {
             (e) =>
                 (0, i.jsx)(_.Z, {
                     ...e,
-                    location: 'AudienceTile',
                     guildId: E,
                     channelId: s.id,
                     userId: r.id

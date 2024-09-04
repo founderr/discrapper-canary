@@ -32,7 +32,7 @@ var i,
     R = n(427679),
     O = n(448206),
     x = n(184301),
-    b = n(103575),
+    b = n(347475),
     P = n(496675),
     M = n(594174),
     D = n(662868),
@@ -332,7 +332,6 @@ function w(e) {
                                           renderPopout: (n) =>
                                               (0, s.jsx)(b.Z, {
                                                   ...n,
-                                                  location: 'LiveChannelNotice',
                                                   userId: e.id,
                                                   guildId: t.id,
                                                   newAnalyticsLocations: [h.Z.AVATAR]
