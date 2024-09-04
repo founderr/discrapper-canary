@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return P;
     }
 }),
     n(47120);
@@ -10,56 +10,59 @@ var i = n(735250),
     l = n.n(s),
     r = n(852229),
     o = n(442837),
-    c = n(481060),
-    u = n(393238),
-    d = n(330726),
-    h = n(48929),
-    p = n(333535),
-    m = n(566006),
-    _ = n(443877),
-    f = n(60174),
-    E = n(216337),
-    C = n(920888),
-    g = n(287151),
-    I = n(569471),
-    x = n(346479),
-    T = n(592125),
-    N = n(934415),
-    S = n(456269),
-    v = n(109590),
-    Z = n(228392),
-    A = n(981631),
-    M = n(689938),
-    b = n(704119),
-    R = n(952527);
-function L(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: s = !1, parentChannelId: L } = e,
-        { ref: j, width: O } = (0, u.Z)(),
-        [P, y] = a.useState(3),
-        [D, k] = a.useState(!n),
-        [U, w] = (0, d.Z)(!1, 2000),
-        B = (0, o.e7)([T.Z], () => T.Z.getChannel(t), [t]),
-        { firstMessage: H } = (0, v.cl)(B),
-        G = (0, o.e7)([I.Z], () => I.Z.hasJoined(t)),
-        { disableReactionUpdates: V, disableReactionCreates: F, isLurking: W, isGuest: z, isPendingMember: Y } = (0, _.Z)(B),
-        K = (0, o.e7)([T.Z], () => T.Z.getChannel(L)),
-        q = (0, S.Bs)(K),
-        X = (0, o.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
-        Q = a.useCallback(
+    c = n(52826),
+    u = n(481060),
+    d = n(904245),
+    h = n(593472),
+    p = n(393238),
+    m = n(330726),
+    _ = n(48929),
+    f = n(333535),
+    E = n(566006),
+    C = n(443877),
+    g = n(60174),
+    I = n(216337),
+    x = n(920888),
+    T = n(287151),
+    N = n(569471),
+    S = n(346479),
+    v = n(592125),
+    Z = n(934415),
+    A = n(456269),
+    M = n(109590),
+    b = n(228392),
+    R = n(981631),
+    L = n(689938),
+    j = n(704119),
+    O = n(952527);
+function P(e) {
+    let { postId: t, isFirstMessage: n, isLastItem: s = !1, parentChannelId: P } = e,
+        { ref: y, width: D } = (0, p.Z)(),
+        [k, U] = a.useState(3),
+        [w, B] = a.useState(!n),
+        [H, G] = (0, m.Z)(!1, 2000),
+        V = (0, o.e7)([v.Z], () => v.Z.getChannel(t), [t]),
+        { firstMessage: F } = (0, M.cl)(V),
+        W = (0, o.e7)([N.Z], () => N.Z.hasJoined(t)),
+        { disableReactionUpdates: z, disableReactionCreates: Y, isLurking: K, isGuest: q, isPendingMember: X } = (0, C.Z)(V),
+        Q = (0, o.e7)([v.Z], () => v.Z.getChannel(P)),
+        J = (0, A.Bs)(Q),
+        $ = (0, o.e7)([_.Z], () => _.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
+        ee = a.useCallback(
             (e) => {
                 let t = e[0];
                 if (null != t && n) {
                     let e = t.intersectionRect,
                         n = t.boundingClientRect;
-                    k((e.bottom - e.top) / (n.bottom - n.top) < 1);
+                    B((e.bottom - e.top) / (n.bottom - n.top) < 1);
                 }
             },
             [n]
         );
     a.useLayoutEffect(() => {
-        let e = j.current;
+        let e = y.current;
         if (null == e || !n) return;
-        let t = new IntersectionObserver(Q, { threshold: 1 });
+        let t = new IntersectionObserver(ee, { threshold: 1 });
         return (
             t.observe(e),
             () => {
@@ -67,50 +70,58 @@ function L(e) {
             }
         );
     });
-    let [J, $] = a.useState(!0);
+    let [et, en] = a.useState(!0);
     if (
         (a.useEffect(() => {
-            if (null != O) y(Math.floor((O - 280) / 58)), $(!1);
-        }, [O]),
-        null == B || null == H)
+            if (null != D) U(Math.floor((D - 280) / 58)), en(!1);
+        }, [D]),
+        null == V || null == F)
     )
         return null;
-    let ee = H.reactions.length > 0,
-        et = () => {
-            G ? x.Z.leaveThread(B, 'Forum Toolbar') : x.Z.joinThread(B, 'Forum Toolbar');
+    let ei = F.reactions.length > 0,
+        ea = () => {
+            W ? S.Z.leaveThread(V, 'Forum Toolbar') : S.Z.joinThread(V, 'Forum Toolbar');
         },
-        en = () => {
-            (0, Z.B)({
-                postId: B.id,
-                location: { section: A.jXE.CHANNEL_HEADER }
+        es = () => {
+            (0, b.B)({
+                postId: V.id,
+                location: { section: R.jXE.CHANNEL_HEADER }
             }),
-                (0, r.J)((0, N.EO)(B, K)),
-                w(!0);
+                (0, r.J)((0, Z.EO)(V, Q)),
+                G(!0);
         },
-        ei = G ? c.CheckmarkLargeIcon : c.BellIcon;
+        el = () => {
+            d.Z.jumpToMessage({
+                channelId: V.id,
+                messageId: V.id,
+                flash: !0,
+                jumpType: h.SR.INSTANT
+            });
+        },
+        er = W ? u.CheckmarkLargeIcon : u.BellIcon;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: l()(b.container, { [b.header]: D }),
-                ref: j,
+                className: l()(j.container, { [j.header]: w }),
+                ref: y,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: l()(b.reactButtons, { [b.loading]: J }),
+                        className: l()(j.reactButtons, { [j.loading]: et }),
                         children: [
-                            !ee &&
-                                !F &&
-                                null != q &&
+                            !ei &&
+                                !Y &&
+                                null != J &&
                                 (0, i.jsx)('div', {
-                                    className: R.reactions,
-                                    children: (0, i.jsx)(g.le, {
-                                        message: H,
+                                    className: O.reactions,
+                                    children: (0, i.jsx)(T.le, {
+                                        message: F,
                                         readOnly: !1,
                                         useChatFontScaling: !1,
-                                        isLurking: W,
-                                        isGuest: z,
-                                        isPendingMember: Y,
-                                        emoji: q,
-                                        type: m.O.NORMAL,
+                                        isLurking: K,
+                                        isGuest: q,
+                                        isPendingMember: X,
+                                        emoji: J,
+                                        type: E.O.NORMAL,
                                         hideCount: !0,
                                         count: 0,
                                         me: !1,
@@ -118,89 +129,108 @@ function L(e) {
                                         me_burst: !1
                                     })
                                 }),
-                            (0, i.jsx)(C.Z, {
-                                message: H,
-                                channel: B,
+                            (0, i.jsx)(x.Z, {
+                                message: F,
+                                channel: V,
                                 disableReactionCreates: !0,
-                                disableReactionUpdates: V,
-                                isLurking: W,
-                                isGuest: z,
-                                isPendingMember: Y,
-                                maxReactions: P,
-                                className: b.reactions,
+                                disableReactionUpdates: z,
+                                isLurking: K,
+                                isGuest: q,
+                                isPendingMember: X,
+                                maxReactions: k,
+                                className: j.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,
                                 forceHideReactionCreates: !0
                             }),
-                            !F &&
-                                (0, i.jsx)(f.X, {
-                                    type: m.O.NORMAL,
-                                    message: H,
-                                    channel: B,
+                            !Y &&
+                                (0, i.jsx)(g.X, {
+                                    type: E.O.NORMAL,
+                                    message: F,
+                                    channel: V,
                                     useChatFontScaling: !1,
-                                    className: b.addReactButton,
+                                    className: j.addReactButton,
                                     isForumToolbar: !0,
-                                    children: !ee && M.Z.Messages.FORUM_REACT_TO_POST
+                                    children: !ei && L.Z.Messages.FORUM_REACT_TO_POST
                                 })
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: b.buttons,
+                        className: j.buttons,
                         children: [
-                            (0, i.jsx)(c.Tooltip, {
-                                text: M.Z.Messages.FORUM_FOLLOW_TOOLTIP,
+                            (0, i.jsx)(u.Tooltip, {
+                                text: L.Z.Messages.FORUM_FOLLOW_TOOLTIP,
                                 children: (e) =>
-                                    (0, i.jsxs)(c.Button, {
+                                    (0, i.jsxs)(u.Button, {
                                         ...e,
-                                        look: c.Button.Looks.BLANK,
-                                        size: c.Button.Sizes.SMALL,
-                                        onClick: et,
-                                        className: b.button,
-                                        innerClassName: l()(b.buttonInner, { [b.active]: G }),
+                                        look: u.Button.Looks.BLANK,
+                                        size: u.Button.Sizes.SMALL,
+                                        onClick: ea,
+                                        className: j.button,
+                                        innerClassName: l()(j.buttonInner, { [j.active]: W }),
                                         children: [
-                                            (0, i.jsx)(ei, {
+                                            (0, i.jsx)(er, {
                                                 size: 'xs',
                                                 color: 'currentColor'
                                             }),
-                                            G ? M.Z.Messages.FORUM_FOLLOWING_POST : M.Z.Messages.FOLLOW
+                                            W ? L.Z.Messages.FORUM_FOLLOWING_POST : L.Z.Messages.FOLLOW
                                         ]
                                     })
                             }),
-                            (0, i.jsx)(c.Tooltip, {
-                                text: M.Z.Messages.COPY_LINK,
+                            (0, i.jsx)(u.Tooltip, {
+                                text: L.Z.Messages.COPY_LINK,
                                 children: (e) =>
-                                    (0, i.jsxs)(c.Button, {
+                                    (0, i.jsxs)(u.Button, {
                                         ...e,
-                                        look: c.Button.Looks.BLANK,
-                                        size: c.Button.Sizes.SMALL,
-                                        onClick: en,
-                                        className: b.button,
-                                        innerClassName: b.buttonInner,
+                                        look: u.Button.Looks.BLANK,
+                                        size: u.Button.Sizes.SMALL,
+                                        onClick: es,
+                                        className: j.button,
+                                        innerClassName: j.buttonInner,
                                         children: [
-                                            U
-                                                ? (0, i.jsx)(c.CheckmarkLargeIcon, {
+                                            H
+                                                ? (0, i.jsx)(u.CheckmarkLargeIcon, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 16,
                                                       height: 16
                                                   })
-                                                : (0, i.jsx)(c.LinkIcon, {
+                                                : (0, i.jsx)(u.LinkIcon, {
                                                       size: 'custom',
                                                       color: 'currentColor',
                                                       width: 16,
                                                       height: 16
                                                   }),
-                                            U ? M.Z.Messages.COPIED : null
+                                            H ? L.Z.Messages.COPIED : null
                                         ]
                                     })
-                            })
+                            }),
+                            !n &&
+                                (0, i.jsx)(u.Tooltip, {
+                                    text: L.Z.Messages.JUMP_TO_TOP,
+                                    children: (e) =>
+                                        (0, i.jsx)(u.Button, {
+                                            ...e,
+                                            look: u.Button.Looks.BLANK,
+                                            size: u.Button.Sizes.SMALL,
+                                            onClick: el,
+                                            className: j.button,
+                                            innerClassName: j.buttonInner,
+                                            children: (0, i.jsx)(c.Z, {
+                                                size: 'custom',
+                                                color: 'currentColor',
+                                                width: 16,
+                                                height: 16
+                                            })
+                                        })
+                                })
                         ]
                     })
                 ]
             }),
-            X && (0, i.jsx)(p.Z, { threadId: t }),
-            (0, i.jsx)(E.Z, {
-                channel: B,
+            $ && (0, i.jsx)(f.Z, { threadId: t }),
+            (0, i.jsx)(I.Z, {
+                channel: V,
                 isLastItem: s
             })
         ]
