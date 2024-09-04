@@ -175,7 +175,7 @@ n.d(t, {
     n(47120),
     n(411104),
     n(653041);
-var r = n(164369),
+var r = n(991998),
     i = n(392711),
     a = n(266067),
     s = n(278074),
@@ -410,17 +410,24 @@ function ea(e) {
 function es(e) {
     let t = ea(e);
     if (null == t || !('expiresAt' in t) || null == t.expiresAt) return null;
-    let n = {
-        days: 0,
-        weeks: 0,
-        months: 0,
-        years: 0,
-        ...(0, r.Z)({
-            start: new Date(e.expiresAt),
-            end: new Date(t.expiresAt)
-        })
-    };
-    return (n.days >= 7 && ((n.weeks = Math.floor(n.days / 7)), (n.days = n.days % 7)), n.years > 0) ? L.Z.Messages.DURATION_YEARS.format({ years: n.years }) : n.months > 0 ? L.Z.Messages.DURATION_MONTHS.format({ months: n.months }) : n.weeks > 0 ? L.Z.Messages.DURATION_WEEKS.format({ weeks: n.weeks }) : L.Z.Messages.DURATION_DAYS.format({ days: n.days });
+    let n = new Date(e.expiresAt),
+        i = new Date(t.expiresAt),
+        a = (0, r.Z)(i, n),
+        s = Math.floor(a / 30),
+        o = s + (a % 30 >= 25 ? 1 : 0);
+    if (o >= 12) {
+        let e = Math.floor(o / 12);
+        return L.Z.Messages.DURATION_YEARS.format({ years: e });
+    }
+    if (o > 0) return L.Z.Messages.DURATION_MONTHS.format({ months: o });
+    {
+        let e = (0, r.Z)(i, n);
+        if (!(e >= 7)) return L.Z.Messages.DURATION_DAYS.format({ days: e });
+        {
+            let t = Math.ceil(e / 7);
+            return L.Z.Messages.DURATION_WEEKS.format({ weeks: t });
+        }
+    }
 }
 function eo(e) {
     return null != ea(e);
