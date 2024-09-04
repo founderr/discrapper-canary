@@ -1,21 +1,22 @@
 n.d(t, {
     Gi: function () {
-        return s;
-    },
-    MP: function () {
         return o;
     },
-    Qs: function () {
+    MP: function () {
         return l;
     },
-    YN: function () {
+    Qs: function () {
         return u;
+    },
+    YN: function () {
+        return c;
     }
 });
 var r = n(818083),
-    i = n(311476),
-    a = n(474936);
-let s = (0, r.B)({
+    i = n(380684),
+    a = n(311476),
+    s = n(474936);
+let o = (0, r.B)({
         id: '2024-06_premium_emoji_desktop_upsell',
         label: 'Premium Emoji Desktop Upsell',
         kind: 'user',
@@ -42,7 +43,7 @@ let s = (0, r.B)({
             }
         ]
     }),
-    o = (0, r.B)({
+    l = (0, r.B)({
         id: '2024-05_file_upload_desktop_upsell',
         label: 'File Upload Desktop Upsell',
         kind: 'user',
@@ -69,7 +70,7 @@ let s = (0, r.B)({
             }
         ]
     }),
-    l = (0, r.B)({
+    u = (0, r.B)({
         id: '2024-06_premium_soundboard_desktop_upsell',
         label: 'Premium Soundboard Desktop Upsell',
         kind: 'user',
@@ -108,14 +109,14 @@ let s = (0, r.B)({
             }
         ]
     });
-function u(e) {
+function c(e) {
     switch (e) {
-        case a.cd.UPLOAD_ERROR_UPSELL:
-            return o.getCurrentConfig({ location: 'File Upload Roadblock' }, { autoTrackExposure: !1 }).addSocialProof;
-        case a.cd.CLIENT_THEMES_UPSELL:
-        case a.cd.APP_ICONS_UPSELL:
-            return i.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
-        case a.cd.FOR_LATER_MODAL_UPSELL:
+        case s.cd.UPLOAD_ERROR_UPSELL:
+            return l.getCurrentConfig({ location: 'File Upload Roadblock' }, { autoTrackExposure: !1 }).addSocialProof || (0, i.XS)();
+        case s.cd.CLIENT_THEMES_UPSELL:
+        case s.cd.APP_ICONS_UPSELL:
+            return a.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
+        case s.cd.FOR_LATER_MODAL_UPSELL:
             return !0;
         default:
             return !1;

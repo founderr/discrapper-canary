@@ -1078,14 +1078,9 @@ function eb(e) {
     return e;
 }
 function eM(e) {
-    let t =
-        arguments.length > 1 && void 0 !== arguments[1]
-            ? arguments[1]
-            : {
-                  useSpace: !0,
-                  useWithoutExperiment: !1
-              };
-    return (0, R.BU)(((0, C.Xv)() && e === P.p9.TIER_2 && !t.useWithoutExperiment ? P.m0[e].fileSize : P.a1[e].fileSize) / 1024, {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { useSpace: !0 },
+        n = P.a1[e].fileSize;
+    return (0, R.BU)(n / 1024, {
         useKibibytes: !0,
         useSpace: t.useSpace
     });

@@ -1,21 +1,18 @@
 n.d(t, {
     B: function () {
-        return l;
-    },
-    Fm: function () {
-        return d;
-    },
-    Lc: function () {
-        return c;
-    },
-    Ld: function () {
         return o;
     },
-    U4: function () {
+    Fm: function () {
+        return c;
+    },
+    Lc: function () {
         return u;
     },
+    U4: function () {
+        return l;
+    },
     hn: function () {
-        return _;
+        return d;
     },
     zz: function () {
         return s;
@@ -81,9 +78,8 @@ let a = [
             type: 'image/webm'
         }
     ],
-    s = 524288000,
-    o = 1073741824;
-function l(e) {
+    s = 524288000;
+function o(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         a = arguments.length > 2 ? arguments[2] : void 0,
@@ -95,7 +91,7 @@ function l(e) {
     })({ spoiler: e.spoiler });
     return (s.filename = ''.concat(o).concat(null != a ? a : e.filename)), (s.uploaded_filename = e.uploadedFilename), 'durationSecs' in e && null != e.durationSecs && (s.duration_secs = e.durationSecs), 'waveform' in e && null != e.waveform && (s.waveform = e.waveform), 'isThumbnail' in e && !0 === e.isThumbnail && (s.is_thumbnail = e.isThumbnail), 'isRemix' in e && !0 === e.isRemix && (s.is_remix = e.isRemix), 'clip' in e && null != e.clip && ((s.is_clip = !0), (s.title = e.clip.name), (s.application_id = e.clip.applicationId), (s.clip_created_at = (0, r.U)(e.clip.id)), (s.clip_participant_ids = (0, r.Z)(e.clip.users))), s;
 }
-function u(e, t, n) {
+function l(e, t, n) {
     let r = new XMLHttpRequest();
     return new Promise((i, a) => {
         r.open('GET', e, !0),
@@ -110,7 +106,7 @@ function u(e, t, n) {
             r.send();
     });
 }
-function c(e) {
+function u(e) {
     let t = new XMLHttpRequest();
     return new Promise((n, r) => {
         t.open('GET', e, !0),
@@ -125,7 +121,7 @@ function c(e) {
             t.send();
     });
 }
-function d(e) {
+function c(e) {
     return new Promise((t, n) => {
         let r = new XMLHttpRequest();
         r.open('HEAD', e, !0),
@@ -141,7 +137,7 @@ function d(e) {
             r.send();
     });
 }
-function _(e) {
+function d(e) {
     var t, n, r, i, s, o;
     let l,
         { uri: u, i: c, overrideFilename: d, overrideType: _ } = e,

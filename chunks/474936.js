@@ -3,13 +3,13 @@ n.d(t, {
         return el;
     },
     $8: function () {
-        return ej;
+        return eY;
     },
     $e: function () {
         return W;
     },
     $n: function () {
-        return e5;
+        return e3;
     },
     A5: function () {
         return ed;
@@ -18,7 +18,7 @@ n.d(t, {
         return eg;
     },
     Bo: function () {
-        return e8;
+        return e6;
     },
     C2: function () {
         return eN;
@@ -45,7 +45,7 @@ n.d(t, {
         return er;
     },
     HO: function () {
-        return eK;
+        return eW;
     },
     Hk: function () {
         return eA;
@@ -57,7 +57,7 @@ n.d(t, {
         return eV;
     },
     M_: function () {
-        return e7;
+        return e5;
     },
     Nl: function () {
         return ew;
@@ -66,7 +66,7 @@ n.d(t, {
         return ee;
     },
     QI: function () {
-        return e2;
+        return e0;
     },
     QP: function () {
         return c;
@@ -93,13 +93,13 @@ n.d(t, {
         return T;
     },
     TD: function () {
-        return eX;
+        return eQ;
     },
     TL: function () {
         return eS;
     },
     Tp: function () {
-        return e0;
+        return e$;
     },
     UA: function () {
         return eo;
@@ -114,7 +114,7 @@ n.d(t, {
         return eH;
     },
     V4: function () {
-        return e3;
+        return e1;
     },
     VU: function () {
         return S;
@@ -123,7 +123,7 @@ n.d(t, {
         return a;
     },
     Y1: function () {
-        return ez;
+        return eK;
     },
     YQ: function () {
         return z;
@@ -135,10 +135,10 @@ n.d(t, {
         return Y;
     },
     _k: function () {
-        return eW;
+        return ej;
     },
     a1: function () {
-        return eJ;
+        return eX;
     },
     a7: function () {
         return eO;
@@ -147,7 +147,7 @@ n.d(t, {
         return j;
     },
     bg: function () {
-        return eQ;
+        return eq;
     },
     cb: function () {
         return es;
@@ -168,10 +168,10 @@ n.d(t, {
         return eb;
     },
     eG: function () {
-        return e9;
+        return e7;
     },
     eZ: function () {
-        return e4;
+        return e2;
     },
     ee: function () {
         return ek;
@@ -207,10 +207,7 @@ n.d(t, {
         return u;
     },
     jy: function () {
-        return e1;
-    },
-    m0: function () {
-        return e$;
+        return eJ;
     },
     m8: function () {
         return eE;
@@ -225,7 +222,7 @@ n.d(t, {
         return eB;
     },
     nH: function () {
-        return eq;
+        return ez;
     },
     nL: function () {
         return f;
@@ -237,7 +234,7 @@ n.d(t, {
         return r;
     },
     pH: function () {
-        return eY;
+        return eZ;
     },
     pj: function () {
         return ei;
@@ -252,13 +249,10 @@ n.d(t, {
         return ef;
     },
     rt: function () {
-        return e6;
+        return e4;
     },
     vL: function () {
         return eF;
-    },
-    wb: function () {
-        return eZ;
     },
     wh: function () {
         return eT;
@@ -689,26 +683,25 @@ let eF = Object.freeze({
     }),
     eV = 52428800,
     eH = 524288000,
-    eZ = 1073741824,
-    eY = {
+    eZ = {
         [V.Eu4.NONE]: 5,
         [V.Eu4.TIER_1]: 10,
         [V.Eu4.TIER_2]: 15,
         [V.Eu4.TIER_3]: 30
     },
-    ej = {
-        [V.Eu4.NONE]: eY[V.Eu4.NONE],
-        [V.Eu4.TIER_1]: eY[V.Eu4.NONE] + eY[V.Eu4.TIER_1],
-        [V.Eu4.TIER_2]: eY[V.Eu4.NONE] + eY[V.Eu4.TIER_1] + eY[V.Eu4.TIER_2],
-        [V.Eu4.TIER_3]: eY[V.Eu4.NONE] + eY[V.Eu4.TIER_1] + eY[V.Eu4.TIER_2] + eY[V.Eu4.TIER_3]
+    eY = {
+        [V.Eu4.NONE]: eZ[V.Eu4.NONE],
+        [V.Eu4.TIER_1]: eZ[V.Eu4.NONE] + eZ[V.Eu4.TIER_1],
+        [V.Eu4.TIER_2]: eZ[V.Eu4.NONE] + eZ[V.Eu4.TIER_1] + eZ[V.Eu4.TIER_2],
+        [V.Eu4.TIER_3]: eZ[V.Eu4.NONE] + eZ[V.Eu4.TIER_1] + eZ[V.Eu4.TIER_2] + eZ[V.Eu4.TIER_3]
     },
-    eW = {
+    ej = {
         [V.Eu4.NONE]: 8,
         [V.Eu4.TIER_1]: 24,
         [V.Eu4.TIER_2]: 36,
         [V.Eu4.TIER_3]: 48
     },
-    eK = Object.freeze({
+    eW = Object.freeze({
         [V.Eu4.NONE]: {
             features: [],
             limits: {
@@ -717,9 +710,9 @@ let eF = Object.freeze({
                 fileSize: V.mBz,
                 screenShareQualityFramerate: 30,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eW[V.Eu4.NONE],
+                soundboardSounds: ej[V.Eu4.NONE],
                 maxConcurrentActivities: 2,
-                stickers: ej[V.Eu4.NONE],
+                stickers: eY[V.Eu4.NONE],
                 stageVideoUsers: V.B9o
             }
         },
@@ -731,9 +724,9 @@ let eF = Object.freeze({
                 fileSize: V.mBz,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '720p',
-                soundboardSounds: eW[V.Eu4.TIER_1],
+                soundboardSounds: ej[V.Eu4.TIER_1],
                 maxConcurrentActivities: 3,
-                stickers: ej[V.Eu4.TIER_1],
+                stickers: eY[V.Eu4.TIER_1],
                 stageVideoUsers: V.B9o
             }
         },
@@ -745,9 +738,9 @@ let eF = Object.freeze({
                 fileSize: 52428800,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eW[V.Eu4.TIER_2],
+                soundboardSounds: ej[V.Eu4.TIER_2],
                 maxConcurrentActivities: 5,
-                stickers: ej[V.Eu4.TIER_2],
+                stickers: eY[V.Eu4.TIER_2],
                 stageVideoUsers: V.eez
             }
         },
@@ -759,16 +752,16 @@ let eF = Object.freeze({
                 fileSize: 104857600,
                 screenShareQualityFramerate: 60,
                 screenShareQualityResolution: '1080p',
-                soundboardSounds: eW[V.Eu4.TIER_3],
+                soundboardSounds: ej[V.Eu4.TIER_3],
                 maxConcurrentActivities: Number.MAX_SAFE_INTEGER,
-                stickers: ej[V.Eu4.TIER_3],
+                stickers: eY[V.Eu4.TIER_3],
                 stageVideoUsers: V.RcX
             }
         }
     }),
-    ez = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
+    eK = ['978380692553465866', '1024422698568122368', '511651871736201216', '511651876987469824', '511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904'];
 ((L = c || (c = {})).SOUNDBOARD_PLAY = 'soundboard play'), (L.PROFILE_THEME_COLOR = 'profile_theme_color'), (L.PROFILE_BANNER = 'profile_banner'), (L.ANIMATED_AVATAR = 'animated_avatar'), (L.AVATAR_DECORATION = 'avatar_decoration'), (L.CLIENT_THEME = 'client_theme'), (L.SHARED_CANVAS = 'shared_canvas'), (L.PROFILE_EFFECT = 'profile_effect'), ((D = d || (d = {})).FREE = 'free'), (D.PREMIUM_STANDARD = 'premium-standard');
-let eq = {
+let ez = {
     '1024422698568122368': 16,
     '511651876987469824': 16,
     '511651885459963904': 16,
@@ -776,38 +769,33 @@ let eq = {
     '642251038925127690': 5
 };
 ((b = _ || (_ = {})).HIGH_STREAMING_QUALITY = 'high_streaming_quality'), (b.MID_STREAMING_QUALITY = 'mid_streaming_quality');
-let eQ = Object.freeze({
+let eq = Object.freeze({
     high_streaming_quality: 2,
     mid_streaming_quality: 1
 });
 ((M = E || (E = {}))[(M.UserSettings = 0)] = 'UserSettings'), (M[(M.ApplicationStoreHome = 1)] = 'ApplicationStoreHome'), ((P = f || (f = {}))[(P.DEFAULT = 0)] = 'DEFAULT'), (P[(P.WINTER = 1)] = 'WINTER'), ((U = h || (h = {}))[(U.SNOWGLOBE = 1)] = 'SNOWGLOBE'), (U[(U.BOX = 2)] = 'BOX'), (U[(U.CUP = 3)] = 'CUP'), (U[(U.STANDARD_BOX = 4)] = 'STANDARD_BOX'), (U[(U.CAKE = 5)] = 'CAKE'), (U[(U.CHEST = 6)] = 'CHEST'), (U[(U.COFFEE = 7)] = 'COFFEE'), (U[(U.SEASONAL_STANDARD_BOX = 8)] = 'SEASONAL_STANDARD_BOX'), (U[(U.SEASONAL_CAKE = 9)] = 'SEASONAL_CAKE'), (U[(U.SEASONAL_CHEST = 10)] = 'SEASONAL_CHEST'), (U[(U.SEASONAL_COFFEE = 11)] = 'SEASONAL_COFFEE'), ((w = p || (p = {})).USER_NOT_VERIFIED = 'user_not_verified'), (w.NO_CODE_BODY = 'no_code_body'), (w.NO_PROMOTION = 'no_promotion'), (w.CODE_CLAIMED = 'code_claimed'), (w.EXISTING_SUBSCRIBER = 'existing_subscriber'), (w.PREVIOUS_SUBSCRIBER = 'previous_subscriber'), (w.BLOCKED_PAYMENT = 'blocked_payment');
-let eX = Object.freeze({
+let eQ = Object.freeze({
         IS_BLOCKED_IOS: 32,
         IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS: 64,
         SUPPRESS_NOTIFICATION: 128
     }),
-    e$ = Object.freeze({
-        3: { fileSize: eV },
-        1: { fileSize: 52428800 },
-        2: { fileSize: eZ }
-    }),
-    eJ = Object.freeze({
+    eX = Object.freeze({
         3: { fileSize: eV },
         1: { fileSize: 52428800 },
         2: { fileSize: eH }
     });
 ((x = I || (I = {})).EXPLORE_ALL_PERKS_CLICKED = 'explore_all_perks_clicked'), (x.HELPER_COLLAPSED = 'helper_collapsed'), (x.HELPER_UNCOLLAPSED = 'helper_uncollapsed'), (x.UNLOCK_EMOJI_CLICKED = 'unlock_emoji_clicked'), (x.CUSTOM_PROFILES_CLICKED = 'custom_profiles_clicked'), (x.SERVER_BOOSTS_CLICKED = 'server_boosts_clicked'), (x.HELPER_DISMISSED = 'premium_feature_helper_dismissed'), (x.HELPER_RENDERED = 'premium_feature_helper_rendered'), ((G = m || (m = {})).EMOJI_TUTORIAL_STARTED = 'emoji_tutorial_started'), (G.EMOJI_INTRO_VIEWED = 'emoji_intro_viewed'), (G.EMOJI_PROMPT_VIEWED = 'emoji_prompt_viewed'), (G.CUSTOM_PROFILE_TUTORIAL_STARTED = 'custom_profile_tutorial_started'), (G.CUSTOM_PROFILE_AVATAR_INTRO_VIEWED = 'custom_profile_avatar_intro_viewed'), (G.CUSTOM_PROFILE_AVATAR_DECORATIONS_VIEWED = 'custom_profile_avatar_decorations_viewed'), (G.CUSTOM_PROFILE_BANNER_INTRO_VIEWED = 'custom_profile_banner_intro_viewed'), (G.CUSTOM_PROFILE_THEME_INTRO_VIEWED = 'custom_profile_theme_intro_viewed'), (G.SERVER_PROFILE_INTRO_VIEWED = 'server_profile_intro_viewed'), (G.SERVER_BOOST_TUTORIAL_STARTED = 'server_boost_tutorial_started'), (G.BOOST_INTRO_VIEWED = 'boost_intro_viewed'), (G.BOOST_PROMPT_VIEWED = 'boost_prompt_viewed'), ((k = T || (T = {})).BOOST = 'boost'), (k.DISMISS = 'dismiss'), ((B = g || (g = {})).BADGE_TOOLTIP_VIEWED = 'share_nitro_bagde_tooltip_viewed'), (B.BADGE_CLICKED = 'share_nitro_badge_clicked'), (B.FLOW_STARTED = 'share_nitro_flow_started'), (B.FLOW_COMPLETED = 'share_nitro_flow_completed');
-let e0 = new Set(['PL', 'TR']),
-    e1 = [1, 2, 3],
-    e2 = [4, 5, 7, 6],
-    e3 = [8, 9, 11, 10],
-    e4 = e3.concat(e1),
-    e5 = 190,
-    e6 = 3,
-    e7 = 30,
-    e8 = 20;
+let e$ = new Set(['PL', 'TR']),
+    eJ = [1, 2, 3],
+    e0 = [4, 5, 7, 6],
+    e1 = [8, 9, 11, 10],
+    e2 = e1.concat(eJ),
+    e3 = 190,
+    e4 = 3,
+    e5 = 30,
+    e6 = 20;
 ((F = S || (S = {})).PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month'), (F.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month'), (F.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month'), (F.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month'), (F.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month'), (F.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month'), (F.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month'), (F.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month');
-let e9 = {
+let e7 = {
     premium_tenure_1_month: 1,
     premium_tenure_3_month: 3,
     premium_tenure_6_month: 6,

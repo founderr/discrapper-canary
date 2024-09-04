@@ -410,12 +410,7 @@ function J(e) {
                 }),
                 (0, u.jsx)(z, {
                     Icon: I.UploadIcon,
-                    text: H.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                        maxUploadPremium: (0, L.v9)(F.p9.TIER_2, {
-                            useSpace: !1,
-                            useWithoutExperiment: r
-                        })
-                    })
+                    text: H.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({ maxUploadPremium: (0, L.v9)(F.p9.TIER_2, { useSpace: !1 }) })
                 }),
                 (0, u.jsx)(z, {
                     Icon: I.ReactionIcon,
@@ -435,12 +430,7 @@ function J(e) {
         children: [
             (0, u.jsx)(z, {
                 Icon: I.UploadIcon,
-                text: H.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({
-                    maxUploadPremium: (0, L.v9)(F.p9.TIER_2, {
-                        useSpace: !1,
-                        useWithoutExperiment: r
-                    })
-                })
+                text: H.Z.Messages.PREMIUM_TIER_UPLOAD_ITEM.format({ maxUploadPremium: (0, L.v9)(F.p9.TIER_2, { useSpace: !1 }) })
             }),
             (0, u.jsx)(z, {
                 Icon: I.ReactionIcon,
