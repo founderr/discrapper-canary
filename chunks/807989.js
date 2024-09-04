@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return p;
     }
 }),
     n(789020),
@@ -12,77 +12,74 @@ n.d(t, {
     n(47120);
 var r = n(735250);
 n(470079);
-var i = n(120356),
-    a = n.n(i),
-    s = n(243814),
-    o = n(993365),
-    l = n(481060),
-    u = n(979200),
-    c = n(630388),
-    d = n(709054),
-    _ = n(941532),
-    E = n(713938),
-    f = n(981631),
-    h = n(689938),
-    p = n(359850);
-let I = (e) => {
+var i = n(243814),
+    a = n(993365),
+    s = n(481060),
+    o = n(979200),
+    l = n(630388),
+    u = n(709054),
+    c = n(941532),
+    d = n(713938),
+    _ = n(981631),
+    E = n(689938),
+    f = n(359850);
+let h = (e) => {
     switch (e) {
-        case u.ZC.IP_LOCATION:
-            return l.GlobeEarthIcon;
-        case u.ZC.DISPLAYS_ADVERTISEMENTS:
-            return l.EmbedIcon;
+        case o.ZC.IP_LOCATION:
+            return s.GlobeEarthIcon;
+        case o.ZC.DISPLAYS_ADVERTISEMENTS:
+            return s.EmbedIcon;
         default:
             return null;
     }
 };
-function m(e) {
+function p(e) {
     var t;
     let n,
-        { application: i, scopes: a, redirectUri: o, approximateGuildCount: m, isEmbeddedFlow: g, disclosures: S } = e,
-        A = new Date(d.default.extractTimestamp(i.id)),
-        N = (0, E.W3)(a),
-        O = (0, c.yE)(null !== (t = i.flags) && void 0 !== t ? t : 0, f.udG.EMBEDDED);
-    if (null != o && !O && !g)
+        { application: a, scopes: p, redirectUri: m, approximateGuildCount: T, isEmbeddedFlow: g, disclosures: S } = e,
+        A = new Date(u.default.extractTimestamp(a.id)),
+        N = (0, d.W3)(p),
+        O = (0, l.yE)(null !== (t = a.flags) && void 0 !== t ? t : 0, _.udG.EMBEDDED);
+    if (null != m && !O && !g)
         try {
-            let e = new URL(o);
+            let e = new URL(m);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href;
         } catch (e) {
             n = null;
         }
     return (0, r.jsxs)('div', {
-        className: p.applicationDetails,
+        className: f.applicationDetails,
         children: [
             null != n
-                ? (0, r.jsx)(T, {
-                      className: p.redirectWarning,
-                      icon: l.LinkIcon,
-                      text: h.Z.Messages.OAUTH2_DETAILS_REDIRECT.format({ origin: n })
+                ? (0, r.jsx)(I, {
+                      icon: s.LinkIcon,
+                      text: E.Z.Messages.OAUTH2_DETAILS_REDIRECT.format({ origin: n })
                   })
                 : null,
-            (0, r.jsx)(T, {
-                icon: l.LockIcon,
-                text: (0, _.i)(i)
+            (0, r.jsx)(I, {
+                icon: s.LockIcon,
+                text: (0, c.i)(a)
             }),
-            (0, r.jsx)(T, {
-                icon: l.ClockIcon,
-                text: h.Z.Messages.OAUTH2_DETAILS_CREATION_DATE.format({ date: A })
+            (0, r.jsx)(I, {
+                icon: s.ClockIcon,
+                text: E.Z.Messages.OAUTH2_DETAILS_CREATION_DATE.format({ date: A })
             }),
-            a.includes(s.x.BOT) && null != m
-                ? (0, r.jsx)(T, {
-                      icon: l.RobotIcon,
-                      text: h.Z.Messages.OAUTH2_DETAILS_GUILDS.format({ guildCount: m })
+            p.includes(i.x.BOT) && null != T
+                ? (0, r.jsx)(I, {
+                      icon: s.RobotIcon,
+                      text: E.Z.Messages.OAUTH2_DETAILS_GUILDS.format({ guildCount: T })
                   })
                 : null,
-            (0, r.jsx)(T, {
-                icon: l.ShieldIcon,
+            (0, r.jsx)(I, {
+                icon: s.ShieldIcon,
                 text: N
             }),
             null != S
                 ? S.map((e) => {
-                      let t = (0, u.PM)(e),
-                          n = I(e);
+                      let t = (0, o.PM)(e),
+                          n = h(e);
                       return null != n && null != t
-                          ? (0, r.jsx)(T, {
+                          ? (0, r.jsx)(I, {
                                 icon: n,
                                 text: t
                             })
@@ -92,19 +89,18 @@ function m(e) {
         ]
     });
 }
-function T(e) {
-    let { icon: t, text: n, className: i } = e;
+function I(e) {
+    let { icon: t, text: n } = e;
     return (0, r.jsxs)('div', {
-        className: a()(p.entry, i),
+        className: f.entry,
         children: [
             (0, r.jsx)(t, {
-                className: p.entryIcon,
+                className: f.entryIcon,
                 color: 'currentColor'
             }),
-            (0, r.jsx)(o.x, {
-                variant: 'text-xs/medium',
-                color: 'text-muted',
-                className: p.entryInner,
+            (0, r.jsx)(a.x, {
+                variant: 'text-xs/normal',
+                className: f.entryInner,
                 children: n
             })
         ]

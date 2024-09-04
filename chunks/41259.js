@@ -17,12 +17,12 @@ var i = n(974674),
     E = n(689938),
     f = n(658471);
 function h(e) {
-    let { id: t, user: n, application: h, bot: p, accountScopes: I, showLogout: m, location: T, isTrustedName: g } = e,
-        S = l.ZP.getApplicationIconURL({
+    let { id: t, user: n, application: h, bot: p, accountScopes: I, showLogout: m, location: T } = e,
+        g = l.ZP.getApplicationIconURL({
             id: h.id,
             icon: h.icon
         }),
-        A = l.ZP.getUserAvatarURL(n);
+        S = l.ZP.getUserAvatarURL(n);
     return (0, r.jsxs)('header', {
         id: t,
         className: f.header,
@@ -31,8 +31,8 @@ function h(e) {
                 className: f.headerIcons,
                 children: [
                     (0, r.jsx)(i.qE, {
-                        src: S,
-                        size: _.EF.SIZE_80,
+                        src: g,
+                        size: _.EF.SIZE_56,
                         'aria-label': h.name
                     }),
                     (0, r.jsxs)('div', {
@@ -40,19 +40,12 @@ function h(e) {
                         children: [(0, r.jsx)('div', { className: f.ellipse }), (0, r.jsx)('div', { className: f.ellipse }), (0, r.jsx)('div', { className: f.ellipse })]
                     }),
                     (0, r.jsx)(i.qE, {
-                        src: A,
-                        size: _.EF.SIZE_80,
+                        src: S,
+                        size: _.EF.SIZE_56,
                         'aria-label': n.username
                     })
                 ]
             }),
-            !g &&
-                (0, r.jsx)(s.x, {
-                    variant: 'text-md/medium',
-                    color: 'header-secondary',
-                    className: f.label,
-                    children: E.Z.Messages.OAUTH2_THIRD_PARTY_APPLICATION
-                }),
             (0, r.jsxs)(s.x, {
                 variant: 'text-lg/bold',
                 color: 'header-primary',

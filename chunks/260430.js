@@ -21,25 +21,23 @@ function h(e) {
     return (0, r.jsxs)('div', {
         className: f.scope,
         children: [
-            (0, r.jsx)('div', {
-                className: a()(f.iconWrapper, i ? f.fakeScopeIcon : f.scopeIcon),
-                children: i
-                    ? (0, r.jsx)(d.XSmallIcon, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: f.icon
-                      })
-                    : (0, r.jsx)(d.CheckmarkLargeIcon, {
-                          size: 'md',
-                          color: 'currentColor',
-                          className: f.icon
-                      })
-            }),
+            i
+                ? (0, r.jsx)(d.CircleXIcon, {
+                      size: 'md',
+                      color: 'currentColor',
+                      className: a()(f.icon, f.fakeScopeIcon)
+                  })
+                : (0, r.jsx)(d.CircleCheckIcon, {
+                      size: 'md',
+                      color: 'currentColor',
+                      className: a()(f.icon, f.scopeIcon)
+                  }),
             (0, r.jsxs)('div', {
                 className: f.scopeInner,
                 children: [
                     (0, r.jsx)(c.x, {
-                        variant: 'text-md/medium',
+                        variant: 'text-md/normal',
+                        color: i ? 'text-muted' : void 0,
                         children: t
                     }),
                     null != n
@@ -66,7 +64,7 @@ function p(e) {
         className: f.scopes,
         children: [
             (0, r.jsx)(u.X, {
-                variant: 'heading-deprecated-12/semibold',
+                variant: 'heading-sm/normal',
                 className: f.sectionLabel,
                 children: T.format({ application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : '' })
             }),

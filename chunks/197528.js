@@ -3,27 +3,27 @@ var a = n(735250),
     r = n(470079),
     o = n(830064),
     s = n(702493),
-    c = n(77987),
-    u = n(133853),
-    l = n(703656),
-    i = n(643366),
+    i = n(77987),
+    l = n(133853),
+    c = n(703656),
+    u = n(643366),
     d = n(94628),
-    _ = n(659154),
-    f = n(902928),
-    I = n(240479),
-    C = n(981631),
-    E = n(773566);
-e.default = (0, c.e)(function () {
+    f = n(659154),
+    p = n(902928),
+    _ = n(240479),
+    E = n(981631),
+    I = n(773566);
+e.default = (0, i.e)(function () {
     let t;
     let [e, n] = r.useState({
         type: 'user-code-input',
         usePrefilledCode: !0
     });
-    (0, s.Z)(), (0, i.Y)(e);
-    let c = r.useCallback(() => {
+    (0, s.Z)(), (0, u.Y)(e);
+    let i = r.useCallback(() => {
             n({ type: 'user-code-input' });
         }, [n]),
-        A = r.useCallback(
+        C = r.useCallback(
             (t) => {
                 n({
                     type: 'authorization',
@@ -32,7 +32,7 @@ e.default = (0, c.e)(function () {
             },
             [n]
         ),
-        T = r.useCallback(
+        h = r.useCallback(
             (t) => {
                 n({
                     type: 'success',
@@ -41,7 +41,7 @@ e.default = (0, c.e)(function () {
             },
             [n]
         ),
-        p = r.useCallback(
+        A = r.useCallback(
             (t) => {
                 n({
                     type: 'error',
@@ -49,49 +49,53 @@ e.default = (0, c.e)(function () {
                 });
             },
             [n]
-        );
+        ),
+        T = !0;
     switch (e.type) {
         case 'user-code-input':
-            t = (0, a.jsx)(I.v, {
+            t = (0, a.jsx)(_.v, {
                 usePrefilledCode: e.usePrefilledCode || !1,
-                onUserCodeAccepted: A
+                onUserCodeAccepted: C
             });
             break;
         case 'authorization':
-            t = (0, a.jsx)(d.B, {
+            (t = (0, a.jsx)(d.B, {
                 data: e.userCodeData,
-                onDenied: c,
-                onError: p,
-                onSuccess: T
-            });
+                onDenied: i,
+                onError: A,
+                onSuccess: h
+            })),
+                (T = !1);
             break;
         case 'success':
-            t = (0, a.jsx)(f.u, {
-                onComplete: () => (0, l.uL)(C.Z5c.ME),
+            t = (0, a.jsx)(p.u, {
+                onComplete: () => (0, c.uL)(E.Z5c.ME),
                 data: e.userCodeData
             });
             break;
         case 'error':
-            t = (0, a.jsx)(_.c, { onTryAgain: c });
+            t = (0, a.jsx)(f.c, { onTryAgain: i });
             break;
         default:
             t = null;
     }
     return (0, a.jsxs)('div', {
-        className: E.activatePage,
+        className: I.activatePage,
         children: [
             (0, a.jsx)(o.Z, {
-                className: E.artwork,
+                className: I.artwork,
                 preserveAspectRatio: 'xMinYMin slice'
             }),
-            (0, a.jsx)(u.Z, {
+            (0, a.jsx)(l.Z, {
                 show: !0,
-                className: E.logo
+                className: I.logo
             }),
-            (0, a.jsx)('div', {
-                className: E.content,
-                children: t
-            })
+            T
+                ? (0, a.jsx)('div', {
+                      className: I.content,
+                      children: t
+                  })
+                : t
         ]
     });
 });

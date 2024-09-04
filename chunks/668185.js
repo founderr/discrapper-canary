@@ -71,12 +71,11 @@ function _(e) {
         className: d.botPermissions,
         children: [
             I.length > 0
-                ? (0, r.jsxs)(r.Fragment, {
+                ? (0, r.jsxs)('div', {
                       children: [
                           (0, r.jsx)(o.x, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
-                              className: d.permissionsLabel,
                               children: c.Z.Messages.OAUTH2_CONFIRM_BOT_PERMISSIONS.format({
                                   applicationName: t.name,
                                   guildName: f.name
@@ -90,12 +89,11 @@ function _(e) {
                   })
                 : null,
             m.length > 0
-                ? (0, r.jsxs)(r.Fragment, {
+                ? (0, r.jsxs)('div', {
                       children: [
                           (0, r.jsx)(o.x, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
-                              className: d.disabledPermissionsLabel,
                               children: c.Z.Messages.OAUTH2_DISABLED_PERMISSIONS.format({ applicationName: t.name })
                           }),
                           (0, r.jsx)('ul', {

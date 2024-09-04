@@ -12,13 +12,14 @@ var o = e(512722),
     A = e(77987),
     h = e(275759),
     I = e(710845),
-    T = e(807675),
-    _ = e(69580),
-    p = e(787025),
-    v = e(591759),
-    w = e(981631);
-let f = new I.Z('LinkAuthorize');
-async function L(r, t, e, n) {
+    p = e(807675),
+    T = e(69580),
+    v = e(787025),
+    _ = e(591759),
+    w = e(981631),
+    f = e(602091);
+let L = new I.Z('LinkAuthorize');
+async function P(r, t, e, n) {
     var o, l, i, u, s;
     let A = null;
     try {
@@ -42,10 +43,10 @@ async function L(r, t, e, n) {
         throw Error('error at callback with code '.concat(null !== (s = null == r ? void 0 : null === (u = r.body) || void 0 === u ? void 0 : u.code) && void 0 !== s ? s : 0));
     }
 }
-function P(r) {
+function N(r) {
     let { platformType: t } = r;
     (0, s.Z)();
-    let e = (0, T.y)(window.location.search),
+    let e = (0, p.y)(window.location.search),
         { code: o, token_redirect_uri: a } = l.parse(window.location.search),
         u = async (r) => {
             let { location: e } = r;
@@ -54,18 +55,20 @@ function P(r) {
                 u = null;
             if (null == n && null != o)
                 try {
-                    u = await L(e, o, a, t);
+                    u = await P(e, o, a, t);
                 } catch (t) {
                     var c;
-                    f.error('Error Creating Discord link', null == t ? void 0 : t.message);
-                    let r = v.Z.toURLSafe(e);
+                    L.error('Error Creating Discord link', null == t ? void 0 : t.message);
+                    let r = _.Z.toURLSafe(e);
                     if (null == r) return;
                     r.searchParams.delete('code'), r.searchParams.set('error', 'two_way_link_error'), r.searchParams.set('error_description', null !== (c = null == t ? void 0 : t.message) && void 0 !== c ? c : 'unknown_error'), (e = r.toString());
                 }
             window.location = null == u || u === i.b.OAUTH_REDIRECT ? e : u;
         };
-    return (0, n.jsx)(p.G, {
-        children: (0, n.jsx)(_.OAuth2Authorize, {
+    return (0, n.jsx)(v.G, {
+        removeChildWrapper: !0,
+        children: (0, n.jsx)(T.OAuth2AuthorizeModal, {
+            transitionState: f.Dv.ENTERED,
             ...e,
             showLogout: !0,
             callback: u
@@ -78,5 +81,5 @@ t.default = (0, A.e)(function (r) {
         { client_id: o = '' } = l.parse(window.location.search),
         a = e === w.ABu.PLAYSTATION && o === u.t.PLAYSTATION_APPLICATION_ID,
         i = e === w.ABu.PLAYSTATION_STAGING && o === u.t.PLAYSTATION_STAGING_APPLICATION_ID;
-    return a || i ? (0, n.jsx)(P, { platformType: e }) : null;
+    return a || i ? (0, n.jsx)(N, { platformType: e }) : null;
 });

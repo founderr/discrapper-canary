@@ -1,67 +1,53 @@
 n.d(t, {
     G: function () {
-        return p;
+        return _;
     },
     j: function () {
-        return I;
+        return E;
     }
-}),
-    n(47120);
-var r = n(735250),
-    i = n(470079),
-    a = n(120356),
-    s = n.n(a),
-    o = n(466377),
-    l = n(481060),
-    u = n(568154),
-    c = n(252618),
-    d = n(449934),
-    _ = n(981631),
-    E = n(898625),
-    f = n(689938),
-    h = n(68560);
-function p(e) {
-    let { children: t, wrapperClassName: n, embedded: a } = e,
-        [o, p] = i.useState(E.hO.INITIAL),
-        I = i.useCallback((e) => {
-            p((t) => Math.max(t, e));
-        }, []);
+});
+var r = n(735250);
+n(470079);
+var i = n(120356),
+    a = n.n(i),
+    s = n(466377),
+    o = n(481060),
+    l = n(252618),
+    u = n(981631),
+    c = n(689938),
+    d = n(68560);
+function _(e) {
+    let { children: t, removeChildWrapper: n, wrapperClassName: i } = e;
     return (
-        (0, c.Tt)({ location: f.Z.Messages.OAUTH2_TITLE }),
-        (0, r.jsx)(l.ThemeProvider, {
-            theme: _.BRd.DARK,
+        (0, l.Tt)({ location: c.Z.Messages.OAUTH2_TITLE }),
+        (0, r.jsx)(o.ThemeProvider, {
+            theme: u.BRd.DARK,
             children: (e) =>
-                (0, r.jsx)(l.ThemeContextProvider, {
-                    theme: _.BRd.DARK,
-                    children: (0, r.jsx)(u.Z, {
-                        embedded: a,
-                        className: s()(e, h.wave),
-                        splash: (0, d.gK)(),
-                        waveState: o,
-                        showLogo: !0,
-                        updateWaveState: I,
-                        children: (0, r.jsx)('div', {
-                            className: s()(h.oauth2Wrapper, n),
-                            children: t
-                        })
-                    })
+                (0, r.jsx)('div', {
+                    className: a()(e, d.oauth2PageWrapper, i),
+                    children:
+                        !0 === n
+                            ? t
+                            : (0, r.jsx)('div', {
+                                  className: d.oauth2PageContent,
+                                  children: t
+                              })
                 })
         })
     );
 }
-function I(e) {
-    let { children: t, footer: n, transitionState: i, overlay: a, ...s } = e;
-    return (0, r.jsxs)(o.Y0, {
-        size: o.Cg.DYNAMIC,
+function E(e) {
+    let { children: t, footer: n, transitionState: i, ...a } = e;
+    return (0, r.jsxs)(s.Y0, {
+        size: s.Cg.DYNAMIC,
         transitionState: i,
-        className: h.oauth2Wrapper,
-        ...s,
+        className: d.oauth2ModalWrapper,
+        ...a,
         children: [
-            (0, r.jsx)(o.hz, { children: t }),
-            a,
+            (0, r.jsx)(s.hz, { children: t }),
             null != n &&
-                (0, r.jsx)(o.mz, {
-                    className: h.footer,
+                (0, r.jsx)(s.mz, {
+                    className: d.footer,
                     children: n
                 })
         ]

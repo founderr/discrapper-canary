@@ -1,24 +1,26 @@
 n.d(e, {
     B: function () {
-        return c;
+        return l;
     }
 });
 var a = n(735250);
 n(470079);
-var r = n(69580),
-    o = n(944844),
-    s = n(896426);
-function c(t) {
-    let { data: e, onDenied: n, onError: c, onSuccess: u } = t,
-        l = (0, o.t)(e, n, c, u);
-    return (0, a.jsx)('div', {
-        className: s.content,
-        children: (0, a.jsx)(r.OAuth2Authorize, {
+var r = n(481060),
+    o = n(69580),
+    s = n(787025),
+    i = n(944844);
+function l(t) {
+    let { data: e, onDenied: n, onError: l, onSuccess: c } = t,
+        u = (0, i.t)(e, n, l, c);
+    return (0, a.jsx)(s.G, {
+        removeChildWrapper: !0,
+        children: (0, a.jsx)(o.OAuth2AuthorizeModal, {
+            transitionState: r.ModalTransitionState.ENTERED,
             clientId: e.clientId,
             scopes: e.scopes,
             showLogout: !0,
             isTrustedName: !0,
-            callbackWithoutPost: l
+            callbackWithoutPost: u
         })
     });
 }
