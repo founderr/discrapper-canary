@@ -355,5 +355,10 @@ class Y extends (r = u.ZP.Store) {
             let { message: t } = e,
                 n = U.default.getCurrentUser();
             null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
+        },
+        REACTION_MESSAGE_FETCHED: function (e) {
+            let { message: t } = e,
+                n = d.Z.getOrCreate(t.channel_id);
+            G.log('Inserting message from a reaction in-app notification', t.id, t.channel_id), d.Z.commit(n.receiveReactionInAppNotification(t));
         }
     }));

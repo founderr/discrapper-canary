@@ -398,6 +398,14 @@ class I {
                   cached: !0
               }).merge([h(this, e)]);
     }
+    receiveReactionInAppNotification(e) {
+        return null != (null == e.nonce ? null : this.get(e.nonce, !0))
+            ? this
+            : this.mutate({
+                  ready: !0,
+                  cached: !0
+              }).merge([h(this, e)]);
+    }
     loadStart(e) {
         var t, n, r, i;
         return this.mutate({
