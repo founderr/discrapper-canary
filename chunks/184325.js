@@ -1,71 +1,112 @@
 n.d(t, {
     Z: function () {
-        return g;
+        return R;
     }
-});
-var r = n(735250);
-n(470079);
-var i = n(120356),
-    a = n.n(i),
-    s = n(481060),
-    o = n(315263),
-    l = n(100527),
-    u = n(906732),
-    c = n(617136),
-    d = n(497505),
-    _ = n(626135),
-    E = n(785717),
-    f = n(221292),
-    h = n(290421),
-    p = n(228168),
-    I = n(981631),
-    m = n(689938),
-    T = n(36548);
-function g(e) {
-    let { badges: t, className: n, badgeClassName: i, onClose: g } = e,
-        { analyticsLocations: S } = (0, u.ZP)(l.Z.BADGE),
-        { context: A, trackUserProfileAction: N } = (0, E.KZ)();
+}),
+    n(47120);
+var r = n(735250),
+    i = n(470079),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(315263),
+    u = n(100527),
+    c = n(906732),
+    d = n(617136),
+    _ = n(497505),
+    E = n(626135),
+    f = n(291175),
+    h = n(785717),
+    p = n(221292),
+    I = n(290421),
+    m = n(797321),
+    T = n(228168),
+    g = n(981631),
+    S = n(474936),
+    A = n(689938),
+    N = n(36548);
+let O = (e) => {
+    if (null != e)
+        switch (e) {
+            case S.VU.PREMIUM_TENURE_1_MONTH:
+                return N.tieredTenureBadgeBronzeGlow;
+            case S.VU.PREMIUM_TENURE_3_MONTH:
+                return N.tieredTenureBadgeSilverGlow;
+            case S.VU.PREMIUM_TENURE_6_MONTH:
+                return N.tieredTenureBadgeGoldGlow;
+            case S.VU.PREMIUM_TENURE_12_MONTH:
+                return N.tieredTenureBadgePlatinumGlow;
+            case S.VU.PREMIUM_TENURE_24_MONTH:
+                return N.tieredTenureBadgeDiamondGlow;
+            case S.VU.PREMIUM_TENURE_36_MONTH:
+                return N.tieredTenureBadgeEmeraldGlow;
+            case S.VU.PREMIUM_TENURE_60_MONTH:
+                return N.tieredTenureBadgeRubyGlow;
+            case S.VU.PREMIUM_TENURE_72_MONTH:
+                return N.tieredTenureBadgeFireGlow;
+            default:
+                return;
+        }
+};
+function R(e) {
+    let { badges: t, className: n, badgeClassName: a, onClose: S } = e,
+        { analyticsLocations: R } = (0, c.ZP)(u.Z.BADGE),
+        { context: v, trackUserProfileAction: C } = (0, h.KZ)(),
+        [y, L] = i.useState(!1);
     return (0, r.jsx)('div', {
-        className: a()(T.container, n),
-        'aria-label': m.Z.Messages.PROFILE_USER_BADGES,
+        className: s()(N.container, n),
+        'aria-label': A.Z.Messages.PROFILE_USER_BADGES,
         role: 'group',
-        children: t.map((e) =>
-            (0, r.jsx)(
-                s.TooltipContainer,
+        children: t.map((e) => {
+            let t = (0, f.g)(e.id),
+                n = O(t),
+                i = null != t && y;
+            return (0, r.jsx)(
+                o.TooltipContainer,
                 {
                     text: e.description,
-                    delay: p.vB,
-                    children: (0, r.jsx)(s.Anchor, {
+                    delay: T.vB,
+                    tooltipClassName: n,
+                    onTooltipShow: () => L(null != t),
+                    onTooltipHide: () => L(!1),
+                    children: (0, r.jsxs)(o.Anchor, {
                         onClick: (t) => {
-                            N({ action: 'PRESS_BADGE' }),
-                                (0, f.NE)({
+                            C({ action: 'PRESS_BADGE' }),
+                                (0, p.NE)({
                                     badge: e.id,
-                                    analyticsLocations: S,
-                                    ...A
+                                    analyticsLocations: R,
+                                    ...v
                                 });
-                            let n = null != e.link ? (0, o.default)(e.link, { analyticsLocations: S }) : null;
-                            if (null != n) return null == g || g(), n(t);
+                            let n = null != e.link ? (0, l.default)(e.link, { analyticsLocations: R }) : null;
+                            if (null != n) return null == S || S(), n(t);
                         },
                         onMouseEnter: () => {
-                            e.id === h.i && _.default.track(I.rMx.QUEST_CONTENT_VIEWED, { ...(0, c.mH)(d.jn.QUEST_BADGE) }),
-                                N({ action: 'HOVER_BADGE' }),
-                                (0, f.Qf)({
+                            e.id === I.i && E.default.track(g.rMx.QUEST_CONTENT_VIEWED, { ...(0, d.mH)(_.jn.QUEST_BADGE) }),
+                                C({ action: 'HOVER_BADGE' }),
+                                (0, p.Qf)({
                                     badge: e.id,
-                                    analyticsLocations: S,
-                                    ...A
+                                    analyticsLocations: R,
+                                    ...v
                                 });
                         },
                         href: e.link,
-                        children: (0, r.jsx)('img', {
-                            alt: ' ',
-                            'aria-hidden': !0,
-                            src: (0, p.jC)(e.icon),
-                            className: a()(T.badge, i)
-                        })
+                        children: [
+                            (0, r.jsx)('img', {
+                                alt: ' ',
+                                'aria-hidden': !0,
+                                src: (0, T.jC)(e.icon),
+                                className: s()(N.badge, a)
+                            }),
+                            i &&
+                                (0, r.jsxs)('div', {
+                                    className: N.starContainer,
+                                    children: [(0, r.jsx)(m.Z, { className: N.topLeftStar }), (0, r.jsx)(m.Z, { className: N.bottomRightStar })]
+                                })
+                        ]
                     })
                 },
                 e.id
-            )
-        )
+            );
+        })
     });
 }
