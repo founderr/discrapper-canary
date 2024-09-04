@@ -31,22 +31,22 @@ async function S() {
     n > d.Z.Millis.HOUR && _.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }),
         e > t && (n = 0),
         _.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat') }),
-        C(!1),
+        f(!1),
         (g = setTimeout(
             () => {
-                f(),
+                C(),
                     (I = setInterval(() => {
-                        f();
+                        C();
                     }, 15 * d.Z.Millis.MINUTE));
             },
             Math.max(n, 0)
         ));
 }
-function C() {
+function f() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     null != g && (clearTimeout(g), (g = null)), null != I && (clearInterval(I), (I = null)), null != p && e && (_.Z.addBreadcrumb({ message: 'Heartbeat correctly scheduled. Clearing 10s check timeout' }), clearTimeout(p), (p = null));
 }
-async function f() {
+async function C() {
     let e = Date.now(),
         t = await (0, h.Gg)(),
         n = Date.now();
@@ -55,7 +55,7 @@ async function f() {
         return;
     }
     if (!T) {
-        _.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), C();
+        _.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), f();
         return;
     }
     _.Z.addBreadcrumb({
@@ -87,14 +87,14 @@ function v() {
         }
     else
         !(function () {
-            if (!!T) (T = !1), _.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, h.fr)(!1), C(), (0, s.Z)();
+            if (!!T) (T = !1), _.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, h.fr)(!1), f(), (0, s.Z)();
         })();
 }
 function Z() {
     _.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), o.Z.addChangeListener(R), a.Z.subscribe('WINDOW_FOCUS', O), a.Z.subscribe('APP_STATE_UPDATE', x), a.Z.subscribe('LOGIN_SUCCESS', L), v();
 }
 function L() {
-    f();
+    C();
 }
 function R() {
     let e = o.Z.getState();

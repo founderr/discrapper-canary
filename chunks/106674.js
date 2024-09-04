@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(594174),
     T = n(51144),
     S = n(498058),
-    C = n(158631),
-    f = n(143614),
+    f = n(158631),
+    C = n(143614),
     N = n(981631),
     A = n(70722),
     v = n(689938),
@@ -57,10 +57,10 @@ function R(e) {
         P = (0, s.e7)([p.default], () => p.default.getUser(r)),
         [M] = (0, _.Z)([d]),
         D = null !== (t = T.ZP.getGlobalName(P)) && void 0 !== t ? t : T.ZP.getUserTag(P),
-        y = (0, f.Z)(),
+        y = (0, C.Z)(),
         j = (0, s.e7)([m.Z], () => m.Z.getPreviewURL(null, R, r)),
         U = (0, s.e7)([g.Z], () => g.Z.getVoiceChannelId()),
-        G = (0, C.ZP)(),
+        G = (0, f.ZP)(),
         w = (0, S.Z)(R);
     if (
         (a.useEffect(() => {

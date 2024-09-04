@@ -321,7 +321,7 @@ function _(e) {
                           return {
                               command: {
                                   ...c,
-                                  name: c.name
+                                  displayName: c.displayName
                                       .split(/[_ ]/)
                                       .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
                                       .join(' ')

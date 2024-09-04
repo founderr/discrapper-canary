@@ -25,8 +25,8 @@ var i,
     p = n(51144),
     T = n(945124),
     S = n(231467),
-    C = n(301544),
-    f = n(931515),
+    f = n(301544),
+    C = n(931515),
     N = n(286083),
     A = n(207796),
     v = n(777734),
@@ -74,7 +74,7 @@ t.ZP = o.memo(function (e) {
                 i = P / t;
             return i > 360 ? Math.max(Math.floor(t - (t - e) / 2), 1) : n < 240 ? Math.max(Math.max(e, t), 1) : Math.max(e, 1);
         }, [P]),
-        { loaded: D, clans: y, searchResult: j, searchCriteria: U } = (0, f.ML)(M, 'saved_guilds' === L),
+        { loaded: D, clans: y, searchResult: j, searchCriteria: U } = (0, C.ML)(M, 'saved_guilds' === L),
         G = (0, A.GN)((e) => e.selectedTraits, u.Z),
         w = (0, A.GN)((e) => e.selectedGames, u.Z),
         k = (0, E.Z)(j),
@@ -212,7 +212,7 @@ t.ZP = o.memo(function (e) {
             },
             [z, M, B, F, J, L, U, G, Q, X]
         ),
-        ee = o.useCallback((e) => (0, l.jsx)(C.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
+        ee = o.useCallback((e) => (0, l.jsx)(f.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
         et = o.useCallback(
             (e) => {
                 let { header: t, subtitle: n, section: i } = z[e];

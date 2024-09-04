@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return f;
+            return C;
         },
         openConsoleConnectionErrorsModal: function () {
             return A;
@@ -26,11 +26,11 @@ var i = n(735250),
     p = n(981631),
     T = n(689938),
     S = n(913895),
-    C = n(708901);
-function f(e) {
-    let { questId: t, errorHints: n, transitionState: s, onClose: f } = e,
+    f = n(708901);
+function C(e) {
+    let { questId: t, errorHints: n, transitionState: s, onClose: C } = e,
         A = (0, E.B4)(t);
-    null == A && f();
+    null == A && C();
     let [v, Z] = (0, a.useState)(n),
         L = (0, E.KX)(),
         R = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
@@ -74,12 +74,12 @@ function f(e) {
                                 children: (0, i.jsx)('img', {
                                     className: S.icon,
                                     alt: '',
-                                    src: C
+                                    src: f
                                 })
                             }),
                             (0, i.jsx)(c.ModalCloseButton, {
                                 className: S.closeBtn,
-                                onClick: f
+                                onClick: C
                             })
                         ]
                     }),
@@ -169,7 +169,7 @@ function f(e) {
                 children: [
                     (0, i.jsx)(c.Button, {
                         size: c.ButtonSizes.MIN,
-                        onClick: f,
+                        onClick: C,
                         className: S.footerCloseButton,
                         children: T.Z.Messages.CLOSE
                     }),
@@ -177,7 +177,7 @@ function f(e) {
                         look: c.ButtonLooks.LINK,
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
-                            f(),
+                            C(),
                                 (0, I.V$)(
                                     { quest: A },
                                     {

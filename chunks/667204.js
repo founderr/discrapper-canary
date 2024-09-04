@@ -220,7 +220,7 @@ async function Z(e) {
         version: C.version,
         id: null !== (R = null === (t = C.rootCommand) || void 0 === t ? void 0 : t.id) && void 0 !== R ? R : C.id,
         guild_id: C.guildId,
-        name: null !== (v = null === (n = C.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== v ? v : C.name,
+        name: null !== (v = null === (n = C.rootCommand) || void 0 === n ? void 0 : n.name) && void 0 !== v ? v : C.untranslatedName,
         type: C.type,
         options: X,
         application_command: C.rootCommand

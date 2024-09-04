@@ -288,8 +288,8 @@ M(
                                 colorClass: b.iconForeground
                             })
                         }),
-                        (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: e.name }) }),
-                        (0, i.jsx)(C.dY, { children: e.description })
+                        (0, i.jsx)(C.z5, { children: (0, i.jsx)(C.BR, { children: e.displayName }) }),
+                        (0, i.jsx)(C.dY, { children: e.displayDescription })
                     ]
                 });
             }

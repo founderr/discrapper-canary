@@ -190,7 +190,7 @@ function k(e) {
         color: d.Button.Colors.PRIMARY,
         className: j.commandSentCTAButton,
         innerClassName: j.commandSentCTAButtonInner,
-        'aria-label': M.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({ commandName: t.name }),
+        'aria-label': M.Z.Messages.APP_LAUNCHER_SEND_COMMAND_ARIA_LABEL.format({ commandName: t.untranslatedName }),
         children: [
             (0, i.jsx)(d.Text, {
                 variant: 'text-sm/medium',

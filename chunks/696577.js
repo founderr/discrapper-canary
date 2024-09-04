@@ -21,8 +21,8 @@ var i = n(735250),
 function p(e) {
     let { user: t, type: n, status: p, isFocused: T } = e,
         S = a.useContext(u.AnalyticsContext),
-        { analyticsLocations: C } = (0, o.ZP)(),
-        f = (e) => {
+        { analyticsLocations: f } = (0, o.ZP)(),
+        C = (e) => {
             e.stopPropagation(), l.Z.cancelFriendRequest(t.id, { location: 'Friends' });
         },
         N = (e) => {
@@ -40,7 +40,7 @@ function p(e) {
         onClick: () =>
             (0, c.openUserProfileModal)({
                 userId: t.id,
-                sourceAnalyticsLocations: C,
+                sourceAnalyticsLocations: f,
                 analyticsLocation: S.location
             }),
         children: (e) => {
@@ -69,7 +69,7 @@ function p(e) {
                                   icon: r.XSmallIcon,
                                   actionType: _.Z.ActionTypes.DENY,
                                   tooltip: I.Z.Messages.FRIEND_REQUEST_IGNORE,
-                                  onClick: f,
+                                  onClick: C,
                                   shouldHighlight: e
                               })
                           ]
@@ -78,7 +78,7 @@ function p(e) {
                           icon: r.XSmallIcon,
                           actionType: _.Z.ActionTypes.DENY,
                           tooltip: I.Z.Messages.FRIEND_REQUEST_CANCEL,
-                          onClick: f,
+                          onClick: C,
                           shouldHighlight: e
                       });
             return (0, i.jsxs)('div', {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
 });
 var i = n(735250);
@@ -38,7 +38,7 @@ function S() {
         })
     });
 }
-let C = {
+let f = {
     [E.D5.Error]: {
         textColor: 'text-primary',
         buttonLook: l.Button.Looks.FILLED,
@@ -79,14 +79,14 @@ let C = {
         containerClass: s()(p.container, p.containerEnabled)
     }
 };
-function f() {
+function C() {
     var e;
     let { decoupledClipsEnabled: t, clipsError: n } = (0, r.cj)([_.Z], () => ({
         decoupledClipsEnabled: _.Z.getSettings().decoupledClipsEnabled,
         clipsError: _.Z.getLastClipsError()
     }));
     let a = ((e = t), null != n ? E.D5.Error : e ? E.D5.Enabled : E.D5.Disabled),
-        { bodyCopy: s, buttonCopy: o, ctaOnClick: c, textColor: d, buttonColor: u, buttonLook: m, containerClass: I } = C[a];
+        { bodyCopy: s, buttonCopy: o, ctaOnClick: c, textColor: d, buttonColor: u, buttonLook: m, containerClass: I } = f[a];
     return (0, i.jsxs)('div', {
         className: I,
         children: [

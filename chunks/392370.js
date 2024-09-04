@@ -157,7 +157,7 @@ function L(e) {
                 bucketPredicates: [
                     (function (e) {
                         return (n) => {
-                            let t = n.name,
+                            let t = n.untranslatedName,
                                 i = n.displayName;
                             return t.startsWith(e) || i.startsWith(e);
                         };
@@ -167,14 +167,14 @@ function L(e) {
                             t = n[0],
                             i = n.slice(1).join(' ');
                         return (e) => {
-                            let n = e.name,
+                            let n = e.untranslatedName,
                                 a = e.displayName;
                             return !!((n.startsWith(t) && n.split(' ').slice(1).join(' ').startsWith(i)) || (a.startsWith(t) && a.split(' ').slice(1).join(' ').startsWith(i))) || !1;
                         };
                     })(e),
                     (function (e) {
                         return (n) => {
-                            let t = n.name,
+                            let t = n.untranslatedName,
                                 i = n.displayName;
                             return t.includes(e) || i.includes(e);
                         };
@@ -182,7 +182,7 @@ function L(e) {
                     (function (e) {
                         return (n) => {
                             var t;
-                            for (let { name: i, serverLocalizedName: a } of null !== (t = n.options) && void 0 !== t ? t : []) if (i.startsWith(e) || ''.concat(n.name, ' ').concat(i).startsWith(e) || (null != n.displayName && ''.concat(n.displayName, ' ').concat(i).startsWith(e)) || (null != a && (a.startsWith(e) || ''.concat(n.name, ' ').concat(a).startsWith(e) || (null != n.displayName && ''.concat(n.displayName, ' ').concat(a).startsWith(e))))) return !0;
+                            for (let { name: i, serverLocalizedName: a } of null !== (t = n.options) && void 0 !== t ? t : []) if (i.startsWith(e) || ''.concat(n.untranslatedName, ' ').concat(i).startsWith(e) || (null != n.displayName && ''.concat(n.displayName, ' ').concat(i).startsWith(e)) || (null != a && (a.startsWith(e) || ''.concat(n.untranslatedName, ' ').concat(a).startsWith(e) || (null != n.displayName && ''.concat(n.displayName, ' ').concat(a).startsWith(e))))) return !0;
                             return !1;
                         };
                     })(e),

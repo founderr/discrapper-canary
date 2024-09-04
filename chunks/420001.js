@@ -60,7 +60,7 @@ let m = {
         if (d.hasSpaceTerminator) {
             let e = d.text.trim(),
                 t = e + ' ';
-            p = p.filter((n) => n.name === e || n.name.startsWith(t));
+            p = p.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
         }
         return 0 === p.length
             ? h.K

@@ -1,48 +1,48 @@
-t.d(s, {
+n.d(t, {
     Z: function () {
-        return p;
+        return u;
     }
 }),
-    t(47120);
-var n = t(735250),
-    a = t(470079),
-    c = t(593473),
-    o = t(266067),
-    r = t(489863),
-    u = t(787025),
-    i = t(397394),
-    h = t(689938);
-function p() {
+    n(47120);
+var s = n(735250),
+    i = n(470079),
+    r = n(593473),
+    o = n(266067),
+    l = n(489863),
+    a = n(787025),
+    c = n(397394),
+    d = n(689938);
+function u() {
     let e;
-    let s = (0, o.TH)(),
-        [t, p] = a.useState(!1),
-        [T, Z] = a.useState(!1);
+    let t = (0, o.TH)(),
+        [n, u] = i.useState(!1),
+        [h, p] = i.useState(!1);
     return (
-        a.useEffect(() => {
+        i.useEffect(() => {
             (async function e() {
-                let e = (0, c.parse)(s.search);
+                let e = (0, r.parse)(t.search);
                 try {
-                    var t;
-                    await (0, r.g)(null !== (t = e.token) && void 0 !== t ? t : ''), p(!0);
+                    var n;
+                    await (0, l.g)(null !== (n = e.token) && void 0 !== n ? n : ''), u(!0);
                 } catch {
-                    Z(!0);
+                    p(!0);
                 }
             })();
-        }, [s.search]),
-        (e = t
-            ? (0, n.jsx)(i.c7, {
-                  message: h.Z.Messages.WHITELISTED,
+        }, [t.search]),
+        (e = n
+            ? (0, s.jsx)(c.c7, {
+                  message: d.Z.Messages.WHITELISTED,
                   showsCloseWindowText: !0
               })
-            : T
-              ? (0, n.jsx)(i.Lk, {
-                    message: h.Z.Messages.WHITELIST_FAILED,
+            : h
+              ? (0, s.jsx)(c.Lk, {
+                    message: d.Z.Messages.WHITELIST_FAILED,
                     showsCloseWindowText: !0
                 })
-              : (0, n.jsx)(i.ZP, {
-                    message: h.Z.Messages.WHITELISTING,
+              : (0, s.jsx)(c.ZP, {
+                    message: d.Z.Messages.WHITELISTING,
                     spinner: !0
                 })),
-        (0, n.jsx)(u.G, { children: e })
+        (0, s.jsx)(a.G, { children: e })
     );
 }

@@ -28,8 +28,8 @@ var i,
     p = n(501655),
     T = n(192079),
     S = n(427679),
-    C = n(448206),
-    f = n(496675),
+    f = n(448206),
+    C = n(496675),
     N = n(938475),
     A = n(626135),
     v = n(823379),
@@ -382,8 +382,8 @@ function Q(e) {
     let { channel: t, speakers: n, voiceType: i } = e,
         a = t.getGuildId(),
         l = r.useMemo(() => n.slice(0, 3), [n]),
-        _ = (0, c.e7)([f.Z], () => f.Z.can(w.Plq.CONNECT, t)),
-        h = (0, C.Z)(t.id),
+        _ = (0, c.e7)([C.Z], () => C.Z.can(w.Plq.CONNECT, t)),
+        h = (0, f.Z)(t.id),
         E = k.Z.Messages.JOIN;
     switch (i) {
         case 1:

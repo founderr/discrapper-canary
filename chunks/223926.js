@@ -32,19 +32,19 @@ s.default = function (e) {
                 reasonOther: T,
                 responses: JSON.stringify(null === (e = n.formResponses) || void 0 === e ? void 0 : e.map((e) => e.response))
             }),
-                L &&
-                    m &&
-                    (_.Z.updateGuildJoinRequest(s.id, t.id, n.joinRequestId, d.wB.REJECTED, ''),
-                    null == N || N(),
-                    (0, R.openModalLazy)(async () => {
-                        let { default: e } = await a.e('43350').then(a.bind(a, 98746));
-                        return (a) =>
-                            (0, o.jsx)(e, {
-                                ...a,
-                                guildId: s.id,
-                                user: t
-                            });
-                    }));
+                L && m
+                    ? (_.Z.updateGuildJoinRequest(s.id, t.id, n.joinRequestId, d.wB.REJECTED, ''),
+                      N(),
+                      (0, R.openModalLazy)(async () => {
+                          let { default: e } = await a.e('43350').then(a.bind(a, 98746));
+                          return (a) =>
+                              (0, o.jsx)(e, {
+                                  ...a,
+                                  guildId: s.id,
+                                  user: t
+                              });
+                      }))
+                    : N();
         }, [s, n, t, I, T, L, m, N]),
         B = l.useCallback(
             (e) => {

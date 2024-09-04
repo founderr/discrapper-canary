@@ -81,12 +81,12 @@ function T(e) {
         version: a.version,
         guildId: a.guild_id,
         id: [a.id, ...E].join(p.oQ),
-        name: [a.name, ...E].join(' '),
+        untranslatedName: [a.name, ...E].join(' '),
         serverLocalizedName: s.name_localized,
         applicationId: o,
         type: null !== (t = a.type) && void 0 !== t ? t : c.yU.CHAT,
         inputType: f.iw.BOT,
-        description: s.description,
+        untranslatedDescription: s.description,
         options: (function e(t) {
             return null == t
                 ? void 0

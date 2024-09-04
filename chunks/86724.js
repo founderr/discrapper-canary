@@ -119,7 +119,7 @@ function C(e, t, n, d) {
                                                 E = '',
                                                 f = _.toLocaleLowerCase(),
                                                 h = ''.concat(N.GI).concat(c.displayName).toLocaleLowerCase(),
-                                                I = ''.concat(N.GI).concat(c.name).toLocaleLowerCase();
+                                                I = ''.concat(N.GI).concat(c.untranslatedName).toLocaleLowerCase();
                                             f.startsWith(h) && f.length > h.length ? (E = _.substring(h.length).trim()) : f.startsWith(I) && f.length > I.length && (E = _.substring(I.length).trim());
                                             let A = [],
                                                 O = null,
@@ -159,7 +159,7 @@ function C(e, t, n, d) {
                                                 children: A,
                                                 command: {
                                                     id: c.id,
-                                                    name: c.name,
+                                                    name: c.untranslatedName,
                                                     displayName: c.displayName
                                                 }
                                             };

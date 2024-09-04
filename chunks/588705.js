@@ -1,6 +1,6 @@
 n.d(s, {
     R: function () {
-        return A;
+        return f;
     }
 }),
     n(411104);
@@ -24,7 +24,7 @@ var t = n(735250),
     g = n(245335),
     j = n(689938),
     h = n(919458);
-let A = () =>
+let f = () =>
         (0, t.jsxs)(a.Fragment, {
             children: [
                 (0, t.jsx)(i.qE, {
@@ -39,7 +39,7 @@ let A = () =>
                 })
             ]
         }),
-    S = (e) => {
+    A = (e) => {
         let { guild: s, user: n, application: a, compact: l } = e;
         if (null != a)
             return (0, t.jsx)(o.Z, {
@@ -72,7 +72,7 @@ s.Z = (e) => {
     let n,
         a,
         u,
-        { invite: o, disableUser: A = !1, error: f, flatActivityCount: v = !1, isRegister: M = !1 } = e,
+        { invite: o, disableUser: f = !1, error: S, flatActivityCount: v = !1, isRegister: M = !1 } = e,
         { currentUser: R, multiAccounts: O } = (0, l.cj)([m.Z, E.default], () => ({
             currentUser: E.default.getCurrentUser(),
             multiAccounts: m.Z.getUsers()
@@ -81,7 +81,7 @@ s.Z = (e) => {
     let D = null != o.guild ? new N.ZP(o.guild) : null,
         L = null != o.channel ? (0, I.jD)(o.channel) : null,
         Z = null != o.target_application ? new d.Z(o.target_application) : null,
-        C = A || null == o.inviter ? null : new _.Z(o.inviter),
+        C = f || null == o.inviter ? null : new _.Z(o.inviter),
         b = !((null != o.approximate_member_count && o.approximate_member_count > 100) || (null != D && D.hasFeature(p.oNc.COMMUNITY))) && null != C,
         V = null,
         B = !1;
@@ -140,7 +140,7 @@ s.Z = (e) => {
         (a = j.Z.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({ username: e })),
             (B = !0),
             (u =
-                null != f
+                null != S
                     ? null
                     : (0, t.jsx)(i.DK, {
                           className: h.directInviteSubTitle,
@@ -150,15 +150,15 @@ s.Z = (e) => {
     return (0, t.jsxs)('div', {
         className: h.container,
         children: [
-            (0, t.jsx)(S, {
+            (0, t.jsx)(A, {
                 application: Z,
                 guild: D,
                 user: b ? C : null,
                 compact: B
             }),
-            null != f
+            null != S
                 ? (0, t.jsxs)(t.Fragment, {
-                      children: [(0, t.jsx)(i.DK, { children: j.Z.Messages.INVITE_MODAL_ERROR_TITLE }), (0, t.jsx)(i.Dx, { children: f })]
+                      children: [(0, t.jsx)(i.DK, { children: j.Z.Messages.INVITE_MODAL_ERROR_TITLE }), (0, t.jsx)(i.Dx, { children: S })]
                   })
                 : (0, t.jsxs)(t.Fragment, {
                       children: [

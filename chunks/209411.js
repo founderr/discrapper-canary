@@ -40,8 +40,8 @@ function p(e) {
             isAuthenticated: _.default.isAuthenticated(),
             loginStatus: _.default.getLoginStatus()
         })),
-        { location: m, redirectTo: I } = e,
-        [f, N] = r.useState(n);
+        { location: m, redirectTo: f } = e,
+        [I, N] = r.useState(n);
     function T(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: s } = e;
         (0, c.Yz)({
@@ -55,8 +55,8 @@ function p(e) {
         if (null != m) {
             let { handoff_key: e, handoff_token: t } = (0, i.parse)(m.search);
             if (null != e && null != t) {
-                let n = null != I ? (0, u.L)(I) : void 0;
-                f
+                let n = null != f ? (0, u.L)(f) : void 0;
+                I
                     ? o.Z.logout(null).finally(() => {
                           T({
                               handoffKey: e,
@@ -72,7 +72,7 @@ function p(e) {
             }
         }
     }, []),
-    f || p === E.u34.LOGGING_IN)
+    I || p === E.u34.LOGGING_IN)
         ? (0, s.jsx)(h.q, {})
         : (0, s.jsx)(h.Z, {
               ...e,

@@ -1,6 +1,6 @@
 n.d(e, {
     v: function () {
-        return C;
+        return E;
     }
 }),
     n(47120);
@@ -8,60 +8,60 @@ var a = n(735250),
     r = n(470079),
     o = n(120356),
     s = n.n(o),
-    c = n(593473),
-    u = n(266067),
-    l = n(481060),
-    i = n(489863),
+    i = n(593473),
+    l = n(266067),
+    c = n(481060),
+    u = n(489863),
     d = n(511540),
-    _ = n(828878),
-    f = n(689938),
-    I = n(847597);
-function C(t) {
+    f = n(828878),
+    p = n(689938),
+    _ = n(847597);
+function E(t) {
     let { onUserCodeAccepted: e, usePrefilledCode: n } = t,
-        [o, C] = r.useState(() => {
-            let { user_code: t } = c.parse(window.location.search);
+        [o, E] = r.useState(() => {
+            let { user_code: t } = i.parse(window.location.search);
             return n && null != t ? t : '';
         }),
-        E = (0, u.TH)(),
-        A = r.useCallback(() => {
-            (0, i.c$)(E);
-        }, [E]),
-        { manualSubmit: T, error: p, submitting: h } = (0, d.c)(o, e, A);
+        I = (0, l.TH)(),
+        C = r.useCallback(() => {
+            (0, u.c$)(I);
+        }, [I]),
+        { manualSubmit: h, error: A, submitting: T } = (0, d.c)(o, e, C);
     return (0, a.jsxs)('div', {
-        className: I.content,
+        className: _.content,
         children: [
-            (0, a.jsx)(l.Heading, {
+            (0, a.jsx)(c.Heading, {
                 variant: 'heading-xl/extrabold',
-                className: I.text,
-                children: f.Z.Messages.ACTIVATE_DEVICE_TITLE
+                className: _.text,
+                children: p.Z.Messages.ACTIVATE_DEVICE_TITLE
             }),
-            (0, a.jsx)(l.Text, {
+            (0, a.jsx)(c.Text, {
                 tag: 'p',
                 variant: 'text-md/medium',
                 color: 'header-secondary',
-                className: I.text,
-                children: f.Z.Messages.ACTIVATE_DEVICE_BODY
+                className: _.text,
+                children: p.Z.Messages.ACTIVATE_DEVICE_BODY
             }),
-            (0, a.jsx)(l.TextInput, {
-                placeholder: f.Z.Messages.ACTIVATE_DEVICE_INPUT_PLACEHOLDER.format({ number: _.A.USER_CODE_LENGTH }),
-                maxLength: _.A.USER_CODE_LENGTH,
-                className: I.textInputContainer,
-                inputClassName: s()(I.textInput, { [I.textInputError]: null != p }),
+            (0, a.jsx)(c.TextInput, {
+                placeholder: p.Z.Messages.ACTIVATE_DEVICE_INPUT_PLACEHOLDER.format({ number: f.A.USER_CODE_LENGTH }),
+                maxLength: f.A.USER_CODE_LENGTH,
+                className: _.textInputContainer,
+                inputClassName: s()(_.textInput, { [_.textInputError]: null != A }),
                 autoComplete: 'off',
                 autoFocus: !0,
                 value: o,
-                onChange: C,
-                error: p
+                onChange: E,
+                error: A
             }),
-            (0, a.jsx)(l.Button, {
+            (0, a.jsx)(c.Button, {
                 fullWidth: !0,
-                color: l.Button.Colors.BRAND,
-                onClick: T,
-                submitting: h,
-                disabled: o.length !== _.A.USER_CODE_LENGTH,
-                children: (0, a.jsx)(l.Text, {
+                color: c.Button.Colors.BRAND,
+                onClick: h,
+                submitting: T,
+                disabled: o.length !== f.A.USER_CODE_LENGTH,
+                children: (0, a.jsx)(c.Text, {
                     variant: 'text-md/medium',
-                    children: f.Z.Messages.SUBMIT
+                    children: p.Z.Messages.SUBMIT
                 })
             })
         ]

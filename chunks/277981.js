@@ -27,7 +27,7 @@ function A(e, t, n) {
     var r, i;
     let a;
     return (
-        n.commands === p.L8.OLD_BUILT_INS ? ((a = t.split(' ')[0].substring(I.GI.length)), (t = t.substring((null !== (r = a.length) && void 0 !== r ? r : 0) + I.GI.length))) : (a = null === (i = d.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.name),
+        n.commands === p.L8.OLD_BUILT_INS ? ((a = t.split(' ')[0].substring(I.GI.length)), (t = t.substring((null !== (r = a.length) && void 0 !== r ? r : 0) + I.GI.length))) : (a = null === (i = d.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.untranslatedName),
         {
             command: a,
             query: t.trim()

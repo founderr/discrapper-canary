@@ -17,8 +17,8 @@ var i,
     p = n(306680),
     T = n(699516),
     S = n(9156),
-    C = n(626135),
-    f = n(70956),
+    f = n(626135),
+    C = n(70956),
     N = n(709054),
     A = n(761080),
     v = n(584925),
@@ -71,7 +71,7 @@ function ee() {
             a = 0;
         for (let i of e) {
             if (!(0, u.Z2)(i)) {
-                if ((0, u.BQ)(i, 2 * f.Z.Seconds.DAY) || (0, u.xt)(i)) {
+                if ((0, u.BQ)(i, 2 * C.Z.Seconds.DAY) || (0, u.xt)(i)) {
                     var n;
                     if (
                         (null == G[i.id] &&
@@ -163,7 +163,7 @@ function ei(e) {
     }
     if ((ee(), null != y.load_id && b !== y.load_id)) {
         var t;
-        C.default.track(L.rMx.FEED_LOADED, {
+        f.default.track(L.rMx.FEED_LOADED, {
             ...y,
             unread_feed_item_ids: X.map((e) => e.id),
             read_feed_item_ids: J.map((e) => e.id),
@@ -374,7 +374,7 @@ O(e_, 'displayName', 'GravityStore'),
                         e.add(t.id);
                     }),
                         Object.values(j).forEach((t) => {
-                            A.zd.has(t.type) && (e.has(t.id) || N.default.age(t.id) > f.Z.Millis.DAY || (t.type === A.Rr.MESSAGE && S.ZP.isChannelMuted(t.data.guild_id, t.data.channel_id)) ? delete j[t.id] : !e.has(t.id) && (M.unshift(t), e.add(t.id)));
+                            A.zd.has(t.type) && (e.has(t.id) || N.default.age(t.id) > C.Z.Millis.DAY || (t.type === A.Rr.MESSAGE && S.ZP.isChannelMuted(t.data.guild_id, t.data.channel_id)) ? delete j[t.id] : !e.has(t.id) && (M.unshift(t), e.add(t.id)));
                         }),
                         M.forEach((e) => {
                             (U[e.id] = e), e.type === A.Rr.CUSTOM_STATUS && (T.Z.isBlocked(e.data.user_id) ? (w[e.id] = !0) : (G[e.id] = (0, Z.mV)(e)));
@@ -392,7 +392,7 @@ O(e_, 'displayName', 'GravityStore'),
                 !a && (W = e), e && (0, Z.em)([...s, ...r], 0, A.xy);
             } else
                 (F = 0),
-                    s.length > 0 && !z && Date.now() - P > 2 * f.Z.Millis.HOUR && ((W = !0), (Y = !0)),
+                    s.length > 0 && !z && Date.now() - P > 2 * C.Z.Millis.HOUR && ((W = !0), (Y = !0)),
                     ei({
                         newUnread: s,
                         newRead: r

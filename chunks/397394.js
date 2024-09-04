@@ -172,7 +172,7 @@ function C(e) {
     var t, n;
     let { location: a } = e;
     i.useEffect(() => {
-        if (null == a) return;
+        if (null == a || '' === a.search) return;
         let e = null != document.referrer && '' !== document.referrer ? u.parse(document.referrer) : null;
         (null == e || e.host !== window.location.host || e.pathname !== T.Z5c.OAUTH2_AUTHORIZE) && (0, h.uL)(T.Z5c.INDEX);
     }, [a]);

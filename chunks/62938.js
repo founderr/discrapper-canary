@@ -1,6 +1,6 @@
 n.d(t, {
     U: function () {
-        return f;
+        return C;
     }
 });
 var i = n(735250),
@@ -52,7 +52,7 @@ function S(e) {
         })
     });
 }
-function C(e) {
+function f(e) {
     let { onScroll: t, withAdminContent: n } = e,
         a = (0, _.GN)((e) => e.mode, s.Z),
         { ref: r, width: o } = (0, l.Z)();
@@ -77,7 +77,7 @@ function C(e) {
         ]
     });
 }
-function f(e) {
+function C(e) {
     let { onScroll: t } = e,
         { enableClanCreation: n } = (0, o.C3)({
             location: 'GuildsTab',
@@ -87,7 +87,7 @@ function f(e) {
         s = (0, _.GN)((e) => e.dismissedPilotAdminNux),
         r = (0, o.YH)('clan_discovery_admin_upsell');
     return ((0, d.LE)(), !n || (a && s) || r)
-        ? (0, i.jsx)(C, {
+        ? (0, i.jsx)(f, {
               onScroll: t,
               withAdminContent: n && a
           })

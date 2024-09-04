@@ -29,7 +29,7 @@ function p(e) {
         T && (h(!1), I(!1));
     }, [T]);
     let S = d && (m || _),
-        C = a.useMemo(
+        f = a.useMemo(
             () =>
                 null != l
                     ? (0, i.jsxs)(o.Clickable, {
@@ -46,7 +46,7 @@ function p(e) {
                     : null,
             [l, c, T]
         ),
-        f = a.useCallback(
+        C = a.useCallback(
             (e) =>
                 (0, i.jsxs)(o.Button, {
                     ...e,
@@ -71,7 +71,7 @@ function p(e) {
                                     color: 'none',
                                     children: n
                                 }),
-                                null != C &&
+                                null != f &&
                                     (0, i.jsx)(o.ChevronSmallDownIcon, {
                                         className: g.chevron,
                                         color: 'currentColor'
@@ -80,12 +80,12 @@ function p(e) {
                         })
                     ]
                 }),
-            [t, n, d, c, C]
+            [t, n, d, c, f]
         );
-    return null == C
-        ? f({})
+    return null == f
+        ? C({})
         : (0, i.jsx)(o.Tooltip, {
-              text: C,
+              text: f,
               position: 'bottom',
               'aria-label': s,
               shouldShow: S,
@@ -94,7 +94,7 @@ function p(e) {
               disableTooltipPointerEvents: !1,
               tooltipClassName: r()(g.filterTooltip, { [g.filterTooltipAutoWidth]: u }),
               tooltipContentClassName: g.filterTooltipContent,
-              children: f
+              children: C
           });
 }
 function T() {
@@ -177,7 +177,7 @@ function S() {
         ariaLabel: null != s ? s : I.Z.Messages.CLAN_DISCOVERY_ANY_PLAYSTYLE
     });
 }
-function C() {
+function f() {
     let e = (0, E.GN)((e) => e.selectedTraits, l.Z),
         t = a.useCallback(() => {
             (0, E.fH)(E.v0.TRAITS, !0);
@@ -214,7 +214,7 @@ function C() {
         autoWidth: !0
     });
 }
-function f(e) {
+function C(e) {
     let { onClick: t } = e,
         n = (0, E.GN)((e) => e.mode, l.Z),
         a = (0, E.GN)((e) => e.savedGuildIds, l.Z),
@@ -371,7 +371,7 @@ function L(e) {
                   u &&
                       (0, i.jsxs)('div', {
                           className: g.actions,
-                          children: [(0, i.jsx)(N, {}), (0, i.jsx)(f, { onClick: _ })]
+                          children: [(0, i.jsx)(N, {}), (0, i.jsx)(C, { onClick: _ })]
                       })
               ]
           });
@@ -397,7 +397,7 @@ t.Z = function (e) {
                         : null,
                     (0, i.jsxs)('div', {
                         className: g.preferences,
-                        children: [(0, i.jsx)(T, {}), (0, i.jsx)(S, {}), (0, i.jsx)(C, {})]
+                        children: [(0, i.jsx)(T, {}), (0, i.jsx)(S, {}), (0, i.jsx)(f, {})]
                     }),
                     (0, i.jsx)('div', { className: g.actions })
                 ]

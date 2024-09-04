@@ -28,12 +28,12 @@ let m = [
         .values()
         .map((e) => ({
             id: e.commandId,
-            name: e.command,
+            untranslatedName: e.command,
             displayName: e.command,
             type: u.yU.CHAT,
             inputType: E.iw.BUILT_IN_INTEGRATION,
             applicationId: f.bi.BUILT_IN,
-            get description() {
+            get untranslatedDescription() {
                 return I(e.title);
             },
             get displayDescription() {
@@ -62,12 +62,12 @@ let m = [
         .value(),
     {
         id: '-15',
-        name: 'leave',
+        untranslatedName: 'leave',
         displayName: 'leave',
         type: u.yU.CHAT,
         inputType: E.iw.BUILT_IN,
         applicationId: f.bi.BUILT_IN,
-        get description() {
+        get untranslatedDescription() {
             return p.Z.Messages.LEAVE_GROUP_DM;
         },
         get displayDescription() {
@@ -123,12 +123,12 @@ let m = [
     },
     {
         id: '-17',
-        name: 'sticker',
+        untranslatedName: 'sticker',
         displayName: 'sticker',
         type: u.yU.CHAT,
         inputType: E.iw.BUILT_IN_INTEGRATION,
         applicationId: f.bi.BUILT_IN,
-        get description() {
+        get untranslatedDescription() {
             return p.Z.Messages.COMMAND_STICKER_DESCRIPTION;
         },
         get displayDescription() {

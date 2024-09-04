@@ -20,8 +20,8 @@ function m(e) {
     let { quest: t, className: n, questContent: s, contentPosition: m, rowIndex: I } = e,
         [g, p] = a.useState(!1),
         [T, S] = a.useState([]),
-        C = (0, o.qb)(t),
-        f = a.useCallback(() => {
+        f = (0, o.qb)(t),
+        C = a.useCallback(() => {
             p(!0),
                 (0, l.dA)({
                     questId: t.id,
@@ -45,14 +45,14 @@ function m(e) {
                     e.current = t;
                 },
                 className: r()(E.container, n),
-                onMouseEnter: f,
+                onMouseEnter: C,
                 onMouseLeave: N,
                 children: [
                     (0, i.jsx)(u.Z, {
                         quest: t,
                         isHovering: g,
                         errorHints: T,
-                        warningHints: C
+                        warningHints: f
                     }),
                     (0, i.jsx)(_.Z, {
                         quest: t,

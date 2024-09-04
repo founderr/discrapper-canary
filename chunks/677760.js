@@ -19,23 +19,23 @@ var s,
     g = n(314897),
     p = n(701190),
     m = n(626135),
-    I = n(768581),
-    f = n(823379),
+    f = n(768581),
+    I = n(823379),
     N = n(264229),
     T = n(230224),
     x = n(617730),
     A = n(258356),
     C = n(981631),
-    Z = n(689938),
-    v = n(318684);
-function R() {
+    v = n(689938),
+    Z = n(318684);
+function S() {
     return (0, i.jsx)('div', {
-        className: v.centerFlex,
+        className: Z.centerFlex,
         children: (0, i.jsx)(c.Spinner, {})
     });
 }
 ((r = s || (s = {}))[(r.LOADING = 0)] = 'LOADING'), (r[(r.DETAILS = 1)] = 'DETAILS'), (r[(r.ERROR = 2)] = 'ERROR');
-let S = (e) => {
+let R = (e) => {
     let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
@@ -54,27 +54,27 @@ let S = (e) => {
         case C.r2o.RESOLVING:
             return 0;
         default:
-            (0, f.vE)(n);
+            (0, I.vE)(n);
     }
 };
 function O(e) {
     let { invite: t, onAcceptInvite: n } = e;
     if ((null == t ? void 0 : t.state) === C.r2o.BANNED)
         return (0, i.jsx)(d.u, {
-            text: Z.Z.Messages.AUTH_BANNED_INVITE_BODY,
-            buttonCta: Z.Z.Messages.INVITE_INVALID_CTA,
+            text: v.Z.Messages.AUTH_BANNED_INVITE_BODY,
+            buttonCta: v.Z.Messages.INVITE_INVALID_CTA,
             onClick: n
         });
     return (0, i.jsx)(d.u, {
-        text: Z.Z.Messages.INVITE_INVALID_ERROR,
-        buttonCta: Z.Z.Messages.INVITE_INVALID_CTA,
+        text: v.Z.Messages.INVITE_INVALID_ERROR,
+        buttonCta: v.Z.Messages.INVITE_INVALID_CTA,
         onClick: n
     });
 }
 function b(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: s, innerStyle: r, ...o } = e,
         { invite: u } = o,
-        [d, h] = a.useState(S(u)),
+        [d, h] = a.useState(R(u)),
         { ref: E, height: g } = (0, _.Z)(),
         p = (0, c.useSpring)({
             height: null != g && 0 !== g ? ''.concat(g, 'px') : ''.concat(s, 'px'),
@@ -82,15 +82,15 @@ function b(e) {
         });
     return (
         a.useEffect(() => {
-            let e = S(u);
+            let e = R(u);
             e !== d && h(e);
         }, [u, d]),
         (0, i.jsxs)(l.animated.div, {
-            className: v.inviteCard,
+            className: Z.inviteCard,
             style: p,
             children: [
                 (0, i.jsx)(l.animated.div, {
-                    className: v.inviteChildContainer,
+                    className: Z.inviteChildContainer,
                     style: p,
                     children: (0, i.jsx)('section', {
                         ref: E,
@@ -113,7 +113,7 @@ function D(e) {
     };
     return (0, i.jsx)(b, {
         startAnimHeightPx: 0,
-        innerStyle: () => v.guildInfoInner,
+        innerStyle: () => Z.guildInfoInner,
         ...e,
         children: (e) => n(e)
     });
@@ -121,7 +121,7 @@ function D(e) {
 function L(e) {
     let { invite: t } = e,
         n = (n) => {
-            if (null == t) return (0, i.jsx)(R, {});
+            if (null == t) return (0, i.jsx)(S, {});
             switch (n) {
                 case 1:
                     return (0, i.jsx)(x.Z, {
@@ -134,13 +134,13 @@ function L(e) {
                         invite: t
                     });
                 default:
-                    return (0, i.jsx)(R, {});
+                    return (0, i.jsx)(S, {});
             }
         },
         s = {
-            1: v.inviteCardInner,
-            2: v.inviteCardInnerError,
-            0: v.inviteCardInnerLoading
+            1: Z.inviteCardInner,
+            2: Z.inviteCardInnerError,
+            0: Z.inviteCardInnerLoading
         };
     return (0, i.jsx)(b, {
         startAnimHeightPx: 200,
@@ -154,7 +154,7 @@ function M(e) {
         { guild: s } = null != t ? t : {},
         r = {};
     if ((null == s ? void 0 : s.splash) != null) {
-        let e = I.ZP.getGuildSplashURL({
+        let e = f.ZP.getGuildSplashURL({
             id: s.id,
             splash: s.splash
         });
@@ -162,9 +162,9 @@ function M(e) {
     }
     return (0, i.jsxs)(h.ZP, {
         theme: C.BRd.DARK,
-        className: v.splashBackground,
+        className: Z.splashBackground,
         style: r,
-        contentClassName: v.centerAuthBoxContent,
+        contentClassName: Z.centerAuthBoxContent,
         children: [
             (0, i.jsx)(L, {
                 ...e,

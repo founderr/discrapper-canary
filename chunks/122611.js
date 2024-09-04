@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(919285),
     T = n(118470),
     S = n(413307),
-    C = n(849688),
-    f = n(374023),
+    f = n(849688),
+    C = n(374023),
     N = n(661599),
     A = n(923608),
     v = n(617899),
@@ -134,7 +134,7 @@ t.Z = (e) => {
         case R.R.HUB_STUDY_ROOM:
             return (0, i.jsx)(g.Z, { guild: t });
         case R.R.SIGNUP:
-            return (0, i.jsx)(C.Z, { guild: t });
+            return (0, i.jsx)(f.Z, { guild: t });
     }
-    return f.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, { guild: e.guild });
+    return C.s.isDisallowPopupsSet() ? null : (0, i.jsx)(M, { guild: e.guild });
 };

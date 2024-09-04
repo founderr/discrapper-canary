@@ -32,7 +32,7 @@ function N(e, t, n, i, a) {
         let r = E.Z.getChannel(e);
         if (null == r) return;
         let { command: s, application: c } = l.Xq(r, n, a);
-        if (null != s && s.name === t) {
+        if (null != s && s.untranslatedName === t) {
             var d, _;
             I.S.dispatch(m.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
             let t =
@@ -99,7 +99,7 @@ function O(e) {
         { command: O } = l.YZ(I, null !== (t = n.commandKey) && void 0 !== t ? t : ''),
         R = _.dN.useSetting(),
         v = i.useMemo(() => {
-            if (null == O || null == I || O.name !== n.commandName || R) return !1;
+            if (null == O || null == I || O.untranslatedName !== n.commandName || R) return !1;
             let e = I.isPrivate();
             if ((0, d.xl)(I) || (!e && !S)) return !1;
             let t = (null == O ? void 0 : O.applicationId) === T.bi.BUILT_IN;

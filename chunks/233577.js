@@ -36,7 +36,7 @@ let S = {
     },
     queryResults(e, t, n, r) {
         var i;
-        let a = null === (i = s.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.name;
+        let a = null === (i = s.Z.getActiveCommand(e.id)) || void 0 === i ? void 0 : i.untranslatedName;
         if (null == a) return T;
         let o = [];
         (0, c.$p)();

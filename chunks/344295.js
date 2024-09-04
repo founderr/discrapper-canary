@@ -14,17 +14,17 @@ var s = n(735250),
     g = n(388905),
     p = n(639946),
     m = n(792766),
-    I = n(362762),
-    f = n(978684),
+    f = n(362762),
+    I = n(978684),
     N = n(264229),
     T = n(929809),
     x = n(703656),
     A = n(108427),
     C = n(314897),
-    Z = n(896797),
-    v = n(701190),
-    R = n(626135),
-    S = n(630388),
+    v = n(896797),
+    Z = n(701190),
+    S = n(626135),
+    R = n(630388),
     O = n(63063),
     b = n(782605),
     D = n(954824),
@@ -63,7 +63,7 @@ async function V(e) {
 class z extends r.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
-        if ((R.default.track(j.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, A.e)('invite'), !B.KO)) {
+        if ((S.default.track(j.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, A.e)('invite'), !B.KO)) {
             let e = this.getInviteKey();
             D.Z.launch('discord://' + j.Z5c.INVITE(e), () => void 0);
         }
@@ -117,7 +117,7 @@ class z extends r.PureComponent {
                       invite_code: i
                   }
                 : { invite_code: i };
-        R.default.track(e, {
+        S.default.track(e, {
             ...a,
             ...n
         });
@@ -239,7 +239,7 @@ class z extends r.PureComponent {
                 return this.renderSpinner(U.Z.Messages.APP_OPENING);
             case j.r2o.RESOLVED:
                 var a;
-                if (n && (0, S.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, l.$.IS_GUEST_INVITE)) return d.Z.openApp(e.code), u.x.set(f.J, e.code), this.renderAppOpened(() => r(j.Z5c.APP));
+                if (n && (0, R.yE)(null !== (a = e.flags) && void 0 !== a ? a : 0, l.$.IS_GUEST_INVITE)) return d.Z.openApp(e.code), u.x.set(I.J, e.code), this.renderAppOpened(() => r(j.Z5c.APP));
                 if (n || !B.KO) return this.renderAuthenticatedOrDownload();
                 else if (this.getMode() === H.LOGIN)
                     return (0, s.jsx)(M.Z, {
@@ -327,14 +327,14 @@ class z extends r.PureComponent {
             });
     }
 }
-t.Z = c.ZP.connectStores([v.Z, Z.Z, C.default, I.Z, h.Z], (e) => {
+t.Z = c.ZP.connectStores([Z.Z, v.Z, C.default, f.Z, h.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
-        invite: null !== (t = v.Z.getInvite(n)) && void 0 !== t ? t : {},
-        nativeAppState: I.Z.getState(n),
+        invite: null !== (t = Z.Z.getInvite(n)) && void 0 !== t ? t : {},
+        nativeAppState: f.Z.getState(n),
         authenticated: C.default.isAuthenticated(),
-        defaultRoute: Z.Z.defaultRoute,
+        defaultRoute: v.Z.defaultRoute,
         isUnderage: h.Z.isUnderageAnonymous()
     };
 })(z);

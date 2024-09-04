@@ -1,43 +1,43 @@
 var s = n(735250),
-    r = n(470079),
-    i = n(266067),
-    a = n(215569);
-class l extends r.Component {
+    i = n(470079),
+    r = n(266067),
+    o = n(215569);
+class l extends i.Component {
     render() {
-        let { children: e, location: t, history: n, staticContext: l, match: o, ...c } = this.props,
-            u = null,
-            d = null;
+        let { children: e, location: t, history: n, staticContext: l, match: a, ...c } = this.props,
+            d = null,
+            u = null;
         return (
-            r.Children.forEach(e, (e) => {
-                if (null == u && r.isValidElement(e)) {
-                    let { component: s, render: a, ...o } = e.props,
-                        c = o.path || o.from;
+            i.Children.forEach(e, (e) => {
+                if (null == d && i.isValidElement(e)) {
+                    let { component: s, render: o, ...a } = e.props,
+                        c = a.path || a.from;
                     if (
                         null !=
-                        (u =
+                        (d =
                             null != c
-                                ? (0, i.LX)(t.pathname, {
-                                      ...o,
+                                ? (0, r.LX)(t.pathname, {
+                                      ...a,
                                       path: c
                                   })
                                 : null)
                     )
-                        (o = {
-                            ...o,
+                        (a = {
+                            ...a,
                             key: c,
                             location: t,
-                            match: u,
+                            match: d,
                             history: n,
                             staticContext: l
                         }),
-                            null != s ? (d = r.createElement(s, o)) : null != a && (d = a(o));
+                            null != s ? (u = i.createElement(s, a)) : null != o && (u = o(a));
                 }
             }),
-            (0, s.jsx)(a.W, {
+            (0, s.jsx)(o.W, {
                 ...c,
-                children: d
+                children: u
             })
         );
     }
 }
-t.Z = (0, i.EN)(l);
+t.Z = (0, r.EN)(l);

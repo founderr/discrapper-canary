@@ -4,8 +4,8 @@ n.r(t),
             return h;
         }
     });
-var a = n(735250),
-    s = n(470079),
+var s = n(735250),
+    a = n(470079),
     i = n(873546),
     r = n(442837),
     l = n(481060),
@@ -27,7 +27,7 @@ function h(e) {
         n = (0, r.e7)([d.Z], () => d.Z.getState('quests')),
         i = t.params.questId;
     if (
-        (s.useEffect(() => {
+        (a.useEffect(() => {
             if (!g)
                 null == n
                     ? (m.default.track(x.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT, { quest_id: i }),
@@ -39,20 +39,20 @@ function h(e) {
         }, [n, i]),
         g)
     )
-        return (0, a.jsxs)('div', {
+        return (0, s.jsxs)('div', {
             className: N.mobileWebContainer,
             children: [
-                (0, a.jsx)('img', {
+                (0, s.jsx)('img', {
                     src: E,
                     alt: '',
                     className: N.mobileWebImage
                 }),
-                (0, a.jsx)(l.Heading, {
+                (0, s.jsx)(l.Heading, {
                     variant: 'display-lg',
                     color: 'text-brand',
                     children: b.Z.Messages.QUESTS_LANDING_PAGE_ERROR_HEADING
                 }),
-                (0, a.jsx)(l.Text, {
+                (0, s.jsx)(l.Text, {
                     variant: 'text-md/normal',
                     className: N.mobileWebCopy,
                     children: b.Z.Messages.QUESTS_LANDING_PAGE_MOBILE_WEB_BODY_DESKTOP_AND_MOBILE_QUEST_HOME
@@ -60,26 +60,26 @@ function h(e) {
             ]
         });
     let h = null == n || n === x.kEZ.OPENING || n === x.kEZ.OPEN_FAIL;
-    return (0, a.jsxs)(a.Fragment, {
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, a.jsx)(o.Z, {
+            (0, s.jsx)(o.Z, {
                 className: N.backgroundArtwork,
                 preserveAspectRatio: 'xMinYMin slice'
             }),
-            (0, a.jsx)('div', {
+            (0, s.jsx)('div', {
                 className: N.container,
-                children: (0, a.jsx)(c.ZP, {
+                children: (0, s.jsx)(c.ZP, {
                     children: h
-                        ? (0, a.jsxs)(a.Fragment, {
-                              children: [(0, a.jsx)(c.Dx, { children: b.Z.Messages.APP_OPENING }), (0, a.jsx)(c.Hh, {})]
+                        ? (0, s.jsxs)(s.Fragment, {
+                              children: [(0, s.jsx)(c.Dx, { children: b.Z.Messages.APP_OPENING }), (0, s.jsx)(c.Hh, {})]
                           })
-                        : (0, a.jsxs)(a.Fragment, {
+                        : (0, s.jsxs)(s.Fragment, {
                               children: [
-                                  (0, a.jsx)(c.Dx, {
+                                  (0, s.jsx)(c.Dx, {
                                       className: N.appOpenedTitle,
                                       children: b.Z.Messages.APP_OPENED_TITLE
                                   }),
-                                  (0, a.jsx)(c.DK, { children: b.Z.Messages.DEEPLINK_BROWSER_APP_OPENED })
+                                  (0, s.jsx)(c.DK, { children: b.Z.Messages.DEEPLINK_BROWSER_APP_OPENED })
                               ]
                           })
                 })

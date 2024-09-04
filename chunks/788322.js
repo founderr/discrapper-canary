@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(879484),
     T = n(26580),
     S = n(206887),
-    C = n(981631),
-    f = n(689938),
+    f = n(981631),
+    C = n(689938),
     N = n(607921),
     A = n(129512),
     v = n(330065);
@@ -45,9 +45,9 @@ t.Z = (e) => {
                 ? H
                 : (function (e) {
                       switch (e) {
-                          case C.BRd.DARK:
+                          case f.BRd.DARK:
                               return A;
-                          case C.BRd.LIGHT:
+                          case f.BRd.LIGHT:
                               return v;
                       }
                   })(Z),
@@ -65,10 +65,10 @@ t.Z = (e) => {
             if (!t.includes('Menu')) {
                 if ((0, h.yU)()) {
                     (0, E.Z)({
-                        analyticsSource: { page: C.ZY5.GUILD_DISCOVERY },
+                        analyticsSource: { page: f.ZY5.GUILD_DISCOVERY },
                         analyticsLocation: {
-                            page: C.ZY5.GUILD_DISCOVERY,
-                            section: C.jXE.GUILD_CAP_UPSELL_MODAL
+                            page: f.ZY5.GUILD_DISCOVERY,
+                            section: f.jXE.GUILD_CAP_UPSELL_MODAL
                         },
                         analyticsLocations: B
                     });
@@ -183,7 +183,7 @@ t.Z = (e) => {
                                                     children: (0, i.jsx)(l.Text, {
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
+                                                        children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
                                                     })
                                                 }),
                                             null != y &&
@@ -195,7 +195,7 @@ t.Z = (e) => {
                                                             children: (0, i.jsx)(l.Text, {
                                                                 variant: 'text-xs/normal',
                                                                 color: 'header-secondary',
-                                                                children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
+                                                                children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
                                                             })
                                                         })
                                                     ]

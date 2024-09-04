@@ -21,8 +21,8 @@ var i = n(735250),
     p = n(791734),
     T = n(444324),
     S = n(726115),
-    C = n(859921),
-    f = n(750910),
+    f = n(859921),
+    C = n(750910),
     N = n(28494),
     A = n(29086),
     v = n(590771),
@@ -59,7 +59,7 @@ function b() {
         ),
         Q = z === h.v0.SAVED_GUILDS,
         X = a.useRef(new T.Z(D)),
-        { onGuildCardSeen: J, onGuildCardClick: $ } = (0, f.H)({
+        { onGuildCardSeen: J, onGuildCardClick: $ } = (0, C.H)({
             guildDiscoveryCardSeenManager: X.current,
             loadId: e.current
         });
@@ -70,7 +70,7 @@ function b() {
             s();
         }, [P, s]),
         a.useEffect(() => {
-            !W && C.B.setState({ searchScrollPosition: null });
+            !W && f.B.setState({ searchScrollPosition: null });
         }, [W]),
         a.useEffect(() => {
             (0, c.N)();

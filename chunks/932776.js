@@ -30,7 +30,7 @@ function d() {
                     let t = l.yU.CHAT + 1,
                         i = n.type > t ? t : n.type,
                         a = i - (e.type > t ? t : e.type);
-                    return 0 !== a ? a : e.name.localeCompare(n.name);
+                    return 0 !== a ? a : e.untranslatedName.localeCompare(n.untranslatedName);
                 }),
             [d]
         ),

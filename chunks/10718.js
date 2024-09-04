@@ -253,9 +253,9 @@ function O(e, t) {
                     type: t,
                     inputType: c.iw.PLACEHOLDER,
                     id: 'placeholder-'.concat(e),
-                    name: '',
+                    untranslatedName: '',
                     displayName: '',
-                    description: '',
+                    untranslatedDescription: '',
                     displayDescription: '',
                     applicationId: '',
                     section: N

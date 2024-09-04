@@ -14,8 +14,8 @@ var s,
     g = n(626135),
     p = n(981631),
     m = n(689938),
-    I = n(884841),
-    f = n(224499);
+    f = n(884841),
+    I = n(224499);
 function N(e, t, n) {
     return (
         t in e
@@ -39,14 +39,14 @@ class T extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(375673),
-                    className: l()(I.image, f.marginBottom20)
+                    className: l()(f.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: f.marginBottom8,
+                    className: I.marginBottom8,
                     children: m.Z.Messages.VERFICATION_EXPIRED
                 }),
                 (0, r.jsx)(d.DK, {
-                    className: f.marginBottom40,
+                    className: I.marginBottom40,
                     children: m.Z.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
                 }),
                 (0, r.jsx)(d.zx, {
@@ -61,10 +61,10 @@ class T extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(73962),
-                    className: l()(I.image, f.marginBottom20)
+                    className: l()(f.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: f.marginBottom40,
+                    className: I.marginBottom40,
                     children: m.Z.Messages.VERIFICATION_VERIFIED
                 }),
                 (0, r.jsx)(d.zx, {
@@ -79,14 +79,14 @@ class T extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(892235),
-                    className: l()(I.image, f.marginBottom20)
+                    className: l()(f.image, I.marginBottom20)
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: f.marginBottom8,
+                    className: I.marginBottom8,
                     children: m.Z.Messages.VERIFICATION_VERIFYING
                 }),
                 (0, r.jsx)(d.DK, {
-                    className: f.marginBottom40,
+                    className: I.marginBottom40,
                     children: m.Z.Messages.ACTION_MAY_TAKE_A_MOMENT
                 }),
                 (0, r.jsx)(d.zx, {

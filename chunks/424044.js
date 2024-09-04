@@ -14,17 +14,17 @@ var s = n(735250),
     g = n(314897),
     p = n(981631),
     m = n(689938),
-    I = n(224499);
+    f = n(224499);
 i.ZP.initialize();
 t.Z = (e) => {
     let { location: t } = e,
         n = (0, i.e7)([g.default], () => g.default.isAuthenticated()),
-        f = (0, i.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+        I = (0, i.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         N = (0, h.oK)('RSL - Landing Page'),
         [T, x] = r.useState(!1),
         [A, C] = r.useState(m.Z.Messages.AUTHORIZING),
-        [Z, v] = r.useState(!0),
-        R = (e) => {
+        [v, Z] = r.useState(!0),
+        S = (e) => {
             switch (e) {
                 case p.evJ.INVALID_FORM_BODY:
                 case p.evJ.DSA_RSL_REPORT_NOT_FOUND:
@@ -46,24 +46,24 @@ t.Z = (e) => {
     return (
         r.useEffect(() => {
             n
-                ? (v(!0),
+                ? (Z(!0),
                   o
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => v(!1))
-                      .catch(() => v(!1)))
-                : v(!1);
+                      .then(() => Z(!1))
+                      .catch(() => Z(!1)))
+                : Z(!1);
         }, [n]),
         r.useEffect(() => {
-            !f && !N && l.Z.getExperiments();
-        }, [f, N]),
+            !I && !N && l.Z.getExperiments();
+        }, [I, N]),
         r.useEffect(() => {
             let e = async (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, _.hs)(e) : void 0;
-                    null != n ? C(m.Z.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : R(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+                    null != n ? C(m.Z.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : S(null === (t = n.body) || void 0 === t ? void 0 : t.code);
                 } catch (e) {
-                    R(null === (n = e.body) || void 0 === n ? void 0 : n.code);
+                    S(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
                     x(!1);
                 }
@@ -71,11 +71,11 @@ t.Z = (e) => {
             x(!0), e((0, c.Z)(t)), (0, E.e)('report_second_look');
         }, [t]),
         N &&
-            !Z &&
+            !v &&
             (0, s.jsxs)(u.ZP, {
                 children: [
                     (0, s.jsx)(u.Dx, {
-                        className: I.marginBottom8,
+                        className: f.marginBottom8,
                         children: A
                     }),
                     T && (0, s.jsx)(a.Spinner, {})

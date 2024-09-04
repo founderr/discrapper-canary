@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return C;
+        return f;
     }
 }),
     n(47120);
@@ -22,8 +22,8 @@ var i = n(735250),
     p = n(731455),
     T = n(689938),
     S = n(514768);
-let C = 12,
-    f = () => {
+let f = 12,
+    C = () => {
         let e = (0, u.s1)().location.search;
         return null != e && e.length > 0 && e.startsWith('?') ? l.parse(e) : {};
     },
@@ -67,7 +67,7 @@ t.Z = (e) => {
         y = r().uniqueId('GuildDiscovery'),
         { guilds: j, loading: U, total: G } = n,
         [w, k] = a.useState(!1),
-        { tag: B } = f(),
+        { tag: B } = C(),
         [H, V] = a.useState(B),
         F = (0, o.e7)([_.ZP], () => _.ZP.hasSearchError()),
         Y = (e, t, n) => {
@@ -84,8 +84,8 @@ t.Z = (e) => {
             null == Z || Z.scrollTo({ to: 0 });
         };
     a.useEffect(() => {
-        let { offset: e, tag: t } = f(),
-            n = null != e ? Math.floor(parseInt(e, 10) / C) + 1 : 1;
+        let { offset: e, tag: t } = C(),
+            n = null != e ? Math.floor(parseInt(e, 10) / f) + 1 : 1;
         V(!!t), 1 === n && k(!0);
     }, [s]);
     let z =
@@ -139,17 +139,17 @@ t.Z = (e) => {
                         categoryId: O,
                         categoryName: x,
                         onClick: () => {
-                            d.uY(p.Hk), Y(0, C, !0);
+                            d.uY(p.Hk), Y(0, f, !0);
                         }
                     })
                   : (0, i.jsx)('div', {
                         className: S.results,
                         children: (0, i.jsx)(m.Z, {
-                            pageSize: C,
+                            pageSize: f,
                             totalCount: G,
                             resetCurrentPage: w,
                             onPageChange: (e) => {
-                                Y((e - 1) * C, C), W();
+                                Y((e - 1) * f, f), W();
                             },
                             children: (e) => {
                                 let { controller: t } = e;
@@ -159,7 +159,7 @@ t.Z = (e) => {
                                         (0, i.jsx)(g.Z, {
                                             guilds: j,
                                             loading: U,
-                                            loadingPlaceholderCount: C,
+                                            loadingPlaceholderCount: f,
                                             onViewGuild: b,
                                             loadingGuildId: L,
                                             theme: R,

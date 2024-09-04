@@ -16,27 +16,27 @@ var s = n(735250),
     m = n(224499);
 t.Z = () => {
     let [e, t] = r.useState(''),
-        [i, I] = r.useState(''),
-        [f, N] = r.useState(!1),
+        [i, f] = r.useState(''),
+        [I, N] = r.useState(!1),
         [T, x] = r.useState(!1),
         [A, C] = r.useState(null),
-        [Z, v] = r.useState(null),
-        R = (0, l.e7)([d.Z], () => d.Z.getCountryCode()),
-        S = R.code.split(' ')[0],
+        [v, Z] = r.useState(null),
+        S = (0, l.e7)([d.Z], () => d.Z.getCountryCode()),
+        R = S.code.split(' ')[0],
         O = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
-                v(e.body.message);
+                Z(e.body.message);
             }
         },
         b = async () => {
             N(!0);
             try {
-                let { token: t } = await c.Z.verifyPhone(S + e, i);
-                C(null), v(null), x(!0), c.Z.validatePhoneForSupport(t);
+                let { token: t } = await c.Z.verifyPhone(R + e, i);
+                C(null), Z(null), x(!0), c.Z.validatePhoneForSupport(t);
             } catch (e) {
-                e.body.message ? (C(null), v(e.body.message)) : (C(e.body.phone), v(e.body.code));
+                e.body.message ? (C(null), Z(e.body.message)) : (C(e.body.phone), Z(e.body.code));
             } finally {
                 N(!1);
             }
@@ -71,8 +71,8 @@ t.Z = () => {
                       children: [
                           (0, s.jsx)(_.Z, {
                               label: g.Z.Messages.FORM_LABEL_PHONE_NUMBER,
-                              alpha2: R.alpha2,
-                              countryCode: S,
+                              alpha2: S.alpha2,
+                              countryCode: R,
                               value: e,
                               autoComplete: 'off',
                               spellCheck: 'false',
@@ -84,9 +84,9 @@ t.Z = () => {
                               className: m.marginTop20,
                               label: g.Z.Messages.CONFIRMATION_CODE,
                               value: i,
-                              onChange: I,
+                              onChange: f,
                               maxLength: E.z,
-                              error: Z
+                              error: v
                           }),
                           (0, s.jsx)(h.zx, {
                               size: h.zx.Sizes.SMALL,
@@ -97,7 +97,7 @@ t.Z = () => {
                           (0, s.jsx)(h.zx, {
                               className: m.marginTop20,
                               onClick: b,
-                              submitting: f,
+                              submitting: I,
                               children: g.Z.Messages.DONE
                           })
                       ]

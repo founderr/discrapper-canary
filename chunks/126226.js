@@ -82,7 +82,7 @@ let C = {
         if (a.hasSpaceTerminator) {
             let e = a.text.trim(),
                 t = e + ' ';
-            _ = _.filter((n) => n.name === e || n.name.startsWith(t));
+            _ = _.filter((n) => n.displayName === e || n.displayName.startsWith(t));
         }
         return 0 === _.length
             ? R
@@ -157,7 +157,7 @@ let C = {
         if (i.commands === g.L8.OLD_BUILT_INS)
             i.insertText(
                 (function (e) {
-                    return ''.concat(S.GI).concat(e.name);
+                    return ''.concat(S.GI).concat(e.displayName);
                 })(u)
             );
         else {

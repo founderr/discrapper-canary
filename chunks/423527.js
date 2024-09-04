@@ -21,17 +21,17 @@ var s,
     g = n(899370),
     p = n(224841),
     m = n(13430),
-    I = n(213609),
-    f = n(882037),
+    f = n(213609),
+    I = n(882037),
     N = n(201207),
     T = n(481230),
     x = n(388905),
     A = n(853268),
     C = n(639946),
-    Z = n(616952),
-    v = n(792766),
-    R = n(692483),
-    S = n(100159),
+    v = n(616952),
+    Z = n(792766),
+    S = n(692483),
+    R = n(100159),
     O = n(473855),
     b = n(726745),
     D = n(929809),
@@ -108,7 +108,7 @@ class el extends (s = i.PureComponent) {
             {
                 location: null != t ? 'Invite Register Page' : 'Non-Invite Register Page',
                 registration_source: this.registrationSource,
-                ...(null != e ? (0, S.Z)(e, !1, !1) : {})
+                ...(null != e ? (0, R.Z)(e, !1, !1) : {})
             },
             { flush: !0 }
         ),
@@ -161,10 +161,10 @@ class el extends (s = i.PureComponent) {
             { invite: a, guildTemplate: l, giftCode: o, onRegister: c, usernameSuggestion: u, isMobileWebInviteRegistration: d } = this.props,
             _ = null != a ? a.code : null,
             h = null != o ? o.skuId : null,
-            E = f.MD.getState(),
+            E = I.MD.getState(),
             g = (0, K.Ew)(u) ? null : t === u,
-            p = Q.a ? await (0, R.K)(t) : t,
-            m = Q.a ? await (0, R.K)(n) : n;
+            p = Q.a ? await (0, S.K)(t) : t,
+            m = Q.a ? await (0, S.K)(n) : n;
         V.S.dispatch(J.CkL.WAVE_EMPHASIZE);
         try {
             d || null == a
@@ -294,7 +294,7 @@ class el extends (s = i.PureComponent) {
     renderInviteHeader() {
         let { invite: e } = this.props;
         return (null == e ? void 0 : e.stage_instance) != null && null != e.guild
-            ? (0, r.jsx)(v.Z, {
+            ? (0, r.jsx)(Z.Z, {
                   stageInstance: e.stage_instance,
                   guild: e.guild
               })
@@ -400,7 +400,7 @@ class el extends (s = i.PureComponent) {
                 null != e && l
                     ? (0, r.jsx)(x.ZP, {
                           className: es.marginTop20,
-                          children: (0, r.jsx)(v.y, {
+                          children: (0, r.jsx)(Z.y, {
                               guild: e.guild,
                               onlineCount: e.approximate_presence_count
                           })
@@ -423,26 +423,26 @@ class el extends (s = i.PureComponent) {
     renderFull(e, t) {
         let { email: n, username: s, globalName: a, password: o, consent: c, parsedDateOfBirth: u, globalNameFocused: d, emailClientError: _, usernameClientError: E, passwordClientError: g, dateOfBirthClientError: p } = this.state,
             {
-                registering: I,
-                consentRequired: f,
+                registering: f,
+                consentRequired: I,
                 isMobileWebInviteRegistration: N,
                 uniqueUsernameRegistrationConfig: { suggestions: T },
                 authBoxClassName: A,
-                apiErrors: { email: C, username: v, global_name: R, password: S, date_of_birth: O } = {},
+                apiErrors: { email: C, username: Z, global_name: S, password: R, date_of_birth: O } = {},
                 hasLoggedInAccounts: b,
                 registrationCopyExperimentConfig: { hasCopyAboveButton: D }
             } = this.props,
             { subText: L, consentText: j } = this.renderConsentComponents(),
             y = this.renderErrorMessage(),
             G = (0, r.jsx)(h.Tooltip, {
-                text: !c && f ? et.Z.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
+                text: !c && I ? et.Z.Messages.TERMS_PRIVACY_OPT_IN_TOOLTIP : null,
                 children: (e) =>
                     (0, r.jsx)('div', {
                         className: es.marginTop20,
                         ...e,
                         children: (0, r.jsx)(x.zx, {
                             type: 'submit',
-                            submitting: I,
+                            submitting: f,
                             disabled: !this.hasConsent() || this.state.isRateLimited,
                             children: et.Z.Messages.CONTINUE
                         })
@@ -479,7 +479,7 @@ class el extends (s = i.PureComponent) {
                         name: 'global_name',
                         value: a,
                         onChange: (e) => this.setState({ globalName: e }),
-                        error: ea(R),
+                        error: ea(S),
                         maxLength: ee.hy,
                         setRef: (e) => {
                             this.globalNameRef = e;
@@ -513,7 +513,7 @@ class el extends (s = i.PureComponent) {
                                         usernameClientError: 0 === e.length ? et.Z.Messages.REQUIRED : null
                                     });
                                 },
-                                error: null != E ? E : ea(v),
+                                error: null != E ? E : ea(Z),
                                 setRef: (e) => {
                                     this.usernameRef = e;
                                 },
@@ -531,7 +531,7 @@ class el extends (s = i.PureComponent) {
                                 password: e,
                                 passwordClientError: 0 === e.length ? et.Z.Messages.REQUIRED : null
                             }),
-                        error: null != g ? g : ea(S),
+                        error: null != g ? g : ea(R),
                         type: 'password',
                         setRef: (e) => {
                             this.passwordRef = e;
@@ -549,7 +549,7 @@ class el extends (s = i.PureComponent) {
                         required: !0
                     }),
                     D && L,
-                    (0, r.jsx)(Z.Z, {}),
+                    (0, r.jsx)(v.Z, {}),
                     G,
                     y,
                     j,
@@ -727,7 +727,7 @@ function eo(e) {
         s = (0, d.e7)([P.Z], () => P.Z.registrationUsernameSuggestion()),
         [a, l] = i.useState(X.E.FULL);
     return (
-        (0, I.Z)(
+        (0, f.Z)(
             {
                 type: u.ImpressionTypes.VIEW,
                 name: u.ImpressionNames.USER_REGISTRATION,

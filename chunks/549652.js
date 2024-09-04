@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return g;
+            return _;
         }
     });
 var s = n(735250),
@@ -37,16 +37,16 @@ let b = {
     DONE: 'done',
     FAILED: 'failed'
 };
-function _() {
+function g() {
     try {
         window.close();
     } catch (e) {}
 }
-class g extends a.PureComponent {
+class _ extends a.PureComponent {
     componentDidMount() {
         let { stage: e, key: t } = this.state;
         e === b.DONE
-            ? _()
+            ? g()
             : p.default.isAuthenticated()
               ? l.tn
                     .post({
@@ -149,10 +149,10 @@ class g extends a.PureComponent {
         var t;
         super(e),
             f(this, 'done', () => {
-                _(), this.setState({ stage: b.DONE });
+                g(), this.setState({ stage: b.DONE });
             }),
             f(this, 'failed', () => {
-                this.setState({ stage: b.FAILED }), _();
+                this.setState({ stage: b.FAILED }), g();
             }),
             f(this, 'handleOpenApp', () => {
                 (0, u.uL)(m.Z5c.ME);
