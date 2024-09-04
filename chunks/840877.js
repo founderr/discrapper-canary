@@ -35,8 +35,8 @@ class u {
                 else if (202 === i.status) {
                     var r;
                     if (((this.query.attempts = (null !== (r = this.query.attempts) && void 0 !== r ? r : 0) + 1), this.query.attempts > 5)) return;
-                    let a = i.body.retry_after * s.Z.Millis.SECOND;
-                    (this.retryDelay = isNaN(a) || 0 === a ? 5000 : a), this.retryLater(e, t, n), t(i);
+                    let a = parseInt(i.headers['retry-after']);
+                    (this.retryDelay = isNaN(a) || 0 === a ? 5000 : a * s.Z.Millis.SECOND), this.retryLater(e, t, n), t(i);
                 }
             } catch (e) {
                 new a.Z('SearchFetcher').error(e), n(e);

@@ -26,8 +26,8 @@ var a = n(735250),
     N = n(210887),
     O = n(74538),
     k = n(335131),
-    B = n(1870),
-    j = n(884697),
+    j = n(1870),
+    B = n(884697),
     Z = n(664018),
     P = n(890249),
     A = n(635552),
@@ -35,8 +35,8 @@ var a = n(735250),
     y = n(390698),
     M = n(813083),
     w = n(680942),
-    H = n(558060),
-    D = n(237031),
+    D = n(558060),
+    H = n(237031),
     F = n(616066),
     U = n(216541),
     G = n(832149),
@@ -81,16 +81,16 @@ t.Z = function (e) {
         [ea] = t.items,
         er = (0, p.e7)([b.Z], () => b.Z.useReducedMotion),
         es = O.ZP.canUseCollectibles(n),
-        eo = (0, j.XM)(t, es, !1),
-        ei = r.useMemo(() => (0, j.BH)(t, es), [t, es]),
-        el = (0, j.G1)(t),
-        ec = (0, j.rN)(t),
+        eo = (0, B.XM)(t, es, !1),
+        ei = r.useMemo(() => (0, B.BH)(t, es), [t, es]),
+        el = (0, B.G1)(t),
+        ec = (0, B.rN)(t),
         { isPurchased: ed, isPartiallyPurchased: eu } = (0, R.L)(t),
-        [ef, ep] = (0, p.Wu)([B.Z], () => [B.Z.isClaiming === t.skuId, null != B.Z.isClaiming && B.Z.isClaiming !== t.skuId]),
+        [ef, ep] = (0, p.Wu)([j.Z], () => [j.Z.isClaiming === t.skuId, null != j.Z.isClaiming && j.Z.isClaiming !== t.skuId]),
         eg = (0, p.e7)([N.Z], () => (0, g.wj)(N.Z.theme)),
         eC = (0, P.m)('CollectiblesCollectedModal'),
-        em = (0, j.x6)(t) || eC,
-        e_ = (0, j.Yq)(t.skuId),
+        em = (0, B.x6)(t) || eC,
+        e_ = (0, B.Yq)(t.skuId),
         { hoverVariant: eb } = (0, Z.E)('CollectiblesShopTallCard'),
         eh = s.skuId === u.T.STORM && '1268362891946627103' === t.skuId;
     r.useEffect(() => {
@@ -128,7 +128,7 @@ t.Z = function (e) {
         },
         eL = (e) => (n) => {
             (eI.current = n.currentTarget),
-                (0, D.T)({
+                (0, H.T)({
                     product: t,
                     category: s,
                     analyticsLocations: $,
@@ -162,13 +162,13 @@ t.Z = function (e) {
                         className: z.priceTag,
                         children: V.Z.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
                     })
-                  : (0, a.jsx)(H.Z, {
+                  : (0, a.jsx)(D.Z, {
                         product: t,
                         discount: ei,
                         isPremiumUser: es,
                         className: z.priceTag
                     }),
-        eB = () =>
+        ej = () =>
             el || d.tq
                 ? null
                 : ec
@@ -180,7 +180,7 @@ t.Z = function (e) {
                         disableCustomColor: !0,
                         tooltipDelay: 250
                     }),
-        ej = () => {
+        eB = () => {
             if (el && !es && !ec) return eO();
             let e = el
                 ? {
@@ -221,11 +221,11 @@ t.Z = function (e) {
                                 ...e,
                                 children: el ? V.Z.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : V.Z.Messages.COLLECTIBLES_PURCHASE.format({ price: eo })
                             }),
-                    eB()
+                    ej()
                 ]
             });
         };
-    return (0, j.x6)(t) && null != ei && ei.discountPercentage < 0
+    return (0, B.x6)(t) && null != ei && ei.discountPercentage < 0
         ? null
         : (0, a.jsx)(C.FocusRing, {
               children: (0, a.jsxs)(C.Clickable, {
@@ -325,7 +325,7 @@ t.Z = function (e) {
                                       }),
                                       (0, a.jsx)('div', {
                                           className: z.innerHover,
-                                          children: ej()
+                                          children: eB()
                                       })
                                   ]
                               })

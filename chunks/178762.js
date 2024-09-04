@@ -32,8 +32,8 @@ var a = t(735250),
     g = t(278399),
     v = t(886217),
     f = t(555672),
-    M = t(644548),
-    P = t(335326),
+    P = t(644548),
+    M = t(335326),
     Z = t(268010),
     A = t(797342),
     S = t(206583);
@@ -50,7 +50,7 @@ let R = (e) => {
                     entry: n
                 });
             case o.s.WATCHED_MEDIA:
-                return (0, a.jsx)(P.Z, {
+                return (0, a.jsx)(M.Z, {
                     ...t,
                     entry: n
                 });
@@ -121,7 +121,7 @@ let R = (e) => {
                     entry: n
                 });
             case o.s.TOP_GAME:
-                return (0, a.jsx)(M.Z, {
+                return (0, a.jsx)(P.Z, {
                     ...t,
                     entry: n
                 });
@@ -160,10 +160,10 @@ n.ZP = l.memo((e) => {
         },
         g = l.useRef(!1),
         [v, f] = l.useState(!1),
-        [M, P] = l.useState(!1),
+        [P, M] = l.useState(!1),
         Z = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled);
     l.useEffect(() => {
-        v && Z && P(!0);
+        v && Z && M(!0);
     }, [v, Z]);
     let O = l.useCallback(
             (e) => {
@@ -198,7 +198,7 @@ n.ZP = l.memo((e) => {
         w = () => {
             (g.current = !1),
                 setTimeout(() => {
-                    !g.current && (f(!1), P(Z));
+                    !g.current && (f(!1), M(Z));
                 }, 100);
         };
     return (0, a.jsx)('div', {
@@ -223,7 +223,7 @@ n.ZP = l.memo((e) => {
             positionKey: m,
             onRequestOpen: () => L(C),
             onRequestClose: () => {
-                M && w();
+                P && w();
             },
             spacing: 8,
             children: (e, n) => {

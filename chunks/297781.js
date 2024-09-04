@@ -144,7 +144,7 @@ function U(e) {
         o = (0, A.kr)(t) && (0, I.Hi)(s, [0, 4]),
         l = o ? h.tokens.colors.TEXT_POSITIVE : i,
         { streamPreviewUrl: u } = (0, S.Z)(t),
-        c = null != u ? h.ScreenArrowIcon : (0, g.Mq)(t) ? h.ActivitiesIcon : h.GameControllerIcon;
+        c = null != u ? h.ScreenArrowIcon : (0, g.Mq)(t) ? h.AppsIcon : h.GameControllerIcon;
     return (0, a.jsxs)(b, {
         children: [
             3 === s

@@ -14062,6 +14062,15 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     margin: 0 0 16px
 }
 
+.contentContainer_ffaecb {
+    display: flex;
+    flex-direction: row
+}
+
+.bodyContent_ffaecb {
+    align-content: center
+}
+
 .header_ffaecb {
     margin-bottom: 24px
 }

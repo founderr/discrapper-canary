@@ -320,7 +320,7 @@ class es extends (i = a.PureComponent) {
             n && (l = q.t_t.IN_GAME),
             (0, s.jsxs)(J.ZP, {
                 type: l,
-                width: 280,
+                width: 380,
                 children: [
                     n ? null : this.renderHeader(),
                     this.renderVoiceUsers(),

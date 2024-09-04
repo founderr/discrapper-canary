@@ -26,8 +26,8 @@ var a = n(735250),
     N = n(819640),
     O = n(594174),
     k = n(626135),
-    B = n(74538),
-    j = n(335131),
+    j = n(74538),
+    B = n(335131),
     Z = n(372047),
     P = n(328347),
     A = n(307043),
@@ -35,8 +35,8 @@ var a = n(735250),
     y = n(675052),
     M = n(298228),
     w = n(937510),
-    H = n(309956),
-    D = n(853748),
+    D = n(309956),
+    H = n(853748),
     F = n(426171),
     U = n(823941),
     G = n(752053),
@@ -159,7 +159,7 @@ function ep(e) {
             }),
             null != _ &&
                 null != t.unpublishedAt &&
-                (0, a.jsx)(D.$, {
+                (0, a.jsx)(H.$, {
                     unpublishedAt: t.unpublishedAt,
                     isVisible: g,
                     displayOptions: _,
@@ -175,14 +175,14 @@ t.default = function (e) {
         { analyticsLocations: i } = (0, _.ZP)([...s, m.Z.COLLECTIBLES_SHOP]),
         { sessionId: C, scrollerRef: v, scrollHandler: T } = (0, b._)(es.rMx.COLLECTIBLES_SHOP_SCROLLED, n),
         w = (0, A.u)('CollectiblesShop'),
-        { feedState: D, catalogState: U, transitionToCatalog: K, transitionToFeed: q } = (0, H.B)(w, v),
+        { feedState: H, catalogState: U, transitionToCatalog: K, transitionToFeed: q } = (0, D.B)(w, v),
         [Q, ea] = r.useState(!1),
         [eu, ef] = r.useState(er.IV),
         eg = (0, c.e7)([N.Z], () => N.Z.getLayers().includes(es.S9g.COLLECTIBLES_SHOP)),
         eC = (0, u.f9)(),
         { onClose: em } = (0, z.Db)(),
         e_ = (0, c.e7)([O.default], () => O.default.getCurrentUser()),
-        eb = B.ZP.canUseCollectibles(e_),
+        eb = j.ZP.canUseCollectibles(e_),
         { categories: eh, isFetchingCategories: ex, error: eI, refreshCategories: eE } = (0, R.Z)();
     (0, L.P)();
     let ev = (0, M.O)(eh),
@@ -220,7 +220,7 @@ t.default = function (e) {
         }, [t]),
         r.useEffect(
             () => () => {
-                (0, j.K$)({
+                (0, B.K$)({
                     categories: [...eh.values()],
                     itemTypes: [l.Z.AVATAR_DECORATION, l.Z.PROFILE_EFFECT]
                 });
@@ -237,7 +237,7 @@ t.default = function (e) {
     let ek = r.useCallback(() => {
             eE();
         }, [eE]),
-        { containerRef: eB } = (function () {
+        { containerRef: ej } = (function () {
             let e = r.useRef(null),
                 t = r.useRef(null);
             return (
@@ -248,7 +248,7 @@ t.default = function (e) {
                 }
             );
         })(),
-        { setCategoryRef: ej, handleScrollToCategory: eZ } = (0, F.xV)(v.current),
+        { setCategoryRef: eB, handleScrollToCategory: eZ } = (0, F.xV)(v.current),
         { condensedBannersAndDynamicHeadersEnabled: eP } = (0, J.O)({ location: 'CollectiblesShop' }),
         { enabled: eA } = (0, Z.Z)({ location: 'CollectiblesShop' }),
         eR = (0, c.e7)([h.Z], () => h.Z.gradientPreset),
@@ -265,7 +265,7 @@ t.default = function (e) {
         children: [
             (0, a.jsx)('div', {
                 className: ed.shop,
-                ref: t ? eB : void 0,
+                ref: t ? ej : void 0,
                 children: (0, a.jsxs)(p.AdvancedScroller, {
                     className: ed.shopScroll,
                     ref: v,
@@ -276,12 +276,12 @@ t.default = function (e) {
                         }
                     },
                     children: [
-                        D !== er.f7.HIDDEN &&
+                        H !== er.f7.HIDDEN &&
                             (0, a.jsxs)('div', {
                                 className: o()(ed.shopViewWrapper, {
-                                    [ed.visible]: D === er.f7.VISIBLE,
-                                    [ed.in]: D === er.f7.IN,
-                                    [ed.out]: D === er.f7.OUT
+                                    [ed.visible]: H === er.f7.VISIBLE,
+                                    [ed.in]: H === er.f7.IN,
+                                    [ed.out]: H === er.f7.OUT
                                 }),
                                 children: [
                                     (0, a.jsx)(W.I, {
@@ -355,7 +355,7 @@ t.default = function (e) {
                                                                     (0, a.jsx)(
                                                                         'div',
                                                                         {
-                                                                            ref: (t) => ej(e.skuId, t),
+                                                                            ref: (t) => eB(e.skuId, t),
                                                                             children: (0, a.jsx)(ep, {
                                                                                 isPremiumUser: eb,
                                                                                 category: e,
@@ -385,12 +385,12 @@ t.default = function (e) {
                     children: [
                         (0, a.jsx)(en.Z, {
                             peaking: Q,
-                            transitioning: D === er.f7.OUT
+                            transitioning: H === er.f7.OUT
                         }),
                         (0, a.jsx)(en.Z, {
                             style: { left: 1208 },
                             peaking: Q,
-                            transitioning: D === er.f7.OUT
+                            transitioning: H === er.f7.OUT
                         })
                     ]
                 })

@@ -21,15 +21,15 @@ var a = t(735250),
     g = t(297781),
     v = t(591853),
     f = t(797342),
-    M = t(981631),
-    P = t(689938);
+    P = t(981631),
+    M = t(689938);
 let Z = (e, n) =>
-        P.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
+        M.Z.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
             username: n.username,
             activity: e.extra.activity_name
         }),
     A = (e, n, t) => {
-        let a = P.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME,
+        let a = M.Z.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME,
             l = h.ZP.getName(n.guild_id, n.id, t),
             i = e.extra.activity_name;
         return a
@@ -41,7 +41,7 @@ let Z = (e, n) =>
     },
     S = (e) => {
         let { entry: n, channel: t, users: a, countOthers: l } = e;
-        return P.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED.plainFormat({
+        return M.Z.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED.plainFormat({
             gameName: n.extra.activity_name,
             user1: h.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, a[0]),
             user2: h.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, a[1]),
@@ -54,7 +54,7 @@ let Z = (e, n) =>
             { user: O, details: j, activity: R, embeddedActivity: y } = (0, f.n)(t),
             { primaryColor: L, secondaryColor: w } = (0, C.Z)(null == h ? void 0 : h.src),
             B = (0, i.e7)([E.default], () => E.default.locale),
-            { displayParticipants: b, participant1: k, participant2: U, numOtherParticipants: D } = (0, I.Z)(t, 3),
+            { displayParticipants: U, participant1: b, participant2: k, numOtherParticipants: D } = (0, I.Z)(t, 3),
             G = l.useCallback(
                 (e) => {
                     if ((null == h ? void 0 : h.src) == null || null == n || null == O) return;
@@ -63,21 +63,21 @@ let Z = (e, n) =>
                             ? S({
                                   entry: t,
                                   channel: n,
-                                  users: [k, U],
+                                  users: [b, k],
                                   countOthers: D
                               })
                             : A(t, n, O);
                     return (0, p.C4)({
                         entry: t,
                         applicationImageSrc: null == h ? void 0 : h.src,
-                        avatarSrcs: b.map((e) => e.getAvatarURL(n.guild_id, 128)),
+                        avatarSrcs: U.map((e) => e.getAvatarURL(n.guild_id, 128)),
                         description: a,
                         timestamp: (0, N.yh)(t, B),
                         colors: [L, w],
                         channelId: e
                     });
                 },
-                [null == h ? void 0 : h.src, n, b, t, B, D, k, U, L, w, O]
+                [null == h ? void 0 : h.src, n, U, t, B, D, b, k, L, w, O]
             );
         if (null == O) return null;
         let H = (0, a.jsx)(g.PZ, {
@@ -86,7 +86,7 @@ let Z = (e, n) =>
             }),
             V = (0, a.jsx)(v.wG, {
                 channel: n,
-                userDescription: (0, N.kr)(t) ? P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : P.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
+                userDescription: (0, N.kr)(t) ? M.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING_V2 : M.Z.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED_V2,
                 title: t.extra.activity_name,
                 subtitle: j,
                 badges: H,
@@ -95,7 +95,7 @@ let Z = (e, n) =>
                 onClickSubtitle: m,
                 onClickThumbnail: m
             }),
-            Y = (0, s.Z)(R, M.xjy.JOIN) || (0, o.Z)(R),
+            Y = (0, s.Z)(R, P.xjy.JOIN) || (0, o.Z)(R),
             F = Y
                 ? (0, a.jsx)(u.Z, {
                       isEmbedded: (0, o.Z)(R),
@@ -104,16 +104,16 @@ let Z = (e, n) =>
                       user: O,
                       ButtonComponent: (e) =>
                           (0, a.jsx)(v.Ll, {
-                              IconComponent: r.ActivitiesIcon,
+                              IconComponent: r.AppsIcon,
                               ...e
                           })
                   })
                 : null,
             W = (0, a.jsx)(v.Ll, {
                 onClick: m,
-                IconComponent: r.ActivitiesIcon,
+                IconComponent: r.AppsIcon,
                 disabled: _,
-                children: _ ? P.Z.Messages.DEFAULT_INPUT_PLACEHOLDER : P.Z.Messages.CONTENT_INVENTORY_VIEW_ACTIVITY
+                children: _ ? M.Z.Messages.DEFAULT_INPUT_PLACEHOLDER : M.Z.Messages.CONTENT_INVENTORY_VIEW_ACTIVITY
             }),
             z = [Y ? F : W].filter(T.lm);
         return (0, a.jsxs)(v.yR, {

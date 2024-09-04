@@ -40,16 +40,16 @@ function v(e) {
         [O, j] = a.useState(new Map(null == s ? void 0 : s.map((e) => [e.value, e]))),
         [Z, R] = a.useState(new Set(O.keys())),
         [M, b] = a.useState(() => (null != s ? s : []).map((e) => e.value)),
-        [A, L] = a.useState(0);
+        [A, P] = a.useState(0);
     a.useEffect(() => {
         let e = (null != s ? s : []).map((e) => e.value);
         if (e.every((e) => M.includes(e)) && M.every((n) => e.includes(n))) return;
         b(e);
         let n = new Map(null == s ? void 0 : s.map((e) => [e.value, e]));
-        j(n), R(new Set(n.keys())), L((e) => e + 1);
+        j(n), R(new Set(n.keys())), P((e) => e + 1);
     }, [s, M]);
     let {
-            state: P,
+            state: L,
             executeStateUpdate: y,
             visualState: k,
             isDisabled: U,
@@ -60,11 +60,11 @@ function v(e) {
         }),
         G = k === p.gH.LOADING;
     a.useEffect(() => {
-        if ((null == P ? void 0 : P.type) === c.re.USER_SELECT || (null == P ? void 0 : P.type) === c.re.ROLE_SELECT || (null == P ? void 0 : P.type) === c.re.MENTIONABLE_SELECT || (null == P ? void 0 : P.type) === c.re.CHANNEL_SELECT) {
-            let e = new Map(P.selectedOptions.map((e) => [e.value, e]));
+        if ((null == L ? void 0 : L.type) === c.re.USER_SELECT || (null == L ? void 0 : L.type) === c.re.ROLE_SELECT || (null == L ? void 0 : L.type) === c.re.MENTIONABLE_SELECT || (null == L ? void 0 : L.type) === c.re.CHANNEL_SELECT) {
+            let e = new Map(L.selectedOptions.map((e) => [e.value, e]));
             j(e), R(new Set(e.keys()));
         }
-    }, [P]);
+    }, [L]);
     let w = a.useCallback(() => {
         y({
             type: v,

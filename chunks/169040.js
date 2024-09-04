@@ -6,7 +6,7 @@ t.d(n, {
         return m;
     },
     I8: function () {
-        return M;
+        return P;
     },
     Iq: function () {
         return N;
@@ -30,7 +30,7 @@ t.d(n, {
         return x;
     },
     Ue: function () {
-        return P;
+        return M;
     },
     Z: function () {
         return c;
@@ -94,5 +94,5 @@ let a = 'M20.97 4.06c0 .18.08.35.24.43.55.28.9.82 1.04 1.42.3 1.24.75 3.7.75 7.0
     g = 99,
     v = 12,
     f = 18,
-    M = ['gg sans', 'sans-serif'],
-    P = 500;
+    P = ['gg sans', 'sans-serif'],
+    M = 500;

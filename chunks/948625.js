@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     },
     yc: function () {
-        return j;
+        return B;
     }
 });
 var a = n(180650),
@@ -33,7 +33,7 @@ let L = () => o.Z.Messages.LIMITED_TIME,
     N = () => o.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
     O = () => o.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
     k = () => o.Z.Messages.TAKE_ME_THERE,
-    B = [
+    j = [
         {
             id: 'category_tide',
             backgroundStaticSrc: T,
@@ -98,8 +98,8 @@ let L = () => o.Z.Messages.LIMITED_TIME,
             }
         }
     ],
-    j = (e) =>
-        B.filter((t) => {
+    B = (e) =>
+        j.filter((t) => {
             var n;
             let a = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
             return null == a || null != e[a];

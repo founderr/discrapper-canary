@@ -25,7 +25,7 @@ var i = n(120356),
     m = n(185923),
     T = n(689938),
     g = n(951768);
-let S = 1200,
+let S = 1800,
     A = (e) => {
         let { emoji: t, username: n, sourceType: r, sourceDetails: i } = e,
             a = ':'.concat(t.name, ':');

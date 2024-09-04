@@ -38,10 +38,10 @@ let g = (e, n, t, a) => {
         });
 n.Z = (e) => {
     let { channel: n, entry: t, onReaction: i, onVoiceChannelPreview: _ } = e,
-        { parent_title: f, provider: M, image_url: P } = t.extra.media,
+        { parent_title: f, provider: P, image_url: M } = t.extra.media,
         Z = t.extra.artist.name,
         A = (0, s.e7)([u.default], () => u.default.getUser(t.author_id)),
-        { primaryColor: S, secondaryColor: O } = (0, T.Z)(P),
+        { primaryColor: S, secondaryColor: O } = (0, T.Z)(M),
         j = (0, m.Nq)(t),
         R = l.useCallback(() => {
             if (null == n || null == A || !(0, d.Hi)(j, h.y9)) return;
@@ -49,13 +49,13 @@ n.Z = (e) => {
             return (0, E.CR)({
                 user: A,
                 channel: n,
-                mediaImageSrc: P,
+                mediaImageSrc: M,
                 artist: Z,
                 description: e,
                 colors: [S, O],
                 badges: (0, E.UU)(t)
             });
-        }, [P, Z, n, t, S, j, O, A]);
+        }, [M, Z, n, t, S, j, O, A]);
     if (null == A || !(0, d.Hi)(j, h.y9)) return null;
     let y = () => {
         let e = p.Hw.ALBUM,
@@ -75,7 +75,7 @@ n.Z = (e) => {
                 channel: n,
                 entry: t,
                 headerIcons:
-                    M === r.p.SPOTIFY
+                    P === r.p.SPOTIFY
                         ? (0, a.jsx)(N.Z, {
                               Icon: c.Z,
                               'aria-label': C.Z.Messages.SPOTIFY

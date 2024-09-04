@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return B;
+        return j;
     },
     n: function () {
         return S;
@@ -190,7 +190,7 @@ function k(e) {
         ]
     });
 }
-function B(e) {
+function j(e) {
     var t, n, r, s;
     let { category: l, className: d, hideLimitedTimeBadge: u = !1, index: f = 0 } = e,
         { backgroundColors: g } = (0, m.Z)(l.styles),

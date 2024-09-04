@@ -37,25 +37,25 @@ let C = (e, n, t) => {
 n.Z = (e) => {
     let { channel: n, entry: t, onReaction: c, onVoiceChannelPreview: v } = e,
         f = (0, i.e7)([o.default], () => o.default.getUser(t.author_id)),
-        { largeImage: M } = (0, _.rv)({ entry: t }),
-        { primaryColor: P, secondaryColor: Z } = (0, T.Z)(null == M ? void 0 : M.src),
+        { largeImage: P } = (0, _.rv)({ entry: t }),
+        { primaryColor: M, secondaryColor: Z } = (0, T.Z)(null == P ? void 0 : P.src),
         A = (0, i.e7)([s.default], () => s.default.locale),
         S = (0, m.ap)(t.extra.media_assets_large_text),
         O = l.useCallback(
             (e) => {
-                if (null != f && (null == M ? void 0 : M.src) != null)
+                if (null != f && (null == P ? void 0 : P.src) != null)
                     return (0, E.B)({
                         entry: t,
-                        mediaImageSrc: null == M ? void 0 : M.src,
+                        mediaImageSrc: null == P ? void 0 : P.src,
                         avatarSrc: f.getAvatarURL(null == n ? void 0 : n.guild_id, 128),
                         description: C(t, n, f),
                         timestamp: (0, m.yh)(t, A),
                         episodeDescription: S,
-                        colors: [P, Z],
+                        colors: [M, Z],
                         channelId: e
                     });
             },
-            [n, t, S, A, null == M ? void 0 : M.src, P, Z, f]
+            [n, t, S, A, null == P ? void 0 : P.src, M, Z, f]
         ),
         j = () => {
             if (null == t.extra.url) return;

@@ -129,15 +129,15 @@ function v(e) {
         j = I === m.gH.LOADING,
         [Z, R] = r.useState(!1),
         [M, b] = r.useState(() => new Set(l.filter((e) => e.default).map((e) => e.value))),
-        [A, L] = r.useState(M),
-        P = r.useMemo(() => l.some((e) => null != e.emoji), [l]);
+        [A, P] = r.useState(M),
+        L = r.useMemo(() => l.some((e) => null != e.emoji), [l]);
     r.useEffect(() => {
         if ((null == x ? void 0 : x.type) === o.re.STRING_SELECT) {
             let e = new Set(x.values);
-            b(e), L(e);
+            b(e), P(e);
         } else {
             let e = new Set(h);
-            b(e), L(e);
+            b(e), P(e);
         }
     }, [i, h, x]);
     let y = r.useCallback(() => {
@@ -145,8 +145,8 @@ function v(e) {
             T({
                 type: o.re.STRING_SELECT,
                 values: Array.from(M)
-            }) && L(M);
-    }, [M, A, L, T]);
+            }) && P(M);
+    }, [M, A, P, T]);
     r.useEffect(() => {
         if (!(Z || (M.size === A.size && Array.from(A).every((e) => M.has(e))))) y();
     }, [Z, M, A, y]);
@@ -179,7 +179,7 @@ function v(e) {
                             (0, t.jsx)(E, {
                                 ...e,
                                 isDisabled: O && !M.has(e.value) && M.size === u,
-                                isOffset: P
+                                isOffset: L
                             }),
                         renderOptionValue: (e) => (O ? (0, t.jsx)(C, { options: e }) : (0, t.jsx)(N, { ...e[0] })),
                         ...U
