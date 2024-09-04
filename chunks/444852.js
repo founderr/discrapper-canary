@@ -93,18 +93,21 @@ class D extends o.Z {
         return this.analyticsContext.maxViewers;
     }
     updateStats(e) {
-        var t, n, r, a, s, o, l, u;
-        let c = !this.isOwner && (null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.getUserID()) != null,
-            d = null === (n = e.find((e) => e.connection === this._connection)) || void 0 === n ? void 0 : n.stats;
-        if (null != d && c) {
-            let e = d.transport.inboundBitrateEstimate;
+        var t, n, r, a, s, o, l, u, c;
+        let d = !this.isOwner && (null === (t = this._goLiveQualityManager) || void 0 === t ? void 0 : t.getUserID()) != null,
+            _ = null === (n = e.find((e) => e.connection === this._connection)) || void 0 === n ? void 0 : n.stats;
+        if (null != _ && d) {
+            let e = _.transport.inboundBitrateEstimate;
             if (null != e && e < 100000000 && (this._bandwidthSamples.push(e), this._bandwidthSamples.length > 10 && this._bandwidthSamples.shift(), 10 === this._bandwidthSamples.length)) {
                 let e = i().mean(this._bandwidthSamples),
                     t = null !== (a = null === (r = this._goLiveQualityManager) || void 0 === r ? void 0 : r.isDowngraded()) && void 0 !== a && a;
                 t && e > 1500000 ? null === (s = this._goLiveQualityManager) || void 0 === s || s.setGoLiveStreamDowngraded(!1) : !t && e < 1000000 && (null === (o = this._goLiveQualityManager) || void 0 === o || o.setGoLiveStreamDowngraded(!0));
             }
         }
-        c && (null === (u = this._videoQuality) || void 0 === u || u.setViewedSimulcastQuality(!(null === (l = this._goLiveQualityManager) || void 0 === l ? void 0 : l.isDowngraded())));
+        if (d) {
+            let e = !(null === (l = this._goLiveQualityManager) || void 0 === l ? void 0 : l.senderSupportsSimulcast()) || (null === (u = this._goLiveQualityManager) || void 0 === u ? void 0 : u.isDowngraded()) === !1;
+            null === (c = this._videoQuality) || void 0 === c || c.setViewedSimulcastQuality(e);
+        }
     }
     _initializeEvents() {
         let e = !1;

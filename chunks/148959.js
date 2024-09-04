@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return m;
+        return g;
     },
     y: function () {
         return r;
@@ -18,8 +18,9 @@ var r,
     d = n(47770),
     _ = n(710845),
     E = n(70956),
-    f = n(65154);
-function h(e, t, n) {
+    f = n(960048),
+    h = n(65154);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,10 +33,13 @@ function h(e, t, n) {
         e
     );
 }
-let p = 10 * E.Z.Millis.SECOND,
-    I = 10 * E.Z.Millis.SECOND;
+let I = 10 * E.Z.Millis.SECOND,
+    m = 10 * E.Z.Millis.SECOND;
+function T(e, t) {
+    !e && f.Z.captureMessage('Assert failed: ' + t);
+}
 ((s = r || (r = {})).RequestedSSRCsUpdate = 'requested-ssrcs-update'), (s.RequestedStreamsUpdate = 'requested-streams-update'), ((o = i || (i = {}))[(o.Ready = 0)] = 'Ready'), (o[(o.Pending = 1)] = 'Pending'), (o[(o.PendingSeamless = 2)] = 'PendingSeamless'), (o[(o.Finalizing = 3)] = 'Finalizing'), ((l = a || (a = {}))[(l.None = 0)] = 'None'), (l[(l.Low = 60)] = 'Low'), (l[(l.High = 100)] = 'High');
-class m extends d.Z {
+class g extends d.Z {
     setUserID(e) {
         this.userId = e;
     }
@@ -51,7 +55,7 @@ class m extends d.Z {
         } else this.update();
     }
     setGoLiveStreamDowngraded(e) {
-        if (!(!this.senderSupportsSimulcast() || this.isOneToOneCall()) && this.debugQualityOverride === f.Z.NO_OVERRIDE && e !== this.downgraded) this.isDowngradeChangeAllowed(e) && ((this.downgraded = e), (this.lastDowngradeChangeTime = Date.now()), this.update());
+        if (!(!this.senderSupportsSimulcast() || this.isOneToOneCall()) && this.debugQualityOverride === h.Z.NO_OVERRIDE && e !== this.downgraded) this.isDowngradeChangeAllowed(e) && ((this.downgraded = e), (this.lastDowngradeChangeTime = Date.now()), this.update());
     }
     isDowngraded() {
         return this.downgraded;
@@ -60,12 +64,12 @@ class m extends d.Z {
         if (!!this.senderSupportsSimulcast() && e !== this.debugQualityOverride) (this.debugQualityOverride = e), this.update();
     }
     setFirstFrameReceived(e) {
-        if (!!this.senderSupportsSimulcast()) {
+        if (((this.currentSSRC = e), !!this.senderSupportsSimulcast())) {
             if (1 !== this.switchState && 2 !== this.switchState) {
                 this.logger.warn('Received the first frame of ssrc '.concat(e, ' while switchState is ').concat(this.switchState));
                 return;
             }
-            this.pendingSSRC === e ? ((this.pendingSSRC = -1), 2 === this.switchState ? ((this.switchState = 3), (this.currentSSRC = e), this.update()) : ((this.currentSSRC = e), (this.switchState = 0))) : this.logger.warn('Pending to switch to ssrc: '.concat(this.pendingSSRC, ' but received the first frame of ').concat(e, ', noop'));
+            this.pendingSSRC === e ? ((this.pendingSSRC = -1), 2 === this.switchState ? ((this.switchState = 3), this.update()) : (this.switchState = 0)) : this.logger.warn('Pending to switch to ssrc: '.concat(this.pendingSSRC, ' but received the first frame of ').concat(e, ', noop'));
         }
     }
     setThrottleStreamDowngradeChanges(e) {
@@ -81,7 +85,7 @@ class m extends d.Z {
         this.incomingVideoEnabled !== e && ((this.incomingVideoEnabled = e), this.update());
     }
     update() {
-        if (void 0 !== this.userId && null !== this.userId) this.senderSupportsSimulcast() ? (this.supportsSeamless ? this.seamlessUpdate() : this.directUpdate()) : this.singleCastUpdate();
+        if (void 0 !== this.userId && null !== this.userId && 0 !== this.videoStreams.length) this.senderSupportsSimulcast() ? (this.supportsSeamless ? this.seamlessUpdate() : this.directUpdate()) : this.singleCastUpdate();
     }
     seamlessUpdate() {
         let e = this.getQuality();
@@ -91,30 +95,28 @@ class m extends d.Z {
         }
         switch (this.switchState) {
             case 0:
-                this.isReceiving() && this.receivingLQ() && 100 === e ? ((this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC), (this.switchState = 2), this.requestBoth()) : ((this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC), (this.switchState = 1), 100 === e ? this.requestHQ() : this.requestLQ());
+                T(-1 === this.pendingSSRC, 'Ready state should not have a pendingSSRC'), this.isReceiving() && this.receivingLQ() && 100 === e ? ((this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC), (this.switchState = 2), this.requestBoth()) : ((this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC), (this.switchState = 1), 100 === e ? this.requestHQ() : this.requestLQ());
                 break;
             case 2:
-                60 === e && this.pendingHQ() ? ((this.switchState = 0), (this.pendingSSRC = -1), this.requestLQ()) : 100 === e && this.pendingLQ() && ((this.switchState = 0), (this.pendingSSRC = -1), this.requestHQ());
+                T(-1 !== this.pendingSSRC, 'PendingSeamless state should have a pendingSSRC'), 60 === e && this.pendingHQ() ? ((this.switchState = 0), (this.pendingSSRC = -1), this.requestLQ()) : 100 === e && this.pendingLQ() && ((this.switchState = 0), (this.pendingSSRC = -1), this.requestHQ());
                 break;
             case 1:
-                60 === e && this.pendingHQ() ? ((this.pendingSSRC = this.lqSSRC), this.requestLQ()) : 100 === e && this.pendingLQ() && ((this.pendingSSRC = this.hqSSRC), this.requestHQ());
+                T(-1 !== this.pendingSSRC, 'Pending state should have a pendingSSRC'), 60 === e && this.pendingHQ() ? ((this.pendingSSRC = this.lqSSRC), this.requestLQ()) : 100 === e && this.pendingLQ() && ((this.pendingSSRC = this.hqSSRC), this.requestHQ());
                 break;
             case 3:
-                100 === e ? this.requestHQ() : 60 === e && this.requestLQ(), (this.switchState = 0);
+                T(this.isReceiving(), 'Should be receiving a stream in Finalizing state'), 100 === e ? this.requestHQ() : 60 === e && this.requestLQ(), (this.switchState = 0), (this.pendingSSRC = -1);
         }
     }
     directUpdate() {
         let e = this.getQuality();
-        if (null !== e) {
-            if (0 === e && this.isReceiving()) {
-                this.reset(), this.stopStreams();
-                return;
-            }
-            0 === this.switchState ? ((this.switchState = 1), 60 === e ? ((this.pendingSSRC = this.lqSSRC), this.requestLQ()) : ((this.pendingSSRC = this.hqSSRC), this.requestHQ())) : 1 === this.switchState ? (60 === e && this.pendingHQ() ? this.requestLQ() : 100 === e && this.pendingLQ() ? this.requestHQ() : (this.switchState = 0)) : this.logger.warn('Seamless switch is not supported but current switchState is '.concat(this.switchState));
+        if (0 === e && this.isReceiving()) {
+            this.reset(), this.stopStreams();
+            return;
         }
+        0 === this.switchState ? (T(-1 === this.pendingSSRC, 'Ready state should not have a pendingSSRC'), (this.switchState = 1), 60 === e ? ((this.pendingSSRC = this.lqSSRC), this.requestLQ()) : ((this.pendingSSRC = this.hqSSRC), this.requestHQ())) : 1 === this.switchState ? (T(-1 !== this.pendingSSRC, 'Pending state should have a pendingSSRC'), 60 === e && this.pendingHQ() ? this.requestLQ() : 100 === e && this.pendingLQ() ? this.requestHQ() : ((this.pendingSSRC = -1), (this.switchState = 0))) : T(!1, 'Direct update should not be called when switchState is not Ready or Pending');
     }
     singleCastUpdate() {
-        this.incomingVideoEnabled ? this.requestDefaultStream() : this.stopDefaultStream();
+        T(1 === this.videoStreams.length, 'singleCastUpdate should only be called when there is exactly one video stream'), T(0 === this.switchState, 'Switch state should not be set for non-simulcast streams'), T(-1 === this.pendingSSRC, 'Pending SSRC should not be set for non-simulcast streams'), this.incomingVideoEnabled ? this.requestDefaultStream() : this.stopDefaultStream();
     }
     pendingHQ() {
         return 1 === this.switchState && this.pendingSSRC === this.hqSSRC;
@@ -132,7 +134,7 @@ class m extends d.Z {
         return -1 !== this.currentSSRC;
     }
     isDowngradeChangeAllowed(e) {
-        return !this.throttleDowngradeChanges || void 0 === this.lastDowngradeChangeTime || (e ? Date.now() - this.lastDowngradeChangeTime >= I : Date.now() - this.lastDowngradeChangeTime >= p);
+        return !this.throttleDowngradeChanges || void 0 === this.lastDowngradeChangeTime || (e ? Date.now() - this.lastDowngradeChangeTime >= m : Date.now() - this.lastDowngradeChangeTime >= I);
     }
     isOneToOneCall() {
         return 1 === this.otherUsers.size;
@@ -144,17 +146,20 @@ class m extends d.Z {
         void 0 !== this.userId && (this.emit('requested-ssrcs-update', this.userId, this.audioSSRC, t), this.emit('requested-streams-update', e));
     }
     requestDefaultStream() {
+        T(1 === this.videoStreams.length, 'requestDefaultStream should only be called when there is exactly one video stream');
         let e = {};
         e[this.videoStreams[0].ssrc] = 100;
         let t = [this.videoStreams[0].ssrc];
         this.request(e, t);
     }
     stopDefaultStream() {
+        T(1 === this.videoStreams.length, 'stopDefaultStream should only be called when there is exactly one video stream');
         let e = {};
         e[this.videoStreams[0].ssrc] = 0;
         this.request(e, []);
     }
     requestBoth() {
+        T(2 === this.videoStreams.length, 'requestBoth should only be called when there are two video streams'), T(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), 'requestBoth called with invalid hqSSRC'), T(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), 'requestBoth called with invalid lqSSRC');
         let e = {};
         (e[this.lqSSRC] = 60), (e[this.hqSSRC] = 100);
         let t = [this.lqSSRC, this.hqSSRC];
@@ -164,33 +169,33 @@ class m extends d.Z {
             }, 2000);
     }
     requestHQ() {
+        T(2 === this.videoStreams.length, 'requestHQ should only be called when there are two video streams'), T(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), 'requestHQ called with invalid hqSSRC'), T(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), 'requestHQ called with invalid lqSSRC');
         let e = {};
         (e[this.lqSSRC] = 0), (e[this.hqSSRC] = 100);
         let t = [this.hqSSRC];
         this.request(e, t);
     }
     requestLQ() {
+        T(2 === this.videoStreams.length, 'requestLQ should only be called when there are two video streams'), T(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), 'requestLQ called with invalid hqSSRC'), T(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), 'requestLQ called with invalid lqSSRC');
         let e = {};
         (e[this.lqSSRC] = 60), (e[this.hqSSRC] = 0);
         let t = [this.lqSSRC];
         this.request(e, t);
     }
     stopStreams() {
+        T(2 === this.videoStreams.length, 'stopStreams should only be called when there are two video streams'), T(void 0 !== this.videoStreams.find((e) => e.ssrc === this.hqSSRC), 'stopStreams called with invalid hqSSRC'), T(void 0 !== this.videoStreams.find((e) => e.ssrc === this.lqSSRC), 'stopStreams called with invalid lqSSRC'), T(-1 === this.pendingSSRC, 'pendingSSRC should be reset before stopping streams');
         let e = {};
         (e[this.lqSSRC] = 0), (e[this.hqSSRC] = 0);
         this.request(e, []);
     }
     getQuality() {
-        let e = c().minBy(this.videoStreams, (e) => e.quality),
-            t = c().maxBy(this.videoStreams, (e) => e.quality);
-        if (void 0 === e || void 0 === t) return 0;
         if (!this.incomingVideoEnabled) return 0;
-        if (this.debugQualityOverride === f.Z.LOW) return 60;
-        if (this.debugQualityOverride === f.Z.HIGH || this.isOneToOneCall()) return 100;
-        else if (this.downgraded) return 60;
+        if (this.debugQualityOverride === h.Z.LOW) return 60;
+        if (this.debugQualityOverride === h.Z.HIGH || this.isOneToOneCall()) return 100;
+        else if (this.downgraded && this.senderSupportsSimulcast()) return 60;
         else return 100;
     }
     constructor(e) {
-        super(), h(this, 'supportsSeamless', void 0), h(this, 'logger', void 0), h(this, 'userId', void 0), h(this, 'videoStreams', void 0), h(this, 'audioSSRC', void 0), h(this, 'hqSSRC', void 0), h(this, 'lqSSRC', void 0), h(this, 'switchState', void 0), h(this, 'pendingSSRC', void 0), h(this, 'currentSSRC', void 0), h(this, 'downgraded', void 0), h(this, 'throttleDowngradeChanges', void 0), h(this, 'lastDowngradeChangeTime', void 0), h(this, 'otherUsers', void 0), h(this, 'debugQualityOverride', void 0), h(this, 'incomingVideoEnabled', void 0), (this.supportsSeamless = e), (this.videoStreams = []), (this.audioSSRC = 0), (this.hqSSRC = 0), (this.lqSSRC = 0), (this.switchState = 0), (this.pendingSSRC = -1), (this.currentSSRC = -1), (this.downgraded = !1), (this.throttleDowngradeChanges = !0), (this.lastDowngradeChangeTime = void 0), (this.otherUsers = new Set()), (this.debugQualityOverride = f.Z.NO_OVERRIDE), (this.incomingVideoEnabled = !0), (this.logger = new _.Z('GoLiveQualityManager'));
+        super(), p(this, 'supportsSeamless', void 0), p(this, 'logger', void 0), p(this, 'userId', void 0), p(this, 'videoStreams', void 0), p(this, 'audioSSRC', void 0), p(this, 'hqSSRC', void 0), p(this, 'lqSSRC', void 0), p(this, 'switchState', void 0), p(this, 'pendingSSRC', void 0), p(this, 'currentSSRC', void 0), p(this, 'downgraded', void 0), p(this, 'throttleDowngradeChanges', void 0), p(this, 'lastDowngradeChangeTime', void 0), p(this, 'otherUsers', void 0), p(this, 'debugQualityOverride', void 0), p(this, 'incomingVideoEnabled', void 0), (this.supportsSeamless = e), (this.videoStreams = []), (this.audioSSRC = 0), (this.hqSSRC = 0), (this.lqSSRC = 0), (this.switchState = 0), (this.pendingSSRC = -1), (this.currentSSRC = -1), (this.downgraded = !1), (this.throttleDowngradeChanges = !0), (this.lastDowngradeChangeTime = void 0), (this.otherUsers = new Set()), (this.debugQualityOverride = h.Z.NO_OVERRIDE), (this.incomingVideoEnabled = !0), (this.logger = new _.Z('GoLiveQualityManager'));
     }
 }
