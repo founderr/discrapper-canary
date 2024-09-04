@@ -43,15 +43,18 @@ function f(e) {
     });
 }
 function E(e) {
-    let { children: n, participants: l, channel: s } = e,
-        u = (0, i.e7)([d.Z], () => d.Z.theme),
-        m = 1 === l.length ? l[0] : null,
-        p = (0, r.useCallback)(
+    let { children: n, participants: l, channel: s, onPopoutClosed: u } = e,
+        m = (0, i.e7)([d.Z], () => d.Z.theme),
+        p = 1 === l.length ? l[0] : null,
+        E = (0, r.useCallback)(
             (e) => {
-                if (null != m)
+                if (null != p)
                     return (0, t.jsx)(c.Z, {
                         ...e,
-                        userId: m.id,
+                        closePopout: () => {
+                            e.closePopout(), null == u || u();
+                        },
+                        userId: p.id,
                         guildId: null == s ? void 0 : s.guild_id,
                         channelId: null == s ? void 0 : s.id
                     });
@@ -62,15 +65,15 @@ function E(e) {
                     });
                 throw Error('One of participant or participants is required');
             },
-            [s, l, m]
+            [s, u, l, p]
         );
     return (0, t.jsx)(a.ThemeContextProvider, {
-        theme: u,
+        theme: m,
         children: (0, t.jsx)(a.Popout, {
-            renderPopout: p,
+            renderPopout: E,
             preload: () =>
-                null != m
-                    ? (0, o.Z)(m, {
+                null != p
+                    ? (0, o.Z)(p, {
                           guildId: null == s ? void 0 : s.guild_id,
                           channelId: null == s ? void 0 : s.id
                       })

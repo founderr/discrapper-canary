@@ -9,11 +9,12 @@ var t = l(735250),
     a = l(256139),
     s = l(866040);
 function u(e) {
-    let { user: n, text: l, channel: u, textClassName: o } = e,
-        c = (0, r.useMemo)(() => [n], [n]);
+    let { user: n, text: l, channel: u, textClassName: o, onPopoutClosed: c } = e,
+        d = (0, r.useMemo)(() => [n], [n]);
     return (0, t.jsx)(s.Z, {
-        participants: c,
+        participants: d,
         channel: u,
+        onPopoutClosed: c,
         children: (e) =>
             (0, t.jsx)(a.Z, {
                 ...e,

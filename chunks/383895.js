@@ -1,12 +1,12 @@
 var t = n(735250),
     r = n(470079),
     s = n(120356),
-    i = n.n(s),
-    o = n(442837),
+    o = n.n(s),
+    i = n(442837),
     l = n(481060),
     c = n(178762),
-    d = n(91140),
-    u = n(297781),
+    u = n(91140),
+    d = n(297781),
     _ = n(592125),
     E = n(944486),
     I = n(594174),
@@ -17,25 +17,25 @@ var t = n(735250),
     O = n(707443);
 a.Z = (e) => {
     let { entry: a, viewId: n, onClose: s } = e,
-        R = (0, o.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
-        p = (0, o.e7)([I.default], () => I.default.getUser(a.author_id)),
+        p = (0, i.e7)([E.Z, _.Z], () => _.Z.getChannel(E.Z.getChannelId())),
+        R = (0, i.e7)([I.default], () => I.default.getUser(a.author_id)),
         { nick: g, avatar: P } = r.useMemo(() => {
-            let e = null == p ? void 0 : p.getAvatarURL(null == R ? void 0 : R.guild_id, 48, !1);
+            let e = null == R ? void 0 : R.getAvatarURL(null == p ? void 0 : p.guild_id, 48, !1);
             return {
-                nick: A.ZP.getName(null == R ? void 0 : R.guild_id, null == R ? void 0 : R.id, p),
+                nick: A.ZP.getName(null == p ? void 0 : p.guild_id, null == p ? void 0 : p.id, R),
                 avatar: e
             };
-        }, [p, R]);
-    return null == p
+        }, [R, p]);
+    return null == R
         ? null
         : (0, t.jsx)(l.Popout, {
               position: 'right',
               renderPopout: (e) => {
-                  let { closePopout: r, updatePosition: i } = e;
+                  let { closePopout: r, updatePosition: o } = e;
                   return (0, t.jsx)(c.J, {
                       entry: a,
                       closePopout: r,
-                      updatePopoutPosition: i,
+                      updatePopoutPosition: o,
                       onReaction: () => {
                           (0, m.UE)({
                               action: m.as.SendMessageUser,
@@ -47,6 +47,7 @@ a.Z = (e) => {
                               s(),
                               r();
                       },
+                      onUserPopoutClosed: () => r(),
                       disableGameProfileLinks: !0
                   });
               },
@@ -79,9 +80,9 @@ a.Z = (e) => {
                                       alt: T.Z.Messages.GAME_PROFILE_USER_AVATAR_ALT.format({ userName: g })
                                   }),
                                   (0, t.jsx)('div', {
-                                      className: i()(N.playerInfo),
+                                      className: o()(N.playerInfo),
                                       children: (0, t.jsxs)('div', {
-                                          className: i()(O.column, O.gapXs),
+                                          className: o()(O.column, O.gapXs),
                                           children: [
                                               (0, t.jsx)(l.Text, {
                                                   variant: 'text-md/medium',
@@ -89,9 +90,9 @@ a.Z = (e) => {
                                                   lineClamp: 1,
                                                   children: g
                                               }),
-                                              (0, t.jsx)(u.Gk, {
-                                                  location: u.Gt.GAME_PROFILE,
-                                                  children: d.W.map((e, n) => (0, t.jsx)(e, { entry: a }, n))
+                                              (0, t.jsx)(d.Gk, {
+                                                  location: d.Gt.GAME_PROFILE,
+                                                  children: u.W.map((e, n) => (0, t.jsx)(e, { entry: a }, n))
                                               })
                                           ]
                                       })
