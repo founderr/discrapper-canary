@@ -85,19 +85,16 @@ function A(e, t) {
         P = T.af.map((e) => {
             let { value: t, label: n } = e,
                 i = (0, c.Z)(T.tI.PRESET_CUSTOM, N, t, v, C);
-            return (
-                L && !D && (i = !1),
-                (0, r.jsx)(
-                    o.MenuRadioItem,
-                    {
-                        group: 'stream-settings-fps',
-                        id: 'stream-settings-fps-'.concat(t),
-                        label: n,
-                        checked: t === O,
-                        action: () => b(i, N, t, m.Qqv.RESOLUTION)
-                    },
-                    'stream-settings-fps-'.concat(t)
-                )
+            return (0, r.jsx)(
+                o.MenuRadioItem,
+                {
+                    group: 'stream-settings-fps',
+                    id: 'stream-settings-fps-'.concat(t),
+                    label: n,
+                    checked: t === O,
+                    action: () => b(i, N, t, m.Qqv.RESOLUTION)
+                },
+                'stream-settings-fps-'.concat(t)
             );
         }),
         U = T.km.map((e) => {
