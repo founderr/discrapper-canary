@@ -1,20 +1,21 @@
 _.d(E, {
     s: function () {
-        return a;
+        return r;
     }
 });
-var t = _(570140),
-    n = _(592125),
-    s = _(305587);
-function a(e) {
+var n = _(704215),
+    t = _(570140),
+    s = _(605236),
+    a = _(592125),
+    M = _(305587);
+function r(e) {
     let { channelId: E, location: _ } = e,
-        a = (0, s.Xs)(_),
-        M = n.Z.getChannel(E);
-    a &&
-        null != M &&
-        M.isDM() &&
-        t.Z.dispatch({
-            type: 'USER_DM_MUTE_SHOW_FEEDBACK',
-            channel: M
-        });
+        r = a.Z.getChannel(E),
+        S = (0, s.un)(n.z.USER_DM_MUTE_FEEDBACK);
+    if (null != r && !!r.isDM() && !S)
+        (0, M.Xs)(_) &&
+            t.Z.dispatch({
+                type: 'USER_DM_MUTE_SHOW_FEEDBACK',
+                channel: r
+            });
 }

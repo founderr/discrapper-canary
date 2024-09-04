@@ -1,49 +1,52 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return f;
+            return M;
         }
     });
 var s = n(735250),
     o = n(470079),
     a = n(77866),
     l = n(442837),
-    r = n(481060),
-    i = n(624659),
-    c = n(594174),
-    u = n(626135),
-    d = n(987562),
-    b = n(981631),
-    _ = n(689938);
-let m = [d.Y.OTHER];
-function f(e) {
-    let { transitionState: t, onClose: f, channel: E } = e,
-        x = (0, a.Z)(d.T),
-        M = (0, l.e7)([c.default], () => c.default.getUser(E.getRecipientId()));
+    r = n(704215),
+    i = n(481060),
+    c = n(605236),
+    u = n(624659),
+    d = n(594174),
+    _ = n(626135),
+    b = n(987562),
+    E = n(981631),
+    m = n(689938);
+let f = [b.Y.OTHER];
+function M(e) {
+    let { transitionState: t, onClose: M, channel: x } = e,
+        h = (0, a.Z)(b.T),
+        p = (0, l.e7)([d.default], () => d.default.getUser(x.getRecipientId()));
     return (
         o.useEffect(() => {
-            u.default.track(b.rMx.OPEN_MODAL, { type: 'DM Mute Feedback Modal' });
+            _.default.track(E.rMx.OPEN_MODAL, { type: 'DM Mute Feedback Modal' });
         }, []),
-        (0, s.jsx)(i.Z, {
-            header: _.Z.Messages.MUTE_FEEDBACK_HEADER,
-            body: _.Z.Messages.MUTE_FEEDBACK_BODY.format({ username: null == M ? void 0 : M.username }),
-            problems: x,
-            feedbackProblems: m,
+        (0, s.jsx)(u.Z, {
+            header: m.Z.Messages.MUTE_FEEDBACK_HEADER,
+            body: m.Z.Messages.MUTE_FEEDBACK_BODY.format({ username: null == p ? void 0 : p.username }),
+            problems: h,
+            feedbackProblems: f,
             onSubmit: function (e) {
-                let { problem: t } = e;
+                let { problem: t, dontShowAgain: o } = e;
+                o && (0, c.EW)(r.z.USER_DM_MUTE_FEEDBACK);
                 null != t &&
-                    (0, r.openModalLazy)(async () => {
+                    (0, i.openModalLazy)(async () => {
                         let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                         return (t) =>
                             (0, s.jsx)(e, {
-                                body: _.Z.Messages.MUTE_FEEDBACK_THANKS,
+                                body: m.Z.Messages.MUTE_FEEDBACK_THANKS,
                                 ...t
                             });
                     });
             },
-            onClose: f,
+            onClose: M,
             transitionState: t,
-            otherKey: d.Y.OTHER
+            otherKey: b.Y.OTHER
         })
     );
 }
