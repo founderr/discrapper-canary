@@ -96,7 +96,11 @@ class D extends T.Z {
     createResponseHandler(e, t) {
         return (n) => {
             if ((null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr)) return t(null, n);
-            null != n.body && (n.body.code === A.evJ.SLOWMODE_RATE_LIMITED || n.body.code === A.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED) ? t(null, n) : 429 === n.status ? t({ retryAfter: n.body.retry_after * I.Z.Millis.SECOND }) : t(null, n);
+            if (null != n.body && (n.body.code === A.evJ.SLOWMODE_RATE_LIMITED || n.body.code === A.evJ.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)) t(null, n);
+            else if (429 === n.status) {
+                let e = parseInt(n.headers['retry-after']);
+                isNaN(e) ? t(null, n) : t({ retryAfter: e * I.Z.Millis.SECOND });
+            } else t(null, n);
         };
     }
     handleSend(e, t) {

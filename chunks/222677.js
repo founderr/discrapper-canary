@@ -38,10 +38,13 @@ var r,
     I = n(981631),
     m = n(689938);
 function T(e, t, n) {
-    let { status: r, body: i } = e;
-    if (429 === r) return setTimeout(t, e.body.retry_after * f.Z.Millis.SECOND), !1;
-    if (403 === r)
-        switch (i && i.code) {
+    let { headers: r, status: i, body: a } = e;
+    if (429 === i) {
+        let e = parseInt(r['retry-after']);
+        return !isNaN(e) && setTimeout(t, e * f.Z.Millis.SECOND), !1;
+    }
+    if (403 === i)
+        switch (a && a.code) {
             case I.evJ.TOO_MANY_REACTIONS:
                 l.Z.show({
                     title: m.Z.Messages.TOO_MANY_REACTIONS_ALERT_HEADER,

@@ -289,13 +289,15 @@ class N {
                         local: !1
                     });
                 } catch (e) {
-                    var n, r;
+                    var n;
                     if (429 === e.status) {
                         this.logger.log('Rate limited, scheduling retry');
-                        let t = setTimeout(this.persistChanges, Math.min(30 * _.Z.Millis.SECOND, (null !== (r = e.body.retry_after) && void 0 !== r ? r : 60) * _.Z.Millis.SECOND));
+                        let t = parseInt(e.headers['retry-after']);
+                        isNaN(t) && (t = 60);
+                        let n = setTimeout(this.persistChanges, Math.min(30 * _.Z.Millis.SECOND, t * _.Z.Millis.SECOND));
                         this.dispatchChanges({
                             rateLimited: !0,
-                            timeout: t
+                            timeout: n
                         });
                     } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === m.evJ.INVALID_USER_SETTINGS_DATA) throw (this.logger.log('Reloading do to invalid data'), this.loadIfNecessary(!0), e);
                     else throw (this.logger.log('Unknown user settings error'), e);
