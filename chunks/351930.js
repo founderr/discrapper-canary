@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return _;
+        return C;
     }
 }),
     n(47120),
@@ -14,11 +14,12 @@ var r = n(735250),
     c = n(481060),
     u = n(355467),
     d = n(78839),
-    h = n(246992),
-    m = n(981631),
-    x = n(535271),
-    f = n(384712);
-let g = [
+    h = n(709054),
+    m = n(246992),
+    x = n(981631),
+    f = n(535271),
+    g = n(384712);
+let p = [
         {
             label: 'Nitro Monthly',
             value: '511651880837840896'
@@ -52,56 +53,56 @@ let g = [
             value: '1267969164312576000'
         }
     ],
-    p = {
-        [m.O0b.UNPAID]: 'Unpaid',
-        [m.O0b.ACTIVE]: 'Active',
-        [m.O0b.PAST_DUE]: 'Past Due',
-        [m.O0b.CANCELED]: 'Canceled',
-        [m.O0b.ENDED]: 'Ended',
-        [m.O0b.ACCOUNT_HOLD]: 'Account Hold',
-        [m.O0b.BILLING_RETRY]: 'Billing Retry',
-        [m.O0b.PAUSED]: 'Paused',
-        [m.O0b.PAUSE_PENDING]: 'Pause Pending'
+    b = {
+        [x.O0b.UNPAID]: 'Unpaid',
+        [x.O0b.ACTIVE]: 'Active',
+        [x.O0b.PAST_DUE]: 'Past Due',
+        [x.O0b.CANCELED]: 'Canceled',
+        [x.O0b.ENDED]: 'Ended',
+        [x.O0b.ACCOUNT_HOLD]: 'Account Hold',
+        [x.O0b.BILLING_RETRY]: 'Billing Retry',
+        [x.O0b.PAUSED]: 'Paused',
+        [x.O0b.PAUSE_PENDING]: 'Pause Pending'
     },
-    b = [
+    v = [
         {
             label: 'Unpaid',
-            value: m.O0b.UNPAID
+            value: x.O0b.UNPAID
         },
         {
             label: 'Active',
-            value: m.O0b.ACTIVE
+            value: x.O0b.ACTIVE
         },
         {
             label: 'Past Due',
-            value: m.O0b.PAST_DUE
+            value: x.O0b.PAST_DUE
         },
         {
             label: 'Canceled',
-            value: m.O0b.CANCELED
+            value: x.O0b.CANCELED
         },
         {
             label: 'Ended',
-            value: m.O0b.ENDED
+            value: x.O0b.ENDED
         },
         {
             label: 'Account Hold',
-            value: m.O0b.ACCOUNT_HOLD
+            value: x.O0b.ACCOUNT_HOLD
         },
         {
             label: 'Billing Retry',
-            value: m.O0b.BILLING_RETRY
+            value: x.O0b.BILLING_RETRY
         },
         {
             label: 'Paused',
-            value: m.O0b.PAUSED
+            value: x.O0b.PAUSED
         },
         {
             label: 'Pause Pending',
-            value: m.O0b.PAUSE_PENDING
+            value: x.O0b.PAUSE_PENDING
         }
     ],
-    v = {
+    _ = {
         '511651880837840896': 'Nitro Monthly',
         '511651885459963904': 'Nitro Yearly',
         '511651871736201216': 'Nitro Classic Monthly',
@@ -109,7 +110,7 @@ let g = [
         '978380692553465866': 'Basic Monthly',
         '1024422698568122368': 'Basic Yearly'
     };
-function _() {
+function C() {
     let [e, t] = a.useState('511651880837840896'),
         n = (0, o.e7)([d.ZP], () => d.ZP.getPremiumSubscription()),
         l = async () => {
@@ -119,13 +120,13 @@ function _() {
             }),
                 await (0, u.jg)();
         },
-        m = async () => {
+        h = async () => {
             await s.tn.del('/debug/subscription'), await (0, u.jg)();
         };
     return (0, r.jsx)(c.ScrollerThin, {
-        className: i()(x.panel),
+        className: i()(f.panel),
         children: (0, r.jsxs)('div', {
-            className: f.panelInner,
+            className: g.panelInner,
             children: [
                 (0, r.jsx)(c.Text, {
                     style: { marginBottom: '16px' },
@@ -133,7 +134,7 @@ function _() {
                     children: 'Manage Subscription'
                 }),
                 (0, r.jsxs)('section', {
-                    className: f.buttons,
+                    className: g.buttons,
                     children: [
                         null == n &&
                             (0, r.jsxs)(r.Fragment, {
@@ -145,9 +146,9 @@ function _() {
                                     (0, r.jsx)(c.Select, {
                                         serialize: (e) => e,
                                         isSelected: (t) => t === e,
-                                        options: g,
+                                        options: p,
                                         select: t,
-                                        popoutLayerContext: h.O$
+                                        popoutLayerContext: m.O$
                                     }),
                                     (0, r.jsx)(c.Button, {
                                         size: c.Button.Sizes.SMALL,
@@ -158,30 +159,44 @@ function _() {
                             }),
                         (0, r.jsx)(c.Button, {
                             size: c.Button.Sizes.SMALL,
-                            onClick: m,
+                            onClick: h,
                             children: 'Delete Subscription'
                         })
                     ]
                 }),
-                null != n && (0, r.jsx)(C, { subscription: n })
+                null != n && (0, r.jsx)(j, { subscription: n })
             ]
         })
     });
 }
-function C(e) {
-    let { subscription: t } = e,
-        n = (e) => {
-            if ((null == e && (e = t.status), e in p)) return p[e];
+function j(e) {
+    var t;
+    let { subscription: n } = e,
+        a = (e) => {
+            if ((null == e && (e = n.status), e in b)) return b[e];
             throw Error('Unknown status');
         },
-        a = async (e) => {
+        l = async (e) => {
             await s.tn.patch({
                 url: '/debug/subscription',
                 body: { subscription_status: e }
-            });
+            }),
+                await (0, u.jg)();
         },
-        l =
-            t.planIdFromItems in
+        o = async (e) => {
+            let t = new Date(e),
+                r = h.default.fromTimestamp(t.getTime());
+            await s.tn.patch({
+                url: '/debug/subscription',
+                body: {
+                    subscription_status: n.status,
+                    premium_streak_started_at: r
+                }
+            }),
+                await (0, u.jg)();
+        },
+        d =
+            n.planIdFromItems in
             {
                 '978380692553465866': !0,
                 '1024422698568122368': !0
@@ -194,16 +209,16 @@ function C(e) {
                 children: 'Existing Subscription'
             }),
             (0, r.jsxs)('div', {
-                className: i()(f.card, l ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
+                className: i()(g.card, d ? g.gradientWrapperTier0 : g.gradientWrapperTier2),
                 children: [
                     (0, r.jsxs)(c.Text, {
                         variant: 'text-md/normal',
                         children: [
                             ' Subscription Type: ',
                             (() => {
-                                let e = t.planIdFromItems;
+                                let e = n.planIdFromItems;
                                 if (null == e) throw Error('No plan id');
-                                if (e in v) return v[e];
+                                if (e in _) return _[e];
                                 throw Error('Unknown plan id');
                             })(),
                             ' '
@@ -211,19 +226,29 @@ function C(e) {
                     }),
                     (0, r.jsxs)(c.Text, {
                         variant: 'text-md/normal',
-                        children: [' Subscription ID ', t.id, ' ']
+                        children: [' Subscription ID ', n.id, ' ']
                     }),
                     (0, r.jsxs)(c.Text, {
                         style: { marginBottom: '15px' },
                         variant: 'text-md/normal',
-                        children: ['Subscription Status: ', n()]
+                        children: ['Subscription Status: ', a()]
                     }),
                     (0, r.jsx)(c.Select, {
-                        serialize: (e) => n(e),
-                        isSelected: (e) => e === t.status,
-                        options: b,
-                        select: a,
-                        popoutLayerContext: h.O$
+                        serialize: (e) => a(e),
+                        isSelected: (e) => e === n.status,
+                        options: v,
+                        select: l,
+                        popoutLayerContext: m.O$
+                    }),
+                    (0, r.jsx)(c.FormSection, {
+                        title: 'Override Premium Streak Start Date',
+                        tag: c.FormTitleTags.H3,
+                        className: f.premiumStreakOverride,
+                        children: (0, r.jsx)('input', {
+                            type: 'date',
+                            value: null === (t = n.premiumSince) || void 0 === t ? void 0 : t.toISOString().substring(0, 10),
+                            onChange: (e) => o(e.target.value)
+                        })
                     })
                 ]
             })
