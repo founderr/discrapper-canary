@@ -6,10 +6,10 @@ t.d(n, {
         return Y;
     },
     kA: function () {
-        return z;
+        return G;
     },
     qR: function () {
-        return G;
+        return z;
     }
 }),
     t(47120),
@@ -369,14 +369,14 @@ function Y(e) {
         [n, l, r, s, a, i, t]
     );
 }
-function z(e) {
+function G(e) {
     let n = Y(e);
     return (0, l.jsx)(U, {
         ...e,
         onClick: n
     });
 }
-function G(e) {
+function z(e) {
     let { channel: n, application: t, location: i, sectionName: a, isOneClickCTA: r, ...s } = e;
     if (!(0, S.BQ)(t)) throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
     let u = o.useId(),
@@ -410,7 +410,7 @@ function G(e) {
                         })
                       : null
               })
-            : (0, l.jsx)(z, {
+            : (0, l.jsx)(G, {
                   ...s,
                   sectionName: a,
                   application: t,

@@ -15,8 +15,8 @@ var r = n(735250),
     d = n(244526),
     h = n(853872),
     m = n(246992),
-    f = n(535271),
-    x = n(384712);
+    x = n(535271),
+    f = n(384712);
 let g = [
     {
         label: 'VISA',
@@ -79,9 +79,9 @@ function p() {
             (0, u.tZ)();
         }, []),
         (0, r.jsx)(c.ScrollerThin, {
-            className: i()(f.panel),
+            className: i()(x.panel),
             children: (0, r.jsxs)('div', {
-                className: x.panelInner,
+                className: f.panelInner,
                 children: [
                     (0, r.jsxs)(c.Text, {
                         style: { marginBottom: '16px' },
@@ -89,7 +89,7 @@ function p() {
                         children: [' ', 'Manage Payment Sources', ' ']
                     }),
                     (0, r.jsxs)('div', {
-                        className: x.buttons,
+                        className: f.buttons,
                         children: [
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-md/normal',
@@ -132,7 +132,7 @@ function p() {
 function b(e) {
     let { paymentSource: t } = e;
     return (0, r.jsxs)('div', {
-        className: x.inputRow,
+        className: f.inputRow,
         children: [
             (0, r.jsx)(
                 d.Z,

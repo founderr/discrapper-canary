@@ -18,24 +18,24 @@ var s,
     E = n(108427),
     g = n(314897),
     p = n(701190),
-    I = n(626135),
-    m = n(768581),
+    m = n(626135),
+    I = n(768581),
     f = n(823379),
     N = n(264229),
     T = n(230224),
     x = n(617730),
     A = n(258356),
     C = n(981631),
-    v = n(689938),
-    Z = n(318684);
-function S() {
+    Z = n(689938),
+    v = n(318684);
+function R() {
     return (0, i.jsx)('div', {
-        className: Z.centerFlex,
+        className: v.centerFlex,
         children: (0, i.jsx)(c.Spinner, {})
     });
 }
 ((r = s || (s = {}))[(r.LOADING = 0)] = 'LOADING'), (r[(r.DETAILS = 1)] = 'DETAILS'), (r[(r.ERROR = 2)] = 'ERROR');
-let R = (e) => {
+let S = (e) => {
     let t = (null == e ? void 0 : e.state) == null && (null == e ? void 0 : e.channel) == null;
     if (null == e || null == e.state || t) return 0;
     let n = e.state;
@@ -61,20 +61,20 @@ function O(e) {
     let { invite: t, onAcceptInvite: n } = e;
     if ((null == t ? void 0 : t.state) === C.r2o.BANNED)
         return (0, i.jsx)(d.u, {
-            text: v.Z.Messages.AUTH_BANNED_INVITE_BODY,
-            buttonCta: v.Z.Messages.INVITE_INVALID_CTA,
+            text: Z.Z.Messages.AUTH_BANNED_INVITE_BODY,
+            buttonCta: Z.Z.Messages.INVITE_INVALID_CTA,
             onClick: n
         });
     return (0, i.jsx)(d.u, {
-        text: v.Z.Messages.INVITE_INVALID_ERROR,
-        buttonCta: v.Z.Messages.INVITE_INVALID_CTA,
+        text: Z.Z.Messages.INVITE_INVALID_ERROR,
+        buttonCta: Z.Z.Messages.INVITE_INVALID_CTA,
         onClick: n
     });
 }
 function b(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: s, innerStyle: r, ...o } = e,
         { invite: u } = o,
-        [d, h] = a.useState(R(u)),
+        [d, h] = a.useState(S(u)),
         { ref: E, height: g } = (0, _.Z)(),
         p = (0, c.useSpring)({
             height: null != g && 0 !== g ? ''.concat(g, 'px') : ''.concat(s, 'px'),
@@ -82,15 +82,15 @@ function b(e) {
         });
     return (
         a.useEffect(() => {
-            let e = R(u);
+            let e = S(u);
             e !== d && h(e);
         }, [u, d]),
         (0, i.jsxs)(l.animated.div, {
-            className: Z.inviteCard,
+            className: v.inviteCard,
             style: p,
             children: [
                 (0, i.jsx)(l.animated.div, {
-                    className: Z.inviteChildContainer,
+                    className: v.inviteChildContainer,
                     style: p,
                     children: (0, i.jsx)('section', {
                         ref: E,
@@ -113,7 +113,7 @@ function D(e) {
     };
     return (0, i.jsx)(b, {
         startAnimHeightPx: 0,
-        innerStyle: () => Z.guildInfoInner,
+        innerStyle: () => v.guildInfoInner,
         ...e,
         children: (e) => n(e)
     });
@@ -121,7 +121,7 @@ function D(e) {
 function L(e) {
     let { invite: t } = e,
         n = (n) => {
-            if (null == t) return (0, i.jsx)(S, {});
+            if (null == t) return (0, i.jsx)(R, {});
             switch (n) {
                 case 1:
                     return (0, i.jsx)(x.Z, {
@@ -134,13 +134,13 @@ function L(e) {
                         invite: t
                     });
                 default:
-                    return (0, i.jsx)(S, {});
+                    return (0, i.jsx)(R, {});
             }
         },
         s = {
-            1: Z.inviteCardInner,
-            2: Z.inviteCardInnerError,
-            0: Z.inviteCardInnerLoading
+            1: v.inviteCardInner,
+            2: v.inviteCardInnerError,
+            0: v.inviteCardInnerLoading
         };
     return (0, i.jsx)(b, {
         startAnimHeightPx: 200,
@@ -154,7 +154,7 @@ function M(e) {
         { guild: s } = null != t ? t : {},
         r = {};
     if ((null == s ? void 0 : s.splash) != null) {
-        let e = m.ZP.getGuildSplashURL({
+        let e = I.ZP.getGuildSplashURL({
             id: s.id,
             splash: s.splash
         });
@@ -162,9 +162,9 @@ function M(e) {
     }
     return (0, i.jsxs)(h.ZP, {
         theme: C.BRd.DARK,
-        className: Z.splashBackground,
+        className: v.splashBackground,
         style: r,
-        contentClassName: Z.centerAuthBoxContent,
+        contentClassName: v.centerAuthBoxContent,
         children: [
             (0, i.jsx)(L, {
                 ...e,
@@ -184,7 +184,7 @@ function P(e) {
         a.useEffect(() => {
             null != s &&
                 s.state === C.r2o.RESOLVED &&
-                I.default.track(
+                m.default.track(
                     C.rMx.INVITE_VIEWED,
                     {
                         invite_code: t,
@@ -199,7 +199,7 @@ function P(e) {
                 !(function (e, t, n) {
                     var s, r, i;
                     null == e || e.preventDefault(),
-                        I.default.track(C.rMx.INVITE_APP_OPENED, {
+                        m.default.track(C.rMx.INVITE_APP_OPENED, {
                             invite_code: (0, N.jX)(t),
                             guild_id: null == n ? void 0 : null === (s = n.guild) || void 0 === s ? void 0 : s.id,
                             channel_id: null == n ? void 0 : null === (r = n.channel) || void 0 === r ? void 0 : r.id,

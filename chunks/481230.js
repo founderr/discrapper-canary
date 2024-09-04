@@ -27,7 +27,7 @@ function g(e) {
     });
 }
 function p(e) {
-    let { email: t, phoneToken: n, username: s, globalName: g, consent: p, password: I, guildTemplateCode: m, birthday: f, invite: N = null, giftCodeSKUId: T = null, multiStep: x = !1, promoEmailConsent: A = null, usedUsernameSuggestion: C = null } = e;
+    let { email: t, phoneToken: n, username: s, globalName: g, consent: p, password: m, guildTemplateCode: I, birthday: f, invite: N = null, giftCodeSKUId: T = null, multiStep: x = !1, promoEmailConsent: A = null, usedUsernameSuggestion: C = null } = e;
     return (
         a.Z.dispatch({
             type: 'REGISTER',
@@ -51,13 +51,13 @@ function p(e) {
                 email: t,
                 username: s,
                 global_name: g,
-                password: I,
+                password: m,
                 invite: N,
                 consent: p,
                 phone_token: n,
                 date_of_birth: null == f ? void 0 : f.format('YYYY-MM-DD'),
                 gift_code_sku_id: T,
-                guild_template_code: m,
+                guild_template_code: I,
                 promotional_email_opt_in: null == A ? void 0 : A.checked
             },
             trackedActionData: {

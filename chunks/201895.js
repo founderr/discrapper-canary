@@ -65,9 +65,9 @@ function c(e) {
                 mentionCount: d
             })
         ],
-        T = s({
+        m = s({
             isSubscriptionGated: E,
             needSubscriptionToAccess: I
         });
-    return null != T && C.push(T), C.join(', ');
+    return null != m && C.push(m), C.join(', ');
 }

@@ -15,8 +15,8 @@ var r = n(735250),
     d = n(442837),
     h = n(481060),
     m = n(570140),
-    f = n(665149),
-    x = n(55935),
+    x = n(665149),
+    f = n(55935),
     g = n(120816),
     p = n(31336),
     b = n(257785),
@@ -63,14 +63,14 @@ let S = [
                     d = u()(o);
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
-                        (0, r.jsxs)(f.ZP, {
+                        (0, r.jsxs)(x.ZP, {
                             className: i()(N.headerBar, T.subPanelHeaderBar),
                             children: [
-                                (0, r.jsx)(f.ZP.Icon, {
+                                (0, r.jsx)(x.ZP.Icon, {
                                     icon: h.AnalyticsIcon,
                                     tooltip: t
                                 }),
-                                (0, r.jsx)(f.ZP.Title, { children: t })
+                                (0, r.jsx)(x.ZP.Title, { children: t })
                             ]
                         }),
                         (0, r.jsxs)(b.E, {
@@ -80,8 +80,8 @@ let S = [
                                     name: 'Timestamp (local)',
                                     children: (0, r.jsx)('time', {
                                         dateTime: o.toISOString(),
-                                        title: (0, x.vc)(d, 'LLLL'),
-                                        children: (0, x.Y4)(d)
+                                        title: (0, f.vc)(d, 'LLLL'),
+                                        children: (0, f.Y4)(d)
                                     })
                                 }),
                                 'guild' === n.type &&
@@ -130,8 +130,8 @@ function I() {
         l = (0, d.Wu)([g.Z], () => g.Z.loggedTriggers),
         o = a.useMemo(() => l.filter((t) => 0 === e.length || s()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, u] = a.useState(void 0),
-        f = o.find((e) => e.key === c),
-        { TabBar: x, renderSelectedTab: b } = (0, C.Z)({ tabs: y }, []),
+        x = o.find((e) => e.key === c),
+        { TabBar: f, renderSelectedTab: b } = (0, C.Z)({ tabs: y }, []),
         I = (0, d.e7)([g.Z], () => g.Z.trackTriggers),
         w = a.useCallback((e) => {
             m.Z.dispatch({
@@ -184,12 +184,12 @@ function I() {
                 selectedRowKey: c,
                 onClickRow: (e) => u(e.key)
             }),
-            null != f &&
+            null != x &&
                 (0, r.jsxs)(v.Z, {
                     className: T.subPanel,
                     minHeight: 100,
                     initialHeight: null != n.current ? n.current.clientHeight / 2 : 300,
-                    children: [(0, r.jsx)(x, {}), b({ loggedTrigger: f })]
+                    children: [(0, r.jsx)(f, {}), b({ loggedTrigger: x })]
                 })
         ]
     });

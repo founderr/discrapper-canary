@@ -22,8 +22,8 @@ var r = n(91192),
     g = n(626135),
     p = n(74538),
     T = n(502087),
-    f = n(647265),
-    S = n(650032),
+    S = n(647265),
+    f = n(650032),
     C = n(104494),
     N = n(639119),
     A = n(655525),
@@ -66,9 +66,9 @@ let k = (e) => {
         ea = (0, l.e7)([h.Z], () => h.Z.hasLayers()),
         es = null != ei ? ei : null == V ? void 0 : V.createdAt,
         er = a || null != z || null != K || X || et || en || J || null != $ || Y,
-        { enabled: el } = S._.useExperiment({ location: w }, { autoTrackExposure: !1 }),
+        { enabled: el } = f._.useExperiment({ location: w }, { autoTrackExposure: !1 }),
         eo = el && (null == z ? void 0 : z.trial_id) === D.a7,
-        ec = (0, f.N9)({
+        ec = (0, S.N9)({
             location: 'NitroTabButton',
             showTabForOtherReasons: er
         }),

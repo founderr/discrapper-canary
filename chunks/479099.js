@@ -1,144 +1,144 @@
-t.d(n, {
+l.d(t, {
     Z: function () {
-        return T;
+        return M;
     },
     f: function () {
-        return m;
+        return x;
     }
 }),
-    t(47120);
-var r,
-    i,
-    o = t(735250),
-    l = t(470079),
-    u = t(120356),
-    a = t.n(u),
-    s = t(91192),
-    c = t(442837),
-    d = t(481060),
-    _ = t(239091),
-    f = t(596454),
-    E = t(607070),
-    I = t(339085),
-    g = t(695346),
-    p = t(572004),
-    S = t(689938),
-    C = t(109756);
-function T(e) {
-    let { tag: n, size: r = 1, disabled: i, className: u, onClick: T, onRemove: m, selected: A, ariaLabel: N } = e,
-        { name: h, emojiId: v, emojiName: L } = n,
-        R = null != m,
-        [M, O] = l.useState(!1),
-        b = (0, c.e7)([I.ZP], () => (null != v ? I.ZP.getUsableCustomEmojiById(v) : null)),
-        D = R || null != T,
-        Z = (!R || !M) && (null != v || null != L),
-        U = 0 === r,
-        P = l.useRef(null),
-        y = (0, c.e7)([E.Z], () => E.Z.keyboardModeEnabled),
-        x = (e) => {
-            let r = g.Sb.getSetting();
-            p.wS &&
-                r &&
+    l(47120);
+var i,
+    n,
+    s = l(735250),
+    a = l(470079),
+    o = l(120356),
+    r = l.n(o),
+    d = l(91192),
+    u = l(442837),
+    c = l(481060),
+    _ = l(239091),
+    m = l(596454),
+    f = l(607070),
+    g = l(339085),
+    h = l(695346),
+    E = l(572004),
+    A = l(689938),
+    p = l(109756);
+function M(e) {
+    let { tag: t, size: i = 1, disabled: n, className: o, onClick: M, onRemove: x, selected: I, ariaLabel: T } = e,
+        { name: O, emojiId: R, emojiName: v } = t,
+        b = null != x,
+        [C, L] = a.useState(!1),
+        j = (0, u.e7)([g.ZP], () => (null != R ? g.ZP.getUsableCustomEmojiById(R) : null)),
+        P = b || null != M,
+        Z = (!b || !C) && (null != R || null != v),
+        D = 0 === i,
+        S = a.useRef(null),
+        N = (0, u.e7)([f.Z], () => f.Z.keyboardModeEnabled),
+        U = (e) => {
+            let i = h.Sb.getSetting();
+            E.wS &&
+                i &&
                 (0, _.jW)(e, async () => {
-                    let { default: e } = await t.e('29646').then(t.bind(t, 955116));
-                    return (t) =>
-                        (0, o.jsx)(e, {
-                            ...t,
-                            tag: n
+                    let { default: e } = await l.e('29646').then(l.bind(l, 955116));
+                    return (l) =>
+                        (0, s.jsx)(e, {
+                            ...l,
+                            tag: t
                         });
                 });
         },
-        G = (0, o.jsxs)(o.Fragment, {
+        y = (0, s.jsxs)(s.Fragment, {
             children: [
                 Z
-                    ? (0, o.jsx)(f.Z, {
-                          className: a()(C.emoji, { [C.small]: U }),
-                          emojiId: v,
-                          emojiName: L,
-                          animated: !!(null == b ? void 0 : b.animated),
+                    ? (0, s.jsx)(m.Z, {
+                          className: r()(p.emoji, { [p.small]: D }),
+                          emojiId: R,
+                          emojiName: v,
+                          animated: !!(null == j ? void 0 : j.animated),
                           size: 'reaction'
                       })
                     : null,
-                M &&
-                    R &&
-                    (0, o.jsx)('div', {
-                        className: C.closeCircle,
-                        children: (0, o.jsx)(d.XSmallIcon, {
+                C &&
+                    b &&
+                    (0, s.jsx)('div', {
+                        className: p.closeCircle,
+                        children: (0, s.jsx)(c.XSmallIcon, {
                             size: 'md',
                             color: 'currentColor',
-                            className: C.close
+                            className: p.close
                         })
                     }),
-                (0, o.jsx)(d.Text, {
-                    variant: U ? 'text-xs/semibold' : 'text-sm/semibold',
+                (0, s.jsx)(c.Text, {
+                    variant: D ? 'text-xs/semibold' : 'text-sm/semibold',
                     lineClamp: 1,
-                    children: h
+                    children: O
                 })
             ]
         }),
-        j = {
-            key: n.id,
-            className: a()(
-                C.pill,
+        z = {
+            key: t.id,
+            className: r()(
+                p.pill,
                 {
-                    [C.disabled]: i,
-                    [C.clickable]: D,
-                    [C.small]: U,
-                    [C.selected]: A
+                    [p.disabled]: n,
+                    [p.clickable]: P,
+                    [p.small]: D,
+                    [p.selected]: I
                 },
-                u
+                o
             ),
             onClick: (e) => {
-                null == T || T(e), null == m || m(n), !y && null != P.current && P.current.blur();
+                null == M || M(e), null == x || x(t), !N && null != S.current && S.current.blur();
             },
-            onContextMenu: (e) => x(e),
-            onMouseEnter: () => R && O(!0),
-            onMouseLeave: () => R && O(!1)
+            onContextMenu: (e) => U(e),
+            onMouseEnter: () => b && L(!0),
+            onMouseLeave: () => b && L(!1)
         },
-        w = (0, s.JA)('forum-tag-'.concat(n.id));
-    return D
-        ? (0, o.jsx)(d.Clickable, {
+        w = (0, d.JA)('forum-tag-'.concat(t.id));
+    return P
+        ? (0, s.jsx)(c.Clickable, {
               ...w,
-              innerRef: P,
-              focusProps: { ringTarget: P },
-              'aria-label': null != N ? N : S.Z.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({ tagName: h }),
+              innerRef: S,
+              focusProps: { ringTarget: S },
+              'aria-label': null != T ? T : A.Z.Messages.FORUM_TAG_A11Y_FILTER_BY_TAG.format({ tagName: O }),
               role: 'button',
-              'aria-pressed': A,
-              ...j,
-              children: G
+              'aria-pressed': I,
+              ...z,
+              children: y
           })
-        : (0, o.jsx)('div', {
-              ...j,
-              children: G
+        : (0, s.jsx)('div', {
+              ...z,
+              children: y
           });
 }
-function m(e) {
-    let { tags: n, count: t, size: r = 1 } = e,
-        i = 0 === r;
-    return (0, o.jsx)(d.Tooltip, {
-        'aria-label': S.Z.Messages.FORUM_TAGS,
-        text: (0, o.jsx)(o.Fragment, {
-            children: n.map((e) =>
-                (0, o.jsx)(
-                    T,
+function x(e) {
+    let { tags: t, count: l, size: i = 1 } = e,
+        n = 0 === i;
+    return (0, s.jsx)(c.Tooltip, {
+        'aria-label': A.Z.Messages.FORUM_TAGS,
+        text: (0, s.jsx)(s.Fragment, {
+            children: t.map((e) =>
+                (0, s.jsx)(
+                    M,
                     {
                         tag: e,
-                        className: C.tooltipPill,
-                        size: T.Sizes.SMALL
+                        className: p.tooltipPill,
+                        size: M.Sizes.SMALL
                     },
                     e.id
                 )
             )
         }),
         children: (e) =>
-            (0, o.jsx)('div', {
+            (0, s.jsx)('div', {
                 ...e,
-                className: a()(C.pill, { [C.small]: i }),
-                children: (0, o.jsxs)(d.Text, {
-                    variant: i ? 'text-xs/semibold' : 'text-sm/semibold',
-                    children: ['+', t]
+                className: r()(p.pill, { [p.small]: n }),
+                children: (0, s.jsxs)(c.Text, {
+                    variant: n ? 'text-xs/semibold' : 'text-sm/semibold',
+                    children: ['+', l]
                 })
             })
     });
 }
-((i = r || (r = {}))[(i.SMALL = 0)] = 'SMALL'), (i[(i.MEDIUM = 1)] = 'MEDIUM'), (T.Sizes = r);
+((n = i || (i = {}))[(n.SMALL = 0)] = 'SMALL'), (n[(n.MEDIUM = 1)] = 'MEDIUM'), (M.Sizes = i);

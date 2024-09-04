@@ -37,8 +37,8 @@ let I = {},
             };
         (I[t] = r), g++;
     },
-    T = (e) => I[e],
-    m = (e) => {
+    m = (e) => I[e],
+    T = (e) => {
         null != I[e] && delete I[e], g++;
     };
 function A(e) {
@@ -80,7 +80,7 @@ class h extends (r = i.ZP.PersistedStore) {
     }
     getMessage(e) {
         var n;
-        return null == e ? null : null !== (n = T(e)) && void 0 !== n ? n : null;
+        return null == e ? null : null !== (n = m(e)) && void 0 !== n ? n : null;
     }
     getMessagesVersion() {
         return g;
@@ -112,14 +112,14 @@ E(h, 'displayName', 'GuildAutomodMessageStore'),
         MESSAGE_EDIT_FAILED_AUTOMOD: A,
         REMOVE_AUTOMOD_MESSAGE_NOTICE: function (e) {
             let { messageId: n } = e;
-            return m(n), !0;
+            return T(n), !0;
         },
         MESSAGE_END_EDIT: function (e) {
             let { response: n } = e;
             if ((null == n ? void 0 : n.body) == null || n.body.code === f.evJ.AUTOMOD_MESSAGE_BLOCKED) return !1;
             let t = n.body.id;
             if (null == t) return !1;
-            m(t);
+            T(t);
         },
         AUTO_MODERATION_MENTION_RAID_DETECTION: function (e) {
             let { guildId: n, decisionId: t, suspiciousMentionActivityUntil: r } = e;

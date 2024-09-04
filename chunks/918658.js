@@ -24,8 +24,8 @@ var i = t(120356),
     p = t(671533),
     S = t(259580),
     C = t(358085),
-    T = t(962086),
-    m = t(160404),
+    m = t(962086),
+    T = t(160404),
     A = t(889695),
     N = t(981631),
     h = t(176505),
@@ -60,11 +60,11 @@ function D() {
             backNavigationSection: i,
             isFullServerPreview: o,
             isServerShopPreview: C
-        } = (0, l.cj)([m.Z], () => ({
-            viewingRoles: null != e ? m.Z.getViewingRoles(e) : null,
-            backNavigationSection: m.Z.getBackNavigationSection(e),
-            isFullServerPreview: null != e && m.Z.isFullServerPreview(e),
-            isServerShopPreview: null != e && m.Z.isViewingServerShop(e)
+        } = (0, l.cj)([T.Z], () => ({
+            viewingRoles: null != e ? T.Z.getViewingRoles(e) : null,
+            backNavigationSection: T.Z.getBackNavigationSection(e),
+            isFullServerPreview: null != e && T.Z.isFullServerPreview(e),
+            isServerShopPreview: null != e && T.Z.isViewingServerShop(e)
         }));
     if (null == t || null == e) return null;
     let D = (function (e) {
@@ -83,7 +83,7 @@ function D() {
         U = n === h.oC.GUILD_ONBOARDING,
         P = (n) => {
             let { backToSettings: t } = n;
-            null != e && (m.Z.isFullServerPreview(e) && (0, E.uL)(N.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (s.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, T.mL)(e), t && f.Z.open(e, i), i === N.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
+            null != e && (T.Z.isFullServerPreview(e) && (0, E.uL)(N.Z5c.CHANNEL(e)), c.ZP.shouldShowOnboarding(e) && (s.Z.finishOnboarding(e), (0, d.discardOnboardingPromise)(e)), (0, m.mL)(e), t && f.Z.open(e, i), i === N.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(e));
         };
     return (0, r.jsxs)(a.Notice, {
         color: a.NoticeColors.BRAND,
@@ -165,7 +165,7 @@ function D() {
 }
 function Z(e) {
     let { guildId: n } = e;
-    return (0, l.e7)([m.Z], () => m.Z.isViewingRoles(n))
+    return (0, l.e7)([T.Z], () => T.Z.isViewingRoles(n))
         ? (0, r.jsx)('div', {
               className: o()(M.settingsWrapper, {
                   [M.windows]: (0, C.isWindows)(),

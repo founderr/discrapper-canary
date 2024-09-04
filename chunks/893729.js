@@ -20,9 +20,9 @@ var r = t(735250),
     p = t(471292);
 function S(e) {
     var n;
-    let { guildId: t, role: o, theme: S, content: C = g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT, className: T } = e,
-        m = (0, u.e7)([f.default], () => f.default.getCurrentUser()),
-        A = E.ZP.useName(t, null, m),
+    let { guildId: t, role: o, theme: S, content: C = g.Z.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT, className: m } = e,
+        T = (0, u.e7)([f.default], () => f.default.getCurrentUser()),
+        A = E.ZP.useName(t, null, T),
         N = (0, s.Kz)(o),
         h = i.useMemo(
             () =>
@@ -34,12 +34,12 @@ function S(e) {
                         type: void 0,
                         messageReference: void 0,
                         allowedMentions: void 0,
-                        author: m
+                        author: T
                     }),
                     state: I.yb.SENT,
                     id: '0'
                 }),
-            [m, C]
+            [T, C]
         ),
         v = {
             nick: A,
@@ -49,7 +49,7 @@ function S(e) {
         theme: S,
         children: (e) =>
             (0, r.jsx)('div', {
-                className: l()(e, p.container, T),
+                className: l()(e, p.container, m),
                 children: (0, r.jsx)(_.Z, {
                     hideTimestamp: !0,
                     author: v,

@@ -133,14 +133,14 @@ function g(e) {
     });
 }
 function p(e) {
-    let { product: n, guildId: t, onEditProduct: i, onUnpublishProduct: p, onDeleteProduct: S, onCopyProductLink: C, onTestDownload: T, disabled: m = !1 } = e,
+    let { product: n, guildId: t, onEditProduct: i, onUnpublishProduct: p, onDeleteProduct: S, onCopyProductLink: C, onTestDownload: m, disabled: T = !1 } = e,
         A = (0, a.U)(n, 600),
         N = null !== n.price_tier ? (0, s.T4)(n.price_tier, _.pK.USD) : void 0,
         h = (0, c.C)(n);
     return (0, r.jsxs)(l.ClickableContainer, {
         tag: 'article',
-        className: o()(E.productCardClickable, E.productCard, { [E.disabled]: m }),
-        onClick: m ? void 0 : i,
+        className: o()(E.productCardClickable, E.productCard, { [E.disabled]: T }),
+        onClick: T ? void 0 : i,
         onContextMenu: function (e) {
             (0, u.jW)(e, () =>
                 Promise.resolve((e) =>
@@ -159,7 +159,7 @@ function p(e) {
                         onUnpublishProduct: p,
                         onDeleteProduct: S,
                         onCopyLink: C,
-                        onTestDownload: T,
+                        onTestDownload: m,
                         onReportProduct: () => {}
                     })
                 )
@@ -211,7 +211,7 @@ function p(e) {
                             n.published ? (0, r.jsx)(d.t, {}) : (0, r.jsx)(d.b, {})
                         ]
                     }),
-                    !m &&
+                    !T &&
                         (0, r.jsx)(g, {
                             product: n,
                             guildId: t,
@@ -225,7 +225,7 @@ function p(e) {
                             onUnpublishProduct: p,
                             onDeleteProduct: S,
                             onCopyProductLink: C,
-                            onTestDownload: T,
+                            onTestDownload: m,
                             onReportProduct: () => {}
                         })
                 ]

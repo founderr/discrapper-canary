@@ -13,8 +13,8 @@ var s = n(735250),
     E = n(108427),
     g = n(314897),
     p = n(981631),
-    I = n(689938),
-    m = n(224499);
+    m = n(689938),
+    I = n(224499);
 i.ZP.initialize();
 t.Z = (e) => {
     let { location: t } = e,
@@ -22,36 +22,36 @@ t.Z = (e) => {
         f = (0, i.e7)([d.Z], () => d.Z.hasLoadedExperiments),
         N = (0, h.oK)('RSL - Landing Page'),
         [T, x] = r.useState(!1),
-        [A, C] = r.useState(I.Z.Messages.AUTHORIZING),
-        [v, Z] = r.useState(!0),
-        S = (e) => {
+        [A, C] = r.useState(m.Z.Messages.AUTHORIZING),
+        [Z, v] = r.useState(!0),
+        R = (e) => {
             switch (e) {
                 case p.evJ.INVALID_FORM_BODY:
                 case p.evJ.DSA_RSL_REPORT_NOT_FOUND:
-                    C(I.Z.Messages.REPORT_SECOND_LOOK_NOT_FOUND_ERROR);
+                    C(m.Z.Messages.REPORT_SECOND_LOOK_NOT_FOUND_ERROR);
                     break;
                 case p.evJ.DSA_RSL_ALREADY_REQUESTED:
-                    C(I.Z.Messages.REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR);
+                    C(m.Z.Messages.REPORT_SECOND_LOOK_ALREADY_REQUESTED_ERROR);
                     break;
                 case p.evJ.DSA_RSL_LIMITED_TIME:
-                    C(I.Z.Messages.REPORT_SECOND_LOOK_LIMITED_TIME_ERROR);
+                    C(m.Z.Messages.REPORT_SECOND_LOOK_LIMITED_TIME_ERROR);
                     break;
                 case p.evJ.DSA_RSL_REPORT_INELIGIBLE:
-                    C(I.Z.Messages.REPORT_SECOND_LOOK_INELIGIBLE_ERROR);
+                    C(m.Z.Messages.REPORT_SECOND_LOOK_INELIGIBLE_ERROR);
                     break;
                 default:
-                    C(I.Z.Messages.REPORT_SECOND_LOOK_UNKNOWN_ERROR);
+                    C(m.Z.Messages.REPORT_SECOND_LOOK_UNKNOWN_ERROR);
             }
         };
     return (
         r.useEffect(() => {
             n
-                ? (Z(!0),
+                ? (v(!0),
                   o
                       .k({ withAnalyticsToken: !0 })
-                      .then(() => Z(!1))
-                      .catch(() => Z(!1)))
-                : Z(!1);
+                      .then(() => v(!1))
+                      .catch(() => v(!1)))
+                : v(!1);
         }, [n]),
         r.useEffect(() => {
             !f && !N && l.Z.getExperiments();
@@ -61,9 +61,9 @@ t.Z = (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, _.hs)(e) : void 0;
-                    null != n ? C(I.Z.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : S(null === (t = n.body) || void 0 === t ? void 0 : t.code);
+                    null != n ? C(m.Z.Messages.REPORT_SECOND_LOOK_SUCCESS_TITLE) : R(null === (t = n.body) || void 0 === t ? void 0 : t.code);
                 } catch (e) {
-                    S(null === (n = e.body) || void 0 === n ? void 0 : n.code);
+                    R(null === (n = e.body) || void 0 === n ? void 0 : n.code);
                 } finally {
                     x(!1);
                 }
@@ -71,11 +71,11 @@ t.Z = (e) => {
             x(!0), e((0, c.Z)(t)), (0, E.e)('report_second_look');
         }, [t]),
         N &&
-            !v &&
+            !Z &&
             (0, s.jsxs)(u.ZP, {
                 children: [
                     (0, s.jsx)(u.Dx, {
-                        className: m.marginBottom8,
+                        className: I.marginBottom8,
                         children: A
                     }),
                     T && (0, s.jsx)(a.Spinner, {})

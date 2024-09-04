@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(944486),
     p = n(594174),
     T = n(51144),
-    f = n(498058),
-    S = n(158631),
+    S = n(498058),
+    f = n(158631),
     C = n(143614),
     N = n(981631),
     A = n(70722),
@@ -60,8 +60,8 @@ function R(e) {
         y = (0, C.Z)(),
         j = (0, s.e7)([m.Z], () => m.Z.getPreviewURL(null, R, r)),
         U = (0, s.e7)([g.Z], () => g.Z.getVoiceChannelId()),
-        G = (0, S.ZP)(),
-        w = (0, f.Z)(R);
+        G = (0, f.ZP)(),
+        w = (0, S.Z)(R);
     if (
         (a.useEffect(() => {
             x && U === R && b(!1);

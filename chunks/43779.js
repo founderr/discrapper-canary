@@ -20,8 +20,8 @@ var i = n(735250),
     g = n(46140),
     p = n(642145),
     T = n(689938),
-    f = n(803162);
-let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
+    S = n(803162);
+let f = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function C(e) {
     var t, n, s;
     let { quest: C, questContent: N, isHovering: A, contentPosition: v, rowIndex: Z, onReceiveErrorHints: L } = e,
@@ -46,7 +46,7 @@ function C(e) {
                     variant: 'text-md/semibold',
                     color: 'text-normal',
                     tag: 'span',
-                    className: f.header,
+                    className: S.header,
                     children: R
                 }),
             [R]
@@ -57,32 +57,32 @@ function C(e) {
                 return (0, i.jsx)(c.Text, {
                     variant: 'text-sm/medium',
                     color: 'text-muted',
-                    className: r()(f.description),
+                    className: r()(S.description),
                     children: G
                 });
         }, [G]),
         H = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
     return (0, i.jsxs)('div', {
-        className: r()(f.container),
+        className: r()(S.container),
         children: [
             (0, i.jsxs)(l.animated.div, {
                 style: {
                     maxHeight: M.to([0, 1], [104, (null != b ? b : 0) + 12])
                 },
-                className: r()(f.rewardDescriptionContainer),
+                className: r()(S.rewardDescriptionContainer),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.assetWrapper,
+                        className: S.assetWrapper,
                         children: [
-                            !y && D && (0, i.jsx)('div', { className: f.completionAnimation }),
+                            !y && D && (0, i.jsx)('div', { className: S.completionAnimation }),
                             O && !y
                                 ? (0, i.jsxs)('div', {
-                                      className: f.progressWrapper,
+                                      className: S.progressWrapper,
                                       children: [
                                           D &&
                                               (0, i.jsx)(c.LottieAnimation, {
-                                                  importData: S,
-                                                  className: f.confetti,
+                                                  importData: f,
+                                                  className: S.confetti,
                                                   loop: !1,
                                                   autoplay: !1,
                                                   shouldAnimate: !H
@@ -93,11 +93,11 @@ function C(e) {
                                               percentComplete: j,
                                               percentCompleteText: A ? U : void 0,
                                               children: (0, i.jsx)('div', {
-                                                  className: f.circularRewardTileWrapper,
+                                                  className: S.circularRewardTileWrapper,
                                                   children: (0, i.jsx)(m.Z, {
                                                       quest: C,
                                                       questContent: N,
-                                                      className: f.circularQuestRewardTileAsset,
+                                                      className: S.circularQuestRewardTileAsset,
                                                       location: g.dr.QUEST_HOME_DESKTOP
                                                   })
                                               })
@@ -108,25 +108,25 @@ function C(e) {
                                       quest: C,
                                       autoplay: A,
                                       questContent: N,
-                                      className: f.questRewardTileAsset,
+                                      className: S.questRewardTileAsset,
                                       location: g.dr.QUEST_HOME_DESKTOP
                                   })
                         ]
                     }),
                     (0, i.jsxs)('div', {
                         ref: x,
-                        className: r()(f.textContainer, { [f.justifyCenter]: !P }),
+                        className: r()(S.textContainer, { [S.justifyCenter]: !P }),
                         children: [
                             (0, i.jsx)(c.Heading, {
                                 variant: 'eyebrow',
                                 color: 'text-brand',
-                                className: f.questName,
+                                className: S.questName,
                                 children: T.Z.Messages.QUEST.format({ questName: C.config.messages.questName })
                             }),
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                className: f.header,
+                                className: S.header,
                                 children: k
                             }),
                             B
@@ -137,7 +137,7 @@ function C(e) {
                             style: {
                                 opacity: M.to([0, 1], [1, 0])
                             },
-                            className: f.textOverflowBlur
+                            className: S.textOverflowBlur
                         })
                 ]
             }),

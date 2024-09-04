@@ -22,8 +22,8 @@ var i,
     g = n(497505),
     p = n(918701),
     T = n(623249),
-    f = n(78826),
-    S = n(670638),
+    S = n(78826),
+    f = n(670638),
     C = n(642145),
     N = n(981631),
     A = n(689938),
@@ -63,8 +63,8 @@ function Z(e) {
             height: g ? o : 0,
             config: C.Y
         }),
-        f = 0 === E ? _.CircleWarningIcon : _.CircleInformationIcon,
-        S = 0 === E ? _.tokens.colors.TEXT_DANGER : _.tokens.colors.TEXT_NORMAL;
+        S = 0 === E ? _.CircleWarningIcon : _.CircleInformationIcon,
+        f = 0 === E ? _.tokens.colors.TEXT_DANGER : _.tokens.colors.TEXT_NORMAL;
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsx)(c.animated.div, {
             style: p,
@@ -75,9 +75,9 @@ function Z(e) {
                     (0, s.jsxs)('div', {
                         className: v.hintsContainer,
                         children: [
-                            (0, s.jsx)(f, {
+                            (0, s.jsx)(S, {
                                 size: 'xs',
-                                color: S
+                                color: f
                             }),
                             (0, s.jsx)(_.Text, {
                                 variant: 'text-xs/medium',
@@ -140,7 +140,7 @@ function L(e) {
                     className: v.heroAssetWrapper,
                     children:
                         x && !b
-                            ? (0, s.jsx)(f.Fl, {
+                            ? (0, s.jsx)(S.Fl, {
                                   id: 'QuestTileBanner_heroAnimated',
                                   children: (e) => (
                                       null != e.current && (j.current = e.current),
@@ -158,7 +158,7 @@ function L(e) {
                                       })
                                   )
                               })
-                            : (0, s.jsx)(f.Fl, {
+                            : (0, s.jsx)(S.Fl, {
                                   id: 'QuestTileBanner',
                                   children: (e) =>
                                       (0, s.jsx)('img', {
@@ -196,7 +196,7 @@ function L(e) {
                                                     children: A.Z.Messages.RECOMMENDED
                                                 })
                                             }),
-                                        (0, s.jsx)(S.r, {
+                                        (0, s.jsx)(f.r, {
                                             onOpen: h,
                                             onClose: c,
                                             onSelect: T,
@@ -219,7 +219,7 @@ function L(e) {
                                         })
                                     ]
                                 }),
-                                (0, s.jsx)(f.Fl, {
+                                (0, s.jsx)(S.Fl, {
                                     id: 'QuestPartnerBranding_gameLogotype',
                                     children: (e) =>
                                         (0, s.jsx)('img', {

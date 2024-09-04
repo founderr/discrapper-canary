@@ -13,8 +13,8 @@ var s,
     E = n(896797),
     g = n(981631),
     p = n(930441),
-    I = n(689938),
-    m = n(224499);
+    m = n(689938),
+    I = n(224499);
 function f(e, t, n) {
     return (
         t in e
@@ -70,25 +70,25 @@ class N extends (s = i.PureComponent) {
     }
     renderCategorySuccess(e, t) {
         let { defaultRoute: n, transitionTo: s } = this.props,
-            i = I.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_EMAIL_BODY.format({ category: t });
+            i = m.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_EMAIL_BODY.format({ category: t });
         return (0, r.jsxs)(d.ZP, {
             children: [
                 (0, r.jsx)(d.Dx, {
-                    className: m.marginBottom8,
-                    children: I.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
+                    className: I.marginBottom8,
+                    children: m.Z.Messages.EMAIL_CATEGORY_UNSUBSCRIBE_HEADER
                 }),
                 (0, r.jsx)(d.DK, { children: i }),
                 (0, r.jsx)(d.zx, {
-                    className: m.marginTop20,
+                    className: I.marginTop20,
                     onClick: () => s(n),
-                    children: I.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: m.Z.Messages.CONTINUE_TO_WEBAPP
                 }),
                 (0, r.jsx)(d.zx, {
-                    className: m.marginTop8,
+                    className: I.marginTop8,
                     color: d.zx.Colors.LINK,
                     look: d.zx.Looks.LINK,
                     onClick: () => s(g.Z5c.SETTINGS('notifications', p.vG)),
-                    children: I.Z.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
+                    children: m.Z.Messages.EMAIL_CATEGORY_MANAGE_SETTING_LABEL
                 })
             ]
         });
@@ -105,17 +105,17 @@ class N extends (s = i.PureComponent) {
                 (0, r.jsx)(d.qE, {
                     src: null == n ? void 0 : n.getAvatarURL(void 0, 100),
                     size: c.AvatarSizes.DEPRECATED_SIZE_100,
-                    className: m.marginBottom20
+                    className: I.marginBottom20
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: m.marginBottom8,
-                    children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
+                    className: I.marginBottom8,
+                    children: m.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_HEADER
                 }),
-                (0, r.jsx)(d.DK, { children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY }),
+                (0, r.jsx)(d.DK, { children: m.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_SUCCESS_BODY }),
                 (0, r.jsx)(d.zx, {
-                    className: m.marginTop40,
+                    className: I.marginTop40,
                     onClick: () => t(e),
-                    children: I.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: m.Z.Messages.CONTINUE_TO_WEBAPP
                 })
             ]
         });
@@ -126,17 +126,17 @@ class N extends (s = i.PureComponent) {
             children: [
                 (0, r.jsx)(d.Ee, {
                     src: n(105020),
-                    className: m.marginBottom20
+                    className: I.marginBottom20
                 }),
                 (0, r.jsx)(d.Dx, {
-                    className: m.marginBottom8,
-                    children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
+                    className: I.marginBottom8,
+                    children: m.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_HEADER
                 }),
-                (0, r.jsx)(d.DK, { children: I.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY }),
+                (0, r.jsx)(d.DK, { children: m.Z.Messages.AUTH_DISABLE_EMAIL_NOTIFICATIONS_FAILURE_BODY }),
                 (0, r.jsx)(d.zx, {
-                    className: m.marginTop40,
+                    className: I.marginTop40,
                     onClick: () => t(e),
-                    children: I.Z.Messages.CONTINUE_TO_WEBAPP
+                    children: m.Z.Messages.CONTINUE_TO_WEBAPP
                 })
             ]
         });

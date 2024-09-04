@@ -15,8 +15,8 @@ var r = n(735250),
     d = n(535271);
 let h = 1000 / 60,
     m = 1000 / 45,
-    f = 3 * h,
-    x = Math.ceil(3000 / h);
+    x = 3 * h,
+    f = Math.ceil(3000 / h);
 function g(e) {
     let { socket: t, isAverageFrameTime: n } = e,
         [l, i] = (function (e) {
@@ -41,7 +41,7 @@ function g(e) {
             bufferFramecountRef: b,
             frameCheckerEffect: v
         } = (function (e, t) {
-            let n = a.useRef(Array(x).fill(0)),
+            let n = a.useRef(Array(f).fill(0)),
                 r = a.useRef(performance.now()),
                 l = a.useRef(0),
                 i = a.useRef(0),
@@ -57,7 +57,7 @@ function g(e) {
                         let a = performance.now(),
                             d = a - r.current;
                         if (((r.current = a), t.current)) return;
-                        if (((i.current -= n.current[c.current]), (n.current[c.current] = d), (i.current += d), s.current < x && (s.current += 1), (c.current = (c.current + 1) % x), d > f)) {
+                        if (((i.current -= n.current[c.current]), (n.current[c.current] = d), (i.current += d), s.current < f && (s.current += 1), (c.current = (c.current + 1) % f), d > x)) {
                             let t = 0 === s.current ? h : i.current / s.current,
                                 n = Math.min(2 * h, t),
                                 r = Math.floor(d / (e ? n : h));
@@ -81,7 +81,7 @@ function g(e) {
             };
         })(n, l),
         [_, C, j] = (function (e) {
-            let t = a.useRef(Array(x).fill(0)),
+            let t = a.useRef(Array(f).fill(0)),
                 n = a.useRef(performance.now()),
                 r = a.useRef(0),
                 l = a.useRef(0),
@@ -96,7 +96,7 @@ function g(e) {
             let u = a.useCallback(function () {
                 let e = performance.now(),
                     a = e - n.current;
-                if (((n.current = e), !s.current)) (r.current -= t.current[i.current]), (t.current[i.current] = a), (r.current += a), l.current < x && (l.current += 1), (i.current = (i.current + 1) % x);
+                if (((n.current = e), !s.current)) (r.current -= t.current[i.current]), (t.current[i.current] = a), (r.current += a), l.current < f && (l.current += 1), (i.current = (i.current + 1) % f);
             }, []);
             return [
                 u,

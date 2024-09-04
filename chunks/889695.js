@@ -23,8 +23,8 @@ var r = t(735250),
     p = t(962086),
     S = t(160404),
     C = t(225675),
-    T = t(981631),
-    m = t(689938),
+    m = t(981631),
+    T = t(689938),
     A = t(44033);
 function N(e) {
     var n;
@@ -91,12 +91,12 @@ function h(e) {
             forceRoles: U,
             context: o
         }),
-        s.$e(T.Plq.MANAGE_GUILD, T.Plq.MANAGE_ROLES)
+        s.$e(m.Plq.MANAGE_GUILD, m.Plq.MANAGE_ROLES)
     ) || o.isOwner(t.id))
         ? (0, r.jsx)('div', {
               className: A.container,
               children: (0, r.jsx)(d.Combobox, {
-                  placeholder: m.Z.Messages.SEARCH_ROLES,
+                  placeholder: T.Z.Messages.SEARCH_ROLES,
                   value: M,
                   onChange: O,
                   autoFocus: !0,
@@ -139,6 +139,6 @@ function h(e) {
           })
         : (0, r.jsx)(d.Text, {
               variant: 'text-md/medium',
-              children: m.Z.Messages.VIEW_AS_ROLES_NO_ACCESS
+              children: T.Z.Messages.VIEW_AS_ROLES_NO_ACCESS
           });
 }

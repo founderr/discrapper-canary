@@ -14,7 +14,7 @@ function r(e) {
 }
 n.d(t, {
     U2: function () {
-        return I;
+        return m;
     },
     wz: function () {
         return p;
@@ -137,7 +137,7 @@ var E = {
 function p(e) {
     return l(s, E, e);
 }
-async function I(e) {
+async function m(e) {
     let t = await navigator.credentials.get(e);
     return (t.toJSON = () => l(r, g, t)), t;
 }

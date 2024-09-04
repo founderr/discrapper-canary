@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(607070),
     p = n(209613),
     T = n(325708),
-    f = n(320149),
-    S = n(82295),
+    S = n(320149),
+    f = n(82295),
     C = n(252618),
     N = n(605236),
     A = n(243778),
@@ -70,7 +70,7 @@ function ei() {
         { rejectAll: m } = (0, H.m)({ onError: E }),
         g = (0, p.Z)('message-requests-list'),
         { channelId: T } = (0, V._)(),
-        f = a.useCallback(() => {
+        S = a.useCallback(() => {
             m(n.map((e) => e.channel.id));
         }, [n, m]),
         C = a.useCallback(
@@ -100,7 +100,7 @@ function ei() {
         N = a.useCallback(
             () =>
                 (0, i.jsxs)(
-                    S.Z,
+                    f.Z,
                     {
                         className: et.sectionTitle,
                         children: [
@@ -116,7 +116,7 @@ function ei() {
                                               children: '\u2022'
                                           }),
                                           (0, i.jsx)(u.Button, {
-                                              onClick: f,
+                                              onClick: S,
                                               look: u.ButtonLooks.LINK,
                                               color: u.ButtonColors.LINK,
                                               size: u.ButtonSizes.SMALL,
@@ -131,7 +131,7 @@ function ei() {
                     },
                     'title'
                 ),
-            [t, f, c]
+            [t, S, c]
         );
     return (n.length !== t && Z.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, i.jsx)(z.Z, { section: Q.pS.REQUESTS })
@@ -177,7 +177,7 @@ function ea(e) {
         sidebarType: T.y.MessageRequestSidebar,
         maxWidth: r,
         onWidthChange: n,
-        children: (0, i.jsx)(f.Z, {
+        children: (0, i.jsx)(S.Z, {
             channel: s,
             baseChannelId: M.uZ
         })
@@ -262,9 +262,9 @@ let eo = (0, m.Z)(function (e) {
     a.useEffect(() => {
         null != m && !g && p && I && ((0, L.Kh)(m), R.Z.closeChannelSidebar(M.uZ));
     }, [m, p, I, g]);
-    let [T, f] = a.useState(Q.pS.REQUESTS),
-        S = (e) => {
-            f(e);
+    let [T, S] = a.useState(Q.pS.REQUESTS),
+        f = (e) => {
+            S(e);
         };
     return (
         (0, C.Tt)({ location: ee.Z.Messages.MESSAGE_REQUESTS }),
@@ -293,7 +293,7 @@ let eo = (0, m.Z)(function (e) {
                                             'aria-label': ee.Z.Messages.MESSAGE_REQUESTS,
                                             selectedItem: T,
                                             type: 'top-pill',
-                                            onItemSelect: S,
+                                            onItemSelect: f,
                                             className: et.__invalid_tabBar,
                                             children: [
                                                 (0, i.jsx)(u.TabBar.Item, {

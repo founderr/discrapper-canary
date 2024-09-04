@@ -15,8 +15,8 @@ var i = n(735250),
     g = n(558652),
     p = n(736683),
     T = n(452081),
-    f = n(981631),
-    S = n(689938),
+    S = n(981631),
+    f = n(689938),
     C = n(296561);
 t.Z = function (e) {
     let {} = e,
@@ -36,9 +36,9 @@ t.Z = function (e) {
         });
     }, []);
     let L = a.useCallback(() => {
-        window.open(E.Z.getArticleURL(f.BhN.QUESTS_LEARN_MORE));
+        window.open(E.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE));
     }, []);
-    (0, o.Tt)({ location: S.Z.Messages.QUESTS });
+    (0, o.Tt)({ location: f.Z.Messages.QUESTS });
     let R = a.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []);
     return (0, i.jsxs)('div', {
         className: C.container,
@@ -56,11 +56,11 @@ t.Z = function (e) {
                 ]
             }),
             (0, i.jsx)(u.Z, {
-                title: S.Z.Messages.QUESTS_HOME_HERO_TITLE,
-                description: S.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
+                title: f.Z.Messages.QUESTS_HOME_HERO_TITLE,
+                description: f.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
                 onScroll: A,
                 button: (0, i.jsx)(d.u, {
-                    text: S.Z.Messages.LEARN_MORE,
+                    text: f.Z.Messages.LEARN_MORE,
                     onClick: L
                 }),
                 bannerClassName: C.bannerContainer,

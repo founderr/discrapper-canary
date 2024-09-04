@@ -17,8 +17,8 @@ var s = n(735250),
     E = n(587444),
     g = n(981631),
     p = n(58346),
-    I = n(689938),
-    m = n(224499);
+    m = n(689938),
+    I = n(224499);
 function f(e, t, n) {
     e.preventDefault(),
         h.default.track(g.rMx.GUILD_TEMPLATE_APP_OPENED, {
@@ -48,14 +48,14 @@ function N(e) {
                     }),
                     (0, s.jsx)(l.zx, {
                         onClick: (e) => f(e, t, n),
-                        className: m.marginTop20,
-                        children: I.Z.Messages.GUILD_TEMPLATE_OPEN
+                        className: I.marginTop20,
+                        children: m.Z.Messages.GUILD_TEMPLATE_OPEN
                     })
                 ]
             })
           : (0, s.jsx)(E.Z, {
-                text: I.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
-                buttonCta: I.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
+                text: m.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_ERROR,
+                buttonCta: m.Z.Messages.GUILD_TEMPLATE_MOBILE_INVALID_CTA,
                 onClick: (e) => f(e, t, n)
             });
 }

@@ -16,8 +16,8 @@ var r = n(735250),
     d = n(78839),
     h = n(246992),
     m = n(981631),
-    f = n(535271),
-    x = n(384712);
+    x = n(535271),
+    f = n(384712);
 let g = [
         {
             label: 'Nitro Monthly',
@@ -123,9 +123,9 @@ function _() {
             await s.tn.del('/debug/subscription'), await (0, u.jg)();
         };
     return (0, r.jsx)(c.ScrollerThin, {
-        className: i()(f.panel),
+        className: i()(x.panel),
         children: (0, r.jsxs)('div', {
-            className: x.panelInner,
+            className: f.panelInner,
             children: [
                 (0, r.jsx)(c.Text, {
                     style: { marginBottom: '16px' },
@@ -133,7 +133,7 @@ function _() {
                     children: 'Manage Subscription'
                 }),
                 (0, r.jsxs)('section', {
-                    className: x.buttons,
+                    className: f.buttons,
                     children: [
                         null == n &&
                             (0, r.jsxs)(r.Fragment, {
@@ -194,7 +194,7 @@ function C(e) {
                 children: 'Existing Subscription'
             }),
             (0, r.jsxs)('div', {
-                className: i()(x.card, l ? x.gradientWrapperTier0 : x.gradientWrapperTier2),
+                className: i()(f.card, l ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
                 children: [
                     (0, r.jsxs)(c.Text, {
                         variant: 'text-md/normal',

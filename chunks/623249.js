@@ -25,8 +25,8 @@ var i = n(735250),
     g = n(667105),
     p = n(981631),
     T = n(689938),
-    f = n(913895),
-    S = n(708901);
+    S = n(913895),
+    f = n(708901);
 function C(e) {
     let { questId: t, errorHints: n, transitionState: s, onClose: C } = e,
         A = (0, E.B4)(t);
@@ -36,7 +36,7 @@ function C(e) {
         R = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         O = (0, g.g2)({
             useReducedMotion: R,
-            className: f.colorTransition
+            className: S.colorTransition
         }),
         x = v.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
         b = (0, I.Bz)(A),
@@ -59,26 +59,26 @@ function C(e) {
     return (0, i.jsxs)(c.ModalRoot, {
         transitionState: s,
         size: c.ModalSize.DYNAMIC,
-        className: f.modalRoot,
+        className: S.modalRoot,
         children: [
             (0, i.jsxs)(c.ModalHeader, {
                 direction: u.Z.Direction.VERTICAL,
                 separator: !1,
-                className: f.modalHeader,
+                className: S.modalHeader,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.modalTop,
+                        className: S.modalTop,
                         children: [
                             (0, i.jsx)('div', {
-                                className: f.iconFrame,
+                                className: S.iconFrame,
                                 children: (0, i.jsx)('img', {
-                                    className: f.icon,
+                                    className: S.icon,
                                     alt: '',
-                                    src: S
+                                    src: f
                                 })
                             }),
                             (0, i.jsx)(c.ModalCloseButton, {
-                                className: f.closeBtn,
+                                className: S.closeBtn,
                                 onClick: C
                             })
                         ]
@@ -90,16 +90,16 @@ function C(e) {
                     (0, i.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        className: f.upperBodyText,
+                        className: S.upperBodyText,
                         children: L.message
                     })
                 ]
             }),
             (0, i.jsxs)(c.ModalContent, {
-                className: f.modalContent,
+                className: S.modalContent,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.contentHeader,
+                        className: S.contentHeader,
                         children: [
                             (0, i.jsx)(c.Text, {
                                 variant: 'eyebrow',
@@ -107,14 +107,14 @@ function C(e) {
                                 children: T.Z.Messages.CONNECTED_ACCOUNTS
                             }),
                             (0, i.jsxs)(c.Clickable, {
-                                className: r()(f.refreshWrapper, { [f.disabled]: y }),
+                                className: r()(S.refreshWrapper, { [S.disabled]: y }),
                                 onClick: D,
                                 children: [
                                     O.render(),
                                     (0, i.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'currentColor',
-                                        className: f.colorTransition,
+                                        className: S.colorTransition,
                                         children: T.Z.Messages.REFRESH
                                     })
                                 ]
@@ -122,7 +122,7 @@ function C(e) {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: f.accountsWrapper,
+                        className: S.accountsWrapper,
                         children: [
                             (0, i.jsx)(N, {
                                 icon: (0, i.jsx)(c.ScreenIcon, { size: 'sm' }),
@@ -137,7 +137,7 @@ function C(e) {
                                           'aria-label': A.config.messages.gameTitle,
                                           text: () =>
                                               (0, i.jsxs)('div', {
-                                                  className: f.tooltip,
+                                                  className: S.tooltip,
                                                   children: [
                                                       (0, i.jsx)(c.Text, {
                                                           variant: 'text-sm/medium',
@@ -153,7 +153,7 @@ function C(e) {
                                           children: (e) =>
                                               (0, i.jsx)('img', {
                                                   ...e,
-                                                  className: f.gameTile,
+                                                  className: S.gameTile,
                                                   alt: A.config.messages.gameTitle,
                                                   src: (0, I.uo)(A, M)
                                               })
@@ -165,12 +165,12 @@ function C(e) {
                 ]
             }),
             (0, i.jsxs)(c.ModalFooter, {
-                className: f.footer,
+                className: S.footer,
                 children: [
                     (0, i.jsx)(c.Button, {
                         size: c.ButtonSizes.MIN,
                         onClick: C,
-                        className: f.footerCloseButton,
+                        className: S.footerCloseButton,
                         children: T.Z.Messages.CLOSE
                     }),
                     (0, i.jsx)(c.Button, {
@@ -198,13 +198,13 @@ function N(e) {
         l = a.length > 0,
         o = l ? c.ConnectionUnknownIcon : c.ConnectionFineIcon;
     return (0, i.jsxs)('div', {
-        className: f.connectionRow,
+        className: S.connectionRow,
         children: [
             (0, i.jsxs)('div', {
-                className: r()(f.connectionRowHeader, { [f.connectionRowHeaderError]: l }),
+                className: r()(S.connectionRowHeader, { [S.connectionRowHeaderError]: l }),
                 children: [
                     (0, i.jsxs)('div', {
-                        className: f.connectionRowHeaderContent,
+                        className: S.connectionRowHeaderContent,
                         children: [
                             t,
                             (0, i.jsx)(c.Text, {
@@ -215,15 +215,15 @@ function N(e) {
                         ]
                     }),
                     (0, i.jsxs)('div', {
-                        className: f.connectionRowHeaderContent,
+                        className: S.connectionRowHeaderContent,
                         children: [
                             s,
                             (0, i.jsx)(o, {
                                 color: 'currentColor',
                                 size: 'sm',
                                 className: r()({
-                                    [f.success]: !l,
-                                    [f.error]: l
+                                    [S.success]: !l,
+                                    [S.error]: l
                                 })
                             })
                         ]
@@ -231,17 +231,17 @@ function N(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: f.errorsContainer,
+                className: S.errorsContainer,
                 children: a.map((e) =>
                     (0, i.jsxs)(
                         'div',
                         {
-                            className: f.errorRow,
+                            className: S.errorRow,
                             children: [
                                 (0, i.jsx)(c.WarningIcon, {
                                     size: 'sm',
                                     color: 'currentColor',
-                                    className: f.error
+                                    className: S.error
                                 }),
                                 (0, i.jsx)(c.Text, {
                                     variant: 'text-xs/medium',

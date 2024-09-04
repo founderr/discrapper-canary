@@ -17,8 +17,8 @@ var r = n(735250),
     d = n(213609),
     h = n(213713),
     m = n(665149),
-    f = n(906467),
-    x = n(259580),
+    x = n(906467),
+    f = n(259580),
     g = n(31336),
     p = n(19759),
     b = n(432877);
@@ -33,8 +33,8 @@ var v = n(392750),
     y = n(645973),
     I = n(912072),
     w = n(246992),
-    E = n(442954),
-    k = n(702904),
+    k = n(442954),
+    E = n(702904),
     R = n(178821),
     Z = n(248526),
     O = n(958328),
@@ -87,7 +87,7 @@ function z() {
                 }
             ];
             return (
-                f.Z.isDeveloper &&
+                x.Z.isDeveloper &&
                     (e.push({
                         id: 'quick_actions',
                         name: 'Quick Actions',
@@ -98,7 +98,7 @@ function z() {
                         name: 'Perks Demos',
                         render: () => (0, r.jsx)(Z.Z, {})
                     })),
-                f.Z.isDeveloper &&
+                x.Z.isDeveloper &&
                     (e.push({
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
@@ -147,14 +147,14 @@ function z() {
                 e.push({
                     id: 'modals',
                     name: 'Modals',
-                    render: () => (0, r.jsx)(E.Z, {})
+                    render: () => (0, r.jsx)(k.Z, {})
                 }),
                 e.push({
                     id: 'affinity',
                     name: 'Affinity',
                     render: () => (0, r.jsx)(v.Z, {})
                 }),
-                f.Z.isDeveloper &&
+                x.Z.isDeveloper &&
                     e.push({
                         id: 'content_inventory',
                         name: 'Content Inventory',
@@ -169,7 +169,7 @@ function z() {
                     e.push({
                         id: 'payments',
                         name: 'Payments',
-                        render: () => (0, r.jsx)(k.Z, {})
+                        render: () => (0, r.jsx)(E.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -274,7 +274,7 @@ function W() {
                   onClick: g.SO,
                   children: (0, r.jsxs)(m.ZP, {
                       className: i()(G.headerBar, U.mobileHeaderCollapsed),
-                      toolbar: (0, r.jsx)(x.Z, { direction: x.Z.Directions.UP }),
+                      toolbar: (0, r.jsx)(f.Z, { direction: f.Z.Directions.UP }),
                       children: [
                           (0, r.jsx)(m.ZP.Icon, {
                               icon: c.StaffBadgeIcon,

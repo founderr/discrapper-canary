@@ -21,7 +21,7 @@ var i = n(735250),
     g = n(46140),
     p = n(689938),
     T = n(839062);
-let f = [
+let S = [
     {
         value: g.cd.DESKTOP,
         get label() {
@@ -35,7 +35,7 @@ let f = [
         }
     }
 ];
-function S(e) {
+function f(e) {
     let t,
         n,
         { value: a } = e;
@@ -145,9 +145,9 @@ function C(e) {
                         ? (0, i.jsx)(o.Select, {
                               className: T.platformSelectorPrimary,
                               isSelected: () => !1,
-                              options: f,
+                              options: S,
                               placeholder: p.Z.Messages.QUEST_MULTIPLATFORM_SELECT_SUBTITLE,
-                              renderOptionLabel: S,
+                              renderOptionLabel: f,
                               select: Q,
                               serialize: (e) => {
                                   switch (e) {

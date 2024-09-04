@@ -1,18 +1,18 @@
-t.d(n, {
+n.d(t, {
     HG: function () {
         return u;
     },
     Md: function () {
-        return l;
+        return a;
     },
     Q8: function () {
         return o;
     }
 });
-var r = t(373228),
-    i = t(689938);
+var r = n(373228),
+    i = n(689938);
 let o = () => [i.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1, i.Z.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2],
-    l = () => [i.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, i.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
+    a = () => [i.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, i.Z.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
     u = [
         {
             id: '781323471249604648',

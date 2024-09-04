@@ -27,13 +27,13 @@ t.d(n, {
         return f;
     },
     _6: function () {
-        return T;
+        return m;
     },
     aj: function () {
         return I;
     },
     dc: function () {
-        return m;
+        return T;
     },
     fX: function () {
         return u.f;
@@ -72,5 +72,5 @@ let a = 1000,
     p = 1,
     S = 50,
     C = 20,
-    T = 150,
-    m = 'automod-profile-quarantine-alert';
+    m = 150,
+    T = 'automod-profile-quarantine-alert';

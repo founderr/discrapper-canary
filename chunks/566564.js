@@ -37,7 +37,7 @@ t.Z = (e) => {
                     .filter((e) => null != e.category),
             [O]
         ),
-        P = r.useMemo(
+        A = r.useMemo(
             () =>
                 _.yo
                     .map((e) => u.Z.getProduct(e))
@@ -186,7 +186,7 @@ t.Z = (e) => {
                               (0, a.jsx)('div', {
                                   className: h.feed,
                                   ref: B,
-                                  children: P.slice(0, N).map((e) => {
+                                  children: A.slice(0, N).map((e) => {
                                       if (null == e || null == e.category) return null;
                                       let { category: t, ...n } = e;
                                       return (0, a.jsx)(

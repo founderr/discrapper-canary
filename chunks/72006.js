@@ -70,8 +70,8 @@ var r = t(371917),
     p = t.n(g),
     S = t(110599),
     C = t.n(S),
-    T = t(801539),
-    m = t.n(T),
+    m = t(801539),
+    T = t.n(m),
     A = t(887868),
     N = t.n(A);
 function h(e, n, t, i) {
@@ -109,7 +109,7 @@ function v(e, n, t, i) {
 function L(e, n) {
     switch (e) {
         case 'delete':
-            return m()(n);
+            return T()(n);
         case 'delete-word':
             return f()(n);
         case 'backspace':

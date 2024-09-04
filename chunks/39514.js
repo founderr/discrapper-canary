@@ -13,18 +13,18 @@ var s,
     E = n(232567),
     g = n(388905),
     p = n(362762),
-    I = n(108427),
-    m = n(314897),
+    m = n(108427),
+    I = n(314897),
     f = n(896797),
     N = n(82142),
     T = n(283595),
     x = n(55563),
     A = n(669079),
     C = n(63063),
-    v = n(51144),
-    Z = n(481153),
-    S = n(781428),
-    R = n(423527),
+    Z = n(51144),
+    v = n(481153),
+    R = n(781428),
+    S = n(423527),
     O = n(981631),
     b = n(689938),
     D = n(224499);
@@ -45,7 +45,7 @@ c.ZP.initialize(), ((r = s || (s = {})).REGISTER = 'register'), (r.LOGIN = 'logi
 class M extends a.PureComponent {
     componentDidMount() {
         let { authenticated: e, isResolved: t } = this.props;
-        e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, I.e)('gift_code');
+        e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, m.e)('gift_code');
     }
     componentDidUpdate(e) {
         let { authenticated: t, isResolved: n } = this.props;
@@ -159,7 +159,7 @@ class M extends a.PureComponent {
         let n = this.getErrorMessage(e);
         return (0, i.jsxs)(g.ZP, {
             children: [
-                (0, i.jsx)(Z.Z, { giftCode: e }),
+                (0, i.jsx)(v.Z, { giftCode: e }),
                 (0, i.jsx)(g.zx, {
                     disabled: null != n,
                     className: D.marginTop40,
@@ -174,7 +174,7 @@ class M extends a.PureComponent {
                     : (0, i.jsx)(g.i_, {
                           className: D.marginTop20,
                           children: b.Z.Messages.GIFT_CODE_AUTH_LOGGED_IN_AS.format({
-                              userTag: v.ZP.getUserTag(t),
+                              userTag: Z.ZP.getUserTag(t),
                               onLogoutClick: this.handleLogout
                           })
                       })
@@ -194,13 +194,13 @@ class M extends a.PureComponent {
                 return c || null == e ? this.renderSpinner(b.Z.Messages.GIFT_CODE_AUTH_FETCHING_USER) : this.requiresVerification && null != e ? this.renderVerification(e) : this.renderAuthenticated(s, e);
             }
             return 'login' === this.getMode()
-                ? (0, i.jsx)(S.Z, {
+                ? (0, i.jsx)(R.Z, {
                       giftCodeSKU: t,
                       giftCode: s,
                       transitionTo: l,
                       location: o
                   })
-                : (0, i.jsx)(R.Z, {
+                : (0, i.jsx)(S.Z, {
                       giftCodeSKU: t,
                       giftCode: s,
                       transitionTo: l,
@@ -255,7 +255,7 @@ class M extends a.PureComponent {
             });
     }
 }
-t.Z = c.ZP.connectStores([N.Z, T.Z, m.default, x.Z, f.Z, p.Z], (e) => {
+t.Z = c.ZP.connectStores([N.Z, T.Z, I.default, x.Z, f.Z, p.Z], (e) => {
     let t = e.match.params.giftCode,
         n = N.Z.get(t),
         s = null != n ? x.Z.get(n.skuId) : null;
@@ -263,7 +263,7 @@ t.Z = c.ZP.connectStores([N.Z, T.Z, m.default, x.Z, f.Z, p.Z], (e) => {
         giftCode: n,
         sku: s,
         libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? A.z2(n.entitlementBranches, s, T.Z) : null,
-        authenticated: m.default.isAuthenticated(),
+        authenticated: I.default.isAuthenticated(),
         defaultRoute: f.Z.defaultRoute,
         isResolved: N.Z.getIsResolved(t),
         isAccepting: N.Z.getIsAccepting(t),

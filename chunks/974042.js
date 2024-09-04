@@ -28,14 +28,14 @@ function T(e, t, n) {
         e
     );
 }
-function f(e) {
+function S(e) {
     let t = g.default.getUser(e);
     return {
         user: t,
         usernameLower: null != t ? t.username.toLowerCase() : null
     };
 }
-function S(e) {
+function f(e) {
     return {
         status: m.Z.getStatus(e),
         isMobile: m.Z.isMobileOnline(e),
@@ -76,8 +76,8 @@ class A {
                         key: t,
                         type: e,
                         nickname: I.Z.getNickname(t),
-                        ...f(t),
                         ...S(t),
+                        ...f(t),
                         ...C(t),
                         spam: (0, u.A)({ location: 'friend-store' }) && I.Z.isSpam(t)
                     })
@@ -89,8 +89,8 @@ class A {
                         key: e.key,
                         type: 99,
                         nickname: e.name,
-                        ...f(e.key),
                         ...S(e.key),
+                        ...f(e.key),
                         ...C(e.key)
                     })
             );
@@ -182,7 +182,7 @@ function D(e) {
 }
 class y extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, m.Z, g.default, E.Z, h.ZP, _.Z, d.Z), this.syncWith([I.Z], M), this.syncWith([d.Z], M), this.syncWith([g.default], D(f)), this.syncWith([m.Z, _.Z], D(S)), P();
+        this.waitFor(I.Z, m.Z, g.default, E.Z, h.ZP, _.Z, d.Z), this.syncWith([I.Z], M), this.syncWith([d.Z], M), this.syncWith([g.default], D(S)), this.syncWith([m.Z, _.Z], D(f)), P();
     }
     getState() {
         return {

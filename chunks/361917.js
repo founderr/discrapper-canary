@@ -89,8 +89,8 @@ function Y(e) {
     return (0, i.jsxs)('div', {
         className: w.container,
         children: [
-            y ? (0, i.jsx)(z, {}) : null,
-            (0, i.jsx)(G, {
+            y ? (0, i.jsx)(G, {}) : null,
+            (0, i.jsx)(z, {
                 searchQuery: l,
                 setSearchQuery: o,
                 placeholder: A ? D.Z.Messages.APP_LAUNCHER_SEARCH_PLACEHOLDER : D.Z.Messages.APP_LAUNCHER_SEARCH_ACTIVITIES_PLACEHOLDER
@@ -142,7 +142,7 @@ function Y(e) {
         ]
     });
 }
-function z() {
+function G() {
     return (0, i.jsxs)('div', {
         className: w.developerShelfControlsContainer,
         children: [
@@ -155,7 +155,7 @@ function z() {
         ]
     });
 }
-function G(e) {
+function z(e) {
     let { searchQuery: n, setSearchQuery: t, placeholder: l } = e,
         r = a.useRef(null),
         [s, c] = a.useState(!1),

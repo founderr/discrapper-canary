@@ -108,7 +108,7 @@ function S(e) {
                                         size: o.Button.Sizes.MIN,
                                         onClick: () => {
                                             (0, o.openModalLazy)(async () => {
-                                                let { default: e } = await Promise.all([i.e('58023'), i.e('10221')]).then(i.bind(i, 779250));
+                                                let { default: e } = await Promise.all([i.e('58023'), i.e('77189')]).then(i.bind(i, 779250));
                                                 return (n) =>
                                                     (0, l.jsx)(e, {
                                                         ...n,

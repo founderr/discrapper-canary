@@ -12,8 +12,8 @@ var s = n(735250),
     E = n(594174),
     g = n(509545),
     p = n(55563),
-    I = n(296848),
-    m = n(981631),
+    m = n(296848),
+    I = n(981631),
     f = n(474936),
     N = n(689938),
     T = n(867013),
@@ -25,7 +25,7 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
         { subscriptionPlanId: s } = t;
     return {
         sku: n,
-        subscriptionPlan: null != s ? (0, I.oE)(s) : null,
+        subscriptionPlan: null != s ? (0, m.oE)(s) : null,
         application: c.Z.getApplication(n.applicationId),
         gifter: E.default.getUser(t.userId)
     };
@@ -62,7 +62,7 @@ t.Z = l.ZP.connectStores([p.Z, c.Z, g.Z, E.default], (e) => {
                               (0, s.jsxs)(u.Dx, {
                                   className: a()(A.marginTop8, x.flexCenter),
                                   children: [
-                                      l.productLine !== m.POd.COLLECTIBLES &&
+                                      l.productLine !== I.POd.COLLECTIBLES &&
                                           (0, s.jsx)(d.Z, {
                                               size: d.Z.Sizes.MEDIUM,
                                               className: T.applicationIcon,

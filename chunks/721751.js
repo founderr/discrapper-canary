@@ -13,11 +13,11 @@ var r = n(735250),
     E = n(568154),
     g = n(353926),
     p = n(703656),
-    I = n(981631),
-    m = n(391205);
+    m = n(981631),
+    I = n(391205);
 let f = n(575703),
     N = n(2984),
-    T = [I.Z5c.LOGIN, I.Z5c.LOGIN_HANDOFF, I.Z5c.REGISTER, I.Z5c.INVITE(''), I.Z5c.GIFT_CODE(''), I.Z5c.GUILD_TEMPLATE_LOGIN(''), I.Z5c.GUILD_TEMPLATE(''), I.Z5c.DISABLE_EMAIL_NOTIFICATIONS, I.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, I.Z5c.BILLING_PREMIUM_SUBSCRIBE, I.Z5c.BILLING_PAYMENT_SOURCES_CREATE, I.Z5c.BILLING_PAYMENTS, I.Z5c.BILLING_PREMIUM_SWITCH_PLAN, I.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, I.Z5c.VERIFY, I.Z5c.VERIFY_HUB_EMAIL, I.Z5c.REJECT_IP, I.Z5c.REJECT_MFA, I.Z5c.AUTHORIZE_IP, I.Z5c.AUTHORIZE_PAYMENT, I.Z5c.RESET, I.Z5c.HANDOFF, I.Z5c.REPORT, I.Z5c.REPORT_SECOND_LOOK];
+    T = [m.Z5c.LOGIN, m.Z5c.LOGIN_HANDOFF, m.Z5c.REGISTER, m.Z5c.INVITE(''), m.Z5c.GIFT_CODE(''), m.Z5c.GUILD_TEMPLATE_LOGIN(''), m.Z5c.GUILD_TEMPLATE(''), m.Z5c.DISABLE_EMAIL_NOTIFICATIONS, m.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, m.Z5c.BILLING_PREMIUM_SUBSCRIBE, m.Z5c.BILLING_PAYMENT_SOURCES_CREATE, m.Z5c.BILLING_PAYMENTS, m.Z5c.BILLING_PREMIUM_SWITCH_PLAN, m.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, m.Z5c.VERIFY, m.Z5c.VERIFY_HUB_EMAIL, m.Z5c.REJECT_IP, m.Z5c.REJECT_MFA, m.Z5c.AUTHORIZE_IP, m.Z5c.AUTHORIZE_PAYMENT, m.Z5c.RESET, m.Z5c.HANDOFF, m.Z5c.REPORT, m.Z5c.REPORT_SECOND_LOOK];
 function x(e) {
     return T.some((t) => e.startsWith(t));
 }
@@ -50,12 +50,12 @@ function C(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)('img', {
-                        className: m.artwork,
+                        className: I.artwork,
                         src: f,
                         alt: ''
                     }),
                     (0, r.jsx)('img', {
-                        className: m.logoWithText,
+                        className: I.logoWithText,
                         src: N,
                         alt: ''
                     }),
@@ -67,7 +67,7 @@ function C(e) {
             return null;
     }
 }
-class v extends i.Component {
+class Z extends i.Component {
     componentDidMount() {
         window.addEventListener('resize', this.handleResize);
     }
@@ -96,7 +96,7 @@ class v extends i.Component {
                 )
             });
         return (0, r.jsx)('div', {
-            className: m.characterBackground,
+            className: I.characterBackground,
             children: (0, r.jsx)(u.HeadingLevel, {
                 forceLevel: 1,
                 children:
@@ -105,7 +105,7 @@ class v extends i.Component {
                               children: [
                                   (0, r.jsx)(h.Z, {
                                       show: !0,
-                                      className: l()(m.logo)
+                                      className: l()(I.logo)
                                   }),
                                   (0, r.jsx)(E.h, {
                                       splash: e,
@@ -152,4 +152,4 @@ class v extends i.Component {
             (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
 }
-t.Z = v;
+t.Z = Z;

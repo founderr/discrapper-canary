@@ -6,7 +6,7 @@ t.d(n, {
         return C;
     },
     Je: function () {
-        return T;
+        return m;
     },
     T9: function () {
         return v;
@@ -18,7 +18,7 @@ t.d(n, {
         return N;
     },
     mm: function () {
-        return m;
+        return T;
     },
     qY: function () {
         return S;
@@ -109,7 +109,7 @@ async function C(e) {
         )
     );
 }
-async function T(e) {
+async function m(e) {
     let n = I(e);
     return p(
         (
@@ -120,7 +120,7 @@ async function T(e) {
         ).body
     );
 }
-async function m(e, n) {
+async function T(e, n) {
     return await r.tn.del({ url: f.ANM.GUILD_AUTOMOD_RULE(n, e) }), !0;
 }
 async function A(e) {

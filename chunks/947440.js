@@ -144,7 +144,7 @@ function W(i, e) {
                   : null != i && i.type === D.d4z.GUILD_VOICE
                     ? (0, a.openModalLazy)(
                           async () => {
-                              let { default: e } = await Promise.all([n.e('7654'), n.e('1187'), n.e('31400')]).then(n.bind(n, 560114));
+                              let { default: e } = await Promise.all([n.e('7654'), n.e('1187'), n.e('66288')]).then(n.bind(n, 560114));
                               return (n) =>
                                   (0, t.jsx)(e, {
                                       ...n,

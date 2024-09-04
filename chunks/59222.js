@@ -1,6 +1,6 @@
 n.d(t, {
     D: function () {
-        return S;
+        return f;
     }
 }),
     n(47120);
@@ -21,8 +21,8 @@ var i = n(735250),
     g = n(650394),
     p = n(731455),
     T = n(689938),
-    f = n(514768);
-let S = 12,
+    S = n(514768);
+let f = 12,
     C = () => {
         let e = (0, u.s1)().location.search;
         return null != e && e.length > 0 && e.startsWith('?') ? l.parse(e) : {};
@@ -33,12 +33,12 @@ let S = 12,
             r = s ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({ categoryName: n }),
             l = s ? T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : T.Z.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({ onClick: a });
         return (0, i.jsxs)('div', {
-            className: f.emptyContainer,
+            className: S.emptyContainer,
             children: [
-                (0, i.jsx)('div', { className: f.emptyImage }),
+                (0, i.jsx)('div', { className: S.emptyImage }),
                 (0, i.jsx)(c.Heading, {
                     variant: 'heading-xl/semibold',
-                    className: f.emptyHeader,
+                    className: S.emptyHeader,
                     children: r
                 }),
                 (0, i.jsx)(c.Text, {
@@ -51,13 +51,13 @@ let S = 12,
     },
     A = () =>
         (0, i.jsxs)('div', {
-            className: f.emptyContainer,
+            className: S.emptyContainer,
             children: [
-                (0, i.jsx)('div', { className: f.errorImage }),
+                (0, i.jsx)('div', { className: S.errorImage }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-md/normal',
                     color: 'header-secondary',
-                    className: f.emptyHeader,
+                    className: S.emptyHeader,
                     children: T.Z.Messages.GUILD_DISCOVERY_SEARCH_ERROR
                 })
             ]
@@ -85,7 +85,7 @@ t.Z = (e) => {
         };
     a.useEffect(() => {
         let { offset: e, tag: t } = C(),
-            n = null != e ? Math.floor(parseInt(e, 10) / S) + 1 : 1;
+            n = null != e ? Math.floor(parseInt(e, 10) / f) + 1 : 1;
         V(!!t), 1 === n && k(!0);
     }, [s]);
     let z =
@@ -100,22 +100,22 @@ t.Z = (e) => {
                   category: x
               });
     return (0, i.jsxs)('div', {
-        className: f.container,
+        className: S.container,
         children: [
             (0, i.jsxs)('div', {
-                className: f.searchHeader,
+                className: S.searchHeader,
                 children: [
                     (0, i.jsx)(c.Clickable, {
                         onClick: () => {
                             d.AQ(), E.IZ(t);
                         },
-                        className: f.arrow,
+                        className: S.arrow,
                         'aria-label': T.Z.Messages.BACK,
                         children: (0, i.jsx)(h.Z, { direction: h.Z.Directions.LEFT })
                     }),
                     (0, i.jsx)(c.Heading, {
                         variant: 'heading-xl/semibold',
-                        className: f.header,
+                        className: S.header,
                         children: z
                     })
                 ]
@@ -139,17 +139,17 @@ t.Z = (e) => {
                         categoryId: O,
                         categoryName: x,
                         onClick: () => {
-                            d.uY(p.Hk), Y(0, S, !0);
+                            d.uY(p.Hk), Y(0, f, !0);
                         }
                     })
                   : (0, i.jsx)('div', {
-                        className: f.results,
+                        className: S.results,
                         children: (0, i.jsx)(m.Z, {
-                            pageSize: S,
+                            pageSize: f,
                             totalCount: G,
                             resetCurrentPage: w,
                             onPageChange: (e) => {
-                                Y((e - 1) * S, S), W();
+                                Y((e - 1) * f, f), W();
                             },
                             children: (e) => {
                                 let { controller: t } = e;
@@ -159,7 +159,7 @@ t.Z = (e) => {
                                         (0, i.jsx)(g.Z, {
                                             guilds: j,
                                             loading: U,
-                                            loadingPlaceholderCount: S,
+                                            loadingPlaceholderCount: f,
                                             onViewGuild: b,
                                             loadingGuildId: L,
                                             theme: R,

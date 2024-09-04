@@ -16,8 +16,8 @@ var i = n(735250),
     g = n(207796),
     p = n(558831),
     T = n(304231),
-    f = n(981631),
-    S = n(689938),
+    S = n(981631),
+    f = n(689938),
     C = n(172149);
 let N = {
         mass: 1,
@@ -41,8 +41,8 @@ let N = {
                 onSave: s,
                 onReset: r,
                 children: (0, i.jsx)(E.Z, {
-                    title: S.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
-                    description: S.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
+                    title: f.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_TITLE,
+                    description: f.Z.Messages.CLAN_DISCOVERY_PLAYSTYLE_SUBTITLE,
                     onUpdatePlaystyle: n,
                     playstyle: t
                 })
@@ -63,8 +63,8 @@ let N = {
                 onSave: s,
                 onReset: r,
                 children: (0, i.jsx)(m.Z, {
-                    title: S.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
-                    description: S.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
+                    title: f.Z.Messages.CLAN_DISCOVERY_TRAIT_TITLE,
+                    description: f.Z.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
                     onUpdateTraits: n,
                     traits: t,
                     hidePreview: !0
@@ -86,8 +86,8 @@ let N = {
                 onSave: s,
                 onReset: r,
                 children: (0, i.jsx)(h.Z, {
-                    title: S.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
-                    description: S.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
+                    title: f.Z.Messages.CLAN_DISCOVERY_GAME_TITLE,
+                    description: f.Z.Messages.CLAN_DISCOVERY_GAME_SUBTITLE,
                     onUpdateGames: n,
                     gameApplicationIds: t
                 })
@@ -121,13 +121,13 @@ let N = {
                     var e;
                     g.GN.getState().setSelectedGames(h.games), g.GN.getState().setSelectedPlaystyle(null !== (e = h.playstyle) && void 0 !== e ? e : null), g.GN.getState().setSelectedTraits(h.traits);
                 }, [h.games, h.playstyle, h.traits]),
-                f = a.useCallback(() => {
+                S = a.useCallback(() => {
                     r(new Set(E.games)), c(E.playstyle), _(new Set(E.traits));
                 }, [E.games, E.playstyle, E.traits]);
             return (0, i.jsx)(I.Z, {
                 hasChanges: m,
                 onSave: T,
-                onReset: f,
+                onReset: S,
                 children: (0, i.jsx)(p.Z, {
                     traits: u,
                     gameApplicationIds: s,
@@ -143,7 +143,7 @@ let N = {
                 t = a.useCallback(() => {
                     (0, g.fH)(g.v0.DISCOVERY);
                 }, []),
-                n = a.useMemo(() => (e === f.BRd.DARK ? C.genericOnboardingBackgroundImageDark : C.genericOnboardingBackgroundImageLight), [e]);
+                n = a.useMemo(() => (e === S.BRd.DARK ? C.genericOnboardingBackgroundImageDark : C.genericOnboardingBackgroundImageLight), [e]);
             return (0, i.jsx)('div', {
                 className: C.container,
                 children: (0, i.jsx)('div', {
