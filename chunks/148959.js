@@ -74,11 +74,8 @@ class m extends d.Z {
     senderSupportsSimulcast() {
         return this.videoStreams.length > 1;
     }
-    onClientConnect(e) {
-        e.forEach((e) => this.otherUsers.add(e));
-    }
-    onClientDisconnect(e) {
-        this.otherUsers.delete(e), this.isOneToOneCall() && this.downgraded && this.update();
+    updateCallUserIds(e) {
+        null != this.userId && e.delete(this.userId), (this.otherUsers = e), this.isOneToOneCall() && this.downgraded && this.update();
     }
     onIncomingVideoEnabled(e) {
         this.incomingVideoEnabled !== e && ((this.incomingVideoEnabled = e), this.update());
