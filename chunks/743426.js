@@ -279,11 +279,6 @@ class T extends s.Z {
     getDesktopSource() {
         return Promise.reject(Error('NO_STREAM'));
     }
-    getDesktopSources() {
-        return new Promise((e) => {
-            null != (0, d.zS)().getDesktopSources ? (0, d.zS)().getDesktopSources((t) => e(t)) : e([]);
-        });
-    }
     getScreenPreviews(e, t) {
         return new Promise((n) => {
             null != (0, d.zS)().getScreenPreviews

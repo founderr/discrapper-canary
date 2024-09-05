@@ -171,9 +171,6 @@ class C extends l.Z {
             n = await I.Z.get(e, t);
         return (this.pendingDesktopInputs[n.id] = n), n.id;
     }
-    getDesktopSources() {
-        return Promise.reject(Error('NO_STREAM'));
-    }
     getScreenPreviews(e, t) {
         return Promise.reject(Error('UNSUPPORTED'));
     }
