@@ -527,14 +527,7 @@ function eP(e) {
                     break;
                 }
                 case e_.ApplicationDirectoryProfileSections.STORE:
-                    no &&
-                        null != p &&
-                        e.push(
-                            (0, i.jsx)(er.M, {
-                                appId: p,
-                                guildId: null != f ? f : void 0
-                            })
-                        );
+                    no && null != p && e.push((0, i.jsx)(er.M, { appId: p }));
                     break;
                 case e_.ApplicationDirectoryProfileSections.PREMIUM:
                     e3 &&
@@ -594,7 +587,7 @@ function eP(e) {
                     )
                 )
             );
-        }, [I, eH, eM, eL, e7, e4, eq, ey, eJ, no, p, f, e3, na, nr, ez]),
+        }, [I, eH, eM, eL, e7, e4, eq, ey, eJ, no, p, e3, na, nr, ez]),
         nl = a.useMemo(() => {
             let e = [
                 {

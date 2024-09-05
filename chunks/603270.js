@@ -6,7 +6,8 @@ n.d(t, {
         return L;
     }
 }),
-    n(47120);
+    n(47120),
+    n(789020);
 var i = n(735250),
     a = n(470079),
     s = n(442837),
@@ -131,10 +132,10 @@ let L = b(function (e) {
         a.useEffect(() => {
             null == C && !Z && !b && (0, o.km)(d);
         }, [b, Z, C, d]);
-        let { subscriptionGroupListing: B } = (0, u.F5)(null == S ? void 0 : S.id, j);
+        let B = (0, s.e7)([h.Z], () => (null != d ? h.Z.getParentSKU(d) : void 0), [d]);
         if (((0, u.FE)(null == S ? void 0 : S.id, null == S ? void 0 : S.primarySkuId), !y || null == S || null == C)) return null;
         let k = C.type === O.epS.SUBSCRIPTION,
-            G = null != B && (0, _.KW)(B.sku_flags),
+            G = !!k && (0, _.KW)(C.flags),
             F = () => {
                 (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([n.e('89131'), n.e('21592')]).then(n.bind(n, 7225));
@@ -161,7 +162,7 @@ let L = b(function (e) {
                                   appId: S.id,
                                   skuId: C.id,
                                   groupListingId: B.id,
-                                  groupListingType: G ? 'user' : 'guild',
+                                  subscriptionType: G ? 'user' : 'guild',
                                   onClose: n.onClose,
                                   onHeaderTitleClick: a
                               })
@@ -252,14 +253,14 @@ let L = b(function (e) {
                             ? (0, i.jsx)(R.p, {
                                   appId: S.id,
                                   groupListingId: null == B ? void 0 : B.id,
-                                  groupListingType: G ? 'user' : 'guild',
+                                  subscriptionType: G ? 'user' : 'guild',
                                   skuId: C.id,
-                                  subPlan: D,
                                   icon: (0, i.jsx)(r.ShopIcon, {
                                       size: 'xs',
                                       color: 'currentcolor'
                                   }),
-                                  onHasClicked: H
+                                  onHasClicked: H,
+                                  subscriptionPlan: D
                               })
                             : (0, i.jsx)(E.Z, {
                                   size: r.ButtonSizes.MEDIUM,
