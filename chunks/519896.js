@@ -11,12 +11,12 @@ var i = t(735250),
     s = t(481060),
     a = t(757746),
     c = t(930155),
-    d = t(889989),
-    u = t(73346),
+    u = t(889989),
+    d = t(73346),
     S = t(591759),
     m = t(886253),
-    I = t(680005),
-    f = t(938337);
+    f = t(680005),
+    I = t(938337);
 function x(e) {
     var n;
     let { appId: t, groupListingId: x, subscriptionType: _, guildId: p, onClose: h, skuId: T, transitionState: v, onHeaderTitleClick: E } = e,
@@ -24,7 +24,7 @@ function x(e) {
         { data: g } = (0, a.Z)(T),
         R = l.useMemo(() => {
             var e;
-            return (null == g ? void 0 : g.thumbnail) != null && null !== (e = S.Z.toURLSafe((0, u._W)(t, g.thumbnail, 256))) && void 0 !== e ? e : void 0;
+            return (null == g ? void 0 : g.thumbnail) != null && null !== (e = S.Z.toURLSafe((0, d._W)(t, g.thumbnail, 256))) && void 0 !== e ? e : void 0;
         }, [t, null == g ? void 0 : g.thumbnail]),
         L = l.useMemo(() => {
             let e = null == g ? void 0 : g.benefits;
@@ -33,7 +33,7 @@ function x(e) {
                     id: e.id,
                     title: e.name,
                     description: e.description,
-                    icon: (0, d.n)(t, e.icon)
+                    icon: (0, u.n)(t, e.icon)
                 }));
         }, [t, null == g ? void 0 : g.benefits]);
     return null == g || null == N || 0 === N.length
@@ -44,7 +44,7 @@ function x(e) {
               transitionState: v,
               onHeaderTitleClick: null != E ? E : h,
               onClose: h,
-              footer: (0, i.jsx)(I.p, {
+              footer: (0, i.jsx)(f.p, {
                   appId: t,
                   groupListingId: x,
                   subscriptionType: _,
@@ -52,7 +52,7 @@ function x(e) {
                   skuId: T,
                   subscriptionPlan: N[0]
               }),
-              children: (0, i.jsx)(f.i, {
+              children: (0, i.jsx)(I.i, {
                   appId: t,
                   skuId: T,
                   benefits:

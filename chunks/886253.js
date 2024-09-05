@@ -1,6 +1,6 @@
 t.d(n, {
     A: function () {
-        return f;
+        return I;
     }
 });
 var i = t(735250);
@@ -11,13 +11,13 @@ var l = t(442837),
     s = t(812206),
     a = t(572004),
     c = t(601911),
-    d = t(504211),
-    u = t(981631),
+    u = t(504211),
+    d = t(981631),
     S = t(689938),
     m = t(437561),
-    I = t(27399);
-function f(e) {
-    let { appId: n, skuId: t, transitionState: f, onClose: x, onHeaderTitleClick: _, children: p, footer: h } = e,
+    f = t(27399);
+function I(e) {
+    let { appId: n, skuId: t, transitionState: I, onClose: x, onHeaderTitleClick: _, children: p, footer: h } = e,
         T = (0, l.e7)(
             [s.Z, o.Z],
             () => {
@@ -30,9 +30,9 @@ function f(e) {
     let v = (0, c.y)(T, 25),
         { termsOfServiceUrl: E, privacyPolicyUrl: N } = T;
     return (0, i.jsxs)(r.ModalRoot, {
-        transitionState: f,
+        transitionState: I,
         size: r.ModalSize.DYNAMIC,
-        className: I.modal,
+        className: f.modal,
         children: [
             (0, i.jsxs)(r.ModalHeader, {
                 className: m.modalHeader,
@@ -45,7 +45,7 @@ function f(e) {
                                 (0, i.jsx)('img', {
                                     src: v.href,
                                     alt: '',
-                                    className: I.appIcon
+                                    className: f.appIcon
                                 }),
                             (0, i.jsx)(r.Heading, {
                                 variant: 'heading-md/semibold',
@@ -61,7 +61,7 @@ function f(e) {
             }),
             p,
             (0, i.jsxs)(r.ModalFooter, {
-                className: I.footer,
+                className: f.footer,
                 children: [
                     null != E && null != N
                         ? (0, i.jsx)(r.Text, {
@@ -78,7 +78,7 @@ function f(e) {
                               children: S.Z.Messages.STOREFRONT_NO_TOS_PP
                           }),
                     (0, i.jsxs)('div', {
-                        className: I.footerButtons,
+                        className: f.footerButtons,
                         children: [
                             a.wS &&
                                 (0, i.jsx)(r.Button, {
@@ -86,10 +86,10 @@ function f(e) {
                                     size: r.ButtonSizes.ICON,
                                     color: r.ButtonColors.CUSTOM,
                                     'aria-label': S.Z.Messages.COPY_LINK,
-                                    className: I.linkButton,
+                                    className: f.linkButton,
                                     onClick: () => {
-                                        let e = ''.concat(location.protocol, '//').concat(location.host).concat(u.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(n, t));
-                                        (0, a.JG)(e), (0, r.showToast)((0, r.createToast)(S.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), (0, d.X)(n, d.B.DETAILS_MODAL, t);
+                                        let e = ''.concat(location.protocol, '//').concat(location.host).concat(d.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(n, t));
+                                        (0, a.JG)(e), (0, r.showToast)((0, r.createToast)(S.Z.Messages.COPIED_LINK, r.ToastType.SUCCESS)), (0, u.X)(n, u.B.DETAILS_MODAL, t);
                                     },
                                     children: (0, i.jsx)(r.LinkIcon, {
                                         size: 'xs',

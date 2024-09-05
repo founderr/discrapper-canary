@@ -20,16 +20,16 @@ e.exports = function (e, t, r, T) {
     if (f) {
         var S = f.prototype;
         if ((!A && a(S, 'cause') && delete S.cause, !r)) return f;
-        var D = n('Error'),
-            L = t(function (e, t) {
+        var L = n('Error'),
+            D = t(function (e, t) {
                 var r = I(T ? t : e, void 0),
                     n = T ? new f(e) : new f();
-                return void 0 !== r && o(n, 'message', r), l(n, L, n.stack, 2), this && i(S, this) && c(n, this, L), arguments.length > N && u(n, arguments[N]), n;
+                return void 0 !== r && o(n, 'message', r), l(n, D, n.stack, 2), this && i(S, this) && c(n, this, D), arguments.length > N && u(n, arguments[N]), n;
             });
-        if (((L.prototype = S), 'Error' !== O ? (_ ? _(L, D) : E(L, D, { name: !0 })) : R && d in f && (s(L, f, d), s(L, f, 'prepareStackTrace')), E(L, f), !A))
+        if (((D.prototype = S), 'Error' !== O ? (_ ? _(D, L) : E(D, L, { name: !0 })) : R && d in f && (s(D, f, d), s(D, f, 'prepareStackTrace')), E(D, f), !A))
             try {
-                S.name !== O && o(S, 'name', O), (S.constructor = L);
+                S.name !== O && o(S, 'name', O), (S.constructor = D);
             } catch (e) {}
-        return L;
+        return D;
     }
 };

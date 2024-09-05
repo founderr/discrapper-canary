@@ -117,7 +117,7 @@ function y() {
                 ),
             []
         ),
-        I = a.useMemo(() => {
+        w = a.useMemo(() => {
             let r = Object.entries(t).map((t) => {
                     let [n, r] = t,
                         { colors: a, highlight: l } = r,
@@ -357,7 +357,7 @@ function y() {
                         s = i.opacity,
                         c = _[n][e];
                     return (0, r.jsx)(
-                        w,
+                        I,
                         {
                             title: C(n),
                             subtitle: 1 === c.opacity ? j(c.raw) : ''.concat(j(c.raw), ' @ ').concat(100 * c.opacity, '%'),
@@ -472,7 +472,7 @@ function y() {
                 children: Object.entries(n).map((e) => {
                     let [t, n] = e;
                     return (0, r.jsxs)(
-                        w,
+                        I,
                         {
                             title: t,
                             subtitle: h.b[t].hex,
@@ -560,13 +560,13 @@ function y() {
             (0, r.jsx)(c.ql, {
                 children: (0, r.jsx)('style', {
                     id: 'devtools-color-overrides',
-                    children: I
+                    children: w
                 })
             })
         ]
     });
 }
-function w(e) {
+function I(e) {
     let { title: t, subtitle: n, highlight: a, onReset: l, onRemove: i, onHighlightToggle: o, children: s } = e;
     return (0, r.jsxs)('li', {
         className: v.override,

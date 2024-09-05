@@ -1,6 +1,6 @@
 t.d(n, {
     Hq: function () {
-        return I;
+        return f;
     },
     M9: function () {
         return x;
@@ -9,13 +9,13 @@ t.d(n, {
         return _;
     },
     cj: function () {
-        return f;
+        return I;
     },
     km: function () {
         return S;
     },
     oJ: function () {
-        return u;
+        return d;
     },
     rV: function () {
         return m;
@@ -33,10 +33,10 @@ var o = t(703656),
 t(551428);
 var a = t(695103),
     c = t(73346),
-    d = t(981631);
-function u(e) {
+    u = t(981631);
+function d(e) {
     return (0, c.Kb)({
-        url: d.ANM.STORE_PUBLISHED_LISTINGS_SKUS,
+        url: u.ANM.STORE_PUBLISHED_LISTINGS_SKUS,
         query: { application_id: e },
         oldFormErrors: !0
     }).then(
@@ -60,7 +60,7 @@ function S(e) {
             type: 'STORE_LISTINGS_FETCH_START',
             skuId: e
         }),
-        (0, c.Kb)(t ? d.ANM.STORE_LISTINGS_SKU(e) : d.ANM.STORE_PUBLISHED_LISTINGS_SKU(e))
+        (0, c.Kb)(t ? u.ANM.STORE_LISTINGS_SKU(e) : u.ANM.STORE_PUBLISHED_LISTINGS_SKU(e))
             .then((e) => {
                 t
                     ? l.Z.dispatch({
@@ -81,30 +81,30 @@ function S(e) {
     );
 }
 function m(e) {
-    return (0, c.Kb)(d.ANM.STORE_LISTING(e)).then((e) => {
+    return (0, c.Kb)(u.ANM.STORE_LISTING(e)).then((e) => {
         l.Z.dispatch({
             type: 'STORE_LISTING_FETCH_SUCCESS',
             storeListing: e.body
         });
     });
 }
-function I(e) {
-    return (0, c.Kb)(d.ANM.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then((e) => {
+function f(e) {
+    return (0, c.Kb)(u.ANM.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then((e) => {
         l.Z.dispatch({
             type: 'STORE_LISTING_FETCH_SUCCESS',
             storeListing: e.body
         });
     });
 }
-function f() {
+function I() {
     l.Z.dispatch({ type: 'APPLICATION_STORE_MATURE_AGREE' });
 }
 function x() {
-    (0, o.uL)(d.Z5c.APPLICATION_STORE);
+    (0, o.uL)(u.Z5c.APPLICATION_STORE);
 }
 function _(e) {
     return i.tn.post({
-        url: d.ANM.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),
+        url: u.ANM.STORE_PUBLISHED_LISTINGS_SKU_JOIN_GUILD(e),
         oldFormErrors: !0
     });
 }

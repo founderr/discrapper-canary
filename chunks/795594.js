@@ -221,7 +221,7 @@ let U = (e) => {
                     })(),
                     (() => {
                         let e = [];
-                        for (let t of s) e.push((0, h.jW)(t, s)), t === c.x.APPLICATIONS_COMMANDS && e.push(b.Z.Messages.SCOPE_DM_YOU);
+                        for (let t of s) e.push(...(0, h.CI)(t, s)), t === c.x.APPLICATIONS_COMMANDS && e.push(b.Z.Messages.SCOPE_DM_YOU);
                         if (e.length > 0 || (null != i && i.length > 0))
                             return (0, n.jsx)(E.FormItem, {
                                 faded: !0,

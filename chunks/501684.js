@@ -7,13 +7,13 @@ r.d(t, {
         return p;
     },
     YF: function () {
-        return D;
+        return L;
     },
     _4: function () {
         return S;
     },
     _j: function () {
-        return L;
+        return D;
     },
     cN: function () {
         return v;
@@ -45,10 +45,10 @@ function f(e) {
 function S(e) {
     return U('ttfb', e, P, i);
 }
-function D(e) {
+function L(e) {
     return U('inp', e, m, _);
 }
-function L(e, t) {
+function D(e, t) {
     return (
         G(e, t),
         !N[e] &&

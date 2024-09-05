@@ -34,8 +34,8 @@ var i,
     j = n(158776),
     D = n(699516),
     w = n(594174),
-    U = n(979651),
-    G = n(823379),
+    G = n(979651),
+    U = n(823379),
     k = n(981631);
 let B = !1,
     V = !1,
@@ -81,7 +81,7 @@ function ee(e) {
     return null != t ? t : (0, f.Z)(e) ? X(e.name) : (0, g.Z)(e) && null != e.url ? J(e.url) : (null != e.application_id && $(e.application_id), t);
 }
 function et(e) {
-    let t = U.Z.getVoiceStateForUser(e);
+    let t = G.Z.getVoiceStateForUser(e);
     return (null == t ? void 0 : t.channelId) != null && y.Z.canWithPartialContext(k.Plq.VIEW_CHANNEL, { channelId: t.channelId }) ? t.channelId : null;
 }
 function en(e) {
@@ -129,11 +129,11 @@ function ei(e, t, n) {
                     activity: s,
                     userId: e.id,
                     application: u,
-                    channelId: null === (r = U.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
+                    channelId: null === (r = G.Z.getVoiceStateForUser(e.id)) || void 0 === r ? void 0 : r.channelId,
                     currentUser: _,
                     isActivitiesEnabledForCurrentPlatform: t,
                     ChannelStore: b.Z,
-                    VoiceStateStore: U.Z,
+                    VoiceStateStore: G.Z,
                     PermissionStore: y.Z,
                     GuildStore: O.Z
                 }) !== h.Fw.CAN_JOIN
@@ -176,13 +176,13 @@ function ei(e, t, n) {
             r = O.Z.getGuild(l);
         if ((H.has(l) && V.has(n)) || null == i || null == r || i.id === r.afkChannelId) null == i && ((u = null), (k = !0));
         else {
-            let e = U.Z.getVoiceStatesForChannel(i.id),
+            let e = G.Z.getVoiceStatesForChannel(i.id),
                 a = o()(e)
                     .map((e) => {
                         let { userId: t } = e;
                         return w.default.getUser(t);
                     })
-                    .filter(G.lm)
+                    .filter(U.lm)
                     .orderBy([en], ['desc'])
                     .value();
             a.filter((e) => !g.includes(e.id)).forEach((e) => t.push(e)),
@@ -290,7 +290,7 @@ function ea() {
 }
 class es extends (i = c.ZP.Store) {
     initialize() {
-        this.syncWith([w.default, C.Z, j.Z, R.Z, U.Z, A.Z, D.Z, M.Z, v.Z], ea), this.waitFor(N.Z, O.Z, C.Z, w.default, v.Z);
+        this.syncWith([w.default, C.Z, j.Z, R.Z, G.Z, A.Z, D.Z, M.Z, v.Z], ea), this.waitFor(N.Z, O.Z, C.Z, w.default, v.Z);
     }
     get currentActivityParties() {
         return H;

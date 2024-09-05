@@ -11,15 +11,15 @@ var i = t(735250),
     a = t(981631);
 function c(e) {
     let { appId: n, skuId: t, ...c } = e,
-        { analyticsLocations: d } = (0, o.ZP)();
+        { analyticsLocations: u } = (0, o.ZP)();
     return (
         l.useEffect(() => {
             s.default.track(a.rMx.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
                 application_id: n,
                 sku_id: t,
-                location_stack: d
+                location_stack: u
             });
-        }, [d, n, t]),
+        }, [u, n, t]),
         (0, i.jsx)(r.u, { ...c })
     );
 }

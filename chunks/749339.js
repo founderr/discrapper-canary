@@ -3,18 +3,18 @@ t.d(n, {
         return o;
     }
 });
-var i = t(735250);
+var a = t(735250);
 t(470079);
-var a = t(481060),
+var i = t(481060),
     l = t(39154),
     r = t(572004),
     s = t(689938);
 function o(e) {
     return r.wS
-        ? (0, i.jsx)(a.MenuItem, {
+        ? (0, a.jsx)(i.MenuItem, {
               id: 'copy-text',
               label: s.Z.Messages.COPY_TEXT,
-              icon: a.CopyIcon,
+              icon: i.CopyIcon,
               action: () => {
                   (e = (0, l.Z)(e)), (0, r.JG)(e.content);
               }

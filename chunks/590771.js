@@ -75,7 +75,7 @@ function p(e) {
                 (N.current = S);
         }, [C, T, f, S, t]),
         a.useEffect(() => {
-            (0, l.k)({ selectedCategoryId: T });
+            (0, l.kR)({ selectedCategoryId: T });
         }, [T]),
         n)
     ) {

@@ -19,10 +19,10 @@ function i(e, t) {
         (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
     }
 }
-function a(e, t, r) {
+function s(e, t, r) {
     return t && i(e.prototype, t), r && i(e, r), e;
 }
-function s(e, t, r) {
+function a(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,10 +37,10 @@ function s(e, t, r) {
 }
 var c = (function () {
     function e(t) {
-        o(this, e), s(this, 'isDisposed', !1), s(this, 'action', void 0), (this.action = (0, n.mf)(t) ? t : n.ZT);
+        o(this, e), a(this, 'isDisposed', !1), a(this, 'action', void 0), (this.action = (0, n.mf)(t) ? t : n.ZT);
     }
     return (
-        a(
+        s(
             e,
             [
                 {
@@ -74,15 +74,15 @@ var c = (function () {
         e
     );
 })();
-s(c, 'empty', { dispose: n.ZT });
+a(c, 'empty', { dispose: n.ZT });
 var u = (function () {
         function e() {
-            o(this, e), s(this, 'isDisposed', !1), s(this, 'disposables', void 0);
+            o(this, e), a(this, 'isDisposed', !1), a(this, 'disposables', void 0);
             for (var t = arguments.length, r = Array(t), n = 0; n < t; n++) r[n] = arguments[n];
             this.disposables = r;
         }
         return (
-            a(e, [
+            s(e, [
                 {
                     key: 'add',
                     value: function (e) {
@@ -127,10 +127,10 @@ var u = (function () {
     })(),
     d = (function () {
         function e() {
-            o(this, e), s(this, 'isDisposed', !1), s(this, 'current', void 0);
+            o(this, e), a(this, 'isDisposed', !1), a(this, 'current', void 0);
         }
         return (
-            a(e, [
+            s(e, [
                 {
                     key: 'getDisposable',
                     value: function () {

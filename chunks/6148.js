@@ -3,9 +3,9 @@ t.d(n, {
         return c;
     }
 });
-var i = t(735250);
+var a = t(735250);
 t(470079);
-var a = t(442837),
+var i = t(442837),
     l = t(481060),
     r = t(904245),
     s = t(665906),
@@ -13,11 +13,11 @@ var a = t(442837),
     u = t(418476),
     d = t(689938);
 function c(e, n) {
-    let t = (0, a.e7)([o.default], () => o.default.getId()),
+    let t = (0, i.e7)([o.default], () => o.default.getId()),
         c = (0, s.$R)(n),
         E = (0, s.Gu)(n);
     return (0, u.Z)(e, t) && c && !E
-        ? (0, i.jsx)(l.MenuItem, {
+        ? (0, a.jsx)(l.MenuItem, {
               id: 'edit',
               label: d.Z.Messages.EDIT_MESSAGE,
               action: () => r.Z.startEditMessage(n.id, e.id, e.content),

@@ -65,7 +65,7 @@ function y(e) {
         ]
     });
 }
-let w = [
+let I = [
         {
             id: 'details',
             name: 'Details',
@@ -142,11 +142,11 @@ let w = [
             }
         }
     ],
-    I = {
+    w = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(I)
+                Object.entries(w)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -173,14 +173,14 @@ let w = [
 function k() {
     let e = a.useRef(null),
         t = (0, c.e7)([f.Z], () => f.Z.loggedEvents),
-        [n, l] = a.useState(Object.keys(I)),
+        [n, l] = a.useState(Object.keys(w)),
         o = t.filter((e) => {
-            for (let t of n) if (I[t].filter(e)) return !0;
+            for (let t of n) if (w[t].filter(e)) return !0;
             return !1;
         }),
         [s, d] = a.useState(void 0),
         h = o.find((e) => e.key === s),
-        { TabBar: m, renderSelectedTab: x } = (0, _.Z)({ tabs: w }, []);
+        { TabBar: m, renderSelectedTab: x } = (0, _.Z)({ tabs: I }, []);
     return (0, r.jsxs)('div', {
         ref: e,
         className: i()(T.panel, j.panel),
@@ -205,7 +205,7 @@ function k() {
                     (0, r.jsx)('div', { className: j.toolbarDivider }),
                     (0, r.jsx)('div', {
                         className: j.filters,
-                        children: Object.entries(I).map((e) => {
+                        children: Object.entries(w).map((e) => {
                             let [t, a] = e;
                             return (0, r.jsx)(
                                 u.Clickable,

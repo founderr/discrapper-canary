@@ -38,8 +38,8 @@ var n = r(636361),
     O = r(804410),
     f = r(376457),
     S = r(42367),
-    D = r(297117),
-    L = r(387486);
+    L = r(297117),
+    D = r(387486);
 function h(e) {
     return [(0, n.S)(), (0, a.C)(), (0, p.t)(), (0, N.f)(), (0, O.k)(), (0, S.O)(), (0, o.R)(), (0, f.s)()];
 }
@@ -73,9 +73,9 @@ function C(e = {}) {
     T.X && !(0, u.Ak)() && I.kg.warn('No Fetch API detected. The Sentry SDK requires a Fetch API compatible environment to send events. Please add a Fetch API polyfill.');
     let r = {
             ...t,
-            stackParser: (0, l.Sq)(t.stackParser || D.Dt),
+            stackParser: (0, l.Sq)(t.stackParser || L.Dt),
             integrations: (0, i.m8)(t),
-            transport: t.transport || L.f
+            transport: t.transport || D.f
         },
         n = (0, _.M)(A.R, r);
     return (

@@ -31,8 +31,8 @@ var v = n(392750),
     N = n(691867),
     S = n(916790),
     y = n(645973),
-    w = n(912072),
-    I = n(246992),
+    I = n(912072),
+    w = n(246992),
     k = n(442954),
     E = n(702904),
     R = n(178821),
@@ -127,17 +127,17 @@ function z() {
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
-                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.OVERLAYS })
+                    render: () => (0, r.jsx)(I.Z, { devSettingsCategory: b.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
                     name: 'Messaging',
-                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.MESSAGING })
+                    render: () => (0, r.jsx)(I.Z, { devSettingsCategory: b.zU.MESSAGING })
                 }),
                 e.push({
                     id: 'reporting',
                     name: 'Reporting',
-                    render: () => (0, r.jsx)(w.Z, { devSettingsCategory: b.zU.REPORTING })
+                    render: () => (0, r.jsx)(I.Z, { devSettingsCategory: b.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -204,7 +204,7 @@ function z() {
             name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: i }
         }),
-        (0, r.jsxs)(I.Gk, {
+        (0, r.jsxs)(w.Gk, {
             children: [
                 (0, r.jsxs)(m.ZP, {
                     className: H.headerBar,
@@ -223,7 +223,7 @@ function z() {
                 }),
                 (0, r.jsx)(n, {}),
                 l(),
-                (0, r.jsx)(I.Br, { className: U.layerContainer })
+                (0, r.jsx)(w.Br, { className: U.layerContainer })
             ]
         })
     );

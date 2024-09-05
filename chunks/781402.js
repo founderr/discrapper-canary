@@ -1,20 +1,20 @@
-l.d(t, {
+n.d(t, {
     Z: function () {
-        return n;
+        return o;
     }
 });
-var i = l(470079);
-function n() {
+var i = n(470079);
+function o() {
     let e = (0, i.createContext)(void 0);
     return {
-        Provider: ({ initialStore: t, createStore: l, children: n }) => {
-            let s = (0, i.useRef)();
-            return !s.current && (t && (console.warn('Provider initialStore is deprecated and will be removed in the next version.'), !l && (l = () => t)), (s.current = l())), (0, i.createElement)(e.Provider, { value: s.current }, n);
+        Provider: ({ initialStore: t, createStore: n, children: o }) => {
+            let r = (0, i.useRef)();
+            return !r.current && (t && (console.warn('Provider initialStore is deprecated and will be removed in the next version.'), !n && (n = () => t)), (r.current = n())), (0, i.createElement)(e.Provider, { value: r.current }, o);
         },
-        useStore: (t, l = Object.is) => {
-            let n = (0, i.useContext)(e);
-            if (!n) throw Error('Seems like you have not used zustand provider as an ancestor.');
-            return n(t, l);
+        useStore: (t, n = Object.is) => {
+            let o = (0, i.useContext)(e);
+            if (!o) throw Error('Seems like you have not used zustand provider as an ancestor.');
+            return o(t, n);
         },
         useStoreApi: () => {
             let t = (0, i.useContext)(e);

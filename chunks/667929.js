@@ -3,7 +3,7 @@ r.d(t, {
         return w;
     },
     y7: function () {
-        return x;
+        return j;
     }
 });
 var a = r(693598),
@@ -160,7 +160,7 @@ var h = o.default,
             a = t.defaultBase16,
             n = void 0 === a ? h : a,
             s = t.base16Themes,
-            o = j(r, void 0 === s ? null : s);
+            o = x(r, void 0 === s ? null : s);
         o && (r = d(d({}, o), r));
         for (
             var i = p.reduce(function (e, t) {
@@ -184,7 +184,7 @@ var h = o.default,
     E = function (e) {
         return !!e.extend;
     },
-    j = function (e, t) {
+    x = function (e, t) {
         if ((e && E(e) && e.extend && (e = e.extend), 'string' == typeof e)) {
             var r = e.split(':'),
                 a = (0, s.Z)(r, 2),
@@ -194,7 +194,7 @@ var h = o.default,
         }
         return e && Object.prototype.hasOwnProperty.call(e, 'base00') ? e : void 0;
     },
-    x = function (e) {
+    j = function (e) {
         if ('string' == typeof e) return ''.concat(e, ':inverted');
         if (e && E(e) && e.extend) return 'string' == typeof e.extend ? d(d({}, e), {}, { extend: ''.concat(e.extend, ':inverted') }) : d(d({}, e), {}, { extend: k(e.extend) });
         return e ? k(e) : e;

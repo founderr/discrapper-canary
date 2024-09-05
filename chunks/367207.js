@@ -35,8 +35,8 @@ var l = n(392711),
     j = n(1163),
     D = n(841174),
     w = n(879463),
-    U = n(822070),
-    G = n(520540),
+    G = n(822070),
+    U = n(520540),
     k = n(11352),
     B = n(474936),
     V = n(981631),
@@ -80,7 +80,7 @@ class Y extends c.Z {
         if (P.Z.getIsFetchingReferralIncentiveEligibility() || !(0, I.I5)(e)) return;
         let t = { location: 'PremiumManager' },
             n = { autoTrackExposure: !1 };
-        if (!!G.g.getCurrentConfig(t, n).enabled && !w.eP.getCurrentConfig(t, n).enabled) U.$.getCurrentConfig(t, n).enabled && (0, R.bq)();
+        if (!!U.g.getCurrentConfig(t, n).enabled && !w.eP.getCurrentConfig(t, n).enabled) G.$.getCurrentConfig(t, n).enabled && (0, R.bq)();
     }
     openPremiumPaymentModalInApp(e) {
         if (__OVERLAY__) throw Error('Should not use this function from the overlay, use ModalAPI.openModal instead');

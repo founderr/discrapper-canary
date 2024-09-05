@@ -1,28 +1,28 @@
-n.d(t, {
+t.d(n, {
     Z: function () {
-        return l;
+        return u;
     }
 });
-var r = n(735250);
-n(470079);
-var i = n(153867),
-    a = n(468026),
-    o = n(394059),
-    s = n(689938);
-function l(e) {
-    let { type: t, onConfirm: n, ...l } = e,
-        u = t === o.K.STREAM ? s.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_HEADER : s.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_HEADER,
-        d = t === o.K.STREAM ? s.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_BODY : s.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_BODY;
-    return (0, r.jsx)(a.default, {
-        confirmText: s.Z.Messages.CONFIRM,
-        secondaryConfirmText: s.Z.Messages.DONT_ASK_AGAIN,
-        title: u,
-        cancelText: s.Z.Messages.CANCEL,
-        onConfirm: n,
+var i = t(735250);
+t(470079);
+var r = t(153867),
+    a = t(468026),
+    o = t(394059),
+    l = t(689938);
+function u(e) {
+    let { type: n, onConfirm: t, ...u } = e,
+        d = n === o.K.STREAM ? l.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_HEADER : l.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_HEADER,
+        s = n === o.K.STREAM ? l.Z.Messages.HIDE_SELF_STREAM_CONFIRMATION_BODY : l.Z.Messages.HIDE_SELF_VIDEO_CONFIRMATION_BODY;
+    return (0, i.jsx)(a.default, {
+        confirmText: l.Z.Messages.CONFIRM,
+        secondaryConfirmText: l.Z.Messages.DONT_ASK_AGAIN,
+        title: d,
+        cancelText: l.Z.Messages.CANCEL,
+        onConfirm: t,
         onConfirmSecondary: () => {
-            i.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), n();
+            r.ZP.updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: !0 }), t();
         },
-        body: d,
-        ...l
+        body: s,
+        ...u
     });
 }

@@ -199,10 +199,10 @@ var n = (function (e) {
         (E.prototype.abs = function () {
             return new E(this.value >= 0 ? this.value : -this.value);
         });
-    function D(e, t, r) {
+    function L(e, t, r) {
         return e < 10000000 ? new i(f(t, e), r) : new i(O(t, c(e)), r);
     }
-    function L(e) {
+    function D(e) {
         var t,
             r,
             n,
@@ -253,10 +253,10 @@ var n = (function (e) {
     }),
         (i.prototype.times = i.prototype.multiply),
         (_.prototype._multiplyBySmall = function (e) {
-            return s(e.value * this.value) ? new _(e.value * this.value) : D(Math.abs(e.value), c(Math.abs(this.value)), this.sign !== e.sign);
+            return s(e.value * this.value) ? new _(e.value * this.value) : L(Math.abs(e.value), c(Math.abs(this.value)), this.sign !== e.sign);
         }),
         (i.prototype._multiplyBySmall = function (e) {
-            return 0 === e.value ? o[0] : 1 === e.value ? this : -1 === e.value ? this.negate() : D(Math.abs(e.value), this.value, this.sign !== e.sign);
+            return 0 === e.value ? o[0] : 1 === e.value ? this : -1 === e.value ? this.negate() : L(Math.abs(e.value), this.value, this.sign !== e.sign);
         }),
         (_.prototype.multiply = function (e) {
             return W(e)._multiplyBySmall(this);
@@ -267,11 +267,11 @@ var n = (function (e) {
         }),
         (E.prototype.times = E.prototype.multiply),
         (i.prototype.square = function () {
-            return new i(L(this.value), !1);
+            return new i(D(this.value), !1);
         }),
         (_.prototype.square = function () {
             var e = this.value * this.value;
-            return s(e) ? new _(e) : new i(L(c(Math.abs(this.value))), !1);
+            return s(e) ? new _(e) : new i(D(c(Math.abs(this.value))), !1);
         }),
         (E.prototype.square = function (e) {
             return new E(this.value * this.value);
@@ -352,9 +352,9 @@ var n = (function (e) {
                       return s.reverse(), [I(s), I(c)];
                   })(A, T))[0];
         var S = e.sign !== s.sign,
-            D = n[1],
-            L = e.sign;
-        return 'number' == typeof r ? (S && (r = -r), (r = new _(r))) : (r = new i(r, S)), 'number' == typeof D ? (L && (D = -D), (D = new _(D))) : (D = new i(D, L)), [r, D];
+            L = n[1],
+            D = e.sign;
+        return 'number' == typeof r ? (S && (r = -r), (r = new _(r))) : (r = new i(r, S)), 'number' == typeof L ? (D && (L = -L), (L = new _(L))) : (L = new i(L, D)), [r, L];
     }
     function g(e, t) {
         if (e.length !== t.length) return e.length > t.length ? 1 : -1;

@@ -52,10 +52,10 @@ function A(e, t, r, A, T = 'auto.http.browser') {
                 return;
             }
         })(f),
-        D = S ? (0, n.en)(S).host : void 0,
-        L = !!(0, c.HN)(),
+        L = S ? (0, n.en)(S).host : void 0,
+        D = !!(0, c.HN)(),
         h =
-            d && L
+            d && D
                 ? (0, l.qp)({
                       name: `${O} ${f}`,
                       attributes: {
@@ -63,7 +63,7 @@ function A(e, t, r, A, T = 'auto.http.browser') {
                           type: 'fetch',
                           'http.method': O,
                           'http.url': S,
-                          'server.address': D,
+                          'server.address': L,
                           [E.S3]: T,
                           [E.$J]: 'http.client'
                       }
@@ -111,7 +111,7 @@ function A(e, t, r, A, T = 'auto.http.browser') {
                     }
                 );
             }
-        })(t, p, N, r, (0, s.z)() && L ? h : void 0);
+        })(t, p, N, r, (0, s.z)() && D ? h : void 0);
     }
     return h;
 }

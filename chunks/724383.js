@@ -23,7 +23,7 @@ t.Z = function () {
         })(e);
     return (
         a.useEffect(() => {
-            (0, c.R)({ selectedTab: e });
+            (0, c.RI)({ selectedTab: e });
         }, [e]),
         (0, i.jsxs)('section', {
             className: h.container,

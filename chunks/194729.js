@@ -98,7 +98,7 @@ class J extends a.PureComponent {
             });
         } else null != l && l !== Y.Hk && E.Z.wait(() => (0, m.uY)(l));
         let u = null !== (t = null === (e = (0, L.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
-        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, Z.e)('guild_discovery'), (0, S.k)({ selectedCategoryId: o });
+        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, Z.e)('guild_discovery'), (0, S.kR)({ selectedCategoryId: o });
     }
     componentDidUpdate(e) {
         let {
@@ -122,7 +122,7 @@ class J extends a.PureComponent {
             var l;
             null === (l = this._scroller.current) || void 0 === l || l.scrollTo({ to: 0 });
         }
-        e.currentCategoryId !== r && D.Az(this.loadId, Array.from(this._guildIdsSeen)), e.currentCategoryId !== r && (0, S.k)({ selectedCategoryId: r }), e.mostRecentQuery.length > 0 && a.length < 1 && s !== r && (0, m.uY)(null != s ? s : Y.Hk);
+        e.currentCategoryId !== r && D.Az(this.loadId, Array.from(this._guildIdsSeen)), e.currentCategoryId !== r && (0, S.kR)({ selectedCategoryId: r }), e.mostRecentQuery.length > 0 && a.length < 1 && s !== r && (0, m.uY)(null != s ? s : Y.Hk);
     }
     componentWillUnmount() {
         let { currentCategoryId: e, recommendationsLoadId: t, recommendationsGuilds: n } = this.props;

@@ -1,6 +1,6 @@
 t.d(n, {
     V: function () {
-        return d;
+        return u;
     },
     Z: function () {
         return c;
@@ -15,7 +15,7 @@ var l = t(628028),
     a = t(33937);
 function c(e) {
     let { type: n } = e;
-    return (0, i.jsx)(d, {
+    return (0, i.jsx)(u, {
         icon:
             'user' === n
                 ? (0, i.jsx)(r.t, {
@@ -29,7 +29,7 @@ function c(e) {
         text: 'user' === n ? s.Z.Messages.Storefront.USER_SUBSCRIPTION : s.Z.Messages.Storefront.SERVER_SUBSCRIPTION
     });
 }
-function d(e) {
+function u(e) {
     let { icon: n, text: t } = e;
     return (0, i.jsxs)('div', {
         className: a.container,

@@ -87,12 +87,12 @@ let w = c.ZP.connectStores([N.ZP, C.Z], (e) => {
             category: C.Z.getChannel(t.parent_id)
         };
     })(D),
-    U = c.ZP.connectStores([S.ZP], (e) => {
+    G = c.ZP.connectStores([S.ZP], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: S.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(D),
-    G = c.ZP.connectStores([I.default], (e) => {
+    U = c.ZP.connectStores([I.default], (e) => {
         let { guild: t } = e;
         return { unread: I.default.hasUnread(t.id) };
     })(A.ic),
@@ -424,7 +424,7 @@ class H extends r.PureComponent {
                         );
                     case _.h8.VOICE_CHANNEL:
                         return (0, l.jsx)(
-                            U,
+                            G,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,
@@ -439,7 +439,7 @@ class H extends r.PureComponent {
                         );
                     case _.h8.GUILD:
                         return (0, l.jsx)(
-                            G,
+                            U,
                             {
                                 id: this.getRowId(t),
                                 focused: i >= 0 && t === i,

@@ -3,9 +3,9 @@ t.d(n, {
         return M;
     }
 });
-var i = t(735250);
+var a = t(735250);
 t(470079);
-var a = t(442837),
+var i = t(442837),
     l = t(481060),
     r = t(668781),
     s = t(79390),
@@ -16,10 +16,10 @@ var a = t(442837),
     E = t(689938);
 function M(e, n) {
     let t = (0, u.$R)(n),
-        M = (0, a.e7)([d.Z], () => d.Z.can(c.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
+        M = (0, i.e7)([d.Z], () => d.Z.can(c.Plq.MANAGE_MESSAGES, n) && t, [n, t]);
     return !M || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, s.eQ)(e))
         ? null
-        : (0, i.jsx)(l.MenuItem, {
+        : (0, a.jsx)(l.MenuItem, {
               id: 'remove-reactions',
               label: E.Z.Messages.REMOVE_ALL_REACTIONS,
               action: function (t) {

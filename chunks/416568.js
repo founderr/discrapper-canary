@@ -34,8 +34,8 @@ var i = n(735250),
     j = n(709054),
     D = n(727258),
     w = n(605951),
-    U = n(474109),
-    G = n(741616),
+    G = n(474109),
+    U = n(741616),
     k = n(187835),
     B = n(162050),
     V = n(118122),
@@ -307,8 +307,8 @@ function ec(e) {
     }
     (0, w.Z)(eM.scrollToGuild);
     let ew = o.getRoots(),
-        eU = (0, v.Z)(),
-        eG = (0, b.U)(),
+        eG = (0, v.Z)(),
+        eU = (0, b.U)(),
         ek = ei.map((e) =>
             (0, i.jsx)(
                 H.Z,
@@ -335,7 +335,7 @@ function ec(e) {
                         role: 'tree',
                         className: en.tree,
                         children: [
-                            (0, i.jsx)(U.Z, {
+                            (0, i.jsx)(G.Z, {
                                 ref: ed,
                                 isVisible: eM.isItemVisible,
                                 onJumpTo: eM.handleJumpToGuild,
@@ -351,11 +351,11 @@ function ec(e) {
                                 onScroll: eM.handleScroll,
                                 children: [
                                     (0, i.jsx)(z.u, {}),
-                                    eU ? (0, i.jsx)(Z.Z, {}) : null,
+                                    eG ? (0, i.jsx)(Z.Z, {}) : null,
                                     (0, i.jsx)(B.Z, {}),
                                     (0, i.jsx)(Y.Z, { isOnHubVerificationRoute: ey }),
-                                    (0, i.jsx)(G.Z, {}),
-                                    eG,
+                                    (0, i.jsx)(U.Z, {}),
+                                    eU,
                                     m.map((e) => (0, i.jsx)($.Z, { guildId: e }, e)),
                                     (0, i.jsx)(J.Z, { onActivate: ej }),
                                     (0, i.jsx)(K.Z, {}),
@@ -410,7 +410,7 @@ function ec(e) {
                                         })
                                     })
                                   : null,
-                            (0, i.jsx)(U.Z, {
+                            (0, i.jsx)(G.Z, {
                                 reverse: !0,
                                 ref: eh,
                                 isVisible: eM.isItemVisible,

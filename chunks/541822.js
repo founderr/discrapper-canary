@@ -13,10 +13,10 @@ var i = t(735250),
 function c(e) {
     let { children: n, gradientClassName: t, ...r } = e,
         c = l.useRef(null),
-        [d, u] = l.useState(!0),
+        [u, d] = l.useState(!0),
         S = () => {
             var e;
-            (null === (e = c.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? u(!1) : u(!0);
+            (null === (e = c.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? d(!1) : d(!0);
         };
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -31,7 +31,7 @@ function c(e) {
             }),
             (0, i.jsx)('div', {
                 className: o()(a.containerScrollGradient, t),
-                'data-shown': d
+                'data-shown': u
             })
         ]
     });

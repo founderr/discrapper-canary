@@ -11,7 +11,7 @@ function i(e, t) {
         (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
     }
 }
-function a(e, t, r) {
+function s(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function a(e, t, r) {
         e
     );
 }
-var s = ['canDrag', 'beginDrag', 'isDragging', 'endDrag'],
+var a = ['canDrag', 'beginDrag', 'isDragging', 'endDrag'],
     c = ['beginDrag'],
     u = (function () {
         var e, t, r;
@@ -33,11 +33,11 @@ var s = ['canDrag', 'beginDrag', 'isDragging', 'endDrag'],
             !(function (e, t) {
                 if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
             })(this, n),
-                a(this, 'props', null),
-                a(this, 'spec', void 0),
-                a(this, 'monitor', void 0),
-                a(this, 'ref', void 0),
-                a(this, 'beginDrag', function () {
+                s(this, 'props', null),
+                s(this, 'spec', void 0),
+                s(this, 'monitor', void 0),
+                s(this, 'ref', void 0),
+                s(this, 'beginDrag', function () {
                     if (!!o.props) {
                         var e = o.spec.beginDrag(o.props, o.monitor, o.ref.current);
                         return e;
@@ -82,7 +82,7 @@ var s = ['canDrag', 'beginDrag', 'isDragging', 'endDrag'],
 function d(e) {
     return (
         Object.keys(e).forEach(function (t) {
-            (0, n.k)(s.indexOf(t) > -1, 'Expected the drag source specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', s.join(', '), t), (0, n.k)('function' == typeof e[t], 'Expected %s in the drag source specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', t, t, e[t]);
+            (0, n.k)(a.indexOf(t) > -1, 'Expected the drag source specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', a.join(', '), t), (0, n.k)('function' == typeof e[t], 'Expected %s in the drag source specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', t, t, e[t]);
         }),
         c.forEach(function (t) {
             (0, n.k)('function' == typeof e[t], 'Expected %s in the drag source specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source', t, t, e[t]);

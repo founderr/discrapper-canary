@@ -1,10 +1,10 @@
 var r = n(192291),
     i = n(22092),
-    a = r.aTypedArrayConstructor;
+    o = r.aTypedArrayConstructor;
 (0, r.exportTypedArrayStaticMethod)(
     'of',
     function () {
-        for (var e = 0, t = arguments.length, n = new (a(this))(t); t > e; ) n[e] = arguments[e++];
+        for (var t = 0, e = arguments.length, n = new (o(this))(e); e > t; ) n[t] = arguments[t++];
         return n;
     },
     i

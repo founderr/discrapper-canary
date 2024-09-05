@@ -10,10 +10,10 @@ var l = t(777207),
     o = t(330711),
     s = t(689498);
 function a(e) {
-    let { benefits: n, description: t, imgSrc: a, title: c, tag: d, FallbackIcon: u } = e,
+    let { benefits: n, description: t, imgSrc: a, title: c, tag: u, FallbackIcon: d } = e,
         S = null != a ? { '--custom-background-url': 'url('.concat(a.toString(), ')') } : void 0,
         m = null != t && '' !== t,
-        I = m || null != n;
+        f = m || null != n;
     return (0, i.jsxs)('div', {
         className: s.container,
         children: [
@@ -26,7 +26,7 @@ function a(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: s.headerTop,
-                        children: (0, i.jsx)('div', { children: d })
+                        children: (0, i.jsx)('div', { children: u })
                     }),
                     (0, i.jsx)('div', {
                         className: s.headerImage,
@@ -36,7 +36,7 @@ function a(e) {
                                       src: a.toString(),
                                       alt: ''
                                   })
-                                : (0, i.jsx)(u, {
+                                : (0, i.jsx)(d, {
                                       size: 'custom',
                                       color: 'var(--text-muted)',
                                       height: 96,
@@ -58,7 +58,7 @@ function a(e) {
                                 variant: 'heading-xl/semibold',
                                 children: c
                             }),
-                            I &&
+                            f &&
                                 (0, i.jsxs)('div', {
                                     className: s.details,
                                     children: [

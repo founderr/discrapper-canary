@@ -1,10 +1,10 @@
 t.r(n),
     t.d(n, {
         default: function () {
-            return k;
+            return w;
         },
         useMessageMenu: function () {
-            return w;
+            return k;
         }
     });
 var a = t(735250);
@@ -28,23 +28,23 @@ var i = t(374470),
     S = t(749339),
     T = t(601184),
     v = t(6148),
-    R = t(519110),
-    A = t(759875),
+    A = t(519110),
+    R = t(759875),
     h = t(168405),
-    O = t(536639),
-    N = t(720904),
+    N = t(536639),
+    O = t(720904),
     p = t(88791),
     x = t(385302),
     j = t(873699),
-    b = t(134323),
-    C = t(429260),
-    D = t(1626),
+    D = t(134323),
+    b = t(429260),
+    C = t(1626),
     L = t(279329),
-    P = t(627938),
-    G = t(512303),
+    G = t(627938),
+    P = t(512303),
     y = t(481300),
     U = t(689938);
-function k(e) {
+function w(e) {
     var n, t;
     let a,
         l,
@@ -57,7 +57,7 @@ function k(e) {
         Z = c.getAttribute('data-name');
     if (null != E) l = a = s = E.url;
     else for (; (0, i.k)(g); ) (0, i.k)(g, HTMLImageElement) && null != g.src && (l = g.src), (0, i.k)(g, HTMLAnchorElement) && null != g.href && ((a = g.href), (o = g.textContent), null == l && 'img' === g.getAttribute('data-role') && ((l = a), g.hasAttribute('data-safe-src') && '' !== g.getAttribute('data-safe-src') && (s = g.getAttribute('data-safe-src')))), (g = g.parentNode);
-    return w({
+    return k({
         message: d,
         channel: u,
         mediaItem: E,
@@ -78,20 +78,20 @@ function k(e) {
         shouldHideMediaOptions: M
     });
 }
-function w(e) {
-    let { message: n, channel: t, mediaItem: i, textSelection: r, favoriteableType: k, favoriteableId: w, favoriteableName: F, itemHref: V, itemSrc: z, itemSafeSrc: K, itemTextContent: H, canReport: X, onHeightUpdate: Y, onSelect: B, onClose: W, navId: q, ariaLabel: J, shouldHideMediaOptions: $ = !1 } = e,
+function k(e) {
+    let { message: n, channel: t, mediaItem: i, textSelection: r, favoriteableType: w, favoriteableId: k, favoriteableName: F, itemHref: V, itemSrc: z, itemSafeSrc: K, itemTextContent: X, canReport: H, onHeightUpdate: Y, onSelect: B, onClose: W, navId: q, ariaLabel: J, shouldHideMediaOptions: $ = !1 } = e,
         Q = (0, u.Z)(r),
         ee = (0, E.Z)(r),
-        en = (0, N.Z)(n, t),
+        en = (0, O.Z)(n, t),
         et = (0, _.Z)(n, t),
         ea = (0, v.Z)(n, t),
-        ei = (0, O.Z)(n, t),
-        el = (0, R.Z)({
-            type: k,
-            id: w,
+        ei = (0, N.Z)(n, t),
+        el = (0, A.Z)({
+            type: w,
+            id: k,
             name: F
         }),
-        er = (0, D.Z)(n, t),
+        er = (0, C.Z)(n, t),
         es = (0, h.Z)(n, t),
         eo = (0, p.Z)(n),
         eu = (0, f.Z)(n, t),
@@ -99,9 +99,9 @@ function w(e) {
         ec = (0, x.Z)(n, t),
         eE = (0, j.Z)(n, t),
         eM = (0, T.Z)(n, t),
-        eI = (0, C.Z)(n),
+        eI = (0, b.Z)(n),
         em = (0, L.Z)(n, t),
-        eg = (0, c.Z)(null != V ? V : z, H, n, { shouldHideMediaOptions: $ }),
+        eg = (0, c.Z)(null != V ? V : z, X, n, { shouldHideMediaOptions: $ }),
         e_ = (0, d.Z)(K, n, { shouldHideMediaOptions: $ }),
         ef = (0, y.Z)(n, i),
         eZ = (0, o.Z)({
@@ -109,20 +109,20 @@ function w(e) {
             label: U.Z.Messages.COPY_ID_MESSAGE,
             shiftId: ''.concat(n.channel_id, '-').concat(n.id)
         }),
-        eS = (0, b.Z)(n, t),
-        eT = (0, A.Z)(n, t),
-        ev = (0, P.Z)(n, t),
-        eR = (0, m.Z)(r, t.getGuildId()),
-        eA = (0, g.Z)(n),
+        eS = (0, D.Z)(n, t),
+        eT = (0, R.Z)(n, t),
+        ev = (0, G.Z)(n, t),
+        eA = (0, m.Z)(r, t.getGuildId()),
+        eR = (0, g.Z)(n),
         eh = (0, S.Z)(n),
-        eO = (0, I.Z)({
+        eN = (0, I.Z)({
             commandType: s.yU.MESSAGE,
             commandTargetId: n.id,
             channel: t,
             guildId: void 0,
             onHeightUpdate: Y
         }),
-        eN = (0, G.Z)(n),
+        eO = (0, P.Z)(n),
         ep = (0, M.Z)(n);
     return (0, a.jsxs)(l.Menu, {
         navId: q,
@@ -133,9 +133,9 @@ function w(e) {
             (0, a.jsx)(l.MenuGroup, { children: Q }),
             (0, a.jsx)(l.MenuGroup, { children: ee }),
             (0, a.jsxs)(l.MenuGroup, {
-                children: ['' === r ? en : null, et, eo, ea, ei, eA, el, eS, eT, ev, eh, eO, er, es, eu, ed, em, ep, eE, ec, eN, eM, X && eI]
+                children: ['' === r ? en : null, et, eo, ea, ei, eR, el, eS, eT, ev, eh, eN, er, es, eu, ed, em, ep, eE, ec, eO, eM, H && eI]
             }),
-            null != eR && (0, a.jsx)(l.MenuGroup, { children: eR }),
+            null != eA && (0, a.jsx)(l.MenuGroup, { children: eA }),
             (0, a.jsxs)(l.MenuGroup, {
                 children: [e_, ef]
             }),

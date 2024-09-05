@@ -3,9 +3,9 @@ t.d(n, {
         return u;
     }
 });
-var i = t(735250);
+var a = t(735250);
 t(470079);
-var a = t(481060),
+var i = t(481060),
     l = t(111618),
     r = t(730954),
     s = t(981631),
@@ -13,7 +13,7 @@ var a = t(481060),
 function u(e, n) {
     return e.state !== s.yb.SEND_FAILED
         ? null
-        : (0, i.jsx)(a.MenuItem, {
+        : (0, a.jsx)(i.MenuItem, {
               id: 'resend',
               label: o.Z.Messages.RESEND_MESSAGE,
               action: () => (0, r.Z)(n, e, void 0, l.Z.getOptions(e.id))

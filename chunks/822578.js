@@ -71,18 +71,18 @@ function l(e, t, r, l, A, T) {
     })(l, r.captureContext);
     r.mechanism && (0, n.EG)(p, r.mechanism);
     let S = A ? A.getEventProcessors() : [],
-        D = (0, s.lW)().getScopeData();
+        L = (0, s.lW)().getScopeData();
     if (T) {
         let e = T.getScopeData();
-        (0, u.yo)(D, e);
+        (0, u.yo)(L, e);
     }
     if (f) {
         let e = f.getScopeData();
-        (0, u.yo)(D, e);
+        (0, u.yo)(L, e);
     }
-    let L = [...(r.attachments || []), ...D.attachments];
-    L.length && (r.attachments = L), (0, u.gi)(p, D);
-    let h = [...S, ...D.eventProcessors];
+    let D = [...(r.attachments || []), ...L.attachments];
+    D.length && (r.attachments = D), (0, u.gi)(p, L);
+    let h = [...S, ...L.eventProcessors];
     return (0, c.R)(h, p, r).then((e) =>
         (e &&
             (function (e) {

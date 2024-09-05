@@ -3,9 +3,9 @@ t.d(n, {
         return d;
     }
 });
-var i = t(735250);
+var a = t(735250);
 t(470079);
-var a = t(481060),
+var i = t(481060),
     l = t(346610),
     r = t(868643),
     s = t(245216),
@@ -15,7 +15,7 @@ function d(e, n) {
     let t = (0, r.a)(e),
         { canForwardMessages: d } = (0, l.yk)({ location: 'MessageActionsMenu' }, { autoTrackExposure: !1 });
     return t && d
-        ? (0, i.jsx)(a.MenuItem, {
+        ? (0, a.jsx)(i.MenuItem, {
               id: 'forward',
               label: u.Z.Messages.MESSAGE_ACTION_FORWARD,
               icon: s.Z,

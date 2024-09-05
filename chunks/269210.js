@@ -1,6 +1,6 @@
 t.d(n, {
     G: function () {
-        return I;
+        return f;
     },
     U: function () {
         return m;
@@ -14,33 +14,33 @@ var l = t(557533),
     s = t(368072),
     a = t(777207),
     c = t(752843),
-    d = t(330711),
-    u = t(772421),
+    u = t(330711),
+    d = t(772421),
     S = t(778342);
 function m(e) {
-    let { description: n, imgSrc: t, renderPurchaseButton: l, onPurchase: m, subscriptionType: I, title: f, onDetails: x, benefitItems: _, benefitsSummary: p } = e;
+    let { description: n, imgSrc: t, renderPurchaseButton: l, onPurchase: m, subscriptionType: f, title: I, onDetails: x, benefitItems: _, benefitsSummary: p } = e;
     return (0, i.jsx)(o.tE, {
         children: (0, i.jsxs)('div', {
-            className: r()(u.container, S.hoverCard),
+            className: r()(d.container, S.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != x ? x() : null != m && m();
             },
             children: [
                 (0, i.jsxs)('div', {
-                    className: u.card,
+                    className: d.card,
                     children: [
-                        null != I && (0, i.jsx)(c.Z, { type: I }),
+                        null != f && (0, i.jsx)(c.Z, { type: f }),
                         (0, i.jsxs)('div', {
-                            className: u.body,
+                            className: d.body,
                             children: [
                                 (0, i.jsx)(a.x, {
                                     tag: 'div',
                                     variant: 'heading-lg/semibold',
-                                    children: f
+                                    children: I
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: u.image,
+                                    className: d.image,
                                     children:
                                         null != t
                                             ? (0, i.jsx)('img', {
@@ -56,7 +56,7 @@ function m(e) {
                                 }),
                                 null != l
                                     ? l({
-                                          className: u.purchaseBtn,
+                                          className: d.purchaseBtn,
                                           onClick: (e) => {
                                               e.stopPropagation(), null == m || m();
                                           }
@@ -65,7 +65,7 @@ function m(e) {
                                 null != n &&
                                     '' !== n &&
                                     (0, i.jsx)(a.x, {
-                                        className: u.description,
+                                        className: d.description,
                                         color: 'text-normal',
                                         variant: 'text-sm/medium',
                                         children: n
@@ -76,25 +76,25 @@ function m(e) {
                 }),
                 null != p &&
                     (0, i.jsx)('div', {
-                        className: u.benefitsSummary,
+                        className: d.benefitsSummary,
                         children: (0, i.jsx)(a.x, {
                             color: 'interactive-normal',
                             variant: 'text-sm/medium',
-                            children: d.Z.Messages.Storefront.BENEFITS_SUMMARY.format({ count: p })
+                            children: u.Z.Messages.Storefront.BENEFITS_SUMMARY.format({ count: p })
                         })
                     }),
                 null != _ &&
                     (0, i.jsx)('div', {
-                        className: u.benefits,
+                        className: d.benefits,
                         children: (0, i.jsx)('div', {
-                            className: u.benefitsContainer,
+                            className: d.benefitsContainer,
                             children: (0, i.jsxs)('div', {
-                                className: u.benefitsList,
+                                className: d.benefitsList,
                                 children: [
                                     (0, i.jsx)(a.x, {
                                         color: 'header-secondary',
                                         variant: 'eyebrow',
-                                        children: d.Z.Messages.Storefront.BENEFITS_TITLE
+                                        children: u.Z.Messages.Storefront.BENEFITS_TITLE
                                     }),
                                     _.length > 3
                                         ? (0, i.jsxs)(i.Fragment, {
@@ -103,7 +103,7 @@ function m(e) {
                                                   (0, i.jsx)(a.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
-                                                      children: d.Z.Messages.Storefront.MORE_BENEFITS.format({ count: _.length - 3 })
+                                                      children: u.Z.Messages.Storefront.MORE_BENEFITS.format({ count: _.length - 3 })
                                                   })
                                               ]
                                           })
@@ -116,13 +116,13 @@ function m(e) {
         })
     });
 }
-function I(e) {
+function f(e) {
     let { icon: n, name: t, description: l } = e;
     return (0, i.jsxs)('div', {
-        className: u.cardBenefit,
+        className: d.cardBenefit,
         children: [
             (0, i.jsx)('div', {
-                className: u.cardBenefitIcon,
+                className: d.cardBenefitIcon,
                 children: n
             }),
             (0, i.jsxs)('div', {
