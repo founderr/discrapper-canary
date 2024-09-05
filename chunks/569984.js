@@ -8,16 +8,18 @@ var m,
     N = n(754700),
     O = n(887003),
     R = n(442837),
-    v = n(570140),
-    C = n(497505),
-    y = n(918701),
-    L = n(5881),
-    D = n(46140);
-function b() {
+    v = n(481060),
+    C = n(570140),
+    y = n(497505),
+    L = n(918701),
+    D = n(5881),
+    b = n(46140),
+    M = n(689938);
+function P() {
     (r = !1), (i = !1), (a = new Map()), (s = new Map()), (o = 0), (l = new Set()), (u = new Set()), (c = new Set()), (d = new Set()), (E = new Map()), (f = new Map()), (h = new Map()), (p = null), (I = new Map()), (_ = new Set());
 }
-b();
-function M(e, t) {
+P();
+function U(e, t) {
     let n = (a = new Map(a)).get(e);
     if (null != n) {
         let r = {
@@ -34,22 +36,22 @@ function M(e, t) {
             a.set(e, r);
     }
 }
-function P(e, t) {
+function w(e, t) {
     let n = new Map(E);
     n.set(e, t), (E = n);
 }
-function U(e) {
+function x(e) {
     null != h.get(e) && (h = new Map(h)).delete(e);
 }
-function w(e) {
+function G(e) {
     let t = new Set(l);
     t.delete(e), (l = t);
 }
-function x(e) {
+function k(e) {
     let t = new Set(d);
     t.delete(e), (d = t);
 }
-class G extends (m = R.ZP.Store) {
+class B extends (m = R.ZP.Store) {
     get quests() {
         return a;
     }
@@ -101,7 +103,7 @@ class G extends (m = R.ZP.Store) {
     }
 }
 (S = 'QuestsStore'),
-    (g = 'displayName') in (T = G)
+    (g = 'displayName') in (T = B)
         ? Object.defineProperty(T, g, {
               value: S,
               enumerable: !0,
@@ -109,16 +111,16 @@ class G extends (m = R.ZP.Store) {
               writable: !0
           })
         : (T[g] = S),
-    (t.Z = new G(v.Z, {
+    (t.Z = new B(C.Z, {
         LOGOUT: function () {
-            b();
+            P();
         },
         QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function () {
             (o = Date.now()), (r = !0);
         },
         QUESTS_FETCH_CURRENT_QUESTS_SUCCESS: function (e) {
             let { quests: t } = e;
-            for (let e of ((r = !1), (a = new Map()), t)) a.set(e.id, e), e.targetedContent.includes(C.jn.QUEST_BAR) && (0, L.T)({ location: D.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
+            for (let e of ((r = !1), (a = new Map()), t)) a.set(e.id, e), e.targetedContent.includes(y.jn.QUEST_BAR) && (0, D.T)({ location: b.dr.QUESTS_STORE }).log('Delivered '.concat(e.config.messages.questName, ' (').concat(e.id, ')'));
         },
         QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function () {
             (o = 0), (r = !1);
@@ -135,7 +137,7 @@ class G extends (m = R.ZP.Store) {
         },
         QUESTS_SEND_HEARTBEAT_SUCCESS: function (e) {
             let { questId: t, streamKey: n, userStatus: r } = e;
-            _.add(t), M(t, { userStatus: r }), U(n);
+            _.add(t), U(t, { userStatus: r }), x(n);
         },
         QUESTS_SEND_HEARTBEAT_FAILURE: function (e) {
             let { questId: t, streamKey: n } = e;
@@ -153,11 +155,13 @@ class G extends (m = R.ZP.Store) {
         },
         QUESTS_ENROLL_SUCCESS: function (e) {
             let { enrolledQuestUserStatus: t } = e;
-            M(t.questId, { userStatus: t }), w(t.questId);
+            U(t.questId, { userStatus: t }), G(t.questId);
         },
         QUESTS_ENROLL_FAILURE: function (e) {
             let { questId: t } = e;
-            w(t);
+            G(t);
+            let n = a.get(t);
+            null != n && (0, L.zK)(n, b.S7.FRACTIONS_QUEST) && (0, v.showToast)((0, v.createToast)(M.Z.Messages.QUESTS_NITRO_ENROLL_FAILURE_TOAST, v.ToastType.FAILURE));
         },
         QUESTS_FETCH_REWARD_CODE_BEGIN: function (e) {
             let { questId: t } = e,
@@ -170,12 +174,12 @@ class G extends (m = R.ZP.Store) {
             r.delete(t),
                 (c = r),
                 !(function (e, t) {
-                    P(e, t);
+                    w(e, t);
                     let n = a.get(e),
                         r = null == n ? void 0 : n.userStatus;
                     null != r &&
                         null == r.claimedAt &&
-                        M(e, {
+                        U(e, {
                             userStatus: {
                                 ...r,
                                 claimedAt: t.claimedAt
@@ -211,8 +215,8 @@ class G extends (m = R.ZP.Store) {
                                 r = null === (t = n.items[0].tenantMetadata) || void 0 === t ? void 0 : t.questRewards.reward;
                             return (null == r ? void 0 : r.tag) !== O.w.REWARD_CODE ? null : r.rewardCode;
                         })({ entitlements: t });
-                        null != n && P(e, n),
-                            M(e, {
+                        null != n && w(e, n),
+                            U(e, {
                                 userStatus: {
                                     ...i,
                                     claimedAt: t.claimedAt,
@@ -234,27 +238,27 @@ class G extends (m = R.ZP.Store) {
         },
         QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
             let { dismissedQuestUserStatus: t } = e;
-            M(t.questId, { userStatus: t }), x(t.questId);
+            U(t.questId, { userStatus: t }), k(t.questId);
         },
         QUESTS_DISMISS_CONTENT_FAILURE: function (e) {
             let { questId: t } = e;
-            x(t);
+            k(t);
         },
         QUESTS_USER_STATUS_UPDATE: function (e) {
             let { user_status: t } = e;
-            (0, L.T)({ location: D.dr.QUESTS_STORE }).log('Received user status update for '.concat(t.quest_id), t), M(t.quest_id, { userStatus: (0, y.U3)(t) });
+            (0, D.T)({ location: b.dr.QUESTS_STORE }).log('Received user status update for '.concat(t.quest_id), t), U(t.quest_id, { userStatus: (0, L.U3)(t) });
         },
         STREAM_CLOSE: function (e) {
             let { streamKey: t } = e;
-            U(t);
+            x(t);
         },
         QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: function (e) {
             let { streamKey: t } = e;
-            U(t);
+            x(t);
         },
         QUESTS_PREVIEW_UPDATE_SUCCESS: function (e) {
             let { previewQuestUserStatus: t } = e;
-            M(t.questId, { userStatus: t }), null == t.claimedAt && (E = new Map(E)).delete(t.questId), null == t.enrolledAt && (I = new Map(I)).delete(t.questId);
+            U(t.questId, { userStatus: t }), null == t.claimedAt && (E = new Map(E)).delete(t.questId), null == t.enrolledAt && (I = new Map(I)).delete(t.questId);
         },
         QUESTS_DELIVERY_OVERRIDE: function (e) {
             let { questId: t } = e;

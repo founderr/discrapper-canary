@@ -647,5 +647,6 @@ e.exports = Object.freeze({
     QUESTS_NITRO_REWARD_MODAL_FOOTER_IN_GAME_BODY: 'You earned **{rewardNameWithArticle}**! It has been automatically applied to your account.',
     QUESTS_NITRO_REWARD_MODAL_ERROR_HAVE_A_SUB: "You already have Nitro! This Quest reward is only available to users who aren't subscribed to Nitro.",
     QUESTS_NITRO_REWARD_MODAL_ERROR_MISC: 'Something went wrong',
-    QUESTS_NITRO_REWARD_MODAL_BACKGROUND_IMAGE_ALT: 'Rocket Ships fly over a stary galaxy.'
+    QUESTS_NITRO_REWARD_MODAL_BACKGROUND_IMAGE_ALT: 'Rocket Ships fly over a stary galaxy.',
+    QUESTS_NITRO_ENROLL_FAILURE_TOAST: 'Something went wrong. You may not be elegible to enroll in this Quest.'
 });
