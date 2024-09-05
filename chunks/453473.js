@@ -281,8 +281,8 @@ function F(e) {
                   (0, i.jsx)(
                       T.sF,
                       {
-                          label: b.Z.Messages.MESSAGE_BOOKMARKS_CREATE,
-                          icon: _.BookmarkOutlineIcon,
+                          label: b.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
+                          icon: _.CheckmarkLargeIcon,
                           onClick: () =>
                               (0, O.z)({
                                   channelId: t.saveData.channelId,
@@ -290,18 +290,8 @@ function F(e) {
                                   dueAt: void 0
                               })
                       },
-                      'create-bookmark'
+                      'mark-complete'
                   ),
-                  (0, i.jsx)(
-                      T.sF,
-                      {
-                          label: b.Z.Messages.JUMP_TO_MESSAGE,
-                          icon: _.ArrowLargeRightIcon,
-                          onClick: (e) => a(e)
-                      },
-                      'jump-to-message'
-                  ),
-                  (0, i.jsx)(T.fO, {}),
                   (0, i.jsx)(
                       T.sF,
                       {
@@ -320,14 +310,25 @@ function F(e) {
                       },
                       'edit-reminder'
                   ),
+                  (0, i.jsx)(T.fO, {}),
                   (0, i.jsx)(
                       T.sF,
                       {
-                          label: b.Z.Messages.MESSAGE_REMINDERS_MARK_COMPLETE,
-                          icon: _.CheckmarkLargeIcon,
-                          onClick: () => (0, O.x)(t.saveData)
+                          label: b.Z.Messages.JUMP_TO_MESSAGE,
+                          icon: _.ArrowLargeRightIcon,
+                          onClick: (e) => a(e)
                       },
-                      'mark-complete'
+                      'jump-to-message'
+                  ),
+                  (0, i.jsx)(
+                      T.sF,
+                      {
+                          label: b.Z.Messages.FOR_LATER_REMOVE,
+                          icon: _.BookmarkOutlineIcon,
+                          onClick: () => (0, O.x)(t.saveData),
+                          dangerous: !0
+                      },
+                      'remove-reminder'
                   )
               ]
           })
@@ -363,9 +364,10 @@ function F(e) {
                   (0, i.jsx)(
                       T.sF,
                       {
-                          label: b.Z.Messages.MESSAGE_BOOKMARKS_REMOVE,
-                          icon: _.BookmarkIcon,
-                          onClick: () => (0, O.x)(t.saveData)
+                          label: b.Z.Messages.FOR_LATER_REMOVE,
+                          icon: _.BookmarkOutlineIcon,
+                          onClick: () => (0, O.x)(t.saveData),
+                          dangerous: !0
                       },
                       'remove-bookmark'
                   )
