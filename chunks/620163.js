@@ -93,7 +93,7 @@ var a = t(990547),
 let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BADGE],
     eB = eO.Z,
     eU = (e) => {
-        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eU, impressionSource: eG, numOfPendingFamilyRequests: eF, isOverlaySupported: ey, isClipsBetaTagShowing: eV = !1, shouldMergeGameSettings: eY, isUserSettingsSearchEnabled: ew, isKeywordFilteringEnabled: ek, isStaff: eH, isInappropriateConversationWarningEnabled: eW, paymentsBlocked: eK, isEligibleForQuests: ez, showGiftNitro: eQ, isStricterMessageRequestsEnabled: eX, hasLibraryApplication: eq, hasTOTPEnabled: eJ, canBroadcastActivity: e$, developerMode: e0, isSafetySettingsV2Enabled: e1 } = e;
+        let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eU, impressionSource: eG, numOfPendingFamilyRequests: eF, isOverlaySupported: ey, isClipsBetaTagShowing: eV = !1, shouldMergeGameSettings: eY, isUserSettingsSearchEnabled: ew, isKeywordFilteringEnabled: ek, isStaff: eH, isInappropriateConversationWarningEnabled: eW, paymentsBlocked: eK, isEligibleForQuests: ez, showGiftNitro: eQ, isStricterMessageRequestsEnabled: eX, hasLibraryApplication: eq, hasTOTPEnabled: eJ, canBroadcastActivity: e$, developerMode: e0, isSafetySettingsV2Enabled: e1, isAdultUser: e2 } = e;
         return Object.freeze({
             [eD.s6.SEARCH_NO_RESULTS]: {
                 section: _.ID.CUSTOM,
@@ -461,6 +461,12 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.SAFETY_ALERTS_SETTING_TITLE],
                 parent: eD.s6.PRIVACY_USER_SETTINGS,
                 predicate: () => eW
+            },
+            [eD.s6.PRIVACY_SAFETY_ALERTS_V2]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eZ.Z.Messages.SAFETY_ALERTS_SETTING_TITLE],
+                parent: eD.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+                predicate: () => eW && !e2
             },
             [eD.s6.PRIVACY_ACCOUNT_STANDING]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,

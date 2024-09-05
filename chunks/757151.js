@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return p;
+        return R;
     }
 });
 var n = t(735250),
@@ -10,89 +10,90 @@ var n = t(735250),
     o = t(518560),
     l = t(526156),
     c = t(924356),
-    d = t(122897),
-    u = t(402583),
-    _ = t(821035),
-    E = t(694569),
-    T = t(394655),
-    S = t(893996),
-    I = t(726985),
-    N = t(981631),
-    m = t(689938),
-    C = t(202490);
-let g = () =>
+    d = t(24400),
+    u = t(122897),
+    _ = t(402583),
+    E = t(821035),
+    T = t(694569),
+    S = t(394655),
+    I = t(893996),
+    N = t(726985),
+    m = t(981631),
+    C = t(689938),
+    g = t(202490);
+let A = () =>
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsxs)(S.Z, {
-                    title: m.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_CONTENT,
-                    webSetting: I.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                    children: [(0, n.jsx)(_.P, {}), (0, n.jsx)(d.Z, {}), (0, n.jsx)(T.Z, {}), (0, n.jsx)(c.Z, {})]
+                (0, n.jsxs)(I.Z, {
+                    title: C.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_CONTENT,
+                    webSetting: N.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
+                    children: [(0, n.jsx)(E.P, {}), (0, n.jsx)(u.Z, {}), (0, n.jsx)(S.Z, {}), (0, n.jsx)(d.Z, {}), (0, n.jsx)(c.Z, {})]
                 }),
-                (0, n.jsx)(S.Z, {
-                    title: m.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_FRIEND_REQUESTS,
-                    webSetting: I.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
-                    children: (0, n.jsx)(E.Z, {})
+                (0, n.jsx)(I.Z, {
+                    title: C.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_FRIEND_REQUESTS,
+                    webSetting: N.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY,
+                    children: (0, n.jsx)(T.Z, {})
                 })
             ]
         }),
-    A = () =>
+    h = () =>
         (0, n.jsx)(n.Fragment, {
-            children: (0, n.jsx)(S.Z, {
-                title: m.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_DISCORD_DATA_USAGE,
-                webSetting: I.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
-                children: (0, n.jsx)(u.Z, {})
+            children: (0, n.jsx)(I.Z, {
+                title: C.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_DISCORD_DATA_USAGE,
+                webSetting: N.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY,
+                children: (0, n.jsx)(_.Z, {})
             })
         }),
-    h = () =>
-        (0, n.jsx)(S.Z, {
-            title: m.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
-            webSetting: I.s6.PRIVACY_AND_SAFETY_STANDING_CATEGORY,
+    O = () =>
+        (0, n.jsx)(I.Z, {
+            title: C.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_SUPPORT_V2,
+            webSetting: N.s6.PRIVACY_AND_SAFETY_STANDING_CATEGORY,
             children: (0, n.jsx)(o.Z, {})
         }),
-    O = (e) => {
+    p = (e) => {
         let { children: s } = e;
         return (0, n.jsx)('div', {
-            className: C.settingsSection,
+            className: g.settingsSection,
             children: s
         });
     };
-function p(e) {
+function R(e) {
     return (
         a.useEffect(() => {
             (0, r.I)();
         }, []),
-        (0, n.jsxs)(O, {
+        (0, n.jsxs)(p, {
             children: [
                 (0, n.jsx)(i.HeadingLevel, {
                     children: (0, n.jsx)(i.Heading, {
                         variant: 'heading-xl/semibold',
-                        children: m.Z.Messages.PRIVACY_AND_SAFETY
+                        children: C.Z.Messages.PRIVACY_AND_SAFETY
                     })
                 }),
                 (0, n.jsx)(l.Z, {
-                    parentSetting: I.s6.PRIVACY_AND_SAFETY_V2,
-                    settingsSection: N.oAB.PRIVACY_AND_SAFETY_V2,
-                    panelClassName: C.tabPanel,
+                    parentSetting: N.s6.PRIVACY_AND_SAFETY_V2,
+                    settingsSection: m.oAB.PRIVACY_AND_SAFETY_V2,
+                    panelClassName: g.tabPanel,
                     tabs: [
                         {
-                            title: m.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_CONTENT_SOCIAL,
-                            component: g,
-                            setting: I.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL
-                        },
-                        {
-                            title: m.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_DATA_PRIVACY,
+                            title: C.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_CONTENT_SOCIAL,
                             component: A,
-                            setting: I.s6.PRIVACY_AND_SAFETY_DATA_PRIVACY
+                            setting: N.s6.PRIVACY_AND_SAFETY_CONTENT_SOCIAL
                         },
                         {
-                            title: m.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_STANDING,
+                            title: C.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_DATA_PRIVACY,
                             component: h,
-                            setting: I.s6.PRIVACY_AND_SAFETY_STANDING
+                            setting: N.s6.PRIVACY_AND_SAFETY_DATA_PRIVACY
                         },
                         {
-                            title: m.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_ENCRYPTION,
-                            component: h,
-                            setting: I.s6.PRIVACY_AND_SAFETY_ENCRYPTION
+                            title: C.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_STANDING,
+                            component: O,
+                            setting: N.s6.PRIVACY_AND_SAFETY_STANDING
+                        },
+                        {
+                            title: C.Z.Messages.PRIVACY_AND_SAFETY_TAB_TITLE_ENCRYPTION,
+                            component: O,
+                            setting: N.s6.PRIVACY_AND_SAFETY_ENCRYPTION
                         }
                     ]
                 })
