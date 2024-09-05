@@ -666,31 +666,30 @@ t.Z = function (e) {
     var t;
     let { channel: n, renderExternalHeader: s, maxHeight: l } = e,
         { width: r = 0, ref: o } = (0, x.Z)(),
-        { width: d = 0, height: p = 0, ref: _ } = (0, x.Z)(),
-        { ref: f } = (0, x.Z)(),
-        E = (0, N.bp)(),
-        g = (0, P.Z)(),
-        A = (0, c.e7)([eu.Z], () => {
+        { width: d = 0, height: p = 0, ref: m } = (0, x.Z)(),
+        { ref: _ } = (0, x.Z)(),
+        f = (0, N.bp)(),
+        E = (0, P.Z)(),
+        g = (0, c.e7)([eu.Z], () => {
             var e;
-            return (null !== (e = null == g ? void 0 : g.channelId) && void 0 !== e ? e : eu.Z.getVoiceChannelId()) === n.id;
+            return (null !== (e = null == E ? void 0 : E.channelId) && void 0 !== e ? e : eu.Z.getVoiceChannelId()) === n.id;
         }),
-        b = (0, T.Z)(A),
         {
-            participants: L,
-            filteredParticipants: y,
-            participantsVersion: D,
-            mode: k,
-            layout: U,
-            participantsOpen: B,
-            chatOpen: G,
-            selectedParticipant: V
+            participants: A,
+            filteredParticipants: b,
+            participantsVersion: L,
+            mode: y,
+            layout: D,
+            participantsOpen: k,
+            chatOpen: U,
+            selectedParticipant: B
         } = (0, c.cj)(
             [eg.Z],
             () => {
-                let e = E === eR.IlC.POPOUT,
+                let e = f === eR.IlC.POPOUT,
                     t = eg.Z.getMode(n.id);
                 e && (t = eR.WtW.VIDEO);
-                let i = t === eR.WtW.VIDEO ? eg.Z.getLayout(n.id, E) : eR.AEg.MINIMUM;
+                let i = t === eR.WtW.VIDEO ? eg.Z.getLayout(n.id, f) : eR.AEg.MINIMUM;
                 return (
                     e && i !== eR.AEg.FULL_SCREEN && (i = eR.AEg.NO_CHAT),
                     {
@@ -705,54 +704,51 @@ t.Z = function (e) {
                     }
                 );
             },
-            [E, n.id]
+            [f, n.id]
         ),
-        F = (0, c.Wu)([ei.Z], () => ei.Z.getAllActiveStreams()),
-        { selectedStream: W } = (0, c.cj)([ei.Z], () => ({ selectedStream: null != V ? ei.Z.getActiveStreamForStreamKey(V.id) : null }), [V]),
-        z = (0, c.e7)([er.Z], () => er.Z.getGuild(n.getGuildId())),
-        Y = (0, c.e7)([el.Z], () => el.Z.getCall(n.id), [n.id]),
-        K = (0, c.e7)([ec.ZP], () => ec.ZP.getMentionCount(n.id), [n.id]),
-        q = (0, c.e7)([ea.default], () => ea.default.getId()),
-        { popoutWindow: X, popoutWindowAlwaysOnTop: Q } = (0, c.cj)([w.Z], () => ({
+        G = (0, c.Wu)([ei.Z], () => ei.Z.getAllActiveStreams()),
+        { selectedStream: V } = (0, c.cj)([ei.Z], () => ({ selectedStream: null != B ? ei.Z.getActiveStreamForStreamKey(B.id) : null }), [B]),
+        F = (0, c.e7)([er.Z], () => er.Z.getGuild(n.getGuildId())),
+        W = (0, c.e7)([el.Z], () => el.Z.getCall(n.id), [n.id]),
+        z = (0, c.e7)([ec.ZP], () => ec.ZP.getMentionCount(n.id), [n.id]),
+        Y = (0, c.e7)([ea.default], () => ea.default.getId()),
+        { popoutWindow: K, popoutWindowAlwaysOnTop: q } = (0, c.cj)([w.Z], () => ({
             popoutWindow: w.Z.getWindow(eR.KJ3.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: w.Z.getIsAlwaysOnTop(eR.KJ3.CHANNEL_CALL_POPOUT)
         })),
-        J = (0, c.e7)([eo.Z], () => eo.Z.can(eR.Plq.CONNECT, n)),
-        $ = (0, c.e7)([es.Z], () => es.Z.getToastsEnabled(n.id)),
-        ee = (0, c.e7)([O.Z], () => O.Z.getAwaitingRemoteSessionInfo()),
-        et = (0, c.e7)([H.ZP], () => H.ZP.callHeaderHeight),
-        en = a.useCallback((e) => {
+        X = (0, c.e7)([eo.Z], () => eo.Z.can(eR.Plq.CONNECT, n)),
+        Q = (0, c.e7)([es.Z], () => es.Z.getToastsEnabled(n.id)),
+        J = (0, c.e7)([O.Z], () => O.Z.getAwaitingRemoteSessionInfo()),
+        $ = (0, c.e7)([H.ZP], () => H.ZP.callHeaderHeight),
+        ee = a.useCallback((e) => {
             C.ZP.updatedUnsyncedSettings({ callHeaderHeight: e });
         }, []),
-        ed = null !== (t = null == z ? void 0 : z.id) && void 0 !== t ? t : null,
-        eh = (0, Z.Z)(ed, n.id),
-        ep = (0, c.e7)([S.Z], () => S.Z.getFetchState(), []),
-        em = (0, T.Z)(ep);
+        et = null !== (t = null == F ? void 0 : F.id) && void 0 !== t ? t : null,
+        en = (0, Z.Z)(et, n.id),
+        ed = (0, c.e7)([S.Z], () => S.Z.getFetchState(), []),
+        eh = (0, T.Z)(ed);
     a.useEffect(() => {
-        'errored' === ep && 'errored' !== em && (0, h.showToast)((0, h.createToast)(eL.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, h.ToastType.FAILURE));
-    }, [ep, em]);
-    let e_ = (0, c.e7)([v.ZP], () => v.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
+        'errored' === ed && 'errored' !== eh && (0, h.showToast)((0, h.createToast)(eL.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY_SHELF_FETCH_ERROR, h.ToastType.FAILURE));
+    }, [ed, eh]);
+    let ep = (0, c.e7)([v.ZP], () => v.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     a.useEffect(() => {
-        A && !b && null != e_ && m.Z.selectParticipant(n.id, e_.applicationId);
-    }, [A, b, e_, n.id]),
-        a.useEffect(() => {
-            let e = !1,
-                t = null;
-            return (
-                (async () => {
-                    A && k === eR.WtW.VIDEO && ((t = await eE.ZP.blockDisplaySleep()), e && null != t && eE.ZP.unblockDisplaySleep(t));
-                })(),
-                () => {
-                    null != t ? eE.ZP.unblockDisplaySleep(t) : (e = !0);
-                }
-            );
-        }, [A, k]);
-    let ef = (0, ex.Z)(n, !0),
-        eC = (0, j.bn)(u.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
-        { analyticsLocations: eI } = (0, R.ZP)(M.Z.CHANNEL_CALL),
-        eN = v.ZP.getEmbeddedActivitiesForChannel(n.id);
+        let e = !1,
+            t = null;
+        return (
+            (async () => {
+                g && y === eR.WtW.VIDEO && ((t = await eE.ZP.blockDisplaySleep()), e && null != t && eE.ZP.unblockDisplaySleep(t));
+            })(),
+            () => {
+                null != t ? eE.ZP.unblockDisplaySleep(t) : (e = !0);
+            }
+        );
+    }, [g, y]);
+    let em = (0, ex.Z)(n, !0),
+        e_ = (0, j.bn)(u.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
+        { analyticsLocations: ef } = (0, R.ZP)(M.Z.CHANNEL_CALL),
+        eC = v.ZP.getEmbeddedActivitiesForChannel(n.id);
     return (0, i.jsx)(R.Gt, {
-        value: eI,
+        value: ef,
         children: (0, i.jsx)(I.Z, {
             page: eR.ZY5.CHANNEL_CALL,
             children: (0, i.jsx)(eT.B2, {
@@ -760,45 +756,45 @@ t.Z = function (e) {
                     children: [
                         (0, i.jsx)(eD, {
                             channel: n,
-                            guild: z,
-                            hasConnectPermission: J,
-                            participantsOpen: B,
+                            guild: F,
+                            hasConnectPermission: X,
+                            participantsOpen: k,
                             renderExternalHeader: s,
-                            appContext: E,
-                            call: Y,
-                            popoutWindow: X,
-                            popoutWindowAlwaysOnTop: Q,
-                            mentionCount: K,
-                            selectedStream: W,
-                            mode: k,
-                            inCall: A,
-                            participants: L,
-                            filteredParticipants: y,
-                            participantsVersion: D,
-                            layout: U,
-                            chatOpen: G,
+                            appContext: f,
+                            call: W,
+                            popoutWindow: K,
+                            popoutWindowAlwaysOnTop: q,
+                            mentionCount: z,
+                            selectedStream: V,
+                            mode: y,
+                            inCall: g,
+                            participants: A,
+                            filteredParticipants: b,
+                            participantsVersion: L,
+                            layout: D,
+                            chatOpen: U,
                             maxSidebarWidth: r - 550,
-                            shouldUseVoiceEffectsActionBar: ef,
-                            currentUserId: q,
-                            selectedParticipant: V,
-                            allActiveStreams: F,
-                            useNewInviteButton: eh,
-                            connectedToEmbeddedActivity: null != e_,
-                            showChatToasts: $,
-                            storedCallHeaderHeight: et,
-                            updateStoredCallHeaderHeight: en,
+                            shouldUseVoiceEffectsActionBar: em,
+                            currentUserId: Y,
+                            selectedParticipant: B,
+                            allActiveStreams: G,
+                            useNewInviteButton: en,
+                            connectedToEmbeddedActivity: null != ep,
+                            showChatToasts: Q,
+                            storedCallHeaderHeight: $,
+                            updateStoredCallHeaderHeight: ee,
                             wrapperRef: o,
                             callContainerDimensions: {
                                 width: d,
                                 height: p
                             },
-                            callContainerRef: _,
-                            channelChatRef: f,
+                            callContainerRef: m,
+                            channelChatRef: _,
                             width: r,
                             maxHeight: l,
-                            forceShowControls: eC,
-                            awaitingRemoteSessionInfo: ee,
-                            currentChannelActivities: eN
+                            forceShowControls: e_,
+                            awaitingRemoteSessionInfo: J,
+                            currentChannelActivities: eC
                         }),
                         !n.isPrivate() && (0, i.jsx)(eA.YR, {}),
                         (0, i.jsx)(eT.H_, {})
