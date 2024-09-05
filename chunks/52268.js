@@ -41,7 +41,7 @@ let x = () => 80,
             { accessibilityLabel: N, thumbnailPreviewSrc: S, title: j } = null !== (t = null == x ? void 0 : x.config) && void 0 !== t ? t : {},
             R = p.ZP.canUseCollectibles(n),
             M = o === h.$0.PREMIUM_PURCHASE && !R,
-            O = (0, E.M)('ProfileEffectPresetItem');
+            O = (0, E.Mu)('ProfileEffectPresetItem');
         return (0, r.jsxs)(P, {
             className: !M || u || O ? void 0 : v.decorationGridItemChurned,
             innerRef: null != l ? l : T,

@@ -6,7 +6,7 @@ n.d(t, {
         return C;
     },
     xV: function () {
-        return b;
+        return h;
     }
 }),
     n(757143),
@@ -70,8 +70,8 @@ let f = ''.concat('#').concat('itemSkuId', '='),
             g = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
             C = a.useRef(null),
             _ = (0, r.TH)(),
-            b = _.pathname === u.Z5c.COLLECTIBLES_SHOP ? i.Z.HOME_PAGE_SHOP_TAB : _.pathname === u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? i.Z.COLLECTIBLES_SHOP_FULLSCREEN : i.Z.COLLECTIBLES_SHOP,
-            { analyticsLocations: h } = (0, l.ZP)(b);
+            h = _.pathname === u.Z5c.COLLECTIBLES_SHOP ? i.Z.HOME_PAGE_SHOP_TAB : _.pathname === u.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? i.Z.COLLECTIBLES_SHOP_FULLSCREEN : i.Z.COLLECTIBLES_SHOP,
+            { analyticsLocations: b } = (0, l.ZP)(h);
         a.useEffect(() => {
             if (d) return;
             let e = p.exec(_.hash);
@@ -90,8 +90,8 @@ let f = ''.concat('#').concat('itemSkuId', '='),
                         let a = m({
                             categories: t,
                             productSkuId: e,
-                            analyticsLocations: h,
-                            analyticsSource: b,
+                            analyticsLocations: b,
+                            analyticsSource: h,
                             initialItemCardRef: f,
                             reducedMotion: g
                         });
@@ -104,9 +104,9 @@ let f = ''.concat('#').concat('itemSkuId', '='),
                     }
                 );
             }
-        }, [d, h, b, t, n, x, f, g]);
+        }, [d, b, h, t, n, x, f, g]);
     },
-    b = (e) => {
+    h = (e) => {
         let t = a.useRef({}),
             n = (0, s.e7)([o.Z], () => o.Z.useReducedMotion),
             r = a.useCallback((e, n) => {

@@ -23,19 +23,19 @@ function u(e, t, n) {
 let _ = 'CollectiblesExpiryModal';
 class h extends r.Z {
     _initialize() {
-        s.Z.subscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen);
+        s.Z.subscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), s.Z.subscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal);
     }
     _terminate() {
-        s.Z.unsubscribe('POST_CONNECTION_OPEN', this.handlePostConnectionOpen), null != this.timeout && clearTimeout(this.timeout);
+        s.Z.unsubscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), s.Z.unsubscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal), null != this.timeout && (clearTimeout(this.timeout), (this.timeout = null));
     }
     constructor(...e) {
         super(...e),
             u(this, 'timeout', null),
-            u(this, 'handlePostConnectionOpen', () => {
+            u(this, 'handleMaybeOpenModal', () => {
                 var e;
                 let t = o.default.getCurrentUser(),
                     n = null == t ? void 0 : null === (e = t.avatarDecoration) || void 0 === e ? void 0 : e.expiresAt;
-                if (null != n && !!(0, c.v)('CollectiblesExpiryManager')) !this.maybeOpenModal() && (this.timeout = setTimeout(this.maybeOpenModal, 1000 * n - Date.now() + 1000));
+                if (null != n && !!(0, c.v)('CollectiblesExpiryManager')) !this.maybeOpenModal() && null == this.timeout && (this.timeout = setTimeout(this.maybeOpenModal, 1000 * n - Date.now() + 1000));
             }),
             u(this, 'maybeOpenModal', () => {
                 var e;

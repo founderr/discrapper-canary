@@ -144,8 +144,8 @@ t.Z = (e) => {
     });
     let y = G.sent === A.Q_,
         k = R.Z.getArticleURL(f.BhN.REFERRAL_PROGRAM),
-        { analyticsLocations: H } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-        w = a.useRef(null),
+        { analyticsLocations: w } = (0, _.ZP)(d.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+        H = a.useRef(null),
         F = (G.sent / A.Q_) * 100,
         V = !1;
     v && null != D && ((V = 0 < (t = Math.ceil((new Date(D).getTime() - new Date().getTime()) / 86400000)) && t < A.AV), (r = (100 * (A.AV - t)) / A.AV));
@@ -220,13 +220,13 @@ t.Z = (e) => {
                                         className: h.expandedProgressBarSelectFriendsCTA,
                                         color: o.ButtonColors.CUSTOM,
                                         onClick: () => {
-                                            I.default.track(f.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: H }),
+                                            I.default.track(f.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: w }),
                                                 (0, o.openModalLazy)(async () => {
                                                     let { default: e } = await n.e('47435').then(n.bind(n, 204387));
                                                     return (t) =>
                                                         (0, s.jsx)(e, {
                                                             ...t,
-                                                            sourceAnalyticsLocations: H
+                                                            sourceAnalyticsLocations: w
                                                         });
                                                 });
                                         },
@@ -252,7 +252,7 @@ t.Z = (e) => {
         Y = x.length === A.Q_,
         z = G.redeemed === A.Q_;
     return (0, s.jsx)(_.Gt, {
-        value: H,
+        value: w,
         children: (0, s.jsx)('div', {
             className: i()({
                 [h.containerWithGlowWithoutBanner]: !W && z && !j,
@@ -263,7 +263,7 @@ t.Z = (e) => {
                 [h.containerWithGlowOnSettingsPage]: !W && z && u
             }),
             children: (0, s.jsxs)('div', {
-                ref: w,
+                ref: H,
                 className: i()({
                     [h.expandedProgressBarContainer]: !u,
                     [h.expandedProgressBarContainerSettingsPage]: u,

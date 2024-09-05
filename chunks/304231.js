@@ -41,7 +41,7 @@ function S() {
         playstyle: e
     });
 }
-function f() {
+function C() {
     let e = (0, m.GN)((e) => e.selectedTraits, r.Z),
         t = a.useMemo(() => new Set(e), [e]),
         n = a.useCallback((e) => m.GN.getState().setSelectedTraits([...e]), []);
@@ -53,7 +53,7 @@ function f() {
         hidePreview: !0
     });
 }
-function C(e) {
+function f(e) {
     return e.toString();
 }
 t.Z = a.memo(function (e) {
@@ -63,11 +63,11 @@ t.Z = a.memo(function (e) {
         u = a.useRef(null),
         E = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         [N, A] = a.useState(0),
-        [v, Z] = a.useState(0),
-        L = (0, m.GN)((e) => e.selectedPlaystyle, r.Z),
+        [v, L] = a.useState(0),
+        Z = (0, m.GN)((e) => e.selectedPlaystyle, r.Z),
         R = a.useCallback(
             (e) => {
-                A(e), v < e && Z(e);
+                A(e), v < e && L(e);
             },
             [v]
         ),
@@ -77,7 +77,7 @@ t.Z = a.memo(function (e) {
         x = a.useCallback(() => {
             2 === N ? t() : R(N + 1);
         }, [N, R, t]),
-        b = a.useMemo(() => 1 === N && null == L, [L, N]),
+        b = a.useMemo(() => 1 === N && null == Z, [Z, N]),
         P = a.useMemo(
             () => [
                 {
@@ -143,7 +143,7 @@ t.Z = a.memo(function (e) {
                 case 1:
                     return (0, i.jsx)(S, {});
                 case 2:
-                    return (0, i.jsx)(f, {});
+                    return (0, i.jsx)(C, {});
             }
         }, []);
     return (0, i.jsxs)(s.animated.div, {
@@ -157,7 +157,7 @@ t.Z = a.memo(function (e) {
                     currentStep: N,
                     items: j,
                     renderItem: U,
-                    getItemKey: C
+                    getItemKey: f
                 })
             }),
             (0, i.jsxs)(s.animated.div, {

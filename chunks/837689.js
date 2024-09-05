@@ -18,8 +18,8 @@ var a = n(873546),
     p = n(786397),
     T = n(248042),
     S = n(278945),
-    f = n(727310),
-    C = n(318199),
+    C = n(727310),
+    f = n(318199),
     N = n(474936);
 function A(e, t, n) {
     return (
@@ -35,7 +35,7 @@ function A(e, t, n) {
     );
 }
 let v = 'PremiumServerDriveAnnouncementModal';
-class Z extends o.Z {
+class L extends o.Z {
     _initialize() {
         l.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), l.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
@@ -45,7 +45,7 @@ class Z extends o.Z {
     constructor(...e) {
         super(...e),
             A(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-                let a = (0, C.extractAnnouncementModalContent)({
+                let a = (0, f.extractAnnouncementModalContent)({
                     content: e,
                     isPreview: t
                 });
@@ -94,7 +94,7 @@ class Z extends o.Z {
                     i = d.default.getCurrentUser();
                 if (t && !n && !(0, r.hasAnyModalOpen)() && !(0, _.I5)(i)) {
                     let t = await (0, S.r)(e.userTrialOffer);
-                    null != t && (0, f.Z)({ upsellType: t });
+                    null != t && (0, C.Z)({ upsellType: t });
                 }
                 if (!(0, r.hasAnyModalOpen)() && E.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !a.tq) {
                     for (let t of await (0, g.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
@@ -102,4 +102,4 @@ class Z extends o.Z {
             });
     }
 }
-t.Z = new Z();
+t.Z = new L();

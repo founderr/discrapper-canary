@@ -22,13 +22,13 @@ var i = n(735250),
     p = n(770471),
     T = n(158631),
     S = n(143614),
-    f = n(463119),
-    C = n(377171),
+    C = n(463119),
+    f = n(377171),
     N = n(243778),
     A = n(922409),
     v = n(899740),
-    Z = n(28476),
-    L = n(880257),
+    L = n(28476),
+    Z = n(880257),
     R = n(631885),
     O = n(457396),
     x = n(51596),
@@ -75,7 +75,7 @@ let q = (e) => {
                 r.length > 0 &&
                     l &&
                     (0, i.jsx)(h.TextBadge, {
-                        color: C.Z.BG_BRAND,
+                        color: f.Z.BG_BRAND,
                         text: (0, i.jsxs)('div', {
                             className: K.broadcastingBadge,
                             children: [
@@ -128,7 +128,7 @@ let q = (e) => {
         return e > 0
             ? (0, i.jsx)(h.NumberBadge, {
                   count: e,
-                  color: 0 === t ? C.Z.ICON_MUTED : void 0
+                  color: 0 === t ? f.Z.ICON_MUTED : void 0
               })
             : null;
     },
@@ -136,7 +136,7 @@ let q = (e) => {
         let { selected: t } = e,
             n = (0, o.JA)('messageRequests'),
             { channelId: a } = (0, A._)();
-        if (!(0, Z.a)()) return null;
+        if (!(0, L.a)()) return null;
         let s = null == a ? void 0 : () => E.Z.preload(W.ME, a);
         return (0, i.jsx)(V.Qj, {
             selected: t,
@@ -153,7 +153,7 @@ let q = (e) => {
             n = z.Z.Messages.FAMILY_CENTER_SIDEBAR_TITLE,
             s = (0, o.JA)('family-center'),
             r = D.Ex.useSetting(),
-            l = (0, L.Z)(),
+            l = (0, Z.Z)(),
             [c, d] = a.useState(!0);
         return r && l
             ? (0, i.jsx)(V.Qj, {
@@ -198,7 +198,7 @@ let q = (e) => {
                         return t === u.z.FAMILY_CENTER_NEW_BADGE
                             ? (0, i.jsx)(h.TextBadge, {
                                   text: z.Z.Messages.NEW,
-                                  color: C.Z.BG_BRAND
+                                  color: f.Z.BG_BRAND
                               })
                             : null;
                     }
@@ -293,7 +293,7 @@ let ea = (e) => {
                         : null,
                     (0, i.jsx)($, { selected: null == u ? null != a && a.startsWith(W.Z5c.MESSAGE_REQUESTS) : u === W.Z5c.MESSAGE_REQUESTS }, 'message-requests'),
                     (0, i.jsx)(
-                        f.i,
+                        C.i,
                         {
                             selected: u === W.Z5c.COLLECTIBLES_SHOP || (null == a ? void 0 : a.startsWith(W.Z5c.COLLECTIBLES_SHOP)),
                             locationState: {

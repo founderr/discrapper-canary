@@ -18,19 +18,19 @@ var a = n(735250),
     C = n(486620),
     m = n(335131),
     _ = n(994896),
-    b = n(689938),
-    h = n(99065);
+    h = n(689938),
+    b = n(99065);
 function x(e) {
     let { isLayer: t, onClose: n, isFullScreen: s = !1 } = e;
     return (0, a.jsxs)(f.Z, {
-        className: o()(h.headerBar, { [h.fullscreenHeaderBar]: s }),
-        innerClassname: h.shopLogoContainer,
+        className: o()(b.headerBar, { [b.fullscreenHeaderBar]: s }),
+        innerClassname: b.shopLogoContainer,
         toolbar: s ? null : (0, a.jsx)(r.Fragment, {}),
         children: [
-            (0, a.jsx)(C.Z, { className: h.shopLogo }),
+            (0, a.jsx)(C.Z, { className: b.shopLogo }),
             s &&
                 (0, a.jsx)(d.Z, {
-                    className: h.closeIcon,
+                    className: b.closeIcon,
                     closeAction: t ? m.DR : n,
                     keybind: 'ESC'
                 })
@@ -40,9 +40,9 @@ function x(e) {
 function I(e) {
     let { isFullScreen: t, isLayer: n, onClose: s, isCatalogView: C, handleTransition: I, transparent: E } = e,
         { newShopLogoEnabled: v } = (0, _.O)({ location: 'CollectiblesShop' }),
-        T = (0, u.ZP)(),
-        L = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
-        S = (null == L ? void 0 : L.isStaff()) || (null == L ? void 0 : L.isStaffPersonal()) || !1;
+        L = (0, u.ZP)(),
+        S = (0, i.e7)([p.default], () => p.default.getCurrentUser()),
+        T = (null == S ? void 0 : S.isStaff()) || (null == S ? void 0 : S.isStaffPersonal()) || !1;
     return v
         ? (0, a.jsx)(x, {
               isLayer: n,
@@ -50,17 +50,17 @@ function I(e) {
               isFullScreen: t
           })
         : (0, a.jsx)(c.ThemeProvider, {
-              theme: T,
+              theme: L,
               children: (e) =>
                   (0, a.jsxs)(f.Z, {
-                      className: o()(e, h.headerBar, {
-                          [h.fullscreenHeaderBar]: t,
-                          [h.headerBarRegularBackground]: !E,
-                          [h.headerBarTransparentLightBackground]: E && !(0, l.wj)(T),
-                          [h.headerBarTransparentDarkBackground]: E && (0, l.wj)(T)
+                      className: o()(e, b.headerBar, {
+                          [b.fullscreenHeaderBar]: t,
+                          [b.headerBarRegularBackground]: !E,
+                          [b.headerBarTransparentLightBackground]: E && !(0, l.wj)(L),
+                          [b.headerBarTransparentDarkBackground]: E && (0, l.wj)(L)
                       }),
                       transparent: E,
-                      toolbar: t || !S ? null : (0, a.jsx)(r.Fragment, {}),
+                      toolbar: t || !T ? null : (0, a.jsx)(r.Fragment, {}),
                       children: [
                           (0, a.jsxs)(a.Fragment, {
                               children: [
@@ -68,25 +68,25 @@ function I(e) {
                                       null != I &&
                                       (0, a.jsx)(c.Clickable, {
                                           onClick: I,
-                                          className: h.back,
-                                          'aria-label': b.Z.Messages.BACK,
+                                          className: b.back,
+                                          'aria-label': h.Z.Messages.BACK,
                                           children: (0, a.jsx)(c.ArrowLargeLeftIcon, {})
                                       }),
                                   (0, a.jsx)(g.Z, {
-                                      color: E ? ((0, l.wj)(T) ? 'white' : 'black') : void 0,
-                                      className: h.discordLogo
+                                      color: E ? ((0, l.wj)(L) ? 'white' : 'black') : void 0,
+                                      className: b.discordLogo
                                   })
                               ]
                           }),
-                          (0, a.jsx)(f.Z.Title, { children: b.Z.Messages.COLLECTIBLES_SHOP }),
+                          (0, a.jsx)(f.Z.Title, { children: h.Z.Messages.COLLECTIBLES_SHOP }),
                           C &&
                               (0, a.jsx)(f.Z.Title, {
-                                  className: h.shopAllHeader,
-                                  children: b.Z.Messages.COLLECTIBLES_SHOP_ALL
+                                  className: b.shopAllHeader,
+                                  children: h.Z.Messages.COLLECTIBLES_SHOP_ALL
                               }),
                           t &&
                               (0, a.jsx)(d.Z, {
-                                  className: h.closeIcon,
+                                  className: b.closeIcon,
                                   closeAction: n ? m.DR : s,
                                   keybind: 'ESC'
                               })

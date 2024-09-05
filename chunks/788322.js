@@ -1,6 +1,6 @@
 n.d(t, {
     Y: function () {
-        return Z;
+        return L;
     }
 }),
     n(47120);
@@ -22,15 +22,15 @@ var i = n(735250),
     p = n(879484),
     T = n(26580),
     S = n(206887),
-    f = n(981631),
-    C = n(689938),
+    C = n(981631),
+    f = n(689938),
     N = n(607921),
     A = n(129512),
     v = n(330065);
-let Z = () => (0, i.jsx)('div', { className: N.placeholder });
+let L = () => (0, i.jsx)('div', { className: N.placeholder });
 t.Z = (e) => {
     var t;
-    let { guild: s, theme: Z, onView: L, onTagClick: R } = e,
+    let { guild: s, theme: L, onView: Z, onTagClick: R } = e,
         { id: O, discoverySplash: x, icon: b, name: P, description: M, presenceCount: D, memberCount: y, keywords: j } = s,
         [U, G] = a.useState(!1),
         [w, k] = a.useState(!1),
@@ -45,12 +45,12 @@ t.Z = (e) => {
                 ? H
                 : (function (e) {
                       switch (e) {
-                          case f.BRd.DARK:
+                          case C.BRd.DARK:
                               return A;
-                          case f.BRd.LIGHT:
+                          case C.BRd.LIGHT:
                               return v;
                       }
-                  })(Z),
+                  })(L),
         F =
             null !==
                 (t = m.ZP.getGuildIconURL({
@@ -65,10 +65,10 @@ t.Z = (e) => {
             if (!t.includes('Menu')) {
                 if ((0, h.yU)()) {
                     (0, E.Z)({
-                        analyticsSource: { page: f.ZY5.GUILD_DISCOVERY },
+                        analyticsSource: { page: C.ZY5.GUILD_DISCOVERY },
                         analyticsLocation: {
-                            page: f.ZY5.GUILD_DISCOVERY,
-                            section: f.jXE.GUILD_CAP_UPSELL_MODAL
+                            page: C.ZY5.GUILD_DISCOVERY,
+                            section: C.jXE.GUILD_CAP_UPSELL_MODAL
                         },
                         analyticsLocations: B
                     });
@@ -76,7 +76,7 @@ t.Z = (e) => {
                 }
                 k(!0);
                 try {
-                    null != L && (await L(s.id));
+                    null != Z && (await Z(s.id));
                 } finally {
                     k(!1);
                 }
@@ -183,7 +183,7 @@ t.Z = (e) => {
                                                     children: (0, i.jsx)(l.Text, {
                                                         variant: 'text-xs/normal',
                                                         color: 'header-secondary',
-                                                        children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
+                                                        children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: D })
                                                     })
                                                 }),
                                             null != y &&
@@ -195,7 +195,7 @@ t.Z = (e) => {
                                                             children: (0, i.jsx)(l.Text, {
                                                                 variant: 'text-xs/normal',
                                                                 color: 'header-secondary',
-                                                                children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
+                                                                children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: y })
                                                             })
                                                         })
                                                     ]

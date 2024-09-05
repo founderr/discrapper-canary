@@ -33,11 +33,11 @@ let m = {},
     p = {},
     T = {},
     S = {},
-    f = {
+    C = {
         id: null,
         justChanged: !1
     },
-    C = {
+    f = {
         id: null,
         justChanged: !1
     },
@@ -62,7 +62,7 @@ function v(e, t, n) {
             }
           : e;
 }
-class Z extends (i = r.ZP.DeviceSettingsStore) {
+class L extends (i = r.ZP.DeviceSettingsStore) {
     initialize(e) {
         this.waitFor(u.Z, c.Z), (I = null != e ? e : m);
     }
@@ -79,37 +79,37 @@ class Z extends (i = r.ZP.DeviceSettingsStore) {
         return p;
     }
     get lastInputSystemDevice() {
-        return f;
+        return C;
     }
     get outputDevices() {
         return T;
     }
     get lastOutputSystemDevice() {
-        return C;
+        return f;
     }
 }
-E(Z, 'displayName', 'ConnectedDeviceStore'),
-    E(Z, 'persistKey', 'ConnectedDeviceStore'),
-    (t.Z = new Z(l.Z, {
+E(L, 'displayName', 'ConnectedDeviceStore'),
+    E(L, 'persistKey', 'ConnectedDeviceStore'),
+    (t.Z = new L(l.Z, {
         MEDIA_ENGINE_DEVICES: function (e) {
             let { inputDevices: t, outputDevices: n } = e,
                 i = {};
-            (f.justChanged = !1),
+            (C.justChanged = !1),
                 t.forEach((e) => {
                     if (((i[A(e)] = e.id), e.id === h.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== f.id && (f.justChanged = !0), (f.id = n);
+                        n !== C.id && (C.justChanged = !0), (C.id = n);
                     }
                 });
             let a = {};
             if (
-                ((C.justChanged = !1),
+                ((f.justChanged = !1),
                 n.forEach((e) => {
                     if (((a[A(e)] = e.id), e.id === h.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
-                        n !== C.id && (C.justChanged = !0), (C.id = n);
+                        n !== f.id && (f.justChanged = !0), (f.id = n);
                     }
                 }),
                 !g)

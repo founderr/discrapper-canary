@@ -221,7 +221,7 @@ function q(e) {
     let en = !!(null == t ? void 0 : t.id.startsWith('camera')),
         el = null != ee && ee.verified && !ee.bot,
         es = null != q && !(0, u.Yk)(q),
-        ei = !(0, a.e7)([v.Z], () => v.Z.getHardwareH264()),
+        ei = !(0, a.e7)([v.Z], () => v.Z.getHardwareEncoding()),
         { enabled: er } = (0, _.S)({ location: 'GoLiveModal_Confirm' });
     return (0, l.jsxs)(s.Fragment, {
         children: [

@@ -72,11 +72,11 @@ let g = {
     ]
 };
 t.Z = (e) => {
-    let { product: t, returnRef: n, onSuccess: C, tooltipDelay: m, isGiftEasterEggEnabled: _, disableCustomColor: b = !1 } = e,
-        { analyticsLocations: h } = (0, i.ZP)(),
+    let { product: t, returnRef: n, onSuccess: C, tooltipDelay: m, isGiftEasterEggEnabled: _, disableCustomColor: h = !1 } = e,
+        { analyticsLocations: b } = (0, i.ZP)(),
         x = r.useRef(null),
         I = (0, o.Z)(x),
-        E = b ? u.BR.DARK : u.BR.LIGHT;
+        E = h ? u.BR.DARK : u.BR.LIGHT;
     return (0, d.x6)(t)
         ? null
         : (0, a.jsx)(s.Tooltip, {
@@ -87,7 +87,7 @@ t.Z = (e) => {
                       ...e,
                       buttonRef: x,
                       className: p.giftButton,
-                      color: b ? s.ButtonColors.BRAND : s.ButtonColors.CUSTOM,
+                      color: h ? s.ButtonColors.BRAND : s.ButtonColors.CUSTOM,
                       look: s.Button.Looks.FILLED,
                       size: s.ButtonSizes.ICON,
                       innerClassName: p.giftButtonInner,
@@ -97,7 +97,7 @@ t.Z = (e) => {
                               (0, c.Z)({
                                   skuId: t.skuId,
                                   isGift: !0,
-                                  analyticsLocations: h,
+                                  analyticsLocations: b,
                                   returnRef: n,
                                   onClose:
                                       null != C

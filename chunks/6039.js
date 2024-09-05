@@ -17,14 +17,14 @@ var i = n(735250),
     p = n(390500),
     T = n(200305),
     S = n(981631),
-    f = n(898625),
-    C = n(689938),
+    C = n(898625),
+    f = n(689938),
     N = n(491808);
 t.Z = (e) => {
     var t;
     let n, A;
-    let { guildId: v, inviteCode: Z } = e,
-        [L, R] = a.useState(f.hO.INITIAL),
+    let { guildId: v, inviteCode: L } = e,
+        [Z, R] = a.useState(C.hO.INITIAL),
         O = (0, s.e7)([E.Z], () => E.Z.get(v)),
         x = (0, s.e7)([I.Z], () => I.Z.getRequest(v)),
         b = (0, s.e7)([c.Z], () => c.Z.getGuild(v)),
@@ -48,17 +48,17 @@ t.Z = (e) => {
             _.Z.resetGuildJoinRequest(v);
         };
     let U =
-            ((n = C.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == M ? void 0 : M.toString() })),
+            ((n = f.Z.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({ name: null == M ? void 0 : M.toString() })),
             (A = () => {
-                R(Math.max(L, f.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(S.Z5c.ME);
+                R(Math.max(Z, C.hO.FILLING)), _.Z.removeGuildJoinRequest(v), (0, o.uL)(S.Z5c.ME);
             }),
             () => {
                 (0, r.openModal)((e) =>
                     (0, i.jsx)(r.ConfirmModal, {
-                        header: C.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
-                        cancelText: C.Z.Messages.NEVERMIND,
+                        header: f.Z.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
+                        cancelText: f.Z.Messages.NEVERMIND,
                         onConfirm: A,
-                        confirmText: C.Z.Messages.YES_TEXT,
+                        confirmText: f.Z.Messages.YES_TEXT,
                         confirmButtonColor: r.Button.Colors.RED,
                         ...e,
                         children: (0, i.jsx)(r.Text, {
@@ -81,7 +81,7 @@ t.Z = (e) => {
         children: (0, i.jsxs)(l.Z, {
             embedded: !0,
             splash: G,
-            waveState: L,
+            waveState: Z,
             showLogo: !1,
             updateWaveState: D,
             children: [
@@ -97,9 +97,9 @@ t.Z = (e) => {
                                 });
                             case m.wB.REJECTED:
                                 return (0, i.jsx)(g.Z, {
-                                    reapplyText: C.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
+                                    reapplyText: f.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
                                     onReapply: j,
-                                    confirmText: C.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
+                                    confirmText: f.Z.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
                                     onWithdrawApplication: U,
                                     rejectionReason: null == x ? void 0 : x.rejectionReason,
                                     guild: M
@@ -107,7 +107,7 @@ t.Z = (e) => {
                             default:
                                 return (0, i.jsx)(T.Z, {
                                     guildId: v,
-                                    inviteCode: Z,
+                                    inviteCode: L,
                                     onComplete: y,
                                     disableVerification: !0
                                 });

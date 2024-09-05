@@ -41,8 +41,8 @@ t.Z = function (e) {
         G = (0, l.e7)([A.default], () => A.default.getCurrentUser()),
         y = (0, P.N)(),
         k = (0, b.Ng)(),
-        H = (0, C.V)(),
-        [w, F] = a.useState(!0),
+        w = (0, C.V)(),
+        [H, F] = a.useState(!0),
         V = a.useRef(0),
         W = (0, h.M5)(G, Z.p9.TIER_2),
         K = (0, O.n)(),
@@ -61,12 +61,12 @@ t.Z = function (e) {
         n && (null != y || null != k) && (0, x.a)(y, k);
     }, [n, y, k]),
     a.useEffect(() => {
-        !w &&
+        !H &&
             S.default.track(D.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                 location_stack: r,
                 load_duration_ms: V.current
             });
-    }, [r, w]),
+    }, [r, H]),
     (0, l.e7)([m.Z], () => m.Z.enabled))
         ? (0, s.jsx)(E.Z, {})
         : n
@@ -76,7 +76,7 @@ t.Z = function (e) {
                   value: j,
                   children: (0, s.jsx)(L.Z, {})
               })
-            : U && H && !w
+            : U && w && !H
               ? (0, s.jsx)(I.Gt, {
                     value: j,
                     children: (0, s.jsx)(v.Z, { entrypoint: t })

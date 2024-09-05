@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 });
 var i = n(735250),
@@ -21,12 +21,12 @@ var i = n(735250),
     p = n(642145),
     T = n(689938),
     S = n(803162);
-let f = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
-function C(e) {
+let C = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
+function f(e) {
     var t, n, s;
-    let { quest: C, questContent: N, isHovering: A, contentPosition: v, rowIndex: Z, onReceiveErrorHints: L } = e,
-        R = h.r.build(C.config).defaultReward.messages.name,
-        O = (null === (t = C.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
+    let { quest: f, questContent: N, isHovering: A, contentPosition: v, rowIndex: L, onReceiveErrorHints: Z } = e,
+        R = h.r.build(f.config).defaultReward.messages.name,
+        O = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: x, scrollHeight: b } = (0, d.Z)(),
         P = 104 !== b,
         { expansionSpring: M } = (0, c.useSpring)({
@@ -36,10 +36,10 @@ function C(e) {
                 clamp: !0
             }
         }),
-        D = (null === (n = C.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
-        y = (null === (s = C.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
-        { completedRatio: j, completedRatioDisplay: U } = (0, _.I)(C),
-        G = (0, _.Bd)(C),
+        D = (null === (n = f.userStatus) || void 0 === n ? void 0 : n.completedAt) != null,
+        y = (null === (s = f.userStatus) || void 0 === s ? void 0 : s.claimedAt) != null,
+        { completedRatio: j, completedRatioDisplay: U } = (0, _.I)(f),
+        G = (0, _.Bd)(f),
         w = a.useCallback(
             () =>
                 (0, i.jsx)(c.Text, {
@@ -81,21 +81,21 @@ function C(e) {
                                       children: [
                                           D &&
                                               (0, i.jsx)(c.LottieAnimation, {
-                                                  importData: f,
+                                                  importData: C,
                                                   className: S.confetti,
                                                   loop: !1,
                                                   autoplay: !1,
                                                   shouldAnimate: !H
                                               }),
                                           (0, i.jsx)(E.Z, {
-                                              quest: C,
+                                              quest: f,
                                               size: 76,
                                               percentComplete: j,
                                               percentCompleteText: A ? U : void 0,
                                               children: (0, i.jsx)('div', {
                                                   className: S.circularRewardTileWrapper,
                                                   children: (0, i.jsx)(m.Z, {
-                                                      quest: C,
+                                                      quest: f,
                                                       questContent: N,
                                                       className: S.circularQuestRewardTileAsset,
                                                       location: g.dr.QUEST_HOME_DESKTOP
@@ -105,7 +105,7 @@ function C(e) {
                                       ]
                                   })
                                 : (0, i.jsx)(m.Z, {
-                                      quest: C,
+                                      quest: f,
                                       autoplay: A,
                                       questContent: N,
                                       className: S.questRewardTileAsset,
@@ -121,7 +121,7 @@ function C(e) {
                                 variant: 'eyebrow',
                                 color: 'text-brand',
                                 className: S.questName,
-                                children: T.Z.Messages.QUEST.format({ questName: C.config.messages.questName })
+                                children: T.Z.Messages.QUEST.format({ questName: f.config.messages.questName })
                             }),
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
@@ -142,11 +142,11 @@ function C(e) {
                 ]
             }),
             (0, i.jsx)(I.Z, {
-                quest: C,
+                quest: f,
                 location: N,
                 contentPosition: v,
-                rowIndex: Z,
-                onReceiveErrorHints: L
+                rowIndex: L,
+                onReceiveErrorHints: Z
             })
         ]
     });

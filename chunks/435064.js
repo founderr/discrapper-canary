@@ -191,7 +191,7 @@ h(D, 'displayName', 'ClipsStore'),
         },
         (e) => {
             var t;
-            let r = null === (t = n(131951).Z) || void 0 === t ? void 0 : t.getHardwareH264();
+            let r = null === (t = n(131951).Z) || void 0 === t ? void 0 : t.getHardwareEncoding();
             return {
                 ...e,
                 clipsSettings: {

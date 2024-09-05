@@ -74,13 +74,13 @@ var i,
     p = n(131951),
     T = n(375954),
     S = n(158776),
-    f = n(594174),
-    C = n(979651),
+    C = n(594174),
+    f = n(979651),
     N = n(70956),
     A = n(5192),
     v = n(226951),
-    Z = n(996106),
-    L = n(863141),
+    L = n(996106),
+    Z = n(863141),
     R = n(186901),
     O = n(981631);
 let x = null !== (i = a.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== i ? i : 'localhost',
@@ -126,8 +126,8 @@ function G(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let a = (!e.isNSFW() || (null === (n = f.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [],
-                s = Object.values(C.Z.getVoiceStatesForChannel(e.id)).map((t) => k(i, e.id, t));
+            let a = (!e.isNSFW() || (null === (n = C.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? T.Z.getMessages(e.id).toArray().map(w) : [],
+                s = Object.values(f.Z.getVoiceStatesForChannel(e.id)).map((t) => k(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -170,7 +170,7 @@ function w(e) {
 }
 function k(e, t, n) {
     let { mute: i, deaf: a, selfMute: s, selfDeaf: r, suppress: l, userId: o } = n,
-        c = f.default.getUser(o);
+        c = C.default.getUser(o);
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
         nick: A.ZP.getName(e, t, c),
@@ -184,14 +184,14 @@ function k(e, t, n) {
             self_deaf: r,
             suppress: l
         },
-        user: (0, L.Z)(c)
+        user: (0, Z.Z)(c)
     };
 }
 function B(e, t, n, i) {
-    let a = f.default.getUser(t);
+    let a = C.default.getUser(t);
     return {
         type: e,
-        user: null != a ? (0, L.Z)(a) : null,
+        user: null != a ? (0, Z.Z)(a) : null,
         presence: {
             status: S.Z.getStatus(t),
             activity: null != i ? S.Z.getApplicationActivity(t, i) : S.Z.getPrimaryActivity(t)
@@ -250,8 +250,8 @@ function z(e, t, n) {
                 if ('string' == typeof n) {
                     if (e.transport === R.He.POST_MESSAGE) {
                         let e = (0, d.Z)(t);
-                        if (null == e || !U(n, [e])) throw new Z.Z({ closeCode: O.$VG.INVALID_ORIGIN }, 'Invalid Origin');
-                    } else if (!U(n, a)) throw new Z.Z({ closeCode: O.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                        if (null == e || !U(n, [e])) throw new L.Z({ closeCode: O.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                    } else if (!U(n, a)) throw new L.Z({ closeCode: O.$VG.INVALID_ORIGIN }, 'Invalid Origin');
                 }
                 e.application = {
                     id: s,
@@ -262,7 +262,7 @@ function z(e, t, n) {
                 };
             },
             () => {
-                throw new Z.Z({ closeCode: O.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+                throw new L.Z({ closeCode: O.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
             }
         );
 }
@@ -325,9 +325,9 @@ function X(e, t) {
     };
 }
 function J(e) {
-    if (e !== R.He.POST_MESSAGE) throw new Z.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== R.He.POST_MESSAGE) throw new L.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function $(e) {
-    if (null == e.id) throw new Z.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'Invalid application');
+    if (null == e.id) throw new L.Z({ errorCode: O.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

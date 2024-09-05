@@ -17,13 +17,13 @@ var i = n(735250),
     p = n(963202),
     T = n(252618),
     S = n(571457),
-    f = n(440190),
-    C = n(665149),
+    C = n(440190),
+    f = n(665149),
     N = n(5955),
     A = n(918701),
     v = n(121711),
-    Z = n(703656),
-    L = n(108427),
+    L = n(703656),
+    Z = n(108427),
     R = n(706454),
     O = n(210887),
     x = n(480294),
@@ -97,8 +97,8 @@ class J extends a.PureComponent {
                 length: parseInt(n, 10)
             });
         } else null != l && l !== Y.Hk && E.Z.wait(() => (0, m.uY)(l));
-        let u = null !== (t = null === (e = (0, Z.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
-        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, L.e)('guild_discovery'), (0, S.k)({ selectedCategoryId: o });
+        let u = null !== (t = null === (e = (0, L.s1)().location.state) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0;
+        u > 0 && (null === (n = this._scroller.current) || void 0 === n || n.scrollTo({ to: u })), (0, Z.e)('guild_discovery'), (0, S.k)({ selectedCategoryId: o });
     }
     componentDidUpdate(e) {
         let {
@@ -268,7 +268,7 @@ class J extends a.PureComponent {
                     location: m
                 }),
                 (0, i.jsx)('div', { className: r()(K.dragRegion, K.pageHeaderDrag, { [K.searchPageDrag]: d }) }),
-                u.tq && (0, i.jsx)(C.ZP, { children: (0, i.jsx)(a.Fragment, {}) }),
+                u.tq && (0, i.jsx)(f.ZP, { children: (0, i.jsx)(a.Fragment, {}) }),
                 (0, i.jsx)(h.AdvancedScrollerAuto, {
                     className: K.scroller,
                     ref: this._scroller,
@@ -380,8 +380,8 @@ class J extends a.PureComponent {
                     { loadingGuildId: l } = this.state;
                 if (e === l) return;
                 let o = null !== (s = null === (a = this._scroller.current) || void 0 === a ? void 0 : a.getScrollerState().scrollTop) && void 0 !== s ? s : 0,
-                    { location: c } = (0, Z.s1)();
-                (0, Z.dL)({
+                    { location: c } = (0, L.s1)();
+                (0, L.dL)({
                     ...c,
                     state: o
                 }),
@@ -451,10 +451,10 @@ function ee(e) {
             fetching: n,
             loadId: a,
             recommendedGuilds: s
-        } = (0, _.cj)([f.Z], () => ({
-            recommendedGuilds: f.Z.getRecommendedGuilds(),
-            loadId: f.Z.getLoadId(),
-            fetching: f.Z.isFetching()
+        } = (0, _.cj)([C.Z], () => ({
+            recommendedGuilds: C.Z.getRecommendedGuilds(),
+            loadId: C.Z.getLoadId(),
+            fetching: C.Z.isFetching()
         }));
     return (0, i.jsx)($, {
         searchRoute: t,

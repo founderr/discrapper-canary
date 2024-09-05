@@ -1,41 +1,41 @@
-var a = t(735250);
+var s = t(735250);
 t(470079);
-var s = t(442837),
-    i = t(481060),
-    l = t(700582),
-    r = t(987209),
+var a = t(442837),
+    l = t(481060),
+    r = t(700582),
+    i = t(987209),
     o = t(699516),
     d = t(594174),
-    u = t(51144),
-    c = t(335131),
+    c = t(51144),
+    u = t(335131),
     E = t(689938);
 n.Z = (e) => {
     let { selectedSkuId: n, className: t } = e,
-        h = (0, s.Wu)([o.Z], () => o.Z.getFriendIDs()),
-        f = (0, s.Wu)([d.default], () => d.default.filter((e) => h.includes(e.id) && !e.bot), [h]),
-        { giftRecipient: m, setGiftRecipient: v, giftRecipientError: C, setGiftRecipientError: p, setValidatingGiftRecipient: x } = (0, r.wD)();
+        h = (0, a.Wu)([o.Z], () => o.Z.getFriendIDs()),
+        C = (0, a.Wu)([d.default], () => d.default.filter((e) => h.includes(e.id) && !e.bot), [h]),
+        { giftRecipient: f, setGiftRecipient: x, giftRecipientError: p, setGiftRecipientError: m, setValidatingGiftRecipient: T } = (0, i.wD)();
     if (null == n) return null;
     let I = async (e) => {
-        x(!0), null != C && p(), v(e), !(await (0, c.B1)(e.id, n)) && p(E.Z.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED), x(!1);
+        T(!0), null != p && m(), x(e), !(await (0, u.B1)(e.id, n)) && m(E.Z.Messages.COLLECTIBLES_GIFT_SEND_ERROR_OWNED), T(!1);
     };
-    return (0, a.jsxs)('div', {
+    return (0, s.jsxs)('div', {
         className: t,
         children: [
-            (0, a.jsx)(i.FormTitle, { children: E.Z.Messages.FORM_LABEL_SEND_TO }),
-            (0, a.jsx)(i.SearchableSelect, {
+            (0, s.jsx)(l.FormTitle, { children: E.Z.Messages.FORM_LABEL_SEND_TO }),
+            (0, s.jsx)(l.SearchableSelect, {
                 placeholder: E.Z.Messages.COLLECTIBLES_GIFT_RECIPIENT_PLACEHOLDER,
                 renderOptionPrefix: (e) =>
                     (null == e ? void 0 : e.value) == null
                         ? null
-                        : (0, a.jsx)(l.Z, {
+                        : (0, s.jsx)(r.Z, {
                               user: e.value,
-                              size: i.AvatarSizes.SIZE_20
+                              size: l.AvatarSizes.SIZE_20
                           }),
-                value: m,
+                value: f,
                 onChange: I,
-                options: f.map((e) => ({
+                options: C.map((e) => ({
                     value: e,
-                    label: ''.concat(u.ZP.getUserTag(e))
+                    label: ''.concat(c.ZP.getUserTag(e))
                 }))
             })
         ]

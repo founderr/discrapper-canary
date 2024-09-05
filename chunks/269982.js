@@ -12,7 +12,7 @@ var i = n(481060),
     l = n(467154);
 function u(e) {
     let { product: t } = e;
-    return (0, o.M)('PremiumUserProfileDecorationUpsell') && (0, a.G1)(t)
+    return (0, o.Mu)('PremiumUserProfileDecorationUpsell') && (0, a.G1)(t)
         ? (0, r.jsxs)('div', {
               className: l.nitroUpsellContainer,
               children: [

@@ -3,10 +3,10 @@ n.d(t, {
         return T;
     },
     ML: function () {
-        return C;
+        return f;
     },
     Qc: function () {
-        return f;
+        return C;
     }
 }),
     n(47120);
@@ -87,7 +87,7 @@ function S(e) {
         t && r.length > 0
     );
 }
-function f() {
+function C() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, m.GN)((e) => e.savedGuildIds, r.Z),
@@ -122,7 +122,7 @@ function f() {
               searchResult: c
           };
 }
-function C(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { updatePaginationSettings: n, pageSize: a, chunkedPages: s, currentPage: o, fetchableGuildIds: c } = (0, E.$)(),
         d = o - 1,
@@ -134,16 +134,16 @@ function C(e) {
     }, [e, n]),
         S(c),
         S(h);
-    let f = i.useMemo(() => {
+    let C = i.useMemo(() => {
             var e;
             return null !== (e = t ? h : s[d]) && void 0 !== e ? e : [];
         }, [h, s, d, t]),
-        C = (0, l.Wu)([_.Z], () => f.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [f]),
-        N = f.length === C.length || t,
-        A = C.length === a || N;
+        f = (0, l.Wu)([_.Z], () => C.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [C]),
+        N = C.length === f.length || t,
+        A = f.length === a || N;
     return {
         loaded: (0, I.Pw)(T) && A,
-        clans: C,
+        clans: f,
         searchCriteria: g,
         searchResult: T
     };

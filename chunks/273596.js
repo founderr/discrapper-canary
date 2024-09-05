@@ -23,18 +23,18 @@ var i = n(735250),
     p = n(746728),
     T = n(140700),
     S = n(665807),
-    f = n(882126),
-    C = n(689938),
+    C = n(882126),
+    f = n(689938),
     N = n(237981);
 let A = 56,
     v = 94,
-    Z = Object.freeze({
+    L = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
         right: 202
     }),
-    L = Object.freeze({
+    Z = Object.freeze({
         top: 0,
         bottom: 0,
         left: 32,
@@ -95,12 +95,12 @@ function O(e) {
                                     (0, i.jsx)(l.X, {
                                         variant: 'heading-lg/semibold',
                                         className: N.heading,
-                                        children: C.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: b })
+                                        children: f.Z.Messages.GLOBAL_DISCOVERY_SERVERS_SEARCH_RESULTS_HEADER.format({ query: b })
                                     }),
                                     !U &&
                                         (0, i.jsxs)('div', {
                                             className: N.headingFilters,
-                                            children: [(0, i.jsx)(T.Z, { loadId: t }), (0, i.jsx)(f.Z, { loadId: t })]
+                                            children: [(0, i.jsx)(T.Z, { loadId: t }), (0, i.jsx)(C.Z, { loadId: t })]
                                         }),
                                     W && (0, i.jsx)(S.Z, { loadId: t })
                                 ]
@@ -221,7 +221,7 @@ function O(e) {
                 }, 250),
             [P]
         ),
-        et = U ? Z : L;
+        et = U ? L : Z;
     return (0, i.jsxs)('div', {
         className: N.container,
         ref: V,
@@ -254,7 +254,7 @@ function O(e) {
                                   children: [
                                       (0, i.jsx)('div', {
                                           className: N.sidebarLanguageSelect,
-                                          children: (0, i.jsx)(f.Z, { loadId: t })
+                                          children: (0, i.jsx)(C.Z, { loadId: t })
                                       }),
                                       (0, i.jsx)(p.Z, { loadId: t })
                                   ]

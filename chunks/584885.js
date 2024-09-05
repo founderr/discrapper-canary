@@ -24,11 +24,11 @@ let E = [
     ];
 t.Z = (e) => {
     let t,
-        { title: n, subtitle: I, guildsData: g, analyticsContext: p, theme: T, onViewGuild: S, fetchGuilds: f, onGuildCardSeen: C, currentCategoryId: N, loadId: A, onTagClick: v, showMoreCards: Z = !1 } = e;
+        { title: n, subtitle: I, guildsData: g, analyticsContext: p, theme: T, onViewGuild: S, fetchGuilds: C, onGuildCardSeen: f, currentCategoryId: N, loadId: A, onTagClick: v, showMoreCards: L = !1 } = e;
     a.useEffect(() => {
-        r.Z.wait(() => f());
+        r.Z.wait(() => C());
     }, [N]);
-    let L = (0, u.Z)(Z ? m : E),
+    let Z = (0, u.Z)(L ? m : E),
         { analyticsLocations: R } = (0, l.ZP)();
     if (null == g) return null;
     let { guilds: O, loading: x } = g,
@@ -51,10 +51,10 @@ t.Z = (e) => {
     };
     if (x || null == O) {
         let e = [];
-        for (let t = 0; t < L; t++) e.push((0, i.jsx)(d.Z.Placeholder, {}, t));
+        for (let t = 0; t < Z; t++) e.push((0, i.jsx)(d.Z.Placeholder, {}, t));
         t = e;
     } else
-        t = O.slice(0, L).map((e) =>
+        t = O.slice(0, Z).map((e) =>
             (0, i.jsx)(
                 d.Z,
                 {
@@ -62,7 +62,7 @@ t.Z = (e) => {
                     guild: e,
                     onView: P,
                     theme: T,
-                    onGuildCardSeen: C,
+                    onGuildCardSeen: f,
                     onTagClick: v
                 },
                 e.id

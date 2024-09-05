@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: function () {
-            return C;
+            return f;
         },
         openConsoleConnectionErrorsModal: function () {
             return A;
@@ -26,13 +26,13 @@ var i = n(735250),
     p = n(981631),
     T = n(689938),
     S = n(913895),
-    f = n(708901);
-function C(e) {
-    let { questId: t, errorHints: n, transitionState: s, onClose: C } = e,
+    C = n(708901);
+function f(e) {
+    let { questId: t, errorHints: n, transitionState: s, onClose: f } = e,
         A = (0, E.B4)(t);
-    null == A && C();
-    let [v, Z] = (0, a.useState)(n),
-        L = (0, E.KX)(),
+    null == A && f();
+    let [v, L] = (0, a.useState)(n),
+        Z = (0, E.KX)(),
         R = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         O = (0, g.g2)({
             useReducedMotion: R,
@@ -53,7 +53,7 @@ function C(e) {
                     });
             },
             afterRequest: (e) => {
-                O.stopAnimation(), Z(e);
+                O.stopAnimation(), L(e);
             }
         });
     return (0, i.jsxs)(c.ModalRoot, {
@@ -74,12 +74,12 @@ function C(e) {
                                 children: (0, i.jsx)('img', {
                                     className: S.icon,
                                     alt: '',
-                                    src: f
+                                    src: C
                                 })
                             }),
                             (0, i.jsx)(c.ModalCloseButton, {
                                 className: S.closeBtn,
-                                onClick: C
+                                onClick: f
                             })
                         ]
                     }),
@@ -91,7 +91,7 @@ function C(e) {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         className: S.upperBodyText,
-                        children: L.message
+                        children: Z.message
                     })
                 ]
             }),
@@ -169,7 +169,7 @@ function C(e) {
                 children: [
                     (0, i.jsx)(c.Button, {
                         size: c.ButtonSizes.MIN,
-                        onClick: C,
+                        onClick: f,
                         className: S.footerCloseButton,
                         children: T.Z.Messages.CLOSE
                     }),
@@ -177,7 +177,7 @@ function C(e) {
                         look: c.ButtonLooks.LINK,
                         color: c.ButtonColors.PRIMARY,
                         onClick: () => {
-                            C(),
+                            f(),
                                 (0, I.V$)(
                                     { quest: A },
                                     {

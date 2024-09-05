@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return C;
+        return f;
     }
 }),
     n(47120);
@@ -35,7 +35,7 @@ let S = [
         }
     }
 ];
-function f(e) {
+function C(e) {
     let t,
         n,
         { value: a } = e;
@@ -54,9 +54,9 @@ function f(e) {
         children: [n, t]
     });
 }
-function C(e) {
-    var t, n, s, C;
-    let { quest: N, location: A, onReceiveErrorHints: v, contentPosition: Z, rowIndex: L } = e,
+function f(e) {
+    var t, n, s, f;
+    let { quest: N, location: A, onReceiveErrorHints: v, contentPosition: L, rowIndex: Z } = e,
         R = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
         O = (0, m.g2)({ useReducedMotion: R }),
         x = (0, u._s)({ quest: N }),
@@ -94,8 +94,8 @@ function C(e) {
             isInHouseQuest: B,
             location: A,
             isCollectibleQuest: H,
-            questContentPosition: Z,
-            questContentRowIndex: L,
+            questContentPosition: L,
+            questContentRowIndex: Z,
             inGiftInventory: !0
         }),
         { startingConsoleQuest: $, startConsoleQuest: ee } = (0, u.GI)({
@@ -106,15 +106,15 @@ function C(e) {
                         questId: N.id,
                         questContent: A,
                         questContentCTA: d.jZ.DEFIBRILLATOR,
-                        questContentPosition: Z,
-                        questContentRowIndex: L
+                        questContentPosition: L,
+                        questContentRowIndex: Z
                     });
             },
             afterRequest: (e) => {
                 O.stopAnimation(), v(e);
             }
         }),
-        et = (null === (C = N.userStatus) || void 0 === C ? void 0 : C.claimedAt) != null,
+        et = (null === (f = N.userStatus) || void 0 === f ? void 0 : f.claimedAt) != null,
         en = null;
     return (G && U
         ? (en = (0, i.jsx)(o.Button, {
@@ -147,7 +147,7 @@ function C(e) {
                               isSelected: () => !1,
                               options: S,
                               placeholder: p.Z.Messages.QUEST_MULTIPLATFORM_SELECT_SUBTITLE,
-                              renderOptionLabel: f,
+                              renderOptionLabel: C,
                               select: Q,
                               serialize: (e) => {
                                   switch (e) {

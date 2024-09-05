@@ -341,7 +341,7 @@ class el extends E.Z {
                                 participant_type: 'sender',
                                 guild_region: F.Z.getRegion(this.hostname),
                                 hostname: this.hostname,
-                                hardware_enabled: G.Z.getHardwareH264(),
+                                hardware_enabled: G.Z.getHardwareEncoding(),
                                 ...t,
                                 ...e.getNetworkStats(),
                                 ...e.getCodecUsageStats('sender', this.userId),
@@ -361,7 +361,7 @@ class el extends E.Z {
                             participant_type: 'receiver',
                             guild_region: F.Z.getRegion(this.hostname),
                             hostname: this.hostname,
-                            hardware_enabled: G.Z.getHardwareH264(),
+                            hardware_enabled: G.Z.getHardwareEncoding(),
                             ...i,
                             ...e.getNetworkStats(),
                             ...e.getCodecUsageStats('receiver', t)
@@ -814,7 +814,7 @@ class el extends E.Z {
                     participant_type: 'receiver',
                     guild_region: F.Z.getRegion(this.hostname),
                     hostname: this.hostname,
-                    hardware_enabled: G.Z.getHardwareH264(),
+                    hardware_enabled: G.Z.getHardwareEncoding(),
                     ...t,
                     ...a.getNetworkStats(),
                     ...a.getCodecUsageStats('receiver', e)

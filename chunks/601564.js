@@ -23,12 +23,12 @@ var i = n(735250),
     p = n(703656),
     T = n(108427),
     S = n(911314),
-    f = n(429899),
-    C = n(843445),
+    C = n(429899),
+    f = n(843445),
     N = n(981631),
     A = n(689938),
     v = n(125944);
-function Z(e, t, n) {
+function L(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,12 +41,12 @@ function Z(e, t, n) {
         e
     );
 }
-let L = (0, I.Un)({
+let Z = (0, I.Un)({
     createPromise: () => Promise.all([n.e('68148'), n.e('99838')]).then(n.bind(n, 496691)),
     webpackId: 496691
 });
 function R(e) {
-    return e < C.x ? C.b.SMALL : C.b.LARGE;
+    return e < f.x ? f.b.SMALL : f.b.LARGE;
 }
 l.ZP.initialize();
 class O extends a.PureComponent {
@@ -76,7 +76,7 @@ class O extends a.PureComponent {
                       className: v.applicationStore,
                       children: this.renderContent()
                   })
-                : (0, i.jsx)(L, {
+                : (0, i.jsx)(Z, {
                       className: v.applicationStore,
                       location: t,
                       render: this.renderContent
@@ -88,8 +88,8 @@ class O extends a.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            Z(this, 'stopListeningToHistory', void 0),
-            Z(this, 'renderStoreListing', (e) => {
+            L(this, 'stopListeningToHistory', void 0),
+            L(this, 'renderStoreListing', (e) => {
                 let {
                         match: {
                             params: { skuId: t, applicationId: n, slug: a }
@@ -101,7 +101,7 @@ class O extends a.PureComponent {
                 return (0, i.jsx)(d.Z, {
                     page: N.ZY5.STORE_LISTING,
                     root: !0,
-                    children: (0, i.jsx)(f.Z, {
+                    children: (0, i.jsx)(C.Z, {
                         skuId: t,
                         applicationId: n,
                         slug: a,
@@ -111,7 +111,7 @@ class O extends a.PureComponent {
                     })
                 });
             }),
-            Z(this, 'renderContent', () =>
+            L(this, 'renderContent', () =>
                 (0, i.jsxs)(r.rs, {
                     children: [
                         (0, i.jsx)(r.AW, {

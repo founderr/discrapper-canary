@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return f;
+        return C;
     }
 }),
     n(47120);
@@ -145,7 +145,7 @@ class S extends a.PureComponent {
                 : (t[n] = i);
     }
 }
-function f() {
+function C() {
     let e = {
         installShortcutDesktop: c.Xc.useSetting(),
         installShortcutStartMenu: c.Pe.useSetting(),

@@ -37,14 +37,14 @@ var s = n(735250),
     G = n(71363),
     y = n(781800),
     k = n(474936),
-    H = n(981631),
-    w = n(556613),
+    w = n(981631),
+    H = n(556613),
     F = n(865215),
     V = n(735035),
     W = n(786362);
 let K = (e) => {
         let { isFullscreen: t, selectedPremiumType: n } = e;
-        return (t && null == n) || (n === k.p9.TIER_2 && t) ? null : (0, s.jsx)(v.Z, { className: t ? w.perkCardsContainerSpacingFullscreen : w.perkCardsContainerSpacingSettings });
+        return (t && null == n) || (n === k.p9.TIER_2 && t) ? null : (0, s.jsx)(v.Z, { className: t ? H.perkCardsContainerSpacingFullscreen : H.perkCardsContainerSpacingSettings });
     },
     Y = (e) => {
         let { isFullscreen: t, inOfferExperience: n } = e;
@@ -54,7 +54,7 @@ let K = (e) => {
         let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: a } = e;
         return t
             ? (0, s.jsxs)('div', {
-                  className: i()(w.whatsNewSectionBackground),
+                  className: i()(H.whatsNewSectionBackground),
                   children: [
                       (0, s.jsx)(L.Z, {
                           variant: U.R0.WHATS_NEW,
@@ -71,13 +71,13 @@ let K = (e) => {
                       }),
                       n
                           ? (0, s.jsx)(Z.ZP, {
-                                className: w.pdSparklesTop,
+                                className: H.pdSparklesTop,
                                 variant: Z.u0.TOP
                             })
                           : null,
                       n
                           ? (0, s.jsx)(Z.ZP, {
-                                className: w.pdSparklesBottom,
+                                className: H.pdSparklesBottom,
                                 variant: Z.u0.BOTTOM
                             })
                           : null
@@ -121,8 +121,8 @@ t.Z = (e) => {
         }, []);
     let eT = (0, s.jsx)('div', {
             className: i()({
-                [w.premiumTierCardsContainerSettings]: !n,
-                [w.premiumTierCardsContainerFullscreen]: n
+                [H.premiumTierCardsContainerSettings]: !n,
+                [H.premiumTierCardsContainerFullscreen]: n
             }),
             children: (0, s.jsx)(c.$, {
                 onChange: (e) => y(e),
@@ -136,17 +136,17 @@ t.Z = (e) => {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: k.Si.TIER_0,
-                                  className: w.marginTopForButtons,
+                                  className: H.marginTopForButtons,
                                   look: d.ButtonLooks.OUTLINED,
                                   color: d.ButtonColors.WHITE,
-                                  buttonShineClassName: w.buttonShine
+                                  buttonShineClassName: H.buttonShine
                               })
                             : (0, s.jsx)(j.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: k.Si.TIER_0,
-                                  className: w.marginTopForButtons,
-                                  buttonShineClassName: w.buttonShine
+                                  className: H.marginTopForButtons,
+                                  buttonShineClassName: H.buttonShine
                               }),
                     tier2CTAButton:
                         ec === k.Si.TIER_0
@@ -154,29 +154,29 @@ t.Z = (e) => {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: k.Si.TIER_2,
-                                  className: w.marginTopForButtons,
+                                  className: H.marginTopForButtons,
                                   look: d.ButtonLooks.OUTLINED,
                                   color: d.ButtonColors.WHITE,
-                                  buttonShineClassName: w.buttonShine
+                                  buttonShineClassName: H.buttonShine
                               })
                             : (0, s.jsx)(j.Z, {
                                   forceInverted: !0,
                                   showIcon: !1,
                                   subscriptionTier: k.Si.TIER_2,
-                                  className: w.marginTopForButtons,
+                                  className: H.marginTopForButtons,
                                   isEligibleForBogoPromotion: e_,
-                                  buttonShineClassName: w.buttonShine
+                                  buttonShineClassName: H.buttonShine
                               })
                 })
             })
         }),
         eI = (0, s.jsxs)('div', {
-            className: i()(w.container, { [w.settingsContainer]: !n }),
+            className: i()(H.container, { [H.settingsContainer]: !n }),
             'data-cy': 'tier-0-marketing-page',
             children: [
                 (0, s.jsx)(O.Z, {
                     premiumSubscription: $,
-                    className: i()(n ? w.fullscreenExistingSubscriberSpacing : w.existingSubscriberSpacing, { [w.zIndex1]: ed }),
+                    className: i()(n ? H.fullscreenExistingSubscriberSpacing : H.existingSubscriberSpacing, { [H.zIndex1]: ed }),
                     isFullscreen: n
                 }),
                 (0, s.jsx)(Y, {
@@ -196,18 +196,18 @@ t.Z = (e) => {
                               subscriptionTier: en,
                               isFullscreen: n || ed,
                               className: i()({
-                                  [w.fullscreenHero]: n,
-                                  [w.settingsHeroNoBackground]: !n && ed,
-                                  [w.trialMarketingMargin]: ed,
-                                  [w.settingsHeroBogoHeight]: !n && e_,
-                                  [w.settingsHeroBogoMarginFullscreen]: n && e_,
-                                  [w.noTopPaddingOverride]: null != $
+                                  [H.fullscreenHero]: n,
+                                  [H.settingsHeroNoBackground]: !n && ed,
+                                  [H.trialMarketingMargin]: ed,
+                                  [H.settingsHeroBogoHeight]: !n && e_,
+                                  [H.settingsHeroBogoMarginFullscreen]: n && e_,
+                                  [H.noTopPaddingOverride]: null != $
                               }),
                               entrypoint: r
                           })
                       }),
                 (0, s.jsxs)('div', {
-                    className: w.promoBannerContainer,
+                    className: H.promoBannerContainer,
                     children: [(0, s.jsx)(f.Z, { isFullScreen: n }), n && ea && (0, s.jsx)(S.Z, { localizedPricingPromo: es })]
                 }),
                 eT,
@@ -218,10 +218,10 @@ t.Z = (e) => {
                 }),
                 (0, s.jsx)(K, { isFullscreen: n }),
                 (0, s.jsxs)('div', {
-                    className: w.planComparisonTableContainer,
+                    className: H.planComparisonTableContainer,
                     children: [
                         (0, s.jsx)(B.Z, {
-                            className: w.planComparisonTable,
+                            className: H.planComparisonTable,
                             hideCTAs: !0
                         }),
                         n
@@ -229,14 +229,14 @@ t.Z = (e) => {
                                   children: [
                                       (0, s.jsx)('img', {
                                           src: V,
-                                          className: w.tableLeftSideDecoration,
+                                          className: H.tableLeftSideDecoration,
                                           width: 197,
                                           height: 486,
                                           alt: l.Z.Messages.IMAGE
                                       }),
                                       (0, s.jsx)('img', {
                                           src: W,
-                                          className: w.tableRightSideDecoration,
+                                          className: H.tableRightSideDecoration,
                                           width: 241,
                                           height: 552,
                                           alt: l.Z.Messages.IMAGE
@@ -246,7 +246,7 @@ t.Z = (e) => {
                             : null
                     ]
                 }),
-                (0, s.jsx)('div', { className: n ? w.footerSpacingFullscreen : w.footerSpacing }),
+                (0, s.jsx)('div', { className: n ? H.footerSpacingFullscreen : H.footerSpacing }),
                 (0, s.jsx)(D.Z, {
                     isVisible: !v && !Z && J,
                     isFullscreen: n,
@@ -254,13 +254,13 @@ t.Z = (e) => {
                 }),
                 (0, s.jsx)(c.$, {
                     onChange: (e) => {
-                        e && !Q && (C.default.track(H.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }), q(!0));
+                        e && !Q && (C.default.track(w.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eu }), q(!0));
                     },
-                    children: (0, s.jsx)('div', { className: w.bottomOfPageVisibilitySensor })
+                    children: (0, s.jsx)('div', { className: H.bottomOfPageVisibilitySensor })
                 }),
                 (0, s.jsx)('img', {
                     src: F,
-                    className: w.bottomIllustration,
+                    className: H.bottomIllustration,
                     width: 112,
                     height: 85,
                     alt: l.Z.Messages.IMAGE
@@ -271,7 +271,7 @@ t.Z = (e) => {
         ? (0, s.jsxs)(s.Fragment, {
               children: [
                   (0, s.jsx)(d.AdvancedScrollerAuto, {
-                      className: w.scroller,
+                      className: H.scroller,
                       ref: b,
                       children: eI
                   }),

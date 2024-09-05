@@ -17,13 +17,13 @@ var i,
     p = n(833664),
     T = n(503438),
     S = n(420660),
-    f = n(74433),
-    C = n(906732),
+    C = n(74433),
+    f = n(906732),
     N = n(895924),
     A = n(812206),
     v = n(933557),
-    Z = n(194082),
-    L = n(264165),
+    L = n(194082),
+    Z = n(264165),
     R = n(630186),
     O = n(925329),
     x = n(382182),
@@ -391,7 +391,7 @@ let et = (e) => {
             { name: c, details: d, assets: _, application_id: h } = i;
         if (null != _ && (0, S.Z)(i)) {
             var m;
-            t = (0, s.jsx)(L.Z, {
+            t = (0, s.jsx)(Z.Z, {
                 className: Y.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
                 children: (0, s.jsxs)(u.Clickable, {
@@ -465,7 +465,7 @@ let et = (e) => {
                     })
                 ]
             }),
-            m = null !== (n = null === (t = (0, f.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : F.Z.Messages.SHARING_SCREEN;
+            m = null !== (n = null === (t = (0, C.Z)(i, r)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : F.Z.Messages.SHARING_SCREEN;
         return (0, s.jsxs)(X, {
             children: [
                 (0, s.jsxs)('div', {
@@ -480,7 +480,7 @@ let et = (e) => {
                         (0, s.jsxs)('div', {
                             children: [K(B.ZP.getName(a)), q(m)]
                         }),
-                        (0, s.jsx)(Z.ZP, { size: Z.ZP.Sizes.SMALL })
+                        (0, s.jsx)(L.ZP, { size: L.ZP.Sizes.SMALL })
                     ]
                 }),
                 E
@@ -504,7 +504,7 @@ let et = (e) => {
                     .filter(k.lm)
             ),
             E = (0, h.O)(),
-            { analyticsLocations: I } = (0, C.ZP)();
+            { analyticsLocations: I } = (0, f.ZP)();
         if (null == d) return null;
         let g = A.Z.getApplication(d);
         if (null == g) return null;

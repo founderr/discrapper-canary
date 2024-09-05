@@ -1,6 +1,6 @@
 n.d(t, {
     h: function () {
-        return h;
+        return b;
     }
 }),
     n(47120);
@@ -19,7 +19,7 @@ var a = n(735250),
     C = n(948625),
     m = n(981631),
     _ = n(246986);
-function b(e) {
+function h(e) {
     var t, n;
     let { config: s, index: i, handleCTAClick: l, text: c, reducedMotion: f = !1 } = e,
         p = r.useMemo(() => (0, C.E8)(s, f), [s, f]);
@@ -105,7 +105,7 @@ function b(e) {
         ]
     });
 }
-function h(e) {
+function b(e) {
     let { categories: t, handleScrollToCategory: n } = e,
         o = r.useMemo(() => {
             let e = {};
@@ -114,19 +114,19 @@ function h(e) {
         }, [t]),
         d = r.useMemo(() => (0, C.yc)(o), [o]),
         { analyticsLocations: u } = (0, s.cj)([p.Z], () => p.Z.getAnalytics()),
-        { analyticsLocations: h } = (0, c.ZP)([...u, l.Z.COLLECTIBLES_SHOP_HEADER_CAROUSEL]),
+        { analyticsLocations: b } = (0, c.ZP)([...u, l.Z.COLLECTIBLES_SHOP_HEADER_CAROUSEL]),
         x = r.useCallback(
             (e, t) => {
                 let a = e.cta;
                 f.default.track(m.rMx.SHOP_HEADER_CAROUSEL_CTA_CLICKED, {
-                    location_stack: h,
+                    location_stack: b,
                     slide_id: e.id,
                     slide_index: t,
                     sku_id: null == a ? void 0 : a.categorySkuId
                 }),
                     (null == a ? void 0 : a.categorySkuId) != null && n(a.categorySkuId);
             },
-            [h, n]
+            [b, n]
         ),
         I = (0, s.e7)([i.Z], () => i.Z.useReducedMotion),
         E = r.useCallback(
@@ -134,7 +134,7 @@ function h(e) {
                 var n, r;
                 let s = null === (n = e.cta) || void 0 === n ? void 0 : n.categorySkuId,
                     i = null != s ? (null === (r = o[s]) || void 0 === r ? void 0 : r.summary) : void 0;
-                return (0, a.jsx)(b, {
+                return (0, a.jsx)(h, {
                     config: e,
                     text: i,
                     handleCTAClick: x,
@@ -162,7 +162,7 @@ function h(e) {
             controlsClassName: _.paginationControls,
             paginationButtonClassName: _.paginationButton,
             delay: 6000,
-            analyticsLocations: h,
+            analyticsLocations: b,
             unidirectional: !0
         })
     });

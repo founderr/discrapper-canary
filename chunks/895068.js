@@ -25,13 +25,13 @@ var i,
     p = n(51144),
     T = n(945124),
     S = n(231467),
-    f = n(301544),
-    C = n(931515),
+    C = n(301544),
+    f = n(931515),
     N = n(286083),
     A = n(207796),
     v = n(777734),
-    Z = n(976757),
-    L = n(981631),
+    L = n(976757),
+    Z = n(981631),
     R = n(689938),
     O = n(266489);
 function x(e) {
@@ -53,7 +53,7 @@ function b(e) {
                 clan: n,
                 affinity: null !== (t = n.affininty) && void 0 !== t ? t : (0, T.y)(n, s),
                 className: d()(O.card, r),
-                source: null != o ? o : L.jXE.DISCOVER_SEARCH,
+                source: null != o ? o : Z.jXE.DISCOVER_SEARCH,
                 onlyAnimateIconOnHover: !0,
                 ...c
             },
@@ -64,7 +64,7 @@ function b(e) {
 ((s = i || (i = {})).TOP_PICKS = 'top_picks'), (s.OTHER_GUILDS = 'other_guilds'), (s.PAGINATION = 'pagination'), (s.HEADER_SPACER = 'header_spacer'), ((r = a || (a = {})).DEFAULT = 'default'), (r.GLOBAL_DISCOVERY = 'global_discovery'), (r.SAVED_GUILDS = 'saved_guilds');
 t.ZP = o.memo(function (e) {
     var t, n, i, a, s, r;
-    let { width: c, paddingVertical: T = 16, paddingHorizontal: S = 32, variant: L = 'default', onUpdatePage: x } = e,
+    let { width: c, paddingVertical: T = 16, paddingHorizontal: S = 32, variant: Z = 'default', onUpdatePage: x } = e,
         P = o.useMemo(() => Math.max(Math.min(null != c ? c : 1024, 1300) - 2 * S, 0), [c, S]),
         M = o.useMemo(() => {
             if (0 === P) return 1;
@@ -74,20 +74,20 @@ t.ZP = o.memo(function (e) {
                 i = P / t;
             return i > 360 ? Math.max(Math.floor(t - (t - e) / 2), 1) : n < 240 ? Math.max(Math.max(e, t), 1) : Math.max(e, 1);
         }, [P]),
-        { loaded: D, clans: y, searchResult: j, searchCriteria: U } = (0, C.ML)(M, 'saved_guilds' === L),
+        { loaded: D, clans: y, searchResult: j, searchCriteria: U } = (0, f.ML)(M, 'saved_guilds' === Z),
         G = (0, A.GN)((e) => e.selectedTraits, u.Z),
         w = (0, A.GN)((e) => e.selectedGames, u.Z),
         k = (0, E.Z)(j),
         { currentPage: B, updatePage: H, totalItems: V, pageSize: F } = (0, N.$)(),
         Y = (0, _.e7)([I.default], () => I.default.getCurrentUser());
     o.useEffect(() => {
-        if (null != j && !!(0, Z.Pw)(j)) (!(null != k && (0, Z.Pw)(k)) || !(k.loadedAt >= j.loadedAt)) && (0, m.Oe)('top_picks', U);
+        if (null != j && !!(0, L.Pw)(j)) (!(null != k && (0, L.Pw)(k)) || !(k.loadedAt >= j.loadedAt)) && (0, m.Oe)('top_picks', U);
     }, [U, j, k]);
     let W = w.length > 0 || G.length > 0 ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE : null != Y ? R.Z.Messages.CLAN_DISCOVERY_TOP_PICKS_SUBTITLE_NO_PREFERENCES.format({ name: p.ZP.getName(Y) }) : '';
     let z =
             ((t = y),
             (n = M),
-            (i = L),
+            (i = Z),
             (a = B),
             (s = W),
             (r = D),
@@ -207,12 +207,12 @@ t.ZP = o.memo(function (e) {
                         hide: n,
                         entranceDelay: o
                     },
-                    ''.concat(r.id, ':').concat(L)
+                    ''.concat(r.id, ':').concat(Z)
                 );
             },
-            [z, M, B, F, J, L, U, G, Q, X]
+            [z, M, B, F, J, Z, U, G, Q, X]
         ),
-        ee = o.useCallback((e) => (0, l.jsx)(f.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
+        ee = o.useCallback((e) => (0, l.jsx)(C.Z, { style: { transform: 'translateY(-6px)' } }, e), []),
         et = o.useCallback(
             (e) => {
                 let { header: t, subtitle: n, section: i } = z[e];
@@ -268,7 +268,7 @@ t.ZP = o.memo(function (e) {
         ? (0, l.jsx)('div', {
               className: O.emptySavedGuilds,
               children:
-                  'saved_guilds' === L
+                  'saved_guilds' === Z
                       ? (0, l.jsxs)(l.Fragment, {
                             children: [
                                 (0, l.jsx)(h.Heading, {

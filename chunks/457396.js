@@ -23,13 +23,13 @@ var r = n(91192),
     p = n(74538),
     T = n(502087),
     S = n(647265),
-    f = n(650032),
-    C = n(104494),
+    C = n(650032),
+    f = n(104494),
     N = n(639119),
     A = n(655525),
     v = n(314684),
-    Z = n(52188),
-    L = n(248042),
+    L = n(52188),
+    Z = n(248042),
     R = n(924540),
     O = n(649765),
     x = n(565626),
@@ -53,10 +53,10 @@ let k = (e) => {
         Y = (0, p.Qo)(V, F),
         W = (0, r.JA)('nitro'),
         z = (0, N.N)(),
-        K = (0, C.Ng)(),
+        K = (0, f.Ng)(),
         q = (0, l.e7)([I.ZP], () => I.ZP.inReverseTrial()),
         Q = (0, l.e7)([m.Z], () => m.Z.isLocalizedPromoEnabled) && null == z,
-        X = (0, L.Vi)(),
+        X = (0, Z.Vi)(),
         J = (0, x.ZP)(),
         $ = (0, v.$_)(),
         ee = (0, P.Kn)(w),
@@ -66,7 +66,7 @@ let k = (e) => {
         ea = (0, l.e7)([h.Z], () => h.Z.hasLayers()),
         es = null != ei ? ei : null == V ? void 0 : V.createdAt,
         er = a || null != z || null != K || X || et || en || J || null != $ || Y,
-        { enabled: el } = f._.useExperiment({ location: w }, { autoTrackExposure: !1 }),
+        { enabled: el } = C._.useExperiment({ location: w }, { autoTrackExposure: !1 }),
         eo = el && (null == z ? void 0 : z.trial_id) === D.a7,
         ec = (0, S.N9)({
             location: 'NitroTabButton',
@@ -104,7 +104,7 @@ let k = (e) => {
                                 onSelect: () => (0, u.EW)(o.z.REFERRAL_PROGRAM_PREMIUM_TAB_BADGE, { dismissAction: j.L.TAKE_ACTION })
                             })),
                             (i = 6))
-                          : Q && ((n = (0, s.jsx)(Z.k, { entryPoint: Z.U.PrivateMessages })), !a && (t = G.localizeBadge), (i = 5))
+                          : Q && ((n = (0, s.jsx)(L.k, { entryPoint: L.U.PrivateMessages })), !a && (t = G.localizeBadge), (i = 5))
                       : ((n = (0, s.jsx)(R.$H, {
                             trialOffer: z,
                             isTabSelected: a

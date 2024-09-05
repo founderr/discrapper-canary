@@ -39,7 +39,7 @@ function N(e) {
                     initialProductSkuId: null != I ? I.skuId : void 0
                 });
         }, [c, g, I]),
-        x = (0, E.M)('ProfileEffectModalFooter');
+        x = (0, E.Mu)('ProfileEffectModalFooter');
     return (0, r.jsxs)(o.ModalFooter, {
         className: T.modalFooter,
         children: [

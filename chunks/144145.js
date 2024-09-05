@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return Z;
+        return L;
     }
 }),
     n(653041),
@@ -23,15 +23,15 @@ var i = n(735250),
     p = n(283595),
     T = n(417363),
     S = n(626135),
-    f = n(804739),
-    C = n(346329),
+    C = n(804739),
+    f = n(346329),
     N = n(981631),
     A = n(689938);
 let v = d.Z.get(N.ABu.XBOX).name;
-function Z(e) {
+function L(e) {
     let { currentActivities: t } = e,
         n = t.length > 1,
-        Z = (function (e) {
+        L = (function (e) {
             let { currentActivities: t } = e,
                 n = (0, s.e7)([I.Z], () => I.Z.getAccounts().some((e) => e.type === d.Z.get(N.ABu.XBOX).type)),
                 a = t.some((e) => {
@@ -46,7 +46,7 @@ function Z(e) {
                       label: A.Z.Messages.USER_ACTIVITY_CONNECT_PLATFORM.format({ platform: v })
                   });
         })(e),
-        L = (function (e) {
+        Z = (function (e) {
             let { currentActivities: t } = e,
                 n = a.useContext(S.AnalyticsContext);
             return (0, s.Wu)(
@@ -61,7 +61,7 @@ function Z(e) {
                                 ...e,
                                 libraryApplication: a,
                                 canJoin: null != t && (0, u.Z)(t, N.xjy.JOIN) && t.type === N.IIU.PLAYING,
-                                canPlay: (0, f.t)({
+                                canPlay: (0, C.t)({
                                     LibraryApplicationStore: p.Z,
                                     LaunchableGameStore: m.Z,
                                     DispatchApplicationStore: T.Z,
@@ -78,7 +78,7 @@ function Z(e) {
             );
         })(e),
         R = [];
-    for (let e of L) {
+    for (let e of Z) {
         let { activity: t } = e;
         null != t &&
             null != t.type &&
@@ -109,7 +109,7 @@ function Z(e) {
                     return (0, i.jsx)(r.MenuItem, {
                         id: 'play-'.concat(n.session_id),
                         action: function () {
-                            (0, C.playApplication)(a.id, s, {
+                            (0, f.playApplication)(a.id, s, {
                                 analyticsParams: {
                                     location: {
                                         ...l,
@@ -124,5 +124,5 @@ function Z(e) {
                 })(e, n)
             );
     }
-    return [Z, ...R];
+    return [L, ...R];
 }

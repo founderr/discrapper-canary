@@ -1,36 +1,36 @@
 t.d(n, {
     Z: function () {
-        return u;
+        return c;
     }
 });
-var a = t(735250);
+var s = t(735250);
 t(470079);
-var s = t(481060),
-    i = t(131388),
-    l = t(409813),
-    r = t(750143),
+var a = t(481060),
+    l = t(131388),
+    r = t(409813),
+    i = t(750143),
     o = t(742242),
     d = t(60314);
-function u(e) {
+function c(e) {
     let { step: n, onClose: t } = e,
-        u = (0, i.Z)(r.X);
-    return n === l.h8.BENEFITS || n === l.h8.CONFIRM
+        c = (0, l.Z)(i.X);
+    return n === r.h8.BENEFITS || n === r.h8.CONFIRM
         ? null
-        : (0, a.jsxs)('div', {
+        : (0, s.jsxs)('div', {
               className: o.headerContainer,
               children: [
-                  !u &&
-                      (0, a.jsx)('div', {
+                  !c &&
+                      (0, s.jsx)('div', {
                           className: o.headerImageContainer,
                           'aria-hidden': 'true',
                           'data-accessibility': 'desaturate',
-                          children: (0, a.jsx)('img', {
+                          children: (0, s.jsx)('img', {
                               src: d,
                               alt: '',
                               className: o.headerImage
                           })
                       }),
-                  (0, a.jsx)(s.ModalCloseButton, {
+                  (0, s.jsx)(a.ModalCloseButton, {
                       withCircleBackground: !0,
                       className: o.closeButton,
                       onClick: t

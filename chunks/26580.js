@@ -85,23 +85,23 @@ let _ = ['egirl', 'egirls', 'waifu', 'dating', 'nsfw', 'sex', 'playboy', 'stupid
         let { tags: t, onTagClick: n, className: s, discoveryTagStyle: l = I.DEFAULT, hideOverflow: c = !1, guildId: d, section: E } = e,
             { ref: g, width: p } = (0, o.Z)(),
             [T, S] = a.useState(null),
-            f = t.filter((e) => !_.includes(e.toLowerCase()));
+            C = t.filter((e) => !_.includes(e.toLowerCase()));
         return (
             a.useLayoutEffect(() => {
                 if (null == g.current || null == p || 0 === p) return;
                 let e = 0,
                     t = 0,
                     n = p - 40 - 4;
-                for (let i = 0; i < f.length && ((t += g.current.children[i].clientWidth + 4), i === f.length - 1 ? !(t > n + 40) : !(t > n)); i++) {
+                for (let i = 0; i < C.length && ((t += g.current.children[i].clientWidth + 4), i === C.length - 1 ? !(t > n + 40) : !(t > n)); i++) {
                     e++;
                 }
-                S((t) => (e <= f.length ? e : t));
-            }, [p, g, f]),
+                S((t) => (e <= C.length ? e : t));
+            }, [p, g, C]),
             (0, i.jsxs)('ul', {
                 ref: g,
                 className: r()(u.tagContainer, s, { [u.invisible]: null == T }),
                 children: [
-                    f.map((e, t) =>
+                    C.map((e, t) =>
                         (0, i.jsx)(
                             h,
                             {
@@ -115,12 +115,12 @@ let _ = ['egirl', 'egirls', 'waifu', 'dating', 'nsfw', 'sex', 'playboy', 'stupid
                     ),
                     !c &&
                         null != T &&
-                        T < f.length &&
+                        T < C.length &&
                         (0, i.jsx)(m, {
                             className: l,
                             onTagClick: n,
-                            tags: f.slice(T),
-                            count: f.length - T,
+                            tags: C.slice(T),
+                            count: C.length - T,
                             guildId: d,
                             section: E
                         })

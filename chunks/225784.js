@@ -17,13 +17,13 @@ var i,
     p = n(879484),
     T = n(26580),
     S = n(206887),
-    f = n(981631),
-    C = n(689938),
+    C = n(981631),
+    f = n(689938),
     N = n(963477),
     A = n(129512),
     v = n(330065),
-    Z = n(755386);
-function L(e, t, n) {
+    L = n(755386);
+function Z(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,11 +38,11 @@ function L(e, t, n) {
 }
 class R extends (i = s.PureComponent) {
     getDefaultSplashURL(e, t) {
-        if (t) return Z;
+        if (t) return L;
         switch (e) {
-            case f.BRd.DARK:
+            case C.BRd.DARK:
                 return A;
-            case f.BRd.LIGHT:
+            case C.BRd.LIGHT:
                 return v;
         }
     }
@@ -50,8 +50,8 @@ class R extends (i = s.PureComponent) {
         var e;
         let { guild: t, className: n, theme: i, onTagClick: s } = this.props,
             { loaded: r, hasBeenSeen: d, isVisible: A, submitting: v } = this.state,
-            { name: Z, description: L, presenceCount: R, memberCount: O, keywords: x } = t,
-            b = null === (e = t.features) || void 0 === e ? void 0 : e.has(f.oNc.HUB),
+            { name: L, description: Z, presenceCount: R, memberCount: O, keywords: x } = t,
+            b = null === (e = t.features) || void 0 === e ? void 0 : e.has(C.oNc.HUB),
             P = m.ZP.getGuildDiscoverySplashURL({
                 id: t.id,
                 splash: t.discoverySplash,
@@ -152,7 +152,7 @@ class R extends (i = s.PureComponent) {
                                                       (0, a.jsx)(c.Heading, {
                                                           variant: 'heading-md/semibold',
                                                           className: N.guildName,
-                                                          children: Z
+                                                          children: L
                                                       })
                                                   ]
                                               }),
@@ -160,7 +160,7 @@ class R extends (i = s.PureComponent) {
                                                   className: N.description,
                                                   variant: 'text-sm/normal',
                                                   color: 'header-secondary',
-                                                  children: L
+                                                  children: Z
                                               }),
                                               y &&
                                                   null != x &&
@@ -183,7 +183,7 @@ class R extends (i = s.PureComponent) {
                                                                       className: N.memberCountText,
                                                                       variant: 'text-xs/normal',
                                                                       color: 'header-secondary',
-                                                                      children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: R })
+                                                                      children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({ membersOnline: R })
                                                                   })
                                                               ]
                                                           }),
@@ -196,7 +196,7 @@ class R extends (i = s.PureComponent) {
                                                                       className: N.memberCountText,
                                                                       variant: 'text-xs/normal',
                                                                       color: 'header-secondary',
-                                                                      children: C.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: O })
+                                                                      children: f.Z.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({ count: O })
                                                                   })
                                                               ]
                                                           })
@@ -214,13 +214,13 @@ class R extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            L(this, 'state', {
+            Z(this, 'state', {
                 loaded: !1,
                 hasBeenSeen: !1,
                 isVisible: !1,
                 submitting: !1
             }),
-            L(this, 'handleClickView', async (e) => {
+            Z(this, 'handleClickView', async (e) => {
                 let { className: t } = e.target;
                 if (t.includes('Menu')) return;
                 let { onView: n, guild: i } = this.props;
@@ -231,11 +231,11 @@ class R extends (i = s.PureComponent) {
                     this.setState({ submitting: !1 });
                 }
             }),
-            L(this, 'handleVisibilityChange', (e) => {
+            Z(this, 'handleVisibilityChange', (e) => {
                 let { onGuildCardSeen: t, guild: n } = this.props;
                 null != n && !this.state.hasBeenSeen && e && (this.setState({ hasBeenSeen: e }), null != t && t(n.id));
             }),
-            L(this, 'handleContextMenu', (e) => {
+            Z(this, 'handleContextMenu', (e) => {
                 (0, d.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 455839));
                     return (t) =>
@@ -245,9 +245,9 @@ class R extends (i = s.PureComponent) {
                         });
                 });
             }),
-            L(this, 'setIsVisible', (e) => {
+            Z(this, 'setIsVisible', (e) => {
                 this.setState({ isVisible: e });
             });
     }
 }
-L(R, 'Placeholder', (e) => (0, a.jsx)('div', { className: l()(e.className, N.cardPlaceholder) })), (t.Z = R);
+Z(R, 'Placeholder', (e) => (0, a.jsx)('div', { className: l()(e.className, N.cardPlaceholder) })), (t.Z = R);

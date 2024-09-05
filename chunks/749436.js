@@ -22,8 +22,8 @@ var i,
     p = n(117496),
     T = n(150192),
     S = n(731455),
-    f = n(981631),
-    C = n(689938),
+    C = n(981631),
+    f = n(689938),
     N = n(998597);
 function A(e, t, n) {
     return (
@@ -42,7 +42,7 @@ let v = c().throttle(I.c6, 1000, {
         leading: !1,
         trailing: !0
     }),
-    Z = (e) => {
+    L = (e) => {
         let { isSelected: t, onCategoryChange: n, categoryId: i, name: s, count: r } = e;
         return (0, a.jsx)(u.Clickable, {
             onClick: () => n(i),
@@ -54,12 +54,12 @@ let v = c().throttle(I.c6, 1000, {
             })
         });
     };
-class L extends (i = s.PureComponent) {
+class Z extends (i = s.PureComponent) {
     componentDidMount() {
         let { loadId: e, searchResults: t, currentCategoryId: n } = this.props,
             { searchId: i, query: a, isHandlingTagSearch: s } = this.state,
             r = this.context;
-        if ((null == h.ZP.getSearchIndex() && _.Ue(), m.S.subscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), m.S.subscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput), a.length > 0)) {
+        if ((null == h.ZP.getSearchIndex() && _.Ue(), m.S.subscribe(C.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), m.S.subscribe(C.CkL.TEXTAREA_FOCUS, this.focusInput), a.length > 0)) {
             let l = n !== S.Hk ? n : null;
             v({
                 loadId: e,
@@ -99,7 +99,7 @@ class L extends (i = s.PureComponent) {
                 });
     }
     componentWillUnmount() {
-        m.S.unsubscribe(f.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), m.S.unsubscribe(f.CkL.TEXTAREA_FOCUS, this.focusInput);
+        m.S.unsubscribe(C.CkL.GLOBAL_CLIPBOARD_PASTE, this.focusInput), m.S.unsubscribe(C.CkL.TEXTAREA_FOCUS, this.focusInput);
     }
     renderSearchOptions() {
         var e;
@@ -131,10 +131,10 @@ class L extends (i = s.PureComponent) {
                     : t.map((t) => {
                           let [n, i] = t;
                           return (0, a.jsx)(
-                              Z,
+                              L,
                               {
                                   categoryId: n,
-                                  name: n === S.Hk ? C.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
+                                  name: n === S.Hk ? f.Z.Messages.GUILD_DISCOVERY_ALL_CATEGORY_FILTER : T.Z.getCategoryName(n),
                                   onCategoryChange: this.handleCategoryChange,
                                   isSelected: e === n,
                                   count: i
@@ -161,7 +161,7 @@ class L extends (i = s.PureComponent) {
                                 inputClassName: i ? void 0 : N.searchBoxInput,
                                 closeIconClassName: i ? void 0 : N.closeIcon,
                                 searchIconClassName: i ? void 0 : N.searchIcon,
-                                label: C.Z.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
+                                label: f.Z.Messages.GUILD_DISCOVERY_SEARCH_LABEL,
                                 placeholder: n,
                                 onChange: this.handleQueryChanged,
                                 onClear: this.handleQueryCleared,
@@ -169,7 +169,7 @@ class L extends (i = s.PureComponent) {
                                 onBlur: this.handleSearchBlurred,
                                 onKeyPress: this.handleSearchKeyPress,
                                 autoFocus: !i,
-                                cta: t && null != e && e.length > 1 ? C.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+                                cta: t && null != e && e.length > 1 ? f.Z.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
                             })
                         }),
                         i ? this.renderSearchOptions() : null
@@ -210,7 +210,7 @@ class L extends (i = s.PureComponent) {
                 let { query: t, queryHasChanged: n } = this.state,
                     { loadId: i, currentCategoryId: a } = this.props,
                     s = a !== S.Hk ? a : null;
-                this.canSearch(t) && n && e.charCode === f.yXg.ENTER ? (I.tI(i, s), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === f.yXg.ENTER && this.setState({ isSearching: !1 });
+                this.canSearch(t) && n && e.charCode === C.yXg.ENTER ? (I.tI(i, s), this.doSearch(0, 12, void 0, !0)) : 0 === t.length && e.charCode === C.yXg.ENTER && this.setState({ isSearching: !1 });
             }),
             A(this, 'handleQueryChanged', (e) => {
                 this.setState({
@@ -258,10 +258,10 @@ class L extends (i = s.PureComponent) {
 function R(e) {
     let t = (0, d.e7)([T.Z], () => T.Z.getDiscoveryCategories(), [], T.j),
         n = (0, d.e7)([h.ZP], () => h.ZP.getTopCategoryCounts(e.mostRecentQuery));
-    return (0, a.jsx)(L, {
+    return (0, a.jsx)(Z, {
         ...e,
         categories: t,
         countsByCategory: n
     });
 }
-A(L, 'contextType', void 0), (L.contextType = E.AnalyticsContext);
+A(Z, 'contextType', void 0), (Z.contextType = E.AnalyticsContext);

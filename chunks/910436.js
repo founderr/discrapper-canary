@@ -25,23 +25,23 @@ var a = n(287734),
     T = n(981631);
 function S(e) {
     let { party: t, onChannelContextMenu: n, quest: S } = e,
-        f = (0, g.L)(),
-        { voiceChannels: C, currentActivities: N, partiedMembers: A, applicationStreams: v, guildContext: Z } = t,
-        L = [],
+        C = (0, g.L)(),
+        { voiceChannels: f, currentActivities: N, partiedMembers: A, applicationStreams: v, guildContext: L } = t,
+        Z = [],
         R = (e) => {
             var t, n;
-            let { length: a } = L;
+            let { length: a } = Z;
             if (0 === a) {
-                L.push(e);
+                Z.push(e);
                 return;
             }
-            let s = L[a - 1],
+            let s = Z[a - 1],
                 r = ''.concat(null !== (t = null == e ? void 0 : e.key) && void 0 !== t ? t : ''),
                 l = ''.concat(null !== (n = null == s ? void 0 : s.key) && void 0 !== n ? n : '').startsWith('game') && r.startsWith('rich-presence');
-            L.push((0, i.jsx)(I.Z.Separator, { inset: l }, 'sep-'.concat(r))), L.push(e);
+            Z.push((0, i.jsx)(I.Z.Separator, { inset: l }, 'sep-'.concat(r))), Z.push(e);
         };
-    for (let { activity: e } of (C.length > 0 &&
-        C.forEach((e) => {
+    for (let { activity: e } of (f.length > 0 &&
+        f.forEach((e) => {
             let { members: t, channel: a, guild: s } = e;
             R(
                 (0, i.jsx)(
@@ -81,14 +81,14 @@ function S(e) {
         }
     return (
         v.length > 0 &&
-            f &&
+            C &&
             v.forEach((e) => {
                 let { stream: t, streamUser: n, activity: r } = e;
                 R(
                     (0, i.jsx)(
                         I.Z.ApplicationStreamingSection,
                         {
-                            guildId: null == Z ? void 0 : Z.id,
+                            guildId: null == L ? void 0 : L.id,
                             user: n,
                             activity: r,
                             applicationStream: t,
@@ -101,7 +101,7 @@ function S(e) {
                 );
             }),
         N.forEach((e, t) => {
-            var n, a, s, h, m, g, f, v, L;
+            var n, a, s, h, m, g, C, v, Z;
             let { activity: O, game: x, playingMembers: b, activityUser: P } = e;
             if (null == O || null == O.type) return null;
             if (N.length > 1 && O.type === T.IIU.PLAYING && !(0, r.Z)(O) && null != x)
@@ -123,7 +123,7 @@ function S(e) {
                 );
             else if ((0, l.Z)(O)) {
                 let e = new Set(b.map((e) => e.id)),
-                    t = null === (s = C.find((e) => null != e)) || void 0 === s ? void 0 : s.channel;
+                    t = null === (s = f.find((e) => null != e)) || void 0 === s ? void 0 : s.channel;
                 null != t &&
                     R(
                         (0, i.jsx)(
@@ -149,13 +149,13 @@ function S(e) {
                     )
                 );
             else if ((0, d.Z)(O)) {
-                let e = C.length > 0 && C[0].members.length > 1,
+                let e = f.length > 0 && f[0].members.length > 1,
                     n = b.length > 1;
                 R(
                     (0, i.jsx)(
                         I.Z.TwitchSection,
                         {
-                            guildId: null == Z ? void 0 : Z.id,
+                            guildId: null == L ? void 0 : L.id,
                             activity: O,
                             user: e || n ? P : null,
                             getAssetImage: E.getAssetImage
@@ -190,12 +190,12 @@ function S(e) {
                                     activity: O,
                                     getAssetImage: E.getAssetImage
                                 },
-                                'rich-presence-'.concat(null !== (f = O.session_id) && void 0 !== f ? f : t, '-').concat(P.id)
+                                'rich-presence-'.concat(null !== (C = O.session_id) && void 0 !== C ? C : t, '-').concat(P.id)
                             )
                         )
                       : (0, c.Z)(O) && R((0, i.jsx)(I.Z.XboxSection, { title: x.name }, 'xbox-'.concat(null !== (v = O.session_id) && void 0 !== v ? v : t)));
-            null != S && null != x && (0, u._D)(O, S) && R((0, i.jsx)(_.Z, { quest: S }, 'quest-'.concat(S.id, '-').concat(null !== (L = O.session_id) && void 0 !== L ? L : t)));
+            null != S && null != x && (0, u._D)(O, S) && R((0, i.jsx)(_.Z, { quest: S }, 'quest-'.concat(S.id, '-').concat(null !== (Z = O.session_id) && void 0 !== Z ? Z : t)));
         }),
-        L.length > 0 ? (0, i.jsx)(I.Z.Body, { children: L }) : null
+        Z.length > 0 ? (0, i.jsx)(I.Z.Body, { children: Z }) : null
     );
 }

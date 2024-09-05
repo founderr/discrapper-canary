@@ -42,8 +42,8 @@ var i = n(399606),
     G = n(393305),
     y = n(338879),
     k = n(609926),
-    H = n(203302),
-    w = n(766491),
+    w = n(203302),
+    H = n(766491),
     F = n(193943),
     V = n(707046),
     W = n(488459),
@@ -106,7 +106,7 @@ t.Z = () => {
                       descriptionCta: L.Z.Messages.VISIT_THE_SHOP_CTA,
                       onCtaClick: ep,
                       pillText: L.Z.Messages.EARLY_ACCESS,
-                      perkImage: H,
+                      perkImage: w,
                       canReveal: e_,
                       dismissibleContentType: l.z.WHATS_NEW_AVATAR_DECOS_FLIP
                   }
@@ -116,7 +116,7 @@ t.Z = () => {
                       subtitle: L.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
                       description: L.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
                       pillText: L.Z.Messages.EARLY_ACCESS,
-                      perkImage: H,
+                      perkImage: w,
                       canReveal: e_,
                       dismissibleContentType: l.z.WHATS_NEW_AVATAR_DECOS_FLIP
                   },
@@ -152,7 +152,7 @@ t.Z = () => {
                           : () => {
                                 window.open(N.Z.getArticleURL(b.BhN.CLIPS), '_blank');
                             },
-                      perkImage: w
+                      perkImage: H
                   }
                 : {
                       name: 'clips',
@@ -160,7 +160,7 @@ t.Z = () => {
                       subtitle: L.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
                       description: L.Z.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
                       pillText: L.Z.Messages.EARLY_ACCESS,
-                      perkImage: w
+                      perkImage: H
                   },
             earlyAccess: ec
                 ? {

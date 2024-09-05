@@ -18,13 +18,13 @@ t.Z = function () {
         t = (0, u.Z)(e),
         n = (0, i.e7)([f.Z], () => f.Z.useReducedMotion),
         s = (0, i.e7)([p.Z], () => (0, l.wj)(p.Z.theme)),
-        { days: b, hours: h } = (0, d.Z)(new Date('2024-08-23T08:15:00-07:00')),
+        { days: h, hours: b } = (0, d.Z)(new Date('2024-08-23T08:15:00-07:00')),
         x = r.useMemo(() => {
-            if (0 === b && 0 === h) return g.Z.Messages.COLLECTIBLES_QUEUING_UP;
-            let e = ''.concat(b.toString().padStart(2, '0')).concat(g.Z.Messages.COUNTDOWN_UNITS_DAYS),
-                t = ''.concat(h.toString().padStart(2, '0')).concat(g.Z.Messages.COUNTDOWN_UNITS_HOURS);
+            if (0 === h && 0 === b) return g.Z.Messages.COLLECTIBLES_QUEUING_UP;
+            let e = ''.concat(h.toString().padStart(2, '0')).concat(g.Z.Messages.COUNTDOWN_UNITS_DAYS),
+                t = ''.concat(b.toString().padStart(2, '0')).concat(g.Z.Messages.COUNTDOWN_UNITS_HOURS);
             return ''.concat(e, ':').concat(t);
-        }, [b, h]);
+        }, [h, b]);
     return (0, a.jsxs)('div', {
         ref: e,
         className: o()(s ? C.shopCardDark : C.shopCard, m.notInteractive, {

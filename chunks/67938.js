@@ -1,6 +1,6 @@
 n.d(t, {
     G: function () {
-        return b;
+        return h;
     }
 });
 var a = n(735250);
@@ -42,7 +42,7 @@ function _() {
         ]
     });
 }
-function b(e) {
+function h(e) {
     let { category: t } = e,
         n = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
         { enabled: r } = (0, c.Z)({ location: 'CollectiblesShop' });

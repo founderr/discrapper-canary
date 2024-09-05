@@ -21,13 +21,13 @@ var i = n(735250),
     p = n(791734),
     T = n(444324),
     S = n(726115),
-    f = n(859921),
-    C = n(750910),
+    C = n(859921),
+    f = n(750910),
     N = n(28494),
     A = n(29086),
     v = n(590771),
-    Z = n(273596),
-    L = n(128449),
+    L = n(273596),
+    Z = n(128449),
     R = n(731455),
     O = n(689938),
     x = n(358831);
@@ -36,7 +36,7 @@ function b() {
         { onScroll: t, scrollPosition: n, resetScrollPosition: s } = (0, E.M)(),
         { tabs: b, selectedTab: P, setSelectedTab: M } = (0, A.Y)(),
         D = (0, S.lg)(P),
-        y = !L.MU.has(P),
+        y = !Z.MU.has(P),
         j = (0, d.iN)('global_discovery_servers_layout'),
         { searchBarState: U, onTabsAvailableWidthChange: G, onCollapsedSearchBarClick: w, onSearchBarBlur: k, tabsClassName: B } = (0, m.U)({ isSearchBarVisible: y }),
         { searchQuery: H, onSearchTextChange: V, onClearSearch: F, onSearchSubmit: Y, isSearchVisible: W } = (0, N.H)({ loadId: e.current }),
@@ -52,14 +52,14 @@ function b() {
                 W
                     ? b.filter((e) => {
                           let { id: t } = e;
-                          return !L.MU.has(t);
+                          return !Z.MU.has(t);
                       })
                     : b,
             [b, W]
         ),
         Q = z === h.v0.SAVED_GUILDS,
         X = a.useRef(new T.Z(D)),
-        { onGuildCardSeen: J, onGuildCardClick: $ } = (0, C.H)({
+        { onGuildCardSeen: J, onGuildCardClick: $ } = (0, f.H)({
             guildDiscoveryCardSeenManager: X.current,
             loadId: e.current
         });
@@ -70,16 +70,16 @@ function b() {
             s();
         }, [P, s]),
         a.useEffect(() => {
-            !W && f.B.setState({ searchScrollPosition: null });
+            !W && C.B.setState({ searchScrollPosition: null });
         }, [W]),
         a.useEffect(() => {
             (0, c.N)();
         }, []);
     let ee = a.useMemo(() => {
         switch (P) {
-            case L.vf.HUBS:
+            case Z.vf.HUBS:
                 return null;
-            case L.vf.GUILDS:
+            case Z.vf.GUILDS:
                 if (j) return (0, i.jsx)(_.Z, { className: r()(x.clanDiscoveryToolbar, !Q && x.rightAlignedToolbar) });
                 return null;
             default:
@@ -119,7 +119,7 @@ function b() {
                 ]
             }),
             W
-                ? (0, i.jsx)(Z.Z, {
+                ? (0, i.jsx)(L.Z, {
                       loadId: e.current,
                       onGuildCardClick: $,
                       onGuildCardSeen: J

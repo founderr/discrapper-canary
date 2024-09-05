@@ -17,8 +17,8 @@ var i = n(735250),
     p = n(825682),
     T = n(170245),
     S = n(981631),
-    f = n(65154),
-    C = n(689938),
+    C = n(65154),
+    f = n(689938),
     N = n(656209);
 function A(e, t, n) {
     return (
@@ -38,17 +38,17 @@ function v(e) {
         a = () => {
             u.Z.removeFriend(t.id, { location: 'Friends' });
         },
-        s = (0, l.e7)([E.Z], () => E.Z.supports(f.AN.VIDEO));
+        s = (0, l.e7)([E.Z], () => E.Z.supports(C.AN.VIDEO));
     return (0, i.jsxs)(o.Menu, {
         navId: 'friend-row',
-        'aria-label': C.Z.Messages.USER_ACTIONS_MENU_LABEL,
+        'aria-label': f.Z.Messages.USER_ACTIONS_MENU_LABEL,
         onClose: d.Zy,
         onSelect: n,
         children: [
             s
                 ? (0, i.jsx)(o.MenuItem, {
                       id: 'start-video-call',
-                      label: C.Z.Messages.START_VIDEO_CALL,
+                      label: f.Z.Messages.START_VIDEO_CALL,
                       action: function () {
                           c.Z.openPrivateChannel(t.id, !0, !0);
                       }
@@ -56,25 +56,25 @@ function v(e) {
                 : null,
             (0, i.jsx)(o.MenuItem, {
                 id: 'start-voice-call',
-                label: C.Z.Messages.START_VOICE_CALL,
+                label: f.Z.Messages.START_VOICE_CALL,
                 action: () => {
                     c.Z.openPrivateChannel(t.id, !0);
                 }
             }),
             (0, i.jsx)(o.MenuItem, {
                 id: 'remove-friend',
-                label: C.Z.Messages.REMOVE_FRIEND,
+                label: f.Z.Messages.REMOVE_FRIEND,
                 action: () => {
                     (0, o.openModal)((e) =>
                         (0, i.jsx)(o.ConfirmModal, {
-                            header: C.Z.Messages.REMOVE_FRIEND_TITLE.format({ name: m.ZP.getName(t) }),
-                            confirmText: C.Z.Messages.REMOVE_FRIEND,
-                            cancelText: C.Z.Messages.CANCEL,
+                            header: f.Z.Messages.REMOVE_FRIEND_TITLE.format({ name: m.ZP.getName(t) }),
+                            confirmText: f.Z.Messages.REMOVE_FRIEND,
+                            cancelText: f.Z.Messages.CANCEL,
                             onConfirm: a,
                             ...e,
                             children: (0, i.jsx)(o.Text, {
                                 variant: 'text-md/normal',
-                                children: C.Z.Messages.REMOVE_FRIEND_BODY.format({ name: m.ZP.getName(t) })
+                                children: f.Z.Messages.REMOVE_FRIEND_BODY.format({ name: m.ZP.getName(t) })
                             })
                         })
                     );
@@ -84,7 +84,7 @@ function v(e) {
         ]
     });
 }
-class Z extends a.PureComponent {
+class L extends a.PureComponent {
     componentWillLeave(e) {
         null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e);
     }
@@ -124,13 +124,13 @@ class Z extends a.PureComponent {
                             children: [
                                 (0, i.jsx)(I.Z, {
                                     icon: o.ChatIcon,
-                                    tooltip: C.Z.Messages.SEND_DM,
+                                    tooltip: f.Z.Messages.SEND_DM,
                                     onClick: this.handleOpenPrivateChannel,
                                     shouldHighlight: t
                                 }),
                                 (0, i.jsx)(I.Z, {
                                     icon: o.MoreVerticalIcon,
-                                    tooltip: C.Z.Messages.MORE,
+                                    tooltip: f.Z.Messages.MORE,
                                     onClick: this.handleOpenActionsMenu,
                                     shouldHighlight: t
                                 })
@@ -169,4 +169,4 @@ class Z extends a.PureComponent {
             });
     }
 }
-t.Z = Z;
+t.Z = L;

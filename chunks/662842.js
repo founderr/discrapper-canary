@@ -22,13 +22,13 @@ var i,
     p = n(151864),
     T = n(725436),
     S = n(497656),
-    f = n(554747),
-    C = n(230900),
+    C = n(554747),
+    f = n(230900),
     N = n(854698),
     A = n(703656),
     v = n(922482),
-    Z = n(565799),
-    L = n(501655),
+    L = n(565799),
+    Z = n(501655),
     R = n(427679),
     O = n(448206),
     x = n(184301),
@@ -44,7 +44,7 @@ var i,
 function w(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         i = (0, S.y)(t.id),
-        a = (0, f.k5)(t.id),
+        a = (0, C.k5)(t.id),
         l = (0, c.e7)([R.Z], () => R.Z.getStageInstanceByChannel(null == i ? void 0 : i.id), [i]),
         { isStageNoticeHidden: w, isEventNoticeHidden: k } = (0, c.cj)(
             [p.Z],
@@ -55,8 +55,8 @@ function w(e) {
             [l, a]
         ),
         B = null == i ? void 0 : i.id,
-        H = (0, c.Wu)([Z.Z], () => [...new Set(Z.Z.getMutableParticipants(B, L.pV.SPEAKER).map((e) => e.user))], [B]),
-        V = (0, c.e7)([Z.Z], () => (null != B ? Z.Z.getParticipantCount(B, L.pV.AUDIENCE) : 0), [B]),
+        H = (0, c.Wu)([L.Z], () => [...new Set(L.Z.getMutableParticipants(B, Z.pV.SPEAKER).map((e) => e.user))], [B]),
+        V = (0, c.e7)([L.Z], () => (null != B ? L.Z.getParticipantCount(B, Z.pV.AUDIENCE) : 0), [B]),
         F = (0, c.e7)([P.Z], () => P.Z.can(y.Plq.CONNECT, i)),
         Y = (0, O.Z)(null == i ? void 0 : i.id),
         W = null == a ? void 0 : a.creator_id,
@@ -189,7 +189,7 @@ function w(e) {
                         );
                     }
                     if (t.entity_type === j.WX.EXTERNAL) {
-                        let e = (0, C.cS)(t);
+                        let e = (0, f.cS)(t);
                         if (null == e) return { noticeType: null };
                         let n = I.ZP.getUserCount(t.id, p);
                         return {

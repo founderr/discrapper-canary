@@ -25,7 +25,7 @@ function p(e) {
         });
     let m = (0, i.ql)(t, d.tuJ.PREMIUM_TIER_2),
         _ = !n && !(0, i.x6)(t),
-        b =
+        h =
             (0, i.x6)(t) && n
                 ? {
                       ...C,
@@ -36,7 +36,7 @@ function p(e) {
         className: s()(f.priceTagsContainer, p),
         children: [
             (0, a.jsx)(l.F, {
-                price: b,
+                price: h,
                 discount: n ? i.f_ : r,
                 className: s()(f.price, {
                     [f.striked]: n,

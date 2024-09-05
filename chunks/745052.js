@@ -17,13 +17,13 @@ var i = n(735250),
     p = n(209613),
     T = n(325708),
     S = n(320149),
-    f = n(82295),
-    C = n(252618),
+    C = n(82295),
+    f = n(252618),
     N = n(605236),
     A = n(243778),
     v = n(984370),
-    Z = n(797614),
-    L = n(359110),
+    L = n(797614),
+    Z = n(359110),
     R = n(6025),
     O = n(897473),
     x = n(108427),
@@ -73,7 +73,7 @@ function ei() {
         S = a.useCallback(() => {
             m(n.map((e) => e.channel.id));
         }, [n, m]),
-        C = a.useCallback(
+        f = a.useCallback(
             (e) => {
                 var t, a;
                 let { row: l } = e,
@@ -100,7 +100,7 @@ function ei() {
         N = a.useCallback(
             () =>
                 (0, i.jsxs)(
-                    f.Z,
+                    C.Z,
                     {
                         className: et.sectionTitle,
                         children: [
@@ -133,7 +133,7 @@ function ei() {
                 ),
             [t, S, c]
         );
-    return (n.length !== t && Z.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
+    return (n.length !== t && L.Z.increment({ name: o.V.MESSAGE_REQUEST_COUNT_DRIFT }), 0 === n.length)
         ? (0, i.jsx)(z.Z, { section: Q.pS.REQUESTS })
         : (0, i.jsx)(l.bG, {
               navigator: g,
@@ -155,7 +155,7 @@ function ei() {
                               sectionHeight: Q.oi,
                               rowHeight: Q.WN,
                               renderSection: N,
-                              renderRow: C,
+                              renderRow: f,
                               sections: [n.length],
                               chunkSize: 30,
                               fade: !0,
@@ -246,7 +246,7 @@ let eo = (0, m.Z)(function (e) {
     let { width: t } = e,
         n = (0, F.q)();
     a.useEffect(() => {
-        _.Y(X.Z5c.MESSAGE_REQUESTS), (0, x.e)('message-requests'), j.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), Z.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
+        _.Y(X.Z5c.MESSAGE_REQUESTS), (0, x.e)('message-requests'), j.default.track(X.rMx.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }), L.Z.increment({ name: o.V.MESSAGE_REQUEST_VIEW });
     }, []);
     let s = (0, c.e7)([P.Z], () => P.Z.theme),
         l = (0, W.w)(),
@@ -260,14 +260,14 @@ let eo = (0, m.Z)(function (e) {
         g = (0, w.T)(m),
         p = (0, G.J)(m);
     a.useEffect(() => {
-        null != m && !g && p && I && ((0, L.Kh)(m), R.Z.closeChannelSidebar(M.uZ));
+        null != m && !g && p && I && ((0, Z.Kh)(m), R.Z.closeChannelSidebar(M.uZ));
     }, [m, p, I, g]);
     let [T, S] = a.useState(Q.pS.REQUESTS),
-        f = (e) => {
+        C = (e) => {
             S(e);
         };
     return (
-        (0, C.Tt)({ location: ee.Z.Messages.MESSAGE_REQUESTS }),
+        (0, f.Tt)({ location: ee.Z.Messages.MESSAGE_REQUESTS }),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
@@ -293,7 +293,7 @@ let eo = (0, m.Z)(function (e) {
                                             'aria-label': ee.Z.Messages.MESSAGE_REQUESTS,
                                             selectedItem: T,
                                             type: 'top-pill',
-                                            onItemSelect: f,
+                                            onItemSelect: C,
                                             className: et.__invalid_tabBar,
                                             children: [
                                                 (0, i.jsx)(u.TabBar.Item, {

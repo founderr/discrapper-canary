@@ -16,26 +16,26 @@ var i = n(735250),
     p = n(296386),
     T = n(150192),
     S = n(889010),
-    f = n(488905),
-    C = n(731455),
+    C = n(488905),
+    f = n(731455),
     N = n(981631),
     A = n(46140),
     v = n(689938),
-    Z = n(653534);
-let L = (e) => {
+    L = n(653534);
+let Z = (e) => {
     switch (e) {
-        case C.Gj.Activity:
-            return C.fW.Activity;
-        case C.Gj.Music:
-            return C.fW.Music;
-        case C.Gj.Television:
-            return C.fW.Television;
-        case C.Gj.Science:
-            return C.fW.Science;
-        case C.Gj.Education:
-            return C.fW.Education;
+        case f.Gj.Activity:
+            return f.fW.Activity;
+        case f.Gj.Music:
+            return f.fW.Music;
+        case f.Gj.Television:
+            return f.fW.Television;
+        case f.Gj.Science:
+            return f.fW.Science;
+        case f.Gj.Education:
+            return f.fW.Education;
         default:
-            return C.fW.Server;
+            return f.fW.Server;
     }
 };
 t.Z = function () {
@@ -55,21 +55,21 @@ t.Z = function () {
                 ? void 0
                 : O.map((e) => ({
                       ...e,
-                      icon: L(e.categoryId)
+                      icon: Z(e.categoryId)
                   })),
         b = (e) => {
-            (0, c.uY)(e, !0), h.Z.closeSidebar(), t && (0, c.AQ)(), (0, E.OG)() && e !== C.Gj.Quests && (0, r.uL)(N.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === C.Gj.Quests && (0, I.navigateToQuestHome)(A.dr.DISCOVERY_SIDEBAR, s.j.DISCOVERY_SIDEBAR);
+            (0, c.uY)(e, !0), h.Z.closeSidebar(), t && (0, c.AQ)(), (0, E.OG)() && e !== f.Gj.Quests && (0, r.uL)(N.Z5c.GUILD_DISCOVERY), !(0, E.OG)() && e === f.Gj.Quests && (0, I.navigateToQuestHome)(A.dr.DISCOVERY_SIDEBAR, s.j.DISCOVERY_SIDEBAR);
         };
     return (
         a.useEffect(() => {
             (0, p.le)(!1, !0);
         }, [e]),
         a.useEffect(() => {
-            !R && null == n && (0, c.uY)(C.Gj.Clans, !0);
+            !R && null == n && (0, c.uY)(f.Gj.Clans, !0);
         }, [R, n]),
         (0, i.jsxs)(l.Scroller, {
             children: [
-                (0, i.jsx)(f.V, { text: v.Z.Messages.DISCOVER }),
+                (0, i.jsx)(C.V, { text: v.Z.Messages.DISCOVER }),
                 (0, i.jsx)(
                     u.Z,
                     {
@@ -82,12 +82,12 @@ t.Z = function () {
                                 bottom: 1
                             }
                         },
-                        onClick: () => b(C.Gj.Clans),
+                        onClick: () => b(f.Gj.Clans),
                         wrapContent: !0,
-                        selected: e === C.Gj.Clans,
-                        className: Z.categoryItem,
-                        selectedClassName: Z.selectedCategoryItem,
-                        innerClassName: Z.itemInner
+                        selected: e === f.Gj.Clans,
+                        className: L.categoryItem,
+                        selectedClassName: L.selectedCategoryItem,
+                        innerClassName: L.itemInner
                     },
                     'clan-discovery-home'
                 ),
@@ -103,8 +103,8 @@ t.Z = function () {
                     shouldDisplaySelectedCategory: !t
                 }),
                 (0, i.jsx)(m.Z, {
-                    onClick: () => b(C.Gj.Quests),
-                    isSelected: e === C.Gj.Quests
+                    onClick: () => b(f.Gj.Quests),
+                    isSelected: e === f.Gj.Quests
                 })
             ]
         })

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return Z;
     }
 }),
     n(571269),
@@ -23,12 +23,12 @@ var i,
     p = n(918701),
     T = n(623249),
     S = n(78826),
-    f = n(670638),
-    C = n(642145),
+    C = n(670638),
+    f = n(642145),
     N = n(981631),
     A = n(689938),
     v = n(222307);
-function Z(e) {
+function L(e) {
     var t;
     let { quest: n, errorHints: i, warningHints: a } = e,
         { ref: l, height: o = 0 } = (0, h.Z)([i]),
@@ -61,10 +61,10 @@ function Z(e) {
         p = (0, _.useSpring)({
             opacity: g ? 1 : 0,
             height: g ? o : 0,
-            config: C.Y
+            config: f.Y
         }),
         S = 0 === E ? _.CircleWarningIcon : _.CircleInformationIcon,
-        f = 0 === E ? _.tokens.colors.TEXT_DANGER : _.tokens.colors.TEXT_NORMAL;
+        C = 0 === E ? _.tokens.colors.TEXT_DANGER : _.tokens.colors.TEXT_NORMAL;
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsx)(c.animated.div, {
             style: p,
@@ -77,7 +77,7 @@ function Z(e) {
                         children: [
                             (0, s.jsx)(S, {
                                 size: 'xs',
-                                color: f
+                                color: C
                             }),
                             (0, s.jsx)(_.Text, {
                                 variant: 'text-xs/medium',
@@ -103,12 +103,12 @@ function Z(e) {
         })
     });
 }
-function L(e) {
+function Z(e) {
     var t;
     let { quest: n, isHovering: i, errorHints: a, warningHints: l, onCtxMenuClose: c, onCtxMenuOpen: h, onCtxMenuSelect: T } = e,
-        C = (0, p.j8)(n),
-        L = (0, E.ZP)(),
-        R = (0, u.wj)(L) ? N.BRd.DARK : N.BRd.LIGHT,
+        f = (0, p.j8)(n),
+        Z = (0, E.ZP)(),
+        R = (0, u.wj)(Z) ? N.BRd.DARK : N.BRd.LIGHT,
         O = R === N.BRd.DARK,
         x = r.useMemo(() => (0, p.nP)(n.config.assets.hero), [n]),
         b = r.useContext(d.S).reducedMotion.enabled,
@@ -152,8 +152,8 @@ function L(e) {
                                           className: v.heroAsset,
                                           controls: !1,
                                           children: (0, s.jsx)('source', {
-                                              src: C,
-                                              type: (0, p.mN)(C)
+                                              src: f,
+                                              type: (0, p.mN)(f)
                                           })
                                       })
                                   )
@@ -165,7 +165,7 @@ function L(e) {
                                           ref: e,
                                           alt: ''.concat(n.config.messages.questName),
                                           className: v.heroAsset,
-                                          src: C
+                                          src: f
                                       })
                               })
                 }),
@@ -196,7 +196,7 @@ function L(e) {
                                                     children: A.Z.Messages.RECOMMENDED
                                                 })
                                             }),
-                                        (0, s.jsx)(f.r, {
+                                        (0, s.jsx)(C.r, {
                                             onOpen: h,
                                             onClose: c,
                                             onSelect: T,
@@ -248,7 +248,7 @@ function L(e) {
                                 })
                             ]
                         }),
-                        (0, s.jsx)(Z, {
+                        (0, s.jsx)(L, {
                             quest: n,
                             errorHints: a,
                             warningHints: l

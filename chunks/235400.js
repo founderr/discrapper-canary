@@ -67,7 +67,7 @@ function L(e) {
             },
             [s, u]
         ),
-        H = (0, h.M)('AvatarDecorationModalBody');
+        H = (0, h.Mu)('AvatarDecorationModalBody');
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(o.ModalHeader, {

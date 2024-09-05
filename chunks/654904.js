@@ -29,12 +29,12 @@ var o = n(51144),
     d = n(689938);
 function _(e, t, i, s) {
     (0, a.openModalLazy)(async () => {
-        let { default: a } = await n.e('82634').then(n.bind(n, 28130));
+        let { default: a } = await Promise.all([n.e('70687'), n.e('98041')]).then(n.bind(n, 28130));
         return (n) =>
             (0, r.jsx)(a, {
                 filters: s,
                 maxFileSizeBytes: u.B,
-                imageSpecifications: e === c.pC.BANNER && d.Z.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS,
+                imageSpecifications: e === c.pC.BANNER ? d.Z.Messages.USER_SETTINGS_PROFILE_THEMES_BANNER_MODAL_SPECS : void 0,
                 onComplete: (n, r) =>
                     (0, l.j)({
                         imageSrc: n,

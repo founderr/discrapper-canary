@@ -3,7 +3,7 @@ n.d(t, {
         return Z;
     },
     yc: function () {
-        return B;
+        return j;
     }
 });
 var a = n(180650),
@@ -21,26 +21,26 @@ var a = n(180650),
     C = n(55817),
     m = n(696228),
     _ = n(202796),
-    b = n(570593),
-    h = n(199546),
+    h = n(570593),
+    b = n(199546),
     x = n(613540),
     I = n(769411),
     E = n(125257),
     v = n(6412),
-    T = n(238286);
-let L = () => o.Z.Messages.LIMITED_TIME,
-    S = () => o.Z.Messages.MOST_POPULAR,
+    L = n(238286);
+let S = () => o.Z.Messages.LIMITED_TIME,
+    T = () => o.Z.Messages.MOST_POPULAR,
     N = () => o.Z.Messages.APPLICATION_STORE_NEW_RELEASE,
     O = () => o.Z.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
     k = () => o.Z.Messages.TAKE_ME_THERE,
-    j = [
+    B = [
         {
             id: 'category_tide',
-            backgroundStaticSrc: T,
+            backgroundStaticSrc: L,
             overflowSrcStatic: v,
             logoSrc: E,
             textColor: (0, r.Lq)(s.Ilk.WHITE_100),
-            badge: { label: L },
+            badge: { label: S },
             cta: {
                 label: k,
                 categorySkuId: a.T.TIDE
@@ -55,7 +55,7 @@ let L = () => o.Z.Messages.LIMITED_TIME,
             overflowSrcAnimated: c,
             logoSrc: l,
             textColor: (0, r.Lq)(s.Ilk.BLACK_500),
-            badge: { label: S },
+            badge: { label: T },
             cta: {
                 label: k,
                 categorySkuId: a.T.ANIME_V2
@@ -64,7 +64,7 @@ let L = () => o.Z.Messages.LIMITED_TIME,
         {
             id: 'category_galaxy',
             backgroundStaticSrc: I,
-            backgroundVideoSrc: h,
+            backgroundVideoSrc: b,
             logoSrc: x,
             textColor: (0, r.Lq)(s.Ilk.WHITE_100),
             badge: { label: N },
@@ -75,7 +75,7 @@ let L = () => o.Z.Messages.LIMITED_TIME,
         },
         {
             id: 'category_disxcore',
-            backgroundStaticSrc: b,
+            backgroundStaticSrc: h,
             overflowSrcStatic: _,
             logoSrc: m,
             textColor: (0, r.Lq)(s.Ilk.WHITE_100),
@@ -91,15 +91,15 @@ let L = () => o.Z.Messages.LIMITED_TIME,
             backgroundVideoSrc: p,
             logoSrc: g,
             textColor: (0, r.Lq)(s.Ilk.WHITE_100),
-            badge: { label: S },
+            badge: { label: T },
             cta: {
                 label: k,
                 categorySkuId: a.T.CYBERPUNK
             }
         }
     ],
-    B = (e) =>
-        j.filter((t) => {
+    j = (e) =>
+        B.filter((t) => {
             var n;
             let a = null === (n = t.cta) || void 0 === n ? void 0 : n.categorySkuId;
             return null == a || null != e[a];

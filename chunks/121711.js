@@ -16,8 +16,8 @@ var i = n(735250),
     p = n(736683),
     T = n(452081),
     S = n(981631),
-    f = n(689938),
-    C = n(296561);
+    C = n(689938),
+    f = n(296561);
 t.Z = function () {
     let { tabs: e, selectedTab: t, onSelectTab: n } = (0, T.z)(),
         { onScroll: N, scrollPosition: A } = (0, c.M)(),
@@ -34,17 +34,17 @@ t.Z = function () {
             }
         });
     }, []);
-    let Z = a.useCallback(() => {
+    let L = a.useCallback(() => {
         window.open(E.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE));
     }, []);
-    (0, o.Tt)({ location: f.Z.Messages.QUESTS });
-    let L = a.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []);
+    (0, o.Tt)({ location: C.Z.Messages.QUESTS });
+    let Z = a.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []);
     return (0, i.jsxs)('div', {
-        className: C.container,
+        className: f.container,
         children: [
             (0, i.jsxs)(_.ZP, {
                 children: [
-                    (0, i.jsx)('div', { className: C.dragRegion }),
+                    (0, i.jsx)('div', { className: f.dragRegion }),
                     (0, i.jsx)(_.z6, { scrollPosition: A }),
                     (0, i.jsx)(_.aV, { icon: r.QuestsIcon }),
                     (0, i.jsx)(h.Z, {
@@ -55,18 +55,18 @@ t.Z = function () {
                 ]
             }),
             (0, i.jsx)(u.Z, {
-                title: f.Z.Messages.QUESTS_HOME_HERO_TITLE,
-                description: f.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
+                title: C.Z.Messages.QUESTS_HOME_HERO_TITLE,
+                description: C.Z.Messages.QUESTS_HOME_HERO_DESCRIPTION,
                 onScroll: N,
                 button: (0, i.jsx)(d.u, {
-                    text: f.Z.Messages.LEARN_MORE,
-                    onClick: Z
+                    text: C.Z.Messages.LEARN_MORE,
+                    onClick: L
                 }),
-                bannerClassName: C.bannerContainer,
+                bannerClassName: f.bannerContainer,
                 bannerBackground: (0, i.jsx)('div', {
-                    className: C.bannerImage,
-                    style: L,
-                    children: (0, i.jsx)('div', { className: C.bannerGradient })
+                    className: f.bannerImage,
+                    style: Z,
+                    children: (0, i.jsx)('div', { className: f.bannerGradient })
                 }),
                 children: t === m.e5.CLAIMED ? (0, i.jsx)(p.Z, { onSelectTab: n }) : (0, i.jsx)(g.Z, {})
             })
