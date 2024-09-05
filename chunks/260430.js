@@ -2,7 +2,8 @@ n.d(t, {
     Z: function () {
         return p;
     }
-});
+}),
+    n(536091);
 var r = n(735250);
 n(470079);
 var i = n(120356),
@@ -68,17 +69,21 @@ function p(e) {
                 className: f.sectionLabel,
                 children: T.format({ application: null !== (t = null == n ? void 0 : n.name) && void 0 !== t ? t : '' })
             }),
-            i.map((e) => {
-                var t;
-                return (0, r.jsx)(
-                    h,
-                    {
-                        text: (0, _.jW)(e, i),
-                        error: null == d ? void 0 : null === (t = d[e]) || void 0 === t ? void 0 : t[0]
-                    },
-                    e
-                );
-            }),
+            i
+                .map((e) =>
+                    (0, _.CI)(e, i).map((t, n) => {
+                        var i;
+                        return (0, r.jsx)(
+                            h,
+                            {
+                                text: t,
+                                error: 0 === n ? (null == d ? void 0 : null === (i = d[e]) || void 0 === i ? void 0 : i[0]) : void 0
+                            },
+                            ''.concat(e, '-').concat(n)
+                        );
+                    })
+                )
+                .flat(),
             g && (0, r.jsx)(h, { text: E.Z.Messages.SCOPE_DM_YOU }),
             (0, r.jsx)(h, {
                 text: m,
