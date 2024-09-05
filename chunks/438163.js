@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return L;
+        return C;
     }
 }),
     n(47120);
@@ -16,24 +16,22 @@ var r = n(735250),
     _ = n(607070),
     E = n(100527),
     f = n(906732),
-    h = n(676035),
+    h = n(8454),
     p = n(314897),
-    I = n(158776),
-    m = n(785717),
-    T = n(481046),
-    g = n(277085),
-    S = n(228168),
-    A = n(981631),
-    N = n(689938),
-    O = n(576062);
-let R = 'text-sm/medium',
-    v = 36,
-    C = 144;
-function y(e) {
+    I = n(785717),
+    m = n(481046),
+    T = n(277085),
+    g = n(228168),
+    S = n(689938),
+    A = n(576062);
+let N = 'text-sm/medium',
+    O = 36,
+    R = 144;
+function v(e) {
     var t;
-    let { statusActivity: a, profileType: h, editEnabled: p, hasEntered: I = !0, animate: T = !0, onClose: A } = e,
+    let { statusActivity: a, profileType: h, editEnabled: p, hasEntered: m = !0, animate: v = !0, onClose: C } = e,
         { analyticsLocations: y } = (0, f.ZP)(E.Z.PROFILE_CUSTOM_STATUS),
-        { trackUserProfileAction: L } = (0, m.KZ)(),
+        { trackUserProfileAction: L } = (0, I.KZ)(),
         D = (0, l.e7)([_.Z], () => _.Z.useReducedMotion),
         [b] = i.useState(() => new u.V7()),
         [M, P] = i.useState(!0),
@@ -48,8 +46,8 @@ function y(e) {
         Z = H && !V,
         Y = H ? 1.25 : 0,
         j = 18 + Y,
-        W = C + Y,
-        K = v + Y,
+        W = R + Y,
+        K = O + Y,
         z = H || V,
         q = p && !z,
         Q = p && z,
@@ -59,13 +57,13 @@ function y(e) {
     i.useLayoutEffect(() => {
         if (null == U.current || Z) return;
         let e = U.current.getBoundingClientRect().height;
-        if (($(Z || e <= j), I)) {
+        if (($(Z || e <= j), m)) {
             var t, n, r, i;
             let e = null !== (r = null === (t = U.current) || void 0 === t ? void 0 : t.getBoundingClientRect().height) && void 0 !== r ? r : W,
                 a = null !== (i = null === (n = x.current) || void 0 === n ? void 0 : n.getBoundingClientRect().height) && void 0 !== i ? i : K;
             ee(!Z && e > a), (w.current = e), (G.current = a);
         }
-    }, [I, Z, j, W, K]);
+    }, [m, Z, j, W, K]);
     let [er, ei] = (0, c.useSpring)(() => ({
         maxHeight: ''.concat(K, 'px'),
         config: {
@@ -106,59 +104,59 @@ function y(e) {
         es = () =>
             H
                 ? (0, r.jsx)(d.I, {
-                      className: V ? O.statusEmojiInline : O.statusEmojiOnly,
+                      className: V ? A.statusEmojiInline : A.statusEmojiOnly,
                       emoji: k,
-                      animate: T,
+                      animate: v,
                       hideTooltip: !1,
-                      tooltipDelay: S.vB
+                      tooltipDelay: g.vB
                   })
                 : null,
         eo = () =>
             V
                 ? (0, r.jsx)(c.Text, {
-                      variant: R,
-                      className: O.statusText,
+                      variant: N,
+                      className: A.statusText,
                       children: F
                   })
                 : null,
         el = () =>
             (0, r.jsxs)('div', {
-                className: O.content,
+                className: A.content,
                 children: [
                     (0, r.jsx)(c.CirclePlusIcon, {
-                        className: O.addStatusIcon,
-                        colorClass: O.addStatusIconColor
+                        className: A.addStatusIcon,
+                        colorClass: A.addStatusIconColor
                     }),
                     (0, r.jsx)(c.Text, {
-                        variant: R,
-                        className: O.addStatusPrompt,
-                        children: N.Z.Messages.USER_SETTINGS_ADD_STATUS
+                        variant: N,
+                        className: A.addStatusPrompt,
+                        children: S.Z.Messages.USER_SETTINGS_ADD_STATUS
                     })
                 ]
             }),
         eu = {
-            [O.biteSize]: h === S.y0.BITE_SIZE,
-            [O.fullSize]: h === S.y0.FULL_SIZE,
-            [O.panel]: h === S.y0.PANEL
+            [A.biteSize]: h === g.y0.BITE_SIZE,
+            [A.fullSize]: h === g.y0.FULL_SIZE,
+            [A.panel]: h === g.y0.PANEL
         },
-        ec = s()(O.background, { [O.editable]: Q }),
+        ec = s()(A.background, { [A.editable]: Q }),
         ed = s()({
-            [O.statusBubbleShape]: (!V && H) || !X,
-            [O.statusBubbleSingleLineWithTextShape]: (X && V) || q
+            [A.statusBubbleShape]: (!V && H) || !X,
+            [A.statusBubbleSingleLineWithTextShape]: (X && V) || q
         }),
-        e_ = s()(O.statusBubbleOuter, eu, ed, { [O.statusBubbleOuterAddStatusCursor]: q }),
-        eE = s()(O.statusBubble, ed, {
-            [O.statusBubbleEmojiOnlyPadding]: Z,
-            [O.statusBubbleWithTextPadding]: V || q,
-            [O.statusBubbleWithTextMinWidth]: V,
-            [O.statusBubbleCopyStatusCursor]: z
+        e_ = s()(A.statusBubbleOuter, eu, ed, { [A.statusBubbleOuterAddStatusCursor]: q }),
+        eE = s()(A.statusBubble, ed, {
+            [A.statusBubbleEmojiOnlyPadding]: Z,
+            [A.statusBubbleWithTextPadding]: V || q,
+            [A.statusBubbleWithTextMinWidth]: V,
+            [A.statusBubbleCopyStatusCursor]: z
         });
     return (0, r.jsx)(f.Gt, {
         value: y,
         children: (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)('div', {
-                    className: s()(O.invisibleContainer, eu),
+                    className: s()(A.invisibleContainer, eu),
                     children: (0, r.jsx)('div', {
                         className: e_,
                         children: (0, r.jsxs)('span', {
@@ -167,13 +165,13 @@ function y(e) {
                                 q && el(),
                                 z &&
                                     (0, r.jsxs)('div', {
-                                        className: s()(O.content, O.clamp, O.placeholderWidth, { [O.panel]: h === S.y0.PANEL }),
+                                        className: s()(A.content, A.clamp, A.placeholderWidth, { [A.panel]: h === g.y0.PANEL }),
                                         ref: x,
                                         children: [es(), eo()]
                                     }),
                                 z &&
                                     (0, r.jsxs)('div', {
-                                        className: s()(O.content, O.unclamp, O.placeholderWidth, O.incorporeal, { [O.panel]: h === S.y0.PANEL }),
+                                        className: s()(A.content, A.unclamp, A.placeholderWidth, A.incorporeal, { [A.panel]: h === g.y0.PANEL }),
                                         ref: U,
                                         children: [es(), eo()]
                                     })
@@ -182,10 +180,10 @@ function y(e) {
                     })
                 }),
                 (0, r.jsxs)(c.ClickableContainer, {
-                    className: s()(O.visibleContainer, eu, ec),
+                    className: s()(A.visibleContainer, eu, ec),
                     'aria-label': q
-                        ? N.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL
-                        : N.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
+                        ? S.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL
+                        : S.Z.Messages.CUSTOM_STATUS_CUSTOM_STATUS_A11Y_LABEL.format({
                               emoji: null !== (t = null == k ? void 0 : k.name) && void 0 !== t ? t : '',
                               status: B
                           }),
@@ -193,7 +191,7 @@ function y(e) {
                     onClick: q
                         ? () => {
                               L({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
-                                  null == A || A(),
+                                  null == C || C(),
                                   (0, c.openModalLazy)(async () => {
                                       let { default: e } = await n.e('51714').then(n.bind(n, 211065));
                                       return (t) =>
@@ -224,10 +222,10 @@ function y(e) {
                                 children: [
                                     z &&
                                         (() => {
-                                            let e = s()(O.content, {
-                                                [O.clamp]: M,
-                                                [O.unclamp]: !M,
-                                                [O.singleLineAlign]: X
+                                            let e = s()(A.content, {
+                                                [A.clamp]: M,
+                                                [A.unclamp]: !M,
+                                                [A.singleLineAlign]: X
                                             });
                                             return (0, r.jsxs)(o.animated.div, {
                                                 style: er,
@@ -240,10 +238,10 @@ function y(e) {
                             })
                         }),
                         Q &&
-                            (0, r.jsx)(g.Z, {
+                            (0, r.jsx)(T.Z, {
                                 isVisible: et,
                                 isExpandable: J,
-                                onClose: A
+                                onClose: C
                             })
                     ]
                 })
@@ -251,20 +249,14 @@ function y(e) {
         })
     });
 }
-function L(e) {
+function C(e) {
     let { user: t, ...n } = e,
         i = (0, l.e7)([p.default], () => p.default.getId() === t.id),
-        a = (0, h.a)(),
-        s = (0, l.e7)([I.Z], () =>
-            I.Z.findActivity(t.id, (e) => {
-                let { type: t } = e;
-                return t === A.IIU.CUSTOM_STATUS;
-            })
-        ),
-        { customStatusBubbleEditEnabled: o } = (0, T.K)({ location: 'UserProfileCustomStatusBubble' });
-    return (0, r.jsx)(y, {
-        editEnabled: o && i,
-        statusActivity: i ? a : s,
+        a = (0, h.Z)(t.id),
+        { customStatusBubbleEditEnabled: s } = (0, m.K)({ location: 'UserProfileCustomStatusBubble' });
+    return (0, r.jsx)(v, {
+        editEnabled: s && i,
+        statusActivity: a,
         ...n
     });
 }
