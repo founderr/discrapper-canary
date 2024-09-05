@@ -48,6 +48,8 @@ n.d(t, {
     (_.APP_LAUNCHER_FRECENTS_VIEW_ALL = 'app_launcher_frecents_view_all'),
     (_.IMAGE_RECS_MENU = 'image_recs_menu'),
     (_.IMAGE_RECS_SUBMENU = 'image_recs_submenu'),
+    (_.ACTIVITY_INSTANCE_EMBED = 'activity_instance_embed'),
+    (_.ACTIVITY_BOOKMARK_EMBED = 'activity_bookmark_embed'),
     ((E = o || (o = {}))[(E.BUILT_IN = 1)] = 'BUILT_IN'),
     (E[(E.FRECENCY = 2)] = 'FRECENCY'),
     (E[(E.APP = 3)] = 'APP'),
@@ -60,4 +62,6 @@ n.d(t, {
     (f[(f.USER_PROFILE = 6)] = 'USER_PROFILE'),
     (f[(f.NOW_PLAYING = 7)] = 'NOW_PLAYING'),
     (f[(f.ACTIVITY_DETAILS = 8)] = 'ACTIVITY_DETAILS'),
-    (f[(f.ACTIVITIES_HOME = 9)] = 'ACTIVITIES_HOME');
+    (f[(f.ACTIVITIES_HOME = 9)] = 'ACTIVITIES_HOME'),
+    (f[(f.ACTIVITY_INSTANCE_EMBED = 10)] = 'ACTIVITY_INSTANCE_EMBED'),
+    (f[(f.ACTIVITY_BOOKMARK_EMBED = 11)] = 'ACTIVITY_BOOKMARK_EMBED');

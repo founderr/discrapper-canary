@@ -297,6 +297,8 @@ function y(e) {
         case f.bB.NOW_PLAYING:
         case f.bB.ACTIVITY_DETAILS:
         case f.bB.ACTIVITIES_HOME:
+        case f.bB.ACTIVITY_INSTANCE_EMBED:
+        case f.bB.ACTIVITY_BOOKMARK_EMBED:
         case f.bB.IMAGE_RECS_MENU:
         case f.bB.IMAGE_RECS_SUBMENU:
             return E.d.SlashCommand;

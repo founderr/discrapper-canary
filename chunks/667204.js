@@ -396,6 +396,10 @@ function q(e) {
             return U.Vh.IMAGE_RECS_MENU;
         case U.bB.IMAGE_RECS_SUBMENU:
             return U.Vh.IMAGE_RECS_SUBMENU;
+        case U.bB.ACTIVITY_INSTANCE_EMBED:
+            return U.Vh.ACTIVITY_INSTANCE_EMBED;
+        case U.bB.ACTIVITY_BOOKMARK_EMBED:
+            return U.Vh.ACTIVITY_BOOKMARK_EMBED;
         default:
             return U.Vh.SLASH_UI;
     }
