@@ -1,4 +1,4 @@
-n(47120), n(653041);
+n(47120), n(653041), n(724458);
 var i,
     a = n(512722),
     s = n.n(a),
@@ -35,7 +35,17 @@ class h {
         c(this, 'counts', null), c(this, 'isFetching', !1), c(this, 'error', null);
     }
 }
-class E {
+function E(e) {
+    var t;
+    __DEV__ && s()(e.startsWith('search-counts'), 'Unexpected id format for global discovery search counts.');
+    let n = null !== (t = u.get(e)) && void 0 !== t ? t : new h();
+    return u.set(e, n), n;
+}
+function m(e, t) {
+    let n = u.get(e);
+    return null != n ? t(n) : null;
+}
+class I {
     handleSearchStart() {
         (this.error = null), (this.isFetching = !0), (this.lastFetchTimestamp = Date.now());
     }
@@ -70,34 +80,37 @@ class E {
         c(this, 'guilds', []), c(this, 'error', null), c(this, 'offset', null), c(this, 'total', null), c(this, 'isFetching', !1), c(this, 'isInitialFetchComplete', !1), c(this, 'lastFetchTimestamp', null);
     }
 }
-function m(e) {
-    var t;
-    __DEV__ && s()(e.startsWith('search-counts'), 'Unexpected id format for global discovery search counts.');
-    let n = null !== (t = u.get(e)) && void 0 !== t ? t : new h();
-    return u.set(e, n), n;
-}
-function I(e) {
+function g(e) {
     var t;
     __DEV__ && s()(e.startsWith('search-results'), 'Unexpected id format for global discovery search state.');
-    let n = null !== (t = d.get(e)) && void 0 !== t ? t : new E();
+    let n = null !== (t = d.get(e)) && void 0 !== t ? t : new I();
     return d.set(e, n), n;
 }
-function g(e, t) {
+function p(e, t) {
     let n = d.get(e);
     return null != n ? t(n) : null;
 }
-class p extends (i = r.ZP.Store) {
+class T extends (i = r.ZP.Store) {
     getGuilds(e) {
-        return g(e, (e) => e.guilds);
+        return p(e, (e) => e.guilds);
     }
     getIsFetching(e) {
-        return g(e, (e) => e.isFetching);
+        return p(e, (e) => e.isFetching);
     }
     getIsInitialFetchComplete(e) {
-        return g(e, (e) => e.isInitialFetchComplete);
+        return p(e, (e) => e.isInitialFetchComplete);
     }
     getOffset(e) {
-        return g(e, (e) => e.offset);
+        return p(e, (e) => e.offset);
+    }
+    getIsFetchingCounts(e) {
+        return m(e, (e) => e.isFetching);
+    }
+    getCountsExist(e) {
+        return m(e, (e) => null != e.counts && e.counts.length > 0);
+    }
+    getCounts(e) {
+        return m(e, (e) => e.counts);
     }
     getAlgoliaSearchIndex() {
         return _;
@@ -106,8 +119,8 @@ class p extends (i = r.ZP.Store) {
         return null != _;
     }
 }
-c(p, 'displayName', 'GlobalDiscoveryServersSearchStore'),
-    new p(l.Z, {
+c(T, 'displayName', 'GlobalDiscoveryServersSearchStore'),
+    new T(l.Z, {
         CONNECTION_OPEN: function () {
             d.clear(), u.clear(), (_ = null);
         },
@@ -117,29 +130,37 @@ c(p, 'displayName', 'GlobalDiscoveryServersSearchStore'),
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_START: function (e) {
             let { id: t } = e;
-            I(t).handleSearchStart();
+            g(t).handleSearchStart();
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: function (e) {
             let { id: t, total: n, guilds: i } = e;
-            I(t).handleSearchSuccess({
+            g(t).handleSearchSuccess({
                 total: n,
                 guilds: i
             });
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: function (e) {
             let { id: t, error: n } = e;
-            I(t).handleSearchFailure(n);
+            g(t).handleSearchFailure(n);
+        },
+        GLOBAL_DISCOVERY_SERVERS_SEARCH_BULK_CLEAR: function (e) {
+            let { ids: t } = e;
+            return t.reduce((e, t) => !!d.delete(t) || e, !1);
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_START: function (e) {
             let { id: t } = e;
-            m(t).handleSearchCountStart();
+            E(t).handleSearchCountStart();
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
             let { id: t, categoryCounts: n } = e;
-            m(t).handleSearchCountSuccess(n);
+            E(t).handleSearchCountSuccess(n);
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_FAILURE: function (e) {
             let { id: t, error: n } = e;
-            m(t).handleSearchCountFailure(n);
+            E(t).handleSearchCountFailure(n);
+        },
+        GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_CLEAR: function (e) {
+            let { id: t } = e;
+            return u.delete(t);
         }
     });
