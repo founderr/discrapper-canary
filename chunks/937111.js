@@ -1,6 +1,6 @@
 n.d(t, {
     j: function () {
-        return p;
+        return I;
     }
 });
 var r,
@@ -15,8 +15,9 @@ var r,
 let _ = !1,
     E = {},
     f = !1,
-    h = {};
-function p(e) {
+    h = {},
+    p = {};
+function I(e) {
     return {
         joinRequestId: e.join_request_id,
         guildId: e.guild_id,
@@ -32,15 +33,15 @@ function p(e) {
         interviewChannelId: e.interview_channel_id
     };
 }
-function I(e) {
+function m(e) {
     let { guildId: t, request: n } = e;
     if (null == n) return;
-    let r = p(n),
+    let r = I(n),
         i = c.default.getCurrentUser();
     if (null != i && r.userId !== i.id) return !1;
     (0, d.d3)(r) ? delete E[t] : (E[t] = r);
 }
-class m extends (s = o.ZP.Store) {
+class T extends (s = o.ZP.Store) {
     getRequest(e) {
         return E[e];
     }
@@ -58,9 +59,12 @@ class m extends (s = o.ZP.Store) {
     hasJoinRequestCoackmark() {
         return _;
     }
+    getCooldown(e) {
+        return p[e];
+    }
 }
 (a = 'UserGuildJoinRequestStore'),
-    (i = 'displayName') in (r = m)
+    (i = 'displayName') in (r = T)
         ? Object.defineProperty(r, i, {
               value: a,
               enumerable: !0,
@@ -68,7 +72,7 @@ class m extends (s = o.ZP.Store) {
               writable: !0
           })
         : (r[i] = a),
-    (t.Z = new m(l.Z, {
+    (t.Z = new T(l.Z, {
         CONNECTION_OPEN: function (e) {
             let { guildJoinRequests: t } = e;
             (f = !1),
@@ -76,18 +80,18 @@ class m extends (s = o.ZP.Store) {
                 (E = {}),
                 t.forEach((e) => {
                     let { guild_id: t } = e;
-                    null != t && (E[t] = p(e));
+                    null != t && (E[t] = I(e));
                 });
         },
-        GUILD_JOIN_REQUEST_UPDATE: I,
-        GUILD_JOIN_REQUEST_CREATE: I,
+        GUILD_JOIN_REQUEST_UPDATE: m,
+        GUILD_JOIN_REQUEST_CREATE: m,
         USER_GUILD_JOIN_REQUEST_UPDATE: function (e) {
             let { request: t, guildId: n } = e;
             if (null == t) {
                 delete E[n];
                 return;
             }
-            let r = p(t);
+            let r = I(t);
             (0, d.d3)(r) ? delete E[n] : (E[n] = r);
         },
         GUILD_DELETE: function (e) {
@@ -124,7 +128,7 @@ class m extends (s = o.ZP.Store) {
                 { guild: n, join_request: r } = t;
             if (null != n && null != r) {
                 let { guild_id: e } = r;
-                E[e] = p(r);
+                E[e] = I(r);
                 let { id: t, name: i, icon: a, features: s } = n;
                 h[t] = {
                     id: t,
@@ -143,5 +147,9 @@ class m extends (s = o.ZP.Store) {
         },
         USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: function () {
             _ = !1;
+        },
+        USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH: function (e) {
+            let { guildId: t, cooldown: n } = e;
+            p[t] = null != n ? n : 0;
         }
     }));

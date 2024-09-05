@@ -1,47 +1,59 @@
-var i = n(735250);
-n(470079);
-var a = n(481060),
-    s = n(565138),
-    r = n(689938),
-    l = n(807907),
-    o = n(364632);
+var i = n(735250),
+    a = n(470079),
+    s = n(442837),
+    r = n(481060),
+    l = n(565138),
+    o = n(693546),
+    c = n(937111),
+    d = n(689938),
+    u = n(807907),
+    _ = n(364632);
 t.Z = (e) => {
-    let { headerId: t, reapplyText: n, onReapply: c, confirmText: d, onWithdrawApplication: u, rejectionReason: _ = null, guild: h = null } = e;
+    let { headerId: t, reapplyText: n, onReapply: h, confirmText: E, onWithdrawApplication: m, rejectionReason: I = null, guild: g = null } = e,
+        p = (0, s.e7)([c.Z], () => {
+            var e;
+            return c.Z.getCooldown(null !== (e = null == g ? void 0 : g.id) && void 0 !== e ? e : '0');
+        });
+    a.useEffect(() => {
+        null == p && null != g && o.Z.fetchJoinRequestCooldown(g.id);
+    }, [p, g]);
+    let T = (null != p ? p : 0) > 0,
+        S = T && null != p ? Math.ceil((1000 * p - Date.now()) / 86400000) : 0;
     return (0, i.jsxs)('div', {
-        className: l.confirmation,
+        className: u.confirmation,
         children: [
             (0, i.jsxs)('div', {
-                className: l.confirmationContent,
+                className: u.confirmationContent,
                 children: [
-                    null !== h
-                        ? (0, i.jsx)(s.Z, {
-                              size: s.Z.Sizes.LARGER,
-                              guild: h,
-                              className: l.guildIcon
+                    null !== g
+                        ? (0, i.jsx)(l.Z, {
+                              size: l.Z.Sizes.LARGER,
+                              guild: g,
+                              className: u.guildIcon
                           })
                         : (0, i.jsx)('img', {
-                              alt: r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_ICON,
-                              src: o,
-                              className: l.__invalid_verificationStateIcon
+                              alt: d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_ICON,
+                              src: _,
+                              className: u.__invalid_verificationStateIcon
                           }),
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(r.Heading, {
                         id: t,
                         variant: 'heading-xl/semibold',
-                        className: l.header,
-                        children: (null == h ? void 0 : h.name) != null ? r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE_WITH_GUILD_NAME.format({ guildName: h.name }) : r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE
+                        className: u.header,
+                        children: (null == g ? void 0 : g.name) != null ? d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE_WITH_GUILD_NAME.format({ guildName: g.name }) : d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_TITLE
                     }),
-                    null != _ && '' !== _
+                    null != I && '' !== I
                         ? (0, i.jsx)(i.Fragment, {
-                              children: (0, i.jsxs)(a.Text, {
+                              children: (0, i.jsxs)(r.Text, {
                                   variant: 'text-sm/normal',
                                   children: [
                                       (0, i.jsx)('span', {
-                                          className: l.rejectionReasonLabel,
-                                          children: r.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_REASON
+                                          className: u.rejectionReasonLabel,
+                                          children: d.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REJECTED_REASON
                                       }),
                                       (0, i.jsx)('span', {
-                                          className: l.rejectionReason,
-                                          children: _
+                                          className: u.rejectionReason,
+                                          children: I
                                       })
                                   ]
                               })
@@ -50,19 +62,26 @@ t.Z = (e) => {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: l.confirmationButtonRow,
+                className: u.confirmationButtonRow,
                 children: [
-                    (0, i.jsx)(a.Button, {
-                        onClick: c,
-                        color: a.Button.Colors.PRIMARY,
-                        className: l.confirmationButton,
-                        children: n
+                    (0, i.jsx)(r.TooltipContainer, {
+                        className: u.confirmationButton,
+                        text: T ? d.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY_COOLDOWN.format({ days: S }) : null,
+                        'aria-label': T ? d.Z.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY_COOLDOWN.format({ days: S }) : void 0,
+                        children: (0, i.jsx)(r.Button, {
+                            className: u.confirmationTooltipContents,
+                            onClick: h,
+                            color: r.Button.Colors.PRIMARY,
+                            submitting: null == p,
+                            disabled: T,
+                            children: n
+                        })
                     }),
-                    (0, i.jsx)(a.Button, {
-                        onClick: u,
-                        color: a.Button.Colors.RED,
-                        className: l.confirmationButton,
-                        children: d
+                    (0, i.jsx)(r.Button, {
+                        onClick: m,
+                        color: r.Button.Colors.RED,
+                        className: u.confirmationButton,
+                        children: E
                     })
                 ]
             })

@@ -149,6 +149,28 @@ let _ = async (e) => {
             t && a.default.selectPrivateChannel(s.id),
             s.id
         );
+    },
+    S = async (e) => {
+        try {
+            let t = await r.tn.get({ url: d.ANM.GUILD_MEMBER_JOIN_REQUEST_COOLDOWN(e) });
+            return (
+                i.Z.dispatch({
+                    type: 'USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH',
+                    guildId: e,
+                    cooldown: t.body.cooldown
+                }),
+                t
+            );
+        } catch (t) {
+            throw (
+                (i.Z.dispatch({
+                    type: 'USER_GUILD_JOIN_REQUEST_COOLDOWN_FETCH',
+                    guildId: e,
+                    cooldown: null
+                }),
+                t)
+            );
+        }
     };
 t.Z = {
     fetchGuildJoinRequest: _,
@@ -186,5 +208,6 @@ t.Z = {
                 request: t
             });
     },
-    createOrEnterJoinRequestInterview: g
+    createOrEnterJoinRequestInterview: g,
+    fetchJoinRequestCooldown: S
 };

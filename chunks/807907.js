@@ -34,6 +34,7 @@ e.exports = {
     confirmationContent: 'confirmationContent_a74b6f',
     confirmationButtonRow: 'confirmationButtonRow_a74b6f',
     confirmationButton: 'confirmationButton_a74b6f',
+    confirmationTooltipContents: 'confirmationTooltipContents_a74b6f',
     confirmationButtonColumn: 'confirmationButtonColumn_a74b6f',
     notice: 'notice_a74b6f',
     rejectionReasonLabel: 'rejectionReasonLabel_a74b6f',
