@@ -7,8 +7,8 @@ var n = t(735250),
     l = t.n(o),
     c = t(243814),
     d = t(442837),
-    u = t(921072),
-    _ = t(1561),
+    _ = t(921072),
+    u = t(1561),
     E = t(481060),
     T = t(384275),
     S = t(230711),
@@ -16,8 +16,8 @@ var n = t(735250),
     N = t(468026),
     m = t(317381),
     C = t(513202),
-    g = t(979200),
-    A = t(600164),
+    A = t(979200),
+    g = t(600164),
     h = t(713938),
     O = t(881998),
     p = t(246946),
@@ -57,13 +57,13 @@ let U = (e) => {
         let { disclosure: s } = e;
         return a.useMemo(() => {
             switch (s) {
-                case u.u$.IP_LOCATION:
+                case _.u$.IP_LOCATION:
                     return (0, n.jsx)(E.GlobeEarthIcon, {
                         size: 'md',
                         color: 'currentColor',
                         className: Z.disclosureIcon
                     });
-                case u.u$.DISPLAYS_ADVERTISEMENTS:
+                case _.u$.DISPLAYS_ADVERTISEMENTS:
                     return (0, n.jsx)(E.EmbedIcon, { className: Z.disclosureIcon });
                 default:
                     return (0, n.jsx)(E.CircleInformationIcon, { className: Z.disclosureIcon });
@@ -122,7 +122,7 @@ let U = (e) => {
                         shouldConfirm: !0
                     });
             },
-            u = (0, M.O)(t.id);
+            _ = (0, M.O)(t.id);
         return (0, n.jsx)(E.Card, {
             className: r()(Z.authedApp, v.marginBottom8),
             outline: !0,
@@ -134,7 +134,7 @@ let U = (e) => {
                         }),
                         s =
                             null != e
-                                ? (0, n.jsx)(A.Z.Child, {
+                                ? (0, n.jsx)(g.Z.Child, {
                                       className: Z.appAvatar,
                                       grow: 0,
                                       children: (0, n.jsx)('img', {
@@ -177,7 +177,7 @@ let U = (e) => {
                                 className: Z.tosPrivacy,
                                 children: [
                                     null != t.terms_of_service_url
-                                        ? (0, n.jsxs)(_.P, {
+                                        ? (0, n.jsxs)(u.P, {
                                               tag: 'a',
                                               onClick: l,
                                               className: Z.tos,
@@ -198,7 +198,7 @@ let U = (e) => {
                                               className: Z.privacy,
                                               children: [
                                                   null != t.terms_of_service_url ? (0, n.jsx)('div', { className: Z.divider }) : null,
-                                                  (0, n.jsxs)(_.P, {
+                                                  (0, n.jsxs)(u.P, {
                                                       tag: 'a',
                                                       onClick: d,
                                                       className: Z.privacy,
@@ -242,7 +242,7 @@ let U = (e) => {
                                         null == i
                                             ? void 0
                                             : i.map((s, t) => {
-                                                  let a = (0, g.PM)(s);
+                                                  let a = (0, A.PM)(s);
                                                   return null != a
                                                       ? (0, n.jsxs)(
                                                             'li',
@@ -258,7 +258,7 @@ let U = (e) => {
                                 })
                             });
                     })(),
-                    u && (0, n.jsx)(B, { application: t })
+                    _ && (0, n.jsx)(B, { application: t })
                 ]
             })
         });
@@ -282,10 +282,10 @@ s.Z = () => {
                 });
         },
         [o, c] = a.useState(''),
-        u = (e) => {
+        _ = (e) => {
             c(e);
         },
-        _ = () => {
+        u = () => {
             c('');
         },
         S = () =>
@@ -294,8 +294,8 @@ s.Z = () => {
                 children: (0, n.jsx)(E.SearchBar, {
                     size: E.SearchBar.Sizes.MEDIUM,
                     query: o,
-                    onChange: u,
-                    onClear: _,
+                    onChange: _,
+                    onClear: u,
                     placeholder: b.Z.Messages.INTEGRATIONS_SEARCH,
                     'aria-label': b.Z.Messages.INTEGRATIONS_SEARCH
                 })
@@ -316,7 +316,7 @@ s.Z = () => {
                     })
                 ]
             }),
-        g = a.useMemo(() => {
+        A = a.useMemo(() => {
             let e = o.trim().toLowerCase();
             return '' === e || null == s ? s : s.length < 100 ? s.filter((s) => l()(e, s.application.name.toLowerCase())) : s.filter((s) => s.application.name.toLowerCase().includes(e));
         }, [s, o]);
@@ -333,32 +333,30 @@ s.Z = () => {
                       body: b.Z.Messages.APPLICATIONS_AND_CONNECTIONS_BODY
                   }),
                   children:
-                      null == s || null == g
+                      null == s || null == A
                           ? (0, n.jsx)(E.Spinner, {
                                 className: v.marginTop20,
                                 type: E.Spinner.Type.SPINNING_CIRCLE
                             })
                           : 0 === s.length
                             ? N(b.Z.Messages.NO_AUTHORIZED_APPS_NOTE, b.Z.Messages.NO_AUTHORIZED_APPS)
-                            : 0 === g.length
+                            : 0 === A.length
                               ? (0, n.jsxs)(n.Fragment, {
                                     children: [S(), N(null, b.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
                                 })
                               : (0, n.jsxs)(n.Fragment, {
                                     children: [
                                         S(),
-                                        g
-                                            .sort((e, s) => e.application.name.localeCompare(s.application.name))
-                                            .map((e) =>
-                                                (0, n.jsx)(
-                                                    G,
-                                                    {
-                                                        onDelete: () => r(e),
-                                                        ...e
-                                                    },
-                                                    e.id
-                                                )
+                                        A.sort((e, s) => e.application.name.localeCompare(s.application.name)).map((e) =>
+                                            (0, n.jsx)(
+                                                G,
+                                                {
+                                                    onDelete: () => r(e),
+                                                    ...e
+                                                },
+                                                e.id
                                             )
+                                        )
                                     ]
                                 })
               })

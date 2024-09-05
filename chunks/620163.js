@@ -12,8 +12,8 @@ var a = t(990547),
     l = t(570140),
     c = t(893776),
     d = t(809206),
-    u = t(230711),
-    _ = t(493544),
+    _ = t(230711),
+    u = t(493544),
     E = t(579806),
     T = t(782568),
     S = t(758182),
@@ -21,8 +21,8 @@ var a = t(990547),
     N = t(703288),
     m = t(574755),
     C = t(377171),
-    g = t(621628),
-    A = t(18438),
+    A = t(621628),
+    g = t(18438),
     h = t(778825),
     O = t(665166),
     p = t(351780),
@@ -66,8 +66,8 @@ var a = t(990547),
     el = t(293389),
     ec = t(88624),
     ed = t(387747),
-    eu = t(389650),
-    e_ = t(649157),
+    e_ = t(389650),
+    eu = t(649157),
     eE = t(593648),
     eT = t(327885),
     eS = t(595242),
@@ -75,8 +75,8 @@ var a = t(990547),
     eN = t(757151),
     em = t(463153),
     eC = t(36192),
-    eg = t(338345),
-    eA = t(400287),
+    eA = t(338345),
+    eg = t(400287),
     eh = t(554042),
     eO = t(200645),
     ep = t(287490),
@@ -96,7 +96,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
         let { unseenGiftCount: s, showPrepaidPaymentPastDueWarning: eU, impressionSource: eG, numOfPendingFamilyRequests: eF, isOverlaySupported: ey, isClipsBetaTagShowing: eV = !1, shouldMergeGameSettings: eY, isUserSettingsSearchEnabled: ew, isKeywordFilteringEnabled: ek, isStaff: eH, isInappropriateConversationWarningEnabled: eW, paymentsBlocked: eK, isEligibleForQuests: ez, showGiftNitro: eQ, isStricterMessageRequestsEnabled: eX, hasLibraryApplication: eq, hasTOTPEnabled: eJ, canBroadcastActivity: e$, developerMode: e0, isSafetySettingsV2Enabled: e1, isAdultUser: e2 } = e;
         return Object.freeze({
             [eD.s6.SEARCH_NO_RESULTS]: {
-                section: _.ID.CUSTOM,
+                section: u.ID.CUSTOM,
                 element: em.Z,
                 predicate: () => ew
             },
@@ -224,7 +224,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [eD.s6.PROFILE_CUSTOMIZATION]: {
                 section: eP.oAB.PROFILE_CUSTOMIZATION,
-                type: _.bT.WIDE,
+                type: u.bT.WIDE,
                 searchableTitles: [eZ.Z.Messages.USER_SETTINGS_PROFILES],
                 label: eZ.Z.Messages.USER_SETTINGS_PROFILES,
                 ariaLabel: eZ.Z.Messages.USER_SETTINGS_PROFILES,
@@ -236,7 +236,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 },
                 onSettingsClose: () => {
                     l.Z.wait(() => {
-                        (0, A.It)(), (0, d.P6)(), u.Z.clearSubsection(eP.oAB.PROFILE_CUSTOMIZATION);
+                        (0, g.It)(), (0, d.P6)(), _.Z.clearSubsection(eP.oAB.PROFILE_CUSTOMIZATION);
                     });
                 }
             },
@@ -418,15 +418,30 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE],
                 parent: eD.s6.PRIVACY_DATA_PRIVACY
             },
+            [eD.s6.PRIVACY_DATA_PERSONALIZE_V2]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eZ.Z.Messages.DATA_PRIVACY_CONTROLS_PERSONALIZATION_TITLE],
+                parent: eD.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY
+            },
             [eD.s6.PRIVACY_DATA_QUESTS]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eZ.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT],
                 parent: eD.s6.PRIVACY_DATA_PRIVACY
             },
+            [eD.s6.PRIVACY_DATA_QUESTS_V2]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eZ.Z.Messages.USER_DROPS_SETTINGS_DROPS_OPTED_OUT],
+                parent: eD.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY
+            },
             [eD.s6.PRIVACY_DATA_BASIC_SERVICE]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
                 parent: eD.s6.PRIVACY_DATA_PRIVACY,
                 searchableTitles: [eD.CF]
+            },
+            [eD.s6.PRIVACY_DATA_BASIC_SERVICE_V2]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eD.CF],
+                parent: eD.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY
             },
             [eD.s6.PRIVACY_DATA_REQUEST]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
@@ -931,7 +946,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.CHAT],
                 label: eZ.Z.Messages.CHAT,
                 ariaLabel: eZ.Z.Messages.CHAT,
-                element: eA.Z
+                element: eg.Z
             },
             [eD.s6.CHAT_INLINE_MEDIA]: {
                 section: eP.oAB.TEXT,
@@ -1144,13 +1159,13 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.KEYBINDS,
                 searchableTitles: [eZ.Z.Messages.KEYBINDS],
                 label: eZ.Z.Messages.KEYBINDS,
-                element: eu.Z
+                element: e_.Z
             },
             [eD.s6.LANGUAGE]: {
                 section: eP.oAB.LOCALE,
                 searchableTitles: [eZ.Z.Messages.LANGUAGE],
                 label: eZ.Z.Messages.LANGUAGE,
-                element: e_.Z
+                element: eu.Z
             },
             [eD.s6.WINDOW_SETTINGS]: {
                 section: eP.oAB.WINDOWS,
@@ -1171,7 +1186,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.STREAMER_MODE],
                 label: eZ.Z.Messages.STREAMER_MODE,
                 ariaLabel: eZ.Z.Messages.STREAMER_MODE,
-                element: eg.Z
+                element: eA.Z
             },
             [eD.s6.STREAMER_MODE_INTEGRATIONS]: {
                 section: eP.oAB.STREAMER_MODE,
@@ -1485,7 +1500,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.DISMISSIBLE_CONTENT_OPTIONS,
                 searchableTitles: ['Dismissible Contents'],
                 label: 'Dismissible Contents',
-                element: g.Z,
+                element: A.Z,
                 predicate: () => b.Z.isDeveloper
             },
             [eD.s6.PAYMENT_FLOW_MODALS]: {
@@ -1570,11 +1585,11 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 })
             },
             [eD.s6.SOCIAL_LINKS]: {
-                section: _.ID.CUSTOM,
+                section: u.ID.CUSTOM,
                 element: K.Z
             },
             [eD.s6.CLIENT_DEBUG_INFO]: {
-                section: _.ID.CUSTOM,
+                section: u.ID.CUSTOM,
                 element: w.Z
             }
         });
