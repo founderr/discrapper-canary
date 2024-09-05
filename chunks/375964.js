@@ -4824,6 +4824,7 @@ e.exports = Object.freeze({
     SCOPE_UNSUPPORTED_ON_ANDROID_DESCRIPTION: 'This OAuth2 scope is not supported within the app yet.\nGood news though, it does work on your mobile web browser! So please open it there.',
     OAUTH2_GO_TO_SERVER_NAME_CTA: 'Go to **!!{guildName}!!**',
     OAUTH2_GO_TO_SERVER_DEFAULT_CTA: 'Go to Server',
+    OAUTH2_OPEN_APP_CTA: 'Open App',
     OAUTH2_IP_LOCATION_DISCLOSURE: 'Developer may see your IP address while you use this application.',
     OAUTH2_ADVERTISEMENTS_DISCLOSURE: 'Developer may show ads while you use this application.',
     SETTINGS_TWO_FA: 'Multi-Factor Authentication',
