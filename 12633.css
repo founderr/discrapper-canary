@@ -20292,6 +20292,10 @@ div.cardContainer_c22357 {
     margin-right: 6px
 }
 
+.nitroText_f03ca8 {
+    flex-wrap: wrap
+}
+
 .modalPreview_aba31b {
     width: 280px;
     box-sizing: border-box;
