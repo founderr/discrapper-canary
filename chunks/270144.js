@@ -1,6 +1,6 @@
 n.d(t, {
     CR: function () {
-        return U;
+        return P;
     },
     F5: function () {
         return y;
@@ -8,14 +8,11 @@ n.d(t, {
     FE: function () {
         return A;
     },
-    IX: function () {
-        return M;
-    },
     LM: function () {
         return N;
     },
     ZP: function () {
-        return P;
+        return M;
     },
     _k: function () {
         return R;
@@ -41,7 +38,7 @@ var r,
     s = n(442837),
     o = n(496929),
     l = n(887706),
-    u = n(812206),
+    u = n(728345),
     c = n(430824),
     d = n(496675),
     _ = n(509545),
@@ -220,35 +217,24 @@ let D = (e) => {
             }, []),
             { loadState: e }
         );
-    },
-    M = (e) => {
-        let t = (0, l.Z)(),
-            n = (0, s.e7)([u.Z], () => (null != e ? u.Z.getApplication(e) : null), [e]),
-            r = null != n;
-        return (
-            a.useEffect(() => {
-                !r && null != e && t && (0, m.UM)(e);
-            }, [r, e, t]),
-            n
-        );
     };
-function P(e) {
+function M(e) {
     var t, n;
     let { applicationId: r, groupListingId: i, guildId: a } = e,
         s = (0, l.Z)(),
         { listingsLoaded: o } = A(r, i),
-        { entitlementsLoaded: u } = N({ guildId: a }),
-        { entitlementsLoaded: c } = O({
+        { entitlementsLoaded: c } = N({ guildId: a }),
+        { entitlementsLoaded: d } = O({
             applicationId: r,
             loggedIn: s
         }),
-        d = M(r),
-        { subscriptionGroupListing: _ } = y(r, a),
-        E = null !== (n = null == _ ? void 0 : null === (t = _.subscription_listings) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0,
-        f = (null == d ? void 0 : d.isMonetized) === !0;
-    return { applicationSubscriptionListingsShown: null != r && null != i && (null == a || u) && (!s || c) && o && f && E > 0 };
+        { data: _ } = (0, u.I)(r),
+        { subscriptionGroupListing: E } = y(r, a),
+        f = null !== (n = null == E ? void 0 : null === (t = E.subscription_listings) || void 0 === t ? void 0 : t.length) && void 0 !== n ? n : 0,
+        h = (null == _ ? void 0 : _.isMonetized) === !0;
+    return { applicationSubscriptionListingsShown: null != r && null != i && (null == a || c) && (!s || d) && o && h && f > 0 };
 }
-function U(e, t) {
+function P(e, t) {
     let n = (0, s.e7)([c.Z], () => c.Z.isLoaded()),
         [r, i] = a.useState([]);
     return (
