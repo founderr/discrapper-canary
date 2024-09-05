@@ -36,12 +36,13 @@ function o(e, t) {
         onFailure: o
     });
 }
-function l(e, t, n) {
+function l(e, t, n, r) {
     i.Z.dispatch({
         type: 'INTERACTION_FAILURE',
         nonce: e,
         errorMessage: n,
-        errorCode: t
+        errorCode: t,
+        status: r
     });
 }
 async function u(e, t) {

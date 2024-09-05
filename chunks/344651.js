@@ -1338,7 +1338,8 @@ B(
     k(['INTERACTION_FAILURE'], (e) => {
         V({
             type: 'INTERACTION_FAILURE',
-            nonce: e.nonce
+            nonce: e.nonce,
+            reasonCode: e.reason_code
         });
     }),
     k(['APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE'], (e) => {

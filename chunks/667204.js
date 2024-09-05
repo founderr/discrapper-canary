@@ -374,13 +374,15 @@ async function z(e, t, n) {
                 null != c.interaction && (c.interaction.id = e);
             },
             onSuccess: () => {},
-            onFailure: (e, n) => {
-                null == n && null != e && s.Z.sendClydeError(t.channel.id, e),
+            onFailure: (n, r, i, o) => {
+                null == r && null != n && s.Z.sendClydeError(t.channel.id, n);
+                let l = r;
+                null == l && null != o && (l = (0, m.A0)(o, e.applicationId)),
                     a.Z.dispatch({
                         type: 'MESSAGE_SEND_FAILED',
                         messageId: c.id,
                         channelId: t.channel.id,
-                        reason: n
+                        reason: l
                     });
             }
         }

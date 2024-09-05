@@ -10954,6 +10954,8 @@ e.exports = Object.freeze({
     MJ_CHATBAR_BODY: 'Type \u201C$[command](commandHook)\u201D to use Midjourney. Tip: Create a server to try it with just friends.',
     APPLICATION_IFRAME_MODAL_LOAD_ERROR: 'There was an error trying to load the application.',
     INTERACTION_RATE_LIMITED: "Slow down! You're clicking too fast.",
+    INTERACTION_FAIL_TIMEOUT: "{applicationName} didn't respond in time",
+    INTERACTION_FAIL_TIMEOUT_GENERIC: "The application didn't respond in time",
     APPLICATION_ADD_BUTTON: 'Add App',
     APPLICATION_ADD_BUTTON_ACTIONS: 'Add App Actions',
     APPLICATION_ADD_BUTTON_ACTIONS_COPY: 'Copy Add App URL',
