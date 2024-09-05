@@ -15,6 +15,7 @@ e.exports = {
     largeBanner: 'largeBanner_e5da8b',
     bannerImage: 'bannerImage_e5da8b',
     disableFadeIn: 'disableFadeIn_e5da8b',
+    bannerUpperRightContainer: 'bannerUpperRightContainer_e5da8b',
     promotedLabelWrapperBanner: 'promotedLabelWrapperBanner_e5da8b',
     promotedLabelWrapperNonBanner: 'promotedLabelWrapperNonBanner_e5da8b',
     appDetailsContainer: 'appDetailsContainer_e5da8b',
@@ -27,5 +28,8 @@ e.exports = {
     activityVideo: 'activityVideo_e5da8b',
     videoFadeOut: 'videoFadeOut_e5da8b',
     tooltipContent: 'tooltipContent_e5da8b',
-    spinner: 'spinner_e5da8b'
+    spinner: 'spinner_e5da8b',
+    devShelfBadge: 'devShelfBadge_e5da8b',
+    devShelfIcon: 'devShelfIcon_e5da8b',
+    staffBadge: 'staffBadge_e5da8b'
 };
