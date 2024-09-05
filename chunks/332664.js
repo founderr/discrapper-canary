@@ -3,7 +3,7 @@ o.d(t, {
         return g;
     },
     Z: function () {
-        return L;
+        return N;
     }
 }),
     o(47120);
@@ -13,32 +13,33 @@ var n = o(735250),
     l = o.n(s),
     i = o(392711),
     r = o.n(i),
-    c = o(481060),
-    u = o(110924),
+    u = o(481060),
+    c = o(110924),
     d = o(600164),
     _ = o(313201),
     b = o(237617),
     E = o(572539),
     m = o(63063),
     O = o(957115),
+    h = o(871364),
     C = o(531578),
-    h = o(689938),
-    A = o(940256);
-let p = [
+    A = o(689938),
+    p = o(940256);
+let f = [
     {
-        className: A.emojiSad,
+        className: p.emojiSad,
         rating: C.aZ.BAD,
-        classNameSelected: A.selected
+        classNameSelected: p.selected
     },
     {
-        className: A.emojiNeutral,
+        className: p.emojiNeutral,
         rating: C.aZ.NEUTRAL,
-        classNameSelected: A.selected
+        classNameSelected: p.selected
     },
     {
-        className: A.emojiHappy,
+        className: p.emojiHappy,
         rating: C.aZ.GOOD,
-        classNameSelected: A.selected
+        classNameSelected: p.selected
     }
 ];
 function g(e) {
@@ -46,11 +47,11 @@ function g(e) {
     return (0, n.jsx)(d.Z, {
         justify: d.Z.Justify.BETWEEN,
         align: d.Z.Align.CENTER,
-        className: l()(A.ratingsSelector, t),
-        children: (null != a ? a : p).map((e) => {
+        className: l()(p.ratingsSelector, t),
+        children: (null != a ? a : f).map((e) => {
             let { rating: t, className: a, classNameSelected: i } = e;
             return (0, n.jsx)(
-                c.Clickable,
+                u.Clickable,
                 {
                     onClick: () => s(t),
                     'aria-label': t,
@@ -61,145 +62,159 @@ function g(e) {
         })
     });
 }
-function f() {
-    return (0, n.jsx)(c.Text, {
-        className: A.helpdeskLink,
+function L() {
+    return (0, n.jsx)(u.Text, {
+        className: p.helpdeskLink,
         variant: 'text-xs/normal',
         color: 'text-muted',
-        children: h.Z.Messages.FEEDBACK_NEED_MORE_HELP.format({ helpdeskURL: m.Z.getSubmitRequestURL() })
+        children: A.Z.Messages.FEEDBACK_NEED_MORE_HELP.format({ helpdeskURL: m.Z.getSubmitRequestURL() })
     });
 }
-function L(e) {
-    let { header: t, body: o, problemTitle: s, problems: i, transitionState: m, ratingConfigs: p, feedbackProblems: L = [], otherKey: N, ratingsSelectorClassName: D, hideDontShowCheckbox: I, startRating: v = null, onSubmit: Z, onClose: x } = e,
-        B = (0, u.Z)(i),
+function N(e) {
+    let { header: t, body: o, problemTitle: s, problems: i, transitionState: m, ratingConfigs: f, feedbackProblems: N = [], otherKey: D, ratingsSelectorClassName: I, hideDontShowCheckbox: Z, startRating: v = null, onSubmit: x, onClose: B } = e,
+        S = (0, c.Z)(i),
         [T, j] = a.useState(!1),
-        [S, M] = a.useState(v),
-        [R, k] = a.useState(null),
-        [K, F] = a.useState(r().shuffle(i)),
-        [H, U] = a.useState(''),
-        P = (0, _.Dt)(),
-        y = (0, b.Z)(S),
-        w = (0, b.Z)(T),
+        [k, M] = a.useState(v),
+        [R, K] = a.useState(null),
+        [F, H] = a.useState(r().shuffle(i)),
+        [P, U] = a.useState(''),
+        y = (0, _.Dt)(),
+        w = (0, b.Z)(k),
+        G = (0, b.Z)(T),
         V = (0, b.Z)(R),
-        G = (0, b.Z)(Z),
-        z = (0, b.Z)(H),
-        Y = null != R && L.includes(R);
+        z = (0, b.Z)(x),
+        Y = (0, b.Z)(P),
+        q = null != R && N.includes(R),
+        { renderSkipButton: W } = h.w.useExperiment({ location: 'FeedbackModal' });
     return (
         a.useEffect(() => {
-            !r().isEqual(B, i) && F((0, O.B)(i, N));
-        }, [i, B, N]),
+            !r().isEqual(S, i) && H((0, O.B)(i, D));
+        }, [i, S, D]),
         a.useEffect(
             () => () => {
-                G.current({
-                    rating: y.current,
+                z.current({
+                    rating: w.current,
                     problem: V.current,
-                    dontShowAgain: w.current,
-                    feedback: z.current
+                    dontShowAgain: G.current,
+                    feedback: Y.current
                 });
             },
             []
         ),
-        (0, n.jsxs)(c.ModalRoot, {
+        (0, n.jsxs)(u.ModalRoot, {
             transitionState: m,
-            className: A.__invalid_modalRoot,
-            'aria-labelledby': P,
+            className: p.__invalid_modalRoot,
+            'aria-labelledby': y,
             children: [
-                (0, n.jsxs)(c.ModalHeader, {
+                (0, n.jsxs)(u.ModalHeader, {
                     separator: !1,
-                    className: A.headerContainer,
+                    className: p.headerContainer,
                     children: [
-                        (0, n.jsx)(c.Heading, {
-                            id: P,
+                        (0, n.jsx)(u.Heading, {
+                            id: y,
                             variant: 'heading-xl/extrabold',
                             color: 'none',
                             children: t
                         }),
-                        (0, n.jsx)(c.Text, {
+                        (0, n.jsx)(u.Text, {
                             variant: 'text-md/normal',
                             color: 'none',
-                            className: A.ratingBody,
+                            className: p.ratingBody,
                             children: o
                         }),
-                        Y
+                        q
                             ? null
                             : (0, n.jsx)(g, {
-                                  className: l()(A.emojis, D),
-                                  selectedRating: S,
+                                  className: l()(p.emojis, I),
+                                  selectedRating: k,
                                   onChangeRating: function (e) {
-                                      M(e), e === C.aZ.GOOD && x();
+                                      M(e), e === C.aZ.GOOD && B();
                                   },
-                                  ratingConfigs: p
+                                  ratingConfigs: f
                               })
                     ]
                 }),
-                (0, n.jsxs)(c.ModalContent, {
-                    className: A.__invalid_content,
+                (0, n.jsxs)(u.ModalContent, {
+                    className: p.__invalid_content,
                     children: [
-                        null == S || S === C.aZ.GOOD || Y
+                        null == k || k === C.aZ.GOOD || q
                             ? null
-                            : (0, n.jsx)(c.FormItem, {
+                            : (0, n.jsx)(u.FormItem, {
                                   title: s,
-                                  className: A.problemInfo,
+                                  className: p.problemInfo,
                                   children: (0, n.jsx)(E.Z, {
-                                      options: K,
+                                      options: F,
                                       onClick: function (e) {
                                           let { value: t } = e;
-                                          k(t), !L.includes(t) && x();
+                                          K(t), !N.includes(t) && B();
                                       },
                                       hideCaret: (e) => {
                                           let { value: t } = e;
-                                          return !L.includes(t);
+                                          return !N.includes(t);
                                       }
                                   })
                               }),
-                        Y
-                            ? (0, n.jsxs)(c.FormItem, {
-                                  title: h.Z.Messages.FEEDBACK_DESCRIBE_ISSUE,
-                                  className: A.problemInfo,
+                        q
+                            ? (0, n.jsxs)(u.FormItem, {
+                                  title: A.Z.Messages.FEEDBACK_DESCRIBE_ISSUE,
+                                  className: p.problemInfo,
                                   children: [
-                                      (0, n.jsx)(c.TextArea, {
-                                          value: H,
+                                      (0, n.jsx)(u.TextArea, {
+                                          value: P,
                                           maxLength: C.iF,
                                           onChange: U
                                       }),
-                                      (0, n.jsx)(f, {})
+                                      (0, n.jsx)(L, {})
                                   ]
                               })
                             : null
                     ]
                 }),
-                (Y || !I) &&
-                    (0, n.jsx)(c.ModalFooter, {
-                        className: A.footer,
+                (q || !Z) &&
+                    (0, n.jsx)(u.ModalFooter, {
+                        className: p.footer,
                         direction: d.Z.Direction.HORIZONTAL,
-                        children: Y
+                        children: q
                             ? (0, n.jsxs)(n.Fragment, {
                                   children: [
-                                      (0, n.jsx)(c.Button, {
-                                          size: c.Button.Sizes.SMALL,
-                                          look: c.Button.Looks.LINK,
-                                          color: c.Button.Colors.PRIMARY,
+                                      (0, n.jsx)(u.Button, {
+                                          size: u.Button.Sizes.SMALL,
+                                          look: u.Button.Looks.LINK,
+                                          color: u.Button.Colors.PRIMARY,
                                           onClick: () => {
-                                              k(null), U('');
+                                              K(null), U('');
                                           },
-                                          children: h.Z.Messages.BACK
+                                          children: A.Z.Messages.BACK
                                       }),
-                                      (0, n.jsx)(c.Button, {
-                                          size: c.Button.Sizes.SMALL,
-                                          onClick: x,
-                                          children: h.Z.Messages.SUBMIT
+                                      (0, n.jsx)(u.Button, {
+                                          size: u.Button.Sizes.SMALL,
+                                          onClick: B,
+                                          children: A.Z.Messages.SUBMIT
                                       })
                                   ]
                               })
-                            : (0, n.jsx)(c.Checkbox, {
-                                  type: c.Checkbox.Types.INVERTED,
-                                  size: 18,
-                                  value: T,
-                                  onChange: () => j(!T),
-                                  children: (0, n.jsx)(c.Text, {
-                                      variant: 'text-sm/normal',
-                                      children: h.Z.Messages.DONT_SHOW_AGAIN
-                                  })
+                            : (0, n.jsxs)(n.Fragment, {
+                                  children: [
+                                      (0, n.jsx)(u.Checkbox, {
+                                          type: u.Checkbox.Types.INVERTED,
+                                          size: 18,
+                                          value: T,
+                                          onChange: () => j(!T),
+                                          children: (0, n.jsx)(u.Text, {
+                                              variant: 'text-sm/normal',
+                                              children: A.Z.Messages.DONT_SHOW_AGAIN
+                                          })
+                                      }),
+                                      W &&
+                                          null != k &&
+                                          k !== C.aZ.GOOD &&
+                                          (0, n.jsx)(u.Button, {
+                                              type: 'submit',
+                                              size: u.Button.Sizes.SMALL,
+                                              onClick: B,
+                                              children: A.Z.Messages.SKIP
+                                          })
+                                  ]
                               })
                     })
             ]
