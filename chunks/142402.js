@@ -18,8 +18,8 @@ var a = n(735250),
     R = n(689938);
 let b = [_.kr.OTHER];
 function m(e) {
-    let { isStreamer: t, stream: m, streamApplication: S, onClose: T, transitionState: M, analyticsData: f } = e,
-        O = t ? R.Z.Messages.STREAM_REPORT_RATING_BODY_STREAMER : R.Z.Messages.STREAM_REPORT_RATING_BODY;
+    let { isStreamer: t, stream: m, streamApplication: S, onClose: T, transitionState: M, analyticsData: O } = e,
+        f = t ? R.Z.Messages.STREAM_REPORT_RATING_BODY_STREAMER : R.Z.Messages.STREAM_REPORT_RATING_BODY;
     return (
         s.useEffect(() => {
             u.default.track(d.rMx.OPEN_MODAL, {
@@ -32,8 +32,9 @@ function m(e) {
             });
         }, [m.ownerId, S]),
         (0, a.jsx)(o.Z, {
+            modalType: 'stream',
             header: R.Z.Messages.STREAM_REPORT_A_PROBLEM_POST_STREAM,
-            body: O,
+            body: f,
             problemTitle: R.Z.Messages.STREAM_REPORT_LABEL,
             problems: (0, r.Z)(t, !0),
             feedbackProblems: b,
@@ -45,7 +46,7 @@ function m(e) {
                         stream: m,
                         feedback: r,
                         streamApplication: S,
-                        analyticsData: f,
+                        analyticsData: O,
                         location: 'Stream End',
                         rating: t
                     }),

@@ -19,7 +19,7 @@ var a = n(735250),
 let b = [u.K8.OTHER, u.K8.ADS, u.K8.NOT_FUN];
 function m(e) {
     var t;
-    let { channel: m, activityApplication: f, onClose: C, transitionState: A, analyticsData: p } = e;
+    let { channel: m, activityApplication: f, onClose: p, transitionState: A, analyticsData: C } = e;
     s.useEffect(() => {
         r.default.track(_.rMx.OPEN_MODAL, {
             type: 'Activity Feedback Modal',
@@ -31,6 +31,7 @@ function m(e) {
     }, [f]);
     let E = (null === (t = f.embeddedActivityConfig) || void 0 === t ? void 0 : t.displays_advertisements) === !0;
     return (0, a.jsx)(i.Z, {
+        modalType: 'activity',
         header: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_HEADER.format({ applicationName: f.name }),
         body: I.Z.Messages.ACTIVITY_REPORT_ACTIVITY_BODY,
         problemTitle: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE,
@@ -58,7 +59,7 @@ function m(e) {
                     channel: m,
                     feedback: c,
                     activityApplication: f,
-                    analyticsData: p,
+                    analyticsData: C,
                     location: 'Activity End',
                     rating: t
                 }),
@@ -72,7 +73,7 @@ function m(e) {
                                 });
                         });
         },
-        onClose: C,
+        onClose: p,
         transitionState: A,
         otherKey: u.K8.OTHER
     });

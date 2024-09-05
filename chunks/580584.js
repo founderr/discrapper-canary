@@ -26,6 +26,7 @@ let c = [
 function d(e) {
     let { transitionState: t, startRating: n, onClose: l, onSubmit: d } = e;
     return (0, s.jsx)(a.Z, {
+        modalType: 'summary',
         header: i.Z.Messages.SUMMARIES_FEEDBACK_HEADER,
         body: i.Z.Messages.SUMMARIES_FEEDBACK_BODY,
         problemTitle: i.Z.Messages.SUMMARIES_FEEDBACK_PROBLEM_TITLE,

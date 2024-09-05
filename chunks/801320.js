@@ -4,29 +4,30 @@ n.r(t),
             return s;
         },
         default: function () {
-            return b;
+            return C;
         }
     });
 var a,
     s,
     l = n(735250),
     o = n(470079),
-    i = n(481060),
-    r = n(332664),
+    r = n(481060),
+    i = n(332664),
     c = n(142497),
     u = n(626135),
     d = n(981631),
     _ = n(190378),
     E = n(689938);
 ((a = s || (s = {})).BAD_OUTLINE = 'BAD_OUTLINE'), (a.BACKGROUND_DETECTION_ACCURACY = 'BACKGROUND_DETECTION_ACCURACY'), (a.FLICKERING = 'FLICKERING'), (a.BACKGROUND_DETECTION_LAG = 'BACKGROUND_DETECTION_LAG'), (a.OTHER = 'OTHER');
-let C = ['OTHER'];
-function b(e) {
+let b = ['OTHER'];
+function C(e) {
     let { analyticsData: t, transitionState: a, onClose: s } = e;
     return (
         o.useEffect(() => {
             u.default.track(d.rMx.OPEN_MODAL, { type: 'Video Background Feedback' });
         }, []),
-        (0, l.jsx)(r.Z, {
+        (0, l.jsx)(i.Z, {
+            modalType: 'video_background',
             header: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_HEADER,
             body: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_BODY,
             problemTitle: E.Z.Messages.VIDEO_BACKGROUND_FEEDBACK_PROBLEM_TITLE,
@@ -52,23 +53,23 @@ function b(e) {
                     label: E.Z.Messages.CALL_FEEDBACK_OPTION_OTHER
                 }
             ],
-            feedbackProblems: C,
+            feedbackProblems: b,
             onSubmit: function (e) {
-                var a, s, o, r;
-                let { rating: C, problem: b, dontShowAgain: O, feedback: N } = e;
-                if ((O && (0, c.Kw)(_.v.VIDEO_BACKGROUND_FEEDBACK), null != C))
-                    (a = C),
-                        (s = b),
+                var a, s, o, i;
+                let { rating: b, problem: C, dontShowAgain: O, feedback: N } = e;
+                if ((O && (0, c.Kw)(_.v.VIDEO_BACKGROUND_FEEDBACK), null != b))
+                    (a = b),
+                        (s = C),
                         (o = N),
-                        (r = t),
+                        (i = t),
                         u.default.track(d.rMx.VIDEO_BACKGROUND_FEEDBACK, {
-                            ...r,
+                            ...i,
                             reason: s,
                             rating: a,
                             feedback: o
                         }),
-                        null != b &&
-                            (0, i.openModalLazy)(async () => {
+                        null != C &&
+                            (0, r.openModalLazy)(async () => {
                                 let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                                 return (t) =>
                                     (0, l.jsx)(e, {

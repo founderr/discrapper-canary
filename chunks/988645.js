@@ -19,6 +19,7 @@ let b = [l().CALL_FEEDBACK_OPTION_OTHER];
 function E(e) {
     let { onClose: t, transitionState: s, analyticsData: E } = e;
     return (0, n.jsx)(i.Z, {
+        modalType: 'voice',
         header: _.Z.Messages.CALL_FEEDBACK_SHEET_TITLE,
         body: _.Z.Messages.CALL_FEEDBACK_PROMPT,
         problemTitle: _.Z.Messages.CALL_FEEDBACK_ISSUE_SECTION_HEADER,
