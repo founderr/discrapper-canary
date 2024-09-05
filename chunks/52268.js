@@ -28,22 +28,22 @@ let x = () => 80,
             children: t
         });
     },
-    A = (e) => {
+    Z = (e) => {
         var t;
         let { user: n, profileEffect: i, innerRef: l, section: o, isSelected: u, ...I } = e,
             x = (0, _.V)(i.id),
-            A = (0, c.e7)([f.Z], () => {
+            Z = (0, c.e7)([f.Z], () => {
                 let e = f.Z.getProduct(i.skuId);
                 return (0, m.G1)(e);
             }),
-            Z = (0, m.Yq)(i.skuId),
+            A = (0, m.Yq)(i.skuId),
             T = s.useRef(null),
             { accessibilityLabel: N, thumbnailPreviewSrc: S, title: j } = null !== (t = null == x ? void 0 : x.config) && void 0 !== t ? t : {},
             R = p.ZP.canUseCollectibles(n),
             M = o === h.$0.PREMIUM_PURCHASE && !R,
-            O = (0, E.Mu)('ProfileEffectPresetItem');
+            L = (0, E.Mu)('ProfileEffectPresetItem');
         return (0, r.jsxs)(P, {
-            className: !M || u || O ? void 0 : v.decorationGridItemChurned,
+            className: !M || u || L ? void 0 : v.decorationGridItemChurned,
             innerRef: null != l ? l : T,
             isSelected: u,
             ...I,
@@ -60,7 +60,7 @@ let x = () => 80,
                 }),
                 o === h.$0.PURCHASE || (o === h.$0.PREMIUM_PURCHASE && R)
                     ? null
-                    : Z
+                    : A
                       ? (0, r.jsx)(d.PremiumBadge, {
                             className: v.newBadge,
                             text: (0, r.jsxs)('div', {
@@ -75,7 +75,7 @@ let x = () => 80,
                             })
                         })
                       : (0, r.jsx)(d.IconBadge, {
-                            icon: A
+                            icon: Z
                                 ? () =>
                                       (0, r.jsx)(d.NitroWheelIcon, {
                                           size: 'custom',
@@ -168,7 +168,7 @@ t.Z = (e) => {
                     .otherwise((e) => {
                         let n = s === e.id;
                         return (0, r.jsx)(
-                            A,
+                            Z,
                             {
                                 user: t,
                                 style: { ...u },

@@ -24,7 +24,7 @@ var l = t(860911),
     _ = t(689938),
     p = t(986357);
 function h(e) {
-    let { appId: n, className: t, groupListingId: l, groupListingType: r, guildId: o, onClick: s, onHasClicked: a, skuId: c, subPlan: u, icon: S } = e,
+    let { appId: n, className: t, groupListingId: l, subscriptionType: r, guildId: o, onClick: s, onHasClicked: a, skuId: c, subscriptionPlan: u, icon: S } = e,
         { openModal: h } = (0, d.Z)({
             guildId: o,
             groupListingId: l,

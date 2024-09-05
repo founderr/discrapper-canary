@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(700582),
     c = t(718629),
     d = t(615830),
-    u = t(630759),
-    _ = t(931500),
+    _ = t(630759),
+    u = t(931500),
     E = t(921157),
     T = t(171368),
     S = t(594174),
@@ -20,13 +20,13 @@ var n = t(735250),
     N = t(760373),
     m = t(689938),
     C = t(288338),
-    g = t(224499);
-function A(e) {
+    A = t(224499);
+function g(e) {
     let { userId: s, count: t } = e,
         c = (0, i.e7)([S.default], () => S.default.getUser(s)),
         d = I.ZP.getFormattedName(c),
-        _ = a.useCallback(() => {
-            (0, u.Zn)(s);
+        u = a.useCallback(() => {
+            (0, _.Zn)(s);
         }, [s]),
         E = a.useCallback(() => (0, T.openUserProfileModal)({ userId: s }), [s]);
     return (
@@ -62,7 +62,7 @@ function A(e) {
                     ]
                 }),
                 (0, n.jsx)(r.Clickable, {
-                    onClick: _,
+                    onClick: u,
                     className: C.sectionIconContainer,
                     children: (0, n.jsx)(r.TrashIcon, { size: 'xs' })
                 })
@@ -72,9 +72,9 @@ function A(e) {
 }
 function h(e) {
     let { className: s, userId: t, verification: i, index: o } = e,
-        l = (0, u.bo)(i.timestamp),
+        l = (0, _.bo)(i.timestamp),
         c = a.useCallback(() => {
-            (0, u.ZU)(t, i.verifiedKey);
+            (0, _.ZU)(t, i.verifiedKey);
         }, [i.verifiedKey, t]);
     return (0, n.jsxs)('div', {
         className: s,
@@ -107,10 +107,10 @@ function h(e) {
 }
 function O(e) {
     let { userId: s } = e,
-        t = (0, _._)(s);
+        t = (0, u._)(s);
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(A, {
+            (0, n.jsx)(g, {
                 userId: s,
                 count: t.length
             }),
@@ -141,11 +141,11 @@ function p(e) {
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsxs)(r.FormItem, {
-                      className: g.marginBottom20,
+                      className: A.marginBottom20,
                       children: [
                           (0, n.jsx)(r.FormTitle, {
                               tag: r.FormTitleTags.H5,
-                              className: g.marginBottom8,
+                              className: A.marginBottom8,
                               children: m.Z.Messages.E2EE_VERIFIED_DEVICES
                           }),
                           (0, n.jsx)(r.FormText, {
@@ -178,14 +178,14 @@ function R() {
                 children: [
                     (0, n.jsx)(r.FormText, {
                         type: r.FormTextTypes.DESCRIPTION,
-                        className: g.marginBottom20,
+                        className: A.marginBottom20,
                         children: m.Z.Messages.E2EE_SETTINGS_SUBTITLE.format({ helpArticle: N.l4 })
                     }),
                     (0, n.jsxs)(r.FormItem, {
                         children: [
                             (0, n.jsx)(r.FormTitle, {
                                 tag: r.FormTitleTags.H5,
-                                className: g.marginBottom8,
+                                className: A.marginBottom8,
                                 children: m.Z.Messages.E2EE_VERIFICATION_CODES
                             }),
                             (0, n.jsx)(r.FormSwitch, {

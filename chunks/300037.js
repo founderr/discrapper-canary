@@ -7,15 +7,15 @@ var a = t(120356),
     l = t(565138),
     c = t(623624),
     d = t(678558),
-    u = t(430824),
-    _ = t(709586),
+    _ = t(430824),
+    u = t(709586),
     E = t(267642),
     T = t(981631),
     S = t(689938),
     I = t(660847);
 s.Z = function (e) {
     let { className: s, guildId: t, boostingVariant: a } = e,
-        N = (0, r.e7)([u.Z], () => u.Z.getGuild(t), [t]);
+        N = (0, r.e7)([_.Z], () => _.Z.getGuild(t), [t]);
     return null == N
         ? (0, n.jsx)('div', {
               className: i()(s, I.guildContainer),
@@ -45,7 +45,7 @@ s.Z = function (e) {
                           (0, n.jsxs)('div', {
                               className: I.guildBoostStatsContainer,
                               children: [
-                                  (0, n.jsx)(_.Z, {
+                                  (0, n.jsx)(u.Z, {
                                       className: I.guildBoostBadge,
                                       width: 16,
                                       height: 16

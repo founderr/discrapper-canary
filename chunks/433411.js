@@ -11,34 +11,34 @@ var n = t(735250),
     l = t(906732),
     c = t(864106),
     d = t(1585),
-    u = t(580747),
-    _ = t(345861),
+    _ = t(580747),
+    u = t(345861),
     E = t(150039),
     T = t(993413),
     S = t(689938),
     I = t(539523);
 function N(e) {
-    let { user: s, guild: t, className: i, sectionTitle: _, forcedDivider: N = !1, withTutorial: C = !1, isTryItOutFlow: g = !1 } = e,
-        { analyticsLocations: A } = (0, l.ZP)(),
+    let { user: s, guild: t, className: i, sectionTitle: u, forcedDivider: N = !1, withTutorial: C = !1, isTryItOutFlow: A = !1 } = e,
+        { analyticsLocations: g } = (0, l.ZP)(),
         h = null != t,
         { userAvatarDecoration: O, guildAvatarDecoration: p, pendingAvatarDecoration: R, pendingErrors: x } = (0, E.$U)(s, t),
-        f = (0, u.Z)('enable_avatar_decoration_uploads'),
+        f = (0, _.Z)('enable_avatar_decoration_uploads'),
         M = a.useCallback(
             () =>
                 (0, d.ps)({
-                    analyticsLocations: A,
-                    isTryItOutFlow: g,
+                    analyticsLocations: g,
+                    isTryItOutFlow: A,
                     guild: t
                 }),
-            [A, g, t]
+            [g, A, t]
         ),
-        D = g || void 0 !== R ? null != R : (h ? p : O) != null,
+        D = A || void 0 !== R ? null != R : (h ? p : O) != null,
         P = C ? o.ShinyButton : o.Button;
     return (0, n.jsxs)(T.Z, {
         className: i,
         forcedDivider: N,
         hasBackground: !0,
-        title: _,
+        title: u,
         errors: x,
         children: [
             (0, n.jsxs)('div', {
@@ -76,7 +76,7 @@ let m = (e) => {
                 variant: 'text-xs/bold',
                 children: 'STAFF ONLY and Experimental. Upload a decoration to view throughout the app.'
             }),
-            (0, n.jsx)(_.Z, {
+            (0, n.jsx)(u.Z, {
                 onChange: (e) => {
                     null != e &&
                         (s.avatarDecoration = {

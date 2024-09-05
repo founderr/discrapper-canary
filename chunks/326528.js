@@ -1,6 +1,6 @@
 t.d(s, {
     b: function () {
-        return u;
+        return _;
     }
 });
 var n = t(481060),
@@ -11,7 +11,7 @@ var n = t(481060),
     l = t(726985),
     c = t(332325),
     d = t(689938);
-function u() {
+function _() {
     let e = (0, o.bC)(),
         s = (0, i.Gj)(l.s6.GAMES);
     return (function (e, s, t) {

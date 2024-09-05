@@ -7,8 +7,8 @@ var a = t(120356),
     l = t(410030),
     c = t(726542),
     d = t(122021),
-    u = t(231757),
-    _ = t(626135),
+    _ = t(231757),
+    u = t(626135),
     E = t(981631),
     T = t(157301);
 s.Z = (e) => {
@@ -35,11 +35,11 @@ s.Z = (e) => {
                                 : () =>
                                       (function (e) {
                                           let s = c.Z.get(e);
-                                          (0, u.Z)({
+                                          (0, _.Z)({
                                               platformType: s.type,
                                               location: 'Friends List'
                                           }),
-                                              _.default.track(E.rMx.ACCOUNT_LINK_STEP, {
+                                              u.default.track(E.rMx.ACCOUNT_LINK_STEP, {
                                                   previous_step: 'desktop connections',
                                                   current_step: 'desktop oauth',
                                                   platform_type: s.type

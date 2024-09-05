@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return g;
     }
 });
 var n = t(735250),
@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(481060),
     c = t(570140),
     d = t(355467),
-    u = t(179360),
-    _ = t(821849),
+    _ = t(179360),
+    u = t(821849),
     E = t(15640),
     T = t(314684),
     S = t(899667),
@@ -20,11 +20,11 @@ var n = t(735250),
     N = t(78839),
     m = t(783739),
     C = t(981631),
-    g = t(473286);
-function A() {
+    A = t(473286);
+function g() {
     a.useEffect(() => {
         c.Z.wait(() => {
-            d.jg(), d.tZ(), (0, u.X8)(), (0, _.Y2)(null, null, C.JjL.DISCOVERY), (0, u.tH)(!0);
+            d.jg(), d.tZ(), (0, _.X8)(), (0, u.Y2)(null, null, C.JjL.DISCOVERY), (0, _.tH)(!0);
         });
     }, []);
     let { hasFetchedSubscriptions: e, premiumSubscription: s } = (0, o.cj)([N.ZP], () => ({
@@ -33,20 +33,20 @@ function A() {
         })),
         t = (0, E.V)(),
         i = (0, o.e7)([I.Z], () => I.Z.hasFetchedPaymentSources),
-        A = (0, o.e7)([S.Z], () => S.Z.isFetchingCurrentUserAppliedBoosts);
-    return ((0, T.JR)(), e && t && i && !A)
+        g = (0, o.e7)([S.Z], () => S.Z.isFetchingCurrentUserAppliedBoosts);
+    return ((0, T.JR)(), e && t && i && !g)
         ? (0, n.jsxs)('div', {
-              className: g.container,
+              className: A.container,
               children: [
-                  (0, n.jsx)('div', { className: g.background }),
+                  (0, n.jsx)('div', { className: A.background }),
                   (0, n.jsx)('div', {
-                      className: g.content,
+                      className: A.content,
                       children: (0, n.jsx)(m.Z, { premiumSubscription: s })
                   })
               ]
           })
         : (0, n.jsx)('div', {
-              className: r()(g.container, g.loading),
+              className: r()(A.container, A.loading),
               children: (0, n.jsx)(l.Spinner, {})
           });
 }

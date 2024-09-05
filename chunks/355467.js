@@ -327,7 +327,7 @@ function L(e) {
     let r,
         i,
         a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        s = S.Z.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR;
+        s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : S.Z.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR;
     if (((t = e), T.i.includes(t.type))) {
         let t = null != e.message ? ''.concat(s, ': ').concat(e.message) : s,
             o = {

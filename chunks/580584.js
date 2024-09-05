@@ -1,16 +1,16 @@
-s.r(t),
-    s.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
             return d;
         }
     });
-var n = s(735250);
-s(470079);
-var a = s(332664),
-    o = s(814249),
-    l = s(531578),
-    i = s(689938),
-    r = s(995335);
+var s = n(735250);
+n(470079);
+var a = n(332664),
+    o = n(814249),
+    l = n(531578),
+    i = n(689938),
+    r = n(995335);
 let c = [
     {
         className: r.emojiThumbsUp,
@@ -24,8 +24,8 @@ let c = [
     }
 ];
 function d(e) {
-    let { transitionState: t, startRating: s, onClose: l, onSubmit: d } = e;
-    return (0, n.jsx)(a.Z, {
+    let { transitionState: t, startRating: n, onClose: l, onSubmit: d } = e;
+    return (0, s.jsx)(a.Z, {
         header: i.Z.Messages.SUMMARIES_FEEDBACK_HEADER,
         body: i.Z.Messages.SUMMARIES_FEEDBACK_BODY,
         problemTitle: i.Z.Messages.SUMMARIES_FEEDBACK_PROBLEM_TITLE,
@@ -37,7 +37,7 @@ function d(e) {
         ratingsSelectorClassName: r.ratingsSelector,
         feedbackProblems: [o.R7.OTHER],
         otherKey: o.R7.OTHER,
-        startRating: s,
+        startRating: n,
         hideDontShowCheckbox: !0
     });
 }

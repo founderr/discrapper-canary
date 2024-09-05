@@ -12,17 +12,17 @@ var a = t(120356),
     l = t(692547),
     c = t(481060),
     d = t(220082),
-    u = t(318661),
-    _ = t(721987),
+    _ = t(318661),
+    u = t(721987),
     E = t(74538),
     T = t(193528),
     S = t(993413),
     I = t(689938),
     N = t(798721);
 function m(e) {
-    let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: m, guildId: C, className: g, showPremiumIcon: A = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
-        p = (0, u.ZP)(s.id, C),
-        { primaryColor: R, secondaryColor: x } = (0, _.Z)({
+    let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: m, guildId: C, className: A, showPremiumIcon: g = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
+        p = (0, _.ZP)(s.id, C),
+        { primaryColor: R, secondaryColor: x } = (0, u.Z)({
             user: s,
             displayProfile: p,
             pendingThemeColors: a,
@@ -39,8 +39,8 @@ function m(e) {
     return (0, n.jsx)(S.Z, {
         title: I.Z.Messages.USER_SETTINGS_PROFILE_THEME,
         disabled: !f && !m,
-        className: i()(N.__invalid_profileThemesSection, g),
-        showPremiumIcon: A,
+        className: i()(N.__invalid_profileThemesSection, A),
+        showPremiumIcon: g,
         forcedDivider: O,
         children: (0, n.jsxs)('div', {
             className: N.sectionContainer,

@@ -13,25 +13,25 @@ function l(e, s) {
     let l = (0, o.eA)({ location: 'settingsTabs' }),
         c = (0, r.Gj)(s),
         d = (0, i.Z7)(),
-        u = (0, n.e7)([a.Z], () => a.Z.getSubsection()),
-        _ = e.filter((e) => null == e.predicate || e.predicate());
+        _ = (0, n.e7)([a.Z], () => a.Z.getSubsection()),
+        u = e.filter((e) => null == e.predicate || e.predicate());
     if (l) {
         if (null != c && c.size > 0) {
-            let e = _.filter((e) => c.has(e.setting));
-            _ = e.length > 0 ? e : _;
+            let e = u.filter((e) => c.has(e.setting));
+            u = e.length > 0 ? e : u;
         }
-        if (null != d && d.length > 0 && null == u) {
-            let e = _.find((e) => e.title.toLowerCase() === d.toLowerCase());
+        if (null != d && d.length > 0 && null == _) {
+            let e = u.find((e) => e.title.toLowerCase() === d.toLowerCase());
             if (null != e)
                 return {
-                    viewableTabs: _,
+                    viewableTabs: u,
                     selectedTab: e
                 };
         }
     }
-    let E = null !== (t = _.find((e) => null != e && e.setting === u)) && void 0 !== t ? t : _[0];
+    let E = null !== (t = u.find((e) => null != e && e.setting === _)) && void 0 !== t ? t : u[0];
     return {
-        viewableTabs: _,
+        viewableTabs: u,
         selectedTab: E
     };
 }

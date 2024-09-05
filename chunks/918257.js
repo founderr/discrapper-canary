@@ -12,8 +12,8 @@ var a = t(120356),
     l = t(208049),
     c = t(242291),
     d = t(63063),
-    u = t(36703),
-    _ = t(981631),
+    _ = t(36703),
+    u = t(981631),
     E = t(689938),
     T = t(238515);
 let S = (0, o.hQ)();
@@ -33,7 +33,7 @@ function I() {
                     (0, n.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: E.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME_DESCRIPTION_WITH_LINK.format({ helpCenterArticle: d.Z.getArticleURL(_.BhN.SOUNDBOARD) })
+                        children: E.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME_DESCRIPTION_WITH_LINK.format({ helpCenterArticle: d.Z.getArticleURL(u.BhN.SOUNDBOARD) })
                     })
                 ]
             }),
@@ -47,11 +47,11 @@ function I() {
                         children: E.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME
                     }),
                     (0, n.jsx)(r.Slider, {
-                        initialValue: (0, u.P)(e),
+                        initialValue: (0, _.P)(e),
                         maxValue: 100,
                         onValueRender: (e) => ''.concat(e.toFixed(0), '%'),
                         asValueChanges: function (s) {
-                            (e = (0, u.A)(s)), (0, l.xz)(e);
+                            (e = (0, _.A)(s)), (0, l.xz)(e);
                         },
                         'aria-labelledby': S
                     })

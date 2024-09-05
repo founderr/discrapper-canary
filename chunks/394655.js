@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return _;
+        return u;
     }
 });
 var n = t(735250),
@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(51331),
     c = t(726985),
     d = t(981631),
-    u = t(689938);
-function _() {
+    _ = t(689938);
+function u() {
     let e = (0, a.p)();
     return (0, n.jsx)(o.U, {
         setting: c.s6.PRIVACY_KEYWORD_FILTER_V2,
@@ -24,8 +24,8 @@ function _() {
                     slurs: e,
                     sexualContent: e
                 }),
-            title: u.Z.Messages.USER_KEYWORD_FILTERS_TOGGLE_TITLE_V2,
-            note: u.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({ learnMoreLink: i.Z.getArticleURL(d.BhN.KEYWORD_FILTERS) })
+            title: _.Z.Messages.USER_KEYWORD_FILTERS_TOGGLE_TITLE_V2,
+            note: _.Z.Messages.USER_KEYWORD_FILTERS_DESCRIPTION_V2.format({ learnMoreLink: i.Z.getArticleURL(d.BhN.KEYWORD_FILTERS) })
         })
     });
 }

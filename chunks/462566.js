@@ -57,7 +57,7 @@ a.Z = function (e) {
                     updateCompleted: (e) => M('cardNumber', e)
                 })
         },
-        g = {
+        y = {
             name: 'cardExpiry',
             title: () => N.Z.Messages.CREDIT_CARD_EXPIRATION_DATE,
             getClassNameForLayout: () => _.width50,
@@ -67,7 +67,7 @@ a.Z = function (e) {
                     updateCompleted: (e) => M('cardExpiry', e)
                 })
         },
-        y = {
+        g = {
             name: 'cardCvc',
             title: () => N.Z.Messages.CREDIT_CARD_CVC,
             getClassNameForLayout: () => _.width50,
@@ -107,7 +107,7 @@ a.Z = function (e) {
                 form: [
                     { fields: [O] },
                     {
-                        fields: [g, y]
+                        fields: [y, g]
                     },
                     { fields: [L] }
                 ],

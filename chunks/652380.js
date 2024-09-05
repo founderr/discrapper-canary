@@ -7,8 +7,8 @@ var n = t(735250),
     l = t(742635),
     c = t(458708),
     d = t(481060),
-    u = t(70956),
-    _ = t(497505),
+    _ = t(70956),
+    u = t(497505),
     E = t(210724),
     T = t(130653),
     S = t(78826),
@@ -16,8 +16,8 @@ var n = t(735250),
     N = t(134483),
     m = t(478977),
     C = t(456799),
-    g = t(210851),
-    A = t(602683),
+    A = t(210851),
+    g = t(602683),
     h = t(916028),
     O = t(15033),
     p = t(899457),
@@ -252,25 +252,25 @@ function Z() {
             (0, n.jsxs)('div', {
                 className: R.fields,
                 children: [
-                    (0, n.jsx)(A.Z, {
+                    (0, n.jsx)(g.Z, {
                         title: 'Quest Name',
                         assetKey: 'questName',
                         onMessageChange: F,
                         initialValue: r.config.messages.questName
                     }),
-                    (0, n.jsx)(A.Z, {
+                    (0, n.jsx)(g.Z, {
                         title: 'Game Title',
                         assetKey: 'gameTitle',
                         onMessageChange: F,
                         initialValue: r.config.messages.gameTitle
                     }),
-                    (0, n.jsx)(A.Z, {
+                    (0, n.jsx)(g.Z, {
                         title: 'Reward Name',
                         assetKey: 'rewardName',
                         onMessageChange: y,
                         initialValue: U.name
                     }),
-                    (0, n.jsx)(A.Z, {
+                    (0, n.jsx)(g.Z, {
                         title: 'Reward Name With Article',
                         assetKey: 'rewardNameWithArticle',
                         onMessageChange: y,
@@ -286,28 +286,28 @@ function Z() {
             (0, n.jsxs)('div', {
                 className: R.fields,
                 children: [
-                    (0, n.jsx)(g.Z, {
+                    (0, n.jsx)(A.Z, {
                         title: 'Game Tile Asset',
                         assetKey: 'gameTile',
                         onFileChange: G,
                         filters: M,
                         initialValue: r.config.assets.gameTile
                     }),
-                    (0, n.jsx)(g.Z, {
+                    (0, n.jsx)(A.Z, {
                         title: 'Logotype',
                         assetKey: 'logotype',
                         onFileChange: G,
                         filters: f,
                         initialValue: r.config.assets.logotype
                     }),
-                    (0, n.jsx)(g.Z, {
+                    (0, n.jsx)(A.Z, {
                         title: 'Quest Bar Hero Asset',
                         assetKey: 'questBarHero',
                         onFileChange: G,
                         filters: D,
                         initialValue: r.config.assets.questBarHero
                     }),
-                    (0, n.jsx)(g.Z, {
+                    (0, n.jsx)(A.Z, {
                         title: 'Reward Tile Asset',
                         assetKey: 'rewardTile',
                         onFileChange: function (e, s) {
@@ -343,7 +343,7 @@ function Z() {
                         filters: D,
                         initialValue: U.rewardTile
                     }),
-                    (0, n.jsx)(g.Z, {
+                    (0, n.jsx)(A.Z, {
                         title: 'Gift Inventory Hero',
                         assetKey: 'hero',
                         onFileChange: G,
@@ -423,7 +423,7 @@ function Z() {
                                         ...r,
                                         userStatus: P({
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: 10 * u.Z.Seconds.MINUTE * 0.25
+                                            streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.25
                                         })
                                     });
                                     break;
@@ -432,7 +432,7 @@ function Z() {
                                         ...r,
                                         userStatus: P({
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: 10 * u.Z.Seconds.MINUTE * 0.5
+                                            streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.5
                                         })
                                     });
                                     break;
@@ -441,7 +441,7 @@ function Z() {
                                         ...r,
                                         userStatus: P({
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: 10 * u.Z.Seconds.MINUTE * 0.75
+                                            streamProgressSeconds: 10 * _.Z.Seconds.MINUTE * 0.75
                                         })
                                     });
                                     break;
@@ -451,7 +451,7 @@ function Z() {
                                         userStatus: P({
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: 10 * u.Z.Seconds.MINUTE
+                                            streamProgressSeconds: 10 * _.Z.Seconds.MINUTE
                                         })
                                     });
                                     break;
@@ -462,7 +462,7 @@ function Z() {
                                             claimedAt: new Date().toISOString(),
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
-                                            streamProgressSeconds: 10 * u.Z.Seconds.MINUTE
+                                            streamProgressSeconds: 10 * _.Z.Seconds.MINUTE
                                         })
                                     });
                             }
@@ -514,7 +514,7 @@ function Z() {
                                 questId: '0',
                                 children: (0, n.jsx)(I.Z, {
                                     quest: r,
-                                    location: _.jn.GIFT_INVENTORY_FOR_YOU
+                                    location: u.jn.GIFT_INVENTORY_FOR_YOU
                                 })
                             })
                         ]

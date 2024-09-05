@@ -7,21 +7,21 @@ var n = t(735250),
     l = t(430492),
     c = t(518638),
     d = t(689938),
-    u = t(287420);
+    _ = t(287420);
 s.Z = function (e) {
-    let { onClose: s, onClaim: t, code: _, outboundPromotion: E, transitionState: T } = e,
+    let { onClose: s, onClaim: t, code: u, outboundPromotion: E, transitionState: T } = e,
         [S, I] = a.useState(null),
         N = (0, o.Dt)();
     return (
         a.useEffect(() => {
-            null == _ &&
+            null == u &&
                 (0, c.A2)(E.id)
                     .then((e) => t(e))
                     .catch((e) => {
                         var s;
                         return I(null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : s.code);
                     });
-        }, [_, E.id, t]),
+        }, [u, E.id, t]),
         (0, n.jsx)(i.ModalRoot, {
             transitionState: T,
             'aria-labelledby': N,
@@ -31,15 +31,15 @@ s.Z = function (e) {
                           onClose: s,
                           errorCode: S
                       })
-                    : null == _
-                      ? (0, n.jsx)(i.ModalContent, { children: (0, n.jsx)(i.Spinner, { className: u.loading }) })
+                    : null == u
+                      ? (0, n.jsx)(i.ModalContent, { children: (0, n.jsx)(i.Spinner, { className: _.loading }) })
                       : (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsxs)(i.ModalHeader, {
                                     separator: !1,
-                                    className: u.headerContainer,
+                                    className: _.headerContainer,
                                     children: [
-                                        (0, n.jsx)('div', { className: u.art }),
+                                        (0, n.jsx)('div', { className: _.art }),
                                         (0, n.jsx)(i.Heading, {
                                             variant: 'heading-xl/semibold',
                                             children: d.Z.Messages.OUTBOUND_PROMOTION_REDEMPTION_MODAL_TITLE
@@ -50,25 +50,25 @@ s.Z = function (e) {
                                     children: [
                                         (0, n.jsx)(i.Text, {
                                             variant: 'text-md/normal',
-                                            className: u.bodyText,
+                                            className: _.bodyText,
                                             children: E.outboundRedemptionModalBody
                                         }),
-                                        (0, n.jsx)(i.FormDivider, { className: u.formDivider }),
+                                        (0, n.jsx)(i.FormDivider, { className: _.formDivider }),
                                         (0, n.jsxs)(i.FormSection, {
                                             title: d.Z.Messages.REDEMPTION_CODE,
-                                            className: u.formSection,
+                                            className: _.formSection,
                                             children: [
                                                 (0, n.jsx)(r.Z, {
-                                                    value: _,
+                                                    value: u,
                                                     buttonColor: i.Button.Colors.BRAND,
                                                     buttonLook: i.Button.Looks.FILLED,
                                                     delay: 1000,
-                                                    inputClassName: u.textInput
+                                                    inputClassName: _.textInput
                                                 }),
                                                 (0, n.jsx)(i.Text, {
                                                     variant: 'text-xs/normal',
                                                     color: 'header-secondary',
-                                                    className: u.confirmationText,
+                                                    className: _.confirmationText,
                                                     children: d.Z.Messages.OUTBOUND_PROMOTION_CODE_CONFIRMATION_EMAIL
                                                 })
                                             ]
@@ -80,7 +80,7 @@ s.Z = function (e) {
                                         (0, n.jsx)(i.Button, {
                                             color: i.Button.Colors.BRAND,
                                             onClick: () => {
-                                                let e = (0, c.BU)(_, E);
+                                                let e = (0, c.BU)(u, E);
                                                 window.open(e, '_blank');
                                             },
                                             children: d.Z.Messages.REDEEM
@@ -88,7 +88,7 @@ s.Z = function (e) {
                                         (0, n.jsx)(i.Button, {
                                             onClick: s,
                                             look: i.Button.Looks.LINK,
-                                            color: u.maybeLaterButton,
+                                            color: _.maybeLaterButton,
                                             children: d.Z.Messages.MAYBE_LATER
                                         })
                                     ]

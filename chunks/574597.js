@@ -19,8 +19,8 @@ var t = l(735250),
     N = l(970184),
     C = l(280501),
     v = l(811654),
-    _ = l(344991),
-    h = l(981631),
+    h = l(344991),
+    _ = l(981631),
     x = l(296555);
 function T(e) {
     var n;
@@ -30,11 +30,11 @@ function T(e) {
         g = p.Z.getGuild(null == I ? void 0 : I.getGuildId()),
         S = (0, d.Z)(null == g ? void 0 : g.id, v.HI),
         O = r.useMemo(() => (0, v.tx)(e.defaultValues, null == g ? void 0 : g.id), [e.defaultValues, g]);
-    return (0, t.jsx)(_.ZP, {
+    return (0, t.jsx)(h.ZP, {
         selectActionComponent: e,
         queryOptions: (n) => (0, v._H)(e.type, n, T),
         renderIcon: (e, n) => {
-            let l = n === _.tE.PILL_ICON_SIZE;
+            let l = n === h.tE.PILL_ICON_SIZE;
             if ((null == e ? void 0 : e.type) === C.tM.USER) {
                 let r = E.default.getUser(e.value);
                 if (null == r) return;
@@ -54,7 +54,7 @@ function T(e) {
                     ? (0, t.jsx)(u.Z, { ...s })
                     : (0, t.jsx)(a.ShieldUserIcon, {
                           size: 'custom',
-                          color: null !== (r = l.colorString) && void 0 !== r ? r : (0, i.Rf)(h.p6O),
+                          color: null !== (r = l.colorString) && void 0 !== r ? r : (0, i.Rf)(_.p6O),
                           height: n,
                           width: n
                       });

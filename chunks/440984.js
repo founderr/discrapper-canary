@@ -1,6 +1,6 @@
 t.d(s, {
     D: function () {
-        return g;
+        return A;
     }
 }),
     t(47120);
@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(410030),
     c = t(607070),
     d = t(530618),
-    u = t(74538),
-    _ = t(937615),
+    _ = t(74538),
+    u = t(937615),
     E = t(230916),
     T = t(798769),
     S = t(474936),
@@ -21,15 +21,15 @@ var n = t(735250),
     N = t(960699),
     m = t(982404),
     C = t(299156);
-function g(e) {
-    let { premiumSubscription: s, premiumType: t, onClose: g, confettiCanvas: A, userWasChurned: h = !1, userDiscountOffer: O } = e,
+function A(e) {
+    let { premiumSubscription: s, premiumType: t, onClose: A, confettiCanvas: g, userWasChurned: h = !1, userDiscountOffer: O } = e,
         p = (0, l.ZP)(),
         R = (0, r.wj)(p) ? m : C,
         x = a.useRef(null),
         [f, M] = a.useState(!1),
         D = (0, E._)(s, S.Xh.PREMIUM_MONTH_TIER_2, O),
-        P = (0, u.aS)(S.Xh.PREMIUM_MONTH_TIER_2),
-        L = (0, _.T4)(P.amount, P.currency),
+        P = (0, _.aS)(S.Xh.PREMIUM_MONTH_TIER_2),
+        L = (0, u.T4)(P.amount, P.currency),
         b = (0, i.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
         (a.useEffect(() => {
@@ -47,7 +47,7 @@ function g(e) {
             className: N.whatYouLoseButtonContainer,
             children: (0, n.jsx)(o.Button, {
                 color: o.Button.Colors.BRAND,
-                onClick: g,
+                onClick: A,
                 children: I.Z.Messages.PREMIUM_DISCOUNT_SWEET
             })
         });
@@ -56,7 +56,7 @@ function g(e) {
             (0, n.jsx)(T.Z, {
                 premiumType: t,
                 className: N.cancellationHeader,
-                onClose: g
+                onClose: A
             }),
             (0, n.jsx)('div', {
                 ref: x,
@@ -94,7 +94,7 @@ function g(e) {
                 f &&
                 (0, n.jsx)(d.Z, {
                     confettiTarget: x.current,
-                    confettiCanvas: A,
+                    confettiCanvas: g,
                     confettiVelocityMultiplier: 0.75
                 })
         ]

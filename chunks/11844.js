@@ -6,8 +6,8 @@ var n = t(735250),
     l = t(709586),
     c = t(267642),
     d = t(981631),
-    u = t(689938),
-    _ = t(123600);
+    _ = t(689938),
+    u = t(123600);
 s.Z = function () {
     let e = a.useRef(null),
         { analyticsLocations: s } = (0, r.ZP)();
@@ -43,24 +43,24 @@ s.Z = function () {
     }
     let S = (0, c.aq)();
     return (0, n.jsxs)('div', {
-        className: _.wrapper,
+        className: u.wrapper,
         children: [
             (0, n.jsx)(l.Z, {
-                className: _.boostIcon,
+                className: u.boostIcon,
                 width: 16,
                 height: 16
             }),
             (0, n.jsx)(i.Text, {
-                className: _.copy,
+                className: u.copy,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: u.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_GUILD_CTA.format({
+                children: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_GUILD_CTA.format({
                     boostAnyGuildHook: (e, s) => {
                         let t = null != S,
                             a = (0, n.jsx)(
                                 i.Button,
                                 {
-                                    className: _.cta,
+                                    className: u.cta,
                                     disabled: t,
                                     color: i.Button.Colors.LINK,
                                     look: i.Button.Looks.LINK,

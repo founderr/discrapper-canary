@@ -12,15 +12,15 @@ var a = t(120356),
     l = t(223245),
     c = t(230711),
     d = t(921801),
-    u = t(246946),
-    _ = t(358085),
+    _ = t(246946),
+    u = t(358085),
     E = t(726985),
     T = t(981631),
     S = t(689938),
     I = t(302823),
     N = t(224499);
 function m() {
-    let { enabled: e, autoToggle: s, hideInstantInvites: a, hidePersonalInformation: m, disableSounds: C, disableNotifications: g, enableContentProtection: A } = (0, r.cj)([u.Z], () => ({ ...u.Z.getSettings() })),
+    let { enabled: e, autoToggle: s, hideInstantInvites: a, hidePersonalInformation: m, disableSounds: C, disableNotifications: A, enableContentProtection: g } = (0, r.cj)([_.Z], () => ({ ..._.Z.getSettings() })),
         h = (e, s) => {
             l.Z.update({ [e]: s });
         };
@@ -59,7 +59,7 @@ function m() {
                         children: S.Z.Messages.ENABLE_STREAMER_MODE_LABEL
                     }),
                     (() => {
-                        if (_.isPlatformEmbedded)
+                        if (u.isPlatformEmbedded)
                             return (0, n.jsx)(o.FormSwitch, {
                                 value: s,
                                 onChange: (e) => h('autoToggle', e),
@@ -105,7 +105,7 @@ function m() {
                     (0, n.jsx)(d.F, {
                         setting: E.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
                         children: (0, n.jsx)(o.FormSwitch, {
-                            value: g,
+                            value: A,
                             onChange: (e) => h('disableNotifications', e),
                             note: S.Z.Messages.DISABLE_NOTIFICATIONS_DESCRIPTION,
                             children: S.Z.Messages.DISABLE_NOTIFICATIONS_LABEL
@@ -114,7 +114,7 @@ function m() {
                     (0, n.jsx)(d.F, {
                         setting: E.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
                         children: (0, n.jsx)(o.FormSwitch, {
-                            value: A,
+                            value: g,
                             onChange: (e) => h('enableContentProtection', e),
                             note: S.Z.Messages.HIDE_WINDOW_FROM_STREAM_DESCRIPTION,
                             children: S.Z.Messages.HIDE_WINDOW_FROM_STREAM_LABEL

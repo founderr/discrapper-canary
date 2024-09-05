@@ -16,8 +16,8 @@ function c(e) {
     let { type: l, style: c, label: d, placeholder: m, minLength: p, maxLength: f, required: E, value: N } = e,
         [C, v] = r.useState(null != N ? N : ''),
         {
-            state: _,
-            executeStateUpdate: h,
+            state: h,
+            executeStateUpdate: _,
             error: x
         } = (0, s.Ee)(
             e,
@@ -30,8 +30,8 @@ function c(e) {
         ),
         T = (0, u.hz)(e.id);
     r.useEffect(() => {
-        (null == _ ? void 0 : _.type) === l && v(_.value);
-    }, [l, _]);
+        (null == h ? void 0 : h.type) === l && v(h.value);
+    }, [l, h]);
     let I = {
         name: d,
         value: C,
@@ -41,7 +41,7 @@ function c(e) {
         required: E,
         onChange: (e) => {
             v(e),
-                h({
+                _({
                     type: l,
                     value: e
                 });

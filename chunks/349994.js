@@ -9,8 +9,8 @@ var a = n(735250),
     s = n(470079),
     o = n(481060),
     l = n(313201),
-    r = n(332664),
-    i = n(429506),
+    i = n(332664),
+    r = n(429506),
     c = n(981631),
     d = n(531578),
     u = n(689938),
@@ -53,7 +53,7 @@ function x(e) {
             }),
             (0, a.jsx)(o.ModalContent, {
                 className: m.modalBody,
-                children: (0, a.jsx)(r.L, {
+                children: (0, a.jsx)(i.L, {
                     ratingConfigs: b,
                     className: m.ratingsSelector,
                     selectedRating: t,
@@ -61,7 +61,7 @@ function x(e) {
                         d(t),
                             !(function (t) {
                                 if (null != t)
-                                    (0, i.Z)({ rating: t }),
+                                    (0, r.Z)({ rating: t }),
                                         e.onClose(),
                                         (0, o.openModalLazy)(async () => {
                                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));

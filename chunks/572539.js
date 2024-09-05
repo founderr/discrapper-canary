@@ -1,6 +1,6 @@
 o.d(t, {
     Z: function () {
-        return c;
+        return u;
     }
 });
 var n = o(735250);
@@ -10,8 +10,8 @@ var a = o(120356),
     l = o(481060),
     i = o(259580),
     r = o(373521);
-function c(e) {
-    let { options: t, onClick: o, className: a, optionClassName: c, hideCaret: u } = e;
+function u(e) {
+    let { options: t, onClick: o, className: a, optionClassName: u, hideCaret: c } = e;
     return (0, n.jsx)('div', {
         className: s()(r.root, a),
         children: t.map((e, t) =>
@@ -19,7 +19,7 @@ function c(e) {
                 l.Clickable,
                 {
                     onClick: () => o(e),
-                    className: s()(r.option, c),
+                    className: s()(r.option, u),
                     children: [
                         (0, n.jsx)(l.Text, {
                             className: r.text,
@@ -27,7 +27,7 @@ function c(e) {
                             variant: 'text-md/normal',
                             children: e.label
                         }),
-                        !(null == u ? void 0 : u(e)) &&
+                        !(null == c ? void 0 : c(e)) &&
                             (0, n.jsx)(i.Z, {
                                 className: r.caret,
                                 direction: i.Z.Directions.RIGHT

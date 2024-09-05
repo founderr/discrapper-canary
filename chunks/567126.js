@@ -3,7 +3,7 @@ n.d(t, {
         return Y;
     },
     oA: function () {
-        return V;
+        return H;
     },
     se: function () {
         return z;
@@ -134,12 +134,12 @@ async function U() {
         )
     ).filter((e) => null !== e);
 }
-function H(e) {
+function V(e) {
     let t = (0, T.isWindows)() ? (0, O.Z)(C.ZP, Z.Z) : null,
         n = C.ZP.getRunningGames();
     return null != t && (0, M.Z)(e.id, t.windowHandle) ? 2 : null != n.find((t) => (0, M.Z)(e.id, t.windowHandle)) ? 1 : 0;
 }
-function V(e) {
+function H(e) {
     let { selectedSource: t, onChangeSelectedSource: n } = e,
         { enableGoLiveCaptureCard: i } = N.Z.useExperiment({ location: 'GoLive_Source_Select' }),
         a = I.Z.supports(y.AN.GO_LIVE_HARDWARE),
@@ -151,7 +151,7 @@ function V(e) {
         [O, w] = s.useState(!1),
         D = s.useRef(null),
         U = s.useRef(new h.Xp()),
-        V = (0, u.e7)([C.ZP], () => C.ZP.getRunningGames()),
+        H = (0, u.e7)([C.ZP], () => C.ZP.getRunningGames()),
         W = (function (e, t, n) {
             let l = (0, v.Zy)({ location: P.dr.STREAM_SOURCE_SELECT });
             return s.useMemo(() => {
@@ -171,10 +171,10 @@ function V(e) {
             }, [l, e, t, n]);
         })(
             (0, u.e7)([S.Z], () => S.Z.quests),
-            V,
+            H,
             f
         ),
-        F = s.useMemo(() => (null == f ? null : [...f].sort((e, t) => ((null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : H(t) - H(e)))), [W, f]);
+        F = s.useMemo(() => (null == f ? null : [...f].sort((e, t) => ((null == W ? void 0 : W.source.id) === e.id ? -1 : (null == W ? void 0 : W.source.id) === t.id ? 1 : V(t) - V(e)))), [W, f]);
     s.useEffect(() => {
         let e = U.current;
         return (

@@ -12,28 +12,28 @@ var n = t(735250),
     l = t(866442),
     c = t(692547),
     d = t(481060),
-    u = t(699682),
-    _ = t(44315),
+    _ = t(699682),
+    u = t(44315),
     E = t(654904),
     T = t(981631),
     S = t(689938),
     I = t(562476);
 function N(e) {
-    let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: m, label: C, colorPickerMiddle: g, colorPickerFooter: A, showEyeDropper: h } = e,
+    let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: m, label: C, colorPickerMiddle: A, colorPickerFooter: g, showEyeDropper: h } = e,
         O = a.useRef(null),
         p = (0, d.useToken)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         R = c.Z.colors.BACKGROUND_ACCENT.css,
         x = (0, E.DP)(i),
         f = (0, l.Rf)(i),
         M = f === p ? R : f,
-        D = (0, _.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530),
-        P = (0, u.Z)(g),
-        L = (0, u.Z)(A),
+        D = (0, u.Lq)(x ? T.Ilk.WHITE_500 : T.Ilk.PRIMARY_530),
+        P = (0, _.Z)(A),
+        L = (0, _.Z)(g),
         [b, Z] = a.useState((0, o.Z)());
     return (
         a.useEffect(() => {
-            (P !== g || L !== A) && Z((0, o.Z)());
-        }, [A, g, L, P]),
+            (P !== A || L !== g) && Z((0, o.Z)());
+        }, [g, A, L, P]),
         (0, n.jsx)(d.Popout, {
             positionKey: b,
             renderPopout: (e) =>
@@ -42,8 +42,8 @@ function N(e) {
                     value: i,
                     onChange: s,
                     suggestedColors: N,
-                    middle: g,
-                    footer: A,
+                    middle: A,
+                    footer: g,
                     showEyeDropper: h
                 }),
             onRequestClose: t,

@@ -12,8 +12,8 @@ var a = t(442837),
     l = t(39604),
     c = t(442334),
     d = t(689938),
-    u = t(992133),
-    _ = t(677787);
+    _ = t(992133),
+    u = t(677787);
 function E() {
     let e = (0, a.e7)([o.Z], () => o.Z.getSettings().storageLocation),
         s = async () => {
@@ -26,9 +26,9 @@ function E() {
         children: (0, n.jsx)(c.O, {
             title: d.Z.Messages.CLIPS_SETTINGS_STORAGE_LOCATION,
             note: d.Z.Messages.CLIPS_SETTINGS_STORAGE_LOCATION_HELP,
-            className: u.formItem,
+            className: _.formItem,
             children: (0, n.jsx)(i.Clickable, {
-                className: _.selectControl,
+                className: u.selectControl,
                 'aria-label': d.Z.Messages.CLIPS_SETTINGS_STORAGE_LOCATION_LABEL.format({ storageLocation: e }),
                 onClick: s,
                 children: (0, n.jsx)(i.TextInput, {

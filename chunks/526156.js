@@ -8,19 +8,19 @@ var a = t(120356),
     c = t(313482);
 s.Z = (e) => {
     let { tabs: s, settingsSection: t, parentSetting: a, panelClassName: d } = e,
-        { viewableTabs: u, selectedTab: _ } = (0, l.a)(s, a);
+        { viewableTabs: _, selectedTab: u } = (0, l.a)(s, a);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(r.TabBar, {
                 className: c.tabBar,
-                selectedItem: _.setting,
+                selectedItem: u.setting,
                 onItemSelect: (e) => {
                     o.Z.setSection(t, e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
                 look: 'brand',
-                children: u.map((e) =>
+                children: _.map((e) =>
                     (0, n.jsx)(
                         r.TabBar.Item,
                         {
@@ -34,13 +34,13 @@ s.Z = (e) => {
                 )
             }),
             (0, n.jsx)(r.TabBar.Panel, {
-                id: _.setting,
-                'aria-labelledby': _.title,
+                id: u.setting,
+                'aria-labelledby': u.title,
                 className: i()(c.tabBarPanel, d),
                 children: ((e) => {
                     let s = e.component;
                     return 'function' == typeof s ? (0, n.jsx)(s, {}) : s;
-                })(_)
+                })(u)
             })
         ]
     });

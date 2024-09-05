@@ -23,8 +23,8 @@ var n = t(735250),
     l = t(704215),
     c = t(433517),
     d = t(481060),
-    u = t(600164),
-    _ = t(112831),
+    _ = t(600164),
+    u = t(112831),
     E = t(675478),
     T = t(581883),
     S = t(883904),
@@ -32,8 +32,8 @@ var n = t(735250),
     N = t(211644),
     m = t(804501),
     C = t(989374),
-    g = t(224499);
-function A(e) {
+    A = t(224499);
+function g(e) {
     let { contents: s, content: t, onChange: a } = e,
         i = l.z[t],
         { isDismissed: r, handleToggleDismissState: o } = (0, m.x)(i, s);
@@ -44,8 +44,8 @@ function A(e) {
                 a(t), o();
             },
             children: (0, n.jsx)(d.FormText, {
-                size: _.Z.Sizes.SIZE_16,
-                className: g.marginTop4,
+                size: u.Z.Sizes.SIZE_16,
+                className: A.marginTop4,
                 children: ''.concat(t.toLowerCase(), ' (').concat(l.z[t], ')')
             })
         })
@@ -58,7 +58,7 @@ function h(e) {
             .filter((e) => isNaN(Number(e)))
             .map((e) =>
                 (0, n.jsx)(
-                    A,
+                    g,
                     {
                         contents: t,
                         content: e,
@@ -76,8 +76,8 @@ function O() {
             dailyCapReached: I.Z.hasUserHitDCCap(),
             dailyCapOverridden: I.Z.dailyCapOverridden
         })),
-        [_, m] = a.useState(''),
-        A =
+        [u, m] = a.useState(''),
+        g =
             null !==
                 (e = (0, o.e7)([T.Z], () => {
                     var e;
@@ -106,22 +106,22 @@ function O() {
             });
         },
         x = s.map((e) => l.z[e]),
-        f = O.filter((e) => e.toLowerCase().includes(_.toLowerCase())).filter((e) => !x.includes(e)),
+        f = O.filter((e) => e.toLowerCase().includes(u.toLowerCase())).filter((e) => !x.includes(e)),
         M = Object.keys(l.z)
             .filter((e) => !x.includes(e))
             .filter((e) => !O.includes(e))
-            .filter((e) => e.toLowerCase().includes(_.toLowerCase()))
+            .filter((e) => e.toLowerCase().includes(u.toLowerCase()))
             .sort((e, s) => e.localeCompare(s));
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)(d.FormSection, {
                 title: 'Dismissible Content Fatigue',
                 tag: d.FormTitleTags.H1,
-                className: g.marginBottom60,
+                className: A.marginBottom60,
                 children: [
                     (0, n.jsx)(d.FormItem, {
                         children: (0, n.jsxs)(d.FormText, {
-                            className: g.marginBottom4,
+                            className: A.marginBottom4,
                             children: ['Daily Cap Reached: ', t ? 'Yes' : 'No']
                         })
                     }),
@@ -137,7 +137,7 @@ function O() {
                                 children: 'Reset DismissibleContentFrameworkStore'
                             }),
                             (0, n.jsx)(d.FormText, {
-                                className: g.marginTop4,
+                                className: A.marginTop4,
                                 children: 'This will reset the daily cap and content seen during session'
                             })
                         ]
@@ -149,9 +149,9 @@ function O() {
                 tag: d.FormTitleTags.H1,
                 children: [
                     (0, n.jsx)(d.SearchBar, {
-                        className: g.marginBottom20,
+                        className: A.marginBottom20,
                         size: d.SearchBar.Sizes.LARGE,
-                        query: _,
+                        query: u,
                         onChange: m,
                         onClear: () => m('')
                     }),
@@ -170,15 +170,15 @@ function O() {
                     }),
                     s.length > 0
                         ? (0, n.jsxs)('div', {
-                              className: g.marginBottom20,
+                              className: A.marginBottom20,
                               children: [
                                   (0, n.jsx)('div', {
-                                      className: g.marginBottom20,
+                                      className: A.marginBottom20,
                                       children: (0, n.jsx)(d.FormTitle, { children: 'Recently Shown' })
                                   }),
                                   (0, n.jsx)(h, {
                                       items: x,
-                                      dismissedContents: A,
+                                      dismissedContents: g,
                                       handleChange: R
                                   })
                               ]
@@ -188,24 +188,24 @@ function O() {
                         ? (0, n.jsxs)(n.Fragment, {
                               children: [
                                   (0, n.jsx)('div', {
-                                      className: g.marginBottom20,
+                                      className: A.marginBottom20,
                                       children: (0, n.jsx)(d.FormTitle, { children: 'Recent Overrides' })
                                   }),
                                   (0, n.jsx)(h, {
                                       items: f,
-                                      dismissedContents: A,
+                                      dismissedContents: g,
                                       handleChange: R
                                   })
                               ]
                           })
                         : null,
-                    (0, n.jsx)(u.Z, {
-                        className: r()(g.marginBottom20, g.marginTop20),
+                    (0, n.jsx)(_.Z, {
+                        className: r()(A.marginBottom20, A.marginTop20),
                         children: (0, n.jsx)(d.FormTitle, { children: 'Available Dismissible Contents' })
                     }),
                     (0, n.jsx)(h, {
                         items: M,
-                        dismissedContents: A,
+                        dismissedContents: g,
                         handleChange: R
                     })
                 ]

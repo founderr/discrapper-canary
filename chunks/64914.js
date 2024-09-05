@@ -12,21 +12,21 @@ var n = t(735250),
     l = t(921801),
     c = t(695103),
     d = t(998502),
-    u = t(695346),
-    _ = t(399970),
+    _ = t(695346),
+    u = t(399970),
     E = t(726985),
     T = t(981631),
     S = t(689938);
 function I() {
     let [e] = a.useState(() => d.ZP.getEnableHardwareAcceleration()),
-        s = u.bm.useSetting(),
-        t = u.Sb.useSetting(),
+        s = _.bm.useSetting(),
+        t = _.Sb.useSetting(),
         I = (0, i.e7)([c.Z], () => c.Z.testModeApplicationId),
         N = a.useCallback((e) => {
-            u.bm.updateSetting(!e);
+            _.bm.updateSetting(!e);
         }, []),
         m = a.useCallback((e) => {
-            e ? (0, r.openModal)((e) => (0, n.jsx)(_.Z, { ...e })) : o.mc();
+            e ? (0, r.openModal)((e) => (0, n.jsx)(u.Z, { ...e })) : o.mc();
         }, []),
         C = a.useCallback((e) => {
             (0, r.openModal)((s) =>
@@ -51,7 +51,7 @@ function I() {
                 setting: E.s6.SETTINGS_ADVANCED_DEVELOPER_MODE,
                 children: (0, n.jsx)(r.FormSwitch, {
                     value: t,
-                    onChange: u.Sb.updateSetting,
+                    onChange: _.Sb.updateSetting,
                     note: S.Z.Messages.DEVELOPER_MODE_HELP_TEXT.format({ apiDocsUrl: T.EYA.API_DOCS }),
                     children: S.Z.Messages.DEVELOPER_MODE
                 })

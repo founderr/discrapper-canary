@@ -1,6 +1,6 @@
 t.d(s, {
     H: function () {
-        return _;
+        return u;
     },
     U: function () {
         return S;
@@ -15,25 +15,25 @@ var a = t(120356),
     l = t(3957),
     c = t(279743),
     d = t(81138),
-    u = t(5718);
-function _(e) {
+    _ = t(5718);
+function u(e) {
     let { header: s, description: t, relatedId: a, disabled: o } = e;
     return (0, n.jsxs)('div', {
-        className: u.header,
+        className: _.header,
         children: [
             (0, n.jsx)(r.Heading, {
                 variant: 'text-md/medium',
                 color: 'header-primary',
                 children: (0, n.jsx)('label', {
                     htmlFor: a,
-                    className: i()(u.title, { [u.disabled]: o }),
+                    className: i()(_.title, { [_.disabled]: o }),
                     children: s
                 })
             }),
             (0, n.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',
-                className: i()(u.description, { [u.disabled]: o }),
+                className: i()(_.description, { [_.disabled]: o }),
                 children: t
             })
         ]
@@ -44,24 +44,24 @@ function E(e) {
     return (0, n.jsx)(o.F, {
         setting: s,
         children: (0, n.jsx)('div', {
-            className: i()(u.container, t),
+            className: i()(_.container, t),
             children: a
         })
     });
 }
 function T(e) {
-    let { setting: s, className: t, children: a, scrollPosition: r, scrollHighlightDelay: _ } = e,
+    let { setting: s, className: t, children: a, scrollPosition: r, scrollHighlightDelay: u } = e,
         E = (0, l.a)(r);
     return (0, n.jsx)(o.F, {
         setting: s,
         children: (0, n.jsxs)('div', {
-            className: i()(u.container, t, { [d.settingsBackgroundFlashElement]: null != r }),
+            className: i()(_.container, t, { [d.settingsBackgroundFlashElement]: null != r }),
             ref: E,
             children: [
                 a,
                 null != r
                     ? (0, n.jsx)(c.Z, {
-                          animationDelay: _,
+                          animationDelay: u,
                           scrollPosition: r
                       })
                     : null

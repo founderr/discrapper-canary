@@ -4,7 +4,7 @@ n.r(t),
             return F;
         },
         PaymentContextProvider: function () {
-            return H;
+            return g;
         },
         useForwardedPaymentContext: function () {
             return K;
@@ -15,20 +15,20 @@ n.r(t),
     }),
     n(47120),
     n(789020);
-var r = n(735250),
-    i = n(470079),
+var i = n(735250),
+    r = n(470079),
     u = n(160612),
     l = n(77866),
     o = n(772848),
     E = n(442837),
     a = n(317381),
-    _ = n(211242),
-    S = n(270144),
+    _ = n(728345),
+    S = n(211242),
     s = n(882712),
     A = n(855775),
     c = n(551428),
-    T = n(975104),
-    I = n(630388),
+    I = n(975104),
+    T = n(630388),
     d = n(74538),
     R = n(960048),
     C = n(735521),
@@ -45,15 +45,15 @@ var r = n(735250),
     G = n(362755),
     D = n(981631),
     Z = n(474936);
-let [F, B, K] = (0, T.Z)();
-function H(e) {
-    var t, n, T;
-    let { loadId: B, activeSubscription: K, stepConfigs: H, breadcrumbs: g = [], skuIDs: y, isGift: v = !1, children: Y, defaultPlanId: w, purchaseType: b = D.GZQ.SUBSCRIPTION, applicationId: W, referralCode: V, repeatPurchase: k = !1 } = e,
+let [F, B, K] = (0, I.Z)();
+function g(e) {
+    var t, n, I;
+    let { loadId: B, activeSubscription: K, stepConfigs: g, breadcrumbs: H = [], skuIDs: y, isGift: v = !1, children: Y, defaultPlanId: w, purchaseType: b = D.GZQ.SUBSCRIPTION, applicationId: W, referralCode: V, repeatPurchase: k = !1 } = e,
         x = (0, m.Z)(),
-        X = (0, _.Q)(),
-        J = (0, M.Z)(),
+        J = (0, S.Q)(),
+        Q = (0, M.Z)(),
         {
-            paymentSources: Q,
+            paymentSources: X,
             hasPaymentSources: j,
             paymentSourceId: q,
             setPaymentSourceId: z,
@@ -62,12 +62,12 @@ function H(e) {
             isGift: v,
             activeSubscription: K
         }),
-        ee = i.useRef(j),
+        ee = r.useRef(j),
         {
             hasFetchedSubscriptionPlans: et,
             priceOptions: en,
-            setCurrency: er,
-            currencyLoading: ei,
+            setCurrency: ei,
+            currencyLoading: er,
             currencies: eu
         } = (0, N.Z)({
             activeSubscription: K,
@@ -76,7 +76,7 @@ function H(e) {
             isGift: v
         }),
         el = (0, O.Z)(),
-        [eo, eE] = i.useState(!1),
+        [eo, eE] = r.useState(!1),
         {
             step: ea,
             setStep: e_,
@@ -84,11 +84,11 @@ function H(e) {
             breadcrumbsData: es,
             previousStepRef: eA
         } = (0, p.Z)({
-            stepConfigs: H,
-            breadcrumbs: g
+            stepConfigs: g,
+            breadcrumbs: H
         }),
-        [ec, eT] = (0, L.Z)(ea),
-        { paymentError: eI, paymentAuthenticationState: ed } = (0, f.Z)(),
+        [ec, eI] = (0, L.Z)(ea),
+        { paymentError: eT, paymentAuthenticationState: ed } = (0, f.Z)(),
         { purchaseError: eR, purchaseErrorBlockRef: eC, setPurchaseError: eN } = (0, U.Z)(),
         eM = (0, l.Z)(() => {
             let e = null != B ? B : (0, o.Z)();
@@ -103,37 +103,37 @@ function H(e) {
         { selectedSkuId: eP, selectedPlan: ef, setSelectedSkuId: eU, setSelectedPlanId: eL } = (0, C.Z)(),
         [eO, eh] = (0, E.Wu)([s.Z], () => [s.Z.purchaseTokenAuthState, s.Z.purchaseTokenHash]),
         [ep, em] = (0, E.Wu)([G.Z], () => [G.Z.browserCheckoutState, G.Z.loadId]),
-        [eG, eD] = i.useState(null),
-        [eZ, eF] = i.useState(null),
-        [eB, eK] = i.useState(null),
-        [eH, eg] = i.useState(null),
-        [ey, ev] = i.useState(null),
-        [eY, ew] = i.useState(void 0),
-        [eb, eW] = i.useState([]),
-        eV = i.useMemo(() => null == ef || (0, d.PV)(ef.id), [ef]),
-        ek = i.useRef(null != K ? K.planId : null);
-    i.useEffect(() => {
+        [eG, eD] = r.useState(null),
+        [eZ, eF] = r.useState(null),
+        [eB, eK] = r.useState(null),
+        [eg, eH] = r.useState(null),
+        [ey, ev] = r.useState(null),
+        [eY, ew] = r.useState(void 0),
+        [eb, eW] = r.useState([]),
+        eV = r.useMemo(() => null == ef || (0, d.PV)(ef.id), [ef]),
+        ek = r.useRef(null != K ? K.planId : null);
+    r.useEffect(() => {
         null == ek.current && null != K && (ek.current = K.planId);
     }, [K]);
     let {
             skusById: ex,
-            hasFetchedSkus: eX,
-            skuPricePreviewsById: eJ,
-            previewErrorsById: eQ
+            hasFetchedSkus: eJ,
+            skuPricePreviewsById: eQ,
+            previewErrorsById: eX
         } = (0, h.Z)({
             applicationId: null != W ? W : Z.RQ,
             skuIDs: y,
             currentPaymentSourceId: q,
             isGift: v
         }),
-        ej = null != eP ? eQ[eP] : null,
-        eq = i.useMemo(() => {
+        ej = null != eP ? eX[eP] : null,
+        eq = r.useMemo(() => {
             if (null == eP) return null;
-            let e = eJ[eP];
+            let e = eQ[eP];
             return null == e ? null : e[null != q ? q : A.c];
-        }, [eP, eJ, q]),
-        ez = (0, S.IX)(W),
-        e$ = (0, I.yE)(null !== (t = null == ez ? void 0 : ez.flags) && void 0 !== t ? t : 0, D.udG.EMBEDDED) && (0, I.yE)(null !== (n = null == ez ? void 0 : ez.flags) && void 0 !== n ? n : 0, D.udG.EMBEDDED_IAP),
+        }, [eP, eQ, q]),
+        { data: ez } = (0, _.I)(W),
+        e$ = (0, T.yE)(null !== (t = null == ez ? void 0 : ez.flags) && void 0 !== t ? t : 0, D.udG.EMBEDDED) && (0, T.yE)(null !== (n = null == ez ? void 0 : ez.flags) && void 0 !== n ? n : 0, D.udG.EMBEDDED_IAP),
         e0 = (0, E.e7)([a.ZP], () =>
             Array.from(a.ZP.getSelfEmbeddedActivities().values()).find((e) => {
                 let { applicationId: t } = e;
@@ -143,28 +143,28 @@ function H(e) {
         e1 = null == e0 ? void 0 : e0.compositeInstanceId,
         e7 = (0, E.e7)([c.Z], () => (null != eP ? c.Z.getForSKU(eP) : null), [eP]),
         e4 = ex[null != eP ? eP : ''],
-        [e2, e8] = i.useState(null),
-        e5 = null !== (T = null == K ? void 0 : K.inReverseTrial) && void 0 !== T && T && !v;
-    return (0, r.jsx)(F.Provider, {
+        [e2, e8] = r.useState(null),
+        e5 = null !== (I = null == K ? void 0 : K.inReverseTrial) && void 0 !== I && I && !v;
+    return (0, i.jsx)(F.Provider, {
         value: {
             stripe: x,
             contextMetadata: eM,
-            blockedPayments: X,
+            blockedPayments: J,
             activeSubscription: K,
-            hasFetchedSubscriptions: J,
+            hasFetchedSubscriptions: Q,
             hasFetchedSubscriptionPlans: et,
-            updatedSubscription: eH,
-            setUpdatedSubscription: eg,
+            updatedSubscription: eg,
+            setUpdatedSubscription: eH,
             subscriptionMetadataRequest: ey,
             setSubscriptionMetadataRequest: ev,
             hasFetchedPaymentSources: $,
-            paymentSources: Q,
+            paymentSources: X,
             hasPaymentSources: j,
             paymentSourceId: q,
             setPaymentSourceId: z,
             priceOptions: en,
-            setCurrency: er,
-            currencyLoading: ei,
+            setCurrency: ei,
+            currencyLoading: er,
             currencies: eu,
             ...el,
             hasAcceptedTerms: eo,
@@ -172,13 +172,13 @@ function H(e) {
             step: ea,
             setStep: e_,
             steps: eS,
-            stepConfigs: H,
+            stepConfigs: g,
             breadcrumbs: es,
             previousStepRef: eA,
             purchaseState: ec,
-            setPurchaseState: eT,
+            setPurchaseState: eI,
             paymentAuthenticationState: ed,
-            paymentError: eI,
+            paymentError: eT,
             purchaseError: eR,
             setPurchaseError: eN,
             purchasePreviewError: ej,
@@ -205,9 +205,9 @@ function H(e) {
             isPremium: eV,
             startedPaymentFlowWithPaymentSourcesRef: ee,
             startingPremiumSubscriptionPlanIdRef: ek,
-            hasFetchedSkus: eX,
+            hasFetchedSkus: eJ,
             skusById: ex,
-            skuPricePreviewsById: eJ,
+            skuPricePreviewsById: eQ,
             selectedSkuPricePreview: eq,
             application: ez,
             purchaseType: b,
@@ -221,7 +221,7 @@ function H(e) {
             repeatPurchase: k,
             inReverseTrial: e5
         },
-        children: (0, r.jsx)(u.Elements, {
+        children: (0, i.jsx)(u.Elements, {
             options: D.OBo,
             stripe: x,
             children: Y

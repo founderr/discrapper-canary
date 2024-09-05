@@ -12,8 +12,8 @@ var a = t(512722),
     l = t(295474),
     c = t(150039),
     d = t(126631),
-    u = t(433411),
-    _ = t(532432),
+    _ = t(433411),
+    u = t(532432),
     E = t(134795),
     T = t(513901),
     S = t(451392),
@@ -21,8 +21,8 @@ var a = t(512722),
     N = t(621853),
     m = t(271383),
     C = t(594174),
-    g = t(74538),
-    A = t(51144),
+    A = t(74538),
+    g = t(51144),
     h = t(18438),
     O = t(778825),
     p = t(52597),
@@ -64,7 +64,7 @@ function D(e) {
     let V = (0, l.gS)(y.id),
         Y = (0, r.e7)([m.ZP], () => (null == y.id ? null : m.ZP.getMember(y.id, L.id))),
         w = (0, r.e7)([N.Z], () => N.Z.getGuildMemberProfile(L.id, y.id)),
-        k = g.ZP.canUsePremiumProfileCustomization(L),
+        k = A.ZP.canUsePremiumProfileCustomization(L),
         H = (0, c.gd)(b, null == Y ? void 0 : Y.avatar),
         W = (0, c.f$)(v, null == w ? void 0 : w.banner),
         K = (0, p.p)(U, null == w ? void 0 : w.themeColors),
@@ -80,7 +80,7 @@ function D(e) {
                 R.Z,
                 {
                     errors: null !== (a = null == G ? void 0 : G.nick) && void 0 !== a ? a : null == V ? void 0 : V.nick,
-                    username: A.ZP.getName(L),
+                    username: g.ZP.getName(L),
                     pendingNick: Z,
                     currentNick: null == Y ? void 0 : Y.nick,
                     guild: y
@@ -105,7 +105,7 @@ function D(e) {
                 showOverlay: !k,
                 children: [
                     (0, n.jsx)(
-                        _.Z,
+                        u.Z,
                         {
                             sectionTitle: (0, n.jsxs)(n.Fragment, {
                                 children: [
@@ -131,7 +131,7 @@ function D(e) {
                         'avatar'
                     ),
                     (0, n.jsx)(
-                        u.Z,
+                        _.Z,
                         {
                             sectionTitle: (0, n.jsxs)(n.Fragment, {
                                 children: [

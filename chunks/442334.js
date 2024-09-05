@@ -40,13 +40,13 @@ function c(e) {
     });
 }
 function d(e) {
-    let { options: s, value: t, select: i, selectClassName: d, ...u } = e,
-        _ = a.useId();
+    let { options: s, value: t, select: i, selectClassName: d, ..._ } = e,
+        u = a.useId();
     return (0, n.jsx)(c, {
-        ...u,
-        id: _,
+        ..._,
+        id: u,
         children: (0, n.jsx)(o.Select, {
-            'aria-labelledby': _,
+            'aria-labelledby': u,
             className: r()(l.selectControl, d),
             options: s,
             isSelected: (e) => e === t,

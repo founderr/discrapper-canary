@@ -1,9 +1,9 @@
 n.d(t, {
     m: function () {
-        return r;
+        return i;
     }
 });
-function r(e) {
+function i(e) {
     return {
         id: e.id,
         filename: e.filename,

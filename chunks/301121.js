@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return eA;
+        return eg;
     }
 }),
     t(47120),
@@ -14,8 +14,8 @@ var n,
     l = t.n(o),
     c = t(512722),
     d = t.n(c),
-    u = t(913527),
-    _ = t.n(u),
+    _ = t(913527),
+    u = t.n(_),
     E = t(442837),
     T = t(524437),
     S = t(481060),
@@ -23,8 +23,8 @@ var n,
     N = t(668781),
     m = t(409700),
     C = t(809206),
-    g = t(230711),
-    A = t(241420),
+    A = t(230711),
+    g = t(241420),
     h = t(600164),
     O = t(651530),
     p = t(163268),
@@ -68,7 +68,7 @@ var n,
     el = t(81138),
     ec = t(630785),
     ed = t(224499);
-function eu(e, s, t) {
+function e_(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -81,7 +81,7 @@ function eu(e, s, t) {
         e
     );
 }
-function e_() {
+function eu() {
     let e = (0, E.e7)([x.Z], () => x.Z.getGuild()),
         s = (0, L.Z)(),
         t = null != e ? e : s;
@@ -110,9 +110,9 @@ function e_() {
                       guildId: t.id,
                       onChange: n
                   }),
-                  (0, i.jsx)(A.ConnectedPrivacySettings, {
+                  (0, i.jsx)(g.ConnectedPrivacySettings, {
                       guild: t,
-                      ingress: A.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
+                      ingress: g.PrivacySettingSurfaces.USER_SETTINGS_PRIVACY_SAFETY
                   })
               ]
           });
@@ -397,7 +397,7 @@ function eC(e) {
         body: s
     });
 }
-class eg extends r.PureComponent {
+class eA extends r.PureComponent {
     componentDidMount() {
         (0, m.I)(),
             (0, C.ol)().then(
@@ -691,7 +691,7 @@ class eg extends r.PureComponent {
                             className: ed.marginBottom20,
                             children: eo.Z.Messages.DATA_PRIVACY_CONTROLS_BASIC_SERVICE_NOTE.format({
                                 onClick: () => {
-                                    g.Z.setSection(ei.oAB.ACCOUNT);
+                                    A.Z.setSection(ei.oAB.ACCOUNT);
                                 }
                             })
                         }),
@@ -733,7 +733,7 @@ class eg extends r.PureComponent {
                     className: ec.card,
                     children: (0, i.jsx)(S.Text, {
                         variant: 'text-md/normal',
-                        children: eo.Z.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({ date: _()(n.created_at).add(ei.eBq, 'days').format('MMMM Do YYYY') })
+                        children: eo.Z.Messages.DATA_DOWNLOAD_REQUESTED_STATUS_NOTE.format({ date: u()(n.created_at).add(ei.eBq, 'days').format('MMMM Do YYYY') })
                     })
                 })),
                 (o = null)),
@@ -847,7 +847,7 @@ class eg extends r.PureComponent {
                 },
                 {
                     title: eo.Z.Messages.PRIVACY_AND_SAFETY_GUILD_TAB_TITLE,
-                    component: (0, i.jsx)(e_, {}),
+                    component: (0, i.jsx)(eu, {}),
                     setting: ea.s6.PRIVACY_SERVER_SPECIFIC_SETTINGS
                 },
                 {
@@ -866,13 +866,13 @@ class eg extends r.PureComponent {
     }
     constructor(e) {
         super(e),
-            eu(this, 'handleChangeDefaultGuildsRestricted', (e) => {
+            e_(this, 'handleChangeDefaultGuildsRestricted', (e) => {
                 this.setState({ defaultGuildsRestricted: !e }, () => this.showGuildRestrictionModal(!e));
             }),
-            eu(this, 'handleChangeDropsOptedOut', () => {
+            e_(this, 'handleChangeDropsOptedOut', () => {
                 Q.bh.updateSetting(!this.props.dropsOptedOut);
             }),
-            eu(this, 'handleUsageStatisticsChange', () => {
+            e_(this, 'handleUsageStatisticsChange', () => {
                 this.props.usageStatistics
                     ? em({
                           header: eo.Z.Messages.USAGE_STATISTICS_DISABLE_MODAL_TITLE,
@@ -883,7 +883,7 @@ class eg extends r.PureComponent {
                       })
                     : (0, m.g)([ei.pjP.USAGE_STATISTICS], []).catch(eC);
             }),
-            eu(this, 'handlePersonalizationChange', () => {
+            e_(this, 'handlePersonalizationChange', () => {
                 this.props.personalization
                     ? em({
                           header: eo.Z.Messages.PERSONALIZATION_DISABLE_MODAL_TITLE,
@@ -896,7 +896,7 @@ class eg extends r.PureComponent {
                       })
                     : (0, m.g)([ei.pjP.PERSONALIZATION], []).catch(eC);
             }),
-            eu(this, 'handleDataDownloadRequest', () => {
+            e_(this, 'handleDataDownloadRequest', () => {
                 var e;
                 (e = {
                     header: eo.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
@@ -942,7 +942,7 @@ class eg extends r.PureComponent {
         };
     }
 }
-function eA() {
+function eg() {
     let e = (0, E.e7)([Y.default], () => {
             let e = Y.default.getCurrentUser();
             return d()(null != e, 'ConnectedUserSettingsPrivacySafety: currentUser cannot be undefined'), e;
@@ -958,9 +958,9 @@ function eA() {
         r = (0, M.Xo)({ location: 'web_user_privacy_and_safety_settings' }),
         { hasSearchResults: o, searchResults: l } = (0, ee.E)(),
         c = (0, D.p)(),
-        u = (0, P.Z)(),
-        { enabled: _ } = (0, b.S)({ location: 'PrivacySafetySettings' });
-    return (0, i.jsx)(eg, {
+        _ = (0, P.Z)(),
+        { enabled: u } = (0, b.S)({ location: 'PrivacySafetySettings' });
+    return (0, i.jsx)(eA, {
         currentUser: e,
         defaultGuildsRestricted: Q.iG.useSetting(),
         nonSpamRetrainingOptIn: Q.kJ.useSetting(),
@@ -974,10 +974,10 @@ function eA() {
         safetyHubFetchError: t,
         mediaRedactionIsEnabled: a,
         keywordFilteringExperimentEnabled: r,
-        userIsConsideredAdult: null == u || u,
+        userIsConsideredAdult: null == _ || _,
         subsection: n,
         searchFilter: o ? l : void 0,
-        isSecureFramesEnabled: _,
+        isSecureFramesEnabled: u,
         ...s
     });
 }

@@ -13,24 +13,24 @@ var n = t(735250),
     l = t(200483),
     c = t(981631),
     d = t(689938);
-function u(e) {
+function _(e) {
     let { onError: s, onSuccess: t, PasswordConfirm: r, ...l } = e,
-        [u, _] = a.useState('');
+        [_, u] = a.useState('');
     return (0, n.jsx)(r, {
         ...l,
         handleSubmit: (e) => o.Z.enableMFAStart(e),
         onError: (e) => {
             var n;
-            if (('object' == typeof (n = e) && null != n && (0, i.nr)(n, 'code') && 'number' == typeof n.code ? n.code : 0) === c.evJ.MFA_INVALID_SECRET) t(u), l.onClose();
+            if (('object' == typeof (n = e) && null != n && (0, i.nr)(n, 'code') && 'number' == typeof n.code ? n.code : 0) === c.evJ.MFA_INVALID_SECRET) t(_), l.onClose();
             else s(e);
         },
-        onPasswordChange: _,
+        onPasswordChange: u,
         title: d.Z.Messages.TWO_FA_ENABLE,
         actionText: d.Z.Messages.CONTINUE,
         skipErrorMsgAbortCode: c.evJ.MFA_INVALID_SECRET
     });
 }
-function _(e, s) {
+function u(e, s) {
     return new Promise((a) => {
         (0, r.openModalLazy)(async () => {
             let { default: i } = await Promise.all([t.e('72426'), t.e('23746')]).then(t.bind(t, 837651));
@@ -68,7 +68,7 @@ async function T() {
         (0, r.openModalLazy)(async () => {
             let { default: a } = await t.e('24642').then(t.bind(t, 279837));
             return (t) =>
-                (0, n.jsx)(u, {
+                (0, n.jsx)(_, {
                     ...t,
                     onSuccess: e,
                     onError: s,
@@ -95,8 +95,8 @@ async function T() {
                     });
             });
         }));
-        await _(e, null == a ? void 0 : a.token);
-    } else await _(e);
+        await u(e, null == a ? void 0 : a.token);
+    } else await u(e);
     await E();
 }
 s.ZP = { enableMFA: T };

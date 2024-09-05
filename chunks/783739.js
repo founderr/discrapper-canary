@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(290799),
     c = t(362948),
     d = t(899667),
-    u = t(165630),
-    _ = t(771845),
+    _ = t(165630),
+    u = t(771845),
     E = t(594174),
     T = t(314884),
     S = t(74538),
@@ -20,8 +20,8 @@ var n = t(735250),
     N = t(901750),
     m = t(112863),
     C = t(701157),
-    g = t(912152),
-    A = t(615603),
+    A = t(912152),
+    g = t(615603),
     h = t(474936),
     O = t(833145);
 function p(e) {
@@ -30,8 +30,8 @@ function p(e) {
         p = a.useMemo(() => Object.values(t), [t]),
         R = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
         x = S.ZP.isPremium(R, h.p9.TIER_2),
-        f = (0, i.e7)([u.Z], () => u.Z.affinities),
-        M = (0, i.e7)([_.ZP], () => _.ZP.getFlattenedGuildIds()),
+        f = (0, i.e7)([_.Z], () => _.Z.affinities),
+        M = (0, i.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
         D = f.length > 0 || M.length > 0,
         P = p.length > 0,
         L = a.useMemo(() => p.some((e) => null != e.premiumGuildSubscription), [p]),
@@ -46,7 +46,7 @@ function p(e) {
                 isUserPremiumTier2: x,
                 subscriptionIsPausedOrPausePending: Z
             }),
-            (0, n.jsx)(g.Z, {
+            (0, n.jsx)(A.Z, {
                 hasAppliedGuildBoosts: L,
                 isUserPremiumTier2: x,
                 hasGuildAffinitiesOrInGuild: D,
@@ -62,7 +62,7 @@ function p(e) {
                       guildBoostSlots: t,
                       premiumSubscription: s
                   }),
-            (0, n.jsx)(A.Z, { guildBoostSlots: p }),
+            (0, n.jsx)(g.Z, { guildBoostSlots: p }),
             (0, n.jsx)(C.Z, {
                 hasAppliedGuildBoosts: L,
                 subscriptionIsPausedOrPausePending: Z

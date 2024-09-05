@@ -14,8 +14,8 @@ var n = t(735250),
     l = t(37234),
     c = t(100527),
     d = t(906732),
-    u = t(238302),
-    _ = t(514361),
+    _ = t(238302),
+    u = t(514361),
     E = t(705262),
     T = t(605236),
     S = t(104494),
@@ -23,8 +23,8 @@ var n = t(735250),
     N = t(311476),
     m = t(165583),
     C = t(197115),
-    g = t(504983),
-    A = t(626135),
+    A = t(504983),
+    g = t(626135),
     h = t(981631),
     O = t(921944),
     p = t(474936),
@@ -36,16 +36,16 @@ let M = () => {
             dismissAction: O.L.PRIMARY,
             forceTrack: !0
         }),
-            (0, u.Kq)(),
+            (0, _.Kq)(),
             (0, l.xf)();
     },
     D = () => {
         var e, s;
         let { analyticsLocations: t } = (0, d.ZP)(c.Z.USER_SETTINGS),
-            r = (0, i.e7)([_.Z], () => _.Z.isPreview),
+            r = (0, i.e7)([u.Z], () => u.Z.isPreview),
             l = (null === (s = (0, I.N)()) || void 0 === s ? void 0 : null === (e = s.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === p.Si.TIER_2,
-            u = (0, S.Ng)(),
-            T = (0, S.Wp)(u, p.Si.TIER_2),
+            _ = (0, S.Ng)(),
+            T = (0, S.Wp)(_, p.Si.TIER_2),
             O = !r || l,
             { enabled: D } = N.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceClientThemes' },
@@ -68,7 +68,7 @@ let M = () => {
                               (0, n.jsx)(C.Z, {
                                   showGradient: D,
                                   subscriptionTier: p.Si.TIER_2,
-                                  buttonText: D ? R.Z.Messages.PREMIUM_UPSELL_GET_NITRO : T ? R.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == u ? void 0 : u.discount.amount }) : R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+                                  buttonText: D ? R.Z.Messages.PREMIUM_UPSELL_GET_NITRO : T ? R.Z.Messages.PREMIUM_DISCOUNT_CTA.format({ percent: null == _ ? void 0 : _.discount.amount }) : R.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
                                   className: x.premiumCta
                               })
                           ]
@@ -76,7 +76,7 @@ let M = () => {
         return (
             a.useEffect(() => {
                 r &&
-                    A.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
+                    g.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: p.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                         location_stack: t
                     });
@@ -93,10 +93,10 @@ let M = () => {
                             : (0, n.jsxs)(n.Fragment, {
                                   children: [
                                       (0, n.jsx)(E.ZP.Basic, { className: x.basicThemeSelectors }),
-                                      (0, n.jsxs)(g.Z, {
+                                      (0, n.jsxs)(A.Z, {
                                           className: x.featureBorder,
                                           isShown: r,
-                                          type: g.Y.PREMIUM,
+                                          type: A.Y.PREMIUM,
                                           children: [
                                               (0, n.jsx)(E.ZP.Gradient, {
                                                   disabled: r,
@@ -130,7 +130,7 @@ let M = () => {
         );
     },
     P = () =>
-        (0, i.e7)([_.Z], () => _.Z.isPreview)
+        (0, i.e7)([u.Z], () => u.Z.isPreview)
             ? null
             : (0, n.jsx)(o.Button, {
                   size: o.ButtonSizes.SMALL,

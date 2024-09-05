@@ -13,8 +13,8 @@ var a = t(392711),
     l = t(481060),
     c = t(846027),
     d = t(600164),
-    u = t(463395),
-    _ = t(131951),
+    _ = t(463395),
+    u = t(131951),
     E = t(210887),
     T = t(962100),
     S = t(65154),
@@ -26,24 +26,24 @@ function C() {
     let a = (0, r.e7)([E.Z], () => E.Z.theme),
         {
             canSetInputDevice: C,
-            canSetOutputDevice: g,
-            inputDeviceId: A,
+            canSetOutputDevice: A,
+            inputDeviceId: g,
             outputDeviceId: h
-        } = (0, r.cj)([_.Z], () => ({
-            canSetInputDevice: _.Z.supports(S.AN.AUDIO_INPUT_DEVICE),
-            canSetOutputDevice: _.Z.supports(S.AN.AUDIO_OUTPUT_DEVICE),
-            inputDeviceId: _.Z.getInputDeviceId(),
-            outputDeviceId: _.Z.getOutputDeviceId()
+        } = (0, r.cj)([u.Z], () => ({
+            canSetInputDevice: u.Z.supports(S.AN.AUDIO_INPUT_DEVICE),
+            canSetOutputDevice: u.Z.supports(S.AN.AUDIO_OUTPUT_DEVICE),
+            inputDeviceId: u.Z.getInputDeviceId(),
+            outputDeviceId: u.Z.getOutputDeviceId()
         })),
-        O = (0, r.e7)([_.Z], () => _.Z.getInputDevices()),
-        p = (0, r.e7)([_.Z], () => _.Z.getOutputDevices());
+        O = (0, r.e7)([u.Z], () => u.Z.getInputDevices()),
+        p = (0, r.e7)([u.Z], () => u.Z.getOutputDevices());
     !C &&
         (e = (0, n.jsx)(l.FormText, {
             type: l.FormText.Types.DESCRIPTION,
             className: m.marginTop8,
             children: I.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, T.y)('Help Text Input Devices') })
         })),
-        !g &&
+        !A &&
             (s = (0, n.jsx)(l.FormText, {
                 type: l.FormText.Types.DESCRIPTION,
                 className: m.marginTop8,
@@ -56,7 +56,7 @@ function C() {
     function D(e) {
         let s,
             { label: i, value: r } = e;
-        if (u.Z.isCertified(r)) {
+        if (_.Z.isCertified(r)) {
             let e = (0, o.ap)(a) ? t(561259) : t(887695);
             s = (0, n.jsx)('img', {
                 src: e,
@@ -71,7 +71,7 @@ function C() {
                 children: [
                     (0, n.jsx)('span', {
                         className: N.deviceOptionLabel,
-                        children: u.Z.getCertifiedDeviceName(r, i)
+                        children: _.Z.getCertifiedDeviceName(r, i)
                     }),
                     s
                 ]
@@ -94,7 +94,7 @@ function C() {
                         children: I.Z.Messages.FORM_LABEL_INPUT_DEVICE
                     }),
                     (0, n.jsx)(l.SingleSelect, {
-                        value: A,
+                        value: g,
                         onChange: (e) => c.Z.setInputDevice(e, 'Settings'),
                         options: i().map(O, (e) => {
                             let { id: s, name: t } = e;

@@ -8,8 +8,8 @@ var o = t(735250),
     c = t(313201),
     u = t(944163),
     d = t(266395),
-    m = t(200305),
-    f = t(592286),
+    f = t(200305),
+    m = t(592286),
     _ = t(689938),
     b = t(807907);
 let h = () =>
@@ -21,20 +21,20 @@ let h = () =>
         },
         onResetText: _.Z.Messages.CANCEL,
         onSave: () => {
-            (0, d.PE)(!1), (0, s.closeModal)(f.Pn);
+            (0, d.PE)(!1), (0, s.closeModal)(m.Pn);
         },
         onSaveText: _.Z.Messages.MEMBER_VERIFICATION_PROGRESS_LOST_CONTINUE,
         onSaveButtonColor: s.ButtonColors.RED
     });
 n.default = (e) => {
-    let { guildId: n, transitionState: t, onClose: l, onComplete: f, isPreview: _ = !1 } = e,
+    let { guildId: n, transitionState: t, onClose: l, onComplete: m, isPreview: _ = !1 } = e,
         p = (0, d.rb)((e) => e.shouldShowWarning),
-        E = (0, i.e7)([u.Z], () => u.Z.get(n)),
-        C = (0, c.Dt)();
+        C = (0, i.e7)([u.Z], () => u.Z.get(n)),
+        E = (0, c.Dt)();
     return (r.useEffect(() => {
-        E === u.t && l();
-    }, [l, E]),
-    E === u.t)
+        C === u.t && l();
+    }, [l, C]),
+    C === u.t)
         ? null
         : (0, o.jsxs)(o.Fragment, {
               children: [
@@ -42,17 +42,17 @@ n.default = (e) => {
                       size: s.ModalSize.MEDIUM,
                       className: b.container,
                       transitionState: t,
-                      'aria-labelledby': C,
+                      'aria-labelledby': E,
                       children: [
                           (0, o.jsx)(s.ModalCloseButton, {
                               onClick: () => l(!1),
                               className: b.closeButton
                           }),
-                          (0, o.jsx)(m.Z, {
-                              headerId: C,
+                          (0, o.jsx)(f.Z, {
+                              headerId: E,
                               guildId: n,
                               onClose: l,
-                              onComplete: f,
+                              onComplete: m,
                               isPreview: _
                           })
                       ]

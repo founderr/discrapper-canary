@@ -12,8 +12,8 @@ var a = t(524437),
     l = t(695346),
     c = t(838436),
     d = t(973005),
-    u = t(726985),
-    _ = t(981631),
+    _ = t(726985),
+    u = t(981631),
     E = t(689938),
     T = t(900965);
 function S() {
@@ -22,11 +22,11 @@ function S() {
         I = l.UP.useSetting();
     let N = ((e = S), (s = I), e !== a.Xr.DEFAULT_UNSET ? e : null !== (t = d.O7.get(s)) && void 0 !== t ? t : a.Xr.NON_FRIENDS);
     return (0, n.jsxs)(c.U, {
-        setting: u.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
+        setting: _.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [
             (0, n.jsx)(c.H, {
                 header: E.Z.Messages.USER_DM_SPAM_FILTER,
-                description: E.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: r.Z.getArticleURL(_.BhN.SAFE_DIRECT_MESSAGING) })
+                description: E.Z.Messages.USER_DM_SPAM_FILTER_HELP.format({ appealLink: r.Z.getArticleURL(u.BhN.SAFE_DIRECT_MESSAGING) })
             }),
             (0, n.jsx)(i.RadioGroup, {
                 radioItemClassName: T.radioGroupItem,

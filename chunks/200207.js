@@ -1,4 +1,4 @@
-i.d(n, {
+i.d(e, {
     I: function () {
         return c;
     }
@@ -9,21 +9,21 @@ var t = i(557533),
     r = i.n(t),
     s = i(789978),
     a = i(790472),
-    o = i(777207),
-    d = i(25378),
+    d = i(777207),
+    o = i(25378),
     u = i(778342);
-function c(e) {
-    let { title: n, description: i, headerImage: t, onDetails: c, onPurchase: p, PurchaseButton: m, availabilityLabel: v } = e;
+function c(n) {
+    let { title: e, description: i, headerImage: t, onDetails: c, onPurchase: p, PurchaseButton: m, availabilityLabel: v } = n;
     return (0, l.jsx)(s.tE, {
         children: (0, l.jsxs)('div', {
-            className: r()(d.wrapper, u.hoverCard),
+            className: r()(o.wrapper, u.hoverCard),
             tabIndex: 0,
             onClick: () => {
                 null != c ? c() : null != p && p();
             },
             children: [
                 (0, l.jsx)('div', {
-                    className: d.cardHeaderImg,
+                    className: o.cardHeaderImg,
                     style: null != t ? { backgroundImage: null != t ? 'url('.concat(t.toString(), ')') : void 0 } : void 0,
                     children:
                         null == t &&
@@ -35,16 +35,16 @@ function c(e) {
                         })
                 }),
                 (0, l.jsxs)('div', {
-                    className: d.details,
+                    className: o.details,
                     children: [
-                        (0, l.jsx)(o.x, {
+                        (0, l.jsx)(d.x, {
                             color: 'header-primary',
                             variant: 'text-md/semibold',
-                            children: n
+                            children: e
                         }),
                         null != i &&
-                            (0, l.jsx)(o.x, {
-                                className: d.description,
+                            (0, l.jsx)(d.x, {
+                                className: o.description,
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
                                 children: i
@@ -53,16 +53,16 @@ function c(e) {
                 }),
                 null != m &&
                     (0, l.jsxs)('div', {
-                        className: d.footer,
+                        className: o.footer,
                         children: [
-                            (0, l.jsx)(o.x, {
+                            (0, l.jsx)(d.x, {
                                 color: 'interactive-normal',
                                 variant: 'text-sm/normal',
                                 children: v
                             }),
                             (0, l.jsx)(m, {
-                                onClick: (e) => {
-                                    e.stopPropagation(), null == p || p();
+                                onClick: (n) => {
+                                    n.stopPropagation(), null == p || p();
                                 }
                             })
                         ]

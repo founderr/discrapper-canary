@@ -7,9 +7,9 @@ var n = t(735250),
     l = t(981631),
     c = t(689938),
     d = t(526201),
-    u = t(224499);
-let _ = 0,
-    E = () => 'notification-position-selector-'.concat(_++),
+    _ = t(224499);
+let u = 0,
+    E = () => 'notification-position-selector-'.concat(u++),
     T = (e) => {
         switch (e) {
             case l._vf.TOP_LEFT:
@@ -28,7 +28,7 @@ let _ = 0,
 function I(e) {
     let { position: s, onChange: t } = e,
         [i] = a.useState(() => E()),
-        _ = s === l._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({ position: T(s) });
+        u = s === l._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({ position: T(s) });
     return (0, n.jsxs)('div', {
         children: [
             (0, n.jsx)(o.FocusRing, {
@@ -73,8 +73,8 @@ function I(e) {
             }),
             (0, n.jsx)(o.FormText, {
                 type: o.FormTextTypes.DESCRIPTION,
-                className: u.marginTop8,
-                children: _
+                className: _.marginTop8,
+                children: u
             })
         ]
     });

@@ -12,8 +12,8 @@ var a = t(512722),
     l = t(634894),
     c = t(954138),
     d = t(891728),
-    u = t(328783),
-    _ = t(295474),
+    _ = t(328783),
+    u = t(295474),
     E = t(150039),
     T = t(126631),
     S = t(433411),
@@ -21,8 +21,8 @@ var a = t(512722),
     N = t(349177),
     m = t(872736),
     C = t(134795),
-    g = t(610966),
-    A = t(513901),
+    A = t(610966),
+    g = t(513901),
     h = t(451392),
     O = t(906364),
     p = t(350327),
@@ -57,7 +57,7 @@ function b() {
                 errors: s
             };
         }),
-        W = (0, _.gS)(),
+        W = (0, u.gS)(),
         K = D.ZP.canUsePremiumProfileCustomization(B),
         z = (0, E.gd)(G, B.avatar),
         Q = (0, E.f$)(y, null == U ? void 0 : U.banner),
@@ -117,7 +117,7 @@ function b() {
                 'decoration'
             ),
             (0, n.jsx)(
-                A.Z,
+                g.Z,
                 {
                     user: B,
                     sectionTitle: P.Z.Messages.USER_SETTINGS_PROFILE_EFFECT
@@ -147,7 +147,7 @@ function b() {
                       ]
                   })
                 : (0, n.jsx)(
-                      g.Z,
+                      A.Z,
                       {
                           user: B,
                           savedUserColor: null == U ? void 0 : U.accentColor,
@@ -167,7 +167,7 @@ function b() {
                 },
                 'bio'
             ),
-            es && et.length > 0 && (0, n.jsx)(u.Z, { availableClans: et }),
+            es && et.length > 0 && (0, n.jsx)(_.Z, { availableClans: et }),
             null != J && (0, n.jsx)(m.Z, { legacyUsername: J }, 'legacy_username')
         ]
     });

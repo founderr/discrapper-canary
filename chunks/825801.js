@@ -59,17 +59,17 @@ function N(e) {
             sourceType: i,
             sourceDetails: d
         });
-        y(!1),
-            C(!1),
-            v(!0),
+        y(!1), C(!1), v(!0);
+        try {
             await (0, p.Z)({
                 userId: t.id,
                 content: n,
                 location: 'UserProfileReactReplyBar',
                 openChannel: !1,
                 whenReady: !1
-            }),
-            C(!0),
+            });
+        } catch (e) {}
+        C(!0),
             setTimeout(() => {
                 v(!1);
             }, S);
@@ -107,8 +107,8 @@ function N(e) {
                         return (0, r.jsx)(u.Z, {
                             guildId: null == n ? void 0 : n.guild_id,
                             closePopout: t,
-                            onSelectEmoji: (e, n) => {
-                                x(e), n && (t(), null == L || L());
+                            onSelectEmoji: async (e, n) => {
+                                await x(e), n && (t(), null == L || L());
                             },
                             pickerIntention: m.Hz.PROFILE,
                             channel: n

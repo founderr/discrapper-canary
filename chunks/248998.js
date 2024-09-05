@@ -12,8 +12,8 @@ var a = t(120356),
     l = t(481060),
     c = t(55935),
     d = t(955204),
-    u = t(674680),
-    _ = t(384924);
+    _ = t(674680),
+    u = t(384924);
 function E(e) {
     let { achievementId: s, dateUnlocked: t } = e,
         a = (0, d.oX)(s);
@@ -23,32 +23,32 @@ function E(e) {
         N = S && !r,
         m = r ? 'header-primary' : 'text-muted',
         C = r ? 'header-secondary' : 'text-muted',
-        g = o()(t),
-        A = null != I && r,
-        h = A ? l.Clickable : 'div';
+        A = o()(t),
+        g = null != I && r,
+        h = g ? l.Clickable : 'div';
     return (0, n.jsxs)(h, {
-        className: i()(_.container, A && _.actionable),
+        className: i()(u.container, g && u.actionable),
         onClick: () => {
-            A && I();
+            g && I();
         },
         children: [
             (0, n.jsx)('div', {
-                className: _.iconContainer,
-                children: (0, n.jsx)(u.Z, {
+                className: u.iconContainer,
+                children: (0, n.jsx)(_.Z, {
                     achievementId: s,
-                    size: u.Z.Sizes.SIZE_40,
+                    size: _.Z.Sizes.SIZE_40,
                     unlocked: r
                 })
             }),
             (0, n.jsxs)('div', {
-                className: _.nameContainer,
+                className: u.nameContainer,
                 children: [
                     null != t &&
                         (0, n.jsx)(l.Text, {
                             variant: 'text-xxs/semibold',
                             color: 'text-muted',
-                            className: _.unlocked,
-                            children: (0, c.Y4)(g)
+                            className: u.unlocked,
+                            children: (0, c.Y4)(A)
                         }),
                     (0, n.jsx)(l.Text, {
                         variant: 'text-md/medium',

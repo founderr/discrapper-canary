@@ -12,20 +12,20 @@ var n = t(735250),
     l = t(893718),
     c = t(313201),
     d = t(131704),
-    u = t(993413),
-    _ = t(981631),
+    _ = t(993413),
+    u = t(981631),
     E = t(689938),
     T = t(637309);
 let S = (0, c.hQ)(),
     I = (0, d.kt)({
         id: '1',
-        type: _.d4z.DM
+        type: u.d4z.DM
     }),
     N = (0, c.hQ)();
 function m(e) {
-    let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: m, currentBio: C, disabled: g = !1 } = e,
-        [A, h] = a.useState(null != d ? d : C),
-        [O, p] = a.useState((0, o.JM)(A)),
+    let { sectionTitle: s, errors: t, onBioChange: c, pendingBio: d, placeholder: m, currentBio: C, disabled: A = !1 } = e,
+        [g, h] = a.useState(null != d ? d : C),
+        [O, p] = a.useState((0, o.JM)(g)),
         R = a.useRef(!1);
     return (
         a.useEffect(() => {
@@ -34,24 +34,24 @@ function m(e) {
                 h(C), p(e);
             }
         }, [d, C]),
-        (0, n.jsxs)(u.Z, {
+        (0, n.jsxs)(_.Z, {
             title: s,
             titleId: S,
             description: E.Z.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
             errors: t,
-            disabled: g,
+            disabled: A,
             children: [
                 (0, n.jsx)(l.Z, {
                     'aria-describedby': N,
                     'aria-labelledby': S,
                     innerClassName: T.bioTextArea,
-                    maxCharacterCount: _.tPV,
+                    maxCharacterCount: u.tPV,
                     onChange: function (e, s, t) {
-                        s !== A && (h(s), p(t), c(s));
+                        s !== g && (h(s), p(t), c(s));
                     },
                     placeholder: m,
                     channel: I,
-                    textValue: A,
+                    textValue: g,
                     richValue: O,
                     type: r.I.PROFILE_BIO_INPUT,
                     onBlur: () => {
@@ -72,7 +72,7 @@ function m(e) {
                 }),
                 (0, n.jsx)(i.HiddenVisually, {
                     id: N,
-                    children: E.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: _.tPV })
+                    children: E.Z.Messages.MAXIMUM_LENGTH.format({ maxLength: u.tPV })
                 })
             ]
         })

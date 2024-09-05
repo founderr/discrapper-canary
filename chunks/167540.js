@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(481060),
     c = t(921801),
     d = t(131951),
-    u = t(962100),
-    _ = t(445817),
+    _ = t(962100),
+    u = t(445817),
     E = t(726985),
     T = t(65154),
     S = t(689938),
@@ -26,7 +26,7 @@ function N() {
         button: (0, n.jsx)(l.Button, {
             size: l.Button.Sizes.SMALL,
             className: I.marginTop20,
-            onClick: () => (0, u.y)('Video unsupported browser'),
+            onClick: () => (0, _.y)('Video unsupported browser'),
             children: S.Z.Messages.DOWNLOAD_APP
         })
     });
@@ -45,7 +45,7 @@ function m() {
                 children: [
                     (0, n.jsx)(c.F, {
                         setting: E.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
-                        children: (0, n.jsx)(_.Z, {
+                        children: (0, n.jsx)(u.Z, {
                             previewEnabled: s,
                             onEnablePreview: () => t(!0)
                         })

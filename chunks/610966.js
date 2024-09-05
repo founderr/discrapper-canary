@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return u;
+        return _;
     }
 });
 var n = t(735250);
@@ -12,9 +12,9 @@ var a = t(866442),
     l = t(193528),
     c = t(993413),
     d = t(689938);
-function u(e) {
+function _(e) {
     var s;
-    let { user: t, savedUserColor: u, pendingColor: _, setPendingAccentColor: E } = e,
+    let { user: t, savedUserColor: _, pendingColor: u, setPendingAccentColor: E } = e,
         T = t.getAvatarURL(null, 80),
         S = (0, r.useToken)(i.Z.unsafe_rawColors.PRIMARY_530).hex(),
         I = (0, o.Cf)(T, S, !1),
@@ -23,7 +23,7 @@ function u(e) {
         title: d.Z.Messages.USER_SETTINGS_BANNER_COLOR_TITLE,
         children: (0, n.jsx)(l.Z, {
             onChange: (e) => E(e),
-            color: null !== (s = null != _ ? _ : u) && void 0 !== s ? s : N,
+            color: null !== (s = null != u ? u : _) && void 0 !== s ? s : N,
             suggestedColors: I,
             showEyeDropper: !0
         })

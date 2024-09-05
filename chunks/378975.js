@@ -113,8 +113,8 @@ function C(e) {
     });
 }
 function v(e) {
-    let { type: n, options: l, id: i, placeholder: a, maxValues: u, minValues: v, disabled: _ } = e,
-        h = r.useMemo(() => l.filter((e) => e.default).map((e) => e.value), [l]),
+    let { type: n, options: l, id: i, placeholder: a, maxValues: u, minValues: v, disabled: h } = e,
+        _ = r.useMemo(() => l.filter((e) => e.default).map((e) => e.value), [l]),
         {
             state: x,
             executeStateUpdate: T,
@@ -123,39 +123,39 @@ function v(e) {
             error: S
         } = (0, d.Ee)(e, {
             type: n,
-            values: h
+            values: _
         }),
         O = u > 1,
         j = I === m.gH.LOADING,
         [Z, R] = r.useState(!1),
         [M, b] = r.useState(() => new Set(l.filter((e) => e.default).map((e) => e.value))),
-        [A, P] = r.useState(M),
+        [P, A] = r.useState(M),
         L = r.useMemo(() => l.some((e) => null != e.emoji), [l]);
     r.useEffect(() => {
         if ((null == x ? void 0 : x.type) === o.re.STRING_SELECT) {
             let e = new Set(x.values);
-            b(e), P(e);
+            b(e), A(e);
         } else {
-            let e = new Set(h);
-            b(e), P(e);
+            let e = new Set(_);
+            b(e), A(e);
         }
-    }, [i, h, x]);
+    }, [i, _, x]);
     let y = r.useCallback(() => {
-        if (A !== M)
+        if (P !== M)
             T({
                 type: o.re.STRING_SELECT,
                 values: Array.from(M)
-            }) && P(M);
-    }, [M, A, P, T]);
+            }) && A(M);
+    }, [M, P, A, T]);
     r.useEffect(() => {
-        if (!(Z || (M.size === A.size && Array.from(A).every((e) => M.has(e))))) y();
-    }, [Z, M, A, y]);
-    let k = s.singleSelect;
-    O ? (k = s.multiSelect) : 0 === v && (k = s.toggleSelect);
-    let U = (0, s.useVariableSelect)({
+        if (!(Z || (M.size === P.size && Array.from(P).every((e) => M.has(e))))) y();
+    }, [Z, M, P, y]);
+    let U = s.singleSelect;
+    O ? (U = s.multiSelect) : 0 === v && (U = s.toggleSelect);
+    let k = (0, s.useVariableSelect)({
         value: M,
         onChange: (e) => b(e),
-        onSelectInteraction: k
+        onSelectInteraction: U
     });
     return (0, t.jsxs)(r.Fragment, {
         children: [
@@ -163,7 +163,7 @@ function v(e) {
                 className: f.container,
                 children: [
                     (0, t.jsx)(s.Select, {
-                        isDisabled: _ || g,
+                        isDisabled: h || g,
                         className: f.select,
                         options: l.map((e) => ({
                             ...e,
@@ -182,7 +182,7 @@ function v(e) {
                                 isOffset: L
                             }),
                         renderOptionValue: (e) => (O ? (0, t.jsx)(C, { options: e }) : (0, t.jsx)(N, { ...e[0] })),
-                        ...U
+                        ...k
                     }),
                     j
                         ? (0, t.jsx)('div', {

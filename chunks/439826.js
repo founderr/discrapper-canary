@@ -125,49 +125,49 @@ function Z(e) {
         r.useEffect(() => {
             if (x && null != j.current)
                 return (
-                    y.current !== i && (i ? j.current.play() : (j.current.pause(), (j.current.currentTime = 0))),
+                    y.current !== i && (i && !b ? j.current.play() : (j.current.pause(), (j.current.currentTime = 0))),
                     (y.current = i),
                     () => {
                         var e;
                         null === (e = j.current) || void 0 === e || e.pause();
                     }
                 );
-        }, [i, x]),
+        }, [i, x, b]),
         (0, s.jsxs)('div', {
             className: v.container,
             children: [
                 (0, s.jsx)('div', {
                     className: v.heroAssetWrapper,
-                    children:
-                        x && !b
-                            ? (0, s.jsx)(S.Fl, {
-                                  id: 'QuestTileBanner_heroAnimated',
-                                  children: (e) => (
-                                      null != e.current && (j.current = e.current),
-                                      (0, s.jsx)(m.Z, {
-                                          ref: e,
-                                          autoPlay: !b && i,
-                                          loop: !0,
-                                          playsInline: !0,
-                                          className: v.heroAsset,
-                                          controls: !1,
-                                          children: (0, s.jsx)('source', {
-                                              src: f,
-                                              type: (0, p.mN)(f)
-                                          })
+                    children: x
+                        ? (0, s.jsx)(S.Fl, {
+                              id: 'QuestTileBanner_heroAnimated',
+                              children: (e) => (
+                                  null != e.current && (j.current = e.current),
+                                  (0, s.jsx)(m.Z, {
+                                      ref: e,
+                                      autoPlay: !b && i,
+                                      loop: !0,
+                                      muted: !0,
+                                      playsInline: !0,
+                                      className: v.heroAsset,
+                                      controls: !1,
+                                      children: (0, s.jsx)('source', {
+                                          src: f,
+                                          type: (0, p.mN)(f)
                                       })
-                                  )
-                              })
-                            : (0, s.jsx)(S.Fl, {
-                                  id: 'QuestTileBanner',
-                                  children: (e) =>
-                                      (0, s.jsx)('img', {
-                                          ref: e,
-                                          alt: ''.concat(n.config.messages.questName),
-                                          className: v.heroAsset,
-                                          src: f
-                                      })
-                              })
+                                  })
+                              )
+                          })
+                        : (0, s.jsx)(S.Fl, {
+                              id: 'QuestTileBanner',
+                              children: (e) =>
+                                  (0, s.jsx)('img', {
+                                      ref: e,
+                                      alt: ''.concat(n.config.messages.questName),
+                                      className: v.heroAsset,
+                                      src: f
+                                  })
+                          })
                 }),
                 (0, s.jsx)('div', {
                     className: o()(v.overlay, {

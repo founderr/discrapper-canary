@@ -12,14 +12,14 @@ var a = t(442837),
     l = t(663389),
     c = t(309739),
     d = t(293389),
-    u = t(327885),
-    _ = t(326528),
+    _ = t(327885),
+    u = t(326528),
     E = t(332325),
     T = t(981631),
     S = t(689938),
     I = t(672280);
 function N() {
-    let e = (0, _.b)(),
+    let e = (0, u.b)(),
         s = (0, a.e7)([l.Z], () => l.Z.getSubsection()),
         t = null != s && e.some((e) => e.id === s) ? s : e[0].id;
     return (0, n.jsxs)(n.Fragment, {
@@ -68,7 +68,7 @@ function N() {
                             showHeader: !1
                         });
                     case E.Z.OVERLAY:
-                        return (0, n.jsx)(u.Z, {
+                        return (0, n.jsx)(_.Z, {
                             className: I.body,
                             showHeader: !1
                         });

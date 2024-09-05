@@ -12,8 +12,8 @@ var n,
     l = t(481060),
     c = t(570140),
     d = t(401430),
-    u = t(155268),
-    _ = t(600164),
+    _ = t(155268),
+    u = t(600164),
     E = t(313201),
     T = t(695103),
     S = t(689938),
@@ -32,11 +32,11 @@ function C(e) {
             authorizationError: T.Z.error,
             authorizing: T.Z.isFetchingAuthorization
         })),
-        [g, A] = r.useState(null != n ? n : ''),
+        [A, g] = r.useState(null != n ? n : ''),
         [h, O] = r.useState('8080'),
         [p, R] = r.useState('localhost'),
         x = (0, E.Dt)(),
-        f = m.test(g);
+        f = m.test(A);
     async function M() {
         d.q$();
         let e = (function (e, s, t) {
@@ -45,16 +45,16 @@ function C(e) {
                 case 'localhost':
                     return 'https://localhost:'.concat(s);
                 case 'proxy':
-                    return (0, u.Z)(t);
+                    return (0, _.Z)(t);
             }
-        })(p, h, g);
-        null != (await d.Wt(g, e)) && s();
+        })(p, h, A);
+        null != (await d.Wt(A, e)) && s();
     }
     r.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-    let D = null != n && n === g,
+    let D = null != n && n === A,
         P = D
             ? function () {
-                  d.mc(), A(''), R(null);
+                  d.mc(), g(''), R(null);
               }
             : M;
     return (0, i.jsxs)(l.ModalRoot, {
@@ -62,7 +62,7 @@ function C(e) {
         transitionState: t,
         children: [
             (0, i.jsxs)(l.ModalHeader, {
-                justify: _.Z.Justify.BETWEEN,
+                justify: u.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
                     (0, i.jsx)(l.FormTitle, {
@@ -92,20 +92,20 @@ function C(e) {
                         onSubmit: (e) => {
                             e.preventDefault(), P();
                         },
-                        children: (0, i.jsxs)(_.Z, {
-                            direction: _.Z.Direction.VERTICAL,
-                            align: _.Z.Align.START,
+                        children: (0, i.jsxs)(u.Z, {
+                            direction: u.Z.Direction.VERTICAL,
+                            align: u.Z.Align.START,
                             children: [
                                 (0, i.jsx)(l.FormItem, {
                                     className: I.inputWrapper,
                                     title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
                                     required: !0,
                                     children: (0, i.jsx)(l.TextInput, {
-                                        value: g,
+                                        value: A,
                                         maxLength: 19,
                                         error: f ? null : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
                                         onChange: function (e) {
-                                            A(e);
+                                            g(e);
                                         },
                                         disabled: C
                                     })
@@ -114,7 +114,7 @@ function C(e) {
                                     className: I.inputWrapper,
                                     title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
                                     children: (0, i.jsx)(l.SingleSelect, {
-                                        isDisabled: !f || '' === g,
+                                        isDisabled: !f || '' === A,
                                         value: p,
                                         options: [
                                             {
@@ -150,7 +150,7 @@ function C(e) {
                                 (0, i.jsx)(l.Button, {
                                     submitting: C,
                                     type: 'submit',
-                                    disabled: !f || 0 === g.length || ('localhost' === p && 0 === h.length),
+                                    disabled: !f || 0 === A.length || ('localhost' === p && 0 === h.length),
                                     color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
                                     children: D ? S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
                                 })

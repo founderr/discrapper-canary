@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return _;
+        return u;
     }
 });
 var n = t(735250);
@@ -12,8 +12,8 @@ var a = t(120356),
     l = t(689938),
     c = t(801742),
     d = t(653869),
-    u = t(845904);
-function _(e) {
+    _ = t(845904);
+function u(e) {
     let { onClickManageSubscription: s, count: t } = e;
     return (0, n.jsxs)('div', {
         children: [
@@ -32,7 +32,7 @@ function _(e) {
                 className: i()(d.guildBoostingSubscriptionRow, c.card),
                 children: [
                     (0, n.jsx)('img', {
-                        src: u,
+                        src: _,
                         alt: '',
                         className: c.bannerImage
                     }),

@@ -12,8 +12,8 @@ var n,
     l = t.n(o),
     c = t(512722),
     d = t.n(c),
-    u = t(442837),
-    _ = t(622535),
+    _ = t(442837),
+    u = t(622535),
     E = t(481060),
     T = t(570140),
     S = t(232567),
@@ -21,8 +21,8 @@ var n,
     N = t(497321),
     m = t(634894),
     C = t(100527),
-    g = t(906732),
-    A = t(475977),
+    A = t(906732),
+    g = t(475977),
     h = t(957730),
     O = t(31590),
     p = t(53691),
@@ -39,18 +39,18 @@ var n,
     j = t(689938),
     B = t(663921);
 function U() {
-    let e = (0, u.e7)([P.default], () => {
+    let e = (0, _.e7)([P.default], () => {
         let e = P.default.getCurrentUser();
         return d()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
     });
     r.useEffect(() => {
         (0, S.In)(e.id);
     }, [e.id]);
-    let s = (0, u.e7)([M.Z], () => M.Z.hidePersonalInformation),
-        { pendingBio: t, ...n } = (0, u.cj)([D.Z], () => D.Z.getAllPending()),
+    let s = (0, _.e7)([M.Z], () => M.Z.hidePersonalInformation),
+        { pendingBio: t, ...n } = (0, _.cj)([D.Z], () => D.Z.getAllPending()),
         a = b.dN.useSetting() && null != t ? h.ZP.parse(void 0, t).content : t,
         o = L.ZP.canUsePremiumProfileCustomization(e),
-        { analyticsLocations: c } = (0, g.ZP)(C.Z.PROFILE);
+        { analyticsLocations: c } = (0, A.ZP)(C.Z.PROFILE);
     r.useEffect(() => () => T.Z.wait(I.W3), []);
     let U = 'UserSettingsProfileCustomization';
     (0, m.j)({
@@ -95,10 +95,10 @@ function U() {
         z = r.useRef(null);
     return s
         ? (0, i.jsx)(N.Z, {})
-        : (0, i.jsxs)(g.Gt, {
+        : (0, i.jsxs)(A.Gt, {
               value: c,
               children: [
-                  (0, i.jsx)(A.Z, {}),
+                  (0, i.jsx)(g.Z, {}),
                   F &&
                       !o &&
                       (0, i.jsx)(E.SegmentedControl, {
@@ -123,7 +123,7 @@ function U() {
                           children: (0, i.jsx)(v.Z, {})
                       }),
                   K &&
-                      (0, i.jsx)(_.$, {
+                      (0, i.jsx)(u.$, {
                           onChange: (e) => k(e),
                           threshold: 0.25,
                           active: y,

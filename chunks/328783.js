@@ -7,8 +7,8 @@ var n = t(735250),
     l = t(993413),
     c = t(594174),
     d = t(931240),
-    u = t(353093),
-    _ = t(732783),
+    _ = t(353093),
+    u = t(732783),
     E = t(981631),
     T = t(689938),
     S = t(714264);
@@ -18,7 +18,7 @@ s.Z = a.memo(function (e) {
         t = a.useMemo(() => new Map(s.map((e) => [e.id, e])), [s]),
         o = (0, i.e7)([c.default], () => {
             var e;
-            return (0, u.vh)(null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId;
+            return (0, _.vh)(null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.clan).guildId;
         }),
         N = a.useMemo(
             () =>
@@ -44,7 +44,7 @@ s.Z = a.memo(function (e) {
                 let r = null === (s = i.clan) || void 0 === s ? void 0 : s.tag;
                 return null == r
                     ? null
-                    : (0, n.jsx)(_.Z, {
+                    : (0, n.jsx)(u.Z, {
                           clanTag: r,
                           clanBadge: null === (a = i.clan) || void 0 === a ? void 0 : a.badge,
                           guildId: i.id,
@@ -62,8 +62,8 @@ s.Z = a.memo(function (e) {
             },
             [m]
         ),
-        g = a.useCallback((e) => (0, d.nE)(e, !0, E.Sbl.USER_SETTINGS), []),
-        A = a.useCallback((e) => e === o, [o]),
+        A = a.useCallback((e) => (0, d.nE)(e, !0, E.Sbl.USER_SETTINGS), []),
+        g = a.useCallback((e) => e === o, [o]),
         h = a.useCallback((e) => e, []),
         O = a.useCallback(() => (0, d.nE)(null, !1), []);
     return (0, n.jsxs)(l.Z, {
@@ -78,9 +78,9 @@ s.Z = a.memo(function (e) {
             (0, n.jsx)(r.Select, {
                 className: S.select,
                 optionClassName: S.selectPopout,
-                isSelected: A,
+                isSelected: g,
                 options: N,
-                select: g,
+                select: A,
                 renderOptionValue: C,
                 renderOptionLabel: m,
                 serialize: h,

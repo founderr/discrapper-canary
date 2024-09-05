@@ -76,17 +76,17 @@ function v(e) {
                 sourceType: _,
                 sourceDetails: E
             });
-            D(!0),
-                L(!1),
-                y(!0),
+            D(!0), L(!1), y(!0);
+            try {
                 await (0, m.Z)({
                     userId: t.id,
                     content: n,
-                    location: 'UserProfileReplyPopout',
+                    location: 'UserProfileReactReplyBar',
                     openChannel: !1,
                     whenReady: !1
-                }),
-                L(!0),
+                });
+            } catch (e) {}
+            L(!0),
                 setTimeout(() => {
                     y(!1);
                 }, T._);

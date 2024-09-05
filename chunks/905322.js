@@ -1,4 +1,4 @@
-i.d(n, {
+i.d(e, {
     j: function () {
         return a;
     }
@@ -7,17 +7,17 @@ var l = i(735250),
     t = i(470079),
     r = i(777207),
     s = i(393713);
-function a(e) {
-    let { title: n, subtitle: i, iconSrc: a, backgroundSrc: o, animatedBackgroundSrc: d, prefersReducedMotion: u = !0 } = e,
+function a(n) {
+    let { title: e, subtitle: i, iconSrc: a, backgroundSrc: d, animatedBackgroundSrc: o, prefersReducedMotion: u = !0 } = n,
         c = t.useMemo(() => {
-            let e = null != o ? o : a;
-            if (null != e) return { '--custom-background-url': 'url('.concat(e.toString(), ')') };
-        }, [o, a]),
+            let n = null != d ? d : a;
+            if (null != n) return { '--custom-background-url': 'url('.concat(n.toString(), ')') };
+        }, [d, a]),
         p = t.useMemo(() => {
-            if (null == o) return;
-            let e = { '--custom-background-static': 'url('.concat(o.toString()) };
-            return !u && null != d && (e['--custom-background-animated'] = 'url('.concat(d.toString(), ')')), e;
-        }, [d, o, u]);
+            if (null == d) return;
+            let n = { '--custom-background-static': 'url('.concat(d.toString()) };
+            return !u && null != o && (n['--custom-background-animated'] = 'url('.concat(o.toString(), ')')), n;
+        }, [o, d, u]);
     return (0, l.jsxs)('div', {
         className: s.wrapper,
         children: [
@@ -41,7 +41,7 @@ function a(e) {
                             (0, l.jsx)(r.x, {
                                 variant: 'heading-xl/bold',
                                 tag: 'div',
-                                children: n
+                                children: e
                             }),
                             null != i &&
                                 (0, l.jsxs)(r.x, {
@@ -52,7 +52,7 @@ function a(e) {
                     })
                 ]
             }),
-            null != o
+            null != d
                 ? (0, l.jsx)('div', {
                       className: s.image,
                       style: p

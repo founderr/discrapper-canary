@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return g;
+        return A;
     }
 });
 var n,
@@ -11,8 +11,8 @@ var n,
     l = t(470079),
     c = t(120356),
     d = t.n(c),
-    u = t(481060),
-    _ = t(987032),
+    _ = t(481060),
+    u = t(987032),
     E = t(600164),
     T = t(219929),
     S = t(46141),
@@ -20,7 +20,7 @@ var n,
     N = t(624138),
     m = t(689938),
     C = t(869121);
-class g extends (r = l.PureComponent) {
+class A extends (r = l.PureComponent) {
     get typeString() {
         let { paymentSource: e } = this.props;
         if (e instanceof S.qo) return T.ZP.Types.PAYPAL;
@@ -73,9 +73,9 @@ class g extends (r = l.PureComponent) {
                                   : e instanceof S.U4
                                     ? m.Z.Messages.PAYMENT_SOURCE_BANCONTACT
                                     : e instanceof S.jc
-                                      ? m.Z.Messages.PAYMENT_SOURCE_IDEAL_WITH_BANK.format({ bank: (0, _.YE)(e.bank) })
+                                      ? m.Z.Messages.PAYMENT_SOURCE_IDEAL_WITH_BANK.format({ bank: (0, u.YE)(e.bank) })
                                       : e instanceof S.D0
-                                        ? m.Z.Messages.PAYMENT_SOURCE_EPS_WITH_BANK.format({ bank: (0, _.Ul)(e.bank) })
+                                        ? m.Z.Messages.PAYMENT_SOURCE_EPS_WITH_BANK.format({ bank: (0, u.Ul)(e.bank) })
                                         : e instanceof S.u_
                                           ? m.Z.Messages.PAYMENT_SOURCE_CASH_APP_PAY
                                           : e instanceof S.$z
@@ -84,7 +84,7 @@ class g extends (r = l.PureComponent) {
     }
     renderDescription() {
         let { paymentSource: e, descriptionClassName: s } = this.props;
-        return (0, o.jsx)(u.Text, {
+        return (0, o.jsx)(_.Text, {
             className: d()(C.description, s),
             variant: 'text-md/semibold',
             children: this.getLabel(e)
@@ -164,7 +164,7 @@ class g extends (r = l.PureComponent) {
     showPaymentSourceIcon: !1,
     showLabels: !1
 }),
-    (a = 'defaultProps') in (n = g)
+    (a = 'defaultProps') in (n = A)
         ? Object.defineProperty(n, a, {
               value: i,
               enumerable: !0,

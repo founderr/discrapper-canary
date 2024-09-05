@@ -15,7 +15,7 @@ var a = n(735250),
     c = n(177862),
     d = n(981631),
     u = n(689938),
-    I = n(940021);
+    I = n(973903);
 function A(e) {
     let { guildId: t, messageId: l, transitionState: A, onClose: R } = e,
         [E, T] = o.useState([]),

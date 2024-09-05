@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(481060),
     c = t(816814),
     d = t(240872),
-    u = t(23645),
-    _ = t(712364),
+    _ = t(23645),
+    u = t(712364),
     E = t(279837),
     T = t(600164),
     S = t(144114),
@@ -21,8 +21,8 @@ var n = t(735250),
     N = t(607018),
     m = t(778764),
     C = t(314897),
-    g = t(325067),
-    A = t(594174),
+    A = t(325067),
+    g = t(594174),
     h = t(572004),
     O = t(287880),
     p = t(714565),
@@ -169,7 +169,7 @@ class v extends a.PureComponent {
                 })
             });
         if (s.length > 0) {
-            t = (0, n.jsx)(u.Z, {
+            t = (0, n.jsx)(_.Z, {
                 fileContents: this.getDownloadFileContents,
                 contentType: 'text/plain',
                 fileName: 'discord_backup_codes.txt',
@@ -338,7 +338,7 @@ class v extends a.PureComponent {
                 });
             }),
             b(this, 'generateBackupCodes', async () => {
-                let e = g.Z.getVerificationKey();
+                let e = A.Z.getVerificationKey();
                 await c.Z.confirmViewBackupCodes(e, !0);
             }),
             b(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
@@ -356,7 +356,7 @@ class v extends a.PureComponent {
             }),
             b(this, 'viewBackupCodes', (e) => {
                 (0, l.openModal)((s) =>
-                    (0, n.jsx)(_.Z, {
+                    (0, n.jsx)(u.Z, {
                         ...s,
                         handleSubmit: (e) => c.Z.confirmViewBackupCodes(e, !1).then(() => s.onClose()),
                         maxLength: 8,
@@ -413,10 +413,10 @@ class v extends a.PureComponent {
     }
 }
 function j(e) {
-    let s = (0, o.e7)([A.default], () => A.default.getCurrentUser());
+    let s = (0, o.e7)([g.default], () => g.default.getCurrentUser());
     r()(null != s, 'TwoFactorAuth: currentUser cannot be undefined');
-    let t = (0, o.cj)([g.Z, C.default], () => ({
-        togglingSMS: g.Z.togglingSMS,
+    let t = (0, o.cj)([A.Z, C.default], () => ({
+        togglingSMS: A.Z.togglingSMS,
         hasTOTPEnabled: C.default.hasTOTPEnabled()
     }));
     return (0, n.jsx)(v, {

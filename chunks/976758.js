@@ -12,8 +12,8 @@ var a = t(442837),
     l = t(313201),
     c = t(131951),
     d = t(36703),
-    u = t(689938),
-    _ = t(224499);
+    _ = t(689938),
+    u = t(224499);
 let E = (0, l.hQ)(),
     T = (0, l.hQ)();
 function S() {
@@ -30,8 +30,8 @@ function S() {
                     (0, n.jsx)(i.FormTitle, {
                         id: E,
                         tag: i.FormTitleTags.H5,
-                        className: _.marginBottom4,
-                        children: u.Z.Messages.FORM_LABEL_INPUT_VOLUME
+                        className: u.marginBottom4,
+                        children: _.Z.Messages.FORM_LABEL_INPUT_VOLUME
                     }),
                     (0, n.jsx)(i.Slider, {
                         initialValue: (0, d.P)(e),
@@ -46,8 +46,8 @@ function S() {
                     (0, n.jsx)(i.FormTitle, {
                         id: T,
                         tag: i.FormTitleTags.H5,
-                        className: _.marginBottom4,
-                        children: u.Z.Messages.FORM_LABEL_OUTPUT_VOLUME
+                        className: u.marginBottom4,
+                        children: _.Z.Messages.FORM_LABEL_OUTPUT_VOLUME
                     }),
                     (0, n.jsx)(i.Slider, {
                         initialValue: (0, d.P)(s),

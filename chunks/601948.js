@@ -12,8 +12,8 @@ var a = t(442837),
     l = t(502087),
     c = t(921801),
     d = t(594174),
-    u = t(726985),
-    _ = t(474936),
+    _ = t(726985),
+    u = t(474936),
     E = t(638152);
 let T = (e) => {
     let { isDevTools: s = !1 } = e,
@@ -29,13 +29,13 @@ let T = (e) => {
     return (0, n.jsxs)('div', {
         children: [
             (0, n.jsxs)(c.F, {
-                setting: u.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_PREMIUM_TYPE,
+                setting: _.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_PREMIUM_TYPE,
                 children: [
                     (0, n.jsx)(i.FormSection, {
                         title: 'Override Client-Side Premium Type',
                         tag: i.FormTitleTags.H3,
                         children: (0, n.jsx)(i.SingleSelect, {
-                            options: _.b6,
+                            options: u.b6,
                             value: S,
                             onChange: (e) => {
                                 (0, o.C)(e, t);
@@ -47,14 +47,14 @@ let T = (e) => {
                         look: i.Button.Looks.LINK,
                         style: { padding: '0' },
                         onClick: () => {
-                            (0, o.C)(_.F_, t);
+                            (0, o.C)(u.F_, t);
                         },
                         children: 'Reset premium type override'
                     })
                 ]
             }),
             (0, n.jsxs)(c.F, {
-                setting: u.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_ACCOUNT_CREATED_DATA,
+                setting: _.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE_ACCOUNT_CREATED_DATA,
                 children: [
                     (0, n.jsx)(i.FormSection, {
                         title: 'Override Client-Side Account Created At Date',

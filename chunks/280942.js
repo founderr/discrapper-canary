@@ -12,7 +12,7 @@ var a = t(481060),
     l = t(689938),
     c = t(641280);
 function d(e) {
-    let { guildBoostSlot: s, onClose: d, hasCancelableGuildBoostSlot: u, premiumSubscription: _, onSelect: E } = e,
+    let { guildBoostSlot: s, onClose: d, hasCancelableGuildBoostSlot: _, premiumSubscription: u, onSelect: E } = e,
         T = {
             transfer: {
                 label: null != s.premiumGuildSubscription ? l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_BUTTON : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SELECT_SERVER_BUTTON,
@@ -21,8 +21,8 @@ function d(e) {
             },
             cancel: {
                 label: l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SLOT_CANCEL_BUTTON,
-                subtext: u ? null : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_TOOLTIP,
-                disabled: !u
+                subtext: _ ? null : l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_TOOLTIP,
+                disabled: !_
             },
             uncancel: {
                 label: l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SLOT_UNCANCEL_BUTTON,
@@ -30,7 +30,7 @@ function d(e) {
                 disabled: !1
             }
         };
-    switch (_.status) {
+    switch (u.status) {
         case o.O0b.PAST_DUE:
             (T.cancel.disabled = !0), (T.cancel.subtext = l.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON_DISABLED_PAST_DUE_TOOLTIP), (T.uncancel.disabled = !0);
             break;
@@ -96,7 +96,7 @@ function d(e) {
                       disabled: T.cancel.disabled,
                       color: 'danger'
                   }),
-            _.isPausedOrPausePending
+            u.isPausedOrPausePending
                 ? (0, n.jsx)(a.MenuItem, {
                       id: 'manage-subscription',
                       label: l.Z.Messages.BILLING_MANAGE_SUBSCRIPTION,

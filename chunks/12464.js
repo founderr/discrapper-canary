@@ -25,7 +25,7 @@ a.Z = function (e) {
         [f, M] = i.useState({}),
         b = (0, c.useElements)(),
         { theme: O } = (0, A.useThemeContext)(),
-        g = i.useCallback(() => {
+        y = i.useCallback(() => {
             if (null != b)
                 switch (t) {
                     case 'cardNumber': {
@@ -47,7 +47,7 @@ a.Z = function (e) {
                     }
                 }
         }, [b, t]),
-        y = i.useCallback(
+        g = i.useCallback(
             (e) => {
                 !S && !e.empty && I(!0), null != n && n(e.complete), null != e.error && C(!1);
             },
@@ -66,7 +66,7 @@ a.Z = function (e) {
                         let e = b.getElement(c.CardNumberElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            u !== e.brand && h(e.brand), e.empty && S ? R(m.Z.Messages.CREDIT_CARD_ERROR_REQUIRED) : null != e.error ? R(m.Z.Messages.CREDIT_CARD_ERROR_NUMBER) : R(null), y(e);
+                            u !== e.brand && h(e.brand), e.empty && S ? R(m.Z.Messages.CREDIT_CARD_ERROR_REQUIRED) : null != e.error ? R(m.Z.Messages.CREDIT_CARD_ERROR_NUMBER) : R(null), g(e);
                         }),
                             e.on('focus', L),
                             e.on('blur', v);
@@ -76,7 +76,7 @@ a.Z = function (e) {
                         let e = b.getElement(c.CardExpiryElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            null != e.error || (e.empty && S) ? R(m.Z.Messages.CREDIT_CARD_ERROR_EXPIRATION) : R(null), y(e);
+                            null != e.error || (e.empty && S) ? R(m.Z.Messages.CREDIT_CARD_ERROR_EXPIRATION) : R(null), g(e);
                         }),
                             e.on('focus', L),
                             e.on('blur', v);
@@ -86,13 +86,13 @@ a.Z = function (e) {
                         let e = b.getElement(c.CardCvcElement);
                         if (null == e) return;
                         e.on('change', (e) => {
-                            null != e.error || (e.empty && S) ? R(m.Z.Messages.CREDIT_CARD_ERROR_SECURITY_CODE) : R(null), y(e);
+                            null != e.error || (e.empty && S) ? R(m.Z.Messages.CREDIT_CARD_ERROR_SECURITY_CODE) : R(null), g(e);
                         }),
                             e.on('focus', L),
                             e.on('blur', v);
                     }
                 }
-        }, [v, y, L, u, b, S, t]);
+        }, [v, g, L, u, b, S, t]);
     function x() {
         return d()(_.cardInput, {
             [_.cardInputError]: null !== P,
@@ -105,10 +105,10 @@ a.Z = function (e) {
             () => (
                 D(),
                 () => {
-                    g();
+                    y();
                 }
             ),
-            [D, g]
+            [D, y]
         ),
         i.useLayoutEffect(() => {
             let { current: e } = a;

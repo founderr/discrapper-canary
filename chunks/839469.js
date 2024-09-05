@@ -14,14 +14,14 @@ function l() {
         s = (0, r.Pt)(),
         t = n.useRef(new a.Z((0, r.ji)(s))),
         [l, c] = n.useState(!1),
-        [d, u] = n.useState(o.QF),
-        _ = n.useCallback(async (e) => {
-            u(await t.current.search(e.trim())), c(!0);
+        [d, _] = n.useState(o.QF),
+        u = n.useCallback(async (e) => {
+            _(await t.current.search(e.trim())), c(!0);
         }, []);
     return (
         n.useEffect(() => {
-            '' === e || e.length < 2 ? (u(o.QF), c(!1)) : _(e);
-        }, [e, _]),
+            '' === e || e.length < 2 ? (_(o.QF), c(!1)) : u(e);
+        }, [e, u]),
         {
             hasSearchResults: l,
             searchResults: d

@@ -81,7 +81,7 @@ function O(e) {
                       locationObject: v.location,
                       analyticsLocations: M,
                       componentId: w,
-                      commandOrigin: m.bB.CHAT
+                      commandOrigin: m.bB.ACTIVITY_INSTANCE_EMBED
                   })
                 : await (0, c.Z)({
                       applicationId: b.applicationId,
@@ -89,7 +89,7 @@ function O(e) {
                       locationObject: v.location,
                       analyticsLocations: M,
                       componentId: w,
-                      commandOrigin: m.bB.CHAT
+                      commandOrigin: m.bB.ACTIVITY_INSTANCE_EMBED
                   });
         },
         Y = F.disabled ? A.Z.Messages.EMBEDDED_ACTIVITIES_EMBED_ENDED : A.Z.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED;

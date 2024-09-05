@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return _;
+        return u;
     }
 });
 var n = t(735250);
@@ -12,9 +12,9 @@ var a = t(120356),
     l = t(993413),
     c = t(486324),
     d = t(689938),
-    u = t(949985);
-function _(e) {
-    let { showRemoveBannerButton: s, errors: t, onBannerChange: a, guildId: _, className: E, disabled: T = !1, showPremiumIcon: S = !0, isTryItOutFlow: I = !1, forcedDivider: N, withHighlight: m = !1 } = e,
+    _ = t(949985);
+function u(e) {
+    let { showRemoveBannerButton: s, errors: t, onBannerChange: a, guildId: u, className: E, disabled: T = !1, showPremiumIcon: S = !0, isTryItOutFlow: I = !1, forcedDivider: N, withHighlight: m = !1 } = e,
         C = m ? r.ShinyButton : r.Button;
     return (0, n.jsx)(l.Z, {
         className: E,
@@ -24,22 +24,22 @@ function _(e) {
         disabled: T,
         forcedDivider: N,
         children: (0, n.jsxs)('div', {
-            className: u.buttonsContainer,
+            className: _.buttonsContainer,
             children: [
                 (0, n.jsx)(C, {
-                    className: i()({ [u.buttonHighlighted]: m }),
+                    className: i()({ [_.buttonHighlighted]: m }),
                     size: r.Button.Sizes.SMALL,
-                    onClick: () => (0, o.$r)(c.pC.BANNER, _, I, void 0),
+                    onClick: () => (0, o.$r)(c.pC.BANNER, u, I, void 0),
                     children: d.Z.Messages.CHANGE_BANNER
                 }),
                 s &&
                     (0, n.jsx)(r.Button, {
-                        className: u.removeButton,
+                        className: _.removeButton,
                         color: r.Button.Colors.PRIMARY,
                         look: r.Button.Looks.LINK,
                         size: r.Button.Sizes.SMALL,
                         onClick: () => a(null),
-                        children: null != _ ? d.Z.Messages.USER_SETTINGS_RESET_BANNER : d.Z.Messages.USER_SETTINGS_REMOVE_BANNER
+                        children: null != u ? d.Z.Messages.USER_SETTINGS_RESET_BANNER : d.Z.Messages.USER_SETTINGS_REMOVE_BANNER
                     })
             ]
         })

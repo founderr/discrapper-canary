@@ -7,8 +7,8 @@ var n = t(735250),
     l = t(442837),
     c = t(481060),
     d = t(53281),
-    u = t(921813),
-    _ = t(594174),
+    _ = t(921813),
+    u = t(594174),
     E = t(572004),
     T = t(451593),
     S = t(477146),
@@ -16,7 +16,7 @@ var n = t(735250),
     N = t(792461),
     m = t(346537),
     C = t(830318);
-let g = (e) => {
+let A = (e) => {
     let [s, t] = e.split(','),
         n = atob(t),
         a = s.split(';')[0],
@@ -28,7 +28,7 @@ let g = (e) => {
 s.Z = (e) => {
     let { effect: s, back: t } = e,
         { upsertConfig: i } = (0, T.E)(),
-        A = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
+        g = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
         [h, O] = a.useState(!0),
         p = a.useRef(null),
         [R, x] = a.useState(!1),
@@ -41,7 +41,7 @@ s.Z = (e) => {
         e.length > 0 &&
             b(
                 [...e].map((e) => {
-                    let s = g(e.base64),
+                    let s = A(e.base64),
                         t = URL.createObjectURL(s);
                     return (e.src = t), e;
                 })
@@ -54,7 +54,7 @@ s.Z = (e) => {
             config: { effects: L }
         });
     }, [L, Z]),
-    null == A)
+    null == g)
         ? (0, n.jsx)('div', {})
         : (0, n.jsxs)('div', {
               className: N.root,
@@ -274,8 +274,8 @@ s.Z = (e) => {
                                           (0, n.jsxs)('div', {
                                               className: r()(N.userProfilePreview, N.preview),
                                               children: [
-                                                  (0, n.jsx)(u.Z, {
-                                                      user: A,
+                                                  (0, n.jsx)(_.Z, {
+                                                      user: g,
                                                       pendingAvatar: void 0,
                                                       pendingProfileEffectId: null,
                                                       canUsePremiumCustomization: !0,

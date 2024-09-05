@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return _;
+        return u;
     }
 }),
     t(390547),
@@ -13,10 +13,10 @@ var n = t(735250),
     l = t(481060),
     c = t(522967);
 let d = Object.keys(l.Button.Colors).filter((e) => 'CUSTOM' !== e),
-    u = Object.keys(l.Button.Looks).filter((e) => 'BLANK' !== e);
-function _() {
+    _ = Object.keys(l.Button.Looks).filter((e) => 'BLANK' !== e);
+function u() {
     let e = d.flatMap((e) => [
-        ...u.map((s) =>
+        ..._.map((s) =>
             (0, n.jsxs)(
                 l.Button,
                 {
@@ -77,7 +77,7 @@ function T() {
     let [e, s] = a.useState(null),
         [t, i] = a.useState(null),
         [r, d] = a.useState([]),
-        [u, _] = a.useState([]),
+        [_, u] = a.useState([]),
         [E, T] = a.useState([]);
     return (0, n.jsxs)('div', {
         className: c.searchableSelectExamples,
@@ -117,8 +117,8 @@ function T() {
             (0, n.jsx)(l.SearchableSelect, {
                 placeholder: 'Multi select (custom pills)',
                 multi: !0,
-                value: u,
-                onChange: (e) => _(e),
+                value: _,
+                onChange: (e) => u(e),
                 options: o.G,
                 hidePills: !0,
                 customPillContainerClassName: c.customPillContainer,

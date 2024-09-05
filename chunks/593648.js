@@ -13,8 +13,8 @@ var n = t(735250),
     l = t.n(o),
     c = t(442837),
     d = t(481060),
-    u = t(668781),
-    _ = t(292556),
+    _ = t(668781),
+    u = t(292556),
     E = t(92114),
     T = t(419363),
     S = t(818083),
@@ -22,8 +22,8 @@ var n = t(735250),
     N = t(487419),
     m = t(378364),
     C = t(197344),
-    g = t(734934),
-    A = t(223683),
+    A = t(734934),
+    g = t(223683),
     h = t(312400),
     O = t(115345),
     p = t(392888),
@@ -97,7 +97,7 @@ function W(e) {
         x.Z.trackExposure({ location: '791c79_3' });
     }, []);
     let c = a.useRef(),
-        u = (0, g.p)(),
+        _ = (0, A.p)(),
         E = a.useCallback((e, s) => {
             s.stopPropagation(), s.preventDefault(), null != c.current && c.current.stop(), (c.current = v.GN(e));
         }, []),
@@ -110,7 +110,7 @@ function W(e) {
                             toggled_on: t,
                             sound_name: e
                         }),
-                    _.default.setDisabledSounds(n);
+                    u.default.setDisabledSounds(n);
             },
             [s]
         );
@@ -122,7 +122,7 @@ function W(e) {
         {
             label: V.Z.Messages.SOUND_MESSAGE,
             sound: 'message1',
-            focusModeDisabled: u
+            focusModeDisabled: _
         },
         {
             label: V.Z.Messages.SOUND_DEAFEN,
@@ -238,13 +238,13 @@ function W(e) {
                 (0, n.jsx)(d.FormSwitch, {
                     note: V.Z.Messages.USER_SETTINGS_NOTIFICATIONS_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL_NOTE,
                     value: i,
-                    onChange: _.default.setNotifyMessagesInSelectedChannel,
+                    onChange: u.default.setNotifyMessagesInSelectedChannel,
                     children: V.Z.Messages.USER_SETTINGS_NOTIFICATIONS_NOTIFY_MESSAGES_IN_SELECTED_CHANNEL_LABEL
                 }),
                 (0, n.jsx)(d.FormSwitch, {
                     note: V.Z.Messages.SOUND_DISABLE_ALL_NOTE,
                     value: t,
-                    onChange: _.default.toggleDisableAllSounds,
+                    onChange: u.default.toggleDisableAllSounds,
                     children: V.Z.Messages.SOUND_DISABLE_ALL
                 }),
                 S.map((e) => {
@@ -367,17 +367,17 @@ class z extends a.PureComponent {
             (t = 'UserSettingsModal'),
                 L.Z.requestPermission((e) => {
                     let s = e ? F.$Ab.ENABLED : F.$Ab.BLOCKED;
-                    _.default.setPermissionsState(s, t);
+                    u.default.setPermissionsState(s, t);
                 });
-        } else _.default.setDesktopType(s);
+        } else u.default.setDesktopType(s);
     }
     handleTTSChange(e) {
         let s = e.value;
-        _.default.setTTSType(s);
+        u.default.setTTSType(s);
     }
     render() {
-        let { desktopType: e, afkTimeout: s, disableUnreadBadge: t, taskbarFlash: a, disabledSounds: i, disableAllSounds: o, notifyMessagesInSelectedChannel: c, focusMode: u } = this.props,
-            _ = b.isPlatformEmbedded && (0, b.isWindows)(),
+        let { desktopType: e, afkTimeout: s, disableUnreadBadge: t, taskbarFlash: a, disabledSounds: i, disableAllSounds: o, notifyMessagesInSelectedChannel: c, focusMode: _ } = this.props,
+            u = b.isPlatformEmbedded && (0, b.isWindows)(),
             E = l()
                 .range(1, 11)
                 .map((e) => ({
@@ -392,11 +392,11 @@ class z extends a.PureComponent {
                     setting: G.s6.NOTIFICATIONS_ENABLE_DESKTOP,
                     children: (0, n.jsx)(d.FormSwitch, {
                         className: w.marginBottom20,
-                        value: e !== F.qrD.NEVER && !u,
+                        value: e !== F.qrD.NEVER && !_,
                         onChange: this.handleDesktopChange,
                         note: V.Z.Messages.DESKTOP_NOTIFICATIONS_ENABLE_BODY,
-                        disabled: u,
-                        tooltipNote: u ? V.Z.Messages.QUIET_MODE_DISABLED_BY : void 0,
+                        disabled: _,
+                        tooltipNote: _ ? V.Z.Messages.QUIET_MODE_DISABLED_BY : void 0,
                         children: V.Z.Messages.DESKTOP_NOTIFICATIONS_ENABLE
                     })
                 }),
@@ -404,7 +404,7 @@ class z extends a.PureComponent {
                 (0, n.jsx)(R.F, {
                     setting: G.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, n.jsx)(d.FormSwitch, {
-                        className: _ ? w.marginBottom20 : w.marginBottom40,
+                        className: u ? w.marginBottom20 : w.marginBottom40,
                         value: !t,
                         note: V.Z.Messages.USER_SETTINGS_NOTIFICATIONS_SHOW_BADGE_BODY,
                         onChange: this.handleToggleShowUnreadBadge,
@@ -457,10 +457,10 @@ class z extends a.PureComponent {
     constructor(...e) {
         super(...e),
             k(this, 'handleToggleShowUnreadBadge', () => {
-                _.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
+                u.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
             }),
             k(this, 'handleToggleShowFlash', () => {
-                _.default.setTaskbarFlash(!this.props.taskbarFlash);
+                u.default.setTaskbarFlash(!this.props.taskbarFlash);
             }),
             k(this, 'renderTTS', () => {
                 if (!T.Zh) return null;
@@ -581,7 +581,7 @@ function q() {
                                       (0, n.jsx)(R.F, {
                                           setting: G.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
                                           children: (0, n.jsx)(d.Button, {
-                                              onClick: A.KP,
+                                              onClick: g.KP,
                                               children: 'Restore most recent snapshot'
                                           })
                                       }),
@@ -617,10 +617,10 @@ function q() {
 }
 async function J(e) {
     e(!0);
-    let s = await (0, A.Tn)();
+    let s = await (0, g.Tn)();
     0 === s.length
         ? await (0, O.oL)()
-        : u.Z.show({
+        : _.Z.show({
               title: V.Z.Messages.CONFIRM,
               body: V.Z.Messages.NOTIF_MIGRATION_SETTINGS_CONFIRM_BODY.format({ date: new Date(s[s.length - 1].recorded_at) }),
               cancelText: V.Z.Messages.CANCEL,
@@ -630,7 +630,7 @@ async function J(e) {
         e(!1);
 }
 function $(e) {
-    let s = (0, g.p)();
+    let s = (0, A.p)();
     return (0, n.jsx)(z, {
         ...e,
         focusMode: s

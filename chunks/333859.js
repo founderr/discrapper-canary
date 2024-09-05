@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(100527),
     c = t(906732),
     d = t(94795),
-    u = t(327943),
-    _ = t(539873),
+    _ = t(327943),
+    u = t(539873),
     E = t(311476),
     T = t(197115),
     S = t(626135),
@@ -20,13 +20,13 @@ var n = t(735250),
     N = t(474936),
     m = t(689938),
     C = t(115907),
-    g = t(224499);
-let A = () => {
+    A = t(224499);
+let g = () => {
         (0, d.nJ)(), (0, o.xf)();
     },
     h = () => {
         let { analyticsLocations: e } = (0, c.ZP)(l.Z.USER_SETTINGS),
-            s = (0, i.e7)([u.Z], () => u.Z.isUpsellPreview),
+            s = (0, i.e7)([_.Z], () => _.Z.isUpsellPreview),
             { enabled: t } = E.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceInAppIcon' },
                 {
@@ -45,7 +45,7 @@ let A = () => {
             (0, n.jsxs)('div', {
                 className: C.selectionGroup,
                 children: [
-                    (0, n.jsx)(_.Z, {
+                    (0, n.jsx)(u.Z, {
                         disabled: s && !t,
                         renderCTAButtons: () =>
                             (0, n.jsxs)('div', {
@@ -53,7 +53,7 @@ let A = () => {
                                 children: [
                                     (0, n.jsx)(r.Button, {
                                         color: !t && s ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
-                                        onClick: () => A(),
+                                        onClick: () => g(),
                                         children: t ? m.Z.Messages.PREVIEW : m.Z.Messages.APP_ICON_PREVIEW_TITLE
                                     }),
                                     s
@@ -66,7 +66,7 @@ let A = () => {
                                 ]
                             })
                     }),
-                    (0, n.jsx)(r.FormDivider, { className: g.marginTop20 })
+                    (0, n.jsx)(r.FormDivider, { className: A.marginTop20 })
                 ]
             })
         );

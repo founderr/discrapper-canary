@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(906732),
     c = t(856768),
     d = t(993413),
-    u = t(921801),
-    _ = t(208049),
+    _ = t(921801),
+    u = t(208049),
     E = t(763296),
     T = t(242291),
     S = t(893663),
@@ -21,8 +21,8 @@ var n = t(735250),
     N = t(63063),
     m = t(581883),
     C = t(918257),
-    g = t(726985),
-    A = t(981631),
+    A = t(726985),
+    g = t(981631),
     h = t(710111),
     O = t(689938),
     p = t(484090),
@@ -46,7 +46,7 @@ function f() {
         P && (0, T.tt)({ location: e });
     }, [P, e]),
         a.useEffect(() => {
-            (0, _.w)();
+            (0, u.w)();
         }, []);
     let L = a.useCallback((e, s) => {
         let { inDropdown: t } = s;
@@ -58,12 +58,12 @@ function f() {
         titleClassName: R.__invalid_marginBottom16,
         title: O.Z.Messages.SOUNDBOARD,
         children: [
-            (0, n.jsx)(u.F, {
-                setting: g.s6.VOICE_AND_VIDEO_SOUNDBOARD,
+            (0, n.jsx)(_.F, {
+                setting: A.s6.VOICE_AND_VIDEO_SOUNDBOARD,
                 children: (0, n.jsx)(C.Z, {})
             }),
-            (0, n.jsxs)(u.F, {
-                setting: g.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
+            (0, n.jsxs)(_.F, {
+                setting: A.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                 children: [
                     (0, n.jsx)(r.FormDivider, { className: p.callSoundsDivider }),
                     (0, n.jsx)(r.Heading, {
@@ -75,7 +75,7 @@ function f() {
                     (0, n.jsx)(r.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        children: O.Z.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({ helpdeskArticle: N.Z.getArticleURL(A.BhN.SOUNDBOARD) })
+                        children: O.Z.Messages.CALL_SOUNDS_SETTINGS_DESCRIPTION_2.format({ helpdeskArticle: N.Z.getArticleURL(g.BhN.SOUNDBOARD) })
                     }),
                     (0, n.jsx)(c.Z, {
                         guildId: s,

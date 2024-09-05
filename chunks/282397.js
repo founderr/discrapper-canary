@@ -112,15 +112,15 @@ class R extends (a = u.ZP.Store) {
         },
         INTERACTION_FAILURE: function (e) {
             var t;
-            let { nonce: n, errorCode: r, errorMessage: i } = e;
+            let { nonce: n, errorCode: r, errorMessage: i, status: a, reasonCode: s } = e;
             if (null == n) return !1;
-            let a = T[n];
-            if (null == a) return !1;
-            null === (t = a.onFailure) || void 0 === t || t.call(a, r, i),
-                a.data.interactionType === _.B8.APPLICATION_COMMAND
+            let o = T[n];
+            if (null == o) return !1;
+            null === (t = o.onFailure) || void 0 === t || t.call(o, r, i, a, s),
+                o.data.interactionType === _.B8.APPLICATION_COMMAND
                     ? O(n)
                     : (T[n] = {
-                          ...a,
+                          ...o,
                           state: p.F.FAILED,
                           errorCode: r,
                           errorMessage: i

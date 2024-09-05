@@ -1,6 +1,6 @@
 l.d(n, {
     Z: function () {
-        return _;
+        return h;
     }
 });
 var t = l(735250);
@@ -37,23 +37,23 @@ function v(e) {
           })
         : null;
 }
-function _(e) {
+function h(e) {
     let n;
-    let { label: l, style: r, disabled: m, emoji: N, url: _, skuId: h } = e,
+    let { label: l, style: r, disabled: m, emoji: N, url: h, skuId: _ } = e,
         { executeStateUpdate: x, visualState: T, isDisabled: I } = (0, f.Ee)(e),
-        g = (0, d.I)(h),
-        S = null != h && r === c.ZJ.PREMIUM,
+        g = (0, d.I)(_),
+        S = null != _ && r === c.ZJ.PREMIUM,
         O = S && (null == g ? void 0 : g.disabled),
         j = S ? (null == g ? void 0 : g.label) : l,
         Z = null != N,
         R = null != j && j.length > 0,
-        M = r === c.ZJ.LINK && null != _ && _.length > 0,
+        M = r === c.ZJ.LINK && null != h && h.length > 0,
         b = T === E.gH.LOADING || (S && null == g);
     return (
         (n = M
             ? () => {
                   (0, p.q)({
-                      href: null != _ ? _ : '',
+                      href: null != h ? h : '',
                       shouldConfirm: !0
                   });
               }
@@ -84,7 +84,7 @@ function _(e) {
                     (0, u.vq)(e, (e) =>
                         (0, t.jsx)(v, {
                             ...e,
-                            url: _
+                            url: h
                         })
                     );
             },

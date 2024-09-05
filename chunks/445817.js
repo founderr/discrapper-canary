@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return g;
+        return A;
     }
 }),
     t(47120);
@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(2052),
     c = t(932724),
     d = t(716161),
-    u = t(672339),
-    _ = t(747545),
+    _ = t(672339),
+    u = t(747545),
     E = t(131951),
     T = t(594174),
     S = t(981631),
@@ -21,12 +21,12 @@ var n = t(735250),
     N = t(133953);
 let m = 387,
     C = 218;
-function g(e) {
+function A(e) {
     let { previewEnabled: s, onEnablePreview: t } = e,
-        g = E.Z.getCameraComponent(),
-        [A, h] = a.useState((0, c.P)(T.default.getCurrentUser())),
+        A = E.Z.getCameraComponent(),
+        [g, h] = a.useState((0, c.P)(T.default.getCurrentUser())),
         O = a.useRef(!1),
-        p = a.useRef(A),
+        p = a.useRef(g),
         R = (0, l.O)(),
         x = (0, i.e7)([E.Z], () => Object.values(E.Z.getVideoDevices()).length > 0);
     return (
@@ -36,10 +36,10 @@ function g(e) {
             },
             []
         ),
-        (0, n.jsx)(_.Z, {
-            selectedBackgroundOption: A,
+        (0, n.jsx)(u.Z, {
+            selectedBackgroundOption: g,
             onSelectBackgroundOption: (e) => {
-                (O.current = !0), (p.current = e), h(e), (0, u.wG)(e, { location: R.location }).catch(S.dG4);
+                (O.current = !0), (p.current = e), h(e), (0, _.wG)(e, { location: R.location }).catch(S.dG4);
             },
             renderCamera: (e) =>
                 s
@@ -48,13 +48,13 @@ function g(e) {
                           children: (0, n.jsxs)('div', {
                               className: N.camera,
                               children: [
-                                  (0, n.jsx)(g, {
+                                  (0, n.jsx)(A, {
                                       deviceId: e,
                                       width: m,
                                       height: C,
                                       disabled: !s
                                   }),
-                                  (0, n.jsx)(_.S, {})
+                                  (0, n.jsx)(u.S, {})
                               ]
                           })
                       })

@@ -13,13 +13,13 @@ var n = t(735250),
     l = t(112831),
     c = t(25990),
     d = t(155433),
-    u = t(981631),
-    _ = t(689938),
+    _ = t(981631),
+    u = t(689938),
     E = t(312254);
 function T(e) {
     var s, t, T, S;
-    let { transitionState: I, onSuccess: N, onClose: m, requirementsUpdated: C, noSkip: g = !1 } = e,
-        [A, h] = a.useState(''),
+    let { transitionState: I, onSuccess: N, onClose: m, requirementsUpdated: C, noSkip: A = !1 } = e,
+        [g, h] = a.useState(''),
         [O, p] = a.useState(''),
         [R, x] = a.useState(''),
         [f, M] = a.useState(null),
@@ -30,9 +30,9 @@ function T(e) {
     async function v(e) {
         e.preventDefault(), (0, o.b9)();
         let s = !1;
-        if (('' === O ? (M(_.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), (s = !0)) : M(null), O !== R ? (P(_.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), (s = !0)) : P(null), s)) return;
+        if (('' === O ? (M(u.Z.Messages.PASSWORD_REQUIREMENTS_EMPTY), (s = !0)) : M(null), O !== R ? (P(u.Z.Messages.FORM_LABEL_NEW_PASSWORD_MISMATCH), (s = !0)) : P(null), s)) return;
         let t = await (0, o.Mn)({
-            password: A,
+            password: g,
             newPassword: O
         });
         if (null == t ? void 0 : t.ok) N();
@@ -59,15 +59,15 @@ function T(e) {
                             color: l.Z.Colors.HEADER_PRIMARY,
                             size: l.Z.Sizes.SIZE_24,
                             className: E.title,
-                            children: _.Z.Messages.UPDATE_PASSWORD
+                            children: u.Z.Messages.UPDATE_PASSWORD
                         }),
                         (0, n.jsx)(r.Text, {
                             color: 'header-secondary',
                             variant: 'text-md/normal',
                             className: E.subtitle,
-                            children: C ? _.Z.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : _.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
+                            children: C ? u.Z.Messages.FORCE_PASSWORD_UPDATE_DESCRIPTION : u.Z.Messages.USER_SETTINGS_ACCOUNT_CHANGE_PASSWORD_PROMPT_DESKTOP
                         }),
-                        !0 !== g &&
+                        !0 !== A &&
                             (0, n.jsx)(r.ModalCloseButton, {
                                 onClick: m,
                                 className: E.modalCloseButton
@@ -81,18 +81,18 @@ function T(e) {
                             className: E.content,
                             children: [
                                 (0, n.jsx)(r.FormItem, {
-                                    title: _.Z.Messages.FORM_LABEL_CURRENT_PASSWORD,
+                                    title: u.Z.Messages.FORM_LABEL_CURRENT_PASSWORD,
                                     error: null == L ? void 0 : null === (s = L.password) || void 0 === s ? void 0 : s[0],
                                     children: (0, n.jsx)(r.TextInput, {
                                         type: 'password',
-                                        value: A,
+                                        value: g,
                                         onChange: h,
                                         inputRef: Z
                                     })
                                 }),
                                 (0, n.jsx)(r.FormItem, {
                                     className: E.newPassword,
-                                    title: _.Z.Messages.FORM_LABEL_NEW_PASSWORD,
+                                    title: u.Z.Messages.FORM_LABEL_NEW_PASSWORD,
                                     error: null !== (S = null !== (T = null == L ? void 0 : null === (t = L.new_password) || void 0 === t ? void 0 : t[0]) && void 0 !== T ? T : f) && void 0 !== S ? S : void 0,
                                     children: (0, n.jsx)(r.TextInput, {
                                         type: 'password',
@@ -102,7 +102,7 @@ function T(e) {
                                 }),
                                 (0, n.jsx)(r.FormItem, {
                                     className: E.newPassword,
-                                    title: _.Z.Messages.FORM_LABEL_CONFIRM_NEW_PASSWORD,
+                                    title: u.Z.Messages.FORM_LABEL_CONFIRM_NEW_PASSWORD,
                                     error: null != D ? D : void 0,
                                     children: (0, n.jsx)(r.TextInput, {
                                         type: 'password',
@@ -118,16 +118,16 @@ function T(e) {
                                     type: 'submit',
                                     color: r.Button.Colors.BRAND,
                                     size: r.Button.Sizes.MEDIUM,
-                                    submitting: b === u.QZA.SUBMITTING,
-                                    children: _.Z.Messages.DONE
+                                    submitting: b === _.QZA.SUBMITTING,
+                                    children: u.Z.Messages.DONE
                                 }),
-                                !0 !== g &&
+                                !0 !== A &&
                                     (0, n.jsx)(r.Button, {
                                         className: E.cancel,
                                         look: r.Button.Looks.LINK,
                                         color: r.Button.Colors.PRIMARY,
                                         onClick: m,
-                                        children: _.Z.Messages.CANCEL
+                                        children: u.Z.Messages.CANCEL
                                     })
                             ]
                         })

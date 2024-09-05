@@ -6,8 +6,8 @@ var n = t(735250),
     l = t(100527),
     c = t(906732),
     d = t(626135),
-    u = t(335131),
-    _ = t(410154),
+    _ = t(335131),
+    u = t(410154),
     E = t(302800),
     T = t(981631),
     S = t(474936),
@@ -15,7 +15,7 @@ var n = t(735250),
     N = t(853601),
     m = t(786792),
     C = t(161594);
-let g = (e) => {
+let A = (e) => {
     var s, t, a, i, l;
     let { displayOptions: c, marketingVariant: d } = e;
     return (0, n.jsxs)(n.Fragment, {
@@ -27,7 +27,7 @@ let g = (e) => {
                 children: (0, n.jsx)('img', {
                     src: null !== (a = null == c ? void 0 : c.artSrc) && void 0 !== a ? a : C,
                     className: r()(N.art, {
-                        [N.tideArt]: null != d && d === _.C5.TIDE,
+                        [N.tideArt]: null != d && d === u.C5.TIDE,
                         [N.defaultArt]: (null == c ? void 0 : c.artSrc) == null
                     }),
                     alt: ''
@@ -56,7 +56,7 @@ s.Z = () => {
     var e;
     let { analyticsLocations: s } = (0, c.ZP)(l.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL),
         t = a.useRef(null),
-        i = (0, _.ZP)('CollectiblesUpsellBanner'),
+        i = (0, u.ZP)('CollectiblesUpsellBanner'),
         C = E.GX[i];
     return (
         a.useEffect(() => {
@@ -68,18 +68,18 @@ s.Z = () => {
         (0, n.jsxs)('div', {
             ref: t,
             className: r()(N.container, {
-                [N.robertContainer]: i === _.C5.ROBERT,
-                [N.stormContainer]: i === _.C5.STORM
+                [N.robertContainer]: i === u.C5.ROBERT,
+                [N.stormContainer]: i === u.C5.STORM
             }),
             style: { backgroundImage: 'url('.concat(null !== (e = null == C ? void 0 : C.backgroundSrc) && void 0 !== e ? e : m, ')') },
             children: [
-                (0, n.jsx)(g, {
+                (0, n.jsx)(A, {
                     displayOptions: C,
                     marketingVariant: i
                 }),
                 (0, n.jsx)(o.Button, {
                     onClick: () => {
-                        (0, u.mK)({
+                        (0, _.mK)({
                             analyticsLocations: s,
                             analyticsSource: l.Z.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
                         });

@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(768762),
     c = t(823379),
     d = t(882029),
-    u = t(955204),
-    _ = t(248998),
+    _ = t(955204),
+    u = t(248998),
     E = t(689938),
     T = t(914480);
 function S(e) {
@@ -21,7 +21,7 @@ function S(e) {
         S = a.useMemo(() => Object.values(t).sort((e, s) => s.dateUnlocked - e.dateUnlocked), [t]),
         I = a.useMemo(
             () =>
-                Object.values(u.LG)
+                Object.values(_.LG)
                     .filter(c.lm)
                     .filter((e) => null == t[e.id])
                     .sort((e, s) => e.rarity - s.rarity),
@@ -83,7 +83,7 @@ function S(e) {
                         children: S.map((e) => {
                             let { achievementId: s, dateUnlocked: t } = e;
                             return (0, n.jsx)(
-                                _.Z,
+                                u.Z,
                                 {
                                     achievementId: s,
                                     dateUnlocked: t
@@ -107,7 +107,7 @@ function S(e) {
                         }),
                         (0, n.jsx)('div', {
                             className: T.achievementGrid,
-                            children: I.map((e) => (0, n.jsx)(_.Z, { achievementId: e.id }, e.id))
+                            children: I.map((e) => (0, n.jsx)(u.Z, { achievementId: e.id }, e.id))
                         })
                     ]
                 }),

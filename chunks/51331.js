@@ -11,7 +11,7 @@ var n = t(735250),
     l = t(838436),
     c = t(415292);
 function d(e) {
-    let { value: s, onChange: t, className: i, note: d, title: u, disabled: _ } = e,
+    let { value: s, onChange: t, className: i, note: d, title: _, disabled: u } = e,
         E = a.useRef(null),
         T = a.useRef(null),
         S = a.useId(),
@@ -21,10 +21,10 @@ function d(e) {
             onChange: t,
             focusProps: { enabled: !1 },
             innerRef: E,
-            disabled: _
+            disabled: u
         });
     return (0, n.jsx)('div', {
-        className: r()(c.container, i, { [c.disabled]: _ }),
+        className: r()(c.container, i, { [c.disabled]: u }),
         children: (0, n.jsx)(o.FocusRing, {
             within: !0,
             offset: -4,
@@ -35,10 +35,10 @@ function d(e) {
                     (0, n.jsx)('div', {
                         className: c.text,
                         children: (0, n.jsx)(l.H, {
-                            header: u,
+                            header: _,
                             description: d,
                             relatedId: S,
-                            disabled: _
+                            disabled: u
                         })
                     }),
                     (0, n.jsx)('div', {

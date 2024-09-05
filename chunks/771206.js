@@ -4,17 +4,17 @@ n.d(t, {
     }
 }),
     n(47120);
-var r = n(470079),
-    i = n(122289),
+var i = n(470079),
+    r = n(122289),
     u = n(622999);
 function l() {
-    let [e, t] = r.useState(null);
+    let [e, t] = i.useState(null);
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             (0, u.d2)()
                 .then((e) => t(e))
                 .catch((e) => {
-                    (0, i.q2)(e);
+                    (0, r.q2)(e);
                 });
         }, []),
         e

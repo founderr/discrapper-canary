@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return u;
+        return _;
     }
 });
 var n = t(735250);
@@ -12,7 +12,7 @@ var a = t(481060),
     l = t(981631),
     c = t(196009);
 let d = { offset: { top: -8 } };
-function u() {
+function _() {
     return (0, n.jsxs)('div', {
         className: c.socialLinks,
         children: [

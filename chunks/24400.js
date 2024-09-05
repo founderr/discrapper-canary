@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(51331),
     c = t(526761),
     d = t(726985),
-    u = t(981631),
-    _ = t(689938);
+    _ = t(981631),
+    u = t(689938);
 function E() {
     let e = (0, a.c)();
     return (0, n.jsx)(o.U, {
@@ -21,8 +21,8 @@ function E() {
         children: (0, n.jsx)(l.Z, {
             value: e,
             onChange: i.Q,
-            title: _.Z.Messages.SAFETY_ALERTS_SETTING_TITLE,
-            note: _.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({ learnMoreLink: r.Z.getArticleURL(u.BhN.SAFETY_ALERTS) })
+            title: u.Z.Messages.SAFETY_ALERTS_SETTING_TITLE,
+            note: u.Z.Messages.SAFETY_ALERTS_SETTING_DESCRIPTION.format({ learnMoreLink: r.Z.getArticleURL(_.BhN.SAFETY_ALERTS) })
         })
     });
 }

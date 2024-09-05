@@ -34,31 +34,31 @@ function C(e) {
 }
 function v(e) {
     let { selectActionComponent: n, queryOptions: l, renderIcon: t, renderOptionLabel: r, defaultValues: s } = e,
-        { type: v, placeholder: _, maxValues: h, disabled: x } = n,
+        { type: v, placeholder: h, maxValues: _, disabled: x } = n,
         [T, I] = a.useState(!1),
         [g, S] = a.useState(!1),
         [O, j] = a.useState(new Map(null == s ? void 0 : s.map((e) => [e.value, e]))),
         [Z, R] = a.useState(new Set(O.keys())),
         [M, b] = a.useState(() => (null != s ? s : []).map((e) => e.value)),
-        [A, P] = a.useState(0);
+        [P, A] = a.useState(0);
     a.useEffect(() => {
         let e = (null != s ? s : []).map((e) => e.value);
         if (e.every((e) => M.includes(e)) && M.every((n) => e.includes(n))) return;
         b(e);
         let n = new Map(null == s ? void 0 : s.map((e) => [e.value, e]));
-        j(n), R(new Set(n.keys())), P((e) => e + 1);
+        j(n), R(new Set(n.keys())), A((e) => e + 1);
     }, [s, M]);
     let {
             state: L,
             executeStateUpdate: y,
-            visualState: k,
-            isDisabled: U,
+            visualState: U,
+            isDisabled: k,
             error: D
         } = (0, m.Ee)(n, {
             type: v,
             selectedOptions: Array.from(O.values())
         }),
-        G = k === p.gH.LOADING;
+        G = U === p.gH.LOADING;
     a.useEffect(() => {
         if ((null == L ? void 0 : L.type) === c.re.USER_SELECT || (null == L ? void 0 : L.type) === c.re.ROLE_SELECT || (null == L ? void 0 : L.type) === c.re.MENTIONABLE_SELECT || (null == L ? void 0 : L.type) === c.re.CHANNEL_SELECT) {
             let e = new Map(L.selectedOptions.map((e) => [e.value, e]));
@@ -76,13 +76,13 @@ function v(e) {
     }, [T, g, Z, O, w]);
     let Y = 0 === O.size || T,
         B = {
-            isDisabled: x || U,
+            isDisabled: x || k,
             wrapperClassName: E.select,
             options: (e) =>
                 new Promise((n) => {
                     n(l(e));
                 }),
-            placeholder: Y ? (null != _ ? _ : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
+            placeholder: Y ? (null != h ? h : f.Z.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER) : void 0,
             onClose: () => I(!1),
             onOpen: () => I(!0),
             onBlur: () => S(!1),
@@ -106,7 +106,7 @@ function v(e) {
             (0, i.jsxs)('div', {
                 className: E.container,
                 children: [
-                    h > 1
+                    _ > 1
                         ? (0, i.jsx)(
                               o.SearchableSelect,
                               {
@@ -125,7 +125,7 @@ function v(e) {
                                   centerCaret: !0,
                                   ...B
                               },
-                              A
+                              P
                           )
                         : (0, i.jsx)(
                               o.SearchableSelect,
@@ -137,7 +137,7 @@ function v(e) {
                                   centerCaret: !0,
                                   ...B
                               },
-                              A
+                              P
                           ),
                     G
                         ? (0, i.jsx)('div', {

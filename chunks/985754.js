@@ -48,57 +48,57 @@ let C = new Set([i.pK.ARS, i.pK.CLP, i.pK.COP]),
     },
     c = (e) => {
         let { localizedPricingPromo: n, subscription: a, forceSingleLine: t = !1, userLocale: d } = e,
-            { countryCode: c, amount: N, currency: p, paymentSourceTypes: y } = n,
-            R = 0 !== y.length,
+            { countryCode: c, amount: N, currency: R, paymentSourceTypes: p } = n,
+            y = 0 !== p.length,
             O = P(c),
-            f = (0, s.T4)(N, p, {
+            f = (0, s.T4)(N, R, {
                 style: 'currency',
-                currency: p,
+                currency: R,
                 currencyDisplay: 'symbol',
                 localeOverride: O
             }),
             g = _.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY.format({
                 helpCenterLink: o.Z.getArticleURL(l.BhN.LOCALIZED_PRICING),
-                currencyISOCode: p.toUpperCase(),
+                currencyISOCode: R.toUpperCase(),
                 localizedPriceWithCurrencySymbol: f
             });
         if (
-            (A.has(p) &&
+            (A.has(R) &&
                 (g = _.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_EXISTING_CURRENCY.format({
                     helpCenterLink: o.Z.getArticleURL(l.BhN.LOCALIZED_PRICING),
                     localizedPriceWithCurrencySymbol: f
                 })),
-            C.has(p) &&
+            C.has(R) &&
                 (g = _.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_NEW_CURRENCY_WITH_AMBIGUOUS_SYMBOL.format({
                     helpCenterLink: o.Z.getArticleURL(l.BhN.LOCALIZED_PRICING),
-                    currencyISOCode: p.toUpperCase(),
+                    currencyISOCode: R.toUpperCase(),
                     localizedPriceWithCurrencySymbol: f
                 })),
             null != a &&
                 !a.hasPremiumNitroMonthly &&
                 (g = _.Z.Messages.LOCALIZED_PRICING_BANNER_BODY_WITHOUT_PRICE.format({
                     helpCenterLink: o.Z.getArticleURL(l.BhN.LOCALIZED_PRICING),
-                    currencyISOCode: p.toUpperCase()
+                    currencyISOCode: R.toUpperCase()
                 })),
-            p === i.pK.EUR &&
+            R === i.pK.EUR &&
                 (g = t
                     ? _.Z.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE_SINGLE_STRING.format({
                           country: (0, r.q9)(c),
-                          currencyISOCode: p.toUpperCase(),
+                          currencyISOCode: R.toUpperCase(),
                           helpCenterLink: o.Z.getArticleURL(l.BhN.LOCALIZED_PRICING)
                       })
                     : _.Z.Messages.LOCALIZED_PRICING_BANNER_NO_LOWERED_PRICE.format({
-                          currencyISOCode: p.toUpperCase(),
+                          currencyISOCode: R.toUpperCase(),
                           helpCenterLink: o.Z.getArticleURL(l.BhN.LOCALIZED_PRICING)
                       })),
-            R)
+            y)
         ) {
-            let e = E.filter((e) => y.includes(e)),
-                n = [...e, ...y.filter((e) => !E.includes(e))].slice(0, 2).map((e) => {
+            let e = E.filter((e) => p.includes(e)),
+                n = [...e, ...p.filter((e) => !E.includes(e))].slice(0, 2).map((e) => {
                     var n, a;
                     return null !== (a = null === (n = u[e]) || void 0 === n ? void 0 : n.call(u)) && void 0 !== a ? a : _.Z.Messages.PAYMENT_SOURCE_UNKNOWN;
                 });
-            y.length >= 3 && n.push(_.Z.Messages.LOCALIZED_PRICING_MORE_NEW_WAYS_TO_PAY);
+            p.length >= 3 && n.push(_.Z.Messages.LOCALIZED_PRICING_MORE_NEW_WAYS_TO_PAY);
             let a = new Intl.ListFormat(d, {
                 style: 'short',
                 type: 'conjunction'
@@ -112,7 +112,7 @@ let C = new Set([i.pK.ARS, i.pK.CLP, i.pK.COP]),
             localizedPricingBannerHeader: _.Z.Messages.LOCALIZED_PRICING_BANNER_HEADER.format({ country: (0, r.q9)(c) }),
             localizedPricingBannerBody: g,
             localizedPricingBannerLinkOnly: _.Z.Messages.LOCALIZED_PRICING_BANNER_LINK_ONLY.format({ helpCenterLink: o.Z.getArticleURL(l.BhN.LOCALIZED_PRICING) }),
-            localizedPricingBannerSubNotif: R ? void 0 : _.Z.Messages.LOCALIZED_PRICING_BANNER_SUB_NOTIF
+            localizedPricingBannerSubNotif: y ? void 0 : _.Z.Messages.LOCALIZED_PRICING_BANNER_SUB_NOTIF
         };
     },
     P = (e) => {

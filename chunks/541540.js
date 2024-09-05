@@ -13,8 +13,8 @@ var n = t(735250),
     l = t(600164),
     c = t(930114),
     d = t(246946),
-    u = t(626135),
-    _ = t(669079),
+    _ = t(626135),
+    u = t(669079),
     E = t(981631),
     T = t(689938),
     S = t(381670);
@@ -101,7 +101,7 @@ class N extends a.Component {
                 e.preventDefault();
                 let { codeInput: s } = this.state;
                 if ('' === s) return;
-                let t = (0, _.JT)(s);
+                let t = (0, u.JT)(s);
                 if (null == t) {
                     this.setState({ hasError: !0 });
                     return;
@@ -110,7 +110,7 @@ class N extends a.Component {
                 try {
                     let e = await o.Z.resolveGiftCode(t);
                     if (null != e && null != e.giftCode.promotion) throw (this.setState({ isPromoCode: !0 }), Error('Cannnot redeem promotion code as gift'));
-                    u.default.track(E.rMx.OPEN_MODAL, {
+                    _.default.track(E.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
                         location: {
                             ...this.analyticsLocation,
@@ -128,7 +128,7 @@ class N extends a.Component {
     }
 }
 function m() {
-    let e = a.useContext(u.AnalyticsContext),
+    let e = a.useContext(_.AnalyticsContext),
         s = (0, i.e7)([d.Z], () => d.Z.enabled);
     return (0, n.jsx)(N, {
         analyticsContext: e,

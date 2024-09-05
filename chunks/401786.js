@@ -14,8 +14,8 @@ var n,
     l = t.n(o),
     c = t(442837),
     d = t(481060),
-    u = t(355467),
-    _ = t(179360),
+    _ = t(355467),
+    u = t(179360),
     E = t(100527),
     T = t(906732),
     S = t(600164),
@@ -23,8 +23,8 @@ var n,
     N = t(431369),
     m = t(55610),
     C = t(653798),
-    g = t(311821),
-    A = t(42818),
+    A = t(311821),
+    g = t(42818),
     h = t(314884),
     O = t(509545),
     p = t(78839),
@@ -101,11 +101,11 @@ async function v(e, s, t, n) {
                   return null != s ? s.id : null;
               })();
     if (null == a) throw Error('No slot to cancel');
-    await (0, _.pD)(a), await (0, u.Mg)(e, { items: (0, x.MY)(e, s) }, t);
+    await (0, u.pD)(a), await (0, _.Mg)(e, { items: (0, x.MY)(e, s) }, t);
 }
 function j(e) {
     var s, t, n;
-    let { premiumSubscription: a, guildBoostSlotId: o, onBack: l, onNext: u, onClose: _ } = e,
+    let { premiumSubscription: a, guildBoostSlotId: o, onBack: l, onNext: _, onClose: u } = e,
         [m, h] = r.useState(!1),
         [p, R] = r.useMemo(() => {
             try {
@@ -115,7 +115,7 @@ function j(e) {
             }
         }, [a]);
     r.useEffect(() => {
-        R && _();
+        R && u();
     }, [R]);
     let { premiumSubscriptionPlan: P, premiumGuildPlan: Z } = (0, c.cj)([O.Z], () => {
             let e = O.Z.get(a.planId);
@@ -162,7 +162,7 @@ function j(e) {
         { interval: Y, intervalCount: w } = P;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(M.Z, { onClose: _ }),
+            (0, i.jsx)(M.Z, { onClose: u }),
             (0, i.jsxs)(d.ModalContent, {
                 className: b.body,
                 children: [
@@ -180,7 +180,7 @@ function j(e) {
                                 ? (0, i.jsxs)('div', {
                                       children: [
                                           (0, i.jsx)(C.KU, {}),
-                                          (0, i.jsx)(A.nd, {
+                                          (0, i.jsx)(g.nd, {
                                               premiumSubscription: a,
                                               renewalInvoice: G,
                                               isUpdate: !0
@@ -201,14 +201,14 @@ function j(e) {
                         disabled: m,
                         onClick: async () => {
                             try {
-                                h(!0), await v(a, p, j, o), u();
+                                h(!0), await v(a, p, j, o), _();
                             } catch {
                                 h(!1);
                             }
                         },
                         children: L.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_CANCEL_BUTTON
                     }),
-                    (0, i.jsx)(g.Z, { onClick: l })
+                    (0, i.jsx)(A.Z, { onClick: l })
                 ]
             })
         ]
@@ -245,10 +245,10 @@ function U(e) {
     let s,
         { guildBoostSlot: t, transitionState: n, onClose: a } = e;
     r.useEffect(() => {
-        !p.ZP.hasFetchedSubscriptions() && (0, u.jg)();
+        !p.ZP.hasFetchedSubscriptions() && (0, _.jg)();
     }, []);
     let o = (0, c.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
-        [l, _] = r.useState(1),
+        [l, u] = r.useState(1),
         { analyticsLocations: S } = (0, T.ZP)(E.Z.GUILD_BOOST_CANCELLATION_MODAL);
     if (null == o) s = (0, i.jsx)(d.ModalContent, { children: (0, i.jsx)(d.Spinner, {}) });
     else
@@ -257,7 +257,7 @@ function U(e) {
                 s = (0, i.jsx)(Z, {
                     premiumSubscription: o,
                     isInventory: null == t.premiumGuildSubscription,
-                    onNext: () => _(2),
+                    onNext: () => u(2),
                     onClose: a
                 });
                 break;
@@ -265,8 +265,8 @@ function U(e) {
                 s = (0, i.jsx)(j, {
                     premiumSubscription: o,
                     guildBoostSlotId: t.id,
-                    onBack: () => _(1),
-                    onNext: () => _(3),
+                    onBack: () => u(1),
+                    onNext: () => u(3),
                     onClose: a
                 });
                 break;

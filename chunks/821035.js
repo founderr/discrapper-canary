@@ -13,8 +13,8 @@ var a = t(524437),
     l = t(880257),
     c = t(63063),
     d = t(3957),
-    u = t(279743),
-    _ = t(838436),
+    _ = t(279743),
+    u = t(838436),
     E = t(526761),
     T = t(726985),
     S = t(981631),
@@ -24,8 +24,8 @@ var a = t(524437),
 function C() {
     var e;
     let s = null === (e = (0, l.Z)()) || void 0 === e || e,
-        { explicitContentGuilds: t, explicitContentFriendDm: C, explicitContentNonFriendDm: g } = (0, o.B)(),
-        A = (0, d.a)(E.to.DM_SAFETY_ALERTS),
+        { explicitContentGuilds: t, explicitContentFriendDm: C, explicitContentNonFriendDm: A } = (0, o.B)(),
+        g = (0, d.a)(E.to.DM_SAFETY_ALERTS),
         h = [
             {
                 value: a.Q4.BLUR,
@@ -48,16 +48,16 @@ function C() {
         };
     return (
         s && (h.unshift(p), O.unshift(p)),
-        (0, n.jsxs)(_.U, {
+        (0, n.jsxs)(u.U, {
             setting: T.s6.PRIVACY_SENSITIVE_MEDIA_V2,
             className: N.settingsBackgroundFlashElement,
             children: [
-                (0, n.jsx)(_.H, {
+                (0, n.jsx)(u.H, {
                     header: I.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
                     description: I.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: c.Z.getArticleURL(S.BhN.EXPLICIT_MEDIA_REDACTION) })
                 }),
                 (0, n.jsx)(i.FormItem, {
-                    ref: A,
+                    ref: g,
                     tag: i.FormTitleTags.H3,
                     title: I.Z.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
                     titleClassName: m.selectItemTitle,
@@ -73,7 +73,7 @@ function C() {
                     titleClassName: m.selectItemTitle,
                     children: (0, n.jsx)(i.SingleSelect, {
                         options: h,
-                        value: g,
+                        value: A,
                         onChange: (e) => (0, r.zj)({ explicitContentNonFriendDm: e })
                     })
                 }),
@@ -88,7 +88,7 @@ function C() {
                             onChange: (e) => (0, r.zj)({ explicitContentGuilds: e })
                         })
                     }),
-                (0, n.jsx)(u.Z, { scrollPosition: E.to.EXPLICIT_MEDIA_REDACTION })
+                (0, n.jsx)(_.Z, { scrollPosition: E.to.EXPLICIT_MEDIA_REDACTION })
             ]
         })
     );

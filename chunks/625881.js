@@ -7,8 +7,8 @@ var n = t(735250),
     l = t(780384),
     c = t(481060),
     d = t(410030),
-    u = t(63063),
-    _ = t(74538),
+    _ = t(63063),
+    u = t(74538),
     E = t(937615),
     T = t(230916),
     S = t(798769),
@@ -16,8 +16,8 @@ var n = t(735250),
     N = t(981631),
     m = t(689938),
     C = t(956554),
-    g = t(982404),
-    A = t(299156);
+    A = t(982404),
+    g = t(299156);
 s.Z = function (e) {
     let { premiumSubscription: s, premiumType: t, onClose: i, onConfirm: h, userDiscountOffer: O } = e,
         [p, R] = a.useState(!1),
@@ -37,9 +37,9 @@ s.Z = function (e) {
             f(!1);
         },
         D = (0, d.ZP)(),
-        P = (0, l.wj)(D) ? g : A,
+        P = (0, l.wj)(D) ? A : g,
         L = (0, T._)(s, I.Xh.PREMIUM_MONTH_TIER_2, O),
-        b = (0, _.aS)(I.Xh.PREMIUM_MONTH_TIER_2),
+        b = (0, u.aS)(I.Xh.PREMIUM_MONTH_TIER_2),
         Z = (0, E.T4)(b.amount, b.currency);
     return null == O
         ? null
@@ -83,10 +83,10 @@ s.Z = function (e) {
                                       className: C.confirmDiscountLegaleseText,
                                       children: m.Z.Messages.CHURN_DISCOUNT_CONFIRM_LEGALESE.format({
                                           discountedPrice: L,
-                                          billingPeriod: (0, _.JP)(O.discount.user_usage_limit_interval),
+                                          billingPeriod: (0, u.JP)(O.discount.user_usage_limit_interval),
                                           numMonths: O.discount.user_usage_limit,
                                           fullPrice: Z,
-                                          helpdeskArticle: u.Z.getArticleURL(N.BhN.PAID_TERMS)
+                                          helpdeskArticle: _.Z.getArticleURL(N.BhN.PAID_TERMS)
                                       })
                                   })
                               }),

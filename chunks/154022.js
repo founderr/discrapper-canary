@@ -12,8 +12,8 @@ var n = t(735250),
     l = t.n(o),
     c = t(442837),
     d = t(481060),
-    u = t(230711),
-    _ = t(419363),
+    _ = t(230711),
+    u = t(419363),
     E = t(857595),
     T = t(607070),
     S = t(627845),
@@ -21,8 +21,8 @@ var n = t(735250),
     N = t(313201),
     m = t(786761),
     C = t(3148),
-    g = t(739566),
-    A = t(753206),
+    A = t(739566),
+    g = t(753206),
     h = t(440849),
     O = t(921801),
     p = t(196051),
@@ -106,7 +106,7 @@ function H(e) {
                 variant: 'text-md/normal',
                 children: B.Z.Messages.ACCESSIBILITY_SETTINGS_APPEARANCE_LINK.format({
                     onAppearanceClick() {
-                        u.Z.open(Z.oAB.APPEARANCE);
+                        _.Z.open(Z.oAB.APPEARANCE);
                     }
                 })
             })
@@ -158,10 +158,10 @@ function W() {
                 }),
                 (0, n.jsx)('div', {
                     className: U.previewMessage,
-                    children: (0, n.jsx)(A.Z, {
+                    children: (0, n.jsx)(g.Z, {
                         compact: e,
                         author: {
-                            ...(0, g.ZH)(s),
+                            ...(0, A.ZH)(s),
                             colorString: '#DD80F4'
                         },
                         message: s
@@ -290,7 +290,7 @@ function q() {
             children: (0, n.jsx)(d.FormSwitch, {
                 note: B.Z.Messages.ACCESSIBILITY_SETTINGS_PROFILE_THEMES_NOTE.format({
                     onThemeClick() {
-                        u.Z.open(Z.oAB.APPEARANCE);
+                        _.Z.open(Z.oAB.APPEARANCE);
                     }
                 }),
                 className: G.marginTop20,
@@ -331,7 +331,7 @@ function $() {
             rawPrefersReducedMotion: i,
             systemPrefersReducedMotion: o,
             gifAutoPlayOverrideReason: l,
-            animateEmojiOverrideReason: u
+            animateEmojiOverrideReason: _
         } = (0, c.cj)([T.Z, D.Z], () => ({
             systemPrefersReducedMotion: T.Z.systemPrefersReducedMotion,
             rawPrefersReducedMotion: T.Z.rawPrefersReducedMotion,
@@ -339,8 +339,8 @@ function $() {
             gifAutoPlayOverrideReason: D.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
             animateEmojiOverrideReason: D.Z.getAppliedOverrideReasonKey('animateEmoji')
         })),
-        _ = a.useRef(null);
-    (0, P.Z)(_, L.rP.REDUCED_MOTION);
+        u = a.useRef(null);
+    (0, P.Z)(u, L.rP.REDUCED_MOTION);
     let S = a.useCallback(
             (e, s) => {
                 (0, E.Zt)(s ? 'auto' : o);
@@ -351,7 +351,7 @@ function $() {
             (0, E.Zt)(e ? 'reduce' : 'no-preference');
         }, []);
     return (0, n.jsxs)(d.FormItem, {
-        ref: _,
+        ref: u,
         title: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION,
         className: r()(G.marginTop20, U.reducedMotion),
         children: [
@@ -387,7 +387,7 @@ function $() {
             (0, n.jsx)(d.FormSwitch, {
                 className: r()(G.marginTop8, G.marginBottom20),
                 value: s,
-                note: null != u ? (0, h.Z)(u) : void 0,
+                note: null != _ ? (0, h.Z)(_) : void 0,
                 onChange: M.Yk.updateSetting,
                 children: B.Z.Messages.ANIMATE_EMOJI
             })
@@ -471,7 +471,7 @@ function et() {
     let e = M.OW.useSetting(),
         s = (0, c.e7)([R.Z], () => R.Z.speechRate),
         [t, i] = a.useState(!1);
-    return _.Zh
+    return u.Zh
         ? (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsxs)(d.FormItem, {

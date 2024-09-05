@@ -10,7 +10,7 @@ var s = t(735250),
     E = t(152029);
 class A extends n.PureComponent {
     componentDidMount() {
-        null == this.props.adyenPaymentData && c.cp();
+        null == this.props.adyenPaymentData && null != this.props.cashAppPayComponent && c.cp();
     }
     render() {
         var e, a;

@@ -17,8 +17,8 @@ var t = l(735250),
     f = l(182408);
 function E(e) {
     let { entry: n, channel: l, className: r } = e,
-        { displayParticipants: E, participant1: N, participant2: C, numOtherParticipants: v, orderedParticipants: _ } = (0, o.Z)(n),
-        h = [N, C];
+        { displayParticipants: E, participant1: N, participant2: C, numOtherParticipants: v, orderedParticipants: h } = (0, o.Z)(n),
+        _ = [N, C];
     return (0, t.jsxs)('div', {
         className: i()(f.container, r),
         children: [
@@ -26,7 +26,7 @@ function E(e) {
                 ? (0, t.jsxs)(t.Fragment, {
                       children: [
                           (0, t.jsx)(m.Z, {
-                              participants: _,
+                              participants: h,
                               channel: l,
                               children: (e) =>
                                   (0, t.jsx)(a.Clickable, {
@@ -55,15 +55,15 @@ function E(e) {
                 className: i()(f.truncatedText, f.usersHeader),
                 scaleFontToUserSetting: !0,
                 children: p.Z.Messages.CONTENT_INVENTORY_ENTRY_USERS_V2.format({
-                    user0: u.ZP.getName(l.guild_id, l.id, h[0]),
-                    user1: u.ZP.getName(l.guild_id, l.id, h[1]),
+                    user0: u.ZP.getName(l.guild_id, l.id, _[0]),
+                    user1: u.ZP.getName(l.guild_id, l.id, _[1]),
                     countOthers: v,
                     name0Hook: (e, n) =>
                         (0, t.jsx)(
                             d.Z,
                             {
                                 text: e,
-                                user: h[0],
+                                user: _[0],
                                 channel: l
                             },
                             n
@@ -73,7 +73,7 @@ function E(e) {
                             d.Z,
                             {
                                 text: e,
-                                user: h[1],
+                                user: _[1],
                                 channel: l
                             },
                             n
@@ -82,7 +82,7 @@ function E(e) {
                         (0, t.jsx)(
                             m.Z,
                             {
-                                participants: _,
+                                participants: h,
                                 channel: l,
                                 children: (n) =>
                                     (0, t.jsx)(c.Z, {

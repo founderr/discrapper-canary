@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(481060),
     c = t(37234),
     d = t(153867),
-    u = t(425493),
-    _ = t(918222),
+    _ = t(425493),
+    u = t(918222),
     E = t(607070),
     T = t(304761),
     S = t(865427),
@@ -21,8 +21,8 @@ var n = t(735250),
     N = t(210887),
     m = t(981631),
     C = t(689938),
-    g = t(945437);
-let A = [
+    A = t(945437);
+let g = [
     {
         label: 'Latin alphabet',
         value: 'aBcDeFgHiJkLmNoPqRsTuVwXyZ'
@@ -78,20 +78,20 @@ function h() {
             var e, s;
             return (0, S.fD)() ? (null === (s = T.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
-        [M, D] = (0, _.R)('playground-overrideText', null),
-        [P, L] = (0, _.R)('playground-defaultText', A[0].value),
+        [M, D] = (0, u.R)('playground-overrideText', null),
+        [P, L] = (0, u.R)('playground-defaultText', g[0].value),
         b = a.useCallback(
             (e) => {
-                let s = A.find((s) => {
+                let s = g.find((s) => {
                     let { value: t } = s;
                     return t === e;
                 });
-                '' === e || null == e ? (L(A[0].value), D(null)) : null != s ? L(s.value) : (L('custom'), D(e));
+                '' === e || null == e ? (L(g[0].value), D(null)) : null != s ? L(s.value) : (L('custom'), D(e));
             },
             [D, L]
         );
     return (0, n.jsx)('div', {
-        className: g.fullscreen,
+        className: A.fullscreen,
         style: {
             '--playground-font-family': 'mono' === h ? 'gg mono' : 'gg sans',
             '--playground-font-style': 'italic' === h ? 'italic' : 'normal'
@@ -100,7 +100,7 @@ function h() {
             tag: l.FormTitleTags.H1,
             children: [
                 (0, n.jsxs)('div', {
-                    className: g.toolbar,
+                    className: A.toolbar,
                     children: [
                         (0, n.jsxs)('div', {
                             children: [
@@ -126,15 +126,15 @@ function h() {
                         }),
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)(l.SingleSelect, {
-                                className: g.select,
-                                options: A,
+                                className: A.select,
+                                options: g,
                                 onChange: (e) => b(e),
                                 value: P
                             })
                         }),
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)('div', {
-                                className: g.input,
+                                className: A.input,
                                 children: (0, n.jsx)(l.TextInput, {
                                     placeholder: 'Enter custom input...',
                                     value: null != M ? M : '',
@@ -145,7 +145,7 @@ function h() {
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)(l.RadioGroup, {
                                 withTransparentBackground: !0,
-                                className: g.theme,
+                                className: A.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
@@ -166,7 +166,7 @@ function h() {
                         (0, n.jsx)(l.FormItem, {
                             children: (0, n.jsx)(l.RadioGroup, {
                                 withTransparentBackground: !0,
-                                className: g.theme,
+                                className: A.theme,
                                 orientation: 'horizontal',
                                 options: [
                                     {
@@ -188,21 +188,21 @@ function h() {
                                 value: h
                             })
                         }),
-                        (0, n.jsx)(u.Z, {
+                        (0, n.jsx)(_.Z, {
                             closeAction: c.xf,
                             keybind: 'ESC'
                         })
                     ]
                 }),
                 (0, n.jsxs)('div', {
-                    className: g.textGrid,
+                    className: A.textGrid,
                     children: [
                         (0, n.jsx)('div', {}),
                         p.map((e) =>
                             (0, n.jsx)(
                                 'div',
                                 {
-                                    className: g.columnHeading,
+                                    className: A.columnHeading,
                                     children: (0, n.jsx)(l.Heading, {
                                         variant: 'eyebrow',
                                         children: e
@@ -219,7 +219,7 @@ function h() {
                                         (0, n.jsxs)(
                                             'div',
                                             {
-                                                className: g.fontSize,
+                                                className: A.fontSize,
                                                 children: [
                                                     (0, n.jsxs)(l.Heading, {
                                                         variant: 'eyebrow',
@@ -242,10 +242,10 @@ function h() {
                                             return (0, n.jsx)(
                                                 'div',
                                                 {
-                                                    className: g.textSample,
+                                                    className: A.textSample,
                                                     children: (0, n.jsxs)('div', {
                                                         title: ''.concat(e, 'px at ').concat(s),
-                                                        className: r()(g.text, { [g.breakAnywhere]: !a.includes(' ') }),
+                                                        className: r()(A.text, { [A.breakAnywhere]: !a.includes(' ') }),
                                                         style: {
                                                             fontSize: e,
                                                             fontWeight: R.get(s)

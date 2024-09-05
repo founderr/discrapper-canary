@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(780384),
     c = t(481060),
     d = t(846027),
-    u = t(600164),
-    _ = t(921801),
+    _ = t(600164),
+    u = t(921801),
     E = t(131951),
     T = t(210887),
     S = t(996073),
@@ -20,11 +20,11 @@ var n = t(735250),
     N = t(726985),
     m = t(689938),
     C = t(224499);
-let g = t(651714),
-    A = t(297166);
+let A = t(651714),
+    g = t(297166);
 function h() {
     let { experimentalEncoders: e } = (0, o.cj)([E.Z], () => ({ experimentalEncoders: E.Z.getExperimentalEncoders() }));
-    return (0, n.jsx)(_.F, {
+    return (0, n.jsx)(u.F, {
         setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
         children: (0, n.jsx)(c.FormSwitch, {
             className: r()(C.marginTop8, C.marginBottom20),
@@ -46,7 +46,7 @@ function O() {
         (0, S.Z)(i, I.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(_.F, {
+                (0, n.jsx)(u.F, {
                     setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_AUDIO,
                     children: (0, n.jsx)(c.FormSection, {
                         className: C.marginBottom20,
@@ -55,22 +55,22 @@ function O() {
                             className: C.marginBottom20,
                             type: c.FormNoticeTypes.PRIMARY,
                             imageData: {
-                                src: (0, l.ap)(e) ? g : A,
+                                src: (0, l.ap)(e) ? A : g,
                                 width: 70,
                                 height: 40
                             },
-                            align: u.Z.Align.CENTER,
+                            align: _.Z.Align.CENTER,
                             body: m.Z.Messages.USER_SETTINGS_VOICE_CODEC_DESCRIPTION
                         })
                     })
                 }),
-                (0, n.jsx)(_.F, {
+                (0, n.jsx)(u.F, {
                     setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
                     children: (0, n.jsxs)(c.FormSection, {
                         className: C.marginBottom20,
                         title: m.Z.Messages.USER_SETTINGS_VOICE_VIDEO_CODEC_TITLE,
                         children: [
-                            (0, n.jsx)(_.F, {
+                            (0, n.jsx)(u.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
                                 children: (0, n.jsx)(c.FormSwitch, {
                                     className: r()(C.marginTop8, C.marginBottom20),
@@ -84,7 +84,7 @@ function O() {
                                 style: { scrollMarginTop: '48px' },
                                 ref: i
                             }),
-                            (0, n.jsx)(_.F, {
+                            (0, n.jsx)(u.F, {
                                 setting: N.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
                                 children: (0, n.jsx)(c.FormSwitch, {
                                     className: r()(C.marginTop8, C.marginBottom20),

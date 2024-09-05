@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(544891),
     c = t(704215),
     d = t(481060),
-    u = t(230711),
-    _ = t(497321),
+    _ = t(230711),
+    u = t(497321),
     E = t(43015),
     T = t(136097),
     S = t(605236),
@@ -21,8 +21,8 @@ var n = t(735250),
     N = t(594174),
     m = t(460562),
     C = t(823379),
-    g = t(981631),
-    A = t(921944),
+    A = t(981631),
+    g = t(921944),
     h = t(689938),
     O = t(308532);
 function p() {
@@ -30,23 +30,23 @@ function p() {
     let { currentSession: s, otherSessions: t } = (0, T.h)(),
         i = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation),
         r = (0, o.e7)([N.default], () => N.default.getCurrentUser()),
-        [u, m] = a.useState(!1);
+        [_, m] = a.useState(!1);
     a.useEffect(() => {
-        (0, S.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: A.L.AUTO }), (0, E.fw)();
+        (0, S.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: g.L.AUTO }), (0, E.fw)();
         let e = setTimeout(() => m(!0), 500);
         return () => {
             clearTimeout(e), (0, E.$Z)();
         };
     }, []);
     let C = () => {
-            l.tn.post({ url: g.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG });
+            l.tn.post({ url: A.ANM.AUTH_SESSION_NOTIFICATIONS_DEBUG });
         },
         [p, f] = a.useState(new Set());
     return i
-        ? (0, n.jsx)(_.Z, {})
+        ? (0, n.jsx)(u.Z, {})
         : ((e =
               null == s && 0 === t.length
-                  ? u
+                  ? _
                       ? (0, n.jsx)('div', {
                             className: O.loading,
                             children: (0, n.jsx)(d.Spinner, {})
@@ -168,10 +168,10 @@ function p() {
 }
 function R(e) {
     var s, t, a, i, o;
-    let { session: l, current: c, setChecked: u, checked: _, useChecks: S } = e,
+    let { session: l, current: c, setChecked: _, checked: u, useChecks: S } = e,
         I = null !== (o = null === (s = l.client_info) || void 0 === s ? void 0 : s.location) && void 0 !== o ? o : null === (t = l.client_info) || void 0 === t ? void 0 : t.ip,
         N = null === (a = l.client_info) || void 0 === a ? void 0 : a.platform,
-        { text: m, icon: g } = (function (e) {
+        { text: m, icon: A } = (function (e) {
             switch (null == e ? void 0 : e.toLowerCase().trim()) {
                 case null:
                 case void 0:
@@ -193,9 +193,9 @@ function R(e) {
                     };
             }
         })(null === (i = l.client_info) || void 0 === i ? void 0 : i.os),
-        A = c ? null : (0, T.p)(l.approx_last_used_time),
+        g = c ? null : (0, T.p)(l.approx_last_used_time),
         p = [m, N].filter(C.lm),
-        R = [I, A].filter(C.lm);
+        R = [I, g].filter(C.lm);
     return (0, n.jsxs)(
         'div',
         {
@@ -203,7 +203,7 @@ function R(e) {
             children: [
                 (0, n.jsx)('div', {
                     className: O.sessionIcon,
-                    children: (0, n.jsx)(g, {
+                    children: (0, n.jsx)(A, {
                         size: 'md',
                         color: 'currentColor'
                     })
@@ -242,15 +242,15 @@ function R(e) {
                             className: O.sessionCheckbox,
                             children: (0, n.jsx)(d.Checkbox, {
                                 onChange: (e, s) => {
-                                    null == u || u(s);
+                                    null == _ || _(s);
                                 },
-                                value: _
+                                value: u
                             })
                         })
                       : (0, n.jsx)(d.Clickable, {
                             className: O.sessionMoreButton,
                             onClick: (e) => {
-                                e.shiftKey ? null == u || u(!0) : (0, E.L$)(l.id_hash);
+                                e.shiftKey ? null == _ || _(!0) : (0, E.L$)(l.id_hash);
                             },
                             'aria-label': h.Z.Messages.AUTH_SESSIONS_SESSION_LOG_OUT,
                             children: (0, n.jsx)(d.XSmallIcon, {
@@ -287,7 +287,7 @@ function x() {
                         variant: 'text-sm/medium',
                         className: O.sessionInfoRow,
                         color: 'text-muted',
-                        children: (0, n.jsx)('span', { children: h.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({ onClick: () => u.Z.setSection(g.oAB.ACCOUNT) }) })
+                        children: (0, n.jsx)('span', { children: h.Z.Messages.AUTH_SESSIONS_UNKNOWN_LEGACY_LOG_OUT.format({ onClick: () => _.Z.setSection(A.oAB.ACCOUNT) }) })
                     })
                 ]
             })

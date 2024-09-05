@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(481060),
     c = t(660216),
     d = t(230711),
-    u = t(825209),
-    _ = t(836157),
+    _ = t(825209),
+    u = t(836157),
     E = t(706454),
     T = t(494620),
     S = t(131951),
@@ -20,8 +20,8 @@ var n = t(735250),
     N = t(924557),
     m = t(435064),
     C = t(894694),
-    g = t(779618),
-    A = t(39604),
+    A = t(779618),
+    g = t(39604),
     h = t(442334),
     O = t(356659),
     p = t(981631),
@@ -36,8 +36,8 @@ function L() {
         { clipsEnabled: s, remindersEnabled: t, decoupledClipsEnabled: i, clipsLength: L, clipsQuality: b } = (0, o.cj)([m.Z], () => m.Z.getSettings()),
         Z = (0, o.e7)([m.Z], () => m.Z.getHardwareClassification()),
         v = (0, o.e7)([I.Z], () => I.Z.getKeybindForAction(p.kg4.SAVE_CLIP, !0)),
-        { enableDecoupledGameClipping: j } = _.Z.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 }),
-        B = (0, g.Z)(S.Z),
+        { enableDecoupledGameClipping: j } = u.Z.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 }),
+        B = (0, A.Z)(S.Z),
         { showClipsHeaderEntrypoint: U } = N.NV.useExperiment({ location: 'clips_recording_settings' }, { autoTrackExposure: !1 });
     r()(null != v, 'Save clip keybind unset');
     let G = (0, o.e7)([E.default], () => E.default.locale),
@@ -134,7 +134,7 @@ function L() {
                         value: s,
                         note: f.Z.Messages.CLIPS_SETTINGS_ENABLE_CLIPS_HELP,
                         onChange: (e) =>
-                            A.em({
+                            g.em({
                                 clipsEnabled: e,
                                 trackAnalytics: !0
                             }),
@@ -162,7 +162,7 @@ function L() {
                                 value: i,
                                 note: f.Z.Messages.CLIPS_SETTINGS_ENABLE_DECOUPLED_CLIPS_HELP,
                                 onChange: (e) =>
-                                    A._Q({
+                                    g._Q({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
@@ -182,7 +182,7 @@ function L() {
                                 className: D.formItem,
                                 value: t,
                                 note: f.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS_HELP,
-                                onChange: (e) => A.N0(e),
+                                onChange: (e) => g.N0(e),
                                 children: f.Z.Messages.CLIPS_SETTINGS_ENABLE_REMINDERS
                             })
                         })
@@ -194,7 +194,7 @@ function L() {
                 children: [
                     (0, n.jsx)(h.Q, {
                         className: D.formItem,
-                        select: A.eU,
+                        select: g.eU,
                         title: f.Z.Messages.CLIPS_SETTINGS_LENGTH,
                         note: f.Z.Messages.CLIPS_SETTINGS_LENGTH_HELP,
                         value: L,
@@ -203,7 +203,7 @@ function L() {
                     (0, n.jsx)(h.Q, {
                         className: D.formItem,
                         select: (e) =>
-                            A.yi({
+                            g.yi({
                                 resolution: e,
                                 frameRate: b.frameRate
                             }),
@@ -215,7 +215,7 @@ function L() {
                     (0, n.jsx)(h.Q, {
                         className: D.formItem,
                         select: (e) =>
-                            A.yi({
+                            g.yi({
                                 resolution: b.resolution,
                                 frameRate: e
                             }),
@@ -230,7 +230,7 @@ function L() {
                         note: f.Z.Messages.CLIPS_SETTINGS_KEYBIND_HELP,
                         children: (0, n.jsx)('div', {
                             className: M.keyRecorder,
-                            children: (0, n.jsx)(u.Z, {
+                            children: (0, n.jsx)(_.Z, {
                                 defaultValue: v.shortcut,
                                 onChange: Y
                             })

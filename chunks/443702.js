@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(481060),
     c = t(570140),
     d = t(355467),
-    u = t(230711),
-    _ = t(497321),
+    _ = t(230711),
+    u = t(497321),
     E = t(231428),
     T = t(390954),
     S = t(89057),
@@ -20,8 +20,8 @@ var n = t(735250),
     N = t(921801),
     m = t(246946),
     C = t(594174),
-    g = t(351402),
-    A = t(853872),
+    A = t(351402),
+    g = t(853872),
     h = t(78839),
     O = t(706454),
     p = t(726985),
@@ -35,12 +35,12 @@ class M extends a.PureComponent {
         });
     }
     handleRedemptionRedirect() {
-        u.Z.setSection(R.oAB.INVENTORY);
+        _.Z.setSection(R.oAB.INVENTORY);
     }
     render() {
         let { syncing: e, hide: s, paymentSources: t, defaultPaymentSourceId: a, locale: i, premiumSubscription: r, isRemovingPaymentSource: o, isUpdatingPaymentSource: c } = this.props;
         return s
-            ? (0, n.jsx)(_.Z, {})
+            ? (0, n.jsx)(u.Z, {})
             : (0, n.jsxs)('div', {
                   className: f.__invalid_userSettingsBilling,
                   children: [
@@ -84,7 +84,7 @@ class M extends a.PureComponent {
     }
 }
 function D() {
-    let e = (0, o.cj)([O.default, g.Z, A.Z, C.default, m.Z, h.ZP], () => {
+    let e = (0, o.cj)([O.default, A.Z, g.Z, C.default, m.Z, h.ZP], () => {
         let e = h.ZP.getPremiumTypeSubscription(),
             s = C.default.getCurrentUser();
         return (
@@ -95,11 +95,11 @@ function D() {
                 isClaimed: s.isClaimed(),
                 isVerified: s.verified,
                 premiumSubscription: e,
-                defaultPaymentSourceId: A.Z.defaultPaymentSourceId,
-                paymentSources: A.Z.paymentSources,
-                syncing: g.Z.isSyncing,
-                isRemovingPaymentSource: g.Z.isRemovingPaymentSource,
-                isUpdatingPaymentSource: g.Z.isUpdatingPaymentSource
+                defaultPaymentSourceId: g.Z.defaultPaymentSourceId,
+                paymentSources: g.Z.paymentSources,
+                syncing: A.Z.isSyncing,
+                isRemovingPaymentSource: A.Z.isRemovingPaymentSource,
+                isUpdatingPaymentSource: A.Z.isUpdatingPaymentSource
             }
         );
     });

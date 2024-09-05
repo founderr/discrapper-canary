@@ -12,21 +12,21 @@ var n = t(735250),
     l = t(748780),
     c = t(481060),
     d = t(442837),
-    u = t(607070),
-    _ = t(663389),
+    _ = t(607070),
+    u = t(663389),
     E = t(81138);
 function T(e) {
-    let { children: s, className: t, onFlashEnd: i, animationDelay: _ = 500 } = e,
+    let { children: s, className: t, onFlashEnd: i, animationDelay: u = 500 } = e,
         T = c.tokens.colors.TEXT_LINK,
-        S = (0, d.e7)([u.Z], () => u.Z.useReducedMotion),
+        S = (0, d.e7)([_.Z], () => _.Z.useReducedMotion),
         I = (0, c.useToken)(T).spring({ opacity: 0 }),
         N = (0, c.useToken)(T).spring({ opacity: 0.1 }),
         m = (0, c.useToken)(T).spring({ opacity: 0 }),
         C = (0, c.useToken)(T).spring({ opacity: 1 }),
-        g = (e) => {
+        A = (e) => {
             e.finished && (null == i || i());
         },
-        [A, h] = (0, c.useSpring)(
+        [g, h] = (0, c.useSpring)(
             () => ({
                 from: {
                     backgroundColor: I,
@@ -35,7 +35,7 @@ function T(e) {
             }),
             'animate-never'
         ),
-        O = _ + 200 + 200,
+        O = u + 200 + 200,
         p = S ? 0 : 200;
     return (
         a.useEffect(() => {
@@ -52,7 +52,7 @@ function T(e) {
                 }
             }),
                 h({
-                    delay: _,
+                    delay: u,
                     immediate: S,
                     to: [
                         {
@@ -78,11 +78,11 @@ function T(e) {
                         duration: p,
                         easing: l.Z.Easing.ease
                     },
-                    onRest: g
+                    onRest: A
                 });
         }, [h]),
         (0, n.jsx)(o.animated.div, {
-            style: A,
+            style: g,
             className: r()(E.settingsItemHighlight, t),
             children: s
         })
@@ -90,7 +90,7 @@ function T(e) {
 }
 function S(e) {
     let { children: s, scrollPosition: t, animationDelay: i } = e,
-        r = (0, d.e7)([_.Z], () => _.Z.getScrollPosition() === t),
+        r = (0, d.e7)([u.Z], () => u.Z.getScrollPosition() === t),
         [o, l] = a.useState(!1);
     return (a.useEffect(() => {
         r && l(!0);

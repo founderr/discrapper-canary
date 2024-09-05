@@ -8,8 +8,8 @@ var n = o(131951),
     s = o(981631);
 function l(e, t, o, l, i) {
     let r = n.Z.getSettings(),
-        c = n.Z.getInputDeviceId(),
-        u = n.Z.getInputDevices()[c],
+        u = n.Z.getInputDeviceId(),
+        c = n.Z.getInputDevices()[u],
         d = n.Z.getOutputDeviceId(),
         _ = n.Z.getOutputDevices()[d],
         b = n.Z.getVideoDeviceId(),
@@ -28,7 +28,7 @@ function l(e, t, o, l, i) {
         automatic_gain_control_enabled: r.automaticGainControl,
         voice_output_volume: r.outputVolume,
         noise_cancellation_enabled: m,
-        input_device_name: null == u ? void 0 : u.name,
+        input_device_name: null == c ? void 0 : c.name,
         output_device_name: null == _ ? void 0 : _.name,
         video_device_name: null == E ? void 0 : E.name,
         ...i

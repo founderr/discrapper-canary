@@ -1,16 +1,16 @@
-a.d(t, {
+n.d(t, {
     Z: function () {
         return l;
     }
 });
-var n = a(626135),
-    s = a(981631);
+var a = n(626135),
+    s = n(981631);
 function l(e) {
-    let { problem: t, channel: a, feedback: l, activityApplication: i, analyticsData: o, location: r, rating: c = null } = e;
-    n.default.track(s.rMx.ACTIVITY_REPORT_PROBLEM, {
+    let { problem: t, channel: n, feedback: l, activityApplication: i, analyticsData: o, location: r, rating: c = null } = e;
+    a.default.track(s.rMx.ACTIVITY_REPORT_PROBLEM, {
         reason: t,
-        guild_id: a.getGuildId(),
-        channel_id: a.id,
+        guild_id: n.getGuildId(),
+        channel_id: n.id,
         application_id: null == i ? void 0 : i.id,
         application_name: null == i ? void 0 : i.name,
         location: r,

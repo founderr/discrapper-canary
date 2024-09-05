@@ -7,8 +7,8 @@ var n = t(735250),
     l = t(771845),
     c = t(11844),
     d = t(300037),
-    u = t(689938),
-    _ = t(127114);
+    _ = t(689938),
+    u = t(127114);
 s.Z = function (e) {
     let { hasAppliedGuildBoosts: s, subscriptionIsPausedOrPausePending: t } = e,
         E = (0, i.e7)([o.Z], () => o.Z.affinities),
@@ -24,19 +24,19 @@ s.Z = function (e) {
     return 0 === S.length
         ? null
         : (0, n.jsxs)('div', {
-              className: _.wrapper,
+              className: u.wrapper,
               children: [
                   s &&
                       (0, n.jsx)(r.Heading, {
                           variant: 'heading-lg/semibold',
-                          className: _.header,
-                          children: u.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_RECOMMENDED_SERVERS_HEADING
+                          className: u.header,
+                          children: _.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_RECOMMENDED_SERVERS_HEADING
                       }),
                   S.map((e) =>
                       (0, n.jsx)(
                           d.Z,
                           {
-                              className: _.recommendedServerCard,
+                              className: u.recommendedServerCard,
                               guildId: e,
                               boostingVariant: !0
                           },

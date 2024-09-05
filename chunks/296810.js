@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return u;
+        return _;
     }
 });
 var n = t(735250);
@@ -12,13 +12,13 @@ var a = t(120356),
     l = t(993413),
     c = t(689938),
     d = t(308152);
-function u(e) {
-    let { children: s, className: t, layoutClassName: a, profilePreview: u, previewTitle: _ } = e,
+function _(e) {
+    let { children: s, className: t, layoutClassName: a, profilePreview: _, previewTitle: u } = e,
         E = () =>
             (0, n.jsx)(l.Z, {
-                title: null != _ ? _ : c.Z.Messages.PROFILE_CUSTOMIZATION_PREVIEW,
+                title: null != u ? u : c.Z.Messages.PROFILE_CUSTOMIZATION_PREVIEW,
                 className: d.preview,
-                children: u
+                children: _
             });
     return (0, n.jsx)('div', {
         className: t,

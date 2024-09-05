@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(780384),
     c = t(481060),
     d = t(37234),
-    u = t(410030),
-    _ = t(605236),
+    _ = t(410030),
+    u = t(605236),
     E = t(626135),
     T = t(617136),
     S = t(497505),
@@ -20,10 +20,10 @@ var n = t(735250),
     N = t(46140),
     m = t(981631),
     C = t(689938),
-    g = t(74242),
-    A = t(66094);
+    A = t(74242),
+    g = t(66094);
 function h() {
-    let e = (0, l.wj)((0, u.ZP)()),
+    let e = (0, l.wj)((0, _.ZP)()),
         s = a.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []),
         t = a.useCallback(() => {
             (0, d.xf)(),
@@ -35,24 +35,24 @@ function h() {
         }, []);
     return (
         a.useCallback(() => {
-            (0, _.EW)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
+            (0, u.EW)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME);
         }, []),
-        (0, _.un)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
+        (0, u.un)(o.z.GIFT_INVENTORY_QUESTS_MOVED_TO_QUEST_HOME),
         (0, n.jsxs)('div', {
-            className: r()(g.container),
+            className: r()(A.container),
             style: s,
             children: [
                 !1,
                 (0, n.jsxs)('div', {
-                    className: g.textContainer,
+                    className: A.textContainer,
                     children: [
                         (0, n.jsxs)('div', {
-                            className: g.headerContainer,
+                            className: A.headerContainer,
                             children: [
                                 (0, n.jsx)('img', {
                                     alt: '',
-                                    src: A,
-                                    className: g.icon
+                                    src: g,
+                                    className: A.icon
                                 }),
                                 (0, n.jsx)(c.Heading, {
                                     variant: 'heading-lg/bold',
@@ -69,9 +69,9 @@ function h() {
                         (0, n.jsx)(c.Button, {
                             size: 'large',
                             color: e ? c.ButtonColors.BRAND : c.ButtonColors.WHITE,
-                            className: g.button,
+                            className: A.button,
                             onClick: t,
-                            innerClassName: g.innerButton,
+                            innerClassName: A.innerButton,
                             children: (0, n.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: e ? 'always-white' : 'text-normal',

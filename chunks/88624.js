@@ -6,8 +6,8 @@ var n = t(735250),
     l = t(481060),
     c = t(346951),
     d = t(644744),
-    u = t(792423),
-    _ = t(674985),
+    _ = t(792423),
+    u = t(674985),
     E = t(594174),
     T = t(843200),
     S = t(689938),
@@ -46,17 +46,17 @@ class N extends a.PureComponent {
                     isVerified: t
                 }),
                 (0, n.jsx)(c.Z, {}),
-                (0, n.jsx)(u.Z, { isHypeSquadOnlineMember: null != e })
+                (0, n.jsx)(_.Z, { isHypeSquadOnlineMember: null != e })
             ]
         });
     }
 }
-s.Z = o.ZP.connectStores([E.default, _.Z], () => {
+s.Z = o.ZP.connectStores([E.default, u.Z], () => {
     let e = E.default.getCurrentUser();
     return (
         r()(null != e, 'UserSettingsHypeSquad: currentUser cannot be undefined'),
         {
-            houseMembership: _.Z.getHouseMembership(),
+            houseMembership: u.Z.getHouseMembership(),
             isClaimed: e.isClaimed(),
             isVerified: e.verified
         }

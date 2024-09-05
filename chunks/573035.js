@@ -34,8 +34,8 @@ n.r(
         secondaryIcon: 'secondaryIcon_f40049',
         favoriteIconFavorite: 'favoriteIconFavorite_f40049',
         primaryIcon: 'primaryIcon_f40049',
-        lockIcon: 'lockIcon_f40049',
         primaryIconTopLevel: 'primaryIconTopLevel_f40049',
+        lockIcon: 'lockIcon_f40049',
         unavailableTooltip: 'unavailableTooltip_f40049',
         unavailableTooltipRefresh: 'unavailableTooltipRefresh_f40049'
     })

@@ -9,7 +9,7 @@ e.exports = {
     icon: 'icon_e5da8b',
     iconContainer: 'iconContainer_e5da8b',
     iconCard: 'iconCard_e5da8b',
-    darkenBannerImage: 'darkenBannerImage_e5da8b',
+    darkenImage: 'darkenImage_e5da8b',
     bannerImageContainer: 'bannerImageContainer_e5da8b',
     mediumBanner: 'mediumBanner_e5da8b',
     largeBanner: 'largeBanner_e5da8b',

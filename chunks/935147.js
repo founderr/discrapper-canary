@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(481060),
     c = t(809206),
     d = t(634894),
-    u = t(100527),
-    _ = t(906732),
+    _ = t(100527),
+    u = t(906732),
     E = t(588126),
     T = t(175756),
     S = t(104494),
@@ -20,8 +20,8 @@ var n = t(735250),
     N = t(81245),
     m = t(53691),
     C = t(165583),
-    g = t(197115),
-    A = t(350327),
+    A = t(197115),
+    g = t(350327),
     h = t(996073),
     O = t(25990),
     p = t(626135),
@@ -69,7 +69,7 @@ function F(e) {
         ee = (0, T.Z)(J),
         es = a.useRef(null);
     (0, h.Z)(es, B.Y_.TRY_IT_OUT);
-    let { analyticsLocations: et, sourceAnalyticsLocations: en } = (0, _.ZP)(u.Z.USER_SETTINGS_TRY_OUT_PREMIUM);
+    let { analyticsLocations: et, sourceAnalyticsLocations: en } = (0, u.ZP)(_.Z.USER_SETTINGS_TRY_OUT_PREMIUM);
     a.useEffect(() => {
         p.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
             type: j.cd.PREMIUM_PROFILE_TRY_IT_OUT,
@@ -90,7 +90,7 @@ function F(e) {
             autoTrackExposure: !1
         });
     let el = (0, N.Mu)('TryOutPremiumSection');
-    return (0, n.jsx)(_.Gt, {
+    return (0, n.jsx)(u.Gt, {
         value: et,
         children: (0, n.jsxs)(P.Z, {
             ref: es,
@@ -146,7 +146,7 @@ function F(e) {
                                 user: y,
                                 pendingAvatar: null != Q ? Q : w,
                                 pendingColors: null != z ? z : H,
-                                onThemeColorsChange: A.rf,
+                                onThemeColorsChange: g.rf,
                                 showPremiumIcon: !1,
                                 preventDisabled: !0
                             }),
@@ -154,13 +154,13 @@ function F(e) {
                                 className: G.customizationSection,
                                 isTryItOutFlow: !0,
                                 showRemoveBannerButton: null != X,
-                                onBannerChange: A.f4,
+                                onBannerChange: g.f4,
                                 showPremiumIcon: !1
                             }),
                             (0, n.jsx)(D.Z, {
                                 className: G.customizationSection,
                                 isTryItOutFlow: !0,
-                                onAvatarChange: A.c_,
+                                onAvatarChange: g.c_,
                                 showRemoveAvatarButton: !1,
                                 changeAvatarButtonText: U.Z.Messages.USER_SETTINGS_ADD_ANIMATED_AVATAR,
                                 sectionTitle: U.Z.Messages.PREMIUM_TIER_0_FEATURE_AVATAR
@@ -195,9 +195,9 @@ function F(e) {
                                             children: U.Z.Messages.USER_SETTINGS_TRY_OUT_PREMIUM_ALSO_INCLUDES
                                         }),
                                         !el &&
-                                            (0, n.jsx)(g.Z, {
+                                            (0, n.jsx)(A.Z, {
                                                 onSubscribeModalClose: (e) => {
-                                                    e && ((0, c.I5)(Q), (0, A.g_)(X), (0, A.z5)(z));
+                                                    e && ((0, c.I5)(Q), (0, g.g_)(X), (0, g.z5)(z));
                                                 },
                                                 subscriptionTier: j.Si.TIER_2,
                                                 className: G.premiumSubscribeButton,

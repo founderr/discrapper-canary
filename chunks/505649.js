@@ -1,6 +1,6 @@
 n(411104);
-var r,
-    i,
+var i,
+    r,
     u,
     l,
     o = n(442837),
@@ -11,18 +11,18 @@ var r,
     s = n(122289),
     A = n(622999),
     c = n(981631),
-    T = n(689938);
-let I = !1,
+    I = n(689938);
+let T = !1,
     d = null,
     R = null;
 function C() {
-    (I = !1), (R = null);
+    (T = !1), (R = null);
 }
 function N(e) {
     let { error: t } = e,
-        { code: n, paymentId: r } = t;
-    if (n !== S.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (I = !1), !1;
-    !I && ((I = !0), (d = r), M(r));
+        { code: n, paymentId: i } = t;
+    if (n !== S.ZP.ErrorCodes.AUTHENTICATION_REQUIRED) return (T = !1), !1;
+    !T && ((T = !0), (d = i), M(i));
 }
 async function M(e) {
     if (null == e) return;
@@ -30,7 +30,7 @@ async function M(e) {
     if (null != t) {
         E.Z.dispatch({
             type: 'PAYMENT_AUTHENTICATION_ERROR',
-            error: new S.ZP(T.Z.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR)
+            error: new S.ZP(I.Z.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR)
         });
         let e = Error(t);
         (0, s.q2)(e, { extra: { authenticationError: t } });
@@ -38,12 +38,12 @@ async function M(e) {
 }
 function P(e) {
     let { payment: t } = e;
-    if (!I || t.id !== d || ![c.PyE.COMPLETED, c.PyE.CANCELED].includes(t.status)) return !1;
-    (I = !1), (R = null), (d = null), E.Z.wait(a.fw), E.Z.wait(_.pB);
+    if (!T || t.id !== d || ![c.PyE.COMPLETED, c.PyE.CANCELED].includes(t.status)) return !1;
+    (T = !1), (R = null), (d = null), E.Z.wait(a.fw), E.Z.wait(_.pB);
 }
-class f extends (r = o.ZP.Store) {
+class f extends (i = o.ZP.Store) {
     get isAwaitingAuthentication() {
-        return I;
+        return T;
     }
     get error() {
         return R;
@@ -53,14 +53,14 @@ class f extends (r = o.ZP.Store) {
     }
 }
 (l = 'PaymentAuthenticationStore'),
-    (u = 'displayName') in (i = f)
-        ? Object.defineProperty(i, u, {
+    (u = 'displayName') in (r = f)
+        ? Object.defineProperty(r, u, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[u] = l),
+        : (r[u] = l),
     (t.Z = new f(E.Z, {
         BILLING_SUBSCRIPTION_UPDATE_START: C,
         PAYMENT_AUTHENTICATION_CLEAR_ERROR: C,
@@ -81,7 +81,7 @@ class f extends (r = o.ZP.Store) {
         GIFT_CODE_REDEEM_FAILURE: N,
         PAYMENT_AUTHENTICATION_ERROR: function (e) {
             let { error: t } = e;
-            (R = t), (I = !1);
+            (R = t), (T = !1);
         },
         PAYMENT_UPDATE: P,
         BILLING_PAYMENT_FETCH_SUCCESS: P

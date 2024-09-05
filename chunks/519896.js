@@ -19,14 +19,14 @@ var i = t(735250),
     f = t(938337);
 function x(e) {
     var n;
-    let { appId: t, groupListingId: x, groupListingType: _, guildId: p, onClose: h, skuId: T, transitionState: v, onHeaderTitleClick: E } = e,
+    let { appId: t, groupListingId: x, subscriptionType: _, guildId: p, onClose: h, skuId: T, transitionState: v, onHeaderTitleClick: E } = e,
         { data: N } = (0, c.H)(T),
         { data: g } = (0, a.Z)(T),
-        L = l.useMemo(() => {
+        R = l.useMemo(() => {
             var e;
             return (null == g ? void 0 : g.thumbnail) != null && null !== (e = S.Z.toURLSafe((0, u._W)(t, g.thumbnail, 256))) && void 0 !== e ? e : void 0;
         }, [t, null == g ? void 0 : g.thumbnail]),
-        R = l.useMemo(() => {
+        L = l.useMemo(() => {
             let e = null == g ? void 0 : g.benefits;
             if (null != e && 0 !== e.length)
                 return e.map((e) => ({
@@ -47,17 +47,17 @@ function x(e) {
               footer: (0, i.jsx)(I.p, {
                   appId: t,
                   groupListingId: x,
-                  groupListingType: _,
+                  subscriptionType: _,
                   guildId: p,
                   skuId: T,
-                  subPlan: N[0]
+                  subscriptionPlan: N[0]
               }),
               children: (0, i.jsx)(f.i, {
                   appId: t,
                   skuId: T,
                   benefits:
-                      null != R
-                          ? R.map((e) =>
+                      null != L
+                          ? L.map((e) =>
                                 (0, i.jsx)(
                                     r.G,
                                     {
@@ -70,7 +70,7 @@ function x(e) {
                             )
                           : void 0,
                   description: null !== (n = g.description) && void 0 !== n ? n : void 0,
-                  imgSrc: L,
+                  imgSrc: R,
                   title: N[0].name,
                   tag: (0, i.jsx)(o.Z, { type: _ }),
                   FallbackIcon: s.BadgeIcon

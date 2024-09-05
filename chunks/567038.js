@@ -12,8 +12,8 @@ var a = t(442837),
     l = t(963249),
     c = t(514851),
     d = t(922518),
-    u = t(643939),
-    _ = t(45595),
+    _ = t(643939),
+    u = t(45595),
     E = t(474936),
     T = t(981631),
     S = t(689938);
@@ -23,10 +23,10 @@ function I() {
         t = null != s && !0 === s.is_eligible;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(_.H, {}),
-            (0, n.jsx)(_.Z, {
+            (0, n.jsx)(u.H, {}),
+            (0, n.jsx)(u.Z, {
                 show: t && e,
-                children: (0, n.jsx)(u.L, {
+                children: (0, n.jsx)(_.L, {
                     message: S.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_UPSELL_CONTENT,
                     handleClick: () => {
                         i.Z.dispatch({ type: 'CASH_APP_PAY_AWARENESS_UPSELL_CTA_CLICKED' }),

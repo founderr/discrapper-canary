@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return g;
+        return A;
     }
 }),
     t(47120);
@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(596454),
     c = t(594174),
     d = t(74538),
-    u = t(242291),
-    _ = t(706667),
+    _ = t(242291),
+    u = t(706667),
     E = t(792165),
     T = t(409673),
     S = t(603074),
@@ -23,9 +23,9 @@ function m(e) {
     let { onSelect: s } = e,
         [t, r] = a.useState(!1),
         l = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        u = d.ZP.canUseCustomCallSounds(l);
-    function _(e) {
-        u && (r(!1), null == s || s(e));
+        _ = d.ZP.canUseCustomCallSounds(l);
+    function u(e) {
+        _ && (r(!1), null == s || s(e));
     }
     return (0, n.jsx)(o.Popout, {
         shouldShow: t,
@@ -40,8 +40,8 @@ function m(e) {
                     guildId: null,
                     channel: null,
                     onClose: s,
-                    onSelect: _,
-                    gridNotice: u ? null : (0, n.jsx)(E.o, {}),
+                    onSelect: u,
+                    gridNotice: _ ? null : (0, n.jsx)(E.o, {}),
                     analyticsSource: 'call sounds edit setting'
                 })
             });
@@ -63,9 +63,9 @@ function m(e) {
 }
 function C(e) {
     let { sound: s } = e,
-        { previewSound: t } = (0, _.Z)(s, null),
+        { previewSound: t } = (0, u.Z)(s, null),
         a =
-            0 === (0, u.pI)()
+            0 === (0, _.pI)()
                 ? I.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME
                 : I.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
                       emojiName: s.emojiName,
@@ -81,13 +81,13 @@ function C(e) {
         })
     });
 }
-function g(e) {
+function A(e) {
     let { sound: s, isGlobal: t, onSelect: a } = e,
         i = null != s,
         c = null == s ? void 0 : s.emojiId,
         d = null == s ? void 0 : s.emojiName,
-        u = i && (null != d || null != c),
-        _ = (e) =>
+        _ = i && (null != d || null != c),
+        u = (e) =>
             (0, n.jsx)(o.Text, {
                 variant: 'text-xs/medium',
                 color: 'header-secondary',
@@ -100,7 +100,7 @@ function g(e) {
             (0, n.jsxs)('div', {
                 className: N.container,
                 children: [
-                    u &&
+                    _ &&
                         (0, n.jsx)(l.Z, {
                             emojiId: c,
                             emojiName: d,
@@ -116,7 +116,7 @@ function g(e) {
                                 : t
                                   ? I.Z.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
                                         soundName: s.name,
-                                        subtextHook: _
+                                        subtextHook: u
                                     })
                                   : s.name
                     }),

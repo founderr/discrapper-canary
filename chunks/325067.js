@@ -6,8 +6,8 @@ var n,
     l = t.n(o),
     c = t(213919),
     d = t(442837),
-    u = t(570140);
-let _ = !1,
+    _ = t(570140);
+let u = !1,
     E = [],
     T = '',
     S = '',
@@ -24,7 +24,7 @@ class m extends (r = d.ZP.Store) {
         return E;
     }
     get togglingSMS() {
-        return _;
+        return u;
     }
     getNonces() {
         return N;
@@ -45,7 +45,7 @@ class m extends (r = d.ZP.Store) {
               writable: !0
           })
         : (n[a] = i),
-    (s.Z = new m(u.Z, {
+    (s.Z = new m(_.Z, {
         MFA_ENABLE_SUCCESS: function (e) {
             let { token: s, codes: t } = e;
             void 0 !== s && c.setToken(s), (E = t);
@@ -59,10 +59,10 @@ class m extends (r = d.ZP.Store) {
             c.setToken(s);
         },
         MFA_SMS_TOGGLE: function () {
-            _ = !0;
+            u = !0;
         },
         MFA_SMS_TOGGLE_COMPLETE: function () {
-            _ = !1;
+            u = !1;
         },
         MFA_CLEAR_BACKUP_CODES: function () {
             E = [];

@@ -15,8 +15,8 @@ var n = t(735250),
     l = t(782568),
     c = t(313201),
     d = t(960359),
-    u = t(524347),
-    _ = t(853197),
+    _ = t(524347),
+    u = t(853197),
     E = t(689938),
     T = t(144048);
 function S(e) {
@@ -114,14 +114,14 @@ function I(e) {
 s.ZP = function (e) {
     let { onClose: s, code: l, drop: I, platform: N, transitionState: m } = e,
         C = (0, c.Dt)(),
-        [g, A] = a.useState();
+        [A, g] = a.useState();
     a.useEffect(() => {
         null == l &&
             o.Z.wait(async () => {
                 await (0, d.dN)(I.dropsQuestId);
             });
     }, [I.dropsQuestId, l]);
-    let h = (0, i.e7)([u.Z], () => u.Z.platformAvailability);
+    let h = (0, i.e7)([_.Z], () => _.Z.platformAvailability);
     return (0, n.jsx)(r.ModalRoot, {
         transitionState: m,
         'aria-labelledby': C,
@@ -160,19 +160,19 @@ s.ZP = function (e) {
                                     (0, n.jsx)(r.Text, {
                                         variant: 'text-md/normal',
                                         className: T.dropBodyText,
-                                        children: a ? E.Z.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({ platform: (0, _.Un)(h[0]) }) : E.Z.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({ title: I.title })
+                                        children: a ? E.Z.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({ platform: (0, u.Un)(h[0]) }) : E.Z.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({ title: I.title })
                                     }),
                                     (0, n.jsx)(r.FormDivider, { className: T.formDivider }),
                                     (0, n.jsxs)(r.FormSection, {
                                         className: T.dropFormSection,
                                         children: [
                                             (0, n.jsx)(r.SingleSelect, {
-                                                onChange: A,
+                                                onChange: g,
                                                 options: h.map((e) => ({
                                                     value: e,
-                                                    label: (0, _.Un)(e)
+                                                    label: (0, u.Un)(e)
                                                 })),
-                                                value: a ? h[0] : g,
+                                                value: a ? h[0] : A,
                                                 isDisabled: !e,
                                                 className: e ? '' : T.selectDangerBorder,
                                                 look: e ? r.SelectLooks.FILLED : r.SelectLooks.CUSTOM
@@ -197,10 +197,10 @@ s.ZP = function (e) {
                                                 (0, r.openModalLazy)(async () => {
                                                     let { default: e } = await t.e('5004').then(t.bind(t, 233070));
                                                     return (t) =>
-                                                        (void 0 !== g || a) &&
+                                                        (void 0 !== A || a) &&
                                                         (0, n.jsx)(e, {
                                                             ...t,
-                                                            platform: void 0 === g ? h[0] : g,
+                                                            platform: void 0 === A ? h[0] : A,
                                                             code: l,
                                                             dropsQuestId: I.dropsQuestId,
                                                             closeParentModal: s,
@@ -208,7 +208,7 @@ s.ZP = function (e) {
                                                         });
                                                 });
                                             },
-                                            disabled: void 0 === g && !a,
+                                            disabled: void 0 === A && !a,
                                             children: E.Z.Messages.UNLOCK_CODE
                                         }),
                                     e

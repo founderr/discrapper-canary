@@ -17,8 +17,8 @@ var n,
     l = t.n(o),
     c = t(887024),
     d = t(512722),
-    u = t.n(d),
-    _ = t(442837),
+    _ = t.n(d),
+    u = t(442837),
     E = t(780384),
     T = t(481060),
     S = t(355467),
@@ -26,8 +26,8 @@ var n,
     N = t(100527),
     m = t(906732),
     C = t(211242),
-    g = t(600164),
-    A = t(509545),
+    A = t(600164),
+    g = t(509545),
     h = t(626135),
     O = t(122289),
     p = t(63063),
@@ -69,9 +69,9 @@ function H(e) {
     var s;
     let { premiumSubscription: t, premiumType: n, setStep: a, onClose: o, whatYouLoseExperienceEnabled: l, analyticsLocation: c } = e,
         d = (0, C.Q)(),
-        [u, _] = r.useState(!1),
+        [_, u] = r.useState(!1),
         [S, N] = r.useState(!1),
-        A = (0, I.ZP)(),
+        g = (0, I.ZP)(),
         { analyticsLocations: h } = (0, m.ZP)(),
         O = null;
     switch (t.status) {
@@ -126,13 +126,13 @@ function H(e) {
               })
             : (0, i.jsx)(T.Button, {
                   color: T.Button.Colors.RED,
-                  disabled: u,
+                  disabled: _,
                   onClick: async () => {
                       await k({
                           setHasError: N,
                           onClose: o,
                           premiumSubscription: t,
-                          setIsCancelling: _,
+                          setIsCancelling: u,
                           analyticsLocations: h,
                           analyticsLocation: c
                       });
@@ -141,7 +141,7 @@ function H(e) {
               }),
         M = (0, i.jsx)(T.Button, {
             look: T.Button.Looks.LINK,
-            color: (0, E.ap)(A) ? T.Button.Colors.PRIMARY : T.Button.Colors.WHITE,
+            color: (0, E.ap)(g) ? T.Button.Colors.PRIMARY : T.Button.Colors.WHITE,
             onClick: o,
             children: l ? Y.Z.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK : Y.Z.Messages.CANCEL
         });
@@ -177,7 +177,7 @@ function H(e) {
                 ]
             }),
             (0, i.jsxs)(T.ModalFooter, {
-                justify: g.Z.Justify.START,
+                justify: A.Z.Justify.START,
                 children: [f, M]
             })
         ]
@@ -194,7 +194,7 @@ function W(e) {
             analyticsLocations: a,
             analyticsLocation: N.Z.CANCEL_INVOICE_PREVIEW
         }),
-        o = (0, _.e7)([A.Z], () => A.Z.get(n.planId));
+        o = (0, u.e7)([g.Z], () => g.Z.get(n.planId));
     if (null == r || null == o) return (0, i.jsx)(T.Spinner, { className: w.loading });
     let { intervalType: l, intervalCount: c } = R.ZP.getIntervalForInvoice(r);
     return (0, i.jsxs)('div', {
@@ -232,7 +232,7 @@ function W(e) {
 function K(e) {
     let { premiumSubscription: s, premiumType: t, onBack: n, onClose: a, analyticsLocation: o } = e,
         [c, d] = r.useState(!1),
-        [u, _] = r.useState(!1),
+        [_, u] = r.useState(!1),
         { analyticsLocations: E } = (0, m.ZP)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -243,7 +243,7 @@ function K(e) {
             (0, i.jsxs)(T.ModalContent, {
                 className: l()(w.previewStep, w.body),
                 children: [
-                    u
+                    _
                         ? (0, i.jsx)(T.FormErrorBlock, {
                               className: w.errorBlock,
                               children: Y.Z.Messages.BILLING_ERROR_GENERIC
@@ -253,15 +253,15 @@ function K(e) {
                 ]
             }),
             (0, i.jsxs)(T.ModalFooter, {
-                align: g.Z.Align.CENTER,
-                justify: g.Z.Justify.BETWEEN,
+                align: A.Z.Align.CENTER,
+                justify: A.Z.Justify.BETWEEN,
                 children: [
                     (0, i.jsx)(T.Button, {
                         color: T.Button.Colors.RED,
                         disabled: c,
                         onClick: async () => {
                             await k({
-                                setHasError: _,
+                                setHasError: u,
                                 onClose: a,
                                 premiumSubscription: s,
                                 setIsCancelling: d,
@@ -299,20 +299,20 @@ let Q = {
 function X(e) {
     var s;
     let t,
-        { premiumSubscription: n, transitionState: a, onClose: o, analyticsLocations: l, analyticsLocation: d, initialStep: _ } = e,
+        { premiumSubscription: n, transitionState: a, onClose: o, analyticsLocations: l, analyticsLocation: d, initialStep: u } = e,
         S = r.useRef(new c.qA()),
-        [C, g] = r.useState(null),
-        A = (0, D.yQ)(),
-        p = (null == A ? void 0 : A.showCard) === !0,
+        [C, A] = r.useState(null),
+        g = (0, D.yQ)(),
+        p = (null == g ? void 0 : g.showCard) === !0,
         x = null === (s = (0, R.Af)(n)) || void 0 === s ? void 0 : s.planId,
         f = null != x ? R.ZP.getPremiumType(x) : null;
-    u()(null != f, 'Should not be cancelling Nitro without premiumType');
+    _()(null != f, 'Should not be cancelling Nitro without premiumType');
     let P = (0, I.ZP)();
     r.useEffect(() => {
         h.default.track(V.rMx.CANCELLATION_FLOW_STARTED, z(n));
     }, [n]);
     let j = f === y.p9.TIER_0 || f === y.p9.TIER_1 || f === y.p9.TIER_2;
-    null == _ && (_ = j ? 1 : 2);
+    null == u && (u = j ? 1 : 2);
     let { analyticsLocations: B } = (0, m.ZP)(l, N.Z.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL),
         [U, k, W, X] = (function (e, s, t) {
             let [n, a] = r.useState(e),
@@ -334,7 +334,7 @@ function X(e) {
                     [t, l, i, n, s]
                 );
             return [n, c, i, l];
-        })(_, n, l),
+        })(u, n, l),
         [q, J] = r.useState(null);
     (0, G.w)(n, o, !1);
     let $ = (e) => {
@@ -488,7 +488,7 @@ function X(e) {
         value: B,
         children: [
             (0, i.jsx)(c.O_, {
-                ref: g,
+                ref: A,
                 className: w.confettiCanvas,
                 environment: S.current
             }),

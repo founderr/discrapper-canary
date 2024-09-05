@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return A;
+        return g;
     }
 }),
     t(47120);
@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(46973),
     c = t(846519),
     d = t(692547),
-    u = t(481060),
-    _ = t(846027),
+    _ = t(481060),
+    u = t(846027),
     E = t(313201),
     T = t(131951),
     S = t(65154),
@@ -21,11 +21,11 @@ var n = t(735250),
     N = t(890755),
     m = t(257995),
     C = t(224499);
-let g = (0, E.hQ)();
-function A() {
+let A = (0, E.hQ)();
+function g() {
     let [e, s] = a.useState(-100),
         [t, i] = a.useState(!1),
-        { threshold: A, autoThreshold: h } = (0, o.cj)([T.Z], () => T.Z.getModeOptions()),
+        { threshold: g, autoThreshold: h } = (0, o.cj)([T.Z], () => T.Z.getModeOptions()),
         {
             inputMode: O,
             automaticVADSupported: p,
@@ -39,7 +39,7 @@ function A() {
         s(e), i((t & S.Dg.VOICE) === S.Dg.VOICE);
     }
     function f(e, s) {
-        _.Z.setMode(O, {
+        u.Z.setMode(O, {
             threshold: e,
             autoThreshold: s
         });
@@ -57,13 +57,13 @@ function A() {
     }, []);
     let M = (0, n.jsx)('section', {
         className: r()(N.inputSensitivityToggle, N.manual),
-        children: (0, n.jsx)(u.Slider, {
-            initialValue: A + 100,
+        children: (0, n.jsx)(_.Slider, {
+            initialValue: g + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
             onValueChange: (e) => f(-((100 - e) * 1), h),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': g,
+            'aria-labelledby': A,
             children: (0, n.jsxs)('div', {
                 className: r()(N.sliderBar, N.microphone, N.inputSensitivityBar),
                 children: [
@@ -85,19 +85,19 @@ function A() {
                         className: N.inputSensitivitySlider,
                         children: (0, n.jsx)('div', { className: r()(N.inputSensitivityBar, N.sliderBar, { [N.speaking]: t }) })
                     }),
-                    (0, n.jsx)(u.FormText, {
-                        type: u.FormText.Types.DESCRIPTION,
+                    (0, n.jsx)(_.FormText, {
+                        type: _.FormText.Types.DESCRIPTION,
                         className: C.marginBottom8,
                         children: I.Z.Messages.FORM_HELP_AUTOMATIC_VAD
                     })
                 ]
             })),
-        (0, n.jsxs)(u.FormItem, {
+        (0, n.jsxs)(_.FormItem, {
             className: N.sensitivity,
             children: [
-                (0, n.jsx)(u.FormTitle, {
-                    id: g,
-                    tag: u.FormTitleTags.H5,
+                (0, n.jsx)(_.FormTitle, {
+                    id: A,
+                    tag: _.FormTitleTags.H5,
                     className: C.marginBottom8,
                     children: I.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY
                 }),
@@ -109,18 +109,18 @@ function A() {
                                     (0, n.jsxs)('div', {
                                         className: r()(m.horizontal, C.marginBottom4),
                                         children: [
-                                            (0, n.jsx)(u.FormTitle, {
-                                                tag: u.FormTitleTags.H3,
+                                            (0, n.jsx)(_.FormTitle, {
+                                                tag: _.FormTitleTags.H3,
                                                 className: C.marginReset,
                                                 children: (0, n.jsx)('label', {
                                                     htmlFor: e,
                                                     children: I.Z.Messages.FORM_LABEL_AUTOMATIC_VAD
                                                 })
                                             }),
-                                            (0, n.jsx)(u.Switch, {
+                                            (0, n.jsx)(_.Switch, {
                                                 id: e,
                                                 checked: h,
-                                                onChange: (e) => f(A, e)
+                                                onChange: (e) => f(g, e)
                                             })
                                         ]
                                     })
@@ -129,10 +129,10 @@ function A() {
                     ]
                 }),
                 !R &&
-                    (0, n.jsx)(u.FormText, {
-                        type: u.FormText.Types.DESCRIPTION,
+                    (0, n.jsx)(_.FormText, {
+                        type: _.FormText.Types.DESCRIPTION,
                         className: r()(N.inputDisabledWarning, C.marginBottom8),
-                        children: I.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({ onEnableClick: _.Z.enable })
+                        children: I.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({ onEnableClick: u.Z.enable })
                     })
             ]
         })

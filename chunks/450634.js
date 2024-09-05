@@ -1,55 +1,55 @@
-a.r(t),
-    a.d(t, {
+n.r(t),
+    n.d(t, {
         default: function () {
             return m;
         }
     });
-var n = a(735250),
-    s = a(470079),
-    l = a(481060),
-    i = a(332664),
-    o = a(142497),
-    r = a(626135),
-    c = a(672655),
-    d = a(768015),
-    u = a(701488),
-    _ = a(981631),
-    T = a(190378),
-    I = a(689938);
+var a = n(735250),
+    s = n(470079),
+    l = n(481060),
+    i = n(332664),
+    o = n(142497),
+    r = n(626135),
+    c = n(672655),
+    d = n(768015),
+    u = n(701488),
+    _ = n(981631),
+    T = n(190378),
+    I = n(689938);
 let b = [u.K8.OTHER, u.K8.ADS, u.K8.NOT_FUN];
 function m(e) {
     var t;
-    let { channel: m, activityApplication: C, onClose: A, transitionState: f, analyticsData: E } = e;
+    let { channel: m, activityApplication: f, onClose: C, transitionState: A, analyticsData: p } = e;
     s.useEffect(() => {
         r.default.track(_.rMx.OPEN_MODAL, {
             type: 'Activity Feedback Modal',
-            application_id: C.id,
-            application_name: C.name,
-            game_id: C.id,
+            application_id: f.id,
+            application_name: f.name,
+            game_id: f.id,
             source: 'Activity End'
         });
-    }, [C]);
-    let p = (null === (t = C.embeddedActivityConfig) || void 0 === t ? void 0 : t.displays_advertisements) === !0;
-    return (0, n.jsx)(i.Z, {
-        header: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_HEADER.format({ applicationName: C.name }),
+    }, [f]);
+    let E = (null === (t = f.embeddedActivityConfig) || void 0 === t ? void 0 : t.displays_advertisements) === !0;
+    return (0, a.jsx)(i.Z, {
+        header: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_HEADER.format({ applicationName: f.name }),
         body: I.Z.Messages.ACTIVITY_REPORT_ACTIVITY_BODY,
         problemTitle: I.Z.Messages.ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE,
-        problems: (0, c.Z)(!0, p),
+        problems: (0, c.Z)(!0, E),
         feedbackProblems: b,
         onSubmit: function (e) {
             let { rating: t, problem: s, dontShowAgain: i, feedback: c } = e;
             if (
                 (i &&
                     !(function (e) {
-                        let { applicationId: t, rating: a } = e;
+                        let { applicationId: t, rating: n } = e;
                         r.default.track(_.rMx.ACTIVITY_REPORT_DONT_SHOW, {
                             application_id: t,
-                            rating: a
+                            rating: n
                         }),
                             (0, o.Kw)(T.v.POST_ACTIVITY_FEEDBACK);
                     })({
                         rating: t,
-                        applicationId: C.id
+                        applicationId: f.id
                     }),
                 null != t)
             )
@@ -57,23 +57,23 @@ function m(e) {
                     problem: s,
                     channel: m,
                     feedback: c,
-                    activityApplication: C,
-                    analyticsData: E,
+                    activityApplication: f,
+                    analyticsData: p,
                     location: 'Activity End',
                     rating: t
                 }),
                     null != s &&
                         (0, l.openModalLazy)(async () => {
-                            let { default: e } = await a.e('14466').then(a.bind(a, 729328));
+                            let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
-                                (0, n.jsx)(e, {
+                                (0, a.jsx)(e, {
                                     body: I.Z.Messages.ACTIVITY_REPORTED_BODY,
                                     ...t
                                 });
                         });
         },
-        onClose: A,
-        transitionState: f,
+        onClose: C,
+        transitionState: A,
         otherKey: u.K8.OTHER
     });
 }

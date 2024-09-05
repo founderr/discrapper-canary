@@ -16,11 +16,11 @@ function d(e) {
         t = (0, a.e7)([l.Z], () => l.Z.getSoundpack()),
         { allowAprilFoolsSoundpack: d } = r.Z.useExperiment({ location: 'a96548_1' }, { autoTrackExposure: !1 });
     if (!d) return null;
-    let u = d ? (0, c.QI)() : [];
+    let _ = d ? (0, c.QI)() : [];
     return (0, n.jsx)(i.SingleSelect, {
         className: s,
         onChange: (e) => (0, o.c)(e),
         value: t,
-        options: u
+        options: _
     });
 }

@@ -115,12 +115,12 @@ function Y(e) {
                                       onEmptyState: N
                                   }),
                               C &&
-                                  (0, i.jsx)(Q, {
+                                  (0, i.jsx)(J, {
                                       channel: n,
                                       onEmptyState: v
                                   }),
                               h &&
-                                  (0, i.jsx)(J, {
+                                  (0, i.jsx)(Q, {
                                       channel: n,
                                       entrypoint: t,
                                       onEmptyState: g
@@ -345,7 +345,7 @@ function q(e) {
               ]
           });
 }
-function Q(e) {
+function J(e) {
     var n;
     let { channel: t, onEmptyState: l } = e,
         r = (0, x.LD)(t.guild_id, !0),
@@ -436,7 +436,7 @@ function Q(e) {
               ]
           });
 }
-function J(e) {
+function Q(e) {
     let { channel: n, entrypoint: t, onEmptyState: l } = e,
         {
             fetchState: o,

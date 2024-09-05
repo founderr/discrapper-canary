@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(481060),
     c = t(846027),
     d = t(230711),
-    u = t(313201),
-    _ = t(111672),
+    _ = t(313201),
+    u = t(111672),
     E = t(921801),
     T = t(131951),
     S = t(663389),
@@ -21,8 +21,8 @@ var n = t(735250),
     N = t(358085),
     m = t(894939),
     C = t(321499),
-    g = t(710808),
-    A = t(625205),
+    A = t(710808),
+    g = t(625205),
     h = t(325808),
     O = t(823087),
     p = t(546997),
@@ -37,7 +37,7 @@ var n = t(735250),
     Z = t(65154),
     v = t(689938),
     j = t(224499);
-let B = (0, u.hQ)(),
+let B = (0, _.hQ)(),
     U = ''.concat(I.Z.getArticleURL(b.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function G(e, s, t) {
     (0, l.openModal)((a) =>
@@ -60,7 +60,7 @@ function F() {
             qosEnabled: s,
             attenuation: t,
             attenuateWhileSpeakingSelf: i,
-            attenuateWhileSpeakingOthers: u,
+            attenuateWhileSpeakingOthers: _,
             audioSubsystem: I,
             silenceWarning: b,
             legacyAudioSubsystemSupported: F,
@@ -88,14 +88,14 @@ function F() {
             null == k || null === (e = k.current) || void 0 === e || e.scrollIntoView(), d.Z.clearSubsection();
         }
     }, [k, w]);
-    let H = _.Z.getCurrentConfig({ location: 'UserSettingsVoiceProcessing' }).sidechainAvailable && !(0, N.isWeb)();
+    let H = u.Z.getCurrentConfig({ location: 'UserSettingsVoiceProcessing' }).sidechainAvailable && !(0, N.isWeb)();
     return (0, n.jsxs)(l.FormSection, {
         tag: l.FormTitleTags.H1,
         title: v.Z.Messages.VOICE_SETTINGS,
         children: [
             (0, n.jsx)(E.F, {
                 setting: L.s6.VOICE_AND_VIDEO_DEVICES,
-                children: (0, n.jsx)(A.Z, {})
+                children: (0, n.jsx)(g.Z, {})
             }),
             (0, n.jsx)(E.F, {
                 setting: L.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
@@ -178,7 +178,7 @@ function F() {
                                     (0, n.jsx)(l.Slider, {
                                         initialValue: t,
                                         onValueChange: (e) => {
-                                            c.Z.setAttenuation(e, i, u);
+                                            c.Z.setAttenuation(e, i, _);
                                         },
                                         'aria-labelledby': B
                                     }),
@@ -190,11 +190,11 @@ function F() {
                                     (0, n.jsx)(l.FormDivider, { className: j.marginBottom20 }),
                                     (0, n.jsx)(l.FormSwitch, {
                                         value: i,
-                                        onChange: (e) => c.Z.setAttenuation(t, e, u),
+                                        onChange: (e) => c.Z.setAttenuation(t, e, _),
                                         children: v.Z.Messages.ATTENUATE_WHILE_SPEAKING_SELF
                                     }),
                                     (0, n.jsx)(l.FormSwitch, {
-                                        value: u,
+                                        value: _,
                                         onChange: (e) => c.Z.setAttenuation(t, i, e),
                                         children: v.Z.Messages.ATTENUATE_WHILE_SPEAKING_OTHERS
                                     })
@@ -282,7 +282,7 @@ function F() {
                         }),
                         (0, n.jsx)(E.F, {
                             setting: L.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                            children: (0, n.jsx)(g.Z, {})
+                            children: (0, n.jsx)(A.Z, {})
                         }),
                         (0, n.jsx)(E.F, {
                             setting: L.s6.VOICE_AND_VIDEO_RESET_VOICE_SETTINGS,

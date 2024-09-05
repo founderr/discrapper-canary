@@ -7,8 +7,8 @@ var n = t(735250),
     l = t(692547),
     c = t(481060),
     d = t(224706),
-    u = t(225433),
-    _ = t(570928),
+    _ = t(225433),
+    u = t(570928),
     E = t(594190),
     T = t(320724),
     S = t(297700),
@@ -16,8 +16,8 @@ var n = t(735250),
     N = t(283595),
     m = t(626135),
     C = t(251625),
-    g = t(358085),
-    A = t(210887),
+    A = t(358085),
+    g = t(210887),
     h = t(981631),
     O = t(689938),
     p = t(806406),
@@ -25,13 +25,13 @@ var n = t(735250),
     x = t(257995),
     f = t(440376),
     M = t(224499);
-let D = o.ZP.connectStores([A.Z], () => ({ theme: A.Z.theme }))(c.EmptyState),
-    P = (0, g.isWindows)();
+let D = o.ZP.connectStores([g.Z], () => ({ theme: g.Z.theme }))(c.EmptyState),
+    P = (0, A.isWindows)();
 function L(e) {
     let { onClose: s } = e,
         t = (0, o.e7)([E.ZP], () => E.ZP.getCandidateGames()),
         [i, l] = a.useState(null),
-        u = t.map((e) => ({
+        _ = t.map((e) => ({
             key: e.pid,
             value: e,
             label: null != e.name ? e.name : ''
@@ -43,7 +43,7 @@ function L(e) {
             (0, n.jsx)(c.SearchableSelect, {
                 placeholder: O.Z.Messages.SELECT,
                 value: i,
-                options: u,
+                options: _,
                 onChange: function (e) {
                     l(e);
                 },
@@ -82,7 +82,7 @@ function b(e) {
     var s;
     let { rawGame: t, nowPlaying: i = !1, isOverride: T } = e,
         C = (0, o.cj)([I.Z, E.ZP, N.Z], () => (0, E.FZ)(t)),
-        [g, A] = a.useState(!1),
+        [A, g] = a.useState(!1),
         [R, M] = a.useState(null !== (s = C.name) && void 0 !== s ? s : '???'),
         D = r()(x.flexCenter, {
             [p.game]: !i,
@@ -103,14 +103,14 @@ function b(e) {
         d.Z.toggleDetection(C);
     }
     function j() {
-        if (g) return;
+        if (A) return;
         let e = null != C.id ? I.Z.getDetectableGame(C.id) : null;
         m.default.track(h.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
             game_name: C.name
         }),
             (0, c.showToast)((0, c.createToast)(O.Z.Messages.SETTINGS_GAMES_REPORT_INCORRECT_DETECTION_CONFIRMATION.format({ gameName: C.name }), c.ToastType.SUCCESS)),
-            A(!0);
+            g(!0);
     }
     return (0, n.jsxs)('div', {
         className: D,
@@ -160,7 +160,7 @@ function b(e) {
                             i ? (e = O.Z.Messages.SETTINGS_GAMES_NOW_PLAYING_STATE) : null != s && '' !== s && (e = O.Z.Messages.SETTINGS_GAMES_LAST_PLAYED.format({ when: s })),
                             (0, n.jsx)('div', {
                                 className: p.lastPlayed,
-                                children: (0, n.jsx)(_.Z, {
+                                children: (0, n.jsx)(u.Z, {
                                     hoverText: null != t && '' !== t ? t.toUpperCase() : '',
                                     children: e
                                 })
@@ -171,7 +171,7 @@ function b(e) {
             }),
             T
                 ? null
-                : g
+                : A
                   ? null
                   : (0, n.jsx)('div', {
                         className: r()(x.flexCenter, x.noWrap, x.justifyBetween, p.toggleContainer),
@@ -279,7 +279,7 @@ function b(e) {
                 });
             })(),
             !i || T
-                ? (0, n.jsx)(u.Z, {
+                ? (0, n.jsx)(_.Z, {
                       className: p.removeGame,
                       onClick: L
                   })

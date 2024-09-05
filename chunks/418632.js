@@ -7,8 +7,8 @@ var n,
     l = t(442837),
     c = t(481060),
     d = t(893776),
-    u = t(468026),
-    _ = t(594174),
+    _ = t(468026),
+    u = t(594174),
     E = t(689938);
 function T(e, s, t) {
     return (
@@ -62,7 +62,7 @@ class S extends (n = i.Component) {
                                     t = E.Z.Messages.VERIFICATION_EMAIL_ERROR_BODY;
                                 null != s && s.email && (t = s.email),
                                     (0, c.openModal)((e) =>
-                                        (0, a.jsx)(u.default, {
+                                        (0, a.jsx)(_.default, {
                                             title: E.Z.Messages.VERIFICATION_EMAIL_ERROR_TITLE,
                                             body: t,
                                             ...e
@@ -78,7 +78,7 @@ T(S, 'defaultProps', {
     size: c.Button.Sizes.MEDIUM,
     color: c.Button.Colors.BRAND
 }),
-    (s.Z = l.ZP.connectStores([_.default], () => {
-        let e = _.default.getCurrentUser();
+    (s.Z = l.ZP.connectStores([u.default], () => {
+        let e = u.default.getCurrentUser();
         return o()(null != e, 'ResendEmailVerificationButton: currentUser cannot be undefined'), { currentUser: e };
     })(S));

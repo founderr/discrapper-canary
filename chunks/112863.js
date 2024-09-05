@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return u;
+        return _;
     }
 });
 var n = t(735250);
@@ -12,7 +12,7 @@ var a = t(481060),
     l = t(689938),
     c = t(591559),
     d = t(286359);
-function u() {
+function _() {
     return (0, n.jsxs)('div', {
         className: c.wrapper,
         children: [

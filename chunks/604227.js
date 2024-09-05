@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return _;
+        return u;
     }
 }),
     t(47120),
@@ -15,17 +15,17 @@ var a = t(525654),
     l = t(304761),
     c = t(320161),
     d = t(689938),
-    u = t(844185);
-function _() {
-    var e, s, t, a, _, E;
+    _ = t(844185);
+function u() {
+    var e, s, t, a, u, E;
     let T = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        S = '324598',
-        I = ((e = '304f4d5586e3abd88c191017622c60ebd24b3ab7'), e.substring(0, 7)),
+        S = '324780',
+        I = ((e = '2a613f4145e42f784d3d20c708c6b6f5552a9355'), e.substring(0, 7)),
         N = null === o.Z || void 0 === o.Z ? void 0 : o.Z.remoteApp.getVersion(),
         m = null === o.Z || void 0 === o.Z ? void 0 : null === (s = (t = o.Z.remoteApp).getBuildNumber) || void 0 === s ? void 0 : s.call(t),
-        C = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (_ = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(_),
-        g = null === (E = l.C.getCurrentBuildOverride().overrides) || void 0 === E ? void 0 : E.discord_web,
-        A = (function () {
+        C = null === o.Z || void 0 === o.Z ? void 0 : null === (a = (u = o.Z.remoteApp).getAppArch) || void 0 === a ? void 0 : a.call(u),
+        A = null === (E = l.C.getCurrentBuildOverride().overrides) || void 0 === E ? void 0 : E.discord_web,
+        g = (function () {
             var e;
             let s = null === i() || void 0 === i() ? void 0 : null === (e = i().os) || void 0 === e ? void 0 : e.toString();
             if (null == s || null == o.Z) return null;
@@ -36,8 +36,8 @@ function _() {
         h = [T, S, '('.concat(I, ')')];
     return (
         null != N && (h.push('Host '.concat(N)), null != C && h.push(C.toLowerCase()), null != m && h.push('('.concat(m, ')'))),
-        h.push('Build Override: '.concat(null != g ? g.id : 'N/A')),
-        null != A && h.push(A),
+        h.push('Build Override: '.concat(null != A ? A.id : 'N/A')),
+        null != g && h.push(g),
         (0, n.jsx)(c.Z, {
             copyValue: h.join(' '),
             text: d.Z.Messages.COPY_VERSION,
@@ -46,13 +46,13 @@ function _() {
                 (0, n.jsx)(r.Clickable, {
                     ...e,
                     'aria-label': d.Z.Messages.COPY_VERSION,
-                    className: u.clickable,
+                    className: _.clickable,
                     children: (0, n.jsxs)('div', {
-                        className: u.info,
+                        className: _.info,
                         children: [
                             (0, n.jsxs)(r.Text, {
                                 tag: 'span',
-                                className: u.line,
+                                className: _.line,
                                 variant: 'text-xs/normal',
                                 color: 'text-muted',
                                 children: [
@@ -61,7 +61,7 @@ function _() {
                                     S,
                                     ' ',
                                     (0, n.jsxs)('span', {
-                                        className: u.versionHash,
+                                        className: _.versionHash,
                                         children: ['(', I, ')']
                                     })
                                 ]
@@ -72,7 +72,7 @@ function _() {
                                       children: [
                                           (0, n.jsxs)(r.Text, {
                                               tag: 'span',
-                                              className: u.line,
+                                              className: _.line,
                                               variant: 'text-xs/normal',
                                               color: 'text-muted',
                                               children: [
@@ -81,7 +81,7 @@ function _() {
                                                   ' ',
                                                   null != C
                                                       ? (0, n.jsxs)('span', {
-                                                            className: u.appArch,
+                                                            className: _.appArch,
                                                             children: [C.toLowerCase(), ' ']
                                                         })
                                                       : null,
@@ -96,13 +96,13 @@ function _() {
                                       ]
                                   })
                                 : null,
-                            null != A
+                            null != g
                                 ? (0, n.jsx)(r.Text, {
                                       tag: 'span',
-                                      className: u.line,
+                                      className: _.line,
                                       variant: 'text-xs/normal',
                                       color: 'text-muted',
-                                      children: A
+                                      children: g
                                   })
                                 : null
                         ]

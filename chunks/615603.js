@@ -7,8 +7,8 @@ var n = t(735250),
     l = t(481060),
     c = t(607070),
     d = t(158153),
-    u = t(760558),
-    _ = t(401786),
+    _ = t(760558),
+    u = t(401786),
     E = t(450468),
     T = t(98278),
     S = t(314684),
@@ -16,8 +16,8 @@ var n = t(735250),
     N = t(78839),
     m = t(267642),
     C = t(74538),
-    g = t(283029),
-    A = t(357956),
+    A = t(283029),
+    g = t(357956),
     h = t(275909),
     O = t(981631),
     p = t(735825),
@@ -26,7 +26,7 @@ var n = t(735250),
 function f(e) {
     let { guildBoostSlot: s, isCancellable: t, onCancel: i, onUncancel: r, premiumSubscription: o, useReducedMotion: c } = e,
         d = a.useMemo(() => (null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null), [s]),
-        u = (0, m.tl)(s);
+        _ = (0, m.tl)(s);
     return (0, n.jsxs)(
         'li',
         {
@@ -38,17 +38,17 @@ function f(e) {
                         (0, n.jsx)(h.Z, {
                             className: x.unappliedGuildBoostSlotIcon,
                             hasCooldown: s.isOnCooldown(),
-                            isCanceled: u,
+                            isCanceled: _,
                             useReducedMotion: c
                         }),
-                        u && null != o
+                        _ && null != o
                             ? (0, n.jsx)(l.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/medium',
                                   children: R.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format({ date: o.currentPeriodEnd })
                               })
                             : s.isOnCooldown() && null != d
-                              ? (0, n.jsx)(A.Z, { cooldown: d.getTime() })
+                              ? (0, n.jsx)(g.Z, { cooldown: d.getTime() })
                               : (0, n.jsx)(l.Text, {
                                     className: x.__invalid_unappliedGuildBoostSlotDescription,
                                     color: 'text-muted',
@@ -61,7 +61,7 @@ function f(e) {
                     className: x.unappliedGuildBoostSlotContentSecondary,
                     children: [
                         t &&
-                            !u &&
+                            !_ &&
                             (0, n.jsx)(l.Button, {
                                 className: x.unappliedGuildBoostSlotCta,
                                 color: l.Button.Colors.PRIMARY,
@@ -70,7 +70,7 @@ function f(e) {
                                 size: l.Button.Sizes.NONE,
                                 children: R.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_SLOT_CANCEL_BUTTON
                             }),
-                        u &&
+                        _ &&
                             (0, n.jsx)(l.Button, {
                                 className: x.unappliedGuildBoostSlotCta,
                                 color: l.Button.Colors.PRIMARY,
@@ -89,7 +89,7 @@ function f(e) {
 function M(e) {
     (0, l.openModalLazy)(
         async () => (s) =>
-            (0, n.jsx)(_.default, {
+            (0, n.jsx)(u.default, {
                 ...s,
                 guildBoostSlot: e
             })
@@ -107,9 +107,9 @@ function D(e) {
 s.Z = function (e) {
     let s, t;
     let { guildBoostSlots: i } = e,
-        _ = (0, o.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
-        E = (null == _ ? void 0 : _.isPausedOrPausePending) === !0,
-        A = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
+        u = (0, o.e7)([N.ZP], () => N.ZP.getPremiumTypeSubscription()),
+        E = (null == u ? void 0 : u.isPausedOrPausePending) === !0,
+        g = (0, o.e7)([c.Z], () => c.Z.useReducedMotion),
         h = (0, o.e7)([I.default], () => I.default.getCurrentUser()),
         P = (0, S.Vp)(),
         {
@@ -137,7 +137,7 @@ s.Z = function (e) {
                 }
             );
         }, [i]),
-        B = null != _ ? (0, d.G)(_, P) : 0,
+        B = null != u ? (0, d.G)(u, P) : 0,
         U = Math.max(0, B - L.length),
         G = Z > B,
         F = B === i.length,
@@ -147,16 +147,16 @@ s.Z = function (e) {
             for (let s = 0; s < y; s++)
                 e.push(
                     (0, n.jsx)(
-                        g.Z,
+                        A.Z,
                         {
                             className: x.headerBoostGem,
-                            useReducedMotion: A
+                            useReducedMotion: g
                         },
                         s
                     )
                 );
             return e;
-        }, [y, A]),
+        }, [y, g]),
         Y = null != P,
         w = a.useMemo(() => b.find((e) => e.isAvailable()), [b]);
     if (0 === b.length) return null;
@@ -255,7 +255,7 @@ s.Z = function (e) {
                                                               (e = w),
                                                               void (0, l.openModalLazy)(
                                                                   async () => (s) =>
-                                                                      (0, n.jsx)(u.default, {
+                                                                      (0, n.jsx)(_.default, {
                                                                           ...s,
                                                                           guildBoostSlots: [e],
                                                                           locationSection: O.jXE.SETTINGS_PREMIUM
@@ -281,8 +281,8 @@ s.Z = function (e) {
                                         isCancellable: G,
                                         onCancel: M,
                                         onUncancel: D,
-                                        premiumSubscription: _,
-                                        useReducedMotion: A
+                                        premiumSubscription: u,
+                                        useReducedMotion: g
                                     },
                                     e.id
                                 )

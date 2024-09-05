@@ -18,12 +18,12 @@ function c(e, s) {
     a()(null != n, 'missing premium guild plan');
     let c = null != e.renewalMutations ? e.renewalMutations.additionalPlans : e.additionalPlans,
         d = (e.status === l.O0b.CANCELED ? 0 : (0, r.uV)(c)) + s,
-        u = c.filter((e) => e.planId !== n.id);
+        _ = c.filter((e) => e.planId !== n.id);
     if (d < 0) throw Error('Invalid adjustment');
     return 0 === d
-        ? u
+        ? _
         : [
-              ...u,
+              ..._,
               {
                   planId: n.id,
                   quantity: d

@@ -1,22 +1,22 @@
-n.d(a, {
+n.d(t, {
     Z: function () {
         return l;
     }
 });
-var t = n(626135),
+var a = n(626135),
     s = n(981631);
 function l(e) {
-    let { problem: a, stream: n, feedback: l, streamApplication: r, analyticsData: o, location: i, rating: c = null } = e;
-    t.default.track(s.rMx.STREAM_REPORT_PROBLEM, {
-        reason: a,
+    let { problem: t, stream: n, feedback: l, streamApplication: o, analyticsData: r, location: i, rating: c = null } = e;
+    a.default.track(s.rMx.STREAM_REPORT_PROBLEM, {
+        reason: t,
         streamer_user_id: n.ownerId,
         stream_channel_id: n.channelId,
         guild_id: n.guildId,
-        application_id: null != r ? r.id : null,
-        application_name: null != r ? r.name : null,
+        application_id: null != o ? o.id : null,
+        application_name: null != o ? o.name : null,
         location: i,
         rating: c,
         feedback: l,
-        ...o
+        ...r
     });
 }

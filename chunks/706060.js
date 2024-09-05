@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return _;
+        return u;
     }
 }),
     t(47120),
@@ -19,12 +19,12 @@ function d(e) {
         children: s
     });
 }
-function u(e) {
+function _(e) {
     let { setting: s, children: t, depth: l } = e,
-        [_, E] = a.useState(1 === l),
+        [u, E] = a.useState(1 === l),
         T = a.useCallback(() => {
-            E(!_);
-        }, [_, E]);
+            E(!u);
+        }, [u, E]);
     if (0 === t.length)
         return (0, n.jsx)(
             'div',
@@ -38,7 +38,7 @@ function u(e) {
             },
             (0, i.Z)()
         );
-    let S = _
+    let S = u
         ? (0, n.jsx)('div', {
               className: c.settingNodeChildren,
               children: t
@@ -46,7 +46,7 @@ function u(e) {
                   .sort((e, s) => e.children.length - s.children.length)
                   .map((e) =>
                       (0, n.jsx)(
-                          u,
+                          _,
                           {
                               setting: e.setting,
                               children: e.children,
@@ -72,7 +72,7 @@ function u(e) {
                             hasChildren: t.length > 0
                         }),
                         (0, n.jsx)(o.Z, {
-                            direction: _ ? o.Z.Directions.DOWN : o.Z.Directions.RIGHT,
+                            direction: u ? o.Z.Directions.DOWN : o.Z.Directions.RIGHT,
                             className: c.headerCaret
                         })
                     ]
@@ -83,7 +83,7 @@ function u(e) {
         (0, i.Z)()
     );
 }
-function _() {
+function u() {
     let e = (0, l.Pt)(),
         s = [],
         t = Object.keys(e)
@@ -129,7 +129,7 @@ function _() {
                     .sort((e, s) => e.setting.localeCompare(s.setting))
                     .map((e) =>
                         (0, n.jsx)(
-                            u,
+                            _,
                             {
                                 setting: e.setting,
                                 children: e.children,

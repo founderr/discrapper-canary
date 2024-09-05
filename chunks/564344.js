@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(906732),
     c = t(254901),
     d = t(18438),
-    u = t(778825),
-    _ = t(66516),
+    _ = t(778825),
+    u = t(66516),
     E = t(484459),
     T = t(216045),
     S = t(839469),
@@ -20,30 +20,30 @@ var n = t(735250),
     N = t(594174),
     m = t(585483),
     C = t(16703),
-    g = t(785145),
-    A = t(981631),
+    A = t(785145),
+    g = t(981631),
     h = t(526761),
     O = t(726985),
     p = t(689938),
     R = t(798042);
 function x() {
     c.Z.useExperiment({ location: 'profile_customization_auto' });
-    let e = (0, i.e7)([u.Z], () => u.Z.getGuild()),
+    let e = (0, i.e7)([_.Z], () => _.Z.getGuild()),
         s = (0, C.Z)(),
-        t = (0, i.e7)([u.Z, I.Z], () => u.Z.showNotice() || I.Z.showNotice()),
+        t = (0, i.e7)([_.Z, I.Z], () => _.Z.showNotice() || I.Z.showNotice()),
         x = null != e ? e : s,
         f = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
-        { subsection: M, setSubsection: D } = (0, g.Z)(),
+        { subsection: M, setSubsection: D } = (0, A.Z)(),
         { analyticsLocations: P } = (0, l.ZP)(),
         { hasSearchResults: L, searchResults: b } = (0, S.E)();
     function Z(s) {
         if (M !== s) {
             if (t) {
-                m.S.dispatch(A.CkL.SHAKE_APP, {
+                m.S.dispatch(g.CkL.SHAKE_APP, {
                     duration: 300,
                     intensity: o.$x
                 }),
-                    m.S.dispatch(A.CkL.EMPHASIZE_NOTICE);
+                    m.S.dispatch(g.CkL.EMPHASIZE_NOTICE);
                 return;
             }
             s === h.NB.GUILD && null == e && null != x && (0, d.Fq)(x, P), D(s);
@@ -95,7 +95,7 @@ function x() {
                                 : null
                         ]
                     }),
-                    M === h.NB.GUILD ? (0, n.jsx)(_.Z, { selectedGuild: x }) : (0, n.jsx)(T.Z, {})
+                    M === h.NB.GUILD ? (0, n.jsx)(u.Z, { selectedGuild: x }) : (0, n.jsx)(T.Z, {})
                 ]
             })
         })

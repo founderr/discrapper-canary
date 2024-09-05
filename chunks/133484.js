@@ -11,8 +11,8 @@ var n = t(735250),
     l = t(906732),
     c = t(197115),
     d = t(626135),
-    u = t(74538),
-    _ = t(981631),
+    _ = t(74538),
+    u = t(981631),
     E = t(474936),
     T = t(689938),
     S = t(333727),
@@ -21,14 +21,14 @@ var n = t(735250),
 function m(e) {
     let { user: s, showOverlay: t, children: m } = e,
         C = (0, r.ZP)(),
-        { analyticsLocations: g } = (0, l.ZP)(o.Z.PREMIUM_UPSELL_OVERLAY);
+        { analyticsLocations: A } = (0, l.ZP)(o.Z.PREMIUM_UPSELL_OVERLAY);
     return (a.useEffect(() => {
         t &&
-            d.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
-                location_stack: g,
+            d.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
+                location_stack: A,
                 type: E.cd.PREMIUM_GUILD_MEMBER_PROFILE_UPSELL_INLINE
             });
-    }, [t, g]),
+    }, [t, A]),
     t)
         ? (0, n.jsxs)('div', {
               className: S.upsellOverlayContainer,
@@ -42,9 +42,9 @@ function m(e) {
                               alt: T.Z.Messages.GUILD_IDENTITY_UPSELL_OVERLAY_IMAGE_ALT,
                               src: (function (e) {
                                   switch (e) {
-                                      case _.BRd.DARK:
+                                      case u.BRd.DARK:
                                           return I;
-                                      case _.BRd.LIGHT:
+                                      case u.BRd.LIGHT:
                                           return N;
                                   }
                               })(C)
@@ -67,7 +67,7 @@ function m(e) {
                           (0, n.jsx)(c.Z, {
                               size: i.Button.Sizes.LARGE,
                               color: i.Button.Colors.GREEN,
-                              buttonText: u.ZP.isPremium(s) ? T.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : T.Z.Messages.CHANGE_IDENTITY_UPSELL,
+                              buttonText: _.ZP.isPremium(s) ? T.Z.Messages.USER_SETTINGS_PROFILE_THEMES_UPSELL_UPGRADE : T.Z.Messages.CHANGE_IDENTITY_UPSELL,
                               subscriptionTier: E.Si.TIER_2
                           })
                       ]

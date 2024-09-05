@@ -13,22 +13,22 @@ var a = t(481060),
     l = t(430824),
     c = t(63063),
     d = t(358085),
-    u = t(709054),
-    _ = t(695346),
+    _ = t(709054),
+    u = t(695346),
     E = t(726985),
     T = t(981631),
     S = t(689938),
     I = t(359043),
     N = t(224499);
 function m() {
-    let e = _.G6.useSetting(),
-        s = _.Wz.useSetting(),
+    let e = u.G6.useSetting(),
+        s = u.Wz.useSetting(),
         t = d.isPlatformEmbedded ? S.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : S.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
         i = (e) => {
-            _.Wz.updateSetting(e),
+            u.Wz.updateSetting(e),
                 !(function (e) {
                     let s = () => {
-                        _.SE.updateSetting(e ? u.default.keys(l.Z.getGuilds()) : []);
+                        u.SE.updateSetting(e ? _.default.keys(l.Z.getGuilds()) : []);
                     };
                     (0, a.openModal)((e) =>
                         (0, n.jsx)(a.ConfirmModal, {
@@ -58,7 +58,7 @@ function m() {
                 }),
                 (0, n.jsx)(a.FormSwitch, {
                     value: e,
-                    onChange: (e) => _.G6.updateSetting(e),
+                    onChange: (e) => u.G6.updateSetting(e),
                     note: t,
                     children: S.Z.Messages.SHOW_CURRENT_ACTIVITY
                 }),
@@ -73,8 +73,8 @@ function m() {
     });
 }
 function C() {
-    let e = _.cP.useSetting(),
-        s = _.Ou.useSetting();
+    let e = u.cP.useSetting(),
+        s = u.Ou.useSetting();
     return (0, n.jsx)(o.F, {
         setting: E.s6.ACTIVITY_PRIVACY_RICH_PRESENCE,
         children: (0, n.jsxs)(a.FormSection, {
@@ -88,20 +88,20 @@ function C() {
                 (0, n.jsx)(a.FormSwitch, {
                     value: e,
                     note: S.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP,
-                    onChange: (e) => _.cP.updateSetting(e),
+                    onChange: (e) => u.cP.updateSetting(e),
                     children: S.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS
                 }),
                 (0, n.jsx)(a.FormSwitch, {
                     value: s,
                     note: S.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP,
-                    onChange: (e) => _.Ou.updateSetting(e),
+                    onChange: (e) => u.Ou.updateSetting(e),
                     children: S.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL
                 })
             ]
         })
     });
 }
-function g() {
+function A() {
     return (0, n.jsx)(o.F, {
         setting: E.s6.ACTIVITY_PRIVACY_BROADCASTING,
         children: (0, n.jsxs)(a.FormSection, {
@@ -128,7 +128,7 @@ function g() {
         })
     });
 }
-function A() {
+function g() {
     return (0, n.jsx)(o.F, {
         setting: E.s6.ACTIVITY_PRIVACY_TOS,
         children: (0, n.jsx)(a.FormSection, {
@@ -149,6 +149,6 @@ function h(e) {
         className: s,
         tag: a.FormTitleTags.H1,
         title: t ? S.Z.Messages.ACTIVITY_PRIVACY : null,
-        children: [(0, n.jsx)(m, {}), (0, n.jsx)(C, {}), (0, n.jsx)(g, {}), (0, n.jsx)(A, {})]
+        children: [(0, n.jsx)(m, {}), (0, n.jsx)(C, {}), (0, n.jsx)(A, {}), (0, n.jsx)(g, {})]
     });
 }

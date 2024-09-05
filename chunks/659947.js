@@ -13,8 +13,8 @@ var n = t(735250),
     l = t(40908),
     c = t(600164),
     d = t(415795),
-    u = t(592125),
-    _ = t(984933),
+    _ = t(592125),
+    u = t(984933),
     E = t(430824),
     T = t(914010),
     S = t(727785),
@@ -22,18 +22,18 @@ var n = t(735250),
     N = t(741632);
 function m() {}
 let C = [S.h8.VOICE_CHANNEL];
-function g(e) {
+function A(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
-function A(e) {
+function g(e) {
     let { height: s } = e;
     return (0, n.jsx)('div', { style: { height: s } });
 }
 function h() {
-    return (0, n.jsx)(A, { height: 16 }, 'footer');
+    return (0, n.jsx)(g, { height: 16 }, 'footer');
 }
 function O() {
-    return (0, n.jsx)(A, { height: 8 }, 'header');
+    return (0, n.jsx)(g, { height: 8 }, 'header');
 }
 function p() {
     return (0, n.jsx)('div', {
@@ -51,14 +51,14 @@ function R(e) {
     let { keybind: i } = e,
         l = a.useRef(i);
     a.useEffect(() => void (l.current = i));
-    let [d, u] = a.useState(null !== (t = null === (s = i.params) || void 0 === s ? void 0 : s.channelId) && void 0 !== t ? t : void 0),
-        _ = a.useCallback(() => {
+    let [d, _] = a.useState(null !== (t = null === (s = i.params) || void 0 === s ? void 0 : s.channelId) && void 0 !== t ? t : void 0),
+        u = a.useCallback(() => {
             (0, r.openModalLazy)(
                 async () => (e) =>
                     (0, n.jsx)(x, {
                         ...e,
                         onSelect: (e) => {
-                            u(e),
+                            _(e),
                                 o.Z.setKeybind({
                                     ...l.current,
                                     params: { channelId: e }
@@ -81,7 +81,7 @@ function R(e) {
                     grow: 0,
                     shrink: 0,
                     children: (0, n.jsx)(r.Button, {
-                        onClick: _,
+                        onClick: u,
                         children: I.Z.Messages.USER_SETTINGS_KEYBINDS_SELECT_VOICE_CHANNEL
                     })
                 })
@@ -94,7 +94,7 @@ function x(e) {
         c = a.useId(),
         m = a.useRef(null),
         {
-            mouseFocusEnabled: A,
+            mouseFocusEnabled: g,
             enableMouseFocus: R,
             disableMouseFocus: x
         } = (function () {
@@ -118,18 +118,18 @@ function x(e) {
         } = (0, l.Z)({
             visible: !0,
             autocompleterResultTypes: C,
-            autocompleterBeforeCreateSearchContext: g
+            autocompleterBeforeCreateSearchContext: A
         }),
         P = (function (e) {
             let s = '' !== e,
                 t = (0, i.Wu)(
-                    [_.ZP, u.Z, T.Z],
+                    [u.ZP, _.Z, T.Z],
                     () => {
                         let e = T.Z.getGuildId();
                         if (s || null == e) return [];
                         let t = [];
-                        for (let s of _.ZP.getVocalChannelIds(e)) {
-                            let e = u.Z.getChannel(s);
+                        for (let s of u.ZP.getVocalChannelIds(e)) {
+                            let e = _.Z.getChannel(s);
                             null != e && t.push(e);
                         }
                         return t;
@@ -229,7 +229,7 @@ function x(e) {
                                     if ((null == e ? void 0 : e.type) === S.h8.VOICE_CHANNEL) return e.record;
                                 })();
                             if (null == a) return null;
-                            let i = null != a.parent_id ? u.Z.getChannel(a.parent_id) : void 0,
+                            let i = null != a.parent_id ? _.Z.getChannel(a.parent_id) : void 0,
                                 r = E.Z.getGuild(a.guild_id);
                             return (0, n.jsx)(
                                 d.$W,
@@ -238,7 +238,7 @@ function x(e) {
                                     channel: a,
                                     category: i,
                                     focused: L === s,
-                                    onMouseEnter: () => A.current && b(s),
+                                    onMouseEnter: () => g.current && b(s),
                                     onClick: () => {
                                         o(a.id), t();
                                     },
@@ -272,12 +272,12 @@ function f(e) {
             channel: t,
             category: a,
             guild: o
-        } = (0, i.cj)([u.Z, E.Z], () => {
-            let e = null != s ? u.Z.getChannel(s) : void 0;
+        } = (0, i.cj)([_.Z, E.Z], () => {
+            let e = null != s ? _.Z.getChannel(s) : void 0;
             return null != e
                 ? {
                       channel: e,
-                      category: null != e.parent_id ? u.Z.getChannel(e.parent_id) : void 0,
+                      category: null != e.parent_id ? _.Z.getChannel(e.parent_id) : void 0,
                       guild: null != e.guild_id ? E.Z.getGuild(e.guild_id) : void 0
                   }
                 : {

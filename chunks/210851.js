@@ -6,7 +6,7 @@ var n = t(735250),
     o = t(673105);
 s.Z = function (e) {
     var s, t;
-    let { assetKey: l, filters: c, initialValue: d, onFileChange: u, title: _ } = e,
+    let { assetKey: l, filters: c, initialValue: d, onFileChange: _, title: u } = e,
         [E, T] = a.useState(null),
         [S, I] = a.useState(!1);
     return (0, n.jsxs)(i.FormItem, {
@@ -16,7 +16,7 @@ s.Z = function (e) {
                 children: (0, n.jsxs)('div', {
                     className: o.headingWithTooltip,
                     children: [
-                        _,
+                        u,
                         (0, n.jsx)(i.Tooltip, {
                             text: 'Supported asset formats: '.concat(c.join(', ')),
                             children: (e) =>
@@ -32,7 +32,7 @@ s.Z = function (e) {
                 filename: null !== (t = null !== (s = null == E ? void 0 : E.name) && void 0 !== s ? s : d) && void 0 !== t ? t : '',
                 filters: [
                     {
-                        name: _,
+                        name: u,
                         extensions: c
                     }
                 ],
@@ -43,7 +43,7 @@ s.Z = function (e) {
                     I(!0);
                     let s = new FileReader();
                     (s.onload = function () {
-                        'string' == typeof s.result && (u(l, s.result), I(!1));
+                        'string' == typeof s.result && (_(l, s.result), I(!1));
                     }),
                         (s.onerror = function (e) {
                             console.error(e);

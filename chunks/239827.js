@@ -6,11 +6,11 @@ var n = t(735250),
     l = t(689938),
     c = t(927256);
 s.Z = a.forwardRef(function (e, s) {
-    let { currentPageIndex: t, numPages: a, onChangePage: i, children: d, className: u, showPageCount: _ = !0, ...E } = e,
+    let { currentPageIndex: t, numPages: a, onChangePage: i, children: d, className: _, showPageCount: u = !0, ...E } = e,
         T = t <= 0,
         S = t >= a - 1;
     return (0, n.jsxs)('div', {
-        className: r()(c.__invalid_paginator, u),
+        className: r()(c.__invalid_paginator, _),
         ref: s,
         ...E,
         children: [
@@ -29,7 +29,7 @@ s.Z = a.forwardRef(function (e, s) {
                             'aria-label': l.Z.Messages.PAGINATION_PREVIOUS
                         })
                     }),
-                    _
+                    u
                         ? (0, n.jsx)('div', {
                               className: c.pageIndicator,
                               children: l.Z.Messages.PAGINATOR_OF_PAGES.format({

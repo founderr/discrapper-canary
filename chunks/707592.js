@@ -6,7 +6,7 @@ t.d(n, {
         return d;
     },
     zY: function () {
-        return m;
+        return f;
     }
 });
 var o = t(735250);
@@ -42,7 +42,7 @@ function d(e) {
         })
     });
 }
-function m(e) {
+function f(e) {
     let { formField: n, autofocus: t, onChange: r } = e;
     return (0, o.jsx)(s.hK, {
         title: n.label,

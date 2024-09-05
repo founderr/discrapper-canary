@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return _;
+        return u;
     },
     z: function () {
         return a;
@@ -19,13 +19,13 @@ let d = {
         info: c.info,
         warning: c.warning
     },
-    u = {
+    _ = {
         info: l.CircleInformationIcon,
         warning: l.CircleWarningIcon
     };
-function _(e) {
+function u(e) {
     let { children: s, className: t, look: n = 'info' } = e,
-        a = u[n];
+        a = _[n];
     return (0, i.jsxs)('div', {
         className: o()(c.root, t, d[n]),
         children: [

@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(704215),
     c = t(780384),
     d = t(481060),
-    u = t(153867),
-    _ = t(230711),
+    _ = t(153867),
+    u = t(230711),
     E = t(714338),
     T = t(857595),
     S = t(607070),
@@ -21,8 +21,8 @@ var n = t(735250),
     N = t(514361),
     m = t(600164),
     C = t(313201),
-    g = t(605236),
-    A = t(786761),
+    A = t(605236),
+    g = t(786761),
     h = t(3148),
     O = t(739566),
     p = t(753206),
@@ -66,7 +66,7 @@ let Y = {
     K = (e) => {
         let s = 0;
         return [
-            (0, A.e5)({
+            (0, g.e5)({
                 ...(0, h.ZP)({
                     channelId: W,
                     content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
@@ -74,7 +74,7 @@ let Y = {
                 state: j.yb.SENT,
                 id: ''.concat(s++)
             }),
-            (0, A.e5)({
+            (0, g.e5)({
                 ...(0, h.ZP)({
                     channelId: W,
                     content: (0, c.wj)(e) ? G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
@@ -82,7 +82,7 @@ let Y = {
                 state: j.yb.SENT,
                 id: ''.concat(s++)
             }),
-            (0, A.e5)({
+            (0, g.e5)({
                 ...(0, h.ZP)({
                     channelId: W,
                     content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
@@ -90,7 +90,7 @@ let Y = {
                 state: j.yb.SENT,
                 id: ''.concat(s++)
             }),
-            (0, A.e5)({
+            (0, g.e5)({
                 ...(0, h.ZP)({
                     channelId: W,
                     content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
@@ -98,7 +98,7 @@ let Y = {
                 state: j.yb.SENT,
                 id: ''.concat(s++)
             }),
-            (0, A.e5)({
+            (0, g.e5)({
                 ...(0, h.ZP)({
                     channelId: W,
                     content: G.Z.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
@@ -257,7 +257,7 @@ class Q extends a.Component {
                       children: (0, I.b)()
                           ? G.Z.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
                                 onClick: () => {
-                                    _.Z.open(j.oAB.ACCESSIBILITY);
+                                    u.Z.open(j.oAB.ACCESSIBILITY);
                                 }
                             })
                           : G.Z.Messages.THEME_DISABLED_FOR_FORCED_COLORS
@@ -341,7 +341,7 @@ class Q extends a.Component {
                     className: y.marginTop20,
                     children: G.Z.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
                         onAccessibilityClick() {
-                            _.Z.open(j.oAB.ACCESSIBILITY);
+                            u.Z.open(j.oAB.ACCESSIBILITY);
                         }
                     })
                 })
@@ -378,7 +378,7 @@ class Q extends a.Component {
             V(this, 'darkMessages', K(j.BRd.DARK)),
             V(this, 'lightMessages', K(j.BRd.LIGHT)),
             V(this, 'handleDisplayCompactAvatarsChanged', (e) => {
-                u.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
+                _.ZP.updatedUnsyncedSettings({ displayCompactAvatars: e });
             }),
             V(this, 'handleMessageDisplayModeChange', (e) => {
                 let { value: s } = e;
@@ -387,8 +387,8 @@ class Q extends a.Component {
     }
 }
 let X = (e) => {
-    !(0, g.un)(e) &&
-        (0, g.EW)(e, {
+    !(0, A.un)(e) &&
+        (0, A.EW)(e, {
             dismissAction: B.L.AUTO,
             forceTrack: !0
         });

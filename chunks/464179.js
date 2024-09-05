@@ -40,8 +40,8 @@ let I = ['AE', 'AG', 'AN', 'AO', 'AW', 'BF', 'BI', 'BJ', 'BM', 'BO', 'BQ', 'BS',
     M = (0, _.hQ)(),
     b = (0, _.hQ)(),
     O = (0, _.hQ)(),
-    g = (0, _.hQ)(),
-    y = (0, _.hQ)();
+    y = (0, _.hQ)(),
+    g = (0, _.hQ)();
 ((o = s || (s = {})).NAME = 'name'), (o.COUNTRY = 'country'), (o.LINE1 = 'line1'), (o.LINE2 = 'line2'), (o.CITY = 'city'), (o.POSTAL_CODE = 'postalCode'), (o.STATE = 'state'), ((i = n || (n = {})).MODAL_US = 'modalUS'), (i.MODAL_INTL = 'modalInternational'), (i.MODAL_US_WITH_NAME = 'modalUSWithName'), (i.MODAL_INTL_WITH_NAME = 'modalInternationalWithName'), (i.SETTINGS_US = 'settingsUS'), (i.SETTINGS_INTL = 'settingsInternational'), (i.SETTINGS_INTL_NO_NAME = 'settingsInternationalWithoutName'), (i.SETTINGS_US_MOBILE = 'settingsUSMobile'), (i.SETTINGS_INTL_MOBILE = 'settingsInternationalMobile'), (i.SETTINGS_INTL_NO_NAME_MOBILE = 'settingsInternationalWithoutNameMobile'), ((c = l || (l = {})).EDIT = 'edit'), (c.CREATE = 'create');
 let L = {
         US: N.G,
@@ -141,7 +141,7 @@ let L = {
         }
         return {
             name: 'postalCode',
-            id: g,
+            id: y,
             title: () => a,
             autoComplete: 'postal-code',
             placeholder: () => t,
@@ -179,7 +179,7 @@ let L = {
         }
         return {
             name: 'state',
-            id: y,
+            id: g,
             title: () => a,
             autoComplete: 'address-level1',
             getClassNameForLayout: (e) => {

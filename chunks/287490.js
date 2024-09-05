@@ -13,14 +13,14 @@ var n = t(735250),
     l = t(481060),
     c = t(492435),
     d = t(353926),
-    u = t(430824),
-    _ = t(499533),
+    _ = t(430824),
+    u = t(499533),
     E = t(878209),
     T = t(987338),
     S = t(922269);
 function I(e, s) {
     return e.map((e, t) => ({
-        label: 'object' == typeof s ? s[t] : _.Z.getExperimentBucketName(e),
+        label: 'object' == typeof s ? s[t] : u.Z.getExperimentBucketName(e),
         value: e
     }));
 }
@@ -64,14 +64,14 @@ function N() {
 }
 function m(e) {
     var s;
-    let { experiment: t, experimentId: i, overrideDescriptor: u } = e,
-        [_, E] = a.useState(null != u),
+    let { experiment: t, experimentId: i, overrideDescriptor: _ } = e,
+        [u, E] = a.useState(null != _),
         [N, m] = a.useState(!1),
         C = a.useCallback(() => {
             E((e) => !e);
         }, []),
-        g = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)),
-        A = (0, o.e7)([d.Z], () => d.Z.getLoadedUserExperiment(i)),
+        A = (0, o.e7)([d.Z], () => d.Z.getUserExperimentDescriptor(i)),
+        g = (0, o.e7)([d.Z], () => d.Z.getLoadedUserExperiment(i)),
         h = (0, o.e7)([d.Z], () =>
             r()
                 .sortBy(d.Z.getRecentExposures(T.xY.USER, i), (e) => {
@@ -106,7 +106,7 @@ function m(e) {
                 ]
             })
         });
-    return _
+    return u
         ? (0, n.jsxs)('div', {
               className: S.group,
               children: [
@@ -118,8 +118,8 @@ function m(e) {
                                   (0, n.jsx)(l.FormItem, {
                                       title: 'Bucket Override',
                                       children: (0, n.jsx)(l.SingleSelect, {
-                                          value: null != u ? u.bucket : null,
-                                          clearable: null != u,
+                                          value: null != _ ? _.bucket : null,
+                                          clearable: null != _,
                                           options: I(t.buckets, t.description),
                                           onChange: (e) => {
                                               (0, c.rX)(i, e);
@@ -142,9 +142,9 @@ function m(e) {
                               children: [
                                   (0, n.jsxs)(l.FormText, {
                                       type: l.FormTextTypes.DESCRIPTION,
-                                      children: ['Current assigned to bucket ', null !== (s = null == g ? void 0 : g.bucket) && void 0 !== s ? s : T.NZ.NOT_ELIGIBLE]
+                                      children: ['Current assigned to bucket ', null !== (s = null == A ? void 0 : A.bucket) && void 0 !== s ? s : T.NZ.NOT_ELIGIBLE]
                                   }),
-                                  null == A
+                                  null == g
                                       ? (0, n.jsx)(l.FormText, {
                                             type: l.FormTextTypes.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -163,7 +163,7 @@ function m(e) {
                                         (0, n.jsx)(l.Text, {
                                             variant: 'code',
                                             className: S.pre,
-                                            children: null == A ? 'None' : JSON.stringify(A, void 0, 2)
+                                            children: null == g ? 'None' : JSON.stringify(g, void 0, 2)
                                         }),
                                         (0, n.jsx)(l.FormTitle, {
                                             tag: 'h5',
@@ -173,7 +173,7 @@ function m(e) {
                                         (0, n.jsx)(l.Text, {
                                             variant: 'code',
                                             className: S.pre,
-                                            children: null == u ? 'None' : JSON.stringify(u, void 0, 2)
+                                            children: null == _ ? 'None' : JSON.stringify(_, void 0, 2)
                                         }),
                                         (0, n.jsx)(l.FormTitle, {
                                             tag: 'h5',
@@ -206,13 +206,13 @@ function m(e) {
 }
 function C(e) {
     let { experiment: s, experimentId: t, overrideDescriptor: i } = e,
-        [_, E] = a.useState(null != i),
+        [u, E] = a.useState(null != i),
         [N, m] = a.useState(!1),
         C = a.useCallback(() => {
             E((e) => !e);
         }, []),
-        g = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(t)),
-        A = (0, o.e7)([d.Z], () =>
+        A = (0, o.e7)([d.Z], () => d.Z.getLoadedGuildExperiment(t)),
+        g = (0, o.e7)([d.Z], () =>
             r()
                 .sortBy(d.Z.getRecentExposures(T.xY.GUILD, t), (e) => {
                     let [s, t] = e;
@@ -223,8 +223,8 @@ function C(e) {
                     return ''.concat(new Date(t).toLocaleString(), ' (').concat(s, ')');
                 })
         ),
-        [h, O] = (0, o.Wu)([u.Z, d.Z], () => {
-            let e = r().sortBy(r().values(u.Z.getGuilds()), (e) => e.name.toLowerCase()),
+        [h, O] = (0, o.Wu)([_.Z, d.Z], () => {
+            let e = r().sortBy(r().values(_.Z.getGuilds()), (e) => e.name.toLowerCase()),
                 s = {},
                 n = [];
             for (let i of e) {
@@ -266,7 +266,7 @@ function C(e) {
                 ]
             })
         });
-    return _
+    return u
         ? (0, n.jsxs)('div', {
               className: S.group,
               children: [
@@ -304,7 +304,7 @@ function C(e) {
                                       type: l.FormTextTypes.DESCRIPTION,
                                       children: ['Current Assignments: ', O]
                                   }),
-                                  null == g
+                                  null == A
                                       ? (0, n.jsx)(l.FormText, {
                                             type: l.FormTextTypes.DESCRIPTION,
                                             children: 'Warning: Server did not send any experiment config. You may need to check the "Send to Client" box in the admin UI.'
@@ -333,7 +333,7 @@ function C(e) {
                                         (0, n.jsx)(l.Text, {
                                             variant: 'code',
                                             className: S.pre,
-                                            children: null == g ? 'None' : JSON.stringify(g, void 0, 2)
+                                            children: null == A ? 'None' : JSON.stringify(A, void 0, 2)
                                         }),
                                         (0, n.jsx)(l.FormTitle, {
                                             tag: 'h5',
@@ -353,7 +353,7 @@ function C(e) {
                                         (0, n.jsx)(l.Text, {
                                             variant: 'code',
                                             className: S.pre,
-                                            children: 0 === A.length ? 'None' : A.join('\n')
+                                            children: 0 === g.length ? 'None' : g.join('\n')
                                         })
                                     ]
                                 })

@@ -12,8 +12,8 @@ var a = t(120356),
     l = t(846027),
     c = t(230711),
     d = t(825209),
-    u = t(600164),
-    _ = t(313201),
+    _ = t(600164),
+    u = t(313201),
     E = t(131951),
     T = t(358085),
     S = t(962100),
@@ -21,12 +21,12 @@ var a = t(120356),
     N = t(689938),
     m = t(570243),
     C = t(224499);
-let g = !T.isPlatformEmbedded,
-    A = (0, _.hQ)();
+let A = !T.isPlatformEmbedded,
+    g = (0, u.hQ)();
 function h(e) {
     let { value: s } = e;
     s === I.pM4.PUSH_TO_TALK &&
-        g &&
+        A &&
         (0, o.openModalLazy)(async () => {
             let { default: e } = await Promise.resolve().then(t.bind(t, 468026));
             return (s) =>
@@ -47,7 +47,7 @@ function O(e) {
 function p(e) {
     let s,
         { inputMode: t } = e,
-        { shortcut: a, delay: _ } = (0, r.cj)([E.Z], () => E.Z.getModeOptions());
+        { shortcut: a, delay: u } = (0, r.cj)([E.Z], () => E.Z.getModeOptions());
     return (
         (s =
             T.isPlatformEmbedded || t !== I.pM4.PUSH_TO_TALK
@@ -64,9 +64,9 @@ function p(e) {
         (0, n.jsxs)('div', {
             className: m.pttTools,
             children: [
-                (0, n.jsxs)(u.Z, {
+                (0, n.jsxs)(_.Z, {
                     children: [
-                        (0, n.jsx)(u.Z.Child, {
+                        (0, n.jsx)(_.Z.Child, {
                             basis: '50%',
                             children: (0, n.jsx)(o.FormItem, {
                                 title: N.Z.Messages.FORM_LABEL_SHORTCUT,
@@ -76,22 +76,22 @@ function p(e) {
                                 })
                             })
                         }),
-                        (0, n.jsx)(u.Z.Child, {
+                        (0, n.jsx)(_.Z.Child, {
                             basis: '50%',
                             children: (0, n.jsxs)(o.FormItem, {
                                 children: [
                                     (0, n.jsx)(o.FormTitle, {
-                                        id: A,
+                                        id: g,
                                         tag: o.FormTitleTags.H5,
                                         className: C.marginBottom8,
                                         children: N.Z.Messages.INPUT_MODE_PTT_RELEASE_DELAY
                                     }),
                                     (0, n.jsx)(o.Slider, {
-                                        initialValue: _,
+                                        initialValue: u,
                                         onValueChange: (e) => l.Z.setMode(t, { delay: e }),
                                         onValueRender: O,
                                         maxValue: I.qhL,
-                                        'aria-labelledby': A
+                                        'aria-labelledby': g
                                     })
                                 ]
                             })
@@ -112,7 +112,7 @@ function R() {
             },
             {
                 value: I.pM4.PUSH_TO_TALK,
-                name: g ? N.Z.Messages.INPUT_MODE_PTT_LIMITED : N.Z.Messages.INPUT_MODE_PTT
+                name: A ? N.Z.Messages.INPUT_MODE_PTT_LIMITED : N.Z.Messages.INPUT_MODE_PTT
             }
         ];
     return (0, n.jsxs)(n.Fragment, {

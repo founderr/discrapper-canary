@@ -12,8 +12,8 @@ var a = t(512722),
     l = t(442837),
     c = t(481060),
     d = t(660216),
-    u = t(13245),
-    _ = t(825209),
+    _ = t(13245),
+    u = t(825209),
     E = t(887278),
     T = t(630699),
     S = t(212632),
@@ -21,9 +21,9 @@ var a = t(512722),
     N = t(556296),
     m = t(808506),
     C = t(237997),
-    g = t(626135);
+    A = t(626135);
 t(63063);
-var A = t(13140),
+var g = t(13140),
     h = t(981631),
     O = t(689938),
     p = t(232603);
@@ -39,8 +39,8 @@ function x(e) {
         notifications_enabled: n,
         notifications_position: n ? t : null,
         text_notifications_mode: C.Z.getTextChatNotificationMode(),
-        hotkey: null != a ? (0, A.BB)(a.shortcut) : null,
-        text_activation_hotkey: null != i ? (0, A.BB)(i.shortcut) : null,
+        hotkey: null != a ? (0, g.BB)(a.shortcut) : null,
+        text_activation_hotkey: null != i ? (0, g.BB)(i.shortcut) : null,
         text_opacity_slider: C.Z.getTextWidgetOpacity(),
         old_enabled: null !== (s = null == e ? void 0 : e.enabled) && void 0 !== s ? s : m.Z.enabled
     };
@@ -60,7 +60,7 @@ function M(e) {
             legacyEnabled: m.Z.legacyEnabled
         })),
         {
-            avatarSizeMode: A,
+            avatarSizeMode: g,
             displayNameMode: M,
             displayUserMode: D,
             notificationPositionMode: P,
@@ -78,15 +78,15 @@ function M(e) {
         { showKeybindIndicators: v } = I.Z.useExperiment({ location: 'overlay_user_settings' }),
         j = (0, E.$1)();
     function B(e) {
-        u.Z.setEnabled(e, r),
-            g.default.track(h.rMx.OVERLAY_TOGGLED, {
+        _.Z.setEnabled(e, r),
+            A.default.track(h.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
                 setting_type: 'overlay toggled - global'
             });
     }
     function U(e) {
-        u.Z.setEnabled(a, e),
-            g.default.track(h.rMx.OVERLAY_TOGGLED, {
+        _.Z.setEnabled(a, e),
+            A.default.track(h.rMx.OVERLAY_TOGGLED, {
                 enabled: e,
                 setting_type: 'overlay toggled - legacy'
             });
@@ -94,7 +94,7 @@ function M(e) {
     return (
         !(function () {
             let e = x(R);
-            !o().isEqual(e, R) && (g.default.track(h.rMx.OVERLAY_SETTINGS_UPDATED, e), (R = e));
+            !o().isEqual(e, R) && (A.default.track(h.rMx.OVERLAY_SETTINGS_UPDATED, e), (R = e));
         })(),
         (0, n.jsxs)(n.Fragment, {
             children: [
@@ -146,7 +146,7 @@ function M(e) {
                                 (0, n.jsx)(c.FormItem, {
                                     title: O.Z.Messages.KEYBIND_TOGGLE_OVERLAY_INPUT_LOCK,
                                     className: p.enableOverlayItem,
-                                    children: (0, n.jsx)(_.Z, {
+                                    children: (0, n.jsx)(u.Z, {
                                         disabled: !a,
                                         defaultValue: null != Z ? Z.shortcut : [],
                                         onChange: function (e) {
@@ -175,9 +175,9 @@ function M(e) {
                                 ],
                                 onChange: (e) => {
                                     let { value: s } = e;
-                                    return u.Z.setAvatarSizeMode(s);
+                                    return _.Z.setAvatarSizeMode(s);
                                 },
-                                value: A
+                                value: g
                             })
                         }),
                         (0, n.jsx)(f, {
@@ -199,7 +199,7 @@ function M(e) {
                                 ],
                                 onChange: (e) => {
                                     let { value: s } = e;
-                                    return u.Z.setDisplayNameMode(s);
+                                    return _.Z.setDisplayNameMode(s);
                                 },
                                 value: M
                             })
@@ -219,7 +219,7 @@ function M(e) {
                                 ],
                                 onChange: (e) => {
                                     let { value: s } = e;
-                                    return u.Z.setDisplayUserMode(s);
+                                    return _.Z.setDisplayUserMode(s);
                                 },
                                 value: D
                             })
@@ -228,7 +228,7 @@ function M(e) {
                             (0, n.jsx)(f, {
                                 children: (0, n.jsx)(c.FormSwitch, {
                                     value: b,
-                                    onChange: (e) => u.Z.setShowKeybindIndicators(e),
+                                    onChange: (e) => _.Z.setShowKeybindIndicators(e),
                                     hideBorder: !0,
                                     children: O.Z.Messages.FORM_LABEL_OVERLAY_SHOW_MUTE_DEAFEN_KEYBINDS
                                 })
@@ -246,7 +246,7 @@ function M(e) {
                                 className: p.notificationSettings,
                                 children: (0, n.jsx)(S.Z, {
                                     position: P,
-                                    onChange: (e, s) => u.Z.setNotificationPositionMode(s)
+                                    onChange: (e, s) => _.Z.setNotificationPositionMode(s)
                                 })
                             })
                         }),
@@ -256,7 +256,7 @@ function M(e) {
                                 disabled: P === h._vf.DISABLED,
                                 onChange: function () {
                                     let { ENABLED: e, DISABLED: s } = h.Ypu;
-                                    u.Z.setTextChatNotificationMode(L === e ? s : e);
+                                    _.Z.setTextChatNotificationMode(L === e ? s : e);
                                 },
                                 hideBorder: !0,
                                 children: O.Z.Messages.FORM_LABEL_OVERLAY_TEXT_CHAT_NOTIFICATIONS

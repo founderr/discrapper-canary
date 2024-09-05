@@ -3,9 +3,9 @@ var a = o(735250);
 o(470079);
 var t = o(442837),
     i = o(481060),
-    r = o(100527),
+    l = o(100527),
     s = o(970606),
-    l = o(313201),
+    r = o(313201),
     c = o(271383),
     u = o(430824),
     d = o(594174),
@@ -18,25 +18,25 @@ var t = o(442837),
     E = o(689938);
 e.default = function (n) {
     let { guildId: e, transitionState: o, ...R } = n,
-        p = (0, l.Dt)(),
-        N = (0, t.e7)([m.Z], () => m.Z.getRequest(e), [e]),
-        g = (0, t.e7)([u.Z], () => u.Z.getGuild(e), [e]),
-        h = (0, t.e7)([d.default], () => {
+        N = (0, r.Dt)(),
+        p = (0, t.e7)([m.Z], () => m.Z.getRequest(e), [e]),
+        A = (0, t.e7)([u.Z], () => u.Z.getGuild(e), [e]),
+        g = (0, t.e7)([d.default], () => {
             var n;
             return null === (n = d.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
         }),
-        A = (0, t.e7)([c.ZP], () => (null != h ? c.ZP.getMember(e, h) : null), [h, e]),
-        B = async () => {
+        M = (0, t.e7)([c.ZP], () => (null != g ? c.ZP.getMember(e, g) : null), [g, e]),
+        h = async () => {
             var n;
             if (
-                (null !== (n = null == g ? void 0 : g.hasFeature(C.oNc.CLAN)) &&
+                (null !== (n = null == A ? void 0 : A.hasFeature(C.oNc.CLAN)) &&
                     void 0 !== n &&
                     n &&
                     (0, s.Vr)({
                         guildId: e,
-                        source: r.Z.CLAN_REAPPLY
+                        source: l.Z.CLAN_REAPPLY
                     }),
-                null == g ? void 0 : g.hasFeature(C.oNc.PREVIEW_ENABLED))
+                null == A ? void 0 : A.hasFeature(C.oNc.PREVIEW_ENABLED))
             ) {
                 try {
                     await f.Z.removeGuildJoinRequest(e);
@@ -49,18 +49,18 @@ e.default = function (n) {
     return (0, a.jsx)(i.ModalRoot, {
         size: i.ModalSize.DYNAMIC,
         transitionState: o,
-        'aria-labelledby': p,
+        'aria-labelledby': N,
         children: (0, a.jsx)(I.Z, {
             ...R,
-            headerId: p,
+            headerId: N,
             reapplyText: E.Z.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
-            onReapply: B,
+            onReapply: h,
             confirmText: E.Z.Messages.OKAY,
             onWithdrawApplication: () => {
-                R.onClose(), null == A && (0, b.Z)();
+                R.onClose(), null == M && (0, b.Z)();
             },
-            rejectionReason: null == N ? void 0 : N.rejectionReason,
-            guild: g
+            rejectionReason: null == p ? void 0 : p.rejectionReason,
+            guild: A
         })
     });
 };

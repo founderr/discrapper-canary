@@ -104,7 +104,7 @@ let Z = (e, n) =>
                       user: O,
                       ButtonComponent: (e) =>
                           (0, a.jsx)(v.Ll, {
-                              IconComponent: r.AppsIcon,
+                              IconComponent: r.DoorEnterIcon,
                               ...e
                           })
                   })

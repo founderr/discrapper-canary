@@ -67,7 +67,7 @@ function b(e) {
                         activityChannelId: y,
                         locationObject: U.location,
                         analyticsLocations: j,
-                        commandOrigin: _.bB.CHAT
+                        commandOrigin: _.bB.ACTIVITY_BOOKMARK_EMBED
                     });
                 else {
                     let e = B.isPrivate() && !m.Z.isCallActive(y),
@@ -76,7 +76,7 @@ function b(e) {
                                 targetApplicationId: b,
                                 channelId: y,
                                 analyticsLocations: j,
-                                commandOrigin: _.bB.CHAT
+                                commandOrigin: _.bB.ACTIVITY_BOOKMARK_EMBED
                             });
                     e
                         ? o.Z.show({

@@ -13,24 +13,24 @@ var n = t(735250),
     l = t(481060),
     c = t(53281),
     d = t(451593),
-    u = t(694539),
-    _ = t(792461);
+    _ = t(694539),
+    u = t(792461);
 let E = (e) => {
         var s, t, a;
         let { effect: i, onClick: o } = e,
             { deleteConfig: c } = (0, d.E)();
         return (0, n.jsxs)(l.Clickable, {
-            className: _.previewCard,
+            className: u.previewCard,
             onClick: () => {
                 o(i);
             },
             children: [
                 (0, n.jsx)('div', {
-                    className: _.previewCardImage,
+                    className: u.previewCardImage,
                     style: { backgroundImage: 'url('.concat(null === (a = i.config) || void 0 === a ? void 0 : null === (t = a.effects) || void 0 === t ? void 0 : null === (s = t[0]) || void 0 === s ? void 0 : s.base64, ')') }
                 }),
                 (0, n.jsxs)('div', {
-                    className: r()(_.previewCardFooter, _.row),
+                    className: r()(u.previewCardFooter, u.row),
                     children: [
                         (0, n.jsx)(l.Text, {
                             variant: 'text-md/bold',
@@ -65,23 +65,23 @@ function S() {
             (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
         };
     return (0, n.jsxs)('div', {
-        className: _.root,
+        className: u.root,
         children: [
             null == t &&
                 (0, n.jsxs)(n.Fragment, {
                     children: [
                         (0, n.jsxs)('div', {
-                            className: _.col,
+                            className: u.col,
                             children: [
                                 (0, n.jsx)('div', {
-                                    className: _.section,
+                                    className: u.section,
                                     children: (0, n.jsx)(l.Heading, {
                                         variant: 'heading-lg/bold',
                                         children: 'Profile Effects'
                                     })
                                 }),
                                 (0, n.jsx)('div', {
-                                    className: _.grid,
+                                    className: u.grid,
                                     children: Object.values(e).map((e) =>
                                         (0, n.jsx)(
                                             E,
@@ -98,10 +98,10 @@ function S() {
                             ]
                         }),
                         (0, n.jsxs)('div', {
-                            className: r()(_.row, _.end, _.section),
+                            className: r()(u.row, u.end, u.section),
                             children: [
                                 (0, n.jsxs)('div', {
-                                    className: _.uploadButton,
+                                    className: u.uploadButton,
                                     children: [
                                         (0, n.jsx)(l.Text, {
                                             variant: 'text-md/normal',
@@ -138,7 +138,7 @@ function S() {
                     ]
                 }),
             null != t &&
-                (0, n.jsx)(u.Z, {
+                (0, n.jsx)(_.Z, {
                     effect: t,
                     back: () => {
                         i(void 0);

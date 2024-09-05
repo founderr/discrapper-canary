@@ -3,10 +3,10 @@ t.d(n, {
         return d;
     },
     QH: function () {
-        return m;
+        return f;
     },
     sp: function () {
-        return f;
+        return m;
     }
 });
 var o = t(735250),
@@ -19,26 +19,26 @@ var o = t(735250),
     u = t(994735);
 function d(e) {
     let { disabled: n, field: t, value: i, radioItemClassName: l, radioItemIconClassName: c, onChange: d } = e,
-        { choices: m } = t,
-        f = r.useMemo(
+        { choices: f } = t,
+        m = r.useMemo(
             () =>
-                m.map((e, n) => ({
+                f.map((e, n) => ({
                     name: e,
                     value: n,
                     radioItemIconClassName: a()(u.multipleChoiceIcon, c)
                 })),
-            [m, c]
+            [f, c]
         );
     return (0, o.jsx)(s.RadioGroup, {
         disabled: n,
-        options: f,
+        options: m,
         value: i,
         onChange: d,
         radioItemClassName: l,
         withTransparentBackground: !0
     });
 }
-function m(e) {
+function f(e) {
     let { formField: n } = e,
         t = null != n.response ? n.choices[n.response] : '';
     return (0, o.jsx)(l.hK, {
@@ -50,7 +50,7 @@ function m(e) {
         })
     });
 }
-function f(e) {
+function m(e) {
     let { formField: n, onChange: t } = e;
     return (0, o.jsx)(l.hK, {
         title: n.label,

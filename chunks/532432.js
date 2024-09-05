@@ -12,16 +12,16 @@ var a = t(120356),
     l = t(993413),
     c = t(486324),
     d = t(689938),
-    u = t(335027);
-let _ = [
+    _ = t(335027);
+let u = [
     {
         name: 'gif',
         extensions: ['gif']
     }
 ];
 function E(e) {
-    let { showRemoveAvatarButton: s, errors: t, onAvatarChange: a, sectionTitle: E, changeAvatarButtonText: T, guildId: S, className: I, disabled: N = !1, isTryItOutFlow: m = !1, forcedDivider: C, withHighlight: g = !1 } = e,
-        A = g ? r.ShinyButton : r.Button;
+    let { showRemoveAvatarButton: s, errors: t, onAvatarChange: a, sectionTitle: E, changeAvatarButtonText: T, guildId: S, className: I, disabled: N = !1, isTryItOutFlow: m = !1, forcedDivider: C, withHighlight: A = !1 } = e,
+        g = A ? r.ShinyButton : r.Button;
     return (0, n.jsx)(l.Z, {
         className: I,
         title: E,
@@ -29,17 +29,17 @@ function E(e) {
         disabled: N,
         forcedDivider: C,
         children: (0, n.jsxs)('div', {
-            className: u.buttonsContainer,
+            className: _.buttonsContainer,
             children: [
-                (0, n.jsx)(A, {
-                    className: i()({ [u.buttonHighlighted]: g }),
+                (0, n.jsx)(g, {
+                    className: i()({ [_.buttonHighlighted]: A }),
                     size: r.Button.Sizes.SMALL,
-                    onClick: () => (0, o.$r)(c.pC.AVATAR, S, m, m ? _ : void 0),
+                    onClick: () => (0, o.$r)(c.pC.AVATAR, S, m, m ? u : void 0),
                     children: null != T ? T : d.Z.Messages.USER_SETTINGS_CHANGE_AVATAR
                 }),
                 s &&
                     (0, n.jsx)(r.Button, {
-                        className: u.removeButton,
+                        className: _.removeButton,
                         color: r.Button.Colors.PRIMARY,
                         look: r.Button.Looks.LINK,
                         size: r.Button.Sizes.SMALL,

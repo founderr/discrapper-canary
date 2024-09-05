@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return u;
+        return _;
     }
 }),
     t(47120);
@@ -13,9 +13,9 @@ var a = t(442837),
     l = t(122890),
     c = t(110818),
     d = t(937934);
-function u(e) {
-    let { purchaseState: s, currentStep: t, onClose: u } = e,
-        [_, E] = (0, l.z)({
+function _(e) {
+    let { purchaseState: s, currentStep: t, onClose: _ } = e,
+        [u, E] = (0, l.z)({
             purchaseState: s,
             currentStep: t,
             initialScene: c.fe.Scenes.ENTRY,
@@ -31,14 +31,14 @@ function u(e) {
         children: [
             (0, n.jsx)(c.fe, {
                 className: d.animation,
-                nextScene: _,
+                nextScene: u,
                 onScenePlay: (e) => E(c.fe.getNextScene(e)),
                 pauseWhileUnfocused: !1,
                 pause: T
             }),
             (0, n.jsx)('div', { className: d.headerTitle }),
             (0, n.jsx)(i.ModalCloseButton, {
-                onClick: u,
+                onClick: _,
                 className: d.closeButton
             })
         ]

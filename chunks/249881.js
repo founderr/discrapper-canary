@@ -1,6 +1,6 @@
 t.d(s, {
     t: function () {
-        return u;
+        return _;
     }
 });
 var n = t(735250),
@@ -20,8 +20,8 @@ let d = (e) => {
             })
         );
     },
-    u = (e) => {
-        let { title: s, body: t, img: a, newIndicatorDismissibleContent: o, onClick: u } = e;
+    _ = (e) => {
+        let { title: s, body: t, img: a, newIndicatorDismissibleContent: o, onClick: _ } = e;
         return (0, n.jsxs)('div', {
             className: c.container,
             children: [
@@ -53,7 +53,7 @@ let d = (e) => {
                 }),
                 (0, n.jsx)(i.Button, {
                     size: i.ButtonSizes.MEDIUM,
-                    onClick: u,
+                    onClick: _,
                     className: c.reconnectButton,
                     children: l.Z.Messages.RECONNECT
                 })

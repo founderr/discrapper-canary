@@ -6,8 +6,8 @@ var n = t(735250),
     l = t.n(o),
     c = t(442837),
     d = t(481060),
-    u = t(600164),
-    _ = t(594174),
+    _ = t(600164),
+    u = t(594174),
     E = t(418632),
     T = t(689938),
     S = t(116536);
@@ -19,7 +19,7 @@ class I extends a.Component {
     renderPrimaryAction() {
         return this.props.isClaimed
             ? this.props.hasEmail
-                ? (0, n.jsx)(u.Z.Child, {
+                ? (0, n.jsx)(_.Z.Child, {
                       grow: 0,
                       shrink: 0,
                       children: (0, n.jsx)(E.Z, {})
@@ -30,7 +30,7 @@ class I extends a.Component {
                       onClick: this.openChangeEmailModal,
                       children: T.Z.Messages.ADD_EMAIL_SHORT
                   })
-            : (0, n.jsx)(u.Z.Child, {
+            : (0, n.jsx)(_.Z.Child, {
                   grow: 0,
                   shrink: 0,
                   children: (0, n.jsx)(d.Button, {
@@ -43,7 +43,7 @@ class I extends a.Component {
     }
     renderSecondaryAction() {
         return this.props.isClaimed && this.props.hasEmail
-            ? (0, n.jsx)(u.Z.Child, {
+            ? (0, n.jsx)(_.Z.Child, {
                   grow: 0,
                   shrink: 0,
                   children: (0, n.jsx)(d.Button, {
@@ -73,22 +73,22 @@ class I extends a.Component {
             ? null
             : (0, n.jsx)(d.Card, {
                   className: r()(S.wrapper, e),
-                  children: (0, n.jsxs)(u.Z, {
-                      align: u.Z.Align.CENTER,
+                  children: (0, n.jsxs)(_.Z, {
+                      align: _.Z.Align.CENTER,
                       children: [
-                          (0, n.jsx)(u.Z.Child, {
+                          (0, n.jsx)(_.Z.Child, {
                               className: S.image,
                               grow: 0,
                               shrink: 0
                           }),
-                          (0, n.jsxs)(u.Z.Child, {
+                          (0, n.jsxs)(_.Z.Child, {
                               children: [
                                   (0, n.jsx)(d.Text, {
                                       variant: 'text-sm/normal',
                                       children: this.renderNotice()
                                   }),
-                                  (0, n.jsxs)(u.Z, {
-                                      justify: u.Z.Justify.CENTER,
+                                  (0, n.jsxs)(_.Z, {
+                                      justify: _.Z.Justify.CENTER,
                                       className: S.content,
                                       children: [this.renderPrimaryAction(), this.renderSecondaryAction()]
                                   })
@@ -99,8 +99,8 @@ class I extends a.Component {
               });
     }
 }
-s.Z = c.ZP.connectStores([_.default], () => {
-    let e = _.default.getCurrentUser();
+s.Z = c.ZP.connectStores([u.default], () => {
+    let e = u.default.getCurrentUser();
     return (
         l()(null != e, 'EmailNotice: currentUser cannot be undefined'),
         {

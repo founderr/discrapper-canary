@@ -12,8 +12,8 @@ var n = t(735250),
     l = t(481060),
     c = t(921801),
     d = t(663389),
-    u = t(960412),
-    _ = t(151662),
+    _ = t(960412),
+    u = t(151662),
     E = t(930441),
     T = t(726985),
     S = t(689938),
@@ -31,16 +31,16 @@ function m(e) {
 function C() {
     let e = (0, o.e7)([d.Z], () => d.Z.getSubsection()),
         s = a.createRef(),
-        { categories: t, initialized: i } = (0, o.cj)([_.Z], () => _.Z.getEmailSettings());
+        { categories: t, initialized: i } = (0, o.cj)([u.Z], () => u.Z.getEmailSettings());
     a.useEffect(() => {
-        if (null == i) (0, u.Y7)();
+        if (null == i) (0, _.Y7)();
         else if (e === E.vG.toUpperCase()) {
             var t;
             null == s || null === (t = s.current) || void 0 === t || t.scrollIntoView(!0);
         }
     }, [i, s, e]);
     let C = E.M0.reduce((e, s) => e || !!t[s], !1),
-        g = {
+        A = {
             [E.$Z.COMMUNICATION]: T.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
             [E.$Z.SOCIAL]: T.s6.NOTIFICATIONS_EMAILS_SOCIAL,
             [E.$Z.UPDATES_AND_ANNOUNCEMENTS]: T.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
@@ -59,7 +59,7 @@ function C() {
                       children: [
                           E.Od.map((e) => {
                               let { category: s, label: a, subLabel: i } = e,
-                                  r = g[s],
+                                  r = A[s],
                                   o = (0, n.jsx)(
                                       m,
                                       {
@@ -68,7 +68,7 @@ function C() {
                                           enabled: t[s],
                                           onChange: (e) => {
                                               var t, n;
-                                              return (t = s), (n = e), void (0, u.pR)(t, n);
+                                              return (t = s), (n = e), void (0, _.pR)(t, n);
                                           }
                                       },
                                       a()
@@ -92,7 +92,7 @@ function C() {
                                       disabled: !C,
                                       look: l.ButtonLooks.LINK,
                                       color: l.ButtonColors.LINK,
-                                      onClick: u.oc,
+                                      onClick: _.oc,
                                       children: S.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING
                                   }),
                                   (0, n.jsx)(l.FormText, {

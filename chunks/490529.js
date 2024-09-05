@@ -3,7 +3,7 @@ t.d(s, {
         return E;
     },
     tI: function () {
-        return _;
+        return u;
     },
     uj: function () {
         return o;
@@ -44,9 +44,9 @@ let o = () => {
         [r.Z.Messages.HYPESQUAD_QUESTION_13_RESPONSE_A, r.Z.Messages.HYPESQUAD_QUESTION_13_RESPONSE_B, r.Z.Messages.HYPESQUAD_QUESTION_13_RESPONSE_C, r.Z.Messages.HYPESQUAD_QUESTION_13_RESPONSE_D],
         [r.Z.Messages.HYPESQUAD_QUESTION_14_RESPONSE_A, r.Z.Messages.HYPESQUAD_QUESTION_14_RESPONSE_B, r.Z.Messages.HYPESQUAD_QUESTION_14_RESPONSE_C, r.Z.Messages.HYPESQUAD_QUESTION_14_RESPONSE_D]
     ],
-    u = () => [i.gkr.HOUSE_1, i.gkr.HOUSE_2, i.gkr.HOUSE_3, i.jsM],
-    _ = () => {
-        let e = u(),
+    _ = () => [i.gkr.HOUSE_1, i.gkr.HOUSE_2, i.gkr.HOUSE_3, i.jsM],
+    u = () => {
+        let e = _(),
             s = c(),
             t = d();
         return l().map((n) => {

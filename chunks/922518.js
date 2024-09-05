@@ -6,14 +6,14 @@ var n,
     l = t(570140),
     c = t(594174),
     d = t(74538),
-    u = t(981631);
-let _ = !1,
+    _ = t(981631);
+let u = !1,
     E = !1,
     T = !1;
 class S extends (r = o.ZP.Store) {
     shouldDisplayUpsell() {
         let e = c.default.getCurrentUser();
-        return _ && !(0, d.I5)(e) && !T && !E;
+        return u && !(0, d.I5)(e) && !T && !E;
     }
 }
 (i = 'CashAppPayAwarenessStore'),
@@ -34,9 +34,9 @@ class S extends (r = o.ZP.Store) {
         },
         BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: function (e) {
             var s;
-            _ = (null == e ? void 0 : null === (s = e.paymentSource) || void 0 === s ? void 0 : s.type) === u.HeQ.CASH_APP;
+            u = (null == e ? void 0 : null === (s = e.paymentSource) || void 0 === s ? void 0 : s.type) === _.HeQ.CASH_APP;
         },
         LOGOUT: function () {
-            (_ = !1), (T = !1), (E = !1);
+            (u = !1), (T = !1), (E = !1);
         }
     }));

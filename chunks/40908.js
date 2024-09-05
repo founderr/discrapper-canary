@@ -11,9 +11,9 @@ let r = [];
 function o(e) {
     let { visible: s, autocompleterResultTypes: t, autocompleterOptions: o, autocompleterBeforeCreateSearchContext: l } = e,
         [c, d] = n.useState(''),
-        [u, _] = n.useState(r),
+        [_, u] = n.useState(r),
         E = n.useCallback((e, s) => {
-            '' === (s = s.trim()).trim() ? _(r) : _(e);
+            '' === (s = s.trim()).trim() ? u(r) : u(e);
         }, []);
     n.useEffect(
         () =>
@@ -28,7 +28,7 @@ function o(e) {
             s ? (null == l || l(T), T.createSearchContext()) : (T.clean(), d(''));
         }, [s, T, l]),
         {
-            queryResults: u,
+            queryResults: _,
             query: c,
             updateQuery: n.useCallback(
                 (e) => {
