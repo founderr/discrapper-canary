@@ -263,12 +263,13 @@ t.default = function (e) {
         { enabled: eH } = (0, P.Z)({ location: 'CollectiblesShop' }),
         eD = (0, c.e7)([b.Z], () => b.Z.gradientPreset),
         eF = !(0, c.e7)([T.Z], () => (0, f.wj)(T.Z.theme)) && null == eD,
-        eU = r.useCallback(
+        { reducedMotion: eU } = r.useContext(p.AccessibilityPreferencesContext),
+        eG = r.useCallback(
             async (e, n, a) => {
-                let r = a && !t;
+                let r = a && !t && !eU.enabled;
                 eh(e), em(n), await X(r), n && eM(n);
             },
-            [X, eM, t]
+            [X, eM, t, eU]
         );
     return (0, a.jsxs)(_.Gt, {
         value: C,
@@ -302,7 +303,7 @@ t.default = function (e) {
                                         transparent: !0
                                     }),
                                     (0, a.jsx)(en.Z, {
-                                        handleTransition: eU,
+                                        handleTransition: eG,
                                         numVisibleItems: ef
                                     })
                                 ]
