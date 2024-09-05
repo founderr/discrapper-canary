@@ -16,8 +16,8 @@ var a = t(990547),
     _ = t(493544),
     E = t(579806),
     T = t(782568),
-    I = t(758182),
-    S = t(163379),
+    S = t(758182),
+    I = t(163379),
     N = t(703288),
     m = t(574755),
     C = t(377171),
@@ -70,8 +70,8 @@ var a = t(990547),
     e_ = t(649157),
     eE = t(593648),
     eT = t(327885),
-    eI = t(595242),
-    eS = t(301121),
+    eS = t(595242),
+    eI = t(301121),
     eN = t(757151),
     em = t(463153),
     eC = t(36192),
@@ -260,7 +260,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 label: eZ.Z.Messages.PRIVACY_AND_SAFETY,
                 searchableTitles: [eZ.Z.Messages.PRIVACY_AND_SAFETY],
                 ariaLabel: eZ.Z.Messages.PRIVACY_AND_SAFETY,
-                element: eS.Z,
+                element: eI.Z,
                 predicate: () => !e1
             },
             [eD.s6.PRIVACY_AND_SAFETY_V2]: {
@@ -315,6 +315,11 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.PRIVACY_AND_SAFETY_V2,
                 searchableTitles: [eZ.Z.Messages.FRIEND_REQUESTS],
                 parent: eD.s6.PRIVACY_AND_SAFETY_FRIEND_REQUESTS_CATEGORY
+            },
+            [eD.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eZ.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_DISCORD_DATA_USAGE],
+                parent: eD.s6.PRIVACY_AND_SAFETY_DATA_PRIVACY
             },
             [eD.s6.PRIVACY_SENSITIVE_MEDIA]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
@@ -402,6 +407,11 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eZ.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE],
                 parent: eD.s6.PRIVACY_DATA_PRIVACY
+            },
+            [eD.s6.PRIVACY_DATA_IMPROVE_DISCORD_V2]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eZ.Z.Messages.DATA_PRIVACY_CONTROLS_USAGE_STATISTICS_TITLE],
+                parent: eD.s6.PRIVACY_AND_SAFETY_DISCORD_DATA_USAGE_CATEGORY
             },
             [eD.s6.PRIVACY_DATA_PERSONALIZE]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
@@ -544,7 +554,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.GUILD_BOOSTING,
                 searchableTitles: [eZ.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE],
                 label: eZ.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_TITLE,
-                element: eI.Z
+                element: eS.Z
             },
             [eD.s6.SUBSCRIPTIONS]: {
                 section: eP.oAB.SUBSCRIPTIONS,
@@ -1272,7 +1282,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [eD.s6.CHANGELOG]: {
                 section: 'changelog',
-                onClick: () => (0, S.Z)(!0),
+                onClick: () => (0, I.Z)(!0),
                 searchableTitles: [eZ.Z.Messages.WHATS_NEW],
                 label: eZ.Z.Messages.WHATS_NEW
             },
@@ -1432,7 +1442,7 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eP.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Clear Caches'],
                 parent: eD.s6.DEVELOPER_OPTIONS,
-                predicate: () => I.q && b.Z.isDeveloper
+                predicate: () => S.q && b.Z.isDeveloper
             },
             [eD.s6.DEVELOPER_OPTIONS_CRASHES]: {
                 section: eP.oAB.DEVELOPER_OPTIONS,
