@@ -38,10 +38,7 @@ function f(e) {
         R = r.useRef(null);
     return (
         r.useEffect(() => {
-            if (null != S && null != I && null == R.current) {
-                _(!0);
-                R.current = setTimeout(() => g(n, I, t, S), 300);
-            }
+            null != S && null != I && null == R.current && (_(!0), (R.current = setTimeout(() => g(n, I, t, S), 0)));
             let e = R.current;
             return () => {
                 null != e && clearTimeout(e);
