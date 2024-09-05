@@ -4789,6 +4789,7 @@ let ie = Object.freeze({
     (nf.CHANNEL_LIST_END_REACHED = 'channel_list_end_reached'),
     (nf.COLLECTIBLES_SHOP_VIEWED = 'collectibles_shop_viewed'),
     (nf.COLLECTIBLES_SHOP_SCROLLED = 'collectibles_shop_scrolled'),
+    (nf.COLLECTIBLES_EXPIRY_MODAL_CLOSED = 'collectibles_expiry_modal_closed'),
     (nf.SLIDE_CAROUSEL_ITEM_VIEWED = 'slide_carousel_item_viewed'),
     (nf.SLIDE_CAROUSEL_PAGINATION_CLICKED = 'slide_carousel_pagination_clicked'),
     (nf.SHOP_HEADER_CAROUSEL_CTA_CLICKED = 'shop_header_carousel_cta_clicked'),

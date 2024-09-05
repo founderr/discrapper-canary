@@ -1,131 +1,143 @@
 e.r(t),
     e.d(t, {
         default: function () {
-            return m;
+            return h;
         }
     });
 var s = e(735250),
-    o = e(470079),
-    r = e(990547),
+    r = e(470079),
+    o = e(990547),
     n = e(481060),
     c = e(37234),
     i = e(809206),
     d = e(100527),
     l = e(906732),
-    E = e(213609),
-    _ = e(1585),
+    _ = e(213609),
+    E = e(1585),
     L = e(313201),
-    A = e(300284),
+    u = e(300284),
+    A = e(626135),
     v = e(768581),
-    u = e(335131),
-    C = e(689938),
-    f = e(965302),
-    S = e(749423);
-function B() {
+    C = e(335131),
+    f = e(981631),
+    S = e(689938),
+    B = e(965302),
+    D = e(749423);
+function I() {
     let a = (0, v.NZ)({
             avatarDecoration: { asset: 'a_49c479e15533fb4c02eb320c9c137433' },
             canAnimate: !1,
-            size: (0, _.y9)(n.AvatarSizes.SIZE_120)
+            size: (0, E.y9)(n.AvatarSizes.SIZE_120)
         }),
         t = (0, v.NZ)({
             avatarDecoration: { asset: 'a_c3cffc19e9784f7d0b005eecdf1b566e' },
             canAnimate: !1,
-            size: (0, _.y9)(n.AvatarSizes.SIZE_120)
+            size: (0, E.y9)(n.AvatarSizes.SIZE_120)
         }),
         e = (0, v.NZ)({
             avatarDecoration: { asset: 'a_d72066b8cecbadd9fc951913ebcc384f' },
             canAnimate: !1,
-            size: (0, _.y9)(n.AvatarSizes.SIZE_120)
+            size: (0, E.y9)(n.AvatarSizes.SIZE_120)
         });
     return (0, s.jsxs)('div', {
-        className: f.avatarBackground,
+        className: B.avatarBackground,
         children: [
             (0, s.jsx)(n.Avatar, {
                 size: n.AvatarSizes.SIZE_120,
-                src: S,
+                src: D,
                 avatarDecoration: a,
-                className: f.leftAvatar,
+                className: B.leftAvatar,
                 'aria-hidden': !0
             }),
             (0, s.jsx)(n.Avatar, {
                 size: n.AvatarSizes.SIZE_120,
-                src: S,
+                src: D,
                 avatarDecoration: t,
-                className: f.centerAvatar,
+                className: B.centerAvatar,
                 'aria-hidden': !0
             }),
             (0, s.jsx)(n.Avatar, {
                 size: n.AvatarSizes.SIZE_120,
-                src: S,
+                src: D,
                 avatarDecoration: e,
-                className: f.rightAvatar,
+                className: B.rightAvatar,
                 'aria-hidden': !0
             })
         ]
     });
 }
-function m(a) {
+function h(a) {
     let { transitionState: t, onClose: e } = a,
         v = (0, L.Dt)(),
-        { analyticsLocations: S } = (0, l.ZP)(d.Z.COLLECTIBLES_EXPIRY_MODAL),
-        m = (0, A.Z)({ analyticsLocations: S });
+        { analyticsLocations: D } = (0, l.ZP)(d.Z.COLLECTIBLES_EXPIRY_MODAL),
+        h = (0, u.Z)({ analyticsLocations: D }),
+        m = r.useRef(null);
     return (
-        o.useEffect(() => {
-            (0, i.Mn)({ avatarDecoration: null });
-        }, []),
-        (0, E.Z)({
-            type: r.ImpressionTypes.MODAL,
-            name: r.ImpressionNames.COLLECTIBLES_EXPIRY_MODAL,
-            properties: { location_stack: S }
+        r.useEffect(
+            () => (
+                (0, i.Mn)({ avatarDecoration: null }),
+                () => {
+                    A.default.track(f.rMx.COLLECTIBLES_EXPIRY_MODAL_CLOSED, { reason: m.current });
+                }
+            ),
+            []
+        ),
+        (0, _.Z)({
+            type: o.ImpressionTypes.MODAL,
+            name: o.ImpressionNames.COLLECTIBLES_EXPIRY_MODAL,
+            properties: { location_stack: D }
         }),
         (0, s.jsxs)(n.ModalRoot, {
             transitionState: t,
             'aria-labelledby': v,
-            className: f.container,
+            className: B.container,
             children: [
-                (0, s.jsx)(B, {}),
+                (0, s.jsx)(I, {}),
                 (0, s.jsx)(n.ModalCloseButton, {
-                    onClick: e,
-                    className: f.closeButton
+                    onClick: () => {
+                        (m.current = 'tap_close_button'), e();
+                    },
+                    className: B.closeButton
                 }),
                 (0, s.jsxs)(n.ModalContent, {
-                    className: f.content,
+                    className: B.content,
                     children: [
                         (0, s.jsx)(n.Heading, {
                             variant: 'heading-xl/bold',
-                            className: f.title,
-                            children: C.Z.Messages.COLLECTIBLES_EPHEMERAL_DECO_UPSELL_HEADER_2
+                            className: B.title,
+                            children: S.Z.Messages.COLLECTIBLES_EPHEMERAL_DECO_UPSELL_HEADER_2
                         }),
                         (0, s.jsx)(n.Text, {
                             variant: 'text-sm/medium',
-                            className: f.body,
-                            children: C.Z.Messages.COLLECTIBLES_EPHEMERAL_DECO_UPSELL_BODY
+                            className: B.body,
+                            children: S.Z.Messages.COLLECTIBLES_EPHEMERAL_DECO_UPSELL_BODY
                         })
                     ]
                 }),
                 (0, s.jsxs)(n.ModalFooter, {
-                    className: f.footer,
+                    className: B.footer,
                     children: [
                         (0, s.jsx)(n.Button, {
                             look: n.Button.Looks.LINK,
                             color: n.Button.Colors.BRAND,
                             onClick: () => {
-                                e(), (0, c.xf)(), m(), (0, _.ps)({ analyticsLocations: S });
+                                (m.current = 'change_avatar_decoration'), e(), (0, c.xf)(), h(), (0, E.ps)({ analyticsLocations: D });
                             },
-                            children: C.Z.Messages.COLLECTIBLES_EPHEMERAL_DECO_UPSELL_CTA_2
+                            children: S.Z.Messages.COLLECTIBLES_EPHEMERAL_DECO_UPSELL_CTA_2
                         }),
                         (0, s.jsx)(n.Button, {
                             look: n.Button.Looks.FILLED,
                             color: n.Button.Colors.BRAND,
                             onClick: () => {
-                                e(),
-                                    (0, u.mK)({
-                                        analyticsLocations: S,
+                                (m.current = 'go_to_shop'),
+                                    e(),
+                                    (0, C.mK)({
+                                        analyticsLocations: D,
                                         analyticsSource: d.Z.COLLECTIBLES_EXPIRY_MODAL,
                                         openInLayer: !1
                                     });
                             },
-                            children: C.Z.Messages.COLLECTIBLES_EPHEMERAL_DECO_UPSELL_CTA_1
+                            children: S.Z.Messages.COLLECTIBLES_EPHEMERAL_DECO_UPSELL_CTA_1
                         })
                     ]
                 })
