@@ -40,6 +40,14 @@ class p extends (r = o.ZP.Store) {
     getSavedMessages() {
         return _.values(d._l.ALL);
     }
+    getSavedMessage(e, t) {
+        return _.get(
+            f({
+                channelId: e,
+                messageId: t
+            })
+        );
+    }
     getMessageBookmarks() {
         return _.values(d._l.BOOKMARK);
     }
