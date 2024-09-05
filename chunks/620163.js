@@ -792,9 +792,8 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
             },
             [eD.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION]: {
                 section: eP.oAB.VOICE,
-                searchableTitles: [eZ.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_H264],
-                parent: eD.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
-                predicate: () => v.Z.supports(eb.AN.OPEN_H264)
+                searchableTitles: [eZ.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_ENCODING],
+                parent: eD.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO
             },
             [eD.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS]: {
                 section: eP.oAB.VOICE,

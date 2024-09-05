@@ -37,9 +37,9 @@ function h() {
 }
 function O() {
     let e = (0, o.e7)([T.Z], () => T.Z.theme),
-        { openH264: s, hardwareH264: t } = (0, o.cj)([E.Z], () => ({
+        { openH264: s, hardwareEncoding: t } = (0, o.cj)([E.Z], () => ({
             openH264: E.Z.getOpenH264(),
-            hardwareH264: E.Z.getHardwareH264()
+            hardwareEncoding: E.Z.getHardwareEncoding()
         })),
         i = a.useRef(null);
     return (
@@ -77,7 +77,6 @@ function O() {
                                     value: s,
                                     onChange: (e) => d.Z.setOpenH264(e),
                                     disabled: !1,
-                                    note: m.Z.Messages.FORM_HELP_OPEN_H264,
                                     children: m.Z.Messages.USER_SETTINGS_VOICE_OPEN_H264
                                 })
                             }),
@@ -90,9 +89,9 @@ function O() {
                                 children: (0, n.jsx)(c.FormSwitch, {
                                     className: r()(C.marginTop8, C.marginBottom20),
                                     value: t,
-                                    onChange: (e) => d.Z.setHardwareH264(e),
-                                    note: m.Z.Messages.FORM_HELP_HARDWARE_H264,
-                                    children: m.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_H264
+                                    onChange: (e) => d.Z.setHardwareEncoding(e),
+                                    note: m.Z.Messages.FORM_HELP_HARDWARE_ENCODING,
+                                    children: m.Z.Messages.USER_SETTINGS_VOICE_HARDWARE_ENCODING
                                 })
                             }),
                             (0, n.jsx)(h, {})
