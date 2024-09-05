@@ -459,6 +459,11 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eZ.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD],
                 parent: eD.s6.PRIVACY_DATA_PRIVACY
             },
+            [eD.s6.PRIVACY_DATA_REQUEST_V2]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eZ.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD],
+                parent: eD.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY
+            },
             [eD.s6.PRIVACY_STAFF_ONLY]: {
                 section: eP.oAB.PRIVACY_AND_SAFETY,
                 searchableTitles: [eZ.Z.Messages.PRIVACY_SETTINGS_STAFF_ONLY_HEADER],
@@ -526,6 +531,11 @@ let ej = () => [i.z.CLIENT_THEMES_SETTINGS_BADGE, i.z.DEKSTOP_CUSTOM_APP_ICON_BA
                     color: C.Z.BG_BRAND
                 }),
                 newIndicatorDismissibleContentTypes: [i.z.FAMILY_CENTER_NEW_BADGE]
+            },
+            [eD.s6.PRIVACY_AND_SAFETY_RECEIVE_DISCORD_DATA_CATEGORY]: {
+                section: eP.oAB.PRIVACY_AND_SAFETY_V2,
+                searchableTitles: [eZ.Z.Messages.PRIVACY_AND_SAFETY_CATEGORY_TITLE_REQUEST_DATA],
+                parent: eD.s6.PRIVACY_AND_SAFETY_DATA_PRIVACY
             },
             [eD.s6.AUTHORIZED_APPS]: {
                 section: eP.oAB.AUTHORIZED_APPS,
