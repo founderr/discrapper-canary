@@ -5899,9 +5899,50 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     color: var(--text-muted)
 }
 
-.scopes_cf14a8 {
-    border-bottom: 1px solid var(--background-modifier-accent);
-    padding-bottom: 24px
+.applicationEducation_d5a5e0 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.applicationEducation_d5a5e0:not(:first-child) {
+    padding-top: 24px
+}
+
+.applicationEducation_d5a5e0:not(:last-child) {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--background-modifier-accent)
+}
+
+.sectionLabel_d5a5e0 {
+    color: var(--header-secondary)
+}
+
+.entry_d5a5e0 {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center
+}
+
+.entryIcon_d5a5e0 {
+    width: 20px;
+    height: 20px;
+    color: var(--text-muted)
+}
+
+.entryText_d5a5e0 {
+    flex: 1;
+    color: var(--text-muted)
+}
+
+.scopes_cf14a8:not(:first-child) {
+    padding-top: 24px
+}
+
+.scopes_cf14a8:not(:last-child) {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--background-modifier-accent)
 }
 
 .scope_cf14a8 {
@@ -5932,17 +5973,24 @@ html.decorate-links .lowSaturationUnderline_c7819f {
 }
 
 .icon_cf14a8 {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     margin-right: 12px
 }
 
 .botPermissions_a06cfc {
-    border-bottom: 1px solid var(--background-modifier-accent);
-    padding: 0 0 24px;
     display: flex;
     flex-direction: column;
     gap: 24px
+}
+
+.botPermissions_a06cfc:not(:first-child) {
+    padding-top: 24px
+}
+
+.botPermissions_a06cfc:not(:last-child) {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--background-modifier-accent)
 }
 
 .permissionsList_a06cfc {
@@ -5975,11 +6023,12 @@ html.decorate-links .lowSaturationUnderline_c7819f {
     color: var(--white-500)
 }
 
-.selectorGroup_cb11e0 {
-    padding: 16px 0 24px
+.selectorGroup_cb11e0:not(:first-child) {
+    padding-top: 24px
 }
 
 .selectorGroup_cb11e0:not(:last-child) {
+    padding-bottom: 24px;
     border-bottom: 1px solid var(--background-modifier-accent)
 }
 
