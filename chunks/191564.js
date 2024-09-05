@@ -26,8 +26,8 @@ var r = n(735250),
     C = n(934261),
     x = n(52268),
     P = n(981631),
-    A = n(474936),
-    Z = n(689938),
+    Z = n(474936),
+    A = n(689938),
     T = n(118610);
 function N(e) {
     let { user: t, product: n, purchase: i, onApply: l, onClose: c, disableApplyButton: f, canUseCollectibles: m, selectedProfileEffectId: h, selectedProfileEffectItem: I, analyticsLocations: g } = e,
@@ -50,27 +50,31 @@ function N(e) {
                         look: o.Button.Looks.LINK,
                         color: o.Button.Colors.PRIMARY,
                         onClick: c,
-                        children: Z.Z.Messages.CANCEL
+                        children: A.Z.Messages.CANCEL
                     }),
                     (null != i && (!(0, u.qS)(i) || m)) || null === h
                         ? (0, r.jsx)(o.Button, {
                               onClick: l,
                               disabled: f,
-                              children: Z.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
+                              children: A.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
                           })
                         : m || !(0, u.G1)(n)
                           ? (0, r.jsx)(o.Button, {
                                 onClick: C,
-                                children: Z.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+                                children: A.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
                             })
                           : (0, r.jsx)(_.Z, {
-                                subscriptionTier: A.Si.TIER_2,
+                                subscriptionTier: Z.Si.TIER_2,
                                 showGradient: x,
-                                buttonText: v.ZP.isPremium(t) ? Z.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : x ? Z.Z.Messages.PREMIUM_UPSELL_GET_NITRO : Z.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+                                buttonText: v.ZP.isPremium(t) ? A.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : x ? A.Z.Messages.PREMIUM_UPSELL_GET_NITRO : A.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
                             })
                 ]
             }),
-            (0, r.jsx)(p.Z, { product: n })
+            (0, u.G1)(n) &&
+                (0, r.jsx)(p.Z, {
+                    product: n,
+                    onSecondaryClick: c
+                })
         ]
     });
 }
@@ -82,7 +86,7 @@ function S(e) {
             return [e.purchased, e.shopPreviews];
         }, [i, l]),
         [I, g] = s.useState(() => (null != c ? c : void 0 !== E ? E : null == d ? null : null != d ? d : null)),
-        [P, A] = s.useMemo(() => {
+        [P, Z] = s.useMemo(() => {
             var e;
             let t = p.find((e) => (null == e ? void 0 : e.id) === I),
                 n = null != t || null === I;
@@ -91,8 +95,8 @@ function S(e) {
         { product: S, purchase: j } = (0, f.Z)(null == P ? void 0 : P.skuId),
         R = s.useRef(null),
         M = v.ZP.canUseCollectibles(t),
-        O = I === (void 0 === E ? (null != d ? d : null) : E),
-        L = s.useCallback(
+        L = I === (void 0 === E ? (null != d ? d : null) : E),
+        O = s.useCallback(
             (e) => {
                 g(e);
             },
@@ -106,7 +110,7 @@ function S(e) {
                 children: [
                     (0, r.jsx)(o.Heading, {
                         variant: 'heading-lg/semibold',
-                        children: Z.Z.Messages.PROFILE_EFFECT_MODAL_HEADER
+                        children: A.Z.Messages.PROFILE_EFFECT_MODAL_HEADER
                     }),
                     (0, r.jsx)(o.ModalCloseButton, {
                         className: T.modalCloseButton,
@@ -122,12 +126,12 @@ function S(e) {
                         guild: n,
                         pendingProfileEffect: I,
                         selectedProfileEffectRef: R,
-                        onSelect: L,
+                        onSelect: O,
                         onClose: a
                     }),
                     (0, r.jsx)(C.Z, {
                         user: t,
-                        canApplySelectedChange: A,
+                        canApplySelectedChange: Z,
                         pendingProfileEffectRecord: P,
                         product: S,
                         purchase: j,
@@ -146,7 +150,7 @@ function S(e) {
                 canUseCollectibles: M,
                 selectedProfileEffectId: I,
                 selectedProfileEffectItem: P,
-                disableApplyButton: O,
+                disableApplyButton: L,
                 analyticsLocations: m
             })
         ]
@@ -157,7 +161,7 @@ function j(e) {
         { isFetching: p, categories: _, purchases: v } = (0, m.Z)(),
         C = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
         { analyticsLocations: x } = (0, c.ZP)(n, a.Z.EDIT_PROFILE_EFFECT_MODAL),
-        A = (0, h.Kg)(C, f);
+        Z = (0, h.Kg)(C, f);
     return (
         s.useEffect(() => {
             g.default.track(P.rMx.OPEN_MODAL, {
@@ -191,7 +195,7 @@ function j(e) {
                           categories: _,
                           purchases: v,
                           initialSelectedProfileEffectId: u,
-                          currentSavedEffectId: A,
+                          currentSavedEffectId: Z,
                           onClose: E,
                           analyticsLocations: x
                       })

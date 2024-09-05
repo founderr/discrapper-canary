@@ -1,29 +1,57 @@
 n.d(t, {
     Z: function () {
-        return u;
+        return _;
     }
 });
-var r = n(735250);
-n(470079);
-var i = n(481060),
-    a = n(884697),
-    s = n(436774),
-    o = n(81245),
-    l = n(467154);
-function u(e) {
-    let { product: t } = e;
-    return (0, o.Mu)('PremiumUserProfileDecorationUpsell') && (0, a.G1)(t)
+var r = n(735250),
+    i = n(470079),
+    a = n(979554),
+    s = n(481060),
+    o = n(436774),
+    l = n(81245),
+    u = n(981631),
+    c = n(689938),
+    d = n(467154);
+function _(e) {
+    let { product: t, onSecondaryClick: _ } = e,
+        E = i.useCallback(() => {
+            if (null != t)
+                (0, s.openModalLazy)(async () => {
+                    let { default: e } = await n.e('43360').then(n.bind(n, 73415));
+                    return (n) =>
+                        (0, r.jsx)(e, {
+                            collectableType: null == t ? void 0 : t.type,
+                            analyticsSource: u.Sbl.PROFILE_PANEL,
+                            analyticsLocation: {
+                                section: u.jXE.USER_PROFILE,
+                                object: u.qAy.BUTTON_CTA
+                            },
+                            onSecondaryClick: _,
+                            ...n
+                        });
+                });
+        }, [t, _]),
+        f = i.useMemo(() => {
+            switch (null == t ? void 0 : t.type) {
+                case a.Z.AVATAR_DECORATION:
+                    return c.Z.Messages.PREMIUM_UPSELL_PROFILE_AVATAR_DECO_INLINE_UPSELL.format({ onClick: E });
+                case a.Z.PROFILE_EFFECT:
+                    return c.Z.Messages.PREMIUM_UPSELL_PROFILE_EFFECT_INLINE_UPSELL.format({ onClick: E });
+            }
+        }, [null == t ? void 0 : t.type, E]);
+    return (0, l.Mu)('PremiumUserProfileDecorationUpsell')
         ? (0, r.jsxs)('div', {
-              className: l.nitroUpsellContainer,
+              className: d.nitroUpsellContainer,
               children: [
-                  (0, r.jsx)(i.NitroWheelIcon, {
-                      className: l.nitroWheel,
+                  (0, r.jsx)(s.NitroWheelIcon, {
+                      className: d.nitroWheel,
                       size: 'md',
-                      color: s.JX.PREMIUM_TIER_2
+                      color: o.JX.PREMIUM_TIER_2
                   }),
-                  (0, r.jsx)(i.Text, {
+                  (0, r.jsx)(s.Text, {
+                      className: d.nitroText,
                       variant: 'text-md/medium',
-                      children: 'Use decos exclusive to Nitro'
+                      children: f
                   })
               ]
           })

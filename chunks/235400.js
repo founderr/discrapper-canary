@@ -109,30 +109,37 @@ function L(e) {
             (0, r.jsxs)(o.ModalFooter, {
                 className: y.modalFooter,
                 children: [
-                    (null != w && (!(0, d.qS)(w) || x)) || null === M
-                        ? (0, r.jsx)(o.Button, {
-                              onClick: F,
-                              disabled: B,
-                              children: C.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
-                          })
-                        : null == w && (x || !(0, d.G1)(U))
-                          ? (0, r.jsx)(o.Button, {
-                                className: y.modalFooterShopButton,
-                                onClick: () => V(null == U ? void 0 : U.skuId),
-                                children: C.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
-                            })
-                          : (0, r.jsx)(I.Z, {
-                                subscriptionTier: v.Si.TIER_2,
-                                showGradient: H,
-                                buttonText: S.ZP.isPremium(t) ? C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : H ? C.Z.Messages.PREMIUM_UPSELL_GET_NITRO : C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
-                            }),
+                    (0, r.jsx)('div', {
+                        children:
+                            (null != w && (!(0, d.qS)(w) || x)) || null === M
+                                ? (0, r.jsx)(o.Button, {
+                                      onClick: F,
+                                      disabled: B,
+                                      children: C.Z.Messages.AVATAR_DECORATION_MODAL_APPLY
+                                  })
+                                : null == w && (x || !(0, d.G1)(U))
+                                  ? (0, r.jsx)(o.Button, {
+                                        className: y.modalFooterShopButton,
+                                        onClick: () => V(null == U ? void 0 : U.skuId),
+                                        children: C.Z.Messages.COLLECTIBLES_CTA_GO_TO_SHOP
+                                    })
+                                  : (0, r.jsx)(I.Z, {
+                                        subscriptionTier: v.Si.TIER_2,
+                                        showGradient: H,
+                                        buttonText: S.ZP.isPremium(t) ? C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPGRADE_UPSELL : H ? C.Z.Messages.PREMIUM_UPSELL_GET_NITRO : C.Z.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL
+                                    })
+                    }),
                     (0, r.jsx)(o.Button, {
                         look: o.Button.Looks.LINK,
                         color: o.Button.Colors.PRIMARY,
                         onClick: u,
                         children: C.Z.Messages.CANCEL
                     }),
-                    (0, r.jsx)(p.Z, { product: U })
+                    (0, d.G1)(U) &&
+                        (0, r.jsx)(p.Z, {
+                            product: U,
+                            onSecondaryClick: u
+                        })
                 ]
             })
         ]
