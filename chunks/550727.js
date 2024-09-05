@@ -1,25 +1,30 @@
-a.d(n, {
+a.d(t, {
     B: function () {
-        return i;
+        return u;
     }
 });
-var s = a(70956),
-    t = a(689938);
-let i = [
+var n = a(913527),
+    s = a.n(n),
+    r = a(689938);
+let u = [
     {
-        duration: 30 * s.Z.Millis.MINUTE,
-        getLabel: () => t.Z.Messages.MESSAGE_REMINDERS_IN_THIRTY_MIN
+        getDueAt: () => s()().add(30, 'minutes').toDate(),
+        getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_THIRTY_MIN
     },
     {
-        duration: s.Z.Millis.HOUR,
-        getLabel: () => t.Z.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
+        getDueAt: () => s()().add(1, 'hour').toDate(),
+        getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_ONE_HOUR
     },
     {
-        duration: 2 * s.Z.Millis.HOUR,
-        getLabel: () => t.Z.Messages.MESSAGE_REMINDERS_IN_TWO_HOURS
+        getDueAt: () => s()().add(4, 'hour').toDate(),
+        getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
     },
     {
-        duration: 4 * s.Z.Millis.HOUR,
-        getLabel: () => t.Z.Messages.MESSAGE_REMINDERS_IN_FOUR_HOURS
+        getDueAt: () => s()().add(1, 'day').startOf('day').add(9, 'hours').toDate(),
+        getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_TOMORROW_MORNING
+    },
+    {
+        getDueAt: () => s()().day(8).startOf('day').add(9, 'hours').toDate(),
+        getLabel: () => r.Z.Messages.MESSAGE_REMINDERS_NEXT_WEEK
     }
 ];
