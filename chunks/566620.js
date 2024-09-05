@@ -330,12 +330,17 @@ async function $() {
                 query: { with_team_applications: !0 },
                 oldFormErrors: !0
             }),
-            t = e.body.applications.map((e) => A.Z.createFromServer(e));
+            t = e.body.applications,
+            n = t.map((e) => A.Z.createFromServer(e));
         a.Z.dispatch({
             type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS',
-            applications: t,
+            applications: n,
             assets: e.body.assets
-        });
+        }),
+            a.Z.dispatch({
+                type: 'APPLICATIONS_FETCH_SUCCESS',
+                applications: t
+            });
     } catch (e) {
         a.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL' });
     }
