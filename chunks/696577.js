@@ -89,8 +89,7 @@ function p(e) {
                         hovered: e,
                         showAccountIdentifier: !0,
                         status: A,
-                        subText: v,
-                        className: g.userInfo
+                        subText: v
                     }),
                     (0, i.jsx)('div', {
                         className: g.actions,

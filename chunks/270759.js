@@ -108,8 +108,7 @@ t.Z = function (e) {
                                             b > 0
                                                 ? (0, i.jsx)(d.NumberBadge, {
                                                       count: b,
-                                                      className: R.badge,
-                                                      style: { paddingRight: 0 }
+                                                      className: R.badge
                                                   })
                                                 : null
                                         ]
@@ -123,8 +122,7 @@ t.Z = function (e) {
                                                   Z.Z.Messages.FRIENDS_SECTION_SUGGESTIONS,
                                                   (0, i.jsx)(d.NumberBadge, {
                                                       count: P,
-                                                      className: R.badge,
-                                                      style: { paddingRight: 0 }
+                                                      className: R.badge
                                                   })
                                               ]
                                           })
