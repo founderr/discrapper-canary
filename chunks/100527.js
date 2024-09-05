@@ -261,6 +261,7 @@ var n, r;
     (r.MESSAGE_LONG_PRESS_MENU = 'message long press menu'),
     (r.CHANNEL_LONG_PRESS_MENU = 'channel long press menu'),
     (r.COLLECTIBLES_SHOP = 'collectibles shop'),
+    (r.COLLECTIBLES_SHOP_HOME_SCREEN = 'collectibles shop home screen'),
     (r.COLLECTIBLES_SHOP_FULLSCREEN = 'collectibles shop fullscreen'),
     (r.COLLECTIBLES_SHOP_INDEX_PAGE = 'collectibles shop index page'),
     (r.COLLECTIBLES_SHOP_CARD = 'collectibles shop card'),
