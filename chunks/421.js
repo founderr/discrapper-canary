@@ -8,8 +8,8 @@ var a = n(735250),
     i = n(470079),
     l = n(399606),
     s = n(481060),
-    r = n(100527),
-    o = n(906732),
+    o = n(100527),
+    r = n(906732),
     c = n(895924),
     d = n(70097),
     u = n(592125),
@@ -17,19 +17,19 @@ var a = n(735250),
     m = n(122613),
     v = n(678173),
     p = n(636508),
-    x = n(696068),
-    I = n(361213),
+    I = n(696068),
+    x = n(361213),
     f = n(778569),
     _ = n(182906),
-    C = n(412019),
+    T = n(412019),
     h = n(431136),
-    T = n(226799),
+    C = n(226799),
     E = n(689938),
     S = n(806384);
 function N(e) {
     var t;
     let { applicationId: n, guildId: l, channelId: c, onActivityLaunch: u } = e,
-        { analyticsLocations: m } = (0, o.ZP)(r.Z.ACTIVITY_SHELF_ACTIVITY_DETAILS);
+        { analyticsLocations: m } = (0, r.ZP)(o.Z.ACTIVITY_SHELF_ACTIVITY_DETAILS);
     i.useEffect(() => {
         (0, g.w1)({ guildId: l });
     }, [l]);
@@ -37,12 +37,12 @@ function N(e) {
             applicationId: null != n ? n : '',
             size: 2048
         }),
-        x = (0, v.T)(null != l ? l : null, n);
-    if (null == x) return null;
-    let _ = null != x.activity.activity_preview_video_asset_id ? (0, I.Z)(n, x.activity.activity_preview_video_asset_id) : null,
-        C = T.o[n],
-        h = (null == C ? void 0 : C.playersSuggestionMin) != null && (null == C ? void 0 : C.playersSuggestionMax) != null ? ''.concat(C.playersSuggestionMin, ' - ').concat(C.playersSuggestionMax) : void 0;
-    return (0, a.jsx)(o.Gt, {
+        I = (0, v.T)(null != l ? l : null, n);
+    if (null == I) return null;
+    let _ = null != I.activity.activity_preview_video_asset_id ? (0, x.Z)(n, I.activity.activity_preview_video_asset_id) : null,
+        T = C.o[n],
+        h = (null == T ? void 0 : T.playersSuggestionMin) != null && (null == T ? void 0 : T.playersSuggestionMax) != null ? ''.concat(T.playersSuggestionMin, ' - ').concat(T.playersSuggestionMax) : void 0;
+    return (0, a.jsx)(r.Gt, {
         value: m,
         children: (0, a.jsx)('div', {
             className: S.scrollContainer,
@@ -52,7 +52,7 @@ function N(e) {
                     (0, a.jsx)('div', {
                         className: S.launcherOuterContainer,
                         children: (0, a.jsx)(b, {
-                            activityItem: x,
+                            activityItem: I,
                             onLaunch: u,
                             channelId: c
                         })
@@ -79,7 +79,7 @@ function N(e) {
                                         className: S.detailsTitle,
                                         children: (0, a.jsx)(s.Heading, {
                                             variant: 'heading-xxl/bold',
-                                            children: x.application.name
+                                            children: I.application.name
                                         })
                                     }),
                                     (0, a.jsxs)('div', {
@@ -101,7 +101,7 @@ function N(e) {
                                                       ]
                                                   })
                                                 : null,
-                                            (null == C ? void 0 : C.timeSuggestionMinutes) != null
+                                            (null == T ? void 0 : T.timeSuggestionMinutes) != null
                                                 ? (0, a.jsxs)('div', {
                                                       className: S.detailItem,
                                                       children: [
@@ -112,7 +112,7 @@ function N(e) {
                                                           (0, a.jsx)(s.Text, {
                                                               variant: 'text-xs/semibold',
                                                               className: S.detailItemText,
-                                                              children: E.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({ nMinutes: C.timeSuggestionMinutes })
+                                                              children: E.Z.Messages.EMBEDDED_ACTIVITIES_NUMBER_OF_MINUTES.format({ nMinutes: T.timeSuggestionMinutes })
                                                           })
                                                       ]
                                                   })
@@ -127,7 +127,7 @@ function N(e) {
                                                     (0, a.jsx)(s.Text, {
                                                         variant: 'text-xs/semibold',
                                                         className: S.detailItemText,
-                                                        children: x.application.tags.slice(0, 3).join(', ')
+                                                        children: I.application.tags.slice(0, 3).join(', ')
                                                     })
                                                 ]
                                             })
@@ -138,17 +138,17 @@ function N(e) {
                             (0, a.jsx)(s.Heading, {
                                 variant: 'heading-lg/medium',
                                 className: S.detailsDescription,
-                                children: x.application.description
+                                children: I.application.description
                             }),
                             (0, a.jsx)('div', { className: S.divider }),
                             (0, a.jsx)('div', {
                                 className: S.imagesContainer,
-                                children: (null !== (t = null == C ? void 0 : C.gameplayImageUrls) && void 0 !== t ? t : []).map((e) =>
+                                children: (null !== (t = null == T ? void 0 : T.gameplayImageUrls) && void 0 !== t ? t : []).map((e) =>
                                     (0, a.jsx)(
                                         'img',
                                         {
                                             src: e,
-                                            alt: E.Z.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({ activityName: x.application.name }),
+                                            alt: E.Z.Messages.EMBEDDED_ACTIVITIES_GAMEPLAY_ALT.format({ activityName: I.application.name }),
                                             className: S.activityImage
                                         },
                                         e
@@ -163,36 +163,36 @@ function N(e) {
     });
 }
 function b(e) {
-    var t, r;
+    var t, o;
     let { activityItem: d, onLaunch: g, channelId: v } = e,
-        I = (0, f.Z)({
+        x = (0, f.Z)({
             applicationId: d.application.id,
             size: 2048
         }),
-        { analyticsLocations: T } = (0, o.ZP)(),
+        { analyticsLocations: C } = (0, r.ZP)(),
         [N, b] = i.useState(null !== (t = (0, p.$)({ allowGdmActivityChannelSuggestion: !0 })) && void 0 !== t ? t : void 0),
         [j, A] = i.useState(
             null !==
-                (r = (0, x.d)({
+                (o = (0, I.d)({
                     guildId: N,
                     allowGdmActivityChannelSuggestion: !0
-                })) && void 0 !== r
-                ? r
+                })) && void 0 !== o
+                ? o
                 : void 0
         ),
         M = (0, l.e7)([u.Z], () => u.Z.getChannel(j), [j]),
         y = (0, p.W)(),
-        Z = (0, x.F)(N),
+        Z = (0, I.F)(N),
         D = i.useCallback(async () => {
             var e;
             if (null != j)
                 await (0, m.Z)({
                     targetApplicationId: null == d ? void 0 : null === (e = d.application) || void 0 === e ? void 0 : e.id,
                     channelId: j,
-                    analyticsLocations: T,
+                    analyticsLocations: C,
                     commandOrigin: c.bB.APPLICATION_LAUNCHER
                 }).then(g);
-        }, [d, T, g, j]),
+        }, [d, C, g, j]),
         L = i.useCallback(() => {
             (0, s.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([n.e('60133'), n.e('79329')]).then(n.bind(n, 827940));
@@ -200,17 +200,17 @@ function b(e) {
                     (0, a.jsx)(e, {
                         activityItem: d,
                         ...t,
-                        analyticsLocations: T
+                        analyticsLocations: C
                     });
             });
-        }, [d, T]),
+        }, [d, C]),
         O = null == M || (null != M.guild_id && !(null != N && null != j && y.some((e) => e.value === N) && Z.some((e) => e.value.channel.id === j)) && !0);
     return (0, a.jsxs)('div', {
         className: S.launcherInnerContainer,
         children: [
             (0, a.jsx)(_.Z, {
                 applicationName: d.application.name,
-                imageBackground: I,
+                imageBackground: x,
                 imageClassName: S.launchImage,
                 imageNotFoundClassName: S.brokenLaunchImage
             }),
@@ -236,7 +236,7 @@ function b(e) {
                               isSelected: (e) => e === N,
                               select: (e) => {
                                   var t;
-                                  b(e), A(null !== (t = (0, x.d)({ guildId: e })) && void 0 !== t ? t : void 0);
+                                  b(e), A(null !== (t = (0, I.d)({ guildId: e })) && void 0 !== t ? t : void 0);
                               },
                               serialize: (e) => e
                           }),
@@ -260,7 +260,7 @@ function b(e) {
                                   let e = Z.find((e) => e.value.channel.id === j);
                                   return null == e
                                       ? null
-                                      : (0, a.jsx)(C.O, {
+                                      : (0, a.jsx)(T.O, {
                                             channel: e.value.channel,
                                             users: e.value.users
                                         });
@@ -269,7 +269,7 @@ function b(e) {
                                   let {
                                       value: { channel: t, users: n }
                                   } = e;
-                                  return (0, a.jsx)(C.O, {
+                                  return (0, a.jsx)(T.O, {
                                       channel: t,
                                       users: n
                                   });

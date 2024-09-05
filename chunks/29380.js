@@ -26,15 +26,15 @@ var i = t(735250),
     v = t(872674);
 function I(e) {
     let { channel: n, application: t, sectionName: I, primaryEntryPointCommand: g, buttonSize: P = o.ButtonSizes.MEDIUM } = e,
-        L = a.useId(),
-        S = a.useCallback(() => {
+        S = a.useId(),
+        b = a.useCallback(() => {
             C.y(h.ti.ACTIVITY);
         }, []),
-        { submitting: b, wasSubmitting: R } = (0, A.Z)({
+        { submitting: L, wasSubmitting: R } = (0, A.Z)({
             applicationId: t.id,
             channelId: n.id,
-            launchingComponentId: L,
-            onSubmissionComplete: S
+            launchingComponentId: S,
+            onSubmissionComplete: b
         }),
         [T, M] = a.useState(!1),
         y = (0, d.Qv)({
@@ -53,10 +53,10 @@ function I(e) {
             sectionName: I,
             commandName: j,
             autoDismissOnClick: y === d.JS.LEAVE,
-            launchingComponentId: L,
-            submitting: null != R ? R : b
+            launchingComponentId: S,
+            submitting: null != R ? R : L
         }),
-        { disabled: U, reason: k } = (function (e) {
+        { disabled: U, reason: B } = (function (e) {
             let { channel: n, application: t, activityAction: i } = e,
                 a = (0, l.e7)([p.Z], () => p.Z.can(N.Pl.USE_EMBEDDED_ACTIVITIES, n)),
                 o = (0, s.KF)(n.id),
@@ -89,7 +89,7 @@ function I(e) {
     return (0, i.jsx)(o.Tooltip, {
         shouldShow: U,
         tooltipContentClassName: v.tooltipContent,
-        text: k,
+        text: B,
         children: (e) => {
             let { onClick: n, ...a } = e;
             return (0, i.jsx)(o.Button, {

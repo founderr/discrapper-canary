@@ -28,34 +28,34 @@ function I(e) {
     var n;
     let { channel: t, application: s, sectionName: c, installOnDemand: I } = e,
         P = (0, l.e7)([m.Z], () => m.Z.entrypoint()),
-        L = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
-        S = (0, _.ye)(L) ? g : A.Z,
-        b = a.useRef(null),
+        S = null !== (n = (0, u.q)(s.id === E.bi.BUILT_IN ? null : s.id)) && void 0 !== n ? n : s,
+        b = (0, _.ye)(S) ? g : A.Z,
+        L = a.useRef(null),
         [R, T] = a.useState(!1),
         { iconURL: M, name: y } = a.useMemo(
             () =>
-                (0, _.sl)(L, {
+                (0, _.sl)(S, {
                     fakeAppIconURL: v,
                     size: 84
                 }),
-            [L]
+            [S]
         );
     return (
         a.useEffect(() => {
-            I ? d.ZP.queryInstallOnDemandApp(L.id, t.id) : d.ZP.maybeQueryForInstallLessApps(L.id, t.id);
-        }, [L.id, t.id, I]),
+            I ? d.ZP.queryInstallOnDemandApp(S.id, t.id) : d.ZP.maybeQueryForInstallLessApps(S.id, t.id);
+        }, [S.id, t.id, I]),
         (0, i.jsxs)(r.ScrollerNone, {
             className: x.container,
             fade: !0,
-            ref: b,
+            ref: L,
             role: 'region',
             'aria-label': N.Z.Messages.APP_LAUNCHER_SECTION_APPLICATION_DETAILS_ARIA_LABEL.format({ applicationName: y }),
             children: [
                 (0, i.jsx)(f.Z, {
-                    application: L,
+                    application: S,
                     name: y,
                     iconURL: M,
-                    scrollerRef: b
+                    scrollerRef: L
                 }),
                 null != M &&
                     (0, i.jsx)(C.Z, {
@@ -63,16 +63,16 @@ function I(e) {
                         className: x.appIcon
                     }),
                 (0, i.jsx)(o.Z, { size: 54 }),
-                (0, i.jsx)(S, {
+                (0, i.jsx)(b, {
                     channel: t,
-                    application: L,
+                    application: S,
                     sectionName: c,
                     hasCommands: R
                 }),
                 P === p._b.TEXT
                     ? (0, i.jsx)(h.Z, {
                           channel: t,
-                          application: L,
+                          application: S,
                           sectionName: c,
                           installOnDemand: I,
                           setHasCommands: T

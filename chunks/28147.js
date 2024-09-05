@@ -27,9 +27,9 @@ var i = t(735250),
     I = t(561160),
     g = t(41558),
     P = t(106771),
-    L = t(79984),
-    S = t(314734),
-    b = t(981631),
+    S = t(79984),
+    b = t(314734),
+    L = t(981631),
     R = t(689938),
     T = t(429032);
 let M = Array(6)
@@ -98,10 +98,10 @@ function O(e) {
             ];
         }, [N, h]),
         P = g.length > 0,
-        L = p && !P && !v;
+        S = p && !P && !v;
     return u
         ? (0, i.jsx)(D, {})
-        : L
+        : S
           ? (0, i.jsx)(I.A, {
                 type: f.LG.SEARCH_EMPTY,
                 searchQuery: t,
@@ -116,7 +116,7 @@ function O(e) {
                             query: t
                         }),
                     (P || v) &&
-                        (0, i.jsx)(k, {
+                        (0, i.jsx)(B, {
                             applicationResults: g,
                             includePlaceholder: v,
                             query: t,
@@ -133,9 +133,9 @@ function H(e) {
         [E, N] = a.useState(!1),
         v = null !== (n = (0, s.Z)(E)) && void 0 !== n ? n : E,
         I = a.useCallback(() => N((e) => !e), []),
-        L = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
-        M = E && !L;
-    a.useLayoutEffect(() => N(!1), [L]);
+        S = (null !== (t = (0, s.Z)(r)) && void 0 !== t ? t : r)[0] !== r[0],
+        M = E && !S;
+    a.useLayoutEffect(() => N(!1), [S]);
     let {
         ref: y,
         isTransitioning: j,
@@ -144,12 +144,12 @@ function H(e) {
         key: r,
         isExpanded: M,
         durationMs: 200,
-        maxAnimationHeight: S.K7
+        maxAnimationHeight: b.K7
     });
     a.useEffect(() => {
         !v &&
             E &&
-            (0, c.yw)(b.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
+            (0, c.yw)(L.rMx.APP_LAUNCHER_SECTION_VIEW_MORE, {
                 section_name: f.L3.SEARCH,
                 source: h.Z.entrypoint(),
                 num: o.length
@@ -198,7 +198,7 @@ function H(e) {
                                         searchResultsPosition: n,
                                         source: e
                                     }),
-                                    _.S.dispatch(b.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                                    _.S.dispatch(L.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                             }
                         },
                         t.id
@@ -224,7 +224,7 @@ function U(e) {
         })
     });
 }
-function k(e) {
+function B(e) {
     let { applicationResults: n, includePlaceholder: t, query: a, searchesBots: l } = e;
     return l
         ? (0, i.jsxs)('div', {
@@ -236,7 +236,7 @@ function k(e) {
                           n.map((e, n) => {
                               let { application: t, installOnDemand: l } = e;
                               return (0, i.jsx)(
-                                  B,
+                                  k,
                                   {
                                       application: t,
                                       location: u.Vh.APP_LAUNCHER_HOME_SEARCH,
@@ -248,7 +248,7 @@ function k(e) {
                                   t.id
                               );
                           }),
-                          t && y.map((e) => (0, i.jsx)(L.Z, {}, e))
+                          t && y.map((e) => (0, i.jsx)(S.Z, {}, e))
                       ]
                   })
               ]
@@ -281,7 +281,7 @@ function k(e) {
               ]
           });
 }
-function B(e) {
+function k(e) {
     let n = (0, E.cG)(e);
     return (0, i.jsx)(P.Z, {
         application: e.application,
@@ -296,12 +296,12 @@ function D() {
             (0, i.jsx)(g.Z, { title: R.Z.Messages.COMMANDS }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
-                children: M.map((e) => (0, i.jsx)(L.Z, {}, e))
+                children: M.map((e) => (0, i.jsx)(S.Z, {}, e))
             }),
             (0, i.jsx)(g.Z, { title: R.Z.Messages.APPS }),
             (0, i.jsx)('div', {
                 className: T.sectionContentContainer,
-                children: y.map((e) => (0, i.jsx)(L.Z, {}, e))
+                children: y.map((e) => (0, i.jsx)(S.Z, {}, e))
             })
         ]
     });

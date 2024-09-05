@@ -11,8 +11,8 @@ var a = n(735250),
     i = n(470079),
     l = n(120356),
     s = n.n(l),
-    r = n(468194),
-    o = n(442837),
+    o = n(468194),
+    r = n(442837),
     c = n(477690),
     d = n(481060),
     u = n(100527),
@@ -20,36 +20,36 @@ var a = n(735250),
     m = n(703656),
     v = n(430824),
     p = n(594174),
-    x = n(115130),
-    I = n(566620),
+    I = n(115130),
+    x = n(566620),
     f = n(520599),
     _ = n(127255),
-    C = n(880308),
+    T = n(880308),
     h = n(451576),
-    T = n(439934),
+    C = n(439934),
     E = n(701488),
     S = n(981631),
     N = n(689938),
     b = n(876792),
     j = n(932463);
-let A = (0, r.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
-    M = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
-    y = (0, r.Mg)(c.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
+let A = (0, o.Mg)(c.Z.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
+    M = (0, o.Mg)(c.Z.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
+    y = (0, o.Mg)(c.Z.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
 function Z(e) {
-    let { channel: t, guildId: n, locationObject: l, onClose: r, onActivityItemVisible: c, scrollerRef: Z } = e,
+    let { channel: t, guildId: n, locationObject: l, onClose: o, onActivityItemVisible: c, scrollerRef: Z } = e,
         [D, L] = i.useState(0),
         O = (0, _.Z)({
             guildId: n,
             enableFilter: !0
         }),
-        B = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        V = (0, o.e7)([v.Z], () => v.Z.getGuild(n), [n]),
-        { analyticsLocations: R } = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY),
+        B = (0, r.e7)([p.default], () => p.default.getCurrentUser()),
+        R = (0, r.e7)([v.Z], () => v.Z.getGuild(n), [n]),
+        { analyticsLocations: V } = (0, g.ZP)(u.Z.ACTIVITY_DIRECTORY),
         k = (0, h.Z)(null == t ? void 0 : t.id),
         { enableAmazonMusicShelfPoster: P } = f.p.useExperiment({ location: 'ActivitiesShelf' }, { autoTrackExposure: !0 }),
-        { isDeveloperActivityShelfEnabled: H, filter: F } = (0, o.cj)([x.Z], () => ({
-            filter: x.Z.getFilter(),
-            isDeveloperActivityShelfEnabled: x.Z.getIsEnabled()
+        { isDeveloperActivityShelfEnabled: H, filter: F } = (0, r.cj)([I.Z], () => ({
+            filter: I.Z.getFilter(),
+            isDeveloperActivityShelfEnabled: I.Z.getIsEnabled()
         }));
     if (
         (i.useEffect(() => {
@@ -68,25 +68,25 @@ function Z(e) {
         }, [Z]),
         i.useEffect(() => {
             (k || null != n) &&
-                (0, I.w1)({
+                (0, x.w1)({
                     guildId: n,
                     force: !0
                 });
         }, [n, k]),
-        (0, C.g)(),
-        (null == V && !k) || null == B)
+        (0, T.g)(),
+        (null == R && !k) || null == B)
     )
         return null;
-    let w = O.length > 0;
-    function U(e) {
-        r();
+    let U = O.length > 0;
+    function Y(e) {
+        o();
     }
     return (0, a.jsx)(g.Gt, {
-        value: R,
+        value: V,
         children: (0, a.jsxs)('div', {
             className: b.scrollContainer,
             children: [
-                w
+                U
                     ? (0, a.jsx)('div', {
                           className: b.scrollBackgroundContainer,
                           style: { top: -D },
@@ -113,7 +113,7 @@ function Z(e) {
                                     'aria-label': e,
                                     onClick: () => {
                                         var e;
-                                        (e = E.Fu), r(), (0, m.uL)(S.Z5c.ACTIVITY_DETAILS(E.Fu), { sourceLocationStack: R });
+                                        (e = E.Fu), o(), (0, m.uL)(S.Z5c.ACTIVITY_DETAILS(E.Fu), { sourceLocationStack: V });
                                     },
                                     children: [
                                         (0, a.jsx)('div', {
@@ -130,14 +130,14 @@ function Z(e) {
                             }
                             return null;
                         })(),
-                        w
+                        U
                             ? (0, a.jsx)('div', {
                                   className: b.scrollSection,
                                   children: (0, a.jsx)('div', {
                                       className: s()(b.shelf),
                                       children: O.map((e) =>
                                           (0, a.jsx)(
-                                              T.Z,
+                                              C.Z,
                                               {
                                                   large: 1 === O.length,
                                                   activityItem: e,
@@ -147,7 +147,7 @@ function Z(e) {
                                                   onActivityItemVisible: c,
                                                   onActivityItemSelected: () => {
                                                       var t;
-                                                      (t = e.application.id), r();
+                                                      (t = e.application.id), o();
                                                   }
                                               },
                                               'activity-shelf-item-'.concat(e.application.id)

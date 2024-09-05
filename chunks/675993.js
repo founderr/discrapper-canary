@@ -70,7 +70,7 @@ function I(e) {
                             className: A ? x.overviewContainerWithVideo : x.overviewContainerNoVideo,
                             children: [
                                 (0, i.jsx)(P, { application: t }),
-                                (0, i.jsx)(L, { application: t }),
+                                (0, i.jsx)(S, { application: t }),
                                 _.length > 0 ? (0, i.jsx)(R, { description: _ }) : null,
                                 C
                                     ? (0, i.jsx)('div', {
@@ -81,7 +81,7 @@ function I(e) {
                                           })
                                       })
                                     : null,
-                                (0, i.jsx)(b, {
+                                (0, i.jsx)(L, {
                                     channel: n,
                                     application: t,
                                     sectionName: d,
@@ -167,7 +167,7 @@ function P(e) {
         ]
     });
 }
-function L(e) {
+function S(e) {
     let { application: n } = e,
         t = a.useMemo(() => {
             var e;
@@ -177,7 +177,7 @@ function L(e) {
         ? (0, i.jsxs)('div', {
               className: x.tagsContainer,
               children: [
-                  (0, i.jsx)(S, { application: n }),
+                  (0, i.jsx)(b, { application: n }),
                   t.map((e, n) =>
                       (0, i.jsx)(
                           'div',
@@ -196,7 +196,7 @@ function L(e) {
           })
         : null;
 }
-function S(e) {
+function b(e) {
     var n;
     let { application: t } = e;
     if (!(0, h.ye)(t)) return null;
@@ -216,7 +216,7 @@ function S(e) {
         ]
     });
 }
-function b(e) {
+function L(e) {
     let { channel: n, application: t, sectionName: a, hasCommands: l, isDeveloperOfThisApp: o } = e,
         { commands: r } = (0, m.SY)(n, t.id),
         c = r[0];

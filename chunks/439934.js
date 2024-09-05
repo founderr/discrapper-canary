@@ -8,8 +8,8 @@ var a = n(735250),
     i = n(470079),
     l = n(120356),
     s = n.n(l),
-    r = n(442837),
-    o = n(481060),
+    o = n(442837),
+    r = n(481060),
     c = n(239091),
     d = n(434650),
     u = n(213459),
@@ -17,13 +17,13 @@ var a = n(735250),
     m = n(70097),
     v = n(695346),
     p = n(594174),
-    x = n(695103),
-    I = n(880448),
+    I = n(695103),
+    x = n(880448),
     f = n(823379),
     _ = n(5192),
-    C = n(624138),
+    T = n(624138),
     h = n(115130),
-    T = n(147865),
+    C = n(147865),
     E = n(542094),
     S = n(665811),
     N = n(182906),
@@ -36,7 +36,7 @@ var a = n(735250),
     D = n(969728);
 function L(e) {
     let { value: t, icon: n } = e;
-    return (0, a.jsxs)(o.Text, {
+    return (0, a.jsxs)(r.Text, {
         className: Z.activityTag,
         color: 'interactive-normal',
         variant: 'text-xs/semibold',
@@ -45,7 +45,7 @@ function L(e) {
 }
 function O(e) {
     let { activity: t, application: n, channel: i, guildId: l, large: s = !1 } = e,
-        c = (0, r.Wu)([p.default], () => {
+        c = (0, o.Wu)([p.default], () => {
             var e;
             return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : [])
                 .map((e) => {
@@ -55,12 +55,12 @@ function O(e) {
                 .filter(f.lm);
         }),
         d = _.ZP.getName(l, null == i ? void 0 : i.id, null == c ? void 0 : c[0]);
-    if (((d = (0, C.aF)(d, 15)), null == t || 0 === c.length)) {
+    if (((d = (0, T.aF)(d, 15)), null == t || 0 === c.length)) {
         var u, g;
-        let e = ''.concat((0, T.ZP)(null !== (u = n.maxParticipants) && void 0 !== u ? u : 0));
+        let e = ''.concat((0, C.ZP)(null !== (u = n.maxParticipants) && void 0 !== u ? u : 0));
         return (
             s && (e = null !== (g = n.description) && void 0 !== g ? g : ''),
-            (0, a.jsx)(o.Text, {
+            (0, a.jsx)(r.Text, {
                 className: Z.activitySubtitleText,
                 variant: 'text-xs/normal',
                 color: 'interactive-normal',
@@ -71,7 +71,7 @@ function O(e) {
     return (0, a.jsxs)('div', {
         className: Z.activitySubtitleText,
         children: [
-            (0, a.jsx)(o.Text, {
+            (0, a.jsx)(r.Text, {
                 className: Z.usersArePlayingText,
                 variant: 'text-xs/normal',
                 children:
@@ -93,11 +93,11 @@ function O(e) {
 }
 function B(e) {
     var t;
-    let { activityItem: n, channel: l, guildId: p, locationObject: f, onActivityItemVisible: _, onActivityItemSelected: C, large: A = !1 } = e,
+    let { activityItem: n, channel: l, guildId: p, locationObject: f, onActivityItemVisible: _, onActivityItemSelected: T, large: A = !1 } = e,
         {
             imageBackground: B,
-            videoUrl: V,
-            activityAction: R,
+            videoUrl: R,
+            activityAction: V,
             joinableEmbeddedApp: k,
             onActivityItemSelected: P,
             labelType: H,
@@ -108,14 +108,14 @@ function B(e) {
             guildId: p,
             locationObject: f,
             onActivityItemVisible: _,
-            onActivityItemSelected: C,
+            onActivityItemSelected: T,
             embeddedActivitiesManager: j.Z,
             commandOrigin: g.bB.APPLICATION_LAUNCHER
         }),
-        w = (0, r.e7)([h.Z, x.Z], () => h.Z.inDevModeForApplication(n.application.id) || x.Z.inTestModeForApplication(n.application.id), [n.application.id]),
-        { application: U } = n,
-        Y = i.useCallback((e) => e && (null == _ ? void 0 : _({ applicationId: n.application.id })), [n.application.id, _]),
-        G = (0, d.O)(Y, 0.8, !0),
+        U = (0, o.e7)([h.Z, I.Z], () => h.Z.inDevModeForApplication(n.application.id) || I.Z.inTestModeForApplication(n.application.id), [n.application.id]),
+        { application: Y } = n,
+        w = i.useCallback((e) => e && (null == _ ? void 0 : _({ applicationId: n.application.id })), [n.application.id, _]),
+        G = (0, d.O)(w, 0.8, !0),
         [W, z] = i.useState(!1),
         [q, J] = i.useState(W);
     i.useEffect(() => {
@@ -125,15 +125,15 @@ function B(e) {
         X = () => z(!1),
         $ = v.Sb.useSetting(),
         Q = i.useCallback(() => {
-            null == P || P(), u.ZP.maybeQueryForInstallLessApps(U.id, null == l ? void 0 : l.id);
-        }, [U.id, null == l ? void 0 : l.id, P]);
-    return (0, a.jsxs)(o.Clickable, {
-        onClick: R === E.JS.START ? Q : void 0,
+            null == P || P(), u.ZP.maybeQueryForInstallLessApps(Y.id, null == l ? void 0 : l.id);
+        }, [Y.id, null == l ? void 0 : l.id, P]);
+    return (0, a.jsxs)(r.Clickable, {
+        onClick: V === E.JS.START ? Q : void 0,
         onContextMenu: $
             ? (e) => {
                   (0, c.vq)(e, (e) =>
                       (0, a.jsx)(M.Z, {
-                          application: U,
+                          application: Y,
                           ...e
                       })
                   );
@@ -141,7 +141,7 @@ function B(e) {
             : void 0,
         className: s()(Z.activityItem, {
             [Z.large]: !0 === A,
-            [Z.disabled]: R !== E.JS.START
+            [Z.disabled]: V !== E.JS.START
         }),
         children: [
             (0, a.jsxs)('div', {
@@ -154,26 +154,26 @@ function B(e) {
                 children: [
                     (0, a.jsx)(N.Z, {
                         imageBackground: B,
-                        applicationName: U.name,
+                        applicationName: Y.name,
                         imageClassName: s()(Z.activityImage, { [Z.large]: !0 === A }),
                         imageNotFoundClassName: Z.brokenImageIconWrapper
                     }),
-                    null != V && q && R === E.JS.START
+                    null != R && q && V === E.JS.START
                         ? (0, a.jsx)('div', {
                               className: s()(Z.activityVideo, { [Z.videoFadeOut]: !W }),
                               onAnimationEnd: () => (W ? null : J(!1)),
                               children: (0, a.jsx)(m.Z, {
                                   className: Z.activityVideo,
-                                  src: V,
+                                  src: R,
                                   loop: !0,
                                   autoPlay: !0,
                                   muted: !0
                               })
                           })
                         : null,
-                    R !== E.JS.START
+                    V !== E.JS.START
                         ? (0, a.jsx)(S.U, {
-                              action: R,
+                              action: V,
                               onClick: Q
                           })
                         : null,
@@ -182,19 +182,19 @@ function B(e) {
                         children: (0, a.jsx)('div', {
                             className: Z.badgeContainer,
                             children: (0, a.jsx)(b.Z, {
-                                name: U.name,
+                                name: Y.name,
                                 labelType: H
                             })
                         })
                     }),
-                    w
-                        ? (0, a.jsx)(o.Tooltip, {
+                    U
+                        ? (0, a.jsx)(r.Tooltip, {
                               text: y.Z.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
                               children: (e) =>
                                   (0, a.jsx)('div', {
                                       className: Z.devShelfBadge,
                                       ...e,
-                                      children: (0, a.jsx)(I.Z, { className: Z.devShelfIcon })
+                                      children: (0, a.jsx)(x.Z, { className: Z.devShelfIcon })
                                   })
                           })
                         : null
@@ -204,24 +204,24 @@ function B(e) {
                 className: s()(Z.activityTextContainer, { [Z.large]: A }),
                 children: [
                     A
-                        ? (0, a.jsx)(o.Text, {
+                        ? (0, a.jsx)(r.Text, {
                               className: Z.activityMaxParticipantsLarge,
                               variant: 'text-xs/normal',
                               color: 'interactive-normal',
-                              children: (0, T.ZP)(null !== (t = U.maxParticipants) && void 0 !== t ? t : 0)
+                              children: (0, C.ZP)(null !== (t = Y.maxParticipants) && void 0 !== t ? t : 0)
                           })
                         : null,
                     (0, a.jsxs)('div', {
                         className: Z.activityName,
                         children: [
-                            (0, a.jsx)(o.Heading, {
+                            (0, a.jsx)(r.Heading, {
                                 className: Z.activityTitleText,
                                 variant: 'heading-md/semibold',
                                 color: 'interactive-active',
-                                children: U.name
+                                children: Y.name
                             }),
                             null != F
-                                ? (0, a.jsx)(o.Tooltip, {
+                                ? (0, a.jsx)(r.Tooltip, {
                                       text: F,
                                       children: (e) =>
                                           (0, a.jsx)('img', {
@@ -236,14 +236,14 @@ function B(e) {
                     }),
                     (0, a.jsx)(O, {
                         activity: null == k ? void 0 : k.embeddedActivity,
-                        application: U,
+                        application: Y,
                         channel: l,
                         guildId: p,
                         large: A
                     }),
                     (0, a.jsx)('div', {
                         className: Z.activityTagsContainer,
-                        children: U.tags.slice(0, 3).map((e) => (0, a.jsx)(L, { value: e }, 'activity-tag-'.concat(U.id, '-').concat(e)))
+                        children: Y.tags.slice(0, 3).map((e) => (0, a.jsx)(L, { value: e }, 'activity-tag-'.concat(Y.id, '-').concat(e)))
                     })
                 ]
             })

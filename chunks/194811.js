@@ -12,7 +12,7 @@ var i = n(120356),
     l = n(228168),
     u = n(139665);
 function c(e) {
-    let { text: t, tags: n, platform: i } = e,
+    let { text: t, tags: n, icon: i } = e,
         { profileType: c } = (0, o.z)();
     return null == t || '' === t
         ? (0, r.jsx)('div', {
@@ -32,8 +32,8 @@ function c(e) {
                               (0, r.jsx)('div', {
                                   className: u.platformIcon,
                                   style: {
-                                      maskImage: 'url('.concat(i.icon.whiteSVG, ')'),
-                                      WebkitMaskImage: 'url('.concat(i.icon.whiteSVG, ')')
+                                      maskImage: 'url('.concat(i.whiteSVG, ')'),
+                                      WebkitMaskImage: 'url('.concat(i.whiteSVG, ')')
                                   }
                               })
                       ]

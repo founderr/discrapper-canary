@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return C;
+        return A;
     }
 }),
     t(47120),
@@ -21,15 +21,25 @@ var n = t(735250),
     I = t(981631),
     N = t(689938),
     m = t(594918);
-function C() {
+let C = (e) => {
+    (0, l.openModalLazy)(async () => {
+        let { default: s } = await t.e('25120').then(t.bind(t, 926281));
+        return (t) =>
+            (0, n.jsx)(s, {
+                modalProps: t,
+                settings: e
+            });
+    });
+};
+function A() {
     let e = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-        [s, i] = a.useState(null),
-        [C, A] = a.useState(!0);
+        [s, t] = a.useState(null),
+        [i, A] = a.useState(!0);
     if (
         (a.useEffect(() => {
             (0, d.ol)()
                 .then((e) => {
-                    i(e.body);
+                    t(e.body);
                 })
                 .finally(() => A(!1));
         }, []),
@@ -38,18 +48,8 @@ function C() {
         return null;
     let g = (0, E.$6)(s, e),
         h = g && null != s,
-        O = (e) => {
-            (0, l.openModalLazy)(async () => {
-                let { default: s } = await t.e('25120').then(t.bind(t, 926281));
-                return (t) =>
-                    (0, n.jsx)(s, {
-                        modalProps: t,
-                        settings: e
-                    });
-            });
-        },
-        p = () => {
-            O({
+        O = () => {
+            C({
                 header: N.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_TITLE,
                 body: N.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_WEB_NOTE.format({ helpdeskArticle: u.Z.getArticleURL(I.BhN.GDPR_PACKAGE_CONTENTS) }),
                 confirmText: N.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_CONFIRM,
@@ -61,7 +61,7 @@ function C() {
                             .then(
                                 (e) => {
                                     null != e && null != e.body
-                                        ? (i(e.body), c.Z.show({ body: N.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS }))
+                                        ? (t(e.body), c.Z.show({ body: N.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_MODAL_SUCCESS }))
                                         : c.Z.show({
                                               title: N.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_TITLE,
                                               body: N.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_FAILURE_BODY
@@ -100,12 +100,12 @@ function C() {
                               let { onMouseEnter: s, onMouseLeave: t } = e;
                               return (0, n.jsx)(l.Button, {
                                   disabled: g,
-                                  onClick: p,
+                                  onClick: O,
                                   onMouseEnter: s,
                                   onMouseLeave: t,
                                   look: l.Button.Looks.FILLED,
                                   color: l.Button.Colors.BRAND,
-                                  submitting: C,
+                                  submitting: i,
                                   children: N.Z.Messages.DATA_PRIVACY_CONTROLS_REQUEST_DATA_DOWNLOAD
                               });
                           }

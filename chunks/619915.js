@@ -6,10 +6,10 @@ n.d(t, {
         return d;
     },
     gb: function () {
-        return p;
+        return f;
     },
     uF: function () {
-        return f;
+        return p;
     }
 }),
     n(47120),
@@ -18,17 +18,17 @@ var i = n(470079),
     l = n(442837),
     r = n(835473),
     o = n(158776),
-    a = n(594174),
-    u = n(823379),
+    u = n(594174),
+    a = n(823379),
     c = n(317381);
 function d(e, t) {
-    return p(
+    return f(
         (0, l.Wu)([c.ZP], () => (null != e && null != e.id && '' !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6)),
         t
     );
 }
 function s(e) {
-    let t = p((0, l.e7)([c.ZP], () => (null != e ? c.ZP.getEmbeddedActivitiesForGuild(e) : c.i6)));
+    let t = f((0, l.e7)([c.ZP], () => (null != e ? c.ZP.getEmbeddedActivitiesForGuild(e) : c.i6)));
     return i.useMemo(() => {
         let e = new Map();
         return (
@@ -42,16 +42,16 @@ function s(e) {
         );
     }, [t]);
 }
-function p(e, t) {
+function f(e, t) {
     let n = e.map((e) => e.applicationId),
         o = (0, r.Z)(n),
         c = new Set([]);
     for (let t of e) for (let e of t.userIds) c.add(e);
     let d = (0, l.Wu)(
-        [a.default],
+        [u.default],
         () => {
             let e = [];
-            for (let t of c) e.push(a.default.getUser(t));
+            for (let t of c) e.push(u.default.getUser(t));
             return e;
         },
         [c]
@@ -82,11 +82,11 @@ function p(e, t) {
                               userParticipantAvatarUrls: r
                           };
                 })
-                .filter(u.lm)
+                .filter(a.lm)
         );
     }, [e, o, d, t]);
 }
-function f(e) {
+function p(e) {
     return (0, l.e7)(
         [o.Z],
         () => {

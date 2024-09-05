@@ -4,7 +4,7 @@ var i = n(120356),
     l = n.n(i),
     s = n(705671);
 t.Z = (e) => {
-    let { aspectRatio: t, style: n, className: i, children: r } = e;
+    let { aspectRatio: t, style: n, className: i, children: o } = e;
     return (0, a.jsx)('div', {
         className: l()(s.outer, i),
         style: {
@@ -13,7 +13,7 @@ t.Z = (e) => {
         },
         children: (0, a.jsx)('div', {
             className: s.inner,
-            children: r
+            children: o
         })
     });
 };

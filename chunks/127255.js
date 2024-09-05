@@ -9,21 +9,21 @@ var i = n(470079),
     l = n(442837),
     r = n(115130),
     o = n(694312),
-    a = n(405625),
-    u = n(664097);
+    u = n(405625),
+    a = n(664097);
 function c(e) {
     let { guildId: t, enableFilter: n = !1 } = e,
         { filter: c } = (0, l.cj)([r.Z], () => ({ filter: r.Z.getFilter() })),
         d = (0, o.E)(t),
-        s = (0, a.Z)(d),
-        p = (0, u.o)();
+        s = (0, u.Z)(d),
+        f = (0, a.o)();
     return i.useMemo(() => {
         function e(e) {
             return !!(!n || '' === c || e.application.name.toLowerCase().includes(c.toLowerCase())) || !1;
         }
-        let t = [...p].filter(e),
+        let t = [...f].filter(e),
             i = new Set(t.map((e) => e.application.id));
         for (let n of s) !i.has(n.application.id) && e(n) && t.push(n);
         return t;
-    }, [p, n, c, s]);
+    }, [f, n, c, s]);
 }

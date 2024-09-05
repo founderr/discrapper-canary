@@ -1,6 +1,6 @@
 n.d(t, {
     E: function () {
-        return p;
+        return f;
     }
 }),
     n(47120);
@@ -8,22 +8,22 @@ var i = n(470079),
     l = n(442837),
     r = n(835473),
     o = n(594174),
-    a = n(695103),
-    u = n(823379),
+    u = n(695103),
+    a = n(823379),
     c = n(358085),
     d = n(317381),
     s = n(761122);
-function p(e) {
+function f(e) {
     let t = (0, l.e7)([o.default], o.default.getCurrentUser),
         n = (0, l.Wu)([d.ZP], () => d.ZP.getShelfActivities(e)),
-        p = (0, l.e7)([a.Z], () => a.Z.testModeEmbeddedApplicationId),
-        f = n.map((e) => e.application_id),
-        v = null != p ? [p, ...f] : f,
+        f = (0, l.e7)([u.Z], () => u.Z.testModeEmbeddedApplicationId),
+        p = n.map((e) => e.application_id),
+        v = null != f ? [f, ...p] : p,
         Z = (0, r.Z)(v),
-        h = i.useMemo(() => Z.filter(u.lm), [Z]),
-        _ = i.useMemo(
+        h = i.useMemo(() => Z.filter(a.lm), [Z]),
+        g = i.useMemo(
             () =>
-                null != p && h.length > 0 && h[0].id === p && null != h[0].embeddedActivityConfig
+                null != f && h.length > 0 && h[0].id === f && null != h[0].embeddedActivityConfig
                     ? [
                           {
                               activity: h[0].embeddedActivityConfig,
@@ -31,9 +31,9 @@ function p(e) {
                           }
                       ]
                     : [],
-            [h, p]
+            [h, f]
         ),
-        g = i.useMemo(
+        m = i.useMemo(
             () =>
                 n
                     .map((e) => {
@@ -45,12 +45,12 @@ function p(e) {
                                   application: t
                               };
                     })
-                    .filter(u.lm),
+                    .filter(a.lm),
             [n, h]
         );
     return i.useMemo(
         () =>
-            [..._, ...g]
+            [...g, ...m]
                 .filter((e) => {
                     var t;
                     let { activity: n } = e;
@@ -60,6 +60,6 @@ function p(e) {
                     let { activity: n } = e;
                     return !n.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null;
                 }),
-        [null == t ? void 0 : t.nsfwAllowed, g, _]
+        [null == t ? void 0 : t.nsfwAllowed, m, g]
     );
 }

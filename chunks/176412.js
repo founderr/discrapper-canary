@@ -1,6 +1,6 @@
 t.d(n, {
     Bm: function () {
-        return L;
+        return S;
     },
     P7: function () {
         return P;
@@ -74,18 +74,18 @@ function P(e) {
             source: I
         }),
         P = s.ButtonColors.BRAND,
-        L = null != l ? l : x.Z.Messages.LAUNCH;
+        S = null != l ? l : x.Z.Messages.LAUNCH;
     return (
-        v === d.JS.JOIN ? ((P = s.ButtonColors.GREEN), (L = x.Z.Messages.JOIN_ACTIVITY)) : v === d.JS.LEAVE && !C && ((P = s.ButtonColors.RED), (L = x.Z.Messages.LEAVE)),
+        v === d.JS.JOIN ? ((P = s.ButtonColors.GREEN), (S = x.Z.Messages.JOIN_ACTIVITY)) : v === d.JS.LEAVE && !C && ((P = s.ButtonColors.RED), (S = x.Z.Messages.LEAVE)),
         {
             onActivityItemSelected: g,
             activityAction: v,
             buttonColor: P,
-            buttonText: L
+            buttonText: S
         }
     );
 }
-function L(e, n) {
+function S(e, n) {
     let t = A.Z.entrypoint(),
         l = i.useMemo(
             () =>

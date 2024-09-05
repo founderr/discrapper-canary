@@ -10,8 +10,8 @@ var a = n(735250),
     i = n(470079),
     l = n(120356),
     s = n.n(l),
-    r = n(990547),
-    o = n(442837),
+    o = n(990547),
+    r = n(442837),
     c = n(477690),
     d = n(481060),
     u = n(110924),
@@ -19,13 +19,13 @@ var a = n(735250),
     m = n(367907),
     v = n(565384),
     p = n(906732),
-    x = n(835473),
-    I = n(600164),
+    I = n(835473),
+    x = n(600164),
     f = n(592125),
     _ = n(451478),
-    C = n(626135),
+    T = n(626135),
     h = n(585483),
-    T = n(624138),
+    C = n(624138),
     E = n(115130),
     S = n(566620),
     N = n(421),
@@ -38,46 +38,46 @@ var a = n(735250),
     D = n(226786),
     L = n(361205),
     O = n(812320);
-let B = (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
-    V = (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
-    R = (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + B + (0, T.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
+let B = (0, C.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_PADDING),
+    R = (0, C.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_WIDTH),
+    V = (0, C.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_MAX_HEIGHT) + B + (0, C.Mg)(c.Z.ACTIVITY_SHELF_MODAL_MODAL_ART_HEIGHT);
 function k(e) {
-    let { channel: t, guildId: n, locationObject: l, onClose: c, initialSelectedApplicationId: g, initialSlide: _ = M.ag.DIRECTORY, enableSelectedTextChannelInvite: T, analyticsLocations: B, ...R } = e,
-        k = (0, o.e7)([E.Z], () => E.Z.getIsEnabled(), []),
+    let { channel: t, guildId: n, locationObject: l, onClose: c, initialSelectedApplicationId: g, initialSlide: _ = M.ag.DIRECTORY, enableSelectedTextChannelInvite: C, analyticsLocations: B, ...V } = e,
+        k = (0, r.e7)([E.Z], () => E.Z.getIsEnabled(), []),
         { analyticsLocations: H } = (0, p.ZP)(B),
-        [F, w] = i.useState(_),
-        U = (0, u.Z)(F),
-        [Y, G] = i.useState(null),
+        [F, U] = i.useState(_),
+        Y = (0, u.Z)(F),
+        [w, G] = i.useState(null),
         [W, z] = i.useState(g),
         [q, J] = i.useState(void 0),
-        [K] = (0, x.Z)(null == W ? [] : [W]),
+        [K] = (0, I.Z)(null == W ? [] : [W]),
         X = i.useRef(null),
         $ = i.useMemo(
             () => ({
                 application_id: W,
                 source_section: l.section,
-                impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW
+                impression_group: o.ImpressionGroups.ACTIVITY_SHELF_FLOW
             }),
             [l.section, W]
         );
     i.useEffect(() => {
-        if (F === M.ag.DIRECTORY && null != U && U !== M.ag.DIRECTORY && null != Y) {
+        if (F === M.ag.DIRECTORY && null != Y && Y !== M.ag.DIRECTORY && null != w) {
             var e;
-            null === (e = X.current) || void 0 === e || e.scrollTo({ top: Y });
+            null === (e = X.current) || void 0 === e || e.scrollTo({ top: w });
         }
-    }, [Y, U, F]);
+    }, [w, Y, F]);
     let Q = i.useCallback((e) => {
             var t;
             let { applicationId: n } = e,
                 a = null === (t = X.current) || void 0 === t ? void 0 : t.scrollTop;
-            null != a && G(a), z(n), w(M.ag.SELECT_CHANNEL);
+            null != a && G(a), z(n), U(M.ag.SELECT_CHANNEL);
         }, []),
         ee = i.useCallback((e) => {
             let { applicationId: t } = e;
-            z(t), w(M.ag.DETAIL_PAGE);
+            z(t), U(M.ag.DETAIL_PAGE);
         }, []);
     i.useEffect(() => {
-        C.default.track(y.rMx.OPEN_MODAL, {
+        T.default.track(y.rMx.OPEN_MODAL, {
             type: 'Activity Shelf',
             channel_id: null == t ? void 0 : t.id,
             guild_id: n
@@ -105,7 +105,7 @@ function k(e) {
             S.ux();
         }, []);
     let et = () => {
-            w(M.ag.DIRECTORY);
+            U(M.ag.DIRECTORY);
         },
         en = i.useRef(Date.now()),
         ea = i.useRef(!1),
@@ -142,7 +142,7 @@ function k(e) {
                         ...$,
                         ...e
                     };
-                C.default.track(y.rMx.ACTIVITY_SHELF_CLOSE, a);
+                T.default.track(y.rMx.ACTIVITY_SHELF_CLOSE, a);
             },
             [null == t ? void 0 : t.id, $, n]
         ),
@@ -151,7 +151,7 @@ function k(e) {
             children: (0, a.jsxs)(d.ModalRoot, {
                 className: s()(D.root),
                 'aria-label': Z.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_TITLE,
-                ...R,
+                ...V,
                 children: [
                     (0, a.jsx)('img', {
                         alt: Z.Z.Messages.EMBEDDED_ACTIVITIES_SHELF_CHARACTERS_ALT_TEXT,
@@ -165,7 +165,7 @@ function k(e) {
                     }),
                     (0, a.jsxs)(d.ModalHeader, {
                         separator: !1,
-                        justify: I.Z.Justify.BETWEEN,
+                        justify: x.Z.Justify.BETWEEN,
                         className: s()(D.modalHeader),
                         children: [
                             (0, a.jsxs)('div', {
@@ -227,14 +227,14 @@ function k(e) {
                     (0, a.jsxs)(d.Slides, {
                         activeSlide: F,
                         centered: !1,
-                        width: V,
+                        width: R,
                         children: [
                             (0, a.jsx)(d.Slide, {
                                 id: M.ag.DIRECTORY,
-                                impressionName: r.ImpressionNames.ACTIVITY_SHELF,
+                                impressionName: o.ImpressionNames.ACTIVITY_SHELF,
                                 impressionProperties: {
                                     source_section: l.section,
-                                    impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW
+                                    impression_group: o.ImpressionGroups.ACTIVITY_SHELF_FLOW
                                 },
                                 children: (0, a.jsx)(P, {
                                     slide: F,
@@ -250,10 +250,10 @@ function k(e) {
                             }),
                             (0, a.jsx)(d.Slide, {
                                 id: M.ag.SELECT_CHANNEL,
-                                impressionName: r.ImpressionNames.ACTIVITY_SHELF_SELECT_CHANNEL,
+                                impressionName: o.ImpressionNames.ACTIVITY_SHELF_SELECT_CHANNEL,
                                 impressionProperties: {
                                     source_section: l.section,
-                                    impression_group: r.ImpressionGroups.ACTIVITY_SHELF_FLOW,
+                                    impression_group: o.ImpressionGroups.ACTIVITY_SHELF_FLOW,
                                     application_id: W
                                 },
                                 children: (0, a.jsx)(P, {
@@ -263,13 +263,13 @@ function k(e) {
                                         selectedChannelId: q,
                                         setSelectedChannelId: J,
                                         guildId: n,
-                                        enableSelectedTextChannelInvite: T
+                                        enableSelectedTextChannelInvite: C
                                     })
                                 })
                             }),
                             (0, a.jsx)(d.Slide, {
                                 id: M.ag.DETAIL_PAGE,
-                                impressionName: r.ImpressionNames.ACTIVITY_DETAILS,
+                                impressionName: o.ImpressionNames.ACTIVITY_DETAILS,
                                 impressionProperties: $,
                                 children: (0, a.jsx)(P, {
                                     slide: F,
@@ -302,7 +302,7 @@ function k(e) {
                                         applicationId: W,
                                         locationObject: l,
                                         selectedChannelId: q,
-                                        enableSelectedTextChannelInvite: T
+                                        enableSelectedTextChannelInvite: C
                                     });
                                 case M.ag.DETAIL_PAGE:
                                 case M.ag.DIRECTORY:
@@ -318,18 +318,18 @@ function k(e) {
 }
 let P = (e) => {
     let { children: t, slide: n } = e,
-        l = (0, o.e7)([E.Z], () => E.Z.getIsEnabled(), []),
-        r = i.useContext(g.ZP),
-        c = (0, o.e7)([_.Z], () => _.Z.windowSize(r.windowId).height, [r.windowId]);
+        l = (0, r.e7)([E.Z], () => E.Z.getIsEnabled(), []),
+        o = i.useContext(g.ZP),
+        c = (0, r.e7)([_.Z], () => _.Z.windowSize(o.windowId).height, [o.windowId]);
     return (0, a.jsx)('div', {
         className: s()(D.slideContentOuterContainerSquished, {
             [D.slideContentOuterContainerSquishedWithDev]: n === M.ag.DIRECTORY && l,
-            [D.slideContentOuterContainerTall]: n === M.ag.DIRECTORY && c > R,
-            [D.slideContentOuterContainerTallWithDev]: n === M.ag.DIRECTORY && c > R && l,
+            [D.slideContentOuterContainerTall]: n === M.ag.DIRECTORY && c > V,
+            [D.slideContentOuterContainerTallWithDev]: n === M.ag.DIRECTORY && c > V && l,
             [D.slideContentOuterContainerNoMetaTextSquished]: n === M.ag.SELECT_CHANNEL,
-            [D.slideContentOuterContainerNoMetaTextTall]: n === M.ag.SELECT_CHANNEL && c > R,
+            [D.slideContentOuterContainerNoMetaTextTall]: n === M.ag.SELECT_CHANNEL && c > V,
             [D.slideContentOuterContainerNoMetaTextNoFooterSquished]: n === M.ag.DETAIL_PAGE,
-            [D.slideContentOuterContainerNoMetaTextNoFooterTall]: n === M.ag.DETAIL_PAGE && c > R
+            [D.slideContentOuterContainerNoMetaTextNoFooterTall]: n === M.ag.DETAIL_PAGE && c > V
         }),
         children: t
     });

@@ -1,6 +1,6 @@
 n.d(t, {
     W: function () {
-        return p;
+        return f;
     }
 });
 var i = n(735250);
@@ -8,17 +8,17 @@ n(470079);
 var l = n(120356),
     r = n.n(l),
     o = n(399606),
-    a = n(481060),
-    u = n(337682),
+    u = n(481060),
+    a = n(337682),
     c = n(115130),
     d = n(689938),
     s = n(464243);
-function p(e) {
+function f(e) {
     let { hideSearch: t, className: n } = e,
         {
             activityUrlOverride: l,
-            useActivityUrlOverride: p,
-            filter: f
+            useActivityUrlOverride: f,
+            filter: p
         } = (0, o.cj)(
             [c.Z],
             () => ({
@@ -31,22 +31,22 @@ function p(e) {
     return (0, i.jsxs)('div', {
         className: r()(s.container, n),
         children: [
-            (0, i.jsx)(a.Checkbox, {
-                type: a.Checkbox.Types.INVERTED,
-                value: p,
-                onClick: u.Y$,
-                children: (0, i.jsx)(a.Text, {
+            (0, i.jsx)(u.Checkbox, {
+                type: u.Checkbox.Types.INVERTED,
+                value: f,
+                onClick: a.Y$,
+                children: (0, i.jsx)(u.Text, {
                     variant: 'text-md/semibold',
                     children: d.Z.Messages.EMBEDDED_ACTIVITIES_USE_ACTIVITY_URL_OVERRIDE
                 })
             }),
-            p
-                ? (0, i.jsx)(a.FormItem, {
+            f
+                ? (0, i.jsx)(u.FormItem, {
                       title: d.Z.Messages.EMBEDDED_ACTIVITIES_ACTIVITY_URL_OVERRIDE,
-                      children: (0, i.jsx)(a.TextInput, {
-                          disabled: !p,
+                      children: (0, i.jsx)(u.TextInput, {
+                          disabled: !f,
                           value: null != l ? l : void 0,
-                          onChange: u.jS,
+                          onChange: a.jS,
                           placeholder: 'https://localhost:3000'
                       })
                   })
@@ -54,12 +54,12 @@ function p(e) {
             !0 === t
                 ? null
                 : (0, i.jsx)('div', {
-                      children: (0, i.jsx)(a.SearchBar, {
+                      children: (0, i.jsx)(u.SearchBar, {
                           className: s.searchBar,
-                          query: f,
-                          onChange: u.a8,
+                          query: p,
+                          onChange: a.a8,
                           onClear: function () {
-                              u.a8('');
+                              a.a8('');
                           }
                       })
                   })
