@@ -17,6 +17,7 @@ n.d(t, {
     (i.CARD_CAROUSEL_THIRD_ROW = 'card_carousel_final_row'),
     ((l = a || (a = {}))[(l.DEFAULT = 0)] = 'DEFAULT'),
     (l[(l.REWARD = 1)] = 'REWARD'),
+    (l[(l.NITRO_GRADIENT_HOVER_BORDER = 2)] = 'NITRO_GRADIENT_HOVER_BORDER'),
     ((o = r || (r = {})).SEE_ALL = 'See All Nitro Perks'),
     (o.MARKETING = 'Marketing'),
     (o.HOME = 'Home');

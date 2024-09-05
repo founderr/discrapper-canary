@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return er;
+        return ea;
     }
 });
 var i = n(735250),
@@ -27,72 +27,70 @@ var i = n(735250),
     A = n(785717),
     v = n(221292),
     L = n(481046),
-    Z = n(27144),
-    R = n(318661),
-    O = n(899007),
-    x = n(648052),
-    b = n(867176),
-    P = n(438163),
-    M = n(483424),
-    D = n(681837),
-    y = n(502762),
-    j = n(530),
-    U = n(544989),
-    G = n(309494),
-    w = n(969205),
-    k = n(171368),
-    B = n(407541),
-    H = n(420654),
-    V = n(695346),
-    F = n(158776),
-    Y = n(246946),
-    W = n(70956),
-    z = n(5192),
-    K = n(51144),
-    q = n(246133),
-    Q = n(474376),
-    X = n(383832),
-    J = n(981631),
-    $ = n(228168),
-    ee = n(689938),
-    et = n(554331),
-    en = n(115879);
-let ei = [
+    Z = n(318661),
+    R = n(899007),
+    O = n(648052),
+    x = n(867176),
+    b = n(438163),
+    P = n(483424),
+    M = n(681837),
+    D = n(502762),
+    y = n(530),
+    j = n(544989),
+    U = n(309494),
+    G = n(969205),
+    w = n(171368),
+    k = n(420654),
+    B = n(695346),
+    H = n(158776),
+    V = n(246946),
+    F = n(70956),
+    Y = n(5192),
+    W = n(51144),
+    z = n(246133),
+    K = n(474376),
+    q = n(383832),
+    Q = n(981631),
+    X = n(228168),
+    J = n(689938),
+    $ = n(554331),
+    ee = n(115879);
+let et = [
     {
-        duration: 30 * W.Z.Millis.MINUTE,
-        label: () => ee.Z.Messages.MUTE_DURATION_30_MINUTES
+        duration: 30 * F.Z.Millis.MINUTE,
+        label: () => J.Z.Messages.MUTE_DURATION_30_MINUTES
     },
     {
-        duration: W.Z.Millis.HOUR,
-        label: () => ee.Z.Messages.MUTE_DURATION_1_HOUR
+        duration: F.Z.Millis.HOUR,
+        label: () => J.Z.Messages.MUTE_DURATION_1_HOUR
     },
     {
-        duration: 3 * W.Z.Millis.HOUR,
-        label: () => ee.Z.Messages.MUTE_DURATION_3_HOURS
+        duration: 3 * F.Z.Millis.HOUR,
+        label: () => J.Z.Messages.MUTE_DURATION_3_HOURS
     },
     {
-        duration: 8 * W.Z.Millis.HOUR,
-        label: () => ee.Z.Messages.MUTE_DURATION_8_HOURS
+        duration: 8 * F.Z.Millis.HOUR,
+        label: () => J.Z.Messages.MUTE_DURATION_8_HOURS
     },
     {
-        duration: W.Z.Millis.DAY,
-        label: () => ee.Z.Messages.MUTE_DURATION_24_HOURS
+        duration: F.Z.Millis.DAY,
+        label: () => J.Z.Messages.MUTE_DURATION_24_HOURS
     },
     {
         duration: void 0,
-        label: () => ee.Z.Messages.DURATION_FOREVER
+        label: () => J.Z.Messages.DURATION_FOREVER
     }
 ];
-function ea(e, t, n, a) {
+function en(e, t, n, a) {
     let s = (0, i.jsx)(i.Fragment, {
-        children: ei.map((a) => {
+        children: et.map((a) => {
             let { duration: s, label: r } = a;
             return (0, i.jsx)(
                 d.MenuItem,
                 {
                     id: ''.concat(e, '-').concat(s),
                     label: r(),
-                    action: () => (0, q.Z)(e, t, n, s),
+                    action: () => (0, z.Z)(e, t, n, s),
                     dontCloseOnAction: !0
                 },
                 s
@@ -101,92 +99,92 @@ function ea(e, t, n, a) {
     });
     return (0, i.jsx)(d.MenuItem, {
         id: e,
-        className: et.expiringStatusMenuItem,
+        className: $.expiringStatusMenuItem,
         keepItemStyles: !0,
         hasSubmenu: !0,
         label: (t) => {
             let { isFocused: n } = t;
             return (0, i.jsxs)('div', {
-                className: et.statusItem,
+                className: $.statusItem,
                 children: [
                     (0, i.jsx)(d.Status, {
                         status: e,
-                        className: et.icon,
+                        className: $.icon,
                         size: 10,
                         color: n ? 'currentColor' : void 0
                     }),
                     (0, i.jsx)('div', {
-                        className: et.status,
-                        children: (0, K.u5)(e)
+                        className: $.status,
+                        children: (0, W.u5)(e)
                     }),
                     null != a &&
                         (0, i.jsx)('div', {
-                            className: et.description,
+                            className: $.description,
                             children: a
                         })
                 ]
             });
         },
-        action: () => (0, q.Z)(e, t, n),
+        action: () => (0, z.Z)(e, t, n),
         dontCloseOnAction: !0,
-        children: e !== J.Skl.ONLINE ? s : void 0
+        children: e !== Q.Skl.ONLINE ? s : void 0
     });
 }
-function es(e, t, n, a) {
+function ei(e, t, n, a) {
     return (0, i.jsx)(d.MenuItem, {
         id: e,
         keepItemStyles: !0,
         render: (t) => {
             let { isFocused: n } = t;
             return (0, i.jsxs)('div', {
-                className: et.statusItem,
+                className: $.statusItem,
                 children: [
                     (0, i.jsx)(d.Status, {
                         status: e,
-                        className: et.icon,
+                        className: $.icon,
                         size: 10,
                         color: n ? 'currentColor' : void 0
                     }),
                     (0, i.jsx)('div', {
-                        className: et.status,
-                        children: (0, K.u5)(e)
+                        className: $.status,
+                        children: (0, W.u5)(e)
                     }),
                     null != a &&
                         (0, i.jsx)('div', {
-                            className: et.description,
+                            className: $.description,
                             children: a
                         })
                 ]
             });
         },
-        action: () => (0, q.Z)(e, t, n),
+        action: () => (0, z.Z)(e, t, n),
         dontCloseOnAction: !0
     });
 }
-function er(e) {
+function ea(e) {
     let { currentUser: t, onClose: n, setPopoutRef: s } = e,
-        W = __OVERLAY__,
-        q = (0, R.ZP)(t.id),
-        er = (0, u.O)(),
-        { analyticsLocations: el } = (0, m.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT),
-        eo = (0, A.ZB)({
+        F = __OVERLAY__,
+        z = (0, Z.ZP)(t.id),
+        ea = (0, u.O)(),
+        { analyticsLocations: es } = (0, m.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT),
+        er = (0, A.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: t.id
         }),
-        ec = (0, I.a)(),
-        ed = (0, c.e7)([F.Z], () => F.Z.getStatus(t.id)),
-        eu = (function (e, t) {
+        el = (0, I.a)(),
+        eo = (0, c.e7)([H.Z], () => H.Z.getStatus(t.id)),
+        ec = (function (e, t) {
             let n = T.Y.useExperiment({ location: 'account popout' }).expiringStatus,
-                a = V.Cr.useSetting(),
+                a = B.Cr.useSetting(),
                 s = (0, S.p)(),
                 r = C.e.useExperiment({ location: 'account popout' }).allowQuietMode || s,
-                o = V.fv.useSetting(),
-                c = e === J.Skl.DND,
+                o = B.fv.useSetting(),
+                c = e === Q.Skl.DND,
                 u = (t) => {
                     let n =
                         null != a && '0' !== a
-                            ? ee.Z.Messages.STATUS_UNTIL.format({
-                                  endTime: new Date(Number(a)).toLocaleString(ee.Z.getLocale(), {
+                            ? J.Z.Messages.STATUS_UNTIL.format({
+                                  endTime: new Date(Number(a)).toLocaleString(J.Z.getLocale(), {
                                       month: 'numeric',
                                       day: 'numeric',
                                       hour: 'numeric',
@@ -196,16 +194,16 @@ function er(e) {
                             : void 0;
                     if (e === t && null != n) return n;
                     switch (t) {
-                        case J.Skl.DND:
-                            return r ? ee.Z.Messages.STATUS_DND_HELP_FOCUS_MODE : ee.Z.Messages.STATUS_DND_HELP;
-                        case J.Skl.INVISIBLE:
-                            return ee.Z.Messages.STATUS_INVISIBLE_HELPER;
+                        case Q.Skl.DND:
+                            return r ? J.Z.Messages.STATUS_DND_HELP_FOCUS_MODE : J.Z.Messages.STATUS_DND_HELP;
+                        case Q.Skl.INVISIBLE:
+                            return J.Z.Messages.STATUS_INVISIBLE_HELPER;
                         default:
                             return;
                     }
                 },
                 _ = (0, i.jsx)(i.Fragment, {
-                    children: ei.map((t) => {
+                    children: et.map((t) => {
                         let { duration: n, label: a } = t;
                         return (0, i.jsx)(
                             d.MenuItem,
@@ -223,11 +221,11 @@ function er(e) {
                 });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    es(J.Skl.ONLINE, e, t),
+                    ei(Q.Skl.ONLINE, e, t),
                     (0, i.jsx)(d.MenuSeparator, {}, 'menu-separator-statuses'),
-                    n ? ea(J.Skl.IDLE, e, t, u(J.Skl.IDLE)) : es(J.Skl.IDLE, e, t, u(J.Skl.IDLE)),
-                    n ? ea(J.Skl.DND, e, t, u(J.Skl.DND)) : es(J.Skl.DND, e, t, u(J.Skl.DND)),
-                    n ? ea(J.Skl.INVISIBLE, e, t, u(J.Skl.INVISIBLE)) : es(J.Skl.INVISIBLE, e, t, u(J.Skl.INVISIBLE)),
+                    n ? en(Q.Skl.IDLE, e, t, u(Q.Skl.IDLE)) : ei(Q.Skl.IDLE, e, t, u(Q.Skl.IDLE)),
+                    n ? en(Q.Skl.DND, e, t, u(Q.Skl.DND)) : ei(Q.Skl.DND, e, t, u(Q.Skl.DND)),
+                    n ? en(Q.Skl.INVISIBLE, e, t, u(Q.Skl.INVISIBLE)) : ei(Q.Skl.INVISIBLE, e, t, u(Q.Skl.INVISIBLE)),
                     r || s
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
@@ -237,40 +235,40 @@ function er(e) {
                                       {
                                           id: 'quiet-mode',
                                           'aria-label': 'focus mode',
-                                          className: et.expiringStatusMenuItem,
+                                          className: $.expiringStatusMenuItem,
                                           keepItemStyles: !0,
                                           hasSubmenu: !0,
                                           label: () =>
                                               (0, i.jsxs)('div', {
-                                                  className: et.statusItem,
+                                                  className: $.statusItem,
                                                   children: [
                                                       (0, i.jsx)(d.BellSlashIcon, {
                                                           size: 'xxs',
-                                                          className: et.icon
+                                                          className: $.icon
                                                       }),
                                                       (0, i.jsxs)('div', {
-                                                          className: et.focusModeTitle,
+                                                          className: $.focusModeTitle,
                                                           children: [
-                                                              ee.Z.Messages.FOCUS_MODE_TITLE,
+                                                              J.Z.Messages.FOCUS_MODE_TITLE,
                                                               (0, i.jsx)(d.TextBadge, {
-                                                                  text: s ? ee.Z.Messages.FOCUS_MODE_BADGE_ON : c ? ee.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : ee.Z.Messages.FOCUS_MODE_BADGE_OFF,
+                                                                  text: s ? J.Z.Messages.FOCUS_MODE_BADGE_ON : c ? J.Z.Messages.FOCUS_MODE_BADGE_ON_VIA_DND : J.Z.Messages.FOCUS_MODE_BADGE_OFF,
                                                                   color: s ? l.Z.BRAND_500 : c ? l.Z.RED_400 : l.Z.PRIMARY_500
                                                               })
                                                           ]
                                                       }),
                                                       (0, i.jsx)('div', {
-                                                          className: et.description,
+                                                          className: $.description,
                                                           children:
                                                               s && null != o && '0' !== o
-                                                                  ? ee.Z.Messages.STATUS_UNTIL.format({
-                                                                        endTime: new Date(Number(o)).toLocaleString(ee.Z.getLocale(), {
+                                                                  ? J.Z.Messages.STATUS_UNTIL.format({
+                                                                        endTime: new Date(Number(o)).toLocaleString(J.Z.getLocale(), {
                                                                             month: 'numeric',
                                                                             day: 'numeric',
                                                                             hour: 'numeric',
                                                                             minute: '2-digit'
                                                                         })
                                                                     })
-                                                                  : ee.Z.Messages.FOCUS_MODE_DESCRIPTION
+                                                                  : J.Z.Messages.FOCUS_MODE_DESCRIPTION
                                                       })
                                                   ]
                                               }),
@@ -287,157 +285,151 @@ function er(e) {
                         : null
                 ]
             });
-        })(ed, er),
-        { ref: e_ } = (0, _.Z)(),
-        eh = (0, h.Z)(e_);
+        })(eo, ea),
+        { ref: ed } = (0, _.Z)(),
+        eu = (0, h.Z)(ed);
     a.useEffect(() => {
-        null == s || s(e_.current);
-    }, [e_, s]);
-    let eE = (e) => {
+        null == s || s(ed.current);
+    }, [ed, s]);
+    let e_ = (e) => {
             null == n || n(),
-                (0, k.openUserProfileModal)({
-                    sourceAnalyticsLocations: el,
-                    ...eo,
+                (0, w.openUserProfileModal)({
+                    sourceAnalyticsLocations: es,
+                    ...er,
                     ...e
                 });
         },
-        { newActivityCardsEnabled: em } = (0, Z.z)({ location: 'AccountProfilePopout' }),
-        { customStatusBubbleEditEnabled: eI } = (0, L.K)({ location: 'AccountProfilePopout' }),
-        eg = (0, f.Z)({ analyticsLocations: el }),
-        ep = (0, S.p)(),
-        eT = ed === J.Skl.DND,
-        eS = (0, Q.g)(),
-        eC = (0, g.o)({
-            focusedClassName: et.menuItemFocused,
-            customStatus: ec,
-            analyticsLocations: el,
+        { customStatusBubbleEditEnabled: eh } = (0, L.K)({ location: 'AccountProfilePopout' }),
+        eE = (0, f.Z)({ analyticsLocations: es }),
+        em = (0, S.p)(),
+        eI = eo === Q.Skl.DND,
+        eg = (0, K.g)(),
+        ep = (0, g.o)({
+            focusedClassName: $.menuItemFocused,
+            customStatus: el,
+            analyticsLocations: es,
             trackUserProfileAction: v.pQ
         }),
-        ef = (0, p.Z)({
+        eT = (0, p.Z)({
             id: t.id,
-            label: ee.Z.Messages.COPY_ID_USER,
+            label: J.Z.Messages.COPY_ID_USER,
             showIconFirst: !0,
-            focusedClassName: et.menuItemFocused
+            focusedClassName: $.menuItemFocused
         }),
-        eN = (0, c.e7)([Y.Z], () => Y.Z.hidePersonalInformation);
+        eS = (0, c.e7)([V.Z], () => V.Z.hidePersonalInformation);
     return (0, i.jsx)(m.Gt, {
-        value: el,
+        value: es,
         children: (0, i.jsx)(A.Mt, {
-            value: eo,
+            value: er,
             children: (0, i.jsx)(d.Dialog, {
-                ref: e_,
+                ref: ed,
                 'aria-label': t.username,
-                children: (0, i.jsxs)(y.Z, {
-                    className: et.themeContainer,
+                children: (0, i.jsxs)(D.Z, {
+                    className: $.themeContainer,
                     user: t,
-                    displayProfile: q,
-                    profileType: $.y0.BITE_SIZE,
+                    displayProfile: z,
+                    profileType: X.y0.BITE_SIZE,
                     children: [
-                        !eI &&
-                            (0, i.jsx)(U.Z, {
-                                profileType: $.y0.BITE_SIZE,
-                                children: (0, i.jsx)(w.Z, {
+                        !eh &&
+                            (0, i.jsx)(j.Z, {
+                                profileType: X.y0.BITE_SIZE,
+                                children: (0, i.jsx)(G.Z, {
                                     userId: t.id,
                                     onClose: n
                                 })
                             }),
                         (0, i.jsxs)('header', {
-                            className: en.header,
+                            className: ee.header,
                             children: [
+                                (0, i.jsx)(x.Z, {
+                                    user: t,
+                                    displayProfile: z,
+                                    profileType: X.y0.BITE_SIZE
+                                }),
+                                (0, i.jsx)(R.Z, {
+                                    user: t,
+                                    displayProfile: z,
+                                    profileType: X.y0.BITE_SIZE,
+                                    onOpenProfile: F ? void 0 : e_
+                                }),
                                 (0, i.jsx)(b.Z, {
                                     user: t,
-                                    displayProfile: q,
-                                    profileType: $.y0.BITE_SIZE
-                                }),
-                                (0, i.jsx)(O.Z, {
-                                    user: t,
-                                    displayProfile: q,
-                                    profileType: $.y0.BITE_SIZE,
-                                    onOpenProfile: W ? void 0 : eE
-                                }),
-                                (0, i.jsx)(P.Z, {
-                                    user: t,
-                                    profileType: $.y0.BITE_SIZE,
+                                    profileType: X.y0.BITE_SIZE,
                                     onClose: n
                                 })
                             ]
                         }),
-                        (null == q ? void 0 : q.profileEffectId) != null &&
+                        (null == z ? void 0 : z.profileEffectId) != null &&
                             (0, i.jsx)(N.Z, {
-                                profileEffectId: null == q ? void 0 : q.profileEffectId,
-                                isHovering: eh
+                                profileEffectId: null == z ? void 0 : z.profileEffectId,
+                                isHovering: eu
                             }),
                         (0, i.jsxs)(d.Scroller, {
-                            className: et.body,
+                            className: $.body,
                             children: [
-                                (0, i.jsx)(j.Z, {
+                                (0, i.jsx)(y.Z, {
                                     user: t,
-                                    className: et.username,
-                                    profileType: $.y0.BITE_SIZE,
-                                    nickname: z.ZP.getName(null, null, t),
-                                    onOpenProfile: eE,
-                                    pronouns: null == q ? void 0 : q.pronouns,
-                                    tags: (0, i.jsx)(x.Z, {
-                                        displayProfile: q,
-                                        profileType: $.y0.BITE_SIZE,
+                                    className: $.username,
+                                    profileType: X.y0.BITE_SIZE,
+                                    nickname: Y.ZP.getName(null, null, t),
+                                    onOpenProfile: e_,
+                                    pronouns: null == z ? void 0 : z.pronouns,
+                                    tags: (0, i.jsx)(O.Z, {
+                                        displayProfile: z,
+                                        profileType: X.y0.BITE_SIZE,
                                         onClose: n
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(D.Z, { userId: t.id }),
-                                            (0, i.jsx)(G.Z, {
+                                            (0, i.jsx)(M.Z, { userId: t.id }),
+                                            (0, i.jsx)(U.Z, {
                                                 user: t,
-                                                isHovering: eh
+                                                isHovering: eu
                                             })
                                         ]
                                     })
                                 }),
-                                (0, i.jsx)(H.Z, {
+                                (0, i.jsx)(k.Z, {
                                     user: t,
-                                    bio: null == q ? void 0 : q.bio,
-                                    hidePersonalInformation: eN,
+                                    bio: null == z ? void 0 : z.bio,
+                                    hidePersonalInformation: eS,
                                     onClose: n
                                 }),
-                                em
-                                    ? (0, i.jsx)(M.Z, {
-                                          user: t,
-                                          currentUser: t,
-                                          onClose: n
-                                      })
-                                    : (0, i.jsx)(B.Z, {
-                                          user: t,
-                                          onClose: n
-                                      }),
+                                (0, i.jsx)(P.Z, {
+                                    user: t,
+                                    currentUser: t,
+                                    onClose: n
+                                }),
                                 (0, i.jsxs)('div', {
-                                    className: et.menus,
+                                    className: $.menus,
                                     children: [
-                                        (0, i.jsx)(y.Z.Overlay, {
-                                            className: et.menuOverlay,
+                                        (0, i.jsx)(D.Z.Overlay, {
+                                            className: $.menuOverlay,
                                             children: (0, i.jsxs)(d.Menu, {
                                                 navId: 'status',
-                                                'aria-label': ee.Z.Messages.STATUS_MENU_LABEL,
+                                                'aria-label': J.Z.Messages.STATUS_MENU_LABEL,
                                                 hideScroller: !0,
-                                                className: et.menu,
+                                                className: $.menu,
                                                 onClose: n,
                                                 onSelect: void 0,
                                                 children: [
-                                                    eI &&
+                                                    eh &&
                                                         (0, i.jsx)(d.MenuGroup, {
                                                             children: (0, i.jsx)(
                                                                 d.MenuItem,
                                                                 {
                                                                     id: 'edit-profile',
                                                                     iconLeft: d.PencilIcon,
-                                                                    label: ee.Z.Messages.EDIT_PROFILE,
+                                                                    label: J.Z.Messages.EDIT_PROFILE,
                                                                     action: () => {
                                                                         (0, v.pQ)({
                                                                             action: 'EDIT_PROFILE',
-                                                                            analyticsLocations: el
+                                                                            analyticsLocations: es
                                                                         }),
-                                                                            eg();
+                                                                            eE();
                                                                     },
-                                                                    focusedClassName: et.menuItemFocused,
-                                                                    subMenuIconClassName: et.subMenuIcon
+                                                                    focusedClassName: $.menuItemFocused,
+                                                                    subMenuIconClassName: $.subMenuIcon
                                                                 },
                                                                 'edit-profile'
                                                             )
@@ -453,16 +445,16 @@ function er(e) {
                                                                         alignItems: 'center',
                                                                         justifyContent: 'space-between'
                                                                     },
-                                                                    children: [(0, K.u5)(ed), ep || eT ? (0, i.jsx)(d.BellSlashIcon, { size: 'xxs' }) : null]
+                                                                    children: [(0, W.u5)(eo), em || eI ? (0, i.jsx)(d.BellSlashIcon, { size: 'xxs' }) : null]
                                                                 }),
-                                                                focusedClassName: et.menuItemFocused,
-                                                                subMenuIconClassName: et.subMenuIcon,
+                                                                focusedClassName: $.menuItemFocused,
+                                                                subMenuIconClassName: $.subMenuIcon,
                                                                 action: o.tq
                                                                     ? function () {
                                                                           (0, v.pQ)({
                                                                               action: 'PRESS_SET_STATUS',
-                                                                              analyticsLocations: el,
-                                                                              ...eo
+                                                                              analyticsLocations: es,
+                                                                              ...er
                                                                           }),
                                                                               (0, d.openModalLazy)(
                                                                                   () =>
@@ -471,17 +463,17 @@ function er(e) {
                                                                                               (0, i.jsx)(d.ModalRoot, {
                                                                                                   ...e,
                                                                                                   size: d.ModalSize.SMALL,
-                                                                                                  className: et.modal,
-                                                                                                  'aria-label': ee.Z.Messages.SET_STATUS,
+                                                                                                  className: $.modal,
+                                                                                                  'aria-label': J.Z.Messages.SET_STATUS,
                                                                                                   children: (0, i.jsx)(d.Menu, {
                                                                                                       navId: 'status-mobile-web',
                                                                                                       variant: 'fixed',
-                                                                                                      'aria-label': ee.Z.Messages.STATUS_MENU_LABEL,
+                                                                                                      'aria-label': J.Z.Messages.STATUS_MENU_LABEL,
                                                                                                       hideScroller: !0,
-                                                                                                      className: et.statusPickerModalMenu,
+                                                                                                      className: $.statusPickerModalMenu,
                                                                                                       onClose: e.onClose,
                                                                                                       onSelect: e.onClose,
-                                                                                                      children: eu
+                                                                                                      children: ec
                                                                                                   })
                                                                                               })
                                                                                           );
@@ -492,49 +484,49 @@ function er(e) {
                                                                 iconLeft: (e) => {
                                                                     let { className: t, isFocused: n } = e;
                                                                     return (0, i.jsx)(d.Status, {
-                                                                        status: ed,
+                                                                        status: eo,
                                                                         size: 12,
-                                                                        className: r()(t, et.mainStatusIcon),
+                                                                        className: r()(t, $.mainStatusIcon),
                                                                         color: n ? 'currentColor' : void 0
                                                                     });
                                                                 },
-                                                                children: o.tq ? void 0 : eu
+                                                                children: o.tq ? void 0 : ec
                                                             },
                                                             'status-picker'
                                                         )
                                                     }),
-                                                    !eI && (0, i.jsx)(d.MenuGroup, { children: eC })
+                                                    !eh && (0, i.jsx)(d.MenuGroup, { children: ep })
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(y.Z.Overlay, {
-                                            className: et.menuOverlay,
+                                        (0, i.jsx)(D.Z.Overlay, {
+                                            className: $.menuOverlay,
                                             children: (0, i.jsxs)(d.Menu, {
                                                 navId: 'account',
-                                                'aria-label': ee.Z.Messages.MULTI_ACCOUNT_MENU_LABEL,
+                                                'aria-label': J.Z.Messages.MULTI_ACCOUNT_MENU_LABEL,
                                                 hideScroller: !0,
-                                                className: et.menu,
+                                                className: $.menu,
                                                 onClose: n,
                                                 onSelect: void 0,
                                                 children: [
                                                     (0, i.jsx)(d.MenuGroup, {
                                                         children: (0, i.jsx)(d.MenuItem, {
                                                             id: 'switch-account',
-                                                            focusedClassName: et.menuItemFocused,
-                                                            subMenuIconClassName: et.subMenuIcon,
-                                                            label: ee.Z.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
+                                                            focusedClassName: $.menuItemFocused,
+                                                            subMenuIconClassName: $.subMenuIcon,
+                                                            label: J.Z.Messages.SWITCH_ACCOUNTS_MENU_ITEM_TITLE,
                                                             iconLeft: d.UserCircleIcon,
                                                             action: () => {
                                                                 (0, v.pQ)({
                                                                     action: 'PRESS_SWITCH_ACCOUNTS',
-                                                                    analyticsLocations: el
+                                                                    analyticsLocations: es
                                                                 }),
-                                                                    (0, X.Z)();
+                                                                    (0, q.Z)();
                                                             },
-                                                            children: eS
+                                                            children: eg
                                                         })
                                                     }),
-                                                    (0, i.jsx)(d.MenuGroup, { children: ef })
+                                                    (0, i.jsx)(d.MenuGroup, { children: eT })
                                                 ]
                                             })
                                         })

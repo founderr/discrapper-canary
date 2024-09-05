@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return O;
+        return N;
     }
 }),
     n(47120);
@@ -16,57 +16,55 @@ var r = n(735250),
     _ = n(970731),
     E = n(594174),
     f = n(785717),
-    h = n(27144),
-    p = n(652853),
-    I = n(171368),
-    m = n(228168),
-    T = n(921944),
-    g = n(689938),
+    h = n(652853),
+    p = n(171368),
+    I = n(228168),
+    m = n(921944),
+    T = n(689938),
     S = n(915108),
-    A = n(881828);
-let N = 32;
-function O(e) {
-    let { user: t, children: n, onClose: O } = e,
-        { analyticsLocations: R } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
-        { context: v } = (0, f.KZ)(),
-        { profileType: C, primaryColor: y } = (0, p.z)(),
-        { selfPastActivityEnabled: L } = (0, h.z)({ location: 'UserProfileActivityEducationTooltipPopout' }),
-        D = (0, a.e7)([E.default], () => {
-            var e;
-            return (null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
-        }),
-        b = L && D && C === m.y0.BITE_SIZE,
-        [M, P] = i.useState(!1);
-    (0, l.Z)(() => P(!0), b ? 200 : null);
-    let U = M ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
-        [w, x] = (0, d.US)(U),
-        G = () => {
-            (0, I.openUserProfileModal)({
+    g = n(881828);
+let A = 32;
+function N(e) {
+    let { user: t, children: n, onClose: N } = e,
+        { analyticsLocations: O } = (0, c.ZP)(u.Z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP),
+        { context: R } = (0, f.KZ)(),
+        { profileType: v, primaryColor: C } = (0, h.z)(),
+        y =
+            (0, a.e7)([E.default], () => {
+                var e;
+                return (null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id;
+            }) && v === I.y0.BITE_SIZE,
+        [D, L] = i.useState(!1);
+    (0, l.Z)(() => L(!0), y ? 200 : null);
+    let b = D ? [s.z.USER_PROFILE_ACTIVITY_EDUCATION_TOOLTIP] : [],
+        [M, P] = (0, d.US)(b),
+        U = () => {
+            (0, p.openUserProfileModal)({
                 userId: t.id,
-                section: m.oh.ACTIVITY,
-                sourceAnalyticsLocations: R,
-                ...v
+                section: I.oh.ACTIVITY,
+                sourceAnalyticsLocations: O,
+                ...R
             }),
-                null == O || O();
+                null == N || N();
         };
     return (0, r.jsx)(o.Popout, {
-        shouldShow: null != w,
-        spacing: null != y ? N : 28,
+        shouldShow: null != M,
+        spacing: null != C ? A : 28,
         renderPopout: (e) => {
             let { position: t, closePopout: n, setPopoutRef: i } = e;
             return (0, r.jsx)(o.Dialog, {
                 ref: i,
                 children: (0, r.jsx)(_.ZP, {
-                    header: g.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_EDUCATION_TOOLTIP_HEADER,
-                    content: g.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_EDUCATION_TOOLTIP_BODY,
+                    header: T.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_EDUCATION_TOOLTIP_HEADER,
+                    content: T.Z.Messages.USER_PROFILE_RECENT_ACTIVITY_EDUCATION_TOOLTIP_BODY,
                     className: S.tooltip,
                     asset: (0, r.jsx)('img', {
                         alt: '',
-                        src: A,
+                        src: g,
                         className: S.asset
                     }),
-                    buttonCTA: g.Z.Messages.CHECK_IT_OUT,
-                    secondaryButtonCTA: g.Z.Messages.EDUCATION_NEW_FEATURE_DISMISS,
+                    buttonCTA: T.Z.Messages.CHECK_IT_OUT,
+                    secondaryButtonCTA: T.Z.Messages.EDUCATION_NEW_FEATURE_DISMISS,
                     buttonProps: {
                         color: o.ButtonColors.BRAND_INVERTED,
                         size: o.Button.Sizes.SMALL
@@ -77,16 +75,16 @@ function O(e) {
                     },
                     buttonLayout: _._F.STACKED,
                     caretPosition: 'right' === t ? _.DF.LEFT_TOP : _.DF.RIGHT_TOP,
-                    onClick: G,
+                    onClick: U,
                     onSecondaryClick: n,
-                    markAsDismissed: x
+                    markAsDismissed: P
                 })
             });
         },
         children: (e) =>
             n({
                 ...e,
-                onAutoDismiss: () => x(T.L.AUTO_DISMISS)
+                onAutoDismiss: () => P(m.L.AUTO_DISMISS)
             })
     });
 }

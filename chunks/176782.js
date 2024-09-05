@@ -36,7 +36,8 @@ let o = {
                         className: l.descriptionCTATenureReward
                     },
                     cardContainer: { className: n ? l.glowingCardContainer : void 0 }
-                }
+                },
+                [i.zW.NITRO_GRADIENT_HOVER_BORDER]: { cardContainer: { className: l.nitroGradientBorderHover } }
             };
         return null != e ? c[e] : c[i.zW.DEFAULT];
     };

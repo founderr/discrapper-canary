@@ -1,24 +1,21 @@
 n.d(t, {
-    Ac: function () {
-        return N;
-    },
     NE: function () {
-        return R;
+        return O;
     },
     QN: function () {
-        return S;
+        return g;
     },
     Qf: function () {
-        return v;
+        return R;
     },
     TY: function () {
-        return C;
+        return v;
     },
     pQ: function () {
         return A;
     },
     z7: function () {
-        return O;
+        return N;
     }
 }),
     n(653041),
@@ -57,7 +54,7 @@ let I = (e) => {
         return t === p.Sk.ONLINE && n ? ''.concat(t, '-mobile') : t === p.Sk.ONLINE ? ''.concat(t, '-desktop') : t;
     },
     T = (e) => (null == e ? e : Object.keys(h.IIU)[Object.values(h.IIU).indexOf(e)]),
-    g = (e) => {
+    S = (e) => {
         var t, n;
         let { layout: r, userId: i, guildId: a, sessionId: l, sourceSessionId: c, showGuildProfile: d = !0 } = e,
             _ = u.default.getUser(i);
@@ -98,7 +95,7 @@ let I = (e) => {
             is_bot_profile: _.bot
         };
     },
-    S = (e) => {
+    g = (e) => {
         var t, n;
         let { userId: r } = e;
         return null == r
@@ -117,8 +114,8 @@ let I = (e) => {
         c.default.track(h.rMx.USER_PROFILE_ACTION, {
             ...(0, r.hH)(t),
             ...(0, r.JS)(n),
-            ...g(e),
             ...S(e),
+            ...g(e),
             location_stack: s,
             profile_action: o,
             profile_section: l,
@@ -127,28 +124,12 @@ let I = (e) => {
         });
     },
     N = (e) => {
-        let { guildId: t, channelId: n, analyticsLocations: i, activityType: a, activityName: s, activityPlatform: o, activitySessionId: l, applicationId: u, voiceChannelId: d } = e;
-        c.default.track(h.rMx.USER_PROFILE_ACTIVITY_JOINED, {
-            ...(0, r.hH)(t),
-            ...(0, r.JS)(n),
-            ...g(e),
-            ...S(e),
-            location_stack: i,
-            activity_type: null != d ? 'VOICE' : T(a),
-            activity_name: s,
-            activity_platform: o,
-            activity_session_id: l,
-            application_id: u,
-            voice_channel_id: d
-        });
-    },
-    O = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, action: a, display: s, activity: o, stream: l, entry: u, outbox: d } = e;
         c.default.track(h.rMx.USER_PROFILE_ACTIVITY_ACTION, {
             ...(0, r.hH)(t),
             ...(0, r.JS)(n),
-            ...g(e),
             ...S(e),
+            ...g(e),
             location_stack: i,
             activity_action: a,
             activity_display: s,
@@ -175,29 +156,29 @@ let I = (e) => {
                       })
         });
     },
-    R = (e) => {
+    O = (e) => {
         let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
         c.default.track(h.rMx.USER_PROFILE_BADGE_PRESSED, {
             ...(0, r.hH)(t),
             ...(0, r.JS)(n),
-            ...g(e),
             ...S(e),
+            ...g(e),
+            location_stack: i,
+            badge: a
+        });
+    },
+    R = (e) => {
+        let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
+        c.default.track(h.rMx.USER_PROFILE_BADGE_HOVERED, {
+            ...(0, r.hH)(t),
+            ...(0, r.JS)(n),
+            ...S(e),
+            ...g(e),
             location_stack: i,
             badge: a
         });
     },
     v = (e) => {
-        let { guildId: t, channelId: n, analyticsLocations: i, badge: a } = e;
-        c.default.track(h.rMx.USER_PROFILE_BADGE_HOVERED, {
-            ...(0, r.hH)(t),
-            ...(0, r.JS)(n),
-            ...g(e),
-            ...S(e),
-            location_stack: i,
-            badge: a
-        });
-    },
-    C = (e) => {
         var t, n, r;
         let { displayProfile: i, isProfileOpen: s } = e,
             u = null == i ? void 0 : i.userId,
