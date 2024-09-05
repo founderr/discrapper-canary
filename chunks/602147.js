@@ -4,50 +4,52 @@ var i = n(735250),
     a = n(481060),
     s = n(212093),
     o = n(831565),
-    c = n(836768),
-    u = n(341907),
-    d = n(703656),
-    h = n(683301),
-    p = n(603592),
-    _ = n(981631),
-    f = n(731455),
-    g = n(49898),
-    m = n(46140),
-    C = n(689938);
-let I = l.forwardRef(function (e, t) {
-    let { selected: n, className: l, onClick: I } = e,
-        E = (0, o.v)({ location: 'guild_discovery_button' }) ? C.Z.Messages.DISCOVER : C.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
-        N = c.d.getState().selectedTab;
-    return (0, i.jsx)(p.Z, {
+    c = n(571457),
+    u = n(836768),
+    d = n(341907),
+    h = n(703656),
+    p = n(683301),
+    _ = n(603592),
+    f = n(981631),
+    g = n(731455),
+    m = n(49898),
+    C = n(46140),
+    I = n(689938);
+let E = l.forwardRef(function (e, t) {
+    let { selected: n, className: l, onClick: E } = e,
+        N = (0, o.v)({ location: 'guild_discovery_button' }) ? I.Z.Messages.DISCOVER : I.Z.Messages.GUILD_DISCOVERY_TOOLTIP,
+        x = u.d.getState().selectedTab;
+    return (0, i.jsx)(_.Z, {
         id: 'guild-discover-button',
         ref: t,
         className: l,
         onClick: () => {
-            null == I || I(),
+            null == E || E(),
+                (0, c.k5)({ source: m.JU.GUILDS_BAR_ICON }),
                 !(function (e) {
                     let t = (0, o.a)({ location: 'discovery_button' }),
-                        n = window.location.pathname.startsWith(_.Z5c.GUILD_DISCOVERY),
-                        i = h.ZP.getCurrentCategoryId() === f.Gj.Clans;
+                        n = window.location.pathname.startsWith(f.Z5c.GUILD_DISCOVERY),
+                        i = p.ZP.getCurrentCategoryId() === g.Gj.Clans;
                     if (t) {
-                        if (e === g.F$.QUESTS) {
-                            (0, u.navigateToQuestHome)(m.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
+                        if (e === m.F$.QUESTS) {
+                            (0, d.navigateToQuestHome)(C.dr.DISCOVERY_COMPASS, r.j.DISCOVERY_COMPASS);
                             return;
                         }
-                        if (e === g.F$.SERVERS) {
-                            (0, d.uL)(_.Z5c.GLOBAL_DISCOVERY_SERVERS);
+                        if (e === m.F$.SERVERS) {
+                            (0, h.uL)(f.Z5c.GLOBAL_DISCOVERY_SERVERS);
                             return;
                         }
-                        (0, d.uL)(_.Z5c.GLOBAL_DISCOVERY);
+                        (0, h.uL)(f.Z5c.GLOBAL_DISCOVERY);
                         return;
                     }
-                    n && !i && ((0, s.AQ)(), (0, s.uY)(f.Hk, !0));
-                    let l = (0, d.s1)().location.search;
-                    (0, d.uL)(_.Z5c.GUILD_DISCOVERY, { search: l });
-                })(N);
+                    n && !i && ((0, s.AQ)(), (0, s.uY)(g.Hk, !0));
+                    let l = (0, h.s1)().location.search;
+                    (0, h.uL)(f.Z5c.GUILD_DISCOVERY, { search: l });
+                })(x);
         },
         selected: n,
-        tooltip: E,
+        tooltip: N,
         icon: a.CompassIcon
     });
 });
-t.Z = I;
+t.Z = E;

@@ -1,18 +1,25 @@
 n.d(t, {
-    R: function () {
+    RI: function () {
+        return r;
+    },
+    k5: function () {
         return s;
     },
-    k: function () {
-        return r;
+    kR: function () {
+        return a;
     }
 });
 var i = n(626135),
-    a = n(981631);
-function s(e) {
-    let { selectedTab: t } = e;
-    i.default.track(a.rMx.GLOBAL_DISCOVERY_VIEWED, { selected_tab: t });
-}
+    l = n(981631);
 function r(e) {
+    let { selectedTab: t } = e;
+    i.default.track(l.rMx.GLOBAL_DISCOVERY_VIEWED, { selected_tab: t });
+}
+function a(e) {
     let { selectedCategoryId: t } = e;
-    i.default.track(a.rMx.GLOBAL_DISCOVERY_SERVERS_VIEWED, { selected_category_id: t });
+    i.default.track(l.rMx.GLOBAL_DISCOVERY_SERVERS_VIEWED, { selected_category_id: t });
+}
+function s(e) {
+    let { source: t } = e;
+    i.default.track(l.rMx.GLOBAL_DISCOVERY_ENTRYPOINT_CLICKED, { source: t });
 }

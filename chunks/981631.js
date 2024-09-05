@@ -4219,6 +4219,7 @@ let ie = Object.freeze({
     (nf.SEARCH_V2_TAB_SELECTED = 'search_v2_tab_selected'),
     (nf.SEARCH_V2_JUMP_TO_MESSAGE = 'search_v2_jump_to_message'),
     (nf.GLOBAL_DISCOVERY_VIEWED = 'global_discovery_viewed'),
+    (nf.GLOBAL_DISCOVERY_ENTRYPOINT_CLICKED = 'global_discovery_entrypoint_clicked'),
     (nf.GLOBAL_DISCOVERY_SERVERS_VIEWED = 'global_discovery_servers_viewed'),
     (nf.UPSELL_VIEWED = 'upsell_viewed'),
     (nf.UPSELL_CLICKED = 'upsell_clicked'),
