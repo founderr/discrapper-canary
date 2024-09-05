@@ -50,7 +50,7 @@ var i,
     H = t(413097);
 function U(e) {
     var n;
-    let { application: t, look: i = 'large_banner', onClick: a, bannerImageStyle: o, enableVideoBanner: r = !0, children: s, sectionName: c, resultsPosition: d, tracksImpression: u = !0, disabled: p = !1 } = e,
+    let { application: t, look: i = 'large_banner', onClick: a, imageStyle: o, enableVideoBanner: r = !0, children: s, sectionName: c, resultsPosition: d, tracksImpression: u = !0, disabled: p = !1 } = e,
         _ = null !== (n = (0, m.Z)(p)) && void 0 !== n ? n : p;
     return (0, l.jsx)(k, {
         application: t,
@@ -64,12 +64,13 @@ function U(e) {
             'icon' === i
                 ? (0, l.jsx)(B, {
                       application: t,
+                      imageStyle: o,
                       children: s
                   })
                 : (0, l.jsx)(D, {
                       application: t,
                       look: i,
-                      bannerImageStyle: o,
+                      imageStyle: o,
                       enableVideoBanner: r,
                       disableBannerFadeIn: _ !== p,
                       children: s
@@ -130,31 +131,31 @@ function k(e) {
           });
 }
 function B(e) {
-    let { application: n, children: t } = e,
-        { name: i, iconURL: a } = o.useMemo(() => (0, S.sl)(n, { fakeAppIconURL: H }), [n]);
+    let { application: n, imageStyle: t, children: i } = e,
+        { name: a, iconURL: r } = o.useMemo(() => (0, S.sl)(n, { fakeAppIconURL: H }), [n]);
     return (0, l.jsx)(d.Tooltip, {
         tooltipContentClassName: O.tooltipContent,
-        text: i,
+        text: a,
         children: (e) => {
             let { ...n } = e;
             return (0, l.jsxs)('div', {
-                className: O.iconContainer,
+                className: s()(O.iconContainer, t),
                 ...n,
                 children: [
                     (0, l.jsx)(M.Z, {
-                        src: a,
+                        src: r,
                         className: O.iconCard,
                         'aria-hidden': !0,
                         rendersPlaceholder: !0
                     }),
-                    t
+                    i
                 ]
             });
         }
     });
 }
 function D(e) {
-    let { application: n, look: t, bannerImageStyle: i, enableVideoBanner: a, disableBannerFadeIn: r, children: c } = e,
+    let { application: n, look: t, imageStyle: i, enableVideoBanner: a, disableBannerFadeIn: r, children: c } = e,
         { iconURL: u, name: m, description: p } = o.useMemo(() => (0, S.sl)(n, { fakeAppIconURL: H }), [n]),
         _ = o.useMemo(() => (null == p ? null : (0, R.ae)(p)), [p]),
         C = (0, x.ZP)(u, ''),
@@ -394,7 +395,7 @@ function z(e) {
             sectionName: a,
             launchingComponentId: u
         });
-    if (A === h.JS.START)
+    if (A === h.JS.START || A === h.JS.JOIN)
         return r
             ? (0, l.jsx)(U, {
                   ...s,
@@ -423,7 +424,7 @@ function z(e) {
         onClick: (e) => {
             e.stopPropagation();
         },
-        bannerImageStyle: O.darkenBannerImage,
+        imageStyle: O.darkenImage,
         enableVideoBanner: !1,
         disabled: !0,
         children: (0, l.jsx)('div', {
