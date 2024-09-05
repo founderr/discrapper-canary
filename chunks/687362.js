@@ -16,11 +16,13 @@ var s = n(704215),
     d = n(689938);
 function _() {
     let e = (0, o.yQ)(),
-        t = (0, l.cG)({ location: r.MQ.HOME });
+        t = (0, l.cG)({ location: r.MQ.HOME }),
+        n = (0, l.AK)({ location: r.MQ.HOME }),
+        a = (0, l.mK)({ location: r.MQ.HOME });
     if (null != e && !!t)
         return {
             title: (0, i.k3)(e.nitroTenureStatus),
-            subtitle: (0, i.vZ)(e.nitroTenureStatus, null == e ? void 0 : e.tenureRewardSkuId),
+            subtitle: (0, i.vZ)(e.nitroTenureStatus, null == e ? void 0 : e.tenureRewardSkuId, a && !n),
             description: (0, i.BS)(e.nitroTenureStatus),
             ctaDescription: (0, i.t2)(e.nitroTenureStatus, e.redeemableInDays),
             pillText: e.nitroTenureStatus === c.EB.PENDING ? d.Z.Messages.REWARD.toLocaleUpperCase() : void 0,
