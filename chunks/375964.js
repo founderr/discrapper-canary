@@ -7698,6 +7698,7 @@ e.exports = Object.freeze({
     PAYMENT_SOURCE_CASH_APP_PAY_DETAILS: 'Cash App Pay Details',
     PAYMENT_SOURCE_CASH_APP_PAY_LOADING: 'Contacting Cash App Pay...',
     PAYMENT_SOURCE_CONNECT_TO_CASH_APP_PAY: 'Connect to Cash App Pay',
+    PAYMENT_SOURCE_CASH_APP_PAY_LOADING_ERROR_TRY_AGAIN: 'Something went wrong loading Cash App Pay. Please try again.',
     PAYMENT_SOURCE_CASH_APP_PAY_CONNECTION_INSTRUCTIONS: 'Follow the steps to complete your account connection.',
     PAYMENT_SOURCE_CASH_APP_PAY_CONNECTED_SUCCESS: "You've connected {cashtag}'s account.",
     PAYMENT_SOURCE_CASH_APP_PAY_CONNECTED_SUCCESS_INSTRUCTIONS: 'Hooray! You can now pay via your Cash App account.',
