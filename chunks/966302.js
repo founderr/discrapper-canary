@@ -205,10 +205,10 @@ function Z(e) {
         onDragEnd: O,
         dragAnywhere: !0,
         children: (0, r.jsx)(u.ThemeProvider, {
-            theme: M.BRd.DARK,
+            theme: p ? M.BRd.DARK : void 0,
             children: (e) =>
                 (0, r.jsxs)(o.animated.div, {
-                    className: s()(w.root, x.elevationHigh, { [w.previewCamera]: p }, p ? e : null),
+                    className: s()(w.root, x.elevationHigh, { [w.previewCamera]: p }, e),
                     style: {
                         ...t,
                         width: R.value.interpolate([0, 1], [Z.width, B]),

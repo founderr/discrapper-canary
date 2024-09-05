@@ -16,8 +16,8 @@ var a = t(512722),
     _ = t(825209),
     E = t(887278),
     T = t(630699),
-    I = t(212632),
-    S = t(658785),
+    S = t(212632),
+    I = t(658785),
     N = t(556296),
     m = t(808506),
     C = t(237997),
@@ -75,7 +75,7 @@ function M(e) {
             shouldShowKeybindIndicators: C.Z.showKeybindIndicators
         })),
         Z = (0, l.e7)([N.Z], () => N.Z.getOverlayKeybind()),
-        { showKeybindIndicators: v } = S.Z.useExperiment({ location: 'overlay_user_settings' }),
+        { showKeybindIndicators: v } = I.Z.useExperiment({ location: 'overlay_user_settings' }),
         j = (0, E.$1)();
     function B(e) {
         u.Z.setEnabled(e, r),
@@ -244,7 +244,7 @@ function M(e) {
                             title: O.Z.Messages.FORM_LABEL_NOTIFICATION_POSITION,
                             children: (0, n.jsx)('div', {
                                 className: p.notificationSettings,
-                                children: (0, n.jsx)(I.Z, {
+                                children: (0, n.jsx)(S.Z, {
                                     position: P,
                                     onChange: (e, s) => u.Z.setNotificationPositionMode(s)
                                 })

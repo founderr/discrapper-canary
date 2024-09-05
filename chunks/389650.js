@@ -17,8 +17,8 @@ var n = t(735250),
     _ = t(660216),
     E = t(225433),
     T = t(825209),
-    I = t(721383),
-    S = t(612226),
+    S = t(721383),
+    I = t(612226),
     N = t(714338),
     m = t(924557),
     C = t(600164),
@@ -52,9 +52,9 @@ function j(e, s, t) {
 }
 function B(e) {
     let { children: s } = e;
-    return s([S.Q2.MESSAGE, S.Q2.NAVIGATION, S.Q2.DND, S.Q2.CHAT, S.Q2.VOICE_AND_VIDEO, S.Q2.MISCELLANEOUS]);
+    return s([I.Q2.MESSAGE, I.Q2.NAVIGATION, I.Q2.DND, I.Q2.CHAT, I.Q2.VOICE_AND_VIDEO, I.Q2.MISCELLANEOUS]);
 }
-let U = l()((0, S.Rv)())
+let U = l()((0, I.Rv)())
         .filter((e) => e.description !== L.Z.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG)
         .groupBy((e) => e.group)
         .value(),
@@ -393,7 +393,7 @@ class y extends a.PureComponent {
                                 (0, n.jsx)('div', {
                                     className: b.defaultKeybindShortcutGroup,
                                     children: (0, n.jsx)(u.KeyCombo, {
-                                        shortcut: I._.binds['0'],
+                                        shortcut: S._.binds['0'],
                                         className: b.__invalid_defaultKeybindShortcut
                                     })
                                 })
@@ -404,8 +404,8 @@ class y extends a.PureComponent {
                             children: (e) =>
                                 (0, n.jsx)(n.Fragment, {
                                     children: e.map((e, s) => {
-                                        let t = (0, S.UD)(e),
-                                            i = (0, S.U6)(e),
+                                        let t = (0, I.UD)(e),
+                                            i = (0, I.U6)(e),
                                             o = U[e];
                                         return (0, n.jsxs)(
                                             'div',

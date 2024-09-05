@@ -15,8 +15,8 @@ var n = t(735250),
     _ = t(921801),
     E = t(131951),
     T = t(210887),
-    I = t(996073),
-    S = t(526761),
+    S = t(996073),
+    I = t(526761),
     N = t(726985),
     m = t(689938),
     C = t(224499);
@@ -43,7 +43,7 @@ function O() {
         })),
         i = a.useRef(null);
     return (
-        (0, I.Z)(i, S.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION),
+        (0, S.Z)(i, I.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION),
         (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)(_.F, {

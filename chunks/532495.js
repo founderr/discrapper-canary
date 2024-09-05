@@ -16,8 +16,8 @@ var a = t(512722),
     _ = t(295474),
     E = t(150039),
     T = t(126631),
-    I = t(433411),
-    S = t(532432),
+    S = t(433411),
+    I = t(532432),
     N = t(349177),
     m = t(872736),
     C = t(134795),
@@ -98,7 +98,7 @@ function b() {
                 'pronouns'
             ),
             (0, n.jsx)(
-                S.Z,
+                I.Z,
                 {
                     onAvatarChange: o.I5,
                     showRemoveAvatarButton: z,
@@ -109,7 +109,7 @@ function b() {
                 'avatar'
             ),
             (0, n.jsx)(
-                I.Z,
+                S.Z,
                 {
                     user: B,
                     sectionTitle: P.Z.Messages.USER_SETTINGS_AVATAR_DECORATION

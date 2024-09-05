@@ -269,10 +269,10 @@ class eD extends a.PureComponent {
                     : void 0,
             children: [
                 (0, i.jsx)(h.ThemeProvider, {
-                    theme: eR.BRd.DARK,
+                    theme: p ? eR.BRd.DARK : void 0,
                     children: (e) =>
                         (0, i.jsx)('div', {
-                            className: l()(ej.callContainer, { [e]: p }),
+                            className: l()(ej.callContainer, e),
                             ref: (e) => {
                                 (this._callContainerRef.current = e), (this.props.callContainerRef.current = e);
                             },

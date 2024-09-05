@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return I;
+        return S;
     }
 });
 var n = t(735250),
@@ -15,11 +15,11 @@ var n = t(735250),
     _ = t(248998),
     E = t(689938),
     T = t(914480);
-function I(e) {
+function S(e) {
     let { onBackClick: s } = e,
         t = (0, i.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
-        I = a.useMemo(() => Object.values(t).sort((e, s) => s.dateUnlocked - e.dateUnlocked), [t]),
-        S = a.useMemo(
+        S = a.useMemo(() => Object.values(t).sort((e, s) => s.dateUnlocked - e.dateUnlocked), [t]),
+        I = a.useMemo(
             () =>
                 Object.values(u.LG)
                     .filter(c.lm)
@@ -75,12 +75,12 @@ function I(e) {
                     })
                 ]
             }),
-            I.length > 0 &&
+            S.length > 0 &&
                 (0, n.jsx)(o.FormSection, {
                     className: T.divider,
                     children: (0, n.jsx)('div', {
                         className: T.achievementGrid,
-                        children: I.map((e) => {
+                        children: S.map((e) => {
                             let { achievementId: s, dateUnlocked: t } = e;
                             return (0, n.jsx)(
                                 _.Z,
@@ -93,7 +93,7 @@ function I(e) {
                         })
                     })
                 }),
-            S.length > 0 &&
+            I.length > 0 &&
                 (0, n.jsxs)(o.FormSection, {
                     className: T.divider,
                     children: [
@@ -107,7 +107,7 @@ function I(e) {
                         }),
                         (0, n.jsx)('div', {
                             className: T.achievementGrid,
-                            children: S.map((e) => (0, n.jsx)(_.Z, { achievementId: e.id }, e.id))
+                            children: I.map((e) => (0, n.jsx)(_.Z, { achievementId: e.id }, e.id))
                         })
                     ]
                 }),

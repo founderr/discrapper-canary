@@ -8,7 +8,7 @@ var n = t(735250),
 s.Z = a.forwardRef(function (e, s) {
     let { currentPageIndex: t, numPages: a, onChangePage: i, children: d, className: u, showPageCount: _ = !0, ...E } = e,
         T = t <= 0,
-        I = t >= a - 1;
+        S = t >= a - 1;
     return (0, n.jsxs)('div', {
         className: r()(c.__invalid_paginator, u),
         ref: s,
@@ -42,9 +42,9 @@ s.Z = a.forwardRef(function (e, s) {
                               children: l.Z.Messages.PAGINATOR_CURRENT_PAGE.format({ currentPage: t + 1 })
                           }),
                     (0, n.jsx)(o.Clickable, {
-                        className: r()(c.pageButtonNext, { [c.disabled]: I }),
-                        tabIndex: I ? -1 : 0,
-                        onClick: I ? void 0 : () => i(t + 1),
+                        className: r()(c.pageButtonNext, { [c.disabled]: S }),
+                        tabIndex: S ? -1 : 0,
+                        onClick: S ? void 0 : () => i(t + 1),
                         children: (0, n.jsx)(o.ChevronSmallRightIcon, {
                             size: 'md',
                             color: 'currentColor',

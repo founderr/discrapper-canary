@@ -15,16 +15,16 @@ var n = t(735250),
     _ = t(931500),
     E = t(921157),
     T = t(171368),
-    I = t(594174),
-    S = t(51144),
+    S = t(594174),
+    I = t(51144),
     N = t(760373),
     m = t(689938),
     C = t(288338),
     g = t(224499);
 function A(e) {
     let { userId: s, count: t } = e,
-        c = (0, i.e7)([I.default], () => I.default.getUser(s)),
-        d = S.ZP.getFormattedName(c),
+        c = (0, i.e7)([S.default], () => S.default.getUser(s)),
+        d = I.ZP.getFormattedName(c),
         _ = a.useCallback(() => {
             (0, u.Zn)(s);
         }, [s]),

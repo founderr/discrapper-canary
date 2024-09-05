@@ -16,8 +16,8 @@ var n,
     _ = t(600164),
     E = t(313201),
     T = t(695103),
-    I = t(689938),
-    S = t(395571),
+    S = t(689938),
+    I = t(395571),
     N = t(224499);
 let m = /^\d+$|^$/;
 ((a = n || (n = {})).LOCALHOST = 'localhost'), (a.PROXY = 'proxy');
@@ -69,18 +69,18 @@ function C(e) {
                         id: x,
                         tag: 'h1',
                         className: N.marginReset,
-                        children: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
+                        children: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
                     }),
                     (0, i.jsx)(l.ModalCloseButton, { onClick: s })
                 ]
             }),
             (0, i.jsxs)(l.ModalContent, {
-                className: S.modalContent,
+                className: I.modalContent,
                 children: [
                     (0, i.jsx)(l.FormText, {
                         className: N.marginBottom20,
                         type: l.FormText.Types.DESCRIPTION,
-                        children: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
+                        children: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
                     }),
                     null == a
                         ? null
@@ -97,13 +97,13 @@ function C(e) {
                             align: _.Z.Align.START,
                             children: [
                                 (0, i.jsx)(l.FormItem, {
-                                    className: S.inputWrapper,
-                                    title: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
+                                    className: I.inputWrapper,
+                                    title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
                                     required: !0,
                                     children: (0, i.jsx)(l.TextInput, {
                                         value: g,
                                         maxLength: 19,
-                                        error: f ? null : I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
+                                        error: f ? null : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
                                         onChange: function (e) {
                                             A(e);
                                         },
@@ -111,20 +111,20 @@ function C(e) {
                                     })
                                 }),
                                 (0, i.jsx)(l.FormItem, {
-                                    className: S.inputWrapper,
-                                    title: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
+                                    className: I.inputWrapper,
+                                    title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
                                     children: (0, i.jsx)(l.SingleSelect, {
                                         isDisabled: !f || '' === g,
                                         value: p,
                                         options: [
                                             {
                                                 value: 'localhost',
-                                                label: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
+                                                label: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
                                                 key: 'localhost'
                                             },
                                             {
                                                 value: 'proxy',
-                                                label: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PROXY_OPTION,
+                                                label: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PROXY_OPTION,
                                                 key: 'proxy'
                                             }
                                         ],
@@ -137,8 +137,8 @@ function C(e) {
                                 'localhost' !== p
                                     ? null
                                     : (0, i.jsx)(l.FormItem, {
-                                          className: S.inputWrapper,
-                                          title: I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
+                                          className: I.inputWrapper,
+                                          title: S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
                                           required: !0,
                                           children: (0, i.jsx)(l.TextInput, {
                                               value: h,
@@ -152,7 +152,7 @@ function C(e) {
                                     type: 'submit',
                                     disabled: !f || 0 === g.length || ('localhost' === p && 0 === h.length),
                                     color: D ? l.Button.Colors.RED : l.Button.Colors.GREEN,
-                                    children: D ? I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : I.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+                                    children: D ? S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : S.Z.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
                                 })
                             ]
                         })

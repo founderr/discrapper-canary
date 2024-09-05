@@ -20,8 +20,8 @@ var n = t(735250),
     _ = t(906732),
     E = t(600164),
     T = t(296848),
-    I = t(798769),
-    S = t(981631),
+    S = t(798769),
+    I = t(981631),
     N = t(689938),
     m = t(391717);
 async function C(e) {
@@ -41,9 +41,9 @@ function g(e) {
             },
             [r]
         ),
-        _ = d.status === S.O0b.PAUSED ? N.Z.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : N.Z.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE,
+        _ = d.status === I.O0b.PAUSED ? N.Z.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : N.Z.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE,
         C = (function (e) {
-            let s = e.status === S.O0b.PAUSED ? N.Z.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE : N.Z.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
+            let s = e.status === I.O0b.PAUSED ? N.Z.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE : N.Z.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
                 { durations: t, currentDaysPaused: n } = (0, T.AT)(e),
                 a = [];
             for (let e of t) {
@@ -71,7 +71,7 @@ function g(e) {
         }, []),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(I.Z, {
+                (0, n.jsx)(S.Z, {
                     premiumType: s,
                     onClose: t
                 }),
@@ -117,16 +117,16 @@ function A(e) {
         p = (0, u.ZP)(),
         R = null,
         x = null,
-        f = [S.O0b.PAST_DUE, S.O0b.PAUSED].includes(s.status) ? s.currentPeriodStart : s.currentPeriodEnd,
+        f = [I.O0b.PAST_DUE, I.O0b.PAUSED].includes(s.status) ? s.currentPeriodStart : s.currentPeriodEnd,
         M = r()(f).add(o, 'days').toDate();
     switch (s.status) {
-        case S.O0b.PAST_DUE:
+        case I.O0b.PAST_DUE:
             x = N.Z.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
                 pauseDuration: o,
                 resumeDate: M
             });
             break;
-        case S.O0b.PAUSED:
+        case I.O0b.PAUSED:
             x = N.Z.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({ resumeDate: M });
             break;
         default:
@@ -143,7 +143,7 @@ function A(e) {
         })),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(I.Z, {
+                (0, n.jsx)(S.Z, {
                     premiumType: t,
                     onClose: i
                 }),

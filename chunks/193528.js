@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(44315),
     E = t(654904),
     T = t(981631),
-    I = t(689938),
-    S = t(562476);
+    S = t(689938),
+    I = t(562476);
 function N(e) {
     let { onChange: s, onClose: t, color: i, suggestedColors: N, disabled: m, label: C, colorPickerMiddle: g, colorPickerFooter: A, showEyeDropper: h } = e,
         O = a.useRef(null),
@@ -51,7 +51,7 @@ function N(e) {
                 let { onClick: s, ...t } = e;
                 return (0, n.jsxs)('div', {
                     ref: O,
-                    className: r()(S.colorSwatch, { [S.disabled]: m }),
+                    className: r()(I.colorSwatch, { [I.disabled]: m }),
                     children: [
                         (0, n.jsx)(d.Clickable, {
                             ...t,
@@ -61,12 +61,12 @@ function N(e) {
                                 backgroundColor: f,
                                 borderColor: M
                             },
-                            className: S.swatch,
-                            'aria-label': I.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
+                            className: I.swatch,
+                            'aria-label': S.Z.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
                             focusProps: { ringTarget: O },
                             children: (0, n.jsx)(d.PencilIcon, {
                                 size: 'custom',
-                                className: S.editPencilIcon,
+                                className: I.editPencilIcon,
                                 width: 14,
                                 height: 14,
                                 color: D

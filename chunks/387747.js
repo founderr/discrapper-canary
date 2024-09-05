@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return I;
+        return S;
     }
 });
 var n = t(735250);
@@ -16,7 +16,7 @@ var a = t(410575),
     _ = t(726985),
     E = t(981631),
     T = t(600777);
-function I() {
+function S() {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(c.F, {

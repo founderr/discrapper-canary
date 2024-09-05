@@ -17,8 +17,8 @@ var a = t(512722),
     _ = t(374649),
     E = t(474936),
     T = t(981631),
-    I = t(689938),
-    S = t(642140);
+    S = t(689938),
+    I = t(642140);
 function N(e) {
     let { subscription: s, withOverheadSeparator: t } = e,
         { analyticsLocations: a } = (0, l.ZP)(),
@@ -29,7 +29,7 @@ function N(e) {
             analyticsLocation: o.Z.PREMIUM_SUBSCRIPTION_FINE_PRINT_CONTENT
         });
     if (null == N) return null;
-    let m = t ? S.finePrintWithOverheadSeparator : S.finePrint,
+    let m = t ? I.finePrintWithOverheadSeparator : I.finePrint,
         C = N.invoiceItems.find((e) => {
             let { subscriptionPlanId: s } = e;
             return (0, d.uZ)(s);
@@ -42,7 +42,7 @@ function N(e) {
         O = '';
     return (
         A.interval === E.rV.YEAR
-            ? (O = I.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
+            ? (O = S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_YEARLY.format({
                   price: h,
                   termsUrl: T.EYA.TERMS,
                   paidURL: T.EYA.PAID_TERMS,
@@ -51,13 +51,13 @@ function N(e) {
             : A.interval === E.rV.MONTH &&
               (O =
                   1 === A.intervalCount
-                      ? I.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
+                      ? S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MONTHLY.format({
                             price: h,
                             termsUrl: T.EYA.TERMS,
                             paidURL: T.EYA.PAID_TERMS,
                             privacyUrl: T.EYA.PRIVACY
                         })
-                      : I.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
+                      : S.Z.Messages.BILLING_PAYMENT_PREMIUM_TERMS_LEGALESE_MULTI_MONTH.format({
                             price: h,
                             termsUrl: T.EYA.TERMS,
                             paidURL: T.EYA.PAID_TERMS,

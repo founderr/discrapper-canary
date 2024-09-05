@@ -15,8 +15,8 @@ var n = t(735250),
     _ = t(539873),
     E = t(311476),
     T = t(197115),
-    I = t(626135),
-    S = t(981631),
+    S = t(626135),
+    I = t(981631),
     N = t(474936),
     m = t(689938),
     C = t(115907),
@@ -37,7 +37,7 @@ let A = () => {
         return (
             a.useEffect(() => {
                 s &&
-                    I.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
+                    S.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: N.cd.APP_ICON_UPSELL,
                         location_stack: e
                     });

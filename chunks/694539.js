@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(594174),
     E = t(572004),
     T = t(451593),
-    I = t(477146),
-    S = t(329156),
+    S = t(477146),
+    I = t(329156),
     N = t(792461),
     m = t(346537),
     C = t(830318);
@@ -78,14 +78,14 @@ s.Z = (e) => {
                                       width: 450
                                   }),
                                   h &&
-                                      (0, n.jsx)(S.Z, {
+                                      (0, n.jsx)(I.Z, {
                                           config: {
                                               type: o.Z.PROFILE_EFFECT,
                                               title: 'debug',
                                               description: 'debug',
                                               accessibilityLabel: 'debug',
                                               reducedMotionSrc: '',
-                                              effects: D ? (0, I.Tp)(L) : L,
+                                              effects: D ? (0, S.Tp)(L) : L,
                                               animationType: 0
                                           },
                                           profileEffectId: 'debug'
@@ -187,7 +187,7 @@ s.Z = (e) => {
                                                               n = new FileReader();
                                                           (n.onload = async (e) => {
                                                               if (null == e.target || 'string' != typeof e.target.result) return;
-                                                              let s = await (0, I.Xv)(URL.createObjectURL(t), e.target.result, t, L.length);
+                                                              let s = await (0, S.Xv)(URL.createObjectURL(t), e.target.result, t, L.length);
                                                               b((e) => [...e, s]);
                                                           }),
                                                               n.readAsDataURL(t);
@@ -223,7 +223,7 @@ s.Z = (e) => {
                                           (0, n.jsx)(c.Button, {
                                               color: c.ButtonColors.BRAND,
                                               onClick: () => {
-                                                  (0, E.JG)((0, I.HV)(L, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
+                                                  (0, E.JG)((0, S.HV)(L, 'proto')), (0, c.showToast)((0, c.createToast)('Copied to clipboard!', c.ToastType.SUCCESS));
                                               },
                                               children: 'Export'
                                           })
@@ -281,14 +281,14 @@ s.Z = (e) => {
                                                       canUsePremiumCustomization: !0,
                                                       isTryItOutFlow: !0
                                                   }),
-                                                  (0, n.jsx)(S.Z, {
+                                                  (0, n.jsx)(I.Z, {
                                                       config: {
                                                           type: o.Z.PROFILE_EFFECT,
                                                           title: 'debug',
                                                           description: 'debug',
                                                           accessibilityLabel: 'debug',
                                                           reducedMotionSrc: '',
-                                                          effects: D ? (0, I.Tp)(L) : L,
+                                                          effects: D ? (0, S.Tp)(L) : L,
                                                           animationType: 0
                                                       },
                                                       profileEffectId: 'debug'

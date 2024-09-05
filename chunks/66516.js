@@ -15,8 +15,8 @@ var n = t(735250),
     _ = t(367907),
     E = t(906732),
     T = t(296810),
-    I = t(921813),
-    S = t(621853),
+    S = t(921813),
+    I = t(621853),
     N = t(246946),
     m = t(594174),
     C = t(63063),
@@ -48,7 +48,7 @@ function D(e) {
             let e = m.default.getCurrentUser();
             return r()(null != e, 'GuildIdentitySettingsPage: user cannot be undefined'), e;
         }),
-        D = (0, o.e7)([S.Z], () => !S.Z.isFetchingProfile(i.id, null == s ? void 0 : s.id)),
+        D = (0, o.e7)([I.Z], () => !I.Z.isFetchingProfile(i.id, null == s ? void 0 : s.id)),
         P = (0, o.e7)([N.Z], () => N.Z.hidePersonalInformation),
         { source: L, ...b } = (0, o.cj)([h.Z], () => ({
             ...h.Z.getAllPending(),
@@ -84,7 +84,7 @@ function D(e) {
                                   }),
                                   (0, n.jsx)(T.Z, {
                                       previewTitle: f.Z.Messages.CHANGE_IDENTITY_PREVIEW_WITH_GUILD_NAME.format({ guildName: null == s ? void 0 : s.name }),
-                                      profilePreview: (0, n.jsx)(I.Z, {
+                                      profilePreview: (0, n.jsx)(S.Z, {
                                           user: i,
                                           guild: s,
                                           canUsePremiumCustomization: g.ZP.canUsePremiumProfileCustomization(i),

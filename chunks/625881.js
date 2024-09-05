@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(74538),
     E = t(937615),
     T = t(230916),
-    I = t(798769),
-    S = t(474936),
+    S = t(798769),
+    I = t(474936),
     N = t(981631),
     m = t(689938),
     C = t(956554),
@@ -38,14 +38,14 @@ s.Z = function (e) {
         },
         D = (0, d.ZP)(),
         P = (0, l.wj)(D) ? g : A,
-        L = (0, T._)(s, S.Xh.PREMIUM_MONTH_TIER_2, O),
-        b = (0, _.aS)(S.Xh.PREMIUM_MONTH_TIER_2),
+        L = (0, T._)(s, I.Xh.PREMIUM_MONTH_TIER_2, O),
+        b = (0, _.aS)(I.Xh.PREMIUM_MONTH_TIER_2),
         Z = (0, E.T4)(b.amount, b.currency);
     return null == O
         ? null
         : (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, n.jsx)(I.Z, {
+                  (0, n.jsx)(S.Z, {
                       premiumType: t,
                       onClose: i
                   }),

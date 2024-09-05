@@ -16,8 +16,8 @@ var a = t(512722),
     _ = t(532432),
     E = t(134795),
     T = t(513901),
-    I = t(451392),
-    S = t(906364),
+    S = t(451392),
+    I = t(906364),
     N = t(621853),
     m = t(271383),
     C = t(594174),
@@ -88,7 +88,7 @@ function D(e) {
                 'nick'
             ),
             (0, n.jsx)(
-                S.Z,
+                I.Z,
                 {
                     sectionTitle: f.Z.Messages.USER_SETTINGS_PRONOUNS,
                     errors: null == G ? void 0 : G.pronouns,
@@ -187,7 +187,7 @@ function D(e) {
                         },
                         'banner'
                     ),
-                    (0, n.jsx)(I.Z, {
+                    (0, n.jsx)(S.Z, {
                         user: L,
                         pendingAvatar: b,
                         pendingColors: U,

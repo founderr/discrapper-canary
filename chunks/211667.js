@@ -31,19 +31,19 @@ s.Z = function (e) {
     let { onCardInfoChange: s, className: t, expirationDate: n, error: r } = e,
         [l, u] = i.useState(!1),
         [E, T] = i.useState(null),
-        [I, S] = i.useState(n);
+        [S, I] = i.useState(n);
     return (
         i.useEffect(() => {
-            s({ expirationDate: I }, null === E);
-        }, [I, s, E]),
+            s({ expirationDate: S }, null === E);
+        }, [S, s, E]),
         (0, a.jsx)(c.Z, {
             className: t,
             form: _,
-            values: { expirationDate: I },
+            values: { expirationDate: S },
             errors: null != E ? { expirationDate: E } : {},
             formError: r,
             onFieldChange: (e) => {
-                !l && '' !== e && u(!0), (l && '' === e) || !(0, o.eH)(e) ? T(d.Z.Messages.CREDIT_CARD_ERROR_EXPIRATION) : T(null), S(e);
+                !l && '' !== e && u(!0), (l && '' === e) || !(0, o.eH)(e) ? T(d.Z.Messages.CREDIT_CARD_ERROR_EXPIRATION) : T(null), I(e);
             }
         })
     );

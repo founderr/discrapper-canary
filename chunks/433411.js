@@ -15,8 +15,8 @@ var n = t(735250),
     _ = t(345861),
     E = t(150039),
     T = t(993413),
-    I = t(689938),
-    S = t(539523);
+    S = t(689938),
+    I = t(539523);
 function N(e) {
     let { user: s, guild: t, className: i, sectionTitle: _, forcedDivider: N = !1, withTutorial: C = !1, isTryItOutFlow: g = !1 } = e,
         { analyticsLocations: A } = (0, l.ZP)(),
@@ -42,24 +42,24 @@ function N(e) {
         errors: x,
         children: [
             (0, n.jsxs)('div', {
-                className: S.buttonsContainer,
+                className: I.buttonsContainer,
                 children: [
                     (0, n.jsx)(P, {
                         size: o.Button.Sizes.SMALL,
                         onClick: M,
-                        className: r()({ [S.buttonHighlighted]: C }),
-                        children: I.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+                        className: r()({ [I.buttonHighlighted]: C }),
+                        children: S.Z.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
                     }),
                     D &&
                         (0, n.jsx)(o.Button, {
-                            className: S.removeButton,
+                            className: I.removeButton,
                             color: o.Button.Colors.PRIMARY,
                             look: o.Button.Looks.LINK,
                             size: o.Button.Sizes.SMALL,
                             onClick: function () {
                                 (0, E.PO)(null == t ? void 0 : t.id, null);
                             },
-                            children: (0, c.ad)(s, t) ? I.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : I.Z.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
+                            children: (0, c.ad)(s, t) ? S.Z.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : S.Z.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
                         })
                 ]
             }),
@@ -70,7 +70,7 @@ function N(e) {
 let m = (e) => {
     let { user: s } = e;
     return (0, n.jsxs)('div', {
-        className: S.overrideButtonsContainer,
+        className: I.overrideButtonsContainer,
         children: [
             (0, n.jsx)(o.Text, {
                 variant: 'text-xs/bold',

@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(151662),
     E = t(930441),
     T = t(726985),
-    I = t(689938),
-    S = t(780346),
+    S = t(689938),
+    I = t(780346),
     N = t(224499);
 function m(e) {
     let { label: s, onChange: t, enabled: a, subLabel: i } = e;
@@ -55,7 +55,7 @@ function C() {
                   (0, n.jsxs)(l.FormSection, {
                       className: r()(N.marginTop40),
                       tag: l.FormTitleTags.H1,
-                      title: I.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
+                      title: S.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
                       children: [
                           E.Od.map((e) => {
                               let { category: s, label: a, subLabel: i } = e,
@@ -88,16 +88,16 @@ function C() {
                               setting: T.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
                               children: [
                                   (0, n.jsx)(l.Button, {
-                                      className: S.marketingUnsubscribeButton,
+                                      className: I.marketingUnsubscribeButton,
                                       disabled: !C,
                                       look: l.ButtonLooks.LINK,
                                       color: l.ButtonColors.LINK,
                                       onClick: u.oc,
-                                      children: I.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING
+                                      children: S.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING
                                   }),
                                   (0, n.jsx)(l.FormText, {
                                       type: l.FormTextTypes.DESCRIPTION,
-                                      children: I.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING_DESCRIPTION
+                                      children: S.Z.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING_DESCRIPTION
                                   }),
                                   (0, n.jsx)(l.FormDivider, { className: r()(N.marginTop40, N.marginBottom40) })
                               ]

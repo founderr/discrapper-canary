@@ -22,8 +22,8 @@ let T = (e) => {
             let e = l.Z.getCreatedAtOverride();
             return null != e ? e.toISOString().substring(0, 10) : '';
         }),
-        I = (0, a.e7)([l.Z], () => l.Z.getPremiumTypeOverride()),
-        S = (e) => {
+        S = (0, a.e7)([l.Z], () => l.Z.getPremiumTypeOverride()),
+        I = (e) => {
             (0, o.u)(new Date(e));
         };
     return (0, n.jsxs)('div', {
@@ -36,7 +36,7 @@ let T = (e) => {
                         tag: i.FormTitleTags.H3,
                         children: (0, n.jsx)(i.SingleSelect, {
                             options: _.b6,
-                            value: I,
+                            value: S,
                             onChange: (e) => {
                                 (0, o.C)(e, t);
                             },
@@ -62,7 +62,7 @@ let T = (e) => {
                         children: (0, n.jsx)('input', {
                             type: 'date',
                             value: T,
-                            onChange: (e) => S(e.target.value),
+                            onChange: (e) => I(e.target.value),
                             className: E.datePicker
                         })
                     }),

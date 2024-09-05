@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(732783),
     E = t(981631),
     T = t(689938),
-    I = t(714264);
-let S = (0, o.hQ)();
+    S = t(714264);
+let I = (0, o.hQ)();
 s.Z = a.memo(function (e) {
     let { availableClans: s } = e,
         t = a.useMemo(() => new Map(s.map((e) => [e.id, e])), [s]),
@@ -68,16 +68,16 @@ s.Z = a.memo(function (e) {
         O = a.useCallback(() => (0, d.nE)(null, !1), []);
     return (0, n.jsxs)(l.Z, {
         title: T.Z.Messages.CLANS,
-        titleId: S,
+        titleId: I,
         children: [
             (0, n.jsx)(r.Text, {
-                className: I.subtitle,
+                className: S.subtitle,
                 variant: 'text-sm/normal',
                 children: T.Z.Messages.CLAN_USER_PROFILE_PRIMARY_CLAN_SUBTITLE
             }),
             (0, n.jsx)(r.Select, {
-                className: I.select,
-                optionClassName: I.selectPopout,
+                className: S.select,
+                optionClassName: S.selectPopout,
                 isSelected: A,
                 options: N,
                 select: g,

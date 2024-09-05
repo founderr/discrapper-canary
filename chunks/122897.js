@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return I;
+        return S;
     }
 });
 var n = t(735250);
@@ -16,11 +16,11 @@ var a = t(524437),
     _ = t(981631),
     E = t(689938),
     T = t(900965);
-function I() {
+function S() {
     var e, s, t;
-    let I = l.Xr.useSetting(),
-        S = l.UP.useSetting();
-    let N = ((e = I), (s = S), e !== a.Xr.DEFAULT_UNSET ? e : null !== (t = d.O7.get(s)) && void 0 !== t ? t : a.Xr.NON_FRIENDS);
+    let S = l.Xr.useSetting(),
+        I = l.UP.useSetting();
+    let N = ((e = S), (s = I), e !== a.Xr.DEFAULT_UNSET ? e : null !== (t = d.O7.get(s)) && void 0 !== t ? t : a.Xr.NON_FRIENDS);
     return (0, n.jsxs)(c.U, {
         setting: u.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [

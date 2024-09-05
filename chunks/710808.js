@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(729345),
     E = t(921801),
     T = t(857192),
-    I = t(131951),
-    S = t(226961),
+    S = t(131951),
+    I = t(226961),
     N = t(12647),
     m = t(726985),
     C = t(981631),
@@ -47,18 +47,18 @@ function p(e) {
 }
 function R() {
     let [e, s] = a.useState(!1),
-        { debugLogging: t, aecDumpEnabled: d } = (0, i.cj)([I.Z], () => ({
-            aecDumpSupported: I.Z.isAecDumpSupported(),
-            debugLogging: I.Z.getDebugLogging(),
-            aecDumpEnabled: I.Z.getAecDump(),
-            supportsConnectionReplay: I.Z.supports(g.AN.CONNECTION_REPLAY)
+        { debugLogging: t, aecDumpEnabled: d } = (0, i.cj)([S.Z], () => ({
+            aecDumpSupported: S.Z.isAecDumpSupported(),
+            debugLogging: S.Z.getDebugLogging(),
+            aecDumpEnabled: S.Z.getAecDump(),
+            supportsConnectionReplay: S.Z.supports(g.AN.CONNECTION_REPLAY)
         })),
         R = (0, i.e7)([T.default], () => T.default.isStreamInfoOverlayEnabled),
-        x = (0, i.e7)([S.ZP], () => S.ZP.shouldRecordNextConnection());
+        x = (0, i.e7)([I.ZP], () => I.ZP.shouldRecordNextConnection());
     async function f() {
         s(!0);
         try {
-            await I.Z.getMediaEngine().writeAudioDebugState(),
+            await S.Z.getMediaEngine().writeAudioDebugState(),
                 await N.Z.submitLiveCrashReport({ message: { message: 'User Live Dump' } }),
                 await (0, _.E)(C.GU0.RTC),
                 !(function () {

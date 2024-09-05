@@ -16,8 +16,8 @@ var a = t(120356),
     _ = t(313201),
     E = t(131951),
     T = t(358085),
-    I = t(962100),
-    S = t(981631),
+    S = t(962100),
+    I = t(981631),
     N = t(689938),
     m = t(570243),
     C = t(224499);
@@ -25,7 +25,7 @@ let g = !T.isPlatformEmbedded,
     A = (0, _.hQ)();
 function h(e) {
     let { value: s } = e;
-    s === S.pM4.PUSH_TO_TALK &&
+    s === I.pM4.PUSH_TO_TALK &&
         g &&
         (0, o.openModalLazy)(async () => {
             let { default: e } = await Promise.resolve().then(t.bind(t, 468026));
@@ -34,7 +34,7 @@ function h(e) {
                     title: N.Z.Messages.PTT_LIMITED_TITLE,
                     confirmText: N.Z.Messages.DOWNLOAD,
                     cancelText: N.Z.Messages.OKAY,
-                    onConfirm: () => (0, I.y)('PTT Limited Modal'),
+                    onConfirm: () => (0, S.y)('PTT Limited Modal'),
                     body: N.Z.Messages.PTT_LIMITED_BODY,
                     ...s
                 });
@@ -50,16 +50,16 @@ function p(e) {
         { shortcut: a, delay: _ } = (0, r.cj)([E.Z], () => E.Z.getModeOptions());
     return (
         (s =
-            T.isPlatformEmbedded || t !== S.pM4.PUSH_TO_TALK
+            T.isPlatformEmbedded || t !== I.pM4.PUSH_TO_TALK
                 ? (0, n.jsx)(o.FormText, {
                       type: o.FormText.Types.DESCRIPTION,
                       className: i()(m.pttToolsMessage, C.marginBottom8),
-                      children: N.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({ onClick: () => c.Z.setSection(S.oAB.KEYBINDS) })
+                      children: N.Z.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({ onClick: () => c.Z.setSection(I.oAB.KEYBINDS) })
                   })
                 : (0, n.jsx)(o.FormText, {
                       type: o.FormText.Types.DESCRIPTION,
                       className: i()(m.pttToolsMessage, m.pttToolsWarning, C.marginBottom8),
-                      children: N.Z.Messages.PTT_LIMITED_WARNING.format({ onDownloadClick: () => (0, I.y)('Help Text PTT') })
+                      children: N.Z.Messages.PTT_LIMITED_WARNING.format({ onDownloadClick: () => (0, S.y)('Help Text PTT') })
                   })),
         (0, n.jsxs)('div', {
             className: m.pttTools,
@@ -90,7 +90,7 @@ function p(e) {
                                         initialValue: _,
                                         onValueChange: (e) => l.Z.setMode(t, { delay: e }),
                                         onValueRender: O,
-                                        maxValue: S.qhL,
+                                        maxValue: I.qhL,
                                         'aria-labelledby': A
                                     })
                                 ]
@@ -107,11 +107,11 @@ function R() {
     let e = (0, r.e7)([E.Z], () => E.Z.getMode()),
         s = [
             {
-                value: S.pM4.VOICE_ACTIVITY,
+                value: I.pM4.VOICE_ACTIVITY,
                 name: N.Z.Messages.INPUT_MODE_VAD
             },
             {
-                value: S.pM4.PUSH_TO_TALK,
+                value: I.pM4.PUSH_TO_TALK,
                 name: g ? N.Z.Messages.INPUT_MODE_PTT_LIMITED : N.Z.Messages.INPUT_MODE_PTT
             }
         ];
@@ -126,7 +126,7 @@ function R() {
                     value: e
                 })
             }),
-            e === S.pM4.PUSH_TO_TALK && (0, n.jsx)(p, { inputMode: e })
+            e === I.pM4.PUSH_TO_TALK && (0, n.jsx)(p, { inputMode: e })
         ]
     });
 }

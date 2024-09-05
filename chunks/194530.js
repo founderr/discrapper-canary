@@ -17,8 +17,8 @@ var n = t(735250),
     _ = t(689938),
     E = t(312254);
 function T(e) {
-    var s, t, T, I;
-    let { transitionState: S, onSuccess: N, onClose: m, requirementsUpdated: C, noSkip: g = !1 } = e,
+    var s, t, T, S;
+    let { transitionState: I, onSuccess: N, onClose: m, requirementsUpdated: C, noSkip: g = !1 } = e,
         [A, h] = a.useState(''),
         [O, p] = a.useState(''),
         [R, x] = a.useState(''),
@@ -43,13 +43,13 @@ function T(e) {
     }
     return (
         a.useEffect(() => {
-            if (S === r.ModalTransitionState.ENTERED) {
+            if (I === r.ModalTransitionState.ENTERED) {
                 var e;
                 null === (e = Z.current) || void 0 === e || e.focus();
             }
-        }, [S]),
+        }, [I]),
         (0, n.jsxs)(r.ModalRoot, {
-            transitionState: S,
+            transitionState: I,
             children: [
                 (0, n.jsxs)(r.ModalHeader, {
                     separator: !1,
@@ -93,7 +93,7 @@ function T(e) {
                                 (0, n.jsx)(r.FormItem, {
                                     className: E.newPassword,
                                     title: _.Z.Messages.FORM_LABEL_NEW_PASSWORD,
-                                    error: null !== (I = null !== (T = null == L ? void 0 : null === (t = L.new_password) || void 0 === t ? void 0 : t[0]) && void 0 !== T ? T : f) && void 0 !== I ? I : void 0,
+                                    error: null !== (S = null !== (T = null == L ? void 0 : null === (t = L.new_password) || void 0 === t ? void 0 : t[0]) && void 0 !== T ? T : f) && void 0 !== S ? S : void 0,
                                     children: (0, n.jsx)(r.TextInput, {
                                         type: 'password',
                                         value: O,

@@ -21,4 +21,4 @@ n.d(t, {
 let c = ['servers', 'quests'],
     u = 24,
     d = 240;
-((s = l || (l = {})).DEFAULT = 'default'), (s.FLOATING = 'floating'), (s.COLLAPSED = 'collapsed'), ((o = r || (r = {})).ROOT = 'root'), (o.SERVER_TAB = 'server_tab');
+((s = l || (l = {})).DEFAULT = 'default'), (s.FLOATING = 'floating'), (s.COLLAPSED = 'collapsed'), ((o = r || (r = {})).ROOT = 'root'), (o.SERVER_TAB = 'server_tab'), (o.SERVER_SEARCH = 'server_search');

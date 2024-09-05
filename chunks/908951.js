@@ -17,8 +17,8 @@ var n = t(735250),
     _ = t(366939),
     E = t(623573),
     T = t(190947),
-    I = t(275850),
-    S = t(906732),
+    S = t(275850),
+    I = t(906732),
     N = t(15640),
     m = t(246946),
     C = t(853872),
@@ -36,7 +36,7 @@ function D(e) {
         Z = (0, c.e7)([m.Z], () => m.Z.hidePersonalInformation),
         [v, j] = (0, c.Wu)([C.Z], () => [C.Z.paymentSources, C.Z.hasFetchedPaymentSources]),
         B = (0, N.V)((0, O.yb)(s)),
-        { analyticsLocations: U } = (0, S.ZP)(),
+        { analyticsLocations: U } = (0, I.ZP)(),
         G = a.useMemo(() => Object.values(v).filter((e) => !e.invalid), [v]),
         [F, y] = a.useState(!1),
         [V, Y] = a.useState(s.currency),
@@ -130,7 +130,7 @@ function D(e) {
             children: [
                 (() => {
                     let e = s.paymentSourceId;
-                    return (0, n.jsx)(I.Z, {
+                    return (0, n.jsx)(S.Z, {
                         prependOption:
                             null == e
                                 ? {

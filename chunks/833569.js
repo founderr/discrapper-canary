@@ -21,8 +21,8 @@ var n,
     _ = t(442837),
     E = t(780384),
     T = t(481060),
-    I = t(355467),
-    S = t(410030),
+    S = t(355467),
+    I = t(410030),
     N = t(100527),
     m = t(906732),
     C = t(211242),
@@ -54,11 +54,11 @@ var n,
 async function k(e) {
     let { premiumSubscription: s, onClose: t, setHasError: n, setIsCancelling: a, analyticsLocations: i, analyticsLocation: r } = e;
     try {
-        if ((a(!0), n(!1), [V.O0b.PAST_DUE, V.O0b.PAUSED, V.O0b.BILLING_RETRY].includes(s.status))) await (0, I.EO)(s.id, i, r);
+        if ((a(!0), n(!1), [V.O0b.PAST_DUE, V.O0b.PAUSED, V.O0b.BILLING_RETRY].includes(s.status))) await (0, S.EO)(s.id, i, r);
         else {
             var o, l;
             let e = null !== (l = null === (o = s.renewalMutations) || void 0 === o ? void 0 : o.items) && void 0 !== l ? l : s.items;
-            await (0, I.Mg)(s, { items: (0, R.Ue)(e) }, i, r);
+            await (0, S.Mg)(s, { items: (0, R.Ue)(e) }, i, r);
         }
         t();
     } catch {
@@ -70,8 +70,8 @@ function H(e) {
     let { premiumSubscription: t, premiumType: n, setStep: a, onClose: o, whatYouLoseExperienceEnabled: l, analyticsLocation: c } = e,
         d = (0, C.Q)(),
         [u, _] = r.useState(!1),
-        [I, N] = r.useState(!1),
-        A = (0, S.ZP)(),
+        [S, N] = r.useState(!1),
+        A = (0, I.ZP)(),
         { analyticsLocations: h } = (0, m.ZP)(),
         O = null;
     switch (t.status) {
@@ -166,7 +166,7 @@ function H(e) {
             (0, i.jsxs)(T.ModalContent, {
                 className: w.body,
                 children: [
-                    I
+                    S
                         ? (0, i.jsx)(T.FormErrorBlock, {
                               className: w.errorBlock,
                               children: Y.Z.Messages.BILLING_ERROR_GENERIC
@@ -300,14 +300,14 @@ function X(e) {
     var s;
     let t,
         { premiumSubscription: n, transitionState: a, onClose: o, analyticsLocations: l, analyticsLocation: d, initialStep: _ } = e,
-        I = r.useRef(new c.qA()),
+        S = r.useRef(new c.qA()),
         [C, g] = r.useState(null),
         A = (0, D.yQ)(),
         p = (null == A ? void 0 : A.showCard) === !0,
         x = null === (s = (0, R.Af)(n)) || void 0 === s ? void 0 : s.planId,
         f = null != x ? R.ZP.getPremiumType(x) : null;
     u()(null != f, 'Should not be cancelling Nitro without premiumType');
-    let P = (0, S.ZP)();
+    let P = (0, I.ZP)();
     r.useEffect(() => {
         h.default.track(V.rMx.CANCELLATION_FLOW_STARTED, z(n));
     }, [n]);
@@ -490,7 +490,7 @@ function X(e) {
             (0, i.jsx)(c.O_, {
                 ref: g,
                 className: w.confettiCanvas,
-                environment: I.current
+                environment: S.current
             }),
             (0, i.jsx)(T.ModalRoot, {
                 transitionState: a,

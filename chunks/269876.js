@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(846027),
     E = t(313201),
     T = t(131951),
-    I = t(65154),
-    S = t(689938),
+    S = t(65154),
+    I = t(689938),
     N = t(890755),
     m = t(257995),
     C = t(224499);
@@ -32,11 +32,11 @@ function A() {
             isEnabled: R
         } = (0, o.cj)([T.Z], () => ({
             inputMode: T.Z.getMode(),
-            automaticVADSupported: T.Z.supports(I.AN.AUTOMATIC_VAD),
+            automaticVADSupported: T.Z.supports(S.AN.AUTOMATIC_VAD),
             isEnabled: T.Z.isEnabled()
         }));
     function x(e, t) {
-        s(e), i((t & I.Dg.VOICE) === I.Dg.VOICE);
+        s(e), i((t & S.Dg.VOICE) === S.Dg.VOICE);
     }
     function f(e, s) {
         _.Z.setMode(O, {
@@ -88,7 +88,7 @@ function A() {
                     (0, n.jsx)(u.FormText, {
                         type: u.FormText.Types.DESCRIPTION,
                         className: C.marginBottom8,
-                        children: S.Z.Messages.FORM_HELP_AUTOMATIC_VAD
+                        children: I.Z.Messages.FORM_HELP_AUTOMATIC_VAD
                     })
                 ]
             })),
@@ -99,7 +99,7 @@ function A() {
                     id: g,
                     tag: u.FormTitleTags.H5,
                     className: C.marginBottom8,
-                    children: S.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY
+                    children: I.Z.Messages.FORM_LABEL_INPUT_SENSITIVTY
                 }),
                 (0, n.jsxs)('div', {
                     children: [
@@ -114,7 +114,7 @@ function A() {
                                                 className: C.marginReset,
                                                 children: (0, n.jsx)('label', {
                                                     htmlFor: e,
-                                                    children: S.Z.Messages.FORM_LABEL_AUTOMATIC_VAD
+                                                    children: I.Z.Messages.FORM_LABEL_AUTOMATIC_VAD
                                                 })
                                             }),
                                             (0, n.jsx)(u.Switch, {
@@ -132,7 +132,7 @@ function A() {
                     (0, n.jsx)(u.FormText, {
                         type: u.FormText.Types.DESCRIPTION,
                         className: r()(N.inputDisabledWarning, C.marginBottom8),
-                        children: S.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({ onEnableClick: _.Z.enable })
+                        children: I.Z.Messages.FORM_WARNING_INPUT_SENSITIVTY.format({ onEnableClick: _.Z.enable })
                     })
             ]
         })

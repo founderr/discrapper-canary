@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(481060),
     E = t(570140),
     T = t(661111),
-    I = t(179658),
-    S = t(491428),
+    S = t(179658),
+    I = t(491428),
     N = t(225433),
     m = t(484614),
     C = t(386506),
@@ -793,7 +793,7 @@ function z(e) {
                     value: t,
                     note: 'Display raw colors as pink. Toggling this will refresh the browser.',
                     onChange: (e) => {
-                        (0, I.y)({ cssDebuggingEnabled: e }), setTimeout(() => location.reload(), 500);
+                        (0, S.y)({ cssDebuggingEnabled: e }), setTimeout(() => location.reload(), 500);
                     },
                     children: 'Enable CSS Debugging'
                 })
@@ -804,7 +804,7 @@ function z(e) {
                     value: s,
                     note: 'Renders a grid on top of the app to help debug layout alignment issues.',
                     onChange: (e) => {
-                        (0, I.y)({ layoutDebuggingEnabled: e });
+                        (0, S.y)({ layoutDebuggingEnabled: e });
                     },
                     children: 'Enable Layout Debugging'
                 })
@@ -1016,7 +1016,7 @@ let q = d.ZP.connectStores([M.default], () => ({
                             children: (0, n.jsx)(_.FormSwitch, {
                                 value: s,
                                 note: 'Force trace all client requests with APM',
-                                onChange: (e) => (0, I.y)({ trace: e }),
+                                onChange: (e) => (0, S.y)({ trace: e }),
                                 children: 'Enable Tracing Requests'
                             })
                         }),
@@ -1025,7 +1025,7 @@ let q = d.ZP.connectStores([M.default], () => ({
                             children: (0, n.jsx)(_.FormSwitch, {
                                 value: t,
                                 note: 'Force all API requests to canary instances',
-                                onChange: (e) => (0, I.y)({ canary: e }),
+                                onChange: (e) => (0, S.y)({ canary: e }),
                                 children: 'Enable Forced Canary'
                             })
                         }),
@@ -1034,7 +1034,7 @@ let q = d.ZP.connectStores([M.default], () => ({
                             children: (0, n.jsx)(_.FormSwitch, {
                                 value: a,
                                 note: 'Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.',
-                                onChange: (e) => (0, I.y)({ logGatewayEvents: e }),
+                                onChange: (e) => (0, S.y)({ logGatewayEvents: e }),
                                 children: 'Enable Logging of Gateway Events to Console'
                             })
                         }),
@@ -1043,7 +1043,7 @@ let q = d.ZP.connectStores([M.default], () => ({
                             children: (0, n.jsx)(_.FormSwitch, {
                                 value: i,
                                 note: 'Logs all overlay related RPC events. Super noisy if an overlay is connected',
-                                onChange: (e) => (0, I.y)({ logOverlayEvents: e }),
+                                onChange: (e) => (0, S.y)({ logOverlayEvents: e }),
                                 children: 'Enable Logging of Overlay RPC Events & Commands'
                             })
                         }),
@@ -1052,7 +1052,7 @@ let q = d.ZP.connectStores([M.default], () => ({
                             children: (0, n.jsx)(_.FormSwitch, {
                                 value: r,
                                 note: 'Logs all analytics events to the developer console',
-                                onChange: (e) => (0, I.y)({ logAnalyticsEvents: e }),
+                                onChange: (e) => (0, S.y)({ logAnalyticsEvents: e }),
                                 children: 'Enable Logging of Analytics Events'
                             })
                         }),
@@ -1061,7 +1061,7 @@ let q = d.ZP.connectStores([M.default], () => ({
                             children: (0, n.jsx)(_.FormSwitch, {
                                 value: d,
                                 note: 'Only enable on devices you trust.',
-                                onChange: (e) => (0, I.y)({ sourceMapsEnabled: e }),
+                                onChange: (e) => (0, S.y)({ sourceMapsEnabled: e }),
                                 children: 'Enable source maps to be loaded on this client'
                             })
                         }),
@@ -1070,7 +1070,7 @@ let q = d.ZP.connectStores([M.default], () => ({
                             children: (0, n.jsx)(_.FormSwitch, {
                                 value: u,
                                 note: 'Displays a floating debugger with viewed impressions',
-                                onChange: (e) => (0, I.y)({ analyticsDebuggerEnabled: e }),
+                                onChange: (e) => (0, S.y)({ analyticsDebuggerEnabled: e }),
                                 children: 'Enable standard analytics debugger view'
                             })
                         }),
@@ -1079,7 +1079,7 @@ let q = d.ZP.connectStores([M.default], () => ({
                             children: (0, n.jsx)(_.FormSwitch, {
                                 value: E,
                                 note: 'Displays a floating idle status indicator',
-                                onChange: (e) => (0, I.y)({ idleStatusIndicatorEnabled: e }),
+                                onChange: (e) => (0, S.y)({ idleStatusIndicatorEnabled: e }),
                                 children: 'Enable idle status indicator'
                             })
                         }),
@@ -1088,7 +1088,7 @@ let q = d.ZP.connectStores([M.default], () => ({
                             children: (0, n.jsx)(_.FormSwitch, {
                                 value: o,
                                 note: 'Runs Axe auditing for accessibility while using the app. Violations get logged to the console. Only available in development',
-                                onChange: (e) => (0, I.y)({ axeEnabled: e }),
+                                onChange: (e) => (0, S.y)({ axeEnabled: e }),
                                 children: 'Enable Accessibility Auditing'
                             })
                         }),
@@ -1097,7 +1097,7 @@ let q = d.ZP.connectStores([M.default], () => ({
                             children: (0, n.jsx)(_.FormSwitch, {
                                 value: T,
                                 note: 'In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.',
-                                onChange: (e) => (0, I.y)({ appDirectoryIncludesInactiveCollections: e }),
+                                onChange: (e) => (0, S.y)({ appDirectoryIncludesInactiveCollections: e }),
                                 children: 'Preview Unpublished Collections on App Directory Homepage'
                             })
                         }),
@@ -1135,7 +1135,7 @@ function J() {
                 (0, n.jsxs)('form', {
                     className: U.surveyOverride,
                     onSubmit: (e) => {
-                        e.preventDefault(), s.length > 0 ? S.Xq(s) : S.Xq(null);
+                        e.preventDefault(), s.length > 0 ? I.Xq(s) : I.Xq(null);
                     },
                     children: [
                         (0, n.jsx)(_.TextInput, {

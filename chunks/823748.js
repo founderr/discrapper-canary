@@ -636,7 +636,7 @@ class e9 extends a.PureComponent {
                     className: e3.subtitleContainer,
                     children: [
                         (0, i.jsx)(f.ThemeProvider, {
-                            theme: eJ.BRd.DARK,
+                            theme: u && r ? eJ.BRd.DARK : void 0,
                             children: (o) =>
                                 (0, i.jsxs)(
                                     $.Z,
@@ -648,7 +648,7 @@ class e9 extends a.PureComponent {
                                         showDivider: h && !(0, e_.X)(),
                                         toolbar: this.renderHeaderToolbar(),
                                         mobileToolbar: this.renderMobileToolbar(),
-                                        className: l()(e3.title, u && r ? o : null),
+                                        className: l()(e3.title, o),
                                         transparent: r || c,
                                         'aria-label': e4.Z.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
                                         children: [

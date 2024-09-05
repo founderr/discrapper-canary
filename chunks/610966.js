@@ -16,15 +16,15 @@ function u(e) {
     var s;
     let { user: t, savedUserColor: u, pendingColor: _, setPendingAccentColor: E } = e,
         T = t.getAvatarURL(null, 80),
-        I = (0, r.useToken)(i.Z.unsafe_rawColors.PRIMARY_530).hex(),
-        S = (0, o.Cf)(T, I, !1),
-        N = (0, a._i)(S[0]);
+        S = (0, r.useToken)(i.Z.unsafe_rawColors.PRIMARY_530).hex(),
+        I = (0, o.Cf)(T, S, !1),
+        N = (0, a._i)(I[0]);
     return (0, n.jsx)(c.Z, {
         title: d.Z.Messages.USER_SETTINGS_BANNER_COLOR_TITLE,
         children: (0, n.jsx)(l.Z, {
             onChange: (e) => E(e),
             color: null !== (s = null != _ ? _ : u) && void 0 !== s ? s : N,
-            suggestedColors: S,
+            suggestedColors: I,
             showEyeDropper: !0
         })
     });

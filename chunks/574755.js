@@ -15,8 +15,8 @@ var n = t(735250),
     _ = t(131951),
     E = t(924557),
     T = t(435064),
-    I = t(779618),
-    S = t(39604),
+    S = t(779618),
+    I = t(39604),
     N = t(703288),
     m = t(491758),
     C = t(183632),
@@ -31,7 +31,7 @@ function p(e) {
         { analyticsLocations: x } = (0, l.ZP)(),
         f = (0, E.Go)(),
         { viewerClipsEnabled: M } = (0, i.cj)([T.Z], () => T.Z.getSettings()),
-        D = (0, I.Z)(_.Z);
+        D = (0, S.Z)(_.Z);
     return (
         a.useEffect(() => {
             (0, c.EW)(r.z.CLIPS_SETTINGS_BETA_TAG);
@@ -65,7 +65,7 @@ function p(e) {
                             className: h.formItem,
                             value: p,
                             note: g.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
-                            onChange: (e) => S.yg({ allowVoiceRecording: e }),
+                            onChange: (e) => I.yg({ allowVoiceRecording: e }),
                             children: g.Z.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
                         }),
                         R &&
@@ -76,7 +76,7 @@ function p(e) {
                                 value: M,
                                 note: g.Z.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
                                 onChange: (e) =>
-                                    S.yl({
+                                    I.yl({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),

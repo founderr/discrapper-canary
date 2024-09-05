@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(230711),
     E = t(714338),
     T = t(857595),
-    I = t(607070),
-    S = t(627845),
+    S = t(607070),
+    I = t(627845),
     N = t(514361),
     m = t(600164),
     C = t(313201),
@@ -254,7 +254,7 @@ class Q extends a.Component {
                   children: (0, n.jsx)(d.FormText, {
                       type: d.FormText.Types.DEFAULT,
                       className: F.forcedColorsWarning,
-                      children: (0, S.b)()
+                      children: (0, I.b)()
                           ? G.Z.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
                                 onClick: () => {
                                     _.Z.open(j.oAB.ACCESSIBILITY);
@@ -401,16 +401,16 @@ function q() {
     a.useEffect(() => {
         X(l.z.CLIENT_THEMES_SETTINGS_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_BADGE), X(l.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
     }, []);
-    let r = (0, o.cj)([D.Z, P.ZP, I.Z, f.default, N.Z], () => {
+    let r = (0, o.cj)([D.Z, P.ZP, S.Z, f.default, N.Z], () => {
         var e, s;
         return {
             theme: D.Z.theme,
-            useForcedColors: I.Z.useForcedColors,
+            useForcedColors: S.Z.useForcedColors,
             useSystemTheme: P.ZP.useSystemTheme,
             darkSidebar: D.Z.darkSidebar,
-            fontSize: I.Z.fontSize,
-            zoom: I.Z.zoom,
-            messageGroupSpacing: I.Z.messageGroupSpacing,
+            fontSize: S.Z.fontSize,
+            zoom: S.Z.zoom,
+            messageGroupSpacing: S.Z.messageGroupSpacing,
             displayCompactAvatars: P.ZP.displayCompactAvatars,
             isStaff: null !== (s = null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== s && s,
             gradientPreset: N.Z.gradientPreset

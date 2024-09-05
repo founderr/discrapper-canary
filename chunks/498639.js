@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(906732),
     E = t(883904),
     T = t(678558),
-    I = t(730647),
-    S = t(584825),
+    S = t(730647),
+    I = t(584825),
     N = t(305342),
     m = t(333867),
     C = t(963249),
@@ -26,7 +26,7 @@ var n = t(735250),
     f = t(729135);
 function M(e) {
     let { selectedGuildForGuildSub: s } = e,
-        t = (0, S.GG)(null == s ? void 0 : s.id)[0];
+        t = (0, I.GG)(null == s ? void 0 : s.id)[0];
     return (0, n.jsx)(n.Fragment, {
         children:
             null != s && null != t
@@ -49,7 +49,7 @@ function M(e) {
 }
 s.Z = function () {
     let [e, s] = a.useState(x.Si.TIER_2),
-        [t, S] = a.useState(null),
+        [t, I] = a.useState(null),
         [N] = (0, r.Wu)([O.Z], () => [O.Z.getGuilds()]),
         [D] = (0, r.Wu)([p.ZP], () => [p.ZP.getPremiumSubscription()]);
     (0, h.t)();
@@ -135,7 +135,7 @@ s.Z = function () {
                                     label: 'None'
                                 }
                             ],
-                            onChange: (e) => S(e)
+                            onChange: (e) => I(e)
                         }),
                         (0, n.jsx)(o.Button, {
                             onClick: () =>
@@ -281,7 +281,7 @@ s.Z = function () {
                         })
                     ]
                 }),
-                (0, n.jsx)(I.l, {
+                (0, n.jsx)(S.l, {
                     guildId: null == G ? void 0 : G.id,
                     children: (0, n.jsx)(M, { selectedGuildForGuildSub: G })
                 }),

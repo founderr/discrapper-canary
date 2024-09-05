@@ -24,12 +24,12 @@ let E = {
         [d.gkr.HOUSE_2]: _.__invalid_houseLogoHouse2,
         [d.gkr.HOUSE_3]: _.__invalid_houseLogoHouse3
     },
-    I = {
+    S = {
         [d.gkr.HOUSE_1]: t(246300),
         [d.gkr.HOUSE_2]: t(797148),
         [d.gkr.HOUSE_3]: t(374347)
     },
-    S = (e) =>
+    I = (e) =>
         ({
             [d.gkr.HOUSE_1]: u.Z.Messages.HYPESQUAD_DESCRIPTION_HOUSE_1,
             [d.gkr.HOUSE_2]: u.Z.Messages.HYPESQUAD_DESCRIPTION_HOUSE_2,
@@ -65,7 +65,7 @@ class N extends a.Component {
                                         (0, n.jsx)(o.Text, {
                                             className: _.membershipDialogHouseDescription,
                                             variant: 'text-md/normal',
-                                            children: S(e)
+                                            children: I(e)
                                         })
                                     ]
                                 }),
@@ -76,7 +76,7 @@ class N extends a.Component {
                                     wrap: !0,
                                     children: (0, n.jsx)('img', {
                                         className: r()(_.houseLogo, T[e]),
-                                        src: I[e],
+                                        src: S[e],
                                         alt: s
                                     })
                                 })

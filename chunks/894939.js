@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(208049),
     E = t(763296),
     T = t(242291),
-    I = t(893663),
-    S = t(331642),
+    S = t(893663),
+    I = t(331642),
     N = t(63063),
     m = t(581883),
     C = t(918257),
@@ -37,10 +37,10 @@ function x(e) {
 function f() {
     let { analyticsLocations: e } = (0, l.ZP)(),
         [s, t] = a.useState(h.hY),
-        o = (0, I.tT)(s),
+        o = (0, S.tT)(s),
         m = x(o),
         f = (0, i.e7)([E.Z], () => E.Z.hasFetchedAllSounds()),
-        D = (null == o ? void 0 : o.type) === I.zx.GLOBAL,
+        D = (null == o ? void 0 : o.type) === S.zx.GLOBAL,
         P = f && null != o && null == m;
     a.useEffect(() => {
         P && (0, T.tt)({ location: e });
@@ -100,7 +100,7 @@ function f() {
                         }),
                         forcedDivider: !0,
                         children: [
-                            (0, n.jsx)(S.Z, {
+                            (0, n.jsx)(I.Z, {
                                 sound: m,
                                 isGlobal: D,
                                 onSelect: (t) => {

@@ -17,8 +17,8 @@ var n = t(735250),
     _ = t(669079),
     E = t(981631),
     T = t(689938),
-    I = t(381670);
-function S(e, s, t) {
+    S = t(381670);
+function I(e, s, t) {
     return (
         s in e
             ? Object.defineProperty(e, s, {
@@ -59,7 +59,7 @@ class N extends a.Component {
                                 onChange: this.handleChange,
                                 placeholder: 'WUMP-AAAAA-BBBBB-CCCCC',
                                 error: !i && a ? T.Z.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_INVALID : null,
-                                className: I.codeRedemptionInput
+                                className: S.codeRedemptionInput
                             }),
                             (0, n.jsx)(r.Button, {
                                 type: 'submit',
@@ -71,7 +71,7 @@ class N extends a.Component {
                 }),
                 i
                     ? (0, n.jsx)(r.Text, {
-                          className: I.errorMessage,
+                          className: S.errorMessage,
                           variant: 'text-sm/normal',
                           children: T.Z.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMOTION.format({
                               promoLink: () => {
@@ -85,19 +85,19 @@ class N extends a.Component {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'state', {
+            I(this, 'state', {
                 codeInput: '',
                 submitting: !1,
                 hasError: !1,
                 isPromoCode: !1
             }),
-            S(this, 'handleChange', (e) => {
+            I(this, 'handleChange', (e) => {
                 this.setState({
                     codeInput: e,
                     hasError: !1
                 });
             }),
-            S(this, 'handleSubmit', async (e) => {
+            I(this, 'handleSubmit', async (e) => {
                 e.preventDefault();
                 let { codeInput: s } = this.state;
                 if ('' === s) return;

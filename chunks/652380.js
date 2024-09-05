@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(497505),
     E = t(210724),
     T = t(130653),
-    I = t(78826),
-    S = t(37303),
+    S = t(78826),
+    I = t(37303),
     N = t(134483),
     m = t(478977),
     C = t(456799),
@@ -494,7 +494,7 @@ function Z() {
                                         }),
                                     (0, n.jsx)('div', {
                                         className: R.questBarPreview,
-                                        children: (0, n.jsx)(I.p, {
+                                        children: (0, n.jsx)(S.p, {
                                             isPreview: !0,
                                             source: 'preview',
                                             questId: '0',
@@ -508,11 +508,11 @@ function Z() {
                     (0, n.jsxs)(C.Z, {
                         children: [
                             (0, n.jsx)(d.FormTitle, { children: 'Gift Inventory' }),
-                            (0, n.jsx)(I.p, {
+                            (0, n.jsx)(S.p, {
                                 isPreview: !0,
                                 source: 'preview',
                                 questId: '0',
-                                children: (0, n.jsx)(S.Z, {
+                                children: (0, n.jsx)(I.Z, {
                                     quest: r,
                                     location: _.jn.GIFT_INVENTORY_FOR_YOU
                                 })
@@ -531,7 +531,7 @@ function Z() {
                                 }),
                             (0, n.jsx)('div', {
                                 className: R.questBarPreviewWrapper,
-                                children: (0, n.jsx)(I.p, {
+                                children: (0, n.jsx)(S.p, {
                                     isPreview: !0,
                                     source: 'preview',
                                     questId: '0',

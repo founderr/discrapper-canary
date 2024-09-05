@@ -10,8 +10,8 @@ var n = t(735250),
     _ = t(496929),
     E = t(821849),
     T = t(230711),
-    I = t(497321),
-    S = t(167354),
+    S = t(497321),
+    I = t(167354),
     N = t(15640),
     m = t(600164),
     C = t(925329),
@@ -90,7 +90,7 @@ function k() {
 }
 s.Z = function () {
     let e = (0, o.e7)([D.ZP], () => D.ZP.getPremiumTypeSubscription()),
-        s = (0, S.Z)({ subscriptionFilter: (e) => j.eS.has(e.status) }),
+        s = (0, I.Z)({ subscriptionFilter: (e) => j.eS.has(e.status) }),
         t = s.length > 1,
         i = (0, o.e7)([M.Z], () => (null != e && null != e.paymentSourceId ? M.Z.getPaymentSource(e.paymentSourceId) : null), [e]),
         _ = (0, o.e7)([D.ZP], () => D.ZP.hasFetchedSubscriptions()),
@@ -119,7 +119,7 @@ s.Z = function () {
         []
     ),
     R.Z.enabled)
-        ? (0, n.jsx)(I.Z, {})
+        ? (0, n.jsx)(S.Z, {})
         : _ && C
           ? P === G.cP
               ? (0, n.jsx)(A.Z, { onGoBack: () => T.Z.clearSubsection() })

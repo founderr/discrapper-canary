@@ -15,8 +15,8 @@ var n = t(735250),
     _ = t(821849),
     E = t(15640),
     T = t(314684),
-    I = t(899667),
-    S = t(853872),
+    S = t(899667),
+    I = t(853872),
     N = t(78839),
     m = t(783739),
     C = t(981631),
@@ -32,8 +32,8 @@ function A() {
             premiumSubscription: N.ZP.getPremiumTypeSubscription()
         })),
         t = (0, E.V)(),
-        i = (0, o.e7)([S.Z], () => S.Z.hasFetchedPaymentSources),
-        A = (0, o.e7)([I.Z], () => I.Z.isFetchingCurrentUserAppliedBoosts);
+        i = (0, o.e7)([I.Z], () => I.Z.hasFetchedPaymentSources),
+        A = (0, o.e7)([S.Z], () => S.Z.isFetchingCurrentUserAppliedBoosts);
     return ((0, T.JR)(), e && t && i && !A)
         ? (0, n.jsxs)('div', {
               className: g.container,

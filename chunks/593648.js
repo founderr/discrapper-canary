@@ -17,8 +17,8 @@ var n = t(735250),
     _ = t(292556),
     E = t(92114),
     T = t(419363),
-    I = t(818083),
-    S = t(688465),
+    S = t(818083),
+    I = t(688465),
     N = t(487419),
     m = t(378364),
     C = t(197344),
@@ -118,7 +118,7 @@ function W(e) {
         var e;
         null === (e = c.current) || void 0 === e || e.stop();
     });
-    let I = [
+    let S = [
         {
             label: V.Z.Messages.SOUND_MESSAGE,
             sound: 'message1',
@@ -247,7 +247,7 @@ function W(e) {
                     onChange: _.default.toggleDisableAllSounds,
                     children: V.Z.Messages.SOUND_DISABLE_ALL
                 }),
-                I.map((e) => {
+                S.map((e) => {
                     let { label: a, sound: i, disabled: r, focusModeDisabled: o } = e;
                     return (0, n.jsx)(
                         H,
@@ -284,7 +284,7 @@ function K() {
                   (0, n.jsxs)(d.Heading, {
                       variant: 'heading-lg/semibold',
                       className: r()(Y.titleWithBeta, w.marginBottom20),
-                      children: [V.Z.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, n.jsx)(S.Z, {})]
+                      children: [V.Z.Messages.GUILD_COMMUNITY_ALERTS_HEADER, (0, n.jsx)(I.Z, {})]
                   }),
                   (0, n.jsx)(d.FormText, {
                       type: d.FormTextTypes.DESCRIPTION,
@@ -502,7 +502,7 @@ class z extends a.PureComponent {
             });
     }
 }
-let Q = (0, I.B)({
+let Q = (0, S.B)({
     kind: 'user',
     id: '2024-01_mention_on_all_messages',
     label: 'Mention on all messages',

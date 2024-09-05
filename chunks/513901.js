@@ -15,8 +15,8 @@ var n = t(735250),
     _ = t(150039),
     E = t(993413),
     T = t(504983),
-    I = t(981631),
-    S = t(474936),
+    S = t(981631),
+    I = t(474936),
     N = t(689938),
     m = t(733691);
 function C(e) {
@@ -36,8 +36,8 @@ function C(e) {
         );
     a.useEffect(() => {
         x &&
-            d.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: S.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
+            d.default.track(S.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: I.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
                 location_stack: f
             });
     }, [x, f]);

@@ -19,8 +19,8 @@ function T() {
     let e = (0, i.e7)([d.Z], () => d.Z.getIsSubmitDisabled()),
         s = (0, i.e7)([d.Z], () => d.Z.getErrors()),
         [t, T] = a.useState(!1),
-        I = a.useMemo(() => ((null == s ? void 0 : s.message) != null ? (null == s ? void 0 : s.message) : Object.keys(null != s ? s : {}).length > 0 ? E.Z.Messages.USER_SETTINGS_EDIT_PROFILE_GENERIC_ERROR : null), [s]),
-        S = a.useCallback(async () => {
+        S = a.useMemo(() => ((null == s ? void 0 : s.message) != null ? (null == s ? void 0 : s.message) : Object.keys(null != s ? s : {}).length > 0 ? E.Z.Messages.USER_SETTINGS_EDIT_PROFILE_GENERIC_ERROR : null), [s]),
+        I = a.useCallback(async () => {
             var e, s, t;
             T(!0);
             let n = d.Z.getAllPending(),
@@ -42,9 +42,9 @@ function T() {
         }, []);
     return (0, n.jsx)(o.Z, {
         submitting: t,
-        onSave: S,
+        onSave: I,
         onReset: N,
         disabled: e,
-        errorMessage: null != I ? I : void 0
+        errorMessage: null != S ? S : void 0
     });
 }

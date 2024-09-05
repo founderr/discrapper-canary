@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(981631),
     E = t(689938),
     T = t(637309);
-let I = (0, c.hQ)(),
-    S = (0, d.kt)({
+let S = (0, c.hQ)(),
+    I = (0, d.kt)({
         id: '1',
         type: _.d4z.DM
     }),
@@ -36,21 +36,21 @@ function m(e) {
         }, [d, C]),
         (0, n.jsxs)(u.Z, {
             title: s,
-            titleId: I,
+            titleId: S,
             description: E.Z.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
             errors: t,
             disabled: g,
             children: [
                 (0, n.jsx)(l.Z, {
                     'aria-describedby': N,
-                    'aria-labelledby': I,
+                    'aria-labelledby': S,
                     innerClassName: T.bioTextArea,
                     maxCharacterCount: _.tPV,
                     onChange: function (e, s, t) {
                         s !== A && (h(s), p(t), c(s));
                     },
                     placeholder: m,
-                    channel: S,
+                    channel: I,
                     textValue: A,
                     richValue: O,
                     type: r.I.PROFILE_BIO_INPUT,

@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(816814),
     E = t(809206),
     T = t(497321),
-    I = t(279837),
-    S = t(952306),
+    S = t(279837),
+    I = t(952306),
     N = t(600164),
     m = t(690221),
     C = t(346585),
@@ -60,7 +60,7 @@ class w extends a.PureComponent {
                         look: u.ButtonLooks.OUTLINED,
                         size: u.ButtonSizes.SMALL,
                         color: u.Button.Colors.WHITE,
-                        onClick: () => S.Z.openClaimAccountModal(),
+                        onClick: () => I.Z.openClaimAccountModal(),
                         children: y.Z.Messages.CLAIM_ACCOUNT_LONG
                     })
                 ]
@@ -300,7 +300,7 @@ class w extends a.PureComponent {
         }
         s.isClaimed()
             ? (0, u.openModal)((s) =>
-                  (0, n.jsx)(I.default, {
+                  (0, n.jsx)(S.default, {
                       ...s,
                       handleSubmit: (s) => this.handleSubmitDisableAccount(s, e),
                       title: e ? y.Z.Messages.DELETE_ACCOUNT : y.Z.Messages.DISABLE_ACCOUNT,

@@ -15,22 +15,22 @@ var a = t(442837),
     u = t(290605);
 function _(e) {
     let { errors: s, pendingNick: t, currentNick: _, username: E, guild: T } = e,
-        I = null != t ? t : _,
-        S = (0, a.e7)([o.Z], () => o.Z.can(c.Plq.CHANGE_NICKNAME, T) || o.Z.can(c.Plq.MANAGE_NICKNAMES, T));
+        S = null != t ? t : _,
+        I = (0, a.e7)([o.Z], () => o.Z.can(c.Plq.CHANGE_NICKNAME, T) || o.Z.can(c.Plq.MANAGE_NICKNAMES, T));
     return (0, n.jsxs)(r.Z, {
         title: d.Z.Messages.SERVER_NICKNAME,
         errors: s,
         children: [
             (0, n.jsx)(i.TextInput, {
-                value: null != I ? I : '',
+                value: null != S ? S : '',
                 placeholder: E,
                 maxLength: c.l$U,
                 onChange: function (e) {
                     (0, l.wi)(e, _);
                 },
-                disabled: !S
+                disabled: !I
             }),
-            !S &&
+            !I &&
                 (0, n.jsx)(i.FormText, {
                     className: u.nicknameDisabled,
                     type: i.FormText.Types.DESCRIPTION,

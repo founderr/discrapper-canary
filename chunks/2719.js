@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(230711),
     E = t(129861),
     T = t(279837),
-    I = t(952306),
-    S = t(299206),
+    S = t(952306),
+    I = t(299206),
     N = t(295474),
     m = t(144114),
     C = t(918505),
@@ -49,8 +49,8 @@ function V(e) {
         _ = (0, C.o9)(),
         E = (0, g.b)(),
         T = (0, N.gS)(),
-        I = null !== (i = null == T ? void 0 : null === (s = T.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null,
-        [S, m] = a.useState(!1);
+        S = null !== (i = null == T ? void 0 : null === (s = T.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== i ? i : null,
+        [I, m] = a.useState(!1);
     a.useEffect(() => {
         m(null != c.current && c.current.scrollWidth > c.current.clientWidth);
     }, [l.username]);
@@ -106,11 +106,11 @@ function V(e) {
                             })
                     })
                 }),
-            null != I &&
+            null != S &&
                 (0, n.jsx)('div', {
                     className: F.pomeloWarning,
                     children: (0, n.jsx)(u.Tooltip, {
-                        text: I,
+                        text: S,
                         'aria-label': !1,
                         children: (e) =>
                             (0, n.jsx)(u.CircleWarningIcon, {
@@ -147,7 +147,7 @@ function V(e) {
                                     return (s) => (0, n.jsx)(e, { ...s });
                                 }
                             }),
-                        children: S ? G.Z.Messages.DISAPPROVAL : G.Z.Messages.EDIT
+                        children: I ? G.Z.Messages.DISAPPROVAL : G.Z.Messages.EDIT
                     })
             })
         ]
@@ -160,10 +160,10 @@ function Y(e) {
         c = null !== (t = null == l ? void 0 : null === (s = l.nick) || void 0 === s ? void 0 : s[0]) && void 0 !== t ? t : null,
         _ = P.ZP.getGlobalName(i),
         E = a.useRef(null),
-        [T, I] = a.useState(!1);
+        [T, S] = a.useState(!1);
     return (
         a.useEffect(() => {
-            I(null != E.current && E.current.scrollWidth > E.current.clientWidth);
+            S(null != E.current && E.current.scrollWidth > E.current.clientWidth);
         }, [_]),
         (0, n.jsxs)('div', {
             className: r()(F.field, o),
@@ -277,7 +277,7 @@ function k(e) {
             buttonAriaLabel: G.Z.Messages.CLAIM_ACCOUNT_SHORT,
             buttonColor: u.Button.Colors.BRAND,
             valueMessage: G.Z.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
-            handleClick: () => I.Z.openClaimAccountModal()
+            handleClick: () => S.Z.openClaimAccountModal()
         };
     return (0, n.jsxs)('div', {
         className: r()(F.field, a),
@@ -401,7 +401,7 @@ function H(e) {
 }
 function W(e) {
     let { user: s } = e,
-        t = (0, S.Z)({
+        t = (0, I.Z)({
             id: s.id,
             label: G.Z.Messages.COPY_ID_USER
         });

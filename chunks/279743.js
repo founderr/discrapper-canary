@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return I;
+        return S;
     }
 }),
     t(47120);
@@ -18,8 +18,8 @@ var n = t(735250),
 function T(e) {
     let { children: s, className: t, onFlashEnd: i, animationDelay: _ = 500 } = e,
         T = c.tokens.colors.TEXT_LINK,
-        I = (0, d.e7)([u.Z], () => u.Z.useReducedMotion),
-        S = (0, c.useToken)(T).spring({ opacity: 0 }),
+        S = (0, d.e7)([u.Z], () => u.Z.useReducedMotion),
+        I = (0, c.useToken)(T).spring({ opacity: 0 }),
         N = (0, c.useToken)(T).spring({ opacity: 0.1 }),
         m = (0, c.useToken)(T).spring({ opacity: 0 }),
         C = (0, c.useToken)(T).spring({ opacity: 1 }),
@@ -29,22 +29,22 @@ function T(e) {
         [A, h] = (0, c.useSpring)(
             () => ({
                 from: {
-                    backgroundColor: S,
-                    borderColor: S
+                    backgroundColor: I,
+                    borderColor: I
                 }
             }),
             'animate-never'
         ),
         O = _ + 200 + 200,
-        p = I ? 0 : 200;
+        p = S ? 0 : 200;
     return (
         a.useEffect(() => {
             h({
                 reset: !0,
                 immediate: !1,
                 to: {
-                    backgroundColor: S,
-                    borderColor: S
+                    backgroundColor: I,
+                    borderColor: I
                 },
                 config: {
                     duration: p,
@@ -53,7 +53,7 @@ function T(e) {
             }),
                 h({
                     delay: _,
-                    immediate: I,
+                    immediate: S,
                     to: [
                         {
                             backgroundColor: N,
@@ -67,7 +67,7 @@ function T(e) {
                 }),
                 h({
                     delay: O,
-                    immediate: I,
+                    immediate: S,
                     to: [
                         {
                             backgroundColor: m,
@@ -88,7 +88,7 @@ function T(e) {
         })
     );
 }
-function I(e) {
+function S(e) {
     let { children: s, scrollPosition: t, animationDelay: i } = e,
         r = (0, d.e7)([_.Z], () => _.Z.getScrollPosition() === t),
         [o, l] = a.useState(!1);

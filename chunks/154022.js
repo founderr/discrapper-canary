@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(419363),
     E = t(857595),
     T = t(607070),
-    I = t(627845),
-    S = t(600164),
+    S = t(627845),
+    I = t(600164),
     N = t(313201),
     m = t(786761),
     C = t(3148),
@@ -79,7 +79,7 @@ function H(e) {
                 setting: b.s6.ACCESSIBILITY_SYNC_PROFILE_THEME,
                 children: (0, n.jsx)(q, {})
             }),
-            (0, I.b)()
+            (0, S.b)()
                 ? (0, n.jsxs)(O.F, {
                       setting: b.s6.ACCESSIBILITY_CONTRAST,
                       children: [(0, n.jsx)(J, {}), ' ']
@@ -341,13 +341,13 @@ function $() {
         })),
         _ = a.useRef(null);
     (0, P.Z)(_, L.rP.REDUCED_MOTION);
-    let I = a.useCallback(
+    let S = a.useCallback(
             (e, s) => {
                 (0, E.Zt)(s ? 'auto' : o);
             },
             [o]
         ),
-        S = a.useCallback((e) => {
+        I = a.useCallback((e) => {
             (0, E.Zt)(e ? 'reduce' : 'no-preference');
         }, []);
     return (0, n.jsxs)(d.FormItem, {
@@ -365,7 +365,7 @@ function $() {
                 value: 'auto' === i,
                 shape: d.Checkbox.Shapes.BOX,
                 type: d.Checkbox.Types.INVERTED,
-                onChange: I,
+                onChange: S,
                 children: (0, n.jsx)(d.Text, {
                     variant: 'text-sm/normal',
                     children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_AUTO
@@ -374,7 +374,7 @@ function $() {
             (0, n.jsx)(d.FormSwitch, {
                 className: G.marginTop20,
                 value: t,
-                onChange: S,
+                onChange: I,
                 children: B.Z.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE
             }),
             (0, n.jsx)(d.FormSwitch, {
@@ -514,8 +514,8 @@ function et() {
                                       ),
                                           i(!0);
                                   },
-                                  children: (0, n.jsxs)(S.Z, {
-                                      align: S.Z.Align.CENTER,
+                                  children: (0, n.jsxs)(I.Z, {
+                                      align: I.Z.Align.CENTER,
                                       children: [
                                           t
                                               ? (0, n.jsx)(d.PauseIcon, {

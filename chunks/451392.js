@@ -16,8 +16,8 @@ var a = t(120356),
     _ = t(721987),
     E = t(74538),
     T = t(193528),
-    I = t(993413),
-    S = t(689938),
+    S = t(993413),
+    I = t(689938),
     N = t(798721);
 function m(e) {
     let { user: s, pendingAvatar: t, pendingColors: a, onThemeColorsChange: r, preventDisabled: m, guildId: C, className: g, showPremiumIcon: A = !0, showResetThemeButton: h = !1, forcedDivider: O } = e,
@@ -36,8 +36,8 @@ function m(e) {
     let L = (e) => {
         r(o()(e, null == p ? void 0 : p.themeColors) ? void 0 : e);
     };
-    return (0, n.jsx)(I.Z, {
-        title: S.Z.Messages.USER_SETTINGS_PROFILE_THEME,
+    return (0, n.jsx)(S.Z, {
+        title: I.Z.Messages.USER_SETTINGS_PROFILE_THEME,
         disabled: !f && !m,
         className: i()(N.__invalid_profileThemesSection, g),
         showPremiumIcon: A,
@@ -57,7 +57,7 @@ function m(e) {
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             'aria-hidden': !0,
-                            children: S.Z.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
+                            children: I.Z.Messages.USER_SETTINGS_PROFILE_THEME_PRIMARY
                         })
                     })
                 }),
@@ -73,7 +73,7 @@ function m(e) {
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             'aria-hidden': !0,
-                            children: S.Z.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
+                            children: I.Z.Messages.USER_SETTINGS_PROFILE_THEME_ACCENT
                         })
                     })
                 }),
@@ -85,7 +85,7 @@ function m(e) {
                         look: c.Button.Looks.LINK,
                         size: c.Button.Sizes.SMALL,
                         onClick: () => L([null, null]),
-                        children: S.Z.Messages.USER_SETTINGS_RESET_PROFILE_THEME
+                        children: I.Z.Messages.USER_SETTINGS_RESET_PROFILE_THEME
                     })
             ]
         })

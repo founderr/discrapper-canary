@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(706667),
     E = t(792165),
     T = t(409673),
-    I = t(603074),
-    S = t(689938),
+    S = t(603074),
+    I = t(689938),
     N = t(397937);
 function m(e) {
     let { onSelect: s } = e,
@@ -34,7 +34,7 @@ function m(e) {
         renderPopout: (e) => {
             let { closePopout: s } = e;
             return (0, n.jsx)(o.Dialog, {
-                children: (0, n.jsx)(I.Z, {
+                children: (0, n.jsx)(S.Z, {
                     suppressPlaySound: !0,
                     shouldShowUpsell: !1,
                     guildId: null,
@@ -52,7 +52,7 @@ function m(e) {
                 onClick: () => {
                     r(!t);
                 },
-                text: S.Z.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
+                text: I.Z.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_CHANGE,
                 children: (0, n.jsx)(o.PencilIcon, {
                     size: 'md',
                     color: 'currentColor',
@@ -66,8 +66,8 @@ function C(e) {
         { previewSound: t } = (0, _.Z)(s, null),
         a =
             0 === (0, u.pI)()
-                ? S.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME
-                : S.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
+                ? I.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND_LOW_VOLUME
+                : I.Z.Messages.SOUNDBOARD_SOUND_PREVIEW_SOUND.format({
                       emojiName: s.emojiName,
                       soundName: s.name
                   });
@@ -112,9 +112,9 @@ function g(e) {
                         className: N.soundText,
                         children:
                             null == s
-                                ? S.Z.Messages.NONE
+                                ? I.Z.Messages.NONE
                                 : t
-                                  ? S.Z.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
+                                  ? I.Z.Messages.CALL_SOUNDS_SETTINGS_ALL_SERVERS.format({
                                         soundName: s.name,
                                         subtextHook: _
                                     })
@@ -137,7 +137,7 @@ function g(e) {
                         !t &&
                         (0, n.jsx)(T.hU, {
                             onClick: () => a(null),
-                            text: S.Z.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
+                            text: I.Z.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND_REMOVE,
                             children: (0, n.jsx)(o.TrashIcon, {
                                 size: 'md',
                                 color: r.Z.unsafe_rawColors.RED_400.css,

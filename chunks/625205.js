@@ -17,8 +17,8 @@ var a = t(392711),
     _ = t(131951),
     E = t(210887),
     T = t(962100),
-    I = t(65154),
-    S = t(689938),
+    S = t(65154),
+    I = t(689938),
     N = t(107246),
     m = t(224499);
 function C() {
@@ -30,8 +30,8 @@ function C() {
             inputDeviceId: A,
             outputDeviceId: h
         } = (0, r.cj)([_.Z], () => ({
-            canSetInputDevice: _.Z.supports(I.AN.AUDIO_INPUT_DEVICE),
-            canSetOutputDevice: _.Z.supports(I.AN.AUDIO_OUTPUT_DEVICE),
+            canSetInputDevice: _.Z.supports(S.AN.AUDIO_INPUT_DEVICE),
+            canSetOutputDevice: _.Z.supports(S.AN.AUDIO_OUTPUT_DEVICE),
             inputDeviceId: _.Z.getInputDeviceId(),
             outputDeviceId: _.Z.getOutputDeviceId()
         })),
@@ -41,13 +41,13 @@ function C() {
         (e = (0, n.jsx)(l.FormText, {
             type: l.FormText.Types.DESCRIPTION,
             className: m.marginTop8,
-            children: S.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, T.y)('Help Text Input Devices') })
+            children: I.Z.Messages.BROWSER_INPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, T.y)('Help Text Input Devices') })
         })),
         !g &&
             (s = (0, n.jsx)(l.FormText, {
                 type: l.FormText.Types.DESCRIPTION,
                 className: m.marginTop8,
-                children: S.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, T.y)('Help Text Output Devices') })
+                children: I.Z.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({ onDownloadClick: () => (0, T.y)('Help Text Output Devices') })
             }));
     let R = i()(O).values().first(),
         x = null != R ? R.disabled : null != e,
@@ -91,7 +91,7 @@ function C() {
                     (0, n.jsx)(l.FormTitle, {
                         tag: l.FormTitleTags.H5,
                         className: m.marginBottom8,
-                        children: S.Z.Messages.FORM_LABEL_INPUT_DEVICE
+                        children: I.Z.Messages.FORM_LABEL_INPUT_DEVICE
                     }),
                     (0, n.jsx)(l.SingleSelect, {
                         value: A,
@@ -116,7 +116,7 @@ function C() {
                     (0, n.jsx)(l.FormTitle, {
                         tag: l.FormTitleTags.H5,
                         className: m.marginBottom8,
-                        children: S.Z.Messages.FORM_LABEL_OUTPUT_DEVICE
+                        children: I.Z.Messages.FORM_LABEL_OUTPUT_DEVICE
                     }),
                     (0, n.jsx)(l.SingleSelect, {
                         value: h,

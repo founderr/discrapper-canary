@@ -31,8 +31,8 @@ function E(e) {
         }),
         { loading: E } = (0, l.sp)(t),
         { loadState: T } = (0, l.qz)(),
-        I = E || T !== l.jd.LOADED,
-        { enabled: S } = r.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' });
+        S = E || T !== l.jd.LOADED,
+        { enabled: I } = r.m.useExperiment({ location: 'UserSettingsApplicationSubscriptions' });
     return (0, n.jsxs)('div', {
         children: [
             (0, n.jsxs)('div', {
@@ -50,11 +50,11 @@ function E(e) {
                     })
                 ]
             }),
-            I
+            S
                 ? (0, n.jsx)(i.Spinner, {})
                 : (0, n.jsx)('div', {
                       className: _.subscriptionsContainer,
-                      children: S ? t.map((e) => (0, n.jsx)(c.Z, { subscription: e }, e.id)) : t.map((e) => (0, n.jsx)(d.Z, { subscription: e }, e.id))
+                      children: I ? t.map((e) => (0, n.jsx)(c.Z, { subscription: e }, e.id)) : t.map((e) => (0, n.jsx)(d.Z, { subscription: e }, e.id))
                   })
         ]
     });

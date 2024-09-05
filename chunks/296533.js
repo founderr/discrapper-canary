@@ -20,8 +20,8 @@ var n = t(735250),
     _ = t(209747),
     E = t(430824),
     T = t(267642),
-    I = t(709054),
-    S = t(357956),
+    S = t(709054),
+    I = t(357956),
     N = t(275909),
     m = t(300037),
     C = t(981631),
@@ -32,7 +32,7 @@ function O(e) {
     let { guildTier: s, guildBoostSlot: t, showAltText: r, isCanceled: l, premiumSubscription: c } = e,
         d = a.useMemo(() => {
             if (l) return A.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format({ date: c.currentPeriodEnd });
-            let e = null != t.premiumGuildSubscription ? I.default.extractTimestamp(t.premiumGuildSubscription.id) : 0;
+            let e = null != t.premiumGuildSubscription ? S.default.extractTimestamp(t.premiumGuildSubscription.id) : 0;
             return A.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_DURATION_SHORTENED.format({ date: new Date(e) });
         }, [t, l, c]),
         u = a.useMemo(
@@ -92,8 +92,8 @@ function O(e) {
 function p(e) {
     let { guildTier: s, guildBoostSlot: t, premiumSubscription: i, hasCancelableGuildBoostSlot: c, showAltText: u, isLastGuildBoostSlot: _ } = e,
         E = (0, r.e7)([l.Z], () => l.Z.useReducedMotion),
-        I = a.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
-        m = a.useMemo(() => null != I && I > new Date(), [I]),
+        S = a.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
+        m = a.useMemo(() => null != S && S > new Date(), [S]),
         C = (0, T.tl)(t);
     return (0, n.jsxs)('div', {
         className: h.boostContainer,
@@ -109,10 +109,10 @@ function p(e) {
                     (0, n.jsx)('div', {
                         className: h.boostDescriptionContainer,
                         children:
-                            null != I && m && !C
-                                ? (0, n.jsx)(S.Z, {
+                            null != S && m && !C
+                                ? (0, n.jsx)(I.Z, {
                                       className: h.boostDescriptionInnerContainer,
-                                      cooldown: I.getTime()
+                                      cooldown: S.getTime()
                                   })
                                 : (0, n.jsx)(O, {
                                       guildTier: s,
@@ -181,17 +181,17 @@ function R(e) {
 function x(e) {
     let { guildId: s, appliedGuildBoosts: t, premiumSubscription: a } = e,
         i = (0, r.e7)([E.Z], () => E.Z.getGuild(s), [s]),
-        o = I.default.fromTimestamp(Date.now());
+        o = S.default.fromTimestamp(Date.now());
     if (
         (t.forEach((e) => {
-            (null == o || 0 > I.default.compare(e.id, o)) && (o = e.id);
+            (null == o || 0 > S.default.compare(e.id, o)) && (o = e.id);
         }),
         null == o)
     )
         return null;
     let l = _.Z.createFromServer(
         {
-            id: I.default.fromTimestamp(Date.now()),
+            id: S.default.fromTimestamp(Date.now()),
             subscription_id: a.id,
             canceled: !1,
             premium_guild_subscription: {
@@ -245,7 +245,7 @@ function f(e) {
               children: [
                   (0, n.jsx)('div', {
                       className: h.container,
-                      children: I.default.keys(i).map((e) =>
+                      children: S.default.keys(i).map((e) =>
                           (0, n.jsx)(
                               x,
                               {
@@ -301,7 +301,7 @@ function M(e) {
         children: [
             (0, n.jsx)('div', {
                 className: h.container,
-                children: I.default.keys(l).map((e) =>
+                children: S.default.keys(l).map((e) =>
                     (0, n.jsx)(
                         R,
                         {

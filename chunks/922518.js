@@ -10,14 +10,14 @@ var n,
 let _ = !1,
     E = !1,
     T = !1;
-class I extends (r = o.ZP.Store) {
+class S extends (r = o.ZP.Store) {
     shouldDisplayUpsell() {
         let e = c.default.getCurrentUser();
         return _ && !(0, d.I5)(e) && !T && !E;
     }
 }
 (i = 'CashAppPayAwarenessStore'),
-    (a = 'displayName') in (n = I)
+    (a = 'displayName') in (n = S)
         ? Object.defineProperty(n, a, {
               value: i,
               enumerable: !0,
@@ -25,7 +25,7 @@ class I extends (r = o.ZP.Store) {
               writable: !0
           })
         : (n[a] = i),
-    (s.Z = new I(l.Z, {
+    (s.Z = new S(l.Z, {
         CASH_APP_PAY_AWARENESS_UPSELL_DISMISSED: function () {
             T = !0;
         },

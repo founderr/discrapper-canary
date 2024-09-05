@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(111672),
     E = t(921801),
     T = t(131951),
-    I = t(663389),
-    S = t(63063),
+    S = t(663389),
+    I = t(63063),
     N = t(358085),
     m = t(894939),
     C = t(321499),
@@ -38,7 +38,7 @@ var n = t(735250),
     v = t(689938),
     j = t(224499);
 let B = (0, u.hQ)(),
-    U = ''.concat(S.Z.getArticleURL(b.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+    U = ''.concat(I.Z.getArticleURL(b.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function G(e, s, t) {
     (0, l.openModal)((a) =>
         (0, n.jsx)(l.ConfirmModal, {
@@ -61,7 +61,7 @@ function F() {
             attenuation: t,
             attenuateWhileSpeakingSelf: i,
             attenuateWhileSpeakingOthers: u,
-            audioSubsystem: S,
+            audioSubsystem: I,
             silenceWarning: b,
             legacyAudioSubsystemSupported: F,
             experimentalAudioSubsystemSupported: y,
@@ -80,7 +80,7 @@ function F() {
             sidechainEnabled: T.Z.getSidechainCompression(),
             sidechainStrength: T.Z.getSidechainCompressionStrength()
         })),
-        w = (0, o.e7)([I.Z], () => I.Z.getSubsection()),
+        w = (0, o.e7)([S.Z], () => S.Z.getSubsection()),
         k = a.createRef();
     a.useEffect(() => {
         if (w === P.GA) {
@@ -235,7 +235,7 @@ function F() {
                                 children: [
                                     (0, n.jsx)(l.SingleSelect, {
                                         className: j.marginBottom20,
-                                        value: S,
+                                        value: I,
                                         options: (function (e, s) {
                                             let t = [
                                                 {

@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(1561),
     E = t(481060),
     T = t(384275),
-    I = t(230711),
-    S = t(497321),
+    S = t(230711),
+    I = t(497321),
     N = t(468026),
     m = t(317381),
     C = t(513202),
@@ -47,7 +47,7 @@ function B(e) {
                 variant: 'text-sm/medium',
                 children: b.Z.Messages.AUTHORIZED_APP_IS_CONNECTED_ACCOUNT.format({
                     applicationName: s.name,
-                    onConnectionPress: () => I.Z.setSection(L.jXE.SETTINGS_CONNECTIONS)
+                    onConnectionPress: () => S.Z.setSection(L.jXE.SETTINGS_CONNECTIONS)
                 })
             })
         ]
@@ -288,7 +288,7 @@ s.Z = () => {
         _ = () => {
             c('');
         },
-        I = () =>
+        S = () =>
             (0, n.jsx)('div', {
                 className: Z.searchContainer,
                 children: (0, n.jsx)(E.SearchBar, {
@@ -321,7 +321,7 @@ s.Z = () => {
             return '' === e || null == s ? s : s.length < 100 ? s.filter((s) => l()(e, s.application.name.toLowerCase())) : s.filter((s) => s.application.name.toLowerCase().includes(e));
         }, [s, o]);
     return e
-        ? (0, n.jsx)(S.Z, {})
+        ? (0, n.jsx)(I.Z, {})
         : (0, n.jsx)(E.FormSection, {
               tag: E.FormTitleTags.H1,
               title: b.Z.Messages.AUTHORIZED_APPS,
@@ -342,11 +342,11 @@ s.Z = () => {
                             ? N(b.Z.Messages.NO_AUTHORIZED_APPS_NOTE, b.Z.Messages.NO_AUTHORIZED_APPS)
                             : 0 === g.length
                               ? (0, n.jsxs)(n.Fragment, {
-                                    children: [I(), N(null, b.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
+                                    children: [S(), N(null, b.Z.Messages.INTEGRATIONS_SEARCH_NO_MATCH)]
                                 })
                               : (0, n.jsxs)(n.Fragment, {
                                     children: [
-                                        I(),
+                                        S(),
                                         g
                                             .sort((e, s) => e.application.name.localeCompare(s.application.name))
                                             .map((e) =>

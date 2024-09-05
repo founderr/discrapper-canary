@@ -12,7 +12,7 @@ var a = t(120356),
     E = t(981631),
     T = t(157301);
 s.Z = (e) => {
-    let { disabled: s = !1, type: t, className: a, innerClassName: I, onConnect: S } = e,
+    let { disabled: s = !1, type: t, className: a, innerClassName: S, onConnect: I } = e,
         N = (0, l.ZP)(),
         m = c.Z.get((0, d.rR)(t));
     return (0, n.jsx)(o.Tooltip, {
@@ -25,13 +25,13 @@ s.Z = (e) => {
                     children: (0, n.jsx)('button', {
                         onMouseEnter: l,
                         onMouseLeave: d,
-                        className: i()(T.inner, I),
+                        className: i()(T.inner, S),
                         type: 'button',
                         disabled: s,
                         style: { backgroundImage: "url('".concat((0, r.wj)(N) ? m.icon.darkSVG : m.icon.lightSVG, "')") },
                         onClick:
-                            null != S
-                                ? S
+                            null != I
+                                ? I
                                 : () =>
                                       (function (e) {
                                           let s = c.Z.get(e);

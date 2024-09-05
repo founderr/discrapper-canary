@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(918222),
     E = t(607070),
     T = t(304761),
-    I = t(865427),
-    S = t(358085),
+    S = t(865427),
+    I = t(358085),
     N = t(210887),
     m = t(981631),
     C = t(689938),
@@ -68,15 +68,15 @@ function h() {
             ['extrabold', 800]
         ]);
     a.useEffect(() => {
-        !S.isPlatformEmbedded &&
+        !I.isPlatformEmbedded &&
             window.addEventListener('resize', () => {
                 s(Math.round((window.outerWidth / window.innerWidth) * 100));
             });
     }, []);
-    let x = S.isPlatformEmbedded ? t : e,
+    let x = I.isPlatformEmbedded ? t : e,
         f = (0, o.e7)([T.C], () => {
             var e, s;
-            return (0, I.fD)() ? (null === (s = T.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
+            return (0, S.fD)() ? (null === (s = T.C.getCurrentBuildOverride()) || void 0 === s ? void 0 : null === (e = s.overrides) || void 0 === e ? void 0 : e.discord_web) : null;
         }),
         [M, D] = (0, _.R)('playground-overrideText', null),
         [P, L] = (0, _.R)('playground-defaultText', A[0].value),

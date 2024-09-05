@@ -15,7 +15,7 @@ var n = t(735250),
     u = t(308083),
     _ = t(703422);
 function E(e) {
-    let { className: s, clanTag: t, clanBadge: i, onTagClick: E, guildId: T, guildName: I, guildIcon: S, guildIconSize: N, memberCount: m } = e,
+    let { className: s, clanTag: t, clanBadge: i, onTagClick: E, guildId: T, guildName: S, guildIcon: I, guildIconSize: N, memberCount: m } = e,
         C = a.useRef(null),
         [g, A] = a.useState(!1);
     return (
@@ -31,8 +31,8 @@ function E(e) {
                     children: [
                         (0, n.jsx)(l.b, {
                             guildId: T,
-                            guildName: I,
-                            guildIcon: S,
+                            guildName: S,
+                            guildIcon: I,
                             iconSize: N,
                             className: _.guildPrefixIcon,
                             animate: !1
@@ -41,7 +41,7 @@ function E(e) {
                             className: _.details,
                             children: [
                                 (0, n.jsx)(o.Tooltip, {
-                                    text: I,
+                                    text: S,
                                     color: o.Tooltip.Colors.PRIMARY,
                                     shouldShow: g,
                                     children: (e) =>
@@ -49,7 +49,7 @@ function E(e) {
                                             ref: C,
                                             ...e,
                                             className: _.guildName,
-                                            children: I
+                                            children: S
                                         })
                                 }),
                                 null != m && (0, n.jsx)(c.Z, { count: m })

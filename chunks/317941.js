@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(812206),
     E = t(600164),
     T = t(925329),
-    I = t(981632),
-    S = t(314897),
+    S = t(981632),
+    I = t(314897),
     N = t(82142),
     m = t(246946),
     C = t(509545),
@@ -179,7 +179,7 @@ class P extends a.PureComponent {
                                     align: E.Z.Align.CENTER,
                                     children: [
                                         null != d
-                                            ? (0, n.jsx)(I.Z, {
+                                            ? (0, n.jsx)(S.Z, {
                                                   giftStyle: d,
                                                   className: f.seasonalGiftBox,
                                                   shouldAnimate: this.state.isHovered
@@ -259,11 +259,11 @@ class P extends a.PureComponent {
             });
     }
 }
-s.Z = o.ZP.connectStores([g.Z, m.Z, N.Z, _.Z, C.Z, S.default], (e) => {
+s.Z = o.ZP.connectStores([g.Z, m.Z, N.Z, _.Z, C.Z, I.default], (e) => {
     let { skuId: s, subscriptionPlanId: t, giftStyle: n } = e,
         a = g.Z.get(s);
     if (null == a) throw Error('SKU was unavailable while rendering gift.');
-    let i = N.Z.getForGifterSKUAndPlan(S.default.getId(), s, t)
+    let i = N.Z.getForGifterSKUAndPlan(I.default.getId(), s, t)
         .filter((e) => !e.isClaimed)
         .filter((e) => e.giftStyle === n);
     return {

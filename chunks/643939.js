@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(680674),
     E = t(74316);
 let T = a.memo(function (e) {
-    let { message: s, handleClick: t, handleClose: i, buttonText: T, useInitialGlow: I, useGlowOnHover: S, handleImageClick: N, className: m, analyticsLocations: C, upsellType: g } = e,
-        [A, h] = a.useState(I);
+    let { message: s, handleClick: t, handleClose: i, buttonText: T, useInitialGlow: S, useGlowOnHover: I, handleImageClick: N, className: m, analyticsLocations: C, upsellType: g } = e,
+        [A, h] = a.useState(S);
     return (
         a.useEffect(() => {
             setTimeout(() => h(!1), 3000);
@@ -31,7 +31,7 @@ let T = a.memo(function (e) {
         (0, n.jsx)('div', {
             className: u.wrapper,
             children: (0, n.jsxs)('div', {
-                className: r()(u.content, A ? u.initialGlowUp : u.initialGlowDown, S ? u.contentGlow : null, m),
+                className: r()(u.content, A ? u.initialGlowUp : u.initialGlowDown, I ? u.contentGlow : null, m),
                 children: [
                     (0, n.jsxs)('div', {
                         className: u.innerContent,

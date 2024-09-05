@@ -13,7 +13,7 @@ s.Z = function (e) {
     let { hasAppliedGuildBoosts: s, subscriptionIsPausedOrPausePending: t } = e,
         E = (0, i.e7)([o.Z], () => o.Z.affinities),
         T = (0, i.e7)([l.ZP], () => l.ZP.getFlattenedGuildIds()),
-        I = a.useMemo(() => {
+        S = a.useMemo(() => {
             let e = E.slice(0, 3).map((e) => e.guildId);
             for (let s = 0; s < T.length && !(e.length >= 3); s++) {
                 let t = T[s];
@@ -21,7 +21,7 @@ s.Z = function (e) {
             }
             return e;
         }, [E, T]);
-    return 0 === I.length
+    return 0 === S.length
         ? null
         : (0, n.jsxs)('div', {
               className: _.wrapper,
@@ -32,7 +32,7 @@ s.Z = function (e) {
                           className: _.header,
                           children: u.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_RECOMMENDED_SERVERS_HEADING
                       }),
-                  I.map((e) =>
+                  S.map((e) =>
                       (0, n.jsx)(
                           d.Z,
                           {

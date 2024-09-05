@@ -16,18 +16,18 @@ var n = t(735250),
     _ = t(445817),
     E = t(726985),
     T = t(65154),
-    I = t(689938),
-    S = t(224499);
+    S = t(689938),
+    I = t(224499);
 function N() {
     return (0, n.jsx)(l.FormNotice, {
         type: l.CardTypes.PRIMARY,
-        title: I.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
-        body: I.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
+        title: S.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_TITLE,
+        body: S.Z.Messages.VIDEO_UNSUPPORTED_BROWSER_BODY,
         button: (0, n.jsx)(l.Button, {
             size: l.Button.Sizes.SMALL,
-            className: S.marginTop20,
+            className: I.marginTop20,
             onClick: () => (0, u.y)('Video unsupported browser'),
-            children: I.Z.Messages.DOWNLOAD_APP
+            children: S.Z.Messages.DOWNLOAD_APP
         })
     });
 }
@@ -39,8 +39,8 @@ function m() {
             (0, n.jsxs)(l.HeadingLevel, {
                 component: (0, n.jsx)(l.FormTitle, {
                     tag: l.FormTitleTags.H1,
-                    className: S.marginBottom20,
-                    children: I.Z.Messages.VIDEO_SETTINGS
+                    className: I.marginBottom20,
+                    children: S.Z.Messages.VIDEO_SETTINGS
                 }),
                 children: [
                     (0, n.jsx)(c.F, {
@@ -53,7 +53,7 @@ function m() {
                     !e && (0, n.jsx)(N, {})
                 ]
             }),
-            (0, n.jsx)(l.FormDivider, { className: r()(S.marginBottom40, S.marginTop40) })
+            (0, n.jsx)(l.FormDivider, { className: r()(I.marginBottom40, I.marginTop40) })
         ]
     });
 }

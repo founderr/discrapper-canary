@@ -20,10 +20,10 @@ let _ = [
     }
 ];
 function E(e) {
-    let { showRemoveAvatarButton: s, errors: t, onAvatarChange: a, sectionTitle: E, changeAvatarButtonText: T, guildId: I, className: S, disabled: N = !1, isTryItOutFlow: m = !1, forcedDivider: C, withHighlight: g = !1 } = e,
+    let { showRemoveAvatarButton: s, errors: t, onAvatarChange: a, sectionTitle: E, changeAvatarButtonText: T, guildId: S, className: I, disabled: N = !1, isTryItOutFlow: m = !1, forcedDivider: C, withHighlight: g = !1 } = e,
         A = g ? r.ShinyButton : r.Button;
     return (0, n.jsx)(l.Z, {
-        className: S,
+        className: I,
         title: E,
         errors: t,
         disabled: N,
@@ -34,7 +34,7 @@ function E(e) {
                 (0, n.jsx)(A, {
                     className: i()({ [u.buttonHighlighted]: g }),
                     size: r.Button.Sizes.SMALL,
-                    onClick: () => (0, o.$r)(c.pC.AVATAR, I, m, m ? _ : void 0),
+                    onClick: () => (0, o.$r)(c.pC.AVATAR, S, m, m ? _ : void 0),
                     children: null != T ? T : d.Z.Messages.USER_SETTINGS_CHANGE_AVATAR
                 }),
                 s &&
@@ -44,7 +44,7 @@ function E(e) {
                         look: r.Button.Looks.LINK,
                         size: r.Button.Sizes.SMALL,
                         onClick: () => a(null),
-                        children: null != I ? d.Z.Messages.USER_SETTINGS_RESET_AVATAR : d.Z.Messages.USER_SETTINGS_REMOVE_AVATAR
+                        children: null != S ? d.Z.Messages.USER_SETTINGS_RESET_AVATAR : d.Z.Messages.USER_SETTINGS_REMOVE_AVATAR
                     })
             ]
         })

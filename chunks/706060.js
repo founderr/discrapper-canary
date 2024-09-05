@@ -38,7 +38,7 @@ function u(e) {
             },
             (0, i.Z)()
         );
-    let I = _
+    let S = _
         ? (0, n.jsx)('div', {
               className: c.settingNodeChildren,
               children: t
@@ -77,7 +77,7 @@ function u(e) {
                         })
                     ]
                 }),
-                I
+                S
             ]
         },
         (0, i.Z)()

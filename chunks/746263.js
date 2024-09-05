@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return I;
+        return S;
     }
 }),
     t(47120),
@@ -57,11 +57,11 @@ let E = (e) => {
             config: { effects: [] }
         };
     };
-function I() {
+function S() {
     let { profileEffects: e, upsertConfig: s } = (0, d.E)(),
         [t, i] = a.useState(),
         o = a.useRef(null),
-        I = (e) => {
+        S = (e) => {
             (0, l.showToast)((0, l.createToast)(e, l.ToastType.FAILURE));
         };
     return (0, n.jsxs)('div', {
@@ -116,9 +116,9 @@ function I() {
                                                 let n = t[0],
                                                     a = new FileReader();
                                                 (a.onload = (e) => {
-                                                    if (null == e.target || 'string' != typeof e.target.result) return I('Something went wrong, try again!');
+                                                    if (null == e.target || 'string' != typeof e.target.result) return S('Something went wrong, try again!');
                                                     let [t, n] = e.target.result.split(',');
-                                                    if (!t.includes('text/plain')) return I("Make sure you're only uploading text files!");
+                                                    if (!t.includes('text/plain')) return S("Make sure you're only uploading text files!");
                                                     s(JSON.parse(atob(n))), (0, l.showToast)((0, l.createToast)('Profile Effect (maybe??) imported!', l.ToastType.SUCCESS));
                                                 }),
                                                     a.readAsDataURL(n);

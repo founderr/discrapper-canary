@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(496929),
     E = t(37234),
     T = t(230711),
-    I = t(410030),
-    S = t(960359),
+    S = t(410030),
+    I = t(960359),
     N = t(730417),
     m = t(524347),
     C = t(454585),
@@ -41,8 +41,8 @@ function F(e) {
         [c, u] = a.useState(!1),
         [_, E] = a.useState(!1),
         T = () => u((e) => !e),
-        S = (0, I.ZP)(),
-        N = (0, h.Pz)(t.id, S),
+        I = (0, S.ZP)(),
+        N = (0, h.Pz)(t.id, I),
         m = null != i,
         g = (0, A.Z)(t, m);
     m && c
@@ -146,7 +146,7 @@ s.Z = function () {
         }),
         i = (0, c.e7)([M.default], () => L.ZP.isPremiumExactly(M.default.getCurrentUser(), B.p9.TIER_2)),
         o = l().groupBy(s, (e) => (0, P.Bg)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
-        [I, C] = a.useState(!1),
+        [S, C] = a.useState(!1),
         A = (0, c.e7)([m.Z], () => m.Z.userStatus);
     a.useEffect(() => {
         u.Z.wait(() => {
@@ -157,7 +157,7 @@ s.Z = function () {
     a.useEffect(() => {
         h &&
             u.Z.wait(async () => {
-                await (0, S.R5)();
+                await (0, I.R5)();
             });
     }, [h]);
     let p = b.bh.useSetting(),
@@ -175,7 +175,7 @@ s.Z = function () {
     function z() {
         T.Z.open(j.oAB.PREMIUM);
     }
-    return I && V && y
+    return S && V && y
         ? (0, n.jsxs)(n.Fragment, {
               children: [
                   h

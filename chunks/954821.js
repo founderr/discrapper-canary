@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(73346),
     E = t(584825),
     T = t(305342),
-    I = t(293810),
-    S = t(689938),
+    S = t(293810),
+    I = t(689938),
     N = t(850371);
 let m = (e) => {
         let [s, t] = a.useState(!1),
@@ -47,10 +47,10 @@ let m = (e) => {
             M = async () => {
                 (await R(C.id)) && g();
             },
-            D = l.role_benefits.benefits.filter((e) => e.ref_type === I.Qs.CHANNEL),
-            P = l.role_benefits.benefits.filter((e) => e.ref_type === I.Qs.INTANGIBLE),
+            D = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.CHANNEL),
+            P = l.role_benefits.benefits.filter((e) => e.ref_type === S.Qs.INTANGIBLE),
             L = r()(C.currentPeriodEnd).format('MMMM Do, YYYY'),
-            b = S.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
+            b = I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_DESCRIPTION.format({
                 numChannels: D.length,
                 numAdditionalBenefits: P.length,
                 subscriptionEndDate: L
@@ -82,7 +82,7 @@ let m = (e) => {
                             id: A,
                             variant: 'text-md/medium',
                             className: N.title,
-                            children: S.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_TITLE
+                            children: I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_TITLE
                         }),
                         (0, n.jsx)(o.Text, {
                             className: N.description,
@@ -103,14 +103,14 @@ let m = (e) => {
                             color: o.Button.Colors.RED,
                             onClick: M,
                             submitting: f,
-                            children: S.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
+                            children: I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_CANCEL_CTA
                         }),
                         (0, n.jsx)(o.Button, {
                             look: o.Button.Looks.LINK,
                             color: o.Button.Colors.WHITE,
                             className: N.goBackButton,
                             onClick: g,
-                            children: S.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_NEVERMIND_CTA
+                            children: I.Z.Messages.GUILD_ROLE_CANCEL_SUBSCRIPTION_MODAL_NEVERMIND_CTA
                         })
                     ]
                 })

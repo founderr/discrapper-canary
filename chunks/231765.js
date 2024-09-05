@@ -16,8 +16,8 @@ var n,
     _ = t(481060),
     E = t(37234),
     T = t(607070),
-    I = t(578361),
-    S = t(585483),
+    S = t(578361),
+    I = t(585483),
     N = t(557177),
     m = t(57562),
     C = t(955204),
@@ -401,7 +401,7 @@ function k(e) {
                 var s;
                 t(!0),
                     (0, N.GN)('poggermode_enabled'),
-                    S.S.dispatch(R.CkL.SHAKE_APP, {
+                    I.S.dispatch(R.CkL.SHAKE_APP, {
                         duration: 2000,
                         intensity: null !== (s = e.shakeIntensity) && void 0 !== s ? s : n.shakeIntensity
                     });
@@ -414,7 +414,7 @@ function k(e) {
             let i = c(n.screenshakeEnabled, e.screenshakeEnabled, n.enabled, e.enabled);
             if (1 === s && i) {
                 var o;
-                S.S.dispatch(R.CkL.SHAKE_APP, {
+                I.S.dispatch(R.CkL.SHAKE_APP, {
                     duration: 1000,
                     intensity: null !== (o = e.shakeIntensity) && void 0 !== o ? o : n.shakeIntensity
                 });
@@ -473,7 +473,7 @@ let H = (e, s, t) => {
                 return null;
         }
     },
-    W = (e) => (0 === e ? I.n.LEFT : I.n.RIGHT);
+    W = (e) => (0 === e ? S.n.LEFT : S.n.RIGHT);
 function K() {
     let [e, s] = l.useState(0),
         [t, n] = l.useState(W(e)),
@@ -492,7 +492,7 @@ function K() {
         }, []),
         (0, o.jsxs)(o.Fragment, {
             children: [
-                (0, o.jsx)(I.Z, {
+                (0, o.jsx)(S.Z, {
                     className: f.slideAnimator,
                     step: e,
                     direction: t,

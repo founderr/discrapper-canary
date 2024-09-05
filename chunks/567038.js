@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return S;
+        return I;
     }
 });
 var n = t(735250);
@@ -16,8 +16,8 @@ var a = t(442837),
     _ = t(45595),
     E = t(474936),
     T = t(981631),
-    I = t(689938);
-function S() {
+    S = t(689938);
+function I() {
     let e = (0, a.e7)([d.Z], () => d.Z.shouldDisplayUpsell(), []),
         s = c.Z.getForCampaign(T.$Dd.CASH_APP_PAY_AWARENESS),
         t = null != s && !0 === s.is_eligible;
@@ -27,7 +27,7 @@ function S() {
             (0, n.jsx)(_.Z, {
                 show: t && e,
                 children: (0, n.jsx)(u.L, {
-                    message: I.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_UPSELL_CONTENT,
+                    message: S.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_UPSELL_CONTENT,
                     handleClick: () => {
                         i.Z.dispatch({ type: 'CASH_APP_PAY_AWARENESS_UPSELL_CTA_CLICKED' }),
                             (0, l.Z)({
@@ -42,7 +42,7 @@ function S() {
                     handleImageClick: () => {
                         r.Z.open(T.oAB.PREMIUM), i.Z.dispatch({ type: 'CASH_APP_PAY_AWARENESS_UPSELL_DISMISSED' });
                     },
-                    buttonText: I.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_UPSELL_CTA,
+                    buttonText: S.Z.Messages.CASH_APP_PAY_AWARENESS_NON_SUBSCRIBER_UPSELL_CTA,
                     useInitialGlow: !0,
                     useGlowOnHover: !0,
                     analyticsLocations: T.Sbl.USER_SETTINGS,

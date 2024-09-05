@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(747545),
     E = t(131951),
     T = t(594174),
-    I = t(981631),
-    S = t(689938),
+    S = t(981631),
+    I = t(689938),
     N = t(133953);
 let m = 387,
     C = 218;
@@ -39,7 +39,7 @@ function g(e) {
         (0, n.jsx)(_.Z, {
             selectedBackgroundOption: A,
             onSelectBackgroundOption: (e) => {
-                (O.current = !0), (p.current = e), h(e), (0, u.wG)(e, { location: R.location }).catch(I.dG4);
+                (O.current = !0), (p.current = e), h(e), (0, u.wG)(e, { location: R.location }).catch(S.dG4);
             },
             renderCamera: (e) =>
                 s
@@ -63,13 +63,13 @@ function g(e) {
                           children: [
                               (0, n.jsx)('div', { className: N.previewImage }),
                               (0, n.jsx)(r.Tooltip, {
-                                  text: x ? null : S.Z.Messages.CAMERA_UNAVAILABLE,
+                                  text: x ? null : I.Z.Messages.CAMERA_UNAVAILABLE,
                                   children: (e) =>
                                       (0, n.jsx)(r.Button, {
                                           ...e,
                                           onClick: t,
                                           disabled: !x,
-                                          children: S.Z.Messages.TEST_VIDEO
+                                          children: I.Z.Messages.TEST_VIDEO
                                       })
                               })
                           ]

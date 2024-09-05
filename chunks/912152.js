@@ -11,7 +11,7 @@ var a = t(481060),
     _ = t(110938);
 s.Z = function (e) {
     let { hasAppliedGuildBoosts: s, isUserPremiumTier2: t, hasGuildAffinitiesOrInGuild: E, subscriptionIsPausedOrPausePending: T } = e,
-        { subtitle: I, flavor: S } = (function (e) {
+        { subtitle: S, flavor: I } = (function (e) {
             let { hasAppliedGuildBoosts: s, isUserPremiumTier2: t, hasGuildAffinitiesOrInGuild: n, subscriptionIsPausedOrPausePending: a } = e;
             if (a) return { flavor: u.Z.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION_WITH_LINK.format({ onClick: () => i.Z.open(c.oAB.SUBSCRIPTIONS) }) };
             if (!n) return { subtitle: u.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_NO_JOINED_SERVER_SUBTITLE };
@@ -39,12 +39,12 @@ s.Z = function (e) {
             (0, n.jsx)(a.Heading, {
                 variant: 'heading-lg/bold',
                 className: _.subtitle,
-                children: I
+                children: S
             }),
-            null != S &&
+            null != I &&
                 (0, n.jsx)(a.Text, {
                     variant: 'text-sm/normal',
-                    children: S
+                    children: I
                 })
         ]
     });

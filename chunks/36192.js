@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(497321),
     E = t(43015),
     T = t(136097),
-    I = t(605236),
-    S = t(246946),
+    S = t(605236),
+    I = t(246946),
     N = t(594174),
     m = t(460562),
     C = t(823379),
@@ -28,11 +28,11 @@ var n = t(735250),
 function p() {
     let e;
     let { currentSession: s, otherSessions: t } = (0, T.h)(),
-        i = (0, o.e7)([S.Z], () => S.Z.hidePersonalInformation),
+        i = (0, o.e7)([I.Z], () => I.Z.hidePersonalInformation),
         r = (0, o.e7)([N.default], () => N.default.getCurrentUser()),
         [u, m] = a.useState(!1);
     a.useEffect(() => {
-        (0, I.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: A.L.AUTO }), (0, E.fw)();
+        (0, S.EW)(c.z.AUTH_SESSIONS_NEW, { dismissAction: A.L.AUTO }), (0, E.fw)();
         let e = setTimeout(() => m(!0), 500);
         return () => {
             clearTimeout(e), (0, E.$Z)();
@@ -168,8 +168,8 @@ function p() {
 }
 function R(e) {
     var s, t, a, i, o;
-    let { session: l, current: c, setChecked: u, checked: _, useChecks: I } = e,
-        S = null !== (o = null === (s = l.client_info) || void 0 === s ? void 0 : s.location) && void 0 !== o ? o : null === (t = l.client_info) || void 0 === t ? void 0 : t.ip,
+    let { session: l, current: c, setChecked: u, checked: _, useChecks: S } = e,
+        I = null !== (o = null === (s = l.client_info) || void 0 === s ? void 0 : s.location) && void 0 !== o ? o : null === (t = l.client_info) || void 0 === t ? void 0 : t.ip,
         N = null === (a = l.client_info) || void 0 === a ? void 0 : a.platform,
         { text: m, icon: g } = (function (e) {
             switch (null == e ? void 0 : e.toLowerCase().trim()) {
@@ -195,7 +195,7 @@ function R(e) {
         })(null === (i = l.client_info) || void 0 === i ? void 0 : i.os),
         A = c ? null : (0, T.p)(l.approx_last_used_time),
         p = [m, N].filter(C.lm),
-        R = [S, A].filter(C.lm);
+        R = [I, A].filter(C.lm);
     return (0, n.jsxs)(
         'div',
         {
@@ -237,7 +237,7 @@ function R(e) {
                 }),
                 c
                     ? null
-                    : I
+                    : S
                       ? (0, n.jsx)('div', {
                             className: O.sessionCheckbox,
                             children: (0, n.jsx)(d.Checkbox, {

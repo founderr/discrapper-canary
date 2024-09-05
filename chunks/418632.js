@@ -23,7 +23,7 @@ function T(e, s, t) {
         e
     );
 }
-class I extends (n = i.Component) {
+class S extends (n = i.Component) {
     render() {
         let { color: e, look: s, size: t } = this.props;
         return (0, a.jsx)(c.Button, {
@@ -74,11 +74,11 @@ class I extends (n = i.Component) {
             });
     }
 }
-T(I, 'defaultProps', {
+T(S, 'defaultProps', {
     size: c.Button.Sizes.MEDIUM,
     color: c.Button.Colors.BRAND
 }),
     (s.Z = l.ZP.connectStores([_.default], () => {
         let e = _.default.getCurrentUser();
         return o()(null != e, 'ResendEmailVerificationButton: currentUser cannot be undefined'), { currentUser: e };
-    })(I));
+    })(S));

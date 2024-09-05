@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(712364),
     E = t(279837),
     T = t(600164),
-    I = t(144114),
-    S = t(921801),
+    S = t(144114),
+    I = t(921801),
     N = t(607018),
     m = t(778764),
     C = t(314897),
@@ -141,7 +141,7 @@ class v extends a.PureComponent {
                 ]
             });
         }
-        return (0, n.jsx)(S.F, {
+        return (0, n.jsx)(I.F, {
             setting: x.s6.ACCOUNT_SMS_BACKUP,
             children: (0, n.jsxs)(l.FormSection, {
                 className: L.marginTop40,
@@ -160,7 +160,7 @@ class v extends a.PureComponent {
     renderEnabled() {
         let e;
         let { backupCodes: s } = this.props,
-            t = (0, n.jsx)(S.F, {
+            t = (0, n.jsx)(I.F, {
                 setting: x.s6.ACCOUNT_VIEW_BACKUP_CODES,
                 children: (0, n.jsx)(l.Button, {
                     onClick: this.sendMFABackupCodesVerificationKeyEmail,
@@ -235,7 +235,7 @@ class v extends a.PureComponent {
                         (0, n.jsxs)(T.Z.Child, {
                             wrap: !0,
                             children: [
-                                (0, n.jsx)(S.F, {
+                                (0, n.jsx)(I.F, {
                                     setting: x.s6.ACCOUNT_REMOVE_2FA,
                                     children: (0, n.jsx)(l.Button, {
                                         onClick: this.handleDisableMFA,
@@ -245,7 +245,7 @@ class v extends a.PureComponent {
                                         children: D.Z.Messages.TWO_FA_REMOVE
                                     })
                                 }),
-                                (0, n.jsx)(S.F, {
+                                (0, n.jsx)(I.F, {
                                     setting: x.s6.ACCOUNT_ENABLE_2FA,
                                     children: (0, n.jsx)(l.Button, {
                                         onClick: R.ZP.enableMFA,
@@ -259,7 +259,7 @@ class v extends a.PureComponent {
                 }),
                 e,
                 this.renderMFASMS(),
-                (0, n.jsx)(S.F, {
+                (0, n.jsx)(I.F, {
                     setting: x.s6.ACCOUNT_SECURITY_KEYS,
                     children: (0, n.jsx)(m.Z, {})
                 })
@@ -313,7 +313,7 @@ class v extends a.PureComponent {
         (0, l.openModal)(
             (s) =>
                 (0, n.jsx)(N.default, {
-                    reason: I.L.USER_SETTINGS_UPDATE,
+                    reason: S.L.USER_SETTINGS_UPDATE,
                     ...s,
                     ...e
                 }),

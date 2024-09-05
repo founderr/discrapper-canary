@@ -15,8 +15,8 @@ var n = t(735250),
     _ = t(66516),
     E = t(484459),
     T = t(216045),
-    I = t(839469),
-    S = t(25990),
+    S = t(839469),
+    I = t(25990),
     N = t(594174),
     m = t(585483),
     C = t(16703),
@@ -30,12 +30,12 @@ function x() {
     c.Z.useExperiment({ location: 'profile_customization_auto' });
     let e = (0, i.e7)([u.Z], () => u.Z.getGuild()),
         s = (0, C.Z)(),
-        t = (0, i.e7)([u.Z, S.Z], () => u.Z.showNotice() || S.Z.showNotice()),
+        t = (0, i.e7)([u.Z, I.Z], () => u.Z.showNotice() || I.Z.showNotice()),
         x = null != e ? e : s,
         f = (0, i.e7)([N.default], () => N.default.getCurrentUser()),
         { subsection: M, setSubsection: D } = (0, g.Z)(),
         { analyticsLocations: P } = (0, l.ZP)(),
-        { hasSearchResults: L, searchResults: b } = (0, I.E)();
+        { hasSearchResults: L, searchResults: b } = (0, S.E)();
     function Z(s) {
         if (M !== s) {
             if (t) {

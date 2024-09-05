@@ -15,8 +15,8 @@ var n = t(735250),
     _ = t(497321),
     E = t(231428),
     T = t(390954),
-    I = t(89057),
-    S = t(567038),
+    S = t(89057),
+    I = t(567038),
     N = t(921801),
     m = t(246946),
     C = t(594174),
@@ -69,7 +69,7 @@ class M extends a.PureComponent {
                                       tag: 'h1',
                                       children: x.Z.Messages.BILLING_PAYMENT_HISTORY
                                   }),
-                                  children: [(0, n.jsx)(I.oQ, {}), (0, n.jsx)(E.Z, { locale: i })]
+                                  children: [(0, n.jsx)(S.oQ, {}), (0, n.jsx)(E.Z, { locale: i })]
                               })
                           })
                       }),
@@ -78,7 +78,7 @@ class M extends a.PureComponent {
                           type: l.Card.Types.CUSTOM,
                           children: x.Z.Messages.BILLING_CODE_REDEMPTION_REDIRECT.format({ onClick: this.handleRedemptionRedirect })
                       }),
-                      (0, n.jsx)(S.Z, {})
+                      (0, n.jsx)(I.Z, {})
                   ]
               });
     }

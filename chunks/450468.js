@@ -18,8 +18,8 @@ var n,
     _ = t(355467),
     E = t(179360),
     T = t(100527),
-    I = t(906732),
-    S = t(600164),
+    S = t(906732),
+    I = t(600164),
     N = t(431369),
     m = t(210887),
     C = t(78839),
@@ -33,7 +33,7 @@ function p(e) {
     let { premiumSubscription: s, guildBoostSlotId: t, onNext: n, onClose: a } = e,
         [o, _] = r.useState(!1),
         E = (0, c.e7)([m.Z], () => m.Z.theme),
-        { analyticsLocations: T } = (0, I.ZP)();
+        { analyticsLocations: T } = (0, S.ZP)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(u.ModalHeader, {
@@ -51,7 +51,7 @@ function p(e) {
                 children: A.Z.Messages.PREMIUM_GUILD_SUBSCRIPTION_INVENTORY_UNCANCEL_DESCRIPTION
             }),
             (0, i.jsxs)(u.ModalFooter, {
-                justify: S.Z.Justify.START,
+                justify: I.Z.Justify.START,
                 children: [
                     (0, i.jsx)(u.Button, {
                         onClick: async () => {
@@ -108,7 +108,7 @@ function R(e) {
 function x(e) {
     let s,
         { guildBoostSlotId: t, transitionState: n, onClose: a } = e,
-        { analyticsLocations: o } = (0, I.ZP)(T.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
+        { analyticsLocations: o } = (0, S.ZP)(T.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
     r.useEffect(() => {
         !C.ZP.hasFetchedSubscriptions() && (0, _.jg)();
     }, []);
@@ -131,7 +131,7 @@ function x(e) {
             default:
                 throw Error('Unexpected step: '.concat(d));
         }
-    return (0, i.jsx)(I.Gt, {
+    return (0, i.jsx)(S.Gt, {
         value: o,
         children: (0, i.jsx)(u.ModalRoot, {
             transitionState: n,

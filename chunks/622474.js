@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(570140),
     E = t(37234),
     T = t(960359),
-    I = t(853197),
-    S = t(430492),
+    S = t(853197),
+    I = t(430492),
     N = t(688465),
     m = t(594174),
     C = t(55935),
@@ -36,8 +36,8 @@ function p(e) {
             }
         );
     }, []);
-    let { title: d, endDate: S, dropsQuestId: N, assets: m, articleUrl: C } = s,
-        g = (0, I.EW)(N);
+    let { title: d, endDate: I, dropsQuestId: N, assets: m, articleUrl: C } = s,
+        g = (0, S.EW)(N);
     if (null == g) return null;
     let O = () => {
         (0, T.RJ)(N).then(() => {
@@ -75,7 +75,7 @@ function p(e) {
                                             variant: 'text-xs/medium',
                                             color: 'text-normal',
                                             className: h.availableUntil,
-                                            children: A.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({ endDate: l()(S, 'YYYY-MM-DD HH:mm').format('MMMM Do, YYYY') })
+                                            children: A.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({ endDate: l()(I, 'YYYY-MM-DD HH:mm').format('MMMM Do, YYYY') })
                                         })
                                     ]
                                 })
@@ -133,7 +133,7 @@ function R(e) {
         _ = (0, C.vc)(l()(s.endDate), 'LL'),
         E = A.Z.Messages.DROPS_CARD_REDEEM_UNTIL.format({ endDate: _ }),
         T = d ? A.Z.Messages.OUTBOUND_PROMOTION_SEE_CODE : A.Z.Messages.PROMOTION_CARD_ACTION_CLAIM,
-        I = a.useCallback(() => c(!1), []);
+        S = a.useCallback(() => c(!1), []);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)('div', {
@@ -180,14 +180,14 @@ function R(e) {
             o &&
                 (0, n.jsx)(u.Modal, {
                     renderModal: (e) =>
-                        (0, n.jsx)(S.ZP, {
+                        (0, n.jsx)(I.ZP, {
                             ...e,
-                            onClose: I,
+                            onClose: S,
                             code: t,
                             drop: s,
                             platform: i
                         }),
-                    onCloseRequest: I
+                    onCloseRequest: S
                 })
         ]
     });
@@ -201,23 +201,23 @@ s.Z = function (e) {
         c = !1;
     if (null == a) return null;
     for (let e of Object.keys(a)) {
-        let s = (0, I.EW)(e);
+        let s = (0, S.EW)(e);
         if (null == s) continue;
         let t = a[e],
-            n = (0, I.x8)(e);
+            n = (0, S.x8)(e);
         if (null == n) continue;
-        let d = (0, I.Xt)(n),
+        let d = (0, S.Xt)(n),
             u = t.eligible && d,
-            _ = (0, I.A5)(n);
+            _ = (0, S.A5)(n);
         if (null == _) continue;
         u && _.trackExposure({ location: 'ENTITLEMENT_GIFTS' });
         let E = !!((null == o ? void 0 : o.isStaff()) && _.getCurrentConfig({ location: '076035_2' }, { autoTrackExposure: !1 }).showUnenroll);
         if (!_.getCurrentConfig({ location: '076035_3' }, { autoTrackExposure: !1 }).dropsEnabled) continue;
         c = !0;
         let T = l()(s.endDate, O),
-            S = l()();
+            I = l()();
         (u && null == t.completed_at) || (null != t.enrolled_at && null == t.completed_at && t.eligible)
-            ? S < T &&
+            ? I < T &&
               i.push({
                   dropsQuestId: e,
                   dropsStatus: t,
@@ -225,7 +225,7 @@ s.Z = function (e) {
                   experiment: _
               })
             : (null != t.code || null != t.completed_at) &&
-              S < l()(s.finalClaimDate, O) &&
+              I < l()(s.finalClaimDate, O) &&
               r.push({
                   dropsQuestId: e,
                   dropsStatus: t,
@@ -261,7 +261,7 @@ s.Z = function (e) {
                     _,
                     (0, n.jsx)(u.FormDivider, { className: h.divider }),
                     i.map((e) => {
-                        let s = (0, I.EW)(e.dropsQuestId),
+                        let s = (0, S.EW)(e.dropsQuestId),
                             t = null != e.dropsStatus.enrolled_at,
                             a = null != e.dropsStatus.completed_at;
                         return null != s
@@ -288,7 +288,7 @@ s.Z = function (e) {
                     }),
                     r.map((e) => {
                         var s, t;
-                        let a = (0, I.EW)(e.dropsQuestId);
+                        let a = (0, S.EW)(e.dropsQuestId);
                         return null != a
                             ? (0, n.jsxs)(n.Fragment, {
                                   children: [

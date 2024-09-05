@@ -10,7 +10,7 @@ var n = t(735250),
     u = t(287420);
 s.Z = function (e) {
     let { onClose: s, onClaim: t, code: _, outboundPromotion: E, transitionState: T } = e,
-        [I, S] = a.useState(null),
+        [S, I] = a.useState(null),
         N = (0, o.Dt)();
     return (
         a.useEffect(() => {
@@ -19,17 +19,17 @@ s.Z = function (e) {
                     .then((e) => t(e))
                     .catch((e) => {
                         var s;
-                        return S(null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : s.code);
+                        return I(null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : s.code);
                     });
         }, [_, E.id, t]),
         (0, n.jsx)(i.ModalRoot, {
             transitionState: T,
             'aria-labelledby': N,
             children:
-                null != I
+                null != S
                     ? (0, n.jsx)(l.L1, {
                           onClose: s,
-                          errorCode: I
+                          errorCode: S
                       })
                     : null == _
                       ? (0, n.jsx)(i.ModalContent, { children: (0, n.jsx)(i.Spinner, { className: u.loading }) })

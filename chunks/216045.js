@@ -16,8 +16,8 @@ var n,
     _ = t(622535),
     E = t(481060),
     T = t(570140),
-    I = t(232567),
-    S = t(809206),
+    S = t(232567),
+    I = t(809206),
     N = t(497321),
     m = t(634894),
     C = t(100527),
@@ -44,14 +44,14 @@ function U() {
         return d()(null != e, 'UserSettingsProfileCustomization: user cannot be undefined'), e;
     });
     r.useEffect(() => {
-        (0, I.In)(e.id);
+        (0, S.In)(e.id);
     }, [e.id]);
     let s = (0, u.e7)([M.Z], () => M.Z.hidePersonalInformation),
         { pendingBio: t, ...n } = (0, u.cj)([D.Z], () => D.Z.getAllPending()),
         a = b.dN.useSetting() && null != t ? h.ZP.parse(void 0, t).content : t,
         o = L.ZP.canUsePremiumProfileCustomization(e),
         { analyticsLocations: c } = (0, g.ZP)(C.Z.PROFILE);
-    r.useEffect(() => () => T.Z.wait(S.W3), []);
+    r.useEffect(() => () => T.Z.wait(I.W3), []);
     let U = 'UserSettingsProfileCustomization';
     (0, m.j)({
         location: U + ' auto on',

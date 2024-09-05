@@ -17,13 +17,13 @@ var a = t(481060),
     _ = t(695346),
     E = t(726985),
     T = t(981631),
-    I = t(689938),
-    S = t(359043),
+    S = t(689938),
+    I = t(359043),
     N = t(224499);
 function m() {
     let e = _.G6.useSetting(),
         s = _.Wz.useSetting(),
-        t = d.isPlatformEmbedded ? I.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : I.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
+        t = d.isPlatformEmbedded ? S.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : S.Z.Messages.SHOW_CURRENT_ACTIVITY_DESC,
         i = (e) => {
             _.Wz.updateSetting(e),
                 !(function (e) {
@@ -32,15 +32,15 @@ function m() {
                     };
                     (0, a.openModal)((e) =>
                         (0, n.jsx)(a.ConfirmModal, {
-                            header: I.Z.Messages.USER_DM_SETTINGS_TITLE,
-                            confirmText: I.Z.Messages.NO_TEXT,
-                            cancelText: I.Z.Messages.YES_TEXT,
+                            header: S.Z.Messages.USER_DM_SETTINGS_TITLE,
+                            confirmText: S.Z.Messages.NO_TEXT,
+                            cancelText: S.Z.Messages.YES_TEXT,
                             onCancel: s,
                             confirmButtonColor: a.Button.Colors.BRAND,
                             ...e,
                             children: (0, n.jsx)(a.Text, {
                                 variant: 'text-md/normal',
-                                children: I.Z.Messages.ACTIVITY_RESTRICTION_MODAL_DESC
+                                children: S.Z.Messages.ACTIVITY_RESTRICTION_MODAL_DESC
                             })
                         })
                     );
@@ -54,19 +54,19 @@ function m() {
                 (0, n.jsx)(a.FormTitle, {
                     tag: a.FormTitleTags.H5,
                     className: N.marginBottom8,
-                    children: I.Z.Messages.ACTIVITY_STATUS
+                    children: S.Z.Messages.ACTIVITY_STATUS
                 }),
                 (0, n.jsx)(a.FormSwitch, {
                     value: e,
                     onChange: (e) => _.G6.updateSetting(e),
                     note: t,
-                    children: I.Z.Messages.SHOW_CURRENT_ACTIVITY
+                    children: S.Z.Messages.SHOW_CURRENT_ACTIVITY
                 }),
                 (0, n.jsx)(a.FormSwitch, {
                     value: !s,
-                    note: I.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({ helpdeskArticle: c.Z.getArticleURL(T.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                    note: S.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT_NOTE.format({ helpdeskArticle: c.Z.getArticleURL(T.BhN.ACTIVITY_STATUS_SETTINGS) }),
                     onChange: (e) => i(!e),
-                    children: I.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT
+                    children: S.Z.Messages.ACTIVITY_RESTRICTION_DEFAULT
                 })
             ]
         })
@@ -83,19 +83,19 @@ function C() {
                 (0, n.jsx)(a.FormTitle, {
                     tag: a.FormTitleTags.H5,
                     className: N.marginBottom8,
-                    children: I.Z.Messages.ACTIVITY_PARTY_PRIVACY
+                    children: S.Z.Messages.ACTIVITY_PARTY_PRIVACY
                 }),
                 (0, n.jsx)(a.FormSwitch, {
                     value: e,
-                    note: I.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP,
+                    note: S.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS_HELP,
                     onChange: (e) => _.cP.updateSetting(e),
-                    children: I.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS
+                    children: S.Z.Messages.ACTIVITY_PARTY_PRIVACY_FRIENDS
                 }),
                 (0, n.jsx)(a.FormSwitch, {
                     value: s,
-                    note: I.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP,
+                    note: S.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL_HELP,
                     onChange: (e) => _.Ou.updateSetting(e),
-                    children: I.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL
+                    children: S.Z.Messages.ACTIVITY_PARTY_PRIVACY_VOICE_CHANNEL
                 })
             ]
         })
@@ -110,18 +110,18 @@ function g() {
                 (0, n.jsxs)(a.FormTitle, {
                     tag: a.FormTitleTags.H5,
                     className: N.marginBottom8,
-                    children: [I.Z.Messages.BROADCASTING_SETTINGS, (0, n.jsx)(i.Z, { className: S.betaTag })]
+                    children: [S.Z.Messages.BROADCASTING_SETTINGS, (0, n.jsx)(i.Z, { className: I.betaTag })]
                 }),
                 (0, n.jsx)(a.FormText, {
                     type: a.FormText.Types.DESCRIPTION,
                     className: N.marginBottom20,
-                    children: I.Z.Messages.BROADCASTING_SETTINGS_DESCRIPTION
+                    children: S.Z.Messages.BROADCASTING_SETTINGS_DESCRIPTION
                 }),
                 (0, n.jsx)(a.FormItem, {
                     children: (0, n.jsx)(a.Button, {
                         onClick: () => (0, r.X)(),
                         size: a.ButtonSizes.SMALL,
-                        children: I.Z.Messages.BROADCASTING_SETTINGS_CTA
+                        children: S.Z.Messages.BROADCASTING_SETTINGS_CTA
                     })
                 })
             ]
@@ -135,7 +135,7 @@ function A() {
             className: N.marginBottom40,
             children: (0, n.jsx)(a.FormNotice, {
                 type: a.FormNotice.Types.PRIMARY,
-                body: I.Z.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
+                body: S.Z.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
                     termsLink: T.EYA.TERMS,
                     privacyLink: T.EYA.PRIVACY
                 })
@@ -148,7 +148,7 @@ function h(e) {
     return (0, n.jsxs)(a.FormSection, {
         className: s,
         tag: a.FormTitleTags.H1,
-        title: t ? I.Z.Messages.ACTIVITY_PRIVACY : null,
+        title: t ? S.Z.Messages.ACTIVITY_PRIVACY : null,
         children: [(0, n.jsx)(m, {}), (0, n.jsx)(C, {}), (0, n.jsx)(g, {}), (0, n.jsx)(A, {})]
     });
 }

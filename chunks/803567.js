@@ -17,8 +17,8 @@ var r = t(120356),
     _ = t(600164),
     E = t(313201),
     T = t(921801),
-    I = t(463395),
-    S = t(131951),
+    S = t(463395),
+    I = t(131951),
     N = t(626135),
     m = t(63063),
     C = t(210887),
@@ -52,11 +52,11 @@ function D() {
             noiseSuppression: t,
             noiseSuppressionSupported: n,
             noiseCancellationSupported: a
-        } = (0, l.cj)([S.Z], () => ({
-            noiseCancellation: S.Z.getNoiseCancellation(),
-            noiseSuppression: S.Z.getNoiseSuppression(),
-            noiseSuppressionSupported: S.Z.isNoiseSuppressionSupported(),
-            noiseCancellationSupported: S.Z.isNoiseCancellationSupported()
+        } = (0, l.cj)([I.Z], () => ({
+            noiseCancellation: I.Z.getNoiseCancellation(),
+            noiseSuppression: I.Z.getNoiseSuppression(),
+            noiseSuppressionSupported: I.Z.isNoiseSuppressionSupported(),
+            noiseCancellationSupported: I.Z.isNoiseCancellationSupported()
         }));
     if (!n && !a) return null;
     let r = [];
@@ -125,24 +125,24 @@ function P() {
             automaticGainControl: n,
             vadAutoThreshold: a,
             vadUseKrisp: r
-        } = (0, l.cj)([S.Z], () => ({
-            inputMode: S.Z.getMode(),
-            inputDeviceId: S.Z.getInputDeviceId(),
-            echoCancellation: S.Z.getEchoCancellation(),
-            automaticGainControl: S.Z.getAutomaticGainControl(),
-            vadAutoThreshold: S.Z.getModeOptions().autoThreshold,
-            vadUseKrisp: S.Z.getModeOptions().vadUseKrisp
+        } = (0, l.cj)([I.Z], () => ({
+            inputMode: I.Z.getMode(),
+            inputDeviceId: I.Z.getInputDeviceId(),
+            echoCancellation: I.Z.getEchoCancellation(),
+            automaticGainControl: I.Z.getAutomaticGainControl(),
+            vadAutoThreshold: I.Z.getModeOptions().autoThreshold,
+            vadUseKrisp: I.Z.getModeOptions().vadUseKrisp
         })),
         {
             hasEchoCancellation: c,
             hasNoiseSuppression: _,
             hasAutomaticGainControl: E
         } = (0, l.cj)(
-            [I.Z],
+            [S.Z],
             () => ({
-                hasEchoCancellation: I.Z.hasEchoCancellation(s),
-                hasNoiseSuppression: I.Z.hasNoiseSuppression(s),
-                hasAutomaticGainControl: I.Z.hasAutomaticGainControl(s)
+                hasEchoCancellation: S.Z.hasEchoCancellation(s),
+                hasNoiseSuppression: S.Z.hasNoiseSuppression(s),
+                hasAutomaticGainControl: S.Z.hasAutomaticGainControl(s)
             }),
             [s]
         ),

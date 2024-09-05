@@ -10,8 +10,8 @@ var n,
 let _ = !1,
     E = [],
     T = '',
-    I = '',
-    S = !1,
+    S = '',
+    I = !1,
     N = {
         viewNonce: '',
         regenerateNonce: ''
@@ -30,10 +30,10 @@ class m extends (r = d.ZP.Store) {
         return N;
     }
     get emailToken() {
-        return I;
+        return S;
     }
     get hasSeenBackupPrompt() {
-        return S;
+        return I;
     }
 }
 (i = 'MFAStore'),
@@ -52,7 +52,7 @@ class m extends (r = d.ZP.Store) {
         },
         MFA_ENABLE_EMAIL_TOKEN: function (e) {
             let { token: s } = e;
-            I = s;
+            S = s;
         },
         MFA_DISABLE_SUCCESS: function (e) {
             let { token: s } = e;
@@ -76,6 +76,6 @@ class m extends (r = d.ZP.Store) {
             N = s;
         },
         MFA_SEEN_BACKUP_CODE_PROMPT: function () {
-            S = !0;
+            I = !0;
         }
     }));

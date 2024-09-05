@@ -19,17 +19,17 @@ function E(e) {
         a = (0, d.oX)(s);
     if (null == a) return null;
     let r = null != t,
-        { name: E, description: T, hideDescriptionUntilUnlock: I, onAction: S } = a,
-        N = I && !r,
+        { name: E, description: T, hideDescriptionUntilUnlock: S, onAction: I } = a,
+        N = S && !r,
         m = r ? 'header-primary' : 'text-muted',
         C = r ? 'header-secondary' : 'text-muted',
         g = o()(t),
-        A = null != S && r,
+        A = null != I && r,
         h = A ? l.Clickable : 'div';
     return (0, n.jsxs)(h, {
         className: i()(_.container, A && _.actionable),
         onClick: () => {
-            A && S();
+            A && I();
         },
         children: [
             (0, n.jsx)('div', {

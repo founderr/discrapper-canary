@@ -17,8 +17,8 @@ var n = t(735250),
     _ = t(287880),
     E = t(358085),
     T = t(960048),
-    I = t(998502),
-    S = t(365007),
+    S = t(998502),
+    I = t(365007),
     N = t(15980),
     m = t(755733),
     C = t(981631),
@@ -35,7 +35,7 @@ function h(e) {
         L = async () => {
             let e;
             x(m.x.REGISTER);
-            let s = E.isPlatformEmbedded && I.ZP.supportsFeature(C.eRX.WEBAUTHN) ? I.ZP.webAuthnRegister(c) : i.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
+            let s = E.isPlatformEmbedded && S.ZP.supportsFeature(C.eRX.WEBAUTHN) ? S.ZP.webAuthnRegister(c) : i.Ue(JSON.parse(c)).then((e) => JSON.stringify(e));
             try {
                 e = await s;
             } catch (e) {
@@ -134,7 +134,7 @@ function h(e) {
                         children: (0, n.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, S.Sr)(N, l, f)
+                                    (0, I.Sr)(N, l, f)
                                         .then(async () => {
                                             await (0, u.Yn)(!1);
                                         })
@@ -226,7 +226,7 @@ function O(e) {
                 label: g.Z.Messages.TWO_FA_WEBAUTHN_DELETE_CREDENTIAL,
                 color: 'danger',
                 action: () => {
-                    (0, S.cT)(a);
+                    (0, I.cT)(a);
                 }
             })
         ]
@@ -238,7 +238,7 @@ function p() {
         credentials: N.Z.getCredentials()
     }));
     a.useEffect(() => {
-        !s && (0, S.hL)();
+        !s && (0, I.hL)();
     }, [s]);
     let [t, i] = a.useState(!1);
     return (0, n.jsxs)(o.FormSection, {
@@ -299,7 +299,7 @@ function p() {
                 children: (0, n.jsx)(o.Button, {
                     onClick: () => {
                         i(!0),
-                            (0, S.L$)()
+                            (0, I.L$)()
                                 .then((e) => {
                                     let { ticket: s, challenge: t } = e;
                                     (0, o.openModal)((e) =>

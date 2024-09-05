@@ -17,11 +17,11 @@ var n = t(735250),
     _ = t(984933),
     E = t(430824),
     T = t(914010),
-    I = t(727785),
-    S = t(689938),
+    S = t(727785),
+    I = t(689938),
     N = t(741632);
 function m() {}
-let C = [I.h8.VOICE_CHANNEL];
+let C = [S.h8.VOICE_CHANNEL];
 function g(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
@@ -42,7 +42,7 @@ function p() {
             variant: 'text-md/medium',
             color: 'text-muted',
             className: N.noVoiceChannelSelected,
-            children: S.Z.Messages.USER_SETTINGS_KEYBINDS_SEARCH_NO_RESULTS_FOUND
+            children: I.Z.Messages.USER_SETTINGS_KEYBINDS_SEARCH_NO_RESULTS_FOUND
         })
     });
 }
@@ -68,7 +68,7 @@ function R(e) {
             );
         }, []);
     return (0, n.jsx)(r.FormSection, {
-        title: S.Z.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
+        title: I.Z.Messages.USER_SETTINGS_KEYBIND_SWITCH_SERVER_SETTINGS_SECTION,
         className: N.channelIdSection,
         children: (0, n.jsxs)(c.Z, {
             align: c.Z.Align.STRETCH,
@@ -82,7 +82,7 @@ function R(e) {
                     shrink: 0,
                     children: (0, n.jsx)(r.Button, {
                         onClick: _,
-                        children: S.Z.Messages.USER_SETTINGS_KEYBINDS_SELECT_VOICE_CHANNEL
+                        children: I.Z.Messages.USER_SETTINGS_KEYBINDS_SELECT_VOICE_CHANNEL
                     })
                 })
             ]
@@ -165,7 +165,7 @@ function x(e) {
                 return null === (e = P[L]) || void 0 === e ? void 0 : e.id;
             }
             let s = D[L];
-            if ((null == s ? void 0 : s.type) === I.h8.VOICE_CHANNEL) return s.record.id;
+            if ((null == s ? void 0 : s.type) === S.h8.VOICE_CHANNEL) return s.record.id;
         })();
     return (0, n.jsx)('div', {
         className: N.voiceModalContainer,
@@ -192,7 +192,7 @@ function x(e) {
                                         let e = (() => {
                                             if (null != P) return P[L];
                                             let e = D[L];
-                                            if ((null == e ? void 0 : e.type) === I.h8.VOICE_CHANNEL) return e.record;
+                                            if ((null == e ? void 0 : e.type) === S.h8.VOICE_CHANNEL) return e.record;
                                         })();
                                         null == e ? o(void 0) : o(e.id), t();
                                         break;
@@ -204,7 +204,7 @@ function x(e) {
                                         L >= Z - 1 ? b(0) : b(L + 1);
                                 }
                         },
-                        placeholder: S.Z.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
+                        placeholder: I.Z.Messages.USER_SETTINGS_KEYBINDS_SEARCH_VOICE,
                         role: 'combobox',
                         'aria-controls': c,
                         'aria-expanded': Z > 0,
@@ -218,7 +218,7 @@ function x(e) {
                     (0, n.jsx)(r.ListThin, {
                         innerId: c,
                         innerRole: 'listbox',
-                        'aria-label': S.Z.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
+                        'aria-label': I.Z.Messages.USER_SETTINGS_KEYBIND_VOICE_CHANNEL_RESULTS,
                         ref: m,
                         sections: [Z],
                         renderRow: function (e) {
@@ -226,7 +226,7 @@ function x(e) {
                                 a = (() => {
                                     if (null != P) return P[s];
                                     let e = D[s];
-                                    if ((null == e ? void 0 : e.type) === I.h8.VOICE_CHANNEL) return e.record;
+                                    if ((null == e ? void 0 : e.type) === S.h8.VOICE_CHANNEL) return e.record;
                                 })();
                             if (null == a) return null;
                             let i = null != a.parent_id ? u.Z.getChannel(a.parent_id) : void 0,
@@ -291,7 +291,7 @@ function f(e) {
               variant: 'text-md/medium',
               color: 'text-muted',
               className: N.noVoiceChannelSelected,
-              children: S.Z.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
+              children: I.Z.Messages.USER_SETTINGS_KEYBINDS_NO_VOICE_CHANNEL_SELECTED
           })
         : (0, n.jsx)(d.$W, {
               channel: t,

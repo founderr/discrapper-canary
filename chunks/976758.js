@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return I;
+        return S;
     }
 });
 var n = t(735250);
@@ -16,7 +16,7 @@ var a = t(442837),
     _ = t(224499);
 let E = (0, l.hQ)(),
     T = (0, l.hQ)();
-function I() {
+function S() {
     let { inputVolume: e, outputVolume: s } = (0, a.cj)([c.Z], () => ({
         inputVolume: c.Z.getInputVolume(),
         outputVolume: c.Z.getOutputVolume()

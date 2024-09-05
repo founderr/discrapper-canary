@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(570140),
     E = t(457330),
     T = t(497321),
-    I = t(23551),
-    S = t(468026),
+    S = t(23551),
+    I = t(468026),
     N = t(410030),
     m = t(726542),
     C = t(122021),
@@ -115,7 +115,7 @@ function k(e) {
     let r,
         o,
         l,
-        { onDisconnect: _, account: T, theme: I, locale: N } = e,
+        { onDisconnect: _, account: T, theme: S, locale: N } = e,
         [O, p] = a.useState(T.friendSync),
         [x, f] = a.useState(T.visibility),
         [M, D] = a.useState(T.metadataVisibility),
@@ -152,7 +152,7 @@ function k(e) {
                 ]
             })),
             (0, u.openModal)((t) =>
-                (0, n.jsx)(S.default, {
+                (0, n.jsx)(I.default, {
                     title: y.Z.Messages.DISCONNECT_ACCOUNT_TITLE.format({ name: e.name }),
                     body: s,
                     confirmText: y.Z.Messages.DISCONNECT_ACCOUNT,
@@ -224,7 +224,7 @@ function k(e) {
                             (0, n.jsx)('img', {
                                 alt: a.name,
                                 className: V.connectionIcon,
-                                src: (0, d.wj)(I) ? a.icon.darkSVG : a.icon.lightSVG
+                                src: (0, d.wj)(S) ? a.icon.darkSVG : a.icon.lightSVG
                             }),
                             (0, n.jsxs)('div', {
                                 children: [
@@ -517,7 +517,7 @@ function K() {
         children: [
             s.slice(0, 10).map((e) =>
                 (0, n.jsx)(
-                    I.Z,
+                    S.Z,
                     {
                         type: e.type,
                         className: V.__invalid_accountButton,

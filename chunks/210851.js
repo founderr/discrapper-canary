@@ -8,7 +8,7 @@ s.Z = function (e) {
     var s, t;
     let { assetKey: l, filters: c, initialValue: d, onFileChange: u, title: _ } = e,
         [E, T] = a.useState(null),
-        [I, S] = a.useState(!1);
+        [S, I] = a.useState(!1);
     return (0, n.jsxs)(i.FormItem, {
         children: [
             (0, n.jsx)(i.FormTitle, {
@@ -40,10 +40,10 @@ s.Z = function (e) {
                 placeholder: 'Select an asset',
                 onFileSelect: function (e) {
                     if ((T(null != e ? e : null), null == e)) return;
-                    S(!0);
+                    I(!0);
                     let s = new FileReader();
                     (s.onload = function () {
-                        'string' == typeof s.result && (u(l, s.result), S(!1));
+                        'string' == typeof s.result && (u(l, s.result), I(!1));
                     }),
                         (s.onerror = function (e) {
                             console.error(e);

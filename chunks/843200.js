@@ -10,8 +10,8 @@ var n = t(735250),
     _ = t(594174),
     E = t(418632),
     T = t(689938),
-    I = t(116536);
-class S extends a.Component {
+    S = t(116536);
+class I extends a.Component {
     renderNotice() {
         let { isClaimed: e, unclaimedNotice: s, unverifiedNotice: t } = this.props;
         return e ? (null != t ? t : T.Z.Messages.NOTICE_UNVERIFIED_ACCOUNT) : null != s ? s : T.Z.Messages.NOTICE_UNCLAIMED_ACCOUNT;
@@ -72,12 +72,12 @@ class S extends a.Component {
         return s && t
             ? null
             : (0, n.jsx)(d.Card, {
-                  className: r()(I.wrapper, e),
+                  className: r()(S.wrapper, e),
                   children: (0, n.jsxs)(u.Z, {
                       align: u.Z.Align.CENTER,
                       children: [
                           (0, n.jsx)(u.Z.Child, {
-                              className: I.image,
+                              className: S.image,
                               grow: 0,
                               shrink: 0
                           }),
@@ -89,7 +89,7 @@ class S extends a.Component {
                                   }),
                                   (0, n.jsxs)(u.Z, {
                                       justify: u.Z.Justify.CENTER,
-                                      className: I.content,
+                                      className: S.content,
                                       children: [this.renderPrimaryAction(), this.renderSecondaryAction()]
                                   })
                               ]
@@ -109,4 +109,4 @@ s.Z = c.ZP.connectStores([_.default], () => {
             hasEmail: null != e.email
         }
     );
-})(S);
+})(I);

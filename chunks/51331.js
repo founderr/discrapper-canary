@@ -14,9 +14,9 @@ function d(e) {
     let { value: s, onChange: t, className: i, note: d, title: u, disabled: _ } = e,
         E = a.useRef(null),
         T = a.useRef(null),
-        I = a.useId(),
-        S = (0, n.jsx)(o.Switch, {
-            id: I,
+        S = a.useId(),
+        I = (0, n.jsx)(o.Switch, {
+            id: S,
             checked: s,
             onChange: t,
             focusProps: { enabled: !1 },
@@ -37,13 +37,13 @@ function d(e) {
                         children: (0, n.jsx)(l.H, {
                             header: u,
                             description: d,
-                            relatedId: I,
+                            relatedId: S,
                             disabled: _
                         })
                     }),
                     (0, n.jsx)('div', {
                         className: c.control,
-                        children: S
+                        children: I
                     })
                 ]
             })

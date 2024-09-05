@@ -1,9 +1,9 @@
 t.d(s, {
     L1: function () {
-        return S;
+        return I;
     },
     o1: function () {
-        return I;
+        return S;
     }
 }),
     t(47120);
@@ -19,7 +19,7 @@ var n = t(735250),
     _ = t(853197),
     E = t(689938),
     T = t(144048);
-function I(e) {
+function S(e) {
     let { onClose: s, code: t, copyInputTitle: a, bodyText: i } = e;
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -68,7 +68,7 @@ function I(e) {
         ]
     });
 }
-function S(e) {
+function I(e) {
     let { onClose: s, errorCode: t } = e,
         a = {
             260000: E.Z.Messages.DROPS_USER_NOT_ENROLLED_ERROR,
@@ -112,15 +112,15 @@ function S(e) {
     );
 }
 s.ZP = function (e) {
-    let { onClose: s, code: l, drop: S, platform: N, transitionState: m } = e,
+    let { onClose: s, code: l, drop: I, platform: N, transitionState: m } = e,
         C = (0, c.Dt)(),
         [g, A] = a.useState();
     a.useEffect(() => {
         null == l &&
             o.Z.wait(async () => {
-                await (0, d.dN)(S.dropsQuestId);
+                await (0, d.dN)(I.dropsQuestId);
             });
-    }, [S.dropsQuestId, l]);
+    }, [I.dropsQuestId, l]);
     let h = (0, i.e7)([u.Z], () => u.Z.platformAvailability);
     return (0, n.jsx)(r.ModalRoot, {
         transitionState: m,
@@ -128,8 +128,8 @@ s.ZP = function (e) {
         children: (0, n.jsx)(n.Fragment, {
             children: (() => {
                 if (null != l)
-                    return (0, n.jsx)(I, {
-                        bodyText: S.messages.claimTip(),
+                    return (0, n.jsx)(S, {
+                        bodyText: I.messages.claimTip(),
                         onClose: s,
                         copyInputTitle: E.Z.Messages.DROPS_REDEMPTION_CODE_PLATFORM_TITLE.format({ platform: N }),
                         code: l
@@ -160,7 +160,7 @@ s.ZP = function (e) {
                                     (0, n.jsx)(r.Text, {
                                         variant: 'text-md/normal',
                                         className: T.dropBodyText,
-                                        children: a ? E.Z.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({ platform: (0, _.Un)(h[0]) }) : E.Z.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({ title: S.title })
+                                        children: a ? E.Z.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({ platform: (0, _.Un)(h[0]) }) : E.Z.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({ title: I.title })
                                     }),
                                     (0, n.jsx)(r.FormDivider, { className: T.formDivider }),
                                     (0, n.jsxs)(r.FormSection, {
@@ -202,7 +202,7 @@ s.ZP = function (e) {
                                                             ...t,
                                                             platform: void 0 === g ? h[0] : g,
                                                             code: l,
-                                                            dropsQuestId: S.dropsQuestId,
+                                                            dropsQuestId: I.dropsQuestId,
                                                             closeParentModal: s,
                                                             singlePlatformClaim: a
                                                         });

@@ -26,8 +26,8 @@ var n,
     _ = t(88658),
     E = t(981631),
     T = t(703115),
-    I = t(726985),
-    S = t(689938),
+    S = t(726985),
+    I = t(689938),
     N = t(205548);
 function m(e) {
     let { isGuildRestricted: s, handleRestrictedGuildChange: t, isGuildActivityRestricted: n, handleActivityRestrictedGuildChange: a, isGuildActivityJoiningRestricted: r, handleActivityJoiningRestrictedGuildChange: c, isGuildMessageRequestRestricted: d, handleMessageRequestRestrictedGuildChange: _, guild: T } = e,
@@ -35,32 +35,32 @@ function m(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(l.F, {
-                setting: I.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS,
+                setting: S.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_DMS,
                 children: [
                     (0, i.jsx)(o.FormItem, {
                         children: (0, i.jsx)(o.FormSwitch, {
                             value: !s,
-                            note: m ? S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
+                            note: m ? I.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC_HUB : I.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES_DESC,
                             onChange: t,
                             hideBorder: !0,
-                            children: S.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES
+                            children: I.Z.Messages.PRIVACY_SETTINGS_DIRECT_MESSAGES
                         })
                     }),
                     (0, i.jsx)(o.FormDivider, { className: N.divider })
                 ]
             }),
             (0, i.jsx)(l.F, {
-                setting: I.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS,
+                setting: S.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_MESSAGE_REQUESTS,
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.FormItem, {
                             children: (0, i.jsx)(o.FormSwitch, {
                                 value: !d,
-                                note: m ? S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }) : S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }),
+                                note: m ? I.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC_HUB.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }) : I.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS_DESC.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.MESSAGE_REQUESTS) }),
                                 onChange: _,
                                 disabled: s,
                                 hideBorder: !0,
-                                children: S.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS
+                                children: I.Z.Messages.PRIVACY_SETTINGS_MESSAGE_REQUESTS
                             })
                         }),
                         (0, i.jsx)(o.FormDivider, { className: N.divider })
@@ -68,7 +68,7 @@ function m(e) {
                 })
             }),
             (0, i.jsx)(l.F, {
-                setting: I.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS,
+                setting: S.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS,
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(o.FormItem, {
@@ -76,8 +76,8 @@ function m(e) {
                                 value: !n,
                                 onChange: a,
                                 hideBorder: !0,
-                                note: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS_DESC.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS) }),
-                                children: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS
+                                note: I.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS_DESC.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                                children: I.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_STATUS
                             })
                         }),
                         (0, i.jsx)(o.FormDivider, { className: N.divider })
@@ -85,15 +85,15 @@ function m(e) {
                 })
             }),
             (0, i.jsxs)(l.F, {
-                setting: I.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING,
+                setting: S.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_JOINING,
                 children: [
                     (0, i.jsx)(o.FormItem, {
                         children: (0, i.jsx)(o.FormSwitch, {
                             value: !r,
                             onChange: c,
                             hideBorder: !0,
-                            note: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING_DESC.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS) }),
-                            children: S.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING
+                            note: I.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING_DESC.format({ helpdeskArticle: u.Z.getArticleURL(E.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                            children: I.Z.Messages.PRIVACY_SETTINGS_ACTIVITY_JOINING
                         })
                     }),
                     (0, i.jsx)(o.FormDivider, { className: N.divider })
@@ -104,7 +104,7 @@ function m(e) {
                 children: (0, i.jsx)(o.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: S.Z.Messages.PRIVACY_SETTINGS_COMMUNITY_GUILDS_DISCLAIMER.format({ policyLink: 'https://discord.com/safety/360043709612-our-policies' })
+                    children: I.Z.Messages.PRIVACY_SETTINGS_COMMUNITY_GUILDS_DISCLAIMER.format({ policyLink: 'https://discord.com/safety/360043709612-our-policies' })
                 })
             })
         ]
@@ -112,7 +112,7 @@ function m(e) {
 }
 function C(e) {
     let { guild: s, transitionState: t, onClose: n } = e,
-        a = ''.concat(S.Z.Messages.PRIVACY_SETTINGS, '\u2014').concat(null != s ? s.toString() : '??');
+        a = ''.concat(I.Z.Messages.PRIVACY_SETTINGS, '\u2014').concat(null != s ? s.toString() : '??');
     return (0, i.jsxs)(o.ModalRoot, {
         transitionState: t,
         size: o.ModalSize.SMALL,
@@ -134,7 +134,7 @@ function C(e) {
             (0, i.jsx)(o.ModalFooter, {
                 children: (0, i.jsx)(o.Button, {
                     onClick: () => n(),
-                    children: S.Z.Messages.DONE
+                    children: I.Z.Messages.DONE
                 })
             })
         ]
@@ -147,7 +147,7 @@ function g(e) {
         o = c.zA.useSetting().includes(n),
         l = c.SE.useSetting().includes(n),
         u = c.iH.useSetting().includes(n),
-        I = r.useCallback(
+        S = r.useCallback(
             (e) => {
                 let s = new Set((0, _.YK)());
                 e ? s.delete(n) : s.add(n),
@@ -160,7 +160,7 @@ function g(e) {
             },
             [n, t]
         ),
-        S = r.useCallback(
+        I = r.useCallback(
             (e) => {
                 let s = new Set((0, _._o)());
                 e ? s.delete(n) : s.add(n),
@@ -201,9 +201,9 @@ function g(e) {
         );
     return (0, i.jsx)(m, {
         isGuildRestricted: a,
-        handleRestrictedGuildChange: I,
+        handleRestrictedGuildChange: S,
         isGuildActivityRestricted: l,
-        handleActivityRestrictedGuildChange: S,
+        handleActivityRestrictedGuildChange: I,
         isGuildActivityJoiningRestricted: u,
         handleActivityJoiningRestrictedGuildChange: N,
         isGuildMessageRequestRestricted: o,

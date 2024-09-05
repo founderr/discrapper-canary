@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(481060),
     E = t(570140),
     T = t(355467),
-    I = t(37234),
-    S = t(821849),
+    S = t(37234),
+    I = t(821849),
     N = t(230711),
     m = t(497321),
     C = t(634894),
@@ -57,8 +57,8 @@ function X() {
         d = e.planIdFromItems === w.Xh.PREMIUM_YEAR_TIER_2,
         E = s || o,
         T = null != e.trialEndsAt ? l()(e.trialEndsAt).diff(l()(), 'd') : 0,
-        S = w.GP[e.planIdFromItems],
-        m = b.ZP.formatPriceString(b.ZP.getDefaultPrice(S.id), S.interval);
+        I = w.GP[e.planIdFromItems],
+        m = b.ZP.formatPriceString(b.ZP.getDefaultPrice(I.id), I.interval);
     return (0, n.jsxs)('div', {
         className: r()(W.tierCard, { [W.withTier2Rim]: E }),
         children: [
@@ -109,7 +109,7 @@ function X() {
                         : (0, n.jsx)(F.Z, {
                               variant: void 0,
                               subscriptionTier: w.Si.TIER_2,
-                              interval: S.interval
+                              interval: I.interval
                           }),
                     (0, n.jsx)(G.nT, {}),
                     (0, n.jsx)(_.Button, {
@@ -120,7 +120,7 @@ function X() {
                                 cta_type: 'to_premium_home_button',
                                 target: 'premium home page'
                             }),
-                                (0, I.xf)(),
+                                (0, S.xf)(),
                                 (0, f.uL)(k.Z5c.APPLICATION_STORE);
                         },
                         children: (0, n.jsx)(_.Text, {
@@ -219,7 +219,7 @@ s.Z = function () {
         r = (0, p.V)(),
         [o, l] = a.useState(!0),
         u = (0, j.n)(),
-        I = null == u ? void 0 : u.countryCode,
+        S = null == u ? void 0 : u.countryCode,
         N = (0, c.e7)([M.Z], () => M.Z.enabled),
         g = 'PremiumManagementSettings';
     (0, C.j)({
@@ -235,9 +235,9 @@ s.Z = function () {
         P = (0, V.pn)('PremiumManagementSettings');
     a.useEffect(() => {
         E.Z.wait(async () => {
-            !N && !e && (await Promise.all([T.jg(), T.tZ(), (0, S.Y2)(I, null, k.JjL.DISCOVERY)])), l(!1);
+            !N && !e && (await Promise.all([T.jg(), T.tZ(), (0, I.Y2)(S, null, k.JjL.DISCOVERY)])), l(!1);
         });
-    }, [I, N, e]);
+    }, [S, N, e]);
     let [b, Z] = a.useState(!1);
     if (N) return (0, n.jsx)(m.Z, {});
     if (e) return (0, n.jsx)(R.c8, {});

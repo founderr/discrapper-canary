@@ -11,51 +11,51 @@ var a = t(120356),
     _ = t(709586),
     E = t(267642),
     T = t(981631),
-    I = t(689938),
-    S = t(660847);
+    S = t(689938),
+    I = t(660847);
 s.Z = function (e) {
     let { className: s, guildId: t, boostingVariant: a } = e,
         N = (0, r.e7)([u.Z], () => u.Z.getGuild(t), [t]);
     return null == N
         ? (0, n.jsx)('div', {
-              className: i()(s, S.guildContainer),
+              className: i()(s, I.guildContainer),
               children: (0, n.jsx)('div', {
-                  className: S.guildInfoContainer,
+                  className: I.guildInfoContainer,
                   children: (0, n.jsx)(o.Text, {
                       variant: 'text-lg/bold',
-                      children: I.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_APPLIED_GUILD_BOOST_UNKNOWN_GUILD
+                      children: S.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_APPLIED_GUILD_BOOST_UNKNOWN_GUILD
                   })
               })
           })
         : (0, n.jsxs)('div', {
-              className: i()(s, S.guildContainer),
+              className: i()(s, I.guildContainer),
               children: [
                   (0, n.jsx)(l.Z, {
-                      className: S.__invalid_guildIcon,
+                      className: I.__invalid_guildIcon,
                       guild: N,
                       size: l.Z.Sizes.LARGER
                   }),
                   (0, n.jsxs)('div', {
-                      className: S.guildInfoContainer,
+                      className: I.guildInfoContainer,
                       children: [
                           (0, n.jsx)(o.Text, {
                               variant: 'text-lg/bold',
                               children: N.name
                           }),
                           (0, n.jsxs)('div', {
-                              className: S.guildBoostStatsContainer,
+                              className: I.guildBoostStatsContainer,
                               children: [
                                   (0, n.jsx)(_.Z, {
-                                      className: S.guildBoostBadge,
+                                      className: I.guildBoostBadge,
                                       width: 16,
                                       height: 16
                                   }),
                                   (0, n.jsx)(o.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
-                                      children: I.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({ subscriptions: N.premiumSubscriberCount })
+                                      children: S.Z.Messages.PREMIUM_GUILD_PERKS_MODAL_HEADER_SUBSCRIPTION_COUNT.format({ subscriptions: N.premiumSubscriberCount })
                                   }),
-                                  (0, n.jsx)('div', { className: S.separator }),
+                                  (0, n.jsx)('div', { className: I.separator }),
                                   (0, n.jsx)(o.Text, {
                                       variant: 'text-sm/bold',
                                       color: 'text-muted',
@@ -77,7 +77,7 @@ s.Z = function (e) {
                             pauseAnimation: !0,
                             size: o.Button.Sizes.MEDIUM,
                             color: o.Button.Colors.PRIMARY,
-                            buttonText: I.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_THIS_SERVER
+                            buttonText: S.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_THIS_SERVER
                         })
                       : (0, n.jsx)(o.Button, {
                             color: o.Button.Colors.PRIMARY,
@@ -88,7 +88,7 @@ s.Z = function (e) {
                                 });
                             },
                             size: o.Button.Sizes.MEDIUM,
-                            children: I.Z.Messages.NAVIGATE_TO_GUILD
+                            children: S.Z.Messages.NAVIGATE_TO_GUILD
                         })
               ]
           });

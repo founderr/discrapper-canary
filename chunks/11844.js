@@ -41,7 +41,7 @@ s.Z = function () {
             }
         );
     }
-    let I = (0, c.aq)();
+    let S = (0, c.aq)();
     return (0, n.jsxs)('div', {
         className: _.wrapper,
         children: [
@@ -56,7 +56,7 @@ s.Z = function () {
                 variant: 'text-sm/medium',
                 children: u.Z.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_GUILD_CTA.format({
                     boostAnyGuildHook: (e, s) => {
-                        let t = null != I,
+                        let t = null != S,
                             a = (0, n.jsx)(
                                 i.Button,
                                 {
@@ -73,7 +73,7 @@ s.Z = function () {
                             ? (0, n.jsx)(
                                   i.Tooltip,
                                   {
-                                      text: I,
+                                      text: S,
                                       children: (e) =>
                                           (0, n.jsx)('span', {
                                               ...e,

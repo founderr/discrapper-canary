@@ -14,12 +14,12 @@ var a = t(120356),
     d = t(689938),
     u = t(949985);
 function _(e) {
-    let { showRemoveBannerButton: s, errors: t, onBannerChange: a, guildId: _, className: E, disabled: T = !1, showPremiumIcon: I = !0, isTryItOutFlow: S = !1, forcedDivider: N, withHighlight: m = !1 } = e,
+    let { showRemoveBannerButton: s, errors: t, onBannerChange: a, guildId: _, className: E, disabled: T = !1, showPremiumIcon: S = !0, isTryItOutFlow: I = !1, forcedDivider: N, withHighlight: m = !1 } = e,
         C = m ? r.ShinyButton : r.Button;
     return (0, n.jsx)(l.Z, {
         className: E,
         title: d.Z.Messages.USER_SETTINGS_PROFILE_BANNER,
-        showPremiumIcon: I,
+        showPremiumIcon: S,
         errors: t,
         disabled: T,
         forcedDivider: N,
@@ -29,7 +29,7 @@ function _(e) {
                 (0, n.jsx)(C, {
                     className: i()({ [u.buttonHighlighted]: m }),
                     size: r.Button.Sizes.SMALL,
-                    onClick: () => (0, o.$r)(c.pC.BANNER, _, S, void 0),
+                    onClick: () => (0, o.$r)(c.pC.BANNER, _, I, void 0),
                     children: d.Z.Messages.CHANGE_BANNER
                 }),
                 s &&

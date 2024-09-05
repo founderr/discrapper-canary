@@ -15,8 +15,8 @@ var n = t(735250),
     _ = t(981631),
     E = t(474936),
     T = t(689938),
-    I = t(333727),
-    S = t(699623),
+    S = t(333727),
+    I = t(699623),
     N = t(820350);
 function m(e) {
     let { user: s, showOverlay: t, children: m } = e,
@@ -31,26 +31,26 @@ function m(e) {
     }, [t, g]),
     t)
         ? (0, n.jsxs)('div', {
-              className: I.upsellOverlayContainer,
+              className: S.upsellOverlayContainer,
               children: [
                   (0, n.jsx)('div', { children: m }),
                   (0, n.jsxs)('div', {
-                      className: I.upsellOverlay,
+                      className: S.upsellOverlay,
                       children: [
                           (0, n.jsx)('img', {
-                              className: I.upsellImage,
+                              className: S.upsellImage,
                               alt: T.Z.Messages.GUILD_IDENTITY_UPSELL_OVERLAY_IMAGE_ALT,
                               src: (function (e) {
                                   switch (e) {
                                       case _.BRd.DARK:
-                                          return S;
+                                          return I;
                                       case _.BRd.LIGHT:
                                           return N;
                                   }
                               })(C)
                           }),
                           (0, n.jsxs)('div', {
-                              className: I.upsellTextContainer,
+                              className: S.upsellTextContainer,
                               children: [
                                   (0, n.jsx)(i.Text, {
                                       variant: 'text-lg/semibold',

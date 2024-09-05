@@ -17,8 +17,8 @@ var a = t(524437),
     _ = t(838436),
     E = t(526761),
     T = t(726985),
-    I = t(981631),
-    S = t(689938),
+    S = t(981631),
+    I = t(689938),
     N = t(81138),
     m = t(365320);
 function C() {
@@ -29,22 +29,22 @@ function C() {
         h = [
             {
                 value: a.Q4.BLUR,
-                label: S.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
+                label: I.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
             },
             {
                 value: a.Q4.BLOCK,
-                label: S.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLOCK
+                label: I.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLOCK
             }
         ],
         O = [
             {
                 value: a.Q4.BLUR,
-                label: S.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
+                label: I.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_BLUR
             }
         ],
         p = {
             value: a.Q4.SHOW,
-            label: S.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_SHOW
+            label: I.Z.Messages.OBSCURED_CONTENT_SETTINGS_OPTION_SHOW
         };
     return (
         s && (h.unshift(p), O.unshift(p)),
@@ -53,13 +53,13 @@ function C() {
             className: N.settingsBackgroundFlashElement,
             children: [
                 (0, n.jsx)(_.H, {
-                    header: S.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
-                    description: S.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: c.Z.getArticleURL(I.BhN.EXPLICIT_MEDIA_REDACTION) })
+                    header: I.Z.Messages.OBSCURED_CONTENT_SETTINGS_HEADER,
+                    description: I.Z.Messages.OBSCURED_CONTENT_SETTINGS_DESC.format({ learnMoreLink: c.Z.getArticleURL(S.BhN.EXPLICIT_MEDIA_REDACTION) })
                 }),
                 (0, n.jsx)(i.FormItem, {
                     ref: A,
                     tag: i.FormTitleTags.H3,
-                    title: S.Z.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
+                    title: I.Z.Messages.OBSCURED_CONTENT_SETTING_FRIENDS,
                     titleClassName: m.selectItemTitle,
                     children: (0, n.jsx)(i.SingleSelect, {
                         options: h,
@@ -69,7 +69,7 @@ function C() {
                 }),
                 (0, n.jsx)(i.FormItem, {
                     tag: i.FormTitleTags.H3,
-                    title: S.Z.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS,
+                    title: I.Z.Messages.OBSCURED_CONTENT_SETTING_NON_FRIENDS,
                     titleClassName: m.selectItemTitle,
                     children: (0, n.jsx)(i.SingleSelect, {
                         options: h,
@@ -80,7 +80,7 @@ function C() {
                 s &&
                     (0, n.jsx)(i.FormItem, {
                         tag: i.FormTitleTags.H3,
-                        title: S.Z.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
+                        title: I.Z.Messages.OBSCURED_CONTENT_SETTING_GUILDS,
                         titleClassName: m.selectItemTitle,
                         children: (0, n.jsx)(i.SingleSelect, {
                             options: O,

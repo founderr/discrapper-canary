@@ -16,8 +16,8 @@ var n = t(735250),
     _ = t(355467),
     E = t(100527),
     T = t(906732),
-    I = t(600164),
-    S = t(210887),
+    S = t(600164),
+    I = t(210887),
     N = t(301766),
     m = t(509545),
     C = t(74538),
@@ -26,7 +26,7 @@ var n = t(735250),
     h = t(981129);
 function O(e) {
     let { subscription: s, renewalMutations: t, transitionState: a, onClose: i, analyticsLocation: r } = e,
-        o = (0, c.e7)([S.Z], () => S.Z.theme),
+        o = (0, c.e7)([I.Z], () => I.Z.theme),
         { analyticsLocations: O } = (0, T.ZP)(E.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
     async function p() {
         await (0, _.dP)(s, s.planId, O, r), i();
@@ -43,7 +43,7 @@ function O(e) {
         'aria-label': A.Z.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
         children: [
             (0, n.jsxs)(u.ModalHeader, {
-                justify: I.Z.Justify.BETWEEN,
+                justify: S.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
                     (0, n.jsx)(u.FormTitle, {

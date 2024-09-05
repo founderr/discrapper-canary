@@ -27,8 +27,8 @@ var n = t(735250),
     _ = t(112831),
     E = t(675478),
     T = t(581883),
-    I = t(883904),
-    S = t(68985),
+    S = t(883904),
+    I = t(68985),
     N = t(211644),
     m = t(804501),
     C = t(989374),
@@ -72,9 +72,9 @@ function h(e) {
 function O() {
     var e;
     let s = (0, N.ZP)((e) => e.recentlyShown),
-        { dailyCapReached: t, dailyCapOverridden: i } = (0, o.cj)([S.Z], () => ({
-            dailyCapReached: S.Z.hasUserHitDCCap(),
-            dailyCapOverridden: S.Z.dailyCapOverridden
+        { dailyCapReached: t, dailyCapOverridden: i } = (0, o.cj)([I.Z], () => ({
+            dailyCapReached: I.Z.hasUserHitDCCap(),
+            dailyCapOverridden: I.Z.dailyCapOverridden
         })),
         [_, m] = a.useState(''),
         A =
@@ -127,13 +127,13 @@ function O() {
                     }),
                     (0, n.jsx)(d.FormSwitch, {
                         value: i,
-                        onChange: I.Nj,
+                        onChange: S.Nj,
                         children: 'Override Dismissible Content Daily Cap'
                     }),
                     (0, n.jsxs)(d.FormItem, {
                         children: [
                             (0, n.jsx)(d.Button, {
-                                onClick: () => (0, I.EG)(),
+                                onClick: () => (0, S.EG)(),
                                 children: 'Reset DismissibleContentFrameworkStore'
                             }),
                             (0, n.jsx)(d.FormText, {

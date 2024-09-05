@@ -24,8 +24,8 @@ let _ = 0,
                 return c.Z.Messages.OVERLAY_NOTIFICATIONS_DISABLED;
         }
     },
-    I = [l._vf.DISABLED, l._vf.TOP_LEFT, l._vf.TOP_RIGHT, l._vf.BOTTOM_LEFT, l._vf.BOTTOM_RIGHT];
-function S(e) {
+    S = [l._vf.DISABLED, l._vf.TOP_LEFT, l._vf.TOP_RIGHT, l._vf.BOTTOM_LEFT, l._vf.BOTTOM_RIGHT];
+function I(e) {
     let { position: s, onChange: t } = e,
         [i] = a.useState(() => E()),
         _ = s === l._vf.DISABLED ? c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_DISABLED : c.Z.Messages.OVERLAY_NOTIFICATION_SETTINGS_POSITION.format({ position: T(s) });
@@ -36,7 +36,7 @@ function S(e) {
                 offset: -2,
                 children: (0, n.jsx)('div', {
                     className: r()(d.wrapper, { [d.disabledSelected]: s === l._vf.DISABLED }),
-                    children: I.map((e) =>
+                    children: S.map((e) =>
                         (0, n.jsxs)(
                             'label',
                             {
@@ -79,4 +79,4 @@ function S(e) {
         ]
     });
 }
-(S.Positions = l._vf), (s.Z = S);
+(I.Positions = l._vf), (s.Z = I);

@@ -19,8 +19,8 @@ function E() {
         s = (0, i.e7)([u.Z], () => u.Z.getGuild()),
         t = (0, i.e7)([u.Z], () => u.Z.getErrors()),
         [E, T] = a.useState(!1),
-        I = a.useMemo(() => ((null == t ? void 0 : t.message) != null ? (null == t ? void 0 : t.message) : Object.keys(null != t ? t : {}).length > 0 ? _.Z.Messages.GUILD_SETTINGS_EDIT_PROFILE_GENERIC_ERROR : null), [t]),
-        S = a.useCallback(async () => {
+        S = a.useMemo(() => ((null == t ? void 0 : t.message) != null ? (null == t ? void 0 : t.message) : Object.keys(null != t ? t : {}).length > 0 ? _.Z.Messages.GUILD_SETTINGS_EDIT_PROFILE_GENERIC_ERROR : null), [t]),
+        I = a.useCallback(async () => {
             var e, t;
             T(!0);
             let n = u.Z.getAllPending(),
@@ -42,9 +42,9 @@ function E() {
         }, []);
     return (0, n.jsx)(r.Z, {
         submitting: E,
-        onSave: S,
+        onSave: I,
         onReset: N,
         disabled: e,
-        errorMessage: null != I ? I : void 0
+        errorMessage: null != S ? S : void 0
     });
 }

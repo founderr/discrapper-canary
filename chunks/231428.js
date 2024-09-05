@@ -16,8 +16,8 @@ var n,
     _ = t(481060),
     E = t(570140),
     T = t(355467),
-    I = t(827837),
-    S = t(821849),
+    S = t(827837),
+    I = t(821849),
     N = t(724757),
     m = t(600164),
     C = t(239827),
@@ -48,8 +48,8 @@ function L(e) {
     let { payments: s, locale: t, compactMode: n, numPages: r } = e,
         l = i.useRef(null),
         [c, u] = i.useState(0),
-        [E, I] = i.useState(null),
-        S = s.slice(10 * c, (c + 1) * 10);
+        [E, S] = i.useState(null),
+        I = s.slice(10 * c, (c + 1) * 10);
     i.useEffect(() => {
         var e;
         null === (e = l.current) || void 0 === e || e.scrollTo({ to: 0 });
@@ -58,7 +58,7 @@ function L(e) {
             (e) => {
                 u(e);
                 let t = s[s.length - 1].id;
-                e >= r - 2 && E !== t && ((0, T.cQ)(10, t), I(t));
+                e >= r - 2 && E !== t && ((0, T.cQ)(10, t), S(t));
             },
             [s, r, E]
         ),
@@ -79,7 +79,7 @@ function L(e) {
                     children: (0, a.jsx)(_.AdvancedScroller, {
                         className: M.bottomDivider,
                         ref: l,
-                        children: S.map((e, s) =>
+                        children: I.map((e, s) =>
                             (0, a.jsx)(
                                 p.Z,
                                 {
@@ -103,7 +103,7 @@ class b extends (n = i.PureComponent) {
     }
     componentDidMount() {
         E.Z.wait(() => {
-            (0, I.N)(), (0, T.cQ)(30);
+            (0, S.N)(), (0, T.cQ)(30);
         });
     }
     renderPremiumExternalSubscription(e) {
@@ -213,7 +213,7 @@ function v(e) {
         i.useEffect(() => {
             !l() &&
                 E.Z.wait(() => {
-                    r.forEach((e) => (0, S.GZ)(e, void 0, void 0, !0, void 0));
+                    r.forEach((e) => (0, I.GZ)(e, void 0, void 0, !0, void 0));
                 });
         }, [l, r]),
         (0, a.jsx)(b, {

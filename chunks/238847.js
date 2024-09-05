@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(355467),
     E = t(100527),
     T = t(906732),
-    I = t(878596),
-    S = t(313201),
+    S = t(878596),
+    I = t(313201),
     N = t(218946),
     m = t(565138),
     C = t(404203),
@@ -99,7 +99,7 @@ let L = (e) => {
                               submitting: a,
                               children: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_RESTART
                           })
-                        : (0, n.jsx)(I.Z, {
+                        : (0, n.jsx)(S.Z, {
                               label: D.Z.Messages.APPLICATION_MANAGE_SUBSCRIPTION_MANAGE_OPTIONS_CANCEL,
                               onClick: t
                           })
@@ -109,8 +109,8 @@ let L = (e) => {
     };
 s.Z = (e) => {
     let { subscription: s } = e,
-        { listing: i, groupListing: o, guild: d, expanded: E, handleToggleExpanded: I, subscriptionInfo: A, application: h } = (0, f.Z)(s),
-        p = (0, S.Dt)(),
+        { listing: i, groupListing: o, guild: d, expanded: E, handleToggleExpanded: S, subscriptionInfo: A, application: h } = (0, f.Z)(s),
+        p = (0, I.Dt)(),
         [v, j] = a.useState(!1),
         { analyticsLocations: B } = (0, T.ZP)();
     if (null == o || null == i || null == A) return null;
@@ -194,7 +194,7 @@ s.Z = (e) => {
         className: P.container,
         children: [
             (0, n.jsx)(C.Z, {
-                onClick: I,
+                onClick: S,
                 className: P.headerContainer,
                 children: (e) => {
                     let { areaRef: s, handleStopPropagation: t } = e;
@@ -222,7 +222,7 @@ s.Z = (e) => {
                                 ]
                             }),
                             (0, n.jsx)(u.Clickable, {
-                                onClick: t(I),
+                                onClick: t(S),
                                 'aria-label': D.Z.Messages.APPLICATION_SUBSCRIPTION_TOGGLE_SECTION_LABEL,
                                 'aria-controls': p,
                                 'aria-expanded': E,

@@ -11,8 +11,8 @@ var n = t(735250),
     _ = t(570928),
     E = t(594190),
     T = t(320724),
-    I = t(297700),
-    S = t(77498),
+    S = t(297700),
+    I = t(77498),
     N = t(283595),
     m = t(626135),
     C = t(251625),
@@ -81,7 +81,7 @@ function L(e) {
 function b(e) {
     var s;
     let { rawGame: t, nowPlaying: i = !1, isOverride: T } = e,
-        C = (0, o.cj)([S.Z, E.ZP, N.Z], () => (0, E.FZ)(t)),
+        C = (0, o.cj)([I.Z, E.ZP, N.Z], () => (0, E.FZ)(t)),
         [g, A] = a.useState(!1),
         [R, M] = a.useState(null !== (s = C.name) && void 0 !== s ? s : '???'),
         D = r()(x.flexCenter, {
@@ -104,7 +104,7 @@ function b(e) {
     }
     function j() {
         if (g) return;
-        let e = null != C.id ? S.Z.getDetectableGame(C.id) : null;
+        let e = null != C.id ? I.Z.getDetectableGame(C.id) : null;
         m.default.track(h.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
             game_name: C.name
@@ -129,7 +129,7 @@ function b(e) {
                                   (0, n.jsx)(c.Tooltip, {
                                       text: O.Z.Messages.SETTINGS_GAMES_VERIFIED_ICON,
                                       children: (e) =>
-                                          (0, n.jsx)(I.Z, {
+                                          (0, n.jsx)(S.Z, {
                                               className: p.gameVerifiedIcon,
                                               size: 18,
                                               color: l.Z.unsafe_rawColors.BRAND_500.css,

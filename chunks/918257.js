@@ -1,6 +1,6 @@
 t.d(s, {
     Z: function () {
-        return S;
+        return I;
     }
 });
 var n = t(735250);
@@ -16,8 +16,8 @@ var a = t(120356),
     _ = t(981631),
     E = t(689938),
     T = t(238515);
-let I = (0, o.hQ)();
-function S() {
+let S = (0, o.hQ)();
+function I() {
     let e = (0, c.pI)();
     return (0, n.jsxs)('div', {
         className: i()(T.soundboardRow),
@@ -41,7 +41,7 @@ function S() {
                 className: i()(T.soundboardColumn, T.__invalid_rightColumn),
                 children: [
                     (0, n.jsx)(r.FormTitle, {
-                        id: I,
+                        id: S,
                         tag: r.FormTitleTags.H5,
                         className: T.soundboardSubtitle,
                         children: E.Z.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME
@@ -53,7 +53,7 @@ function S() {
                         asValueChanges: function (s) {
                             (e = (0, u.A)(s)), (0, l.xz)(e);
                         },
-                        'aria-labelledby': I
+                        'aria-labelledby': S
                     })
                 ]
             })
