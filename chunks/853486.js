@@ -12,7 +12,7 @@ var t = n(735250),
     _ = n(689938),
     T = n(189522);
 s.Z = function (e) {
-    let { guild: s, guildJoinRequest: m, guildJoinRequestUser: M, onClose: R } = e,
+    let { guild: s, guildJoinRequest: m, guildJoinRequestUser: R, onClose: M } = e,
         N = a.useMemo(() => {
             var e;
             return null !== (e = m.formResponses) && void 0 !== e ? e : [];
@@ -27,17 +27,17 @@ s.Z = function (e) {
                             ...n,
                             guild: s,
                             guildJoinRequest: m,
-                            user: M
+                            user: R
                         });
                 }),
-            [s, m, M]
+            [s, m, R]
         );
     return (0, t.jsxs)(t.Fragment, {
         children: [
             (0, t.jsxs)(r.ZP, {
                 toolbar: (0, t.jsx)(r.ZP.Icon, {
                     icon: l.XSmallIcon,
-                    onClick: R,
+                    onClick: M,
                     tooltip: _.Z.Messages.CLOSE
                 }),
                 children: [
@@ -48,13 +48,13 @@ s.Z = function (e) {
                     }),
                     (0, t.jsx)(l.Heading, {
                         variant: 'heading-md/semibold',
-                        children: i.ZP.getName(M)
+                        children: i.ZP.getName(R)
                     })
                 ]
             }),
             (0, t.jsx)(d.Z, {
                 guildJoinRequest: m,
-                guildJoinRequestUser: M,
+                guildJoinRequestUser: R,
                 guild: s
             }),
             (0, t.jsxs)(l.Scroller, {
@@ -63,8 +63,8 @@ s.Z = function (e) {
                         className: T.container,
                         children: [
                             (0, t.jsx)(I.Z, {
-                                user: M,
-                                guildId: s.id
+                                user: R,
+                                joinRequestId: m.joinRequestId
                             }),
                             C &&
                                 (0, t.jsxs)('div', {
@@ -85,7 +85,7 @@ s.Z = function (e) {
                         children: (0, t.jsx)(c.Z, {
                             guildId: s.id,
                             formFields: N,
-                            user: M
+                            user: R
                         })
                     })
                 ]

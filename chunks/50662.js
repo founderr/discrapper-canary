@@ -18,8 +18,8 @@ var a = n(913527),
     _ = n(709054),
     T = n(246364),
     m = n(360328),
-    M = n(981631),
-    R = n(689938),
+    R = n(981631),
+    M = n(689938),
     N = n(385747);
 function C(e) {
     var s;
@@ -31,7 +31,7 @@ function C(e) {
         f = (0, r.e7)([I.ZP], () => (null != g ? I.ZP.getMember(b, g) : null), [g, b]),
         Z = (0, r.e7)([u.Z], () => u.Z.getMemberCount(b)),
         O = (null != Z ? Z : 0) >= C.maxMembers,
-        B = R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING,
+        B = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_PENDING,
         L = (0, t.jsx)(o.ClockIcon, {
             size: 'custom',
             color: 'currentColor',
@@ -40,7 +40,7 @@ function C(e) {
             className: N.icon
         });
     a.applicationStatus === T.wB.APPROVED
-        ? ((B = R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED),
+        ? ((B = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVED),
           (L = (0, t.jsx)(o.CircleCheckIcon, {
               size: 'md',
               className: N.iconApproved,
@@ -48,7 +48,7 @@ function C(e) {
               secondaryColor: 'currentColor'
           })))
         : a.applicationStatus === T.wB.REJECTED &&
-          ((B = R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED),
+          ((B = M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_REJECTED),
           (L = (0, t.jsx)(o.CircleXIcon, {
               size: 'md',
               color: i.Z.colors.WHITE.css,
@@ -56,7 +56,7 @@ function C(e) {
           })));
     let D =
         null != v && null != A
-            ? R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
+            ? M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_ACTIONED_BY_HOOK.format({
                   date: l()(_.default.extractTimestamp(A)).format('ll'),
                   usernameHook: function () {
                       var e;
@@ -69,8 +69,8 @@ function C(e) {
                                       userId: v.id,
                                       guildId: b,
                                       analyticsLocation: {
-                                          section: M.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-                                          object: M.qAy.ACTIONED_BY_USER
+                                          section: R.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+                                          object: R.qAy.ACTIONED_BY_USER
                                       }
                                   }),
                               tag: 'div',
@@ -120,7 +120,7 @@ function C(e) {
                                     className: N.buttons,
                                     children: [
                                         (0, t.jsx)(o.Tooltip, {
-                                            text: R.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
+                                            text: M.Z.Messages.CLAN_APPLICATION_MAX_MEMBER_LIMIT_TOOLTIP,
                                             shouldShow: O,
                                             children: (e) =>
                                                 (0, t.jsx)(o.Button, {
@@ -129,14 +129,14 @@ function C(e) {
                                                     submitting: p,
                                                     disabled: O,
                                                     onClick: j,
-                                                    children: R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
+                                                    children: M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
                                                 })
                                         }),
                                         (0, t.jsx)(o.Button, {
                                             color: o.Button.Colors.RED,
                                             onClick: P,
                                             disabled: p,
-                                            children: R.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
+                                            children: M.Z.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
                                         })
                                     ]
                                 }),

@@ -3,7 +3,7 @@ r.d(t, {
         return P;
     },
     AJ: function () {
-        return D;
+        return L;
     },
     Ei: function () {
         return M;
@@ -15,7 +15,7 @@ r.d(t, {
         return g;
     },
     db: function () {
-        return L;
+        return D;
     },
     dz: function () {
         return v;
@@ -61,12 +61,12 @@ if ('object' == typeof (n = f) && null !== n && 'getHighEntropyValues' in n)
 function S(e) {
     return 'pageload' === (0, o.XU)(e).op;
 }
-function L(e, t) {
+function D(e, t) {
     if (!t.length) return e;
     for (let r of t) e[1].push([{ type: 'profile' }, r]);
     return e;
 }
-function D(e) {
+function L(e) {
     let t = [];
     return (
         (0, c.gv)(e, (e, r) => {

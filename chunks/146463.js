@@ -13,8 +13,8 @@ var a = n(120356),
     _ = n(826581),
     T = n(246364),
     m = n(328977),
-    M = n(571728),
-    R = n(762660),
+    R = n(571728),
+    M = n(762660),
     N = n(689938),
     C = n(811140);
 let x = () => null;
@@ -67,15 +67,15 @@ s.Z = function (e) {
         j = (0, i.e7)([_.Z], () => _.Z.isFetching()),
         P = j ? [a.length + 25] : [a.length],
         p = (0, m.L)({ guildId: u }),
-        g = null !== (s = (0, M.A)({ guildId: u })) && void 0 !== s ? s : 0,
+        g = null !== (s = (0, R.A)({ guildId: u })) && void 0 !== s ? s : 0,
         v = (0, c.Z)('guild-join-requests'),
         f = (e) => {
             let { row: s } = e,
                 r = a[s];
             return null == r
-                ? (0, t.jsx)(R.h, {}, s)
+                ? (0, t.jsx)(M.h, {}, s)
                 : (0, t.jsx)(
-                      R.C,
+                      M.C,
                       {
                           className: l()({
                               [C.selected]: p === r,

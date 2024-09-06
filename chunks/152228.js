@@ -1,12 +1,12 @@
 r.d(t, {
     GK: function () {
-        return L;
+        return D;
     },
     Iw: function () {
         return M;
     },
     V0: function () {
-        return D;
+        return L;
     },
     _d: function () {
         return g;
@@ -38,7 +38,7 @@ var n = r(370541),
     O = r(793373),
     f = r(881243);
 let S = '__SENTRY_SUPPRESS_TRACING__';
-function L(e, t) {
+function D(e, t) {
     let r = U();
     if (r.startSpan) return r.startSpan(e, t);
     let n = m(e),
@@ -75,7 +75,7 @@ function L(e, t) {
         })
     );
 }
-function D(e, t) {
+function L(e, t) {
     let r = U();
     if (r.startSpanManual) return r.startSpanManual(e, t);
     let n = m(e),

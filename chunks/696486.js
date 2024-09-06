@@ -134,28 +134,28 @@ function f(e) {
 function S(e) {
     return e && e.code !== I.pq ? (e.code === I.OP ? 'ok' : e.message || 'unknown_error') : void 0;
 }
-let L = '_sentryChildSpans',
-    D = '_sentryRootSpan';
+let D = '_sentryChildSpans',
+    L = '_sentryRootSpan';
 function h(e, t) {
-    let r = e[D] || e;
-    (0, n.xp)(t, D, r), e[L] ? e[L].add(t) : (0, n.xp)(e, L, new Set([t]));
+    let r = e[L] || e;
+    (0, n.xp)(t, L, r), e[D] ? e[D].add(t) : (0, n.xp)(e, D, new Set([t]));
 }
 function C(e, t) {
-    e[L] && e[L].delete(t);
+    e[D] && e[D].delete(t);
 }
 function g(e) {
     let t = new Set();
     return (
         !(function e(r) {
             if (!t.has(r)) {
-                if (f(r)) for (let n of (t.add(r), r[L] ? Array.from(r[L]) : [])) e(n);
+                if (f(r)) for (let n of (t.add(r), r[D] ? Array.from(r[D]) : [])) e(n);
             }
         })(e),
         Array.from(t)
     );
 }
 function M(e) {
-    return e[D] || e;
+    return e[L] || e;
 }
 function P() {
     let e = (0, _.c)(),

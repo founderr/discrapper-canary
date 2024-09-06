@@ -1,6 +1,6 @@
 r.d(t, {
     Qy: function () {
-        return L;
+        return D;
     },
     TM: function () {
         return h;
@@ -45,7 +45,7 @@ r.d(t, {
         return f;
     },
     yj: function () {
-        return D;
+        return L;
     },
     yl: function () {
         return O;
@@ -101,10 +101,10 @@ async function f(e) {
 function S() {
     return !!(0, i.s3)();
 }
-function L(e) {
+function D(e) {
     (0, i.aF)().addEventProcessor(e);
 }
-function D(e) {
+function L(e) {
     let t = (0, i.s3)(),
         r = (0, i.aF)(),
         n = (0, i.nZ)(),

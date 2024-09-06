@@ -3,10 +3,10 @@ r.d(t, {
         return S;
     },
     Wo: function () {
-        return L;
+        return D;
     },
     og: function () {
-        return D;
+        return L;
     }
 });
 var n = r(650665),
@@ -131,7 +131,7 @@ let f = {
                     }),
                     N.m9.location &&
                         (v &&
-                            L(e, {
+                            D(e, {
                                 name: N.m9.location.pathname,
                                 startTime: R.Z1 ? R.Z1 / 1000 : void 0,
                                 attributes: {
@@ -147,7 +147,7 @@ let f = {
                                 }
                                 r !== t &&
                                     ((n = void 0),
-                                    D(e, {
+                                    L(e, {
                                         name: N.m9.location.pathname,
                                         attributes: {
                                             [E.Zj]: 'url',
@@ -204,12 +204,12 @@ let f = {
             }
         };
     };
-function L(e, t, r) {
+function D(e, t, r) {
     e.emit('startPageLoadSpan', t, r), (0, s.nZ)().setTransactionName(t.name);
     let n = (0, c.HN)();
     return 'pageload' === (n && (0, c.XU)(n).op) ? n : void 0;
 }
-function D(e, t) {
+function L(e, t) {
     (0, s.aF)().setPropagationContext((0, A.Q)()), (0, s.nZ)().setPropagationContext((0, A.Q)()), e.emit('startNavigationSpan', t), (0, s.nZ)().setTransactionName(t.name);
     let r = (0, c.HN)();
     return 'navigation' === (r && (0, c.XU)(r).op) ? r : void 0;

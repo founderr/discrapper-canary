@@ -142,7 +142,7 @@ let f = (e) =>
               }
           }
         : e;
-for (var S = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', L = 'undefined' == typeof Uint8Array ? [] : new Uint8Array(256), D = 0; D < S.length; D++) L[S.charCodeAt(D)] = D;
+for (var S = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/', D = 'undefined' == typeof Uint8Array ? [] : new Uint8Array(256), L = 0; L < S.length; L++) D[S.charCodeAt(L)] = L;
 var h = function (e) {
     var t,
         r = new Uint8Array(e),

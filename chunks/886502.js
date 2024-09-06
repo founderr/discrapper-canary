@@ -17,21 +17,21 @@ e.exports = function (e, t, r, A, T, d) {
         f = p ? u : _(t);
     (O = O == I ? l : O), (f = f == I ? l : f);
     var S = O == l,
-        L = f == l,
-        D = O == f;
-    if (D && s(e)) {
+        D = f == l,
+        L = O == f;
+    if (L && s(e)) {
         if (!s(t)) return !1;
         (N = !0), (S = !1);
     }
-    if (D && !S) return d || (d = new n()), N || c(e) ? a(e, t, r, A, T, d) : o(e, t, O, r, A, T, d);
+    if (L && !S) return d || (d = new n()), N || c(e) ? a(e, t, r, A, T, d) : o(e, t, O, r, A, T, d);
     if (!(1 & r)) {
         var h = S && R.call(e, '__wrapped__'),
-            C = L && R.call(t, '__wrapped__');
+            C = D && R.call(t, '__wrapped__');
         if (h || C) {
             var g = h ? e.value() : e,
                 M = C ? t.value() : t;
             return d || (d = new n()), T(g, M, r, A, d);
         }
     }
-    return !!D && (d || (d = new n()), i(e, t, r, A, T, d));
+    return !!L && (d || (d = new n()), i(e, t, r, A, T, d));
 };

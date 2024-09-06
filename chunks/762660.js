@@ -1,6 +1,6 @@
 n.d(s, {
     C: function () {
-        return R;
+        return M;
     },
     h: function () {
         return N;
@@ -22,7 +22,7 @@ var t = n(735250),
     _ = n(246364),
     T = n(689938),
     m = n(811140);
-function M(e) {
+function R(e) {
     let { icon: s, onClick: n, submitting: a, disabled: l } = e;
     return (0, t.jsx)(c.Clickable, {
         className: r()(m.actionIconContainer, { [m.disabled]: l || a }),
@@ -40,8 +40,8 @@ function M(e) {
               })
     });
 }
-function R(e) {
-    let { applicationStatus: s, guild: l, guildJoinRequest: i, className: R, onClick: N, atMaxMemberCapacity: C } = e,
+function M(e) {
+    let { applicationStatus: s, guild: l, guildJoinRequest: i, className: M, onClick: N, atMaxMemberCapacity: C } = e,
         [x, h] = a.useState(null),
         { user: A, createdAt: b } = i;
     if (null == A) throw Error('Missing user on this guild join request!');
@@ -69,7 +69,7 @@ function R(e) {
             await p(i, _.wB.REJECTED);
         };
     return (0, t.jsxs)(c.Clickable, {
-        className: r()(m.container, R),
+        className: r()(m.container, M),
         onClick: N,
         children: [
             (0, t.jsx)(c.Avatar, {
@@ -96,14 +96,14 @@ function R(e) {
             }),
             P &&
                 !C &&
-                (0, t.jsx)(M, {
+                (0, t.jsx)(R, {
                     icon: c.CheckmarkLargeIcon,
                     onClick: g,
                     submitting: x === _.wB.APPROVED,
                     disabled: null != x && x !== _.wB.APPROVED
                 }),
             P &&
-                (0, t.jsx)(M, {
+                (0, t.jsx)(R, {
                     icon: c.XSmallIcon,
                     onClick: v,
                     submitting: x === _.wB.REJECTED,

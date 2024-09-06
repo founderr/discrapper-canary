@@ -13,8 +13,8 @@ var t = n(735250),
     _ = n(98493),
     T = n(985159),
     m = n(328977),
-    M = n(412222),
-    R = n(223312),
+    R = n(412222),
+    M = n(223312),
     N = n(571728),
     C = n(572940),
     x = n(80487),
@@ -74,10 +74,10 @@ function P(e) {
     let { guildId: P, isSidebarOpen: p } = e,
         g = a.useRef(null),
         [v, f] = a.useState((0, T.z)({ guildId: P })),
-        Z = (0, M.C)({ guildId: P }),
+        Z = (0, R.C)({ guildId: P }),
         O = (0, m.L)({ guildId: P }),
         B = null !== (s = (0, N.A)({ guildId: P })) && void 0 !== s ? s : 0,
-        { guildJoinRequests: L } = (0, R.j)({
+        { guildJoinRequests: L } = (0, M.j)({
             guildId: P,
             applicationStatus: 'REVIEW_APPLICATION' === v ? E.wB.SUBMITTED : v,
             sortOrder: Z

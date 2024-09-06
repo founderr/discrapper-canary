@@ -13,7 +13,7 @@ var t = n(735250),
     _ = n(246364),
     T = n(689938),
     m = n(859955);
-let M = (e) => {
+let R = (e) => {
         let { tabs: s, selectedTab: n, onTabSelect: a, onClose: l } = e;
         return (0, t.jsx)(o.Menu, {
             navId: 'member-applications-tabs-overflow-menu',
@@ -42,7 +42,7 @@ let M = (e) => {
             )
         });
     },
-    R = (e, s, n) => {
+    M = (e, s, n) => {
         let t = [];
         return (
             e &&
@@ -84,7 +84,7 @@ function N(e) {
     return (0, t.jsx)(o.Popout, {
         renderPopout: (e) => {
             let { closePopout: a } = e;
-            return (0, t.jsx)(M, {
+            return (0, t.jsx)(R, {
                 selectedTab: l,
                 onClose: a,
                 tabs: n,
@@ -123,10 +123,10 @@ function N(e) {
 }
 s.Z = function (e) {
     let { pendingGuildJoinRequestsTotal: s, currentTab: n, onTabItemSelect: l, showSetupTab: r, canActionJoinRequests: i, isSidebarOpen: c } = e,
-        [_, M] = a.useState(0),
+        [_, R] = a.useState(0),
         C = a.useRef(null),
         x = a.useRef(_),
-        h = R(r, i, s),
+        h = M(r, i, s),
         {
             lastVisibleIndex: A,
             onItemLayout: b,
@@ -142,7 +142,7 @@ s.Z = function (e) {
         p = a.useCallback(() => {
             var e;
             let s = null === (e = C.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
-            null != s && x.current !== s.width && (M(s.width), (x.current = s.width));
+            null != s && x.current !== s.width && (R(s.width), (x.current = s.width));
         }, []);
     return (
         a.useEffect(() => {

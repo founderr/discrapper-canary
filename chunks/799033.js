@@ -1,9 +1,9 @@
 r.d(t, {
     L7: function () {
-        return D;
+        return L;
     },
     k3: function () {
-        return L;
+        return D;
     }
 });
 var n = r(157079),
@@ -26,21 +26,21 @@ var n = r(157079),
     O = r(163162);
 let f = new WeakMap(),
     S = new Map(),
-    L = {
+    D = {
         traceFetch: !0,
         traceXHR: !0,
         enableHTTPTimings: !0
     };
-function D(e, t) {
+function L(e, t) {
     let {
             traceFetch: r,
             traceXHR: a,
             shouldCreateSpanForRequest: T,
-            enableHTTPTimings: D,
+            enableHTTPTimings: L,
             tracePropagationTargets: C
         } = {
-            traceFetch: L.traceFetch,
-            traceXHR: L.traceXHR,
+            traceFetch: D.traceFetch,
+            traceXHR: D.traceXHR,
             ...t
         },
         M = 'function' == typeof T ? T : (e) => !0,
@@ -93,7 +93,7 @@ function D(e, t) {
                     'server.address': n
                 });
             }
-            D && t && h(t);
+            L && t && h(t);
         })),
         a &&
             (0, n.UK)((e) => {
@@ -128,11 +128,11 @@ function D(e, t) {
                                   })
                                 : new I.b();
                     (o.__sentry_xhr_span_id__ = S.spanContext().spanId), (a[o.__sentry_xhr_span_id__] = S);
-                    let L = (0, u.s3)();
+                    let D = (0, u.s3)();
                     return (
                         o.setRequestHeader &&
                             r(R.url) &&
-                            L &&
+                            D &&
                             (function (e, t, r) {
                                 let n = (0, u.nZ)(),
                                     {
@@ -150,11 +150,11 @@ function D(e, t) {
                                         e.setRequestHeader('sentry-trace', t), r && e.setRequestHeader(p.bU, r);
                                     } catch (e) {}
                                 })(e, c, (0, p.IQ)(s || (r ? (0, l.jC)(r) : (0, l._l)(a, t))));
-                            })(o, L, (0, _.z)() && f ? S : void 0),
+                            })(o, D, (0, _.z)() && f ? S : void 0),
                         S
                     );
                 })(e, M, P, m);
-                D && t && h(t);
+                L && t && h(t);
             });
 }
 function h(e) {

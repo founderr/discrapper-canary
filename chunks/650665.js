@@ -4,7 +4,7 @@ r.d(t, {
         return S;
     },
     Jk: function () {
-        return L;
+        return D;
     },
     PR: function () {
         return f;
@@ -13,7 +13,7 @@ r.d(t, {
         return h;
     },
     sn: function () {
-        return D;
+        return L;
     }
 });
 var o = r(696486),
@@ -109,7 +109,7 @@ function S() {
         }
     });
 }
-function L() {
+function D() {
     new PerformanceObserver((e) => {
         for (let t of e.getEntries()) {
             if (!(0, o.HN)() || !t.scripts[0]) return;
@@ -134,7 +134,7 @@ function L() {
         buffered: !0
     });
 }
-function D() {
+function L() {
     (0, A._j)('event', ({ entries: e }) => {
         for (let t of e) {
             if (!(0, o.HN)()) return;
