@@ -13,6 +13,5 @@ e.exports = {
     text: 'text_b3552d',
     confettiCanvas: 'confettiCanvas_b3552d',
     additionalRedemptionInstructions: 'additionalRedemptionInstructions_b3552d',
-    sponsorLogo: 'sponsorLogo_b3552d',
-    sponsoredBy: 'sponsoredBy_b3552d'
+    sponsorLogo: 'sponsorLogo_b3552d'
 };
