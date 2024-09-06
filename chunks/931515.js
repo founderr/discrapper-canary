@@ -20,8 +20,8 @@ var i = n(470079),
     d = n(963202),
     u = n(823379),
     _ = n(229893),
-    h = n(229765),
-    E = n(286083),
+    E = n(229765),
+    h = n(286083),
     m = n(207796),
     I = n(976757),
     g = n(308083);
@@ -36,13 +36,13 @@ function T() {
         s = (0, d.An)({ location: 'clan_discovery' }),
         c = (0, d.iN)('clan_discovery'),
         { defaultGameId: u } = (0, d.nk)('clan_discovery'),
-        E = null != s ? s : u,
+        h = null != s ? s : u,
         I = (function () {
             let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                 t = (0, l.e7)([_.Z], () => _.Z.hasLoadedStaticClanDiscovery());
             return (
                 i.useEffect(() => {
-                    e && !t && (0, h.XB)();
+                    e && !t && (0, E.XB)();
                 }, [t, e]),
                 t
             );
@@ -50,13 +50,13 @@ function T() {
         T = (0, l.e7)([_.Z], () => _.Z.isLoading());
     return (
         i.useEffect(() => {
-            !(n.length > 0) && !c && (E === g.nJ ? (e(m.hz.VALORANT), t([E])) : E === g.xn ? (e(m.hz.GENSHIN), t([E])) : null == E && (e(m.hz.NONE), t([])));
-        }, [e, t, E, n, c]),
+            !(n.length > 0) && !c && (h === g.nJ ? (e(m.hz.VALORANT), t([h])) : h === g.xn ? (e(m.hz.GENSHIN), t([h])) : null == h && (e(m.hz.NONE), t([])));
+        }, [e, t, h, n, c]),
         i.useEffect(() => {
-            if (c) (0, h.Cg)(a);
+            if (c) (0, E.Cg)(a);
             else {
                 if (!I) return;
-                (0, h.jc)(a);
+                (0, E.jc)(a);
             }
         }, [a, I, c]),
         i.useEffect(() => {
@@ -72,7 +72,7 @@ function S(e) {
         o = (0, c.Z)(r),
         d = i.useRef(new AbortController()),
         u = i.useCallback(async (e) => {
-            n(!0), null != a.current && (d.current.abort(), (d.current = new AbortController())), (a.current = (0, h.$s)(e, d.current.signal)), await a.current, null !== a.current && (n(!1), (a.current = null));
+            n(!0), null != a.current && (d.current.abort(), (d.current = new AbortController())), (a.current = (0, E.$s)(e, d.current.signal)), await a.current, null !== a.current && (n(!1), (a.current = null));
         }, []);
     return (
         i.useEffect(() => {
@@ -95,8 +95,8 @@ function C() {
         s = (0, l.e7)([_.Z], () => _.Z.hasLoadedStaticClanDiscovery()),
         o = (0, d.iN)('clan_discovery'),
         c = (0, l.e7)([_.Z], () => _.Z.getSearchResult(a), [a]),
-        h = (0, l.Wu)([_.Z], () => (t && null != n ? n.map((e) => _.Z.getGuildProfile(e)).filter(u.lm) : []), [t, n]),
-        E = i.useMemo(() => {
+        E = (0, l.Wu)([_.Z], () => (t && null != n ? n.map((e) => _.Z.getGuildProfile(e)).filter(u.lm) : []), [t, n]),
+        h = i.useMemo(() => {
             if ((0, I.Pw)(c)) {
                 let t = c.items;
                 return null != e ? t.slice(0, e) : t;
@@ -106,10 +106,10 @@ function C() {
     return t
         ? {
               loaded: s || o,
-              clans: h,
+              clans: E,
               searchCriteria: a,
               searchResult: {
-                  items: h,
+                  items: E,
                   loadedAt: Date.now(),
                   status: 'loaded',
                   guildIds: n
@@ -117,34 +117,42 @@ function C() {
           }
         : {
               loaded: s || o,
-              clans: E,
+              clans: h,
               searchCriteria: a,
               searchResult: c
           };
 }
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { updatePaginationSettings: n, pageSize: a, chunkedPages: s, currentPage: o, fetchableGuildIds: c } = (0, E.$)(),
+        { updatePaginationSettings: n, pageSize: a, chunkedPages: s, currentPage: o, fetchableGuildIds: c } = (0, h.$)(),
         d = o - 1,
-        h = (0, m.GN)((e) => e.savedGuildIds, r.Z),
+        E = (0, m.GN)((e) => e.savedGuildIds, r.Z),
         g = p(),
-        T = (0, l.e7)([_.Z], () => _.Z.getSearchResult(g), [g]);
+        { searchResult: T, hasError: C } = (0, l.cj)(
+            [_.Z],
+            () => ({
+                searchResult: _.Z.getSearchResult(g),
+                hasError: _.Z.hasError()
+            }),
+            [g]
+        );
     i.useEffect(() => {
         n(e);
     }, [e, n]),
         S(c),
-        S(h);
-    let C = i.useMemo(() => {
+        S(E);
+    let f = i.useMemo(() => {
             var e;
-            return null !== (e = t ? h : s[d]) && void 0 !== e ? e : [];
-        }, [h, s, d, t]),
-        f = (0, l.Wu)([_.Z], () => C.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [C]),
-        N = C.length === f.length || t,
-        A = f.length === a || N;
+            return null !== (e = t ? E : s[d]) && void 0 !== e ? e : [];
+        }, [E, s, d, t]),
+        N = (0, l.Wu)([_.Z], () => f.map((e) => _.Z.getGuildProfile(e)).filter(u.lm), [f]),
+        A = f.length === N.length || t,
+        v = N.length === a || A;
     return {
-        loaded: (0, I.Pw)(T) && A,
-        clans: f,
+        loaded: (0, I.Pw)(T) && v,
+        clans: N,
         searchCriteria: g,
-        searchResult: T
+        searchResult: T,
+        hasError: C
     };
 }

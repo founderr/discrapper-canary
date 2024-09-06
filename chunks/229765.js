@@ -9,7 +9,7 @@ n.d(t, {
         return I;
     },
     XB: function () {
-        return E;
+        return h;
     },
     jc: function () {
         return m;
@@ -31,8 +31,8 @@ var i = n(470079),
     d = n(286083),
     u = n(976757),
     _ = n(981631);
-let h = new Worker(new URL('/assets/' + n.u('59546'), n.b));
-function E() {
+let E = new Worker(new URL('/assets/' + n.u('59546'), n.b));
+function h() {
     return (
         l.Z.dispatch({ type: 'FETCH_STATIC_CLAN_LIST_START' }),
         r.tn
@@ -68,11 +68,11 @@ async function m(e) {
                 let {
                     data: { id: i, sortedClans: s }
                 } = t;
-                n === i && e(s), null == h || h.removeEventListener('message', a);
+                n === i && e(s), null == E || E.removeEventListener('message', a);
             };
-            null == h || h.addEventListener('message', a);
-            null == h ||
-                h.postMessage({
+            null == E || E.addEventListener('message', a);
+            null == E ||
+                E.postMessage({
                     id: n,
                     unsortedClans: t,
                     criteria: i
@@ -143,10 +143,13 @@ async function p(e) {
             d
         );
     } catch (e) {
-        return {
-            status: 'error',
-            error: e
-        };
+        return (
+            l.Z.dispatch({ type: 'FETCH_CLAN_DISCOVERY_SEARCH_RESULT_FAILURE' }),
+            {
+                status: 'error',
+                error: e
+            }
+        );
     }
 }
 async function T(e, t) {
