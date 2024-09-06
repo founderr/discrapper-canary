@@ -26,15 +26,17 @@ let u = 'no primary app command for application';
 async function c(e, t) {
     let n,
         r = a.Z.getChannel(e);
-    if (null != r && null == (n = d(r, t))) {
-        let e = {
+    if (
+        (null != r &&
+            null == (n = d(r, t)) &&
+            (await (0, o.FN)({
                 type: 'application',
                 applicationId: t
-            },
-            i = new AbortController();
-        (0, s.j)(e, !1), await (0, s.a)(e, 0, i), (n = d(r, t));
-    }
-    if (null != n) return n;
+            }),
+            (n = d(r, t))),
+        null != n)
+    )
+        return n;
     throw Error(u);
 }
 function d(e, t) {

@@ -131,8 +131,14 @@ async function q(e) {
                         throw e;
                     }
                     if (e.handler === _.VC.APP_HANDLER) {
-                        let e = f.ZP.getGuildState(y),
-                            t = f.ZP.getUserState();
+                        let e =
+                                null != y
+                                    ? await (0, f.FN)({
+                                          type: 'guild',
+                                          guildId: y
+                                      })
+                                    : f.ZP.getGuildState(y),
+                            t = await (0, f.FN)({ type: 'user' });
                         if (
                             !(await (0, E.L)({
                                 applicationId: i,

@@ -11,21 +11,22 @@ var r = n(544891),
     a = n(626135),
     s = n(70956),
     o = n(981631);
-async function l(e, t, n) {
-    let l,
+async function l(e, t) {
+    let n;
+    let l = performance.now(),
         u = 0;
     switch (e.type) {
         case 'channel':
-            l = o.ANM.APPLICATION_COMMAND_INDEX_CHANNEL(e.channelId);
+            n = o.ANM.APPLICATION_COMMAND_INDEX_CHANNEL(e.channelId);
             break;
         case 'guild':
-            l = o.ANM.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
+            n = o.ANM.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
             break;
         case 'user':
-            l = o.ANM.APPLICATION_COMMAND_INDEX_USER;
+            n = o.ANM.APPLICATION_COMMAND_INDEX_USER;
             break;
         case 'application':
-            l = o.ANM.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId);
+            n = o.ANM.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId);
     }
     let c = async (t) =>
             u >= 3
@@ -38,9 +39,9 @@ async function l(e, t, n) {
         d = () =>
             r.tn
                 .get({
-                    url: l,
+                    url: n,
                     retries: 3 - u - 1,
-                    signal: n.signal,
+                    signal: t.signal,
                     onRequestCreated: () => u++
                 })
                 .then(
@@ -53,13 +54,13 @@ async function l(e, t, n) {
                                   target: e,
                                   index: t.body
                               })),
-                    (t) => {
-                        if (n.signal.aborted) {
+                    (n) => {
+                        if (t.signal.aborted) {
                             _(!0);
                             return;
                         }
-                        return 429 === t.status
-                            ? c(t.body.retry_after * s.Z.Millis.SECOND)
+                        return 429 === n.status
+                            ? c(n.body.retry_after * s.Z.Millis.SECOND)
                             : (_(!0),
                               i.Z.dispatch({
                                   type: 'APPLICATION_COMMAND_INDEX_FETCH_FAILURE',
@@ -68,11 +69,11 @@ async function l(e, t, n) {
                     }
                 ),
         _ = (e) => {
-            let r = performance.now() - t;
+            let n = performance.now() - l;
             a.default.track(o.rMx.APPLICATION_COMMAND_PERFORMANCE, {
-                duration_ms: r,
+                duration_ms: n,
                 error: e,
-                aborted: n.signal.aborted,
+                aborted: t.signal.aborted,
                 include_applications: !0,
                 retries: Math.max(u - 1, 0),
                 kind: null,
@@ -82,11 +83,8 @@ async function l(e, t, n) {
     await d();
 }
 function u(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     i.Z.dispatch({
         type: 'APPLICATION_COMMAND_INDEX_FETCH_REQUEST',
-        start: performance.now(),
-        target: e,
-        canFetch: t
+        target: e
     });
 }
