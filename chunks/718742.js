@@ -62,6 +62,7 @@ function f(e) {
                                                         onVerify: (e) => {
                                                             _(), n(e, y), t();
                                                         },
+                                                        onClose: E ? t : void 0,
                                                         ...b
                                                     })
                                                 ]
