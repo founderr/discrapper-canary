@@ -134,7 +134,7 @@ function w(e, t, n) {
 ((s = r || (r = {}))[(s.DESC = 0)] = 'DESC'), (s[(s.ASC = 1)] = 'ASC');
 function x(e) {
     let { quests: t, isFetchingCurrentQuests: n } = U({ fetchPolicy: 'cache-and-network' }),
-        r = u.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+        r = new Map(t.map((e) => [e.id, e])),
         i = (function (e) {
             let t = u.useRef([]);
             return u.useMemo(() => {
@@ -184,16 +184,14 @@ function x(e) {
                 return (n.current = e), e;
             }, [t]);
         })(t),
-        s = 'all' === e ? i : a;
+        s = [],
+        o = [];
+    for (let t of (s = 'all' === e ? i : a)) {
+        let e = r.get(t);
+        null != e && o.push(e);
+    }
     return {
-        quests: u.useMemo(() => {
-            let e = [];
-            for (let t of s) {
-                let n = r.get(t);
-                null != n && e.push(n);
-            }
-            return e;
-        }, [r, s]),
+        quests: o,
         isFetchingCurrentQuests: n
     };
 }
