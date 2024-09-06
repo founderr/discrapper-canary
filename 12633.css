@@ -46553,11 +46553,6 @@ code {
 }
 
 :root {
-    --custom-application-subscription-card-benefits-gap: 16px;
-    --custom-application-subscription-card-listing-image-size: 40px
-}
-
-:root {
     --custom-application-directory-content-min-width: 600px;
     --custom-application-directory-content-max-width: 1024px;
     --custom-guild-count-small-icon-size: 16px;

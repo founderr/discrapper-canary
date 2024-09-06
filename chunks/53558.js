@@ -7,43 +7,40 @@ var r = n(735250),
     i = n(442837),
     a = n(481060),
     s = n(970321),
-    o = n(621853),
-    l = n(523034),
+    o = n(283836),
+    l = n(621853),
     u = n(475413),
     c = n(689938);
 function d(e) {
-    let { user: t, guildId: n, onClick: i, ...s } = e;
+    let { user: t, onClick: n, ...i } = e;
     return (
-        (0, l.Z)({
-            user: t,
-            guildId: n
-        }),
+        (0, o.q)(t.id),
         (0, r.jsx)(u.tG, {
             action: 'PRESS_APP_STOREFRONT',
             icon: a.ShopIcon,
             text: c.Z.Messages.STOREFRONT,
             color: a.ButtonColors.BRAND,
             themeColor: 'none',
-            onClick: i,
-            ...s
+            onClick: n,
+            ...i
         })
     );
 }
 function _(e) {
     var t;
-    let { user: l, guildId: u, ...c } = e,
-        _ = (0, i.e7)([o.Z], () => {
+    let { user: o, guildId: u, ...c } = e,
+        _ = (0, i.e7)([l.Z], () => {
             var e;
-            return null === (e = o.Z.getUserProfile(l.id)) || void 0 === e ? void 0 : e.application;
+            return null === (e = l.Z.getUserProfile(o.id)) || void 0 === e ? void 0 : e.application;
         }),
         E = (0, s.R)(null !== (t = null == _ ? void 0 : _.id) && void 0 !== t ? t : '');
     return null != _ && E
         ? (0, r.jsx)(d, {
-              user: l,
+              user: o,
               guildId: u,
               onClick: () => {
                   (0, a.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([n.e('29549'), n.e('31605'), n.e('81272'), n.e('89131'), n.e('40907')]).then(n.bind(n, 7225));
+                      let { default: e } = await Promise.all([n.e('29549'), n.e('31605'), n.e('81272'), n.e('98538'), n.e('2732')]).then(n.bind(n, 7225));
                       return (t) =>
                           (0, r.jsx)(e, {
                               appId: _.id,
