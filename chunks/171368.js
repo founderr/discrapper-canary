@@ -32,22 +32,24 @@ let E = (0, i.getAvatarSize)(i.AvatarSizes.SIZE_120),
             }
     };
 async function p(e) {
-    let { userId: t, guildId: n = _.ME, channelId: r, messageId: i, roleId: o, sessionId: l, section: c, subsection: f, friendToken: p, showGuildProfile: I, analyticsLocation: m, sourceAnalyticsLocations: T } = e,
-        S = null != n && n !== _.ME ? n : void 0,
-        g = u.default.getUser(t);
+    let { userId: t, guildId: n = _.ME, channelId: r, messageId: i, roleId: o, sessionId: l, joinRequestId: c, section: f, subsection: p, friendToken: I, showGuildProfile: m, analyticsLocation: T, sourceAnalyticsLocations: S } = e,
+        g = null != n && n !== _.ME ? n : void 0,
+        A = u.default.getUser(t);
     h(t),
-        null == g
+        null == A
             ? await (0, s.In)(t, {
-                  guildId: I ? S : void 0,
+                  guildId: m ? g : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,
-                  friendToken: p
+                  friendToken: I,
+                  joinRequestId: c
               })
-            : (0, d.Z)(g.id, g.getAvatarURL(void 0, E), {
-                  guildId: I ? S : void 0,
+            : (0, d.Z)(A.id, A.getAvatarURL(void 0, E), {
+                  guildId: m ? g : void 0,
                   withMutualGuilds: !0,
                   withMutualFriends: !0,
-                  friendToken: p
+                  friendToken: I,
+                  joinRequestId: c
               }),
         a.Z.dispatch({
             type: 'USER_PROFILE_MODAL_OPEN',
@@ -57,12 +59,12 @@ async function p(e) {
             messageId: null != i ? i : void 0,
             roleId: null != o ? o : void 0,
             sessionId: null != l ? l : void 0,
-            section: c,
-            subsection: f,
-            friendToken: p,
-            showGuildProfile: I,
-            analyticsLocation: m,
-            sourceAnalyticsLocations: T
+            section: f,
+            subsection: p,
+            friendToken: I,
+            showGuildProfile: m,
+            analyticsLocation: T,
+            sourceAnalyticsLocations: S
         });
 }
 function I() {

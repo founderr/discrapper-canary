@@ -94,8 +94,8 @@ function m(e) {
               );
 }
 async function T(e) {
-    let { friendToken: t, withMutualGuilds: n, withMutualFriendsCount: r, withMutualFriends: i, guildId: a, connectionsRoleId: s, abortSignal: c } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        d = arguments.length > 2 ? arguments[2] : void 0;
+    let { friendToken: t, withMutualGuilds: n, withMutualFriendsCount: r, withMutualFriends: i, guildId: a, connectionsRoleId: s, joinRequestId: c, abortSignal: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        _ = arguments.length > 2 ? arguments[2] : void 0;
     l.Z.dispatch({
         type: 'USER_PROFILE_FETCH_START',
         userId: e,
@@ -110,13 +110,14 @@ async function T(e) {
                 with_mutual_friends: i,
                 with_mutual_friends_count: r && (null == i || !i),
                 guild_id: a,
-                connections_role_id: s
+                connections_role_id: s,
+                join_request_id: c
             },
             oldFormErrors: !0,
-            signal: c
+            signal: d
         });
         return (
-            null == d || d(u.body, a),
+            null == _ || _(u.body, a),
             l.Z.dispatch({
                 type: 'USER_UPDATE',
                 user: u.body.user

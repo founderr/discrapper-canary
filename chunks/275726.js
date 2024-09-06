@@ -55,7 +55,8 @@ r.d(t, {
     (a[(a.VOICE_HANGOUT_INVITE = 45)] = 'VOICE_HANGOUT_INVITE'),
     (a[(a.POLL_RESULT = 46)] = 'POLL_RESULT'),
     (a[(a.CHANGELOG = 47)] = 'CHANGELOG'),
-    (a[(a.NITRO_NOTIFICATION = 48)] = 'NITRO_NOTIFICATION');
+    (a[(a.NITRO_NOTIFICATION = 48)] = 'NITRO_NOTIFICATION'),
+    (a[(a.CHANNEL_LINKED_TO_LOBBY = 49)] = 'CHANNEL_LINKED_TO_LOBBY');
 let o = {
     UNDELETABLE: new Set([1, 2, 3, 4, 5, 21]),
     GUILD_DISCOVERY_STATUS: new Set([14, 15, 16, 17]),

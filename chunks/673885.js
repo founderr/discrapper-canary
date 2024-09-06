@@ -16,14 +16,15 @@ var a = n(120356),
     I = n(689938),
     E = n(691700);
 function _(e) {
-    let { user: s, guildId: n, className: a } = e,
+    let { user: s, joinRequestId: n, className: a } = e,
         { username: _ } = s,
         T = c.ZP.getUserAvatarURL(s),
         { analyticsLocations: m } = (0, i.ZP)(),
-        M = () => {
+        R = () => {
             (0, o.openUserProfileModal)({
                 userId: s.id,
-                guildId: n,
+                guildId: null,
+                joinRequestId: n,
                 sourceAnalyticsLocations: m,
                 analyticsLocation: {
                     section: u.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
@@ -35,7 +36,7 @@ function _(e) {
         className: l()(E.container, a),
         children: [
             (0, t.jsx)(r.Anchor, {
-                onClick: M,
+                onClick: R,
                 children: (0, t.jsx)(r.Avatar, {
                     src: T,
                     size: r.AvatarSizes.SIZE_80,
@@ -51,7 +52,7 @@ function _(e) {
                 })
             }),
             (0, t.jsx)(r.Anchor, {
-                onClick: M,
+                onClick: R,
                 children: I.Z.Messages.VIEW_PROFILE
             })
         ]

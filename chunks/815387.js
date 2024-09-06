@@ -640,7 +640,8 @@ let eO = Object.freeze({
             message: t,
             channel: n
         });
-    }
+    },
+    [ef.uaV.CHANNEL_LINKED_TO_LOBBY]: void 0
 });
 t.Z = s.memo(function (e) {
     let { message: t, channel: n, compact: s, disableInteraction: a } = e,
