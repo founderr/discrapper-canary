@@ -19,8 +19,8 @@ var s = n(120356),
     I = n(802856),
     x = n(387903),
     T = n(606925),
-    S = n(719216),
-    v = n(429589),
+    v = n(719216),
+    S = n(429589),
     N = n(276149),
     A = n(636245),
     Z = n(697761),
@@ -28,38 +28,35 @@ var s = n(120356),
     b = n(544671),
     R = n(757182),
     L = n(910424),
-    P = n(981631),
-    j = n(638937);
+    j = n(981631),
+    P = n(638937);
 t.Z = (0, u.Z)((e) => {
     let { activity: t, embeddedActivity: n, user: s, applicationStream: l, className: u, guildId: O, channelId: y, source: D, color: k = c.Button.Colors.WHITE, look: U = c.Button.Looks.OUTLINED, type: w, onAction: B, isEmbedded: H = !1 } = e,
         G = (0, o.e7)([_.default], () => {
             let e = _.default.getCurrentUser();
             return r()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
         }),
-        V = w === x.Y.PROFILE || w === x.Y.PROFILE_V2 || w === x.Y.SIMPLIFIED_PROFILE,
-        F = w === x.Y.STREAM_PREVIEW || null != l,
-        W = w === x.Y.SIMPLIFIED_PROFILE || w === x.Y.BITE_SIZE_POPOUT,
-        z = (0, C.Z)(t),
-        Y = V ? h.Z.Align.END : h.Z.Align.STRETCH,
-        K = z || F ? h.Z.Direction.HORIZONTAL : h.Z.Direction.VERTICAL,
-        q = (null == t ? void 0 : t.type) === P.IIU.HANG_STATUS,
-        X = (0, o.e7)([f.Z, p.Z], () => {
+        V = w === x.Y.STREAM_PREVIEW || null != l,
+        F = (0, C.Z)(t),
+        W = F || V ? h.Z.Direction.HORIZONTAL : h.Z.Direction.VERTICAL,
+        z = (null == t ? void 0 : t.type) === j.IIU.HANG_STATUS,
+        Y = (0, o.e7)([f.Z, p.Z], () => {
             var e;
-            return q ? p.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(s.id)) || void 0 === e ? void 0 : e.channelId) : null;
+            return z ? p.Z.getChannel(null === (e = f.Z.getVoiceStateForUser(s.id)) || void 0 === e ? void 0 : e.channelId) : null;
         }),
-        Q = K === h.Z.Direction.VERTICAL;
+        K = W === h.Z.Direction.VERTICAL;
     return (0, i.jsx)(h.Z, {
         grow: 0,
-        align: Y,
-        direction: K,
-        wrap: Q ? h.Z.Wrap.WRAP : h.Z.Wrap.NO_WRAP,
-        className: a()(u, j.buttonsWrapper, Q ? j.vertical : j.horizontal),
+        align: h.Z.Align.STRETCH,
+        direction: W,
+        wrap: K ? h.Z.Wrap.WRAP : h.Z.Wrap.NO_WRAP,
+        className: a()(u, P.buttonsWrapper, K ? P.vertical : P.horizontal),
         children: (() => {
             if ((0, I.Z)(t))
                 return (0, i.jsx)(
                     T.Z,
                     {
-                        platform: d.Z.get(P.ABu.XBOX),
+                        platform: d.Z.get(j.ABu.XBOX),
                         look: U,
                         color: k,
                         onAction: B,
@@ -67,19 +64,19 @@ t.Z = (0, u.Z)((e) => {
                     },
                     'ConnectPlatformActivityButton'
                 );
-            if ((null == t ? void 0 : t.platform) === P.M7m.PS4 || (null == t ? void 0 : t.platform) === P.M7m.PS5)
+            if ((null == t ? void 0 : t.platform) === j.M7m.PS4 || (null == t ? void 0 : t.platform) === j.M7m.PS5)
                 return (0, i.jsx)(
                     T.Z,
                     {
                         look: U,
                         color: k,
-                        platform: d.Z.get(P.ABu.PLAYSTATION),
+                        platform: d.Z.get(j.ABu.PLAYSTATION),
                         onAction: B,
                         Icon: E.Z
                     },
                     'ConnectPlatformActivityButton'
                 );
-            if (z) {
+            if (F) {
                 let e = (0, i.jsx)(
                         b.Z,
                         {
@@ -106,13 +103,9 @@ t.Z = (0, u.Z)((e) => {
                         },
                         'spotify-activity-play-button'
                     );
-                return W
-                    ? (0, i.jsxs)(i.Fragment, {
-                          children: [e, n]
-                      })
-                    : (0, i.jsxs)(i.Fragment, {
-                          children: [n, e]
-                      });
+                return (0, i.jsxs)(i.Fragment, {
+                    children: [n, e]
+                });
             }
             if ((0, m.dS)(t)) {
                 let e = (0, m.rq)(t);
@@ -125,13 +118,12 @@ t.Z = (0, u.Z)((e) => {
                               channelId: e.channelId,
                               color: k,
                               look: U,
-                              isProfile: V,
                               onAction: B
                           },
                           e.channelId
                       );
             }
-            return F
+            return V
                 ? (0, i.jsx)(
                       L.Z,
                       {
@@ -143,13 +135,13 @@ t.Z = (0, u.Z)((e) => {
                       },
                       'watch-button'
                   )
-                : q && null != X
+                : z && null != Y
                   ? (0, i.jsx)(
                         N.Z,
                         {
                             color: k,
                             look: U,
-                            hangStatusChannel: X,
+                            hangStatusChannel: Y,
                             onAction: B
                         },
                         'hang-status-button'
@@ -167,7 +159,7 @@ t.Z = (0, u.Z)((e) => {
                                 'watch-button'
                             ),
                             (0, i.jsx)(
-                                v.Z,
+                                S.Z,
                                 {
                                     activity: t,
                                     embeddedActivity: n,
@@ -191,7 +183,7 @@ t.Z = (0, u.Z)((e) => {
                                 'notify-button'
                             ),
                             (0, i.jsx)(
-                                S.Z,
+                                v.Z,
                                 {
                                     user: s,
                                     color: k,

@@ -1,28 +1,26 @@
 var i = n(735250);
 n(470079);
-var s = n(120356),
-    a = n.n(s),
-    l = n(442837),
-    r = n(922482),
-    o = n(979651),
-    c = n(915863),
-    u = n(689938),
-    d = n(275778);
+var s = n(442837),
+    a = n(922482),
+    l = n(979651),
+    r = n(915863),
+    o = n(689938),
+    c = n(275778);
 t.Z = (e) => {
-    let { guildId: t, channelId: n, color: s, look: h, isProfile: m, onAction: p } = e,
-        _ = (0, l.e7)([o.Z], () => o.Z.isInChannel(n), [n]);
+    let { guildId: t, channelId: n, color: u, look: d, onAction: h } = e,
+        m = (0, s.e7)([l.Z], () => l.Z.isInChannel(n), [n]);
     return (0, i.jsx)(
-        c.Z,
+        r.Z,
         {
-            className: a()(d.button, { [d.popout]: !m }),
-            color: s,
-            look: h,
-            disabled: _,
+            className: c.button,
+            color: u,
+            look: d,
+            disabled: m,
             onClick: () => {
-                null == p || p(), r.AC(t, n);
+                null == h || h(), a.AC(t, n);
             },
             fullWidth: !0,
-            children: u.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON
+            children: o.Z.Messages.STAGE_CHANNEL_JOIN_BUTTON
         },
         'stage'
     );
