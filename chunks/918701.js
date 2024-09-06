@@ -174,6 +174,8 @@ n.d(t, {
     n(627341),
     n(47120),
     n(411104),
+    n(571269),
+    n(298267),
     n(653041);
 var r = n(991998),
     i = n(392711),
@@ -714,12 +716,26 @@ function eY(e, t) {
         questContentPosition: t.position,
         questContentRowIndex: t.rowIndex,
         questContentCTA: t.ctaContent
-    }),
-        d.Z.dispatch({
-            type: 'CONNECTIONS_GRID_MODAL_SHOW',
-            onComplete: (e) => (0, f.Z)({ platformType: e }),
-            includedPlatformTypes: new Set([C.ABu.XBOX, C.ABu.PLAYSTATION])
-        });
+    });
+    let r = (function (e) {
+        let t = Object.keys(e.config.taskConfig.tasks),
+            n = [];
+        for (let e of t)
+            switch (e) {
+                case o.X.PLAY_ON_XBOX:
+                    n.push(C.ABu.XBOX);
+                    break;
+                case o.X.PLAY_ON_PLAYSTATION:
+                    n.push(C.ABu.PLAYSTATION);
+            }
+        return n;
+    })(n);
+    if (1 === r.length) return (0, f.Z)({ platformType: r.at(0) });
+    d.Z.dispatch({
+        type: 'CONNECTIONS_GRID_MODAL_SHOW',
+        onComplete: (e) => (0, f.Z)({ platformType: e }),
+        includedPlatformTypes: new Set(r)
+    });
 }
 function ej(e, t) {
     let { quest: n } = e;
