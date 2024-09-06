@@ -15,8 +15,8 @@ var i = n(735250),
     d = n(410030),
     u = n(117496),
     _ = n(225784),
-    h = n(229765),
-    E = n(626135),
+    E = n(229765),
+    h = n(626135),
     m = n(900849),
     I = n(859921),
     g = n(28494),
@@ -48,7 +48,7 @@ function O(e) {
     let { loadId: t, onGuildCardSeen: n, onGuildCardClick: r } = e,
         m = (0, d.ZP)(),
         { guilds: O, loading: x, searchResultsQuery: b, loadMore: P, searchCategoryId: M } = (0, g.f)({ loadId: t }),
-        D = a.useContext(E.AnalyticsContext),
+        D = a.useContext(h.AnalyticsContext),
         [y, j] = a.useState((0, u.P)()),
         [U, G] = a.useState(!0),
         w = a.useRef(U),
@@ -226,7 +226,7 @@ function O(e) {
         className: N.container,
         ref: V,
         children: [
-            (0, i.jsx)(h.KY, {
+            (0, i.jsx)(E.KY, {
                 location: 'global_discovery_search',
                 query: b
             }),

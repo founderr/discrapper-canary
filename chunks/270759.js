@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(481060),
     u = n(570140),
     _ = n(150063),
-    h = n(758059),
-    E = n(252618),
+    E = n(758059),
+    h = n(252618),
     m = n(313201),
     I = n(5254),
     g = n(984370),
@@ -48,13 +48,13 @@ t.Z = function (e) {
             _.Y(v.Z5c.FRIENDS), (0, S.e)('friends');
         }, []),
         a.useEffect(() => {
-            null != t && h.Z.setInitialSection(t);
+            null != t && E.Z.setInitialSection(t);
         }, [t]);
     let p = (0, c.e7)([C.Z], () => C.Z.theme),
         { section: x, pendingCount: b } = (0, c.cj)([f.ZP], () => f.ZP.getState()),
         P = (0, c.cj)([I.Z], () => I.Z.getSuggestionCount()),
         M = (e) => {
-            h.Z.setSection(e);
+            E.Z.setSection(e);
         },
         D = (0, m.Dt)(),
         y = (0, m.Dt)();
@@ -62,7 +62,7 @@ t.Z = function (e) {
         className: R.container,
         'aria-label': Z.Z.Messages.FRIENDS,
         children: [
-            (0, i.jsx)(E.yY, { location: Z.Z.Messages.FRIENDS }),
+            (0, i.jsx)(h.yY, { location: Z.Z.Messages.FRIENDS }),
             (0, i.jsx)(d.ThemeProvider, {
                 theme: p,
                 children: (e) =>

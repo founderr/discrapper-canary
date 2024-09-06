@@ -21,7 +21,7 @@ function u(e, t, n) {
     );
 }
 let _ = 'CollectiblesExpiryModal';
-class h extends r.Z {
+class E extends r.Z {
     _initialize() {
         s.Z.subscribe('POST_CONNECTION_OPEN', this.handleMaybeOpenModal), s.Z.subscribe('CURRENT_USER_UPDATE', this.handleMaybeOpenModal);
     }
@@ -58,4 +58,4 @@ class h extends r.Z {
             });
     }
 }
-t.Z = new h();
+t.Z = new E();

@@ -13,8 +13,8 @@ var i,
     d = n(358085),
     u = n(131951),
     _ = n(981631),
-    h = n(65154);
-function E(e, t, n) {
+    E = n(65154);
+function h(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -88,15 +88,15 @@ class L extends (i = r.ZP.DeviceSettingsStore) {
         return f;
     }
 }
-E(L, 'displayName', 'ConnectedDeviceStore'),
-    E(L, 'persistKey', 'ConnectedDeviceStore'),
+h(L, 'displayName', 'ConnectedDeviceStore'),
+    h(L, 'persistKey', 'ConnectedDeviceStore'),
     (t.Z = new L(l.Z, {
         MEDIA_ENGINE_DEVICES: function (e) {
             let { inputDevices: t, outputDevices: n } = e,
                 i = {};
             (C.justChanged = !1),
                 t.forEach((e) => {
-                    if (((i[A(e)] = e.id), e.id === h.w5)) {
+                    if (((i[A(e)] = e.id), e.id === E.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
                         n !== C.id && (C.justChanged = !0), (C.id = n);
@@ -106,7 +106,7 @@ E(L, 'displayName', 'ConnectedDeviceStore'),
             if (
                 ((f.justChanged = !1),
                 n.forEach((e) => {
-                    if (((a[A(e)] = e.id), e.id === h.w5)) {
+                    if (((a[A(e)] = e.id), e.id === E.w5)) {
                         var t;
                         let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
                         n !== f.id && (f.justChanged = !0), (f.id = n);

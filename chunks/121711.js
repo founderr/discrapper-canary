@@ -8,8 +8,8 @@ var i = n(735250),
     d = n(175307),
     u = n(374939),
     _ = n(611928),
-    h = n(791734),
-    E = n(63063),
+    E = n(791734),
+    h = n(63063),
     m = n(113434),
     I = n(150560),
     g = n(558652),
@@ -35,7 +35,7 @@ t.Z = function () {
         });
     }, []);
     let L = a.useCallback(() => {
-        window.open(E.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE));
+        window.open(h.Z.getArticleURL(S.BhN.QUESTS_LEARN_MORE));
     }, []);
     (0, o.Tt)({ location: C.Z.Messages.QUESTS });
     let Z = a.useMemo(() => ({ backgroundImage: 'url('.concat('https://cdn.discordapp.com/assets/discovery/quests-wumpus-hikes-mountain-transparent-background.png', ')') }), []);
@@ -47,7 +47,7 @@ t.Z = function () {
                     (0, i.jsx)('div', { className: f.dragRegion }),
                     (0, i.jsx)(_.z6, { scrollPosition: A }),
                     (0, i.jsx)(_.aV, { icon: r.QuestsIcon }),
-                    (0, i.jsx)(h.Z, {
+                    (0, i.jsx)(E.Z, {
                         tabs: e,
                         selectedTab: t,
                         onTabSelect: n

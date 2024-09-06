@@ -9,8 +9,8 @@ var i = n(913527),
     d = n(706454),
     u = n(695346),
     _ = n(314897),
-    h = n(433355),
-    E = n(592125),
+    E = n(433355),
+    h = n(592125),
     m = n(271383),
     I = n(430824),
     g = n(131951),
@@ -45,7 +45,7 @@ function D(e, t, n, i) {
                 return null != n && null != n.name ? n.name : R.Z.Messages.MESSAGE_TTS_DELETED_ROLE;
             })
             .replace(/<#(\d+)>/g, (e, t) => {
-                let n = E.Z.getChannel(t);
+                let n = h.Z.getChannel(t);
                 return null == n ? e : (0, l.F6)(n, f.default, T.Z);
             })
             .replace(/<a?:(\w+):(\d+)>/g, (e, t) => ''.concat(R.Z.Messages.EMOJI, ' ').concat(t))
@@ -107,10 +107,10 @@ function B(e) {
     var t, n, i, a, s, r;
     let { channelId: l, message: o, optimistic: c } = e;
     if (c || g.Z.isSelfDeaf()) return !1;
-    let d = E.Z.getChannel(l);
+    let d = h.Z.getChannel(l);
     if (null == d) return !1;
     let I = S.Z.getChannelId(),
-        f = h.ZP.getCurrentSidebarChannelId(I),
+        f = E.ZP.getCurrentSidebarChannelId(I),
         A = l === I || l === f,
         v = u.OW.getSetting() && o.tts && A,
         R = p.Z.getTTSType(),

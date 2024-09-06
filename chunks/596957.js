@@ -9,8 +9,8 @@ var i = n(735250),
     d = n(194359),
     u = n(410575),
     _ = n(607070),
-    h = n(100527),
-    E = n(906732),
+    E = n(100527),
+    h = n(906732),
     m = n(205976),
     I = n(735778),
     g = n(699516),
@@ -29,7 +29,7 @@ var i = n(735250),
     x = n(49175);
 t.Z = function (e) {
     let { sectionFilter: t, titleId: s } = e,
-        { analyticsLocations: b } = (0, E.ZP)(h.Z.FRIENDS_LIST),
+        { analyticsLocations: b } = (0, h.ZP)(E.Z.FRIENDS_LIST),
         { rows: P, section: M } = (0, l.cj)([p.ZP], () => p.ZP.getState()),
         D = (0, l.e7)([T.Z], () => T.Z.isFocused()),
         y = (0, l.e7)([g.Z], () => g.Z.getRelationshipCount()),
@@ -86,7 +86,7 @@ t.Z = function (e) {
         F = 0 === H.length && '' !== j[t],
         Y = H.filter((e) => e.type === R.OGo.PENDING_INCOMING).length,
         W = t === R.pJs.PENDING && Y > 0 && Y >= Z.yf;
-    return (0, i.jsx)(E.Gt, {
+    return (0, i.jsx)(h.Gt, {
         value: b,
         children: (0, i.jsxs)(u.Z, {
             section: R.jXE.FRIENDS_LIST,

@@ -21,7 +21,7 @@ function c(e, t, n) {
 let d = new Map(),
     u = new Map(),
     _ = null;
-class h {
+class E {
     handleSearchCountStart() {
         (this.error = null), (this.isFetching = !0);
     }
@@ -35,10 +35,10 @@ class h {
         c(this, 'counts', null), c(this, 'isFetching', !1), c(this, 'error', null);
     }
 }
-function E(e) {
+function h(e) {
     var t;
     __DEV__ && s()(e.startsWith('search-counts'), 'Unexpected id format for global discovery search counts.');
-    let n = null !== (t = u.get(e)) && void 0 !== t ? t : new h();
+    let n = null !== (t = u.get(e)) && void 0 !== t ? t : new E();
     return u.set(e, n), n;
 }
 function m(e, t) {
@@ -149,15 +149,15 @@ c(T, 'displayName', 'GlobalDiscoveryServersSearchStore'),
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_START: function (e) {
             let { id: t } = e;
-            E(t).handleSearchCountStart();
+            h(t).handleSearchCountStart();
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_SUCCESS: function (e) {
             let { id: t, categoryCounts: n } = e;
-            E(t).handleSearchCountSuccess(n);
+            h(t).handleSearchCountSuccess(n);
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_FAILURE: function (e) {
             let { id: t, error: n } = e;
-            E(t).handleSearchCountFailure(n);
+            h(t).handleSearchCountFailure(n);
         },
         GLOBAL_DISCOVERY_SERVERS_SEARCH_COUNT_CLEAR: function (e) {
             let { id: t } = e;

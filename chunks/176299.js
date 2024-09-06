@@ -14,8 +14,8 @@ var i = n(735250),
     d = n(873546),
     u = n(442837),
     _ = n(433517),
-    h = n(481060),
-    E = n(711237),
+    E = n(481060),
+    h = n(711237),
     m = n(532835),
     I = n(347469),
     g = n(290297),
@@ -68,14 +68,14 @@ var i = n(735250),
     ed = n(425369),
     eu = n(715702),
     e_ = n(981631),
-    eh = n(176505),
-    eE = n(290511),
+    eE = n(176505),
+    eh = n(290511),
     em = n(264044);
 let eI = 'resizable-sidebar-width',
     eg = () =>
         (0, i.jsx)('div', {
             className: em.loader,
-            children: (0, i.jsx)(h.Spinner, {})
+            children: (0, i.jsx)(E.Spinner, {})
         }),
     ep = (0, c.Un)({
         createPromise: () => n.e('68614').then(n.bind(n, 650788)),
@@ -136,38 +136,38 @@ let eI = 'resizable-sidebar-width',
                     }
             }),
             d = (0, v.C4)(a, 'channel_renderer');
-        if (null != a && null != s && (0, eh.AB)(s))
+        if (null != a && null != s && (0, eE.AB)(s))
             switch (s) {
-                case eh.oC.ROLE_SUBSCRIPTIONS:
+                case eE.oC.ROLE_SUBSCRIPTIONS:
                     return d
                         ? (0, i.jsx)(ep, {
                               guildId: a,
                               initialTab: L.y.GUILD_ROLE_SUBSCRIPTIONS
                           })
                         : (0, i.jsx)(U.Z, { guildId: a });
-                case eh.oC.GUILD_SHOP:
+                case eE.oC.GUILD_SHOP:
                     return (0, i.jsx)(ep, {
                         guildId: a,
                         productId: r,
                         initialTab: c
                     });
-                case eh.oC.MEMBER_APPLICATIONS:
+                case eE.oC.MEMBER_APPLICATIONS:
                     return (0, i.jsx)(eT, { guildId: a });
-                case eh.oC.GUILD_HOME:
+                case eE.oC.GUILD_HOME:
                     return (0, i.jsx)(eS, { guildId: a });
-                case eh.oC.CHANNEL_BROWSER:
+                case eE.oC.CHANNEL_BROWSER:
                     return (0, i.jsx)(ef, {
                         guildId: a,
-                        selectedSection: eE.l7.BROWSE
+                        selectedSection: eh.l7.BROWSE
                     });
-                case eh.oC.GUILD_ONBOARDING:
+                case eE.oC.GUILD_ONBOARDING:
                     return (0, i.jsx)(eN, { guildId: a });
-                case eh.oC.CUSTOMIZE_COMMUNITY:
+                case eE.oC.CUSTOMIZE_COMMUNITY:
                     return (0, i.jsx)(ef, {
                         guildId: a,
-                        selectedSection: eE.l7.CUSTOMIZE
+                        selectedSection: eh.l7.CUSTOMIZE
                     });
-                case eh.oC.MEMBER_SAFETY:
+                case eE.oC.MEMBER_SAFETY:
                     return (0, i.jsx)(eC, { guildId: a });
                 default:
                     (0, ei.vE)(s);
@@ -285,7 +285,7 @@ function ew(e) {
     let { hasNotice: t, sidebarTheme: n, hideSidebar: s } = e;
     (0, m.t)(!0);
     let l = 'app view user trigger debugging';
-    E.R6.useExperiment({ location: l }, { autoTrackExposure: !1 }), E.R6.trackExposure({ location: l });
+    h.R6.useExperiment({ location: l }, { autoTrackExposure: !1 }), h.R6.trackExposure({ location: l });
     let o = (0, u.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         c = (0, Z.Q)('ChannelSidebar');
     a.useLayoutEffect(() => {
@@ -323,7 +323,7 @@ function ew(e) {
         );
     return s
         ? null
-        : (0, i.jsx)(h.ThemeProvider, {
+        : (0, i.jsx)(E.ThemeProvider, {
               theme: n,
               children: (e) =>
                   (0, i.jsxs)('div', {
@@ -387,22 +387,22 @@ function ek() {
             let t = (0, l.TH)();
             return (null === (e = (0, l.LX)(t.pathname, e_.Z5c.COLLECTIBLES_SHOP_FULLSCREEN)) || void 0 === e ? void 0 : e.isExact) === !0;
         })(),
-        h = (0, u.e7)([Y.Z], () => Y.Z.getIsOpen()),
-        E = (0, l.$B)([e_.Z5c.CHANNEL(e_.ME, ':channelId'), e_.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')]),
-        m = (null == E ? void 0 : null === (e = E.params) || void 0 === e ? void 0 : e.channelId) === eh.oC.GUILD_ONBOARDING,
+        E = (0, u.e7)([Y.Z], () => Y.Z.getIsOpen()),
+        h = (0, l.$B)([e_.Z5c.CHANNEL(e_.ME, ':channelId'), e_.Z5c.CHANNEL(':guildId', ':channelId?', ':messageId?')]),
+        m = (null == h ? void 0 : null === (e = h.params) || void 0 === e ? void 0 : e.channelId) === eE.oC.GUILD_ONBOARDING,
         I = a.useCallback(() => F.Z.openSidebar(), []);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
             className: em.container,
             children: [
-                h &&
+                E &&
                     !_ &&
                     (0, i.jsx)(w.Z, {
                         className: em.guilds,
                         themeOverride: n
                     }),
                 (0, i.jsx)(M.Z.Provider, {
-                    value: (null == E ? void 0 : E.params.guildId) === e_.ME ? void 0 : null == E ? void 0 : E.params.guildId,
+                    value: (null == h ? void 0 : h.params.guildId) === e_.ME ? void 0 : null == h ? void 0 : h.params.guildId,
                     children: (0, i.jsxs)('div', {
                         className: em.base,
                         children: [
@@ -414,7 +414,7 @@ function ek() {
                                     (0, i.jsx)(ew, {
                                         hasNotice: t,
                                         sidebarTheme: n,
-                                        hideSidebar: s || r || c || _ || m || !h
+                                        hideSidebar: s || r || c || _ || m || !E
                                     }),
                                     (0, i.jsx)(g.Z.Provider, {
                                         value: I,

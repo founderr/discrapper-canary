@@ -15,8 +15,8 @@ var i,
     d = n(186325),
     u = n(780384),
     _ = n(481060),
-    h = n(393238),
-    E = n(410030),
+    E = n(393238),
+    h = n(410030),
     m = n(70097),
     I = n(113434),
     g = n(497505),
@@ -31,10 +31,10 @@ var i,
 function L(e) {
     var t;
     let { quest: n, errorHints: i, warningHints: a } = e,
-        { ref: l, height: o = 0 } = (0, h.Z)([i]),
+        { ref: l, height: o = 0 } = (0, E.Z)([i]),
         d = (null === (t = n.userStatus) || void 0 === t ? void 0 : t.completedAt) != null,
         u = (0, I.z)(n),
-        { type: E, hints: m } = r.useMemo(
+        { type: h, hints: m } = r.useMemo(
             () =>
                 d || u
                     ? {
@@ -57,14 +57,14 @@ function L(e) {
                           },
             [i, d, u, a]
         ),
-        g = 2 !== E,
+        g = 2 !== h,
         p = (0, _.useSpring)({
             opacity: g ? 1 : 0,
             height: g ? o : 0,
             config: f.Y
         }),
-        S = 0 === E ? _.CircleWarningIcon : _.CircleInformationIcon,
-        C = 0 === E ? _.tokens.colors.TEXT_DANGER : _.tokens.colors.TEXT_NORMAL;
+        S = 0 === h ? _.CircleWarningIcon : _.CircleInformationIcon,
+        C = 0 === h ? _.tokens.colors.TEXT_DANGER : _.tokens.colors.TEXT_NORMAL;
     return (0, s.jsx)(s.Fragment, {
         children: (0, s.jsx)(c.animated.div, {
             style: p,
@@ -86,7 +86,7 @@ function L(e) {
                             })
                         ]
                     }),
-                    0 === E &&
+                    0 === h &&
                         (0, s.jsx)(_.Button, {
                             onClick: () =>
                                 (0, T.openConsoleConnectionErrorsModal)({
@@ -105,9 +105,9 @@ function L(e) {
 }
 function Z(e) {
     var t;
-    let { quest: n, isHovering: i, errorHints: a, warningHints: l, onCtxMenuClose: c, onCtxMenuOpen: h, onCtxMenuSelect: T } = e,
+    let { quest: n, isHovering: i, errorHints: a, warningHints: l, onCtxMenuClose: c, onCtxMenuOpen: E, onCtxMenuSelect: T } = e,
         f = (0, p.j8)(n),
-        Z = (0, E.ZP)(),
+        Z = (0, h.ZP)(),
         R = (0, u.wj)(Z) ? N.BRd.DARK : N.BRd.LIGHT,
         O = R === N.BRd.DARK,
         x = r.useMemo(() => (0, p.nP)(n.config.assets.hero), [n]),
@@ -197,7 +197,7 @@ function Z(e) {
                                                 })
                                             }),
                                         (0, s.jsx)(C.r, {
-                                            onOpen: h,
+                                            onOpen: E,
                                             onClose: c,
                                             onSelect: T,
                                             questContent: g.jn.QUEST_HOME_DESKTOP,

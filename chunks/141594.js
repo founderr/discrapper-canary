@@ -9,14 +9,14 @@ var i = n(470079),
     d = n(51144),
     u = n(874703),
     _ = n(636357),
-    h = n(105622),
-    E = n(302800),
+    E = n(105622),
+    h = n(302800),
     m = n(921944);
 let I = 'useCollectiblesShopTabNewBadge';
 t.Z = () => {
     var e, t, n, g, p, T, S;
     let C = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
-        f = (0, h.J)(I),
+        f = (0, E.J)(I),
         N = (0, _.n)(I),
         A = (0, r.e7)([u.Z], () => u.Z.getMarketingBySurface(a.K.DESKTOP_SHOP_BUTTON)),
         v = i.useMemo(() => ((0, d.Fc)(C) && f && null != A && !N ? [A.dismissibleContent] : []), [C, f, A, N]),
@@ -25,7 +25,7 @@ t.Z = () => {
         x = null;
     if ((null != L || null != R) && f && null != A && A.type === s.Z.COACHTIP) {
         x = {
-            type: E.k2.COACHTIP,
+            type: h.k2.COACHTIP,
             title: () => A.title,
             body: () => A.body,
             imageSrc: A.avatar,

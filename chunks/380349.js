@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 });
 var i = n(735250);
@@ -14,32 +14,32 @@ var a = n(442837),
     d = n(894344),
     u = n(203777),
     _ = n(616922),
-    h = n(689938);
-function E(e, t, n) {
-    let E = (0, a.e7)([l.Z, r.default], () => (null != t ? (0, c.Z)(l.Z, r.default, t, e) : void 0), [e, t]);
-    if (null == E || null == e || null == t) return null;
-    let m = E.isCurrentUser || E.notPlayable || E.playingSameTrack,
-        I = E.isCurrentUser || E.syncingWithUser || E.syncingWithParty;
+    E = n(689938);
+function h(e, t, n) {
+    let h = (0, a.e7)([l.Z, r.default], () => (null != t ? (0, c.Z)(l.Z, r.default, t, e) : void 0), [e, t]);
+    if (null == h || null == e || null == t) return null;
+    let m = h.isCurrentUser || h.notPlayable || h.playingSameTrack,
+        I = h.isCurrentUser || h.syncingWithUser || h.syncingWithParty;
     return [
         (0, i.jsx)(
             s.MenuItem,
             {
                 id: 'spotify-play-'.concat(e.session_id),
-                action: () => (0, u.Z)(E, _.kG.USER_ACTIVITY_PLAY, n),
-                label: h.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
-                subtext: m ? (0, o.Z)(E, _.kG.USER_ACTIVITY_PLAY) : void 0,
+                action: () => (0, u.Z)(h, _.kG.USER_ACTIVITY_PLAY, n),
+                label: E.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_PLAY_ON_SPOTIFY,
+                subtext: m ? (0, o.Z)(h, _.kG.USER_ACTIVITY_PLAY) : void 0,
                 disabled: m
             },
             'spotify-play-'.concat(e.session_id)
         ),
-        E.canPlaySpotify
+        h.canPlaySpotify
             ? (0, i.jsx)(
                   s.MenuItem,
                   {
                       id: 'spotify-sync-'.concat(e.session_id),
-                      action: () => (0, d.Z)(E, _.kG.USER_ACTIVITY_SYNC, n),
-                      label: h.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG,
-                      subtext: I ? (0, o.Z)(E, _.kG.USER_ACTIVITY_SYNC) : void 0,
+                      action: () => (0, d.Z)(h, _.kG.USER_ACTIVITY_SYNC, n),
+                      label: E.Z.Messages.ACTIVITY_FEED_NOW_PLAYING_ACTION_LISTEN_ALONG,
+                      subtext: I ? (0, o.Z)(h, _.kG.USER_ACTIVITY_SYNC) : void 0,
                       disabled: I
                   },
                   'spotify-sync-'.concat(e.session_id)

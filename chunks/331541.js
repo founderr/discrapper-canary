@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(481060),
     u = n(2052),
     _ = n(393238),
-    h = n(727637),
-    E = n(100527),
+    E = n(727637),
+    h = n(100527),
     m = n(906732),
     I = n(676035),
     g = n(521868),
@@ -166,7 +166,7 @@ function ea(e) {
         F = __OVERLAY__,
         z = (0, Z.ZP)(t.id),
         ea = (0, u.O)(),
-        { analyticsLocations: es } = (0, m.ZP)(E.Z.ACCOUNT_PROFILE_POPOUT),
+        { analyticsLocations: es } = (0, m.ZP)(h.Z.ACCOUNT_PROFILE_POPOUT),
         er = (0, A.ZB)({
             layout: 'SIMPLIFIED_ACCOUNT_POPOUT',
             userId: t.id
@@ -287,7 +287,7 @@ function ea(e) {
             });
         })(eo, ea),
         { ref: ed } = (0, _.Z)(),
-        eu = (0, h.Z)(ed);
+        eu = (0, E.Z)(ed);
     a.useEffect(() => {
         null == s || s(ed.current);
     }, [ed, s]);
@@ -299,8 +299,8 @@ function ea(e) {
                     ...e
                 });
         },
-        { customStatusBubbleEditEnabled: eh } = (0, L.K)({ location: 'AccountProfilePopout' }),
-        eE = (0, f.Z)({ analyticsLocations: es }),
+        { customStatusBubbleEditEnabled: eE } = (0, L.K)({ location: 'AccountProfilePopout' }),
+        eh = (0, f.Z)({ analyticsLocations: es }),
         em = (0, S.p)(),
         eI = eo === Q.Skl.DND,
         eg = (0, K.g)(),
@@ -330,7 +330,7 @@ function ea(e) {
                     displayProfile: z,
                     profileType: X.y0.BITE_SIZE,
                     children: [
-                        !eh &&
+                        !eE &&
                             (0, i.jsx)(j.Z, {
                                 profileType: X.y0.BITE_SIZE,
                                 children: (0, i.jsx)(G.Z, {
@@ -413,7 +413,7 @@ function ea(e) {
                                                 onClose: n,
                                                 onSelect: void 0,
                                                 children: [
-                                                    eh &&
+                                                    eE &&
                                                         (0, i.jsx)(d.MenuGroup, {
                                                             children: (0, i.jsx)(
                                                                 d.MenuItem,
@@ -426,7 +426,7 @@ function ea(e) {
                                                                             action: 'EDIT_PROFILE',
                                                                             analyticsLocations: es
                                                                         }),
-                                                                            eE();
+                                                                            eh();
                                                                     },
                                                                     focusedClassName: $.menuItemFocused,
                                                                     subMenuIconClassName: $.subMenuIcon
@@ -495,7 +495,7 @@ function ea(e) {
                                                             'status-picker'
                                                         )
                                                     }),
-                                                    !eh && (0, i.jsx)(d.MenuGroup, { children: ep })
+                                                    !eE && (0, i.jsx)(d.MenuGroup, { children: ep })
                                                 ]
                                             })
                                         }),

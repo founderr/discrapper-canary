@@ -15,8 +15,8 @@ var i = n(735250),
     d = n(400354),
     u = n(652844),
     _ = n(789639),
-    h = n(481060),
-    E = n(355467),
+    E = n(481060),
+    h = n(355467),
     m = n(239091),
     I = n(230711),
     g = n(410575),
@@ -69,8 +69,8 @@ var i = n(735250),
     ed = n(819640),
     eu = n(131951),
     e_ = n(19780),
-    eh = n(885110),
-    eE = n(246946),
+    eE = n(885110),
+    eh = n(246946),
     em = n(594174),
     eI = n(78839),
     eg = n(626135),
@@ -102,20 +102,20 @@ function eM(e, t, n) {
         e
     );
 }
-let eD = eA.ZP.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
+let eD = eA.ZP.getEnableHardwareAcceleration() ? E.AnimatedAvatar : E.Avatar,
     ey = 30 * eS.Z.Millis.DAY;
 function ej(e) {
     let { speaking: t, streaming: n, currentUser: a, status: s, handleMouseLeave: l, renderNameTag: o } = e,
         c = (0, N.Z)(null == a ? void 0 : a.avatarDecoration),
         d = (0, ep.NZ)({
             avatarDecoration: c,
-            size: (0, A.y9)(h.AvatarSizes.SIZE_32)
+            size: (0, A.y9)(E.AvatarSizes.SIZE_32)
         });
     return null == a
         ? null
         : (0, i.jsx)(g.Z, {
               object: eR.qAy.AVATAR,
-              children: (0, i.jsx)(h.Popout, {
+              children: (0, i.jsx)(E.Popout, {
                   renderPopout: (e) => {
                       let { closePopout: t, setPopoutRef: n } = e;
                       return (0, i.jsx)('div', {
@@ -131,7 +131,7 @@ function ej(e) {
                   },
                   position: 'top',
                   align: 'left',
-                  animation: h.Popout.Animation.FADE,
+                  animation: E.Popout.Animation.FADE,
                   spacing: 14,
                   fixed: !0,
                   preload: () =>
@@ -140,13 +140,13 @@ function ej(e) {
                           withMutualFriends: !1
                       }),
                   children: (e) =>
-                      (0, i.jsxs)(h.Clickable, {
+                      (0, i.jsxs)(E.Clickable, {
                           ...e,
                           'aria-label': eb.Z.Messages.SET_STATUS,
                           className: eP.avatarWrapper,
                           children: [
                               (0, i.jsx)(eD, {
-                                  size: h.AvatarSizes.SIZE_32,
+                                  size: E.AvatarSizes.SIZE_32,
                                   src: a.getAvatarURL(void 0, 32, !1),
                                   avatarDecoration: d,
                                   'aria-label': a.username,
@@ -180,7 +180,7 @@ class eU extends a.PureComponent {
         let { copiedStreak: e } = this.state,
             t = [eb.Z.Messages.COPY_SUCCESS_1, eb.Z.Messages.COPY_SUCCESS_2, eb.Z.Messages.COPY_SUCCESS_3, eb.Z.Messages.COPY_SUCCESS_4, eb.Z.Messages.COPY_SUCCESS_5, eb.Z.Messages.COPY_SUCCESS_6, eb.Z.Messages.COPY_SUCCESS_7, eb.Z.Messages.COPY_SUCCESS_8, eb.Z.Messages.COPY_SUCCESS_9, eb.Z.Messages.COPY_SUCCESS_10, eb.Z.Messages.COPY_SUCCESS_11],
             n = Math.min(Math.max(0, e - 1), t.length - 1);
-        return (0, i.jsx)(h.Shaker, {
+        return (0, i.jsx)(E.Shaker, {
             isShaking: this.isCopiedStreakGodlike,
             children: t[n]
         });
@@ -267,7 +267,7 @@ class eU extends a.PureComponent {
                                   suppress: l,
                                   awaitingRemote: a,
                                   tooltipText: d ? eb.Z.Messages.ACCOUNT_SPEAKING_WHILE_MUTED : (0, R.Z)(n, s, l, a),
-                                  tooltipColor: d ? h.TooltipColors.GREEN : void 0,
+                                  tooltipColor: d ? E.TooltipColors.GREEN : void 0,
                                   tooltipForceOpen: d || void 0,
                                   onMouseEnter: this.handleMouseEnterMute,
                                   onMouseLeave: this.handleMouseLeaveMute,
@@ -287,7 +287,7 @@ class eU extends a.PureComponent {
                                       let { visibleContent: t, markAsDismissed: n } = e;
                                       switch (t) {
                                           case o.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2:
-                                              return (0, i.jsx)(h.Popout, {
+                                              return (0, i.jsx)(E.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -295,7 +295,7 @@ class eU extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.QUEST_2_ENROLLMENT_TOOLTIP:
-                                              return (0, i.jsx)(h.Popout, {
+                                              return (0, i.jsx)(E.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -307,7 +307,7 @@ class eU extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.QUEST_2_COMPLETION_TOOLTIP:
-                                              return (0, i.jsx)(h.Popout, {
+                                              return (0, i.jsx)(E.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -319,7 +319,7 @@ class eU extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.USER_SAFETY_SAFE_DIRECT_MESSAGING:
-                                              return (0, i.jsx)(h.Popout, {
+                                              return (0, i.jsx)(E.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -327,7 +327,7 @@ class eU extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK:
-                                              return (0, i.jsx)(h.Popout, {
+                                              return (0, i.jsx)(E.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -335,7 +335,7 @@ class eU extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE:
-                                              return (0, i.jsx)(h.Popout, {
+                                              return (0, i.jsx)(E.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -343,7 +343,7 @@ class eU extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.SOUNDBOARD_VOLUME_EDUCATION:
-                                              return (0, i.jsx)(h.Popout, {
+                                              return (0, i.jsx)(E.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -351,7 +351,7 @@ class eU extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.USER_SAFETY_CONSUMER_EDUCATION_REPORTING:
-                                              return (0, i.jsx)(h.Popout, {
+                                              return (0, i.jsx)(E.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -359,7 +359,7 @@ class eU extends a.PureComponent {
                                                   children: this.renderSettingsGear
                                               });
                                           case o.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK:
-                                              return (0, i.jsx)(h.Popout, {
+                                              return (0, i.jsx)(E.Popout, {
                                                   position: 'top',
                                                   align: 'center',
                                                   shouldShow: !0,
@@ -517,13 +517,13 @@ function eG() {
         s = (0, G._g)(ex.X2.FORTNITE),
         r = (0, l.e7)([eo.default], () => eo.default.getId()),
         c = (0, D.a)(),
-        { streaming: d, status: u } = (0, l.cj)([eh.Z], () => ({
-            streaming: null != eh.Z.findActivity((e) => e.type === eR.IIU.STREAMING),
-            status: eh.Z.getStatus()
+        { streaming: d, status: u } = (0, l.cj)([eE.Z], () => ({
+            streaming: null != eE.Z.findActivity((e) => e.type === eR.IIU.STREAMING),
+            status: eE.Z.getStatus()
         })),
         _ = (0, C.Z)({ userId: r }),
         m = eN.ZP.useUserTag(n, { decoration: 'never' }),
-        I = (0, l.e7)([eE.Z], () => eE.Z.hidePersonalInformation),
+        I = (0, l.e7)([eh.Z], () => eh.Z.hidePersonalInformation),
         g = (0, l.e7)([e_.Z, ec.Z], () => {
             let e = e_.Z.getChannelId();
             return null != e ? ec.Z.getChannel(e) : null;
@@ -537,7 +537,7 @@ function eG() {
         x = (0, l.e7)([eI.ZP], () => eI.ZP.getPremiumTypeSubscription()),
         b = (0, l.e7)([eu.Z], () => eu.Z.getEverSpeakingWhileMuted()),
         P = (0, l.e7)([ed.Z], () => ed.Z.hasLayers()),
-        M = (0, h.useModalsStore)(h.hasAnyModalOpenSelector) || P || ef.s.isDisallowPopupsSet(),
+        M = (0, E.useModalsStore)(E.hasAnyModalOpenSelector) || P || ef.s.isDisallowPopupsSet(),
         y = (0, W.b)(),
         U = (0, l.e7)([V.Z], () => null != V.Z.getAwaitingRemoteSessionInfo()),
         B = (0, l.e7)([w.Z], () => w.Z.isCurrentQuestCompleted),
@@ -574,10 +574,10 @@ function eG() {
                     (async () => {
                         if (e || null != n || !r) return;
                         if (!i) {
-                            await (0, E.ou)();
+                            await (0, h.ou)();
                             return;
                         }
-                        if (!c) !t && (await (0, E.l0)());
+                        if (!c) !t && (await (0, h.l0)());
                     })();
                 }, [r, n, e, i, t, c]),
                 !e && !!r && !c && null != n && n
@@ -614,15 +614,15 @@ function eG() {
 }
 function ew(e) {
     let { webBuildOverride: t, isEligibleForPomelo: n, onClick: a, onContextMenu: s } = e,
-        r = (0, h.useRedesignIconContext)().enabled,
+        r = (0, E.useRedesignIconContext)().enabled,
         l = null,
-        o = h.SettingsIcon,
+        o = E.SettingsIcon,
         c = (0, _.i)();
     return (
         r
-            ? (o = null != t ? h.SettingsInfoIcon : n ? h.SettingsCircleIcon : c.Component)
+            ? (o = null != t ? E.SettingsInfoIcon : n ? E.SettingsCircleIcon : c.Component)
             : null != t
-              ? (l = (0, i.jsx)(h.CircleInformationIcon, {
+              ? (l = (0, i.jsx)(E.CircleInformationIcon, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 9,
@@ -631,7 +631,7 @@ function ew(e) {
                     'aria-hidden': !0
                 }))
               : n &&
-                (l = (0, i.jsx)(h.CircleBadge, {
+                (l = (0, i.jsx)(E.CircleBadge, {
                     color: P.Z.STATUS_DANGER,
                     className: eP.hasBuildOverride,
                     'aria-hidden': !0
@@ -648,10 +648,10 @@ function ew(e) {
     );
 }
 function ek(e) {
-    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: r, tooltipText: l, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: _, onClick: E, onContextMenu: m } = e,
+    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: r, tooltipText: l, tooltipColor: o, tooltipForceOpen: c, onMouseEnter: d, onMouseLeave: _, onClick: h, onContextMenu: m } = e,
         I = t || s || n,
         { Component: g, play: p, events: T } = (0, u.O)(I ? 'unmute' : 'mute'),
-        S = n || s ? h.MicrophoneDenyIcon : g;
+        S = n || s ? E.MicrophoneDenyIcon : g;
     return (
         a.useEffect(() => () => p(), [I, p]),
         (0, i.jsx)(ev.Z, {
@@ -668,10 +668,10 @@ function ek(e) {
                 size: 'custom',
                 width: 20,
                 height: 20,
-                color: I ? h.tokens.colors.STATUS_DANGER : 'currentColor'
+                color: I ? E.tokens.colors.STATUS_DANGER : 'currentColor'
             }),
             iconForeground: I ? eP.strikethrough : null,
-            onClick: E,
+            onClick: h,
             onContextMenu: m,
             role: 'switch',
             'aria-label': eb.Z.Messages.MUTE,
@@ -686,20 +686,20 @@ function eB(e) {
         {
             Component: u,
             play: _,
-            events: { onMouseEnter: E, onMouseLeave: m }
+            events: { onMouseEnter: h, onMouseLeave: m }
         } = (0, d.l)(c ? 'undeafen' : 'deafen'),
-        I = n ? h.HeadphonesDenyIcon : u;
+        I = n ? E.HeadphonesDenyIcon : u;
     return (
         a.useEffect(() => () => _(), [c, _]),
         (0, i.jsx)(ev.Z, {
             tooltipText: (0, Z.Z)(t, n, s),
-            onMouseEnter: E,
+            onMouseEnter: h,
             onMouseLeave: m,
             icon: (0, i.jsx)(I, {
                 size: 'custom',
                 width: 20,
                 height: 20,
-                color: c ? h.tokens.colors.STATUS_DANGER : 'currentColor'
+                color: c ? E.tokens.colors.STATUS_DANGER : 'currentColor'
             }),
             onClick: l,
             onContextMenu: o,

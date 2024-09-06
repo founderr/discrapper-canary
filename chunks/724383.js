@@ -8,7 +8,7 @@ var i = n(735250),
     d = n(766219),
     u = n(917039),
     _ = n(49898),
-    h = n(623641);
+    E = n(623641);
 t.Z = function () {
     let e = (0, u.Z)(),
         t = (function (e) {
@@ -26,8 +26,8 @@ t.Z = function () {
             (0, c.RI)({ selectedTab: e });
         }, [e]),
         (0, i.jsxs)('section', {
-            className: h.container,
-            children: [(0, i.jsx)(s.yY, { location: (0, d.s)(e) }), (0, i.jsx)('div', { className: h.dragRegion }), t]
+            className: E.container,
+            children: [(0, i.jsx)(s.yY, { location: (0, d.s)(e) }), (0, i.jsx)('div', { className: E.dragRegion }), t]
         })
     );
 };

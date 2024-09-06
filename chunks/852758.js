@@ -20,8 +20,8 @@ var i = n(735250),
     d = n(37234),
     u = n(809206),
     _ = n(110924),
-    h = n(714338),
-    E = n(213609),
+    E = n(714338),
+    h = n(213609),
     m = n(429142),
     I = n(144114),
     g = n(210887),
@@ -41,7 +41,7 @@ function L() {
         L = T.Z.getVerificationTypes(e),
         [Z, R] = a.useState(0),
         O = (0, _.Z)(L);
-    (0, E.Z)(
+    (0, h.Z)(
         {
             type: s.ImpressionTypes.MODAL,
             name: s.ImpressionNames.USER_ACTION_REQUIRED,
@@ -85,9 +85,9 @@ function L() {
     return (
         a.useEffect(
             () => (
-                h.Z.disable(),
+                E.Z.disable(),
                 () => {
-                    h.Z.enable();
+                    E.Z.enable();
                 }
             ),
             []

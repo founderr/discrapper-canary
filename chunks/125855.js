@@ -13,7 +13,7 @@ var a = n(6025),
     c = n(426051),
     d = n(981631);
 function u(e) {
-    let { index: t, className: n, channel: u, user: _, hasSingleMessageRequest: h } = e;
+    let { index: t, className: n, channel: u, user: _, hasSingleMessageRequest: E } = e;
     return (0, i.jsx)(o.Z, {
         index: t,
         className: n,
@@ -25,7 +25,7 @@ function u(e) {
                 a.Z.openPrivateChannelAsSidebar({
                     channelId: u.id,
                     baseChannelId: s.uZ,
-                    hasSingleMessageRequest: h
+                    hasSingleMessageRequest: E
                 }),
                 r.default.track(d.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !0,

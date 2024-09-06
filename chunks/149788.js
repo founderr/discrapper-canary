@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(469988),
     u = n(526383),
     _ = n(210887),
-    h = n(900849),
-    E = n(481685),
+    E = n(900849),
+    h = n(481685),
     m = n(731455),
     I = n(689938),
     g = n(252065),
@@ -25,7 +25,7 @@ function T(e) {
         S = (0, s.e7)([_.Z], () => _.Z.theme);
     return (
         a.useEffect(() => {
-            h.Zt({
+            E.Zt({
                 loadId: t,
                 gamesYouPlayGuilds: [],
                 allGuilds: [],
@@ -36,7 +36,7 @@ function T(e) {
             title: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_TITLE,
             description: I.Z.Messages.GLOBAL_DISCOVERY_SERVERS_HUB_DESCRIPTION,
             onScroll: n,
-            bannerBackground: (0, i.jsx)(E.Z, {}),
+            bannerBackground: (0, i.jsx)(h.Z, {}),
             children: [
                 T.length > 0
                     ? (0, i.jsxs)(i.Fragment, {

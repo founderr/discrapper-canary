@@ -13,8 +13,8 @@ var i = n(735250),
     d = n(393238),
     u = n(607070),
     _ = n(113434),
-    h = n(566078),
-    E = n(472144),
+    E = n(566078),
+    h = n(472144),
     m = n(644646),
     I = n(69439),
     g = n(46140),
@@ -25,7 +25,7 @@ let C = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function f(e) {
     var t, n, s;
     let { quest: f, questContent: N, isHovering: A, contentPosition: v, rowIndex: L, onReceiveErrorHints: Z } = e,
-        R = h.r.build(f.config).defaultReward.messages.name,
+        R = E.r.build(f.config).defaultReward.messages.name,
         O = (null === (t = f.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null,
         { ref: x, scrollHeight: b } = (0, d.Z)(),
         P = 104 !== b,
@@ -87,7 +87,7 @@ function f(e) {
                                                   autoplay: !1,
                                                   shouldAnimate: !H
                                               }),
-                                          (0, i.jsx)(E.Z, {
+                                          (0, i.jsx)(h.Z, {
                                               quest: f,
                                               size: 76,
                                               percentComplete: j,

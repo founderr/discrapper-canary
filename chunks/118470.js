@@ -1,6 +1,6 @@
 n.d(t, {
     Z: function () {
-        return E;
+        return h;
     }
 }),
     n(47120),
@@ -15,11 +15,11 @@ var i = n(735250),
     d = n(270144),
     u = n(981631),
     _ = n(689938),
-    h = n(466389);
-function E(e) {
+    E = n(466389);
+function h(e) {
     let { guild: t } = e,
         n = (0, d.h6)(t),
-        E = () => (0, c.sB)(t.id),
+        h = () => (0, c.sB)(t.id),
         m = a.useMemo(() => new Set(n.map((e) => e.applicationId)), [n]),
         I = (0, s.Wu)(
             [r.Z],
@@ -53,12 +53,12 @@ function E(e) {
                     : _.Z.Messages.MORE_APPLICATION_SUBSCRIPTION_EXPIRATION_CHANNEL_NOTICE_CONTENT),
         (0, i.jsx)(l.Z, {
             guild: t,
-            onDismissed: E,
+            onDismissed: h,
             message: g,
             type: u.vID.APPLICATION_SUBSCRIPTION_EXPIRATION,
-            image: h,
+            image: E,
             onClick: () => {
-                E(), o.Z.open(t.id, u.pNK.INTEGRATIONS);
+                h(), o.Z.open(t.id, u.pNK.INTEGRATIONS);
             },
             imageMarginTop: 6,
             imageMarginX: 46,
