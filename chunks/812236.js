@@ -1,58 +1,78 @@
 n.d(t, {
+    Fs: function () {
+        return _;
+    },
     SY: function () {
-        return d;
+        return E;
     },
     Xu: function () {
-        return c;
+        return d;
     },
     ZP: function () {
-        return u;
+        return c;
     },
     sV: function () {
-        return l;
+        return u;
     }
 }),
     n(411104);
-var r = n(911969),
-    i = n(592125),
-    a = n(963456),
-    s = n(213459),
-    o = n(367790);
-let l = 'no primary app command for application';
-async function u(e, t) {
+var r = n(470079),
+    i = n(911969),
+    a = n(592125),
+    s = n(963456),
+    o = n(213459),
+    l = n(367790);
+let u = 'no primary app command for application';
+async function c(e, t) {
     let n,
-        r = i.Z.getChannel(e);
-    if (null != r && null == (n = c(r, t))) {
+        r = a.Z.getChannel(e);
+    if (null != r && null == (n = d(r, t))) {
         let e = {
                 type: 'application',
                 applicationId: t
             },
             i = new AbortController();
-        (0, a.j)(e, !1), await (0, a.a)(e, 0, i), (n = c(r, t));
+        (0, s.j)(e, !1), await (0, s.a)(e, 0, i), (n = d(r, t));
     }
     if (null != n) return n;
-    throw Error(l);
+    throw Error(u);
 }
-function c(e, t) {
-    return s.ZP.query(
+function d(e, t) {
+    return o.ZP.query(
         e,
-        { commandTypes: [r.yU.PRIMARY_ENTRY_POINT] },
+        { commandTypes: [i.yU.PRIMARY_ENTRY_POINT] },
         {
             placeholderCount: 1,
-            scoreMethod: o.p.COMMAND_ONLY,
+            scoreMethod: l.p.COMMAND_ONLY,
             applicationId: t,
             allowFetch: !1,
             allowApplicationState: !0
         }
     ).commands[0];
 }
-function d(e, t) {
-    return (0, s.v1)(
+function _(e, t) {
+    let { commands: n, loading: i } = E(e, t),
+        a = n[0],
+        o = null != a;
+    return (
+        r.useEffect(() => {
+            !o &&
+                !i &&
+                (0, s.j)({
+                    type: 'application',
+                    applicationId: t
+                });
+        }, [t, o, i]),
+        a
+    );
+}
+function E(e, t) {
+    return (0, o.v1)(
         e,
-        { commandTypes: [r.yU.PRIMARY_ENTRY_POINT] },
+        { commandTypes: [i.yU.PRIMARY_ENTRY_POINT] },
         {
             placeholderCount: 1,
-            scoreMethod: o.p.COMMAND_ONLY,
+            scoreMethod: l.p.COMMAND_ONLY,
             applicationId: t,
             allowFetch: !1,
             allowApplicationState: !0
