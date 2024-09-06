@@ -1,6 +1,6 @@
 t.d(n, {
     Q2: function () {
-        return b;
+        return L;
     },
     pe: function () {
         return S;
@@ -22,16 +22,16 @@ var i = t(470079),
     p = t(807169),
     _ = t(104793),
     C = t(674588),
-    h = t(809547),
-    f = t(822245),
+    f = t(809547),
+    h = t(822245),
     A = t(631827),
     E = t(827498),
     N = t(783097),
     x = t(689079),
     v = t(665692);
 function I(e, n) {
-    let t = f.Z.getScoreWithoutLoadingLatest(e.id);
-    return f.Z.getScoreWithoutLoadingLatest(n.id) - t;
+    let t = h.Z.getScoreWithoutLoadingLatest(e.id);
+    return h.Z.getScoreWithoutLoadingLatest(n.id) - t;
 }
 function g(e, n) {
     let t = (0, N.$d)(e),
@@ -45,8 +45,8 @@ function S(e) {
     let { channel: n, query: t, commandLimit: a, applicationLimit: o, searchesCommands: r = !0, searchesBots: s = !0, searchesActivities: C = !0 } = e;
     t.startsWith(''.concat(v.GI)) && (t = t.substring(1));
     let {
-            commands: h,
-            commandSectionMap: f,
+            commands: f,
+            commandSectionMap: h,
             loading: E
         } = (function (e) {
             var n, t;
@@ -92,16 +92,16 @@ function S(e) {
                     [o, r, t]
                 ),
                 C = [],
-                h = new Set();
+                f = new Set();
             if (null != d.result)
                 for (let e of Object.values(d.result.sections)) {
                     let n = e.descriptor.application;
-                    null != n && _(e) && (C.push(n), h.add(n.id));
+                    null != n && _(e) && (C.push(n), f.add(n.id));
                 }
             if (null != u.result)
                 for (let e of Object.values(u.result.sections)) {
                     let n = e.descriptor.application;
-                    null != n && !h.has(n.id) && _(e) && C.push(n);
+                    null != n && !f.has(n.id) && _(e) && C.push(n);
                 }
             return (
                 r && a && C.push(N.Wx),
@@ -117,11 +117,11 @@ function S(e) {
             includeEmbeddedApps: C,
             includeNonEmbeddedApps: s
         }),
-        b = (0, d.Z)({ guildId: n.getGuildId() }),
-        L = i.useMemo(() => {
+        L = (0, d.Z)({ guildId: n.getGuildId() }),
+        b = i.useMemo(() => {
             var e;
             if (!r) return [];
-            return (0, A.N)(h, {
+            return (0, A.N)(f, {
                 limit: a,
                 filterPredicates: [
                     (function (e) {
@@ -204,16 +204,16 @@ function S(e) {
                     P
                 ]
             });
-        }, [r, h, a, n, t]),
+        }, [r, f, a, n, t]),
         R = i.useMemo(() => {
-            if (0 === L.length) return [];
+            if (0 === b.length) return [];
             let e = new Map(S.map((e) => [e.id, e]));
             return l().compact(
-                L.map((n) => {
+                b.map((n) => {
                     var t;
                     let i = e.get(n.applicationId);
                     if (null == i) return null;
-                    let a = null !== (t = f[n.id]) && void 0 !== t ? t : null;
+                    let a = null !== (t = h[n.id]) && void 0 !== t ? t : null;
                     return {
                         command: n,
                         application: i,
@@ -221,7 +221,7 @@ function S(e) {
                     };
                 })
             );
-        }, [S, L, f]),
+        }, [S, b, h]),
         T = i.useMemo(() => {
             var e;
             let i = [];
@@ -234,17 +234,15 @@ function S(e) {
                 );
                 i.push(...S),
                     i.push(
-                        ...b
-                            .filter((n) => {
-                                let {
-                                    application: { id: t }
-                                } = n;
-                                return !e.has(t);
-                            })
-                            .map((e) => {
-                                let { application: n } = e;
-                                return n;
-                            })
+                        ...L.filter((n) => {
+                            let {
+                                application: { id: t }
+                            } = n;
+                            return !e.has(t);
+                        }).map((e) => {
+                            let { application: n } = e;
+                            return n;
+                        })
                     );
             } else s && (i = S);
             return (0, A.N)(i, {
@@ -298,7 +296,7 @@ function S(e) {
                 ],
                 sortComparers: [I, g]
             });
-        }, [s, C, o, n, t, S, b]),
+        }, [s, C, o, n, t, S, L]),
         M = R.length > 0,
         y = T.length > 0;
     return {
@@ -310,19 +308,19 @@ function S(e) {
         loading: E && r
     };
 }
-function b(e) {
+function L(e) {
     let { channel: n, query: t, fetches: a = !0, pageLimit: l = 1 / 0, entrypoint: c } = e;
     t.startsWith(''.concat(v.GI)) && (t = t.substring(1));
     let d = c === E._b.VOICE,
         [u, m] = i.useState(1),
         p = i.useRef(u);
     p.current = u;
-    let { fetchState: _, totalPages: f } = (0, s.cj)(
-            [h.Z],
+    let { fetchState: _, totalPages: h } = (0, s.cj)(
+            [f.Z],
             () => {
                 var e, i;
                 return {
-                    fetchState: h.Z.getFetchState({
+                    fetchState: f.Z.getFetchState({
                         query: t,
                         guildId: n.guild_id,
                         page: u,
@@ -337,7 +335,7 @@ function b(e) {
                         null !==
                             (i =
                                 null ===
-                                    (e = h.Z.getSearchResults({
+                                    (e = f.Z.getSearchResults({
                                         query: t,
                                         guildId: n.guild_id,
                                         page: u,
@@ -358,12 +356,12 @@ function b(e) {
         ),
         A = i.useMemo(
             () =>
-                Array.from({ length: _ === h.M.FETCHED || _ === h.M.ERROR ? u : u - 1 }, (e, i) => {
+                Array.from({ length: _ === f.M.FETCHED || _ === f.M.ERROR ? u : u - 1 }, (e, i) => {
                     var a, l;
                     return null !==
                         (l =
                             null ===
-                                (a = h.Z.getSearchResults({
+                                (a = f.Z.getSearchResults({
                                     query: t,
                                     guildId: n.guild_id,
                                     page: i + 1,
@@ -383,8 +381,8 @@ function b(e) {
         ),
         N = i.useCallback(() => {
             let e = A.length;
-            _ === h.M.FETCHED && e === p.current && e > 0 && e < f && e < l && A[e - 1].length > 0 && (p.current++, m((e) => e + 1));
-        }, [_, l, A, f]),
+            _ === f.M.FETCHED && e === p.current && e > 0 && e < h && e < l && A[e - 1].length > 0 && (p.current++, m((e) => e + 1));
+        }, [_, l, A, h]),
         x = i.useCallback(
             (e) => {
                 let { query: n, page: t, guildId: i } = e;
