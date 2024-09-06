@@ -1,4 +1,7 @@
 n.d(t, {
+    Kv: function () {
+        return u;
+    },
     T: function () {
         return a;
     },
@@ -104,6 +107,20 @@ let o = (0, r.B)({
             {
                 id: 1,
                 label: 'Enable app link sharing and install flow improvements',
+                config: { enabled: !0 }
+            }
+        ]
+    }),
+    u = (0, r.B)({
+        kind: 'user',
+        id: '2024-09_open_platform_link_sharing_mobile',
+        label: 'Open Platform Link Sharing Mobile',
+        defaultConfig: { enabled: !1 },
+        commonTriggerPoint: i.$P.CONNECTION_OPEN,
+        treatments: [
+            {
+                id: 1,
+                label: 'Enable app link sharing and install flow improvements on mobile',
                 config: { enabled: !0 }
             }
         ]
