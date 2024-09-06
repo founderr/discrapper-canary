@@ -414,7 +414,9 @@ class el extends E.Z {
                 output_device: this.getOutputDeviceName(),
                 device_performance_class: (0, A.R)(),
                 num_fast_udp_reconnects: null != this._connection ? (null === (u = this._connection) || void 0 === u ? void 0 : u.getNumFastUdpReconnects()) : null,
-                parent_media_session_id: this.parentMediaSessionId
+                parent_media_session_id: this.parentMediaSessionId,
+                audio_subsystem: G.Z.getMediaEngine().getAudioSubsystem(),
+                audio_layer: G.Z.getMediaEngine().getAudioLayer()
             });
             let a = this.getMediaSessionId();
             G.Z.getMediaEngine()

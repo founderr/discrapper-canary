@@ -9,12 +9,14 @@ var n = o(131951),
 function l(e, t, o, l, i) {
     let r = n.Z.getSettings(),
         u = n.Z.getInputDeviceId(),
-        c = n.Z.getInputDevices()[u],
-        d = n.Z.getOutputDeviceId(),
-        _ = n.Z.getOutputDevices()[d],
+        d = n.Z.getInputDevices()[u],
+        c = n.Z.getOutputDeviceId(),
+        _ = n.Z.getOutputDevices()[c],
         b = n.Z.getVideoDeviceId(),
         E = n.Z.getVideoDevices()[b],
-        m = n.Z.getNoiseCancellation();
+        m = n.Z.getNoiseCancellation(),
+        O = n.Z.getMediaEngine().getAudioSubsystem(),
+        h = n.Z.getMediaEngine().getAudioLayer();
     a.default.track(s.rMx.CALL_REPORT_PROBLEM, {
         rating: null != e ? e : 'no response',
         reason_code: t,
@@ -28,9 +30,11 @@ function l(e, t, o, l, i) {
         automatic_gain_control_enabled: r.automaticGainControl,
         voice_output_volume: r.outputVolume,
         noise_cancellation_enabled: m,
-        input_device_name: null == c ? void 0 : c.name,
+        input_device_name: null == d ? void 0 : d.name,
         output_device_name: null == _ ? void 0 : _.name,
         video_device_name: null == E ? void 0 : E.name,
+        audio_subsystem: O,
+        audio_layer: h,
         ...i
     });
 }
