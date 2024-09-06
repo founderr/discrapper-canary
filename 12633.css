@@ -28326,6 +28326,8 @@ input[type=checkbox]:focus-visible+.label_d1ac9b {
 .emojiPicker_c6ee36 {
     background-color: var(--background-secondary);
     box-shadow: var(--shadow-border), var(--shadow-high);
+    border-bottom-right-radius: var(--custom-emoji-picker-border-radius);
+    border-bottom-left-radius: var(--custom-emoji-picker-border-radius);
     display: grid;
     grid-template-columns: 48px auto;
     grid-template-rows: auto 1fr auto;
