@@ -763,10 +763,11 @@ class tO extends (l = p.ZP.Store) {
                         error: e
                     });
             }),
-            eR.on(I.aB.AudioDeviceModuleError, (e, t) => {
+            eR.on(I.aB.AudioDeviceModuleError, (e, t, n) => {
                 $.default.track(eE.rMx.AUDIO_DEVICE_MODULE_ERROR, {
                     audio_device_module: e,
-                    code: t
+                    code: t,
+                    device_name: n
                 });
             }),
             tl.reset(),
