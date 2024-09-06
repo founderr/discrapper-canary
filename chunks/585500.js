@@ -27,10 +27,9 @@ let c = (0, a.T)({}),
     };
 function _(e) {
     let { quest: t, location: n, questContent: a } = e,
-        c = (0, s.pF)({ location: e.location }),
+        c = (0, s.pF)({ location: n }),
         _ = (0, r.uA)({
             quest: t,
-            location: n,
             questContent: a
         });
     return (function (e) {

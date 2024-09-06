@@ -1,12 +1,9 @@
 n.d(t, {
     P: function () {
-        return a;
-    },
-    i: function () {
-        return i;
+        return o;
     }
 });
-let r = (0, n(818083).B)({
+let s = (0, n(818083).B)({
         id: '2024-06_quest_inline_console_connection',
         kind: 'user',
         label: 'Quest Inline Console Connection Experiment',
@@ -24,12 +21,8 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = (e) => {
-        let { location: t, autoTrackExposure: n = !1 } = e;
-        return r.getCurrentConfig({ location: t }, { autoTrackExposure: n }).enabled;
-    },
-    a = (e) => {
+    o = (e) => {
         let { location: t, autoTrackExposure: n = !1 } = e,
-            { enabled: i } = r.useExperiment({ location: t }, { autoTrackExposure: n });
-        return i;
+            { enabled: o } = s.useExperiment({ location: t }, { autoTrackExposure: n });
+        return o;
     };

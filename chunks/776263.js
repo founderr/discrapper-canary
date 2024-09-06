@@ -34,10 +34,7 @@ let x = (e) => {
             className: p.cta,
             onClick: () =>
                 (0, l.gI)(
-                    {
-                        quest: t,
-                        showInline: !1
-                    },
+                    { quest: t },
                     {
                         content: a.jn.QUEST_BAR_V2,
                         ctaContent: r.jZ.CONNECT_CONSOLE

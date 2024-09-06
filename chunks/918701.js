@@ -12,10 +12,10 @@ n.d(t, {
         return eH;
     },
     C1: function () {
-        return eX;
+        return eQ;
     },
     C9: function () {
-        return eQ;
+        return eq;
     },
     CE: function () {
         return k;
@@ -24,7 +24,7 @@ n.d(t, {
         return ev;
     },
     Fs: function () {
-        return e$;
+        return eX;
     },
     GN: function () {
         return er;
@@ -51,7 +51,7 @@ n.d(t, {
         return eT;
     },
     OG: function () {
-        return eK;
+        return eW;
     },
     Qe: function () {
         return b;
@@ -66,13 +66,13 @@ n.d(t, {
         return eg;
     },
     V$: function () {
-        return eW;
+        return ej;
     },
     WP: function () {
         return H;
     },
     XT: function () {
-        return ez;
+        return eK;
     },
     Xh: function () {
         return j;
@@ -90,7 +90,7 @@ n.d(t, {
         return U;
     },
     _j: function () {
-        return eq;
+        return ez;
     },
     b7: function () {
         return ex;
@@ -102,10 +102,10 @@ n.d(t, {
         return eC;
     },
     fY: function () {
-        return eY;
+        return eZ;
     },
     gI: function () {
-        return ej;
+        return eY;
     },
     gO: function () {
         return K;
@@ -153,7 +153,7 @@ n.d(t, {
         return ea;
     },
     yH: function () {
-        return eJ;
+        return e$;
     },
     yI: function () {
         return Z;
@@ -694,24 +694,20 @@ let eG = (e) => (t) => e.some((e) => null != t.config.taskConfig.tasks[e]),
         (0, s.EQ)(e)
             .with({ config: { configVersion: 2 } }, (e) => null != e.userStatus && (eV(e.userStatus, o.X.PLAY_ON_XBOX) || eV(e.userStatus, o.X.PLAY_ON_PLAYSTATION)))
             .exhaustive();
-function eZ() {
-    _.Z.open(C.oAB.CONNECTIONS);
-}
-function eY(e, t) {
-    let { platformType: n, quest: r, showInline: i } = e;
+function eZ(e, t) {
+    let { platformType: n, quest: r } = e;
     (0, g._3)({
         questId: r.id,
         questContent: t.content,
         questContentCTA: t.ctaContent
     }),
-        !i && eZ(),
         (0, f.Z)({
             platformType: n,
             location: t.ctaContent
         });
 }
-function ej(e, t) {
-    let { quest: n, showInline: r } = e;
+function eY(e, t) {
+    let { quest: n } = e;
     (0, g._3)({
         questId: n.id,
         questContent: t.content,
@@ -719,14 +715,13 @@ function ej(e, t) {
         questContentRowIndex: t.rowIndex,
         questContentCTA: t.ctaContent
     }),
-        !r && eZ(),
         d.Z.dispatch({
             type: 'CONNECTIONS_GRID_MODAL_SHOW',
             onComplete: (e) => (0, f.Z)({ platformType: e }),
             includedPlatformTypes: new Set([C.ABu.XBOX, C.ABu.PLAYSTATION])
         });
 }
-function eW(e, t) {
+function ej(e, t) {
     let { quest: n } = e;
     (0, g._3)({
         questId: n.id,
@@ -734,23 +729,23 @@ function eW(e, t) {
         questContentPosition: t.position,
         questContentCTA: t.ctaContent
     }),
-        eZ();
+        _.Z.open(C.oAB.CONNECTIONS);
 }
-function eK() {
+function eW() {
     return window.location.pathname.startsWith(C.Z5c.QUEST_HOME);
 }
-function ez() {
+function eK() {
     var e;
     let t = (0, a.TH)();
     return (null === (e = (0, a.LX)(t.pathname, C.Z5c.QUEST_HOME)) || void 0 === e ? void 0 : e.isExact) === !0;
 }
-function eq(e) {
+function ez(e) {
     return 'xbox' === e.connected_account_type ? C.ABu.XBOX : C.ABu.PLAYSTATION;
 }
-function eQ(e) {
-    return eq(e) === C.ABu.XBOX ? D.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_XBOX : D.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_PSN;
+function eq(e) {
+    return ez(e) === C.ABu.XBOX ? D.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_XBOX : D.Z.Messages.QUESTS_CONSOLE_EXPIRED_CREDENTIALS_PSN;
 }
-function eX(e) {
+function eQ(e) {
     var t, n, r, i;
     let { quest: a, rewardCode: s, selectedPlatformType: o, sharedQuestFields: l } = e,
         u = eI({ quest: a }),
@@ -764,7 +759,7 @@ function eX(e) {
         _ = null !== (i = null == d ? void 0 : null === (n = d.messages) || void 0 === n ? void 0 : n.redemptionInstructionsByPlatform) && void 0 !== i ? i : l.defaultRewardRedemptionInstructionsByPlatform;
     return null != c ? _[c] : void 0;
 }
-function e$(e) {
+function eX(e) {
     let { isTargetedDisclosure: t, gamePublisher: n, gameTitle: r, isInHouseQuest: i } = e;
     if (i) return t ? D.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_BAR : D.Z.Messages.QUESTS_DISCLOSURE_IN_HOUSE_QUEST_HOME;
     return t
@@ -774,7 +769,7 @@ function e$(e) {
               gameTitle: r
           });
 }
-function eJ(e) {
+function e$(e) {
     let t =
             eT({ quest: e }) ||
             (function (e) {
