@@ -5,6 +5,9 @@ n.d(t, {
     QW: function () {
         return d;
     },
+    U0: function () {
+        return _;
+    },
     a$: function () {
         return c;
     },
@@ -15,7 +18,8 @@ n.d(t, {
         return l;
     }
 }),
-    n(411104);
+    n(411104),
+    n(47120);
 var i = n(823379),
     a = n(128449),
     s = n(731455),
@@ -118,4 +122,22 @@ function u(e) {
         default:
             (0, i.vE)(e);
     }
+}
+function _(e) {
+    return {
+        id: e.id,
+        name: e.name,
+        description: e.description,
+        splash: e.splash,
+        banner: e.banner,
+        icon: e.icon,
+        features: new Set(e.features),
+        presenceCount: e.approximate_presence_count,
+        memberCount: e.approximate_member_count,
+        premiumSubscriptionCount: e.premium_subscription_count,
+        preferredLocale: e.preferred_locale,
+        discoverySplash: e.discovery_splash,
+        emojis: e.emojis,
+        emojiCount: e.emoji_count
+    };
 }
