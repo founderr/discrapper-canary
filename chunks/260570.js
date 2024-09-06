@@ -75,8 +75,23 @@ function L(e) {
             duration: 150
         }
     }));
-    if ((i.useEffect(() => () => Y.stop(), [Y]), !eo && !el)) return null;
-    let eT = (e) => {
+    i.useEffect(() => () => Y.stop(), [Y]);
+    let eT = i.useRef(t);
+    if (
+        (i.useEffect(() => {
+            w &&
+                (null == t || eT.current !== t) &&
+                (null == U ||
+                    U({
+                        interactionType: null,
+                        interactionSourceType: null
+                    })),
+                (eT.current = t);
+        }, [t, U, w]),
+        !eo && !el)
+    )
+        return null;
+    let eS = (e) => {
             var t, n;
             if (!!e_) {
                 if (e) {
@@ -105,7 +120,7 @@ function L(e) {
                 });
             }
         },
-        eS = () =>
+        eg = () =>
             et
                 ? (0, r.jsx)(d.I, {
                       className: ee ? v.statusEmojiInline : v.statusEmojiOnly,
@@ -115,7 +130,7 @@ function L(e) {
                       tooltipDelay: O.vB
                   })
                 : null,
-        eg = () =>
+        eA = () =>
             ee
                 ? (0, r.jsx)(c.Text, {
                       variant: C,
@@ -123,7 +138,7 @@ function L(e) {
                       children: J
                   })
                 : null,
-        eA = () => {
+        eN = () => {
             let e = s()(v.content, {
                 [v.clamp]: j,
                 [v.unclamp]: !j,
@@ -132,22 +147,22 @@ function L(e) {
             return (0, r.jsxs)(o.animated.div, {
                 style: eI,
                 className: e,
-                children: [eS(), eg()]
+                children: [eg(), eA()]
             });
         },
-        eN = () =>
+        eO = () =>
             (0, r.jsxs)('div', {
                 className: s()(v.content, v.clamp, v.placeholderWidth, { [v.panel]: L === O.y0.PANEL }),
                 ref: q,
-                children: [eS(), eg()]
+                children: [eg(), eA()]
             }),
-        eO = () =>
+        eR = () =>
             (0, r.jsxs)('div', {
                 className: s()(v.content, v.unclamp, v.placeholderWidth, v.incorporeal, { [v.panel]: L === O.y0.PANEL }),
                 ref: K,
-                children: [eS(), eg()]
+                children: [eg(), eA()]
             }),
-        eR = () =>
+        ev = () =>
             (0, r.jsxs)('div', {
                 className: v.content,
                 children: [
@@ -162,7 +177,7 @@ function L(e) {
                     })
                 ]
             }),
-        ev = () => {
+        eC = () => {
             var e;
             return el
                 ? R.Z.Messages.CUSTOM_STATUS_ADD_CUSTOM_STATUS_A11Y_LABEL
@@ -171,7 +186,7 @@ function L(e) {
                       status: $
                   });
         },
-        eC = () => {
+        ey = () => {
             H({ action: 'PRESS_ADD_CUSTOM_STATUS' }),
                 null == G || G(),
                 (0, c.openModalLazy)(async () => {
@@ -183,62 +198,62 @@ function L(e) {
                         });
                 });
         },
-        ey = {
+        eD = {
             [v.biteSize]: L === O.y0.BITE_SIZE,
             [v.fullSize]: L === O.y0.FULL_SIZE,
             [v.panel]: L === O.y0.PANEL
         },
-        eD = s()(v.background, { [v.editable]: eu }),
-        eL = { [v.hoisted]: w },
-        eb = s()({
+        eL = s()(v.background, { [v.editable]: eu }),
+        eb = { [v.hoisted]: w },
+        eM = s()({
             [v.statusBubbleShape]: (!ee && et) || !ec,
             [v.statusBubbleSingleLineWithTextShape]: (ec && ee) || el
         }),
-        eM = s()(v.statusBubbleOuter, ey, eb, { [v.statusBubbleOuterAddStatusCursor]: el }),
-        eP = s()(v.statusBubble, eb, {
+        eP = s()(v.statusBubbleOuter, eD, eM, { [v.statusBubbleOuterAddStatusCursor]: el }),
+        eU = s()(v.statusBubble, eM, {
             [v.statusBubbleEmojiOnlyPadding]: en,
             [v.statusBubbleWithTextPadding]: ee || el,
             [v.statusBubbleWithTextMinWidth]: ee,
             [v.statusBubbleCopyStatusCursor]: eo
         }),
-        eU = () => {
+        ew = () => {
             if (et) {
                 let e = null != X.id ? '`' + ':'.concat(X.name, ':') + '`' : p.ZP.translateSurrogatesToInlineEmoji(X.name);
                 return en ? ''.concat(e) : ''.concat(e, ' ').concat($);
             }
             if (!en) return ''.concat($);
         },
-        ew = () =>
+        ex = () =>
             (0, r.jsxs)(c.ClickableContainer, {
-                className: s()(v.visibleContainer, ey, eD, eL),
-                'aria-label': ev(),
-                focusProps: { ringClassName: eb },
-                onClick: el ? eC : void 0,
+                className: s()(v.visibleContainer, eD, eL, eb),
+                'aria-label': eC(),
+                focusProps: { ringClassName: eM },
+                onClick: el ? ey : void 0,
                 onFocus: () => {
-                    eh(!0), eT(!0);
+                    eh(!0), eS(!0);
                 },
                 onBlur: (e) => {
-                    !e.currentTarget.contains(e.relatedTarget) && (eh(!1), eT(!1));
+                    !e.currentTarget.contains(e.relatedTarget) && (eh(!1), eS(!1));
                 },
                 onMouseOver: () => {
-                    H({ action: 'HOVER_CUSTOM_STATUS' }), eh(!0), eT(!0);
+                    H({ action: 'HOVER_CUSTOM_STATUS' }), eh(!0), eS(!0);
                 },
                 onMouseLeave: () => {
-                    !x && (eh(!1), eT(!1));
+                    !x && (eh(!1), eS(!1));
                 },
                 children: [
                     (0, r.jsx)('div', {
-                        className: eM,
+                        className: eP,
                         children: (0, r.jsxs)('span', {
-                            className: eP,
-                            children: [eo && eA(), el && eR()]
+                            className: eU,
+                            children: [eo && eN(), el && ev()]
                         })
                     }),
                     eo &&
                         !x &&
                         (0, r.jsx)(g.Z, {
                             user: a,
-                            sourceDetails: eU(),
+                            sourceDetails: ew(),
                             sourceType: O.n_.STATUS,
                             isVisible: ef,
                             isExpandable: e_,
@@ -247,7 +262,7 @@ function L(e) {
                             setInteractionSent: B,
                             setIsReplyInteraction: F,
                             onClose: () => {
-                                eh(!1), eT(!1);
+                                eh(!1), eS(!1);
                             }
                         }),
                     eu &&
@@ -261,12 +276,12 @@ function L(e) {
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsx)('div', {
-                className: s()(v.invisibleContainer, ey),
+                className: s()(v.invisibleContainer, eD),
                 children: (0, r.jsx)('div', {
-                    className: eM,
+                    className: eP,
                     children: (0, r.jsxs)('span', {
-                        className: eP,
-                        children: [el && eR(), eo && eN(), eo && eO()]
+                        className: eU,
+                        children: [el && ev(), eo && eO(), eo && eR()]
                     })
                 })
             }),
@@ -278,7 +293,7 @@ function L(e) {
                         guildId: I,
                         channelId: T,
                         profileType: L,
-                        sourceDetails: eU(),
+                        sourceDetails: ew(),
                         sourceType: O.n_.STATUS,
                         setPopoutRef: t,
                         modalKey: ep,
@@ -287,7 +302,7 @@ function L(e) {
                         setInteractionSent: B,
                         setIsReplyInteraction: F,
                         onClose: () => {
-                            eh(!1), eT(!1);
+                            eh(!1), eS(!1);
                         }
                     });
                 },
@@ -296,7 +311,7 @@ function L(e) {
                 align: L === O.y0.FULL_SIZE ? 'center' : 'left',
                 spacing: 6,
                 shouldShow: x,
-                children: () => ew()
+                children: () => ex()
             })
         ]
     });
