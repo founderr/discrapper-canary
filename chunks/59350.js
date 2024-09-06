@@ -25,9 +25,9 @@ var l = t(735250),
     I = t(160404),
     b = t(240991),
     E = t(703656),
-    Z = t(484459),
-    v = t(318661),
-    T = t(252532),
+    Z = t(687158),
+    v = t(287008),
+    T = t(484459),
     j = t(271383),
     S = t(430824),
     R = t(306680),
@@ -62,7 +62,7 @@ function ee(e) {
             avatarSrc: s,
             eventHandlers: c,
             isAvatarAnimating: h
-        } = (0, T.w)({
+        } = (0, v.Z)({
             user: i,
             guildId: t.id,
             size: 120
@@ -80,9 +80,9 @@ function ee(e) {
             .map((e) => p[e])
             .orderBy('position', 'desc')
             .value(),
-        I = (0, v.ZP)(i.id, t.id);
+        I = (0, Z.ZP)(i.id, t.id);
     a.useEffect(() => {
-        (0, Z.Z)(i.id, i.getAvatarURL(t.id, (0, _.getAvatarSize)(J)), { guildId: t.id });
+        (0, T.Z)(i.id, i.getAvatarURL(t.id, (0, _.getAvatarSize)(J)), { guildId: t.id });
     }, []);
     let E = (0, b.YP)(null == I ? void 0 : I.bio),
         R = L.ZP.getEnableHardwareAcceleration() ? _.AnimatedAvatar : _.Avatar;

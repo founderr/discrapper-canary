@@ -35,8 +35,8 @@ let s = o.n,
     O = 'Description',
     f = 'Your Name',
     S = 'Name',
-    D = 'Thank you for your report!',
-    L = '(required)',
+    L = 'Thank you for your report!',
+    D = '(required)',
     h = 'Add a screenshot',
     C = 'Remove screenshot',
     g = (e, t = { includeReplay: !0 }) => {
@@ -163,14 +163,14 @@ let b =
         emailLabel: j = N,
         emailPlaceholder: $ = d,
         formTitle: q = T,
-        isRequiredLabel: z = L,
+        isRequiredLabel: z = D,
         messageLabel: J = O,
         messagePlaceholder: Q = p,
         nameLabel: Z = S,
         namePlaceholder: ee = f,
         removeScreenshotButtonLabel: et = C,
         submitButtonLabel: er = R,
-        successMessageText: en = D,
+        successMessageText: en = L,
         triggerLabel: ea = u,
         triggerAriaLabel: eo = '',
         onFormOpen: ei,
@@ -710,8 +710,8 @@ function eE(e, t, r, n, a, o, i, _, E, s) {
         O,
         f,
         S,
-        D,
         L,
+        D,
         h = t.type;
     if (void 0 !== t.constructor) return null;
     128 & r.__u && ((E = !!(32 & r.__u)), (o = [(_ = t.__e = r.__e)])), (c = H.__b) && c(t);
@@ -742,12 +742,12 @@ function eE(e, t, r, n, a, o, i, _, E, s) {
                         });
             }
             if (((I.context = p), (I.props = d), (I.__P = e), (I.__e = !1), (f = H.__r), (S = 0), 'prototype' in h && h.prototype.render)) {
-                for (I.state = I.__s, I.__d = !1, f && f(t), c = I.render(I.props, I.state, I.context), D = 0; D < I._sb.length; D++) I.__h.push(I._sb[D]);
+                for (I.state = I.__s, I.__d = !1, f && f(t), c = I.render(I.props, I.state, I.context), L = 0; L < I._sb.length; L++) I.__h.push(I._sb[L]);
                 I._sb = [];
             } else
                 do (I.__d = !1), f && f(t), (c = I.render(I.props, I.state, I.context)), (I.state = I.__s);
                 while (I.__d && ++S < 25);
-            (I.state = I.__s), null != I.getChildContext && (n = $($({}, n), I.getChildContext())), u || null == I.getSnapshotBeforeUpdate || (A = I.getSnapshotBeforeUpdate(l, R)), en(e, j((L = null != c && c.type === Q && null == c.key ? c.props.children : c)) ? L : [L], t, r, n, a, o, i, _, E, s), (I.base = t.__e), (t.__u &= -161), I.__h.length && i.push(I), T && (I.__E = I.__ = null);
+            (I.state = I.__s), null != I.getChildContext && (n = $($({}, n), I.getChildContext())), u || null == I.getSnapshotBeforeUpdate || (A = I.getSnapshotBeforeUpdate(l, R)), en(e, j((D = null != c && c.type === Q && null == c.key ? c.props.children : c)) ? D : [D], t, r, n, a, o, i, _, E, s), (I.base = t.__e), (t.__u &= -161), I.__h.length && i.push(I), T && (I.__E = I.__ = null);
         } catch (e) {
             (t.__v = null), E || null != o ? ((t.__e = _), (t.__u |= E ? 160 : 32), (o[o.indexOf(_)] = null)) : ((t.__e = r.__e), (t.__k = r.__k)), H.__e(e, t, r);
         }
@@ -866,8 +866,8 @@ var el,
     eO = H,
     ef = eO.__b,
     eS = eO.__r,
-    eD = eO.diffed,
-    eL = eO.__c,
+    eL = eO.diffed,
+    eD = eO.__c,
     eh = eO.unmount,
     eC = eO.__;
 function eg(e, t) {
@@ -980,7 +980,7 @@ function ey() {
             (eA = eR);
     }),
     (eO.diffed = function (e) {
-        eD && eD(e);
+        eL && eL(e);
         var t = e.__c;
         t &&
             t.__H &&
@@ -1017,7 +1017,7 @@ function ey() {
                     eO.__e(r, e.__v);
             }
         }),
-            eL && eL(e, t);
+            eD && eD(e, t);
     }),
     (eO.unmount = function (e) {
         eh && eh(e);
@@ -1185,7 +1185,7 @@ function ex(e, t) {
     return 'string' == typeof r ? r.trim() : '';
 }
 function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSubmit: a, onSubmitSuccess: o, onSubmitError: i, showEmail: E, showName: s, screenshotInput: c }) {
-    let { tags: I, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: l, cancelButtonLabel: R, emailLabel: A, emailPlaceholder: T, isEmailRequired: d, isNameRequired: N, messageLabel: p, messagePlaceholder: O, nameLabel: f, namePlaceholder: S, submitButtonLabel: D, isRequiredLabel: L } = e,
+    let { tags: I, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: l, cancelButtonLabel: R, emailLabel: A, emailPlaceholder: T, isEmailRequired: d, isNameRequired: N, messageLabel: p, messagePlaceholder: O, nameLabel: f, namePlaceholder: S, submitButtonLabel: L, isRequiredLabel: D } = e,
         [h, C] = eM(null),
         [g, P] = eM(!1),
         m = c && c.input,
@@ -1310,7 +1310,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                           },
                           z(eW, {
                               label: f,
-                              isRequiredLabel: L,
+                              isRequiredLabel: D,
                               isRequired: N,
                               __self: this,
                               __source: {
@@ -1358,7 +1358,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                           },
                           z(eW, {
                               label: A,
-                              isRequiredLabel: L,
+                              isRequiredLabel: D,
                               isRequired: d,
                               __self: this,
                               __source: {
@@ -1405,7 +1405,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                     },
                     z(eW, {
                         label: p,
-                        isRequiredLabel: L,
+                        isRequiredLabel: D,
                         isRequired: !0,
                         __self: this,
                         __source: {
@@ -1494,7 +1494,7 @@ function eF({ options: e, defaultEmail: t, defaultName: r, onFormClose: n, onSub
                             lineNumber: 217
                         }
                     },
-                    D
+                    L
                 ),
                 z(
                     'button',
@@ -2312,7 +2312,7 @@ ${eQ}
                                     },
                                 []
                             ),
-                            D = t.useRef({
+                            L = t.useRef({
                                 initialX: 0,
                                 initialY: 0
                             });
@@ -2385,23 +2385,23 @@ ${eQ}
                                         e('canvas', {
                                             onMouseDown: function (e) {
                                                 if (N) return;
-                                                D.current = {
+                                                L.current = {
                                                     initialX: e.clientX,
                                                     initialY: e.clientY
                                                 };
                                                 let t = (e) => {
                                                         let t = l.current;
                                                         if (!t) return;
-                                                        let r = e.clientX - D.current.initialX,
-                                                            n = e.clientY - D.current.initialY;
+                                                        let r = e.clientX - L.current.initialX,
+                                                            n = e.clientY - L.current.initialY;
                                                         A((a) => {
                                                             let o = Math.max(0, Math.min(a.startX + r, t.width / e3 - (a.endX - a.startX))),
                                                                 i = Math.max(0, Math.min(a.startY + n, t.height / e3 - (a.endY - a.startY))),
                                                                 _ = o + (a.endX - a.startX),
                                                                 E = i + (a.endY - a.startY);
                                                             return (
-                                                                (D.current.initialX = e.clientX),
-                                                                (D.current.initialY = e.clientY),
+                                                                (L.current.initialX = e.clientX),
+                                                                (L.current.initialY = e.clientY),
                                                                 {
                                                                     startX: o,
                                                                     startY: i,

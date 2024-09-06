@@ -121,10 +121,10 @@ r.r(t),
             return S.Q;
         },
         feedbackIntegration: function () {
-            return D.r;
+            return L.r;
         },
         feedbackSyncIntegration: function () {
-            return D.r;
+            return L.r;
         },
         flush: function () {
             return n.yl;
@@ -154,7 +154,7 @@ r.r(t),
             return c.nV;
         },
         getFeedback: function () {
-            return L.qm;
+            return D.qm;
         },
         getGlobalScope: function () {
             return n.lW;
@@ -247,7 +247,7 @@ r.r(t),
             return n.vU;
         },
         sendFeedback: function () {
-            return L.fA;
+            return D.fA;
         },
         sessionTimingIntegration: function () {
             return n.rE;
@@ -351,8 +351,8 @@ var n = r(148503),
     O = r(616456),
     f = r(778600),
     S = r(780850),
-    D = r(226483),
-    L = r(185461),
+    L = r(226483),
+    D = r(185461),
     h = r(166800),
     C = r(799033),
     g = r(325124),

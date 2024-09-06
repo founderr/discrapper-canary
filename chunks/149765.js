@@ -12,7 +12,7 @@ r.d(t, {
         return S;
     },
     Od: function () {
-        return D;
+        return L;
     },
     U_: function () {
         return d;
@@ -27,7 +27,7 @@ r.d(t, {
         return R;
     },
     r0: function () {
-        return L;
+        return D;
     },
     ug: function () {
         return h;
@@ -229,10 +229,10 @@ function f(e, t) {
 function S(e, t) {
     return t === l ? e : A(e, t);
 }
-function D(e, t) {
+function L(e, t) {
     return t === l ? e : T(e, R(e, t));
 }
-let L = s
+let D = s
         ? function (e) {
               return BigInt(1) << BigInt(e);
           }

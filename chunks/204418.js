@@ -1,7 +1,7 @@
 var r = n(735250);
 n(470079);
 var i = n(481060),
-    a = n(204197),
+    a = n(518950),
     s = n(998502),
     o = n(689938);
 let l = s.ZP.getEnableHardwareAcceleration() ? i.AnimatedAvatar : i.Avatar;

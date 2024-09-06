@@ -23,8 +23,8 @@ var i = n(735250),
     f = n(226192),
     p = n(36459),
     g = n(434404),
-    S = n(347475),
-    A = n(204197),
+    S = n(518950),
+    A = n(347475),
     R = n(592125),
     O = n(271383),
     x = n(594174),
@@ -123,7 +123,7 @@ function F(e) {
             avatarSrc: u,
             avatarDecorationSrc: d,
             eventHandlers: _
-        } = (0, A.Z)({
+        } = (0, S.Z)({
             user: r,
             guildId: l,
             size: 12
@@ -162,7 +162,7 @@ function F(e) {
                                     renderPopout: function (e) {
                                         return null == r
                                             ? (0, i.jsx)(i.Fragment, {})
-                                            : (0, i.jsx)(S.Z, {
+                                            : (0, i.jsx)(A.Z, {
                                                   ...e,
                                                   userId: r.id,
                                                   user: r,

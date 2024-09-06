@@ -23,8 +23,8 @@ var a = t(735250),
     R = t(565138),
     f = t(822179),
     M = t(419922),
-    g = t(484459),
-    O = t(318661),
+    g = t(687158),
+    O = t(484459),
     h = t(813549),
     P = t(867176),
     j = t(502762),
@@ -120,7 +120,7 @@ function e_(e) {
 }
 function ed(e) {
     let { currentUser: s, premiumType: t, onClose: n } = e,
-        i = (0, O.ZP)(s.id),
+        i = (0, g.ZP)(s.id),
         r = (0, d.e7)([S.Z], () => S.Z.useReducedMotion),
         l = t === w.p9.TIER_1,
         o = (0, _.EQ)(null == i ? void 0 : i.premiumType)
@@ -484,7 +484,7 @@ s.Z = function (e) {
             return o()(null != e, 'ProfileItem: currentUser cannot be undefined'), e;
         });
     n.useEffect(() => {
-        (0, g.Z)(S.id, S.getAvatarURL(null, 80));
+        (0, O.Z)(S.id, S.getAvatarURL(null, 80));
     }, [S]);
     let A = null != C && !I;
     return (n.useEffect(() => {

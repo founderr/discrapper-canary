@@ -18,8 +18,8 @@ var n = r(147018),
     O = T.BUGGY_SAFARI_ITERATORS,
     f = R('iterator'),
     S = 'keys',
-    D = 'values',
-    L = 'entries',
+    L = 'values',
+    D = 'entries',
     h = function () {
         return this;
     };
@@ -33,8 +33,8 @@ e.exports = function (e, t, r, i, R, T, C) {
             if (!O && e && e in y) return y[e];
             switch (e) {
                 case S:
-                case D:
                 case L:
+                case D:
                     return function () {
                         return new r(this, e);
                     };
@@ -52,11 +52,11 @@ e.exports = function (e, t, r, i, R, T, C) {
     if (
         (B && (g = s(B.call(new e()))) !== Object.prototype && g.next && (!o && s(g) !== p && (c ? c(g, p) : !_(g[f]) && l(g, f, h)), I(g, U, !0, !0), o && (A[U] = h)),
         d &&
-            R === D &&
+            R === L &&
             v &&
-            v.name !== D &&
+            v.name !== L &&
             (!o && N
-                ? u(y, 'name', D)
+                ? u(y, 'name', L)
                 : ((G = !0),
                   (b = function () {
                       return a(v, this);
@@ -65,9 +65,9 @@ e.exports = function (e, t, r, i, R, T, C) {
     ) {
         if (
             ((M = {
-                values: m(D),
+                values: m(L),
                 keys: T ? b : m(S),
-                entries: m(L)
+                entries: m(D)
             }),
             C)
         )

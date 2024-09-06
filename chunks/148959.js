@@ -56,7 +56,7 @@ class g extends d.Z {
         } else this.update();
     }
     setGoLiveStreamDowngraded(e) {
-        if (!(!this.senderSupportsSimulcast() || this.isOneToOneCall()) && this.debugQualityOverride === p.Z.NO_OVERRIDE && e !== this.downgraded) this.isDowngradeChangeAllowed(e) && ((this.downgraded = e), (this.lastDowngradeChangeTime = Date.now()), this.update());
+        if (!(!this.senderSupportsSimulcast() || this.isOneToOneCall()) && this.debugQualityOverride === p.Z.NO_OVERRIDE && e !== this.downgraded) this.isDowngradeChangeAllowed(e) && (this.logger.info('Setting downgraded to '.concat(e)), (this.downgraded = e), (this.lastDowngradeChangeTime = Date.now()), this.update());
     }
     isDowngraded() {
         return this.downgraded;
@@ -80,7 +80,7 @@ class g extends d.Z {
         return this.videoStreams.length > 1;
     }
     updateCallUserIds(e) {
-        e.delete(E.default.getId()), (this.otherUsers = e), this.isOneToOneCall() && this.downgraded && this.update();
+        e.delete(E.default.getId()), (this.otherUsers = e), this.isOneToOneCall() && this.downgraded && (this.logger.info('Call became 1:1 while downgraded, requesting HQ'), this.update());
     }
     onIncomingVideoEnabled(e) {
         this.incomingVideoEnabled !== e && ((this.incomingVideoEnabled = e), this.update());
@@ -96,16 +96,16 @@ class g extends d.Z {
         }
         switch (this.switchState) {
             case 0:
-                S(-1 === this.pendingSSRC, 'Ready state should not have a pendingSSRC'), this.isReceiving() && this.receivingLQ() && 100 === e ? ((this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC), (this.switchState = 2), this.requestBoth()) : ((this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC), (this.switchState = 1), 100 === e ? this.requestHQ() : this.requestLQ());
+                S(-1 === this.pendingSSRC, 'Ready state should not have a pendingSSRC'), this.isReceiving() && this.receivingLQ() && 100 === e ? (this.logger.info('Starting seamless transition from LQ to HQ (ssrc '.concat(this.lqSSRC, ' -> ').concat(this.hqSSRC, ')')), (this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC), (this.switchState = 2), this.requestBoth()) : (this.logger.info('Starting non-seamless transition to '.concat(100 === e ? 'HQ' : 'LQ', ' (ssrc ').concat(100 === e ? this.hqSSRC : this.lqSSRC, ')')), (this.pendingSSRC = 100 === e ? this.hqSSRC : this.lqSSRC), (this.switchState = 1), 100 === e ? this.requestHQ() : this.requestLQ());
                 break;
             case 2:
-                S(-1 !== this.pendingSSRC, 'PendingSeamless state should have a pendingSSRC'), 60 === e && this.pendingHQ() ? ((this.switchState = 0), (this.pendingSSRC = -1), this.requestLQ()) : 100 === e && this.pendingLQ() && ((this.switchState = 0), (this.pendingSSRC = -1), this.requestHQ());
+                S(-1 !== this.pendingSSRC, 'PendingSeamless state should have a pendingSSRC'), 60 === e && this.pendingHQ() ? (this.logger.info('Cancelling seamless transition from LQ to HQ, re-requesting LQ (ssrc '.concat(this.lqSSRC, ')')), (this.switchState = 0), (this.pendingSSRC = -1), this.requestLQ()) : 100 === e && this.pendingLQ() && (this.logger.info('Cancelling seamless transition from HQ to LQ, re-requesting HQ (ssrc '.concat(this.hqSSRC, ')')), (this.switchState = 0), (this.pendingSSRC = -1), this.requestHQ());
                 break;
             case 1:
-                S(-1 !== this.pendingSSRC, 'Pending state should have a pendingSSRC'), 60 === e && this.pendingHQ() ? ((this.pendingSSRC = this.lqSSRC), this.requestLQ()) : 100 === e && this.pendingLQ() && ((this.pendingSSRC = this.hqSSRC), this.requestHQ());
+                S(-1 !== this.pendingSSRC, 'Pending state should have a pendingSSRC'), 60 === e && this.pendingHQ() ? (this.logger.info('Cancelling seamless transition from LQ to HQ, re-requesting LQ (ssrc '.concat(this.lqSSRC, ')')), (this.pendingSSRC = this.lqSSRC), this.requestLQ()) : 100 === e && this.pendingLQ() && (this.logger.info('Cancelling seamless transition from HQ to LQ, re-requesting HQ (ssrc '.concat(this.hqSSRC, ')')), (this.pendingSSRC = this.hqSSRC), this.requestHQ());
                 break;
             case 3:
-                S(this.isReceiving(), 'Should be receiving a stream in Finalizing state'), 100 === e ? this.requestHQ() : 60 === e && this.requestLQ(), (this.switchState = 0), (this.pendingSSRC = -1);
+                S(this.isReceiving(), 'Should be receiving a stream in Finalizing state'), this.logger.info('Finalizing seamless transition to '.concat(100 === e ? 'HQ' : 'LQ')), 100 === e ? this.requestHQ() : 60 === e && this.requestLQ(), (this.switchState = 0), (this.pendingSSRC = -1);
         }
     }
     directUpdate() {
@@ -114,7 +114,7 @@ class g extends d.Z {
             this.reset(), this.stopStreams();
             return;
         }
-        0 === this.switchState ? (S(-1 === this.pendingSSRC, 'Ready state should not have a pendingSSRC'), (this.switchState = 1), 60 === e ? ((this.pendingSSRC = this.lqSSRC), this.requestLQ()) : ((this.pendingSSRC = this.hqSSRC), this.requestHQ())) : 1 === this.switchState ? (S(-1 !== this.pendingSSRC, 'Pending state should have a pendingSSRC'), 60 === e && this.pendingHQ() ? this.requestLQ() : 100 === e && this.pendingLQ() ? this.requestHQ() : ((this.pendingSSRC = -1), (this.switchState = 0))) : S(!1, 'Direct update should not be called when switchState is not Ready or Pending');
+        0 === this.switchState ? (S(-1 === this.pendingSSRC, 'Ready state should not have a pendingSSRC'), this.logger.info('Starting non-seamless transition to '.concat(100 === e ? 'HQ' : 'LQ', ' (ssrc ').concat(100 === e ? this.hqSSRC : this.lqSSRC, ')')), (this.switchState = 1), 60 === e ? ((this.pendingSSRC = this.lqSSRC), this.requestLQ()) : ((this.pendingSSRC = this.hqSSRC), this.requestHQ())) : 1 === this.switchState ? (S(-1 !== this.pendingSSRC, 'Pending state should have a pendingSSRC'), 60 === e && this.pendingHQ() ? this.requestLQ() : 100 === e && this.pendingLQ() ? this.requestHQ() : ((this.pendingSSRC = -1), (this.switchState = 0))) : S(!1, 'Direct update should not be called when switchState is not Ready or Pending');
     }
     singleCastUpdate() {
         S(1 === this.videoStreams.length, 'singleCastUpdate should only be called when there is exactly one video stream'), S(0 === this.switchState, 'Switch state should not be set for non-simulcast streams'), S(-1 === this.pendingSSRC, 'Pending SSRC should not be set for non-simulcast streams'), this.incomingVideoEnabled ? this.requestDefaultStream() : this.stopDefaultStream();
@@ -166,7 +166,7 @@ class g extends d.Z {
         let t = [this.lqSSRC, this.hqSSRC];
         this.request(e, t),
             setTimeout(() => {
-                2 === this.switchState && (this.reset(), this.update());
+                2 === this.switchState && (this.logger.warn('Seamless transition timeout, forcing switch'), this.reset(), this.update());
             }, 2000);
     }
     requestHQ() {

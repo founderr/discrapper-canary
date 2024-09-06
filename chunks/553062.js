@@ -29,9 +29,9 @@ function A(e, t = {}) {
         d = 'externalFinish',
         N = !t.disableAutoFinish,
         p = [],
-        { idleTimeout: O = R.idleTimeout, finalTimeout: f = R.finalTimeout, childSpanTimeout: S = R.childSpanTimeout, beforeSpanEnd: D } = t,
-        L = (0, o.s3)();
-    if (!L || !(0, E.z)()) return new I.b();
+        { idleTimeout: O = R.idleTimeout, finalTimeout: f = R.finalTimeout, childSpanTimeout: S = R.childSpanTimeout, beforeSpanEnd: L } = t,
+        D = (0, o.s3)();
+    if (!D || !(0, E.z)()) return new I.b();
     let h = (0, o.nZ)(),
         C = (0, c.HN)(),
         g = (function (e) {
@@ -54,7 +54,7 @@ function A(e, t = {}) {
     }
     g.end = new Proxy(g.end, {
         apply(e, t, r) {
-            D && D(g);
+            L && L(g);
             let [a, ...o] = r,
                 i = a || (0, n.ph)(),
                 _ = (0, c.$k)(i),
@@ -96,7 +96,7 @@ function A(e, t = {}) {
     }
     return (
         p.push(
-            L.on('spanStart', (e) => {
+            D.on('spanStart', (e) => {
                 if (!T && e !== g && !(0, c.XU)(e).timestamp) {
                     if ((0, c.Dp)(g).includes(e)) {
                         var t;
@@ -106,13 +106,13 @@ function A(e, t = {}) {
             })
         ),
         p.push(
-            L.on('spanEnd', (e) => {
+            D.on('spanEnd', (e) => {
                 var t;
                 if (!T) (t = e.spanContext().spanId), A.has(t) && A.delete(t), 0 === A.size && P((0, n.ph)() + O / 1000);
             })
         ),
         p.push(
-            L.on('idleSpanEnableAutoFinish', (e) => {
+            D.on('idleSpanEnableAutoFinish', (e) => {
                 e === g && ((N = !0), P(), A.size && m());
             })
         ),

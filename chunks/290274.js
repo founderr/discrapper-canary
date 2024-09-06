@@ -11,7 +11,7 @@ var r = n(735250),
     o = n(481060),
     l = n(100527),
     u = n(906732),
-    c = n(318134),
+    c = n(960870),
     d = n(848966),
     _ = n(689938),
     E = n(139665);
@@ -19,7 +19,7 @@ function f(e) {
     let { user: t, activity: n, entry: a, display: f, className: h, onSelect: p, onClose: I, onRequestOpen: m } = e,
         [T, S] = i.useState(!1),
         { analyticsLocations: g } = (0, u.ZP)(l.Z.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        { onAction: A } = (0, c.Z)({
+        A = (0, c.Z)({
             display: f,
             user: t,
             activity: n,

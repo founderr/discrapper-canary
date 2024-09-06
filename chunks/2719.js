@@ -23,11 +23,11 @@ var n = t(735250),
     C = t(918505),
     A = t(332473),
     g = t(921801),
-    h = t(290421),
-    O = t(318661),
-    p = t(184325),
-    R = t(867176),
-    x = t(204197),
+    h = t(485341),
+    O = t(687158),
+    p = t(518950),
+    R = t(184325),
+    x = t(867176),
     f = t(25990),
     M = t(594174),
     D = t(572004),
@@ -445,14 +445,14 @@ function z() {
         i = b.co.useSetting(),
         r = (0, c.e7)([f.Z], () => f.Z.getErrors()),
         o = null == r ? void 0 : null === (e = r.avatar) || void 0 === e ? void 0 : e[0],
-        { avatarSrc: d, avatarDecorationSrc: u } = (0, x.Z)({
+        { avatarSrc: d, avatarDecorationSrc: u } = (0, p.Z)({
             user: s,
             size: _.AvatarSizes.SIZE_80
         });
     return (0, n.jsxs)('div', {
         className: F.accountProfileCard,
         children: [
-            (0, n.jsx)(R.b, {
+            (0, n.jsx)(x.b, {
                 user: s,
                 displayProfile: t,
                 avatarSize: _.AvatarSizes.SIZE_80,
@@ -486,7 +486,7 @@ function z() {
                                     (0, n.jsx)(W, { user: s })
                                 ]
                             }),
-                            (0, n.jsx)(p.Z, {
+                            (0, n.jsx)(R.Z, {
                                 badges: a,
                                 className: F.badgeList,
                                 badgeClassName: F.badge

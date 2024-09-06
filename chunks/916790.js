@@ -191,7 +191,7 @@ function k() {
     let e = a.useRef(null),
         [t, n] = a.useState(''),
         l = (function (e) {
-            let [t, n] = a.useState([...e.logs]),
+            let [t, n] = a.useState(e.logs),
                 r = a.useCallback(() => n([...e.logs]), [e]);
             return (
                 a.useEffect(
@@ -218,7 +218,7 @@ function k() {
         [x, f] = a.useState(),
         g = a.useRef(null),
         p = a.useCallback(
-            (0, o.debounce)(
+            (0, o.throttle)(
                 async (e, t) => {
                     if ('' === e) {
                         h(t);
@@ -236,7 +236,7 @@ function k() {
                     );
                     if (null != g.current) h(n);
                 },
-                100,
+                300,
                 { leading: !0 }
             ),
             []
@@ -247,7 +247,7 @@ function k() {
         }, [t, p, s]),
         a.useEffect(() => {
             g.current = null;
-        }, [t, s]),
+        }, []),
         (0, r.jsxs)('div', {
             ref: e,
             className: i()(j.panel, C.panel),
@@ -264,7 +264,7 @@ function k() {
                 }),
                 (0, r.jsx)(v.Z, {
                     columns: w,
-                    data: c,
+                    data: t.trim().length > 0 ? c : s,
                     selectedRowKey: null == x ? void 0 : x.id.toString(),
                     onClickRow: (e) => f(e.actionLog)
                 }),

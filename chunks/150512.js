@@ -14,9 +14,9 @@ var a = l(735250),
     u = l(410030),
     h = l(607070),
     m = l(603368),
-    g = l(484459),
-    C = l(318661),
-    x = l(721987),
+    g = l(687158),
+    C = l(576635),
+    x = l(484459),
     f = l(502762),
     I = l(430824),
     v = l(594174),
@@ -30,8 +30,8 @@ function p(e) {
         b = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
         E = (0, d.e7)([v.default], () => v.default.getUser(null == l ? void 0 : l.authorIds[0])),
         M = (0, d.e7)([v.default], () => v.default.getCurrentUser()),
-        A = (0, C.ZP)(null == E ? void 0 : E.id, n),
-        { theme: S, primaryColor: T } = (0, x.Z)({
+        A = (0, g.ZP)(null == E ? void 0 : E.id, n),
+        { theme: S, primaryColor: T } = (0, C.Z)({
             user: E,
             displayProfile: A
         }),
@@ -45,7 +45,7 @@ function p(e) {
         c.Z.requestMembersById(n, k);
     }, [n, k]),
         i.useEffect(() => {
-            null != E && (0, g.Z)(E.id, E.getAvatarURL(n, 48), { guildId: n });
+            null != E && (0, x.Z)(E.id, E.getAvatarURL(n, 48), { guildId: n });
         }, [E, n]);
     let y = (0, Z._T)(M),
         B = null != T ? (0, s.br)(T, 1) : P,

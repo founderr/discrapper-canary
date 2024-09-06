@@ -9,11 +9,11 @@ var r = a(120356),
     s = a.n(r),
     o = a(481060),
     l = a(680295),
-    t = a(318661),
-    u = a(721987),
-    c = a(438163),
-    d = a(502762),
-    A = a(204197),
+    t = a(687158),
+    u = a(576635),
+    c = a(518950),
+    d = a(438163),
+    A = a(502762),
     E = a(654904),
     _ = a(450734),
     I = a(225089),
@@ -25,7 +25,7 @@ var r = a(120356),
 function C(e) {
     let { user: n, guild: a, canUsePremiumCustomization: r, onUpsellClick: C, pendingBanner: L, pendingBio: T, pendingPronouns: R, pendingAvatar: f, pendingAvatarDecoration: M, pendingNickname: S, pendingGlobalName: Z, pendingThemeColors: g, pendingProfileEffectId: h, avatarClassName: U, containerClassName: x, isTryItOutFlow: y = !1, disabledInputs: j = !1, hideCustomStatus: O = !1, hideBioSection: B = !1, hideMessageInput: b = !0, hideExampleButton: w = !1 } = e,
         D = (0, t.ZP)(n.id, null == a ? void 0 : a.id),
-        { avatarSrc: k, avatarDecorationSrc: F } = (0, A.Z)({
+        { avatarSrc: k, avatarDecorationSrc: F } = (0, c.Z)({
             user: n,
             guildId: null == a ? void 0 : a.id,
             avatarDecorationOverride: M,
@@ -43,7 +43,7 @@ function C(e) {
             pendingThemeColors: g,
             isPreview: r
         });
-    return (0, i.jsxs)(d.Z, {
+    return (0, i.jsxs)(A.Z, {
         user: n,
         displayProfile: D,
         profileType: N.y0.BITE_SIZE,
@@ -80,7 +80,7 @@ function C(e) {
                         onUpsellClick: () => (null == C ? void 0 : C({ object: v.qAy.AVATAR }))
                     }),
                     !O &&
-                        (0, i.jsx)(c.Z, {
+                        (0, i.jsx)(d.Z, {
                             user: n,
                             profileType: N.y0.BITE_SIZE
                         })

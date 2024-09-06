@@ -214,8 +214,8 @@ class S {
     _processEvent(e, t, r) {
         let n = this.getOptions(),
             { sampleRate: a } = n,
-            o = L(e),
-            E = D(e),
+            o = D(e),
+            E = L(e),
             s = e.type || 'error',
             I = `before send for type \`${s}\``,
             u = void 0 === a ? void 0 : (0, p.o)(a);
@@ -244,8 +244,8 @@ class S {
                       })(
                           (function (e, t, r, n) {
                               let { beforeSend: a, beforeSendTransaction: o, beforeSendSpan: i } = t;
-                              if (D(r) && a) return a(r, n);
-                              if (L(r)) {
+                              if (L(r) && a) return a(r, n);
+                              if (D(r)) {
                                   if (r.spans && i) {
                                       let t = [];
                                       for (let n of r.spans) {
@@ -346,9 +346,9 @@ Reason: ${e}`))
         this.sendEnvelope(t);
     }
 }
-function D(e) {
+function L(e) {
     return void 0 === e.type;
 }
-function L(e) {
+function D(e) {
     return 'transaction' === e.type;
 }

@@ -17,8 +17,8 @@ var i = n(735250),
     m = n(100527),
     p = n(906732),
     _ = n(527379),
-    f = n(184301),
-    E = n(318661),
+    f = n(687158),
+    E = n(184301),
     g = n(502762),
     C = n(271383),
     I = n(594174),
@@ -35,7 +35,7 @@ function N(e) {
         j = (0, u.Z)(R),
         O = s.useRef(null),
         { analyticsLocations: y } = (0, p.ZP)(m.Z.GUILD_MEMBER_MOD_VIEW),
-        D = (0, E.ZP)(t, n),
+        D = (0, f.ZP)(t, n),
         k = (0, d.ZP)();
     return (s.useEffect(() => {
         !M && a();
@@ -61,7 +61,7 @@ function N(e) {
             let e = [
                 c.Z.requestMembersById(n, [t]),
                 (0, _.nb)(n, [t]),
-                (0, f.Z)(t, void 0, {
+                (0, E.Z)(t, void 0, {
                     guildId: n,
                     dispatchWait: !0
                 })
