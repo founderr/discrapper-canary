@@ -1,8 +1,9 @@
-n.d(t, {
-    e: function () {
-        return E;
-    }
-}),
+n.r(t),
+    n.d(t, {
+        Anchor: function () {
+            return E;
+        }
+    }),
     n(411104);
 var r = n(735250),
     i = n(470079),
@@ -15,9 +16,9 @@ var r = n(735250),
     d = n(645499),
     _ = n(685580);
 function E(e) {
-    let { href: t, onClick: n, className: a, children: E, rel: f, target: h, useDefaultUnderlineStyles: p = !0, title: I, style: m, focusProps: T, ...g } = e;
+    let { href: t, onClick: n, className: a, children: E, rel: f, target: h, useDefaultUnderlineStyles: p = !0, title: I, style: m, focusProps: T, ...S } = e;
     null != t && null == n && (n = c.X.getDefaultLinkInterceptor(t));
-    let S = i.useContext(o.g),
+    let g = i.useContext(o.g),
         A = {
             className: s()(_.anchor, { [_.anchorUnderlineOnHover]: p }, a),
             href: t,
@@ -27,10 +28,10 @@ function E(e) {
             title: null != I ? I : void 0,
             style: null != m ? m : void 0
         };
-    return (null != t && !(0, d.B)(t) && ((A.rel = 'noreferrer noopener'), (A.target = '_blank')), S && delete A.href, null != n)
+    return (null != t && !(0, d.B)(t) && ((A.rel = 'noreferrer noopener'), (A.target = '_blank')), g && delete A.href, null != n)
         ? (0, r.jsx)(l.P, {
               tag: 'a',
-              ...g,
+              ...S,
               ...A,
               onClick: n,
               focusProps: T,
@@ -39,7 +40,7 @@ function E(e) {
         : (0, r.jsx)(u.t, {
               ...T,
               children: (0, r.jsx)('a', {
-                  ...g,
+                  ...S,
                   ...A,
                   children: E
               })
