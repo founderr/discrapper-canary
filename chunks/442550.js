@@ -1,6 +1,6 @@
 n.d(t, {
     f: function () {
-        return d;
+        return _;
     }
 }),
     n(47120);
@@ -8,51 +8,52 @@ var r = n(735250),
     i = n(470079),
     a = n(120356),
     s = n.n(a),
-    o = n(481060),
-    l = n(410030),
-    u = n(689938),
-    c = n(668850);
-function d(e) {
-    let { src: t, size: n, constrain: a = 'height', className: d, alt: _, fallbackSrc: E, 'aria-hidden': f, showTooltip: h = !1 } = e,
-        p = (0, l.ZP)(),
-        I = ''.concat(n, 'px'),
-        [m, T] = i.useState(!1),
-        [S, g] = i.useState(!1),
-        A = null == E || S;
-    if (null == t || (m && A))
-        return (0, r.jsx)(o.UnknownGameIcon, {
+    o = n(780384),
+    l = n(481060),
+    u = n(410030),
+    c = n(689938),
+    d = n(668850);
+function _(e) {
+    let { src: t, size: n, constrain: a = 'height', className: _, alt: E, fallbackSrc: f, 'aria-hidden': h, showTooltip: p = !1 } = e,
+        I = (0, u.ZP)(),
+        m = ''.concat(n, 'px'),
+        [T, S] = i.useState(!1),
+        [g, A] = i.useState(!1),
+        N = null == f || g;
+    if (null == t || (T && N))
+        return (0, r.jsx)(l.UnknownGameIcon, {
             size: 'custom',
             width: '100%',
             height: '100%',
-            color: 'dark' === p ? 'white' : 'black',
-            style: { maxWidth: I },
-            className: s()(c.contentImage, d)
+            color: (0, o.wj)(I) ? l.tokens.colors.WHITE : l.tokens.colors.BLACK,
+            style: { maxWidth: m },
+            className: s()(d.contentImage, _)
         });
-    let N =
+    let O =
         'height' === a
             ? {
-                  maxWidth: I,
-                  height: I
+                  maxWidth: m,
+                  height: m
               }
             : {
-                  maxWidth: I,
-                  minHeight: I
+                  maxWidth: m,
+                  minHeight: m
               };
     return (0, r.jsx)(
-        o.Tooltip,
+        l.Tooltip,
         {
-            'aria-label': _,
-            text: _,
-            shouldShow: h,
+            'aria-label': E,
+            text: E,
+            shouldShow: p,
             children: (e) =>
                 (0, r.jsx)('img', {
                     ...e,
-                    style: N,
-                    className: s()(c.contentImage, d),
-                    src: m && null != E ? E : t,
-                    'aria-hidden': f,
-                    alt: null != _ ? _ : f ? void 0 : u.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
-                    onError: (e) => (m ? g(!0) : T(!0))
+                    style: O,
+                    className: s()(d.contentImage, _),
+                    src: T && null != f ? f : t,
+                    'aria-hidden': h,
+                    alt: null != E ? E : h ? void 0 : c.Z.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL,
+                    onError: (e) => (T ? A(!0) : S(!0))
                 })
         },
         'content-image'
